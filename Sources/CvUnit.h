@@ -833,7 +833,7 @@ public:
 	int getStackExperienceToGive(int iNumUnits) const;
 
 	int upgradePrice(UnitTypes eUnit) const; // Exposed to Python
-	bool upgradeAvailable(UnitTypes eFromUnit, UnitClassTypes eToUnitClass) const; // Exposed to Python
+	bool upgradeAvailable(UnitTypes eFromUnit, UnitTypes eToUnit) const; // Exposed to Python
 	bool canUpgrade(UnitTypes eUnit, bool bTestVisible = false) const; // Exposed to Python
 	bool isReadyForUpgrade() const;
 	bool hasUpgrade(bool bSearch = false) const; // Exposed to Python
@@ -846,7 +846,7 @@ public:
 	CivilizationTypes getCivilizationType() const; // Exposed to Python
 	const wchar* getVisualCivAdjective(TeamTypes eForTeam) const;
 	SpecialUnitTypes getSpecialUnitType() const; // Exposed to Python								
-	UnitTypes getCaptureUnitType(CivilizationTypes eCivilization) const; // Exposed to Python
+	UnitTypes getCaptureUnitType() const; // Exposed to Python
 	UnitCombatTypes getUnitCombatType() const; // Exposed to Python
 	DllExport DomainTypes getDomainType() const; // Exposed to Python
 	InvisibleTypes getInvisibleType() const; // Exposed to Python
@@ -1128,23 +1128,9 @@ public:
 	void setHotKeyNumber(int iNewValue); // Exposed to Python
 
 	DllExport int getViewportX() const; // Exposed to Python
-	inline int getX_INLINE() const
-	{
-		return m_iX;
-	}
-	inline int getX() const
-	{
-		return m_iX;
-	}
+	inline int getX() const { return m_iX; }
 	DllExport int getViewportY() const; // Exposed to Python
-	inline int getY() const
-	{
-		return m_iY;
-	}
-	inline int getY_INLINE() const
-	{
-		return m_iY;
-	}
+	inline int getY() const { return m_iY; }
 	bool isInViewport() const;
 	void setXY(int iX, int iY, bool bGroup = false, bool bUpdate = true, bool bShow = false, bool bCheckPlotVisible = false, bool bInit = false); // Exposed to Python
 	bool isTempUnit() const;
@@ -1624,13 +1610,7 @@ public:
 	void setBlockading(bool bNewValue);
 	void collectBlockadeGold();
 
-	DllExport PlayerTypes getOwner() const; // Exposed to Python
-#ifdef _USRDLL
-	inline PlayerTypes getOwnerINLINE() const
-	{
-		return m_eOwner;
-	}
-#endif
+	DllExport inline PlayerTypes getOwner() const { return m_eOwner; } // Exposed to Python
 	DllExport PlayerTypes getVisualOwner(TeamTypes eForTeam = NO_TEAM) const; // Exposed to Python
 	PlayerTypes getCombatOwner(TeamTypes eForTeam, const CvPlot* pPlot) const; // Exposed to Python
 	DllExport TeamTypes getTeam() const; // Exposed to Python

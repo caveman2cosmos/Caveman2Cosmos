@@ -1117,7 +1117,7 @@ const UnitCombatModifier& CvSpecialistInfo::getUnitCombatExperienceType(int iUni
 	FAssertMsg(iUnitCombat > -1, "Index out of bounds");
 	if (!bForLoad)
 	{
-		if (!GC.getGameINLINE().isOption(GAMEOPTION_XP_FROM_ASSIGNED_SPECIALISTS) && isVisible())
+		if (!GC.getGame().isOption(GAMEOPTION_XP_FROM_ASSIGNED_SPECIALISTS) && isVisible())
 		{
 			return m_aUnitCombatExperienceTypesNull[iUnitCombat];
 		}
@@ -1468,8 +1468,8 @@ m_iDistanceMaintenanceModifier(0),
 m_iNumCitiesMaintenanceModifier(0),
 m_iCoastalDistanceMaintenanceModifier(0),
 //DPII < Maintenance Modifier >
-m_iFirstFreeUnitClass(NO_UNITCLASS),
-m_iFirstFreeProphet(NO_UNITCLASS),
+m_iFirstFreeUnit(NO_UNIT),
+m_iFirstFreeProphet(NO_UNIT),
 m_iHealth(0),
 m_iHappiness(0),
 m_iFirstFreeTechs(0),
@@ -1496,16 +1496,10 @@ m_bIrrigation(false),
 m_bIgnoreIrrigation(false),
 m_bWaterWork(false),
 m_bRiverTrade(false),
-/************************************************************************************************/
-/* DCM									 04/19/09								Johny Smith  */
-/************************************************************************************************/
 // Dale - AB: Bombing START
 m_bDCMAirBombTech1(0),
 m_bDCMAirBombTech2(0),
 // Dale - AB: Bombing END
-/************************************************************************************************/
-/* DCM									 END												  */
-/************************************************************************************************/
 m_piDomainExtraMoves(NULL),
 m_piFlavorValue(NULL),
 m_piPrereqOrTechs(NULL),
@@ -1514,11 +1508,6 @@ m_pbCommerceFlexible(NULL),
 m_pbTerrainTrade(NULL),
 //ls612: Tech Commerce Modifiers
 m_piCommerceModifier(NULL)
-/************************************************************************************************/
-/* Afforess					  Start		 Last Update: 3/8/10									*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 ,m_bEmbassyTrading(false)
 ,m_bCanPassPeaks(false)
 ,m_bMoveFastPeaks(false)
@@ -1539,9 +1528,7 @@ m_piCommerceModifier(NULL)
 ,m_piOriginalPrereqOrTechs(NULL)
 ,m_piOriginalPrereqAndTechs(NULL)
 ,m_piUnitClassStrengthChange(NULL)
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+
 //TB Tech Tags
 ,m_bGlobal(false)
 //TB Tech Tags end
@@ -1674,9 +1661,9 @@ int CvTechInfo::getCoastalDistanceMaintenanceModifier() const
 	return m_iCoastalDistanceMaintenanceModifier;
 }
 //DPII < Maintenance Modifier >
-int CvTechInfo::getFirstFreeUnitClass() const
+int CvTechInfo::getFirstFreeUnit() const
 {
-	return m_iFirstFreeUnitClass;
+	return m_iFirstFreeUnit;
 }
 
 int CvTechInfo::getFirstFreeProphet() const
@@ -1922,11 +1909,7 @@ int* CvTechInfo::getCommerceModifierArray() const
 {
 	return m_piCommerceModifier;
 }
-/************************************************************************************************/
-/* Afforess					  Start		 Last Update: 3/8/10									*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 bool CvTechInfo::isEmbassyTrading() const
 {
 	return m_bEmbassyTrading;
@@ -2120,18 +2103,15 @@ int CvTechInfo::getOriginalPrereqAndTechs(int i) const
 
 int CvTechInfo::getUnitClassStrengthChange(int iUnit, bool bForLoad) const
 {
-	//if (!bForLoad && GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+	//if (!bForLoad && GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	//{
 	//	int iTotal = m_piUnitClassStrengthChange[iUnit] * 100;
 	//	return m_piUnitClassStrengthChange ? iTotal : 0;
 	//}
 	return m_piUnitClassStrengthChange ? m_piUnitClassStrengthChange[iUnit] : 0;
 }
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-//TB Tech Tags
 
+//TB Tech Tags
 bool CvTechInfo::isGlobal() const
 {
 	return m_bGlobal;
@@ -2160,12 +2140,12 @@ bool CvTechInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"Era");
 	m_iEra = pXML->GetInfoClass(szTextVal);
 
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"FirstFreeUnitClass");
-	m_iFirstFreeUnitClass = pXML->GetInfoClass(szTextVal);
+	pXML->GetOptionalChildXmlValByName(szTextVal, L"FirstFreeUnit");
+	m_aszExtraXMLforPass3.push_back(szTextVal);
 
 #ifdef C2C_BUILD
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"FirstFreeProphet");
-	m_iFirstFreeProphet = pXML->GetInfoClass(szTextVal);
+	m_aszExtraXMLforPass3.push_back(szTextVal);
 #endif
 
 	pXML->GetOptionalChildXmlValByName(&m_iFeatureProductionModifier, L"iFeatureProductionModifier");
@@ -2254,11 +2234,7 @@ bool CvTechInfo::read(CvXMLLoadUtility* pXML)
 /************************************************************************************************/
 	//pXML->CvXMLLoadUtility::InitList(&m_piPrereqOrTechs, GC.getNUM_OR_TECH_PREREQS(), -1);
 	//pXML->CvXMLLoadUtility::InitList(&m_piPrereqAndTechs, GC.getNUM_AND_TECH_PREREQS(), -1);
-/************************************************************************************************/
-/* Afforess					  Start		 Last Update: 3/8/10									*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 	pXML->GetOptionalChildXmlValByName(&m_bEmbassyTrading, L"bEmbassyTrading");
 	pXML->GetOptionalChildXmlValByName(&m_bCanPassPeaks, L"bCanPassPeaks");
 	pXML->GetOptionalChildXmlValByName(&m_bMoveFastPeaks, L"bMoveFastPeaks");
@@ -2392,9 +2368,7 @@ bool CvTechInfo::read(CvXMLLoadUtility* pXML)
 	//	}
 
 	//}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+
 
 	//OutputDebugString("I'm here #2");
 	//this->getCivilopedia();
@@ -2528,8 +2502,8 @@ void CvTechInfo::copyNonDefaults(CvTechInfo* pClassInfo, CvXMLLoadUtility* pXML)
 	if (getAdvancedStartCostIncrease() == iDefault) m_iAdvancedStartCostIncrease = pClassInfo->getAdvancedStartCostIncrease();
 
 	if (m_iEra == NO_ERA) m_iEra = pClassInfo->getEra();
-	if (m_iFirstFreeUnitClass == NO_UNITCLASS) m_iFirstFreeUnitClass = pClassInfo->getFirstFreeUnitClass();
-	if (m_iFirstFreeProphet == NO_UNITCLASS) m_iFirstFreeProphet = pClassInfo->getFirstFreeProphet();
+	if (m_iFirstFreeUnit == NO_UNIT) m_iFirstFreeUnit = pClassInfo->getFirstFreeUnit();
+	if (m_iFirstFreeProphet == NO_UNIT) m_iFirstFreeProphet = pClassInfo->getFirstFreeProphet();
 
 	if (getFeatureProductionModifier() == iDefault) m_iFeatureProductionModifier = pClassInfo->getFeatureProductionModifier();
 	if (getWorkerSpeedModifier() == iDefault) m_iWorkerSpeedModifier = pClassInfo->getWorkerSpeedModifier();
@@ -2653,11 +2627,7 @@ void CvTechInfo::copyNonDefaults(CvTechInfo* pClassInfo, CvXMLLoadUtility* pXML)
 			m_piPrereqAndTechs[j] = pClassInfo->getPrereqAndTechs(j);
 		}
 	}
-/************************************************************************************************/
-/* Afforess					  Start		 Last Update: 3/8/10									*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 	if (!isEmbassyTrading()) m_bEmbassyTrading = pClassInfo->isEmbassyTrading();
 	if (!isCanPassPeaks()) m_bCanPassPeaks = pClassInfo->isCanPassPeaks();
 	if (!isMoveFastPeaks()) m_bMoveFastPeaks = pClassInfo->isMoveFastPeaks();
@@ -2736,11 +2706,6 @@ void CvTechInfo::copyNonDefaults(CvTechInfo* pClassInfo, CvXMLLoadUtility* pXML)
 	//	m_aiPrereqOrBuildingClassforPass3.push_back(pClassInfo->getPrereqOrBuildingClassValuesVectorElement(i));
 	//	m_aszPrereqOrBuildingClassforPass3.push_back(pClassInfo->getPrereqOrBuildingNamesVectorElement(i));
 	//}
-
-
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 }
 
 void CvTechInfo::copyNonDefaultsReadPass2(CvTechInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver)
@@ -2791,49 +2756,21 @@ void CvTechInfo::copyNonDefaultsReadPass2(CvTechInfo* pClassInfo, CvXMLLoadUtili
 		}
 	}
 }
-/************************************************************************************************/
-/* Afforess					  Start		 04/01/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 bool CvTechInfo::readPass3()
 {
-	//m_paiPrereqBuildingClass = new int[GC.getNumBuildingClassInfos()];
-	//m_paiPrereqOrBuildingClass = new int[GC.getNumBuildingClassInfos()];
-	//for (int iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
-	//{
-	//	m_paiPrereqBuildingClass[iI] = 0;
-	//	m_paiPrereqOrBuildingClass[iI] = 0;
-	//}
-	//if (!m_aiPrereqBuildingClassforPass3.empty() && !m_aszPrereqBuildingClassforPass3.empty())
-	//{
-	//	int iNumLoad = m_aiPrereqBuildingClassforPass3.size();
-	//	for(int iI = 0; iI < iNumLoad; iI++)
-	//	{
-	//		int iTempIndex = GC.getInfoTypeForString(m_aszPrereqBuildingClassforPass3[iI]);
-	//		if (iTempIndex >= 0 && iTempIndex < GC.getNumBuildingClassInfos())
-	//			m_paiPrereqBuildingClass[iTempIndex] = m_aiPrereqBuildingClassforPass3[iI];
-	//	}
-	//	m_aszPrereqBuildingClassforPass3.clear();
-	//	m_aiPrereqBuildingClassforPass3.clear();
-	//}
-	//if (!m_aiPrereqOrBuildingClassforPass3.empty() && !m_aszPrereqOrBuildingClassforPass3.empty())
-	//{
-	//	int iNumLoad = m_aiPrereqOrBuildingClassforPass3.size();
-	//	for(int iI = 0; iI < iNumLoad; iI++)
-	//	{
-	//		int iTempIndex = GC.getInfoTypeForString(m_aszPrereqOrBuildingClassforPass3[iI]);
-	//		if (iTempIndex >= 0 && iTempIndex < GC.getNumBuildingClassInfos())
-	//			m_paiPrereqOrBuildingClass[iTempIndex] = m_aiPrereqOrBuildingClassforPass3[iI];
-	//	}
-	//	m_aszPrereqOrBuildingClassforPass3.clear();
-	//	m_aiPrereqOrBuildingClassforPass3.clear();
-	//}
+	if (m_aszExtraXMLforPass3.size() < 1)
+	{
+		FAssert(false);
+		return false;
+	}
+	m_iFirstFreeUnit = GC.getInfoTypeForString(m_aszExtraXMLforPass3[0]);
+#ifdef C2C_BUILD
+	m_iFirstFreeProphet = GC.getInfoTypeForString(m_aszExtraXMLforPass3[1]);
+#endif
+	m_aszExtraXMLforPass3.clear();
 	return true;
 }
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 void CvTechInfo::getCheckSum(unsigned int& iSum)
 {
@@ -2851,7 +2788,7 @@ void CvTechInfo::getCheckSum(unsigned int& iSum)
 	CheckSum(iSum, m_iDistanceMaintenanceModifier);
 	CheckSum(iSum, m_iNumCitiesMaintenanceModifier);
 	CheckSum(iSum, m_iCoastalDistanceMaintenanceModifier);
-	CheckSum(iSum, m_iFirstFreeUnitClass);
+	CheckSum(iSum, m_iFirstFreeUnit);
 	CheckSum(iSum, m_iFirstFreeProphet);
 	CheckSum(iSum, m_iHealth);
 	CheckSum(iSum, m_iHappiness);
@@ -3202,7 +3139,7 @@ m_bRemoveAfterSet(false),
 m_bQuick(false)
 //TB Combat Mods End
 {
-	m_zobristValue = GC.getGameINLINE().getSorenRand().getInt();
+	m_zobristValue = GC.getGame().getSorenRand().getInt();
 }
 
 //------------------------------------------------------------------------------------------------------
@@ -3924,7 +3861,7 @@ int CvPromotionInfo::getDefenseCombatModifierChange() const
 
 int CvPromotionInfo::getPursuitChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_FIGHT_OR_FLIGHT))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_FIGHT_OR_FLIGHT))
 	{
 		return 0;
 	}
@@ -3933,7 +3870,7 @@ int CvPromotionInfo::getPursuitChange(bool bForLoad) const
 
 int CvPromotionInfo::getEarlyWithdrawChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_FIGHT_OR_FLIGHT))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_FIGHT_OR_FLIGHT))
 	{
 		return 0;
 	}
@@ -3958,7 +3895,7 @@ int CvPromotionInfo::getPunctureChange() const
 //Heart of War
 int CvPromotionInfo::getOverrunChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -3967,7 +3904,7 @@ int CvPromotionInfo::getOverrunChange(bool bForLoad) const
 
 int CvPromotionInfo::getRepelChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -3976,7 +3913,7 @@ int CvPromotionInfo::getRepelChange(bool bForLoad) const
 
 int CvPromotionInfo::getFortRepelChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -3985,7 +3922,7 @@ int CvPromotionInfo::getFortRepelChange(bool bForLoad) const
 
 int CvPromotionInfo::getRepelRetriesChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -3994,7 +3931,7 @@ int CvPromotionInfo::getRepelRetriesChange(bool bForLoad) const
 
 int CvPromotionInfo::getUnyieldingChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -4003,7 +3940,7 @@ int CvPromotionInfo::getUnyieldingChange(bool bForLoad) const
 
 int CvPromotionInfo::getKnockbackChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -4012,7 +3949,7 @@ int CvPromotionInfo::getKnockbackChange(bool bForLoad) const
 
 int CvPromotionInfo::getKnockbackRetriesChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -4022,7 +3959,7 @@ int CvPromotionInfo::getKnockbackRetriesChange(bool bForLoad) const
 //Battleworn
 int CvPromotionInfo::getStrAdjperRndChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_BATTLEWORN))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_BATTLEWORN))
 	{
 		return 0;
 	}
@@ -4031,7 +3968,7 @@ int CvPromotionInfo::getStrAdjperRndChange(bool bForLoad) const
 
 int CvPromotionInfo::getStrAdjperAttChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_BATTLEWORN))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_BATTLEWORN))
 	{
 		return 0;
 	}
@@ -4040,7 +3977,7 @@ int CvPromotionInfo::getStrAdjperAttChange(bool bForLoad) const
 
 int CvPromotionInfo::getStrAdjperDefChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_BATTLEWORN))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_BATTLEWORN))
 	{
 		return 0;
 	}
@@ -4049,7 +3986,7 @@ int CvPromotionInfo::getStrAdjperDefChange(bool bForLoad) const
 
 int CvPromotionInfo::getWithdrawAdjperAttChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_BATTLEWORN))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_BATTLEWORN))
 	{
 		return 0;
 	}
@@ -4059,7 +3996,7 @@ int CvPromotionInfo::getWithdrawAdjperAttChange(bool bForLoad) const
 //S&D extended
 int CvPromotionInfo::getUnnerveChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_SAD))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_SAD))
 	{
 		return 0;
 	}
@@ -4068,7 +4005,7 @@ int CvPromotionInfo::getUnnerveChange(bool bForLoad) const
 
 int CvPromotionInfo::getEncloseChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_SAD))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_SAD))
 	{
 		return 0;
 	}
@@ -4077,7 +4014,7 @@ int CvPromotionInfo::getEncloseChange(bool bForLoad) const
 
 int CvPromotionInfo::getLungeChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_SAD))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_SAD))
 	{
 		return 0;
 	}
@@ -4086,7 +4023,7 @@ int CvPromotionInfo::getLungeChange(bool bForLoad) const
 
 int CvPromotionInfo::getDynamicDefenseChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_SAD))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_SAD))
 	{
 		return 0;
 	}
@@ -4128,7 +4065,7 @@ int CvPromotionInfo::getWeakenperTurn() const
 //Strength in Numbers
 int CvPromotionInfo::getFrontSupportPercentChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 	{
 		return 0;
 	}
@@ -4137,7 +4074,7 @@ int CvPromotionInfo::getFrontSupportPercentChange(bool bForLoad) const
 
 int CvPromotionInfo::getShortRangeSupportPercentChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 	{
 		return 0;
 	}
@@ -4146,7 +4083,7 @@ int CvPromotionInfo::getShortRangeSupportPercentChange(bool bForLoad) const
 
 int CvPromotionInfo::getMediumRangeSupportPercentChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 	{
 		return 0;
 	}
@@ -4155,7 +4092,7 @@ int CvPromotionInfo::getMediumRangeSupportPercentChange(bool bForLoad) const
 
 int CvPromotionInfo::getLongRangeSupportPercentChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 	{
 		return 0;
 	}
@@ -4164,7 +4101,7 @@ int CvPromotionInfo::getLongRangeSupportPercentChange(bool bForLoad) const
 
 int CvPromotionInfo::getFlankSupportPercentChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 	{
 		return 0;
 	}
@@ -4327,7 +4264,7 @@ int CvPromotionInfo::getDCMBombAccuracyChange() const
 
 int CvPromotionInfo::getCombatModifierPerSizeMoreChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
 		return 0;
 	}
@@ -4336,7 +4273,7 @@ int CvPromotionInfo::getCombatModifierPerSizeMoreChange(bool bForLoad) const
 
 int CvPromotionInfo::getCombatModifierPerSizeLessChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
 		return 0;
 	}
@@ -4345,7 +4282,7 @@ int CvPromotionInfo::getCombatModifierPerSizeLessChange(bool bForLoad) const
 
 int CvPromotionInfo::getCombatModifierPerVolumeMoreChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
 		return 0;
 	}
@@ -4354,7 +4291,7 @@ int CvPromotionInfo::getCombatModifierPerVolumeMoreChange(bool bForLoad) const
 
 int CvPromotionInfo::getCombatModifierPerVolumeLessChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
 		return 0;
 	}
@@ -4418,7 +4355,7 @@ int CvPromotionInfo::getAssassinChange() const
 
 int CvPromotionInfo::getStealthStrikesChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_WITHOUT_WARNING))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_WITHOUT_WARNING))
 	{
 		return 0;
 	}
@@ -4427,7 +4364,7 @@ int CvPromotionInfo::getStealthStrikesChange(bool bForLoad) const
 
 int CvPromotionInfo::getStealthCombatModifierChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_WITHOUT_WARNING))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_WITHOUT_WARNING))
 	{
 		return 0;
 	}
@@ -4436,7 +4373,7 @@ int CvPromotionInfo::getStealthCombatModifierChange(bool bForLoad) const
 
 int CvPromotionInfo::getStealthDefenseChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_WITHOUT_WARNING))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_WITHOUT_WARNING))
 	{
 		return 0;
 	}
@@ -5199,7 +5136,7 @@ int CvPromotionInfo::getNumPursuitVSUnitCombatChangeTypes() const
 
 int CvPromotionInfo::getPursuitVSUnitCombatChangeType(int iUnitCombat, bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_FIGHT_OR_FLIGHT))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_FIGHT_OR_FLIGHT))
 	{
 		return 0;
 	}
@@ -5215,7 +5152,7 @@ int CvPromotionInfo::getPursuitVSUnitCombatChangeType(int iUnitCombat, bool bFor
 
 bool CvPromotionInfo::isPursuitVSUnitCombatChangeType(int iUnitCombat, bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_FIGHT_OR_FLIGHT))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_FIGHT_OR_FLIGHT))
 	{
 		return false;
 	}
@@ -5237,7 +5174,7 @@ int CvPromotionInfo::getNumRepelVSUnitCombatChangeTypes() const
 
 int CvPromotionInfo::getRepelVSUnitCombatChangeType(int iUnitCombat, bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -5253,7 +5190,7 @@ int CvPromotionInfo::getRepelVSUnitCombatChangeType(int iUnitCombat, bool bForLo
 
 bool CvPromotionInfo::isRepelVSUnitCombatChangeType(int iUnitCombat, bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
 		return false;
 	}
@@ -5274,7 +5211,7 @@ int CvPromotionInfo::getNumKnockbackVSUnitCombatChangeTypes() const
 
 int CvPromotionInfo::getKnockbackVSUnitCombatChangeType(int iUnitCombat, bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -5290,7 +5227,7 @@ int CvPromotionInfo::getKnockbackVSUnitCombatChangeType(int iUnitCombat, bool bF
 
 bool CvPromotionInfo::isKnockbackVSUnitCombatChangeType(int iUnitCombat, bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
 		return false;
 	}
@@ -9352,7 +9289,7 @@ bool CvSpawnInfo::getTreatAsBarbarian() const
 
 bool CvSpawnInfo::getNeutralOnly() const
 {
-	if (GC.getUnitInfo(getUnitType()).isWildAnimal() && GC.getGameINLINE().isOption(GAMEOPTION_DANGEROUS_WILDLIFE))
+	if (GC.getUnitInfo(getUnitType()).isWildAnimal() && GC.getGame().isOption(GAMEOPTION_DANGEROUS_WILDLIFE))
 	{
 		return false;
 	}
@@ -9714,7 +9651,7 @@ int CvSpecialUnitInfo::getWithdrawalChange() const
 
 int CvSpecialUnitInfo::getPursuitChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_FIGHT_OR_FLIGHT))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_FIGHT_OR_FLIGHT))
 	{
 		return 0;
 	}
@@ -10857,12 +10794,12 @@ int CvCivicInfo::getSpecialistCommercePercentChanges(int i, int j ) const
 
 int CvCivicInfo::getCityLimit(PlayerTypes ePlayer) const
 {
-	if (ePlayer > NO_PLAYER && GC.getGameINLINE().isOption(GAMEOPTION_NO_CITY_LIMITS))
+	if (ePlayer > NO_PLAYER && GC.getGame().isOption(GAMEOPTION_NO_CITY_LIMITS))
 	{
 		return 0;
 	}
 	//ls612: Option to scale City Limits by Mapsize
-	else if (ePlayer > NO_PLAYER && GC.getGameINLINE().isOption(GAMEOPTION_SCALE_CITY_LIMITS))
+	else if (ePlayer > NO_PLAYER && GC.getGame().isOption(GAMEOPTION_SCALE_CITY_LIMITS))
 	{
 		int iCityLimit;
 		CvPlayer* pPlayer = &GET_PLAYER(ePlayer);
@@ -12670,26 +12607,8 @@ bool CvDiplomacyInfo::FindResponseIndex(const CvDiplomacyResponse* pNewResponse,
 //
 //------------------------------------------------------------------------------------------------------
 CvUnitClassInfo::CvUnitClassInfo() :
-m_iMaxGlobalInstances(0),
-m_iMaxTeamInstances(0),
-m_iMaxPlayerInstances(0),
-//TB Unlimited National Units Mod
-m_bUnlimitedException(false),
-//TB Unlimited National Units End
-m_iInstanceCostModifier(0),
-m_iDefaultUnitIndex(NO_UNIT)
-/************************************************************************************************/
-/* Afforess					  Start		 12/23/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-,m_bUnique(false)
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-
-{
-}
+	m_iDefaultUnitIndex(NO_UNIT)
+{}
 
 //------------------------------------------------------------------------------------------------------
 //
@@ -12698,36 +12617,7 @@ m_iDefaultUnitIndex(NO_UNIT)
 //  PURPOSE :   Default destructor
 //
 //------------------------------------------------------------------------------------------------------
-CvUnitClassInfo::~CvUnitClassInfo()
-{
-}
-
-int CvUnitClassInfo::getMaxGlobalInstances() const
-{
-	return m_iMaxGlobalInstances;
-}
-
-int CvUnitClassInfo::getMaxTeamInstances() const
-{
-	return m_iMaxTeamInstances;
-}
-
-int CvUnitClassInfo::getMaxPlayerInstances() const
-{
-	return m_iMaxPlayerInstances;
-}
-
-//TB Unlimited National Units Mod
-bool CvUnitClassInfo::isUnlimitedException() const
-{
-	return m_bUnlimitedException;
-}
-//TB Unlimited National Units End
-
-int CvUnitClassInfo::getInstanceCostModifier() const
-{
-	return m_iInstanceCostModifier;
-}
+CvUnitClassInfo::~CvUnitClassInfo() {}
 
 int CvUnitClassInfo::getDefaultUnitIndex() const
 {
@@ -12738,18 +12628,6 @@ void CvUnitClassInfo::setDefaultUnitIndex(int i)
 {
 	m_iDefaultUnitIndex = i;
 }
-/************************************************************************************************/
-/* Afforess					  Start		 12/23/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-bool CvUnitClassInfo::isUnique() const
-{
-	return m_bUnique;
-}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 int CvUnitClassInfo::getDefaultUnitIndexVector() const
 {
@@ -12769,21 +12647,6 @@ bool CvUnitClassInfo::read(CvXMLLoadUtility* pXML)
 		return false;
 	}
 
-	pXML->GetOptionalChildXmlValByName(&m_iMaxGlobalInstances, L"iMaxGlobalInstances", -1);
-	pXML->GetOptionalChildXmlValByName(&m_iMaxTeamInstances, L"iMaxTeamInstances", -1);
-	pXML->GetOptionalChildXmlValByName(&m_iMaxPlayerInstances, L"iMaxPlayerInstances", -1);
-	pXML->GetOptionalChildXmlValByName(&m_bUnlimitedException, L"bUnlimitedException");
-	pXML->GetOptionalChildXmlValByName(&m_iInstanceCostModifier, L"iInstanceCostModifier");
-/************************************************************************************************/
-/* Afforess					  Start		 12/23/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-	pXML->GetOptionalChildXmlValByName(&m_bUnique, L"bUnique");
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-
 	CvString szTextVal;
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"DefaultUnit");
 	m_aszExtraXMLforPass3.push_back(szTextVal);
@@ -12793,32 +12656,9 @@ bool CvUnitClassInfo::read(CvXMLLoadUtility* pXML)
 
 void CvUnitClassInfo::copyNonDefaults(CvUnitClassInfo* pClassInfo, CvXMLLoadUtility* pXML)
 {
-	bool bDefault = false;
-	int iDefault = 0;
-	int iTextDefault = -1;  //all integers which are TEXT_KEYS in the xml are -1 by default
-	int iAudioDefault = -1;  //all audio is default -1
-	float fDefault = 0.0f;
-	CvString cDefault = CvString::format("").GetCString();
-	CvWString wDefault = CvWString::format(L"").GetCString();
-
 	CvInfoBase::copyNonDefaults(pClassInfo, pXML);
 
-	if (getMaxGlobalInstances() == -1) m_iMaxGlobalInstances = pClassInfo->getMaxGlobalInstances();
-	if (getMaxTeamInstances() == -1) m_iMaxTeamInstances = pClassInfo->getMaxTeamInstances();
-	if (getMaxPlayerInstances() == -1) m_iMaxPlayerInstances = pClassInfo->getMaxPlayerInstances();
-	if (isUnlimitedException() == bDefault) m_bUnlimitedException = pClassInfo->isUnlimitedException();
-	if (getInstanceCostModifier() == iDefault) m_iInstanceCostModifier = pClassInfo->getInstanceCostModifier();
-/************************************************************************************************/
-/* Afforess					  Start		 12/23/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-	if (isUnique() == bDefault) m_bUnique = pClassInfo->isUnique();
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-
-	for ( int i = 0; i < pClassInfo->getDefaultUnitIndexVector(); i++ )
+	for (int i = 0; i < pClassInfo->getDefaultUnitIndexVector(); i++)
 	{
 		m_aszExtraXMLforPass3.push_back(pClassInfo->getDefaultUnitIndexVectorElement(i));
 	}
@@ -12858,14 +12698,7 @@ bool CvUnitClassInfo::readPass3()
 
 void CvUnitClassInfo::getCheckSum(unsigned int& iSum)
 {
-	CheckSum(iSum, m_iMaxGlobalInstances);
-	CheckSum(iSum, m_iMaxTeamInstances);
-	CheckSum(iSum, m_iMaxPlayerInstances);
-	CheckSum(iSum, m_bUnlimitedException);
-	CheckSum(iSum, m_iInstanceCostModifier);
 	CheckSum(iSum, m_iDefaultUnitIndex);
-
-	CheckSum(iSum, m_bUnique);
 }
 
 //======================================================================================================
@@ -12880,13 +12713,12 @@ void CvUnitClassInfo::getCheckSum(unsigned int& iSum)
 //
 //------------------------------------------------------------------------------------------------------
 CvSpecialBuildingInfo::CvSpecialBuildingInfo() :
-m_iObsoleteTech(NO_TECH),
-m_iTechPrereq(NO_TECH),
-m_iTechPrereqAnyone(NO_TECH),
-m_iMaxPlayerInstances(-1),
-m_bValid(false)
-{
-}
+	m_iObsoleteTech(NO_TECH),
+	m_iTechPrereq(NO_TECH),
+	m_iTechPrereqAnyone(NO_TECH),
+	m_iMaxPlayerInstances(-1),
+	m_bValid(false)
+{}
 
 //------------------------------------------------------------------------------------------------------
 //
@@ -12989,16 +12821,13 @@ void CvSpecialBuildingInfo::getCheckSum(unsigned int& iSum)
 //
 //------------------------------------------------------------------------------------------------------
 CvBuildingClassInfo::CvBuildingClassInfo() :
-m_iMaxGlobalInstances(0),
-m_iMaxTeamInstances(0),
-m_iMaxPlayerInstances(0),
-m_iExtraPlayerInstances(0),
-m_iDefaultBuildingIndex(NO_BUILDING),
-m_bNoLimit(false),
-m_bMonument(false),
-m_piVictoryThreshold(NULL)
-{
-}
+	m_iMaxGlobalInstances(-1),
+	m_iMaxTeamInstances(-1),
+	m_iMaxPlayerInstances(-1),
+	m_iExtraPlayerInstances(0),
+	m_iDefaultBuildingIndex(NO_BUILDING),
+	m_piVictoryThreshold(NULL)
+{}
 
 //------------------------------------------------------------------------------------------------------
 //
@@ -13042,16 +12871,6 @@ void CvBuildingClassInfo::setDefaultBuildingIndex(int i)
 	m_iDefaultBuildingIndex = i;
 }
 
-bool CvBuildingClassInfo::isNoLimit() const
-{
-	return m_bNoLimit;
-}
-
-bool CvBuildingClassInfo::isMonument() const
-{
-	return m_bMonument;
-}
-
 // Arrays
 
 int CvBuildingClassInfo::getVictoryThreshold(int i) const
@@ -13073,10 +12892,7 @@ bool CvBuildingClassInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iMaxGlobalInstances, L"iMaxGlobalInstances", -1);
 	pXML->GetOptionalChildXmlValByName(&m_iMaxTeamInstances, L"iMaxTeamInstances", -1);
 	pXML->GetOptionalChildXmlValByName(&m_iMaxPlayerInstances, L"iMaxPlayerInstances", -1);
-	pXML->GetOptionalChildXmlValByName(&m_iExtraPlayerInstances, L"iExtraPlayerInstances");
-
-	pXML->GetOptionalChildXmlValByName(&m_bNoLimit, L"bNoLimit");
-	pXML->GetOptionalChildXmlValByName(&m_bMonument, L"bMonument");
+	pXML->GetOptionalChildXmlValByName(&m_iExtraPlayerInstances, L"iExtraPlayerInstances", 0);
 
 	pXML->SetVariableListTagPair(&m_piVictoryThreshold, L"VictoryThresholds",  GC.getNumVictoryInfos());
 
@@ -13095,27 +12911,18 @@ void CvBuildingClassInfo::copyNonDefaults(CvBuildingClassInfo* pClassInfo, CvXML
 {
 	CvInfoBase::copyNonDefaults(pClassInfo, pXML);
 
-	bool bDefault = false;
-	int iDefault = 0;
-	float fDefault = 0.0f;
-	CvString cDefault = CvString::format("").GetCString();
-	CvWString wDefault = CvWString::format(L"").GetCString();
-
 	if (getMaxGlobalInstances() == -1) m_iMaxGlobalInstances = pClassInfo->getMaxGlobalInstances();
 	if (getMaxTeamInstances() == -1) m_iMaxTeamInstances = pClassInfo->getMaxTeamInstances();
 	if (getMaxPlayerInstances() == -1) m_iMaxPlayerInstances = pClassInfo->getMaxPlayerInstances();
-	if (getExtraPlayerInstances() == iDefault) m_iExtraPlayerInstances = pClassInfo->getExtraPlayerInstances();
-
-	if (isNoLimit() == bDefault) m_bNoLimit = pClassInfo->isNoLimit();
-	if (isMonument() == bDefault) m_bMonument = pClassInfo->isMonument();
+	if (getExtraPlayerInstances() == 0) m_iExtraPlayerInstances = pClassInfo->getExtraPlayerInstances();
 
 	for ( int i = 0; i < GC.getNumVictoryInfos(); i++ )
 	{
-		if (getVictoryThreshold(i) == iDefault && pClassInfo->getVictoryThreshold(i) != iDefault)
+		if (getVictoryThreshold(i) == 0 && pClassInfo->getVictoryThreshold(i) != 0)
 		{
 			if ( NULL == m_piVictoryThreshold )
 			{
-				CvXMLLoadUtility::InitList(&m_piVictoryThreshold,GC.getNumVictoryInfos(),iDefault);
+				CvXMLLoadUtility::InitList(&m_piVictoryThreshold,GC.getNumVictoryInfos(), 0);
 			}
 			m_piVictoryThreshold[i] = pClassInfo->getVictoryThreshold(i);
 		}
@@ -13161,12 +12968,7 @@ void CvBuildingClassInfo::getCheckSum(unsigned int &iSum)
 	CheckSum(iSum, m_iMaxPlayerInstances);
 	CheckSum(iSum, m_iExtraPlayerInstances);
 	CheckSum(iSum, m_iDefaultBuildingIndex);
-
-	CheckSum(iSum, m_bNoLimit);
-	CheckSum(iSum, m_bMonument);
-
 	// Arrays
-
 	CheckSum(iSum, m_piVictoryThreshold, GC.getNumVictoryInfos());
 }
 
@@ -16738,7 +16540,7 @@ m_piTechMovementChange(NULL),
 m_piPrereqOrBonuses(NULL),
 m_PropertyManipulators()
 {
-	m_zobristValue = GC.getGameINLINE().getSorenRand().getInt();
+	m_zobristValue = GC.getGame().getSorenRand().getInt();
 }
 
 //------------------------------------------------------------------------------------------------------
@@ -19292,7 +19094,7 @@ m_pbTerrain(NULL)
 /************************************************************************************************/
 ,m_PropertyManipulators()
 {
-	m_zobristValue = GC.getGameINLINE().getSorenRand().getInt();
+	m_zobristValue = GC.getGame().getSorenRand().getInt();
 }
 
 //------------------------------------------------------------------------------------------------------
@@ -20324,7 +20126,7 @@ m_pi3DAudioScriptFootstepIndex(NULL)
 m_bColdDamage(false)
 //TB Combat Mod end
 {
-	m_zobristValue = GC.getGameINLINE().getSorenRand().getInt();
+	m_zobristValue = GC.getGame().getSorenRand().getInt();
 }
 
 //------------------------------------------------------------------------------------------------------
@@ -23499,49 +23301,40 @@ void CvVoteInfo::getCheckSum(unsigned int& iSum)
 //
 //------------------------------------------------------------------------------------------------------
 CvProjectInfo::CvProjectInfo() :
-m_iVictoryPrereq(NO_VICTORY),
-m_iTechPrereq(NO_TECH),
-m_iAnyoneProjectPrereq(NO_PROJECT),
-m_iMaxGlobalInstances(0),
-m_iMaxTeamInstances(0),
-m_iProductionCost(0),
-m_iNukeInterception(0),
-m_iTechShare(0),
-//DPII < Maintenance Modifiers >
-m_iGlobalMaintenanceModifier(0),
-m_iDistanceMaintenanceModifier(0),
-m_iNumCitiesMaintenanceModifier(0),
-m_iConnectedCityMaintenanceModifier(0),
-//DPII < Maintenance Modifiers >
-m_iEveryoneSpecialUnit(NO_SPECIALUNIT),
-m_iEveryoneSpecialBuilding(NO_SPECIALBUILDING),
-m_iVictoryDelayPercent(0),
-m_iSuccessRate(0),
-m_bSpaceship(false),
-m_bAllowsNukes(false),
-m_piBonusProductionModifier(NULL),
-m_piVictoryThreshold(NULL),
-m_piVictoryMinThreshold(NULL),
-m_piProjectsNeeded(NULL)
-/************************************************************************************************/
-/* Afforess					  Start		 01/02/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-,m_iWorldHappiness(0)
-,m_iGlobalHappiness(0)
-,m_iWorldHealth(0)
-,m_iGlobalHealth(0)
-,m_iWorldTradeRoutes(0)
-,m_iInflationModifier(0)
-,m_bTechShareWithHalfCivs(false)
-,m_piCommerceModifier(NULL)
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+	m_iVictoryPrereq(NO_VICTORY),
+	m_iTechPrereq(NO_TECH),
+	m_iAnyoneProjectPrereq(NO_PROJECT),
+	m_iMaxGlobalInstances(-1),
+	m_iMaxTeamInstances(-1),
+	m_iProductionCost(0),
+	m_iNukeInterception(0),
+	m_iTechShare(0),
 
-{
-}
+	m_iGlobalMaintenanceModifier(0),
+	m_iDistanceMaintenanceModifier(0),
+	m_iNumCitiesMaintenanceModifier(0),
+	m_iConnectedCityMaintenanceModifier(0),
+
+	m_iEveryoneSpecialUnit(NO_SPECIALUNIT),
+	m_iEveryoneSpecialBuilding(NO_SPECIALBUILDING),
+	m_iVictoryDelayPercent(0),
+	m_iSuccessRate(0),
+	m_bSpaceship(false),
+	m_bAllowsNukes(false),
+	m_piBonusProductionModifier(NULL),
+	m_piVictoryThreshold(NULL),
+	m_piVictoryMinThreshold(NULL),
+	m_piProjectsNeeded(NULL)
+
+	,m_iWorldHappiness(0)
+	,m_iGlobalHappiness(0)
+	,m_iWorldHealth(0)
+	,m_iGlobalHealth(0)
+	,m_iWorldTradeRoutes(0)
+	,m_iInflationModifier(0)
+	,m_bTechShareWithHalfCivs(false)
+	,m_piCommerceModifier(NULL)
+{}
 
 //------------------------------------------------------------------------------------------------------
 //
@@ -23899,29 +23692,6 @@ bool CvProjectInfo::read(CvXMLLoadUtility* pXML)
 	return true;
 }
 
-// bool CvProjectInfo::readPass2(CvXMLLoadUtility* pXML)
-// {
-	// CvString szTextVal;
-// /************************************************************************************************/
-// /* XMLCOPY								 10/14/07								MRGENIE	  */
-// /*																							  */
-// /*																							  */
-// /************************************************************************************************/
-	// if (!CvInfoBase::read(pXML))
-	// {
-		// return false;
-	// }
-// /************************************************************************************************/
-// /* XMLCOPY								 END												  */
-// /************************************************************************************************/
-
-	// pXML->SetVariableListTagPair(&m_piProjectsNeeded, L"PrereqProjects", sizeof(GC.getProjectInfo((ProjectTypes)0)), GC.getNumProjectInfos());
-
-	// pXML->GetChildXmlValByName(szTextVal, L"AnyonePrereqProject");
-	// m_iAnyoneProjectPrereq = GC.getInfoTypeForString(szTextVal);
-
-	// return true;
-// }
 
 void CvProjectInfo::copyNonDefaults(CvProjectInfo* pClassInfo, CvXMLLoadUtility* pXML)
 {
@@ -25700,7 +25470,7 @@ CvTraitInfo::~CvTraitInfo()
 
 int CvTraitInfo::getHealth() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iHealth > 0)
 		{
@@ -25716,7 +25486,7 @@ int CvTraitInfo::getHealth() const
 
 int CvTraitInfo::getHappiness() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iHappiness > 0)
 		{
@@ -25732,7 +25502,7 @@ int CvTraitInfo::getHappiness() const
 
 int CvTraitInfo::getMaxAnarchy() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iMaxAnarchy > -1)
 		{
@@ -25744,7 +25514,7 @@ int CvTraitInfo::getMaxAnarchy() const
 
 int CvTraitInfo::getUpkeepModifier() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iUpkeepModifier < 0)
 		{
@@ -25760,7 +25530,7 @@ int CvTraitInfo::getUpkeepModifier() const
 
 int CvTraitInfo::getLevelExperienceModifier() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iLevelExperienceModifier < 0)
 		{
@@ -25776,7 +25546,7 @@ int CvTraitInfo::getLevelExperienceModifier() const
 
 int CvTraitInfo::getGreatPeopleRateModifier() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iGreatPeopleRateModifier > 0)
 		{
@@ -25792,7 +25562,7 @@ int CvTraitInfo::getGreatPeopleRateModifier() const
 
 int CvTraitInfo::getGreatGeneralRateModifier() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iGreatGeneralRateModifier > 0)
 		{
@@ -25808,7 +25578,7 @@ int CvTraitInfo::getGreatGeneralRateModifier() const
 
 int CvTraitInfo::getDomesticGreatGeneralRateModifier() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iDomesticGreatGeneralRateModifier > 0)
 		{
@@ -25824,7 +25594,7 @@ int CvTraitInfo::getDomesticGreatGeneralRateModifier() const
 
 int CvTraitInfo::getMaxGlobalBuildingProductionModifier() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iMaxGlobalBuildingProductionModifier > 0)
 		{
@@ -25840,7 +25610,7 @@ int CvTraitInfo::getMaxGlobalBuildingProductionModifier() const
 
 int CvTraitInfo::getMaxTeamBuildingProductionModifier() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iMaxTeamBuildingProductionModifier > 0)
 		{
@@ -25856,7 +25626,7 @@ int CvTraitInfo::getMaxTeamBuildingProductionModifier() const
 
 int CvTraitInfo::getMaxPlayerBuildingProductionModifier() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iMaxPlayerBuildingProductionModifier > 0)
 		{
@@ -25879,7 +25649,7 @@ int CvTraitInfo::getMaxPlayerBuildingProductionModifier() const
 int CvTraitInfo::getRevIdxLocal() const
 //Note: Positive is penalty
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iRevIdxLocal < 0)
 		{
@@ -25896,7 +25666,7 @@ int CvTraitInfo::getRevIdxLocal() const
 int CvTraitInfo::getRevIdxNational() const
 {
 //Note: Positive is Penalty
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iRevIdxNational < 0)
 		{
@@ -25913,7 +25683,7 @@ int CvTraitInfo::getRevIdxNational() const
 int CvTraitInfo::getRevIdxDistanceModifier() const
 {
 //Note: Positive is penalty
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iRevIdxDistanceModifier < 0)
 		{
@@ -25930,7 +25700,7 @@ int CvTraitInfo::getRevIdxDistanceModifier() const
 int CvTraitInfo::getRevIdxHolyCityGood() const
 {
 //Note: Positive is bonus
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iRevIdxHolyCityGood > 0)
 		{
@@ -25947,7 +25717,7 @@ int CvTraitInfo::getRevIdxHolyCityGood() const
 int CvTraitInfo::getRevIdxHolyCityBad() const
 {
 //Note: Positive is Penalty
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iRevIdxHolyCityBad < 0)
 		{
@@ -25964,7 +25734,7 @@ int CvTraitInfo::getRevIdxHolyCityBad() const
 float CvTraitInfo::getRevIdxNationalityMod() const
 {
 //Note: Positive is Penalty
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_fRevIdxNationalityMod < 0)
 		{
@@ -25981,7 +25751,7 @@ float CvTraitInfo::getRevIdxNationalityMod() const
 float CvTraitInfo::getRevIdxBadReligionMod() const
 {
 //Note: Positive is Penalty
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_fRevIdxBadReligionMod < 0)
 		{
@@ -25998,7 +25768,7 @@ float CvTraitInfo::getRevIdxBadReligionMod() const
 float CvTraitInfo::getRevIdxGoodReligionMod() const
 {
 //Note: Positive is Bonus
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_fRevIdxGoodReligionMod > 0)
 		{
@@ -26014,7 +25784,7 @@ float CvTraitInfo::getRevIdxGoodReligionMod() const
 
 bool CvTraitInfo::isNonStateReligionCommerce() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_bNonStateReligionCommerce)
 		{
@@ -26026,7 +25796,7 @@ bool CvTraitInfo::isNonStateReligionCommerce() const
 
 bool CvTraitInfo::isUpgradeAnywhere() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_bUpgradeAnywhere)
 		{
@@ -26056,7 +25826,7 @@ int CvTraitInfo::getExtraYieldThreshold(int i) const
 	if (!m_paiExtraYieldThreshold)
 		return -1;
 
-	if (m_paiExtraYieldThresholdFiltered && GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (m_paiExtraYieldThresholdFiltered && GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_paiExtraYieldThreshold[i] > -1)
 		{
@@ -26078,7 +25848,7 @@ int CvTraitInfo::getTradeYieldModifier(int i) const
 {
 	if (m_paiTradeYieldModifier)
 	{
-		if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS) && m_paiTradeYieldModifierFiltered)
+		if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS) && m_paiTradeYieldModifierFiltered)
 		{
 			if (isNegativeTrait() && m_paiTradeYieldModifier[i] > 0)
 			{
@@ -26102,7 +25872,7 @@ int CvTraitInfo::getCommerceChange(int i) const
 {
 	if (m_paiCommerceChange)
 	{
-		if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS) && m_paiCommerceChangeFiltered)
+		if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS) && m_paiCommerceChangeFiltered)
 		{
 			if (isNegativeTrait() && m_paiCommerceChange[i] > 0)
 			{
@@ -26126,7 +25896,7 @@ int CvTraitInfo::getCommerceModifier(int i) const
 {
 	if (m_paiCommerceModifier)
 	{
-		if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS) && m_paiCommerceModifierFiltered)
+		if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS) && m_paiCommerceModifierFiltered)
 		{
 			if (isNegativeTrait() && m_paiCommerceModifier[i] > 0)
 			{
@@ -26166,7 +25936,7 @@ int CvTraitInfo::isFreePromotionUnitCombat(int i) const
 
 bool CvTraitInfo::isFreePromotionUnitCombats(int i, int j) const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS) && isImpurePromotions())
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS) && isImpurePromotions())
 	{
 		return false;
 	}
@@ -26211,7 +25981,7 @@ TechTypes CvTraitInfo::getPrereqTech() const
 //Team Project (6)
 SpecialistTypes CvTraitInfo::getEraAdvanceFreeSpecialistType() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_eEraAdvanceFreeSpecialistType != NO_SPECIALIST)
 		{
@@ -26223,7 +25993,7 @@ SpecialistTypes CvTraitInfo::getEraAdvanceFreeSpecialistType() const
 
 int CvTraitInfo::getGoldenAgeonBirthofGreatPeopleType() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iGoldenAgeonBirthofGreatPeopleType != NO_UNITCLASS)
 		{
@@ -26236,7 +26006,7 @@ int CvTraitInfo::getGoldenAgeonBirthofGreatPeopleType() const
 //integers
 int CvTraitInfo::getWarWearinessAccumulationModifier() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iWarWearinessAccumulationModifier < 0)
 		{
@@ -26252,7 +26022,7 @@ int CvTraitInfo::getWarWearinessAccumulationModifier() const
 
 int CvTraitInfo::getCivicAnarchyTimeModifier() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iCivicAnarchyTimeModifier < 0)
 		{
@@ -26268,7 +26038,7 @@ int CvTraitInfo::getCivicAnarchyTimeModifier() const
 
 int CvTraitInfo::getReligiousAnarchyTimeModifier() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iReligiousAnarchyTimeModifier < 0)
 		{
@@ -26284,7 +26054,7 @@ int CvTraitInfo::getReligiousAnarchyTimeModifier() const
 
 int CvTraitInfo::getImprovementUpgradeRateModifier() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iImprovementUpgradeRateModifier > 0)
 		{
@@ -26300,7 +26070,7 @@ int CvTraitInfo::getImprovementUpgradeRateModifier() const
 
 int CvTraitInfo::getWorkerSpeedModifier() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iWorkerSpeedModifier > 0)
 		{
@@ -26316,7 +26086,7 @@ int CvTraitInfo::getWorkerSpeedModifier() const
 
 int CvTraitInfo::getMaxConscript() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iMaxConscript > 0)
 		{
@@ -26332,7 +26102,7 @@ int CvTraitInfo::getMaxConscript() const
 
 int CvTraitInfo::getDistanceMaintenanceModifier() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iDistanceMaintenanceModifier < 0)
 		{
@@ -26348,7 +26118,7 @@ int CvTraitInfo::getDistanceMaintenanceModifier() const
 
 int CvTraitInfo::getNumCitiesMaintenanceModifier() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iNumCitiesMaintenanceModifier < 0)
 		{
@@ -26364,7 +26134,7 @@ int CvTraitInfo::getNumCitiesMaintenanceModifier() const
 
 int CvTraitInfo::getCorporationMaintenanceModifier() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iCorporationMaintenanceModifier < 0)
 		{
@@ -26380,7 +26150,7 @@ int CvTraitInfo::getCorporationMaintenanceModifier() const
 
 int CvTraitInfo::getStateReligionGreatPeopleRateModifier() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iStateReligionGreatPeopleRateModifier > 0)
 		{
@@ -26396,7 +26166,7 @@ int CvTraitInfo::getStateReligionGreatPeopleRateModifier() const
 
 int CvTraitInfo::getFreeExperience() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iFreeExperience > 0)
 		{
@@ -26412,7 +26182,7 @@ int CvTraitInfo::getFreeExperience() const
 
 int CvTraitInfo::getBaseFreeUnits() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iBaseFreeUnits > 0)
 		{
@@ -26428,7 +26198,7 @@ int CvTraitInfo::getBaseFreeUnits() const
 
 int CvTraitInfo::getBaseFreeMilitaryUnits() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iBaseFreeMilitaryUnits > 0)
 		{
@@ -26444,7 +26214,7 @@ int CvTraitInfo::getBaseFreeMilitaryUnits() const
 
 int CvTraitInfo::getFreeUnitsPopulationPercent() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iFreeUnitsPopulationPercent > 0)
 		{
@@ -26460,7 +26230,7 @@ int CvTraitInfo::getFreeUnitsPopulationPercent() const
 
 int CvTraitInfo::getFreeMilitaryUnitsPopulationPercent() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iFreeMilitaryUnitsPopulationPercent > 0)
 		{
@@ -26476,7 +26246,7 @@ int CvTraitInfo::getFreeMilitaryUnitsPopulationPercent() const
 
 int CvTraitInfo::getGoldPerUnit() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iGoldPerUnit < 0)
 		{
@@ -26492,7 +26262,7 @@ int CvTraitInfo::getGoldPerUnit() const
 
 int CvTraitInfo::getGoldPerMilitaryUnit() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iGoldPerMilitaryUnit < 0)
 		{
@@ -26508,7 +26278,7 @@ int CvTraitInfo::getGoldPerMilitaryUnit() const
 
 int CvTraitInfo::getHappyPerMilitaryUnit() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iHappyPerMilitaryUnit > 0)
 		{
@@ -26524,7 +26294,7 @@ int CvTraitInfo::getHappyPerMilitaryUnit() const
 
 int CvTraitInfo::getLargestCityHappiness() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iLargestCityHappiness > 0)
 		{
@@ -26540,7 +26310,7 @@ int CvTraitInfo::getLargestCityHappiness() const
 
 int CvTraitInfo::getFreeSpecialist() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iFreeSpecialist > 0)
 		{
@@ -26556,7 +26326,7 @@ int CvTraitInfo::getFreeSpecialist() const
 
 int CvTraitInfo::getTradeRoutes() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iTradeRoutes > 0)
 		{
@@ -26572,7 +26342,7 @@ int CvTraitInfo::getTradeRoutes() const
 
 int CvTraitInfo::getStateReligionHappiness() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iStateReligionHappiness > 0)
 		{
@@ -26588,7 +26358,7 @@ int CvTraitInfo::getStateReligionHappiness() const
 
 int CvTraitInfo::getNonStateReligionHappiness() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iNonStateReligionHappiness > 0)
 		{
@@ -26604,7 +26374,7 @@ int CvTraitInfo::getNonStateReligionHappiness() const
 
 int CvTraitInfo::getStateReligionUnitProductionModifier() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iStateReligionUnitProductionModifier > 0)
 		{
@@ -26620,7 +26390,7 @@ int CvTraitInfo::getStateReligionUnitProductionModifier() const
 
 int CvTraitInfo::getStateReligionBuildingProductionModifier() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iStateReligionBuildingProductionModifier > 0)
 		{
@@ -26636,7 +26406,7 @@ int CvTraitInfo::getStateReligionBuildingProductionModifier() const
 
 int CvTraitInfo::getStateReligionFreeExperience() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iStateReligionFreeExperience > 0)
 		{
@@ -26652,7 +26422,7 @@ int CvTraitInfo::getStateReligionFreeExperience() const
 
 int CvTraitInfo::getExpInBorderModifier() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iExpInBorderModifier > 0)
 		{
@@ -26668,7 +26438,7 @@ int CvTraitInfo::getExpInBorderModifier() const
 
 int CvTraitInfo::getCityDefenseBonus() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iCityDefenseBonus > 0)
 		{
@@ -26684,7 +26454,7 @@ int CvTraitInfo::getCityDefenseBonus() const
 
 int CvTraitInfo::getMilitaryProductionModifier() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iMilitaryProductionModifier > 0)
 		{
@@ -26700,7 +26470,7 @@ int CvTraitInfo::getMilitaryProductionModifier() const
 
 int CvTraitInfo::getAttitudeModifier() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iAttitudeModifier > 0)
 		{
@@ -26721,7 +26491,7 @@ int CvTraitInfo::getLinePriority() const
 
 int CvTraitInfo::getEspionageDefense() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iEspionageDefense > 0)
 		{
@@ -26737,7 +26507,7 @@ int CvTraitInfo::getEspionageDefense() const
 
 int CvTraitInfo::getMinAnarchy() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iMinAnarchy < 0)
 		{
@@ -26753,7 +26523,7 @@ int CvTraitInfo::getMinAnarchy() const
 
 int CvTraitInfo::getMaxTradeRoutesChange() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iMaxTradeRoutesChange > 0)
 		{
@@ -26769,7 +26539,7 @@ int CvTraitInfo::getMaxTradeRoutesChange() const
 
 int CvTraitInfo::getGoldenAgeDurationModifier() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iGoldenAgeDurationModifier > 0)
 		{
@@ -26785,7 +26555,7 @@ int CvTraitInfo::getGoldenAgeDurationModifier() const
 
 int CvTraitInfo::getGreatPeopleRateChange() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iGreatPeopleRateChange > 0)
 		{
@@ -26801,7 +26571,7 @@ int CvTraitInfo::getGreatPeopleRateChange() const
 
 int CvTraitInfo::getHurryAngerModifier() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iHurryAngerModifier < 0)
 		{
@@ -26817,7 +26587,7 @@ int CvTraitInfo::getHurryAngerModifier() const
 
 int CvTraitInfo::getHurryCostModifier() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iHurryCostModifier < 0)
 		{
@@ -26833,7 +26603,7 @@ int CvTraitInfo::getHurryCostModifier() const
 
 int CvTraitInfo::getEnemyWarWearinessModifier() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iEnemyWarWearinessModifier > 0)
 		{
@@ -26849,7 +26619,7 @@ int CvTraitInfo::getEnemyWarWearinessModifier() const
 
 int CvTraitInfo::getForeignTradeRouteModifier() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iForeignTradeRouteModifier > 0)
 		{
@@ -26865,7 +26635,7 @@ int CvTraitInfo::getForeignTradeRouteModifier() const
 
 int CvTraitInfo::getBombardDefense() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iBombardDefense > 0)
 		{
@@ -26881,7 +26651,7 @@ int CvTraitInfo::getBombardDefense() const
 
 int CvTraitInfo::getUnitUpgradePriceModifier() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iUnitUpgradePriceModifier < 0)
 		{
@@ -26897,7 +26667,7 @@ int CvTraitInfo::getUnitUpgradePriceModifier() const
 
 int CvTraitInfo::getCoastalTradeRoutes() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iCoastalTradeRoutes > 0)
 		{
@@ -26914,7 +26684,7 @@ int CvTraitInfo::getCoastalTradeRoutes() const
 //Team Project (6)
 int CvTraitInfo::getGlobalPopulationgrowthratepercentage() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iGlobalPopulationgrowthratepercentage < 0)
 		{
@@ -26930,11 +26700,11 @@ int CvTraitInfo::getGlobalPopulationgrowthratepercentage() const
 
 int CvTraitInfo::getCityStartCulture(bool bForLoad) const
 {
-	if (!bForLoad && GC.getGameINLINE().isOption(GAMEOPTION_1_CITY_TILE_FOUNDING))
+	if (!bForLoad && GC.getGame().isOption(GAMEOPTION_1_CITY_TILE_FOUNDING))
 	{
 		return 0;
 	}
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iCityStartCulture > 0)
 		{
@@ -26950,7 +26720,7 @@ int CvTraitInfo::getCityStartCulture(bool bForLoad) const
 
 int CvTraitInfo::getGlobalAirUnitCapacity() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iGlobalAirUnitCapacity > 0)
 		{
@@ -26966,7 +26736,7 @@ int CvTraitInfo::getGlobalAirUnitCapacity() const
 
 int CvTraitInfo::getCapitalXPModifier() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iCapitalXPModifier > 0)
 		{
@@ -26982,7 +26752,7 @@ int CvTraitInfo::getCapitalXPModifier() const
 
 int CvTraitInfo::getHolyCityofStateReligionXPModifier() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iHolyCityofStateReligionXPModifier > 0)
 		{
@@ -26998,7 +26768,7 @@ int CvTraitInfo::getHolyCityofStateReligionXPModifier() const
 
 int CvTraitInfo::getHolyCityofNonStateReligionXPModifier() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iHolyCityofNonStateReligionXPModifier > 0)
 		{
@@ -27014,7 +26784,7 @@ int CvTraitInfo::getHolyCityofNonStateReligionXPModifier() const
 
 int CvTraitInfo::getBonusPopulationinNewCities() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iBonusPopulationinNewCities > 0)
 		{
@@ -27030,7 +26800,7 @@ int CvTraitInfo::getBonusPopulationinNewCities() const
 
 int CvTraitInfo::getMissileRange() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iMissileRange > 0)
 		{
@@ -27046,7 +26816,7 @@ int CvTraitInfo::getMissileRange() const
 
 int CvTraitInfo::getFlightOperationRange() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iFlightOperationRange > 0)
 		{
@@ -27062,7 +26832,7 @@ int CvTraitInfo::getFlightOperationRange() const
 
 int CvTraitInfo::getNavalCargoSpace() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iNavalCargoSpace > 0)
 		{
@@ -27078,7 +26848,7 @@ int CvTraitInfo::getNavalCargoSpace() const
 
 int CvTraitInfo::getMissileCargoSpace() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iMissileCargoSpace > 0)
 		{
@@ -27095,7 +26865,7 @@ int CvTraitInfo::getMissileCargoSpace() const
 //Team Project (3)
 int CvTraitInfo::getNationalCaptureProbabilityModifier() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iNationalCaptureProbabilityModifier > 0)
 		{
@@ -27111,7 +26881,7 @@ int CvTraitInfo::getNationalCaptureProbabilityModifier() const
 
 int CvTraitInfo::getNationalCaptureResistanceModifier() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iNationalCaptureResistanceModifier > 0)
 		{
@@ -27128,7 +26898,7 @@ int CvTraitInfo::getNationalCaptureResistanceModifier() const
 //Team Project (6)
 int CvTraitInfo::getStateReligionSpreadProbabilityModifier() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iStateReligionSpreadProbabilityModifier > 0)
 		{
@@ -27144,7 +26914,7 @@ int CvTraitInfo::getStateReligionSpreadProbabilityModifier() const
 
 int CvTraitInfo::getNonStateReligionSpreadProbabilityModifier() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iNonStateReligionSpreadProbabilityModifier > 0)
 		{
@@ -27160,7 +26930,7 @@ int CvTraitInfo::getNonStateReligionSpreadProbabilityModifier() const
 
 int CvTraitInfo::getFreedomFighterChange() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iFreedomFighterChange > 0)
 		{
@@ -27177,7 +26947,7 @@ int CvTraitInfo::getFreedomFighterChange() const
 
 bool CvTraitInfo::isMilitaryFoodProduction() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_bMilitaryFoodProduction)
 		{
@@ -27209,7 +26979,7 @@ bool CvTraitInfo::isCivilizationTrait() const
 
 bool CvTraitInfo::isAllowsInquisitions() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_bAllowsInquisitions)
 		{
@@ -27232,7 +27002,7 @@ bool CvTraitInfo::isBarbarianSelectionOnly() const
 //Team Project (6)
 bool CvTraitInfo::isCitiesStartwithStateReligion() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_bCitiesStartwithStateReligion)
 		{
@@ -27245,7 +27015,7 @@ bool CvTraitInfo::isCitiesStartwithStateReligion() const
 
 bool CvTraitInfo::isDraftsOnCityCapture() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_bDraftsOnCityCapture)
 		{
@@ -27258,7 +27028,7 @@ bool CvTraitInfo::isDraftsOnCityCapture() const
 
 bool CvTraitInfo::isFreeSpecialistperWorldWonder() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_bFreeSpecialistperWorldWonder)
 		{
@@ -27271,7 +27041,7 @@ bool CvTraitInfo::isFreeSpecialistperWorldWonder() const
 
 bool CvTraitInfo::isFreeSpecialistperNationalWonder() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_bFreeSpecialistperNationalWonder)
 		{
@@ -27284,7 +27054,7 @@ bool CvTraitInfo::isFreeSpecialistperNationalWonder() const
 
 bool CvTraitInfo::isFreeSpecialistperTeamProject() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_bFreeSpecialistperTeamProject)
 		{
@@ -27297,7 +27067,7 @@ bool CvTraitInfo::isFreeSpecialistperTeamProject() const
 
 bool CvTraitInfo::isExtraGoody() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_bExtraGoody)
 		{
@@ -27311,7 +27081,7 @@ bool CvTraitInfo::isExtraGoody() const
 //Team Project (5)
 bool CvTraitInfo::isAllReligionsActive() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_bAllReligionsActive)
 		{
@@ -27323,7 +27093,7 @@ bool CvTraitInfo::isAllReligionsActive() const
 
 bool CvTraitInfo::isBansNonStateReligions() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (!isNegativeTrait() && m_bBansNonStateReligions)
 		{
@@ -27335,7 +27105,7 @@ bool CvTraitInfo::isBansNonStateReligions() const
 
 bool CvTraitInfo::isFreedomFighter() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_bFreedomFighter)
 		{
@@ -27390,7 +27160,7 @@ bool CvTraitInfo::isValidTrait(bool bGameStart) const
 {
 	for (int iI = 0; iI < GC.getNumGameOptionInfos(); iI++)
 	{
-		if (GC.getGameINLINE().isOption((GameOptionTypes)iI))
+		if (GC.getGame().isOption((GameOptionTypes)iI))
 		{
 			if (isNotOnGameOption(iI)) return false;
 		}
@@ -27404,17 +27174,18 @@ bool CvTraitInfo::isValidTrait(bool bGameStart) const
 
 	if (isNegativeTrait())
 	{
-		if (GC.getGameINLINE().isOption(GAMEOPTION_NO_NEGATIVE_TRAITS))
+		if (GC.getGame().isOption(GAMEOPTION_NO_NEGATIVE_TRAITS)
+		|| bGameStart && GC.getGame().isOption(GAMEOPTION_START_NO_POSITIVE_TRAITS) && GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS))
 		{
 			return false;
 		}
 	}
-	else if (bGameStart && GC.getGameINLINE().isOption(GAMEOPTION_START_NO_POSITIVE_TRAITS))
+	else if (bGameStart && GC.getGame().isOption(GAMEOPTION_START_NO_POSITIVE_TRAITS))
 	{
 		return false;
 	}
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS))
 	{
 		if (getLinePriority() == 0)
 		{
@@ -27436,7 +27207,7 @@ int CvTraitInfo::getSpecialistYieldChange(int i, int j) const
 	FAssertMsg(j < NUM_YIELD_TYPES, "Index out of bounds");
 	FAssertMsg(j > -1, "Index out of bounds");
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (m_ppaiSpecialistYieldChange && m_ppaiSpecialistYieldChange[i] && m_ppaiSpecialistYieldChangeFiltered && m_ppaiSpecialistYieldChangeFiltered[i])
 		{
@@ -27463,7 +27234,7 @@ int* CvTraitInfo::getSpecialistYieldChangeArray(int i) const
 	FAssertMsg(i < GC.getNumSpecialistInfos(), "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		for (int j = 0; j < NUM_YIELD_TYPES; j++)
 		{
@@ -27493,7 +27264,7 @@ int CvTraitInfo::getYieldModifier(int i) const
 	FAssertMsg(i < NUM_YIELD_TYPES, "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (m_piYieldModifier && m_piYieldModifierFiltered)
 		{
@@ -27517,7 +27288,7 @@ int CvTraitInfo::getYieldModifier(int i) const
 
 int* CvTraitInfo::getYieldModifierArray() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		for (int i = 0; i < NUM_YIELD_TYPES; i++)
 		{
@@ -27547,7 +27318,7 @@ int CvTraitInfo::getCapitalYieldModifier(int i) const
 	FAssertMsg(i < NUM_YIELD_TYPES, "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (m_piCapitalYieldModifier && m_piCapitalYieldModifierFiltered)
 		{
@@ -27571,7 +27342,7 @@ int CvTraitInfo::getCapitalYieldModifier(int i) const
 
 int* CvTraitInfo::getCapitalYieldModifierArray() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		for (int i = 0; i < NUM_YIELD_TYPES; i++)
 		{
@@ -27601,7 +27372,7 @@ int CvTraitInfo::getCapitalCommerceModifier(int i) const
 	FAssertMsg(i < NUM_COMMERCE_TYPES, "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (m_piCapitalCommerceModifier && m_piCapitalCommerceModifierFiltered)
 		{
@@ -27625,7 +27396,7 @@ int CvTraitInfo::getCapitalCommerceModifier(int i) const
 
 int* CvTraitInfo::getCapitalCommerceModifierArray() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		for (int i = 0; i < NUM_COMMERCE_TYPES; i++)
 		{
@@ -27655,7 +27426,7 @@ int CvTraitInfo::getSpecialistExtraCommerce(int i) const
 	FAssertMsg(i < NUM_COMMERCE_TYPES, "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (m_piSpecialistExtraCommerce && m_piSpecialistExtraCommerceFiltered)
 		{
@@ -27679,7 +27450,7 @@ int CvTraitInfo::getSpecialistExtraCommerce(int i) const
 
 int* CvTraitInfo::getSpecialistExtraCommerceArray() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		for (int i = 0; i < NUM_COMMERCE_TYPES; i++)
 		{
@@ -27709,7 +27480,7 @@ int CvTraitInfo::getSpecialistExtraYield(int i) const
 	FAssertMsg(i < NUM_YIELD_TYPES, "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (m_piSpecialistExtraYield && m_piSpecialistExtraYieldFiltered)
 		{
@@ -27733,7 +27504,7 @@ int CvTraitInfo::getSpecialistExtraYield(int i) const
 
 int* CvTraitInfo::getSpecialistExtraYieldArray() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		for (int i = 0; i < NUM_YIELD_TYPES; i++)
 		{
@@ -27771,7 +27542,7 @@ int CvTraitInfo::getYieldChange(int i) const
 	FAssertMsg(i < NUM_YIELD_TYPES, "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (m_piYieldChange && m_piYieldChangeFiltered)
 		{
@@ -27800,7 +27571,7 @@ int CvTraitInfo::getSpecialistCommerceChange(int i, int j) const
 	FAssertMsg(j < NUM_COMMERCE_TYPES, "Index out of bounds");
 	FAssertMsg(j > -1, "Index out of bounds");
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (m_ppaiSpecialistCommerceChange && m_ppaiSpecialistCommerceChange[i] && m_ppaiSpecialistCommerceChangeFiltered && m_ppaiSpecialistCommerceChangeFiltered[i])
 		{
@@ -27827,7 +27598,7 @@ int* CvTraitInfo::getSpecialistCommerceChangeArray(int i) const
 	FAssertMsg(i < GC.getNumSpecialistInfos(), "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		for (int j = 0; j < NUM_COMMERCE_TYPES; j++)
 		{
@@ -27854,7 +27625,7 @@ int* CvTraitInfo::getSpecialistCommerceChangeArray(int i) const
 
 int CvTraitInfo::getLessYieldThreshold(int i) const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (m_paiLessYieldThreshold && m_paiLessYieldThresholdFiltered)
 		{
@@ -27879,7 +27650,7 @@ int CvTraitInfo::getSeaPlotYieldChanges(int i) const
 	FAssertMsg(i < NUM_YIELD_TYPES, "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (m_piSeaPlotYieldChanges && m_piSeaPlotYieldChangesFiltered)
 		{
@@ -27903,7 +27674,7 @@ int CvTraitInfo::getSeaPlotYieldChanges(int i) const
 
 int* CvTraitInfo::getSeaPlotYieldChangesArray() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		for (int i = 0; i < NUM_YIELD_TYPES; i++)
 		{
@@ -27935,7 +27706,7 @@ int CvTraitInfo::getImprovementYieldChange(int i, int j) const
 	FAssertMsg(j < NUM_YIELD_TYPES, "Index out of bounds");
 	FAssertMsg(j > -1, "Index out of bounds");
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (m_ppaiImprovementYieldChange && m_ppaiImprovementYieldChange[i] && m_ppaiImprovementYieldChangeFiltered && m_ppaiImprovementYieldChangeFiltered[i])
 		{
@@ -27962,7 +27733,7 @@ int* CvTraitInfo::getImprovementYieldChangeArray(int i) const
 	FAssertMsg(i < GC.getNumImprovementInfos(), "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		for (int j = 0; j < NUM_YIELD_TYPES; j++)
 		{
@@ -27993,7 +27764,7 @@ int CvTraitInfo::getGoldenAgeYieldChanges(int i) const
 	FAssertMsg(i < NUM_YIELD_TYPES, "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (m_piGoldenAgeYieldChanges && m_piGoldenAgeYieldChangesFiltered)
 		{
@@ -28017,7 +27788,7 @@ int CvTraitInfo::getGoldenAgeYieldChanges(int i) const
 
 int* CvTraitInfo::getGoldenAgeYieldChangesArray() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		for (int i = 0; i < NUM_YIELD_TYPES; i++)
 		{
@@ -28047,7 +27818,7 @@ int CvTraitInfo::getGoldenAgeCommerceChanges(int i) const
 	FAssertMsg(i < NUM_COMMERCE_TYPES, "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		if (m_piGoldenAgeCommerceChanges && m_piGoldenAgeCommerceChangesFiltered)
 		{
@@ -28071,7 +27842,7 @@ int CvTraitInfo::getGoldenAgeCommerceChanges(int i) const
 
 int* CvTraitInfo::getGoldenAgeCommerceChangesArray() const
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		for (int i = 0; i < NUM_COMMERCE_TYPES; i++)
 		{
@@ -28107,7 +27878,7 @@ ImprovementModifier CvTraitInfo::getImprovementUpgradeModifier(int iImprovement)
 	FAssertMsg(iImprovement < (int)m_aImprovementUpgradeModifierTypes.size(), "Index out of bounds");
 	FAssertMsg(iImprovement > -1, "Index out of bounds");
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		ImprovementModifier kMod = m_aImprovementUpgradeModifierTypes[iImprovement];
 		if (isNegativeTrait() && kMod.iModifier > 0)
@@ -28134,7 +27905,7 @@ BuildModifier CvTraitInfo::getBuildWorkerSpeedModifier(int iBuild)
 	FAssertMsg(iBuild < (int)m_aBuildWorkerSpeedModifierTypes.size(), "Index out of bounds");
 	FAssertMsg(iBuild > -1, "Index out of bounds");
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		BuildModifier kMod = m_aBuildWorkerSpeedModifierTypes[iBuild];
 		if (isNegativeTrait() && kMod.iModifier > 0)
@@ -28173,7 +27944,7 @@ DomainModifier CvTraitInfo::getDomainFreeExperience(int iDomain)
 	FAssertMsg(iDomain < (int)m_aDomainFreeExperiences.size(), "Index out of bounds");
 	FAssertMsg(iDomain > -1, "Index out of bounds");
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		DomainModifier kMod = m_aDomainFreeExperiences[iDomain];
 		if (isNegativeTrait() && kMod.iModifier > 0)
@@ -28199,7 +27970,7 @@ DomainModifier CvTraitInfo::getDomainProductionModifier(int iDomain)
 	FAssertMsg(iDomain < (int)m_aDomainProductionModifiers.size(), "Index out of bounds");
 	FAssertMsg(iDomain > -1, "Index out of bounds");
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		DomainModifier kMod = m_aDomainProductionModifiers[iDomain];
 		if (isNegativeTrait() && kMod.iModifier > 0)
@@ -28225,7 +27996,7 @@ TechModifier CvTraitInfo::getTechResearchModifier(int iTech)
 	FAssertMsg(iTech < (int)m_aTechResearchModifiers.size(), "Index out of bounds");
 	FAssertMsg(iTech > -1, "Index out of bounds");
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		TechModifier kMod = m_aTechResearchModifiers[iTech];
 		if (isNegativeTrait() && kMod.iModifier > 0)
@@ -28251,7 +28022,7 @@ BuildingModifier CvTraitInfo::getBuildingProductionModifier(int iBuilding)
 	FAssertMsg(iBuilding < (int)m_aBuildingProductionModifiers.size(), "Index out of bounds");
 	FAssertMsg(iBuilding > -1, "Index out of bounds");
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		BuildingModifier kMod = m_aBuildingProductionModifiers[iBuilding];
 		if (isNegativeTrait() && kMod.iModifier > 0)
@@ -28277,7 +28048,7 @@ SpecialBuildingModifier CvTraitInfo::getSpecialBuildingProductionModifier(int iS
 	FAssertMsg(iSpecialBuilding < (int)m_aSpecialBuildingProductionModifiers.size(), "Index out of bounds");
 	FAssertMsg(iSpecialBuilding > -1, "Index out of bounds");
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		SpecialBuildingModifier kMod = m_aSpecialBuildingProductionModifiers[iSpecialBuilding];
 		if (isNegativeTrait() && kMod.iModifier > 0)
@@ -28303,7 +28074,7 @@ BuildingModifier CvTraitInfo::getBuildingHappinessModifier(int iBuilding)
 	FAssertMsg(iBuilding < (int)m_aBuildingHappinessModifiers.size(), "Index out of bounds");
 	FAssertMsg(iBuilding > -1, "Index out of bounds");
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		BuildingModifier kMod = m_aBuildingHappinessModifiers[iBuilding];
 		if (isNegativeTrait() && kMod.iModifier > 0)
@@ -28329,7 +28100,7 @@ UnitModifier CvTraitInfo::getUnitProductionModifier(int iUnit)
 	FAssertMsg(iUnit < (int)m_aUnitProductionModifiers.size(), "Index out of bounds");
 	FAssertMsg(iUnit > -1, "Index out of bounds");
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		UnitModifier kMod = m_aUnitProductionModifiers[iUnit];
 		if (isNegativeTrait() && kMod.iModifier > 0)
@@ -28355,7 +28126,7 @@ SpecialUnitModifier CvTraitInfo::getSpecialUnitProductionModifier(int iSpecialUn
 	FAssertMsg(iSpecialUnit < (int)m_aSpecialUnitProductionModifiers.size(), "Index out of bounds");
 	FAssertMsg(iSpecialUnit > -1, "Index out of bounds");
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		SpecialUnitModifier kMod = m_aSpecialUnitProductionModifiers[iSpecialUnit];
 		if (isNegativeTrait() && kMod.iModifier > 0)
@@ -28381,7 +28152,7 @@ CivicOptionTypeBool CvTraitInfo::isCivicOptionNoUpkeepType(int iCivicOption)
 	FAssertMsg(iCivicOption < (int)m_aCivicOptionNoUpkeepTypes.size(), "Index out of bounds");
 	FAssertMsg(iCivicOption > -1, "Index out of bounds");
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		CivicOptionTypeBool kMod = m_aCivicOptionNoUpkeepTypes[iCivicOption];
 		if (isNegativeTrait() && kMod.bBool)
@@ -28408,7 +28179,7 @@ UnitCombatModifier CvTraitInfo::getUnitCombatFreeExperience(int iUnitCombat)
 	FAssertMsg(iUnitCombat < (int)m_aUnitCombatFreeExperiences.size(), "Index out of bounds");
 	FAssertMsg(iUnitCombat > -1, "Index out of bounds");
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		UnitCombatModifier kMod = m_aUnitCombatFreeExperiences[iUnitCombat];
 		if (isNegativeTrait() && kMod.iModifier > 0)
@@ -28434,7 +28205,7 @@ UnitCombatModifier CvTraitInfo::getUnitCombatProductionModifier(int iUnitCombat)
 	FAssertMsg(iUnitCombat < (int)m_aUnitCombatProductionModifiers.size(), "Index out of bounds");
 	FAssertMsg(iUnitCombat > -1, "Index out of bounds");
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		UnitCombatModifier kMod = m_aUnitCombatProductionModifiers[iUnitCombat];
 		if (isNegativeTrait() && kMod.iModifier > 0)
@@ -28460,7 +28231,7 @@ BonusModifier CvTraitInfo::getBonusHappinessChange(int iBonus)
 	FAssertMsg((int)m_aBonusHappinessChanges[iBonus].eBonus < GC.getNumBonusInfos(), "Index out of bounds");
 	FAssertMsg((int)m_aBonusHappinessChanges[iBonus].eBonus > -1, "Index out of bounds");
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
 		BonusModifier kMod = m_aBonusHappinessChanges[iBonus];
 		if (isNegativeTrait() && kMod.iModifier > 0)
@@ -30603,7 +30374,7 @@ bool CvTraitInfo::readPass3()
 
 CvPropertyManipulators* CvTraitInfo::getPropertyManipulators()
 {
-	if (GC.getGameINLINE().isOption(GAMEOPTION_PURE_TRAITS) && isImpurePropertyManipulators())
+	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS) && isImpurePropertyManipulators())
 	{
 		return &m_PropertyManipulatorsNull;
 	}
@@ -41318,7 +41089,7 @@ CvUnitCombatInfo::CvUnitCombatInfo()
 	//PropertyManipulators
 	, m_PropertyManipulators()
 {
-	m_zobristValue = GC.getGameINLINE().getSorenRand().getInt();
+	m_zobristValue = GC.getGame().getSorenRand().getInt();
 }
 
 CvUnitCombatInfo::~CvUnitCombatInfo()
@@ -41677,7 +41448,7 @@ int CvUnitCombatInfo::getDefenseCombatModifierChange() const
 
 int CvUnitCombatInfo::getPursuitChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_FIGHT_OR_FLIGHT))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_FIGHT_OR_FLIGHT))
 	{
 		return 0;
 	}
@@ -41686,7 +41457,7 @@ int CvUnitCombatInfo::getPursuitChange(bool bForLoad) const
 
 int CvUnitCombatInfo::getEarlyWithdrawChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_FIGHT_OR_FLIGHT))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_FIGHT_OR_FLIGHT))
 	{
 		return 0;
 	}
@@ -41710,7 +41481,7 @@ int CvUnitCombatInfo::getPunctureChange() const
 
 int CvUnitCombatInfo::getOverrunChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -41719,7 +41490,7 @@ int CvUnitCombatInfo::getOverrunChange(bool bForLoad) const
 
 int CvUnitCombatInfo::getRepelChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -41728,7 +41499,7 @@ int CvUnitCombatInfo::getRepelChange(bool bForLoad) const
 
 int CvUnitCombatInfo::getFortRepelChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -41737,7 +41508,7 @@ int CvUnitCombatInfo::getFortRepelChange(bool bForLoad) const
 
 int CvUnitCombatInfo::getRepelRetriesChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -41746,7 +41517,7 @@ int CvUnitCombatInfo::getRepelRetriesChange(bool bForLoad) const
 
 int CvUnitCombatInfo::getUnyieldingChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -41755,7 +41526,7 @@ int CvUnitCombatInfo::getUnyieldingChange(bool bForLoad) const
 
 int CvUnitCombatInfo::getKnockbackChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -41764,7 +41535,7 @@ int CvUnitCombatInfo::getKnockbackChange(bool bForLoad) const
 
 int CvUnitCombatInfo::getKnockbackRetriesChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -41773,7 +41544,7 @@ int CvUnitCombatInfo::getKnockbackRetriesChange(bool bForLoad) const
 
 int CvUnitCombatInfo::getStrAdjperAttChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_BATTLEWORN))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_BATTLEWORN))
 	{
 		return 0;
 	}
@@ -41782,7 +41553,7 @@ int CvUnitCombatInfo::getStrAdjperAttChange(bool bForLoad) const
 
 int CvUnitCombatInfo::getStrAdjperDefChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_BATTLEWORN))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_BATTLEWORN))
 	{
 		return 0;
 	}
@@ -41791,7 +41562,7 @@ int CvUnitCombatInfo::getStrAdjperDefChange(bool bForLoad) const
 
 int CvUnitCombatInfo::getWithdrawAdjperAttChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_BATTLEWORN))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_BATTLEWORN))
 	{
 		return 0;
 	}
@@ -41800,7 +41571,7 @@ int CvUnitCombatInfo::getWithdrawAdjperAttChange(bool bForLoad) const
 
 int CvUnitCombatInfo::getUnnerveChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_SAD))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_SAD))
 	{
 		return 0;
 	}
@@ -41809,7 +41580,7 @@ int CvUnitCombatInfo::getUnnerveChange(bool bForLoad) const
 
 int CvUnitCombatInfo::getEncloseChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_SAD))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_SAD))
 	{
 		return 0;
 	}
@@ -41818,7 +41589,7 @@ int CvUnitCombatInfo::getEncloseChange(bool bForLoad) const
 
 int CvUnitCombatInfo::getLungeChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_SAD))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_SAD))
 	{
 		return 0;
 	}
@@ -41827,7 +41598,7 @@ int CvUnitCombatInfo::getLungeChange(bool bForLoad) const
 
 int CvUnitCombatInfo::getDynamicDefenseChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_SAD))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_SAD))
 	{
 		return 0;
 	}
@@ -41846,7 +41617,7 @@ int CvUnitCombatInfo::getFortitudeChange() const
 
 int CvUnitCombatInfo::getFrontSupportPercentChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 	{
 		return 0;
 	}
@@ -41855,7 +41626,7 @@ int CvUnitCombatInfo::getFrontSupportPercentChange(bool bForLoad) const
 
 int CvUnitCombatInfo::getShortRangeSupportPercentChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 	{
 		return 0;
 	}
@@ -41864,7 +41635,7 @@ int CvUnitCombatInfo::getShortRangeSupportPercentChange(bool bForLoad) const
 
 int CvUnitCombatInfo::getMediumRangeSupportPercentChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 	{
 		return 0;
 	}
@@ -41873,7 +41644,7 @@ int CvUnitCombatInfo::getMediumRangeSupportPercentChange(bool bForLoad) const
 
 int CvUnitCombatInfo::getLongRangeSupportPercentChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 	{
 		return 0;
 	}
@@ -41882,7 +41653,7 @@ int CvUnitCombatInfo::getLongRangeSupportPercentChange(bool bForLoad) const
 
 int CvUnitCombatInfo::getFlankSupportPercentChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 	{
 		return 0;
 	}
@@ -41981,7 +41752,7 @@ int CvUnitCombatInfo::getTauntChange() const
 
 int CvUnitCombatInfo::getMaxHPChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
 		return 0;
 	}
@@ -42045,7 +41816,7 @@ int CvUnitCombatInfo::getDCMBombAccuracyBase() const
 
 int CvUnitCombatInfo::getCombatModifierPerSizeMoreChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
 		return 0;
 	}
@@ -42054,7 +41825,7 @@ int CvUnitCombatInfo::getCombatModifierPerSizeMoreChange(bool bForLoad) const
 
 int CvUnitCombatInfo::getCombatModifierPerSizeLessChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
 		return 0;
 	}
@@ -42063,7 +41834,7 @@ int CvUnitCombatInfo::getCombatModifierPerSizeLessChange(bool bForLoad) const
 
 int CvUnitCombatInfo::getCombatModifierPerVolumeMoreChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
 		return 0;
 	}
@@ -42072,7 +41843,7 @@ int CvUnitCombatInfo::getCombatModifierPerVolumeMoreChange(bool bForLoad) const
 
 int CvUnitCombatInfo::getCombatModifierPerVolumeLessChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
 		return 0;
 	}
@@ -42126,7 +41897,7 @@ int CvUnitCombatInfo::getInvestigationChange() const
 
 int CvUnitCombatInfo::getStealthStrikesChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_WITHOUT_WARNING))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_WITHOUT_WARNING))
 	{
 		return 0;
 	}
@@ -42135,7 +41906,7 @@ int CvUnitCombatInfo::getStealthStrikesChange(bool bForLoad) const
 
 int CvUnitCombatInfo::getStealthCombatModifierChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_WITHOUT_WARNING))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_WITHOUT_WARNING))
 	{
 		return 0;
 	}
@@ -42144,7 +41915,7 @@ int CvUnitCombatInfo::getStealthCombatModifierChange(bool bForLoad) const
 
 int CvUnitCombatInfo::getStealthDefenseChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_WITHOUT_WARNING))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_WITHOUT_WARNING))
 	{
 		return 0;
 	}

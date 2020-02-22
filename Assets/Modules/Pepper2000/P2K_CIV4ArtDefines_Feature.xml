@@ -592,7 +592,7 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
         <FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_WATER_PLANET</Type>
+			<Type>ART_DEF_FEATURE_OCEAN_PLANET</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>

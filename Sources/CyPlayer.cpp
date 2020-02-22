@@ -170,7 +170,7 @@ CyUnit* CyPlayer::initUnit(int /*UnitTypes*/ iIndex, int iX, int iY, UnitAITypes
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
-	return m_pPlayer ? new CyUnit(m_pPlayer->initUnit((UnitTypes) iIndex, iX, iY, eUnitAI, eFacingDirection, GC.getGameINLINE().getSorenRandNum(10000, "AI Unit Birthmark"))) : NULL;
+	return m_pPlayer ? new CyUnit(m_pPlayer->initUnit((UnitTypes) iIndex, iX, iY, eUnitAI, eFacingDirection, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"))) : NULL;
 }
 
 void CyPlayer::disbandUnit(bool bAnnounce)
@@ -558,9 +558,9 @@ bool CyPlayer::canMaintain(int /*ProcessTypes*/ eProcess, bool bContinue)
 	return m_pPlayer ? m_pPlayer->canMaintain((ProcessTypes)eProcess, bContinue) : false;
 }
 
-bool CyPlayer::isProductionMaxedUnitClass(int /*UnitClassTypes*/ eUnitClass)
+bool CyPlayer::isProductionMaxedUnit(int /*UnitTypes*/ eUnit)
 {
-	return m_pPlayer ? m_pPlayer->isProductionMaxedUnitClass((UnitClassTypes) eUnitClass) : false;
+	return m_pPlayer ? m_pPlayer->isProductionMaxedUnit((UnitTypes) eUnit) : false;
 }
 
 bool CyPlayer::isProductionMaxedBuildingClass(int /*BuildingClassTypes*/ eBuildingClass, bool bAcquireCity)
@@ -1272,18 +1272,10 @@ int CyPlayer::getCityDefenseModifier()
 	return m_pPlayer ? m_pPlayer->getCityDefenseModifier() : -1;
 }
 
-/************************************************************************************************/
-/* LoR                                        11/03/10                          phungus420      */
-/*                                                                                              */
-/* Colonists                                                                                    */
-/************************************************************************************************/
 int CyPlayer::getBestUnitType(int /*UnitAITypes*/ eUnitAI) const
 {
 	return m_pPlayer ? (int) m_pPlayer->getBestUnitType(UnitAITypes(eUnitAI)) : -1;
 }
-/************************************************************************************************/
-/* LoR                            END                                                           */
-/************************************************************************************************/
 
 /************************************************************************************************/
 /* REVDCM                                 09/02/10                                phungus420    */
@@ -2101,24 +2093,24 @@ int CyPlayer::getFeatureHappiness(int /*FeatureTypes*/ iIndex)
 	return m_pPlayer ? m_pPlayer->getFeatureHappiness((FeatureTypes)iIndex) : -1;
 }
 
-int CyPlayer::getUnitClassCount(int /*UnitClassTypes*/ eIndex)
+int CyPlayer::getUnitCount(int /*UnitTypes*/ eIndex)
 {
-	return (m_pPlayer && eIndex >= 0) ? m_pPlayer->getUnitClassCount((UnitClassTypes) eIndex) : 0;
+	return (m_pPlayer && eIndex >= 0) ? m_pPlayer->getUnitCount((UnitTypes) eIndex) : 0;
 }
 
-bool CyPlayer::isUnitClassMaxedOut(int /*UnitClassTypes*/ eIndex, int iExtra)
+bool CyPlayer::isUnitMaxedOut(int /*UnitTypes*/ eIndex, int iExtra)
 {
-	return (m_pPlayer && eIndex >= 0) ? m_pPlayer->isUnitClassMaxedOut((UnitClassTypes) eIndex, iExtra) : false;
+	return (m_pPlayer && eIndex >= 0) ? m_pPlayer->isUnitMaxedOut((UnitTypes) eIndex, iExtra) : false;
 }
 
-int CyPlayer::getUnitClassMaking(int /*UnitClassTypes*/ eIndex)
+int CyPlayer::getUnitMaking(int /*UnitTypes*/ eIndex)
 {
-	return (m_pPlayer && eIndex >= 0) ? m_pPlayer->getUnitClassMaking((UnitClassTypes) eIndex) : 0;
+	return (m_pPlayer && eIndex >= 0) ? m_pPlayer->getUnitMaking((UnitTypes) eIndex) : 0;
 }
 
-int CyPlayer::getUnitClassCountPlusMaking(int /*UnitClassTypes*/ eIndex)
+int CyPlayer::getUnitCountPlusMaking(int /*UnitTypes*/ eIndex)
 {
-	return (m_pPlayer && eIndex >= 0) ? m_pPlayer->getUnitClassCountPlusMaking((UnitClassTypes) eIndex) : 0;
+	return (m_pPlayer && eIndex >= 0) ? m_pPlayer->getUnitCountPlusMaking((UnitTypes) eIndex) : 0;
 }
 
 int CyPlayer::getBuildingClassCount(int /*BuildingClassTypes*/ iIndex)
@@ -3275,7 +3267,7 @@ void CyPlayer::addBLList()
 	if (NULL != pInfo)
 	{
 		pInfo->setData1(-1);
-		gDLL->getInterfaceIFace()->addPopup(pInfo, GC.getGameINLINE().getActivePlayer(), true, true);
+		gDLL->getInterfaceIFace()->addPopup(pInfo, GC.getGame().getActivePlayer(), true, true);
 	}
 	//CvMessageControl::getInstance().sendBuildListEdit(-1, CvString(szName));
 }
@@ -3286,7 +3278,7 @@ void CyPlayer::renameBLList(int iID)
 	if (NULL != pInfo)
 	{
 		pInfo->setData1(iID);
-		gDLL->getInterfaceIFace()->addPopup(pInfo, GC.getGameINLINE().getActivePlayer(), true, true);
+		gDLL->getInterfaceIFace()->addPopup(pInfo, GC.getGame().getActivePlayer(), true, true);
 	}
 	//CvMessageControl::getInstance().sendBuildListEdit(iID, CvString(szName));
 }

@@ -33,6 +33,7 @@ m_iDCMAirbombMission(0),
 /************************************************************************************************/
 
 m_iBuildingClassType(NO_BUILDINGCLASS),
+m_bNoLimit(false),
 m_iVictoryPrereq(NO_VICTORY),
 m_iFreeStartEra(NO_ERA),
 m_iMaxStartEra(NO_ERA),
@@ -486,6 +487,11 @@ CvBuildingInfo::~CvBuildingInfo()
 int CvBuildingInfo::getBuildingClassType() const
 {
 	return m_iBuildingClassType;
+}
+
+bool CvBuildingInfo::isNoLimit() const
+{
+	return m_bNoLimit;
 }
 
 int CvBuildingInfo::getVictoryPrereq() const
@@ -1953,7 +1959,7 @@ int CvBuildingInfo::getOccupationTimeModifier() const
 
 int CvBuildingInfo::getNoEntryDefenseLevel(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_REALISTIC_SIEGE))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_REALISTIC_SIEGE))
 	{
 		return 0;
 	}
@@ -2559,7 +2565,7 @@ int CvBuildingInfo::getRiverDefensePenalty() const
 
 int CvBuildingInfo::getLocalRepel(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -2568,7 +2574,7 @@ int CvBuildingInfo::getLocalRepel(bool bForLoad) const
 
 int CvBuildingInfo::getMinDefense(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_REALISTIC_SIEGE))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_REALISTIC_SIEGE))
 	{
 		return 0;
 	}
@@ -2597,7 +2603,7 @@ int CvBuildingInfo::getDamageToAttacker() const
 
 int CvBuildingInfo::getMaxPopulationAllowed(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_MAXIMUM_POPULATION))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_MAXIMUM_POPULATION))
 	{
 		return -1;
 	}
@@ -2606,7 +2612,7 @@ int CvBuildingInfo::getMaxPopulationAllowed(bool bForLoad) const
 
 int CvBuildingInfo::getMaxPopulationChange(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_MAXIMUM_POPULATION))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_MAXIMUM_POPULATION))
 	{
 		return 0;
 	}
@@ -2816,7 +2822,7 @@ int CvBuildingInfo::getNumUnitCombatRepelModifiers() const
 
 int CvBuildingInfo::getUnitCombatRepelModifier(int iUnitCombat, bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -2838,7 +2844,7 @@ int CvBuildingInfo::getNumUnitCombatRepelAgainstModifiers() const
 
 int CvBuildingInfo::getUnitCombatRepelAgainstModifier(int iUnitCombat, bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -2896,7 +2902,7 @@ int CvBuildingInfo::getNumUnitCombatOngoingTrainingDurations() const
 
 int CvBuildingInfo::getUnitCombatOngoingTrainingDuration(int iUnitCombat, bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGameINLINE().isOption(GAMEOPTION_ONGOING_TRAINING))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_ONGOING_TRAINING))
 	{
 		return 0;
 	}
@@ -3138,6 +3144,7 @@ bool CvBuildingInfo::EnablesUnits() const
 void CvBuildingInfo::getCheckSum(unsigned int& iSum)
 {
 	CheckSum(iSum, m_iBuildingClassType);
+	CheckSum(iSum, m_bNoLimit);
 	CheckSum(iSum, m_iVictoryPrereq);
 	CheckSum(iSum, m_iFreeStartEra);
 	CheckSum(iSum, m_iMaxStartEra);
@@ -3643,6 +3650,8 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"Advisor");
 	m_iAdvisorType = pXML->GetInfoClass(szTextVal);
+
+	pXML->GetOptionalChildXmlValByName(&m_bNoLimit, L"bNoLimit");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"ArtDefineTag");
 	setArtDefineTag(szTextVal);
@@ -5443,6 +5452,8 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 	if (getBuildingClassType() == iTextDefault) m_iBuildingClassType = pClassInfo->getBuildingClassType();
 	if (getSpecialBuildingType() == iTextDefault) m_iSpecialBuildingType = pClassInfo->getSpecialBuildingType();
 	if (getAdvisorType() == iTextDefault) m_iAdvisorType = pClassInfo->getAdvisorType();
+
+	if (isNoLimit() == bDefault) m_bNoLimit = pClassInfo->isNoLimit();
 
 /********************************************************************************/
 /**		REVDCM									2/16/10				phungus420	*/

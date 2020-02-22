@@ -13044,19 +13044,19 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 		<Spanish>Nomenclatura: Combat[ENTERTAINER]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__COMBAT_ERA_SEDENTARY_HOVER</Tag>
-		<English>Enter the user defined naming convention for combat units 'ERA_SEDENTARY'.</English>
-		<French>Entrez la convention des noms pour les unités 'ERA_SEDENTARY'.</French>
-		<German>Eingabe der benutzerdefinierten Benennungsregel für 'ERA_SEDENTARY' Einheiten</German>
-		<Italian>Inserisci la tua convenzione di denominazione personalizzata per le Unità di Combattimento Corazzate ('Combat[ERA_SEDENTARY]').</Italian>
-		<Spanish>Introduce la nomenclatura que desees para nombrar a las unidades de tipo 'ERA_SEDENTARY'.</Spanish>
+		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__COMBAT_ERA_ANCIENT_HOVER</Tag>
+		<English>Enter the user defined naming convention for combat units 'ERA_ANCIENT'.</English>
+		<French>Entrez la convention des noms pour les unités 'ERA_ANCIENT'.</French>
+		<German>Eingabe der benutzerdefinierten Benennungsregel für 'ERA_ANCIENT' Einheiten</German>
+		<Italian>Inserisci la tua convenzione di denominazione personalizzata per le Unità di Combattimento Corazzate ('Combat[ERA_ANCIENT]').</Italian>
+		<Spanish>Introduce la nomenclatura que desees para nombrar a las unidades de tipo 'ERA_ANCIENT'.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__COMBAT_ERA_SEDENTARY_TEXT</Tag>
-		<English>Naming Convention: Combat[ERA_SEDENTARY]</English>
-		<French>Convention des Noms: Combat[ERA_SEDENTARY]</French>
-		<German>Benennungsregel: Kampf[ERA_SEDENTARY]</German>
-		<Spanish>Nomenclatura: Combat[ERA_SEDENTARY]</Spanish>
+		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__COMBAT_ERA_ANCIENT_TEXT</Tag>
+		<English>Naming Convention: Combat[ERA_ANCIENT]</English>
+		<French>Convention des Noms: Combat[ERA_ANCIENT]</French>
+		<German>Benennungsregel: Kampf[ERA_ANCIENT]</German>
+		<Spanish>Nomenclatura: Combat[ERA_ANCIENT]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__COMBAT_ERA_CLASSICAL_HOVER</Tag>
@@ -13134,34 +13134,34 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 		<Spanish>Nomenclatura: Combat[ERA_MEDIEVAL]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__COMBAT_ERA_MODERN_HOVER</Tag>
-		<English>Enter the user defined naming convention for combat units 'ERA_MODERN'.</English>
-		<French>Entrez la convention des noms pour les unités 'ERA_MODERN'.</French>
-		<German>Eingabe der benutzerdefinierten Benennungsregel für 'ERA_MODERN' Einheiten</German>
-		<Italian>Inserisci la tua convenzione di denominazione personalizzata per le Unità di Combattimento Corazzate ('Combat[ERA_MODERN]').</Italian>
-		<Spanish>Introduce la nomenclatura que desees para nombrar a las unidades de tipo 'ERA_MODERN'.</Spanish>
+		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__COMBAT_ERA_ATOMIC_HOVER</Tag>
+		<English>Enter the user defined naming convention for combat units 'ERA_ATOMIC'.</English>
+		<French>Entrez la convention des noms pour les unités 'ERA_ATOMIC'.</French>
+		<German>Eingabe der benutzerdefinierten Benennungsregel für 'ERA_ATOMIC' Einheiten</German>
+		<Italian>Inserisci la tua convenzione di denominazione personalizzata per le Unità di Combattimento Corazzate ('Combat[ERA_ATOMIC]').</Italian>
+		<Spanish>Introduce la nomenclatura que desees para nombrar a las unidades de tipo 'ERA_ATOMIC'.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__COMBAT_ERA_MODERN_TEXT</Tag>
-		<English>Naming Convention: Combat[ERA_MODERN]</English>
-		<French>Convention des Noms: Combat[ERA_MODERN]</French>
-		<German>Benennungsregel: Kampf[ERA_MODERN]</German>
-		<Spanish>Nomenclatura: Combat[ERA_MODERN]</Spanish>
+		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__COMBAT_ERA_ATOMIC_TEXT</Tag>
+		<English>Naming Convention: Combat[ERA_ATOMIC]</English>
+		<French>Convention des Noms: Combat[ERA_ATOMIC]</French>
+		<German>Benennungsregel: Kampf[ERA_ATOMIC]</German>
+		<Spanish>Nomenclatura: Combat[ERA_ATOMIC]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__COMBAT_ERA_ANCIENT_HOVER</Tag>
-		<English>Enter the user defined naming convention for combat units 'ERA_ANCIENT'.</English>
-		<French>Entrez la convention des noms pour les unités 'ERA_ANCIENT'.</French>
-		<German>Eingabe der benutzerdefinierten Benennungsregel für 'ERA_ANCIENT' Einheiten</German>
-		<Italian>Inserisci la tua convenzione di denominazione personalizzata per le Unità di Combattimento Corazzate ('Combat[ERA_ANCIENT]').</Italian>
-		<Spanish>Introduce la nomenclatura que desees para nombrar a las unidades de tipo 'ERA_ANCIENT'.</Spanish>
+		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__COMBAT_ERA_PREHISTORIC_HOVER</Tag>
+		<English>Enter the user defined naming convention for combat units 'ERA_PREHISTORIC'.</English>
+		<French>Entrez la convention des noms pour les unités 'ERA_PREHISTORIC'.</French>
+		<German>Eingabe der benutzerdefinierten Benennungsregel für 'ERA_PREHISTORIC' Einheiten</German>
+		<Italian>Inserisci la tua convenzione di denominazione personalizzata per le Unità di Combattimento Corazzate ('Combat[ERA_PREHISTORIC]').</Italian>
+		<Spanish>Introduce la nomenclatura que desees para nombrar a las unidades de tipo 'ERA_PREHISTORIC'.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__COMBAT_ERA_ANCIENT_TEXT</Tag>
-		<English>Naming Convention: Combat[ERA_ANCIENT]</English>
-		<French>Convention des Noms: Combat[ERA_ANCIENT]</French>
-		<German>Benennungsregel: Kampf[ERA_ANCIENT]</German>
-		<Spanish>Nomenclatura: Combat[ERA_ANCIENT]</Spanish>
+		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__COMBAT_ERA_PREHISTORIC_TEXT</Tag>
+		<English>Naming Convention: Combat[ERA_PREHISTORIC]</English>
+		<French>Convention des Noms: Combat[ERA_PREHISTORIC]</French>
+		<German>Benennungsregel: Kampf[ERA_PREHISTORIC]</German>
+		<Spanish>Nomenclatura: Combat[ERA_PREHISTORIC]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__COMBAT_ERA_RENAISSANCE_HOVER</Tag>

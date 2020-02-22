@@ -807,44 +807,11 @@ class PyGame:
 				listTechs.append(loopInfo)
 		return listTechs
 
-	def getListUniqueUnits(self):
-		lUniqueUnits = self.getListUniqueUnitID()
-		lUnitInfos = []
-		for i in range(len(lUniqueUnits)):
-			lUnitInfos.append(PyInfo.UnitInfo(lUniqueUnits[i]))
-		return lUnitInfos
-
-	def getListUniqueUnitID(self):
-		listUU = []
-		unitClass = []
-		for i in range(gc.getNumUnitInfos()):
-			iUnitClass = PyInfo.UnitInfo(i).getUnitClassType()
-			if iUnitClass in unitClass:
-				listUU.append(i)
-			else:
-				unitClass.append(iUnitClass)
-		return listUU
-
 	def getListAnimalUnits(self):
 		listUnits = []
 		for i in range(gc.getNumUnitInfos()):
 			loopUnit = PyInfo.UnitInfo(i)
 			if loopUnit.isAnimal():
-				listUnits.append(loopUnit)
-		return listUnits
-
-	def getListUnitCombatTypes(self, combatType, bUnique):
-		"listObj - list of unit infos of a particular combat type"
-		CombatTypes = {0:(0,'Neutral'),1:(1,'Recon'),2:(2,'Archery'),3:(3,'Mounted'),4:(4,'Melee'),5:(5,'Siege'),6:(6,'Gunpowder')}
-		listUnits = []
-		if bUnique:
-			UUidList = self.getListUniqueUnitID()
-		for i in range(gc.getNumUnitInfos()):
-			if bUnique:
-				if i in UUidList:
-					continue
-			loopUnit = PyInfo.UnitInfo(i)
-			if loopUnit.getUnitCombatType() == combatType:
 				listUnits.append(loopUnit)
 		return listUnits
 
@@ -1017,13 +984,6 @@ class PyInfo:
 		def getUnitClassType(self):
 			"str - unit class type"
 			return self.info.getUnitClassType()
-
-		def isUniqueUnit(self):
-			"bool - is this unit a unique unit"
-			lUniqueUnits = PyGame.PyGame().getListUniqueUnitID()
-			if self.unitID in lUniqueUnits:
-				return True
-			return False
 
 		def getListUnitClassID(self):
 			"intList - id list of all unit infos that match combat type with current unit"
@@ -1305,30 +1265,12 @@ class PyInfo:
 					unitList.append(i)
 			return unitList
 
-		def getNoUniqueUnlockedUnitIDList(self):
-			lUniqueUnits = PyGame.PyGame().getListUniqueUnitID()
-			lAllUnits = self.getUnlockedUnitIdxList()
-			lUnits = []
-			for i in range(len(lAllUnits)):
-				loopUnit = lAllUnits[i]
-				if loopUnit in lUniqueUnits:
-					continue
-				else:
-					lUnits.append(loopUnit)
-			return lUnits
-
 		def getListUnlockedUnitInfos(self):
 			"objList - info list of unlocked units"
 			unitList = []
 			for i in range(len(self.getUnlockedUnitIdxList())):
 				unitList.append(UnitInfo(idList[i]))
 			return unitList
-
-		def getNoUniqueUnlockedUnitInfoList(self):
-			lUnitInfos = []
-			for unitID in self.getNoUniqueUnlockedUnitIDList():
-				lUnitInfos.append(UnitInfo(unitID))
-			return lUnitInfos
 
 		def getUnlockedReligionIdxList(self):
 			"intList - IDList of unlocked Religions"

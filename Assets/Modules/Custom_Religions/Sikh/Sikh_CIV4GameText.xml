@@ -6,14 +6,14 @@
 <!-- GameText Civilopedia -->
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_SIKHISM</Tag>
+		<Tag>TXT_KEY_TECH_SIKHISM</Tag>
 		<English>Sikhism</English>
 		<French>Sikhisme</French>
 		<Italian>Sikhismo</Italian>
 		<Polish>Sikhizm</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_SIKHISM_PEDIA</Tag>
+		<Tag>TXT_KEY_TECH_SIKHISM_PEDIA</Tag>
 		<English>The origins of the Sikhs, a religious group initially formed as a sect within the larger Hindu community, lie in the Punjab in the 15th century. The Sikh founder, Guru Nanak (1469-1539),was roughly a contemporary of the founder of Mughal fortunes in India, Babur, and belonged to the Khatri community of scribes and traders. From an early career as a scribe for an important noble of the Lody dynasty, Nanak became a wandering preacher before settling down at Kartarpur in the Punjab at about the time of Babur's invasion. By the time of his death, he had numerous followers, albeit within a limited region, and, like many other religious leaders of the time, founded a fictive lineage (i.e., one not related by blood) of Gurus who succeeded him. His immediate successor was Guru Angad, chosen by Nanak before his death. He, too, was a Khatri, as indeed were all the remaining Gurus, though of various subcastes.  In practice, the essential teachings of Nanak, collected in the Adi Granth (Punjabi: "First Book"), represented a syncretic melding of elements of Vaisnava devotional Hinduism and Sufic Islam, with a goodly amount of social criticism thrown in.</English>
 		<French>Sikhisme</French>
 		<German>Sikhism</German>
@@ -22,14 +22,14 @@
 		<Polish>Sikhizm - religia powstała w XV wieku w Indiach w prowincji Pendżab. Jej założycielem był Guru Nanak. Obecnie na świecie jest ok. 24 milionów wyznawców tej religii (sikhów) - żyją oni głównie w indyjskim Pendżabie, ale posiadają także liczną kilkumilionową diasporę rozsianą po krajach dawnego Imperium Brytyjskiego i w USA (tu stosunkowo liczni są również zachodni konwertyci na sikhizm - często w bardzo nieortodoksyjnej formie). Najważniejszym miejscem kultu jest "Złota Swiątynia" w Amritsarze, w której przechowywany jest oryginał świętej księgi sikhów zwanej Sri Guru Granth Sahib.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_SIKHISM_QUOTE</Tag>
+		<Tag>TXT_KEY_TECH_SIKHISM_QUOTE</Tag>
 		<English>"Meditation of the Lord is the highest of the deeds, through which myriads obtain release, through which one becomes all knowing, through which the dirt of the mind is cleansed and the Nectar of the Name of God is absorbed in the mind." - Guru Nanak, Gauri Sukhmani</English>
 		<French>"une Méditation of the un Seigneur is the highest of the deeds, through which myriads obtain release, through which one becomes all knowing, through which the dirt of the mind is cleansed and the Nectar of the un Nom of God is absorbed in the mind." - Guru Nanak, Gauri Sukhmani</French>
 		<Spanish>"La meditación del Señor es la mayor de las hazañas, a través de ella miles obtienen la liberación, a través de ella uno adquiere todo el conocimiento, a través de ella se limpia la suciedad de la mente y se absorbe en ella el Néctar del Nombre de Dios." - Gurú Nanak, Gauri Sukhmani</Spanish>
 		<Polish>"Medytacja to najwyższa z cnót Pana, przez którą myriady doznają ukojenia, przez którą jest wszewiedzący, przez którą nieczystość umysłu zostaje usunięta i tylko nektar Imienia Boga jest przyjęty w duszy." - Guru Nanak, Gauri Sukhmani</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_SIKHISM_STRATEGY</Tag>
+		<Tag>TXT_KEY_TECH_SIKHISM_STRATEGY</Tag>
 		<English>Research Sikhism to found a Religion</English>
 		<French>Recherchez Sikhism pour fonder une religion</French>
 		<Spanish>Investiga el Sijismo para fundar una religión.</Spanish>

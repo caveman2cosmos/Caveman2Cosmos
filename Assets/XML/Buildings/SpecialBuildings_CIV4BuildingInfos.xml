@@ -88,7 +88,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_WILDERNESSC</PrereqTech>
+			<PrereqTech>TECH_WILDLIFE_CONSERVATION</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_WRITING</PrereqTech>
 			</TechTypes>
@@ -232,7 +232,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_WILDERNESSC</PrereqTech>
+			<PrereqTech>TECH_WILDLIFE_CONSERVATION</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_WRITING</PrereqTech>
 			</TechTypes>
@@ -682,11 +682,11 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Cereal Mills -->
-			<BuildingClass>BUILDINGCLASS_CORPORATION_1</BuildingClass>
-			<Type>BUILDING_CORPORATION_1</Type>
+			<BuildingClass>BUILDINGCLASS_CORPORATION_1_HQ</BuildingClass>
+			<Type>BUILDING_CORPORATION_1_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_1_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_1_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_1_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_1_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CORPORATION_1_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -753,11 +753,11 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Sid's Sushi Co -->
-			<BuildingClass>BUILDINGCLASS_CORPORATION_2</BuildingClass>
-			<Type>BUILDING_CORPORATION_2</Type>
+			<BuildingClass>BUILDINGCLASS_CORPORATION_2_HQ</BuildingClass>
+			<Type>BUILDING_CORPORATION_2_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_2_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_2_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_2_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_2_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CORPORATION_2_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -825,11 +825,11 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Standard Ethanol -->
-			<BuildingClass>BUILDINGCLASS_CORPORATION_3</BuildingClass>
-			<Type>BUILDING_CORPORATION_3</Type>
+			<BuildingClass>BUILDINGCLASS_CORPORATION_3_HQ</BuildingClass>
+			<Type>BUILDING_CORPORATION_3_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_3_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_3_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_3_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_3_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CORPORATION_3_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -896,11 +896,11 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Creative Constructions -->
-			<BuildingClass>BUILDINGCLASS_CORPORATION_4</BuildingClass>
-			<Type>BUILDING_CORPORATION_4</Type>
+			<BuildingClass>BUILDINGCLASS_CORPORATION_4_HQ</BuildingClass>
+			<Type>BUILDING_CORPORATION_4_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_4_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_4_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_4_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_4_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CORPORATION_4_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -967,11 +967,11 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Mining Inc -->
-			<BuildingClass>BUILDINGCLASS_CORPORATION_5</BuildingClass>
-			<Type>BUILDING_CORPORATION_5</Type>
+			<BuildingClass>BUILDINGCLASS_CORPORATION_5_HQ</BuildingClass>
+			<Type>BUILDING_CORPORATION_5_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_5_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_5_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_5_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_5_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CORPORATION_5_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -1038,11 +1038,11 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Aluminum Co -->
-			<BuildingClass>BUILDINGCLASS_CORPORATION_6</BuildingClass>
-			<Type>BUILDING_CORPORATION_6</Type>
+			<BuildingClass>BUILDINGCLASS_CORPORATION_6_HQ</BuildingClass>
+			<Type>BUILDING_CORPORATION_6_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_6_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_6_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_6_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_6_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CORPORATION_6_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -1109,11 +1109,11 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Civilized Jewelers Inc -->
-			<BuildingClass>BUILDINGCLASS_CORPORATION_7</BuildingClass>
-			<Type>BUILDING_CORPORATION_7</Type>
+			<BuildingClass>BUILDINGCLASS_CORPORATION_7_HQ</BuildingClass>
+			<Type>BUILDING_CORPORATION_7_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_7_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_7_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_7_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_7_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CORPORATION_7_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -1183,8 +1183,8 @@
 			<BuildingClass>BUILDINGCLASS_CORPORATION_ADVENTURE_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_ADVENTURE_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_ADVENTURE_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_ADVENTURE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_ADVENTURE_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_ADVENTURE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_ADVENTURE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -1258,8 +1258,8 @@
 			<BuildingClass>BUILDINGCLASS_CORPORATION_BULLSEYE_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_BULLSEYE_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_BULLSEYE_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_BULLSEYE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_BULLSEYE_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_BULLSEYE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BULLSEYE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -1333,8 +1333,8 @@
 			<BuildingClass>BUILDINGCLASS_CORPORATION_BURGERWORLD_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_BURGERWORLD_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_BURGERWORLD_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_BURGERWORLD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_BURGERWORLD_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_BURGERWORLD_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BURGERWORLD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -1408,8 +1408,8 @@
 			<BuildingClass>BUILDINGCLASS_CORPORATION_EMPCLOTH_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_EMPCLOTH_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_EMPCLOTH_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_EMPCLOTH_HQ_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH_HQ_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_EMPCLOTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -1479,8 +1479,8 @@
 			<BuildingClass>BUILDINGCLASS_CORPORATION_EWTRADE_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_EWTRADE_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_EWTRADE_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_EWTRADE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_EWTRADE_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_EWTRADE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_EWTRADE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -1551,11 +1551,11 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Fashion House Headquarters -->
-			<BuildingClass>BUILDINGCLASS_CORPORATION_FASHION_HQ</BuildingClass>
+			<BuildingClass>BUILDINGCLASS_BUILDING_CORPORATION_FASHION_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_FASHION_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_FASHION_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_FASHION_HQ_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_FASHION_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_FASHION_HQ_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_FASHION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -1625,8 +1625,8 @@
 			<BuildingClass>BUILDINGCLASS_CORPORATION_MALLWART_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_MALLWART_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_MALLWART_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_MALLWART_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_MALLWART_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MALLWART_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_MALLWART_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -1700,8 +1700,8 @@
 			<BuildingClass>BUILDINGCLASS_CORPORATION_MAPSTER_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_MAPSTER_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_MAPSTER_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_MAPSTER_HQ_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_MAPSTER_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MAPSTER_HQ_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_MAPSTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -1772,8 +1772,8 @@
 			<BuildingClass>BUILDINGCLASS_CORPORATION_MCDOWELLS_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_MCDOWELLS_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_MCDOWELLS_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_MCDOWELLS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_MCDOWELLS_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MCDOWELLS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_MCDOWELLS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -1847,8 +1847,8 @@
 			<BuildingClass>BUILDINGCLASS_CORPORATION_MILEHIGH_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_MILEHIGH_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_MILEHIGH_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_MILEHIGH_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_MILEHIGH_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MILEHIGH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_MILEHIGH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -1918,8 +1918,8 @@
 			<BuildingClass>BUILDINGCLASS_CORPORATION_MOBBY_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_MOBBY_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_MOBBY_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_MOBBY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_MOBBY_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MOBBY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_MOBBY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -1993,8 +1993,8 @@
 			<BuildingClass>BUILDINGCLASS_CORPORATION_MOONBEAN_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_MOONBEAN_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_MOONBEAN_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_MOONBEAN_HQ_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_MOONBEAN_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MOONBEAN_HQ_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_MOONBEAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -2064,8 +2064,8 @@
 			<BuildingClass>BUILDINGCLASS_CORPORATION_RED_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_RED_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_RED_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_RED_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_RED_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_RED_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_RED_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -2141,8 +2141,8 @@
 			<BuildingClass>BUILDINGCLASS_CORPORATION_SAFARI_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_SAFARI_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_SAFARI_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_SAFARI_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_SAFARI_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_SAFARI_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_SAFARI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -2214,8 +2214,8 @@
 			<BuildingClass>BUILDINGCLASS_CORPORATION_ULTSOLDIER_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_ULTSOLDIER_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_ULTSOLDIER_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_ULTSOLDIER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_ULTSOLDIER_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_ULTSOLDIER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_ULTSOLDIER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<!-- Graphical and interface -->
@@ -2288,8 +2288,8 @@
 			<BuildingClass>BUILDINGCLASS_CORPORATION_WONKA_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_WONKA_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_WONKA_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_WONKA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_WONKA_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_WONKA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_WONKA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -2729,7 +2729,7 @@
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_MODERN_LIFESTYLE</PrereqTech>
+			<PrereqTech>TECH_ATOMIC_LIFESTYLE</PrereqTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Main effects -->
@@ -3512,7 +3512,7 @@
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_MODERN_LIFESTYLE</PrereqTech>
+			<PrereqTech>TECH_ATOMIC_LIFESTYLE</PrereqTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Main effects -->
@@ -4389,7 +4389,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_EQ_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqTech>TECH_MODERN_LIFESTYLE</PrereqTech>
+			<PrereqTech>TECH_ATOMIC_LIFESTYLE</PrereqTech>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
@@ -4560,9 +4560,9 @@
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
 			<BuildingClass>BUILDINGCLASS_KNOWLEDGE_BASE_ANCIENT</BuildingClass>
 			<Type>BUILDING_KNOWLEDGE_BASE_ANCIENT</Type>
-			<Description>TXT_KEY_KNOWLEDGE_BASE_ANCIENT</Description>
-			<Civilopedia>TXT_KEY_KNOWLEDGE_BASE_ANCIENT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_KNOWLEDGE_BASE_ANCIENT_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_ANCIENT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_ANCIENT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_KNOWLEDGE_BASE_ANCIENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
@@ -4592,9 +4592,9 @@
 			<!-- Education Increasing Cost(Knowledge Base 2) -->
 			<BuildingClass>BUILDINGCLASS_KNOWLEDGE_BASE_CLASSICAL</BuildingClass>
 			<Type>BUILDING_KNOWLEDGE_BASE_CLASSICAL</Type>
-			<Description>TXT_KEY_KNOWLEDGE_BASE_CLASSICAL</Description>
-			<Civilopedia>TXT_KEY_KNOWLEDGE_BASE_CLASSICAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_KNOWLEDGE_BASE_CLASSICAL_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_CLASSICAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_CLASSICAL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_KNOWLEDGE_BASE_CLASSICAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
@@ -4624,9 +4624,9 @@
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
 			<BuildingClass>BUILDINGCLASS_KNOWLEDGE_BASE_MEDIEVAL</BuildingClass>
 			<Type>BUILDING_KNOWLEDGE_BASE_MEDIEVAL</Type>
-			<Description>TXT_KEY_KNOWLEDGE_BASE_MEDIEVAL</Description>
-			<Civilopedia>TXT_KEY_KNOWLEDGE_BASE_MEDIEVAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_KNOWLEDGE_BASE_MEDIEVAL_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MEDIEVAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MEDIEVAL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MEDIEVAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
@@ -4656,9 +4656,9 @@
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
 			<BuildingClass>BUILDINGCLASS_KNOWLEDGE_BASE_RENAISSANCE</BuildingClass>
 			<Type>BUILDING_KNOWLEDGE_BASE_RENAISSANCE</Type>
-			<Description>TXT_KEY_KNOWLEDGE_BASE_RENAISSANCE</Description>
-			<Civilopedia>TXT_KEY_KNOWLEDGE_BASE_RENAISSANCE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_KNOWLEDGE_BASE_RENAISSANCE_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_RENAISSANCE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_RENAISSANCE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_KNOWLEDGE_BASE_RENAISSANCE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
@@ -4688,9 +4688,9 @@
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
 			<!-- <BuildingClass>BUILDINGCLASS_KNOWLEDGE_BASE_INDUSTRIAL</BuildingClass>
 			<Type>BUILDING_KNOWLEDGE_BASE_INDUSTRIAL</Type>
-			<Description>TXT_KEY_KNOWLEDGE_BASE_INDUSTRIAL</Description>
-			<Civilopedia>TXT_KEY_KNOWLEDGE_BASE_INDUSTRIAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_KNOWLEDGE_BASE_INDUSTRIAL_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_INDUSTRIAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_INDUSTRIAL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_KNOWLEDGE_BASE_INDUSTRIAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>-->
 			<!-- Graphical and interface -->
 			<!-- <ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
@@ -4721,15 +4721,15 @@
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
 			<!-- <BuildingClass>BUILDINGCLASS_KNOWLEDGE_BASE_MODERN</BuildingClass>
 			<Type>BUILDING_KNOWLEDGE_BASE_MODERN</Type>
-			<Description>TXT_KEY_KNOWLEDGE_BASE_MODERN</Description>
-			<Civilopedia>TXT_KEY_KNOWLEDGE_BASE_MODERN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_KNOWLEDGE_BASE_MODERN_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MODERN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MODERN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MODERN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>-->
 			<!-- Graphical and interface -->
 			<!-- <ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			-->
 			<!-- Prerequisites -->
-			<!-- <PrereqTech>TECH_MODERN_LIFESTYLE</PrereqTech>-->
+			<!-- <PrereqTech>TECH_ATOMIC_LIFESTYLE</PrereqTech>-->
 			<!-- Construction cost -->
 			<!-- <iCost>-1</iCost>-->
 			<!-- Misc. Effects -->
@@ -4754,9 +4754,9 @@
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
 			<!-- <BuildingClass>BUILDINGCLASS_KNOWLEDGE_BASE_INFORMATION</BuildingClass>
 			<Type>BUILDING_KNOWLEDGE_BASE_INFORMATION</Type>
-			<Description>TXT_KEY_KNOWLEDGE_BASE_INFORMATION</Description>
-			<Civilopedia>TXT_KEY_KNOWLEDGE_BASE_INFORMATION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_KNOWLEDGE_BASE_INFORMATION_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_INFORMATION</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_INFORMATION_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_KNOWLEDGE_BASE_INFORMATION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>-->
 			<!-- Graphical and interface -->
 			<!-- <ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
@@ -4787,9 +4787,9 @@
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
 			<!-- <BuildingClass>BUILDINGCLASS_KNOWLEDGE_BASE_NANOTECH</BuildingClass>
 			<Type>BUILDING_KNOWLEDGE_BASE_NANOTECH</Type>
-			<Description>TXT_KEY_KNOWLEDGE_BASE_NANOTECH</Description>
-			<Civilopedia>TXT_KEY_KNOWLEDGE_BASE_NANOTECH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_KNOWLEDGE_BASE_NANOTECH_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_NANOTECH</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_NANOTECH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_KNOWLEDGE_BASE_NANOTECH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>-->
 			<!-- Graphical and interface -->
 			<!-- <ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
@@ -4820,9 +4820,9 @@
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
 			<!-- <BuildingClass>BUILDINGCLASS_KNOWLEDGE_BASE_TRANSHUMAN</BuildingClass>
 			<Type>BUILDING_KNOWLEDGE_BASE_TRANSHUMAN</Type>
-			<Description>TXT_KEY_KNOWLEDGE_BASE_TRANSHUMAN</Description>
-			<Civilopedia>TXT_KEY_KNOWLEDGE_BASE_TRANSHUMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_KNOWLEDGE_BASE_TRANSHUMAN_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_TRANSHUMAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_TRANSHUMAN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_KNOWLEDGE_BASE_TRANSHUMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>-->
 			<!-- Graphical and interface -->
 			<!-- <ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
@@ -4853,9 +4853,9 @@
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
 			<!-- <BuildingClass>BUILDINGCLASS_KNOWLEDGE_BASE_GALACTIC</BuildingClass>
 			<Type>BUILDING_KNOWLEDGE_BASE_GALACTIC</Type>
-			<Description>TXT_KEY_KNOWLEDGE_BASE_GALACTIC</Description>
-			<Civilopedia>TXT_KEY_KNOWLEDGE_BASE_GALACTIC_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_KNOWLEDGE_BASE_GALACTIC_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_GALACTIC</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_GALACTIC_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_KNOWLEDGE_BASE_GALACTIC_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>-->
 			<!-- Graphical and interface -->
 			<!-- <ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
@@ -4886,9 +4886,9 @@
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
 			<!-- <BuildingClass>BUILDINGCLASS_KNOWLEDGE_BASE_COSMIC</BuildingClass>
 			<Type>BUILDING_KNOWLEDGE_BASE_COSMIC</Type>
-			<Description>TXT_KEY_KNOWLEDGE_BASE_COSMIC</Description>
-			<Civilopedia>TXT_KEY_KNOWLEDGE_BASE_COSMIC_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_KNOWLEDGE_BASE_COSMIC_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_COSMIC</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_COSMIC_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_KNOWLEDGE_BASE_COSMIC_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>-->
 			<!-- Graphical and interface -->
 			<!-- <ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
@@ -4919,9 +4919,9 @@
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
 			<!-- <BuildingClass>BUILDINGCLASS_KNOWLEDGE_BASE_TRANSCENDENT</BuildingClass>
 			<Type>BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</Type>
-			<Description>TXT_KEY_KNOWLEDGE_BASE_TRANSCENDENT</Description>
-			<Civilopedia>TXT_KEY_KNOWLEDGE_BASE_TRANSCENDENT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_KNOWLEDGE_BASE_TRANSCENDENT_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_TRANSCENDENT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_KNOWLEDGE_BASE_TRANSCENDENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>-->
 			<!-- Graphical and interface -->
 			<!-- <ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
@@ -4990,7 +4990,7 @@
 			<!-- Prerequisites -->
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_BURN_TRASH</CivicOption>
+					<CivicOption>CIVIC_BURN_GARBAGE</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -5112,7 +5112,7 @@
 			</BuildingClassNeededs>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_LIBERAL</CivicOption>
+					<CivicOption>CIVIC_EGALITARIAN</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -5193,7 +5193,7 @@
 			</BuildingClassNeededs>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_LAISSEZ_FAIRE</CivicOption>
+					<CivicOption>CIVIC_FREE_MARKET</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -5235,7 +5235,7 @@
 			</BuildingClassNeededs>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_MARTIALLAW</CivicOption>
+					<CivicOption>CIVIC_MARTIAL_LAW</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -5375,7 +5375,7 @@
 			</BuildingClassNeededs>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_POST_SCARCITY</CivicOption>
+					<CivicOption>CIVIC_AUTOMATED</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -5906,13 +5906,13 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_GLASS</BonusType>
+					<BonusType>BONUS_GLASSWARE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>-1</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_CLOTHES</BonusType>
+					<BonusType>BONUS_CLOTHING</BonusType>
 					<CommerceModifiers>
 						<iCommerce>-1</iCommerce>
 					</CommerceModifiers>
@@ -5930,25 +5930,25 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_PERCUSSION</BonusType>
+					<BonusType>BONUS_PERCUSSION_INSTRUMENTS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>-1</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_WOODWINDS</BonusType>
+					<BonusType>BONUS_WOODWIND_INSTRUMENTS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>-1</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_BRASS</BonusType>
+					<BonusType>BONUS_BRASS_INSTRUMENTS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>-1</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_STRINGS</BonusType>
+					<BonusType>BONUS_STRING_INSTRUMENTS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>-1</iCommerce>
 					</CommerceModifiers>
@@ -6108,7 +6108,7 @@
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LABOR_UNION</PrereqTech>
+			<PrereqTech>TECH_LABOR_UNIONS</PrereqTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Main effects -->
@@ -6240,7 +6240,7 @@
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_MMO</PrereqTech>
+			<PrereqTech>TECH_ONLINE_COMMUNITY</PrereqTech>
 			<Bonus>BONUS_COMPUTERS</Bonus>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
@@ -6805,7 +6805,7 @@
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LABOR_UNION</PrereqTech>
+			<PrereqTech>TECH_LABOR_UNIONS</PrereqTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Main effects -->
@@ -6990,7 +6990,7 @@
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_COMPUTERS</PrereqTech>
+			<PrereqTech>TECH_PERSONAL_COMPUTERS</PrereqTech>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_COMPUTERS</Bonus>
 			<!-- Construction cost -->
@@ -7128,7 +7128,7 @@
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_COMPUTERS</PrereqTech>
+			<PrereqTech>TECH_PERSONAL_COMPUTERS</PrereqTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Main effects -->
@@ -7234,7 +7234,7 @@
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_SECURE_BORDERS</CivicOption>
+					<CivicOption>CIVIC_SECURED_BORDERS</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqOrCivics>
@@ -7283,7 +7283,7 @@
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_STOCK_EXCHANGING</PrereqTech>
+			<PrereqTech>TECH_STOCK_BROKERING</PrereqTech>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_STOCKMARKET</BuildingClassType>
@@ -7607,7 +7607,7 @@
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_CLOUDCOMPUTING</PrereqTech>
+			<PrereqTech>TECH_CLOUD_COMPUTING</PrereqTech>
 			<Bonus>BONUS_COMPUTERS</Bonus>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
@@ -8206,7 +8206,7 @@
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LABOR_UNION</PrereqTech>
+			<PrereqTech>TECH_LABOR_UNIONS</PrereqTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Main effects -->
@@ -8299,7 +8299,7 @@
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_JURIS_PRUDENCE</PrereqTech>
+			<PrereqTech>TECH_JURISPRUDENCE</PrereqTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Main effects -->
@@ -8956,7 +8956,7 @@
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_LABOR_UNION</PrereqTech>
+			<PrereqTech>TECH_LABOR_UNIONS</PrereqTech>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_WELFARE_OFFICE</BuildingClassType>
@@ -9074,7 +9074,7 @@
 			<!-- Special Health and Happiness  modifiers -->
 			<TechHappinessTypes>
 				<TechHappinessType>
-					<TechType>TECH_BLOOD_CULT</TechType>
+					<TechType>TECH_SACRIFICE_CULT</TechType>
 					<iModifier>1</iModifier>
 				</TechHappinessType>
 			</TechHappinessTypes>
@@ -9251,7 +9251,7 @@
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_MUSIC</ObsoleteTech>
+			<ObsoleteTech>TECH_MUSICAL_NOTATION</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Main effects -->
@@ -9302,7 +9302,7 @@
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_MUSIC</ObsoleteTech>
+			<ObsoleteTech>TECH_MUSICAL_NOTATION</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Main effects -->
@@ -9958,7 +9958,7 @@
 			<!-- Special Health and Happiness  modifiers -->
 			<BonusHealthChanges>
 				<BonusHealthChange>
-					<BonusType>BONUS_LEMON</BonusType>
+					<BonusType>BONUS_LEMONS</BonusType>
 					<iHealthChange>1</iHealthChange>
 				</BonusHealthChange>
 			</BonusHealthChanges>
@@ -10244,7 +10244,7 @@
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_CLOUDCOMPUTING</PrereqTech>
+			<PrereqTech>TECH_CLOUD_COMPUTING</PrereqTech>
 			<Bonus>BONUS_COMPUTERS</Bonus>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
@@ -10274,7 +10274,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_ENHANCED_SPECIES</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_GENEENHANCEMENT</PrereqTech>
+			<PrereqTech>TECH_GENE_ENHANCEMENT</PrereqTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Special Yield and Commerce modifiers -->
@@ -10292,7 +10292,7 @@
 					</YieldChanges>
 				</BonusYieldChange>
 				<BonusYieldChange>
-					<BonusType>BONUS_POTATO</BonusType>
+					<BonusType>BONUS_POTATOES</BonusType>
 					<YieldChanges>
 						<iYield>2</iYield>
 					</YieldChanges>
@@ -10369,7 +10369,7 @@
 					</YieldChanges>
 				</BonusYieldChange>
 				<BonusYieldChange>
-					<BonusType>BONUS_SEA_LIONS</BonusType>
+					<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
 					<YieldChanges>
 						<iYield>2</iYield>
 						<iYield>1</iYield>
@@ -10471,7 +10471,7 @@
 					</YieldChanges>
 				</BonusYieldChange>
 				<BonusYieldChange>
-					<BonusType>BONUS_LEMON</BonusType>
+					<BonusType>BONUS_LEMONS</BonusType>
 					<YieldChanges>
 						<iYield>2</iYield>
 					</YieldChanges>
@@ -10483,7 +10483,7 @@
 					</YieldChanges>
 				</BonusYieldChange>
 				<BonusYieldChange>
-					<BonusType>BONUS_MELON</BonusType>
+					<BonusType>BONUS_MELONS</BonusType>
 					<YieldChanges>
 						<iYield>2</iYield>
 					</YieldChanges>
@@ -10563,7 +10563,7 @@
 					</YieldChanges>
 				</BonusYieldChange>
 				<BonusYieldChange>
-					<BonusType>BONUS_ELEPHANT</BonusType>
+					<BonusType>BONUS_ELEPHANTS</BonusType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>2</iYield>
@@ -10617,7 +10617,7 @@
 					</YieldChanges>
 				</BonusYieldChange>
 				<BonusYieldChange>
-					<BonusType>BONUS_WINE</BonusType>
+					<BonusType>BONUS_GRAPES</BonusType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -10625,7 +10625,7 @@
 					</YieldChanges>
 				</BonusYieldChange>
 				<BonusYieldChange>
-					<BonusType>BONUS_CANNABIS</BonusType>
+					<BonusType>BONUS_HEMP</BonusType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -10735,7 +10735,7 @@
 					</YieldChanges>
 				</BonusYieldChange>
 				<BonusYieldChange>
-					<BonusType>BONUS_GUINEA_PIG</BonusType>
+					<BonusType>BONUS_GUINEA_PIGS</BonusType>
 					<YieldChanges>
 						<iYield>2</iYield>
 						<iYield>0</iYield>
@@ -10743,7 +10743,7 @@
 					</YieldChanges>
 				</BonusYieldChange>
 				<BonusYieldChange>
-					<BonusType>BONUS_TIMBER</BonusType>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>2</iYield>
@@ -10759,7 +10759,7 @@
 					</YieldChanges>
 				</BonusYieldChange>
 				<BonusYieldChange>
-					<BonusType>BONUS_GUAVA</BonusType>
+					<BonusType>BONUS_GUAVAS</BonusType>
 					<YieldChanges>
 						<iYield>2</iYield>
 						<iYield>0</iYield>
@@ -10889,7 +10889,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqBonuses>
-				<Bonus>BONUS_GOLD</Bonus>
+				<Bonus>BONUS_GOLD_ORE</Bonus>
 			</PrereqBonuses>
 			<PrereqAndCivics>
 				<PrereqCivic>
@@ -10931,7 +10931,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqBonuses>
-				<Bonus>BONUS_SILVER</Bonus>
+				<Bonus>BONUS_SILVER_ORE</Bonus>
 			</PrereqBonuses>
 			<PrereqAndCivics>
 				<PrereqCivic>
@@ -11078,7 +11078,7 @@
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -11512,7 +11512,7 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -12263,7 +12263,7 @@
 			<Bonus>BONUS_GRASS</Bonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -12636,7 +12636,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POTTERY</PrereqTech>
-			<Bonus>BONUS_TIMBER</Bonus>
+			<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_FINE_CLAY</Bonus>
 			</PrereqBonuses>
@@ -13227,14 +13227,14 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<Bonus>BONUS_TIMBER</Bonus>
+			<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -13415,7 +13415,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POTTERY</PrereqTech>
-			<Bonus>BONUS_CLAY</Bonus>
+			<Bonus>BONUS_COMMON_CLAY</Bonus>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
@@ -14102,7 +14102,7 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_BAMBOO</Bonus>
 				<Bonus>BONUS_WOOD</Bonus>
-				<Bonus>BONUS_TIMBER</Bonus>
+				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			</PrereqBonuses>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
@@ -14287,7 +14287,7 @@
 			<VicinityBonus>BONUS_BISON</VicinityBonus>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
@@ -14398,7 +14398,7 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -14447,7 +14447,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
-			<Bonus>BONUS_TIMBER</Bonus>
+			<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_BAMBOO</Bonus>
 			</PrereqBonuses>
@@ -14461,7 +14461,7 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -14604,7 +14604,7 @@
 			<RawVicinityBonus>BONUS_HORSE</RawVicinityBonus>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 				<PrereqTerrain>
@@ -14741,7 +14741,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_PROSTITUTION_BAN</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_JURIS_PRUDENCE</PrereqTech>
+			<PrereqTech>TECH_JURISPRUDENCE</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
@@ -15811,8 +15811,8 @@
 			<PrereqTech>TECH_COOKING</PrereqTech>
 			<iPrereqPopulation>4</iPrereqPopulation>
 			<PrereqVicinityBonuses>
-				<VicinityBonus>BONUS_RAWMEAT</VicinityBonus>
-				<VicinityBonus>BONUS_RAWFISH</VicinityBonus>
+				<VicinityBonus>BONUS_RAW_MEAT</VicinityBonus>
+				<VicinityBonus>BONUS_RAW_FISH</VicinityBonus>
 				<VicinityBonus>BONUS_SHELLFISH</VicinityBonus>
 				<VicinityBonus>BONUS_FERTILIZERS</VicinityBonus>
 			</PrereqVicinityBonuses>
@@ -16012,7 +16012,7 @@
 			<iPrereqPopulation>12</iPrereqPopulation>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_CLOTH</VicinityBonus>
-				<VicinityBonus>BONUS_CLOTHES</VicinityBonus>
+				<VicinityBonus>BONUS_CLOTHING</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
@@ -16194,7 +16194,7 @@
 			<iPrereqPopulation>14</iPrereqPopulation>
 			<bWater>1</bWater>
 			<PrereqVicinityBonuses>
-				<VicinityBonus>BONUS_RAWFISH</VicinityBonus>
+				<VicinityBonus>BONUS_RAW_FISH</VicinityBonus>
 				<VicinityBonus>BONUS_SHELLFISH</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<iMaxLatitude>80</iMaxLatitude>
@@ -16274,7 +16274,7 @@
 			<iPrereqPopulation>10</iPrereqPopulation>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_WOOD</VicinityBonus>
-				<VicinityBonus>BONUS_TIMBER</VicinityBonus>
+				<VicinityBonus>BONUS_PRIME_TIMBER</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
@@ -17425,11 +17425,11 @@
 			</BuildingClassNeededs>
 			<PrereqOrCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_INTOLERANT</CivicOption>
+					<CivicOption>CIVIC_INQUISITORIAL</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_FASCIST</CivicOption>
+					<CivicOption>CIVIC_TOTALITARIANISM</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -17523,7 +17523,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_SAFETY_NAT_LEGAL_DATABASE</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_CLOUDCOMPUTING</PrereqTech>
+			<PrereqTech>TECH_CLOUD_COMPUTING</PrereqTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Special properties -->
@@ -17571,7 +17571,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_SAFETY_ORBITAL_PRISON</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Main effects -->
@@ -17801,7 +17801,7 @@
 			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_COMPUTERS</ObsoleteTech>
+			<ObsoleteTech>TECH_PERSONAL_COMPUTERS</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Main effects -->
@@ -18113,7 +18113,7 @@
             <MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_MODERN_LIFESTYLE</PrereqTech>
+			<PrereqTech>TECH_ATOMIC_LIFESTYLE</PrereqTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Main effects -->
@@ -18446,8 +18446,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ReligionType>RELIGION_MESOAMERICANISM</ReligionType>
-			<HolyCity>RELIGION_MESOAMERICANISM</HolyCity>
+			<ReligionType>RELIGION_NAGHUALISM</ReligionType>
+			<HolyCity>RELIGION_NAGHUALISM</HolyCity>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Special Yield and Commerce modifiers -->
@@ -18469,7 +18469,7 @@
 			<!-- Special Health and Happiness  modifiers -->
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_MESOAMERICANISM</ReligionType>
+					<ReligionType>RELIGION_NAGHUALISM</ReligionType>
 					<iReligionChange>4</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -18490,7 +18490,7 @@
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
-			<GlobalReligionCommerce>RELIGION_MESOAMERICANISM</GlobalReligionCommerce>
+			<GlobalReligionCommerce>RELIGION_NAGHUALISM</GlobalReligionCommerce>
 			<!-- Special properties -->
 			<iAsset>8</iAsset>
 			<Flavors>
@@ -18652,8 +18652,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<ReligionType>RELIGION_EGYPT_MYTHOLOGY</ReligionType>
-			<HolyCity>RELIGION_EGYPT_MYTHOLOGY</HolyCity>
+			<ReligionType>RELIGION_KEMETISM</ReligionType>
+			<HolyCity>RELIGION_KEMETISM</HolyCity>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Special Yield and Commerce modifiers -->
@@ -18680,7 +18680,7 @@
 			<!-- Special Health and Happiness  modifiers -->
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_EGYPT_MYTHOLOGY</ReligionType>
+					<ReligionType>RELIGION_KEMETISM</ReligionType>
 					<iReligionChange>4</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -18695,7 +18695,7 @@
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
-			<GlobalReligionCommerce>RELIGION_EGYPT_MYTHOLOGY</GlobalReligionCommerce>
+			<GlobalReligionCommerce>RELIGION_KEMETISM</GlobalReligionCommerce>
 			<!-- Special properties -->
 			<iAsset>8</iAsset>
 			<Flavors>
@@ -19483,7 +19483,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_AUTOMATIC_WEAPONS</PrereqTech>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_BRAIN_SCAN</ObsoleteTech>
+			<ObsoleteTech>TECH_THOUGHT_SCANNING</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Main effects -->
@@ -19551,7 +19551,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_PARTS</BonusType>
 				<BonusType>BONUS_TIRES</BonusType>
-				<BonusType>BONUS_DIESEL</BonusType>
+				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<!-- Construction cost -->
@@ -19855,7 +19855,7 @@
 			<Help>TXT_KEY_BUILDING_WV_HUMAN_SACRIFICE_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WV_HUMAN_SACRIFICE</ArtDefineTag>
-			<PrereqTech>TECH_BLOOD_CULT</PrereqTech>
+			<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
 			<FreeBuilding>BUILDINGCLASS_HUMAN_SACRIFICE</FreeBuilding>
 			<bNeverCapture>1</bNeverCapture>
 			<MapCategoryTypes>
@@ -19965,8 +19965,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DEPARTMENT_FOREIGN_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DEPARTMENT_FOREIGN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_DEPT_FOREIGN_POLICY_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DEPT_FOREIGN_POLICY_PEDIA</Civilopedia>
 			<!-- Cost -->
 			<iCost>-1</iCost>
 			<!-- Local -->
@@ -20424,7 +20424,7 @@
 			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FIRE_MYTH_EFFECT</ArtDefineTag>
-			<FreeStartEra>ERA_MEDIEVAL</FreeStartEra>
+			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>-1</iCost>
 			<MapCategoryTypes>
@@ -20439,7 +20439,7 @@
 			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_METAL_MYTH_EFFECT</ArtDefineTag>
-			<FreeStartEra>ERA_MEDIEVAL</FreeStartEra>
+			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>-1</iCost>
 			<MapCategoryTypes>
@@ -20455,7 +20455,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SEA_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
-			<FreeStartEra>ERA_MEDIEVAL</FreeStartEra>
+			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
 			<FreeBuilding>BUILDINGCLASS_SEA_MYTH_EFFECT</FreeBuilding>
 			<iCost>-1</iCost>
 			<MapCategoryTypes>
@@ -20604,7 +20604,7 @@
 			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SKY_MYTH_EFFECT</ArtDefineTag>
-			<FreeStartEra>ERA_MEDIEVAL</FreeStartEra>
+			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>-1</iCost>
 			<MapCategoryTypes>
@@ -20619,7 +20619,7 @@
 			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_STONE_MYTH_EFFECT</ArtDefineTag>
-			<FreeStartEra>ERA_MEDIEVAL</FreeStartEra>
+			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>-1</iCost>
 			<MapCategoryTypes>
@@ -20781,14 +20781,14 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_AUTOBUILD_ALUMINUM_NEAR</BuildingClass>
 			<Type>BUILDING_AUTOBUILD_ALUMINUM_NEAR</Type>
-			<Description>TXT_KEY_AUTOBUILD_ALUMINUM_NEAR</Description>
-			<Civilopedia>TXT_KEY_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_AUTOBUILD_ALUMINUM_NEAR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_ALUMINUM_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_BAUXITE</RawVicinityBonus>
+            <RawVicinityBonus>BONUS_BAUXITE_ORE</RawVicinityBonus>
 			<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -20800,14 +20800,14 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_AUTOBUILD_COPPER_NEAR</BuildingClass>
 			<Type>BUILDING_AUTOBUILD_COPPER_NEAR</Type>
-			<Description>TXT_KEY_AUTOBUILD_COPPER_NEAR</Description>
-			<Civilopedia>TXT_KEY_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_AUTOBUILD_COPPER_NEAR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_COPPER_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_COPPER</RawVicinityBonus>
+            <RawVicinityBonus>BONUS_COPPER_ORE</RawVicinityBonus>
 			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -20819,14 +20819,14 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_AUTOBUILD_GOLD_NEAR</BuildingClass>
 			<Type>BUILDING_AUTOBUILD_GOLD_NEAR</Type>
-			<Description>TXT_KEY_AUTOBUILD_GOLD_NEAR</Description>
-			<Civilopedia>TXT_KEY_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_AUTOBUILD_GOLD_NEAR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_GOLD_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_GOLD</RawVicinityBonus>
+            <RawVicinityBonus>BONUS_GOLD_ORE</RawVicinityBonus>
 			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -20838,14 +20838,14 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_AUTOBUILD_IRON_NEAR</BuildingClass>
 			<Type>BUILDING_AUTOBUILD_IRON_NEAR</Type>
-			<Description>TXT_KEY_AUTOBUILD_IRON_NEAR</Description>
-			<Civilopedia>TXT_KEY_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_AUTOBUILD_IRON_NEAR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_IRON_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_IRON</RawVicinityBonus>
+            <RawVicinityBonus>BONUS_IRON_ORE</RawVicinityBonus>
 			<PrereqTech>TECH_MINING</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -20857,14 +20857,14 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_AUTOBUILD_LEAD_NEAR</BuildingClass>
 			<Type>BUILDING_AUTOBUILD_LEAD_NEAR</Type>
-			<Description>TXT_KEY_AUTOBUILD_LEAD_NEAR</Description>
-			<Civilopedia>TXT_KEY_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_AUTOBUILD_LEAD_NEAR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_LEAD_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_LEAD</RawVicinityBonus>
+            <RawVicinityBonus>BONUS_LEAD_ORE</RawVicinityBonus>
 			<PrereqTech>TECH_MINING</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -20876,14 +20876,14 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_AUTOBUILD_PLATINUM_NEAR</BuildingClass>
 			<Type>BUILDING_AUTOBUILD_PLATINUM_NEAR</Type>
-			<Description>TXT_KEY_AUTOBUILD_PLATINUM_NEAR</Description>
-			<Civilopedia>TXT_KEY_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_AUTOBUILD_PLATINUM_NEAR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_PLATINUM_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_PLATINUM</RawVicinityBonus>
+            <RawVicinityBonus>BONUS_PLATINUM_ORE</RawVicinityBonus>
 			<PrereqTech>TECH_METAL_CASTING</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -20895,14 +20895,14 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_AUTOBUILD_SILVER_NEAR</BuildingClass>
 			<Type>BUILDING_AUTOBUILD_SILVER_NEAR</Type>
-			<Description>TXT_KEY_AUTOBUILD_SILVER_NEAR</Description>
-			<Civilopedia>TXT_KEY_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_AUTOBUILD_SILVER_NEAR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_SILVER_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_SILVER</RawVicinityBonus>
+            <RawVicinityBonus>BONUS_SILVER_ORE</RawVicinityBonus>
 			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -20914,14 +20914,14 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_AUTOBUILD_TIN_NEAR</BuildingClass>
 			<Type>BUILDING_AUTOBUILD_TIN_NEAR</Type>
-			<Description>TXT_KEY_AUTOBUILD_TIN_NEAR</Description>
-			<Civilopedia>TXT_KEY_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_AUTOBUILD_TIN_NEAR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_TIN_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_TIN</RawVicinityBonus>
+            <RawVicinityBonus>BONUS_TIN_ORE</RawVicinityBonus>
 			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -20933,14 +20933,14 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_AUTOBUILD_TITANIUM_NEAR</BuildingClass>
 			<Type>BUILDING_AUTOBUILD_TITANIUM_NEAR</Type>
-			<Description>TXT_KEY_AUTOBUILD_TITANIUM_NEAR</Description>
-			<Civilopedia>TXT_KEY_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_AUTOBUILD_TITANIUM_NEAR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_TITANIUM_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_TITANIUM</RawVicinityBonus>
+            <RawVicinityBonus>BONUS_TITANIUM_ORE</RawVicinityBonus>
 			<PrereqTech>TECH_ADVANCED_METALLURGY</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -20952,9 +20952,9 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_AUTOBUILD_CAMEL_NEAR</BuildingClass>
 			<Type>BUILDING_AUTOBUILD_CAMEL_NEAR</Type>
-			<Description>TXT_KEY_AUTOBUILD_CAMEL_NEAR</Description>
-			<Civilopedia>TXT_KEY_AUTOBUILD_ANIMAL_NEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_AUTOBUILD_ANIMAL_NEAR_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_AUTOBUILD_CAMEL_NEAR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_ANIMAL_NEAR_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_AUTOBUILD_ANIMAL_NEAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_CAMEL_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -20971,14 +20971,14 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_AUTOBUILD_ELEPHANT_NEAR</BuildingClass>
 			<Type>BUILDING_AUTOBUILD_ELEPHANT_NEAR</Type>
-			<Description>TXT_KEY_AUTOBUILD_ELEPHANT_NEAR</Description>
-			<Civilopedia>TXT_KEY_AUTOBUILD_ANIMAL_NEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_AUTOBUILD_ANIMAL_NEAR_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_AUTOBUILD_ELEPHANT_NEAR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_ANIMAL_NEAR_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_AUTOBUILD_ANIMAL_NEAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_ELEPHANT_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<RawVicinityBonus>BONUS_ELEPHANT</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_ELEPHANTS</RawVicinityBonus>
 			<PrereqTech>TECH_SCAVENGING</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -20990,9 +20990,9 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_AUTOBUILD_HORSE_NEAR</BuildingClass>
 			<Type>BUILDING_AUTOBUILD_HORSE_NEAR</Type>
-			<Description>TXT_KEY_AUTOBUILD_HORSE_NEAR</Description>
-			<Civilopedia>TXT_KEY_AUTOBUILD_ANIMAL_NEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_AUTOBUILD_ANIMAL_NEAR_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_AUTOBUILD_HORSE_NEAR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_ANIMAL_NEAR_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_AUTOBUILD_ANIMAL_NEAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_HORSE_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -21132,11 +21132,11 @@
 					<iModifier>-2</iModifier>
 				</TechHappinessType>
 				<TechHappinessType>
-					<TechType>TECH_LABOR_UNION</TechType>
+					<TechType>TECH_LABOR_UNIONS</TechType>
 					<iModifier>-1</iModifier>
 				</TechHappinessType>
 				<TechHappinessType>
-					<TechType>TECH_UTOPIA</TechType>
+					<TechType>TECH_COMMUNISM</TechType>
 					<iModifier>-1</iModifier>
 				</TechHappinessType>
 				<TechHappinessType>

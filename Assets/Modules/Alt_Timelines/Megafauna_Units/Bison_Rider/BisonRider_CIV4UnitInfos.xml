@@ -1,12 +1,10 @@
 <?xml version="1.0"?>
-<!-- Created with Notepad by strategyonly -->
-<!-- Assets\Modules\Alt_Timelines\MegaFauna\Bison_Rider\BisonRider_CIV4UnitInfos.xml -->
-<!-- ###################################################################################### -->
 <Civ4UnitInfos xmlns="x-schema:../../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
 			<Class>UNITCLASS_BISON_RIDER</Class>
 			<Type>UNIT_BISON_RIDER</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -47,12 +45,9 @@
 			<bPillage>1</bPillage>
 			<bFirstStrikeImmune>1</bFirstStrikeImmune>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_CUIRASSIER</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_CUIRASSIER</UnitType>
+			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
 					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>

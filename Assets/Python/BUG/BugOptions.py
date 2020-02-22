@@ -72,8 +72,8 @@
 ##      default for Option X to be Option Y's actual value (or default if no value)
 ##    e.g.
 ##      Parameterized:
-##        ERA_SEDENTARY__WARRIOR -> WARRIOR
-##        ERA_SEDENTARY__MELEE -> MELEE
+##        ERA_ANCIENT__WARRIOR -> WARRIOR
+##        ERA_ANCIENT__MELEE -> MELEE
 ##        (This can be accomplished in Python of course)
 ##      Normal:
 ##        BetterEspionage.GoodColor -> BetterEspionage.DefaultColor

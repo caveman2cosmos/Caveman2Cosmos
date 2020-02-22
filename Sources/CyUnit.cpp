@@ -489,10 +489,10 @@ int CyUnit::upgradePrice(int /*UnitTypes*/ eUnit)
 	return m_pUnit ? m_pUnit->upgradePrice((UnitTypes) eUnit) : -1;
 }
 
-bool CyUnit::upgradeAvailable(int /*UnitTypes*/ eFromUnit, int /*UnitClassTypes*/ eToUnitClass, int iCount)
+bool CyUnit::upgradeAvailable(int /*UnitTypes*/ eFromUnit, int /*UnitTypes*/ eToUnit, int iCount)
 {
 	FAssert(iCount == 0);
-	return m_pUnit ? m_pUnit->upgradeAvailable((UnitTypes) eFromUnit, (UnitClassTypes) eToUnitClass) : false;
+	return m_pUnit ? m_pUnit->upgradeAvailable((UnitTypes) eFromUnit, (UnitTypes) eToUnit) : false;
 }
 
 bool CyUnit::canUpgrade(int /*UnitTypes*/ eUnit, bool bTestVisible)			
@@ -520,9 +520,9 @@ int /*SpecialUnitTypes*/ CyUnit::getSpecialUnitType()
 	return m_pUnit ? (int) m_pUnit->getSpecialUnitType() : (int) NO_SPECIALUNIT;
 }
 
-int /*UnitTypes*/ CyUnit::getCaptureUnitType(int /*CivilizationTypes*/ eCivilization)
+int /*UnitTypes*/ CyUnit::getCaptureUnitType()
 {
-	return m_pUnit ? m_pUnit->getCaptureUnitType((CivilizationTypes)eCivilization) : -1;
+	return m_pUnit ? m_pUnit->getCaptureUnitType() : -1;
 }
 
 int /*UnitCombatTypes*/ CyUnit::getUnitCombatType()
@@ -1402,19 +1402,19 @@ void CyUnit::setHotKeyNumber(int iNewValue)
 
 int CyUnit::getX()
 {
-	return m_pUnit ? m_pUnit->getX_INLINE() : -1;
+	return m_pUnit ? m_pUnit->getX() : -1;
 }
 
 int CyUnit::getY()
 {
-	return m_pUnit ? m_pUnit->getY_INLINE() : -1;
+	return m_pUnit ? m_pUnit->getY() : -1;
 }
 
 void CyUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow)
 {
 	if (m_pUnit)
 	{
-		//GC.getGameINLINE().logOOSSpecial(23, m_pUnit->getID(), iX, iY);
+		//GC.getGame().logOOSSpecial(23, m_pUnit->getID(), iX, iY);
 		return m_pUnit->setXY(iX, iY, bGroup, bUpdate, bShow);
 	}
 }
@@ -1947,7 +1947,7 @@ void CyUnit::setPromotionReady(bool bNewValue)
 
 int CyUnit::getOwner()
 {
-	return m_pUnit ? m_pUnit->getOwnerINLINE() : -1;
+	return m_pUnit ? m_pUnit->getOwner() : -1;
 }
 
 int CyUnit::getVisualOwner()

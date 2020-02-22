@@ -523,10 +523,10 @@
 			<Button>Art/Interface/mainscreen/cityscreen/great_statesman.dds</Button>
 		</SpecialistInfo>
 		<SpecialistInfo>
-			<Type>SPECIALIST_GREAT_PRIEST</Type>
-			<Description>TXT_KEY_SPECIALIST_GREAT_PRIEST</Description>
+			<Type>SPECIALIST_GREAT_PROPHET</Type>
+			<Description>TXT_KEY_SPECIALIST_GREAT_PROPHET</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_PEOPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_SPECIALIST_GREAT_PRIEST_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_SPECIALIST_GREAT_PROPHET_STRATEGY</Strategy>
 			<Help/>
 			<Texture>Art/Interface/MainScreen/CityScreen/Great_Priest.dds</Texture>
 			<bVisible>0</bVisible>
@@ -706,10 +706,10 @@
 			<Button>Art/Interface/MainScreen/CityScreen/Great_Engineer.dds</Button>
 		</SpecialistInfo>
 		<SpecialistInfo>
-			<Type>SPECIALIST_GREAT_GENERAL</Type>
-			<Description>TXT_KEY_SPECIALIST_GREAT_GENERAL</Description>
+			<Type>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</Type>
+			<Description>TXT_KEY_SPECIALIST_GREAT_MILITARY_INSTRUCTOR</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_SPECIALIST_GREAT_GENERAL_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_SPECIALIST_GREAT_MILITARY_INSTRUCTOR_STRATEGY</Strategy>
 			<Help/>
 			<Texture>,Art/Interface/MainScreen/CityScreen/Great_Engineer.dds,Art/Interface/Buttons/Warlords_Atlas_2.dds,2,6</Texture>
 			<bVisible>0</bVisible>
@@ -744,7 +744,7 @@
 			<Type>SPECIALIST_GREAT_ADMIRAL</Type>
 			<Description>TXT_KEY_SPECIALIST_GREAT_ADMIRAL</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_SPECIALIST_GREAT_GENERAL_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_SPECIALIST_GREAT_MILITARY_INSTRUCTOR_STRATEGY</Strategy>
 			<Help/>
 			<Texture>Art/Interface/MainScreen/CityScreen/specialist_great_admiral.dds</Texture>
 			<bVisible>0</bVisible>
@@ -842,10 +842,10 @@
 			<Button>,Art/Interface/Buttons/TechTree/Corporation.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,6,14</Button>
 		</SpecialistInfo>
 		<SpecialistInfo>
-			<Type>SPECIALIST_ANDROID</Type>
-			<Description>TXT_KEY_SPECIALIST_ANDROID</Description>
+			<Type>SPECIALIST_ANDROID_WORKER</Type>
+			<Description>TXT_KEY_SPECIALIST_ANDROID_WORKER</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SPECIALISTS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_SPECIALIST_ANDROID_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_SPECIALIST_ANDROID_WORKER_STRATEGY</Strategy>
 			<Help/>
 			<Texture>Art/Interface/MainScreen/CityScreen/android.dds</Texture>
 			<bVisible>0</bVisible>
@@ -899,10 +899,10 @@
 		</SpecialistInfo>
 		-->
 		<SpecialistInfo>
-			<Type>SPECIALIST_GREAT_WARLORD</Type>
-			<Description>TXT_KEY_SPECIALIST_GREAT_WARLORD</Description>
+			<Type>SPECIALIST_MILITARY_INSTRUCTOR</Type>
+			<Description>TXT_KEY_SPECIALIST_MILITARY_INSTRUCTOR</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_SPECIALIST_GREAT_GENERAL_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_SPECIALIST_GREAT_MILITARY_INSTRUCTOR_STRATEGY</Strategy>
 			<Help/>
 			<Texture>Art/Interface/Buttons/Specialists/Warlord_Instructor.dds</Texture>
 			<bVisible>0</bVisible>
@@ -1070,8 +1070,8 @@
 			</PropertyManipulators>
 		</SpecialistInfo>
 		<SpecialistInfo>
-			<Type>SPECIALIST_SLEUTH</Type>
-			<Description>TXT_KEY_SPECIALIST_SLEUTH</Description>
+			<Type>SPECIALIST_GREAT_SLEUTH</Type>
+			<Description>TXT_KEY_SPECIALIST_GREAT_SLEUTH</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_DETECTIVE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_SPECIALIST_INVESTIGATOR_STRATEGY</Strategy>
 			<Help/>

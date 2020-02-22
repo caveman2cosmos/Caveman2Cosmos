@@ -4696,7 +4696,7 @@ int cvInternalGlobals::getTGA_CORPORATIONS() const							// GAMEFONT_TGA_CORPORA
 /************************************************************************************************/
 int cvInternalGlobals::getMAX_CIV_PLAYERS() const
 {
-	return MAX_CIV_PLAYERS;
+	return MAX_PC_PLAYERS;
 }
 
 int cvInternalGlobals::getMAX_PC_PLAYERS() const
@@ -4723,60 +4723,54 @@ int cvInternalGlobals::getBARBARIAN_PLAYER() const
 {
 	return BARBARIAN_PLAYER;
 }
-
 int cvInternalGlobals::getBARBARIAN_TEAM() const
 {
 	return BARBARIAN_TEAM;
 }
 
-int cvInternalGlobals::getAGGRESSIVE_ANIMAL_PLAYER() const
+int cvInternalGlobals::getNEANDERTHAL_PLAYER() const
 {
-	return AGGRESSIVE_ANIMAL_PLAYER;
+	return NEANDERTHAL_PLAYER;
+}
+int cvInternalGlobals::getNEANDERTHAL_TEAM() const
+{
+	return NEANDERTHAL_TEAM;
 }
 
-int cvInternalGlobals::getAGGRESSIVE_ANIMAL_TEAM() const
+int cvInternalGlobals::getBEAST_PLAYER() const
 {
-	return AGGRESSIVE_ANIMAL_TEAM;
+	return BEAST_PLAYER;
+}
+int cvInternalGlobals::getBEAST_TEAM() const
+{
+	return BEAST_TEAM;
 }
 
-int cvInternalGlobals::getPASSIVE_ANIMAL_PLAYER() const
+int cvInternalGlobals::getPREDATOR_PLAYER() const
 {
-	return PASSIVE_ANIMAL_PLAYER;
+	return PREDATOR_PLAYER;
+}
+int cvInternalGlobals::getPREDATOR_TEAM() const
+{
+	return PREDATOR_TEAM;
 }
 
-int cvInternalGlobals::getPASSIVE_ANIMAL_TEAM() const
+int cvInternalGlobals::getPREY_PLAYER() const
 {
-	return PASSIVE_ANIMAL_TEAM;
+	return PREY_PLAYER;
+}
+int cvInternalGlobals::getPREY_TEAM() const
+{
+	return PREY_TEAM;
 }
 
-int cvInternalGlobals::getNPC1_PLAYER() const
+int cvInternalGlobals::getINSECT_PLAYER() const
 {
-	return NPC1_PLAYER;
+	return INSECT_PLAYER;
 }
-
-int cvInternalGlobals::getNPC1_TEAM() const
+int cvInternalGlobals::getINSECT_TEAM() const
 {
-	return NPC1_TEAM;
-}
-
-int cvInternalGlobals::getNPC2_PLAYER() const
-{
-	return NPC2_PLAYER;
-}
-
-int cvInternalGlobals::getNPC2_TEAM() const
-{
-	return NPC2_TEAM;
-}
-
-int cvInternalGlobals::getNPC3_PLAYER() const
-{
-	return NPC3_PLAYER;
-}
-
-int cvInternalGlobals::getNPC3_TEAM() const
-{
-	return NPC3_TEAM;
+	return INSECT_TEAM;
 }
 
 int cvInternalGlobals::getNPC4_PLAYER() const
@@ -4789,44 +4783,44 @@ int cvInternalGlobals::getNPC4_TEAM() const
 	return NPC4_TEAM;
 }
 
-int cvInternalGlobals::getNPC5_PLAYER() const
+int cvInternalGlobals::getNPC3_PLAYER() const
 {
-	return NPC5_PLAYER;
+	return NPC3_PLAYER;
 }
 
-int cvInternalGlobals::getNPC5_TEAM() const
+int cvInternalGlobals::getNPC3_TEAM() const
 {
-	return NPC5_TEAM;
+	return NPC3_TEAM;
 }
 
-int cvInternalGlobals::getNPC6_PLAYER() const
+int cvInternalGlobals::getNPC2_PLAYER() const
 {
-	return NPC6_PLAYER;
+	return NPC2_PLAYER;
 }
 
-int cvInternalGlobals::getNPC6_TEAM() const
+int cvInternalGlobals::getNPC2_TEAM() const
 {
-	return NPC6_TEAM;
+	return NPC2_TEAM;
 }
 
-int cvInternalGlobals::getNPC7_PLAYER() const
+int cvInternalGlobals::getNPC1_PLAYER() const
 {
-	return NPC7_PLAYER;
+	return NPC1_PLAYER;
 }
 
-int cvInternalGlobals::getNPC7_TEAM() const
+int cvInternalGlobals::getNPC1_TEAM() const
 {
-	return NPC7_TEAM;
+	return NPC1_TEAM;
 }
 
-int cvInternalGlobals::getNPC8_PLAYER() const
+int cvInternalGlobals::getNPC0_PLAYER() const
 {
-	return NPC8_PLAYER;
+	return NPC0_PLAYER;
 }
 
-int cvInternalGlobals::getNPC8_TEAM() const
+int cvInternalGlobals::getNPC0_TEAM() const
 {
-	return NPC8_TEAM;
+	return NPC0_TEAM;
 }
 
 int cvInternalGlobals::getINVALID_PLOT_COORD() const
@@ -5506,26 +5500,14 @@ void cvInternalGlobals::switchMap(MapTypes eMap)
 {	
 	//bool bInitial = false;
 
-	GC.getMapINLINE().beforeSwitch();
+	GC.getMap().beforeSwitch();
 
 	if (eMap > NO_MAP && eMap < GC.getNumMapInfos())
 		GC.getGame().setCurrentMap(eMap);
 
-	GC.getMapINLINE().afterSwitch();
+	GC.getMap().afterSwitch();
 }
 
-#ifdef _USRDLL
-CvMap& cvInternalGlobals::getMapINLINE()
-{
-	return *m_maps[GC.getGame().getCurrentMap()];
-}
-#endif
-
-CvMap& cvInternalGlobals::getMap()
-{
-	return *m_maps[GC.getGame().getCurrentMap()];
-}
-	
 CvViewport* cvInternalGlobals::getCurrentViewport()
 {
 	return m_maps[GC.getGame().getCurrentMap()]->getCurrentViewport();
@@ -5533,12 +5515,12 @@ CvViewport* cvInternalGlobals::getCurrentViewport()
 
 int	cvInternalGlobals::getViewportSizeX() const
 {
-	return GC.viewportsEnabled() ? std::min(m_iViewportSizeX, m_maps[GC.getGame().getCurrentMap()]->getGridWidthINLINE()) : m_maps[GC.getGame().getCurrentMap()]->getGridWidthINLINE();
+	return GC.viewportsEnabled() ? std::min(m_iViewportSizeX, m_maps[GC.getGame().getCurrentMap()]->getGridWidth()) : m_maps[GC.getGame().getCurrentMap()]->getGridWidth();
 }
 
 int	cvInternalGlobals::getViewportSizeY() const
 {
-	return GC.viewportsEnabled() ? std::min(m_iViewportSizeY, m_maps[GC.getGame().getCurrentMap()]->getGridHeightINLINE()) : m_maps[GC.getGame().getCurrentMap()]->getGridHeightINLINE();
+	return GC.viewportsEnabled() ? std::min(m_iViewportSizeY, m_maps[GC.getGame().getCurrentMap()]->getGridHeight()) : m_maps[GC.getGame().getCurrentMap()]->getGridHeight();
 }
 
 int	cvInternalGlobals::getViewportSelectionBorder() const
@@ -5677,16 +5659,19 @@ int cvInternalGlobals::getNumMissionInfos() const
 #endif
 }
 
+inline CvMap& cvInternalGlobals::getMap() const
+{
+	return *m_maps[GC.getGame().getCurrentMap()];
+}
 
-//
-// non-inline versions
-//
-CvGameAI& cvInternalGlobals::getGame() { return *m_game; }
-CvGameAI *cvInternalGlobals::getGamePointer(){ return m_game; }
+CvGameAI* cvInternalGlobals::getGamePointer() { return m_game; }
 
+// This determines how many starting civs can be chosen in the custom game staging room screen.
+// Currently it allows you to add more civs than there are civ slots.
+// If this is reduced to the correct number, the city bar and city graphics for the neanderthal NPC will never be updated as the exe doesn't understand that their cities exist.
 int cvInternalGlobals::getMaxCivPlayers() const
 {
-	return MAX_CIV_PLAYERS;
+	return MAX_PLAYERS-1;
 }
 
 int cvInternalGlobals::getMaxPCPlayers() const
@@ -5694,8 +5679,8 @@ int cvInternalGlobals::getMaxPCPlayers() const
 	return MAX_PC_PLAYERS;
 }
 
-bool cvInternalGlobals::IsGraphicsInitialized() const { return m_bGraphicsInitialized;}
-void cvInternalGlobals::SetGraphicsInitialized(bool bVal) { m_bGraphicsInitialized = bVal;}
+bool cvInternalGlobals::IsGraphicsInitialized() const { return m_bGraphicsInitialized; }
+void cvInternalGlobals::SetGraphicsInitialized(bool bVal) { m_bGraphicsInitialized = bVal; }
 void cvInternalGlobals::setInterface(CvInterface* pVal) { m_interface = pVal; }
 void cvInternalGlobals::setDiplomacyScreen(CvDiplomacyScreen* pVal) { m_diplomacyScreen = pVal; }
 void cvInternalGlobals::setMPDiplomacyScreen(CMPDiplomacyScreen* pVal) { m_mpDiplomacyScreen = pVal; }
@@ -6280,7 +6265,7 @@ bool cvInternalGlobals::getGraphicalDetailPagingEnabled() const
 
 int cvInternalGlobals::getGraphicalDetailPageInRange()
 {
-	return std::max(getGameINLINE().getXResolution(), getGameINLINE().getYResolution())/150;
+	return std::max(getGame().getXResolution(), getGame().getYResolution())/150;
 }
 
 /************************************************************************************************/

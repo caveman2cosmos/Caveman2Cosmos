@@ -11,7 +11,7 @@
 				<DependencyType>RELIGION_JUDAISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_JEWISH_MISSIONARY</Capture>
+			<Capture>UNIT_JEWISH_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -60,7 +60,7 @@
 				<DependencyType>RELIGION_CHRISTIANITY</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_CHRISTIAN_MISSIONARY</Capture>
+			<Capture>UNIT_CHRISTIAN_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -109,7 +109,7 @@
 				<DependencyType>RELIGION_ISLAM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_ISLAMIC_MISSIONARY</Capture>
+			<Capture>UNIT_ISLAMIC_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -158,7 +158,7 @@
 				<DependencyType>RELIGION_HINDUISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_HINDU_MISSIONARY</Capture>
+			<Capture>UNIT_HINDU_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -207,7 +207,7 @@
 				<DependencyType>RELIGION_BUDDHISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_BUDDHIST_MISSIONARY</Capture>
+			<Capture>UNIT_BUDDHIST_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -256,7 +256,7 @@
 				<DependencyType>RELIGION_CONFUCIANISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_CONFUCIAN_MISSIONARY</Capture>
+			<Capture>UNIT_CONFUCIAN_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -305,7 +305,7 @@
 				<DependencyType>RELIGION_TAOISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_TAOIST_MISSIONARY</Capture>
+			<Capture>UNIT_TAOIST_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -351,10 +351,10 @@
 			<Class>UNITCLASS_ANDEAN_MISSIONARY</Class>
 			<Type>UNIT_FEMALE_ANDEAN_MISSIONARY</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_ANDEAN</DependencyType>
+				<DependencyType>RELIGION_ANDEANISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_ANDEAN_MISSIONARY</Capture>
+			<Capture>UNIT_ANDEAN_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -373,11 +373,11 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_ANDEAN</ReligionType>
+					<ReligionType>RELIGION_ANDEANISM</ReligionType>
 					<iReligionSpread>40</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>
-			<PrereqReligion>RELIGION_ANDEAN</PrereqReligion>
+			<PrereqReligion>RELIGION_ANDEANISM</PrereqReligion>
 			<PrereqBuilding>BUILDING_ANDEAN_MONASTERY</PrereqBuilding>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -403,7 +403,7 @@
 				<DependencyType>RELIGION_ASATRU</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_ASATRU_MISSIONARY</Capture>
+			<Capture>UNIT_ASATRU_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -449,10 +449,10 @@
 			<Class>UNITCLASS_DRUID_MISSIONARY</Class>
 			<Type>UNIT_FEMALE_DRUID_MISSIONARY</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_DRUID</DependencyType>
+				<DependencyType>RELIGION_DRUIDIC_TRADITIONS</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_DRUID_MISSIONARY</Capture>
+			<Capture>UNIT_DRUID_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -471,11 +471,11 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_DRUID</ReligionType>
+					<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 					<iReligionSpread>40</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>
-			<PrereqReligion>RELIGION_DRUID</PrereqReligion>
+			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<PrereqBuilding>BUILDING_DRUID_MONASTERY</PrereqBuilding>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -501,7 +501,7 @@
 				<DependencyType>RELIGION_HELLENISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_HELLENIC_MISSIONARY</Capture>
+			<Capture>UNIT_HELLENIC_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -547,10 +547,10 @@
 			<Class>UNITCLASS_EGYPT_MYTH_MISSIONARY</Class>
 			<Type>UNIT_FEMALE_KEMETISM_MISSIONARY</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_EGYPT_MYTHOLOGY</DependencyType>
+				<DependencyType>RELIGION_KEMETISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_EGYPT_MYTH_MISSIONARY</Capture>
+			<Capture>UNIT_EGYPT_MYTH_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -569,11 +569,11 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_EGYPT_MYTHOLOGY</ReligionType>
+					<ReligionType>RELIGION_KEMETISM</ReligionType>
 					<iReligionSpread>40</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>
-			<PrereqReligion>RELIGION_EGYPT_MYTHOLOGY</PrereqReligion>
+			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
 			<PrereqBuilding>BUILDING_EGYPT_MYTH_MONASTERY</PrereqBuilding>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -596,10 +596,10 @@
 			<Class>UNITCLASS_MESO_MISSIONARY</Class>
 			<Type>UNIT_FEMALE_MESOPOTAMIEN_MISSIONARY</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_MESO</DependencyType>
+				<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_MESO_MISSIONARY</Capture>
+			<Capture>UNIT_MESO_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -618,11 +618,11 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_MESO</ReligionType>
+					<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 					<iReligionSpread>40</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>
-			<PrereqReligion>RELIGION_MESO</PrereqReligion>
+			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<PrereqBuilding>BUILDING_AN</PrereqBuilding>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -645,10 +645,10 @@
 			<Class>UNITCLASS_SHAMAN_MISSIONARY</Class>
 			<Type>UNIT_FEMALE_SHAMAN_MISSIONARY</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_SHAMAN</DependencyType>
+				<DependencyType>RELIGION_SHAMANISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_SHAMAN_MISSIONARY</Capture>
+			<Capture>UNIT_SHAMAN_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -667,11 +667,11 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_SHAMAN</ReligionType>
+					<ReligionType>RELIGION_SHAMANISM</ReligionType>
 					<iReligionSpread>40</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>
-			<PrereqReligion>RELIGION_SHAMAN</PrereqReligion>
+			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<PrereqBuilding>BUILDING_SHAMAN_MONASTERY</PrereqBuilding>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -697,7 +697,7 @@
 				<DependencyType>RELIGION_SHINTO</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_SHINTO_MISSIONARY</Capture>
+			<Capture>UNIT_SHINTO_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -746,7 +746,7 @@
 				<DependencyType>RELIGION_TENGRIISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_TENGRI_MISSIONARY</Capture>
+			<Capture>UNIT_TENGRI_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -795,7 +795,7 @@
 				<DependencyType>RELIGION_BAHAI</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_BAHAI_MISSIONARY</Capture>
+			<Capture>UNIT_BAHAI_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -844,7 +844,7 @@
 				<DependencyType>RELIGION_MORMON</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_MORMON_MISSIONARY</Capture>
+			<Capture>UNIT_MORMON_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -893,7 +893,7 @@
 				<DependencyType>RELIGION_SCIENTOLOGY</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_SCIENTOLOGY_MISSIONARY</Capture>
+			<Capture>UNIT_SCIENTOLOGY_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -942,7 +942,7 @@
 				<DependencyType>RELIGION_SIKHISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_SIKH_MISSIONARY</Capture>
+			<Capture>UNIT_SIKH_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -991,7 +991,7 @@
 				<DependencyType>RELIGION_VOODOO</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_VOODOO_MISSIONARY</Capture>
+			<Capture>UNIT_VOODOO_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -1040,7 +1040,7 @@
 				<DependencyType>RELIGION_YORUBA</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_YORUBA_MISSIONARY</Capture>
+			<Capture>UNIT_YORUBA_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -1086,10 +1086,10 @@
 			<Class>UNITCLASS_CANAANITE_MISSIONARY</Class>
 			<Type>UNIT_FEMALE_CANAANITE_MISSIONARY</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_CANAANITE</DependencyType>
+				<DependencyType>RELIGION_CANAANISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_CANAANITE_MISSIONARY</Capture>
+			<Capture>UNIT_CANAANITE_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -1108,11 +1108,11 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_CANAANITE</ReligionType>
+					<ReligionType>RELIGION_CANAANISM</ReligionType>
 					<iReligionSpread>40</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>
-			<PrereqReligion>RELIGION_CANAANITE</PrereqReligion>
+			<PrereqReligion>RELIGION_CANAANISM</PrereqReligion>
 			<PrereqBuilding>BUILDING_CANAANISM_MONASTERY</PrereqBuilding>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>

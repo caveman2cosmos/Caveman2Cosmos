@@ -15,8 +15,8 @@
 			<Strategy>TXT_KEY_BUILDING_JEWISH_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CANAANISM_TEMPLE</ArtDefineTag>
-			<ReligionType>RELIGION_CANAANITE</ReligionType>
-			<PrereqReligion>RELIGION_CANAANITE</PrereqReligion>
+			<ReligionType>RELIGION_CANAANISM</ReligionType>
+			<PrereqReligion>RELIGION_CANAANISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -64,8 +64,8 @@
 			<Strategy>TXT_KEY_BUILDING_CANAANISM_CATHEDRAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CANAANISM_CATHEDRAL</ArtDefineTag>
-			<ReligionType>RELIGION_CANAANITE</ReligionType>
-			<PrereqReligion>RELIGION_CANAANITE</PrereqReligion>
+			<ReligionType>RELIGION_CANAANISM</ReligionType>
+			<PrereqReligion>RELIGION_CANAANISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>280</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -140,8 +140,8 @@
 			<Strategy>TXT_KEY_BUILDING_JEWISH_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CANAANISM_MONASTERY</ArtDefineTag>
-			<ReligionType>RELIGION_CANAANITE</ReligionType>
-			<PrereqReligion>RELIGION_CANAANITE</PrereqReligion>
+			<ReligionType>RELIGION_CANAANISM</ReligionType>
+			<PrereqReligion>RELIGION_CANAANISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>216</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -190,9 +190,9 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CANAANISM_SHRINE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_CANAANISM</MovieDefineTag>
-			<HolyCity>RELIGION_CANAANITE</HolyCity>
-			<ReligionType>RELIGION_CANAANITE</ReligionType>
-			<GlobalReligionCommerce>RELIGION_CANAANITE</GlobalReligionCommerce>
+			<HolyCity>RELIGION_CANAANISM</HolyCity>
+			<ReligionType>RELIGION_CANAANISM</ReligionType>
+			<GlobalReligionCommerce>RELIGION_CANAANISM</GlobalReligionCommerce>
 			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
@@ -213,7 +213,7 @@
 			</CommerceChangeDoubleTimes>
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_CANAANITE</ReligionType>
+					<ReligionType>RELIGION_CANAANISM</ReligionType>
 					<iReligionChange>1</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
