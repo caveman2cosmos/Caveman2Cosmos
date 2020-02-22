@@ -354,7 +354,7 @@ public:
 	bool canConstructInternal(BuildingTypes eBuilding, bool bContinue = false, bool bTestVisible = false, bool bIgnoreCost = false, TechTypes eIgnoreTechReq = NO_TECH, int* probabilityEverConstructable = NULL, bool bAffliction = false, bool bExposed = false) const;
 	bool canCreate(ProjectTypes eProject, bool bContinue = false, bool bTestVisible = false) const; // Exposed to Python
 	bool canMaintain(ProcessTypes eProcess, bool bContinue = false) const; // Exposed to Python
-	bool isProductionMaxedUnitClass(UnitClassTypes eUnitClass) const; // Exposed to Python
+	bool isProductionMaxedUnit(UnitTypes eUnit) const; // Exposed to Python
 	bool isProductionMaxedBuildingClass(BuildingClassTypes eBuildingClass, bool bAcquireCity = false) const; // Exposed to Python
 	bool isProductionMaxedProject(ProjectTypes eProject) const; // Exposed to Python
 	int getProductionNeeded(UnitTypes eUnit) const; // Exposed to Python
@@ -1146,40 +1146,20 @@ public:
 	void changeFreeAreaBuildingCount(BuildingTypes eIndex, const CvArea* area, int iChange);
 
 	int getExtraBuildingHappiness(BuildingTypes eIndex) const; // Exposed to Python
-/********************************************************************************/
-/* 	New Civic AI						02.08.2010				Fuyu			*/
-/********************************************************************************/
-//Fuyu bLimited
 	void changeExtraBuildingHappiness(BuildingTypes eIndex, int iChange, bool bLimited = false);
-	/********************************************************************************/
-	/* 	New Civic AI												END 			*/
-	/********************************************************************************/
+
 	int getExtraBuildingHealth(BuildingTypes eIndex) const; // Exposed to Python
-/********************************************************************************/
-/* 	New Civic AI						02.08.2010				Fuyu			*/
-/********************************************************************************/
-//Fuyu bLimited
 	void changeExtraBuildingHealth(BuildingTypes eIndex, int iChange, bool bLimited = false);
-	/********************************************************************************/
-	/* 	New Civic AI												END 			*/
-	/********************************************************************************/
 
 	int getFeatureHappiness(FeatureTypes eIndex) const; // Exposed to Python
-/********************************************************************************/
-/* 	New Civic AI						02.08.2010				Fuyu			*/
-/********************************************************************************/
-//Fuyu bLimited
 	void changeFeatureHappiness(FeatureTypes eIndex, int iChange, bool bLimited = false);
-	/********************************************************************************/
-	/* 	New Civic AI												END 			*/
-	/********************************************************************************/
 
-	int getUnitClassCount(UnitClassTypes eIndex) const; // Exposed to Python
-	bool isUnitClassMaxedOut(UnitClassTypes eIndex, int iExtra = 0) const; // Exposed to Python
-	void changeUnitClassCount(UnitClassTypes eIndex, int iChange);
-	int getUnitClassMaking(UnitClassTypes eIndex) const; // Exposed to Python
-	void changeUnitClassMaking(UnitClassTypes eIndex, int iChange);
-	int getUnitClassCountPlusMaking(UnitClassTypes eIndex) const; // Exposed to Python
+	int getUnitCount(UnitTypes eIndex) const; // Exposed to Python
+	bool isUnitMaxedOut(const UnitTypes eIndex, const int iExtra = 0) const; // Exposed to Python
+	void changeUnitCount(UnitTypes eIndex, int iChange);
+	int getUnitMaking(UnitTypes eIndex) const; // Exposed to Python
+	void changeUnitMaking(UnitTypes eIndex, int iChange);
+	int getUnitCountPlusMaking(UnitTypes eIndex) const; // Exposed to Python
 
 	int getBuildingClassCount(BuildingClassTypes eIndex) const;
 	int getBuildingGroupCount(SpecialBuildingTypes eIndex) const; // Exposed to Python
@@ -1229,14 +1209,8 @@ public:
 
 	CvProperties* getProperties();
 	const CvProperties* getPropertiesConst() const;
-	/********************************************************************************/
-	/* 	New Civic AI						19.08.2010				Fuyu			*/
-	/********************************************************************************/
-	//Fuyu bLimited
+
 	void changeSpecialistValidCount(SpecialistTypes eIndex, int iChange, bool bLimited = false);
-	/********************************************************************************/
-	/* 	New Civic AI												END 			*/
-	/********************************************************************************/
 
 	bool isResearchingTech(TechTypes eIndex) const; // Exposed to Python
 	void setResearchingTech(TechTypes eIndex, bool bNewValue);
@@ -2275,8 +2249,8 @@ protected:
 	int** m_paiExtraBuildingYield;
 	int** m_paiExtraBuildingCommerce;
 	int* m_paiFeatureHappiness;
-	int* m_paiUnitClassCount;
-	int* m_paiUnitClassMaking;
+	int* m_paiUnitCount;
+	int* m_paiUnitMaking;
 	int* m_paiBuildingClassCount;
 	int* m_paiBuildingGroupCount;
 	int* m_paiBuildingClassMaking;
@@ -2403,7 +2377,7 @@ protected:
 	void getDebugLayerColors(GlobeLayerResourceOptionTypes eOption, std::vector<NiColorA>& aColors, std::vector<CvPlotIndicatorData>& aIndicators) const; // used by Globeview resource layer
 
 	void processTrait(TraitTypes eTrait, int iChange);
-	void recalculateUnitClassCounts();
+	void recalculateUnitCounts();
 
 	//TB Traits begin
 public:

@@ -1237,9 +1237,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DEPARTMENT_ENERGY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DEPARTMENT_ENERGY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DEPARTMENT_ENERGY_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_DOE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DOE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_DOE_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
@@ -1287,9 +1287,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DEPARTMENT_FOREIGN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DEPARTMENT_FOREIGN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DEPARTMENT_FOREIGN_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_DEPT_FOREIGN_POLICY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DEPT_FOREIGN_POLICY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_DEPT_FOREIGN_POLICY_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_FOREIGN_POLICY</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
@@ -1341,9 +1341,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DEPARTMENT_VEHICLES</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DEPARTMENT_VEHICLES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DEPARTMENT_VEHICLES_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_DMV</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DMV_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_DMV_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
@@ -1408,9 +1408,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DEPARTMENT_WATER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DEPARTMENT_WATER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DEPARTMENT_WATER_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_WATER_DEPARTMENT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_WATER_DEPARTMENT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_WATER_DEPARTMENT_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_PLUMBING</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
@@ -1531,9 +1531,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DUTCH_DIKE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DUTCH_DIKE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DUTCH_DIKE_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_NETHERLANDS_DIKE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NETHERLANDS_DIKE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_NETHERLANDS_DIKE_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
@@ -3788,9 +3788,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_IRONWORKS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_IRONWORKS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_IRONWORKS_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_IRON_WORKS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_IRON_WORKS_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_IRON_WORKS_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_STEEL</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
@@ -4542,9 +4542,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_NATIONAL_BREEDER_CAMEL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_BREEDER_CAMEL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATIONAL_BREEDER_CAMEL_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_CAMEL_NATIONAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CAMEL_NATIONAL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CAMEL_NATIONAL_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CAMELID_DOMESTICATION</PrereqTech>
 			<PrereqBonuses>
@@ -4589,9 +4589,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_NATIONAL_BREEDER_ELEPHANT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_BREEDER_ELEPHANT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATIONAL_BREEDER_ELEPHANT_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_ELEPHANT_NATIONAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ELEPHANT_NATIONAL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ELEPHANT_NATIONAL_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_ELEPHANT_DOMESTICATION</PrereqTech>
 			<PrereqBonuses>
@@ -4641,9 +4641,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_NATIONAL_BREEDER_HORSE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_BREEDER_HORSE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATIONAL_BREEDER_HORSE_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_HORSE_NATIONAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HORSE_NATIONAL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_HORSE_NATIONAL_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
 			<PrereqBonuses>
@@ -4693,9 +4693,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_NATIONAL_FIRE_SERVICE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_FIRE_SERVICE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATIONAL_FIRE_SERVICE_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_NFS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NFS_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_NFS_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_FIREFIGHTING</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
@@ -5024,9 +5024,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_NATIONAL_SCIENCE_FOUNDATION</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_SCIENCE_FOUNDATION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATIONAL_SCIENCE_FOUNDATION_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_NSF</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NSF_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_NSF_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
@@ -5642,9 +5642,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_NATIONAL_SPORTS_LEAGUE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_SPORTS_LEAGUE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATIONAL_SPORTS_LEAGUE_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_NHL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NHL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_NHL_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MODERN_SPORTS</PrereqTech>
 			<ObsoleteTech>TECH_BINARY_PSYCHOKINESIS</ObsoleteTech>
@@ -5834,9 +5834,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_NATIONAL_WEATHER_SERVICE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_WEATHER_SERVICE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NATIONAL_WEATHER_SERVICE_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_NWS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NWS_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_NWS_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_RADIO</PrereqTech>
 			<TechTypes>

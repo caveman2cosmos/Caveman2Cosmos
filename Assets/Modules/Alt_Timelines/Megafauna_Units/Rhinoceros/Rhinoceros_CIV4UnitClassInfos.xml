@@ -8,7 +8,7 @@
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_RHINO_SWORDSMAN</Type>
-			<Description>TXT_KEY_UNIT_RHINO_RIDER</Description>
+			<Description>TXT_KEY_UNIT_RHINO_SWORDSMAN</Description>
 			<DefaultUnit>UNIT_RHINO_SWORDSMAN</DefaultUnit>
 		</UnitClassInfo>
 	</UnitClassInfos>

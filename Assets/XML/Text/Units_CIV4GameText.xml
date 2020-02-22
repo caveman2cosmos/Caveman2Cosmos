@@ -786,7 +786,7 @@
 		<French>[COLOR_UNIT_TEXT]le Véhicule Blindé SAM[COLOR_REVERT] - Une unité terrestre anti-aérienne automatisée. A utiliser pour intercepter les avions ennemis et pour clouer les [COLOR_UNIT_TEXT]Gunships[COLOR_REVERT] au sol.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ADVENTURE_EXECUTIVE</Tag>
+		<Tag>TXT_KEY_UNIT_EXECUTIVE_ADVENTURE</Tag>
 		<English>Adventure Executive</English>
 		<French>Gérant de Aventure Tours</French>
 		<German>
@@ -852,7 +852,7 @@
 		<Polish>Wojownik Adze to jednostka specjalizująca się w zasadzkach.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_AEGIS_CRUISER</Tag>
+		<Tag>TXT_KEY_UNIT_AEGIS</Tag>
 		<English>Aegis Cruiser</English>
 		<French>
 			<Text>Croiseur Aegis</Text>
@@ -877,7 +877,7 @@
 		<Polish>Krążownik Aegis</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_AEGIS_CRUISER_PEDIA</Tag>
+		<Tag>TXT_KEY_UNIT_AEGIS_PEDIA</Tag>
 		<English>The term "Aegis cruiser" loosely describes a cruiser carrying an Aegis anti-missile system created by the United States in the late twentieth century. The US Navy had long been developing an anti-missile vessel, and the sinking of the British destroyer HMS 'Sheffield' by a single French Exocet missile during the Falklands War only increased their efforts. [PARAGRAPH:1]Aegis cruisers are typically armed with anti-missile missiles, as well as two enormous "Vulcan" gatling guns, "last ditch" weapons designed to destroy close-in missiles that evaded the cruiser's defensive missiles. The ships are also equipped with anti-aircraft weaponry and some anti-submarine defenses, as well. In addition, the cruisers often carry offensive missiles which can be deployed against naval or land-based targets. Aegis cruisers are most usually deployed as escort vessels, protecting the highly vulnerable carrier groups from missile and air assault.</English>
 		<French>Le terme de "Croiseur Aegis" désigne un croiseur armé du système anti-missiles Aegis, conçu par les Etats-Unis à la fin du vingtième siècle. La marine américaine a toujours cherché à doter sa flotte de vaisseaux anti-missiles. Le torpillage du destroyer britannique HMS Sheffield par un simple missile Exocet français lors de la guerre des Malouines les incita à redoubler d'efforts. [PARAGRAPH:1]Les croiseurs Aegis sont généralement dotés de missiles anti-missiles ainsi que de deux énormes canons "Vulcain", censés pouvoir détruire les missiles qui auraient échappé à la surveillance des radars. Ces vaisseaux sont également équipés de tout un arsenal anti-aérien et anti-sous-marins. En outre, les croiseurs sont souvent pourvus de missiles d'attaque qui peuvent être déployés contre des cibles navales ou terrestres. Les croiseurs Aegis sont le plus souvent utilisés pour servir d'escorte aux transporteurs.</French>
 		<German>Als "Aegis-Kreuzer" bezeichnet man einen Ende des 20. Jahrhunderts in den Vereinigten Staaten eingesetzten Kreuzer, der mit einem Aegis-Kampfsystem ausgestattet ist. Die U.S. Navy hatte bereits lange an der Entwicklung eines Schiffes mit Warn- und Feuerleitsystem gearbeitet, als diese Bemühungen nach der Versenkung des britischen Zerstörers HMS 'Sheffield' während des Falklandkrieges durch eine einzige französische Exocet-Rakete noch stärker vorangetrieben wurden. [PARAGRAPH:1]Aegis-Kreuzer sind normalerweise mit Abfangraketen sowie zwei riesigen "Vulcan"-Gatlingkanonen ausgestattet - also Waffen, die als allerletztes Mittel eingesetzt werden, um anfliegende Raketen zu zerstören, die zuvor den Abwehrraketen des Kreuzers ausweichen konnten. Darüber hinaus sind die Schiffe mit Flugabwehrwaffen sowie einigen U-Boot-Abwehrwaffen und häufig auch mit Angriffsraketen ausgerüstet, die sowohl gegen land- als auch seegestützte Ziele eingesetzt werden können. Aegis-Kreuzer dienen in aller Regel als Begleitschiffe für äußerst angreifbare Flugzeugträgerflotten, die vor Raketen- und Luftbombardierungen geschützt werden müssen.</German>
@@ -886,7 +886,7 @@
 		<Polish>Termin "Krążownik Aegis" odnosi się do krążownika wyposażonego w system atypociskowy o nazwie Aegis. Pierwszy taki okręt został skonstruowany przez Stany Zjednoczone u schyłku XX wieku.[PARAGRAPH:1]Krążowniki Aegis oprócz rakiet są zwykle wyposażone także w działa obrotowe typu Vulcan i inne bronie zaprojektowane w celu obrony przed pociskami, którym uda się jakoś ominąć systemy antyrakietowe. Pozostałym wyposażeniem są armatki przeciwlotnicze i uzbrojenie przeciw łodziom podwodnym. Mogą one także transportować i wystrzeliwać pociski dalekiego zasięgu przeciwko celom morskim lub lądowym.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_AEGIS_CRUISER_STRATEGY</Tag>
+		<Tag>TXT_KEY_UNIT_AEGIS_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Aegis Cruisers[COLOR_REVERT] carry up to 2 [COLOR_UNIT_TEXT]Missiles[COLOR_REVERT]. They have a 50% chance to intercept [COLOR_UNIT_TEXT]Aircraft[COLOR_REVERT], and they can [COLOR_HIGHLIGHT_TEXT]Bombard[COLOR_HIGHLIGHT_TEXT]cities (-10%/Turn).</English>
 		<French>[COLOR_UNIT_TEXT]Aegis Cruisers[COLOR_REVERT] carry up to 2 [COLOR_UNIT_TEXT]Missiles[COLOR_REVERT]. They have a 50% chance to intercept [COLOR_UNIT_TEXT]Aircraft[COLOR_REVERT], and they can [COLOR_HIGHLIGHT_TEXT]Bombard[COLOR_HIGHLIGHT_TEXT]cities (-10%/Turn).</French>
 		<Spanish>Los [COLOR_UNIT_TEXT]Cruceros AEGIS[COLOR_REVERT] pueden llevar hasta 2 [COLOR_UNIT_TEXT]Misiles[COLOR_REVERT]. Tienen una probabilidad del 50% de interceptar [COLOR_UNIT_TEXT]aeronaves[COLOR_REVERT], y son capaces de [COLOR_HIGHLIGHT_TEXT]bombardear[COLOR_HIGHLIGHT_TEXT] ciudades (-10%/turno).</Spanish>
@@ -2644,7 +2644,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Bohater Narodowy Fenicjan to [COLOR_UNIT_TEXT]Baal-Eser II[COLOR_REVERT]. Rozpoczyna w towarzystwie [COLOR_HIGHLIGHT_TEXT]Handlarza[COLOR_REVERT]. Może zostać wyszkolony wraz z odkryciem [COLOR_TECH_TEXT]Pisma[COLOR_REVERT] i [COLOR_TECH_TEXT]Alfabetu[COLOR_REVERT].</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_BABUR</Tag>
+		<Tag>TXT_KEY_UNIT_MUGHAL_BABUR</Tag>
 		<English>Babur</English>
 		<French>Babur</French>
 		<Spanish>
@@ -2654,7 +2654,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_BABUR_PEDIA</Tag>
+		<Tag>TXT_KEY_UNIT_MUGHAL_BABUR_PEDIA</Tag>
 		<English>Babur (born Feb. 15, 1483, principality of Fergana died Dec. 26, 1530, Agra, India) was Emperor (1526 - 30) and founder of the Mughal dynasty of India. A descendant of Genghis Khan and Timur, he came from a tribe of Mongol origin but was Turkish in language and upbringing. In his youth he tried for 10 years (1494 - 1504) to gain control of Samarkand, Timur's old capital. Those efforts ended in his losing his own principality in Fergana (modern Uzbekistan), but he consoled himself by seizing and holding Kabul (1504). After four failed attempts, he successfully occupied Delhi (1525). Surrounded by enemy states, Babur (the name means "Tiger") persuaded his homesick troops to stand their ground, and over the next four years he defeated his foes. His grandson Akbar consolidated the new empire. Babur was also a gifted poet and a lover of nature who constructed gardens wherever he went. The Babur-nameh, his prose memoirs, has become a world classic of autobiography.[PARAGRAPH:2]</English>
 		<Polish>Babur, Zahir ud-din Muhammad (1483-1530), założyciel indyjskiej, muzułmańskiej dynastii Wielkich Mogołów, potomek Timura i Czyngis-chana. W 1494 opanował i rządził Ferganą, po jej utracie i nieudanych próbach odzyskania schronił się w Afganistanie. W 1504 podporządkował sobie Kabul i Kandahar, w 1519 Pendżab, który płacił mu trybut. W 1526 pokonał pod Panipatem sułtana delhijskiego Ibrahima Lodiego, zajął Delhi i Agrę. W 1527 pokonał pod Chanwą koalicję radźputów i opanował Nizinę Hindustańską. W 1529 zdobył Gwalior i dotarł do granic Bengalu i Himalajów. Wybitny wódz, polityk, protektor nauki i sztuki. Autor pamiętników Baburname, traktatu o sprawowaniu rządów i utworów poetyckich.</Polish>
 	</TEXT>
@@ -3978,7 +3978,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Buldożer</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_BULLSEYE_EXECUTIVE</Tag>
+		<Tag>TXT_KEY_UNIT_EXECUTIVE_BULLSEYE</Tag>
 		<English>Bullseye Executive</English>
 		<French>Gérant de Gran'Frais</French>
 		<German>Bullseye-Geschäftsführer</German>
@@ -3991,7 +3991,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Przedstawiciel Bullseye</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_BURGERWORLD_EXECUTIVE</Tag>
+		<Tag>TXT_KEY_UNIT_EXECUTIVE_BURGERWORLD</Tag>
 		<English>Burgerworld Executive</English>
 		<French>Gérant de MondoBurger</French>
 		<German>Burgerworld-Geschäftsführer</German>
@@ -5239,7 +5239,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>%[SPACE]Wolniejsza Produkcja[SPACE]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CLASSIC_WORK_BOAT</Tag>
+		<Tag>TXT_KEY_UNIT_CLASSIC_WORKBOAT</Tag>
 		<English>Workboat (Ancient)</English>
 		<French>
 			<Text>Bateau-atelier (Classique)</Text>
@@ -5255,7 +5255,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Łódka (Antyk)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CLASSIC_WORK_BOAT_STRATEGY</Tag>
+		<Tag>TXT_KEY_UNIT_CLASSIC_WORKBOAT_STRATEGY</Tag>
 		<English>Classic [COLOR_UNIT_TEXT]Workboat[COLOR_REVERT] unit with slightly better work rate and movement. Unarmed vessels that can create fishing boats, whaling boats, and (in late game) oil rigs. [COLOR_UNIT_TEXT]Work Boats[COLOR_REVERT] cannot enter Ocean spaces. </English>
 		<French>Classic [COLOR_UNIT_TEXT]Workboat[COLOR_REVERT] unit with slightly better work rate and movement. Unarmed vessels that can create fishing boats, whaling boats, and (in late game) oil rigs. [COLOR_UNIT_TEXT]Work Boats[COLOR_REVERT] cannot enter Ocean spaces. </French>
 		<Polish>Kliper Handlowy</Polish>
@@ -5975,7 +5975,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>[COLOR_UNIT_TEXT]Kolubryna[COLOR_REVERT] potężne działo, dobre zarówno przeciwko miastom jak i jednostkom.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CUNHAMBEBE</Tag>
+		<Tag>TXT_KEY_UNIT_TUPI_CUNHAMBEBE</Tag>
 		<English>Cunhambebe</English>
 		<French>Cunhambebe</French>
 		<Spanish>
@@ -5985,7 +5985,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CUNHAMBEBE_PEDIA</Tag>
+		<Tag>TXT_KEY_UNIT_TUPI_CUNHAMBEBE_PEDIA</Tag>
 		<English>Cunhambebe was an aboriginal Indian chieftain of the Tamoyo tribe, which dominated the region between present-day Cabo Frio (Rio de Janeiro) and Bertioga (Sao Paulo). He lived in a village in Iperoig (near present-day Ubatuba). Cunhambebe was also the main force and elected chief of the Tamoyo Confederation, a military alliance between the sea coast tribes against the Portuguese colonists, which waged war against them until the Peace of Iperoig was celebrated with them, in 1567. They fought also the Portuguese forces in alliance with the French invaders commanded by Nicolas Durand de Villegaignon (1510-1571), a Huguenot admiral, in the historical episode which became known as the France Antarctique. According to the description of French priest Andre de Thevet, the German soldier of fortune and sailor Hans Staden (1525-1579) was a prisoner of Cunhambebe's father (who had the same name) between 1554 and 1557. The Tupinamba were fierce warriors and cannibals, as described by Hans Staden, who narrowly escaped several times of being killed and eaten by Cunhambebe's Indians.[PARAGRAPH:2]The war waged by the Tamoyo Confederation was strongly affecting the Portuguese colonisation efforts, so the two Portuguese Jesuit priests who had founded Sao Paulo dos Campos de Piratininga (which became the present-day megalopolis of Sao Paulo), Manoel da Nobrega (1517-1570) and Jose de Anchieta (1534 - 1597) started a peace mission by doing a high risk visit to Cunhambebe's village. Although they were received with mistrust, Anchieta spoke Tupi language very well, and they were spared death. Eventually, Anchieta succeeded in celebrating a peace treaty, which was respected by Cunhambebe and the Tupinambas until the attack force led by Portuguese knight D. Estacio de Sa (1520-1567) tried to expel the French invaders. In this occasion, the Tamoyo tribes came to help the Frenchmen, particularly because they felt betrayed by the Portuguese, and also because the Temimino tribes, their traditional and bitter enemies, fought on the side of the Portuguese.[PARAGRAPH:2]Cunhambebe died of bubonic plague just after the arrival of Villegaigon's fleet to the Guanabara Bay in Rio de Janeiro, so he took no part in the following events which eventually led to the almost complete destruction of the Tamoyos towards the end of the 16th century.[PARAGRAPH:2]</English>
 	</TEXT>
 	<TEXT>
@@ -7263,7 +7263,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Potężna, Włoska jednostka specjalna.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_EMPCLOTH_EXECUTIVE</Tag>
+		<Tag>TXT_KEY_UNIT_EXECUTIVE_EMPCLOTH</Tag>
 		<English>Emperors Clothing Executive</English>
 		<French>Gérant d'Habits Impériaux</French>
 		<German>Emperors-Clothing-Geschäftsführer</German>
@@ -7557,7 +7557,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>[ICON_BULLET]Może uniknąć wykrycia (Szansa: %d1_Amount%%)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_EWTRADE_EXECUTIVE</Tag>
+		<Tag>TXT_KEY_UNIT_EXECUTIVE_EWTRADE</Tag>
 		<English>East West Traders Executive</English>
 		<French>Gérant de 'East West Traders'</French>
 		<German>East-West-Traders-Geschäftsführer</German>
@@ -8141,7 +8141,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Fanatyzm (łac. fanaticus - zagorzały, szalony) - postawa oraz zjawisko społeczne polegające na ślepej i bezkrytycznej wierze w słuszność jakichś poglądów politycznych, religijnych lub społecznych. Przejawem fanatyzmu jest skrajna nietolerancja wobec przedstawicieli odmiennych poglądów. Po raz pierwszy określenia fanatici użyto wobec kapłanów bogini Bellony w Rzymie.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_FASHION_EXECUTIVE</Tag>
+		<Tag>TXT_KEY_UNIT_EXECUTIVE_FASHION</Tag>
 		<English>Fashion Executive</English>
 		<French>Gérant de 'Maison de la Mode'</French>
 		<German>Fashion-Geschäftsführer</German>
@@ -9645,7 +9645,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>[COLOR_UNIT_TEXT]Great Admiral[COLOR_REVERT] is the naval version of the [COLOR_UNIT_TEXT]Great General[COLOR_REVERT] unit. Admiral can build special buildings related to sea and navy and can join cities as a GP specialist and add XP to every ship built in that city.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GREAT_ARTIST</Tag>
+		<Tag>TXT_KEY_UNIT_ARTIST</Tag>
 		<English>Great Artist</English>
 		<French>
 			<Text>Artiste illustre</Text>
@@ -9699,7 +9699,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>[COLOR_UNIT_TEXT]Wielka Bombarda[COLOR_REVERT] znakomita jednostka do atakowania miast.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GREAT_ENGINEER</Tag>
+		<Tag>TXT_KEY_UNIT_ENGINEER</Tag>
 		<English>Great Engineer</English>
 		<French>
 			<Text>Ingénieur illustre</Text>
@@ -9815,7 +9815,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Osadź Wielkiego Łowcę w mieście lub stwórz tradycję.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GREAT_MERCHANT</Tag>
+		<Tag>TXT_KEY_UNIT_MERCHANT</Tag>
 		<English>Great Merchant</English>
 		<French>
 			<Text>Marchand illustre</Text>
@@ -9854,7 +9854,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>[COLOR_UNIT_TEXT]Wielki Prorok[COLOR_REVERT] możesz go dołączyć do miasta jako [BOLD]Kapłana[\BOLD]. Możesz też użyć go by wybudować [COLOR_BUILDING_TEXT]Sakntuarium[COLOR_REVERT].</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GREAT_PROPHET</Tag>
+		<Tag>TXT_KEY_UNIT_PROPHET</Tag>
 		<English>Great Prophet</English>
 		<French>
 			<Text>Prophète illustre</Text>
@@ -9879,7 +9879,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Wielki Prorok</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GREAT_SCIENTIST</Tag>
+		<Tag>TXT_KEY_UNIT_SCIENTIST</Tag>
 		<English>Great Scientist</English>
 		<French>
 			<Text>Savant illustre</Text>
@@ -11258,19 +11258,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Ciężki Czołg IS-2</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_HEAVY_TANK_M26</Tag>
-		<English>Heavy Tank</English>
-		<French>Char Lourd</French>
-		<German>Schwerer Panzer</German>
-		<Italian>Carro armato pesante</Italian>
-		<Spanish>
-			<Text>Tanque pesado</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Ciężki Czołg M26 Pershing</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEAVY_TANK_PZKPFWVI</Tag>
 		<English>Heavy Tank PzKpfw VI Tiger I</English>
 		<French>Char Lourd PzKpfw VI Tiger I</French>
@@ -12493,31 +12480,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>The [COLOR_UNIT_TEXT]Inniskilling[COLOR_REVERT] is the Irish unique Culture unit. Boosted by copious alcohol comsumption it is good in a pinch and has great morale.</English>
 		<French>The [COLOR_UNIT_TEXT]Inniskilling[COLOR_REVERT] is the Irish unique Culture unit. Boosted by copious alcohol comsumption it is good in a pinch and has great morale.</French>
 		<Polish>Inniskilling to Irlandzka unikalna jednostka kulturowa. Posiada wysokie morale i jest wszechstronnie wyszkolona.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_INQUISITOR</Tag>
-		<English>Inquisitor</English>
-		<French>
-			<Text>Inquisiteur</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Inquisitor</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Inquisitore</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Inquisidor</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Inkwizytor</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INQUISITOR_HELP</Tag>
@@ -15075,7 +15037,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Wojownik Kanembu</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_MALLWART_EXECUTIVE</Tag>
+		<Tag>TXT_KEY_UNIT_EXECUTIVE_MALLWART</Tag>
 		<English>MallWart Executive</English>
 		<French>Gérant de Carouf'</French>
 		<German>MallWart-Geschäftsführer</German>
@@ -15303,7 +15265,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_MAPSTER_EXECUTIVE</Tag>
+		<Tag>TXT_KEY_UNIT_EXECUTIVE_MAPSTER</Tag>
 		<English>Mapster Executive</English>
 		<French>Gérant de Mapster</French>
 		<German>Mapster-Geschäftsführer</German>
@@ -15471,7 +15433,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_MCDOWELLS_EXECUTIVE</Tag>
+		<Tag>TXT_KEY_UNIT_EXECUTIVE_MCDOWELLS</Tag>
 		<English>Big McDowells Executive</English>
 		<French>Gérant de Big McDowells</French>
 		<German>Big-McDowells-Geschäftsführer</German>
@@ -15820,7 +15782,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Bohater Narodowy Holendrów to [COLOR_UNIT_TEXT]Michiel de Ruyter[COLOR_REVERT]. Rozpoczyna w towarzystwie [COLOR_HIGHLIGHT_TEXT]Handlarza[COLOR_REVERT]. Może zostać wyszkolony wraz z odkryciem [COLOR_TECH_TEXT]Edukacji[COLOR_REVERT] i [COLOR_TECH_TEXT]Nauk Wojskowych[COLOR_REVERT].</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_MIDDLE_WORK_BOAT</Tag>
+		<Tag>TXT_KEY_UNIT_MIDDLE_WORKBOAT</Tag>
 		<English>Workboat (Middle Ages)</English>
 		<French>
 			<Text>Bateau-atelier (Moyen-Age)</Text>
@@ -15836,7 +15798,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Łódka (Średniowiecze)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_MIDDLE_WORK_BOAT_STRATEGY</Tag>
+		<Tag>TXT_KEY_UNIT_MIDDLE_WORKBOAT_STRATEGY</Tag>
 		<English>Medieval [COLOR_UNIT_TEXT]Workboat[COLOR_REVERT] unit with moderate work rate and movement. Unarmed vessels that can create fishing boats, whaling boats, and (in late game) oil rigs. [COLOR_UNIT_TEXT]Work Boats[COLOR_REVERT] cannot enter Ocean spaces. </English>
 		<French>Medieval [COLOR_UNIT_TEXT]Workboat[COLOR_REVERT] unit with moderate work rate and movement. Unarmed vessels that can create fishing boats, whaling boats, and (in late game) oil rigs. [COLOR_UNIT_TEXT]Work Boats[COLOR_REVERT] cannot enter Ocean spaces. </French>
 		<Polish>Myśliwiec MiG-29</Polish>
@@ -15926,7 +15888,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>MiG-25 jest radzieckim samolotem naddźwiękowym osiągającym prędkość maksymalną odpowiadającą liczbie Macha równej 3. Zakładano dla niego różne funkcje, w tym przenoszenie pocisków manewrujących jak również mały 5 do 7 osobowy transport pasażerski, ale głównym celem było stworzenie nowego samolotu rozpoznawczego latającego na dużych wysokościach oraz ciężkiego myśliwca przechwytującego. Produkcje seryjną rozpoczęto na początku 1969 roku. Ogółem wyprodukowano 1190 MiG-25 - myśliwskie MiG-25 P oraz rozpoznawczo-bombowe MiG-25 R, w kilkunastu wersjach aż do zakończenia produkcji w 1984 roku.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_MILEHIGH_EXECUTIVE</Tag>
+		<Tag>TXT_KEY_UNIT_EXECUTIVE_MILEHIGH</Tag>
 		<English>MileHigh Executive</English>
 		<French>Gérant de 'MileHigh'</French>
 		<German>MileHigh-Geschäftsführer</German>
@@ -16109,7 +16071,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Struś Moa</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_MOBBY_EXECUTIVE</Tag>
+		<Tag>TXT_KEY_UNIT_EXECUTIVE_MOBBY</Tag>
 		<English>Mobby Meats Executive</English>
 		<French>Gérant de 'Mobby Meats'</French>
 		<German>Mobby-Meats-Geschäftsführer</German>
@@ -16577,7 +16539,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Współczesny Spadochroniarz</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_MODERN_WORK_BOAT</Tag>
+		<Tag>TXT_KEY_UNIT_MODERN_WORKBOAT</Tag>
 		<English>Modern Workboat</English>
 		<French>Bateau-Atelier (Moderne)</French>
 		<German>Modernes Arbeitsboot</German>
@@ -16590,7 +16552,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Współczesny Kuter</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_MODERN_WORK_BOAT_STRATEGY</Tag>
+		<Tag>TXT_KEY_UNIT_MODERN_WORKBOAT_STRATEGY</Tag>
 		<English>Modern Workboat unit with above average work rate and movement. Unarmed vessels that can create fishing boats, whaling boats, and (in late game) oil rigs. This[COLOR_UNIT_TEXT]Work Boat[COLOR_REVERT] can enter Ocean spaces. </English>
 		<French>Modern Workboat unit with above average work rate and movement. Unarmed vessels that can create fishing boats, whaling boats, and (in late game) oil rigs. This[COLOR_UNIT_TEXT]Work Boat[COLOR_REVERT] can enter Ocean spaces. </French>
 	</TEXT>
@@ -16941,16 +16903,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Współczesny Snajper</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_MUGHAL_BABUR</Tag>
-		<English>Babur</English>
-		<French>Babur</French>
-		<Spanish>
-			<Text>Babur</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MUNGO_MAN</Tag>
@@ -20250,7 +20202,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Samolot zwiadowczy to dobry wybór jeśli chcesz szpiegować terytorium wroga w późniejszym etapie gry.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_RED_EXECUTIVE</Tag>
+		<Tag>TXT_KEY_UNIT_EXECUTIVE_RED</Tag>
 		<English>Red Curtains Executive</English>
 		<French>Gérant de Red Curtains</French>
 		<German>Red-Curtains-Geschäftsführer</German>
@@ -20309,7 +20261,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>The red panda (Ailurus fulgens, or shining-cat), is a small arboreal mammal native to the eastern Himalayas and southwestern China. It is the only extant species of the genus Ailurus. Slightly larger than a domestic cat, it has reddish-brown fur, a long, shaggy tail, and a waddling gait due to its shorter front legs. It feeds mainly on bamboo, but is omnivorous and may also eat eggs, birds, insects, and small mammals. It is a solitary animal, mainly active from dusk to dawn, and is largely sedentary during the day.[PARAGRAPH:2]The red panda has been classified as Vulnerable by IUCN because its population is estimated at fewer than 10,000 mature individuals. Although red pandas are protected by national laws in their range countries, their numbers in the wild continue to decline mainly due to habitat loss and fragmentation, poaching, and inbreeding depression.[PARAGRAPH:2]The red panda has been previously classified in the families Procyonidae (raccoons) and Ursidae (bears), but recent research has placed it in its own family Ailuridae, in superfamily Musteloidea along with Mustelidae and Procyonidae. Two subspecies are recognized.[PARAGRAPH:2]Source: Wikipedia</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_REDU</Tag>
+		<Tag>TXT_KEY_UNIT_ASSYRIAN_REDU</Tag>
 		<English>Redu</English>
 		<French>Redu</French>
 		<Spanish>
@@ -20319,7 +20271,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_REDU_PEDIA</Tag>
+		<Tag>TXT_KEY_UNIT_ASSYRIAN_REDU_PEDIA</Tag>
 		<English>The Assyrian military contained cavalry, chariots, and infantry.  The Assyrian army consisted of both foreigners, and natives.  Within the infantry, there were archers, spearmen, slingers, and shield barers.  The infantry were the cheapest and most numerous.  The Assyrian infantry was effectively used in siege warfare, for which the Assyrians are famous.</English>
 		<French>La cavalerie, les chars, et l'infanterie contenus militaires assyriens. Chez l'infanterie, il y avait des archers, des hommes armés d'une lance, des baques d'étanchéité, et des barers de bouclier. L'infanterie étaient la meilleur marché et la plus nombreuse. L'infanterie assyrienne a été efficacement employée dans la guerre de siège, pour laquelle les Assyriens sont célèbres.</French>
 		<German>Die Assyrian militärische enthaltene Kavallerie, die chariots und die Infanterie. Innerhalb der Infanterie gab es Bogenschützen, Spearmen, Slingers und Schild barers. Die Infanterie waren das preiswerteste und das am zahlreichsten. Die Assyrian Infanterie wurde effektiv in der Belagerungkriegsführung verwendet, für die die Assyrians berühmt sind.</German>
@@ -20328,7 +20280,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Mieszkańcy Asyrii, leżącej na północ od ośrodków wcześniejszych cywilizacji, Sumeru i Akadu, byli przez setki lat kulturowo zacofani w stosunku do swoich sąsiadów z południa. W czasach Sargona Wielkiego i Ur-Nammu tylko chwilowo ziemie asyryjskie zostały zjednoczone z dolną Mezopotamią. Spowodowało to późniejsze wytworzenie się państwowości. Jak informują zapiski asyryjskie (Asyryjska lista królów), pierwsi królowie tego ubogiego kraju byli nomadami i mieszkali w namiotach. Trudne warunki egzystencji wymusiły poniekąd stworzenie państwa o charakterze wojskowym. Dzięki położeniu na północy Mezopotamii rozwój Asyrii opierał się na handlu, gdyż przez miasta asyryjskie przebiegały główne szlaki handlowe łączące Zatokę Perską z Morzem Śródziemnym.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_REDU_STRATEGY</Tag>
+		<Tag>TXT_KEY_UNIT_ASSYRIAN_REDU_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Redu[COLOR_REVERT] are Assyrian culture unit. They are similar to typical [COLOR_UNIT_TEXT]Spearman[COLOR_REVERT] but with even better bonuses against mounted units.</English>
 		<French>Constuisez des [COLOR_UNIT_TEXT]Redu.</French>
 		<German>Baue den [COLOR_UNIT_TEXT]Redu[COLOR_REVERT].</German>
@@ -21060,7 +21012,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Italian>Unità unica cartaginese</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SAFARI_EXECUTIVE</Tag>
+		<Tag>TXT_KEY_UNIT_EXECUTIVE_SAFARI</Tag>
 		<English>Safari Hunters Executive</English>
 		<French>Gérant des Chasseurs Safari</French>
 		<German>Safari-Hunters-Geschäftsführer</German>
@@ -24960,7 +24912,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>TBD</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_TORTOISE</Tag>
+		<Tag>TXT_KEY_UNIT_DESERT_TORTOISE</Tag>
 		<English>Desert Tortoise</English>
 		<French>
 			<Text>Tortue du désert</Text>
@@ -24981,13 +24933,13 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Żółw Pustynny</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_TORTOISE_PEDIA</Tag>
+		<Tag>TXT_KEY_UNIT_DESERT_TORTOISE_PEDIA</Tag>
 		<English>The desert tortoise (Gopherus agassizii) is a species of tortoise native to the Mojave desert and Sonoran desert of the southwestern United States and northwestern Mexico. They can be located in western Arizona, southeastern California, southern Nevada, and southwestern Utah. The species name agassizii is in honor of Swiss-American zoologist Jean Louis Rodolphe Agassiz. Recently, on the basis of DNA, geographic, and behavioral differences between desert tortoises in the Sonoran and Mojave desert, it was decided that the species should be split into two separate species: the Mojave Desert Tortoise (Gopherus agassizii) and Sonoran Desert Tortoise (Gopherus morafkai).[PARAGRAPH:2]This tortoise may attain a length of 10 to 14 inches (25 to 36 cm), with males being slightly larger than females. Male tortoises have a longer gular horn than females, their plastron (lower shell) is concave compared to female tortoises. Males have larger tails than females do. Their shells are high-domed, and greenish-tan to dark brown in color. Desert tortoises can grow from 4 - 6'(10 - 15 cm) in height and weigh 8 - 15 lb (4 - 7 kg) when fully grown. The front limbs have sharp, claw-like scales and are flattened for digging. Back legs are skinnier and very long(Source: Wikipedia)</English>
 		<German>Gopherschildkröten (Gopherus) sind eine Tiergattung aus der Familie der Landschildkröten. Ausgewachsen sind sie etwa 40 cm lang und bis zu 4 kg schwer. Auffallend sind ihre abgeflachten, stark beschuppten Vorderbeine, die sie u.a. zum Graben ihrer Baue benutzen.[PARAGRAPH:2]Gopherschildkröten gibt es nur im Süden Nordamerikas und im Norden Mexikos. Sie leben in den Trockengebieten und am Rande von Wüsten. Tagsüber flüchten sie vor den hohen Temperaturen in ihre unterirdischen Baue, die bis zu 12 m lang und 3 m tief werden können. In der Dämmerung hingegen werden sie aktiv und gehen auf Nahrungssuche. Gopherschildkröten fressen überwiegend pflanzliche Nahrung, aber auch Aas und die Exkremente von Säugetieren. Trinken müssen sie nur sehr selten, da sie das meiste Wasser bereits über die Nahrung aufnehmen.[PARAGRAPH:2]Gopherschildkröten zählen zu den bedrohten Tierarten, da ihr Lebensraum immer mehr verloren geht. In einigen Gebieten ist ihr Bestand seit den 80er Jahren um mehr als 90% zurückgegangen. Deshalb ist mittlerweile vielerorts nicht nur der Fang, sondern schon die Berührung wildlebender Schildkröten gesetzlich verboten.</German>
 		<Polish>Żółw pustynny (Geochelone sulcata)? jest jednym z bardziej interesujących gatunków żółwi lądowych, który żyje w Afryce. Osiąga do 0,5 m długości oraz około 50 kg wagi. Jego pancerz grzbietowy, o ochronnej szarobeżowej barwie i o wyraźnym rysunku, jest silnie wysklepiony. Kończyny pokryte są długimi i stosunkowo ostrymi wyrostkami rogowymi. Zaniepokojony, błyskawicznie chowa głowę do skorupy, całkowicie zasłaniając otwór przednimi kończynami.[PARAGRAPH:2]W ogrodach zoologicznych spotykany jest rzadko. W Polsce znajduje się cała hodowla we Wrocławskim ZOO. (źródło: Wikipedia)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_TORTOISE2</Tag>
+		<Tag>TXT_KEY_UNIT_GALAPOGOS_TORTOISE</Tag>
 		<English>Galapagos Tortoise</English>
 		<French>
 			<Text>Tortue des Galapagos</Text>
@@ -25008,7 +24960,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Żółw Słoniowy</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_TORTOISE2_PEDIA</Tag>
+		<Tag>TXT_KEY_UNIT_GALAPOGOS_TORTOISE_PEDIA</Tag>
 		<English>The Galápagos tortoise or Galápagos giant tortoise (Chelonoidis nigra) is the largest living species of tortoise, reaching weights of over 400 kg (880 lb) and lengths of over 1.8 meters (5.9 ft). With life spans in the wild of over 100 years, it is one of the longest-lived vertebrates. A captive individual lived at least 170 years.[PARAGRAPH:2]The tortoise is native to seven of the Galápagos Islands, a volcanic archipelago about 1,000 km (620 mi) west of the Ecuadorian mainland. Spanish explorers who discovered the islands in the 16th century named them after the Spanish galápago, meaning tortoise.[PARAGRAPH:2]Shell size and shape vary between populations. On islands with humid highlands, the tortoises are larger, with domed shells and short necks. On islands with dry lowlands, the tortoises are smaller, with "saddleback" shells and long necks. These island-to-island differences played a role in the inception of Charles Darwin's theory of evolution.[PARAGRAPH:2]Tortoise numbers declined from over 250,000 in the 16th century to a low of around 3,000 in the 1970s. The decline was caused by hunting for tortoise meat and oil, habitat clearance for agriculture, and introduction of non-native animals such as rats, goats, and pigs. Ten subspecies of the original fifteen survive in the wild. An eleventh subspecies (C. n. abingdoni) has only a single living individual, in captivity, nicknamed Lonesome George. Conservation efforts beginning in the 20th century have resulted in thousands of captive-bred juveniles being released onto their home islands, and it is estimated that numbers exceeded 19,000 at the start of the 21st century. Despite this rebound, the species as a whole is classified as "Vulnerable" by the International Union for Conservation of Nature (IUCN).(Source: Wikipedia)</English>
 		<German>Die Galápagos-Riesenschildkröte (Chelonoidis nigra) ist die größte rezente Landschildkröte, die ausschließlich auf dem Galápagos-Archipel lebt. Die Männchen sind deutlich größer als die Weibchen, haben einen längeren Schwanz, einen flacheren Rückenpanzer und längere Fußnägel. Frei lebende Tiere erreichen eine Panzerlänge von 134 cm und können bis zu 290 kg schwer werden, in Gefangenschaft sogar über 400 kg.[PARAGRAPH:2]Zahlreiche Pflanzen stehen auf dem Speiseplan der Galápagos-Riesenschildkröte. Besonders gern frisst sie Opuntien, aber auch andere Kakteen, Beeren, Gräser und Kräuter. Zur Paarungszeit legen die Weibchen bis zu 17 Eier in eine Nisthöhle, aus der sich die Jungtiere nach dem Schlüpfen selbstständig graben. Riesenschildkröten können weit über 100 Jahre alt werden.[PARAGRAPH:2]Die Galápagos-Riesenschildkröte ist eine bedrohte Tierart. Einige Unterarten sind bereits ausgestorben. Ihre Feinde sind vor allem Ziegen, Schweine und andere Tiere, welche die Gelege zerstören und Jungtiere töten. Eingeschleppte Pflanzen verdrängen die heimischen Arten und zerstören somit den Lebensraum der Schildkröte.</German>
 		<Polish>Żółw słoniowy (Chelonoidis nigra)? gatunek jednego z największych żółwi na świecie. Podobny rozmiarem do żółwi olbrzymich z wysp Oceanu Indyjskiego. Jego pancerz grzbietowy może mieć 150 cm długości, a największy znaleziony osobnik mierzył prawie 3 metry i ważył 1000 kg. Na ogół za duże uważa się osobniki, których waga przekracza 200 kg, a wysokość dochodzi do 1 metra. Samce są zwykle większe od samic. Żółwie słoniowe żyją na wyspach Galapagos.[PARAGRAPH:2]W stosunku do reszty ciała ich karapaks (górna część skorupy) jest bardzo duży. Wypukły, spadzisty karapaks jest z zewnątrz pokryty dużymi i gładkimi rogowymi tarczkami, od przodu wysoko uniesiony opada stromo ku tyłowi. Natomiast brak jest tarczki karkowej. Głowa mała osadzona na długiej szyi osłoniętej miękką skórą. Grube słupowate nogi (kształtem podobne do nóg słonia i stąd wzięła się nazwa tych żółwi) pokrywają duże tarczki, a palce zakończone są potężnymi pazurami. Podobnie jak inne żółwie nie mają zębów, a ich rolę spełniają ostre listwy rogowe, za pomocą których tną i miażdżą zjadaną roślinność. Całe ciało jest jednolicie brunatne lub czarnawe. Karapaks niektórych osobników nad głową zakrzywia się w górę umożliwiając żółwiowi dosięganie wyższych roślin. Poruszają się powoli na szeroko rozstawionych nogach w sposób typowy dla gadów. Takie ustawienie nóg powoduje, że więcej energii tracą na utrzymanie ciężaru ciała niż na rzeczywisty ruch. Wykonują powolne kroki noga za nogą zostawiając za sobą szeroki ślad. Są długowiecznymi zwierzętami, gdyż w sprzyjających warunkach mogą dożyć nawet 300 lat. Dobrym przykładem może być żółw o imieniu Tu'i Malila, podarowany przez kapitana J. Cooka królowi Tonga ok. 1777 r. Jeszcze w 1949 r. był w dobrej formie, a umarł w 1965 roku w wieku ok. 188 lat.[PARAGRAPH:2]Prawdopodobnie wszystkie podgatunki/gatunki żółwia rozwinęły się na Galapagos od wspólnego przodka, który został przyniesiony ze stałego lądu wraz z prądem morskim, a musiał być to Prąd Peruwiański. Chociaż to wydaje się nieprawdopodobne, faktem jest, że żółwie słoniowe potrafią pływać w morzu. Wystarczyłoby, że jedna zapłodniona samica albo para żółwi przebyłaby tę drogę np. na jakiejś pływającej wyspie z konarów drzew wyniesionej przez prąd rzeki po silnej ulewie na pełne morze by skolonizować wyspy. Jest wysoce prawdopodobne, że pierwszy żółw dopłynął do brzegów wyspy San Cristobal, a stamtąd jego potomkowie stopniowo rozproszyli się na pozostałe wyspy archipelagu tą samą drogą wraz z oceanicznym prądem. Najbliższym żyjącym krewnym żółwi słoniowych jest Chelonoidis chilensis, mały żółw znaleziony w Chile. Pierwotny przodek żółwi był prawdopodobnie przeciętnego rozmiaru, a rozwinął się do dzisiejszych dopiero po przybyciu na Galapagos. Jest to zjawisko zauważane w wielu ekosystemach, gdzie gigantyzm rozwija się tam, gdzie zwierzę nie ma wrogów, więc nie potrzebuje ukrywać się przed drapieżnikami, a także nie ma innych podobnych zwierząt, z którymi musiałoby współzawodniczyć o żywność. Żółwie ewoluowały na izolowanych wyspach do różnych podgatunków, które widzimy dzisiaj, niektóre mają pancerz w kształcie kopuły, a inne w kształcie siodła. Kształt siodła rozwinął się na różnych wyspach niezależnie od siebie, co świadczyłoby, że jest to udany projekt ewolucji.[PARAGRAPH:2]W XVI wieku piraci zaczęli używać Galapagos jako bazy, czemu sprzyjało dogodne położenie archipelagu blisko szlaku hiszpańskich statków wywożących złoto Inków. Tutaj uzupełniali zapasy wody i naprawiali swoje statki między łupieżczymi wypadami na hiszpańskie kolonie w Ameryce Południowej. Bogactwem wysp były żółwie słoniowe, które były zabierane i przechowywane żywe na pokładach statków przez wiele miesięcy. Dlatego, iż są niewiarygodnie wytrzymałe na brak wody i pożywienia oraz skromne warunki tlenowe panujące pod pokładami statków, były one niegdyś wykorzystywane przez żeglarzy jako "żywe konserwy". W XVIII wieku statki wielorybnicze i łowcy fok zabierali jako zapas świeżego mięsa po kilkaset żółwi, które mogły przetrwać na pokładzie (i w ładowni) wiele miesięcy bez jedzenia. Dużo więcej zabijali dla świetnego żółwiowego oleju. Od końca XVIII w. aż do początków XX w. ludzie, którzy tam się osiedlili polowali na nie dla mięsa i zagarnęli duże obszary pod rolnictwo. Osadnicy wprowadzili domowe zwierzęta, co miało zgubny wpływ na populację żółwi. Nie wiadomo dokładnie, ile żółwi słoniowych żyło pierwotnie na wyspach, ale szacuje się, że więcej niż 100 000 było zabitych przez ludzi. W wyniku tego dzisiaj trzy podgatunki żółwia słoniowego są wygasłe, a czwarta odmiana jest reprezentowana tylko przez jednego żółwia. Żółwie obecnie przeniosły się dalej od brzegów i żyją w pobliżu zboczy wulkanów. Prześladowania trwają, ale już w dużo mniejszej skali; mimo to od 1990 roku kłusownicy zabili ponad 120 żółwi słoniowych.[PARAGRAPH:2]Ogólnie wiodą spokojne, leniwe życie. Rano między 7:00 a 8:00 budzą się i wygrzewają w słońcu, aby podnieść temperaturę ciała. Są aktywne za dnia, spędzając czas na żerowaniu. Najgorętszą porę dnia przeczekują w cieniu schowane pod krzakami chroniąc się przed przegrzaniem. Około 4 albo 5 po południu zaczynają szukać miejsca, w którym spędzą chłodną noc. Wieczorem zasypiają, często w osłoniętym wgłębieniu w gruncie albo wpół zanurzone w błocie lub wodzie, co najpewniej pomaga utrzymać dłużej ciepło. Piją wodę i lubią taplać się w wodzie i błocie. Mają łagodne usposobienie. Dojrzałe samce nie są wobec siebie agresywne, a hierarchię między sobą ustalają na podstawie długości szyi. Zawody wygrywa ten, który potrafi wyżej wyciągnąć głowę, co dla drugiego samca żółwia oznacza wielkość i siłę przeciwnika. (źródło: Wikipedia)</Polish>
@@ -25488,16 +25440,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Bohater Wojskowy Inków to [COLOR_UNIT_TEXT]Tupac Yupanqui[COLOR_REVERT]. Rozpoczyna w towarzystwie [COLOR_HIGHLIGHT_TEXT]Budowniczego[COLOR_REVERT]. Może zostać wyszkolony wraz z odkryciem [COLOR_TECH_TEXT]Edukacji[COLOR_REVERT] i [COLOR_TECH_TEXT]Boskiego Prawa[COLOR_REVERT].</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_TUPI_CUNHAMBEBE</Tag>
-		<English>Cunhambebe</English>
-		<French>Cunhambebe</French>
-		<Spanish>
-			<Text>Cunhambebe</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_TURKEY</Tag>
 		<English>Wild Turkey</English>
 		<French>
@@ -25705,7 +25647,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Ujgurski Rycerz to ujgurska wersja rycerza. Potrafi leczyć się w czasie ruchu i ma większy zasięg widzenia niż większość jednostek.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ULTSOLDIER_EXECUTIVE</Tag>
+		<Tag>TXT_KEY_UNIT_EXECUTIVE_ULTSOLDIER</Tag>
 		<English>Ultimate Soldiers Executive</English>
 		<French>Gérant de Soldats Ultimes</French>
 		<German>Ultimate Soldiers Geschäftsführer</German>
@@ -27008,7 +26950,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Rosomak (Gulo gulo)? gatunek drapieżnego ssaka lądowego z rodziny łasicowatych, doskonale przystosowanego do zimowych warunków życia. Jest jednym z największych? obok wydry olbrzymiej i wydry morskiej? przedstawicieli rodziny łasicowatych i jedynym współcześnie żyjącym przedstawicielem rodzaju Gulo. Ze względu na wygląd uważany był początkowo za bliskiego krewniaka psów lub niedźwiedzi. W wielu regionach niesłusznie uważany za zwierzę bardzo agresywne, wręcz krwiożercze. Ze względu na mobilny tryb życia jest zwierzęciem trudnym do obserwowania i? w efekcie? stosunkowo słabo poznanym. Jest prawdopodobnie najsłabiej poznanym gatunkiem spośród dużych drapieżników lądowych. Obecnie występuje na odludnych terenach w tajdze i tundrze północnej Europy (Skandynawia), Azji oraz Ameryki Północnej (Kanada). Preferuje tereny górzyste. W przeszłości zasięg jego występowania w Ameryce Północnej rozciągał się po Kolorado, Indianę i Pensylwanię. Rosomaki zostały niemal doszczętnie wytępione w Stanach Zjednoczonych (poza Alaską), a w Kanadzie ich liczebność znacznie ograniczono? zwłaszcza w Kanadzie południowej i wschodniej, gdzie praktycznie już nie występują. W Europie pozostały jeszcze dwie populacje: jedna w północnej części Półwyspu Skandynawskiego, wzdłuż wybrzeży Norwegii i Szwecji, druga na obszarze od Finlandii po rosyjską Republikę Karelii. Kwestia występowania rosomaka w przeszłości na ziemiach obecnej Polski jest dyskusyjna. Argumentem za tym jest m.in. obecność tego zwierzęcia w kulturze kurpiowskiej.[PARAGRAPH:2]Rosomak jest największym typowo naziemnym przedstawicielem rodziny łasicowatych. Łasicowate podobnych rozmiarów? wydra olbrzymia i wydra morska prowadzą głównie wodny tryb życia. Budową zewnętrzną rosomak przypomina niewielkiego niedźwiedzia, ale jego zachowania są typowe dla łasicowatych. Ma dużą głowę, małe oczy, małe i zaokrąglone uszy, krótki ogon i masywnie zbudowane łapy zakończone silnymi pazurami. Długość jego ciała wynosi 65-87 cm, długość ogona 17-26 cm, masa ciała od 10 do 31 kg, samice są przynajmniej o 10% mniejsze i do 30% lżejsze od samców. Zmysły węchu i słuchu są silnie rozwinięte, w przeciwieństwie do słabego wzroku. Skóra rosomaka jest pokryta długim, gęstym futrem o brązowoczarnym ubarwieniu z jasnymi plamami na głowie i jasnymi pasami po bokach ciała. Szerokie stopy i relatywnie mała masa ciała ułatwiają mu bieganie po śniegu. Rosomak prowadzi naziemny tryb życia, ale świetnie pływa i zwinnie wspina się po drzewach oraz skałach. Jest aktywny całą dobę w około 4-godzinnych cyklach, na przemian, aktywności i spoczynku. Rosomak nie zapada w sen zimowy. Jest samotnikiem. Areał osobniczy jednego samca może obejmować areały 2-3 samic. To zwierzę charakteryzuje się dużą siłą, odwagą, zręcznością i nieustępliwością? notowano wiele przypadków konfrontacji rosomaka walczącego o mięsny łup ze znacznie większymi i silniejszymi drapieżnikami jak baribal, puma, a nawet wataha wilków. Młode, niedoświadczone rosomaki czasami giną w trakcie takich walk, ale dorosłe osobniki zwykle wychodzą z nich zwycięsko. (źródło: Wikipedia)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_WONKA_EXECUTIVE</Tag>
+		<Tag>TXT_KEY_UNIT_EXECUTIVE_WONKA</Tag>
 		<English>Wonka Confectioneries Executive</English>
 		<French>Gérant de des Confiseries Wonka</French>
 		<German>Wonka Confiserie Geschäftsführer</German>
@@ -27052,7 +26994,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Wojownik z dzidą to pierwsza dedykowana do walki z konnicą jednostka piechoty.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_WORK_BOAT</Tag>
+		<Tag>TXT_KEY_UNIT_WORKBOAT</Tag>
 		<English>Workboat (Prehistoric)</English>
 		<French>
 			<Text>Bateau-atelier (Antique)</Text>
@@ -27073,7 +27015,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Kuter</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_WORK_BOAT_ANCIENT_STRATEGY</Tag>
+		<Tag>TXT_KEY_UNIT_WORKBOAT_ANCIENT_STRATEGY</Tag>
 		<English>Earliest [COLOR_UNIT_TEXT]Workboat[COLOR_REVERT] unit with slowest work rate. Unarmed vessels that can create fishing boats, whaling boats, and (in late game) oil rigs. [COLOR_UNIT_TEXT]Work Boats[COLOR_REVERT] cannot enter Ocean spaces. </English>
 		<French>Earliest [COLOR_UNIT_TEXT]Workboat[COLOR_REVERT] unit with slowest work rate. Unarmed vessels that can create fishing boats, whaling boats, and (in late game) oil rigs. [COLOR_UNIT_TEXT]Work Boats[COLOR_REVERT] cannot enter Ocean spaces. </French>
 	</TEXT>

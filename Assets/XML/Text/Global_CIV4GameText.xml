@@ -5032,7 +5032,7 @@
 		<Polish>Używaj tych szybkich jednostek w celu szybkiego reagowania oraz do obrony wzgórz i lasów.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CHARL_UNIT_SUPPLY_TRAIN</Tag>
+		<Tag>TXT_KEY_UNIT_SUPPLY_TRAIN</Tag>
 		<English>Supply Train</English>
 		<French>
 			<Text>Convoi d'approvisionnement</Text>
@@ -5053,7 +5053,7 @@
 		<Polish>Wozy Zaopatrzeniowe</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CHARL_UNIT_SUPPLY_TRAIN_PEDIA</Tag>
+		<Tag>TXT_KEY_UNIT_SUPPLY_TRAIN_PEDIA</Tag>
 		<English>[BOLD]Strategy:[\BOLD][PARAGRAPH:1]In this scenario, units cannot heal at all when in enemy territory, unless accompanied by Supply Trains. Always be sure to bring along one or more trains when invading enemy lands. Note that Supply Trains are totally unarmed, so it's a good idea to provide a heavy military escort when sending one into dangerous territory.[NEWLINE][NEWLINE][BOLD]Background:[\BOLD][PARAGRAPH:1]As Napoleon Bonaparte once noted, an army fights on its stomach. From the very earliest days of mass warfare, armies have always been accompanied by "supply trains," carrying food, medicine, spare weapons, and all of the other baggage that an army in the field needs to survive.[PARAGRAPH:1]The size and quality of an army's Supply Train shaped a campaign as much - or more - as did the size and quality of the army's soldiers. A huge Supply Train could support an army in the field for long periods of time, but it would also slow the army down. Further, Supply Trains needed a lot of protection, and the deeper an army advanced, the more vulnerable its train became.</English>
 		<French>
 			<Text>[BOLD]Stratégie:[\BOLD][PARAGRAPH:1]Dans ce scénario, les unités ne peuvent pas du tout se soigner en territoire ennemi, sauf si elles sont accompagnées par des convois d'approvisionnement. Veillez à toujours emmener au moins un convoi d'approvisionnement quand vous envahissez des territoires ennemis. Notez que les convois d'approvisionnement ne sont pas du tout armés et qu'il est donc préférable de leur fournir une bonne escorte quand vous les envoyez dans une région dangereuse.[NEWLINE][NEWLINE][BOLD]Histoire:[\BOLD][PARAGRAPH:1]Comme l'a un jour dit Napoléon Bonaparte, une armée doit manger pour se battre. Depuis le début des grandes guerres, les armées sont accompagnées par des "convois d'approvisionnement", transportant de la nourriture, des médicaments, des armes de rechange et tout ce dont une armée a besoin pour survivre sur le terrain.[PARAGRAPH:1]La taille et la qualité du convoi d'approvisionnement d'une armée avaient autant d'importance? si ce n'est plus? que le nombre ou la qualité de ses soldats. Un grand convoi d'approvisionnement pouvait soutenir une armée sur le terrain pendant longtemps, mais il la ralentissait aussi. De plus, les convois d'approvisionnement devaient être bien protégés et ils devenaient de plus en plus vulnérables à mesure que l'armée progressait.</Text>
@@ -7816,7 +7816,7 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Prześladowania Religijne[COLOR_REVERT][NEWLINE]Usuwa wszystkie religie z tego miasta, oprócz religii państwowej.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GODS_UNIT_INQUISITOR</Tag>
+		<Tag>TXT_KEY_UNIT_INQUISITOR</Tag>
 		<English>Inquisitor</English>
 		<French>Inquisiteur</French>
 		<German>
@@ -7837,7 +7837,7 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>Inkwizytor</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GODS_UNIT_INQUISITOR_PEDIA</Tag>
+		<Tag>TXT_KEY_UNIT_INQUISITOR_PEDIA</Tag>
 		<English>While Missionaries often focus on extolling the glories of their respective gods to spread their religion, the Inquisitor focuses instead on pointing out the fallacies of all religions but his own. Ardent in the belief that all other religions are wrong, the Inquisitor lives to destroy the beliefs of others. If the inquisition convicted a person of heresy, the persoanl property of a condemned person was confiscated and places of worship were destroyed; based on medieval and feudal laws. Usually the confiscated property was divided three ways: by the Inquisition members, the church officials, and the state treasury. The Church and state kept strict accounts of the prisoner's incarceration, trial and execution costs. If the value of his confiscated property was not enough to cover these costs, then his heirs had to pay the difference. Records show many women and children were left penniless from such confiscation.  You may expend an Inquisitor inside a city to remove all religions from that city except your own.</English>
 		<French>Les missionnaires se contentent souvent de glorifier leurs dieux respectifs pour propager leur religion, alors que l'inquisiteur s'efforce de démontrer les aberrations de toutes les autres religions. Convaincu que toutes les autres religions sont dans l'erreur, l'inquisiteur vit pour détruire les croyances des autres. Vous pouvez envoyer un inquisiteur dans une ville pour l'expurger de toutes les religions sauf la vôtre.</French>
 		<German>Während Missionare sich oft darauf konzentrieren, die Tugenden ihrer jeweiligen Götter zu übertreiben, um ihre Religion zu verbreiten, konzentriert sich der Inquisitor stattdessen darauf, die Fehler aller anderen Religionen außer seiner eigenen aufzuzeigen. Der Inquisitor brennt vor Überzeugung, dass alle anderen Religionen falsch sind, und lebt dafür, den Glauben aller anderen zu zerstören. Sie können einen Inquisitor in eine Stadt entsenden, um aus dieser Stadt alle Religionen außer Ihrer zu entfernen.</German>
@@ -7846,7 +7846,7 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>Inkwizycja (łac. Inquisitio? śledztwo, badanie)? potoczna nazwa systemu śledczo-sądowniczego Kościoła katolickiego działającego od XIII do XIX wieku, utworzonego w celu wyszukiwania, nawracania i karania heretyków w oparciu o postanowienia ujęte w dokumentach soborowych, synodalnych oraz bullach papieskich.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GODS_UNIT_INQUISITOR_STRATEGY</Tag>
+		<Tag>TXT_KEY_UNIT_INQUISITOR_STRATEGY</Tag>
 		<English>Use [COLOR_UNIT_TEXT]Inquisitors[COLOR_REVERT] to eliminate non-state religions from a city. Doing so will destroy the [COLOR_UNIT_TEXT]Inquisitor[COLOR_REVERT].</English>
 		<French>Utilisez un [COLOR_UNIT_TEXT]Inquisiteur[COLOR_REVERT] pour faire disparaître d'une ville les religions non officielles. En accomplissant sa mission, l'[COLOR_UNIT_TEXT]Inquisiteur[COLOR_REVERT] donnera sa vie.</French>
 		<German>Benutzen Sie [COLOR_UNIT_TEXT]Inquisitoren[COLOR_REVERT], um Religionen, die nicht Staatsreligion sind, aus einer Stadt zu eliminieren. Dadurch wird der [COLOR_UNIT_TEXT]Inquisitor[COLOR_REVERT] vernichtet.</German>
@@ -9402,7 +9402,7 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Spanish>O</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_LAWYER_INQUISITOR_TWO</Tag>
+		<Tag>TXT_KEY_UNIT_LAWYER</Tag>
 		<English>Lawyer</English>
 		<French>Avocat</French>
 		<Italian>Avvocato</Italian>
@@ -21662,6 +21662,31 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Wielki Naukowiec</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_GREAT_SPY</Tag>
+		<English>Great Spy</English>
+		<French>
+			<Text>Espion illustre:Espions illustres</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</French>
+		<German>
+			<Text>Großer Spion:Großen Spions:Großen Spion:Großen Spion:Große Spione:Großen Spione:Großen Spionen:Großen Spione</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
+		<Italian>
+			<Text>Grande Spia:Grandi Spie</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Gran espía:Grandes espías</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Wielki Szpieg</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_GREAT_SPY</Tag>
