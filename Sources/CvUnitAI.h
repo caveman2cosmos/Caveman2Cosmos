@@ -357,7 +357,7 @@ protected:
 	bool AI_rangeAttack(int iRange);
 	bool AI_leaveAttack(int iRange, int iThreshold, int iStrengthThreshold);
 	bool AI_blockade();
-	int  AI_blockadeValue(CvPlot* pLoopPlot, CvCity* pCity, CvPlot*& endTurnPlot) const;
+	int  AI_blockadeValue(CvPlot* pLoopPlot, const CvCity* pCity, CvPlot*& endTurnPlot) const;
 	bool AI_pirateBlockade();
 	bool AI_seaBombardRange(int iMaxRange);
 	bool AI_pillage(int iBonusValueThreshold = 0);

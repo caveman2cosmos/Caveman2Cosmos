@@ -179,7 +179,7 @@ public:
 	DllExport bool isGameMultiPlayer() const;																			// Exposed to Python
 	DllExport bool isTeamGame() const;																						// Exposed to Python
 
-	bool isModem();
+	bool isModem() const;
 	void setModem(bool bModem);
 
 /************************************************************************************************/
@@ -392,7 +392,7 @@ public:
 	void updateInitialSigns();
 	
 	void doFoundCorporation(CorporationTypes eCorporation, bool bForce);
-	int getAverageCorporationInfluence(CvCity* pCity, CorporationTypes eCorporation) const;
+	int getAverageCorporationInfluence(const CvCity* pCity, const CorporationTypes eCorporation) const;
 	
 	bool canEverResearch(TechTypes eTech) const;
 	bool canEverConstruct(BuildingTypes eBuilding) const;
@@ -537,10 +537,7 @@ public:
 
 	int getUnitCreatedCount(UnitTypes eIndex) const;																	// Exposed to Python
 	void incrementUnitCreatedCount(UnitTypes eIndex);
-
-	int getUnitClassCreatedCount(UnitClassTypes eIndex) const;												// Exposed to Python
-	bool isUnitClassMaxedOut(UnitClassTypes eIndex, int iExtra = 0) const;						// Exposed to Python
-	void incrementUnitClassCreatedCount(UnitClassTypes eIndex);
+	bool isUnitMaxedOut(UnitTypes eIndex, int iExtra = 0) const;						// Exposed to Python
 
 	int getBuildingClassCreatedCount(BuildingClassTypes eIndex) const;								// Exposed to Python
 	bool isBuildingClassMaxedOut(BuildingClassTypes eIndex, int iExtra = 0) const;		// Exposed to Python
@@ -604,7 +601,7 @@ public:
 /************************************************************************************************/
 
 	CvCity* getHolyCity(ReligionTypes eIndex) const;																	// Exposed to Python
-	void setHolyCity(ReligionTypes eIndex, CvCity* pNewValue, bool bAnnounce);	// Exposed to Python
+	void setHolyCity(ReligionTypes eIndex, const CvCity* pNewValue, bool bAnnounce);	// Exposed to Python
 
 	int getCorporationGameTurnFounded(CorporationTypes eIndex) const;												// Exposed to Python
 	bool isCorporationFounded(CorporationTypes eIndex) const;																// Exposed to Python
@@ -685,7 +682,7 @@ public:
 	virtual void AI_reset() = 0;
 	virtual void AI_makeAssignWorkDirty() = 0;
 	virtual void AI_updateAssignWork() = 0;
-	virtual int AI_combatValue(UnitTypes eUnit) = 0;
+	virtual int AI_combatValue(const UnitTypes eUnit) const = 0;
 
 	CvReplayInfo* getReplayInfo() const;
 	DllExport void setReplayInfo(CvReplayInfo* pReplay);
@@ -895,7 +892,6 @@ protected:
 
 	int* m_paiImprovementCount;
 	int* m_paiUnitCreatedCount;
-	int* m_paiUnitClassCreatedCount;
 	int* m_paiBuildingClassCreatedCount;
 	int* m_paiProjectCreatedCount;
 	int* m_paiForceCivicCount;

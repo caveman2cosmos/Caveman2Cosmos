@@ -253,8 +253,7 @@ def teams(alive=None, human=None, barbarian=None, minor=None, active=None):
 	"""
 	for eTeam in range(gc.getMAX_TEAMS()):
 		team = gc.getTeam(eTeam)
-		if (not team.isNone() and team.isEverAlive()
-				and matchPlayerOrTeam(team, alive, human, barbarian, minor)):
+		if not team.isNone() and team.isEverAlive() and matchPlayerOrTeam(team, alive, human, barbarian, minor):
 			yield team
 
 def matchPlayerOrTeam(teamOrPlayer, alive=None, human=None, barbarian=None, minor=None, active=None):

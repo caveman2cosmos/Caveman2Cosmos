@@ -10,7 +10,7 @@
 			<Class>UNITCLASS_DRUID_MISSIONARY</Class>
 			<Type>UNIT_DRUID_MISSIONARY</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_DRUID_MISSIONARY</Capture>
+			<Capture>UNIT_DRUID_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -29,11 +29,11 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_DRUID</ReligionType>
+					<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 					<iReligionSpread>40</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>
-			<PrereqReligion>RELIGION_DRUID</PrereqReligion>
+			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<PrereqBuilding>BUILDING_DRUID_MONASTERY</PrereqBuilding>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -60,7 +60,7 @@
 			</Buildings>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_DRUID</ReligionType>
+					<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 					<iReligionSpread>100</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>

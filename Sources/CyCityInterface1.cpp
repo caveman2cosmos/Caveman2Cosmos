@@ -29,16 +29,8 @@ void CyCityPythonInterface1(python::class_<CyCity>& x)
 		.def("findYieldRateRank", &CyCity::findYieldRateRank, "int (int /*YieldTypes*/ eYield)")
 		.def("findCommerceRateRank", &CyCity::findCommerceRateRank, "int (int /*CommerceTypes*/ eCommerce)")
 
-/************************************************************************************************/
-/* REVDCM                                 02/16/10                                phungus420    */
-/*                                                                                              */
-/* CanTrain                                                                                     */
-/************************************************************************************************/
-		.def("isForceObsoleteUnitClassAvailable", &CyCity::isForceObsoleteUnitClassAvailable, "bool (int eUnit)")
+		.def("isSupersedingUnitAvailable", &CyCity::isSupersedingUnitAvailable, "bool (int eUnit)")
 		.def("isPlotTrainable", &CyCity::isPlotTrainable, "bool (int eUnit, bool bContinue, bool bTestVisible)")
-/************************************************************************************************/
-/* REVDCM                                  END                                                  */
-/************************************************************************************************/
 
 		.def("allUpgradesAvailable", &CyCity::allUpgradesAvailable, "int UnitTypes (int eUnit, int iUpgradeCount)")
 		.def("isWorldWondersMaxed", &CyCity::isWorldWondersMaxed, "bool ()")

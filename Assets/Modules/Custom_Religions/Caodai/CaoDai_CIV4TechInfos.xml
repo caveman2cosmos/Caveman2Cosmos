@@ -4,25 +4,25 @@
 	<TechInfos>
 		<TechInfo>
 			<!-- CAODAIISM -->
-			<Type>TECH_CAODAIISM</Type>
-			<Description>TXT_KEY_RELIGION_CAODAI</Description>
-			<Civilopedia>TXT_KEY_RELIGION_CAODAI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_RELIGION_CAODAI_STRATEGY</Strategy>
+			<Type>TECH_CAO_DAI</Type>
+			<Description>TXT_KEY_TECH_CAO_DAI</Description>
+			<Civilopedia>TXT_KEY_TECH_CAO_DAI_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_TECH_CAO_DAI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<Quote>TXT_KEY_RELIGION_CAODAI_QUOTE</Quote>
-			<Sound>AS2D_TECH_CAODAIISM</Sound>
+			<Quote>TXT_KEY_TECH_CAO_DAI_QUOTE</Quote>
+			<Sound>AS2D_TECH_CAO_DAI</Sound>
 			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Caodai.dds</Button>
 			<!-- Main properties -->
 			<iCost>9484</iCost>
 			<bGlobal>1</bGlobal>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<Era>ERA_MODERN</Era>
+			<Era>C2C_ERA_ATOMIC</Era>
 			<OrPreReqs>
-				<PrereqTech>TECH_MODERN_LIFESTYLE</PrereqTech>
+				<PrereqTech>TECH_ATOMIC_LIFESTYLE</PrereqTech>
 			</OrPreReqs>
 			<!-- Special effects -->
-			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<!-- System -->
 			<iAsset>8</iAsset>
 			<iGridX>72</iGridX>

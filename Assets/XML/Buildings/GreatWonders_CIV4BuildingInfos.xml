@@ -13,9 +13,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ABU_SIMBEL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ABU_SIMBEL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ABU_SIMBEL_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_ABU</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ABU_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ABU_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MONARCHY</PrereqTech>
 			<PrereqOrTerrain>
@@ -293,7 +293,7 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_COMPUTERS</ObsoleteTech>
+			<ObsoleteTech>TECH_PERSONAL_COMPUTERS</ObsoleteTech>
 			<!-- Cost -->
 			<iCost>1512</iCost>
 			<BonusProductionModifiers>
@@ -369,12 +369,12 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANTIKYTHERA_MECHANISM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANTIKYTHERA_MECHANISM_STRATEGY</Strategy>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_GEAR</PrereqTech>
+			<PrereqTech>TECH_GEARS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_SUNDIAL</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<Bonus>BONUS_WARE_BRONZE</Bonus>
+			<Bonus>BONUS_BRONZE_WARES</Bonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_STARGAZERS_HUT</BuildingClassType>
@@ -422,7 +422,7 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_STEEL</Bonus>
+				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
 			<PrereqBuildingClasses>
 				<PrereqBuildingClass>
@@ -709,9 +709,9 @@
 			<Strategy>TXT_KEY_BUILDING_ARK_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_PRIESTHOOD</PrereqTech>
-			<Bonus>BONUS_WARE_GOLD</Bonus>
+			<Bonus>BONUS_GOLD_WARES</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_TIMBER</Bonus>
+				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			</PrereqBonuses>
 			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_JUDAISM</PrereqReligion>
@@ -891,7 +891,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_ANCIENTTEMPLE</BonusType>
+					<BonusType>BONUS_ANCIENT_RELICS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -939,7 +939,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_WATERWORKS</PrereqTech>
+			<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -1247,7 +1247,7 @@
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -1296,7 +1296,7 @@
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -1350,7 +1350,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_WEARABLE_ELECTRONICS</ObsoleteTech>
+			<ObsoleteTech>TECH_WEARABLE_COMPUTERS</ObsoleteTech>
 			<!-- Cost -->
 			<iCost>4620</iCost>
 			<!-- Special Yield and Commerce modifiers -->
@@ -1413,7 +1413,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_MOTER_SPORTS</PrereqTech>
+			<PrereqTech>TECH_MOTORSPORTS</PrereqTech>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
 			<PrereqAndTerrain>
 				<PrereqTerrain>
@@ -1565,7 +1565,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>12</iCommerce>
 			</CommerceModifiers>
-			<FreeBonus>BONUS_DRAMA</FreeBonus>
+			<FreeBonus>BONUS_HIT_MUSICALS</FreeBonus>
 			<iNumFreeBonuses>6</iNumFreeBonuses>
 			<!-- Special Yield and Commerce modifiers -->
 			<CommerceChangeOriginalOwners>
@@ -1706,7 +1706,7 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_STEEL</Bonus>
+				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -1796,7 +1796,7 @@
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_STONETOOLS</FreeBonus>
+			<FreeBonus>BONUS_STONE_TOOLS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -1995,7 +1995,7 @@
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -2112,7 +2112,7 @@
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -2241,7 +2241,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_BLOOD_CULT</PrereqTech>
+				<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<!-- Obsolescence -->
@@ -2514,7 +2514,7 @@
 			<iCost>7080</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_ALUMINUM</BonusType>
+					<BonusType>BONUS_ALUMINUM_WARES</BonusType>
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -2672,15 +2672,15 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqOrFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_CORAL</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_CORAL_WITH_BEACON</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_BEACON</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_CORAL_WITH_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_LIGHTHOUSE</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
@@ -2688,11 +2688,11 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_GREAT_BARRIER_WITH_BEACON</FeatureType>
+					<FeatureType>FEATURE_GREAT_BARRIER_REEF_BEACON</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_GREAT_BARRIER_WITH_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -3038,7 +3038,7 @@
 			<PrereqTech>TECH_INCANDESCENT_LIGHTING</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_MAGLEV</ObsoleteTech>
+			<ObsoleteTech>TECH_MAGNETIC_LEVITATION</ObsoleteTech>
 			<!-- Cost -->
 			<iCost>4800</iCost>
 			<!-- Main effects -->
@@ -3121,7 +3121,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_SUPERSTRINGTHEORY</ObsoleteTech>
+			<ObsoleteTech>TECH_SUPERSTRING_THEORY</ObsoleteTech>
 			<!-- Cost -->
 			<iCost>5940</iCost>
 			<!-- Main effects -->
@@ -3259,7 +3259,7 @@
 			<PrereqTech>TECH_PICTOGRAPHS</PrereqTech>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_OCEANIAN</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_OCEANIAN</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 				<BuildingClassNeeded>
@@ -3275,7 +3275,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_EMU_EGG</FreeBonus>
+			<FreeBonus>BONUS_CARVED_EMU_EGGS</FreeBonus>
 			<iNumFreeBonuses>6</iNumFreeBonuses>
 			<!-- Specialist effects -->
 			<SpecialistCounts>
@@ -3384,7 +3384,7 @@
 			<VicinityBonus>BONUS_STONE</VicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_MIDDLEEASTERN</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
@@ -3528,7 +3528,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<Bonus>BONUS_INGOT_GOLD</Bonus>
+			<Bonus>BONUS_GOLD_INGOTS</Bonus>
 			<PrereqBuildingClasses>
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_BANK</BuildingClassType>
@@ -3667,7 +3667,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_GENOMIC_E</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_GENCYCLOPEDIA</PrereqTech>
+			<PrereqTech>TECH_GENOMIC_ENCYCLOPEDIA</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqBonuses>
@@ -3952,7 +3952,7 @@
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bRiver>1</bRiver>
-			<Bonus>BONUS_WARE_STEEL</Bonus>
+			<Bonus>BONUS_STEEL_WARES</Bonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_LARGE_SUSPENSION_BRIDGE</BuildingClassType>
@@ -4022,8 +4022,8 @@
 				<Bonus>BONUS_MARBLE</Bonus>
 				<Bonus>BONUS_JADE</Bonus>
 				<Bonus>BONUS_AMBER</Bonus>
-				<Bonus>BONUS_RUBY</Bonus>
-				<Bonus>BONUS_SAPPHIRE</Bonus>
+				<Bonus>BONUS_RUBIES</Bonus>
+				<Bonus>BONUS_SAPPHIRES</Bonus>
 				<Bonus>BONUS_TURQUOISE</Bonus>
 			</PrereqBonuses>
 			<PrereqOrFeature>
@@ -4032,7 +4032,7 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -4071,7 +4071,7 @@
 				</PrereqNotBuildingClass>
 			</PrereqNotBuildingClasses>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_WILDERNESSC</ObsoleteTech>
+			<ObsoleteTech>TECH_WILDLIFE_CONSERVATION</ObsoleteTech>
 			<!-- Cost -->
 			<iCost>516</iCost>
 			<!-- Main effects -->
@@ -4105,13 +4105,13 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_RUBY</BonusType>
+					<BonusType>BONUS_RUBIES</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_SAPPHIRE</BonusType>
+					<BonusType>BONUS_SAPPHIRES</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -4163,7 +4163,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_MUSIC</PrereqTech>
+					<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -4247,16 +4247,16 @@
 				<Bonus>BONUS_SULPHUR</Bonus>
 				<Bonus>BONUS_OBSIDIAN</Bonus>
 				<Bonus>BONUS_DIAMOND</Bonus>
-				<Bonus>BONUS_SILVER</Bonus>
-				<Bonus>BONUS_GOLD</Bonus>
+				<Bonus>BONUS_SILVER_ORE</Bonus>
+				<Bonus>BONUS_GOLD_ORE</Bonus>
 			</PrereqBonuses>
 			<PrereqOrFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_VOLCANO2</FeatureType>
+					<FeatureType>FEATURE_VOLCANO_DORMANT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_VOLCANO</FeatureType>
+					<FeatureType>FEATURE_VOLCANO_ACTIVE</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -4341,13 +4341,13 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_SILVER</BonusType>
+					<BonusType>BONUS_SILVER_ORE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_GOLD</BonusType>
+					<BonusType>BONUS_GOLD_ORE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -4387,7 +4387,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_MUSIC</PrereqTech>
+					<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -4485,19 +4485,19 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_SEAGRASS</FeatureType>
+					<FeatureType>FEATURE_SEA_GRASS</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_CORAL</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_CORAL_WITH_BEACON</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_BEACON</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_CORAL_WITH_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_LIGHTHOUSE</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
@@ -4505,11 +4505,11 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_REEF_WITH_BEACON</FeatureType>
+					<FeatureType>FEATURE_REEF_BEACON</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_REEF_WITH_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_REEF_LIGHTHOUSE</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
@@ -4517,11 +4517,11 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_GREAT_BARRIER_WITH_BEACON</FeatureType>
+					<FeatureType>FEATURE_GREAT_BARRIER_REEF_BEACON</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_GREAT_BARRIER_WITH_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -4652,7 +4652,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_MUSIC</PrereqTech>
+					<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -4843,7 +4843,7 @@
 			</BonusCommerceModifiers>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_BLOOD_CULT</PrereqTech>
+					<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -4875,7 +4875,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_MUSIC</PrereqTech>
+					<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -5029,11 +5029,11 @@
 			</PrereqNotBuildingClasses>
 			<PrereqOrCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_INTOLERANT</CivicOption>
+					<CivicOption>CIVIC_INQUISITORIAL</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_FASCIST</CivicOption>
+					<CivicOption>CIVIC_TOTALITARIANISM</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -5163,8 +5163,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HADRIAN_WALL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HADRIAN_WALL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ADRIANOS_WALL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ADRIANOS_WALL_PEDIA</Civilopedia>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>
@@ -5249,7 +5249,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_WATERWORKS</PrereqTech>
+			<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -5312,7 +5312,7 @@
 			<PrereqTech>TECH_MARTIAL_ARTS</PrereqTech>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_OCEANIAN</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_OCEANIAN</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
@@ -5327,7 +5327,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_H_SURFBOARD</FreeBonus>
+			<FreeBonus>BONUS_HAWAIIAN_SURFBOARDS</FreeBonus>
 			<iNumFreeBonuses>6</iNumFreeBonuses>
 			<!-- Specialist effects -->
 			<SpecialistCounts>
@@ -5711,7 +5711,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>12</iCommerce>
 			</CommerceModifiers>
-			<FreeBonus>BONUS_MOVIES</FreeBonus>
+			<FreeBonus>BONUS_HIT_MOVIES</FreeBonus>
 			<iNumFreeBonuses>6</iNumFreeBonuses>
 			<!-- Special Yield and Commerce modifiers -->
 			<CommerceChangeOriginalOwners>
@@ -5815,7 +5815,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_HUMPHREY_METRODOME</MovieDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MODERN_SPORTS</PrereqTech>
-			<ObsoleteTech>TECH_BINARY_PYSCHOKINESIS</ObsoleteTech>
+			<ObsoleteTech>TECH_BINARY_PSYCHOKINESIS</ObsoleteTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -6147,7 +6147,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_PERSONAL_ADORNMENT</PrereqTech>
+			<PrereqTech>TECH_PERSONAL_ADORNMENTS</PrereqTech>
 			<Bonus>BONUS_JADE</Bonus>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
@@ -6165,7 +6165,7 @@
 			</PrereqOrBuildingClasses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_SAMERICAN</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 				<BuildingClassNeeded>
@@ -6181,7 +6181,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_JADE_MASK</FreeBonus>
+			<FreeBonus>BONUS_JADE_DEATH_MASKS</FreeBonus>
 			<iNumFreeBonuses>6</iNumFreeBonuses>
 			<!-- Specialist effects -->
 			<SpecialistCounts>
@@ -6491,7 +6491,7 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_STEEL</Bonus>
+				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -6571,7 +6571,7 @@
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>		
 			<PrereqOrFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -6695,7 +6695,7 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqOrFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_TARPIT</FeatureType>
+					<FeatureType>FEATURE_TAR_PIT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -6722,7 +6722,7 @@
 			</CommerceChangeOriginalOwners>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_FOSSIL</BonusType>
+					<BonusType>BONUS_FOSSIL_BEDS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 						<iCommerce>1</iCommerce>
@@ -6857,7 +6857,7 @@
 			<PrereqTech>TECH_PETROGLYPHS</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -7501,7 +7501,7 @@
 			<PrereqTech>TECH_COMPASS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_UTOPIA</ObsoleteTech>
+			<ObsoleteTech>TECH_COMMUNISM</ObsoleteTech>
 			<!-- Cost -->
 			<iCost>2280</iCost>
 			<!-- Special Yield and Commerce modifiers -->
@@ -7902,8 +7902,8 @@
 			<bWater>1</bWater>
 			<PrereqBonuses>
 				<Bonus>BONUS_NANOTUBES</Bonus>
-				<Bonus>BONUS_WARE_TITANIUM</Bonus>
-				<Bonus>BONUS_WARE_STEEL</Bonus>
+				<Bonus>BONUS_TITANIUM_WARES</Bonus>
+				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -7952,7 +7952,7 @@
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<PrereqBonuses>
 				<Bonus>BONUS_NANOTUBES</Bonus>
-				<Bonus>BONUS_WARE_TITANIUM</Bonus>
+				<Bonus>BONUS_TITANIUM_WARES</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -8339,7 +8339,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_GLASS</ID>
+						<ID>BONUS_GLASSWARE</ID>
 					</Has>
 				</And>
 			</ConstructCondition>
@@ -8420,7 +8420,7 @@
 			<VicinityBonus>BONUS_FINE_CLAY</VicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_AFRICAN</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_AFRICAN</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
@@ -8433,7 +8433,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_SCULPTURE_NOK</FreeBonus>
+			<FreeBonus>BONUS_NOK_SCULPTURES</FreeBonus>
 			<iNumFreeBonuses>6</iNumFreeBonuses>
 			<!-- Great People effects -->
 			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
@@ -8476,9 +8476,9 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_HUMANISM</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<Bonus>BONUS_WARE_GOLD</Bonus>
+			<Bonus>BONUS_GOLD_WARES</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARES_TERRACOTTA</Bonus>
+				<Bonus>BONUS_TERRACOTTA_WARES</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -8683,7 +8683,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_HUMANISM</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<Bonus>BONUS_WARE_SILVER</Bonus>
+			<Bonus>BONUS_SILVER_WARES</Bonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_MANOR</BuildingClassType>
@@ -8698,7 +8698,7 @@
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_PESTICIDES</ObsoleteTech>
+			<ObsoleteTech>TECH_AGRICULTURAL_ENGINEERING</ObsoleteTech>
 			<!-- Cost -->
 			<iCost>2460</iCost>
 			<!-- Main effects -->
@@ -8851,7 +8851,7 @@
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -9199,7 +9199,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>10240000</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_WATERWORKS</PrereqTech>
+			<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<iCitiesPrereq>4</iCitiesPrereq>
 			<!-- Cost -->
@@ -9339,7 +9339,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_PROTEOMIC_E</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_GENCYCLOPEDIA</PrereqTech>
+			<PrereqTech>TECH_GENOMIC_ENCYCLOPEDIA</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqBonuses>
@@ -9413,9 +9413,9 @@
 			<PrereqTech>TECH_CALENDAR</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<bStateReligion>1</bStateReligion>
-			<PrereqReligion>RELIGION_MESOAMERICANISM</PrereqReligion>
-			<ReligionType>RELIGION_MESOAMERICANISM</ReligionType>
-			<StateReligion>RELIGION_MESOAMERICANISM</StateReligion>
+			<PrereqReligion>RELIGION_NAGHUALISM</PrereqReligion>
+			<ReligionType>RELIGION_NAGHUALISM</ReligionType>
+			<StateReligion>RELIGION_NAGHUALISM</StateReligion>
 			<!-- Cost -->
 			<iCost>1404</iCost>
 			<BonusProductionModifiers>
@@ -9443,7 +9443,7 @@
 			<!-- Special Health and Happiness  modifiers -->
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_MESOAMERICANISM</ReligionType>
+					<ReligionType>RELIGION_NAGHUALISM</ReligionType>
 					<iReligionChange>3</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -9509,7 +9509,7 @@
 			<VicinityBonus>BONUS_FINE_CLAY</VicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_EUROPEAN</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_EUROPEAN</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 				<BuildingClassNeeded>
@@ -9529,7 +9529,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_RED_AND_BLACK</FreeBonus>
+			<FreeBonus>BONUS_RED_AND_BLACK_WARE</FreeBonus>
 			<iNumFreeBonuses>6</iNumFreeBonuses>
 			<!-- Specialist effects -->
 			<SpecialistCounts>
@@ -9616,7 +9616,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceModifiers>
-			<FreeBonus>BONUS_MUSIC</FreeBonus>
+			<FreeBonus>BONUS_HIT_SINGLES</FreeBonus>
 			<iNumFreeBonuses>6</iNumFreeBonuses>
 			<!-- Special Yield and Commerce modifiers -->
 			<CommerceChangeOriginalOwners>
@@ -9747,7 +9747,7 @@
 			<iCost>7680</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_ALUMINUM</BonusType>
+					<BonusType>BONUS_ALUMINUM_WARES</BonusType>
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -9819,13 +9819,13 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_GOLD</Bonus>
+				<Bonus>BONUS_GOLD_WARES</Bonus>
 			</PrereqBonuses>
 			<!-- Cost -->
 			<iCost>1566</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_GOLD</BonusType>
+					<BonusType>BONUS_GOLD_WARES</BonusType>
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -9887,7 +9887,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_COMPUTER_NETWORKS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<Bonus>BONUS_SEMICONDUCTORS</Bonus>
+			<Bonus>BONUS_MICROCHIPS</Bonus>
 			<!-- Cost -->
 			<iCost>8850</iCost>
 			<!-- Special Yield and Commerce modifiers -->
@@ -10046,7 +10046,7 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_STEEL</Bonus>
+				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_MEGASTRUCTURE_ENGINEERING</ObsoleteTech>
@@ -10216,7 +10216,7 @@
 			<!-- Special Health and Happiness  modifiers -->
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
-					<BonusType>BONUS_ANCIENTTEMPLE</BonusType>
+					<BonusType>BONUS_ANCIENT_RELICS</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
@@ -10340,10 +10340,10 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<Bonus>BONUS_GLASS</Bonus>
+			<Bonus>BONUS_GLASSWARE</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_TITANIUM</Bonus>
-				<Bonus>BONUS_WARE_STEEL</Bonus>
+				<Bonus>BONUS_TITANIUM_WARES</Bonus>
+				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -10399,7 +10399,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_GBIOLOGY</PrereqTech>
+			<PrereqTech>TECH_GENESIS_BIOLOGY</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqBonuses>
@@ -10430,7 +10430,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_POTATO</FreeBonus>
+					<FreeBonus>BONUS_POTATOES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -10446,7 +10446,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FUR</FreeBonus>
+					<FreeBonus>BONUS_BEAVERS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -10474,7 +10474,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SEA_LIONS</FreeBonus>
+					<FreeBonus>BONUS_SEA_LION_AND_SEAL</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -10538,7 +10538,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_LEMON</FreeBonus>
+					<FreeBonus>BONUS_LEMONS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -10546,7 +10546,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_MELON</FreeBonus>
+					<FreeBonus>BONUS_MELONS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -10598,7 +10598,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_ELEPHANT</FreeBonus>
+					<FreeBonus>BONUS_ELEPHANTS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -10630,11 +10630,11 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WINE</FreeBonus>
+					<FreeBonus>BONUS_GRAPES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CANNABIS</FreeBonus>
+					<FreeBonus>BONUS_HEMP</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -10690,11 +10690,11 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_GUINEA_PIG</FreeBonus>
+					<FreeBonus>BONUS_GUINEA_PIGS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TIMBER</FreeBonus>
+					<FreeBonus>BONUS_PRIME_TIMBER</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -10702,7 +10702,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_GUAVA</FreeBonus>
+					<FreeBonus>BONUS_GUAVAS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -11502,7 +11502,7 @@
 			<iCost>1104</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -12420,15 +12420,15 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_MESO</DependencyType>
+				<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
 			</AndDependencyTypes>
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_GLASS_BLOWING</PrereqTech>
 			</TechTypes>
-			<PrereqReligion>RELIGION_MESO</PrereqReligion>
-			<ReligionType>RELIGION_MESO</ReligionType>
-			<StateReligion>RELIGION_MESO</StateReligion>
+			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
+			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
+			<StateReligion>RELIGION_MESOPOTAMISM</StateReligion>
 			<PrereqBuildingClasses>
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_GLASSSMITH</BuildingClassType>
@@ -12528,7 +12528,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_KREMLIN</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_UTOPIA</PrereqTech>
+			<PrereqTech>TECH_COMMUNISM</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_FIBER_OPTICS</ObsoleteTech>
@@ -13122,7 +13122,7 @@
 			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_COMPUTERS</ObsoleteTech>
+			<ObsoleteTech>TECH_PERSONAL_COMPUTERS</ObsoleteTech>
 			<!-- Cost -->
 			<iCost>2640</iCost>
 			<BonusProductionModifiers>
@@ -13200,7 +13200,7 @@
 			</PrereqBuildingClasses>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_LIBERAL</CivicOption>
+					<CivicOption>CIVIC_EGALITARIAN</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -13209,7 +13209,7 @@
 			<iCost>3480</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -13410,7 +13410,7 @@
 			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_BRICKS</Bonus>
-				<Bonus>BONUS_TIMBER</Bonus>
+				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 				<Bonus>BONUS_WOOD</Bonus>
 			</PrereqBonuses>
 			<bStateReligion>1</bStateReligion>
@@ -13509,8 +13509,8 @@
 			<bRiver>1</bRiver>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_IRON</Bonus>
-				<Bonus>BONUS_WARE_STEEL</Bonus>
+				<Bonus>BONUS_IRON_WARES</Bonus>
+				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -13774,9 +13774,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_WONDER_SACRIFICIAL_ALTAR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WONDER_SACRIFICIAL_ALTAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_WONDER_SACRIFICIAL_ALTAR_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_AZTEC_SACRIFICIAL_ALTAR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_AZTEC_SACRIFICIAL_ALTAR_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_AZTEC_SACRIFICIAL_ALTAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AZTEC_SACRIFICIAL_ALTAR</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_CEREMONIAL_ALTAR</ConstructSound>
@@ -13784,7 +13784,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqReligion>RELIGION_MESOAMERICANISM</PrereqReligion>
+			<PrereqReligion>RELIGION_NAGHUALISM</PrereqReligion>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_MESOAMERICAN_CATHEDRAL</BuildingClassType>
@@ -13793,7 +13793,7 @@
 			</BuildingClassNeededs>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_DIVINE_RULE</CivicOption>
+					<CivicOption>CIVIC_DIVINE_CULT</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -13927,7 +13927,7 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_STEEL</Bonus>
+				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -14000,7 +14000,7 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_STEEL</Bonus>
+				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
 			<PrereqBuildingClasses>
 				<PrereqBuildingClass>
@@ -14073,12 +14073,12 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_WATERWORKS</PrereqTech>
+				<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Bonus>BONUS_SCULPTURES</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_SILVER</Bonus>
+				<Bonus>BONUS_SILVER_WARES</Bonus>
 			</PrereqBonuses>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
@@ -14091,7 +14091,7 @@
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_VIRTUALSOCIETY</ObsoleteTech>
+			<ObsoleteTech>TECH_VIRTUAL_SOCIETY</ObsoleteTech>
 			<!-- Cost -->
 			<iCost>1566</iCost>
 			<!-- Main effects -->
@@ -14144,7 +14144,7 @@
 			<PrereqTech>TECH_PAPER</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_COMPUTERS</ObsoleteTech>
+			<ObsoleteTech>TECH_PERSONAL_COMPUTERS</ObsoleteTech>
 			<!-- Cost -->
 			<iCost>2064</iCost>
 			<BonusProductionModifiers>
@@ -14422,7 +14422,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_WALL_STREET</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_STOCK_EXCHANGING</PrereqTech>
+			<PrereqTech>TECH_STOCK_BROKERING</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqBuildingClasses>
 				<PrereqBuildingClass>
@@ -14629,7 +14629,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_WIKIPEDIA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_MMO</PrereqTech>
+			<PrereqTech>TECH_ONLINE_COMMUNITY</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_COMPUTERS</Bonus>
 			<PrereqBuildingClasses>
@@ -14684,7 +14684,7 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_STEEL</Bonus>
+				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -14771,7 +14771,7 @@
 			<!-- Cost -->
 			<iCost>1280</iCost>
 			<!-- Main effects -->
-			<FreeBonus>BONUS_CHAMPAGNE</FreeBonus>
+			<FreeBonus>BONUS_WINE_CHAMPAGNE</FreeBonus>
 			<iNumFreeBonuses>3</iNumFreeBonuses>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -14822,7 +14822,7 @@
 			<!-- Cost -->
 			<iCost>1280</iCost>
 			<!-- Main effects -->
-			<FreeBonus>BONUS_VINTAGE_RED_WINE</FreeBonus>
+			<FreeBonus>BONUS_WINE_VINTAGE_RED</FreeBonus>
 			<iNumFreeBonuses>3</iNumFreeBonuses>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -14872,7 +14872,7 @@
 			<!-- Cost -->
 			<iCost>1280</iCost>
 			<!-- Main effects -->
-			<FreeBonus>BONUS_VINTAGE_WHITE_WINE</FreeBonus>
+			<FreeBonus>BONUS_WINE_VINTAGE_WHITE</FreeBonus>
 			<iNumFreeBonuses>3</iNumFreeBonuses>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -15034,12 +15034,12 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_STEEL</Bonus>
+				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
 			<!-- Cost -->
 			<iCost>7080</iCost>
 			<!-- Main effects -->
-			<FreeBonus>BONUS_INGOT_GOLD</FreeBonus>
+			<FreeBonus>BONUS_GOLD_INGOTS</FreeBonus>
 			<iNumFreeBonuses>3</iNumFreeBonuses>
 			<!-- Special Yield and Commerce modifiers -->
 			<ObsoleteSafeCommerceChanges>
@@ -17587,7 +17587,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_DUALISM</PrereqTech>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_COPPER</Bonus>
+				<Bonus>BONUS_COPPER_WARES</Bonus>
 			</PrereqBonuses>
 			<iPrereqPopulation>15</iPrereqPopulation>
 			<!-- Obsolescence -->
@@ -17810,7 +17810,7 @@
 			</TechTypes>
 			<PrereqBonuses>
 				<Bonus>BONUS_HORSE</Bonus>
-				<Bonus>BONUS_ELEPHANT</Bonus>
+				<Bonus>BONUS_ELEPHANTS</Bonus>
 				<Bonus>BONUS_CAMEL</Bonus>
 				<Bonus>BONUS_LLAMA</Bonus>
 			</PrereqBonuses>
@@ -18180,7 +18180,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_ASIAN</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_ASIAN</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
@@ -18248,7 +18248,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_ASIAN</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_ASIAN</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
@@ -18463,11 +18463,11 @@
 			</CommerceChangeOriginalOwners>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
-					<BonusType>BONUS_ELEPHANT</BonusType>
+					<BonusType>BONUS_ELEPHANTS</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
-					<BonusType>BONUS_FUR</BonusType>
+					<BonusType>BONUS_BEAVERS</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
@@ -18489,7 +18489,7 @@
 			</BuildingClassNeededs>
 			<ImprovementFreeSpecialists>
 				<ImprovementFreeSpecialist>
-					<ImprovementType>IMPROVEMENT_CAMP</ImprovementType>
+					<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
 					<iFreeSpecialistCount>1</iFreeSpecialistCount>
 				</ImprovementFreeSpecialist>
 			</ImprovementFreeSpecialists>
@@ -18733,7 +18733,7 @@
 			</CommerceChangeOriginalOwners>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_GOLD</BonusType>
+					<BonusType>BONUS_GOLD_WARES</BonusType>
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -19000,7 +19000,7 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WEMBLEY</ArtDefineTag>
 			<PrereqTech>TECH_SATELLITES</PrereqTech>
-			<ObsoleteTech>TECH_BINARY_PYSCHOKINESIS</ObsoleteTech>
+			<ObsoleteTech>TECH_BINARY_PSYCHOKINESIS</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -19499,7 +19499,7 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqOrCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_DIVINE_RULE</CivicOption>
+					<CivicOption>CIVIC_DIVINE_CULT</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -19507,7 +19507,7 @@
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_INTOLERANT</CivicOption>
+					<CivicOption>CIVIC_INQUISITORIAL</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqOrCivics>
@@ -19713,7 +19713,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_BANK_OF_CHINA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BANK_OF_CHINA</MovieDefineTag>
 			<PrereqTech>TECH_CONGLOMERATES</PrereqTech>
-			<Bonus>BONUS_WARE_STEEL</Bonus>
+			<Bonus>BONUS_STEEL_WARES</Bonus>
 			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>7380</iCost>
@@ -19898,7 +19898,7 @@
 			</GlobalBuildingExtraCommerces>
 			<LocalSpecialistCommerceChanges>
 				<LocalSpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_GENERAL</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</SpecialistType>
 					<CommerceChanges>
 				            <iCommerce>0</iCommerce>
 				            <iCommerce>0</iCommerce>
@@ -19937,7 +19937,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_FASCISM</PrereqTech>
 			</TechTypes>
-			<Bonus>BONUS_WARE_STEEL</Bonus>
+			<Bonus>BONUS_STEEL_WARES</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_CEMENT</Bonus>
 			</PrereqBonuses>
@@ -20393,9 +20393,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRYSTAL_PALACE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CRYSTAL_PALACE</MovieDefineTag>
 			<PrereqTech>TECH_IMPERIALISM</PrereqTech>
-			<Bonus>BONUS_GLASS</Bonus>
+			<Bonus>BONUS_GLASSWARE</Bonus>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_STEEL</BonusType>
+				<BonusType>BONUS_STEEL_WARES</BonusType>
 			</PrereqBonuses>
 			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
@@ -20685,7 +20685,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ELLIS_ISLAND</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ELLIS_ISLAND</MovieDefineTag>
 			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
-			<FreeBuilding>BUILDINGCLASS_GOOD_EUROPEAN</FreeBuilding>
+			<FreeBuilding>BUILDINGCLASS_CULTURE_LOCAL_EUROPEAN</FreeBuilding>
 			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bWater>1</bWater>
@@ -20828,7 +20828,7 @@
 			</CommerceChangeDoubleTimes>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_GOLD</BonusType>
+					<BonusType>BONUS_GOLD_WARES</BonusType>
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -20836,7 +20836,7 @@
 			<Help>TXT_KEY_HELP_FIELD_GOLD</Help>
 			<PrereqOrCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_FUEDALISM</CivicOption>
+					<CivicOption>CIVIC_VASSAL_LEVIES</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -20920,13 +20920,13 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GOLDEN_SPIKE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GOLDEN_SPIKE</MovieDefineTag>
-			<ObsoleteTech>TECH_MAGLEV</ObsoleteTech>
+			<ObsoleteTech>TECH_MAGNETIC_LEVITATION</ObsoleteTech>
 			<PrereqTech>TECH_RAILROAD</PrereqTech>
-			<Bonus>BONUS_WARE_STEEL</Bonus>
+			<Bonus>BONUS_STEEL_WARES</Bonus>
 			<PrereqBonuses>
 				<BonusType>BONUS_COAL</BonusType>
 				<BonusType>BONUS_OIL</BonusType>
-				<BonusType>BONUS_DIESEL</BonusType>
+				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
 			</PrereqBonuses>
 			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
@@ -20952,7 +20952,7 @@
 			</CommerceChangeDoubleTimes>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_GOLD</BonusType>
+					<BonusType>BONUS_GOLD_WARES</BonusType>
 					<iProductonModifier>50</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -21041,7 +21041,7 @@
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_HEREDITARY_RULE</CivicOption>
+					<CivicOption>CIVIC_MONARCHY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -21168,7 +21168,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<CommerceChanges>
 				            <iCommerce>-1</iCommerce>
 				            <iCommerce>1</iCommerce>
@@ -21269,7 +21269,7 @@
 			<PrereqTech>TECH_TOURNAMENTS</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_HORSE</Bonus>
-				<Bonus>BONUS_ELEPHANT</Bonus>
+				<Bonus>BONUS_ELEPHANTS</Bonus>
 				<Bonus>BONUS_CAMEL</Bonus>
 			</PrereqBonuses>
 			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
@@ -21348,7 +21348,7 @@
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_FUEDALISM</CivicOption>
+					<CivicOption>CIVIC_VASSAL_LEVIES</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqOrCivics>
@@ -21516,7 +21516,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_LONDONEYE</MovieDefineTag>
 			<ObsoleteTech>TECH_MEGASTRUCTURE_ENGINEERING</ObsoleteTech>
 			<PrereqTech>TECH_TOURISM</PrereqTech>
-			<Bonus>BONUS_WARE_STEEL</Bonus>
+			<Bonus>BONUS_STEEL_WARES</Bonus>
 			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
@@ -21784,7 +21784,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_CEMENT</BonusType>
 				<BonusType>BONUS_MARBLE</BonusType>
-				<BonusType>BONUS_WARE_STEEL</BonusType>
+				<BonusType>BONUS_STEEL_WARES</BonusType>
 			</PrereqBonuses>
 			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
@@ -21812,7 +21812,7 @@
 			</CommerceModifiers>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_GOLD</BonusType>
+					<BonusType>BONUS_GOLD_WARES</BonusType>
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -21860,7 +21860,7 @@
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ORIENT_EXPRESS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ORIENT_EXPRESS</MovieDefineTag>
-			<ObsoleteTech>TECH_MAGLEV</ObsoleteTech>
+			<ObsoleteTech>TECH_MAGNETIC_LEVITATION</ObsoleteTech>
 			<PrereqTech>TECH_RAILROAD</PrereqTech>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
@@ -21915,8 +21915,8 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PALACE_SOV</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_PALACE_SOV</MovieDefineTag>
-			<PrereqTech>TECH_UTOPIA</PrereqTech>
-			<Bonus>BONUS_WARE_STEEL</Bonus>
+			<PrereqTech>TECH_COMMUNISM</PrereqTech>
+			<Bonus>BONUS_STEEL_WARES</Bonus>
 			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
@@ -22203,7 +22203,7 @@
 					</YieldModifiers>
 				</BonusYieldModifier>
 				<BonusYieldModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<YieldModifiers>
 						<iYield>0</iYield>
 						<iYield>20</iYield>
@@ -22217,14 +22217,14 @@
 					</YieldModifiers>
 				</BonusYieldModifier>
 				<BonusYieldModifier>
-					<BonusType>BONUS_WARE_ALUMINUM</BonusType>
+					<BonusType>BONUS_ALUMINUM_WARES</BonusType>
 					<YieldModifiers>
 						<iYield>0</iYield>
 						<iYield>5</iYield>
 					</YieldModifiers>
 				</BonusYieldModifier>
 				<BonusYieldModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<YieldModifiers>
 						<iYield>0</iYield>
 						<iYield>5</iYield>
@@ -22263,7 +22263,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_ROSETTA_STONE</MovieDefineTag>
 			<ObsoleteTech>TECH_UNIVERSAL_TRANSLATOR</ObsoleteTech>
 			<PrereqTech>TECH_ARCHEOLOGY</PrereqTech>
-			<Bonus>BONUS_ANCIENTTEMPLE</Bonus>
+			<Bonus>BONUS_ANCIENT_RELICS</Bonus>
 			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
@@ -22699,7 +22699,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_LEMON</FreeBonus>
+					<FreeBonus>BONUS_LEMONS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -22707,7 +22707,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_MELON</FreeBonus>
+					<FreeBonus>BONUS_MELONS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -22719,7 +22719,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_POTATO</FreeBonus>
+					<FreeBonus>BONUS_POTATOES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -22755,7 +22755,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WINE</FreeBonus>
+					<FreeBonus>BONUS_GRAPES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -22771,7 +22771,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TOKYO_SKY_TREE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TOKYO_SKY_TREE</MovieDefineTag>
 			<PrereqTech>TECH_COMMUNICATION_NETWORKS</PrereqTech>
-			<Bonus>BONUS_WARE_STEEL</Bonus>
+			<Bonus>BONUS_STEEL_WARES</Bonus>
 			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
@@ -22823,7 +22823,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TOKYO_TOWER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TOKYO_TOWER</MovieDefineTag>
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
-			<Bonus>BONUS_WARE_STEEL</Bonus>
+			<Bonus>BONUS_STEEL_WARES</Bonus>
 			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
@@ -23063,7 +23063,7 @@
 			</CommerceChangeDoubleTimes>
 			<BonusHealthChanges>
 				<BonusHealthChange>
-					<BonusType>BONUS_MUSIC</BonusType>
+					<BonusType>BONUS_HIT_SINGLES</BonusType>
 					<iHealthChange>-1</iHealthChange>
 				</BonusHealthChange>
 			</BonusHealthChanges>
@@ -23177,7 +23177,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WILLOWRUN</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_WILLOWRUN</MovieDefineTag>
-			<ObsoleteTech>TECH_LUNAR_LUNAR_MANUFACTURING</ObsoleteTech>
+			<ObsoleteTech>TECH_LUNAR_MANUFACTURING</ObsoleteTech>
 			<PrereqTech>TECH_AVIATION</PrereqTech>
 			<FreeBonus>BONUS_AIRCRAFT</FreeBonus>
 			<iNumFreeBonuses>3</iNumFreeBonuses>
@@ -23266,13 +23266,13 @@
 			</CommerceChangeDoubleTimes>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
-					<BonusType>BONUS_MUSIC</BonusType>
+					<BonusType>BONUS_HIT_SINGLES</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_MUSIC</BonusType>
+					<BonusType>BONUS_HIT_SINGLES</BonusType>
 					<iProductonModifier>50</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -23296,7 +23296,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_YASNAYA_POLYANA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_YASNAYA_POLYANA</MovieDefineTag>
 			<ObsoleteTech>TECH_VERTICAL_FARMING</ObsoleteTech>
-			<PrereqTech>TECH_LABOR_UNION</PrereqTech>
+			<PrereqTech>TECH_LABOR_UNIONS</PrereqTech>
 			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>

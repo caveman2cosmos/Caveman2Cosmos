@@ -174,8 +174,8 @@ public:
 	bool canTrain(int /*UnitTypes*/ eUnit, bool bContinue, bool bTestVisible);
 	bool canConstruct(int /*BuildingTypes*/eBuilding, bool bContinue, bool bTestVisible, bool bIgnoreCost);
 	bool canCreate(int /*ProjectTypes*/ eProject, bool bContinue, bool bTestVisible);
-	bool canMaintain(int /*ProcessTypes*/ eProcess, bool bContinue);	
-	bool isProductionMaxedUnitClass(int /*UnitClassTypes*/ eUnitClass);
+	bool canMaintain(int /*ProcessTypes*/ eProcess, bool bContinue);
+	bool isProductionMaxedUnit(int /*UnitTypes*/ eUnit);
 	bool isProductionMaxedBuildingClass(int /*BuildingClassTypes*/ eBuildingClass, bool bAcquireCity);
 	bool isProductionMaxedProject(int /*ProjectTypes*/ eProject);
 	int getUnitProductionNeeded(int /*UnitTypes*/ iIndex);
@@ -553,10 +553,11 @@ public:
 	int getExtraBuildingHappiness(int /*BuildingTypes*/ iIndex);
 	int getExtraBuildingHealth(int /*BuildingTypes*/ iIndex);
 	int getFeatureHappiness(int /*FeatureTypes*/ iIndex);
-	int getUnitClassCount(int /*UnitClassTypes*/ eIndex);
-	bool isUnitClassMaxedOut(int /*UnitClassTypes*/ eIndex, int iExtra);
-	int getUnitClassMaking(int /*UnitClassTypes*/ eIndex);
-	int getUnitClassCountPlusMaking(int /*UnitClassTypes*/ eIndex);
+
+	int getUnitCount(int /*UnitTypes*/ eIndex);
+	bool isUnitMaxedOut(int /*UnitTypes*/ eIndex, int iExtra);
+	int getUnitMaking(int /*UnitTypes*/ eIndex);
+	int getUnitCountPlusMaking(int /*UnitTypes*/ eIndex);
 
 	int getBuildingClassCount(int /*BuildingClassTypes*/ iIndex);
 	bool isBuildingClassMaxedOut(int /*BuildingClassTypes*/ iIndex, int iExtra);

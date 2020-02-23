@@ -78,26 +78,6 @@
 		<Italian>Può unirsi alla tua città (se la popolazione è minore di 7) oppure essere sacrificato in cambio di cultura o produzione. Se la schiavitù è attiva nel tuo impero, quest'unità può essere venduta come schiava.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CAPTIVE_SPECIALIST</Tag>
-		<English>Captive - Specialist</English>
-		<French>Prisonnier - Spécialiste</French>
-		<Italian>
-			<Text>Prigioniero - Specialista</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_CAPTIVE_SPECIALIST_PEDIA</Tag>
-		<English>Specialists may be captured when razing a city that has specialists present.</English>
-		<Italian>Gli specialisti possono essere catturati razziando una città in cui sono presenti specialisti.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_CAPTIVE_SPECIALIST_STRATEGY</Tag>
-		<English>Captured Specialists are almost Great People they can only join your cities.</English>
-		<Italian>Gli specialisti catturati sono quasi come i grandi personaggi, dato che possono solo unirsi alle tue città.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_FREED_SLAVE</Tag>
 		<English>Captive - Freed Slave</English>
 		<French>Prisonnier - Esclave libéré</French>

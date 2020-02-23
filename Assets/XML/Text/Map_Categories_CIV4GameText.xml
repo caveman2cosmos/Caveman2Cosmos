@@ -76,18 +76,12 @@
 		<French>Case Interstellaire</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MAPCATEGORY_MILKYWAY</Tag>
+		<Tag>TXT_KEY_MAPCATEGORY_MILKY_WAY</Tag>
 		<English>Milky Way Plot</English>
 		<French>Case de Voie lactée</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MAPCATEGORY_VOID</Tag>
-		<English>Void Plot</English>
-		<French>Case de Vide</French>
-		<German>Voidfeld</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MAPCATEGORY_SPACE</Tag>
+		<Tag>TXT_KEY_MAPCATEGORY_CISLUNAR</Tag>
 		<English>Cislunar Plot</English>
 		<French>Case Cislunaire</French>
 		<German>Weltraumfeld</German>

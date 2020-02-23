@@ -7,11 +7,11 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
 	<!-- SHINTO -->
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_ASATRU</Tag>
+		<Tag>TXT_KEY_TECH_ASATRU</Tag>
 		<English>Asatru</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_ASATRU_ADJECTIVE</Tag>
+		<Tag>TXT_KEY_TECH_ASATRU_ADJECTIVE</Tag>
 		<English>Asatru</English>
 		<French>
 			<Text>Asatru</Text>
@@ -35,19 +35,19 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_ASATRU_PEDIA</Tag>
+		<Tag>TXT_KEY_TECH_ASATRU_PEDIA</Tag>
 		<English>Asatru is a term used to describe the religious traditions which were common amongst the Germanic tribes living in Nordic countries prior to and during the Christianization of Northern Europe. Norse paganism is therefore a subset of Germanic paganism, which was practiced in the lands inhabited by the Germanic tribes across most of Northern and Central Europe in the Viking Age. Our knowledge of Norse paganism is mostly drawn from the results of archaeological field work, etymology and early written materials.</English>
 		<Polish>Asatru - politeistyczna religia oparta na wierzeniach zawartych w mitologii nordyckiej, której świat bogów reprezentują dwie dynastie Asów i Vanów. Stanowi ona próbę odtworzenia wierzeń dominujących w Europie Północnej przed przyjęciem chrześcijaństwa. Zaliczana jest do neopogańskich ruchów religijnych.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_ASATRU_QUOTE</Tag>
+		<Tag>TXT_KEY_TECH_ASATRU_QUOTE</Tag>
 		<English>"No man lives till eve whom the Norns doom at dawning." - Anglo Saxon Poem (found at cauldronborn.blogspot.com.au)</English>
 		<French>"Aucun Homme de vivra tant que le cauchemar des Nornes est présent." - Poème Anglo Saxon (trouvé sur cauldronborn.blogspot.com.au)</French>
 		<Spanish>"Ningún hombre sobrevive a la condena de los nórdicos al amanecer." - Poema anglosajón (encontrado en cauldronborn.blogspot.com.au)</Spanish>
 		<Polish>"A furore Normannorum libera nos, Domine (przed gniewem Normanów ocal nas, Panie)" - Anglosaxońska modlitwa</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_ASATRU_STRATEGY</Tag>
+		<Tag>TXT_KEY_TECH_ASATRU_STRATEGY</Tag>
 		<English>Research Asatru to found a Religion</English>
 		<French>Recherchez Asatru pour fonder une religion</French>
 		<Spanish>Investiga el Ásatrú para fundar una religión.</Spanish>
@@ -236,12 +236,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THOR_SANCTUARY_STRATEGY</Tag>
 		<English>[COLOR_BUILDING_TEXT]Thor Sanctuary[COLOR_REVERT] </English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_ASATRU_QUOTE</Tag>
-		<English>"No man lives till eve whom the Norns doom at dawning."[NEWLINE][NEWLINE]-Anglo Saxon Poem (found at cauldronborn.blogspot.com.au)</English>
-		<French>"Aucun Homme de vivra tant que le cauchemar des Nornes est présent."[NEWLINE][NEWLINE]-Poème Anglo Saxon (trouvé sur  cauldronborn.blogspot.com.au)</French>
-		<Spanish>"Ningún hombre sobrevive a la condena de los nórdicos al amanecer."[NEWLINE][NEWLINE]-Poema anglosajón (encontrado en cauldronborn.blogspot.com.au)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_RELIGION_ASATRU</Tag>

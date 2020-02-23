@@ -22,9 +22,9 @@ public:
 	void AI_makeAssignWorkDirty();
 	void AI_updateAssignWork();
 
-	int AI_combatValue(UnitTypes eUnit);
+	int AI_combatValue(const UnitTypes eUnit) const;
 
-	int AI_turnsPercent(int iTurns, int iPercent);
+	int AI_turnsPercent(int iTurns, const int iPercent) const;
 
 	virtual void read(FDataStreamBase* pStream);
 	virtual void write(FDataStreamBase* pStream);

@@ -7332,7 +7332,7 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 		<French>Unités de soins</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_DOCTOR</Tag>
+		<Tag>TXT_KEY_SPECIALIST_DOCTOR</Tag>
 		<English>Doctor</English>
 		<French>
 			<Text>Docteur en médecine</Text>
@@ -7340,8 +7340,17 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 			<Plural>0</Plural>
 		</French>
 	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_SPECIALIST_GREAT_DOCTOR</Tag>
+		<English>Great Doctor</English>
+				<French>
+			<Text>Médecin Illustre</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GREAT_DOCTOR</Tag>
+		<Tag>TXT_KEY_UNIT_DOCTOR</Tag>
 		<English>Great Doctor</English>
 		<French>
 			<Text>Médecin Illustre</Text>
@@ -9136,5 +9145,29 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 		<English>Early Quarry</English>
 		<French>Carrière antique</French>
 		<Polish>Wczesny Kamieniołom</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPECIALIST_GREAT_MILITARY_INSTRUCTOR</Tag>
+		<English>Great Military Instructor</English>
+		<French>
+			<Text>Instructeur militaire illustre</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Großer Militärausbilder</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</German>
+		<Italian>
+			<Text>Grande istruttore militare:Grandi istruttori militari</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Gran instructor militar:Grandes instructores militares</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
 	</TEXT>
 </Civ4GameText>

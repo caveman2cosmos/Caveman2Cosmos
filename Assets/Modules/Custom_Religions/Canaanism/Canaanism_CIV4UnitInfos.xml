@@ -10,7 +10,7 @@
 			<Class>UNITCLASS_CANAANITE_MISSIONARY</Class>
 			<Type>UNIT_CANAANITE_MISSIONARY</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_CANAANITE_MISSIONARY</Capture>
+			<Capture>UNIT_CANAANITE_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -29,11 +29,11 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_CANAANITE</ReligionType>
+					<ReligionType>RELIGION_CANAANISM</ReligionType>
 					<iReligionSpread>40</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>
-			<PrereqReligion>RELIGION_CANAANITE</PrereqReligion>
+			<PrereqReligion>RELIGION_CANAANISM</PrereqReligion>
 			<PrereqBuilding>BUILDING_CANAANISM_MONASTERY</PrereqBuilding>
 			<Flavors>
 				<Flavor>
@@ -69,7 +69,7 @@
 			</Buildings>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_CANAANITE</ReligionType>
+					<ReligionType>RELIGION_CANAANISM</ReligionType>
 					<iReligionSpread>100</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>

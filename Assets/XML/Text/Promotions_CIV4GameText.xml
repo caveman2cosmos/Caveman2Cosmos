@@ -915,7 +915,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ASSASSIN_TEXT</Tag>
 		<English>[ICON_BULLET]Trait - Assassination: %D1_Change</English>
-		<French>[ICON_BULLET]Trait - Assassination: %D1_Change</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ASTONISHING_ACCUMEN</Tag>
@@ -3066,7 +3065,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CANCER</Tag>
 		<English>Cancer</English>
-		<French>Cancer</French>
 		<Spanish>Cáncer</Spanish>
 		<Polish>Rak</Polish>
 	</TEXT>
@@ -3833,7 +3831,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_COLD1</Tag>
-		<English>Arctic Combat I</English>
+		<English>Arctic I</English>
 		<French>Combat en zone Arctique I</French>
 		<Italian>Combattente artico I</Italian>
 		<Spanish>Combate ártico I</Spanish>
@@ -3841,7 +3839,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_COLD2</Tag>
-		<English>Arctic Combat II</English>
+		<English>Arctic II</English>
 		<French>Combat en zone Arctique II</French>
 		<Italian>Combattente artico II</Italian>
 		<Spanish>Combate ártico II</Spanish>
@@ -3849,7 +3847,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_COLD3</Tag>
-		<English>Arctic Combat III</English>
+		<English>Arctic III</English>
 		<French>Combat en zone Arctique III</French>
 		<Italian>Combattente artico III</Italian>
 		<Spanish>Combate ártico III</Spanish>
@@ -3857,7 +3855,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_COLD4</Tag>
-		<English>Arctic Combat IV</English>
+		<English>Arctic IV</English>
 		<French>Combat en zone Arctique IV</French>
 		<Italian>Combattente artico IV</Italian>
 		<Spanish>Combate ártico IV</Spanish>
@@ -4605,6 +4603,34 @@
 		<French>[ICON_BULLET]Récupère de la [ICON_CULTURE] en plus de l'[ICON_GOLD] lors des pillages</French>
 		<Spanish>[ICON_BULLET]Saquea [ICON_CULTURE] además de [ICON_GOLD]</Spanish>
 		<Polish>[ICON_BULLET]Plądrowanie [ICON_CULTURE] oprócz [ICON_GOLD]</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_CULTURE_AFRICAN</Tag>
+		<English>African</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_CULTURE_ASIAN</Tag>
+		<English>Asian</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_CULTURE_EUROPEAN</Tag>
+		<English>European</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_CULTURE_MIDDLE_EASTERN</Tag>
+		<English>Middle Eastern</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_CULTURE_NORTH_AMERICAN</Tag>
+		<English>North American</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_CULTURE_OCEANIAN</Tag>
+		<English>Oceanian</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_CULTURE_SOUTH_AMERICAN</Tag>
+		<English>South American</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CURE_AFFLICTION_TEXT</Tag>
@@ -6125,7 +6151,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_EXTRA_STRENGTH_TEXT</Tag>
 		<English>[ICON_BULLET]+%d1 [ICON_STRENGTH]</English>
-		<French>[ICON_BULLET]+%d1 [ICON_STRENGTH]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FAKE_IDENTITY1</Tag>
@@ -8642,7 +8667,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INFILTRATION</Tag>
 		<English>Infiltration</English>
-		<French>Infiltration</French>
 		<Italian>Infiltrazione</Italian>
 		<Spanish>Infiltración</Spanish>
 		<Polish>Infiltracja</Polish>
@@ -8659,7 +8683,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INITIATIVE1</Tag>
 		<English>Initiative I</English>
-		<French>Initiative I</French>
 		<Italian>Iniziativa I</Italian>
 		<Spanish>Iniciativa I</Spanish>
 		<Polish>Inicjatywa I</Polish>
@@ -8667,7 +8690,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INITIATIVE2</Tag>
 		<English>Initiative II</English>
-		<French>Initiative II</French>
 		<Italian>Iniziativa II</Italian>
 		<Spanish>Iniciativa II</Spanish>
 		<Polish>Inicjatywa II</Polish>
@@ -8675,7 +8697,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INITIATIVE3</Tag>
 		<English>Initiative III</English>
-		<French>Initiative III</French>
 		<Italian>Iniziativa III</Italian>
 		<Spanish>Iniciativa III</Spanish>
 		<Polish>Inicjatywa III</Polish>
@@ -8683,7 +8704,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INITIATIVE4</Tag>
 		<English>Initiative IV</English>
-		<French>Initiative IV</French>
 		<Italian>Iniziativa IV</Italian>
 		<Spanish>Iniciativa IV</Spanish>
 		<Polish>Inicjatywa IV</Polish>
@@ -8901,7 +8921,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INVESTIGATION_TEXT</Tag>
 		<English>[ICON_BULLET]%s1_Change%% Investigation</English>
-		<French>[ICON_BULLET]%s1_Change%% Investigation</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_IRON_ARMOR</Tag>
@@ -9038,13 +9057,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_KAMIKAZE</Tag>
 		<English>Kamikaze</English>
-		<French>Kamikaze</French>
 		<Polish>Kamikadze</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_KANAI</Tag>
 		<English>Kanai</English>
-		<French>Kanai</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_KEEN_EARS1</Tag>
@@ -10694,7 +10711,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_NAVIGATION3</Tag>
 		<English>Navigation III</English>
-		<French>Navigation III</French>
 		<Italian>Navigazione III</Italian>
 		<Spanish>Navegación III</Spanish>
 		<Polish>Nawigacja III</Polish>
@@ -14507,7 +14523,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SNIPER</Tag>
 		<English>Sniper</English>
-		<French>Sniper</French>
 		<Italian>Cecchino</Italian>
 		<Spanish>Tirador escondido</Spanish>
 		<Polish>Skradanie się</Polish>
@@ -14565,30 +14580,25 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SONAR</Tag>
 		<English>Sonar</English>
-		<French>Sonar</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SOPHISTICATION1</Tag>
 		<English>Sophistication I</English>
-		<French>Sophistication I</French>
 		<Polish>Wyrafinowany I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SOPHISTICATION2</Tag>
 		<English>Sophistication II</English>
-		<French>Sophistication II</French>
 		<Polish>Wyrafinowany II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SOPHISTICATION3</Tag>
 		<English>Sophistication III</English>
-		<French>Sophistication III</French>
 		<Polish>Wyrafinowany III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SOPHISTICATION4</Tag>
 		<English>Sophistication IV</English>
-		<French>Sophistication IV</French>
 		<Polish>Wyrafinowany IV</Polish>
 	</TEXT>
 	<TEXT>
@@ -14630,7 +14640,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SPHINX</Tag>
 		<English>Sphinx</English>
-		<French>Sphinx</French>
 		<Italian>Sfinge</Italian>
 		<Spanish>Esfinge</Spanish>
 		<Polish>Sfinks</Polish>
@@ -15463,7 +15472,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SUPER_CAVITATION</Tag>
 		<English>Super Cavitation</English>
-		<French>Super Cavitation</French>
 		<German>Super-Kavitation</German>
 		<Italian>Super Cavitazione</Italian>
 		<Spanish>Supercavitación</Spanish>
@@ -15834,7 +15842,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TEMP_UCAIWEIGHT_TEXT</Tag>
 		<English>[ICON_BULLET]%s1_UnitCombat%%: %d2_Amount%%</English>
-		<French>[ICON_BULLET]%s1_UnitCombat%%: %d2_Amount%%</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TEMPERED_IRON_WEAPONS</Tag>
@@ -16571,21 +16578,18 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TRANSPORT1</Tag>
 		<English>Transport I</English>
-		<French>Transport I</French>
 		<Italian>Trasporto I</Italian>
 		<Spanish>Transporte I</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TRANSPORT2</Tag>
 		<English>Transport II</English>
-		<French>Transport II</French>
 		<Italian>Trasporto II</Italian>
 		<Spanish>Transporte II</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TRANSPORT3</Tag>
 		<English>Transport III</English>
-		<French>Transport III</French>
 		<Italian>Trasporto III</Italian>
 		<Spanish>Transporte III</Spanish>
 	</TEXT>
@@ -16970,7 +16974,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAIDAN</Tag>
 		<English>Waidan</English>
-		<French>Waidan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WALL_BREAKER</Tag>
@@ -16983,7 +16986,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WARMTH1</Tag>
-		<English>Desert Combat I</English>
+		<English>Heat I</English>
 		<French>Combat dans le désert I</French>
 		<German>Wüstenkampf I</German>
 		<Italian>Combattente del deserto I</Italian>
@@ -16992,7 +16995,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WARMTH2</Tag>
-		<English>Desert Combat II</English>
+		<English>Heat II</English>
 		<French>Combat dans le désert II</French>
 		<Italian>Combattente del deserto II</Italian>
 		<Spanish>Combate en desierto II</Spanish>
@@ -17000,7 +17003,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WARMTH3</Tag>
-		<English>Desert Combat III</English>
+		<English>Heat III</English>
 		<French>Combat dans le désert III</French>
 		<Italian>Combattente del deserto III</Italian>
 		<Spanish>Combate en desierto III</Spanish>
@@ -17293,7 +17296,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ZEN</Tag>
 		<English>Zen</English>
-		<French>Zen</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_ACCURACY</Tag>
@@ -19608,7 +19610,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_SECURITY</Tag>
-		<English>Build Up (Counter Espionage)</English>
+		<English>Build Up (Counter Espionage) I</English>
 		<French>Retranchement (Contre-espionnage)</French>
 	</TEXT>
 	<TEXT>

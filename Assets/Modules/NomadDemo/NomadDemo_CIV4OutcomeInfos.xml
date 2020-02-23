@@ -28,7 +28,7 @@
 			<Type>OUTCOME_NOMAD_RECON</Type>
 			<Description>TXT_KEY_OUTCOME_NOMAD_RECON</Description>
 			<Message>TXT_KEY_OUTCOME_NOMAD_RECON_MESSAGE</Message>
-			<PrereqTech>TECH_NOMADIC_LIFESTYLE</PrereqTech>
+			<PrereqTech>TECH_NOMADISM</PrereqTech>
 		</OutcomeInfo>
 	</OutcomeInfos>
 </Civ4OutcomeInfos>

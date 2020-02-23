@@ -172,7 +172,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<iCost>-1</iCost>
 			<iConquestProb>25</iConquestProb>
 			<iAsset>2</iAsset>

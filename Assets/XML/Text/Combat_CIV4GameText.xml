@@ -6752,7 +6752,7 @@
 		<Polish>Artysta</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_ERA_ANCIENT</Tag>
+		<Tag>TXT_KEY_UNITCOMBAT_ERA_PREHISTORIC</Tag>
 		<English>Era(Prehistoric)</English>
 		<French>
 			<Text>Ere(Pré-histoire)</Text>
@@ -6768,7 +6768,7 @@
 		<Polish>Era (Prehistoryczna)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_ERA_SEDENTARY</Tag>
+		<Tag>TXT_KEY_UNITCOMBAT_ERA_ANCIENT</Tag>
 		<English>Era(Ancient)</English>
 		<French>
 			<Text>Ere(Antiquité)</Text>
@@ -6848,7 +6848,7 @@
 		<Polish>Era (Przemysłowa)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_ERA_MODERN</Tag>
+		<Tag>TXT_KEY_UNITCOMBAT_ERA_ATOMIC</Tag>
 		<English>Era(Modern)</English>
 		<French>
 			<Text>Ere(Moderne)</Text>
@@ -8923,7 +8923,7 @@
 		<Polish>Religia (Confucianizm)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_RELIGION_DRUIDIC</Tag>
+		<Tag>TXT_KEY_UNITCOMBAT_RELIGION_DRUIDIC_TRADITIONS</Tag>
 		<English>Religion(Druidic)</English>
 		<French>
 			<Text>Religion(Druidique)</Text>
@@ -9028,7 +9028,7 @@
 		<Polish>Religia (Kemetizm)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_RELIGION_MESOPOTAMIANISM</Tag>
+		<Tag>TXT_KEY_UNITCOMBAT_RELIGION_MESOPOTAMISM</Tag>
 		<English>Religion(Mesopotamianism)</English>
 		<French>
 			<Text>Religion(Mesopotamianisme)</Text>

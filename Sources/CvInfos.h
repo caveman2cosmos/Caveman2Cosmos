@@ -232,14 +232,14 @@ public:
 	CvDiplomacyResponse();
 	virtual ~CvDiplomacyResponse();
 
-	int getNumDiplomacyText();
+	int getNumDiplomacyText() const;
 	void setNumDiplomacyText(int i);
 
-	bool getCivilizationTypes(int i);
+	bool getCivilizationTypes(const int i) const;
 	bool* getCivilizationTypes() const;
 	void setCivilizationTypes(int i, bool bVal);
 
-	bool getLeaderHeadTypes(int i);
+	bool getLeaderHeadTypes(const int i) const;
 	bool* getLeaderHeadTypes() const;
 	void setLeaderHeadTypes(int i, bool bVal);
 
@@ -247,7 +247,7 @@ public:
 	bool* getAttitudeTypes() const;
 	void setAttitudeTypes(int i, bool bVal);
 
-	bool getDiplomacyPowerTypes(int i);
+	bool getDiplomacyPowerTypes(const int i) const;
 	bool* getDiplomacyPowerTypes() const;
 	void setDiplomacyPowerTypes(int i, bool bVal);
 
@@ -409,7 +409,7 @@ public:
 	int getNumCitiesMaintenanceModifier() const;
 	int getCoastalDistanceMaintenanceModifier() const;
 	//DPII < Maintenance Modifier >
-	int getFirstFreeUnitClass() const;			// Exposed to Python
+	int getFirstFreeUnit() const;				// Exposed to Python
 	int getFirstFreeProphet() const;			// Exposed to Python
 	int getHealth() const;						// Exposed to Python
 	int getHappiness() const;					// Exposed to Python
@@ -440,11 +440,6 @@ public:
 	bool isWaterWork() const;					// Exposed to Python
 	bool isRiverTrade() const;					// Exposed to Python
 
-/************************************************************************************************/
-/* Afforess					  Start		 12/9/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	bool isCanPassPeaks() const;
 	bool isMoveFastPeaks() const;
 	bool isCanFoundOnPeaks() const;
@@ -463,13 +458,13 @@ public:
 
 	int getNumPrereqBuildingClasses() const;
 	PrereqBuildingClass& getPrereqBuildingClass(int iIndex);
-	int getPrereqBuildingClassType(int iIndex);
-	int getPrereqBuildingClassMinimumRequired(int iIndex);
+	int getPrereqBuildingClassType(int iIndex) const;
+	int getPrereqBuildingClassMinimumRequired(int iIndex) const;
 
 	int getNumPrereqOrBuildingClasses() const;
 	PrereqBuildingClass& getPrereqOrBuildingClass(int iIndex);
-	int getPrereqOrBuildingClassType(int iIndex);
-	int getPrereqOrBuildingClassMinimumRequired(int iIndex);
+	int getPrereqOrBuildingClassType(int iIndex) const;
+	int getPrereqOrBuildingClassMinimumRequired(int iIndex) const;
 
 	//int getPrereqBuildingClass(int i) const;
 	//int getPrereqBuildingVectorSize();
@@ -492,17 +487,10 @@ public:
 	int getOriginalPrereqOrTechs(int i) const;
 	int getOriginalPrereqAndTechs(int i) const;
 	int getUnitClassStrengthChange(int iUnit, bool bForLoad = false) const;
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 	//TB Tech Tags
 	bool isGlobal() const;
 	//TB Tech Tags end
 
-
-/************************************************************************************************/
-/* DCM									 04/19/09								Johny Smith  */
-/************************************************************************************************/
 	// Dale - AB: Bombing START
 	bool getDCMAirBombTech1() const;
 	bool getDCMAirBombTech2() const;
@@ -511,12 +499,10 @@ protected:
 	bool m_bDCMAirBombTech2;
 public:
 	// Dale - AB: Bombing END
-/************************************************************************************************/
-/* DCM									 END												  */
-/************************************************************************************************/
+
 	std::wstring getQuote() const;				// Exposed to Python
 	void setQuoteKey(const TCHAR* szVal);
-	const TCHAR* getQuoteKey();
+	const TCHAR* getQuoteKey() const;
 	const TCHAR* getSound() const;				// Exposed to Python
 	void setSound(const TCHAR* szVal);
 	const TCHAR* getSoundMP() const;			// Exposed to Python
@@ -566,7 +552,7 @@ protected:
 	int m_iNumCitiesMaintenanceModifier;
 	int m_iCoastalDistanceMaintenanceModifier;
 	//DPII < Maintenance Modifier >
-	int m_iFirstFreeUnitClass;
+	int m_iFirstFreeUnit;
 	int m_iFirstFreeProphet;
 	int m_iHealth;
 	int m_iHappiness;
@@ -614,11 +600,6 @@ protected:
 	//ls612: Tech Commerce Modifiers
 	int* m_piCommerceModifier;
 
-/************************************************************************************************/
-/* Afforess					  Start		 12/9/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	//TB Tech Tags
 	bool m_bGlobal;
 	//TB Tech Tags end
@@ -654,9 +635,6 @@ protected:
 	//int* m_paiPrereqOrBuildingClass;
 	//std::vector<CvString> m_aszPrereqOrBuildingClassforPass3;
 	//std::vector<int> m_aiPrereqOrBuildingClassforPass3;
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -988,19 +966,19 @@ public:
 	// bool vector without delayed resolution
 	int getSubCombatChangeType(int i) const;
 	int getNumSubCombatChangeTypes() const;
-	bool isSubCombatChangeType(int i);
+	bool isSubCombatChangeType(int i) const;
 
 	int getRemovesUnitCombatType(int i) const;
 	int getNumRemovesUnitCombatTypes() const;
-	bool isRemovesUnitCombatType(int i);
+	bool isRemovesUnitCombatType(int i) const;
 
 	int getOnGameOption(int i) const;
 	int getNumOnGameOptions() const;
-	bool isOnGameOption(int i);
+	bool isOnGameOption(int i)const;
 
 	int getNotOnGameOption(int i) const;
 	int getNumNotOnGameOptions() const;
-	bool isNotOnGameOption(int i);
+	bool isNotOnGameOption(int i) const;
 
 	int getFreetoUnitCombat(int i) const;
 	int getNumFreetoUnitCombats() const;
@@ -1008,74 +986,74 @@ public:
 
 	int getNotOnUnitCombatType(int i) const;
 	int getNumNotOnUnitCombatTypes() const;
-	bool isNotOnUnitCombatType(int i);
+	bool isNotOnUnitCombatType(int i) const;
 
 	int getNotOnDomainType(int i) const;
 	int getNumNotOnDomainTypes() const;
-	bool isNotOnDomainType(int i);
+	bool isNotOnDomainType(int i) const;
 
 	int getNoAutoEquiptoCombatClassType(int i) const;
 	int getNumNoAutoEquiptoCombatClassTypes() const;
-	bool isNoAutoEquiptoCombatClassType(int i);
+	bool isNoAutoEquiptoCombatClassType(int i) const;
 
 	int getMapCategoryType(int i) const;
 	int getNumMapCategoryTypes() const;
-	bool isMapCategoryType(int i);
+	bool isMapCategoryType(int i) const;
 
 	// bool vector with delayed resolution
 	int getCureAfflictionChangeType(int i) const;
 	int getNumCureAfflictionChangeTypes() const;
-	bool isCureAfflictionChangeType(int i);
+	bool isCureAfflictionChangeType(int i) const;
 
 	int getPrereqBonusType(int i) const;
 	int getNumPrereqBonusTypes() const;
-	bool isPrereqBonusType(int i);
+	bool isPrereqBonusType(int i) const;
 
 	int getAddsBuildType(int i) const;
 	int getNumAddsBuildTypes() const;
-	bool isAddsBuildType(int i);
+	bool isAddsBuildType(int i) const;
 
 	int getNegatesInvisibilityType(int i) const;
 	int getNumNegatesInvisibilityTypes() const;
-	bool isNegatesInvisibilityType(int i);
+	bool isNegatesInvisibilityType(int i) const;
 
 	int getPrereqTerrainType(int i) const;
 	int getNumPrereqTerrainTypes() const;
-	bool isPrereqTerrainType(int i);
+	bool isPrereqTerrainType(int i) const;
 
 	int getPrereqFeatureType(int i) const;
 	int getNumPrereqFeatureTypes() const;
-	bool isPrereqFeatureType(int i);
+	bool isPrereqFeatureType(int i) const;
 
 	int getPrereqImprovementType(int i) const;
 	int getNumPrereqImprovementTypes() const;
-	bool isPrereqImprovementType(int i);
+	bool isPrereqImprovementType(int i) const;
 
 	int getPrereqPlotBonusType(int i) const;
 	int getNumPrereqPlotBonusTypes() const;
-	bool isPrereqPlotBonusType(int i);
+	bool isPrereqPlotBonusType(int i) const;
 
 	int getPrereqLocalBuildingClassType(int i) const;
 	int getNumPrereqLocalBuildingClassTypes() const;
-	bool isPrereqLocalBuildingClassType(int i);
+	bool isPrereqLocalBuildingClassType(int i) const;
 
 	int getTrapSetWithPromotionType(int i) const;
 	int getNumTrapSetWithPromotionTypes() const;
-	bool isTrapSetWithPromotionType(int i);
+	bool isTrapSetWithPromotionType(int i) const;
 
 	int getTrapImmunityUnitCombatType(int i) const;
 	int getNumTrapImmunityUnitCombatTypes() const;
-	bool isTrapImmunityUnitCombatType(int i);
+	bool isTrapImmunityUnitCombatType(int i) const;
 
 	int getTargetUnitCombatType(int i) const;
 	int getNumTargetUnitCombatTypes() const;
-	bool isTargetUnitCombatType(int i);
+	bool isTargetUnitCombatType(int i) const;
 
 	// int vector utilizing pairing without delayed resolution
 
 	int getNumFlankingStrikesbyUnitCombatTypesChange() const;
 	int getFlankingStrengthbyUnitCombatTypeChange(int iUnitCombat) const;
-	bool isFlankingStrikebyUnitCombatTypeChange(int iUnitCombat);
+	bool isFlankingStrikebyUnitCombatTypeChange(int iUnitCombat) const;
 
 	int getNumWithdrawOnTerrainTypeChanges() const;
 	int getWithdrawOnTerrainTypeChange(int iTerrain) const;
@@ -1085,84 +1063,84 @@ public:
 
 	int getNumWithdrawVSUnitCombatChangeTypes() const;
 	int getWithdrawVSUnitCombatChangeType(int iUnitCombat) const;
-	bool isWithdrawVSUnitCombatChangeType(int iUnitCombat);
+	bool isWithdrawVSUnitCombatChangeType(int iUnitCombat) const;
 
 	int getNumPursuitVSUnitCombatChangeTypes() const;
 	int getPursuitVSUnitCombatChangeType(int iUnitCombat, bool bForLoad = false) const;
-	bool isPursuitVSUnitCombatChangeType(int iUnitCombat, bool bForLoad = false);
+	bool isPursuitVSUnitCombatChangeType(int iUnitCombat, bool bForLoad = false) const;
 
 	int getNumRepelVSUnitCombatChangeTypes() const;
 	int getRepelVSUnitCombatChangeType(int iUnitCombat, bool bForLoad = false) const;
-	bool isRepelVSUnitCombatChangeType(int iUnitCombat, bool bForLoad = false);
+	bool isRepelVSUnitCombatChangeType(int iUnitCombat, bool bForLoad = false) const;
 
 	int getNumKnockbackVSUnitCombatChangeTypes() const;
 	int getKnockbackVSUnitCombatChangeType(int iUnitCombat, bool bForLoad = false) const;
-	bool isKnockbackVSUnitCombatChangeType(int iUnitCombat, bool bForLoad = false);
+	bool isKnockbackVSUnitCombatChangeType(int iUnitCombat, bool bForLoad = false) const;
 
 	int getNumPunctureVSUnitCombatChangeTypes() const;
 	int getPunctureVSUnitCombatChangeType(int iUnitCombat) const;
-	bool isPunctureVSUnitCombatChangeType(int iUnitCombat);
+	bool isPunctureVSUnitCombatChangeType(int iUnitCombat) const;
 
 	int getNumArmorVSUnitCombatChangeTypes() const;
 	int getArmorVSUnitCombatChangeType(int iUnitCombat) const;
-	bool isArmorVSUnitCombatChangeType(int iUnitCombat);
+	bool isArmorVSUnitCombatChangeType(int iUnitCombat) const;
 
 	int getNumDodgeVSUnitCombatChangeTypes() const;
 	int getDodgeVSUnitCombatChangeType(int iUnitCombat) const;
-	bool isDodgeVSUnitCombatChangeType(int iUnitCombat);
+	bool isDodgeVSUnitCombatChangeType(int iUnitCombat) const;
 
 	int getNumPrecisionVSUnitCombatChangeTypes() const;
 	int getPrecisionVSUnitCombatChangeType(int iUnitCombat) const;
-	bool isPrecisionVSUnitCombatChangeType(int iUnitCombat);
+	bool isPrecisionVSUnitCombatChangeType(int iUnitCombat) const;
 
 	int getNumCriticalVSUnitCombatChangeTypes() const;
 	int getCriticalVSUnitCombatChangeType(int iUnitCombat) const;
-	bool isCriticalVSUnitCombatChangeType(int iUnitCombat);
+	bool isCriticalVSUnitCombatChangeType(int iUnitCombat) const;
 
 	int getNumRoundStunVSUnitCombatChangeTypes() const;
 	int getRoundStunVSUnitCombatChangeType(int iUnitCombat) const;
-	bool isRoundStunVSUnitCombatChangeType(int iUnitCombat);
+	bool isRoundStunVSUnitCombatChangeType(int iUnitCombat) const;
 
 	int getNumTrapDisableUnitCombatTypes() const;
 	int getTrapDisableUnitCombatType(int iUnitCombat) const;
-	bool isTrapDisableUnitCombatType(int iUnitCombat);
+	bool isTrapDisableUnitCombatType(int iUnitCombat) const;
 
 	int getNumTrapAvoidanceUnitCombatTypes() const;
 	int getTrapAvoidanceUnitCombatType(int iUnitCombat) const;
-	bool isTrapAvoidanceUnitCombatType(int iUnitCombat);
+	bool isTrapAvoidanceUnitCombatType(int iUnitCombat) const;
 
 	int getNumTrapTriggerUnitCombatTypes() const;
 	int getTrapTriggerUnitCombatType(int iUnitCombat) const;
-	bool isTrapTriggerUnitCombatType(int iUnitCombat);
+	bool isTrapTriggerUnitCombatType(int iUnitCombat) const;
 
 	int getNumAidChanges() const;
 	int getAidChange(int iProperty) const;
-	bool isAidChange(int iProperty);
+	bool isAidChange(int iProperty) const;
 	//Team Project (4)
 	//WorkRateMod
 	int getNumTerrainWorkRateModifierChangeTypes() const;
 	int getTerrainWorkRateModifierChangeType(int iTerrain) const;
-	bool isTerrainWorkRateModifierChangeType(int iTerrain);
+	bool isTerrainWorkRateModifierChangeType(int iTerrain) const;
 
 	int getNumFeatureWorkRateModifierChangeTypes() const;
 	int getFeatureWorkRateModifierChangeType(int iFeature) const;
-	bool isFeatureWorkRateModifierChangeType(int iFeature);
+	bool isFeatureWorkRateModifierChangeType(int iFeature) const;
 
 	int getNumBuildWorkRateModifierChangeTypes() const;
 	int getBuildWorkRateModifierChangeType(int iBuild) const;
-	bool isBuildWorkRateModifierChangeType(int iBuild);
+	bool isBuildWorkRateModifierChangeType(int iBuild) const;
 
 	int getNumVisibilityIntensityChangeTypes() const;
 	int getVisibilityIntensityChangeType(int iInvisibility) const;
-	bool isVisibilityIntensityChangeType(int iInvisibility);
+	bool isVisibilityIntensityChangeType(int iInvisibility) const;
 
 	int getNumInvisibilityIntensityChangeTypes() const;
 	int getInvisibilityIntensityChangeType(int iInvisibility) const;
-	bool isInvisibilityIntensityChangeType(int iInvisibility);
+	bool isInvisibilityIntensityChangeType(int iInvisibility) const;
 
 	int getNumVisibilityIntensityRangeChangeTypes() const;
 	int getVisibilityIntensityRangeChangeType(int iInvisibility) const;
-	bool isVisibilityIntensityRangeChangeType(int iInvisibility);
+	bool isVisibilityIntensityRangeChangeType(int iInvisibility) const;
 
 	// int vector utilizing struct with delayed resolution
 	int getNumAIWeightbyUnitCombatTypes() const;
@@ -1212,7 +1190,7 @@ public:
 	//Pediahelp
 	int getQualifiedUnitCombatType(int i) const;
 	int getNumQualifiedUnitCombatTypes() const;
-	bool isQualifiedUnitCombatType(int i);
+	bool isQualifiedUnitCombatType(int i) const;
 	void setQualifiedUnitCombatTypes();
 
 	bool hasNegativeEffects() const;
@@ -1812,6 +1790,10 @@ public:
 	CvUnitInfo();
 	virtual ~CvUnitInfo();
 
+	int getMaxGlobalInstances() const;			// Exposed to Python
+	int getMaxPlayerInstances() const;			// Exposed to Python
+	bool isUnlimitedException() const;			// Exposed to Python
+	int getInstanceCostModifier() const;		// Exposed to Python
 	int getAIWeight() const;					// Exposed to Python
 	int getProductionCost() const;				// Exposed to Python
 	int getHurryCostModifier() const;			// Exposed to Python
@@ -1867,14 +1849,14 @@ public:
 	int getCargoSpace() const;					// Exposed to Python
 	int getSMCargoSpace() const;
 	int getSMCargoVolume() const;
-	int getConscriptionValue() const;			// Exposed to Python
-	int getCultureGarrisonValue() const;		// Exposed to Python
-	int getExtraCost() const;					// Exposed to Python
+	int getConscriptionValue() const;				// Exposed to Python
+	int getCultureGarrisonValue() const;			// Exposed to Python
+	int getExtraCost() const;						// Exposed to Python
 	int getAssetValue(bool bForLoad = false) const;	// Exposed to Python
 	int getPowerValue(bool bForLoad = false) const;	// Exposed to Python
 	int getUnitClassType() const;					// Exposed to Python
 	int getSpecialUnitType() const;					// Exposed to Python
-	int getUnitCaptureClassType() const;			// Exposed to Python
+	int getUnitCaptureType() const;					// Exposed to Python
 	int getUnitCombatType() const;					// Exposed to Python
 	int getDomainType() const;						// Exposed to Python
 	int getDefaultUnitAIType() const;				// Exposed to Python
@@ -1882,21 +1864,11 @@ public:
 	int getSeeInvisibleType(int i) const;			// Exposed to Python
 	int getNumSeeInvisibleTypes() const;			// Exposed to Python
 	int getAdvisorType() const;						// Exposed to Python
-
-/********************************************************************************/
-/**		REVDCM									2/16/10				phungus420	*/
-/**																				*/
-/**		CanTrain 																*/
-/********************************************************************************/
 	int getMaxStartEra() const;						// Exposed to Python
 	int getForceObsoleteTech() const;				// Exposed to Python
 	bool isStateReligion() const;					// Exposed to Python
 	int getPrereqGameOption() const;				// Exposed to Python
 	int getNotGameOption() const;					// Exposed to Python
-/********************************************************************************/
-/**		REVDCM									END								*/
-/********************************************************************************/
-
 	int getHolyCity() const;						// Exposed to Python
 	int getReligionType() const;					// Exposed to Python
 	int getStateReligion() const;					// Exposed to Python
@@ -1957,36 +1929,12 @@ public:
 	bool isLineOfSight() const;					// Exposed to Python
 	bool isHiddenNationality() const;			// Exposed to Python
 	bool isAlwaysHostile() const;				// Exposed to Python
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre																		  **/
-/**  Date: 21.09.2009																			   **/
-/**  ModComp: TLOTags																			   **/
-/**  Reason Added: New Tag Definition															   **/
-/**  Notes:																						 **/
-/*****************************************************************************************************/
 	bool isFreeDrop() const;					// Exposed to Python
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 21.09.2009; TLOTags															 **/
-/*****************************************************************************************************/
 	bool isNoRevealMap() const;					// Exposed to Python
-
-/********************************************************************************/
-/**		REVDCM_OC							2/16/10				phungus420		*/
-/**																				*/
-/**		 																		*/
-/********************************************************************************/
 	bool isInquisitor() const;					// Exposed to Python
-/********************************************************************************/
-/**		REVDCM_OC									END							*/
-/********************************************************************************/
 	//ls612: Can't enter non-Owned cities
 	bool isNoNonOwnedEntry() const;
 
-/************************************************************************************************/
-/* Afforess					  Start		 12/9/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	void setPowerValue(int iNewValue);
 	int getPrereqVicinityBonus() const;
 	bool isRequiresStateReligionInCity() const;
@@ -1997,9 +1945,6 @@ public:
 	bool isSlave() const;
 	int getPrereqOrVicinityBonuses(int i) const;
 	bool getPassableRouteNeeded(int i) const;
-	std::vector<int> getUpgradeUnitClassTypes() const;
-	void addUpgradeUnitClassTypes(int);
-	bool isUpgradeUnitClassTypes(int);
 	int getBaseFoodChange() const;
 	int getControlPoints() const;
 	int getCommandRange() const;
@@ -2013,9 +1958,9 @@ public:
 	void setFutureArtDefineTag(int i, const TCHAR* szVal);
 
 	CvWString getCivilizationName(int i) const;
-	int getCivilizationNamesVectorSize();
-	CvWString getCivilizationNamesNamesVectorElement(int i);
-	CvWString getCivilizationNamesValuesVectorElement(int i);
+	int getCivilizationNamesVectorSize() const;
+	CvWString getCivilizationNamesNamesVectorElement(const int i) const;
+	CvWString getCivilizationNamesValuesVectorElement(const int i) const;
 
 	//TB Combat Mod Begin  TB SubCombat Mod begin
 	//Functions
@@ -2129,24 +2074,24 @@ public:
 	// boolean vectors without delayed resolution
 	int getSubCombatType(int i) const;
 	int getNumSubCombatTypes() const;
-	bool isSubCombatType(int i);
+	bool isSubCombatType(int i) const;
 
 	int getCureAfflictionType(int i) const;
 	int getNumCureAfflictionTypes() const;
-	bool isCureAfflictionType(int i);
+	bool isCureAfflictionType(int i) const;
 
 	int getHealAsType(int i) const;
 	int getNumHealAsTypes() const;
-	bool isHealAsType(int i);
+	bool isHealAsType(int i) const;
 	void setHealAsTypes();
 
 	int getTerrainImpassableType(int i) const;
 	int getNumTerrainImpassableTypes() const;
-	bool isTerrainImpassableType(int i);
+	bool isTerrainImpassableType(int i) const;
 
 	int getFeatureImpassableType(int i) const;
 	int getNumFeatureImpassableTypes() const;
-	bool isFeatureImpassableType(int i);
+	bool isFeatureImpassableType(int i) const;
 
 	int getMapCategoryType(int i) const;
 	int getNumMapCategoryTypes() const;
@@ -2154,11 +2099,11 @@ public:
 
 	int getTrapSetWithPromotionType(int i) const;
 	int getNumTrapSetWithPromotionTypes() const;
-	bool isTrapSetWithPromotionType(int i);
+	bool isTrapSetWithPromotionType(int i) const;
 
 	int getTrapImmunityUnitCombatType(int i) const;
 	int getNumTrapImmunityUnitCombatTypes() const;
-	bool isTrapImmunityUnitCombatType(int i);
+	bool isTrapImmunityUnitCombatType(int i)const;
 
 	// int vector utilizing struct with delayed resolution
 	int getNumAfflictionFortitudeModifiers() const;
@@ -2210,7 +2155,7 @@ public:
 	// int vector utilizing pairing without delayed resolution
 	int getNumFlankingStrikesbyUnitCombatTypes() const;
 	int getFlankingStrengthbyUnitCombatType(int iUnitCombat) const;
-	bool isFlankingStrikebyUnitCombatType(int iUnitCombat);
+	bool isFlankingStrikebyUnitCombatType(int iUnitCombat) const;
 
 	int getNumWithdrawOnTerrainTypes() const;
 	int getWithdrawOnTerrainType(int iTerrain) const;
@@ -2220,100 +2165,100 @@ public:
 
 	int getNumWithdrawVSUnitCombatTypes() const;
 	int getWithdrawVSUnitCombatType(int iUnitCombat) const;
-	bool isWithdrawVSUnitCombatType(int iUnitCombat);
+	bool isWithdrawVSUnitCombatType(int iUnitCombat) const;
 	UnitCombatModifierArray& getWithdrawVSUnitCombatTypes();
 
 	int getNumPursuitVSUnitCombatTypes() const;
 	int getPursuitVSUnitCombatType(int iUnitCombat, bool bForLoad = false) const;
-	bool isPursuitVSUnitCombatType(int iUnitCombat, bool bForLoad = false);
+	bool isPursuitVSUnitCombatType(int iUnitCombat, bool bForLoad = false) const;
 	UnitCombatModifierArray& getPursuitVSUnitCombatTypes();
 
 	int getNumRepelVSUnitCombatTypes() const;
 	int getRepelVSUnitCombatType(int iUnitCombat, bool bForLoad = false) const;
-	bool isRepelVSUnitCombatType(int iUnitCombat, bool bForLoad = false);
+	bool isRepelVSUnitCombatType(int iUnitCombat, bool bForLoad = false) const;
 	UnitCombatModifierArray& getRepelVSUnitCombatTypes();
 
 	int getNumKnockbackVSUnitCombatTypes() const;
 	int getKnockbackVSUnitCombatType(int iUnitCombat, bool bForLoad = false) const;
-	bool isKnockbackVSUnitCombatType(int iUnitCombat, bool bForLoad = false);
+	bool isKnockbackVSUnitCombatType(int iUnitCombat, bool bForLoad = false) const;
 	UnitCombatModifierArray& getKnockbackVSUnitCombatTypes();
 
 	int getNumPunctureVSUnitCombatTypes() const;
 	int getPunctureVSUnitCombatType(int iUnitCombat) const;
-	bool isPunctureVSUnitCombatType(int iUnitCombat);
+	bool isPunctureVSUnitCombatType(int iUnitCombat) const;
 	UnitCombatModifierArray& getPunctureVSUnitCombatTypes();
 
 	int getNumArmorVSUnitCombatTypes() const;
 	int getArmorVSUnitCombatType(int iUnitCombat) const;
-	bool isArmorVSUnitCombatType(int iUnitCombat);
+	bool isArmorVSUnitCombatType(int iUnitCombat) const;
 	UnitCombatModifierArray& getArmorVSUnitCombatTypes();
 
 	int getNumDodgeVSUnitCombatTypes() const;
 	int getDodgeVSUnitCombatType(int iUnitCombat) const;
-	bool isDodgeVSUnitCombatType(int iUnitCombat);
+	bool isDodgeVSUnitCombatType(int iUnitCombat) const;
 	UnitCombatModifierArray& getDodgeVSUnitCombatTypes();
 
 	int getNumPrecisionVSUnitCombatTypes() const;
 	int getPrecisionVSUnitCombatType(int iUnitCombat) const;
-	bool isPrecisionVSUnitCombatType(int iUnitCombat);
+	bool isPrecisionVSUnitCombatType(int iUnitCombat) const;
 	UnitCombatModifierArray& getPrecisionVSUnitCombatTypes();
 
 	int getNumCriticalVSUnitCombatTypes() const;
 	int getCriticalVSUnitCombatType(int iUnitCombat) const;
-	bool isCriticalVSUnitCombatType(int iUnitCombat);
+	bool isCriticalVSUnitCombatType(int iUnitCombat) const;
 	UnitCombatModifierArray& getCriticalVSUnitCombatTypes();
 
 	int getNumRoundStunVSUnitCombatTypes() const;
 	int getRoundStunVSUnitCombatType(int iUnitCombat) const;
-	bool isRoundStunVSUnitCombatType(int iUnitCombat);
+	bool isRoundStunVSUnitCombatType(int iUnitCombat) const;
 	UnitCombatModifierArray& getRoundStunVSUnitCombatTypes();
 
 	int getNumTrapDisableUnitCombatTypes() const;
 	int getTrapDisableUnitCombatType(int iUnitCombat) const;
-	bool isTrapDisableUnitCombatType(int iUnitCombat);
+	bool isTrapDisableUnitCombatType(int iUnitCombat) const;
 	UnitCombatModifierArray& getTrapDisableUnitCombatTypes();
 
 	int getNumTrapAvoidanceUnitCombatTypes() const;
 	int getTrapAvoidanceUnitCombatType(int iUnitCombat) const;
-	bool isTrapAvoidanceUnitCombatType(int iUnitCombat);
+	bool isTrapAvoidanceUnitCombatType(int iUnitCombat) const;
 	UnitCombatModifierArray& getTrapAvoidanceUnitCombatTypes();
 
 	int getNumTrapTriggerUnitCombatTypes() const;
 	int getTrapTriggerUnitCombatType(int iUnitCombat) const;
-	bool isTrapTriggerUnitCombatType(int iUnitCombat);
+	bool isTrapTriggerUnitCombatType(int iUnitCombat) const;
 	UnitCombatModifierArray& getTrapTriggerUnitCombatTypes();
 
 	int getNumVisibilityIntensityTypes() const;
 	int getVisibilityIntensityType(int iInvisibility) const;
-	bool isVisibilityIntensityType(int iInvisibility);
+	bool isVisibilityIntensityType(int iInvisibility) const;
 	InvisibilityArray& getVisibilityIntensityTypes();
 
 	int getNumInvisibilityIntensityTypes() const;
 	int getInvisibilityIntensityType(int iInvisibility) const;
-	bool isInvisibilityIntensityType(int iInvisibility);
+	bool isInvisibilityIntensityType(int iInvisibility) const;
 	InvisibilityArray& getInvisibilityIntensityTypes();
 
 	int getNumVisibilityIntensityRangeTypes() const;
 	int getVisibilityIntensityRangeType(int iInvisibility) const;
-	bool isVisibilityIntensityRangeType(int iInvisibility);
+	bool isVisibilityIntensityRangeType(int iInvisibility) const;
 	InvisibilityArray& getVisibilityIntensityRangeTypes();
 	//Team Project (4)
 		//WorkRateMod
 	int getNumTerrainWorkRateModifierTypes() const;
 	int getTerrainWorkRateModifierType(int iTerrain) const;
-	bool isTerrainWorkRateModifierType(int iTerrain);
+	bool isTerrainWorkRateModifierType(int iTerrain) const;
 
 	int getNumFeatureWorkRateModifierTypes() const;
 	int getFeatureWorkRateModifierType(int iFeature) const;
-	bool isFeatureWorkRateModifierType(int iFeature);
+	bool isFeatureWorkRateModifierType(int iFeature) const;
 
 	int getNumBuildWorkRateModifierTypes() const;
 	int getBuildWorkRateModifierType(int iBuild) const;
-	bool isBuildWorkRateModifierType(int iBuild);
+	bool isBuildWorkRateModifierType(int iBuild) const;
 
 	int getNumAidChanges() const;
 	int getAidChange(int iProperty) const;
-	bool isAidChange(int iProperty);
+	bool isAidChange(int iProperty) const;
 
 
 	// TB Combat Mod End TB SubCombat Mod end
@@ -2333,7 +2278,7 @@ public:
 	void setSM();
 	int getQualifiedPromotionType(int i) const;
 	int getNumQualifiedPromotionTypes() const;
-	bool isQualifiedPromotionType(int i);
+	bool isQualifiedPromotionType(int i) const;
 	void setQualifiedPromotionTypes();
 	void setCanAnimalIgnores();
 
@@ -2348,7 +2293,10 @@ public:
 	BoolExpr* getTrainCondition();
 
 protected:
-	std::vector<int> m_aiUpgradeUnitClassTypes;
+	int m_iMaxGlobalInstances;
+	int m_iMaxPlayerInstances;
+	bool m_bUnlimitedException;
+	int m_iInstanceCostModifier;
 	bool* m_pbPassableRouteNeeded;
 	int* m_piPrereqOrVicinityBonuses;
 	bool m_bWorkerTrade;
@@ -2374,11 +2322,6 @@ protected:
 	BoolExpr* m_pExprTrainCondition;
 
 public:
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-
-
 /************************************************************************************************/
 /* DCM									 04/19/09								Johny Smith  */
 /************************************************************************************************/
@@ -2455,21 +2398,22 @@ public:
 	int getFeaturePassableTech(int i) const;		// Exposed to Python
 	int getFlankingStrikeUnitClass(int i) const;	// Exposed to Python
 
-/********************************************************************************/
-/**		REVDCM									2/16/10				phungus420	*/
-/**																				*/
-/**		CanTrain 																*/
-/********************************************************************************/
 	bool isPrereqOrCivics(int i) const;				// Exposed to Python
 	bool isPrereqBuildingClass(int i) const; 		// Exposed to Python
 	int getPrereqBuildingClassOverrideTech(int i) const;	//Exposed to Python
 	int getPrereqBuildingClassOverrideEra(int i) const; 	//Exposed to Python
-	bool getForceObsoleteUnitClass(int i) const; 			//Exposed to Python
-/********************************************************************************/
-/**		REVDCM									END								*/
-/********************************************************************************/
 
-	bool getUpgradeUnitClass(int i) const;			// Exposed to Python
+	int getSupersedingUnit(int i) const;
+	int getNumSupersedingUnits() const;
+	bool isSupersedingUnit(int i) const;		//Exposed to Python
+
+	int getUnitUpgrade(int i) const;			//Exposed to Python
+	int getNumUnitUpgrades() const;				//Exposed to Python
+	bool isUnitUpgrade(int i) const;			//Exposed to Python
+
+	std::vector<int> getUnitUpgradeChain() const;
+	void CvUnitInfo::addUnitToUpgradeChain(int i);
+
 	bool getTargetUnitClass(int i) const;			// Exposed to Python
 	bool getTargetUnitCombat(int i) const;			// Exposed to Python
 	bool getDefenderUnitClass(int i) const;			// Exposed to Python
@@ -2492,12 +2436,12 @@ public:
 	int getLeaderExperience() const;				// Exposed to Python
 
 	CvOutcomeList* getKillOutcomeList();
-	int getNumActionOutcomes();
-	CvOutcomeList* getActionOutcomeList(int index);
-	MissionTypes getActionOutcomeMission(int index);
-	CvOutcomeList* getActionOutcomeListByMission(MissionTypes eMission);
-	CvOutcomeMission* getOutcomeMission(int index);
-	CvOutcomeMission* getOutcomeMissionByMission(MissionTypes eMission);
+	int getNumActionOutcomes() const;
+	CvOutcomeList* getActionOutcomeList(const int index) const;
+	MissionTypes getActionOutcomeMission(const int index) const;
+	CvOutcomeList* getActionOutcomeListByMission(const MissionTypes eMission) const;
+	CvOutcomeMission* getOutcomeMission(const int index) const;
+	CvOutcomeMission* getOutcomeMissionByMission(const MissionTypes eMission) const;
 
 	const TCHAR* getEarlyArtDefineTag(int i, UnitArtStyleTypes eStyle) const;	// Exposed to Python
 	void setEarlyArtDefineTag(int i, const TCHAR* szVal);
@@ -2582,27 +2526,17 @@ protected:
 	int m_iPowerValue;
 	int m_iUnitClassType;
 	int m_iSpecialUnitType;
-	int m_iUnitCaptureClassType;
+	int m_iUnitCaptureType;
 	int m_iUnitCombatType;
 	int m_iDomainType;
 	int m_iDefaultUnitAIType;
 	int m_iInvisibleType;
 	int m_iAdvisorType;
-
-/********************************************************************************/
-/**		REVDCM									2/16/10				phungus420	*/
-/**																				*/
-/**		CanTrain 																*/
-/********************************************************************************/
 	int m_iMaxStartEra;
 	int m_iForceObsoleteTech;
 	bool m_bStateReligion;
 	int m_iPrereqGameOption;
 	int m_iNotGameOption;
-/********************************************************************************/
-/**		REVDCM									END								*/
-/********************************************************************************/
-
 	int m_iHolyCity;
 	int m_iReligionType;
 	int m_iStateReligion;
@@ -2612,6 +2546,9 @@ protected:
 	int m_iPrereqAndTech;
 	int m_iPrereqAndBonus;
 	std::vector<int> m_aePrereqOrBuildings;
+	std::vector<int> m_aiSupersedingUnits;
+	std::vector<int> m_aiUnitUpgrades;
+	std::vector<int> m_aiUnitUpgradeChain;
 	int m_iGroupSize;
 	int m_iGroupDefinitions;
 	int m_iUnitMeleeWaveSize;
@@ -2656,31 +2593,13 @@ protected:
 	bool m_bLineOfSight;
 	bool m_bHiddenNationality;
 	bool m_bAlwaysHostile;
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre																		  **/
-/**  Date: 21.09.2009																			   **/
-/**  ModComp: TLOTags																			   **/
-/**  Reason Added: New Tag Definition															   **/
-/**  Notes:																						 **/
-/*****************************************************************************************************/
 	bool m_bFreeDrop;
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 21.09.2009; TLOTags															 **/
-/*****************************************************************************************************/
 	bool m_bNoRevealMap;
-/************************************************************************************************/
-/* REVOLUTION_MOD								 01/01/08						DPII		  */
-/*																							  */
-/* CoreComponent																				*/
-/************************************************************************************************/
 	bool m_bInquisitor;
 	bool m_bCanBeRebel;
 	bool m_bCanRebelCapture;
 	bool m_bCannotDefect;
 	bool m_bCanQuellRebellion;
-/************************************************************************************************/
-/* REVOLUTION_MOD						  END												  */
-/************************************************************************************************/
 
 	//ls612: Can't enter non-Owned cities
 	bool m_bNoNonOwnedEntry;
@@ -2712,21 +2631,11 @@ protected:
 	int* m_piFeaturePassableTech;
 	int* m_piFlankingStrikeUnitClass;
 
-/********************************************************************************/
-/**		REVDCM									2/16/10				phungus420	*/
-/**																				*/
-/**		CanTrain 																*/
-/********************************************************************************/
 	bool* m_pbPrereqOrCivics;
 	bool* m_pbPrereqBuildingClass;
 	int* m_piPrereqBuildingClassOverrideTech;
 	int* m_piPrereqBuildingClassOverrideEra;
-	bool* m_pbForceObsoleteUnitClass;
-/********************************************************************************/
-/**		REVDCM									END								*/
-/********************************************************************************/
 
-	bool* m_pbUpgradeUnitClass;
 	bool* m_pbTargetUnitClass;
 	bool* m_pbTargetUnitCombat;
 	bool* m_pbDefenderUnitClass;
@@ -2941,43 +2850,43 @@ public:
 	virtual bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvSpawnInfo* pClassInfo = NULL , CvXMLLoadUtility* pXML = NULL);
 
-	int	getNumBonuses();
-	int	getNumTerrains();
-	int	getNumFeatures();
-	int	getNumFeatureTerrains();
-	int	getNumSpawnGroup();
-	PlayerTypes		getPlayer();
-	BonusTypes		getBonus(int index);
-	TerrainTypes	getTerrain(int index);
-	FeatureTypes	getFeature(int index);
-	TerrainTypes	getFeatureTerrain(int index);
-	UnitTypes		getSpawnGroup(int index);
-	int getTurnRate();
-	int getGlobalTurnRate();
-	int getMaxLocalDensity();
-	int getMaxAreaTotalDensity();
-	int getMaxAreaUnitDensity();
-	int getStartDate();
-	int	getEndDate();
-	int	getMinLatitude();
-	int	getMaxLatitude();
-	bool getLatitudeAbs();
-	int	getMinLongitude();
-	int	getMaxLongitude();
-	bool getTreatAsBarbarian();
-	bool getNeutralOnly();
-	bool getNoSpeedNormalization();
-	bool getNotInView();
-	bool getHills();
-	bool getFlatlands();
-	bool getPeaks();
-	bool getFreshWaterOnly();
-	int getRateOverride();
-	UnitTypes	getUnitType();
-	TechTypes	getPrereqTechType();
-	TechTypes	getObsoleteTechType();
+	int	getNumBonuses() const;
+	int	getNumTerrains() const;
+	int	getNumFeatures() const;
+	int	getNumFeatureTerrains() const;
+	int	getNumSpawnGroup() const;
+	PlayerTypes getPlayer() const;
+	BonusTypes getBonus(const int index) const;
+	TerrainTypes getTerrain(const int index) const;
+	FeatureTypes getFeature(const int index) const;
+	TerrainTypes getFeatureTerrain(const int index) const;
+	UnitTypes getSpawnGroup(const int index) const;
+	int getTurnRate() const;
+	int getGlobalTurnRate() const;
+	int getMaxLocalDensity() const;
+	int getMaxAreaTotalDensity() const;
+	int getMaxAreaUnitDensity() const;
+	int getStartDate() const;
+	int	getEndDate() const;
+	int	getMinLatitude() const;
+	int	getMaxLatitude() const;
+	bool getLatitudeAbs() const;
+	int	getMinLongitude() const;
+	int	getMaxLongitude() const;
+	bool getTreatAsBarbarian() const;
+	bool getNeutralOnly() const;
+	bool getNoSpeedNormalization() const;
+	bool getNotInView() const;
+	bool getHills() const;
+	bool getFlatlands() const;
+	bool getPeaks() const;
+	bool getFreshWaterOnly() const;
+	int getRateOverride() const;
+	UnitTypes getUnitType() const;
+	TechTypes getPrereqTechType() const;
+	TechTypes getObsoleteTechType() const;
 
-	BoolExpr* getSpawnCondition();
+	BoolExpr* getSpawnCondition() const;
 
 	void getCheckSum(unsigned int& iSum);
 
@@ -3193,9 +3102,9 @@ public:
 	virtual ~CvCivicInfo();
 
 	std::wstring pyGetWeLoveTheKing() { return getWeLoveTheKing(); }// Exposed to Python
-	const wchar* getWeLoveTheKing();
+	const wchar* getWeLoveTheKing() const;
 	void setWeLoveTheKingKey(const TCHAR* szVal);
-	const wchar* getWeLoveTheKingKey();
+	const wchar* getWeLoveTheKingKey() const;
 
 	int getCivicOptionType() const;						// Exposed to Python
 	int getAnarchyLength() const;						// Exposed to Python
@@ -3207,8 +3116,8 @@ public:
 	int getStateReligionGreatPeopleRateModifier() const;// Exposed to Python
 	int getDistanceMaintenanceModifier() const;			// Exposed to Python
 	int getNumCitiesMaintenanceModifier() const;		// Exposed to Python
-		int getHomeAreaMaintenanceModifier() const;
-		int getOtherAreaMaintenanceModifier() const;
+	int getHomeAreaMaintenanceModifier() const;
+	int getOtherAreaMaintenanceModifier() const;
 	int getCorporationMaintenanceModifier() const;		// Exposed to Python
 	int getExtraHealth() const;							// Exposed to Python
 	int getFreeExperience() const;						// Exposed to Python
@@ -3351,13 +3260,13 @@ public:
 	bool isAnySpecialistCommerceChanges() const;
 	bool isAnySpecialistYieldChanges() const;
 
-	CvString getCivicAttitudeReason(int i) const;
-	int getCivicAttitudeVectorSize();
-	CvString getCivicAttitudeNamesVectorElement(int i);
-	int getCivicAttitudeValuesVectorElement(int i);
-	int getCivicAttitudeReasonVectorSize();
-	CvString getCivicAttitudeReasonNamesVectorElement(int i);
-	CvString getCivicAttitudeReasonValuesVectorElement(int i);
+	CvString getCivicAttitudeReason(const int i) const;
+	int getCivicAttitudeVectorSize() const;
+	CvString getCivicAttitudeNamesVectorElement(const int i) const;
+	int getCivicAttitudeValuesVectorElement(const int i) const;
+	int getCivicAttitudeReasonVectorSize() const;
+	CvString getCivicAttitudeReasonNamesVectorElement(const int i) const;
+	CvString getCivicAttitudeReasonValuesVectorElement(const int i) const;
 
 	void read(FDataStreamBase* stream) {}
 	void write(FDataStreamBase* stream) {}
@@ -3554,7 +3463,7 @@ public:
 	void write(FDataStreamBase* stream){}
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvXMLLoadUtility* pXML);
-	bool FindResponseIndex(CvDiplomacyResponse* pNewResponse, int iCase, int* iIndex);
+	bool FindResponseIndex(const CvDiplomacyResponse* pNewResponse, int iCase, int* iIndex) const;
 
 private:
 	std::vector<CvDiplomacyResponse*> m_pResponses;
@@ -3576,27 +3485,11 @@ public:
 	CvUnitClassInfo();
 	virtual ~CvUnitClassInfo();
 
-	int getMaxGlobalInstances() const;				// Exposed to Python
-	int getMaxTeamInstances() const;				// Exposed to Python
-	int getMaxPlayerInstances() const;				// Exposed to Python
-	//TB Unlimited National Units Mod
-	bool isUnlimitedException() const;				// Exposed to Python
-	//TB Unlimited National Units End
-	int getInstanceCostModifier() const;			// Exposed to Python
 	int getDefaultUnitIndex() const;				// Exposed to Python
 	void setDefaultUnitIndex(int i);
-/************************************************************************************************/
-/* Afforess					  Start		 12/23/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-	bool isUnique() const;
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
-	int getDefaultUnitIndexVector();
-	CvString getDefaultUnitIndexVectorElement(int i);
+	int getDefaultUnitIndexVector() const;
+	CvString getDefaultUnitIndexVectorElement(const int i) const;
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvUnitClassInfo* pClassInfo = NULL , CvXMLLoadUtility* pXML = NULL);
@@ -3610,27 +3503,8 @@ public:
 
 //----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
-
-	int m_iMaxGlobalInstances;
-	int m_iMaxTeamInstances;
-	int m_iMaxPlayerInstances;
-	//TB Unlimited National Units Mod
-	bool m_bUnlimitedException;
-	//TB Unlimited National Units End
-	int m_iInstanceCostModifier;
 	int m_iDefaultUnitIndex;
-/************************************************************************************************/
-/* Afforess					  Start		 12/23/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	bool m_bUnique;
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-
-
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3650,6 +3524,7 @@ public:
 	CvBuildingInfo();
 	virtual ~CvBuildingInfo();
 
+	bool isNoLimit() const;						// Exposed to Python
 	int getBuildingClassType() const;			// Exposed to Python
 	int getVictoryPrereq() const;				// Exposed to Python
 	int getFreeStartEra() const;				// Exposed to Python
@@ -3952,13 +3827,13 @@ public:
 	std::vector<CvString> m_aszPrereqOrCivicsforPass3;
 	std::vector<bool> m_abPrereqOrCivicsforPass3;
 
-	int isPrereqOrCivicsVectorSize();
-	CvString isPrereqOrCivicsNamesVectorElement(int i);
-	int isPrereqOrCivicsValuesVectorElement(int i);
+	int isPrereqOrCivicsVectorSize() const;
+	CvString isPrereqOrCivicsNamesVectorElement(const int i) const;
+	int isPrereqOrCivicsValuesVectorElement(const int i) const;
 
-	int isPrereqAndCivicsVectorSize();
-	CvString isPrereqAndCivicsNamesVectorElement(int i);
-	int isPrereqAndCivicsValuesVectorElement(int i);
+	int isPrereqAndCivicsVectorSize() const;
+	CvString isPrereqAndCivicsNamesVectorElement(const int i) const;
+	int isPrereqAndCivicsValuesVectorElement(const int i) const;
 
 	std::vector<CvString> m_aszPrereqAndCivicsforPass3;
 	std::vector<bool> m_abPrereqAndCivicsforPass3;
@@ -3986,19 +3861,19 @@ public:
 	int* m_piTechHealthChanges;
 
 	int getTechCommerceChange(int i, int j) const;
-	int* getTechCommerceChangeArray(int i);
+	int* getTechCommerceChangeArray(int i) const;
 
 	int getTechYieldChange(int i, int j) const;
-	int* getTechYieldChangeArray(int i);
+	int* getTechYieldChangeArray(int i) const;
 
 	int getTechSpecialistChange(int i, int j) const;
-	int* getTechSpecialistChangeArray(int i);
+	int* getTechSpecialistChangeArray(int i) const;
 
 	int getTechCommerceModifier(int i, int j) const;
-	int* getTechCommerceModifierArray(int i);
+	int* getTechCommerceModifierArray(int i) const;
 
 	int getTechYieldModifier(int i, int j) const;
-	int* getTechYieldModifierArray(int i);
+	int* getTechYieldModifierArray(int i) const;
 
 	int getUnitCombatExtraStrength(int i) const;
 
@@ -4059,11 +3934,11 @@ public:
 
 	int getUnitCombatRetrainType(int i) const;
 	int getNumUnitCombatRetrainTypes() const;
-	bool isUnitCombatRetrainType(int i);
+	bool isUnitCombatRetrainType(int i) const;
 
 	int getMayDamageAttackingUnitCombatType(int i) const;
 	int getNumMayDamageAttackingUnitCombatTypes() const;
-	bool isMayDamageAttackingUnitCombatType(int i);
+	bool isMayDamageAttackingUnitCombatType(int i) const;
 
 	int getMapCategoryType(int i) const;
 	int getNumMapCategoryTypes() const;
@@ -4152,7 +4027,7 @@ public:
 
 	bool isNewCityFree(CvGameObject* pObject);
 
-	BoolExpr* getConstructCondition();
+	BoolExpr* getConstructCondition() const;
 
 	bool m_bAnySpecialistYieldChanges;
 	bool m_bAnySpecialistCommerceChanges;
@@ -4170,6 +4045,7 @@ public:
 	bool getNotShowInCity() const;
 
 protected:
+	bool m_bNoLimit;
 	bool m_bNotShowInCity;
 	void setNotShowInCity();
 	int m_iFreePromotion_2;
@@ -4630,9 +4506,6 @@ public:
 	int getDefaultBuildingIndex() const;				// Exposed to Python
 	void setDefaultBuildingIndex(int i);
 
-	bool isNoLimit() const;				// Exposed to Python
-	bool isMonument() const;				// Exposed to Python
-
 	// Arrays
 	int getVictoryThreshold(int i) const;				// Exposed to Python
 
@@ -4654,11 +4527,7 @@ protected:
 	int m_iExtraPlayerInstances;
 	int m_iDefaultBuildingIndex;
 
-	bool m_bNoLimit;
-	bool m_bMonument;
-
 	// Arrays
-
 	int* m_piVictoryThreshold;
 
 };
@@ -5230,7 +5099,7 @@ public:
 	GameTurnInfo& getGameTurnInfo(int iIndex) const;	// Exposed to Python
 	CvDateIncrement& getDateIncrement(int iIndex);
 	std::vector<CvDateIncrement>& getIncrements();
-	bool getEndDatesCalculated();
+	bool getEndDatesCalculated() const;
 	void setEndDatesCalculated(bool bCalculated);
 
 	void allocateGameTurnInfos(const int iSize);
@@ -5374,7 +5243,7 @@ public:
 	// Vectors
 	int getPrereqBonusType(int i) const;
 	int getNumPrereqBonusTypes() const;
-	bool isPrereqBonusType(int i);
+	bool isPrereqBonusType(int i) const;
 
 	int getMapCategoryType(int i) const;
 	int getNumMapCategoryTypes() const;
@@ -5550,7 +5419,7 @@ public:
 
 	// Arrays
 	int getYieldChange(int i) const;			// Exposed to Python
-	int* getYieldChangeArray();
+	int* getYieldChangeArray() const;
 	int getTechMovementChange(int i) const;		// Exposed to Python
 	int getPrereqOrBonus(int i) const;			// Exposed to Python
 	bool isAnyPrereqOrBonus() const;
@@ -5710,23 +5579,23 @@ public:
 	// Arrays
 
 	int getPrereqNatureYield(int i) const;		// Exposed to Python
-	int* getPrereqNatureYieldArray();
+	int* getPrereqNatureYieldArray() const;
 	int getYieldChange(int i) const;			// Exposed to Python
-	int* getYieldChangeArray();
+	int* getYieldChangeArray() const;
 	int getRiverSideYieldChange(int i) const;	// Exposed to Python
-	int* getRiverSideYieldChangeArray();
+	int* getRiverSideYieldChangeArray() const;
 	int getHillsYieldChange(int i) const;		// Exposed to Python
-	int* getHillsYieldChangeArray();
+	int* getHillsYieldChangeArray() const;
 	int getIrrigatedYieldChange(int i) const;	// Exposed to Python
-	int* getIrrigatedYieldChangeArray();		// For Moose - CvWidgetData XXX
+	int* getIrrigatedYieldChangeArray() const;		// For Moose - CvWidgetData XXX
 
 	bool getTerrainMakesValid(int i) const;		// Exposed to Python
 	bool getFeatureMakesValid(int i) const;		// Exposed to Python
 
 	int getTechYieldChanges(int i, int j) const;	// Exposed to Python
-	int* getTechYieldChangesArray(int i);
+	int* getTechYieldChangesArray(int i) const;
 	int getRouteYieldChanges(int i, int j) const;	// Exposed to Python
-	int* getRouteYieldChangesArray(int i);		// For Moose - CvWidgetData XXX
+	int* getRouteYieldChangesArray(int i) const;		// For Moose - CvWidgetData XXX
 
 	int getImprovementBonusYield(int i, int j) const;	// Exposed to Python
 	bool isImprovementBonusMakesValid(int i) const;		// Exposed to Python
@@ -5748,7 +5617,7 @@ public:
 	int getImprovementBonusDepletionRand(int i) const;
 	int getPrereqTech() const;			// Exposed to Python
 	//int getTraitYieldChanges(int i, int j) const;
-	//int* getTraitYieldChangesArray(int i);
+	//int* getTraitYieldChangesArray(int i) const;
 
 	//TB Improvements
 	//Object Indexes
@@ -5762,11 +5631,11 @@ public:
 	// bool vector with delayed resolution
 	int getAlternativeImprovementUpgradeType(int i) const;
 	int getNumAlternativeImprovementUpgradeTypes() const;
-	bool isAlternativeImprovementUpgradeType(int i);
+	bool isAlternativeImprovementUpgradeType(int i) const;
 
 	int getFeatureChangeType(int i) const;
 	int getNumFeatureChangeTypes() const;
-	bool isFeatureChangeType(int i);
+	bool isFeatureChangeType(int i) const;
 
 	//Post Load Functions
 	void setHighestCost();
@@ -5978,7 +5847,7 @@ public:
 
 	// Arrays
 	int getYieldChange(int i) const;	// Exposed to Python
-	int* getYieldChangeArray();			// Exposed to Python
+	int* getYieldChangeArray() const;			// Exposed to Python
 	int getImprovementChange(int i) const;
 
 	bool isTerrain(int i) const;		// Exposed to Python
@@ -7192,11 +7061,6 @@ public:
 	void copyNonDefaults(CvProjectInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
 	void getCheckSum(unsigned int& iSum);
 
-/************************************************************************************************/
-/* Afforess					  Start		 07/30/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	int getWorldHappiness() const;
 	int getGlobalHappiness() const;
 	int getWorldHealth() const;
@@ -7206,9 +7070,9 @@ public:
 	bool isTechShareWithHalfCivs() const;
 	int getCommerceModifier(int i) const;
 	int* getCommerceModifierArray() const;
-	int getProjectsNeededVectorSize();
-	CvString getProjectsNeededNamesVectorElement(int i);
-	int getProjectsNeededValuesVectorElement(int i);
+	int getProjectsNeededVectorSize() const;
+	CvString getProjectsNeededNamesVectorElement(int i) const;
+	int getProjectsNeededValuesVectorElement(int i) const;
 
 	bool readPass3();
 protected:
@@ -7222,9 +7086,6 @@ protected:
 	int* m_piCommerceModifier;
 	std::vector<CvString> m_aszProjectsNeededforPass3;
 	std::vector<int> m_aiProjectsNeededforPass3;
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
@@ -7311,7 +7172,7 @@ public:
 
 	void setAdjectiveKey(const TCHAR* szVal);
 	const wchar* getAdjectiveKey() const;			// Exposed to Python
-	std::wstring pyGetAdjectiveKey() { return getAdjectiveKey(); }	// Exposed to Python
+	std::wstring pyGetAdjectiveKey() const { return getAdjectiveKey(); }	// Exposed to Python
 
 	// Arrays
 
@@ -7431,14 +7292,14 @@ public:
 	int getPrereqGameOption() const;
 
 	int getPrereqBuildingClass(int i) const;
-	int getPrereqBuildingVectorSize();
-	CvString getPrereqBuildingNamesVectorElement(int i);
-	int getPrereqBuildingClassValuesVectorElement(int i);
+	int getPrereqBuildingVectorSize() const;
+	CvString getPrereqBuildingNamesVectorElement(const int i) const;
+	int getPrereqBuildingClassValuesVectorElement(const int i) const;
 
 	bool isCompetingCorporation(int i) const;
-	int getCompetingCorporationVectorSize();
-	CvString getCompetingCorporationNamesVectorElement(int i);
-	bool getCompetingCorporationValuesVectorElement(int i);
+	int getCompetingCorporationVectorSize() const;
+	CvString getCompetingCorporationNamesVectorElement(const int i) const;
+	bool getCompetingCorporationValuesVectorElement(const int i) const;
 
 	bool readPass3();
 	int getYieldChange(int i) const;
@@ -9619,7 +9480,7 @@ public:
 	CvTutorialInfo();
 	virtual ~CvTutorialInfo();
 
-	const TCHAR* getNextTutorialInfoType();
+	const TCHAR* getNextTutorialInfoType() const;
 	void setNextTutorialInfoType(const TCHAR* szVal);
 
 	bool initTutorialMessages(int iNum);
@@ -10116,17 +9977,17 @@ public:
 /************************************************************************************************/
 	int getPrereqGameOption() const;
 	int getRevolutionIndexChange() const;
-	int getAdditionalEventChanceVectorSize();
-	CvString getAdditionalEventChanceNamesVectorElement(int i);
-	int getAdditionalEventChanceValuesVectorElement(int i);
+	int getAdditionalEventChanceVectorSize() const;
+	CvString getAdditionalEventChanceNamesVectorElement(int i) const;
+	int getAdditionalEventChanceValuesVectorElement(int i) const;
 
-	int getAdditionalEventTimeVectorSize();
-	CvString getAdditionalEventTimeNamesVectorElement(int i);
-	int getAdditionalEventTimeValuesVectorElement(int i);
+	int getAdditionalEventTimeVectorSize() const;
+	CvString getAdditionalEventTimeNamesVectorElement(int i) const;
+	int getAdditionalEventTimeValuesVectorElement(int i) const;
 
-	int getClearEventChanceVectorSize();
-	CvString getClearEventChanceNamesVectorElement(int i);
-	int getClearEventChanceValuesVectorElement(int i);
+	int getClearEventChanceVectorSize() const;
+	CvString getClearEventChanceNamesVectorElement(int i) const;
+	int getClearEventChanceValuesVectorElement(int i) const;
 
 	bool readPass3();
 
@@ -10141,7 +10002,6 @@ public:
 /************************************************************************************************/
 /* Afforess						 END															*/
 /************************************************************************************************/
-
 
 	void read(FDataStreamBase* ) {}
 	void write(FDataStreamBase* ) {}
@@ -10514,39 +10374,6 @@ protected:
 /*																							  */
 /*																							  */
 /************************************************************************************************/
-// Python Modular Loading
-class CvPythonModulesInfo : public CvInfoBase
-{
-public:
-	CvPythonModulesInfo();
-	virtual ~CvPythonModulesInfo();
-
-	bool isMainInterfaceScreen();
-	bool isCivicScreen();
-	bool isCorporationScreen();
-	bool isDomesticAdvisor();
-	bool isEspionageAdvisor();
-	bool isForeignAdvisor();
-	bool isMilitaryAdvisor();
-	bool isVictoryScreen();
-	int getScreen();
-
-	bool read(CvXMLLoadUtility* pXML);
-
-protected:
-
-	bool m_bMainInterfaceScreen;
-	bool m_bCivicScreen;
-	bool m_bCorporationScreen;
-	bool m_bDomesticAdvisor;
-	bool m_bEspionageAdvisor;
-	bool m_bForeignAdvisor;
-	bool m_bMilitaryAdvisor;
-	bool m_bVictoryScreen;
-	int m_iScreen;
-
-};
-
 // MLF loading
 class CvModLoadControlInfo : public CvInfoBase
 {
@@ -10611,7 +10438,7 @@ public:
 
 	int getNumTargetLevelbyEraTypes() const;
 	int getTargetLevelbyEraType(int iIndex) const;
-	bool isTargetLevelbyEraType(int iIndex);
+	bool isTargetLevelbyEraType(int iIndex) const;
 
 	int getChar() const;
 	void setChar(int i);
@@ -10763,55 +10590,55 @@ public:
 	// bool vectors without delayed resolution
 	int getUnitCombatPrereqType(int i) const;
 	int getNumUnitCombatPrereqTypes() const;
-	bool isUnitCombatPrereqType(int i);
+	bool isUnitCombatPrereqType(int i) const;
 
 	int getNotOnUnitCombatType(int i) const;
 	int getNumNotOnUnitCombatTypes() const;
-	bool isNotOnUnitCombatType(int i);
+	bool isNotOnUnitCombatType(int i) const;
 
 	int getNotOnDomainType(int i) const;
 	int getNumNotOnDomainTypes() const;
-	bool isNotOnDomainType(int i);
+	bool isNotOnDomainType(int i) const;
 
 	int getOnGameOption(int i) const;
 	int getNumOnGameOptions() const;
-	bool isOnGameOption(int i);
+	bool isOnGameOption(int i) const;
 
 	int getNotOnGameOption(int i) const;
 	int getNumNotOnGameOptions() const;
-	bool isNotOnGameOption(int i);
+	bool isNotOnGameOption(int i) const;
 
 	int getCriticalOriginCombatClassType(int i) const;
 	int getNumCriticalOriginCombatClassTypes() const;
-	bool isCriticalOriginCombatClassType(int i);
+	bool isCriticalOriginCombatClassType(int i) const;
 
 	// int vector utilizing pairing without delayed resolution
 	int getNumUnitCombatContractChanceChanges() const;
 	int getUnitCombatContractChanceChange(int iUnitCombat) const;
-	bool isUnitCombatContractChanceChange(int iUnitCombat);
+	bool isUnitCombatContractChanceChange(int iUnitCombat) const;
 
 	int getNumUnitCombatOvercomeChanges() const;
 	int getUnitCombatOvercomeChange(int iUnitCombat) const;
-	bool isUnitCombatOvercomeChange(int iUnitCombat);
+	bool isUnitCombatOvercomeChange(int iUnitCombat) const;
 
 	int getNumTechContractChanceChanges() const;
 	int getTechContractChanceChange(int iTech) const;
-	bool isTechContractChanceChange(int iTech);
+	bool isTechContractChanceChange(int iTech) const;
 
 	int getNumTechOvercomeChanges() const;
 	int getTechOvercomeChange(int iTech) const;
-	bool isTechOvercomeChange(int iTech);
+	bool isTechOvercomeChange(int iTech) const;
 
 	//Post Load
 
 	int getPromotion(int i) const;
 	int getNumPromotions() const;
-	bool isPromotion(int i);
+	bool isPromotion(int i) const;
 	void setPromotions();
 
 	int getBuilding(int i) const;
 	int getNumBuildings() const;
-	bool isBuilding(int i);
+	bool isBuilding(int i) const;
 	void setBuildings();
 
 	virtual void read(FDataStreamBase* pStream) {}
@@ -10900,12 +10727,12 @@ public:
 	static void setUnitCombatWildAnimal(UnitCombatTypes eIndex) { m_UnitCombatWildAnimal = eIndex; }
 
 	CvOutcomeList* getKillOutcomeList();
-	int getNumActionOutcomes();
-	CvOutcomeList* getActionOutcomeList(int index);
-	MissionTypes getActionOutcomeMission(int index);
-	CvOutcomeList* getActionOutcomeListByMission(MissionTypes eMission);
-	CvOutcomeMission* getOutcomeMission(int index);
-	CvOutcomeMission* getOutcomeMissionByMission(MissionTypes eMission);
+	int getNumActionOutcomes() const;
+	CvOutcomeList* getActionOutcomeList(int index) const;
+	MissionTypes getActionOutcomeMission(int index) const;
+	CvOutcomeList* getActionOutcomeListByMission(MissionTypes eMission) const;
+	CvOutcomeMission* getOutcomeMission(int index) const;
+	CvOutcomeMission* getOutcomeMissionByMission(MissionTypes eMission) const;
 
 protected:
 
@@ -11106,39 +10933,39 @@ public:
 	// bool vector with delayed resolution
 	int getCureAfflictionChangeType(int i) const;
 	int getNumCureAfflictionChangeTypes() const;
-	bool isCureAfflictionChangeType(int i);
+	bool isCureAfflictionChangeType(int i) const;
 
 	int getTerrainIgnoreDamageChangeType(int i) const;
 	int getNumTerrainIgnoreDamageChangeTypes() const;
-	bool isTerrainIgnoreDamageChangeType(int i);
+	bool isTerrainIgnoreDamageChangeType(int i) const;
 
 	int getTerrainDoubleMoveChangeType(int i) const;
 	int getNumTerrainDoubleMoveChangeTypes() const;
-	bool isTerrainDoubleMoveChangeType(int i);
+	bool isTerrainDoubleMoveChangeType(int i) const;
 
 	int getFeatureDoubleMoveChangeType(int i) const;
 	int getNumFeatureDoubleMoveChangeTypes() const;
-	bool isFeatureDoubleMoveChangeType(int i);
+	bool isFeatureDoubleMoveChangeType(int i) const;
 
 	int getOnGameOption(int i) const;
 	int getNumOnGameOptions() const;
-	bool isOnGameOption(int i);
+	bool isOnGameOption(int i) const;
 
 	int getNotOnGameOption(int i) const;
 	int getNumNotOnGameOptions() const;
-	bool isNotOnGameOption(int i);
+	bool isNotOnGameOption(int i) const;
 
 	int getGGptsforUnitType(int i) const;
 	int getNumGGptsforUnitTypes() const;
-	bool isGGptsforUnitType(int i);
+	bool isGGptsforUnitType(int i) const;
 
 	int getDefaultStatusType(int i) const;
 	int getNumDefaultStatusTypes() const;
-	bool isDefaultStatusType(int i);
+	bool isDefaultStatusType(int i) const;
 
 	int getTrapImmunityUnitCombatType(int i) const;
 	int getNumTrapImmunityUnitCombatTypes() const;
-	bool isTrapImmunityUnitCombatType(int i);
+	bool isTrapImmunityUnitCombatType(int i) const;
 
 	// int vector utilizing pairing without delayed resolution
 	int getNumWithdrawOnTerrainTypeChanges() const;
@@ -11149,23 +10976,23 @@ public:
 
 	int getNumVisibilityIntensityChangeTypes() const;
 	int getVisibilityIntensityChangeType(int iInvisibility) const;
-	bool isVisibilityIntensityChangeType(int iInvisibility);
+	bool isVisibilityIntensityChangeType(int iInvisibility) const;
 
 	int getNumInvisibilityIntensityChangeTypes() const;
 	int getInvisibilityIntensityChangeType(int iInvisibility) const;
-	bool isInvisibilityIntensityChangeType(int iInvisibility);
+	bool isInvisibilityIntensityChangeType(int iInvisibility) const;
 
 	int getNumVisibilityIntensityRangeChangeTypes() const;
 	int getVisibilityIntensityRangeChangeType(int iInvisibility) const;
-	bool isVisibilityIntensityRangeChangeType(int iInvisibility);
+	bool isVisibilityIntensityRangeChangeType(int iInvisibility) const;
 
 	int getNumVisibilityIntensitySameTileChangeTypes() const;
 	int getVisibilityIntensitySameTileChangeType(int iInvisibility) const;
-	bool isVisibilityIntensitySameTileChangeType(int iInvisibility);
+	bool isVisibilityIntensitySameTileChangeType(int iInvisibility) const;
 
 	int getNumAidChanges() const;
 	int getAidChange(int iProperty) const;
-	bool isAidChange(int iProperty);
+	bool isAidChange(int iProperty) const;
 
 	// int vector utilizing struct with delayed resolution
 	int getNumAfflictionFortitudeChangeModifiers() const;
