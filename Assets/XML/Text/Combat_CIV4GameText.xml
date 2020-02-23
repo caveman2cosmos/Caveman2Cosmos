@@ -6256,6 +6256,15 @@
 		<Polish>Kultura (Sumeryjska)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SUNDANESE</Tag>
+		<English>Culture(Sundanese)</English>
+		<French>
+			<Text>Culture(Soudanaise)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SWAHILI</Tag>
 		<English>Culture(Swahili)</English>
 		<French>
@@ -13611,7 +13620,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GOLDEN_HORDE</Tag>
-		<English>Culture(Golden_Horde)</English>
+		<English>Culture(Golden Horde)</English>
 		<French>Culture(Horde dorée)</French>
 	</TEXT>
 	<TEXT>
@@ -13891,8 +13900,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ORANG_ASLI</Tag>
-		<English>Culture(Orang_Asli)</English>
-		<French>Culture(Orang_Asli)</French>
+		<English>Culture(Orang Asli)</English>
+		<French>Culture(Orang Asli)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PAIUTE</Tag>
@@ -13951,7 +13960,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_POVERTY_POINT</Tag>
-		<English>Culture(Poverty_Point)</English>
+		<English>Culture(Poverty Point)</English>
 		<French>Culture(Poverty Point)</French>
 	</TEXT>
 	<TEXT>
@@ -14001,7 +14010,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_RED_OCHER</Tag>
-		<English>Culture(Red_Ocher)</English>
+		<English>Culture(Red Ocher)</English>
 		<French>Culture(Red_Ocher)</French>
 	</TEXT>
 	<TEXT>
@@ -14146,7 +14155,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_THREE_KINGDOMS</Tag>
-		<English>Culture(Three_Kingdoms)</English>
+		<English>Culture(Three Kingdoms)</English>
 		<French>Culture(Trois Royaumes)</French>
 	</TEXT>
 	<TEXT>
