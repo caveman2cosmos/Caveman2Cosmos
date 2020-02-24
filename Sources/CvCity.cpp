@@ -1768,7 +1768,7 @@ void CvCity::doTurn()
 	{
 		setWeLoveTheKingDay(false);
 	}
-	else if ((getPopulation() >= GC.getDefineINT("WE_LOVE_THE_KING_POPULATION_MIN_POPULATION")) && (GC.getGame().getSorenRandNum(GC.getDefineINT("WE_LOVE_THE_KING_RAND"), "Do We Love The King?") < getPopulation()))
+	else if (getPopulation() >= WE_LOVE_THE_KING_POPULATION_MIN_POPULATION && GC.getGame().getSorenRandNum(WE_LOVE_THE_KING_RAND, "Do We Love The King?") < getPopulation())
 	{
 		setWeLoveTheKingDay(true);
 	}
@@ -5267,7 +5267,7 @@ bool CvCity::canConscript(bool bOnCapture) const
 	}
 
 	//Team Project (6)
-	if (plot()->calculateTeamCulturePercent(getTeam()) < GC.getDefineINT("CONSCRIPT_MIN_CULTURE_PERCENT") && !bOnCapture)
+	if (plot()->calculateTeamCulturePercent(getTeam()) < CONSCRIPT_MIN_CULTURE_PERCENT && !bOnCapture)
 	{
 		return false;
 	}
@@ -13504,21 +13504,21 @@ int CvCity::getPeaceTradeModifier(TeamTypes eTeam) const
 		return 0;
 	}
 
-	int iPeaceTurns = std::min(GC.getDefineINT("FOREIGN_TRADE_FULL_CREDIT_PEACE_TURNS"), GET_TEAM(getTeam()).AI_getAtPeaceCounter(eTeam));
+	const int iPeaceTurns = std::min(FOREIGN_TRADE_FULL_CREDIT_PEACE_TURNS, GET_TEAM(getTeam()).AI_getAtPeaceCounter(eTeam));
 
 	if (GC.getGame().getElapsedGameTurns() <= iPeaceTurns)
 	{
-		return GC.getDefineINT("FOREIGN_TRADE_MODIFIER");
+		return FOREIGN_TRADE_MODIFIER;
 	}
 
-	return ((GC.getDefineINT("FOREIGN_TRADE_MODIFIER") * iPeaceTurns) / std::max(1, GC.getDefineINT("FOREIGN_TRADE_FULL_CREDIT_PEACE_TURNS")));
+	return ((FOREIGN_TRADE_MODIFIER * iPeaceTurns) / std::max(1, FOREIGN_TRADE_FULL_CREDIT_PEACE_TURNS));
 }
 
 int CvCity::getBaseTradeProfit(CvCity* pCity) const
 {
-	int iProfit = std::min(pCity->getPopulation() * GC.getDefineINT("THEIR_POPULATION_TRADE_PERCENT"), plotDistance(getX(), getY(), pCity->getX(), pCity->getY()) * GC.getWorldInfo(GC.getMap().getWorldSize()).getTradeProfitPercent());
+	int iProfit = std::min(pCity->getPopulation() * THEIR_POPULATION_TRADE_PERCENT, plotDistance(getX(), getY(), pCity->getX(), pCity->getY()) * GC.getWorldInfo(GC.getMap().getWorldSize()).getTradeProfitPercent());
 
-	iProfit *= GC.getDefineINT("TRADE_PROFIT_PERCENT");
+	iProfit *= TRADE_PROFIT_PERCENT;
 	iProfit /= 100;
 
 	iProfit = std::max(100, iProfit);
@@ -20467,28 +20467,27 @@ public:
 
 void CvCity::getVisibleBuildings(std::list<BuildingTypes>& kChosenVisible, int& iChosenNumGenerics)
 {
-
 	if (!plot()->isGraphicsVisible(ECvPlotGraphics::CITY))
 	{
 		iChosenNumGenerics = 0;
 		return;
 	}
 
-	int iShowFlags = GC.getDefineINT("SHOW_BUILDINGS_LEVEL");
+	const int iShowFlags = SHOW_BUILDINGS_LEVEL;
 	std::vector<BuildingTypes> kVisible;
-	int iNumBuildings = GC.getNumBuildingInfos();
+	const int iNumBuildings = GC.getNumBuildingInfos();
 	for (int i = 0; i < iNumBuildings; i++)
 	{
-		BuildingTypes eCurType = (BuildingTypes)i;
+		const BuildingTypes eCurType = (BuildingTypes)i;
 		if (getNumBuilding(eCurType) > 0)
 		{
-			bool	bValid = false;
+			bool bValid = false;
 			CvBuildingInfo& kBuilding = GC.getBuildingInfo(eCurType);
 
 			if (kBuilding.getNotShowInCity()) continue;
 
-			bool	bIsWonder = isLimitedWonderClass((BuildingClassTypes)kBuilding.getBuildingClassType());
-			bool	bIsDefense = (kBuilding.getDefenseModifier() > 0);
+			const bool bIsWonder = isLimitedWonderClass((BuildingClassTypes)kBuilding.getBuildingClassType());
+			const bool bIsDefense = (kBuilding.getDefenseModifier() > 0);
 
 			if ((iShowFlags & SHOW_BUILDINGS_WONDERS) != 0)
 			{
@@ -20521,7 +20520,7 @@ void CvCity::getVisibleBuildings(std::list<BuildingTypes>& kChosenVisible, int& 
 	int iTotalVisibleBuildings = 0;
 	if (stricmp(GC.getDefineSTRING("GAME_CITY_SIZE_METHOD"), "METHOD_EXPONENTIAL") == 0)
 	{
-		int iCityScaleMod = ((int)(pow((float)getPopulation(), GC.getDefineFLOAT("GAME_CITY_SIZE_EXP_MODIFIER")))) * 2;
+		const int iCityScaleMod = ((int)(pow((float)getPopulation(), GAME_CITY_SIZE_EXP_MODIFIER))) * 2;
 		iTotalVisibleBuildings = (10 + iCityScaleMod);
 	}
 	else
@@ -26961,7 +26960,7 @@ void CvCity::changeExtraCityDefenseRecoverySpeedModifier(int iChange)
 
 int CvCity::cityDefenseRecoveryRate() const
 {
-	int iValue = GC.getDefineINT("CITY_DEFENSE_DAMAGE_HEAL_RATE");
+	int iValue = CITY_DEFENSE_DAMAGE_HEAL_RATE;
 
 	int iRecoveryModifier = getExtraCityDefenseRecoverySpeedModifier();
 

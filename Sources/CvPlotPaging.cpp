@@ -293,12 +293,12 @@ void CvPlotPaging::UpdatePaging()
 
 			// The min distance different plot graphics should be paged in at
 			const int pageInDistances[] = {
-				GC.getDefineINT("PAGE_IN_DIST_SYMBOLS", 100),
-				GC.getDefineINT("PAGE_IN_DIST_FEATURES", 7),
-				GC.getDefineINT("PAGE_IN_DIST_RIVER", 40),
-				GC.getDefineINT("PAGE_IN_DIST_ROUTE", 100),
-				GC.getDefineINT("PAGE_IN_DIST_UNIT", 15),
-				GC.getDefineINT("PAGE_IN_DIST_CITY", 5),
+				PAGE_IN_DIST_SYMBOLS,
+				PAGE_IN_DIST_FEATURES,
+				PAGE_IN_DIST_RIVER,
+				PAGE_IN_DIST_ROUTE,
+				PAGE_IN_DIST_UNIT,
+				PAGE_IN_DIST_CITY,
 			};
 
 

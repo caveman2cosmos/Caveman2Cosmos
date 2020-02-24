@@ -11700,8 +11700,6 @@ int CvPlayer::getCivicAnarchyLength(CivicTypes* paeNewCivics) const
 
 int CvPlayer::getReligionAnarchyLength() const
 {
-	int iAnarchyLength;
-
 	if (getMaxAnarchyTurns() == 0)
 	{
 		return 0;
@@ -11712,7 +11710,7 @@ int CvPlayer::getReligionAnarchyLength() const
 		return 0;
 	}
 
-	iAnarchyLength = GC.getDefineINT("BASE_RELIGION_ANARCHY_LENGTH");
+	int iAnarchyLength = BASE_RELIGION_ANARCHY_LENGTH;
 
 	iAnarchyLength *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getAnarchyPercent();
 	iAnarchyLength /= 100;
@@ -11751,7 +11749,7 @@ int CvPlayer::getReligionAnarchyLength() const
 
 int CvPlayer::unitsRequiredForGoldenAge() const
 {
-	return (GC.getDefineINT("BASE_GOLDEN_AGE_UNITS") + (getNumUnitGoldenAges() * GC.getDefineINT("GOLDEN_AGE_UNITS_MULTIPLIER")));
+	return (BASE_GOLDEN_AGE_UNITS + (getNumUnitGoldenAges() * GOLDEN_AGE_UNITS_MULTIPLIER));
 }
 
 
@@ -29249,15 +29247,15 @@ int CvPlayer::getNewCityProductionValue() const
 		}
 	}
 
-	iValue *= 100 + GC.getDefineINT("NEW_CITY_BUILDING_VALUE_MODIFIER");
+	iValue *= 100 + NEW_CITY_BUILDING_VALUE_MODIFIER;
 	iValue /= 100;
 
-	iValue += (GC.getDefineINT("ADVANCED_START_CITY_COST") * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getGrowthPercent()) / 100;
+	iValue += (ADVANCED_START_CITY_COST * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getGrowthPercent()) / 100;
 
-	int iPopulation = GC.getDefineINT("INITIAL_CITY_POPULATION") + GC.getEraInfo(GC.getGame().getStartEra()).getFreePopulation();
+	const int iPopulation = INITIAL_CITY_POPULATION + GC.getEraInfo(GC.getGame().getStartEra()).getFreePopulation();
 	for (int i = 1; i <= iPopulation; ++i)
 	{
-		iValue += (getGrowthThreshold(i) * GC.getDefineINT("ADVANCED_START_POPULATION_COST")) / 100;
+		iValue += (getGrowthThreshold(i) * ADVANCED_START_POPULATION_COST) / 100;
 	}
 
 	return iValue;

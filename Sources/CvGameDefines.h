@@ -18,33 +18,21 @@ public:
 		m_iTEMP_HAPPY(globals.getDefineINT("TEMP_HAPPY")),
 		m_iPLOTS_PER_RIVER_EDGE(globals.getDefineINT("PLOTS_PER_RIVER_EDGE")),
 		m_iPLOT_VISIBILITY_RANGE(globals.getDefineINT("PLOT_VISIBILITY_RANGE")),
-		m_iSHALLOW_WATER_TERRAIN(globals.getDefineINT("SHALLOW_WATER_TERRAIN")),
+		m_iSHALLOW_WATER_TERRAIN(globals.getDefineINT("SHALLOW_WATER_TERRAIN")), //
 		m_iSHOW_BUILDINGS_LEVEL(globals.getDefineINT("SHOW_BUILDINGS_LEVEL")),
-		m_iCAMERA_CITY_NO_PITCH(globals.getDefineINT("CAMERA_CITY_NO_PITCH")),
 		m_iCONSCRIPT_MIN_CULTURE_PERCENT(globals.getDefineINT("CONSCRIPT_MIN_CULTURE_PERCENT")),
 		m_iWE_LOVE_THE_KING_RAND(globals.getDefineINT("WE_LOVE_THE_KING_RAND")),
-		m_iACO_ENABLED(globals.getDefineINT("ACO_ENABLED")),
-		m_iCURSOR_SIZENW(globals.getDefineINT("CURSOR_SIZENW")),
-		m_iNPC0_LEADER(globals.getDefineINT("NPC0_LEADER")),
 		m_iNEW_CITY_BUILDING_VALUE_MODIFIER(globals.getDefineINT("NEW_CITY_BUILDING_VALUE_MODIFIER")),
-		m_iNPC1_LEADER(globals.getDefineINT("NPC1_LEADER")),
 		m_iSTART_YEAR(globals.getDefineINT("START_YEAR")),
-		m_iUSE_ON_UNIT_CREATED_CALLBACK(globals.getDefineINT("USE_ON_UNIT_CREATED_CALLBACK")),
-		m_iBANDIT_SPAWN_MODIFIER(globals.getDefineINT("BANDIT_SPAWN_MODIFIER")),
-		m_iCURSOR_SPLITV(globals.getDefineINT("CURSOR_SPLITV")),
-		m_iNPC2_LEADER(globals.getDefineINT("NPC2_LEADER")),
 		m_iGOLDEN_AGE_UNITS_MULTIPLIER(globals.getDefineINT("GOLDEN_AGE_UNITS_MULTIPLIER")),
-		m_iNPC3_LEADER(globals.getDefineINT("NPC3_LEADER")),
-		m_iAI_HANDICAP(globals.getDefineINT("AI_HANDICAP")),
-		m_iNPC4_LEADER(globals.getDefineINT("NPC4_LEADER")),
 		m_iPAGE_IN_DIST_SYMBOLS(globals.getDefineINT("PAGE_IN_DIST_SYMBOLS")),
 		m_iCITY_DEFENSE_DAMAGE_HEAL_RATE(globals.getDefineINT("CITY_DEFENSE_DAMAGE_HEAL_RATE")),
 		m_iDEFAULT_FLEXIBLE_DIFFICULTY_TURN_INCREMENTS(globals.getDefineINT("DEFAULT_FLEXIBLE_DIFFICULTY_TURN_INCREMENTS")),
-		m_iUSE_CAN_TRAIN_CALLBACK(globals.getDefineINT("USE_CAN_TRAIN_CALLBACK")),
 		m_iNUM_UNIT_PREREQ_OR_BONUSES(globals.getDefineINT("NUM_UNIT_PREREQ_OR_BONUSES")),
 		m_iBASE_RELIGION_ANARCHY_LENGTH(globals.getDefineINT("BASE_RELIGION_ANARCHY_LENGTH")),
 		m_iFOREIGN_TRADE_MODIFIER(globals.getDefineINT("FOREIGN_TRADE_MODIFIER")),
 		m_iPAGE_IN_DIST_FEATURES(globals.getDefineINT("PAGE_IN_DIST_FEATURES")),
+
 		m_iSPY_DESTROY_COST_MULTIPLIER(globals.getDefineINT("SPY_DESTROY_COST_MULTIPLIER")),
 		m_iCAN_TRADE_GOLD(globals.getDefineINT("CAN_TRADE_GOLD")),
 		m_iWAR_PRIZES(globals.getDefineINT("WAR_PRIZES")),
@@ -62,7 +50,6 @@ public:
 		m_iNUM_BUILDING_AND_TECH_PREREQS(globals.getDefineINT("NUM_BUILDING_AND_TECH_PREREQS")),
 		m_iTRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT(globals.getDefineINT("TRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT")),
 		m_iUNIT_UPGRADE_COST_PER_PRODUCTION(globals.getDefineINT("UNIT_UPGRADE_COST_PER_PRODUCTION")),
-		m_iACO_SHOW_DEFENDER_HEALTH_BARS(globals.getDefineINT("ACO_SHOW_DEFENDER_HEALTH_BARS")),
 		m_iBARREN_TERRAIN(globals.getDefineINT("BARREN_TERRAIN")),
 		m_iIDW_ENABLED(globals.getDefineINT("IDW_ENABLED")),
 		m_iTREAT_NEGATIVE_GOLD_AS_MAINTENANCE(globals.getDefineINT("TREAT_NEGATIVE_GOLD_AS_MAINTENANCE")),
@@ -70,7 +57,6 @@ public:
 		m_iDEFY_RESOLUTION_ANGER_DIVISOR(globals.getDefineINT("DEFY_RESOLUTION_ANGER_DIVISOR")),
 		m_iCAN_TRADE_MAPS(globals.getDefineINT("CAN_TRADE_MAPS")),
 		m_iCORPORATION_RESOURCE_BASE_INFLUENCE(globals.getDefineINT("CORPORATION_RESOURCE_BASE_INFLUENCE")),
-		m_iACO_FORCE_ORIGINAL_ODDS(globals.getDefineINT("ACO_FORCE_ORIGINAL_ODDS")),
 		m_iUSE_ON_UPDATE_CALLBACK(globals.getDefineINT("USE_ON_UPDATE_CALLBACK")),
 		m_iVIEWPORT_FOCUS_BORDER(globals.getDefineINT("VIEWPORT_FOCUS_BORDER")),
 		m_iEVENT_PROBABILITY_ROLL_SIDES(globals.getDefineINT("EVENT_PROBABILITY_ROLL_SIDES")),
@@ -108,8 +94,6 @@ public:
 		m_iUSE_ON_UNIT_SELECTED_CALLBACK(globals.getDefineINT("USE_ON_UNIT_SELECTED_CALLBACK")),
 		m_iLAKE_PLOT_RAND(globals.getDefineINT("LAKE_PLOT_RAND")),
 		m_iNUM_LAKE_NAMES(globals.getDefineINT("NUM_LAKE_NAMES")),
-		m_iACO_SHOW_ATTACKER_HEALTH_BARS(globals.getDefineINT("ACO_SHOW_ATTACKER_HEALTH_BARS")),
-		m_iACO_SHOW_DEFENDER_INFO(globals.getDefineINT("ACO_SHOW_DEFENDER_INFO")),
 		m_iBATTLE_EFFECT_LESS_PRODUCTION(globals.getDefineINT("BATTLE_EFFECT_LESS_PRODUCTION")),
 		m_iFREE_TRADE_CORPORATION_SPREAD_MOD(globals.getDefineINT("FREE_TRADE_CORPORATION_SPREAD_MOD")),
 		m_iNUKE_POPULATION_DEATH_RAND_1(globals.getDefineINT("NUKE_POPULATION_DEATH_RAND_1")),
@@ -121,7 +105,6 @@ public:
 		m_iMAX_EXPERIENCE_AFTER_UPGRADE(globals.getDefineINT("MAX_EXPERIENCE_AFTER_UPGRADE")),
 		m_iNUM_PEAK_NAMES(globals.getDefineINT("NUM_PEAK_NAMES")),
 		m_iTEST_GAMEFONTS(globals.getDefineINT("TEST_GAMEFONTS")),
-		m_iACO_SHOW_UNHARMED_ODDS(globals.getDefineINT("ACO_SHOW_UNHARMED_ODDS")),
 		m_iCAN_TRADE_EMBARGO(globals.getDefineINT("CAN_TRADE_EMBARGO")),
 		m_iINITIAL_OUTSIDE_UNIT_GOLD_PERCENT(globals.getDefineINT("INITIAL_OUTSIDE_UNIT_GOLD_PERCENT")),
 		m_iSS_ASSASSINATE(globals.getDefineINT("SS_ASSASSINATE")),
@@ -160,7 +143,6 @@ public:
 		m_iGLOBAL_WARMING_TERRAIN(globals.getDefineINT("GLOBAL_WARMING_TERRAIN")),
 		m_iMAX_INTERCEPTION_PROBABILITY(globals.getDefineINT("MAX_INTERCEPTION_PROBABILITY")),
 		m_iSTANDARD_HANDICAP(globals.getDefineINT("STANDARD_HANDICAP")),
-		m_iACO_SHOW_ATTACKER_INFO(globals.getDefineINT("ACO_SHOW_ATTACKER_INFO")),
 		m_iBBAI_TURTLE_ENEMY_POWER_RATIO(globals.getDefineINT("BBAI_TURTLE_ENEMY_POWER_RATIO")),
 		m_iCONSCRIPT_POPULATION_PER_COST(globals.getDefineINT("CONSCRIPT_POPULATION_PER_COST")),
 		m_iGAMEFONT_TGA_RELIGIONS(globals.getDefineINT("GAMEFONT_TGA_RELIGIONS")),
@@ -366,7 +348,6 @@ public:
 		m_iOC_RESPAWN_HOLY_CITIES(globals.getDefineINT("OC_RESPAWN_HOLY_CITIES")),
 		m_iOWNERSHIP_SCORE_DURATION_THRESHOLD(globals.getDefineINT("OWNERSHIP_SCORE_DURATION_THRESHOLD")),
 		m_iREVOLT_TOTAL_CULTURE_MODIFIER(globals.getDefineINT("REVOLT_TOTAL_CULTURE_MODIFIER")),
-		m_iACO_MERGE_SHORT_BARS(globals.getDefineINT("ACO_MERGE_SHORT_BARS")),
 		m_iINITIAL_FREE_OUTSIDE_UNITS(globals.getDefineINT("INITIAL_FREE_OUTSIDE_UNITS")),
 		m_iNUM_BAY_NAMES(globals.getDefineINT("NUM_BAY_NAMES")),
 		m_iPEAK_SEE_FROM_CHANGE(globals.getDefineINT("PEAK_SEE_FROM_CHANGE")),
@@ -378,7 +359,6 @@ public:
 		m_iKILLERRABBIT_SPAWN_MODIFIER(globals.getDefineINT("KILLERRABBIT_SPAWN_MODIFIER")),
 		m_iRAZING_CULTURAL_PERCENT_THRESHOLD(globals.getDefineINT("RAZING_CULTURAL_PERCENT_THRESHOLD")),
 		m_iWW_CAPTURED_UNIT(globals.getDefineINT("WW_CAPTURED_UNIT")),
-		m_iACO_SHOW_DEFENSE_MODIFIERS(globals.getDefineINT("ACO_SHOW_DEFENSE_MODIFIERS")),
 		m_iBASE_CITY_GROWTH_THRESHOLD(globals.getDefineINT("BASE_CITY_GROWTH_THRESHOLD")),
 		m_iCURSOR_BUSY(globals.getDefineINT("CURSOR_BUSY")),
 		m_iESPIONAGE_INTERCEPT_COUNTERSPY(globals.getDefineINT("ESPIONAGE_INTERCEPT_COUNTERSPY")),
@@ -453,7 +433,6 @@ public:
 		m_iUSE_CAN_DO_CIVIC_CALLBACK(globals.getDefineINT("USE_CAN_DO_CIVIC_CALLBACK")),
 		m_iUSE_FINISH_TEXT_CALLBACK(globals.getDefineINT("USE_FINISH_TEXT_CALLBACK")),
 		m_iUSE_SPIES_NO_ENTER_BORDERS(globals.getDefineINT("USE_SPIES_NO_ENTER_BORDERS")),
-		m_iACO_IGNORE_BARB_FREE_WINS(globals.getDefineINT("ACO_IGNORE_BARB_FREE_WINS")),
 		m_iCAN_TRADE_EMBASSIES(globals.getDefineINT("CAN_TRADE_EMBASSIES")),
 		m_iFREE_VASSAL_POPULATION_PERCENT(globals.getDefineINT("FREE_VASSAL_POPULATION_PERCENT")),
 		m_iUSE_CAN_BUILD_CALLBACK(globals.getDefineINT("USE_CAN_BUILD_CALLBACK")),
@@ -473,7 +452,6 @@ public:
 		m_iDCM_FIGHTER_ENGAGE(globals.getDefineINT("DCM_FIGHTER_ENGAGE")),
 		m_iFORCE_UNOWNED_CITY_TIMER(globals.getDefineINT("FORCE_UNOWNED_CITY_TIMER")),
 		m_iRANGE_COMBAT_DAMAGE(globals.getDefineINT("RANGE_COMBAT_DAMAGE")),
-		m_iACO_DEBUG(globals.getDefineINT("ACO_DEBUG")),
 		m_iCONSCRIPT_POP_ANGER(globals.getDefineINT("CONSCRIPT_POP_ANGER")),
 		m_iFREE_VASSAL_LAND_PERCENT(globals.getDefineINT("FREE_VASSAL_LAND_PERCENT")),
 		m_iHILLS_EXTRA_DEFENSE(globals.getDefineINT("HILLS_EXTRA_DEFENSE")),
@@ -490,10 +468,8 @@ public:
 		m_iFOREIGN_TRADE_FULL_CREDIT_PEACE_TURNS(globals.getDefineINT("FOREIGN_TRADE_FULL_CREDIT_PEACE_TURNS")),
 		m_iNO_MILITARY_PERCENT_ANGER(globals.getDefineINT("NO_MILITARY_PERCENT_ANGER")),
 		m_iUSE_GET_CITY_FOUND_VALUE_CALLBACK(globals.getDefineINT("USE_GET_CITY_FOUND_VALUE_CALLBACK")),
-		m_iACO_SHOW_TOTAL_DEFENSE_MODIFIER(globals.getDefineINT("ACO_SHOW_TOTAL_DEFENSE_MODIFIER")),
 		m_iEXPERIENCE_FROM_WITHDRAWL(globals.getDefineINT("EXPERIENCE_FROM_WITHDRAWL")),
 		m_iUSE_CAN_FOUND_CITIES_ON_WATER_CALLBACK(globals.getDefineINT("USE_CAN_FOUND_CITIES_ON_WATER_CALLBACK")),
-		m_iACO_SHOW_MODIFIER_LABELS(globals.getDefineINT("ACO_SHOW_MODIFIER_LABELS")),
 		m_iMIN_EXPERIENCE_PER_COMBAT(globals.getDefineINT("MIN_EXPERIENCE_PER_COMBAT")),
 		m_iNUKE_FEATURE(globals.getDefineINT("NUKE_FEATURE")),
 		m_iCAN_TRADE_RELIGIONS(globals.getDefineINT("CAN_TRADE_RELIGIONS")),
@@ -598,7 +574,6 @@ public:
 		m_iMINIMUM_DESERT_SIZE(globals.getDefineINT("MINIMUM_DESERT_SIZE")),
 		m_iHOLY_CITY_INFLUENCE(globals.getDefineINT("HOLY_CITY_INFLUENCE")),
 		m_iUSE_CAN_DO_COMBAT_CALLBACK(globals.getDefineINT("USE_CAN_DO_COMBAT_CALLBACK")),
-		m_iACO_SHOW_BASIC_INFO(globals.getDefineINT("ACO_SHOW_BASIC_INFO")),
 		m_iMINIMUM_FOREST_SIZE(globals.getDefineINT("MINIMUM_FOREST_SIZE")),
 		m_iNUM_MOUNTAINS_NAMES(globals.getDefineINT("NUM_MOUNTAINS_NAMES")),
 		m_iNUM_WARNING_REVOLTS(globals.getDefineINT("NUM_WARNING_REVOLTS")),
@@ -626,6 +601,8 @@ public:
 		m_iUSE_ON_UNIT_SET_XY_CALLBACK(globals.getDefineINT("USE_ON_UNIT_SET_XY_CALLBACK")),
 		m_iUSE_CANNOT_DO_CIVIC_CALLBACK(globals.getDefineINT("USE_CANNOT_DO_CIVIC_CALLBACK")),
 		m_iUSE_CAN_DO_MELTDOWN_CALLBACK(globals.getDefineINT("USE_CAN_DO_MELTDOWN_CALLBACK")),
+		m_iUSE_ON_UNIT_CREATED_CALLBACK(globals.getDefineINT("USE_ON_UNIT_CREATED_CALLBACK")),
+		m_iUSE_CAN_TRAIN_CALLBACK(globals.getDefineINT("USE_CAN_TRAIN_CALLBACK")),
 
 		m_fIDW_FORT_CAPTURE_MULTIPLIER(globals.getDefineFLOAT("IDW_FORT_CAPTURE_MULTIPLIER")),
 		m_fGAME_CITY_SIZE_LINMAP_AT_0(globals.getDefineFLOAT("GAME_CITY_SIZE_LINMAP_AT_0")),
@@ -725,27 +702,14 @@ public:
 	inline const int getPLOT_VISIBILITY_RANGE() const                                    { return m_iPLOT_VISIBILITY_RANGE; }
 	inline const int getSHALLOW_WATER_TERRAIN() const                                    { return m_iSHALLOW_WATER_TERRAIN; }
 	inline const int getSHOW_BUILDINGS_LEVEL() const                                     { return m_iSHOW_BUILDINGS_LEVEL; }
-	inline const int getCAMERA_CITY_NO_PITCH() const                                     { return m_iCAMERA_CITY_NO_PITCH; }
 	inline const int getCONSCRIPT_MIN_CULTURE_PERCENT() const                            { return m_iCONSCRIPT_MIN_CULTURE_PERCENT; }
 	inline const int getWE_LOVE_THE_KING_RAND() const                                    { return m_iWE_LOVE_THE_KING_RAND; }
-	inline const int getACO_ENABLED() const                                              { return m_iACO_ENABLED; }
-	inline const int getCURSOR_SIZENW() const                                            { return m_iCURSOR_SIZENW; }
-	inline const int getNPC0_LEADER() const                                              { return m_iNPC0_LEADER; }
 	inline const int getNEW_CITY_BUILDING_VALUE_MODIFIER() const                         { return m_iNEW_CITY_BUILDING_VALUE_MODIFIER; }
-	inline const int getNPC1_LEADER() const                                              { return m_iNPC1_LEADER; }
 	inline const int getSTART_YEAR() const                                               { return m_iSTART_YEAR; }
-	inline const int getUSE_ON_UNIT_CREATED_CALLBACK() const                             { return m_iUSE_ON_UNIT_CREATED_CALLBACK; }
-	inline const int getBANDIT_SPAWN_MODIFIER() const                                    { return m_iBANDIT_SPAWN_MODIFIER; }
-	inline const int getCURSOR_SPLITV() const                                            { return m_iCURSOR_SPLITV; }
-	inline const int getNPC2_LEADER() const                                              { return m_iNPC2_LEADER; }
 	inline const int getGOLDEN_AGE_UNITS_MULTIPLIER() const                              { return m_iGOLDEN_AGE_UNITS_MULTIPLIER; }
-	inline const int getNPC3_LEADER() const                                              { return m_iNPC3_LEADER; }
-	inline const int getAI_HANDICAP() const                                              { return m_iAI_HANDICAP; }
-	inline const int getNPC4_LEADER() const                                              { return m_iNPC4_LEADER; }
 	inline const int getPAGE_IN_DIST_SYMBOLS() const                                     { return m_iPAGE_IN_DIST_SYMBOLS; }
 	inline const int getCITY_DEFENSE_DAMAGE_HEAL_RATE() const                            { return m_iCITY_DEFENSE_DAMAGE_HEAL_RATE; }
 	inline const int getDEFAULT_FLEXIBLE_DIFFICULTY_TURN_INCREMENTS() const              { return m_iDEFAULT_FLEXIBLE_DIFFICULTY_TURN_INCREMENTS; }
-	inline const int getUSE_CAN_TRAIN_CALLBACK() const                                   { return m_iUSE_CAN_TRAIN_CALLBACK; }
 	inline const int getNUM_UNIT_PREREQ_OR_BONUSES() const                               { return m_iNUM_UNIT_PREREQ_OR_BONUSES; }
 	inline const int getBASE_RELIGION_ANARCHY_LENGTH() const                             { return m_iBASE_RELIGION_ANARCHY_LENGTH; }
 	inline const int getFOREIGN_TRADE_MODIFIER() const                                   { return m_iFOREIGN_TRADE_MODIFIER; }
@@ -767,7 +731,6 @@ public:
 	inline const int getNUM_BUILDING_AND_TECH_PREREQS() const                            { return m_iNUM_BUILDING_AND_TECH_PREREQS; }
 	inline const int getTRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT() const               { return m_iTRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT; }
 	inline const int getUNIT_UPGRADE_COST_PER_PRODUCTION() const                         { return m_iUNIT_UPGRADE_COST_PER_PRODUCTION; }
-	inline const int getACO_SHOW_DEFENDER_HEALTH_BARS() const                            { return m_iACO_SHOW_DEFENDER_HEALTH_BARS; }
 	inline const int getBARREN_TERRAIN() const                                           { return m_iBARREN_TERRAIN; }
 	inline const int getIDW_ENABLED() const                                              { return m_iIDW_ENABLED; }
 	inline const int getTREAT_NEGATIVE_GOLD_AS_MAINTENANCE() const                       { return m_iTREAT_NEGATIVE_GOLD_AS_MAINTENANCE; }
@@ -775,7 +738,6 @@ public:
 	inline const int getDEFY_RESOLUTION_ANGER_DIVISOR() const                            { return m_iDEFY_RESOLUTION_ANGER_DIVISOR; }
 	inline const int getCAN_TRADE_MAPS() const                                           { return m_iCAN_TRADE_MAPS; }
 	inline const int getCORPORATION_RESOURCE_BASE_INFLUENCE() const                      { return m_iCORPORATION_RESOURCE_BASE_INFLUENCE; }
-	inline const int getACO_FORCE_ORIGINAL_ODDS() const                                  { return m_iACO_FORCE_ORIGINAL_ODDS; }
 	inline const int getUSE_ON_UPDATE_CALLBACK() const                                   { return m_iUSE_ON_UPDATE_CALLBACK; }
 	inline const int getVIEWPORT_FOCUS_BORDER() const                                    { return m_iVIEWPORT_FOCUS_BORDER; }
 	inline const int getEVENT_PROBABILITY_ROLL_SIDES() const                             { return m_iEVENT_PROBABILITY_ROLL_SIDES; }
@@ -813,8 +775,6 @@ public:
 	inline const int getUSE_ON_UNIT_SELECTED_CALLBACK() const                            { return m_iUSE_ON_UNIT_SELECTED_CALLBACK; }
 	inline const int getLAKE_PLOT_RAND() const                                           { return m_iLAKE_PLOT_RAND; }
 	inline const int getNUM_LAKE_NAMES() const                                           { return m_iNUM_LAKE_NAMES; }
-	inline const int getACO_SHOW_ATTACKER_HEALTH_BARS() const                            { return m_iACO_SHOW_ATTACKER_HEALTH_BARS; }
-	inline const int getACO_SHOW_DEFENDER_INFO() const                                   { return m_iACO_SHOW_DEFENDER_INFO; }
 	inline const int getBATTLE_EFFECT_LESS_PRODUCTION() const                            { return m_iBATTLE_EFFECT_LESS_PRODUCTION; }
 	inline const int getFREE_TRADE_CORPORATION_SPREAD_MOD() const                        { return m_iFREE_TRADE_CORPORATION_SPREAD_MOD; }
 	inline const int getNUKE_POPULATION_DEATH_RAND_1() const                             { return m_iNUKE_POPULATION_DEATH_RAND_1; }
@@ -826,7 +786,6 @@ public:
 	inline const int getMAX_EXPERIENCE_AFTER_UPGRADE() const                             { return m_iMAX_EXPERIENCE_AFTER_UPGRADE; }
 	inline const int getNUM_PEAK_NAMES() const                                           { return m_iNUM_PEAK_NAMES; }
 	inline const int getTEST_GAMEFONTS() const                                           { return m_iTEST_GAMEFONTS; }
-	inline const int getACO_SHOW_UNHARMED_ODDS() const                                   { return m_iACO_SHOW_UNHARMED_ODDS; }
 	inline const int getCAN_TRADE_EMBARGO() const                                        { return m_iCAN_TRADE_EMBARGO; }
 	inline const int getINITIAL_OUTSIDE_UNIT_GOLD_PERCENT() const                        { return m_iINITIAL_OUTSIDE_UNIT_GOLD_PERCENT; }
 	inline const int getSS_ASSASSINATE() const                                           { return m_iSS_ASSASSINATE; }
@@ -865,7 +824,6 @@ public:
 	inline const int getGLOBAL_WARMING_TERRAIN() const                                   { return m_iGLOBAL_WARMING_TERRAIN; }
 	inline const int getMAX_INTERCEPTION_PROBABILITY() const                             { return m_iMAX_INTERCEPTION_PROBABILITY; }
 	inline const int getSTANDARD_HANDICAP() const                                        { return m_iSTANDARD_HANDICAP; }
-	inline const int getACO_SHOW_ATTACKER_INFO() const                                   { return m_iACO_SHOW_ATTACKER_INFO; }
 	inline const int getBBAI_TURTLE_ENEMY_POWER_RATIO() const                            { return m_iBBAI_TURTLE_ENEMY_POWER_RATIO; }
 	inline const int getCONSCRIPT_POPULATION_PER_COST() const                            { return m_iCONSCRIPT_POPULATION_PER_COST; }
 	inline const int getGAMEFONT_TGA_RELIGIONS() const                                   { return m_iGAMEFONT_TGA_RELIGIONS; }
@@ -1071,7 +1029,6 @@ public:
 	inline const int getOC_RESPAWN_HOLY_CITIES() const                                   { return m_iOC_RESPAWN_HOLY_CITIES; }
 	inline const int getOWNERSHIP_SCORE_DURATION_THRESHOLD() const                       { return m_iOWNERSHIP_SCORE_DURATION_THRESHOLD; }
 	inline const int getREVOLT_TOTAL_CULTURE_MODIFIER() const                            { return m_iREVOLT_TOTAL_CULTURE_MODIFIER; }
-	inline const int getACO_MERGE_SHORT_BARS() const                                     { return m_iACO_MERGE_SHORT_BARS; }
 	inline const int getINITIAL_FREE_OUTSIDE_UNITS() const                               { return m_iINITIAL_FREE_OUTSIDE_UNITS; }
 	inline const int getNUM_BAY_NAMES() const                                            { return m_iNUM_BAY_NAMES; }
 	inline const int getPEAK_SEE_FROM_CHANGE() const                                     { return m_iPEAK_SEE_FROM_CHANGE; }
@@ -1083,7 +1040,6 @@ public:
 	inline const int getKILLERRABBIT_SPAWN_MODIFIER() const                              { return m_iKILLERRABBIT_SPAWN_MODIFIER; }
 	inline const int getRAZING_CULTURAL_PERCENT_THRESHOLD() const                        { return m_iRAZING_CULTURAL_PERCENT_THRESHOLD; }
 	inline const int getWW_CAPTURED_UNIT() const                                         { return m_iWW_CAPTURED_UNIT; }
-	inline const int getACO_SHOW_DEFENSE_MODIFIERS() const                               { return m_iACO_SHOW_DEFENSE_MODIFIERS; }
 	inline const int getBASE_CITY_GROWTH_THRESHOLD() const                               { return m_iBASE_CITY_GROWTH_THRESHOLD; }
 	inline const int getCURSOR_BUSY() const                                              { return m_iCURSOR_BUSY; }
 	inline const int getESPIONAGE_INTERCEPT_COUNTERSPY() const                           { return m_iESPIONAGE_INTERCEPT_COUNTERSPY; }
@@ -1158,7 +1114,6 @@ public:
 	inline const int getUSE_CAN_DO_CIVIC_CALLBACK() const                                { return m_iUSE_CAN_DO_CIVIC_CALLBACK; }
 	inline const int getUSE_FINISH_TEXT_CALLBACK() const                                 { return m_iUSE_FINISH_TEXT_CALLBACK; }
 	inline const int getUSE_SPIES_NO_ENTER_BORDERS() const                               { return m_iUSE_SPIES_NO_ENTER_BORDERS; }
-	inline const int getACO_IGNORE_BARB_FREE_WINS() const                                { return m_iACO_IGNORE_BARB_FREE_WINS; }
 	inline const int getCAN_TRADE_EMBASSIES() const                                      { return m_iCAN_TRADE_EMBASSIES; }
 	inline const int getFREE_VASSAL_POPULATION_PERCENT() const                           { return m_iFREE_VASSAL_POPULATION_PERCENT; }
 	inline const int getUSE_CAN_BUILD_CALLBACK() const                                   { return m_iUSE_CAN_BUILD_CALLBACK; }
@@ -1178,7 +1133,6 @@ public:
 	inline const int getDCM_FIGHTER_ENGAGE() const                                       { return m_iDCM_FIGHTER_ENGAGE; }
 	inline const int getFORCE_UNOWNED_CITY_TIMER() const                                 { return m_iFORCE_UNOWNED_CITY_TIMER; }
 	inline const int getRANGE_COMBAT_DAMAGE() const                                      { return m_iRANGE_COMBAT_DAMAGE; }
-	inline const int getACO_DEBUG() const                                                { return m_iACO_DEBUG; }
 	inline const int getCONSCRIPT_POP_ANGER() const                                      { return m_iCONSCRIPT_POP_ANGER; }
 	inline const int getFREE_VASSAL_LAND_PERCENT() const                                 { return m_iFREE_VASSAL_LAND_PERCENT; }
 	inline const int getHILLS_EXTRA_DEFENSE() const                                      { return m_iHILLS_EXTRA_DEFENSE; }
@@ -1195,10 +1149,8 @@ public:
 	inline const int getFOREIGN_TRADE_FULL_CREDIT_PEACE_TURNS() const                    { return m_iFOREIGN_TRADE_FULL_CREDIT_PEACE_TURNS; }
 	inline const int getNO_MILITARY_PERCENT_ANGER() const                                { return m_iNO_MILITARY_PERCENT_ANGER; }
 	inline const int getUSE_GET_CITY_FOUND_VALUE_CALLBACK() const                        { return m_iUSE_GET_CITY_FOUND_VALUE_CALLBACK; }
-	inline const int getACO_SHOW_TOTAL_DEFENSE_MODIFIER() const                          { return m_iACO_SHOW_TOTAL_DEFENSE_MODIFIER; }
 	inline const int getEXPERIENCE_FROM_WITHDRAWL() const                                { return m_iEXPERIENCE_FROM_WITHDRAWL; }
 	inline const int getUSE_CAN_FOUND_CITIES_ON_WATER_CALLBACK() const                   { return m_iUSE_CAN_FOUND_CITIES_ON_WATER_CALLBACK; }
-	inline const int getACO_SHOW_MODIFIER_LABELS() const                                 { return m_iACO_SHOW_MODIFIER_LABELS; }
 	inline const int getMIN_EXPERIENCE_PER_COMBAT() const                                { return m_iMIN_EXPERIENCE_PER_COMBAT; }
 	inline const int getNUKE_FEATURE() const                                             { return m_iNUKE_FEATURE; }
 	inline const int getCAN_TRADE_RELIGIONS() const                                      { return m_iCAN_TRADE_RELIGIONS; }
@@ -1302,7 +1254,6 @@ public:
 	inline const int getMINIMUM_DESERT_SIZE() const                                      { return m_iMINIMUM_DESERT_SIZE; }
 	inline const int getHOLY_CITY_INFLUENCE() const                                      { return m_iHOLY_CITY_INFLUENCE; }
 	inline const int getUSE_CAN_DO_COMBAT_CALLBACK() const                               { return m_iUSE_CAN_DO_COMBAT_CALLBACK; }
-	inline const int getACO_SHOW_BASIC_INFO() const                                      { return m_iACO_SHOW_BASIC_INFO; }
 	inline const int getMINIMUM_FOREST_SIZE() const                                      { return m_iMINIMUM_FOREST_SIZE; }
 	inline const int getNUM_MOUNTAINS_NAMES() const                                      { return m_iNUM_MOUNTAINS_NAMES; }
 	inline const int getNUM_WARNING_REVOLTS() const                                      { return m_iNUM_WARNING_REVOLTS; }
@@ -1330,6 +1281,8 @@ public:
 	inline const int getUSE_ON_UNIT_SET_XY_CALLBACK() const                              { return m_iUSE_ON_UNIT_SET_XY_CALLBACK; }
 	inline const int getUSE_CANNOT_DO_CIVIC_CALLBACK() const                             { return m_iUSE_CANNOT_DO_CIVIC_CALLBACK; }
 	inline const int getUSE_CAN_DO_MELTDOWN_CALLBACK() const                             { return m_iUSE_CAN_DO_MELTDOWN_CALLBACK; }
+	inline const int getUSE_ON_UNIT_CREATED_CALLBACK() const                             { return m_iUSE_ON_UNIT_CREATED_CALLBACK; }
+	inline const int getUSE_CAN_TRAIN_CALLBACK() const                                   { return m_iUSE_CAN_TRAIN_CALLBACK; }
 
 	inline const float getIDW_FORT_CAPTURE_MULTIPLIER() const                            { return m_fIDW_FORT_CAPTURE_MULTIPLIER; }
 	inline const float getGAME_CITY_SIZE_LINMAP_AT_0() const                             { return m_fGAME_CITY_SIZE_LINMAP_AT_0; }
@@ -1426,23 +1379,11 @@ protected:
 	const int m_iPLOT_VISIBILITY_RANGE;
 	const int m_iSHALLOW_WATER_TERRAIN;
 	const int m_iSHOW_BUILDINGS_LEVEL;
-	const int m_iCAMERA_CITY_NO_PITCH;
 	const int m_iCONSCRIPT_MIN_CULTURE_PERCENT;
 	const int m_iWE_LOVE_THE_KING_RAND;
-	const int m_iACO_ENABLED;
-	const int m_iCURSOR_SIZENW;
-	const int m_iNPC0_LEADER;
 	const int m_iNEW_CITY_BUILDING_VALUE_MODIFIER;
-	const int m_iNPC1_LEADER;
 	const int m_iSTART_YEAR;
-	const int m_iUSE_ON_UNIT_CREATED_CALLBACK;
-	const int m_iBANDIT_SPAWN_MODIFIER;
-	const int m_iCURSOR_SPLITV;
-	const int m_iNPC2_LEADER;
 	const int m_iGOLDEN_AGE_UNITS_MULTIPLIER;
-	const int m_iNPC3_LEADER;
-	const int m_iAI_HANDICAP;
-	const int m_iNPC4_LEADER;
 	const int m_iPAGE_IN_DIST_SYMBOLS;
 	const int m_iCITY_DEFENSE_DAMAGE_HEAL_RATE;
 	const int m_iDEFAULT_FLEXIBLE_DIFFICULTY_TURN_INCREMENTS;
@@ -1468,7 +1409,6 @@ protected:
 	const int m_iNUM_BUILDING_AND_TECH_PREREQS;
 	const int m_iTRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT;
 	const int m_iUNIT_UPGRADE_COST_PER_PRODUCTION;
-	const int m_iACO_SHOW_DEFENDER_HEALTH_BARS;
 	const int m_iBARREN_TERRAIN;
 	const int m_iIDW_ENABLED;
 	const int m_iTREAT_NEGATIVE_GOLD_AS_MAINTENANCE;
@@ -1476,7 +1416,6 @@ protected:
 	const int m_iDEFY_RESOLUTION_ANGER_DIVISOR;
 	const int m_iCAN_TRADE_MAPS;
 	const int m_iCORPORATION_RESOURCE_BASE_INFLUENCE;
-	const int m_iACO_FORCE_ORIGINAL_ODDS;
 	const int m_iUSE_ON_UPDATE_CALLBACK;
 	const int m_iVIEWPORT_FOCUS_BORDER;
 	const int m_iEVENT_PROBABILITY_ROLL_SIDES;
@@ -1514,8 +1453,6 @@ protected:
 	const int m_iUSE_ON_UNIT_SELECTED_CALLBACK;
 	const int m_iLAKE_PLOT_RAND;
 	const int m_iNUM_LAKE_NAMES;
-	const int m_iACO_SHOW_ATTACKER_HEALTH_BARS;
-	const int m_iACO_SHOW_DEFENDER_INFO;
 	const int m_iBATTLE_EFFECT_LESS_PRODUCTION;
 	const int m_iFREE_TRADE_CORPORATION_SPREAD_MOD;
 	const int m_iNUKE_POPULATION_DEATH_RAND_1;
@@ -1527,7 +1464,6 @@ protected:
 	const int m_iMAX_EXPERIENCE_AFTER_UPGRADE;
 	const int m_iNUM_PEAK_NAMES;
 	const int m_iTEST_GAMEFONTS;
-	const int m_iACO_SHOW_UNHARMED_ODDS;
 	const int m_iCAN_TRADE_EMBARGO;
 	const int m_iINITIAL_OUTSIDE_UNIT_GOLD_PERCENT;
 	const int m_iSS_ASSASSINATE;
@@ -1566,7 +1502,6 @@ protected:
 	const int m_iGLOBAL_WARMING_TERRAIN;
 	const int m_iMAX_INTERCEPTION_PROBABILITY;
 	const int m_iSTANDARD_HANDICAP;
-	const int m_iACO_SHOW_ATTACKER_INFO;
 	const int m_iBBAI_TURTLE_ENEMY_POWER_RATIO;
 	const int m_iCONSCRIPT_POPULATION_PER_COST;
 	const int m_iGAMEFONT_TGA_RELIGIONS;
@@ -1772,7 +1707,6 @@ protected:
 	const int m_iOC_RESPAWN_HOLY_CITIES;
 	const int m_iOWNERSHIP_SCORE_DURATION_THRESHOLD;
 	const int m_iREVOLT_TOTAL_CULTURE_MODIFIER;
-	const int m_iACO_MERGE_SHORT_BARS;
 	const int m_iINITIAL_FREE_OUTSIDE_UNITS;
 	const int m_iNUM_BAY_NAMES;
 	const int m_iPEAK_SEE_FROM_CHANGE;
@@ -1784,7 +1718,6 @@ protected:
 	const int m_iKILLERRABBIT_SPAWN_MODIFIER;
 	const int m_iRAZING_CULTURAL_PERCENT_THRESHOLD;
 	const int m_iWW_CAPTURED_UNIT;
-	const int m_iACO_SHOW_DEFENSE_MODIFIERS;
 	const int m_iBASE_CITY_GROWTH_THRESHOLD;
 	const int m_iCURSOR_BUSY;
 	const int m_iESPIONAGE_INTERCEPT_COUNTERSPY;
@@ -1859,7 +1792,6 @@ protected:
 	const int m_iUSE_CAN_DO_CIVIC_CALLBACK;
 	const int m_iUSE_FINISH_TEXT_CALLBACK;
 	const int m_iUSE_SPIES_NO_ENTER_BORDERS;
-	const int m_iACO_IGNORE_BARB_FREE_WINS;
 	const int m_iCAN_TRADE_EMBASSIES;
 	const int m_iFREE_VASSAL_POPULATION_PERCENT;
 	const int m_iUSE_CAN_BUILD_CALLBACK;
@@ -1879,7 +1811,6 @@ protected:
 	const int m_iDCM_FIGHTER_ENGAGE;
 	const int m_iFORCE_UNOWNED_CITY_TIMER;
 	const int m_iRANGE_COMBAT_DAMAGE;
-	const int m_iACO_DEBUG;
 	const int m_iCONSCRIPT_POP_ANGER;
 	const int m_iFREE_VASSAL_LAND_PERCENT;
 	const int m_iHILLS_EXTRA_DEFENSE;
@@ -1896,10 +1827,8 @@ protected:
 	const int m_iFOREIGN_TRADE_FULL_CREDIT_PEACE_TURNS;
 	const int m_iNO_MILITARY_PERCENT_ANGER;
 	const int m_iUSE_GET_CITY_FOUND_VALUE_CALLBACK;
-	const int m_iACO_SHOW_TOTAL_DEFENSE_MODIFIER;
 	const int m_iEXPERIENCE_FROM_WITHDRAWL;
 	const int m_iUSE_CAN_FOUND_CITIES_ON_WATER_CALLBACK;
-	const int m_iACO_SHOW_MODIFIER_LABELS;
 	const int m_iMIN_EXPERIENCE_PER_COMBAT;
 	const int m_iNUKE_FEATURE;
 	const int m_iCAN_TRADE_RELIGIONS;
@@ -2003,7 +1932,6 @@ protected:
 	const int m_iMINIMUM_DESERT_SIZE;
 	const int m_iHOLY_CITY_INFLUENCE;
 	const int m_iUSE_CAN_DO_COMBAT_CALLBACK;
-	const int m_iACO_SHOW_BASIC_INFO;
 	const int m_iMINIMUM_FOREST_SIZE;
 	const int m_iNUM_MOUNTAINS_NAMES;
 	const int m_iNUM_WARNING_REVOLTS;
@@ -2031,6 +1959,7 @@ protected:
 	const int m_iUSE_ON_UNIT_SET_XY_CALLBACK;
 	const int m_iUSE_CANNOT_DO_CIVIC_CALLBACK;
 	const int m_iUSE_CAN_DO_MELTDOWN_CALLBACK;
+	const int m_iUSE_ON_UNIT_CREATED_CALLBACK;
 
 	const float m_fIDW_FORT_CAPTURE_MULTIPLIER;
 	const float m_fGAME_CITY_SIZE_LINMAP_AT_0;
@@ -2133,23 +2062,13 @@ protected:
 #define PLOT_VISIBILITY_RANGE                                    GC.getGameDefines().getPLOT_VISIBILITY_RANGE()
 #define SHALLOW_WATER_TERRAIN                                    GC.getGameDefines().getSHALLOW_WATER_TERRAIN()
 #define SHOW_BUILDINGS_LEVEL                                     GC.getGameDefines().getSHOW_BUILDINGS_LEVEL()
-#define CAMERA_CITY_NO_PITCH                                     GC.getGameDefines().getCAMERA_CITY_NO_PITCH()
 #define CONSCRIPT_MIN_CULTURE_PERCENT                            GC.getGameDefines().getCONSCRIPT_MIN_CULTURE_PERCENT()
 #define WE_LOVE_THE_KING_RAND                                    GC.getGameDefines().getWE_LOVE_THE_KING_RAND()
-#define ACO_ENABLED                                              GC.getGameDefines().getACO_ENABLED()
-#define CURSOR_SIZENW                                            GC.getGameDefines().getCURSOR_SIZENW()
-#define NPC0_LEADER                                              GC.getGameDefines().getNPC0_LEADER()
 #define NEW_CITY_BUILDING_VALUE_MODIFIER                         GC.getGameDefines().getNEW_CITY_BUILDING_VALUE_MODIFIER()
-#define NPC1_LEADER                                              GC.getGameDefines().getNPC1_LEADER()
 #define START_YEAR                                               GC.getGameDefines().getSTART_YEAR()
 #define USE_ON_UNIT_CREATED_CALLBACK                             GC.getGameDefines().getUSE_ON_UNIT_CREATED_CALLBACK()
-#define BANDIT_SPAWN_MODIFIER                                    GC.getGameDefines().getBANDIT_SPAWN_MODIFIER()
-#define CURSOR_SPLITV                                            GC.getGameDefines().getCURSOR_SPLITV()
-#define NPC2_LEADER                                              GC.getGameDefines().getNPC2_LEADER()
 #define GOLDEN_AGE_UNITS_MULTIPLIER                              GC.getGameDefines().getGOLDEN_AGE_UNITS_MULTIPLIER()
 #define NPC3_LEADER                                              GC.getGameDefines().getNPC3_LEADER()
-#define AI_HANDICAP                                              GC.getGameDefines().getAI_HANDICAP()
-#define NPC4_LEADER                                              GC.getGameDefines().getNPC4_LEADER()
 #define PAGE_IN_DIST_SYMBOLS                                     GC.getGameDefines().getPAGE_IN_DIST_SYMBOLS()
 #define CITY_DEFENSE_DAMAGE_HEAL_RATE                            GC.getGameDefines().getCITY_DEFENSE_DAMAGE_HEAL_RATE()
 #define DEFAULT_FLEXIBLE_DIFFICULTY_TURN_INCREMENTS              GC.getGameDefines().getDEFAULT_FLEXIBLE_DIFFICULTY_TURN_INCREMENTS()
@@ -2175,7 +2094,6 @@ protected:
 #define NUM_BUILDING_AND_TECH_PREREQS                            GC.getGameDefines().getNUM_BUILDING_AND_TECH_PREREQS()
 #define TRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT               GC.getGameDefines().getTRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT()
 #define UNIT_UPGRADE_COST_PER_PRODUCTION                         GC.getGameDefines().getUNIT_UPGRADE_COST_PER_PRODUCTION()
-#define ACO_SHOW_DEFENDER_HEALTH_BARS                            GC.getGameDefines().getACO_SHOW_DEFENDER_HEALTH_BARS()
 #define BARREN_TERRAIN                                           GC.getGameDefines().getBARREN_TERRAIN()
 #define IDW_ENABLED                                              GC.getGameDefines().getIDW_ENABLED()
 #define TREAT_NEGATIVE_GOLD_AS_MAINTENANCE                       GC.getGameDefines().getTREAT_NEGATIVE_GOLD_AS_MAINTENANCE()
@@ -2183,7 +2101,6 @@ protected:
 #define DEFY_RESOLUTION_ANGER_DIVISOR                            GC.getGameDefines().getDEFY_RESOLUTION_ANGER_DIVISOR()
 #define CAN_TRADE_MAPS                                           GC.getGameDefines().getCAN_TRADE_MAPS()
 #define CORPORATION_RESOURCE_BASE_INFLUENCE                      GC.getGameDefines().getCORPORATION_RESOURCE_BASE_INFLUENCE()
-#define ACO_FORCE_ORIGINAL_ODDS                                  GC.getGameDefines().getACO_FORCE_ORIGINAL_ODDS()
 #define USE_ON_UPDATE_CALLBACK                                   GC.getGameDefines().getUSE_ON_UPDATE_CALLBACK()
 #define VIEWPORT_FOCUS_BORDER                                    GC.getGameDefines().getVIEWPORT_FOCUS_BORDER()
 #define EVENT_PROBABILITY_ROLL_SIDES                             GC.getGameDefines().getEVENT_PROBABILITY_ROLL_SIDES()
@@ -2475,7 +2392,6 @@ protected:
 #define OC_RESPAWN_HOLY_CITIES                                   GC.getGameDefines().getOC_RESPAWN_HOLY_CITIES()
 #define OWNERSHIP_SCORE_DURATION_THRESHOLD                       GC.getGameDefines().getOWNERSHIP_SCORE_DURATION_THRESHOLD()
 #define REVOLT_TOTAL_CULTURE_MODIFIER                            GC.getGameDefines().getREVOLT_TOTAL_CULTURE_MODIFIER()
-#define ACO_MERGE_SHORT_BARS                                     GC.getGameDefines().getACO_MERGE_SHORT_BARS()
 #define INITIAL_FREE_OUTSIDE_UNITS                               GC.getGameDefines().getINITIAL_FREE_OUTSIDE_UNITS()
 #define NUM_BAY_NAMES                                            GC.getGameDefines().getNUM_BAY_NAMES()
 #define PEAK_SEE_FROM_CHANGE                                     GC.getGameDefines().getPEAK_SEE_FROM_CHANGE()
@@ -2580,7 +2496,6 @@ protected:
 #define DCM_FIGHTER_ENGAGE                                       GC.getGameDefines().getDCM_FIGHTER_ENGAGE()
 #define FORCE_UNOWNED_CITY_TIMER                                 GC.getGameDefines().getFORCE_UNOWNED_CITY_TIMER()
 #define RANGE_COMBAT_DAMAGE                                      GC.getGameDefines().getRANGE_COMBAT_DAMAGE()
-#define ACO_DEBUG                                                GC.getGameDefines().getACO_DEBUG()
 #define CONSCRIPT_POP_ANGER                                      GC.getGameDefines().getCONSCRIPT_POP_ANGER()
 #define FREE_VASSAL_LAND_PERCENT                                 GC.getGameDefines().getFREE_VASSAL_LAND_PERCENT()
 #define HILLS_EXTRA_DEFENSE                                      GC.getGameDefines().getHILLS_EXTRA_DEFENSE()
@@ -2599,7 +2514,6 @@ protected:
 #define USE_GET_CITY_FOUND_VALUE_CALLBACK                        GC.getGameDefines().getUSE_GET_CITY_FOUND_VALUE_CALLBACK()
 #define EXPERIENCE_FROM_WITHDRAWL                                GC.getGameDefines().getEXPERIENCE_FROM_WITHDRAWL()
 #define USE_CAN_FOUND_CITIES_ON_WATER_CALLBACK                   GC.getGameDefines().getUSE_CAN_FOUND_CITIES_ON_WATER_CALLBACK()
-#define ACO_SHOW_MODIFIER_LABELS                                 GC.getGameDefines().getACO_SHOW_MODIFIER_LABELS()
 #define MIN_EXPERIENCE_PER_COMBAT                                GC.getGameDefines().getMIN_EXPERIENCE_PER_COMBAT()
 #define NUKE_FEATURE                                             GC.getGameDefines().getNUKE_FEATURE()
 #define CAN_TRADE_RELIGIONS                                      GC.getGameDefines().getCAN_TRADE_RELIGIONS()
@@ -2703,7 +2617,6 @@ protected:
 #define MINIMUM_DESERT_SIZE                                      GC.getGameDefines().getMINIMUM_DESERT_SIZE()
 #define HOLY_CITY_INFLUENCE                                      GC.getGameDefines().getHOLY_CITY_INFLUENCE()
 #define USE_CAN_DO_COMBAT_CALLBACK                               GC.getGameDefines().getUSE_CAN_DO_COMBAT_CALLBACK()
-#define ACO_SHOW_BASIC_INFO                                      GC.getGameDefines().getACO_SHOW_BASIC_INFO()
 #define MINIMUM_FOREST_SIZE                                      GC.getGameDefines().getMINIMUM_FOREST_SIZE()
 #define NUM_MOUNTAINS_NAMES                                      GC.getGameDefines().getNUM_MOUNTAINS_NAMES()
 #define NUM_WARNING_REVOLTS                                      GC.getGameDefines().getNUM_WARNING_REVOLTS()

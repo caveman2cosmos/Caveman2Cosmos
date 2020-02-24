@@ -715,7 +715,7 @@ void CvPlot::doTurn()
 	// Super Forts begin *bombard*
 	if (!isBombarded() && getDefenseDamage() > 0)
 	{
-		changeDefenseDamage(-(GC.getDefineINT("CITY_DEFENSE_DAMAGE_HEAL_RATE")));
+		changeDefenseDamage(-CITY_DEFENSE_DAMAGE_HEAL_RATE);
 	}
 	setBombarded(false);
 	// Super Forts end

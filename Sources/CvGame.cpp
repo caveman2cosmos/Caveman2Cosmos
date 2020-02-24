@@ -388,7 +388,7 @@ void CvGame::init(HandicapTypes eHandicap)
 		}
 	}
 
-	setStartYear(GC.getDefineINT("START_YEAR"));
+	setStartYear(START_YEAR);
 	m_iDateTurn = -500;
 
 	for (int iI = 0; iI < GC.getNumSpecialUnitInfos(); iI++)
@@ -7481,7 +7481,7 @@ void CvGame::doGlobalWarming()
 				{// GWMod stepped terrain changes M.A.
 					if (pPlot->getTerrainType() == eBarrenTerrain)
 					{
-						if (GC.getDefineINT("GW_MOD_ENABLED"))
+						if (GW_MOD_ENABLED)
 						{
 							if (pPlot->isCoastalLand())
 							{
@@ -11765,7 +11765,7 @@ void CvGame::doFlexibleDifficulty()
 
 			if (iTurns <= 0 || (!kPlayer.isHuman() && isModderGameOption(MODDERGAMEOPTION_AI_USE_FLEXIBLE_DIFFICULTY)))
 			{
-				iTurns = GC.getDefineINT("DEFAULT_FLEXIBLE_DIFFICULTY_TURN_INCREMENTS", 25);
+				iTurns = DEFAULT_FLEXIBLE_DIFFICULTY_TURN_INCREMENTS;
 				iTurns *= GC.getGameSpeedInfo(getGameSpeedType()).getResearchPercent();
 				iTurns /= 100;
 			}
