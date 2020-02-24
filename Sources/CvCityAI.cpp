@@ -11552,8 +11552,8 @@ bool CvCityAI::AI_chooseLeastRepresentedUnit(const char* reason, UnitTypeWeightA
 
 bool CvCityAI::AI_bestSpreadUnit(bool bMissionary, bool bExecutive, int iBaseChance, UnitTypes* eBestSpreadUnit, int* iBestSpreadUnitValue)
 {
-	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
-	CvTeamAI& kTeam = GET_TEAM(getTeam());
+	const CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
+	const CvTeamAI& kTeam = GET_TEAM(getTeam());
 	CvGame& kGame = GC.getGame();
 
 	FAssert(eBestSpreadUnit != NULL && iBestSpreadUnitValue != NULL);
@@ -11564,22 +11564,12 @@ bool CvCityAI::AI_bestSpreadUnit(bool bMissionary, bool bExecutive, int iBaseCha
 	{
 		for (int iReligion = 0; iReligion < GC.getNumReligionInfos(); iReligion++)
 		{
-			ReligionTypes eReligion = (ReligionTypes)iReligion;
-/************************************************************************************************/
-/* Afforess	                  Start		 09/15/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-			int iNeededMissionaries = kPlayer.AI_neededMissionaries(area(), eReligion);
-/*
-			if (isHasReligion(eReligion))
-*/
+			const ReligionTypes eReligion = (ReligionTypes)iReligion;
+			const int iNeededMissionaries = kPlayer.AI_neededMissionaries(area(), eReligion);
+
 			if (isHasReligion(eReligion) && iNeededMissionaries > 0)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 			{
-				int iHasCount = kPlayer.getHasReligionCount(eReligion);
+				const int iHasCount = kPlayer.getHasReligionCount(eReligion);
 				FAssert(iHasCount > 0);
 				int iRoll = (iHasCount > 4) ? iBaseChance : (((100 - iBaseChance) / iHasCount) + iBaseChance);
 				if (kPlayer.AI_isDoStrategy(AI_STRATEGY_MISSIONARY))
@@ -11587,15 +11577,7 @@ bool CvCityAI::AI_bestSpreadUnit(bool bMissionary, bool bExecutive, int iBaseCha
 					iRoll *= (kPlayer.getStateReligion() == eReligion) ? 170 : 65;
 					iRoll /= 100;
 				}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      03/08/10                                jdog5000      */
-/*                                                                                              */
-/* Victory Strategy AI                                                                          */
-/************************************************************************************************/
 				if (kPlayer.AI_isDoVictoryStrategy(AI_VICTORY_CULTURE2))
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 				{
 					iRoll += 25;
 				}
@@ -11607,7 +11589,6 @@ bool CvCityAI::AI_bestSpreadUnit(bool bMissionary, bool bExecutive, int iBaseCha
 						iRoll /= 2;
 					}
 				}
-
 /************************************************************************************************/
 /* RevDCM	                  Start		 5/1/09                                                 */
 /*                                                                                              */
@@ -11630,20 +11611,22 @@ bool CvCityAI::AI_bestSpreadUnit(bool bMissionary, bool bExecutive, int iBaseCha
 
 				if (iRoll > kGame.getSorenRandNum(100, "AI choose missionary"))
 				{
-					int iReligionValue = kPlayer.AI_missionaryValue(area(), eReligion);
+					const int iReligionValue = kPlayer.AI_missionaryValue(area(), eReligion);
 					if (iReligionValue > 0)
 					{
 						for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 						{
-							const int iValue = iReligionValue / GC.getUnitInfo((UnitTypes) iI).getProductionCost();
-
-							if (iValue > iBestValue
-							&& GC.getUnitInfo((UnitTypes) iI).getReligionSpreads(eReligion) > 0
-							&& canTrain((UnitTypes) iI))
+							if (GC.getUnitInfo((UnitTypes) iI).getReligionSpreads(eReligion) > 0
+							&& GC.getUnitInfo((UnitTypes) iI).getProductionCost() > 0)
 							{
-								iBestValue = iValue;
-								*eBestSpreadUnit = (UnitTypes) iI;
-								*iBestSpreadUnitValue = iReligionValue;
+								const int iValue = iReligionValue / GC.getUnitInfo((UnitTypes) iI).getProductionCost();
+
+								if (iValue > iBestValue && canTrain((UnitTypes) iI))
+								{
+									iBestValue = iValue;
+									*eBestSpreadUnit = (UnitTypes) iI;
+									*iBestSpreadUnitValue = iReligionValue;
+								}
 							}
 						}
 					}
@@ -11659,7 +11642,7 @@ bool CvCityAI::AI_bestSpreadUnit(bool bMissionary, bool bExecutive, int iBaseCha
 			CorporationTypes eCorporation = (CorporationTypes)iCorporation;
 			if (isActiveCorporation(eCorporation) && kPlayer.getHasCorporationCount(eCorporation) > 0)
 			{
-				int iHasCount = kPlayer.getHasCorporationCount(eCorporation);
+				const int iHasCount = kPlayer.getHasCorporationCount(eCorporation);
 				FAssert(iHasCount > 0);
 				int iRoll = (iHasCount > 4) ? iBaseChance : (((100 - iBaseChance) / iHasCount) + iBaseChance);
 				if (!kTeam.hasHeadquarters(eCorporation))
@@ -11723,7 +11706,6 @@ bool CvCityAI::AI_bestSpreadUnit(bool bMissionary, bool bExecutive, int iBaseCha
 			}
 		}
 	}
-
 	return (*eBestSpreadUnit != NULL);
 }
 

@@ -13003,7 +13003,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RETINUE_STRATEGIST_DESC</Tag>
 		<English>Strategist (Hero)</English>
-		<French>Stratèsge (Héros)</French>
+		<French>Stratège (Héros)</French>
 		<German>Strategist</German>
 		<Italian>Stratega</Italian>
 		<Spanish>Estratega</Spanish>
@@ -14923,7 +14923,7 @@
 		<Tag>TXT_KEY_PROMOTION_STALK_PREY</Tag>
 		<English>Stalk Prey</English>
 		<French>
-			<Text>Chien Traqueur</Text>
+			<Text>Chien pisteur</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -16069,7 +16069,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TRACKING</Tag>
 		<English>Tracker</English>
-		<French>Traqueur</French>
+		<French>Pisteur</French>
 		<German>Fährtensucher</German>
 		<Italian>Cercatore di tracce</Italian>
 		<Spanish>Rastreo</Spanish>
