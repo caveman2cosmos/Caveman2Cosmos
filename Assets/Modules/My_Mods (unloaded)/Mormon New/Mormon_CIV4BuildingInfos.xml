@@ -236,7 +236,7 @@
 					</Has>
 				</And>
 			</ConstructCondition>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
@@ -303,9 +303,9 @@
 			<HolyCity>RELIGION_MORMON</HolyCity>
 			<ReligionType>RELIGION_MORMON</ReligionType>
 			<GlobalReligionCommerce>RELIGION_MORMON</GlobalReligionCommerce>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>-1</iCost>
@@ -613,7 +613,7 @@
 					</Has>
 				</And>
 			</ConstructCondition>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
@@ -1115,7 +1115,7 @@
 			<FreeBonus>BONUS_CANNED_FOOD</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<FreeBuilding>BUILDINGCLASS_BISHOPS_STOREHOUSE</FreeBuilding>
-			<GreatPeopleUnitClass>UNITCLASS_DOCTOR</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHealthPercentPerPopulation>5</iHealthPercentPerPopulation>
 			<iCost>4440</iCost>

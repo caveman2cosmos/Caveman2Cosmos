@@ -112,7 +112,7 @@
 	<ElementType name="TraitPrereqOr1" content="textOnly"/>
 	<ElementType name="TraitPrereqOr2" content="textOnly"/>
 	<ElementType name="PromotionLine" content="textOnly"/>
-	<ElementType name="GreatPeopleUnitClass" content="textOnly"/>
+	<ElementType name="GreatPeopleUnitType" content="textOnly"/>
 	<ElementType name="PrereqTech" content="textOnly"/>
 	<ElementType name="EraAdvanceFreeSpecialistType" content="textOnly"/>
 	<ElementType name="GoldenAgeonBirthofGreatPersonType" content="textOnly"/>
@@ -883,7 +883,7 @@
 		<element type="iMinAnarchy" minOccurs="0"/>
 		<element type="iMaxTradeRoutesChange" minOccurs="0"/>
 		<element type="iGoldenAgeDurationModifier" minOccurs="0"/>
-		<element type="GreatPeopleUnitClass" minOccurs="0"/>
+		<element type="GreatPeopleUnitType" minOccurs="0"/>
 		<element type="iGreatPeopleRateChange" minOccurs="0"/>
 		<element type="iHurryAngerModifier" minOccurs="0"/>
 		<element type="iHurryCostModifier" minOccurs="0"/>

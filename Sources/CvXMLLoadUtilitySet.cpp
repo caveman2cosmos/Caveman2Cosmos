@@ -1146,6 +1146,11 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 		GC.getTraitInfo((TraitTypes)i).readPass3();
 		GC.getTraitInfoReplacements()->readPass3();
 	}
+	for (int i=0; i < GC.getNumSpecialistInfos(); ++i)
+	{
+		GC.getSpecialistInfo((SpecialistTypes)i).readPass3();
+		GC.getSpecialistInfoReplacements()->readPass3();
+	}
 	OutputDebugString("Pass3 processing complete\n");
 /************************************************************************************************/
 /* Afforess                                END                                                  */

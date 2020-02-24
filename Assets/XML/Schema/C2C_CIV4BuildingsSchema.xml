@@ -544,7 +544,7 @@
 	<ElementType name="fVisibilityPriority" content="textOnly"/>
 	<ElementType name="FreePromotion" content="textOnly"/>
 	<ElementType name="CivicOption" content="textOnly"/>
-	<ElementType name="GreatPeopleUnitClass" content="textOnly"/>
+	<ElementType name="GreatPeopleUnitType" content="textOnly"/>
 	<ElementType name="iGreatPeopleRateChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iHurryAngerModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="bBorderObstacle" content="textOnly" dt:type="boolean"/>
@@ -846,7 +846,7 @@
 		<element type="FreeAreaBuilding" minOccurs="0"/>
 		<element type="FreePromotion" minOccurs="0"/>
 		<element type="CivicOption" minOccurs="0"/>
-		<element type="GreatPeopleUnitClass" minOccurs="0"/>
+		<element type="GreatPeopleUnitType" minOccurs="0"/>
 		<element type="VicinityBonus" minOccurs="0"/>
 		<element type="RawVicinityBonus" minOccurs="0"/>
 		<element type="PrereqVicinityBonuses" minOccurs="0"/>

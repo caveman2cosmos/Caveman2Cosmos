@@ -115,7 +115,7 @@ m_iFoundsCorporation(NO_CORPORATION),
 m_iGlobalReligionCommerce(NO_RELIGION),
 m_iGlobalCorporationCommerce(NO_CORPORATION),
 m_iPrereqAndBonus(NO_BONUS),
-m_iGreatPeopleUnitClass(NO_UNITCLASS),
+m_iGreatPeopleUnitType(NO_UNIT),
 m_iGreatPeopleRateChange(0),
 m_iConquestProbability(50),
 m_iMaintenanceModifier(0),
@@ -892,9 +892,9 @@ int CvBuildingInfo::getPrereqAndBonus() const
 	return m_iPrereqAndBonus;
 }
 
-int CvBuildingInfo::getGreatPeopleUnitClass() const
+int CvBuildingInfo::getGreatPeopleUnitType() const
 {
-	return m_iGreatPeopleUnitClass;
+	return m_iGreatPeopleUnitType;
 }
 
 int CvBuildingInfo::getGreatPeopleRateChange() const
@@ -3229,7 +3229,7 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum)
 	CheckSum(iSum, m_iGlobalReligionCommerce);
 	CheckSum(iSum, m_iGlobalCorporationCommerce);
 	CheckSum(iSum, m_iPrereqAndBonus);
-	CheckSum(iSum, m_iGreatPeopleUnitClass);
+	CheckSum(iSum, m_iGreatPeopleUnitType);
 	CheckSum(iSum, m_iGreatPeopleRateChange);
 	CheckSum(iSum, m_iConquestProbability);
 	CheckSum(iSum, m_iMaintenanceModifier);
@@ -3807,8 +3807,8 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"CivicOption");
 	m_iCivicOption = pXML->GetInfoClass(szTextVal);
 
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"GreatPeopleUnitClass");
-	m_iGreatPeopleUnitClass = pXML->GetInfoClass(szTextVal);
+	pXML->GetOptionalChildXmlValByName(szTextVal, L"GreatPeopleUnitType");
+	m_aszExtraXMLforPass3.push_back(szTextVal);
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"DiploVoteType");
 	m_iVoteSourceType = pXML->GetInfoClass(szTextVal);
@@ -5418,6 +5418,15 @@ bool CvBuildingInfo::readPass3()
 		m_abPrereqAndCivicsforPass3.clear();
 	}
 
+	if (m_aszExtraXMLforPass3.size() < 1)
+	{
+		FAssert(false);
+		return false;
+	}
+	m_iGreatPeopleUnitType = GC.getInfoTypeForString(m_aszExtraXMLforPass3[0]);
+
+	m_aszExtraXMLforPass3.clear();
+
 	return true;
 }
 /************************************************************************************************/
@@ -5514,7 +5523,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 	if (getFreeAreaBuildingClass() == iTextDefault) m_iFreeAreaBuildingClass = pClassInfo->getFreeAreaBuildingClass();
 	if (getFreePromotion() == iTextDefault) m_iFreePromotion = pClassInfo->getFreePromotion();
 	if (getCivicOption() == iTextDefault) m_iCivicOption = pClassInfo->getCivicOption();
-	if (getGreatPeopleUnitClass() == iTextDefault) m_iGreatPeopleUnitClass = pClassInfo->getGreatPeopleUnitClass();
+	if (getGreatPeopleUnitType() == iTextDefault) m_iGreatPeopleUnitType = pClassInfo->getGreatPeopleUnitType();
 	if (getVoteSourceType() == iTextDefault) m_iVoteSourceType = pClassInfo->getVoteSourceType();
 
 	if (getGreatPeopleRateChange() == iDefault) m_iGreatPeopleRateChange = pClassInfo->getGreatPeopleRateChange();

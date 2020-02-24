@@ -15,7 +15,7 @@
 			<Help/>
 			<Texture>Art/Interface/MainScreen/CityScreen/Citizen.dds</Texture>
 			<bVisible>1</bVisible>
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>NONE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<Yields>
 				<iYield>0</iYield>
@@ -46,7 +46,7 @@
 			<Help/>
 			<Texture>Art/Interface/MainScreen/CityScreen/slave.dds</Texture>
 			<bVisible>1</bVisible>
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>NONE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
 				<iYield>1</iYield>
@@ -95,7 +95,7 @@
 			<Help/>
 			<Texture>Art/Interface/MainScreen/CityScreen/Priest.dds</Texture>
 			<bVisible>1</bVisible>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<Yields>
 				<iYield>0</iYield>
@@ -130,7 +130,7 @@
 			<Help/>
 			<Texture>Art/Interface/MainScreen/CityScreen/Artist.dds</Texture>
 			<bVisible>1</bVisible>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<Yields/>
 			<Commerces>
@@ -161,7 +161,7 @@
 			<Help/>
 			<Texture>Art/Interface/MainScreen/CityScreen/scientist.dds</Texture>
 			<bVisible>1</bVisible>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<Yields/>
 			<Commerces>
@@ -186,7 +186,7 @@
 			<Help/>
 			<Texture>Art/Interface/MainScreen/CityScreen/merchant.dds</Texture>
 			<bVisible>1</bVisible>
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<Yields/>
 			<Commerces>
@@ -217,7 +217,7 @@
 			<Help/>
 			<Texture>Art/Interface/MainScreen/CityScreen/engineer.dds</Texture>
 			<bVisible>1</bVisible>
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<Yields>
 				<iYield>0</iYield>
@@ -252,7 +252,7 @@
 			<Help/>
 			<Texture>Art/Interface/MainScreen/CityScreen/noble.dds</Texture>
 			<bVisible>1</bVisible>
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>NONE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<Yields/>
 			<Commerces>
@@ -283,7 +283,7 @@
 			<Help/>
 			<Texture>Art/Interface/Buttons/Specialists/doctor.dds</Texture>
 			<bVisible>1</bVisible>
-			<GreatPeopleUnitClass>UNITCLASS_DOCTOR</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<Commerces>
 				<iCommerce>0</iCommerce>
@@ -320,7 +320,7 @@
 			<Help/>
 			<Texture>Art/Interface/MainScreen/CityScreen/spy.dds</Texture>
 			<bVisible>1</bVisible>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<Yields/>
 			<Commerces>
@@ -352,7 +352,7 @@
 			<Help/>
 			<Texture>Art/Interface/MainScreen/CityScreen/Investigator.dds</Texture>
 			<bVisible>1</bVisible>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_DETECTIVE</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_DETECTIVE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<Yields/>
 			<Commerces>
@@ -395,7 +395,7 @@
 			<Help/>
 			<Texture>Art/Interface/MainScreen/CityScreen/lawyer.dds</Texture>
 			<bVisible>1</bVisible>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_STATESMAN</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_STATESMAN</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<Yields>
 				<iYield>0</iYield>
@@ -453,7 +453,7 @@
 			<Help/>
 			<Texture>Art/Interface/MainScreen/CityScreen/celebrity.dds</Texture>
 			<bVisible>1</bVisible>
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>NONE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<Yields>
 				<iYield>0</iYield>
@@ -490,7 +490,7 @@
 			<Help/>
 			<Texture>Art/Interface/mainscreen/cityscreen/great_statesman.dds</Texture>
 			<bVisible>0</bVisible>
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>NONE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<Yields>
 				<iYield>0</iYield>
@@ -530,7 +530,7 @@
 			<Help/>
 			<Texture>Art/Interface/MainScreen/CityScreen/Great_Priest.dds</Texture>
 			<bVisible>0</bVisible>
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>NONE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<Yields>
 				<iYield>0</iYield>
@@ -565,7 +565,7 @@
 			<Help/>
 			<Texture>Art/Interface/MainScreen/CityScreen/Great_Artist.dds</Texture>
 			<bVisible>0</bVisible>
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>NONE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<Yields/>
 			<Commerces>
@@ -596,7 +596,7 @@
 			<Help/>
 			<Texture>Art/Interface/MainScreen/CityScreen/Great_Scientist.dds</Texture>
 			<bVisible>0</bVisible>
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>NONE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<Yields>
 				<iYield>0</iYield>
@@ -639,7 +639,7 @@
 			<Help/>
 			<Texture>Art/Interface/MainScreen/CityScreen/Great_Merchant.dds</Texture>
 			<bVisible>0</bVisible>
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>NONE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<Yields>
 				<iYield>1</iYield>
@@ -674,7 +674,7 @@
 			<Help/>
 			<Texture>Art/Interface/MainScreen/CityScreen/Great_Engineer.dds</Texture>
 			<bVisible>0</bVisible>
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>NONE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<Yields>
 				<iYield>0</iYield>
@@ -713,7 +713,7 @@
 			<Help/>
 			<Texture>,Art/Interface/MainScreen/CityScreen/Great_Engineer.dds,Art/Interface/Buttons/Warlords_Atlas_2.dds,2,6</Texture>
 			<bVisible>0</bVisible>
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>NONE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<Yields>
 				<iYield>0</iYield>
@@ -748,7 +748,7 @@
 			<Help/>
 			<Texture>Art/Interface/MainScreen/CityScreen/specialist_great_admiral.dds</Texture>
 			<bVisible>0</bVisible>
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>NONE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<Yields>
 				<iYield>0</iYield>
@@ -783,7 +783,7 @@
 			<Help/>
 			<Texture>Art/Interface/MainScreen/CityScreen/great_hunter.dds</Texture>
 			<bVisible>0</bVisible>
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>NONE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<Yields>
 				<iYield>5</iYield>
@@ -813,7 +813,7 @@
 			<Help/>
 			<Texture>,Art/Interface/Buttons/TechTree/Corporation.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,6,14</Texture>
 			<bVisible>0</bVisible>
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>NONE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<Yields/>
 			<Commerces>
@@ -849,7 +849,7 @@
 			<Help/>
 			<Texture>Art/Interface/MainScreen/CityScreen/android.dds</Texture>
 			<bVisible>0</bVisible>
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>NONE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<Yields>
 				<iYield>0</iYield>
@@ -875,7 +875,7 @@
 			<Help/>
 			<Texture>Art/Interface/MainScreen/CityScreen/Citizen.dds</Texture>
 			<bVisible>1</bVisible>
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>NONE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<Yields>
 				<iYield>-3</iYield>
@@ -906,7 +906,7 @@
 			<Help/>
 			<Texture>Art/Interface/Buttons/Specialists/Warlord_Instructor.dds</Texture>
 			<bVisible>0</bVisible>
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>NONE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<Yields>
 				<iYield>0</iYield>
@@ -941,7 +941,7 @@
 			<Help/>
 			<Texture>Art/Interface/MainScreen/CityScreen/slave.dds</Texture>
 			<bVisible>0</bVisible>
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>NONE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
 				<iYield>1</iYield>
@@ -983,7 +983,7 @@
 			<Help/>
 			<Texture>Art/Interface/MainScreen/CityScreen/Citizen.dds</Texture>
 			<bVisible>0</bVisible>
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>NONE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<Yields>
 				<iYield>-2</iYield>
@@ -1009,7 +1009,7 @@
 			<Help/>
 			<Texture>Art/Interface/mainscreen/cityscreen/specialist_gladiator.dds</Texture>
 			<bVisible>0</bVisible>
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>NONE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<Yields>
 				<iYield>0</iYield>
@@ -1044,7 +1044,7 @@
 			<Help/>
 			<Texture>Art/Interface/buttons/specialists/great_doctor.dds</Texture>
 			<bVisible>0</bVisible>
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>NONE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<Commerces>
 				<iCommerce>0</iCommerce>
@@ -1077,7 +1077,7 @@
 			<Help/>
 			<Texture>Art/Interface/MainScreen/CityScreen/Detective.dds</Texture>
 			<bVisible>0</bVisible>
-			<!--GreatPeopleUnitClass>UNITCLASS_GREAT_DETECTIVE</GreatPeopleUnitClass>
+			<!--GreatPeopleUnitType>UNITCLASS_GREAT_DETECTIVE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange-->
 			<Yields/>
 			<Commerces>
@@ -1120,7 +1120,7 @@
 			<Help/>
 			<Texture>Art/Interface/MainScreen/CityScreen/slave_food.dds</Texture>
 			<bVisible>0</bVisible>
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>NONE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
 				<iYield>8</iYield>
@@ -1162,7 +1162,7 @@
 			<Help/>
 			<Texture>Art/Interface/MainScreen/CityScreen/slave_production.dds</Texture>
 			<bVisible>0</bVisible>
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>NONE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
 				<iYield>-2</iYield>
@@ -1204,7 +1204,7 @@
 			<Help/>
 			<Texture>Art/Interface/MainScreen/CityScreen/slave_commerce.dds</Texture>
 			<bVisible>0</bVisible>
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>NONE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
 				<iYield>-2</iYield>
@@ -1246,7 +1246,7 @@
 			<Help/>
 			<Texture>Art/Interface/MainScreen/CityScreen/slave_sanitation.dds</Texture>
 			<bVisible>0</bVisible>
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>NONE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
 				<iYield>-2</iYield>
@@ -1302,7 +1302,7 @@
 			<Help/>
 			<Texture>Art/Interface/MainScreen/CityScreen/slave_health.dds</Texture>
 			<bVisible>0</bVisible>
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>NONE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
 				<iYield>-2</iYield>
@@ -1344,7 +1344,7 @@
 			<Help/>
 			<Texture>Art/Interface/MainScreen/CityScreen/slave_entertainment.dds</Texture>
 			<bVisible>0</bVisible>
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>NONE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
 				<iYield>-2</iYield>
@@ -1386,7 +1386,7 @@
 			<Help/>
 			<Texture>Art/Interface/MainScreen/CityScreen/slave_tutor.dds</Texture>
 			<bVisible>0</bVisible>
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>NONE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
 				<iYield>-2</iYield>
@@ -1435,7 +1435,7 @@
 			<Help/>
 			<Texture>Art/Interface/MainScreen/CityScreen/slave_military.dds</Texture>
 			<bVisible>0</bVisible>
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>NONE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
 				<iYield>-2</iYield>
@@ -1477,7 +1477,7 @@
 			<Help/>
 			<Texture>Art/Interface/MainScreen/CityScreen/slave_crime_prevention.dds</Texture>
 			<bVisible>0</bVisible>
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>NONE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
 				<iYield>-2</iYield>
