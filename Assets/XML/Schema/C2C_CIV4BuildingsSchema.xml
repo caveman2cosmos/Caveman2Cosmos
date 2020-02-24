@@ -58,7 +58,6 @@
 	<ElementType name="FreePromoTypes" content="eltOnly">
 		<element type="FreePromoType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	</ElementType>
 	<ElementType name="FreeTraitTypes" content="eltOnly">
 		<element type="TraitType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
