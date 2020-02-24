@@ -32,19 +32,19 @@ GC = CyGlobalContext()
 
 def onUnitBuilt(argsList):
 	CyCity = argsList[0]
-	unit = argsList[1]
-	CyPlayer = GC.getPlayer(CyCity.getOwner())
+	CyUnit = argsList[1]
 
-# Female Missionaries - saibotlieh
-
-	iUnitType = unit.getUnitType()
+	iUnitType = CyUnit.getUnitType()
 	UnitInfo = GC.getUnitInfo(iUnitType)
+	sUnitType = UnitInfo.getType()
+
+	# Female Missionaries - saibotlieh
 	if UnitInfo.getDefaultUnitAIType() == GC.getInfoTypeForString('UNITAI_MISSIONARY'):
-		sUnitType = UnitInfo.getType()
 		sFemaleUnitType = 'UNIT_FEMALE'+sUnitType[4:]
 		iFemaleUnitType = GC.getInfoTypeForString(sFemaleUnitType)
 
 		if iFemaleUnitType > -1:
+			CyPlayer = GC.getPlayer(CyCity.getOwner())
 			if CyPlayer.isCivic(GC.getInfoTypeForString('CIVIC_EGALITARIAN')):
 				iFemaleChance = 50
 			else:
@@ -52,31 +52,33 @@ def onUnitBuilt(argsList):
 
 			iRnd = CyGame().getSorenRandNum(100, "Female unit")
 			if iRnd < iFemaleChance:
-				oldunit = unit
-				pFemaleUnit = CyPlayer.initUnit(iFemaleUnitType,oldunit.getX(),oldunit.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-				pFemaleUnit.convert(oldunit)
+				oldunit = CyUnit
+				CyUnit = CyPlayer.initUnit(iFemaleUnitType,oldunit.getX(),oldunit.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
+				CyUnit.convert(oldunit)
 				if oldunit.getGroup().isAutomated():
-					pFemaleUnit.getGroup().setAutomateType(AutomateTypes.AUTOMATE_RELIGION)
-				## If city has a rally point send the female missionary there
-				else:
+					CyUnit.getGroup().setAutomateType(AutomateTypes.AUTOMATE_RELIGION)
+
+				else: # If city has a rally point send the female missionary there
 					rallyPlot = CyCity.getRallyPlot()
-					# if not (rallyPlot == None):
 					if rallyPlot.getX() > -1 and rallyPlot.getY() > -1:
-						pFemaleUnit.getGroup().pushMission(MissionTypes.MISSION_MOVE_TO, rallyPlot.getX(), rallyPlot.getY(), 0, False, True, MissionAITypes.NO_MISSIONAI, pFemaleUnit.plot(), pFemaleUnit)
+						CyUnit.getGroup().pushMission(MissionTypes.MISSION_MOVE_TO, rallyPlot.getX(), rallyPlot.getY(), 0, False, True, MissionAITypes.NO_MISSIONAI, CyUnit.plot(), CyUnit)
 				oldunit.kill(False, oldunit.getOwner())
 
 				## Fa Men Si
 				FA_MEN_SI = GC.getInfoTypeForString("BUILDING_FA_MEN_SI")
 				if FA_MEN_SI > -1 and CyPlayer.countNumBuildings(FA_MEN_SI):
-					pFemaleUnit.setHasPromotion(GC.getInfoTypeForString("PROMOTION_FA_MEN_SI_INSPIRED"),True)
+					CyUnit.setHasPromotion(GC.getInfoTypeForString("PROMOTION_FA_MEN_SI_INSPIRED"),True)
+				return
 
-# Beastmaster - saibotlieh
 
-	sUnitType = UnitInfo.getType()
-
+	# Beastmaster - saibotlieh
 	if sUnitType[:10] == 'UNIT_TAMED':	# A Beastmaster will be added to all units which first 10 letters of the UnitType are UNIT_TAMED
-		iRnd = CyGame().getSorenRandNum(100, "Female Beastmaster")
-		if iRnd < 15:
-			unit.setLeaderUnitType(GC.getInfoTypeForString("UNIT_FEMALE_BEASTMASTER"))
+		if GC.getPlayer(CyCity.getOwner()).isCivic(GC.getInfoTypeForString('CIVIC_EGALITARIAN')):
+			iOdds = 50
 		else:
-			unit.setLeaderUnitType(GC.getInfoTypeForString("UNIT_BEASTMASTER"))
+			iOdds = 15
+		iRnd = CyGame().getSorenRandNum(100, "Female Beastmaster")
+		if iRnd < iOdds:
+			CyUnit.setLeaderUnitType(GC.getInfoTypeForString("UNIT_FEMALE_BEASTMASTER"))
+		else:
+			CyUnit.setLeaderUnitType(GC.getInfoTypeForString("UNIT_BEASTMASTER"))

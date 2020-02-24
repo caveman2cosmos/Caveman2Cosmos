@@ -12,6 +12,11 @@
 			<DefaultUnit>UNIT_BEASTMASTER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
+			<Type>UNITCLASS_FEMALE_BEASTMASTER</Type>
+			<Description>TXT_KEY_UNIT_BEASTMASTER</Description>
+			<DefaultUnit>UNIT_FEMALE_BEASTMASTER</DefaultUnit>
+		</UnitClassInfo>
+		<UnitClassInfo>
 			<Type>UNITCLASS_SETTLER</Type>
 			<Description>TXT_KEY_UNIT_SETTLER</Description>
 			<DefaultUnit>UNIT_SETTLER</DefaultUnit>
