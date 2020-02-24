@@ -27200,6 +27200,8 @@ bool CvTraitInfo::isValidTrait(bool bGameStart) const
 		return false;
 	}
 
+	if (isCivilizationTrait()) return true;
+
 	if (GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS))
 	{
 		if (getLinePriority() == 0)
@@ -28465,10 +28467,10 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 	m_ePromotionLine = (PromotionLineTypes) pXML->GetInfoClass(szTextVal);
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"GreatPeopleUnitType");
-	m_aszExtraXMLforPass3.push_back(szTextVal);
+	m_iGreatPeopleUnitType = (UnitTypes) pXML->GetInfoClass(szTextVal);
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"GoldenAgeonBirthofGreatPersonType");
-	m_aszExtraXMLforPass3.push_back(szTextVal);
+	m_iGoldenAgeonBirthofGreatPeopleType = (UnitTypes) pXML->GetInfoClass(szTextVal);
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PrereqTech");
 	m_ePrereqTech = (TechTypes) pXML->GetInfoClass(szTextVal);
@@ -29578,11 +29580,11 @@ void CvTraitInfo::copyNonDefaults(CvTraitInfo* pClassInfo, CvXMLLoadUtility* pXM
 	//TB Traits Mods begin
 	//Textual References
 	if (getPromotionLine() == NO_PROMOTIONLINE) m_ePromotionLine = pClassInfo->getPromotionLine();
-	if (getGreatPeopleUnitType() == NO_UNIT) m_iGreatPeopleUnitType = pClassInfo->getGreatPeopleUnitType();
+	if (m_iGreatPeopleUnitType == NO_UNIT) m_iGreatPeopleUnitType = pClassInfo->m_iGreatPeopleUnitType;
+	if (m_iGoldenAgeonBirthofGreatPeopleType == NO_UNIT) m_iGoldenAgeonBirthofGreatPeopleType = pClassInfo->m_iGoldenAgeonBirthofGreatPeopleType;
 	if (getPrereqTech() == NO_TECH) m_ePrereqTech = pClassInfo->getPrereqTech();
 //Team Project (6)
 	if (getEraAdvanceFreeSpecialistType() == NO_SPECIALIST) m_eEraAdvanceFreeSpecialistType = pClassInfo->getEraAdvanceFreeSpecialistType();
-	if (getGoldenAgeonBirthofGreatPeopleType() == NO_UNIT) m_iGoldenAgeonBirthofGreatPeopleType = pClassInfo->getGoldenAgeonBirthofGreatPeopleType();
 	//integers
 	if (getWarWearinessAccumulationModifier() == iDefault) m_iWarWearinessAccumulationModifier = pClassInfo->getWarWearinessAccumulationModifier();
 	if (getCivicAnarchyTimeModifier() == iDefault) m_iCivicAnarchyTimeModifier = pClassInfo->getCivicAnarchyTimeModifier();
@@ -30055,21 +30057,6 @@ void CvTraitInfo::copyNonDefaultsReadPass2(CvTraitInfo* pClassInfo, CvXMLLoadUti
 	if (bOver || getPrereqOrTrait2() == iTextDefault) m_iPrereqOrTrait2 = pClassInfo->getPrereqOrTrait2();
 }
 
-bool CvTraitInfo::readPass3()
-{
-	if (m_aszExtraXMLforPass3.size() < 1)
-	{
-		FAssert(false);
-		return false;
-	}
-	m_iGreatPeopleUnitType = GC.getInfoTypeForString(m_aszExtraXMLforPass3[0]);
-
-	m_iGoldenAgeonBirthofGreatPeopleType = GC.getInfoTypeForString(m_aszExtraXMLforPass3[1]);
-
-	m_aszExtraXMLforPass3.clear();
-	return true;
-}
-
 void CvTraitInfo::getCheckSum(unsigned int& iSum)
 {
 	for ( int j = 0; j < GC.getNumPromotionInfos(); j++ )
@@ -30119,9 +30106,9 @@ void CvTraitInfo::getCheckSum(unsigned int& iSum)
 	CheckSum(iSum, m_iPrereqOrTrait2);
 	CheckSum(iSum, m_ePromotionLine);
 	CheckSum(iSum, m_iGreatPeopleUnitType);
+	CheckSum(iSum, m_iGoldenAgeonBirthofGreatPeopleType);
 	CheckSum(iSum, m_ePrereqTech);
 	CheckSum(iSum, m_eEraAdvanceFreeSpecialistType);
-	CheckSum(iSum, m_iGoldenAgeonBirthofGreatPeopleType);
 	//integers
 	CheckSum(iSum, m_iWarWearinessAccumulationModifier);
 	CheckSum(iSum, m_iCivicAnarchyTimeModifier);

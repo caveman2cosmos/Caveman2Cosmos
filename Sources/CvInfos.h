@@ -4000,7 +4000,7 @@ public:
 	const FreePromoTypes& getFreePromoType(int iPromotion) const;
 
 	int getNumFreeTraitTypes() const;
-	FreeTraitTypes& getFreeTraitType(int iIndex);
+	int getFreeTraitType(int iIndex) const;
 
 	int getNumHealUnitCombatTypes() const;
 	HealUnitCombat& getHealUnitCombatType(int iUnitCombat);
@@ -4424,7 +4424,7 @@ protected:
 	BoolExpr* m_pExprFreePromotionCondition;*/
 	//Structs
 	std::vector<FreePromoTypes> m_aFreePromoTypes;
-	std::vector<FreeTraitTypes> m_aFreeTraitTypes;
+	std::vector<int> m_aiFreeTraitTypes;
 	std::vector<HealUnitCombat> m_aHealUnitCombatTypes;
 	std::vector<EnabledCivilizations> m_aEnabledCivilizationTypes;
 	std::vector<BonusAidModifiers> m_aBonusAidModifiers;
@@ -7633,7 +7633,7 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
-	bool readPass3();
+
 	void copyNonDefaults(CvTraitInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL );
 	void copyNonDefaultsReadPass2(CvTraitInfo* pClassInfo = NULL , CvXMLLoadUtility* pXML = NULL, bool bOver = false);
 	void getCheckSum(unsigned int& iSum);

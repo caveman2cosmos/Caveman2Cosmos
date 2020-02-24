@@ -23940,7 +23940,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 
 	for (int iI = 0; iI < kBuilding.getNumFreeTraitTypes(); iI++)
 	{
-		TraitTypes eTrait = kBuilding.getFreeTraitType(iI).eTrait;
+		TraitTypes eTrait = (TraitTypes) kBuilding.getFreeTraitType(iI);
 		if (GC.getTraitInfo(eTrait).isCivilizationTrait())
 		{
 			szBuffer.append(NEWLINE);

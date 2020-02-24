@@ -17656,9 +17656,7 @@
 				</UnitCombatProdModifier>
 			</UnitCombatProdModifiers>
 			<FreeTraitTypes>
-				<FreeTraitType>
-					<TraitType>TRAIT_ANCIENT_WAY_OF_THE_FIST</TraitType>
-				</FreeTraitType>
+				<TraitType>TRAIT_ANCIENT_WAY_OF_THE_FIST</TraitType>
 			</FreeTraitTypes>
 			<!-- Misc -->
 			<iAsset>3</iAsset>
@@ -17711,9 +17709,7 @@
 				</UnitCombatProdModifier>
 			</UnitCombatProdModifiers>
 			<FreeTraitTypes>
-				<FreeTraitType>
-					<TraitType>TRAIT_ANCIENT_WAY_OF_THE_FEATHER</TraitType>
-				</FreeTraitType>
+				<TraitType>TRAIT_ANCIENT_WAY_OF_THE_FEATHER</TraitType>
 			</FreeTraitTypes>
 			<!-- Misc -->
 			<iAsset>3</iAsset>
@@ -17768,9 +17764,7 @@
 				</UnitCombatProdModifier>
 			</UnitCombatProdModifiers>
 			<FreeTraitTypes>
-				<FreeTraitType>
-					<TraitType>TRAIT_ANCIENT_WAY_OF_THE_SHADOWS</TraitType>
-				</FreeTraitType>
+				<TraitType>TRAIT_ANCIENT_WAY_OF_THE_SHADOWS</TraitType>
 			</FreeTraitTypes>
 			<!-- Misc -->
 			<iAsset>3</iAsset>
@@ -17826,9 +17820,7 @@
 				</UnitCombatProdModifier>
 			</UnitCombatProdModifiers>
 			<FreeTraitTypes>
-				<FreeTraitType>
-					<TraitType>TRAIT_ANCIENT_WAY_OF_THE_CENTAUR</TraitType>
-				</FreeTraitType>
+				<TraitType>TRAIT_ANCIENT_WAY_OF_THE_CENTAUR</TraitType>
 			</FreeTraitTypes>
 			<!-- Misc -->
 			<iAsset>3</iAsset>
@@ -17875,9 +17867,7 @@
 				</UnitCombatProdModifier>
 			</UnitCombatProdModifiers>
 			<FreeTraitTypes>
-				<FreeTraitType>
-					<TraitType>TRAIT_ANCIENT_WAY_OF_THE_WARRIOR</TraitType>
-				</FreeTraitType>
+				<TraitType>TRAIT_ANCIENT_WAY_OF_THE_WARRIOR</TraitType>
 			</FreeTraitTypes>
 			<!-- Misc -->
 			<iAsset>3</iAsset>
@@ -17928,9 +17918,7 @@
 				</UnitCombatProdModifier>
 			</UnitCombatProdModifiers>
 			<FreeTraitTypes>
-				<FreeTraitType>
-					<TraitType>TRAIT_ANCIENT_WAY_OF_THE_WAVES</TraitType>
-				</FreeTraitType>
+				<TraitType>TRAIT_ANCIENT_WAY_OF_THE_WAVES</TraitType>
 			</FreeTraitTypes>
 			<!-- Misc -->
 			<iAsset>3</iAsset>
@@ -17977,9 +17965,7 @@
 				</UnitCombatProdModifier>
 			</UnitCombatProdModifiers>
 			<FreeTraitTypes>
-				<FreeTraitType>
-					<TraitType>TRAIT_ANCIENT_WAY_OF_THE_WIND</TraitType>
-				</FreeTraitType>
+				<TraitType>TRAIT_ANCIENT_WAY_OF_THE_WIND</TraitType>
 			</FreeTraitTypes>
 			<!-- Misc -->
 			<iAsset>3</iAsset>
@@ -18026,9 +18012,7 @@
 				</UnitCombatProdModifier>
 			</UnitCombatProdModifiers>
 			<FreeTraitTypes>
-				<FreeTraitType>
-					<TraitType>TRAIT_ANCIENT_WAY_OF_THE_WILD</TraitType>
-				</FreeTraitType>
+				<TraitType>TRAIT_ANCIENT_WAY_OF_THE_WILD</TraitType>
 			</FreeTraitTypes>
 			<!-- Misc -->
 			<iAsset>3</iAsset>
@@ -18075,9 +18059,7 @@
 				</UnitCombatProdModifier>
 			</UnitCombatProdModifiers>
 			<FreeTraitTypes>
-				<FreeTraitType>
-					<TraitType>TRAIT_ANCIENT_WAY_OF_THE_LEECH</TraitType>
-				</FreeTraitType>
+				<TraitType>TRAIT_ANCIENT_WAY_OF_THE_LEECH</TraitType>
 			</FreeTraitTypes>
 			<!-- Misc -->
 			<iAsset>3</iAsset>
@@ -18127,9 +18109,7 @@
 				</UnitCombatProdModifier>
 			</UnitCombatProdModifiers>
 			<FreeTraitTypes>
-				<FreeTraitType>
-					<TraitType>TRAIT_ANCIENT_WAY_OF_THE_WOLF</TraitType>
-				</FreeTraitType>
+				<TraitType>TRAIT_ANCIENT_WAY_OF_THE_WOLF</TraitType>
 			</FreeTraitTypes>
 			<!-- Misc -->
 			<iAsset>3</iAsset>

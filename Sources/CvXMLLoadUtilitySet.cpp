@@ -987,7 +987,6 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	LoadGlobalClassInfo(GC.getPromotionLineInfos(), "CIV4PromotionLineInfos", "Units", L"/Civ4PromotionLineInfos/PromotionLineInfos/PromotionLineInfo", false);
 	//TB Promotion Line Mod begin
 	LoadGlobalClassInfo(GC.getPromotionInfos(), "CIV4PromotionInfos", "Units", L"/Civ4PromotionInfos/PromotionInfos/PromotionInfo", true, GC.getPromotionInfoReplacements());
-	LoadGlobalClassInfo(GC.getTraitInfos(), "CIV4TraitInfos", "Civilizations", L"/Civ4TraitInfos/TraitInfos/TraitInfo", true, GC.getTraitInfoReplacements());
 	LoadGlobalClassInfo(GC.getBuildingClassInfos(), "CIV4BuildingClassInfos", "Buildings", L"/Civ4BuildingClassInfos/BuildingClassInfos/BuildingClassInfo", false, GC.getBuildingClassInfoReplacements());
 	LoadGlobalClassInfo(GC.getHurryInfos(), "CIV4HurryInfo", "GameInfo", L"/Civ4HurryInfo/HurryInfos/HurryInfo", false);
 	LoadGlobalClassInfo(GC.getCorporationInfos(), "CIV4CorporationInfo", "GameInfo", L"/Civ4CorporationInfo/CorporationInfos/CorporationInfo", false, GC.getCorporationInfoReplacements());
@@ -1011,6 +1010,18 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	{
 		GC.getVoteSourceInfo((VoteSourceTypes)i).readPass3();
 	}
+	LoadGlobalClassInfo(GC.getPlayerColorInfos(), "CIV4PlayerColorInfos", "Interface", L"/Civ4PlayerColorInfos/PlayerColorInfos/PlayerColorInfo", false);
+	LoadGlobalClassInfo(GC.getBuildInfos(), "CIV4BuildInfos", "Units", L"/Civ4BuildInfos/BuildInfos/BuildInfo", false, GC.getBuildInfoReplacements());
+
+	LoadGlobalClassInfo(GC.getOutcomeInfos(), "CIV4OutcomeInfos", "GameInfo", L"/Civ4OutcomeInfos/OutcomeInfos/OutcomeInfo", true);
+
+	//	AlbertS2: Register mission types
+	GC.registerMissions();
+	LoadGlobalClassInfo(GC.getMissionInfos(), "CIV4MissionInfos", "Units", L"/Civ4MissionInfos/MissionInfos/MissionInfo", false);
+	LoadGlobalClassInfo(GC.getUnitInfos(), "CIV4UnitInfos", "Units", L"/Civ4UnitInfos/UnitInfos/UnitInfo", false, GC.getUnitInfoReplacements());
+
+	LoadGlobalClassInfo(GC.getTraitInfos(), "CIV4TraitInfos", "Civilizations", L"/Civ4TraitInfos/TraitInfos/TraitInfo", true, GC.getTraitInfoReplacements());
+
 	LoadGlobalClassInfo(GC.getLeaderHeadInfos(), "CIV4LeaderHeadInfos", "Civilizations", L"/Civ4LeaderHeadInfos/LeaderHeadInfos/LeaderHeadInfo", false, GC.getLeaderHeadInfoReplacements());
 /************************************************************************************************/
 /* SORT_ALPHABET                           11/17/07                                MRGENIE      */
@@ -1027,16 +1038,6 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 /************************************************************************************************/
 /* SORT_ALPHABET                           END                                                  */
 /************************************************************************************************/
-	LoadGlobalClassInfo(GC.getPlayerColorInfos(), "CIV4PlayerColorInfos", "Interface", L"/Civ4PlayerColorInfos/PlayerColorInfos/PlayerColorInfo", false);
-	LoadGlobalClassInfo(GC.getBuildInfos(), "CIV4BuildInfos", "Units", L"/Civ4BuildInfos/BuildInfos/BuildInfo", false, GC.getBuildInfoReplacements());
-
-	LoadGlobalClassInfo(GC.getOutcomeInfos(), "CIV4OutcomeInfos", "GameInfo", L"/Civ4OutcomeInfos/OutcomeInfos/OutcomeInfo", true);
-
-	//	AlbertS2: Register mission types
-	GC.registerMissions();
-	LoadGlobalClassInfo(GC.getMissionInfos(), "CIV4MissionInfos", "Units", L"/Civ4MissionInfos/MissionInfos/MissionInfo", false);
-	LoadGlobalClassInfo(GC.getUnitInfos(), "CIV4UnitInfos", "Units", L"/Civ4UnitInfos/UnitInfos/UnitInfo", false, GC.getUnitInfoReplacements());
-
 	for (int i=0; i < GC.getNumUnitClassInfos(); ++i)
 	{
 		GC.getUnitClassInfo((UnitClassTypes)i).readPass3();
@@ -1139,18 +1140,6 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	{
 		GC.getUnitInfo((UnitTypes)i).readPass3();
 		GC.getUnitInfoReplacements()->readPass3();
-	}
-	
-	for (int i=0; i < GC.getNumTraitInfos(); ++i)
-	{
-		GC.getTraitInfo((TraitTypes)i).readPass3();
-/* Toffer: I couldn't get the replacements to add values to m_aszExtraXMLforPass3. . .
-	This became an issue when I swapped out UNITCLASS_X with UNIT_X tags
-	UNITS are parsed after traits so their values can't be resolved until some time after readPass2 for traits has finished, like here.
-	I don't know if this is a real issue, or that the commenting out below actually breaks the replacements,
-	as I don't have the required insight into how the replacments get thier values in the first place.
-*/
-		//GC.getTraitInfoReplacements()->readPass3();
 	}
 	for (int i=0; i < GC.getNumSpecialistInfos(); ++i)
 	{
