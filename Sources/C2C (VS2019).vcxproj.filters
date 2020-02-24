@@ -629,6 +629,9 @@
     <ClInclude Include="CvGameCoreUtils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CvGameDefines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="CvGameObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>

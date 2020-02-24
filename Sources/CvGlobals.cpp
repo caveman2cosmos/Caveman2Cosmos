@@ -2,6 +2,7 @@
 // globals.cpp
 //
 #include "CvGameCoreDLL.h"
+#include "CvGameDefines.h"
 #include "CvMapExternal.h"
 #include <time.h> 
 #include <sstream>
@@ -206,6 +207,7 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_asyncRand(NULL)
 	, m_interface(NULL)
 	, m_game(NULL)
+	, m_GameDefines(NULL)
 	, m_messageQueue(NULL)
 	, m_hotJoinMsgQueue(NULL)
 	, m_messageControl(NULL)
@@ -795,7 +797,8 @@ void cvInternalGlobals::uninit()
 	SAFE_DELETE_ARRAY(m_aeTurnRightDirection);
 
 	SAFE_DELETE(m_game);
-	
+	//SAFE_DELETE(m_GameDefines);
+
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
@@ -3814,6 +3817,8 @@ FVariableSystem* cvInternalGlobals::getDefinesVarSystem() const
 void cvInternalGlobals::cacheGlobals()
 {
 	OutputDebugString("Caching Globals: Start");
+
+	m_GameDefines = new CvGameDefines(*this);
 
 	strcpy(gVersionString, getDefineSTRING("C2C_VERSION"));
 

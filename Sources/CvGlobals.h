@@ -15,6 +15,7 @@ class FProfiler;
 class CvDLLUtilityIFaceBase;
 class CvRandom;
 class CvGameAI;
+class CvGameDefines;
 class CMessageControl;
 class CvDropMgr;
 class CMessageQueue;
@@ -238,6 +239,7 @@ public:
 /*******************************/
 	inline CvGameAI& getGame() const { return *m_game; }
 	CvGameAI* getGamePointer();
+	inline const CvGameDefines& getGameDefines() const { return *m_GameDefines; }
 	CvRandom& getASyncRand();
 	CMessageQueue& getMessageQueue();
 	CMessageQueue& getHotMessageQueue();
@@ -1966,6 +1968,8 @@ protected:
 
 	bool m_bSignsCleared;
 	bool m_bIsInPedia;
+
+	const CvGameDefines* m_GameDefines;
 };
 
 extern cvInternalGlobals* gGlobals;	// for debugging
