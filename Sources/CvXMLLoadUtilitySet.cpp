@@ -1144,7 +1144,13 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	for (int i=0; i < GC.getNumTraitInfos(); ++i)
 	{
 		GC.getTraitInfo((TraitTypes)i).readPass3();
-		GC.getTraitInfoReplacements()->readPass3();
+/* Toffer: I couldn't get the replacements to add values to m_aszExtraXMLforPass3. . .
+	This became an issue when I swapped out UNITCLASS_X with UNIT_X tags
+	UNITS are parsed after traits so their values can't be resolved until some time after readPass2 for traits has finished, like here.
+	I don't know if this is a real issue, or that the commenting out below actually breaks the replacements,
+	as I don't have the required insight into how the replacments get thier values in the first place.
+*/
+		//GC.getTraitInfoReplacements()->readPass3();
 	}
 	for (int i=0; i < GC.getNumSpecialistInfos(); ++i)
 	{
