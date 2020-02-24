@@ -492,16 +492,11 @@ void CvPlayer::init(PlayerTypes eID)
 			resetTriggerFired((EventTriggerTypes)iI);
 		}
 
-		for (iI = 0; iI < GC.getNumUnitClassInfos(); ++iI)
+		for (iI = 0; iI < GC.getNumUnitInfos(); ++iI)
 		{
-			UnitTypes eUnit = ((UnitTypes)(GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(iI)));
-
-			if (NO_UNIT != eUnit)
+			if (GC.getUnitInfo((UnitTypes)iI).isFound())
 			{
-				if (GC.getUnitInfo(eUnit).isFound())
-				{
-					setUnitExtraCost((UnitClassTypes)iI, getNewCityProductionValue());
-				}
+				setUnitExtraCost((UnitClassTypes)GC.getUnitInfo((UnitTypes)iI).getUnitClassType(), getNewCityProductionValue());
 			}
 		}
 	}
@@ -728,16 +723,11 @@ void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 			resetEventOccured((EventTypes)iI, false);
 		}
 
-		for (iI = 0; iI < GC.getNumUnitClassInfos(); ++iI)
+		for (iI = 0; iI < GC.getNumUnitInfos(); ++iI)
 		{
-			UnitTypes eUnit = ((UnitTypes)(GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(iI)));
-
-			if (NO_UNIT != eUnit)
+			if (GC.getUnitInfo((UnitTypes)iI).isFound())
 			{
-				if (GC.getUnitInfo(eUnit).isFound())
-				{
-					setUnitExtraCost((UnitClassTypes)iI, getNewCityProductionValue());
-				}
+				setUnitExtraCost((UnitClassTypes)GC.getUnitInfo((UnitTypes)iI).getUnitClassType(), getNewCityProductionValue());
 			}
 		}
 	}
@@ -1868,21 +1858,19 @@ void CvPlayer::changePersonalityType( )
 //
 void CvPlayer::resetCivTypeEffects( )
 {
-	int iI;
-
 	if (!isAlive())
 	{
-		for (iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
 		{
 			setCivics(((CivicOptionTypes)iI), ((CivicTypes)(GC.getCivilizationInfo(getCivilizationType()).getCivilizationInitialCivics(iI))));
 		}
 
-		for (iI = 0; iI < GC.getNumEventInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumEventInfos(); iI++)
 		{
 			resetEventOccured((EventTypes)iI, false);
 		}
 
-		for (iI = 0; iI < GC.getNumEventTriggerInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumEventTriggerInfos(); iI++)
 		{
 			if( (!GC.getEventTriggerInfo((EventTriggerTypes)iI).isGlobal()) && (!GC.getEventTriggerInfo((EventTriggerTypes)iI).isTeam() || GET_TEAM(getTeam()).getNumMembers() == 1) )
 			{
@@ -1891,16 +1879,11 @@ void CvPlayer::resetCivTypeEffects( )
 		}
 	}
 
-	for (iI = 0; iI < GC.getNumUnitClassInfos(); ++iI)
+	for (int iI = 0; iI < GC.getNumUnitInfos(); ++iI)
 	{
-		UnitTypes eUnit = ((UnitTypes)(GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(iI)));
-
-		if (NO_UNIT != eUnit)
+		if (GC.getUnitInfo((UnitTypes)iI).isFound())
 		{
-			if (GC.getUnitInfo(eUnit).isFound())
-			{
-				setUnitExtraCost((UnitClassTypes)iI, getNewCityProductionValue());
-			}
+			setUnitExtraCost((UnitClassTypes)GC.getUnitInfo((UnitTypes)iI).getUnitClassType(), getNewCityProductionValue());
 		}
 	}
 }
@@ -36366,25 +36349,19 @@ int CvPlayer::getFocusPlotY() const
 // K-Mod
 int CvPlayer::getTypicalUnitValue(UnitAITypes eUnitAI) const
 {
-	//UnitTypes eBestUnit = NO_UNIT;
 	int iHighestValue = 0;
-	CvCivilizationInfo& kCivilizationInfo = GC.getCivilizationInfo(getCivilizationType());
 
-	for (int iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
-		UnitTypes eLoopUnit = ((UnitTypes)kCivilizationInfo.getCivilizationUnits(iI));
-
-		if (eLoopUnit != NO_UNIT && GC.getUnitInfo(eLoopUnit).getUnitAIType(eUnitAI) && canTrain(eLoopUnit))
+		if (GC.getUnitInfo((UnitTypes)iI).getUnitAIType(eUnitAI) && canTrain((UnitTypes)iI))
 		{
-			int iValue = GC.getGame().AI_combatValue(eLoopUnit);
+			const int iValue = GC.getGame().AI_combatValue((UnitTypes)iI);
 			if (iValue > iHighestValue)
 			{
 				iHighestValue = iValue;
-				//eBestUnit = eLoopUnit;
 			}
 		}
 	}
-
 	return iHighestValue;
 }
 
