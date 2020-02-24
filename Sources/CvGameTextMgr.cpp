@@ -11682,7 +11682,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			szHelpString.append(NEWLINE);
 			szHelpString.append(gDLL->getText("TXT_KEY_DOMESTIC_GREAT_GENERAL_MODIFIER_C2C", GC.getTraitInfo(eTrait).getDomesticGreatGeneralRateModifier()));
 		}
-		UnitTypes eGreatPeopleUnit = NO_UNIT;
+
 		if (GC.getTraitInfo(eTrait).getGreatPeopleRateChange() != 0)
 		{
 			szHelpString.append(NEWLINE);
@@ -11690,22 +11690,12 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			szTempBuffer.Format(L"%s%d%c", ((GC.getTraitInfo(eTrait).getGreatPeopleRateChange() > 0) ? L"+" : L""), GC.getTraitInfo(eTrait).getGreatPeopleRateChange(), gDLL->getSymbolID(GREAT_PEOPLE_CHAR));
 			szHelpString.append(szTempBuffer);
 
-			if (GC.getTraitInfo(eTrait).getGreatPeopleUnitClass() != NO_UNITCLASS)
-			{
-				if (GC.getGame().getActivePlayer() != NO_PLAYER)
-				{
-					eGreatPeopleUnit = ((UnitTypes)(GC.getCivilizationInfo(GET_PLAYER(GC.getGame().getActivePlayer()).getCivilizationType()).getCivilizationUnits(GC.getTraitInfo(eTrait).getGreatPeopleUnitClass())));
-				}
-				else
-				{
-					eGreatPeopleUnit = (UnitTypes)GC.getUnitClassInfo((UnitClassTypes)GC.getTraitInfo(eTrait).getGreatPeopleUnitClass()).getDefaultUnitIndex();
-				}
+			const UnitTypes eGreatPeopleUnit = (UnitTypes)GC.getTraitInfo(eTrait).getGreatPeopleUnitType();
 
-				if (eGreatPeopleUnit != NO_UNIT)
-				{
-					szTempBuffer.Format(L" (%s)", GC.getUnitInfo(eGreatPeopleUnit).getDescription());
-					szHelpString.append(szTempBuffer);
-				}
+			if (eGreatPeopleUnit != NO_UNIT)
+			{
+				szTempBuffer.Format(L" (%s)", GC.getUnitInfo(eGreatPeopleUnit).getDescription());
+				szHelpString.append(szTempBuffer);
 			}
 		}
 
@@ -12310,10 +12300,10 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 
 //Team Project (6)
 		//	Golden Age On Birth of GP
-		if (GC.getTraitInfo(eTrait).getGoldenAgeonBirthofGreatPeopleType() != NO_UNITCLASS)
+		if (GC.getTraitInfo(eTrait).getGoldenAgeonBirthofGreatPeopleType() != NO_UNIT)
 		{
 			szHelpString.append(NEWLINE);
-			szHelpString.append(gDLL->getText("TXT_KEY_TRAIT_GOLDEN_AGE_ON_BIRTH_OF_GP_TYPE", GC.getUnitClassInfo((UnitClassTypes)GC.getTraitInfo(eTrait).getGoldenAgeonBirthofGreatPeopleType()).getTextKeyWide()));
+			szHelpString.append(gDLL->getText("TXT_KEY_TRAIT_GOLDEN_AGE_ON_BIRTH_OF_GP_TYPE", GC.getUnitInfo((UnitTypes)GC.getTraitInfo(eTrait).getGoldenAgeonBirthofGreatPeopleType()).getTextKeyWide()));
 		}
 
 //POPULATION
@@ -22600,22 +22590,12 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 			szTempBuffer.Format(L", %s%d%c", ((kBuilding.getGreatPeopleRateChange() > 0) ? L"+" : L""), kBuilding.getGreatPeopleRateChange(), gDLL->getSymbolID(GREAT_PEOPLE_CHAR));
 			szBuffer.append(szTempBuffer);
 
-			if (kBuilding.getGreatPeopleUnitClass() != NO_UNITCLASS)
-			{
-				if (ePlayer != NO_PLAYER)
-				{
-					eGreatPeopleUnit = ((UnitTypes)(GC.getCivilizationInfo(GET_PLAYER(ePlayer).getCivilizationType()).getCivilizationUnits(kBuilding.getGreatPeopleUnitClass())));
-				}
-				else
-				{
-					eGreatPeopleUnit = (UnitTypes)GC.getUnitClassInfo((UnitClassTypes)kBuilding.getGreatPeopleUnitClass()).getDefaultUnitIndex();
-				}
+			eGreatPeopleUnit = (UnitTypes)kBuilding.getGreatPeopleUnitType();
 
-				if (eGreatPeopleUnit != NO_UNIT)
-				{
-					szTempBuffer.Format(L" (%s)", GC.getUnitInfo(eGreatPeopleUnit).getDescription());
-					szBuffer.append(szTempBuffer);
-				}
+			if (eGreatPeopleUnit != NO_UNIT)
+			{
+				szTempBuffer.Format(L" (%s)", GC.getUnitInfo(eGreatPeopleUnit).getDescription());
+				szBuffer.append(szTempBuffer);
 			}
 		}
 
@@ -23960,7 +23940,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 
 	for (int iI = 0; iI < kBuilding.getNumFreeTraitTypes(); iI++)
 	{
-		TraitTypes eTrait = kBuilding.getFreeTraitType(iI).eTrait;
+		TraitTypes eTrait = (TraitTypes) kBuilding.getFreeTraitType(iI);
 		if (GC.getTraitInfo(eTrait).isCivilizationTrait())
 		{
 			szBuffer.append(NEWLINE);
@@ -25181,22 +25161,12 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 
 	if (bCivilopediaText)
 	{
-		if (kBuilding.getGreatPeopleUnitClass() != NO_UNITCLASS)
-		{
-			if (ePlayer != NO_PLAYER)
-			{
-				eGreatPeopleUnit = ((UnitTypes)(GC.getCivilizationInfo(GET_PLAYER(ePlayer).getCivilizationType()).getCivilizationUnits(kBuilding.getGreatPeopleUnitClass())));
-			}
-			else
-			{
-				eGreatPeopleUnit = (UnitTypes)GC.getUnitClassInfo((UnitClassTypes)kBuilding.getGreatPeopleUnitClass()).getDefaultUnitIndex();
-			}
+		eGreatPeopleUnit = (UnitTypes)kBuilding.getGreatPeopleUnitType();
 
-			if (eGreatPeopleUnit!= NO_UNIT)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_LIKELY_TO_GENERATE", CvWString(GC.getUnitInfo(eGreatPeopleUnit).getType()).GetCString(), GC.getUnitInfo(eGreatPeopleUnit).getTextKeyWide()));
-			}
+		if (eGreatPeopleUnit!= NO_UNIT)
+		{
+			szBuffer.append(NEWLINE);
+			szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_LIKELY_TO_GENERATE", CvWString(GC.getUnitInfo(eGreatPeopleUnit).getType()).GetCString(), GC.getUnitInfo(eGreatPeopleUnit).getTextKeyWide()));
 		}
 
 		if (kBuilding.getFreeStartEra() != NO_ERA)

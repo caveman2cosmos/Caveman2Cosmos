@@ -129,7 +129,7 @@
 			<HolyCity>RELIGION_CAO_DAI</HolyCity>
 			<ReligionType>RELIGION_CAO_DAI</ReligionType>
 			<GlobalReligionCommerce>RELIGION_CAO_DAI</GlobalReligionCommerce>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>-1</iCost>

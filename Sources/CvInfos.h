@@ -284,7 +284,7 @@ public:
 	CvSpecialistInfo();
 	virtual ~CvSpecialistInfo();
 
-	int getGreatPeopleUnitClass() const;		// Exposed to Python
+	int getGreatPeopleUnitType() const;		// Exposed to Python
 	int getGreatPeopleRateChange() const;		// Exposed to Python
 	int getMissionType() const;					// Exposed to Python
 	void setMissionType(int iNewType);
@@ -332,12 +332,14 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvSpecialistInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
+	bool readPass3();
+
 	void getCheckSum(unsigned int& iSum);
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 
 protected:
 
-	int m_iGreatPeopleUnitClass;
+	int m_iGreatPeopleUnitType;
 	int m_iGreatPeopleRateChange;
 	int m_iMissionType;
 	// Afforess 03/26/10
@@ -3604,7 +3606,7 @@ public:
 	int getGlobalReligionCommerce() const;		// Exposed to Python
 	int getGlobalCorporationCommerce() const;	// Exposed to Python
 	int getPrereqAndBonus() const;				// Exposed to Python
-	int getGreatPeopleUnitClass() const;		// Exposed to Python
+	int getGreatPeopleUnitType() const;		// Exposed to Python
 	int getGreatPeopleRateChange() const;		// Exposed to Python
 	int getConquestProbability() const;			// Exposed to Python
 	int getMaintenanceModifier() const;			// Exposed to Python
@@ -3998,7 +4000,7 @@ public:
 	const FreePromoTypes& getFreePromoType(int iPromotion) const;
 
 	int getNumFreeTraitTypes() const;
-	FreeTraitTypes& getFreeTraitType(int iIndex);
+	int getFreeTraitType(int iIndex) const;
 
 	int getNumHealUnitCombatTypes() const;
 	HealUnitCombat& getHealUnitCombatType(int iUnitCombat);
@@ -4211,7 +4213,7 @@ protected:
 	int m_iGlobalReligionCommerce;
 	int m_iGlobalCorporationCommerce;
 	int m_iPrereqAndBonus;
-	int m_iGreatPeopleUnitClass;
+	int m_iGreatPeopleUnitType;
 	int m_iGreatPeopleRateChange;
 	int m_iConquestProbability;
 	int m_iMaintenanceModifier;
@@ -4422,7 +4424,7 @@ protected:
 	BoolExpr* m_pExprFreePromotionCondition;*/
 	//Structs
 	std::vector<FreePromoTypes> m_aFreePromoTypes;
-	std::vector<FreeTraitTypes> m_aFreeTraitTypes;
+	std::vector<int> m_aiFreeTraitTypes;
 	std::vector<HealUnitCombat> m_aHealUnitCombatTypes;
 	std::vector<EnabledCivilizations> m_aEnabledCivilizationTypes;
 	std::vector<BonusAidModifiers> m_aBonusAidModifiers;
@@ -7443,7 +7445,7 @@ public:
 	int getPrereqOrTrait1() const;
 	int getPrereqOrTrait2() const;
 	PromotionLineTypes getPromotionLine() const;
-	int getGreatPeopleUnitClass() const;
+	int getGreatPeopleUnitType() const;
 	TechTypes getPrereqTech() const;
 	//Team Project (6)
 	SpecialistTypes getEraAdvanceFreeSpecialistType() const;
@@ -7631,7 +7633,7 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
-	bool readPass3();
+
 	void copyNonDefaults(CvTraitInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL );
 	void copyNonDefaultsReadPass2(CvTraitInfo* pClassInfo = NULL , CvXMLLoadUtility* pXML = NULL, bool bOver = false);
 	void getCheckSum(unsigned int& iSum);
@@ -7694,7 +7696,7 @@ protected:
 	int m_iPrereqOrTrait2;
 	TechTypes m_ePrereqTech;
 	PromotionLineTypes m_ePromotionLine;
-	int m_iGreatPeopleUnitClass;
+	int m_iGreatPeopleUnitType;
 	//Team Project (6)
 	SpecialistTypes m_eEraAdvanceFreeSpecialistType;
 	int m_iGoldenAgeonBirthofGreatPeopleType;

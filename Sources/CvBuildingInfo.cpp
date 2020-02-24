@@ -115,7 +115,7 @@ m_iFoundsCorporation(NO_CORPORATION),
 m_iGlobalReligionCommerce(NO_RELIGION),
 m_iGlobalCorporationCommerce(NO_CORPORATION),
 m_iPrereqAndBonus(NO_BONUS),
-m_iGreatPeopleUnitClass(NO_UNITCLASS),
+m_iGreatPeopleUnitType(NO_UNIT),
 m_iGreatPeopleRateChange(0),
 m_iConquestProbability(50),
 m_iMaintenanceModifier(0),
@@ -480,6 +480,11 @@ CvBuildingInfo::~CvBuildingInfo()
 	for (int i=0; i<(int)m_aAidRateChanges.size(); i++)
 	{
 		GC.removeDelayedResolution((int*)&(m_aAidRateChanges[i]));
+	}
+
+	for (int i=0; i < (int)m_aiFreeTraitTypes.size(); i++)
+	{
+		GC.removeDelayedResolution((int*)&(m_aiFreeTraitTypes[i]));
 	}
 	//TB Combat Mods (Buildings) end
 }
@@ -892,9 +897,9 @@ int CvBuildingInfo::getPrereqAndBonus() const
 	return m_iPrereqAndBonus;
 }
 
-int CvBuildingInfo::getGreatPeopleUnitClass() const
+int CvBuildingInfo::getGreatPeopleUnitType() const
 {
-	return m_iGreatPeopleUnitClass;
+	return m_iGreatPeopleUnitType;
 }
 
 int CvBuildingInfo::getGreatPeopleRateChange() const
@@ -2682,14 +2687,14 @@ const FreePromoTypes& CvBuildingInfo::getFreePromoType(int iPromotion) const
 
 int CvBuildingInfo::getNumFreeTraitTypes() const
 {
-	return (int)m_aFreeTraitTypes.size();
+	return (int)m_aiFreeTraitTypes.size();
 }
 
-FreeTraitTypes& CvBuildingInfo::getFreeTraitType(int iIndex)
+int CvBuildingInfo::getFreeTraitType(int iIndex) const
 {
-	FAssertMsg(iIndex < (int)m_aFreeTraitTypes.size(), "Index out of bounds");
+	FAssertMsg(iIndex < (int)m_aiFreeTraitTypes.size(), "Index out of bounds");
 	FAssertMsg(iIndex > -1, "Index out of bounds");
-	return m_aFreeTraitTypes[iIndex];
+	return m_aiFreeTraitTypes[iIndex];
 }
 
 int CvBuildingInfo::getNumHealUnitCombatTypes() const
@@ -3229,7 +3234,7 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum)
 	CheckSum(iSum, m_iGlobalReligionCommerce);
 	CheckSum(iSum, m_iGlobalCorporationCommerce);
 	CheckSum(iSum, m_iPrereqAndBonus);
-	CheckSum(iSum, m_iGreatPeopleUnitClass);
+	CheckSum(iSum, m_iGreatPeopleUnitType);
 	CheckSum(iSum, m_iGreatPeopleRateChange);
 	CheckSum(iSum, m_iConquestProbability);
 	CheckSum(iSum, m_iMaintenanceModifier);
@@ -3556,11 +3561,7 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum)
 			m_aFreePromoTypes[i].m_pExprFreePromotionCondition->getCheckSum(iSum);
 	}
 
-	iNumElements = m_aFreeTraitTypes.size();
-	for (int i = 0; i < iNumElements; ++i)
-	{
-		CheckSum(iSum, m_aFreeTraitTypes[i].eTrait);
-	}
+	CheckSumC(iSum, m_aiFreeTraitTypes);
 
 	iNumElements = m_aHealUnitCombatTypes.size();
 	for (int i = 0; i < iNumElements; ++i)
@@ -3807,8 +3808,8 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"CivicOption");
 	m_iCivicOption = pXML->GetInfoClass(szTextVal);
 
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"GreatPeopleUnitClass");
-	m_iGreatPeopleUnitClass = pXML->GetInfoClass(szTextVal);
+	pXML->GetOptionalChildXmlValByName(szTextVal, L"GreatPeopleUnitType");
+	m_aszExtraXMLforPass3.push_back(szTextVal);
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"DiploVoteType");
 	m_iVoteSourceType = pXML->GetInfoClass(szTextVal);
@@ -5200,27 +5201,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 		pXML->MoveToXmlParent();
 	}
 
-	if(pXML->TryMoveToXmlFirstChild(L"FreeTraitTypes"))
-	{
-		int iNum = pXML->GetXmlChildrenNumber(L"FreeTraitType" );
-		m_aFreeTraitTypes.resize(iNum); // Important to keep the delayed resolution pointers correct
-
-		if(pXML->TryMoveToXmlFirstChild())
-		{
-			if (pXML->TryMoveToXmlFirstOfSiblings(L"FreeTraitType"))
-			{
-				int i = 0;
-				do
-				{
-					pXML->GetChildXmlValByName(szTextVal, L"TraitType");
-					m_aFreeTraitTypes[i].eTrait = (TraitTypes)pXML->GetInfoClass(szTextVal);
-					i++;
-				} while(pXML->TryMoveToXmlNextSibling(L"FreeTraitType"));
-			}
-			pXML->MoveToXmlParent();
-		}
-		pXML->MoveToXmlParent();
-	}
+	pXML->SetOptionalIntVectorWithDelayedResolution(m_aiFreeTraitTypes, L"FreeTraitTypes");
 
 	if(pXML->TryMoveToXmlFirstChild(L"HealUnitCombatTypes"))
 	{
@@ -5418,6 +5399,15 @@ bool CvBuildingInfo::readPass3()
 		m_abPrereqAndCivicsforPass3.clear();
 	}
 
+	if (m_aszExtraXMLforPass3.size() < 1)
+	{
+		FAssert(false);
+		return false;
+	}
+	m_iGreatPeopleUnitType = GC.getInfoTypeForString(m_aszExtraXMLforPass3[0]);
+
+	m_aszExtraXMLforPass3.clear();
+
 	return true;
 }
 /************************************************************************************************/
@@ -5514,7 +5504,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 	if (getFreeAreaBuildingClass() == iTextDefault) m_iFreeAreaBuildingClass = pClassInfo->getFreeAreaBuildingClass();
 	if (getFreePromotion() == iTextDefault) m_iFreePromotion = pClassInfo->getFreePromotion();
 	if (getCivicOption() == iTextDefault) m_iCivicOption = pClassInfo->getCivicOption();
-	if (getGreatPeopleUnitClass() == iTextDefault) m_iGreatPeopleUnitClass = pClassInfo->getGreatPeopleUnitClass();
+	if (getGreatPeopleUnitType() == iTextDefault) m_iGreatPeopleUnitType = pClassInfo->getGreatPeopleUnitType();
 	if (getVoteSourceType() == iTextDefault) m_iVoteSourceType = pClassInfo->getVoteSourceType();
 
 	if (getGreatPeopleRateChange() == iDefault) m_iGreatPeopleRateChange = pClassInfo->getGreatPeopleRateChange();
@@ -6763,8 +6753,13 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 
 	if (getNumFreeTraitTypes() == 0)
 	{
-		CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aFreeTraitTypes, pClassInfo->m_aFreeTraitTypes);
+		int iNum = pClassInfo->getNumFreeTraitTypes();
+		m_aiFreeTraitTypes.resize(iNum);
+		for (int i = 0; i < iNum; i++)
+		{
+			GC.copyNonDefaultDelayedResolution((int*)&(m_aiFreeTraitTypes[i]), (int*)&(pClassInfo->m_aiFreeTraitTypes[i]));
 		}
+	}
 
 	if (getNumHealUnitCombatTypes() == 0)
 	{

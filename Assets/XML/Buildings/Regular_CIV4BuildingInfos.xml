@@ -488,7 +488,7 @@
 				<iYield>50</iYield>
 			</PowerYieldModifiers>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iSpaceProductionModifier>25</iSpaceProductionModifier>
@@ -5495,7 +5495,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Other -->
 			<iAsset>5</iAsset>
@@ -5607,7 +5607,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Other -->
 			<iAsset>3</iAsset>
@@ -9706,7 +9706,7 @@
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unit effects -->
 			<UnitCombatFreeExperiences>
@@ -19918,7 +19918,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<BuildingClassProductionModifiers>
@@ -24067,7 +24067,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Other -->
 			<iAsset>2</iAsset>
@@ -32997,7 +32997,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Other -->
 			<iAsset>2</iAsset>
@@ -46675,7 +46675,7 @@
 				<iCommerce>1</iCommerce>
 			</ObsoleteSafeCommerceChanges>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<BuildingClassProductionModifiers>
@@ -65186,7 +65186,7 @@
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<!-- Other -->
 			<iAsset>8</iAsset>
 			<Flavors>
@@ -69324,7 +69324,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Other -->
 			<iAsset>2</iAsset>
@@ -82265,7 +82265,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Other -->
 			<iAsset>6</iAsset>
@@ -83755,7 +83755,7 @@
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iGreatPeopleRateModifier>10</iGreatPeopleRateModifier>
 			<!-- Other -->
@@ -84832,7 +84832,7 @@
 				<iCommerce>5</iCommerce>
 			</CommerceModifiers>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iWarWearinessModifier>-10</iWarWearinessModifier>

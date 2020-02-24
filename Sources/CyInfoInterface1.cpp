@@ -33,7 +33,7 @@ void CyInfoPythonInterface1()
 		;
 
 	python::class_<CvSpecialistInfo, python::bases<CvInfoBase> >("CvSpecialistInfo")
-		.def("getGreatPeopleUnitClass", &CvSpecialistInfo::getGreatPeopleUnitClass, "int ()")
+		.def("getGreatPeopleUnitType", &CvSpecialistInfo::getGreatPeopleUnitType, "int ()")
 		.def("getGreatPeopleRateChange", &CvSpecialistInfo::getGreatPeopleRateChange, "int ()")
 		.def("getMissionType", &CvSpecialistInfo::getMissionType, "int ()")
 
@@ -802,7 +802,7 @@ void CyInfoPythonInterface1()
 		.def("getGlobalReligionCommerce", &CvBuildingInfo::getGlobalReligionCommerce, "int ()")
 		.def("getGlobalCorporationCommerce", &CvBuildingInfo::getGlobalCorporationCommerce, "int ()")
 		.def("getPrereqAndBonus", &CvBuildingInfo::getPrereqAndBonus, "int ()")
-		.def("getGreatPeopleUnitClass", &CvBuildingInfo::getGreatPeopleUnitClass, "int ()")
+		.def("getGreatPeopleUnitType", &CvBuildingInfo::getGreatPeopleUnitType, "int ()")
 		.def("getGreatPeopleRateChange", &CvBuildingInfo::getGreatPeopleRateChange, "int ()")
 		.def("getConquestProbability", &CvBuildingInfo::getConquestProbability, "int ()")
 		.def("getMaintenanceModifier", &CvBuildingInfo::getMaintenanceModifier, "int ()")

@@ -5694,7 +5694,7 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 			bool bChange = (iChange == 1);
 			for (int iI = 0; iI < kBuilding.getNumFreeTraitTypes(); iI++)
 			{
-				TraitTypes eTrait = kBuilding.getFreeTraitType(iI).eTrait;
+				TraitTypes eTrait = (TraitTypes) kBuilding.getFreeTraitType(iI);
 				if (GC.getTraitInfo(eTrait).isCivilizationTrait())
 				{
 					GET_PLAYER(getOwner()).setHasTrait(eTrait, bChange);
@@ -6341,14 +6341,11 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 
 			changeBaseGreatPeopleRate(kBuilding.getGreatPeopleRateChange() * iChange);
 
-			if (kBuilding.getGreatPeopleUnitClass() != NO_UNITCLASS)
-			{
-				UnitTypes eGreatPeopleUnit = ((UnitTypes)(kCivilizationInfo.getCivilizationUnits(kBuilding.getGreatPeopleUnitClass())));
+			UnitTypes eGreatPeopleUnit = (UnitTypes)kBuilding.getGreatPeopleUnitType();
 
-				if (eGreatPeopleUnit != NO_UNIT)
-				{
-					changeGreatPeopleUnitRate(eGreatPeopleUnit, kBuilding.getGreatPeopleRateChange() * iChange);
-				}
+			if (eGreatPeopleUnit != NO_UNIT)
+			{
+				changeGreatPeopleUnitRate(eGreatPeopleUnit, kBuilding.getGreatPeopleRateChange() * iChange);
 			}
 
 			SpecialBuildingTypes eSpecialBuilding = (SpecialBuildingTypes)kBuilding.getSpecialBuildingType();
@@ -6403,32 +6400,18 @@ void CvCity::processProcess(ProcessTypes eProcess, int iChange)
 
 void CvCity::processSpecialist(SpecialistTypes eSpecialist, int iChange)
 {
-	if (GC.getSpecialistInfo(eSpecialist).getGreatPeopleUnitClass() != NO_UNITCLASS)
-	{
-		UnitTypes eGreatPeopleUnit = ((UnitTypes)(GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(GC.getSpecialistInfo(eSpecialist).getGreatPeopleUnitClass())));
+	UnitTypes eGreatPeopleUnit = (UnitTypes)GC.getSpecialistInfo(eSpecialist).getGreatPeopleUnitType();
 
-		if (eGreatPeopleUnit != NO_UNIT)
-		{
-			changeGreatPeopleUnitRate(eGreatPeopleUnit, GC.getSpecialistInfo(eSpecialist).getGreatPeopleRateChange() * iChange);
-		}
+	if (eGreatPeopleUnit != NO_UNIT)
+	{
+		changeGreatPeopleUnitRate(eGreatPeopleUnit, GC.getSpecialistInfo(eSpecialist).getGreatPeopleRateChange() * iChange);
 	}
 
 	changeBaseGreatPeopleRate(GC.getSpecialistInfo(eSpecialist).getGreatPeopleRateChange() * iChange);
 
 	for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 	{
-		/************************************************************************************************/
-		/* Afforess	                  Start		 07/20/10                                               */
-		/*                                                                                              */
-		/*                                                                                              */
-		/************************************************************************************************/
-		/*
-				changeBaseYieldRate(((YieldTypes)iI), (GC.getSpecialistInfo(eSpecialist).getYieldChange(iI) * iChange));
-		*/
 		changeBaseYieldRate(((YieldTypes)iI), ((GC.getSpecialistInfo(eSpecialist).getYieldChange(iI) + (GET_PLAYER(getOwner()).getSpecialistYieldPercentChanges(eSpecialist, (YieldTypes)iI) / 100)) * iChange));
-		/************************************************************************************************/
-		/* Afforess	                     END                                                            */
-		/************************************************************************************************/
 	}
 
 	int iCommerceChangeTotal = 0;

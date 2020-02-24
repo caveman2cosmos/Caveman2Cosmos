@@ -736,7 +736,7 @@ int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth,
 		}
 
 		//iGreatPeopleRate = ((iGreatPeopleRate * getTotalGreatPeopleRateModifier()) / 100);
-		// UnitTypes iGreatPeopleType = (UnitTypes)GC.getSpecialistInfo(eSpecialist).getGreatPeopleUnitClass();
+		// UnitTypes iGreatPeopleType = (UnitTypes)GC.getSpecialistInfo(eSpecialist).getGreatPeopleUnitType();
 
 		/************************************************************************************************/
 		/* BETTER_BTS_AI_MOD                      12/06/09                                jdog5000      */
@@ -773,18 +773,13 @@ int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth,
 
 		if (GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE2))
 		{
-			int iUnitClass = GC.getSpecialistInfo(eSpecialist).getGreatPeopleUnitClass();
-
-			if (iUnitClass != NO_UNITCLASS)
+			UnitTypes eGreatPeopleUnit = (UnitTypes)GC.getSpecialistInfo(eSpecialist).getGreatPeopleUnitType();
+			if (eGreatPeopleUnit != NO_UNIT)
 			{
-				UnitTypes eGreatPeopleUnit = (UnitTypes)GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(iUnitClass);
-				if (eGreatPeopleUnit != NO_UNIT)
+				CvUnitInfo& kUnitInfo = GC.getUnitInfo(eGreatPeopleUnit);
+				if (kUnitInfo.getGreatWorkCulture() > 0)
 				{
-					CvUnitInfo& kUnitInfo = GC.getUnitInfo(eGreatPeopleUnit);
-					if (kUnitInfo.getGreatWorkCulture() > 0)
-					{
-						iTempValue += kUnitInfo.getGreatWorkCulture() / ((GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3)) ? 200 : 350);
-					}
+					iTempValue += kUnitInfo.getGreatWorkCulture() / ((GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3)) ? 200 : 350);
 				}
 			}
 		}
@@ -801,29 +796,22 @@ int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth,
 				ReligionTypes eReligion = (ReligionTypes)iJ;
 
 				if (isHolyCity(eReligion) && !hasShrine(eReligion)
-					&& ((iCurrentEra < iTotalEras / 2) || GC.getGame().countReligionLevels(eReligion) >= 10))
+				&& ((iCurrentEra < iTotalEras / 2) || GC.getGame().countReligionLevels(eReligion) >= 10))
 				{
-					CvCivilizationInfo* pCivilizationInfo = &GC.getCivilizationInfo(getCivilizationType());
-
-					int iUnitClass = GC.getSpecialistInfo(eSpecialist).getGreatPeopleUnitClass();
-
-					if (iUnitClass != NO_UNITCLASS)
+					UnitTypes eGreatPeopleUnit = (UnitTypes)GC.getSpecialistInfo(eSpecialist).getGreatPeopleUnitType();
+					if (eGreatPeopleUnit != NO_UNIT)
 					{
-						UnitTypes eGreatPeopleUnit = (UnitTypes)pCivilizationInfo->getCivilizationUnits(iUnitClass);
-						if (eGreatPeopleUnit != NO_UNIT)
+						// note, for normal XML, this count will be one (there is only 1 shrine building for each religion)
+						int	shrineBuildingCount = GC.getGame().getShrineBuildingCount(eReligion);
+						for (int iI = 0; iI < shrineBuildingCount; iI++)
 						{
-							// note, for normal XML, this count will be one (there is only 1 shrine building for each religion)
-							int	shrineBuildingCount = GC.getGame().getShrineBuildingCount(eReligion);
-							for (int iI = 0; iI < shrineBuildingCount; iI++)
-							{
-								int eBuilding = (int)GC.getGame().getShrineBuilding(iI, eReligion);
+							int eBuilding = (int)GC.getGame().getShrineBuilding(iI, eReligion);
 
-								// if this unit builds or forceBuilds this building
-								if (GC.getUnitInfo(eGreatPeopleUnit).getHasBuilding(eBuilding))
-								{
-									bNeedProphet = true;
-									iBestSpreadValue = std::max(iBestSpreadValue, GC.getGame().countReligionLevels(eReligion));
-								}
+							// if this unit builds or forceBuilds this building
+							if (GC.getUnitInfo(eGreatPeopleUnit).getHasBuilding(eBuilding))
+							{
+								bNeedProphet = true;
+								iBestSpreadValue = std::max(iBestSpreadValue, GC.getGame().countReligionLevels(eReligion));
 							}
 						}
 					}
@@ -6126,7 +6114,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 					}
 					for (int iI = 0; iI < kBuilding.getNumFreeTraitTypes(); iI++)
 					{
-						TraitTypes eTrait = kBuilding.getFreeTraitType(iI).eTrait;
+						TraitTypes eTrait = (TraitTypes) kBuilding.getFreeTraitType(iI);
 						if (GC.getTraitInfo(eTrait).isCivilizationTrait())
 						{
 							if (!GC.getTraitInfo(eTrait).isNegativeTrait())
@@ -6713,7 +6701,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 					iValue += ((kBuilding.getGlobalSpaceProductionModifier() * iNumCities) / 20);
 
 
-					if (kBuilding.getGreatPeopleUnitClass() != NO_UNITCLASS)
+					if (kBuilding.getGreatPeopleUnitType() != NO_UNIT)
 					{
 						iValue++; // XXX improve this for diversity...
 					}
@@ -17941,7 +17929,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 							}
 							for (int iI = 0; iI < kBuilding.getNumFreeTraitTypes(); iI++)
 							{
-								TraitTypes eTrait = kBuilding.getFreeTraitType(iI).eTrait;
+								TraitTypes eTrait = (TraitTypes) kBuilding.getFreeTraitType(iI);
 								if (GC.getTraitInfo(eTrait).isCivilizationTrait())
 								{
 									if (!GC.getTraitInfo(eTrait).isNegativeTrait())
@@ -18581,25 +18569,13 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 							iValue += ((kBuilding.getGlobalSpaceProductionModifier() * iNumCities) / 20);
 
 
-							if (kBuilding.getGreatPeopleUnitClass() != NO_UNITCLASS)
+							if (kBuilding.getGreatPeopleUnitType() != NO_UNIT)
 							{
 								iValue++; // XXX improve this for diversity...
 							}
 
 							// prefer to build great people buildings in places that already have some GP points
-			/************************************************************************************************/
-			/* Afforess	                  Start		 07/28/10                                               */
-			/*                                                                                              */
-			/*                                                                                              */
-			/************************************************************************************************/
-			/*
-							iValue += (kBuilding.getGreatPeopleRateChange() * 10) * (1 + (getBaseGreatPeopleRate() / 2));
-			*/
 							iValue += ((kBuilding.getGreatPeopleRateChange() + iSpecialistGreatPeopleRate ) * 10) * (1 + (getBaseGreatPeopleRate() / 2));
-			/************************************************************************************************/
-			/* Afforess	                     END                                                            */
-			/************************************************************************************************/
-
 
 							if (!bAreaAlone)
 							{

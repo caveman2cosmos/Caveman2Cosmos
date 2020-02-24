@@ -162,7 +162,7 @@
 			<HolyCity>RELIGION_SCIENTOLOGY</HolyCity>
 			<ReligionType>RELIGION_SCIENTOLOGY</ReligionType>
 			<GlobalReligionCommerce>RELIGION_SCIENTOLOGY</GlobalReligionCommerce>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
