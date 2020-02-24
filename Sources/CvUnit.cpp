@@ -419,11 +419,9 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 
 		setGameTurnCreated(GC.getGame().getGameTurn());
 
-		GC.getGame().incrementUnitCreatedCount(getUnitType());
-
-		GC.getGame().incrementUnitClassCreatedCount((UnitClassTypes)(m_pUnitInfo->getUnitClassType()));
-		GET_TEAM(getTeam()).changeUnitClassCount(((UnitClassTypes)(m_pUnitInfo->getUnitClassType())), 1);
-		GET_PLAYER(getOwner()).changeUnitClassCount(((UnitClassTypes)(m_pUnitInfo->getUnitClassType())), 1);
+		GC.getGame().incrementUnitCreatedCount(eUnit);
+		GET_TEAM(getTeam()).changeUnitCount(eUnit, 1);
+		GET_PLAYER(getOwner()).changeUnitCount(eUnit, 1);
 
 		GET_PLAYER(getOwner()).changeExtraUnitCost(getExtraUnitCost100());
 
@@ -1478,8 +1476,8 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 		FAssertMsg(getAttackPlot() == NULL, "The current unit instance's attack plot is expected to be NULL");
 		FAssertMsg(getCombatUnit() == NULL, "The current unit instance's combat unit is expected to be NULL");
 	}
-	GET_TEAM(getTeam()).changeUnitClassCount((UnitClassTypes)m_pUnitInfo->getUnitClassType(), -1);
-	GET_PLAYER(getOwner()).changeUnitClassCount((UnitClassTypes)m_pUnitInfo->getUnitClassType(), -1);
+	GET_TEAM(getTeam()).changeUnitCount(m_eUnitType, -1);
+	GET_PLAYER(getOwner()).changeUnitCount(m_eUnitType, -1);
 
 	GET_PLAYER(getOwner()).changeExtraUnitCost(-(getExtraUnitCost100()));
 
@@ -7631,7 +7629,6 @@ void CvUnit::scrap()
 bool CvUnit::canGift(bool bTestVisible, bool bTestTransport)
 {
 	CvPlot* pPlot = plot();
-	CvUnit* pTransport = getTransportUnit();
 
 	if (!(pPlot->isOwned()))
 	{
@@ -7652,6 +7649,7 @@ bool CvUnit::canGift(bool bTestVisible, bool bTestTransport)
 	{
 		return false;
 	}
+	CvUnit* pTransport = getTransportUnit();
 
 	if (!pPlot->isValidDomainForLocation(*this) && NULL == pTransport)
 	{
@@ -7676,22 +7674,16 @@ bool CvUnit::canGift(bool bTestVisible, bool bTestTransport)
 
 	if (!bTestVisible)
 	{
-		if (GET_TEAM(pPlot->getTeam()).isUnitClassMaxedOut(getUnitClassType(), GET_TEAM(pPlot->getTeam()).getUnitClassMaking(getUnitClassType())))
+		if (GET_TEAM(pPlot->getTeam()).isUnitMaxedOut(getUnitType(), GET_TEAM(pPlot->getTeam()).getUnitMaking(getUnitType()))
+		|| GET_PLAYER(pPlot->getOwner()).isUnitMaxedOut(getUnitType(), GET_PLAYER(pPlot->getOwner()).getUnitMaking(getUnitType())))
 		{
 			return false;
 		}
-
-		if (GET_PLAYER(pPlot->getOwner()).isUnitClassMaxedOut(getUnitClassType(), GET_PLAYER(pPlot->getOwner()).getUnitClassMaking(getUnitClassType())))
-		{
-			return false;
-		}
-
 		if (!(GET_PLAYER(pPlot->getOwner()).AI_acceptUnit(this)))
 		{
 			return false;
 		}
 	}
-
 	return !atWar(pPlot->getTeam(), getTeam());
 }
 
@@ -26061,8 +26053,8 @@ void CvUnit::read(FDataStreamBase* pStream)
 		} while(!GC.getUnitInfo((UnitTypes)tempUnitType).isMilitaryHappiness());
 
 		m_eUnitType = (UnitTypes)tempUnitType;
-		GET_TEAM(getTeam()).changeUnitClassCount((UnitClassTypes)GC.getUnitInfo(m_eUnitType).getUnitClassType(), 1);
-		GET_PLAYER(getOwner()).changeUnitClassCount((UnitClassTypes)GC.getUnitInfo(m_eUnitType).getUnitClassType(), 1);
+		GET_TEAM(getTeam()).changeUnitCount(m_eUnitType, 1);
+		GET_PLAYER(getOwner()).changeUnitCount(m_eUnitType, 1);
 		m_bDeathDelay = true;
 	}
 	m_pUnitInfo = &GC.getUnitInfo(m_eUnitType);

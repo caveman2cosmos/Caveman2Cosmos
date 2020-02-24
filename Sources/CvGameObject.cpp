@@ -1119,8 +1119,7 @@ bool CvGameObjectGame::hasGOM(GOMTypes eType, int iID)
 		case GOM_UNITTYPE:
 		{
 			// If there is any unit of that type created, return true
-			const UnitTypes eUnit = (UnitTypes) iID;
-			return GC.getGame().getUnitClassCreatedCount((UnitClassTypes)GC.getUnitInfo(eUnit).getUnitClassType()) > 0;
+			return GC.getGame().getUnitCreatedCount((UnitTypes) iID) > 0;
 			//break;
 		}
 
@@ -1242,8 +1241,7 @@ bool CvGameObjectTeam::hasGOM(GOMTypes eType, int iID)
 		case GOM_UNITTYPE:
 		{
 			// If there is any unit of that type in the team, return true
-			const UnitTypes eUnit = (UnitTypes) iID;
-			return m_pTeam->getUnitClassCount((UnitClassTypes)GC.getUnitInfo(eUnit).getUnitClassType()) > 0;
+			return m_pTeam->getUnitCount((UnitTypes) iID) > 0;
 			//break;
 		}
 
@@ -1367,8 +1365,7 @@ bool CvGameObjectPlayer::hasGOM(GOMTypes eType, int iID)
 		case GOM_UNITTYPE:
 		{
 			// If there is any unit of that type of the player, return true
-			const UnitTypes eUnit = (UnitTypes) iID;
-			return m_pPlayer->getUnitClassCount((UnitClassTypes)GC.getUnitInfo(eUnit).getUnitClassType()) > 0;
+			return m_pPlayer->getUnitCount((UnitTypes) iID) > 0;
 			//break;
 		}
 

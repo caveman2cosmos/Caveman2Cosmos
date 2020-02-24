@@ -569,8 +569,8 @@
 			<!-- Adventure Tours Franchise -->
 			<BuildingClass>BUILDINGCLASS_CORPORATION_ADVENTURE_FRANCHISE</BuildingClass>
 			<Type>BUILDING_CORPORATION_ADVENTURE_FRANCHISE</Type>
-			<Description>TXT_KEY_CORPORATION_ADVENTURE_FRANCHISE</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_ADVENTURE_FRANCHISE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_ADVENTURE_FRANCHISE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_ADVENTURE_FRANCHISE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_ADVENTURE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_ADVENTURE_FRANCHISE</ArtDefineTag>
@@ -1716,7 +1716,7 @@
 			<BuildingClass>BUILDINGCLASS_ALUMINUM_CO_R_AND_D</BuildingClass>
 			<Type>BUILDING_ALUMINUM_CO_R_AND_D</Type>
 			<Description>TXT_KEY_BUILDING_ALUMINUM_CO_R_AND_D</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_6_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_6_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ALUMINUM_CO_R_AND_D_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ALUMINUM_CO_R_AND_D</ArtDefineTag>
@@ -1857,9 +1857,9 @@
 			<!-- Smelter (Aluminum) -->
 			<BuildingClass>BUILDINGCLASS_ALUMINUM_FACTORY</BuildingClass>
 			<Type>BUILDING_ALUMINUM_FACTORY</Type>
-			<Description>TXT_KEY_BUILDING_SMELTER_ALUMINUM</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SMELTER_ALUMINUM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SMELTER_ALUMINUM_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_ALUMINUM_FACTORY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ALUMINUM_FACTORY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ALUMINUM_FACTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SMELTER_ALUMINUM</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_ALUMINUM_FACTORY</ConstructSound>
@@ -6060,9 +6060,9 @@
 			<!-- Artist Colony -->
 			<BuildingClass>BUILDINGCLASS_ARTIST_GUILD</BuildingClass>
 			<Type>BUILDING_ARTIST_GUILD</Type>
-			<Description>TXT_KEY_BUILDING_ARTIST_COLONY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ARTIST_COLONY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ARTIST_COLONY_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_ARTIST_GUILD</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ARTIST_GUILD_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ARTIST_GUILD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ARTIST_COLONY</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
@@ -10847,8 +10847,8 @@
 			<!-- Big McDowells Restaurant -->
 			<BuildingClass>BUILDINGCLASS_CORPORATION_MCDOWELLS_RESTAURANT</BuildingClass>
 			<Type>BUILDING_CORPORATION_MCDOWELLS_RESTAURANT</Type>
-			<Description>TXT_KEY_CORPORATION_MCDOWELLS_RESTAURANT</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_MCDOWELLS_RESTAURANT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_MCDOWELLS_RESTAURANT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MCDOWELLS_RESTAURANT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_MCDOWELLS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_MCDOWELLS_RESTAURANT</ArtDefineTag>
@@ -16583,8 +16583,8 @@
 			<!-- Bullseye Store -->
 			<BuildingClass>BUILDINGCLASS_CORPORATION_BULLSEYE_STORE</BuildingClass>
 			<Type>BUILDING_CORPORATION_BULLSEYE_STORE</Type>
-			<Description>TXT_KEY_CORPORATION_BULLSEYE_STORE</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_BULLSEYE_STORE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_BULLSEYE_STORE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_BULLSEYE_STORE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BULLSEYE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_BULLSEYE_STORE</ArtDefineTag>
@@ -16838,8 +16838,8 @@
 			<!-- Burgerworld Restaurant -->
 			<BuildingClass>BUILDINGCLASS_CORPORATION_BURGERWORLD_RESTAURANT</BuildingClass>
 			<Type>BUILDING_CORPORATION_BURGERWORLD_RESTAURANT</Type>
-			<Description>TXT_KEY_CORPORATION_BURGERWORLD_RESTAURANT</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_BURGERWORLD_RESTAURANT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_BURGERWORLD_RESTAURANT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_BURGERWORLD_RESTAURANT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BURGERWORLD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_BURGERWORLD_RESTAURANT</ArtDefineTag>
@@ -20922,7 +20922,7 @@
 			<BuildingClass>BUILDINGCLASS_CEREAL_MILLS_FACTORY</BuildingClass>
 			<Type>BUILDING_CEREAL_MILLS_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_CEREAL_MILLS_FACTORY</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_1_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_1_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CEREAL_MILLS_FACTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CEREAL_MILLS_FACTORY</ArtDefineTag>
@@ -24150,7 +24150,7 @@
 			<BuildingClass>BUILDINGCLASS_CIVILIZED_JEWELERS_STORE</BuildingClass>
 			<Type>BUILDING_CIVILIZED_JEWELERS_STORE</Type>
 			<Description>TXT_KEY_BUILDING_CIVILIZED_JEWELERS_STORE</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_7_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_7_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CIVILIZED_JEWELERS_STORE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CIVILIZED_JEWELERS_STORE</ArtDefineTag>
@@ -28656,7 +28656,7 @@
 			<BuildingClass>BUILDINGCLASS_CREATIVE_CONSTRUCTIONS_OFFICE</BuildingClass>
 			<Type>BUILDING_CREATIVE_CONSTRUCTIONS_OFFICE</Type>
 			<Description>TXT_KEY_BUILDING_CREATIVE_CONSTRUCTIONS_OFFICE</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_4_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_4_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CREATIVE_CONSTRUCTIONS_OFFICE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CREATIVE_CONSTRUCTIONS_OFFICE</ArtDefineTag>
@@ -34276,8 +34276,8 @@
 			<!-- East West Traders Store -->
 			<BuildingClass>BUILDINGCLASS_CORPORATION_EWTRADE_STORE</BuildingClass>
 			<Type>BUILDING_CORPORATION_EWTRADE_STORE</Type>
-			<Description>TXT_KEY_CORPORATION_EWTRADE_STORE</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_EWTRADE_STORE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_EWTRADE_STORE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_EWTRADE_STORE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_EWTRADE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_EWTRADE_STORE</ArtDefineTag>
@@ -35336,9 +35336,9 @@
 			<!-- Elementary School -->
 			<BuildingClass>BUILDINGCLASS_PUBLIC_SCHOOL</BuildingClass>
 			<Type>BUILDING_PUBLIC_SCHOOL</Type>
-			<Description>TXT_KEY_BUILDING_ELEMENTARY_SCHOOL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTARY_SCHOOL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ELEMENTARY_SCHOOL_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_PUBLIC_SCHOOL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_PUBLIC_SCHOOL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_PUBLIC_SCHOOL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ELEMENTARY_SCHOOL</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_SCHOOL</ConstructSound>
@@ -35794,10 +35794,10 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Emperors Clothing Store -->
-			<BuildingClass>BUILDINGCLASS_EMPCLOTH_STORE</BuildingClass>
-			<Type>BUILDING_EMPCLOTH_STORE</Type>
-			<Description>TXT_KEY_CORPORATION_EMPCLOTH_STORE</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_EMPCLOTH_STORE_PEDIA</Civilopedia>
+			<BuildingClass>BUILDINGCLASS_CORPORATION_EMPCLOTH_STORE</BuildingClass>
+			<Type>BUILDING_CORPORATION_EMPCLOTH_STORE</Type>
+			<Description>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH_STORE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH_STORE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_EMPCLOTH_STORE</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_FACTORY</ConstructSound>
@@ -38281,10 +38281,10 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Fashion House Store -->
-			<BuildingClass>BUILDINGCLASS_FASHION_STORE</BuildingClass>
-			<Type>BUILDING_FASHION_STORE</Type>
-			<Description>TXT_KEY_CORPORATION_FASHION_STORE</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_FASHION_STORE_PEDIA</Civilopedia>
+			<BuildingClass>BUILDINGCLASS_CORPORATION_FASHION_STORE</BuildingClass>
+			<Type>BUILDING_CORPORATION_FASHION_STORE</Type>
+			<Description>TXT_KEY_BUILDING_CORPORATION_FASHION_STORE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_FASHION_STORE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_FASHION_STORE</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_FACTORY</ConstructSound>
@@ -45486,9 +45486,9 @@
 			<!-- Grand Estate -->
 			<BuildingClass>BUILDINGCLASS_ESTATE</BuildingClass>
 			<Type>BUILDING_ESTATE</Type>
-			<Description>TXT_KEY_BUILDING_GRAND_ESTATE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GRAND_ESTATE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_GRAND_ESTATE_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_ESTATE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ESTATE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ESTATE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GRAND_ESTATE</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
@@ -49803,9 +49803,9 @@
 			<!-- Hippodrome -->
 			<BuildingClass>BUILDINGCLASS_BYZANTINE_HIPPODROME</BuildingClass>
 			<Type>BUILDING_BYZANTINE_HIPPODROME</Type>
-			<Description>TXT_KEY_BUILDING_HIPPODROME</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HIPPODROME_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HIPPODROME_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_BYZANTINE_HIPPODROME</Description>
+			<Civilopedia>TXT_KEY_BUILDING_BYZANTINE_HIPPODROME_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_BYZANTINE_HIPPODROME_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BYZANTINE_HIPPODROME</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_COLOSSEUM</ConstructSound>
@@ -54658,9 +54658,9 @@
 			<!-- Jeweler -->
 			<BuildingClass>BUILDINGCLASS_JEWELLERY</BuildingClass>
 			<Type>BUILDING_JEWELLERY</Type>
-			<Description>TXT_KEY_BUILDING_JEWELRY_STORE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_JEWELRY_STORE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_JEWELRY_STORE_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_JEWELLERY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_JEWELLERY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_JEWELLERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_JEWELLERY</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_JEWELLERY</ConstructSound>
@@ -60149,7 +60149,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Madrassa -->
-			<BuildingClass>BUILDINGCLASS_MADRASSA</BuildingClass>
+			<BuildingClass>BUILDINGCLASS_ARABIAN_MADRASSA</BuildingClass>
 			<Type>BUILDING_ARABIAN_MADRASSA</Type>
 			<Description>TXT_KEY_BUILDING_ARABIAN_MADRASSA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ARABIAN_MADRASSA_PEDIA</Civilopedia>
@@ -60720,8 +60720,8 @@
 			<!-- MallWart Store -->
 			<BuildingClass>BUILDINGCLASS_CORPORATION_MALLWART_STORE</BuildingClass>
 			<Type>BUILDING_CORPORATION_MALLWART_STORE</Type>
-			<Description>TXT_KEY_CORPORATION_MALLWART_STORE</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_MALLWART_STORE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_MALLWART_STORE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MALLWART_STORE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_MALLWART_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_MALLWART_STORE</ArtDefineTag>
@@ -65113,8 +65113,8 @@
 			<!-- MileHigh Travels International Franchise -->
 			<BuildingClass>BUILDINGCLASS_CORPORATION_MILEHIGH_FRANCHISE</BuildingClass>
 			<Type>BUILDING_CORPORATION_MILEHIGH_FRANCHISE</Type>
-			<Description>TXT_KEY_CORPORATION_MILEHIGH_FRANCHISE</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_MILEHIGH_FRANCHISE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_MILEHIGH_FRANCHISE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MILEHIGH_FRANCHISE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_MILEHIGH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_MILEHIGH_FRANCHISE</ArtDefineTag>
@@ -66188,7 +66188,7 @@
 			<BuildingClass>BUILDINGCLASS_MINING_INC_SURVEY_OFFICE</BuildingClass>
 			<Type>BUILDING_MINING_INC_SURVEY_OFFICE</Type>
 			<Description>TXT_KEY_BUILDING_MINING_INC_SURVEY_OFFICE</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_5_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_5_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MINING_INC_SURVEY_OFFICE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MINING_INC_SURVEY</ArtDefineTag>
@@ -67175,8 +67175,8 @@
 			<!-- Mobby Meats Store -->
 			<BuildingClass>BUILDINGCLASS_CORPORATION_MOBBY_STORE</BuildingClass>
 			<Type>BUILDING_CORPORATION_MOBBY_STORE</Type>
-			<Description>TXT_KEY_CORPORATION_MOBBY_STORE</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_MOBBY_STORE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_MOBBY_STORE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MOBBY_STORE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_MOBBY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_MOBBY_STORE</ArtDefineTag>
@@ -68071,9 +68071,9 @@
 			<!-- Monument -->
 			<BuildingClass>BUILDINGCLASS_OBELISK</BuildingClass>
 			<Type>BUILDING_OBELISK</Type>
-			<Description>TXT_KEY_BUILDING_MONUMENT</Description>
+			<Description>TXT_KEY_BUILDING_OBELISK</Description>
 			<Civilopedia>TXT_KEY_NEW_BUILDING_MONUMENT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MONUMENT_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_OBELISK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MONUMENT</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_OBELISK</ConstructSound>
@@ -68206,8 +68206,8 @@
 			<!-- MoonBean Coffeeshop -->
 			<BuildingClass>BUILDINGCLASS_CORPORATION_MOONBEAN_SHOP</BuildingClass>
 			<Type>BUILDING_CORPORATION_MOONBEAN_SHOP</Type>
-			<Description>TXT_KEY_CORPORATION_MOONBEAN_SHOP</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_MOONBEAN_SHOP_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_MOONBEAN_SHOP</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MOONBEAN_SHOP_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_MOONBEAN_SHOP</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_BANK</ConstructSound>
@@ -71838,7 +71838,7 @@
 			<!-- Obelisk -->
 			<BuildingClass>BUILDINGCLASS_EGYPTIAN_OBELISK</BuildingClass>
 			<Type>BUILDING_EGYPTIAN_OBELISK</Type>
-			<Description>TXT_KEY_BUILDING_OBELISK</Description>
+			<Description>TXT_KEY_BUILDING_EGYPTIAN_OBELISK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EGYPTIAN_OBELISK_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_EGYPTIAN_OBELISK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
@@ -83696,8 +83696,8 @@
 			<!-- Red Curtains Theatre -->
 			<BuildingClass>BUILDINGCLASS_CORPORATION_RED_THEATER</BuildingClass>
 			<Type>BUILDING_CORPORATION_RED_THEATER</Type>
-			<Description>TXT_KEY_CORPORATION_RED_THEATER</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_RED_THEATER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_RED_THEATER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_RED_THEATER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_RED_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_RED_THEATER</ArtDefineTag>
@@ -87127,8 +87127,8 @@
 			<!-- Safari Hunters Guide -->
 			<BuildingClass>BUILDINGCLASS_CORPORATION_SAFARI_GUIDE</BuildingClass>
 			<Type>BUILDING_CORPORATION_SAFARI_GUIDE</Type>
-			<Description>TXT_KEY_CORPORATION_SAFARI_GUIDE</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_SAFARI_GUIDE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_SAFARI_GUIDE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_SAFARI_GUIDE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_SAFARI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_SAFARI_GUIDE</ArtDefineTag>
@@ -91120,7 +91120,7 @@
 			<BuildingClass>BUILDINGCLASS_SID_SUSHI_RESTAURANT</BuildingClass>
 			<Type>BUILDING_SID_SUSHI_RESTAURANT</Type>
 			<Description>TXT_KEY_BUILDING_SID_SUSHI_RESTAURANT</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_2_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_2_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SID_SUSHI_RESTAURANT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SID_SUSHI_RESTAURANT</ArtDefineTag>
@@ -94722,7 +94722,7 @@
 			<BuildingClass>BUILDINGCLASS_STANDARD_ETHANOL_DISTILLERY</BuildingClass>
 			<Type>BUILDING_STANDARD_ETHANOL_DISTILLERY</Type>
 			<Description>TXT_KEY_BUILDING_STANDARD_ETHANOL_DISTILLERY</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_3_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_3_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_STANDARD_ETHANOL_DISTILLERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_STANDARD_ETHANOL_DISTILLERY</ArtDefineTag>
@@ -95304,9 +95304,9 @@
 			<!-- Smelter (Steel) -->
 			<BuildingClass>BUILDINGCLASS_STEEL_MILL</BuildingClass>
 			<Type>BUILDING_STEEL_MILL</Type>
-			<Description>TXT_KEY_BUILDING_SMELTER_STEEL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SMELTER_STEEL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SMELTER_STEEL_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_STEEL_MILL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_STEEL_MILL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_STEEL_MILL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SMELTER_STEEL</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_IRONWORKS</ConstructSound>
@@ -95418,9 +95418,9 @@
 			<!-- Stele -->
 			<BuildingClass>BUILDINGCLASS_ABYSSINIA_STELE</BuildingClass>
 			<Type>BUILDING_ABYSSINIA_STELE</Type>
-			<Description>TXT_KEY_BUILDING_STELE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_STELE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MONUMENT_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_ABYSSINIA_STELE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ABYSSINIA_STELE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_OBELISK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ABYSSINIA_STELE</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_OBELISK</ConstructSound>
@@ -103954,8 +103954,8 @@
 			<!-- Ultimate Soldiers Trainer -->
 			<BuildingClass>BUILDINGCLASS_CORPORATION_ULTSOLDIER_TRAINER</BuildingClass>
 			<Type>BUILDING_CORPORATION_ULTSOLDIER_TRAINER</Type>
-			<Description>TXT_KEY_CORPORATION_ULTSOLDIER_TRAINER</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_ULTSOLDIER_TRAINER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_ULTSOLDIER_TRAINER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_ULTSOLDIER_TRAINER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_ULTSOLDIER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_ULTSOLDIER_TRAINER</ArtDefineTag>
@@ -108847,8 +108847,8 @@
 			<!-- Wonka Confectioneries Shop -->
 			<BuildingClass>BUILDINGCLASS_CORPORATION_WONKA_SHOP</BuildingClass>
 			<Type>BUILDING_CORPORATION_WONKA_SHOP</Type>
-			<Description>TXT_KEY_CORPORATION_WONKA_SHOP</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_WONKA_SHOP_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_WONKA_SHOP</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_WONKA_SHOP_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_WONKA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_WONKA_SHOP</ArtDefineTag>
@@ -112655,7 +112655,7 @@
 		<BuildingInfo>
 			<!-- Scarecrows -->
 			<BuildingClass>BUILDINGCLASS_SCARECROWS</BuildingClass>
-			<Type>BUILDING_SCARESCROWS</Type>
+			<Type>BUILDING_SCARECROWS</Type>
 			<Description>TXT_KEY_BUILDING_SCARECROWS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SCARECROWS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SCARECROWS_STRATEGY</Strategy>

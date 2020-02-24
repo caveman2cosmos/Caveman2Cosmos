@@ -163,8 +163,8 @@ m_cachedBonusCount(NULL)
 	m_paiExtraBuildingHappiness = NULL;
 	m_paiExtraBuildingHealth = NULL;
 	m_paiFeatureHappiness = NULL;
-	m_paiUnitClassCount = NULL;
-	m_paiUnitClassMaking = NULL;
+	m_paiUnitCount = NULL;
+	m_paiUnitMaking = NULL;
 	m_paiBuildingClassCount = NULL;
 	m_paiBuildingClassMaking = NULL;
 	m_paiBuildingGroupCount = NULL;
@@ -798,8 +798,8 @@ void CvPlayer::uninit()
 	SAFE_DELETE_ARRAY(m_paiExtraBuildingHappiness);
 	SAFE_DELETE_ARRAY(m_paiExtraBuildingHealth);
 	SAFE_DELETE_ARRAY(m_paiFeatureHappiness);
-	SAFE_DELETE_ARRAY(m_paiUnitClassCount);
-	SAFE_DELETE_ARRAY(m_paiUnitClassMaking);
+	SAFE_DELETE_ARRAY(m_paiUnitCount);
+	SAFE_DELETE_ARRAY(m_paiUnitMaking);
 	SAFE_DELETE_ARRAY(m_paiBuildingClassCount);
 	SAFE_DELETE_ARRAY(m_paiBuildingClassMaking);
 	SAFE_DELETE_ARRAY(m_paiBuildingGroupCount);
@@ -1363,14 +1363,14 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 			m_paiFeatureHappiness[iI] = 0;
 		}
 
-		FAssertMsg(m_paiUnitClassCount==NULL, "about to leak memory, CvPlayer::m_paiUnitClassCount");
-		m_paiUnitClassCount = new int [GC.getNumUnitClassInfos()];
-		FAssertMsg(m_paiUnitClassMaking==NULL, "about to leak memory, CvPlayer::m_paiUnitClassMaking");
-		m_paiUnitClassMaking = new int [GC.getNumUnitClassInfos()];
-		for (iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
+		FAssertMsg(m_paiUnitCount==NULL, "about to leak memory, CvPlayer::m_paiUnitCount");
+		m_paiUnitCount = new int [GC.getNumUnitInfos()];
+		FAssertMsg(m_paiUnitMaking==NULL, "about to leak memory, CvPlayer::m_paiUnitMaking");
+		m_paiUnitMaking = new int [GC.getNumUnitInfos()];
+		for (iI = 0; iI < GC.getNumUnitInfos(); iI++)
 		{
-			m_paiUnitClassCount[iI] = 0;
-			m_paiUnitClassMaking[iI] = 0;
+			m_paiUnitCount[iI] = 0;
+			m_paiUnitMaking[iI] = 0;
 		}
 
 		FAssertMsg(m_paiBuildingClassCount==NULL, "about to leak memory, CvPlayer::m_paiBuildingClassCount");
@@ -2281,18 +2281,13 @@ void CvPlayer::initFreeUnits()
 Consider removing freeUnitClass from civilization info as this is the only place that would have used it.
 
 		CvCivilizationInfo& kCivilizationInfo = GC.getCivilizationInfo(getCivilizationType());
-		for (int iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 		{
-			eLoopUnit = (UnitTypes)kCivilizationInfo.getCivilizationUnits(iI);
+			int iFreeCount = kCivilizationInfo.getCivilizationFreeUnitsClass(GC.getUnitInfo((UnitTypes)iI).getUnitClassType) * iMult;
 
-			if (eLoopUnit != NO_UNIT)
+			for (int iJ = 0; iJ < iFreeCount; iJ++)
 			{
-				int iFreeCount = kCivilizationInfo.getCivilizationFreeUnitsClass(iI) * iMult;
-
-				for (int iJ = 0; iJ < iFreeCount; iJ++)
-				{
-					addFreeUnit(eLoopUnit);
-				}
+				addFreeUnit((UnitTypes)iI);
 			}
 		}
 */
@@ -2436,28 +2431,15 @@ UnitTypes CvPlayer::getBestUnitType(UnitAITypes eUnitAI) const
 
 	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
-		if (GC.getUnitInfo((UnitTypes) iI).getPrereqAndBonus() != NO_BONUS)
-		{
+		if (algo::none_of(cities(), CvCity::fn::canTrain((UnitTypes) iI)))
 			continue;
-		}
-		bool bValid = true;
-		for (int iJ = 0; iJ < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); iJ++)
-		{
-			if (GC.getUnitInfo((UnitTypes) iI).getPrereqOrBonuses(iJ) != NO_BONUS)
-			{
-				bValid = false;
-				break;
-			}
-		}
-		if (bValid && canTrain((UnitTypes) iI))
-		{
-			const int iValue = AI_unitValue((UnitTypes) iI, eUnitAI, NULL);
 
-			if (iValue > iBestValue)
-			{
-				eBestUnit = (UnitTypes) iI;
-				iBestValue = iValue;
-			}
+		const int iValue = AI_unitValue((UnitTypes) iI, eUnitAI, NULL);
+
+		if (iValue > iBestValue)
+		{
+			eBestUnit = (UnitTypes) iI;
+			iBestValue = iValue;
 		}
 	}
 	return eBestUnit;
@@ -4677,21 +4659,21 @@ const TCHAR* CvPlayer::getUnitButton(UnitTypes eUnit) const
 	return pUnitArtInfo ? pUnitArtInfo->getButton() : GC.getUnitInfo(eUnit).getArtInfo(0, getCurrentEra(), NO_UNIT_ARTSTYLE)->getButton();
 }
 
-void CvPlayer::recalculateUnitClassCounts()
+void CvPlayer::recalculateUnitCounts()
 {
 	PROFILE_FUNC();
 
 	CvUnit*	pLoopUnit;
 	int		iLoop;
 
-	for(int iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
+	for(int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
-		m_paiUnitClassCount[iI] = 0;
+		m_paiUnitCount[iI] = 0;
 	}
 
 	for(pLoopUnit = firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = nextUnit(&iLoop))
 	{
-		m_paiUnitClassCount[pLoopUnit->getUnitClassType()]++;
+		m_paiUnitCount[pLoopUnit->getUnitType()]++;
 		changeUnitPercentCountForCostAdjustment(pLoopUnit->getExtraCostModifier());
 	}
 }
@@ -6787,46 +6769,20 @@ bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial
 		}
 		break;
 
-/************************************************************************************************/
-/* Afforess	                  Start		 07/29/10                                               */
-/*                                                                                              */
-/* Advanced Diplomacy                                                                           */
-/************************************************************************************************/
     case TRADE_WORKER:
         {
             pUnitTraded = getUnit(item.m_iData);
             pTheirCapitalCity = GET_PLAYER(eWhoTo).getCapitalCity();
-			if (GC.getGame().isOption(GAMEOPTION_ADVANCED_DIPLOMACY))
+			if (pUnitTraded != NULL && pTheirCapitalCity != NULL
+			&& GC.getGame().isOption(GAMEOPTION_ADVANCED_DIPLOMACY)
+			&& GC.getDefineINT("CAN_TRADE_WORKERS") > 0
+			&& GET_TEAM(getTeam()).isHasEmbassy(GET_PLAYER(eWhoTo).getTeam())
+			&& GC.getUnitInfo(pUnitTraded->getUnitType()).isWorkerTrade()
+			&& pUnitTraded->canMove()
+			&& !GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).isUnitMaxedOut(pUnitTraded->getUnitType(), GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).getUnitMaking(pUnitTraded->getUnitType()))
+			&& !GET_PLAYER(eWhoTo).isUnitMaxedOut(pUnitTraded->getUnitType(), GET_PLAYER(eWhoTo).getUnitMaking(pUnitTraded->getUnitType())))
 			{
-				if (GC.getDefineINT("CAN_TRADE_WORKERS") > 0)
-				{
-					if (GET_TEAM(getTeam()).isHasEmbassy(GET_PLAYER(eWhoTo).getTeam()))
-					{
-						if (pUnitTraded != NULL)
-						{
-						//	pTradingCity = pUnitTraded->plot()->getPlotCity();
-							if (GC.getUnitInfo(pUnitTraded->getUnitType()).isWorkerTrade() && pUnitTraded->canMove()/* && (pTradingCity != NULL) */&& (pTheirCapitalCity != NULL))
-							{
-							//	if (pTradingCity->getOwner() == getID())
-							//	{
-								//	if (pTradingCity->isConnectedTo(pTheirCapitalCity))
-								//	{
-								//		if (pTradingCity->isRevealed(GET_PLAYER(eWhoTo).getTeam(), true))
-								//		{
-											if (!GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).isUnitClassMaxedOut(pUnitTraded->getUnitClassType(), GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).getUnitClassMaking(pUnitTraded->getUnitClassType())))
-											{
-												if (!GET_PLAYER(eWhoTo).isUnitClassMaxedOut(pUnitTraded->getUnitClassType(), GET_PLAYER(eWhoTo).getUnitClassMaking(pUnitTraded->getUnitClassType())))
-												{
-													bResult = true;
-												}
-											}
-									//	}
-									//}
-							//	}
-							}
-						}
-					}
-				}
+				bResult = true;
 			}
 		}
         break;
@@ -6836,45 +6792,26 @@ bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial
             pUnitTraded = getUnit(item.m_iData);
             pTheirCapitalCity = GET_PLAYER(eWhoTo).getCapitalCity();
 
-			if (GC.getGame().isOption(GAMEOPTION_ADVANCED_DIPLOMACY) && GC.getDefineINT("NO_MILITARY_UNIT_TRADING") == 0)
+			if (pUnitTraded != NULL && pTheirCapitalCity != NULL && pUnitTraded->canMove()
+			&& GC.getGame().isOption(GAMEOPTION_ADVANCED_DIPLOMACY)
+			&& GC.getDefineINT("NO_MILITARY_UNIT_TRADING") == 0
+			&& GET_TEAM(getTeam()).isHasEmbassy(GET_PLAYER(eWhoTo).getTeam())
+			&& GC.getUnitInfo(pUnitTraded->getUnitType()).isMilitaryTrade())
 			{
-				if (GET_TEAM(getTeam()).isHasEmbassy(GET_PLAYER(eWhoTo).getTeam()))
+				pTradingCity = pUnitTraded->plot()->getPlotCity();
+
+				if (pTradingCity != NULL && pTradingCity->getOwner() == getID()
+				&& pTradingCity->isConnectedTo(pTheirCapitalCity)
+				&& pTradingCity->isRevealed(GET_PLAYER(eWhoTo).getTeam(), true)
+				&& !GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).isUnitMaxedOut(pUnitTraded->getUnitType(), GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).getUnitMaking(pUnitTraded->getUnitType()))
+				&& !GET_PLAYER(eWhoTo).isUnitMaxedOut(pUnitTraded->getUnitType(), GET_PLAYER(eWhoTo).getUnitMaking(pUnitTraded->getUnitType())))
 				{
-					if (pUnitTraded != NULL)
-					{
-						UnitTypes eUnit = (UnitTypes)GC.getCivilizationInfo(GET_PLAYER(eWhoTo).getCivilizationType()).getCivilizationUnits(pUnitTraded->getUnitClassType());
-						if ( NO_UNIT != eUnit )
-				//		if (GET_PLAYER(eWhoTo).canTrain(eUnit))
-						{
-							pTradingCity = pUnitTraded->plot()->getPlotCity();
-							if (GC.getUnitInfo(pUnitTraded->getUnitType()).isMilitaryTrade() && pUnitTraded->canMove() && (pTradingCity != NULL) && (pTheirCapitalCity != NULL))
-							{
-								if (pTradingCity->getOwner() == getID())
-								{
-									if (pTradingCity->isConnectedTo(pTheirCapitalCity))
-									{
-										if (pTradingCity->isRevealed(GET_PLAYER(eWhoTo).getTeam(), true))
-										{
-											if (!GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).isUnitClassMaxedOut(pUnitTraded->getUnitClassType(), GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).getUnitClassMaking(pUnitTraded->getUnitClassType())))
-											{
-												if (!GET_PLAYER(eWhoTo).isUnitClassMaxedOut(pUnitTraded->getUnitClassType(), GET_PLAYER(eWhoTo).getUnitClassMaking(pUnitTraded->getUnitClassType())))
-												{
-													bResult = true;
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-					}
+					bResult = true;
 				}
 			}
 		}
         break;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 	case TRADE_GOLD:
 		if (GET_TEAM(getTeam()).isGoldTrading() && GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).isGoldTrading())
 		{
@@ -8569,20 +8506,16 @@ bool CvPlayer::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool
 	PROFILE_FUNC();
 
 	if (eUnit == NO_UNIT) return false;
-	CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
-	const UnitClassTypes eUnitClass = (UnitClassTypes)kUnit.getUnitClassType();
-	int iI;
 
-	//Another way to create a barrier for barbarians to spawn heroes - apparently this is called when determining what units to add to a newly spawned barb city.
-	if (isNPC() && GC.getUnitInfo(eUnit).hasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_HERO")))
+	if (isNPC() && isWorldUnit(eUnit))
 	{
 		return false;
 	}
-
 	if (!GC.getGame().canEverTrain(eUnit))
 	{
 		return false;
 	}
+	CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
 
 	if (!bIgnoreCost && kUnit.getProductionCost() == -1)
 	{
@@ -8610,7 +8543,7 @@ bool CvPlayer::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool
 		return false;
 	}
 
-	for (iI = 0; iI < GC.getNUM_UNIT_AND_TECH_PREREQS(); iI++)
+	for (int iI = 0; iI < GC.getNUM_UNIT_AND_TECH_PREREQS(); iI++)
 	{
 		if (kUnit.getPrereqAndTechs(iI) != NO_TECH && !GET_TEAM(getTeam()).isHasTech((TechTypes)(kUnit.getPrereqAndTechs(iI))))
 		{
@@ -8633,7 +8566,7 @@ bool CvPlayer::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool
 		if (kUnit.isPrereqOrCivics((int)NO_CIVIC))
 		{
 			bool bValid = false;
-			for (iI = 0; iI < GC.getNumCivicInfos(); iI++)
+			for (int iI = 0; iI < GC.getNumCivicInfos(); iI++)
 			{
 				if (kUnit.isPrereqOrCivics(iI) && isCivic(CivicTypes(iI)))
 				{
@@ -8647,17 +8580,7 @@ bool CvPlayer::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool
 			}
 		}
 
-		if (GC.getGame().isUnitClassMaxedOut(eUnitClass))
-		{
-			return false;
-		}
-
-		if (GET_TEAM(getTeam()).isUnitClassMaxedOut(eUnitClass))
-		{
-			return false;
-		}
-
-		if (isUnitClassMaxedOut(eUnitClass))
+		if (GC.getGame().isUnitMaxedOut(eUnit) || GET_TEAM(getTeam()).isUnitMaxedOut(eUnit) || isUnitMaxedOut(eUnit))
 		{
 			return false;
 		}
@@ -8667,17 +8590,9 @@ bool CvPlayer::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool
 	{
 		if (!bPropertySpawn)
 		{
-			if (GC.getGame().isUnitClassMaxedOut(eUnitClass, (GET_TEAM(getTeam()).getUnitClassMaking(eUnitClass) + ((bContinue) ? -1 : 0))))
-			{
-				return false;
-			}
-
-			if (GET_TEAM(getTeam()).isUnitClassMaxedOut(eUnitClass, (GET_TEAM(getTeam()).getUnitClassMaking(eUnitClass) + ((bContinue) ? -1 : 0))))
-			{
-				return false;
-			}
-
-			if (isUnitClassMaxedOut(eUnitClass, (getUnitClassMaking(eUnitClass) + ((bContinue) ? -1 : 0))))
+			if (GC.getGame().isUnitMaxedOut(eUnit, (GET_TEAM(getTeam()).getUnitMaking(eUnit) + ((bContinue) ? -1 : 0)))
+			|| GET_TEAM(getTeam()).isUnitMaxedOut(eUnit, (GET_TEAM(getTeam()).getUnitMaking(eUnit) + ((bContinue) ? -1 : 0)))
+			|| isUnitMaxedOut(eUnit, (getUnitMaking(eUnit) + ((bContinue) ? -1 : 0))))
 			{
 				return false;
 			}
@@ -9143,24 +9058,24 @@ bool CvPlayer::canMaintain(ProcessTypes eProcess, bool bContinue) const
 }
 
 
-bool CvPlayer::isProductionMaxedUnitClass(UnitClassTypes eUnitClass) const
+bool CvPlayer::isProductionMaxedUnit(UnitTypes eUnit) const
 {
-	if (eUnitClass == NO_UNITCLASS)
+	if (eUnit == NO_UNIT)
 	{
 		return false;
 	}
 
-	if (GC.getGame().isUnitClassMaxedOut(eUnitClass))
+	if (GC.getGame().isUnitMaxedOut(eUnit))
 	{
 		return true;
 	}
 
-	if (GET_TEAM(getTeam()).isUnitClassMaxedOut(eUnitClass))
+	if (GET_TEAM(getTeam()).isUnitMaxedOut(eUnit))
 	{
 		return true;
 	}
 
-	if (isUnitClassMaxedOut(eUnitClass))
+	if (isUnitMaxedOut(eUnit))
 	{
 		return true;
 	}
@@ -9221,9 +9136,6 @@ bool CvPlayer::isProductionMaxedProject(ProjectTypes eProject) const
 
 int CvPlayer::getProductionNeeded(UnitTypes eUnit) const
 {
-	UnitClassTypes eUnitClass = (UnitClassTypes)GC.getUnitInfo(eUnit).getUnitClassType();
-	FAssert(NO_UNITCLASS != eUnitClass);
-
 	int iInitialProduction = GC.getUnitInfo(eUnit).getProductionCost();
 	if (iInitialProduction < 0)
 	{
@@ -9234,7 +9146,7 @@ int CvPlayer::getProductionNeeded(UnitTypes eUnit) const
 
 	iProductionNeeded *= 100;
 
-	int iModifier = 100 + getUnitClassCount(eUnitClass) * GC.getUnitInfo(eUnit).getInstanceCostModifier();
+	int iModifier = 100 + getUnitCount(eUnit) * GC.getUnitInfo(eUnit).getInstanceCostModifier();
 	iProductionNeeded *= iModifier;
 	iProductionNeeded /= 100;
 
@@ -9298,7 +9210,7 @@ int CvPlayer::getProductionNeeded(UnitTypes eUnit) const
 
 	//The following is where we get the cost for a settler unit (that's ALL this does) and the cost scales to GROWTH factors rather than training factors.
 	//Thus placing it so that training factors influence the cost will cause settlers to be double scaled and the costs to go out of balance as a result.
-	iProductionNeeded += (getUnitExtraCost(eUnitClass) * 100);
+	iProductionNeeded += (getUnitExtraCost((UnitClassTypes)GC.getUnitInfo(eUnit).getUnitClassType()) * 100);
 
 	// Python cost modifier
 	if(GC.getUSE_GET_UNIT_COST_MOD_CALLBACK())
@@ -12753,41 +12665,33 @@ int CvPlayer::getWorkRate(BuildTypes eBuild) const
 {
 	int iRate = 0;
 	int iBestScore = 0;
-	CvCivilizationInfo& kCiv = GC.getCivilizationInfo(getCivilizationType());
 
-	for (int iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
-		UnitTypes eUnit = (UnitTypes)kCiv.getCivilizationUnits(iI);
-		if ( NO_UNIT != eUnit )
+		const CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes)iI);
+
+		if (kUnit.getBuilds(eBuild))
 		{
-			CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
+			const int iUnitRate = kUnit.getWorkRate();
+			int iScore = 0;
 
-			if (kUnit.getBuilds(eBuild))
+			if (getUnitCount((UnitTypes)iI) > 0)
 			{
-				bool	bHas = (getUnitClassCount((UnitClassTypes)iI) > 0);
-				int iUnitRate = kUnit.getWorkRate();
-				int iScore = 0;
+				iScore = iUnitRate*10;
+			}
+			else if (canTrain((UnitTypes)iI))
+			{
+				iScore = iUnitRate;
+			}
 
-				if ( bHas )
-				{
-					iScore = iUnitRate*10;
-				}
-				else if ( canTrain(eUnit) )
-				{
-					iScore = iUnitRate;
-				}
-
-				if ( iScore > iBestScore )
-				{
-					iBestScore = iScore;
-					iRate = iUnitRate;
-				}
+			if (iScore > iBestScore)
+			{
+				iBestScore = iScore;
+				iRate = iUnitRate;
 			}
 		}
 	}
-	int iRateModifier = getWorkerSpeedModifier();
-	iRateModifier += getBuildWorkerSpeedModifierSpecific(eBuild);
-	iRate *= std::max(0, iRateModifier + 100);
+	iRate *= std::max(0, getWorkerSpeedModifier() + getBuildWorkerSpeedModifierSpecific(eBuild) + 100);
 	iRate /= 100;
 
 	if (!isHuman() && !isNPC())
@@ -12795,7 +12699,6 @@ int CvPlayer::getWorkRate(BuildTypes eBuild) const
 		iRate *= std::max(0, (GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIWorkRateModifier() + 100));
 		iRate /= 100;
 	}
-
 	return iRate;
 }
 // BUG - Partial Builds - end
@@ -17122,62 +17025,60 @@ void CvPlayer::changeFeatureHappiness(FeatureTypes eIndex, int iChange, bool bLi
 /********************************************************************************/
 
 
-int CvPlayer::getUnitClassCount(UnitClassTypes eIndex) const
+int CvPlayer::getUnitCount(UnitTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitClassInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
-	return m_paiUnitClassCount[eIndex];
+	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	return m_paiUnitCount[eIndex];
 }
 
 
-bool CvPlayer::isUnitClassMaxedOut(UnitClassTypes eIndex, int iExtra) const
+bool CvPlayer::isUnitMaxedOut(const UnitTypes eIndex, const int iExtra) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitClassInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
-	const UnitTypes eUnit = (UnitTypes)GC.getUnitClassInfo(eIndex).getDefaultUnitIndex();
-
-	if (!isNationalUnit(eUnit))
+	if (!isNationalUnit(eIndex))
 	{
 		return false;
 	}
 
 	if (GC.getGame().isOption(GAMEOPTION_UNLIMITED_NATIONAL_UNITS))
 	{
-		if (!GC.getUnitInfo(eUnit).isUnlimitedException()) return false;
+		if (!GC.getUnitInfo(eIndex).isUnlimitedException()) return false;
 
-		FAssertMsg(getUnitClassCount(eIndex) <= GC.getUnitInfo(eUnit).getMaxPlayerInstances(), "getUnitClassCount is expected to be less than maximum bound of MaxPlayerInstances (invalid index)");
+		FAssertMsg(getUnitCount(eIndex) <= GC.getUnitInfo(eIndex).getMaxPlayerInstances(), "getUnitCount is expected to be less than maximum bound of MaxPlayerInstances (invalid index)");
 	}
-	return (getUnitClassCount(eIndex) + iExtra) >= GC.getUnitInfo(eUnit).getMaxPlayerInstances();
+	return (getUnitCount(eIndex) + iExtra) >= GC.getUnitInfo(eIndex).getMaxPlayerInstances();
 }
 
 
-void CvPlayer::changeUnitClassCount(UnitClassTypes eIndex, int iChange)
+void CvPlayer::changeUnitCount(UnitTypes eIndex, int iChange)
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitClassInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
-	m_paiUnitClassCount[eIndex] = (m_paiUnitClassCount[eIndex] + iChange);
-	FAssert(getUnitClassCount(eIndex) >= 0);
+	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	m_paiUnitCount[eIndex] = (m_paiUnitCount[eIndex] + iChange);
+	FAssert(getUnitCount(eIndex) >= 0);
 }
 
 
-int CvPlayer::getUnitClassMaking(UnitClassTypes eIndex) const
+int CvPlayer::getUnitMaking(UnitTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitClassInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
-	return m_paiUnitClassMaking[eIndex];
+	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	return m_paiUnitMaking[eIndex];
 }
 
 
-void CvPlayer::changeUnitClassMaking(UnitClassTypes eIndex, int iChange)
+void CvPlayer::changeUnitMaking(UnitTypes eIndex, int iChange)
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitClassInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
 	if (iChange != 0)
 	{
-		m_paiUnitClassMaking[eIndex] = (m_paiUnitClassMaking[eIndex] + iChange);
-		FAssert(getUnitClassMaking(eIndex) >= 0);
+		m_paiUnitMaking[eIndex] = (m_paiUnitMaking[eIndex] + iChange);
+		FAssert(getUnitMaking(eIndex) >= 0);
 
 		if (getID() == GC.getGame().getActivePlayer())
 		{
@@ -17187,9 +17088,9 @@ void CvPlayer::changeUnitClassMaking(UnitClassTypes eIndex, int iChange)
 }
 
 
-int CvPlayer::getUnitClassCountPlusMaking(UnitClassTypes eIndex) const
+int CvPlayer::getUnitCountPlusMaking(UnitTypes eIndex) const
 {
-	return (getUnitClassCount(eIndex) + getUnitClassMaking(eIndex));
+	return (getUnitCount(eIndex) + getUnitMaking(eIndex));
 }
 
 
@@ -23378,8 +23279,8 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiExtraBuildingHappiness);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiExtraBuildingHealth);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_FEATURES, GC.getNumFeatureInfos(), m_paiFeatureHappiness);
-		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNIT_CLASSES, GC.getNumUnitClassInfos(), m_paiUnitClassCount);
-		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNIT_CLASSES, GC.getNumUnitClassInfos(), m_paiUnitClassMaking);
+		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitClassInfos(), m_paiUnitCount);
+		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitClassInfos(), m_paiUnitMaking);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDING_CLASSES, GC.getNumBuildingClassInfos(), m_paiBuildingClassCount);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDING_CLASSES, GC.getNumBuildingClassInfos(), m_paiBuildingClassMaking);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_HURRIES, GC.getNumHurryInfos(), m_paiHurryCount);
@@ -24534,8 +24435,8 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiExtraBuildingHappiness);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiExtraBuildingHealth);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_FEATURES, GC.getNumFeatureInfos(), m_paiFeatureHappiness);
-		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNIT_CLASSES, GC.getNumUnitClassInfos(), m_paiUnitClassCount);
-		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNIT_CLASSES, GC.getNumUnitClassInfos(), m_paiUnitClassMaking);
+		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitClassInfos(), m_paiUnitCount);
+		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitClassInfos(), m_paiUnitMaking);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDING_CLASSES, GC.getNumBuildingClassInfos(), m_paiBuildingClassCount);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDING_CLASSES, GC.getNumBuildingClassInfos(), m_paiBuildingClassMaking);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_HURRIES, GC.getNumHurryInfos(), m_paiHurryCount);
@@ -34188,7 +34089,7 @@ void CvPlayer::recalculateModifiers()
 	//	Note - would ideally have this be a virtual to avoid the cast but adding virtuals to this
 	//	class screws up the core engine which accessing it via the DLL interafce
 	((CvPlayerAI*)this)->AI_recalculateUnitCounts();
-	recalculateUnitClassCounts();
+	recalculateUnitCounts();
 
 	doInflation(false); //true was only set during two week, to 'clean' the messed savegames due to inflation calculation bugs.
 

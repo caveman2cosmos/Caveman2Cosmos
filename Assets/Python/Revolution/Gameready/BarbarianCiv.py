@@ -65,7 +65,7 @@ class BarbarianCiv:
 		fMod *= iNumCities ** .5
 		# Gamespeed factor
 		iFactorGS = GC.getGameSpeedInfo(GAME.getGameSpeedType()).getGrowthPercent()
-		iRange = 10*iFactorGS
+		iRange = 16*iFactorGS
 		iEra = GAME.getCurrentEra()
 
 		iPolicy = self.RevOpt.getNewWorldPolicy()
@@ -219,6 +219,7 @@ class BarbarianCiv:
 		CyPlayer.setNewPlayerAlive(True)
 
 		civName = CyPlayer.getCivilizationDescription(0)
+		print "[INFO] %s has emerged in %s" %(civName, szCityName)
 
 		# Add replay message
 		mess = TRNSLTR.getText("TXT_KEY_BARBCIV_FORM_MINOR", ()) %(civName, szCityName)
@@ -249,7 +250,7 @@ class BarbarianCiv:
 		else:
 			fNumTeams = GAME.countCivTeamsAlive() * 1.0
 			fTechFrac = self.RevOpt.getBarbTechFrac()
-
+			#print "Free Starting techs:"
 			for iTech in xrange(GC.getNumTechInfos()):
 				if CyTeam.isHasTech(iTech) or not CyPlayer.canEverResearch(iTech): continue
 
@@ -267,13 +268,9 @@ class BarbarianCiv:
 
 				if fKnownRatio >= fTechFrac:
 					CyTeam.setHasTech(iTech, True, iPlayer, False, False)
+					#print "\t " + GC.getTechInfo(iTech).getDescription()
 
 		CyTeam.setIsMinorCiv(True, False)
-		# Remove initial units
-		CyUnit, i = CyPlayer.firstUnit(False)
-		while CyUnit:
-			CyUnit.kill(False, -1)
-			CyUnit, i = CyPlayer.nextUnit(i, False)
 
 		# Units
 		iNumBarbDefenders = GC.getHandicapInfo(GAME.getHandicapType()).getBarbarianInitialDefenders()
@@ -296,16 +293,20 @@ class BarbarianCiv:
 		else:
 			if iSettler > -1:
 				CyPlayer.initUnit(iSettler, iX, iY, UnitAITypes.UNITAI_SETTLE, DirectionTypes.DIRECTION_SOUTH)
+				#print "Free settler: " + CyUnit.getName()
 			if iWorker > -1:
 				CyPlayer.initUnit(iWorker, iX, iY, UnitAITypes.UNITAI_WORKER, DirectionTypes.DIRECTION_SOUTH)
 				CyPlayer.initUnit(iWorker, iX, iY, UnitAITypes.UNITAI_WORKER, DirectionTypes.DIRECTION_SOUTH)
+				#print "Free Workers (2): " + CyUnit.getName()
 			if iExplorer > -1:
 				CyPlayer.initUnit(iExplorer, iX, iY, UnitAITypes.UNITAI_EXPLORE, DirectionTypes.DIRECTION_SOUTH)
 				CyPlayer.initUnit(iExplorer, iX, iY, UnitAITypes.UNITAI_EXPLORE, DirectionTypes.DIRECTION_SOUTH)
+				#print "Free Explorers (2): " + CyUnit.getName()
 			if iMerchant > -1:
 				iTemp = 2 + 2*(iEra + 1)
 				for i in xrange(iTemp):
 					CyPlayer.initUnit(iMerchant, iX, iY, UnitAITypes.UNITAI_MERCHANT, DirectionTypes.DIRECTION_SOUTH)
+				#print "Free Merchant (%d): %s" %(iTemp, CyUnit.getName())
 
 		aList = [iCounter, iAttack, iAttackCity, iMobile]
 		iTemp = int(iBaseOffensiveUnits*fMilitaryMod)
@@ -319,6 +320,7 @@ class BarbarianCiv:
 					CyUnit = CyPlayer.initUnit(iUnit, iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 					CyUnit.changeExperience(iEra + GAME.getSorenRandNum(2*(iEra+1), 'Experience'), -1, False, False, False)
 					iCount += 1
+					#print "Free Combatant: " + CyUnit.getName()
 				break
 
 		szTxt = TRNSLTR.getText("TXT_KEY_BARBCIV_WORD_SPREADS", ()) + " "
@@ -399,9 +401,10 @@ class BarbarianCiv:
 		iAttackCityStr = 0
 		iMobileVal = 0
 		for iUnit in xrange(GC.getNumUnitInfos()):
+			if isLimitedUnit(iUnit): continue
 
 			CvUnitInfo = GC.getUnitInfo(iUnit)
-			if CvUnitInfo.getDomainType() != DomainTypes.DOMAIN_LAND or CvUnitInfo.getMaxGlobalInstances() > 0 or CvUnitInfo.getMaxPlayerInstances() > 0:
+			if CvUnitInfo.getDomainType() != DomainTypes.DOMAIN_LAND or CvUnitInfo.isPrereqBuildingClass(-1):
 				continue
 
 			if not CyPlayer.canTrain(iUnit, False, False): continue
@@ -411,22 +414,23 @@ class BarbarianCiv:
 				if iStr > iDefenderStr:
 					aList[0] = iUnit
 					iDefenderStr = iStr
-			if CvUnitInfo.getUnitAIType(UnitAITypes.UNITAI_COUNTER):
-				if iStr >= iCounterStr:
-					aList[1] = iUnit
-					iCounterStr = iStr
-			if CvUnitInfo.getUnitAIType(UnitAITypes.UNITAI_ATTACK):
-				if iStr > iAttackStr:
-					aList[2] = iUnit
-					iAttackStr = iStr
-			if CvUnitInfo.getUnitAIType(UnitAITypes.UNITAI_ATTACK_CITY):
-				if iStr > iAttackCityStr:
-					aList[3] = iUnit
-					iAttackCityStr = iStr
-			iVal = iStr * CvUnitInfo.getMoves()
-			if iVal > iMobileVal:
-				aList[4] = iUnit
-				iMobileVal = iVal
+			if not CvUnitInfo.isOnlyDefensive():
+				if CvUnitInfo.getUnitAIType(UnitAITypes.UNITAI_COUNTER):
+					if iStr >= iCounterStr:
+						aList[1] = iUnit
+						iCounterStr = iStr
+				if CvUnitInfo.getUnitAIType(UnitAITypes.UNITAI_ATTACK):
+					if iStr > iAttackStr:
+						aList[2] = iUnit
+						iAttackStr = iStr
+				if CvUnitInfo.getUnitAIType(UnitAITypes.UNITAI_ATTACK_CITY):
+					if iStr > iAttackCityStr:
+						aList[3] = iUnit
+						iAttackCityStr = iStr
+				iVal = iStr * CvUnitInfo.getMoves()
+				if iVal > iMobileVal:
+					aList[4] = iUnit
+					iMobileVal = iVal
 
 		iStd = -1
 		if -1 in aList:
@@ -455,15 +459,17 @@ class BarbarianCiv:
 			CvUnitInfo = GC.getUnitInfo(iUnit)
 			# Tech Prereq
 			iTech = CvUnitInfo.getPrereqAndTech()
-			if iTech > -1 and not CyTeam.isHasTech(iTech): continue
+			if iTech > -1 and not CyTeam.isHasTech(iTech):
+				continue
 			for i in range(self.NUM_UNIT_AND_TECH_PREREQS):
 				iTech = CvUnitInfo.getPrereqAndTechs(i)
-				if iTech > -1 and not CyTeam.isHasTech(iTech): break
+				if iTech > -1 and not CyTeam.isHasTech(iTech):
+					break
 			else:
 				aList.append(iUnit); break
 		else: aList.append(iStd)
 
-		if iStd != -1 and -1 in aList:
+		if -1 in aList:
 			for i in xrange(len(aList)):
 				if aList[i] == -1:
 					aList[i] = iStd
