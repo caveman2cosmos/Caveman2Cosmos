@@ -10,7 +10,6 @@
 		||| Active Culture ||
 		||||||||||||||||||-->
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CULTURE_ACTIVE_AFRICAN</BuildingClass>
 			<Type>BUILDING_CULTURE_ACTIVE_AFRICAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_AFRICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
@@ -21,7 +20,6 @@
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CULTURE_ACTIVE_ASIAN</BuildingClass>
 			<Type>BUILDING_CULTURE_ACTIVE_ASIAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_ASIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
@@ -32,7 +30,6 @@
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CULTURE_ACTIVE_EUROPEAN</BuildingClass>
 			<Type>BUILDING_CULTURE_ACTIVE_EUROPEAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_EUROPEAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
@@ -43,7 +40,6 @@
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingClass>
 			<Type>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
@@ -54,7 +50,6 @@
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClass>
 			<Type>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -70,7 +65,6 @@
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingClass>
 			<Type>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
@@ -81,7 +75,6 @@
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CULTURE_ACTIVE_OCEANIAN</BuildingClass>
 			<Type>BUILDING_CULTURE_ACTIVE_OCEANIAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_OCEANIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
@@ -92,7 +85,6 @@
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingClass>
 			<Type>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
@@ -106,7 +98,6 @@
 		||| Adopted Culture |||
 		||||||||||||||||||||-->
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CULTURE_ADOPTED_AFRICAN</BuildingClass>
 			<Type>BUILDING_CULTURE_ADOPTED_AFRICAN</Type>
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_AFRICAN</Description>
@@ -138,7 +129,6 @@
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CULTURE_ADOPTED_ASIAN</BuildingClass>
 			<Type>BUILDING_CULTURE_ADOPTED_ASIAN</Type>
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_ASIAN</Description>
@@ -170,7 +160,6 @@
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CULTURE_ADOPTED_EUROPEAN</BuildingClass>
 			<Type>BUILDING_CULTURE_ADOPTED_EUROPEAN</Type>
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_EUROPEAN</Description>
@@ -202,7 +191,6 @@
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CULTURE_ADOPTED_MIDDLE_EASTERN</BuildingClass>
 			<Type>BUILDING_CULTURE_ADOPTED_MIDDLE_EASTERN</Type>
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_MIDDLE_EASTERN</Description>
@@ -234,7 +222,6 @@
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CULTURE_ADOPTED_NEANDERTHAL</BuildingClass>
 			<Type>BUILDING_CULTURE_ADOPTED_NEANDERTHAL</Type>
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_NEANDERTHAL</Description>
@@ -266,7 +253,6 @@
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CULTURE_ADOPTED_NORTH_AMERICAN</BuildingClass>
 			<Type>BUILDING_CULTURE_ADOPTED_NORTH_AMERICAN</Type>
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_NORTH_AMERICAN</Description>
@@ -298,7 +284,6 @@
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CULTURE_ADOPTED_OCEANIAN</BuildingClass>
 			<Type>BUILDING_CULTURE_ADOPTED_OCEANIAN</Type>
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_OCEANIAN</Description>
@@ -330,7 +315,6 @@
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CULTURE_ADOPTED_SOUTH_AMERICAN</BuildingClass>
 			<Type>BUILDING_CULTURE_ADOPTED_SOUTH_AMERICAN</Type>
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_SOUTH_AMERICAN</Description>
@@ -365,7 +349,6 @@
 		||| Local Culture |||
 		||||||||||||||||||-->
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CULTURE_LOCAL_AFRICAN</BuildingClass>
 			<Type>BUILDING_CULTURE_LOCAL_AFRICAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_AFRICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
@@ -499,7 +482,6 @@
 			<iConquestProb>70</iConquestProb>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CULTURE_LOCAL_EUROPEAN</BuildingClass>
 			<Type>BUILDING_CULTURE_LOCAL_EUROPEAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_EUROPEAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
@@ -566,7 +548,6 @@
 			<iConquestProb>70</iConquestProb>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingClass>
 			<Type>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
@@ -633,7 +614,6 @@
 			<iConquestProb>70</iConquestProb>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClass>
 			<Type>BUILDING_CULTURE_LOCAL_NEANDERTHAL</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -705,7 +685,6 @@
 			<iConquestProb>70</iConquestProb>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CULTURE_LOCAL_NORTH_AMERICAN</BuildingClass>
 			<Type>BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
@@ -772,7 +751,6 @@
 			<iConquestProb>70</iConquestProb>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CULTURE_LOCAL_OCEANIAN</BuildingClass>
 			<Type>BUILDING_CULTURE_LOCAL_OCEANIAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_OCEANIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
@@ -839,7 +817,6 @@
 			<iConquestProb>70</iConquestProb>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingClass>
 			<Type>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
@@ -909,7 +886,6 @@
 		||| Native Culture |||
 		|||||||||||||||||||-->
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CULTURE_NATIVE_AFRICAN</BuildingClass>
 			<Type>BUILDING_CULTURE_NATIVE_AFRICAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_AFRICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
@@ -921,7 +897,6 @@
 			<FreeBuilding>BUILDINGCLASS_CULTURE_ACTIVE_AFRICAN</FreeBuilding>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CULTURE_NATIVE_ASIAN</BuildingClass>
 			<Type>BUILDING_CULTURE_NATIVE_ASIAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_ASIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
@@ -933,7 +908,6 @@
 			<FreeBuilding>BUILDINGCLASS_CULTURE_ACTIVE_ASIAN</FreeBuilding>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CULTURE_NATIVE_EUROPEAN</BuildingClass>
 			<Type>BUILDING_CULTURE_NATIVE_EUROPEAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_EUROPEAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
@@ -945,7 +919,6 @@
 			<FreeBuilding>BUILDINGCLASS_CULTURE_ACTIVE_EUROPEAN</FreeBuilding>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingClass>
 			<Type>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
@@ -957,7 +930,6 @@
 			<FreeBuilding>BUILDINGCLASS_CULTURE_ACTIVE_MIDDLE_EASTERN</FreeBuilding>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CULTURE_NATIVE_NEANDERTHAL</BuildingClass>
 			<Type>BUILDING_CULTURE_NATIVE_NEANDERTHAL</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -974,7 +946,6 @@
 			<FreeBuilding>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</FreeBuilding>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CULTURE_NATIVE_NORTH_AMERICAN</BuildingClass>
 			<Type>BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
@@ -986,7 +957,6 @@
 			<FreeBuilding>BUILDINGCLASS_CULTURE_ACTIVE_NORTH_AMERICAN</FreeBuilding>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CULTURE_NATIVE_OCEANIAN</BuildingClass>
 			<Type>BUILDING_CULTURE_NATIVE_OCEANIAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_OCEANIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
@@ -998,7 +968,6 @@
 			<FreeBuilding>BUILDINGCLASS_CULTURE_ACTIVE_OCEANIAN</FreeBuilding>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CULTURE_NATIVE_SOUTH_AMERICAN</BuildingClass>
 			<Type>BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
@@ -1014,7 +983,6 @@
 		||||||||||||||||||||-->
 		<BuildingInfo>
 			<!-- Culture (Aborigine) -->
-			<BuildingClass>BUILDINGCLASS_ABORIGINE_EMBASSY</BuildingClass>
 			<Type>BUILDING_ABORIGINE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -1061,7 +1029,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Ainu) -->
-			<BuildingClass>BUILDINGCLASS_AINU_EMBASSY</BuildingClass>
 			<Type>BUILDING_AINU_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -1102,7 +1069,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Aka) -->
-			<BuildingClass>BUILDINGCLASS_AKA_EMBASSY</BuildingClass>
 			<Type>BUILDING_AKA_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -1148,7 +1114,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Akkadian) -->
-			<BuildingClass>BUILDINGCLASS_AKKAD_EMBASSY</BuildingClass>
 			<Type>BUILDING_AKKAD_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -1189,7 +1154,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (American) -->
-			<BuildingClass>BUILDINGCLASS_AMERICAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_AMERICAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -1440,7 +1404,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Anasazi) -->
-			<BuildingClass>BUILDINGCLASS_ANASAZI_EMBASSY</BuildingClass>
 			<Type>BUILDING_ANASAZI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -1487,7 +1450,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Apache) -->
-			<BuildingClass>BUILDINGCLASS_APACHE_EMBASSY</BuildingClass>
 			<Type>BUILDING_APACHE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -1534,7 +1496,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Arabian) -->
-			<BuildingClass>BUILDINGCLASS_ARABIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_ARABIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -1604,7 +1565,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Arawak) -->
-			<BuildingClass>BUILDINGCLASS_ARAWAK_EMBASSY</BuildingClass>
 			<Type>BUILDING_ARAWAK_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -1646,7 +1606,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Argentinian) -->
-			<BuildingClass>BUILDINGCLASS_ARGENTINIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_ARGENTINIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -1691,7 +1650,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Armenian) -->
-			<BuildingClass>BUILDINGCLASS_ARMENIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_ARMENIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -1732,7 +1690,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Ashanti) -->
-			<BuildingClass>BUILDINGCLASS_ASHANTI_EMBASSY</BuildingClass>
 			<Type>BUILDING_ASHANTI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -1773,7 +1730,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Assyrian) -->
-			<BuildingClass>BUILDINGCLASS_ASSYRIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_ASSYRIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -1825,7 +1781,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Athenian) -->
-			<BuildingClass>BUILDINGCLASS_ATHENIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_ATHENIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -1923,7 +1878,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Austrian) -->
-			<BuildingClass>BUILDINGCLASS_AUSTRIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_AUSTRIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -1971,7 +1925,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Aymara) -->
-			<BuildingClass>BUILDINGCLASS_AYMARA_EMBASSY</BuildingClass>
 			<Type>BUILDING_AYMARA_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -2018,7 +1971,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Aztec) -->
-			<BuildingClass>BUILDINGCLASS_AZTEC_EMBASSY</BuildingClass>
 			<Type>BUILDING_AZTEC_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -2080,7 +2032,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Babylonian) -->
-			<BuildingClass>BUILDINGCLASS_BABYLONIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_BABYLONIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -2142,7 +2093,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Bandanese) -->
-			<BuildingClass>BUILDINGCLASS_BANDANESE_EMBASSY</BuildingClass>
 			<Type>BUILDING_BANDANESE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
