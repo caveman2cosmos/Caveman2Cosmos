@@ -682,11 +682,11 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Cereal Mills -->
-			<BuildingClass>BUILDINGCLASS_CORPORATION_1</BuildingClass>
-			<Type>BUILDING_CORPORATION_1</Type>
+			<BuildingClass>BUILDINGCLASS_CORPORATION_1_HQ</BuildingClass>
+			<Type>BUILDING_CORPORATION_1_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_1_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_1_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_1_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_1_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CORPORATION_1_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -753,11 +753,11 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Sid's Sushi Co -->
-			<BuildingClass>BUILDINGCLASS_CORPORATION_2</BuildingClass>
-			<Type>BUILDING_CORPORATION_2</Type>
+			<BuildingClass>BUILDINGCLASS_CORPORATION_2_HQ</BuildingClass>
+			<Type>BUILDING_CORPORATION_2_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_2_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_2_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_2_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_2_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CORPORATION_2_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -825,11 +825,11 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Standard Ethanol -->
-			<BuildingClass>BUILDINGCLASS_CORPORATION_3</BuildingClass>
-			<Type>BUILDING_CORPORATION_3</Type>
+			<BuildingClass>BUILDINGCLASS_CORPORATION_3_HQ</BuildingClass>
+			<Type>BUILDING_CORPORATION_3_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_3_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_3_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_3_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_3_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CORPORATION_3_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -896,11 +896,11 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Creative Constructions -->
-			<BuildingClass>BUILDINGCLASS_CORPORATION_4</BuildingClass>
-			<Type>BUILDING_CORPORATION_4</Type>
+			<BuildingClass>BUILDINGCLASS_CORPORATION_4_HQ</BuildingClass>
+			<Type>BUILDING_CORPORATION_4_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_4_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_4_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_4_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_4_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CORPORATION_4_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -967,11 +967,11 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Mining Inc -->
-			<BuildingClass>BUILDINGCLASS_CORPORATION_5</BuildingClass>
-			<Type>BUILDING_CORPORATION_5</Type>
+			<BuildingClass>BUILDINGCLASS_CORPORATION_5_HQ</BuildingClass>
+			<Type>BUILDING_CORPORATION_5_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_5_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_5_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_5_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_5_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CORPORATION_5_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -1038,11 +1038,11 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Aluminum Co -->
-			<BuildingClass>BUILDINGCLASS_CORPORATION_6</BuildingClass>
-			<Type>BUILDING_CORPORATION_6</Type>
+			<BuildingClass>BUILDINGCLASS_CORPORATION_6_HQ</BuildingClass>
+			<Type>BUILDING_CORPORATION_6_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_6_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_6_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_6_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_6_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CORPORATION_6_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -1109,11 +1109,11 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Civilized Jewelers Inc -->
-			<BuildingClass>BUILDINGCLASS_CORPORATION_7</BuildingClass>
-			<Type>BUILDING_CORPORATION_7</Type>
+			<BuildingClass>BUILDINGCLASS_CORPORATION_7_HQ</BuildingClass>
+			<Type>BUILDING_CORPORATION_7_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_7_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_7_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_7_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_7_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CORPORATION_7_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -1183,8 +1183,8 @@
 			<BuildingClass>BUILDINGCLASS_CORPORATION_ADVENTURE_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_ADVENTURE_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_ADVENTURE_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_ADVENTURE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_ADVENTURE_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_ADVENTURE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_ADVENTURE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -1258,8 +1258,8 @@
 			<BuildingClass>BUILDINGCLASS_CORPORATION_BULLSEYE_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_BULLSEYE_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_BULLSEYE_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_BULLSEYE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_BULLSEYE_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_BULLSEYE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BULLSEYE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -1333,8 +1333,8 @@
 			<BuildingClass>BUILDINGCLASS_CORPORATION_BURGERWORLD_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_BURGERWORLD_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_BURGERWORLD_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_BURGERWORLD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_BURGERWORLD_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_BURGERWORLD_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BURGERWORLD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -1408,8 +1408,8 @@
 			<BuildingClass>BUILDINGCLASS_CORPORATION_EMPCLOTH_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_EMPCLOTH_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_EMPCLOTH_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_EMPCLOTH_HQ_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH_HQ_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_EMPCLOTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -1479,8 +1479,8 @@
 			<BuildingClass>BUILDINGCLASS_CORPORATION_EWTRADE_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_EWTRADE_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_EWTRADE_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_EWTRADE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_EWTRADE_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_EWTRADE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_EWTRADE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -1551,11 +1551,11 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Fashion House Headquarters -->
-			<BuildingClass>BUILDINGCLASS_CORPORATION_FASHION_HQ</BuildingClass>
+			<BuildingClass>BUILDINGCLASS_BUILDING_CORPORATION_FASHION_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_FASHION_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_FASHION_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_FASHION_HQ_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_FASHION_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_FASHION_HQ_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_FASHION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -1625,8 +1625,8 @@
 			<BuildingClass>BUILDINGCLASS_CORPORATION_MALLWART_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_MALLWART_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_MALLWART_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_MALLWART_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_MALLWART_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MALLWART_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_MALLWART_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -1700,8 +1700,8 @@
 			<BuildingClass>BUILDINGCLASS_CORPORATION_MAPSTER_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_MAPSTER_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_MAPSTER_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_MAPSTER_HQ_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_MAPSTER_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MAPSTER_HQ_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_MAPSTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -1772,8 +1772,8 @@
 			<BuildingClass>BUILDINGCLASS_CORPORATION_MCDOWELLS_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_MCDOWELLS_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_MCDOWELLS_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_MCDOWELLS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_MCDOWELLS_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MCDOWELLS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_MCDOWELLS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -1847,8 +1847,8 @@
 			<BuildingClass>BUILDINGCLASS_CORPORATION_MILEHIGH_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_MILEHIGH_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_MILEHIGH_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_MILEHIGH_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_MILEHIGH_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MILEHIGH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_MILEHIGH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -1918,8 +1918,8 @@
 			<BuildingClass>BUILDINGCLASS_CORPORATION_MOBBY_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_MOBBY_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_MOBBY_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_MOBBY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_MOBBY_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MOBBY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_MOBBY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -1993,8 +1993,8 @@
 			<BuildingClass>BUILDINGCLASS_CORPORATION_MOONBEAN_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_MOONBEAN_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_MOONBEAN_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_MOONBEAN_HQ_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_MOONBEAN_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MOONBEAN_HQ_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_MOONBEAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -2064,8 +2064,8 @@
 			<BuildingClass>BUILDINGCLASS_CORPORATION_RED_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_RED_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_RED_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_RED_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_RED_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_RED_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_RED_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -2141,8 +2141,8 @@
 			<BuildingClass>BUILDINGCLASS_CORPORATION_SAFARI_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_SAFARI_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_SAFARI_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_SAFARI_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_SAFARI_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_SAFARI_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_SAFARI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -2214,8 +2214,8 @@
 			<BuildingClass>BUILDINGCLASS_CORPORATION_ULTSOLDIER_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_ULTSOLDIER_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_ULTSOLDIER_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_ULTSOLDIER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_ULTSOLDIER_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_ULTSOLDIER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_ULTSOLDIER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<!-- Graphical and interface -->
@@ -2288,8 +2288,8 @@
 			<BuildingClass>BUILDINGCLASS_CORPORATION_WONKA_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_WONKA_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_CORPORATION_WONKA_HQ</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_WONKA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_WONKA_HQ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_WONKA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_WONKA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -4560,9 +4560,9 @@
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
 			<BuildingClass>BUILDINGCLASS_KNOWLEDGE_BASE_ANCIENT</BuildingClass>
 			<Type>BUILDING_KNOWLEDGE_BASE_ANCIENT</Type>
-			<Description>TXT_KEY_KNOWLEDGE_BASE_ANCIENT</Description>
-			<Civilopedia>TXT_KEY_KNOWLEDGE_BASE_ANCIENT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_KNOWLEDGE_BASE_ANCIENT_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_ANCIENT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_ANCIENT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_KNOWLEDGE_BASE_ANCIENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
@@ -4592,9 +4592,9 @@
 			<!-- Education Increasing Cost(Knowledge Base 2) -->
 			<BuildingClass>BUILDINGCLASS_KNOWLEDGE_BASE_CLASSICAL</BuildingClass>
 			<Type>BUILDING_KNOWLEDGE_BASE_CLASSICAL</Type>
-			<Description>TXT_KEY_KNOWLEDGE_BASE_CLASSICAL</Description>
-			<Civilopedia>TXT_KEY_KNOWLEDGE_BASE_CLASSICAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_KNOWLEDGE_BASE_CLASSICAL_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_CLASSICAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_CLASSICAL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_KNOWLEDGE_BASE_CLASSICAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
@@ -4624,9 +4624,9 @@
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
 			<BuildingClass>BUILDINGCLASS_KNOWLEDGE_BASE_MEDIEVAL</BuildingClass>
 			<Type>BUILDING_KNOWLEDGE_BASE_MEDIEVAL</Type>
-			<Description>TXT_KEY_KNOWLEDGE_BASE_MEDIEVAL</Description>
-			<Civilopedia>TXT_KEY_KNOWLEDGE_BASE_MEDIEVAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_KNOWLEDGE_BASE_MEDIEVAL_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MEDIEVAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MEDIEVAL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MEDIEVAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
@@ -4656,9 +4656,9 @@
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
 			<BuildingClass>BUILDINGCLASS_KNOWLEDGE_BASE_RENAISSANCE</BuildingClass>
 			<Type>BUILDING_KNOWLEDGE_BASE_RENAISSANCE</Type>
-			<Description>TXT_KEY_KNOWLEDGE_BASE_RENAISSANCE</Description>
-			<Civilopedia>TXT_KEY_KNOWLEDGE_BASE_RENAISSANCE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_KNOWLEDGE_BASE_RENAISSANCE_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_RENAISSANCE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_RENAISSANCE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_KNOWLEDGE_BASE_RENAISSANCE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
@@ -4688,9 +4688,9 @@
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
 			<!-- <BuildingClass>BUILDINGCLASS_KNOWLEDGE_BASE_INDUSTRIAL</BuildingClass>
 			<Type>BUILDING_KNOWLEDGE_BASE_INDUSTRIAL</Type>
-			<Description>TXT_KEY_KNOWLEDGE_BASE_INDUSTRIAL</Description>
-			<Civilopedia>TXT_KEY_KNOWLEDGE_BASE_INDUSTRIAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_KNOWLEDGE_BASE_INDUSTRIAL_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_INDUSTRIAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_INDUSTRIAL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_KNOWLEDGE_BASE_INDUSTRIAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>-->
 			<!-- Graphical and interface -->
 			<!-- <ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
@@ -4721,9 +4721,9 @@
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
 			<!-- <BuildingClass>BUILDINGCLASS_KNOWLEDGE_BASE_MODERN</BuildingClass>
 			<Type>BUILDING_KNOWLEDGE_BASE_MODERN</Type>
-			<Description>TXT_KEY_KNOWLEDGE_BASE_MODERN</Description>
-			<Civilopedia>TXT_KEY_KNOWLEDGE_BASE_MODERN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_KNOWLEDGE_BASE_MODERN_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MODERN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MODERN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MODERN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>-->
 			<!-- Graphical and interface -->
 			<!-- <ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
@@ -4754,9 +4754,9 @@
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
 			<!-- <BuildingClass>BUILDINGCLASS_KNOWLEDGE_BASE_INFORMATION</BuildingClass>
 			<Type>BUILDING_KNOWLEDGE_BASE_INFORMATION</Type>
-			<Description>TXT_KEY_KNOWLEDGE_BASE_INFORMATION</Description>
-			<Civilopedia>TXT_KEY_KNOWLEDGE_BASE_INFORMATION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_KNOWLEDGE_BASE_INFORMATION_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_INFORMATION</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_INFORMATION_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_KNOWLEDGE_BASE_INFORMATION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>-->
 			<!-- Graphical and interface -->
 			<!-- <ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
@@ -4787,9 +4787,9 @@
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
 			<!-- <BuildingClass>BUILDINGCLASS_KNOWLEDGE_BASE_NANOTECH</BuildingClass>
 			<Type>BUILDING_KNOWLEDGE_BASE_NANOTECH</Type>
-			<Description>TXT_KEY_KNOWLEDGE_BASE_NANOTECH</Description>
-			<Civilopedia>TXT_KEY_KNOWLEDGE_BASE_NANOTECH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_KNOWLEDGE_BASE_NANOTECH_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_NANOTECH</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_NANOTECH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_KNOWLEDGE_BASE_NANOTECH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>-->
 			<!-- Graphical and interface -->
 			<!-- <ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
@@ -4820,9 +4820,9 @@
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
 			<!-- <BuildingClass>BUILDINGCLASS_KNOWLEDGE_BASE_TRANSHUMAN</BuildingClass>
 			<Type>BUILDING_KNOWLEDGE_BASE_TRANSHUMAN</Type>
-			<Description>TXT_KEY_KNOWLEDGE_BASE_TRANSHUMAN</Description>
-			<Civilopedia>TXT_KEY_KNOWLEDGE_BASE_TRANSHUMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_KNOWLEDGE_BASE_TRANSHUMAN_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_TRANSHUMAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_TRANSHUMAN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_KNOWLEDGE_BASE_TRANSHUMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>-->
 			<!-- Graphical and interface -->
 			<!-- <ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
@@ -4853,9 +4853,9 @@
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
 			<!-- <BuildingClass>BUILDINGCLASS_KNOWLEDGE_BASE_GALACTIC</BuildingClass>
 			<Type>BUILDING_KNOWLEDGE_BASE_GALACTIC</Type>
-			<Description>TXT_KEY_KNOWLEDGE_BASE_GALACTIC</Description>
-			<Civilopedia>TXT_KEY_KNOWLEDGE_BASE_GALACTIC_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_KNOWLEDGE_BASE_GALACTIC_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_GALACTIC</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_GALACTIC_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_KNOWLEDGE_BASE_GALACTIC_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>-->
 			<!-- Graphical and interface -->
 			<!-- <ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
@@ -4886,9 +4886,9 @@
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
 			<!-- <BuildingClass>BUILDINGCLASS_KNOWLEDGE_BASE_COSMIC</BuildingClass>
 			<Type>BUILDING_KNOWLEDGE_BASE_COSMIC</Type>
-			<Description>TXT_KEY_KNOWLEDGE_BASE_COSMIC</Description>
-			<Civilopedia>TXT_KEY_KNOWLEDGE_BASE_COSMIC_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_KNOWLEDGE_BASE_COSMIC_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_COSMIC</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_COSMIC_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_KNOWLEDGE_BASE_COSMIC_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>-->
 			<!-- Graphical and interface -->
 			<!-- <ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
@@ -4919,9 +4919,9 @@
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
 			<!-- <BuildingClass>BUILDINGCLASS_KNOWLEDGE_BASE_TRANSCENDENT</BuildingClass>
 			<Type>BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</Type>
-			<Description>TXT_KEY_KNOWLEDGE_BASE_TRANSCENDENT</Description>
-			<Civilopedia>TXT_KEY_KNOWLEDGE_BASE_TRANSCENDENT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_KNOWLEDGE_BASE_TRANSCENDENT_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_TRANSCENDENT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_KNOWLEDGE_BASE_TRANSCENDENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>-->
 			<!-- Graphical and interface -->
 			<!-- <ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
@@ -19965,8 +19965,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DEPARTMENT_FOREIGN_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DEPARTMENT_FOREIGN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_DEPT_FOREIGN_POLICY_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DEPT_FOREIGN_POLICY_PEDIA</Civilopedia>
 			<!-- Cost -->
 			<iCost>-1</iCost>
 			<!-- Local -->
@@ -20781,9 +20781,9 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_AUTOBUILD_ALUMINUM_NEAR</BuildingClass>
 			<Type>BUILDING_AUTOBUILD_ALUMINUM_NEAR</Type>
-			<Description>TXT_KEY_AUTOBUILD_ALUMINUM_NEAR</Description>
-			<Civilopedia>TXT_KEY_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_AUTOBUILD_ALUMINUM_NEAR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_ALUMINUM_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -20800,9 +20800,9 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_AUTOBUILD_COPPER_NEAR</BuildingClass>
 			<Type>BUILDING_AUTOBUILD_COPPER_NEAR</Type>
-			<Description>TXT_KEY_AUTOBUILD_COPPER_NEAR</Description>
-			<Civilopedia>TXT_KEY_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_AUTOBUILD_COPPER_NEAR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_COPPER_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -20819,9 +20819,9 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_AUTOBUILD_GOLD_NEAR</BuildingClass>
 			<Type>BUILDING_AUTOBUILD_GOLD_NEAR</Type>
-			<Description>TXT_KEY_AUTOBUILD_GOLD_NEAR</Description>
-			<Civilopedia>TXT_KEY_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_AUTOBUILD_GOLD_NEAR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_GOLD_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -20838,9 +20838,9 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_AUTOBUILD_IRON_NEAR</BuildingClass>
 			<Type>BUILDING_AUTOBUILD_IRON_NEAR</Type>
-			<Description>TXT_KEY_AUTOBUILD_IRON_NEAR</Description>
-			<Civilopedia>TXT_KEY_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_AUTOBUILD_IRON_NEAR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_IRON_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -20857,9 +20857,9 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_AUTOBUILD_LEAD_NEAR</BuildingClass>
 			<Type>BUILDING_AUTOBUILD_LEAD_NEAR</Type>
-			<Description>TXT_KEY_AUTOBUILD_LEAD_NEAR</Description>
-			<Civilopedia>TXT_KEY_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_AUTOBUILD_LEAD_NEAR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_LEAD_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -20876,9 +20876,9 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_AUTOBUILD_PLATINUM_NEAR</BuildingClass>
 			<Type>BUILDING_AUTOBUILD_PLATINUM_NEAR</Type>
-			<Description>TXT_KEY_AUTOBUILD_PLATINUM_NEAR</Description>
-			<Civilopedia>TXT_KEY_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_AUTOBUILD_PLATINUM_NEAR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_PLATINUM_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -20895,9 +20895,9 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_AUTOBUILD_SILVER_NEAR</BuildingClass>
 			<Type>BUILDING_AUTOBUILD_SILVER_NEAR</Type>
-			<Description>TXT_KEY_AUTOBUILD_SILVER_NEAR</Description>
-			<Civilopedia>TXT_KEY_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_AUTOBUILD_SILVER_NEAR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_SILVER_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -20914,9 +20914,9 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_AUTOBUILD_TIN_NEAR</BuildingClass>
 			<Type>BUILDING_AUTOBUILD_TIN_NEAR</Type>
-			<Description>TXT_KEY_AUTOBUILD_TIN_NEAR</Description>
-			<Civilopedia>TXT_KEY_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_AUTOBUILD_TIN_NEAR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_TIN_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -20933,9 +20933,9 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_AUTOBUILD_TITANIUM_NEAR</BuildingClass>
 			<Type>BUILDING_AUTOBUILD_TITANIUM_NEAR</Type>
-			<Description>TXT_KEY_AUTOBUILD_TITANIUM_NEAR</Description>
-			<Civilopedia>TXT_KEY_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_AUTOBUILD_TITANIUM_NEAR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_TITANIUM_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -20952,9 +20952,9 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_AUTOBUILD_CAMEL_NEAR</BuildingClass>
 			<Type>BUILDING_AUTOBUILD_CAMEL_NEAR</Type>
-			<Description>TXT_KEY_AUTOBUILD_CAMEL_NEAR</Description>
-			<Civilopedia>TXT_KEY_AUTOBUILD_ANIMAL_NEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_AUTOBUILD_ANIMAL_NEAR_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_AUTOBUILD_CAMEL_NEAR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_ANIMAL_NEAR_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_AUTOBUILD_ANIMAL_NEAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_CAMEL_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -20971,9 +20971,9 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_AUTOBUILD_ELEPHANT_NEAR</BuildingClass>
 			<Type>BUILDING_AUTOBUILD_ELEPHANT_NEAR</Type>
-			<Description>TXT_KEY_AUTOBUILD_ELEPHANT_NEAR</Description>
-			<Civilopedia>TXT_KEY_AUTOBUILD_ANIMAL_NEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_AUTOBUILD_ANIMAL_NEAR_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_AUTOBUILD_ELEPHANT_NEAR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_ANIMAL_NEAR_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_AUTOBUILD_ANIMAL_NEAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_ELEPHANT_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -20990,9 +20990,9 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_AUTOBUILD_HORSE_NEAR</BuildingClass>
 			<Type>BUILDING_AUTOBUILD_HORSE_NEAR</Type>
-			<Description>TXT_KEY_AUTOBUILD_HORSE_NEAR</Description>
-			<Civilopedia>TXT_KEY_AUTOBUILD_ANIMAL_NEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_AUTOBUILD_ANIMAL_NEAR_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_AUTOBUILD_HORSE_NEAR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_ANIMAL_NEAR_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_AUTOBUILD_ANIMAL_NEAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_HORSE_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
