@@ -11079,7 +11079,7 @@ int CvUnit::destroyCost(const CvPlot* pPlot) const
 		bLimited = isLimitedProject(pCity->getProductionProject());
 	}
 
-	return (GC.getDefineINT("BASE_SPY_DESTROY_COST") + (pCity->getProduction() * ((bLimited) ? GC.getDefineINT("SPY_DESTROY_COST_MULTIPLIER_LIMITED") : GC.getDefineINT("SPY_DESTROY_COST_MULTIPLIER"))));
+	return (BASE_SPY_DESTROY_COST + (pCity->getProduction() * (bLimited ? SPY_DESTROY_COST_MULTIPLIER_LIMITED : SPY_DESTROY_COST_MULTIPLIER)));
 }
 
 

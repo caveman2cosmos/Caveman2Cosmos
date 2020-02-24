@@ -1027,7 +1027,6 @@ public:
 
 	bool isDYNAMIC_CIV_NAMES() const;
 
-	bool isLIMITED_RELIGIONS_EXCEPTIONS() const;
 	bool isOC_RESPAWN_HOLY_CITIES() const;
 
 	bool isIDW_ENABLED() const;
@@ -1687,7 +1686,6 @@ protected:
 
 	bool m_bDYNAMIC_CIV_NAMES;
 
-	bool m_bLIMITED_RELIGIONS_EXCEPTIONS;
 	bool m_bOC_RESPAWN_HOLY_CITIES;
 
 	bool m_bIDW_ENABLED;

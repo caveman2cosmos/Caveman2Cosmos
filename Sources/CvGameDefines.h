@@ -32,13 +32,13 @@ public:
 		m_iBASE_RELIGION_ANARCHY_LENGTH(globals.getDefineINT("BASE_RELIGION_ANARCHY_LENGTH")),
 		m_iFOREIGN_TRADE_MODIFIER(globals.getDefineINT("FOREIGN_TRADE_MODIFIER")),
 		m_iPAGE_IN_DIST_FEATURES(globals.getDefineINT("PAGE_IN_DIST_FEATURES")),
-
 		m_iSPY_DESTROY_COST_MULTIPLIER(globals.getDefineINT("SPY_DESTROY_COST_MULTIPLIER")),
-		m_iCAN_TRADE_GOLD(globals.getDefineINT("CAN_TRADE_GOLD")),
+
 		m_iWAR_PRIZES(globals.getDefineINT("WAR_PRIZES")),
 		m_iCAN_TRADE_CORPORATIONS(globals.getDefineINT("CAN_TRADE_CORPORATIONS")),
 		m_iGW_MOD_ENABLED(globals.getDefineINT("GW_MOD_ENABLED")),
 		m_iLIMITED_RELIGIONS_EXCEPTIONS(globals.getDefineINT("LIMITED_RELIGIONS_EXCEPTIONS")),
+
 		m_iUNIT_MULTISELECT_MAX(globals.getDefineINT("UNIT_MULTISELECT_MAX")),
 		m_iWARLORD_EXTRA_EXPERIENCE_PER_UNIT_PERCENT(globals.getDefineINT("WARLORD_EXTRA_EXPERIENCE_PER_UNIT_PERCENT")),
 		m_iCAPITAL_TRADE_MODIFIER(globals.getDefineINT("CAPITAL_TRADE_MODIFIER")),
@@ -682,7 +682,8 @@ public:
 		m_bENABLE_BACKGROUND_PROFILING(globals.getDefineBOOL("ENABLE_BACKGROUND_PROFILING")),
 		m_bDONT_ESCORT_SUBDUED_SEA_ANIMAL(globals.getDefineBOOL("DONT_ESCORT_SUBDUED_SEA_ANIMAL")),
 		m_bDYNAMIC_GREAT_WALL(globals.getDefineBOOL("DYNAMIC_GREAT_WALL")),
-		m_bDONT_ESCORT_SUBDUED_LAND_ANIMAL(globals.getDefineBOOL("DONT_ESCORT_SUBDUED_LAND_ANIMAL"))
+		m_bDONT_ESCORT_SUBDUED_LAND_ANIMAL(globals.getDefineBOOL("DONT_ESCORT_SUBDUED_LAND_ANIMAL")),
+		m_bCAN_TRADE_GOLD(globals.getDefineINT("CAN_TRADE_GOLD"))
 	{ }
 
 	~CvGameDefines()
@@ -715,7 +716,6 @@ public:
 	inline const int getFOREIGN_TRADE_MODIFIER() const                                   { return m_iFOREIGN_TRADE_MODIFIER; }
 	inline const int getPAGE_IN_DIST_FEATURES() const                                    { return m_iPAGE_IN_DIST_FEATURES; }
 	inline const int getSPY_DESTROY_COST_MULTIPLIER() const                              { return m_iSPY_DESTROY_COST_MULTIPLIER; }
-	inline const int getCAN_TRADE_GOLD() const                                           { return m_iCAN_TRADE_GOLD; }
 	inline const int getWAR_PRIZES() const                                               { return m_iWAR_PRIZES; }
 	inline const int getCAN_TRADE_CORPORATIONS() const                                   { return m_iCAN_TRADE_CORPORATIONS; }
 	inline const int getGW_MOD_ENABLED() const                                           { return m_iGW_MOD_ENABLED; }
@@ -1363,6 +1363,7 @@ public:
 	inline const bool getDONT_ESCORT_SUBDUED_SEA_ANIMAL() const                          { return m_bDONT_ESCORT_SUBDUED_SEA_ANIMAL; }
 	inline const bool getDYNAMIC_GREAT_WALL() const                                      { return m_bDYNAMIC_GREAT_WALL; }
 	inline const bool getDONT_ESCORT_SUBDUED_LAND_ANIMAL() const                         { return m_bDONT_ESCORT_SUBDUED_LAND_ANIMAL; }
+	inline const bool getCAN_TRADE_GOLD() const                                          { return m_bCAN_TRADE_GOLD; }
 
 protected:
 	const int m_iC2C_MIN_PROP_CONTROL;
@@ -1393,7 +1394,6 @@ protected:
 	const int m_iFOREIGN_TRADE_MODIFIER;
 	const int m_iPAGE_IN_DIST_FEATURES;
 	const int m_iSPY_DESTROY_COST_MULTIPLIER;
-	const int m_iCAN_TRADE_GOLD;
 	const int m_iWAR_PRIZES;
 	const int m_iCAN_TRADE_CORPORATIONS;
 	const int m_iGW_MOD_ENABLED;
@@ -2040,6 +2040,7 @@ protected:
 	const bool m_bDONT_ESCORT_SUBDUED_SEA_ANIMAL;
 	const bool m_bDYNAMIC_GREAT_WALL;
 	const bool m_bDONT_ESCORT_SUBDUED_LAND_ANIMAL;
+	const bool m_bCAN_TRADE_GOLD;
 };
 #endif
 	

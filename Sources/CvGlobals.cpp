@@ -163,7 +163,6 @@ cvInternalGlobals::cvInternalGlobals()
 
 	, m_bDYNAMIC_CIV_NAMES(false)
 
-	, m_bLIMITED_RELIGIONS_EXCEPTIONS(false)
 	, m_bOC_RESPAWN_HOLY_CITIES(false)
 
 	, m_bIDW_ENABLED(false)
@@ -3843,7 +3842,6 @@ void cvInternalGlobals::cacheGlobals()
 
 	m_bDYNAMIC_CIV_NAMES = (getDefineINT("DYNAMIC_CIV_NAMES") > 0) ? true : false;
 
-	m_bLIMITED_RELIGIONS_EXCEPTIONS = (getDefineINT("LIMITED_RELIGIONS_EXCEPTIONS") > 0) ? true : false;
 	m_bOC_RESPAWN_HOLY_CITIES = (getDefineINT("OC_RESPAWN_HOLY_CITIES") > 0) ? true : false;
 
 	m_bIDW_ENABLED = (getDefineINT("IDW_ENABLED") > 0) ? true : false;
@@ -6108,11 +6106,6 @@ bool cvInternalGlobals::isDCM_FIGHTER_ENGAGE() const
 bool cvInternalGlobals::isDYNAMIC_CIV_NAMES() const
 {
 	return m_bDYNAMIC_CIV_NAMES;
-}
-
-bool cvInternalGlobals::isLIMITED_RELIGIONS_EXCEPTIONS() const
-{
-	return m_bLIMITED_RELIGIONS_EXCEPTIONS;
 }
 
 bool cvInternalGlobals::isOC_RESPAWN_HOLY_CITIES() const

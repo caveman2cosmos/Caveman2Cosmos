@@ -12982,7 +12982,7 @@ bool CvPlayer::canFoundReligion() const
 
 	if(GC.getGame().isOption(GAMEOPTION_LIMITED_RELIGIONS))
 	{
-		if( ((getNumCities() > 1) && !(isRebel())) || !GC.isLIMITED_RELIGIONS_EXCEPTIONS() )
+		if ((getNumCities() > 1 && !isRebel()) || !LIMITED_RELIGIONS_EXCEPTIONS)
 		{
 			if(hasHolyCity())
 			{
