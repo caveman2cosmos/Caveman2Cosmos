@@ -620,8 +620,6 @@ public:
 	int getBASE_UNIT_UPGRADE_COST() const;
 	int getUPGRADE_ROUND_LIMIT() const;
 	int getCITY_BARBARIAN_DEFENSE_MODIFIER() const;
-	int getUNIT_VISIBILITY_RANGE() const;
-	int getMAX_UNIT_VISIBILITY_RANGE() const;
 	int getGREATER_COMMERCE_SWITCH_POINT() const;
 	int getWORKER_TRADE_VALUE_PERCENT_ADJUSTMENT() const;
 	int getTRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT() const;
@@ -1085,10 +1083,8 @@ public:
 	int getMAX_HIT_POINTS() const;
 	int getPATH_DAMAGE_WEIGHT() const;
 	int getHILLS_EXTRA_DEFENSE() const;
-	int getRIVER_ATTACK_MODIFIER() const;
 	int getAMPHIB_ATTACK_MODIFIER() const;
 	int getHILLS_EXTRA_MOVEMENT() const;
-	int getRIVER_EXTRA_MOVEMENT() const;
 	int getMAX_PLOT_LIST_ROWS() const;
 	int getUNIT_MULTISELECT_MAX() const;
 	int getPERCENT_ANGER_DIVISOR() const;
@@ -1769,10 +1765,8 @@ protected:
 /************************************************************************************************/
 /* Afforess	Mountains End       END        		                                             */
 /************************************************************************************************/
-	int m_iRIVER_ATTACK_MODIFIER;
 	int m_iAMPHIB_ATTACK_MODIFIER;
 	int m_iHILLS_EXTRA_MOVEMENT;
-	int m_iRIVER_EXTRA_MOVEMENT;
 	int m_iMAX_PLOT_LIST_ROWS;
 	int m_iUNIT_MULTISELECT_MAX;
 	int m_iPERCENT_ANGER_DIVISOR;
@@ -1849,8 +1843,6 @@ protected:
 	int m_iBASE_UNIT_UPGRADE_COST;
 	int m_iUPGRADE_ROUND_LIMIT;
 	int m_iCITY_BARBARIAN_DEFENSE_MODIFIER;
-	int m_iUNIT_VISIBILITY_RANGE;
-	int m_iMAX_UNIT_VISIBILITY_RANGE;
 	int m_iGREATER_COMMERCE_SWITCH_POINT;
 	int m_iWORKER_TRADE_VALUE_PERCENT_ADJUSTMENT;
 	int m_iTRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT;

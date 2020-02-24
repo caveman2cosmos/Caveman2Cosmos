@@ -21019,7 +21019,7 @@ bool CvUnitAI::AI_goToTargetCity(int iFlags, int iMaxPathTurns, CvCity* pTargetC
 
 									if (!(pAdjacentPlot->isRiverCrossing(directionXY(pAdjacentPlot, pTargetCity->plot()))))
 									{
-										iValue += (12 * -(GC.getRIVER_ATTACK_MODIFIER()));
+										iValue += (12 * -(RIVER_ATTACK_MODIFIER));
 									}
 
 									if (!isEnemy(pAdjacentPlot->getTeam(), pAdjacentPlot))
@@ -21221,7 +21221,7 @@ bool CvUnitAI::AI_goToTargetBarbCity(int iMaxPathTurns)
 
 							if (!(pAdjacentPlot->isRiverCrossing(directionXY(pAdjacentPlot, pBestCity->plot()))))
 							{
-								iValue += (10 * -(GC.getRIVER_ATTACK_MODIFIER()));
+								iValue += (10 * -(RIVER_ATTACK_MODIFIER));
 							}
 
 							iValue = std::max(1, iValue);
@@ -23685,7 +23685,7 @@ bool CvUnitAI::AI_assaultSeaTransport(bool bBarbarian)
 
 										if (!(pLoopPlot->isRiverCrossing(directionXY(pLoopPlot, pCity->plot()))))
 										{
-											iValue += (50 * -(GC.getRIVER_ATTACK_MODIFIER()));
+											iValue += (50 * -(RIVER_ATTACK_MODIFIER));
 										}
 
 										iValue += 15 * (pLoopPlot->defenseModifier(getTeam(), false));
@@ -35445,7 +35445,7 @@ namespace {
 	int scorePropertyControlNeed(const std::vector<PropertyAmount>& propertyScores, const CvUnit* unit, const CvCity* city)
 	{
 		const CvPlayer& player = GET_PLAYER(unit->getOwner());
-		static const int C2C_MIN_PROP_CONTROL = GC.getDefineINT("C2C_MIN_PROP_CONTROL");
+		const int minPropertyControl = C2C_MIN_PROP_CONTROL;
 
 		int maxScore = 0;
 
@@ -35461,7 +35461,7 @@ namespace {
 				continue;
 			}
 
-			int minRequired = C2C_MIN_PROP_CONTROL;
+			int minRequired = minPropertyControl;
 			// prop 0 == crime
 			// TODO: better way to drive this behavior that doesn't hard code property index.
 			// First question is why this extra calculation is needed at all? The property value and delta should always be enough to work out what is needed, by definition.
@@ -35472,8 +35472,8 @@ namespace {
 
 			// This gets ALL property control missions, not just for this property...
 			// TODO: filter by property somehow...
-			int iResponders = player.AI_plotTargetMissionAIs(city->plot(), MISSIONAI_PROPERTY_CONTROL_RESPONSE, NULL, 0);
-			int iExisting = player.AI_plotTargetMissionAIs(city->plot(), MISSIONAI_PROPERTY_CONTROL_MAINTAIN, NULL, 0);
+			const int iResponders = player.AI_plotTargetMissionAIs(city->plot(), MISSIONAI_PROPERTY_CONTROL_RESPONSE, NULL, 0);
+			const int iExisting = player.AI_plotTargetMissionAIs(city->plot(), MISSIONAI_PROPERTY_CONTROL_MAINTAIN, NULL, 0);
 
 			if (iResponders > 0)
 			{

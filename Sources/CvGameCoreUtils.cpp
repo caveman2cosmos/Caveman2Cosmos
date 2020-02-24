@@ -2959,8 +2959,8 @@ int pathCost(FAStarNode* parent, FAStarNode* node, int data, const void* pointer
 							{
 								if (!(pLoopUnit->isRiver()))
 								{
-									iExtraEdgeCost += (PATH_RIVER_WEIGHT * -(GC.getRIVER_ATTACK_MODIFIER()))/100;
-									iExtraEdgeCost += (PATH_MOVEMENT_WEIGHT * iMovesLeft)/GC.getMOVE_DENOMINATOR();
+									iExtraEdgeCost += (PATH_RIVER_WEIGHT * -(RIVER_ATTACK_MODIFIER))/100;
+									iExtraEdgeCost += (PATH_MOVEMENT_WEIGHT * iMovesLeft)/MOVE_DENOMINATOR;
 								}
 							}
 						}
@@ -3702,9 +3702,9 @@ int	NewPathCostFunc(const CvPathGeneratorBase* generator, const CvSelectionGroup
 							{
 								if (!(pLoopUnit->isRiver()))
 								{
-									iExtraEdgeCost += (PATH_RIVER_WEIGHT * -(GC.getRIVER_ATTACK_MODIFIER()))/100;
+									iExtraEdgeCost += (PATH_RIVER_WEIGHT * -(RIVER_ATTACK_MODIFIER))/100;
 									// AIAndy: This might be reachable without iMovesLeft initialised. Check needed.
-									iExtraEdgeCost += (PATH_MOVEMENT_WEIGHT * iWorstMovement)/GC.getMOVE_DENOMINATOR();
+									iExtraEdgeCost += (PATH_MOVEMENT_WEIGHT * iWorstMovement)/MOVE_DENOMINATOR;
 								}
 							}
 						}

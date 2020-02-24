@@ -7071,12 +7071,12 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 							{
 								if (pAttacker->plot()->isRiverCrossing(directionXY(pAttacker->plot(), pPlot)))
 								{
-									iModifier = GC.getRIVER_ATTACK_MODIFIER();
+									const int riverAttackModifier = RIVER_ATTACK_MODIFIER;
 
-									if (iModifier != 0)
+									if (riverAttackModifier != 0)
 									{
 										szString.append(NEWLINE);
-										szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_RIVER_MOD", -(iModifier)));
+										szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_RIVER_MOD", -(riverAttackModifier)));
 									}
 								}
 							}
@@ -7915,12 +7915,12 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 						{
 							if (pAttacker->plot()->isRiverCrossing(directionXY(pAttacker->plot(), pPlot)))
 							{
-								iModifier = GC.getRIVER_ATTACK_MODIFIER();
+								const int riverAttackModifier = RIVER_ATTACK_MODIFIER;
 
-								if (iModifier != 0)
+								if (riverAttackModifier != 0)
 								{
 									szString.append(NEWLINE);
-									szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_RIVER_MOD", -(iModifier)));
+									szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_RIVER_MOD", -(riverAttackModifier)));
 								}
 							}
 						}
@@ -27720,9 +27720,9 @@ void CvGameTextMgr::setHappyHelp(CvWStringBuffer &szBuffer, CvCity& city)
 
 		if (city.getHappinessTimer() > 0)
 		{
-			iHappy = GC.getDefineINT("TEMP_HAPPY");
-			iTotalHappy += iHappy;
-			szBuffer.append(gDLL->getText("TXT_KEY_HAPPY_TEMP", iHappy, city.getHappinessTimer()));
+			const int tempHappy = TEMP_HAPPY;
+			iTotalHappy += tempHappy;
+			szBuffer.append(gDLL->getText("TXT_KEY_HAPPY_TEMP", tempHappy, city.getHappinessTimer()));
 			szBuffer.append(NEWLINE);
 		}
 
@@ -37592,12 +37592,12 @@ void CvGameTextMgr::setEventHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, i
 		if (kEvent.isCityEffect() || kEvent.isOtherPlayerCityEffect())
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_EVENT_TEMP_HAPPY_CITY", GC.getDefineINT("TEMP_HAPPY"), kEvent.getHappyTurns(), szCity.GetCString()));
+			szBuffer.append(gDLL->getText("TXT_KEY_EVENT_TEMP_HAPPY_CITY", TEMP_HAPPY, kEvent.getHappyTurns(), szCity.GetCString()));
 		}
 		else
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_EVENT_TEMP_HAPPY", GC.getDefineINT("TEMP_HAPPY"), kEvent.getHappyTurns()));
+			szBuffer.append(gDLL->getText("TXT_KEY_EVENT_TEMP_HAPPY", TEMP_HAPPY, kEvent.getHappyTurns()));
 		}
 	}
 

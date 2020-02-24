@@ -11276,7 +11276,7 @@ void CvPlayer::convert(ReligionTypes eReligion)
 		pLoopUnit->defineReligion();
 	}
 
-	setConversionTimer(std::max(1, ((100 + getAnarchyModifier()) * GC.getDefineINT("MIN_CONVERSION_TURNS")) / 100) + iAnarchyLength);
+	setConversionTimer(std::max(1, ((100 + getAnarchyModifier()) * MIN_CONVERSION_TURNS) / 100) + iAnarchyLength);
 }
 
 
@@ -20724,7 +20724,7 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 
 			szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_SWITCH_RELIGION", GC.getReligionInfo((ReligionTypes) iReligion).getDescription()).GetCString();
 			GET_PLAYER(eTargetPlayer).setLastStateReligion((ReligionTypes) iReligion);
-			GET_PLAYER(eTargetPlayer).setConversionTimer(std::max(1, ((100 + GET_PLAYER(eTargetPlayer).getAnarchyModifier()) * GC.getDefineINT("MIN_CONVERSION_TURNS")) / 100));
+			GET_PLAYER(eTargetPlayer).setConversionTimer(std::max(1, ((100 + GET_PLAYER(eTargetPlayer).getAnarchyModifier()) * MIN_CONVERSION_TURNS) / 100));
 			bSomethingHappened = true;
 		}
 	}

@@ -12685,9 +12685,7 @@ void CvGame::doFoundCorporation(CorporationTypes eCorporation, bool bForce)
 	pBestCity = NULL;
 
 
-	int iCheckTurns = GC.getDefineINT("CORPORATION_FOUND_CHECK_TURNS");
-	iCheckTurns *= GC.getGameSpeedInfo(getGameSpeedType()).getAnarchyPercent();
-	iCheckTurns /= 100;
+	const int iCheckTurns = CORPORATION_FOUND_CHECK_TURNS * GC.getGameSpeedInfo(getGameSpeedType()).getAnarchyPercent() / 100;
 
 	if (getElapsedGameTurns() % std::max(1, iCheckTurns) != 0 && !bForce)
 	{
@@ -12743,12 +12741,12 @@ void CvGame::doFoundCorporation(CorporationTypes eCorporation, bool bForce)
 
 		if (ePrereqTech != NO_TECH)
 		{
-			if (countKnownTechNumTeams(ePrereqTech) > GC.getDefineINT("MINIMUM_PLAYERS_WITH_TECH_FOR_AUTO_CORPORATION_FOUNDING"))
+			if (countKnownTechNumTeams(ePrereqTech) > MINIMUM_PLAYERS_WITH_TECH_FOR_AUTO_CORPORATION_FOUNDING)
 			{
-				TechTypes eObsoleteTech = (TechTypes)GC.getCorporationInfo(eCorporation).getObsoleteTech();
+				const TechTypes eObsoleteTech = (TechTypes)GC.getCorporationInfo(eCorporation).getObsoleteTech();
 				for (iI = 0; iI < MAX_PLAYERS; iI++)
 				{
-					CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)iI);
+					const CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)iI);
 					if (kPlayer.isAlive())
 					{
 						if (eObsoleteTech == NO_TECH || !GET_TEAM(kPlayer.getTeam()).isHasTech(eObsoleteTech))

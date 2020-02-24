@@ -821,7 +821,7 @@ int CvSelectionGroupAI::AI_sumStrength(const CvPlot* pAttackedPlot, DomainTypes 
 		return 0;
 
 	unsigned long long strSum = 0;
-	static const int COLLATERAL_COMBAT_DAMAGE = GC.getDefineINT("COLLATERAL_COMBAT_DAMAGE"); // K-Mod. (currently this number is "10")
+	const int collateralCombatDamage = COLLATERAL_COMBAT_DAMAGE; // K-Mod. (currently this number is "10")
 
 	const bool bCheckCanAttack = flags & StackCompare::CheckCanAttack;
 	const bool bCheckCanMove = flags & StackCompare::CheckCanMove;
@@ -853,7 +853,7 @@ int CvSelectionGroupAI::AI_sumStrength(const CvPlot* pAttackedPlot, DomainTypes 
 				if (iPossibleTargets > 0) 
 				{ 
 					// collateral damage is not trivial to calculate. This estimate is pretty rough. 
-					strSum += (unsigned long long)unit->baseCombatStrNonGranular() * COLLATERAL_COMBAT_DAMAGE * unit->collateralDamage() * iPossibleTargets / 100;
+					strSum += (unsigned long long)unit->baseCombatStrNonGranular() * collateralCombatDamage * unit->collateralDamage() * iPossibleTargets / 100;
 				} 
 			} 
 

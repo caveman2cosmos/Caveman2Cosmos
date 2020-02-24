@@ -246,10 +246,8 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_iMAX_HIT_POINTS(0)
 	, m_iPATH_DAMAGE_WEIGHT(0)
 	, m_iHILLS_EXTRA_DEFENSE(0)
-	, m_iRIVER_ATTACK_MODIFIER(0)
 	, m_iAMPHIB_ATTACK_MODIFIER(0)
 	, m_iHILLS_EXTRA_MOVEMENT(0)
-	, m_iRIVER_EXTRA_MOVEMENT(0)
 	, m_iMAX_PLOT_LIST_ROWS(0)
 	, m_iUNIT_MULTISELECT_MAX(0)
 	, m_iPERCENT_ANGER_DIVISOR(0)
@@ -323,8 +321,6 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_iBASE_UNIT_UPGRADE_COST(0)
 	, m_iUPGRADE_ROUND_LIMIT(0)
 	, m_iCITY_BARBARIAN_DEFENSE_MODIFIER(0)
-	, m_iUNIT_VISIBILITY_RANGE(0)
-	, m_iMAX_UNIT_VISIBILITY_RANGE(0)
 	, m_iGREATER_COMMERCE_SWITCH_POINT(0)
 	, m_iWORKER_TRADE_VALUE_PERCENT_ADJUSTMENT(0)
 	, m_iTRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT(0)
@@ -1108,7 +1104,7 @@ bool cvInternalGlobals::viewportsEnabled() const
 
 bool cvInternalGlobals::getReprocessGreatWallDynamically() const
 {
-	return m_bViewportsEnabled || (getDefineBOOL("DYNAMIC_GREAT_WALL") != 0);
+	return m_bViewportsEnabled || DYNAMIC_GREAT_WALL == true;
 }
 
 int cvInternalGlobals::getNumMapInfos() const
@@ -3883,10 +3879,8 @@ void cvInternalGlobals::cacheGlobals()
 	m_iMAX_HIT_POINTS = getDefineINT("MAX_HIT_POINTS");
 	m_iPATH_DAMAGE_WEIGHT = getDefineINT("PATH_DAMAGE_WEIGHT");
 	m_iHILLS_EXTRA_DEFENSE = getDefineINT("HILLS_EXTRA_DEFENSE");
-	m_iRIVER_ATTACK_MODIFIER = getDefineINT("RIVER_ATTACK_MODIFIER");
 	m_iAMPHIB_ATTACK_MODIFIER = getDefineINT("AMPHIB_ATTACK_MODIFIER");
 	m_iHILLS_EXTRA_MOVEMENT = getDefineINT("HILLS_EXTRA_MOVEMENT");
-	m_iRIVER_EXTRA_MOVEMENT = getDefineINT("RIVER_EXTRA_MOVEMENT");
 	m_iMAX_PLOT_LIST_ROWS = getDefineINT("MAX_PLOT_LIST_ROWS");
 	m_iUNIT_MULTISELECT_MAX = getDefineINT("UNIT_MULTISELECT_MAX");
 	m_iPERCENT_ANGER_DIVISOR = getDefineINT("PERCENT_ANGER_DIVISOR");
@@ -4064,8 +4058,6 @@ void cvInternalGlobals::cacheGlobals()
 	m_iBASE_UNIT_UPGRADE_COST = getDefineINT("BASE_UNIT_UPGRADE_COST");
 	m_iUPGRADE_ROUND_LIMIT = getDefineINT("UPGRADE_ROUND_LIMIT");
 	m_iCITY_BARBARIAN_DEFENSE_MODIFIER = getDefineINT("CITY_BARBARIAN_DEFENSE_MODIFIER");
-	m_iUNIT_VISIBILITY_RANGE = getDefineINT("UNIT_VISIBILITY_RANGE");
-	m_iMAX_UNIT_VISIBILITY_RANGE = getDefineINT("MAX_UNIT_VISIBILITY_RANGE");
 	m_iGREATER_COMMERCE_SWITCH_POINT = getDefineINT("GREATER_COMMERCE_SWITCH_POINT");
 	m_iWORKER_TRADE_VALUE_PERCENT_ADJUSTMENT = getDefineINT("WORKER_TRADE_VALUE_PERCENT_ADJUSTMENT");
 	m_iTRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT = getDefineINT("TRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT");
@@ -4218,11 +4210,6 @@ int cvInternalGlobals::getHILLS_EXTRA_DEFENSE() const
 	return m_iHILLS_EXTRA_DEFENSE;
 }
 
-int cvInternalGlobals::getRIVER_ATTACK_MODIFIER() const
-{
-	return m_iRIVER_ATTACK_MODIFIER;
-}
-
 int cvInternalGlobals::getAMPHIB_ATTACK_MODIFIER() const
 {
 	return m_iAMPHIB_ATTACK_MODIFIER;
@@ -4231,11 +4218,6 @@ int cvInternalGlobals::getAMPHIB_ATTACK_MODIFIER() const
 int cvInternalGlobals::getHILLS_EXTRA_MOVEMENT() const
 {
 	return m_iHILLS_EXTRA_MOVEMENT;
-}
-
-int cvInternalGlobals::getRIVER_EXTRA_MOVEMENT() const
-{
-	return m_iRIVER_EXTRA_MOVEMENT;
 }
 
 int cvInternalGlobals::getMAX_PLOT_LIST_ROWS() const
@@ -4606,16 +4588,6 @@ int cvInternalGlobals::getCITY_BARBARIAN_DEFENSE_MODIFIER() const
 	return m_iCITY_BARBARIAN_DEFENSE_MODIFIER;
 }
 
-int cvInternalGlobals::getUNIT_VISIBILITY_RANGE() const
-{
-	return m_iUNIT_VISIBILITY_RANGE;
-}
-
-int cvInternalGlobals::getMAX_UNIT_VISIBILITY_RANGE() const
-{
-	return m_iMAX_UNIT_VISIBILITY_RANGE;
-}
-
 int cvInternalGlobals::getGREATER_COMMERCE_SWITCH_POINT() const
 {
 	return m_iGREATER_COMMERCE_SWITCH_POINT;
@@ -4860,7 +4832,7 @@ void cvInternalGlobals::enableDLLProfiler(bool bEnable)
 #ifdef USE_INTERNAL_PROFILER
 	if ( bEnable )
 	{
-		g_bTraceBackgroundThreads = getDefineBOOL("ENABLE_BACKGROUND_PROFILING");
+		g_bTraceBackgroundThreads = ENABLE_BACKGROUND_PROFILING;
 	}
 #endif
 }

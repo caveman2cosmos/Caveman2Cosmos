@@ -1511,7 +1511,7 @@ void CvPlot::nukeExplosion(int iRange, CvUnit* pNukeUnit)
 						{
 							if (!pLoopUnit->isNukeImmune() && !pLoopUnit->isDelayedDeath())
 							{
-								iNukeDamage = (GC.getDefineINT("NUKE_UNIT_DAMAGE_BASE") + GC.getGame().getSorenRandNum(GC.getDefineINT("NUKE_UNIT_DAMAGE_RAND_1"), "Nuke Damage 1") + GC.getGame().getSorenRandNum(GC.getDefineINT("NUKE_UNIT_DAMAGE_RAND_2"), "Nuke Damage 2"));
+								iNukeDamage = (NUKE_UNIT_DAMAGE_BASE + GC.getGame().getSorenRandNum(NUKE_UNIT_DAMAGE_RAND_1, "Nuke Damage 1") + GC.getGame().getSorenRandNum(NUKE_UNIT_DAMAGE_RAND_2, "Nuke Damage 2"));
 
 								if (pLoopCity != NULL)
 								{
@@ -1523,7 +1523,7 @@ void CvPlot::nukeExplosion(int iRange, CvUnit* pNukeUnit)
 								{
 									pLoopUnit->changeDamage(iNukeDamage, ((pNukeUnit != NULL) ? pNukeUnit->getOwner() : NO_PLAYER));
 								}
-								else if (iNukeDamage >= GC.getDefineINT("NUKE_NON_COMBAT_DEATH_THRESHOLD"))
+								else if (iNukeDamage >= NUKE_NON_COMBAT_DEATH_THRESHOLD)
 								{
 									pLoopUnit->kill(true, ((pNukeUnit != NULL) ? pNukeUnit->getOwner() : NO_PLAYER));
 								}
@@ -2691,7 +2691,7 @@ void CvPlot::updateSeeFromSight(bool bIncrement, bool bUpdatePlotGroups)
 	CvPlot* pLoopPlot;
 	int iDX, iDY;
 
-	int iRange = GC.getMAX_UNIT_VISIBILITY_RANGE() + 1;
+	const int iRange = MAX_UNIT_VISIBILITY_RANGE + 1;
 
 	for (iDX = -iRange; iDX <= iRange; iDX++)
 	{
@@ -4037,7 +4037,7 @@ CvUnit* CvPlot::getFirstDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlaye
 // returns a sum of the strength (adjusted by firepower) of all the units on a plot
 int CvPlot::AI_sumStrength(PlayerTypes eOwner, PlayerTypes eAttackingPlayer, DomainTypes eDomainType, StrengthFlags::flags flags /*= StrengthFlags::DefensiveBonuses*/, int iRange) const
 {
-	const int COLLATERAL_COMBAT_DAMAGE = GC.getDefineINT("COLLATERAL_COMBAT_DAMAGE"); // K-Mod. (currently this number is "10")
+	const int collateralCombatDamage = COLLATERAL_COMBAT_DAMAGE; // K-Mod. (currently this number is "10")
 
 	const bool bTestAtWar = flags & StrengthFlags::TestAtWar;
 	const bool bTestPotentialEnemy = flags & StrengthFlags::TestPotentialEnemy;
@@ -4080,7 +4080,7 @@ int CvPlot::AI_sumStrength(PlayerTypes eOwner, PlayerTypes eAttackingPlayer, Dom
 						if (iPossibleTargets > 0)
 						{
 							// collateral damage is not trivial to calculate. This estimate is pretty rough.
-							strSum += pLoopUnit->baseCombatStr() * COLLATERAL_COMBAT_DAMAGE * pLoopUnit->collateralDamage() * iPossibleTargets / 100;
+							strSum += pLoopUnit->baseCombatStr() * collateralCombatDamage * pLoopUnit->collateralDamage() * iPossibleTargets / 100;
 						}
 					}
 					// K-Mod end
@@ -4859,12 +4859,12 @@ int CvPlot::movementCost(const CvUnit* pUnit, const CvPlot* pFromPlot) const
 
 				if (isHills())
 				{
-					iRegularCost += GC.getHILLS_EXTRA_MOVEMENT();
+					iRegularCost += HILLS_EXTRA_MOVEMENT;
 				}
 
 				if (bRiverCrossing)
 				{
-					iRegularCost += GC.getRIVER_EXTRA_MOVEMENT();
+					iRegularCost += RIVER_EXTRA_MOVEMENT;
 				}
 
 				/************************************************************************************************/
@@ -4876,7 +4876,7 @@ int CvPlot::movementCost(const CvUnit* pUnit, const CvPlot* pFromPlot) const
 				{
 					if (!GET_TEAM(pUnit->getTeam()).isMoveFastPeaks())
 					{
-						iRegularCost += GC.getPEAK_EXTRA_MOVEMENT();
+						iRegularCost += PEAK_EXTRA_MOVEMENT;
 					}
 					else
 					{

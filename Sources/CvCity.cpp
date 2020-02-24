@@ -7066,7 +7066,7 @@ int CvCity::happyLevel() const
 
 	if (getHappinessTimer() > 0)
 	{
-		iHappiness += GC.getDefineINT("TEMP_HAPPY");
+		iHappiness += TEMP_HAPPY;
 	}
 	/*****************************************************************************************************/
 	/**  Author: TheLadiesOgre                                                                          **/

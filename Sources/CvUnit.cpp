@@ -1538,7 +1538,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 
 		if ((eCapturingPlayer != NO_PLAYER) && (eCaptureUnitType != NO_UNIT) && !(GET_PLAYER(eCapturingPlayer).isNPC()))
 		{
-			if (GET_PLAYER(eCapturingPlayer).isHuman() || GET_PLAYER(eCapturingPlayer).AI_captureUnit(eCaptureUnitType, pPlot) || 0 == GC.getDefineINT("AI_CAN_DISBAND_UNITS"))
+			if (GET_PLAYER(eCapturingPlayer).isHuman() || GET_PLAYER(eCapturingPlayer).AI_captureUnit(eCaptureUnitType, pPlot) || AI_CAN_DISBAND_UNITS)
 			{
 				CvUnit* pkCapturedUnit = GET_PLAYER(eCapturingPlayer).initUnit(eCaptureUnitType, pPlot->getX(), pPlot->getY(), NO_UNITAI, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 
@@ -1556,7 +1556,6 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_CAPTURED_UNIT", GC.getUnitInfo(eCaptureUnitType).getTextKeyWide());
 					AddDLLMessage(eCapturingPlayer, true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNITCAPTURE", MESSAGE_TYPE_INFO, pkCapturedUnit->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
 
-
 					// Add a captured mission
 					addMission(CvMissionDefinition(MISSION_CAPTURED, pPlot, pkCapturedUnit));
 
@@ -1567,7 +1566,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 						CvPlot* pPlot = pkCapturedUnit->plot();
 						if (pPlot && !pPlot->isCity(false))
 						{
-							if (GET_PLAYER(eCapturingPlayer).AI_getPlotDanger(pPlot) && GC.getDefineINT("AI_CAN_DISBAND_UNITS"))
+							if (GET_PLAYER(eCapturingPlayer).AI_getPlotDanger(pPlot) && AI_CAN_DISBAND_UNITS)
 							{
 								pkCapturedUnit->kill(false, NO_PLAYER, true);
 							}
@@ -1578,7 +1577,6 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 		}
 
 		GET_PLAYER(getOwner()).deleteUnit(getID());
-
 	}
 }
 
@@ -14284,10 +14282,8 @@ int CvUnit::visibilityRange(const CvPlot* pPlot) const
 	{
 		iImprovementVisibilityChange = GC.getImprovementInfo(pPlot->getImprovementType()).getVisibilityChange();
 	}
-	return std::min(GC.getMAX_UNIT_VISIBILITY_RANGE(), GC.getUNIT_VISIBILITY_RANGE() + getExtraVisibilityRange() + iImprovementVisibilityChange);
+	return std::min(MAX_UNIT_VISIBILITY_RANGE, UNIT_VISIBILITY_RANGE + getExtraVisibilityRange() + iImprovementVisibilityChange);
 	// Super Forts end
-	/* Original
-	return (GC.getDefineINT("UNIT_VISIBILITY_RANGE") + getExtraVisibilityRange()); */
 }
 
 
@@ -15638,11 +15634,11 @@ int CvUnit::maxCombatStr(const CvPlot* pPlot, const CvUnit* pAttacker, CombatDet
 
 				if (pCity != NULL && pAttackedPlot->isCity(true, getTeam()))
 				{
-					iExtraModifier = std::min(0,(pCity->getExtraRiverDefensePenalty() - GC.getRIVER_ATTACK_MODIFIER()));
+					iExtraModifier = std::min(0,(pCity->getExtraRiverDefensePenalty() - RIVER_ATTACK_MODIFIER));
 				}
 				else
 				{
-					iExtraModifier = -GC.getRIVER_ATTACK_MODIFIER();
+					iExtraModifier = -RIVER_ATTACK_MODIFIER;
 				}
 				iTempModifier += iExtraModifier;
 				if (pCombatDetails != NULL)
@@ -33363,7 +33359,7 @@ bool CvUnit::performInquisition()
 					else if (pCity->isHasReligion((ReligionTypes)iI))
 					{
 						pCity->setHasReligion((ReligionTypes)iI, false, false, false);
-						iCompensationGold += GC.getDefineINT("RELIGION_REMOVAL_GOLD");
+						iCompensationGold += RELIGION_REMOVAL_GOLD;
 					}
 				}
 			}

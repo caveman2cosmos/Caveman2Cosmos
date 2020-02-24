@@ -21112,7 +21112,7 @@ void CvPlayerAI::AI_doReligion()
 	if (canConvert(eBestReligion))
 	{
 		convert(eBestReligion);
-		AI_setReligionTimer((getMaxAnarchyTurns() == 0) ? (GC.getDefineINT("MIN_CONVERSION_TURNS") * 2) : RELIGION_CHANGE_DELAY);
+		AI_setReligionTimer((getMaxAnarchyTurns() == 0) ? (MIN_CONVERSION_TURNS * 2) : RELIGION_CHANGE_DELAY);
 	}
 }
 

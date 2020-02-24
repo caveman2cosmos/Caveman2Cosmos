@@ -1143,9 +1143,8 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 			if (m_iHappinessTimer)
 			{
 				pCity->changeHappinessTimer(m_iHappinessTimer);
-				int iHappy = GC.getDefineINT("TEMP_HAPPY");
 				szBuffer.append(L" ");
-				szBuffer.append(gDLL->getText("TXT_KEY_OUTCOME_TEMP_HAPPY", iHappy, m_iHappinessTimer));
+				szBuffer.append(gDLL->getText("TXT_KEY_OUTCOME_TEMP_HAPPY", TEMP_HAPPY, m_iHappinessTimer));
 			}
 
 			if (m_iPopulationBoost)
@@ -1158,7 +1157,7 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 			int iReduce = getReduceAnarchyLength(kUnit);
 			if (iReduce)
 			{
-				int iOccupation = pCity->getOccupationTimer();
+				const int iOccupation = pCity->getOccupationTimer();
 				iReduce = std::min(iReduce, iOccupation);
 				if (iReduce)
 				{
@@ -1823,9 +1822,8 @@ void CvOutcome::buildDisplayString(CvWStringBuffer &szBuffer, const CvUnit& kUni
 
 		if (m_iHappinessTimer)
 		{
-			int iHappy = GC.getDefineINT("TEMP_HAPPY");
 			szBuffer.append(L" ");
-			szBuffer.append(gDLL->getText("TXT_KEY_OUTCOME_TEMP_HAPPY", iHappy, m_iHappinessTimer));
+			szBuffer.append(gDLL->getText("TXT_KEY_OUTCOME_TEMP_HAPPY", TEMP_HAPPY, m_iHappinessTimer));
 		}
 
 		if (m_iPopulationBoost)

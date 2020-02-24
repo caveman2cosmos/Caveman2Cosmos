@@ -639,7 +639,7 @@ bool CvCityAI::AI_avoidGrowth()
 
 		if (getFoodTurnsLeft() == 1)
 		{
-			int iHappyFacesLeft = happyLevel() - unhappyLevel(getHappinessTimer() > 0 ? GC.getDefineINT("TEMP_HAPPY") : 0);
+			const int iHappyFacesLeft = happyLevel() - unhappyLevel(getHappinessTimer() > 0 ? TEMP_HAPPY : 0);
 
 			if (iHappyFacesLeft < 1)
 			{

@@ -293,22 +293,22 @@ void CvMapGenerator::addRivers()
 
 	for (int iPass = 0; iPass < 4; iPass++)
 	{
-		int iRiverSourceRange = 
+		const int iRiverSourceRange = 
 			(iPass <= 1 || !GC.getGame().isOption(GAMEOPTION_MORE_RIVERS)) 
-			? GC.getDefineINT("RIVER_SOURCE_MIN_RIVER_RANGE")
-			: (GC.getDefineINT("RIVER_SOURCE_MIN_RIVER_RANGE") / 2);
+			? RIVER_SOURCE_MIN_RIVER_RANGE
+			: (RIVER_SOURCE_MIN_RIVER_RANGE / 2);
 
-		int iSeaWaterRange = 
+		const int iSeaWaterRange = 
 			(iPass <= 1 || !GC.getGame().isOption(GAMEOPTION_MORE_RIVERS))
-			? GC.getDefineINT("RIVER_SOURCE_MIN_SEAWATER_RANGE")
-			: (GC.getDefineINT("RIVER_SOURCE_MIN_SEAWATER_RANGE") / 2);
+			? RIVER_SOURCE_MIN_SEAWATER_RANGE
+			: (RIVER_SOURCE_MIN_SEAWATER_RANGE / 2);
 
 		int iRand = 8;
-		int iPPRE = GC.getDefineINT("PLOTS_PER_RIVER_EDGE");
+		int iPPRE = PLOTS_PER_RIVER_EDGE;
 		if (GC.getGame().isOption(GAMEOPTION_MORE_RIVERS))
 		{
 			iRand = GC.getDefineINT("RIVER_RAND_ON_MORE_RIVERS");
-			iPPRE /= std::max(1, GC.getDefineINT("PLOTS_PER_RIVER_EDGE_DIVISOR"));
+			iPPRE /= std::max(1, PLOTS_PER_RIVER_EDGE_DIVISOR);
 		}
 		iPPRE = std::max(1, iPPRE);
 		for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
