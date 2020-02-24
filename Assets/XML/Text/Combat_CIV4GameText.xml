@@ -6258,6 +6258,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SUNDANESE</Tag>
 		<English>Culture(Sundanese)</English>
+		<French>
+			<Text>Culture(Soudanaise)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SWAHILI</Tag>
@@ -13896,7 +13901,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ORANG_ASLI</Tag>
 		<English>Culture(Orang Asli)</English>
-		<French>Culture(Orang_Asli)</French>
+		<French>Culture(Orang Asli)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PAIUTE</Tag>

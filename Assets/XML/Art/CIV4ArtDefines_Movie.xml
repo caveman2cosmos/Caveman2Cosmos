@@ -98,10 +98,6 @@
 			<Path>Art/Movies/Wonders/SistineChapel.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_SPACE_ELEVATOR</Type>
-			<Path>Art/Movies/Wonders/SpaceElevator.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_SPIRAL_MINARET</Type>
 			<Path>Art/Movies/Wonders/SpiralMinaret.bik</Path>
 		</MovieArtInfo>
@@ -364,10 +360,6 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_ISS</Type>
 			<Path>Art/Movies/Wonders/ISS.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_EDEN</Type>
-			<Path>Art/Movies/Wonders/Eden.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_CARHENGE</Type>

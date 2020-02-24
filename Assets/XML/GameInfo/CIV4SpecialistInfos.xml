@@ -277,7 +277,7 @@
 		</SpecialistInfo>
 		<SpecialistInfo>
 			<Type>SPECIALIST_DOCTOR</Type>
-			<Description>TXT_KEY_UNIT_DOCTOR</Description>
+			<Description>TXT_KEY_SPECIALIST_DOCTOR</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SPECIALIST_DOCTOR_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_SPECIALIST_DOCTOR_STRATEGY</Strategy>
 			<Help/>
@@ -1038,7 +1038,7 @@
 		</SpecialistInfo>
 		<SpecialistInfo>
 			<Type>SPECIALIST_GREAT_DOCTOR</Type>
-			<Description>TXT_KEY_UNIT_GREAT_DOCTOR</Description>
+			<Description>TXT_KEY_SPECIALIST_GREAT_DOCTOR</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_DOCTOR_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_GREAT_DOCTOR_STRATEGY</Strategy>
 			<Help/>
