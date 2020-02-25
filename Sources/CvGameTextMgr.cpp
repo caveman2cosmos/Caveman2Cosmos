@@ -18317,16 +18317,12 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 		szBuffer.append(gDLL->getText("TXT_KEY_TECH_GLOBAL"));
 	}
 
-	CvWString szUnitName;
-	bool bFound = false;
 	for (iI = 0; iI < GC.getNumUnitInfos(); ++iI)
 	{
-		szUnitName = GC.getUnitInfo((UnitTypes) iI).getDescription();
-
-		if (kTech.getUnitClassStrengthChange(GC.getUnitInfo((UnitTypes) iI).getUnitClassType()) != 0)
+		if (kTech.getUnitStrengthChange((UnitTypes) iI) != 0)
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_TECH_UNIT_STRENGTH_CHANGE", kTech.getUnitClassStrengthChange(GC.getUnitInfo((UnitTypes) iI).getUnitClassType()), szUnitName.c_str()));
+			szBuffer.append(gDLL->getText("TXT_KEY_TECH_UNIT_STRENGTH_CHANGE", kTech.getUnitStrengthChange((UnitTypes) iI), ((CvWString)GC.getUnitInfo((UnitTypes) iI).getDescription()).c_str()));
 		}
 	}
 
@@ -18399,11 +18395,6 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 		buildSpecialBuildingString(szBuffer, eTech, iI, true, bPlayerContext);
 	}
 
-/************************************************************************************************/
-/* Afforess                         12/7/09                                                     */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	for (iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
 	{
 		CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
@@ -18431,9 +18422,6 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 			buildBuildingTechHealthChangesString(szBuffer, eTech, iI, true, bPlayerContext);
 		}
 	}
-/************************************************************************************************/
-/* Afforess	                         END                                                        */
-/************************************************************************************************/
 	//	Build farm, mine, etc...
 	for (iI = 0; iI < GC.getNumImprovementInfos(); ++iI)
 	{
@@ -18607,11 +18595,6 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 		bFirst = buildPromotionString(szBuffer, eTech, iI, bFirst, true, bPlayerContext);
 	}
 
-/************************************************************************************************/
-/* Afforess	                  Start		 01/03/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	bFirst = true;
 	for (iI = 0; iI < GC.getNumPromotionInfos(); ++iI)
 	{
@@ -18630,9 +18613,6 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 			}
 		}
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	if (bTreeInfo && NO_TECH == eFromTech)
 	{
@@ -18644,11 +18624,6 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 		szBuffer.append(CvWString::format(L"%s%s", NEWLINE, GC.getTechInfo(eTech).getHelp()).c_str());
 	}
 
-/************************************************************************************************/
-/* Afforess	                  Start		 04/01/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	if (bCivilopediaText || GC.getGame().getActivePlayer() == NO_PLAYER || !GET_PLAYER(GC.getGame().getActivePlayer()).canResearch(eTech))
 	{
 		BuildingTypes eLoopBuilding;
@@ -18693,9 +18668,6 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 			}
 		}
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	if (!bCivilopediaText)
 	{
@@ -18869,14 +18841,9 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		}
 		else
 		{
-/************************************************************************************************/
-/* Afforess	                  Start		 6/11/11                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 			float fCombat = (float)kUnit.getTotalModifiedCombatStrength100();
 			int iModifier = kUnit.getCombatStrengthModifier();
-			int iAdditional = GC.getGame().getActiveTeam() == NO_TEAM ? 0 : (GET_TEAM(pCity != NULL ? pCity->getTeam() : GC.getGame().getActiveTeam()).getUnitClassStrengthChange((UnitClassTypes)kUnit.getUnitClassType()));
+			int iAdditional = GC.getGame().getActiveTeam() == NO_TEAM ? 0 : (GET_TEAM(pCity != NULL ? pCity->getTeam() : GC.getGame().getActiveTeam()).getUnitStrengthChange(eUnit));
 			fCombat += (iModifier * iAdditional);
 			fCombat /= 100;
 
@@ -18885,15 +18852,6 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 				szTempBuffer.Format(L"%.1f%c, ", fCombat, gDLL->getSymbolID(STRENGTH_CHAR));
 				szBuffer.append(szTempBuffer);
 			}
-
-			//int iCombat = (kUnit.getCombat() +
-			//			   (GC.getGame().getActiveTeam() == NO_TEAM ? 0 : (
-			//					GET_TEAM(pCity != NULL ? pCity->getTeam() : GC.getGame().getActiveTeam()).getUnitClassStrengthChange((UnitClassTypes)kUnit.getUnitClassType()))));
-			//if (iCombat > 0)
-			//{
-			//	szTempBuffer.Format(L"%d%c, ", iCombat, gDLL->getSymbolID(STRENGTH_CHAR));
-			//	szBuffer.append(szTempBuffer);
-			//}
 		}
 
 		szTempBuffer.Format(L"%d%c", kUnit.getMoves(), gDLL->getSymbolID(MOVES_CHAR));

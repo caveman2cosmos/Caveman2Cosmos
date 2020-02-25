@@ -106,19 +106,13 @@ void CyInfoPythonInterface1()
 
 		.def("isCommerceFlexible", &CvTechInfo::isCommerceFlexible, "bool (int i)")
 		.def("isTerrainTrade", &CvTechInfo::isTerrainTrade, "bool (int i)")
-/************************************************************************************************/
-/* Afforess	                  Start		 03/30/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 		.def("isEmbassyTrading", &CvTechInfo::isEmbassyTrading, "bool ()")
 		.def("isCanPassPeaks", &CvTechInfo::isCanPassPeaks, "bool ()")
 		.def("setPrereqOrTech", &CvTechInfo::setPrereqOrTech, "int (int i)")
 		.def("setPrereqAndTech", &CvTechInfo::setPrereqAndTech, "int (int i)")
-		.def("getUnitClassStrengthChange", &CvTechInfo::getUnitClassStrengthChange, "int (int i)")
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+		.def("getUnitStrengthChange", &CvTechInfo::getUnitStrengthChange, "int (int i)")
+
 		.def("getNumPrereqBuildingClasses", &CvTechInfo::getNumPrereqBuildingClasses, "int ()")
 		.def("getPrereqBuildingClassType", &CvTechInfo::getPrereqBuildingClassType, "int (int i)")
 		.def("getPrereqBuildingClassMinimumRequired", &CvTechInfo::getPrereqBuildingClassMinimumRequired, "int (int i)")

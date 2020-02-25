@@ -7889,17 +7889,8 @@ bool CvPlayer::canReceiveGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit) 
 			return false;
 		}
 
-/************************************************************************************************/
-/* Afforess	                  Start		 6/11/11                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-		int iCombat = (GC.getUnitInfo(eUnit).getCombat() +
-		GET_TEAM(getTeam()).getUnitClassStrengthChange((UnitClassTypes)GC.getUnitInfo(eUnit).getUnitClassType()));
-		if ((iCombat > 0) && !(GC.getUnitInfo(eUnit).isOnlyDefensive()))
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+		if (GC.getUnitInfo(eUnit).getCombat() + GET_TEAM(getTeam()).getUnitStrengthChange(eUnit) > 0
+		&& !GC.getUnitInfo(eUnit).isOnlyDefensive())
 		{
 			if (GC.getGame().isGameMultiPlayer() || (GC.getGame().getElapsedGameTurns() < 20))
 			{

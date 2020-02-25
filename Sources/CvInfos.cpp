@@ -1541,7 +1541,7 @@ m_piCommerceModifier(NULL)
 //,m_paiPrereqOrBuildingClass(NULL)
 ,m_piOriginalPrereqOrTechs(NULL)
 ,m_piOriginalPrereqAndTechs(NULL)
-,m_piUnitClassStrengthChange(NULL)
+,m_piUnitStrengthChange(NULL)
 
 //TB Tech Tags
 ,m_bGlobal(false)
@@ -1566,19 +1566,11 @@ CvTechInfo::~CvTechInfo()
 	SAFE_DELETE_ARRAY(m_pbTerrainTrade);
 	//ls612: Tech Commerce Modifiers
 	SAFE_DELETE_ARRAY(m_piCommerceModifier);
-/************************************************************************************************/
-/* Afforess					  Start		 04/01/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	//SAFE_DELETE_ARRAY(m_paiPrereqBuildingClass);
 	//SAFE_DELETE_ARRAY(m_paiPrereqOrBuildingClass);
 	SAFE_DELETE_ARRAY(m_piOriginalPrereqOrTechs);
 	SAFE_DELETE_ARRAY(m_piOriginalPrereqAndTechs);
-	SAFE_DELETE_ARRAY(m_piUnitClassStrengthChange);
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+	SAFE_DELETE_ARRAY(m_piUnitStrengthChange);
 
 	for (int i=0; i<(int)m_aPrereqBuildingClass.size(); i++)
 	{
@@ -2115,14 +2107,14 @@ int CvTechInfo::getOriginalPrereqAndTechs(int i) const
 	return m_piOriginalPrereqAndTechs ? m_piOriginalPrereqAndTechs[i] : -1;
 }
 
-int CvTechInfo::getUnitClassStrengthChange(int iUnit, bool bForLoad) const
+int CvTechInfo::getUnitStrengthChange(int iUnit, bool bForLoad) const
 {
 	//if (!bForLoad && GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	//{
-	//	int iTotal = m_piUnitClassStrengthChange[iUnit] * 100;
-	//	return m_piUnitClassStrengthChange ? iTotal : 0;
+	//	int iTotal = m_piUnitStrengthChange[iUnit] * 100;
+	//	return m_piUnitStrengthChange ? iTotal : 0;
 	//}
-	return m_piUnitClassStrengthChange ? m_piUnitClassStrengthChange[iUnit] : 0;
+	return m_piUnitStrengthChange ? m_piUnitStrengthChange[iUnit] : 0;
 }
 
 //TB Tech Tags
@@ -2264,7 +2256,7 @@ bool CvTechInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iCorporationRevenueModifier, L"iCorporationRevenueModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iCorporationMaintenanceModifier, L"iCorporationMaintenanceModifier");
 
-	pXML->SetVariableListTagPair(&m_piUnitClassStrengthChange, L"UnitClassStrengthChanges", GC.getNumUnitClassInfos());
+	pXML->SetVariableListTagPair(&m_piUnitStrengthChange, L"UnitStrengthChanges", GC.getNumUnitInfos());
 
 
 	//pXML->CvXMLLoadUtility::InitList(&m_piOriginalPrereqOrTechs, GC.getNUM_OR_TECH_PREREQS(), -1);
@@ -2676,16 +2668,16 @@ void CvTechInfo::copyNonDefaults(CvTechInfo* pClassInfo, CvXMLLoadUtility* pXML)
 		}
 	}
 
-	for ( int j = 0; j < GC.getNumUnitClassInfos(); j++)
+	for (int j = 0; j < GC.getNumUnitInfos(); j++)
 	{
-		if ((m_piUnitClassStrengthChange == NULL || m_piUnitClassStrengthChange[j] == 0) &&
-			pClassInfo->getUnitClassStrengthChange(j, true) != 0)
+		if ((m_piUnitStrengthChange == NULL || m_piUnitStrengthChange[j] == 0)
+		&& pClassInfo->getUnitStrengthChange(j, true) != 0)
 		{
-			if ( m_piUnitClassStrengthChange == NULL )
+			if (m_piUnitStrengthChange == NULL)
 			{
-				CvXMLLoadUtility::InitList(&m_piUnitClassStrengthChange,GC.getNumUnitClassInfos(),0);
+				CvXMLLoadUtility::InitList(&m_piUnitStrengthChange, GC.getNumUnitInfos(), 0);
 			}
-			m_piUnitClassStrengthChange[j] = pClassInfo->getUnitClassStrengthChange(j, true);
+			m_piUnitStrengthChange[j] = pClassInfo->getUnitStrengthChange(j, true);
 		}
 	}
 
@@ -2858,7 +2850,7 @@ void CvTechInfo::getCheckSum(unsigned int& iSum)
 	CheckSum(iSum, m_piFreeSpecialistCount, GC.getNumSpecialistInfos());
 	CheckSum(iSum, m_piOriginalPrereqOrTechs, GC.getNUM_OR_TECH_PREREQS());
 	CheckSum(iSum, m_piOriginalPrereqAndTechs, GC.getNUM_AND_TECH_PREREQS());
-	CheckSum(iSum, m_piUnitClassStrengthChange, GC.getNumUnitClassInfos());
+	CheckSum(iSum, m_piUnitStrengthChange, GC.getNumUnitInfos());
 	//CheckSum(iSum, m_paiPrereqBuildingClass, GC.getNumBuildingClassInfos());
 	//CheckSum(iSum, m_paiPrereqOrBuildingClass, GC.getNumBuildingClassInfos());
 

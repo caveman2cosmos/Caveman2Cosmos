@@ -488,7 +488,7 @@ public:
 	void setOriginalPrereqAndTech(int i, int iTech);
 	int getOriginalPrereqOrTechs(int i) const;
 	int getOriginalPrereqAndTechs(int i) const;
-	int getUnitClassStrengthChange(int iUnit, bool bForLoad = false) const;
+	int getUnitStrengthChange(int iUnit, bool bForLoad = false) const;
 	//TB Tech Tags
 	bool isGlobal() const;
 	//TB Tech Tags end
@@ -625,7 +625,7 @@ protected:
 	int* m_piOriginalPrereqOrTechs;
 	int* m_piOriginalPrereqAndTechs;
 
-	int* m_piUnitClassStrengthChange;
+	int* m_piUnitStrengthChange;
 
 	std::vector<PrereqBuildingClass> m_aPrereqBuildingClass;
 	std::vector<PrereqBuildingClass> m_aPrereqOrBuildingClass;

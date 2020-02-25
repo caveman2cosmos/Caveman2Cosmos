@@ -995,24 +995,10 @@ void CvCityAI::AI_chooseProduction()
 
 			// if building a combat unit, and we have no defenders, keep building it
 			UnitTypes eProductionUnit = getProductionUnit();
-			if (eProductionUnit != NO_UNIT)
+			if (eProductionUnit != NO_UNIT && plot()->getNumDefenders(getOwner()) == 0
+			&& GC.getUnitInfo(eProductionUnit).getCombat() + GET_TEAM(getTeam()).getUnitStrengthChange(eProductionUnit) > 0)
 			{
-				if (plot()->getNumDefenders(getOwner()) == 0)
-				{
-/************************************************************************************************/
-/* Afforess	                  Start		 6/11/11                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-					if ((GC.getUnitInfo(eProductionUnit).getCombat() +
-					GET_TEAM(getTeam()).getUnitClassStrengthChange((UnitClassTypes)GC.getUnitInfo(eProductionUnit).getUnitClassType())) > 0)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-					{
-						return;
-					}
-				}
+				return;
 			}
 
 			// if we are building a wonder, do not cancel, keep building it (if no danger)
@@ -10976,20 +10962,11 @@ void CvCityAI::AI_doHurry(bool bForce)
 				}
 			}
 
-			if (eProductionUnit != NO_UNIT)
+			if (bDanger && eProductionUnit != NO_UNIT && GC.getUnitInfo(eProductionUnit).getDomainType() == DOMAIN_LAND
+			&& GC.getUnitInfo(eProductionUnit).getCombat() + GET_TEAM(getTeam()).getUnitStrengthChange(eProductionUnit) > 0)
 			{
-				if (GC.getUnitInfo(eProductionUnit).getDomainType() == DOMAIN_LAND)
-				{
-					if ((GC.getUnitInfo(eProductionUnit).getCombat() +
-					GET_TEAM(getTeam()).getUnitClassStrengthChange((UnitClassTypes)GC.getUnitInfo(eProductionUnit).getUnitClassType())) > 0)
-					{
-						if (bDanger)
-						{
-							iMinTurns = std::min(iMinTurns, 3);
-							bEssential = true;
-						}
-					}
-				}
+				iMinTurns = std::min(iMinTurns, 3);
+				bEssential = true;
 			}
 
 			if (eProductionUnitAI == UNITAI_CITY_DEFENSE)
@@ -14275,22 +14252,11 @@ bool CvCityAI::AI_doPanic()
 
 			if (eProductionUnit != NO_UNIT)
 			{
-				if (getProduction() > 0)
+				if (getProduction() > 0
+				&& GC.getUnitInfo(eProductionUnit).getCombat() + GET_TEAM(getTeam()).getUnitStrengthChange(eProductionUnit) > 0)
 				{
-/************************************************************************************************/
-/* Afforess	                  Start		 6/11/11                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-					if ((GC.getUnitInfo(eProductionUnit).getCombat() +
-					GET_TEAM(getTeam()).getUnitClassStrengthChange((UnitClassTypes)GC.getUnitInfo(eProductionUnit).getUnitClassType())) > 0)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-					{
-						AI_doHurry(true);
-						return true;
-					}
+					AI_doHurry(true);
+					return true;
 				}
 			}
 			else

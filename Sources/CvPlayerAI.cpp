@@ -7854,10 +7854,10 @@ int CvPlayerAI::AI_techUnitValue( TechTypes eTech, int iPathLength, bool &bEnabl
 				iValue += iUnitValue;
 			}
 		}
-		if (GC.getTechInfo(eTech).getUnitClassStrengthChange((UnitClassTypes)kLoopUnit.getUnitClassType()) != 0)
+		if (GC.getTechInfo(eTech).getUnitStrengthChange(eLoopUnit) != 0)
 		{
-			int iUnitValue = GC.getTechInfo(eTech).getUnitClassStrengthChange((UnitClassTypes)kLoopUnit.getUnitClassType()) * getUnitCountPlusMaking(eLoopUnit) * 20;
-			iUnitValue += 50;
+			int iUnitValue = 50 + GC.getTechInfo(eTech).getUnitStrengthChange(eLoopUnit) * getUnitCountPlusMaking(eLoopUnit) * 20;
+
 			if (bWarPlan)
 			{
 				iUnitValue *= 3;
@@ -26355,7 +26355,7 @@ int CvPlayerAI::AI_getStrategyHash() const
 			{
 				iAttackUnitCount++;
 
-				int iCombat = (kLoopUnit.getCombat() + GET_TEAM(getTeam()).getUnitClassStrengthChange((UnitClassTypes)kLoopUnit.getUnitClassType()));
+				int iCombat = (kLoopUnit.getCombat() + GET_TEAM(getTeam()).getUnitStrengthChange((UnitTypes)iI));
 
 				if (iMoves == 1)
 				{
@@ -31006,39 +31006,28 @@ int CvPlayerAI::strengthOfBestUnitAI(DomainTypes eDomain, UnitAITypes eUnitAITyp
 	noGrowthCriteria.m_bIgnoreGrowth = true;
 	UnitTypes eBestUnit = bestBuildableUnitForAIType(eDomain, eUnitAIType, &noGrowthCriteria);
 
-	if ( eBestUnit == NO_UNIT )
+	if (eBestUnit == NO_UNIT)
 	{
 		//	We cannot build any!  Take the average of any we already have
 		int iLoop;
 		int iTotal = 0;
 		int iCount = 0;
 
-		for(CvUnit* pLoopUnit = firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = nextUnit(&iLoop))
+		for (CvUnit* pLoopUnit = firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = nextUnit(&iLoop))
 		{
-			UnitAITypes eAIType = pLoopUnit->AI_getUnitAIType();
-
-			if ( eAIType == eUnitAIType || eUnitAIType == NO_UNITAI )
+			if (eUnitAIType == NO_UNITAI || pLoopUnit->AI_getUnitAIType() == eUnitAIType)
 			{
-				CvUnitInfo& kUnit = pLoopUnit->getUnitInfo();
-
 				iCount++;
-				iTotal += (kUnit.getCombat() + GET_TEAM(getTeam()).getUnitClassStrengthChange((UnitClassTypes)kUnit.getUnitClassType()));
+				iTotal += pLoopUnit->getUnitInfo().getCombat() + GET_TEAM(getTeam()).getUnitStrengthChange((UnitTypes)pLoopUnit->getUnitType());
 			}
 		}
-
-		if ( iCount > 0 )
+		if (iCount > 0)
 		{
 			iTotal /= iCount;
 		}
-
 		return std::max(1, iTotal);
 	}
-	else
-	{
-		CvUnitInfo& kUnit = GC.getUnitInfo(eBestUnit);
-
-		return (kUnit.getCombat() + GET_TEAM(getTeam()).getUnitClassStrengthChange((UnitClassTypes)kUnit.getUnitClassType()));
-	}
+	return GC.getUnitInfo(eBestUnit).getCombat() + GET_TEAM(getTeam()).getUnitStrengthChange(eBestUnit);
 }
 
 UnitTypes CvPlayerAI::bestBuildableUnitForAIType(DomainTypes eDomain, UnitAITypes eUnitAIType, CvUnitSelectionCriteria* criteria) const
