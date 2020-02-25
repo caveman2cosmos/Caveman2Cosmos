@@ -17030,7 +17030,12 @@ bool CvPlayer::isUnitMaxedOut(const UnitTypes eIndex, const int iExtra) const
 	{
 		return false;
 	}
-	FAssertMsg(getUnitCount(eIndex) <= GC.getUnitInfo(eIndex).getMaxPlayerInstances(), "getUnitCount is expected to be less than maximum bound of MaxPlayerInstances (invalid index)");
+/* Toffer: FAssertMsg(GC.getUnitInfo(eIndex).getMaxPlayerInstances() == 0 ...
+	Special assert exception rule for the initial settler unit that is never trainable.
+	Settler units are trainable even when their hammer cost is set to -1 due to their unique hammer cost calculation.
+*/	FAssertMsg(GC.getUnitInfo(eIndex).getMaxPlayerInstances() == 0 || getUnitCount(eIndex) <= GC.getUnitInfo(eIndex).getMaxPlayerInstances(),
+		CvString::format("getUnitCount=%d is expected not to be greater than MaxPlayerInstances=%d for %s",
+		getUnitCount(eIndex), GC.getUnitInfo(eIndex).getMaxPlayerInstances(), GC.getUnitInfo(eIndex).getType()).c_str());
 
 	return (getUnitCount(eIndex) + iExtra) >= GC.getUnitInfo(eIndex).getMaxPlayerInstances();
 }
