@@ -39952,8 +39952,8 @@ Base XP gained when defending
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_DEFENSE_AIR</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_EARLYSTEALTH</Description>
-			<Civilopedia>TXT_KEY_UNIT_F117_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_F117_STRATEGY</Strategy>
+			<Civilopedia>TXT_KEY_UNIT_STEALTH_FIGHTER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_STEALTH_FIGHTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>

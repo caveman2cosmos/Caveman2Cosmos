@@ -4004,7 +4004,7 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_AFRICANELEPHANT</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_ELEPHANT_AFRICAN</EarlyArtDefineTag>
 				</UnitMeshGroup>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
@@ -4107,7 +4107,7 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_ELEPHANT</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_ELEPHANT_ASIAN</EarlyArtDefineTag>
 				</UnitMeshGroup>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
