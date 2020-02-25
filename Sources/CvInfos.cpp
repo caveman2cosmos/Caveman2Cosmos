@@ -27416,6 +27416,8 @@ bool CvTraitInfo::isValidTrait(bool bGameStart) const
 		return false;
 	}
 
+	if (isCivilizationTrait()) return true;
+
 	if (GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS))
 	{
 		if (getLinePriority() == 0)
