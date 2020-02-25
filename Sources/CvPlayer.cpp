@@ -17025,13 +17025,13 @@ bool CvPlayer::isUnitMaxedOut(const UnitTypes eIndex, const int iExtra) const
 	{
 		return false;
 	}
-
-	if (GC.getGame().isOption(GAMEOPTION_UNLIMITED_NATIONAL_UNITS))
+	if (GC.getGame().isOption(GAMEOPTION_UNLIMITED_NATIONAL_UNITS)
+	&& !GC.getUnitInfo(eIndex).isUnlimitedException())
 	{
-		if (!GC.getUnitInfo(eIndex).isUnlimitedException()) return false;
-
-		FAssertMsg(getUnitCount(eIndex) <= GC.getUnitInfo(eIndex).getMaxPlayerInstances(), "getUnitCount is expected to be less than maximum bound of MaxPlayerInstances (invalid index)");
+		return false;
 	}
+	FAssertMsg(getUnitCount(eIndex) <= GC.getUnitInfo(eIndex).getMaxPlayerInstances(), "getUnitCount is expected to be less than maximum bound of MaxPlayerInstances (invalid index)");
+
 	return (getUnitCount(eIndex) + iExtra) >= GC.getUnitInfo(eIndex).getMaxPlayerInstances();
 }
 
