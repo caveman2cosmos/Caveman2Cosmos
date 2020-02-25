@@ -16615,8 +16615,7 @@ void CvPlayer::changeSpecialistExtraCommerce(CommerceTypes eIndex, int iChange)
 
 	if (iChange != 0)
 	{
-		m_aiSpecialistExtraCommerce[eIndex] = (m_aiSpecialistExtraCommerce[eIndex] + iChange);
-		FAssert(getSpecialistExtraCommerce(eIndex) >= 0);
+		m_aiSpecialistExtraCommerce[eIndex] += iChange;
 
 		setCommerceDirty(eIndex);
 
