@@ -423,6 +423,9 @@ class CvEventManager:
 
 			elif iModifiers == 2:
 
+				import XmlUtil
+				XmlUtil.init()
+
 				if DebugUtils.bDebugMode:
 
 					if bShift and bCtrl:
