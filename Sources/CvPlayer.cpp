@@ -17011,7 +17011,8 @@ bool CvPlayer::isUnitMaxedOut(const UnitTypes eIndex, const int iExtra) const
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
-	if (!isNationalUnit(eIndex))
+	// NPC's are not organized as nations so they shouldn't respect national limits.
+	if (!isNationalUnit(eIndex) || isNPC())
 	{
 		return false;
 	}
