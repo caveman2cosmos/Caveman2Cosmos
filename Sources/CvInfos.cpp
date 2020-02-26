@@ -2149,10 +2149,8 @@ bool CvTechInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"FirstFreeUnit");
 	m_aszExtraXMLforPass3.push_back(szTextVal);
 
-
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"FirstFreeProphet");
 	m_aszExtraXMLforPass3.push_back(szTextVal);
-
 
 	pXML->GetOptionalChildXmlValByName(&m_iFeatureProductionModifier, L"iFeatureProductionModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iWorkerSpeedModifier, L"iWorkerSpeedModifier");
@@ -24260,9 +24258,7 @@ bool CvReligionInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"Adjective");
 	setAdjectiveKey(szTextVal);
 
-
 	pXML->SetVariableListTagPair(&m_piFlavorValue, L"Flavors", GC.getFlavorTypes(), GC.getNumFlavorTypes());
-
 
 	m_PropertyManipulators.read(pXML);
 
@@ -24332,7 +24328,6 @@ void CvReligionInfo::copyNonDefaults(CvReligionInfo* pClassInfo, CvXMLLoadUtilit
 	if (getSound() == cDefault) setSound(pClassInfo->getSound());
 	if (getAdjectiveKey() == wDefault) setAdjectiveKey(CvString::format("%s",pClassInfo->getAdjectiveKey()).GetCString());
 
-
 	for ( int i = 0; i < GC.getNumFlavorTypes(); i++ )
 	{
 		if ( getFlavorValue(i) == iDefault && pClassInfo->getFlavorValue(i) != iDefault)
@@ -24344,7 +24339,6 @@ void CvReligionInfo::copyNonDefaults(CvReligionInfo* pClassInfo, CvXMLLoadUtilit
 			m_piFlavorValue[i] = pClassInfo->getFlavorValue(i);
 		}
 	}
-
 
 	m_PropertyManipulators.copyNonDefaults(pClassInfo->getPropertyManipulators(), pXML);
 }
