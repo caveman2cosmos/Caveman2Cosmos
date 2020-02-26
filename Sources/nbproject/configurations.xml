@@ -193,7 +193,6 @@
               <Elem>_MOD_GOVWORKERS</Elem>
               <Elem>_MOD_GWARM</Elem>
               <Elem>_MOD_SENTRY</Elem>
-              <Elem>_MOD_SHAM_SPOILER</Elem>
               <Elem>_USRDLL</Elem>
             </preprocessorList>
           </ccTool>
@@ -520,7 +519,6 @@
               <Elem>_MOD_GOVWORKERS</Elem>
               <Elem>_MOD_GWARM</Elem>
               <Elem>_MOD_SENTRY</Elem>
-              <Elem>_MOD_SHAM_SPOILER</Elem>
               <Elem>_USRDLL</Elem>
             </preprocessorList>
           </ccTool>
@@ -848,7 +846,6 @@
               <Elem>_MOD_GOVWORKERS</Elem>
               <Elem>_MOD_GWARM</Elem>
               <Elem>_MOD_SENTRY</Elem>
-              <Elem>_MOD_SHAM_SPOILER</Elem>
               <Elem>_USRDLL</Elem>
             </preprocessorList>
           </ccTool>
@@ -1177,7 +1174,6 @@
               <Elem>_MOD_GOVWORKERS</Elem>
               <Elem>_MOD_GWARM</Elem>
               <Elem>_MOD_SENTRY</Elem>
-              <Elem>_MOD_SHAM_SPOILER</Elem>
               <Elem>_USRDLL</Elem>
             </preprocessorList>
           </ccTool>
