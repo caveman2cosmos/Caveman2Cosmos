@@ -926,15 +926,9 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	OutputDebugString("Maps loaded\n");
 
 	LoadGlobalClassInfo(GC.getGameSpeedInfos(), "CIV4GameSpeedInfo", "GameInfo", L"/Civ4GameSpeedInfo/GameSpeedInfos/GameSpeedInfo", false, GC.getGameSpeedInfoReplacements());
-/************************************************************************************************/
-/* REVDCM                                 02/16/10                                phungus420    */
-/*                                                                                              */
-/* CanTrain                                                                                     */
-/************************************************************************************************/
+
 	LoadGlobalClassInfo(GC.getGameOptionInfos(), "CIV4GameOptionInfos", "GameInfo", L"/Civ4GameOptionInfos/GameOptionInfos/GameOptionInfo", false);
-/************************************************************************************************/
-/* REVDCM                                  END                                                  */
-/************************************************************************************************/
+
 	LoadGlobalClassInfo(GC.getColorInfos(), "CIV4ColorVals", "Interface", L"/Civ4ColorVals/ColorVals/ColorVal", false);
 	LoadGlobalClassInfo(GC.getTurnTimerInfos(), "CIV4TurnTimerInfo", "GameInfo", L"/Civ4TurnTimerInfo/TurnTimerInfos/TurnTimerInfo", false);
 	LoadGlobalClassInfo(GC.getWorldInfos(), "CIV4WorldInfo", "GameInfo", L"/Civ4WorldInfo/WorldInfos/WorldInfo", false, GC.getWorldInfoReplacements());
@@ -1046,24 +1040,9 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 
 	LoadGlobalClassInfo(GC.getUnitArtStyleTypeInfos(), "CIV4UnitArtStyleTypeInfos", "Civilizations", L"/Civ4UnitArtStyleTypeInfos/UnitArtStyleTypeInfos/UnitArtStyleTypeInfo", false);
 	LoadGlobalClassInfo(GC.getCivilizationInfos(), "CIV4CivilizationInfos", "Civilizations", L"/Civ4CivilizationInfos/CivilizationInfos/CivilizationInfo", true, GC.getCivilizationInfoReplacements());
-	
-/************************************************************************************************/
-/* Afforess	                  Start		 07/30/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	LoadGlobalClassInfo(GC.getProjectInfos(), "CIV4ProjectInfo", "GameInfo", L"/Civ4ProjectInfo/ProjectInfos/ProjectInfo", false, GC.getProjectInfoReplacements());
-/************************************************************************************************/
-/*                                         END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 07/07/09                                                        */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/************************************************************************************************/
-/* JOOYO_ADDON                          END                                                     */
-/************************************************************************************************/
+
 /************************************************************************************************/
 /* SORT_ALPHABET                           11/17/07                                MRGENIE      */
 /*                                                                                              */
@@ -1088,11 +1067,7 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 
 	LoadGlobalClassInfo(GC.getMPOptionInfos(), "CIV4MPOptionInfos", "GameInfo", L"/Civ4MPOptionInfos/MPOptionInfos/MPOptionInfo", false);
 	LoadGlobalClassInfo(GC.getForceControlInfos(), "CIV4ForceControlInfos", "GameInfo", L"/Civ4ForceControlInfos/ForceControlInfos/ForceControlInfo", false);
-/************************************************************************************************/
-/* Afforess                                03/18/10                                             */
-/*                            ReadPass3                                                         */
-/*                                                                                              */
-/************************************************************************************************/
+
 	LoadGlobalClassInfo(GC.getEventInfos(), "CIV4EventInfos", "Events", L"/Civ4EventInfos/EventInfos/EventInfo", false, GC.getEventInfoReplacements());
 	LoadGlobalClassInfo(GC.getEventTriggerInfos(), "CIV4EventTriggerInfos", "Events", L"/Civ4EventTriggerInfos/EventTriggerInfos/EventTriggerInfo", false, GC.getEventTriggerInfoReplacements());
 	OutputDebugString("Base load complete\n");
@@ -1116,6 +1091,12 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	{
 		GC.getCorporationInfo((CorporationTypes)i).readPass3();
 		GC.getCorporationInfoReplacements()->readPass3();
+	}
+
+	for (int i=0; i < GC.getNumReligionInfos(); ++i)
+	{
+		GC.getReligionInfo((ReligionTypes)i).readPass3();
+		GC.getReligionInfoReplacements()->readPass3();
 	}
 
 	for (int i=0; i < GC.getNumEventInfos(); ++i)
@@ -1147,9 +1128,6 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 		GC.getSpecialistInfoReplacements()->readPass3();
 	}
 	OutputDebugString("Pass3 processing complete\n");
-/************************************************************************************************/
-/* Afforess                                END                                                  */
-/************************************************************************************************/
 
 	// add types to global var system
 	for (int i = 0; i < GC.getNumCursorInfos(); ++i)
