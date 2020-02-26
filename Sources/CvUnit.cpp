@@ -11720,8 +11720,6 @@ bool CvUnit::spread(ReligionTypes eReligion)
 //FfH: End Modify
 
 //TB Prophet Mod end
-			pCity->setHasReligion(eReligion, true, true, false);
-
 			bSuccess = true;
 		}
 		else
