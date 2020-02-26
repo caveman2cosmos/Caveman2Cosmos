@@ -1081,6 +1081,7 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 		GC.getBuildingInfo((BuildingTypes)i).readPass3();
 		GC.getBuildingInfoReplacements()->readPass3();
 	}
+
 	for (int i=0; i < GC.getNumCivicInfos(); ++i)
 	{
 		GC.getCivicInfo((CivicTypes)i).readPass3();
@@ -1122,6 +1123,7 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 		GC.getUnitInfo((UnitTypes)i).readPass3();
 		GC.getUnitInfoReplacements()->readPass3();
 	}
+
 	for (int i=0; i < GC.getNumSpecialistInfos(); ++i)
 	{
 		GC.getSpecialistInfo((SpecialistTypes)i).readPass3();

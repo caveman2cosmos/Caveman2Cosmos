@@ -30191,7 +30191,7 @@ int CvUnit::getTriggerValue(EventTriggerTypes eTrigger, const CvPlot* pPlot, boo
 		bool bFoundValid = false;
 		for (int i = 0; i < kTrigger.getNumUnitsRequired(); ++i)
 		{
-			if (getUnitClassType() == kTrigger.getUnitRequired(i))
+			if (getUnitType() == kTrigger.getUnitRequired(i))
 			{
 				bFoundValid = true;
 				break;

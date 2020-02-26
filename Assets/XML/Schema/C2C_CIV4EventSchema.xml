@@ -73,8 +73,9 @@
 	<ElementType name="iAngry" content="textOnly" dt:type="int"/>
 	<ElementType name="iUnhealthy" content="textOnly" dt:type="int"/>
 	<ElementType name="UnitsRequired" content="eltOnly">
-		<element type="UnitClass" minOccurs="0" maxOccurs="*"/>
+		<element type="UnitType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
+	<ElementType name="UnitType" content="textOnly"/>
 	<ElementType name="UnitClass" content="textOnly"/>
 	<ElementType name="bUnitsOnPlot" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bOwnPlot" content="textOnly" dt:type="boolean"/>
