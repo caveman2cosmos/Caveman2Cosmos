@@ -11643,34 +11643,34 @@ Base XP gained when defending
 			<iCollateralDamageMaxUnits>2</iCollateralDamageMaxUnits>
 			<iCityAttack>25</iCityAttack>
 			<iBombardRate>7</iBombardRate>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_ARQUEBUSIER</UnitClassType>
-					<iUnitClassMod>25</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_MUSKETMAN</UnitClassType>
-					<iUnitClassMod>25</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_RIFLEMAN</UnitClassType>
-					<iUnitClassMod>25</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_EARLY_TANK</UnitClassType>
-					<iUnitClassMod>15</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_TANK</UnitClassType>
-					<iUnitClassMod>15</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
-			<UnitClassDefenseMods>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_EARLY_TANK</UnitClassType>
-					<iUnitClassMod>75</iUnitClassMod>
-				</UnitClassDefenseMod>
-			</UnitClassDefenseMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_ARQUEBUSIER</UnitType>
+					<iModifier>25</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_MUSKETMAN</UnitType>
+					<iModifier>25</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_RIFLEMAN</UnitType>
+					<iModifier>25</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_EARLY_TANK</UnitType>
+					<iModifier>15</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_TANK</UnitType>
+					<iModifier>15</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
+			<UnitDefenseMods>
+				<UnitDefenseMod>
+					<UnitType>UNIT_EARLY_TANK</UnitType>
+					<iModifier>75</iModifier>
+				</UnitDefenseMod>
+			</UnitDefenseMods>
 			<iAsset>4</iAsset>
 			<iPower>43</iPower>
 			<UnitMeshGroups>
@@ -11765,30 +11765,30 @@ Base XP gained when defending
 			<iCollateralDamageMaxUnits>2</iCollateralDamageMaxUnits>
 			<iCityAttack>30</iCityAttack>
 			<iBombardRate>10</iBombardRate>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_RIFLEMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_INFANTRY</UnitClassType>
-					<iUnitClassMod>25</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_EARLY_TANK</UnitClassType>
-					<iUnitClassMod>25</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_TANK</UnitClassType>
-					<iUnitClassMod>25</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
-			<UnitClassDefenseMods>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_EARLY_TANK</UnitClassType>
-					<iUnitClassMod>100</iUnitClassMod>
-				</UnitClassDefenseMod>
-			</UnitClassDefenseMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_RIFLEMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_INFANTRY</UnitType>
+					<iModifier>25</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_EARLY_TANK</UnitType>
+					<iModifier>25</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_TANK</UnitType>
+					<iModifier>25</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
+			<UnitDefenseMods>
+				<UnitDefenseMod>
+					<UnitType>UNIT_EARLY_TANK</UnitType>
+					<iModifier>100</iModifier>
+				</UnitDefenseMod>
+			</UnitDefenseMods>
 			<iAsset>5</iAsset>
 			<iPower>98</iPower>
 			<UnitMeshGroups>
@@ -13736,16 +13736,16 @@ Base XP gained when defending
 			<iCombat>39</iCombat>
 			<iXPValueAttack>3</iXPValueAttack>
 			<iXPValueDefense>3</iXPValueDefense>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_MACHINE_GUN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_ARTILLERY</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_MACHINE_GUN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_ARTILLERY</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
 			<iAsset>5</iAsset>
 			<iPower>117</iPower>
 			<UnitMeshGroups>
@@ -13844,16 +13844,16 @@ Base XP gained when defending
 			<iXPValueAttack>3</iXPValueAttack>
 			<iXPValueDefense>3</iXPValueDefense>
 			<iChanceFirstStrikes>1</iChanceFirstStrikes>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_MACHINE_GUN</UnitClassType>
-					<iUnitClassMod>75</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_ARTILLERY</UnitClassType>
-					<iUnitClassMod>75</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_MACHINE_GUN</UnitType>
+					<iModifier>75</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_ARTILLERY</UnitType>
+					<iModifier>75</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
 			<iAsset>5</iAsset>
 			<iPower>183</iPower>
 			<UnitMeshGroups>
@@ -14738,11 +14738,11 @@ Base XP gained when defending
 			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CATAPULT</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TREBUCHET</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -14880,11 +14880,11 @@ Base XP gained when defending
 			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CATAPULT</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TREBUCHET</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -15017,11 +15017,11 @@ Base XP gained when defending
 			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CATAPULT</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TREBUCHET</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -15317,23 +15317,23 @@ Base XP gained when defending
 			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_ARCHER</FlankingStrikeUnitClass>
+					<UnitType>UNIT_ARCHER</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_LONGBOWMAN</FlankingStrikeUnitClass>
+					<UnitType>UNIT_LONGBOWMAN</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CROSSBOWMAN</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CROSSBOWMAN</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_LIGHT_CROSSBOWMAN</FlankingStrikeUnitClass>
+					<UnitType>UNIT_LIGHT_CROSSBOWMAN</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_HEAVY_CROSSBOWMAN</FlankingStrikeUnitClass>
+					<UnitType>UNIT_HEAVY_CROSSBOWMAN</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -15479,23 +15479,23 @@ Base XP gained when defending
 			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_ARCHER</FlankingStrikeUnitClass>
+					<UnitType>UNIT_ARCHER</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_LONGBOWMAN</FlankingStrikeUnitClass>
+					<UnitType>UNIT_LONGBOWMAN</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CROSSBOWMAN</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CROSSBOWMAN</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_LIGHT_CROSSBOWMAN</FlankingStrikeUnitClass>
+					<UnitType>UNIT_LIGHT_CROSSBOWMAN</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_HEAVY_CROSSBOWMAN</FlankingStrikeUnitClass>
+					<UnitType>UNIT_HEAVY_CROSSBOWMAN</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -15631,11 +15631,11 @@ Base XP gained when defending
 			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CATAPULT</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TREBUCHET</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -15755,15 +15755,15 @@ Base XP gained when defending
 			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CATAPULT</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TREBUCHET</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_BOMBARD</FlankingStrikeUnitClass>
+					<UnitType>UNIT_BOMBARD</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -15890,19 +15890,19 @@ Base XP gained when defending
 			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CATAPULT</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TREBUCHET</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_BOMBARD</FlankingStrikeUnitClass>
+					<UnitType>UNIT_BOMBARD</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CANNON</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CANNON</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -15969,34 +15969,34 @@ Base XP gained when defending
 					<iFeatureAttack>-25</iFeatureAttack>
 				</FeatureAttack>
 			</FeatureAttacks>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_SPEARMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_PIKEMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_HEAVY_PIKEMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
-			<UnitClassDefenseMods>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_SPEARMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_PIKEMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_HEAVY_PIKEMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-			</UnitClassDefenseMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_SPEARMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_PIKEMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_HEAVY_PIKEMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
+			<UnitDefenseMods>
+				<UnitDefenseMod>
+					<UnitType>UNIT_SPEARMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+				<UnitDefenseMod>
+					<UnitType>UNIT_PIKEMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+				<UnitDefenseMod>
+					<UnitType>UNIT_HEAVY_PIKEMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+			</UnitDefenseMods>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
@@ -16071,19 +16071,19 @@ Base XP gained when defending
 			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CATAPULT</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TREBUCHET</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_BOMBARD</FlankingStrikeUnitClass>
+					<UnitType>UNIT_BOMBARD</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CANNON</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CANNON</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -16149,34 +16149,34 @@ Base XP gained when defending
 					<iFeatureAttack>-25</iFeatureAttack>
 				</FeatureAttack>
 			</FeatureAttacks>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_SPEARMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_PIKEMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_HEAVY_PIKEMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
-			<UnitClassDefenseMods>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_SPEARMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_PIKEMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_HEAVY_PIKEMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-			</UnitClassDefenseMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_SPEARMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_PIKEMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_HEAVY_PIKEMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
+			<UnitDefenseMods>
+				<UnitDefenseMod>
+					<UnitType>UNIT_SPEARMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+				<UnitDefenseMod>
+					<UnitType>UNIT_PIKEMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+				<UnitDefenseMod>
+					<UnitType>UNIT_HEAVY_PIKEMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+			</UnitDefenseMods>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
@@ -16414,19 +16414,19 @@ Base XP gained when defending
 			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CATAPULT</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TREBUCHET</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_BOMBARD</FlankingStrikeUnitClass>
+					<UnitType>UNIT_BOMBARD</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CANNON</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CANNON</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -16493,34 +16493,34 @@ Base XP gained when defending
 					<iFeatureAttack>-25</iFeatureAttack>
 				</FeatureAttack>
 			</FeatureAttacks>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_SPEARMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_PIKEMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_HEAVY_PIKEMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
-			<UnitClassDefenseMods>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_SPEARMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_PIKEMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_HEAVY_PIKEMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-			</UnitClassDefenseMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_SPEARMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_PIKEMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_HEAVY_PIKEMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
+			<UnitDefenseMods>
+				<UnitDefenseMod>
+					<UnitType>UNIT_SPEARMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+				<UnitDefenseMod>
+					<UnitType>UNIT_PIKEMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+				<UnitDefenseMod>
+					<UnitType>UNIT_HEAVY_PIKEMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+			</UnitDefenseMods>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
@@ -16597,19 +16597,19 @@ Base XP gained when defending
 			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CATAPULT</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TREBUCHET</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_BOMBARD</FlankingStrikeUnitClass>
+					<UnitType>UNIT_BOMBARD</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CANNON</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CANNON</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -16678,38 +16678,38 @@ Base XP gained when defending
 					<iFeatureAttack>-25</iFeatureAttack>
 				</FeatureAttack>
 			</FeatureAttacks>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_CANNON</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_SPEARMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_PIKEMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_HEAVY_PIKEMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
-			<UnitClassDefenseMods>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_SPEARMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_PIKEMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_HEAVY_PIKEMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-			</UnitClassDefenseMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_CANNON</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_SPEARMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_PIKEMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_HEAVY_PIKEMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
+			<UnitDefenseMods>
+				<UnitDefenseMod>
+					<UnitType>UNIT_SPEARMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+				<UnitDefenseMod>
+					<UnitType>UNIT_PIKEMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+				<UnitDefenseMod>
+					<UnitType>UNIT_HEAVY_PIKEMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+			</UnitDefenseMods>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
@@ -16784,23 +16784,23 @@ Base XP gained when defending
 			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CATAPULT</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TREBUCHET</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_BOMBARD</FlankingStrikeUnitClass>
+					<UnitType>UNIT_BOMBARD</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CANNON</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CANNON</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_LIGHT_ARTILLERY</FlankingStrikeUnitClass>
+					<UnitType>UNIT_LIGHT_ARTILLERY</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -16870,42 +16870,42 @@ Base XP gained when defending
 					<iFeatureAttack>-25</iFeatureAttack>
 				</FeatureAttack>
 			</FeatureAttacks>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_CANNON</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_SPEARMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_PIKEMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_HEAVY_PIKEMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_LIGHT_ARTILLERY</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
-			<UnitClassDefenseMods>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_SPEARMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_PIKEMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_HEAVY_PIKEMAN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-			</UnitClassDefenseMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_CANNON</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_SPEARMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_PIKEMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_HEAVY_PIKEMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_LIGHT_ARTILLERY</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
+			<UnitDefenseMods>
+				<UnitDefenseMod>
+					<UnitType>UNIT_SPEARMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+				<UnitDefenseMod>
+					<UnitType>UNIT_PIKEMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+				<UnitDefenseMod>
+					<UnitType>UNIT_HEAVY_PIKEMAN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+			</UnitDefenseMods>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
@@ -16983,11 +16983,11 @@ Base XP gained when defending
 			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CATAPULT</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TREBUCHET</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -18381,16 +18381,16 @@ Base XP gained when defending
 			<iXPValueDefense>1</iXPValueDefense>
 			<iCollateralDamageLimit>60</iCollateralDamageLimit>
 			<iCollateralDamageMaxUnits>5</iCollateralDamageMaxUnits>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_MACHINE_GUN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_EARLY_TANK</UnitClassType>
-					<iUnitClassMod>25</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_MACHINE_GUN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_EARLY_TANK</UnitType>
+					<iModifier>25</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
@@ -18488,16 +18488,16 @@ Base XP gained when defending
 			<iXPValueDefense>1</iXPValueDefense>
 			<iCollateralDamageLimit>60</iCollateralDamageLimit>
 			<iCollateralDamageMaxUnits>5</iCollateralDamageMaxUnits>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_MACHINE_GUN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_EARLY_TANK</UnitClassType>
-					<iUnitClassMod>40</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_MACHINE_GUN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_EARLY_TANK</UnitType>
+					<iModifier>40</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
@@ -18594,16 +18594,16 @@ Base XP gained when defending
 			<iXPValueDefense>1</iXPValueDefense>
 			<iCollateralDamageLimit>60</iCollateralDamageLimit>
 			<iCollateralDamageMaxUnits>5</iCollateralDamageMaxUnits>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_MACHINE_GUN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_EARLY_TANK</UnitClassType>
-					<iUnitClassMod>100</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_MACHINE_GUN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_EARLY_TANK</UnitType>
+					<iModifier>100</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
@@ -18709,28 +18709,28 @@ Base XP gained when defending
 			<iFirstStrikes>1</iFirstStrikes>
 			<iCollateralDamageLimit>60</iCollateralDamageLimit>
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_MACHINE_GUN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_EARLY_TANK</UnitClassType>
-					<iUnitClassMod>150</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_LIGHT_TANK</UnitClassType>
-					<iUnitClassMod>30</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_TANK</UnitClassType>
-					<iUnitClassMod>20</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_HEAVY_TANK</UnitClassType>
-					<iUnitClassMod>10</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_MACHINE_GUN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_EARLY_TANK</UnitType>
+					<iModifier>150</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_LIGHT_TANK</UnitType>
+					<iModifier>30</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_TANK</UnitType>
+					<iModifier>20</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_HEAVY_TANK</UnitType>
+					<iModifier>10</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
@@ -18840,28 +18840,28 @@ Base XP gained when defending
 			<iFirstStrikes>1</iFirstStrikes>
 			<iCollateralDamageLimit>60</iCollateralDamageLimit>
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_MACHINE_GUN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_EARLY_TANK</UnitClassType>
-					<iUnitClassMod>150</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_LIGHT_TANK</UnitClassType>
-					<iUnitClassMod>30</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_TANK</UnitClassType>
-					<iUnitClassMod>20</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_HEAVY_TANK</UnitClassType>
-					<iUnitClassMod>10</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_MACHINE_GUN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_EARLY_TANK</UnitType>
+					<iModifier>150</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_LIGHT_TANK</UnitType>
+					<iModifier>30</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_TANK</UnitType>
+					<iModifier>20</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_HEAVY_TANK</UnitType>
+					<iModifier>10</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
@@ -19072,28 +19072,28 @@ Base XP gained when defending
 			<iInterceptionProbability>10</iInterceptionProbability>
 			<iCollateralDamageLimit>70</iCollateralDamageLimit>
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_MACHINE_GUN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_EARLY_TANK</UnitClassType>
-					<iUnitClassMod>150</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_LIGHT_TANK</UnitClassType>
-					<iUnitClassMod>30</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_TANK</UnitClassType>
-					<iUnitClassMod>20</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_HEAVY_TANK</UnitClassType>
-					<iUnitClassMod>10</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_MACHINE_GUN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_EARLY_TANK</UnitType>
+					<iModifier>150</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_LIGHT_TANK</UnitType>
+					<iModifier>30</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_TANK</UnitType>
+					<iModifier>20</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_HEAVY_TANK</UnitType>
+					<iModifier>10</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
@@ -19321,28 +19321,28 @@ Base XP gained when defending
 			<iFirstStrikes>1</iFirstStrikes>
 			<iCollateralDamageLimit>80</iCollateralDamageLimit>
 			<iCollateralDamageMaxUnits>8</iCollateralDamageMaxUnits>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_MACHINE_GUN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_EARLY_TANK</UnitClassType>
-					<iUnitClassMod>150</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_LIGHT_TANK</UnitClassType>
-					<iUnitClassMod>30</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_TANK</UnitClassType>
-					<iUnitClassMod>20</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_HEAVY_TANK</UnitClassType>
-					<iUnitClassMod>10</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_MACHINE_GUN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_EARLY_TANK</UnitType>
+					<iModifier>150</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_LIGHT_TANK</UnitType>
+					<iModifier>30</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_TANK</UnitType>
+					<iModifier>20</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_HEAVY_TANK</UnitType>
+					<iModifier>10</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
@@ -19569,12 +19569,12 @@ Base XP gained when defending
 			<iEarlyWithdraw>10</iEarlyWithdraw>
 			<iCollateralDamageLimit>80</iCollateralDamageLimit>
 			<iCollateralDamageMaxUnits>8</iCollateralDamageMaxUnits>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_MACHINE_GUN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_MACHINE_GUN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
@@ -19748,27 +19748,27 @@ Base XP gained when defending
 			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CATAPULT</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TREBUCHET</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_BOMBARD</FlankingStrikeUnitClass>
+					<UnitType>UNIT_BOMBARD</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CANNON</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CANNON</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_LIGHT_ARTILLERY</FlankingStrikeUnitClass>
+					<UnitType>UNIT_LIGHT_ARTILLERY</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_ARTILLERY</FlankingStrikeUnitClass>
+					<UnitType>UNIT_ARTILLERY</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -19823,18 +19823,18 @@ Base XP gained when defending
 					<iFeatureAttack>-75</iFeatureAttack>
 				</FeatureAttack>
 			</FeatureAttacks>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_MACHINE_GUN</UnitClassType>
-					<iUnitClassMod>25</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
-			<UnitClassDefenseMods>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_MACHINE_GUN</UnitClassType>
-					<iUnitClassMod>25</iUnitClassMod>
-				</UnitClassDefenseMod>
-			</UnitClassDefenseMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_MACHINE_GUN</UnitType>
+					<iModifier>25</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
+			<UnitDefenseMods>
+				<UnitDefenseMod>
+					<UnitType>UNIT_MACHINE_GUN</UnitType>
+					<iModifier>25</iModifier>
+				</UnitDefenseMod>
+			</UnitDefenseMods>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
@@ -19896,27 +19896,27 @@ Base XP gained when defending
 			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CATAPULT</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TREBUCHET</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_BOMBARD</FlankingStrikeUnitClass>
+					<UnitType>UNIT_BOMBARD</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CANNON</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CANNON</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_LIGHT_ARTILLERY</FlankingStrikeUnitClass>
+					<UnitType>UNIT_LIGHT_ARTILLERY</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_ARTILLERY</FlankingStrikeUnitClass>
+					<UnitType>UNIT_ARTILLERY</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -19971,12 +19971,12 @@ Base XP gained when defending
 					<iFeatureAttack>-75</iFeatureAttack>
 				</FeatureAttack>
 			</FeatureAttacks>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_MACHINE_GUN</UnitClassType>
-					<iUnitClassMod>25</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_MACHINE_GUN</UnitType>
+					<iModifier>25</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
@@ -20084,12 +20084,12 @@ Base XP gained when defending
 					<iFeatureAttack>-50</iFeatureAttack>
 				</FeatureAttack>
 			</FeatureAttacks>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_MACHINE_GUN</UnitClassType>
-					<iUnitClassMod>25</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_MACHINE_GUN</UnitType>
+					<iModifier>25</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
@@ -20163,27 +20163,27 @@ Base XP gained when defending
 			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CATAPULT</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TREBUCHET</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_BOMBARD</FlankingStrikeUnitClass>
+					<UnitType>UNIT_BOMBARD</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CANNON</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CANNON</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_LIGHT_ARTILLERY</FlankingStrikeUnitClass>
+					<UnitType>UNIT_LIGHT_ARTILLERY</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_ARTILLERY</FlankingStrikeUnitClass>
+					<UnitType>UNIT_ARTILLERY</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -30408,26 +30408,26 @@ Base XP gained when defending
 			<iCombat>9</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_FRIGATE</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_GALLEON</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
-			<UnitClassDefenseMods>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_FRIGATE</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_GALLEON</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-			</UnitClassDefenseMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_FRIGATE</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_GALLEON</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
+			<UnitDefenseMods>
+				<UnitDefenseMod>
+					<UnitType>UNIT_FRIGATE</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+				<UnitDefenseMod>
+					<UnitType>UNIT_GALLEON</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+			</UnitDefenseMods>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
@@ -30662,18 +30662,18 @@ Base XP gained when defending
 			<iXPValueDefense>1</iXPValueDefense>
 			<iWithdrawalProb>20</iWithdrawalProb>
 			<iPursuit>20</iPursuit>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_GALLEON</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
-			<UnitClassDefenseMods>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_GALLEON</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-			</UnitClassDefenseMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_GALLEON</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
+			<UnitDefenseMods>
+				<UnitDefenseMod>
+					<UnitType>UNIT_GALLEON</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+			</UnitDefenseMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_PRIME_TIMBER</BonusType>
@@ -30789,18 +30789,18 @@ Base XP gained when defending
 			<iXPValueDefense>1</iXPValueDefense>
 			<iWithdrawalProb>20</iWithdrawalProb>
 			<iPursuit>20</iPursuit>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_GALLEON</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
-			<UnitClassDefenseMods>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_GALLEON</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-			</UnitClassDefenseMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_GALLEON</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
+			<UnitDefenseMods>
+				<UnitDefenseMod>
+					<UnitType>UNIT_GALLEON</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+			</UnitDefenseMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_PRIME_TIMBER</BonusType>
@@ -31716,20 +31716,11 @@ Base XP gained when defending
 			<UnitUpgrades>
 				<UnitType>UNIT_LITTORAL_COMBAT_SHIP</UnitType>
 			</UnitUpgrades>
-			<UnitClassDefenders>
-				<UnitClassDefender>
-					<UnitClassDefenderType>UNITCLASS_SUBMARINE</UnitClassDefenderType>
-					<bUnitClassDefender>1</bUnitClassDefender>
-				</UnitClassDefender>
-				<UnitClassDefender>
-					<UnitClassDefenderType>UNITCLASS_ATTACK_SUBMARINE</UnitClassDefenderType>
-					<bUnitClassDefender>1</bUnitClassDefender>
-				</UnitClassDefender>
-				<UnitClassDefender>
-					<UnitClassDefenderType>UNITCLASS_NUCLEAR_SUBMARINE</UnitClassDefenderType>
-					<bUnitClassDefender>1</bUnitClassDefender>
-				</UnitClassDefender>
-			</UnitClassDefenders>
+			<DefendAgainstUnit>
+				<UnitType>UNIT_SUBMARINE</UnitType>
+				<UnitType>UNIT_ATTACK_SUBMARINE</UnitType>
+				<UnitType>UNIT_NUCLEAR_SUBMARINE</UnitType>
+			</DefendAgainstUnit>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK_SEA</UnitAIType>
@@ -31762,20 +31753,20 @@ Base XP gained when defending
 			<iXPValueDefense>1</iXPValueDefense>
 			<iInterceptionProbability>20</iInterceptionProbability>
 			<iPursuit>50</iPursuit>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_NUCLEAR_SUBMARINE</UnitClassType>
-					<iUnitClassMod>25</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_SUBMARINE</UnitClassType>
-					<iUnitClassMod>35</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_ATTACK_SUBMARINE</UnitClassType>
-					<iUnitClassMod>30</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_NUCLEAR_SUBMARINE</UnitType>
+					<iModifier>25</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_SUBMARINE</UnitType>
+					<iModifier>35</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_ATTACK_SUBMARINE</UnitType>
+					<iModifier>30</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
@@ -31886,24 +31877,24 @@ Base XP gained when defending
 			<iXPValueDefense>1</iXPValueDefense>
 			<iInterceptionProbability>20</iInterceptionProbability>
 			<iPursuit>55</iPursuit>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_STEALTH_SUBMARINE</UnitClassType>
-					<iUnitClassMod>25</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_NUCLEAR_SUBMARINE</UnitClassType>
-					<iUnitClassMod>25</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_SUBMARINE</UnitClassType>
-					<iUnitClassMod>35</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_ATTACK_SUBMARINE</UnitClassType>
-					<iUnitClassMod>30</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_STEALTH_SUBMARINE</UnitType>
+					<iModifier>25</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_NUCLEAR_SUBMARINE</UnitType>
+					<iModifier>25</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_SUBMARINE</UnitType>
+					<iModifier>35</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_ATTACK_SUBMARINE</UnitType>
+					<iModifier>30</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
@@ -32130,24 +32121,24 @@ Base XP gained when defending
 			<iXPValueDefense>1</iXPValueDefense>
 			<iInterceptionProbability>20</iInterceptionProbability>
 			<iPursuit>60</iPursuit>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_STEALTH_SUBMARINE</UnitClassType>
-					<iUnitClassMod>25</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_NUCLEAR_SUBMARINE</UnitClassType>
-					<iUnitClassMod>25</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_SUBMARINE</UnitClassType>
-					<iUnitClassMod>35</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_ATTACK_SUBMARINE</UnitClassType>
-					<iUnitClassMod>30</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_STEALTH_SUBMARINE</UnitType>
+					<iModifier>25</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_NUCLEAR_SUBMARINE</UnitType>
+					<iModifier>25</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_SUBMARINE</UnitType>
+					<iModifier>35</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_ATTACK_SUBMARINE</UnitType>
+					<iModifier>30</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
@@ -32714,18 +32705,18 @@ Base XP gained when defending
 			<iChanceFirstStrikes>1</iChanceFirstStrikes>
 			<iWithdrawalProb>35</iWithdrawalProb>
 			<iPursuit>30</iPursuit>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_GALLEON</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
-			<UnitClassDefenseMods>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_GALLEON</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-			</UnitClassDefenseMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_GALLEON</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
+			<UnitDefenseMods>
+				<UnitDefenseMod>
+					<UnitType>UNIT_GALLEON</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+			</UnitDefenseMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_PRIME_TIMBER</BonusType>
@@ -33245,16 +33236,10 @@ Base XP gained when defending
 				<UnitType>UNIT_STEALTH_DESTROYER</UnitType>
 				<UnitType>UNIT_MODERN_FRIGATE</UnitType>
 			</UnitUpgrades>
-			<UnitClassDefenders>
-				<UnitClassDefender>
-					<UnitClassDefenderType>UNITCLASS_SUBMARINE</UnitClassDefenderType>
-					<bUnitClassDefender>1</bUnitClassDefender>
-				</UnitClassDefender>
-				<UnitClassDefender>
-					<UnitClassDefenderType>UNITCLASS_ATTACK_SUBMARINE</UnitClassDefenderType>
-					<bUnitClassDefender>1</bUnitClassDefender>
-				</UnitClassDefender>
-			</UnitClassDefenders>
+			<DefendAgainstUnit>
+				<UnitType>UNIT_SUBMARINE</UnitType>
+				<UnitType>UNIT_ATTACK_SUBMARINE</UnitType>
+			</DefendAgainstUnit>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK_SEA</UnitAIType>
@@ -33396,18 +33381,18 @@ Base XP gained when defending
 			<iInterceptionProbability>35</iInterceptionProbability>
 			<iWithdrawalProb>35</iWithdrawalProb>
 			<iPursuit>60</iPursuit>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_SUBMARINE</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
-			<UnitClassDefenseMods>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_SUBMARINE</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-			</UnitClassDefenseMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_SUBMARINE</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
+			<UnitDefenseMods>
+				<UnitDefenseMod>
+					<UnitType>UNIT_SUBMARINE</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+			</UnitDefenseMods>
 			<iBombardRate>14</iBombardRate>
 			<iAsset>4</iAsset>
 			<iPower>32</iPower>
@@ -33471,24 +33456,12 @@ Base XP gained when defending
 			<UnitUpgrades>
 				<UnitType>UNIT_FF_DESTROYER_I</UnitType>
 			</UnitUpgrades>
-			<UnitClassDefenders>
-				<UnitClassDefender>
-					<UnitClassDefenderType>UNITCLASS_SUBMARINE</UnitClassDefenderType>
-					<bUnitClassDefender>1</bUnitClassDefender>
-				</UnitClassDefender>
-				<UnitClassDefender>
-					<UnitClassDefenderType>UNITCLASS_ATTACK_SUBMARINE</UnitClassDefenderType>
-					<bUnitClassDefender>1</bUnitClassDefender>
-				</UnitClassDefender>
-				<UnitClassDefender>
-					<UnitClassDefenderType>UNITCLASS_NUCLEAR_SUBMARINE</UnitClassDefenderType>
-					<bUnitClassDefender>1</bUnitClassDefender>
-				</UnitClassDefender>
-				<UnitClassDefender>
-					<UnitClassDefenderType>UNITCLASS_STEALTH_SUBMARINE</UnitClassDefenderType>
-					<bUnitClassDefender>1</bUnitClassDefender>
-				</UnitClassDefender>
-			</UnitClassDefenders>
+			<DefendAgainstUnit>
+				<UnitType>UNIT_SUBMARINE</UnitType>
+				<UnitType>UNIT_ATTACK_SUBMARINE</UnitType>
+				<UnitType>UNIT_NUCLEAR_SUBMARINE</UnitType>
+				<UnitType>UNIT_STEALTH_SUBMARINE</UnitType>
+			</DefendAgainstUnit>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK_SEA</UnitAIType>
@@ -33590,24 +33563,12 @@ Base XP gained when defending
 			<bMechanized>1</bMechanized>
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitClassDefenders>
-				<UnitClassDefender>
-					<UnitClassDefenderType>UNITCLASS_SUBMARINE</UnitClassDefenderType>
-					<bUnitClassDefender>1</bUnitClassDefender>
-				</UnitClassDefender>
-				<UnitClassDefender>
-					<UnitClassDefenderType>UNITCLASS_ATTACK_SUBMARINE</UnitClassDefenderType>
-					<bUnitClassDefender>1</bUnitClassDefender>
-				</UnitClassDefender>
-				<UnitClassDefender>
-					<UnitClassDefenderType>UNITCLASS_NUCLEAR_SUBMARINE</UnitClassDefenderType>
-					<bUnitClassDefender>1</bUnitClassDefender>
-				</UnitClassDefender>
-				<UnitClassDefender>
-					<UnitClassDefenderType>UNITCLASS_STEALTH_SUBMARINE</UnitClassDefenderType>
-					<bUnitClassDefender>1</bUnitClassDefender>
-				</UnitClassDefender>
-			</UnitClassDefenders>
+			<DefendAgainstUnit>
+				<UnitType>UNIT_SUBMARINE</UnitType>
+				<UnitType>UNIT_ATTACK_SUBMARINE</UnitType>
+				<UnitType>UNIT_NUCLEAR_SUBMARINE</UnitType>
+				<UnitType>UNIT_STEALTH_SUBMARINE</UnitType>
+			</DefendAgainstUnit>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK_SEA</UnitAIType>
@@ -33654,24 +33615,24 @@ Base XP gained when defending
 			<iInterceptionProbability>20</iInterceptionProbability>
 			<iWithdrawalProb>50</iWithdrawalProb>
 			<iPursuit>40</iPursuit>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_STEALTH_SUBMARINE</UnitClassType>
-					<iUnitClassMod>25</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_NUCLEAR_SUBMARINE</UnitClassType>
-					<iUnitClassMod>25</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_SUBMARINE</UnitClassType>
-					<iUnitClassMod>35</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_ATTACK_SUBMARINE</UnitClassType>
-					<iUnitClassMod>30</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_STEALTH_SUBMARINE</UnitType>
+					<iModifier>25</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_NUCLEAR_SUBMARINE</UnitType>
+					<iModifier>25</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_SUBMARINE</UnitType>
+					<iModifier>35</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_ATTACK_SUBMARINE</UnitType>
+					<iModifier>30</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
@@ -33749,28 +33710,13 @@ Base XP gained when defending
 			<bMechanized>1</bMechanized>
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitClassDefenders>
-				<UnitClassDefender>
-					<UnitClassDefenderType>UNITCLASS_SUBMARINE</UnitClassDefenderType>
-					<bUnitClassDefender>1</bUnitClassDefender>
-				</UnitClassDefender>
-				<UnitClassDefender>
-					<UnitClassDefenderType>UNITCLASS_ATTACK_SUBMARINE</UnitClassDefenderType>
-					<bUnitClassDefender>1</bUnitClassDefender>
-				</UnitClassDefender>
-				<UnitClassDefender>
-					<UnitClassDefenderType>UNITCLASS_NUCLEAR_SUBMARINE</UnitClassDefenderType>
-					<bUnitClassDefender>1</bUnitClassDefender>
-				</UnitClassDefender>
-				<UnitClassDefender>
-					<UnitClassDefenderType>UNITCLASS_STEALTH_SUBMARINE</UnitClassDefenderType>
-					<bUnitClassDefender>1</bUnitClassDefender>
-				</UnitClassDefender>
-				<UnitClassDefender>
-					<UnitClassDefenderType>UNITCLASS_FUSION_SUBMARINE</UnitClassDefenderType>
-					<bUnitClassDefender>1</bUnitClassDefender>
-				</UnitClassDefender>
-			</UnitClassDefenders>
+			<DefendAgainstUnit>
+				<UnitType>UNIT_SUBMARINE</UnitType>
+				<UnitType>UNIT_ATTACK_SUBMARINE</UnitType>
+				<UnitType>UNIT_NUCLEAR_SUBMARINE</UnitType>
+				<UnitType>UNIT_STEALTH_SUBMARINE</UnitType>
+				<UnitType>UNIT_FUSION_SUBMARINE</UnitType>
+			</DefendAgainstUnit>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK_SEA</UnitAIType>
@@ -33894,39 +33840,27 @@ Base XP gained when defending
 			<UnitUpgrades>
 				<UnitType>UNIT_ATTACK_SUBMARINE</UnitType>
 			</UnitUpgrades>
-			<UnitClassTargets>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_FLUYT</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_GALLEON</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_TRANSPORT</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_LANDING_SHIP</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-			</UnitClassTargets>
+			<UnitTargets>
+				<UnitType>UNIT_FLUYT</UnitType>
+				<UnitType>UNIT_GALLEON</UnitType>
+				<UnitType>UNIT_TRANSPORT</UnitType>
+				<UnitType>UNIT_LANDING_SHIP</UnitType>
+			</UnitTargets>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_FLUYT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_FLUYT</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_GALLEON</FlankingStrikeUnitClass>
+					<UnitType>UNIT_GALLEON</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TRANSPORT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TRANSPORT</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_LANDING_SHIP</FlankingStrikeUnitClass>
+					<UnitType>UNIT_LANDING_SHIP</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -34044,39 +33978,27 @@ Base XP gained when defending
 			<UnitUpgrades>
 				<UnitType>UNIT_NUCLEAR_SUBMARINE</UnitType>
 			</UnitUpgrades>
-			<UnitClassTargets>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_FLUYT</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_GALLEON</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_TRANSPORT</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_LANDING_SHIP</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-			</UnitClassTargets>
+			<UnitTargets>
+				<UnitType>UNIT_FLUYT</UnitType>
+				<UnitType>UNIT_GALLEON</UnitType>
+				<UnitType>UNIT_TRANSPORT</UnitType>
+				<UnitType>UNIT_LANDING_SHIP</UnitType>
+			</UnitTargets>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_FLUYT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_FLUYT</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_GALLEON</FlankingStrikeUnitClass>
+					<UnitType>UNIT_GALLEON</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TRANSPORT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TRANSPORT</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_LANDING_SHIP</FlankingStrikeUnitClass>
+					<UnitType>UNIT_LANDING_SHIP</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -34118,18 +34040,18 @@ Base XP gained when defending
 					<iPursuitVSUnitCombat>15</iPursuitVSUnitCombat>
 				</PursuitVSUnitCombatType>
 			</PursuitVSUnitCombatTypes>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_SUBMARINE</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
-			<UnitClassDefenseMods>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_SUBMARINE</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-			</UnitClassDefenseMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_SUBMARINE</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
+			<UnitDefenseMods>
+				<UnitDefenseMod>
+					<UnitType>UNIT_SUBMARINE</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+			</UnitDefenseMods>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
@@ -34206,43 +34128,28 @@ Base XP gained when defending
 			<UnitUpgrades>
 				<UnitType>UNIT_FUSION_SUBMARINE</UnitType>
 			</UnitUpgrades>
-			<UnitClassTargets>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_FLUYT</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_GALLEON</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_TRANSPORT</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_LANDING_SHIP</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_FUSION_TRANSPORT</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-			</UnitClassTargets>
+			<UnitTargets>
+				<UnitType>UNIT_FLUYT</UnitType>
+				<UnitType>UNIT_GALLEON</UnitType>
+				<UnitType>UNIT_TRANSPORT</UnitType>
+				<UnitType>UNIT_LANDING_SHIP</UnitType>
+				<UnitType>UNIT_FUSION_TRANSPORT</UnitType>
+			</UnitTargets>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_FLUYT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_FLUYT</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_GALLEON</FlankingStrikeUnitClass>
+					<UnitType>UNIT_GALLEON</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TRANSPORT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TRANSPORT</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_LANDING_SHIP</FlankingStrikeUnitClass>
+					<UnitType>UNIT_LANDING_SHIP</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -34279,18 +34186,18 @@ Base XP gained when defending
 					<iPursuitVSUnitCombat>20</iPursuitVSUnitCombat>
 				</PursuitVSUnitCombatType>
 			</PursuitVSUnitCombatTypes>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_SUBMARINE</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
-			<UnitClassDefenseMods>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_SUBMARINE</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-			</UnitClassDefenseMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_SUBMARINE</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
+			<UnitDefenseMods>
+				<UnitDefenseMod>
+					<UnitType>UNIT_SUBMARINE</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+			</UnitDefenseMods>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
@@ -34371,43 +34278,28 @@ Base XP gained when defending
 			<UnitUpgrades>
 				<UnitType>UNIT_FUSION_SUBMARINE</UnitType>
 			</UnitUpgrades>
-			<UnitClassTargets>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_FLUYT</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_GALLEON</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_TRANSPORT</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_LANDING_SHIP</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_FUSION_TRANSPORT</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-			</UnitClassTargets>
+			<UnitTargets>
+				<UnitType>UNIT_FLUYT</UnitType>
+				<UnitType>UNIT_GALLEON</UnitType>
+				<UnitType>UNIT_TRANSPORT</UnitType>
+				<UnitType>UNIT_LANDING_SHIP</UnitType>
+				<UnitType>UNIT_FUSION_TRANSPORT</UnitType>
+			</UnitTargets>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_FLUYT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_FLUYT</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_GALLEON</FlankingStrikeUnitClass>
+					<UnitType>UNIT_GALLEON</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TRANSPORT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TRANSPORT</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_LANDING_SHIP</FlankingStrikeUnitClass>
+					<UnitType>UNIT_LANDING_SHIP</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -34443,18 +34335,18 @@ Base XP gained when defending
 					<iPursuitVSUnitCombat>20</iPursuitVSUnitCombat>
 				</PursuitVSUnitCombatType>
 			</PursuitVSUnitCombatTypes>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_SUBMARINE</UnitClassType>
-					<iUnitClassMod>75</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
-			<UnitClassDefenseMods>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_SUBMARINE</UnitClassType>
-					<iUnitClassMod>75</iUnitClassMod>
-				</UnitClassDefenseMod>
-			</UnitClassDefenseMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_SUBMARINE</UnitType>
+					<iModifier>75</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
+			<UnitDefenseMods>
+				<UnitDefenseMod>
+					<UnitType>UNIT_SUBMARINE</UnitType>
+					<iModifier>75</iModifier>
+				</UnitDefenseMod>
+			</UnitDefenseMods>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
@@ -34536,39 +34428,27 @@ Base XP gained when defending
 			<bMechanized>1</bMechanized>
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitClassTargets>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_FLUYT</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_GALLEON</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_TRANSPORT</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_LANDING_SHIP</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-			</UnitClassTargets>
+			<UnitTargets>
+				<UnitType>UNIT_FLUYT</UnitType>
+				<UnitType>UNIT_GALLEON</UnitType>
+				<UnitType>UNIT_TRANSPORT</UnitType>
+				<UnitType>UNIT_LANDING_SHIP</UnitType>
+			</UnitTargets>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_FLUYT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_FLUYT</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_GALLEON</FlankingStrikeUnitClass>
+					<UnitType>UNIT_GALLEON</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TRANSPORT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TRANSPORT</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_LANDING_SHIP</FlankingStrikeUnitClass>
+					<UnitType>UNIT_LANDING_SHIP</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -34621,18 +34501,18 @@ Base XP gained when defending
 					<iPursuitVSUnitCombat>40</iPursuitVSUnitCombat>
 				</PursuitVSUnitCombatType>
 			</PursuitVSUnitCombatTypes>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_SUBMARINE</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
-			<UnitClassDefenseMods>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_SUBMARINE</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-			</UnitClassDefenseMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_SUBMARINE</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
+			<UnitDefenseMods>
+				<UnitDefenseMod>
+					<UnitType>UNIT_SUBMARINE</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+			</UnitDefenseMods>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
@@ -34711,43 +34591,28 @@ Base XP gained when defending
 			<bMechanized>1</bMechanized>
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitClassTargets>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_FLUYT</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_GALLEON</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_TRANSPORT</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_LANDING_SHIP</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_FUSION_TRANSPORT</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-			</UnitClassTargets>
+			<UnitTargets>
+				<UnitType>UNIT_FLUYT</UnitType>
+				<UnitType>UNIT_GALLEON</UnitType>
+				<UnitType>UNIT_TRANSPORT</UnitType>
+				<UnitType>UNIT_LANDING_SHIP</UnitType>
+				<UnitType>UNIT_FUSION_TRANSPORT</UnitType>
+			</UnitTargets>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_FLUYT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_FLUYT</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_GALLEON</FlankingStrikeUnitClass>
+					<UnitType>UNIT_GALLEON</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TRANSPORT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TRANSPORT</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_LANDING_SHIP</FlankingStrikeUnitClass>
+					<UnitType>UNIT_LANDING_SHIP</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -34786,18 +34651,18 @@ Base XP gained when defending
 					<iPursuitVSUnitCombat>40</iPursuitVSUnitCombat>
 				</PursuitVSUnitCombatType>
 			</PursuitVSUnitCombatTypes>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_SUBMARINE</UnitClassType>
-					<iUnitClassMod>75</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
-			<UnitClassDefenseMods>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_SUBMARINE</UnitClassType>
-					<iUnitClassMod>75</iUnitClassMod>
-				</UnitClassDefenseMod>
-			</UnitClassDefenseMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_SUBMARINE</UnitType>
+					<iModifier>75</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
+			<UnitDefenseMods>
+				<UnitDefenseMod>
+					<UnitType>UNIT_SUBMARINE</UnitType>
+					<iModifier>75</iModifier>
+				</UnitDefenseMod>
+			</UnitDefenseMods>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
@@ -35383,18 +35248,18 @@ Base XP gained when defending
 			<iCombat>14</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_BARBARY_CORSAIR</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
-			<UnitClassDefenseMods>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_BARBARY_CORSAIR</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-			</UnitClassDefenseMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_BARBARY_CORSAIR</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
+			<UnitDefenseMods>
+				<UnitDefenseMod>
+					<UnitType>UNIT_BARBARY_CORSAIR</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+			</UnitDefenseMods>
 			<iBombardRate>12</iBombardRate>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iAsset>3</iAsset>
@@ -35480,18 +35345,18 @@ Base XP gained when defending
 			<iCombat>35</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_UBOAT</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
-			<UnitClassDefenseMods>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_UBOAT</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-			</UnitClassDefenseMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_UBOAT</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
+			<UnitDefenseMods>
+				<UnitDefenseMod>
+					<UnitType>UNIT_UBOAT</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+			</UnitDefenseMods>
 			<iBombardRate>10</iBombardRate>
 			<iAsset>3</iAsset>
 			<iPower>14</iPower>
@@ -35575,18 +35440,18 @@ Base XP gained when defending
 			<iXPValueAttack>4</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iPursuit>30</iPursuit>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_ASSAULT_SHIP</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
-			<UnitClassDefenseMods>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_ASSAULT_SHIP</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-			</UnitClassDefenseMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_ASSAULT_SHIP</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
+			<UnitDefenseMods>
+				<UnitDefenseMod>
+					<UnitType>UNIT_ASSAULT_SHIP</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+			</UnitDefenseMods>
 			<iBombardRate>10</iBombardRate>
 			<iAsset>3</iAsset>
 			<iPower>8</iPower>
@@ -35756,18 +35621,18 @@ Base XP gained when defending
 			<iWithdrawalProb>15</iWithdrawalProb>
 			<iPursuit>10</iPursuit>
 			<iEarlyWithdraw>50</iEarlyWithdraw>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_COG_MERCHANT</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
-			<UnitClassDefenseMods>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_COG_MERCHANT</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-			</UnitClassDefenseMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_COG_MERCHANT</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
+			<UnitDefenseMods>
+				<UnitDefenseMod>
+					<UnitType>UNIT_COG_MERCHANT</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+			</UnitDefenseMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_PRIME_TIMBER</BonusType>
@@ -35902,18 +35767,18 @@ Base XP gained when defending
 			<iWithdrawalProb>25</iWithdrawalProb>
 			<iPursuit>20</iPursuit>
 			<iEarlyWithdraw>50</iEarlyWithdraw>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_CARRACK_MERCHANT</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
-			<UnitClassDefenseMods>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_CARRACK_MERCHANT</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-			</UnitClassDefenseMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_CARRACK_MERCHANT</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
+			<UnitDefenseMods>
+				<UnitDefenseMod>
+					<UnitType>UNIT_CARRACK_MERCHANT</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+			</UnitDefenseMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_PRIME_TIMBER</BonusType>
@@ -36206,20 +36071,20 @@ Base XP gained when defending
 					<iTerrainAttack>25</iTerrainAttack>
 				</TerrainAttack>
 			</TerrainAttacks>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_DESTROYER</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_CRUISER</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_PRE_DREADNOUGHT</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_DESTROYER</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_CRUISER</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_PRE_DREADNOUGHT</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
 			<iAsset>3</iAsset>
 			<iPower>28</iPower>
 			<UnitMeshGroups>
@@ -36347,18 +36212,18 @@ Base XP gained when defending
 			<iFirstStrikes>1</iFirstStrikes>
 			<iWithdrawalProb>50</iWithdrawalProb>
 			<iEarlyWithdraw>50</iEarlyWithdraw>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_LIBERTY_MERCHANT</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
-			<UnitClassDefenseMods>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_LIBERTY_MERCHANT</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-			</UnitClassDefenseMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_LIBERTY_MERCHANT</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
+			<UnitDefenseMods>
+				<UnitDefenseMod>
+					<UnitType>UNIT_LIBERTY_MERCHANT</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+			</UnitDefenseMods>
 			<iAsset>4</iAsset>
 			<iPower>28</iPower>
 			<UnitMeshGroups>
@@ -36481,18 +36346,18 @@ Base XP gained when defending
 			<iWithdrawalProb>45</iWithdrawalProb>
 			<iPursuit>40</iPursuit>
 			<iEarlyWithdraw>50</iEarlyWithdraw>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_CARGO_SHIP</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
-			<UnitClassDefenseMods>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_CARGO_SHIP</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-			</UnitClassDefenseMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_CARGO_SHIP</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
+			<UnitDefenseMods>
+				<UnitDefenseMod>
+					<UnitType>UNIT_CARGO_SHIP</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+			</UnitDefenseMods>
 			<iAsset>2</iAsset>
 			<iPower>3</iPower>
 			<UnitMeshGroups>
@@ -37712,27 +37577,27 @@ Base XP gained when defending
 			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CATAPULT</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TREBUCHET</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_BOMBARD</FlankingStrikeUnitClass>
+					<UnitType>UNIT_BOMBARD</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CANNON</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CANNON</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_LIGHT_ARTILLERY</FlankingStrikeUnitClass>
+					<UnitType>UNIT_LIGHT_ARTILLERY</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_ARTILLERY</FlankingStrikeUnitClass>
+					<UnitType>UNIT_ARTILLERY</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -37849,31 +37714,31 @@ Base XP gained when defending
 			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CATAPULT</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TREBUCHET</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_BOMBARD</FlankingStrikeUnitClass>
+					<UnitType>UNIT_BOMBARD</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CANNON</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CANNON</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_LIGHT_ARTILLERY</FlankingStrikeUnitClass>
+					<UnitType>UNIT_LIGHT_ARTILLERY</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_ARTILLERY</FlankingStrikeUnitClass>
+					<UnitType>UNIT_ARTILLERY</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_MOBILE_ARTILLERY</FlankingStrikeUnitClass>
+					<UnitType>UNIT_MOBILE_ARTILLERY</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -37986,35 +37851,35 @@ Base XP gained when defending
 			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CATAPULT</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TREBUCHET</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_BOMBARD</FlankingStrikeUnitClass>
+					<UnitType>UNIT_BOMBARD</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CANNON</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CANNON</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_LIGHT_ARTILLERY</FlankingStrikeUnitClass>
+					<UnitType>UNIT_LIGHT_ARTILLERY</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_ARTILLERY</FlankingStrikeUnitClass>
+					<UnitType>UNIT_ARTILLERY</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_MOBILE_ARTILLERY</FlankingStrikeUnitClass>
+					<UnitType>UNIT_MOBILE_ARTILLERY</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_ROCKET_ARTILLERY</FlankingStrikeUnitClass>
+					<UnitType>UNIT_ROCKET_ARTILLERY</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -38132,35 +37997,35 @@ Base XP gained when defending
 			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CATAPULT</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TREBUCHET</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_BOMBARD</FlankingStrikeUnitClass>
+					<UnitType>UNIT_BOMBARD</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CANNON</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CANNON</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_LIGHT_ARTILLERY</FlankingStrikeUnitClass>
+					<UnitType>UNIT_LIGHT_ARTILLERY</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_ARTILLERY</FlankingStrikeUnitClass>
+					<UnitType>UNIT_ARTILLERY</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_MOBILE_ARTILLERY</FlankingStrikeUnitClass>
+					<UnitType>UNIT_MOBILE_ARTILLERY</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_ROCKET_ARTILLERY</FlankingStrikeUnitClass>
+					<UnitType>UNIT_ROCKET_ARTILLERY</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -38275,35 +38140,35 @@ Base XP gained when defending
 			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CATAPULT</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TREBUCHET</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_BOMBARD</FlankingStrikeUnitClass>
+					<UnitType>UNIT_BOMBARD</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CANNON</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CANNON</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_LIGHT_ARTILLERY</FlankingStrikeUnitClass>
+					<UnitType>UNIT_LIGHT_ARTILLERY</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_ARTILLERY</FlankingStrikeUnitClass>
+					<UnitType>UNIT_ARTILLERY</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_MOBILE_ARTILLERY</FlankingStrikeUnitClass>
+					<UnitType>UNIT_MOBILE_ARTILLERY</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_ROCKET_ARTILLERY</FlankingStrikeUnitClass>
+					<UnitType>UNIT_ROCKET_ARTILLERY</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -38412,35 +38277,35 @@ Base XP gained when defending
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CATAPULT</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TREBUCHET</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_BOMBARD</FlankingStrikeUnitClass>
+					<UnitType>UNIT_BOMBARD</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CANNON</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CANNON</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_LIGHT_ARTILLERY</FlankingStrikeUnitClass>
+					<UnitType>UNIT_LIGHT_ARTILLERY</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_ARTILLERY</FlankingStrikeUnitClass>
+					<UnitType>UNIT_ARTILLERY</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_MOBILE_ARTILLERY</FlankingStrikeUnitClass>
+					<UnitType>UNIT_MOBILE_ARTILLERY</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_ROCKET_ARTILLERY</FlankingStrikeUnitClass>
+					<UnitType>UNIT_ROCKET_ARTILLERY</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -64146,35 +64011,35 @@ Base XP gained when defending
 			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CATAPULT</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TREBUCHET</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_BOMBARD</FlankingStrikeUnitClass>
+					<UnitType>UNIT_BOMBARD</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CANNON</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CANNON</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_LIGHT_ARTILLERY</FlankingStrikeUnitClass>
+					<UnitType>UNIT_LIGHT_ARTILLERY</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_ARTILLERY</FlankingStrikeUnitClass>
+					<UnitType>UNIT_ARTILLERY</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_MOBILE_ARTILLERY</FlankingStrikeUnitClass>
+					<UnitType>UNIT_MOBILE_ARTILLERY</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_ROCKET_ARTILLERY</FlankingStrikeUnitClass>
+					<UnitType>UNIT_ROCKET_ARTILLERY</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -64287,35 +64152,35 @@ Base XP gained when defending
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CATAPULT</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TREBUCHET</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_BOMBARD</FlankingStrikeUnitClass>
+					<UnitType>UNIT_BOMBARD</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CANNON</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CANNON</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_LIGHT_ARTILLERY</FlankingStrikeUnitClass>
+					<UnitType>UNIT_LIGHT_ARTILLERY</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_ARTILLERY</FlankingStrikeUnitClass>
+					<UnitType>UNIT_ARTILLERY</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_MOBILE_ARTILLERY</FlankingStrikeUnitClass>
+					<UnitType>UNIT_MOBILE_ARTILLERY</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_ROCKET_ARTILLERY</FlankingStrikeUnitClass>
+					<UnitType>UNIT_ROCKET_ARTILLERY</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>

@@ -1283,14 +1283,14 @@ int CyUnit::featureDefenseModifier(int /*FeatureTypes*/ eFeature)
 	return m_pUnit ? m_pUnit->featureDefenseModifier((FeatureTypes) eFeature) : -1;
 }
 
-int CyUnit::unitClassAttackModifier(int /*UnitClassTypes*/ eUnitClass)
+int CyUnit::unitAttackModifier(int /*UnitTypes*/ eUnit)
 {
-	return m_pUnit ? m_pUnit->unitClassAttackModifier((UnitClassTypes) eUnitClass) : -1;
+	return m_pUnit ? m_pUnit->unitAttackModifier((UnitTypes) eUnit) : -1;
 }
 
-int CyUnit::unitClassDefenseModifier(int /*UnitClassTypes*/ eUnitClass)
+int CyUnit::unitDefenseModifier(int /*UnitTypes*/ eUnit)
 {
-	return m_pUnit ? m_pUnit->unitClassDefenseModifier((UnitClassTypes) eUnitClass) : -1;
+	return m_pUnit ? m_pUnit->unitDefenseModifier((UnitTypes) eUnit) : -1;
 }
 
 int CyUnit::unitCombatModifier(int /*UnitCombatTypes*/ eUnitCombat)

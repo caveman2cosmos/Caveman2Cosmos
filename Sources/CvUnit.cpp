@@ -15139,8 +15139,8 @@ int CvUnit::maxCombatStr(const CvPlot* pPlot, const CvUnit* pAttacker, CombatDet
 		pCombatDetails->iCityAttackModifier = 0;
 		pCombatDetails->iDomainDefenseModifier = 0;
 		pCombatDetails->iCityBarbarianDefenseModifier = 0;
-		pCombatDetails->iClassDefenseModifier = 0;
-		pCombatDetails->iClassAttackModifier = 0;
+		pCombatDetails->iDefenseModifier = 0;
+		pCombatDetails->iAttackModifier = 0;
 		pCombatDetails->iCombatModifierA = 0;
 		pCombatDetails->iCombatModifierT = 0;
 		pCombatDetails->iDomainModifierA = 0;
@@ -15535,18 +15535,18 @@ int CvUnit::maxCombatStr(const CvPlot* pPlot, const CvUnit* pAttacker, CombatDet
 		{
 			FAssertMsg(pAttacker != this, "pAttacker is not expected to be equal with this");
 
-			iExtraModifier = unitClassDefenseModifier(pAttacker->getUnitClassType());
+			iExtraModifier = unitDefenseModifier(pAttacker->getUnitType());
 			iTempModifier += iExtraModifier;
 			if (pCombatDetails != NULL)
 			{
-				pCombatDetails->iClassDefenseModifier = iExtraModifier;
+				pCombatDetails->iDefenseModifier = iExtraModifier;
 			}
 
-			iExtraModifier = -pAttacker->unitClassAttackModifier(getUnitClassType());
+			iExtraModifier = -pAttacker->unitAttackModifier(getUnitType());
 			iTempModifier += iExtraModifier;
 			if (pCombatDetails != NULL)
 			{
-				pCombatDetails->iClassAttackModifier = iExtraModifier;
+				pCombatDetails->iAttackModifier = iExtraModifier;
 			}
 
 			iExtraModifier = religiousCombatModifierTotal(pAttacker->getReligion());
@@ -17553,19 +17553,19 @@ int CvUnit::featureDefenseModifier(FeatureTypes eFeature) const
 	return (m_pUnitInfo->getFeatureDefenseModifier(eFeature) + getExtraFeatureDefensePercent(eFeature));
 }
 
-int CvUnit::unitClassAttackModifier(UnitClassTypes eUnitClass) const
+int CvUnit::unitAttackModifier(UnitTypes eUnit) const
 {
-	FAssertMsg(eUnitClass >= 0, "eUnitClass is expected to be non-negative (invalid Index)");
-	FAssertMsg(eUnitClass < GC.getNumUnitClassInfos(), "eUnitClass is expected to be within maximum bounds (invalid Index)");
-	return m_pUnitInfo->getUnitClassAttackModifier(eUnitClass);
+	FAssertMsg(eUnit >= 0, "eUnit is expected to be non-negative (invalid Index)");
+	FAssertMsg(eUnit < GC.getNumUnitInfos(), "eUnit is expected to be within maximum bounds (invalid Index)");
+	return m_pUnitInfo->getUnitAttackModifier(eUnit);
 }
 
 
-int CvUnit::unitClassDefenseModifier(UnitClassTypes eUnitClass) const
+int CvUnit::unitDefenseModifier(UnitTypes eUnit) const
 {
-	FAssertMsg(eUnitClass >= 0, "eUnitClass is expected to be non-negative (invalid Index)");
-	FAssertMsg(eUnitClass < GC.getNumUnitClassInfos(), "eUnitClass is expected to be within maximum bounds (invalid Index)");
-	return m_pUnitInfo->getUnitClassDefenseModifier(eUnitClass);
+	FAssertMsg(eUnit >= 0, "eUnit is expected to be non-negative (invalid Index)");
+	FAssertMsg(eUnit < GC.getNumUnitInfos(), "eUnit is expected to be within maximum bounds (invalid Index)");
+	return m_pUnitInfo->getUnitDefenseModifier(eUnit);
 }
 
 
@@ -29137,7 +29137,7 @@ void CvUnit::flankingStrikeCombat(const CvPlot* pPlot, int iAttackerStrength, in
 				{
 					if (pLoopUnit->canDefend())
 					{
-						int iFlankingStrength = m_pUnitInfo->getFlankingStrikeUnitClass(pLoopUnit->getUnitClassType());
+						int iFlankingStrength = m_pUnitInfo->getFlankingStrikeUnit(pLoopUnit->getUnitType());
 
 						for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 						{
@@ -29958,12 +29958,12 @@ bool CvUnit::isTargetOf(const CvUnit& attacker) const
 	//if (!plot()->isCity(true, getTeam()) || (attacker.plot() == plot() && (attacker.isAssassin() || isAssassin())))
 	//{
 
-	if (getUnitClassType() != NO_UNITCLASS && attackerInfo.getTargetUnitClass(getUnitClassType()))
+	if (getUnitType() != NO_UNIT && attackerInfo.isTargetUnit(getUnitType()))
 	{
 		return true;
 	}
 
-	if (attackerInfo.getUnitClassType() != NO_UNITCLASS && ourInfo.getDefenderUnitClass(attackerInfo.getUnitClassType()))
+	if (attacker.getUnitType() != NO_UNIT && ourInfo.isDefendAgainstUnit(attacker.getUnitType()))
 	{
 		return true;
 	}

@@ -2286,8 +2286,6 @@ public:
 
 	virtual const wchar* getExtraHoverText() const;
 
-	bool readPass3();
-
 	void getCheckSum(unsigned int& iSum);
 
 	CvPropertyManipulators* getPropertyManipulators();
@@ -2387,8 +2385,8 @@ public:
 	int getTerrainDefenseModifier(int i) const;		// Exposed to Python
 	int getFeatureAttackModifier(int i) const;		// Exposed to Python
 	int getFeatureDefenseModifier(int i) const;		// Exposed to Python
-	int getUnitClassAttackModifier(int i) const;	// Exposed to Python
-	int getUnitClassDefenseModifier(int i) const;	// Exposed to Python
+	int getUnitAttackModifier(int i) const;			// Exposed to Python
+	int getUnitDefenseModifier(int i) const;		// Exposed to Python
 	int getUnitCombatModifier(int i) const;			// Exposed to Python
 	int getUnitCombatCollateralImmune(int i) const;	// Exposed to Python
 	int getDomainModifier(int i) const;				// Exposed to Python
@@ -2398,12 +2396,20 @@ public:
 	int getCorporationSpreads(int i) const;			// Exposed to Python
 	int getTerrainPassableTech(int i) const;		// Exposed to Python
 	int getFeaturePassableTech(int i) const;		// Exposed to Python
-	int getFlankingStrikeUnitClass(int i) const;	// Exposed to Python
+	int getFlankingStrikeUnit(int i) const;			// Exposed to Python
 
 	bool isPrereqOrCivics(int i) const;				// Exposed to Python
 	bool isPrereqBuildingClass(int i) const; 		// Exposed to Python
 	int getPrereqBuildingClassOverrideTech(int i) const;	//Exposed to Python
 	int getPrereqBuildingClassOverrideEra(int i) const; 	//Exposed to Python
+
+	int getTargetUnit(int i) const;
+	int getNumTargetUnits() const;
+	bool isTargetUnit(int i) const;		//Exposed to Python
+
+	int getDefendAgainstUnit(int i) const;
+	int getNumDefendAgainstUnits() const;
+	bool isDefendAgainstUnit(int i) const;		//Exposed to Python
 
 	int getSupersedingUnit(int i) const;
 	int getNumSupersedingUnits() const;
@@ -2416,9 +2422,7 @@ public:
 	std::vector<int> getUnitUpgradeChain() const;
 	void CvUnitInfo::addUnitToUpgradeChain(int i);
 
-	bool getTargetUnitClass(int i) const;			// Exposed to Python
 	bool getTargetUnitCombat(int i) const;			// Exposed to Python
-	bool getDefenderUnitClass(int i) const;			// Exposed to Python
 	bool getDefenderUnitCombat(int i) const;		// Exposed to Python
 	bool getUnitAIType(int i) const;				// Exposed to Python
 	bool getNotUnitAIType(int i) const;				// Exposed to Python
@@ -2463,8 +2467,11 @@ public:
 	void write(FDataStreamBase* ) {}
 
 	bool read(CvXMLLoadUtility* pXML);
-
+	bool readPass2(CvXMLLoadUtility* pXML);
+	bool readPass3();
 	void copyNonDefaults(CvUnitInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaultsReadPass2(CvUnitInfo* pClassInfo = NULL , CvXMLLoadUtility* pXML = NULL, bool bOver = false);
+
 	std::vector<int>& getSubCombatTypes();
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 
@@ -2547,10 +2554,14 @@ protected:
 	int m_iPrereqBuilding;
 	int m_iPrereqAndTech;
 	int m_iPrereqAndBonus;
+
 	std::vector<int> m_aePrereqOrBuildings;
+	std::vector<int> m_aiTargetUnit;
+	std::vector<int> m_aiDefendAgainstUnit;
 	std::vector<int> m_aiSupersedingUnits;
 	std::vector<int> m_aiUnitUpgrades;
 	std::vector<int> m_aiUnitUpgradeChain;
+
 	int m_iGroupSize;
 	int m_iGroupDefinitions;
 	int m_iUnitMeleeWaveSize;
@@ -2620,8 +2631,8 @@ protected:
 	int* m_piTerrainDefenseModifier;
 	int* m_piFeatureAttackModifier;
 	int* m_piFeatureDefenseModifier;
-	int* m_piUnitClassAttackModifier;
-	int* m_piUnitClassDefenseModifier;
+	int* m_piUnitAttackModifier;
+	int* m_piUnitDefenseModifier;
 	int* m_piUnitCombatModifier;
 	int* m_piUnitCombatCollateralImmune;
 	int* m_piDomainModifier;
@@ -2631,16 +2642,14 @@ protected:
 	int* m_piCorporationSpreads;
 	int* m_piTerrainPassableTech;
 	int* m_piFeaturePassableTech;
-	int* m_piFlankingStrikeUnitClass;
+	int* m_piFlankingStrikeUnit;
 
 	bool* m_pbPrereqOrCivics;
 	bool* m_pbPrereqBuildingClass;
 	int* m_piPrereqBuildingClassOverrideTech;
 	int* m_piPrereqBuildingClassOverrideEra;
 
-	bool* m_pbTargetUnitClass;
 	bool* m_pbTargetUnitCombat;
-	bool* m_pbDefenderUnitClass;
 	bool* m_pbDefenderUnitCombat;
 	bool* m_pbUnitAIType;
 	bool* m_pbNotUnitAIType;

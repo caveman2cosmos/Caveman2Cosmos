@@ -173,8 +173,8 @@ struct CombatDetails					// Exposed to Python
 	int iCityAttackModifier;
 	int iDomainDefenseModifier;
 	int iCityBarbarianDefenseModifier;
-	int iClassDefenseModifier;
-	int iClassAttackModifier;
+	int iDefenseModifier;
+	int iAttackModifier;
 	int iCombatModifierT;
 	int iCombatModifierA;
 	int iDomainModifierA;
@@ -1093,8 +1093,8 @@ public:
 	int terrainDefenseModifier(TerrainTypes eTerrain) const; // Exposed to Python
 	int featureAttackModifier(FeatureTypes eFeature) const; // Exposed to Python
 	int featureDefenseModifier(FeatureTypes eFeature) const; // Exposed to Python
-	int unitClassAttackModifier(UnitClassTypes eUnitClass) const; // Exposed to Python
-	int unitClassDefenseModifier(UnitClassTypes eUnitClass) const; // Exposed to Python
+	int unitAttackModifier(UnitTypes eUnit) const; // Exposed to Python
+	int unitDefenseModifier(UnitTypes eUnit) const; // Exposed to Python
 	int unitCombatModifier(UnitCombatTypes eUnitCombat) const; // Exposed to Python
 	int domainModifier(DomainTypes eDomain) const;
 

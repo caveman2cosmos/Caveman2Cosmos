@@ -542,12 +542,9 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_BOMBARD_MAMMOTH</UnitType>
 			</UnitUpgrades>
-			<UnitClassTargets>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_MOUNTED_INFANTRY</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-			</UnitClassTargets>
+			<UnitTargets>
+				<UnitType>UNIT_MOUNTED_INFANTRY</UnitType>
+			</UnitTargets>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -673,12 +670,9 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_EARLY_TANK</UnitType>
 			</UnitUpgrades>
-			<UnitClassTargets>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_MOUNTED_INFANTRY</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-			</UnitClassTargets>
+			<UnitTargets>
+				<UnitType>UNIT_MOUNTED_INFANTRY</UnitType>
+			</UnitTargets>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>

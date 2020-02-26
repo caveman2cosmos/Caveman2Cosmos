@@ -347,8 +347,8 @@ public:
 	int terrainDefenseModifier(int /*TerrainTypes*/ eTerrain);
 	int featureAttackModifier(int /*FeatureTypes*/ eFeature);
 	int featureDefenseModifier(int /*FeatureTypes*/ eFeature);
-	int unitClassAttackModifier(int /*UnitClassTypes*/ eUnitClass);
-	int unitClassDefenseModifier(int /*UnitClassTypes*/ eUnitClass);
+	int unitAttackModifier(int /*UnitTypes*/ eUnit);
+	int unitDefenseModifier(int /*UnitTypes*/ eUnit);
 	int unitCombatModifier(int /*UnitCombatTypes*/ eUnitCombat);
 	int domainModifier(int /*DomainTypes*/ eDomain);
 
