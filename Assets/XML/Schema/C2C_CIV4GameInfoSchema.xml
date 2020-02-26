@@ -1726,7 +1726,7 @@ DPII < Revolution Mod End >
 	<ElementType name="Flavors" content="eltOnly">
 		<element type="Flavor" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="GreatPeopleUnitClass" content="textOnly"/>
+	<ElementType name="GreatPeopleUnitType" content="textOnly"/>
 	<ElementType name="HotKey" content="textOnly"/>
 	<ElementType name="Texture" content="textOnly"/>
 	<ElementType name="Yields" content="eltOnly">
@@ -1763,7 +1763,7 @@ DPII < Revolution Mod End >
 		<element type="Help" minOccurs="0"/>
 		<element type="Texture" minOccurs="0"/>
 		<element type="bVisible" minOccurs="0"/>
-		<element type="GreatPeopleUnitClass" minOccurs="0"/>
+		<element type="GreatPeopleUnitType" minOccurs="0"/>
 		<element type="iGreatPeopleRateChange" minOccurs="0"/>
 		<element type="Yields" minOccurs="0"/>
 		<element type="Commerces" minOccurs="0"/>

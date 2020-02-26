@@ -5009,7 +5009,7 @@
 				<iYield>0</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
@@ -14770,7 +14770,7 @@
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<PrereqBuildingClasses>
 				<PrereqBuildingClass>
@@ -18744,7 +18744,7 @@
 			<ObsoleteTech>TECH_ABYSS_COLONIZATION</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_MADRASSA</BuildingClass>
+			<BuildingClass>BUILDINGCLASS_ARABIAN_MADRASSA</BuildingClass>
 			<Type>BUILDING_ARABIAN_MADRASSA</Type>
 			<ObsoleteTech>TECH_COMPULSORY_EDUCATION</ObsoleteTech>
 		</BuildingInfo>
@@ -22345,7 +22345,7 @@
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
@@ -22386,7 +22386,7 @@
 				<iYield>0</iYield>
 				<iYield>3</iYield>
 			</SeaPlotYieldChanges>
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
@@ -23761,7 +23761,7 @@
 			</BuildingClassNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_BUILDING_MEMBRANE</BuildingClass>
+			<BuildingClass>BUILDINGCLASS_BUILDING_BUILDING_MEMBRANE</BuildingClass>
 			<Type>BUILDING_BUILDING_MEMBRANE</Type>
 			<Description>TXT_KEY_BUILDING_BUILDING_MEMBRANE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BUILDING_MEMBRANE_PEDIA</Civilopedia>
@@ -25997,7 +25997,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
@@ -26828,7 +26828,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>40</iCommerce>
 			</CommerceChanges>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<PrereqBuildingClasses>
 				<PrereqBuildingClass>
@@ -27132,7 +27132,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -27974,7 +27974,7 @@
 			<CommerceChanges>
 				<iCommerce>20</iCommerce>
 			</CommerceChanges>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<PrereqBuildingClasses>
 				<PrereqBuildingClass>

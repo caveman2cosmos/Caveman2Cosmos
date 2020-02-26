@@ -419,11 +419,9 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 
 		setGameTurnCreated(GC.getGame().getGameTurn());
 
-		GC.getGame().incrementUnitCreatedCount(getUnitType());
-
-		GC.getGame().incrementUnitClassCreatedCount((UnitClassTypes)(m_pUnitInfo->getUnitClassType()));
-		GET_TEAM(getTeam()).changeUnitClassCount(((UnitClassTypes)(m_pUnitInfo->getUnitClassType())), 1);
-		GET_PLAYER(getOwner()).changeUnitClassCount(((UnitClassTypes)(m_pUnitInfo->getUnitClassType())), 1);
+		GC.getGame().incrementUnitCreatedCount(eUnit);
+		GET_TEAM(getTeam()).changeUnitCount(eUnit, 1);
+		GET_PLAYER(getOwner()).changeUnitCount(eUnit, 1);
 
 		GET_PLAYER(getOwner()).changeExtraUnitCost(getExtraUnitCost100());
 
@@ -1478,8 +1476,8 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 		FAssertMsg(getAttackPlot() == NULL, "The current unit instance's attack plot is expected to be NULL");
 		FAssertMsg(getCombatUnit() == NULL, "The current unit instance's combat unit is expected to be NULL");
 	}
-	GET_TEAM(getTeam()).changeUnitClassCount((UnitClassTypes)m_pUnitInfo->getUnitClassType(), -1);
-	GET_PLAYER(getOwner()).changeUnitClassCount((UnitClassTypes)m_pUnitInfo->getUnitClassType(), -1);
+	GET_TEAM(getTeam()).changeUnitCount(m_eUnitType, -1);
+	GET_PLAYER(getOwner()).changeUnitCount(m_eUnitType, -1);
 
 	GET_PLAYER(getOwner()).changeExtraUnitCost(-(getExtraUnitCost100()));
 
@@ -7458,7 +7456,7 @@ bool CvUnit::canAutomate(AutomateTypes eAutomate) const
 		}
 		break;
 	case AUTOMATE_UPGRADING:
-		if (m_pUnitInfo->getUpgradeUnitClassTypes().size() == 0)
+		if (m_pUnitInfo->getNumUnitUpgrades() == 0)
 		{
 			return false;
 		}
@@ -7472,7 +7470,7 @@ bool CvUnit::canAutomate(AutomateTypes eAutomate) const
 		}
 		break;
 	case AUTOMATE_CANCEL_UPGRADING:
-		if (m_pUnitInfo->getUpgradeUnitClassTypes().size() == 0)
+		if (m_pUnitInfo->getNumUnitUpgrades() == 0)
 		{
 			return false;
 		}
@@ -7631,7 +7629,6 @@ void CvUnit::scrap()
 bool CvUnit::canGift(bool bTestVisible, bool bTestTransport)
 {
 	CvPlot* pPlot = plot();
-	CvUnit* pTransport = getTransportUnit();
 
 	if (!(pPlot->isOwned()))
 	{
@@ -7652,6 +7649,7 @@ bool CvUnit::canGift(bool bTestVisible, bool bTestTransport)
 	{
 		return false;
 	}
+	CvUnit* pTransport = getTransportUnit();
 
 	if (!pPlot->isValidDomainForLocation(*this) && NULL == pTransport)
 	{
@@ -7676,22 +7674,16 @@ bool CvUnit::canGift(bool bTestVisible, bool bTestTransport)
 
 	if (!bTestVisible)
 	{
-		if (GET_TEAM(pPlot->getTeam()).isUnitClassMaxedOut(getUnitClassType(), GET_TEAM(pPlot->getTeam()).getUnitClassMaking(getUnitClassType())))
+		if (GET_TEAM(pPlot->getTeam()).isUnitMaxedOut(getUnitType(), GET_TEAM(pPlot->getTeam()).getUnitMaking(getUnitType()))
+		|| GET_PLAYER(pPlot->getOwner()).isUnitMaxedOut(getUnitType(), GET_PLAYER(pPlot->getOwner()).getUnitMaking(getUnitType())))
 		{
 			return false;
 		}
-
-		if (GET_PLAYER(pPlot->getOwner()).isUnitClassMaxedOut(getUnitClassType(), GET_PLAYER(pPlot->getOwner()).getUnitClassMaking(getUnitClassType())))
-		{
-			return false;
-		}
-
 		if (!(GET_PLAYER(pPlot->getOwner()).AI_acceptUnit(this)))
 		{
 			return false;
 		}
 	}
-
 	return !atWar(pPlot->getTeam(), getTeam());
 }
 
@@ -13816,9 +13808,9 @@ int CvUnit::upgradePrice(UnitTypes eUnit) const
 }
 
 
-bool CvUnit::upgradeAvailable(UnitTypes eFromUnit, UnitClassTypes eToUnitClass) const
+bool CvUnit::upgradeAvailable(UnitTypes eFromUnit, UnitTypes eToUnit) const
 {
-	return GET_PLAYER(getOwner()).upgradeAvailable(eFromUnit, eToUnitClass);
+	return GET_PLAYER(getOwner()).upgradeAvailable(eFromUnit, eToUnit);
 }
 
 
@@ -13829,17 +13821,14 @@ bool CvUnit::canUpgrade(UnitTypes eUnit, bool bTestVisible) const
 		return false;
 	}
 
-	if(!isReadyForUpgrade())
+	if (!isReadyForUpgrade())
 	{
 		return false;
 	}
 
-	if (!bTestVisible)
+	if (!bTestVisible && GET_PLAYER(getOwner()).getEffectiveGold() < upgradePrice(eUnit))
 	{
-		if (GET_PLAYER(getOwner()).getEffectiveGold() < upgradePrice(eUnit))
-		{
-			return false;
-		}
+		return false;
 	}
 
 	if (GET_PLAYER(getOwner()).getUpgradeRoundCount() == GC.getUPGRADE_ROUND_LIMIT())
@@ -13959,12 +13948,12 @@ CvCity* CvUnit::getUpgradeCity(UnitTypes eUnit, bool bSearch, int* iSearchValue)
 		return NULL;
 	}
 
-	CvUnitInfo& kUnitInfo = GC.getUnitInfo(eUnit);
-
-	if (!upgradeAvailable(getUnitType(), ((UnitClassTypes)(kUnitInfo.getUnitClassType()))))
+	if (!upgradeAvailable(getUnitType(), eUnit))
 	{
 		return NULL;
 	}
+	CvUnitInfo& kUnitInfo = GC.getUnitInfo(eUnit);
+
 	//The following checks to make sure that the upgrade won't make it impossible for a ship to hold
 	//the cargo it already does.
 	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
@@ -14959,43 +14948,43 @@ int CvUnit::baseCombatStrPreCheck() const
 	int iStr = (m_iBaseCombat);
 	if (!isNPC())
 	{
-		iStr += GET_TEAM(getTeam()).getUnitClassStrengthChange((UnitClassTypes)getUnitClassType());
+		iStr += GET_TEAM(getTeam()).getUnitStrengthChange((UnitTypes)getUnitType());
 	}
 	iStr += getExtraStrength();
 	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
 		iStr *= 100;
 	}
-    if (iStr < 0)
-    {
-        iStr = 0;
-    }
+	if (iStr < 0)
+	{
+		iStr = 0;
+	}
 	if (getExtraStrengthModifier() != 0)
 	{
 		iStr *= (100 + getExtraStrengthModifier());
 		iStr /= 100;
 	}
-    return iStr;
+	return iStr;
 }
 
 int CvUnit::baseAirCombatStrPreCheck() const
 {
-	int iStr = (m_pUnitInfo->getAirCombat() + GET_TEAM(getTeam()).getUnitClassStrengthChange((UnitClassTypes)getUnitClassType()));
+	int iStr = (m_pUnitInfo->getAirCombat() + GET_TEAM(getTeam()).getUnitStrengthChange((UnitTypes)getUnitType()));
 	iStr += getExtraStrength();
 	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
 		iStr *= 100;
 	}
-    if (iStr < 0)
-    {
-        iStr = 0;
-    }
+	if (iStr < 0)
+	{
+		iStr = 0;
+	}
 	if (getExtraStrengthModifier() != 0)
 	{
 		iStr *= (100 + getExtraStrengthModifier());
 		iStr /= 100;
 	}
-    return iStr;
+	return iStr;
 }
 
 int CvUnit::getExtraStrength() const
@@ -15150,8 +15139,8 @@ int CvUnit::maxCombatStr(const CvPlot* pPlot, const CvUnit* pAttacker, CombatDet
 		pCombatDetails->iCityAttackModifier = 0;
 		pCombatDetails->iDomainDefenseModifier = 0;
 		pCombatDetails->iCityBarbarianDefenseModifier = 0;
-		pCombatDetails->iClassDefenseModifier = 0;
-		pCombatDetails->iClassAttackModifier = 0;
+		pCombatDetails->iDefenseModifier = 0;
+		pCombatDetails->iAttackModifier = 0;
 		pCombatDetails->iCombatModifierA = 0;
 		pCombatDetails->iCombatModifierT = 0;
 		pCombatDetails->iDomainModifierA = 0;
@@ -15546,18 +15535,18 @@ int CvUnit::maxCombatStr(const CvPlot* pPlot, const CvUnit* pAttacker, CombatDet
 		{
 			FAssertMsg(pAttacker != this, "pAttacker is not expected to be equal with this");
 
-			iExtraModifier = unitClassDefenseModifier(pAttacker->getUnitClassType());
+			iExtraModifier = unitDefenseModifier(pAttacker->getUnitType());
 			iTempModifier += iExtraModifier;
 			if (pCombatDetails != NULL)
 			{
-				pCombatDetails->iClassDefenseModifier = iExtraModifier;
+				pCombatDetails->iDefenseModifier = iExtraModifier;
 			}
 
-			iExtraModifier = -pAttacker->unitClassAttackModifier(getUnitClassType());
+			iExtraModifier = -pAttacker->unitAttackModifier(getUnitType());
 			iTempModifier += iExtraModifier;
 			if (pCombatDetails != NULL)
 			{
-				pCombatDetails->iClassAttackModifier = iExtraModifier;
+				pCombatDetails->iAttackModifier = iExtraModifier;
 			}
 
 			iExtraModifier = religiousCombatModifierTotal(pAttacker->getReligion());
@@ -17564,19 +17553,19 @@ int CvUnit::featureDefenseModifier(FeatureTypes eFeature) const
 	return (m_pUnitInfo->getFeatureDefenseModifier(eFeature) + getExtraFeatureDefensePercent(eFeature));
 }
 
-int CvUnit::unitClassAttackModifier(UnitClassTypes eUnitClass) const
+int CvUnit::unitAttackModifier(UnitTypes eUnit) const
 {
-	FAssertMsg(eUnitClass >= 0, "eUnitClass is expected to be non-negative (invalid Index)");
-	FAssertMsg(eUnitClass < GC.getNumUnitClassInfos(), "eUnitClass is expected to be within maximum bounds (invalid Index)");
-	return m_pUnitInfo->getUnitClassAttackModifier(eUnitClass);
+	FAssertMsg(eUnit >= 0, "eUnit is expected to be non-negative (invalid Index)");
+	FAssertMsg(eUnit < GC.getNumUnitInfos(), "eUnit is expected to be within maximum bounds (invalid Index)");
+	return m_pUnitInfo->getUnitAttackModifier(eUnit);
 }
 
 
-int CvUnit::unitClassDefenseModifier(UnitClassTypes eUnitClass) const
+int CvUnit::unitDefenseModifier(UnitTypes eUnit) const
 {
-	FAssertMsg(eUnitClass >= 0, "eUnitClass is expected to be non-negative (invalid Index)");
-	FAssertMsg(eUnitClass < GC.getNumUnitClassInfos(), "eUnitClass is expected to be within maximum bounds (invalid Index)");
-	return m_pUnitInfo->getUnitClassDefenseModifier(eUnitClass);
+	FAssertMsg(eUnit >= 0, "eUnit is expected to be non-negative (invalid Index)");
+	FAssertMsg(eUnit < GC.getNumUnitInfos(), "eUnit is expected to be within maximum bounds (invalid Index)");
+	return m_pUnitInfo->getUnitDefenseModifier(eUnit);
 }
 
 
@@ -26064,8 +26053,8 @@ void CvUnit::read(FDataStreamBase* pStream)
 		} while(!GC.getUnitInfo((UnitTypes)tempUnitType).isMilitaryHappiness());
 
 		m_eUnitType = (UnitTypes)tempUnitType;
-		GET_TEAM(getTeam()).changeUnitClassCount((UnitClassTypes)GC.getUnitInfo(m_eUnitType).getUnitClassType(), 1);
-		GET_PLAYER(getOwner()).changeUnitClassCount((UnitClassTypes)GC.getUnitInfo(m_eUnitType).getUnitClassType(), 1);
+		GET_TEAM(getTeam()).changeUnitCount(m_eUnitType, 1);
+		GET_PLAYER(getOwner()).changeUnitCount(m_eUnitType, 1);
 		m_bDeathDelay = true;
 	}
 	m_pUnitInfo = &GC.getUnitInfo(m_eUnitType);
@@ -29148,7 +29137,7 @@ void CvUnit::flankingStrikeCombat(const CvPlot* pPlot, int iAttackerStrength, in
 				{
 					if (pLoopUnit->canDefend())
 					{
-						int iFlankingStrength = m_pUnitInfo->getFlankingStrikeUnitClass(pLoopUnit->getUnitClassType());
+						int iFlankingStrength = m_pUnitInfo->getFlankingStrikeUnit(pLoopUnit->getUnitType());
 
 						for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 						{
@@ -29969,12 +29958,12 @@ bool CvUnit::isTargetOf(const CvUnit& attacker) const
 	//if (!plot()->isCity(true, getTeam()) || (attacker.plot() == plot() && (attacker.isAssassin() || isAssassin())))
 	//{
 
-	if (getUnitClassType() != NO_UNITCLASS && attackerInfo.getTargetUnitClass(getUnitClassType()))
+	if (getUnitType() != NO_UNIT && attackerInfo.isTargetUnit(getUnitType()))
 	{
 		return true;
 	}
 
-	if (attackerInfo.getUnitClassType() != NO_UNITCLASS && ourInfo.getDefenderUnitClass(attackerInfo.getUnitClassType()))
+	if (attacker.getUnitType() != NO_UNIT && ourInfo.isDefendAgainstUnit(attacker.getUnitType()))
 	{
 		return true;
 	}

@@ -284,7 +284,7 @@ public:
 	CvSpecialistInfo();
 	virtual ~CvSpecialistInfo();
 
-	int getGreatPeopleUnitClass() const;		// Exposed to Python
+	int getGreatPeopleUnitType() const;		// Exposed to Python
 	int getGreatPeopleRateChange() const;		// Exposed to Python
 	int getMissionType() const;					// Exposed to Python
 	void setMissionType(int iNewType);
@@ -332,12 +332,14 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvSpecialistInfo* pClassInfo, CvXMLLoadUtility* pXML);
 
+	bool readPass3();
+
 	void getCheckSum(unsigned int& iSum);
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 
 protected:
 
-	int m_iGreatPeopleUnitClass;
+	int m_iGreatPeopleUnitType;
 	int m_iGreatPeopleRateChange;
 	int m_iMissionType;
 	// Afforess 03/26/10
@@ -486,7 +488,7 @@ public:
 	void setOriginalPrereqAndTech(int i, int iTech);
 	int getOriginalPrereqOrTechs(int i) const;
 	int getOriginalPrereqAndTechs(int i) const;
-	int getUnitClassStrengthChange(int iUnit, bool bForLoad = false) const;
+	int getUnitStrengthChange(int iUnit, bool bForLoad = false) const;
 	//TB Tech Tags
 	bool isGlobal() const;
 	//TB Tech Tags end
@@ -623,7 +625,7 @@ protected:
 	int* m_piOriginalPrereqOrTechs;
 	int* m_piOriginalPrereqAndTechs;
 
-	int* m_piUnitClassStrengthChange;
+	int* m_piUnitStrengthChange;
 
 	std::vector<PrereqBuildingClass> m_aPrereqBuildingClass;
 	std::vector<PrereqBuildingClass> m_aPrereqOrBuildingClass;
@@ -1945,9 +1947,6 @@ public:
 	bool isSlave() const;
 	int getPrereqOrVicinityBonuses(int i) const;
 	bool getPassableRouteNeeded(int i) const;
-	std::vector<int> getUpgradeUnitClassTypes() const;
-	void addUpgradeUnitClassTypes(int);
-	bool isUpgradeUnitClassTypes(int) const;
 	int getBaseFoodChange() const;
 	int getControlPoints() const;
 	int getCommandRange() const;
@@ -2287,8 +2286,6 @@ public:
 
 	virtual const wchar* getExtraHoverText() const;
 
-	bool readPass3();
-
 	void getCheckSum(unsigned int& iSum);
 
 	CvPropertyManipulators* getPropertyManipulators();
@@ -2300,7 +2297,6 @@ protected:
 	int m_iMaxPlayerInstances;
 	bool m_bUnlimitedException;
 	int m_iInstanceCostModifier;
-	std::vector<int> m_aiUpgradeUnitClassTypes;
 	bool* m_pbPassableRouteNeeded;
 	int* m_piPrereqOrVicinityBonuses;
 	bool m_bWorkerTrade;
@@ -2389,8 +2385,8 @@ public:
 	int getTerrainDefenseModifier(int i) const;		// Exposed to Python
 	int getFeatureAttackModifier(int i) const;		// Exposed to Python
 	int getFeatureDefenseModifier(int i) const;		// Exposed to Python
-	int getUnitClassAttackModifier(int i) const;	// Exposed to Python
-	int getUnitClassDefenseModifier(int i) const;	// Exposed to Python
+	int getUnitAttackModifier(int i) const;			// Exposed to Python
+	int getUnitDefenseModifier(int i) const;		// Exposed to Python
 	int getUnitCombatModifier(int i) const;			// Exposed to Python
 	int getUnitCombatCollateralImmune(int i) const;	// Exposed to Python
 	int getDomainModifier(int i) const;				// Exposed to Python
@@ -2400,20 +2396,33 @@ public:
 	int getCorporationSpreads(int i) const;			// Exposed to Python
 	int getTerrainPassableTech(int i) const;		// Exposed to Python
 	int getFeaturePassableTech(int i) const;		// Exposed to Python
-	int getFlankingStrikeUnitClass(int i) const;	// Exposed to Python
+	int getFlankingStrikeUnit(int i) const;			// Exposed to Python
 
 	bool isPrereqOrCivics(int i) const;				// Exposed to Python
 	bool isPrereqBuildingClass(int i) const; 		// Exposed to Python
 	int getPrereqBuildingClassOverrideTech(int i) const;	//Exposed to Python
 	int getPrereqBuildingClassOverrideEra(int i) const; 	//Exposed to Python
+
+	int getTargetUnit(int i) const;
+	int getNumTargetUnits() const;
+	bool isTargetUnit(int i) const;		//Exposed to Python
+
+	int getDefendAgainstUnit(int i) const;
+	int getNumDefendAgainstUnits() const;
+	bool isDefendAgainstUnit(int i) const;		//Exposed to Python
+
 	int getSupersedingUnit(int i) const;
 	int getNumSupersedingUnits() const;
-	bool isSupersedingUnit(int i) const; 			//Exposed to Python
+	bool isSupersedingUnit(int i) const;		//Exposed to Python
 
-	bool getUpgradeUnitClass(int i) const;			// Exposed to Python
-	bool getTargetUnitClass(int i) const;			// Exposed to Python
+	int getUnitUpgrade(int i) const;			//Exposed to Python
+	int getNumUnitUpgrades() const;				//Exposed to Python
+	bool isUnitUpgrade(int i) const;			//Exposed to Python
+
+	std::vector<int> getUnitUpgradeChain() const;
+	void CvUnitInfo::addUnitToUpgradeChain(int i);
+
 	bool getTargetUnitCombat(int i) const;			// Exposed to Python
-	bool getDefenderUnitClass(int i) const;			// Exposed to Python
 	bool getDefenderUnitCombat(int i) const;		// Exposed to Python
 	bool getUnitAIType(int i) const;				// Exposed to Python
 	bool getNotUnitAIType(int i) const;				// Exposed to Python
@@ -2458,8 +2467,11 @@ public:
 	void write(FDataStreamBase* ) {}
 
 	bool read(CvXMLLoadUtility* pXML);
-
+	bool readPass2(CvXMLLoadUtility* pXML);
+	bool readPass3();
 	void copyNonDefaults(CvUnitInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
+	void copyNonDefaultsReadPass2(CvUnitInfo* pClassInfo = NULL , CvXMLLoadUtility* pXML = NULL, bool bOver = false);
+
 	std::vector<int>& getSubCombatTypes();
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 
@@ -2542,8 +2554,14 @@ protected:
 	int m_iPrereqBuilding;
 	int m_iPrereqAndTech;
 	int m_iPrereqAndBonus;
+
 	std::vector<int> m_aePrereqOrBuildings;
+	std::vector<int> m_aiTargetUnit;
+	std::vector<int> m_aiDefendAgainstUnit;
 	std::vector<int> m_aiSupersedingUnits;
+	std::vector<int> m_aiUnitUpgrades;
+	std::vector<int> m_aiUnitUpgradeChain;
+
 	int m_iGroupSize;
 	int m_iGroupDefinitions;
 	int m_iUnitMeleeWaveSize;
@@ -2613,8 +2631,8 @@ protected:
 	int* m_piTerrainDefenseModifier;
 	int* m_piFeatureAttackModifier;
 	int* m_piFeatureDefenseModifier;
-	int* m_piUnitClassAttackModifier;
-	int* m_piUnitClassDefenseModifier;
+	int* m_piUnitAttackModifier;
+	int* m_piUnitDefenseModifier;
 	int* m_piUnitCombatModifier;
 	int* m_piUnitCombatCollateralImmune;
 	int* m_piDomainModifier;
@@ -2624,17 +2642,14 @@ protected:
 	int* m_piCorporationSpreads;
 	int* m_piTerrainPassableTech;
 	int* m_piFeaturePassableTech;
-	int* m_piFlankingStrikeUnitClass;
+	int* m_piFlankingStrikeUnit;
 
 	bool* m_pbPrereqOrCivics;
 	bool* m_pbPrereqBuildingClass;
 	int* m_piPrereqBuildingClassOverrideTech;
 	int* m_piPrereqBuildingClassOverrideEra;
 
-	bool* m_pbUpgradeUnitClass;
-	bool* m_pbTargetUnitClass;
 	bool* m_pbTargetUnitCombat;
-	bool* m_pbDefenderUnitClass;
 	bool* m_pbDefenderUnitCombat;
 	bool* m_pbUnitAIType;
 	bool* m_pbNotUnitAIType;
@@ -3600,7 +3615,7 @@ public:
 	int getGlobalReligionCommerce() const;		// Exposed to Python
 	int getGlobalCorporationCommerce() const;	// Exposed to Python
 	int getPrereqAndBonus() const;				// Exposed to Python
-	int getGreatPeopleUnitClass() const;		// Exposed to Python
+	int getGreatPeopleUnitType() const;		// Exposed to Python
 	int getGreatPeopleRateChange() const;		// Exposed to Python
 	int getConquestProbability() const;			// Exposed to Python
 	int getMaintenanceModifier() const;			// Exposed to Python
@@ -3994,7 +4009,7 @@ public:
 	const FreePromoTypes& getFreePromoType(int iPromotion) const;
 
 	int getNumFreeTraitTypes() const;
-	FreeTraitTypes& getFreeTraitType(int iIndex);
+	int getFreeTraitType(int iIndex) const;
 
 	int getNumHealUnitCombatTypes() const;
 	HealUnitCombat& getHealUnitCombatType(int iUnitCombat);
@@ -4207,7 +4222,7 @@ protected:
 	int m_iGlobalReligionCommerce;
 	int m_iGlobalCorporationCommerce;
 	int m_iPrereqAndBonus;
-	int m_iGreatPeopleUnitClass;
+	int m_iGreatPeopleUnitType;
 	int m_iGreatPeopleRateChange;
 	int m_iConquestProbability;
 	int m_iMaintenanceModifier;
@@ -4418,7 +4433,7 @@ protected:
 	BoolExpr* m_pExprFreePromotionCondition;*/
 	//Structs
 	std::vector<FreePromoTypes> m_aFreePromoTypes;
-	std::vector<FreeTraitTypes> m_aFreeTraitTypes;
+	std::vector<int> m_aiFreeTraitTypes;
 	std::vector<HealUnitCombat> m_aHealUnitCombatTypes;
 	std::vector<EnabledCivilizations> m_aEnabledCivilizationTypes;
 	std::vector<BonusAidModifiers> m_aBonusAidModifiers;
@@ -7439,7 +7454,7 @@ public:
 	int getPrereqOrTrait1() const;
 	int getPrereqOrTrait2() const;
 	PromotionLineTypes getPromotionLine() const;
-	int getGreatPeopleUnitClass() const;
+	int getGreatPeopleUnitType() const;
 	TechTypes getPrereqTech() const;
 	//Team Project (6)
 	SpecialistTypes getEraAdvanceFreeSpecialistType() const;
@@ -7627,7 +7642,7 @@ public:
 
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
-	bool readPass3();
+
 	void copyNonDefaults(CvTraitInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL );
 	void copyNonDefaultsReadPass2(CvTraitInfo* pClassInfo = NULL , CvXMLLoadUtility* pXML = NULL, bool bOver = false);
 	void getCheckSum(unsigned int& iSum);
@@ -7690,7 +7705,7 @@ protected:
 	int m_iPrereqOrTrait2;
 	TechTypes m_ePrereqTech;
 	PromotionLineTypes m_ePromotionLine;
-	int m_iGreatPeopleUnitClass;
+	int m_iGreatPeopleUnitType;
 	//Team Project (6)
 	SpecialistTypes m_eEraAdvanceFreeSpecialistType;
 	int m_iGoldenAgeonBirthofGreatPeopleType;

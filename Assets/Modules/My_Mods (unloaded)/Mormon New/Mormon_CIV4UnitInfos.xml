@@ -27,12 +27,6 @@
 			<Civilopedia>TXT_KEY_CONCEPT_RELIGION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_MORMON_MISSIONARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<!--UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_RETURNED_MISSIONARY</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades-->
 			<ReligionSpreads>
 				<ReligionSpread>
 					<ReligionType>RELIGION_MORMON</ReligionType>
@@ -104,16 +98,6 @@
 			<bNoCapture>1</bNoCapture>
 			<PrereqReligion>RELIGION_MORMON</PrereqReligion>
 			<PrereqBuilding>BUILDING_MORMON_MONASTERY</PrereqBuilding>
-			<!--UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_TOWN_WATCHMEN</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_MUSKETMAN</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades-->
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_RESERVE</UnitAIType>

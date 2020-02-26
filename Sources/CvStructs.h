@@ -80,12 +80,7 @@ struct FreePromoTypes
 	operator int() const {return (int)ePromotion;}
 	bool operator< (const FreePromoTypes& rhs) const {return (int)ePromotion < (int)rhs.ePromotion;}
 };
-struct FreeTraitTypes
-{	
-	TraitTypes eTrait;
-	operator int() const {return (int)eTrait;}
-	bool operator< (const FreeTraitTypes& rhs) const {return (int)eTrait < (int)rhs.eTrait;}
-};
+
 struct AfflictOnAttack
 {	
 	PromotionLineTypes eAfflictionLine;

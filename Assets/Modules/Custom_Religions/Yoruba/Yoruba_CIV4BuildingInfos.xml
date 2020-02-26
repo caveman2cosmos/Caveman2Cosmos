@@ -19,7 +19,7 @@
 			<StateReligion>RELIGION_YORUBA</StateReligion>
 			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_YORUBA</PrereqReligion>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>160</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -84,7 +84,7 @@
 			<StateReligion>RELIGION_YORUBA</StateReligion>
 			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_YORUBA</PrereqReligion>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>160</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -147,7 +147,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_OLOFIN</ArtDefineTag>
 			<ReligionType>RELIGION_YORUBA</ReligionType>
 			<PrereqReligion>RELIGION_YORUBA</PrereqReligion>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>160</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -197,7 +197,7 @@
 			<StateReligion>RELIGION_YORUBA</StateReligion>
 			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_YORUBA</PrereqReligion>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>160</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -294,7 +294,7 @@
 			<StateReligion>RELIGION_YORUBA</StateReligion>
 			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_YORUBA</PrereqReligion>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>160</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -366,7 +366,7 @@
 			<HolyCity>RELIGION_YORUBA</HolyCity>
 			<ReligionType>RELIGION_YORUBA</ReligionType>
 			<GlobalReligionCommerce>RELIGION_YORUBA</GlobalReligionCommerce>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>-1</iCost>

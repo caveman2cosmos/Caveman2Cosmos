@@ -49,12 +49,9 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<PrereqBuilding>BUILDING_MAPINGUARI_COMPOUND</PrereqBuilding>
 			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_MAPINGUARI_STONE</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_MAPINGUARI_STONE</UnitType>
+			</UnitUpgrades>
 			<ForceObsoleteTech>TECH_SPEAR_MAKING</ForceObsoleteTech>
 			<iCost>100</iCost>
 			<iMoves>1</iMoves>
@@ -136,12 +133,9 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<PrereqTech>TECH_SPEAR_MAKING</PrereqTech>
 			<PrereqBuilding>BUILDING_MAPINGUARI_COMPOUND</PrereqBuilding>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_MAPINGUARI_OBSIDIAN</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_MAPINGUARI_OBSIDIAN</UnitType>
+			</UnitUpgrades>
 			<ForceObsoleteTech>TECH_IRON_WORKING</ForceObsoleteTech>
 			<iCost>110</iCost>
 			<iMoves>1</iMoves>
@@ -223,12 +217,9 @@
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
 			<PrereqBuilding>BUILDING_MAPINGUARI_COMPOUND</PrereqBuilding>
 			<BonusType>BONUS_OBSIDIAN</BonusType>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_MAPINGUARI</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_MAPINGUARI</UnitType>
+			</UnitUpgrades>
 			<ForceObsoleteTech>TECH_IRON_WORKING</ForceObsoleteTech>
 			<iCost>140</iCost>
 			<iMoves>1</iMoves>
@@ -315,12 +306,9 @@
 				<BonusType>BONUS_BRONZE_WARES</BonusType>
 				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_MAPINGUARI_PIKE</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_MAPINGUARI_PIKE</UnitType>
+			</UnitUpgrades>
 			<ForceObsoleteTech>TECH_GUNPOWDER</ForceObsoleteTech>
 			<iCost>275</iCost>
 			<iMoves>1</iMoves>

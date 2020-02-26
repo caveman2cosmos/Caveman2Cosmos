@@ -28,7 +28,7 @@
 		<Italian>Il [COLOR_UNIT_TEXT]Rinoceronte asiatico da guerra[COLOR_REVERT] è un arma ad uso singolo, che causa danni collaterali alle pile di unità.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_RHINO_RIDER</Tag>
+		<Tag>TXT_KEY_UNIT_RHINO_SWORDSMAN</Tag>
 		<English>Rhinoceros Rider</English>
 		<French>
 			<Text>Monteur de Rhinocéros</Text>
@@ -39,12 +39,12 @@
 		<Polish>Jeździec (Nosorożec)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_RHINO_RIDER_PEDIA</Tag>
+		<Tag>TXT_KEY_UNIT_RHINO_SWORDSMAN_PEDIA</Tag>
 		<English>There is no evidence this unit was ever used.  It is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT].  Technologies that might have been.</English>
 		<Italian>Non c'è alcuna prova che quest'unità sia mai stata usata in battaglia. Fa parte delle [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_RHINO_RIDER_STRATEGY</Tag>
+		<Tag>TXT_KEY_UNIT_RHINO_SWORDSMAN_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Rhinoceros Riders[COLOR_REVERT] are early-game mounted units. This particular rider is using [COLOR_HIGHLIGHT_TEXT]Rhinos[COLOR_REVERT] instead [COLOR_HIGHLIGHT_TEXT]Horses[COLOR_REVERT]. Its slower then rest of the Riders but stronger. They have bonuses in siege cities and cause collateral damage.</English>
 		<French>[COLOR_UNIT_TEXT]Monteur de Rhinocéros[COLOR_REVERT] are</French>
 		<Italian>I [COLOR_UNIT_TEXT]Cavalcatori di rinoceronti[COLOR_REVERT] sono</Italian>

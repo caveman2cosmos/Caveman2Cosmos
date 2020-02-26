@@ -495,7 +495,7 @@ public:
 	
 	int AI_calculateTotalBombard(DomainTypes eDomain) const;
 	
-	int AI_getUnitClassWeight(UnitClassTypes eUnitClass) const;
+	int AI_getUnitWeight(UnitTypes eUnit) const;
 	int AI_getUnitCombatWeight(UnitCombatTypes eUnitCombat) const;
 	int AI_calculateUnitAIViability(UnitAITypes eUnitAI, DomainTypes eDomain) const;
 	
@@ -666,7 +666,7 @@ protected:
 	int* m_aiBonusValue;
 	int* m_aiTradeBonusValue;
 	bool* m_abNonTradeBonusCalculated;
-	int* m_aiUnitClassWeights;
+	int* m_aiUnitWeights;
 	int* m_aiUnitCombatWeights;
 	
 	mutable int* m_aiCloseBordersAttitudeCache;

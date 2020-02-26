@@ -423,15 +423,6 @@
 			<Button>Art/Interface/Buttons/Builds/BuildModernMine.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_VERTICAL_FARM</Type>
-			<bExtraAnimations>1</bExtraAnimations>
-			<fScale>1.0</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Structures/Improvements/future_refinery/Extractor.nif</NIF>
-			<KFM/>
-			<Button>,Art/Interface/Buttons/Builds/BuildFarm.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,3,7</Button>
-		</ImprovementArtInfo>
-		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_COMMAND_CENTER</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>3.5</fScale>

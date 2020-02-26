@@ -440,55 +440,55 @@ void BoolExprHas::buildDisplayString(CvWStringBuffer &szBuffer) const
 	switch (m_eGOM)
 	{
 		case GOM_BUILDING:
-			szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getBuildingInfo((BuildingTypes)m_iID).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes)m_iID).getDescription()));
+			szBuffer.append(CvWString::format(L"<link=%s>%s</link>", CvWString(GC.getBuildingInfo((BuildingTypes)m_iID).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes)m_iID).getDescription()));
 			break;
 		case GOM_PROMOTION:
-			szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getPromotionInfo((PromotionTypes)m_iID).getType()).GetCString(), GC.getPromotionInfo((PromotionTypes)m_iID).getDescription()));
+			szBuffer.append(CvWString::format(L"<link=%s>%s</link>", CvWString(GC.getPromotionInfo((PromotionTypes)m_iID).getType()).GetCString(), GC.getPromotionInfo((PromotionTypes)m_iID).getDescription()));
 			break;
 		case GOM_TRAIT:
-			szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getTraitInfo((TraitTypes)m_iID).getType()).GetCString(), GC.getTraitInfo((TraitTypes)m_iID).getDescription()));
+			szBuffer.append(CvWString::format(L"<link=%s>%s</link>", CvWString(GC.getTraitInfo((TraitTypes)m_iID).getType()).GetCString(), GC.getTraitInfo((TraitTypes)m_iID).getDescription()));
 			break;
 		case GOM_FEATURE:
-			szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getFeatureInfo((FeatureTypes)m_iID).getType()).GetCString(), GC.getFeatureInfo((FeatureTypes)m_iID).getDescription()));
+			szBuffer.append(CvWString::format(L"<link=%s>%s</link>", CvWString(GC.getFeatureInfo((FeatureTypes)m_iID).getType()).GetCString(), GC.getFeatureInfo((FeatureTypes)m_iID).getDescription()));
 			break;
 		case GOM_OPTION:
-			szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getGameOptionInfo((GameOptionTypes)m_iID).getType()).GetCString(), GC.getGameOptionInfo((GameOptionTypes)m_iID).getDescription()));
+			szBuffer.append(CvWString::format(L"<link=%s>%s</link>", CvWString(GC.getGameOptionInfo((GameOptionTypes)m_iID).getType()).GetCString(), GC.getGameOptionInfo((GameOptionTypes)m_iID).getDescription()));
 			break;
 		case GOM_TERRAIN:
-			szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getTerrainInfo((TerrainTypes)m_iID).getType()).GetCString(), GC.getTerrainInfo((TerrainTypes)m_iID).getDescription()));
+			szBuffer.append(CvWString::format(L"<link=%s>%s</link>", CvWString(GC.getTerrainInfo((TerrainTypes)m_iID).getType()).GetCString(), GC.getTerrainInfo((TerrainTypes)m_iID).getDescription()));
 			break;
 		case GOM_GAMESPEED:
-			szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getGameSpeedInfo((GameSpeedTypes)m_iID).getType()).GetCString(), GC.getGameSpeedInfo((GameSpeedTypes)m_iID).getDescription()));
+			szBuffer.append(CvWString::format(L"<link=%s>%s</link>", CvWString(GC.getGameSpeedInfo((GameSpeedTypes)m_iID).getType()).GetCString(), GC.getGameSpeedInfo((GameSpeedTypes)m_iID).getDescription()));
 			break;
 		case GOM_ROUTE:
-			szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getRouteInfo((RouteTypes)m_iID).getType()).GetCString(), GC.getRouteInfo((RouteTypes)m_iID).getDescription()));
+			szBuffer.append(CvWString::format(L"<link=%s>%s</link>", CvWString(GC.getRouteInfo((RouteTypes)m_iID).getType()).GetCString(), GC.getRouteInfo((RouteTypes)m_iID).getDescription()));
 			break;
 		case GOM_BONUS:
-			szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getBonusInfo((BonusTypes)m_iID).getType()).GetCString(), GC.getBonusInfo((BonusTypes)m_iID).getDescription()));
+			szBuffer.append(CvWString::format(L"<link=%s>%s</link>", CvWString(GC.getBonusInfo((BonusTypes)m_iID).getType()).GetCString(), GC.getBonusInfo((BonusTypes)m_iID).getDescription()));
 			break;
 		case GOM_UNITTYPE:
-			szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getUnitInfo((UnitTypes)m_iID).getType()).GetCString(), GC.getUnitInfo((UnitTypes)m_iID).getDescription()));
+			szBuffer.append(CvWString::format(L"<link=%s>%s</link>", CvWString(GC.getUnitInfo((UnitTypes)m_iID).getType()).GetCString(), GC.getUnitInfo((UnitTypes)m_iID).getDescription()));
 			break;
 		case GOM_TECH:
-			szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getTechInfo((TechTypes)m_iID).getType()).GetCString(), GC.getTechInfo((TechTypes)m_iID).getDescription()));
+			szBuffer.append(CvWString::format(L"<link=%s>%s</link>", CvWString(GC.getTechInfo((TechTypes)m_iID).getType()).GetCString(), GC.getTechInfo((TechTypes)m_iID).getDescription()));
 			break;
 		case GOM_CIVIC:
-			szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getCivicInfo((CivicTypes)m_iID).getType()).GetCString(), GC.getCivicInfo((CivicTypes)m_iID).getDescription()));
+			szBuffer.append(CvWString::format(L"<link=%s>%s</link>", CvWString(GC.getCivicInfo((CivicTypes)m_iID).getType()).GetCString(), GC.getCivicInfo((CivicTypes)m_iID).getDescription()));
 			break;
 		case GOM_RELIGION:
-			szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getReligionInfo((ReligionTypes)m_iID).getType()).GetCString(), GC.getReligionInfo((ReligionTypes)m_iID).getDescription()));
+			szBuffer.append(CvWString::format(L"<link=%s>%s</link>", CvWString(GC.getReligionInfo((ReligionTypes)m_iID).getType()).GetCString(), GC.getReligionInfo((ReligionTypes)m_iID).getDescription()));
 			break;
 		case GOM_CORPORATION:
-			szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getCorporationInfo((CorporationTypes)m_iID).getType()).GetCString(), GC.getCorporationInfo((CorporationTypes)m_iID).getDescription()));
+			szBuffer.append(CvWString::format(L"<link=%s>%s</link>", CvWString(GC.getCorporationInfo((CorporationTypes)m_iID).getType()).GetCString(), GC.getCorporationInfo((CorporationTypes)m_iID).getDescription()));
 			break;
 		case GOM_IMPROVEMENT:
-			szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getImprovementInfo((ImprovementTypes)m_iID).getType()).GetCString(), GC.getImprovementInfo((ImprovementTypes)m_iID).getDescription()));
+			szBuffer.append(CvWString::format(L"<link=%s>%s</link>", CvWString(GC.getImprovementInfo((ImprovementTypes)m_iID).getType()).GetCString(), GC.getImprovementInfo((ImprovementTypes)m_iID).getDescription()));
 			break;
 		case GOM_UNITCOMBAT:
-			szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getUnitCombatInfo((UnitCombatTypes)m_iID).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)m_iID).getDescription()));
+			szBuffer.append(CvWString::format(L"<link=%s>%s</link>", CvWString(GC.getUnitCombatInfo((UnitCombatTypes)m_iID).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes)m_iID).getDescription()));
 			break;
 		case GOM_HANDICAP:
-			szBuffer.append(CvWString::format(L"<link=%s>%s", CvWString(GC.getHandicapInfo((HandicapTypes)m_iID).getType()).GetCString(), GC.getHandicapInfo((HandicapTypes)m_iID).getDescription()));
+			szBuffer.append(CvWString::format(L"<link=%s>%s</link>", CvWString(GC.getHandicapInfo((HandicapTypes)m_iID).getType()).GetCString(), GC.getHandicapInfo((HandicapTypes)m_iID).getDescription()));
 			break;
 	}
 }

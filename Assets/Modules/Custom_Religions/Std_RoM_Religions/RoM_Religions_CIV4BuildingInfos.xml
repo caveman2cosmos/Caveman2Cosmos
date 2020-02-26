@@ -177,9 +177,9 @@
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_ERECTION</BuildingClass>
 			<Type>BUILDING_ERECTION</Type>
-			<Description>TXT_KEY_BUILDING_ERECHTHEUM</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ERECHTHEUM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ERECHTHEUM_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_ERECTION</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ERECTION_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ERECTION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ERECTION</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ERECTION</MovieDefineTag>
@@ -192,7 +192,7 @@
 				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			</TechTypes>
 			<FreePromotion>PROMOTION_COASTAL_GUARD1</FreePromotion>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bWater>1</bWater>
 			<iCost>1566</iCost>
@@ -283,7 +283,7 @@
 			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_HELLENISM</PrereqReligion>
 			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<iCost>1104</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
@@ -380,7 +380,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			</TechTypes>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>1566</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
@@ -478,7 +478,7 @@
 			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
 			<PrereqTech>TECH_CALENDAR</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>-100</iHurryAngerModifier>
 			<iCost>1404</iCost>
@@ -557,7 +557,7 @@
 			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
 			<PrereqTech>TECH_CALENDAR</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>-100</iHurryAngerModifier>
 			<iCost>1404</iCost>
@@ -712,7 +712,7 @@
 			<StateReligion>RELIGION_MESOPOTAMISM</StateReligion>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<PrereqTech>TECH_DUALISM</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>1008</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
@@ -795,7 +795,7 @@
 			<Bonus>BONUS_STONE</Bonus>
 			<iCost>1566</iCost>
 			<iConquestProb>25</iConquestProb>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>4</iGreatPeopleRateChange>
 			<iHappiness>2</iHappiness>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
@@ -841,7 +841,7 @@
 			</TechTypes>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<iDomesticGreatGeneralRateModifier>100</iDomesticGreatGeneralRateModifier>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>4</iGreatPeopleRateChange>
 			<iCost>1620</iCost>
 			<iConquestProb>25</iConquestProb>
@@ -883,7 +883,7 @@
 			<PrereqReligion>RELIGION_ZOROASTRIANISM</PrereqReligion>
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>4</iGreatPeopleRateChange>
 			<FreePromotion>PROMOTION_MORALE</FreePromotion>
 			<iCost>1860</iCost>
@@ -928,7 +928,7 @@
 			<PrereqReligion>RELIGION_ZOROASTRIANISM</PrereqReligion>
 			<PrereqTech>TECH_PRIESTHOOD</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iCost>160</iCost>
 			<iConquestProb>100</iConquestProb>

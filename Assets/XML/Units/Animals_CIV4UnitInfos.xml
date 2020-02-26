@@ -1791,24 +1791,12 @@
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
-			<UnitClassTargets>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_DUCK</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_LIZARD</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_OPOSSUM</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_PHEASANT</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-			</UnitClassTargets>
+			<UnitTargets>
+				<UnitType>UNIT_DUCK</UnitType>
+				<UnitType>UNIT_LIZARD</UnitType>
+				<UnitType>UNIT_OPOSSUM</UnitType>
+				<UnitType>UNIT_PHEASANT</UnitType>
+			</UnitTargets>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -3132,8 +3120,8 @@
 					<Title>TXT_KEY_GROUPTITLE_OBSTINANCY</Title>
 				</GroupSpawnUnitCombatType>
 			</GroupSpawnUnitCombatTypes>
-			<Description>TXT_KEY_UNIT_BUFFALO_CAPE</Description>
-			<Civilopedia>TXT_KEY_UNIT_BUFFALO_CAPE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_UNIT_BUFFALO</Description>
+			<Civilopedia>TXT_KEY_UNIT_BUFFALO_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -3270,8 +3258,8 @@
 					<Title>TXT_KEY_GROUPTITLE_CONGREGATION</Title>
 				</GroupSpawnUnitCombatType>
 			</GroupSpawnUnitCombatTypes>
-			<Description>TXT_KEY_UNIT_CAIMAN_BLACK</Description>
-			<Civilopedia>TXT_KEY_UNIT_CAIMAN_BLACK_PEDIA</Civilopedia>
+			<Description>TXT_KEY_UNIT_CAIMAN</Description>
+			<Civilopedia>TXT_KEY_UNIT_CAIMAN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -5458,8 +5446,8 @@
 				<SubCombatType>UNITCOMBAT_SIZE_TINY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
-			<Description>TXT_KEY_UNIT_TORTOISE</Description>
-			<Civilopedia>TXT_KEY_UNIT_TORTOISE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_UNIT_DESERT_TORTOISE</Description>
+			<Civilopedia>TXT_KEY_UNIT_DESERT_TORTOISE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -6661,7 +6649,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_ELEPHANT_AFRICAN</Class>
-			<Type>UNIT_AFRICANELEPHANT</Type>
+			<Type>UNIT_ELEPHANT_AFRICAN</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WILD</SubCombatType>
@@ -6761,7 +6749,7 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_AFRICANELEPHANT</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_ELEPHANT_AFRICAN</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
@@ -6802,7 +6790,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_ELEPHANT_ASIAN</Class>
-			<Type>UNIT_ELEPHANT</Type>
+			<Type>UNIT_ELEPHANT_ASIAN</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WILD</SubCombatType>
@@ -6887,7 +6875,7 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_ELEPHANT</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_ELEPHANT_ASIAN</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
@@ -7572,8 +7560,8 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
-			<Description>TXT_KEY_UNIT_TORTOISE2</Description>
-			<Civilopedia>TXT_KEY_UNIT_TORTOISE2_PEDIA</Civilopedia>
+			<Description>TXT_KEY_UNIT_GALAPOGOS_TORTOISE</Description>
+			<Civilopedia>TXT_KEY_UNIT_GALAPOGOS_TORTOISE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -9823,28 +9811,13 @@
 			<iAnimalIgnoresBorders>2</iAnimalIgnoresBorders>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bAssassin>1</bAssassin>
-			<UnitClassTargets>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_AARDVARK</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_ANTEATER</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_ARMADILLO</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_IGUANA</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_TREESLOTH</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-			</UnitClassTargets>
+			<UnitTargets>
+				<UnitType>UNIT_AARDVARK</UnitType>
+				<UnitType>UNIT_ANTEATER</UnitType>
+				<UnitType>UNIT_ARMADILLO</UnitType>
+				<UnitType>UNIT_IGUANA</UnitType>
+				<UnitType>UNIT_TREESLOTH</UnitType>
+			</UnitTargets>
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_BIRD_PARROT</UnitCombatTargetType>
@@ -10343,32 +10316,14 @@
 			<iAnimalIgnoresBorders>2</iAnimalIgnoresBorders>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bAssassin>1</bAssassin>
-			<UnitClassTargets>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_ARMADILLO</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_CRAB</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_OPOSSUM</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_SKUNK</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_JUNGLE_TARANTULA</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_DESERT_TARANTULA</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-			</UnitClassTargets>
+			<UnitTargets>
+				<UnitType>UNIT_ARMADILLO</UnitType>
+				<UnitType>UNIT_CRAB</UnitType>
+				<UnitType>UNIT_OPOSSUM</UnitType>
+				<UnitType>UNIT_SKUNK</UnitType>
+				<UnitType>UNIT_JUNGLE_TARANTULA</UnitType>
+				<UnitType>UNIT_DESERT_TARANTULA</UnitType>
+			</UnitTargets>
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_BIRD_GAMEBIRD</UnitCombatTargetType>
@@ -10763,20 +10718,11 @@
 				</UnitAI>
 			</UnitAIs>
 			<bAssassin>1</bAssassin>
-			<UnitClassTargets>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_BOAR</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_DESERT_TORTOISE</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_DONKEY</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-			</UnitClassTargets>
+			<UnitTargets>
+				<UnitType>UNIT_BOAR</UnitType>
+				<UnitType>UNIT_DESERT_TORTOISE</UnitType>
+				<UnitType>UNIT_DONKEY</UnitType>
+			</UnitTargets>
 			<iCost>-1</iCost>
 			<iMoves>2</iMoves>
 			<TerrainImpassableTypes>
@@ -11957,20 +11903,11 @@
 				</UnitAI>
 			</UnitAIs>
 			<bAssassin>1</bAssassin>
-			<UnitClassTargets>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_BUFFALO</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_WILDEBEEST</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_ZEBRA</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-			</UnitClassTargets>
+			<UnitTargets>
+				<UnitType>UNIT_BUFFALO</UnitType>
+				<UnitType>UNIT_WILDEBEEST</UnitType>
+				<UnitType>UNIT_ZEBRA</UnitType>
+			</UnitTargets>
 			<iCost>-1</iCost>
 			<iMoves>2</iMoves>
 			<InvisibleTerrainChanges>
@@ -16994,20 +16931,11 @@
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
-			<UnitClassTargets>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_IGUANA</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_LIZARD</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_MONITOR</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-			</UnitClassTargets>
+			<UnitTargets>
+				<UnitType>UNIT_IGUANA</UnitType>
+				<UnitType>UNIT_LIZARD</UnitType>
+				<UnitType>UNIT_MONITOR</UnitType>
+			</UnitTargets>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<TerrainImpassableTypes>
@@ -19359,7 +19287,7 @@
 					<Title>TXT_KEY_GROUPTITLE_ROOKERY</Title>
 				</GroupSpawnUnitCombatType>
 			</GroupSpawnUnitCombatTypes>
-			<Description>TXT_KEY_UNIT_SEALION</Description>
+			<Description>TXT_KEY_UNIT_SEALION_LAND</Description>
 			<Civilopedia>TXT_KEY_UNIT_SEALION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
@@ -19488,7 +19416,7 @@
 					<Title>TXT_KEY_GROUPTITLE_HERD</Title>
 				</GroupSpawnUnitCombatType>
 			</GroupSpawnUnitCombatTypes>
-			<Description>TXT_KEY_UNIT_SEALION</Description>
+			<Description>TXT_KEY_UNIT_SEALION_SEA</Description>
 			<Civilopedia>TXT_KEY_UNIT_SEALION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
@@ -20462,24 +20390,12 @@
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
-			<UnitClassTargets>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_IBEX</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_MOUFLON</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_REDPANDA</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_STAG_DEER</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-			</UnitClassTargets>
+			<UnitTargets>
+				<UnitType>UNIT_IBEX</UnitType>
+				<UnitType>UNIT_MOUFLON</UnitType>
+				<UnitType>UNIT_REDPANDA</UnitType>
+				<UnitType>UNIT_STAG_DEER</UnitType>
+			</UnitTargets>
 			<iCost>-1</iCost>
 			<iMoves>2</iMoves>
 			<TerrainImpassableTypes>
@@ -20649,20 +20565,11 @@
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
-			<UnitClassTargets>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_COW</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_GUANACO</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_STAG_DEER</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-			</UnitClassTargets>
+			<UnitTargets>
+				<UnitType>UNIT_COW</UnitType>
+				<UnitType>UNIT_GUANACO</UnitType>
+				<UnitType>UNIT_STAG_DEER</UnitType>
+			</UnitTargets>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<TerrainImpassableTypes>
@@ -21691,12 +21598,9 @@
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
-			<UnitClassTargets>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_WOMBAT</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-			</UnitClassTargets>
+			<UnitTargets>
+				<UnitType>UNIT_WOMBAT</UnitType>
+			</UnitTargets>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<TerrainImpassableTypes>
@@ -21951,12 +21855,9 @@
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
-			<UnitClassTargets>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_WOMBAT</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-			</UnitClassTargets>
+			<UnitTargets>
+				<UnitType>UNIT_WOMBAT</UnitType>
+			</UnitTargets>
 			<iCost>-1</iCost>
 			<iMoves>2</iMoves>
 			<TerrainImpassableTypes>
@@ -23739,20 +23640,11 @@
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
-			<UnitClassTargets>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_ARCTICFOX</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_LYNX</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_REDFOX</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-			</UnitClassTargets>
+			<UnitTargets>
+				<UnitType>UNIT_ARCTICFOX</UnitType>
+				<UnitType>UNIT_LYNX</UnitType>
+				<UnitType>UNIT_REDFOX</UnitType>
+			</UnitTargets>
 			<iCost>-1</iCost>
 			<iMoves>2</iMoves>
 			<TerrainImpassableTypes>

@@ -1376,23 +1376,11 @@
 	<ElementType name="bMilitaryTrade" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bGreatGeneral" content="textOnly" dt:type="boolean"/>
 	<!-- DIPLOMACYMOD END -->
-	<ElementType name="UnitClassUpgradeType" content="textOnly"/>
-	<ElementType name="bUnitClassUpgrade" content="textOnly" dt:type="boolean"/>
-	<ElementType name="UnitClassUpgrade" content="eltOnly">
-		<element type="UnitClassUpgradeType"/>
-		<element type="bUnitClassUpgrade"/>
+	<ElementType name="UnitUpgrades" content="eltOnly">
+		<element type="UnitType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="UnitClassUpgrades" content="eltOnly">
-		<element type="UnitClassUpgrade" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="UnitClassTargetType" content="textOnly"/>
-	<ElementType name="bUnitClassTarget" content="textOnly" dt:type="boolean"/>
-	<ElementType name="UnitClassTarget" content="eltOnly">
-		<element type="UnitClassTargetType"/>
-		<element type="bUnitClassTarget"/>
-	</ElementType>
-	<ElementType name="UnitClassTargets" content="eltOnly">
-		<element type="UnitClassTarget" minOccurs="0" maxOccurs="*"/>
+	<ElementType name="UnitTargets" content="eltOnly">
+		<element type="UnitType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="UnitCombatTargetType" content="textOnly"/>
 	<ElementType name="bUnitCombatTarget" content="textOnly" dt:type="boolean"/>
@@ -1403,14 +1391,8 @@
 	<ElementType name="UnitCombatTargets" content="eltOnly">
 		<element type="UnitCombatTarget" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="UnitClassDefenderType" content="textOnly"/>
-	<ElementType name="bUnitClassDefender" content="textOnly" dt:type="boolean"/>
-	<ElementType name="UnitClassDefender" content="eltOnly">
-		<element type="UnitClassDefenderType"/>
-		<element type="bUnitClassDefender"/>
-	</ElementType>
-	<ElementType name="UnitClassDefenders" content="eltOnly">
-		<element type="UnitClassDefender" minOccurs="0" maxOccurs="*"/>
+	<ElementType name="DefendAgainstUnit" content="eltOnly">
+		<element type="UnitType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="UnitCombatDefenderType" content="textOnly"/>
 	<ElementType name="bUnitCombatDefender" content="textOnly" dt:type="boolean"/>
@@ -1421,10 +1403,9 @@
 	<ElementType name="UnitCombatDefenders" content="eltOnly">
 		<element type="UnitCombatDefender" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="FlankingStrikeUnitClass" content="textOnly"/>
 	<ElementType name="iFlankingStrength" content="textOnly" dt:type="int"/>
 	<ElementType name="FlankingStrike" content="eltOnly">
-		<element type="FlankingStrikeUnitClass"/>
+		<element type="UnitType"/>
 		<element type="iFlankingStrength"/>
 	</ElementType>
 	<ElementType name="FlankingStrikes" content="eltOnly">
@@ -1683,21 +1664,19 @@
 	<ElementType name="FeatureWorks" content="eltOnly">
 		<element type="FeatureWork" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="UnitClassType" content="textOnly"/>
-	<ElementType name="iUnitClassMod" content="textOnly" dt:type="int"/>
-	<ElementType name="UnitClassAttackMod" content="eltOnly">
-		<element type="UnitClassType"/>
-		<element type="iUnitClassMod"/>
+	<ElementType name="UnitAttackMod" content="eltOnly">
+		<element type="UnitType"/>
+		<element type="iModifier"/>
 	</ElementType>
-	<ElementType name="UnitClassAttackMods" content="eltOnly">
-		<element type="UnitClassAttackMod" minOccurs="0" maxOccurs="*"/>
+	<ElementType name="UnitAttackMods" content="eltOnly">
+		<element type="UnitAttackMod" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="UnitClassDefenseMod" content="eltOnly">
-		<element type="UnitClassType"/>
-		<element type="iUnitClassMod"/>
+	<ElementType name="UnitDefenseMod" content="eltOnly">
+		<element type="UnitType"/>
+		<element type="iModifier"/>
 	</ElementType>
-	<ElementType name="UnitClassDefenseMods" content="eltOnly">
-		<element type="UnitClassDefenseMod" minOccurs="0" maxOccurs="*"/>
+	<ElementType name="UnitDefenseMods" content="eltOnly">
+		<element type="UnitDefenseMod" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="UnitCombatType" content="textOnly"/>
 	<ElementType name="TechType" content="textOnly"/>
@@ -1994,10 +1973,10 @@
 		<element type="iSelfHealModifier" minOccurs="0"/>
 		<element type="iNumHealSupport" minOccurs="0"/>
 		<element type="HealUnitCombatTypes" minOccurs="0"/>
-		<element type="UnitClassUpgrades" minOccurs="0"/>
-		<element type="UnitClassTargets" minOccurs="0"/>
+		<element type="UnitUpgrades" minOccurs="0"/>
+		<element type="UnitTargets" minOccurs="0"/>
 		<element type="UnitCombatTargets" minOccurs="0"/>
-		<element type="UnitClassDefenders" minOccurs="0"/>
+		<element type="DefendAgainstUnit" minOccurs="0"/>
 		<element type="UnitCombatDefenders" minOccurs="0"/>
 		<element type="FlankingStrikes" minOccurs="0"/>
 		<element type="UnitAIs" minOccurs="0"/>
@@ -2181,8 +2160,8 @@
 		<element type="TerrainDefenses" minOccurs="0"/>
 		<element type="FeatureAttacks" minOccurs="0"/>
 		<element type="FeatureDefenses" minOccurs="0"/>
-		<element type="UnitClassAttackMods" minOccurs="0"/>
-		<element type="UnitClassDefenseMods" minOccurs="0"/>
+		<element type="UnitAttackMods" minOccurs="0"/>
+		<element type="UnitDefenseMods" minOccurs="0"/>
 		<element type="UnitCombatMods" minOccurs="0"/>
 		<element type="UnitCombatCollateralImmunes" minOccurs="0"/>
 		<element type="DomainMods" minOccurs="0"/>

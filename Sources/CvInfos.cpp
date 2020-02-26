@@ -913,7 +913,7 @@ void CvDiplomacyResponse::UpdateDiplomacies(CvDiplomacyInfo* pDiplomacyInfo, int
 //
 //------------------------------------------------------------------------------------------------------
 CvSpecialistInfo::CvSpecialistInfo() :
-m_iGreatPeopleUnitClass(NO_UNITCLASS),
+m_iGreatPeopleUnitType(NO_UNIT),
 m_iGreatPeopleRateChange(0),
 m_iMissionType(NO_MISSION),
 m_bVisible(false),
@@ -973,9 +973,9 @@ CvSpecialistInfo::~CvSpecialistInfo()
 	}
 }
 
-int CvSpecialistInfo::getGreatPeopleUnitClass() const
+int CvSpecialistInfo::getGreatPeopleUnitType() const
 {
-	return m_iGreatPeopleUnitClass;
+	return m_iGreatPeopleUnitType;
 }
 
 int CvSpecialistInfo::getGreatPeopleRateChange() const
@@ -1154,8 +1154,8 @@ bool CvSpecialistInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->GetOptionalChildXmlValByName(&m_bVisible, L"bVisible");
 
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"GreatPeopleUnitClass");
-	m_iGreatPeopleUnitClass = pXML->GetInfoClass(szTextVal);
+	pXML->GetOptionalChildXmlValByName(szTextVal, L"GreatPeopleUnitType");
+	m_aszExtraXMLforPass3.push_back(szTextVal);
 
 	pXML->GetOptionalChildXmlValByName(&m_iGreatPeopleRateChange, L"iGreatPeopleRateChange");
 
@@ -1298,7 +1298,7 @@ void CvSpecialistInfo::copyNonDefaults(CvSpecialistInfo* pClassInfo, CvXMLLoadUt
 
 	if (getTexture() == cDefault) setTexture(pClassInfo->getTexture());
 	if (isVisible() == bDefault) m_bVisible = pClassInfo->isVisible();
-	if (getGreatPeopleUnitClass() == iTextDefault) m_iGreatPeopleUnitClass = pClassInfo->getGreatPeopleUnitClass();
+	if (getGreatPeopleUnitType() == iTextDefault) m_iGreatPeopleUnitType = pClassInfo->getGreatPeopleUnitType();
 	if (getGreatPeopleRateChange() == iDefault) m_iGreatPeopleRateChange = pClassInfo->getGreatPeopleRateChange();
 
 	for ( int i = 0; i < NUM_YIELD_TYPES; i++ )
@@ -1387,9 +1387,23 @@ void CvSpecialistInfo::copyNonDefaults(CvSpecialistInfo* pClassInfo, CvXMLLoadUt
 		}
 	}
 }
+
+bool CvSpecialistInfo::readPass3()
+{
+	if (m_aszExtraXMLforPass3.size() < 1)
+	{
+		FAssert(false);
+		return false;
+	}
+	m_iGreatPeopleUnitType = GC.getInfoTypeForString(m_aszExtraXMLforPass3[0]);
+
+	m_aszExtraXMLforPass3.clear();
+	return true;
+}
+
 void CvSpecialistInfo::getCheckSum(unsigned int& iSum)
 {
-	CheckSum(iSum, m_iGreatPeopleUnitClass);
+	CheckSum(iSum, m_iGreatPeopleUnitType);
 	CheckSum(iSum, m_iGreatPeopleRateChange);
 	CheckSum(iSum, m_iMissionType);
 	CheckSum(iSum, m_iHealthPercent);
@@ -1527,7 +1541,7 @@ m_piCommerceModifier(NULL)
 //,m_paiPrereqOrBuildingClass(NULL)
 ,m_piOriginalPrereqOrTechs(NULL)
 ,m_piOriginalPrereqAndTechs(NULL)
-,m_piUnitClassStrengthChange(NULL)
+,m_piUnitStrengthChange(NULL)
 
 //TB Tech Tags
 ,m_bGlobal(false)
@@ -1552,19 +1566,11 @@ CvTechInfo::~CvTechInfo()
 	SAFE_DELETE_ARRAY(m_pbTerrainTrade);
 	//ls612: Tech Commerce Modifiers
 	SAFE_DELETE_ARRAY(m_piCommerceModifier);
-/************************************************************************************************/
-/* Afforess					  Start		 04/01/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	//SAFE_DELETE_ARRAY(m_paiPrereqBuildingClass);
 	//SAFE_DELETE_ARRAY(m_paiPrereqOrBuildingClass);
 	SAFE_DELETE_ARRAY(m_piOriginalPrereqOrTechs);
 	SAFE_DELETE_ARRAY(m_piOriginalPrereqAndTechs);
-	SAFE_DELETE_ARRAY(m_piUnitClassStrengthChange);
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+	SAFE_DELETE_ARRAY(m_piUnitStrengthChange);
 
 	for (int i=0; i<(int)m_aPrereqBuildingClass.size(); i++)
 	{
@@ -2101,14 +2107,14 @@ int CvTechInfo::getOriginalPrereqAndTechs(int i) const
 	return m_piOriginalPrereqAndTechs ? m_piOriginalPrereqAndTechs[i] : -1;
 }
 
-int CvTechInfo::getUnitClassStrengthChange(int iUnit, bool bForLoad) const
+int CvTechInfo::getUnitStrengthChange(int iUnit, bool bForLoad) const
 {
 	//if (!bForLoad && GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	//{
-	//	int iTotal = m_piUnitClassStrengthChange[iUnit] * 100;
-	//	return m_piUnitClassStrengthChange ? iTotal : 0;
+	//	int iTotal = m_piUnitStrengthChange[iUnit] * 100;
+	//	return m_piUnitStrengthChange ? iTotal : 0;
 	//}
-	return m_piUnitClassStrengthChange ? m_piUnitClassStrengthChange[iUnit] : 0;
+	return m_piUnitStrengthChange ? m_piUnitStrengthChange[iUnit] : 0;
 }
 
 //TB Tech Tags
@@ -2250,7 +2256,7 @@ bool CvTechInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iCorporationRevenueModifier, L"iCorporationRevenueModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iCorporationMaintenanceModifier, L"iCorporationMaintenanceModifier");
 
-	pXML->SetVariableListTagPair(&m_piUnitClassStrengthChange, L"UnitClassStrengthChanges", GC.getNumUnitClassInfos());
+	pXML->SetVariableListTagPair(&m_piUnitStrengthChange, L"UnitStrengthChanges", GC.getNumUnitInfos());
 
 
 	//pXML->CvXMLLoadUtility::InitList(&m_piOriginalPrereqOrTechs, GC.getNUM_OR_TECH_PREREQS(), -1);
@@ -2662,16 +2668,16 @@ void CvTechInfo::copyNonDefaults(CvTechInfo* pClassInfo, CvXMLLoadUtility* pXML)
 		}
 	}
 
-	for ( int j = 0; j < GC.getNumUnitClassInfos(); j++)
+	for (int j = 0; j < GC.getNumUnitInfos(); j++)
 	{
-		if ((m_piUnitClassStrengthChange == NULL || m_piUnitClassStrengthChange[j] == 0) &&
-			pClassInfo->getUnitClassStrengthChange(j, true) != 0)
+		if ((m_piUnitStrengthChange == NULL || m_piUnitStrengthChange[j] == 0)
+		&& pClassInfo->getUnitStrengthChange(j, true) != 0)
 		{
-			if ( m_piUnitClassStrengthChange == NULL )
+			if (m_piUnitStrengthChange == NULL)
 			{
-				CvXMLLoadUtility::InitList(&m_piUnitClassStrengthChange,GC.getNumUnitClassInfos(),0);
+				CvXMLLoadUtility::InitList(&m_piUnitStrengthChange, GC.getNumUnitInfos(), 0);
 			}
-			m_piUnitClassStrengthChange[j] = pClassInfo->getUnitClassStrengthChange(j, true);
+			m_piUnitStrengthChange[j] = pClassInfo->getUnitStrengthChange(j, true);
 		}
 	}
 
@@ -2844,7 +2850,7 @@ void CvTechInfo::getCheckSum(unsigned int& iSum)
 	CheckSum(iSum, m_piFreeSpecialistCount, GC.getNumSpecialistInfos());
 	CheckSum(iSum, m_piOriginalPrereqOrTechs, GC.getNUM_OR_TECH_PREREQS());
 	CheckSum(iSum, m_piOriginalPrereqAndTechs, GC.getNUM_AND_TECH_PREREQS());
-	CheckSum(iSum, m_piUnitClassStrengthChange, GC.getNumUnitClassInfos());
+	CheckSum(iSum, m_piUnitStrengthChange, GC.getNumUnitInfos());
 	//CheckSum(iSum, m_paiPrereqBuildingClass, GC.getNumBuildingClassInfos());
 	//CheckSum(iSum, m_paiPrereqOrBuildingClass, GC.getNumBuildingClassInfos());
 
@@ -25230,11 +25236,11 @@ CvTraitInfo::CvTraitInfo()
 	, m_iPrereqOrTrait1(NO_TRAIT)
 	, m_iPrereqOrTrait2(NO_TRAIT)
 	, m_ePromotionLine(NO_PROMOTIONLINE)
-	, m_iGreatPeopleUnitClass(NO_UNITCLASS)
+	, m_iGreatPeopleUnitType(NO_UNIT)
 	, m_ePrereqTech(NO_TECH)
 	//Team Project (6)
 	, m_eEraAdvanceFreeSpecialistType(NO_SPECIALIST)
-	, m_iGoldenAgeonBirthofGreatPeopleType(NO_UNITCLASS)
+	, m_iGoldenAgeonBirthofGreatPeopleType(NO_UNIT)
 	//integers
 	, m_iWarWearinessAccumulationModifier(0)
 	, m_iCivicAnarchyTimeModifier(0)
@@ -25968,9 +25974,9 @@ PromotionLineTypes CvTraitInfo::getPromotionLine() const
 	return m_ePromotionLine;
 }
 
-int CvTraitInfo::getGreatPeopleUnitClass() const
+int CvTraitInfo::getGreatPeopleUnitType() const
 {
-	return m_iGreatPeopleUnitClass;
+	return m_iGreatPeopleUnitType;
 }
 
 TechTypes CvTraitInfo::getPrereqTech() const
@@ -25996,9 +26002,9 @@ int CvTraitInfo::getGoldenAgeonBirthofGreatPeopleType() const
 {
 	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
 	{
-		if (isNegativeTrait() && m_iGoldenAgeonBirthofGreatPeopleType != NO_UNITCLASS)
+		if (isNegativeTrait() && m_iGoldenAgeonBirthofGreatPeopleType != NO_UNIT)
 		{
-				return NO_UNITCLASS;
+				return NO_UNIT;
 		}
 	}
 	return m_iGoldenAgeonBirthofGreatPeopleType;
@@ -27185,6 +27191,8 @@ bool CvTraitInfo::isValidTrait(bool bGameStart) const
 	{
 		return false;
 	}
+
+	if (isCivilizationTrait()) return true;
 
 	if (GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS))
 	{
@@ -28449,15 +28457,19 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 	//Textual References
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PromotionLine");
 	m_ePromotionLine = (PromotionLineTypes) pXML->GetInfoClass(szTextVal);
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"GreatPeopleUnitClass");
-	m_iGreatPeopleUnitClass = pXML->GetInfoClass(szTextVal);
+
+	pXML->GetOptionalChildXmlValByName(szTextVal, L"GreatPeopleUnitType");
+	m_iGreatPeopleUnitType = (UnitTypes) pXML->GetInfoClass(szTextVal);
+
+	pXML->GetOptionalChildXmlValByName(szTextVal, L"GoldenAgeonBirthofGreatPersonType");
+	m_iGoldenAgeonBirthofGreatPeopleType = (UnitTypes) pXML->GetInfoClass(szTextVal);
+
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PrereqTech");
 	m_ePrereqTech = (TechTypes) pXML->GetInfoClass(szTextVal);
 //Team Project (6)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"EraAdvanceFreeSpecialistType");
 	m_eEraAdvanceFreeSpecialistType = (SpecialistTypes) pXML->GetInfoClass(szTextVal);
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"GoldenAgeonBirthofGreatPersonType");
-	m_iGoldenAgeonBirthofGreatPeopleType = pXML->GetInfoClass(szTextVal);
+
 	//integers
 	pXML->GetOptionalChildXmlValByName(&m_iWarWearinessAccumulationModifier, L"iWarWearinessAccumulationModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iCivicAnarchyTimeModifier, L"iCivicAnarchyTimeModifier");
@@ -29560,11 +29572,11 @@ void CvTraitInfo::copyNonDefaults(CvTraitInfo* pClassInfo, CvXMLLoadUtility* pXM
 	//TB Traits Mods begin
 	//Textual References
 	if (getPromotionLine() == NO_PROMOTIONLINE) m_ePromotionLine = pClassInfo->getPromotionLine();
-	if (getGreatPeopleUnitClass() == NO_UNITCLASS) m_iGreatPeopleUnitClass = pClassInfo->getGreatPeopleUnitClass();
+	if (m_iGreatPeopleUnitType == NO_UNIT) m_iGreatPeopleUnitType = pClassInfo->m_iGreatPeopleUnitType;
+	if (m_iGoldenAgeonBirthofGreatPeopleType == NO_UNIT) m_iGoldenAgeonBirthofGreatPeopleType = pClassInfo->m_iGoldenAgeonBirthofGreatPeopleType;
 	if (getPrereqTech() == NO_TECH) m_ePrereqTech = pClassInfo->getPrereqTech();
 //Team Project (6)
 	if (getEraAdvanceFreeSpecialistType() == NO_SPECIALIST) m_eEraAdvanceFreeSpecialistType = pClassInfo->getEraAdvanceFreeSpecialistType();
-	if (getGoldenAgeonBirthofGreatPeopleType() == NO_UNITCLASS) m_iGoldenAgeonBirthofGreatPeopleType = pClassInfo->getGoldenAgeonBirthofGreatPeopleType();
 	//integers
 	if (getWarWearinessAccumulationModifier() == iDefault) m_iWarWearinessAccumulationModifier = pClassInfo->getWarWearinessAccumulationModifier();
 	if (getCivicAnarchyTimeModifier() == iDefault) m_iCivicAnarchyTimeModifier = pClassInfo->getCivicAnarchyTimeModifier();
@@ -30085,10 +30097,10 @@ void CvTraitInfo::getCheckSum(unsigned int& iSum)
 	CheckSum(iSum, m_iPrereqOrTrait1);
 	CheckSum(iSum, m_iPrereqOrTrait2);
 	CheckSum(iSum, m_ePromotionLine);
-	CheckSum(iSum, m_iGreatPeopleUnitClass);
+	CheckSum(iSum, m_iGreatPeopleUnitType);
+	CheckSum(iSum, m_iGoldenAgeonBirthofGreatPeopleType);
 	CheckSum(iSum, m_ePrereqTech);
 	CheckSum(iSum, m_eEraAdvanceFreeSpecialistType);
-	CheckSum(iSum, m_iGoldenAgeonBirthofGreatPeopleType);
 	//integers
 	CheckSum(iSum, m_iWarWearinessAccumulationModifier);
 	CheckSum(iSum, m_iCivicAnarchyTimeModifier);
@@ -30360,18 +30372,6 @@ void CvTraitInfo::getCheckSum(unsigned int& iSum)
 	//TB Traits Mods end
 }
 
-/************************************************************************************************/
-/* Afforess					  Start		 08/26/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-bool CvTraitInfo::readPass3()
-{
-	return true;
-}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 CvPropertyManipulators* CvTraitInfo::getPropertyManipulators()
 {

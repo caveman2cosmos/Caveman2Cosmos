@@ -28,7 +28,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_SHAMAN_TEMPLE_PIG</Type>
-			<Description>TXT_KEY_BUILDING_SHAMAND_TEMPLE_PIG</Description>
+			<Description>TXT_KEY_BUILDING_SHAMAN_TEMPLE_PIG</Description>
 			<DefaultBuilding>BUILDING_SHAMAN_TEMPLE_PIG</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>
@@ -83,7 +83,7 @@
 		</BuildingClassInfo>
 		<BuildingClassInfo>
 			<Type>BUILDINGCLASS_SHAMAN_MONASTERY_PIG</Type>
-			<Description>TXT_KEY_BUILDING_SHAMAND_MONASTERY_PIG</Description>
+			<Description>TXT_KEY_BUILDING_SHAMAN_MONASTERY_PIG</Description>
 			<DefaultBuilding>BUILDING_SHAMAN_MONASTERY_PIG</DefaultBuilding>
 		</BuildingClassInfo>
 		<BuildingClassInfo>

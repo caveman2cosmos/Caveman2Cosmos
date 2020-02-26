@@ -56,7 +56,7 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_BEASTMASTER</Class>
+			<Class>UNITCLASS_FEMALE_BEASTMASTER</Class>
 			<Type>UNIT_FEMALE_BEASTMASTER</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_CAPTAIN</Combat>
@@ -74,7 +74,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_GENERAL</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FEMALE_BEASTMASTER</Description>
+			<Description>TXT_KEY_UNIT_BEASTMASTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_BEASTMASTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_GREAT_GENERAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
