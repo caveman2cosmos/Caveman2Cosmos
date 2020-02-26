@@ -11718,7 +11718,7 @@ bool CvUnit::spread(ReligionTypes eReligion)
                 GC.getGame().setReligionSlotTaken(eReligion, true);
             }
 //FfH: End Modify
-#else
+
 //TB Prophet Mod end
 			pCity->setHasReligion(eReligion, true, true, false);
 
