@@ -6563,12 +6563,12 @@ void CvUnitAI::AI_prophetMove()
 	}
 
 /*TB Prophet Mod begin*/
-#ifdef C2C_BUILD
+
 	if (AI_foundReligion())
 	{
 		return;
 	}
-#endif
+
 /*TB Prophet Mod end*/
 
 	if (AI_discover(true, true))
@@ -35011,7 +35011,7 @@ void CvUnitAI::AI_setAsGarrison(const CvCity* pCity)
 
 
 /*TB Prophet Mod begin*/
-#ifdef C2C_BUILD
+
 bool CvUnitAI::AI_foundReligion()
 {
 	PROFILE_FUNC();
@@ -35130,7 +35130,7 @@ bool CvUnitAI::AI_cureAffliction(PromotionLineTypes eAfflictionLine)
 	}
 	return false;
 }
-#endif
+
 /*TB Prophet Mod end*/
 
 void unitSourcesValueToCity(const CvGameObject* pObject, const CvPropertyManipulators* pMani, const CvUnit* pUnit, const CvCityAI* pCity, int* iValue, PropertyTypes eProperty)

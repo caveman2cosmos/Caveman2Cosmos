@@ -11381,14 +11381,14 @@ void CvPlayer::foundReligion(ReligionTypes eReligion, ReligionTypes eSlotReligio
 /************************************************************************************************/
 /* REVDCM                                  END                                                  */
 /************************************************************************************************/
-#ifdef C2C_BUILD
+
 	//TB Prophet Mod begin
 	if(GC.getGame().isOption(GAMEOPTION_DIVINE_PROPHETS))
 	{
 		return;
 	}
 	//TB Prophet Mod End
-#endif
+
 	// Clear queued religious techs for human player when founding a religion
 	// Religious techs are not researchable after founding a religion under "Limited Religions" rules
 	// AI always clear their entire tech queue when a religion is founded in CvTeam::setHasTech
@@ -29287,7 +29287,7 @@ UnitTypes CvPlayer::getTechFreeUnit(TechTypes eTech) const
 	return eUnit;
 }
 
-#ifdef C2C_BUILD
+
 //TB Prophet Mod begin
 UnitTypes CvPlayer::getTechFreeProphet(TechTypes eTech) const
 {
@@ -29298,7 +29298,7 @@ UnitTypes CvPlayer::getTechFreeProphet(TechTypes eTech) const
 	return NO_UNIT;
 }
 //TB Prophet Mod end
-#endif
+
 
 // BUG - Trade Totals - start
 /*

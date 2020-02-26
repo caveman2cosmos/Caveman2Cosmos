@@ -1508,7 +1508,7 @@ void CvCityAI::AI_chooseProduction()
 	}
 
 //TB Build Mod (is considered a poor strategy now)	// if we need to pop borders, then do that immediately if we have drama and can do it
-#ifndef C2C_BUILD
+
 	// if we need to pop borders, then do that immediately if we have drama and can do it
 	// cppcheck-suppress knownConditionTrueFalse
 	if ((iTargetCulturePerTurn > 0) && (getCultureLevel() <= (CultureLevelTypes) 1))
@@ -1518,7 +1518,7 @@ void CvCityAI::AI_chooseProduction()
 			return;
 		}
 	}
-#endif
+
 
 /************************************************************************************************/
 /* REVOLUTION_MOD                         06/11/08                                jdog5000      */
@@ -2361,7 +2361,7 @@ void CvCityAI::AI_chooseProduction()
 
 	m_iTempBuildPriority--;
 
-#ifdef C2C_BUILD
+
 //TB Build Priority Mod Begin
 	{
 		PROFILE("AI_chooseProduction.TB_Mod");
@@ -2392,7 +2392,7 @@ void CvCityAI::AI_chooseProduction()
 		}
 	}
 //TB Build Priority Mod End
-#endif
+
 
 	m_iTempBuildPriority--;
 	// cppcheck-suppress knownConditionTrueFalse
@@ -2799,7 +2799,7 @@ void CvCityAI::AI_chooseProduction()
 	}
 
 //TB Build Mod (Moves below to lower priority)
-#ifndef C2C_BUILD
+
 	if	(!bLandWar && !bAssault && (iTargetCulturePerTurn > getCommerceRate(COMMERCE_CULTURE)))
 	{
 		if (AI_chooseBuilding(BUILDINGFOCUS_CULTURE, bAggressiveAI ? 10 : 20, 0, bAggressiveAI ? 33 : 50))
@@ -2808,7 +2808,7 @@ void CvCityAI::AI_chooseProduction()
 			return;
 		}
 	}
-#endif
+
 //TB Build Mod end
 
 	m_iTempBuildPriority--;
@@ -14307,7 +14307,7 @@ void CvCityAI::AI_buildGovernorChooseProduction()
 	}
 
 //TB Build Mod (Bad Strategy)
-#ifndef C2C_BUILD
+
 	// if we need to pop borders, then do that immediately if we have drama and can do it
 	// if we need to pop borders, then do that immediately if we have drama and can do it
 	if ((getCultureLevel() <= (CultureLevelTypes)1) && ((getCommerceRate(COMMERCE_CULTURE) < 2) || (iCulturePressure > 0)))
@@ -14317,7 +14317,7 @@ void CvCityAI::AI_buildGovernorChooseProduction()
 			return;
 		}
 	}
-#endif
+
 
 // BUG - Governor Builds Workboats - start
 #ifdef _MOD_GOVWORKERS
@@ -14370,12 +14370,12 @@ void CvCityAI::AI_buildGovernorChooseProduction()
 	}
 
 //TB Build Mod (Move up in priority)
-#ifndef C2C_BUILD
+
 	if (AI_chooseBuilding(BUILDINGFOCUS_PRODUCTION, 30, 10 / iMinValueDivisor))
 	{
 		return;
 	}
-#endif
+
 
 	if (AI_chooseBuilding(BUILDINGFOCUS_EXPERIENCE, 8, 33))
 	{

@@ -181,7 +181,6 @@
               <pElem>include</pElem>
             </incDir>
             <preprocessorList>
-              <Elem>C2C_BUILD</Elem>
               <Elem>FASSERT_ENABLE</Elem>
               <Elem>LOG_AI</Elem>
               <Elem>MULTI_FEATURE_MOD</Elem>
@@ -509,7 +508,6 @@
               <pElem>include</pElem>
             </incDir>
             <preprocessorList>
-              <Elem>C2C_BUILD</Elem>
               <Elem>FINAL_RELEASE</Elem>
               <Elem>LOG_AI</Elem>
               <Elem>MULTI_FEATURE_MOD</Elem>
@@ -837,7 +835,6 @@
               <pElem>include</pElem>
             </incDir>
             <preprocessorList>
-              <Elem>C2C_BUILD</Elem>
               <Elem>FASSERT_ENABLE</Elem>
               <Elem>FINAL_RELEASE</Elem>
               <Elem>LOG_AI</Elem>
@@ -1166,7 +1163,6 @@
               <pElem>include</pElem>
             </incDir>
             <preprocessorList>
-              <Elem>C2C_BUILD</Elem>
               <Elem>FINAL_RELEASE</Elem>
               <Elem>FP_PROFILE_ENABLE</Elem>
               <Elem>LOG_AI</Elem>
