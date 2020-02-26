@@ -1059,8 +1059,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CARBON_DIOXIDE_ICE_PEDIA</Tag>
-		<English>Dry ice is the solid form of carbon dioxide. It is used primarily as a cooling agent. Its advantages include lower temperature than that of water ice and not leaving any residue (other than incidental frost from moisture in the atmosphere). It is useful for preserving frozen foods where mechanical cooling is unavailable. Dry ice sublimates at 194.65 K (−78.5 °C; −109.3 °F) at Earth atmospheric pressures. This extreme cold makes the solid dangerous to handle without protection due to burns caused by freezing (frostbite). While generally not very toxic, the outgassing from it can cause abnormally elevated carbon dioxide blood levels.</English>
-		<Italian>Il ghiaccio secco è la forma solida dell'anidride carbonica. Viene utilizzato principalmente come agente di raffreddamento. I suoi vantaggi includono la temperatura inferiore a quella del ghiaccio normale e non lasciare alcun residuo (oltre alle tracce di gelo accidentale dovute all'umidità nell'atmosfera). È utile per conservare cibi congelati laddove il normale raffreddamento meccanico non sia disponibile. Il ghiaccio secco sublima a 194,65 K (-78,5 °C, con pressione atmosferica terrestre). Maneggiarlo senza protezione è pericoloso e può causare ustioni da congelamento. Sebbene generalmente non molto tossico, il degassamento può causare livelli di anidride carbonica nel sangue decisamente anomali.</Italian>
+		<English>Dry ice is the solid form of carbon dioxide. It is used primarily as a cooling agent. Its advantages include lower temperature than that of water ice and not leaving any residue (other than incidental frost from moisture in the atmosphere). It is useful for preserving frozen foods where mechanical cooling is unavailable. Dry ice sublimates at 194.65 °K (−78.5 °C; −109.3 °F) at Earth atmospheric pressures. This extreme cold makes the solid dangerous to handle without protection due to burns caused by freezing (frostbite). While generally not very toxic, the outgassing from it can cause abnormally elevated carbon dioxide blood levels.</English>
+		<Italian>Il ghiaccio secco è la forma solida dell'anidride carbonica. Viene utilizzato principalmente come agente di raffreddamento. I suoi vantaggi includono la temperatura inferiore a quella del ghiaccio normale e non lasciare alcun residuo (oltre alle tracce di gelo accidentale dovute all'umidità nell'atmosfera). È utile per conservare cibi congelati laddove il normale raffreddamento meccanico non sia disponibile. Il ghiaccio secco sublima a 194,65 °K (-78,5 °C, con pressione atmosferica terrestre). Maneggiarlo senza protezione è pericoloso e può causare ustioni da congelamento. Sebbene generalmente non molto tossico, il degassamento può causare livelli di anidride carbonica nel sangue decisamente anomali.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CARBON_FIBER</Tag>
@@ -2949,6 +2949,11 @@
 		<Polish>Przeboje Filmowe</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_HIT_MOVIES_PEDIA</Tag>
+		<English>A hit movie, also called blockbuster, is a feature film that is highly popular and financially successful. The term has also come to refer to any large-budget production intended for "blockbuster" status, aimed at mass markets with associated merchandising, sometimes on a scale that meant the financial fortunes of a film studio or a distributor could depend on it. The first use of the term was in 1943, but only by mid-1970s the term reached widespread popularity.</English>
+		<Italian>Un film di successo, chiamato anche blockbuster, è un film molto popolare e di grande successo al botteghino. Il termine comprende, più in generale, qualsiasi produzione cinematografica con un grande budget rivolta al grande pubblico, con un merchandising associato, talvolta prodotto su una scala talmente ampia da poter determinare la sorte di uno studio cinematografico o di un distributore. Il primo uso del termine fu nel 1943, ma solo a metà degli anni settanta il termine raggiunse una popolarità diffusa.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_HIT_MUSICALS</Tag>
 		<English>Hit Musicals</English>
 		<French>Comédies musicales</French>
@@ -3012,9 +3017,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HONEY_PEDIA</Tag>
-		<English>Honey bees form nectar into honey by a process of regurgitation, and store it as a primary food source in wax honeycombs inside the beehive. Beekeeping practices encourage overproduction of honey so the excess can be taken from the colony.[PARAGRAPH:2]Honey is a sweet aliment produced by honey bees (and some other species) and derived from the nectar of flowers.  According to the United States National Honey Board and various international food regulations, "honey stipulates a pure product that does not allow for the addition of any other substance, this includes, but is not limited to, water or other sweeteners."   Honey gets its sweetness from the monosaccharides fructose and glucose and has approximately the same relative sweetness as that of granulated sugar (97% of the sweetness of sucrose, a disaccharide).  Honey has attractive chemical properties for baking, and a distinctive flavor which leads some people to prefer it over sugar and other sweeteners.</English>
-		<Italian>Il miele viene prodotto dalle api trasformando il nettare con un processo di rigurgitazione, conservandolo come una fonte di cibo negli alveoli di cera all'interno dell'alveare. Le tecniche di apicoltura aumentano la produzione di miele, in modo che il miele in eccesso può essere preso dalla colonia</Italian>
-		<Polish>Miód to słodki produkt spożywczy, wytwarzany przez pszczoły i inne owady, poprzez przetwarzanie nektaru kwiatowego lub innych słodkich soków roślinnych. Pszczoły gromadzą go w plastrze, gdzie ulega dojrzewaniu. W zależności od surowca, z jakiego powstał miód.</Polish>
+		<English>Honey is a sweet, viscous food substance, made by bees from floral nectar or from secretions of other insects (such as honeydew), by regurgitation, enzymatic activity, and water evaporation. Bees store honey in wax structures called honeycombs. The variety of honey produced by honey bees is the best-known, due to its worldwide commercial production and human consumption. Honey is collected from wild bee colonies, or from hives of domesticated bees, a practice known as beekeeping or apiculture. Honey use and production have a long and varied history as an ancient activity. Several cave paintings in Spain depict humans foraging for honey at least 8,000 years ago.</English>
+		<Italian>Il miele è una sostanza alimentare dolce e viscosa, prodotta dalle api dal nettare floreale o dalle secrezioni di altri insetti (come la melata), tramite rigurgito, attività enzimatica ed evaporazione dell'acqua. Le api immagazzinano il miele in strutture di cera chiamate favi. La varietà di miele prodotta dalle api è la più nota, grazie alla sua produzione commerciale mondiale e al consumo umano. Il miele viene raccolto da colonie di api selvatiche o da alveari di api domestiche - pratica nota come apicoltura. L'uso e la produzione del miele hanno una storia lunga e variegata come attività antica. Diverse pitture rupestri in Spagna raffigurano umani che cercano miele risalenti ad almeno 8.000 anni fa.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HONG_KONG</Tag>
@@ -5431,7 +5435,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PERSONAL_HYPERCRAFT_PEDIA</Tag>
 		<English>These are personal spacecraft that allow interdimensional travel.</English>
-	</TEXT>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PERSONAL_SPACECRAFT</Tag>
