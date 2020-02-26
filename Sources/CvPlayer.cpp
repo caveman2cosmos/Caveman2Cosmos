@@ -1729,7 +1729,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 		m_mapEventsOccured.clear();
 		m_mapEventCountdown.clear();
 		m_aFreeUnitCombatPromotions.clear();
-		m_aFreeUnitClassPromotions.clear();
+		m_aFreeUnitPromotions.clear();
 		m_aVote.clear();
 		m_aUnitExtraCosts.clear();
 		m_triggersFired.clear();
@@ -23865,16 +23865,16 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		}
 
 		{
-			m_aFreeUnitClassPromotions.clear();
+			m_aFreeUnitPromotions.clear();
 			uint iSize;
-			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "numFreeUnitClassPromotions");
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "numFreeUnitPromotions");
 			for (uint i = 0; i < iSize; i++)
 			{
-				int iUnitClass;
+				int iUnit;
 				int iPromotion;
-				WRAPPER_READ_CLASS_ENUM(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNIT_CLASSES, &iUnitClass);
+				WRAPPER_READ_CLASS_ENUM(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, &iUnit);
 				WRAPPER_READ_CLASS_ENUM(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_PROMOTIONS, &iPromotion);
-				m_aFreeUnitClassPromotions.push_back(std::make_pair((UnitClassTypes)iUnitClass, (PromotionTypes)iPromotion));
+				m_aFreeUnitPromotions.push_back(std::make_pair((UnitTypes)iUnit, (PromotionTypes)iPromotion));
 			}
 		}
 
@@ -24737,12 +24737,12 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		}
 
 		{
-			uint iSize = m_aFreeUnitClassPromotions.size();
-			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", iSize, "numFreeUnitClassPromotions");
-			UnitClassPromotionArray::iterator it;
-			for (it = m_aFreeUnitClassPromotions.begin(); it != m_aFreeUnitClassPromotions.end(); ++it)
+			uint iSize = m_aFreeUnitPromotions.size();
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", iSize, "numFreeUnitPromotions");
+			UnitPromotionArray::iterator it;
+			for (it = m_aFreeUnitPromotions.begin(); it != m_aFreeUnitPromotions.end(); ++it)
 			{
-				WRAPPER_WRITE_CLASS_ENUM_DECORATED(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNIT_CLASSES, (*it).first, "iUnitClass");
+				WRAPPER_WRITE_CLASS_ENUM_DECORATED(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, (*it).first, "iUnit");
 				WRAPPER_WRITE_CLASS_ENUM_DECORATED(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_PROMOTIONS, (*it).second, "iPromotion");
 			}
 		}
@@ -25859,15 +25859,6 @@ bool CvPlayer::canDoEvent(EventTypes eEvent, const EventTriggeredData& kTriggere
 		}
 	}
 
-	if (kEvent.getUnitClass() != NO_UNITCLASS)
-	{
-		UnitTypes eUnit = (UnitTypes)GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(kEvent.getUnitClass());
-		if (eUnit == NO_UNIT)
-		{
-			return false;
-		}
-	}
-
 	if (kEvent.isCityEffect())
 	{
 		CvCity* pCity =	getCity(kTriggeredData.m_iCityId);
@@ -26873,24 +26864,20 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 /************************************************************************************************/
 
 
-		if (kEvent.getUnitClass() != NO_UNITCLASS && !adjustModifiersOnly)
+		if (!adjustModifiersOnly && kEvent.getFreeUnit() != NO_UNIT)
 		{
-			UnitTypes eUnit = (UnitTypes)kCivilizationInfo.getCivilizationUnits(kEvent.getUnitClass());
-			if (eUnit != NO_UNIT)
+			CvCity* pUnitCity = pCity;
+
+			if (NULL == pUnitCity)
 			{
-				CvCity* pUnitCity = pCity;
+				pUnitCity = getCapitalCity();
+			}
 
-				if (NULL == pUnitCity)
+			if (NULL != pUnitCity)
+			{
+				for (int i = 0; i < kEvent.getNumUnits(); ++i)
 				{
-					pUnitCity = getCapitalCity();
-				}
-
-				if (NULL != pUnitCity)
-				{
-					for (int i = 0; i < kEvent.getNumUnits(); ++i)
-					{
-						initUnit(eUnit, pUnitCity->getX(), pUnitCity->getY(), NO_UNITAI, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
-					}
+					initUnit((UnitTypes)kEvent.getFreeUnit(), pUnitCity->getX(), pUnitCity->getY(), NO_UNITAI, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 				}
 			}
 		}
@@ -26914,20 +26901,19 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 		}
 	}
 
-	for (int i = 0; i < GC.getNumUnitClassInfos(); ++i)
+	for (int i = 0; i < GC.getNumUnitInfos(); ++i)
 	{
-		if (NO_PROMOTION != kEvent.getUnitClassPromotion(i))
+		if (NO_PROMOTION != kEvent.getUnitPromotion(i))
 		{
 			int iLoop;
 			for (CvUnit* pLoopUnit = firstUnit(&iLoop); NULL != pLoopUnit; pLoopUnit = nextUnit(&iLoop))
 			{
-				if (pLoopUnit->getUnitClassType() == i)
+				if (pLoopUnit->getUnitType() == i)
 				{
-					pLoopUnit->setHasPromotion((PromotionTypes)kEvent.getUnitClassPromotion(i), true, true);
+					pLoopUnit->setHasPromotion((PromotionTypes)kEvent.getUnitPromotion(i), true, true);
 				}
 			}
-
-			setFreePromotion((UnitClassTypes)i, (PromotionTypes)kEvent.getUnitClassPromotion(i), true);
+			setFreePromotion((UnitTypes)i, (PromotionTypes)kEvent.getUnitPromotion(i), true);
 		}
 	}
 
@@ -28402,36 +28388,34 @@ void CvPlayer::setFreePromotion(UnitCombatTypes eUnitCombat, PromotionTypes ePro
 	}
 }
 
-bool CvPlayer::isFreePromotion(UnitClassTypes eUnitClass, PromotionTypes ePromotion) const
+bool CvPlayer::isFreePromotion(UnitTypes eUnit, PromotionTypes ePromotion) const
 {
-	for (UnitClassPromotionArray::const_iterator it = m_aFreeUnitClassPromotions.begin(); it != m_aFreeUnitClassPromotions.end(); ++it)
+	for (UnitPromotionArray::const_iterator it = m_aFreeUnitPromotions.begin(); it != m_aFreeUnitPromotions.end(); ++it)
 	{
-		if ((*it).first == eUnitClass && (*it).second == ePromotion)
+		if ((*it).first == eUnit && (*it).second == ePromotion)
 		{
 			return true;
 		}
 	}
-
 	return false;
 }
 
-void CvPlayer::setFreePromotion(UnitClassTypes eUnitClass, PromotionTypes ePromotion, bool bFree)
+void CvPlayer::setFreePromotion(UnitTypes eUnit, PromotionTypes ePromotion, bool bFree)
 {
-	for (UnitClassPromotionArray::iterator it = m_aFreeUnitClassPromotions.begin(); it != m_aFreeUnitClassPromotions.end(); ++it)
+	for (UnitPromotionArray::iterator it = m_aFreeUnitPromotions.begin(); it != m_aFreeUnitPromotions.end(); ++it)
 	{
-		if ((*it).first == eUnitClass && (*it).second == ePromotion)
+		if ((*it).first == eUnit && (*it).second == ePromotion)
 		{
 			if (!bFree)
 			{
-				m_aFreeUnitClassPromotions.erase(it);
+				m_aFreeUnitPromotions.erase(it);
 			}
 			return;
 		}
 	}
-
 	if (bFree)
 	{
-		m_aFreeUnitClassPromotions.push_back(std::make_pair(eUnitClass, ePromotion));
+		m_aFreeUnitPromotions.push_back(std::make_pair(eUnit, ePromotion));
 	}
 }
 

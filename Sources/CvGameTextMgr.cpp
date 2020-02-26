@@ -37609,18 +37609,10 @@ void CvGameTextMgr::setEventHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, i
 		}
 	}
 
-	if (kEvent.getUnitClass() != NO_UNITCLASS)
+	if (kEvent.getFreeUnit() != NO_UNIT)
 	{
-		CivilizationTypes eCiv = kActivePlayer.getCivilizationType();
-		if (NO_CIVILIZATION != eCiv)
-		{
-			UnitTypes eUnit = (UnitTypes)GC.getCivilizationInfo(eCiv).getCivilizationUnits(kEvent.getUnitClass());
-			if (eUnit != NO_UNIT)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_EVENT_BONUS_UNIT", kEvent.getNumUnits(), GC.getUnitInfo(eUnit).getTextKeyWide()));
-			}
-		}
+		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_EVENT_BONUS_UNIT", kEvent.getNumUnits(), GC.getUnitInfo((UnitTypes) kEvent.getFreeUnit()).getTextKeyWide()));
 	}
 
 	if (kEvent.getBuildingClass() != NO_BUILDINGCLASS)
@@ -37881,12 +37873,6 @@ void CvGameTextMgr::setEventHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, i
 		szBuffer.append(gDLL->getText("TXT_KEY_EVENT_UNIT_DISBAND", szUnit.GetCString()));
 	}
 
-	if (NO_PROMOTION != kEvent.getUnitPromotion())
-	{
-		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_EVENT_UNIT_PROMOTION", szUnit.GetCString(), GC.getPromotionInfo((PromotionTypes)kEvent.getUnitPromotion()).getTextKeyWide()));
-	}
-
 	for (int i = 0; i < GC.getNumUnitCombatInfos(); ++i)
 	{
 		if (NO_PROMOTION != kEvent.getUnitCombatPromotion(i))
@@ -37898,11 +37884,10 @@ void CvGameTextMgr::setEventHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, i
 
 	for (int i = 0; i < GC.getNumUnitInfos(); ++i)
 	{
-		if (NO_PROMOTION != kEvent.getUnitClassPromotion(GC.getUnitInfo((UnitTypes) i).getUnitClassType()))
+		if (NO_PROMOTION != kEvent.getUnitPromotion(i))
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_EVENT_UNIT_CLASS_PROMOTION", GC.getUnitInfo((UnitTypes) i).getTextKeyWide(),
-				GC.getPromotionInfo((PromotionTypes)kEvent.getUnitClassPromotion(GC.getUnitInfo((UnitTypes) i).getUnitClassType())).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_EVENT_UNIT_CLASS_PROMOTION", GC.getUnitInfo((UnitTypes) i).getTextKeyWide(), GC.getPromotionInfo((PromotionTypes)kEvent.getUnitPromotion(i)).getTextKeyWide()));
 		}
 	}
 

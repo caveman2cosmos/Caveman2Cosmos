@@ -36,7 +36,7 @@ typedef std::list<CvDiploParameters*> CvDiploQueue;
 typedef stdext::hash_map<int, int> CvTurnScoreMap;
 typedef stdext::hash_map<EventTypes, EventTriggeredData> CvEventMap;
 typedef std::vector< std::pair<UnitCombatTypes, PromotionTypes> > UnitCombatPromotionArray;
-typedef std::vector< std::pair<UnitClassTypes, PromotionTypes> > UnitClassPromotionArray;
+typedef std::vector< std::pair<UnitTypes, PromotionTypes> > UnitPromotionArray;
 typedef std::vector< std::pair<CivilizationTypes, LeaderHeadTypes> > CivLeaderArray;
 
 //	Forward declaration
@@ -1429,8 +1429,8 @@ public:
 
 	bool isFreePromotion(UnitCombatTypes eUnitCombat, PromotionTypes ePromotion) const;
 	void setFreePromotion(UnitCombatTypes eUnitCombat, PromotionTypes ePromotion, bool bFree);
-	bool isFreePromotion(UnitClassTypes eUnitCombat, PromotionTypes ePromotion) const;
-	void setFreePromotion(UnitClassTypes eUnitCombat, PromotionTypes ePromotion, bool bFree);
+	bool isFreePromotion(UnitTypes eUnit, PromotionTypes ePromotion) const;
+	void setFreePromotion(UnitTypes eUnit, PromotionTypes ePromotion, bool bFree);
 
 	PlayerVoteTypes getVote(int iId) const;
 	void setVote(int iId, PlayerVoteTypes ePlayerVote);
@@ -2294,7 +2294,7 @@ protected:
 	CvEventMap m_mapEventsOccured;
 	CvEventMap m_mapEventCountdown;
 	UnitCombatPromotionArray m_aFreeUnitCombatPromotions;
-	UnitClassPromotionArray m_aFreeUnitClassPromotions;
+	UnitPromotionArray m_aFreeUnitPromotions;
 
 	std::vector< std::pair<int, PlayerVoteTypes> > m_aVote;
 	std::vector< std::pair<UnitClassTypes, int> > m_aUnitExtraCosts;

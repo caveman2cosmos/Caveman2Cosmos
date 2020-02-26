@@ -9899,7 +9899,7 @@ public:
 	int getTechCostPercent() const;				// Exposed to Python
 	int getTechMinTurnsLeft() const;			// Exposed to Python
 	int getPrereqTech() const;					// Exposed to Python
-	int getUnitClass() const;					// Exposed to Python
+	int getFreeUnit() const;						// Exposed to Python
 	int getNumUnits() const;					// Exposed to Python
 	int getBuildingClass() const;				// Exposed to Python
 	int getBuildingChange() const;				// Exposed to Python
@@ -9933,7 +9933,6 @@ public:
 	int getRevoltTurns() const;					// Exposed to Python
 	int getMinPillage() const;					// Exposed to Python
 	int getMaxPillage() const;					// Exposed to Python
-	int getUnitPromotion() const;				// Exposed to Python
 	int getFreeUnitSupport() const;				// Exposed to Python
 	int getInflationModifier() const;			// Exposed to Python
 	int getSpaceProductionModifier() const;		// Exposed to Python
@@ -9946,7 +9945,7 @@ public:
 	int getPlotExtraYield(int i) const;			// Exposed to Python
 	int getFreeSpecialistCount(int i) const;	// Exposed to Python
 	int getUnitCombatPromotion(int i) const;	// Exposed to Python
-	int getUnitClassPromotion(int i) const;		// Exposed to Python
+	int getUnitPromotion(int i) const;			// Exposed to Python
 	const CvWString& getWorldNews(int i) const;
 	int getNumWorldNews() const;
 
@@ -9975,11 +9974,6 @@ public:
 	const wchar* getOtherPlayerPopup() const;
 	const wchar* getLocalInfoTextKey() const;
 
-/************************************************************************************************/
-/* Afforess					  Start		 07/30/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	int getPrereqGameOption() const;
 	int getRevolutionIndexChange() const;
 	int getAdditionalEventChanceVectorSize() const;
@@ -10004,9 +9998,6 @@ private:
 	std::vector<CvString> m_aszClearEventChanceforPass3;
 	std::vector<int> m_aiClearEventChanceforPass3;
 public:
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 	void read(FDataStreamBase* ) {}
 	void write(FDataStreamBase* ) {}
@@ -10041,7 +10032,7 @@ private:
 	int m_iTechCostPercent;
 	int m_iTechMinTurnsLeft;
 	int m_iPrereqTech;
-	int m_iUnitClass;
+	int m_iFreeUnit;
 	int m_iNumUnits;
 	int m_iBuildingClass;
 	int m_iBuildingChange;
@@ -10089,7 +10080,7 @@ private:
 	int* m_piAdditionalEventTime;
 	int* m_piClearEventChance;
 	int* m_piUnitCombatPromotions;
-	int* m_piUnitClassPromotions;
+	int* m_piUnitPromotions;
 	int* m_piCommerceModifier;
 	int* m_piYieldModifier;
 

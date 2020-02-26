@@ -43,7 +43,6 @@
 			<UnitPromotion/>
 			<UnitName/>
 			<UnitCombatPromotions/>
-			<UnitClassPromotions/>
 			<BuildingClass>NONE</BuildingClass>
 			<iBuildingChange>0</iBuildingChange>
 			<BuildingExtraYields/>
@@ -124,7 +123,6 @@
 			<UnitPromotion/>
 			<UnitName/>
 			<UnitCombatPromotions/>
-			<UnitClassPromotions/>
 			<BuildingClass>NONE</BuildingClass>
 			<iBuildingChange>0</iBuildingChange>
 			<BuildingExtraYields/>
@@ -211,7 +209,6 @@
 			<UnitPromotion/>
 			<UnitName/>
 			<UnitCombatPromotions/>
-			<UnitClassPromotions/>
 			<BuildingClass>BUILDINGCLASS_GUILD_APOTHECARY</BuildingClass>
 			<iBuildingChange>1</iBuildingChange>
 			<BuildingExtraYields/>
@@ -292,7 +289,6 @@
 			<UnitPromotion/>
 			<UnitName/>
 			<UnitCombatPromotions/>
-			<UnitClassPromotions/>
 			<BuildingClass>NONE</BuildingClass>
 			<iBuildingChange>0</iBuildingChange>
 			<BuildingExtraYields/>

@@ -21279,15 +21279,12 @@ void CvCity::applyEvent(EventTypes eEvent, const EventTriggeredData* pTriggeredD
 	}
 
 
-	if (kEvent.getUnitClass() != NO_UNITCLASS && !adjustModifiersOnly)
+	if (kEvent.getFreeUnit() != NO_UNIT && !adjustModifiersOnly)
 	{
-		UnitTypes eUnit = (UnitTypes)GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(kEvent.getUnitClass());
-		if (eUnit != NO_UNIT)
+		UnitTypes eUnit = (UnitTypes) kEvent.getFreeUnit();
+		for (int i = 0; i < kEvent.getNumUnits(); ++i)
 		{
-			for (int i = 0; i < kEvent.getNumUnits(); ++i)
-			{
-				GET_PLAYER(getOwner()).initUnit(eUnit, getX(), getY(), NO_UNITAI, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
-			}
+			GET_PLAYER(getOwner()).initUnit(eUnit, getX(), getY(), NO_UNITAI, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 		}
 	}
 

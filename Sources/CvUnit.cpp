@@ -30259,27 +30259,6 @@ bool CvUnit::canApplyEvent(EventTypes eEvent) const
 		}
 	}
 
-	if (NO_PROMOTION != kEvent.getUnitPromotion())
-	{
-		//TB Combat Mods begin
-		const CvPromotionInfo& promo = GC.getPromotionInfo((PromotionTypes)kEvent.getUnitPromotion());
-
-		// Todo: surely canAcquirePromotion can work out these flags if it knows what promotion you are
-		// asking about? Smells fishy that we have to set them here.
-		PromotionRequirements::flags promoFlags = PromotionRequirements::None;
-		if (promo.isEquipment()) promoFlags |= PromotionRequirements::Equip;
-		if (promo.isAffliction()) promoFlags |= PromotionRequirements::Afflict;
-
-		if (promoFlags == PromotionRequirements::None) promoFlags = PromotionRequirements::Promote;
-		if (promo.isLeader()) promoFlags |= PromotionRequirements::ForLeader;
-
-		if (!canAcquirePromotion((PromotionTypes)kEvent.getUnitPromotion(), promoFlags))
-		//TB Combat Mods end
-		{
-			return false;
-		}
-	}
-
 	if (kEvent.getUnitImmobileTurns() > 0)
 	{
 		if (!canAttack())
@@ -30287,7 +30266,6 @@ bool CvUnit::canApplyEvent(EventTypes eEvent) const
 			return false;
 		}
 	}
-
 	return true;
 }
 
@@ -30306,11 +30284,6 @@ void CvUnit::applyEvent(EventTypes eEvent)
 		changeExperience(kEvent.getUnitExperience());
 	}
 
-	if (NO_PROMOTION != kEvent.getUnitPromotion())
-	{
-		//TB Combat Mod next line
-		setHasPromotion((PromotionTypes)kEvent.getUnitPromotion(), true);
-	}
 
 	if (kEvent.getUnitImmobileTurns() > 0)
 	{
@@ -38333,9 +38306,9 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 	{
 		bIsUnitSpecific = true;
 	}
-	if (NO_UNITCLASS != getUnitClassType())
+	if (NO_UNIT != getUnitType())
 	{
-		if (GET_PLAYER(getOwner()).isFreePromotion(getUnitClassType(), ePromotion))
+		if (GET_PLAYER(getOwner()).isFreePromotion(getUnitType(), ePromotion))
 		{
 			bIsUnitSpecific = true;
 		}
@@ -40888,9 +40861,9 @@ void CvUnit::setFreePromotion(PromotionTypes ePromotion, bool bAdding, TraitType
 			return;
 		}
 
-		if (NO_UNITCLASS != getUnitClassType())
+		if (NO_UNITCLASS != getUnitType())
 		{
-			if (pPlayer.isFreePromotion(getUnitClassType(), ePromotion))
+			if (pPlayer.isFreePromotion(getUnitType(), ePromotion))
 			{
 				setHasPromotion(ePromotion, true, true);
 				return;

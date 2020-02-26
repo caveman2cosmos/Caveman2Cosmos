@@ -76,7 +76,7 @@
 		<element type="UnitType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="UnitType" content="textOnly"/>
-	<ElementType name="UnitClass" content="textOnly"/>
+	<ElementType name="FreeUnit" content="textOnly"/>
 	<ElementType name="bUnitsOnPlot" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bOwnPlot" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iMaxNumReligions" content="textOnly" dt:type="int"/>
@@ -91,21 +91,21 @@
 	<ElementType name="iUnitExperienceWeight" content="textOnly" dt:type="int"/>
 	<ElementType name="iUnitExperience" content="textOnly" dt:type="int"/>
 	<ElementType name="iUnitImmobileTurns" content="textOnly" dt:type="int"/>
-	<ElementType name="UnitPromotion" content="textOnly"/>
+	<ElementType name="Promotion" content="textOnly"/>
 	<ElementType name="UnitCombat" content="textOnly"/>
 	<ElementType name="UnitCombatPromotion" content="eltOnly">
 		<element type="UnitCombat"/>
-		<element type="UnitPromotion"/>
+		<element type="Promotion"/>
 	</ElementType>
 	<ElementType name="UnitCombatPromotions" content="eltOnly">
 		<element type="UnitCombatPromotion" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="UnitClassPromotion" content="eltOnly">
-		<element type="UnitClass"/>
-		<element type="UnitPromotion"/>
+	<ElementType name="PromoteUnit" content="eltOnly">
+		<element type="UnitType"/>
+		<element type="Promotion"/>
 	</ElementType>
-	<ElementType name="UnitClassPromotions" content="eltOnly">
-		<element type="UnitClassPromotion" minOccurs="0" maxOccurs="*"/>
+	<ElementType name="PromoteUnits" content="eltOnly">
+		<element type="PromoteUnit" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="UnitName" content="textOnly"/>
 	<ElementType name="iHappy" content="textOnly" dt:type="int"/>
@@ -487,15 +487,14 @@
 		<element type="iTechCostPercent" minOccurs="0"/>
 		<element type="iTechMinTurnsLeft" minOccurs="0"/>
 		<element type="PrereqTech" minOccurs="0"/>
-		<element type="UnitClass" minOccurs="0"/>
+		<element type="FreeUnit" minOccurs="0"/>
 		<element type="iNumFreeUnits" minOccurs="0"/>
 		<element type="bDisbandUnit" minOccurs="0"/>
 		<element type="iUnitExperience" minOccurs="0"/>
 		<element type="iUnitImmobileTurns" minOccurs="0"/>
-		<element type="UnitPromotion" minOccurs="0"/>
 		<element type="UnitName" minOccurs="0"/>
 		<element type="UnitCombatPromotions" minOccurs="0"/>
-		<element type="UnitClassPromotions" minOccurs="0"/>
+		<element type="PromoteUnits" minOccurs="0"/>
 		<element type="BuildingClass" minOccurs="0"/>
 		<element type="iBuildingChange" minOccurs="0"/>
 		<element type="BuildingExtraYields" minOccurs="0"/>

@@ -29542,27 +29542,6 @@ void CvTraitInfo::copyNonDefaults(CvTraitInfo* pClassInfo, CvXMLLoadUtility* pXM
 		}
 	}
 
-/************************************************************************************************/
-/* Afforess					  Start		 08/26/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-/*
-	for ( int j = 0; j < GC.getNumPromotionInfos(); j++ )
-	{
-		if (m_pabFreePromotion[j] == bDefault)
-		{
-			m_pabFreePromotion[j] = pClassInfo->isFreePromotion(j);
-		}
-	}
-	for ( int j = 0; j < GC.getNumUnitCombatInfos(); j++ )
-	{
-		if (m_pabFreePromotionUnitCombat[j] == bDefault)
-		{
-			m_pabFreePromotionUnitCombat[j] = pClassInfo->isFreePromotionUnitCombat(j);
-		}
-	}
-*/
 	for ( int j = 0; j < GC.getNumPromotionInfos(); j++ )
 	{
 		for ( int i = 0; i < GC.getNumUnitCombatInfos(); i++ )
@@ -29581,9 +29560,6 @@ void CvTraitInfo::copyNonDefaults(CvTraitInfo* pClassInfo, CvXMLLoadUtility* pXM
 			}
 		}
 	}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 	m_PropertyManipulators.copyNonDefaults(pClassInfo->getPropertyManipulators(), pXML);
 
@@ -36644,7 +36620,7 @@ CvEventInfo::CvEventInfo() :
 	m_iTechCostPercent(0),
 	m_iTechMinTurnsLeft(0),
 	m_iPrereqTech(NO_TECH),
-	m_iUnitClass(NO_UNITCLASS),
+	m_iFreeUnit(NO_UNIT),
 	m_iNumUnits(0),
 	m_iUnitExperience(0),
 	m_iUnitImmobileTurns(0),
@@ -36676,7 +36652,6 @@ CvEventInfo::CvEventInfo() :
 	m_iRevoltTurns(0),
 	m_iMinPillage(0),
 	m_iMaxPillage(0),
-	m_iUnitPromotion(NO_PROMOTION),
 	m_iFreeUnitSupport(0),
 	m_iInflationModifier(0),
 	m_iSpaceProductionModifier(0),
@@ -36688,21 +36663,12 @@ CvEventInfo::CvEventInfo() :
 	m_piAdditionalEventTime(NULL),
 	m_piClearEventChance(NULL),
 	m_piUnitCombatPromotions(NULL),
-	m_piUnitClassPromotions(NULL),
+	m_piUnitPromotions(NULL),
 	m_piCommerceModifier(NULL),
-	m_piYieldModifier(NULL)
-/************************************************************************************************/
-/* Afforess					  Start		 01/20/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-	,m_iPrereqGameOption(NO_GAMEOPTION)
-	,m_iRevolutionIndexChange(0)
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-{
-}
+	m_piYieldModifier(NULL),
+	m_iPrereqGameOption(NO_GAMEOPTION),
+	m_iRevolutionIndexChange(0)
+{ }
 
 CvEventInfo::~CvEventInfo()
 {
@@ -36713,7 +36679,7 @@ CvEventInfo::~CvEventInfo()
 	SAFE_DELETE_ARRAY(m_piAdditionalEventTime);
 	SAFE_DELETE_ARRAY(m_piClearEventChance);
 	SAFE_DELETE_ARRAY(m_piUnitCombatPromotions);
-	SAFE_DELETE_ARRAY(m_piUnitClassPromotions);
+	SAFE_DELETE_ARRAY(m_piUnitPromotions);
 	SAFE_DELETE_ARRAY(m_piCommerceModifier);
 	SAFE_DELETE_ARRAY(m_piYieldModifier);
 }
@@ -36808,9 +36774,9 @@ int CvEventInfo::getPrereqTech() const
 	return m_iPrereqTech;
 }
 
-int CvEventInfo::getUnitClass() const
+int CvEventInfo::getFreeUnit() const
 {
-	return m_iUnitClass;
+	return m_iFreeUnit;
 }
 
 int CvEventInfo::getNumUnits() const
@@ -36982,11 +36948,6 @@ int CvEventInfo::getMaxPillage() const
 	return m_iMaxPillage;
 }
 
-int CvEventInfo::getUnitPromotion() const
-{
-	return m_iUnitPromotion;
-}
-
 int CvEventInfo::getFreeUnitSupport() const
 {
 	return m_iFreeUnitSupport;
@@ -37053,11 +37014,11 @@ int CvEventInfo::getUnitCombatPromotion(int i) const
 	return m_piUnitCombatPromotions ? m_piUnitCombatPromotions[i] : -1;
 }
 
-int CvEventInfo::getUnitClassPromotion(int i) const
+int CvEventInfo::getUnitPromotion(int i) const
 {
 	FAssertMsg(i < GC.getNumUnitClassInfos(), "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
-	return m_piUnitClassPromotions ? m_piUnitClassPromotions[i] : -1;
+	return m_piUnitPromotions ? m_piUnitPromotions[i] : -1;
 }
 
 const CvWString& CvEventInfo::getWorldNews(int i) const
@@ -37261,7 +37222,7 @@ void CvEventInfo::getCheckSum(unsigned int& iSum)
 	CheckSum(iSum, m_iTechCostPercent);
 	CheckSum(iSum, m_iTechMinTurnsLeft);
 	CheckSum(iSum, m_iPrereqTech);
-	CheckSum(iSum, m_iUnitClass);
+	CheckSum(iSum, m_iFreeUnit);
 	CheckSum(iSum, m_iNumUnits);
 	CheckSum(iSum, m_iUnitExperience);
 	CheckSum(iSum, m_iUnitImmobileTurns);
@@ -37293,7 +37254,6 @@ void CvEventInfo::getCheckSum(unsigned int& iSum)
 	CheckSum(iSum, m_iRevoltTurns);
 	CheckSum(iSum, m_iMinPillage);
 	CheckSum(iSum, m_iMaxPillage);
-	CheckSum(iSum, m_iUnitPromotion);
 	CheckSum(iSum, m_iFreeUnitSupport);
 	CheckSum(iSum, m_iInflationModifier);
 	CheckSum(iSum, m_iSpaceProductionModifier);
@@ -37306,7 +37266,7 @@ void CvEventInfo::getCheckSum(unsigned int& iSum)
 	CheckSumI(iSum, GC.getNumEventInfos(), m_piAdditionalEventTime);
 	CheckSumI(iSum, GC.getNumEventInfos(), m_piClearEventChance);
 	CheckSumI(iSum, GC.getNumUnitCombatInfos(), m_piUnitCombatPromotions);
-	CheckSumI(iSum, GC.getNumUnitClassInfos(), m_piUnitClassPromotions);
+	CheckSumI(iSum, GC.getNumUnitClassInfos(), m_piUnitPromotions);
 
 	for (std::vector<BuildingYieldChange>::iterator it = m_aBuildingYieldChanges.begin(); it != m_aBuildingYieldChanges.end(); ++it)
 	{
@@ -37377,8 +37337,8 @@ bool CvEventInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iTechMinTurnsLeft, L"iTechMinTurnsLeft");
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PrereqTech");
 	m_iPrereqTech = pXML->GetInfoClass(szTextVal);
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"UnitClass");
-	m_iUnitClass = pXML->GetInfoClass(szTextVal);
+	pXML->GetOptionalChildXmlValByName(szTextVal, L"FreeUnit");
+	m_iFreeUnit = pXML->GetInfoClass(szTextVal);
 	pXML->GetOptionalChildXmlValByName(&m_iNumUnits, L"iNumFreeUnits");
 	pXML->GetOptionalChildXmlValByName(&m_bDisbandUnit, L"bDisbandUnit");
 	pXML->GetOptionalChildXmlValByName(&m_iUnitExperience, L"iUnitExperience");
@@ -37430,8 +37390,6 @@ bool CvEventInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iRevoltTurns, L"iRevoltTurns");
 	pXML->GetOptionalChildXmlValByName(&m_iMinPillage, L"iMinPillage");
 	pXML->GetOptionalChildXmlValByName(&m_iMaxPillage, L"iMaxPillage");
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"UnitPromotion");
-	m_iUnitPromotion = pXML->GetInfoClass(szTextVal);
 	pXML->GetOptionalChildXmlValByName(&m_iFreeUnitSupport, L"iFreeUnitSupport");
 	pXML->GetOptionalChildXmlValByName(&m_iInflationModifier, L"iInflationMod");
 	pXML->GetOptionalChildXmlValByName(&m_iSpaceProductionModifier, L"iSpaceProductionMod");
@@ -37470,14 +37428,14 @@ bool CvEventInfo::read(CvXMLLoadUtility* pXML)
 		SAFE_DELETE_ARRAY(pszPromotions);
 	}
 
-	FAssertMsg(NULL == m_piUnitClassPromotions, "Memory leak");
-	CvXMLLoadUtility::InitList(&m_piUnitClassPromotions,GC.getNumUnitClassInfos(),-1);
-	pXML->SetVariableListTagPair(&pszPromotions, L"UnitClassPromotions", GC.getNumUnitClassInfos(), "NONE");
-	if ( pszPromotions != NULL )
+	FAssertMsg(NULL == m_piUnitPromotions, "Memory leak");
+	CvXMLLoadUtility::InitList(&m_piUnitPromotions, GC.getNumUnitInfos(), -1);
+	pXML->SetVariableListTagPair(&pszPromotions, L"PromoteUnits", GC.getNumUnitInfos(), "NONE");
+	if (pszPromotions != NULL)
 	{
-		for (int i = 0; i < GC.getNumUnitClassInfos(); ++i)
+		for (int i = 0; i < GC.getNumUnitInfos(); ++i)
 		{
-			m_piUnitClassPromotions[i] = pXML->GetInfoClass(pszPromotions[i]);
+			m_piUnitPromotions[i] = pXML->GetInfoClass(pszPromotions[i]);
 		}
 		SAFE_DELETE_ARRAY(pszPromotions);
 	}
@@ -37845,7 +37803,7 @@ void CvEventInfo::copyNonDefaults(CvEventInfo* pClassInfo, CvXMLLoadUtility* pXM
 	if (getTechCostPercent() == iDefault) m_iTechCostPercent = pClassInfo->getTechCostPercent();
 	if (getTechMinTurnsLeft() == iDefault) m_iTechMinTurnsLeft = pClassInfo->getTechMinTurnsLeft();
 	if (getPrereqTech() == iTextDefault) m_iPrereqTech = pClassInfo->getPrereqTech();
-	if (getUnitClass() == iTextDefault) m_iUnitClass = pClassInfo->getUnitClass();
+	if (getFreeUnit() == iTextDefault) m_iFreeUnit = pClassInfo->getFreeUnit();
 	if (getNumUnits() == iDefault) m_iNumUnits = pClassInfo->getNumUnits();
 	if (isDisbandUnit() == bDefault) m_bDisbandUnit = pClassInfo->isDisbandUnit();
 	if (getUnitExperience() == iDefault) m_iUnitExperience = pClassInfo->getUnitExperience();
@@ -37932,7 +37890,6 @@ void CvEventInfo::copyNonDefaults(CvEventInfo* pClassInfo, CvXMLLoadUtility* pXM
 	if (getRevoltTurns() == iDefault) m_iRevoltTurns = pClassInfo->getRevoltTurns();
 	if (getMinPillage() == iDefault) m_iMinPillage = pClassInfo->getMinPillage();
 	if (getMaxPillage() == iDefault) m_iMaxPillage = pClassInfo->getMaxPillage();
-	if (getUnitPromotion() == iTextDefault) m_iUnitPromotion = pClassInfo->getUnitPromotion();
 	if (getFreeUnitSupport() == iDefault) m_iFreeUnitSupport = pClassInfo->getFreeUnitSupport();
 	if (getInflationModifier() == iDefault) m_iInflationModifier = pClassInfo->getInflationModifier();
 	if (getSpaceProductionModifier() == iDefault) m_iSpaceProductionModifier = pClassInfo->getSpaceProductionModifier();
@@ -37946,11 +37903,11 @@ void CvEventInfo::copyNonDefaults(CvEventInfo* pClassInfo, CvXMLLoadUtility* pXM
 		}
 	}
 
-	for (int i = 0; i < GC.getNumUnitClassInfos(); ++i)
+	for (int i = 0; i < GC.getNumUnitInfos(); ++i)
 	{
-		if (m_piUnitClassPromotions[i] == iTextDefault)
+		if (m_piUnitPromotions[i] == iTextDefault)
 		{
-			m_piUnitClassPromotions[i] = pClassInfo->getUnitClassPromotion(i);
+			m_piUnitPromotions[i] = pClassInfo->getUnitPromotion(i);
 		}
 	}
 

@@ -55,9 +55,7 @@ void CyInfoPythonInterface2()
 		.def("getDerivativeCiv", &CvCivilizationInfo::getDerivativeCiv, "int ()")
 
 		// Arrays
-
 		.def("getCivilizationBuildings", &CvCivilizationInfo::getCivilizationBuildings, "int (int i)")
-		.def("getCivilizationUnits", &CvCivilizationInfo::getCivilizationUnits, "int (int i)")
 		.def("getCivilizationFreeUnitsClass", &CvCivilizationInfo::getCivilizationFreeUnitsClass, "int (int i)")
 		.def("getCivilizationInitialCivics", &CvCivilizationInfo::getCivilizationInitialCivics, "int (int i)")
 

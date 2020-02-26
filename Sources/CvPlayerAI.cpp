@@ -24394,25 +24394,21 @@ int CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTrig
 		iValue += (GET_TEAM(getTeam()).getResearchCost((TechTypes)kEvent.getTech()) * kEvent.getTechPercent()) / 100;
 	}
 
-	if (kEvent.getUnitClass() != NO_UNITCLASS)
+	if (kEvent.getFreeUnit() != NO_UNIT)
 	{
-		UnitTypes eUnit = (UnitTypes)GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(kEvent.getUnitClass());
-		if (eUnit != NO_UNIT)
+		//Altough AI_unitValue compares well within units, the value is somewhat independent of cost
+		int iUnitValue = GC.getUnitInfo((UnitTypes)kEvent.getFreeUnit()).getProductionCost();
+		if (iUnitValue > 0)
 		{
-			//Altough AI_unitValue compares well within units, the value is somewhat independent of cost
-			int iUnitValue = GC.getUnitInfo(eUnit).getProductionCost();
-			if (iUnitValue > 0)
-			{
-				iUnitValue *= 2;
-			}
-			else if (iUnitValue == -1)
-			{
-				iUnitValue = 200; //Great Person?
-			}
-
-			iUnitValue *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
-			iValue += kEvent.getNumUnits() * iUnitValue;
+			iUnitValue *= 2;
 		}
+		else if (iUnitValue == -1)
+		{
+			iUnitValue = 200; //Great Person?
+		}
+
+		iUnitValue *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
+		iValue += kEvent.getNumUnits() * iUnitValue;
 	}
 
 	if (kEvent.isDisbandUnit())
@@ -27959,7 +27955,7 @@ UnitTypes CvPlayerAI::AI_bestAdvancedStartUnitAI(const CvPlot* pPlot, UnitAIType
 					{
 						iPromotionValue += 15;
 					}
-					else if (isFreePromotion((UnitClassTypes)kUnit.getUnitClassType(), (PromotionTypes)iJ))
+					else if (isFreePromotion((UnitTypes)iI, (PromotionTypes)iJ))
 					{
 						iPromotionValue += 15;
 					}
