@@ -4089,7 +4089,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LEVITATION_GENERATORS_PEDIA</Tag>
 		<English>While levitation trough usage of room superconductors, magnetics, electricity, acoustics and optics was theoretically possible earlier, it wasn't economically feasible to do as energy requirements were enormous. Now with fusion reactors it is possible to use levitation anywhere and everywhere. That is levitation is no longer limited to maglev trains.</English>
-		<Italian> </Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LIANGZHU</Tag>
@@ -6422,11 +6421,6 @@
 		<Italian>Leoni marini e foche</Italian>
 		<Spanish>Focas y leones marinos</Spanish>
 		<Polish>Lwy Morskie i Foki</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_SEA_LION_AND_SEAL_PEDIA</Tag>
-		<English> </English>
-		<Italian> </Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SEASONING</Tag>
