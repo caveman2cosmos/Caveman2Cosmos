@@ -11356,39 +11356,22 @@ int CvPlayer::countHolyCities() const
 
 void CvPlayer::foundReligion(ReligionTypes eReligion, ReligionTypes eSlotReligion, bool bAward)
 {
-	CvCity* pLoopCity;
-	CvCity* pBestCity;
-	UnitTypes eFreeUnit;
-	bool bStarting;
-	int iValue;
-	int iBestValue;
-	int iLoop;
-
-/************************************************************************************************/
-/* RevDCM	                  Start		 4/29/10                                                */
-/*                                                                                              */
-/* OC_LIMITED_RELIGIONS                                                                         */
-/************************************************************************************************/
-	FAssert(NO_RELIGION != eReligion);
-	FAssert(canFoundReligion());
-	FAssert(!(isNPC()));
-	if( (NO_RELIGION == eReligion) || !(canFoundReligion()) )
-	{
-		return;
-	}
-	TechTypes eIndex = TechTypes(GC.getReligionInfo(eSlotReligion).getTechPrereq());
-	FAssert(!GC.getGame().isReligionSlotTaken(eSlotReligion));
-/************************************************************************************************/
-/* REVDCM                                  END                                                  */
-/************************************************************************************************/
-#ifdef C2C_BUILD
-	//TB Prophet Mod begin
+	//TB Prophet Mod
 	if(GC.getGame().isOption(GAMEOPTION_DIVINE_PROPHETS))
 	{
 		return;
 	}
-	//TB Prophet Mod End
-#endif
+
+	// Limited religion GO
+	FAssert(!isNPC());
+	if (NO_RELIGION == eReligion || !canFoundReligion())
+	{
+		FAssert(NO_RELIGION != eReligion);
+		FAssert(canFoundReligion());
+		return;
+	}
+	FAssert(!GC.getGame().isReligionSlotTaken(eSlotReligion));
+
 	// Clear queued religious techs for human player when founding a religion
 	// Religious techs are not researchable after founding a religion under "Limited Religions" rules
 	// AI always clear their entire tech queue when a religion is founded in CvTeam::setHasTech
@@ -11419,27 +11402,26 @@ void CvPlayer::foundReligion(ReligionTypes eReligion, ReligionTypes eSlotReligio
 		return;
 	}
 
-/************************************************************************************************/
-/* RevDCM	                  Start		 4/29/10                                                */
-/*                                                                                              */
-/* OC_LIMITED_RELIGIONS                                                                         */
-/************************************************************************************************/
-	bStarting = ( (GC.getReligionInfo(eSlotReligion).getTechPrereq() == NO_TECH)
-		|| GC.getGame().isGameStart() );
-/************************************************************************************************/
-/* REVDCM                                  END                                                  */
-/************************************************************************************************/
+	// Limited religion GO
+	const TechTypes eTechReq = TechTypes(GC.getReligionInfo(eSlotReligion).getTechPrereq());
+	const bool bStarting = eTechReq == NO_TECH || GC.getGame().isGameStart();
 
-	iBestValue = 0;
-	pBestCity = NULL;
-
+	// Find founding city
+	const int iRand = GC.getDefineINT("FOUND_RELIGION_CITY_RAND");
+	int iBestValue = -1;
+	CvCity* pBestCity = NULL;
+	CvCity* pLoopCity;
+	int iLoop;
 	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
 	{
 		if (!bStarting || !(pLoopCity->isHolyCity()))
 		{
-			iValue = 10;
-			iValue += pLoopCity->getPopulation();
-			iValue += GC.getGame().getSorenRandNum(GC.getDefineINT("FOUND_RELIGION_CITY_RAND"), "Found Religion");
+			int iValue = 10 + pLoopCity->getPopulation();
+
+			if (iRand > 0)
+			{
+				iValue += 1 + GC.getGame().getSorenRandNum(iRand, "Found Religion");
+			}
 
 			iValue /= (pLoopCity->getReligionCount() + 1);
 
@@ -11447,8 +11429,6 @@ void CvPlayer::foundReligion(ReligionTypes eReligion, ReligionTypes eSlotReligio
 			{
 				iValue /= 8;
 			}
-
-			iValue = std::max(1, iValue);
 
 			if (iValue > iBestValue)
 			{
@@ -11461,36 +11441,22 @@ void CvPlayer::foundReligion(ReligionTypes eReligion, ReligionTypes eSlotReligio
 
 	if (pBestCity != NULL)
 	{
-/************************************************************************************************/
-/* RevDCM	                  Start		 4/29/10                                                */
-/*                                                                                              */
-/* OC_LIMITED_RELIGIONS                                                                         */
-/************************************************************************************************/
+		// Limited religion GO
 		GC.getGame().setReligionSlotTaken(eSlotReligion, true);
-		GC.getGame().setTechCanFoundReligion(eIndex, true);
-/************************************************************************************************/
-/* REVDCM                                  END                                                  */
-/************************************************************************************************/
+		GC.getGame().setTechCanFoundReligion(eTechReq, true);
 
+		// Found religion
 		GC.getGame().setHolyCity(eReligion, pBestCity, true);
 
-		if (bAward)
+		if (bAward && GC.getReligionInfo(eSlotReligion).getNumFreeUnits() > 0)
 		{
-			if (GC.getReligionInfo(eSlotReligion).getNumFreeUnits() > 0)
+			const UnitTypes eFreeUnit = (UnitTypes)GC.getReligionInfo(eReligion).getFreeUnit();
+
+			if (eFreeUnit != NO_UNIT)
 			{
-				UnitClassTypes eFreeUnitClass = (UnitClassTypes)GC.getReligionInfo(eReligion).getFreeUnitClass();
-
-				if ( eFreeUnitClass != NO_UNITCLASS )
+				for (int i = 0; i < GC.getReligionInfo(eSlotReligion).getNumFreeUnits(); ++i)
 				{
-					eFreeUnit = ((UnitTypes)(GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(eFreeUnitClass)));
-
-					if (eFreeUnit != NO_UNIT)
-					{
-						for (int i = 0; i < GC.getReligionInfo(eSlotReligion).getNumFreeUnits(); ++i)
-						{
-							initUnit(eFreeUnit, pBestCity->getX(), pBestCity->getY(), NO_UNITAI, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
-						}
-					}
+					initUnit(eFreeUnit, pBestCity->getX(), pBestCity->getY(), NO_UNITAI, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 				}
 			}
 		}

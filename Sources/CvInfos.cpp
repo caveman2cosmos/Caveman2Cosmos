@@ -23915,7 +23915,7 @@ m_iTGAIndex(-1),
 /************************************************************************************************/
 m_iHolyCityChar(0),
 m_iTechPrereq(NO_TECH),
-m_iFreeUnitClass(NO_UNITCLASS),
+m_iFreeUnit(NO_UNIT),
 m_iNumFreeUnits(0),
 m_iSpreadFactor(0),
 m_iMissionType(NO_MISSION),
@@ -24014,9 +24014,9 @@ int CvReligionInfo::getTechPrereq() const
 	return m_iTechPrereq;
 }
 
-int CvReligionInfo::getFreeUnitClass() const
+int CvReligionInfo::getFreeUnit() const
 {
-	return m_iFreeUnitClass;
+	return m_iFreeUnit;
 }
 
 int CvReligionInfo::getNumFreeUnits() const
@@ -24176,8 +24176,8 @@ bool CvReligionInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"TechPrereq");
 	m_iTechPrereq = pXML->GetInfoClass(szTextVal);
 
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"FreeUnitClass");
-	m_iFreeUnitClass = pXML->GetInfoClass(szTextVal);
+	pXML->GetOptionalChildXmlValByName(szTextVal, L"FreeUnit");
+	m_aszExtraXMLforPass3.push_back(szTextVal);
 
 	pXML->GetOptionalChildXmlValByName(&m_iNumFreeUnits, L"iFreeUnits");
 	pXML->GetOptionalChildXmlValByName(&m_iSpreadFactor, L"iSpreadFactor");
@@ -24284,7 +24284,7 @@ void CvReligionInfo::copyNonDefaults(CvReligionInfo* pClassInfo, CvXMLLoadUtilit
 	CvHotkeyInfo::copyNonDefaults(pClassInfo, pXML);
 
 	if (getTechPrereq() == iTextDefault) m_iTechPrereq = pClassInfo->getTechPrereq();
-	if (getFreeUnitClass() == iTextDefault) m_iFreeUnitClass = pClassInfo->getFreeUnitClass();
+	if (m_iFreeUnit == iTextDefault) m_iFreeUnit = pClassInfo->getFreeUnit();
 
 	if (getNumFreeUnits() == iDefault) m_iNumFreeUnits = pClassInfo->getNumFreeUnits();
 	if (getSpreadFactor() == iDefault) m_iSpreadFactor = pClassInfo->getSpreadFactor();
@@ -24351,10 +24351,25 @@ void CvReligionInfo::copyNonDefaults(CvReligionInfo* pClassInfo, CvXMLLoadUtilit
 	m_PropertyManipulators.copyNonDefaults(pClassInfo->getPropertyManipulators(), pXML);
 }
 
+bool CvReligionInfo::readPass3()
+{
+	if (m_aszExtraXMLforPass3.size() < 1)
+	{
+		FAssert(false);
+		return false;
+	}
+
+	m_iFreeUnit = GC.getInfoTypeForString(m_aszExtraXMLforPass3[0]);
+
+	m_aszExtraXMLforPass3.clear();
+
+	return true;
+}
+
 void CvReligionInfo::getCheckSum(unsigned int& iSum)
 {
 	CheckSum(iSum, m_iTechPrereq);
-	CheckSum(iSum, m_iFreeUnitClass);
+	CheckSum(iSum, m_iFreeUnit);
 	CheckSum(iSum, m_iNumFreeUnits);
 	CheckSum(iSum, m_iSpreadFactor);
 	CheckSum(iSum, m_iMissionType);
@@ -24399,7 +24414,7 @@ m_iTGAIndex(-1),
 /************************************************************************************************/
 m_iHeadquarterChar(0),
 m_iTechPrereq(NO_TECH),
-m_iFreeUnitClass(NO_UNITCLASS),
+m_iFreeUnit(NO_UNIT),
 m_iSpreadFactor(0),
 m_iSpreadCost(0),
 m_iMaintenance(0),
@@ -24525,9 +24540,9 @@ int CvCorporationInfo::getTechPrereq() const
 	return m_iTechPrereq;
 }
 
-int CvCorporationInfo::getFreeUnitClass() const
+int CvCorporationInfo::getFreeUnit() const
 {
-	return m_iFreeUnitClass;
+	return m_iFreeUnit;
 }
 
 int CvCorporationInfo::getSpreadFactor() const
@@ -24742,8 +24757,8 @@ bool CvCorporationInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"TechPrereq");
 	m_iTechPrereq = pXML->GetInfoClass(szTextVal);
 
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"FreeUnitClass");
-	m_iFreeUnitClass = pXML->GetInfoClass(szTextVal);
+	pXML->GetOptionalChildXmlValByName(szTextVal, L"FreeUnit");
+	m_aszExtraXMLforPass3.push_back(szTextVal);
 
 	pXML->GetOptionalChildXmlValByName(&m_iSpreadFactor, L"iSpreadFactor");
 	pXML->GetOptionalChildXmlValByName(&m_iSpreadCost, L"iSpreadCost");
@@ -24973,7 +24988,7 @@ void CvCorporationInfo::copyNonDefaults(CvCorporationInfo* pClassInfo, CvXMLLoad
 	CvHotkeyInfo::copyNonDefaults(pClassInfo, pXML);
 
 	if (getTechPrereq() == iTextDefault) m_iTechPrereq = pClassInfo->getTechPrereq();
-	if (getFreeUnitClass() == iTextDefault) m_iFreeUnitClass = pClassInfo->getFreeUnitClass();
+	if (m_iFreeUnit == iTextDefault) m_iFreeUnit = pClassInfo->getFreeUnit();
 	if (getSpreadFactor() == iDefault) m_iSpreadFactor = pClassInfo->getSpreadFactor();
 	if (getSpreadCost() == iDefault) m_iSpreadCost = pClassInfo->getSpreadCost();
 	if (getMaintenance() == iDefault) m_iMaintenance = pClassInfo->getMaintenance();
@@ -25081,7 +25096,7 @@ void CvCorporationInfo::copyNonDefaults(CvCorporationInfo* pClassInfo, CvXMLLoad
 void CvCorporationInfo::getCheckSum(unsigned int& iSum)
 {
 	CheckSum(iSum, m_iTechPrereq);
-	CheckSum(iSum, m_iFreeUnitClass);
+	CheckSum(iSum, m_iFreeUnit);
 	CheckSum(iSum, m_iSpreadFactor);
 	CheckSum(iSum, m_iSpreadCost);
 	CheckSum(iSum, m_iMaintenance);
@@ -25113,11 +25128,7 @@ void CvCorporationInfo::getCheckSum(unsigned int& iSum)
 	m_PropertyManipulators.getCheckSum(iSum);
 }
 
-/************************************************************************************************/
-/* Afforess					  Start		 02/05/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 bool CvCorporationInfo::readPass3()
 {
 	m_paiPrereqBuildingClass = new int[GC.getNumBuildingClassInfos()];
@@ -25156,11 +25167,18 @@ bool CvCorporationInfo::readPass3()
 		m_abCompetingCorporationforPass3.clear();
 	}
 
+	if (m_aszExtraXMLforPass3.size() < 1)
+	{
+		FAssert(false);
+		return false;
+	}
+
+	m_iFreeUnit = GC.getInfoTypeForString(m_aszExtraXMLforPass3[0]);
+
+	m_aszExtraXMLforPass3.clear();
+
 	return true;
 }
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 CvPropertyManipulators* CvCorporationInfo::getPropertyManipulators()
 {

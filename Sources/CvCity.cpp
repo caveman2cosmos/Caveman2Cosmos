@@ -6606,14 +6606,11 @@ void CvCity::setHeadquarters(CorporationTypes eIndex)
 	{
 		GC.getGame().setHeadquarters(eIndex, this, true);
 
-		if (GC.getCorporationInfo(eIndex).getFreeUnitClass() != NO_UNITCLASS)
-		{
-			UnitTypes eFreeUnit = ((UnitTypes)(GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(GC.getCorporationInfo(eIndex).getFreeUnitClass())));
+		const UnitTypes eFreeUnit = (UnitTypes)GC.getCorporationInfo(eIndex).getFreeUnit();
 
-			if (eFreeUnit != NO_UNIT)
-			{
-				GET_PLAYER(getOwner()).initUnit(eFreeUnit, getX(), getY(), NO_UNITAI, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
-			}
+		if (eFreeUnit != NO_UNIT)
+		{
+			GET_PLAYER(getOwner()).initUnit(eFreeUnit, getX(), getY(), NO_UNITAI, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 		}
 	}
 }

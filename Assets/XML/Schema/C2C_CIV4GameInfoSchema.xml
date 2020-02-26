@@ -449,7 +449,7 @@
 		<element type="DependencyType" minOccurs="1"/>
 	</ElementType>
 	<!-- XMLCOPY				END					MRGENIE		-->
-	<ElementType name="FreeUnitClass" content="textOnly"/>
+	<ElementType name="FreeUnit" content="textOnly"/>
 	<ElementType name="iSpreadFactor" content="textOnly" dt:type="int"/>
 	<ElementType name="iSpreadCost" content="textOnly" dt:type="int"/>
 	<ElementType name="iMaintenance" content="textOnly" dt:type="int"/>
@@ -499,7 +499,7 @@
 		<element type="Adjective" minOccurs="0"/>
 		<element type="Civilopedia" minOccurs="0"/>
 		<element type="TechPrereq" minOccurs="0"/>
-		<element type="FreeUnitClass" minOccurs="0"/>
+		<element type="FreeUnit" minOccurs="0"/>
 		<element type="iFreeUnits" minOccurs="0"/>
 		<element type="iSpreadFactor" minOccurs="0"/>
 		<!-- TGA_INDEXATION			01/21/2008			MRGENIE		-->
@@ -574,7 +574,7 @@
 		<element type="iSpread" minOccurs="0"/>
 		<element type="PrereqGameOption" minOccurs="0"/>
 		<!--Afforess-->
-		<element type="FreeUnitClass" minOccurs="0"/>
+		<element type="FreeUnit" minOccurs="0"/>
 		<element type="iSpreadFactor" minOccurs="0"/>
 		<element type="iSpreadCost" minOccurs="0"/>
 		<element type="iMaintenance" minOccurs="0"/>

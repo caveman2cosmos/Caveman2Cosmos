@@ -7162,7 +7162,7 @@ public:
 	int getHolyCityChar() const;				// Exposed to Python
 	void setHolyCityChar(int i);
 	int getTechPrereq() const;					// Exposed to Python
-	int getFreeUnitClass() const;				// Exposed to Python
+	int getFreeUnit() const;					// Exposed to Python
 	int getNumFreeUnits() const;				// Exposed to Python
 	int getSpreadFactor() const;				// Exposed to Python
 	int getMissionType() const;					// Exposed to Python
@@ -7196,6 +7196,7 @@ public:
 	int getFlavorValue(int i) const;				// Exposed to Python
 
 	bool read(CvXMLLoadUtility* pXML);
+	bool readPass3();
 
 	virtual void read(FDataStreamBase* pStream) {}
 	virtual void write(FDataStreamBase* pStream) {}
@@ -7215,7 +7216,7 @@ protected:
 	int m_iChar;
 	int m_iHolyCityChar;
 	int m_iTechPrereq;
-	int m_iFreeUnitClass;
+	int m_iFreeUnit;
 	int m_iNumFreeUnits;
 	int m_iSpreadFactor;
 	int m_iMissionType;
@@ -7262,7 +7263,7 @@ public:
 	int getHeadquarterChar() const;			// Exposed to Python
 	void setHeadquarterChar(int i);
 	int getTechPrereq() const;				// Exposed to Python
-	int getFreeUnitClass() const;			// Exposed to Python
+	int getFreeUnit() const;				// Exposed to Python
 	int getSpreadFactor() const;			// Exposed to Python
 	int getSpreadCost() const;				// Exposed to Python
 	int getMaintenance() const;				// Exposed to Python
@@ -7289,11 +7290,7 @@ public:
 	int* getYieldProducedArray() const;
 
 	bool read(CvXMLLoadUtility* pXML);
-/************************************************************************************************/
-/* Afforess					  Start		 01/14/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 	int getObsoleteTech() const;
 	int getSpread() const;
 	int getHealth() const;
@@ -7317,9 +7314,6 @@ public:
 	int* getYieldChangeArray() const;
 	int getCommerceChange(int i) const;
 	int* getCommerceChangeArray() const;
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 	void read(FDataStreamBase* stream) {}
 	void write(FDataStreamBase* stream) {}
@@ -7339,7 +7333,7 @@ protected:
 	int m_iChar;
 	int m_iHeadquarterChar;
 	int m_iTechPrereq;
-	int m_iFreeUnitClass;
+	int m_iFreeUnit;
 	int m_iSpreadFactor;
 	int m_iSpreadCost;
 	int m_iMaintenance;

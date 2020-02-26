@@ -28376,13 +28376,11 @@ void CvGameTextMgr::setBonusTradeHelp(CvWStringBuffer &szBuffer, BonusTypes eBon
 
 void CvGameTextMgr::setReligionHelp(CvWStringBuffer &szBuffer, ReligionTypes eReligion, bool bCivilopedia)
 {
-	UnitTypes eFreeUnit;
-
 	if (NO_RELIGION == eReligion)
 	{
 		return;
 	}
-	CvReligionInfo& religion = GC.getReligionInfo(eReligion);
+	const CvReligionInfo& religion = GC.getReligionInfo(eReligion);
 
 	if (!bCivilopedia)
 	{
@@ -28401,29 +28399,19 @@ void CvGameTextMgr::setReligionHelp(CvWStringBuffer &szBuffer, ReligionTypes eRe
 		}
 	}
 
-	if (religion.getFreeUnitClass() != NO_UNITCLASS)
-	{
-		if (GC.getGame().getActivePlayer() != NO_PLAYER)
-		{
-			eFreeUnit = ((UnitTypes)(GC.getCivilizationInfo(GET_PLAYER(GC.getGame().getActivePlayer()).getCivilizationType()).getCivilizationUnits(religion.getFreeUnitClass())));
-		}
-		else
-		{
-			eFreeUnit = (UnitTypes)GC.getUnitClassInfo((UnitClassTypes)religion.getFreeUnitClass()).getDefaultUnitIndex();
-		}
+	const UnitTypes eFreeUnit = (UnitTypes) religion.getFreeUnit();
 
-		if (eFreeUnit != NO_UNIT)
+	if (eFreeUnit != NO_UNIT)
+	{
+		if (religion.getNumFreeUnits() > 1)
 		{
-			if (religion.getNumFreeUnits() > 1)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_RELIGION_FOUNDER_RECEIVES_NUM", GC.getUnitInfo(eFreeUnit).getTextKeyWide(), religion.getNumFreeUnits()));
-			}
-			else if (religion.getNumFreeUnits() > 0)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_RELIGION_FOUNDER_RECEIVES", GC.getUnitInfo(eFreeUnit).getTextKeyWide()));
-			}
+			szBuffer.append(NEWLINE);
+			szBuffer.append(gDLL->getText("TXT_KEY_RELIGION_FOUNDER_RECEIVES_NUM", GC.getUnitInfo(eFreeUnit).getTextKeyWide(), religion.getNumFreeUnits()));
+		}
+		else if (religion.getNumFreeUnits() > 0)
+		{
+			szBuffer.append(NEWLINE);
+			szBuffer.append(gDLL->getText("TXT_KEY_RELIGION_FOUNDER_RECEIVES", GC.getUnitInfo(eFreeUnit).getTextKeyWide()));
 		}
 	}
 }
@@ -28580,24 +28568,23 @@ void CvGameTextMgr::setReligionHelpCity(CvWStringBuffer &szBuffer, ReligionTypes
 
 void CvGameTextMgr::setCorporationHelp(CvWStringBuffer &szBuffer, CorporationTypes eCorporation, bool bCivilopedia)
 {
-	UnitTypes eFreeUnit;
-	CvWString szTempBuffer;
-
 	if (NO_CORPORATION == eCorporation)
 	{
 		return;
 	}
-	CvCorporationInfo& kCorporation = GC.getCorporationInfo(eCorporation);
+	const CvCorporationInfo& kCorporation = GC.getCorporationInfo(eCorporation);
 
 	if (!bCivilopedia)
 	{
 		szBuffer.append(CvWString::format(SETCOLR L"%s" ENDCOLR , TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), kCorporation.getDescription()));
 	}
 
+	CvWString szTempBuffer;
 	szTempBuffer.clear();
+
 	for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
 	{
-		int iYieldProduced = GC.getCorporationInfo(eCorporation).getYieldProduced((YieldTypes)iI);
+		int iYieldProduced = kCorporation.getYieldProduced((YieldTypes)iI);
 		if (NO_PLAYER != GC.getGame().getActivePlayer())
 		{
 			iYieldProduced *= GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent();
@@ -28637,7 +28624,7 @@ void CvGameTextMgr::setCorporationHelp(CvWStringBuffer &szBuffer, CorporationTyp
 	szTempBuffer.clear();
 	for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
 	{
-		int iCommerceProduced = GC.getCorporationInfo(eCorporation).getCommerceProduced((CommerceTypes)iI);
+		int iCommerceProduced = kCorporation.getCommerceProduced((CommerceTypes)iI);
 		if (NO_PLAYER != GC.getGame().getActivePlayer())
 		{
 			iCommerceProduced *= GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent();
@@ -28746,64 +28733,44 @@ void CvGameTextMgr::setCorporationHelp(CvWStringBuffer &szBuffer, CorporationTyp
 		szBuffer.append(gDLL->getText("TXT_KEY_CORPORATION_BONUS_PRODUCED", GC.getBonusInfo((BonusTypes)kCorporation.getBonusProduced()).getChar()));
 	}
 
-	if (kCorporation.getFreeUnitClass() != NO_UNITCLASS)
-	{
-		if (GC.getGame().getActivePlayer() != NO_PLAYER)
-		{
-			eFreeUnit = ((UnitTypes)(GC.getCivilizationInfo(GET_PLAYER(GC.getGame().getActivePlayer()).getCivilizationType()).getCivilizationUnits(kCorporation.getFreeUnitClass())));
-		}
-		else
-		{
-			eFreeUnit = (UnitTypes)GC.getUnitClassInfo((UnitClassTypes)kCorporation.getFreeUnitClass()).getDefaultUnitIndex();
-		}
+	const UnitTypes eFreeUnit = (UnitTypes) kCorporation.getFreeUnit();
 
-		if (eFreeUnit != NO_UNIT)
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_RELIGION_FOUNDER_RECEIVES", GC.getUnitInfo(eFreeUnit).getTextKeyWide()));
-		}
+	if (eFreeUnit != NO_UNIT)
+	{
+		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_RELIGION_FOUNDER_RECEIVES", GC.getUnitInfo(eFreeUnit).getTextKeyWide()));
 	}
 
 	bFirst = true;
-	for (int iCorporation = 0; iCorporation < GC.getNumCorporationInfos(); ++iCorporation)
+	for (int iI = 0; iI < GC.getNumCorporationInfos(); ++iI)
 	{
-		if (iCorporation != eCorporation)
+		if (iI != eCorporation)
 		{
-			bool bCompeting = false;
+			const CvCorporationInfo& kLoopCorporation = GC.getCorporationInfo((CorporationTypes)iI);
 
-			CvCorporationInfo& kLoopCorporation = GC.getCorporationInfo((CorporationTypes)iCorporation);
-/************************************************************************************************/
-/* Afforess	                  Start		 02/09/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-			if (kLoopCorporation.isCompetingCorporation(eCorporation) || kCorporation.isCompetingCorporation(iCorporation))
-				bCompeting = true;
-			if (!bCompeting)	{
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-			for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
+			bool bCompeting = kLoopCorporation.isCompetingCorporation(eCorporation) || kCorporation.isCompetingCorporation(iI);
+
+			if (!bCompeting)
 			{
-				if (kCorporation.getPrereqBonus(i) != NO_BONUS)
+				for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
 				{
-					for (int j = 0; j < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++j)
+					if (kCorporation.getPrereqBonus(i) != NO_BONUS)
 					{
-						if (kLoopCorporation.getPrereqBonus(j) == kCorporation.getPrereqBonus(i))
+						for (int j = 0; j < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++j)
 						{
-							bCompeting = true;
-							break;
+							if (kLoopCorporation.getPrereqBonus(j) == kCorporation.getPrereqBonus(i))
+							{
+								bCompeting = true;
+								break;
+							}
 						}
 					}
-				}
-
-				if (bCompeting)
-				{
-					break;
+					if (bCompeting)
+					{
+						break;
+					}
 				}
 			}
-			}
-
 			if (bCompeting)
 			{
 				CvWString szTemp = CvWString::format(L"<link=%s>%s</link>", CvWString(kLoopCorporation.getType()).GetCString(), kLoopCorporation.getDescription());
@@ -28813,11 +28780,6 @@ void CvGameTextMgr::setCorporationHelp(CvWStringBuffer &szBuffer, CorporationTyp
 		}
 	}
 
-/************************************************************************************************/
-/* Afforess	                  Start		 01/14/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	if (kCorporation.getHealth() > 0)
 	{
 		szBuffer.append(NEWLINE);
@@ -28881,9 +28843,6 @@ void CvGameTextMgr::setCorporationHelp(CvWStringBuffer &szBuffer, CorporationTyp
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_OBSOLETE_WITH", CvWString(GC.getTechInfo((TechTypes)kCorporation.getObsoleteTech()).getType()).GetCString(), GC.getTechInfo((TechTypes)kCorporation.getObsoleteTech()).getTextKeyWide()));
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 }
 
 void CvGameTextMgr::setCorporationHelpCity(CvWStringBuffer &szBuffer, CorporationTypes eCorporation, CvCity *pCity, bool bCityBar, bool bForceCorporation)
