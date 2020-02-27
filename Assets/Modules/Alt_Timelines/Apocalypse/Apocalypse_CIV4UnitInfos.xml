@@ -8,7 +8,6 @@
 <Civ4UnitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_APOCALYPSE_URBAN_CROSSBOWMAN</Class>
 			<Type>UNIT_APOCALYPSE_URBAN_CROSSBOWMAN</Type>
 			<Combat>UNITCOMBAT_ARCHER</Combat>
 			<SubCombatTypes>
@@ -96,7 +95,6 @@
 			<FormationType>FORMATION_TYPE_RANGED</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_MACHETE_WARRIOR</Class>
 			<Type>UNIT_MACHETE_WARRIOR</Type>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
@@ -176,7 +174,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_WRENCH_WARRIOR</Class>
 			<Type>UNIT_WRENCH_WARRIOR</Type>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
@@ -269,7 +266,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_CROWBAR_GUARD</Class>
 			<Type>UNIT_CROWBAR_GUARD</Type>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
@@ -360,7 +356,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_HATCHET_MAN</Class>
 			<Type>UNIT_HATCHET_MAN</Type>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
@@ -452,7 +447,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_POST_APOCALYPTIC_GRENADIER</Class>
 			<Type>UNIT_POST_APOCALYPTIC_GRENADIER</Type>
 			<Combat>UNITCOMBAT_THROWING</Combat>
 			<SubCombatTypes>

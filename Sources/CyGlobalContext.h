@@ -80,7 +80,6 @@ public:
 	CvCommandInfo* getCommandInfo(int i) const;
 	CvAutomateInfo* getAutomateInfo(int i) const;
 	CvActionInfo* getActionInfo(int i) const;
-	CvUnitClassInfo* getUnitClassInfo(int i) const;
 	CvInfoBase* getUnitCombatInfo(int i) const;
 	//TB Promotion Line Mod begin
 	CvPromotionLineInfo* getPromotionLineInfo(int i) const;
@@ -208,7 +207,6 @@ public:
 	int getNumTurnTimerInfos() const { return GC.getNumTurnTimerInfos(); }
 	int getNumBuildingClassInfos() const { return GC.getNumBuildingClassInfos(); }
 	int getNumBuildingInfos() const { return GC.getNumBuildingInfos(); }
-	int getNumUnitClassInfos() const { return GC.getNumUnitClassInfos(); }
 	int getNumUnitCombatInfos() const { return GC.getNumUnitCombatInfos(); }
 	//TB Promotion Line Mod begin
 	int getNumPromotionLineInfos() const { return GC.getNumPromotionLineInfos(); }

@@ -9,7 +9,7 @@
 			<Description>TXT_KEY_TECH_RODNOVERA</Description>
 			<Civilopedia>TXT_KEY_TECH_RODNOVERA_PEDIA</Civilopedia>
 			<TechPrereq>TECH_RODNOVERA</TechPrereq>
-			<FreeUnitClass>UNITCLASS_RODNOVERY_MISSIONARY</FreeUnitClass>
+			<FreeUnit>UNIT_RODNOVERY_MISSIONARY</FreeUnit>
 			<iFreeUnits>1</iFreeUnits>
 			<iSpreadFactor>100</iSpreadFactor>
 			<iTGAIndex>25</iTGAIndex>

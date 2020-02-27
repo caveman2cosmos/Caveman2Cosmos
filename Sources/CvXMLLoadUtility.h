@@ -557,18 +557,10 @@ public:
 	void InitImprovementBonusList(CvImprovementBonusInfo** ppImprovementBonus, int iListLen);
 	// allocate and initialize the civilization's default buildings
 	void InitBuildingDefaults(int **ppiDefaults);
-	// allocate and initialize the civilization's default units
-	void InitUnitDefaults(int **ppiDefaults);
-/************************************************************************************************/
-/* Afforess	                  Start		 08/26/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	// allocate and initialize a 2 dimensional array of bool pointers
 	static void Init2DBoolList(bool*** pppbList, int iSizeX, int iSizeY);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 	// allocate and initialize a 2 dimensional array of int pointers
 	static void Init2DIntList(int*** pppiList, int iSizeX, int iSizeY);
 	// allocate and initialize a 2 dimensional array of float pointers

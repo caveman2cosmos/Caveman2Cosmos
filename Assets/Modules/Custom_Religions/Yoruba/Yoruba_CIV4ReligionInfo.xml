@@ -12,7 +12,7 @@
 			<Adjective>TXT_KEY_TECH_YORUBA_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_TECH_YORUBA_PEDIA</Civilopedia>
 			<TechPrereq>TECH_YORUBA</TechPrereq>
-			<FreeUnitClass>UNITCLASS_YORUBA_MISSIONARY</FreeUnitClass>
+			<FreeUnit>UNIT_YORUBA_MISSIONARY</FreeUnit>
 			<iFreeUnits>1</iFreeUnits>
 			<iSpreadFactor>10</iSpreadFactor>
 			<iTGAIndex>18</iTGAIndex>

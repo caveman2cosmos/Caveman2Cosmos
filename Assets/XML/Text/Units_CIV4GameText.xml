@@ -7548,7 +7548,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Myśliwiec Odrzutowy to uniwersalna jednostka odrzutowa.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_F117</Tag>
+		<Tag>TXT_KEY_UNIT_STEALTH_FIGHTER</Tag>
 		<English>Stealth Fighter</English>
 		<French>Chasseur Furtif</French>
 		<German>Stealth-Jäger</German>
@@ -7561,12 +7561,12 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Myśliwiec Stealth</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_F117_PEDIA</Tag>
+		<Tag>TXT_KEY_UNIT_STEALTH_FIGHTER_PEDIA</Tag>
 		<English>The F-117 Nighthawk is a stealth ground attack aircraft formerly operated by the United States Air Force. The F-117A's first flight was in 1981, and it achieved Initial Operational Capability status in October 1983. The F-117A came out of secrecy and was revealed to the world in November 1988. The F-117A is equipped with sophisticated navigation and attack systems integrated into a digital avionics suite. It carries no radar, which lowers emissions and cross-section. It navigates primarily by GPS and high-accuracy inertial navigation. Missions are coordinated by an automated planning system that can automatically perform all aspects of a strike mission, including weapons release. Targets are acquired by a thermal imaging infrared system, slaved to a laser that finds the range and designates targets for laser-guided bombs.</English>
 		<Polish>F-117 Nighthawk amerykański odrzutowy samolot bombowy wykonany w technologii stealth, produkowany przez firmę Lockheed. Służył w United States Air Force od 1983 do 2008. Pomimo oznaczenia "F", stosowanego w lotnictwie USA do klasyfikacji myśliwców, F-117 był taktycznym bombowcem, przeznaczonym do wykonywania precyzyjnych ataków na cele naziemne.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_F117_STRATEGY</Tag>
+		<Tag>TXT_KEY_UNIT_STEALTH_FIGHTER</Tag>
 		<English>Stealth Fighters have greater range than Strike Fighters, and they are better at intercepting and destroying enemy aircraft. Stealth technology allows them to evade interception.</English>
 		<French>Les Chasseurs Furtifs ont une plus grande portée que les Intercepteurs Modernes, et ils sont meilleurs pour intercepter et détruire les avions ennemis. La technologie furtive leur permet d'échapper à l'interception.</French>
 		<Spanish>Los Cazas furtivos poseen un alcance mayor que los Cazas de ataque, y son más efectivos a la hora de interceptar y destruir aeronaves enemigas. Su tecnología furtiva les permite evitar la interceptación.</Spanish>

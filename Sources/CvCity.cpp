@@ -81,12 +81,8 @@ CvCity::CvCity()
 	m_pabWorkingPlot = NULL;
 	m_pabHasReligion = NULL;
 	m_pabHasCorporation = NULL;
-	/************************************************************************************************/
-	/* Afforess	                  Start		 12/7/09                                                */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-	m_paiUnitClassProductionModifier = NULL;
+
+	m_paiUnitProductionModifier = NULL;
 	m_aiBonusCommerceRateModifier = new int[NUM_COMMERCE_TYPES];
 	m_aiBonusCommercePercentChanges = new int[NUM_COMMERCE_TYPES];
 	m_aiCommerceAttacks = new int[NUM_COMMERCE_TYPES];
@@ -103,9 +99,7 @@ CvCity::CvCity()
 	m_pabDisabledBuilding = NULL;
 	m_paiUnitCombatExtraStrength = NULL;
 	m_pabAutomatedCanBuild = NULL;
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
+
 	//TB Combat Mod (Buildings) begin
 	m_paiNewAfflictionTypeCount = NULL;
 	m_paiAidRate = NULL;
@@ -426,7 +420,7 @@ void CvCity::uninit()
 	SAFE_DELETE_ARRAY(m_paiNumFreeBuilding);
 	SAFE_DELETE_ARRAY(m_paiNumFreeAreaBuilding);
 	SAFE_DELETE_ARRAY(m_paiBuildingReplaced);
-	SAFE_DELETE_ARRAY(m_paiUnitClassProductionModifier);
+	SAFE_DELETE_ARRAY(m_paiUnitProductionModifier);
 	SAFE_DELETE_ARRAY(m_paiBuildingClassProductionModifier);
 	SAFE_DELETE_ARRAY(m_paiBonusDefenseChanges);
 	SAFE_DELETE_ARRAY(m_cachedPropertyNeeds);
@@ -1086,10 +1080,10 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 		/*                                                                                              */
 		/*                                                                                              */
 		/************************************************************************************************/
-		m_paiUnitClassProductionModifier = new int[GC.getNumUnitClassInfos()];
-		for (int iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
+		m_paiUnitProductionModifier = new int[GC.getNumUnitInfos()];
+		for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 		{
-			m_paiUnitClassProductionModifier[iI] = 0;
+			m_paiUnitProductionModifier[iI] = 0;
 		}
 		m_paiBuildingClassProductionModifier = new int[GC.getNumBuildingClassInfos()];
 		for (int iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
@@ -4757,8 +4751,8 @@ int CvCity::getProductionModifier(UnitTypes eUnit) const
 {
 	int iMultiplier = GET_PLAYER(getOwner()).getProductionModifier(eUnit);
 
-	iMultiplier += getUnitClassProductionModifier((UnitClassTypes)(GC.getUnitInfo(eUnit).getUnitClassType()));
-	iMultiplier += GET_PLAYER(getOwner()).getUnitClassProductionModifier((UnitClassTypes)(GC.getUnitInfo(eUnit).getUnitClassType()));
+	iMultiplier += getUnitProductionModifier(eUnit);
+	iMultiplier += GET_PLAYER(getOwner()).getUnitProductionModifier(eUnit);
 	if (!GC.getUnitInfo(eUnit).isNoNonTypeProdMods())
 	{
 		iMultiplier += getDomainProductionModifier((DomainTypes)(GC.getUnitInfo(eUnit).getDomainType()));
@@ -5694,7 +5688,7 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 			bool bChange = (iChange == 1);
 			for (int iI = 0; iI < kBuilding.getNumFreeTraitTypes(); iI++)
 			{
-				TraitTypes eTrait = kBuilding.getFreeTraitType(iI).eTrait;
+				TraitTypes eTrait = (TraitTypes) kBuilding.getFreeTraitType(iI);
 				if (GC.getTraitInfo(eTrait).isCivilizationTrait())
 				{
 					GET_PLAYER(getOwner()).setHasTrait(eTrait, bChange);
@@ -5726,15 +5720,13 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 				changeFreePromotionCount(((PromotionTypes)(kBuilding.getFreePromotion())), iChange);
 			}
 
-			if (kBuilding.getPropertySpawnProperty() != NO_PROPERTY && kBuilding.getPropertySpawnUnitClass() != NO_UNITCLASS)
+			if (kBuilding.getPropertySpawnProperty() != NO_PROPERTY && kBuilding.getPropertySpawnUnit() != NO_UNIT)
 			{
-				FAssertMsg(
-					GC.getUnitInfo(static_cast<UnitTypes>(GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(static_cast<int>(kBuilding.getPropertySpawnUnitClass())))).isBlendIntoCity(),
+				FAssertMsg(GC.getUnitInfo(kBuilding.getPropertySpawnUnit()).isBlendIntoCity(),
 					CvString::format("Building %s wants to add property spawner with unit class %s, but this unit doesn't have bBlendIntoCity enabled, which is a requirement",
-						kBuilding.getType(),
-						GC.getUnitInfo(static_cast<UnitTypes>(GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(static_cast<int>(kBuilding.getPropertySpawnUnitClass())))).getType()).c_str());
+						kBuilding.getType(), GC.getUnitInfo(kBuilding.getPropertySpawnUnit()).getType()).c_str());
 
-				changePropertySpawn(iChange, kBuilding.getPropertySpawnProperty(), kBuilding.getPropertySpawnUnitClass());
+				changePropertySpawn(iChange, kBuilding.getPropertySpawnProperty(), kBuilding.getPropertySpawnUnit());
 			}
 
 			//TB Nukefix reset nuke validation
@@ -6260,10 +6252,10 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 		/*                                                                                              */
 		/*                                                                                              */
 		/************************************************************************************************/
-		for (int iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 		{
 			PROFILE("CvCity::processBuilding.UniClasses");
-			changeUnitClassProductionModifier(((UnitClassTypes)iI), kBuilding.getUnitClassProductionModifier(iI) * iChange);
+			changeUnitProductionModifier(((UnitTypes)iI), kBuilding.getUnitProductionModifier(iI) * iChange);
 		}
 		for (int iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
 		{
@@ -6341,14 +6333,11 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 
 			changeBaseGreatPeopleRate(kBuilding.getGreatPeopleRateChange() * iChange);
 
-			if (kBuilding.getGreatPeopleUnitClass() != NO_UNITCLASS)
-			{
-				UnitTypes eGreatPeopleUnit = ((UnitTypes)(kCivilizationInfo.getCivilizationUnits(kBuilding.getGreatPeopleUnitClass())));
+			UnitTypes eGreatPeopleUnit = (UnitTypes)kBuilding.getGreatPeopleUnitType();
 
-				if (eGreatPeopleUnit != NO_UNIT)
-				{
-					changeGreatPeopleUnitRate(eGreatPeopleUnit, kBuilding.getGreatPeopleRateChange() * iChange);
-				}
+			if (eGreatPeopleUnit != NO_UNIT)
+			{
+				changeGreatPeopleUnitRate(eGreatPeopleUnit, kBuilding.getGreatPeopleRateChange() * iChange);
 			}
 
 			SpecialBuildingTypes eSpecialBuilding = (SpecialBuildingTypes)kBuilding.getSpecialBuildingType();
@@ -6403,32 +6392,18 @@ void CvCity::processProcess(ProcessTypes eProcess, int iChange)
 
 void CvCity::processSpecialist(SpecialistTypes eSpecialist, int iChange)
 {
-	if (GC.getSpecialistInfo(eSpecialist).getGreatPeopleUnitClass() != NO_UNITCLASS)
-	{
-		UnitTypes eGreatPeopleUnit = ((UnitTypes)(GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(GC.getSpecialistInfo(eSpecialist).getGreatPeopleUnitClass())));
+	UnitTypes eGreatPeopleUnit = (UnitTypes)GC.getSpecialistInfo(eSpecialist).getGreatPeopleUnitType();
 
-		if (eGreatPeopleUnit != NO_UNIT)
-		{
-			changeGreatPeopleUnitRate(eGreatPeopleUnit, GC.getSpecialistInfo(eSpecialist).getGreatPeopleRateChange() * iChange);
-		}
+	if (eGreatPeopleUnit != NO_UNIT)
+	{
+		changeGreatPeopleUnitRate(eGreatPeopleUnit, GC.getSpecialistInfo(eSpecialist).getGreatPeopleRateChange() * iChange);
 	}
 
 	changeBaseGreatPeopleRate(GC.getSpecialistInfo(eSpecialist).getGreatPeopleRateChange() * iChange);
 
 	for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 	{
-		/************************************************************************************************/
-		/* Afforess	                  Start		 07/20/10                                               */
-		/*                                                                                              */
-		/*                                                                                              */
-		/************************************************************************************************/
-		/*
-				changeBaseYieldRate(((YieldTypes)iI), (GC.getSpecialistInfo(eSpecialist).getYieldChange(iI) * iChange));
-		*/
 		changeBaseYieldRate(((YieldTypes)iI), ((GC.getSpecialistInfo(eSpecialist).getYieldChange(iI) + (GET_PLAYER(getOwner()).getSpecialistYieldPercentChanges(eSpecialist, (YieldTypes)iI) / 100)) * iChange));
-		/************************************************************************************************/
-		/* Afforess	                     END                                                            */
-		/************************************************************************************************/
 	}
 
 	int iCommerceChangeTotal = 0;
@@ -6623,14 +6598,11 @@ void CvCity::setHeadquarters(CorporationTypes eIndex)
 	{
 		GC.getGame().setHeadquarters(eIndex, this, true);
 
-		if (GC.getCorporationInfo(eIndex).getFreeUnitClass() != NO_UNITCLASS)
-		{
-			UnitTypes eFreeUnit = ((UnitTypes)(GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(GC.getCorporationInfo(eIndex).getFreeUnitClass())));
+		const UnitTypes eFreeUnit = (UnitTypes)GC.getCorporationInfo(eIndex).getFreeUnit();
 
-			if (eFreeUnit != NO_UNIT)
-			{
-				GET_PLAYER(getOwner()).initUnit(eFreeUnit, getX(), getY(), NO_UNITAI, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
-			}
+		if (eFreeUnit != NO_UNIT)
+		{
+			GET_PLAYER(getOwner()).initUnit(eFreeUnit, getX(), getY(), NO_UNITAI, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 		}
 	}
 }
@@ -19690,7 +19662,7 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_aiBonusCommercePercentChanges);
 	WRAPPER_READ_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_aiCommerceAttacks);
 	WRAPPER_READ_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_aiMaxCommerceAttacks);
-	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_UNIT_CLASSES, GC.getNumUnitClassInfos(), m_paiUnitClassProductionModifier);
+	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiUnitProductionModifier);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDING_CLASSES, GC.getNumBuildingClassInfos(), m_paiBuildingClassProductionModifier);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiBonusDefenseChanges);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_pabHadVicinityBonus);
@@ -20250,7 +20222,7 @@ void CvCity::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_aiBonusCommercePercentChanges);
 	WRAPPER_WRITE_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_aiCommerceAttacks);
 	WRAPPER_WRITE_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_aiMaxCommerceAttacks);
-	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_UNIT_CLASSES, GC.getNumUnitClassInfos(), m_paiUnitClassProductionModifier);
+	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiUnitProductionModifier);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDING_CLASSES, GC.getNumBuildingClassInfos(), m_paiBuildingClassProductionModifier);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiBonusDefenseChanges);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_pabHadVicinityBonus);
@@ -21299,15 +21271,12 @@ void CvCity::applyEvent(EventTypes eEvent, const EventTriggeredData* pTriggeredD
 	}
 
 
-	if (kEvent.getUnitClass() != NO_UNITCLASS && !adjustModifiersOnly)
+	if (kEvent.getFreeUnit() != NO_UNIT && !adjustModifiersOnly)
 	{
-		UnitTypes eUnit = (UnitTypes)GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(kEvent.getUnitClass());
-		if (eUnit != NO_UNIT)
+		UnitTypes eUnit = (UnitTypes) kEvent.getFreeUnit();
+		for (int i = 0; i < kEvent.getNumUnits(); ++i)
 		{
-			for (int i = 0; i < kEvent.getNumUnits(); ++i)
-			{
-				GET_PLAYER(getOwner()).initUnit(eUnit, getX(), getY(), NO_UNITAI, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
-			}
+			GET_PLAYER(getOwner()).initUnit(eUnit, getX(), getY(), NO_UNITAI, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 		}
 	}
 
@@ -23064,18 +23033,18 @@ void CvCity::changeMaxCommerceAttacks(CommerceTypes eIndex, int iChange)
 }
 
 
-int CvCity::getUnitClassProductionModifier(UnitClassTypes eIndex) const
+int CvCity::getUnitProductionModifier(UnitTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumUnitClassInfos(), "eIndex expected to be < GC.getNumUnitClassInfos()");
-	return m_paiUnitClassProductionModifier[eIndex];
+	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex expected to be < GC.getNumUnitInfos()");
+	return m_paiUnitProductionModifier[eIndex];
 }
 
-void CvCity::changeUnitClassProductionModifier(UnitClassTypes eIndex, int iChange)
+void CvCity::changeUnitProductionModifier(UnitTypes eIndex, int iChange)
 {
 	FAssertMsg(eIndex >= 0, "eIndex expected to be >= 0");
-	FAssertMsg(eIndex < GC.getNumUnitClassInfos(), "eIndex expected to be < GC.getNumUnitClassInfos()");
-	m_paiUnitClassProductionModifier[eIndex] = (m_paiUnitClassProductionModifier[eIndex] + iChange);
+	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex expected to be < GC.getNumUnitInfos()");
+	m_paiUnitProductionModifier[eIndex] = (m_paiUnitProductionModifier[eIndex] + iChange);
 }
 
 int CvCity::getBuildingClassProductionModifier(BuildingClassTypes eIndex) const
@@ -23412,7 +23381,7 @@ bool CvCity::canUpgradeUnit(UnitTypes eUnit) const
 	{
 		UnitTypes eUpgradeUnit = (UnitTypes)GC.getUnitInfo(eUnit).getUnitUpgrade(iI);
 		if ((GC.getGame().isUnitMaxedOut(eUpgradeUnit)) || (GET_TEAM(GET_PLAYER(getOwner()).getTeam()).isUnitMaxedOut(eUpgradeUnit)) || GET_PLAYER(getOwner()).isUnitMaxedOut(eUpgradeUnit))
-		{//if the upgrade unitclass is maxed out, I assume you can construct them, and already have construct the max
+		{//if the upgrade unit is maxed out, I assume you can construct them, and already have construct the max
 			return true;
 		}
 	}
@@ -25579,9 +25548,9 @@ void CvCity::clearModifierTotals()
 	m_aBuildingHappyChange.clear();
 	m_aBuildingHealthChange.clear();
 
-	for (int iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
-		m_paiUnitClassProductionModifier[iI] = 0;
+		m_paiUnitProductionModifier[iI] = 0;
 	}
 
 	for (int iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
@@ -27665,16 +27634,16 @@ PropertySpawns& CvCity::getPropertySpawn(int iIndex)
 	return m_aPropertySpawns[iIndex];
 }
 
-void CvCity::changePropertySpawn(int iChange, PropertyTypes eProperty, UnitClassTypes eUnitClass)
+void CvCity::changePropertySpawn(int iChange, PropertyTypes eProperty, UnitTypes eUnit)
 {
 	bool bAdding = (iChange > 0);
 	if (bAdding)
 	{
-		if (NO_PROPERTY != eProperty && NO_UNITCLASS != eUnitClass)
+		if (NO_PROPERTY != eProperty && NO_UNIT != eUnit)
 		{
 			PropertySpawns kChange;
 			kChange.eProperty = eProperty;
-			kChange.eUnitClass = eUnitClass;
+			kChange.eUnit = eUnit;
 			m_aPropertySpawns.push_back(kChange);
 		}
 	}
@@ -27683,11 +27652,11 @@ void CvCity::changePropertySpawn(int iChange, PropertyTypes eProperty, UnitClass
 		std::vector<PropertySpawns> m_aTempPropertySpawns;
 		for (std::vector<PropertySpawns>::iterator it = m_aPropertySpawns.begin(); it != m_aPropertySpawns.end(); ++it)
 		{
-			if ((*it).eProperty != eProperty || (*it).eUnitClass != eUnitClass)
+			if ((*it).eProperty != eProperty || (*it).eUnit != eUnit)
 			{
 				PropertySpawns kChange;
 				kChange.eProperty = (*it).eProperty;
-				kChange.eUnitClass = (*it).eUnitClass;
+				kChange.eUnit = (*it).eUnit;
 				m_aTempPropertySpawns.push_back(kChange);
 			}
 		}
@@ -27696,7 +27665,7 @@ void CvCity::changePropertySpawn(int iChange, PropertyTypes eProperty, UnitClass
 		{
 			PropertySpawns kChange;
 			kChange.eProperty = (*it).eProperty;
-			kChange.eUnitClass = (*it).eUnitClass;
+			kChange.eUnit = (*it).eUnit;
 			m_aPropertySpawns.push_back(kChange);
 		}
 		m_aTempPropertySpawns.clear();
@@ -27727,67 +27696,63 @@ void CvCity::doPropertyUnitSpawn()
 			}
 			for (std::vector<PropertySpawns>::iterator it = m_aPropertySpawns.begin(); it != m_aPropertySpawns.end(); ++it)
 			{
-				if ((*it).eProperty == eProperty)
+				if ((*it).eProperty == eProperty
+				&& GC.getGame().getSorenRandNum(10000, "Property Unit Spawn Check") < iCurrentValue)
 				{
-					UnitClassTypes eUnitClass = (*it).eUnitClass;
-					if (GC.getGame().getSorenRandNum(10000, "Property Unit Spawn Check") < iCurrentValue)
+					UnitTypes eUnit = (*it).eUnit;
+					if (!GET_PLAYER(getOwner()).canTrain(eUnit, false, false, true, true))
 					{
-						UnitTypes eUnit = ((UnitTypes)GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(eUnitClass));
+						continue;
+					}
+					//TBNote:Saving this brilliant example...
+					//std::vector<int> aiUnitAIIndex;
+					//aiUnitAIIndex.clear();
+					//for (int iJ = 0; iJ < NUM_UNITAI_TYPES; iJ++)
+					//{
+					//	if (GC.getUnitInfo(eUnit).getUnitAIType(iJ))
+					//	{
+					//		aiUnitAIIndex.push_back(iJ);
+					//	}
+					//}
+					//int iAIRoll = GC.getGame().getSorenRandNum(aiUnitAIIndex.size(), "Property Unit Spawn AI Check");
+					//UnitAITypes eUnitAI = (UnitAITypes)aiUnitAIIndex[iAIRoll];
 
-						if (!GET_PLAYER(getOwner()).canTrain(eUnit, false, false, true, true))
+					FAssertMsg(GC.getUnitInfo(eUnit).isBlendIntoCity(), CvString::format("Trying to spawn %s from property spawn, but it doesn't have bBlendIntoCity enabled, which is a requirement", GC.getUnitInfo(eUnit).getType()).c_str());
+
+					CvUnit* pUnit = GET_PLAYER(eSpawnOwner).initUnit(eUnit, getX(), getY(), UNITAI_BARB_CRIMINAL, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
+
+					if (pUnit != NULL)
+					{
+
+						FAssertMsg(pUnit != NULL, "pUnit is expected to be assigned a valid unit object");
+						if (pUnit->isExcile())
 						{
-							continue;
+							pUnit->jumpToNearestValidPlot(false);
 						}
-						//TBNote:Saving this brilliant example...
-						//std::vector<int> aiUnitAIIndex;
-						//aiUnitAIIndex.clear();
-						//for (int iJ = 0; iJ < NUM_UNITAI_TYPES; iJ++)
-						//{
-						//	if (GC.getUnitInfo(eUnit).getUnitAIType(iJ))
-						//	{
-						//		aiUnitAIIndex.push_back(iJ);
-						//	}
-						//}
-						//int iAIRoll = GC.getGame().getSorenRandNum(aiUnitAIIndex.size(), "Property Unit Spawn AI Check");
-						//UnitAITypes eUnitAI = (UnitAITypes)aiUnitAIIndex[iAIRoll];
+						pUnit->finishMoves();
 
-						FAssertMsg(GC.getUnitInfo(eUnit).isBlendIntoCity(), CvString::format("Trying to spawn %s from property spawn, but it doesn't have bBlendIntoCity enabled, which is a requirement", GC.getUnitInfo(eUnit).getType()).c_str());
+						addProductionExperience(pUnit);
 
-						CvUnit* pUnit = GET_PLAYER(eSpawnOwner).initUnit(eUnit, getX(), getY(), UNITAI_BARB_CRIMINAL, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
-
-						if (pUnit != NULL)
+						if (!bPositiveProperty)
 						{
+							CvWString szBuffer = gDLL->getText("TXT_KEY_CITY_PROPERTY_SPAWN_BARB", GC.getUnitInfo(eUnit).getDescription(), getNameKey());
 
-							FAssertMsg(pUnit != NULL, "pUnit is expected to be assigned a valid unit object");
-							if (pUnit->isExcile())
+							if (!GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_IGNORE_DISABLED_ALERTS))
 							{
-								pUnit->jumpToNearestValidPlot(false);
+								MEMORY_TRACK_EXEMPT();
+
+								AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, GC.getUnitInfo(eUnit).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WARNING_TEXT"), getX(), getY(), true, true);
 							}
-							pUnit->finishMoves();
+						}
+						else
+						{
+							CvWString szBuffer = gDLL->getText("TXT_KEY_CITY_PROPERTY_SPAWN_FRIENDLY", GC.getUnitInfo(eUnit).getDescription(), getNameKey());
 
-							addProductionExperience(pUnit);
-
-							if (!bPositiveProperty)
+							if (!GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_IGNORE_DISABLED_ALERTS))
 							{
-								CvWString szBuffer = gDLL->getText("TXT_KEY_CITY_PROPERTY_SPAWN_BARB", GC.getUnitInfo(eUnit).getDescription(), getNameKey());
+								MEMORY_TRACK_EXEMPT();
 
-								if (!GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_IGNORE_DISABLED_ALERTS))
-								{
-									MEMORY_TRACK_EXEMPT();
-
-									AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, GC.getUnitInfo(eUnit).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WARNING_TEXT"), getX(), getY(), true, true);
-								}
-							}
-							else
-							{
-								CvWString szBuffer = gDLL->getText("TXT_KEY_CITY_PROPERTY_SPAWN_FRIENDLY", GC.getUnitInfo(eUnit).getDescription(), getNameKey());
-
-								if (!GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_IGNORE_DISABLED_ALERTS))
-								{
-									MEMORY_TRACK_EXEMPT();
-
-									AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, GC.getUnitInfo(eUnit).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"), getX(), getY(), true, true);
-								}
+								AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, GC.getUnitInfo(eUnit).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"), getX(), getY(), true, true);
 							}
 						}
 					}

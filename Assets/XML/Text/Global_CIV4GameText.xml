@@ -12117,7 +12117,7 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>Żywność netto: +0[ICON_FOOD]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_PROD_UNITCLASS</Tag>
+		<Tag>TXT_KEY_MISC_HELP_PROD_UNIT</Tag>
 		<English>[ICON_BULLET]%D1%%[ICON_PRODUCTION] from %s2</English>
 		<French>[ICON_BULLET]%D1%%[ICON_PRODUCTION] pour %s2</French>
 		<German>[ICON_BULLET]%D1%%[ICON_PRODUCTION] für %s2</German>

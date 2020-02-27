@@ -1337,7 +1337,7 @@ bool CvDLLButtonPopup::launchProductionPopup(CvPopup* pPopup, CvPopupInfo &info)
 		{
 			int iTurns = pCity->getProductionTurnsLeft(eProductionUnit, 0);
 			CvWString szUnitText = gDLL->getText("TXT_KEY_POPUP_RECOMMENDED", GC.getUnitInfo(eProductionUnit).getTextKeyWide(), iTurns, GC.getAdvisorInfo(eUnitAdvisor).getTextKeyWide());
-			gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, szUnitText, GET_PLAYER(pCity->getOwner()).getUnitButton(eProductionUnit), GC.getUnitInfo(eProductionUnit).getUnitClassType(), WIDGET_TRAIN, GC.getUnitInfo(eProductionUnit).getUnitClassType(), pCity->getID(), true, POPUP_LAYOUT_STRETCH, DLL_FONT_LEFT_JUSTIFY);
+			gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, szUnitText, GET_PLAYER(pCity->getOwner()).getUnitButton(eProductionUnit), eProductionUnit, WIDGET_TRAIN, eProductionUnit, pCity->getID(), true, POPUP_LAYOUT_STRETCH, DLL_FONT_LEFT_JUSTIFY);
 			iNumBuilds++;
 		}
 	}
@@ -1453,11 +1453,10 @@ bool CvDLLButtonPopup::launchProductionPopup(CvPopup* pPopup, CvPopupInfo &info)
 		for (size_t unitIdx = 0; unitIdx < units.size(); unitIdx++)
 		{
 			const UnitBuildItem& unitBuildItem = units[unitIdx];
-			const CvUnitInfo& unitInfo = GC.getUnitInfo(unitBuildItem.type);
 			gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup,
-				CvWString::format(L"%s (%d)", unitInfo.getDescription(), pCity->getProductionTurnsLeft(unitBuildItem.type, 0)),
+				CvWString::format(L"%s (%d)", GC.getUnitInfo(unitBuildItem.type).getDescription(), pCity->getProductionTurnsLeft(unitBuildItem.type, 0)),
 				GET_PLAYER(pCity->getOwner()).getUnitButton(unitBuildItem.type),
-				unitInfo.getUnitClassType(), WIDGET_TRAIN, unitInfo.getUnitClassType(), pCity->getID(), true, POPUP_LAYOUT_STRETCH, DLL_FONT_LEFT_JUSTIFY);
+				unitBuildItem.type, WIDGET_TRAIN, unitBuildItem.type, pCity->getID(), true, POPUP_LAYOUT_STRETCH, DLL_FONT_LEFT_JUSTIFY);
 			iNumBuilds++;
 		}
 	}

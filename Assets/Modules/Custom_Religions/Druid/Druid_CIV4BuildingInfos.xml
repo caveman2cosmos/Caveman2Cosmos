@@ -432,7 +432,7 @@
 			<HolyCity>RELIGION_DRUIDIC_TRADITIONS</HolyCity>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<GlobalReligionCommerce>RELIGION_DRUIDIC_TRADITIONS</GlobalReligionCommerce>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>

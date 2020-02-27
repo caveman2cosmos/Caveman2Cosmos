@@ -643,16 +643,16 @@
 					<iProductionModifier>30</iProductionModifier>
 				</BuildingClassProductionModifier>
 			</BuildingClassProductionModifiers>
-			<UnitClassProductionModifiers>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_NOBLE</UnitClassType>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_NOBLE</UnitType>
 					<iProductionModifier>15</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_LORD</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_LORD</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-			</UnitClassProductionModifiers>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 			<CivicAttitudeChanges>
 				<CivicAttitudeChange>
 					<CivicType>CIVIC_MONARCHY</CivicType>
@@ -5387,28 +5387,28 @@
 			<WeLoveTheKing/>
 			<Flavors/>
 			<iPopulationgrowthratepercentage>20</iPopulationgrowthratepercentage>
-			<UnitClassProductionModifiers>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_TRIBE</UnitClassType>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_TRIBE</UnitType>
 					<iProductionModifier>25</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_SETTLER</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_SETTLER</UnitType>
 					<iProductionModifier>25</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_COLONIST</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_COLONIST</UnitType>
 					<iProductionModifier>20</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_PIONEER</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_PIONEER</UnitType>
 					<iProductionModifier>20</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_AIRSETTLER</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_AIRSETTLER</UnitType>
 					<iProductionModifier>0</iProductionModifier>
-				</UnitClassProductionModifier>
-			</UnitClassProductionModifiers>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_SOCIETY</CivicOptionType>
@@ -19713,24 +19713,24 @@
 					<iFlavor>-1</iFlavor>
 				</Flavor>
 			</Flavors>
-			<UnitClassProductionModifiers>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_THIEF</UnitClassType>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_THIEF</UnitType>
 					<iProductionModifier>20</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_ROGUE</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_ROGUE</UnitType>
 					<iProductionModifier>20</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_AMBUSHER</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_AMBUSHER</UnitType>
 					<iProductionModifier>20</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_ASSASSIN</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_ASSASSIN</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-			</UnitClassProductionModifiers>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 			<iAttitudeShareMod>1</iAttitudeShareMod>
 			<PropertyManipulators>
 				<PropertySource>
@@ -19874,7 +19874,6 @@
 					<iFlavor>3</iFlavor>
 				</Flavor>
 			</Flavors>
-			<UnitClassProductionModifiers/>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_MILITARY</CivicOptionType>
@@ -20763,16 +20762,16 @@
 					<iProductionModifier>20</iProductionModifier>
 				</UnitCombatProductionModifier>
 			</UnitCombatProductionModifiers>
-			<UnitClassProductionModifiers>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_WALKER_MECH</UnitClassType>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_WALKER_MECH</UnitType>
 					<iProductionModifier>20</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_UAV</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_UAV</UnitType>
 					<iProductionModifier>25</iProductionModifier>
-				</UnitClassProductionModifier>
-			</UnitClassProductionModifiers>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_MILITARY</CivicOptionType>
@@ -20912,16 +20911,16 @@
 					<iProductionModifier>50</iProductionModifier>
 				</UnitCombatProductionModifier>
 			</UnitCombatProductionModifiers>
-			<UnitClassProductionModifiers>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_CYBORG</UnitClassType>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_CYBORG</UnitType>
 					<iProductionModifier>100</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_AUTOMATONS</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_AUTOMATONS</UnitType>
 					<iProductionModifier>100</iProductionModifier>
-				</UnitClassProductionModifier>
-			</UnitClassProductionModifiers>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 		</CivicInfo>
         <CivicInfo>
 			<CivicOptionType>CIVICOPTION_MILITARY</CivicOptionType>
@@ -21493,40 +21492,40 @@
 			<!-- Revolution Mod End -->
 			<bFixedBorders>0</bFixedBorders>
 			<WeLoveTheKing/>
-			<UnitClassProductionModifiers>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_GATHERER</UnitClassType>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_GATHERER</UnitType>
 					<iProductionModifier>20</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_WORKER</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_WORKER</UnitType>
 					<iProductionModifier>20</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_WORKBUFFALO</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_WORKBUFFALO</UnitType>
 					<iProductionModifier>20</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_WORKER_INDUSTRIAL</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_WORKER_INDUSTRIAL</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_WORKMULE</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_WORKMULE</UnitType>
 					<iProductionModifier>20</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_WORKELEPHANT</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_WORKELEPHANT</UnitType>
 					<iProductionModifier>20</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_WORKER_MODERN</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_WORKER_MODERN</UnitType>
 					<iProductionModifier>5</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_RAPANUIWORKER</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_RAPANUIWORKER</UnitType>
 					<iProductionModifier>25</iProductionModifier>
-				</UnitClassProductionModifier>
-			</UnitClassProductionModifiers>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 			<Flavors/>
 			<iPopulationgrowthratepercentage>0</iPopulationgrowthratepercentage>
 		</CivicInfo>
