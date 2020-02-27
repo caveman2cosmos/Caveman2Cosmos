@@ -11603,7 +11603,6 @@ bool CvUnit::canSpread(const CvPlot* pPlot, ReligionTypes eReligion, bool bTestV
 /* UNOFFICIAL_PATCH                        END                                                  */
 /************************************************************************************************/
 //TB Prophet Mod start
-#ifdef C2C_BUILD
 	if (!GC.getGame().isOption(GAMEOPTION_DIVINE_PROPHETS) && (AI_getUnitAIType() != UNITAI_MISSIONARY))
 	{
 		return false;
@@ -11657,7 +11656,6 @@ bool CvUnit::canSpread(const CvPlot* pPlot, ReligionTypes eReligion, bool bTestV
 	}
 
 
-#endif
 //TB Prophet Mod end
 
 	return true;
@@ -11705,7 +11703,6 @@ bool CvUnit::spread(ReligionTypes eReligion)
 		if (GC.getGame().getSorenRandNum(100, "Unit Spread Religion") < iSpreadProb)
 		{
 //TB Prophet Mod start
-#ifdef C2C_BUILD
 //FfH: Modified by Kael 10/04/2008
             if (GC.getGame().isReligionFounded(eReligion))
             {
@@ -11718,10 +11715,7 @@ bool CvUnit::spread(ReligionTypes eReligion)
                 GC.getGame().setReligionSlotTaken(eReligion, true);
             }
 //FfH: End Modify
-#else
 //TB Prophet Mod end
-			pCity->setHasReligion(eReligion, true, true, false);
-#endif
 			bSuccess = true;
 		}
 		else

@@ -944,9 +944,6 @@
 		<element type="Building" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="UnitType" content="textOnly"/>
-	<ElementType name="Units" content="eltOnly">
-		<element type="Unit" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
 	<ElementType name="iFreeUnits" content="textOnly" dt:type="int"/>
 	<ElementType name="FreeUnit" content="eltOnly">
 		<element type="UnitType"/>
@@ -1022,7 +1019,6 @@
 		<element type="iSpawnRateNPCPeaceModifier" minOccurs="0"/>
 		<element type="Cities" minOccurs="0"/>
 		<element type="Buildings" minOccurs="0"/>
-		<element type="Units" minOccurs="0"/>
 		<element type="FreeUnits" minOccurs="0"/>
 		<element type="FreeBuildingClasses" minOccurs="0"/>
 		<element type="FreeTechs" minOccurs="0"/>

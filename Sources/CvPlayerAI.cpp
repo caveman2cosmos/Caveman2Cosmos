@@ -8383,20 +8383,12 @@ int CvPlayerAI::AI_getAttitudeVal(PlayerTypes ePlayer, bool bForced) const
 // BEGIN: Show Hidden Attitude Mod 01/22/2009
 bool isShowPersonalityModifiers()
 {
-#ifdef _MOD_SHAM_SPOILER
 	return true;
-#else
-	return !GC.getGame().isOption(GAMEOPTION_RANDOM_PERSONALITIES) || GC.getGame().isDebugMode();
-#endif
 }
 
 bool isShowSpoilerModifiers()
 {
-#ifdef _MOD_SHAM_SPOILER
 	return true;
-#else
-	return GC.getGame().isDebugMode();
-#endif
 }
 
 int CvPlayerAI::AI_getFirstImpressionAttitude(PlayerTypes ePlayer) const

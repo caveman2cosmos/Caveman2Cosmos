@@ -29040,7 +29040,6 @@ UnitTypes CvPlayer::getTechFreeUnit(TechTypes eTech) const
 	return eUnit;
 }
 
-#ifdef C2C_BUILD
 //TB Prophet Mod begin
 UnitTypes CvPlayer::getTechFreeProphet(TechTypes eTech) const
 {
@@ -29051,7 +29050,6 @@ UnitTypes CvPlayer::getTechFreeProphet(TechTypes eTech) const
 	return NO_UNIT;
 }
 //TB Prophet Mod end
-#endif
 
 // BUG - Trade Totals - start
 /*

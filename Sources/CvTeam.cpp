@@ -6349,9 +6349,7 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 /************************************************************************************************/
 	BonusTypes eBonus;
 	UnitTypes eFreeUnit;
-#ifdef C2C_BUILD
 	UnitTypes eFreeProphet;
-#endif
 	int iValue;
 	int iBestValue;
 	int iI, iJ, iK;
@@ -6635,7 +6633,6 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 						pCapitalCity->createGreatPeople(eFreeUnit, false, false);
 					}
 				}
-#ifdef C2C_BUILD
 				//TB Prophet Mod begin
 				if (GC.getGame().isOption(GAMEOPTION_DIVINE_PROPHETS) && !GC.getGame().isOption(GAMEOPTION_LIMITED_RELIGIONS))
 				{
@@ -6652,7 +6649,6 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 					}
 				}
 				//TB Prophet Mod end
-#endif
 				if (GC.getTechInfo(eIndex).getFirstFreeTechs() > 0)
 				{
 					bClearResearchQueueAI = true;
