@@ -4704,7 +4704,7 @@ public:
 
 	int getCivilizationBuildings(int i) const;			// Exposed to Python
 	int getCivilizationUnits(int i) const;				// Exposed to Python
-	int getCivilizationFreeUnitsClass(int i) const;		// Exposed to Python
+	int getCivilizationFreeUnits(int i) const;			// Exposed to Python
 	int getCivilizationInitialCivics(int i) const;		// Exposed to Python
 	// Afforess 04/05/10
 	void setCivilizationInitialCivics(int iCivicOption, int iCivic);
@@ -4764,7 +4764,7 @@ protected:
 
 	int* m_piCivilizationBuildings;
 	int* m_piCivilizationUnits;
-	int* m_piCivilizationFreeUnitsClass;
+	int* m_piCivilizationFreeUnits;
 	int* m_piCivilizationInitialCivics;
 
 	bool* m_pbLeaders;
@@ -5345,8 +5345,8 @@ public:
 	int getDamagePrereq() const;		// Exposed to Python
 	int getBarbarianUnitProb() const;	// Exposed to Python
 	int getMinBarbarians() const;		// Exposed to Python
-	int getUnitClassType() const;		// Exposed to Python
-	int getBarbarianUnitClass() const;	// Exposed to Python
+	int getGoodyUnit() const;		// Exposed to Python
+	int getBarbarianUnit() const;		// Exposed to Python
 	int getEraType() const;
 	int getNotEraType() const;
 	int getResearch() const;
@@ -5385,8 +5385,8 @@ protected:
 	int m_iDamagePrereq;
 	int m_iBarbarianUnitProb;
 	int m_iMinBarbarians;
-	int m_iUnitClassType;
-	int m_iBarbarianUnitClass;
+	int m_iGoodyUnit;
+	int m_iBarbarianUnit;
 	int m_iEraType;
 	int m_iNotEraType;
 	int m_iResearch;

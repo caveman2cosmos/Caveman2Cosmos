@@ -626,8 +626,7 @@
 	<ElementType name="bTech" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bBad" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNaval" content="textOnly" dt:type="boolean"/>
-	<ElementType name="UnitClass" content="textOnly"/>
-	<ElementType name="BarbarianClass" content="textOnly"/>
+	<ElementType name="BarbarianUnit" content="textOnly"/>
 	<ElementType name="iBarbarianUnitProb" content="textOnly" dt:type="int"/>
 	<ElementType name="iMinBarbarians" content="textOnly" dt:type="int"/>
 	<ElementType name="EraType" content="textOnly"/>
@@ -656,8 +655,8 @@
 		<element type="bTech" minOccurs="0"/>
 		<element type="bBad" minOccurs="0"/>
 		<element type="bNaval" minOccurs="0"/>
-		<element type="UnitClass" minOccurs="0"/>
-		<element type="BarbarianClass" minOccurs="0"/>
+		<element type="FreeUnit" minOccurs="0"/>
+		<element type="BarbarianUnit" minOccurs="0"/>
 		<element type="iBarbarianUnitProb" minOccurs="0"/>
 		<element type="iMinBarbarians" minOccurs="0"/>
 		<element type="EraType" minOccurs="0"/>

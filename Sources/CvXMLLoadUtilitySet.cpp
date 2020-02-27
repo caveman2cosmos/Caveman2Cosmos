@@ -971,8 +971,6 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	LoadGlobalClassInfo(GC.getBonusInfos(), "CIV4BonusInfos", "Terrain", L"/Civ4BonusInfos/BonusInfos/BonusInfo", false, GC.getBonusInfoReplacements());
 	LoadGlobalClassInfo(GC.getSpecialUnitInfos(), "CIV4SpecialUnitInfos", "Units", L"/Civ4SpecialUnitInfos/SpecialUnitInfos/SpecialUnitInfo", false);
 	shouldHaveType = true;
-	LoadGlobalClassInfo(GC.getGoodyInfos(), "CIV4GoodyInfo", "GameInfo", L"/Civ4GoodyInfo/GoodyInfos/GoodyInfo", false);
-	LoadGlobalClassInfo(GC.getHandicapInfos(), "CIV4HandicapInfo", "GameInfo", L"/Civ4HandicapInfo/HandicapInfos/HandicapInfo", false, GC.getHandicapInfoReplacements());
 	LoadGlobalClassInfo(GC.getRouteInfos(), "CIV4RouteInfos", "Misc", L"/Civ4RouteInfos/RouteInfos/RouteInfo", false, GC.getRouteInfoReplacements());
 	shouldHaveType = false;
 	LoadGlobalClassInfo(GC.getImprovementInfos(), "CIV4ImprovementInfos", "Terrain", L"/Civ4ImprovementInfos/ImprovementInfos/ImprovementInfo", true, GC.getImprovementInfoReplacements());
@@ -1064,6 +1062,11 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	LoadGlobalClassInfo(GC.getSlideShowRandomInfos(), "CIV4SlideShowRandomInfos", "Interface", L"/Civ4SlideShowRandomInfos/SlideShowRandomInfos/SlideShowRandomInfo", false);
 	LoadGlobalClassInfo(GC.getWorldPickerInfos(), "CIV4WorldPickerInfos", "Interface", L"/Civ4WorldPickerInfos/WorldPickerInfos/WorldPickerInfo", false);
 	LoadGlobalClassInfo(GC.getSpaceShipInfos(), "CIV4SpaceShipInfos", "Interface", L"/Civ4SpaceShipInfos/SpaceShipInfos/SpaceShipInfo", false);
+
+	shouldHaveType = true;
+	LoadGlobalClassInfo(GC.getGoodyInfos(), "CIV4GoodyInfo", "GameInfo", L"/Civ4GoodyInfo/GoodyInfos/GoodyInfo", false);
+	LoadGlobalClassInfo(GC.getHandicapInfos(), "CIV4HandicapInfo", "GameInfo", L"/Civ4HandicapInfo/HandicapInfos/HandicapInfo", false, GC.getHandicapInfoReplacements());
+	shouldHaveType = false;
 
 	LoadGlobalClassInfo(GC.getMPOptionInfos(), "CIV4MPOptionInfos", "GameInfo", L"/Civ4MPOptionInfos/MPOptionInfos/MPOptionInfo", false);
 	LoadGlobalClassInfo(GC.getForceControlInfos(), "CIV4ForceControlInfos", "GameInfo", L"/Civ4ForceControlInfos/ForceControlInfos/ForceControlInfo", false);

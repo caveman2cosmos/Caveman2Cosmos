@@ -31319,11 +31319,8 @@ int CvPlayerAI::AI_getCivicShareAttitude(PlayerTypes ePlayer) const
 	}
 	return iAttitude;
 }
-/************************************************************************************************/
-/* Afforess					  Start		 06/16/10											   */
-/*																							  */
-/* Advanced Diplomacy																		   */
-/************************************************************************************************/
+
+
 TeamTypes CvPlayerAI::AI_bestJoinWarTeam(PlayerTypes ePlayer)
 {
 	int iValue = 0;
@@ -31474,37 +31471,30 @@ TeamTypes CvPlayerAI::AI_bestStopTradeTeam(PlayerTypes ePlayer)
 int CvPlayerAI::AI_militaryBonusVal(BonusTypes eBonus)
 {
 	int iValue = 0;
-	int iHasOrBonusCount;
-	bool bFound = false;
-	UnitTypes eUnit = NO_UNIT;
 
-	for (int iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
-		eUnit = (UnitTypes)GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(iI);
-
-		if (canTrain(eUnit))
+		if (canTrain((UnitTypes)iI))
 		{
-			if (GC.getUnitInfo(eUnit).getPrereqAndBonus() == eBonus)
+			if (GC.getUnitInfo((UnitTypes)iI).getPrereqAndBonus() == eBonus)
 			{
 				iValue += 1000;
 			}
 
-			iHasOrBonusCount = 0;
-
-			bFound = false;
+			int iHasOrBonusCount = 0;
+			bool bFound = false;
 
 			for (int iK = 0; iK < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); iK++)
 			{
-				if (GC.getUnitInfo(eUnit).getPrereqOrBonuses(iK) == eBonus)
+				if (GC.getUnitInfo((UnitTypes)iI).getPrereqOrBonuses(iK) == eBonus)
 				{
 					bFound = true;
 				}
-				else if (hasBonus((BonusTypes)GC.getUnitInfo(eUnit).getPrereqOrBonuses(iK)))
+				else if (hasBonus((BonusTypes)GC.getUnitInfo((UnitTypes)iI).getPrereqOrBonuses(iK)))
 				{
 					iHasOrBonusCount++;
 				}
 			}
-
 			if (bFound)
 			{
 				iValue += 300;
@@ -31514,9 +31504,6 @@ int CvPlayerAI::AI_militaryBonusVal(BonusTypes eBonus)
 	}
 	return iValue;
 }
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 
 //Slightly altered form of CvUnitAI::AI_promotionValue()

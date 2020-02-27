@@ -13302,7 +13302,7 @@ m_bPlayable(false),
 m_bAIPlayable(false),
 m_piCivilizationBuildings(NULL),
 m_piCivilizationUnits(NULL),
-m_piCivilizationFreeUnitsClass(NULL),
+m_piCivilizationFreeUnits(NULL),
 m_piCivilizationInitialCivics(NULL),
 m_pbLeaders(NULL),
 m_pbCivilizationFreeBuildingClass(NULL),
@@ -13326,7 +13326,7 @@ CvCivilizationInfo::~CvCivilizationInfo()
 {
 	SAFE_DELETE_ARRAY(m_piCivilizationBuildings);
 	SAFE_DELETE_ARRAY(m_piCivilizationUnits);
-	SAFE_DELETE_ARRAY(m_piCivilizationFreeUnitsClass);
+	SAFE_DELETE_ARRAY(m_piCivilizationFreeUnits);
 	SAFE_DELETE_ARRAY(m_piCivilizationInitialCivics);
 	SAFE_DELETE_ARRAY(m_pbLeaders);
 	SAFE_DELETE_ARRAY(m_pbCivilizationFreeBuildingClass);
@@ -13449,11 +13449,11 @@ int CvCivilizationInfo::getCivilizationUnits(int i) const
 	return m_piCivilizationUnits ? m_piCivilizationUnits[i] : -1;
 }
 
-int CvCivilizationInfo::getCivilizationFreeUnitsClass(int i) const
+int CvCivilizationInfo::getCivilizationFreeUnits(int i) const
 {
-	FAssertMsg(i < GC.getNumUnitClassInfos(), "Index out of bounds");
+	FAssertMsg(i < GC.getNumUnitInfos(), "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
-	return m_piCivilizationFreeUnitsClass ? m_piCivilizationFreeUnitsClass[i] : 0;
+	return m_piCivilizationFreeUnits ? m_piCivilizationFreeUnits[i] : 0;
 }
 
 int CvCivilizationInfo::getCivilizationInitialCivics(int i) const
@@ -13586,7 +13586,7 @@ void CvCivilizationInfo::getCheckSum(unsigned int& iSum)
 	// Arrays
 	CheckSumI(iSum, GC.getNumBuildingClassInfos(), m_piCivilizationBuildings);
 	CheckSumI(iSum, GC.getNumUnitClassInfos(), m_piCivilizationUnits);
-	CheckSumI(iSum, GC.getNumUnitClassInfos(), m_piCivilizationFreeUnitsClass);
+	CheckSumI(iSum, GC.getNumUnitInfos(), m_piCivilizationFreeUnits);
 	CheckSumI(iSum, GC.getNumCivicOptionInfos(), m_piCivilizationInitialCivics);
 	CheckSumI(iSum, GC.getNumLeaderHeadInfos(), m_pbLeaders);
 	CheckSumI(iSum, GC.getNumBuildingClassInfos(), m_pbCivilizationFreeBuildingClass);
@@ -13796,7 +13796,7 @@ bool CvCivilizationInfo::read(CvXMLLoadUtility* pXML)
 		}
 	}
 
-	pXML->SetVariableListTagPair(&m_piCivilizationFreeUnitsClass, L"FreeUnitClasses", GC.getNumUnitClassInfos());
+	pXML->SetVariableListTagPair(&m_piCivilizationFreeUnits, L"FreeUnits", GC.getNumUnitInfos());
 
 	pXML->SetVariableListTagPair(&m_pbCivilizationFreeBuildingClass, L"FreeBuildingClasses",  GC.getNumBuildingClassInfos());
 
@@ -13962,17 +13962,18 @@ void CvCivilizationInfo::copyNonDefaults(CvCivilizationInfo* pClassInfo, CvXMLLo
 
 	for ( int i = 0; i < GC.getNumUnitClassInfos(); i++)
 	{
-		if ( getCivilizationUnits(i) == GC.getUnitClassInfo((UnitClassTypes) i).getDefaultUnitIndex())	// "Units"
+		m_piCivilizationUnits[i] = pClassInfo->getCivilizationUnits(i);
+	}
+
+	for ( int i = 0; i < GC.getNumUnitInfos(); i++)
+	{
+		if (getCivilizationFreeUnits(i) == iDefault && pClassInfo->getCivilizationFreeUnits(i) != iDefault)
 		{
-			m_piCivilizationUnits[i] = pClassInfo->getCivilizationUnits(i);
-		}
-		if ( getCivilizationFreeUnitsClass(i) == iDefault && pClassInfo->getCivilizationFreeUnitsClass(i) != iDefault)
-		{
-			if ( NULL == m_piCivilizationFreeUnitsClass )
+			if (NULL == m_piCivilizationFreeUnits)
 			{
-				CvXMLLoadUtility::InitList(&m_piCivilizationFreeUnitsClass,GC.getNumUnitClassInfos(),iDefault);
+				CvXMLLoadUtility::InitList(&m_piCivilizationFreeUnits, GC.getNumUnitInfos(), iDefault);
 			}
-			m_piCivilizationFreeUnitsClass[i] = pClassInfo->getCivilizationFreeUnitsClass(i);
+			m_piCivilizationFreeUnits[i] = pClassInfo->getCivilizationFreeUnits(i);
 		}
 	}
 
@@ -16251,8 +16252,8 @@ m_iHealing(0),
 m_iDamagePrereq(0),
 m_iBarbarianUnitProb(0),
 m_iMinBarbarians(0),
-m_iUnitClassType(NO_UNITCLASS),
-m_iBarbarianUnitClass(NO_UNITCLASS),
+m_iGoodyUnit(NO_UNIT),
+m_iBarbarianUnit(NO_UNIT),
 m_iEraType(NO_ERA),
 m_iNotEraType(NO_ERA),
 m_iResearch(0),
@@ -16328,14 +16329,14 @@ int CvGoodyInfo::getMinBarbarians() const
 	return m_iMinBarbarians;
 }
 
-int CvGoodyInfo::getUnitClassType() const
+int CvGoodyInfo::getGoodyUnit() const
 {
-	return m_iUnitClassType;
+	return m_iGoodyUnit;
 }
 
-int CvGoodyInfo::getBarbarianUnitClass() const
+int CvGoodyInfo::getBarbarianUnit() const
 {
-	return m_iBarbarianUnitClass;
+	return m_iBarbarianUnit;
 }
 
 int CvGoodyInfo::getEraType() const
@@ -16424,11 +16425,11 @@ bool CvGoodyInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bBad, L"bBad");
 	pXML->GetOptionalChildXmlValByName(&m_bNaval, L"bNaval");
 
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"UnitClass");
-	m_iUnitClassType = pXML->GetInfoClass(szTextVal);
+	pXML->GetOptionalChildXmlValByName(szTextVal, L"FreeUnit");
+	m_iGoodyUnit = pXML->GetInfoClass(szTextVal);
 
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"BarbarianClass");
-	m_iBarbarianUnitClass = pXML->GetInfoClass(szTextVal);
+	pXML->GetOptionalChildXmlValByName(szTextVal, L"BarbarianUnit");
+	m_iBarbarianUnit = pXML->GetInfoClass(szTextVal);
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"EraType");
 	m_iEraType = pXML->GetInfoClass(szTextVal);
@@ -16469,8 +16470,8 @@ void CvGoodyInfo::copyNonDefaults(CvGoodyInfo* pClassInfo, CvXMLLoadUtility* pXM
 	if (isTech() == bDefault) m_bTech = pClassInfo->isTech();
 	if (isBad() == bDefault) m_bBad = pClassInfo->isBad();
 	if (isNaval() == bDefault) m_bNaval = pClassInfo->isNaval();
-	if (getUnitClassType() == iTextDefault) m_iUnitClassType = pClassInfo->getUnitClassType();
-	if (getBarbarianUnitClass() == iTextDefault) m_iBarbarianUnitClass = pClassInfo->getBarbarianUnitClass();
+	if (m_iGoodyUnit == iTextDefault) m_iGoodyUnit = pClassInfo->getGoodyUnit();
+	if (m_iBarbarianUnit == iTextDefault) m_iBarbarianUnit = pClassInfo->getBarbarianUnit();
 	if (getEraType() == iTextDefault) m_iEraType = pClassInfo->getEraType();
 	if (getNotEraType() == iTextDefault) m_iNotEraType = pClassInfo->getNotEraType();
 	if (getResearch() == iDefault) m_iResearch = pClassInfo->getResearch();
@@ -16501,8 +16502,8 @@ void CvGoodyInfo::getCheckSum(unsigned int& iSum)
 	CheckSum(iSum, m_iDamagePrereq);
 	CheckSum(iSum, m_iBarbarianUnitProb);
 	CheckSum(iSum, m_iMinBarbarians);
-	CheckSum(iSum, m_iUnitClassType);
-	CheckSum(iSum, m_iBarbarianUnitClass);
+	CheckSum(iSum, m_iGoodyUnit);
+	CheckSum(iSum, m_iBarbarianUnit);
 	CheckSum(iSum, m_iEraType);
 	CheckSum(iSum, m_iNotEraType);
 	CheckSum(iSum, m_iResearch);
