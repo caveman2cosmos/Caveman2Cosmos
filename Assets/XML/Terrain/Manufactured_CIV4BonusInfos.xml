@@ -2388,7 +2388,7 @@
 		<BonusInfo>
 			<Type>BONUS_STEEL_INGOTS</Type>
 			<Description>TXT_KEY_BONUS_STEEL_INGOTS</Description>
-			<Civilopedia>TXT_KEY_BONUS_STEEL_INGOTS_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BONUS_INGOTS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_STEEL_INGOTS</ArtDefineTag>
 			<TechReveal>TECH_CRUCIBLE_STEEL</TechReveal>
