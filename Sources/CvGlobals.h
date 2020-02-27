@@ -98,7 +98,6 @@ class CvProjectInfo;
 class CvBuildingClassInfo;
 class CvBuildingInfo;
 class CvSpecialBuildingInfo;
-class CvUnitClassInfo;
 class CvActionInfo;
 class CvMissionInfo;
 class CvControlInfo;
@@ -802,13 +801,6 @@ public:
 	std::vector<CvSpecialBuildingInfo*>& getSpecialBuildingInfos();
 	CvSpecialBuildingInfo& getSpecialBuildingInfo(SpecialBuildingTypes eSpecialBuildingNum) const;
 	CvInfoReplacements<CvSpecialBuildingInfo>* getSpecialBuildingInfoReplacements();
-
-	int getNumUnitClassInfos() const;
-	std::vector<CvUnitClassInfo*>& getUnitClassInfos();
-	CvUnitClassInfo& getUnitClassInfo(UnitClassTypes eUnitClassNum);
-	const CvUnitClassInfo& getUnitClassInfo(UnitClassTypes eUnitClassNum) const;
-
-	CvInfoReplacements<CvUnitClassInfo>* getUnitClassInfoReplacements();
 
 	int getNumActionInfos() const;
 	std::vector<CvActionInfo*>& getActionInfos();
@@ -1519,8 +1511,6 @@ protected:
 	CvInfoReplacements<CvBuildingInfo> m_BuildingInfoReplacements;
 	std::vector<CvSpecialBuildingInfo*> m_paSpecialBuildingInfo;
 	CvInfoReplacements<CvSpecialBuildingInfo> m_SpecialBuildingInfoReplacements;
-	std::vector<CvUnitClassInfo*> m_paUnitClassInfo;
-	CvInfoReplacements<CvUnitClassInfo> m_UnitClassInfoReplacements;
 	std::vector<CvUnitInfo*> m_paUnitInfo;
 	CvInfoReplacements<CvUnitInfo> m_UnitInfoReplacements;
 	std::vector<CvSpawnInfo*> m_paSpawnInfo;

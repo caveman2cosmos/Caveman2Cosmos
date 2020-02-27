@@ -1507,24 +1507,6 @@ void CvCityAI::AI_chooseProduction()
 		return;
 	}
 
-//TB Build Mod (is considered a poor strategy now)	// if we need to pop borders, then do that immediately if we have drama and can do it
-#ifndef C2C_BUILD
-	// if we need to pop borders, then do that immediately if we have drama and can do it
-	// cppcheck-suppress knownConditionTrueFalse
-	if ((iTargetCulturePerTurn > 0) && (getCultureLevel() <= (CultureLevelTypes) 1))
-	{
-		if (AI_chooseProcess(COMMERCE_CULTURE))
-		{
-			return;
-		}
-	}
-#endif
-
-/************************************************************************************************/
-/* REVOLUTION_MOD                         06/11/08                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	if( kPlayer.isRebel() )
 	{
 		UnitTypeWeightArray rebelDefenseTypes;
@@ -2361,7 +2343,6 @@ void CvCityAI::AI_chooseProduction()
 
 	m_iTempBuildPriority--;
 
-#ifdef C2C_BUILD
 //TB Build Priority Mod Begin
 	{
 		PROFILE("AI_chooseProduction.TB_Mod");
@@ -2392,7 +2373,6 @@ void CvCityAI::AI_chooseProduction()
 		}
 	}
 //TB Build Priority Mod End
-#endif
 
 	m_iTempBuildPriority--;
 	// cppcheck-suppress knownConditionTrueFalse
@@ -2798,17 +2778,6 @@ void CvCityAI::AI_chooseProduction()
 		}
 	}
 
-//TB Build Mod (Moves below to lower priority)
-#ifndef C2C_BUILD
-	if	(!bLandWar && !bAssault && (iTargetCulturePerTurn > getCommerceRate(COMMERCE_CULTURE)))
-	{
-		if (AI_chooseBuilding(BUILDINGFOCUS_CULTURE, bAggressiveAI ? 10 : 20, 0, bAggressiveAI ? 33 : 50))
-		{
-			if( gCityLogLevel >= 2 ) logBBAI("      City %S uses minimal culture rate", getName().GetCString());
-			return;
-		}
-	}
-#endif
 //TB Build Mod end
 
 	m_iTempBuildPriority--;
@@ -6702,15 +6671,15 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						}
 					}
 					iValue += forcedTradeRoutesValue;
-					if (kBuilding.getUnitClassProductionModifier(NO_UNITCLASS) != 0)
+					if (kBuilding.getUnitProductionModifier(NO_UNIT) != 0)
 					{
 						int unitProductionModifierValue = 0;
 						for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 						{
-							PROFILE("CvCityAI::AI_buildingValueThresholdOriginal.UnitClass");
+							PROFILE("CvCityAI::AI_buildingValueThresholdOriginal.Unit");
 							UnitTypes eLoopUnit = (UnitTypes) iI;
 
-							const int iModifier = kBuilding.getUnitClassProductionModifier(GC.getUnitInfo(eLoopUnit).getUnitClassType());
+							const int iModifier = kBuilding.getUnitProductionModifier(iI);
 							if (iModifier != 0 && canTrain(eLoopUnit))
 							{
 								UnitAITypes eUnitAI = (UnitAITypes) GC.getUnitInfo(eLoopUnit).getDefaultUnitAIType();
@@ -14307,17 +14276,6 @@ void CvCityAI::AI_buildGovernorChooseProduction()
 	}
 
 //TB Build Mod (Bad Strategy)
-#ifndef C2C_BUILD
-	// if we need to pop borders, then do that immediately if we have drama and can do it
-	// if we need to pop borders, then do that immediately if we have drama and can do it
-	if ((getCultureLevel() <= (CultureLevelTypes)1) && ((getCommerceRate(COMMERCE_CULTURE) < 2) || (iCulturePressure > 0)))
-	{
-		if (AI_chooseProcess(COMMERCE_CULTURE))
-		{
-			return;
-		}
-	}
-#endif
 
 // BUG - Governor Builds Workboats - start
 #ifdef _MOD_GOVWORKERS
@@ -14370,12 +14328,6 @@ void CvCityAI::AI_buildGovernorChooseProduction()
 	}
 
 //TB Build Mod (Move up in priority)
-#ifndef C2C_BUILD
-	if (AI_chooseBuilding(BUILDINGFOCUS_PRODUCTION, 30, 10 / iMinValueDivisor))
-	{
-		return;
-	}
-#endif
 
 	if (AI_chooseBuilding(BUILDINGFOCUS_EXPERIENCE, 8, 33))
 	{
@@ -18509,14 +18461,14 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 								}
 							}
 							iValue += forceTradeRoutesValue;
-							if (kBuilding.getUnitClassProductionModifier(NO_UNITCLASS) != 0)
+							if (kBuilding.getUnitProductionModifier(NO_UNIT) != 0)
 							{
 								int unitProductionModifierValue = 0;
 								for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 								{
 									UnitTypes eLoopUnit = (UnitTypes) iI;
 
-									int iModifier = kBuilding.getUnitClassProductionModifier(GC.getUnitInfo(eLoopUnit).getUnitClassType());
+									int iModifier = kBuilding.getUnitProductionModifier(iI);
 									if (iModifier != 0 && canTrain(eLoopUnit))
 									{
 										UnitAITypes eUnitAI = (UnitAITypes) GC.getUnitInfo(eLoopUnit).getDefaultUnitAIType();

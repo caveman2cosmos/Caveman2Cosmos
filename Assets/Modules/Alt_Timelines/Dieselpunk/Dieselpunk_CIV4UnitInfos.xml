@@ -2,7 +2,6 @@
 <Civ4UnitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_GOLIATH_AIRSHIP</Class>
 			<Type>UNIT_GOLIATH_AIRSHIP</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_BALLOON</Combat>
@@ -97,7 +96,6 @@
 			<bDCMFighterEngage>1</bDCMFighterEngage>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_DRACHE_HELICOPTER</Class>
 			<Type>UNIT_DRACHE_HELICOPTER</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_HELICOPTER</Combat>
@@ -207,7 +205,6 @@
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_RAILROAD_ARTILLERY</Class>
 			<Type>UNIT_RAILROAD_ARTILLERY</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Capture>UNIT_RAILROAD_ARTILLERY</Capture>
@@ -320,7 +317,6 @@
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_BIG_BERTHA</Class>
 			<Type>UNIT_BIG_BERTHA</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Capture>UNIT_BIG_BERTHA</Capture>
@@ -438,7 +434,6 @@
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TZAR_TANK</Class>
 			<Type>UNIT_TZAR_TANK</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WHEELED</Combat>
@@ -550,7 +545,6 @@
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_DOUBLE_BIPLANE</Class>
 			<Type>UNIT_DOUBLE_BIPLANE</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_EARLY_FIGHTERS</Combat>
@@ -630,7 +624,6 @@
 			<bDCMFighterEngage>1</bDCMFighterEngage>
 		</UnitInfo>
  		<UnitInfo>
-			<Class>UNITCLASS_VERY_HEAVY_ARMOR</Class>
 			<Type>UNIT_VERY_HEAVY_ARMOR</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_TRACKED</Combat>
@@ -754,7 +747,6 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_CHROMIUM_GUNMAN</Class>
 			<Type>UNIT_CHROMIUM_GUNMAN</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_GUN</Combat>

@@ -1856,7 +1856,6 @@ public:
 	int getExtraCost() const;						// Exposed to Python
 	int getAssetValue(bool bForLoad = false) const;	// Exposed to Python
 	int getPowerValue(bool bForLoad = false) const;	// Exposed to Python
-	int getUnitClassType() const;					// Exposed to Python
 	int getSpecialUnitType() const;					// Exposed to Python
 	int getUnitCaptureType() const;					// Exposed to Python
 	int getUnitCombatType() const;					// Exposed to Python
@@ -2533,7 +2532,6 @@ protected:
 	int m_iExtraCost;
 	int m_iAssetValue;
 	int m_iPowerValue;
-	int m_iUnitClassType;
 	int m_iSpecialUnitType;
 	int m_iUnitCaptureType;
 	int m_iUnitCombatType;
@@ -3245,7 +3243,7 @@ public:
 	int getFreeSpecialistCount(int i) const;		// Exposed to Python
 	int getFlavorValue(int i) const;
 	int getUnitCombatProductionModifier(int i) const;
-	int getUnitClassProductionModifier(int i) const;
+	int getUnitProductionModifier(int i) const;
 	int getBuildingClassProductionModifier(int i) const;
 	int getImprovementHappinessChanges(int i) const;
 	int getImprovementHealthPercentChanges(int i) const;
@@ -3401,7 +3399,7 @@ protected:
 	int* m_piImprovementHealthPercentChanges;
 	int* m_piLandmarkYieldChanges;
 	int* m_piFreeSpecialistCount;
-	int* m_piUnitClassProductionModifier;
+	int* m_piUnitProductionModifier;
 	int* m_piFlavorValue;
 	int* m_piCivicAttitudeChanges;
 	int* m_piYieldModifier;
@@ -3428,6 +3426,9 @@ protected:
 	int** m_ppiBuildingCommerceModifier;
 	int** m_ppiBonusCommerceModifier;
 	int** m_ppiImprovementYieldChanges;
+
+	std::vector<CvString> m_aszUnitProdModforPass3;
+	std::vector<int> m_aiUnitProdModforPass3;
 
 	std::vector<CvString> m_aszCivicAttitudeforPass3;
 	std::vector<int> m_aiCivicAttitudeforPass3;
@@ -3478,44 +3479,6 @@ public:
 
 private:
 	std::vector<CvDiplomacyResponse*> m_pResponses;
-};
-
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//
-//  class : CvUnitClassInfo
-//
-//  DESC:
-//
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvUnitClassInfo :
-	public CvInfoBase
-{
-//---------------------------PUBLIC INTERFACE---------------------------------
-public:
-
-	CvUnitClassInfo();
-	virtual ~CvUnitClassInfo();
-
-	int getDefaultUnitIndex() const;				// Exposed to Python
-	void setDefaultUnitIndex(int i);
-
-	int getDefaultUnitIndexVector() const;
-	CvString getDefaultUnitIndexVectorElement(const int i) const;
-
-	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvUnitClassInfo* pClassInfo = NULL , CvXMLLoadUtility* pXML = NULL);
-	bool readPass3();
-
-	void getCheckSum(unsigned int& iSum);
-
-	// serialization
-	void read(FDataStreamBase* pStream) {}
-	void write(FDataStreamBase* pStream) {}
-
-//----------------------PROTECTED MEMBER VARIABLES----------------------------
-protected:
-	int m_iDefaultUnitIndex;
-	bool m_bUnique;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3814,7 +3777,7 @@ public:
 	int getHappinessPercentPerPopulation() const;
 	int getHealthPercentPerPopulation() const;
 
-	int getUnitClassProductionModifier(int i) const;
+	int getUnitProductionModifier(int i) const;
 	int getPrereqOrVicinityBonuses(int i) const;
 	int getPrereqOrRawVicinityBonuses(int i) const;
 
@@ -3848,6 +3811,9 @@ public:
 
 	std::vector<CvString> m_aszPrereqAndCivicsforPass3;
 	std::vector<bool> m_abPrereqAndCivicsforPass3;
+
+	std::vector<CvString> m_aszUnitProdModforPass3;
+	std::vector<int> m_aiUnitProdModforPass3;
 
 	bool isReplaceBuildingClass(int i) const;
 
@@ -3899,7 +3865,7 @@ public:
 	CvProperties* getPrereqPlayerMaxProperties();
 
 	//TB Combat Mods (Buildings) begin
-	UnitClassTypes getPropertySpawnUnitClass() const;
+	UnitTypes getPropertySpawnUnit() const;
 	PropertyTypes getPropertySpawnProperty() const;
 	PromotionLineTypes getPromotionLineType() const;
 	//TechTypes getFreeSpecialTech() const;
@@ -4097,7 +4063,7 @@ protected:
 
 	int* m_piPrereqOrVicinityBonuses;
 	int* m_piPrereqOrRawVicinityBonuses;
-	int* m_piUnitClassProductionModifier;
+	int* m_piUnitProductionModifier;
 	bool* m_pbPrereqOrCivics;
 	bool* m_pbPrereqAndCivics;
 
@@ -4358,7 +4324,7 @@ protected:
 	std::vector<BuildingCommerceChange> m_aGlobalBuildingCommerceChanges;
 
 	//TB Combat Mods (Buildings) begin
-	UnitClassTypes m_ePropertySpawnUnitClass;
+	UnitTypes m_ePropertySpawnUnit;
 	PropertyTypes m_ePropertySpawnProperty;
 	PromotionLineTypes m_ePromotionLineType;
 	//TechTypes m_eFreeSpecialTech;
@@ -4703,8 +4669,7 @@ public:
 	// Arrays
 
 	int getCivilizationBuildings(int i) const;			// Exposed to Python
-	int getCivilizationUnits(int i) const;				// Exposed to Python
-	int getCivilizationFreeUnitsClass(int i) const;		// Exposed to Python
+	int getCivilizationFreeUnits(int i) const;			// Exposed to Python
 	int getCivilizationInitialCivics(int i) const;		// Exposed to Python
 	// Afforess 04/05/10
 	void setCivilizationInitialCivics(int iCivicOption, int iCivic);
@@ -4763,8 +4728,7 @@ protected:
 	// Arrays
 
 	int* m_piCivilizationBuildings;
-	int* m_piCivilizationUnits;
-	int* m_piCivilizationFreeUnitsClass;
+	int* m_piCivilizationFreeUnits;
 	int* m_piCivilizationInitialCivics;
 
 	bool* m_pbLeaders;
@@ -5345,8 +5309,8 @@ public:
 	int getDamagePrereq() const;		// Exposed to Python
 	int getBarbarianUnitProb() const;	// Exposed to Python
 	int getMinBarbarians() const;		// Exposed to Python
-	int getUnitClassType() const;		// Exposed to Python
-	int getBarbarianUnitClass() const;	// Exposed to Python
+	int getGoodyUnit() const;		// Exposed to Python
+	int getBarbarianUnit() const;		// Exposed to Python
 	int getEraType() const;
 	int getNotEraType() const;
 	int getResearch() const;
@@ -5385,8 +5349,8 @@ protected:
 	int m_iDamagePrereq;
 	int m_iBarbarianUnitProb;
 	int m_iMinBarbarians;
-	int m_iUnitClassType;
-	int m_iBarbarianUnitClass;
+	int m_iGoodyUnit;
+	int m_iBarbarianUnit;
 	int m_iEraType;
 	int m_iNotEraType;
 	int m_iResearch;
@@ -7162,7 +7126,7 @@ public:
 	int getHolyCityChar() const;				// Exposed to Python
 	void setHolyCityChar(int i);
 	int getTechPrereq() const;					// Exposed to Python
-	int getFreeUnitClass() const;				// Exposed to Python
+	int getFreeUnit() const;					// Exposed to Python
 	int getNumFreeUnits() const;				// Exposed to Python
 	int getSpreadFactor() const;				// Exposed to Python
 	int getMissionType() const;					// Exposed to Python
@@ -7196,6 +7160,7 @@ public:
 	int getFlavorValue(int i) const;				// Exposed to Python
 
 	bool read(CvXMLLoadUtility* pXML);
+	bool readPass3();
 
 	virtual void read(FDataStreamBase* pStream) {}
 	virtual void write(FDataStreamBase* pStream) {}
@@ -7215,7 +7180,7 @@ protected:
 	int m_iChar;
 	int m_iHolyCityChar;
 	int m_iTechPrereq;
-	int m_iFreeUnitClass;
+	int m_iFreeUnit;
 	int m_iNumFreeUnits;
 	int m_iSpreadFactor;
 	int m_iMissionType;
@@ -7262,7 +7227,7 @@ public:
 	int getHeadquarterChar() const;			// Exposed to Python
 	void setHeadquarterChar(int i);
 	int getTechPrereq() const;				// Exposed to Python
-	int getFreeUnitClass() const;			// Exposed to Python
+	int getFreeUnit() const;				// Exposed to Python
 	int getSpreadFactor() const;			// Exposed to Python
 	int getSpreadCost() const;				// Exposed to Python
 	int getMaintenance() const;				// Exposed to Python
@@ -7289,11 +7254,7 @@ public:
 	int* getYieldProducedArray() const;
 
 	bool read(CvXMLLoadUtility* pXML);
-/************************************************************************************************/
-/* Afforess					  Start		 01/14/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 	int getObsoleteTech() const;
 	int getSpread() const;
 	int getHealth() const;
@@ -7317,9 +7278,6 @@ public:
 	int* getYieldChangeArray() const;
 	int getCommerceChange(int i) const;
 	int* getCommerceChangeArray() const;
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 	void read(FDataStreamBase* stream) {}
 	void write(FDataStreamBase* stream) {}
@@ -7339,7 +7297,7 @@ protected:
 	int m_iChar;
 	int m_iHeadquarterChar;
 	int m_iTechPrereq;
-	int m_iFreeUnitClass;
+	int m_iFreeUnit;
 	int m_iSpreadFactor;
 	int m_iSpreadCost;
 	int m_iMaintenance;
@@ -9905,7 +9863,7 @@ public:
 	int getTechCostPercent() const;				// Exposed to Python
 	int getTechMinTurnsLeft() const;			// Exposed to Python
 	int getPrereqTech() const;					// Exposed to Python
-	int getUnitClass() const;					// Exposed to Python
+	int getFreeUnit() const;						// Exposed to Python
 	int getNumUnits() const;					// Exposed to Python
 	int getBuildingClass() const;				// Exposed to Python
 	int getBuildingChange() const;				// Exposed to Python
@@ -9939,7 +9897,6 @@ public:
 	int getRevoltTurns() const;					// Exposed to Python
 	int getMinPillage() const;					// Exposed to Python
 	int getMaxPillage() const;					// Exposed to Python
-	int getUnitPromotion() const;				// Exposed to Python
 	int getFreeUnitSupport() const;				// Exposed to Python
 	int getInflationModifier() const;			// Exposed to Python
 	int getSpaceProductionModifier() const;		// Exposed to Python
@@ -9952,7 +9909,7 @@ public:
 	int getPlotExtraYield(int i) const;			// Exposed to Python
 	int getFreeSpecialistCount(int i) const;	// Exposed to Python
 	int getUnitCombatPromotion(int i) const;	// Exposed to Python
-	int getUnitClassPromotion(int i) const;		// Exposed to Python
+	int getUnitPromotion(int i) const;			// Exposed to Python
 	const CvWString& getWorldNews(int i) const;
 	int getNumWorldNews() const;
 
@@ -9981,11 +9938,6 @@ public:
 	const wchar* getOtherPlayerPopup() const;
 	const wchar* getLocalInfoTextKey() const;
 
-/************************************************************************************************/
-/* Afforess					  Start		 07/30/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	int getPrereqGameOption() const;
 	int getRevolutionIndexChange() const;
 	int getAdditionalEventChanceVectorSize() const;
@@ -10010,9 +9962,6 @@ private:
 	std::vector<CvString> m_aszClearEventChanceforPass3;
 	std::vector<int> m_aiClearEventChanceforPass3;
 public:
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 	void read(FDataStreamBase* ) {}
 	void write(FDataStreamBase* ) {}
@@ -10047,7 +9996,7 @@ private:
 	int m_iTechCostPercent;
 	int m_iTechMinTurnsLeft;
 	int m_iPrereqTech;
-	int m_iUnitClass;
+	int m_iFreeUnit;
 	int m_iNumUnits;
 	int m_iBuildingClass;
 	int m_iBuildingChange;
@@ -10095,7 +10044,7 @@ private:
 	int* m_piAdditionalEventTime;
 	int* m_piClearEventChance;
 	int* m_piUnitCombatPromotions;
-	int* m_piUnitClassPromotions;
+	int* m_piUnitPromotions;
 	int* m_piCommerceModifier;
 	int* m_piYieldModifier;
 

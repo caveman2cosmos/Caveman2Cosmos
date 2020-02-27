@@ -128,7 +128,6 @@ public:
 	void changeProduction(int iChange);
 	int getProductionModifier();
 	int getCurrentProductionDifference(bool bIgnoreFood, bool bOverflow);
-	int getUnitProductionModifier(int /*UnitTypes*/ iUnit);
 	int getBuildingProductionModifier(int /*BuildingTypes*/ iBuilding);
 	int getProjectProductionModifier(int /*ProjectTypes*/ eProject);
 
@@ -482,12 +481,6 @@ public:
 	int getCommerceHappiness();
 	int getDomainFreeExperience(int /*DomainTypes*/ eIndex);
 	int getDomainProductionModifier(int /*DomainTypes*/ eIndex);
-/************************************************************************************************/
-/* Afforess	UnitClassProductionModifier Start		 09/25/09                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	int getUnitClassProductionModifier(int /*UnitClassTypes*/ eIndex);
 
 	int getCivicHappiness() const;
 	int getNumCityPlots() const;
@@ -496,8 +489,8 @@ public:
 	bool isValidTerrainForBuildings(int /*BuildingTypes*/ eIndex) const;
 	bool hasFreshWater() const;
 	bool canUpgradeUnit(int /*UnitTypes*/ eUnit) const;
-	int getUnitClassProductionModifier(int /*UnitClassTypes*/ eIndex) const;				 //Exposed to Python
-	void changeUnitClassProductionModifier(int /*UnitClassTypes*/ eIndex, int iChange);
+	int getUnitProductionModifier(int /*UnitTypes*/ eIndex) const; //Exposed to Python
+	void changeUnitProductionModifier(int /*UnitTypes*/ eIndex, int iChange);
 	int getBuildingClassProductionModifier(int /*BuildingClassTypes*/ eIndex) const;
 	void changeBuildingClassProductionModifier(int /*BuildingClassTypes*/ eIndex, int iChange);
 	int getBonusDefenseChanges(int /*CommerceTypes*/ eIndex) const;
@@ -524,9 +517,7 @@ public:
 
 	bool isAutomatedCanBuild(int /*BuildTypes*/ eIndex);
 	void setAutomatedCanBuild(int /*BuildTypes*/ eIndex, bool bNewValue);
-/************************************************************************************************/
-/* Afforess	UnitClassProductionModifier END                                                  */
-/************************************************************************************************/
+
 	int getCulture(int /*PlayerTypes*/ eIndex);
 	int getCultureTimes100(int /*PlayerTypes*/ eIndex);
 	int countTotalCultureTimes100();
@@ -538,16 +529,9 @@ public:
 	void changeCulture(int /*PlayerTypes*/ eIndex, int iChange, bool bPlots);
 	void changeCultureTimes100(int /*PlayerTypes*/ eIndex, int iChange, bool bPlots);
 
-/************************************************************************************************/
-/* REVOLUTION_MOD                         01/01/08                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	int getNumRevolts(int playerIdx);
 	void changeNumRevolts(int playerIdx, int iChange);
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+
 	bool isTradeRoute(int /*PlayerTypes*/ eIndex);
 	bool isEverOwned(int /*PlayerTypes*/ eIndex);
 

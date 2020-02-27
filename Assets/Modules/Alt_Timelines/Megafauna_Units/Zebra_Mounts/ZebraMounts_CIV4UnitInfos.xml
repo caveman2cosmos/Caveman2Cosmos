@@ -11,7 +11,6 @@
 			</Buildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_ZEBRA_ARCHER</Class>
 			<Type>UNIT_ZEBRA_ARCHER</Type>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
@@ -159,7 +158,6 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_ZEBRA_CAVALRY</Class>
 			<Type>UNIT_ZEBRA_CAVALRY</Type>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
@@ -359,7 +357,6 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_ZEBRA_CHARIOT</Class>
 			<Type>UNIT_ZEBRA_CHARIOT</Type>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
@@ -476,7 +473,6 @@
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_ZEBRA_CUIRASSIER</Class>
 			<Type>UNIT_ZEBRA_CUIRASSIER</Type>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
@@ -671,7 +667,6 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_ZEBRA_KNIGHT</Class>
 			<Type>UNIT_ZEBRA_KNIGHT</Type>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>

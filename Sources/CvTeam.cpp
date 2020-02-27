@@ -5797,7 +5797,7 @@ bool CvTeam::isUnitMaxedOut(UnitTypes eIndex, int iExtra) const
 	return false;
 
 /* Toffer:
-iMaxTeamInstances was unused in CvUnitClassInfo and then removed as part of us shedding the unitclass object, maybe we want to add it back in for CvUnitInfo?
+iMaxTeamInstances was unused in CvUnit(Class)Info and then removed as part of us shedding the unit-class object, maybe we want to add it back in for CvUnitInfo?
 
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
@@ -6349,9 +6349,7 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 /************************************************************************************************/
 	BonusTypes eBonus;
 	UnitTypes eFreeUnit;
-#ifdef C2C_BUILD
 	UnitTypes eFreeProphet;
-#endif
 	int iValue;
 	int iBestValue;
 	int iI, iJ, iK;
@@ -6635,7 +6633,6 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 						pCapitalCity->createGreatPeople(eFreeUnit, false, false);
 					}
 				}
-#ifdef C2C_BUILD
 				//TB Prophet Mod begin
 				if (GC.getGame().isOption(GAMEOPTION_DIVINE_PROPHETS) && !GC.getGame().isOption(GAMEOPTION_LIMITED_RELIGIONS))
 				{
@@ -6652,7 +6649,6 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 					}
 				}
 				//TB Prophet Mod end
-#endif
 				if (GC.getTechInfo(eIndex).getFirstFreeTechs() > 0)
 				{
 					bClearResearchQueueAI = true;

@@ -1623,7 +1623,6 @@ public:
 
 	DllExport const UnitTypes getUnitType() const; // Exposed to Python
 	CvUnitInfo &getUnitInfo() const;
-	UnitClassTypes getUnitClassType() const; // Exposed to Python
 
 	DllExport const UnitTypes getLeaderUnitType() const;
 	void setLeaderUnitType(UnitTypes leaderUnitType);

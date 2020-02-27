@@ -26490,12 +26490,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ADVANCED_ROCKETRY</PrereqTech>
 			<iCost>8070</iCost>
-			<UnitClassProductionModifiers>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_SATELLITE</UnitClassType>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_SATELLITE</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-			</UnitClassProductionModifiers>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 			<CommerceChanges>
 				<iCommerce>-2</iCommerce>
 				<iCommerce>0</iCommerce>

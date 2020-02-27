@@ -2,7 +2,6 @@
 <Civ4UnitInfos xmlns="x-schema:../../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_DEERRIDER</Class>
 			<Type>UNIT_DEERRIDER</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
@@ -135,7 +134,6 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_DEER_ARCHER</Class>
 			<Type>UNIT_DEER_ARCHER</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
@@ -271,7 +269,6 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_DEER_LIGHT</Class>
 			<Type>UNIT_DEER_LIGHT</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
@@ -414,21 +411,18 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_STAG_DEER</Class>
 			<Type>UNIT_SUBDUED_STAG_DEER</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_DEER</BuildingType>
 			</Buildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_MOOSE</Class>
 			<Type>UNIT_SUBDUED_MOOSE</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_DEER</BuildingType>
 			</Buildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_CARIBOU</Class>
 			<Type>UNIT_SUBDUED_CARIBOU</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_DEER</BuildingType>

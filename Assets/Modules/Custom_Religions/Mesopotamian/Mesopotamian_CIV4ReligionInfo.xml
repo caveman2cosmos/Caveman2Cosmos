@@ -12,7 +12,6 @@
 			<Adjective>TXT_KEY_TECH_MESOPOTAMISM_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_TECH_MESOPOTAMISM_PEDIA</Civilopedia>
 			<TechPrereq>TECH_MESOPOTAMISM</TechPrereq>
-			<FreeUnitClass/>
 			<iFreeUnits>0</iFreeUnits>
 			<iSpreadFactor>20</iSpreadFactor>
 			<iTGAIndex>15</iTGAIndex>

@@ -4,39 +4,39 @@
 <!-- -->
 <!-- Unit Schema -->
 <Schema xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">
-  <!-- Replacement condition by AIAndy -->
-  <ElementType name="ReplacementCondition"/>
-  <ElementType name="ReplacementID"/>
-  <!-- Expressions added by AIAndy -->
-  <ElementType name="Constant" content="textOnly"/>
-  <ElementType name="Is" content="textOnly"/>
-  <ElementType name="Python" content="textOnly"/>
-  <ElementType name="PythonName" content="textOnly"/>
-  <ElementType name="BoolExpr"/>
-  <ElementType name="Not"/>
-  <ElementType name="And"/>
-  <ElementType name="Or"/>
-  <ElementType name="BEqual"/>
-  <ElementType name="If"/>
-  <ElementType name="IntegrateOr"/>
-  <ElementType name="GOMType" content="textOnly"/>
-  <ElementType name="ID" content="textOnly"/>
-  <ElementType name="Has" content="eltOnly">
-    <element type="GOMType" minOccurs="1" maxOccurs="*"/>
-    <element type="ID" minOccurs="1" maxOccurs="*"/>
-  </ElementType>
-  <ElementType name="Greater"/>
-  <ElementType name="GreaterEqual"/>
-  <ElementType name="Equal"/>
-  <ElementType name="Random"/>
-  <ElementType name="Adapt"/>
-  <ElementType name="Plus"/>
-  <ElementType name="Minus"/>
-  <ElementType name="Mult"/>
-  <ElementType name="Div"/>
-  <ElementType name="IntegrateSum"/>
-  <ElementType name="IntegrateAvg"/>
-  <ElementType name="IntegrateCount"/>
+	<!-- Replacement condition by AIAndy -->
+	<ElementType name="ReplacementCondition"/>
+	<ElementType name="ReplacementID"/>
+	<!-- Expressions added by AIAndy -->
+	<ElementType name="Constant" content="textOnly"/>
+	<ElementType name="Is" content="textOnly"/>
+	<ElementType name="Python" content="textOnly"/>
+	<ElementType name="PythonName" content="textOnly"/>
+	<ElementType name="BoolExpr"/>
+	<ElementType name="Not"/>
+	<ElementType name="And"/>
+	<ElementType name="Or"/>
+	<ElementType name="BEqual"/>
+	<ElementType name="If"/>
+	<ElementType name="IntegrateOr"/>
+	<ElementType name="GOMType" content="textOnly"/>
+	<ElementType name="ID" content="textOnly"/>
+	<ElementType name="Has" content="eltOnly">
+		<element type="GOMType" minOccurs="1" maxOccurs="*"/>
+		<element type="ID" minOccurs="1" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Greater"/>
+	<ElementType name="GreaterEqual"/>
+	<ElementType name="Equal"/>
+	<ElementType name="Random"/>
+	<ElementType name="Adapt"/>
+	<ElementType name="Plus"/>
+	<ElementType name="Minus"/>
+	<ElementType name="Mult"/>
+	<ElementType name="Div"/>
+	<ElementType name="IntegrateSum"/>
+	<ElementType name="IntegrateAvg"/>
+	<ElementType name="IntegrateCount"/>
 	<!-- PropertyManipulators added by AIAndy -->
 	<ElementType name="PropertySourceType" content="textOnly"/>
 	<ElementType name="PropertyInteractionType" content="textOnly"/>
@@ -106,8 +106,8 @@
 	</ElementType>
 
 	<ElementType name="PropertyManipulators" content="eltOnly" order="many">
-    <element type="PropertySource" minOccurs="0" maxOccurs="*"/>
-    <element type="PropertyInteraction" minOccurs="0" maxOccurs="*"/>
+		<element type="PropertySource" minOccurs="0" maxOccurs="*"/>
+		<element type="PropertyInteraction" minOccurs="0" maxOccurs="*"/>
 		<element type="PropertyPropagator" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 
@@ -130,25 +130,19 @@
 	<ElementType name="bKill" content="textOnly" dt:type="boolean"/>
 	<ElementType name="ImprovementType" content="textOnly"/>
 	<ElementType name="RouteType" content="textOnly"/>
-<!-- JOOYO_ADDON							START	-->
 	<ElementType name="TerrainChange" content="textOnly"/>
 	<ElementType name="FeatureChange" content="textOnly"/>
-<!-- JOOYO_ADDON							END		-->
 	<ElementType name="EntityEvent" content="textOnly"/>
 	<ElementType name="iProduction" content="textOnly" dt:type="int"/>
 	<ElementType name="bRemove" content="textOnly" dt:type="boolean"/>
-	<!--Afforess-->
 	<ElementType name="bCanRemoveWithNoProductionGain" content="textOnly" dt:type="boolean"/>
-	<!--Afforess-->
 	<ElementType name="FeatureStruct" content="eltOnly">
 		<element type="FeatureType"/>
 		<element type="PrereqTech"/>
 		<element type="iTime"/>
 		<element type="iProduction"/>
 		<element type="bRemove" minOccurs="0"/>
-		<!--Afforess-->
 		<element type="bCanRemoveWithNoProductionGain" minOccurs="0"/>
-		<!--Afforess-->
 	</ElementType>
 	<ElementType name="FeatureStructs" content="eltOnly">
 		<element type="FeatureStruct" minOccurs="0" maxOccurs="*"/>
@@ -166,10 +160,8 @@
 	<ElementType name="bShiftDown" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bCtrlDown" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iHotKeyPriority" content="textOnly" dt:type="int"/>
-	<!--Afforess-->
 	<ElementType name="bRestoreLand" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bMine" content="textOnly" dt:type="boolean"/>
-	<!--Afforess-->
 	<ElementType name="HotKeyAlt" content="textOnly"/>
 	<ElementType name="bAltDownAlt" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bShiftDownAlt" content="textOnly" dt:type="boolean"/>
@@ -179,11 +171,9 @@
 	<ElementType name="bGraphicalOnly" content="textOnly" dt:type="boolean"/>
 	<ElementType name="BuildInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
 		<element type="PrereqTech" minOccurs="0"/>
@@ -195,10 +185,8 @@
 		<element type="PrereqBonusTypes" minOccurs="0"/>
 		<element type="ImprovementType" minOccurs="0"/>
 		<element type="RouteType" minOccurs="0"/>
-<!-- JOOYO_ADDON							START	-->
 		<element type="TerrainChange" minOccurs="0"/>
 		<element type="FeatureChange" minOccurs="0"/>
-<!-- JOOYO_ADDON							END		-->
 		<element type="PlaceBonusTypes" minOccurs="0"/>
 		<element type="EntityEvent" minOccurs="0"/>
 		<element type="FeatureStructs" minOccurs="0"/>
@@ -210,10 +198,8 @@
 		<element type="iHotKeyPriority" minOccurs="0"/>
 		<element type="Button" minOccurs="0" maxOccurs="*"/>
 		<element type="iOrderPriority" minOccurs="0"/>
-		<!--Afforess-->
 		<element type="bRestoreLand" minOccurs="0"/>
 		<element type="bMine" minOccurs="0"/>
-		<!--Afforess-->
 		<element type="bGraphicalOnly" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="BuildInfos" content="eltOnly">
@@ -1295,18 +1281,7 @@
 	<!--TB's Converted TLOTags End-->
 	<ElementType name="iInstanceCostModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iIntensity" content="textOnly" dt:type="int"/>
-	<ElementType name="DefaultUnit" content="textOnly"/>
 	<ElementType name="InvisibleType" content="textOnly"/>
-	<ElementType name="UnitClassInfo" content="eltOnly">
-		<element type="Type"/>
-		<element type="Description" minOccurs="0"/>
-		<element type="iInstanceCostModifier" minOccurs="0"/>
-		<element type="DefaultUnit" minOccurs="0"/>
-	</ElementType>
-	<ElementType name="UnitClassInfos" content="eltOnly">
-		<element type="UnitClassInfo" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="Class" content="textOnly"/>
 	<ElementType name="UniqueName" content="textOnly"/>
 	<ElementType name="UniqueNames" content="eltOnly">
 		<element type="UniqueName" minOccurs="0" maxOccurs="*"/>
@@ -1362,20 +1337,16 @@
 	<ElementType name="bPlotPrereqsKeepAfter" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bRemoveAfterSet" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bQuick" content="textOnly" dt:type="boolean"/>
-<!--DPII < Revolution Mod Start> -->
 	<ElementType name="bInquisitor" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bCanBeRebel" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bCanRebelCapture" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bCannotDefect" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bCanQuellRebellion" content="textOnly" dt:type="boolean"/>
-<!--DPII < Revolution Mod End> -->
 	<!-- ls612: No Non-Owned Entry -->
 	<ElementType name="bOnlyFriendlyEntry" content="textOnly" dt:type="boolean"/>
-	<!-- DIPLOMACYMOD 04/13/09 by DPII -->
 	<ElementType name="bWorkerTrade" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bMilitaryTrade" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bGreatGeneral" content="textOnly" dt:type="boolean"/>
-	<!-- DIPLOMACYMOD END -->
 	<ElementType name="UnitUpgrades" content="eltOnly">
 		<element type="UnitType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
@@ -1769,7 +1740,6 @@
 	<ElementType name="FreePromotions" content="eltOnly">
 		<element type="FreePromotion" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<!--Afforess-->
 	<ElementType name="CivilizationType" content="textOnly"/>
 	<ElementType name="CivilizationUniqueName" content="textOnly"/>
 	<ElementType name="CivilizationName" content="eltOnly">
@@ -1779,7 +1749,6 @@
 	<ElementType name="CivilizationNames" content="eltOnly">
 		<element type="CivilizationName" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<!--Afforess-->
 	<ElementType name="LeaderPromotion" content="textOnly"/>
 	<ElementType name="iLeaderExperience" content="textOnly" dt:type="int"/>
 	<ElementType name="iDCMBombRange" content="textOnly" dt:type="int"/>
@@ -1868,21 +1837,19 @@
 	</ElementType>
 	<ElementType name="TrainCondition"/>
 	<ElementType name="UnitInfo" content="eltOnly">
-		<element type="Class" minOccurs="0"/>
 		<element type="Type" minOccurs="0"/>
 		<element type="iMaxGlobalInstances" minOccurs="0"/>
 		<element type="iMaxPlayerInstances" minOccurs="0"/>
 		<element type="bUnlimitedException" minOccurs="0"/>
+		<element type="iInstanceCostModifier" minOccurs="0"/>
 		<element type="Description" minOccurs="0"/>
 		<element type="Civilopedia" minOccurs="0"/>
 		<element type="Strategy" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
 		<element type="Advisor" minOccurs="0"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="UniqueNames" minOccurs="0"/>
 		<element type="Special" minOccurs="0"/>
 		<element type="Capture" minOccurs="0"/>
@@ -2216,11 +2183,9 @@
 	<ElementType name="bSound" content="textOnly" dt:type="boolean"/>
 	<ElementType name="MissionInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
 		<element type="Waypoint" minOccurs="0"/>
@@ -2249,11 +2214,9 @@
 	<ElementType name="Mission" content="textOnly"/>
 	<ElementType name="ControlInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
 		<element type="HotKey" minOccurs="0"/>
@@ -2278,11 +2241,9 @@
 	<ElementType name="bAll" content="textOnly" dt:type="boolean"/>
 	<ElementType name="CommandInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
 		<element type="HotKey" minOccurs="0"/>
@@ -2339,7 +2300,6 @@
 	<ElementType name="bEnemyRoute" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bAlwaysHeal" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bHillsDoubleMove" content="textOnly" dt:type="boolean"/>
-	<!--Afforess-->
 	<ElementType name="bCanMovePeaks" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bCanLeadThroughPeaks" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bForceUpgrade" content="textOnly" dt:type="boolean"/>
@@ -2350,7 +2310,6 @@
 	<ElementType name="PromotionOverwrites" content="eltOnly">
 		<element type="Promotion" minOccurs="0"/>
 	</ElementType>
-	<!--Afforess-->
 	<ElementType name="bImmuneToFirstStrikes" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iVisibilityChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iMovesChange" content="textOnly" dt:type="int"/>
@@ -2399,11 +2358,9 @@
 	</ElementType>
 	<ElementType name="PromotionInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="Help" minOccurs="0" maxOccurs="*"/>
 		<element type="Sound" minOccurs="0"/>
@@ -2473,7 +2430,6 @@
 		<element type="bPlotPrereqsKeepAfter" minOccurs="0"/>
 		<element type="bRemoveAfterSet" minOccurs="0"/>
 		<element type="bQuick" minOccurs="0"/>
-		<!--Afforess-->
 		<element type="bCanMovePeaks" minOccurs="0"/>
 		<element type="bCanLeadThroughPeaks" minOccurs="0"/>
 		<element type="bForceUpgrade" minOccurs="0"/>
@@ -2481,7 +2437,6 @@
 		<element type="PromotionOverwrites" minOccurs="0"/>
 		<element type="ObsoleteTech" minOccurs="0"/>
 		<element type="IgnoreTerrainDamage" minOccurs="0"/>
-		<!--Afforess-->
 		<element type="bImmuneToFirstStrikes" minOccurs="0"/>
 		<element type="iVisibilityChange" minOccurs="0"/>
 		<element type="iMovesChange" minOccurs="0"/>
@@ -2712,18 +2667,15 @@
 	<ElementType name="DomainType" content="textOnly"/>
 	<ElementType name="DomainInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description"/>
 	</ElementType>
 	<ElementType name="DomainInfos" content="eltOnly">
 		<element type="DomainInfo" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="Type" content="textOnly"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 	<ElementType name="bForceOverwrite" content="textOnly" dt:type="boolean"/>
 	<ElementType name="DependencyType" content="textOnly"/>
 	<ElementType name="AndDependencyTypes" content="eltOnly">
@@ -2732,7 +2684,6 @@
 	<ElementType name="OrDependencyTypes" content="eltOnly">
 		<element type="DependencyType" minOccurs="1"/>
 	</ElementType>
-<!-- XMLCOPY				END					MRGENIE		-->
 	<ElementType name="bValid" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bCityLoad" content="textOnly" dt:type="boolean"/>
 	<ElementType name="CarrierUnitAI" content="eltOnly">
@@ -2744,11 +2695,9 @@
 	</ElementType>
 	<ElementType name="SpecialUnitInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="bValid" minOccurs="0"/>
 		<element type="bCityLoad" minOccurs="0"/>
@@ -2777,21 +2726,17 @@
 	</ElementType>
 	<ElementType name="AnimationCategory" content="eltOnly">
 		<element type="Type" maxOccurs="1" minOccurs="1"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="DefaultTo" maxOccurs="1" minOccurs="0"/>
 		<element type="BaseID" maxOccurs="1" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="EntityEventInfo" content="eltOnly">
 		<element type="Type" minOccurs="1" maxOccurs="1"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="AnimationPathTypes" minOccurs="0" maxOccurs="1"/>
 		<element type="EffectTypes" minOccurs="0" maxOccurs="1"/>
 		<element type="bUpdateFormation" minOccurs="0" maxOccurs="1"/>
@@ -2817,19 +2762,14 @@
 	</ElementType>
 	<ElementType name="AnimationPath" content="eltOnly">
 		<element type="Type" maxOccurs="1" minOccurs="1"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="bMissionPath" maxOccurs="1" minOccurs="0"/>
 		<element type="PathEntry" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="Civ4BuildInfos" content="eltOnly">
 		<element type="BuildInfos" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="Civ4UnitClassInfos" content="eltOnly">
-		<element type="UnitClassInfos" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="Civ4UnitInfos" content="eltOnly">
 		<element type="UnitInfos" minOccurs="0" maxOccurs="*"/>
@@ -3002,10 +2942,8 @@
 	</ElementType>
 	<ElementType name="UnitCombatInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="GenericCategory" minOccurs="0"/>
 
@@ -3243,10 +3181,8 @@
 	</ElementType>
 	<ElementType name="InvisibleInfo" content="eltOnly">
 		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
 		<element type="Description" minOccurs="0"/>
 		<element type="FontButtonIndex" minOccurs="0"/>
 	</ElementType>

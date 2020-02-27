@@ -8,22 +8,18 @@
 	<TEXT>
 		<Tag>INTERFACE_CITY_COMMERCE_RATE_FLOAT</Tag>
 		<English>%F1: %s2</English>
-		<French>%F1: %s2</French>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_FOOD_GROW</Tag>
 		<English>%d1[ICON_FOOD] - %d2[ICON_EATENFOOD] = +%d3[ICON_FOOD]</English>
-		<French>%d1[ICON_FOOD] - %d2[ICON_EATENFOOD] = +%d3[ICON_FOOD]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_FOOD_SHRINK</Tag>
 		<English>%d1[ICON_FOOD] - %d2[ICON_EATENFOOD] = [COLOR_WARNING_TEXT]%d3[COLOR_REVERT][ICON_BAD_FOOD]</English>
-		<French>%d1[ICON_FOOD] - %d2[ICON_EATENFOOD] = [COLOR_WARNING_TEXT]%d3[COLOR_REVERT][ICON_BAD_FOOD]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_FOOD_STAGNATE</Tag>
 		<English>%d1[ICON_FOOD] = %d2[ICON_EATENFOOD]</English>
-		<French>%d1[ICON_FOOD] = %d2[ICON_EATENFOOD]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_GROWTH</Tag>
@@ -37,22 +33,18 @@
 	<TEXT>
 		<Tag>INTERFACE_CITY_HEALTH_BAD</Tag>
 		<English>%d1[ICON_HEALTHY] &lt; %d2[ICON_UNHEALTHY] = [COLOR_WARNING_TEXT]%d3[COLOR_REVERT][ICON_EATENFOOD]</English>
-		<French>%d1[ICON_HEALTHY] &lt; %d2[ICON_UNHEALTHY] = [COLOR_WARNING_TEXT]%d3[COLOR_REVERT][ICON_EATENFOOD]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_PRODUCTION_BUY</Tag>
 		<English>%s1 (%d2)   -%d3[ICON_GOLD]</English>
-		<French>%s1 (%d2)   -%d3[ICON_GOLD]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_PRODUCTION_WHIP</Tag>
 		<English>%s1 (%d2)   %d3[ICON_ANGRYPOP] %d4[ICON_PRODUCTION]</English>
-		<French>%s1 (%d2)   %d3[ICON_ANGRYPOP] %d4[ICON_PRODUCTION]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_PRODUCTION_WHIP_PLUS_GOLD</Tag>
 		<English>%s1 (%d2)   %d3[ICON_ANGRYPOP] %d4[ICON_PRODUCTION] %d5[ICON_GOLD]</English>
-		<French>%s1 (%d2)   %d3[ICON_ANGRYPOP] %d4[ICON_PRODUCTION] %d5[ICON_GOLD]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_SHRINKING</Tag>
@@ -66,17 +58,14 @@
 	<TEXT>
 		<Tag>INTERFACE_CITY_UNHAPPY</Tag>
 		<English>%d1[ICON_HAPPY] &lt; %d2[ICON_UNHAPPY] = [COLOR_WARNING_TEXT]%d3[COLOR_REVERT][ICON_ANGRYPOP]</English>
-		<French>%d1[ICON_HAPPY] &lt; %d2[ICON_UNHAPPY] = [COLOR_WARNING_TEXT]%d3[COLOR_REVERT][ICON_ANGRYPOP]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_GREAT_PERSON_CITY</Tag>
 		<English>%s1: %s2</English>
-		<French>%s1: %s2</French>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_GREAT_PERSON_CITY_TURNS</Tag>
 		<English>%s1: %s2 (%d3)</English>
-		<French>%s1: %s2 (%d3)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_GREAT_PERSON_NONE</Tag>
@@ -90,12 +79,10 @@
 	<TEXT>
 		<Tag>INTERFACE_GREAT_PERSON_TURNS</Tag>
 		<English>%s1: (%d2)</English>
-		<French>%s1: (%d2)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_NEXT_GREAT_GENERAL_XP</Tag>
 		<English>%s1 (%d2)</English>
-		<French>%s1 (%d2)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_ACO_AttackModifiers</Tag>
@@ -187,8 +174,6 @@
 	<TEXT>
 		<Tag>TXT_ACO_MULTIPLY</Tag>
 		<English>×</English>
-		<French>×</French>
-		<Polish>x</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_ACO_PressSHIFT</Tag>
@@ -360,7 +345,6 @@
 	<TEXT>
 		<Tag>TXT_BULLET</Tag>
 		<English>[ICON_BULLET]</English>
-		<French>[ICON_BULLET]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_CASTE_SYSTEM_HELP</Tag>
@@ -2330,12 +2314,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_ARCHER</Tag>
 		<English>archer</English>
-		<French>archer</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_ARQUEBUSIER</Tag>
 		<English>arquebusier</English>
-		<French>arquebusier</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_AXEMAN</Tag>
@@ -2748,8 +2730,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BARBCIV_OK</Tag>
 		<English>Ok</English>
-		<French>Ok</French>
-		<German>Ok.</German>
 		<Spanish>De acuerdo.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4380,7 +4360,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WORKER_SPEED_MODIFIER_ADDITIONAL</Tag>
 		<English>, [LINK=%s1_Build]%s2_Build[\LINK]</English>
-		<French>, [LINK=%s1_Build]%s2_Build[\LINK]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_GROW_FOREST</Tag>
@@ -4401,7 +4380,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BULLET</Tag>
 		<English>[ICON_BULLET]</English>
-		<French>[ICON_BULLET]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BULLSEYE_STRATEGY</Tag>
@@ -5184,7 +5162,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_CULTURE_NO_LEVEL</Tag>
 		<English>[NEWLINE][ICON_CULTURE]: %d1/%d2</English>
-		<French>[NEWLINE][ICON_CULTURE]: %d1/%d2</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_FOOD_GROW</Tag>
@@ -5714,7 +5691,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_COLOR_CYAN</Tag>
 		<English>Cyan</English>
-		<French>Cyan</French>
 		<German>Türkis</German>
 		<Italian>Azzurro</Italian>
 		<Spanish>Turquesa</Spanish>
@@ -5759,7 +5735,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_COLOR_MAGENTA</Tag>
 		<English>Magenta</English>
-		<French>Magenta</French>
 		<Polish>Magentowy</Polish>
 	</TEXT>
 	<TEXT>
@@ -5834,7 +5809,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_COMMA</Tag>
 		<English>,</English>
-		<French>,</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_AMBUSH</Tag>
@@ -6211,7 +6185,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_MONUMENTAL</Tag>
 		<English>Monumental</English>
-		<French>Monumental</French>
 		<Polish>Monumentalna</Polish>
 	</TEXT>
 	<TEXT>
@@ -6802,6 +6775,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_ERA_ANCIENT_STRATEGY</Tag>
 		<English>The term Ancient in regards to Caveman to Cosmos describes the beginning of cities and the arrival of what is referred to as the bronze age. It is a period where tribal societies begin to form larger towns and eventually cities, and more elaborate artwork and architecture. Kings emerge in this period, one of the first kinds of powerful rulers, evolving out of powerful tribal leaders. Warfare becomes formalized, with the development of professional armies, the training of animals for war etc.
+
 Time Frame: 12 000 BC - 1200 BC</English>
 	</TEXT>	
 	<TEXT>
@@ -6832,6 +6806,7 @@ Time Frame: 12 000 BC - 1200 BC</English>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_CLASSICAL_STRATEGY</Tag>
 		<English>The Classical era picks up where the ancient era left off. During this period new ideas of religion, government, and political organization enter the picture. Technology has improved to the point in this era that larger empires become possible, and many would be conquerors try their hands at conquest. Further advances in architecture lead to better living conditions in some cases.
+
 Time Frame: 1200 BC - 450 AD</English>
 	</TEXT>
 	<TEXT>
@@ -6847,6 +6822,7 @@ Time Frame: 1200 BC - 450 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_COSMIC_STRATEGY</Tag>
 		<English>The Cosmic era describes a period where a civilization has surpassed the limitations of galactic travel and is able to explore nearby galaxies, spreading further across the universe. Further advances in space flight make this possible.
+
 Time Frame: 3000 AD - 4000 AD</English>
 	</TEXT>
 	<TEXT>
@@ -6895,6 +6871,7 @@ Time Frame: 3000 AD - 4000 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_GALACTIC_STRATEGY</Tag>
 		<English>The Galactic Era represents a time when a civilization develops faster than light travel, allowing the exploration and colonization of nearby solar systems and increasingly, the galaxy. Further improvements in terraforming technology allow hostile planets to be transformed into earth-like worlds, greatly increasing the places humanity can call home. Interplanetary warfare is refined as well, and not all human space nations are friendly democracies. Some develop into deadly space empires.
+		
 Time Frame: 2300 AD - 3000 AD</English>
 	</TEXT>
 	<TEXT>
@@ -6925,12 +6902,12 @@ Time Frame: 2300 AD - 3000 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_INDUSTRIAL_STRATEGY</Tag>
 		<English>The Industrial Era begins with the invention of steam power and continues with the development of factories. Increasingly, warfare becomes mechanized, with the advent of automatic weapons. New ideas on the economy and society begin to shake the old order, with capitalism and communist ideas among others begin to establish themselves, clashing with traditional ideas of religion and government. Flight becomes possible for the first time, and warfare in general undergoes enormous changes, formational warfare and colorful uniforms giving way to drab uniforms and eventually camoflage.
+		
 Time Frame: 1750 AD - 1900 AD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_INFORMATION</Tag>
 		<English>Information</English>
-		<French>Information</French>
 		<German>
 			<Text>Digitalzeitalter:Digitalzeitalters:Digitalzeitalter:Digitalzeitalter</Text>
 			<Gender>Neuter</Gender>
@@ -6940,6 +6917,7 @@ Time Frame: 1750 AD - 1900 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_INFORMATION_STRATEGY</Tag>
 		<English>The Information era represents roughly the time after the cold war in our world technologically. Computers become personal, the internet appears, and new forms of entertainment such as computer and console games mark the early part of this period. Later, with the advent of high-speed internet, cloud computing and mobile devices such as smart phones, society undergoes a great change as physical businesses begin to be replaced by digital businesses, and increasingly private ownership of things such as movies, music moves into the hands of corporate distribution with streaming technology. Eventually artificial intelligence evolves to the point of allowing first automated drones and driverless cars, to many jobs disappearing due to more advanced machines. Physical cash disappears, with all transactions being done digitally.
+		
 Time Frame: 1990 AD - 2050 AD</English>
 	</TEXT>
 	<TEXT>
@@ -6970,6 +6948,7 @@ Time Frame: 1990 AD - 2050 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_MEDIEVAL_STRATEGY</Tag>
 		<English>A Medieval society is one which has reached further levels of refinement in culture and technology compared to Classical times. Stronger blacksmithing techniques allow heavier armor, making heavy cavalry and other forces the weapon of choice on the battlefield along with increasingly powerful siege weaponry. Fortifications improve, creating fortresses capable of sustaining a siege for months if need be due not only to sturdy construction but also food and supply storage. New structures like wind and watermills appear with the advent of the first gears. Gunpowder weapons begin to be refined toward the end of this period, foreshadowing the second great change in warfare since ancient times.
+		
 Time Frame: 450 AD - 1400 AD</English>
 	</TEXT>
 	<TEXT>
@@ -6985,12 +6964,12 @@ Time Frame: 450 AD - 1400 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_ATOMIC_STRATEGY</Tag>
 		<English>The Atomic era describes the time of the second world war till roughly the end of the cold war. During this period air power becomes the strongest force on the battlefield and the doctrine of MAD, or mutually assured destruction, appears as nuclear weapons enter the picture. Also, the beginnings of space flight and computers occur in this period.
+		
 Time Frame: 1900 AD - 1990 AD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_NANOTECH</Tag>
 		<English>Nanotech</English>
-		<French>Nanotech</French>
 		<German>
 			<Text>Nanozeitalter:Nanozeitalters:Nanozeitalter:Nanozeitalter</Text>
 			<Gender>Neuter</Gender>
@@ -7000,6 +6979,7 @@ Time Frame: 1900 AD - 1990 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_NANOTECH_STRATEGY</Tag>
 		<English>The Nanotech era is a logical evolution of the previous information age. Computers become sentient, and sentient robots begin to appear. Nanites are able to provide a nearly limitless capacity for construction, and small nano-factories find a place first in the homes of developed nations, then in developing nations. Poverty as we know it begins to disappear, and existing systems of government and society are shaken. Capitalism begins to give way to a post-scarcity economy. However not everything is all bring. Nanotech and robotics also become used as deadly weapons. Fierce wars are fought as traditional totalitarian governments fight to maintain control over populations suddenly able to produce nearly anything. MAD or mutually assured destruction is rendered obsolete due to nanotech. With the removal of nuclear deterrence, many powerful countries turn again towards conquest, but the dark spectre of nanotech hangs over the world as the potential for doomsday is much greater than the era of nuclear exchange. Machine governments become possible, and many sophisticated AI attempt at domination in order to protect humanity from itself.
+		
 Time Frame: 2050 AD - 2150 AD</English>
 	</TEXT>
 	<TEXT>
@@ -7018,6 +6998,7 @@ Time Frame: 2050 AD - 2150 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_PREHISTORIC_STRATEGY</Tag>
 		<English>Prehistory (Latin, pra = before; Greek, iotopia = history) is a term used to describe the period before recorded history. Paul Tournal originally coined the term Pré-historique in describing the finds he had made in the caves of southern France. The term "prehistory" can be used to refer to all time since the beginning of the universe, although it is more often used in referring to the period of time since life appeared on Earth, or even more specifically to the time since human-like beings appeared.
+		
 Time Frame: 200 000 BC - 12 000 BC</English>
 	</TEXT>
 	<TEXT>
@@ -7048,6 +7029,7 @@ Time Frame: 200 000 BC - 12 000 BC</English>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_RENAISSANCE_STRATEGY</Tag>
 		<English>The Renaissance begins with the advent of the printing press, further refinements in gunpowder weaponry, and the advent of ships capable of traversing the world. New thoughts on government and religion, much like the Classical era, shape this period as well. Many religions schism as the traditional teachings are again brought to light. Science as a serious discipline emerges for the first time, and advances in medicine and astronomy improve the knowledge of the physical world. Religious explanations for existence and the origin of the universe are questioned, and serious schisms between science and religion occur in some cases, but not all. Towards the end of this period massive oceanic empires appear, colonizing far off lands and trading and dominating far off people. Many native peoples are displaced or enslaved.
+		
 Time Frame: 1400 AD - 1750 AD</English>
 	</TEXT>
 	<TEXT>
@@ -7063,6 +7045,7 @@ Time Frame: 1400 AD - 1750 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_TRANSCENDENT_STRATEGY</Tag>
 		<English>The Transcendent era is a period in the far future. Mankind has the ability to time travel, transverse diamensions, settle the known and increasingly unknown parts of the universe.
+		
 Time Frame: 4000 AD - 6000 AD</English>
 	</TEXT>
 	<TEXT>
@@ -7081,6 +7064,7 @@ Time Frame: 4000 AD - 6000 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_TRANSHUMAN_STRATEGY</Tag>
 		<English>The transhuman era represents a period following the nanotech era. In the transhuman era in order to combat the increased hostility between machine and human life, as well as improve themselves, and for some, reach some kind of immortality, some of mankind merges with technology. The transhuman movement actually began in the Information age, but only became possible with the advanced technologies of the late nanotech period. While some humans choose to embrace transhumanism, a counter movement, or new humanist movement also appears, which is diverse, including religious people of all stripes, some scientists warning of the possible negative ramifications of transhumanism, and others simply horrified or opposed to the idea. Some of the Transhumans attempt to force humans to convert. The line between machine and man begins to blur, as machine life becomes more human with emotions, many developing competing ideas, leading to further conflict. Transhumans, Machine factions, and normal humans continue to struggle, some against each other and some allied. Humanity also begins colonizing the solar system in this period, many escaping the warfare on earth to seek a better life. Primitive terraforming allows Mars to become habitable, and eventually the technology improves to allow the construction of massive artificial space colonies. Space warfare appears, first with space fightercraft, developed from shuttles, then with larger ships as well as space faring robots of massive size, some piloted by humans. Eventually interplanetary warfare becomes possible when ships no longer take enormous amounts of time to transverse space. Some of these wars are traditional wars of conquest over resources, others over ideology as the humanist/transhumanist and various machine factions battle it out in space.
+		
 Time Frame: 2150 AD - 2300 AD</English>
 	</TEXT>
 	<TEXT>
@@ -7225,44 +7209,14 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>Gratulacje! Wyprodukowałeś swój pierwszy pojazd gąsienicowy ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) w mieście %s2City_Name! Pojazdy gąsienicowe są najpotężniejszymi jednostkami szturmowymi - wykorzystuj je w celu zniszczenia swoich wrogów!</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FINANCE_ADVISOR_CITY_MAINT_COST</Tag>
-		<English>[NEWLINE]%d1[ICON_GOLD]: Base Maintenance[NEWLINE]%d2[ICON_GOLD]: Distance Maintenance[NEWLINE]%d3[ICON_GOLD]: Number of Cities Maintenance[NEWLINE]%d4[ICON_GOLD]: Colony Maintenance[NEWLINE]%d5[ICON_GOLD]: Corporation Maintenance[NEWLINE]%d6[ICON_GOLD]: Building Maintenance[NEWLINE]------------------------[NEWLINE]%d7[ICON_GOLD]: Sub-Total(includes decimals not shown)[NEWLINE]------------------------[NEWLINE]%D8%%[ICON_GOLD]: Gamespeed Modifier[NEWLINE]------------------------[NEWLINE]TOTAL CITY MAINTENANCE COST: %d9[ICON_GOLD]</English>
-		<French>[NEWLINE]%d1[ICON_GOLD]: Entretien de base[NEWLINE]%d2[ICON_GOLD]: Entretien de la distance[NEWLINE]%d3[ICON_GOLD]:  Entretien nombre de villes[NEWLINE]%d4[ICON_GOLD]: Entretien de colonie[NEWLINE]%d5[ICON_GOLD]:  Entretien Corporation[NEWLINE]%d6[ICON_GOLD]: Entretien des bâtiments[NEWLINE]------------------------[NEWLINE]%d7[ICON_GOLD]: Sous-Total(sans les décimales)[NEWLINE]------------------------[NEWLINE]%D8%%[ICON_GOLD]: Modif. vitesse[NEWLINE]------------------------[NEWLINE]COUT TOTAL ENTRETIEN DE LA VILLE: %d9[ICON_GOLD]</French>
-		<German>
-		[NEWLINE]%d1[ICON_GOLD]: entfernungsabhängige Kosten
-		[NEWLINE]%d2[ICON_GOLD]: entfernungsunabhängige Kosten
-		[NEWLINE]%d3[ICON_GOLD]: Kosten für Kolonien
-		[NEWLINE]%d4[ICON_GOLD]: Kapitalgesellschaftszahlungen
-		[NEWLINE]------------------------------------------------
-		[NEWLINE]Gesamte laufende Kosten für Städte: %d5[ICON_GOLD]</German>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_CITY_MAINT_COST_DISTANCE</Tag>
 		<English>------------------------
 		[NEWLINE]%s1[ICON_GOLD]: Distance to Capital</English>
-		<French>------------------------
-		[NEWLINE]%s1[ICON_GOLD]: Distance to Capital</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_FINANCE_ADVISOR_CITY_MAINT_COST_MODIFIER</Tag>
-		<English>------------------------
-		[NEWLINE]%D1%%[ICON_GOLD]: Gamespeed Modifier</English>
-		<French>------------------------
-		[NEWLINE]%D1%%[ICON_GOLD]: Gamespeed Modifier</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_FINANCE_ADVISOR_CITY_MAINT_COST_SUB_TOTAL</Tag>
-		<English>------------------------
-		[NEWLINE]%s1[ICON_GOLD]: Sub-Total</English>
-		<French>------------------------
-		[NEWLINE]%s1[ICON_GOLD]: Sub-Total</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_CITY_MAINT_COST_TOTAL</Tag>
 		<English>------------------------
 		[NEWLINE]TOTAL NATIONWIDE CITY MAINTENANCE COST: %d1[ICON_GOLD]</English>
-		<French>------------------------
-		[NEWLINE]TOTAL NATIONWIDE CITY MAINTENANCE COST: %d1[ICON_GOLD]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_INFLATION_NEW</Tag>
@@ -7398,7 +7352,6 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_FOREIGN_ADVISOR_ABBR_ATTITUDE</Tag>
 		<English>Attitude</English>
-		<French>Attitude</French>
 		<German>Haltung</German>
 		<Italian>Attitudine</Italian>
 		<Spanish>Actitud</Spanish>
@@ -7615,7 +7568,6 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPEED_BLITZ</Tag>
 		<English>Blitz</English>
-		<French>Blitz</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPEED_BLITZ_HELP</Tag>
@@ -7626,7 +7578,6 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPEED_EONS</Tag>
 		<English>Eons</English>
-		<French>Eons</French>
 		<Italian>Eoni</Italian>
 		<German>Äonen</German>
 		<Spanish>Eones</Spanish>
@@ -7689,7 +7640,6 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPEED_LONG</Tag>
 		<English>Long</English>
-		<French>Long</French>
 		<German>Langsam</German>
 	</TEXT>
 	<TEXT>
@@ -8671,7 +8621,6 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_INFLATION_OUTLOOK_STABLE</Tag>
 		<English>stable</English>
-		<French>stable</French>
 		<Spanish>estable</Spanish>
 		<Polish>stabilne</Polish>
 	</TEXT>
@@ -8901,7 +8850,6 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACE_CITY_BAR_SPECIALIST_ADDENDUM</Tag>
 		<English>(%d1)</English>
-		<French>(%d1)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERNET4</Tag>
@@ -9300,7 +9248,6 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_LANDMARK_NAME</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT]</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LANDMARK_PEAK_0</Tag>
@@ -9376,24 +9323,19 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_LATLONG</Tag>
 		<English>%d1°%d2'[SPACE]</English>
-		<French>%d1°%d2'[SPACE]</French>
-		<Polish>%d1o%d2'[SPACE]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LATLONG_EAST</Tag>
 		<English>E</English>
-		<French>E</French>
 		<German>O</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LATLONG_NORTH</Tag>
 		<English>N</English>
-		<French>N</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LATLONG_SOUTH</Tag>
 		<English>S</English>
-		<French>S</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LATLONG_WEST</Tag>
@@ -9838,7 +9780,6 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_LOCAL_REV_INDEX_ADVISOR_SIMPLE</Tag>
 		<English>Local</English>
-		<French>Local</French>
 		<German>Lokal</German>
 		<Italian>Locale</Italian>
 		<Polish>Lokalny</Polish>
@@ -10364,7 +10305,6 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_MILITARY_SITREP_POSSIBLE_EMBARGOS_2</Tag>
 		<English>Embargos</English>
-		<French>Embargos</French>
 		<Italian>Embarghi</Italian>
 		<Polish>Embarga</Polish>
 	</TEXT>
@@ -10380,7 +10320,6 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_MILITARY_SITREP_VASSAL</Tag>
 		<English>Vassal</English>
-		<French>Vassal</French>
 		<German>Vasall</German>
 		<Italian>Vassallo</Italian>
 		<Spanish>Vasallo</Spanish>
@@ -10470,7 +10409,6 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_MILITARY_STRATADV_POSSIBLE</Tag>
 		<English>Possible</English>
-		<French>Possible</French>
 		<German>Möglich</German>
 		<Italian>Possibili</Italian>
 		<Spanish>Posible</Spanish>
@@ -11903,7 +11841,6 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_GREAT_MILITARY_PERSON_BREAKDOWN</Tag>
 		<English>%s1_GMP: %d2_Curr</English>
-		<French>%s1_GMP: %d2_Curr</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HEALTH_FROM_BUILDINGS</Tag>
@@ -11985,7 +11922,6 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_COMMERCE_FINAL_YIELD_FLOAT</Tag>
 		<English>-----------------------[NEWLINE]Total %s1_commerce_type: %s2%F3</English>
-		<French>-----------------------[NEWLINE]Total %s1_commerce_type: %s2%F3</French>
 		<German>-----------------------[NEWLINE]Summe %s1_commerce_type: %s2 %F3</German>
 		<Italian>-----------------------[NEWLINE]%s1_commerce_type totale: %s2%F3</Italian>
 		<Spanish>-----------------------[NEWLINE]Total de %s1_commerce_type: %s2%F3</Spanish>
@@ -12117,7 +12053,7 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>Żywność netto: +0[ICON_FOOD]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_PROD_UNITCLASS</Tag>
+		<Tag>TXT_KEY_MISC_HELP_PROD_UNIT</Tag>
 		<English>[ICON_BULLET]%D1%%[ICON_PRODUCTION] from %s2</English>
 		<French>[ICON_BULLET]%D1%%[ICON_PRODUCTION] pour %s2</French>
 		<German>[ICON_BULLET]%D1%%[ICON_PRODUCTION] für %s2</German>
@@ -12182,7 +12118,6 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_TOTAL_YIELD</Tag>
 		<English>-----------------------[NEWLINE]Total %s1_yield_type: %d2%F3</English>
-		<French>-----------------------[NEWLINE]Total %s1_yield_type: %d2%F3</French>
 		<German>-----------------------[NEWLINE]Gesamtertrag %s1_yield_type: %d2%F3</German>
 		<Italian>-----------------------[NEWLINE]%s1_yield_type totale: %d2%F3</Italian>
 		<Spanish>-----------------------[NEWLINE]Total de %s1_yield_type: %d2%F3</Spanish>
@@ -12447,7 +12382,6 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_NEG_GOLD</Tag>
 		<English>[ICON_GOLD]: [COLOR_NEGATIVE_TEXT]%d1_Gold[COLOR_REVERT]</English>
-		<French>[ICON_GOLD]: [COLOR_NEGATIVE_TEXT]%d1_Gold[COLOR_REVERT]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_NEG_WARNING_GOLD_PER_TURN</Tag>
@@ -12882,7 +12816,6 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_POS_GOLD</Tag>
 		<English>[ICON_GOLD]: %d1_Gold</English>
-		<French>[ICON_GOLD]: %d1_Gold</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_POS_GOLD_PER_TURN_TD_WFL</Tag>
@@ -12931,7 +12864,6 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PROMOTIONS</Tag>
 		<English>%d1[ICON_STAR]</English>
-		<French>%d1[ICON_STAR]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PURSUIT_ONATTACK_SUCCESS</Tag>
@@ -14618,7 +14550,6 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_MOD_DCN_ALLIANCE</Tag>
 		<English>Alliance</English>
-		<French>Alliance</French>
 		<German>Allianz</German>
 		<Italian>alleanza</Italian>
 		<Spanish>Alianza</Spanish>
@@ -14920,7 +14851,6 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_MOD_DCN_PLAIN_EMPIRE</Tag>
 		<English>Empire</English>
-		<French>Empire</French>
 		<German>Imperium</German>
 		<Italian>Impero</Italian>
 		<Spanish>Imperio</Spanish>
@@ -14996,7 +14926,6 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_MOD_DCN_REICH</Tag>
 		<English>Reich</English>
-		<French>Reich</French>
 		<Polish>Rzesza</Polish>
 	</TEXT>
 	<TEXT>
@@ -15046,7 +14975,6 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_MOD_DCN_SOVIET</Tag>
 		<English>Soviet</English>
-		<French>Soviet</French>
 		<Italian>Sovietica</Italian>
 		<Spanish>Soviética</Spanish>
 		<Polish>Sowiecki</Polish>
@@ -15891,7 +15819,6 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_NAME_PREFIX_CIV</Tag>
 		<English>%s_civ_adjective</English>
-		<French>%s_civ_adjective</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NAME_PREFIX_ENGLISH_CULTURE</Tag>
@@ -16176,8 +16103,6 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_NEW_GREEKWAR_BUILDING_HELLENIC_SHRINE_PEDIA</Tag>
 		<English>TBD</English>
-		<French>TBD</French>
-		<Polish>Brak opisu w Cywilopedii</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NEW_GREEKWAR_BUILDING_HELLENIC_TEMPLE_PEDIA</Tag>
@@ -16506,12 +16431,10 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_LESS_ANARCHY</Tag>
 		<English>-%D1[ICON_OCCUPATION]</English>
-		<French>-%D1[ICON_OCCUPATION]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_LESS_ANARCHY_DISPLAY</Tag>
 		<English>[ICON_OCCUPATION]</English>
-		<French>[ICON_OCCUPATION]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_NEAREST_CITY</Tag>
@@ -17678,7 +17601,6 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_BUTTON1_BARBARIAN_ASSAULT_1</Tag>
 		<English>OK</English>
-		<French>OK</French>
 		<Spanish>¡Sí!</Spanish>
 	</TEXT>
 	<TEXT>
@@ -17692,7 +17614,6 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_BUTTON1_FOREIGN_WOMAN_1</Tag>
 		<English>OK</English>
-		<French>OK</French>
 		<Spanish>Vale.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -17706,7 +17627,6 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_BUTTON1_TRAITOR_2</Tag>
 		<English>DAMN %s1_civ_adjective</English>
-		<French>DAMN %s1_civ_adjective</French>
 		<Italian>DANNATI %s1_civ_adjective</Italian>
 		<Spanish>¡Malditos %s1_civ_adjective!</Spanish>
 		<Polish>Przeklęci %s1_civ_adjective</Polish>
@@ -17977,7 +17897,6 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_OLD_GAME_SAVE_FORMAT</Tag>
 		<English>Original BTS</English>
-		<French>Original BTS</French>
 		<Spanish>Original de BTS</Spanish>
 		<Polish>Oryginalny BTS</Polish>
 	</TEXT>
@@ -18060,7 +17979,6 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_POSITIVE_COLOR</Tag>
 		<English>[COLOR_POSITIVE_TEXT]</English>
-		<French>[COLOR_POSITIVE_TEXT]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POWER</Tag>
@@ -18425,7 +18343,6 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_RANKING_CULTURE</Tag>
 		<English>Culture</English>
-		<French>Culture</French>
 		<German>Kultur</German>
 		<Italian>Cultura</Italian>
 		<Spanish>Cultura</Spanish>
@@ -18451,7 +18368,6 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_RANKING_POPULATION</Tag>
 		<English>Population</English>
-		<French>Population</French>
 		<German>Bevölkerung</German>
 		<Italian>Popolazione</Italian>
 		<Spanish>Población</Spanish>
@@ -21132,7 +21048,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	<TEXT>
 		<Tag>TXT_KEY_SIGN_EVENT_JADE_1</Tag>
 		<English>jade</English>
-		<French>jade</French>
 		<German>Jade</German>
 		<Italian>Giada</Italian>
 		<Polish>nefryt</Polish>
@@ -21257,7 +21172,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	<TEXT>
 		<Tag>TXT_KEY_SIGN_FORMAT_COMM</Tag>
 		<English>%D1 C</English>
-		<French>%D1 C</French>
 		<German>%D1 G</German>
 		<Italian>%D1 Comm.</Italian>
 		<Polish>%D1 H</Polish>
@@ -21794,7 +21708,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_NOBLE</Tag>
 		<English>Noble</English>
-		<French>Noble</French>
 		<German>Feudalherr</German>
 		<Italian>Nobile</Italian>
 		<Spanish>
@@ -21807,12 +21720,10 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_NOBLE_STRATEGY</Tag>
 		<English>TBD</English>
-		<French>TBD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_PERCENT</Tag>
 		<English>[ICON_BULLET]+%s1_Change %F2[SPACE]</English>
-		<French>[ICON_BULLET]+%s1_Change %F2[SPACE]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_PRIEST</Tag>
@@ -21919,7 +21830,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_SLAVES_STRATEGY</Tag>
 		<English>TBD</English>
-		<French>TBD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_GREAT_SLEUTH</Tag>
@@ -21957,12 +21867,10 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_UNHAPPY</Tag>
 		<English>[ICON_BULLET]%D1_Change[ICON_UNHAPPY]</English>
-		<French>[ICON_BULLET]%D1_Change[ICON_UNHAPPY]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_UNHEALTHY</Tag>
 		<English>[ICON_BULLET]%D1_Change[ICON_UNHEALTHY]</English>
-		<French>[ICON_BULLET]%D1_Change[ICON_UNHEALTHY]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_UNIT_COMBAT_EXPERIENCE</Tag>
@@ -25573,7 +25481,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCIENTIFIC_PEDIA</Tag>
 		<English>[SPACE]</English>
-		<French>[SPACE]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCORE</Tag>
@@ -25611,7 +25518,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_CITIES</Tag>
-		<English>Mythical Cities</English>
+		<English>Legendary Cities</English>
 		<French>Villes Légendaires</French>
 		<German>legendäre Städte</German>
 		<Spanish>Ciudades Legendarias</Spanish>
@@ -25664,7 +25571,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_POINTS</Tag>
 		<English>Points</English>
-		<French>Points</French>
 		<German>Punkte</German>
 		<Spanish>Puntos</Spanish>
 		<Polish>Punktów</Polish>
@@ -25725,7 +25631,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_WORLD_POP</Tag>
 		<English>Population</English>
-		<French>Population</French>
 		<German>Einwohner</German>
 		<Spanish>Población</Spanish>
 		<Polish>Populacja</Polish>
@@ -26012,7 +25917,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	<TEXT>
 		<Tag>TXT_KEY_WONDER_DATE</Tag>
 		<English>Date</English>
-		<French>Date</French>
 		<German>Errichtet</German>
 		<Italian>Data</Italian>
 		<Spanish>Fecha</Spanish>
@@ -26425,8 +26329,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	<TEXT>
 		<Tag>TXT_MULTIPLY</Tag>
 		<English>×</English>
-		<French>×</French>
-		<Polish>x</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_RECRUITED</Tag>

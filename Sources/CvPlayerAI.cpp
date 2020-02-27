@@ -8383,20 +8383,12 @@ int CvPlayerAI::AI_getAttitudeVal(PlayerTypes ePlayer, bool bForced) const
 // BEGIN: Show Hidden Attitude Mod 01/22/2009
 bool isShowPersonalityModifiers()
 {
-#ifdef _MOD_SHAM_SPOILER
 	return true;
-#else
-	return !GC.getGame().isOption(GAMEOPTION_RANDOM_PERSONALITIES) || GC.getGame().isDebugMode();
-#endif
 }
 
 bool isShowSpoilerModifiers()
 {
-#ifdef _MOD_SHAM_SPOILER
 	return true;
-#else
-	return GC.getGame().isDebugMode();
-#endif
 }
 
 int CvPlayerAI::AI_getFirstImpressionAttitude(PlayerTypes ePlayer) const
@@ -16106,9 +16098,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	iValue += iTempValue;
 
 	iTempValue = 0;
-	for (iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
+	for (iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
-		iValue += (kCivic.getUnitClassProductionModifier(iI) * 2) / 5;
+		iTempValue += (kCivic.getUnitProductionModifier(iI) * 2) / 5;
 	}
 	if ( gPlayerLogLevel > 2 && iTempValue != 0 )
 	{
@@ -24394,25 +24386,21 @@ int CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTrig
 		iValue += (GET_TEAM(getTeam()).getResearchCost((TechTypes)kEvent.getTech()) * kEvent.getTechPercent()) / 100;
 	}
 
-	if (kEvent.getUnitClass() != NO_UNITCLASS)
+	if (kEvent.getFreeUnit() != NO_UNIT)
 	{
-		UnitTypes eUnit = (UnitTypes)GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(kEvent.getUnitClass());
-		if (eUnit != NO_UNIT)
+		//Altough AI_unitValue compares well within units, the value is somewhat independent of cost
+		int iUnitValue = GC.getUnitInfo((UnitTypes)kEvent.getFreeUnit()).getProductionCost();
+		if (iUnitValue > 0)
 		{
-			//Altough AI_unitValue compares well within units, the value is somewhat independent of cost
-			int iUnitValue = GC.getUnitInfo(eUnit).getProductionCost();
-			if (iUnitValue > 0)
-			{
-				iUnitValue *= 2;
-			}
-			else if (iUnitValue == -1)
-			{
-				iUnitValue = 200; //Great Person?
-			}
-
-			iUnitValue *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
-			iValue += kEvent.getNumUnits() * iUnitValue;
+			iUnitValue *= 2;
 		}
+		else if (iUnitValue == -1)
+		{
+			iUnitValue = 200; //Great Person?
+		}
+
+		iUnitValue *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
+		iValue += kEvent.getNumUnits() * iUnitValue;
 	}
 
 	if (kEvent.isDisbandUnit())
@@ -27959,7 +27947,7 @@ UnitTypes CvPlayerAI::AI_bestAdvancedStartUnitAI(const CvPlot* pPlot, UnitAIType
 					{
 						iPromotionValue += 15;
 					}
-					else if (isFreePromotion((UnitClassTypes)kUnit.getUnitClassType(), (PromotionTypes)iJ))
+					else if (isFreePromotion((UnitTypes)iI, (PromotionTypes)iJ))
 					{
 						iPromotionValue += 15;
 					}
@@ -31323,11 +31311,8 @@ int CvPlayerAI::AI_getCivicShareAttitude(PlayerTypes ePlayer) const
 	}
 	return iAttitude;
 }
-/************************************************************************************************/
-/* Afforess					  Start		 06/16/10											   */
-/*																							  */
-/* Advanced Diplomacy																		   */
-/************************************************************************************************/
+
+
 TeamTypes CvPlayerAI::AI_bestJoinWarTeam(PlayerTypes ePlayer)
 {
 	int iValue = 0;
@@ -31478,37 +31463,30 @@ TeamTypes CvPlayerAI::AI_bestStopTradeTeam(PlayerTypes ePlayer)
 int CvPlayerAI::AI_militaryBonusVal(BonusTypes eBonus)
 {
 	int iValue = 0;
-	int iHasOrBonusCount;
-	bool bFound = false;
-	UnitTypes eUnit = NO_UNIT;
 
-	for (int iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
-		eUnit = (UnitTypes)GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(iI);
-
-		if (canTrain(eUnit))
+		if (canTrain((UnitTypes)iI))
 		{
-			if (GC.getUnitInfo(eUnit).getPrereqAndBonus() == eBonus)
+			if (GC.getUnitInfo((UnitTypes)iI).getPrereqAndBonus() == eBonus)
 			{
 				iValue += 1000;
 			}
 
-			iHasOrBonusCount = 0;
-
-			bFound = false;
+			int iHasOrBonusCount = 0;
+			bool bFound = false;
 
 			for (int iK = 0; iK < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); iK++)
 			{
-				if (GC.getUnitInfo(eUnit).getPrereqOrBonuses(iK) == eBonus)
+				if (GC.getUnitInfo((UnitTypes)iI).getPrereqOrBonuses(iK) == eBonus)
 				{
 					bFound = true;
 				}
-				else if (hasBonus((BonusTypes)GC.getUnitInfo(eUnit).getPrereqOrBonuses(iK)))
+				else if (hasBonus((BonusTypes)GC.getUnitInfo((UnitTypes)iI).getPrereqOrBonuses(iK)))
 				{
 					iHasOrBonusCount++;
 				}
 			}
-
 			if (bFound)
 			{
 				iValue += 300;
@@ -31518,9 +31496,6 @@ int CvPlayerAI::AI_militaryBonusVal(BonusTypes eBonus)
 	}
 	return iValue;
 }
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 
 //Slightly altered form of CvUnitAI::AI_promotionValue()

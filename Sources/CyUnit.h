@@ -508,7 +508,6 @@ public:
 	int getTeam();
 
 	int /*UnitTypes*/ getUnitType();
-	int /*UnitClassTypes*/ getUnitClassType();
 	int /*UnitTypes*/ getLeaderUnitType();
 	void setLeaderUnitType(int /*UnitTypes*/ leaderUnitType);
 
