@@ -16,7 +16,6 @@
 			</Buildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_CELEBRITY</Class>
 			<Type>UNIT_CELEBRITY</Type>
 			<Buildings>
 				<BuildingType>BUILDING_HORSE_STORY</BuildingType>

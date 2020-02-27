@@ -1378,24 +1378,24 @@
 			</PropertyManipulators>
 			<!-- Units -->
 			<FreePromotion>PROMOTION_URBAN_TACTICS1</FreePromotion>
-			<UnitClassProductionModifiers>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_FREIGHT</UnitClassType>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_FREIGHT</UnitType>
 					<iProductionModifier>25</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_MOTORCYCLE</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_MOTORCYCLE</UnitType>
 					<iProductionModifier>25</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_JEEP</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_JEEP</UnitType>
 					<iProductionModifier>25</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_HUMVEE</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_HUMVEE</UnitType>
 					<iProductionModifier>25</iProductionModifier>
-				</UnitClassProductionModifier>
-			</UnitClassProductionModifiers>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_DMV</ArtDefineTag>
@@ -6169,16 +6169,16 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<!-- Units -->
-			<UnitClassProductionModifiers>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_RIOTPOLICE</UnitClassType>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_RIOTPOLICE</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_POLICE_DOG</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_POLICE_DOG</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-			</UnitClassProductionModifiers>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 			<!-- Security -->
 			<iEspionageDefense>25</iEspionageDefense>
 			<!-- Global -->

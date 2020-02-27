@@ -16106,9 +16106,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	iValue += iTempValue;
 
 	iTempValue = 0;
-	for (iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
+	for (iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
-		iValue += (kCivic.getUnitClassProductionModifier(iI) * 2) / 5;
+		iTempValue += (kCivic.getUnitProductionModifier(iI) * 2) / 5;
 	}
 	if ( gPlayerLogLevel > 2 && iTempValue != 0 )
 	{

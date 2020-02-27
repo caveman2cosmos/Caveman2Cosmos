@@ -1487,11 +1487,6 @@ enum DomainTypes			// Exposed to Python
 #endif
 };
 
-enum UnitClassTypes		// Exposed to Python
-{
-	NO_UNITCLASS = -1,
-};
-
 enum UnitTypes				// Exposed to Python
 {
 	NO_UNIT = -1,

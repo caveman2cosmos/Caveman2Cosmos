@@ -370,7 +370,6 @@ void CyInfoPythonInterface1()
 		.def("getExtraCost", &CvUnitInfo::getExtraCost, "int ()")
 		.def("getAssetValue", &CvUnitInfo::getAssetValue, "int ()")
 		.def("getPowerValue", &CvUnitInfo::getPowerValue, "int ()")
-		.def("getUnitClassType", &CvUnitInfo::getUnitClassType, "int ()")
 		.def("getSpecialUnitType", &CvUnitInfo::getSpecialUnitType, "int ()")
 		.def("getUnitCaptureType", &CvUnitInfo::getUnitCaptureType, "int ()")
 		.def("getUnitCombatType", &CvUnitInfo::getUnitCombatType, "int ()")
@@ -716,10 +715,6 @@ void CyInfoPythonInterface1()
 		.def("isSpecialistValid", &CvCivicInfo::isSpecialistValid, "bool (int i)")
 
 		.def("getImprovementYieldChanges", &CvCivicInfo::getImprovementYieldChanges, "int (int i, int j)")
-		;
-
-	python::class_<CvUnitClassInfo, python::bases<CvInfoBase> >("CvUnitClassInfo")
-		.def("getDefaultUnitIndex", &CvUnitClassInfo::getDefaultUnitIndex, "int ()")
 		;
 
 	python::class_<CvBuildingInfo, python::bases<CvInfoBase, CvScalableInfo> >("CvBuildingInfo")

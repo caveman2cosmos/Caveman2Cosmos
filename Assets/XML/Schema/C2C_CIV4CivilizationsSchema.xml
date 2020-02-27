@@ -943,12 +943,7 @@
 	<ElementType name="Buildings" content="eltOnly">
 		<element type="Building" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="UnitClassType" content="textOnly"/>
 	<ElementType name="UnitType" content="textOnly"/>
-	<ElementType name="Unit" content="eltOnly">
-		<element type="UnitClassType"/>
-		<element type="UnitType"/>
-	</ElementType>
 	<ElementType name="Units" content="eltOnly">
 		<element type="Unit" minOccurs="0" maxOccurs="*"/>
 	</ElementType>

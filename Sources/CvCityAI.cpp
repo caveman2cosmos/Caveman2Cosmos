@@ -6702,15 +6702,15 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						}
 					}
 					iValue += forcedTradeRoutesValue;
-					if (kBuilding.getUnitClassProductionModifier(NO_UNITCLASS) != 0)
+					if (kBuilding.getUnitProductionModifier(NO_UNIT) != 0)
 					{
 						int unitProductionModifierValue = 0;
 						for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 						{
-							PROFILE("CvCityAI::AI_buildingValueThresholdOriginal.UnitClass");
+							PROFILE("CvCityAI::AI_buildingValueThresholdOriginal.Unit");
 							UnitTypes eLoopUnit = (UnitTypes) iI;
 
-							const int iModifier = kBuilding.getUnitClassProductionModifier(GC.getUnitInfo(eLoopUnit).getUnitClassType());
+							const int iModifier = kBuilding.getUnitProductionModifier(iI);
 							if (iModifier != 0 && canTrain(eLoopUnit))
 							{
 								UnitAITypes eUnitAI = (UnitAITypes) GC.getUnitInfo(eLoopUnit).getDefaultUnitAIType();
@@ -18509,14 +18509,14 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 								}
 							}
 							iValue += forceTradeRoutesValue;
-							if (kBuilding.getUnitClassProductionModifier(NO_UNITCLASS) != 0)
+							if (kBuilding.getUnitProductionModifier(NO_UNIT) != 0)
 							{
 								int unitProductionModifierValue = 0;
 								for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 								{
 									UnitTypes eLoopUnit = (UnitTypes) iI;
 
-									int iModifier = kBuilding.getUnitClassProductionModifier(GC.getUnitInfo(eLoopUnit).getUnitClassType());
+									int iModifier = kBuilding.getUnitProductionModifier(iI);
 									if (iModifier != 0 && canTrain(eLoopUnit))
 									{
 										UnitAITypes eUnitAI = (UnitAITypes) GC.getUnitInfo(eLoopUnit).getDefaultUnitAIType();

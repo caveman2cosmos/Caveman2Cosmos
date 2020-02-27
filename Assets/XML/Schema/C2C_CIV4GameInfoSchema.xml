@@ -1482,13 +1482,13 @@ DPII < Revolution Mod End >
 	<ElementType name="BuildingClassProductionModifiers" content="eltOnly">
 		<element type="BuildingClassProductionModifier" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="UnitClassType" content="textOnly"/>
-	<ElementType name="UnitClassProductionModifier" content="eltOnly">
-		<element type="UnitClassType"/>
+	<ElementType name="UnitType" content="textOnly"/>
+	<ElementType name="UnitProductionModifier" content="eltOnly">
+		<element type="UnitType"/>
 		<element type="iProductionModifier"/>
 	</ElementType>
-	<ElementType name="UnitClassProductionModifiers" content="eltOnly">
-		<element type="UnitClassProductionModifier" minOccurs="0" maxOccurs="*"/>
+	<ElementType name="UnitProductionModifiers" content="eltOnly">
+		<element type="UnitProductionModifier" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="UnitCombatType" content="textOnly"/>
 	<ElementType name="UnitCombatProductionModifier" content="eltOnly">

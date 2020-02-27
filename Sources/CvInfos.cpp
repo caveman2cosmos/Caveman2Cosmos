@@ -9931,11 +9931,6 @@ m_bAnyImprovementYieldChange(false)
 /* 	New Civic AI												END 			*/
 /********************************************************************************/
 
-/************************************************************************************************/
-/* Afforess					  Start		 Last Update: 3/8/10									*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 ,m_iAttitudeShareMod(0)
 ,m_iEnslavementChance(0)
 ,m_iPopulationgrowthratepercentage(0)
@@ -9971,7 +9966,7 @@ m_bAnyImprovementYieldChange(false)
 ,m_piFreeSpecialistCount(NULL)
 ,m_paiUnitCombatProductionModifier(NULL)
 ,m_paiBuildingClassProductionModifier(NULL)
-,m_piUnitClassProductionModifier(NULL)
+,m_piUnitProductionModifier(NULL)
 ,m_ppiTerrainYieldChanges(NULL)
 ,m_piFlavorValue(NULL)
 ,m_piCivicAttitudeChanges(NULL)
@@ -10018,7 +10013,7 @@ CvCivicInfo::~CvCivicInfo()
 	SAFE_DELETE_ARRAY(m_pszCivicAttitudeReason);
 	SAFE_DELETE_ARRAY(m_paiUnitCombatProductionModifier);
 	SAFE_DELETE_ARRAY(m_paiBuildingClassProductionModifier);
-	SAFE_DELETE_ARRAY(m_piUnitClassProductionModifier);
+	SAFE_DELETE_ARRAY(m_piUnitProductionModifier);
 	SAFE_DELETE_ARRAY(m_piLandmarkYieldChanges);
 	SAFE_DELETE_ARRAY(m_piFreeSpecialistCount);
 	SAFE_DELETE_ARRAY(m_piImprovementHappinessChanges);
@@ -10693,11 +10688,11 @@ int CvCivicInfo::getUnitCombatProductionModifier(int i) const
 	return m_paiUnitCombatProductionModifier ? m_paiUnitCombatProductionModifier[i] : 0;
 }
 
-int CvCivicInfo::getUnitClassProductionModifier(int i) const
+int CvCivicInfo::getUnitProductionModifier(int i) const
 {
-	FAssertMsg(i < GC.getNumUnitClassInfos(), "Index out of bounds");
+	FAssertMsg(i < GC.getNumUnitInfos(), "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
-	return m_piUnitClassProductionModifier ? m_piUnitClassProductionModifier[i] : 0;
+	return m_piUnitProductionModifier ? m_piUnitProductionModifier[i] : 0;
 }
 
 int CvCivicInfo::getBuildingClassProductionModifier(int i) const
@@ -11002,7 +10997,7 @@ void CvCivicInfo::getCheckSum(unsigned int& iSum)
 	CheckSumI(iSum, GC.getNumBonusInfos(), m_piBonusMintedPercent);
 	CheckSumI(iSum, GC.getNumUnitCombatInfos(), m_paiUnitCombatProductionModifier);
 	CheckSumI(iSum, GC.getNumBuildingClassInfos(), m_paiBuildingClassProductionModifier);
-	CheckSumI(iSum, GC.getNumUnitClassInfos(), m_piUnitClassProductionModifier);
+	CheckSumI(iSum, GC.getNumUnitInfos(), m_piUnitProductionModifier);
 	CheckSumI(iSum, GC.getNumFlavorTypes(), m_piFlavorValue);
 	CheckSumI(iSum, GC.getNumCivicInfos(), m_piCivicAttitudeChanges);
 	CheckSumI(iSum, NUM_YIELD_TYPES, m_piLandmarkYieldChanges);
@@ -11326,7 +11321,34 @@ bool CvCivicInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->SetVariableListTagPair(&m_paiUnitCombatProductionModifier, L"UnitCombatProductionModifiers", GC.getNumUnitCombatInfos());
 	pXML->SetVariableListTagPair(&m_paiBuildingClassProductionModifier, L"BuildingClassProductionModifiers",  GC.getNumBuildingClassInfos());
-	pXML->SetVariableListTagPair(&m_piUnitClassProductionModifier, L"UnitClassProductionModifiers", GC.getNumUnitClassInfos());
+
+	if (pXML->TryMoveToXmlFirstChild(L"UnitProductionModifiers"))
+	{
+		int iNumSibs = pXML->GetXmlChildrenNumber();
+		int iTemp = false;
+		if (iNumSibs > 0)
+		{
+			if (pXML->TryMoveToXmlFirstChild())
+			{
+				for (int i = 0; i < iNumSibs; i++)
+				{
+					if (pXML->GetChildXmlVal(szTextVal))
+					{
+						m_aszUnitProdModforPass3.push_back(szTextVal);
+						pXML->GetNextXmlVal(&iTemp);
+						m_aiUnitProdModforPass3.push_back(iTemp);
+						pXML->MoveToXmlParent();
+					}
+					if (!pXML->TryMoveToXmlNextSibling())
+					{
+						break;
+					}
+				}
+				pXML->MoveToXmlParent();
+			}
+		}
+		pXML->MoveToXmlParent();
+	}
 
 	pXML->SetVariableListTagPair(&m_piFlavorValue, L"Flavors", GC.getFlavorTypes(), GC.getNumFlavorTypes());
 	pXML->SetVariableListTagPair(&m_piFreeSpecialistCount, L"FreeSpecialistCounts", GC.getNumSpecialistInfos());
@@ -11658,6 +11680,26 @@ bool CvCivicInfo::readPass3()
 		}
 		m_aszCivicAttitudeReasonforPass3.clear();
 		m_aszCivicAttitudeReasonValueforPass3.clear();
+	}
+
+	m_piUnitProductionModifier = new int[GC.getNumUnitInfos()];
+    for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
+	{
+		m_piUnitProductionModifier[iI] = 0;
+	}
+	if (!m_aiUnitProdModforPass3.empty() && !m_aszUnitProdModforPass3.empty())
+	{
+		int iNumLoad = m_aiUnitProdModforPass3.size();
+		for(int iI = 0; iI < iNumLoad; iI++)
+		{
+			int iTempIndex = GC.getInfoTypeForString(m_aszUnitProdModforPass3[iI]);
+			if (iTempIndex >= 0 && iTempIndex < GC.getNumUnitInfos())
+			{
+				m_piUnitProductionModifier[iTempIndex] = m_aiUnitProdModforPass3[iI];
+			}
+		}
+		m_aszUnitProdModforPass3.clear();
+		m_aiUnitProdModforPass3.clear();
 	}
 
 	return true;
@@ -12010,18 +12052,6 @@ void CvCivicInfo::copyNonDefaults(CvCivicInfo* pClassInfo, CvXMLLoadUtility* pXM
 				CvXMLLoadUtility::InitList(&m_paiUnitCombatProductionModifier,GC.getNumUnitCombatInfos(),iDefault);
 			}
 			m_paiUnitCombatProductionModifier[i] = pClassInfo->getUnitCombatProductionModifier(i);
-		}
-	}
-
-	for ( int j = 0; j < GC.getNumUnitClassInfos(); j++)
-	{
-		if ( getUnitClassProductionModifier(j) == iDefault && pClassInfo->getUnitClassProductionModifier(j) != iDefault)
-		{
-			if ( NULL == m_piUnitClassProductionModifier )
-			{
-				CvXMLLoadUtility::InitList(&m_piUnitClassProductionModifier,GC.getNumUnitClassInfos(),iDefault);
-			}
-			m_piUnitClassProductionModifier[j] = pClassInfo->getUnitClassProductionModifier(j);
 		}
 	}
 
@@ -12602,111 +12632,6 @@ bool CvDiplomacyInfo::FindResponseIndex(const CvDiplomacyResponse* pNewResponse,
 	return false;  //This means there was no index, hence it's a new one and needs to be added to the vector
 }
 
-//======================================================================================================
-//					CvUnitClassInfo
-//======================================================================================================
-
-//------------------------------------------------------------------------------------------------------
-//
-//  FUNCTION:   CvUnitClassInfo()
-//
-//  PURPOSE :   Default constructor
-//
-//------------------------------------------------------------------------------------------------------
-CvUnitClassInfo::CvUnitClassInfo() :
-	m_iDefaultUnitIndex(NO_UNIT)
-{}
-
-//------------------------------------------------------------------------------------------------------
-//
-//  FUNCTION:   ~CvUnitClassInfo()
-//
-//  PURPOSE :   Default destructor
-//
-//------------------------------------------------------------------------------------------------------
-CvUnitClassInfo::~CvUnitClassInfo() {}
-
-int CvUnitClassInfo::getDefaultUnitIndex() const
-{
-	return m_iDefaultUnitIndex;
-}
-
-void CvUnitClassInfo::setDefaultUnitIndex(int i)
-{
-	m_iDefaultUnitIndex = i;
-}
-
-int CvUnitClassInfo::getDefaultUnitIndexVector() const
-{
-	return m_aszExtraXMLforPass3.size();
-}
-CvString CvUnitClassInfo::getDefaultUnitIndexVectorElement(const int i) const
-{
-	return m_aszExtraXMLforPass3[i];
-}
-
-bool CvUnitClassInfo::read(CvXMLLoadUtility* pXML)
-{
-	MEMORY_TRACE_FUNCTION();
-
-	if (!CvInfoBase::read(pXML))
-	{
-		return false;
-	}
-
-	CvString szTextVal;
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"DefaultUnit");
-	m_aszExtraXMLforPass3.push_back(szTextVal);
-
-	return true;
-}
-
-void CvUnitClassInfo::copyNonDefaults(CvUnitClassInfo* pClassInfo, CvXMLLoadUtility* pXML)
-{
-	CvInfoBase::copyNonDefaults(pClassInfo, pXML);
-
-	for (int i = 0; i < pClassInfo->getDefaultUnitIndexVector(); i++)
-	{
-		m_aszExtraXMLforPass3.push_back(pClassInfo->getDefaultUnitIndexVectorElement(i));
-	}
-}
-
-bool CvUnitClassInfo::readPass3()
-{
-	if (m_aszExtraXMLforPass3.size() < 1)
-	{
-		FAssert(false);
-		return false;
-	}
-
-/************************************************************************************************/
-/* XMLCOPY								 10/12/07								MRGENIE	  */
-/*																							  */
-/* Assuming the modder purposly added an entry to this tag, we want to take the last enty set   */
-/* by the modder and not the first as set by firaxis											*/
-/************************************************************************************************/
-/*
-	m_iDefaultUnitIndex = GC.getInfoTypeForString(m_aszExtraXMLforPass3[0]);
-*/
-	int iSize = m_aszExtraXMLforPass3.size();
-	int iTextDefault = -1;
-	for ( int i = 0; i < iSize; i++ )
-	{
-		if ( GC.getInfoTypeForString(m_aszExtraXMLforPass3[i], true) != iTextDefault)
-		{
-			m_iDefaultUnitIndex = GC.getInfoTypeForString(m_aszExtraXMLforPass3[i]);
-			break;
-		}
-	}
-	m_aszExtraXMLforPass3.clear();
-
-	return true;
-}
-
-void CvUnitClassInfo::getCheckSum(unsigned int& iSum)
-{
-	CheckSum(iSum, m_iDefaultUnitIndex);
-}
 
 //======================================================================================================
 //					CvSpecialBuildingInfo
@@ -13301,7 +13226,6 @@ m_iDerivativeCiv(NO_CIVILIZATION),
 m_bPlayable(false),
 m_bAIPlayable(false),
 m_piCivilizationBuildings(NULL),
-m_piCivilizationUnits(NULL),
 m_piCivilizationFreeUnits(NULL),
 m_piCivilizationInitialCivics(NULL),
 m_pbLeaders(NULL),
@@ -13325,7 +13249,6 @@ m_bStronglyRestricted(false)
 CvCivilizationInfo::~CvCivilizationInfo()
 {
 	SAFE_DELETE_ARRAY(m_piCivilizationBuildings);
-	SAFE_DELETE_ARRAY(m_piCivilizationUnits);
 	SAFE_DELETE_ARRAY(m_piCivilizationFreeUnits);
 	SAFE_DELETE_ARRAY(m_piCivilizationInitialCivics);
 	SAFE_DELETE_ARRAY(m_pbLeaders);
@@ -13440,13 +13363,6 @@ int CvCivilizationInfo::getCivilizationBuildings(int i) const
 	FAssertMsg(i < GC.getNumBuildingClassInfos(), "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
 	return m_piCivilizationBuildings ? m_piCivilizationBuildings[i] : -1;
-}
-
-int CvCivilizationInfo::getCivilizationUnits(int i) const
-{
-	FAssertMsg(i < GC.getNumUnitClassInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
-	return m_piCivilizationUnits ? m_piCivilizationUnits[i] : -1;
 }
 
 int CvCivilizationInfo::getCivilizationFreeUnits(int i) const
@@ -13585,7 +13501,6 @@ void CvCivilizationInfo::getCheckSum(unsigned int& iSum)
 
 	// Arrays
 	CheckSumI(iSum, GC.getNumBuildingClassInfos(), m_piCivilizationBuildings);
-	CheckSumI(iSum, GC.getNumUnitClassInfos(), m_piCivilizationUnits);
 	CheckSumI(iSum, GC.getNumUnitInfos(), m_piCivilizationFreeUnits);
 	CheckSumI(iSum, GC.getNumCivicOptionInfos(), m_piCivilizationInitialCivics);
 	CheckSumI(iSum, GC.getNumLeaderHeadInfos(), m_pbLeaders);
@@ -13676,16 +13591,7 @@ bool CvCivilizationInfo::read(CvXMLLoadUtility* pXML)
 						// or the index in the list the match is found at
 						m_piCivilizationBuildings[iBuildingClassIndex] = pXML->GetInfoClass(szTextVal);
 					}
-/************************************************************************************************/
-/* Afforess					  Start		 03/21/10											   */
-/*																							  */
-/*  Hide Assert for Deleted Objects																	 */
-/************************************************************************************************/
 					else if (!GC.getDefineINT(szClassVal))
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-
 					{
 						FAssertMsg(0,"BuildingClass index is -1 in SetGlobalCivilizationInfo function");
 					}
@@ -13710,89 +13616,12 @@ bool CvCivilizationInfo::read(CvXMLLoadUtility* pXML)
 		// set the current xml node to it's parent node
 		pXML->MoveToXmlParent();
 	}
-/************************************************************************************************/
-/* XMLCOPY								 10/09/07								MRGENIE	  */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	else
 	{
 		pXML->InitBuildingDefaults(&m_piCivilizationBuildings);
 		for ( j = 0; j < GC.getNumBuildingClassInfos(); j++)
 		{
 			m_piCivilizationBuildings[j] = GC.getBuildingClassInfo((BuildingClassTypes) j).getDefaultBuildingIndex();
-		}
-	}
-
-	// if we can set the current xml node to it's next sibling
-	if (pXML->TryMoveToXmlFirstChild(L"Units"))
-	{
-			// call the function that sets the default civilization buildings
-			pXML->InitUnitDefaults(&m_piCivilizationUnits);
-			// get the total number of children the current xml node has
-			iNumSibs = pXML->GetXmlChildrenNumber();
-			// if the call to the function that sets the current xml node to it's first non-comment
-			// child and sets the parameter with the new node's value succeeds
-			if ( (0 < iNumSibs) && (pXML->TryMoveToXmlFirstChild()) )
-			{
-				int iUnitClassIndex;
-
-				FAssertMsg((iNumSibs <= GC.getNumUnitClassInfos()),"In SetGlobalCivilizationInfo iNumSibs is greater than GC.getNumUnitClassInfos()");
-
-				// loop through all the siblings
-				for (j=0;j<iNumSibs;j++)
-				{
-					if (pXML->GetChildXmlVal(szClassVal))
-					{
-						// set the unit class index
-						iUnitClassIndex = pXML->GetInfoClass(szClassVal);
-						if (-1 < iUnitClassIndex)
-						{
-							// get the next value which should be the building type to set this civilization's version of this building class too
-							pXML->GetNextXmlVal( szTextVal);
-							// call the find in list function to return either -1 if no value is found
-							// or the index in the list the match is found at
-							m_piCivilizationUnits[iUnitClassIndex] = pXML->GetInfoClass(szTextVal);
-						}
-						else
-						{
-							if (!GC.getDefineINT(szClassVal))
-							{
-								FAssertMsg(0, "UnitClass index is -1 in SetGlobalCivilizationInfo function");
-							}
-						}
-
-						// set the current xml node to it's parent node
-						pXML->MoveToXmlParent();
-					}
-
-					// if the call to the function that sets the current xml node to it's first non-comment
-					// sibling and sets the parameter with the new node's value does not succeed
-					// we will break out of this for loop
-					if (!pXML->TryMoveToXmlNextSibling())
-					{
-						break;
-					}
-				}
-
-				// set the current xml node to it's parent node
-				pXML->MoveToXmlParent();
-			}
-
-		// set the current xml node to it's parent node
-		pXML->MoveToXmlParent();
-	}
-/************************************************************************************************/
-/* XMLCOPY								 10/09/07								MRGENIE	  */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-	else
-	{
-		pXML->InitUnitDefaults(&m_piCivilizationUnits);
-		for ( j = 0; j < GC.getNumUnitClassInfos(); j++)
-		{
-			m_piCivilizationUnits[j] = GC.getUnitClassInfo((UnitClassTypes) j).getDefaultUnitIndex();
 		}
 	}
 
@@ -13960,11 +13789,6 @@ void CvCivilizationInfo::copyNonDefaults(CvCivilizationInfo* pClassInfo, CvXMLLo
 		}
 	}
 
-	for ( int i = 0; i < GC.getNumUnitClassInfos(); i++)
-	{
-		m_piCivilizationUnits[i] = pClassInfo->getCivilizationUnits(i);
-	}
-
 	for ( int i = 0; i < GC.getNumUnitInfos(); i++)
 	{
 		if (getCivilizationFreeUnits(i) == iDefault && pClassInfo->getCivilizationFreeUnits(i) != iDefault)
@@ -14049,10 +13873,9 @@ void CvCivilizationInfo::copyNonDefaults(CvCivilizationInfo* pClassInfo, CvXMLLo
 			m_paszOldNames[i] = pClassInfo->getCityNames(i);
 		}
 
-		CvXMLLoadUtilityModTools* pCurrentUnitClass = new CvXMLLoadUtilityModTools;
-		pCurrentUnitClass->StringArrayExtend(&m_paszCityNames, &m_iNumCityNames,
-										 &m_paszOldNames, pClassInfo->getNumCityNames());
-		delete pCurrentUnitClass;
+		CvXMLLoadUtilityModTools* pCurrentUnit = new CvXMLLoadUtilityModTools;
+		pCurrentUnit->StringArrayExtend(&m_paszCityNames, &m_iNumCityNames, &m_paszOldNames, pClassInfo->getNumCityNames());
+		delete pCurrentUnit;
 		SAFE_DELETE_ARRAY(m_paszOldNames)
 	}
 }
@@ -15108,10 +14931,10 @@ void CvHandicapInfo::copyNonDefaults(CvHandicapInfo* pClassInfo, CvXMLLoadUtilit
 			gDLL->logMsg("CvHandicapInfo_copyNonDefaults.log", szDebugBuffer.c_str());
 		}
 
-		CvXMLLoadUtilityModTools* pCurrentUnitClass = new CvXMLLoadUtilityModTools;
+		CvXMLLoadUtilityModTools* pCurrentUnit = new CvXMLLoadUtilityModTools;
 		for ( int i = 0; i < pClassInfo->getNumGoodies(); i++ )
 		{
-			if (!(pCurrentUnitClass->isDuplicate(getNumGoodies(), &m_piGoodies[0], pClassInfo->getGoodies(i))))
+			if (!(pCurrentUnit->isDuplicate(getNumGoodies(), &m_piGoodies[0], pClassInfo->getGoodies(i))))
 			{
 				if (GC.isXMLLogging())
 				{
@@ -15144,7 +14967,7 @@ void CvHandicapInfo::copyNonDefaults(CvHandicapInfo* pClassInfo, CvXMLLoadUtilit
 			}
 			else
 			{
-				if (!(pCurrentUnitClass->isDuplicate(getNumGoodies(), &m_piGoodiesTemp[0], pClassInfo->getGoodies(i))))
+				if (!(pCurrentUnit->isDuplicate(getNumGoodies(), &m_piGoodiesTemp[0], pClassInfo->getGoodies(i))))
 				{
 					m_piGoodiesTemp[i] = pClassInfo->getGoodies(i);
 					if (GC.isXMLLogging())
@@ -15175,7 +14998,7 @@ void CvHandicapInfo::copyNonDefaults(CvHandicapInfo* pClassInfo, CvXMLLoadUtilit
 			m_piGoodies[i] = m_piGoodiesTemp[i];
 		}
 		SAFE_DELETE_ARRAY(m_piGoodiesTemp);
-		SAFE_DELETE(pCurrentUnitClass);
+		SAFE_DELETE(pCurrentUnit);
 	}
 
 	for ( int i = 0; i < GC.getNumTechInfos(); i++)
@@ -36334,12 +36157,12 @@ void CvEventTriggerInfo::copyNonDefaults(CvEventTriggerInfo* pClassInfo, CvXMLLo
 	{
 		if ( pClassInfo->getBuildingRequired(i) != NULL)
 		{
-			CvXMLLoadUtilityModTools* pCurrentUnitClass = new CvXMLLoadUtilityModTools;
-			if (!(pCurrentUnitClass->isDuplicate(getNumBuildingsRequired(), &m_aiBuildingsRequired[0], pClassInfo->getBuildingRequired(i))))
+			CvXMLLoadUtilityModTools* pCurrentUnit = new CvXMLLoadUtilityModTools;
+			if (!(pCurrentUnit->isDuplicate(getNumBuildingsRequired(), &m_aiBuildingsRequired[0], pClassInfo->getBuildingRequired(i))))
 			{
 				m_aiBuildingsRequired.push_back(pClassInfo->getBuildingRequired(i));
 			}
-			delete pCurrentUnitClass;
+			delete pCurrentUnit;
 			//no need to do anything if a dupe has been found!
 		}
 	}
@@ -36348,12 +36171,12 @@ void CvEventTriggerInfo::copyNonDefaults(CvEventTriggerInfo* pClassInfo, CvXMLLo
 	{
 		if ( pClassInfo->getPrereqOrTechs(i) != NULL)
 		{
-			CvXMLLoadUtilityModTools* pCurrentUnitClass = new CvXMLLoadUtilityModTools;
-			if (!(pCurrentUnitClass->isDuplicate(getNumPrereqOrTechs(), &m_aiPrereqOrTechs[0], pClassInfo->getPrereqOrTechs(i))))
+			CvXMLLoadUtilityModTools* pCurrentUnit = new CvXMLLoadUtilityModTools;
+			if (!(pCurrentUnit->isDuplicate(getNumPrereqOrTechs(), &m_aiPrereqOrTechs[0], pClassInfo->getPrereqOrTechs(i))))
 			{
 				m_aiPrereqOrTechs.push_back(pClassInfo->getPrereqOrTechs(i));
 			}
-			delete pCurrentUnitClass;
+			delete pCurrentUnit;
 			//no need to do anything if a dupe has been found!
 		}
 	}
@@ -36362,12 +36185,12 @@ void CvEventTriggerInfo::copyNonDefaults(CvEventTriggerInfo* pClassInfo, CvXMLLo
 	{
 		if ( pClassInfo->getPrereqAndTechs(i) != NULL)
 		{
-			CvXMLLoadUtilityModTools* pCurrentUnitClass = new CvXMLLoadUtilityModTools;
-			if (!(pCurrentUnitClass->isDuplicate(getNumPrereqAndTechs(), &m_aiPrereqAndTechs[0], pClassInfo->getPrereqAndTechs(i))))
+			CvXMLLoadUtilityModTools* pCurrentUnit = new CvXMLLoadUtilityModTools;
+			if (!(pCurrentUnit->isDuplicate(getNumPrereqAndTechs(), &m_aiPrereqAndTechs[0], pClassInfo->getPrereqAndTechs(i))))
 			{
 				m_aiPrereqAndTechs.push_back(pClassInfo->getPrereqAndTechs(i));
 			}
-			delete pCurrentUnitClass;
+			delete pCurrentUnit;
 			//no need to do anything if a dupe has been found!
 		}
 	}
@@ -36379,12 +36202,12 @@ void CvEventTriggerInfo::copyNonDefaults(CvEventTriggerInfo* pClassInfo, CvXMLLo
 	{
 		if ( pClassInfo->getObsoleteTech(i) != NULL)
 		{
-			CvXMLLoadUtilityModTools* pCurrentUnitClass = new CvXMLLoadUtilityModTools;
-			if (!(pCurrentUnitClass->isDuplicate(getNumObsoleteTechs(), &m_aiObsoleteTechs[0], pClassInfo->getObsoleteTech(i))))
+			CvXMLLoadUtilityModTools* pCurrentUnit = new CvXMLLoadUtilityModTools;
+			if (!(pCurrentUnit->isDuplicate(getNumObsoleteTechs(), &m_aiObsoleteTechs[0], pClassInfo->getObsoleteTech(i))))
 			{
 				m_aiObsoleteTechs.push_back(pClassInfo->getObsoleteTech(i));
 			}
-			delete pCurrentUnitClass;
+			delete pCurrentUnit;
 			//no need to do anything if a dupe has been found!
 		}
 	}
@@ -36393,12 +36216,12 @@ void CvEventTriggerInfo::copyNonDefaults(CvEventTriggerInfo* pClassInfo, CvXMLLo
 	{
 		if ( pClassInfo->getEvent(i) != NULL)
 		{
-			CvXMLLoadUtilityModTools* pCurrentUnitClass = new CvXMLLoadUtilityModTools;
-			if (!(pCurrentUnitClass->isDuplicate(getNumEvents(), &m_aiEvents[0], pClassInfo->getEvent(i))))
+			CvXMLLoadUtilityModTools* pCurrentUnit = new CvXMLLoadUtilityModTools;
+			if (!(pCurrentUnit->isDuplicate(getNumEvents(), &m_aiEvents[0], pClassInfo->getEvent(i))))
 			{
 				m_aiEvents.push_back(pClassInfo->getEvent(i));
 			}
-			delete pCurrentUnitClass;
+			delete pCurrentUnit;
 			//no need to do anything if a dupe has been found!
 		}
 	}
@@ -36407,12 +36230,12 @@ void CvEventTriggerInfo::copyNonDefaults(CvEventTriggerInfo* pClassInfo, CvXMLLo
 	{
 		if ( pClassInfo->getPrereqEvent(i) != NULL)
 		{
-			CvXMLLoadUtilityModTools* pCurrentUnitClass = new CvXMLLoadUtilityModTools;
-			if (!(pCurrentUnitClass->isDuplicate(getNumPrereqEvents(), &m_aiPrereqEvents[0], pClassInfo->getPrereqEvent(i))))
+			CvXMLLoadUtilityModTools* pCurrentUnit = new CvXMLLoadUtilityModTools;
+			if (!(pCurrentUnit->isDuplicate(getNumPrereqEvents(), &m_aiPrereqEvents[0], pClassInfo->getPrereqEvent(i))))
 			{
 				m_aiPrereqEvents.push_back(pClassInfo->getPrereqEvent(i));
 			}
-			delete pCurrentUnitClass;
+			delete pCurrentUnit;
 			//no need to do anything if a dupe has been found!
 		}
 	}
@@ -36421,12 +36244,12 @@ void CvEventTriggerInfo::copyNonDefaults(CvEventTriggerInfo* pClassInfo, CvXMLLo
 	{
 		if ( pClassInfo->getFeatureRequired(i) != NULL)
 		{
-			CvXMLLoadUtilityModTools* pCurrentUnitClass = new CvXMLLoadUtilityModTools;
-			if (!(pCurrentUnitClass->isDuplicate(getNumFeaturesRequired(), &m_aiFeaturesRequired[0], pClassInfo->getFeatureRequired(i))))
+			CvXMLLoadUtilityModTools* pCurrentUnit = new CvXMLLoadUtilityModTools;
+			if (!(pCurrentUnit->isDuplicate(getNumFeaturesRequired(), &m_aiFeaturesRequired[0], pClassInfo->getFeatureRequired(i))))
 			{
 				m_aiFeaturesRequired.push_back(pClassInfo->getFeatureRequired(i));
 			}
-			delete pCurrentUnitClass;
+			delete pCurrentUnit;
 			//no need to do anything if a dupe has been found!
 		}
 	}
@@ -36435,12 +36258,12 @@ void CvEventTriggerInfo::copyNonDefaults(CvEventTriggerInfo* pClassInfo, CvXMLLo
 	{
 		if ( pClassInfo->getTerrainRequired(i) != NULL)
 		{
-			CvXMLLoadUtilityModTools* pCurrentUnitClass = new CvXMLLoadUtilityModTools;
-			if (!(pCurrentUnitClass->isDuplicate(getNumTerrainsRequired(), &m_aiTerrainsRequired[0], pClassInfo->getTerrainRequired(i))))
+			CvXMLLoadUtilityModTools* pCurrentUnit = new CvXMLLoadUtilityModTools;
+			if (!(pCurrentUnit->isDuplicate(getNumTerrainsRequired(), &m_aiTerrainsRequired[0], pClassInfo->getTerrainRequired(i))))
 			{
 				m_aiTerrainsRequired.push_back(pClassInfo->getTerrainRequired(i));
 			}
-			delete pCurrentUnitClass;
+			delete pCurrentUnit;
 			//no need to do anything if a dupe has been found!
 		}
 	}
@@ -36448,12 +36271,12 @@ void CvEventTriggerInfo::copyNonDefaults(CvEventTriggerInfo* pClassInfo, CvXMLLo
 	{
 		if ( pClassInfo->getImprovementRequired(i) != NULL)
 		{
-			CvXMLLoadUtilityModTools* pCurrentUnitClass = new CvXMLLoadUtilityModTools;
-			if (!(pCurrentUnitClass->isDuplicate(getNumImprovementsRequired(), &m_aiImprovementsRequired[0], pClassInfo->getImprovementRequired(i))))
+			CvXMLLoadUtilityModTools* pCurrentUnit = new CvXMLLoadUtilityModTools;
+			if (!(pCurrentUnit->isDuplicate(getNumImprovementsRequired(), &m_aiImprovementsRequired[0], pClassInfo->getImprovementRequired(i))))
 			{
 				m_aiImprovementsRequired.push_back(pClassInfo->getImprovementRequired(i));
 			}
-			delete pCurrentUnitClass;
+			delete pCurrentUnit;
 			//no need to do anything if a dupe has been found!
 		}
 	}
@@ -36461,12 +36284,12 @@ void CvEventTriggerInfo::copyNonDefaults(CvEventTriggerInfo* pClassInfo, CvXMLLo
 	{
 		if ( pClassInfo->getBonusRequired(i) != NULL)
 		{
-			CvXMLLoadUtilityModTools* pCurrentUnitClass = new CvXMLLoadUtilityModTools;
-			if (!(pCurrentUnitClass->isDuplicate(getNumBonusesRequired(), &m_aiBonusesRequired[0], pClassInfo->getBonusRequired(i))))
+			CvXMLLoadUtilityModTools* pCurrentUnit = new CvXMLLoadUtilityModTools;
+			if (!(pCurrentUnit->isDuplicate(getNumBonusesRequired(), &m_aiBonusesRequired[0], pClassInfo->getBonusRequired(i))))
 			{
 				m_aiImprovementsRequired.push_back(pClassInfo->getBonusRequired(i));
 			}
-			delete pCurrentUnitClass;
+			delete pCurrentUnit;
 			//no need to do anything if a dupe has been found!
 		}
 	}
@@ -36474,12 +36297,12 @@ void CvEventTriggerInfo::copyNonDefaults(CvEventTriggerInfo* pClassInfo, CvXMLLo
 	{
 		if ( pClassInfo->getRouteRequired(i) != NULL)
 		{
-			CvXMLLoadUtilityModTools* pCurrentUnitClass = new CvXMLLoadUtilityModTools;
-			if (!(pCurrentUnitClass->isDuplicate(getNumRoutesRequired(), &m_aiRoutesRequired[0], pClassInfo->getRouteRequired(i))))
+			CvXMLLoadUtilityModTools* pCurrentUnit = new CvXMLLoadUtilityModTools;
+			if (!(pCurrentUnit->isDuplicate(getNumRoutesRequired(), &m_aiRoutesRequired[0], pClassInfo->getRouteRequired(i))))
 			{
 				m_aiImprovementsRequired.push_back(pClassInfo->getRouteRequired(i));
 			}
-			delete pCurrentUnitClass;
+			delete pCurrentUnit;
 			//no need to do anything if a dupe has been found!
 		}
 	}
@@ -36487,12 +36310,12 @@ void CvEventTriggerInfo::copyNonDefaults(CvEventTriggerInfo* pClassInfo, CvXMLLo
 	{
 		if ( pClassInfo->getReligionRequired(i) != NULL)
 		{
-			CvXMLLoadUtilityModTools* pCurrentUnitClass = new CvXMLLoadUtilityModTools;
-			if (!(pCurrentUnitClass->isDuplicate(getNumReligionsRequired(), &m_aiReligionsRequired[0], pClassInfo->getReligionRequired(i))))
+			CvXMLLoadUtilityModTools* pCurrentUnit = new CvXMLLoadUtilityModTools;
+			if (!(pCurrentUnit->isDuplicate(getNumReligionsRequired(), &m_aiReligionsRequired[0], pClassInfo->getReligionRequired(i))))
 			{
 				m_aiImprovementsRequired.push_back(pClassInfo->getReligionRequired(i));
 			}
-			delete pCurrentUnitClass;
+			delete pCurrentUnit;
 			//no need to do anything if a dupe has been found!
 		}
 	}
@@ -36500,12 +36323,12 @@ void CvEventTriggerInfo::copyNonDefaults(CvEventTriggerInfo* pClassInfo, CvXMLLo
 	{
 		if ( pClassInfo->getCorporationRequired(i) != NULL)
 		{
-			CvXMLLoadUtilityModTools* pCurrentUnitClass = new CvXMLLoadUtilityModTools;
-			if (!(pCurrentUnitClass->isDuplicate(getNumCorporationsRequired(), &m_aiCorporationsRequired[0], pClassInfo->getCorporationRequired(i))))
+			CvXMLLoadUtilityModTools* pCurrentUnit = new CvXMLLoadUtilityModTools;
+			if (!(pCurrentUnit->isDuplicate(getNumCorporationsRequired(), &m_aiCorporationsRequired[0], pClassInfo->getCorporationRequired(i))))
 			{
 				m_aiImprovementsRequired.push_back(pClassInfo->getCorporationRequired(i));
 			}
-			delete pCurrentUnitClass;
+			delete pCurrentUnit;
 			//no need to do anything if a dupe has been found!
 		}
 	}
@@ -36514,8 +36337,8 @@ void CvEventTriggerInfo::copyNonDefaults(CvEventTriggerInfo* pClassInfo, CvXMLLo
 	{
 		if ( pClassInfo->getText(i) != NULL)
 		{
-			CvXMLLoadUtilityModTools* pCurrentUnitClass = new CvXMLLoadUtilityModTools;
-			if (!(pCurrentUnitClass->isDuplicate(getNumTexts(), &m_aszText[0], pClassInfo->getText(i))))
+			CvXMLLoadUtilityModTools* pCurrentUnit = new CvXMLLoadUtilityModTools;
+			if (!(pCurrentUnit->isDuplicate(getNumTexts(), &m_aszText[0], pClassInfo->getText(i))))
 			{
 				m_aszText.push_back(pClassInfo->getText(i));
 				m_aiTextEra.push_back(pClassInfo->getTextEra(i));
@@ -36525,7 +36348,7 @@ void CvEventTriggerInfo::copyNonDefaults(CvEventTriggerInfo* pClassInfo, CvXMLLo
 				m_aszText[i] = pClassInfo->getText(i);
 				m_aiTextEra[i] = pClassInfo->getTextEra(i);
 			}
-			delete pCurrentUnitClass;
+			delete pCurrentUnit;
 		}
 	}
 
@@ -36533,12 +36356,12 @@ void CvEventTriggerInfo::copyNonDefaults(CvEventTriggerInfo* pClassInfo, CvXMLLo
 	{
 		if ( pClassInfo->getWorldNews(i) != NULL)
 		{
-			CvXMLLoadUtilityModTools* pCurrentUnitClass = new CvXMLLoadUtilityModTools;
-			if (!(pCurrentUnitClass->isDuplicate(getNumWorldNews(), &m_aszWorldNews[0], pClassInfo->getWorldNews(i))))
+			CvXMLLoadUtilityModTools* pCurrentUnit = new CvXMLLoadUtilityModTools;
+			if (!(pCurrentUnit->isDuplicate(getNumWorldNews(), &m_aszWorldNews[0], pClassInfo->getWorldNews(i))))
 			{
 				m_aszWorldNews.push_back(pClassInfo->getWorldNews(i));
 			}
-			delete pCurrentUnitClass;
+			delete pCurrentUnit;
 			//no need to do anything if a dupe has been found!
 		}
 	}
@@ -37017,7 +36840,7 @@ int CvEventInfo::getUnitCombatPromotion(int i) const
 
 int CvEventInfo::getUnitPromotion(int i) const
 {
-	FAssertMsg(i < GC.getNumUnitClassInfos(), "Index out of bounds");
+	FAssertMsg(i < GC.getNumUnitInfos(), "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
 	return m_piUnitPromotions ? m_piUnitPromotions[i] : -1;
 }
@@ -37267,7 +37090,7 @@ void CvEventInfo::getCheckSum(unsigned int& iSum)
 	CheckSumI(iSum, GC.getNumEventInfos(), m_piAdditionalEventTime);
 	CheckSumI(iSum, GC.getNumEventInfos(), m_piClearEventChance);
 	CheckSumI(iSum, GC.getNumUnitCombatInfos(), m_piUnitCombatPromotions);
-	CheckSumI(iSum, GC.getNumUnitClassInfos(), m_piUnitPromotions);
+	CheckSumI(iSum, GC.getNumUnitInfos(), m_piUnitPromotions);
 
 	for (std::vector<BuildingYieldChange>::iterator it = m_aBuildingYieldChanges.begin(); it != m_aBuildingYieldChanges.end(); ++it)
 	{

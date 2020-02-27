@@ -1970,11 +1970,6 @@ int /*UnitTypes*/ CyUnit::getUnitType()
 	return m_pUnit ? (int)m_pUnit->getUnitType() : -1;
 }
 
-int /*UnitClassTypes*/ CyUnit::getUnitClassType()
-{
-	return m_pUnit ? (int)m_pUnit->getUnitClassType() : -1;
-}
-
 int /*UnitTypes*/ CyUnit::getLeaderUnitType()
 {
 	return m_pUnit ? (int)m_pUnit->getLeaderUnitType() : -1;

@@ -1025,7 +1025,7 @@
 			<Strategy>TXT_KEY_SPECIALIST_INVESTIGATOR_STRATEGY</Strategy>
 			<Texture>Art/Interface/MainScreen/CityScreen/Detective.dds</Texture>
 			<bVisible>0</bVisible>
-			<!--GreatPeopleUnitType>UNITCLASS_GREAT_DETECTIVE</GreatPeopleUnitType>
+			<!--GreatPeopleUnitType>UNIT_GREAT_DETECTIVE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange-->
 			<Yields/>
 			<Commerces>

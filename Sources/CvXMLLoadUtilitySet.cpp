@@ -954,7 +954,6 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	LoadGlobalClassInfo(GC.getEffectInfos(), "CIV4EffectInfos", "Misc", L"/Civ4EffectInfos/EffectInfos/EffectInfo", false);
 	LoadGlobalClassInfo(GC.getEntityEventInfos(), "CIV4EntityEventInfos", "Units", L"/Civ4EntityEventInfos/EntityEventInfos/EntityEventInfo", false);
 	LoadGlobalClassInfo(GC.getPropertyInfos(), "CIV4PropertyInfos", "GameInfo", L"/Civ4PropertyInfos/PropertyInfos/PropertyInfo", false);
-	LoadGlobalClassInfo(GC.getUnitClassInfos(), "CIV4UnitClassInfos", "Units", L"/Civ4UnitClassInfos/UnitClassInfos/UnitClassInfo", false, GC.getUnitClassInfoReplacements());
 	LoadGlobalClassInfo(GC.getSpecialistInfos(), "CIV4SpecialistInfos", "GameInfo", L"/Civ4SpecialistInfos/SpecialistInfos/SpecialistInfo", false, GC.getSpecialistInfoReplacements());
 	LoadGlobalClassInfo(GC.getVoteSourceInfos(), "CIV4VoteSourceInfos", "GameInfo", L"/Civ4VoteSourceInfos/VoteSourceInfos/VoteSourceInfo", false);
 	LoadGlobalClassInfo(GC.getTechInfos(), "CIV4TechInfos", "Technologies", L"/Civ4TechInfos/TechInfos/TechInfo", true, GC.getTechInfoReplacements());
@@ -1030,11 +1029,6 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 /************************************************************************************************/
 /* SORT_ALPHABET                           END                                                  */
 /************************************************************************************************/
-	for (int i=0; i < GC.getNumUnitClassInfos(); ++i)
-	{
-		GC.getUnitClassInfo((UnitClassTypes)i).readPass3();
-		GC.getUnitClassInfoReplacements()->readPass3();
-	}
 
 	LoadGlobalClassInfo(GC.getUnitArtStyleTypeInfos(), "CIV4UnitArtStyleTypeInfos", "Civilizations", L"/Civ4UnitArtStyleTypeInfos/UnitArtStyleTypeInfos/UnitArtStyleTypeInfo", false);
 	LoadGlobalClassInfo(GC.getCivilizationInfos(), "CIV4CivilizationInfos", "Civilizations", L"/Civ4CivilizationInfos/CivilizationInfos/CivilizationInfo", true, GC.getCivilizationInfoReplacements());
@@ -1399,12 +1393,6 @@ void CvXMLLoadUtility::SetGlobalActionInfo()
 	{
 		char	szMessage[1024];
 		sprintf( szMessage, "GC.getNumPromotionInfos() is not greater than zero in CvXMLLoadUtility::SetGlobalActionInfo \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
-		gDLL->MessageBox(szMessage, "XML Error");
-	}
-	if(!(GC.getNumUnitClassInfos() > 0) )
-	{
-		char	szMessage[1024];
-		sprintf( szMessage, "GC.getNumUnitClassInfos() is not greater than zero in CvXMLLoadUtility::SetGlobalActionInfo \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
 		gDLL->MessageBox(szMessage, "XML Error");
 	}
 	if(!(GC.getNumSpecialistInfos() > 0) )

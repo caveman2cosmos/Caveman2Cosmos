@@ -486,7 +486,6 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 		.def("getTeam", &CyUnit::getTeam, "int ()")
 
 		.def("getUnitType", &CyUnit::getUnitType, "int ()")
-		.def("getUnitClassType", &CyUnit::getUnitClassType, "int ()")
 		.def("getLeaderUnitType", &CyUnit::getLeaderUnitType, "int ()")
 		.def("setLeaderUnitType", &CyUnit::setLeaderUnitType, "void (int iNewValue)")
 

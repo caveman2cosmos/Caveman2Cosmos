@@ -2,7 +2,6 @@
 <Civ4UnitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_CLOUD_DESTROYER</Class>
 			<Type>UNIT_CLOUD_DESTROYER</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_BALLOON</Combat>
@@ -128,7 +127,6 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_NAUTILUS</Class>
 			<Type>UNIT_NAUTILUS</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_SUBMARINE</Combat>
@@ -271,7 +269,6 @@
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_WAR_WHEEL</Class>
 			<Type>UNIT_WAR_WHEEL</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_RECON</Combat>
@@ -363,7 +360,6 @@
 			<bRBombardForceAbility>1</bRBombardForceAbility>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_STEAM_TANK</Class>
 			<Type>UNIT_STEAM_TANK</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WHEELED</Combat>
@@ -460,7 +456,6 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_STEAMPUNK_WORKER</Class>
 			<Type>UNIT_STEAMPUNK_WORKER</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Capture>UNIT_STEAMPUNK_WORKER</Capture>

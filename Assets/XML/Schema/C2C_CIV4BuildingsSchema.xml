@@ -11,7 +11,7 @@
 	<!-- ls612's Other Building Tags -->
 	<ElementType name="bNoHolyCity" content="textOnly" dt:type="boolean"/>
 	<!--TB's Tags Begin -->
-	<ElementType name="PropertySpawnUnitClass" content="textOnly"/>
+	<ElementType name="PropertySpawnUnit" content="textOnly"/>
 	<ElementType name="PropertySpawnProperty" content="textOnly"/>
 	<ElementType name="PromotionLineType" content="textOnly"/>
 	<!--Integers -->
@@ -848,7 +848,7 @@
 		<element type="RawVicinityBonus" minOccurs="0"/>
 		<element type="PrereqVicinityBonuses" minOccurs="0"/>
 		<element type="PrereqRawVicinityBonuses" minOccurs="0"/>
-		<element type="PropertySpawnUnitClass" minOccurs="0"/>
+		<element type="PropertySpawnUnit" minOccurs="0"/>
 		<element type="PropertySpawnProperty" minOccurs="0"/>
 		<element type="PromotionLineType" minOccurs="0"/>
 		<element type="iLinePriority" minOccurs="0"/>
@@ -1286,13 +1286,13 @@
 		<element type="ReplaceBuilding" minOccurs="0"/>
 	</ElementType>
 
-	<ElementType name="UnitClassType" content="textOnly"/>
-	<ElementType name="UnitClassProductionModifier" content="eltOnly">
-		<element type="UnitClassType"/>
+	<ElementType name="UnitType" content="textOnly"/>
+	<ElementType name="UnitProductionModifier" content="eltOnly">
+		<element type="UnitType"/>
 		<element type="iProductionModifier"/>
 	</ElementType>
-	<ElementType name="UnitClassProductionModifiers" content="eltOnly">
-		<element type="UnitClassProductionModifier" minOccurs="0" maxOccurs="*"/>
+	<ElementType name="UnitProductionModifiers" content="eltOnly">
+		<element type="UnitProductionModifier" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 
 	<ElementType name="BuildingClassProductionModifier" content="eltOnly">

@@ -739,11 +739,11 @@ struct BuildingCommerceChange
 struct PropertySpawns
 {
 	PropertyTypes eProperty;
-	UnitClassTypes eUnitClass;
+	UnitTypes eUnit;
 
 	PropertySpawns()
 		: eProperty(NO_PROPERTY)
-		, eUnitClass(NO_UNITCLASS)
+		, eUnit(NO_UNIT)
 	{}
 
 	void read(FDataStreamBase* pStream);

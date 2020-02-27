@@ -90,7 +90,6 @@ m_iCultureGarrisonValue(0),
 m_iExtraCost(0),
 m_iAssetValue(0),
 m_iPowerValue(0),
-m_iUnitClassType(NO_UNITCLASS),
 m_iSpecialUnitType(NO_SPECIALUNIT),
 m_iUnitCaptureType(NO_UNIT),
 m_iUnitCombatType(NO_UNITCOMBAT),
@@ -795,11 +794,6 @@ int CvUnitInfo::getPowerValue(bool bForLoad) const
 		return m_iPowerValue * 100;
 	}
 	return m_iPowerValue;
-}
-
-int CvUnitInfo::getUnitClassType() const
-{
-	return m_iUnitClassType;
 }
 
 int CvUnitInfo::getSpecialUnitType() const
@@ -3897,7 +3891,6 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum)
 	CheckSum(iSum, m_iExtraCost);
 	CheckSum(iSum, m_iAssetValue);
 	CheckSum(iSum, m_iPowerValue);
-	CheckSum(iSum, m_iUnitClassType);
 	CheckSum(iSum, m_iSpecialUnitType);
 	CheckSum(iSum, m_iUnitCaptureType);
 	CheckSum(iSum, m_iUnitCombatType);
@@ -4338,9 +4331,6 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	int iNumSibs=0;				// the number of siblings the current xml node has
 	int iNumChildren;
 	int iIndexVal;
-
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"Class");
-	m_iUnitClassType = pXML->GetInfoClass(szTextVal);
 
 	pXML->GetOptionalChildXmlValByName(&m_iMaxGlobalInstances, L"iMaxGlobalInstances", -1);
 	pXML->GetOptionalChildXmlValByName(&m_iMaxPlayerInstances, L"iMaxPlayerInstances", -1);
@@ -5431,7 +5421,6 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 	int iTextDefault = -1;
 	CvString cDefault = CvString::format("").GetCString();
 
-	if ( m_iUnitClassType == iTextDefault )	m_iUnitClassType = pClassInfo->getUnitClassType();
 	if ( m_iMaxGlobalInstances == -1) m_iMaxGlobalInstances = pClassInfo->getMaxGlobalInstances();
 	if ( m_iMaxPlayerInstances == -1) m_iMaxPlayerInstances = pClassInfo->getMaxPlayerInstances();
 	if ( m_bUnlimitedException == false) m_bUnlimitedException = pClassInfo->isUnlimitedException();
@@ -6524,10 +6513,9 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 			m_paszNewNames[i] = pClassInfo->getUnitNames(i);
 		}
 
-		CvXMLLoadUtilityModTools* pCurrentUnitClass = new CvXMLLoadUtilityModTools;
-		pCurrentUnitClass->StringArrayExtend(&m_paszUnitNames, &m_iNumUnitNames,
-										 &m_paszNewNames, pClassInfo->getNumUnitNames());
-		delete pCurrentUnitClass;
+		CvXMLLoadUtilityModTools* pCurrentUnit = new CvXMLLoadUtilityModTools;
+		pCurrentUnit->StringArrayExtend(&m_paszUnitNames, &m_iNumUnitNames, &m_paszNewNames, pClassInfo->getNumUnitNames());
+		delete pCurrentUnit;
 		SAFE_DELETE_ARRAY(m_paszNewNames)
 	}
 

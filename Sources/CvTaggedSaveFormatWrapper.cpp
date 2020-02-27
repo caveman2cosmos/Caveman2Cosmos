@@ -597,17 +597,6 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 			m_stream->WriteString(info.getType());
 		}
 		break;
-	case REMAPPED_CLASS_TYPE_UNIT_CLASSES:
-		entry.numClasses = GC.getNumUnitClassInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
-		for(int i = 0; i < entry.numClasses; i++)
-		{
-			CvUnitClassInfo& info = GC.getUnitClassInfo((UnitClassTypes)i);
-
-			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
-			m_stream->WriteString(info.getType());
-		}
-		break;
 	case REMAPPED_CLASS_TYPE_PROJECTS:
 		entry.numClasses = GC.getNumProjectInfos();
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
@@ -1087,7 +1076,6 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTables()
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_BUILDINGS);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_BUILDING_CLASSES);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_UNITS);
-	WriteClassMappingTable(REMAPPED_CLASS_TYPE_UNIT_CLASSES);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_PROJECTS);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_BONUSES);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_SPECIALISTS);
@@ -1158,9 +1146,6 @@ CvTaggedSaveFormatWrapper::getNumClassEnumValues(RemappedClassType classType)
 			break;
 		case REMAPPED_CLASS_TYPE_UNITS:
 			result = GC.getNumUnitInfos();
-			break;
-		case REMAPPED_CLASS_TYPE_UNIT_CLASSES:
-			result = GC.getNumUnitClassInfos();
 			break;
 		case REMAPPED_CLASS_TYPE_PROJECTS:
 			result = GC.getNumProjectInfos();

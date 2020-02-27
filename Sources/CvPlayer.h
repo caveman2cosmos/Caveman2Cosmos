@@ -1435,8 +1435,8 @@ public:
 	PlayerVoteTypes getVote(int iId) const;
 	void setVote(int iId, PlayerVoteTypes ePlayerVote);
 
-	int getUnitExtraCost(UnitClassTypes eUnitClass) const;
-	void setUnitExtraCost(UnitClassTypes eUnitClass, int iCost);
+	int getUnitExtraCost(UnitTypes eUnit) const;
+	void setUnitExtraCost(UnitTypes eUnit, int iCost);
 
 	bool splitEmpire(int iAreaId);
 	bool canSplitEmpire() const;
@@ -1596,8 +1596,8 @@ public:
 	int getBuildingClassProductionModifier(BuildingClassTypes eIndex) const;
 	void changeBuildingClassProductionModifier(BuildingClassTypes eIndex, int iChange);
 
-	int getUnitClassProductionModifier(UnitClassTypes eIndex) const;
-	void changeUnitClassProductionModifier(UnitClassTypes eIndex, int iChange);
+	int getUnitProductionModifier(UnitTypes eIndex) const;
+	void changeUnitProductionModifier(UnitTypes eIndex, int iChange);
 
 	bool isAutomatedCanBuild(BuildTypes eBuild) const; //Exposed to Python
 	void setAutomatedCanBuild(BuildTypes eBuild, bool bNewValue); //Exposed to Python
@@ -1759,7 +1759,7 @@ protected:
 	int** m_ppiBonusCommerceModifier;
 	int* m_paiUnitCombatProductionModifier;
 	int* m_paiBuildingClassProductionModifier;
-	int* m_paiUnitClassProductionModifier;
+	int* m_paiUnitProductionModifier;
 	int* m_paiBonusMintedPercent;
 	int* m_paiPlayerWideAfflictionCount;
 	bool* m_pabAutomatedCanBuild;
@@ -2297,7 +2297,7 @@ protected:
 	UnitPromotionArray m_aFreeUnitPromotions;
 
 	std::vector< std::pair<int, PlayerVoteTypes> > m_aVote;
-	std::vector< std::pair<UnitClassTypes, int> > m_aUnitExtraCosts;
+	std::vector< std::pair<UnitTypes, int> > m_aUnitExtraCosts;
 
 	CvMessageQueue m_listGameMessages;
 	CvPopupQueue m_listPopups;

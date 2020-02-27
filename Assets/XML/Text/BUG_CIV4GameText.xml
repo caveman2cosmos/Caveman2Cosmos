@@ -20521,11 +20521,11 @@ uno de s, A, a, p, g, n, o, r (véase archivo de ayuda)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__USEADVANCED_HOVER</Tag>
-		<English>When checked, the advanced naming conventions in 'Adv Unit Naming.ini' file will be used  (see ini file for Era_UnitClass options).</English>
-		<French>Lorsque activé, les conventions de noms du fichier 'Adv Unit Naming.ini' seront utilisées  (voir le fichier INI pour les options Era_UnitClass).</French>
-		<German>Verwenden erweiterter Benennungsregeln aus 'Adv Unit Naming.ini' (siehe INI-Datei für Era_UnitClass-Optionen)</German>
+		<English>When checked, the advanced naming conventions in 'Adv Unit Naming.ini' file will be used  (see ini file for Era_Unit options).</English>
+		<French>Lorsque activé, les conventions de noms du fichier 'Adv Unit Naming.ini' seront utilisées  (voir le fichier INI pour les options Era_Unit).</French>
+		<German>Verwenden erweiterter Benennungsregeln aus 'Adv Unit Naming.ini' (siehe INI-Datei für Era_Unit-Optionen)</German>
 		<Italian>Quando è selezionato, vengono utilizzate le convenzioni di denominazione avanzate definite nel file 'Adv Unit Naming.ini', che consentono impostazioni differenziate per le varie Ere.</Italian>
-		<Spanish>Si se activa, se utilizará la nomenclatura avanzada definida en el archivo 'Adv Unit Naming.ini' (véase el archivo INI para las opciones sobre Era_UnitClass).</Spanish>
+		<Spanish>Si se activa, se utilizará la nomenclatura avanzada definida en el archivo 'Adv Unit Naming.ini' (véase el archivo INI para las opciones sobre Era_Unit).</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__USEADVANCED_TEXT</Tag>

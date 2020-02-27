@@ -224,11 +224,7 @@ m_pbBuildingClassNeededInCity(NULL),
 m_ppaiSpecialistYieldChange(NULL),
 m_ppaiSpecialistCommerceChange(NULL),
 m_ppaiBonusYieldModifier(NULL)
-/************************************************************************************************/
-/* Afforess	                  Start		 Last Update: 6/13/10                                    */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 //New Integers
 ,m_iGlobalPopulationgrowthratepercentage(0)
 ,m_iPopulationgrowthratepercentage(0)
@@ -288,7 +284,7 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_piGlobalBuildingClassProductionModifier(NULL)
 ,m_piTechHappinessChanges(NULL)
 ,m_piTechHealthChanges(NULL)
-,m_piUnitClassProductionModifier(NULL)
+,m_piUnitProductionModifier(NULL)
 ,m_piPrereqOrVicinityBonuses(NULL)
 ,m_piPrereqOrRawVicinityBonuses(NULL)
 ,m_piBonusDefenseChanges(NULL)
@@ -323,9 +319,7 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_bAnyBonusCommercePercentChanges(false)
 
 ,m_ppiImprovementYieldChanges(NULL)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 ,m_PropertyManipulators()
 ,m_pExprNewCityFree(NULL)
 ,m_pExprConstructCondition(NULL)
@@ -380,7 +374,7 @@ m_ppaiBonusYieldModifier(NULL)
 //ls612 End
 //,m_pExprFreePromotionCondition(NULL)
 ,m_bNotShowInCity(false)
-,m_ePropertySpawnUnitClass(NO_UNITCLASS)
+,m_ePropertySpawnUnit(NO_UNIT)
 ,m_ePropertySpawnProperty(NO_PROPERTY)
 ,m_ePromotionLineType(NO_PROMOTIONLINE)
 {
@@ -445,7 +439,7 @@ CvBuildingInfo::~CvBuildingInfo()
 	SAFE_DELETE_ARRAY(m_pbPrereqOrFeature);
 	SAFE_DELETE_ARRAY(m_pbPrereqOrBuildingClass);
 	SAFE_DELETE_ARRAY(m_pbPrereqOrGameSpeed);
-	SAFE_DELETE_ARRAY(m_piUnitClassProductionModifier);
+	SAFE_DELETE_ARRAY(m_piUnitProductionModifier);
 	SAFE_DELETE_ARRAY(m_piPrereqOrVicinityBonuses);
 	SAFE_DELETE_ARRAY(m_piPrereqOrRawVicinityBonuses);
 	SAFE_DELETE_ARRAY(m_piBonusDefenseChanges);
@@ -1873,11 +1867,7 @@ const TCHAR* CvBuildingInfo::getMovie() const
 	}
 }
 
-/************************************************************************************************/
-/* Afforess	                  Start		 Last Update: 6/13/10                                    */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 int CvBuildingInfo::getGlobalPopulationgrowthratepercentage() const
 {
 	return m_iGlobalPopulationgrowthratepercentage;
@@ -2179,18 +2169,18 @@ int CvBuildingInfo::getBonusDefenseChanges(int i) const
 	return m_piBonusDefenseChanges ? m_piBonusDefenseChanges[i] : 0;
 }
 
-int CvBuildingInfo::getUnitClassProductionModifier(int i) const
+int CvBuildingInfo::getUnitProductionModifier(int i) const
 {
-	FAssertMsg(i < GC.getNumUnitClassInfos(), "Index out of bounds");
+	FAssertMsg(i < GC.getNumUnitInfos(), "Index out of bounds");
 	FAssertMsg(i >= -1, "Index out of bounds");
 
 	if (i == -1)
 	{
-		return (m_piUnitClassProductionModifier == NULL) ? 0 : 1;
+		return (m_piUnitProductionModifier == NULL) ? 0 : 1;
 	}
 	else
 	{
-		return m_piUnitClassProductionModifier ? m_piUnitClassProductionModifier[i] : 0;
+		return m_piUnitProductionModifier ? m_piUnitProductionModifier[i] : 0;
 	}
 }
 
@@ -2471,15 +2461,12 @@ int CvBuildingInfo::getUnitCombatExtraStrength(int i) const
 		return m_piUnitCombatExtraStrength ? m_piUnitCombatExtraStrength[i] : 0;
 	}
 }
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 //TB Combat Mods (Buildings) begin
 
-UnitClassTypes CvBuildingInfo::getPropertySpawnUnitClass() const
+UnitTypes CvBuildingInfo::getPropertySpawnUnit() const
 {
-	return m_ePropertySpawnUnitClass;
+	return m_ePropertySpawnUnit;
 }
 
 PropertyTypes CvBuildingInfo::getPropertySpawnProperty() const
@@ -3394,11 +3381,7 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum)
 			CheckSumI(iSum, NUM_YIELD_TYPES, m_ppaiBonusYieldModifier[i]);
 		}
 	}
-/************************************************************************************************/
-/* Afforess	                  Start		 Last Update: 3/8/10                                    */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	CheckSum(iSum, m_iGlobalPopulationgrowthratepercentage);
 	CheckSum(iSum, m_iPopulationgrowthratepercentage);
 	CheckSum(iSum, m_iPrereqVicinityBonus);
@@ -3453,7 +3436,7 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum)
 	CheckSumI(iSum, GC.getNumTechInfos(), m_piTechHappinessChanges);
 	CheckSumI(iSum, GC.getNumTechInfos(), m_piTechHealthChanges);
 
-	CheckSumI(iSum, GC.getNumUnitClassInfos(), m_piUnitClassProductionModifier);
+	CheckSumI(iSum, GC.getNumUnitInfos(), m_piUnitProductionModifier);
 	CheckSumI(iSum, GC.getNUM_BUILDING_PREREQ_OR_BONUSES(), m_piPrereqOrVicinityBonuses);
 	CheckSumI(iSum, GC.getNUM_BUILDING_PREREQ_OR_BONUSES(), m_piPrereqOrRawVicinityBonuses);
 	CheckSumI(iSum, GC.getNumBonusInfos(), m_piBonusDefenseChanges);
@@ -3493,9 +3476,7 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum)
 			CheckSumI(iSum, NUM_YIELD_TYPES, m_ppiImprovementYieldChanges[i]);
 		}
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 	m_Properties.getCheckSum(iSum);
 	m_PropertiesAllCities.getCheckSum(iSum);
 	m_PrereqMinProperties.getCheckSum(iSum);
@@ -3511,7 +3492,7 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum)
 	if (m_pExprConstructCondition)
 		m_pExprConstructCondition->getCheckSum(iSum);
 	//TB Combat Mods (Buildings) begin
-	CheckSum(iSum, m_ePropertySpawnUnitClass);
+	CheckSum(iSum, m_ePropertySpawnUnit);
 	CheckSum(iSum, m_ePropertySpawnProperty);
 	CheckSum(iSum, (int)m_ePromotionLineType);
 	//integers
@@ -4451,13 +4432,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->SetVariableListTagPair(&m_piBuildingHappinessChanges, L"BuildingHappinessChanges",  GC.getNumBuildingClassInfos());
 
-
-/************************************************************************************************/
-/* Afforess	                  Start		 12/9/09                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************//*
-	pXML->GetOptionalChildXmlValByName(&m_iRevIdxLocal, L"iRevolutionIndexModifier");*/
+	//pXML->GetOptionalChildXmlValByName(&m_iRevIdxLocal, L"iRevolutionIndexModifier");
 	pXML->GetOptionalChildXmlValByName(&m_bApplyFreePromotionOnMove, L"bApplyFreePromotionOnMove");
 	pXML->GetOptionalChildXmlValByName(&m_bNoEnemyPillagingIncome, L"bNoEnemyPillagingIncome");
 	pXML->GetOptionalChildXmlValByName(&m_bProvidesFreshWater, L"bProvidesFreshWater");
@@ -4514,7 +4489,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetVariableListTagPair(&m_piTechHappinessChanges, L"TechHappinessChanges", GC.getNumTechInfos());
 	pXML->SetVariableListTagPair(&m_piTechHealthChanges, L"TechHealthChanges", GC.getNumTechInfos());
 	pXML->SetVariableListTagPair(&m_pbReplaceBuildingClass, L"ReplaceBuildings",  GC.getNumBuildingClassInfos());
-	pXML->SetVariableListTagPair(&m_piUnitClassProductionModifier, L"UnitClassProductionModifiers", GC.getNumUnitClassInfos());
 	pXML->SetVariableListTagPair(&m_pbPrereqOrTerrain, L"PrereqOrTerrain", GC.getNumTerrainInfos());
 	pXML->SetVariableListTagPair(&m_pbPrereqAndTerrain, L"PrereqAndTerrain", GC.getNumTerrainInfos());
 	pXML->SetVariableListTagPair(&m_pbPrereqOrImprovement, L"PrereqOrImprovement", GC.getNumImprovementInfos());
@@ -4768,6 +4742,34 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 			}
 		}
 
+		pXML->MoveToXmlParent();
+	}
+
+	if (pXML->TryMoveToXmlFirstChild(L"UnitProductionModifiers"))
+	{
+		int iNumSibs = pXML->GetXmlChildrenNumber();
+		int iTemp = false;
+		if (iNumSibs > 0)
+		{
+			if (pXML->TryMoveToXmlFirstChild())
+			{
+				for (int i = 0; i < iNumSibs; i++)
+				{
+					if (pXML->GetChildXmlVal(szTextVal))
+					{
+						m_aszUnitProdModforPass3.push_back(szTextVal);
+						pXML->GetNextXmlVal(&iTemp);
+						m_aiUnitProdModforPass3.push_back(iTemp);
+						pXML->MoveToXmlParent();
+					}
+					if (!pXML->TryMoveToXmlNextSibling())
+					{
+						break;
+					}
+				}
+				pXML->MoveToXmlParent();
+			}
+		}
 		pXML->MoveToXmlParent();
 	}
 
@@ -5103,9 +5105,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 		pXML->MoveToXmlParent();
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 	m_Properties.read(pXML);
 	m_PropertiesAllCities.read(pXML, L"PropertiesAllCities");
 	m_PrereqMinProperties.read(pXML, L"PrereqMinProperties");
@@ -5127,8 +5127,8 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 		pXML->MoveToXmlParent();
 	}
 	//TB Combat Mods (Buildings) begin
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"PropertySpawnUnitClass");
-	m_ePropertySpawnUnitClass = (UnitClassTypes) pXML->GetInfoClass(szTextVal);
+	pXML->GetOptionalChildXmlValByName(szTextVal, L"PropertySpawnUnit");
+	m_aszExtraXMLforPass3.push_back(szTextVal);
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PropertySpawnProperty");
 	m_ePropertySpawnProperty = (PropertyTypes) pXML->GetInfoClass(szTextVal);
@@ -5355,11 +5355,8 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	return true;
 }
-/************************************************************************************************/
-/* Afforess	                  Start		 12/9/09                                                */
-/*                                                                                              */
-/*   ReadPass3 added to search for information that has not been loaded                         */
-/************************************************************************************************/
+
+
 bool CvBuildingInfo::readPass3()
 {
 	m_pbPrereqOrCivics = new bool[GC.getNumCivicInfos()];
@@ -5380,10 +5377,11 @@ bool CvBuildingInfo::readPass3()
 		m_aszPrereqOrCivicsforPass3.clear();
 		m_abPrereqOrCivicsforPass3.clear();
 	}
+
 	m_pbPrereqAndCivics = new bool[GC.getNumCivicInfos()];
     for (int iI = 0; iI < GC.getNumCivicInfos(); iI++)
 	{
-        m_pbPrereqAndCivics[iI] = false;
+		m_pbPrereqAndCivics[iI] = false;
 	}
 	if (!m_abPrereqAndCivicsforPass3.empty() && !m_aszPrereqAndCivicsforPass3.empty())
 	{
@@ -5399,6 +5397,26 @@ bool CvBuildingInfo::readPass3()
 		m_abPrereqAndCivicsforPass3.clear();
 	}
 
+	m_piUnitProductionModifier = new int[GC.getNumUnitInfos()];
+    for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
+	{
+		m_piUnitProductionModifier[iI] = 0;
+	}
+	if (!m_aiUnitProdModforPass3.empty() && !m_aszUnitProdModforPass3.empty())
+	{
+		int iNumLoad = m_aiUnitProdModforPass3.size();
+		for(int iI = 0; iI < iNumLoad; iI++)
+		{
+			int iTempIndex = GC.getInfoTypeForString(m_aszUnitProdModforPass3[iI]);
+			if (iTempIndex >= 0 && iTempIndex < GC.getNumUnitInfos())
+			{
+				m_piUnitProductionModifier[iTempIndex] = m_aiUnitProdModforPass3[iI];
+			}
+		}
+		m_aszUnitProdModforPass3.clear();
+		m_aiUnitProdModforPass3.clear();
+	}
+
 	if (m_aszExtraXMLforPass3.size() < 1)
 	{
 		FAssert(false);
@@ -5406,13 +5424,12 @@ bool CvBuildingInfo::readPass3()
 	}
 	m_iGreatPeopleUnitType = GC.getInfoTypeForString(m_aszExtraXMLforPass3[0]);
 
+	m_ePropertySpawnUnit = (UnitTypes) GC.getInfoTypeForString(m_aszExtraXMLforPass3[1]);
+
 	m_aszExtraXMLforPass3.clear();
 
 	return true;
 }
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 /************************************************************************************************/
 /* XMLCOPY                                 10/09/07                                MRGENIE      */
 /*                                                                                              */
@@ -5595,18 +5612,12 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 	if (getEspionageDefenseModifier() == iDefault) m_iEspionageDefenseModifier = pClassInfo->getEspionageDefenseModifier();
 	if (getAssetValue(true) == iDefault) m_iAssetValue = pClassInfo->getAssetValue(true);
 	if (getPowerValue(true) == iDefault) m_iPowerValue = pClassInfo->getPowerValue(true);
-/********************************************************************************/
-/**		REVDCM									4/09/10				Afforess	*/
-/**																				*/
-/**		Building Effects														*/
-/********************************************************************************/
+
 	if (getUnitUpgradePriceModifier() == iDefault) m_iUnitUpgradePriceModifier = pClassInfo->getUnitUpgradePriceModifier();
 	if (getRevIdxLocal() == iDefault) m_iRevIdxLocal = pClassInfo->getRevIdxLocal();
 	if (getRevIdxNational() == iDefault) m_iRevIdxNational = pClassInfo->getRevIdxNational();
 	if (getRevIdxDistanceModifier() == iDefault) m_iRevIdxDistanceModifier = pClassInfo->getRevIdxDistanceModifier();
-/********************************************************************************/
-/**		REVDCM									END								*/
-/********************************************************************************/
+
 	//ls612 Begin
 	if (getMaxPopAllowed() == -1) m_iMaxPopAllowed = pClassInfo->getMaxPopAllowed();
 	if (getMaxCultureLevelAllowed() == -1) m_iMaxCultureLevelAllowed = pClassInfo->getMaxCultureLevelAllowed();
@@ -6078,11 +6089,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 			}
 		}
 	}
-/************************************************************************************************/
-/* Afforess	                  Start		 12/9/09                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	if (isApplyFreePromotionOnMove() == bDefault) m_bApplyFreePromotionOnMove = pClassInfo->isApplyFreePromotionOnMove();
 	if (isNoEnemyPillagingIncome() == bDefault) m_bNoEnemyPillagingIncome = pClassInfo->isNoEnemyPillagingIncome();
 	if (isProvidesFreshWater() == bDefault) m_bProvidesFreshWater = pClassInfo->isProvidesFreshWater();
@@ -6150,17 +6157,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 		}
 	}
 
-	for ( int j = 0; j < GC.getNumUnitClassInfos(); j++)
-	{
-		if ( getUnitClassProductionModifier(j) == iDefault && pClassInfo->getUnitClassProductionModifier(j) != iDefault)
-		{
-			if ( NULL == m_piUnitClassProductionModifier )
-			{
-				CvXMLLoadUtility::InitList(&m_piUnitClassProductionModifier,GC.getNumUnitClassInfos(),iDefault);
-			}
-			m_piUnitClassProductionModifier[j] = pClassInfo->getUnitClassProductionModifier(j);
-		}
-	}
 	for ( int j = 0; j < GC.getNumTerrainInfos(); j++)
 	{
 		if ( isPrereqOrTerrain(j) == bDefault && pClassInfo->isPrereqOrTerrain(j) != bDefault)
@@ -6680,9 +6676,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 		m_abPrereqAndCivicsforPass3.push_back(pClassInfo->isPrereqAndCivicsValuesVectorElement(i));
 		m_aszPrereqAndCivicsforPass3.push_back(pClassInfo->isPrereqAndCivicsNamesVectorElement(i));
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 	m_Properties.copyNonDefaults(pClassInfo->getProperties(), pXML);
 	m_PropertiesAllCities.copyNonDefaults(pClassInfo->getPropertiesAllCities(), pXML);
 	m_PrereqMinProperties.copyNonDefaults(pClassInfo->getPrereqMinProperties(), pXML);
@@ -6705,7 +6699,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 	}
 
 	//TB Combat Mods (Buildings) begin
-	if (getPropertySpawnUnitClass() == NO_UNITCLASS) m_ePropertySpawnUnitClass = pClassInfo->getPropertySpawnUnitClass();
+	if (m_ePropertySpawnUnit == NO_UNIT) m_ePropertySpawnUnit = pClassInfo->getPropertySpawnUnit();
 	if (getPropertySpawnProperty() == NO_PROPERTY) m_ePropertySpawnProperty = pClassInfo->getPropertySpawnProperty();
 	if (getPromotionLineType() == NO_PROMOTIONLINE) m_ePromotionLineType = pClassInfo->getPromotionLineType();
 	//integers

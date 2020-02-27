@@ -2,7 +2,6 @@
 <Civ4UnitInfos xmlns="x-schema:../../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_BISON_RIDER</Class>
 			<Type>UNIT_BISON_RIDER</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
@@ -110,7 +109,7 @@
 		<UnitInfo>
 			<Type>UNIT_BISON_RIDER</Type>
 			<AndDependencyTypes>
-				<DependencyType>UNITCLASS_TRAINED_MAMMOTH</DependencyType>
+				<DependencyType>UNIT_TRAINED_MAMMOTH</DependencyType>
  			</AndDependencyTypes>
 			<UnitAttackMods>
 				<UnitAttackMod>
@@ -122,7 +121,7 @@
 		<UnitInfo>
 			<Type>UNIT_BISON_RIDER</Type>
 			<AndDependencyTypes>
-				<DependencyType>UNITCLASS_WAR_MAMMOTH</DependencyType>
+				<DependencyType>UNIT_WAR_MAMMOTH</DependencyType>
  			</AndDependencyTypes>
 			<UnitAttackMods>
 				<UnitAttackMod>
@@ -132,7 +131,6 @@
 			</UnitAttackMods>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_BISON</Class>
 			<Type>UNIT_SUBDUED_BISON</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_BISON</BuildingType>

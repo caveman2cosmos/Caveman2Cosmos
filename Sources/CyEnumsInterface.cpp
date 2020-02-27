@@ -1055,10 +1055,6 @@ void CyEnumsPythonInterface()
 		.value("NUM_DOMAIN_TYPES", NUM_DOMAIN_TYPES)
 		;
 
-	python::enum_<UnitClassTypes>("UnitClassTypes")
-		.value("NO_UNITCLASS", NO_UNITCLASS)
-		;
-
 	python::enum_<UnitTypes>("UnitTypes")
 		.value("NO_UNIT", NO_UNIT)
 		;

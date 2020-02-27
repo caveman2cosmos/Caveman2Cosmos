@@ -22266,12 +22266,6 @@ CvUnitInfo &CvUnit::getUnitInfo() const
 	return *m_pUnitInfo;
 }
 
-
-UnitClassTypes CvUnit::getUnitClassType() const
-{
-	return (UnitClassTypes)m_pUnitInfo->getUnitClassType();
-}
-
 const UnitTypes CvUnit::getLeaderUnitType() const
 {
 	return m_eLeaderUnitType;
@@ -40861,7 +40855,7 @@ void CvUnit::setFreePromotion(PromotionTypes ePromotion, bool bAdding, TraitType
 			return;
 		}
 
-		if (NO_UNITCLASS != getUnitType())
+		if (NO_UNIT != getUnitType())
 		{
 			if (pPlayer.isFreePromotion(getUnitType(), ePromotion))
 			{

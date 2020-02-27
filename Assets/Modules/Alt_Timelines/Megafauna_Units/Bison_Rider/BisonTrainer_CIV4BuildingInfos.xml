@@ -184,12 +184,12 @@
 					<bPrereqBuildingClass>1</bPrereqBuildingClass>
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
-			<UnitClassProductionModifiers>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_BISON_RIDER</UnitClassType>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_BISON_RIDER</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-			</UnitClassProductionModifiers>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>

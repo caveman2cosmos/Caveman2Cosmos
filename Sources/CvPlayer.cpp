@@ -192,16 +192,11 @@ m_cachedBonusCount(NULL)
 	m_ppaaiSpecialistExtraYield = NULL;
 	m_ppaaiImprovementYieldChange = NULL;
 
-/************************************************************************************************/
-/* Afforess	                  Start		 12/9/09                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	m_paiUnitCombatProductionModifier = NULL;
 	m_paiBonusMintedPercent = NULL;
 	m_pabAutomatedCanBuild = NULL;
 	m_paiBuildingClassProductionModifier = NULL;
-	m_paiUnitClassProductionModifier = NULL;
+	m_paiUnitProductionModifier = NULL;
 	m_ppaaiTerrainYieldChange = NULL;
 	m_paiResourceConsumption = NULL;
 	m_paiFreeSpecialistCount = NULL;
@@ -213,9 +208,7 @@ m_cachedBonusCount(NULL)
 	m_aiLandmarkYield = new int[NUM_YIELD_TYPES];
 	m_aiModderOptions = new int[NUM_MODDEROPTION_TYPES];
 	m_paiPlayerWideAfflictionCount = NULL;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 	//TB Traits begin
 	m_paiImprovementUpgradeRateModifierSpecific = NULL;
 	m_paiBuildWorkerSpeedModifierSpecific = NULL;
@@ -337,16 +330,10 @@ CvPlayer::~CvPlayer()
 	SAFE_DELETE_ARRAY(m_aiEspionageSpendingWeightAgainstTeam);
 	SAFE_DELETE_ARRAY(m_abFeatAccomplished);
 	SAFE_DELETE_ARRAY(m_abOptions);
-/************************************************************************************************/
-/* Afforess	                  Start		 02/02/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	SAFE_DELETE_ARRAY(m_aiLandmarkYield);
 	SAFE_DELETE_ARRAY(m_aiModderOptions);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 	//TB Traits begin
 	SAFE_DELETE_ARRAY(m_aiFreeCityYield);
 	SAFE_DELETE_ARRAY(m_aiLessYieldThreshold);
@@ -496,7 +483,7 @@ void CvPlayer::init(PlayerTypes eID)
 		{
 			if (GC.getUnitInfo((UnitTypes)iI).isFound())
 			{
-				setUnitExtraCost((UnitClassTypes)GC.getUnitInfo((UnitTypes)iI).getUnitClassType(), getNewCityProductionValue());
+				setUnitExtraCost((UnitTypes)iI, getNewCityProductionValue());
 			}
 		}
 	}
@@ -727,7 +714,7 @@ void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 		{
 			if (GC.getUnitInfo((UnitTypes)iI).isFound())
 			{
-				setUnitExtraCost((UnitClassTypes)GC.getUnitInfo((UnitTypes)iI).getUnitClassType(), getNewCityProductionValue());
+				setUnitExtraCost((UnitTypes)iI, getNewCityProductionValue());
 			}
 		}
 	}
@@ -828,7 +815,7 @@ void CvPlayer::uninit()
 	SAFE_DELETE_ARRAY(m_paiUnitCombatProductionModifier);
 	SAFE_DELETE_ARRAY(m_paiBonusMintedPercent);
 	SAFE_DELETE_ARRAY(m_paiBuildingClassProductionModifier);
-	SAFE_DELETE_ARRAY(m_paiUnitClassProductionModifier);
+	SAFE_DELETE_ARRAY(m_paiUnitProductionModifier);
 	SAFE_DELETE_ARRAY(m_pabAutomatedCanBuild);
 	SAFE_DELETE_ARRAY(m_paiResourceConsumption);
 	SAFE_DELETE_ARRAY(m_paiFreeSpecialistCount);
@@ -1162,11 +1149,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_eCurrentEra = ((EraTypes)0);  //??? Is this repeated data???
 	m_eLastStateReligion = NO_RELIGION;
 	m_eParent = NO_PLAYER;
-/************************************************************************************************/
-/* Afforess	                  Start		 12/9/09                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
     m_ePledgedVote = NO_PLAYER_VOTE;
 	m_eSecretaryGeneralVote = NO_TEAM;
 	m_eGreatGeneralTypetoAssign = NO_UNIT;
@@ -1226,10 +1209,6 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 
 	m_bInhibitPlotGroupRecalc = false;
 
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-
 	for (iI = 0; iI < NUM_YIELD_TYPES; iI++)
 	{
 		m_aiSeaPlotYield[iI] = 0;
@@ -1237,15 +1216,8 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 		m_aiCapitalYieldRateModifier[iI] = 0;
 		m_aiExtraYieldThreshold[iI] = 0;
 		m_aiTradeYieldModifier[iI] = 0;
-/************************************************************************************************/
-/* Afforess	                  Start		 04/15/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 		m_aiLandmarkYield[iI] = 0;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 		//TB Traits begin
 		m_aiFreeCityYield[iI] = 0;
 		m_aiSpecialistExtraYield[iI] = 0;
@@ -1500,15 +1472,8 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 		FAssertMsg(0 < GC.getNumSpecialistInfos(), "GC.getNumSpecialistInfos() is not greater than zero but it is used to allocate memory in CvPlayer::reset");
 		FAssertMsg(m_ppaaiSpecialistExtraYield==NULL, "about to leak memory, CvPlayer::m_ppaaiSpecialistExtraYield");
 		m_ppaaiSpecialistExtraYield = new int*[GC.getNumSpecialistInfos()];
-/************************************************************************************************/
-/* Afforess	                  Start		 03/27/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 		m_paiFreeSpecialistCount = new int[GC.getNumSpecialistInfos()];
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 		for (iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 		{
 			m_ppaaiSpecialistExtraYield[iI] = new int[NUM_YIELD_TYPES];
@@ -1516,15 +1481,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 			{
 				m_ppaaiSpecialistExtraYield[iI][iJ] = 0;
 			}
-/************************************************************************************************/
-/* Afforess	                  Start		 03/27/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 			m_paiFreeSpecialistCount[iI] = 0;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 		}
 		//TB Traits begin
 		FAssertMsg(0 < GC.getNumSpecialistInfos(), "GC.getNumSpecialistInfos() is not greater than zero but it is used to allocate memory in CvPlayer::reset");
@@ -1565,11 +1522,6 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 			//TB Traits end
 		}
 
-/************************************************************************************************/
-/* Afforess	                  Start		 12/9/09                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 		FAssertMsg(m_paiUnitCombatProductionModifier==NULL, "about to leak memory, CvPlayer::m_paiUnitCombatProductionModifier");
 		m_paiUnitCombatProductionModifier = new int [GC.getNumUnitCombatInfos()];
 	//Team Project (8)
@@ -1596,11 +1548,11 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 			m_paiBuildingClassProductionModifier[iI] = 0;
 		}
 
-		FAssertMsg(m_paiUnitClassProductionModifier==NULL, "about to leak memory, CvPlayer::m_paiUnitClassProductionModifier");
-		m_paiUnitClassProductionModifier = new int [GC.getNumUnitClassInfos()];
-		for (iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
+		FAssertMsg(m_paiUnitProductionModifier==NULL, "about to leak memory, CvPlayer::m_paiUnitProductionModifier");
+		m_paiUnitProductionModifier = new int [GC.getNumUnitInfos()];
+		for (iI = 0; iI < GC.getNumUnitInfos(); iI++)
 		{
-			m_paiUnitClassProductionModifier[iI] = 0;
+			m_paiUnitProductionModifier[iI] = 0;
 		}
 
 		FAssertMsg((0 < GC.getNumUnitInfos()),  "GC.getNumUnitInfos() is not greater than zero but an array is being allocated in CvCity::reset");
@@ -1723,9 +1675,6 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 		{
 			m_aiModderOptions[iI] = 0;
 		}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 		m_mapEventsOccured.clear();
 		m_mapEventCountdown.clear();
 		m_aFreeUnitCombatPromotions.clear();
@@ -1883,7 +1832,7 @@ void CvPlayer::resetCivTypeEffects( )
 	{
 		if (GC.getUnitInfo((UnitTypes)iI).isFound())
 		{
-			setUnitExtraCost((UnitClassTypes)GC.getUnitInfo((UnitTypes)iI).getUnitClassType(), getNewCityProductionValue());
+			setUnitExtraCost((UnitTypes)iI, getNewCityProductionValue());
 		}
 	}
 }
@@ -2809,20 +2758,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 	std::vector<int> aeFreeSpecialists;
 	CvPlotGroup* originalTradeNetworkConnectivity[MAX_PLAYERS];
 
-/************************************************************************************************/
-/* Afforess	                  Start		 02/15/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	int iOccupationRange = 0;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-/************************************************************************************************/
-/* Afforess	                  Start		 06/14/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	int iOccupationTimeModifier = 100;
 	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
@@ -2834,9 +2770,6 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 			}
 		}
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	pCityPlot = pOldCity->plot();
 	eOldOwner = pOldCity->getOwner();
 
@@ -2872,11 +2805,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 			}
 		}
 	}
-/************************************************************************************************/
-/* Afforess	                  Start		 07/21/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	iRange = pOldCity->getMaxCultureLevelAmongPlayers();
 
 	iOccupationRange = iRange;
@@ -2940,9 +2869,6 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 		}
 	}
 	if (bConquest && !hasFixedBorders())
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	{
 		iRange = pOldCity->getCultureLevel();
 
@@ -2950,15 +2876,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 		{
 			for (iDY = -(iRange); iDY <= iRange; iDY++)
 			{
-/************************************************************************************************/
-/* Afforess	                  Start		 02/15/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 				if ((pOldCity->cultureDistance(iDX, iDY) <= iRange) && (pOldCity->cultureDistance(iDX, iDY) > 1))
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 				{
 					pLoopPlot = plotXY(pOldCity->getX(),pOldCity-> getY(), iDX, iDY);
 
@@ -3042,19 +2960,11 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 						szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_CAPTURED_BY", szName.GetCString(), getCivilizationDescriptionKey());
 						AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITYCAPTURED", MESSAGE_TYPE_MAJOR_EVENT, ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pOldCity->getX(), pOldCity->getY(), true, true);
 					}
-				/************************************************************************************************/
-				/* Afforess	                  Start		 12/9/09                                                */
-				/*                                                                                              */
-				/*                                                                                              */
-				/************************************************************************************************/
 					else if (GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).isHasEmbassy(getTeam()))
 					{
 						szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_CAPTURED_BY", szName.GetCString(), getCivilizationDescriptionKey());
 						AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITYCAPTURED", MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"));
 					}
-				/************************************************************************************************/
-				/* Afforess	                     END                                                            */
-				/************************************************************************************************/
 				}
 			}
 		}
@@ -3747,20 +3657,12 @@ CvUnit* CvPlayer::initUnit(UnitTypes eUnit, int iX, int iY, UnitAITypes eUnitAI,
 	if (NULL != pUnit)
 	{
 		pUnit->init(pUnit->getID(), eUnit, ((eUnitAI == NO_UNITAI) ? ((UnitAITypes)(GC.getUnitInfo(eUnit).getDefaultUnitAIType())) : eUnitAI), getID(), iX, iY, eFacingDirection, iBirthmark);
-/************************************************************************************************/
-/* Afforess	                  Start		 02/27/10                      Coded By: KillMePlease   */
-/*                                                                                              */
-/* Great Commanders                                                                             */
-/************************************************************************************************/
+
 		if (pUnit->isCommander())
 		{
 			Commanders.push_back(pUnit);
 		}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	}
-
 	return pUnit;
 }
 
@@ -3803,18 +3705,11 @@ void CvPlayer::disbandUnit(bool bAnnounce)
 						{
 							iValue *= 3;
 						}
-/************************************************************************************************/
-/* Afforess	                  Start		 02/12/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 						if (pLoopUnit->plot()->getOwner() == pLoopUnit->getOwner())
 						{
 							iValue /= 6;
 						}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 						switch (pLoopUnit->AI_getUnitAIType())
 						{
@@ -4805,12 +4700,6 @@ void CvPlayer::doTurn()
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 
-/************************************************************************************************/
-/* Afforess	                  Start		 6/27/10                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-
 	doCheckForTaxationAnger();
 
 	//Clear the cache each turn.
@@ -4821,10 +4710,6 @@ void CvPlayer::doTurn()
 	doAdvancedEconomy();
 
 	doInflation(false);
-
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	{
 		PROFILE("CvPlayer::doTurn.DoCityTurn");
@@ -9146,7 +9031,7 @@ int CvPlayer::getProductionNeeded(UnitTypes eUnit) const
 
 	//The following is where we get the cost for a settler unit (that's ALL this does) and the cost scales to GROWTH factors rather than training factors.
 	//Thus placing it so that training factors influence the cost will cause settlers to be double scaled and the costs to go out of balance as a result.
-	iProductionNeeded += (getUnitExtraCost((UnitClassTypes)GC.getUnitInfo(eUnit).getUnitClassType()) * 100);
+	iProductionNeeded += (getUnitExtraCost(eUnit) * 100);
 
 	// Python cost modifier
 	if(GC.getUSE_GET_UNIT_COST_MOD_CALLBACK())
@@ -22779,9 +22664,9 @@ void CvPlayer::processCivics(CivicTypes eCivic, int iChange, bool bLimited)
 			changeBuildingClassProductionModifier(((BuildingClassTypes)iI), (kCivic.getBuildingClassProductionModifier(iI) * iChange));
 		}
 
-		for (int iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 		{
-			changeUnitClassProductionModifier(((UnitClassTypes)iI), kCivic.getUnitClassProductionModifier(iI) * iChange);
+			changeUnitProductionModifier(((UnitTypes)iI), kCivic.getUnitProductionModifier(iI) * iChange);
 		}
 
 		for (int iI = 0; iI < GC.getNumFeatureInfos(); iI++)
@@ -23186,8 +23071,8 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiExtraBuildingHappiness);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiExtraBuildingHealth);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_FEATURES, GC.getNumFeatureInfos(), m_paiFeatureHappiness);
-		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitClassInfos(), m_paiUnitCount);
-		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitClassInfos(), m_paiUnitMaking);
+		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiUnitCount);
+		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiUnitMaking);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDING_CLASSES, GC.getNumBuildingClassInfos(), m_paiBuildingClassCount);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDING_CLASSES, GC.getNumBuildingClassInfos(), m_paiBuildingClassMaking);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_HURRIES, GC.getNumHurryInfos(), m_paiHurryCount);
@@ -23291,7 +23176,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiBonusMintedPercent);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatProductionModifier);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDING_CLASSES, GC.getNumBuildingClassInfos(), m_paiBuildingClassProductionModifier);
-		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNIT_CLASSES, GC.getNumUnitClassInfos(), m_paiUnitClassProductionModifier);
+		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiUnitProductionModifier);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiResourceConsumption);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_paiFreeSpecialistCount);
 
@@ -23861,8 +23746,8 @@ void CvPlayer::read(FDataStreamBase* pStream)
 			for (uint i = 0; i < iSize; i++)
 			{
 				int iCost;
-				UnitClassTypes eUnit;
-				WRAPPER_READ_CLASS_ENUM(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNIT_CLASSES, (int*)&eUnit);
+				UnitTypes eUnit;
+				WRAPPER_READ_CLASS_ENUM(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, (int*)&eUnit);
 				WRAPPER_READ(wrapper, "CvPlayer", &iCost);
 				m_aUnitExtraCosts.push_back(std::make_pair(eUnit, iCost));
 			}
@@ -24342,8 +24227,8 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiExtraBuildingHappiness);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiExtraBuildingHealth);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_FEATURES, GC.getNumFeatureInfos(), m_paiFeatureHappiness);
-		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitClassInfos(), m_paiUnitCount);
-		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitClassInfos(), m_paiUnitMaking);
+		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiUnitCount);
+		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiUnitMaking);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDING_CLASSES, GC.getNumBuildingClassInfos(), m_paiBuildingClassCount);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDING_CLASSES, GC.getNumBuildingClassInfos(), m_paiBuildingClassMaking);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_HURRIES, GC.getNumHurryInfos(), m_paiHurryCount);
@@ -24355,11 +24240,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UPKEEPS, GC.getNumUpkeepInfos(), m_paiUpkeepCount);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_paiSpecialistValidCount);
 
-	/************************************************************************************************/
-	/* Afforess	                  Start		 12/9/09                                                */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iForeignTradeRouteModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iTaxRateUnhappiness);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_fPopulationgrowthratepercentageLog);
@@ -24425,7 +24305,7 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiBonusMintedPercent);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatProductionModifier);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDING_CLASSES, GC.getNumBuildingClassInfos(), m_paiBuildingClassProductionModifier);
-		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNIT_CLASSES, GC.getNumUnitClassInfos(), m_paiUnitClassProductionModifier);
+		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiUnitProductionModifier);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiResourceConsumption);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_paiFreeSpecialistCount);
 
@@ -24465,9 +24345,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 			WRAPPER_WRITE_ARRAY(wrapper, "CvPlayer", NUM_YIELD_TYPES, m_ppiSpecialistYieldPercentChanges[i]);
 			WRAPPER_WRITE_ARRAY(wrapper, "CvPlayer", NUM_COMMERCE_TYPES, m_ppiSpecialistCommercePercentChanges[i]);
 		}
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
 
 		FAssertMsg((0 < GC.getNumTechInfos()), "GC.getNumTechInfos() is not greater than zero but it is expected to be in CvPlayer::write");
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_pabResearchingTech);
@@ -24723,10 +24600,10 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		{
 			uint iSize = m_aUnitExtraCosts.size();
 			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", iSize, "numUnitCosts");
-			std::vector< std::pair<UnitClassTypes, int> >::iterator it;
+			std::vector< std::pair<UnitTypes, int> >::iterator it;
 			for (it = m_aUnitExtraCosts.begin(); it != m_aUnitExtraCosts.end(); ++it)
 			{
-				WRAPPER_WRITE_CLASS_ENUM_DECORATED(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNIT_CLASSES, (*it).first, "eUnit");
+				WRAPPER_WRITE_CLASS_ENUM_DECORATED(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, (*it).first, "eUnit");
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (*it).second, "iCost");
 			}
 		}
@@ -25707,11 +25584,7 @@ bool CvPlayer::canDoEvent(EventTypes eEvent, const EventTriggeredData& kTriggere
 	}
 
 	CvEventInfo& kEvent = GC.getEventInfo(eEvent);
-/************************************************************************************************/
-/* Afforess	                  Start		 01/20/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	if (kEvent.getPrereqGameOption() != NO_GAMEOPTION)
 	{
 		if (!(GC.getGame().isOption((GameOptionTypes)kEvent.getPrereqGameOption())))
@@ -25719,9 +25592,6 @@ bool CvPlayer::canDoEvent(EventTypes eEvent, const EventTriggeredData& kTriggere
 			return false;
 		}
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	int iGold = std::min(getEventCost(eEvent, kTriggeredData.m_eOtherPlayer, false), getEventCost(eEvent, kTriggeredData.m_eOtherPlayer, true));
 
@@ -26076,21 +25946,11 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 	{
 		int iGold = getEventCost(eEvent, pTriggeredData->m_eOtherPlayer, false);
 		int iRandomGold = getEventCost(eEvent, pTriggeredData->m_eOtherPlayer, true);
-	/************************************************************************************************/
-	/* Afforess	                  Start		 07/15/10                                               */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-	/*
-		iGold += GC.getGame().getSorenRandNum(iRandomGold - iGold + 1, "Event random gold");
-	*/
+
 		if (iGold > 0)
 			iGold += GC.getGame().getSorenRandNum(iRandomGold - iGold + 1, "Event random gold");
 		else if (iGold < 0)
 			iGold -= GC.getGame().getSorenRandNum(abs(iRandomGold - iGold - 1), "Event random gold");
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
 
 		if (iGold != 0)
 		{
@@ -26801,11 +26661,6 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 			}
 		}
 
-/************************************************************************************************/
-/* Afforess	                  Start		 01/20/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 		if (kEvent.getRevolutionIndexChange() != 0 && !adjustModifiersOnly)
 		{
 			int iLoop;
@@ -26821,10 +26676,6 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 				}
 			}
 		}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-
 
 		if (!adjustModifiersOnly && kEvent.getFreeUnit() != NO_UNIT)
 		{
@@ -28418,11 +28269,11 @@ void CvPlayer::setVote(int iId, PlayerVoteTypes ePlayerVote)
 	}
 }
 
-int CvPlayer::getUnitExtraCost(UnitClassTypes eUnitClass) const
+int CvPlayer::getUnitExtraCost(UnitTypes eUnit) const
 {
-	for (std::vector< std::pair<UnitClassTypes, int> >::const_iterator it = m_aUnitExtraCosts.begin(); it != m_aUnitExtraCosts.end(); ++it)
+	for (std::vector< std::pair<UnitTypes, int> >::const_iterator it = m_aUnitExtraCosts.begin(); it != m_aUnitExtraCosts.end(); ++it)
 	{
-		if ((*it).first == eUnitClass)
+		if ((*it).first == eUnit)
 		{
 			return ((*it).second);
 		}
@@ -28431,11 +28282,11 @@ int CvPlayer::getUnitExtraCost(UnitClassTypes eUnitClass) const
 	return 0;
 }
 
-void CvPlayer::setUnitExtraCost(UnitClassTypes eUnitClass, int iCost)
+void CvPlayer::setUnitExtraCost(UnitTypes eUnit, int iCost)
 {
-	for (std::vector< std::pair<UnitClassTypes, int> >::iterator it = m_aUnitExtraCosts.begin(); it != m_aUnitExtraCosts.end(); ++it)
+	for (std::vector< std::pair<UnitTypes, int> >::iterator it = m_aUnitExtraCosts.begin(); it != m_aUnitExtraCosts.end(); ++it)
 	{
-		if ((*it).first == eUnitClass)
+		if ((*it).first == eUnit)
 		{
 			if (0 == iCost)
 			{
@@ -28451,7 +28302,7 @@ void CvPlayer::setUnitExtraCost(UnitClassTypes eUnitClass, int iCost)
 
 	if (0 != iCost)
 	{
-		m_aUnitExtraCosts.push_back(std::make_pair(eUnitClass, iCost));
+		m_aUnitExtraCosts.push_back(std::make_pair(eUnit, iCost));
 	}
 }
 
@@ -28904,18 +28755,8 @@ bool CvPlayer::canHaveTradeRoutesWith(PlayerTypes ePlayer) const
 		return true;
 	}
 
-/************************************************************************************************/
-/* Afforess	                  Start		 12/9/09                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	if (GET_TEAM(getTeam()).isFreeTrade(kOtherPlayer.getTeam()) || (GET_TEAM(getTeam()).isLimitedBorders(kOtherPlayer.getTeam())) || (getForceAllTradeRoutes() > 0))
-/* was:
-	if (GET_TEAM(getTeam()).isFreeTrade(kOtherPlayer.getTeam()))
-*/
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	{
 		if (GET_TEAM(getTeam()).isVassal(kOtherPlayer.getTeam()))
 		{
@@ -29280,24 +29121,20 @@ void CvPlayer::buildTradeTable(PlayerTypes eOtherPlayer, CLinkList<TradeData>& o
 	{
 		ourList.insertAtEnd(item);
 	}
-/************************************************************************************************/
-/* Afforess	                  Start		 06/16/10                                               */
-/*                                                                                              */
-/* Advanced Diplomacy                                                                           */
-/************************************************************************************************/
-     //Embassy
-    setTradeItem(&item, TRADE_EMBASSY);
-    if (canTradeItem(eOtherPlayer, item))
-    {
-        ourList.insertAtEnd(item);
-    }
+
+	 //Embassy
+	setTradeItem(&item, TRADE_EMBASSY);
+	if (canTradeItem(eOtherPlayer, item))
+	{
+		ourList.insertAtEnd(item);
+	}
 
 	//Free Trade
 	setTradeItem(&item, TRADE_FREE_TRADE_ZONE);
-    if (canTradeItem(eOtherPlayer, item))
-    {
-        ourList.insertAtEnd(item);
-    }
+	if (canTradeItem(eOtherPlayer, item))
+	{
+		ourList.insertAtEnd(item);
+	}
 
 	//Right of Passage
 	setTradeItem(&item, TRADE_RITE_OF_PASSAGE);
@@ -29306,9 +29143,6 @@ void CvPlayer::buildTradeTable(PlayerTypes eOtherPlayer, CLinkList<TradeData>& o
 		ourList.insertAtEnd(item);
 	}
 
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	//	Open Borders
 	setTradeItem(&item, TRADE_OPEN_BORDERS);
 	if (canTradeItem(eOtherPlayer, item))
@@ -29475,11 +29309,7 @@ void CvPlayer::buildTradeTable(PlayerTypes eOtherPlayer, CLinkList<TradeData>& o
 				}
 			}
 			break;
-/************************************************************************************************/
-/* Afforess	                  Start		 06/16/10                                               */
-/*                                                                                              */
-/* Advanced Diplomacy                                                                           */
-/************************************************************************************************/
+
         case TRADE_CORPORATION:
             for (int j = 0; j < GC.getNumCorporationInfos(); j++)
             {
@@ -29566,9 +29396,6 @@ void CvPlayer::buildTradeTable(PlayerTypes eOtherPlayer, CLinkList<TradeData>& o
                 }
             }
             break;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 		}
 	}
 }
@@ -29591,11 +29418,6 @@ bool CvPlayer::getHeadingTradeString(PlayerTypes eOtherPlayer, TradeableItems eI
 		szString = gDLL->getText("TXT_KEY_TRADE_CITIES");
 		break;
 
-/************************************************************************************************/
-/* Afforess	                  Start		 07/29/10                                               */
-/*                                                                                              */
-/* Advanced Diplomacy                                                                           */
-/************************************************************************************************/
     case TRADE_WORKER:
         szString = gDLL->getText("TXT_KEY_TRADE_WORKERS");
         break;
@@ -29606,9 +29428,7 @@ bool CvPlayer::getHeadingTradeString(PlayerTypes eOtherPlayer, TradeableItems eI
     case TRADE_CONTACT:
         szString = gDLL->getText("TXT_KEY_TRADE_MAKE_CONTACT_WITH");
         break;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 	case TRADE_PEACE:
 		szString = gDLL->getText("TXT_KEY_TRADE_MAKE_PEACE_WITH");
 		break;
@@ -29628,26 +29448,20 @@ bool CvPlayer::getHeadingTradeString(PlayerTypes eOtherPlayer, TradeableItems eI
 	case TRADE_RELIGION:
 		szString = gDLL->getText("TXT_KEY_TRADE_CONVERT");
 		break;
-/************************************************************************************************/
-/* Afforess	                  Start		 07/29/10                                               */
-/*                                                                                              */
-/* Advanced Diplomacy                                                                           */
-/************************************************************************************************/
-    case TRADE_CORPORATION:
-        szString = gDLL->getText("TXT_KEY_TRADE_BUY_CORPORATION");
-        break;
-    case TRADE_PLEDGE_VOTE:
-        szString = gDLL->getText("TXT_KEY_TRADE_PLEDGE_VOTE");
-        break;
+
+	case TRADE_CORPORATION:
+		szString = gDLL->getText("TXT_KEY_TRADE_BUY_CORPORATION");
+		break;
+	case TRADE_PLEDGE_VOTE:
+		szString = gDLL->getText("TXT_KEY_TRADE_PLEDGE_VOTE");
+		break;
 	case TRADE_SECRETARY_GENERAL_VOTE:
 		szString = gDLL->getText("TXT_KEY_TRADE_SECRETARY_GENERAL_VOTE");
 		break;
 	case TRADE_EMBASSY:
 		szString = gDLL->getText("TXT_KEY_TRADE_EMBASSY_STRING");
 		break;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 	default:
 		szString.clear();
 		return false;
@@ -29808,11 +29622,7 @@ bool CvPlayer::getItemTradeString(PlayerTypes eOtherPlayer, bool bOffer, bool bS
 		}
 		szIcon = GC.getReligionInfo((ReligionTypes)zTradeData.m_iData).getButton();
 		break;
-/************************************************************************************************/
-/* Afforess	                  Start		 06/16/10                                               */
-/*                                                                                              */
-/* Advanced Diplomacy                                                                           */
-/************************************************************************************************/
+
     case TRADE_WORKER:
         {
             CvUnit* pUnit = NULL;
@@ -29915,13 +29725,7 @@ bool CvPlayer::getItemTradeString(PlayerTypes eOtherPlayer, bool bOffer, bool bS
 	case TRADE_EMBASSY:
         szString = gDLL->getText("TXT_KEY_TRADE_EMBASSY_STRING");
         break;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	default:
 		szString.clear();
 		return false;
@@ -29992,11 +29796,7 @@ void CvPlayer::updateTradeList(PlayerTypes eOtherPlayer, CLinkList<TradeData>& o
 				}
 			}
 			break;
-/************************************************************************************************/
-/* Afforess	                  Start		 12/9/09                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
         case TRADE_PLEDGE_VOTE:
 			for (CLLNode<TradeData>* pOfferNode = theirOffer.head(); pOfferNode != NULL; pOfferNode = theirOffer.next(pOfferNode))
 			{
@@ -30008,9 +29808,7 @@ void CvPlayer::updateTradeList(PlayerTypes eOtherPlayer, CLinkList<TradeData>& o
 				}
 			}
 			break;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 		default:
 			break;
 		}
@@ -30632,11 +30430,6 @@ bool CvPlayer::hasSpaceshipArrived() const
 	return false;
 }
 
-/************************************************************************************************/
-/* Afforess	                  Start		 12/9/09                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 void CvPlayer::doCheckForTaxationAnger()
 {
 	PROFILE_FUNC()
@@ -31244,16 +31037,16 @@ void CvPlayer::changeBuildingClassProductionModifier(BuildingClassTypes eIndex, 
 	}
 }
 
-int CvPlayer::getUnitClassProductionModifier(UnitClassTypes eIndex) const
+int CvPlayer::getUnitProductionModifier(UnitTypes eIndex) const
 {
-	return m_paiUnitClassProductionModifier[eIndex];
+	return m_paiUnitProductionModifier[eIndex];
 }
 
-void CvPlayer::changeUnitClassProductionModifier(UnitClassTypes eIndex, int iChange)
+void CvPlayer::changeUnitProductionModifier(UnitTypes eIndex, int iChange)
 {
 	if (iChange != 0)
 	{
-		m_paiUnitClassProductionModifier[eIndex] = (m_paiUnitClassProductionModifier[eIndex] + iChange);
+		m_paiUnitProductionModifier[eIndex] = (m_paiUnitProductionModifier[eIndex] + iChange);
 	}
 }
 
@@ -32873,9 +32666,7 @@ void CvPlayer::changeForeignUnhappyPercent(int iChange) {
 		m_iForeignUnhappyPercent += iChange;
 	}
 }
-/************************************************************************************************/
-/* Afforess                                                END                                  */
-/************************************************************************************************/
+
 // < M.A.D. Nukes Start >
 int CvPlayer::getMADIncoming() const
 {
@@ -33343,9 +33134,9 @@ void CvPlayer::clearModifierTotals()
 		m_paiImprovementUpgradeRateModifierSpecific[iI] = 0;
 	}
 
-	for (iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
+	for (iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
-		m_paiUnitClassProductionModifier[iI] = 0;
+		m_paiUnitProductionModifier[iI] = 0;
 	}
 
 	for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
@@ -33363,11 +33154,6 @@ void CvPlayer::clearModifierTotals()
 	for (iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
 	{
 		m_paiBuildingClassProductionModifier[iI] = 0;
-	}
-
-	for (iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
-	{
-		m_paiUnitClassProductionModifier[iI] = 0;
 	}
 
 	for (iI = 0; iI < GC.getNumTerrainInfos(); iI++)
@@ -33454,15 +33240,8 @@ void CvPlayer::clearModifierTotals()
 		m_aiCapitalYieldRateModifier[iI] = 0;
 		m_aiExtraYieldThreshold[iI] = 0;
 		m_aiTradeYieldModifier[iI] = 0;
-/************************************************************************************************/
-/* Afforess	                  Start		 04/15/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 		m_aiLandmarkYield[iI] = 0;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 		//TB Traits begin
 		m_aiFreeCityYield[iI] = 0;
 		m_aiSpecialistExtraYield[iI] = 0;
@@ -33585,11 +33364,7 @@ void CvPlayer::processTrait(TraitTypes eTrait, int iChange)
 	//		changeNoCivicUpkeepCount(((CivicOptionTypes)iJ), iChange);
 	//	}
 	//}
-/************************************************************************************************/
-/* Afforess	                  Start		 08/26/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	for (iI = 0; iI < GC.getNumImprovementInfos(); iI++)
 	{
 		for (iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
@@ -33597,9 +33372,7 @@ void CvPlayer::processTrait(TraitTypes eTrait, int iChange)
 			changeImprovementYieldChange(((ImprovementTypes)iI), ((YieldTypes)iJ), (GC.getTraitInfo(eTrait).getImprovementYieldChange(iI, iJ) * iChange));
 		}
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 	//TB Traits begin
 	if (GC.getTraitInfo(eTrait).getMaxAnarchy() > -1)
 	{
