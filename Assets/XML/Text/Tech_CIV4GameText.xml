@@ -1108,7 +1108,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ANCESTOR_WORSHIP_STRATEGY</Tag>
 		<English>TBD</English>
-		<Polish>Odblokowuje [COLOR_BUILDING_TEXT]Ambasadę Chińską[COLOR_REVERT] i [COLOR_BUILDING_TEXT]Kaplicę Bożka[COLOR_REVERT].</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ANCIENT_BALLISTICS</Tag>
@@ -2292,7 +2291,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ASSEMBLY_LINE_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Assembly Line[COLOR_REVERT] allows you to build [COLOR_UNIT_TEXT]Early Destroyer[COLOR_REVERT] and [COLOR_UNIT_TEXT]Pre-Dreadnought[COLOR_REVERT] (with [COLOR_TECH_TEXT]Artillery[COLOR_REVERT] and [COLOR_TECH_TEXT]Screw Propeller[COLOR_REVERT]). It also enables construction of the [COLOR_BUILDING_TEXT]Factory[COLOR_REVERT] building and is required for the [COLOR_BUILDING_TEXT]Coal Plant[COLOR_REVERT] and [COLOR_BUILDING_TEXT]Oil Plant[COLOR_REVERT]. The tech enables [COLOR_HIGHLIGHT_TEXT]Corporate[COLOR_REVERT] welfare civic.</English>
-		<French>[COLOR_TECH_TEXT]Travail à la chaîne[COLOR_REVERT] vous permet de fabriquer des [COLOR_UNIT_TEXT]Contre-torpilleurs basiques[COLOR_REVERT] et des [COLOR_UNIT_TEXT]Cuirassés à coque en fer[COLOR_REVERT] (avec [COLOR_TECH_TEXT]Artillerie[COLOR_REVERT] et [COLOR_TECH_TEXT]Vis hélicoïdale[COLOR_REVERT]). Rend également actif la construction des [COLOR_BUILDING_TEXT]Usine[COLOR_REVERT] et est requis pour les [COLOR_BUILDING_TEXT]Centrales thermiques (charbon)[COLOR_REVERT] et les [COLOR_BUILDING_TEXT]Raffineries[COLOR_REVERT]. La Tech. rend actif la doctrine  [COLOR_HIGHLIGHT_TEXT]Société commerciale[COLOR_REVERT].</French>
+		<French>[COLOR_TECH_TEXT]Travail à la chaîne[COLOR_REVERT] vous permet de fabriquer des [COLOR_UNIT_TEXT]Contre-torpilleurs basiques[COLOR_REVERT] et des [COLOR_UNIT_TEXT]Cuirassés à coque en fer[COLOR_REVERT] (avec [COLOR_TECH_TEXT]Artillerie[COLOR_REVERT] et [COLOR_TECH_TEXT]Vis hélicoïdale[COLOR_REVERT]). Rend également actif la construction des [COLOR_BUILDING_TEXT]Usine[COLOR_REVERT] et est requis pour les [COLOR_BUILDING_TEXT]Centrales thermiques (charbon)[COLOR_REVERT] et les [COLOR_BUILDING_TEXT]Raffineries[COLOR_REVERT]. La Tech. rend actif la doctrine  [COLOR_HIGHLIGHT_TEXT]Corporation[COLOR_REVERT].</French>
 		<Spanish>La [COLOR_TECH_TEXT]Cadena de montaje[COLOR_REVERT] te permite construir [COLOR_UNIT_TEXT]Destructores antiguos[COLOR_REVERT] y [COLOR_UNIT_TEXT]Buques de línea pre-Dreadnought[COLOR_REVERT] (con la [COLOR_TECH_TEXT]Artillería[COLOR_REVERT] y la [COLOR_TECH_TEXT]Propulsión a hélice[COLOR_REVERT]). También permite la construcción del edificio de la [COLOR_BUILDING_TEXT]Fábrica[COLOR_REVERT], y se requiere para la [COLOR_BUILDING_TEXT]Central térmica[COLOR_REVERT] y la [COLOR_BUILDING_TEXT]Central térmica de petróleo[COLOR_REVERT]. Esta tecnología desbloquea el principio de Bienestar de las [COLOR_HIGHLIGHT_TEXT]Corporaciones[COLOR_REVERT].</Spanish>
 	</TEXT>
 	<TEXT>
