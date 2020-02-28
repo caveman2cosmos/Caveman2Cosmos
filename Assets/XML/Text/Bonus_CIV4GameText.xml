@@ -3065,10 +3065,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ALIEN_HYBRID</Tag>
 		<English>Human Mod (Alien Hybrid)</English>
+		<Italian>Umano augmentato (Ibrido alieno)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ALIEN_HYBRID_PEDIA</Tag>
 		<English>A permanent change in human psyche, physiology, or nature.</English>
+		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ARCHAILECT</Tag>
@@ -4439,8 +4441,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MEDICAL_TRICODERS_PEDIA</Tag>
-		<English>TBD</English>
-		<Polish>Mini komputery medyczno-diagnostyczne.</Polish>
+		<English>A medical tricorder is a handheld portable scanning device to be used by consumers to self-diagnose medical conditions within seconds and take basic vital measurements, such as blood pressure, temperature, and flow in a noninvasive way. It can diagnose a person's state of health either as a standalone device or as a connection to medical databases via an Internet connection. The idea of a medical tricorder comes from an imaginary device on the science fiction TV show Star Trek.</English>
+		<Italian>Un tricorder medico è un dispositivo medico portatile che può essere utilizzato per autodiagnosticare condizioni mediche in pochi secondi e per eseguire misurazioni vitali di base, come la pressione, la temperatura e il flusso sanguigno in modo non invasivo. Può diagnosticare lo stato di salute di una persona come dispositivo autonomo oppure connettendosi tramite Internet a dei database medici. L'idea di un tricorder medico proviene da un dispositivo immaginario dello show televisivo di fantascienza Star Trek.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MELANESIAN</Tag>
@@ -5352,8 +5354,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PEAT_PEDIA</Tag>
-		<English>Peat (turf) is an accumulation of partially decayed vegetation. One of the most common components is Sphagnum moss, although many other plants can contribute. Soils that contain mostly peat are known as a histosol. Peat forms in wetland conditions, where flooding obstructs flows of oxygen from the atmosphere, slowing rates of decomposition.</English>
-		<Polish>Torf - skała osadowa powstała w wyniku zachodzących w szczególnych warunkach przemian obumarłych szczątków roślinnych, najmłodszy węgiel kopalny. Zawiera mniej niż 60% węgla. Przez wieki torf wydobywany z torfowiska był używany jako opał. Obecnie na niewielką skalę służy również jako opał w postaci torfu opałowego lub półkoksu torfowego. Nadal w Bilansie zasobów kopalin torf figuruje jako surowiec energetyczny. Do tej pory torf jest wykorzystywany do produkcji energii elektrycznej w Irlandii i Finlandii.</Polish>
+		<English>Peat, also known as turf, is an accumulation of partially decayed vegetation or organic matter. Peat forms in wetland conditions, where flooding or stagnant water obstructs the flow of oxygen from the atmosphere, slowing the rate of decomposition. The peatland ecosystem is the most efficient carbon sink on the planet, because peatland plants capture carbon dioxide naturally released from the peat, maintaining an equilibrium. Over time, the formation of peat is often the first step in the geological formation of fossil fuels such as coal, particularly low-grade coal such as lignite. Peat is harvested as an important source of fuel in certain parts of the world.</English>
+		<Italian>La torba è un accumulo di vegetazione parzialmente decomposta o di materia organica. La torba si forma in zone umide, dove inondazioni o acqua stagnante ostruiscono il flusso di ossigeno dall'atmosfera, rallentando il tasso di decomposizione. Una torbiera è il dissipatore di carbonio più efficiente del pianeta, perché le piante catturano l'anidride carbonica rilasciata naturalmente, mantenendo un equilibrio. Nel tempo, la formazione della torba è spesso il primo passo nella formazione geologica di combustibili fossili come il carbone, in particolare quello di bassa qualità come la lignite. La torba viene usata come importante fonte di combustibile in alcune parti del mondo.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PELTS</Tag>
@@ -7129,7 +7131,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TIN_ORE</Tag>
 		<English>Tin Ore</English>
-		<French>Minerai d'Etain</French>
+		<French>Minerai d'etain</French>
 		<Italian>Stagno grezzo</Italian>
 		<Polish>Ruda Cyny</Polish>
 	</TEXT>
