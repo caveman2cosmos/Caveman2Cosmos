@@ -3756,6 +3756,10 @@
 		<Polish>Zbuduj [LINK=IMPROVEMENT_MODERN_MINE]Nowoczesną Kopalnię[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILD_EARLY_MOUNTAIN_MINE</Tag>
+		<English>Build [LINK=IMPROVEMENT_EARLY_MOUNTAIN_MINE]Early Mountain Mine[\LINK]</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILD_MOUNTAIN_MINE</Tag>
 		<English>Build [LINK=IMPROVEMENT_MOUNTAIN_MINE]Mountain Mine[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_MOUNTAIN_MINE]Mine de la montagne[\LINK]</French>
