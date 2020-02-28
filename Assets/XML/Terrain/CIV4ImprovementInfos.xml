@@ -11691,6 +11691,9 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 				</BonusTypeStruct>
 			</BonusTypeStructs>
 			<ImprovementUpgrade>IMPROVEMENT_QUARRY</ImprovementUpgrade>
+			<AlternativeImprovementUpgradeTypes>
+				<ImprovementType>IMPROVEMENT_MOUNTAIN_MINE</ImprovementType>
+			</AlternativeImprovementUpgradeTypes>
 		</ImprovementInfo>
 		<!-- Mine -->
 		<ImprovementInfo>
