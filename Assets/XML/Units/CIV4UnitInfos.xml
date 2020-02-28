@@ -698,6 +698,10 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -1013,6 +1017,10 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -1324,6 +1332,10 @@ Base XP gained when defending
 				</Build>
 				<Build>
 					<BuildType>BUILD_SHAFT_MINE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1655,6 +1667,10 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -1980,6 +1996,10 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -2295,6 +2315,10 @@ Base XP gained when defending
 				</Build>
 				<Build>
 					<BuildType>BUILD_SHAFT_MINE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2619,6 +2643,10 @@ Base XP gained when defending
 				</Build>
 				<Build>
 					<BuildType>BUILD_SHAFT_MINE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2952,6 +2980,10 @@ Base XP gained when defending
 				</Build>
 				<Build>
 					<BuildType>BUILD_SHAFT_MINE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3332,6 +3364,10 @@ Base XP gained when defending
 				</Build>
 				<Build>
 					<BuildType>BUILD_SHAFT_MINE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3722,6 +3758,10 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -4102,6 +4142,10 @@ Base XP gained when defending
 				</Build>
 				<Build>
 					<BuildType>BUILD_SHAFT_MINE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -68201,6 +68245,10 @@ iTradeMultiplier>3</iTradeMultiplier>
 				</Build>
 				<Build>
 					<BuildType>BUILD_SHAFT_MINE_SLAVE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE_SLAVE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>

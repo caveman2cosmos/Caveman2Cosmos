@@ -9585,6 +9585,14 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_EARLY_MOUNTAIN_MINE</ImprovementType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>-1</iYield>
+						<iYield>0</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_MOUNTAIN_MINE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
@@ -10391,6 +10399,14 @@
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_SHAFT_MINE</ImprovementType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>-1</iYield>
+						<iYield>0</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_EARLY_MOUNTAIN_MINE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
@@ -24044,6 +24060,14 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_EARLY_MOUNTAIN_MINE</ImprovementType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+						<iYield>0</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_MOUNTAIN_MINE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
@@ -24149,6 +24173,10 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_SHAFT_MINE</BuildType>
+					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
+				</BuildWorkerSpeedModifierType>
+				<BuildWorkerSpeedModifierType>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -25484,6 +25512,14 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_EARLY_MOUNTAIN_MINE</ImprovementType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+						<iYield>0</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_MOUNTAIN_MINE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
@@ -25521,6 +25557,10 @@
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_SHAFT_MINE</BuildType>
+					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
+				</BuildWorkerSpeedModifierType>
+				<BuildWorkerSpeedModifierType>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -26507,6 +26547,14 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_EARLY_MOUNTAIN_MINE</ImprovementType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>-1</iYield>
+						<iYield>0</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_MOUNTAIN_MINE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
@@ -26612,6 +26660,10 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_SHAFT_MINE</BuildType>
+					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
+				</BuildWorkerSpeedModifierType>
+				<BuildWorkerSpeedModifierType>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -27942,6 +27994,14 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_EARLY_MOUNTAIN_MINE</ImprovementType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>-1</iYield>
+						<iYield>0</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_MOUNTAIN_MINE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
@@ -27979,6 +28039,10 @@
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_SHAFT_MINE</BuildType>
+					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
+				</BuildWorkerSpeedModifierType>
+				<BuildWorkerSpeedModifierType>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>

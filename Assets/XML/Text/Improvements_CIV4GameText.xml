@@ -1319,6 +1319,14 @@
 		<Polish>Współczesny Wiatrak</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_EARLY_MOUNTAIN_MINE</Tag>
+		<English>Early Mountain Mine</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_EARLY_MOUNTAIN_MINE_PEDIA</Tag>
+		<English>Ancient mining site for mountains</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_MOUNTAIN_MINE</Tag>
 		<English>Mountain Mine</English>
 		<French>Mine de la montagne</French>
