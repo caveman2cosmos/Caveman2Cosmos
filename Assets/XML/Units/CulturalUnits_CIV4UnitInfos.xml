@@ -3638,7 +3638,7 @@
 				<Or>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_OIL_PRODUCTS</ID>
+						<ID>BONUS_PETROLEUM_PRODUCTS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -8453,7 +8453,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_YEOMANRY</PrereqTech>
-			<BonusType>BONUS_BENIN</BonusType>
+			<BonusType>BONUS_BENINESE</BonusType>
 			<iCost>290</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>8</iCombat>
@@ -8942,7 +8942,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_SPECIES_UPLIFTING</PrereqTech>
-			<BonusType>BONUS_CETACEA_SAPIEN</BonusType>
+			<BonusType>BONUS_CETACEA_SAPIENS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_MECHS</BonusType>
 			</PrereqBonuses>
@@ -10881,7 +10881,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
-			<BonusType>BONUS_FRANKS</BonusType>
+			<BonusType>BONUS_FRANKISH</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_COPPER_WARES</BonusType>
 				<BonusType>BONUS_BRONZE_WARES</BonusType>
@@ -11839,7 +11839,7 @@
 			<PrereqTech>TECH_URBAN_CULTURE</PrereqTech>
 			<BonusType>BONUS_SOMALI</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			</PrereqBonuses>
 			<iCost>1100</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
@@ -16248,7 +16248,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_AUTOMATIC_WEAPONS</PrereqTech>
-			<BonusType>BONUS_NEW_ZEALAND</BonusType>
+			<BonusType>BONUS_NEW_ZEALANDER</BonusType>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -17779,7 +17779,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
-			<BonusType>BONUS_EPIRUS</BonusType>
+			<BonusType>BONUS_EPIROTE</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_COPPER_WARES</BonusType>
 				<BonusType>BONUS_BRONZE_WARES</BonusType>
@@ -18491,7 +18491,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
-			<BonusType>BONUS_MACEDONIA</BonusType>
+			<BonusType>BONUS_MACEDONIAN</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_COPPER_WARES</BonusType>
 				<BonusType>BONUS_BRONZE_WARES</BonusType>
@@ -19680,7 +19680,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_OIL_PRODUCTS</ID>
+						<ID>BONUS_PETROLEUM_PRODUCTS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -20538,7 +20538,7 @@
 				<UnitType>UNIT_MUSKETMAN</UnitType>
 			</UnitUpgrades>
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
-			<BonusType>BONUS_KITARA</BonusType>
+			<BonusType>BONUS_KITARAN</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
@@ -20771,7 +20771,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<BonusType>BONUS_KONJO</BonusType>
+			<BonusType>BONUS_KONJAN</BonusType>
 			<PrereqTech>TECH_ROCKETRY</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_MECHANIZED_WARFARE</PrereqTech>
@@ -21009,7 +21009,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
-			<BonusType>BONUS_KUSH</BonusType>
+			<BonusType>BONUS_KUSHITE</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_COPPER_WARES</BonusType>
 				<BonusType>BONUS_BRONZE_WARES</BonusType>
@@ -21291,7 +21291,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_SUBMARINE_WARFARE</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_KUWAIT</BonusType>
+			<BonusType>BONUS_KUWAITI</BonusType>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -21386,7 +21386,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
-			<BonusType>BONUS_LA_PLATA</BonusType>
+			<BonusType>BONUS_LA_PLATAN</BonusType>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -21727,7 +21727,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqTech>TECH_URBAN_CULTURE</PrereqTech>
-			<BonusType>BONUS_LEBANON</BonusType>
+			<BonusType>BONUS_LEBANESE</BonusType>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -22257,7 +22257,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
-			<BonusType>BONUS_LONGOBARDI</BonusType>
+			<BonusType>BONUS_LONGOBARDIAN</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_COPPER_WARES</BonusType>
 				<BonusType>BONUS_BRONZE_WARES</BonusType>
@@ -22814,7 +22814,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
-			<BonusType>BONUS_LUSITANI</BonusType>
+			<BonusType>BONUS_LUSITANIAN</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_COPPER_WARES</BonusType>
 				<BonusType>BONUS_BRONZE_WARES</BonusType>
@@ -23296,7 +23296,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
-			<BonusType>BONUS_ARAGON</BonusType>
+			<BonusType>BONUS_ARAGONESE</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_COPPER_WARES</BonusType>
 				<BonusType>BONUS_IRON_WARES</BonusType>
@@ -23409,7 +23409,7 @@
 			</NotUnitAIs>
 			<PrereqBuilding>BUILDING_CAMEL_TRAINER</PrereqBuilding>
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
-			<BonusType>BONUS_MAMELUKS</BonusType>
+			<BonusType>BONUS_MAMELUK</BonusType>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -24710,7 +24710,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_ARCHERY</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_MITTANNI</BonusType>
+			<BonusType>BONUS_MITANNI</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_HORSE</BonusType>
 			</PrereqBonuses>
@@ -25933,7 +25933,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_SMITHING</PrereqTech>
-			<BonusType>BONUS_MURRI</BonusType>
+			<BonusType>BONUS_MARRI</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
@@ -27336,7 +27336,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<ForceObsoleteTech>TECH_OPTICS</ForceObsoleteTech>
-			<BonusType>BONUS_OMAN</BonusType>
+			<BonusType>BONUS_OMANI</BonusType>
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_PIRACY</PrereqTech>
@@ -28416,7 +28416,7 @@
 					<Or>
 						<Has>
 							<GOMType>GOM_BONUS</GOMType>
-							<ID>BONUS_OIL_PRODUCTS</ID>
+							<ID>BONUS_PETROLEUM_PRODUCTS</ID>
 						</Has>
 						<Has>
 							<GOMType>GOM_BONUS</GOMType>
@@ -29385,7 +29385,7 @@
 			<ForceObsoleteTech>TECH_ENGINEERING</ForceObsoleteTech>
 			<PrereqBuilding>BUILDING_CARAVAN_POST</PrereqBuilding>
 			<PrereqTech>TECH_TRADE</PrereqTech>
-			<BonusType>BONUS_AVERNI</BonusType>
+			<BonusType>BONUS_ARVERNIAN</BonusType>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -30343,7 +30343,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_RIFLING</PrereqTech>
-			<BonusType>BONUS_QUEBEC</BonusType>
+			<BonusType>BONUS_QUEBECKER</BonusType>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -30582,7 +30582,7 @@
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_HORSE_TRAINER</PrereqBuilding>
 			<PrereqTech>TECH_STIRRUP</PrereqTech>
-			<BonusType>BONUS_AVARS</BonusType>
+			<BonusType>BONUS_AVARIC</BonusType>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -31392,7 +31392,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
-			<BonusType>BONUS_SAFAVIDS</BonusType>
+			<BonusType>BONUS_SAFAVID</BonusType>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -31653,7 +31653,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_TRENCH_WARFARE</PrereqTech>
-			<BonusType>BONUS_SAMOA</BonusType>
+			<BonusType>BONUS_SAMOAN</BonusType>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -31789,7 +31789,7 @@
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_HORSE_TRAINER</PrereqBuilding>
 			<PrereqTech>TECH_STIRRUP</PrereqTech>
-			<BonusType>BONUS_SARMATIANS</BonusType>
+			<BonusType>BONUS_SARMATIAN</BonusType>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -34081,7 +34081,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_SEMI_AUTOMATIC_WEAPONS</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_SURINAM</BonusType>
+			<BonusType>BONUS_SURINAMESE</BonusType>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -34434,7 +34434,7 @@
 			</NotUnitAIs>
 			<PrereqBuilding>BUILDING_HORSE_TRAINER</PrereqBuilding>
 			<PrereqTech>TECH_COMPASS</PrereqTech>
-			<BonusType>BONUS_TAJIKS</BonusType>
+			<BonusType>BONUS_TAJIK</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_HORSE</BonusType>
 			</PrereqBonuses>
@@ -35208,7 +35208,7 @@
 				<UnitType>UNIT_HEAVY_AXEMAN</UnitType>
 			</UnitUpgrades>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
-			<BonusType>BONUS_ADENA</BonusType>
+			<BonusType>BONUS_ADENAN</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_COPPER_WARES</BonusType>
 				<BonusType>BONUS_BRONZE_WARES</BonusType>
@@ -35328,7 +35328,7 @@
 			<ForceObsoleteTech>TECH_SUBMARINE_WARFARE</ForceObsoleteTech>
 			<PrereqBuilding>BUILDING_SHIPWRIGHT</PrereqBuilding>
 			<PrereqTech>TECH_CHEMISTRY</PrereqTech>
-			<BonusType>BONUS_BAHRAIN</BonusType>
+			<BonusType>BONUS_BAHRAINI</BonusType>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -37509,7 +37509,7 @@
 			<PrereqTech>TECH_ADVANCED_ROCKETRY</PrereqTech>
 			<BonusType>BONUS_TUNISIAN</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
@@ -38261,7 +38261,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-			<BonusType>BONUS_UZBEKS</BonusType>
+			<BonusType>BONUS_UZBEK</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_SULPHUR</BonusType>
 			</PrereqBonuses>
@@ -38384,7 +38384,7 @@
 			</UnitAIs>
 			<ForceObsoleteTech>TECH_ENGINEERING</ForceObsoleteTech>
 			<PrereqTech>TECH_BARTER</PrereqTech>
-			<BonusType>BONUS_VALDIVIA</BonusType>
+			<BonusType>BONUS_VALDIVIAN</BonusType>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -38490,7 +38490,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
-			<BonusType>BONUS_VANATU</BonusType>
+			<BonusType>BONUS_VANUATUAN</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_COPPER_WARES</BonusType>
 				<BonusType>BONUS_BRONZE_WARES</BonusType>
@@ -39691,7 +39691,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_ASTROLABE</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_BANGLADESH</BonusType>
+			<BonusType>BONUS_BANGLADESHI</BonusType>
 			<iCost>440</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iMoves>4</iMoves>
@@ -40759,7 +40759,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
-			<BonusType>BONUS_YEMENESE</BonusType>
+			<BonusType>BONUS_YEMENI</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
@@ -40957,7 +40957,7 @@
 			</NotUnitAIs>
 			<PrereqBuilding>BUILDING_SMUGGLERS_SHANTY</PrereqBuilding>
 			<PrereqTech>TECH_ASTROLABE</PrereqTech>
-			<BonusType>BONUS_ZANZIBAR</BonusType>
+			<BonusType>BONUS_ZANZIBARI</BonusType>
 			<iCost>450</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iMoves>5</iMoves>
@@ -41292,7 +41292,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_SMITHING</PrereqTech>
-			<BonusType>BONUS_ZIMBABWE</BonusType>
+			<BonusType>BONUS_ZIMBABWEAN</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
@@ -41728,7 +41728,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_SMITHING</PrereqTech>
-			<BonusType>BONUS_BATAVI</BonusType>
+			<BonusType>BONUS_BATAVIAN</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
@@ -42550,7 +42550,7 @@
 				</Build>
 			</Builds>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
-			<BonusType>BONUS_BELIZE</BonusType>
+			<BonusType>BONUS_BELIZEAN</BonusType>
 			<ForceObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ForceObsoleteTech>
 			<iCost>140</iCost>
 			<iMoves>2</iMoves>
@@ -42663,7 +42663,7 @@
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_MUNITIONS_FACTORY</PrereqBuilding>
 			<PrereqTech>TECH_ADVANCED_ROCKETRY</PrereqTech>
-			<BonusType>BONUS_AFGHANISTAN</BonusType>
+			<BonusType>BONUS_AFGHAN</BonusType>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -43382,7 +43382,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_METALLURGY</PrereqTech>
 			<ForceObsoleteTech>TECH_FLINTLOCK</ForceObsoleteTech>
-			<BonusType>BONUS_BURGUNDI</BonusType>
+			<BonusType>BONUS_BURGUNDIAN</BonusType>
 			<iCost>385</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>12</iCombat>
@@ -44968,7 +44968,7 @@
 				<PrereqTech>TECH_HORSE_BREEDING</PrereqTech>
 				<PrereqTech>TECH_HERALDRY</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_CHORESM</BonusType>
+			<BonusType>BONUS_KHWARAZMIAN</BonusType>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -45248,7 +45248,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_OIL_PRODUCTS</ID>
+						<ID>BONUS_PETROLEUM_PRODUCTS</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -47209,7 +47209,7 @@
 			<PrereqTech>TECH_COMPOSITES</PrereqTech>
 			<BonusType>BONUS_FURAWI</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
@@ -48090,7 +48090,7 @@
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_HORSE_TRAINER</PrereqBuilding>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
-			<BonusType>BONUS_GOLDEN_HORDE</BonusType>
+			<BonusType>BONUS_KIPCHAK</BonusType>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -48314,7 +48314,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
-			<BonusType>BONUS_GUAM</BonusType>
+			<BonusType>BONUS_CHAMORRAN</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_COPPER_WARES</BonusType>
 				<BonusType>BONUS_BRONZE_WARES</BonusType>
@@ -48808,7 +48808,7 @@
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_HORSE_TRAINER</PrereqBuilding>
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
-			<BonusType>BONUS_GUATEMALA</BonusType>
+			<BonusType>BONUS_GUATEMALAN</BonusType>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -48989,7 +48989,7 @@
 			<ForceObsoleteTech>TECH_SUBMARINE_WARFARE</ForceObsoleteTech>
 			<PrereqBuilding>BUILDING_SHIPWRIGHT</PrereqBuilding>
 			<PrereqTech>TECH_CHEMISTRY</PrereqTech>
-			<BonusType>BONUS_GUYANA</BonusType>
+			<BonusType>BONUS_GUYANESE</BonusType>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -49084,7 +49084,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqTech>TECH_ROAD_BUILDING</PrereqTech>
-			<BonusType>BONUS_HELVETII</BonusType>
+			<BonusType>BONUS_HELVETIAN</BonusType>
 			<iCost>190</iCost>
 			<iMoves>3</iMoves>
 			<iCombat>6</iCombat>
@@ -49420,7 +49420,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_NAVAL_CANNON</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_ALGIER</BonusType>
+			<BonusType>BONUS_ALGERIAN</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_BRONZE_WARES</BonusType>
 				<BonusType>BONUS_IRON_WARES</BonusType>
@@ -49560,7 +49560,7 @@
 			<ForceObsoleteTech>TECH_SUBMARINE_WARFARE</ForceObsoleteTech>
 			<PrereqBuilding>BUILDING_SHIPWRIGHT</PrereqBuilding>
 			<PrereqTech>TECH_CHEMISTRY</PrereqTech>
-			<BonusType>BONUS_HONG_KONG</BonusType>
+			<BonusType>BONUS_HONGKONGER</BonusType>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -50964,7 +50964,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_MANUFACTURING</PrereqTech>
-			<BonusType>BONUS_IRAQUI</BonusType>
+			<BonusType>BONUS_IRAQI</BonusType>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -51712,7 +51712,7 @@
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_SIEGE_WORKSHOP</PrereqBuilding>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
-			<BonusType>BONUS_KHAZARS</BonusType>
+			<BonusType>BONUS_KHAZAR</BonusType>
 			<iCost>330</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>9</iCombat>

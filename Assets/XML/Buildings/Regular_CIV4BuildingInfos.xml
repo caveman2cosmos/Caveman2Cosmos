@@ -1997,7 +1997,7 @@
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GEMS</FreeBonus>
+			<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -2024,7 +2024,7 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GEMS</FreeBonus>
+			<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -2106,7 +2106,7 @@
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GEMS</FreeBonus>
+			<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -5677,7 +5677,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_COMMON_CLAY</BonusType>
+					<BonusType>BONUS_CLAY</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -7117,7 +7117,7 @@
 			<PrereqTech>TECH_AUTOMATED_ROBOTICS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_MEDICAL_TRICODERS</Bonus>
+			<Bonus>BONUS_MEDICAL_TRICORDERS</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_SERVICE_BOTS</Bonus>
 				<Bonus>BONUS_ANDROIDS</Bonus>
@@ -7326,7 +7326,7 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_OIL_PRODUCTS</Bonus>
+				<Bonus>BONUS_PETROLEUM_PRODUCTS</Bonus>
 				<Bonus>BONUS_BIOFUEL</Bonus>
 			</PrereqBonuses>
 			<PrereqOrBuildingClasses>
@@ -8951,7 +8951,7 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GRAIN</FreeBonus>
+			<FreeBonus>BONUS_GRAINS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -8994,7 +8994,7 @@
 			<YieldChanges>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<FreeBonus>BONUS_GRAIN</FreeBonus>
+			<FreeBonus>BONUS_GRAINS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -9938,7 +9938,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_GEMS</BonusType>
+					<BonusType>BONUS_GEMSTONE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -10069,7 +10069,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_GEMS</BonusType>
+					<BonusType>BONUS_GEMSTONE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -10167,7 +10167,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_GEMS</BonusType>
+					<BonusType>BONUS_GEMSTONE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -11231,7 +11231,7 @@
 				<Or>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_GRAIN</ID>
+						<ID>BONUS_GRAINS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -15627,7 +15627,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FERMENTATION</PrereqTech>
-			<Bonus>BONUS_GRAIN</Bonus>
+			<Bonus>BONUS_GRAINS</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_GLASSWARE</Bonus>
 				<Bonus>BONUS_POTTERY</Bonus>
@@ -15798,7 +15798,7 @@
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqBonuses>
 				<Bonus>BONUS_FINE_CLAY</Bonus>
-				<Bonus>BONUS_COMMON_CLAY</Bonus>
+				<Bonus>BONUS_CLAY</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -15854,7 +15854,7 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqBonuses>
 				<Bonus>BONUS_FINE_CLAY</Bonus>
-				<Bonus>BONUS_COMMON_CLAY</Bonus>
+				<Bonus>BONUS_CLAY</Bonus>
 			</PrereqBonuses>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
@@ -17035,7 +17035,7 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_OIL_PRODUCTS</Bonus>
+				<Bonus>BONUS_PETROLEUM_PRODUCTS</Bonus>
 				<Bonus>BONUS_BIOFUEL</Bonus>
 			</PrereqBonuses>
 			<!-- Obsolescence -->
@@ -20842,7 +20842,7 @@
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqBonuses>
 				<Bonus>BONUS_FINE_CLAY</Bonus>
-				<Bonus>BONUS_COMMON_CLAY</Bonus>
+				<Bonus>BONUS_CLAY</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -21682,7 +21682,7 @@
 			<Bonus>BONUS_SULPHUR</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_OIL</Bonus>
-				<Bonus>BONUS_OIL_PRODUCTS</Bonus>
+				<Bonus>BONUS_PETROLEUM_PRODUCTS</Bonus>
 			</PrereqBonuses>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
@@ -22052,7 +22052,7 @@
 			<!-- Special Yield and Commerce modifiers -->
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
-					<BonusType>BONUS_GRAIN</BonusType>
+					<BonusType>BONUS_GRAINS</BonusType>
 					<YieldModifiers>
 						<iYield>1</iYield>
 					</YieldModifiers>
@@ -23596,7 +23596,7 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GEMS</FreeBonus>
+			<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -24193,7 +24193,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_GEMS</BonusType>
+					<BonusType>BONUS_GEMSTONE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -24297,7 +24297,7 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_COMMON_CLAY</FreeBonus>
+			<FreeBonus>BONUS_CLAY</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>50</iHurryCostModifier>
@@ -25924,7 +25924,7 @@
 			</CommerceChangeDoubleTimes>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_FURS</BonusType>
+					<BonusType>BONUS_FUR</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -27730,7 +27730,7 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GRAIN</FreeBonus>
+			<FreeBonus>BONUS_GRAINS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -27773,7 +27773,7 @@
 			<YieldChanges>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<FreeBonus>BONUS_GRAIN</FreeBonus>
+			<FreeBonus>BONUS_GRAINS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -28362,7 +28362,7 @@
 					</YieldModifiers>
 				</BonusYieldModifier>
 				<BonusYieldModifier>
-					<BonusType>BONUS_GRAIN</BonusType>
+					<BonusType>BONUS_GRAINS</BonusType>
 					<YieldModifiers>
 						<iYield>1</iYield>
 					</YieldModifiers>
@@ -30404,7 +30404,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_GEOTHERMAL_SEA_VENT</BonusType>
+					<BonusType>BONUS_HYDROTHERMAL_VENT</BonusType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>1</iCommerce>
@@ -31035,7 +31035,7 @@
 			<CommerceChanges>
 				<iCommerce>6</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GEMS</FreeBonus>
+			<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -32650,7 +32650,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MACHINERY</PrereqTech>
-			<Bonus>BONUS_GRAIN</Bonus>
+			<Bonus>BONUS_GRAINS</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOD</Bonus>
 				<Bonus>BONUS_PRIME_TIMBER</Bonus>
@@ -33488,7 +33488,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_METH</BonusType>
+					<BonusType>BONUS_METHAMPHETAMINE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -33517,7 +33517,7 @@
 					<iHealthChange>-1</iHealthChange>
 				</BonusHealthChange>
 				<BonusHealthChange>
-					<BonusType>BONUS_METH</BonusType>
+					<BonusType>BONUS_METHAMPHETAMINE</BonusType>
 					<iHealthChange>-1</iHealthChange>
 				</BonusHealthChange>
 			</BonusHealthChanges>
@@ -33736,7 +33736,7 @@
 			<!-- Special Yield and Commerce modifiers -->
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
-					<BonusType>BONUS_GRAIN</BonusType>
+					<BonusType>BONUS_GRAINS</BonusType>
 					<YieldModifiers>
 						<iYield>1</iYield>
 					</YieldModifiers>
@@ -35721,7 +35721,7 @@
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GEMS</FreeBonus>
+			<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -38097,7 +38097,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_GRAIN</BonusType>
+					<BonusType>BONUS_GRAINS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -38385,7 +38385,7 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_OMEGA_ACIDS</FreeBonus>
+			<FreeBonus>BONUS_OMEGA_FATTY_ACID</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -38482,7 +38482,7 @@
 			<bRiver>1</bRiver>
 			<Bonus>BONUS_STEEL_INGOTS</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_OIL_PRODUCTS</Bonus>
+				<Bonus>BONUS_PETROLEUM_PRODUCTS</Bonus>
 				<Bonus>BONUS_BIOFUEL</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
@@ -40725,7 +40725,7 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GEMS</FreeBonus>
+			<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -42150,7 +42150,7 @@
 			<!-- Construction cost -->
 			<iCost>40</iCost>
 			<!-- Main effects -->
-			<FreeBonus>BONUS_FURS</FreeBonus>
+			<FreeBonus>BONUS_FUR</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special Yield and Commerce modifiers -->
 			<ObsoleteSafeCommerceChanges>
@@ -42756,7 +42756,7 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GEMS</FreeBonus>
+			<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -42961,7 +42961,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<Bonus>BONUS_OIL_PRODUCTS</Bonus>
+			<Bonus>BONUS_PETROLEUM_PRODUCTS</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_AUTOMOBILES</Bonus>
 			</PrereqBonuses>
@@ -43073,7 +43073,7 @@
 			<PrereqTech>TECH_MINING</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqBonuses>
-				<Bonus>BONUS_GEMS</Bonus>
+				<Bonus>BONUS_GEMSTONE</Bonus>
 			</PrereqBonuses>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
@@ -43538,7 +43538,7 @@
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GEMS</FreeBonus>
+			<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -44782,7 +44782,7 @@
 					</YieldModifiers>
 				</BonusYieldModifier>
 				<BonusYieldModifier>
-					<BonusType>BONUS_GRAIN</BonusType>
+					<BonusType>BONUS_GRAINS</BonusType>
 					<YieldModifiers>
 						<iYield>1</iYield>
 					</YieldModifiers>
@@ -45289,7 +45289,7 @@
 			<!-- Special Yield and Commerce modifiers -->
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
-					<BonusType>BONUS_GRAIN</BonusType>
+					<BonusType>BONUS_GRAINS</BonusType>
 					<YieldModifiers>
 						<iYield>1</iYield>
 					</YieldModifiers>
@@ -47180,7 +47180,7 @@
 					</YieldModifiers>
 				</BonusYieldModifier>
 				<BonusYieldModifier>
-					<BonusType>BONUS_GRAIN</BonusType>
+					<BonusType>BONUS_GRAINS</BonusType>
 					<YieldModifiers>
 						<iYield>1</iYield>
 					</YieldModifiers>
@@ -47629,7 +47629,7 @@
 				<Bonus>BONUS_PLASTIC</Bonus>
 				<Bonus>BONUS_CLOTH</Bonus>
 				<Bonus>BONUS_LEATHER</Bonus>
-				<Bonus>BONUS_FURS</Bonus>
+				<Bonus>BONUS_FUR</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -47704,7 +47704,7 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_CLOTH</Bonus>
 				<Bonus>BONUS_LEATHER</Bonus>
-				<Bonus>BONUS_FURS</Bonus>
+				<Bonus>BONUS_FUR</Bonus>
 			</PrereqBonuses>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
@@ -47983,7 +47983,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_GRAIN</BonusType>
+					<BonusType>BONUS_GRAINS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -48158,7 +48158,7 @@
 			<PrereqTech>TECH_VERTICAL_FLIGHT</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<PrereqBonuses>
-				<Bonus>BONUS_OIL_PRODUCTS</Bonus>
+				<Bonus>BONUS_PETROLEUM_PRODUCTS</Bonus>
 				<Bonus>BONUS_BIOFUEL</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
@@ -49244,7 +49244,7 @@
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_NANOTUBES</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_OIL_PRODUCTS</Bonus>
+				<Bonus>BONUS_PETROLEUM_PRODUCTS</Bonus>
 				<Bonus>BONUS_BIOFUEL</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
@@ -50129,7 +50129,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_GEMS</ID>
+						<ID>BONUS_GEMSTONE</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -51166,7 +51166,7 @@
 			<PrereqTech>TECH_POWERED_EXOSKELETON</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_ELECTROLYTE_CELLS</Bonus>
+			<Bonus>BONUS_ELECTROLYTIC_CELLS</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_PLATINUM_WARES</Bonus>
 			</PrereqBonuses>
@@ -51311,7 +51311,7 @@
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_OIL_PRODUCTS</FreeBonus>
+			<FreeBonus>BONUS_PETROLEUM_PRODUCTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -52852,7 +52852,7 @@
 			</SeaPlotYieldChanges>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_FURS</BonusType>
+					<BonusType>BONUS_FUR</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -54051,7 +54051,7 @@
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GEMS</FreeBonus>
+			<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -54195,7 +54195,7 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GEMS</FreeBonus>
+			<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -54538,7 +54538,7 @@
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GEMS</FreeBonus>
+			<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -54712,7 +54712,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_GEMS</BonusType>
+					<BonusType>BONUS_GEMSTONE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -55914,7 +55914,7 @@
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_CHEMICALS</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_OIL_PRODUCTS</Bonus>
+				<Bonus>BONUS_PETROLEUM_PRODUCTS</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -59625,7 +59625,7 @@
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_CHEMICALS</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_GRAIN</Bonus>
+				<Bonus>BONUS_GRAINS</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -62647,7 +62647,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_OIL_PRODUCTS</ID>
+						<ID>BONUS_PETROLEUM_PRODUCTS</ID>
 					</Has>
 				</And>
 			</ConstructCondition>
@@ -62868,7 +62868,7 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_MEDICAL_TRICODERS</FreeBonus>
+			<FreeBonus>BONUS_MEDICAL_TRICORDERS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -64526,7 +64526,7 @@
 			<CommerceChanges>
 				<iCommerce>20</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_METH</FreeBonus>
+			<FreeBonus>BONUS_METHAMPHETAMINE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertySpawnUnit>UNIT_STREET_GANG</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
@@ -65642,7 +65642,7 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GRAIN</FreeBonus>
+			<FreeBonus>BONUS_GRAINS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -65831,7 +65831,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_COMMON_CLAY</BonusType>
+					<BonusType>BONUS_CLAY</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -66376,7 +66376,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_COMMON_CLAY</BonusType>
+					<BonusType>BONUS_CLAY</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -66575,7 +66575,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_COMMON_CLAY</BonusType>
+					<BonusType>BONUS_CLAY</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -67400,7 +67400,7 @@
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_STEEL_WARES</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_OIL_PRODUCTS</Bonus>
+				<Bonus>BONUS_PETROLEUM_PRODUCTS</Bonus>
 				<Bonus>BONUS_BIOFUEL</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
@@ -67562,7 +67562,7 @@
 			<PrereqTech>TECH_REFRIGERATION</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_GRAIN</Bonus>
+			<Bonus>BONUS_GRAINS</Bonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_MODERN_GRANARY</BuildingClassType>
@@ -68972,7 +68972,7 @@
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_FINE_CLAY</Bonus>
-				<Bonus>BONUS_COMMON_CLAY</Bonus>
+				<Bonus>BONUS_CLAY</Bonus>
 			</PrereqBonuses>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
@@ -71710,7 +71710,7 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Bonus>BONUS_CHEMICALS</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_OIL_PRODUCTS</Bonus>
+				<Bonus>BONUS_PETROLEUM_PRODUCTS</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -71821,7 +71821,7 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GRAIN</FreeBonus>
+			<FreeBonus>BONUS_GRAINS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -72424,7 +72424,7 @@
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_OIL_PRODUCTS</FreeBonus>
+			<FreeBonus>BONUS_PETROLEUM_PRODUCTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special Health and Happiness  modifiers -->
 			<BonusHealthChanges>
@@ -72864,7 +72864,7 @@
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GEMS</FreeBonus>
+			<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -73978,7 +73978,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MACHINERY</PrereqTech>
-			<Bonus>BONUS_GRAIN</Bonus>
+			<Bonus>BONUS_GRAINS</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOD</Bonus>
 				<Bonus>BONUS_PRIME_TIMBER</Bonus>
@@ -74062,7 +74062,7 @@
 			<PrereqTech>TECH_FUEL_CELLS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_OMEGA_ACIDS</Bonus>
+			<Bonus>BONUS_OMEGA_FATTY_ACID</Bonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_FACTORY</BuildingClassType>
@@ -74085,7 +74085,7 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_ELECTROLYTE_CELLS</FreeBonus>
+			<FreeBonus>BONUS_ELECTROLYTIC_CELLS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -77725,7 +77725,7 @@
 					</YieldModifiers>
 				</BonusYieldModifier>
 				<BonusYieldModifier>
-					<BonusType>BONUS_GRAIN</BonusType>
+					<BonusType>BONUS_GRAINS</BonusType>
 					<YieldModifiers>
 						<iYield>1</iYield>
 					</YieldModifiers>
@@ -78689,7 +78689,7 @@
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_CHEMICALS</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_OIL_PRODUCTS</Bonus>
+				<Bonus>BONUS_PETROLEUM_PRODUCTS</Bonus>
 				<Bonus>BONUS_BIOFUEL</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
@@ -80127,7 +80127,7 @@
 			</CommerceChangeDoubleTimes>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_FURS</BonusType>
+					<BonusType>BONUS_FUR</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -80490,7 +80490,7 @@
 			<PrereqTech>TECH_POTTERY</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_FINE_CLAY</Bonus>
-				<Bonus>BONUS_COMMON_CLAY</Bonus>
+				<Bonus>BONUS_CLAY</Bonus>
 			</PrereqBonuses>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
@@ -80604,7 +80604,7 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqBonuses>
 				<Bonus>BONUS_FINE_CLAY</Bonus>
-				<Bonus>BONUS_COMMON_CLAY</Bonus>
+				<Bonus>BONUS_CLAY</Bonus>
 			</PrereqBonuses>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
@@ -82331,7 +82331,7 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GEMS</FreeBonus>
+			<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -82351,7 +82351,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GROUND_STONE</PrereqTech>
 			<bRiver>1</bRiver>
-			<Bonus>BONUS_GRAIN</Bonus>
+			<Bonus>BONUS_GRAINS</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_STONE</Bonus>
 			</PrereqBonuses>
@@ -82537,7 +82537,7 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GRAIN</FreeBonus>
+			<FreeBonus>BONUS_GRAINS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -82592,7 +82592,7 @@
 					</YieldModifiers>
 				</BonusYieldModifier>
 				<BonusYieldModifier>
-					<BonusType>BONUS_GRAIN</BonusType>
+					<BonusType>BONUS_GRAINS</BonusType>
 					<YieldModifiers>
 						<iYield>1</iYield>
 					</YieldModifiers>
@@ -84031,7 +84031,7 @@
 					<iHealthChange>1</iHealthChange>
 				</BonusHealthChange>
 				<BonusHealthChange>
-					<BonusType>BONUS_METH</BonusType>
+					<BonusType>BONUS_METHAMPHETAMINE</BonusType>
 					<iHealthChange>1</iHealthChange>
 				</BonusHealthChange>
 				<BonusHealthChange>
@@ -84116,7 +84116,7 @@
 					</YieldModifiers>
 				</BonusYieldModifier>
 				<BonusYieldModifier>
-					<BonusType>BONUS_GRAIN</BonusType>
+					<BonusType>BONUS_GRAINS</BonusType>
 					<YieldModifiers>
 						<iYield>1</iYield>
 					</YieldModifiers>
@@ -85080,7 +85080,7 @@
 			<YieldChanges>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<FreeBonus>BONUS_GRAIN</FreeBonus>
+			<FreeBonus>BONUS_GRAINS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -85112,7 +85112,7 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GRAIN</FreeBonus>
+			<FreeBonus>BONUS_GRAINS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -85166,7 +85166,7 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GRAIN</FreeBonus>
+			<FreeBonus>BONUS_GRAINS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -86832,7 +86832,7 @@
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GEMS</FreeBonus>
+			<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -86944,7 +86944,7 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GRAIN</FreeBonus>
+			<FreeBonus>BONUS_GRAINS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -88011,7 +88011,7 @@
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GEMS</FreeBonus>
+			<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -88355,7 +88355,7 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_OIL_PRODUCTS</Bonus>
+				<Bonus>BONUS_PETROLEUM_PRODUCTS</Bonus>
 				<Bonus>BONUS_BIOFUEL</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
@@ -89298,7 +89298,7 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_CLOTH</Bonus>
 				<Bonus>BONUS_LEATHER</Bonus>
-				<Bonus>BONUS_FURS</Bonus>
+				<Bonus>BONUS_FUR</Bonus>
 				<Bonus>BONUS_HIDE</Bonus>
 			</PrereqBonuses>
 			<PrereqOrBuildingClasses>
@@ -90104,7 +90104,7 @@
 			<CommerceChanges>
 				<iCommerce>-20</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_OIL_PRODUCTS</FreeBonus>
+			<FreeBonus>BONUS_PETROLEUM_PRODUCTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Defense effects -->
 			<iDCMAirbombMission>3</iDCMAirbombMission>
@@ -90324,7 +90324,7 @@
 					</YieldModifiers>
 				</BonusYieldModifier>
 				<BonusYieldModifier>
-					<BonusType>BONUS_GRAIN</BonusType>
+					<BonusType>BONUS_GRAINS</BonusType>
 					<YieldModifiers>
 						<iYield>1</iYield>
 					</YieldModifiers>
@@ -91852,7 +91852,7 @@
 			<PrereqTech>TECH_SKYROADS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqBonuses>
-				<Bonus>BONUS_OIL_PRODUCTS</Bonus>
+				<Bonus>BONUS_PETROLEUM_PRODUCTS</Bonus>
 				<Bonus>BONUS_BIOFUEL</Bonus>
 			</PrereqBonuses>
 			<!-- Construction cost -->
@@ -93578,7 +93578,7 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GRAIN</FreeBonus>
+			<FreeBonus>BONUS_GRAINS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -96319,7 +96319,7 @@
 			<!-- Special Health and Happiness  modifiers -->
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
-					<BonusType>BONUS_GEMS</BonusType>
+					<BonusType>BONUS_GEMSTONE</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
@@ -97692,7 +97692,7 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_STONE</Bonus>
 				<Bonus>BONUS_FINE_CLAY</Bonus>
-				<Bonus>BONUS_COMMON_CLAY</Bonus>
+				<Bonus>BONUS_CLAY</Bonus>
 			</PrereqBonuses>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
@@ -100585,7 +100585,7 @@
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<Bonus>BONUS_STEEL_WARES</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_OIL_PRODUCTS</Bonus>
+				<Bonus>BONUS_PETROLEUM_PRODUCTS</Bonus>
 				<Bonus>BONUS_BIOFUEL</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
@@ -100653,7 +100653,7 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_CLOTH</Bonus>
 				<Bonus>BONUS_LEATHER</Bonus>
-				<Bonus>BONUS_FURS</Bonus>
+				<Bonus>BONUS_FUR</Bonus>
 				<Bonus>BONUS_HIDE</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
@@ -100718,7 +100718,7 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_CLOTH</Bonus>
 				<Bonus>BONUS_LEATHER</Bonus>
-				<Bonus>BONUS_FURS</Bonus>
+				<Bonus>BONUS_FUR</Bonus>
 				<Bonus>BONUS_HIDE</Bonus>
 			</PrereqBonuses>
 			<PrereqOrBuildingClasses>
@@ -100990,7 +100990,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
-					<BonusType>BONUS_GEMS</BonusType>
+					<BonusType>BONUS_GEMSTONE</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
@@ -101898,7 +101898,7 @@
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GEMS</FreeBonus>
+			<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -102615,7 +102615,7 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqBonuses>
 				<Bonus>BONUS_FINE_CLAY</Bonus>
-				<Bonus>BONUS_COMMON_CLAY</Bonus>
+				<Bonus>BONUS_CLAY</Bonus>
 				<Bonus>BONUS_WOOD</Bonus>
 				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 				<Bonus>BONUS_TIN_WARES</Bonus>
@@ -103775,7 +103775,7 @@
 			<!-- Special Yield and Commerce modifiers -->
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
-					<BonusType>BONUS_GRAIN</BonusType>
+					<BonusType>BONUS_GRAINS</BonusType>
 					<YieldModifiers>
 						<iYield>1</iYield>
 					</YieldModifiers>
@@ -103823,7 +103823,7 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GEMS</FreeBonus>
+			<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -104066,7 +104066,7 @@
 				<Or>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_GRAIN</ID>
+						<ID>BONUS_GRAINS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -107267,7 +107267,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_WATERWHEELS</PrereqTech>
 			<bRiver>1</bRiver>
-			<Bonus>BONUS_GRAIN</Bonus>
+			<Bonus>BONUS_GRAINS</Bonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_GRANARY</BuildingClassType>
@@ -107926,7 +107926,7 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GRAIN</FreeBonus>
+			<FreeBonus>BONUS_GRAINS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -107969,7 +107969,7 @@
 			<YieldChanges>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<FreeBonus>BONUS_GRAIN</FreeBonus>
+			<FreeBonus>BONUS_GRAINS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -108493,7 +108493,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_WINDMILLS</PrereqTech>
-			<Bonus>BONUS_GRAIN</Bonus>
+			<Bonus>BONUS_GRAINS</Bonus>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_HILL</TerrainType>
@@ -110501,7 +110501,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_PARTS</BonusType>
 				<BonusType>BONUS_TIRES</BonusType>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
@@ -110587,7 +110587,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_METH</BonusType>
+					<BonusType>BONUS_METHAMPHETAMINE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -112707,7 +112707,7 @@
 			<PrereqTech>TECH_RAT_CATCHING</PrereqTech>
 			<iPrereqPopulation>8</iPrereqPopulation>
 			<PrereqBonuses>
-				<Bonus>BONUS_GRAIN</Bonus>
+				<Bonus>BONUS_GRAINS</Bonus>
 				<Bonus>BONUS_CHEESE</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>

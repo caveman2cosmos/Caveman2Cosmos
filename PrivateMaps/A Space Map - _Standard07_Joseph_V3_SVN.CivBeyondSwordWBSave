@@ -19314,7 +19314,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=18,y=13
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -30903,7 +30903,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=29,y=15
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -34161,7 +34161,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=32,y=34
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -37251,7 +37251,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=35,y=21
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -44549,7 +44549,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=42,y=16
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -53963,7 +53963,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=51,y=39
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -55008,7 +55008,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=52,y=39
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -58052,13 +58052,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=19
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
 	x=55,y=20
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -107161,7 +107161,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=102,y=14
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot

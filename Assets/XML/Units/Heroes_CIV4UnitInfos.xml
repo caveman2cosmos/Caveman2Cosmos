@@ -19178,7 +19178,7 @@
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
-			<BonusType>BONUS_BENIN</BonusType>
+			<BonusType>BONUS_BENINESE</BonusType>
 			<iCost>1650</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>25</iCombat>
@@ -20710,7 +20710,7 @@
 				</GreatPeople>
 			</GreatPeoples>
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
-			<BonusType>BONUS_BENIN</BonusType>
+			<BonusType>BONUS_BENINESE</BonusType>
 			<iCost>1250</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
@@ -21421,7 +21421,7 @@
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
-			<BonusType>BONUS_KITARA</BonusType>
+			<BonusType>BONUS_KITARAN</BonusType>
 			<iCost>1500</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
@@ -21627,7 +21627,7 @@
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_COMMUNISM</PrereqTech>
-			<BonusType>BONUS_KONJO</BonusType>
+			<BonusType>BONUS_KONJAN</BonusType>
 			<iCost>4000</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>32</iCombat>
@@ -21887,7 +21887,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_CURRENCY</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_KUSH</BonusType>
+			<BonusType>BONUS_KUSHITE</BonusType>
 			<iCost>1050</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>10</iCombat>
@@ -22102,7 +22102,7 @@
 				</GreatPeople>
 			</GreatPeoples>
 			<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
-			<BonusType>BONUS_KUWAIT</BonusType>
+			<BonusType>BONUS_KUWAITI</BonusType>
 			<iCost>3800</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>44</iCombat>
@@ -22190,7 +22190,7 @@
 				</GreatPeople>
 			</GreatPeoples>
 			<PrereqTech>TECH_RAILROAD</PrereqTech>
-			<BonusType>BONUS_LA_PLATA</BonusType>
+			<BonusType>BONUS_LA_PLATAN</BonusType>
 			<iCost>2620</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>33</iCombat>
@@ -22561,7 +22561,7 @@
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_ASTRONOMY</PrereqTech>
-			<BonusType>BONUS_LEBANON</BonusType>
+			<BonusType>BONUS_LEBANESE</BonusType>
 			<iCost>1700</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
@@ -22912,7 +22912,7 @@
 				</GreatPeople>
 			</GreatPeoples>
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
-			<BonusType>BONUS_LONGOBARDI</BonusType>
+			<BonusType>BONUS_LONGOBARDIAN</BonusType>
 			<iCost>900</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>11</iCombat>
@@ -23319,7 +23319,7 @@
 				</GreatPeople>
 			</GreatPeoples>
 			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
-			<BonusType>BONUS_LUSITANI</BonusType>
+			<BonusType>BONUS_LUSITANIAN</BonusType>
 			<iCost>1200</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>17</iCombat>
@@ -23803,7 +23803,7 @@
 				</GreatPeople>
 			</GreatPeoples>
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
-			<BonusType>BONUS_ARAGON</BonusType>
+			<BonusType>BONUS_ARAGONESE</BonusType>
 			<iCost>1400</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
@@ -23901,7 +23901,7 @@
 				</GreatPeople>
 			</GreatPeoples>
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
-			<BonusType>BONUS_MAMELUKS</BonusType>
+			<BonusType>BONUS_MAMELUK</BonusType>
 			<iCost>1500</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>14</iCombat>
@@ -24938,7 +24938,7 @@
 				</GreatPeople>
 			</GreatPeoples>
 			<PrereqTech>TECH_WRITING</PrereqTech>
-			<BonusType>BONUS_MITTANNI</BonusType>
+			<BonusType>BONUS_MITANNI</BonusType>
 			<iCost>700</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>11</iCombat>
@@ -25746,7 +25746,7 @@
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
-			<BonusType>BONUS_MURRI</BonusType>
+			<BonusType>BONUS_MARRI</BonusType>
 			<iCost>4720</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>42</iCombat>
@@ -27114,7 +27114,7 @@
 				</GreatPeople>
 			</GreatPeoples>
 			<PrereqTech>TECH_NATIONALISM</PrereqTech>
-			<BonusType>BONUS_OMAN</BonusType>
+			<BonusType>BONUS_OMANI</BonusType>
 			<iCost>2200</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
@@ -28555,7 +28555,7 @@
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
-			<BonusType>BONUS_AVERNI</BonusType>
+			<BonusType>BONUS_ARVERNIAN</BonusType>
 			<iCost>600</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>11</iCombat>
@@ -29315,7 +29315,7 @@
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_REPRESENTATIVE_DEMOCRACY</PrereqTech>
-			<BonusType>BONUS_QUEBEC</BonusType>
+			<BonusType>BONUS_QUEBECKER</BonusType>
 			<iCost>2300</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>18</iCombat>
@@ -29517,7 +29517,7 @@
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_HORSE_BREEDING</PrereqTech>
-			<BonusType>BONUS_AVARS</BonusType>
+			<BonusType>BONUS_AVARIC</BonusType>
 			<iCost>900</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
@@ -30273,7 +30273,7 @@
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_ASTRONOMY</PrereqTech>
-			<BonusType>BONUS_SAFAVIDS</BonusType>
+			<BonusType>BONUS_SAFAVID</BonusType>
 			<iCost>1700</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
@@ -30637,7 +30637,7 @@
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_RIFLING</PrereqTech>
-			<BonusType>BONUS_SAMOA</BonusType>
+			<BonusType>BONUS_SAMOAN</BonusType>
 			<iCost>2150</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>33</iCombat>
@@ -30781,7 +30781,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_SARMATIANS</BonusType>
+			<BonusType>BONUS_SARMATIAN</BonusType>
 			<iCost>850</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>12</iCombat>
@@ -32336,7 +32336,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_FLIGHT</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_SURINAM</BonusType>
+			<BonusType>BONUS_SURINAMESE</BonusType>
 			<iCost>3800</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>43</iCombat>
@@ -32476,7 +32476,7 @@
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_NATIONALISM</PrereqTech>
-			<BonusType>BONUS_TAJIKS</BonusType>
+			<BonusType>BONUS_TAJIK</BonusType>
 			<iCost>2200</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>32</iCombat>
@@ -33050,7 +33050,7 @@
 				</GreatPeople>
 			</GreatPeoples>
 			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
-			<BonusType>BONUS_ADENA</BonusType>
+			<BonusType>BONUS_ADENAN</BonusType>
 			<iCost>850</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>11</iCombat>
@@ -33180,7 +33180,7 @@
 				</GreatPeople>
 			</GreatPeoples>
 			<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
-			<BonusType>BONUS_BAHRAIN</BonusType>
+			<BonusType>BONUS_BAHRAINI</BonusType>
 			<iCost>4120</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>17</iCombat>
@@ -36067,7 +36067,7 @@
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_HUMANISM</PrereqTech>
-			<BonusType>BONUS_UZBEKS</BonusType>
+			<BonusType>BONUS_UZBEK</BonusType>
 			<iCost>1650</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>18</iCombat>
@@ -36207,7 +36207,7 @@
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_HUMANISM</PrereqTech>
-			<BonusType>BONUS_VALDIVIA</BonusType>
+			<BonusType>BONUS_VALDIVIAN</BonusType>
 			<iCost>1650</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>18</iCombat>
@@ -36316,7 +36316,7 @@
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
-			<BonusType>BONUS_VANATU</BonusType>
+			<BonusType>BONUS_VANUATUAN</BonusType>
 			<iCost>4720</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>42</iCombat>
@@ -37129,7 +37129,7 @@
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
-			<BonusType>BONUS_BANGLADESH</BonusType>
+			<BonusType>BONUS_BANGLADESHI</BonusType>
 			<iCost>1800</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>24</iCombat>
@@ -38178,7 +38178,7 @@
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
-			<BonusType>BONUS_YEMENESE</BonusType>
+			<BonusType>BONUS_YEMENI</BonusType>
 			<iCost>1200</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
@@ -38393,7 +38393,7 @@
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_ECONOMICS</PrereqTech>
-			<BonusType>BONUS_ZANZIBAR</BonusType>
+			<BonusType>BONUS_ZANZIBARI</BonusType>
 			<iCost>2150</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>33</iCombat>
@@ -38685,7 +38685,7 @@
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
-			<BonusType>BONUS_ZIMBABWE</BonusType>
+			<BonusType>BONUS_ZIMBABWEAN</BonusType>
 			<iCost>1500</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
@@ -38892,7 +38892,7 @@
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_DEMOCRACY</PrereqTech>
-			<BonusType>BONUS_BATAVI</BonusType>
+			<BonusType>BONUS_BATAVIAN</BonusType>
 			<iCost>950</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>11</iCombat>
@@ -39419,7 +39419,7 @@
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
-			<BonusType>BONUS_BELIZE</BonusType>
+			<BonusType>BONUS_BELIZEAN</BonusType>
 			<iCost>4720</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>42</iCombat>
@@ -39550,7 +39550,7 @@
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
-			<BonusType>BONUS_AFGHANISTAN</BonusType>
+			<BonusType>BONUS_AFGHAN</BonusType>
 			<iCost>2500</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
@@ -39975,7 +39975,7 @@
 				</GreatPeople>
 			</GreatPeoples>
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
-			<BonusType>BONUS_BURGUNDI</BonusType>
+			<BonusType>BONUS_BURGUNDIAN</BonusType>
 			<iCost>1500</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>14</iCombat>
@@ -41577,7 +41577,7 @@
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
-			<BonusType>BONUS_CHORESM</BonusType>
+			<BonusType>BONUS_KHWARAZMIAN</BonusType>
 			<iCost>1250</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
@@ -44771,7 +44771,7 @@
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
-			<BonusType>BONUS_GOLDEN_HORDE</BonusType>
+			<BonusType>BONUS_KIPCHAK</BonusType>
 			<iCost>1750</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
@@ -44998,7 +44998,7 @@
 				</GreatPeople>
 			</GreatPeoples>
 			<PrereqTech>TECH_MERCANTILISM</PrereqTech>
-			<BonusType>BONUS_GUAM</BonusType>
+			<BonusType>BONUS_CHAMORRAN</BonusType>
 			<iCost>1800</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
@@ -45352,7 +45352,7 @@
 				</GreatPeople>
 			</GreatPeoples>
 			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
-			<BonusType>BONUS_GUATEMALA</BonusType>
+			<BonusType>BONUS_GUATEMALAN</BonusType>
 			<iCost>1650</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
@@ -45473,7 +45473,7 @@
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_COMMUNISM</PrereqTech>
-			<BonusType>BONUS_GUYANA</BonusType>
+			<BonusType>BONUS_GUYANESE</BonusType>
 			<iCost>4000</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>32</iCombat>
@@ -45597,7 +45597,7 @@
 				</GreatPeople>
 			</GreatPeoples>
 			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
-			<BonusType>BONUS_HELVETII</BonusType>
+			<BonusType>BONUS_HELVETIAN</BonusType>
 			<iCost>850</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>11</iCombat>
@@ -45926,7 +45926,7 @@
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_ASTRONOMY</PrereqTech>
-			<BonusType>BONUS_ALGIER</BonusType>
+			<BonusType>BONUS_ALGERIAN</BonusType>
 			<iCost>1700</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
@@ -46068,7 +46068,7 @@
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_ARTILLERY</PrereqTech>
-			<BonusType>BONUS_HONG_KONG</BonusType>
+			<BonusType>BONUS_HONGKONGER</BonusType>
 			<iCost>3300</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>33</iCombat>
@@ -47296,7 +47296,7 @@
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_FASCISM</PrereqTech>
-			<BonusType>BONUS_IRAQUI</BonusType>
+			<BonusType>BONUS_IRAQI</BonusType>
 			<iCost>4000</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>44</iCombat>
@@ -48138,7 +48138,7 @@
 				</GreatPeople>
 			</GreatPeoples>
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
-			<BonusType>BONUS_KHAZARS</BonusType>
+			<BonusType>BONUS_KHAZAR</BonusType>
 			<iCost>900</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>11</iCombat>

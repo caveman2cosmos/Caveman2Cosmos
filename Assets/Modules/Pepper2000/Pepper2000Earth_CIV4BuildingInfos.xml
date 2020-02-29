@@ -733,7 +733,7 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_GRAIN</FreeBonus>
+					<FreeBonus>BONUS_GRAINS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -1171,7 +1171,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_COMMON_CLAY</FreeBonus>
+					<FreeBonus>BONUS_CLAY</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -1317,7 +1317,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_GEMS</FreeBonus>
+					<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -1688,11 +1688,11 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FULLERENES</FreeBonus>
+					<FreeBonus>BONUS_FULLERENE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BULK_DIAMOND</FreeBonus>
+					<FreeBonus>BONUS_SYNTHETIC_DIAMOND</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -1777,7 +1777,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_METH</FreeBonus>
+					<FreeBonus>BONUS_METHAMPHETAMINE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -2223,7 +2223,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<Bonus>BONUS_ELECTROLYTE_CELLS</Bonus>
+			<Bonus>BONUS_ELECTROLYTIC_CELLS</Bonus>
 			<bPrereqPower>1</bPrereqPower>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -3752,7 +3752,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FURS</FreeBonus>
+					<FreeBonus>BONUS_FUR</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -4241,7 +4241,7 @@
 			</TechCommerceChanges>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_BULK_DIAMOND</BonusType>
+					<BonusType>BONUS_SYNTHETIC_DIAMOND</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -4528,7 +4528,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<Bonus>BONUS_ELECTROLYTE_CELLS</Bonus>
+			<Bonus>BONUS_ELECTROLYTIC_CELLS</Bonus>
 			<bPrereqPower>1</bPrereqPower>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -4573,7 +4573,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<Bonus>BONUS_ELECTROLYTE_CELLS</Bonus>
+			<Bonus>BONUS_ELECTROLYTIC_CELLS</Bonus>
 			<bPrereqPower>1</bPrereqPower>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -4797,7 +4797,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_BULK_DIAMOND</ID>
+						<ID>BONUS_SYNTHETIC_DIAMOND</ID>
 					</Has>
 				</And>
 			</ConstructCondition>
@@ -4961,7 +4961,7 @@
 			</YieldChanges>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_FULLERENES</BonusType>
+					<BonusType>BONUS_FULLERENE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -5178,7 +5178,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<FreeBonus>BONUS_BULK_DIAMOND</FreeBonus>
+			<FreeBonus>BONUS_SYNTHETIC_DIAMOND</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
 				<PropertySource>
@@ -5222,7 +5222,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<FreeBonus>BONUS_FULLERENES</FreeBonus>
+			<FreeBonus>BONUS_FULLERENE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
 				<PropertySource>
@@ -9221,7 +9221,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<FreeBonus>BONUS_MEDICAL_TRICODERS</FreeBonus>
+			<FreeBonus>BONUS_MEDICAL_TRICORDERS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
@@ -18043,7 +18043,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_OIL_PRODUCTS</FreeBonus>
+					<FreeBonus>BONUS_PETROLEUM_PRODUCTS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -22281,7 +22281,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<Bonus>BONUS_CETACEA_SAPIEN</Bonus>
+			<Bonus>BONUS_CETACEA_SAPIENS</Bonus>
 			<VicinityBonus>BONUS_WHALE</VicinityBonus>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -23448,7 +23448,7 @@
 			<Type>BUILDING_MEGATOWER_SOLAR_CROWN</Type>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_FULLERENES</BonusType>
+					<BonusType>BONUS_FULLERENE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>

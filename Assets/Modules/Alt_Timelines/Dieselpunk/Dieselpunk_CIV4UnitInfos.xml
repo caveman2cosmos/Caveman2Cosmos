@@ -151,7 +151,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_ZEPPELINS</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_DIESELPUNK</BonusType>
 			</PrereqBonuses>
@@ -681,7 +681,7 @@
 			<PrereqTech>TECH_DIESELPUNK</PrereqTech>
 			<BonusType>BONUS_DIESELPUNK</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
@@ -813,7 +813,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_OIL_PRODUCTS</ID>
+						<ID>BONUS_PETROLEUM_PRODUCTS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>

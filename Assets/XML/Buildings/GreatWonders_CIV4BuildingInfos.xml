@@ -20906,7 +20906,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_COAL</BonusType>
 				<BonusType>BONUS_OIL</BonusType>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			</PrereqBonuses>
 			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>

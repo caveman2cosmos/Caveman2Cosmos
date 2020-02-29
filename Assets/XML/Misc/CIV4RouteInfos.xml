@@ -71,7 +71,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>30</iMovement>
 			<iFlatMovement>30</iFlatMovement>
-			<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqOrBonuses/>
 			<Yields/>
 			<TechMovementChanges>
@@ -103,7 +103,7 @@
 					<BonusType>BONUS_OIL</BonusType>
 				</PrereqOrBonus>
 				<PrereqOrBonus>
-					<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+					<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				</PrereqOrBonus>
 			</PrereqOrBonuses>
 			<Yields/>

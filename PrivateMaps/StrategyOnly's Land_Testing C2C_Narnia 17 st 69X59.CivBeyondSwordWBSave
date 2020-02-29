@@ -4931,7 +4931,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=13,y=8
-	BonusType=BONUS_OIL_PRODUCTS
+	BonusType=BONUS_PETROLEUM_PRODUCTS
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
@@ -19775,7 +19775,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=33
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot

@@ -4196,7 +4196,7 @@
 			<iNumBuildings>1</iNumBuildings>
 			<iNumBuildingsGlobal>1</iNumBuildingsGlobal>
 			<BonusesRequired>
-				<BonusType>BONUS_GEMS</BonusType>
+				<BonusType>BONUS_GEMSTONE</BonusType>
 			</BonusesRequired>
 			<Events>
 				<Event>EVENT_GIRLS_BEST_FRIEND_1</Event>
@@ -6249,7 +6249,7 @@
 			<iWeight>175</iWeight>
 			<iMinTreasury>300</iMinTreasury>
 			<BonusesRequired>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			</BonusesRequired>
 			<Events>
 				<Event>EVENT_NAPALM_1</Event>
@@ -6310,7 +6310,7 @@
 			</UnitsRequired>
 			<iNumUnits>1</iNumUnits>
 			<BonusesRequired>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			</BonusesRequired>
 			<Events>
 				<Event>EVENT_REACTIVE_ARMOR_1</Event>

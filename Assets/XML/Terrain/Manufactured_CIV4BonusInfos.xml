@@ -544,11 +544,11 @@
 		</BonusInfo>
 	<!-- Common Clay -->
 		<BonusInfo>
-			<Type>BONUS_COMMON_CLAY</Type>
-			<Description>TXT_KEY_BONUS_COMMON_CLAY</Description>
-			<Civilopedia>TXT_KEY_BONUS_COMMON_CLAY_PEDIA</Civilopedia>
+			<Type>BONUS_CLAY</Type>
+			<Description>TXT_KEY_BONUS_CLAY</Description>
+			<Civilopedia>TXT_KEY_BONUS_CLAY_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_COMMON_CLAY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_CLAY</ArtDefineTag>
 			<TechReveal>TECH_NATURAL_PIGMENTS</TechReveal>
 			<TechCityTrade>TECH_NATURAL_PIGMENTS</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
@@ -632,11 +632,11 @@
 		</BonusInfo>
 	<!-- Oil Products -->
 		<BonusInfo>
-			<Type>BONUS_OIL_PRODUCTS</Type>
-			<Description>TXT_KEY_BONUS_OIL_PRODUCTS</Description>
-			<Civilopedia>TXT_KEY_BONUS_OIL_PRODUCTS_PEDIA</Civilopedia>
+			<Type>BONUS_PETROLEUM_PRODUCTS</Type>
+			<Description>TXT_KEY_BONUS_PETROLEUM_PRODUCTS</Description>
+			<Civilopedia>TXT_KEY_BONUS_PETROLEUM_PRODUCTS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_FUEL</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_OIL_PRODUCTS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_PETROLEUM_PRODUCTS</ArtDefineTag>
 			<TechReveal>TECH_REFINING</TechReveal>
 			<TechCityTrade>TECH_REFINING</TechCityTrade>
 			<iAITradeModifier>10</iAITradeModifier>
@@ -778,11 +778,11 @@
 		</BonusInfo>
 	<!-- Electrolyte Cells -->
 		<BonusInfo>
-			<Type>BONUS_ELECTROLYTE_CELLS</Type>
-			<Description>TXT_KEY_BONUS_ELECTROLYTE_CELLS</Description>
-			<Civilopedia>TXT_KEY_BONUS_ELECTROLYTE_CELLS_PEDIA</Civilopedia>
+			<Type>BONUS_ELECTROLYTIC_CELLS</Type>
+			<Description>TXT_KEY_BONUS_ELECTROLYTIC_CELLS</Description>
+			<Civilopedia>TXT_KEY_BONUS_ELECTROLYTIC_CELLS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_ELECTROLYTE_CELLS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_ELECTROLYTIC_CELLS</ArtDefineTag>
 			<TechReveal>TECH_FUEL_CELLS</TechReveal>
 			<TechCityTrade>TECH_FUEL_CELLS</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
@@ -991,22 +991,22 @@
 		</BonusInfo>
 	<!-- Furs -->
 		<BonusInfo>
-			<Type>BONUS_FURS</Type>
-			<Description>TXT_KEY_BONUS_FURS</Description>
-			<Civilopedia>TXT_KEY_BONUS_FURS_PEDIA</Civilopedia>
+			<Type>BONUS_FUR</Type>
+			<Description>TXT_KEY_BONUS_FUR</Description>
+			<Civilopedia>TXT_KEY_BONUS_FUR_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_FURS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_FUR</ArtDefineTag>
 			<TechReveal>TECH_SKINNING</TechReveal>
 			<TechCityTrade>TECH_SKINNING</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Gems -->
 		<BonusInfo>
-			<Type>BONUS_GEMS</Type>
-			<Description>TXT_KEY_BONUS_GEMS</Description>
-			<Civilopedia>TXT_KEY_BONUS_GEMS_PEDIA</Civilopedia>
+			<Type>BONUS_GEMSTONE</Type>
+			<Description>TXT_KEY_BONUS_GEMSTONE</Description>
+			<Civilopedia>TXT_KEY_BONUS_GEMSTONE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_GEMS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_GEMSTONE</ArtDefineTag>
 			<TechReveal>TECH_BARTER</TechReveal>
 			<TechCityTrade>TECH_BARTER</TechCityTrade>
 			<iAITradeModifier>7</iAITradeModifier>
@@ -1049,11 +1049,11 @@
 		</BonusInfo>
 	<!-- Grain -->
 		<BonusInfo>
-			<Type>BONUS_GRAIN</Type>
-			<Description>TXT_KEY_BONUS_GRAIN</Description>
-			<Civilopedia>TXT_KEY_BONUS_GRAIN_PEDIA</Civilopedia>
+			<Type>BONUS_GRAINS</Type>
+			<Description>TXT_KEY_BONUS_GRAINS</Description>
+			<Civilopedia>TXT_KEY_BONUS_GRAINS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_GRAIN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_GRAINS</ArtDefineTag>
 			<TechReveal>TECH_GROUND_STONE</TechReveal>
 			<TechCityTrade>TECH_GROUND_STONE</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
@@ -1571,11 +1571,11 @@
 		</BonusInfo>
 	<!-- Medical Tricoders -->
 		<BonusInfo>
-			<Type>BONUS_MEDICAL_TRICODERS</Type>
-			<Description>TXT_KEY_BONUS_MEDICAL_TRICODERS</Description>
-			<Civilopedia>TXT_KEY_BONUS_MEDICAL_TRICODERS_PEDIA</Civilopedia>
+			<Type>BONUS_MEDICAL_TRICORDERS</Type>
+			<Description>TXT_KEY_BONUS_MEDICAL_TRICORDERS</Description>
+			<Civilopedia>TXT_KEY_BONUS_MEDICAL_TRICORDERS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_MEDICAL_TRICODERS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_MEDICAL_TRICORDERS</ArtDefineTag>
 			<TechReveal>TECH_PERSONALIZED_HEALTH</TechReveal>
 			<TechCityTrade>TECH_PERSONALIZED_HEALTH</TechCityTrade>
 			<iHealth>1</iHealth>
@@ -1583,11 +1583,11 @@
 		</BonusInfo>
 	<!-- Meth -->
 		<BonusInfo>
-			<Type>BONUS_METH</Type>
-			<Description>TXT_KEY_BONUS_METH</Description>
-			<Civilopedia>TXT_KEY_BONUS_METH_PEDIA</Civilopedia>
+			<Type>BONUS_METHAMPHETAMINE</Type>
+			<Description>TXT_KEY_BONUS_METHAMPHETAMINE</Description>
+			<Civilopedia>TXT_KEY_BONUS_METHAMPHETAMINE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_METH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_METHAMPHETAMINE</ArtDefineTag>
 			<TechReveal>TECH_URBAN_CULTURE</TechReveal>
 			<TechCityTrade>TECH_URBAN_CULTURE</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
@@ -1788,11 +1788,11 @@
 		</BonusInfo>
 	<!-- Omega Acids -->
 		<BonusInfo>
-			<Type>BONUS_OMEGA_ACIDS</Type>
-			<Description>TXT_KEY_BONUS_OMEGA_ACIDS</Description>
-			<Civilopedia>TXT_KEY_BONUS_OMEGA_ACIDS_PEDIA</Civilopedia>
+			<Type>BONUS_OMEGA_FATTY_ACID</Type>
+			<Description>TXT_KEY_BONUS_OMEGA_FATTY_ACID</Description>
+			<Civilopedia>TXT_KEY_BONUS_OMEGA_FATTY_ACID_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_OMEGA_ACIDS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_OMEGA_FATTY_ACID</ArtDefineTag>
 			<TechReveal>TECH_MOLECULAR_BIOLOGY</TechReveal>
 			<TechCityTrade>TECH_MOLECULAR_BIOLOGY</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
@@ -2388,7 +2388,7 @@
 		<BonusInfo>
 			<Type>BONUS_STEEL_INGOTS</Type>
 			<Description>TXT_KEY_BONUS_STEEL_INGOTS</Description>
-			<Civilopedia>TXT_KEY_BONUS_STEEL_INGOTS_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BONUS_INGOTS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_STEEL_INGOTS</ArtDefineTag>
 			<TechReveal>TECH_CRUCIBLE_STEEL</TechReveal>
@@ -3097,19 +3097,19 @@
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_BULK_DIAMOND</Type>
-			<Description>TXT_KEY_BONUS_BULK_DIAMOND</Description>
-			<Civilopedia>TXT_KEY_BONUS_BULK_DIAMOND_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_BONUS_BULK_DIAMOND</ArtDefineTag>
+			<Type>BONUS_SYNTHETIC_DIAMOND</Type>
+			<Description>TXT_KEY_BONUS_SYNTHETIC_DIAMOND</Description>
+			<Civilopedia>TXT_KEY_BONUS_SYNTHETIC_DIAMOND_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_BONUS_SYNTHETIC_DIAMOND</ArtDefineTag>
 			<TechReveal>TECH_GRAPHENE_ALLOYS</TechReveal>
 			<TechCityTrade>TECH_GRAPHENE_ALLOYS</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_FULLERENES</Type>
-			<Description>TXT_KEY_BONUS_FULLERENES</Description>
-			<Civilopedia>TXT_KEY_BONUS_FULLERENES_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_BONUS_FULLERENES</ArtDefineTag>
+			<Type>BONUS_FULLERENE</Type>
+			<Description>TXT_KEY_BONUS_FULLERENE</Description>
+			<Civilopedia>TXT_KEY_BONUS_FULLERENE_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_BONUS_FULLERENE</ArtDefineTag>
 			<TechReveal>TECH_GRAPHENE_ALLOYS</TechReveal>
 			<TechCityTrade>TECH_GRAPHENE_ALLOYS</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>

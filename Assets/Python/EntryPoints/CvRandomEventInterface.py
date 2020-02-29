@@ -4536,7 +4536,7 @@ def getHelpSyntheticFuels4(argsList):
   pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
   pCity = pPlayer.getCity(kTriggeredData.iCityId)
 
-  oBonus = GC.getInfoTypeForString("BONUS_OIL_PRODUCTS")
+  oBonus = GC.getInfoTypeForString("BONUS_PETROLEUM_PRODUCTS")
 
   szHelp = TRNSLTR.getText("TXT_KEY_EVENT_SYNTHETIC_FUELS_HELP_4", (1, GC.getBonusInfo(oBonus).getChar(), pCity.getNameKey()))
 
@@ -4549,7 +4549,7 @@ def doSyntheticFuels4(argsList):
   pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
   pCity = pPlayer.getCity(kTriggeredData.iCityId)
 
-  iBonus = GC.getInfoTypeForString("BONUS_OIL_PRODUCTS")
+  iBonus = GC.getInfoTypeForString("BONUS_PETROLEUM_PRODUCTS")
 
   pCity.changeFreeBonus(iBonus, 1)
 
