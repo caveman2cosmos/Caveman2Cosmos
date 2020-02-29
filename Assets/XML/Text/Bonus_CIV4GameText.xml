@@ -87,13 +87,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ABORIGINE</Tag>
-		<English>Aborigene</English>
+		<English>Aborigine</English>
 		<French>Aborigène</French>
 		<Italian>Aborigeno</Italian>
 		<Polish>Aborygen</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_ADENA</Tag>
+		<Tag>TXT_KEY_BONUS_ADENAN</Tag>
 		<English>Adenan</English>
 		<Italian>Adena</Italian>
 	</TEXT>
@@ -118,7 +118,7 @@
 		<Italian>Un aerogel è un materiale ultraleggero poroso sintetico derivato da un gel, in cui la componente liquida è stata sostituita con un gas. Il risultato è un materiale solido, rigido e asciutto con densità e conducibilità termica estremamente bassa, poiché è costituito al 99,8% da aria. Gli aerogel possono essere prodotti principalmente da silice, carbonio e ossidi di metallo, ma si possono usare anche polimeri organici.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_AFGHANISTAN</Tag>
+		<Tag>TXT_KEY_BONUS_AFGHAN</Tag>
 		<English>Afghan</English>
 		<Italian>Afghano</Italian>
 	</TEXT>
@@ -202,7 +202,7 @@
 		<Italian>Le alghe sono un gruppo di organismi di struttura vegetale unicellulari o pluricellulari. Le alghe unicellulari si trovano perlopiù vicino al pelo dell'acqua, dove la luce è più abbondante: vengono considerate fitoplancton e hanno quindi un ruolo fondamentale nella catena alimentare marina e nel rifornire di ossigeno l'atmosfera. Quelle pluricellulari vivono invece in acque poco profonde e sono caratterizzate da forme e colori diversi per poter meglio assorbire la luce (più tendente al rosso è il loro colore, maggiore è la profondità alla quale vivono). Sono formate di solo tessuto (il "tallo") e non hanno radici, fusto o foglie.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_ALGIER</Tag>
+		<Tag>TXT_KEY_BONUS_ALGERIAN</Tag>
 		<English>Algerian</English>
 		<Italian>Algerino</Italian>
 	</TEXT>
@@ -364,7 +364,7 @@
 		<Polish>Arabska</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_ARAGON</Tag>
+		<Tag>TXT_KEY_BONUS_ARAGONESE</Tag>
 		<English>Aragonese</English>
 		<Italian>Aragonese</Italian>
 	</TEXT>
@@ -453,12 +453,12 @@
 		<Italian>Un'automobile è un veicolo a motore, usato principalmente per il trasporto di passeggeri o, secondariamente, di oggetti. Le automobili sono progettate per procedere su percorsi appositi, come le strade, possono avere posti disponibili fino a otto persone e hanno solitamente quattro ruote.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_AVARS</Tag>
+		<Tag>TXT_KEY_BONUS_AVARIC</Tag>
 		<English>Avaric</English>
 		<Italian>Avaro</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_AVERNI</Tag>
+		<Tag>TXT_KEY_BONUS_ARVERNIAN</Tag>
 		<English>Arvernian</English>
 		<Italian>Arverno</Italian>
 	</TEXT>
@@ -493,7 +493,7 @@
 		<Italian>Battriano</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_BAHRAIN</Tag>
+		<Tag>TXT_KEY_BONUS_BAHRAINI</Tag>
 		<English>Bahraini</English>
 		<Italian>Bahraino</Italian>
 	</TEXT>
@@ -531,7 +531,7 @@
 		<Italian>Bandanese</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_BANGLADESH</Tag>
+		<Tag>TXT_KEY_BONUS_BANGLADESHI</Tag>
 		<English>Bangladeshi</English>
 		<Italian>Bangladese</Italian>
 	</TEXT>
@@ -597,7 +597,7 @@
 		<Polish>Baskijski</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_BATAVI</Tag>
+		<Tag>TXT_KEY_BONUS_BATAVIAN</Tag>
 		<English>Batavian</English>
 		<Italian>Batavo</Italian>
 	</TEXT>
@@ -660,7 +660,7 @@
 		<Polish>Belgijska</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_BELIZE</Tag>
+		<Tag>TXT_KEY_BONUS_BELIZEAN</Tag>
 		<English>Belizean</English>
 		<Italian>Beliziano</Italian>
 	</TEXT>
@@ -672,7 +672,7 @@
 		<Polish>Bengalska</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_BENIN</Tag>
+		<Tag>TXT_KEY_BONUS_BENINESE</Tag>
 		<English>Beninese</English>
 		<French>Béninoise</French>
 		<Italian>Beninese</Italian>
@@ -900,17 +900,17 @@
 		<Polish>Bułgarska</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_BULK_DIAMOND</Tag>
+		<Tag>TXT_KEY_BONUS_SYNTHETIC_DIAMOND</Tag>
 		<English>Synthetic Diamond</English>
 		<Italian>Diamanti sintetici</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_BULK_DIAMOND_PEDIA</Tag>
+		<Tag>TXT_KEY_BONUS_SYNTHETIC_DIAMOND_PEDIA</Tag>
 		<English>A synthetic diamond is diamond produced by an artificial controlled process, instead of the natural geological process. Synthetic diamonds are made of the same material as natural diamonds, i.e. pure carbon, although their properties depend on the details of the manufacturing processes. Some varieties have superior hardness, thermal conductivity and electron mobility to those of most naturally formed diamonds. It is estimated that 98% of industrial grade diamond demand is supplied with synthetic diamonds.</English>
 		<Italian>Un diamante sintetico è un diamante prodotto da un processo artificiale controllato, anziché dal naturale processo geologico. I diamanti sintetici sono realizzati con lo stesso materiale dei diamanti naturali, ossia il carbonio puro, anche se le loro proprietà dipendono dai dettagli dei processi di fabbricazione. Alcune varietà di diamanti hanno durezza, conducibilità termica e mobilità elettronica superiori a quelle dei diamanti naturali. Si stima che il 98% della domanda di diamanti di livello industriale venga soddisfatta da diamanti sintetici.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_BURGUNDI</Tag>
+		<Tag>TXT_KEY_BONUS_BURGUNDIAN</Tag>
 		<English>Burgundian</English>
 		<Italian>Burgundo</Italian>
 	</TEXT>
@@ -1212,7 +1212,7 @@
 		<Italian>Un cermet è un materiale composito composto da materiali ceramici (cer) e metallici (met). È progettato idealmente per avere le proprietà ottimali sia di una ceramica (come resistenza alle alte temperature e durezza), sia quelle di un metallo (come la capacità di subire una deformazione plastica). I cermet vengono utilizzati nella fabbricazione di resistori (in particolare potenziometri), condensatori e altri componenti elettronici che potrebbero raggiungere temperature elevate. Alcuni tipi di cermet vengono anche considerati per la schermatura di veicoli spaziali, poiché resistono agli impatti ad alta velocità dei micrometeoroidi e dei detriti orbitali in modo molto più efficace rispetto ai più tradizionali materiali spaziali.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_CETACEA_SAPIEN</Tag>
+		<Tag>TXT_KEY_BONUS_CETACEA_SAPIENS</Tag>
 		<English>Cetacea Sapiens</English>
 		<French>Cetacea Sapiens</French>
 		<Italian>Cetacea Sapiens</Italian>
@@ -1354,7 +1354,7 @@
 		<Italian>Chola</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_CHORESM</Tag>
+		<Tag>TXT_KEY_BONUS_KHWARAZMIAN</Tag>
 		<English>Khwarazmian</English>
 		<Italian>Corasmio</Italian>
 	</TEXT>
@@ -1541,7 +1541,7 @@
 		<Italian>Comanche</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_COMMON_CLAY</Tag>
+		<Tag>TXT_KEY_BONUS_CLAY</Tag>
 		<English>Clay</English>
 		<French>Argile</French>
 		<German>Lehm</German>
@@ -1550,7 +1550,7 @@
 		<Polish>Glina</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_COMMON_CLAY_PEDIA</Tag>
+		<Tag>TXT_KEY_BONUS_CLAY_PEDIA</Tag>
 		<English>Clay is an aluminum silicate composed mainly of fine-grained materials. Clay minerals have peculiar physical-chemical characteristics that give them a sensitive plasticity (if mixed with water) or refractory (if dehydrated) - properties that have allowed the development of the brick and ceramic industries.</English>
 		<Italian>L'argilla è un silicato d'alluminio composto principalmente di materiali a grana fine. I minerali argillosi hanno caratteristiche fisico-chimiche peculiari che conferiscono loro una sensibile plasticità (se miscelato con acqua) o refrattarietà (se disidratato) - proprietà che hanno permesso lo sviluppo dell'industria laterizia e ceramica.</Italian>
 	</TEXT>
@@ -2027,20 +2027,20 @@
 		<Italian>I polimeri elettroattivi (EAP) sono polimeri che mostrano un cambiamento nelle dimensioni o nella forma quando stimolati da un campo elettrico. Le applicazioni più comuni di questo tipo di materiale sono sensori e attuatori. La maggior parte degli attuatori sono stati storicamente realizzati con materiali ceramici piezoelettrici, in grado di resistere a grandi forze deformandosi solo in una piccolissima percentuale. Uno dei campi di applicazione più comuni per gli EAP è la robotica, più specificamente lo sviluppo dei muscoli artificiali.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_ELECTROLYTE_CELLS</Tag>
+		<Tag>TXT_KEY_BONUS_ELECTROLYTIC_CELLS</Tag>
 		<English>Electrolytic Cells</English>
 		<French>Cellules électrolytiques</French>
 		<Italian>Celle elettrolitiche</Italian>
 		<Polish>Komórki Elektrolitowe</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_ELECTROLYTE_CELLS_PEDIA</Tag>
+		<Tag>TXT_KEY_BONUS_ELECTROLYTIC_CELLS_PEDIA</Tag>
 		<English>An electrolytic cell is an electrochemical cell that drives a non-spontaneous redox reaction through the application of electrical energy. They are often used to decompose chemical compounds, in a process called electrolysis ("breaking up through electricity"). An electrolytic cell has three component parts: an electrolyte and two electrodes (a cathode and an anode).Commercially, electrolytic cells are used in electrorefining and electrowinning of several non-ferrous metals. Almost all high-purity aluminum, copper, zinc and lead is produced industrially in electrolytic cells.</English>
 		<Italian>Una cellula elettrolitica è una cellula elettrochimica che determina una reazione di ossidoriduzione non spontanea attraverso l'applicazione di energia elettrica. Sono spesso usate per decomporre i composti chimici, in un processo chiamato elettrolisi ("rottura tramite elettricità"). Una cellula elettrolitica ha tre parti componenti: un elettrolita e due elettrodi (un catodo e un anodo). Commercialmente, le celle elettrolitiche sono utilizzate nella raffinazione elettrolitica di numerosi metalli non ferrosi. Quasi tutto l'alluminio, il rame, lo zinco e il piombo di elevata purezza sono prodotti industrialmente in celle elettrolitiche.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ELEPHANTS</Tag>
-		<English>Elephant</English>
+		<English>Elephants</English>
 		<French>Éléphant</French>
 		<German>Elefanten</German>
 		<Italian>Elefante</Italian>
@@ -2082,7 +2082,7 @@
 		<Italian>Gli enzimi sono sia proteine che catalizzatori biologici che accelerano le reazioni chimiche. Le molecole su cui possono agire gli enzimi sono chiamate substrati, che vengono convertiti in molecole diverse, dette "prodotti". Quasi tutti i processi metabolici necessitano di catalisi enzimatica per verificarsi a velocità sufficientemente elevate da sostenere la vita e si sa che gli enzimi catalizzano più di 5.000 tipi di reazioni biochimiche. Alcuni prodotti per la casa usano enzimi per accelerare le reazioni chimiche.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_EPIRUS</Tag>
+		<Tag>TXT_KEY_BONUS_EPIROTE</Tag>
 		<English>Epirote</English>
 		<French>Épirotes</French>
 		<Italian>Epirota</Italian>
@@ -2396,7 +2396,7 @@
 		<Italian>Il termine "fossile" indica i resti integri o parziali di organismi un tempo viventi. Più in generale, viene usato per una qualsiasi testimonianza di vita geologicamente passata, come resti animali (ossa, denti, uova, conchiglie), resti vegetali (foglie, tronchi, pollini), evidenze di attività vitale (tane, orme) o tracce legate all'alimentazione (coproliti).</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_FRANKS</Tag>
+		<Tag>TXT_KEY_BONUS_FRANKISH</Tag>
 		<English>Frankish</English>
 		<French>Francs</French>
 		<Italian>Franco</Italian>
@@ -2432,12 +2432,12 @@
 		<Italian>Fulani</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_FULLERENES</Tag>
+		<Tag>TXT_KEY_BONUS_FULLERENE</Tag>
 		<English>Fullerene</English>
 		<Italian>Fullerene</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_FULLERENES_PEDIA</Tag>
+		<Tag>TXT_KEY_BONUS_FULLERENE_PEDIA</Tag>
 		<English>A fullerene is an allotrope of carbon whose molecule consists of carbon atoms connected by single and double bonds, so as to form a closed or partially closed mesh, with fused rings of five to seven atoms. Fullerenes had been predicted for some time, but only after their accidental synthesis in 1985 were they detected in nature and outer space. They have been the subject of intense research, both for their chemistry and for their technological applications, especially in materials science, electronics, and nanotechnology.</English>
 		<Italian>Un fullerene è un allotropo di carbonio la cui molecola è costituita da atomi di carbonio collegati da legami singoli e doppi, in modo da formare una maglia chiusa o parzialmente chiusa, con anelli fusi da cinque a sette atomi. I fullereni sono stati ipotizzati lungo il XX secolo, ma solo dopo la loro sintesi accidentale nel 1985 furono rilevati nella natura e nello spazio. Sono stati oggetto di intense ricerche, sia per la loro chimica che per le loro applicazioni tecnologiche, in particolare nella scienza dei materiali, nell'elettronica e nelle nanotecnologie.</Italian>
 	</TEXT>
@@ -2459,7 +2459,7 @@
 		<Italian>I mobili sono oggetti destinati a supportare varie attività umane, come sedersi (sedie, sgabelli, divani), mangiare (tavoli) o dormire (letti). I mobili vengono anche utilizzati per tenere oggetti ad un'altezza conveniente per il lavoro (tavoli, scrivanie) o per riporre oggetti (armadi, scaffali). L'arredamento può essere un prodotto di design ed è considerato una forma di arte decorativa. Oltre al suo ruolo funzionale, l'arredamento può servire per uno scopo simbolico o religioso. Può essere realizzato con molti materiali, tra cui metallo, plastica e legno. I mobili possono essere realizzati utilizzando una varietà di giunti in legno che, spesso, riflettono la cultura locale.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_FURS</Tag>
+		<Tag>TXT_KEY_BONUS_FUR</Tag>
 		<English>Fur</English>
 		<French>Fourrure</French>
 		<German>Felle</German>
@@ -2468,7 +2468,7 @@
 		<Polish>Futro</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_FURS_PEDIA</Tag>
+		<Tag>TXT_KEY_BONUS_FUR_PEDIA</Tag>
 		<English>Fur is a thick growth of hair that covers the skin of many animals, and it is a defining characteristic of mammals. The fur of mammals has many uses: protection, sensory purposes, waterproofing, and camouflage, with the primary usage being thermoregulation. Fur has also long served as a source of clothing for humans, including Neanderthals. Historically, it was worn for its insulating quality, with aesthetics becoming a factor over time. Common fur-bearers used include fox, rabbit, mink, beaver, ermine, otter, sable, seal, coyote, chinchilla, raccoon, and possum. The use of fur in clothing has become controversial during XX century, but fur clothing is still a large market.</English>
 		<Italian>La pelliccia è una folta coltre di peli che copre la pelle di molti animali ed è una caratteristica distintiva dei mammiferi. La pelliccia dei mammiferi ha molti usi, come protezione, impermeabilizzazione e mimetizzazione, ma principalmente viene usata per la termoregolazione. Le pellicce degli animali sono state a lungo anche oggetto di abbigliamento per l'uomo, compresi i Neanderthal. Storicamente, sono state usate per le loro qualità isolanti, mentre le qualità estetiche sono diventate un fattore decisivo con l'evolvere della società. Gli animali più comunemente usati per la loro pelliccia sono la volpe, il coniglio, il visone, il castoro, l'ermellino, la lontra, lo zibellino, la foca, il coyote, il cincillà, il procione e l'opossum. L'uso delle pellicce animali nell'industria dell'abbigliamento è diventato controverso nel corso del XX secolo, ma continua ad avere ancora un grande mercato.</Italian>
 	</TEXT>
@@ -2484,7 +2484,7 @@
 		<Italian>Gaucho</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_GEMS</Tag>
+		<Tag>TXT_KEY_BONUS_GEMSTONE</Tag>
 		<English>Gemstone</English>
 		<French>Pierres précieuses</French>
 		<German>Edelsteine</German>
@@ -2493,7 +2493,7 @@
 		<Polish>Klejnoty</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_GEMS_PEDIA</Tag>
+		<Tag>TXT_KEY_BONUS_GEMSTONE_PEDIA</Tag>
 		<English>A gemstone is a piece of mineral crystal which, in a cut and polished form, is used to make jewelry or other adornments. Certain rocks (such as lapislazuli and opal) and occasionally organic materials (such as amber, jet, and pearl) that are also used for jewelry are often considered to be gemstones as well. Most gemstones are hard, but some soft minerals are used in jewelry because of their luster or other physical properties that have aesthetic value. Rarity is another characteristic that lends value to a gemstone. Apart from jewelry, from earliest antiquity engraved gems and hardstone carvings, such as cups, were major luxury art forms.</English>
 		<Italian>Una pietra preziosa è un pezzo di cristallo minerale che, in una forma tagliata e lucidata, viene utilizzato per realizzare gioielli o altri ornamenti. Anche alcune pietre (come lapislazzuli e opali) e occasionalmente materiali organici (come ambra, giaietto e perla) utilizzate per realizzare gioielli sono spesso considerate pietre preziose. La maggior parte di esse sono dure, ma anche alcuni materiali morbidi sono usati in gioielleria a causa della loro lucentezza o altre proprietà fisiche di alto valore estetico. La rarità è un'altra caratteristica che conferisce valore a una pietra preziosa. Oltre ai gioielli, le prime gemme incise nell'antichità e le sculture in pietra dura, come le tazze, erano le principali forme d'arte di lusso.</Italian>
 	</TEXT>
@@ -2541,15 +2541,15 @@
 		<Italian>L'energia geotermica è l'energia termica generata e immagazzinata nella Terra. Questo tipo di energia proviene dalla formazione originale del pianeta e dal decadimento radioattivo dei materiali. Assieme all'acqua proveniente da sorgenti termali, l'energia geotermica è stata utilizzata per la balneazione fin dal Paleolitico e per il riscaldamento degli spazi fin dai tempi dei romani, ma ora è meglio conosciuta per la generazione di elettricità. L'energia geotermica è economica, affidabile, sostenibile e rispettosa dell'ambiente, ma è stata storicamente limitata alle aree a ridosso dei confini fra placche tettoniche. I progressi tecnologici nel XX e XXI secolo hanno notevolmente ampliato la gamma e le dimensioni degli utilizzi, in particolare per il riscaldamento domestico, aprendo un potenziale sfruttamento diffuso.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_GEOTHERMAL_SEA_VENT</Tag>
-		<English>Hydrothermal vent</English>
+		<Tag>TXT_KEY_BONUS_HYDROTHERMAL_VENT</Tag>
+		<English>Hydrothermal Vent</English>
 		<French>Sources hydrothermales</French>
 		<Italian>Sorgente idrotermale</Italian>
 		<Spanish>Fuente geotérmica submarina</Spanish>
 		<Polish>Energia Geotermalna</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_GEOTHERMAL_SEA_VENT_PEDIA</Tag>
+		<Tag>TXT_KEY_BONUS_HYDROTHERMAL_VENT_PEDIA</Tag>
 		<English>A hydrothermal vent is a fissure on the seafloor from which geothermally heated water issues. They are commonly found near volcanically or geologically active places, ocean basins, and hotspots. Under the sea, hydrothermal vents may form features called black smokers or white smokers. Relative to the majority of the deep sea, the areas around submarine hydrothermal vents are biologically more productive, often hosting complex communities of lifeforms, fueled by the chemicals dissolved in the vent fluids. Active hydrothermal vents are thought to exist on Europa and Enceladus, and it is speculated that ancient hydrothermal vents once existed on Mars.</English>
 		<Italian>Una sorgente idrotermale è una fessura sul fondo del mare da cui vengono emesse colonne d'acqua calda. Si trovano spesso in luoghi vulcanicamente o geologicamente attivi, bacini oceanici e punti caldi. Sotto il mare, le sorgenti possono formare delle fumarole di colore nero o bianco. Rispetto al resto del mare profondo, le aree intorno alle sorgenti sono biologicamente più produttive, ospitando spesso comunità complesse di forme di vita, alimentate dalle sostanze chimiche disciolte nei fluidi di sfiato. Si pensa che esistano sorgenti idrotermali attive su Europa ed Encelado, e si ipotizza che in passato esistessero anche su Marte.</Italian>
 	</TEXT>
@@ -2616,7 +2616,7 @@
 		<Italian>L'oro è un metallo brillante, leggermente rossastro, denso, morbido, malleabile e duttile nella sua forma più pura. Si presenta spesso in forma elementare libera, sotto forma di pepite o granaglie, nelle rocce, nelle vene e nei depositi alluvionali. Elemento relativamente raro, l'alta malleabilità, la duttilità, la resistenza alla corrosione e la maggior parte delle altre reazioni chimiche e la conduttività dell'elettricità dell'oro hanno portato al suo uso per monete, gioielli e altre opere d'arte nel corso della storia, così come nei connettori elettrici dei computer, nelle schermature a infrarossi, nella produzione di vetri colorati e foglie d'oro e nel restauro dei denti.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_GOLDEN_HORDE</Tag>
+		<Tag>TXT_KEY_BONUS_KIPCHAK</Tag>
 		<English>Kipchak</English>
 		<Italian>Kipchak</Italian>
 	</TEXT>
@@ -2627,14 +2627,14 @@
 		<Polish>Gocka</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_GRAIN</Tag>
+		<Tag>TXT_KEY_BONUS_GRAINS</Tag>
 		<English>Grains</English>
 		<French>Céréales</French>
 		<Italian>Cereali</Italian>
 		<Polish>Ziarno</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_GRAIN_PEDIA</Tag>
+		<Tag>TXT_KEY_BONUS_GRAINS_PEDIA</Tag>
 		<English>A grain is a small, hard, dry seed, with or without an attached hull or fruit layer, harvested for human or animal consumption. The two main types of commercial grain crops are cereals and legumes. Because of their properties, they can be stored, measured, and transported more readily than can other kinds of food crops such as fresh fruits, roots and tubers. The development of grain agriculture allowed excess food to be produced and stored easily which could have led to the creation of the first permanent settlements and the division of society into classes.</English>
 		<Italian>Un grano è un seme piccolo, duro, secco, con o senza guccio o buccia, che viene raccolto per essere consumato da umani o animali. I due principali tipi di colture commerciali sono cereali e legumi. Per le loro proprietà, possono essere immagazzinati, misurati e trasportati più facilmente rispetto ad altri tipi di colture alimentari come frutta fresca, radici e tuberi. Lo sviluppo dell'agricoltura cerealicola ha permesso di produrre e conservare facilmente il cibo in eccesso, il che avrebbe potuto portare alla creazione dei primi insediamenti permanenti e a una primordiale divisione della società in classi.</Italian>
 	</TEXT>
@@ -2708,7 +2708,7 @@
 		<Polish>Grecka</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_GUAM</Tag>
+		<Tag>TXT_KEY_BONUS_CHAMORRAN</Tag>
 		<English>Chamorran</English>
 		<Italian>Chamorro</Italian>
 	</TEXT>
@@ -2723,7 +2723,7 @@
 		<Italian>Guaraní</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_GUATEMALA</Tag>
+		<Tag>TXT_KEY_BONUS_GUATEMALAN</Tag>
 		<English>Guatemalan</English>
 		<Italian>Guatemalense</Italian>
 	</TEXT>
@@ -2756,7 +2756,7 @@
 		<Italian>Il porcellino d'India, noto anche come cavia, è una specie di roditore. I porcellini d'India avuto origine nelle Ande del Sud America; studi scientifici suggeriscono che discendono da una specie selvatica strettamente correlata, che è stata nel tempo addomesticata come bestiame e come fonte di cibo, ma utilizzata anche nella medicina popolare e nelle cerimonie religiose. Nella società occidentale, hanno goduto di una diffusa popolarità come animali domestici dal XVI secolo, ma sono state anche frequentemente utilizzati come organismi modello nella sperimentazione biologica, al punto che il termine "cavia" viene comunemente utilizzato per descrivere qualsiasi tipo di soggetto di prova, compresi gli umani.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_GUYANA</Tag>
+		<Tag>TXT_KEY_BONUS_GUYANESE</Tag>
 		<English>Guyanese</English>
 		<Italian>Guyanense</Italian>
 	</TEXT>
@@ -2861,7 +2861,7 @@
 		<Italian>L'elio-3 è un isotopo leggero e non radioattivo di elio con due protoni e un neutrone scoperto nel 1939. Oltre al protio (idrogeno ordinario), l'elio-3 è l'unico isotopo stabile di qualsiasi elemento con più protoni dei neutroni. Si è discusso molto sul rendere l'elio-3 come una futura fonte di energia: la fusione degli atomi di elio-3 libera grandi quantità di energia senza far diventare radioattivo il materiale circostante, sebbene le temperature richieste siano molto più elevate rispetto alla fusione tradizionale. L'abbondanza di elio-3 è maggiore sulla Luna e, su scala più ampia, su Giove e Saturno.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HELVETII</Tag>
+		<Tag>TXT_KEY_BONUS_HELVETIAN</Tag>
 		<English>Helvetian</English>
 		<Italian>Elvetico</Italian>
 	</TEXT>
@@ -3014,7 +3014,7 @@
 		<Italian>Il miele è una sostanza alimentare dolce e viscosa, prodotta dalle api dal nettare floreale o dalle secrezioni di altri insetti (come la melata), tramite rigurgito, attività enzimatica ed evaporazione dell'acqua. Le api immagazzinano il miele in strutture di cera chiamate favi. La varietà di miele prodotta dalle api è la più nota, grazie alla sua produzione commerciale mondiale e al consumo umano. Il miele viene raccolto da colonie di api selvatiche o da alveari di api domestiche - pratica nota come apicoltura. L'uso e la produzione del miele hanno una storia lunga e variegata come attività antica. Diverse pitture rupestri in Spagna raffigurano umani che cercano miele risalenti ad almeno 8.000 anni fa.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HONG_KONG</Tag>
+		<Tag>TXT_KEY_BONUS_HONGKONGER</Tag>
 		<English>Hongkonger</English>
 		<Italian>Hongkonghese</Italian>
 	</TEXT>
@@ -3596,7 +3596,7 @@
 		<Italian>Iraniano</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_IRAQUI</Tag>
+		<Tag>TXT_KEY_BONUS_IRAQI</Tag>
 		<English>Iraqi</English>
 		<Italian>Iracheno</Italian>
 	</TEXT>
@@ -3818,7 +3818,7 @@
 		<Italian>Kazako</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_KHAZARS</Tag>
+		<Tag>TXT_KEY_BONUS_KHAZAR</Tag>
 		<English>Khazar</English>
 		<Italian>Cazaro</Italian>
 	</TEXT>
@@ -3839,7 +3839,7 @@
 		<Italian>Killke</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_KITARA</Tag>
+		<Tag>TXT_KEY_BONUS_KITARAN</Tag>
 		<English>Kitaran</English>
 		<Italian>Kitara</Italian>
 	</TEXT>
@@ -3861,7 +3861,7 @@
 		<Polish>Kongijska</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_KONJO</Tag>
+		<Tag>TXT_KEY_BONUS_KONJAN</Tag>
 		<English>Konjan</English>
 		<Italian>Konjo</Italian>
 	</TEXT>
@@ -3888,7 +3888,7 @@
 		<Italian>Curdo</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_KUSH</Tag>
+		<Tag>TXT_KEY_BONUS_KUSHITE</Tag>
 		<English>Kushite</English>
 		<Italian>Kush</Italian>
 	</TEXT>
@@ -3898,13 +3898,13 @@
 		<Italian>Cusana</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_KUWAIT</Tag>
+		<Tag>TXT_KEY_BONUS_KUWAITI</Tag>
 		<English>Kuwaiti</English>
 		<Italian>Kuwaitiano</Italian>
 	</TEXT>
 <!-- L -->
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_LA_PLATA</Tag>
+		<Tag>TXT_KEY_BONUS_LA_PLATAN</Tag>
 		<English>La Platan</English>
 		<Italian>Laplatense</Italian>
 	</TEXT>
@@ -3976,7 +3976,7 @@
 		<Italian>Il cuoio è un materiale durevole e flessibile creato con la conciatura della pelle animale. Può essere prodotta in diversi modi da una produzione artigiana ad una industriale su grande scala.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_LEBANON</Tag>
+		<Tag>TXT_KEY_BONUS_LEBANESE</Tag>
 		<English>Lebanese</English>
 		<Italian>Libanese</Italian>
 	</TEXT>
@@ -4086,7 +4086,7 @@
 		<English>Lobsters are economically important as seafood, forming the basis of a global industry that nets more than 1 billion dollars annually. In North America, the American lobster did not achieve popularity until the mid-19th century, when New Yorkers and Bostonians developed a taste for it; not until the invention of a special boat, the lobster smack, did a commercial fishery flourish. The American Lobster is fished from Canada to New Jersey. In Massachusetts, the near-shore lobster fishery consists of independent fishermen who operate their own vessels. Lobster is the most valuable species caught in Massachusetts waters. Lobsters can be air-shipped anywhere in the world and arrive alive, making them the most expensive.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_LONGOBARDI</Tag>
+		<Tag>TXT_KEY_BONUS_LONGOBARDIAN</Tag>
 		<English>Longobardian</English>
 		<Italian>Longobardo</Italian>
 	</TEXT>
@@ -4116,7 +4116,7 @@
 		<Italian>Lunda</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_LUSITANI</Tag>
+		<Tag>TXT_KEY_BONUS_LUSITANIAN</Tag>
 		<English>Lusitanian</English>
 		<Italian>Lusitano</Italian>
 	</TEXT>
@@ -4140,7 +4140,7 @@
 	</TEXT>
 <!-- M -->
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_MACEDONIA</Tag>
+		<Tag>TXT_KEY_BONUS_MACEDONIAN</Tag>
 		<English>Macedonian</English>
 		<French>Macédonien</French>
 		<Italian>Macedone</Italian>
@@ -4193,7 +4193,7 @@
 		<Polish>Malinezyjska</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_MAMELUKS</Tag>
+		<Tag>TXT_KEY_BONUS_MAMELUK</Tag>
 		<English>Mameluk</English>
 		<Italian>Mammelucco</Italian>
 	</TEXT>
@@ -4406,14 +4406,14 @@
 		<Italian>Medo</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_MEDICAL_TRICODERS</Tag>
+		<Tag>TXT_KEY_BONUS_MEDICAL_TRICORDERS</Tag>
 		<English>Medical Tricorders</English>
 		<French>Tricorder médical</French>
 		<Italian>Tricorder medicale</Italian>
 		<Polish>Medyczne Trikordery</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_MEDICAL_TRICODERS_PEDIA</Tag>
+		<Tag>TXT_KEY_BONUS_MEDICAL_TRICORDERS_PEDIA</Tag>
 		<English>A medical tricorder is a handheld portable scanning device to be used by consumers to self-diagnose medical conditions within seconds and take basic vital measurements, such as blood pressure, temperature, and flow in a noninvasive way. It can diagnose a person's state of health either as a standalone device or as a connection to medical databases via an Internet connection. The idea of a medical tricorder comes from an imaginary device on the science fiction TV show Star Trek.</English>
 		<Italian>Un tricorder medico è un dispositivo medico portatile che può essere utilizzato per autodiagnosticare condizioni mediche in pochi secondi e per eseguire misurazioni vitali di base, come la pressione, la temperatura e il flusso sanguigno in modo non invasivo. Può diagnosticare lo stato di salute di una persona come dispositivo autonomo oppure connettendosi tramite Internet a dei database medici. L'idea di un tricorder medico proviene da un dispositivo immaginario dello show televisivo di fantascienza Star Trek.</Italian>
 	</TEXT>
@@ -4459,14 +4459,14 @@
 		<English>A metal foam is a cellular structure consisting of a solid metal, frequently aluminium, as well as a large volume fraction of gas-filled pores. The pores can be sealed (closed-cell foam), or they can form an interconnected network (open-cell foam). The defining characteristic of metal foams is a very high porosity: typically 75-95% of the volume consists of void spaces making these ultralight materials. The strength of foamed metal possesses a power law relationship to its density; i.e., a 20% dense material is more than twice as strong as a 10% dense material.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_METH</Tag>
+		<Tag>TXT_KEY_BONUS_METHAMPHETAMINE</Tag>
 		<English>Methamphetamine</English>
 		<French>Methamphétamines</French>
 		<Italian>Metanfetamine</Italian>
 		<Polish>Metaamfetamina</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_METH_PEDIA</Tag>
+		<Tag>TXT_KEY_BONUS_METHAMPHETAMINE_PEDIA</Tag>
 		<English>N-methylamphetamine, commonly named methamphetamine or meth, is a potent central nervous system stimulant that is mainly used as a recreational drug, and less commonly as a second-line treatment for attention deficit hyperactivity disorder and obesity. It is rarely prescribed over concerns involving human neurotoxicity, high addiction and dependence liability, as well as the availability of safer substitute drugs with comparable treatment efficacy. Internationally, the production, distribution, sale, and possession of methamphetamine is restricted or banned in many countries.</English>
 		<Italian>La N-metilamphetamina, comunemente chiamata metanfetamina, è un potente stimolante del sistema nervoso centrale che viene utilizzato principalmente come farmaco ricreativo e, meno comunemente, come trattamento di seconda linea per il disturbo da deficit di attenzione e iperattività e l'obesità. Viene raramente prescritta come medicinale a causa delle controindicazioni (come neurotossicità e alto rischio di dipendenza), nonché dalla disponibilità di farmaci sostitutivi più sicuri. A livello internazionale, la produzione, la distribuzione, la vendita e il possesso di metanfetamine sono limitati o vietati in molti paesi.</Italian>
 	</TEXT>
@@ -4572,7 +4572,7 @@
 		<English>Mithril is an artisan material that is manufactured out of lunar regolith, designed specifically to have the properties described about in fantasy. In actuality, it is a composite that is treated with high tech methods that are trade secrets.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_MITTANNI</Tag>
+		<Tag>TXT_KEY_BONUS_MITANNI</Tag>
 		<English>Mitanni</English>
 		<Italian>Mitanno</Italian>
 	</TEXT>
@@ -4654,7 +4654,7 @@
 		<English>Murex is a genus of medium to large sized predatory tropical sea snails. These are carnivorous marine gastropod molluscs in the family Muricidae, commonly called "murexes" or "rock snails". The common name murex is still used for a large number of species in the family Muricidae which were originally given the Latin generic name Murex in the past, but have more recently been regrouped into different newer genera. The word murex was used by Aristotle in reference to these kinds of snails, thus making it one of the oldest classical seashell names still in use by the scientific community.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_MURRI</Tag>
+		<Tag>TXT_KEY_BONUS_MARRI</Tag>
 		<English>Marri</English>
 		<Italian>Marri</Italian>
 	</TEXT>
@@ -4848,7 +4848,7 @@
 		<German>Das Wort Zeitung war ursprünglich der Begriff für eine beliebige Nachricht; die Bedeutung hat sich jedoch im Laufe des 18. Jahrhunderts geändert. Heute versteht man darunter ein periodisch erscheinendes Druckerzeugnis mit aktuellem und universellem Inhalt. Dieser besteht aus mehreren inhaltlich in sich abgeschlossenen Texten, die Zeitungsartikel genannt werden und bei deren Abfassung verschiedene journalistische Stilmittel angewandt werden.</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_NEW_ZEALAND</Tag>
+		<Tag>TXT_KEY_BONUS_NEW_ZEALANDER</Tag>
 		<English>New Zealander</English>
 		<French>Néo-zélandais</French>
 		<Italian>Neozelandese</Italian>
@@ -5001,7 +5001,7 @@
 		<Spanish>Los humanos conocen el petróleo desde la antigüedad. Los yacimientos de petróleo encontrados en la superficie se usaron durante siglos como impermeabilizador y combustible. Pero no fue hasta la llegada de la Revolución Industrial cuando las civilizaciones comenzaron a tener dependencia de los productos derivados del petróleo. El amplio uso del petróleo como combustible, lubricante, etc. ha llevado a una búsqueda constante de yacimientos todavía más grandes. A mediados del siglo XIX, se perforaron los primeros pozos petrolíferos en Pensilvania, lo que marcó el inicio de una industria tremendamente importante y beneficiosa. Hoy en día, con la reducción de las reservas mundiales y el crecimiento constante de la demanda, el petróleo es un recurso más valioso que nunca.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_OIL_PRODUCTS</Tag>
+		<Tag>TXT_KEY_BONUS_PETROLEUM_PRODUCTS</Tag>
 		<English>Petroleum Products</English>
 		<French>Produits pétroliers</French>
 		<German>Ölprodukte</German>
@@ -5010,7 +5010,7 @@
 		<Polish>Produkty Naftowe</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_OIL_PRODUCTS_PEDIA</Tag>
+		<Tag>TXT_KEY_BONUS_PETROLEUM_PRODUCTS_PEDIA</Tag>
 		<English>Petroleum products are materials derived from crude oil (petroleum) as it is processed in oil refineries. The largest share of oil products are the various grades of fuel oil and gasoline. Heavier (less volatile) fractions can also be used to produce asphalt, tar, paraffin wax, lubricating and other heavy oils. Refineries also produce other chemicals, some of which are used to produce plastics. Over 6,000 items are made from petroleum waste by-products, including fertilizers, floorings (floor coverings), perfumes, insecticides, petroleum jellies, soaps, vitamins and some essential aminoacids.</English>
 		<Italian>I derivati del petrolio sono materiali derivati dal petrolio greggio trasformato nelle raffinerie. I principali derivati sono le varie gradazioni di benzina e altri oli combustibili. Le parti più pesanti (ossia meno volatili) possono essere invece usate per produrre asfalto, catrame, cera di paraffina, lubrificanti e altri oli pesanti. Le raffinerie producono anche altri prodotti chimici, alcuni dei quali vengono utilizzati per realizzare materie plastiche. Oltre 6.000 prodotti vengono realizzati con gli scarti delle raffinazioni, tra cui tra cui fertilizzanti, pavimentazioni (rivestimenti per pavimenti), profumi, insetticidi, gelatine di petrolio, saponi, vitamine e alcuni aminoacidi essenziali.</Italian>
 	</TEXT>
@@ -5057,20 +5057,20 @@
 		<Polish>Jadeit to minerał o znacznej twardości był ceniony przez wiele kultur np. w starożytnych Chinach, w państwach Mezoameryki i przez ludy maoryskie (pounamu). Z jadeitu wyrabiano ozdoby oraz ze względu na twardość - narzędzia i kosztowną broń.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_OMAN</Tag>
+		<Tag>TXT_KEY_BONUS_OMANI</Tag>
 		<English>Omani</English>
 		<Italian>Omanita</Italian>
 		<Polish>Omanu</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_OMEGA_ACIDS</Tag>
-		<English>Omega-3 fatty acid</English>
+		<Tag>TXT_KEY_BONUS_OMEGA_FATTY_ACID</Tag>
+		<English>Omega Fatty Acid</English>
 		<French>Acides gras oméga-3</French>
 		<Italian>Acidi grassi omega-3</Italian>
 		<Polish>Kwasy tłuszczowe omega-3</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_OMEGA_ACIDS_PEDIA</Tag>
+		<Tag>TXT_KEY_BONUS_OMEGA_FATTY_ACID_PEDIA</Tag>
 		<English>In chemistry, and especially in biochemistry, a fatty acid is a carboxylic acid with a long aliphatic tail (chain), which is either saturated or unsaturated. Most naturally occurring fatty acids have a chain of an even number of carbon atoms, from 4 to 28. Fatty acids are usually derived from triglycerides or phospholipids. When they are not attached to other molecules, they are known as "free" fatty acids. Fatty acids are important sources of fuel because, when metabolized, they yield large quantities of ATP. Many cell types can use either glucose or fatty acids for this purpose. In particular, heart and skeletal muscle prefer fatty acids. Despite long-standing assertions to the contrary, the brain can use fatty acids as a source of fuel in addition to glucose and ketone bodies.</English>
 		<Polish>Nienasycone kwasy tłuszczowe, których ostatnie wiązanie podwójne w łańcuchu węglowym znajduje się przy trzecim od końca atomie węgla. Do tej grupy należą m.in. wielonienasycone kwasy pełniące ważną rolę w odżywianiu człowieka:</Polish>
 	</TEXT>
@@ -5812,7 +5812,7 @@
 		<English>Quantum dots (QD) are very small semiconductor particles, only several nanometers in size, so small that their optical and electronic properties differ from those of larger particles. They are a central theme in nanotechnology. Many types of quantum dot will emit light of specific frequencies if electricity or light is applied to them, and these frequencies can be precisely tuned by changing the dots' size, shape and material, giving rise to many applications.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_QUEBEC</Tag>
+		<Tag>TXT_KEY_BONUS_QUEBECKER</Tag>
 		<English>Quebecker</English>
 		<Italian>Quebecchese</Italian>
 	</TEXT>
@@ -5897,7 +5897,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RED_AND_BLACK_WARE</Tag>
-		<English>Red and Black Ware</English>
+		<English>Red And Black Ware</English>
 		<French>Objets à figures rouges et noires</French>
 		<Italian>Ceramiche rosse e nere</Italian>
 		<Polish>Ceramika czarno-czerwona</Polish>
@@ -6114,7 +6114,7 @@
 		<Polish>Siodło - część rzędu końskiego stanowiąca siedzenie przeznaczone dla jeźdźca. Rusztowanie siodła to tzw. stelaż lub terlica, wykonany z drewna, metalu lub tworzywa sztucznego. Jego pokrycie to część wykonana z wyściółki (najczęściej z plastikowej pianki, dawniej ze słomy lub filcu) i obciągnięta skórą lub sztucznym materiałem. Chroni ona kręgosłup konia przed urazami oraz umożliwia mu swobodę poruszania. Kształt i wyprofilowanie siodła wpływa na dosiad i sylwetkę jeźdźca. Siodła są wytwarzane w różnych rozmiarach oraz ciężarach, tak, aby pasowały do różnych rodzajów koni i jeźdźców.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_SAFAVIDS</Tag>
+		<Tag>TXT_KEY_BONUS_SAFAVID</Tag>
 		<English>Safavid</English>
 		<Italian>Safavide</Italian>
 	</TEXT>
@@ -6159,7 +6159,7 @@
 		<Italian>Sami</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_SAMOA</Tag>
+		<Tag>TXT_KEY_BONUS_SAMOAN</Tag>
 		<English>Samoan</English>
 		<Italian>Samoano</Italian>
 	</TEXT>
@@ -6190,7 +6190,7 @@
 		<French>Saphir (du mot hébreu ; Sapir) est la forme de simple-cristal de l'oxyde d'aluminium (Al2O3), un minerai connu sous le nom de corindon. Il peut être trouvé naturellement comme pierres gemmes ou être fabriqué en grands boules en cristal pour une variété d'applications. Le premier laser produit a été basé sur l'impureté rouge de chrome en saphir. Tandis que ce laser a peu d'applications, le laser de Ti-saphir est dû populaire à la capacité relativement rare d'accorder la longueur d'onde de laser dans la région infrarouge rouge-à-proche du spectre électromagnétique. Il peut également être facilement modelocked. Dans des ces lasers, un cristal synthétiquement produit de saphir avec des impuretés de chrome ou de titane est irradié avec une lumière intense d'une lampe spéciale, ou un laser différent, pour créer l'émission stimulée. Des lingots purs de saphir peuvent être découpés en gaufrettes et être polis en tranches pour former les tranches en cristal transparentes. De telles tranches sont employées comme visages de montre dans des montres de haute qualité, car la dureté exceptionnelle du matériel rend le visage presque impossible pour rayer. Puisque le saphir range des 9 sur l'échelle de Mohs, les propriétaires de telles montres devraient encore faire attention à éviter l'exposition aux bijoux de diamant, et devraient éviter de frapper leurs montres contre la pierre artificielle et les surfaces en pierre simulées. De telles surfaces contiennent souvent les matériaux comprenant le carbure de silicium, qui, comme le diamant, sont plus durs que le saphir et capable de causer raye ainsi.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_SARMATIANS</Tag>
+		<Tag>TXT_KEY_BONUS_SARMATIAN</Tag>
 		<English>Sarmatian</English>
 		<Italian>Sarmato</Italian>
 	</TEXT>
@@ -6265,7 +6265,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SEA_LION_AND_SEAL</Tag>
-		<English>Sea Lion and Seal</English>
+		<English>Sea Lion And Seal</English>
 		<French>Lion de mer et phoque</French>
 		<German>Seelöwe und Siegel</German>
 		<Italian>Leoni marini e foche</Italian>
@@ -6776,7 +6776,7 @@
 		<Italian>Un materiale supersolido (anche conosciuto come condensato di Bose-Einstein o come "il quinto stato della materia") è uno stato della materia che si forma tipicamente quando un gas di bosoni a bassa densità viene raffreddato a temperature molto vicine allo zero assoluto (-273,15 °C). In tali condizioni una grande frazione di bosoni occupa lo stato quantico più basso e quindi i fenomeni quantistici microscopici, in particolare l'interferenza della funzione d'onda, diventano apparenti macroscopicamente. Un materiale supersolido si forma raffreddando un gas di densità estremamente bassa (circa 1/100.000 della densità dell'aria normale) a temperature ultra-basse.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_SURINAM</Tag>
+		<Tag>TXT_KEY_BONUS_SURINAMESE</Tag>
 		<English>Surinamese</English>
 		<Italian>Surinamese</Italian>
 	</TEXT>
@@ -6857,7 +6857,7 @@
 		<Polish>Tajwańska</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_TAJIKS</Tag>
+		<Tag>TXT_KEY_BONUS_TAJIK</Tag>
 		<English>Tajik</English>
 		<Italian>Tagico</Italian>
 	</TEXT>
@@ -7319,7 +7319,7 @@
 		<Italian>Uruguaiano</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_UZBEKS</Tag>
+		<Tag>TXT_KEY_BONUS_UZBEK</Tag>
 		<English>Uzbek</English>
 		<Italian>Uzbeco</Italian>
 	</TEXT>
@@ -7337,12 +7337,12 @@
 		<Polish>Odkurzacz jest urządzeniem, które wykorzystuje się pompę powietrza, w celu utworzenia podciśnienia do zasysania kurzu i brudu, zwykle od podłogi, oraz ewentualnie innych powierzchni, jak również.Zanieczyszczenia są zbierane przez czy dustbag lub cyklonu w celu późniejszego usunięcia. Odkurzaczy, które są stosowane w domach, jak również w przemyśle występować w różnych wymiarach i modelach małe urządzenia na baterie ręcznych domowe centralne odkurzacze, urządzenia przemysłowe ogromne stacjonarne, które mogą obsługiwać kilkaset litrów kurzu przed opróżniony i samobieżne wodociągowe do odzyskania dużych wycieków lub usuwania zanieczyszczonej gleby.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_VALDIVIA</Tag>
+		<Tag>TXT_KEY_BONUS_VALDIVIAN</Tag>
 		<English>Valdivian</English>
 		<Italian>Valdiviano</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_VANATU</Tag>
+		<Tag>TXT_KEY_BONUS_VANUATUAN</Tag>
 		<English>Vanuatuan</English>
 		<Italian>Vanuatuano</Italian>
 	</TEXT>
@@ -7853,7 +7853,7 @@
 		<Italian>Yanomami</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_YEMENESE</Tag>
+		<Tag>TXT_KEY_BONUS_YEMENI</Tag>
 		<English>Yemeni</English>
 		<French>Yéménite</French>
 		<Italian>Yemenita</Italian>
@@ -7876,7 +7876,7 @@
 	</TEXT>
 <!-- Z -->
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_ZANZIBAR</Tag>
+		<Tag>TXT_KEY_BONUS_ZANZIBARI</Tag>
 		<English>Zanzibari</English>
 		<Italian>Zanzibarese</Italian>
 	</TEXT>
@@ -7893,7 +7893,7 @@
 		<Italian>Zenú</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_ZIMBABWE</Tag>
+		<Tag>TXT_KEY_BONUS_ZIMBABWEAN</Tag>
 		<English>Zimbabwean</English>
 		<Italian>Zimbabwese</Italian>
 	</TEXT>

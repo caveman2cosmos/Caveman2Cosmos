@@ -96,7 +96,7 @@
 				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 			</HeadquarterCommerces>
-			<BonusProduced>BONUS_OIL_PRODUCTS</BonusProduced>
+			<BonusProduced>BONUS_PETROLEUM_PRODUCTS</BonusProduced>
 			<CommercesProduced>
 				<iCommerceProduced>0</iCommerceProduced>
 				<iCommerceProduced>200</iCommerceProduced>
@@ -233,7 +233,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_GOLD_ORE</BonusType>
 				<BonusType>BONUS_SILVER_ORE</BonusType>
-				<BonusType>BONUS_GEMS</BonusType>
+				<BonusType>BONUS_GEMSTONE</BonusType>
 				<BonusType>BONUS_PEARLS</BonusType>
 			</PrereqBonuses>
 			<HeadquarterCommerces>

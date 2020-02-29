@@ -2350,7 +2350,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_BENIN</FreeBonus>
+			<FreeBonus>BONUS_BENINESE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special properties -->
 			<iConquestProb>100</iConquestProb>
@@ -3026,7 +3026,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_CETACEA_SAPIEN</FreeBonus>
+			<FreeBonus>BONUS_CETACEA_SAPIENS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special properties -->
 			<iConquestProb>100</iConquestProb>
@@ -4186,7 +4186,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_EPIRUS</FreeBonus>
+			<FreeBonus>BONUS_EPIROTE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special properties -->
 			<iConquestProb>100</iConquestProb>
@@ -4363,7 +4363,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_FRANKS</FreeBonus>
+			<FreeBonus>BONUS_FRANKISH</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special properties -->
 			<iConquestProb>100</iConquestProb>
@@ -6366,7 +6366,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_KONJO</FreeBonus>
+			<FreeBonus>BONUS_KONJAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special properties -->
 			<iConquestProb>100</iConquestProb>
@@ -6637,7 +6637,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_MACEDONIA</FreeBonus>
+			<FreeBonus>BONUS_MACEDONIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special properties -->
 			<iConquestProb>100</iConquestProb>
@@ -7778,7 +7778,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_NEW_ZEALAND</FreeBonus>
+			<FreeBonus>BONUS_NEW_ZEALANDER</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special properties -->
 			<iConquestProb>100</iConquestProb>
@@ -9045,7 +9045,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_SAMOA</FreeBonus>
+			<FreeBonus>BONUS_SAMOAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special properties -->
 			<iConquestProb>100</iConquestProb>
@@ -11315,7 +11315,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_YEMENESE</FreeBonus>
+			<FreeBonus>BONUS_YEMENI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special properties -->
 			<iConquestProb>100</iConquestProb>
@@ -11548,7 +11548,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_ADENA</FreeBonus>
+			<FreeBonus>BONUS_ADENAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -11591,7 +11591,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_AFGHANISTAN</FreeBonus>
+			<FreeBonus>BONUS_AFGHAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -11806,7 +11806,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_ALGIER</FreeBonus>
+			<FreeBonus>BONUS_ALGERIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -11978,7 +11978,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_ARAGON</FreeBonus>
+			<FreeBonus>BONUS_ARAGONESE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -12021,7 +12021,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_AVARS</FreeBonus>
+			<FreeBonus>BONUS_AVARIC</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -12064,7 +12064,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_AVERNI</FreeBonus>
+			<FreeBonus>BONUS_ARVERNIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -12150,7 +12150,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_BAHRAIN</FreeBonus>
+			<FreeBonus>BONUS_BAHRAINI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -12236,7 +12236,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_BANGLADESH</FreeBonus>
+			<FreeBonus>BONUS_BANGLADESHI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -12322,7 +12322,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_BATAVI</FreeBonus>
+			<FreeBonus>BONUS_BATAVIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -12494,7 +12494,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_BELIZE</FreeBonus>
+			<FreeBonus>BONUS_BELIZEAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -12666,7 +12666,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_BURGUNDI</FreeBonus>
+			<FreeBonus>BONUS_BURGUNDIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -13182,7 +13182,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_CHORESM</FreeBonus>
+			<FreeBonus>BONUS_KHWARAZMIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -13913,7 +13913,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GOLDEN_HORDE</FreeBonus>
+			<FreeBonus>BONUS_KIPCHAK</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -13956,7 +13956,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GUAM</FreeBonus>
+			<FreeBonus>BONUS_CHAMORRAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -14085,7 +14085,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GUATEMALA</FreeBonus>
+			<FreeBonus>BONUS_GUATEMALAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -14128,7 +14128,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GUYANA</FreeBonus>
+			<FreeBonus>BONUS_GUYANESE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -14171,7 +14171,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_HELVETII</FreeBonus>
+			<FreeBonus>BONUS_HELVETIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -14300,7 +14300,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_HONG_KONG</FreeBonus>
+			<FreeBonus>BONUS_HONGKONGER</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -14644,7 +14644,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_IRAQUI</FreeBonus>
+			<FreeBonus>BONUS_IRAQI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -14859,7 +14859,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_KHAZARS</FreeBonus>
+			<FreeBonus>BONUS_KHAZAR</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -14988,7 +14988,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_KITARA</FreeBonus>
+			<FreeBonus>BONUS_KITARAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -15117,7 +15117,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_KUSH</FreeBonus>
+			<FreeBonus>BONUS_KUSHITE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -15203,7 +15203,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_KUWAIT</FreeBonus>
+			<FreeBonus>BONUS_KUWAITI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -15289,7 +15289,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_LA_PLATA</FreeBonus>
+			<FreeBonus>BONUS_LA_PLATAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -15332,7 +15332,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_LEBANON</FreeBonus>
+			<FreeBonus>BONUS_LEBANESE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -15461,7 +15461,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_LONGOBARDI</FreeBonus>
+			<FreeBonus>BONUS_LONGOBARDIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -15590,7 +15590,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_LUSITANI</FreeBonus>
+			<FreeBonus>BONUS_LUSITANIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -15676,7 +15676,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_MAMELUKS</FreeBonus>
+			<FreeBonus>BONUS_MAMELUK</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -15934,7 +15934,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_MITTANNI</FreeBonus>
+			<FreeBonus>BONUS_MITANNI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -16149,7 +16149,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_MURRI</FreeBonus>
+			<FreeBonus>BONUS_MARRI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -16493,7 +16493,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_OMAN</FreeBonus>
+			<FreeBonus>BONUS_OMANI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -17267,7 +17267,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_QUEBEC</FreeBonus>
+			<FreeBonus>BONUS_QUEBECKER</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -17484,7 +17484,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_SAFAVIDS</FreeBonus>
+			<FreeBonus>BONUS_SAFAVID</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -17613,7 +17613,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_SARMATIANS</FreeBonus>
+			<FreeBonus>BONUS_SARMATIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -18129,7 +18129,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_SURINAM</FreeBonus>
+			<FreeBonus>BONUS_SURINAMESE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -18301,7 +18301,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_TAJIKS</FreeBonus>
+			<FreeBonus>BONUS_TAJIK</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -18989,7 +18989,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_UZBEKS</FreeBonus>
+			<FreeBonus>BONUS_UZBEK</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -19032,7 +19032,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_VALDIVIA</FreeBonus>
+			<FreeBonus>BONUS_VALDIVIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -19075,7 +19075,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_VANATU</FreeBonus>
+			<FreeBonus>BONUS_VANUATUAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -19548,7 +19548,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_ZANZIBAR</FreeBonus>
+			<FreeBonus>BONUS_ZANZIBARI</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -19634,7 +19634,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_ZIMBABWE</FreeBonus>
+			<FreeBonus>BONUS_ZIMBABWEAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->

@@ -642,7 +642,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=0,y=25
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	ImprovementType=IMPROVEMENT_GOODY_ISLAND
 	TerrainType=TERRAIN_SEA
 	PlotType=3
@@ -2258,7 +2258,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=2,y=30
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_SEA
 	PlotType=3
 EndPlot
@@ -2304,7 +2304,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=2,y=39
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_SEA_DEEP_TROPICAL
 	PlotType=3
 EndPlot
@@ -10044,7 +10044,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=12,y=37
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -10788,7 +10788,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=13,y=34
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_SEA_DEEP
 	PlotType=3
 EndPlot
@@ -12011,7 +12011,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=14,y=122
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -17542,7 +17542,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=21,y=122
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -17892,7 +17892,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=22,y=43
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_SEA
 	PlotType=3
 EndPlot
@@ -18641,7 +18641,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23,y=40
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -19765,7 +19765,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=24,y=109
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -20591,7 +20591,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=121
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -21317,7 +21317,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=115
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -27792,7 +27792,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=35,y=38
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_SEA_DEEP_TROPICAL
 	PlotType=3
 EndPlot
@@ -29318,7 +29318,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=37,y=37
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_SEA_DEEP_TROPICAL
 	PlotType=3
 EndPlot
@@ -30230,7 +30230,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=58
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	FeatureType=FEATURE_ICE, FeatureVariety=0
 	TerrainType=TERRAIN_SEA_DEEP_POLAR
 	PlotType=3
@@ -34973,7 +34973,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=44,y=49
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	ImprovementType=IMPROVEMENT_GOODY_ISLAND
 	TerrainType=TERRAIN_SEA
 	PlotType=3
@@ -44508,7 +44508,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=56,y=57
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	FeatureType=FEATURE_ICE, FeatureVariety=0
 	TerrainType=TERRAIN_SEA_DEEP_POLAR
 	PlotType=3
@@ -45613,7 +45613,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=118
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot

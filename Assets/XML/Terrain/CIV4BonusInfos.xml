@@ -11176,11 +11176,11 @@
 			</FeatureTerrainBooleans>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_GEOTHERMAL_SEA_VENT</Type>
-			<Description>TXT_KEY_BONUS_GEOTHERMAL_SEA_VENT</Description>
-			<Civilopedia>TXT_KEY_BONUS_GEOTHERMAL_SEA_VENT_PEDIA</Civilopedia>
+			<Type>BONUS_HYDROTHERMAL_VENT</Type>
+			<Description>TXT_KEY_BONUS_HYDROTHERMAL_VENT</Description>
+			<Civilopedia>TXT_KEY_BONUS_HYDROTHERMAL_VENT_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_GEOTHERMAL_SEA_VENT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_HYDROTHERMAL_VENT</ArtDefineTag>
 			<TechReveal>TECH_VOLCANOLOGY</TechReveal>
 			<TechCityTrade>TECH_VOLCANOLOGY</TechCityTrade>
 			<YieldChanges>

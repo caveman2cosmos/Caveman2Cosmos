@@ -26,7 +26,7 @@
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqBonuses>
 				<Bonus>BONUS_FINE_CLAY</Bonus>
-				<Bonus>BONUS_COMMON_CLAY</Bonus>
+				<Bonus>BONUS_CLAY</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -290,7 +290,7 @@
 			<PrereqTech>TECH_POTTERY</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_FINE_CLAY</Bonus>
-				<Bonus>BONUS_COMMON_CLAY</Bonus>
+				<Bonus>BONUS_CLAY</Bonus>
 			</PrereqBonuses>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
@@ -413,7 +413,7 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqBonuses>
 				<Bonus>BONUS_FINE_CLAY</Bonus>
-				<Bonus>BONUS_COMMON_CLAY</Bonus>
+				<Bonus>BONUS_CLAY</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>

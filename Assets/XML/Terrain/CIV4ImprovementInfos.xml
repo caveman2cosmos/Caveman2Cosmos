@@ -5203,7 +5203,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_GEOTHERMAL_SEA_VENT</BonusType>
+					<BonusType>BONUS_HYDROTHERMAL_VENT</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>

@@ -158,7 +158,7 @@ def getModInfo(mapVersion=None, defLatitude=None, sMapInfo=None):
 	ebCow             = GC.getInfoTypeForString('BONUS_COW')			# grass, plains
 	ebDeer            = GC.getInfoTypeForString('BONUS_DEER')			# tundra, forest
 	ebFur             = GC.getInfoTypeForString('BONUS_BEAVERS')			# tundra, snow, forest
-	ebGems            = GC.getInfoTypeForString('BONUS_GEMS')			# grass, jungle
+	ebGems            = GC.getInfoTypeForString('BONUS_GEMSTONE')			# grass, jungle
 	ebMarble          = GC.getInfoTypeForString('BONUS_MARBLE')			# plains, tundra, snow
 	ebSheep           = GC.getInfoTypeForString('BONUS_SHEEP')			# grass, plains
 

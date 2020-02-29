@@ -13415,7 +13415,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POTTERY</PrereqTech>
-			<Bonus>BONUS_COMMON_CLAY</Bonus>
+			<Bonus>BONUS_CLAY</Bonus>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
@@ -15725,7 +15725,7 @@
 			<iPrereqPopulation>12</iPrereqPopulation>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_CARCASS</VicinityBonus>
-				<VicinityBonus>BONUS_GRAIN</VicinityBonus>
+				<VicinityBonus>BONUS_GRAINS</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
@@ -15855,7 +15855,7 @@
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
 			<iPrereqPopulation>14</iPrereqPopulation>
 			<PrereqVicinityBonuses>
-               <VicinityBonus>BONUS_GRAIN</VicinityBonus>
+               <VicinityBonus>BONUS_GRAINS</VicinityBonus>
                <VicinityBonus>BONUS_VEGETABLES</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<!-- Construction cost -->
@@ -15924,7 +15924,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
 			<iPrereqPopulation>8</iPrereqPopulation>
-			<VicinityBonus>BONUS_GRAIN</VicinityBonus>
+			<VicinityBonus>BONUS_GRAINS</VicinityBonus>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<bAutoBuild>1</bAutoBuild>
@@ -16130,7 +16130,7 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<iPrereqPopulation>8</iPrereqPopulation>
 			<PrereqVicinityBonuses>
-				<VicinityBonus>BONUS_GRAIN</VicinityBonus>
+				<VicinityBonus>BONUS_GRAINS</VicinityBonus>
 				<VicinityBonus>BONUS_CHEESE</VicinityBonus>
 				<VicinityBonus>BONUS_VEGETABLES</VicinityBonus>
 			</PrereqVicinityBonuses>
@@ -19551,7 +19551,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_PARTS</BonusType>
 				<BonusType>BONUS_TIRES</BonusType>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<!-- Construction cost -->
