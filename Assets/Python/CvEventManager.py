@@ -283,6 +283,10 @@ class CvEventManager:
 					"DOMAIN_LAND"		: GC.getInfoTypeForString('DOMAIN_LAND'),
 					"DOMAIN_SEA"		: GC.getInfoTypeForString('DOMAIN_SEA')
 				}
+				self.TECH_SATELLITES		= GC.getInfoTypeForString("TECH_SATELLITES")
+				self.TECH_STARGAZING		= GC.getInfoTypeForString("TECH_STARGAZING")
+				self.TECH_ASTROLOGY			= GC.getInfoTypeForString("TECH_ASTROLOGY")
+				self.TECH_CRITICAL_THOUGHT	= GC.getInfoTypeForString("TECH_CRITICAL_THOUGHT")
 				# onUnitBuilt
 				self.mapSettlerPop = {
 					GC.getInfoTypeForString("UNIT_COLONIST")	: 1,
@@ -722,7 +726,7 @@ class CvEventManager:
 				elif KEY == "ZIZKOV":
 					MAP = GC.getMap()
 					iPlayerAct = GAME.getActivePlayer()
-					TECH_SATELLITES = GC.getInfoTypeForString("TECH_SATELLITES")
+					TECH_SATELLITES = self.TECH_SATELLITES
 					iChance = 50 + (MAP.getWorldSize() + 3)**2 + 64 * self.iVictoryDelayPrcntGS / 100
 					iTeam = CyPlayer.getTeam()
 					for iPlayerX in xrange(self.MAX_PC_PLAYERS):
@@ -1390,7 +1394,7 @@ class CvEventManager:
 					if CyPlayerX.isAlive():
 						CyPlayerX.AI_changeAttitudeExtra(iTeam, 3)
 			elif KEY == "ZIZKOV":
-				TECH_SATELLITES = GC.getInfoTypeForString("TECH_SATELLITES")
+				TECH_SATELLITES = self.TECH_SATELLITES
 				iTeam = CyPlayer.getTeam()
 				for iTeamX in xrange(GC.getMAX_PC_TEAMS()):
 					if iTeamX == iTeam:
@@ -2087,8 +2091,13 @@ class CvEventManager:
 		KEY = CvUnitInfo.getType()
 
 		# Star Signs
-		if CyUnit.isNPC() and not GAME.getSorenRandNum(100, "Random to get a Sign"):
-			# 1% chance of getting a "sign promotion"
+		CyTeam = GC.getTeam(CyUnit.getTeam())
+		if CyUnit.getDomainType() == self.mapDomain['DOMAIN_LAND'] \
+		and CyTeam.isHasTech(self.TECH_STARGAZING) \
+		and(CyTeam.isHasTech(self.TECH_ASTROLOGY) or GAME.getSorenRandNum(2, "Half probability before Astrology")) \
+		and not CyTeam.isHasTech(self.TECH_SATELLITES) \
+		and not CyTeam.isHasTech(self.TECH_CRITICAL_THOUGHT) \
+		and not GAME.getSorenRandNum(49, "Seventh son of seventh son"):
 			import StarSigns
 			StarSigns.give(GC, TRNSLTR, GAME, CyUnit, GC.getPlayer(iPlayer))
 
@@ -2132,11 +2141,6 @@ class CvEventManager:
 			popupInfo.setText("showWonderMovie")
 			popupInfo.addPopup(iPlayer)
 		'''
-		# Star Signs
-		if not CyUnit.isNPC() and not GAME.getSorenRandNum(100, "Random to get a Sign"):
-			# 1% chance of getting a "sign promotion"
-			import StarSigns
-			StarSigns.give(GC, TRNSLTR, GAME, CyUnit, CyPlayer)
 
 		# Technocracy - Free Promotion
 		if CyPlayer.getCivics(self.CIVICOPTION_POWER) == self.CIVIC_TECHNOCRACY:
