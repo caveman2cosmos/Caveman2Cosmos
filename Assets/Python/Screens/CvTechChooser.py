@@ -283,6 +283,7 @@ class CvTechChooser:
 		screen.showWindowBackground(False)
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
 
+		iPlayer = GC.getGame().getActivePlayer()
 		# Debug
 		import DebugUtils
 		if DebugUtils.bDebugMode:
@@ -293,7 +294,7 @@ class CvTechChooser:
 				if CyPlayerX.isAlive():
 					screen.addPullDownString(DDB, CyPlayerX.getName(), iPlayerX, iPlayerX, iPlayer == iPlayerX)
 
-		self.initForPlayer(GC.getGame().getActivePlayer())
+		self.initForPlayer(iPlayer)
 
 		print "CvTechChooser.interfaceScreen - DONE"
 

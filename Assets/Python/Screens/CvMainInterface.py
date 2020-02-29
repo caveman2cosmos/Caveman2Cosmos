@@ -5708,7 +5708,7 @@ class CvMainInterface:
 				elif ID == 3:
 					UP.showForeignAdvisorScreen([0])
 				elif ID == 4:
-					UP.showMilitaryAdvisor()
+					GAME.doControl(ControlTypes.CONTROL_MILITARY_SCREEN)
 				elif ID == 5:
 					UP.showTechChooser()
 				elif ID == 6:
