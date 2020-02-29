@@ -8,7 +8,6 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<!-- Agricultural Achievement -->
-			<BuildingClass>BUILDINGCLASS_AGRICULTURAL_ACHIEVEMENT</BuildingClass>
 			<Type>BUILDING_AGRICULTURAL_ACHIEVEMENT</Type>
 			<Description>TXT_KEY_BUILDING_AGRICULTURAL_ACHIEVEMENT</Description>
 			<Civilopedia>TXT_KEY_ACHIEVEMENT_PEDIA</Civilopedia>
@@ -41,7 +40,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Commercial Achievement -->
-			<BuildingClass>BUILDINGCLASS_COMMERCIAL_ACHIEVEMENT</BuildingClass>
 			<Type>BUILDING_COMMERCIAL_ACHIEVEMENT</Type>
 			<Description>TXT_KEY_BUILDING_COMMERCIAL_ACHIEVEMENT</Description>
 			<Civilopedia>TXT_KEY_ACHIEVEMENT_PEDIA</Civilopedia>
@@ -76,7 +74,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Effect - Achievement (Environmental) -->
-			<BuildingClass>BUILDINGCLASS_ENVIRONMENTAL_ACHIEVEMENT_EFFECT</BuildingClass>
 			<Type>BUILDING_ENVIRONMENTAL_ACHIEVEMENT_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_ENVIRONMENTAL_ACHIEVEMENT_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ENVIRONMENTAL_ACHIEVEMENT_EFFECT_PEDIA</Civilopedia>
@@ -113,7 +110,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Effect - Achievement (Medical) -->
-			<BuildingClass>BUILDINGCLASS_MEDICAL_ACHIEVEMENT_EFFECT</BuildingClass>
 			<Type>BUILDING_MEDICAL_ACHIEVEMENT_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_MEDICAL_ACHIEVEMENT_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MEDICAL_ACHIEVEMENT_EFFECT_PEDIA</Civilopedia>
@@ -145,7 +141,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Effect - Achievement (Safety) -->
-			<BuildingClass>BUILDINGCLASS_SAFETY_ACHIEVEMENT_EFFECT</BuildingClass>
 			<Type>BUILDING_SAFETY_ACHIEVEMENT_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_SAFETY_ACHIEVEMENT_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SAFETY_ACHIEVEMENT_EFFECT_PEDIA</Civilopedia>
@@ -185,7 +180,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Effect - Achievement (Tourism) -->
-			<BuildingClass>BUILDINGCLASS_TOURISM_ACHIEVEMENT_EFFECT</BuildingClass>
 			<Type>BUILDING_TOURISM_ACHIEVEMENT_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_TOURISM_ACHIEVEMENT_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TOURISM_ACHIEVEMENT_EFFECT_PEDIA</Civilopedia>
@@ -217,7 +211,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Environmental Achievement -->
-			<BuildingClass>BUILDINGCLASS_ENVIRONMENTAL_ACHIEVEMENT</BuildingClass>
 			<Type>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</Type>
 			<Description>TXT_KEY_BUILDING_ENVIRONMENTAL_A</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ENVIRONMENTAL_A_PEDIA</Civilopedia>
@@ -254,7 +247,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Industrial Achievement -->
-			<BuildingClass>BUILDINGCLASS_INDUSTRIAL_ACHIEVEMENT</BuildingClass>
 			<Type>BUILDING_INDUSTRIAL_ACHIEVEMENT</Type>
 			<Description>TXT_KEY_BUILDING_INDUSTRIAL_ACHIEVEMENT</Description>
 			<Civilopedia>TXT_KEY_ACHIEVEMENT_PEDIA</Civilopedia>
@@ -288,7 +280,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Medical Achievement -->
-			<BuildingClass>BUILDINGCLASS_MEDICAL_ACHIEVEMENT</BuildingClass>
 			<Type>BUILDING_MEDICAL_ACHIEVEMENT</Type>
 			<Description>TXT_KEY_BUILDING_MEDICAL_A</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MEDICAL_A_PEDIA</Civilopedia>
@@ -325,7 +316,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Military Achievement -->
-			<BuildingClass>BUILDINGCLASS_MILITARY_ACHIEVEMENT</BuildingClass>
 			<Type>BUILDING_MILITARY_ACHIEVEMENT</Type>
 			<Description>TXT_KEY_BUILDING_MILITARY_ACHIEVEMENT</Description>
 			<Civilopedia>TXT_KEY_ACHIEVEMENT_PEDIA</Civilopedia>
@@ -357,7 +347,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Political Achievement -->
-			<BuildingClass>BUILDINGCLASS_POLITICAL_ACHIEVEMENT</BuildingClass>
 			<Type>BUILDING_POLITICAL_ACHIEVEMENT</Type>
 			<Description>TXT_KEY_BUILDING_POLITICAL_ACHIEVEMENT</Description>
 			<Civilopedia>TXT_KEY_ACHIEVEMENT_PEDIA</Civilopedia>
@@ -393,7 +382,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Safety Achievement -->
-			<BuildingClass>BUILDINGCLASS_SAFETY_ACHIEVEMENT</BuildingClass>
 			<Type>BUILDING_SAFETY_ACHIEVEMENT</Type>
 			<Description>TXT_KEY_BUILDING_SAFETY_A</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SAFETY_A_PEDIA</Civilopedia>
@@ -428,7 +416,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Scientific Achievement -->
-			<BuildingClass>BUILDINGCLASS_SCIENTIFIC_ACHIEVEMENT</BuildingClass>
 			<Type>BUILDING_SCIENTIFIC_ACHIEVEMENT</Type>
 			<Description>TXT_KEY_BUILDING_SCIENTIFIC_ACHIEVEMENT</Description>
 			<Civilopedia>TXT_KEY_ACHIEVEMENT_PEDIA</Civilopedia>
@@ -462,7 +449,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Seafaring Achievement -->
-			<BuildingClass>BUILDINGCLASS_SEAFARING_ACHIEVEMENT</BuildingClass>
 			<Type>BUILDING_SEAFARING_ACHIEVEMENT</Type>
 			<Description>TXT_KEY_BUILDING_SEAFARING_ACHIEVEMENT</Description>
 			<Civilopedia>TXT_KEY_ACHIEVEMENT_PEDIA</Civilopedia>
@@ -503,7 +489,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Tourism Achievement -->
-			<BuildingClass>BUILDINGCLASS_TOURISM_ACHIEVEMENT</BuildingClass>
 			<Type>BUILDING_TOURISM_ACHIEVEMENT</Type>
 			<Description>TXT_KEY_BUILDING_TOURISM_A</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TOURISM_A_PEDIA</Civilopedia>
@@ -539,7 +524,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National Belief (Karma) -->
-			<BuildingClass>BUILDINGCLASS_NATIONAL_BELIEF_KARMA</BuildingClass>
 			<Type>BUILDING_NATIONAL_BELIEF_KARMA</Type>
 			<Description>TXT_KEY_BUILDING_NATIONAL_BELIEF_KARMA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_BELIEF_KARMA_PEDIA</Civilopedia>
@@ -584,7 +568,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National Belief (Reincarnation) -->
-			<BuildingClass>BUILDINGCLASS_NATIONAL_BELIEF_REINCARNATION</BuildingClass>
 			<Type>BUILDING_NATIONAL_BELIEF_REINCARNATION</Type>
 			<Description>TXT_KEY_BUILDING_NATIONAL_BELIEF_REINCARNATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_BELIEF_REINCARNATION_PEDIA</Civilopedia>
@@ -625,7 +608,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National Belief (Resurrection) -->
-			<BuildingClass>BUILDINGCLASS_NATIONAL_BELIEF_RESURRECTION</BuildingClass>
 			<Type>BUILDING_NATIONAL_BELIEF_RESURRECTION</Type>
 			<Description>TXT_KEY_BUILDING_NATIONAL_BELIEF_RESURRECTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_BELIEF_RESURRECTION_PEDIA</Civilopedia>
@@ -682,7 +664,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Cereal Mills -->
-			<BuildingClass>BUILDINGCLASS_CORPORATION_1_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_1_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_1_HQ</Description>
@@ -753,7 +734,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Sid's Sushi Co -->
-			<BuildingClass>BUILDINGCLASS_CORPORATION_2_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_2_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_2_HQ</Description>
@@ -825,7 +805,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Standard Ethanol -->
-			<BuildingClass>BUILDINGCLASS_CORPORATION_3_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_3_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_3_HQ</Description>
@@ -896,7 +875,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Creative Constructions -->
-			<BuildingClass>BUILDINGCLASS_CORPORATION_4_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_4_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_4_HQ</Description>
@@ -967,7 +945,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Mining Inc -->
-			<BuildingClass>BUILDINGCLASS_CORPORATION_5_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_5_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_5_HQ</Description>
@@ -1038,7 +1015,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Aluminum Co -->
-			<BuildingClass>BUILDINGCLASS_CORPORATION_6_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_6_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_6_HQ</Description>
@@ -1109,7 +1085,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Civilized Jewelers Inc -->
-			<BuildingClass>BUILDINGCLASS_CORPORATION_7_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_7_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_7_HQ</Description>
@@ -1180,7 +1155,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Adventure Tours Headquarters -->
-			<BuildingClass>BUILDINGCLASS_CORPORATION_ADVENTURE_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_ADVENTURE_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_ADVENTURE_HQ</Description>
@@ -1255,7 +1229,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Bullseye Headquarters -->
-			<BuildingClass>BUILDINGCLASS_CORPORATION_BULLSEYE_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_BULLSEYE_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_BULLSEYE_HQ</Description>
@@ -1330,7 +1303,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Burgerworld Headquarters -->
-			<BuildingClass>BUILDINGCLASS_CORPORATION_BURGERWORLD_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_BURGERWORLD_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_BURGERWORLD_HQ</Description>
@@ -1405,7 +1377,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Emperors Clothing Headquarters -->
-			<BuildingClass>BUILDINGCLASS_CORPORATION_EMPCLOTH_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_EMPCLOTH_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH_HQ</Description>
@@ -1476,7 +1447,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- East West Traders Headquarters -->
-			<BuildingClass>BUILDINGCLASS_CORPORATION_EWTRADE_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_EWTRADE_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_EWTRADE_HQ</Description>
@@ -1551,7 +1521,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Fashion House Headquarters -->
-			<BuildingClass>BUILDINGCLASS_BUILDING_CORPORATION_FASHION_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_FASHION_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_FASHION_HQ</Description>
@@ -1622,7 +1591,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- MallWart Headquarters -->
-			<BuildingClass>BUILDINGCLASS_CORPORATION_MALLWART_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_MALLWART_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_MALLWART_HQ</Description>
@@ -1697,7 +1665,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Mapster Headquarters -->
-			<BuildingClass>BUILDINGCLASS_CORPORATION_MAPSTER_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_MAPSTER_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_MAPSTER_HQ</Description>
@@ -1769,7 +1736,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Big McDowells Headquarters -->
-			<BuildingClass>BUILDINGCLASS_CORPORATION_MCDOWELLS_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_MCDOWELLS_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_MCDOWELLS_HQ</Description>
@@ -1844,7 +1810,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- MileHigh Travels International Headquarters -->
-			<BuildingClass>BUILDINGCLASS_CORPORATION_MILEHIGH_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_MILEHIGH_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_MILEHIGH_HQ</Description>
@@ -1915,7 +1880,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Mobby Meats International Headquarters -->
-			<BuildingClass>BUILDINGCLASS_CORPORATION_MOBBY_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_MOBBY_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_MOBBY_HQ</Description>
@@ -1990,7 +1954,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- MoonBean Coffee Headquarters -->
-			<BuildingClass>BUILDINGCLASS_CORPORATION_MOONBEAN_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_MOONBEAN_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_MOONBEAN_HQ</Description>
@@ -2061,7 +2024,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Red Curtains Headquarters -->
-			<BuildingClass>BUILDINGCLASS_CORPORATION_RED_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_RED_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_RED_HQ</Description>
@@ -2138,7 +2100,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Safari Hunters Headquarters -->
-			<BuildingClass>BUILDINGCLASS_CORPORATION_SAFARI_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_SAFARI_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_SAFARI_HQ</Description>
@@ -2211,7 +2172,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Ultimate Soldiers Headquarters -->
-			<BuildingClass>BUILDINGCLASS_CORPORATION_ULTSOLDIER_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_ULTSOLDIER_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_ULTSOLDIER_HQ</Description>
@@ -2285,7 +2245,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Wonka Confectioneries Headquarters -->
-			<BuildingClass>BUILDINGCLASS_CORPORATION_WONKA_HQ</BuildingClass>
 			<Type>BUILDING_CORPORATION_WONKA_HQ</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_WONKA_HQ</Description>
@@ -2356,7 +2315,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Unaware) -->
-			<BuildingClass>BUILDINGCLASS_EQ_MINUS1</BuildingClass>
 			<Type>BUILDING_EQ_MINUS1</Type>
 			<Description>TXT_KEY_BUILDING_EQ_MINUS1</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -2413,7 +2371,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Foolish) -->
-			<BuildingClass>BUILDINGCLASS_EQ_MINUS2</BuildingClass>
 			<Type>BUILDING_EQ_MINUS2</Type>
 			<Description>TXT_KEY_BUILDING_EQ_MINUS2</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -2475,7 +2432,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Senseless) -->
-			<BuildingClass>BUILDINGCLASS_EQ_MINUS3</BuildingClass>
 			<Type>BUILDING_EQ_MINUS3</Type>
 			<Description>TXT_KEY_BUILDING_EQ_MINUS3</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -2534,7 +2490,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Absurd) -->
-			<BuildingClass>BUILDINGCLASS_EQ_MINUS4</BuildingClass>
 			<Type>BUILDING_EQ_MINUS4</Type>
 			<Description>TXT_KEY_BUILDING_EQ_MINUS4</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -2596,7 +2551,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Moronic) -->
-			<BuildingClass>BUILDINGCLASS_EQ_MINUS5</BuildingClass>
 			<Type>BUILDING_EQ_MINUS5</Type>
 			<Description>TXT_KEY_BUILDING_EQ_MINUS5</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -2655,7 +2609,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Farcical) -->
-			<BuildingClass>BUILDINGCLASS_EQ_MINUS6</BuildingClass>
 			<Type>BUILDING_EQ_MINUS6</Type>
 			<Description>TXT_KEY_BUILDING_EQ_MINUS6</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -2717,7 +2670,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Dimwitted) -->
-			<BuildingClass>BUILDINGCLASS_EQ_MINUS7</BuildingClass>
 			<Type>BUILDING_EQ_MINUS7</Type>
 			<Description>TXT_KEY_BUILDING_EQ_MINUS7</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -2776,7 +2728,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Ridiculous) -->
-			<BuildingClass>BUILDINGCLASS_EQ_MINUS8</BuildingClass>
 			<Type>BUILDING_EQ_MINUS8</Type>
 			<Description>TXT_KEY_BUILDING_EQ_MINUS8</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -2838,7 +2789,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Preposterous) -->
-			<BuildingClass>BUILDINGCLASS_EQ_MINUS9</BuildingClass>
 			<Type>BUILDING_EQ_MINUS9</Type>
 			<Description>TXT_KEY_BUILDING_EQ_MINUS9</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -2897,7 +2847,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Idiocracy) -->
-			<BuildingClass>BUILDINGCLASS_EQ_MINUS10</BuildingClass>
 			<Type>BUILDING_EQ_MINUS10</Type>
 			<Description>TXT_KEY_BUILDING_EQ_MINUS10</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -2959,7 +2908,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Ignorant) -->
-			<BuildingClass>BUILDINGCLASS_EQ_MINUS11</BuildingClass>
 			<Type>BUILDING_EQ_MINUS11</Type>
 			<Description>TXT_KEY_BUILDING_EQ_MINUS11</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -3018,7 +2966,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Ignorant) -->
-			<BuildingClass>BUILDINGCLASS_EQ_MINUS12</BuildingClass>
 			<Type>BUILDING_EQ_MINUS12</Type>
 			<Description>TXT_KEY_BUILDING_EQ_MINUS12</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -3080,7 +3027,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Ignorant) -->
-			<BuildingClass>BUILDINGCLASS_EQ_MINUS13</BuildingClass>
 			<Type>BUILDING_EQ_MINUS13</Type>
 			<Description>TXT_KEY_BUILDING_EQ_MINUS13</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -3139,7 +3085,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Intutive) -->
-			<BuildingClass>BUILDINGCLASS_EQ_PLUS1</BuildingClass>
 			<Type>BUILDING_EQ_PLUS1</Type>
 			<Description>TXT_KEY_BUILDING_EQ_PLUS1</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -3196,7 +3141,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Brilliant) -->
-			<BuildingClass>BUILDINGCLASS_EQ_PLUS2</BuildingClass>
 			<Type>BUILDING_EQ_PLUS2</Type>
 			<Description>TXT_KEY_BUILDING_EQ_PLUS2</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -3258,7 +3202,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Cultivated) -->
-			<BuildingClass>BUILDINGCLASS_EQ_PLUS3</BuildingClass>
 			<Type>BUILDING_EQ_PLUS3</Type>
 			<Description>TXT_KEY_BUILDING_EQ_PLUS3</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -3317,7 +3260,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Knowledgeable) -->
-			<BuildingClass>BUILDINGCLASS_EQ_PLUS4</BuildingClass>
 			<Type>BUILDING_EQ_PLUS4</Type>
 			<Description>TXT_KEY_BUILDING_EQ_PLUS4</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -3379,7 +3321,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Acumen) -->
-			<BuildingClass>BUILDINGCLASS_EQ_PLUS5</BuildingClass>
 			<Type>BUILDING_EQ_PLUS5</Type>
 			<Description>TXT_KEY_BUILDING_EQ_PLUS5</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -3438,7 +3379,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Scholarly) -->
-			<BuildingClass>BUILDINGCLASS_EQ_PLUS6</BuildingClass>
 			<Type>BUILDING_EQ_PLUS6</Type>
 			<Description>TXT_KEY_BUILDING_EQ_PLUS6</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -3500,7 +3440,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Enlightened) -->
-			<BuildingClass>BUILDINGCLASS_EQ_PLUS7</BuildingClass>
 			<Type>BUILDING_EQ_PLUS7</Type>
 			<Description>TXT_KEY_BUILDING_EQ_PLUS7</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -3559,7 +3498,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Cosmopolitan) -->
-			<BuildingClass>BUILDINGCLASS_EQ_PLUS8</BuildingClass>
 			<Type>BUILDING_EQ_PLUS8</Type>
 			<Description>TXT_KEY_BUILDING_EQ_PLUS8</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -3621,7 +3559,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Wunderkind) -->
-			<BuildingClass>BUILDINGCLASS_EQ_PLUS9</BuildingClass>
 			<Type>BUILDING_EQ_PLUS9</Type>
 			<Description>TXT_KEY_BUILDING_EQ_PLUS9</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -3680,7 +3617,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Mastermind) -->
-			<BuildingClass>BUILDINGCLASS_EQ_PLUS10</BuildingClass>
 			<Type>BUILDING_EQ_PLUS10</Type>
 			<Description>TXT_KEY_BUILDING_EQ_PLUS10</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -3742,7 +3678,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Genius) -->
-			<BuildingClass>BUILDINGCLASS_EQ_PLUS11</BuildingClass>
 			<Type>BUILDING_EQ_PLUS11</Type>
 			<Description>TXT_KEY_BUILDING_EQ_PLUS11</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -3801,7 +3736,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Wise) -->
-			<BuildingClass>BUILDINGCLASS_EQ_PLUS12</BuildingClass>
 			<Type>BUILDING_EQ_PLUS12</Type>
 			<Description>TXT_KEY_BUILDING_EQ_PLUS12</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -3863,7 +3797,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Omniscience) -->
-			<BuildingClass>BUILDINGCLASS_EQ_PLUS13</BuildingClass>
 			<Type>BUILDING_EQ_PLUS13</Type>
 			<Description>TXT_KEY_BUILDING_EQ_PLUS13</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -3922,7 +3855,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Blissful Ignorance 1) -->
-			<BuildingClass>BUILDINGCLASS_EQ_NAT_MINUS1</BuildingClass>
 			<Type>BUILDING_EQ_NAT_MINUS1</Type>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_MINUS1</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -3946,7 +3878,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Blissful Ignorance 2) -->
-			<BuildingClass>BUILDINGCLASS_EQ_NAT_MINUS2</BuildingClass>
 			<Type>BUILDING_EQ_NAT_MINUS2</Type>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_MINUS2</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -3970,7 +3901,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Blissful Ignorance 3) -->
-			<BuildingClass>BUILDINGCLASS_EQ_NAT_MINUS3</BuildingClass>
 			<Type>BUILDING_EQ_NAT_MINUS3</Type>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_MINUS3</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -3994,7 +3924,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Blissful Ignorance 4) -->
-			<BuildingClass>BUILDINGCLASS_EQ_NAT_MINUS4</BuildingClass>
 			<Type>BUILDING_EQ_NAT_MINUS4</Type>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_MINUS4</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -4018,7 +3947,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Blissful Ignorance 5) -->
-			<BuildingClass>BUILDINGCLASS_EQ_NAT_MINUS5</BuildingClass>
 			<Type>BUILDING_EQ_NAT_MINUS5</Type>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_MINUS5</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -4042,7 +3970,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Blissful Ignorance 6) -->
-			<BuildingClass>BUILDINGCLASS_EQ_NAT_MINUS6</BuildingClass>
 			<Type>BUILDING_EQ_NAT_MINUS6</Type>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_MINUS6</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -4066,7 +3993,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Blissful Ignorance 7) -->
-			<BuildingClass>BUILDINGCLASS_EQ_NAT_MINUS7</BuildingClass>
 			<Type>BUILDING_EQ_NAT_MINUS7</Type>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_MINUS7</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -4090,7 +4016,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Blissful Ignorance 8) -->
-			<BuildingClass>BUILDINGCLASS_EQ_NAT_MINUS8</BuildingClass>
 			<Type>BUILDING_EQ_NAT_MINUS8</Type>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_MINUS8</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -4114,7 +4039,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Blissful Ignorance 9) -->
-			<BuildingClass>BUILDINGCLASS_EQ_NAT_MINUS9</BuildingClass>
 			<Type>BUILDING_EQ_NAT_MINUS9</Type>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_MINUS9</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -4138,7 +4062,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Blissful Ignorance 10) -->
-			<BuildingClass>BUILDINGCLASS_EQ_NAT_MINUS10</BuildingClass>
 			<Type>BUILDING_EQ_NAT_MINUS10</Type>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_MINUS10</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -4162,7 +4085,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Blissful Ignorance 11) -->
-			<BuildingClass>BUILDINGCLASS_EQ_NAT_MINUS11</BuildingClass>
 			<Type>BUILDING_EQ_NAT_MINUS11</Type>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_MINUS11</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -4186,7 +4108,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Blissful Ignorance 12) -->
-			<BuildingClass>BUILDINGCLASS_EQ_NAT_MINUS12</BuildingClass>
 			<Type>BUILDING_EQ_NAT_MINUS12</Type>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_MINUS12</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -4210,7 +4131,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Blissful Ignorance 11) -->
-			<BuildingClass>BUILDINGCLASS_EQ_NAT_MINUS13</BuildingClass>
 			<Type>BUILDING_EQ_NAT_MINUS13</Type>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_MINUS13</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -4234,7 +4154,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Argumentative Awareness 1) -->
-			<BuildingClass>BUILDINGCLASS_EQ_NAT_PLUS1</BuildingClass>
 			<Type>BUILDING_EQ_NAT_PLUS1</Type>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS1</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -4258,7 +4177,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Argumentative Awareness 2) -->
-			<BuildingClass>BUILDINGCLASS_EQ_NAT_PLUS2</BuildingClass>
 			<Type>BUILDING_EQ_NAT_PLUS2</Type>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS2</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -4283,7 +4201,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Argumentative Awareness 3) -->
-			<BuildingClass>BUILDINGCLASS_EQ_NAT_PLUS3</BuildingClass>
 			<Type>BUILDING_EQ_NAT_PLUS3</Type>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS3</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -4308,7 +4225,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Argumentative Awareness 4) -->
-			<BuildingClass>BUILDINGCLASS_EQ_NAT_PLUS4</BuildingClass>
 			<Type>BUILDING_EQ_NAT_PLUS4</Type>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS4</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -4333,7 +4249,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Argumentative Awareness 5) -->
-			<BuildingClass>BUILDINGCLASS_EQ_NAT_PLUS5</BuildingClass>
 			<Type>BUILDING_EQ_NAT_PLUS5</Type>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS5</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -4358,7 +4273,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Argumentative Awareness 6) -->
-			<BuildingClass>BUILDINGCLASS_EQ_NAT_PLUS6</BuildingClass>
 			<Type>BUILDING_EQ_NAT_PLUS6</Type>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS6</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -4383,7 +4297,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Argumentative Awareness 7) -->
-			<BuildingClass>BUILDINGCLASS_EQ_NAT_PLUS7</BuildingClass>
 			<Type>BUILDING_EQ_NAT_PLUS7</Type>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS7</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -4408,7 +4321,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Argumentative Awareness 8) -->
-			<BuildingClass>BUILDINGCLASS_EQ_NAT_PLUS8</BuildingClass>
 			<Type>BUILDING_EQ_NAT_PLUS8</Type>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS8</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -4433,7 +4345,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Argumentative Awareness 9) -->
-			<BuildingClass>BUILDINGCLASS_EQ_NAT_PLUS9</BuildingClass>
 			<Type>BUILDING_EQ_NAT_PLUS9</Type>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS9</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -4458,7 +4369,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Argumentative Awareness 10) -->
-			<BuildingClass>BUILDINGCLASS_EQ_NAT_PLUS10</BuildingClass>
 			<Type>BUILDING_EQ_NAT_PLUS10</Type>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS10</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -4483,7 +4393,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Argumentative Awareness 11) -->
-			<BuildingClass>BUILDINGCLASS_EQ_NAT_PLUS11</BuildingClass>
 			<Type>BUILDING_EQ_NAT_PLUS11</Type>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS11</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -4508,7 +4417,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Argumentative Awareness 12) -->
-			<BuildingClass>BUILDINGCLASS_EQ_NAT_PLUS12</BuildingClass>
 			<Type>BUILDING_EQ_NAT_PLUS12</Type>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS12</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -4533,7 +4441,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education (Argumentative Awareness 13) -->
-			<BuildingClass>BUILDINGCLASS_EQ_NAT_PLUS13</BuildingClass>
 			<Type>BUILDING_EQ_NAT_PLUS13</Type>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS13</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
@@ -4558,7 +4465,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
-			<BuildingClass>BUILDINGCLASS_KNOWLEDGE_BASE_ANCIENT</BuildingClass>
 			<Type>BUILDING_KNOWLEDGE_BASE_ANCIENT</Type>
 			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_ANCIENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_ANCIENT_PEDIA</Civilopedia>
@@ -4590,7 +4496,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education Increasing Cost(Knowledge Base 2) -->
-			<BuildingClass>BUILDINGCLASS_KNOWLEDGE_BASE_CLASSICAL</BuildingClass>
 			<Type>BUILDING_KNOWLEDGE_BASE_CLASSICAL</Type>
 			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_CLASSICAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_CLASSICAL_PEDIA</Civilopedia>
@@ -4622,7 +4527,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
-			<BuildingClass>BUILDINGCLASS_KNOWLEDGE_BASE_MEDIEVAL</BuildingClass>
 			<Type>BUILDING_KNOWLEDGE_BASE_MEDIEVAL</Type>
 			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MEDIEVAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MEDIEVAL_PEDIA</Civilopedia>
@@ -4654,7 +4558,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
-			<BuildingClass>BUILDINGCLASS_KNOWLEDGE_BASE_RENAISSANCE</BuildingClass>
 			<Type>BUILDING_KNOWLEDGE_BASE_RENAISSANCE</Type>
 			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_RENAISSANCE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_RENAISSANCE_PEDIA</Civilopedia>
@@ -4950,7 +4853,6 @@
 		</BuildingInfo>-->
 		<BuildingInfo>
 			<!-- Civic (Banditry) -->
-			<BuildingClass>BUILDINGCLASS_CIVICBANDITRY</BuildingClass>
 			<Type>BUILDING_CIVICBANDITRY</Type>
 			<Description>TXT_KEY_BUILDING_CIVICBANDITRY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CIVICBANDITRY_PEDIA</Civilopedia>
@@ -4979,7 +4881,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Civic (Burn Trash) -->
-			<BuildingClass>BUILDINGCLASS_CIVICBURNTRASH</BuildingClass>
 			<Type>BUILDING_CIVICBURNTRASH</Type>
 			<Description>TXT_KEY_BUILDING_CIVICBURNTRASH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CIVICBURNTRASH_PEDIA</Civilopedia>
@@ -5011,7 +4912,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Civic (Caste) -->
-			<BuildingClass>BUILDINGCLASS_CIVICCASTE</BuildingClass>
 			<Type>BUILDING_CIVICCASTE</Type>
 			<Description>TXT_KEY_BUILDING_CIVICCASTE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CIVICCASTE_PEDIA</Civilopedia>
@@ -5053,7 +4953,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Civic (Democracy) -->
-			<BuildingClass>BUILDINGCLASS_CIVICDEMOCRACY</BuildingClass>
 			<Type>BUILDING_CIVICDEMOCRACY</Type>
 			<Description>TXT_KEY_BUILDING_CIVICDEMOCRACY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CIVICDEMOCRACY_PEDIA</Civilopedia>
@@ -5095,7 +4994,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Civic (Egalitarian) -->
-			<BuildingClass>BUILDINGCLASS_CIVICEGALITARIAN</BuildingClass>
 			<Type>BUILDING_CIVICEGALITARIAN</Type>
 			<Description>TXT_KEY_BUILDING_CIVICEGALITARIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CIVICEGALITARIAN_PEDIA</Civilopedia>
@@ -5136,7 +5034,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Civic (Feudal) -->
-			<BuildingClass>BUILDINGCLASS_CIVICFEUDAL</BuildingClass>
 			<Type>BUILDING_CIVICFEUDAL</Type>
 			<Description>TXT_KEY_BUILDING_CIVICFEUDAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CIVICFEUDAL_PEDIA</Civilopedia>
@@ -5176,7 +5073,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Civic (Free Market) -->
-			<BuildingClass>BUILDINGCLASS_CIVICFREEMARKET</BuildingClass>
 			<Type>BUILDING_CIVICFREEMARKET</Type>
 			<Description>TXT_KEY_BUILDING_CIVICFREEMARKET</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CIVICFREEMARKET_PEDIA</Civilopedia>
@@ -5218,7 +5114,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Civic (Martial Law) -->
-			<BuildingClass>BUILDINGCLASS_CIVICMARTIALLAW</BuildingClass>
 			<Type>BUILDING_CIVICMARTIALLAW</Type>
 			<Description>TXT_KEY_BUILDING_CIVICMARTIALLAW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CIVICMARTIALLAW_PEDIA</Civilopedia>
@@ -5259,7 +5154,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Civic (Mercenaries) -->
-			<BuildingClass>BUILDINGCLASS_CIVICMERCENARIES</BuildingClass>
 			<Type>BUILDING_CIVICMERCENARIES</Type>
 			<Description>TXT_KEY_BUILDING_CIVICMERCENARIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CIVICMERCENARIES_PEDIA</Civilopedia>
@@ -5288,7 +5182,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Civic (Militia) -->
-			<BuildingClass>BUILDINGCLASS_CIVICMILITIA</BuildingClass>
 			<Type>BUILDING_CIVICMILITIA</Type>
 			<Description>TXT_KEY_BUILDING_CIVICMILITIA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CIVICMILITIA_PEDIA</Civilopedia>
@@ -5317,7 +5210,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Civic (Mind Control) -->
-			<BuildingClass>BUILDINGCLASS_CIVICMINDCONTROL</BuildingClass>
 			<Type>BUILDING_CIVICMINDCONTROL</Type>
 			<Description>TXT_KEY_BUILDING_CIVICMINDCONTROL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CIVICMINDCONTROL_PEDIA</Civilopedia>
@@ -5358,7 +5250,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Civic (Post Scarcity) -->
-			<BuildingClass>BUILDINGCLASS_CIVICPOSTSCARCITY</BuildingClass>
 			<Type>BUILDING_CIVICPOSTSCARCITY</Type>
 			<Description>TXT_KEY_BUILDING_CIVICPOSTSCARCITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CIVICPOSTSCARCITY_PEDIA</Civilopedia>
@@ -5399,7 +5290,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Civic (Republic) -->
-			<BuildingClass>BUILDINGCLASS_CIVICREPUBLIC</BuildingClass>
 			<Type>BUILDING_CIVICREPUBLIC</Type>
 			<Description>TXT_KEY_BUILDING_CIVICREPUBLIC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CIVICREPUBLIC_PEDIA</Civilopedia>
@@ -5441,7 +5331,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Aircraft Hijacking) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_PLANEHIJACKING</BuildingClass>
 			<Type>BUILDING_CRIME_PLANEHIJACKING</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_PLANEHIJACKING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_PLANEHIJACKING_PEDIA</Civilopedia>
@@ -5491,7 +5380,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Animal Abuse) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_ANIMALABUSE</BuildingClass>
 			<Type>BUILDING_CRIME_ANIMALABUSE</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_ANIMALABUSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_ANIMALABUSE_PEDIA</Civilopedia>
@@ -5530,7 +5418,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Armed Communities) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_ARMEDCOMMUNITIES</BuildingClass>
 			<Type>BUILDING_CRIME_ARMEDCOMMUNITIES</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_ARMEDCOMMUNITIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_ARMEDCOMMUNITIES_PEDIA</Civilopedia>
@@ -5578,7 +5465,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Arson) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_ARSON</BuildingClass>
 			<Type>BUILDING_CRIME_ARSON</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_ARSON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_ARSON_PEDIA</Civilopedia>
@@ -5629,7 +5515,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Asimov Tampering) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_ASIMOV</BuildingClass>
 			<Type>BUILDING_CRIME_ASIMOV</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_ASIMOV</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_ASIMOV_PEDIA</Civilopedia>
@@ -5667,7 +5552,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Bank Robbery) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_BANKROBBERY</BuildingClass>
 			<Type>BUILDING_CRIME_BANKROBBERY</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_BANKROBBERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_BANKROBBERY_PEDIA</Civilopedia>
@@ -5712,7 +5596,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Black Markets) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_BLACKMARKETS</BuildingClass>
 			<Type>BUILDING_CRIME_BLACKMARKETS</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_BLACKMARKETS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_BLACKMARKETS_PEDIA</Civilopedia>
@@ -5767,7 +5650,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Blackmail) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_BLACKMAIL</BuildingClass>
 			<Type>BUILDING_CRIME_BLACKMAIL</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_BLACKMAIL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_BLACKMAIL_PEDIA</Civilopedia>
@@ -5809,7 +5691,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Bribery) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_BRIBERY</BuildingClass>
 			<Type>BUILDING_CRIME_BRIBERY</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_BRIBERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_BRIBERY_PEDIA</Civilopedia>
@@ -5857,7 +5738,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Burglary) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_BURGLARY</BuildingClass>
 			<Type>BUILDING_CRIME_BURGLARY</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_BURGLARY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_BURGLARY_PEDIA</Civilopedia>
@@ -5999,7 +5879,6 @@
 		</BuildingInfo>		
 		<BuildingInfo>
 			<!-- Crime (Car Bombing) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_CARBOMBING</BuildingClass>
 			<Type>BUILDING_CRIME_CARBOMBING</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_CARBOMBING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_CARBOMBING_PEDIA</Civilopedia>
@@ -6051,7 +5930,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Car Theft) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_CARTHEIFT</BuildingClass>
 			<Type>BUILDING_CRIME_CARTHEIFT</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_CARTHEIFT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_CARTHEIFT_PEDIA</Civilopedia>
@@ -6095,7 +5973,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Child Labor) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_CHILDLABOR</BuildingClass>
 			<Type>BUILDING_CRIME_CHILDLABOR</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_CHILDLABOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_CHILDLABOR_PEDIA</Civilopedia>
@@ -6139,7 +6016,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Corruption) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_CORRUPTION</BuildingClass>
 			<Type>BUILDING_CRIME_CORRUPTION</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_CORRUPTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_CORRUPTION_PEDIA</Civilopedia>
@@ -6190,7 +6066,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Counterfeiting) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_COUNTERFEITING</BuildingClass>
 			<Type>BUILDING_CRIME_COUNTERFEITING</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_COUNTERFEITING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_COUNTERFEITING_PEDIA</Civilopedia>
@@ -6227,7 +6102,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Cyberbullying) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_CYBERBULLYING</BuildingClass>
 			<Type>BUILDING_CRIME_CYBERBULLYING</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_CYBERBULLYING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_CYBERBULLYING_PEDIA</Civilopedia>
@@ -6253,7 +6127,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Cyberwarfare) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_CYBERWARFARE</BuildingClass>
 			<Type>BUILDING_CRIME_CYBERWARFARE</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_CYBERWARFARE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_CYBERWARFARE_PEDIA</Civilopedia>
@@ -6295,7 +6168,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Domestic Violence) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_DOMESTICVIOLENCE</BuildingClass>
 			<Type>BUILDING_CRIME_DOMESTICVIOLENCE</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_DOMESTICVIOLENCE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_DOMESTICVIOLENCE_PEDIA</Civilopedia>
@@ -6329,7 +6201,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Drug Cartels) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_DRUGCARTELS</BuildingClass>
 			<Type>BUILDING_CRIME_DRUGCARTELS</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_DRUGCARTELS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_DRUGCARTELS_PEDIA</Civilopedia>
@@ -6383,7 +6254,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Drugs) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_DRUGS</BuildingClass>
 			<Type>BUILDING_CRIME_DRUGS</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_DRUGS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_DRUGS_PEDIA</Civilopedia>
@@ -6432,7 +6302,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Drunk Driving) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_DRUNKDRIVING</BuildingClass>
 			<Type>BUILDING_CRIME_DRUNKDRIVING</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_DRUNKDRIVING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_DRUNKDRIVING_PEDIA</Civilopedia>
@@ -6467,7 +6336,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Elder Abuse) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_ELDERABUSE</BuildingClass>
 			<Type>BUILDING_CRIME_ELDERABUSE</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_ELDERABUSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_ELDERABUSE_PEDIA</Civilopedia>
@@ -6502,7 +6370,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Embezzlement) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_EMBEZZLEMENT</BuildingClass>
 			<Type>BUILDING_CRIME_EMBEZZLEMENT</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_EMBEZZLEMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_EMBEZZLEMENT_PEDIA</Civilopedia>
@@ -6539,7 +6406,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Environmental Dumping) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_TOXICDUMPING</BuildingClass>
 			<Type>BUILDING_CRIME_TOXICDUMPING</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_TOXICDUMPING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_TOXICDUMPING_PEDIA</Civilopedia>
@@ -6590,7 +6456,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Extortion) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_EXTORTION</BuildingClass>
 			<Type>BUILDING_CRIME_EXTORTION</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_EXTORTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_EXTORTION_PEDIA</Civilopedia>
@@ -6632,7 +6497,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (False Accusations) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_FALSEACCUSATIONS</BuildingClass>
 			<Type>BUILDING_CRIME_FALSEACCUSATIONS</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_FALSEACCUSATIONS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_FALSEACCUSATIONS_PEDIA</Civilopedia>
@@ -6665,7 +6529,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Fighting) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_FIGHTING</BuildingClass>
 			<Type>BUILDING_CRIME_FIGHTING</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_FIGHTING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_FIGHTING_PEDIA</Civilopedia>
@@ -6706,7 +6569,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Forgery) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_FORGERY</BuildingClass>
 			<Type>BUILDING_CRIME_FORGERY</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_FORGERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_FORGERY_PEDIA</Civilopedia>
@@ -6740,7 +6602,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Gang Warfare) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_GANGWARFARE</BuildingClass>
 			<Type>BUILDING_CRIME_GANGWARFARE</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_GANGWARFARE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_GANGWARFARE_PEDIA</Civilopedia>
@@ -6792,7 +6653,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Gangs) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_GANGS</BuildingClass>
 			<Type>BUILDING_CRIME_GANGS</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_GANGS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_GANGS_PEDIA</Civilopedia>
@@ -6843,7 +6703,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Gene Forgery) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_GENEFORGERY</BuildingClass>
 			<Type>BUILDING_CRIME_GENEFORGERY</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_GENEFORGERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_GENEFORGERY_PEDIA</Civilopedia>
@@ -6879,7 +6738,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Graffiti) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_GRAFFITI</BuildingClass>
 			<Type>BUILDING_CRIME_GRAFFITI</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_GRAFFITI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_GRAFFITI_PEDIA</Civilopedia>
@@ -6933,7 +6791,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Gun Rampage) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_GUNRAMPAGE</BuildingClass>
 			<Type>BUILDING_CRIME_GUNRAMPAGE</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_GUNRAMPAGE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_GUNRAMPAGE_PEDIA</Civilopedia>
@@ -6977,7 +6834,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Hacking) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_HACKING</BuildingClass>
 			<Type>BUILDING_CRIME_HACKING</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_HACKING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_HACKING_PEDIA</Civilopedia>
@@ -7016,7 +6872,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Hate Crime) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_HATECRIME</BuildingClass>
 			<Type>BUILDING_CRIME_HATECRIME</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_HATECRIME</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_HATECRIME_PEDIA</Civilopedia>
@@ -7062,7 +6917,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Human Trafficking) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_HUMANTRAFFICKING</BuildingClass>
 			<Type>BUILDING_CRIME_HUMANTRAFFICKING</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_HUMANTRAFFICKING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_HUMANTRAFFICKING_PEDIA</Civilopedia>
@@ -7115,7 +6969,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Identity Theft) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_IDENTITYTHEFT</BuildingClass>
 			<Type>BUILDING_CRIME_IDENTITYTHEFT</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_IDENTITYTHEFT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_IDENTITYTHEFT_PEDIA</Civilopedia>
@@ -7154,7 +7007,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Illegal Brainwashing) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_BRAINWASHING</BuildingClass>
 			<Type>BUILDING_CRIME_BRAINWASHING</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_BRAINWASHING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_BRAINWASHING_PEDIA</Civilopedia>
@@ -7210,7 +7062,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Illegal Immigration) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_ILLEGALIMMIGRATION</BuildingClass>
 			<Type>BUILDING_CRIME_ILLEGALIMMIGRATION</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_ILLEGALIMMIGRATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_ILLEGALIMMIGRATION_PEDIA</Civilopedia>
@@ -7270,7 +7121,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Insider Trading) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_INSIDERTRADING</BuildingClass>
 			<Type>BUILDING_CRIME_INSIDERTRADING</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_INSIDERTRADING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_INSIDERTRADING_PEDIA</Civilopedia>
@@ -7315,7 +7165,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Insubordination) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_INSUBORDINATION</BuildingClass>
 			<Type>BUILDING_CRIME_INSUBORDINATION</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_INSUBORDINATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_INSUBORDINATION_PEDIA</Civilopedia>
@@ -7344,7 +7193,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Insurance Fraud) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_INSURANCEFRAUD</BuildingClass>
 			<Type>BUILDING_CRIME_INSURANCEFRAUD</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_INSURANCEFRAUD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_INSURANCEFRAUD_PEDIA</Civilopedia>
@@ -7381,7 +7229,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Internet Fraud) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_INTERNETFRAUD</BuildingClass>
 			<Type>BUILDING_CRIME_INTERNETFRAUD</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_INTERNETFRAUD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_INTERNETFRAUD_PEDIA</Civilopedia>
@@ -7418,7 +7265,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Kidnapping) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_KIDNAPPING</BuildingClass>
 			<Type>BUILDING_CRIME_KIDNAPPING</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_KIDNAPPING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_KIDNAPPING_PEDIA</Civilopedia>
@@ -7459,7 +7305,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Littering) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_LITERING</BuildingClass>
 			<Type>BUILDING_CRIME_LITERING</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_LITERING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_LITERING_PEDIA</Civilopedia>
@@ -7501,7 +7346,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Looting) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_LOOTING</BuildingClass>
 			<Type>BUILDING_CRIME_LOOTING</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_LOOTING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_LOOTING_PEDIA</Civilopedia>
@@ -7561,7 +7405,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Lying) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_LYING</BuildingClass>
 			<Type>BUILDING_CRIME_LYING</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_LYING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_LYING_PEDIA</Civilopedia>
@@ -7594,7 +7437,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Malware) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_MALWARE</BuildingClass>
 			<Type>BUILDING_CRIME_MALWARE</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_MALWARE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_MALWARE_PEDIA</Civilopedia>
@@ -7635,7 +7477,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Medical Fraud) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_MEDICALFRAUD</BuildingClass>
 			<Type>BUILDING_CRIME_MEDICALFRAUD</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_MEDICALFRAUD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_MEDICALFRAUD_PEDIA</Civilopedia>
@@ -7683,7 +7524,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Military Desertion) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_MILITARYDESERTION</BuildingClass>
 			<Type>BUILDING_CRIME_MILITARYDESERTION</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_MILITARYDESERTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_MILITARYDESERTION_PEDIA</Civilopedia>
@@ -7726,7 +7566,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Money Laundering) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_MONEYLAUNDERING</BuildingClass>
 			<Type>BUILDING_CRIME_MONEYLAUNDERING</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_MONEYLAUNDERING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_MONEYLAUNDERING_PEDIA</Civilopedia>
@@ -7765,7 +7604,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Mugging) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_MUGGING</BuildingClass>
 			<Type>BUILDING_CRIME_MUGGING</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_MUGGING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_MUGGING_PEDIA</Civilopedia>
@@ -7812,7 +7650,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Murder) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_MURDER</BuildingClass>
 			<Type>BUILDING_CRIME_MURDER</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_MURDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_MURDER_PEDIA</Civilopedia>
@@ -7856,7 +7693,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Online Piracy) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_EPIRACY</BuildingClass>
 			<Type>BUILDING_CRIME_EPIRACY</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_EPIRACY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_EPIRACY_PEDIA</Civilopedia>
@@ -7896,7 +7732,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Organ Trafficking) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_ORGANTRADE</BuildingClass>
 			<Type>BUILDING_CRIME_ORGANTRADE</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_ORGANTRADE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_ORGANTRADE_PEDIA</Civilopedia>
@@ -7938,7 +7773,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Organized Crime) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_MOB</BuildingClass>
 			<Type>BUILDING_CRIME_MOB</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_MOB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_MOB_PEDIA</Civilopedia>
@@ -7994,7 +7828,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Pickpocketing) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_PICKPOCKET</BuildingClass>
 			<Type>BUILDING_CRIME_PICKPOCKET</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_PICKPOCKET</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_PICKPOCKET_PEDIA</Civilopedia>
@@ -8038,7 +7871,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Poaching) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_POACHING</BuildingClass>
 			<Type>BUILDING_CRIME_POACHING</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_POACHING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_POACHING_PEDIA</Civilopedia>
@@ -8088,7 +7920,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Prison Breakouts) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_JAILBREAK</BuildingClass>
 			<Type>BUILDING_CRIME_JAILBREAK</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_JAILBREAK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_JAILBREAK_PEDIA</Civilopedia>
@@ -8154,7 +7985,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Public Intoxication) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_PUBLICINTOXICATION</BuildingClass>
 			<Type>BUILDING_CRIME_PUBLICINTOXICATION</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_PUBLICINTOXICATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_PUBLICINTOXICATION_PEDIA</Civilopedia>
@@ -8193,7 +8023,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Racketeering) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_RACKETEERTING</BuildingClass>
 			<Type>BUILDING_CRIME_RACKETEERTING</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_RACKETEERTING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_RACKETEERTING_PEDIA</Civilopedia>
@@ -8241,7 +8070,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Rape) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_RAPE</BuildingClass>
 			<Type>BUILDING_CRIME_RAPE</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_RAPE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_RAPE_PEDIA</Civilopedia>
@@ -8286,7 +8114,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Rioting) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_RIOTING</BuildingClass>
 			<Type>BUILDING_CRIME_RIOTING</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_RIOTING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_RIOTING_PEDIA</Civilopedia>
@@ -8340,7 +8167,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (School Shootings) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_SCHOOLSHOOTING</BuildingClass>
 			<Type>BUILDING_CRIME_SCHOOLSHOOTING</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_SCHOOLSHOOTING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_SCHOOLSHOOTING_PEDIA</Civilopedia>
@@ -8376,7 +8202,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Sectarian Violence) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_SECTARIANVIOLENCE</BuildingClass>
 			<Type>BUILDING_CRIME_SECTARIANVIOLENCE</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_SECTARIANVIOLENCE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_SECTARIANVIOLENCE_PEDIA</Civilopedia>
@@ -8430,7 +8255,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Sexual Harassment) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_SEXUALHARASSMENT</BuildingClass>
 			<Type>BUILDING_CRIME_SEXUALHARASSMENT</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_SEXUALHARASSMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_SEXUALHARASSMENT_PEDIA</Civilopedia>
@@ -8462,7 +8286,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Shoplifting) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_SHOPLIFTING</BuildingClass>
 			<Type>BUILDING_CRIME_SHOPLIFTING</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_SHOPLIFTING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_SHOPLIFTING_PEDIA</Civilopedia>
@@ -8583,7 +8406,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Soliciting) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_SOLICITING</BuildingClass>
 			<Type>BUILDING_CRIME_SOLICITING</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_SOLICITING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_SOLICITING_PEDIA</Civilopedia>
@@ -8609,7 +8431,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Sports Riots) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_SPORTSRIOTS</BuildingClass>
 			<Type>BUILDING_CRIME_SPORTSRIOTS</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_SPORTSRIOTS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_SPORTSRIOTS_PEDIA</Civilopedia>
@@ -8647,7 +8468,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Tax Evasion) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_TAXEVASION</BuildingClass>
 			<Type>BUILDING_CRIME_TAXEVASION</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_TAXEVASION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_TAXEVASION_PEDIA</Civilopedia>
@@ -8678,7 +8498,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Timeline Tampering) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_TIMELINETAMPERING</BuildingClass>
 			<Type>BUILDING_CRIME_TIMELINETAMPERING</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_TIMELINETAMPERING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_TIMELINETAMPERING_PEDIA</Civilopedia>
@@ -8728,7 +8547,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Tresspassing) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_TRESSPASSING</BuildingClass>
 			<Type>BUILDING_CRIME_TRESSPASSING</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_TRESSPASSING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_TRESSPASSING_PEDIA</Civilopedia>
@@ -8761,7 +8579,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Truancy) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_TRUANCY</BuildingClass>
 			<Type>BUILDING_CRIME_TRUANCY</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_TRUANCY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_TRUANCY_PEDIA</Civilopedia>
@@ -8796,7 +8613,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Unlicensed Cloning) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_UNLICENSEDCLONING</BuildingClass>
 			<Type>BUILDING_CRIME_UNLICENSEDCLONING</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_UNLICENSEDCLONING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_UNLICENSEDCLONING_PEDIA</Civilopedia>
@@ -8834,7 +8650,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Vigilantism) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_VIGILANTISM</BuildingClass>
 			<Type>BUILDING_CRIME_VIGILANTISM</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_VIGILANTISM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_VIGILANTISM_PEDIA</Civilopedia>
@@ -8892,7 +8707,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Weapons Trafficking) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_WEAPONSTRAFFICKING</BuildingClass>
 			<Type>BUILDING_CRIME_WEAPONSTRAFFICKING</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_WEAPONSTRAFFICKING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_WEAPONSTRAFFICKING_PEDIA</Civilopedia>
@@ -8943,7 +8757,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Welfare Fraud) -->
-			<BuildingClass>BUILDINGCLASS_CRIME_WELFAREFRAUD</BuildingClass>
 			<Type>BUILDING_CRIME_WELFAREFRAUD</Type>
 			<Description>TXT_KEY_BUILDING_CRIME_WELFAREFRAUD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_WELFAREFRAUD_PEDIA</Civilopedia>
@@ -8991,7 +8804,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Cultural Achievement -->
-			<BuildingClass>BUILDINGCLASS_CULTURAL_ACHIEVEMENT</BuildingClass>
 			<Type>BUILDING_CULTURAL_ACHIEVEMENT</Type>
 			<Description>TXT_KEY_BUILDING_CULTURAL_ACHIEVEMENT</Description>
 			<Civilopedia>TXT_KEY_ACHIEVEMENT_PEDIA</Civilopedia>
@@ -9025,7 +8837,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Blood Dance -->
-			<BuildingClass>BUILDINGCLASS_BLOOD_DANCE</BuildingClass>
 			<Type>BUILDING_BLOOD_DANCE</Type>
 			<Description>TXT_KEY_BUILDING_BLOOD_DANCE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BLOOD_DANCE_PEDIA</Civilopedia>
@@ -9098,7 +8909,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Fertility Dance -->
-			<BuildingClass>BUILDINGCLASS_FERTILTY_DANCE</BuildingClass>
 			<Type>BUILDING_FERTILTY_DANCE</Type>
 			<Description>TXT_KEY_BUILDING_FERTILTY_DANCE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FERTILTY_DANCE_PEDIA</Civilopedia>
@@ -9161,7 +8971,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Fire Dance -->
-			<BuildingClass>BUILDINGCLASS_FIRE_DANCE</BuildingClass>
 			<Type>BUILDING_FIRE_DANCE</Type>
 			<Description>TXT_KEY_BUILDING_FIRE_DANCE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FIRE_DANCE_PEDIA</Civilopedia>
@@ -9227,7 +9036,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Moon Dance -->
-			<BuildingClass>BUILDINGCLASS_MOON_DANCE</BuildingClass>
 			<Type>BUILDING_MOON_DANCE</Type>
 			<Description>TXT_KEY_BUILDING_MOON_DANCE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MOON_DANCE_PEDIA</Civilopedia>
@@ -9278,7 +9086,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Nature Dance -->
-			<BuildingClass>BUILDINGCLASS_NATURE_DANCE</BuildingClass>
 			<Type>BUILDING_NATURE_DANCE</Type>
 			<Description>TXT_KEY_BUILDING_NATURE_DANCE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURE_DANCE_PEDIA</Civilopedia>
@@ -9336,7 +9143,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Rain Dance -->
-			<BuildingClass>BUILDINGCLASS_RAIN_DANCE</BuildingClass>
 			<Type>BUILDING_RAIN_DANCE</Type>
 			<Description>TXT_KEY_BUILDING_RAIN_DANCE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RAIN_DANCE_PEDIA</Civilopedia>
@@ -9377,7 +9183,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- War Dance -->
-			<BuildingClass>BUILDINGCLASS_WAR_DANCE</BuildingClass>
 			<Type>BUILDING_WAR_DANCE</Type>
 			<Description>TXT_KEY_BUILDING_WAR_DANCE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WAR_DANCE_PEDIA</Civilopedia>
@@ -9417,7 +9222,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Disease (Anthrax) -->
-			<BuildingClass>BUILDINGCLASS_DISEASE_ANTHRAX</BuildingClass>
 			<Type>BUILDING_DISEASE_ANTHRAX</Type>
 			<Description>TXT_KEY_BUILDING_DISEASE_ANTHRAX</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DISEASE_PEDIA</Civilopedia>
@@ -9460,7 +9264,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Disease (Bird Flu) -->
-			<BuildingClass>BUILDINGCLASS_DISEASE_BIRDFLU</BuildingClass>
 			<Type>BUILDING_DISEASE_BIRDFLU</Type>
 			<Description>TXT_KEY_BUILDING_DISEASE_BIRDFLU</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DISEASE_PEDIA</Civilopedia>
@@ -9503,7 +9306,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Disease (Bubonic Plague) -->
-			<BuildingClass>BUILDINGCLASS_DISEASE_PLAGUE</BuildingClass>
 			<Type>BUILDING_DISEASE_PLAGUE</Type>
 			<Description>TXT_KEY_BUILDING_DISEASE_PLAGUE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DISEASE_PEDIA</Civilopedia>
@@ -9548,7 +9350,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Disease (Cholera) -->
-			<BuildingClass>BUILDINGCLASS_DISEASE_CHOLERA</BuildingClass>
 			<Type>BUILDING_DISEASE_CHOLERA</Type>
 			<Description>TXT_KEY_BUILDING_DISEASE_CHOLERA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DISEASE_PEDIA</Civilopedia>
@@ -9598,7 +9399,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Disease (Common Cold) -->
-			<BuildingClass>BUILDINGCLASS_DISEASE_COMMONCOLD</BuildingClass>
 			<Type>BUILDING_DISEASE_COMMONCOLD</Type>
 			<Description>TXT_KEY_BUILDING_DISEASE_COMMONCOLD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DISEASE_PEDIA</Civilopedia>
@@ -9628,7 +9428,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Disease (Diphtheria) -->
-			<BuildingClass>BUILDINGCLASS_DISEASE_DIPHTHERIA</BuildingClass>
 			<Type>BUILDING_DISEASE_DIPHTHERIA</Type>
 			<Description>TXT_KEY_BUILDING_DISEASE_DIPHTHERIA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DISEASE_PEDIA</Civilopedia>
@@ -9678,7 +9477,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Disease (Dysentery) -->
-			<BuildingClass>BUILDINGCLASS_DISEASE_DYSENTERY</BuildingClass>
 			<Type>BUILDING_DISEASE_DYSENTERY</Type>
 			<Description>TXT_KEY_BUILDING_DISEASE_DYSENTERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DISEASE_PEDIA</Civilopedia>
@@ -9728,7 +9526,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Disease (Syphilis) -->
-			<BuildingClass>BUILDINGCLASS_DISEASE_HIV</BuildingClass>
 			<Type>BUILDING_DISEASE_HIV</Type>
 			<Description>TXT_KEY_BUILDING_DISEASE_HIV</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DISEASE_PEDIA</Civilopedia>
@@ -9767,7 +9564,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Disease (Leprosy) -->
-			<BuildingClass>BUILDINGCLASS_DISEASE_LEPROSY</BuildingClass>
 			<Type>BUILDING_DISEASE_LEPROSY</Type>
 			<Description>TXT_KEY_BUILDING_DISEASE_LEPROSY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DISEASE_PEDIA</Civilopedia>
@@ -9806,7 +9602,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Disease (Malaria) -->
-			<BuildingClass>BUILDINGCLASS_DISEASE_MALARIA</BuildingClass>
 			<Type>BUILDING_DISEASE_MALARIA</Type>
 			<Description>TXT_KEY_BUILDING_DISEASE_MALARIA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DISEASE_PEDIA</Civilopedia>
@@ -9851,7 +9646,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Disease (Measles) -->
-			<BuildingClass>BUILDINGCLASS_DISEASE_MEASLES</BuildingClass>
 			<Type>BUILDING_DISEASE_MEASLES</Type>
 			<Description>TXT_KEY_BUILDING_DISEASE_MEASLES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DISEASE_PEDIA</Civilopedia>
@@ -9890,7 +9684,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Disease (Scarlet Fever) -->
-			<BuildingClass>BUILDINGCLASS_DISEASE_SCARLETFEAVER</BuildingClass>
 			<Type>BUILDING_DISEASE_SCARLETFEAVER</Type>
 			<Description>TXT_KEY_BUILDING_DISEASE_SCARLETFEAVER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DISEASE_PEDIA</Civilopedia>
@@ -9929,7 +9722,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Disease (Scurvy) -->
-			<BuildingClass>BUILDINGCLASS_DISEASE_SCURVY</BuildingClass>
 			<Type>BUILDING_DISEASE_SCURVY</Type>
 			<Description>TXT_KEY_BUILDING_DISEASE_SCURVY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DISEASE_PEDIA</Civilopedia>
@@ -9968,7 +9760,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Disease (Smallpox) -->
-			<BuildingClass>BUILDINGCLASS_DISEASE_SMALLPOX</BuildingClass>
 			<Type>BUILDING_DISEASE_SMALLPOX</Type>
 			<Description>TXT_KEY_BUILDING_DISEASE_SMALLPOX</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DISEASE_PEDIA</Civilopedia>
@@ -10007,7 +9798,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Disease (Swine Flu) -->
-			<BuildingClass>BUILDINGCLASS_DISEASE_SWINEFLU</BuildingClass>
 			<Type>BUILDING_DISEASE_SWINEFLU</Type>
 			<Description>TXT_KEY_BUILDING_DISEASE_SWINEFLU</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DISEASE_PEDIA</Civilopedia>
@@ -10048,7 +9838,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Disease (Typhoid Fever) -->
-			<BuildingClass>BUILDINGCLASS_DISEASE_TYPHOIDFEAVER</BuildingClass>
 			<Type>BUILDING_DISEASE_TYPHOIDFEAVER</Type>
 			<Description>TXT_KEY_BUILDING_DISEASE_TYPHOIDFEAVER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DISEASE_PEDIA</Civilopedia>
@@ -10098,7 +9887,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Belief (Karma) -->
-			<BuildingClass>BUILDINGCLASS_BELIEF_KARMA</BuildingClass>
 			<Type>BUILDING_BELIEF_KARMA</Type>
 			<Description>TXT_KEY_BUILDING_BELIEF_KARMA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BELIEF_KARMA_PEDIA</Civilopedia>
@@ -10134,7 +9922,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Belief (Reincarnation) -->
-			<BuildingClass>BUILDINGCLASS_BELIEF_REINCARNATION</BuildingClass>
 			<Type>BUILDING_BELIEF_REINCARNATION</Type>
 			<Description>TXT_KEY_BUILDING_BELIEF_REINCARNATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BELIEF_REINCARNATION_PEDIA</Civilopedia>
@@ -10172,7 +9959,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Belief (Resurrection) -->
-			<BuildingClass>BUILDINGCLASS_BELIEF_RESURRECTION</BuildingClass>
 			<Type>BUILDING_BELIEF_RESURRECTION</Type>
 			<Description>TXT_KEY_BUILDING_BELIEF_RESURRECTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BELIEF_RESURRECTION_PEDIA</Civilopedia>
@@ -10210,7 +9996,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Safety (Aesop's Fables) -->
-			<BuildingClass>BUILDINGCLASS_AESOP_CRIME</BuildingClass>
 			<Type>BUILDING_AESOP_CRIME</Type>
 			<Description>TXT_KEY_BUILDING_AESOP_CRIME</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AESOP_CRIME_PEDIA</Civilopedia>
@@ -10232,7 +10017,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Effect - National Academic Database -->
-			<BuildingClass>BUILDINGCLASS_EFFECT_NATIONAL_ACADEMY_DATABASE</BuildingClass>
 			<Type>BUILDING_EFFECT_NATIONAL_ACADEMY_DATABASE</Type>
 			<Description>TXT_KEY_BUILDING_EFFECT_NATIONAL_ACADEMY_DATABASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EFFECT_NATIONAL_ACADEMY_DATABASE_PEDIA</Civilopedia>
@@ -10265,7 +10049,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Enhanced Species -->
-			<BuildingClass>BUILDINGCLASS_ENHANCED_SPECIES</BuildingClass>
 			<Type>BUILDING_ENHANCED_SPECIES</Type>
 			<Description>TXT_KEY_BUILDING_ENHANCED_SPECIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ENHANCED_SPECIES_PEDIA</Civilopedia>
@@ -10793,7 +10576,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Health (Medical Database) -->
-			<BuildingClass>BUILDINGCLASS_MEDICAL_DATABASE_GOOD</BuildingClass>
 			<Type>BUILDING_MEDICAL_DATABASE_GOOD</Type>
 			<Description>TXT_KEY_BUILDING_MEDICAL_DATABASE_GOOD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MEDICAL_DATABASE_GOOD_PEDIA</Civilopedia>
@@ -10825,7 +10607,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Health Spa -->
-			<BuildingClass>BUILDINGCLASS_HEALTH_SPA</BuildingClass>
 			<Type>BUILDING_HEALTH_SPA</Type>
 			<Description>TXT_KEY_BUILDING_HEALTH_SPA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HEALTH_SPA_PEDIA</Civilopedia>
@@ -10874,7 +10655,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Mercantilism Bonus(Gold) -->
-			<BuildingClass>BUILDINGCLASS_MERCANTILISMGOLD</BuildingClass>
 			<Type>BUILDING_MERCANTILISMGOLD</Type>
 			<Description>TXT_KEY_BUILDING_MERCANTILISMGOLD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MERCANTILISMGOLD_PEDIA</Civilopedia>
@@ -10916,7 +10696,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Mercantilism Bonus(Silver) -->
-			<BuildingClass>BUILDINGCLASS_MERCANTILISMSILVER</BuildingClass>
 			<Type>BUILDING_MERCANTILISMSILVER</Type>
 			<Description>TXT_KEY_BUILDING_MERCANTILISMSILVER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MERCANTILISMSILVER_PEDIA</Civilopedia>
@@ -10958,7 +10737,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Power (Fusion) -->
-			<BuildingClass>BUILDINGCLASS_GOOD_FUSION</BuildingClass>
 			<Type>BUILDING_GOOD_FUSION</Type>
 			<Description>TXT_KEY_BUILDING_GOOD_FUSION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GOOD_FUSION_PEDIA</Civilopedia>
@@ -10985,7 +10763,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Power (Gorge) -->
-			<BuildingClass>BUILDINGCLASS_GOOD_GORGE</BuildingClass>
 			<Type>BUILDING_GOOD_GORGE</Type>
 			<Description>TXT_KEY_BUILDING_GOOD_GORGE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GOOD_GORGE_PEDIA</Civilopedia>
@@ -11015,7 +10792,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Universal Health Care -->
-			<BuildingClass>BUILDINGCLASS_UNIVERSAL_HEALTH_CARE</BuildingClass>
 			<Type>BUILDING_UNIVERSAL_HEALTH_CARE</Type>
 			<Description>TXT_KEY_BUILDING_UNIVERSAL_HEALTH_CARE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_UNIVERSAL_HEALTH_CARE_PEDIA</Civilopedia>
@@ -11059,7 +10835,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Cave Dwelling -->
-			<BuildingClass>BUILDINGCLASS_CAVE_DWELLING</BuildingClass>
 			<Type>BUILDING_CAVE_DWELLING</Type>
 			<Description>TXT_KEY_BUILDING_CAVE_DWELLING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CAVE_DWELLING_PEDIA</Civilopedia>
@@ -11121,7 +10896,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Animal Burrow) -->
-			<BuildingClass>BUILDINGCLASS_ANIMAL_BURROW</BuildingClass>
 			<Type>BUILDING_ANIMAL_BURROW</Type>
 			<Description>TXT_KEY_BUILDING_ANIMAL_BURROW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_BURROW_PEDIA</Civilopedia>
@@ -11171,7 +10945,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Animal Hide Tents) -->
-			<BuildingClass>BUILDINGCLASS_HIDE_HUT</BuildingClass>
 			<Type>BUILDING_HIDE_HUT</Type>
 			<Description>TXT_KEY_BUILDING_HIDE_HUT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HIDE_HUT_PEDIA</Civilopedia>
@@ -11240,7 +11013,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Apartments) -->
-			<BuildingClass>BUILDINGCLASS_HOUSE_ERA3_MDMW</BuildingClass>
 			<Type>BUILDING_HOUSE_ERA3_MDMW</Type>
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA3_MDMW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA3_MDMW_PEDIA</Civilopedia>
@@ -11301,7 +11073,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Arcology Slums) -->
-			<BuildingClass>BUILDINGCLASS_HOUSE_ERA4_SDLW</BuildingClass>
 			<Type>BUILDING_HOUSE_ERA4_SDLW</Type>
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_SDLW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_SDLW_PEDIA</Civilopedia>
@@ -11367,7 +11138,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Arcology Suburbs) -->
-			<BuildingClass>BUILDINGCLASS_HOUSE_ERA4_SDMW</BuildingClass>
 			<Type>BUILDING_HOUSE_ERA4_SDMW</Type>
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_SDMW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_SDMW_PEDIA</Civilopedia>
@@ -11429,7 +11199,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Arcology Upperclass) -->
-			<BuildingClass>BUILDINGCLASS_HOUSE_ERA4_SDHW</BuildingClass>
 			<Type>BUILDING_HOUSE_ERA4_SDHW</Type>
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_SDHW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_SDHW_PEDIA</Civilopedia>
@@ -11492,7 +11261,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Bark Huts) -->
-			<BuildingClass>BUILDINGCLASS_WOOD_HUT</BuildingClass>
 			<Type>BUILDING_WOOD_HUT</Type>
 			<Description>TXT_KEY_BUILDING_WOOD_HUT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WOOD_HUT_PEDIA</Civilopedia>
@@ -11558,7 +11326,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Bone Huts) -->
-			<BuildingClass>BUILDINGCLASS_BONE_HUT</BuildingClass>
 			<Type>BUILDING_BONE_HUT</Type>
 			<Description>TXT_KEY_BUILDING_BONE_HUT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BONE_HUT_PEDIA</Civilopedia>
@@ -11621,7 +11388,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Boondocks) -->
-			<BuildingClass>BUILDINGCLASS_HOUSE_ERA3_LDLW</BuildingClass>
 			<Type>BUILDING_HOUSE_ERA3_LDLW</Type>
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA3_LDLW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA3_LDLW_PEDIA</Civilopedia>
@@ -11676,7 +11442,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Chateau) -->
-			<BuildingClass>BUILDINGCLASS_HOUSE_ERA4_LDHW</BuildingClass>
 			<Type>BUILDING_HOUSE_ERA4_LDHW</Type>
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_LDHW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_LDHW_PEDIA</Civilopedia>
@@ -11737,7 +11502,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Cliff Dwelling) -->
-			<BuildingClass>BUILDINGCLASS_CLIFF_DWELLING</BuildingClass>
 			<Type>BUILDING_CLIFF_DWELLING</Type>
 			<Description>TXT_KEY_BUILDING_CLIFF_DWELLING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CLIFF_DWELLING_PEDIA</Civilopedia>
@@ -11797,7 +11561,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Commons) -->
-			<BuildingClass>BUILDINGCLASS_HOUSE_ERA2_MDMW</BuildingClass>
 			<Type>BUILDING_HOUSE_ERA2_MDMW</Type>
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA2_MDMW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA2_MDMW_PEDIA</Civilopedia>
@@ -11852,7 +11615,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Condominiums) -->
-			<BuildingClass>BUILDINGCLASS_HOUSE_ERA3_MDHW</BuildingClass>
 			<Type>BUILDING_HOUSE_ERA3_MDHW</Type>
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA3_MDHW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA3_MDHW_PEDIA</Civilopedia>
@@ -11913,7 +11675,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Cottages) -->
-			<BuildingClass>BUILDINGCLASS_HOUSE_ERA2_LDMW</BuildingClass>
 			<Type>BUILDING_HOUSE_ERA2_LDMW</Type>
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA2_LDMW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA2_LDMW_PEDIA</Civilopedia>
@@ -11966,7 +11727,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Domus) -->
-			<BuildingClass>BUILDINGCLASS_HOUSE_ERA1_LDMW</BuildingClass>
 			<Type>BUILDING_HOUSE_ERA1_LDMW</Type>
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA1_LDMW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA1_LDMW_PEDIA</Civilopedia>
@@ -12023,7 +11783,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Dugouts) -->
-			<BuildingClass>BUILDINGCLASS_HOUSE_ERA4_LDLW</BuildingClass>
 			<Type>BUILDING_HOUSE_ERA4_LDLW</Type>
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_LDLW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_LDLW_PEDIA</Civilopedia>
@@ -12079,7 +11838,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Estates) -->
-			<BuildingClass>BUILDINGCLASS_HOUSE_ERA2_MDHW</BuildingClass>
 			<Type>BUILDING_HOUSE_ERA2_MDHW</Type>
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA2_MDHW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA2_MDHW_PEDIA</Civilopedia>
@@ -12140,7 +11898,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Frat House) -->
-			<BuildingClass>BUILDINGCLASS_FRAT_HOUSE</BuildingClass>
 			<Type>BUILDING_FRAT_HOUSE</Type>
 			<Description>TXT_KEY_BUILDING_FRAT_HOUSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FRAT_HOUSE_PEDIA</Civilopedia>
@@ -12182,7 +11939,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Ghettos) -->
-			<BuildingClass>BUILDINGCLASS_HOUSE_ERA3_MDLW</BuildingClass>
 			<Type>BUILDING_HOUSE_ERA3_MDLW</Type>
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA3_MDLW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA3_MDLW_PEDIA</Civilopedia>
@@ -12247,7 +12003,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Grass Huts) -->
-			<BuildingClass>BUILDINGCLASS_GRASS_HUT</BuildingClass>
 			<Type>BUILDING_GRASS_HUT</Type>
 			<Description>TXT_KEY_BUILDING_GRASS_HUT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GRASS_HUT_PEDIA</Civilopedia>
@@ -12310,7 +12065,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Habitation Pods) -->
-			<BuildingClass>BUILDINGCLASS_HOUSE_ERA4_HDLW</BuildingClass>
 			<Type>BUILDING_HOUSE_ERA4_HDLW</Type>
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_HDLW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_HDLW_PEDIA</Civilopedia>
@@ -12379,7 +12133,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Highrises) -->
-			<BuildingClass>BUILDINGCLASS_HOUSE_ERA3_HDMW</BuildingClass>
 			<Type>BUILDING_HOUSE_ERA3_HDMW</Type>
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA3_HDMW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA3_HDMW_PEDIA</Civilopedia>
@@ -12444,7 +12197,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (High-Tech Appartments) -->
-			<BuildingClass>BUILDINGCLASS_HOUSE_ERA4_MDMW</BuildingClass>
 			<Type>BUILDING_HOUSE_ERA4_MDMW</Type>
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_MDMW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_MDMW_PEDIA</Civilopedia>
@@ -12502,7 +12254,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (High-Tech Condominiums) -->
-			<BuildingClass>BUILDINGCLASS_HOUSE_ERA4_MDHW</BuildingClass>
 			<Type>BUILDING_HOUSE_ERA4_MDHW</Type>
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_MDHW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_MDHW_PEDIA</Civilopedia>
@@ -12561,7 +12312,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (High-Tech Highrises) -->
-			<BuildingClass>BUILDINGCLASS_HOUSE_ERA4_HDMW</BuildingClass>
 			<Type>BUILDING_HOUSE_ERA4_HDMW</Type>
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_HDMW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_HDMW_PEDIA</Civilopedia>
@@ -12623,7 +12373,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Hogans) -->
-			<BuildingClass>BUILDINGCLASS_HOGAN</BuildingClass>
 			<Type>BUILDING_HOGAN</Type>
 			<Description>TXT_KEY_BUILDING_HOGAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOGAN_PEDIA</Civilopedia>
@@ -12692,7 +12441,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Holo-Suites) -->
-			<BuildingClass>BUILDINGCLASS_HOUSE_ERA4_HDHW</BuildingClass>
 			<Type>BUILDING_HOUSE_ERA4_HDHW</Type>
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_HDHW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_HDHW_PEDIA</Civilopedia>
@@ -12755,7 +12503,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Homeless) -->
-			<BuildingClass>BUILDINGCLASS_HOMELESS</BuildingClass>
 			<Type>BUILDING_HOMELESS</Type>
 			<Description>TXT_KEY_BUILDING_HOMELESS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOMELESS_PEDIA</Civilopedia>
@@ -12983,7 +12730,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Hovels) -->
-			<BuildingClass>BUILDINGCLASS_HOUSE_ERA1_LDLW</BuildingClass>
 			<Type>BUILDING_HOUSE_ERA1_LDLW</Type>
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA1_LDLW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA1_LDLW_PEDIA</Civilopedia>
@@ -13038,7 +12784,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Igloos) -->
-			<BuildingClass>BUILDINGCLASS_IGLOO</BuildingClass>
 			<Type>BUILDING_IGLOO</Type>
 			<Description>TXT_KEY_BUILDING_IGLOO2</Description>
 			<Civilopedia>TXT_KEY_BUILDING_IGLOO_PEDIA</Civilopedia>
@@ -13083,7 +12828,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Insulae) -->
-			<BuildingClass>BUILDINGCLASS_HOUSE_ERA1_MDMW</BuildingClass>
 			<Type>BUILDING_HOUSE_ERA1_MDMW</Type>
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA1_MDMW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA1_MDMW_PEDIA</Civilopedia>
@@ -13142,7 +12886,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Lean-Tos) -->
-			<BuildingClass>BUILDINGCLASS_LEANTO</BuildingClass>
 			<Type>BUILDING_LEANTO</Type>
 			<Description>TXT_KEY_BUILDING_LEANTO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LEANTO_PEDIA</Civilopedia>
@@ -13212,7 +12955,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Longhouse) -->
-			<BuildingClass>BUILDINGCLASS_IROQUOIS_LONGHOUSE</BuildingClass>
 			<Type>BUILDING_IROQUOIS_LONGHOUSE</Type>
 			<Description>TXT_KEY_BUILDING_LONGHOUSE2</Description>
 			<Civilopedia>TXT_KEY_BUILDING_IROQUOIS_LONGHOUSE_PEDIA</Civilopedia>
@@ -13281,7 +13023,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Manors) -->
-			<BuildingClass>BUILDINGCLASS_HOUSE_ERA2_LDHW</BuildingClass>
 			<Type>BUILDING_HOUSE_ERA2_LDHW</Type>
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA2_LDHW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA2_LDHW_PEDIA</Civilopedia>
@@ -13341,7 +13082,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Mansions) -->
-			<BuildingClass>BUILDINGCLASS_HOUSE_ERA3_LDHW</BuildingClass>
 			<Type>BUILDING_HOUSE_ERA3_LDHW</Type>
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA3_LDHW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA3_LDHW_PEDIA</Civilopedia>
@@ -13402,7 +13142,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Mud Huts) -->
-			<BuildingClass>BUILDINGCLASS_MUD_HUT</BuildingClass>
 			<Type>BUILDING_MUD_HUT</Type>
 			<Description>TXT_KEY_BUILDING_MUD_HUT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MUD_HUT_PEDIA</Civilopedia>
@@ -13468,7 +13207,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Palaces) -->
-			<BuildingClass>BUILDINGCLASS_HOUSE_ERA1_MDHW</BuildingClass>
 			<Type>BUILDING_HOUSE_ERA1_MDHW</Type>
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA1_MDHW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA1_MDHW_PEDIA</Civilopedia>
@@ -13533,7 +13271,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Penthouse Suites) -->
-			<BuildingClass>BUILDINGCLASS_HOUSE_ERA3_HDHW</BuildingClass>
 			<Type>BUILDING_HOUSE_ERA3_HDHW</Type>
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA3_HDHW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA3_HDHW_PEDIA</Civilopedia>
@@ -13599,7 +13336,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Projects) -->
-			<BuildingClass>BUILDINGCLASS_HOUSE_ERA3_HDLW</BuildingClass>
 			<Type>BUILDING_HOUSE_ERA3_HDLW</Type>
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA3_HDLW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA3_HDLW_PEDIA</Civilopedia>
@@ -13668,7 +13404,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Pueblos) -->
-			<BuildingClass>BUILDINGCLASS_PUEBLO</BuildingClass>
 			<Type>BUILDING_PUEBLO</Type>
 			<Description>TXT_KEY_BUILDING_PUEBLO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PUEBLO_PEDIA</Civilopedia>
@@ -13737,7 +13472,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Refugee Camps) -->
-			<BuildingClass>BUILDINGCLASS_HOUSE_ERA4_MDLW</BuildingClass>
 			<Type>BUILDING_HOUSE_ERA4_MDLW</Type>
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_MDLW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_MDLW_PEDIA</Civilopedia>
@@ -13799,7 +13533,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Shacks) -->
-			<BuildingClass>BUILDINGCLASS_HOUSE_ERA2_LDLW</BuildingClass>
 			<Type>BUILDING_HOUSE_ERA2_LDLW</Type>
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA2_LDLW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA2_LDLW_PEDIA</Civilopedia>
@@ -13850,7 +13583,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Shanty Town) -->
-			<BuildingClass>BUILDINGCLASS_HOUSE_ERA2_MDLW</BuildingClass>
 			<Type>BUILDING_HOUSE_ERA2_MDLW</Type>
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA2_MDLW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA2_MDLW_PEDIA</Civilopedia>
@@ -13913,7 +13645,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Slums) -->
-			<BuildingClass>BUILDINGCLASS_HOUSE_ERA1_MDLW</BuildingClass>
 			<Type>BUILDING_HOUSE_ERA1_MDLW</Type>
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA1_MDLW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA1_MDLW_PEDIA</Civilopedia>
@@ -13984,7 +13715,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Smart Homes) -->
-			<BuildingClass>BUILDINGCLASS_HOUSE_ERA4_LDMW</BuildingClass>
 			<Type>BUILDING_HOUSE_ERA4_LDMW</Type>
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_LDMW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_LDMW_PEDIA</Civilopedia>
@@ -14043,7 +13773,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Sorority House) -->
-			<BuildingClass>BUILDINGCLASS_SORORITY_HOUSE</BuildingClass>
 			<Type>BUILDING_SORORITY_HOUSE</Type>
 			<Description>TXT_KEY_BUILDING_SORORITY_HOUSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SORORITY_HOUSE_PEDIA</Civilopedia>
@@ -14085,7 +13814,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Stilt Huts) -->
-			<BuildingClass>BUILDINGCLASS_STILT_HUT</BuildingClass>
 			<Type>BUILDING_STILT_HUT</Type>
 			<Description>TXT_KEY_BUILDING_STILT_HUT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_STILT_HUT_PEDIA</Civilopedia>
@@ -14150,7 +13878,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Stone Huts) -->
-			<BuildingClass>BUILDINGCLASS_STONE_HUT</BuildingClass>
 			<Type>BUILDING_STONE_HUT</Type>
 			<Description>TXT_KEY_BUILDING_STONE_HUT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_STONE_HUT_PEDIA</Civilopedia>
@@ -14206,7 +13933,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Suburbs) -->
-			<BuildingClass>BUILDINGCLASS_HOUSE_ERA3_LDMW</BuildingClass>
 			<Type>BUILDING_HOUSE_ERA3_LDMW</Type>
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA3_LDMW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA3_LDMW_PEDIA</Civilopedia>
@@ -14266,7 +13992,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Tipis) -->
-			<BuildingClass>BUILDINGCLASS_TIPI</BuildingClass>
 			<Type>BUILDING_TIPI</Type>
 			<Description>TXT_KEY_BUILDING_TIPI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TIPI_PEDIA</Civilopedia>
@@ -14341,7 +14066,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Trailer Park) -->
-			<BuildingClass>BUILDINGCLASS_TRAILER_PARK</BuildingClass>
 			<Type>BUILDING_TRAILER_PARK</Type>
 			<Description>TXT_KEY_BUILDING_TRAILER_PARK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRAILER_PARK_PEDIA</Civilopedia>
@@ -14375,7 +14099,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Tree Hollow) -->
-			<BuildingClass>BUILDINGCLASS_TREE_HALLOW</BuildingClass>
 			<Type>BUILDING_TREE_HALLOW</Type>
 			<Description>TXT_KEY_BUILDING_TREE_HALLOW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TREE_HALLOW_PEDIA</Civilopedia>
@@ -14434,7 +14157,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Treehouses) -->
-			<BuildingClass>BUILDINGCLASS_TREEHOUSE</BuildingClass>
 			<Type>BUILDING_TREEHOUSE</Type>
 			<Description>TXT_KEY_BUILDING_TREEHOUSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TREEHOUSE_PEDIA</Civilopedia>
@@ -14519,7 +14241,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Villas) -->
-			<BuildingClass>BUILDINGCLASS_HOUSE_ERA1_LDHW</BuildingClass>
 			<Type>BUILDING_HOUSE_ERA1_LDHW</Type>
 			<Description>TXT_KEY_BUILDING_HOUSE_ERA1_LDHW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA1_LDHW_PEDIA</Civilopedia>
@@ -14583,7 +14304,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Yurts) -->
-			<BuildingClass>BUILDINGCLASS_YURT</BuildingClass>
 			<Type>BUILDING_YURT</Type>
 			<Description>TXT_KEY_BUILDING_YURT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_YURT_PEDIA</Civilopedia>
@@ -14654,7 +14374,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National Alcohol Prohibition -->
-			<BuildingClass>BUILDINGCLASS_NATIONAL_ALCOHOL_PROHIBITION</BuildingClass>
 			<Type>BUILDING_NATIONAL_ALCOHOL_PROHIBITION</Type>
 			<Description>TXT_KEY_BUILDING_NATIONAL_ALCOHOL_PROHIBITION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_ALCOHOL_PROHIBITION_PEDIA</Civilopedia>
@@ -14680,7 +14399,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National Drug Prohibition -->
-			<BuildingClass>BUILDINGCLASS_NATIONAL_DRUG_PROHIBITION</BuildingClass>
 			<Type>BUILDING_NATIONAL_DRUG_PROHIBITION</Type>
 			<Description>TXT_KEY_BUILDING_NATIONAL_DRUG_PROHIBITION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_DRUG_PROHIBITION_PEDIA</Civilopedia>
@@ -14706,7 +14424,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National Gambling Ban -->
-			<BuildingClass>BUILDINGCLASS_NATIONAL_GAMBLING_BAN</BuildingClass>
 			<Type>BUILDING_NATIONAL_GAMBLING_BAN</Type>
 			<Description>TXT_KEY_BUILDING_NATIONAL_GAMBLING_BAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_GAMBLING_BAN_PEDIA</Civilopedia>
@@ -14732,7 +14449,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National Prostitution Ban -->
-			<BuildingClass>BUILDINGCLASS_NATIONAL_PROSTITUTION_BAN</BuildingClass>
 			<Type>BUILDING_NATIONAL_PROSTITUTION_BAN</Type>
 			<Description>TXT_KEY_BUILDING_NATIONAL_PROSTITUTION_BAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_PROSTITUTION_BAN_PEDIA</Civilopedia>
@@ -14758,7 +14474,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Ordinance - National Smoking Prohibition -->
-			<BuildingClass>BUILDINGCLASS_NATIONAL_SMOKING_PROHIBITION</BuildingClass>
 			<Type>BUILDING_NATIONAL_SMOKING_PROHIBITION</Type>
 			<Description>TXT_KEY_BUILDING_NATIONAL_SMOKING_PROHIBITION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_SMOKING_PROHIBITION_PEDIA</Civilopedia>
@@ -14800,7 +14515,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Ordinance - Alcohol Prohibition -->
-			<BuildingClass>BUILDINGCLASS_ALCOCHOL_PROHIBITION</BuildingClass>
 			<Type>BUILDING_ALCOCHOL_PROHIBITION</Type>
 			<Description>TXT_KEY_BUILDING_ALCOCHOL_PROHIBITION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ALCOCHOL_PROHIBITION_PEDIA</Civilopedia>
@@ -14828,7 +14542,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Ordinance - Automobile Emission Reduction Act -->
-			<BuildingClass>BUILDINGCLASS_EMISSION_ACT</BuildingClass>
 			<Type>BUILDING_EMISSION_ACT</Type>
 			<Description>TXT_KEY_BUILDING_EMISSION_ACT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EMISSION_ACT_PEDIA</Civilopedia>
@@ -14867,7 +14580,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Ordinance Effect - Automobile Emission Reduction Act -->
-			<BuildingClass>BUILDINGCLASS_EMISSION_ACT_EFFECT</BuildingClass>
 			<Type>BUILDING_EMISSION_ACT_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_EMISSION_ACT_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EMISSION_ACT_EFFECT_PEDIA</Civilopedia>
@@ -14892,7 +14604,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Ordinance - Carpool -->
-			<BuildingClass>BUILDINGCLASS_CARPOOL</BuildingClass>
 			<Type>BUILDING_CARPOOL</Type>
 			<Description>TXT_KEY_BUILDING_CARPOOL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CARPOOL_PEDIA</Civilopedia>
@@ -14931,7 +14642,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Ordinance Effect - Carpool -->
-			<BuildingClass>BUILDINGCLASS_CARPOOL_EFFECT</BuildingClass>
 			<Type>BUILDING_CARPOOL_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_CARPOOL_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CARPOOL_EFFECT_PEDIA</Civilopedia>
@@ -14956,7 +14666,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Ordinance - Clean Air Act -->
-			<BuildingClass>BUILDINGCLASS_CLEANAIR_ACT</BuildingClass>
 			<Type>BUILDING_CLEANAIR_ACT</Type>
 			<Description>TXT_KEY_BUILDING_CLEANAIR_ACT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CLEANAIR_ACT_PEDIA</Civilopedia>
@@ -14993,7 +14702,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Ordinance Effect - Clean Air Act -->
-			<BuildingClass>BUILDINGCLASS_CLEANAIR_ACT_EFFECT</BuildingClass>
 			<Type>BUILDING_CLEANAIR_ACT_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_CLEANAIR_ACT_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CLEANAIR_ACT_EFFECT_PEDIA</Civilopedia>
@@ -15019,7 +14727,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Ordinance - Clean Water Act -->
-			<BuildingClass>BUILDINGCLASS_CLEANWATER_ACT</BuildingClass>
 			<Type>BUILDING_CLEANWATER_ACT</Type>
 			<Description>TXT_KEY_BUILDING_CLEANWATER_ACT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CLEANWATER_ACT_PEDIA</Civilopedia>
@@ -15056,7 +14763,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Ordinance Effect - Clean Water Act -->
-			<BuildingClass>BUILDINGCLASS_CLEANWATER_ACT_EFFECT</BuildingClass>
 			<Type>BUILDING_CLEANWATER_ACT_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_CLEANWATER_ACT_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CLEANWATER_ACT_EFFECT_PEDIA</Civilopedia>
@@ -15082,7 +14788,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Ordinance - Commuter Shuttle Service -->
-			<BuildingClass>BUILDINGCLASS_SHUTTLE_SERVICE</BuildingClass>
 			<Type>BUILDING_SHUTTLE_SERVICE</Type>
 			<Description>TXT_KEY_BUILDING_SHUTTLE_SERVICE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHUTTLE_SERVICE_PEDIA</Civilopedia>
@@ -15121,7 +14826,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Ordinance Effect - Commuter Shuttle Service -->
-			<BuildingClass>BUILDINGCLASS_SHUTTLE_SERVICE_EFFECT</BuildingClass>
 			<Type>BUILDING_SHUTTLE_SERVICE_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_SHUTTLE_SERVICE_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHUTTLE_SERVICE_EFFECT_PEDIA</Civilopedia>
@@ -15146,7 +14850,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Ordinance - Drug Prohibition -->
-			<BuildingClass>BUILDINGCLASS_DRUG_PROHIBITION</BuildingClass>
 			<Type>BUILDING_DRUG_PROHIBITION</Type>
 			<Description>TXT_KEY_BUILDING_DRUG_PROHIBITION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUG_PROHIBITION_PEDIA</Civilopedia>
@@ -15173,7 +14876,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Ordinance - Fire Code -->
-			<BuildingClass>BUILDINGCLASS_FIRE_CODE</BuildingClass>
 			<Type>BUILDING_FIRE_CODE</Type>
 			<Description>TXT_KEY_BUILDING_FIRE_CODE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FIRE_CODE_PEDIA</Civilopedia>
@@ -15226,7 +14928,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Ordinance - Gambling Ban -->
-			<BuildingClass>BUILDINGCLASS_GAMBLING_BAN</BuildingClass>
 			<Type>BUILDING_GAMBLING_BAN</Type>
 			<Description>TXT_KEY_BUILDING_GAMBLING_BAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GAMBLING_BAN_PEDIA</Civilopedia>
@@ -15253,7 +14954,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Ordinance - Neighborhood Watch -->
-			<BuildingClass>BUILDINGCLASS_NEIGHBORHOOD_WATCH</BuildingClass>
 			<Type>BUILDING_NEIGHBORHOOD_WATCH</Type>
 			<Description>TXT_KEY_BUILDING_NEIGHBORHOOD_WATCH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NEIGHBORHOOD_WATCH_PEDIA</Civilopedia>
@@ -15313,7 +15013,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Ordinance - Prostitution Ban -->
-			<BuildingClass>BUILDINGCLASS_PROSTITUTION_BAN</BuildingClass>
 			<Type>BUILDING_PROSTITUTION_BAN</Type>
 			<Description>TXT_KEY_BUILDING_PROSTITUTION_BAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PROSTITUTION_BAN_PEDIA</Civilopedia>
@@ -15341,7 +15040,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Ordinance - Smoke Detector -->
-			<BuildingClass>BUILDINGCLASS_SMOKE_DETECTOR</BuildingClass>
 			<Type>BUILDING_SMOKE_DETECTOR</Type>
 			<Description>TXT_KEY_BUILDING_SMOKE_DETECTOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SMOKE_DETECTOR_PEDIA</Civilopedia>
@@ -15394,7 +15092,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Ordinance - Smoking Prohibition -->
-			<BuildingClass>BUILDINGCLASS_SMOKING_PROHIBITION</BuildingClass>
 			<Type>BUILDING_SMOKING_PROHIBITION</Type>
 			<Description>TXT_KEY_BUILDING_SMOKING_PROHIBITION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SMOKING_PROHIBITION_PEDIA</Civilopedia>
@@ -15436,7 +15133,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Ordinance - Tire Recycling Program -->
-			<BuildingClass>BUILDINGCLASS_TIRE_RECYCLE</BuildingClass>
 			<Type>BUILDING_TIRE_RECYCLE</Type>
 			<Description>TXT_KEY_BUILDING_TIRE_RECYCLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TIRE_RECYCLE_PEDIA</Civilopedia>
@@ -15476,7 +15172,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Ordinance Effect - Tire Recycling Program -->
-			<BuildingClass>BUILDINGCLASS_TIRE_RECYCLE_EFFECT</BuildingClass>
 			<Type>BUILDING_TIRE_RECYCLE_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_TIRE_RECYCLE_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TIRE_RECYCLE_EFFECT_PEDIA</Civilopedia>
@@ -15501,7 +15196,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Ordinance - Youth Curfew -->
-			<BuildingClass>BUILDINGCLASS_YOUTH_CURFEW</BuildingClass>
 			<Type>BUILDING_YOUTH_CURFEW</Type>
 			<Description>TXT_KEY_BUILDING_YOUTH_CURFEW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_YOUTH_CURFEW_PEDIA</Civilopedia>
@@ -15561,7 +15255,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pests (Ants) -->
-			<BuildingClass>BUILDINGCLASS_PEST_ANTS</BuildingClass>
 			<Type>BUILDING_PEST_ANTS</Type>
 			<Description>TXT_KEY_BUILDING_PEST_ANTS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
@@ -15590,7 +15283,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pests (Aphids) -->
-			<BuildingClass>BUILDINGCLASS_PEST_APHIDS</BuildingClass>
 			<Type>BUILDING_PEST_APHIDS</Type>
 			<Description>TXT_KEY_BUILDING_PEST_APHIDS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
@@ -15634,7 +15326,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pests (Bed Bugs) -->
-			<BuildingClass>BUILDINGCLASS_PEST_BEDBUGS</BuildingClass>
 			<Type>BUILDING_PEST_BEDBUGS</Type>
 			<Description>TXT_KEY_BUILDING_PEST_BEDBUGS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
@@ -15669,7 +15360,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pests (Cockroaches) -->
-			<BuildingClass>BUILDINGCLASS_PEST_COCKROACHES</BuildingClass>
 			<Type>BUILDING_PEST_COCKROACHES</Type>
 			<Description>TXT_KEY_BUILDING_PEST_COCKROACHES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
@@ -15709,7 +15399,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pests (Crows) -->
-			<BuildingClass>BUILDINGCLASS_PEST_CROWS</BuildingClass>
 			<Type>BUILDING_PEST_CROWS</Type>
 			<Description>TXT_KEY_BUILDING_PEST_CROWS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
@@ -15757,7 +15446,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pests (Fleas) -->
-			<BuildingClass>BUILDINGCLASS_PEST_FLEAS</BuildingClass>
 			<Type>BUILDING_PEST_FLEAS</Type>
 			<Description>TXT_KEY_BUILDING_PEST_FLEAS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
@@ -15796,7 +15484,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pests (Flies) -->
-			<BuildingClass>BUILDINGCLASS_PEST_FLIES</BuildingClass>
 			<Type>BUILDING_PEST_FLIES</Type>
 			<Description>TXT_KEY_BUILDING_PEST_FLIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
@@ -15840,7 +15527,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pests (Gophers) -->
-			<BuildingClass>BUILDINGCLASS_PEST_GOPHERS</BuildingClass>
 			<Type>BUILDING_PEST_GOPHERS</Type>
 			<Description>TXT_KEY_BUILDING_PEST_GOPHERS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
@@ -15875,7 +15561,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pests (Lice) -->
-			<BuildingClass>BUILDINGCLASS_PEST_LICE</BuildingClass>
 			<Type>BUILDING_PEST_LICE</Type>
 			<Description>TXT_KEY_BUILDING_PEST_LICE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
@@ -15910,7 +15595,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pests (Locust) -->
-			<BuildingClass>BUILDINGCLASS_PEST_LOCUST</BuildingClass>
 			<Type>BUILDING_PEST_LOCUST</Type>
 			<Description>TXT_KEY_BUILDING_PEST_LOCUST</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
@@ -15943,7 +15627,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pests (Mosquitoes) -->
-			<BuildingClass>BUILDINGCLASS_PEST_MOSQUITOES</BuildingClass>
 			<Type>BUILDING_PEST_MOSQUITOES</Type>
 			<Description>TXT_KEY_BUILDING_PEST_MOSQUITOES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
@@ -15996,7 +15679,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pests (Moths) -->
-			<BuildingClass>BUILDINGCLASS_PEST_MOTHS</BuildingClass>
 			<Type>BUILDING_PEST_MOTHS</Type>
 			<Description>TXT_KEY_BUILDING_PEST_MOTHS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
@@ -16034,7 +15716,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pests (Pigeons) -->
-			<BuildingClass>BUILDINGCLASS_PEST_PIGEONS</BuildingClass>
 			<Type>BUILDING_PEST_PIGEONS</Type>
 			<Description>TXT_KEY_BUILDING_PEST_PIGEONS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
@@ -16077,7 +15758,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pests (Raccoons) -->
-			<BuildingClass>BUILDINGCLASS_PEST_RACCOONS</BuildingClass>
 			<Type>BUILDING_PEST_RACCOONS</Type>
 			<Description>TXT_KEY_BUILDING_PEST_RACCOONS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
@@ -16115,7 +15795,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pests (Rats) -->
-			<BuildingClass>BUILDINGCLASS_PEST_RATS</BuildingClass>
 			<Type>BUILDING_PEST_RATS</Type>
 			<Description>TXT_KEY_BUILDING_PEST_RATS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
@@ -16178,7 +15857,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pests (Seagulls) -->
-			<BuildingClass>BUILDINGCLASS_PEST_SEAGULLS</BuildingClass>
 			<Type>BUILDING_PEST_SEAGULLS</Type>
 			<Description>TXT_KEY_BUILDING_PEST_SEAGULLS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
@@ -16221,7 +15899,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pests (Slugs) -->
-			<BuildingClass>BUILDINGCLASS_PEST_SLUGS</BuildingClass>
 			<Type>BUILDING_PEST_SLUGS</Type>
 			<Description>TXT_KEY_BUILDING_PEST_SLUGS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
@@ -16258,7 +15935,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pests (Termites) -->
-			<BuildingClass>BUILDINGCLASS_PEST_TERMITES</BuildingClass>
 			<Type>BUILDING_PEST_TERMITES</Type>
 			<Description>TXT_KEY_BUILDING_PEST_TERMITES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
@@ -16293,7 +15969,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pests (Ticks) -->
-			<BuildingClass>BUILDINGCLASS_PEST_TICKS</BuildingClass>
 			<Type>BUILDING_PEST_TICKS</Type>
 			<Description>TXT_KEY_BUILDING_PEST_TICKS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
@@ -16332,7 +16007,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pests (Wasps) -->
-			<BuildingClass>BUILDINGCLASS_PEST_WASPS</BuildingClass>
 			<Type>BUILDING_PEST_WASPS</Type>
 			<Description>TXT_KEY_BUILDING_PEST_WASPS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
@@ -16359,7 +16033,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pollution (Acid Rain) -->
-			<BuildingClass>BUILDINGCLASS_POLLUTION_ACIDRAIN</BuildingClass>
 			<Type>BUILDING_POLLUTION_ACIDRAIN</Type>
 			<Description>TXT_KEY_BUILDING_POLLUTION_ACIDRAIN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AIR_POLLUTION_PEDIA</Civilopedia>
@@ -16406,7 +16079,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pollution (Blackened Skies) -->
-			<BuildingClass>BUILDINGCLASS_POLLUTION_BLACKENEDSKIES</BuildingClass>
 			<Type>BUILDING_POLLUTION_BLACKENEDSKIES</Type>
 			<Description>TXT_KEY_BUILDING_POLLUTION_BLACKENEDSKIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AIR_POLLUTION_PEDIA</Civilopedia>
@@ -16454,7 +16126,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pollution (Heavy Smog) -->
-			<BuildingClass>BUILDINGCLASS_POLLUTION_SMOG3</BuildingClass>
 			<Type>BUILDING_POLLUTION_SMOG3</Type>
 			<Description>TXT_KEY_BUILDING_POLLUTION_SMOG3</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AIR_POLLUTION_PEDIA</Civilopedia>
@@ -16498,7 +16169,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pollution (Light Smog) -->
-			<BuildingClass>BUILDINGCLASS_POLLUTION_SMOG1</BuildingClass>
 			<Type>BUILDING_POLLUTION_SMOG1</Type>
 			<Description>TXT_KEY_BUILDING_POLLUTION_SMOG1</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AIR_POLLUTION_PEDIA</Civilopedia>
@@ -16540,7 +16210,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pollution (Major Coastal Pollution) -->
-			<BuildingClass>BUILDINGCLASS_POLLUTION_COAST3</BuildingClass>
 			<Type>BUILDING_POLLUTION_COAST3</Type>
 			<Description>TXT_KEY_BUILDING_POLLUTION_COAST3</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WATER_POLLUTION_PEDIA</Civilopedia>
@@ -16584,7 +16253,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pollution (Major Global Warming) -->
-			<BuildingClass>BUILDINGCLASS_POLLUTION_GLOBALWARMING3</BuildingClass>
 			<Type>BUILDING_POLLUTION_GLOBALWARMING3</Type>
 			<Description>TXT_KEY_BUILDING_POLLUTION_GLOBALWARMING3</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AIR_POLLUTION_PEDIA</Civilopedia>
@@ -16622,7 +16290,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pollution (Major Groundwater Pollution) -->
-			<BuildingClass>BUILDINGCLASS_POLLUTION_GROUNDWATER3</BuildingClass>
 			<Type>BUILDING_POLLUTION_GROUNDWATER3</Type>
 			<Description>TXT_KEY_BUILDING_POLLUTION_GROUNDWATER3</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WATER_POLLUTION_PEDIA</Civilopedia>
@@ -16666,7 +16333,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pollution (Major Ozone Depletion) -->
-			<BuildingClass>BUILDINGCLASS_POLLUTION_OZONE3</BuildingClass>
 			<Type>BUILDING_POLLUTION_OZONE3</Type>
 			<Description>TXT_KEY_BUILDING_POLLUTION_OZONE3</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AIR_POLLUTION_PEDIA</Civilopedia>
@@ -16715,7 +16381,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pollution (Major River Pollution) -->
-			<BuildingClass>BUILDINGCLASS_POLLUTION_RIVER3</BuildingClass>
 			<Type>BUILDING_POLLUTION_RIVER3</Type>
 			<Description>TXT_KEY_BUILDING_POLLUTION_RIVER3</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WATER_POLLUTION_PEDIA</Civilopedia>
@@ -16759,7 +16424,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pollution (Minor Coastal Pollution) -->
-			<BuildingClass>BUILDINGCLASS_POLLUTION_COAST1</BuildingClass>
 			<Type>BUILDING_POLLUTION_COAST1</Type>
 			<Description>TXT_KEY_BUILDING_POLLUTION_COAST1</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WATER_POLLUTION_PEDIA</Civilopedia>
@@ -16803,7 +16467,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pollution (Minor Global Warming) -->
-			<BuildingClass>BUILDINGCLASS_POLLUTION_GLOBALWARMING1</BuildingClass>
 			<Type>BUILDING_POLLUTION_GLOBALWARMING1</Type>
 			<Description>TXT_KEY_BUILDING_POLLUTION_GLOBALWARMING1</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AIR_POLLUTION_PEDIA</Civilopedia>
@@ -16839,7 +16502,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pollution (Minor Groundwater Pollution) -->
-			<BuildingClass>BUILDINGCLASS_POLLUTION_GROUNDWATER1</BuildingClass>
 			<Type>BUILDING_POLLUTION_GROUNDWATER1</Type>
 			<Description>TXT_KEY_BUILDING_POLLUTION_GROUNDWATER1</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WATER_POLLUTION_PEDIA</Civilopedia>
@@ -16881,7 +16543,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pollution (Minor Ozone Depletion) -->
-			<BuildingClass>BUILDINGCLASS_POLLUTION_OZONE1</BuildingClass>
 			<Type>BUILDING_POLLUTION_OZONE1</Type>
 			<Description>TXT_KEY_BUILDING_POLLUTION_OZONE1</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AIR_POLLUTION_PEDIA</Civilopedia>
@@ -16930,7 +16591,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pollution (Minor River Pollution) -->
-			<BuildingClass>BUILDINGCLASS_POLLUTION_RIVER1</BuildingClass>
 			<Type>BUILDING_POLLUTION_RIVER1</Type>
 			<Description>TXT_KEY_BUILDING_POLLUTION_RIVER1</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WATER_POLLUTION_PEDIA</Civilopedia>
@@ -16974,7 +16634,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pollution (Moderate Coastal Pollution) -->
-			<BuildingClass>BUILDINGCLASS_POLLUTION_COAST2</BuildingClass>
 			<Type>BUILDING_POLLUTION_COAST2</Type>
 			<Description>TXT_KEY_BUILDING_POLLUTION_COAST2</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WATER_POLLUTION_PEDIA</Civilopedia>
@@ -17018,7 +16677,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pollution (Moderate Global Warming) -->
-			<BuildingClass>BUILDINGCLASS_POLLUTION_GLOBALWARMING2</BuildingClass>
 			<Type>BUILDING_POLLUTION_GLOBALWARMING2</Type>
 			<Description>TXT_KEY_BUILDING_POLLUTION_GLOBALWARMING2</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AIR_POLLUTION_PEDIA</Civilopedia>
@@ -17054,7 +16712,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pollution (Moderate Groundwater Pollution) -->
-			<BuildingClass>BUILDINGCLASS_POLLUTION_GROUNDWATER2</BuildingClass>
 			<Type>BUILDING_POLLUTION_GROUNDWATER2</Type>
 			<Description>TXT_KEY_BUILDING_POLLUTION_GROUNDWATER2</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WATER_POLLUTION_PEDIA</Civilopedia>
@@ -17096,7 +16753,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pollution (Moderate Ozone Depletion) -->
-			<BuildingClass>BUILDINGCLASS_POLLUTION_OZONE2</BuildingClass>
 			<Type>BUILDING_POLLUTION_OZONE2</Type>
 			<Description>TXT_KEY_BUILDING_POLLUTION_OZONE2</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AIR_POLLUTION_PEDIA</Civilopedia>
@@ -17145,7 +16801,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pollution (Moderate River Pollution) -->
-			<BuildingClass>BUILDINGCLASS_POLLUTION_RIVER2</BuildingClass>
 			<Type>BUILDING_POLLUTION_RIVER2</Type>
 			<Description>TXT_KEY_BUILDING_POLLUTION_RIVER2</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WATER_POLLUTION_PEDIA</Civilopedia>
@@ -17189,7 +16844,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pollution (Moderate Smog) -->
-			<BuildingClass>BUILDINGCLASS_POLLUTION_SMOG2</BuildingClass>
 			<Type>BUILDING_POLLUTION_SMOG2</Type>
 			<Description>TXT_KEY_BUILDING_POLLUTION_SMOG2</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AIR_POLLUTION_PEDIA</Civilopedia>
@@ -17231,7 +16885,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pollution (Red Tide) -->
-			<BuildingClass>BUILDINGCLASS_POLLUTION_REDTIDE</BuildingClass>
 			<Type>BUILDING_POLLUTION_REDTIDE</Type>
 			<Description>TXT_KEY_BUILDING_POLLUTION_REDTIDE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WATER_POLLUTION_PEDIA</Civilopedia>
@@ -17275,7 +16928,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pollution (Reef Bleaching) -->
-			<BuildingClass>BUILDINGCLASS_POLLUTION_REEFBLEACHING</BuildingClass>
 			<Type>BUILDING_POLLUTION_REEFBLEACHING</Type>
 			<Description>TXT_KEY_BUILDING_POLLUTION_REEFBLEACHING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AIR_POLLUTION_PEDIA</Civilopedia>
@@ -17310,7 +16962,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pollution (Toxic Atmosphere) -->
-			<BuildingClass>BUILDINGCLASS_POLLUTION_TOXICATMOSPHERE</BuildingClass>
 			<Type>BUILDING_POLLUTION_TOXICATMOSPHERE</Type>
 			<Description>TXT_KEY_BUILDING_POLLUTION_TOXICATMOSPHERE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AIR_POLLUTION_PEDIA</Civilopedia>
@@ -17358,7 +17009,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pollution (Toxic Hydrosphere) -->
-			<BuildingClass>BUILDINGCLASS_POLLUTION_TOXICHYDROSPHERE</BuildingClass>
 			<Type>BUILDING_POLLUTION_TOXICHYDROSPHERE</Type>
 			<Description>TXT_KEY_BUILDING_POLLUTION_TOXICHYDROSPHERE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WATER_POLLUTION_PEDIA</Civilopedia>
@@ -17406,7 +17056,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Safety (Great Firewall) -->
-			<BuildingClass>BUILDINGCLASS_GREAT_FIREWALL_GOOD</BuildingClass>
 			<Type>BUILDING_GREAT_FIREWALL_GOOD</Type>
 			<Description>TXT_KEY_BUILDING_GREAT_FIREWALL_GOOD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GREAT_FIREWALL_GOOD_PEDIA</Civilopedia>
@@ -17483,7 +17132,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Safety (Maximum Security Prison) -->
-			<BuildingClass>BUILDINGCLASS_GOOD_FEDERAL_PRISON</BuildingClass>
 			<Type>BUILDING_GOOD_FEDERAL_PRISON</Type>
 			<Description>TXT_KEY_BUILDING_GOOD_FEDERAL_PRISON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GOOD_FEDERAL_PRISON_PEDIA</Civilopedia>
@@ -17514,7 +17162,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Safety (National Legal Database) -->
-			<BuildingClass>BUILDINGCLASS_SAFETY_NAT_LEGAL_DATABASE</BuildingClass>
 			<Type>BUILDING_SAFETY_NAT_LEGAL_DATABASE</Type>
 			<Description>TXT_KEY_BUILDING_SAFETY_NAT_LEGAL_DATABASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SAFETY_NAT_LEGAL_DATABASE_PEDIA</Civilopedia>
@@ -17538,7 +17185,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Safety (Neighborhood Watch) -->
-			<BuildingClass>BUILDINGCLASS_GOOD_NEIGHBORHOOD_WATCH</BuildingClass>
 			<Type>BUILDING_GOOD_NEIGHBORHOOD_WATCH</Type>
 			<Description>TXT_KEY_BUILDING_GOOD_NEIGHBORHOOD_WATCH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GOOD_NEIGHBORHOOD_WATCH_PEDIA</Civilopedia>
@@ -17562,7 +17208,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Safety (Orbital Prison) -->
-			<BuildingClass>BUILDINGCLASS_SAFETY_ORBITAL_PRISON</BuildingClass>
 			<Type>BUILDING_SAFETY_ORBITAL_PRISON</Type>
 			<Description>TXT_KEY_BUILDING_SAFETY_ORBITAL_PRISON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SAFETY_ORBITAL_PRISON_PEDIA</Civilopedia>
@@ -17606,7 +17251,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Safety (Police Academy) -->
-			<BuildingClass>BUILDINGCLASS_GOOD_POLICE_ACADEMY</BuildingClass>
 			<Type>BUILDING_GOOD_POLICE_ACADEMY</Type>
 			<Description>TXT_KEY_BUILDING_GOOD_POLICE_ACADEMY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GOOD_POLICE_ACADEMY_PEDIA</Civilopedia>
@@ -17630,7 +17274,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Safety (Youth Curfew) -->
-			<BuildingClass>BUILDINGCLASS_GOOD_YOUTH_CURFEW</BuildingClass>
 			<Type>BUILDING_GOOD_YOUTH_CURFEW</Type>
 			<Description>TXT_KEY_BUILDING_GOOD_YOUTH_CURFEW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GOOD_YOUTH_CURFEW_PEDIA</Civilopedia>
@@ -17655,7 +17298,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Military Academy -->
-			<BuildingClass>BUILDINGCLASS_MILITARY_ACADEMY</BuildingClass>
 			<Type>BUILDING_MILITARY_ACADEMY</Type>
 			<Description>TXT_KEY_BUILDING_MILITARY_ACADEMY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MILITARY_ACADEMY_PEDIA</Civilopedia>
@@ -17712,7 +17354,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Scotland Yard -->
-			<BuildingClass>BUILDINGCLASS_SCOTLAND_YARD</BuildingClass>
 			<Type>BUILDING_SCOTLAND_YARD</Type>
 			<Description>TXT_KEY_BUILDING_SCOTLAND_YARD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SCOTLAND_YARD_PEDIA</Civilopedia>
@@ -17784,7 +17425,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Academy -->
-			<BuildingClass>BUILDINGCLASS_ACADEMY</BuildingClass>
 			<Type>BUILDING_ACADEMY</Type>
 			<Description>TXT_KEY_BUILDING_ACADEMY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ACADEMY_PEDIA</Civilopedia>
@@ -17840,7 +17480,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Tourism (Level 1) -->
-			<BuildingClass>BUILDINGCLASS_TOURISM_PLUS1</BuildingClass>
 			<Type>BUILDING_TOURISM_PLUS1</Type>
 			<Description>TXT_KEY_BUILDING_TOURISM_PLUS1</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
@@ -17892,7 +17531,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Tourism (Level 2) -->
-			<BuildingClass>BUILDINGCLASS_TOURISM_PLUS2</BuildingClass>
 			<Type>BUILDING_TOURISM_PLUS2</Type>
 			<Description>TXT_KEY_BUILDING_TOURISM_PLUS2</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
@@ -17944,7 +17582,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Tourism (Level 3) -->
-			<BuildingClass>BUILDINGCLASS_TOURISM_PLUS3</BuildingClass>
 			<Type>BUILDING_TOURISM_PLUS3</Type>
 			<Description>TXT_KEY_BUILDING_TOURISM_PLUS3</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
@@ -17996,7 +17633,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Tourism (Level 4) -->
-			<BuildingClass>BUILDINGCLASS_TOURISM_PLUS4</BuildingClass>
 			<Type>BUILDING_TOURISM_PLUS4</Type>
 			<Description>TXT_KEY_BUILDING_TOURISM_PLUS4</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
@@ -18048,7 +17684,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Tourism (Level 5) -->
-			<BuildingClass>BUILDINGCLASS_TOURISM_PLUS5</BuildingClass>
 			<Type>BUILDING_TOURISM_PLUS5</Type>
 			<Description>TXT_KEY_BUILDING_TOURISM_PLUS5</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
@@ -18100,7 +17735,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Tourism (Level 6) -->
-			<BuildingClass>BUILDINGCLASS_TOURISM_PLUS6</BuildingClass>
 			<Type>BUILDING_TOURISM_PLUS6</Type>
 			<Description>TXT_KEY_BUILDING_TOURISM_PLUS6</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
@@ -18152,7 +17786,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Tourism (Level 7) -->
-			<BuildingClass>BUILDINGCLASS_TOURISM_PLUS7</BuildingClass>
 			<Type>BUILDING_TOURISM_PLUS7</Type>
 			<Description>TXT_KEY_BUILDING_TOURISM_PLUS7</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
@@ -18204,7 +17837,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Tourism (Level 8) -->
-			<BuildingClass>BUILDINGCLASS_TOURISM_PLUS8</BuildingClass>
 			<Type>BUILDING_TOURISM_PLUS8</Type>
 			<Description>TXT_KEY_BUILDING_TOURISM_PLUS8</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
@@ -18256,7 +17888,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Tourism (Level 9) -->
-			<BuildingClass>BUILDINGCLASS_TOURISM_PLUS9</BuildingClass>
 			<Type>BUILDING_TOURISM_PLUS9</Type>
 			<Description>TXT_KEY_BUILDING_TOURISM_PLUS9</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
@@ -18308,7 +17939,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Tourism (Level 10) -->
-			<BuildingClass>BUILDINGCLASS_TOURISM_PLUS10</BuildingClass>
 			<Type>BUILDING_TOURISM_PLUS10</Type>
 			<Description>TXT_KEY_BUILDING_TOURISM_PLUS10</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
@@ -18360,7 +17990,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pir-e Sabz -->
-			<BuildingClass>BUILDINGCLASS_ZOROASTRIAN_SHRINE</BuildingClass>
 			<Type>BUILDING_ZOROASTRIAN_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_ZOROASTRIAN_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ZOROASTRIAN_SHRINE_PEDIA</Civilopedia>
@@ -18432,7 +18061,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Teotihuacan -->
-			<BuildingClass>BUILDINGCLASS_MESOAMERICAN_SHRINE</BuildingClass>
 			<Type>BUILDING_MESOAMERICAN_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_MESOAMERICAN_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MESOAMERICAN_SHRINE_PEDIA</Civilopedia>
@@ -18504,7 +18132,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- The Church of the Nativity -->
-			<BuildingClass>BUILDINGCLASS_CHRISTIAN_SHRINE</BuildingClass>
 			<Type>BUILDING_CHRISTIAN_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_CHRISTIAN_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CHRISTIAN_SHRINE_PEDIA</Civilopedia>
@@ -18571,7 +18198,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- The Dai Miao -->
-			<BuildingClass>BUILDINGCLASS_TAOIST_SHRINE</BuildingClass>
 			<Type>BUILDING_TAOIST_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_TAOIST_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TAOIST_SHRINE_PEDIA</Civilopedia>
@@ -18638,7 +18264,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- The Karnak Temple Complex -->
-			<BuildingClass>BUILDINGCLASS_EGYPT_MYTH_SHRINE</BuildingClass>
 			<Type>BUILDING_EGYPT_MYTH_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_EGYPT_MYTH_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EGYPT_MYTH_SHRINE_PEDIA</Civilopedia>
@@ -18709,7 +18334,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- The Kashi Vishwanath -->
-			<BuildingClass>BUILDINGCLASS_HINDU_SHRINE</BuildingClass>
 			<Type>BUILDING_HINDU_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_HINDU_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HINDU_SHRINE_PEDIA</Civilopedia>
@@ -18776,7 +18400,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- The Kong Miao -->
-			<BuildingClass>BUILDINGCLASS_CONFUCIAN_SHRINE</BuildingClass>
 			<Type>BUILDING_CONFUCIAN_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_CONFUCIAN_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CONFUCIAN_SHRINE_PEDIA</Civilopedia>
@@ -18845,7 +18468,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- The Mahabodhi -->
-			<BuildingClass>BUILDINGCLASS_BUDDHIST_SHRINE</BuildingClass>
 			<Type>BUILDING_BUDDHIST_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_BUDDHIST_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BUDDHIST_SHRINE_PEDIA</Civilopedia>
@@ -18912,7 +18534,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- The Masjid al-Haram -->
-			<BuildingClass>BUILDINGCLASS_ISLAMIC_SHRINE</BuildingClass>
 			<Type>BUILDING_ISLAMIC_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_ISLAMIC_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ISLAMIC_SHRINE_PEDIA</Civilopedia>
@@ -18979,7 +18600,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- The National Standard of Measurement -->
-			<BuildingClass>BUILDINGCLASS_NATIONAL_STANDARD_OF_MEASUREMENT</BuildingClass>
 			<Type>BUILDING_NATIONAL_STANDARD_OF_MEASUREMENT</Type>
 			<Description>TXT_KEY_BUILDING_NATIONAL_STANDARD_OF_MEASUREMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_STANDARD_OF_MEASUREMENT_PEDIA</Civilopedia>
@@ -19018,7 +18638,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- The Statue of Zeus -->
-			<BuildingClass>BUILDINGCLASS_STATUE_OF_ZEUS</BuildingClass>
 			<Type>BUILDING_STATUE_OF_ZEUS</Type>
 			<Description>TXT_KEY_BUILDING_STATUE_OF_ZEUS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_STATUE_OF_ZEUS_PEDIA</Civilopedia>
@@ -19088,7 +18707,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- The Temple of Solomon -->
-			<BuildingClass>BUILDINGCLASS_JEWISH_SHRINE</BuildingClass>
 			<Type>BUILDING_JEWISH_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_JEWISH_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_JEWISH_SHRINE_PEDIA</Civilopedia>
@@ -19162,7 +18780,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Valley of the Kings -->
-			<BuildingClass>BUILDINGCLASS_VALLEY_KINGS</BuildingClass>
 			<Type>BUILDING_VALLEY_KINGS</Type>
 			<Description>TXT_KEY_BUILDING_VALLEY_KINGS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VALLEY_KINGS_PEDIA</Civilopedia>
@@ -19216,7 +18833,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Bandit's Hideout -->
-			<BuildingClass>BUILDINGCLASS_UNSANCTIONED_BANDITS_HIDEOUT1</BuildingClass>
 			<Type>BUILDING_UNSANCTIONED_BANDITS_HIDEOUT1</Type>
 			<Description>TXT_KEY_BUILDING_UNSANCTIONED_BANDITS_HIDEOUT1</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BANDITS_HIDEOUT_PEDIA</Civilopedia>
@@ -19257,7 +18873,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Bandit's Hideout -->
-			<BuildingClass>BUILDINGCLASS_UNSANCTIONED_BANDITS_HIDEOUT2</BuildingClass>
 			<Type>BUILDING_UNSANCTIONED_BANDITS_HIDEOUT2</Type>
 			<Description>TXT_KEY_BUILDING_UNSANCTIONED_BANDITS_HIDEOUT2</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BANDITS_HIDEOUT_PEDIA</Civilopedia>
@@ -19298,7 +18913,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Bandit's Hideout -->
-			<BuildingClass>BUILDINGCLASS_UNSANCTIONED_BANDITS_HIDEOUT3</BuildingClass>
 			<Type>BUILDING_UNSANCTIONED_BANDITS_HIDEOUT3</Type>
 			<Description>TXT_KEY_BUILDING_UNSANCTIONED_BANDITS_HIDEOUT3</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BANDITS_HIDEOUT_PEDIA</Civilopedia>
@@ -19339,7 +18953,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Assassin's Den -->
-			<BuildingClass>BUILDINGCLASS_UNSANCTIONED_ASSASSINS_DEN</BuildingClass>
 			<Type>BUILDING_UNSANCTIONED_ASSASSINS_DEN</Type>
 			<Description>TXT_KEY_BUILDING_UNSANCTIONED_ASSASSINS_DEN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ASSASSINS_DEN_PEDIA</Civilopedia>
@@ -19391,7 +19004,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Loan Shark -->
-			<BuildingClass>BUILDINGCLASS_UNSANCTIONED_LOANSHARK</BuildingClass>
 			<Type>BUILDING_UNSANCTIONED_LOANSHARK</Type>
 			<Description>TXT_KEY_BUILDING_UNSANCTIONED_LOANSHARK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LOANSHARK_PEDIA</Civilopedia>
@@ -19427,7 +19039,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Conspirators' Hideout -->
-			<BuildingClass>BUILDINGCLASS_UNSANCTIONED_CONSPIRATORS_HIDEOUT</BuildingClass>
 			<Type>BUILDING_UNSANCTIONED_CONSPIRATORS_HIDEOUT</Type>
 			<Description>TXT_KEY_BUILDING_UNSANCTIONED_CONSPIRATORS_HIDEOUT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CONSPIRATORS_HIDEOUT_PEDIA</Civilopedia>
@@ -19470,7 +19081,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Mob Storefront -->
-			<BuildingClass>BUILDINGCLASS_UNSANCTIONED_MOB_STOREFRONT</BuildingClass>
 			<Type>BUILDING_UNSANCTIONED_MOB_STOREFRONT</Type>
 			<Description>TXT_KEY_BUILDING_UNSANCTIONED_MOB_STOREFRONT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MOB_STOREFRONT_PEDIA</Civilopedia>
@@ -19535,7 +19145,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Motorcycle Club -->
-			<BuildingClass>BUILDINGCLASS_UNSANCTIONED_MOTORCYCLE_CLUB</BuildingClass>
 			<Type>BUILDING_UNSANCTIONED_MOTORCYCLE_CLUB</Type>
 			<Description>TXT_KEY_BUILDING_UNSANCTIONED_MOTORCYCLE_CLUB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MOTORCYCLE_CLUB_PEDIA</Civilopedia>
@@ -19578,7 +19187,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Black Hat Hideout -->
-			<BuildingClass>BUILDINGCLASS_UNSANCTIONED_BLACK_HAT_HIDEOUT</BuildingClass>
 			<Type>BUILDING_UNSANCTIONED_BLACK_HAT_HIDEOUT</Type>
 			<Description>TXT_KEY_BUILDING_UNSANCTIONED_BLACK_HAT_HIDEOUT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BLACK_HAT_HIDEOUT_PEDIA</Civilopedia>
@@ -19627,7 +19235,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Disneyland - Effect -->
-			<BuildingClass>BUILDINGCLASS_DISNEYLAND_EFFECT</BuildingClass>
 			<Type>BUILDING_DISNEYLAND_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_DISNEYLAND_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DISNEYLAND_EFFECT_PEDIA</Civilopedia>
@@ -19651,7 +19258,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Cave Painting -->
-			<BuildingClass>BUILDINGCLASS_LASCAUX_EFFECT</BuildingClass>
 			<Type>BUILDING_LASCAUX_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_LASCAUX_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LASCAUX_PEDIA</Civilopedia>
@@ -19702,7 +19308,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_WV_CANNIBALISM</BuildingClass>
 			<Type>BUILDING_WV_CANNIBALISM</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -19735,7 +19340,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_WV_CANNIBALISM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CANNIBALISM</BuildingClass>
 			<Type>BUILDING_CANNIBALISM</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -19756,7 +19360,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CANNIBALISM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CANNIBALISM_BAD_I</BuildingClass>
 			<Type>BUILDING_CANNIBALISM_BAD_I</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -19778,7 +19381,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CANNIBALISM_BAD_I</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CANNIBALISM_BAD_II</BuildingClass>
 			<Type>BUILDING_CANNIBALISM_BAD_II</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -19800,7 +19402,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CANNIBALISM_BAD_II</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CANNIBALISM_BAD_III</BuildingClass>
 			<Type>BUILDING_CANNIBALISM_BAD_III</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -19822,7 +19423,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CANNIBALISM_BAD_III</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DISEASE_KURU</BuildingClass>
 			<Type>BUILDING_DISEASE_KURU</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -19847,7 +19447,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_KURU</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_WV_HUMAN_SACRIFICE</BuildingClass>
 			<Type>BUILDING_WV_HUMAN_SACRIFICE</Type>
 			<Description>TXT_KEY_BUILDING_WV_HUMAN_SACRIFICE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WV_HUMAN_SACRIFICE_PEDIA</Civilopedia>
@@ -19883,7 +19482,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_HUMAN_SACRIFICE</BuildingClass>
 			<Type>BUILDING_HUMAN_SACRIFICE</Type>
 			<Description>TXT_KEY_BUILDING_HUMAN_SACRIFICE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WV_HUMAN_SACRIFICE_PEDIA</Civilopedia>
@@ -19911,7 +19509,6 @@
 		</BuildingInfo>
 		<!-- Safety (Alcatraz) -->
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_GOOD_ALCATRAZ</BuildingClass>
 			<Type>BUILDING_GOOD_ALCATRAZ</Type>
 			<Description>TXT_KEY_BUILDING_GOOD_ALCATRAZ</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GOOD_ALCATRAZ_PEDIA</Civilopedia>
@@ -19937,7 +19534,6 @@
 		</BuildingInfo>
 		<!-- Route 66 Terminus -->
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ROUTE_66_TERMINUS</BuildingClass>
 			<Type>BUILDING_ROUTE_66_TERMINUS</Type>
 			<Description>TXT_KEY_BUILDING_ROUTE_66_TERMINUS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ROUTE_66_PEDIA</Civilopedia>
@@ -19960,7 +19556,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Department of Foreign Policy Effect -->
-			<BuildingClass>BUILDINGCLASS_DEPT_FOREIGN_POLICY_EFFECT</BuildingClass>
 			<Type>BUILDING_DEPT_FOREIGN_POLICY_EFFECT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -19989,7 +19584,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Fertility Festival Effect -->
-			<BuildingClass>BUILDINGCLASS_FERTILITYFESTIVAL_EFFECT</BuildingClass>
 			<Type>BUILDING_FERTILITYFESTIVAL_EFFECT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -20019,7 +19613,6 @@
 		<!--↓ Traditions ↓-->
 		<BuildingInfo>
 			<!-- Tradition - Archery -->
-			<BuildingClass>BUILDINGCLASS_TRADITION_ARCHERY</BuildingClass>
 			<Type>BUILDING_TRADITION_ARCHERY</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -20069,7 +19662,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Effect - Tradition - Archery -->
-			<BuildingClass>BUILDINGCLASS_TRADITION_ARCHERY_EFFECT</BuildingClass>
 			<Type>BUILDING_TRADITION_ARCHERY_EFFECT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -20096,7 +19688,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Tradition - Asthetic Appreciation  -->
-			<BuildingClass>BUILDINGCLASS_TRADITION_ASTHETIC_APPRECIATION</BuildingClass>
 			<Type>BUILDING_TRADITION_ASTHETIC_APPRECIATION</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -20134,7 +19725,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Effect - Tradition - Aesthetic Appreciation -->
-			<BuildingClass>BUILDINGCLASS_TRADITION_ASTHETIC_APPRECIATION_EFFECT</BuildingClass>
 			<Type>BUILDING_TRADITION_ASTHETIC_APPRECIATION_EFFECT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -20166,7 +19756,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Tradition - Work Ethic  -->
-			<BuildingClass>BUILDINGCLASS_TRADITION_WORK_ETHIC</BuildingClass>
 			<Type>BUILDING_TRADITION_WORK_ETHIC</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -20210,7 +19799,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Effect - Tradition - Work Ethic -->
-			<BuildingClass>BUILDINGCLASS_TRADITION_WORK_ETHIC_EFFECT</BuildingClass>
 			<Type>BUILDING_TRADITION_WORK_ETHIC_EFFECT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -20237,7 +19825,6 @@
 		</BuildingInfo>
 		<!--↑ Traditions ↑-->
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SPY_NETWORK</BuildingClass>
 			<Type>BUILDING_SPY_NETWORK</Type>
 			<NotGameOption>GAMEOPTION_NO_ESPIONAGE</NotGameOption>
 			<Description>TXT_KEY_BUILDING_SPY_NETWORK</Description>
@@ -20336,7 +19923,6 @@
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_EARTH_MYTH</BuildingClass>
 			<Type>BUILDING_EARTH_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_EARTH_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
@@ -20403,7 +19989,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_EARTH_MYTH_EFFECT</BuildingClass>
 			<Type>BUILDING_EARTH_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_EARTH_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
@@ -20417,7 +20002,6 @@
 			</MapCategoryTypes>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FIRE_MYTH_EFFECT</BuildingClass>
 			<Type>BUILDING_FIRE_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_FIRE_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
@@ -20432,7 +20016,6 @@
 			</MapCategoryTypes>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_METAL_MYTH_EFFECT</BuildingClass>
 			<Type>BUILDING_METAL_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_METAL_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
@@ -20447,7 +20030,6 @@
 			</MapCategoryTypes>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SEA_MYTH</BuildingClass>
 			<Type>BUILDING_SEA_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_SEA_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
@@ -20515,7 +20097,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SEA_MYTH_EFFECT</BuildingClass>
 			<Type>BUILDING_SEA_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_SEA_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
@@ -20529,7 +20110,6 @@
 			</MapCategoryTypes>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SKY_MYTH</BuildingClass>
 			<Type>BUILDING_SKY_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_SKY_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
@@ -20597,7 +20177,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SKY_MYTH_EFFECT</BuildingClass>
 			<Type>BUILDING_SKY_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_SKY_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
@@ -20612,7 +20191,6 @@
 			</MapCategoryTypes>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_STONE_MYTH_EFFECT</BuildingClass>
 			<Type>BUILDING_STONE_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_STONE_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
@@ -20627,7 +20205,6 @@
 			</MapCategoryTypes>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRAGON_MYTH</BuildingClass>
 			<Type>BUILDING_DRAGON_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_DRAGON_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -20665,7 +20242,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_MERMAID_MYTH</BuildingClass>
 			<Type>BUILDING_MERMAID_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_MERMAID_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -20706,7 +20282,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_PHOENIX_MYTH</BuildingClass>
 			<Type>BUILDING_PHOENIX_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_PHOENIX_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -20745,7 +20320,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_UNICORN_MYTH</BuildingClass>
 			<Type>BUILDING_UNICORN_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_UNICORN_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -20779,7 +20353,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_AUTOBUILD_ALUMINUM_NEAR</BuildingClass>
 			<Type>BUILDING_AUTOBUILD_ALUMINUM_NEAR</Type>
 			<Description>TXT_KEY_BUILDING_AUTOBUILD_ALUMINUM_NEAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
@@ -20798,7 +20371,6 @@
             <bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_AUTOBUILD_COPPER_NEAR</BuildingClass>
 			<Type>BUILDING_AUTOBUILD_COPPER_NEAR</Type>
 			<Description>TXT_KEY_BUILDING_AUTOBUILD_COPPER_NEAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
@@ -20817,7 +20389,6 @@
             <bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_AUTOBUILD_GOLD_NEAR</BuildingClass>
 			<Type>BUILDING_AUTOBUILD_GOLD_NEAR</Type>
 			<Description>TXT_KEY_BUILDING_AUTOBUILD_GOLD_NEAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
@@ -20836,7 +20407,6 @@
             <bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_AUTOBUILD_IRON_NEAR</BuildingClass>
 			<Type>BUILDING_AUTOBUILD_IRON_NEAR</Type>
 			<Description>TXT_KEY_BUILDING_AUTOBUILD_IRON_NEAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
@@ -20855,7 +20425,6 @@
             <bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_AUTOBUILD_LEAD_NEAR</BuildingClass>
 			<Type>BUILDING_AUTOBUILD_LEAD_NEAR</Type>
 			<Description>TXT_KEY_BUILDING_AUTOBUILD_LEAD_NEAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
@@ -20874,7 +20443,6 @@
             <bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_AUTOBUILD_PLATINUM_NEAR</BuildingClass>
 			<Type>BUILDING_AUTOBUILD_PLATINUM_NEAR</Type>
 			<Description>TXT_KEY_BUILDING_AUTOBUILD_PLATINUM_NEAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
@@ -20893,7 +20461,6 @@
             <bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_AUTOBUILD_SILVER_NEAR</BuildingClass>
 			<Type>BUILDING_AUTOBUILD_SILVER_NEAR</Type>
 			<Description>TXT_KEY_BUILDING_AUTOBUILD_SILVER_NEAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
@@ -20912,7 +20479,6 @@
             <bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_AUTOBUILD_TIN_NEAR</BuildingClass>
 			<Type>BUILDING_AUTOBUILD_TIN_NEAR</Type>
 			<Description>TXT_KEY_BUILDING_AUTOBUILD_TIN_NEAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
@@ -20931,7 +20497,6 @@
             <bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_AUTOBUILD_TITANIUM_NEAR</BuildingClass>
 			<Type>BUILDING_AUTOBUILD_TITANIUM_NEAR</Type>
 			<Description>TXT_KEY_BUILDING_AUTOBUILD_TITANIUM_NEAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
@@ -20950,7 +20515,6 @@
 			<bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_AUTOBUILD_CAMEL_NEAR</BuildingClass>
 			<Type>BUILDING_AUTOBUILD_CAMEL_NEAR</Type>
 			<Description>TXT_KEY_BUILDING_AUTOBUILD_CAMEL_NEAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_ANIMAL_NEAR_PEDIA</Civilopedia>
@@ -20969,7 +20533,6 @@
 			<bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_AUTOBUILD_ELEPHANT_NEAR</BuildingClass>
 			<Type>BUILDING_AUTOBUILD_ELEPHANT_NEAR</Type>
 			<Description>TXT_KEY_BUILDING_AUTOBUILD_ELEPHANT_NEAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_ANIMAL_NEAR_PEDIA</Civilopedia>
@@ -20988,7 +20551,6 @@
             <bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_AUTOBUILD_HORSE_NEAR</BuildingClass>
 			<Type>BUILDING_AUTOBUILD_HORSE_NEAR</Type>
 			<Description>TXT_KEY_BUILDING_AUTOBUILD_HORSE_NEAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_ANIMAL_NEAR_PEDIA</Civilopedia>
@@ -21007,7 +20569,6 @@
             <bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_WV_SLAVERY</BuildingClass>
 			<Type>BUILDING_WV_SLAVERY</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -21093,7 +20654,6 @@
 			</GlobalBuildingClassProductionModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SLAVERY</BuildingClass>
 			<Type>BUILDING_SLAVERY</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -21302,7 +20862,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SLAVERY_BAD_ZORO_I</BuildingClass>
 			<Type>BUILDING_SLAVERY_BAD_ZORO_I</Type>
 			<Description>TXT_KEY_BUILDING_SLAVERY_BAD_ZORO_I</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SLAVERY_ZORO_PEDIA</Civilopedia>
@@ -21328,7 +20887,6 @@
 			<bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SLAVERY_BAD_ZORO_II</BuildingClass>
 			<Type>BUILDING_SLAVERY_BAD_ZORO_II</Type>
 			<Description>TXT_KEY_BUILDING_SLAVERY_BAD_ZORO_II</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SLAVERY_ZORO_PEDIA</Civilopedia>
@@ -21353,7 +20911,6 @@
 			<bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SLAVE_COMPOUND</BuildingClass>
 			<Type>BUILDING_SLAVE_COMPOUND</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -21403,7 +20960,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SLAVE_COMPOUND_MILITARY_SUPPORT</BuildingClass>
 			<Type>BUILDING_SLAVE_COMPOUND_MILITARY_SUPPORT</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -21460,7 +21016,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SLAVE_COMPOUND_ENTERTAINMENT</BuildingClass>
 			<Type>BUILDING_SLAVE_COMPOUND_ENTERTAINMENT</Type>
 			<Description>TXT_KEY_BUILDING_SLAVE_COMPOUND_ENTERTAINMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SLAVE_COMPOUND_PEDIA</Civilopedia>
@@ -21537,7 +21092,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SLAVE_COMPOUND_FOOD</BuildingClass>
 			<Type>BUILDING_SLAVE_COMPOUND_FOOD</Type>
 			<Description>TXT_KEY_BUILDING_SLAVE_COMPOUND_FOOD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SLAVE_COMPOUND_PEDIA</Civilopedia>
@@ -21581,7 +21135,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SLAVE_COMPOUND_PRODUCTION</BuildingClass>
 			<Type>BUILDING_SLAVE_COMPOUND_PRODUCTION</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -21631,7 +21184,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SLAVE_COMPOUND_COMMERCE</BuildingClass>
 			<Type>BUILDING_SLAVE_COMPOUND_COMMERCE</Type>
 			<Description>TXT_KEY_BUILDING_SLAVE_COMPOUND_COMMERCE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SLAVE_COMPOUND_PEDIA</Civilopedia>
@@ -21677,7 +21229,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SLAVE_COMPOUND_SANITATION</BuildingClass>
 			<Type>BUILDING_SLAVE_COMPOUND_SANITATION</Type>
 			<Description>TXT_KEY_BUILDING_SLAVE_COMPOUND_SANITATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SLAVE_COMPOUND_PEDIA</Civilopedia>
@@ -21736,7 +21287,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SLAVE_COMPOUND_CRIME_PREVENTION</BuildingClass>
 			<Type>BUILDING_SLAVE_COMPOUND_CRIME_PREVENTION</Type>
 			<Description>TXT_KEY_BUILDING_SLAVE_COMPOUND_CRIME_PREVENTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SLAVE_COMPOUND_PEDIA</Civilopedia>

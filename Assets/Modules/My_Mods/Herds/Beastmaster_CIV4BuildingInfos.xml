@@ -4,7 +4,6 @@
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DONKEY_BREEDER</BuildingClass>
 			<Type>BUILDING_DONKEY_BREEDER</Type>
 			<Description>TXT_KEY_BUILDING_DONKEY_BREEDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_BREEDER_PEDIA</Civilopedia>
@@ -20,19 +19,19 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DONKEY_FARM</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DONKEY_FARM</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DONKEY_MYTH_EFFECT</BuildingClassType>
+				<BuildingNeeded>>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DONKEY_MYTH_EFFECT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
+					<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings>
@@ -48,7 +47,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_HORSE_BREEDER</BuildingClass>
 			<Type>BUILDING_HORSE_BREEDER</Type>
 			<Description>TXT_KEY_BUILDING_HORSE_BREEDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_BREEDER_PEDIA</Civilopedia>
@@ -64,19 +62,19 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_HORSE_TRAINER</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_HORSE_MYTH_EFFECT</BuildingClassType>
+				<BuildingNeeded>>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_HORSE_MYTH_EFFECT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
+					<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings>

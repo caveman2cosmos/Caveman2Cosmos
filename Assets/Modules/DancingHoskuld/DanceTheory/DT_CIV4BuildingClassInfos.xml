@@ -3,17 +3,17 @@
 	<!-- Modified by Strategyonly -->
 	<!-- Building Class Infos -->
 	<!-- -->
-<Civ4BuildingClassInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
-	<BuildingClassInfos>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_BIRD_DANCE</Type>
+<Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
+	<BuildingInfos>
+		<BuildingInfo>
+			<Type>BUILDING_BIRD_DANCE</Type>
 			<Description>TXT_KEY_BUILDING_BIRD_DANCE</Description>
 			<DefaultBuilding>BUILDING_BIRD_DANCE</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_FOX_DANCE</Type>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_FOX_DANCE</Type>
 			<Description>TXT_KEY_BUILDING_FOX_DANCE</Description>
 			<DefaultBuilding>BUILDING_FOX_DANCE</DefaultBuilding>
-		</BuildingClassInfo>
-	</BuildingClassInfos>
-</Civ4BuildingClassInfos>
+		</BuildingInfo>
+	</BuildingInfos>
+</Civ4BuildingInfos>

@@ -4,28 +4,28 @@
 <!-- Copyright Firaxis Games 2005 -->
 <!-- -->
 <!-- Building Class Infos -->
-<Civ4BuildingClassInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
-	<BuildingClassInfos>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_CAODAI_CATHEDRAL</Type>
+<Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
+	<BuildingInfos>
+		<BuildingInfo>
+			<Type>BUILDING_CAODAI_CATHEDRAL</Type>
 			<Description>TXT_KEY_BUILDING_CAODAI_CATHEDRAL</Description>
 			<DefaultBuilding>BUILDING_CAODAI_CATHEDRAL</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_CAODAI_MONASTERY</Type>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_CAODAI_MONASTERY</Type>
 			<Description>TXT_KEY_BUILDING_CAODAI_MONASTERY</Description>
 			<DefaultBuilding>BUILDING_CAODAI_MONASTERY</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_CAODAI_SHRINE</Type>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_CAODAI_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_CAODAI_SHRINE</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<DefaultBuilding>BUILDING_CAODAI_SHRINE</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_CAODAI_TEMPLE</Type>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_CAODAI_TEMPLE</Type>
 			<Description>TXT_KEY_BUILDING_CAODAI_TEMPLE</Description>
 			<DefaultBuilding>BUILDING_CAODAI_TEMPLE</DefaultBuilding>
-		</BuildingClassInfo>
-	</BuildingClassInfos>
-</Civ4BuildingClassInfos>
+		</BuildingInfo>
+	</BuildingInfos>
+</Civ4BuildingInfos>

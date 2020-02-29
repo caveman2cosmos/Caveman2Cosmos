@@ -44,7 +44,6 @@
 			<UnitName/>
 			<UnitCombatPromotions/>
 			<UnitClassPromotions/>
-			<BuildingClass>NONE</BuildingClass>
 			<iBuildingChange>0</iBuildingChange>
 			<BuildingExtraYields/>
 			<BuildingExtraCommerces/>
@@ -125,7 +124,6 @@
 			<UnitName/>
 			<UnitCombatPromotions/>
 			<UnitClassPromotions/>
-			<BuildingClass>NONE</BuildingClass>
 			<iBuildingChange>0</iBuildingChange>
 			<BuildingExtraYields/>
 			<BuildingExtraCommerces/>
@@ -206,7 +204,6 @@
 			<UnitName/>
 			<UnitCombatPromotions/>
 			<UnitClassPromotions/>
-			<BuildingClass>NONE</BuildingClass>
 			<iBuildingChange>0</iBuildingChange>
 			<BuildingExtraYields/>
 			<BuildingExtraCommerces/>
@@ -287,7 +284,6 @@
 			<UnitName/>
 			<UnitCombatPromotions/>
 			<UnitClassPromotions/>
-			<BuildingClass>NONE</BuildingClass>
 			<iBuildingChange>0</iBuildingChange>
 			<BuildingExtraYields/>
 			<BuildingExtraCommerces/>
@@ -368,7 +364,6 @@
 			<UnitName/>
 			<UnitCombatPromotions/>
 			<UnitClassPromotions/>
-			<BuildingClass>NONE</BuildingClass>
 			<iBuildingChange>0</iBuildingChange>
 			<BuildingExtraYields/>
 			<BuildingExtraCommerces/>
@@ -449,7 +444,6 @@
 			<UnitName/>
 			<UnitCombatPromotions/>
 			<UnitClassPromotions/>
-			<BuildingClass>NONE</BuildingClass>
 			<iBuildingChange>0</iBuildingChange>
 			<BuildingExtraYields/>
 			<BuildingExtraCommerces/>

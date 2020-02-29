@@ -4,70 +4,70 @@
 <!-- Copyright Firaxis Games 2005 -->
 <!-- -->
 <!-- Building Class Infos -->
-<Civ4BuildingClassInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
-	<BuildingClassInfos>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_ATOMPUNK_EMBASSY</Type>
+<Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
+	<BuildingInfos>
+		<BuildingInfo>
+			<Type>BUILDING_ATOMPUNK_EMBASSY</Type>
 			<Description>TXT_KEY_BUILDING_ATOMPUNK_EMBASSY</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<DefaultBuilding>BUILDING_ATOMPUNK_EMBASSY</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_FAST_BREEDER_REACTOR</Type>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_FAST_BREEDER_REACTOR</Type>
 			<Description>TXT_KEY_BUILDING_FAST_BREEDER_REACTOR</Description>
 			<DefaultBuilding>BUILDING_FAST_BREEDER_REACTOR</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_VIDEOPHONE_NETWORK</Type>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_VIDEOPHONE_NETWORK</Type>
 			<Description>TXT_KEY_BUILDING_VIDEOPHONE_NETWORK</Description>
 			<DefaultBuilding>BUILDING_VIDEOPHONE_NETWORK</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_PUSHBUTTON_AUTOMAT</Type>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_PUSHBUTTON_AUTOMAT</Type>
 			<Description>TXT_KEY_BUILDING_PUSHBUTTON_AUTOMAT</Description>
 			<DefaultBuilding>BUILDING_PUSHBUTTON_AUTOMAT</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_MID_CLASS_SKYPAD_APARTMENTS</Type>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_MID_CLASS_SKYPAD_APARTMENTS</Type>
 			<Description>TXT_KEY_BUILDING_MID_CLASS_SKYPAD_APARTMENTS</Description>
 			<DefaultBuilding>BUILDING_MID_CLASS_SKYPAD_APARTMENTS</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_CLEAN_NUCLEAR_REACTOR</Type>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_CLEAN_NUCLEAR_REACTOR</Type>
 			<Description>TXT_KEY_BUILDING_CLEAN_NUCLEAR_REACTOR</Description>
 			<DefaultBuilding>BUILDING_CLEAN_NUCLEAR_REACTOR</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_HI_TECH_NUCLEAR_REACTOR</Type>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_HI_TECH_NUCLEAR_REACTOR</Type>
 			<Description>TXT_KEY_BUILDING_HI_TECH_NUCLEAR_REACTOR</Description>
 			<DefaultBuilding>BUILDING_HI_TECH_NUCLEAR_REACTOR</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_NUCLEAR_POWERCOMPLEX</Type>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_NUCLEAR_POWERCOMPLEX</Type>
 			<Description>TXT_KEY_BUILDING_NUCLEAR_POWERCOMPLEX</Description>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_NUCLEAR_POWERCOMPLEX</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_HIGH_ENERGY_LAB</Type>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_HIGH_ENERGY_LAB</Type>
 			<Description>TXT_KEY_BUILDING_HIGH_ENERGY_LAB</Description>
 			<DefaultBuilding>BUILDING_HIGH_ENERGY_LAB</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_SMALL_REACTOR_FACTORY</Type>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_SMALL_REACTOR_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_SMALL_REACTOR_FACTORY</Description>
 			<DefaultBuilding>BUILDING_SMALL_REACTOR_FACTORY</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_VENTURE_INDUSTRIES</Type>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_VENTURE_INDUSTRIES</Type>
 			<Description>TXT_KEY_BUILDING_VENTURE_INDUSTRIES</Description>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_VENTURE_INDUSTRIES</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_GOOD_ATOM</Type>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_GOOD_ATOM</Type>
 			<Description>TXT_KEY_BUILDING_GOOD_ATOM</Description>
 			<DefaultBuilding>BUILDING_GOOD_ATOM</DefaultBuilding>
-		</BuildingClassInfo>
-	</BuildingClassInfos>
-</Civ4BuildingClassInfos>
+		</BuildingInfo>
+	</BuildingInfos>
+</Civ4BuildingInfos>

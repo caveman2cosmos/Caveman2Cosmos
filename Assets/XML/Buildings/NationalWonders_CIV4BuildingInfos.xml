@@ -204,12 +204,12 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_VIDEO_GAMES</Bonus>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ANIMA_STUDIO</BuildingType>
+			<BuildingClassNeededs>
+				<BuildingClassNeeded>
+					<BuildingClassType>BUILDINGCLASS_ANIMA_STUDIO</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+				</BuildingClassNeeded>
+			</BuildingClassNeededs>
 			<!-- Cost -->
 			<iCost>11810</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -237,12 +237,12 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<PrereqBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_LIBRARY</BuildingType>
+			<PrereqBuildingClasses>
+				<PrereqBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_LIBRARY</BuildingClassType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqBuildings>
+				</PrereqBuildingClass>
+			</PrereqBuildingClasses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_LIBRARY</BuildingClassType>
@@ -2089,12 +2089,12 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_APOTHECARY_SHOP</Building>
+					<BuildingClass>BUILDINGCLASS_APOTHECARY_SHOP</BuildingClass>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_PHARMACY</Building>
+					<BuildingClass>BUILDINGCLASS_PHARMACY</BuildingClass>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>

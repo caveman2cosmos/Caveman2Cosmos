@@ -2,7 +2,6 @@
 <Civ4BuildingInfos xmlns="x-schema:../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_OUTPOST</BuildingClass>
 			<Type>BUILDING_LUNAR_OUTPOST</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_OUTPOST</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_OUTPOST_PEDIA</Civilopedia>
@@ -23,7 +22,6 @@
 			</CommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_URBAN_MOON</BuildingClass>
 			<Type>BUILDING_URBAN_MOON</Type>
 			<Description>TXT_KEY_BUILDING_URBAN_MOON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_URBAN_MOON_PEDIA</Civilopedia>
@@ -43,22 +41,21 @@
 				<iYield>0</iYield>
 				<iYield>100</iYield>
 			</YieldChanges>
-			<FreeBuilding>BUILDINGCLASS_LUNAR_ARCOLOGY</FreeBuilding>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_ARCOLOGY</BuildingClassType>
+			<FreeBuilding>BUILDING_LUNAR_ARCOLOGY</FreeBuilding>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_LUNAR_ARCOLOGY</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_ARCOLOGY</BuildingClassType>
+				</PrereqBuilding>
+			</PrereqBuildings>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_ARCOLOGY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_MOON_TERRA</BuildingClass>
 			<Type>BUILDING_MOON_TERRA</Type>
 			<Description>TXT_KEY_BUILDING_MOON_TERRA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MOON_TERRA_PEDIA</Civilopedia>
@@ -76,21 +73,21 @@
 			<YieldChanges>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<FreeBuilding>BUILDINGCLASS_MOON_TERRA_EFFECT</FreeBuilding>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_SOIL_GENERATOR</BuildingClassType>
+			<FreeBuilding>BUILDING_MOON_TERRA_EFFECT</FreeBuilding>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_LUNAR_SOIL_GENERATOR</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_COMETARY_BOMBARDMENT</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_LUNAR_COMETARY_BOMBARDMENT</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_SEA</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_LUNAR_SEA</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -105,7 +102,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_MOON_TERRA_EFFECT</BuildingClass>
 			<Type>BUILDING_MOON_TERRA_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_MOON_TERRA_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MOON_TERRA_EFFECT_PEDIA</Civilopedia>
@@ -141,7 +137,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNA_RING</BuildingClass>
 			<Type>BUILDING_LUNA_RING</Type>
 			<Description>TXT_KEY_BUILDING_LUNA_RING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNA_RING_PEDIA</Civilopedia>
@@ -163,16 +158,15 @@
 				<iYield>0</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<FreeBuilding>BUILDINGCLASS_LUNA_RING_EFFECT</FreeBuilding>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_ARCOLOGY</BuildingClassType>
+			<FreeBuilding>BUILDING_LUNA_RING_EFFECT</FreeBuilding>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_ARCOLOGY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNA_RING_EFFECT</BuildingClass>
 			<Type>BUILDING_LUNA_RING_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_LUNA_RING_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNA_RING_EFFECT_PEDIA</Civilopedia>
@@ -191,7 +185,6 @@
 			</YieldChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_CENTRIFUGAL_HABITAT</BuildingClass>
 			<Type>BUILDING_LUNAR_CENTRIFUGAL_HABITAT</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_CENTRIFUGAL_HABITAT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_CENTRIFUGAL_HABITAT_PEDIA</Civilopedia>
@@ -211,15 +204,14 @@
 			</YieldChanges>
 			<iHappiness>3</iHappiness>
 			<iHealth>3</iHealth>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_MANUFACTURING_PLANT</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_MANUFACTURING_PLANT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_ARCOLOGY</BuildingClass>
 			<Type>BUILDING_LUNAR_ARCOLOGY</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_ARCOLOGY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_ARCOLOGY_PEDIA</Civilopedia>
@@ -242,19 +234,18 @@
 				<iYield>3</iYield>
 			</YieldChanges>
 			<iWorkableRadius>3</iWorkableRadius>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_PARCOLOGY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_PARCOLOGY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_MANUFACTURING_PLANT</BuildingClassType>
+				<BuildingNeeded>>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_MANUFACTURING_PLANT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_COMETARY_BOMBARDMENT</BuildingClass>
 			<Type>BUILDING_LUNAR_COMETARY_BOMBARDMENT</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_COMETARY_BOMBARDMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_COMETARY_BOMBARDMENT_PEDIA</Civilopedia>
@@ -276,15 +267,14 @@
 				<iYield>0</iYield>
 				<iYield>5</iYield>
 			</YieldChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_SPACE_PORT</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_SPACE_PORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_SOIL_GENERATOR</BuildingClass>
 			<Type>BUILDING_LUNAR_SOIL_GENERATOR</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_SOIL_GENERATOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_SOIL_GENERATOR_PEDIA</Civilopedia>
@@ -305,15 +295,14 @@
 			<YieldChanges>
 				<iYield>5</iYield>
 			</YieldChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_ALGAE_FARM</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_ALGAE_FARM</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_SEA</BuildingClass>
 			<Type>BUILDING_LUNAR_SEA</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_SEA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_SEA_PEDIA</Civilopedia>
@@ -345,15 +334,14 @@
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_SOIL_GENERATOR</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_SOIL_GENERATOR</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_MITHRIL_FOUNDRY</BuildingClass>
 			<Type>BUILDING_MITHRIL_FOUNDRY</Type>
 			<Description>TXT_KEY_BUILDING_MITHRIL_FOUNDRY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MITHRIL_FOUNDRY_PEDIA</Civilopedia>
@@ -377,21 +365,20 @@
 				<iYield>0</iYield>
 				<iYield>3</iYield>
 			</YieldChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_ARCOLOGY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_ARCOLOGY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_SPACE_PORT</BuildingClassType>
+				<BuildingNeeded>>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_SPACE_PORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<FreeBonus>BONUS_MITHRIL</FreeBonus>
 			<iNumFreeBonuses>3</iNumFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_DEFENSES</BuildingClass>
 			<Type>BUILDING_LUNAR_DEFENSES</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_DEFENSES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_DEFENSES_PEDIA</Civilopedia>
@@ -414,15 +401,14 @@
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_ARCOLOGY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_ARCOLOGY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_BASE</BuildingClass>
 			<Type>BUILDING_LUNAR_BASE</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_BASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_BASE_PEDIA</Civilopedia>
@@ -452,7 +438,6 @@
 			<bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_WATER_EXTRACTION_FACILITY</BuildingClass>
 			<Type>BUILDING_LUNAR_WATER_EXTRACTION_FACILITY</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_WATER_EXTRACTION_FACILITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_WATER_EXTRACTION_FACILITY_PEDIA</Civilopedia>
@@ -474,12 +459,12 @@
 			<CommerceChanges>
 				<iCommerce>-100</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_BASE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -489,7 +474,6 @@
 			<bProvidesFreshWater>1</bProvidesFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_ROCK_QUARRY</BuildingClass>
 			<Type>BUILDING_LUNAR_ROCK_QUARRY</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_ROCK_QUARRY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_ROCK_QUARRY_PEDIA</Civilopedia>
@@ -518,12 +502,12 @@
 				<iCommerce>-50</iCommerce>
 			</CommerceChanges>
 			<ConstructSound>AS2D_BUILD_WALLS</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_BASE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
@@ -532,7 +516,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_CONCRETE_MILL</BuildingClass>
 			<Type>BUILDING_LUNAR_CONCRETE_MILL</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_CONCRETE_MILL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_CONCRETE_MILL_PEDIA</Civilopedia>
@@ -568,16 +551,16 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_ROCK_QUARRY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_ROCK_QUARRY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_WATER_EXTRACTION_FACILITY</BuildingClassType>
+				<BuildingNeeded>>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_WATER_EXTRACTION_FACILITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
@@ -586,7 +569,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_GLASS_FACTORY</BuildingClass>
 			<Type>BUILDING_LUNAR_GLASS_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_GLASS_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_GLASS_FACTORY_PEDIA</Civilopedia>
@@ -611,15 +593,14 @@
 			<CommerceChanges>
 				<iCommerce>-50</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_ROCK_QUARRY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_ROCK_QUARRY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_HYDROPONICS_FARM</BuildingClass>
 			<Type>BUILDING_LUNAR_HYDROPONICS_FARM</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_HYDROPONICS_FARM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_HYDROPONICS_FARM_PEDIA</Civilopedia>
@@ -642,12 +623,12 @@
 			<CommerceChanges>
 				<iCommerce>-100</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_WATER_EXTRACTION_FACILITY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_WATER_EXTRACTION_FACILITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
@@ -656,7 +637,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_ALGAE_FARM</BuildingClass>
 			<Type>BUILDING_LUNAR_ALGAE_FARM</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_ALGAE_FARM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_ALGAE_FARM_PEDIA</Civilopedia>
@@ -694,12 +674,12 @@
 			<CommerceChanges>
 				<iCommerce>-50</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_HYDROPONICS_FARM</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_HYDROPONICS_FARM</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
@@ -709,7 +689,6 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_ALGAE_LAB</BuildingClass>
 			<Type>BUILDING_LUNAR_ALGAE_LAB</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_ALGAE_LAB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_ALGAE_LAB_PEDIA</Civilopedia>
@@ -755,12 +734,12 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_HYDROPONICS_FARM</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_HYDROPONICS_FARM</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
@@ -770,7 +749,6 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_LAUNCH_SITE</BuildingClass>
 			<Type>BUILDING_LUNAR_LAUNCH_SITE</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_LAUNCH_SITE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_LAUNCH_SITE_PEDIA</Civilopedia>
@@ -798,12 +776,12 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_ROCK_QUARRY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_ROCK_QUARRY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -813,7 +791,6 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_ALUMINIUM_EXTRACTION_FACILITY</BuildingClass>
 			<Type>BUILDING_LUNAR_ALUMINIUM_EXTRACTION_FACILITY</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_ALUMINIUM_EXTRACTION_FACILITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_ALUMINIUM_EXTRACTION_FACILITY_PEDIA</Civilopedia>
@@ -848,12 +825,12 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_ROCK_QUARRY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_ROCK_QUARRY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -869,7 +846,6 @@
 			</Properties>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_IRON_EXTRACTION_FACILITY</BuildingClass>
 			<Type>BUILDING_LUNAR_IRON_EXTRACTION_FACILITY</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_IRON_EXTRACTION_FACILITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_IRON_EXTRACTION_FACILITY_PEDIA</Civilopedia>
@@ -907,12 +883,12 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_ROCK_QUARRY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_ROCK_QUARRY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -928,7 +904,6 @@
 			</Properties>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_TITANIUM_EXTRACTION_FACILITY</BuildingClass>
 			<Type>BUILDING_LUNAR_TITANIUM_EXTRACTION_FACILITY</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_TITANIUM_EXTRACTION_FACILITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_TITANIUM_EXTRACTION_FACILITY_PEDIA</Civilopedia>
@@ -963,12 +938,12 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_ROCK_QUARRY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_ROCK_QUARRY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -984,7 +959,6 @@
 			</Properties>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_MANGANESE_EXTRACTION_FACILITY</BuildingClass>
 			<Type>BUILDING_LUNAR_MANGANESE_EXTRACTION_FACILITY</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_MANGANESE_EXTRACTION_FACILITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_MANGANESE_EXTRACTION_FACILITY_PEDIA</Civilopedia>
@@ -1018,12 +992,12 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_ROCK_QUARRY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_ROCK_QUARRY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -1039,7 +1013,6 @@
 			</Properties>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_MAGNESIUM_EXTRACTION_FACILITY</BuildingClass>
 			<Type>BUILDING_LUNAR_MAGNESIUM_EXTRACTION_FACILITY</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_MAGNESIUM_EXTRACTION_FACILITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_MAGNESIUM_EXTRACTION_FACILITY_PEDIA</Civilopedia>
@@ -1073,12 +1046,12 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_ROCK_QUARRY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_ROCK_QUARRY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -1094,7 +1067,6 @@
 			</Properties>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_ORGANIC_POLYMERE_FACTORY</BuildingClass>
 			<Type>BUILDING_LUNAR_ORGANIC_POLYMERE_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_ORGANIC_POLYMERE_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_ORGANIC_POLYMERE_FACTORY_PEDIA</Civilopedia>
@@ -1150,12 +1122,12 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_WATER_EXTRACTION_FACILITY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_WATER_EXTRACTION_FACILITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -1171,7 +1143,6 @@
 			</Properties>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_RESEARCH_BASE</BuildingClass>
 			<Type>BUILDING_LUNAR_RESEARCH_BASE</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_RESEARCH_BASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_RESEARCH_BASE_PEDIA</Civilopedia>
@@ -1266,16 +1237,16 @@
 					<iSpecialistCount>3</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_ALGAE_LAB</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_OBSERVATORY</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_LUNAR_ALGAE_LAB</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_LUNAR_OBSERVATORY</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -1291,7 +1262,6 @@
 			</Properties>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_GREENHOUSE_COMPLEX</BuildingClass>
 			<Type>BUILDING_LUNAR_GREENHOUSE_COMPLEX</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_GREENHOUSE_COMPLEX</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_GREENHOUSE_COMPLEX_PEDIA</Civilopedia>
@@ -1327,12 +1297,12 @@
 			<CommerceChanges>
 				<iCommerce>-250</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_HYDROPONICS_FARM</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_HYDROPONICS_FARM</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
@@ -1342,7 +1312,6 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_MANUFACTURING_PLANT</BuildingClass>
 			<Type>BUILDING_LUNAR_MANUFACTURING_PLANT</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_MANUFACTURING_PLANT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_MANUFACTURING_PLANT_PEDIA</Civilopedia>
@@ -1422,12 +1391,12 @@
 					<iSpecialistCount>3</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_ROCK_QUARRY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_ROCK_QUARRY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
@@ -1437,7 +1406,6 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_SPACE_PORT</BuildingClass>
 			<Type>BUILDING_LUNAR_SPACE_PORT</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_SPACE_PORT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_SPACE_PORT_PEDIA</Civilopedia>
@@ -1482,12 +1450,12 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_LAUNCH_SITE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_LAUNCH_SITE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -1497,7 +1465,6 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_HOTEL</BuildingClass>
 			<Type>BUILDING_LUNAR_HOTEL</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_HOTEL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_HOTEL_PEDIA</Civilopedia>
@@ -1517,12 +1484,12 @@
 			<CommerceChanges>
 				<iCommerce>1000</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_SPACE_PORT</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_SPACE_PORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -1532,7 +1499,6 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_ASSEMBLY_PLANT</BuildingClass>
 			<Type>BUILDING_LUNAR_ASSEMBLY_PLANT</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_ASSEMBLY_PLANT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_ASSEMBLY_PLANT_PEDIA</Civilopedia>
@@ -1578,12 +1544,12 @@
 					<iSpecialistCount>2</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_ROCK_QUARRY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_ROCK_QUARRY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
@@ -1593,7 +1559,6 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_SILICON_EXTRACTION_FACILITY</BuildingClass>
 			<Type>BUILDING_LUNAR_SILICON_EXTRACTION_FACILITY</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_SILICON_EXTRACTION_FACILITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_SILICON_EXTRACTION_FACILITY_PEDIA</Civilopedia>
@@ -1630,12 +1595,12 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_ROCK_QUARRY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_ROCK_QUARRY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -1651,7 +1616,6 @@
 			</Properties>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_SHIPYARD</BuildingClass>
 			<Type>BUILDING_LUNAR_SHIPYARD</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_SHIPYARD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_SHIPYARD_PEDIA</Civilopedia>
@@ -1730,12 +1694,12 @@
           				<iUnitCombatProdModifier>50</iUnitCombatProdModifier>
      				</UnitCombatProdModifier>
 			</UnitCombatProdModifiers>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_ASSEMBLY_PLANT</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_ASSEMBLY_PLANT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
@@ -1745,7 +1709,6 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_DROID_FACTORY</BuildingClass>
 			<Type>BUILDING_LUNAR_DROID_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_DROID_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_DROID_FACTORY_PEDIA</Civilopedia>
@@ -1796,12 +1759,12 @@
 					<iSpecialistCount>2</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_ASSEMBLY_PLANT</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_ASSEMBLY_PLANT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
@@ -1811,7 +1774,6 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_SOLAR_ARRAY</BuildingClass>
 			<Type>BUILDING_LUNAR_SOLAR_ARRAY</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_SOLAR_ARRAY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_SOLAR_ARRAY_PEDIA</Civilopedia>
@@ -1827,7 +1789,7 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_MICROCHIPS</Bonus>
 			</PrereqBonuses>
-			<FreeBuilding>BUILDINGCLASS_LUNAR_SOLAR_PANELS</FreeBuilding>
+			<FreeBuilding>BUILDING_LUNAR_SOLAR_PANELS</FreeBuilding>
 			<bPower>1</bPower>
 			<iCost>19500</iCost>
 			<iHurryCostModifier>1000000</iHurryCostModifier>
@@ -1840,19 +1802,18 @@
 			<CommerceChanges>
 				<iCommerce>-200</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_ASSEMBLY_PLANT</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_ASSEMBLY_PLANT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_SILICON_EXTRACTION_FACILITY</BuildingClassType>
+				<BuildingNeeded>>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_SILICON_EXTRACTION_FACILITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_PARCOLOGY</BuildingClass>
 			<Type>BUILDING_LUNAR_PARCOLOGY</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_PARCOLOGY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_PARCOLOGY_PEDIA</Civilopedia>
@@ -1875,16 +1836,16 @@
 				<iCommerce>-200</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_ASSEMBLY_PLANT</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_ASSEMBLY_PLANT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_HYDROPONICS_FARM</BuildingClassType>
+				<BuildingNeeded>>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_HYDROPONICS_FARM</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -1905,7 +1866,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_KREEP_MINE</BuildingClass>
 			<Type>BUILDING_LUNAR_KREEP_MINE</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_KREEP_MINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_KREEP_MINE_PEDIA</Civilopedia>
@@ -1935,12 +1895,12 @@
 			<CommerceChanges>
 				<iCommerce>250</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_MANUFACTURING_PLANT</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_MANUFACTURING_PLANT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -1950,7 +1910,6 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_HE3_EXTRACTION_FACILITY</BuildingClass>
 			<Type>BUILDING_LUNAR_HE3_EXTRACTION_FACILITY</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_HE3_EXTRACTION_FACILITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_HE3_EXTRACTION_FACILITY_PEDIA</Civilopedia>
@@ -1982,12 +1941,12 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_MANUFACTURING_PLANT</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_MANUFACTURING_PLANT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -1997,7 +1956,6 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_OBSERVATORY</BuildingClass>
 			<Type>BUILDING_LUNAR_OBSERVATORY</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_OBSERVATORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_OBSERVATORY_PEDIA</Civilopedia>
@@ -2041,12 +1999,12 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_BASE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -2056,7 +2014,6 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_CHEMICAL_STORAGE</BuildingClass>
 			<Type>BUILDING_LUNAR_CHEMICAL_STORAGE</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_CHEMICAL_STORAGE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_CHEMICAL_STORAGE_PEDIA</Civilopedia>
@@ -2077,15 +2034,14 @@
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_BASE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_ORGANIC_MATERIAL_STORAGE</BuildingClass>
 			<Type>BUILDING_LUNAR_ORGANIC_MATERIAL_STORAGE</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_ORGANIC_MATERIAL_STORAGE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_ORGANIC_MATERIAL_STORAGE_PEDIA</Civilopedia>
@@ -2104,15 +2060,14 @@
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_BASE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_FERTILIZER_STORAGE</BuildingClass>
 			<Type>BUILDING_LUNAR_FERTILIZER_STORAGE</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_FERTILIZER_STORAGE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_FERTILIZER_STORAGE_PEDIA</Civilopedia>
@@ -2134,15 +2089,14 @@
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_BASE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_SOLAR_PANELS</BuildingClass>
 			<Type>BUILDING_LUNAR_SOLAR_PANELS</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_SOLAR_PANELS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_SOLAR_PANELS_PEDIA</Civilopedia>
@@ -2166,15 +2120,14 @@
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_BASE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_BUG_FARM</BuildingClass>
 			<Type>BUILDING_LUNAR_BUG_FARM</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_BUG_FARM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_BUG_FARM_PEDIA</Civilopedia>
@@ -2200,12 +2153,12 @@
 			<CommerceChanges>
 				<iCommerce>-50</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_WATER_EXTRACTION_FACILITY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_WATER_EXTRACTION_FACILITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
@@ -2215,7 +2168,6 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_FISH_FARM</BuildingClass>
 			<Type>BUILDING_LUNAR_FISH_FARM</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_FISH_FARM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_FISH_FARM_PEDIA</Civilopedia>
@@ -2254,12 +2206,12 @@
 			<CommerceChanges>
 				<iCommerce>-100</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_WATER_EXTRACTION_FACILITY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_WATER_EXTRACTION_FACILITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
@@ -2269,7 +2221,6 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_ROCKET_FUEL_REFIENERY</BuildingClass>
 			<Type>BUILDING_LUNAR_ROCKET_FUEL_REFIENERY</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_ROCKET_FUEL_REFIENERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_ROCKET_FUEL_REFIENERY_PEDIA</Civilopedia>
@@ -2305,16 +2256,16 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_WATER_EXTRACTION_FACILITY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_WATER_EXTRACTION_FACILITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_ORGANIC_POLYMERE_FACTORY</BuildingClassType>
+				<BuildingNeeded>>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_ORGANIC_POLYMERE_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -2330,7 +2281,6 @@
 			</Properties>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNAR_BIOMASS_POWERPLANT</BuildingClass>
 			<Type>BUILDING_LUNAR_BIOMASS_POWERPLANT</Type>
 			<Description>TXT_KEY_BUILDING_LUNAR_BIOMASS_POWERPLANT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_BIOMASS_POWERPLANT_PEDIA</Civilopedia>
@@ -2355,12 +2305,12 @@
 			<CommerceChanges>
 				<iCommerce>-50</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_HYDROPONICS_FARM</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_HYDROPONICS_FARM</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

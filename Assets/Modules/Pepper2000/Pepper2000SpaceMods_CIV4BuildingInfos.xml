@@ -2,7 +2,6 @@
 <Civ4BuildingInfos xmlns="x-schema:../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DIGITAL_LIFESTYLE</BuildingClass>
 			<Type>BUILDING_DIGITAL_LIFESTYLE</Type>
 			<Description>TXT_KEY_BUILDING_DIGITAL_LIFESTYLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DIGITAL_LIFESTYLE_PEDIA</Civilopedia>
@@ -15,34 +14,33 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ONLINE_COMMUNITY</PrereqTech>
 			<iCost>4210</iCost>
-			<FreeBuilding>BUILDINGCLASS_MARKET_RESEARCH</FreeBuilding>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DIGITAL_OFFICES</BuildingClassType>
+			<FreeBuilding>BUILDING_MARKET_RESEARCH</FreeBuilding>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DIGITAL_OFFICES</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_SOCIAL_NETWORKS</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_HOLOGRAPHIC_NETWORKS</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_EXOCORTEX_NETWORKS</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_SOCIAL_NETWORKS</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_HOLOGRAPHIC_NETWORKS</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_EXOCORTEX_NETWORKS</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<Bonus>BONUS_CELLPHONES</Bonus>
 			<FreeBonus>BONUS_HUMAN_MOD_DIGITAL_LIFESTYLE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DIGITAL_IDENTITY</BuildingClass>
 			<Type>BUILDING_DIGITAL_IDENTITY</Type>
 			<Description>TXT_KEY_BUILDING_DIGITAL_IDENTITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DIGITAL_IDENTITY_PEDIA</Civilopedia>
@@ -55,20 +53,19 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_VIRTUAL_SOCIETY</PrereqTech>
 			<iCost>4810</iCost>
-			<FreeBuilding>BUILDINGCLASS_SOCIAL_NETWORKS</FreeBuilding>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_VIRTUAL_WORLD</BuildingClassType>
+			<FreeBuilding>BUILDING_SOCIAL_NETWORKS</FreeBuilding>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_VIRTUAL_WORLD</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Bonus>BONUS_HUMAN_MOD_DIGITAL_LIFESTYLE</Bonus>
 			<FreeBonus>BONUS_HUMAN_MOD_DIGITAL_IDENTITY</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_GENE_EDITING</BuildingClass>
 			<Type>BUILDING_GENE_EDITING</Type>
 			<Description>TXT_KEY_BUILDING_GENE_EDITING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GENE_EDITING_PEDIA</Civilopedia>
@@ -81,19 +78,18 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GENE_ENHANCEMENT</PrereqTech>
 			<iCost>6770</iCost>
-			<FreeBuilding>BUILDINGCLASS_STEM_CELL_LAB</FreeBuilding>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_STEM_CELL_LAB</BuildingClassType>
+			<FreeBuilding>BUILDING_STEM_CELL_LAB</FreeBuilding>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_STEM_CELL_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<FreeBonus>BONUS_HUMAN_MOD_GENE_EDITING</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DESIGNER_BABIES</BuildingClass>
 			<Type>BUILDING_DESIGNER_BABIES</Type>
 			<Description>TXT_KEY_BUILDING_DESIGNER_BABIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DESIGNER_BABIES_PEDIA</Civilopedia>
@@ -112,7 +108,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_COGNITIVE_ENHANCEMENT</BuildingClass>
 			<Type>BUILDING_COGNITIVE_ENHANCEMENT</Type>
 			<Description>TXT_KEY_BUILDING_COGNITIVE_ENHANCEMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COGNITIVE_ENHANCEMENT_PEDIA</Civilopedia>
@@ -125,14 +120,13 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NEURON_ENGINEERING</PrereqTech>
 			<iCost>10110</iCost>
-			<FreeBuilding>BUILDINGCLASS_APPLIED_PSYCHOLOGY_LAB</FreeBuilding>
+			<FreeBuilding>BUILDING_APPLIED_PSYCHOLOGY_LAB</FreeBuilding>
 			<Bonus>BONUS_HUMAN_MOD_DESIGNER_BABIES</Bonus>
 			<FreeBonus>BONUS_HUMAN_MOD_COGNITIVE_ENHANCEMENT</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NOVEL_SENSES</BuildingClass>
 			<Type>BUILDING_NOVEL_SENSES</Type>
 			<Description>TXT_KEY_BUILDING_NOVEL_SENSES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NOVEL_SENSES_PEDIA</Civilopedia>
@@ -162,7 +156,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ENLIGHTENMENT</BuildingClass>
 			<Type>BUILDING_ENLIGHTENMENT</Type>
 			<Description>TXT_KEY_BUILDING_ENLIGHTENMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ENLIGHTENMENT_PEDIA</Civilopedia>
@@ -192,7 +185,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LUNARIS</BuildingClass>
 			<Type>BUILDING_LUNARIS</Type>
 			<Description>TXT_KEY_BUILDING_LUNARIS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNARIS_PEDIA</Civilopedia>
@@ -207,29 +199,28 @@
 			<iCost>10910</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_LUNAR_BASE</BuildingClass>
+					<Building>BUILDING_LUNAR_BASE</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_LUNAR_PARCOLOGY</BuildingClass>
+					<Building>BUILDING_LUNAR_PARCOLOGY</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_BASE</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_LUNAR_BASE</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<Bonus>BONUS_HUMAN_MOD_NOVEL_SENSES</Bonus>
 			<FreeBonus>BONUS_HUMAN_MOD_LUNARIS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_MARTIAN</BuildingClass>
 			<Type>BUILDING_MARTIAN</Type>
 			<Description>TXT_KEY_BUILDING_MARTIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_PEDIA</Civilopedia>
@@ -244,39 +235,38 @@
 			<iCost>10910</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_MARS_ARCOLOGY</BuildingClass>
+					<Building>BUILDING_MARS_ARCOLOGY</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_MARS_MEGACITY</BuildingClass>
+					<Building>BUILDING_MARS_MEGACITY</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_MARS_CITY</BuildingClass>
+					<Building>BUILDING_MARS_CITY</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_MARS_METRO</BuildingClass>
+					<Building>BUILDING_MARS_METRO</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_MARS_CITY</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_MARS_CITY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<Bonus>BONUS_HUMAN_MOD_NOVEL_SENSES</Bonus>
 			<FreeBonus>BONUS_HUMAN_MOD_MARTIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ROBOTIC_BODY</BuildingClass>
 			<Type>BUILDING_ROBOTIC_BODY</Type>
 			<Description>TXT_KEY_BUILDING_ROBOTIC_BODY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ROBOTIC_BODY_PEDIA</Civilopedia>
@@ -291,24 +281,23 @@
 			<iCost>11810</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_MARS_HITECH</BuildingClass>
+					<Building>BUILDING_MARS_HITECH</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_ANIMA_CHAMBER</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_ANIMA_CHAMBER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Bonus>BONUS_HUMAN_MOD_DIGITAL_IDENTITY</Bonus>
 			<FreeBonus>BONUS_HUMAN_MOD_ROBOTIC_BODY</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_INDEFINITE_LIFESPAN</BuildingClass>
 			<Type>BUILDING_INDEFINITE_LIFESPAN</Type>
 			<Description>TXT_KEY_BUILDING_INDEFINITE_LIFESPAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INDEFINITE_LIFESPAN_PEDIA</Civilopedia>
@@ -321,19 +310,18 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRANSHUMANISM</PrereqTech>
 			<iCost>12310</iCost>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_RESURRECTION_HUB</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_RESURRECTION_HUB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Bonus>BONUS_HUMAN_MOD_ENLIGHTENED</Bonus>
 			<FreeBonus>BONUS_HUMAN_MOD_INDEFINITE_LIFESPAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ZERO_G</BuildingClass>
 			<Type>BUILDING_ZERO_G</Type>
 			<Description>TXT_KEY_BUILDING_ZERO_G</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ZERO_G_PEDIA</Civilopedia>
@@ -348,7 +336,7 @@
 			<iCost>12310</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_ORBITAL_FACTORY</BuildingClass>
+					<Building>BUILDING_ORBITAL_FACTORY</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -359,7 +347,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_WINGS</BuildingClass>
 			<Type>BUILDING_WINGS</Type>
 			<Description>TXT_KEY_BUILDING_WINGS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WINGS_PEDIA</Civilopedia>
@@ -374,7 +361,7 @@
 			<iCost>12810</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_ASTEROID_INTERIOR_CITY</BuildingClass>
+					<Building>BUILDING_ASTEROID_INTERIOR_CITY</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -385,7 +372,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_GILLS</BuildingClass>
 			<Type>BUILDING_GILLS</Type>
 			<Description>TXT_KEY_BUILDING_GILLS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GILLS_PEDIA</Civilopedia>
@@ -400,7 +386,7 @@
 			<iCost>12810</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_EUROPA_COLONY</BuildingClass>
+					<Building>BUILDING_EUROPA_COLONY</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -411,7 +397,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_HEAT_TOLERANCE</BuildingClass>
 			<Type>BUILDING_HEAT_TOLERANCE</Type>
 			<Description>TXT_KEY_BUILDING_HEAT_TOLERANCE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HEAT_TOLERANCE_PEDIA</Civilopedia>
@@ -426,7 +411,7 @@
 			<iCost>13310</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_VENUS_COLONY</BuildingClass>
+					<Building>BUILDING_VENUS_COLONY</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -437,7 +422,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_COLD_TOLERANCE</BuildingClass>
 			<Type>BUILDING_COLD_TOLERANCE</Type>
 			<Description>TXT_KEY_BUILDING_COLD_TOLERANCE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COLD_TOLERANCE_PEDIA</Civilopedia>
@@ -452,12 +436,12 @@
 			<iCost>13310</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_UMBRIEL_BASE</BuildingClass>
+					<Building>BUILDING_UMBRIEL_BASE</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_TRITON_BASE</BuildingClass>
+					<Building>BUILDING_TRITON_BASE</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -468,7 +452,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_RADIATION_TOLERANCE</BuildingClass>
 			<Type>BUILDING_RADIATION_TOLERANCE</Type>
 			<Description>TXT_KEY_BUILDING_RADIATION_TOLERANCE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RADIATION_TOLERANCE_PEDIA</Civilopedia>
@@ -483,7 +466,7 @@
 			<iCost>13810</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_MERCURY_COLONY</BuildingClass>
+					<Building>BUILDING_MERCURY_COLONY</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -501,7 +484,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_COLLECTIVE_CONSCIOUSNESS</BuildingClass>
 			<Type>BUILDING_COLLECTIVE_CONSCIOUSNESS</Type>
 			<Description>TXT_KEY_BUILDING_COLLECTIVE_CONSCIOUSNESS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COLLECTIVE_CONSCIOUSNESS_PEDIA</Civilopedia>
@@ -514,13 +496,13 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SENTIENT_EARTH</PrereqTech>
 			<iCost>13810</iCost>
-			<FreeBuilding>BUILDINGCLASS_NETWORK_NODE</FreeBuilding>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_NETWORK_NODE</BuildingClassType>
+			<FreeBuilding>BUILDING_NETWORK_NODE</FreeBuilding>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_NETWORK_NODE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -538,7 +520,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NANOMORPHICS_BEINGS</BuildingClass>
 			<Type>BUILDING_NANOMORPHICS_BEINGS</Type>
 			<Description>TXT_KEY_BUILDING_NANOMORPHICS_BEINGS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NANOMORPHICS_BEINGS_PEDIA</Civilopedia>
@@ -551,7 +532,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NANOMORPHIC_TROIDS</PrereqTech>
 			<iCost>19610</iCost>
-			<FreeBuilding>BUILDINGCLASS_IMMATERIAL_CITY</FreeBuilding>
+			<FreeBuilding>BUILDING_IMMATERIAL_CITY</FreeBuilding>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -573,7 +554,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_INFORMATION_BEING</BuildingClass>
 			<Type>BUILDING_INFORMATION_BEING</Type>
 			<Description>TXT_KEY_BUILDING_INFORMATION_BEING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INFORMATION_BEING_PEDIA</Civilopedia>
@@ -588,7 +568,7 @@
 			<iCost>21910</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_INTERSTELLAR_BROADCAST_NODE</BuildingClass>
+					<Building>BUILDING_INTERSTELLAR_BROADCAST_NODE</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -606,7 +586,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_TRANSAPIENT</BuildingClass>
 			<Type>BUILDING_TRANSAPIENT</Type>
 			<Description>TXT_KEY_BUILDING_TRANSAPIENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRANSAPIENT_PEDIA</Civilopedia>
@@ -621,17 +600,17 @@
 			<iCost>24310</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_MATRIOSHKA_BRAIN</BuildingClass>
+					<Building>BUILDING_MATRIOSHKA_BRAIN</Building>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>10</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_OPTRONIC_SUPERCOMPUTER</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_OPTRONIC_SUPERCOMPUTER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -645,7 +624,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_HUMAN_ALIEN_HYBRID</BuildingClass>
 			<Type>BUILDING_HUMAN_ALIEN_HYBRID</Type>
 			<Description>TXT_KEY_BUILDING_HUMAN_ALIEN_HYBRID</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HUMAN_ALIEN_HYBRID_PEDIA</Civilopedia>
@@ -660,22 +638,22 @@
 			<iCost>26310</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_INTERGALACTIC_PORT</BuildingClass>
+					<Building>BUILDING_INTERGALACTIC_PORT</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_ECUMENOPOLIS</BuildingClass>
+					<Building>BUILDING_ECUMENOPOLIS</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GALACTIC_CANTINA</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_GALACTIC_CANTINA</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -706,7 +684,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_IMMORTAL_BEING</BuildingClass>
 			<Type>BUILDING_IMMORTAL_BEING</Type>
 			<Description>TXT_KEY_BUILDING_IMMORTAL_BEING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_IMMORTAL_BEING_PEDIA</Civilopedia>
@@ -721,7 +698,7 @@
 			<iCost>31710</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_ETERNAL_INTELLIGENCE</BuildingClass>
+					<Building>BUILDING_ETERNAL_INTELLIGENCE</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -743,7 +720,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_PURE_INFORMATION_BEING</BuildingClass>
 			<Type>BUILDING_PURE_INFORMATION_BEING</Type>
 			<Description>TXT_KEY_BUILDING_PURE_INFORMATION_BEING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PURE_INFORMATION_BEING_PEDIA</Civilopedia>
@@ -758,12 +734,12 @@
 			<iCost>39510</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_NEUTRON_STAR_COMPUTATIONAL_SUBSTRATE</BuildingClass>
+					<Building>BUILDING_NEUTRON_STAR_COMPUTATIONAL_SUBSTRATE</Building>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_BLACKHOLE_COLONY</BuildingClass>
+					<Building>BUILDING_BLACKHOLE_COLONY</Building>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -774,7 +750,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_HIGH_DIMENSIONAL_BEING</BuildingClass>
 			<Type>BUILDING_HIGH_DIMENSIONAL_BEING</Type>
 			<Description>TXT_KEY_BUILDING_HIGH_DIMENSIONAL_BEING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HIGH_DIMENSIONAL_BEING_PEDIA</Civilopedia>
@@ -789,12 +764,12 @@
 			<iCost>43910</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_HYPERFACTORY</BuildingClass>
+					<Building>BUILDING_HYPERFACTORY</Building>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_ESCHER_CITY</BuildingClass>
+					<Building>BUILDING_ESCHER_CITY</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -820,7 +795,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ARCHAILECT</BuildingClass>
 			<Type>BUILDING_ARCHAILECT</Type>
 			<Description>TXT_KEY_BUILDING_ARCHAILECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ARCHAILECT_PEDIA</Civilopedia>
@@ -833,20 +807,20 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HYPERINTELLIGENCE</PrereqTech>
 			<iCost>48710</iCost>
-			<FreeBuilding>BUILDINGCLASS_KOLMOGOROV_COMPRESSION</FreeBuilding>
+			<FreeBuilding>BUILDING_KOLMOGOROV_COMPRESSION</FreeBuilding>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_KOLMOGOROV_COMPRESSION</BuildingClass>
+					<Building>BUILDING_KOLMOGOROV_COMPRESSION</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>10</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_QUANTUM_GRAVITY_SUPERCOMPUTER</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_QUANTUM_GRAVITY_SUPERCOMPUTER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -860,7 +834,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NONSPATIAL_BEINGS</BuildingClass>
 			<Type>BUILDING_NONSPATIAL_BEINGS</Type>
 			<Description>TXT_KEY_BUILDING_NONSPATIAL_BEINGS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NONSPATIAL_BEINGS_PEDIA</Civilopedia>
@@ -875,7 +848,7 @@
 			<iCost>52110</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_COSMIC_NODE</BuildingClass>
+					<Building>BUILDING_COSMIC_NODE</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -893,7 +866,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ATEMPORAL_BEINGS</BuildingClass>
 			<Type>BUILDING_ATEMPORAL_BEINGS</Type>
 			<Description>TXT_KEY_BUILDING_ATEMPORAL_BEINGS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ATEMPORAL_BEINGS_PEDIA</Civilopedia>
@@ -919,7 +891,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_METAPHYSICAL</BuildingClass>
 			<Type>BUILDING_METAPHYSICAL</Type>
 			<Description>TXT_KEY_BUILDING_METAPHYSICAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_METAPHYSICAL_PEDIA</Civilopedia>
@@ -934,12 +905,12 @@
 			<iCost>57510</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_QUATERNIONIC_PROJECTIVE_SPACE_COLONY</BuildingClass>
+					<Building>BUILDING_QUATERNIONIC_PROJECTIVE_SPACE_COLONY</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_TRANSFINITE_SUPERCOMPUTER</BuildingClass>
+					<Building>BUILDING_TRANSFINITE_SUPERCOMPUTER</Building>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -965,7 +936,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CRISPR_CAS9_BACTERIA</BuildingClass>
 			<Type>BUILDING_CRISPR_CAS9_BACTERIA</Type>
 			<Description>TXT_KEY_BUILDING_CRISPR_CAS9_BACTERIA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRISPR_CAS9_BACTERIA_PEDIA</Civilopedia>
@@ -980,21 +950,20 @@
 			<iCost>5730</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_BACTERIUM_BIOFORGE</BuildingClass>
+					<Building>BUILDING_BACTERIUM_BIOFORGE</Building>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_BACTERIUM_BIOFORGE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_BACTERIUM_BIOFORGE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_C4_CROPS</BuildingClass>
 			<Type>BUILDING_C4_CROPS</Type>
 			<Description>TXT_KEY_BUILDING_C4_CROPS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_C4_CROPS_PEDIA</Civilopedia>
@@ -1009,21 +978,20 @@
 			<iCost>5730</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_GENFARM_LAB</BuildingClass>
+					<Building>BUILDING_GENFARM_LAB</Building>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CRISPR_CAS9_BACTERIA</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CRISPR_CAS9_BACTERIA</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FLUORESCENT_BACTERIA</BuildingClass>
 			<Type>BUILDING_FLUORESCENT_BACTERIA</Type>
 			<Description>TXT_KEY_BUILDING_FLUORESCENT_BACTERIA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FLUORESCENT_BACTERIA_PEDIA</Civilopedia>
@@ -1038,21 +1006,20 @@
 			<iCost>5730</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_BACTERIUM_BIOFORGE</BuildingClass>
+					<Building>BUILDING_BACTERIUM_BIOFORGE</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CRISPR_CAS9_BACTERIA</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CRISPR_CAS9_BACTERIA</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_STRUCTURAL_BACTERIA</BuildingClass>
 			<Type>BUILDING_STRUCTURAL_BACTERIA</Type>
 			<Description>TXT_KEY_BUILDING_STRUCTURAL_BACTERIA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_STRUCTURAL_BACTERIA_PEDIA</Civilopedia>
@@ -1065,16 +1032,15 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PROTOTYPED_PATHOGENS</PrereqTech>
 			<iCost>6490</iCost>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CRISPR_CAS9_BACTERIA</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CRISPR_CAS9_BACTERIA</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NONPHOTOSYNTHETIC_PLANTS</BuildingClass>
 			<Type>BUILDING_NONPHOTOSYNTHETIC_PLANTS</Type>
 			<Description>TXT_KEY_BUILDING_NONPHOTOSYNTHETIC_PLANTS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NONPHOTOSYNTHETIC_PLANTS_PEDIA</Civilopedia>
@@ -1103,15 +1069,14 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_TRANSGENETICS_LAB</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_TRANSGENETICS_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SILICON_LIFE</BuildingClass>
 			<Type>BUILDING_SILICON_LIFE</Type>
 			<Description>TXT_KEY_BUILDING_SILICON_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SILICON_LIFE_PEDIA</Civilopedia>
@@ -1129,12 +1094,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>200</iCommerce>
 			</CommerceChanges>
-			<GlobalBuildingClassProductionModifiers>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_MOON_TERRA</BuildingClassType>
+			<GlobalBuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_MOON_TERRA</BuildingType>
 					<iProductionModifier>25</iProductionModifier>
-				</BuildingClassProductionModifier>
-			</GlobalBuildingClassProductionModifiers>
+				</BuildingProductionModifier>
+			</GlobalBuildingProductionModifiers>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_GAIA_ECOLOGY</PrereqTech>
@@ -1169,15 +1134,14 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUNAR_SILICON_EXTRACTION_FACILITY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LUNAR_SILICON_EXTRACTION_FACILITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_HYDROGEN_PEROXIDE_LIFE</BuildingClass>
 			<Type>BUILDING_HYDROGEN_PEROXIDE_LIFE</Type>
 			<Description>TXT_KEY_BUILDING_HYDROGEN_PEROXIDE_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYDROGEN_PEROXIDE_LIFE_PEDIA</Civilopedia>
@@ -1198,15 +1162,14 @@
 			<YieldChanges>
 				<iYield>5</iYield>
 			</YieldChanges>
-			<GlobalBuildingClassProductionModifiers>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_MARS_TERRA</BuildingClassType>
+			<GlobalBuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_MARS_TERRA</BuildingType>
 					<iProductionModifier>30</iProductionModifier>
-				</BuildingClassProductionModifier>
-			</GlobalBuildingClassProductionModifiers>
+				</BuildingProductionModifier>
+			</GlobalBuildingProductionModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SULFURIC_ACID_LIFE</BuildingClass>
 			<Type>BUILDING_SULFURIC_ACID_LIFE</Type>
 			<Description>TXT_KEY_BUILDING_SULFURIC_ACID_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SULFURIC_ACID_LIFE_PEDIA</Civilopedia>
@@ -1224,15 +1187,14 @@
 				<iCommerce>300</iCommerce>
 				<iCommerce>600</iCommerce>
 			</CommerceChanges>
-			<GlobalBuildingClassProductionModifiers>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_VENUS_TERRA</BuildingClassType>
+			<GlobalBuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_VENUS_TERRA</BuildingType>
 					<iProductionModifier>30</iProductionModifier>
-				</BuildingClassProductionModifier>
-			</GlobalBuildingClassProductionModifiers>
+				</BuildingProductionModifier>
+			</GlobalBuildingProductionModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_METAL_OXIDE_LIFE</BuildingClass>
 			<Type>BUILDING_METAL_OXIDE_LIFE</Type>
 			<Description>TXT_KEY_BUILDING_METAL_OXIDE_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_METAL_OXIDE_LIFE_PEDIA</Civilopedia>
@@ -1260,15 +1222,14 @@
 				<iYield>0</iYield>
 				<iYield>200</iYield>
 			</YieldChanges>
-			<GlobalBuildingClassProductionModifiers>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_TERRAFORMED_MERCURY</BuildingClassType>
+			<GlobalBuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_TERRAFORMED_MERCURY</BuildingType>
 					<iProductionModifier>30</iProductionModifier>
-				</BuildingClassProductionModifier>
-			</GlobalBuildingClassProductionModifiers>
+				</BuildingProductionModifier>
+			</GlobalBuildingProductionModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_HYDROGEN_SULFIDE_LIFE</BuildingClass>
 			<Type>BUILDING_HYDROGEN_SULFIDE_LIFE</Type>
 			<Description>TXT_KEY_BUILDING_HYDROGEN_SULFIDE_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYDROGEN_SULFIDE_LIFE_PEDIA</Civilopedia>
@@ -1295,21 +1256,20 @@
 				<iYield>5</iYield>
 				<iYield>100</iYield>
 			</YieldChanges>
-			<GlobalBuildingClassProductionModifiers>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_TERRAFORMED_GANYMEDE</BuildingClassType>
+			<GlobalBuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_TERRAFORMED_GANYMEDE</BuildingType>
 					<iProductionModifier>30</iProductionModifier>
-				</BuildingClassProductionModifier>
-			</GlobalBuildingClassProductionModifiers>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_ORBITAL_BASE</BuildingClassType>
+				</BuildingProductionModifier>
+			</GlobalBuildingProductionModifiers>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_ORBITAL_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_AMMONIA_LIFE</BuildingClass>
 			<Type>BUILDING_AMMONIA_LIFE</Type>
 			<Description>TXT_KEY_BUILDING_AMMONIA_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AMMONIA_LIFE_PEDIA</Civilopedia>
@@ -1331,29 +1291,28 @@
 				<iYield>10</iYield>
 				<iYield>100</iYield>
 			</YieldChanges>
-			<GlobalBuildingClassProductionModifiers>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_TERRAFORMED_TRITON</BuildingClassType>
+			<GlobalBuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_TERRAFORMED_TRITON</BuildingType>
 					<iProductionModifier>30</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_TERRAFORMED_TITANIA</BuildingClassType>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_TERRAFORMED_TITANIA</BuildingType>
 					<iProductionModifier>30</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_TERRAFORMED_OBERON</BuildingClassType>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_TERRAFORMED_OBERON</BuildingType>
 					<iProductionModifier>30</iProductionModifier>
-				</BuildingClassProductionModifier>
-			</GlobalBuildingClassProductionModifiers>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_TITAN_BIOFACTORY</BuildingClassType>
+				</BuildingProductionModifier>
+			</GlobalBuildingProductionModifiers>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_TITAN_BIOFACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_METHANE_LIFE</BuildingClass>
 			<Type>BUILDING_METHANE_LIFE</Type>
 			<Description>TXT_KEY_BUILDING_METHANE_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_METHANE_LIFE_PEDIA</Civilopedia>
@@ -1374,21 +1333,20 @@
 				<iYield>0</iYield>
 				<iYield>100</iYield>
 			</YieldChanges>
-			<GlobalBuildingClassProductionModifiers>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_TERRAFORMED_TITAN</BuildingClassType>
+			<GlobalBuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_TERRAFORMED_TITAN</BuildingType>
 					<iProductionModifier>30</iProductionModifier>
-				</BuildingClassProductionModifier>
-			</GlobalBuildingClassProductionModifiers>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_TITAN_BIOFACTORY</BuildingClassType>
+				</BuildingProductionModifier>
+			</GlobalBuildingProductionModifiers>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_TITAN_BIOFACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_LIQUID_NITROGEN_LIFE</BuildingClass>
 			<Type>BUILDING_LIQUID_NITROGEN_LIFE</Type>
 			<Description>TXT_KEY_BUILDING_LIQUID_NITROGEN_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LIQUID_NITROGEN_LIFE_PEDIA</Civilopedia>
@@ -1416,21 +1374,20 @@
 				<iYield>10</iYield>
 				<iYield>100</iYield>
 			</YieldChanges>
-			<GlobalBuildingClassProductionModifiers>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_EDEN</BuildingClassType>
+			<GlobalBuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_EDEN</BuildingType>
 					<iProductionModifier>30</iProductionModifier>
-				</BuildingClassProductionModifier>
-			</GlobalBuildingClassProductionModifiers>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_KBO_OUTPOST</BuildingClassType>
+				</BuildingProductionModifier>
+			</GlobalBuildingProductionModifiers>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_KBO_OUTPOST</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_JUPITER_CLOUD_LIFE</BuildingClass>
 			<Type>BUILDING_JUPITER_CLOUD_LIFE</Type>
 			<Description>TXT_KEY_BUILDING_JUPITER_CLOUD_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_JUPITER_CLOUD_LIFE_PEDIA</Civilopedia>
@@ -1456,7 +1413,6 @@
 			</CommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SILICON_DIOXIDE_LIFE</BuildingClass>
 			<Type>BUILDING_SILICON_DIOXIDE_LIFE</Type>
 			<Description>TXT_KEY_BUILDING_SILICON_DIOXIDE_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SILICON_DIOXIDE_LIFE_PEDIA</Civilopedia>
@@ -1478,12 +1434,12 @@
 				<iYield>0</iYield>
 				<iYield>200</iYield>
 			</YieldChanges>
-			<GlobalBuildingClassProductionModifiers>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_KEPLER_186F</BuildingClassType>
+			<GlobalBuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_KEPLER_186F</BuildingType>
 					<iProductionModifier>30</iProductionModifier>
-				</BuildingClassProductionModifier>
-			</GlobalBuildingClassProductionModifiers>
+				</BuildingProductionModifier>
+			</GlobalBuildingProductionModifiers>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_GALACTIC_ECOLOGY</PrereqTech>
@@ -1498,15 +1454,14 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CHTHONIAN_PLANET_BASE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_CHTHONIAN_PLANET_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SUPERCRITICAL_CO2_LIFE</BuildingClass>
 			<Type>BUILDING_SUPERCRITICAL_CO2_LIFE</Type>
 			<Description>TXT_KEY_BUILDING_SUPERCRITICAL_CO2_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SUPERCRITICAL_CO2_LIFE_PEDIA</Civilopedia>
@@ -1527,12 +1482,12 @@
 			<YieldChanges>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<GlobalBuildingClassProductionModifiers>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_KEPLER_22B</BuildingClassType>
+			<GlobalBuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_KEPLER_22B</BuildingType>
 					<iProductionModifier>5</iProductionModifier>
-				</BuildingClassProductionModifier>
-			</GlobalBuildingClassProductionModifiers>
+				</BuildingProductionModifier>
+			</GlobalBuildingProductionModifiers>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_GALACTIC_ECOLOGY</PrereqTech>
@@ -1547,15 +1502,14 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SUPER_EARTH</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_SUPER_EARTH</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_PARTICLE_LIFEFORMS</BuildingClass>
 			<Type>BUILDING_PARTICLE_LIFEFORMS</Type>
 			<Description>TXT_KEY_BUILDING_PARTICLE_LIFEFORMS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PARTICLE_LIFEFORMS_PEDIA</Civilopedia>
@@ -1576,15 +1530,14 @@
 			<YieldChanges>
 				<iYield>5</iYield>
 			</YieldChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_OSMIUM_CORE_PLANET</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_OSMIUM_CORE_PLANET</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DUST_PLASMA_LIFE</BuildingClass>
 			<Type>BUILDING_DUST_PLASMA_LIFE</Type>
 			<Description>TXT_KEY_BUILDING_DUST_PLASMA_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DUST_PLASMA_LIFE_PEDIA</Civilopedia>
@@ -1607,16 +1560,16 @@
 				<iYield>25</iYield>
 				<iYield>3</iYield>
 			</YieldChanges>
-			<GlobalBuildingClassProductionModifiers>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_SMALL_MAGELLANIC_CLOUD</BuildingClassType>
+			<GlobalBuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_SMALL_MAGELLANIC_CLOUD</BuildingType>
 					<iProductionModifier>30</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_LARGE_MAGELLANIC_CLOUD</BuildingClassType>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_LARGE_MAGELLANIC_CLOUD</BuildingType>
 					<iProductionModifier>30</iProductionModifier>
-				</BuildingClassProductionModifier>
-			</GlobalBuildingClassProductionModifiers>
+				</BuildingProductionModifier>
+			</GlobalBuildingProductionModifiers>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_GRAND_UNIFICATION_BIOLOGY</PrereqTech>
@@ -1626,15 +1579,14 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_INTERSTELLAR_HYDROGEN_MAP</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_INTERSTELLAR_HYDROGEN_MAP</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CHIRAL_FLEXIBLE_LIFEFORMS</BuildingClass>
 			<Type>BUILDING_CHIRAL_FLEXIBLE_LIFEFORMS</Type>
 			<Description>TXT_KEY_BUILDING_CHIRAL_FLEXIBLE_LIFEFORMS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CHIRAL_FLEXIBLE_LIFEFORMS_PEDIA</Civilopedia>
@@ -1654,19 +1606,18 @@
 			<YieldChanges>
 				<iYield>20</iYield>
 			</YieldChanges>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_RINGED_GALAXY</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_SPIRAL_GALAXY</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_RINGED_GALAXY</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_SPIRAL_GALAXY</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_TRUE_VACUUM_LIFE</BuildingClass>
 			<Type>BUILDING_TRUE_VACUUM_LIFE</Type>
 			<Description>TXT_KEY_BUILDING_TRUE_VACUUM_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRUE_VACUUM_LIFE_PEDIA</Civilopedia>
@@ -1687,15 +1638,14 @@
 			<YieldChanges>
 				<iYield>20</iYield>
 			</YieldChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SPACE_WHALE_HUNTER</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_SPACE_WHALE_HUNTER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_PAN_DIMENSIONAL_LIFE</BuildingClass>
 			<Type>BUILDING_PAN_DIMENSIONAL_LIFE</Type>
 			<Description>TXT_KEY_BUILDING_PAN_DIMENSIONAL_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PAN_DIMENSIONAL_LIFE_PEDIA</Civilopedia>

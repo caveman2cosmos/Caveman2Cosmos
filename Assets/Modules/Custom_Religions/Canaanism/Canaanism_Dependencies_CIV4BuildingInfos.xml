@@ -8,26 +8,26 @@
 <BuildingInfos>
 	<BuildingInfo>
 		<!-- Dependency -->
-		<BuildingClass>BUILDINGCLASS_DJENNE</BuildingClass>
+		<Building>BUILDING_DJENNE</Building>
 		<Type>BUILDING_DJENNE</Type>
 		<!-- Misc. Effects -->
-		<GlobalBuildingClassProductionModifiers>
-			<BuildingClassProductionModifier>
-				<BuildingClassType>BUILDINGCLASS_CANAANISM_CATHEDRAL</BuildingClassType>
+		<GlobalBuildingProductionModifiers>
+			<BuildingProductionModifier>
+				<BuildingType>BUILDING_CANAANISM_CATHEDRAL</BuildingType>
 				<iProductionModifier>100</iProductionModifier>
-			</BuildingClassProductionModifier>
-		</GlobalBuildingClassProductionModifiers>
+			</BuildingProductionModifier>
+		</GlobalBuildingProductionModifiers>
 	</BuildingInfo>
 	<BuildingInfo>
 		<!-- Dependency -->
-		<BuildingClass>BUILDINGCLASS_NATIONAL_BELIEF_RESURRECTION</BuildingClass>
+		<Building>BUILDING_NATIONAL_BELIEF_RESURRECTION</Building>
 		<Type>BUILDING_NATIONAL_BELIEF_RESURRECTION</Type>
-		<PrereqOrBuildingClasses>
-			<PrereqOrBuildingClass>
-				<BuildingClassType>BUILDINGCLASS_CANAANISM_TEMPLE</BuildingClassType>
-				<bPrereqBuildingClass>1</bPrereqBuildingClass>
-			</PrereqOrBuildingClass>
-		</PrereqOrBuildingClasses>
+		<PrereqOrBuildings>
+			<PrereqOrBuilding>
+				<BuildingType>BUILDING_CANAANISM_TEMPLE</BuildingType>
+				<bPrereqBuilding>1</bPrereqBuilding>
+			</PrereqOrBuilding>
+		</PrereqOrBuildings>
 	</BuildingInfo>
 </BuildingInfos>
 </Civ4BuildingInfos>

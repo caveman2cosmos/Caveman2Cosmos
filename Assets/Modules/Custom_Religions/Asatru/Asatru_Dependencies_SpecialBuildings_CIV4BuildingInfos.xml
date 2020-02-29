@@ -8,14 +8,14 @@
 <BuildingInfos>
 	<BuildingInfo>
 		<!-- National Belief (Reincarnation) -->
-		<BuildingClass>BUILDINGCLASS_NATIONAL_BELIEF_REINCARNATION</BuildingClass>
+		<Building>BUILDING_NATIONAL_BELIEF_REINCARNATION</Building>
 		<Type>BUILDING_NATIONAL_BELIEF_REINCARNATION</Type>
-		<PrereqOrBuildingClasses>
-			<PrereqOrBuildingClass>
-				<BuildingClassType>BUILDINGCLASS_ASATRU_TEMPLE</BuildingClassType>
-				<bPrereqBuildingClass>1</bPrereqBuildingClass>
-			</PrereqOrBuildingClass>
-		</PrereqOrBuildingClasses>
+		<PrereqOrBuildings>
+			<PrereqOrBuilding>
+				<BuildingType>BUILDING_ASATRU_TEMPLE</BuildingType>
+				<bPrereqBuilding>1</bPrereqBuilding>
+			</PrereqOrBuilding>
+		</PrereqOrBuildings>
 	</BuildingInfo>
 </BuildingInfos>
 </Civ4BuildingInfos>

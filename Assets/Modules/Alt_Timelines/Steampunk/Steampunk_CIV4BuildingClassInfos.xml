@@ -4,54 +4,54 @@
 <!-- Copyright Firaxis Games 2005 -->
 <!-- -->
 <!-- Building Class Infos -->
-<Civ4BuildingClassInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
-	<BuildingClassInfos>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_STEAMPUNK_EMBASSY</Type>
+<Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
+	<BuildingInfos>
+		<BuildingInfo>
+			<Type>BUILDING_STEAMPUNK_EMBASSY</Type>
 			<Description>TXT_KEY_BUILDING_STEAMPUNK_EMBASSY</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<DefaultBuilding>BUILDING_STEAMPUNK_EMBASSY</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_MUNICIP_COMP</Type>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_MUNICIP_COMP</Type>
 			<Description>TXT_KEY_BUILDING_MUNICIP_COMP</Description>
 			<DefaultBuilding>BUILDING_MUNICIP_COMP</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_TR_WORKSHOP</Type>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_TR_WORKSHOP</Type>
 			<Description>TXT_KEY_BUILDING_TR_WORKSHOP</Description>
 			<DefaultBuilding>BUILDING_TR_WORKSHOP</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_PANOPTICON_PRISON</Type>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_PANOPTICON_PRISON</Type>
 			<Description>TXT_KEY_BUILDING_PANOPTICON_PRISON</Description>
 			<DefaultBuilding>BUILDING_PANOPTICON_PRISON</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_MADSCIENTIST_CASTLE</Type>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_MADSCIENTIST_CASTLE</Type>
 			<Description>TXT_KEY_BUILDING_MADSCIENTIST_CASTLE</Description>
 			<DefaultBuilding>BUILDING_MADSCIENTIST_CASTLE</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_COAL_DYNAMO</Type>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_COAL_DYNAMO</Type>
 			<Description>TXT_KEY_BUILDING_COAL_DYNAMO</Description>
 			<DefaultBuilding>BUILDING_COAL_DYNAMO</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_WOOD_DYNAMO</Type>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_WOOD_DYNAMO</Type>
 			<Description>TXT_KEY_BUILDING_WOOD_DYNAMO</Description>
 			<DefaultBuilding>BUILDING_WOOD_DYNAMO</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_PEAT_DYNAMO</Type>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_PEAT_DYNAMO</Type>
 			<Description>TXT_KEY_BUILDING_PEAT_DYNAMO</Description>
 			<DefaultBuilding>BUILDING_PEAT_DYNAMO</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_NEMO_ACADEMY</Type>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_NEMO_ACADEMY</Type>
 			<Description>TXT_KEY_BUILDING_NEMO_ACADEMY</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<DefaultBuilding>BUILDING_NEMO_ACADEMY</DefaultBuilding>
-		</BuildingClassInfo>
-	</BuildingClassInfos>
-</Civ4BuildingClassInfos>
+		</BuildingInfo>
+	</BuildingInfos>
+</Civ4BuildingInfos>

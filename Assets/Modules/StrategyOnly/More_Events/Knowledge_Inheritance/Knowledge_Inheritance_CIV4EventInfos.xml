@@ -44,7 +44,7 @@
       <UnitName/>
       <UnitCombatPromotions/>
       <UnitClassPromotions/>
-      <BuildingClass>NONE</BuildingClass>
+      <Building>NONE</Building>
       <iBuildingChange>0</iBuildingChange>
       <BuildingExtraYields/>
       <BuildingExtraCommerces/>
@@ -125,12 +125,12 @@
       <UnitName/>
       <UnitCombatPromotions/>
       <UnitClassPromotions/>
-      <BuildingClass>NONE</BuildingClass>
+      <Building>NONE</Building>
       <iBuildingChange>0</iBuildingChange>
       <BuildingExtraYields/>
       <BuildingExtraCommerces>
         <BuildingExtraCommerce>
-          <BuildingClass>BUILDINGCLASS_KNOWLEDGE_INHERITANCE</BuildingClass>
+          <Building>BUILDING_KNOWLEDGE_INHERITANCE</Building>
           <CommerceType>COMMERCE_RESEARCH</CommerceType>
           <iExtraCommerce>1</iExtraCommerce>
         </BuildingExtraCommerce>

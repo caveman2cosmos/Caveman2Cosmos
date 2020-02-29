@@ -7,7 +7,6 @@
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SHAMAN_CATHEDRAL2</BuildingClass>
 			<Type>BUILDING_SHAMAN_CATHEDRAL2</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CATHEDRAL_II</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_SHAMAN_CATHEDRAL2</Description>
@@ -49,18 +48,18 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_SHAMAN_CATHEDRAL</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_SHAMAN_CATHEDRAL</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SHAMAN_CATHEDRAL</BuildingClassType>
+				</PrereqBuilding>
+			</PrereqBuildings>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_SHAMAN_CATHEDRAL</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -69,7 +68,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SHAMAN_CATHEDRAL</BuildingClass>
 			<Type>BUILDING_SHAMAN_CATHEDRAL</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CATHEDRAL_II</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_SHAMAN_CATHEDRAL</Description>
@@ -110,18 +108,18 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_SHAMAN_MONASTERY</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SHAMAN_MONASTERY</BuildingClassType>
+				</PrereqBuilding>
+			</PrereqBuildings>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -137,7 +135,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SHAMAN_MONASTERY</BuildingClass>
 			<Type>BUILDING_SHAMAN_MONASTERY</Type>
 			<SpecialBuildingType>SPECIALBUILDING_MONASTERY_II</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_SHAMAN_MONASTERY</Description>
@@ -182,12 +179,12 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SHAMAN_TEMPLE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_SHAMAN_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -203,7 +200,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SHAMAN_MONASTERY_BISON</BuildingClass>
 			<Type>BUILDING_SHAMAN_MONASTERY_BISON</Type>
 			<Description>TXT_KEY_BUILDING_SHAMAN_MONASTERY_BISON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHAMAN_MONASTERY_PEDIA</Civilopedia>
@@ -221,12 +217,12 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_BISON</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SHAMAN_MONASTERY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_BISON</BonusType>
@@ -245,7 +241,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SHAMAN_MONASTERY_COW</BuildingClass>
 			<Type>BUILDING_SHAMAN_MONASTERY_COW</Type>
 			<Description>TXT_KEY_BUILDING_SHAMAN_MONASTERY_COW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHAMAN_MONASTERY_PEDIA</Civilopedia>
@@ -263,12 +258,12 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_COW</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SHAMAN_MONASTERY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_COW</BonusType>
@@ -287,7 +282,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SHAMAN_MONASTERY_DEER</BuildingClass>
 			<Type>BUILDING_SHAMAN_MONASTERY_DEER</Type>
 			<Description>TXT_KEY_BUILDING_SHAMAN_MONASTERY_DEER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHAMAN_MONASTERY_PEDIA</Civilopedia>
@@ -305,12 +299,12 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_DEER</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SHAMAN_MONASTERY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_DEER</BonusType>
@@ -329,7 +323,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SHAMAN_MONASTERY_PIG</BuildingClass>
 			<Type>BUILDING_SHAMAN_MONASTERY_PIG</Type>
 			<Description>TXT_KEY_BUILDING_SHAMAN_MONASTERY_PIG</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHAMAN_MONASTERY_PEDIA</Civilopedia>
@@ -347,12 +340,12 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_PIG</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SHAMAN_MONASTERY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_PIG</BonusType>
@@ -371,7 +364,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SHAMAN_MONASTERY_SHEEP</BuildingClass>
 			<Type>BUILDING_SHAMAN_MONASTERY_SHEEP</Type>
 			<Description>TXT_KEY_BUILDING_SHAMAN_MONASTERY_SHEEP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHAMAN_MONASTERY_PEDIA</Civilopedia>
@@ -389,12 +381,12 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_SHEEP</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SHAMAN_MONASTERY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_SHEEP</BonusType>
@@ -413,7 +405,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SHAMAN_SHRINE</BuildingClass>
 			<Type>BUILDING_SHAMAN_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_SHAMAN_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHAMAN_SHRINE_PEDIA</Civilopedia>
@@ -468,7 +459,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SHAMAN_TEMPLE</BuildingClass>
 			<Type>BUILDING_SHAMAN_TEMPLE</Type>
 			<Description>TXT_KEY_BUILDING_SHAMAN_TEMPLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHAMAN_TEMPLE_PEDIA</Civilopedia>
@@ -522,7 +512,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SHAMAN_TEMPLE_BISON</BuildingClass>
 			<Type>BUILDING_SHAMAN_TEMPLE_BISON</Type>
 			<Description>TXT_KEY_BUILDING_SHAMAN_TEMPLE_BISON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHAMAN_TEMPLE_PEDIA</Civilopedia>
@@ -537,12 +526,12 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_BISON</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SHAMAN_TEMPLE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_SHAMAN_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_BISON</BonusType>
@@ -561,7 +550,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SHAMAN_TEMPLE_COW</BuildingClass>
 			<Type>BUILDING_SHAMAN_TEMPLE_COW</Type>
 			<Description>TXT_KEY_BUILDING_SHAMAN_TEMPLE_COW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHAMAN_TEMPLE_PEDIA</Civilopedia>
@@ -576,12 +564,12 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_COW</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SHAMAN_TEMPLE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_SHAMAN_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_COW</BonusType>
@@ -600,7 +588,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SHAMAN_TEMPLE_DEER</BuildingClass>
 			<Type>BUILDING_SHAMAN_TEMPLE_DEER</Type>
 			<Description>TXT_KEY_BUILDING_SHAMAN_TEMPLE_DEER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHAMAN_TEMPLE_PEDIA</Civilopedia>
@@ -615,12 +602,12 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_DEER</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SHAMAN_TEMPLE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_SHAMAN_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_DEER</BonusType>
@@ -639,7 +626,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SHAMAN_TEMPLE_PIG</BuildingClass>
 			<Type>BUILDING_SHAMAN_TEMPLE_PIG</Type>
 			<Description>TXT_KEY_BUILDING_SHAMAN_TEMPLE_PIG</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHAMAN_TEMPLE_PEDIA</Civilopedia>
@@ -654,12 +640,12 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_PIG</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SHAMAN_TEMPLE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_SHAMAN_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_PIG</BonusType>
@@ -678,7 +664,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SHAMAN_TEMPLE_SHEEP</BuildingClass>
 			<Type>BUILDING_SHAMAN_TEMPLE_SHEEP</Type>
 			<Description>TXT_KEY_BUILDING_SHAMAN_TEMPLE_SHEEP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHAMAN_TEMPLE_PEDIA</Civilopedia>
@@ -693,12 +678,12 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_SHEEP</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SHAMAN_TEMPLE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_SHAMAN_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_SHEEP</BonusType>
@@ -717,7 +702,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SHAMAN_MONASTERY_RABBIT</BuildingClass>
 			<Type>BUILDING_SHAMAN_MONASTERY_RABBIT</Type>
 			<Description>TXT_KEY_BUILDING_SHAMAN_MONASTERY_RABBIT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHAMAN_MONASTERY_PEDIA</Civilopedia>
@@ -735,12 +719,12 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_RABBIT</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SHAMAN_MONASTERY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_RABBIT</BonusType>
@@ -759,7 +743,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SHAMAN_MONASTERY_SEA_LIONS</BuildingClass>
 			<Type>BUILDING_SHAMAN_MONASTERY_SEA_LIONS</Type>
 			<Description>TXT_KEY_BUILDING_SHAMAN_MONASTERY_SEA_LIONS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHAMAN_MONASTERY_PEDIA</Civilopedia>
@@ -777,12 +760,12 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_SEA_LION_AND_SEAL</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SHAMAN_MONASTERY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
@@ -801,7 +784,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SHAMAN_MONASTERY_WALRUS</BuildingClass>
 			<Type>BUILDING_SHAMAN_MONASTERY_WALRUS</Type>
 			<Description>TXT_KEY_BUILDING_SHAMAN_MONASTERY_WALRUS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHAMAN_MONASTERY_PEDIA</Civilopedia>
@@ -819,12 +801,12 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_WALRUS</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SHAMAN_MONASTERY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_WALRUS</BonusType>
@@ -843,7 +825,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SHAMAN_TEMPLE_RABBIT</BuildingClass>
 			<Type>BUILDING_SHAMAN_TEMPLE_RABBIT</Type>
 			<Description>TXT_KEY_BUILDING_SHAMAN_TEMPLE_RABBIT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHAMAN_TEMPLE_PEDIA</Civilopedia>
@@ -858,12 +839,12 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_RABBIT</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SHAMAN_TEMPLE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_SHAMAN_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_RABBIT</BonusType>
@@ -882,7 +863,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SHAMAN_TEMPLE_SEA_LIONS</BuildingClass>
 			<Type>BUILDING_SHAMAN_TEMPLE_SEA_LIONS</Type>
 			<Description>TXT_KEY_BUILDING_SHAMAN_TEMPLE_SEA_LIONS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHAMAN_TEMPLE_PEDIA</Civilopedia>
@@ -897,12 +877,12 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_SEA_LION_AND_SEAL</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SHAMAN_TEMPLE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_SHAMAN_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
@@ -921,7 +901,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SHAMAN_TEMPLE_WALRUS</BuildingClass>
 			<Type>BUILDING_SHAMAN_TEMPLE_WALRUS</Type>
 			<Description>TXT_KEY_BUILDING_SHAMAN_TEMPLE_WALRUS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHAMAN_TEMPLE_PEDIA</Civilopedia>
@@ -936,12 +915,12 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_WALRUS</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SHAMAN_TEMPLE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_SHAMAN_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_WALRUS</BonusType>
@@ -960,18 +939,17 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DJENNE</BuildingClass>
 			<Type>BUILDING_DJENNE</Type>
-			<GlobalBuildingClassProductionModifiers>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_SHAMAN_CATHEDRAL</BuildingClassType>
+			<GlobalBuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_SHAMAN_CATHEDRAL</BuildingType>
 					<iProductionModifier>100</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_SHAMAN_CATHEDRAL2</BuildingClassType>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_SHAMAN_CATHEDRAL2</BuildingType>
 					<iProductionModifier>100</iProductionModifier>
-				</BuildingClassProductionModifier>
-			</GlobalBuildingClassProductionModifiers>
+				</BuildingProductionModifier>
+			</GlobalBuildingProductionModifiers>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

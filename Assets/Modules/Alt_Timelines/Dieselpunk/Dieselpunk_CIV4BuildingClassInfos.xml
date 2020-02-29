@@ -4,48 +4,48 @@
 <!-- Copyright Firaxis Games 2005 -->
 <!-- -->
 <!-- Building Class Infos -->
-<Civ4BuildingClassInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
-	<BuildingClassInfos>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_DIESELPUNK_EMBASSY</Type>
+<Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
+	<BuildingInfos>
+		<BuildingInfo>
+			<Type>BUILDING_DIESELPUNK_EMBASSY</Type>
 			<Description>TXT_KEY_BUILDING_DIESELPUNK_EMBASSY</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<DefaultBuilding>BUILDING_DIESELPUNK_EMBASSY</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_AERODROME</Type>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_AERODROME</Type>
 			<Description>TXT_KEY_BUILDING_AERODROME</Description>
 			<DefaultBuilding>BUILDING_AERODROME</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_GRAND_AERODROME</Type>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_GRAND_AERODROME</Type>
 			<Description>TXT_KEY_BUILDING_GRAND_AERODROME</Description>
 			<DefaultBuilding>BUILDING_GRAND_AERODROME</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_ZUSE_COMPUTER</Type>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_ZUSE_COMPUTER</Type>
 			<Description>TXT_KEY_BUILDING_ZUSE_COMPUTER</Description>
 			<DefaultBuilding>BUILDING_ZUSE_COMPUTER</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_DIRIGIBLE_TERMINAL</Type>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_DIRIGIBLE_TERMINAL</Type>
 			<Description>TXT_KEY_BUILDING_DIRIGIBLE_TERMINAL</Description>
 			<DefaultBuilding>BUILDING_DIRIGIBLE_TERMINAL</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_FARNSWORTH_LAB</Type>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_FARNSWORTH_LAB</Type>
 			<Description>TXT_KEY_BUILDING_FARNSWORTH_LAB</Description>
 			<DefaultBuilding>BUILDING_FARNSWORTH_LAB</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_THEREMIN_FACTORY</Type>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_THEREMIN_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_THEREMIN_FACTORY</Description>
 			<DefaultBuilding>BUILDING_THEREMIN_FACTORY</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_RADIOPLEX</Type>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_RADIOPLEX</Type>
 			<Description>TXT_KEY_BUILDING_RADIOPLEX</Description>
 			<DefaultBuilding>BUILDING_RADIOPLEX</DefaultBuilding>
-		</BuildingClassInfo>
-	</BuildingClassInfos>
-</Civ4BuildingClassInfos>
+		</BuildingInfo>
+	</BuildingInfos>
+</Civ4BuildingInfos>
