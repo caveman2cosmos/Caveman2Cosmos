@@ -399,7 +399,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_JET_PROPULSION</PrereqTech>
 			<BonusType>BONUS_JET_ENGINES</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
 				<And>
@@ -675,6 +675,10 @@ Base XP gained when defending
 				</Build>
 				<Build>
 					<BuildType>BUILD_SHAFT_MINE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -974,6 +978,10 @@ Base XP gained when defending
 				</Build>
 				<Build>
 					<BuildType>BUILD_SHAFT_MINE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1284,6 +1292,10 @@ Base XP gained when defending
 				</Build>
 				<Build>
 					<BuildType>BUILD_SHAFT_MINE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -1611,6 +1623,10 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -1932,6 +1948,10 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -2243,6 +2263,10 @@ Base XP gained when defending
 				</Build>
 				<Build>
 					<BuildType>BUILD_SHAFT_MINE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2563,6 +2587,10 @@ Base XP gained when defending
 				</Build>
 				<Build>
 					<BuildType>BUILD_SHAFT_MINE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -2892,6 +2920,10 @@ Base XP gained when defending
 				</Build>
 				<Build>
 					<BuildType>BUILD_SHAFT_MINE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3268,6 +3300,10 @@ Base XP gained when defending
 				</Build>
 				<Build>
 					<BuildType>BUILD_SHAFT_MINE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3654,6 +3690,10 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -4036,6 +4076,10 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -4399,7 +4443,7 @@ Base XP gained when defending
 			<BonusType>BONUS_AUTOMOBILES</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_BIOFUEL</BonusType>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			</PrereqBonuses>
 			<iCost>800</iCost>
 			<iMoves>2</iMoves>
@@ -5079,7 +5123,7 @@ Base XP gained when defending
 			</TechTypes>
 			<BonusType>BONUS_TIRES</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<iCost>630</iCost>
@@ -18113,7 +18157,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_ARMORED_VEHICLES</PrereqTech>
 			<BonusType>BONUS_TANKS</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<iCost>1000</iCost>
@@ -18201,7 +18245,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_MECHANIZED_WARFARE</PrereqTech>
 			<BonusType>BONUS_TANKS</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<iCost>1100</iCost>
@@ -18307,7 +18351,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_MECHANIZED_WARFARE</PrereqTech>
 			<BonusType>BONUS_TANKS</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<iCost>1200</iCost>
@@ -18412,7 +18456,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_MECHANIZED_WARFARE</PrereqTech>
 			<BonusType>BONUS_TANKS</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<iCost>1300</iCost>
@@ -18517,7 +18561,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_ADVANCED_ROCKETRY</PrereqTech>
 			<BonusType>BONUS_TANKS</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
@@ -18647,7 +18691,7 @@ Base XP gained when defending
 			</TechTypes>
 			<BonusType>BONUS_TANKS</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
@@ -18774,7 +18818,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_METAMATERIALS</PrereqTech>
 			<BonusType>BONUS_TANKS</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
@@ -18876,7 +18920,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_BIOMATERIALS</PrereqTech>
 			<BonusType>BONUS_TANKS</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
@@ -19011,7 +19055,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_BIOMIMETICS</PrereqTech>
 			<BonusType>BONUS_TANKS</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
@@ -19124,7 +19168,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_LEVITATION</PrereqTech>
 			<BonusType>BONUS_TANKS</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
@@ -19268,7 +19312,7 @@ Base XP gained when defending
 				</And>
 			</TrainCondition>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<iCost>4300</iCost>
@@ -19368,7 +19412,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_COILGUN</PrereqTech>
 			<BonusType>BONUS_TANKS</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
@@ -19485,7 +19529,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_ADVANCED_SHIELDING</PrereqTech>
 			<BonusType>BONUS_TANKS</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
@@ -19619,7 +19663,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_ARMORED_VEHICLES</PrereqTech>
 			<BonusType>BONUS_AUTOMOBILES</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<iCost>1025</iCost>
@@ -19766,7 +19810,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_MECHANIZED_WARFARE</PrereqTech>
 			<BonusType>BONUS_AUTOMOBILES</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<iCost>1100</iCost>
@@ -19881,7 +19925,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_MANUFACTURING</PrereqTech>
 			<BonusType>BONUS_AUTOMOBILES</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<iCost>1180</iCost>
@@ -20031,7 +20075,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_COMPOSITES</PrereqTech>
 			<BonusType>BONUS_AUTOMOBILES</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<iCost>1700</iCost>
@@ -20267,7 +20311,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_MILITARY_ROBOTICS</PrereqTech>
 			<BonusType>BONUS_AUTOMOBILES</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<iCost>2865</iCost>
@@ -20366,7 +20410,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_MILITARY_ROBOTICS</PrereqTech>
 			<BonusType>BONUS_AUTOMOBILES</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<iCost>2865</iCost>
@@ -23123,7 +23167,7 @@ Base XP gained when defending
 				<BuildingType>BUILDING_WEAPON_FACTORY</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_SEMICONDUCTORS</PrereqTech>
-			<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<iCost>1180</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>48</iCombat>
@@ -23231,7 +23275,7 @@ Base XP gained when defending
 				<BuildingType>BUILDING_WEAPON_FACTORY</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_COMPOSITES</PrereqTech>
-			<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<iCost>1700</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>65</iCombat>
@@ -23337,7 +23381,7 @@ Base XP gained when defending
 				<BuildingType>BUILDING_WEAPON_FACTORY</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MICROMECHANICS</PrereqTech>
-			<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<iCost>3294</iCost>
 			<iMoves>3</iMoves>
 			<iCombat>90</iCombat>
@@ -23442,7 +23486,7 @@ Base XP gained when defending
 			</TechTypes>
 			<BonusType>BONUS_TITANIUM_WARES</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
@@ -23870,7 +23914,7 @@ Base XP gained when defending
 			</TechTypes>
 			<BonusType>BONUS_AUTOMOBILES</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<iCost>1030</iCost>
@@ -23970,7 +24014,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_GUIDED_WEAPONS</PrereqTech>
 			<BonusType>BONUS_AUTOMOBILES</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<iCost>1365</iCost>
@@ -24099,7 +24143,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_MILITARY_ROBOTICS</PrereqTech>
 			<BonusType>BONUS_AUTOMOBILES</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<iCost>2580</iCost>
@@ -25073,7 +25117,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_AUTOMATIC_WEAPONS</PrereqTech>
 			<BonusType>BONUS_CHEMICALS</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			</PrereqBonuses>
 			<iCost>890</iCost>
 			<iMoves>1</iMoves>
@@ -25194,7 +25238,7 @@ Base XP gained when defending
 			</TechTypes>
 			<BonusType>BONUS_CHEMICALS</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			</PrereqBonuses>
 			<iCost>1400</iCost>
 			<iMoves>1</iMoves>
@@ -28938,7 +28982,7 @@ Base XP gained when defending
 			</UnitAIs>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_URANIUM</BonusType>
 			</PrereqBonuses>
 			<iCost>750</iCost>
@@ -29026,7 +29070,7 @@ Base XP gained when defending
 			</UnitAIs>
 			<PrereqTech>TECH_MANUFACTURING</PrereqTech>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_URANIUM</BonusType>
 			</PrereqBonuses>
 			<iCost>1180</iCost>
@@ -29110,7 +29154,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_STEALTH</PrereqTech>
 			<BonusType>BONUS_ALUMINUM_WARES</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			</PrereqBonuses>
 			<iCost>1660</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
@@ -31023,7 +31067,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_MECHANIZED_WARFARE</PrereqTech>
 			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			</PrereqBonuses>
 			<iCost>1300</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
@@ -31124,7 +31168,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_SEMICONDUCTORS</PrereqTech>
 			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_URANIUM</BonusType>
 			</PrereqBonuses>
 			<iCost>1420</iCost>
@@ -31230,7 +31274,7 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_MECHANIZED_WARFARE</PrereqTech>
-			<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_STEEL_WARES</BonusType>
 			</PrereqBonuses>
@@ -31338,7 +31382,7 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_MECHANIZED_WARFARE</PrereqTech>
-			<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_STEEL_WARES</BonusType>
 			</PrereqBonuses>
@@ -31452,7 +31496,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_NEURAL_NETWORKS</PrereqTech>
 			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_URANIUM</BonusType>
 			</PrereqBonuses>
 			<iCost>2305</iCost>
@@ -31575,7 +31619,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_DISASTER_ROBOTS</PrereqTech>
 			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_URANIUM</BonusType>
 			</PrereqBonuses>
 			<iCost>2985</iCost>
@@ -31701,7 +31745,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_GUIDED_WEAPONS</PrereqTech>
 			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_URANIUM</BonusType>
 			</PrereqBonuses>
 			<iCost>1845</iCost>
@@ -32851,7 +32895,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_ARMORED_VEHICLES</PrereqTech>
 			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_COAL</BonusType>
 			</PrereqBonuses>
 			<iCost>1150</iCost>
@@ -32965,7 +33009,7 @@ Base XP gained when defending
 			</TechTypes>
 			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			</PrereqBonuses>
 			<iCost>1300</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
@@ -33064,7 +33108,7 @@ Base XP gained when defending
 			</UnitAIs>
 			<PrereqTech>TECH_ROBOTICS</PrereqTech>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_URANIUM</BonusType>
 			</PrereqBonuses>
 			<iCost>1765</iCost>
@@ -33174,7 +33218,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_STEALTH</PrereqTech>
 			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_URANIUM</BonusType>
 			</PrereqBonuses>
 			<iCost>2030</iCost>
@@ -33577,7 +33621,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_SUBMARINE_WARFARE</PrereqTech>
 			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_URANIUM</BonusType>
 			</PrereqBonuses>
 			<iCost>1290</iCost>
@@ -33714,7 +33758,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_ADVANCED_ROCKETRY</PrereqTech>
 			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_URANIUM</BonusType>
 			</PrereqBonuses>
 			<iCost>1680</iCost>
@@ -34439,7 +34483,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_NAVAL_FLIGHT</PrereqTech>
 			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			</PrereqBonuses>
 			<iCost>1300</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
@@ -34556,7 +34600,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_JET_PROPULSION</PrereqTech>
 			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_URANIUM</BonusType>
 			</PrereqBonuses>
 			<iCost>1660</iCost>
@@ -35018,7 +35062,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_SUBMARINE_WARFARE</PrereqTech>
 			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			</PrereqBonuses>
 			<iCost>1130</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
@@ -35111,7 +35155,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_COAST_GUARD</PrereqTech>
 			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			</PrereqBonuses>
 			<iCost>1200</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
@@ -35722,7 +35766,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_ASSEMBLY_LINE</PrereqTech>
 			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			</PrereqBonuses>
 			<iCost>710</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
@@ -35876,7 +35920,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_SUBMARINE_WARFARE</PrereqTech>
 			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			</PrereqBonuses>
 			<iCost>1230</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
@@ -36883,7 +36927,7 @@ Base XP gained when defending
 			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_BIOFUEL</BonusType>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
 				<And>
@@ -37017,7 +37061,7 @@ Base XP gained when defending
 			<BonusType>BONUS_ALUMINUM_WARES</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_BIOFUEL</BonusType>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
 				<And>
@@ -37139,7 +37183,7 @@ Base XP gained when defending
 			<BonusType>BONUS_TITANIUM_WARES</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_BIOFUEL</BonusType>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
 				<And>
@@ -37275,7 +37319,7 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_AVIATION</PrereqTech>
-			<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<iCost>1030</iCost>
 			<iMoves>4</iMoves>
 			<TerrainImpassableTypes>
@@ -37417,7 +37461,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_VERTICAL_FLIGHT</PrereqTech>
 			<BonusType>BONUS_HELICOPTERS</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			</PrereqBonuses>
 			<iCost>1280</iCost>
 			<iMoves>4</iMoves>
@@ -37560,7 +37604,7 @@ Base XP gained when defending
 			</TechTypes>
 			<BonusType>BONUS_HELICOPTERS</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			</PrereqBonuses>
 			<iCost>1475</iCost>
 			<iMoves>5</iMoves>
@@ -37702,7 +37746,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_STEALTH</PrereqTech>
 			<BonusType>BONUS_HELICOPTERS</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			</PrereqBonuses>
 			<iCost>1845</iCost>
 			<iAdvancedStartCost>150</iAdvancedStartCost>
@@ -37844,7 +37888,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_MILITARY_ROBOTICS</PrereqTech>
 			<BonusType>BONUS_HELICOPTERS</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			</PrereqBonuses>
 			<iCost>2865</iCost>
 			<iMoves>6</iMoves>
@@ -37987,7 +38031,7 @@ Base XP gained when defending
 			</TechTypes>
 			<BonusType>BONUS_HELICOPTERS</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			</PrereqBonuses>
 			<iCost>4300</iCost>
 			<iMoves>7</iMoves>
@@ -38404,7 +38448,7 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_FLIGHT</PrereqTech>
-			<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_AMMUNITION</BonusType>
 			</PrereqBonuses>
@@ -38491,7 +38535,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_AVIATION</PrereqTech>
 			<BonusType>BONUS_AIRCRAFT</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			</PrereqBonuses>
 			<iCost>930</iCost>
 			<iMoves>1</iMoves>
@@ -38573,7 +38617,7 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_JET_PROPULSION</PrereqTech>
-			<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_AMMUNITION</BonusType>
 			</PrereqBonuses>
@@ -38664,7 +38708,7 @@ Base XP gained when defending
 			<TechTypes>
 				<PrereqTech>TECH_JET_PROPULSION</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_ALUMINUM_WARES</BonusType>
 			</PrereqBonuses>
@@ -38766,7 +38810,7 @@ Base XP gained when defending
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_MILITARY_AIRBASE</PrereqBuilding>
 			<PrereqTech>TECH_COMPOSITES</PrereqTech>
-			<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_AMMUNITION</BonusType>
 			</PrereqBonuses>
@@ -38867,7 +38911,7 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_STEALTH</PrereqTech>
-			<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -39186,7 +39230,7 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_ADVANCED_AVIATION</PrereqTech>
-			<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -39279,7 +39323,7 @@ Base XP gained when defending
 			<TechTypes>
 				<PrereqTech>TECH_JET_PROPULSION</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_ALUMINUM_WARES</BonusType>
 			</PrereqBonuses>
@@ -39376,7 +39420,7 @@ Base XP gained when defending
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_MILITARY_AIRBASE</PrereqBuilding>
 			<PrereqTech>TECH_COMPOSITES</PrereqTech>
-			<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_ALUMINUM_WARES</BonusType>
 			</PrereqBonuses>
@@ -39481,7 +39525,7 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_STEALTH</PrereqTech>
-			<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_AMMUNITION</BonusType>
 			</PrereqBonuses>
@@ -39592,7 +39636,7 @@ Base XP gained when defending
 			<TechTypes>
 				<PrereqTech>TECH_STEALTH</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_ALUMINUM_WARES</BonusType>
 			</PrereqBonuses>
@@ -39808,7 +39852,7 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_AVIATION</PrereqTech>
-			<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_AMMUNITION</BonusType>
 			</PrereqBonuses>
@@ -39918,7 +39962,7 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_GUIDED_WEAPONS</PrereqTech>
-			<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_AMMUNITION</BonusType>
 			</PrereqBonuses>
@@ -40029,7 +40073,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_UNMANNED_AIR_VEHICLES</PrereqTech>
 			<BonusType>BONUS_UNMANNED_AIRCRAFTS</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
@@ -40140,7 +40184,7 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_NAVAL_FLIGHT</PrereqTech>
-			<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -40255,7 +40299,7 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_ADVANCED_AVIATION</PrereqTech>
-			<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -40369,7 +40413,7 @@ Base XP gained when defending
 			<TechTypes>
 				<PrereqTech>TECH_JET_PROPULSION</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_ALUMINUM_WARES</BonusType>
 			</PrereqBonuses>
@@ -40490,7 +40534,7 @@ Base XP gained when defending
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_MILITARY_AIRBASE</PrereqBuilding>
 			<PrereqTech>TECH_GUIDED_WEAPONS</PrereqTech>
-			<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_ALUMINUM_WARES</BonusType>
 			</PrereqBonuses>
@@ -40605,7 +40649,7 @@ Base XP gained when defending
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_MILITARY_AIRBASE</PrereqBuilding>
 			<PrereqTech>TECH_COMPOSITES</PrereqTech>
-			<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_ALUMINUM_WARES</BonusType>
 			</PrereqBonuses>
@@ -40723,7 +40767,7 @@ Base XP gained when defending
 			<TechTypes>
 				<PrereqTech>TECH_JET_PROPULSION</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_ALUMINUM_WARES</BonusType>
 			</PrereqBonuses>
@@ -40822,7 +40866,7 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_COMPOSITES</PrereqTech>
-			<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_AMMUNITION</BonusType>
 			</PrereqBonuses>
@@ -40923,7 +40967,7 @@ Base XP gained when defending
 			<TechTypes>
 				<PrereqTech>TECH_STEALTH</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_ALUMINUM_WARES</BonusType>
 			</PrereqBonuses>
@@ -41016,7 +41060,7 @@ Base XP gained when defending
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_SECRET_ARMY_BASE</PrereqBuilding>
 			<PrereqTech>TECH_JET_PROPULSION</PrereqTech>
-			<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_ALUMINUM_WARES</BonusType>
 			</PrereqBonuses>
@@ -41105,7 +41149,7 @@ Base XP gained when defending
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_SECRET_ARMY_BASE</PrereqBuilding>
 			<PrereqTech>TECH_SUPERSONIC_FLIGHT</PrereqTech>
-			<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_ALUMINUM_WARES</BonusType>
 			</PrereqBonuses>
@@ -41200,7 +41244,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_UNMANNED_AIR_VEHICLES</PrereqTech>
 			<BonusType>BONUS_UNMANNED_AIRCRAFTS</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
@@ -44534,7 +44578,7 @@ Base XP gained when defending
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_OIL_PRODUCTS</ID>
+						<ID>BONUS_PETROLEUM_PRODUCTS</ID>
 					</Has>
 					<Or>
 						<Has>
@@ -44711,7 +44755,7 @@ Base XP gained when defending
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_OIL_PRODUCTS</ID>
+						<ID>BONUS_PETROLEUM_PRODUCTS</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -44849,7 +44893,7 @@ Base XP gained when defending
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_OIL_PRODUCTS</ID>
+						<ID>BONUS_PETROLEUM_PRODUCTS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -45020,7 +45064,7 @@ Base XP gained when defending
 					<Or>
 						<Has>
 							<GOMType>GOM_BONUS</GOMType>
-							<ID>BONUS_OIL_PRODUCTS</ID>
+							<ID>BONUS_PETROLEUM_PRODUCTS</ID>
 						</Has>
 						<Has>
 							<GOMType>GOM_BONUS</GOMType>
@@ -47174,7 +47218,7 @@ Base XP gained when defending
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_OIL_PRODUCTS</ID>
+						<ID>BONUS_PETROLEUM_PRODUCTS</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -47347,7 +47391,7 @@ Base XP gained when defending
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_OIL_PRODUCTS</ID>
+						<ID>BONUS_PETROLEUM_PRODUCTS</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -47548,7 +47592,7 @@ Base XP gained when defending
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_OIL_PRODUCTS</ID>
+						<ID>BONUS_PETROLEUM_PRODUCTS</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -47754,7 +47798,7 @@ Base XP gained when defending
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_OIL_PRODUCTS</ID>
+						<ID>BONUS_PETROLEUM_PRODUCTS</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -52184,7 +52228,7 @@ Base XP gained when defending
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_GEMS</BonusType>
+					<BonusType>BONUS_GEMSTONE</BonusType>
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
@@ -52305,7 +52349,7 @@ Base XP gained when defending
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_GEMS</BonusType>
+					<BonusType>BONUS_GEMSTONE</BonusType>
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
@@ -52445,7 +52489,7 @@ Base XP gained when defending
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_GEMS</BonusType>
+					<BonusType>BONUS_GEMSTONE</BonusType>
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
@@ -52581,7 +52625,7 @@ Base XP gained when defending
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_GEMS</BonusType>
+					<BonusType>BONUS_GEMSTONE</BonusType>
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
@@ -52697,7 +52741,7 @@ Base XP gained when defending
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_GEMS</BonusType>
+					<BonusType>BONUS_GEMSTONE</BonusType>
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
@@ -59767,7 +59811,7 @@ Base XP gained when defending
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_OIL_PRODUCTS</ID>
+						<ID>BONUS_PETROLEUM_PRODUCTS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -59974,7 +60018,7 @@ Base XP gained when defending
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_OIL_PRODUCTS</ID>
+						<ID>BONUS_PETROLEUM_PRODUCTS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -60266,7 +60310,7 @@ Base XP gained when defending
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_OIL_PRODUCTS</ID>
+						<ID>BONUS_PETROLEUM_PRODUCTS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -61819,7 +61863,7 @@ Base XP gained when defending
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_OIL_PRODUCTS</ID>
+						<ID>BONUS_PETROLEUM_PRODUCTS</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -61944,7 +61988,7 @@ Base XP gained when defending
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_OIL_PRODUCTS</ID>
+						<ID>BONUS_PETROLEUM_PRODUCTS</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -62076,7 +62120,7 @@ Base XP gained when defending
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_OIL_PRODUCTS</ID>
+						<ID>BONUS_PETROLEUM_PRODUCTS</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -62201,7 +62245,7 @@ Base XP gained when defending
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_OIL_PRODUCTS</ID>
+						<ID>BONUS_PETROLEUM_PRODUCTS</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -62451,7 +62495,7 @@ Base XP gained when defending
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_MEDICAL_TRICODERS</ID>
+						<ID>BONUS_MEDICAL_TRICORDERS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -62905,7 +62949,7 @@ Base XP gained when defending
 			</PrereqBuildingClasses>
 			<PrereqBuilding>BUILDING_HOSPITAL</PrereqBuilding>
 			<PrereqTech>TECH_GLOBALIZATION</PrereqTech>
-			<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_STEEL_WARES</BonusType>
 			</PrereqBonuses>
@@ -63380,7 +63424,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_MILITARY_ROBOTICS</PrereqTech>
 			<BonusType>BONUS_TIRES</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<iCost>2150</iCost>
@@ -63508,7 +63552,7 @@ Base XP gained when defending
 			<PrereqTech>TECH_MILITARY_ROBOTICS</PrereqTech>
 			<BonusType>BONUS_HELICOPTERS</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			</PrereqBonuses>
 			<iCost>2865</iCost>
 			<iAdvancedStartCost>150</iAdvancedStartCost>
@@ -63651,7 +63695,7 @@ Base XP gained when defending
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_OIL_PRODUCTS</ID>
+						<ID>BONUS_PETROLEUM_PRODUCTS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -66239,6 +66283,10 @@ iTradeMultiplier>3</iTradeMultiplier>
 				</Build>
 				<Build>
 					<BuildType>BUILD_SHAFT_MINE_SLAVE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE_SLAVE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>

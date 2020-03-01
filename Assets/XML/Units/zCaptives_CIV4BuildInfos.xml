@@ -922,6 +922,23 @@
 			<bMine>1</bMine>
 		</BuildInfo>
 		<BuildInfo>
+			<Type>BUILD_EARLY_MOUNTAIN_MINE_SLAVE</Type>
+			<Description>TXT_KEY_BUILD_EARLY_MOUNTAIN_MINE_SLAVE</Description>
+			<PrereqTech>TECH_MINING</PrereqTech>
+			<ObsoleteTech>TECH_MOUNTAINEERING</ObsoleteTech>
+			<iTime>300</iTime>
+			<iCost>0</iCost>
+			<bKill>1</bKill>
+			<ImprovementType>IMPROVEMENT_EARLY_MOUNTAIN_MINE</ImprovementType>
+			<RouteType>NONE</RouteType>
+			<EntityEvent>ENTITY_EVENT_MINE</EntityEvent>			
+			<HotKey>KB_M</HotKey>
+			<bShiftDown>1</bShiftDown>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<Button>Art/Interface/Buttons/Builds/Button_StoneToolsWorkshop.dds</Button>
+			<bMine>1</bMine>
+		</BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_MOUNTAIN_MINE_SLAVE</Type>
 			<Description>TXT_KEY_BUILD_MOUNTAIN_MINE_SLAVE</Description>
 			<PrereqTech>TECH_MOUNTAINEERING</PrereqTech>

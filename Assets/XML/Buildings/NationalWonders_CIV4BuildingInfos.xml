@@ -1349,7 +1349,7 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_OIL_PRODUCTS</Bonus>
+				<Bonus>BONUS_PETROLEUM_PRODUCTS</Bonus>
 				<Bonus>BONUS_BIOFUEL</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
@@ -1703,7 +1703,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CELEBRATION</PrereqTech>
 			<PrereqBonuses>
-				<Bonus>BONUS_FURS</Bonus>
+				<Bonus>BONUS_FUR</Bonus>
 				<Bonus>BONUS_BASKETS</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
@@ -1858,7 +1858,7 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_OIL_PRODUCTS</Bonus>
+				<Bonus>BONUS_PETROLEUM_PRODUCTS</Bonus>
 				<Bonus>BONUS_BIOFUEL</Bonus>
 			</PrereqBonuses>
 			<!-- Cost -->

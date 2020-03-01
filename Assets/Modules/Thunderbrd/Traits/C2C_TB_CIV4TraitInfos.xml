@@ -9585,6 +9585,14 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_EARLY_MOUNTAIN_MINE</ImprovementType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>-1</iYield>
+						<iYield>0</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_MOUNTAIN_MINE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
@@ -9968,7 +9976,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
-					<BonusType>BONUS_GEOTHERMAL_SEA_VENT</BonusType>
+					<BonusType>BONUS_HYDROTHERMAL_VENT</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
@@ -10296,7 +10304,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
-					<BonusType>BONUS_GEOTHERMAL_SEA_VENT</BonusType>
+					<BonusType>BONUS_HYDROTHERMAL_VENT</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
@@ -10391,6 +10399,14 @@
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_SHAFT_MINE</ImprovementType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>-1</iYield>
+						<iYield>0</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_EARLY_MOUNTAIN_MINE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
@@ -24044,6 +24060,14 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_EARLY_MOUNTAIN_MINE</ImprovementType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+						<iYield>0</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_MOUNTAIN_MINE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
@@ -24149,6 +24173,10 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_SHAFT_MINE</BuildType>
+					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
+				</BuildWorkerSpeedModifierType>
+				<BuildWorkerSpeedModifierType>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -25484,6 +25512,14 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_EARLY_MOUNTAIN_MINE</ImprovementType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+						<iYield>0</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_MOUNTAIN_MINE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
@@ -25521,6 +25557,10 @@
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_SHAFT_MINE</BuildType>
+					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
+				</BuildWorkerSpeedModifierType>
+				<BuildWorkerSpeedModifierType>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -26507,6 +26547,14 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_EARLY_MOUNTAIN_MINE</ImprovementType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>-1</iYield>
+						<iYield>0</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_MOUNTAIN_MINE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
@@ -26612,6 +26660,10 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_SHAFT_MINE</BuildType>
+					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
+				</BuildWorkerSpeedModifierType>
+				<BuildWorkerSpeedModifierType>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -27942,6 +27994,14 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_EARLY_MOUNTAIN_MINE</ImprovementType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>-1</iYield>
+						<iYield>0</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_MOUNTAIN_MINE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
@@ -27979,6 +28039,10 @@
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_SHAFT_MINE</BuildType>
+					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
+				</BuildWorkerSpeedModifierType>
+				<BuildWorkerSpeedModifierType>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -66414,7 +66478,7 @@
 					<iHappinessChange>-1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
-					<BonusType>BONUS_METH</BonusType>
+					<BonusType>BONUS_METHAMPHETAMINE</BonusType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
@@ -66852,7 +66916,7 @@
 					<iHappinessChange>-1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
-					<BonusType>BONUS_METH</BonusType>
+					<BonusType>BONUS_METHAMPHETAMINE</BonusType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
@@ -68082,7 +68146,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
-					<BonusType>BONUS_METH</BonusType>
+					<BonusType>BONUS_METHAMPHETAMINE</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
@@ -68936,7 +69000,7 @@
 			</PropertyManipulators>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
-					<BonusType>BONUS_METH</BonusType>
+					<BonusType>BONUS_METHAMPHETAMINE</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>

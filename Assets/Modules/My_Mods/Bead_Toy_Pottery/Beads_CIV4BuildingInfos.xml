@@ -31,7 +31,7 @@
 				<Bonus>BONUS_SHELLFISH</Bonus>
 				<Bonus>BONUS_OBSIDIAN</Bonus>
 				<Bonus>BONUS_FINE_CLAY</Bonus>
-				<Bonus>BONUS_COMMON_CLAY</Bonus>
+				<Bonus>BONUS_CLAY</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -73,7 +73,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_GEMS</BonusType>
+					<BonusType>BONUS_GEMSTONE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -162,7 +162,7 @@
 				<Bonus>BONUS_SHELLFISH</Bonus>
 				<Bonus>BONUS_OBSIDIAN</Bonus>
 				<Bonus>BONUS_FINE_CLAY</Bonus>
-				<Bonus>BONUS_COMMON_CLAY</Bonus>
+				<Bonus>BONUS_CLAY</Bonus>
 			</PrereqBonuses>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
@@ -213,7 +213,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_GEMS</BonusType>
+					<BonusType>BONUS_GEMSTONE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -276,7 +276,7 @@
 				<Bonus>BONUS_SHELLFISH</Bonus>
 				<Bonus>BONUS_OBSIDIAN</Bonus>
 				<Bonus>BONUS_FINE_CLAY</Bonus>
-				<Bonus>BONUS_COMMON_CLAY</Bonus>
+				<Bonus>BONUS_CLAY</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -327,7 +327,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_GEMS</BonusType>
+					<BonusType>BONUS_GEMSTONE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
