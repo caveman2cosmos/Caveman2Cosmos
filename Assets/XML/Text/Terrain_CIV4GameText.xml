@@ -633,7 +633,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_NONE</Tag>
 		<English>No terrain</English>
-		<French>Vide</French>
+		<French>Pas de terrain</French>
 		<Spanish>
 			<Text>Vacío</Text>
 			<Gender>Male</Gender>
