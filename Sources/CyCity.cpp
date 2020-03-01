@@ -440,17 +440,12 @@ int CyCity::getCurrentProductionDifference(bool bIgnoreFood, bool bOverflow)
 	) : -1;
 }
 
-int CyCity::getUnitProductionModifier(int /*UnitTypes*/ iUnit)
-{
-	return m_pCity ? m_pCity->getProductionModifier((UnitTypes)iUnit) : -1;
-}
-
 int CyCity::getBuildingProductionModifier(int /*BuildingTypes*/ iBuilding)
 {
 	return m_pCity ? m_pCity->getProductionModifier((BuildingTypes)iBuilding) : -1;
 }
 
-int CyCity::getProjectProductionModifier(int /*ProjectTypes*/ eProject)											
+int CyCity::getProjectProductionModifier(int /*ProjectTypes*/ eProject)
 {
 	return m_pCity ? m_pCity->getProductionModifier((ProjectTypes)eProject) : -1;
 }
@@ -2140,19 +2135,10 @@ int CyCity::getDomainProductionModifier(int /*DomainTypes*/ eIndex)
 	return m_pCity ? m_pCity->getDomainProductionModifier((DomainTypes)eIndex) : -1;
 }
 
-/************************************************************************************************/
-/* Afforess	UnitClassProductionModifier Start		 09/25/09                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-int CyCity::getUnitClassProductionModifier(int /*UnitClassTypes*/ eIndex)
+int CyCity::getUnitProductionModifier(int /*UnitTypes*/ eIndex) const
 {
-	return m_pCity ? m_pCity->getUnitClassProductionModifier((UnitClassTypes)eIndex) : -1;
+	return m_pCity ? m_pCity->getUnitProductionModifier((UnitTypes)eIndex) : -1;
 }
-/************************************************************************************************/
-/* Afforess	UnitClassProductionModifier END                                                  */
-/************************************************************************************************/	
-
 
 int CyCity::getCulture(int /*PlayerTypes*/ eIndex)
 {
@@ -2895,11 +2881,11 @@ bool CyCity::canUpgradeUnit(int /*UnitTypes*/ eUnit) const
 	return (m_pCity ? m_pCity->canUpgradeUnit((UnitTypes)eUnit) : false);
 }
 
-void CyCity::changeUnitClassProductionModifier(int /*UnitClassTypes*/ eIndex, int iChange)
+void CyCity::changeUnitProductionModifier(int /*UnitTypes*/ eIndex, int iChange)
 {
 	if (m_pCity)
 	{
-		m_pCity->changeUnitClassProductionModifier((UnitClassTypes)eIndex, iChange);
+		m_pCity->changeUnitProductionModifier((UnitTypes)eIndex, iChange);
 	}
 }
 

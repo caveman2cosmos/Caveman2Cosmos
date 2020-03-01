@@ -12,7 +12,7 @@
 			<Adjective>TXT_KEY_TECH_ANDEANISM_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_TECH_ANDEANISM_PEDIA</Civilopedia>
 			<TechPrereq>TECH_ANDEANISM</TechPrereq>
-			<FreeUnitClass>UNITCLASS_ANDEAN_MISSIONARY</FreeUnitClass>
+			<FreeUnit>UNIT_ANDEAN_MISSIONARY</FreeUnit>
 			<iFreeUnits>1</iFreeUnits>
 			<iSpreadFactor>20</iSpreadFactor>
 			<iTGAIndex>11</iTGAIndex>

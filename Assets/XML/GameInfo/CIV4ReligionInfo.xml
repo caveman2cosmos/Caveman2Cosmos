@@ -12,7 +12,7 @@
 			<Adjective>TXT_KEY_TECH_JUDAISM_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_TECH_JUDAISM_PEDIA</Civilopedia>
 			<TechPrereq>TECH_JUDAISM</TechPrereq>
-			<FreeUnitClass>UNITCLASS_JEWISH_MISSIONARY</FreeUnitClass>
+			<FreeUnit>UNIT_JEWISH_MISSIONARY</FreeUnit>
 			<iFreeUnits>0</iFreeUnits>
 			<iSpreadFactor>30</iSpreadFactor>
 			<iTGAIndex>0</iTGAIndex>
@@ -78,7 +78,7 @@
 			<Adjective>TXT_KEY_TECH_CHRISTIANITY_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_TECH_CHRISTIANITY_PEDIA</Civilopedia>
 			<TechPrereq>TECH_CHRISTIANITY</TechPrereq>
-			<FreeUnitClass>UNITCLASS_CHRISTIAN_MISSIONARY</FreeUnitClass>
+			<FreeUnit>UNIT_CHRISTIAN_MISSIONARY</FreeUnit>
 			<iFreeUnits>1</iFreeUnits>
 			<iSpreadFactor>50</iSpreadFactor>
 			<iTGAIndex>1</iTGAIndex>
@@ -144,7 +144,7 @@
 			<Adjective>TXT_KEY_TECH_ISLAM_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_TECH_ISLAM_PEDIA</Civilopedia>
 			<TechPrereq>TECH_ISLAM</TechPrereq>
-			<FreeUnitClass>UNITCLASS_ISLAMIC_MISSIONARY</FreeUnitClass>
+			<FreeUnit>UNIT_ISLAMIC_MISSIONARY</FreeUnit>
 			<iFreeUnits>1</iFreeUnits>
 			<iSpreadFactor>60</iSpreadFactor>
 			<iTGAIndex>2</iTGAIndex>
@@ -210,7 +210,7 @@
 			<Adjective>TXT_KEY_TECH_HINDUISM_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_TECH_HINDUISM_PEDIA</Civilopedia>
 			<TechPrereq>TECH_HINDUISM</TechPrereq>
-			<FreeUnitClass>UNITCLASS_HINDU_MISSIONARY</FreeUnitClass>
+			<FreeUnit>UNIT_HINDU_MISSIONARY</FreeUnit>
 			<iFreeUnits>0</iFreeUnits>
 			<iSpreadFactor>20</iSpreadFactor>
 			<iTGAIndex>3</iTGAIndex>
@@ -276,7 +276,7 @@
 			<Adjective>TXT_KEY_TECH_BUDDHISM_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_TECH_BUDDHISM_PEDIA</Civilopedia>
 			<TechPrereq>TECH_BUDDHISM</TechPrereq>
-			<FreeUnitClass>UNITCLASS_BUDDHIST_MISSIONARY</FreeUnitClass>
+			<FreeUnit>UNIT_BUDDHIST_MISSIONARY</FreeUnit>
 			<iFreeUnits>0</iFreeUnits>
 			<iSpreadFactor>35</iSpreadFactor>
 			<iTGAIndex>4</iTGAIndex>
@@ -342,7 +342,7 @@
 			<Adjective>TXT_KEY_TECH_CONFUCIANISM_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_TECH_CONFUCIANISM_PEDIA</Civilopedia>
 			<TechPrereq>TECH_CONFUCIANISM</TechPrereq>
-			<FreeUnitClass>UNITCLASS_CONFUCIAN_MISSIONARY</FreeUnitClass>
+			<FreeUnit>UNIT_CONFUCIAN_MISSIONARY</FreeUnit>
 			<iFreeUnits>1</iFreeUnits>
 			<iSpreadFactor>50</iSpreadFactor>
 			<iTGAIndex>5</iTGAIndex>
@@ -408,7 +408,7 @@
 			<Adjective>TXT_KEY_TECH_TAOISM_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_TECH_TAOISM_PEDIA</Civilopedia>
 			<TechPrereq>TECH_TAOISM</TechPrereq>
-			<FreeUnitClass>UNITCLASS_TAOIST_MISSIONARY</FreeUnitClass>
+			<FreeUnit>UNIT_TAOIST_MISSIONARY</FreeUnit>
 			<iFreeUnits>1</iFreeUnits>
 			<iSpreadFactor>50</iSpreadFactor>
 			<iTGAIndex>6</iTGAIndex>
@@ -474,7 +474,7 @@
 			<Adjective>TXT_KEY_TECH_ZOROASTRIANISM_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_TECH_ZOROASTRIANISM_PEDIA</Civilopedia>
 			<TechPrereq>TECH_ZOROASTRIANISM</TechPrereq>
-			<FreeUnitClass>UNITCLASS_ZOROASTRIAN_MISSIONARY</FreeUnitClass>
+			<FreeUnit>UNIT_ZOROASTRIAN_MISSIONARY</FreeUnit>
 			<iFreeUnits>0</iFreeUnits>
 			<iSpreadFactor>25</iSpreadFactor>
 			<iTGAIndex>7</iTGAIndex>
@@ -541,7 +541,7 @@
 			<Adjective>TXT_KEY_TECH_HELLENISM_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_TECH_HELLENISM_PEDIA</Civilopedia>
 			<TechPrereq>TECH_HELLENISM</TechPrereq>
-			<FreeUnitClass>UNITCLASS_HELLENIC_MISSIONARY</FreeUnitClass>
+			<FreeUnit>UNIT_HELLENIC_MISSIONARY</FreeUnit>
 			<iFreeUnits>1</iFreeUnits>
 			<iSpreadFactor>40</iSpreadFactor>
 			<iTGAIndex>8</iTGAIndex>
@@ -607,7 +607,7 @@
 			<Adjective/>
 			<Civilopedia>TXT_KEY_TECH_KEMETISM_PEDIA</Civilopedia>
 			<TechPrereq>TECH_KEMETISM</TechPrereq>
-			<FreeUnitClass>UNITCLASS_EGYPT_MYTH_MISSIONARY</FreeUnitClass>
+			<FreeUnit>UNIT_EGYPT_MYTH_MISSIONARY</FreeUnit>
 			<iFreeUnits>0</iFreeUnits>
 			<iSpreadFactor>20</iSpreadFactor>
 			<iTGAIndex>9</iTGAIndex>
@@ -673,7 +673,7 @@
 			<Adjective/>
 			<Civilopedia>TXT_KEY_TECH_NAGHUALISM_PEDIA</Civilopedia>
 			<TechPrereq>TECH_NAGHUALISM</TechPrereq>
-			<FreeUnitClass>UNITCLASS_NAGUALISM_MISSIONARY</FreeUnitClass>
+			<FreeUnit>UNIT_NAGUALISM_MISSIONARY</FreeUnit>
 			<iFreeUnits>0</iFreeUnits>
 			<iSpreadFactor>45</iSpreadFactor>
 			<iTGAIndex>10</iTGAIndex>

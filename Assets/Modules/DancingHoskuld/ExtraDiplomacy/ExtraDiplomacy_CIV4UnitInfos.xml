@@ -7,7 +7,6 @@
 <Civ4UnitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_DIPLOMAT_MESSENGER</Class>
 			<Type>UNIT_DIPLOMAT_MESSENGER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
@@ -169,7 +168,6 @@
 			-->
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_DIPLOMAT_EARLY</Class>
 			<Type>UNIT_DIPLOMAT_EARLY</Type>
 			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
@@ -243,7 +241,6 @@ iCost>150</iCost
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_DIPLOMAT_INDUST</Class>
 			<Type>UNIT_DIPLOMAT_INDUST</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_DIPLOMAT</Combat>
@@ -318,7 +315,6 @@ iCost>300</iCost
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_DIPLOMAT_MODERN</Class>
 			<Type>UNIT_DIPLOMAT_MODERN</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_DIPLOMAT</Combat>

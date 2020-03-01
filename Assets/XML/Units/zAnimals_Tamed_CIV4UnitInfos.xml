@@ -8,7 +8,6 @@
 <Civ4UnitInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_BEASTMASTER</Class>
 			<Type>UNIT_BEASTMASTER</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_CAPTAIN</Combat>
@@ -56,7 +55,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_BEASTMASTER</Class>
 			<Type>UNIT_FEMALE_BEASTMASTER</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_CAPTAIN</Combat>
@@ -74,7 +72,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_GENERAL</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FEMALE_BEASTMASTER</Description>
+			<Description>TXT_KEY_UNIT_BEASTMASTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_BEASTMASTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_GREAT_GENERAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
@@ -104,7 +102,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_PANTHER</Class>
 			<Type>UNIT_TAMED_PANTHER</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
@@ -209,7 +206,6 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_LION</Class>
 			<Type>UNIT_TAMED_LION</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
@@ -313,7 +309,6 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_CAMEL</Class>
 			<Type>UNIT_TAMED_CAMEL</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
@@ -424,7 +419,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_LLAMA</Class>
 			<Type>UNIT_TAMED_LLAMA</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
@@ -534,7 +528,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_DONKEY</Class>
 			<Type>UNIT_TAMED_DONKEY</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
@@ -642,7 +635,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_HORSE</Class>
 			<Type>UNIT_TAMED_HORSE</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
@@ -753,7 +745,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_BISON</Class>
 			<Type>UNIT_TAMED_BISON</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
@@ -870,7 +861,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_BUFFALO</Class>
 			<Type>UNIT_TAMED_BUFFALO</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
@@ -983,7 +973,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_CATTLE</Class>
 			<Type>UNIT_TAMED_CATTLE</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
@@ -1093,7 +1082,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_MUSKOX</Class>
 			<Type>UNIT_TAMED_MUSKOX</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
@@ -1200,7 +1188,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_AARDVARK</Class>
 			<Type>UNIT_TAMED_AARDVARK</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
@@ -1301,7 +1288,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_BOAR</Class>
 			<Type>UNIT_TAMED_BOAR</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
@@ -1411,7 +1397,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_AMPHIBIAN</Class>
 			<Type>UNIT_TAMED_AMPHIBIAN</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
@@ -1485,7 +1470,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_ASIANBEAR</Class>
 			<Type>UNIT_TAMED_ASIANBEAR</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
@@ -1597,7 +1581,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_BROWNBEAR</Class>
 			<Type>UNIT_TAMED_BROWNBEAR</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
@@ -1684,7 +1667,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_BLACKBEAR</Class>
 			<Type>UNIT_TAMED_BLACKBEAR</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
@@ -1770,7 +1752,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_CAVEBEAR</Class>
 			<Type>UNIT_TAMED_CAVEBEAR</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
@@ -1857,7 +1838,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_GRIZZLY</Class>
 			<Type>UNIT_TAMED_GRIZZLY</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
@@ -1944,7 +1924,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_PANDA_BEAR</Class>
 			<Type>UNIT_TAMED_PANDA_BEAR</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
@@ -2025,7 +2004,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_POLARBEAR</Class>
 			<Type>UNIT_TAMED_POLARBEAR</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
@@ -2112,7 +2090,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_REDPANDA</Class>
 			<Type>UNIT_TAMED_REDPANDA</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
@@ -2196,7 +2173,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_SLOTHBEAR</Class>
 			<Type>UNIT_TAMED_SLOTHBEAR</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
@@ -2283,7 +2259,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_SPECTACLEDBEAR</Class>
 			<Type>UNIT_TAMED_SPECTACLEDBEAR</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
@@ -2371,7 +2346,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_SUNBEAR</Class>
 			<Type>UNIT_TAMED_SUNBEAR</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
@@ -2459,7 +2433,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_ELEPHANT</Class>
 			<Type>UNIT_TAMED_ELEPHANT</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
@@ -2567,7 +2540,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_GIRAFFE</Class>
 			<Type>UNIT_TAMED_GIRAFFE</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
@@ -2677,7 +2649,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_HIPPO</Class>
 			<Type>UNIT_TAMED_HIPPO</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
@@ -2782,7 +2753,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_WOLF</Class>
 			<Type>UNIT_TAMED_WOLF</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
@@ -2901,7 +2871,6 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_BLACK_RHINO</Class>
 			<Type>UNIT_TAMED_BLACK_RHINO</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
@@ -3011,7 +2980,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_INDIAN_RHINO</Class>
 			<Type>UNIT_TAMED_INDIAN_RHINO</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
@@ -3121,7 +3089,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_JAVA_RHINO</Class>
 			<Type>UNIT_TAMED_JAVA_RHINO</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
@@ -3231,7 +3198,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_WHITE_RHINO</Class>
 			<Type>UNIT_TAMED_WHITE_RHINO</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
@@ -3341,7 +3307,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_BAIRDS_TAPIR</Class>
 			<Type>UNIT_TAMED_BAIRDS_TAPIR</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
@@ -3449,7 +3414,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_BRAZILIAN_TAPIR</Class>
 			<Type>UNIT_TAMED_BRAZILIAN_TAPIR</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
@@ -3557,7 +3521,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_MALAYAN_TAPIR</Class>
 			<Type>UNIT_TAMED_MALAYAN_TAPIR</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
@@ -3665,7 +3628,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_MOUNTAIN_TAPIR</Class>
 			<Type>UNIT_TAMED_MOUNTAIN_TAPIR</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
@@ -3773,7 +3735,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_LIZARD</Class>
 			<Type>UNIT_TAMED_LIZARD</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
@@ -3854,7 +3815,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_SNAKE</Class>
 			<Type>UNIT_TAMED_SNAKE</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>

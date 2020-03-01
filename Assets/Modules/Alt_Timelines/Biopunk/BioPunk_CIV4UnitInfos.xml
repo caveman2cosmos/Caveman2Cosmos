@@ -2,7 +2,6 @@
 <Civ4UnitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_ORGANIC_INFANTRY</Class>
 			<Type>UNIT_ORGANIC_INFANTRY</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>

@@ -1274,19 +1274,20 @@
 		<Polish>Współczesny Wiatrak</Polish>
 	</TEXT>
 	<TEXT>
+<<<<<<< HEAD
 		<Tag>TXT_KEY_IMPROVEMENT_EARLY_MOUNTAIN_MINE</Tag>
 		<English>Early Mountain Mine</English>
-		<French>Mine de montagne primitive</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_EARLY_MOUNTAIN_MINE_PEDIA</Tag>
 		<English>Ancient mining site for mountains</English>
-		<French>Une Mine primitive située dans les montagnes</French>
 	</TEXT>
 	<TEXT>
+=======
+>>>>>>> parent of 526769f3... French Translation
 		<Tag>TXT_KEY_IMPROVEMENT_MOUNTAIN_MINE</Tag>
 		<English>Mountain Mine</English>
-		<French>Mine de montagne</French>
+		<French>Mine de la montagne</French>
 		<German>Mine des Berges</German>
 		<Italian>Miniera della montagna</Italian>
 		<Spanish>

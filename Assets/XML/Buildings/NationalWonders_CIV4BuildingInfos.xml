@@ -185,7 +185,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
@@ -281,7 +281,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -556,7 +556,7 @@
 					<iExperience>1</iExperience>
 				</DomainFreeExperience>
 			</DomainFreeExperiences>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>1</iAsset>
@@ -725,7 +725,7 @@
 			<iGlobalHealth>2</iGlobalHealth>
 			<iGlobalHappiness>1</iGlobalHappiness>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>8</iAsset>
@@ -808,7 +808,7 @@
 				<iCommerce>200</iCommerce>
 			</CommerceChangeDoubleTimes>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>5</iAsset>
@@ -1045,7 +1045,7 @@
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Global -->
 			<iAllCityDefense>10</iAllCityDefense>
@@ -1096,7 +1096,7 @@
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>10</iGreatPeopleRateChange>
 			<!-- Security -->
 			<iEspionageDefense>15</iEspionageDefense>
@@ -1349,7 +1349,7 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_OIL_PRODUCTS</Bonus>
+				<Bonus>BONUS_PETROLEUM_PRODUCTS</Bonus>
 				<Bonus>BONUS_BIOFUEL</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
@@ -1378,24 +1378,24 @@
 			</PropertyManipulators>
 			<!-- Units -->
 			<FreePromotion>PROMOTION_URBAN_TACTICS1</FreePromotion>
-			<UnitClassProductionModifiers>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_FREIGHT</UnitClassType>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_FREIGHT</UnitType>
 					<iProductionModifier>25</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_MOTORCYCLE</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_MOTORCYCLE</UnitType>
 					<iProductionModifier>25</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_JEEP</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_JEEP</UnitType>
 					<iProductionModifier>25</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_HUMVEE</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_HUMVEE</UnitType>
 					<iProductionModifier>25</iProductionModifier>
-				</UnitClassProductionModifier>
-			</UnitClassProductionModifiers>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_DMV</ArtDefineTag>
@@ -1561,7 +1561,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>4</iAsset>
@@ -1703,7 +1703,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CELEBRATION</PrereqTech>
 			<PrereqBonuses>
-				<Bonus>BONUS_FURS</Bonus>
+				<Bonus>BONUS_FUR</Bonus>
 				<Bonus>BONUS_BASKETS</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
@@ -1858,7 +1858,7 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_OIL_PRODUCTS</Bonus>
+				<Bonus>BONUS_PETROLEUM_PRODUCTS</Bonus>
 				<Bonus>BONUS_BIOFUEL</Bonus>
 			</PrereqBonuses>
 			<!-- Cost -->
@@ -1946,7 +1946,7 @@
 			</PropertyManipulators>
 			<FreeAreaBuilding>BUILDINGCLASS_RAILROAD_STATION</FreeAreaBuilding>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
@@ -2037,7 +2037,7 @@
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>8</iAsset>
@@ -2118,7 +2118,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_DOCTOR</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
@@ -2186,7 +2186,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
@@ -2249,7 +2249,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
@@ -2316,7 +2316,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
@@ -2385,7 +2385,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
@@ -2461,7 +2461,7 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
@@ -2533,7 +2533,7 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
@@ -2605,7 +2605,7 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
@@ -2686,7 +2686,7 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
@@ -2758,7 +2758,7 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_GENERAL</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_GENERAL</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
@@ -2821,7 +2821,7 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
@@ -2884,7 +2884,7 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
@@ -2947,7 +2947,7 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
@@ -3019,7 +3019,7 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
@@ -3082,7 +3082,7 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
@@ -3154,7 +3154,7 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
@@ -3226,7 +3226,7 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
@@ -3289,7 +3289,7 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
@@ -3356,7 +3356,7 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
@@ -3419,7 +3419,7 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
@@ -3491,7 +3491,7 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
@@ -3533,7 +3533,7 @@
 			</CommerceChangeDoubleTimes>
 			<!-- Units -->
 			<iMilitaryProductionModifier>100</iMilitaryProductionModifier>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>8</iAsset>
@@ -3694,7 +3694,7 @@
 				<iCommerce>15</iCommerce>
 			</GlobalCommerceModifiers>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -3850,7 +3850,7 @@
 				</BonusYieldModifier>
 			</BonusYieldModifiers>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>8</iAsset>
@@ -4183,7 +4183,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>8</iAsset>
@@ -4238,7 +4238,7 @@
 			<!-- Global -->
 			<iGlobalHappiness>1</iGlobalHappiness>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
@@ -4286,7 +4286,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_DOCTOR</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Global -->
 			<FreeBuilding>BUILDINGCLASS_MEDICAL_DATABASE_GOOD</FreeBuilding>
@@ -4354,7 +4354,7 @@
 					<iHeal>4</iHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>8</iAsset>
@@ -4459,7 +4459,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Global -->
 			<FreeBuilding>BUILDINGCLASS_AQUARIUM</FreeBuilding>
@@ -4519,7 +4519,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iGreatPeopleRateModifier>100</iGreatPeopleRateModifier>
 			<!-- Misc -->
@@ -4841,7 +4841,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Global -->
 			<FreeBuilding>BUILDINGCLASS_LIBRARY</FreeBuilding>
@@ -5003,7 +5003,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>7</iAsset>
@@ -5055,7 +5055,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Global -->
 			<iFreeTechs>1</iFreeTechs>
@@ -5678,7 +5678,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>5</iAsset>
@@ -5792,7 +5792,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>15</iCommerce>
 			</CommerceChanges>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>4</iGreatPeopleRateChange>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
@@ -5889,7 +5889,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>8</iAsset>
@@ -5948,7 +5948,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Global -->
 			<FreeBuilding>BUILDINGCLASS_ZOO</FreeBuilding>
@@ -6169,16 +6169,16 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<!-- Units -->
-			<UnitClassProductionModifiers>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_RIOTPOLICE</UnitClassType>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_RIOTPOLICE</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_POLICE_DOG</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_POLICE_DOG</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-			</UnitClassProductionModifiers>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 			<!-- Security -->
 			<iEspionageDefense>25</iEspionageDefense>
 			<!-- Global -->
@@ -6249,7 +6249,7 @@
 			</CommerceChangeDoubleTimes>
 			<!-- Units -->
 			<iMilitaryProductionModifier>25</iMilitaryProductionModifier>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Global -->
 			<bTeamShare>1</bTeamShare>
@@ -6330,7 +6330,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>8</iAsset>
@@ -6412,7 +6412,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
@@ -6466,7 +6466,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_DOCTOR</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<FreePromotion>PROMOTION_FIRST_AID_PEOPLE1</FreePromotion>
 			<HealUnitCombatTypes>
@@ -6616,7 +6616,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>8</iAsset>
@@ -6835,7 +6835,7 @@
 			</CommerceModifiers>
 			<iWarWearinessModifier>-50</iWarWearinessModifier>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>2</iAsset>
@@ -6907,7 +6907,7 @@
 				</BonusHealthChange>
 			</BonusHealthChanges>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Global -->
 			<bTeamShare>1</bTeamShare>
@@ -6971,7 +6971,7 @@
 			</SpecialistCounts>
 			<iSpaceProductionModifier>10</iSpaceProductionModifier>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>6</iAsset>
@@ -7395,7 +7395,7 @@
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>8</iAsset>
@@ -7501,7 +7501,7 @@
 				<iCommerce>100</iCommerce>
 			</CommerceChangeDoubleTimes>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Global -->
 			<GlobalCommerceModifiers>
@@ -7693,7 +7693,7 @@
 			</CommerceChangeDoubleTimes>
 			<!-- Units -->
 			<iMilitaryProductionModifier>15</iMilitaryProductionModifier>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Global -->
 			<iGreatGeneralRateModifier>10</iGreatGeneralRateModifier>
@@ -7740,7 +7740,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Global -->
 			<bForceTeamVoteEligible>1</bForceTeamVoteEligible>
@@ -7795,7 +7795,7 @@
 				<iCommerce>5</iCommerce>
 			</GlobalCommerceModifiers>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -8303,7 +8303,7 @@
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
 			<!-- Specialist -->
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<SpecialistCounts>
 				<SpecialistCount>
@@ -8409,7 +8409,7 @@
 			<!-- Misc. Effects -->
 			<iHappiness>4</iHappiness>
 			<iHealth>10</iHealth>
-			<GreatPeopleUnitClass>UNITCLASS_DOCTOR</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GARDEN_CITY</ArtDefineTag>

@@ -411,7 +411,7 @@ def getUprisingUnitTypes(CyCity):
 		iCombat = CvUnitInfo.getCombat()
 		if iCombat < 1: continue
 
-		if not CvUnitInfo.hasUnitCombat(GC.getInfoTypeForString("UNITCOMBAT_COMBATANT")):
+		if not CvUnitInfo.hasUnitCombat(UnitCombatTypes(GC.getInfoTypeForString("UNITCOMBAT_COMBATANT"))):
 			continue
 
 		if CyCity.canTrain(iUnit, False, False, False, False):

@@ -9,7 +9,6 @@
 		<!-- Mine Warfare Mod -->
 		<!-- Naval Mine -->
 		<UnitInfo>
-			<Class>UNITCLASS_NAVAL_MINE</Class>
 			<Type>UNIT_NAVAL_MINE</Type>
 			<Combat>UNITCOMBAT_MINE_WARFARE</Combat>
 			<Domain>DOMAIN_SEA</Domain>
@@ -106,7 +105,6 @@
 		<!-- End Naval Mine -->
 		<!-- Naval Mine Field -->
 		<UnitInfo>
-			<Class>UNITCLASS_NAVAL_MINE_FIELD</Class>
 			<Type>UNIT_NAVAL_MINE_FIELD</Type>
 			<Combat>UNITCOMBAT_MINE_WARFARE</Combat>
 			<Domain>DOMAIN_SEA</Domain>
@@ -204,7 +202,6 @@
 		<!-- Naval Mine Field -->
 		<!-- Nuclear Naval Mine -->
 		<UnitInfo>
-			<Class>UNITCLASS_NUCLEAR_NAVAL_MINE</Class>
 			<Type>UNIT_NUCLEAR_NAVAL_MINE</Type>
 			<Combat>UNITCOMBAT_MINE_WARFARE</Combat>
 			<Domain>DOMAIN_SEA</Domain>
@@ -304,7 +301,6 @@
 		<!-- End Nuclear Naval Mine -->
 		<!-- Naval Mine Sweeper -->
 		<UnitInfo>
-			<Class>UNITCLASS_NAVAL_MINE_SWEEPER</Class>
 			<Type>UNIT_NAVAL_MINE_SWEEPER</Type>
 			<Combat>UNITCOMBAT_DIESEL_SHIPS</Combat>
 			<Domain>DOMAIN_SEA</Domain>
@@ -363,7 +359,6 @@
 		<!-- End Naval Mine Sweeper -->
 		<!-- Land Mine -->
 		<UnitInfo>
-			<Class>UNITCLASS_LAND_MINE</Class>
 			<Type>UNIT_LAND_MINE</Type>
 			<Combat>UNITCOMBAT_MINE_WARFARE</Combat>
 			<Domain>DOMAIN_LAND</Domain>
@@ -453,7 +448,6 @@
 		<!-- End Land Mine -->
 		<!-- Land Mine Field -->
 		<UnitInfo>
-			<Class>UNITCLASS_LAND_MINE_FIELD</Class>
 			<Type>UNIT_LAND_MINE_FIELD</Type>
 			<Combat>UNITCOMBAT_MINE_WARFARE</Combat>
 			<Domain>DOMAIN_LAND</Domain>
@@ -547,7 +541,6 @@
 		<!-- End Land Mine Field -->
 		<!-- Nuclear Land Mine -->
 		<UnitInfo>
-			<Class>UNITCLASS_NUCLEAR_LAND_MINE</Class>
 			<Type>UNIT_NUCLEAR_LAND_MINE</Type>
 			<Combat>UNITCOMBAT_MINE_WARFARE</Combat>
 			<Domain>DOMAIN_LAND</Domain>
@@ -641,7 +634,6 @@
 		<!-- End Nuclear Land Mine -->
 		<!-- Land Mine Sweeper -->
 		<UnitInfo>
-			<Class>UNITCLASS_LAND_MINE_SWEEPER</Class>
 			<Type>UNIT_LAND_MINE_SWEEPER</Type>
 			<Combat>UNITCOMBAT_RECON</Combat>
 			<Domain>DOMAIN_LAND</Domain>

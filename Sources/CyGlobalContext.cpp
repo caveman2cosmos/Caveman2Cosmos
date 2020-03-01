@@ -253,11 +253,6 @@ CvBuildingInfo* CyGlobalContext::getBuildingInfo(int i) const
 	return (i>=0 && i<GC.getNumBuildingInfos()) ? &GC.getBuildingInfo((BuildingTypes) i) : NULL;
 }
 
-CvUnitClassInfo* CyGlobalContext::getUnitClassInfo(int i) const
-{
-	return (i>=0 && i<GC.getNumUnitClassInfos()) ? &GC.getUnitClassInfo((UnitClassTypes) i) : NULL;
-}
-
 
 CvInfoBase* CyGlobalContext::getUnitCombatInfo(int i) const
 {

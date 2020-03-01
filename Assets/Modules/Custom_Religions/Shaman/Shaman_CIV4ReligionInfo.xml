@@ -12,7 +12,7 @@
 			<Adjective>TXT_KEY_TECH_SHAMANISM_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_TECH_SHAMANISM_PEDIA</Civilopedia>
 			<TechPrereq>TECH_SHAMANISM</TechPrereq>
-			<FreeUnitClass>UNITCLASS_SHAMAN_MISSIONARY</FreeUnitClass>
+			<FreeUnit>UNIT_SHAMAN_MISSIONARY</FreeUnit>
 			<iFreeUnits>0</iFreeUnits>
 			<iSpreadFactor>10</iSpreadFactor>
 			<iTGAIndex>22</iTGAIndex>

@@ -18,9 +18,9 @@
 			<bProbabilityUnitMultiply>1</bProbabilityUnitMultiply>
 			<iMaxOurLandmass>-1</iMaxOurLandmass>
 			<UnitsRequired>
-				<UnitClass>UNITCLASS_CHASER</UnitClass>
-				<UnitClass>UNITCLASS_TRACKER</UnitClass>
-				<UnitClass>UNITCLASS_HUNTER</UnitClass>
+				<UnitType>UNIT_CHASER</UnitType>
+				<UnitType>UNIT_TRACKER</UnitType>
+				<UnitType>UNIT_HUNTER</UnitType>
 			</UnitsRequired>
 			<iNumUnits>4</iNumUnits>
 			<iPlotType>-1</iPlotType>

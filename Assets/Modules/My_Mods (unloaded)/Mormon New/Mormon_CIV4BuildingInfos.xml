@@ -236,7 +236,7 @@
 					</Has>
 				</And>
 			</ConstructCondition>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
@@ -303,9 +303,9 @@
 			<HolyCity>RELIGION_MORMON</HolyCity>
 			<ReligionType>RELIGION_MORMON</ReligionType>
 			<GlobalReligionCommerce>RELIGION_MORMON</GlobalReligionCommerce>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>-1</iCost>
@@ -469,7 +469,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_METH</BonusType>
+					<BonusType>BONUS_METHAMPHETAMINE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>-1</iCommerce>
 					</CommerceModifiers>
@@ -491,7 +491,7 @@
 				</BonusCommerceModifier>
 				<!-- the following foods are promoted in the mormon health code -->
 				<BonusCommerceModifier>
-					<BonusType>BONUS_GRAIN</BonusType>
+					<BonusType>BONUS_GRAINS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>2</iCommerce>
 					</CommerceModifiers>
@@ -613,7 +613,7 @@
 					</Has>
 				</And>
 			</ConstructCondition>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
@@ -1009,7 +1009,7 @@
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<BonusHealthChanges>
 				<BonusHealthChange>
-					<BonusType>BONUS_GRAIN</BonusType>
+					<BonusType>BONUS_GRAINS</BonusType>
 					<iHealthChange>1</iHealthChange>
 				</BonusHealthChange>
 				<BonusHealthChange>
@@ -1115,7 +1115,7 @@
 			<FreeBonus>BONUS_CANNED_FOOD</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<FreeBuilding>BUILDINGCLASS_BISHOPS_STOREHOUSE</FreeBuilding>
-			<GreatPeopleUnitClass>UNITCLASS_DOCTOR</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHealthPercentPerPopulation>5</iHealthPercentPerPopulation>
 			<iCost>4440</iCost>

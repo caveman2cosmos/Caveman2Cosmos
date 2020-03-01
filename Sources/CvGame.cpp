@@ -7927,14 +7927,14 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 }
 
 namespace {
-	bool isHeroUnit(const CvUnitInfo& unitInfo, const UnitClassTypes& unitClassType)
+	bool isHeroUnit(const CvUnitInfo& unitInfo)
 	{
-		return unitInfo.hasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_HERO")) 
+		return unitInfo.hasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_HERO"))
 			|| unitInfo.getMaxGlobalInstances() > 0
 			|| unitInfo.getMaxPlayerInstances() > 0;
 	}
 
-	bool isValidBarbarianSpawnUnit(const CvArea* area, const CvUnitInfo& unitInfo, const UnitTypes unitType, const UnitClassTypes unitClass)
+	bool isValidBarbarianSpawnUnit(const CvArea* area, const CvUnitInfo& unitInfo, const UnitTypes unitType)
 	{
 		return unitInfo.getCombat() > 0
 			&& !unitInfo.isOnlyDefensive()
@@ -7946,7 +7946,7 @@ namespace {
 			// Need to ignore pre-requisite buildings or no ships can be built
 			// && unitInfo.getPrereqBuilding() == NO_BUILDING
 			// Another attempt to deny the spawning of barb heroes.
-			&& !isHeroUnit(unitInfo, unitClass)
+			&& !isHeroUnit(unitInfo)
 			&& GET_TEAM(BARBARIAN_TEAM).isUnitPrereqOrBonusesMet(unitInfo)
 			;
 	}
@@ -8053,7 +8053,7 @@ void CvGame::createBarbarianUnits()
 			{
 				const CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes) iJ);
 
-				if (isValidBarbarianSpawnUnit(pLoopArea, kUnit, (UnitTypes) iJ, static_cast<UnitClassTypes>(kUnit.getUnitClassType())))
+				if (isValidBarbarianSpawnUnit(pLoopArea, kUnit, (UnitTypes) iJ))
 				{
 					int iValue = 500 + getSorenRandNum(500, "Barb Unit Selection");
 
