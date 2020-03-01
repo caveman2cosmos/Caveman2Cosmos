@@ -71,12 +71,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_RESIDENTIAL_PORTAL</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HYPERCITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ESCHER_CITY</Type>
@@ -106,8 +106,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HYPESPACE_PORTAL</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<bPrereqPower>1</bPrereqPower>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
@@ -137,8 +137,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ESCHER_CITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_11_DIMENSIONAL_CITY</Type>
@@ -163,8 +163,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HYPERCITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOROIDAL_COLONY</Type>
@@ -189,8 +189,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_POINCARE_DODECAHEDRAL_SPACE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_REAL_PROJECTIVE_SPACE_COLONY</Type>
@@ -217,8 +217,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_PICARD_HORN</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COMPLEX_PROJECTIVE_SPACE_COLONY</Type>
@@ -242,8 +242,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_EKPYROTIC_UNIVERSE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_QUATERNIONIC_PROJECTIVE_SPACE_COLONY</Type>
@@ -326,12 +326,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HYPERSPACE_IMPORTER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HYPERSPACE_EXPORTER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYPERSPACE_EXPORTER</Type>
@@ -383,8 +383,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HYPERSPACE_IMPORTER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_5D_ARTIFICIAL_GRAVITY</Type>
@@ -411,8 +411,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HYPERFACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYPERSPACE_WAREHOUSE</Type>
@@ -437,8 +437,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HYPERSPACE_COMMERCIAL_CENTER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYPERSPACE_POWER_PLANT</Type>
@@ -556,8 +556,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HYPERFACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_TESSERACT</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -611,8 +611,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HYPERFACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FORMAL_CONSTRUCTION_CENTER</Type>
@@ -640,8 +640,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TRANSFINITE_STRUCTURES</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYPERPLANET</Type>
@@ -683,12 +683,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HYPERFACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HYPERCITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NON_CAUSAL_ENGINEERING_FIRM</Type>
@@ -716,12 +716,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HYPERFACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HYPERCITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INFLATON_FIELD</Type>
@@ -753,8 +753,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HYPESPACE_PORTAL</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OPEN_FRW_UNIVERSE</Type>
@@ -791,12 +791,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_INFLATON_FIELD</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_UNIVERSAL_EFFECT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SIMULATED_UNIVERSE</Type>
@@ -866,16 +866,16 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_5D_ARTIFICIAL_GRAVITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_INFLATON_FIELD</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_UNIVERSAL_EFFECT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POINCARE_DODECAHEDRAL_SPACE</Type>
@@ -898,8 +898,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SIMULATED_UNIVERSE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PICARD_HORN</Type>
@@ -923,8 +923,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SIMULATED_UNIVERSE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EKPYROTIC_UNIVERSE</Type>
@@ -950,8 +950,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SIMULATED_UNIVERSE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRANSFINITE_STRUCTURES</Type>
@@ -975,8 +975,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SIMULATED_UNIVERSE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LANDSCAPE_MULTIVERSE</Type>
@@ -1002,8 +1002,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_POINCARE_DODECAHEDRAL_SPACE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_YOTTAVERSE</Type>
@@ -1035,8 +1035,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_11_DIMENSIONAL_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYPERSPACE_CONSTRUCTION_CENTER</Type>
@@ -1063,8 +1063,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HYPERFACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_QUANTUM_GRAPH_MANIFESTATION</Type>
@@ -1089,8 +1089,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TRANSFINITE_STRUCTURES</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYPERSPACE_MEDIA_CENTER</Type>
@@ -1181,8 +1181,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SIMULATED_UNIVERSE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYPERSPACE_GOVERNING_COUNCIL</Type>
@@ -1209,8 +1209,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HYPERCITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1237,8 +1237,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SIMULATED_UNIVERSE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iRevIdxLocal>5</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1266,8 +1266,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HYPERPLANET</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1293,8 +1293,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SIMULATED_UNIVERSE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEW_BIG_BANG</Type>
@@ -1326,8 +1326,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_EKPYROTIC_UNIVERSE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRANSFINITE_SUPERCOMPUTER</Type>
@@ -1351,8 +1351,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_11_DIMENSIONAL_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1384,8 +1384,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SIMULATED_UNIVERSE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYPERCOMPUTRONIUM_STRUCTURES</Type>
@@ -1409,12 +1409,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HYPERPLANET</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TRANSFINITE_STRUCTURES</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_METAVERSE_EDUCATION</Type>
@@ -1605,8 +1605,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_METAVERSE_VR_CENTER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1646,8 +1646,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_INFLATON_FIELD</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COSMIC_AC</Type>
@@ -1705,8 +1705,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_EKPYROTIC_UNIVERSE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UNIVERSE</Type>
@@ -1739,12 +1739,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COSMIC_ECONOMY_EFFECT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_INFLATON_FIELD</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

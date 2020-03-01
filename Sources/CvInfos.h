@@ -4615,7 +4615,6 @@ public:
 	void setArtDefineTag(const TCHAR* szVal);
 	// Arrays
 
-	int getCivilizationBuildings(int i) const;			// Exposed to Python
 	int getCivilizationFreeUnits(int i) const;			// Exposed to Python
 	int getCivilizationInitialCivics(int i) const;		// Exposed to Python
 	// Afforess 04/05/10
@@ -4674,7 +4673,6 @@ protected:
 	CvWString m_szAdjectiveKey;
 	// Arrays
 
-	int* m_piCivilizationBuildings;
 	int* m_piCivilizationFreeUnits;
 	int* m_piCivilizationInitialCivics;
 

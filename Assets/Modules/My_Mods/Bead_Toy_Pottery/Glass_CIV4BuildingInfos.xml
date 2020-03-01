@@ -27,12 +27,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_GLASSSMITH</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_GLASSSMITH</BuildingType>

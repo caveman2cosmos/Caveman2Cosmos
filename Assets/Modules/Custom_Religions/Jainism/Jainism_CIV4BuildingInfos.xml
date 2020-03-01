@@ -72,8 +72,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_JAIN_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>

@@ -44,12 +44,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_EFFECT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_PLANETARY_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -76,8 +76,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ORBITAL_COLONY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_NANOTUBES</Bonus>
 			<ConstructCondition>
 				<And>
@@ -119,8 +119,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BISHOP_RING_REGULAR</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -170,8 +170,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_PLANETARY_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<bPower>1</bPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -228,8 +228,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_PLANETARY_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<bPower>1</bPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -274,8 +274,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_PLANETARY_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<bPower>1</bPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -339,8 +339,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_PLANETARY_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DEEP_SPACE_TELESCOPE</Type>
@@ -364,8 +364,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DEEP_SPACE_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORBITAL_BASE</Type>
@@ -461,8 +461,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_PLANETARY_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -493,8 +493,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_PLANETARY_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DEEP_SPACE_PLASTEEL_FACTORY</Type>
@@ -521,12 +521,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HOUSING_WORKING_CLASS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DEEP_SPACE_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_PLASTEEL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -558,8 +558,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HOUSING_MANAGEMENT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -599,12 +599,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_NEUROIMPLANT_EXPORTER_EFFECT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_PLANETARY_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -637,8 +637,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_PLANETARY_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DEEP_SPACE_RECONAISSANCE</Type>
@@ -664,8 +664,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DEEP_SPACE_DOCKING_BAY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -687,8 +687,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_PLANETARY_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -724,8 +724,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DEEP_SPACE_SOCIAL_ENGINEERING</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_SUPERINTELLIGENT_COMPUTERS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -799,16 +799,16 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ORBITAL_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ORBITAL_COLONY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DEEP_SPACE_SOCIAL_ENGINEERING</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INDUSTRIALIZED_ASTEROID</Type>
@@ -837,16 +837,16 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DEEP_SPACE_DOCKING_BAY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ORBITAL_COLONY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DEEP_SPACE_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -874,12 +874,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ORBITAL_COLONY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DEEP_SPACE_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<bPrereqPower>1</bPrereqPower>
 			<FreeBonus>BONUS_DEEP_SPACE_NANOBOTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -918,12 +918,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DEEP_SPACE_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DEEP_SPACE_TELESCOPE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COLONY_ECOSYSTEM</Type>
@@ -958,12 +958,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ORBITAL_COLONY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DEEP_SPACE_HYDROPONICS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_DEEP_SPACE_LIFEFORMS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
@@ -998,8 +998,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ORBITAL_COLONY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -1033,8 +1033,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DEEP_SPACE_DOCKING_BAY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_NANOTUBES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -1064,12 +1064,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DEEP_SPACE_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DEEP_SPACE_TELESCOPE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1106,12 +1106,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DEEP_SPACE_DOCKING_BAY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DEEP_SPACE_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FUSION_CORE</Type>
@@ -1150,8 +1150,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DEEP_SPACE_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORGANIC_VOLATILE_EXTRACTION</Type>
@@ -1175,12 +1175,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DEEP_SPACE_DOCKING_BAY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ORBITAL_COLONY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DEEP_SPACE_MAGLEV</Type>
@@ -1205,8 +1205,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ORBITAL_COLONY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DEEP_SPACE_CLOAKING</Type>
@@ -1271,8 +1271,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ORBITAL_COLONY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DEEP_SPACE_PRISON</Type>
@@ -1295,12 +1295,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HOUSING_MANAGEMENT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ORBITAL_COLONY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1334,16 +1334,16 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HOUSING_MANAGEMENT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ORBITAL_VR</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ORBITAL_COLONY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1375,12 +1375,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HOUSING_WORKING_CLASS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COLONY_ECOSYSTEM</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DEEP_SPACE_FARM</Type>
@@ -1406,8 +1406,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COLONY_ECOSYSTEM</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANTIMATTER_RESEARCH_CENTER</Type>
@@ -1431,8 +1431,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_FUSION_CORE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DEEP_SPACE_MEGAFACTORY</Type>
@@ -1460,20 +1460,20 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BISHOP_RING_REGULAR</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CIRCULAR_ECONOMY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DEEP_SPACE_MAGLEV</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ORGANIC_VOLATILE_EXTRACTION</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_ADVANCED_REPLICATORS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -1501,12 +1501,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BISHOP_RING_REGULAR</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CIRCULAR_ECONOMY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1543,8 +1543,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BISHOP_RING_REGULAR</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_NANOMORPHIC_HABITATS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -1579,12 +1579,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BISHOP_RING_REGULAR</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_FOCUS_SUN</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SUN_SCOOP_POWER_PLANT</Type>
@@ -1614,8 +1614,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SUN_SCOOP</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DEEP_SPACE_HOTEL</Type>
@@ -1645,12 +1645,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DEEP_SPACE_DOCKING_BAY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BISHOP_RING_REGULAR</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1687,12 +1687,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DEEP_SPACE_DOCKING_BAY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BISHOP_RING_REGULAR</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ALIEN_SIGNAL_DECODER</Type>
@@ -1729,8 +1729,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BISHOP_RING_REGULAR</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PLANET_EXOTIC_ARCHITECTURE</Type>
@@ -1768,8 +1768,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MCKENDREE_CYLINDER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SOLAR_QUANTUM_THRUSTER</Type>
@@ -1794,8 +1794,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MCKENDREE_CYLINDER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TEMPERATURE_REGULATOR</Type>
@@ -1822,8 +1822,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MCKENDREE_CYLINDER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COLD_FUSION2</Type>
@@ -1847,8 +1847,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MCKENDREE_CYLINDER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASCENDED_PLANET</Type>
@@ -1873,8 +1873,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COSMIC_ECONOMY_EFFECT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1926,8 +1926,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COLD_FUSION2</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MICROVAC</Type>
@@ -1951,8 +1951,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COLD_FUSION2</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1991,8 +1991,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COLD_FUSION2</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EDEN</Type>
@@ -2033,12 +2033,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COLONY_ECOSYSTEM</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CONSCIOUS_SPACE_STATION</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2082,12 +2082,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DEEP_SPACE_DEFENSES</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BISHOP_RING_REGULAR</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LASER_STARWAY</Type>
@@ -2123,12 +2123,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SOLAR_EFFECT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ORBITAL_COLONY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BRACEWELL_PROBES</Type>
@@ -2155,8 +2155,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BISHOP_RING_REGULAR</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SOLAR_CORE_PROBE</Type>
@@ -2194,12 +2194,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MCKENDREE_CYLINDER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SUN_SCOOP</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GRAND_UNIFICATION_ACCELERATOR</Type>
@@ -2258,8 +2258,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MCKENDREE_CYLINDER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SOLAR_DYSON_SPHERE</Type>
@@ -2305,8 +2305,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BISHOP_RING_REGULAR</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SOLAR_DYSON_SPHERE_EFFECT</Type>
@@ -2371,8 +2371,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MCKENDREE_CYLINDER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2417,12 +2417,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DEEP_SPACE_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DEEP_SPACE_TELESCOPE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FUSION_CANDLE</Type>
@@ -2465,8 +2465,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_FUSION_CORE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MERCURY_COLONY</Type>
@@ -2500,8 +2500,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ORBITAL_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iRevIdxLocal>-10</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2545,12 +2545,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MERCURY_COLONY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SOLAR_EFFECT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_ANTIMATTER</FreeBonus>
 			<iNumFreeBonuses>3</iNumFreeBonuses>
 		</BuildingInfo>
@@ -2586,8 +2586,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MERCURY_COLONY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MERCURY_COMET_BOMBARDMENT</Type>
@@ -2616,8 +2616,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MERCURY_COLONY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MERCURY_SUNSHADE</Type>
@@ -2655,8 +2655,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MERCURY_COMET_BOMBARDMENT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERRAFORMED_MERCURY</Type>
@@ -2688,8 +2688,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MERCURY_COMET_BOMBARDMENT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASTEROID_INTERIOR_CITY</Type>
@@ -2727,8 +2727,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ASTEROID_WATER_SHIELD</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iRevIdxLocal>-10</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2880,8 +2880,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ORBITAL_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTER_ASTEROID_CITY</Type>
@@ -2915,8 +2915,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ASTEROID_INTERIOR_CITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iRevIdxLocal>-10</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -3006,8 +3006,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ORBITAL_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SHELL_WORLD_FACTORY</Type>
@@ -3044,8 +3044,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SHELLWORLD</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SHELL_WORLD_FLIGHT</Type>
@@ -3084,8 +3084,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SHELLWORLD</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SHELL_WORLD_HANGING_CITY</Type>
@@ -3122,8 +3122,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SHELLWORLD</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SHELL_WORLD_LIGHTING</Type>
@@ -3157,8 +3157,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SHELLWORLD</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SHELL_WORLD_SPACEPORT</Type>
@@ -3196,8 +3196,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SHELLWORLD</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERRAFORMED_CERES</Type>
@@ -3234,8 +3234,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CERES_TRADING_POST</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CALLISTO_RESUPPLY_BASE</Type>
@@ -3266,8 +3266,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ORBITAL_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -3300,8 +3300,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CALLISTO_NOBLE_GAS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CALLISTO_NITROGEN_GENERATOR</Type>
@@ -3330,8 +3330,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CALLISTO_RESUPPLY_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CALLISTO_NOBLE_GAS</Type>
@@ -3360,8 +3360,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CALLISTO_NITROGEN_GENERATOR</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CALLISTO_FLOATING_CONTINENT</Type>
@@ -3394,8 +3394,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CALLISTO_NOBLE_GAS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SULPHUR_HEXAFLOURIDE</Type>
@@ -3424,8 +3424,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_EUROPA_COLONY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EUROPA_COLONY</Type>
@@ -3460,8 +3460,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ORBITAL_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -3503,8 +3503,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SULPHUR_HEXAFLOURIDE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EUROPA_CITY</Type>
@@ -3538,8 +3538,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_EUROPA_COLONY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -3608,8 +3608,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_EUROPA_ECOSYSTEM</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERRAFORMED_GANYMEDE</Type>
@@ -3641,8 +3641,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ORBITAL_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_IO_BASE</Type>
@@ -3673,8 +3673,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ORBITAL_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -3713,8 +3713,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_IO_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_JOVIAN_MAGNETOSPHERE_POWER_PLANT</Type>
@@ -3745,8 +3745,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BISHOP_RING_REGULAR</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<bPower>1</bPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -3785,8 +3785,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DEEP_SPACE_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_JOVIAN_ANTIMATTER_HARVESTER</Type>
@@ -3832,8 +3832,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DEEP_SPACE_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERRAFORMED_JUPITER</Type>
@@ -3871,12 +3871,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BISHOP_RING_REGULAR</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_JOVIAN_ANTIMATTER_HARVESTER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SATURN_CLOUD_CITY</Type>
@@ -3910,8 +3910,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ORBITAL_COLONY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iRevIdxLocal>-10</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -4004,8 +4004,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DEEP_SPACE_HOTEL</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ENCELADUS_BASE</Type>
@@ -4036,8 +4036,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ORBITAL_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -4070,12 +4070,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SATURN_CLOUD_CITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BISHOP_RING_REGULAR</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_URANUS_FLOATING_CITY</Type>
@@ -4111,8 +4111,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SOLAR_EFFECT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iRevIdxLocal>-10</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -4144,8 +4144,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_UMBRIEL_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_HELIUM3</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -4209,8 +4209,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ORBITAL_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -4243,12 +4243,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_URANIAN_SF6</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_OBERON_MAGNETIC_FIELD</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_TERRAFORMED_OBERON</BuildingMustNotHave>
@@ -4286,12 +4286,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_URANIAN_SF6</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_OBERON_MAGNETIC_FIELD</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_TERRAFORMED_TITANIA</BuildingMustNotHave>
@@ -4329,8 +4329,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_UMBRIEL_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OBERON_MAGNETIC_FIELD</Type>
@@ -4360,8 +4360,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_OBERON_HEATING</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_URANIAN_SF6</Type>
@@ -4390,8 +4390,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_OBERON_HEATING</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERRAFORMED_URANUS</Type>
@@ -4426,12 +4426,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_URANUS_FLOATING_CITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BISHOP_RING_REGULAR</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRITON_BASE</Type>
@@ -4465,8 +4465,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ORBITAL_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -4497,8 +4497,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TRITON_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<bPower>1</bPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -4528,8 +4528,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TRITON_GEOTHERMAL</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERRAFORMED_TRITON</Type>
@@ -4561,8 +4561,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TRITON_HEAT_RING</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRITON_MILITARY_BASE</Type>
@@ -4608,8 +4608,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TRITON_HEAT_RING</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEPTUNE_WIND_TURBINE</Type>
@@ -4639,8 +4639,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ORBITAL_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEPTUNE_VOLATILE_MINE</Type>
@@ -4680,8 +4680,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_NEPTUNE_WIND_TURBINE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEPTUNE_CHANDELIER_CITY</Type>
@@ -4723,8 +4723,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ORBITAL_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEPTUNE_ORBITAL_RING</Type>
@@ -4758,8 +4758,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_NEPTUNE_WIND_TURBINE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERRAFORMED_NEPTUNE</Type>
@@ -4795,12 +4795,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BISHOP_RING_REGULAR</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_NEPTUNE_CHANDELIER_CITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ERIS_COLONY</Type>
@@ -4837,8 +4837,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COLONY_ECOSYSTEM</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_PLUTO_BASE</BuildingMustNotHave>
@@ -4890,8 +4890,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COLONY_ECOSYSTEM</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_PLUTO_BASE</BuildingMustNotHave>
@@ -4943,8 +4943,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COLONY_ECOSYSTEM</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_MAKEMAKE_COLONY</BuildingMustNotHave>
@@ -4994,8 +4994,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ORBITAL_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_MAKEMAKE_COLONY</BuildingMustNotHave>
@@ -5046,8 +5046,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_PLUTO_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KBO_OUTPOST</Type>
@@ -5126,8 +5126,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_KBO_OUTPOST</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KUIPER_BELT_GEOTHERMAL</Type>
@@ -5157,8 +5157,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_KBO_OUTPOST</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<bPower>1</bPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -5189,8 +5189,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_KBO_OUTPOST</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<bPower>1</bPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -5226,8 +5226,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_KUIPER_BELT_FUSION</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iRevIdxLocal>-10</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -5267,8 +5267,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_KUIPER_BELT_FUSION</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HILLS_CLOUD_COLONY</Type>
@@ -5354,8 +5354,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COLONY_ECOSYSTEM</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_PLANET_NINE_COLONY</BuildingMustNotHave>
@@ -5400,8 +5400,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COLONY_ECOSYSTEM</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_SEDNA_COLONY</BuildingMustNotHave>

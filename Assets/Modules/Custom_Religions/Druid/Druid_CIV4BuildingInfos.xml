@@ -56,8 +56,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_CATHEDRAL</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_WHEAT</BonusType>
@@ -163,8 +163,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -221,8 +221,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -259,8 +259,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -294,8 +294,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -329,8 +329,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -364,8 +364,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -399,8 +399,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -532,8 +532,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_WHEAT</BonusType>
@@ -570,8 +570,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_BARLEY</BonusType>
@@ -608,8 +608,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_CORN</BonusType>
@@ -646,8 +646,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_RICE</BonusType>
@@ -684,8 +684,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_POTATOES</BonusType>
@@ -723,8 +723,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -753,8 +753,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_ALMONDS</BonusType>
@@ -792,8 +792,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -822,8 +822,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_APPLE</BonusType>
@@ -861,8 +861,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -891,8 +891,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_BANANA</BonusType>
@@ -930,8 +930,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -960,8 +960,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_COCONUT</BonusType>
@@ -999,8 +999,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -1029,8 +1029,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_DATES</BonusType>
@@ -1068,8 +1068,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -1098,8 +1098,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_FIG</BonusType>
@@ -1137,8 +1137,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -1167,8 +1167,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_GRAPES</BonusType>
@@ -1206,8 +1206,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -1236,8 +1236,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_GUAVAS</BonusType>
@@ -1275,8 +1275,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -1305,8 +1305,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_LEMONS</BonusType>
@@ -1344,8 +1344,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -1374,8 +1374,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_MANGO</BonusType>
@@ -1413,8 +1413,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -1443,8 +1443,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_MELONS</BonusType>
@@ -1482,8 +1482,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -1512,8 +1512,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_MUSHROOMS</BonusType>
@@ -1551,8 +1551,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -1581,8 +1581,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_OLIVES</BonusType>
@@ -1620,8 +1620,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -1650,8 +1650,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_PAPAYA</BonusType>
@@ -1689,8 +1689,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -1719,8 +1719,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_PISTACHIO</BonusType>
@@ -1758,8 +1758,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -1788,8 +1788,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_POMEGRANATE</BonusType>
@@ -1827,8 +1827,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -1857,8 +1857,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_PRICKLY_PEAR</BonusType>
@@ -1896,8 +1896,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -1926,8 +1926,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_PUMPKIN</BonusType>
@@ -1965,8 +1965,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -1995,8 +1995,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_SQUASH</BonusType>
@@ -2034,8 +2034,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -2064,8 +2064,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_KAVA</BonusType>

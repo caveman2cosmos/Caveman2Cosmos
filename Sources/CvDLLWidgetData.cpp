@@ -1839,7 +1839,7 @@ void CvDLLWidgetData::doPediaTrainJump(CvWidgetDataStruct &widgetDataStruct)
 
 void CvDLLWidgetData::doPediaConstructJump(CvWidgetDataStruct &widgetDataStruct)
 {
-	Cy::call(PYScreensModule, "pediaJumpToBuilding", Cy::Args(GC.getCivilizationInfo(GC.getGame().getActiveCivilizationType()).getCivilizationBuildings(widgetDataStruct.m_iData1)));
+	Cy::call(PYScreensModule, "pediaJumpToBuilding", Cy::Args(widgetDataStruct.m_iData1));
 }
 
 
@@ -2083,10 +2083,8 @@ void CvDLLWidgetData::parseConstructHelp(CvWidgetDataStruct &widgetDataStruct, C
 
 	if (pHeadSelectedCity != NULL)
 	{
-		eBuilding = (BuildingTypes)GC.getCivilizationInfo(pHeadSelectedCity->getCivilizationType()).getCivilizationBuildings(widgetDataStruct.m_iData1);
-
 // BUG - Building Actual Effects - start
-		GAMETEXT.setBuildingHelpActual(szBuffer, eBuilding, false, widgetDataStruct.m_bOption, false, pHeadSelectedCity);
+		GAMETEXT.setBuildingHelpActual(szBuffer, (BuildingTypes)widgetDataStruct.m_iData1, false, widgetDataStruct.m_bOption, false, pHeadSelectedCity);
 // BUG - Building Actual Effects - end
 	}
 }

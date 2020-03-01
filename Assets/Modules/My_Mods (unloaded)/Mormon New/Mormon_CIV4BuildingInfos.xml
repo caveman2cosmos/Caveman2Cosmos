@@ -851,8 +851,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MORMON_CATHEDRAL</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -951,8 +951,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MORMON_CATHEDRAL</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -1066,9 +1066,9 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MORMON_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<!-- aka mormon meetinghouse -->
-			<BuildingNeededs>>
+			</BuildingNeededs>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
@@ -1142,8 +1142,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BISHOPS_STOREHOUSE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<ImprovementFreeSpecialists>
 				<ImprovementFreeSpecialist>
 					<ImprovementType>IMPROVEMENT_FARM</ImprovementType>
@@ -1222,16 +1222,16 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_LIBRARY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_PRIVATE_SCHOOL</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HIGH_SCHOOL</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_CULTURE</FlavorType>

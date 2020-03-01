@@ -72,8 +72,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TOWNCLOCK</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<iAIWeight>1</iAIWeight>
@@ -118,8 +118,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_OPERA_HOUSE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<iAIWeight>1</iAIWeight>
@@ -201,8 +201,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ENGINEERING_SCHOOL</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iAsset>2</iAsset>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -234,8 +234,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CLOCKWORK_WORKSHOP</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<ReplaceBuildings>
 				<ReplaceBuilding>

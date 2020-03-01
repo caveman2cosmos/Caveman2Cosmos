@@ -42,12 +42,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_WAR_DANCE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_ABORIGINE_EMBASSY</BuildingType>

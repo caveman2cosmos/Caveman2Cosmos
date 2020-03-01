@@ -108,8 +108,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DREAM_SIMULATION_CENTER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>6</iPrereqPopulation>
 		</BuildingInfo>
@@ -182,8 +182,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BIOLOGY_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>6</iPrereqPopulation>
 		</BuildingInfo>
@@ -257,8 +257,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DREAM_SIMULATION_CENTER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PropertyManipulators>

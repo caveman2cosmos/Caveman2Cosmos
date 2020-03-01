@@ -259,8 +259,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_STATION</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -292,8 +292,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_STATION</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<bPower>1</bPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -364,8 +364,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_STATION_CONTROL_SYSTEM</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -400,8 +400,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_GOV</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -431,8 +431,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_STATION</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_STATION_CONTROL_SYSTEM</Type>
@@ -458,8 +458,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_STATION</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -489,8 +489,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_STORM_SHELTER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -663,8 +663,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DOCKING_BAY</Type>
@@ -825,8 +825,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_REFUELING_STATION</Type>
@@ -860,8 +860,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DOCKING_BAY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_ROCKET_FUEL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -940,12 +940,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_STATION_SANITATION_SYSTEM</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_AGRICULTURAL_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_ULTRAFUEL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -1006,12 +1006,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_AEROGEL_SHIELDING</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_MATERIALS_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_PHASED_ARRAY_OPTICS</Type>
@@ -1042,8 +1042,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_MATERIALS_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_HOTEL</Type>
@@ -1078,12 +1078,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DOCKING_BAY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_AGRICULTURAL_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1114,16 +1114,16 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_SATELLITE_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_TELESCOPE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_BIOFACTORY</Type>
@@ -1159,16 +1159,16 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_MATERIALS_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_AGRICULTURAL_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_SPACEPORT</Type>
@@ -1225,12 +1225,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_SPACEPORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_MATERIALS_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_ORGANIC_COLONY</Type>
@@ -1255,12 +1255,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_ENHANCED_ALGAE_FARM</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_SPACEPORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1301,8 +1301,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_SPACEPORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_SOCIAL_ENGINEERING</Type>
@@ -1332,12 +1332,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_GOV</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_SPACEPORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1375,12 +1375,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MICROSATELLITE_CONSTELLATION</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_SPACEPORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRYONIC_BODY_STORAGE</Type>
@@ -1404,12 +1404,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ADVANCED_COOLING_SYSTEM</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_SPACEPORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1444,16 +1444,16 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_ORGANIC_COLONY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_BIOFACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_SOCIAL_ENGINEERING</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_ONEILL_CYLINDER</Type>
@@ -1479,20 +1479,20 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ADVANCED_COOLING_SYSTEM</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_GOV</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_BIOFACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_EFFECT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_DEFENSES</Type>
@@ -1520,8 +1520,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_SECURITY</Type>
@@ -1547,12 +1547,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_STATION_CONTROL_SYSTEM</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1587,8 +1587,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NUCLEAR_DAMPER</Type>
@@ -1611,12 +1611,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_SHIELDING</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iNukeModifier>-50</iNukeModifier>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1641,12 +1641,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_NANOSATELLITE_CONSTELLATION</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<bPower>1</bPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1672,12 +1672,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_NANOSATELLITE_CONSTELLATION</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRASH_ATOMIZER</Type>
@@ -1705,8 +1705,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WORMHOLE_TO_EARTH</Type>
@@ -1734,8 +1734,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_CLAYTRONIC</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_BLACK_HOLE</Type>
@@ -1760,8 +1760,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DILATON_GENERATOR</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DILATON_GENERATOR</Type>
@@ -1789,12 +1789,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_ION_CANNON</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GIGAVERSE</Type>
@@ -1860,8 +1860,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_CLAYTRONIC</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FOOD_REPLICATOR</Type>
@@ -1926,8 +1926,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORBITAL_PRISON</Type>
@@ -1981,8 +1981,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DYSON_HARROP_SATELLITE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_ANTIMATTER</Type>
@@ -2005,8 +2005,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_ANTIMATTER</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -2042,8 +2042,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASTEROID_MINING_COMPLEX</Type>
@@ -2119,8 +2119,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERPLANETARY_TRANSPORT_NETWORK</Type>
@@ -2153,8 +2153,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_STATION</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ELYSIUM</Type>
@@ -2179,12 +2179,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_STATION_CONTROL_SYSTEM</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqOrCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_DESPOTISM</CivicOption>
@@ -2225,8 +2225,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_ION_CANNON</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

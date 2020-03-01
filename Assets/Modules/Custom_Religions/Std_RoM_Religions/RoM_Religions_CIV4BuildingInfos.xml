@@ -245,8 +245,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HELLENIC_CATHEDRAL</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -338,8 +338,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SCULPTOR</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -429,8 +429,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HELLENIC_CATHEDRAL</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
 					<SpecialistType>SPECIALIST_PRIEST</SpecialistType>
@@ -937,8 +937,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BURIAL_TRADITION_SKY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>

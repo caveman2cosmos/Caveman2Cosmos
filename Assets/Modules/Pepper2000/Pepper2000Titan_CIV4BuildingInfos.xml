@@ -50,8 +50,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TITAN_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TITAN_FERTILIZER_PLANT</Type>
@@ -76,8 +76,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TITAN_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_FERTILIZERS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -104,8 +104,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TITAN_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_ULTRAFUEL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -135,8 +135,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TITAN_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TITAN_AMMONIA_ERUPTION</Type>
@@ -160,8 +160,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TITAN_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TITAN_SF6</Type>
@@ -184,8 +184,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TITAN_HYDROCARBON_REFINERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TITAN_CONTINENT</Type>
@@ -213,8 +213,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TITAN_SF6</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TITAN_ECOSYSTEM</Type>
@@ -238,8 +238,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TITAN_BIOFACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TITAN_SUPERCOMPUTER</Type>
@@ -263,8 +263,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TITAN_HYDROCARBON_REFINERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TITAN_ARCOLOGY</Type>
@@ -293,12 +293,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TITAN_AIR_TRANSPORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TITAN_BIOFACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TITAN_NITROGEN_EXPORTER</Type>
@@ -326,8 +326,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TITAN_HYDROCARBON_REFINERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERRAFORMED_TITAN</Type>
@@ -366,12 +366,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TITAN_SF6</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TITAN_ECOSYSTEM</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COMPUTRONIUM_TITAN</Type>
@@ -398,12 +398,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TITAN_SUPERCOMPUTER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TITAN_ARCOLOGY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

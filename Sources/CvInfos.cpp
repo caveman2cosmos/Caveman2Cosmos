@@ -12952,7 +12952,6 @@ m_iActionSoundScriptId(0),
 m_iDerivativeCiv(NO_CIVILIZATION),
 m_bPlayable(false),
 m_bAIPlayable(false),
-m_piCivilizationBuildings(NULL),
 m_piCivilizationFreeUnits(NULL),
 m_piCivilizationInitialCivics(NULL),
 m_pbLeaders(NULL),
@@ -12975,7 +12974,6 @@ m_bStronglyRestricted(false)
 //------------------------------------------------------------------------------------------------------
 CvCivilizationInfo::~CvCivilizationInfo()
 {
-	SAFE_DELETE_ARRAY(m_piCivilizationBuildings);
 	SAFE_DELETE_ARRAY(m_piCivilizationFreeUnits);
 	SAFE_DELETE_ARRAY(m_piCivilizationInitialCivics);
 	SAFE_DELETE_ARRAY(m_pbLeaders);
@@ -13084,13 +13082,6 @@ void CvCivilizationInfo::setArtDefineTag(const TCHAR* szVal)
 }
 
 // Arrays
-
-int CvCivilizationInfo::getCivilizationBuildings(int i) const
-{
-	FAssertMsg(i < GC.getNumBuildingInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
-	return m_piCivilizationBuildings ? m_piCivilizationBuildings[i] : -1;
-}
 
 int CvCivilizationInfo::getCivilizationFreeUnits(int i) const
 {
@@ -13221,8 +13212,6 @@ void CvCivilizationInfo::getCheckSum(unsigned int& iSum)
 	CheckSum(iSum, m_bPlayable);
 
 	// Arrays
-	CheckSumI(iSum, GC.getNumBuildingInfos(), m_piCivilizationBuildings);
-	CheckSumI(iSum, GC.getNumUnitClassInfos(), m_piCivilizationUnits);
 	CheckSumI(iSum, GC.getNumUnitInfos(), m_piCivilizationFreeUnits);
 	CheckSumI(iSum, GC.getNumCivicOptionInfos(), m_piCivilizationInitialCivics);
 	CheckSumI(iSum, GC.getNumLeaderHeadInfos(), m_pbLeaders);
@@ -13239,8 +13228,6 @@ void CvCivilizationInfo::getCheckSum(unsigned int& iSum)
 bool CvCivilizationInfo::read(CvXMLLoadUtility* pXML)
 {
 	MEMORY_TRACE_FUNCTION();
-
-	char szClassVal[256];					// holds the text value of the relevant classinfo
 
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
@@ -13283,74 +13270,8 @@ bool CvCivilizationInfo::read(CvXMLLoadUtility* pXML)
 		pXML->MoveToXmlParent();
 	}
 
-	// if we can set the current xml node to it's next sibling
-	if (pXML->TryMoveToXmlFirstChild(L"Buildings"))
-	{
-		// call the function that sets the default civilization buildings
-		pXML->InitBuildingDefaults(&m_piCivilizationBuildings);
-		// get the total number of children the current xml node has
-		iNumSibs = pXML->GetXmlChildrenNumber();
-		// if the call to the function that sets the current xml node to it's first non-comment
-		// child and sets the parameter with the new node's value succeeds
-		if ( (0 < iNumSibs) && (pXML->TryMoveToXmlFirstChild()) )
-		{
-			int iBuildingIndex;
-
-			FAssertMsg((iNumSibs <= GC.getNumBuildingInfos()) ,"In SetGlobalCivilizationInfo iNumSibs is greater than GC.getNumBuildingInfos()");
-
-			// loop through all the siblings
-			for (j=0;j<iNumSibs;j++)
-			{
-				if (pXML->GetChildXmlVal(szClassVal))
-				{
-					// get the index into the array based on the building class type
-					iBuildingIndex = pXML->GetInfoClass(szClassVal);
-					if (-1 < iBuildingIndex)
-					{
-						// get the next value which should be the building type to set this civilization's version of this building class too
-						pXML->GetNextXmlVal( szTextVal);
-						// call the find in list function to return either -1 if no value is found
-						// or the index in the list the match is found at
-						m_piCivilizationBuildings[iBuildingIndex] = pXML->GetInfoClass(szTextVal);
-					}
-					else if (!GC.getDefineINT(szClassVal))
-					{
-						FAssertMsg(0,"Building index is -1 in SetGlobalCivilizationInfo function");
-					}
-
-					// set the current xml node to it's parent node
-					pXML->MoveToXmlParent();
-				}
-
-				// if the call to the function that sets the current xml node to it's first non-comment
-				// sibling and sets the parameter with the new node's value does not succeed
-				// we will break out of this for loop
-				if (!pXML->TryMoveToXmlNextSibling())
-				{
-					break;
-				}
-			}
-
-			// set the current xml node to it's parent node
-			pXML->MoveToXmlParent();
-		}
-
-		// set the current xml node to it's parent node
-		pXML->MoveToXmlParent();
-	}
-	else
-	{
-		pXML->InitBuildingDefaults(&m_piCivilizationBuildings);
-		for ( j = 0; j < GC.getNumBuildingInfos(); j++)
-		{
-			m_piCivilizationBuildings[j] = (BuildingTypes)j;
-		}
-	}
-
 	pXML->SetVariableListTagPair(&m_piCivilizationFreeUnits, L"FreeUnits", GC.getNumUnitInfos());
-
 	pXML->SetVariableListTagPair(&m_pbCivilizationFreeBuilding, L"FreeBuildings",  GC.getNumBuildingInfos());
-
 	pXML->SetVariableListTagPair(&m_pbCivilizationFreeTechs, L"FreeTechs", GC.getNumTechInfos());
 	pXML->SetVariableListTagPair(&m_pbCivilizationDisableTechs, L"DisableTechs", GC.getNumTechInfos());
 
@@ -13497,10 +13418,6 @@ void CvCivilizationInfo::copyNonDefaults(CvCivilizationInfo* pClassInfo, CvXMLLo
 
 	for ( int i = 0; i < GC.getNumBuildingInfos(); i++)
 	{
-		if ( getCivilizationBuildings(i) == (BuildingTypes)i)	// "Buildings"
-		{
-			m_piCivilizationBuildings[i] = pClassInfo->getCivilizationBuildings(i);
-		}
 		if ( isCivilizationFreeBuilding(i) == bDefault && pClassInfo->isCivilizationFreeBuilding(i) != bDefault)
 		{
 			if ( NULL == m_pbCivilizationFreeBuilding )

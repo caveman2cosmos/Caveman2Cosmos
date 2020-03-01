@@ -76,12 +76,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TOY_MAKER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_TOY_MAKER</BuildingType>
@@ -146,8 +146,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TOYCARVER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_TOYCARVER</BuildingType>
