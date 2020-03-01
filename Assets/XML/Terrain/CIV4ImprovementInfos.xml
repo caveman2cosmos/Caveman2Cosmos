@@ -13578,6 +13578,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
+			<ImprovementPillage>IMPROVEMENT_EARLY_MOUNTAIN_MINE</ImprovementPillage>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>

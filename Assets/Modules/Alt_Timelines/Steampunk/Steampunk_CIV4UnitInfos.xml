@@ -597,6 +597,10 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_3FACTORY_2</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_LUMBER_JACK</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
