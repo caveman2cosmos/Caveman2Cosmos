@@ -1,6 +1,5 @@
 Version=11
 BeginGame
-	Victory=VICTORY_SPACE_RACE
 	StartYear=-200000
 	Description= C2C Large Earth Map with 21 Civs. By Harrier.
 	ModPath=

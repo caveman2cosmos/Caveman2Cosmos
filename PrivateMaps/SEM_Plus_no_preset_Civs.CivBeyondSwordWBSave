@@ -1,7 +1,5 @@
 Version=11
 BeginGame
-	Speed=NONE
-	Victory=VICTORY_SPACE_RACE
 	StartYear=-200000
 	Description= C2C 10% larger Standard Earth Map - no preset Civs. By Harrier.
 	ModPath=
