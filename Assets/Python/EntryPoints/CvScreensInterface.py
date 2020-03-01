@@ -112,10 +112,6 @@ def showDomesticAdvisor(argsList):
 	if CyGame().getActivePlayer() != -1:
 		screenMap[DOMESTIC_ADVISOR].interfaceScreen()
 
-def showMilitaryAdvisor():
-	if CyGame().getActivePlayer() != -1:
-		screenMap[MILITARY_ADVISOR].interfaceScreen()
-
 def showEspionageAdvisor():
 	if CyGame().getActivePlayer() != -1:
 		screenMap[ESPIONAGE_ADVISOR].interfaceScreen()
@@ -1184,7 +1180,7 @@ def featAccomplishedOnClickedCallback(argsList):
 		if iData1 == FeatTypes.FEAT_TRADE_ROUTE:
 			showDomesticAdvisor(())
 		elif (iData1 >= FeatTypes.FEAT_UNITCOMBAT_ARCHER) and (iData1 <= FeatTypes.FEAT_UNIT_SPY):
-			showMilitaryAdvisor()
+			CyGlobalContext().getGame().doControl(ControlTypes.CONTROL_MILITARY_SCREEN)
 		elif (iData1 >= FeatTypes.FEAT_COPPER_CONNECTED) and (iData1 <= FeatTypes.FEAT_FOOD_CONNECTED):
 			showForeignAdvisorScreen([0])
 		elif iData1 == FeatTypes.FEAT_NATIONAL_WONDER:

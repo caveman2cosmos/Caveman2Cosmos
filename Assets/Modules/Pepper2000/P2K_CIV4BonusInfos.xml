@@ -10,7 +10,7 @@
 			<Type>BONUS_ABANDONED_CIVILIZATION</Type>
 			<Description>TXT_KEY_BONUS_ABANDONED_CIVILIZATION</Description>
 			<Civilopedia>TXT_KEY_BONUS_ABANDONED_CIVILIZATION_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_SPACE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ABANDONED_CIVILIZATION</ArtDefineTag>
 			<TechReveal>TECH_ASTROIMPERIALISM</TechReveal>
 			<TechCityTrade>TECH_ASTROIMPERIALISM</TechCityTrade>
@@ -78,7 +78,7 @@
 			<Type>BONUS_ABANDONED_MEGASTRUCTURE</Type>
 			<Description>TXT_KEY_BONUS_ABANDONED_MEGASTRUCTURE</Description>
 			<Civilopedia>TXT_KEY_BONUS_ABANDONED_MEGASTRUCTURE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_SPACE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ABANDONED_MEGASTRUCTURE</ArtDefineTag>
 			<TechReveal>TECH_CULTURAL_LONGEVITY</TechReveal>
 			<TechCityTrade>TECH_CULTURAL_LONGEVITY</TechCityTrade>
@@ -126,7 +126,7 @@
 			<Type>BONUS_EXOTIC_LIFEFORMS</Type>
 			<Description>TXT_KEY_BONUS_EXOTIC_LIFEFORMS</Description>
 			<Civilopedia>TXT_KEY_BONUS_EXOTIC_LIFEFORMS_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_SPACE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_EXOTIC_LIFEFORMS</ArtDefineTag>
 			<TechReveal>TECH_ENDLESS_EXPLORATION</TechReveal>
 			<TechCityTrade>TECH_ENDLESS_EXPLORATION</TechCityTrade>
@@ -170,7 +170,7 @@
 			<Type>BONUS_EXTRATERRESTRIAL_MICROBES</Type>
 			<Description>TXT_KEY_BONUS_EXTRATERRESTRIAL_MICROBES</Description>
 			<Civilopedia>TXT_KEY_BONUS_EXTRATERRESTRIAL_MICROBES_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_SPACE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_EXTRATERRESTRIAL_MICROBES</ArtDefineTag>
 			<TechReveal>TECH_JOVIAN_EXPLORATION</TechReveal>
 			<TechCityTrade>TECH_JOVIAN_EXPLORATION</TechCityTrade>
@@ -242,7 +242,7 @@
 			<Type>BONUS_MARTIAN_BLUEBERRIES</Type>
 			<Description>TXT_KEY_BONUS_MARTIAN_BLUEBERRIES</Description>
 			<Civilopedia>TXT_KEY_BONUS_MARTIAN_BLUEBERRIES_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_SPACE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MARTIAN_BLUEBERRIES</ArtDefineTag>
 			<TechReveal>TECH_PLANETARY_EXTRACTION</TechReveal>
 			<TechCityTrade>TECH_PLANETARY_EXTRACTION</TechCityTrade>
@@ -302,7 +302,7 @@
 			<Type>BONUS_METALLIC_ASTEROID</Type>
 			<Description>TXT_KEY_BONUS_METALLIC_ASTEROID</Description>
 			<Civilopedia>TXT_KEY_BONUS_METALLIC_ASTEROID_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_SPACE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_METALLIC_ASTEROID</ArtDefineTag>
 			<TechReveal>TECH_ASTEROID_BELT_PROBES</TechReveal>
 			<TechCityTrade>TECH_ASTEROID_BELT_PROBES</TechCityTrade>
@@ -370,7 +370,7 @@
 			<Type>BONUS_ORGANIC_VOLATILES</Type>
 			<Description>TXT_KEY_BONUS_ORGANIC_VOLATILES</Description>
 			<Civilopedia>TXT_KEY_BONUS_ORGANIC_VOLATILES_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_SPACE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ORGANIC_VOLATILES</ArtDefineTag>
 			<TechReveal>TECH_ASTEROID_BELT_PROBES</TechReveal>
 			<TechCityTrade>TECH_ASTEROID_BELT_PROBES</TechCityTrade>
@@ -438,7 +438,7 @@
 			<Type>BONUS_XENOFAUNA</Type>
 			<Description>TXT_KEY_BONUS_XENOFAUNA</Description>
 			<Civilopedia>TXT_KEY_BONUS_XENOFAUNA_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_SPACE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_XENOFAUNA</ArtDefineTag>
 			<TechReveal>TECH_PLANET_SCOUTING</TechReveal>
 			<TechCityTrade>TECH_PLANET_SCOUTING</TechCityTrade>
@@ -506,7 +506,7 @@
 			<Type>BONUS_XENOFLORA</Type>
 			<Description>TXT_KEY_BONUS_XENOFLORA</Description>
 			<Civilopedia>TXT_KEY_BONUS_XENOFLORA_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_SPACE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_XENOFLORA</ArtDefineTag>
 			<TechReveal>TECH_PLANET_SCOUTING</TechReveal>
 			<TechCityTrade>TECH_PLANET_SCOUTING</TechCityTrade>

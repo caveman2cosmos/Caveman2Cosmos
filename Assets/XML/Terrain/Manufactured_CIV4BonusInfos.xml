@@ -223,7 +223,7 @@
 			<Type>BONUS_BIOFUEL</Type>
 			<Description>TXT_KEY_BONUS_BIOFUEL</Description>
 			<Civilopedia>TXT_KEY_TECH_BIOMATERIALS_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_FUEL</BonusClassType>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_BIOFUEL</ArtDefineTag>
 			<TechReveal>TECH_BIOMATERIALS</TechReveal>
 			<TechCityTrade>TECH_BIOMATERIALS</TechCityTrade>
@@ -456,7 +456,7 @@
 			<Type>BONUS_CEMENT</Type>
 			<Description>TXT_KEY_BONUS_CEMENT</Description>
 			<Civilopedia>TXT_KEY_BONUS_CEMENT_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MODERN</BonusClassType>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_CEMENT</ArtDefineTag>
 			<TechReveal>TECH_CONCRETE</TechReveal>
 			<TechCityTrade>TECH_CONCRETE</TechCityTrade>
@@ -544,11 +544,11 @@
 		</BonusInfo>
 	<!-- Common Clay -->
 		<BonusInfo>
-			<Type>BONUS_COMMON_CLAY</Type>
-			<Description>TXT_KEY_BONUS_COMMON_CLAY</Description>
-			<Civilopedia>TXT_KEY_BONUS_COMMON_CLAY_PEDIA</Civilopedia>
+			<Type>BONUS_CLAY</Type>
+			<Description>TXT_KEY_BONUS_CLAY</Description>
+			<Civilopedia>TXT_KEY_BONUS_CLAY_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_COMMON_CLAY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_CLAY</ArtDefineTag>
 			<TechReveal>TECH_NATURAL_PIGMENTS</TechReveal>
 			<TechCityTrade>TECH_NATURAL_PIGMENTS</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
@@ -632,11 +632,11 @@
 		</BonusInfo>
 	<!-- Oil Products -->
 		<BonusInfo>
-			<Type>BONUS_OIL_PRODUCTS</Type>
-			<Description>TXT_KEY_BONUS_OIL_PRODUCTS</Description>
-			<Civilopedia>TXT_KEY_BONUS_OIL_PRODUCTS_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_FUEL</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_OIL_PRODUCTS</ArtDefineTag>
+			<Type>BONUS_PETROLEUM_PRODUCTS</Type>
+			<Description>TXT_KEY_BONUS_PETROLEUM_PRODUCTS</Description>
+			<Civilopedia>TXT_KEY_BONUS_PETROLEUM_PRODUCTS_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
+			<ArtDefineTag>ART_DEF_BONUS_PETROLEUM_PRODUCTS</ArtDefineTag>
 			<TechReveal>TECH_REFINING</TechReveal>
 			<TechCityTrade>TECH_REFINING</TechCityTrade>
 			<iAITradeModifier>10</iAITradeModifier>
@@ -778,11 +778,11 @@
 		</BonusInfo>
 	<!-- Electrolyte Cells -->
 		<BonusInfo>
-			<Type>BONUS_ELECTROLYTE_CELLS</Type>
-			<Description>TXT_KEY_BONUS_ELECTROLYTE_CELLS</Description>
-			<Civilopedia>TXT_KEY_BONUS_ELECTROLYTE_CELLS_PEDIA</Civilopedia>
+			<Type>BONUS_ELECTROLYTIC_CELLS</Type>
+			<Description>TXT_KEY_BONUS_ELECTROLYTIC_CELLS</Description>
+			<Civilopedia>TXT_KEY_BONUS_ELECTROLYTIC_CELLS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_ELECTROLYTE_CELLS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_ELECTROLYTIC_CELLS</ArtDefineTag>
 			<TechReveal>TECH_FUEL_CELLS</TechReveal>
 			<TechCityTrade>TECH_FUEL_CELLS</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
@@ -991,22 +991,22 @@
 		</BonusInfo>
 	<!-- Furs -->
 		<BonusInfo>
-			<Type>BONUS_FURS</Type>
-			<Description>TXT_KEY_BONUS_FURS</Description>
-			<Civilopedia>TXT_KEY_BONUS_FURS_PEDIA</Civilopedia>
+			<Type>BONUS_FUR</Type>
+			<Description>TXT_KEY_BONUS_FUR</Description>
+			<Civilopedia>TXT_KEY_BONUS_FUR_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_FURS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_FUR</ArtDefineTag>
 			<TechReveal>TECH_SKINNING</TechReveal>
 			<TechCityTrade>TECH_SKINNING</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Gems -->
 		<BonusInfo>
-			<Type>BONUS_GEMS</Type>
-			<Description>TXT_KEY_BONUS_GEMS</Description>
-			<Civilopedia>TXT_KEY_BONUS_GEMS_PEDIA</Civilopedia>
+			<Type>BONUS_GEMSTONE</Type>
+			<Description>TXT_KEY_BONUS_GEMSTONE</Description>
+			<Civilopedia>TXT_KEY_BONUS_GEMSTONE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_GEMS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_GEMSTONE</ArtDefineTag>
 			<TechReveal>TECH_BARTER</TechReveal>
 			<TechCityTrade>TECH_BARTER</TechCityTrade>
 			<iAITradeModifier>7</iAITradeModifier>
@@ -1049,11 +1049,11 @@
 		</BonusInfo>
 	<!-- Grain -->
 		<BonusInfo>
-			<Type>BONUS_GRAIN</Type>
-			<Description>TXT_KEY_BONUS_GRAIN</Description>
-			<Civilopedia>TXT_KEY_BONUS_GRAIN_PEDIA</Civilopedia>
+			<Type>BONUS_GRAINS</Type>
+			<Description>TXT_KEY_BONUS_GRAINS</Description>
+			<Civilopedia>TXT_KEY_BONUS_GRAINS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_GRAIN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_GRAINS</ArtDefineTag>
 			<TechReveal>TECH_GROUND_STONE</TechReveal>
 			<TechCityTrade>TECH_GROUND_STONE</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
@@ -1571,11 +1571,11 @@
 		</BonusInfo>
 	<!-- Medical Tricoders -->
 		<BonusInfo>
-			<Type>BONUS_MEDICAL_TRICODERS</Type>
-			<Description>TXT_KEY_BONUS_MEDICAL_TRICODERS</Description>
-			<Civilopedia>TXT_KEY_BONUS_MEDICAL_TRICODERS_PEDIA</Civilopedia>
+			<Type>BONUS_MEDICAL_TRICORDERS</Type>
+			<Description>TXT_KEY_BONUS_MEDICAL_TRICORDERS</Description>
+			<Civilopedia>TXT_KEY_BONUS_MEDICAL_TRICORDERS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_MEDICAL_TRICODERS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_MEDICAL_TRICORDERS</ArtDefineTag>
 			<TechReveal>TECH_PERSONALIZED_HEALTH</TechReveal>
 			<TechCityTrade>TECH_PERSONALIZED_HEALTH</TechCityTrade>
 			<iHealth>1</iHealth>
@@ -1583,11 +1583,11 @@
 		</BonusInfo>
 	<!-- Meth -->
 		<BonusInfo>
-			<Type>BONUS_METH</Type>
-			<Description>TXT_KEY_BONUS_METH</Description>
-			<Civilopedia>TXT_KEY_BONUS_METH_PEDIA</Civilopedia>
+			<Type>BONUS_METHAMPHETAMINE</Type>
+			<Description>TXT_KEY_BONUS_METHAMPHETAMINE</Description>
+			<Civilopedia>TXT_KEY_BONUS_METHAMPHETAMINE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_METH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_METHAMPHETAMINE</ArtDefineTag>
 			<TechReveal>TECH_URBAN_CULTURE</TechReveal>
 			<TechCityTrade>TECH_URBAN_CULTURE</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
@@ -1788,11 +1788,11 @@
 		</BonusInfo>
 	<!-- Omega Acids -->
 		<BonusInfo>
-			<Type>BONUS_OMEGA_ACIDS</Type>
-			<Description>TXT_KEY_BONUS_OMEGA_ACIDS</Description>
-			<Civilopedia>TXT_KEY_BONUS_OMEGA_ACIDS_PEDIA</Civilopedia>
+			<Type>BONUS_OMEGA_FATTY_ACID</Type>
+			<Description>TXT_KEY_BONUS_OMEGA_FATTY_ACID</Description>
+			<Civilopedia>TXT_KEY_BONUS_OMEGA_FATTY_ACID_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_OMEGA_ACIDS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_OMEGA_FATTY_ACID</ArtDefineTag>
 			<TechReveal>TECH_MOLECULAR_BIOLOGY</TechReveal>
 			<TechCityTrade>TECH_MOLECULAR_BIOLOGY</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
@@ -2388,7 +2388,7 @@
 		<BonusInfo>
 			<Type>BONUS_STEEL_INGOTS</Type>
 			<Description>TXT_KEY_BONUS_STEEL_INGOTS</Description>
-			<Civilopedia>TXT_KEY_BONUS_STEEL_INGOTS_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BONUS_INGOTS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_STEEL_INGOTS</ArtDefineTag>
 			<TechReveal>TECH_CRUCIBLE_STEEL</TechReveal>
@@ -3037,6 +3037,7 @@
 			<Type>BONUS_PUNCH_CARDS</Type>
 			<Description>TXT_KEY_BONUS_PUNCH_CARDS</Description>
 			<Civilopedia>TXT_KEY_BONUS_PUNCH_CARDS_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_PUNCH_CARDS</ArtDefineTag>
 			<TechReveal>TECH_ENCRYPTION_MACHINES</TechReveal>
 			<TechCityTrade>TECH_ENCRYPTION_MACHINES</TechCityTrade>
@@ -3046,6 +3047,7 @@
 			<Type>BONUS_CARBON_FIBER</Type>
 			<Description>TXT_KEY_BONUS_CARBON_FIBER</Description>
 			<Civilopedia>TXT_KEY_BONUS_CARBON_FIBER_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_CARBON_FIBER</ArtDefineTag>
 			<TechReveal>TECH_COMPOSITES</TechReveal>
 			<TechCityTrade>TECH_COMPOSITES</TechCityTrade>
@@ -3055,6 +3057,7 @@
 			<Type>BONUS_RARE_EARTH_MINERALS</Type>
 			<Description>TXT_KEY_BONUS_RARE_EARTH_MINERALS</Description>
 			<Civilopedia>TXT_KEY_BONUS_RARE_EARTH_MINERALS_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_RARE_EARTH_MINERALS</ArtDefineTag>
 			<TechReveal>TECH_MODERN_SEISMOLOGY</TechReveal>
 			<TechCityTrade>TECH_MODERN_SEISMOLOGY</TechCityTrade>
@@ -3064,6 +3067,7 @@
 			<Type>BONUS_CERMET</Type>
 			<Description>TXT_KEY_BONUS_CERMET</Description>
 			<Civilopedia>TXT_KEY_BONUS_CERMET_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_CERMET</ArtDefineTag>
 			<TechReveal>TECH_COMPOSITES</TechReveal>
 			<TechCityTrade>TECH_COMPOSITES</TechCityTrade>
@@ -3073,6 +3077,7 @@
 			<Type>BONUS_QUANTUM_DOTS</Type>
 			<Description>TXT_KEY_BONUS_QUANTUM_DOTS</Description>
 			<Civilopedia>TXT_KEY_BONUS_QUANTUM_DOTS_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_QUANTUM_DOTS</ArtDefineTag>
 			<TechReveal>TECH_QUANTUM_TELEPORTATION</TechReveal>
 			<TechCityTrade>TECH_QUANTUM_TELEPORTATION</TechCityTrade>
@@ -3082,6 +3087,7 @@
 			<Type>BONUS_AEROGEL</Type>
 			<Description>TXT_KEY_BONUS_AEROGEL</Description>
 			<Civilopedia>TXT_KEY_BONUS_AEROGEL_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_AEROGEL</ArtDefineTag>
 			<TechReveal>TECH_METAMATERIALS</TechReveal>
 			<TechCityTrade>TECH_METAMATERIALS</TechCityTrade>
@@ -3091,25 +3097,28 @@
 			<Type>BONUS_METALLIC_HYDROGEN</Type>
 			<Description>TXT_KEY_BONUS_METALLIC_HYDROGEN</Description>
 			<Civilopedia>TXT_KEY_BONUS_METALLIC_HYDROGEN_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_METALLIC_HYDROGEN</ArtDefineTag>
 			<TechReveal>TECH_METAMATERIALS</TechReveal>
 			<TechCityTrade>TECH_METAMATERIALS</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_BULK_DIAMOND</Type>
-			<Description>TXT_KEY_BONUS_BULK_DIAMOND</Description>
-			<Civilopedia>TXT_KEY_BONUS_BULK_DIAMOND_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_BONUS_BULK_DIAMOND</ArtDefineTag>
+			<Type>BONUS_SYNTHETIC_DIAMOND</Type>
+			<Description>TXT_KEY_BONUS_SYNTHETIC_DIAMOND</Description>
+			<Civilopedia>TXT_KEY_BONUS_SYNTHETIC_DIAMOND_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
+			<ArtDefineTag>ART_DEF_BONUS_SYNTHETIC_DIAMOND</ArtDefineTag>
 			<TechReveal>TECH_GRAPHENE_ALLOYS</TechReveal>
 			<TechCityTrade>TECH_GRAPHENE_ALLOYS</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_FULLERENES</Type>
-			<Description>TXT_KEY_BONUS_FULLERENES</Description>
-			<Civilopedia>TXT_KEY_BONUS_FULLERENES_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_BONUS_FULLERENES</ArtDefineTag>
+			<Type>BONUS_FULLERENE</Type>
+			<Description>TXT_KEY_BONUS_FULLERENE</Description>
+			<Civilopedia>TXT_KEY_BONUS_FULLERENE_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
+			<ArtDefineTag>ART_DEF_BONUS_FULLERENE</ArtDefineTag>
 			<TechReveal>TECH_GRAPHENE_ALLOYS</TechReveal>
 			<TechCityTrade>TECH_GRAPHENE_ALLOYS</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
@@ -3118,6 +3127,7 @@
 			<Type>BONUS_METAL_FOAM</Type>
 			<Description>TXT_KEY_BONUS_METAL_FOAM</Description>
 			<Civilopedia>TXT_KEY_BONUS_METAL_FOAM_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_METAL_FOAM</ArtDefineTag>
 			<TechReveal>TECH_LIQUID_METALS</TechReveal>
 			<TechCityTrade>TECH_LIQUID_METALS</TechCityTrade>
@@ -3127,6 +3137,7 @@
 			<Type>BONUS_NANOTRUSSES</Type>
 			<Description>TXT_KEY_BONUS_NANOTRUSSES</Description>
 			<Civilopedia>TXT_KEY_BONUS_NANOTRUSSES_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_NANOTRUSSES</ArtDefineTag>
 			<TechReveal>TECH_NANO_ARCHITECTURE</TechReveal>
 			<TechCityTrade>TECH_NANO_ARCHITECTURE</TechCityTrade>
@@ -3136,6 +3147,7 @@
 			<Type>BONUS_TRANSPARENT_ALUMINUM</Type>
 			<Description>TXT_KEY_BONUS_TRANSPARENT_ALUMINUM</Description>
 			<Civilopedia>TXT_KEY_BONUS_TRANSPARENT_ALUMINUM_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_TRANSPARENT_ALUMINUM</ArtDefineTag>
 			<TechReveal>TECH_NANO_ARCHITECTURE</TechReveal>
 			<TechCityTrade>TECH_NANO_ARCHITECTURE</TechCityTrade>
@@ -3145,6 +3157,7 @@
 			<Type>BONUS_MARTIAN_VEGETABLES</Type>
 			<Description>TXT_KEY_BONUS_MARTIAN_VEGETABLES</Description>
 			<Civilopedia>TXT_KEY_BONUS_MARTIAN_VEGETABLES_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MARTIAN_VEGETABLES</ArtDefineTag>
 			<TechReveal>TECH_PLANETARY_COLONIZATION</TechReveal>
 			<TechCityTrade>TECH_PLANETARY_COLONIZATION</TechCityTrade>
@@ -3154,6 +3167,7 @@
 			<Type>BONUS_MARTIAN_MANUFACTURED_GOODS</Type>
 			<Description>TXT_KEY_BONUS_MARTIAN_MANUFACTURED_GOODS</Description>
 			<Civilopedia>TXT_KEY_BONUS_MARTIAN_MANUFACTURED_GOODS_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MARTIAN_MANUFACTURED_GOODS</ArtDefineTag>
 			<TechReveal>TECH_PLANETARY_MANUFACTURING</TechReveal>
 			<TechCityTrade>TECH_PLANETARY_MANUFACTURING</TechCityTrade>
@@ -3163,6 +3177,7 @@
 			<Type>BONUS_CARBYNE</Type>
 			<Description>TXT_KEY_BONUS_CARBYNE</Description>
 			<Civilopedia>TXT_KEY_BONUS_CARBYNE_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_CARBYNE</ArtDefineTag>
 			<TechReveal>TECH_SUPERSTRONG_ALLOYS</TechReveal>
 			<TechCityTrade>TECH_SUPERSTRONG_ALLOYS</TechCityTrade>
@@ -3172,6 +3187,7 @@
 			<Type>BONUS_MARTIAN_ELECTRONICS</Type>
 			<Description>TXT_KEY_BONUS_MARTIAN_ELECTRONICS</Description>
 			<Civilopedia>TXT_KEY_BONUS_MARTIAN_ELECTRONICS_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MARTIAN_ELECTRONICS</ArtDefineTag>
 			<TechReveal>TECH_ION_BEAMS</TechReveal>
 			<TechCityTrade>TECH_ION_BEAMS</TechCityTrade>
@@ -3181,6 +3197,7 @@
 			<Type>BONUS_MARTIAN_ALGAE</Type>
 			<Description>TXT_KEY_BONUS_MARTIAN_ALGAE</Description>
 			<Civilopedia>TXT_KEY_BONUS_MARTIAN_ALGAE_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MARTIAN_ALGAE</ArtDefineTag>
 			<TechReveal>TECH_DYSTOPIA_PATHOGENS</TechReveal>
 			<TechCityTrade>TECH_DYSTOPIA_PATHOGENS</TechCityTrade>
@@ -3190,6 +3207,7 @@
 			<Type>BONUS_DIAMOND_NANOTHREADS</Type>
 			<Description>TXT_KEY_BONUS_DIAMOND_NANOTHREADS</Description>
 			<Civilopedia>TXT_KEY_BONUS_DIAMOND_NANOTHREADS_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_DIAMOND_NANOTHREADS</ArtDefineTag>
 			<TechReveal>TECH_SUPERCHARGED_CRYSTALLOGRAPHY</TechReveal>
 			<TechCityTrade>TECH_SUPERCHARGED_CRYSTALLOGRAPHY</TechCityTrade>
@@ -3199,6 +3217,7 @@
 			<Type>BONUS_PLASTEEL</Type>
 			<Description>TXT_KEY_BONUS_PLASTEEL</Description>
 			<Civilopedia>TXT_KEY_BONUS_PLASTEEL_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_PLASTEEL</ArtDefineTag>
 			<TechReveal>TECH_HYPERMAGNETICS</TechReveal>
 			<TechCityTrade>TECH_HYPERMAGNETICS</TechCityTrade>
@@ -3208,6 +3227,7 @@
 			<Type>BONUS_MARTIAN_FRUIT</Type>
 			<Description>TXT_KEY_BONUS_MARTIAN_FRUIT</Description>
 			<Civilopedia>TXT_KEY_BONUS_MARTIAN_FRUIT_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MARTIAN_FRUIT</ArtDefineTag>
 			<TechReveal>TECH_BOTANICAL_ALCHEMY</TechReveal>
 			<TechCityTrade>TECH_BOTANICAL_ALCHEMY</TechCityTrade>
@@ -3217,6 +3237,7 @@
 			<Type>BONUS_SUPERINTELLIGENT_COMPUTERS</Type>
 			<Description>TXT_KEY_BONUS_SUPERINTELLIGENT_COMPUTERS</Description>
 			<Civilopedia>TXT_KEY_BONUS_SUPERINTELLIGENT_COMPUTERS_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SUPERINTELLIGENT_COMPUTERS</ArtDefineTag>
 			<TechReveal>TECH_TECHNOLOGICAL_SINGULARITY</TechReveal>
 			<TechCityTrade>TECH_TECHNOLOGICAL_SINGULARITY</TechCityTrade>
@@ -3226,6 +3247,7 @@
 			<Type>BONUS_CLAYTRONIC_ATOMS</Type>
 			<Description>TXT_KEY_BONUS_CLAYTRONIC_ATOMS</Description>
 			<Civilopedia>TXT_KEY_BONUS_CLAYTRONIC_ATOMS_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_CLAYTRONIC_ATOMS</ArtDefineTag>
 			<TechReveal>TECH_ANIMAMATERIALS</TechReveal>
 			<TechCityTrade>TECH_ANIMAMATERIALS</TechCityTrade>
@@ -3235,6 +3257,7 @@
 			<Type>BONUS_DEEP_SPACE_NANOBOTS</Type>
 			<Description>TXT_KEY_BONUS_DEEP_SPACE_NANOBOTS</Description>
 			<Civilopedia>TXT_KEY_BONUS_DEEP_SPACE_NANOBOTS_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_DEEP_SPACE_NANOBOTS</ArtDefineTag>
 			<TechReveal>TECH_ANIMAMATERIALS</TechReveal>
 			<TechCityTrade>TECH_ANIMAMATERIALS</TechCityTrade>
@@ -3244,6 +3267,7 @@
 			<Type>BONUS_DEEP_SPACE_LIFEFORMS</Type>
 			<Description>TXT_KEY_BONUS_DEEP_SPACE_LIFEFORMS</Description>
 			<Civilopedia>TXT_KEY_BONUS_DEEP_SPACE_LIFEFORMS_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_DEEP_SPACE_LIFEFORMS</ArtDefineTag>
 			<TechReveal>TECH_GAIA_ECOLOGY</TechReveal>
 			<TechCityTrade>TECH_GAIA_ECOLOGY</TechCityTrade>
@@ -3253,6 +3277,7 @@
 			<Type>BONUS_SUPERSOLID_MATERIAL</Type>
 			<Description>TXT_KEY_BONUS_SUPERSOLID_MATERIAL</Description>
 			<Civilopedia>TXT_KEY_BONUS_SUPERSOLID_MATERIAL_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SUPERSOLID_MATERIAL</ArtDefineTag>
 			<TechReveal>TECH_FRICTIONLESS_FLIGHT</TechReveal>
 			<TechCityTrade>TECH_FRICTIONLESS_FLIGHT</TechCityTrade>
@@ -3262,6 +3287,7 @@
 			<Type>BONUS_NANOMORPHIC_HABITATS</Type>
 			<Description>TXT_KEY_BONUS_NANOMORPHIC_HABITATS</Description>
 			<Civilopedia>TXT_KEY_BONUS_NANOMORPHIC_HABITATS_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_NANOMORPHIC_HABITATS</ArtDefineTag>
 			<TechReveal>TECH_NANOMORPHIC_TROIDS</TechReveal>
 			<TechCityTrade>TECH_NANOMORPHIC_TROIDS</TechCityTrade>
@@ -3271,6 +3297,7 @@
 			<Type>BONUS_MARTIAN_CROPS</Type>
 			<Description>TXT_KEY_BONUS_MARTIAN_CROPS</Description>
 			<Civilopedia>TXT_KEY_BONUS_MARTIAN_CROPS_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MARTIAN_CROPS</ArtDefineTag>
 			<TechReveal>TECH_EXTRATERRESTRIAL_AGRICULTURE</TechReveal>
 			<TechCityTrade>TECH_EXTRATERRESTRIAL_AGRICULTURE</TechCityTrade>
@@ -3280,6 +3307,7 @@
 			<Type>BONUS_ADVANCED_REPLICATORS</Type>
 			<Description>TXT_KEY_BONUS_ADVANCED_REPLICATORS</Description>
 			<Civilopedia>TXT_KEY_BONUS_ADVANCED_REPLICATORS_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ADVANCED_REPLICATORS</ArtDefineTag>
 			<TechReveal>TECH_FORGE_WORLDS</TechReveal>
 			<TechCityTrade>TECH_FORGE_WORLDS</TechCityTrade>
@@ -3289,6 +3317,7 @@
 			<Type>BONUS_ATOMICALLY_PRECISE_ALLOYS</Type>
 			<Description>TXT_KEY_BONUS_ATOMICALLY_PRECISE_ALLOYS</Description>
 			<Civilopedia>TXT_KEY_BONUS_ATOMICALLY_PRECISE_ALLOYS_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ATOMICALLY_PRECISE_ALLOYS</ArtDefineTag>
 			<TechReveal>TECH_ATOMIC_SCALE_ENGINEERING</TechReveal>
 			<TechCityTrade>TECH_ATOMIC_SCALE_ENGINEERING</TechCityTrade>
@@ -3298,6 +3327,7 @@
 			<Type>BONUS_PERSONAL_SPACECRAFT</Type>
 			<Description>TXT_KEY_BONUS_PERSONAL_SPACECRAFT</Description>
 			<Civilopedia>TXT_KEY_BONUS_PERSONAL_SPACECRAFT_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_PERSONAL_SPACECRAFT</ArtDefineTag>
 			<TechReveal>TECH_FUSION_SPACECRAFT</TechReveal>
 			<TechCityTrade>TECH_FUSION_SPACECRAFT</TechCityTrade>
@@ -3307,6 +3337,7 @@
 			<Type>BONUS_YGGDRASIL_SEEDS</Type>
 			<Description>TXT_KEY_BONUS_YGGDRASIL_SEEDS</Description>
 			<Civilopedia>TXT_KEY_BONUS_YGGDRASIL_SEEDS_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_YGGDRASIL_SEEDS</ArtDefineTag>
 			<TechReveal>TECH_ECOSYNTHESIS</TechReveal>
 			<TechCityTrade>TECH_ECOSYNTHESIS</TechCityTrade>
@@ -3316,6 +3347,7 @@
 			<Type>BONUS_COMPUTRONIUM</Type>
 			<Description>TXT_KEY_BONUS_COMPUTRONIUM</Description>
 			<Civilopedia>TXT_KEY_BONUS_COMPUTRONIUM_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_COMPUTRONIUM</ArtDefineTag>
 			<TechReveal>TECH_PICOTECHNOLOGY</TechReveal>
 			<TechCityTrade>TECH_PICOTECHNOLOGY</TechCityTrade>
@@ -3325,6 +3357,7 @@
 			<Type>BONUS_KUGELBLITZ</Type>
 			<Description>TXT_KEY_BONUS_KUGELBLITZ</Description>
 			<Civilopedia>TXT_KEY_BONUS_KUGELBLITZ_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_KUGELBLITZ</ArtDefineTag>
 			<TechReveal>TECH_SINGULARITY_STABILIZATION</TechReveal>
 			<TechCityTrade>TECH_SINGULARITY_STABILIZATION</TechCityTrade>
@@ -3334,6 +3367,7 @@
 			<Type>BONUS_WARP_DRIVES</Type>
 			<Description>TXT_KEY_BONUS_WARP_DRIVES</Description>
 			<Civilopedia>TXT_KEY_BONUS_WARP_DRIVES_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_WARP_DRIVES</ArtDefineTag>
 			<TechReveal>TECH_FOLDING_SPACE</TechReveal>
 			<TechCityTrade>TECH_FOLDING_SPACE</TechCityTrade>
@@ -3343,6 +3377,7 @@
 			<Type>BONUS_AB_MATTER</Type>
 			<Description>TXT_KEY_BONUS_AB_MATTER</Description>
 			<Civilopedia>TXT_KEY_BONUS_AB_MATTER_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_AB_MATTER</ArtDefineTag>
 			<TechReveal>TECH_FEMTOTECHNOLOGY</TechReveal>
 			<TechCityTrade>TECH_FEMTOTECHNOLOGY</TechCityTrade>
@@ -3352,6 +3387,7 @@
 			<Type>BONUS_FEMTOBOTS</Type>
 			<Description>TXT_KEY_BONUS_FEMTOBOTS</Description>
 			<Civilopedia>TXT_KEY_BONUS_FEMTOBOTS_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_FEMTOBOTS</ArtDefineTag>
 			<TechReveal>TECH_PARTICLE_GENETICS</TechReveal>
 			<TechCityTrade>TECH_PARTICLE_GENETICS</TechCityTrade>
@@ -3361,6 +3397,7 @@
 			<Type>BONUS_PERSONAL_STARCRAFT</Type>
 			<Description>TXT_KEY_BONUS_PERSONAL_STARCRAFT</Description>
 			<Civilopedia>TXT_KEY_BONUS_PERSONAL_STARCRAFT_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_PERSONAL_STARCRAFT</ArtDefineTag>
 			<TechReveal>TECH_REACTIONLESS_DRIVE</TechReveal>
 			<TechCityTrade>TECH_REACTIONLESS_DRIVE</TechCityTrade>
@@ -3370,6 +3407,7 @@
 			<Type>BONUS_TIME_CRYSTALS</Type>
 			<Description>TXT_KEY_BONUS_TIME_CRYSTALS</Description>
 			<Civilopedia>TXT_KEY_BONUS_TIME_CRYSTALS_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_TIME_CRYSTALS</ArtDefineTag>
 			<TechReveal>TECH_IMMORTALITY</TechReveal>
 			<TechCityTrade>TECH_IMMORTALITY</TechCityTrade>
@@ -3379,6 +3417,7 @@
 			<Type>BONUS_VIBRANIUM</Type>
 			<Description>TXT_KEY_BONUS_VIBRANIUM</Description>
 			<Civilopedia>TXT_KEY_BONUS_VIBRANIUM_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_VIBRANIUM</ArtDefineTag>
 			<TechReveal>TECH_ZEPTOTECHNOLOGY</TechReveal>
 			<TechCityTrade>TECH_ZEPTOTECHNOLOGY</TechCityTrade>
@@ -3388,6 +3427,7 @@
 			<Type>BONUS_DARK_MATTER</Type>
 			<Description>TXT_KEY_BONUS_DARK_MATTER</Description>
 			<Civilopedia>TXT_KEY_BONUS_DARK_MATTER_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_DARK_MATTER</ArtDefineTag>
 			<TechReveal>TECH_DARK_MATTER_ENGINEERING</TechReveal>
 			<TechCityTrade>TECH_DARK_MATTER_ENGINEERING</TechCityTrade>
@@ -3397,6 +3437,7 @@
 			<Type>BONUS_MAGNETIC_MONOPOLES</Type>
 			<Description>TXT_KEY_BONUS_MAGNETIC_MONOPOLES</Description>
 			<Civilopedia>TXT_KEY_BONUS_MAGNETIC_MONOPOLES_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MAGNETIC_MONOPOLES</ArtDefineTag>
 			<TechReveal>TECH_ELECTROWEAK_MATTER</TechReveal>
 			<TechCityTrade>TECH_ELECTROWEAK_MATTER</TechCityTrade>
@@ -3406,6 +3447,7 @@
 			<Type>BONUS_ALICE_MATTER</Type>
 			<Description>TXT_KEY_BONUS_ALICE_MATTER</Description>
 			<Civilopedia>TXT_KEY_BONUS_ALICE_MATTER_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ALICE_MATTER</ArtDefineTag>
 			<TechReveal>TECH_SUPERSYMMETRIC_PARTICLE_CONSTRUCTION</TechReveal>
 			<TechCityTrade>TECH_SUPERSYMMETRIC_PARTICLE_CONSTRUCTION</TechCityTrade>
@@ -3415,6 +3457,7 @@
 			<Type>BONUS_CHRONOTON</Type>
 			<Description>TXT_KEY_BONUS_CHRONOTON</Description>
 			<Civilopedia>TXT_KEY_BONUS_CHRONOTON_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_CHRONOTON</ArtDefineTag>
 			<TechReveal>TECH_OMEGA_MINUS_ENGINEERING</TechReveal>
 			<TechCityTrade>TECH_OMEGA_MINUS_ENGINEERING</TechCityTrade>
@@ -3424,6 +3467,7 @@
 			<Type>BONUS_MITHRIL</Type>
 			<Description>TXT_KEY_BONUS_MITHRIL</Description>
 			<Civilopedia>TXT_KEY_BONUS_MITHRIL_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MITHRIL</ArtDefineTag>
 			<TechReveal>TECH_FANTASY_MATERIALS</TechReveal>
 			<TechCityTrade>TECH_FANTASY_MATERIALS</TechCityTrade>
@@ -3433,6 +3477,7 @@
 			<Type>BONUS_CONSCIOUS_MATERIALS</Type>
 			<Description>TXT_KEY_BONUS_CONSCIOUS_MATERIALS</Description>
 			<Civilopedia>TXT_KEY_BONUS_CONSCIOUS_MATERIALS_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_CONSCIOUS_MATERIALS</ArtDefineTag>
 			<TechReveal>TECH_FANTASY_MATERIALS</TechReveal>
 			<TechCityTrade>TECH_FANTASY_MATERIALS</TechCityTrade>
@@ -3442,6 +3487,7 @@
 			<Type>BONUS_ORICHALCUM</Type>
 			<Description>TXT_KEY_BONUS_ORICHALCUM</Description>
 			<Civilopedia>TXT_KEY_BONUS_ORICHALCUM_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ORICHALCUM</ArtDefineTag>
 			<TechReveal>TECH_FANTASY_MATERIALS</TechReveal>
 			<TechCityTrade>TECH_FANTASY_MATERIALS</TechCityTrade>
@@ -3451,6 +3497,7 @@
 			<Type>BONUS_NEUTRONIUM</Type>
 			<Description>TXT_KEY_BONUS_NEUTRONIUM</Description>
 			<Civilopedia>TXT_KEY_BONUS_NEUTRONIUM_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_NEUTRONIUM</ArtDefineTag>
 			<TechReveal>TECH_NEUTRONIUM</TechReveal>
 			<TechCityTrade>TECH_NEUTRONIUM</TechCityTrade>
@@ -3460,6 +3507,7 @@
 			<Type>BONUS_CHAOS_WANDS</Type>
 			<Description>TXT_KEY_BONUS_CHAOS_WANDS</Description>
 			<Civilopedia>TXT_KEY_BONUS_CHAOS_WANDS_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_CHAOS_WANDS</ArtDefineTag>
 			<TechReveal>TECH_MENSIOKINESIS</TechReveal>
 			<TechCityTrade>TECH_MENSIOKINESIS</TechCityTrade>
@@ -3469,6 +3517,7 @@
 			<Type>BONUS_ARTISAN_PLANETS</Type>
 			<Description>TXT_KEY_BONUS_ARTISAN_PLANETS</Description>
 			<Civilopedia>TXT_KEY_BONUS_ARTISAN_PLANETS_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ARTISAN_PLANETS</ArtDefineTag>
 			<TechReveal>TECH_HYPERSTRUCTURE_ENGINEERING</TechReveal>
 			<TechCityTrade>TECH_HYPERSTRUCTURE_ENGINEERING</TechCityTrade>
@@ -3478,6 +3527,7 @@
 			<Type>BONUS_PERSONAL_HYPERCRAFT</Type>
 			<Description>TXT_KEY_BONUS_PERSONAL_HYPERCRAFT</Description>
 			<Civilopedia>TXT_KEY_BONUS_PERSONAL_HYPERCRAFT_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_PERSONAL_HYPERCRAFT</ArtDefineTag>
 			<TechReveal>TECH_ENDOGENOUS_EUCLIDEAN_PROPULSION</TechReveal>
 			<TechCityTrade>TECH_ENDOGENOUS_EUCLIDEAN_PROPULSION</TechCityTrade>
@@ -3487,6 +3537,7 @@
 			<Type>BONUS_TESSERACT</Type>
 			<Description>TXT_KEY_BONUS_TESSERACT</Description>
 			<Civilopedia>TXT_KEY_BONUS_TESSERACT_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_TESSERACT</ArtDefineTag>
 			<TechReveal>TECH_TESSERACT_CONSTRUCTION</TechReveal>
 			<TechCityTrade>TECH_TESSERACT_CONSTRUCTION</TechCityTrade>
@@ -3496,6 +3547,7 @@
 			<Type>BONUS_POCKET_UNIVERSE</Type>
 			<Description>TXT_KEY_BONUS_POCKET_UNIVERSE</Description>
 			<Civilopedia>TXT_KEY_BONUS_POCKET_UNIVERSE_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_POCKET_UNIVERSE</ArtDefineTag>
 			<TechReveal>TECH_SUBDIMENSIONAL_UNIVERSE</TechReveal>
 			<TechCityTrade>TECH_SUBDIMENSIONAL_UNIVERSE</TechCityTrade>
@@ -3505,6 +3557,7 @@
 			<Type>BONUS_UNOBTAINIUM</Type>
 			<Description>TXT_KEY_BONUS_UNOBTAINIUM</Description>
 			<Civilopedia>TXT_KEY_BONUS_UNOBTAINIUM_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_UNOBTAINIUM</ArtDefineTag>
 			<TechReveal>TECH_SIMULATION_AWARENESS</TechReveal>
 			<TechCityTrade>TECH_SIMULATION_AWARENESS</TechCityTrade>

@@ -17961,28 +17961,28 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
-			<UnitClassProductionModifiers>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_TRAINEDDOG</UnitClassType>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_TRAINEDDOG</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_WARDOG</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_WARDOG</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_GUARDDOG</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_GUARDDOG</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_POLICE_DOG</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_POLICE_DOG</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_CANIS_SUPERIOR</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_CANIS_SUPERIOR</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-			</UnitClassProductionModifiers>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>

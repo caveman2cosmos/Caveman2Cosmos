@@ -197,9 +197,9 @@ class PediaBuilding:
 				szText1 += "<color=0,230,0,255>%d" %iGreatPeopleRateChange + unichr(8862)
 			else:
 				szText1 += "<color=255,0,0,255>%d" %iGreatPeopleRateChange + unichr(8862)
-			iGreatPeopleUnitClass = CvTheBuildingInfo.getGreatPeopleUnitClass()
-			if iGreatPeopleUnitClass != -1:
-				szGreatPersonDesc = GC.getUnitInfo(GC.getUnitClassInfo(iGreatPeopleUnitClass).getDefaultUnitIndex()).getDescription()
+			iGreatPeopleUnit = CvTheBuildingInfo.getGreatPeopleUnitType()
+			if iGreatPeopleUnit != -1:
+				szGreatPersonDesc = GC.getUnitInfo(iGreatPeopleUnit).getDescription()
 				try:
 					szText1 += "</color> (" + szGreatPersonDesc.split(" ")[1] + ")"
 				except:

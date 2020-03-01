@@ -6,7 +6,6 @@
 	<UnitInfos>
 <!--Trained Cats (Feline Domestication) -> Warcats (Military Training) -> Guard Cats (Leadership) -> Police Cats (Criminology) -> Feline Superior (Homo Superior) -->
 		<UnitInfo>
-			<Class>UNITCLASS_TRAINEDCAT</Class>
 			<Type>UNIT_TRAINEDCAT</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -145,7 +144,6 @@
 		</UnitInfo>
 		<!-- War Cat -->
 		<UnitInfo>
-			<Class>UNITCLASS_WARCAT</Class>
 			<Type>UNIT_WARCAT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -300,7 +298,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_GUARDCAT</Class>
 			<Type>UNIT_GUARDCAT</Type>
 			<Combat>UNITCOMBAT_FELINE</Combat>
 			<SubCombatTypes>
@@ -448,7 +445,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_POLICE_CAT</Class>
 			<Type>UNIT_POLICE_CAT</Type>
 			<Combat>UNITCOMBAT_FELINE</Combat>
 			<SubCombatTypes>
@@ -627,7 +623,6 @@
 			</PropertyManipulators>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_FELINE_SUPERIOR</Class>
 			<Type>UNIT_FELINE_SUPERIOR</Type>
 			<Combat>UNITCOMBAT_FELINE</Combat>
 			<SubCombatTypes>
@@ -812,63 +807,54 @@
 			</PropertyManipulators>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_BENGALTIGER</Class>
 			<Type>UNIT_SUBDUED_BENGALTIGER</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_CATS</BuildingType>
 			</Buildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_CAVE_LION</Class>
 			<Type>UNIT_SUBDUED_CAVE_LION</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_CATS</BuildingType>
 			</Buildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_CHEETAH</Class>
 			<Type>UNIT_SUBDUED_CHEETAH</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_CATS</BuildingType>
 			</Buildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_JAGUAR</Class>
 			<Type>UNIT_SUBDUED_JAGUAR</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_CATS</BuildingType>
 			</Buildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_LION</Class>
 			<Type>UNIT_SUBDUED_LION</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_CATS</BuildingType>
 			</Buildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_LYNX</Class>
 			<Type>UNIT_SUBDUED_LYNX</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_CATS</BuildingType>
 			</Buildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_PANTHER</Class>
 			<Type>UNIT_SUBDUED_PANTHER</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_CATS</BuildingType>
 			</Buildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_SIBERIANTIGER</Class>
 			<Type>UNIT_SUBDUED_SIBERIANTIGER</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_CATS</BuildingType>
 			</Buildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_SNOWLEOPARD</Class>
 			<Type>UNIT_SUBDUED_SNOWLEOPARD</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_CATS</BuildingType>

@@ -20,7 +20,7 @@
 			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_BUDDHISM</PrereqReligion>
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>1566</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
@@ -98,7 +98,7 @@
 			<PrereqReligion>RELIGION_BUDDHISM</PrereqReligion>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<Bonus>BONUS_SCULPTURES</Bonus>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>1104</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
@@ -166,7 +166,7 @@
 			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_CHRISTIANITY</PrereqReligion>
 			<PrereqTech>TECH_ARCHITECTURE</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bWater>1</bWater>
 			<bNukeImmune>1</bNukeImmune>
@@ -263,7 +263,7 @@
 			<PrereqReligion>RELIGION_CHRISTIANITY</PrereqReligion>
 			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>1800</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
@@ -350,7 +350,7 @@
 				<Bonus>BONUS_SCROLLS</Bonus>
 				<Bonus>BONUS_TABLETS</Bonus>
 			</PrereqBonuses>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>1512</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
@@ -444,7 +444,7 @@
 			<PrereqReligion>RELIGION_JUDAISM</PrereqReligion>
 			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
 			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>1404</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
@@ -525,7 +525,7 @@
 				<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
 			</TechTypes>
 			<Bonus>BONUS_BRICKS</Bonus>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>-50</iHurryAngerModifier>
 			<iCost>1566</iCost>
@@ -607,7 +607,7 @@
 				<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
 			</TechTypes>
 			<Bonus>BONUS_BRICKS</Bonus>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>-50</iHurryAngerModifier>
 			<iCost>1566</iCost>
@@ -691,7 +691,7 @@
 			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>2208</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
@@ -767,7 +767,7 @@
 			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
 			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>2640</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
@@ -850,7 +850,7 @@
 			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>2208</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>

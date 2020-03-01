@@ -19,7 +19,7 @@
 			<PrereqTech>TECH_PRIESTHOOD</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<FreePromotion>PROMOTION_AN</FreePromotion>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
@@ -83,7 +83,7 @@
 			<StateReligion>RELIGION_MESOPOTAMISM</StateReligion>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<FreePromotion>PROMOTION_ENKI</FreePromotion>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bWater>1</bWater>
 			<bNeverCapture>1</bNeverCapture>
@@ -165,7 +165,7 @@
 			<StateReligion>RELIGION_MESOPOTAMISM</StateReligion>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<FreePromotion>PROMOTION_ENLIL</FreePromotion>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
@@ -240,7 +240,7 @@
 			<StateReligion>RELIGION_MESOPOTAMISM</StateReligion>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<FreePromotion>PROMOTION_INANNA</FreePromotion>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
@@ -308,7 +308,7 @@
 			<StateReligion>RELIGION_MESOPOTAMISM</StateReligion>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<FreePromotion>PROMOTION_KI</FreePromotion>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
@@ -535,7 +535,7 @@
 			<HolyCity>RELIGION_MESOPOTAMISM</HolyCity>
 			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 			<GlobalReligionCommerce>RELIGION_MESOPOTAMISM</GlobalReligionCommerce>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>-1</iCost>

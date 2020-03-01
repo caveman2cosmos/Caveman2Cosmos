@@ -326,8 +326,8 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 		.def("terrainDefenseModifier", &CyUnit::terrainDefenseModifier, "int (int /*TerrainTypes*/ eTerrain)")
 		.def("featureAttackModifier", &CyUnit::featureAttackModifier, "int (int /*FeatureTypes*/ eFeature)")
 		.def("featureDefenseModifier", &CyUnit::featureDefenseModifier, "int (int /*FeatureTypes*/ eFeature)")
-		.def("unitClassAttackModifier", &CyUnit::unitClassAttackModifier, "int (int /*UnitClassTypes*/ eUnitClass)")
-		.def("unitClassDefenseModifier", &CyUnit::unitClassDefenseModifier, "int (int /*UnitClassTypes*/ eUnitClass)")
+		.def("unitAttackModifier", &CyUnit::unitAttackModifier, "int (int /*UnitTypes*/ eUnit)")
+		.def("unitDefenseModifier", &CyUnit::unitDefenseModifier, "int (int /*UnitTypes*/ eUnit)")
 		.def("unitCombatModifier", &CyUnit::unitCombatModifier, "int (int /*UnitCombatTypes*/ eUnitCombat)")
 		.def("domainModifier", &CyUnit::domainModifier, "int (int /*DomainTypes*/ eDomain)") 
 
@@ -486,7 +486,6 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 		.def("getTeam", &CyUnit::getTeam, "int ()")
 
 		.def("getUnitType", &CyUnit::getUnitType, "int ()")
-		.def("getUnitClassType", &CyUnit::getUnitClassType, "int ()")
 		.def("getLeaderUnitType", &CyUnit::getLeaderUnitType, "int ()")
 		.def("setLeaderUnitType", &CyUnit::setLeaderUnitType, "void (int iNewValue)")
 

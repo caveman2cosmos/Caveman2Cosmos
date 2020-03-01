@@ -213,12 +213,12 @@ def combatDetailMessageBuilder(cdUnit, ePlayer, iChange):
 		msg=TRNSLTR.getText("TXT_KEY_COMBAT_MESSAGE_CITY_BARBARIAN_DEFENSE",(cdUnit.iCityBarbarianDefenseModifier * iChange,))
 		CyIF.addCombatMessage(ePlayer,msg)
 
-	if cdUnit.iClassDefenseModifier:
-		msg=TRNSLTR.getText("TXT_KEY_COMBAT_MESSAGE_CLASS_DEFENSE",(cdUnit.iClassDefenseModifier * iChange,))
+	if cdUnit.iDefenseModifier:
+		msg=TRNSLTR.getText("TXT_KEY_COMBAT_MESSAGE_CLASS_DEFENSE",(cdUnit.iDefenseModifier * iChange,))
 		CyIF.addCombatMessage(ePlayer,msg)
 
-	if cdUnit.iClassAttackModifier:
-		msg=TRNSLTR.getText("TXT_KEY_COMBAT_MESSAGE_CLASS_ATTACK",(cdUnit.iClassAttackModifier * iChange,))
+	if cdUnit.iAttackModifier:
+		msg=TRNSLTR.getText("TXT_KEY_COMBAT_MESSAGE_CLASS_ATTACK",(cdUnit.iAttackModifier * iChange,))
 		CyIF.addCombatMessage(ePlayer,msg)
 
 	if cdUnit.iCombatModifierT:

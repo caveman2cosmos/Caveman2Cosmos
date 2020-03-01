@@ -223,7 +223,7 @@
 			<HolyCity>RELIGION_SHINTO</HolyCity>
 			<ReligionType>RELIGION_SHINTO</ReligionType>
 			<GlobalReligionCommerce>RELIGION_SHINTO</GlobalReligionCommerce>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>-1</iCost>
 			<iConquestProb>100</iConquestProb>
@@ -278,7 +278,7 @@
 				<Bonus>BONUS_WOOD</Bonus>
 			</PrereqBonuses>
 			<FreePromotion>PROMOTION_LOOTER</FreePromotion>
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
@@ -330,7 +330,7 @@
 			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_SHINTO</PrereqReligion>
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>4</iGreatPeopleRateChange>
 			<bTeamShare>1</bTeamShare>
 			<bWater>1</bWater>

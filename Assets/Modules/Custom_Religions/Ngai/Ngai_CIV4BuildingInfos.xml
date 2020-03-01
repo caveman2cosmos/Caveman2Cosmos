@@ -408,7 +408,7 @@
 			<HolyCity>RELIGION_NGAIISM</HolyCity>
 			<ReligionType>RELIGION_NGAIISM</ReligionType>
 			<GlobalReligionCommerce>RELIGION_NGAIISM</GlobalReligionCommerce>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>-1</iCost>

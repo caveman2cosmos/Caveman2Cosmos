@@ -11,7 +11,7 @@
 	<!-- ls612's Other Building Tags -->
 	<ElementType name="bNoHolyCity" content="textOnly" dt:type="boolean"/>
 	<!--TB's Tags Begin -->
-	<ElementType name="PropertySpawnUnitClass" content="textOnly"/>
+	<ElementType name="PropertySpawnUnit" content="textOnly"/>
 	<ElementType name="PropertySpawnProperty" content="textOnly"/>
 	<ElementType name="PromotionLineType" content="textOnly"/>
 	<!--Integers -->
@@ -58,11 +58,8 @@
 	<ElementType name="FreePromoTypes" content="eltOnly">
 		<element type="FreePromoType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="FreeTraitType" content="eltOnly">
-		<element type="TraitType" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
 	<ElementType name="FreeTraitTypes" content="eltOnly">
-		<element type="FreeTraitType" minOccurs="0" maxOccurs="*"/>
+		<element type="TraitType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="iHeal" content="textOnly" dt:type="int"/>
 	<ElementType name="HealUnitCombatType" content="eltOnly">
@@ -544,7 +541,7 @@
 	<ElementType name="fVisibilityPriority" content="textOnly"/>
 	<ElementType name="FreePromotion" content="textOnly"/>
 	<ElementType name="CivicOption" content="textOnly"/>
-	<ElementType name="GreatPeopleUnitClass" content="textOnly"/>
+	<ElementType name="GreatPeopleUnitType" content="textOnly"/>
 	<ElementType name="iGreatPeopleRateChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iHurryAngerModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="bBorderObstacle" content="textOnly" dt:type="boolean"/>
@@ -846,12 +843,12 @@
 		<element type="FreeAreaBuilding" minOccurs="0"/>
 		<element type="FreePromotion" minOccurs="0"/>
 		<element type="CivicOption" minOccurs="0"/>
-		<element type="GreatPeopleUnitClass" minOccurs="0"/>
+		<element type="GreatPeopleUnitType" minOccurs="0"/>
 		<element type="VicinityBonus" minOccurs="0"/>
 		<element type="RawVicinityBonus" minOccurs="0"/>
 		<element type="PrereqVicinityBonuses" minOccurs="0"/>
 		<element type="PrereqRawVicinityBonuses" minOccurs="0"/>
-		<element type="PropertySpawnUnitClass" minOccurs="0"/>
+		<element type="PropertySpawnUnit" minOccurs="0"/>
 		<element type="PropertySpawnProperty" minOccurs="0"/>
 		<element type="PromotionLineType" minOccurs="0"/>
 		<element type="iLinePriority" minOccurs="0"/>
@@ -1289,13 +1286,13 @@
 		<element type="ReplaceBuilding" minOccurs="0"/>
 	</ElementType>
 
-	<ElementType name="UnitClassType" content="textOnly"/>
-	<ElementType name="UnitClassProductionModifier" content="eltOnly">
-		<element type="UnitClassType"/>
+	<ElementType name="UnitType" content="textOnly"/>
+	<ElementType name="UnitProductionModifier" content="eltOnly">
+		<element type="UnitType"/>
 		<element type="iProductionModifier"/>
 	</ElementType>
-	<ElementType name="UnitClassProductionModifiers" content="eltOnly">
-		<element type="UnitClassProductionModifier" minOccurs="0" maxOccurs="*"/>
+	<ElementType name="UnitProductionModifiers" content="eltOnly">
+		<element type="UnitProductionModifier" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 
 	<ElementType name="BuildingClassProductionModifier" content="eltOnly">

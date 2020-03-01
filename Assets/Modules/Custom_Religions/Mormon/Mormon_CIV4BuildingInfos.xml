@@ -137,7 +137,7 @@
 			<HolyCity>RELIGION_MORMON</HolyCity>
 			<ReligionType>RELIGION_MORMON</ReligionType>
 			<GlobalReligionCommerce>RELIGION_MORMON</GlobalReligionCommerce>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>-1</iCost>

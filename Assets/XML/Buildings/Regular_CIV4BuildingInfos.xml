@@ -479,7 +479,7 @@
 				<iYield>50</iYield>
 			</PowerYieldModifiers>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iSpaceProductionModifier>25</iSpaceProductionModifier>
@@ -1963,7 +1963,7 @@
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GEMS</FreeBonus>
+			<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -1989,7 +1989,7 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GEMS</FreeBonus>
+			<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -2069,7 +2069,7 @@
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GEMS</FreeBonus>
+			<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -5413,7 +5413,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Other -->
 			<iAsset>5</iAsset>
@@ -5524,7 +5524,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Other -->
 			<iAsset>3</iAsset>
@@ -5593,7 +5593,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_COMMON_CLAY</BonusType>
+					<BonusType>BONUS_CLAY</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -6246,7 +6246,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
-			<PropertySpawnUnitClass>UNITCLASS_ASSASSIN</PropertySpawnUnitClass>
+			<PropertySpawnUnit>UNIT_ASSASSIN</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
 			<!-- Unit effects -->
 			<UnitCombatFreeExperiences>
@@ -7009,7 +7009,7 @@
 			<PrereqTech>TECH_AUTOMATED_ROBOTICS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_MEDICAL_TRICODERS</Bonus>
+			<Bonus>BONUS_MEDICAL_TRICORDERS</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_SERVICE_BOTS</Bonus>
 				<Bonus>BONUS_ANDROIDS</Bonus>
@@ -7215,7 +7215,7 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_OIL_PRODUCTS</Bonus>
+				<Bonus>BONUS_PETROLEUM_PRODUCTS</Bonus>
 				<Bonus>BONUS_BIOFUEL</Bonus>
 			</PrereqBonuses>
 			<PrereqOrBuildingClasses>
@@ -7293,24 +7293,24 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Unit effects -->
-			<UnitClassProductionModifiers>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_FREIGHT</UnitClassType>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_FREIGHT</UnitType>
 					<iProductionModifier>25</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_MOTORCYCLE</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_MOTORCYCLE</UnitType>
 					<iProductionModifier>25</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_JEEP</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_JEEP</UnitType>
 					<iProductionModifier>25</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_HUMVEE</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_HUMVEE</UnitType>
 					<iProductionModifier>25</iProductionModifier>
-				</UnitClassProductionModifier>
-			</UnitClassProductionModifiers>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 			<!-- Other -->
 			<iPower>10</iPower>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -8454,7 +8454,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
-			<PropertySpawnUnitClass>UNITCLASS_THIEF</PropertySpawnUnitClass>
+			<PropertySpawnUnit>UNIT_THIEF</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
 			<!-- Special Yield and Commerce modifiers -->
 			<TechCommerceChanges>
@@ -8814,7 +8814,7 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GRAIN</FreeBonus>
+			<FreeBonus>BONUS_GRAINS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -8856,7 +8856,7 @@
 			<YieldChanges>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<FreeBonus>BONUS_GRAIN</FreeBonus>
+			<FreeBonus>BONUS_GRAINS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -9556,7 +9556,7 @@
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unit effects -->
 			<UnitCombatFreeExperiences>
@@ -9785,7 +9785,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_GEMS</BonusType>
+					<BonusType>BONUS_GEMSTONE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -9915,7 +9915,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_GEMS</BonusType>
+					<BonusType>BONUS_GEMSTONE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -10012,7 +10012,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_GEMS</BonusType>
+					<BonusType>BONUS_GEMSTONE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -11056,7 +11056,7 @@
 				<Or>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_GRAIN</ID>
+						<ID>BONUS_GRAINS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -15373,7 +15373,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FERMENTATION</PrereqTech>
-			<Bonus>BONUS_GRAIN</Bonus>
+			<Bonus>BONUS_GRAINS</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_GLASSWARE</Bonus>
 				<Bonus>BONUS_POTTERY</Bonus>
@@ -15542,7 +15542,7 @@
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqBonuses>
 				<Bonus>BONUS_FINE_CLAY</Bonus>
-				<Bonus>BONUS_COMMON_CLAY</Bonus>
+				<Bonus>BONUS_CLAY</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -15597,7 +15597,7 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqBonuses>
 				<Bonus>BONUS_FINE_CLAY</Bonus>
-				<Bonus>BONUS_COMMON_CLAY</Bonus>
+				<Bonus>BONUS_CLAY</Bonus>
 			</PrereqBonuses>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
@@ -16761,7 +16761,7 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_OIL_PRODUCTS</Bonus>
+				<Bonus>BONUS_PETROLEUM_PRODUCTS</Bonus>
 				<Bonus>BONUS_BIOFUEL</Bonus>
 			</PrereqBonuses>
 			<!-- Obsolescence -->
@@ -18270,16 +18270,16 @@
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<!-- Unit effects -->
-			<UnitClassProductionModifiers>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_BOMBARD</UnitClassType>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_BOMBARD</UnitType>
 					<iProductionModifier>100</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_CANNON</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_CANNON</UnitType>
 					<iProductionModifier>100</iProductionModifier>
-				</UnitClassProductionModifier>
-			</UnitClassProductionModifiers>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 			<!-- Defense effects -->
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<!-- Other -->
@@ -19095,12 +19095,12 @@
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
 			<!-- Unit effects -->
-			<UnitClassProductionModifiers>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_TRADE_CARAVAN</UnitClassType>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_TRADE_CARAVAN</UnitType>
 					<iProductionModifier>25</iProductionModifier>
-				</UnitClassProductionModifier>
-			</UnitClassProductionModifiers>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAIWeight>1</iAIWeight>
@@ -19598,7 +19598,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<BuildingClassProductionModifiers>
@@ -20504,7 +20504,7 @@
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqBonuses>
 				<Bonus>BONUS_FINE_CLAY</Bonus>
-				<Bonus>BONUS_COMMON_CLAY</Bonus>
+				<Bonus>BONUS_CLAY</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -21331,7 +21331,7 @@
 			<Bonus>BONUS_SULPHUR</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_OIL</Bonus>
-				<Bonus>BONUS_OIL_PRODUCTS</Bonus>
+				<Bonus>BONUS_PETROLEUM_PRODUCTS</Bonus>
 			</PrereqBonuses>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
@@ -21695,7 +21695,7 @@
 			<!-- Special Yield and Commerce modifiers -->
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
-					<BonusType>BONUS_GRAIN</BonusType>
+					<BonusType>BONUS_GRAINS</BonusType>
 					<YieldModifiers>
 						<iYield>1</iYield>
 					</YieldModifiers>
@@ -23214,7 +23214,7 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GEMS</FreeBonus>
+			<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -23678,7 +23678,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Other -->
 			<iAsset>2</iAsset>
@@ -23802,7 +23802,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_GEMS</BonusType>
+					<BonusType>BONUS_GEMSTONE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -23904,7 +23904,7 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_COMMON_CLAY</FreeBonus>
+			<FreeBonus>BONUS_CLAY</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>50</iHurryCostModifier>
@@ -25500,7 +25500,7 @@
 			</CommerceChangeDoubleTimes>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_FURS</BonusType>
+					<BonusType>BONUS_FUR</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -27277,7 +27277,7 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GRAIN</FreeBonus>
+			<FreeBonus>BONUS_GRAINS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -27319,7 +27319,7 @@
 			<YieldChanges>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<FreeBonus>BONUS_GRAIN</FreeBonus>
+			<FreeBonus>BONUS_GRAINS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -27897,7 +27897,7 @@
 					</YieldModifiers>
 				</BonusYieldModifier>
 				<BonusYieldModifier>
-					<BonusType>BONUS_GRAIN</BonusType>
+					<BonusType>BONUS_GRAINS</BonusType>
 					<YieldModifiers>
 						<iYield>1</iYield>
 					</YieldModifiers>
@@ -29902,7 +29902,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_GEOTHERMAL_SEA_VENT</BonusType>
+					<BonusType>BONUS_HYDROTHERMAL_VENT</BonusType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>1</iCommerce>
@@ -30522,7 +30522,7 @@
 			<CommerceChanges>
 				<iCommerce>6</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GEMS</FreeBonus>
+			<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -32103,7 +32103,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MACHINERY</PrereqTech>
-			<Bonus>BONUS_GRAIN</Bonus>
+			<Bonus>BONUS_GRAINS</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOD</Bonus>
 				<Bonus>BONUS_PRIME_TIMBER</Bonus>
@@ -32445,7 +32445,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Other -->
 			<iAsset>2</iAsset>
@@ -32838,16 +32838,16 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<!-- Unit effects -->
-			<UnitClassProductionModifiers>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_PARATROOPER</UnitClassType>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_PARATROOPER</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_MODERN_PARATROOPER</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_MODERN_PARATROOPER</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-			</UnitClassProductionModifiers>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<!-- Properties diffusion -->
@@ -32926,7 +32926,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_METH</BonusType>
+					<BonusType>BONUS_METHAMPHETAMINE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -32955,7 +32955,7 @@
 					<iHealthChange>-1</iHealthChange>
 				</BonusHealthChange>
 				<BonusHealthChange>
-					<BonusType>BONUS_METH</BonusType>
+					<BonusType>BONUS_METHAMPHETAMINE</BonusType>
 					<iHealthChange>-1</iHealthChange>
 				</BonusHealthChange>
 			</BonusHealthChanges>
@@ -33170,7 +33170,7 @@
 			<!-- Special Yield and Commerce modifiers -->
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
-					<BonusType>BONUS_GRAIN</BonusType>
+					<BonusType>BONUS_GRAINS</BonusType>
 					<YieldModifiers>
 						<iYield>1</iYield>
 					</YieldModifiers>
@@ -35122,7 +35122,7 @@
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GEMS</FreeBonus>
+			<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -37469,7 +37469,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_GRAIN</BonusType>
+					<BonusType>BONUS_GRAINS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -37752,7 +37752,7 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_OMEGA_ACIDS</FreeBonus>
+			<FreeBonus>BONUS_OMEGA_FATTY_ACID</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -37847,7 +37847,7 @@
 			<bRiver>1</bRiver>
 			<Bonus>BONUS_STEEL_INGOTS</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_OIL_PRODUCTS</Bonus>
+				<Bonus>BONUS_PETROLEUM_PRODUCTS</Bonus>
 				<Bonus>BONUS_BIOFUEL</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
@@ -38267,12 +38267,12 @@
 				</TechHealthChange>
 			</TechHealthChanges>
 			<!-- Unit effects -->
-			<UnitClassProductionModifiers>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_MEDIC</UnitClassType>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_MEDIC</UnitType>
 					<iProductionModifier>25</iProductionModifier>
-				</UnitClassProductionModifier>
-			</UnitClassProductionModifiers>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
@@ -39788,28 +39788,28 @@
 			<!-- Construction cost -->
 			<iCost>45</iCost>
 			<!-- Unit effects -->
-			<UnitClassProductionModifiers>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_STONE_AGE_SPEARMAN</UnitClassType>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_STONE_AGE_AXEMAN</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_STONE_AGE_AXEMAN</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_JAVELINEER</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_JAVELINEER</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_ARCHER</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_ARCHER</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_SPEARMAN</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_SPEARMAN</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-			</UnitClassProductionModifiers>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
@@ -40056,7 +40056,7 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GEMS</FreeBonus>
+			<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -41461,7 +41461,7 @@
 			<!-- Construction cost -->
 			<iCost>40</iCost>
 			<!-- Main effects -->
-			<FreeBonus>BONUS_FURS</FreeBonus>
+			<FreeBonus>BONUS_FUR</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special Yield and Commerce modifiers -->
 			<ObsoleteSafeCommerceChanges>
@@ -42056,7 +42056,7 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GEMS</FreeBonus>
+			<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -42257,7 +42257,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<Bonus>BONUS_OIL_PRODUCTS</Bonus>
+			<Bonus>BONUS_PETROLEUM_PRODUCTS</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_AUTOMOBILES</Bonus>
 			</PrereqBonuses>
@@ -42367,7 +42367,7 @@
 			<PrereqTech>TECH_MINING</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqBonuses>
-				<Bonus>BONUS_GEMS</Bonus>
+				<Bonus>BONUS_GEMSTONE</Bonus>
 			</PrereqBonuses>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
@@ -42825,7 +42825,7 @@
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GEMS</FreeBonus>
+			<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -43134,24 +43134,24 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Unit effects -->
-			<UnitClassProductionModifiers>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_CLONES</UnitClassType>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_CLONES</UnitType>
 					<iProductionModifier>100</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_AUTOMATONS</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_AUTOMATONS</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_FERAL</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_FERAL</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_BLEEDER</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_BLEEDER</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-			</UnitClassProductionModifiers>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 			<!-- Misc. Effects -->
 			<iPopulationgrowthratepercentage>-15</iPopulationgrowthratepercentage>
 			<!-- Other -->
@@ -44047,7 +44047,7 @@
 					</YieldModifiers>
 				</BonusYieldModifier>
 				<BonusYieldModifier>
-					<BonusType>BONUS_GRAIN</BonusType>
+					<BonusType>BONUS_GRAINS</BonusType>
 					<YieldModifiers>
 						<iYield>1</iYield>
 					</YieldModifiers>
@@ -44544,7 +44544,7 @@
 			<!-- Special Yield and Commerce modifiers -->
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
-					<BonusType>BONUS_GRAIN</BonusType>
+					<BonusType>BONUS_GRAINS</BonusType>
 					<YieldModifiers>
 						<iYield>1</iYield>
 					</YieldModifiers>
@@ -45910,7 +45910,7 @@
 				<iCommerce>1</iCommerce>
 			</ObsoleteSafeCommerceChanges>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<BuildingClassProductionModifiers>
@@ -46408,7 +46408,7 @@
 					</YieldModifiers>
 				</BonusYieldModifier>
 				<BonusYieldModifier>
-					<BonusType>BONUS_GRAIN</BonusType>
+					<BonusType>BONUS_GRAINS</BonusType>
 					<YieldModifiers>
 						<iYield>1</iYield>
 					</YieldModifiers>
@@ -46849,7 +46849,7 @@
 				<Bonus>BONUS_PLASTIC</Bonus>
 				<Bonus>BONUS_CLOTH</Bonus>
 				<Bonus>BONUS_LEATHER</Bonus>
-				<Bonus>BONUS_FURS</Bonus>
+				<Bonus>BONUS_FUR</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -46923,7 +46923,7 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_CLOTH</Bonus>
 				<Bonus>BONUS_LEATHER</Bonus>
-				<Bonus>BONUS_FURS</Bonus>
+				<Bonus>BONUS_FUR</Bonus>
 			</PrereqBonuses>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
@@ -47198,7 +47198,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_GRAIN</BonusType>
+					<BonusType>BONUS_GRAINS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -47370,7 +47370,7 @@
 			<PrereqTech>TECH_VERTICAL_FLIGHT</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<PrereqBonuses>
-				<Bonus>BONUS_OIL_PRODUCTS</Bonus>
+				<Bonus>BONUS_PETROLEUM_PRODUCTS</Bonus>
 				<Bonus>BONUS_BIOFUEL</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
@@ -48439,7 +48439,7 @@
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_NANOTUBES</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_OIL_PRODUCTS</Bonus>
+				<Bonus>BONUS_PETROLEUM_PRODUCTS</Bonus>
 				<Bonus>BONUS_BIOFUEL</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
@@ -49311,7 +49311,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_GEMS</ID>
+						<ID>BONUS_GEMSTONE</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -50329,7 +50329,7 @@
 			<PrereqTech>TECH_POWERED_EXOSKELETON</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_ELECTROLYTE_CELLS</Bonus>
+			<Bonus>BONUS_ELECTROLYTIC_CELLS</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_PLATINUM_WARES</Bonus>
 			</PrereqBonuses>
@@ -50472,7 +50472,7 @@
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_OIL_PRODUCTS</FreeBonus>
+			<FreeBonus>BONUS_PETROLEUM_PRODUCTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -51993,7 +51993,7 @@
 			</SeaPlotYieldChanges>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_FURS</BonusType>
+					<BonusType>BONUS_FUR</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -53174,7 +53174,7 @@
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GEMS</FreeBonus>
+			<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -53315,7 +53315,7 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GEMS</FreeBonus>
+			<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -53653,7 +53653,7 @@
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GEMS</FreeBonus>
+			<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -53824,7 +53824,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_GEMS</BonusType>
+					<BonusType>BONUS_GEMSTONE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -55006,7 +55006,7 @@
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_CHEMICALS</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_OIL_PRODUCTS</Bonus>
+				<Bonus>BONUS_PETROLEUM_PRODUCTS</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -58080,7 +58080,7 @@
 			<CommerceModifiers>
 				<iCommerce>2</iCommerce>
 			</CommerceModifiers>
-			<PropertySpawnUnitClass>UNITCLASS_CUTTHROAT</PropertySpawnUnitClass>
+			<PropertySpawnUnit>UNIT_CUTTHROAT</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
 			<!-- Defense effects -->
 			<iDCMAirbombMission>2</iDCMAirbombMission>
@@ -58496,7 +58496,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
-			<PropertySpawnUnitClass>UNITCLASS_EXILE</PropertySpawnUnitClass>
+			<PropertySpawnUnit>UNIT_EXILE</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
 			<!-- Other -->
 			<iPower>1</iPower>
@@ -58653,7 +58653,7 @@
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_CHEMICALS</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_GRAIN</Bonus>
+				<Bonus>BONUS_GRAINS</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -61627,7 +61627,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_OIL_PRODUCTS</ID>
+						<ID>BONUS_PETROLEUM_PRODUCTS</ID>
 					</Has>
 				</And>
 			</ConstructCondition>
@@ -61845,7 +61845,7 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_MEDICAL_TRICODERS</FreeBonus>
+			<FreeBonus>BONUS_MEDICAL_TRICORDERS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -63474,9 +63474,9 @@
 			<CommerceChanges>
 				<iCommerce>20</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_METH</FreeBonus>
+			<FreeBonus>BONUS_METHAMPHETAMINE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<PropertySpawnUnitClass>UNITCLASS_STREET_GANG</PropertySpawnUnitClass>
+			<PropertySpawnUnit>UNIT_STREET_GANG</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -64125,7 +64125,7 @@
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<!-- Other -->
 			<iAsset>8</iAsset>
 			<Flavors>
@@ -64574,7 +64574,7 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GRAIN</FreeBonus>
+			<FreeBonus>BONUS_GRAINS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -64760,7 +64760,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_COMMON_CLAY</BonusType>
+					<BonusType>BONUS_CLAY</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -65302,7 +65302,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_COMMON_CLAY</BonusType>
+					<BonusType>BONUS_CLAY</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -65500,7 +65500,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_COMMON_CLAY</BonusType>
+					<BonusType>BONUS_CLAY</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -65858,80 +65858,80 @@
 			<!-- Construction cost -->
 			<iCost>1345</iCost>
 			<!-- Unit effects -->
-			<UnitClassProductionModifiers>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_ICBM</UnitClassType>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_ICBM</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_TACTICAL_NUKE</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_TACTICAL_NUKE</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_GUIDED_MISSILE</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_GUIDED_MISSILE</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_PRECISION_ATTACK_MISSILE</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_PRECISION_ATTACK_MISSILE</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_BIOLOGICAL_WARFARE_MISSILE</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_BIOLOGICAL_WARFARE_MISSILE</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_ICBM</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_ICBM</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_TACTICAL_NUKE</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_TACTICAL_NUKE</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_GUIDED_MISSILE</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_GUIDED_MISSILE</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_PRECISION_ATTACK_MISSILE</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_PRECISION_ATTACK_MISSILE</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_BIOLOGICAL_WARFARE_MISSILE</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_BIOLOGICAL_WARFARE_MISSILE</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_POISON_NOVA</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_POISON_NOVA</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_MRBM</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_MRBM</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_IRBM</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_IRBM</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_HYDROGEN</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_HYDROGEN</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_EXPERIMENTAL</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_EXPERIMENTAL</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_FUSION_NUKE</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_FUSION_NUKE</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_FUSION_NOVA</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_FUSION_NOVA</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_TURN</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_TURN</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-			</UnitClassProductionModifiers>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 			<!-- Other -->
 			<iAsset>8</iAsset>
 			<iPower>25</iPower>
@@ -66036,7 +66036,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
-			<PropertySpawnUnitClass>UNITCLASS_MOBSTER_CAR</PropertySpawnUnitClass>
+			<PropertySpawnUnit>UNIT_MOBSTER_CAR</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
 			<!-- Special Health and Happiness  modifiers -->
 			<BonusHealthChanges>
@@ -66315,7 +66315,7 @@
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_STEEL_WARES</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_OIL_PRODUCTS</Bonus>
+				<Bonus>BONUS_PETROLEUM_PRODUCTS</Bonus>
 				<Bonus>BONUS_BIOFUEL</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
@@ -66474,7 +66474,7 @@
 			<PrereqTech>TECH_REFRIGERATION</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_GRAIN</Bonus>
+			<Bonus>BONUS_GRAINS</Bonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_MODERN_GRANARY</BuildingClassType>
@@ -67860,7 +67860,7 @@
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_FINE_CLAY</Bonus>
-				<Bonus>BONUS_COMMON_CLAY</Bonus>
+				<Bonus>BONUS_CLAY</Bonus>
 			</PrereqBonuses>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
@@ -68207,7 +68207,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Other -->
 			<iAsset>2</iAsset>
@@ -70553,7 +70553,7 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Bonus>BONUS_CHEMICALS</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_OIL_PRODUCTS</Bonus>
+				<Bonus>BONUS_PETROLEUM_PRODUCTS</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -70662,7 +70662,7 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GRAIN</FreeBonus>
+			<FreeBonus>BONUS_GRAINS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -71255,7 +71255,7 @@
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_OIL_PRODUCTS</FreeBonus>
+			<FreeBonus>BONUS_PETROLEUM_PRODUCTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special Health and Happiness  modifiers -->
 			<BonusHealthChanges>
@@ -71687,7 +71687,7 @@
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GEMS</FreeBonus>
+			<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -72781,7 +72781,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MACHINERY</PrereqTech>
-			<Bonus>BONUS_GRAIN</Bonus>
+			<Bonus>BONUS_GRAINS</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOD</Bonus>
 				<Bonus>BONUS_PRIME_TIMBER</Bonus>
@@ -72864,7 +72864,7 @@
 			<PrereqTech>TECH_FUEL_CELLS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_OMEGA_ACIDS</Bonus>
+			<Bonus>BONUS_OMEGA_FATTY_ACID</Bonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_FACTORY</BuildingClassType>
@@ -72887,7 +72887,7 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_ELECTROLYTE_CELLS</FreeBonus>
+			<FreeBonus>BONUS_ELECTROLYTIC_CELLS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -76462,7 +76462,7 @@
 					</YieldModifiers>
 				</BonusYieldModifier>
 				<BonusYieldModifier>
-					<BonusType>BONUS_GRAIN</BonusType>
+					<BonusType>BONUS_GRAINS</BonusType>
 					<YieldModifiers>
 						<iYield>1</iYield>
 					</YieldModifiers>
@@ -77409,7 +77409,7 @@
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_CHEMICALS</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_OIL_PRODUCTS</Bonus>
+				<Bonus>BONUS_PETROLEUM_PRODUCTS</Bonus>
 				<Bonus>BONUS_BIOFUEL</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
@@ -78822,7 +78822,7 @@
 			</CommerceChangeDoubleTimes>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_FURS</BonusType>
+					<BonusType>BONUS_FUR</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -79178,7 +79178,7 @@
 			<PrereqTech>TECH_POTTERY</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_FINE_CLAY</Bonus>
-				<Bonus>BONUS_COMMON_CLAY</Bonus>
+				<Bonus>BONUS_CLAY</Bonus>
 			</PrereqBonuses>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
@@ -79291,7 +79291,7 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqBonuses>
 				<Bonus>BONUS_FINE_CLAY</Bonus>
-				<Bonus>BONUS_COMMON_CLAY</Bonus>
+				<Bonus>BONUS_CLAY</Bonus>
 			</PrereqBonuses>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
@@ -80925,7 +80925,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Other -->
 			<iAsset>6</iAsset>
@@ -80990,7 +80990,7 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GEMS</FreeBonus>
+			<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -81009,7 +81009,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GROUND_STONE</PrereqTech>
 			<bRiver>1</bRiver>
-			<Bonus>BONUS_GRAIN</Bonus>
+			<Bonus>BONUS_GRAINS</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_STONE</Bonus>
 			</PrereqBonuses>
@@ -81192,7 +81192,7 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GRAIN</FreeBonus>
+			<FreeBonus>BONUS_GRAINS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -81246,7 +81246,7 @@
 					</YieldModifiers>
 				</BonusYieldModifier>
 				<BonusYieldModifier>
-					<BonusType>BONUS_GRAIN</BonusType>
+					<BonusType>BONUS_GRAINS</BonusType>
 					<YieldModifiers>
 						<iYield>1</iYield>
 					</YieldModifiers>
@@ -82387,7 +82387,7 @@
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iGreatPeopleRateModifier>10</iGreatPeopleRateModifier>
 			<!-- Other -->
@@ -82659,7 +82659,7 @@
 					<iHealthChange>1</iHealthChange>
 				</BonusHealthChange>
 				<BonusHealthChange>
-					<BonusType>BONUS_METH</BonusType>
+					<BonusType>BONUS_METHAMPHETAMINE</BonusType>
 					<iHealthChange>1</iHealthChange>
 				</BonusHealthChange>
 				<BonusHealthChange>
@@ -82743,7 +82743,7 @@
 					</YieldModifiers>
 				</BonusYieldModifier>
 				<BonusYieldModifier>
-					<BonusType>BONUS_GRAIN</BonusType>
+					<BonusType>BONUS_GRAINS</BonusType>
 					<YieldModifiers>
 						<iYield>1</iYield>
 					</YieldModifiers>
@@ -83320,16 +83320,16 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Unit effects -->
-			<UnitClassProductionModifiers>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_WORKER_ANDROID</UnitClassType>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_WORKER_ANDROID</UnitType>
 					<iProductionModifier>200</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_FERAL</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_FERAL</UnitType>
 					<iProductionModifier>100</iProductionModifier>
-				</UnitClassProductionModifier>
-			</UnitClassProductionModifiers>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
@@ -83447,7 +83447,7 @@
 				<iCommerce>5</iCommerce>
 			</CommerceModifiers>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iWarWearinessModifier>-10</iWarWearinessModifier>
@@ -83690,7 +83690,7 @@
 			<YieldChanges>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<FreeBonus>BONUS_GRAIN</FreeBonus>
+			<FreeBonus>BONUS_GRAINS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -83721,7 +83721,7 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GRAIN</FreeBonus>
+			<FreeBonus>BONUS_GRAINS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -83774,7 +83774,7 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GRAIN</FreeBonus>
+			<FreeBonus>BONUS_GRAINS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -83851,48 +83851,48 @@
 					</FreePromotionCondition>
 				</FreePromoType>
 			</FreePromoTypes>
-			<UnitClassProductionModifiers>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_CHARIOT</UnitClassType>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_CHARIOT</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_HORSEMAN</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_HORSEMAN</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_HORSE_ARCHER</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_HORSE_ARCHER</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_LIGHT_CAVALRY</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_LIGHT_CAVALRY</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_HEAVY_CAVALRY</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_HEAVY_CAVALRY</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_MOUNTED_INFANTRY</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_MOUNTED_INFANTRY</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_KNIGHT</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_KNIGHT</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_CHIVALRY</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_CHIVALRY</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_CUIRASSIER</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_CUIRASSIER</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_CAVALRY</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_CAVALRY</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-			</UnitClassProductionModifiers>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<!-- Properties diffusion -->
@@ -85412,7 +85412,7 @@
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GEMS</FreeBonus>
+			<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -85521,7 +85521,7 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GRAIN</FreeBonus>
+			<FreeBonus>BONUS_GRAINS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -86080,7 +86080,7 @@
 				<iCommerce>4</iCommerce>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
-			<PropertySpawnUnitClass>UNITCLASS_GUNFIGHTER</PropertySpawnUnitClass>
+			<PropertySpawnUnit>UNIT_GUNFIGHTER</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
 			<!-- Special Health and Happiness  modifiers -->
 			<BonusHealthChanges>
@@ -86567,7 +86567,7 @@
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GEMS</FreeBonus>
+			<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -86904,7 +86904,7 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_OIL_PRODUCTS</Bonus>
+				<Bonus>BONUS_PETROLEUM_PRODUCTS</Bonus>
 				<Bonus>BONUS_BIOFUEL</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
@@ -87001,24 +87001,24 @@
 					<iExperience>1</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<UnitClassProductionModifiers>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_DIPLOMAT_MESSENGER</UnitClassType>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_DIPLOMAT_MESSENGER</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_DIPLOMAT_EARLY</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_DIPLOMAT_EARLY</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_DIPLOMAT_INDUST</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_DIPLOMAT_INDUST</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_DIPLOMAT_MODERN</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_DIPLOMAT_MODERN</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-			</UnitClassProductionModifiers>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 			<!-- Defense effects -->
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<!-- Other -->
@@ -87831,7 +87831,7 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_CLOTH</Bonus>
 				<Bonus>BONUS_LEATHER</Bonus>
-				<Bonus>BONUS_FURS</Bonus>
+				<Bonus>BONUS_FUR</Bonus>
 				<Bonus>BONUS_HIDE</Bonus>
 			</PrereqBonuses>
 			<PrereqOrBuildingClasses>
@@ -88623,7 +88623,7 @@
 			<CommerceChanges>
 				<iCommerce>-20</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_OIL_PRODUCTS</FreeBonus>
+			<FreeBonus>BONUS_PETROLEUM_PRODUCTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Defense effects -->
 			<iDCMAirbombMission>3</iDCMAirbombMission>
@@ -88839,7 +88839,7 @@
 					</YieldModifiers>
 				</BonusYieldModifier>
 				<BonusYieldModifier>
-					<BonusType>BONUS_GRAIN</BonusType>
+					<BonusType>BONUS_GRAINS</BonusType>
 					<YieldModifiers>
 						<iYield>1</iYield>
 					</YieldModifiers>
@@ -89746,16 +89746,16 @@
 			<!-- Construction cost -->
 			<iCost>225</iCost>
 			<!-- Unit effects -->
-			<UnitClassProductionModifiers>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_CATAPULT</UnitClassType>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_CATAPULT</UnitType>
 					<iProductionModifier>100</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_TREBUCHET</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_TREBUCHET</UnitType>
 					<iProductionModifier>100</iProductionModifier>
-				</UnitClassProductionModifier>
-			</UnitClassProductionModifiers>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_MECHANICAL</UnitCombatType>
@@ -90341,7 +90341,7 @@
 			<PrereqTech>TECH_SKYROADS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqBonuses>
-				<Bonus>BONUS_OIL_PRODUCTS</Bonus>
+				<Bonus>BONUS_PETROLEUM_PRODUCTS</Bonus>
 				<Bonus>BONUS_BIOFUEL</Bonus>
 			</PrereqBonuses>
 			<!-- Construction cost -->
@@ -92037,7 +92037,7 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GRAIN</FreeBonus>
+			<FreeBonus>BONUS_GRAINS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -94735,7 +94735,7 @@
 			<!-- Special Health and Happiness  modifiers -->
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
-					<BonusType>BONUS_GEMS</BonusType>
+					<BonusType>BONUS_GEMSTONE</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
@@ -96084,7 +96084,7 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_STONE</Bonus>
 				<Bonus>BONUS_FINE_CLAY</Bonus>
-				<Bonus>BONUS_COMMON_CLAY</Bonus>
+				<Bonus>BONUS_CLAY</Bonus>
 			</PrereqBonuses>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
@@ -97148,100 +97148,100 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<!-- Unit effects -->
-			<UnitClassProductionModifiers>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_CANOE</UnitClassType>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_CANOE</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_WAR_CANOE</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_WAR_CANOE</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_GALLEY</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_GALLEY</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_WARGALLEY</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_WARGALLEY</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_TRIREME</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_TRIREME</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_QUINQUEREME</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_QUINQUEREME</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_CARAVEL</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_CARAVEL</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_PORTUGAL_CARRACK</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_PORTUGAL_CARRACK</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_FLUYT</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_FLUYT</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_SLOOP</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_SLOOP</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_GALLEON</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_GALLEON</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_NETHERLANDS_OOSTINDIEVAARDER</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_NETHERLANDS_OOSTINDIEVAARDER</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_BRIGANTINE</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_BRIGANTINE</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_PRIVATEER</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_PRIVATEER</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_FRIGATE</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_FRIGATE</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_MANOWAR</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_MANOWAR</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_SHIP_OF_THE_LINE</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_SHIP_OF_THE_LINE</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_MERCHANTFLEET</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_MERCHANTFLEET</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_PADDLE_STEAMER</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_PADDLE_STEAMER</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_COG</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_COG</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_GALLEASS</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_GALLEASS</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_QUINQUEREME2</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_QUINQUEREME2</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_DECAREME</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_DECAREME</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-			</UnitClassProductionModifiers>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 			<!-- Misc. Effects -->
 			<BuildingClassProductionModifiers>
 				<BuildingClassProductionModifier>
@@ -98935,7 +98935,7 @@
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<Bonus>BONUS_STEEL_WARES</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_OIL_PRODUCTS</Bonus>
+				<Bonus>BONUS_PETROLEUM_PRODUCTS</Bonus>
 				<Bonus>BONUS_BIOFUEL</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
@@ -98955,32 +98955,32 @@
 					<iExperience>5</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<UnitClassProductionModifiers>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_B1_LANCER</UnitClassType>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_B1_LANCER</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_MODERN_FIGHTER</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_MODERN_FIGHTER</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_SCRAMJET</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_SCRAMJET</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_SR71</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_SR71</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_ORBITAL_BOMBER</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_ORBITAL_BOMBER</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_ORBITAL_FIGHTER</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_ORBITAL_FIGHTER</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-			</UnitClassProductionModifiers>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
@@ -99002,7 +99002,7 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_CLOTH</Bonus>
 				<Bonus>BONUS_LEATHER</Bonus>
-				<Bonus>BONUS_FURS</Bonus>
+				<Bonus>BONUS_FUR</Bonus>
 				<Bonus>BONUS_HIDE</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
@@ -99066,7 +99066,7 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_CLOTH</Bonus>
 				<Bonus>BONUS_LEATHER</Bonus>
-				<Bonus>BONUS_FURS</Bonus>
+				<Bonus>BONUS_FUR</Bonus>
 				<Bonus>BONUS_HIDE</Bonus>
 			</PrereqBonuses>
 			<PrereqOrBuildingClasses>
@@ -99335,7 +99335,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
-					<BonusType>BONUS_GEMS</BonusType>
+					<BonusType>BONUS_GEMSTONE</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
@@ -100225,7 +100225,7 @@
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GEMS</FreeBonus>
+			<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -100930,7 +100930,7 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqBonuses>
 				<Bonus>BONUS_FINE_CLAY</Bonus>
-				<Bonus>BONUS_COMMON_CLAY</Bonus>
+				<Bonus>BONUS_CLAY</Bonus>
 				<Bonus>BONUS_WOOD</Bonus>
 				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 				<Bonus>BONUS_TIN_WARES</Bonus>
@@ -102069,7 +102069,7 @@
 			<!-- Special Yield and Commerce modifiers -->
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
-					<BonusType>BONUS_GRAIN</BonusType>
+					<BonusType>BONUS_GRAINS</BonusType>
 					<YieldModifiers>
 						<iYield>1</iYield>
 					</YieldModifiers>
@@ -102116,7 +102116,7 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GEMS</FreeBonus>
+			<FreeBonus>BONUS_GEMSTONE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -102355,7 +102355,7 @@
 				<Or>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_GRAIN</ID>
+						<ID>BONUS_GRAINS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -102971,20 +102971,20 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Unit effects -->
-			<UnitClassProductionModifiers>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_WORKER_ANDROID</UnitClassType>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_WORKER_ANDROID</UnitType>
 					<iProductionModifier>100</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_CYBORG</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_CYBORG</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_FERAL</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_FERAL</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-			</UnitClassProductionModifiers>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 			<!-- Misc. Effects -->
 			<iPopulationgrowthratepercentage>-15</iPopulationgrowthratepercentage>
 			<!-- Other -->
@@ -105505,7 +105505,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_WATERWHEELS</PrereqTech>
 			<bRiver>1</bRiver>
-			<Bonus>BONUS_GRAIN</Bonus>
+			<Bonus>BONUS_GRAINS</Bonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_GRANARY</BuildingClassType>
@@ -106153,7 +106153,7 @@
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GRAIN</FreeBonus>
+			<FreeBonus>BONUS_GRAINS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -106195,7 +106195,7 @@
 			<YieldChanges>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<FreeBonus>BONUS_GRAIN</FreeBonus>
+			<FreeBonus>BONUS_GRAINS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -106253,16 +106253,16 @@
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
 			<!-- Unit effects -->
-			<UnitClassProductionModifiers>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_CHARIOT</UnitClassType>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_CHARIOT</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_TRADE_CARAVAN</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_TRADE_CARAVAN</UnitType>
 					<iProductionModifier>25</iProductionModifier>
-				</UnitClassProductionModifier>
-			</UnitClassProductionModifiers>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_MECHANICAL</UnitCombatType>
@@ -106708,7 +106708,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_WINDMILLS</PrereqTech>
-			<Bonus>BONUS_GRAIN</Bonus>
+			<Bonus>BONUS_GRAINS</Bonus>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_HILL</TerrainType>
@@ -108436,7 +108436,7 @@
 			<iHappiness>1</iHappiness>
 			<iInsidiousness>20</iInsidiousness>
 			<iEspionageDefense>-1</iEspionageDefense>
-			<PropertySpawnUnitClass>UNITCLASS_SCOUNDREL</PropertySpawnUnitClass>
+			<PropertySpawnUnit>UNIT_SCOUNDREL</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
 			<!-- Unit effects -->
 			<UnitCombatFreeExperiences>
@@ -108634,7 +108634,7 @@
 				<iCommerce>1</iCommerce>
 			</CommerceModifiers>
 			<iInsidiousness>20</iInsidiousness>
-			<PropertySpawnUnitClass>UNITCLASS_ROBBER</PropertySpawnUnitClass>
+			<PropertySpawnUnit>UNIT_ROBBER</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
 			<!-- Unit effects -->
 			<UnitCombatFreeExperiences>
@@ -108686,7 +108686,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_PARTS</BonusType>
 				<BonusType>BONUS_TIRES</BonusType>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
@@ -108772,14 +108772,14 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_METH</BonusType>
+					<BonusType>BONUS_METHAMPHETAMINE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
 			<iInsidiousness>25</iInsidiousness>
-			<PropertySpawnUnitClass>UNITCLASS_BIKER_GANG</PropertySpawnUnitClass>
+			<PropertySpawnUnit>UNIT_BIKER_GANG</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
 			<!-- Unit effects -->
 			<UnitCombatFreeExperiences>
@@ -108955,7 +108955,7 @@
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
 			<iInsidiousness>30</iInsidiousness>
-			<PropertySpawnUnitClass>UNITCLASS_HACKER</PropertySpawnUnitClass>
+			<PropertySpawnUnit>UNIT_HACKER</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
 			<!-- Unit effects -->
 			<UnitCombatFreeExperiences>
@@ -110854,7 +110854,7 @@
 			<PrereqTech>TECH_RAT_CATCHING</PrereqTech>
 			<iPrereqPopulation>8</iPrereqPopulation>
 			<PrereqBonuses>
-				<Bonus>BONUS_GRAIN</Bonus>
+				<Bonus>BONUS_GRAINS</Bonus>
 				<Bonus>BONUS_CHEESE</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>

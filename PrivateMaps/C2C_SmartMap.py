@@ -38,7 +38,7 @@ from math import pi
 #stuff the user may want to configure
 
 #these are the resources you find only in water tiles
-resourcesWater = ('BONUS_CLAM', 'BONUS_FISH', 'BONUS_WHALE', 'BONUS_CRAB', 'BONUS_PEARLS', 'BONUS_SHRIMP', 'BONUS_LOBSTER', 'BONUS_KELP')
+resourcesWater = ('BONUS_CLAM', 'BONUS_FISH', 'BONUS_WHALE', 'BONUS_CRAB', 'BONUS_PEARLS', 'BONUS_SHRIMP', 'BONUS_LOBSTER')
 #these resources should be given more often than others
 resourcesCommon = ('BONUS_CORN', 'BONUS_COW', 'BONUS_DEER', 'BONUS_PIG', 'BONUS_RICE', 'BONUS_SHEEP', 'BONUS_WHEAT')
 #these resources are important early on, and will place extras unless using one of the 'stricter' options

@@ -2,7 +2,6 @@
 <Civ4UnitInfos xmlns="x-schema:../../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_MAPINGUARI_WOODEN</Class>
 			<Type>UNIT_MAPINGUARI_WOODEN</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
@@ -86,7 +85,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_MAPINGUARI_STONE</Class>
 			<Type>UNIT_MAPINGUARI_STONE</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
@@ -169,7 +167,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_MAPINGUARI_OBSIDIAN</Class>
 			<Type>UNIT_MAPINGUARI_OBSIDIAN</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
@@ -254,7 +251,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_MAPINGUARI</Class>
 			<Type>UNIT_MAPINGUARI</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
@@ -343,7 +339,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_MAPINGUARI_PIKE</Class>
 			<Type>UNIT_MAPINGUARI_PIKE</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>

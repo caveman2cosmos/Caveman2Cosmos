@@ -716,7 +716,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<FoundsCorporation>CORPORATION_1</FoundsCorporation>
@@ -787,7 +787,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<FoundsCorporation>CORPORATION_2</FoundsCorporation>
@@ -857,7 +857,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<FoundsCorporation>CORPORATION_3</FoundsCorporation>
@@ -927,7 +927,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<FoundsCorporation>CORPORATION_4</FoundsCorporation>
@@ -997,7 +997,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<FoundsCorporation>CORPORATION_5</FoundsCorporation>
@@ -1067,7 +1067,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<FoundsCorporation>CORPORATION_6</FoundsCorporation>
@@ -1137,7 +1137,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<FoundsCorporation>CORPORATION_7</FoundsCorporation>
@@ -1207,7 +1207,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<FoundsCorporation>CORPORATION_ADVENTURE</FoundsCorporation>
@@ -1281,7 +1281,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<FoundsCorporation>CORPORATION_BULLSEYE</FoundsCorporation>
@@ -1355,7 +1355,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<FoundsCorporation>CORPORATION_BURGERWORLD</FoundsCorporation>
@@ -1429,7 +1429,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<FoundsCorporation>CORPORATION_EMPCLOTH</FoundsCorporation>
@@ -1499,7 +1499,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<FoundsCorporation>CORPORATION_EWTRADE</FoundsCorporation>
@@ -1573,7 +1573,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<FoundsCorporation>CORPORATION_FASHION</FoundsCorporation>
@@ -1643,7 +1643,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<FoundsCorporation>CORPORATION_MALLWART</FoundsCorporation>
@@ -1718,7 +1718,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<FoundsCorporation>CORPORATION_MAPSTER</FoundsCorporation>
@@ -1788,7 +1788,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<FoundsCorporation>CORPORATION_MCDOWELLS</FoundsCorporation>
@@ -1862,7 +1862,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<FoundsCorporation>CORPORATION_MILEHIGH</FoundsCorporation>
@@ -1932,7 +1932,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<FoundsCorporation>CORPORATION_MOBBY</FoundsCorporation>
@@ -2006,7 +2006,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<FoundsCorporation>CORPORATION_MOONBEAN</FoundsCorporation>
@@ -2078,7 +2078,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<FoundsCorporation>CORPORATION_RED</FoundsCorporation>
@@ -2150,7 +2150,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_GENERAL</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_GENERAL</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<FoundsCorporation>CORPORATION_SAFARI</FoundsCorporation>
@@ -2219,7 +2219,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_GENERAL</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_GENERAL</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<FoundsCorporation>CORPORATION_ULTSOLDIER</FoundsCorporation>
@@ -2297,7 +2297,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<FoundsCorporation>CORPORATION_WONKA</FoundsCorporation>
@@ -5542,7 +5542,7 @@
 					<iExperience>2</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<PropertySpawnUnitClass>UNITCLASS_TECHNARCHIST</PropertySpawnUnitClass>
+			<PropertySpawnUnit>UNIT_TECHNARCHIST</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
 			<!-- Special properties -->
 			<bNukeImmune>1</bNukeImmune>
@@ -5586,7 +5586,7 @@
 					<iExperience>5</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<PropertySpawnUnitClass>UNITCLASS_ROBBER</PropertySpawnUnitClass>
+			<PropertySpawnUnit>UNIT_ROBBER</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
 			<!-- Special properties -->
 			<bNukeImmune>1</bNukeImmune>
@@ -6630,7 +6630,7 @@
 					<iExperience>8</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<PropertySpawnUnitClass>UNITCLASS_STREET_GANG</PropertySpawnUnitClass>
+			<PropertySpawnUnit>UNIT_STREET_GANG</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
 			<!-- Special properties -->
 			<bNukeImmune>1</bNukeImmune>
@@ -6686,7 +6686,7 @@
 					<iExperience>6</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<PropertySpawnUnitClass>UNITCLASS_THUG</PropertySpawnUnitClass>
+			<PropertySpawnUnit>UNIT_THUG</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
 			<!-- Special properties -->
 			<bNukeImmune>1</bNukeImmune>
@@ -6817,7 +6817,7 @@
 					<iExperience>2</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<PropertySpawnUnitClass>UNITCLASS_GUNFIGHTER</PropertySpawnUnitClass>
+			<PropertySpawnUnit>UNIT_GUNFIGHTER</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
 			<!-- Special properties -->
 			<bNukeImmune>1</bNukeImmune>
@@ -8530,7 +8530,7 @@
 					<iExperience>6</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<PropertySpawnUnitClass>UNITCLASS_TECHNARCHIST</PropertySpawnUnitClass>
+			<PropertySpawnUnit>UNIT_TECHNARCHIST</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
 			<!-- Special properties -->
 			<bNukeImmune>1</bNukeImmune>
@@ -10593,7 +10593,7 @@
 			<!-- Main effects -->
 			<iHealth>5</iHealth>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_DOCTOR</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Special properties -->
 			<!-- Properties diffusion -->
@@ -10819,7 +10819,7 @@
 			<!-- Special Health and Happiness  modifiers -->
 			<iGlobalHealth>2</iGlobalHealth>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_DOCTOR</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iGlobalPopulationChange>1</iGlobalPopulationChange>
@@ -13154,7 +13154,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POTTERY</PrereqTech>
-			<Bonus>BONUS_COMMON_CLAY</Bonus>
+			<Bonus>BONUS_CLAY</Bonus>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
@@ -15414,7 +15414,7 @@
 			<iPrereqPopulation>12</iPrereqPopulation>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_CARCASS</VicinityBonus>
-				<VicinityBonus>BONUS_GRAIN</VicinityBonus>
+				<VicinityBonus>BONUS_GRAINS</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
@@ -15541,7 +15541,7 @@
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
 			<iPrereqPopulation>14</iPrereqPopulation>
 			<PrereqVicinityBonuses>
-               <VicinityBonus>BONUS_GRAIN</VicinityBonus>
+               <VicinityBonus>BONUS_GRAINS</VicinityBonus>
                <VicinityBonus>BONUS_VEGETABLES</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<!-- Construction cost -->
@@ -15608,7 +15608,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
 			<iPrereqPopulation>8</iPrereqPopulation>
-			<VicinityBonus>BONUS_GRAIN</VicinityBonus>
+			<VicinityBonus>BONUS_GRAINS</VicinityBonus>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<bAutoBuild>1</bAutoBuild>
@@ -15809,7 +15809,7 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<iPrereqPopulation>8</iPrereqPopulation>
 			<PrereqVicinityBonuses>
-				<VicinityBonus>BONUS_GRAIN</VicinityBonus>
+				<VicinityBonus>BONUS_GRAINS</VicinityBonus>
 				<VicinityBonus>BONUS_CHEESE</VicinityBonus>
 				<VicinityBonus>BONUS_VEGETABLES</VicinityBonus>
 			</PrereqVicinityBonuses>
@@ -18044,7 +18044,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<GlobalReligionCommerce>RELIGION_ZOROASTRIANISM</GlobalReligionCommerce>
@@ -18115,7 +18115,7 @@
 				</ImprovementFreeSpecialist>
 			</ImprovementFreeSpecialists>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<GlobalReligionCommerce>RELIGION_NAGHUALISM</GlobalReligionCommerce>
@@ -18181,7 +18181,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<GlobalReligionCommerce>RELIGION_CHRISTIANITY</GlobalReligionCommerce>
@@ -18247,7 +18247,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<GlobalReligionCommerce>RELIGION_TAOISM</GlobalReligionCommerce>
@@ -18317,7 +18317,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<GlobalReligionCommerce>RELIGION_KEMETISM</GlobalReligionCommerce>
@@ -18383,7 +18383,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<GlobalReligionCommerce>RELIGION_HINDUISM</GlobalReligionCommerce>
@@ -18449,7 +18449,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unit effects -->
 			<FreePromotion>PROMOTION_MORALE</FreePromotion>
@@ -18517,7 +18517,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<GlobalReligionCommerce>RELIGION_BUDDHISM</GlobalReligionCommerce>
@@ -18583,7 +18583,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<GlobalReligionCommerce>RELIGION_ISLAM</GlobalReligionCommerce>
@@ -18686,7 +18686,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iEnemyWarWearinessModifier>100</iEnemyWarWearinessModifier>
@@ -18763,7 +18763,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<GlobalReligionCommerce>RELIGION_JUDAISM</GlobalReligionCommerce>
@@ -18814,7 +18814,7 @@
 				<iCommerce>6</iCommerce>
 			</CommerceChanges>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_DOCTOR</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iFreeTechs>1</iFreeTechs>
@@ -18855,7 +18855,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
-			<PropertySpawnUnitClass>UNITCLASS_THIEF</PropertySpawnUnitClass>
+			<PropertySpawnUnit>UNIT_THIEF</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
 			<!-- Special properties -->
 			<iInsidiousness>5</iInsidiousness>
@@ -18895,7 +18895,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>-2</iCommerce>
 			</CommerceChanges>
-			<PropertySpawnUnitClass>UNITCLASS_ROGUE</PropertySpawnUnitClass>
+			<PropertySpawnUnit>UNIT_ROGUE</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
 			<!-- Special properties -->
 			<iInsidiousness>7</iInsidiousness>
@@ -18935,7 +18935,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>-3</iCommerce>
 			</CommerceChanges>
-			<PropertySpawnUnitClass>UNITCLASS_BURGLAR</PropertySpawnUnitClass>
+			<PropertySpawnUnit>UNIT_BURGLAR</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
 			<!-- Special properties -->
 			<iInsidiousness>15</iInsidiousness>
@@ -18977,7 +18977,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
-			<PropertySpawnUnitClass>UNITCLASS_ASSASSIN</PropertySpawnUnitClass>
+			<PropertySpawnUnit>UNIT_ASSASSIN</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
 			<!-- Unit effects -->
 			<UnitCombatFreeExperiences>
@@ -19022,7 +19022,7 @@
 			<CommerceModifiers>
 				<iCommerce>2</iCommerce>
 			</CommerceModifiers>
-			<PropertySpawnUnitClass>UNITCLASS_CUTTHROAT</PropertySpawnUnitClass>
+			<PropertySpawnUnit>UNIT_CUTTHROAT</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
 			<!-- Special properties -->
 			<iAsset>1</iAsset>
@@ -19061,7 +19061,7 @@
 			</CommerceChanges>
 			<iInsidiousness>20</iInsidiousness>
 			<iEspionageDefense>-5</iEspionageDefense>
-			<PropertySpawnUnitClass>UNITCLASS_SCOUNDREL</PropertySpawnUnitClass>
+			<PropertySpawnUnit>UNIT_SCOUNDREL</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
 			<bNeverCapture>1</bNeverCapture>
 			<iRevIdxLocal>20</iRevIdxLocal>
@@ -19106,7 +19106,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
-			<PropertySpawnUnitClass>UNITCLASS_MOBSTER_CAR</PropertySpawnUnitClass>
+			<PropertySpawnUnit>UNIT_MOBSTER_CAR</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
 			<!-- Special Health and Happiness  modifiers -->
 			<BonusHealthChanges>
@@ -19160,7 +19160,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_PARTS</BonusType>
 				<BonusType>BONUS_TIRES</BonusType>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<!-- Construction cost -->
@@ -19173,7 +19173,7 @@
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<iInsidiousness>25</iInsidiousness>
-			<PropertySpawnUnitClass>UNITCLASS_BIKER_GANG</PropertySpawnUnitClass>
+			<PropertySpawnUnit>UNIT_BIKER_GANG</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
 			<iConquestProb>75</iConquestProb>
 			<!-- Properties diffusion -->
@@ -19214,7 +19214,7 @@
 				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
 			<iInsidiousness>30</iInsidiousness>
-			<PropertySpawnUnitClass>UNITCLASS_HACKER</PropertySpawnUnitClass>
+			<PropertySpawnUnit>UNIT_HACKER</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
 			<!-- Unit effects -->
 			<HealUnitCombatTypes>
@@ -19892,7 +19892,7 @@
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
 			<!-- Specialist -->
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<SpecialistCounts>
 				<SpecialistCount>

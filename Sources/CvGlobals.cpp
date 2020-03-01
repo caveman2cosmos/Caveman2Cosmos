@@ -1335,8 +1335,6 @@ void cvInternalGlobals::updateReplacements()
 	m_CivicInfoReplacements.updateReplacements(getCivicInfos());
 	m_LeaderHeadInfoReplacements.updateReplacements(getLeaderHeadInfos());
 
-	m_UnitClassInfoReplacements.updateReplacements(getUnitClassInfos());
-
 	m_CivilizationInfoReplacements.updateReplacements(getCivilizationInfos());
 
 	m_CultureLevelInfoReplacements.updateReplacements(getCultureLevelInfos());
@@ -3033,35 +3031,6 @@ CvSpecialBuildingInfo& cvInternalGlobals::getSpecialBuildingInfo(SpecialBuilding
 CvInfoReplacements<CvSpecialBuildingInfo>* cvInternalGlobals::getSpecialBuildingInfoReplacements()
 {
 	return &m_SpecialBuildingInfoReplacements;
-}
-
-int cvInternalGlobals::getNumUnitClassInfos() const
-{
-	return (int)m_paUnitClassInfo.size();
-}
-
-std::vector<CvUnitClassInfo*>& cvInternalGlobals::getUnitClassInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paUnitClassInfo;
-}
-
-CvUnitClassInfo& cvInternalGlobals::getUnitClassInfo(UnitClassTypes eUnitClassNum)
-{
-	FAssert(eUnitClassNum > -1);
-	FAssert(eUnitClassNum < GC.getNumUnitClassInfos());
-	return *(m_paUnitClassInfo[eUnitClassNum]);
-}
-
-const CvUnitClassInfo& cvInternalGlobals::getUnitClassInfo(UnitClassTypes eUnitClassNum) const
-{
-	FAssert(eUnitClassNum > -1);
-	FAssert(eUnitClassNum < GC.getNumUnitClassInfos());
-	return *(m_paUnitClassInfo[eUnitClassNum]);
-}
-
-CvInfoReplacements<CvUnitClassInfo>* cvInternalGlobals::getUnitClassInfoReplacements()
-{
-	return &m_UnitClassInfoReplacements;
 }
 
 int cvInternalGlobals::getNumActionInfos() const
@@ -5124,7 +5093,6 @@ void cvInternalGlobals::deleteInfoArrays()
 	deleteInfoArray(m_paDiplomacyInfo);
 
 	deleteInfoArray(m_paBuildInfo);
-	deleteInfoArray(m_paUnitClassInfo);
 	deleteInfoArray(m_paUnitInfo);
 	deleteInfoArray(m_paSpawnInfo);
 	deleteInfoArray(m_paSpecialUnitInfo);
