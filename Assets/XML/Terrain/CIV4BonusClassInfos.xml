@@ -37,20 +37,19 @@
 			<Type>BONUSCLASS_FUEL</Type>
 			<iUnique>3</iUnique>
 		</BonusClassInfo>
+		<!-- Represents resources, that are produced by buildings, and are not meant to be placed on map -->
 		<BonusClassInfo>
 			<Type>BONUSCLASS_MANUFACTURED</Type>
 			<iUnique>0</iUnique>
 		</BonusClassInfo>
-		<BonusClassInfo>
-			<Type>BONUSCLASS_FUTURE</Type>
-			<iUnique>0</iUnique>
-		</BonusClassInfo>
+		<!-- Represents resources, that are produced by cultural wonders, and are not meant to be placed on map -->
 		<BonusClassInfo>
 			<Type>BONUSCLASS_CULTURE</Type>
 			<iUnique>0</iUnique>
 		</BonusClassInfo>
+		<!-- Represents resources, that are are meant to be generated on space tiles only -->
 		<BonusClassInfo>
-			<Type>BONUSCLASS_RELIGION</Type>
+			<Type>BONUSCLASS_SPACE</Type>
 			<iUnique>0</iUnique>
 		</BonusClassInfo>
 	</BonusClassInfos>

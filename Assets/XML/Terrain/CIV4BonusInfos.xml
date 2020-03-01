@@ -12461,7 +12461,7 @@
 			<Type>BONUS_CO2_ICE</Type>
 			<Description>TXT_KEY_BONUS_CO2_ICE</Description>
 			<Civilopedia>TXT_KEY_BONUS_CO2_ICE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_SPACE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_CO2_ICE</ArtDefineTag>
 			<TechReveal>TECH_ASTROGEOLOGY</TechReveal>
 			<TechCityTrade>TECH_ASTROGEOLOGY</TechCityTrade>
@@ -12491,7 +12491,7 @@
 			<Type>BONUS_HELIUM3</Type>
 			<Description>TXT_KEY_BONUS_HELIUM3</Description>
 			<Civilopedia>TXT_KEY_BONUS_HELIUM3_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_SPACE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HELIUM3</ArtDefineTag>
 			<TechReveal>TECH_ASTROGEOLOGY</TechReveal>
 			<TechCityTrade>TECH_ASTROGEOLOGY</TechCityTrade>
@@ -12531,7 +12531,7 @@
 			<Type>BONUS_QUANTONIUM_CRYSTAL</Type>
 			<Description>TXT_KEY_BONUS_QUANTONIUM_CRYSTAL</Description>
 			<Civilopedia>TXT_KEY_BONUS_QUANTONIUM_CRYSTAL_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_SPACE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_QUANTONIUM_CRYSTAL</ArtDefineTag>
 			<TechReveal>TECH_3D_PROJECTIONS</TechReveal>
 			<TechCityTrade>TECH_3D_PROJECTIONS</TechCityTrade>
