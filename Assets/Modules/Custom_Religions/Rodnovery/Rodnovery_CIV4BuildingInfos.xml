@@ -221,7 +221,7 @@
 			<HolyCity>RELIGION_RODNOVERA</HolyCity>
 			<ReligionType>RELIGION_RODNOVERA</ReligionType>
 			<GlobalReligionCommerce>RELIGION_RODNOVERA</GlobalReligionCommerce>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>-1</iCost>

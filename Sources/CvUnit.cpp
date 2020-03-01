@@ -11603,7 +11603,6 @@ bool CvUnit::canSpread(const CvPlot* pPlot, ReligionTypes eReligion, bool bTestV
 /* UNOFFICIAL_PATCH                        END                                                  */
 /************************************************************************************************/
 //TB Prophet Mod start
-#ifdef C2C_BUILD
 	if (!GC.getGame().isOption(GAMEOPTION_DIVINE_PROPHETS) && (AI_getUnitAIType() != UNITAI_MISSIONARY))
 	{
 		return false;
@@ -11657,7 +11656,6 @@ bool CvUnit::canSpread(const CvPlot* pPlot, ReligionTypes eReligion, bool bTestV
 	}
 
 
-#endif
 //TB Prophet Mod end
 
 	return true;
@@ -11705,7 +11703,6 @@ bool CvUnit::spread(ReligionTypes eReligion)
 		if (GC.getGame().getSorenRandNum(100, "Unit Spread Religion") < iSpreadProb)
 		{
 //TB Prophet Mod start
-#ifdef C2C_BUILD
 //FfH: Modified by Kael 10/04/2008
             if (GC.getGame().isReligionFounded(eReligion))
             {
@@ -11718,10 +11715,7 @@ bool CvUnit::spread(ReligionTypes eReligion)
                 GC.getGame().setReligionSlotTaken(eReligion, true);
             }
 //FfH: End Modify
-#else
 //TB Prophet Mod end
-			pCity->setHasReligion(eReligion, true, true, false);
-#endif
 			bSuccess = true;
 		}
 		else
@@ -14948,43 +14942,43 @@ int CvUnit::baseCombatStrPreCheck() const
 	int iStr = (m_iBaseCombat);
 	if (!isNPC())
 	{
-		iStr += GET_TEAM(getTeam()).getUnitClassStrengthChange((UnitClassTypes)getUnitClassType());
+		iStr += GET_TEAM(getTeam()).getUnitStrengthChange((UnitTypes)getUnitType());
 	}
 	iStr += getExtraStrength();
 	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
 		iStr *= 100;
 	}
-    if (iStr < 0)
-    {
-        iStr = 0;
-    }
+	if (iStr < 0)
+	{
+		iStr = 0;
+	}
 	if (getExtraStrengthModifier() != 0)
 	{
 		iStr *= (100 + getExtraStrengthModifier());
 		iStr /= 100;
 	}
-    return iStr;
+	return iStr;
 }
 
 int CvUnit::baseAirCombatStrPreCheck() const
 {
-	int iStr = (m_pUnitInfo->getAirCombat() + GET_TEAM(getTeam()).getUnitClassStrengthChange((UnitClassTypes)getUnitClassType()));
+	int iStr = (m_pUnitInfo->getAirCombat() + GET_TEAM(getTeam()).getUnitStrengthChange((UnitTypes)getUnitType()));
 	iStr += getExtraStrength();
 	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
 		iStr *= 100;
 	}
-    if (iStr < 0)
-    {
-        iStr = 0;
-    }
+	if (iStr < 0)
+	{
+		iStr = 0;
+	}
 	if (getExtraStrengthModifier() != 0)
 	{
 		iStr *= (100 + getExtraStrengthModifier());
 		iStr /= 100;
 	}
-    return iStr;
+	return iStr;
 }
 
 int CvUnit::getExtraStrength() const
@@ -15139,8 +15133,8 @@ int CvUnit::maxCombatStr(const CvPlot* pPlot, const CvUnit* pAttacker, CombatDet
 		pCombatDetails->iCityAttackModifier = 0;
 		pCombatDetails->iDomainDefenseModifier = 0;
 		pCombatDetails->iCityBarbarianDefenseModifier = 0;
-		pCombatDetails->iClassDefenseModifier = 0;
-		pCombatDetails->iClassAttackModifier = 0;
+		pCombatDetails->iDefenseModifier = 0;
+		pCombatDetails->iAttackModifier = 0;
 		pCombatDetails->iCombatModifierA = 0;
 		pCombatDetails->iCombatModifierT = 0;
 		pCombatDetails->iDomainModifierA = 0;
@@ -15535,18 +15529,18 @@ int CvUnit::maxCombatStr(const CvPlot* pPlot, const CvUnit* pAttacker, CombatDet
 		{
 			FAssertMsg(pAttacker != this, "pAttacker is not expected to be equal with this");
 
-			iExtraModifier = unitClassDefenseModifier(pAttacker->getUnitClassType());
+			iExtraModifier = unitDefenseModifier(pAttacker->getUnitType());
 			iTempModifier += iExtraModifier;
 			if (pCombatDetails != NULL)
 			{
-				pCombatDetails->iClassDefenseModifier = iExtraModifier;
+				pCombatDetails->iDefenseModifier = iExtraModifier;
 			}
 
-			iExtraModifier = -pAttacker->unitClassAttackModifier(getUnitClassType());
+			iExtraModifier = -pAttacker->unitAttackModifier(getUnitType());
 			iTempModifier += iExtraModifier;
 			if (pCombatDetails != NULL)
 			{
-				pCombatDetails->iClassAttackModifier = iExtraModifier;
+				pCombatDetails->iAttackModifier = iExtraModifier;
 			}
 
 			iExtraModifier = religiousCombatModifierTotal(pAttacker->getReligion());
@@ -17553,19 +17547,19 @@ int CvUnit::featureDefenseModifier(FeatureTypes eFeature) const
 	return (m_pUnitInfo->getFeatureDefenseModifier(eFeature) + getExtraFeatureDefensePercent(eFeature));
 }
 
-int CvUnit::unitClassAttackModifier(UnitClassTypes eUnitClass) const
+int CvUnit::unitAttackModifier(UnitTypes eUnit) const
 {
-	FAssertMsg(eUnitClass >= 0, "eUnitClass is expected to be non-negative (invalid Index)");
-	FAssertMsg(eUnitClass < GC.getNumUnitClassInfos(), "eUnitClass is expected to be within maximum bounds (invalid Index)");
-	return m_pUnitInfo->getUnitClassAttackModifier(eUnitClass);
+	FAssertMsg(eUnit >= 0, "eUnit is expected to be non-negative (invalid Index)");
+	FAssertMsg(eUnit < GC.getNumUnitInfos(), "eUnit is expected to be within maximum bounds (invalid Index)");
+	return m_pUnitInfo->getUnitAttackModifier(eUnit);
 }
 
 
-int CvUnit::unitClassDefenseModifier(UnitClassTypes eUnitClass) const
+int CvUnit::unitDefenseModifier(UnitTypes eUnit) const
 {
-	FAssertMsg(eUnitClass >= 0, "eUnitClass is expected to be non-negative (invalid Index)");
-	FAssertMsg(eUnitClass < GC.getNumUnitClassInfos(), "eUnitClass is expected to be within maximum bounds (invalid Index)");
-	return m_pUnitInfo->getUnitClassDefenseModifier(eUnitClass);
+	FAssertMsg(eUnit >= 0, "eUnit is expected to be non-negative (invalid Index)");
+	FAssertMsg(eUnit < GC.getNumUnitInfos(), "eUnit is expected to be within maximum bounds (invalid Index)");
+	return m_pUnitInfo->getUnitDefenseModifier(eUnit);
 }
 
 
@@ -22264,12 +22258,6 @@ const UnitTypes CvUnit::getUnitType() const
 CvUnitInfo &CvUnit::getUnitInfo() const
 {
 	return *m_pUnitInfo;
-}
-
-
-UnitClassTypes CvUnit::getUnitClassType() const
-{
-	return (UnitClassTypes)m_pUnitInfo->getUnitClassType();
 }
 
 const UnitTypes CvUnit::getLeaderUnitType() const
@@ -29137,7 +29125,7 @@ void CvUnit::flankingStrikeCombat(const CvPlot* pPlot, int iAttackerStrength, in
 				{
 					if (pLoopUnit->canDefend())
 					{
-						int iFlankingStrength = m_pUnitInfo->getFlankingStrikeUnitClass(pLoopUnit->getUnitClassType());
+						int iFlankingStrength = m_pUnitInfo->getFlankingStrikeUnit(pLoopUnit->getUnitType());
 
 						for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 						{
@@ -29958,12 +29946,12 @@ bool CvUnit::isTargetOf(const CvUnit& attacker) const
 	//if (!plot()->isCity(true, getTeam()) || (attacker.plot() == plot() && (attacker.isAssassin() || isAssassin())))
 	//{
 
-	if (getUnitClassType() != NO_UNITCLASS && attackerInfo.getTargetUnitClass(getUnitClassType()))
+	if (getUnitType() != NO_UNIT && attackerInfo.isTargetUnit(getUnitType()))
 	{
 		return true;
 	}
 
-	if (attackerInfo.getUnitClassType() != NO_UNITCLASS && ourInfo.getDefenderUnitClass(attackerInfo.getUnitClassType()))
+	if (attacker.getUnitType() != NO_UNIT && ourInfo.isDefendAgainstUnit(attacker.getUnitType()))
 	{
 		return true;
 	}
@@ -30191,7 +30179,7 @@ int CvUnit::getTriggerValue(EventTriggerTypes eTrigger, const CvPlot* pPlot, boo
 		bool bFoundValid = false;
 		for (int i = 0; i < kTrigger.getNumUnitsRequired(); ++i)
 		{
-			if (getUnitClassType() == kTrigger.getUnitRequired(i))
+			if (getUnitType() == kTrigger.getUnitRequired(i))
 			{
 				bFoundValid = true;
 				break;
@@ -30259,27 +30247,6 @@ bool CvUnit::canApplyEvent(EventTypes eEvent) const
 		}
 	}
 
-	if (NO_PROMOTION != kEvent.getUnitPromotion())
-	{
-		//TB Combat Mods begin
-		const CvPromotionInfo& promo = GC.getPromotionInfo((PromotionTypes)kEvent.getUnitPromotion());
-
-		// Todo: surely canAcquirePromotion can work out these flags if it knows what promotion you are
-		// asking about? Smells fishy that we have to set them here.
-		PromotionRequirements::flags promoFlags = PromotionRequirements::None;
-		if (promo.isEquipment()) promoFlags |= PromotionRequirements::Equip;
-		if (promo.isAffliction()) promoFlags |= PromotionRequirements::Afflict;
-
-		if (promoFlags == PromotionRequirements::None) promoFlags = PromotionRequirements::Promote;
-		if (promo.isLeader()) promoFlags |= PromotionRequirements::ForLeader;
-
-		if (!canAcquirePromotion((PromotionTypes)kEvent.getUnitPromotion(), promoFlags))
-		//TB Combat Mods end
-		{
-			return false;
-		}
-	}
-
 	if (kEvent.getUnitImmobileTurns() > 0)
 	{
 		if (!canAttack())
@@ -30287,7 +30254,6 @@ bool CvUnit::canApplyEvent(EventTypes eEvent) const
 			return false;
 		}
 	}
-
 	return true;
 }
 
@@ -30306,11 +30272,6 @@ void CvUnit::applyEvent(EventTypes eEvent)
 		changeExperience(kEvent.getUnitExperience());
 	}
 
-	if (NO_PROMOTION != kEvent.getUnitPromotion())
-	{
-		//TB Combat Mod next line
-		setHasPromotion((PromotionTypes)kEvent.getUnitPromotion(), true);
-	}
 
 	if (kEvent.getUnitImmobileTurns() > 0)
 	{
@@ -38333,9 +38294,9 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 	{
 		bIsUnitSpecific = true;
 	}
-	if (NO_UNITCLASS != getUnitClassType())
+	if (NO_UNIT != getUnitType())
 	{
-		if (GET_PLAYER(getOwner()).isFreePromotion(getUnitClassType(), ePromotion))
+		if (GET_PLAYER(getOwner()).isFreePromotion(getUnitType(), ePromotion))
 		{
 			bIsUnitSpecific = true;
 		}
@@ -40886,9 +40847,9 @@ void CvUnit::setFreePromotion(PromotionTypes ePromotion, bool bAdding, TraitType
 			return;
 		}
 
-		if (NO_UNITCLASS != getUnitClassType())
+		if (NO_UNIT != getUnitType())
 		{
-			if (pPlayer.isFreePromotion(getUnitClassType(), ePromotion))
+			if (pPlayer.isFreePromotion(getUnitType(), ePromotion))
 			{
 				setHasPromotion(ePromotion, true, true);
 				return;

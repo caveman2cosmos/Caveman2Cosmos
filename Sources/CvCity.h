@@ -1441,10 +1441,10 @@ public:
 	bool hasFreshWater() const;
 
 	bool canUpgradeUnit(UnitTypes eUnit) const;
-	int getUnitClassProductionModifier(UnitClassTypes eIndex) const;				 //Exposed to Python
-	void changeUnitClassProductionModifier(UnitClassTypes eIndex, int iChange);
 	int getBuildingProductionModifier(BuildingTypes eIndex) const;
 	void changeBuildingProductionModifier(BuildingTypes eIndex, int iChange);
+	int getUnitProductionModifier(UnitTypes eIndex) const; //Exposed to Python
+	void changeUnitProductionModifier(UnitTypes eIndex, int iChange);
 	bool hadVicinityBonus(BonusTypes eIndex) const;
 	bool hadRawVicinityBonus(BonusTypes eIndex) const;
 	int getBonusDefenseChanges(BonusTypes eIndex) const;
@@ -1923,8 +1923,8 @@ protected:
 
 	int* m_aiBonusCommerceRateModifier;
 	int* m_aiBonusCommercePercentChanges;
-	int* m_paiUnitClassProductionModifier;
 	int* m_paiBuildingProductionModifier;
+	int* m_paiUnitProductionModifier;
 	int* m_paiBonusDefenseChanges;
 	mutable int* m_cachedPropertyNeeds;
 	bool* m_pabHadVicinityBonus;
@@ -2370,7 +2370,7 @@ public:
 	int getPropertyNeed(PropertyTypes eProperty) const;
 	int getNumPropertySpawns() const;
 	PropertySpawns& getPropertySpawn(int iIndex);
-	void changePropertySpawn(int iChange, PropertyTypes eProperty, UnitClassTypes eUnitClass);
+	void changePropertySpawn(int iChange, PropertyTypes eProperty, UnitTypes eUnit);
 	void doPropertyUnitSpawn();
 
 	void AI_setPropertyControlBuildingQueued(bool bSet);

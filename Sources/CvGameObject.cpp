@@ -721,17 +721,10 @@ void CvGameObjectPlot::foreachManipulator(ManipCallbackFn func) const
 	func(GC.getTerrainInfo(m_pPlot->getTerrainType()).getPropertyManipulators());
 
 	// Feature Type
-//#ifdef MULTI_FEATURE_MOD
-//	for (int i=0; i<m_pPlot->getNumFeatures(); i++)
-//	{
-//		func(GC.getFeatureInfo(m_pPlot->getFeatureByIndex(i)).getPropertyManipulators());
-//	}
-//#else
 	if (m_pPlot->getFeatureType() != NO_FEATURE)
 	{
 		func(GC.getFeatureInfo(m_pPlot->getFeatureType()).getPropertyManipulators());
 	}
-//#endif
 
 	// Improvement Type
 	if (m_pPlot->getImprovementType() != NO_IMPROVEMENT)
@@ -1593,11 +1586,7 @@ bool CvGameObjectUnit::hasGOM(GOMTypes eType, int iID)
 		{
 			// Check plot on which the unit is
 			const FeatureTypes eFeature = (FeatureTypes) iID;
-//#ifdef MULTI_FEATURE_MOD
-//			return m_pUnit->plot()->getHasFeature(eFeature);
-//#else
 			return m_pUnit->plot()->getFeatureType() == eFeature;
-//#endif
 			//break;
 		}
 
@@ -1752,11 +1741,7 @@ bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID)
 		{
 			// Check feature type
 			const FeatureTypes eFeature = (FeatureTypes) iID;
-//#ifdef MULTI_FEATURE_MOD
-//			return m_pPlot->getHasFeature(eFeature);
-//#else
 			return m_pPlot->getFeatureType() == eFeature;
-//#endif
 			//break;
 		}
 

@@ -8,7 +8,6 @@
 			</Buildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TRAINED_MAMMOTH</Class>
 			<Type>UNIT_TRAINED_MAMMOTH</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
@@ -122,7 +121,6 @@
 			</SupersedingUnits>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_MAMMOTH</Class>
 			<Type>UNIT_TAMED_MAMMOTH</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
@@ -237,7 +235,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_NEANDERTHAL_MAMMOTH_RIDER</Class>
 			<Type>UNIT_NEANDERTHAL_MAMMOTH_RIDER</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<EnabledCivilizationTypes>
@@ -379,7 +376,6 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_WAR_MAMMOTH</Class>
 			<Type>UNIT_WAR_MAMMOTH</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
@@ -493,7 +489,6 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_BALLISTA_MAMMOTH</Class>
 			<Type>UNIT_BALLISTA_MAMMOTH</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
@@ -542,12 +537,9 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_BOMBARD_MAMMOTH</UnitType>
 			</UnitUpgrades>
-			<UnitClassTargets>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_MOUNTED_INFANTRY</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-			</UnitClassTargets>
+			<UnitTargets>
+				<UnitType>UNIT_MOUNTED_INFANTRY</UnitType>
+			</UnitTargets>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -624,7 +616,6 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_BOMBARD_MAMMOTH</Class>
 			<Type>UNIT_BOMBARD_MAMMOTH</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
@@ -673,12 +664,9 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_EARLY_TANK</UnitType>
 			</UnitUpgrades>
-			<UnitClassTargets>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_MOUNTED_INFANTRY</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-			</UnitClassTargets>
+			<UnitTargets>
+				<UnitType>UNIT_MOUNTED_INFANTRY</UnitType>
+			</UnitTargets>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -765,7 +753,6 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_WORKMAMMOTH</Class>
 			<Type>UNIT_WORKMAMMOTH</Type>
 			<Capture>UNIT_WORKMAMMOTH</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
@@ -851,6 +838,10 @@
 				</Build>
 				<Build>
 					<BuildType>BUILD_SHAFT_MINE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>

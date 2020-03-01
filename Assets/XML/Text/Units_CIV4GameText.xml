@@ -914,7 +914,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AFONSO_HENRIQUES</Tag>
 		<English>Afonso Henriques</English>
-		<French>Afonso Henriques</French>
 		<Spanish>
 			<Text>Afonso Henriques</Text>
 			<Gender>Male</Gender>
@@ -959,7 +958,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AGENT</Tag>
 		<English>Agent</English>
-		<French>Agent</French>
 		<German>
 			<Text>Agent:Agenten:Agenten:Agenten:Agenten:Agenten:Agenten:Agenten</Text>
 			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
@@ -979,7 +977,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AGUEYBANA</Tag>
 		<English>Agueybana</English>
-		<French>Agueybana</French>
 		<Spanish>
 			<Text>Agüeybaná</Text>
 			<Gender>Male</Gender>
@@ -989,7 +986,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AGUEYBANA_II</Tag>
 		<English>Agueybana II</English>
-		<French>Agueybana II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AGUEYBANA_II_PEDIA</Tag>
@@ -1039,7 +1035,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AH64_GUNSHIP_STRATEGY</Tag>
 		<English>TBD</English>
-		<French>A compléter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AID</Tag>
@@ -1106,7 +1101,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ALARA</Tag>
 		<English>Alara</English>
-		<French>Alara</French>
 		<Spanish>
 			<Text>Alara</Text>
 			<Gender>Male</Gender>
@@ -1145,7 +1139,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ALOSKA</Tag>
 		<English>Aloska</English>
-		<French>Aloska</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ALOSKA_PEDIA</Tag>
@@ -1184,7 +1177,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AMERICAN_NAVY_SEAL</Tag>
 		<English>Navy SEAL</English>
-		<French>Navy SEAL</French>
 		<German>
 			<Text>Navy SEAL:Navy SEALs:Navy SEAL:Navy SEAL:Navy SEALs:Navy SEALs:Navy SEALs:Navy SEALs</Text>
 			<Gender>male:male:male:male:male:male:male:male</Gender>
@@ -1204,7 +1196,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AMINA</Tag>
 		<English>Amina</English>
-		<French>Amina</French>
 		<Spanish>
 			<Text>Amina</Text>
 			<Gender>Male</Gender>
@@ -1249,7 +1240,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ANCIENT_CANNON_STRATEGY</Tag>
 		<English>TBD</English>
-		<French>A compléter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ANCIENT_FLAMETHROWER</Tag>
@@ -1399,7 +1389,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ANIMAL_JAGUAR</Tag>
 		<English>Jaguar</English>
-		<French>Jaguar</French>
 		<Italian>Giaguaro</Italian>
 		<Spanish>
 			<Text>Jaguar</Text>
@@ -1500,7 +1489,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_APACHE_CAVALRY_STRATEGY</Tag>
 		<English>TBD</English>
-		<French>A compléter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARABIA_CAMELARCHER</Tag>
@@ -1543,12 +1531,10 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARABIAN_ANSAR_STRATEGY</Tag>
 		<English>TBD</English>
-		<French>A compléter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARCHER</Tag>
 		<English>Archer</English>
-		<French>Archer</French>
 		<German>
 			<Text>Bogenschütze:Bogenschützen:Bogenschützen:Bogenschützen:Bogenschützen:Bogenschützen:Bogenschützen:Bogenschützen</Text>
 			<Gender>male:male:male:male:male:male:male:male</Gender>
@@ -1681,7 +1667,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AROK</Tag>
 		<English>Ken Arok</English>
-		<French>Ken Arok</French>
 		<Spanish>
 			<Text>Ken Arok</Text>
 			<Gender>Male</Gender>
@@ -1703,7 +1688,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARPAD</Tag>
 		<English>Arpad</English>
-		<French>Arpad</French>
 		<Spanish>
 			<Text>Árpád</Text>
 			<Gender>Male</Gender>
@@ -1725,7 +1709,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARQUEBUSIER</Tag>
 		<English>Arquebusier</English>
-		<French>Arquebusier</French>
 		<German>Arkebusier</German>
 		<Italian>Archibugiere</Italian>
 		<Spanish>
@@ -1775,7 +1758,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARTHUR</Tag>
 		<English>Arthur</English>
-		<French>Arthur</French>
 		<Italian>Artù</Italian>
 		<Spanish>
 			<Text>Arturo</Text>
@@ -1787,7 +1769,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARTHUR_CURRIE</Tag>
 		<English>Arthur Currie</English>
-		<French>Arthur Currie</French>
 		<Spanish>
 			<Text>Arthur Currie</Text>
 			<Gender>Male</Gender>
@@ -1846,7 +1827,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ASHURBANIPAL</Tag>
 		<English>Ashurbanipal</English>
-		<French>Ashurbanipal</French>
 		<Spanish>
 			<Text>Asurbanipal</Text>
 			<Gender>Male</Gender>
@@ -1907,7 +1887,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ASSASSIN</Tag>
 		<English>Assassin</English>
-		<French>Assassin</French>
 		<German>Meuchelmörder</German>
 		<Italian>Assassino</Italian>
 		<Spanish>
@@ -2216,7 +2195,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AURANGZEB</Tag>
 		<English>Aurangzeb</English>
-		<French>Aurangzeb</French>
 		<Spanish>
 			<Text>Aurangzeb</Text>
 			<Gender>Male</Gender>
@@ -2445,7 +2423,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AZTEC_ELITE_JAGUAR_STRATEGY</Tag>
 		<English>TBD</English>
-		<French>A compléter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AZTEC_JAGUAR</Tag>
@@ -2497,12 +2474,10 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_B1S_LANCASTER</Tag>
 		<English>B1S Lancaster</English>
-		<French>B1S Lancaster</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_B2_SPIRIT</Tag>
 		<English>B2 Spirit</English>
-		<French>B2 Spirit</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_B52_BOMBER</Tag>
@@ -2524,7 +2499,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BAAL_ESER</Tag>
 		<English>Baal-Eser II</English>
-		<French>Baal-Eser II</French>
 		<Spanish>
 			<Text>Balbazer II</Text>
 			<Gender>Male</Gender>
@@ -2546,7 +2520,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MUGHAL_BABUR</Tag>
 		<English>Babur</English>
-		<French>Babur</French>
 		<Spanish>
 			<Text>Babur</Text>
 			<Gender>Male</Gender>
@@ -2586,7 +2559,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BAIBARS</Tag>
 		<English>Baibars</English>
-		<French>Baibars</French>
 		<Spanish>
 			<Text>Baibars</Text>
 			<Gender>Male</Gender>
@@ -3080,7 +3052,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BAYAJIDDA</Tag>
 		<English>Bayajidda</English>
-		<French>Bayajidda</French>
 		<Spanish>
 			<Text>Bayajidda</Text>
 			<Gender>Male</Gender>
@@ -3102,7 +3073,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BAYINNAUNG</Tag>
 		<English>Bayinnaung</English>
-		<French>Bayinnaung</French>
 		<Spanish>
 			<Text>Bayinnaung</Text>
 			<Gender>Male</Gender>
@@ -3117,7 +3087,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BAZOOKA</Tag>
 		<English>Bazooka</English>
-		<French>Bazooka</French>
 		<Spanish>
 			<Text>Infantería con lanzacohetes</Text>
 			<Gender>Female</Gender>
@@ -3162,7 +3131,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BELUGA</Tag>
 		<English>Beluga</English>
-		<French>Beluga</French>
 		<German>
 			<Text>Weißwal:Weißwals:Weißwal:Weißwal:Weißwale:Weißwale:Weißwalen:Weißwale</Text>
 			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
@@ -3242,7 +3210,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BILGE_KHAN</Tag>
 		<English>Bilge Khan</English>
-		<French>Bilge Khan</French>
 		<Spanish>
 			<Text>Bilge Khagan</Text>
 			<Gender>Male</Gender>
@@ -3332,7 +3299,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BISON</Tag>
 		<English>Bison</English>
-		<French>Bison</French>
 		<Italian>Bisonte</Italian>
 		<Spanish>
 			<Text>Bisonte</Text>
@@ -3546,7 +3512,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BONGO</Tag>
 		<English>Bongo</English>
-		<French>Bongo</French>
 		<German>
 			<Text>Bongo:Bongos:Bongo:Bongo:Bongos:Bongos:Bongos:Bongos</Text>
 			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
@@ -3593,7 +3558,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BRAZILIAN_BANDEIRANTE</Tag>
 		<English>Bandeirante</English>
-		<French>Bandeirante</French>
 		<Spanish>
 			<Text>Bandeirante</Text>
 			<Gender>Male</Gender>
@@ -3769,7 +3733,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BUFFALO_HUMP</Tag>
 		<English>Buffalo Hump</English>
-		<French>Buffalo Hump</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BUFFALO_HUMP_PEDIA</Tag>
@@ -3785,7 +3748,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BULLDOZER</Tag>
 		<English>Bulldozer</English>
-		<French>Bulldozer</French>
 		<Spanish>
 			<Text>Excavadora</Text>
 			<Gender>Female</Gender>
@@ -4120,7 +4082,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CANUTE</Tag>
 		<English>Canute</English>
-		<French>Canute</French>
 		<Spanish>
 			<Text>Canuto</Text>
 			<Gender>Male</Gender>
@@ -4143,7 +4104,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAPRONI</Tag>
 		<English>Caproni</English>
-		<French>Caproni</French>
 		<Spanish>
 			<Text>Caproni</Text>
 			<Gender>Male</Gender>
@@ -4214,7 +4174,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CARABINIER</Tag>
 		<English>Carabinier</English>
-		<French>Carabinier</French>
 		<Italian>Carabiniere</Italian>
 		<Spanish>
 			<Text>Carabinero</Text>
@@ -4334,7 +4293,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CARIBOU</Tag>
 		<English>Caribou</English>
-		<French>Caribou</French>
 		<German>
 			<Text>Karibu:Karibus:Karibu:Karibu:Karibus:Karibus:Karibus:Karibus</Text>
 			<Gender>Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter</Gender>
@@ -4435,7 +4393,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CASIMIR</Tag>
 		<English>Casimir III</English>
-		<French>Casimir III</French>
 		<Italian>Casimiro III</Italian>
 		<Spanish>
 			<Text>Casimiro III</Text>
@@ -4476,7 +4433,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CATAMARAN</Tag>
 		<English>Catamaran</English>
-		<French>Catamaran</French>
 		<Italian>Catamarano</Italian>
 		<Polish>Katamaran</Polish>
 	</TEXT>
@@ -4625,7 +4581,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHANDRAGUPTA_MAURYA</Tag>
 		<English>Chandragupta Maurya</English>
-		<French>Chandragupta Maurya</French>
 		<Spanish>
 			<Text>Chandragupta Maurya</Text>
 			<Gender>Male</Gender>
@@ -4696,7 +4651,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHARLES_V</Tag>
 		<English>Charles V</English>
-		<French>Charles V</French>
 		<Italian>Carlo V</Italian>
 		<Spanish>
 			<Text>Carlos V</Text>
@@ -4803,7 +4757,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHINA_CHOKONU</Tag>
 		<English>Cho-Ko-Nu</English>
-		<French>Cho-Ko-Nu</French>
 		<German>
 			<Text>Cho-Ko-Nu:Cho-Ko-Nu:Cho-Ko-Nu:Cho-Ko-Nu:Cho-Ko-Nus:Cho-Ko-Nus:Cho-Ko-Nus:Cho-Ko-Nus</Text>
 			<Gender>female:female:female:female:female:female:female:female</Gender>
@@ -4841,12 +4794,10 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHINA_JUNK_STRATEGY</Tag>
 		<English>TBD</English>
-		<French>A compléter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_chinook</Tag>
 		<English>Chinook</English>
-		<French>Chinook</French>
 		<Italian>Elicottero Chinook</Italian>
 		<Spanish>
 			<Text>Chinook</Text>
@@ -4904,7 +4855,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHULALONGKORN</Tag>
 		<English>Chulalongkorn</English>
-		<French>Chulalongkorn</French>
 		<Spanish>
 			<Text>Chulalongkorn</Text>
 			<Gender>Male</Gender>
@@ -5055,7 +5005,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COBRA</Tag>
 		<English>Cobra</English>
-		<French>Cobra</French>
 		<German>
 			<Text>Kobra:Kobra:Kobra:Kobra:Kobras:Kobras:Kobras:Kobras</Text>
 			<Gender>Female:Female:Female:Female:Female:Female:Female:Female</Gender>
@@ -5071,7 +5020,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COCHISE</Tag>
 		<English>Cochise</English>
-		<French>Cochise</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COCHISE_PEDIA</Tag>
@@ -5412,7 +5360,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_cr42</Tag>
 		<English>Fiat CR42</English>
-		<French>Fiat CR42</French>
 		<Spanish>
 			<Text>Fiat CR42</Text>
 			<Gender>Male</Gender>
@@ -5555,7 +5502,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CROWFOOT</Tag>
 		<English>Crowfoot</English>
-		<French>Crowfoot</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CROWFOOT_PEDIA</Tag>
@@ -5622,7 +5568,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CSS-3</Tag>
 		<English>CSS-3</English>
-		<French>CSS-3</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CUIRASSIER</Tag>
@@ -5681,7 +5626,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TUPI_CUNHAMBEBE</Tag>
 		<English>Cunhambebe</English>
-		<French>Cunhambebe</French>
 		<Spanish>
 			<Text>Cunhambebe</Text>
 			<Gender>Male</Gender>
@@ -5702,7 +5646,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CYBORG</Tag>
 		<English>Cyborg</English>
-		<French>Cyborg</French>
 		<German>
 			<Text>Cyborg</Text>
 			<Gender>Male</Gender>
@@ -5763,7 +5706,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DAI_CHUI</Tag>
 		<English>Dai Chui</English>
-		<French>Dai Chui</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DAI_CHUI_PEDIA</Tag>
@@ -5947,7 +5889,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DHAR</Tag>
 		<English>Dharmapala</English>
-		<French>Dharmapala</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DHAR_PEDIA</Tag>
@@ -5964,7 +5905,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DHU_NUWAS</Tag>
 		<English>Dhu Nuwas</English>
-		<French>Dhu Nuwas</French>
 		<Spanish>
 			<Text>Dhu Nuwas</Text>
 			<Gender>Male</Gender>
@@ -6339,7 +6279,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DROMON</Tag>
 		<English>Dromon</English>
-		<French>Dromon</French>
 		<Italian>Dromone</Italian>
 		<Spanish>
 			<Text>Dromón</Text>
@@ -6350,7 +6289,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DROMON_FIRE_SHIP</Tag>
 		<English>Dromon</English>
-		<French>Dromon</French>
 		<Italian>Dromone</Italian>
 		<Spanish>
 			<Text>Dromón</Text>
@@ -6435,7 +6373,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DUGONG</Tag>
 		<English>Dugong</English>
-		<French>Dugong</French>
 		<German>
 			<Text>Dugong:Dugongs:Dugong:Dugong:Dugonge:Dugonge:Dugongen:Dugonge</Text>
 			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
@@ -6717,7 +6654,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EARLYJET_STRATEGY</Tag>
 		<English>TBD</English>
-		<French>A compléter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EARLYSTEALTH</Tag>
@@ -6754,7 +6690,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EGYPT_MYTH_MISSIONARY</Tag>
 		<English>Scribe</English>
-		<French>Scribe</French>
 		<German>Schreiber</German>
 		<Italian>Scriba</Italian>
 		<Spanish>
@@ -7007,7 +6942,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ENKIDU</Tag>
 		<English>Enkidu</English>
-		<French>Enkidu</French>
 		<Spanish>
 			<Text>Enkidu</Text>
 			<Gender>Male</Gender>
@@ -7029,7 +6963,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ENRICO_DANDOLO</Tag>
 		<English>Enrico Dandolo</English>
-		<French>Enrico Dandolo</French>
 		<Spanish>
 			<Text>Enrico Dandolo</Text>
 			<Gender>Male</Gender>
@@ -7081,7 +7014,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ERWIN_ROMMEL</Tag>
 		<English>Erwin Rommel</English>
-		<French>Erwin Rommel</French>
 		<Spanish>
 			<Text>Erwin Rommel</Text>
 			<Gender>Male</Gender>
@@ -7494,7 +7426,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EZANA</Tag>
 		<English>Ezana</English>
-		<French>Ezana</French>
 		<Spanish>
 			<Text>Ezana</Text>
 			<Gender>Male</Gender>
@@ -7548,7 +7479,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Myśliwiec Odrzutowy to uniwersalna jednostka odrzutowa.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_F117</Tag>
+		<Tag>TXT_KEY_UNIT_STEALTH_FIGHTER</Tag>
 		<English>Stealth Fighter</English>
 		<French>Chasseur Furtif</French>
 		<German>Stealth-Jäger</German>
@@ -7561,12 +7492,12 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Myśliwiec Stealth</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_F117_PEDIA</Tag>
+		<Tag>TXT_KEY_UNIT_STEALTH_FIGHTER_PEDIA</Tag>
 		<English>The F-117 Nighthawk is a stealth ground attack aircraft formerly operated by the United States Air Force. The F-117A's first flight was in 1981, and it achieved Initial Operational Capability status in October 1983. The F-117A came out of secrecy and was revealed to the world in November 1988. The F-117A is equipped with sophisticated navigation and attack systems integrated into a digital avionics suite. It carries no radar, which lowers emissions and cross-section. It navigates primarily by GPS and high-accuracy inertial navigation. Missions are coordinated by an automated planning system that can automatically perform all aspects of a strike mission, including weapons release. Targets are acquired by a thermal imaging infrared system, slaved to a laser that finds the range and designates targets for laser-guided bombs.</English>
 		<Polish>F-117 Nighthawk amerykański odrzutowy samolot bombowy wykonany w technologii stealth, produkowany przez firmę Lockheed. Służył w United States Air Force od 1983 do 2008. Pomimo oznaczenia "F", stosowanego w lotnictwie USA do klasyfikacji myśliwców, F-117 był taktycznym bombowcem, przeznaczonym do wykonywania precyzyjnych ataków na cele naziemne.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_F117_STRATEGY</Tag>
+		<Tag>TXT_KEY_UNIT_STEALTH_FIGHTER</Tag>
 		<English>Stealth Fighters have greater range than Strike Fighters, and they are better at intercepting and destroying enemy aircraft. Stealth technology allows them to evade interception.</English>
 		<French>Les Chasseurs Furtifs ont une plus grande portée que les Intercepteurs Modernes, et ils sont meilleurs pour intercepter et détruire les avions ennemis. La technologie furtive leur permet d'échapper à l'interception.</French>
 		<Spanish>Los Cazas furtivos poseen un alcance mayor que los Cazas de ataque, y son más efectivos a la hora de interceptar y destruir aeronaves enemigas. Su tecnología furtiva les permite evitar la interceptación.</Spanish>
@@ -7575,7 +7506,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_F14_TOMCAT</Tag>
 		<English>F14 Tomcat</English>
-		<French>F14 Tomcat</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_F14_TOMCAT_PEDIA</Tag>
@@ -7661,7 +7591,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_F86</Tag>
 		<English>F-86 Sabre</English>
-		<French>F-86 Sabre</French>
 		<Spanish>
 			<Text>Caza a reacción F-86 Sabre</Text>
 			<Gender>Male</Gender>
@@ -8196,7 +8125,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FORKBEARD</Tag>
 		<English>Sweyn Forkbeard</English>
-		<French>Sweyn Forkbeard</French>
 		<Polish>Swen Widłobrody</Polish>
 	</TEXT>
 	<TEXT>
@@ -8291,7 +8219,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FRANCISCO</Tag>
 		<English>Francisco de Miranda</English>
-		<French>Francisco de Miranda</French>
 		<Spanish>
 			<Text>Francisco de Miranda</Text>
 			<Gender>Male</Gender>
@@ -8358,7 +8285,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FREDRICK_II</Tag>
 		<English>Fredrick II</English>
-		<French>Fredrick II</French>
 		<Polish>Fryderyk II</Polish>
 	</TEXT>
 	<TEXT>
@@ -8445,7 +8371,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FRENCH_MARINE_STRATEGY</Tag>
 		<English>TBD</English>
-		<French>A compléter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FRENCH_MUSKETEER</Tag>
@@ -8825,7 +8750,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_fw190a</Tag>
 		<English>FockeWulf 190a</English>
-		<French>'FockeWulf' 190a</French>
 		<Spanish>
 			<Text>FockeWulf 190a</Text>
 			<Gender>Male</Gender>
@@ -9033,7 +8957,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GERMAN_MARINE</Tag>
 		<English>Marine</English>
-		<French>Marine</French>
 		<German>Marines</German>
 		<Spanish>
 			<Text>Infantería de marina</Text>
@@ -9045,7 +8968,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GERMAN_PANZER</Tag>
 		<English>Panzer</English>
-		<French>Panzer</French>
 		<German>
 			<Text>Panzer V "Panther":Panzer V "Panther":Panzer V "Panther":Panzer V "Panther":Panzer V "Panther":Panzer V "Panther":Panzer V "Panther":Panzer V "Panther"</Text>
 			<Gender>male:male:male:male:male:male:male:male</Gender>
@@ -9096,7 +9018,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GESAR</Tag>
 		<English>Gesar</English>
-		<French>Gesar</French>
 		<Spanish>
 			<Text>Gesar</Text>
 			<Gender>Male</Gender>
@@ -9456,7 +9377,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GRENADIER</Tag>
 		<English>Grenadier</English>
-		<French>Grenadier</French>
 		<German>
 			<Text>Grenadier:Grenadiers:Grenadier:Grenadier:Grenadiere:Grenadiere:Grenadieren:Grenadiere</Text>
 			<Gender>male:male:male:male:male:male:male:male</Gender>
@@ -9482,7 +9402,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GRIVPANVAR</Tag>
 		<English>Grivpanvar</English>
-		<French>Grivpanvar</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GRIVPANVAR_PEDIA</Tag>
@@ -9500,7 +9419,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GRIZZLY</Tag>
 		<English>Grizzly</English>
-		<French>Grizzly</French>
 		<German>
 			<Text>Grizzly:Grizzlys:Grizzly:Grizzly:Grizzlys:Grizzlys:Grizzlys:Grizzlys</Text>
 			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
@@ -9870,7 +9788,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GROUPER_ORDER_GROUP_PROTECTSETTINGS</Tag>
 		<English>Auto Protect</English>
-		<French>Auto Protect</French>
 		<Spanish>Protección automatizada</Spanish>
 		<Polish>Automatyczna Ochrona</Polish>
 	</TEXT>
@@ -9929,7 +9846,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GROUPER_PROMOTION_GROUPING</Tag>
 		<English>Promotions</English>
-		<French>Promotions</French>
 		<German>Beförderungen</German>
 		<Italian>Promozioni</Italian>
 		<Spanish>Ascensos</Spanish>
@@ -9947,7 +9863,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GROUPING_COMBAT</Tag>
 		<English>Combat</English>
-		<French>Combat</French>
 		<German>Kampfart</German>
 		<Italian>Combattimento</Italian>
 		<Spanish>Combate</Spanish>
@@ -9983,7 +9898,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GUAN_YU</Tag>
 		<English>Guan Yu</English>
-		<French>Guan Yu</French>
 		<Spanish>
 			<Text>Guan Yu</Text>
 			<Gender>Male</Gender>
@@ -10004,8 +9918,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GUANACO</Tag>
-		<English>Guanaco (Wild Llama)</English>
-		<French>Guanaco</French>
+		<English>Guanaco</English>
 		<German>
 			<Text>Guanako:Guanakos:Guanako:Guanako:Guanakos:Guanakos:Guanakos:Guanakos</Text>
 			<Gender>Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter</Gender>
@@ -10078,7 +9991,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GUDARI</Tag>
 		<English>Gudari</English>
-		<French>Gudari</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GUDARI_PEDIA</Tag>
@@ -10121,7 +10033,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GUIDE</Tag>
 		<English>Guide</English>
-		<French>Guide</French>
 		<Spanish>
 			<Text>Guía</Text>
 			<Gender>Male</Gender>
@@ -10219,7 +10130,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GURKHA</Tag>
 		<English>Gurkha</English>
-		<French>Gurkha</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GURKHA_PEDIA</Tag>
@@ -10255,7 +10165,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GWANGGAETO</Tag>
 		<English>Gwanggaeto</English>
-		<French>Gwanggaeto</French>
 		<Spanish>
 			<Text>Gwanggaeto</Text>
 			<Gender>Male</Gender>
@@ -10278,7 +10187,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GYGES</Tag>
 		<English>Gyges</English>
-		<French>Gyges</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GYGES_PEDIA</Tag>
@@ -10365,7 +10273,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HAMILCAR</Tag>
 		<English>Hamilcar Barca</English>
-		<French>Hamilcar Barca</French>
 		<Italian>Amilcare Barca</Italian>
 		<Spanish>
 			<Text>Amílcar Barca</Text>
@@ -10613,7 +10520,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEAVY_CRUISER_STRATEGY</Tag>
 		<English>TBD</English>
-		<French>A compléter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEAVY_PIKEMAN</Tag>
@@ -10721,7 +10627,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HELLENIC_MISSIONARY</Tag>
 		<English>Oracle</English>
-		<French>Oracle</French>
 		<German>Orakel</German>
 		<Italian>Oracolo</Italian>
 		<Spanish>
@@ -10752,22 +10657,18 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HELP_COMBAT_CLASS_DEFAULT</Tag>
 		<English>(%s_CombatClass)</English>
-		<French>(%s_CombatClass)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HELP_COMBAT_CLASS_STEPONE</Tag>
 		<English>(%s1_CombatClass</English>
-		<French>(%s1_CombatClass</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HELP_COMBAT_CLASS_STEPTHREE</Tag>
 		<English>)</English>
-		<French>)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HELP_COMBAT_CLASS_STEPTWO</Tag>
 		<English>, %s1_CombatClass</English>
-		<French>, %s1_CombatClass</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HELP_COMMAND_RANGE</Tag>
@@ -10809,7 +10710,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HENRI_IV</Tag>
 		<English>Henri IV</English>
-		<French>Henri IV</French>
 		<Italian>Enrico IV</Italian>
 		<Spanish>
 			<Text>Enrique IV</Text>
@@ -10845,7 +10745,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HENRY_PARKES</Tag>
 		<English>Henry Parkes</English>
-		<French>Henry Parkes</French>
 		<Spanish>
 			<Text>Henry Parkes</Text>
 			<Gender>Male</Gender>
@@ -10921,7 +10820,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HERMANN</Tag>
 		<English>Hermann von Salza</English>
-		<French>Hermann von Salza</French>
 		<Spanish>
 			<Text>Hermann von Salza</Text>
 			<Gender>Male</Gender>
@@ -10936,7 +10834,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HERNAN_CORTES</Tag>
 		<English>Hernan Cortes</English>
-		<French>Hernan Cortes</French>
 		<Spanish>
 			<Text>Hernán Cortés</Text>
 			<Gender>Male</Gender>
@@ -10958,7 +10855,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HIAWATHA</Tag>
 		<English>Hiawatha</English>
-		<French>Hiawatha</French>
 		<Spanish>
 			<Text>Hiawatha</Text>
 			<Gender>Male</Gender>
@@ -10980,7 +10876,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HIDEYOSHI</Tag>
 		<English>Toyotomi Hideyoshi</English>
-		<French>Toyotomi Hideyoshi</French>
 		<Spanish>
 			<Text>Toyotomi Hideyoshi</Text>
 			<Gender>Male</Gender>
@@ -11308,7 +11203,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HOWDAH</Tag>
 		<English>Howdah</English>
-		<French>Howdah</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HOWDAH_PEDIA</Tag>
@@ -11339,7 +11233,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HUAMINCA</Tag>
 		<English>Huaminca</English>
-		<French>Huaminca</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HUAMINCA_PEDIA</Tag>
@@ -11358,7 +11251,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HUITZILOPOCHTLI</Tag>
 		<English>Huitzilopochtli</English>
-		<French>Huitzilopochtli</French>
 		<Spanish>
 			<Text>Huitzilopochtli</Text>
 			<Gender>Male</Gender>
@@ -11409,7 +11301,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HUMVEE</Tag>
 		<English>Humvee</English>
-		<French>Humvee</French>
 		<Spanish>
 			<Text>Vehículo de alta movilidad</Text>
 			<Gender>Male</Gender>
@@ -11465,7 +11356,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HUSKARL</Tag>
 		<English>Huskarl</English>
-		<French>Huskarl</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HUSKARL_PEDIA</Tag>
@@ -11627,7 +11517,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_IDRIS</Tag>
 		<English>Idris Alooma</English>
-		<French>Idris Alooma</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_IDRIS_PEDIA</Tag>
@@ -11708,7 +11597,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_IMPALA</Tag>
 		<English>Impala</English>
-		<French>Impala</French>
 		<German>
 			<Text>Impala:Impalas:Impala:Impala:Impalas:Impalas:Impalas:Impalas</Text>
 			<Gender>Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter</Gender>
@@ -11728,7 +11616,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INCAN_QUECHUA</Tag>
 		<English>Quechua</English>
-		<French>Quechua</French>
 		<German>
 			<Text>Quechua:Quechuas:Quechua:Quechua:Quechuas:Quechuas:Quechuas:Quechuas</Text>
 			<Gender>male:male:male:male:male:male:male:male</Gender>
@@ -11788,7 +11675,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INDONESIAN_SILAT</Tag>
 		<English>Silat</English>
-		<French>Silat</French>
 		<Spanish>
 			<Text>Silat</Text>
 			<Gender>Female</Gender>
@@ -11823,7 +11709,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INIGO</Tag>
 		<English>Inigo Arista</English>
-		<French>Inigo Arista</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INIGO_PEDIA</Tag>
@@ -12005,7 +11890,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_IPARHAN</Tag>
 		<English>Iparhan</English>
-		<French>Iparhan</French>
 		<Spanish>
 			<Text>Iparhan</Text>
 			<Gender>Male</Gender>
@@ -12127,7 +12011,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_IROQUOIS_MOHAWKARCHER_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Mohawk Archer[COLOR_REVERT] replaces the [COLOR_UNIT_TEXT]Longbowman[COLOR_REVERT]. It gets a bonus when defending in cities or in wooded terrain. Build them to replace your obsolete [COLOR_UNIT_TEXT]Archers[COLOR_REVERT].</English>
-<French>L'[COLOR_UNIT_TEXT]Archer Mohawk [COLOR_REVERT] remplace l' [COLOR_UNIT_TEXT]Archer long[COLOR_REVERT]. Il obtient un bonus lors de la défense dans les villes ou sur un terrain boisé. Construisez-les pour remplacer vos [COLOR_UNIT_TEXT]Archers[COLOR_REVERT] devenus obsolètes.</French>
+		<French>L'[COLOR_UNIT_TEXT]Archer Mohawk [COLOR_REVERT] remplace l' [COLOR_UNIT_TEXT]Archer long[COLOR_REVERT]. Il obtient un bonus lors de la défense dans les villes ou sur un terrain boisé. Construisez-les pour remplacer vos [COLOR_UNIT_TEXT]Archers[COLOR_REVERT] devenus obsolètes.</French>
 		<German>Die [COLOR_UNIT_TEXT]Mohawk-Bogenschützen[COLOR_REVERT] ersetzen den[COLOR_UNIT_TEXT]Langbogenschützen[COLOR_REVERT]. Sie bekommen einen Bonus, wenn sie in Städten oder Wäldern verteidigen. Bilde sie aus, um die veralteten [COLOR_UNIT_TEXT]Bogenschützen[COLOR_REVERT] zu ersetzen.</German>
 		<Italian>L'[COLOR_UNIT_TEXT]Arciere Mohawk[COLOR_REVERT] sostituisce l'[COLOR_UNIT_TEXT]Arciere con arco lungo[COLOR_REVERT]. Ottiene un bonus alla difesa nelle città e nelle foreste. Costruiscili per sostituire i tuoi [COLOR_UNIT_TEXT]Arcieri[COLOR_REVERT] obsoleti.</Italian>
 		<Spanish>El [COLOR_UNIT_TEXT]Arquero mohawk[COLOR_REVERT] sustituye al [COLOR_UNIT_TEXT]Saetero[COLOR_REVERT]. Obtiene una bonificación al defender ciudades o territorio boscoso. Entrénalos para reemplazar a tus obsoletos [COLOR_UNIT_TEXT]Arqueros[COLOR_REVERT].</Spanish>
@@ -12154,7 +12038,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ISAAC_BROCK</Tag>
 		<English>Isaac Brock</English>
-		<French>Isaac Brock</French>
 		<Spanish>
 			<Text>Isaac Brock</Text>
 			<Gender>Male</Gender>
@@ -12213,7 +12096,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ITHOBAAL</Tag>
 		<English>Ithobaal I</English>
-		<French>Ithobaal I</French>
 		<Spanish>
 			<Text>Ithobaal I</Text>
 			<Gender>Male</Gender>
@@ -12236,7 +12118,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ITZCOATL</Tag>
 		<English>Itzcoatl</English>
-		<French>Itzcoatl</French>
 		<Spanish>
 			<Text>Itzcóatl</Text>
 			<Gender>Male</Gender>
@@ -12258,7 +12139,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ITZKUMA</Tag>
 		<English>Itzkuma</English>
-		<French>Itzkuma</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ITZKUMA_PEDIA</Tag>
@@ -12273,7 +12153,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_IVAN_IV</Tag>
 		<English>Ivan IV</English>
-		<French>Ivan IV</French>
 		<Spanish>
 			<Text>Iván IV</Text>
 			<Gender>Male</Gender>
@@ -12327,7 +12206,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JADWIGA</Tag>
 		<English>Jadwiga</English>
-		<French>Jadwiga</French>
 		<Spanish>
 			<Text>Eduviges</Text>
 			<Gender>Female</Gender>
@@ -12370,7 +12248,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JAPAN_ASHIGARU</Tag>
 		<English>Ashigaru</English>
-		<French>Ashigaru</French>
 		<Spanish>
 			<Text>Ashigaru</Text>
 			<Gender>Male</Gender>
@@ -12460,7 +12337,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JAYAVARMAN_II</Tag>
 		<English>Jayavarman II</English>
-		<French>Jayavarman II</French>
 		<Spanish>
 			<Text>Jayavarman II</Text>
 			<Gender>Male</Gender>
@@ -12483,7 +12359,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JAYAVARMAN_VII</Tag>
 		<English>Jayavarman VII</English>
-		<French>Jayavarman VII</French>
 		<Spanish>
 			<Text>Jayavarman VII</Text>
 			<Gender>Male</Gender>
@@ -12615,7 +12490,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JOHN_MONASH</Tag>
 		<English>John Monash</English>
-		<French>John Monash</French>
 		<Spanish>
 			<Text>John Monash</Text>
 			<Gender>Male</Gender>
@@ -12637,7 +12511,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JUAN_PERON</Tag>
 		<English>Juan Peron</English>
-		<French>Juan Peron</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JUAN_PERON_PEDIA</Tag>
@@ -12695,7 +12568,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KAHINA</Tag>
 		<English>Kahina</English>
-		<French>Kahina</French>
 		<Spanish>
 			<Text>Kahina</Text>
 			<Gender>Female</Gender>
@@ -12717,7 +12589,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KALLARANI</Tag>
 		<English>Kallarani</English>
-		<French>Kallarani</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KALLARANI_PEDIA</Tag>
@@ -12736,7 +12607,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KAMUY</Tag>
 		<English>Kim-un Kamuy</English>
-		<French>Kim-un Kamuy</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KAMUY_PEDIA</Tag>
@@ -12799,7 +12669,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KARIKALA_CHOLA</Tag>
 		<English>Karikala Chola</English>
-		<French>Karikala Chola</French>
 		<Spanish>
 			<Text>Karikala Chola</Text>
 			<Gender>Male</Gender>
@@ -12820,7 +12689,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KARRANI</Tag>
 		<English>Sulaiman Khan Karrani</English>
-		<French>Sulaiman Khan Karrani</French>
 		<Polish>Sulejman Chan Karrani</Polish>
 	</TEXT>
 	<TEXT>
@@ -12859,7 +12727,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KATARI</Tag>
 		<English>Tupac Katari</English>
-		<French>Tupac Katari</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KATARI_PEDIA</Tag>
@@ -12876,7 +12743,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KAYAK</Tag>
 		<English>Kayak</English>
-		<French>Kayak</French>
 		<Spanish>
 			<Text>Kayak</Text>
 			<Gender>Male</Gender>
@@ -12902,7 +12768,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KHAEMWASET</Tag>
 		<English>Khaemwaset</English>
-		<French>Khaemwaset</French>
 		<Spanish>
 			<Text>Khaemweset</Text>
 			<Gender>Male</Gender>
@@ -12925,7 +12790,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KHALID</Tag>
 		<English>Khalid ibn al-Walid</English>
-		<French>Khalid ibn al-Walid</French>
 		<Spanish>
 			<Text>Jalid ibn al-Walid</Text>
 			<Gender>Male</Gender>
@@ -12973,12 +12837,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KHMER_PHAKAK</Tag>
 		<English>Phak'ak</English>
-		<French>Phak'ak</French>
-		<Spanish>
-			<Text>Phak'ak</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KHMER_PHAKAK_PEDIA</Tag>
@@ -12995,7 +12853,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KHONVOUM</Tag>
 		<English>Khomvoum</English>
-		<French>Khomvoum</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KHONVOUM_PEDIA</Tag>
@@ -13112,7 +12969,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KOA</Tag>
 		<English>Koa</English>
-		<French>Koa</French>
 		<Spanish>
 			<Text>Koa</Text>
 			<Gender>Male</Gender>
@@ -13139,7 +12995,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KOALA</Tag>
 		<English>Koala</English>
-		<French>Koala</French>
 		<German>
 			<Text>Koala:Koalas:Koala:Koala:Koalas:Koalas:Koalas:Koalas</Text>
 			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
@@ -13160,7 +13015,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KOLOKOTRONIS</Tag>
 		<English>Theodoros Kolokotronis</English>
-		<French>Theodoros Kolokotronis</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KOLOKOTRONIS_PEDIA</Tag>
@@ -13216,7 +13070,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KRUM</Tag>
 		<English>Krum</English>
-		<French>Krum</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KRUM_PEDIA</Tag>
@@ -13233,7 +13086,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KUKULCAN</Tag>
 		<English>Kukulcan</English>
-		<French>Kukulcan</French>
 		<Spanish>
 			<Text>Kukulkán</Text>
 			<Gender>Male</Gender>
@@ -13289,7 +13141,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LABARNA</Tag>
 		<English>Labarna</English>
-		<French>Labarna</French>
 		<Spanish>
 			<Text>Labarna</Text>
 			<Gender>Male</Gender>
@@ -13362,7 +13213,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LEO_I</Tag>
 		<English>Leo I</English>
-		<French>Leo I</French>
 		<Spanish>
 			<Text>León I</Text>
 			<Gender>Male</Gender>
@@ -13408,12 +13258,10 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LEOPOLD</Tag>
 		<English>Leopold I</English>
-		<French>Leopold I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LEOPOLD_II</Tag>
 		<English>Leopold II</English>
-		<French>Leopold II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LEOPOLD_II_PEDIA</Tag>
@@ -13710,7 +13558,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LLANERO</Tag>
 		<English>Llanero</English>
-		<French>Llanero</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LLANERO_PEDIA</Tag>
@@ -13923,7 +13770,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LORD_NELSON</Tag>
 		<English>Lord Nelson</English>
-		<French>Lord Nelson</French>
 		<Spanish>
 			<Text>Horatio Nelson</Text>
 			<Gender>Male</Gender>
@@ -13950,7 +13796,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LORENZO_DE_MEDICI</Tag>
 		<English>Lorenzo de' Medici</English>
-		<French>Lorenzo de' Medici</French>
 		<Spanish>
 			<Text>Lorenzo de Médici</Text>
 			<Gender>Male</Gender>
@@ -13973,7 +13818,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUGALZAGESI</Tag>
 		<English>Lugal-Zage-Si</English>
-		<French>Lugal-Zage-Si</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUGALZAGESI_PEDIA</Tag>
@@ -13990,7 +13834,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUIS</Tag>
 		<English>Lus Alves de Lima e Silva</English>
-		<French>Lus Alves de Lima e Silva</French>
 		<Spanish>
 			<Text>Luís Alves de Lima e Silva</Text>
 			<Gender>Male</Gender>
@@ -14047,14 +13890,12 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNGE_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Lunge: %d1_Amount%%</English>
-		<French>[ICON_BULLET]Lunge: %d1_Amount%%</French>
 		<Italian>[ICON_BULLET]Affondo: %d1_Amount%%</Italian>
 		<Polish>[ICON_BULLET]Pchnięcie: %d1_Amount%%</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LYNX</Tag>
 		<English>Lynx</English>
-		<French>Lynx</French>
 		<German>
 			<Text>Luchs:Luchses:Luchs:Luchs:Luchse:Luchse:Luchsen:Luchse</Text>
 			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
@@ -14231,7 +14072,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAHKAN</Tag>
 		<English>Aatsista-Mahkan</English>
-		<French>Aatsista-Mahkan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAHKAN_PEDIA</Tag>
@@ -14316,7 +14156,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAMBISE</Tag>
 		<English>Mambise</English>
-		<French>Mambise</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAMBISE_PEDIA</Tag>
@@ -14368,7 +14207,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MANCO_CAPAC</Tag>
 		<English>Manco Capac</English>
-		<French>Manco Capac</French>
 		<Spanish>
 			<Text>Manco Cápac</Text>
 			<Gender>Male</Gender>
@@ -14409,7 +14247,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MANDRILL</Tag>
 		<English>Mandrill</English>
-		<French>Mandrill</French>
 		<German>
 			<Text>Mandrill:Mandrills:Mandrill:Mandrill:Mandrille:Mandrille:Mandrillen:Mandrille</Text>
 			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
@@ -14439,12 +14276,10 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MANGONEL_STRATEGY</Tag>
 		<English>TBD</English>
-		<French>A compléter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MANOWAR</Tag>
 		<English>Man'O'War</English>
-		<French>Man'O'War</French>
 		<Spanish>
 			<Text>Man-of-war</Text>
 			<Gender>Male</Gender>
@@ -14466,7 +14301,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MANSA_SAKURA</Tag>
 		<English>Mansa Sakura</English>
-		<French>Mansa Sakura</French>
 		<Spanish>
 			<Text>Mansa Sakura</Text>
 			<Gender>Male</Gender>
@@ -14488,7 +14322,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MANUELITO</Tag>
 		<English>Manuelito</English>
-		<French>Manuelito</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MANUELITO_PEDIA</Tag>
@@ -14505,7 +14338,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAORI_WAKA</Tag>
 		<English>Waka</English>
-		<French>Waka</French>
 		<Spanish>
 			<Text>Waka</Text>
 			<Gender>Male</Gender>
@@ -14553,7 +14385,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MARLIN</Tag>
 		<English>Marlin</English>
-		<French>Marlin</French>
 		<German>
 			<Text>Marlin:Marlins:Marlin:Marlin:Marline:Marline:Marlinen:Marline</Text>
 			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
@@ -14588,7 +14419,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAUI</Tag>
 		<English>Maui</English>
-		<French>Maui</French>
 		<Spanish>
 			<Text>Maui</Text>
 			<Gender>Male</Gender>
@@ -14807,7 +14637,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MENALAMBA</Tag>
 		<English>Menalamba</English>
-		<French>Menalamba</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MENALAMBA_PEDIA</Tag>
@@ -14826,7 +14655,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MENELIK</Tag>
 		<English>Menelik II</English>
-		<French>Menelik II</French>
 		<Spanish>
 			<Text>Menelik II</Text>
 			<Gender>Male</Gender>
@@ -14901,7 +14729,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MERLIN</Tag>
 		<English>Merlin</English>
-		<French>Merlin</French>
 		<Italian>Merlino</Italian>
 		<Spanish>
 			<Text>Merlín</Text>
@@ -14924,7 +14751,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MEXICO_RURALES</Tag>
 		<English>Rurales</English>
-		<French>Rurales</French>
 		<Spanish>
 			<Text>Rurales</Text>
 			<Gender>Male</Gender>
@@ -14990,7 +14816,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MICHIEL_DE_RUYTER</Tag>
 		<English>Michiel de Ruyter</English>
-		<French>Michiel de Ruyter</French>
 		<Spanish>
 			<Text>Michiel de Ruyter</Text>
 			<Gender>Male</Gender>
@@ -15030,7 +14855,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_mig15</Tag>
 		<English>MIG 15</English>
-		<French>MIG 15</French>
 		<Spanish>
 			<Text>MIG 15</Text>
 			<Gender>Male</Gender>
@@ -15082,7 +14906,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_mig3</Tag>
 		<English>MIG3</English>
-		<French>MIG3</French>
 		<Spanish>
 			<Text>MIG3</Text>
 			<Gender>Male</Gender>
@@ -15207,7 +15030,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MINUTEMAN_STRATEGY</Tag>
 		<English>TBD</English>
-		<French>A compléter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MINUTEMANIII</Tag>
@@ -15253,7 +15075,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MOA</Tag>
 		<English>Moa</English>
-		<French>Moa</French>
 		<German>
 			<Text>Moa:Moas:Moa:Moa:Moas:Moas:Moas:Moas</Text>
 			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
@@ -15568,7 +15389,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MODERN_GRENADIER_STRATEGY</Tag>
 		<English>TBD</English>
-		<French>A compléter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MODERN_HOVERCRAFT</Tag>
@@ -15769,7 +15589,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MONGOL_KESHIK</Tag>
 		<English>Keshik</English>
-		<French>Keshik</French>
 		<German>
 			<Text>Keschik:Keschiks:Keschik:Keschik:Keschiks:Keschiks:Keschiks:Keschiks</Text>
 			<Gender>male:male:male:male:male:male:male:male</Gender>
@@ -15976,7 +15795,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MOUFLON</Tag>
 		<English>Mouflon</English>
-		<French>Mouflon</French>
 		<German>
 			<Text>Mufflon:Mufflons:Mufflon:Mufflon:Mufflons:Mufflons:Mufflons:Mufflons</Text>
 			<Gender>Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter</Gender>
@@ -16030,7 +15848,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MRBM</Tag>
 		<English>MRBM</English>
-		<French>MRBM</French>
 		<German>
 			<Text>Mittelstreckenrakete Typ MRBM:Mittelstreckenrakete Typ MRBM:Mittelstreckenrakete Typ MRBM:Mittelstreckenrakete Typ MRBM:Mittelstreckenraketen Typ MRBM:Mittelstreckenraketen Typ MRBM:Mittelstreckenraketen Typ MRBM:Mittelstreckenraketen Typ MRBM</Text>
 			<Gender>Female:Female:Female:Female:Female:Female:Female:Female</Gender>
@@ -16131,7 +15948,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NABOPOLASSAR</Tag>
 		<English>Nabopolassar</English>
-		<French>Nabopolassar</French>
 		<Spanish>
 			<Text>Nabopolasar</Text>
 			<Gender>Male</Gender>
@@ -16153,7 +15969,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAGUALISM_MISSIONARY</Tag>
 		<English>Tlenamacac</English>
-		<French>Tlenamacac</French>
 		<Spanish>
 			<Text>Tlenamacac</Text>
 			<Gender>Male</Gender>
@@ -16173,7 +15988,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAKHARAR</Tag>
 		<English>Nakharar</English>
-		<French>Nakharar</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAKHARAR_PEDIA</Tag>
@@ -16299,7 +16113,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NARAMSIN</Tag>
 		<English>Naram-Sin</English>
-		<French>Naram-Sin</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NARAMSIN_PEDIA</Tag>
@@ -16391,7 +16204,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NDLELA</Tag>
 		<English>Ndlela kaSompisi</English>
-		<French>Ndlela kaSompisi</French>
 		<Spanish>
 			<Text>Ndlela kaSompisi</Text>
 			<Gender>Male</Gender>
@@ -16648,7 +16460,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NELSON_MANDELA</Tag>
 		<English>Nelson Mandela</English>
-		<French>Nelson Mandela</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NELSON_MANDELA_PEDIA</Tag>
@@ -16707,7 +16518,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NIMI</Tag>
 		<English>Lukeni Lua Nimi</English>
-		<French>Lukeni Lua Nimi</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NIMI_PEDIA</Tag>
@@ -16724,7 +16534,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NINJA</Tag>
 		<English>Ninja</English>
-		<French>Ninja</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NINJA_PEDIA</Tag>
@@ -16773,7 +16582,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NOBLE</Tag>
 		<English>Noble</English>
-		<French>Noble</French>
 		<German>
 			<Text>Noble</Text>
 			<Gender>Male</Gender>
@@ -16851,7 +16659,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NUCLEAR_CARRIER_STRATEGY</Tag>
 		<English>TBD</English>
-		<French>A compléter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NUCLEAR_SUBMARINE</Tag>
@@ -16881,7 +16688,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NULLA_NULLA</Tag>
 		<English>Nulla Nulla</English>
-		<French>Nulla Nulla</French>
 		<Spanish>
 			<Text>Nulla Nulla</Text>
 			<Gender>Male</Gender>
@@ -16913,7 +16719,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NURHACI</Tag>
 		<English>Nurhaci</English>
-		<French>Nurhaci</French>
 		<Spanish>
 			<Text>Nurhaci</Text>
 			<Gender>Male</Gender>
@@ -17077,7 +16882,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OGODAI</Tag>
 		<English>Ogodai Khan</English>
-		<French>Ogodai Khan</French>
 		<Spanish>
 			<Text>Ogodei Khan</Text>
 			<Gender>Male</Gender>
@@ -17100,7 +16904,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OKAPI</Tag>
 		<English>Okapi</English>
-		<French>Okapi</French>
 		<German>
 			<Text>Okapi:Okapis:Okapi:Okapi:Okapis:Okapis:Okapis:Okapis</Text>
 			<Gender>Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter</Gender>
@@ -17247,7 +17050,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OSEI</Tag>
 		<English>Osei Kofi Tutu I</English>
-		<French>Osei Kofi Tutu I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OSEI_PEDIA</Tag>
@@ -17264,7 +17066,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OSMAN</Tag>
 		<English>Osman</English>
-		<French>Osman</French>
 		<Spanish>
 			<Text>Osmán</Text>
 			<Gender>Male</Gender>
@@ -17432,7 +17233,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OZOLUA</Tag>
 		<English>Ozolua</English>
-		<French>Ozolua</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OZOLUA_PEDIA</Tag>
@@ -17449,7 +17249,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_p38</Tag>
 		<English>P38 Lightning</English>
-		<French>P38 Lightning</French>
 		<Spanish>
 			<Text>P38 Lightning</Text>
 			<Gender>Male</Gender>
@@ -17558,7 +17357,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PANCHO_VILLA</Tag>
 		<English>Pancho Villa</English>
-		<French>Pancho Villa</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PANCHO_VILLA_PEDIA</Tag>
@@ -17695,7 +17493,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PARTISAN</Tag>
 		<English>Partisan</English>
-		<French>Partisan</French>
 		<German>
 			<Text>Partisan</Text>
 			<Gender>Male</Gender>
@@ -17731,7 +17528,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PATTON</Tag>
 		<English>George Patton</English>
-		<French>George Patton</French>
 		<Spanish>
 			<Text>George Patton</Text>
 			<Gender>Male</Gender>
@@ -17906,7 +17702,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PERSIA_SIPAHI</Tag>
 		<English>Sipahi</English>
-		<French>Sipahi</French>
 		<Spanish>
 			<Text>Sipahi persa</Text>
 			<Gender>Male</Gender>
@@ -18085,7 +17880,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PO_NGBE</Tag>
 		<English>Po Ngbe</English>
-		<French>Po Ngbe</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PO_NGBE_PEDIA</Tag>
@@ -18101,7 +17895,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POCAHONTAS</Tag>
 		<English>Pocahontas</English>
-		<French>Pocahontas</French>
 		<Spanish>
 			<Text>Pocahontas</Text>
 			<Gender>Female</Gender>
@@ -18158,7 +17951,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POISON_NOVA_STRATEGY</Tag>
 		<English>TBD</English>
-		<French>A compléter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POISON_NUKE</Tag>
@@ -18335,7 +18127,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POMAREI</Tag>
 		<English>Pomare I</English>
-		<French>Pomare I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POMAREI_PEDIA</Tag>
@@ -18611,7 +18402,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PREMPEH</Tag>
 		<English>Prempeh</English>
-		<French>Prempeh</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PREMPEH_PEDIA</Tag>
@@ -18672,7 +18462,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PROCOPTODON</Tag>
 		<English>Procoptodon</English>
-		<French>Procoptodon</French>
 		<German>
 			<Text>Procoptodon:Procoptodons:Procoptodon:Procoptodon:Procoptodonten:Procoptodonten:Procoptodonten:Procoptodonten</Text>
 			<Gender>Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter:Neuter</Gender>
@@ -18733,7 +18522,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PROTESTANT_MISSIONARY_STRATEGY</Tag>
 		<English>TBD</English>
-		<French>A compléter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PUNCTURE</Tag>
@@ -18849,7 +18637,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_QUANG_TRUNG</Tag>
 		<English>Quang Trung</English>
-		<French>Quang Trung</French>
 		<Spanish>
 			<Text>Nguyen Hue</Text>
 			<Gender>Male</Gender>
@@ -18945,7 +18732,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_QUINQUEREME2_STRATEGY</Tag>
 		<English>TBD</English>
-		<French>A compléter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_QUOLL</Tag>
@@ -19055,7 +18841,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RAJARAJA_CHOLA</Tag>
 		<English>Rajaraja Chola I</English>
-		<French>Rajaraja Chola I</French>
 		<Spanish>
 			<Text>Rajaraja Chola I</Text>
 			<Gender>Male</Gender>
@@ -19076,7 +18861,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RAJPUT</Tag>
 		<English>Rajput</English>
-		<French>Rajput</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RAJPUT_PEDIA</Tag>
@@ -19137,7 +18921,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RATEL</Tag>
 		<English>Ratel</English>
-		<French>Ratel</French>
 		<German>
 			<Text>Honigdachs:Honigdachses:Honigdachs:Honigdachs:Honigdachse:Honigdachse:Honigdachsen:Honigdachse</Text>
 			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
@@ -19256,7 +19039,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ASSYRIAN_REDU</Tag>
 		<English>Redu</English>
-		<French>Redu</French>
 		<Spanish>
 			<Text>Redu</Text>
 			<Gender>Male</Gender>
@@ -19514,7 +19296,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RIBAULDEQUIN</Tag>
 		<English>Ribauldequin</English>
-		<French>Ribauldequin</French>
 		<Spanish>
 			<Text>Ribadoquín</Text>
 			<Gender>Male</Gender>
@@ -19585,7 +19366,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ROBERT_E_LEE</Tag>
 		<English>Robert E. Lee</English>
-		<French>Robert E. Lee</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ROBERT_E_LEE_PEDIA</Tag>
@@ -19685,11 +19465,9 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ROCKHOPPER_PEDIA</Tag>
 		<English>The rockhopper penguins are three closely related taxa of crested penguins that have been traditionally treated as a single species and are sometimes split into two or three species. Not all experts agree on the classification of these penguins. Some consider all three as distinct species, some split the Western and Eastern forms into the Southern Rockhopper Penguin and keeping the Northern Rockhopper as distinct, while other experts lump all 3 calling it simply Rockhopper Penguin. (Source: WikiPedia)</English>
-		<French>TAB]Les Gorfou sauteur sont trois taxons étroitement apparentés de manchots huppés qui ont été traditionnellement traités comme une seule espèce et sont parfois divisés en deux ou trois espèces. Tous les experts ne sont pas d'accord sur la classification de ces pingouins. Certains considèrent les trois comme des espèces distinctes, certains divisent les formes occidentales et orientales en pingouin rockhopper sud et en gardant le rockhopper nordique distinct, tandis que d'autres experts regroupent les 3 en l'appelant simplement pingouin rockhopper. (Source: WikiPedia)</French>
+		<French>Les Gorfou sauteur sont trois taxons étroitement apparentés de manchots huppés qui ont été traditionnellement traités comme une seule espèce et sont parfois divisés en deux ou trois espèces. Tous les experts ne sont pas d'accord sur la classification de ces pingouins. Certains considèrent les trois comme des espèces distinctes, certains divisent les formes occidentales et orientales en pingouin rockhopper sud et en gardant le rockhopper nordique distinct, tandis que d'autres experts regroupent les 3 en l'appelant simplement pingouin rockhopper. (Source: WikiPedia)</French>
 		<German>Felsenpinguine (Eudyptes chrysocome) sind 45 bis 58 Zentimeter große Vögel aus der Familie der Pinguine, die durch einen schmalen gelben Streifen oberhalb der Augen auffallen, dessen längere Federn hinter dem Auge abstehen.[PARAGRAPH:2]Felsenpinguine sind von Südamerika bis nach Neuseeland verbreitet. Sie zählen zu den gefährdeten Tierarten, da ihr Bestand hauptsächlich durch den Fischfang in ihren Jagdgründen, aber auch durch Ökotourismus, Meeresverschmutzung und den Klimawandel immer mehr abnimmt.</German>
-		<Italian>TAB]The rockhopper penguins are three closely related taxa of crested penguins that have been traditionally treated as a single species and are sometimes split into two or three species. Not all experts agree on the classification of these penguins. Some consider all three as distinct species, some split the Western and Eastern forms into the Southern Rockhopper Penguin and keeping the Northern Rockhopper as distinct, while other experts lump all 3 calling it simply Rockhopper Penguin. (Source: WikiPedia)</Italian>
-		<Spanish>TAB]The rockhopper penguins are three closely related taxa of crested penguins that have been traditionally treated as a single species and are sometimes split into two or three species. Not all experts agree on the classification of these penguins. Some consider all three as distinct species, some split the Western and Eastern forms into the Southern Rockhopper Penguin and keeping the Northern Rockhopper as distinct, while other experts lump all 3 calling it simply Rockhopper Penguin. (Source: WikiPedia)</Spanish>
-		<Polish>TAB]Pingwin skalny (Eudyptes chrysocome)? gatunek ptaka z rodziny pingwinów (Spheniscidae), występujący w zachodniej części Oceanu Spokojnego i Indyjskiego. Posiada pomarańczowy dziób i czarno-białe upierzenie. Osiąga długość 45-58 cm i waży od 2 do 3,4 kg, choć niektóre okazy ważą nawet 5 kg. Jego oczy mają czerwoną barwę. (źródło: WikiPedia)</Polish>
+		<Polish>Pingwin skalny (Eudyptes chrysocome)? gatunek ptaka z rodziny pingwinów (Spheniscidae), występujący w zachodniej części Oceanu Spokojnego i Indyjskiego. Posiada pomarańczowy dziób i czarno-białe upierzenie. Osiąga długość 45-58 cm i waży od 2 do 3,4 kg, choć niektóre okazy ważą nawet 5 kg. Jego oczy mają czerwoną barwę. (źródło: WikiPedia)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ROGUE</Tag>
@@ -19734,7 +19512,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ROME_CAVALRY_AUXILIA</Tag>
 		<English>Equites</English>
-		<French>Equites</French>
 		<Spanish>
 			<Text>Équites</Text>
 			<Gender>Male</Gender>
@@ -19750,7 +19527,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ROME_CAVALRY_AUXILIA_STRATEGY</Tag>
 		<English>Equites are the first mounted unit capable of making flanking strikes against enemy siege units.</English>
-		<French>Equites are the first mounted unit capable of making flanking strikes against enemy siege units.</French>
 		<Spanish>Los Équites son la primera unidad montada capaz de realizar ataques de flanqueo contra las armas de asedio enemigas.</Spanish>
 		<Polish>Ekwici to pierwsza jednostka zdolna do skomplikowanych manewrów na polu bitwy. Szczególnie przeci jednostkom oblężniczym.</Polish>
 	</TEXT>
@@ -19794,7 +19570,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ROMULUS</Tag>
 		<English>Romulus</English>
-		<French>Romulus</French>
 		<Italian>Romolo</Italian>
 		<Spanish>
 			<Text>Rómulo</Text>
@@ -19817,7 +19592,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ROSTAM</Tag>
 		<English>Rostam</English>
-		<French>Rostam</French>
 		<Spanish>
 			<Text>Rostam</Text>
 			<Gender>Male</Gender>
@@ -19886,7 +19660,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ROZVI</Tag>
 		<English>Rozvi</English>
-		<French>Rozvi</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ROZVI_PEDIA</Tag>
@@ -20001,7 +19774,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SAN_MARTIN</Tag>
 		<English>Jose de San Martin</English>
-		<French>Jose de San Martin</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SAN_MARTIN_PEDIA</Tag>
@@ -20018,7 +19790,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SANCHO</Tag>
 		<English>Sancho III</English>
-		<French>Sancho III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SANCHO_PEDIA</Tag>
@@ -20035,7 +19806,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SARGON</Tag>
 		<English>Sargon</English>
-		<French>Sargon</French>
 		<Spanish>
 			<Text>Sargón</Text>
 			<Gender>Male</Gender>
@@ -20058,7 +19828,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SATURDAY</Tag>
 		<English>Windradyne</English>
-		<French>Windradyne</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SATURDAY_PEDIA</Tag>
@@ -20145,7 +19914,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SCORPION</Tag>
 		<English>Scorpion</English>
-		<French>Scorpion</French>
 		<Polish>Skorpion</Polish>
 	</TEXT>
 	<TEXT>
@@ -20266,7 +20034,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEAPLANE_TENDER_STRATEGY</Tag>
 		<English>TBD</English>
-		<French>A compléter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEATURTLE</Tag>
@@ -20303,7 +20070,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SELEUCOS</Tag>
 		<English>Seleucos I Nicator</English>
-		<French>Seleucos I Nicator</French>
 		<Italian>Seleuco I Nicatore</Italian>
 		<Spanish>
 			<Text>Seleuco I Nicátor</Text>
@@ -20320,7 +20086,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEMIRAMIS</Tag>
 		<English>Semiramis</English>
-		<French>Semiramis</French>
 		<Italian>Semiramide</Italian>
 		<Spanish>
 			<Text>Semíramis</Text>
@@ -20394,7 +20159,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEPOY</Tag>
 		<English>Sepoy</English>
-		<French>Sepoy</French>
 		<Polish>Sipajowie</Polish>
 	</TEXT>
 	<TEXT>
@@ -20452,7 +20216,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHAH_RUKH</Tag>
 		<English>Shah Rukh</English>
-		<French>Shah Rukh</French>
 		<Spanish>
 			<Text>Shahruj</Text>
 			<Gender>Male</Gender>
@@ -20475,7 +20238,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHAK</Tag>
 		<English>Shakushain</English>
-		<French>Shakushain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHAK_PEDIA</Tag>
@@ -20550,7 +20312,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHAPUR</Tag>
 		<English>Shapur I</English>
-		<French>Shapur I</French>
 		<Spanish>
 			<Text>Sapor I</Text>
 			<Gender>Male</Gender>
@@ -20630,7 +20391,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHEHE_MVITA</Tag>
 		<English>Shehe Mvita</English>
-		<French>Shehe Mvita</French>
 		<Spanish>
 			<Text>Shehe Mvita</Text>
 			<Gender>Male</Gender>
@@ -20717,7 +20477,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHO_HASHI</Tag>
 		<English>Sho Hashi</English>
-		<French>Sho Hashi</French>
 		<Spanish>
 			<Text>Sho Hashi</Text>
 			<Gender>Male</Gender>
@@ -20938,7 +20697,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SIMEON</Tag>
 		<English>Simeon I</English>
-		<French>Simeon I</French>
 		<Polish>Symeon I</Polish>
 	</TEXT>
 	<TEXT>
@@ -21184,7 +20942,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SNIPER</Tag>
 		<English>Sniper</English>
-		<French>Sniper</French>
 		<Italian>Cecchino</Italian>
 		<Spanish>
 			<Text>Francotirador</Text>
@@ -21229,7 +20986,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_so79</Tag>
 		<English>Sovoia79</English>
-		<French>Sovoia79</French>
 		<Italian>Savoia79</Italian>
 		<Spanish>
 			<Text>Savoia SM79</Text>
@@ -21312,7 +21068,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SORT_CARGO</Tag>
 		<English>Cargo</English>
-		<French>Cargo</French>
 		<German>Fracht</German>
 		<Spanish>Carga</Spanish>
 		<Polish>Ładowność</Polish>
@@ -21419,7 +21174,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPANISH_CONQUISTADOR</Tag>
 		<English>Conquistador</English>
-		<French>Conquistador</French>
 		<German>
 			<Text>Konquistador:Konquistadors:Konquistador:Konquistador:Konquistadoren:Konquistadoren:Konquistadoren:Konquistadoren</Text>
 			<Gender>male:male:male:male:male:male:male:male</Gender>
@@ -21449,7 +21203,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPARTACUS</Tag>
 		<English>Spartacus</English>
-		<French>Spartacus</French>
 		<Italian>Spartaco</Italian>
 		<Spanish>
 			<Text>Espartaco</Text>
@@ -21666,7 +21419,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_spitfire</Tag>
 		<English>Spitfire mk1</English>
-		<French>Spitfire mk1</French>
 		<Spanish>
 			<Text>Spitfire Mk1</Text>
 			<Gender>Male</Gender>
@@ -21730,12 +21482,10 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SS-18</Tag>
 		<English>SS-18</English>
-		<French>SS-18</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SS-20</Tag>
 		<English>SS-20</English>
-		<French>SS-20</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STAMPEDE</Tag>
@@ -21896,7 +21646,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STEALTH_TORPEDOBOAT_STRATEGY</Tag>
 		<English>TBD</English>
-		<French>A compléter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STEAM_DESTROYER</Tag>
@@ -21920,7 +21669,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STEPHEN_I</Tag>
 		<English>Stephen I</English>
-		<French>Stephen I</French>
 		<Italian>Stefano I</Italian>
 		<Spanish>
 			<Text>Esteban I</Text>
@@ -22169,7 +21917,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_su37</Tag>
 		<English>SU37</English>
-		<French>SU37</French>
 		<Spanish>
 			<Text>SU37</Text>
 			<Gender>Male</Gender>
@@ -22185,7 +21932,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_su47</Tag>
 		<English>SU47</English>
-		<French>SU47</French>
 		<Spanish>
 			<Text>SU47</Text>
 			<Gender>Male</Gender>
@@ -22707,7 +22453,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBOTEI</Tag>
 		<English>Subotei</English>
-		<French>Subotei</French>
 		<Spanish>
 			<Text>Subotai</Text>
 			<Gender>Male</Gender>
@@ -22776,7 +22521,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUNDIATA_KEITA</Tag>
 		<English>Sundiata Keita</English>
-		<French>Sundiata Keita</French>
 		<Spanish>
 			<Text>Sundiata Keita</Text>
 			<Gender>Male</Gender>
@@ -22798,7 +22542,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SURIYOTHAI</Tag>
 		<English>Suriyothai</English>
-		<French>Suriyothai</French>
 		<Spanish>
 			<Text>Suriyothai</Text>
 			<Gender>Male</Gender>
@@ -22820,7 +22563,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SURKU</Tag>
 		<English>Surku</English>
-		<French>Surku</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SURKU_PEDIA</Tag>
@@ -22948,7 +22690,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAHARQA</Tag>
 		<English>Taharqa</English>
-		<French>Taharqa</French>
 		<Spanish>
 			<Text>Taharqo</Text>
 			<Gender>Male</Gender>
@@ -23123,7 +22864,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAOIST_MISSIONARY</Tag>
 		<English>Daoshi</English>
-		<French>Daoshi</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAOIST_MISSIONARY_PEDIA</Tag>
@@ -23132,7 +22872,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TARKAN</Tag>
 		<English>Tarkan</English>
-		<French>Tarkan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TARKAN_PEDIA</Tag>
@@ -23151,7 +22890,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TASIUS</Tag>
 		<English>Tasius</English>
-		<French>Tasius</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TASIUS_PEDIA</Tag>
@@ -23199,7 +22937,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TECUN_UMAN</Tag>
 		<English>Tecun Uman</English>
-		<French>Tecun Uman</French>
 		<Spanish>
 			<Text>Tecún Umán</Text>
 			<Gender>Male</Gender>
@@ -23248,7 +22985,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TERRAFORMER</Tag>
 		<English>Terraformer</English>
-		<French>Terraformer</French>
 		<Spanish>
 			<Text>Terraformadora</Text>
 			<Gender>Female</Gender>
@@ -23284,7 +23020,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TEWHATEWHA</Tag>
 		<English>Tewhatewha</English>
-		<French>Tewhatewha</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TEWHATEWHA_PEDIA</Tag>
@@ -23303,7 +23038,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_THEMISTOCLES</Tag>
 		<English>Themistocles</English>
-		<French>Themistocles</French>
 		<Polish>Temistokles</Polish>
 	</TEXT>
 	<TEXT>
@@ -23392,7 +23126,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_THOMAS_JEFFERSON</Tag>
 		<English>Thomas Jefferson</English>
-		<French>Thomas Jefferson</French>
 		<Spanish>
 			<Text>Thomas Jefferson</Text>
 			<Gender>Male</Gender>
@@ -23414,7 +23147,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_THUTMOSE_III</Tag>
 		<English>Thutmose III</English>
-		<French>Thutmose III</French>
 		<Spanish>
 			<Text>Tutmosis III</Text>
 			<Gender>Male</Gender>
@@ -23437,7 +23169,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TIBETIAN_DOB_DOB</Tag>
 		<English>Dob Dob</English>
-		<French>Dob Dob</French>
 		<Spanish>
 			<Text>Monje guerrero</Text>
 			<Gender>Male</Gender>
@@ -23471,7 +23202,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TIRADENTES</Tag>
 		<English>Tiradentes</English>
-		<French>Tiradentes</French>
 		<Spanish>
 			<Text>Tiradentes</Text>
 			<Gender>Male</Gender>
@@ -23538,7 +23268,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TOMOL</Tag>
 		<English>Tomol</English>
-		<French>Tomol</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TOMOL_PEDIA</Tag>
@@ -23557,8 +23286,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TORE</Tag>
 		<English>Tore</English>
-		<French>Tore</French>
-		<Spanish>TOre</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TORE_PEDIA</Tag>
@@ -23610,7 +23337,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TORPEDOBOAT_STRATEGY</Tag>
 		<English>TBD</English>
-		<French>A compléter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DESERT_TORTOISE</Tag>
@@ -23669,7 +23395,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TOUCAN</Tag>
 		<English>Toucan</English>
-		<French>Toucan</French>
 		<Spanish>
 			<Text>Tucán</Text>
 			<Gender>Male</Gender>
@@ -23785,7 +23510,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRANSPORT</Tag>
 		<English>Transport</English>
-		<French>Transport</French>
 		<German>
 			<Text>Transportschiff:Transportschiffes:Transportschiff:Transportschiff:Transportschiffe:Transportschiffe:Transportschiffen:Transportschiffe</Text>
 			<Gender>neuter:neuter:neuter:neuter:neuter:neuter:neuter:neuter</Gender>
@@ -23973,7 +23697,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRISONG_DETSEN</Tag>
 		<English>Trisong Detsen</English>
-		<French>Trisong Detsen</French>
 		<Spanish>
 			<Text>Trisong Detsen</Text>
 			<Gender>Male</Gender>
@@ -24019,7 +23742,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRUNG_SISTERS</Tag>
 		<English>Trieu Thi Trinh</English>
-		<French>Trieu Thi Trinh</French>
 		<Spanish>
 			<Text>Trieu Thi Trinh</Text>
 			<Gender>Female</Gender>
@@ -24062,7 +23784,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TUITATUI</Tag>
 		<English>Tu'i-ta-tui</English>
-		<French>Tu'i-ta-tui</French>
 		<Spanish>
 			<Text>Tu'i-ta-tui</Text>
 			<Gender>Male</Gender>
@@ -24101,7 +23822,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TUPAC_YUPANQUI</Tag>
 		<English>Tupac Yupanqui</English>
-		<French>Tupac Yupanqui</French>
 		<Spanish>
 			<Text>Túpac Yupanqui</Text>
 			<Gender>Male</Gender>
@@ -24323,7 +24043,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ULUGH_BEG</Tag>
 		<English>Ulugh Beg</English>
-		<French>Ulugh Beg</French>
 		<Spanish>
 			<Text>Ulugh Beg</Text>
 			<Gender>Male</Gender>
@@ -24555,7 +24274,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VAMPIRE</Tag>
 		<English>Vampire</English>
-		<French>Vampire</French>
 		<Spanish>
 			<Text>Vampire</Text>
 			<Gender>Male</Gender>
@@ -24625,7 +24343,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VIETCONG</Tag>
 		<English>Vietcong</English>
-		<French>Vietcong</French>
 		<Polish>Wietkong</Polish>
 	</TEXT>
 	<TEXT>
@@ -24662,7 +24379,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VIRACOCHA</Tag>
 		<English>Viracocha</English>
-		<French>Viracocha</French>
 		<Polish>Wirakocza</Polish>
 	</TEXT>
 	<TEXT>
@@ -25302,7 +25018,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CLUBMAN_STRATEGY</Tag>
 		<English>TBD</English>
-		<French>A compléter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARTHOG</Tag>
@@ -25806,7 +25521,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_XEBEC</Tag>
 		<English>Xebec</English>
-		<French>Xebec</French>
 		<Spanish>
 			<Text>Jabeque</Text>
 			<Gender>Male</Gender>
@@ -25816,7 +25530,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_XIFOS</Tag>
 		<English>Xifos</English>
-		<French>Xifos</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_XIFOS_PEDIA</Tag>
@@ -25835,7 +25548,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_YAMAMOTO</Tag>
 		<English>Yamamoto</English>
-		<French>Yamamoto</French>
 		<Spanish>
 			<Text>Isoroku Yamamoto</Text>
 			<Gender>Male</Gender>
@@ -25878,7 +25590,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_YI_SUN_SIN</Tag>
 		<English>Yi Sun-Sin</English>
-		<French>Yi Sun-Sin</French>
 		<Spanish>
 			<Text>Yi Sun-sin</Text>
 			<Gender>Male</Gender>
@@ -25931,7 +25642,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_YUSUF</Tag>
 		<English>Yusuf ibn Tashfin</English>
-		<French>Yusuf ibn Tashfin</French>
 		<Spanish>
 			<Text>Yusuf ibn Tasufin</Text>
 			<Gender>Male</Gender>
@@ -25954,7 +25664,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZHENG_HE</Tag>
 		<English>Zheng He</English>
-		<French>Zheng He</French>
 		<Spanish>
 			<Text>Zheng He</Text>
 			<Gender>Male</Gender>
@@ -26121,7 +25830,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_THUG</Tag>
 		<English>Thug</English>
-		<French>Thug</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_THUG_STRATEGY</Tag>
@@ -26398,7 +26106,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AL_MANSUR</Tag>
 		<English>Al-Mansur</English>
-		<French>Al-Mansur</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AL_MANSUR_PEDIA</Tag>
@@ -26426,7 +26133,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KORA</Tag>
 		<English>Kora</English>
-		<French>Kora</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KORA_PEDIA</Tag>
@@ -26454,7 +26160,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_APU_TAMBO</Tag>
 		<English>Apu Tambo</English>
-		<French>Apu Tambo</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_APU_TAMBO_PEDIA</Tag>
@@ -26468,7 +26173,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WIRUTI</Tag>
 		<English>Wiruti</English>
-		<French>Wiruti</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WIRUTI_PEDIA</Tag>
@@ -26482,7 +26186,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RUHANGA</Tag>
 		<English>Ruhanga</English>
-		<French>Ruhanga</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RUHANGA_PEDIA</Tag>
@@ -26496,7 +26199,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHWEZI_ELITES</Tag>
 		<English>Chwezi Elites</English>
-		<French>Chwezi Elites</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHWEZI_ELITES_PEDIA</Tag>
@@ -26510,7 +26212,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FARUK_IMAM</Tag>
 		<English>Faruk Imam</English>
-		<French>Faruk Imam</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FARUK_IMAM_PEDIA</Tag>
@@ -26538,7 +26239,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AMON_BAZIRA</Tag>
 		<English>Amon Bazira</English>
-		<French>Amon Bazira</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AMON_BAZIRA_PEDIA</Tag>
@@ -26566,7 +26266,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KARIM_KHAN</Tag>
 		<English>Karim Khan</English>
-		<French>Karim Khan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KARIM_KHAN_PEDIA</Tag>
@@ -26580,7 +26279,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PESHMERGA</Tag>
 		<English>Peshmerga</English>
-		<French>Peshmerga</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PESHMERGA_PEDIA</Tag>
@@ -26594,7 +26292,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PIYE</Tag>
 		<English>Piye</English>
-		<French>Piye</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PIYE_PEDIA</Tag>
@@ -26622,7 +26319,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KUJULA_KADPHISES</Tag>
 		<English>Kujula Kadphises</English>
-		<French>Kujula Kadphises</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KUJULA_KADPHISES_PEDIA</Tag>
@@ -26650,7 +26346,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SABAH_AL_AHMAD</Tag>
 		<English>Sabah Al Ahmad</English>
-		<French>Sabah Al Ahmad</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SABAH_AL_AHMAD_PEDIA</Tag>
@@ -26678,7 +26373,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DARDO_ROCHA</Tag>
 		<English>Dardo Rocha</English>
-		<French>Dardo Rocha</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DARDO_ROCHA_PEDIA</Tag>
@@ -26706,7 +26400,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JACOB_KETTLER</Tag>
 		<English>Jacob Kettler</English>
-		<French>Jacob Kettler</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JACOB_KETTLER_PEDIA</Tag>
@@ -26734,7 +26427,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DOS_SANTOS</Tag>
 		<English>Dos Santos</English>
-		<French>Dos Santos</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DOS_SANTOS_PEDIA</Tag>
@@ -26762,7 +26454,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FAKHR_EL_DIN_II</Tag>
 		<English>Fakhr el Din II</English>
-		<French>Fakhr el Din II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FAKHR_EL_DIN_II_PEDIA</Tag>
@@ -26776,7 +26467,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEZBOLLAH</Tag>
 		<English>Hezbollah</English>
-		<French>Hezbollah</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEZBOLLAH_PEDIA</Tag>
@@ -26790,7 +26480,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHOSHENQ_I</Tag>
 		<English>Shoshenq I</English>
-		<French>Shoshenq I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHOSHENQ_I_PEDIA</Tag>
@@ -26804,7 +26493,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GARAMANTES</Tag>
 		<English>Garamantes</English>
-		<French>Garamantes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GARAMANTES_PEDIA</Tag>
@@ -26818,7 +26506,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MINDAUGAS</Tag>
 		<English>Mindaugas</English>
-		<French>Mindaugas</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MINDAUGAS_PEDIA</Tag>
@@ -26832,7 +26519,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PETYHORCY</Tag>
 		<English>Petyhorcy</English>
-		<French>Petyhorcy</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PETYHORCY_PEDIA</Tag>
@@ -26846,7 +26532,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LIUTPRAND</Tag>
 		<English>Liutprand</English>
-		<French>Liutprand</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LIUTPRAND_PEDIA</Tag>
@@ -26860,7 +26545,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DUGUNDIZ</Tag>
 		<English>Dugundiz</English>
-		<French>Dugundiz</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DUGUNDIZ_PEDIA</Tag>
@@ -26874,7 +26558,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CACAN</Tag>
 		<English>Cacan</English>
-		<French>Cacan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CACAN_PEDIA</Tag>
@@ -26902,7 +26585,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DAMBALLA</Tag>
 		<English>Damballa</English>
-		<French>Damballa</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DAMBALLA_PEDIA</Tag>
@@ -26916,7 +26598,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MWAANTA_GAAND</Tag>
 		<English>Mwaanta Gaand</English>
-		<French>Mwaanta Gaand</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MWAANTA_GAAND_PEDIA</Tag>
@@ -26930,7 +26611,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAUTALUS</Tag>
 		<English>Tautalus</English>
-		<French>Tautalus</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAUTALUS_PEDIA</Tag>
@@ -26944,7 +26624,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SCORTAMAREVA</Tag>
 		<English>Scortamareva</English>
-		<French>Scortamareva</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SCORTAMAREVA_PEDIA</Tag>
@@ -26958,7 +26637,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CROESUS</Tag>
 		<English>Croesus</English>
-		<French>Croesus</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CROESUS_PEDIA</Tag>
@@ -26972,7 +26650,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MEIONE_CARAVAN</Tag>
 		<English>Meione Caravan</English>
-		<French>Meione Caravan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MEIONE_CARAVAN_PEDIA</Tag>
@@ -26986,7 +26663,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PHILIBERT_TSIRANANA</Tag>
 		<English>Philibert Tsiranana</English>
-		<French>Philibert Tsiranana</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PHILIBERT_TSIRANANA_PEDIA</Tag>
@@ -27014,7 +26690,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ABDUL_RAZAK_HUSSEIN</Tag>
 		<English>Abdul Razak Hussein</English>
-		<French>Abdul Razak Hussein</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ABDUL_RAZAK_HUSSEIN_PEDIA</Tag>
@@ -27042,7 +26717,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FERDINAND_II</Tag>
 		<English>Ferdinand II</English>
-		<French>Ferdinand II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FERDINAND_II_PEDIA</Tag>
@@ -27070,7 +26744,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BARQUQ</Tag>
 		<English>Barquq</English>
-		<French>Barquq</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BARQUQ_PEDIA</Tag>
@@ -27084,7 +26757,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAMELUK</Tag>
 		<English>Mameluk</English>
-		<French>Mameluk</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAMELUK_PEDIA</Tag>
@@ -27098,7 +26770,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MATO_TOPE</Tag>
 		<English>Mato tope</English>
-		<French>Mato tope</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MATO_TOPE_PEDIA</Tag>
@@ -27126,7 +26797,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MALGAQ</Tag>
 		<English>Malgaq</English>
-		<French>Malgaq</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MALGAQ_PEDIA</Tag>
@@ -27154,7 +26824,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAUES</Tag>
 		<English>Maues</English>
-		<French>Maues</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAUES_PEDIA</Tag>
@@ -27182,7 +26851,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CYAXARES</Tag>
 		<English>Cyaxares</English>
-		<French>Cyaxares</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CYAXARES_PEDIA</Tag>
@@ -27210,7 +26878,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_QUAHE</Tag>
 		<English>Quahe</English>
-		<French>Quahe</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_QUAHE_PEDIA</Tag>
@@ -27238,7 +26905,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHARLES_WILKES</Tag>
 		<English>Charles Wilkes</English>
-		<French>Charles Wilkes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHARLES_WILKES_PEDIA</Tag>
@@ -27252,7 +26918,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ISOKELEKEL</Tag>
 		<English>Isokelekel</English>
-		<French>Isokelekel</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ISOKELEKEL_PEDIA</Tag>
@@ -27266,7 +26931,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WANLI</Tag>
 		<English>Wanli</English>
-		<French>Wanli</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WANLI_PEDIA</Tag>
@@ -27294,7 +26958,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEAR_KNEE</Tag>
 		<English>Bear Knee</English>
-		<French>Bear Knee</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEAR_KNEE_PEDIA</Tag>
@@ -27322,7 +26985,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHUTTARNA_II</Tag>
 		<English>Shuttarna II</English>
-		<French>Shuttarna II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHUTTARNA_II_PEDIA</Tag>
@@ -27392,7 +27054,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_QUADO</Tag>
 		<English>Quado</English>
-		<French>Quado</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_QUADO_PEDIA</Tag>
@@ -27420,7 +27081,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_THAYENDANEGEA</Tag>
 		<English>Thayendanegea</English>
-		<French>Thayendanegea</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_THAYENDANEGEA_PEDIA</Tag>
@@ -27448,7 +27108,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KALYAGA</Tag>
 		<English>Kalyaga</English>
-		<French>Kalyaga</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KALYAGA_PEDIA</Tag>
@@ -27462,7 +27121,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KALLAWAYA</Tag>
 		<English>Kallawaya</English>
-		<French>Kallawaya</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KALLAWAYA_PEDIA</Tag>
@@ -27490,7 +27148,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PEDRO_DE_AGUADO</Tag>
 		<English>Pedro de Aguado</English>
-		<French>Pedro de Aguado</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PEDRO_DE_AGUADO_PEDIA</Tag>
@@ -27518,7 +27175,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ROBERT_LUI</Tag>
 		<English>Robert Lui</English>
-		<French>Robert Lui</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ROBERT_LUI_PEDIA</Tag>
@@ -27546,7 +27202,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARETAS_III</Tag>
 		<English>Aretas III</English>
-		<French>Aretas III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARETAS_III_PEDIA</Tag>
@@ -27574,7 +27229,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ALTAMIRANO</Tag>
 		<English>Altamirano</English>
-		<French>Altamirano</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ALTAMIRANO_PEDIA</Tag>
@@ -27602,7 +27256,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HENDRIK_WITBOOI</Tag>
 		<English>Hendrik Witbooi</English>
-		<French>Hendrik Witbooi</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HENDRIK_WITBOOI_PEDIA</Tag>
@@ -27630,7 +27283,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AL_SAFFAR</Tag>
 		<English>Al Saffar</English>
-		<French>Al Saffar</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AL_SAFFAR_PEDIA</Tag>
@@ -27658,7 +27310,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PACADEO</Tag>
 		<English>Pacadeo</English>
-		<French>Pacadeo</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PACADEO_PEDIA</Tag>
@@ -27686,7 +27337,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OBAFEMI_AWOLOWO</Tag>
 		<English>Obafemi Awolowo</English>
-		<French>Obafemi Awolowo</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OBAFEMI_AWOLOWO_PEDIA</Tag>
@@ -27714,7 +27364,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LAMBOGA</Tag>
 		<English>Lamboga</English>
-		<French>Lamboga</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LAMBOGA_PEDIA</Tag>
@@ -27742,7 +27391,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PIBELMAN</Tag>
 		<English>Pibelman</English>
-		<French>Pibelman</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PIBELMAN_PEDIA</Tag>
@@ -27770,7 +27418,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ROLLO</Tag>
 		<English>Rollo</English>
-		<French>Rollo</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ROLLO_PEDIA</Tag>
@@ -27798,7 +27445,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MASINISSA</Tag>
 		<English>Masinissa</English>
-		<French>Masinissa</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MASINISSA_PEDIA</Tag>
@@ -27812,7 +27458,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EGUSHAWA</Tag>
 		<English>Egushawa</English>
-		<French>Egushawa</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EGUSHAWA_PEDIA</Tag>
@@ -27840,7 +27485,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_QABOOS</Tag>
 		<English>Qaboos</English>
-		<French>Qaboos</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_QABOOS_PEDIA</Tag>
@@ -27868,7 +27512,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LOPHORON</Tag>
 		<English>Lophoron</English>
-		<French>Lophoron</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LOPHORON_PEDIA</Tag>
@@ -27896,7 +27539,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JAHAI</Tag>
 		<English>Jahai</English>
-		<French>Jahai</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JAHAI_PEDIA</Tag>
@@ -27924,7 +27566,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TWAFO</Tag>
 		<English>Twafo</English>
-		<French>Twafo</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TWAFO_PEDIA</Tag>
@@ -27938,7 +27579,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WINNEMUCCA</Tag>
 		<English>Winnemucca</English>
-		<French>Winnemucca</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WINNEMUCCA_PEDIA</Tag>
@@ -27994,7 +27634,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JASIR_ARAFAT</Tag>
 		<English>Jasir Arafat</English>
-		<French>Jasir Arafat</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JASIR_ARAFAT_PEDIA</Tag>
@@ -28022,7 +27661,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VASCO_DE_BALBOA</Tag>
 		<English>Vasco de Balboa</English>
-		<French>Vasco de Balboa</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VASCO_DE_BALBOA_PEDIA</Tag>
@@ -28050,7 +27688,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JOSE_DE_FRANCIA</Tag>
 		<English>Jose de Francia</English>
-		<French>Jose de Francia</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JOSE_DE_FRANCIA_PEDIA</Tag>
@@ -28064,7 +27701,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LOS_MARINOS</Tag>
 		<English>Los Marinos</English>
-		<French>Los Marinos</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LOS_MARINOS_PEDIA</Tag>
@@ -28078,7 +27714,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHER_ALI_KHAN</Tag>
 		<English>Sher Ali Khan</English>
-		<French>Sher Ali Khan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHER_ALI_KHAN_PEDIA</Tag>
@@ -28092,7 +27727,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAHSUD_ATTAN</Tag>
 		<English>Mahsud Attan</English>
-		<French>Mahsud Attan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAHSUD_ATTAN_PEDIA</Tag>
@@ -28106,7 +27740,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AUGUSTO_LEGUIA</Tag>
 		<English>Augusto Leguia</English>
-		<French>Augusto Leguia</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AUGUSTO_LEGUIA_PEDIA</Tag>
@@ -28134,7 +27767,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LAPU_LAPU</Tag>
 		<English>Lapu Lapu</English>
-		<French>Lapu Lapu</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LAPU_LAPU_PEDIA</Tag>
@@ -28162,7 +27794,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GOLIATH</Tag>
 		<English>Goliath</English>
-		<French>Goliath</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GOLIATH_PEDIA</Tag>
@@ -28176,7 +27807,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LIGHT_HOPLITE</Tag>
 		<English>Light Hoplite</English>
-		<French>Light Hoplite</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LIGHT_HOPLITE_PEDIA</Tag>
@@ -28190,7 +27820,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAHAQUE</Tag>
 		<English>Mahaque</English>
-		<French>Mahaque</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAHAQUE_PEDIA</Tag>
@@ -28204,7 +27833,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WAPITI</Tag>
 		<English>Wapiti</English>
-		<French>Wapiti</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WAPITI_PEDIA</Tag>
@@ -28232,7 +27860,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARJOS</Tag>
 		<English>Arjos</English>
-		<French>Arjos</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARJOS_PEDIA</Tag>
@@ -28246,7 +27873,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ANTONIO</Tag>
 		<English>Antonio</English>
-		<French>Antonio</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ANTONIO_PEDIA</Tag>
@@ -28302,7 +27928,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAHUAL</Tag>
 		<English>Nahual</English>
-		<French>Nahual</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAHUAL_PEDIA</Tag>
@@ -28330,7 +27955,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TEHUELCHE</Tag>
 		<English>Tehuelche</English>
-		<French>Tehuelche</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TEHUELCHE_PEDIA</Tag>
@@ -28344,7 +27968,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WANQARA</Tag>
 		<English>Wanqara</English>
-		<French>Wanqara</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WANQARA_PEDIA</Tag>
@@ -28358,7 +27981,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PERAHU</Tag>
 		<English>Perahu</English>
-		<French>Perahu</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PERAHU_PEDIA</Tag>
@@ -28386,7 +28008,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_YAO_CHANG</Tag>
 		<English>Yao Chang</English>
-		<French>Yao Chang</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_YAO_CHANG_PEDIA</Tag>
@@ -28400,7 +28021,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHUO_QIANG</Tag>
 		<English>Chuo Qiang</English>
-		<French>Chuo Qiang</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHUO_QIANG_PEDIA</Tag>
@@ -28414,7 +28034,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHANG_YANG</Tag>
 		<English>Shang Yang</English>
-		<French>Shang Yang</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHANG_YANG_PEDIA</Tag>
@@ -28428,7 +28047,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZHUGE_NO</Tag>
 		<English>Zhuge No</English>
-		<French>Zhuge No</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZHUGE_NO_PEDIA</Tag>
@@ -28442,7 +28060,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KANGXI</Tag>
 		<English>Kangxi</English>
-		<French>Kangxi</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KANGXI_PEDIA</Tag>
@@ -28456,7 +28073,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_UJEN_CHOOHA</Tag>
 		<English>Ujen Chooha</English>
-		<French>Ujen Chooha</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_UJEN_CHOOHA_PEDIA</Tag>
@@ -28470,7 +28086,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ADELARD_GODBOUT</Tag>
 		<English>Adelard Godbout</English>
-		<French>Adelard Godbout</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ADELARD_GODBOUT_PEDIA</Tag>
@@ -28498,7 +28113,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NANDUAPAQUE</Tag>
 		<English>Nanduapaque</English>
-		<French>Nanduapaque</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NANDUAPAQUE_PEDIA</Tag>
@@ -28512,7 +28126,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BOLA_HUNTER</Tag>
 		<English>Bola Hunter</English>
-		<French>Bola Hunter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BOLA_HUNTER_PEDIA</Tag>
@@ -28526,7 +28139,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KUBRAT</Tag>
 		<English>Kubrat</English>
-		<French>Kubrat</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KUBRAT_PEDIA</Tag>
@@ -28554,7 +28166,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NUSTA_HUILLAC</Tag>
 		<English>Nusta Huillac</English>
-		<French>Nusta Huillac</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NUSTA_HUILLAC_PEDIA</Tag>
@@ -28568,7 +28179,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHULLPAS</Tag>
 		<English>Chullpas</English>
-		<French>Chullpas</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHULLPAS_PEDIA</Tag>
@@ -28582,7 +28192,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RED_CHIEF</Tag>
 		<English>Red Chief</English>
-		<French>Red Chief</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RED_CHIEF_PEDIA</Tag>
@@ -28610,7 +28219,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_IAN_SMITH</Tag>
 		<English>Ian Smith</English>
-		<French>Ian Smith</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_IAN_SMITH_PEDIA</Tag>
@@ -28638,7 +28246,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STEFAN_RAZVAN</Tag>
 		<English>Stefan Razvan</English>
-		<French>Stefan Razvan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STEFAN_RAZVAN_PEDIA</Tag>
@@ -28652,7 +28259,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEGGAR</Tag>
 		<English>Beggar</English>
-		<French>Beggar</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEGGAR_PEDIA</Tag>
@@ -28667,7 +28273,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHEBA</Tag>
 		<English>Sheba</English>
-		<French>Sheba</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHEBA_PEDIA</Tag>
@@ -28681,7 +28286,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAGOS</Tag>
 		<English>Magos</English>
-		<French>Magos</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAGOS_PEDIA</Tag>
@@ -28696,7 +28300,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ISMAIL_I</Tag>
 		<English>Ismail I</English>
-		<French>Ismail I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ISMAIL_I_PEDIA</Tag>
@@ -28710,7 +28313,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TOFANGCHI</Tag>
 		<English>Tofangchi</English>
-		<French>Tofangchi</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TOFANGCHI_PEDIA</Tag>
@@ -28724,7 +28326,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KANISHKA</Tag>
 		<English>Kanishka</English>
-		<French>Kanishka</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KANISHKA_PEDIA</Tag>
@@ -28738,7 +28339,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AILI_KESKITALO</Tag>
 		<English>Aili Keskitalo</English>
-		<French>Aili Keskitalo</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AILI_KESKITALO_PEDIA</Tag>
@@ -28766,7 +28366,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MATAAFA_IOSEFO</Tag>
 		<English>Mata'afa Iosefo</English>
-		<French>Mata'afa Iosefo</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MATAAFA_IOSEFO_PEDIA</Tag>
@@ -28794,7 +28393,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BATRADZ</Tag>
 		<English>Batradz</English>
-		<French>Batradz</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BATRADZ_PEDIA</Tag>
@@ -28822,7 +28420,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TUPAC_KATARI</Tag>
 		<English>Tupac Katari</English>
-		<French>Tupac Katari</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TUPAC_KATARI_PEDIA</Tag>
@@ -28850,7 +28447,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ALP_ARSLAN</Tag>
 		<English>Alp Arslan</English>
-		<French>Alp Arslan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ALP_ARSLAN_PEDIA</Tag>
@@ -28864,7 +28460,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SIPAHI</Tag>
 		<English>Sipahi</English>
-		<French>Sipahi</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SIPAHI_PEDIA</Tag>
@@ -28878,7 +28473,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KHANUNG</Tag>
 		<English>Khanung</English>
-		<French>Khanung</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KHANUNG_PEDIA</Tag>
@@ -28892,7 +28486,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KHANUNGESE</Tag>
 		<English>Khanungese</English>
-		<French>Khanungese</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KHANUNGESE_PEDIA</Tag>
@@ -28906,7 +28499,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LEOPOLD_SENGHOR</Tag>
 		<English>Leopold Senghor</English>
-		<French>Leopold Senghor</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LEOPOLD_SENGHOR_PEDIA</Tag>
@@ -28934,7 +28526,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BADI_VII</Tag>
 		<English>Badi VII</English>
-		<French>Badi VII</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BADI_VII_PEDIA</Tag>
@@ -28962,7 +28553,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STEPHEN_UROS_IV_DUSAN</Tag>
 		<English>Stephen Uros IV Dusan</English>
-		<French>Stephen Uros IV Dusan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STEPHEN_UROS_IV_DUSAN_PEDIA</Tag>
@@ -28976,7 +28566,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HAJDUK</Tag>
 		<English>Hajduk</English>
-		<French>Hajduk</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HAJDUK_PEDIA</Tag>
@@ -28990,7 +28579,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAYLAMP</Tag>
 		<English>Naylamp</English>
-		<French>Naylamp</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAYLAMP_PEDIA</Tag>
@@ -29004,7 +28592,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TUCUME</Tag>
 		<English>Tucume</English>
-		<French>Tucume</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TUCUME_PEDIA</Tag>
@@ -29018,7 +28605,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARCHIMEDES</Tag>
 		<English>Archimedes</English>
-		<French>Archimedes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARCHIMEDES_PEDIA</Tag>
@@ -29032,7 +28618,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GASTRAPHETES</Tag>
 		<English>Gastraphetes</English>
-		<French>Gastraphetes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GASTRAPHETES_PEDIA</Tag>
@@ -29046,7 +28631,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GANDR</Tag>
 		<English>Gandr</English>
-		<French>Gandr</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GANDR_PEDIA</Tag>
@@ -29074,7 +28658,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUDOVIT_STUR</Tag>
 		<English>Ludovit Stur</English>
-		<French>Ludovit Stur</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUDOVIT_STUR_PEDIA</Tag>
@@ -29088,7 +28671,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZBOJNIK</Tag>
 		<English>Zbojnik</English>
-		<French>Zbojnik</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZBOJNIK_PEDIA</Tag>
@@ -29102,7 +28684,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JOZE_PUCNIK</Tag>
 		<English>Joze Pucnik</English>
-		<French>Joze Pucnik</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JOZE_PUCNIK_PEDIA</Tag>
@@ -29116,7 +28697,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CARANTANIAN_MERCENARY</Tag>
 		<English>Carantanian Mercenary</English>
-		<French>Carantanian Mercenary</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CARANTANIAN_MERCENARY_PEDIA</Tag>
@@ -29130,7 +28710,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SANDEH</Tag>
 		<English>Sandeh</English>
-		<French>Sandeh</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SANDEH_PEDIA</Tag>
@@ -29144,7 +28723,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NIAM_NIAM</Tag>
 		<English>Niam-Niam</English>
-		<French>Niam-Niam</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NIAM_NIAM_PEDIA</Tag>
@@ -29158,7 +28736,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ASKIA</Tag>
 		<English>Askia</English>
-		<French>Askia</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ASKIA_PEDIA</Tag>
@@ -29186,7 +28763,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MUHAMMAD_AHMAD</Tag>
 		<English>Muhammad Ahmad</English>
-		<French>Muhammad Ahmad</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MUHAMMAD_AHMAD_PEDIA</Tag>
@@ -29214,7 +28790,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DEWI_SARTIKA</Tag>
 		<English>Dewi Sartika</English>
-		<French>Dewi Sartika</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DEWI_SARTIKA_PEDIA</Tag>
@@ -29242,7 +28817,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JULES_WIJDENBOSCH</Tag>
 		<English>Jules Wijdenbosch</English>
-		<French>Jules Wijdenbosch</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JULES_WIJDENBOSCH_PEDIA</Tag>
@@ -29256,7 +28830,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BOSNEGERS</Tag>
 		<English>Bosnegers</English>
-		<French>Bosnegers</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BOSNEGERS_PEDIA</Tag>
@@ -29270,7 +28843,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GUSTAVUS_ADOLPHUS</Tag>
 		<English>Gustavus Adolphus</English>
-		<French>Gustavus Adolphus</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GUSTAVUS_ADOLPHUS_PEDIA</Tag>
@@ -29284,7 +28856,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KAROLINER</Tag>
 		<English>Karoliner</English>
-		<French>Karoliner</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KAROLINER_PEDIA</Tag>
@@ -29298,7 +28869,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BURHANUDDIN_RABBANI</Tag>
 		<English>Burhanuddin Rabbani</English>
-		<French>Burhanuddin Rabbani</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BURHANUDDIN_RABBANI_PEDIA</Tag>
@@ -29312,7 +28882,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OMUCHTAN</Tag>
 		<English>Omuchtan</English>
-		<French>Omuchtan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OMUCHTAN_PEDIA</Tag>
@@ -29326,7 +28895,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JOSE_RIZAL</Tag>
 		<English>Jose Rizal</English>
-		<French>Jose Rizal</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JOSE_RIZAL_PEDIA</Tag>
@@ -29354,7 +28922,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POMARE_IV</Tag>
 		<English>Pomare IV</English>
-		<French>Pomare IV</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POMARE_IV_PEDIA</Tag>
@@ -29382,7 +28949,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CANACUMACO</Tag>
 		<English>Canacumaco</English>
-		<French>Canacumaco</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CANACUMACO_PEDIA</Tag>
@@ -29410,7 +28976,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GAOZONG</Tag>
 		<English>Gaozong</English>
-		<French>Gaozong</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GAOZONG_PEDIA</Tag>
@@ -29424,7 +28989,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PEN_HUO_QI</Tag>
 		<English>Pen Huo Qi</English>
-		<French>Pen Huo Qi</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PEN_HUO_QI_PEDIA</Tag>
@@ -29438,7 +29002,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SAKAYENGA</Tag>
 		<English>Sakayenga</English>
-		<French>Sakayenga</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SAKAYENGA_PEDIA</Tag>
@@ -29466,7 +29029,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AL_KHALIFA</Tag>
 		<English>Al Khalifa</English>
-		<French>Al Khalifa</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AL_KHALIFA_PEDIA</Tag>
@@ -29480,7 +29042,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BANYAN_XEBEC</Tag>
 		<English>Banyan Xebec</English>
-		<French>Banyan Xebec</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BANYAN_XEBEC_PEDIA</Tag>
@@ -29494,7 +29055,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BENJAMIN_MKAPA</Tag>
 		<English>Benjamin Mkapa</English>
-		<French>Benjamin Mkapa</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BENJAMIN_MKAPA_PEDIA</Tag>
@@ -29522,7 +29082,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TARIACURI</Tag>
 		<English>Tariacuri</English>
-		<French>Tariacuri</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TARIACURI_PEDIA</Tag>
@@ -29536,7 +29095,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_UACUSECHA</Tag>
 		<English>Uacusecha</English>
-		<French>Uacusecha</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_UACUSECHA_PEDIA</Tag>
@@ -29550,7 +29108,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRUGANINI</Tag>
 		<English>Truganini</English>
-		<French>Truganini</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRUGANINI_PEDIA</Tag>
@@ -29578,7 +29135,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TUGAY_BEY</Tag>
 		<English>Tugay Bey</English>
-		<French>Tugay Bey</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TUGAY_BEY_PEDIA</Tag>
@@ -29592,7 +29148,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZAGON</Tag>
 		<English>Zagon</English>
-		<French>Zagon</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZAGON_PEDIA</Tag>
@@ -29606,7 +29161,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STEPHEN_AUSTIN</Tag>
 		<English>Stephen Austin</English>
-		<French>Stephen Austin</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STEPHEN_AUSTIN_PEDIA</Tag>
@@ -29634,7 +29188,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TERES</Tag>
 		<English>Teres</English>
-		<French>Teres</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TERES_PEDIA</Tag>
@@ -29662,7 +29215,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAO_CAO</Tag>
 		<English>Cao Cao</English>
-		<French>Cao Cao</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAO_CAO_PEDIA</Tag>
@@ -29676,7 +29228,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DOUJIAN</Tag>
 		<English>Doujian</English>
-		<French>Doujian</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DOUJIAN_PEDIA</Tag>
@@ -29690,7 +29241,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TIMUR</Tag>
 		<English>Timur</English>
-		<French>Timur</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TIMUR_PEDIA</Tag>
@@ -29718,7 +29268,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AUSTIN_WONAEAMIRRI</Tag>
 		<English>Austin Wonaeamirri</English>
-		<French>Austin Wonaeamirri</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AUSTIN_WONAEAMIRRI_PEDIA</Tag>
@@ -29746,7 +29295,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_XICOTENCATL_II</Tag>
 		<English>Xicotencatl II</English>
-		<French>Xicotencatl II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_XICOTENCATL_II_PEDIA</Tag>
@@ -29802,7 +29350,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARACAGUA</Tag>
 		<English>Aracagua</English>
-		<French>Aracagua</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARACAGUA_PEDIA</Tag>
@@ -29816,7 +29363,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GUAYKURU</Tag>
 		<English>Guaykuru</English>
-		<French>Guaykuru</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GUAYKURU_PEDIA</Tag>
@@ -29830,7 +29376,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WILLIAM_MARINER</Tag>
 		<English>William Mariner</English>
-		<French>William Mariner</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WILLIAM_MARINER_PEDIA</Tag>
@@ -29858,7 +29403,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CENTEOTL</Tag>
 		<English>Centeotl</English>
-		<French>Centeotl</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CENTEOTL_PEDIA</Tag>
@@ -29872,7 +29416,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAIZE_CARAVAN</Tag>
 		<English>Maize Caravan</English>
-		<French>Maize Caravan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAIZE_CARAVAN_PEDIA</Tag>
@@ -29886,7 +29429,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHAGATAI_KHAN</Tag>
 		<English>Chagatai Khan</English>
-		<French>Chagatai Khan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHAGATAI_KHAN_PEDIA</Tag>
@@ -29914,7 +29456,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WANANO</Tag>
 		<English>Wanano</English>
-		<French>Wanano</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WANANO_PEDIA</Tag>
@@ -29942,7 +29483,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KUCHUM_KHAN</Tag>
 		<English>Kuchum Khan</English>
-		<French>Kuchum Khan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KUCHUM_KHAN_PEDIA</Tag>
@@ -29970,7 +29510,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AL_AGHLAB</Tag>
 		<English>Al Aghlab</English>
-		<French>Al Aghlab</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AL_AGHLAB_PEDIA</Tag>
@@ -29998,7 +29537,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ATATURK</Tag>
 		<English>Ataturk</English>
-		<French>Ataturk</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ATATURK_PEDIA</Tag>
@@ -30026,7 +29564,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SVIATOSLAV_I</Tag>
 		<English>Sviatoslav I</English>
-		<French>Sviatoslav I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SVIATOSLAV_I_PEDIA</Tag>
@@ -30040,7 +29577,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZAPOROZKI_KOZAK</Tag>
 		<English>Zaporozki Kozak</English>
-		<French>Zaporozki Kozak</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZAPOROZKI_KOZAK_PEDIA</Tag>
@@ -30054,7 +29590,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JOSE_MUJICA</Tag>
 		<English>Jose Mujica</English>
-		<French>Jose Mujica</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JOSE_MUJICA_PEDIA</Tag>
@@ -30082,7 +29617,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ORANG_KAYA</Tag>
 		<English>Orang Kaya</English>
-		<French>Orang Kaya</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ORANG_KAYA_PEDIA</Tag>
@@ -30096,7 +29630,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BOROBUDUR</Tag>
 		<English>Borobudur</English>
-		<French>Borobudur</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BOROBUDUR_PEDIA</Tag>
@@ -30110,7 +29643,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHAYBANI</Tag>
 		<English>Shaybani</English>
-		<French>Shaybani</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHAYBANI_PEDIA</Tag>
@@ -30138,7 +29670,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PASTENE</Tag>
 		<English>Pastene</English>
-		<French>Pastene</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PASTENE_PEDIA</Tag>
@@ -30152,7 +29683,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FIGURINE_POTTER</Tag>
 		<English>Figurine Potter</English>
-		<French>Figurine Potter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FIGURINE_POTTER_PEDIA</Tag>
@@ -30166,7 +29696,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JOHN_FRUM</Tag>
 		<English>John Frum</English>
-		<French>John Frum</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JOHN_FRUM_PEDIA</Tag>
@@ -30194,7 +29723,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GALLIOT</Tag>
 		<English>Galliot</English>
-		<French>Galliot</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GALLIOT_PEDIA</Tag>
@@ -30208,7 +29736,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MUHAMMAD_BIN_SAUD</Tag>
 		<English>Muhammad bin Saud</English>
-		<French>Muhammad bin Saud</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MUHAMMAD_BIN_SAUD_PEDIA</Tag>
@@ -30236,7 +29763,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VLAD_III_DRACULA</Tag>
 		<English>Vlad III Dracula</English>
-		<French>Vlad III Dracula</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VLAD_III_DRACULA_PEDIA</Tag>
@@ -30250,7 +29776,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ORDER_OF_THE_DRAGON</Tag>
 		<English>Order of the Dragon</English>
-		<French>Order of the Dragon</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ORDER_OF_THE_DRAGON_PEDIA</Tag>
@@ -30264,7 +29789,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GENSERIC</Tag>
 		<English>Genseric</English>
-		<French>Genseric</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GENSERIC_PEDIA</Tag>
@@ -30278,7 +29802,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VANDAL_PILLAGER</Tag>
 		<English>Vandal Pillager</English>
-		<French>Vandal Pillager</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VANDAL_PILLAGER_PEDIA</Tag>
@@ -30292,7 +29815,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NORBERTO_ROMUALDEZ</Tag>
 		<English>Norberto Romualdez</English>
-		<French>Norberto Romualdez</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NORBERTO_ROMUALDEZ_PEDIA</Tag>
@@ -30306,7 +29828,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARAY_RIDERS</Tag>
 		<English>Waray Riders</English>
-		<French>Waray Riders</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARAY_RIDERS_PEDIA</Tag>
@@ -30320,7 +29841,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PAAKA</Tag>
 		<English>Paaka</English>
-		<French>Paaka</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PAAKA_PEDIA</Tag>
@@ -30348,7 +29868,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OJANA</Tag>
 		<English>Ojana</English>
-		<French>Ojana</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OJANA_PEDIA</Tag>
@@ -30362,7 +29881,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AKAVAI</Tag>
 		<English>Akavai</English>
-		<French>Akavai</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AKAVAI_PEDIA</Tag>
@@ -30376,7 +29894,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RAM_MOHAN_ROY</Tag>
 		<English>Ram Mohan Roy</English>
-		<French>Ram Mohan Roy</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RAM_MOHAN_ROY_PEDIA</Tag>
@@ -30390,7 +29907,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PATAMAR</Tag>
 		<English>Patamar</English>
-		<French>Patamar</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PATAMAR_PEDIA</Tag>
@@ -30404,7 +29920,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GUAJIRO</Tag>
 		<English>Guajiro</English>
-		<French>Guajiro</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GUAJIRO_PEDIA</Tag>
@@ -30460,7 +29975,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TUOBA_LIWEI</Tag>
 		<English>Tuoba Liwei</English>
-		<French>Tuoba Liwei</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TUOBA_LIWEI_PEDIA</Tag>
@@ -30474,7 +29988,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DAREN</Tag>
 		<English>Daren</English>
-		<French>Daren</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DAREN_PEDIA</Tag>
@@ -30488,7 +30001,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HUYAN_ZHUO</Tag>
 		<English>Huyan Zhuo</English>
-		<French>Huyan Zhuo</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HUYAN_ZHUO_PEDIA</Tag>
@@ -30502,7 +30014,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZHUGE_KESHIK</Tag>
 		<English>Zhuge Keshik</English>
-		<French>Zhuge Keshik</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZHUGE_KESHIK_PEDIA</Tag>
@@ -30516,7 +30027,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CRISTINA_CALDERON</Tag>
 		<English>Cristina Calderon</English>
-		<French>Cristina Calderon</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CRISTINA_CALDERON_PEDIA</Tag>
@@ -30544,7 +30054,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_YAWAR_RUNA</Tag>
 		<English>Yawar Runa</English>
-		<French>Yawar Runa</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_YAWAR_RUNA_PEDIA</Tag>
@@ -30572,7 +30081,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TUXAWA</Tag>
 		<English>Tuxawa</English>
-		<French>Tuxawa</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TUXAWA_PEDIA</Tag>
@@ -30586,7 +30094,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KARAWETARI</Tag>
 		<English>Karawetari</English>
-		<French>Karawetari</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KARAWETARI_PEDIA</Tag>
@@ -30600,7 +30107,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARWA_AL_SULAYHI</Tag>
 		<English>Arwa al Sulayhi</English>
-		<French>Arwa al Sulayhi</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARWA_AL_SULAYHI_PEDIA</Tag>
@@ -30614,7 +30120,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MBARZ_BALSYF</Tag>
 		<English>Mbarz Balsyf</English>
-		<French>Mbarz Balsyf</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MBARZ_BALSYF_PEDIA</Tag>
@@ -30628,7 +30133,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MANDAWUY_YUNUPINGU</Tag>
 		<English>Mandawuy Yunupingu</English>
-		<French>Mandawuy Yunupingu</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MANDAWUY_YUNUPINGU_PEDIA</Tag>
@@ -30656,7 +30160,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SAID_BIN_SULTAN</Tag>
 		<English>Said bin Sultan</English>
-		<French>Said bin Sultan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SAID_BIN_SULTAN_PEDIA</Tag>
@@ -30670,7 +30173,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SAMBUK</Tag>
 		<English>Sambuk</English>
-		<French>Sambuk</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SAMBUK_PEDIA</Tag>
@@ -30684,7 +30186,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SALAWAT_YULAYEV</Tag>
 		<English>Salawat Yulayev</English>
-		<French>Salawat Yulayev</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SALAWAT_YULAYEV_PEDIA</Tag>
@@ -30712,7 +30213,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PACHECO</Tag>
 		<English>Pacheco</English>
-		<French>Pacheco</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PACHECO_PEDIA</Tag>
@@ -30726,7 +30226,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZENU_GOLDSMITHS</Tag>
 		<English>Zenu Goldsmiths</English>
-		<French>Zenu Goldsmiths</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZENU_GOLDSMITHS_PEDIA</Tag>
@@ -30740,7 +30239,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MATOPE</Tag>
 		<English>Matope</English>
-		<French>Matope</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MATOPE_PEDIA</Tag>
@@ -30754,7 +30252,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHEBA_ELITES</Tag>
 		<English>Sheba Elites</English>
-		<French>Sheba Elites</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHEBA_ELITES_PEDIA</Tag>
@@ -30768,7 +30265,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUTAKAWI</Tag>
 		<English>Lutakawi</English>
-		<French>Lutakawi</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUTAKAWI_PEDIA</Tag>
@@ -30782,7 +30278,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CIBOLA_PEASANT</Tag>
 		<English>Cibola Peasant</English>
-		<French>Cibola Peasant</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CIBOLA_PEASANT_PEDIA</Tag>
@@ -30796,7 +30291,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JULIUS_CIVILIS</Tag>
 		<English>Julius Civilis</English>
-		<French>Julius Civilis</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JULIUS_CIVILIS_PEDIA</Tag>
@@ -30810,7 +30304,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CORNUTI</Tag>
 		<English>Cornuti</English>
-		<French>Cornuti</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CORNUTI_PEDIA</Tag>
@@ -30824,7 +30317,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STAMAN</Tag>
 		<English>Staman</English>
-		<French>Staman</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STAMAN_PEDIA</Tag>
@@ -30852,7 +30344,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HENRY_THE_LION</Tag>
 		<English>Henry the Lion</English>
-		<French>Henry the Lion</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HENRY_THE_LION_PEDIA</Tag>
@@ -30866,7 +30357,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MARHATHEGNOZ</Tag>
 		<English>Marhathegnoz</English>
-		<French>Marhathegnoz</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MARHATHEGNOZ_PEDIA</Tag>
@@ -30880,7 +30370,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BADIS</Tag>
 		<English>Badis</English>
-		<French>Badis</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BADIS_PEDIA</Tag>
@@ -30894,7 +30383,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MEHARISTS</Tag>
 		<English>Meharists</English>
-		<French>Meharists</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MEHARISTS_PEDIA</Tag>
@@ -30908,7 +30396,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GEORGE_CADLE_PRICE</Tag>
 		<English>George Cadle Price</English>
-		<French>George Cadle Price</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GEORGE_CADLE_PRICE_PEDIA</Tag>
@@ -30922,7 +30409,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAHOGANY_WOODCUTTER</Tag>
 		<English>Mahogany Woodcutter</English>
-		<French>Mahogany Woodcutter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAHOGANY_WOODCUTTER_PEDIA</Tag>
@@ -30936,7 +30422,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AHMAD_SHAH_DURRANI</Tag>
 		<English>Ahmad Shah Durrani</English>
-		<French>Ahmad Shah Durrani</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AHMAD_SHAH_DURRANI_PEDIA</Tag>
@@ -30950,7 +30435,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MUJAHIDEEN</Tag>
 		<English>Mujahideen</English>
-		<French>Mujahideen</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MUJAHIDEEN_PEDIA</Tag>
@@ -30964,7 +30448,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EVO_MORALES</Tag>
 		<English>Evo Morales</English>
-		<French>Evo Morales</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EVO_MORALES_PEDIA</Tag>
@@ -30992,7 +30475,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JOSE_BALLIVIAN</Tag>
 		<English>Jose Ballivian</English>
-		<French>Jose Ballivian</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JOSE_BALLIVIAN_PEDIA</Tag>
@@ -31006,7 +30488,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PALADIN</Tag>
 		<English>Paladin</English>
-		<French>Paladin</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PALADIN_PEDIA</Tag>
@@ -31020,7 +30501,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BOUDICA</Tag>
 		<English>Boudica</English>
-		<French>Boudica</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BOUDICA_PEDIA</Tag>
@@ -31034,7 +30514,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GAEROAS</Tag>
 		<English>Gaeroas</English>
-		<French>Gaeroas</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GAEROAS_PEDIA</Tag>
@@ -31048,7 +30527,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BOYARS</Tag>
 		<English>Boyars</English>
-		<French>Boyars</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BOYARS_PEDIA</Tag>
@@ -31062,7 +30540,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PHILIP_THE_BOLD</Tag>
 		<English>Philip the Bold</English>
-		<French>Philip the Bold</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PHILIP_THE_BOLD_PEDIA</Tag>
@@ -31090,7 +30567,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EDUARDO_ANGELIM</Tag>
 		<English>Eduardo Angelim</English>
-		<French>Eduardo Angelim</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EDUARDO_ANGELIM_PEDIA</Tag>
@@ -31118,7 +30594,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_YUPANQUI</Tag>
 		<English>Yupanqui</English>
-		<French>Yupanqui</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_YUPANQUI_PEDIA</Tag>
@@ -31132,7 +30607,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CANARI_BOWMANS</Tag>
 		<English>Canari Bowmans</English>
-		<French>Canari Bowmans</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CANARI_BOWMANS_PEDIA</Tag>
@@ -31146,7 +30620,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JACHAL</Tag>
 		<English>Jachal</English>
-		<French>Jachal</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JACHAL_PEDIA</Tag>
@@ -31174,7 +30647,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AGAPARO</Tag>
 		<English>Agaparo</English>
-		<French>Agaparo</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AGAPARO_PEDIA</Tag>
@@ -31188,7 +30660,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KON_TIKI</Tag>
 		<English>Kon-Tiki</English>
-		<French>Kon-Tiki</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KON_TIKI_PEDIA</Tag>
@@ -31202,7 +30673,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JAMES_I</Tag>
 		<English>James I</English>
-		<French>James I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JAMES_I_PEDIA</Tag>
@@ -31230,7 +30700,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ENDUBIS</Tag>
 		<English>Endubis</English>
-		<French>Endubis</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ENDUBIS_PEDIA</Tag>
@@ -31258,7 +30727,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VIRIATHUS</Tag>
 		<English>Viriathus</English>
-		<French>Viriathus</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VIRIATHUS_PEDIA</Tag>
@@ -31286,7 +30754,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MARANON</Tag>
 		<English>Maranon</English>
-		<French>Maranon</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MARANON_PEDIA</Tag>
@@ -31314,7 +30781,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HUANTAR</Tag>
 		<English>Huantar</English>
-		<French>Huantar</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HUANTAR_PEDIA</Tag>
@@ -31328,7 +30794,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_QHATUQ</Tag>
 		<English>Qhatuq</English>
-		<French>Qhatuq</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_QHATUQ_PEDIA</Tag>
@@ -31370,7 +30835,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OHIGGINS</Tag>
 		<English>O'Higgins</English>
-		<French>O'Higgins</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OHIGGINS_PEDIA</Tag>
@@ -31398,7 +30862,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ACALAPUA</Tag>
 		<English>Acalapua</English>
-		<French>Acalapua</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ACALAPUA_PEDIA</Tag>
@@ -31426,7 +30889,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHA_CO_PAY</Tag>
 		<English>Sha-Co-Pay</English>
-		<French>Sha-Co-Pay</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHA_CO_PAY_PEDIA</Tag>
@@ -31440,7 +30902,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MIDEWIWIN</Tag>
 		<English>Midewiwin</English>
-		<French>Midewiwin</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MIDEWIWIN_PEDIA</Tag>
@@ -31454,7 +30915,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MINGBURNU</Tag>
 		<English>Mingburnu</English>
-		<French>Mingburnu</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MINGBURNU_PEDIA</Tag>
@@ -31468,7 +30928,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ASVARAN_SARDAR</Tag>
 		<English>Asvaran Sardar</English>
-		<French>Asvaran Sardar</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ASVARAN_SARDAR_PEDIA</Tag>
@@ -31482,7 +30941,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RAFAEL_SOLARES</Tag>
 		<English>Rafael Solares</English>
-		<French>Rafael Solares</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RAFAEL_SOLARES_PEDIA</Tag>
@@ -31496,7 +30954,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEAD_HUCKSTER</Tag>
 		<English>Bead Huckster</English>
-		<French>Bead Huckster</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEAD_HUCKSTER_PEDIA</Tag>
@@ -31510,7 +30967,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PETER_CLAVER</Tag>
 		<English>Peter Claver</English>
-		<French>Peter Claver</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PETER_CLAVER_PEDIA</Tag>
@@ -31538,7 +30994,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HALAKWULUP</Tag>
 		<English>Halakwulup</English>
-		<French>Halakwulup</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HALAKWULUP_PEDIA</Tag>
@@ -31566,7 +31021,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TOMISLAV</Tag>
 		<English>Tomislav</English>
-		<French>Tomislav</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TOMISLAV_PEDIA</Tag>
@@ -31580,7 +31034,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SAMOSTRELAC</Tag>
 		<English>Samostrelac</English>
-		<French>Samostrelac</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SAMOSTRELAC_PEDIA</Tag>
@@ -31594,7 +31047,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TOMAS_MASARYK</Tag>
 		<English>Tomas Masaryk</English>
-		<French>Tomas Masaryk</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TOMAS_MASARYK_PEDIA</Tag>
@@ -31608,7 +31060,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VOZOVA_HRADBA</Tag>
 		<English>Vozova Hradba</English>
-		<French>Vozova Hradba</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VOZOVA_HRADBA_PEDIA</Tag>
@@ -31622,7 +31073,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DECEBALUS</Tag>
 		<English>Decebalus</English>
-		<French>Decebalus</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DECEBALUS_PEDIA</Tag>
@@ -31636,7 +31086,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FALXMEN</Tag>
 		<English>Falxmen</English>
-		<French>Falxmen</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FALXMEN_PEDIA</Tag>
@@ -31650,7 +31099,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JAMES_BROOKE</Tag>
 		<English>James Brooke</English>
-		<French>James Brooke</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JAMES_BROOKE_PEDIA</Tag>
@@ -31664,7 +31112,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NGAYAU</Tag>
 		<English>Ngayau</English>
-		<French>Ngayau</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NGAYAU_PEDIA</Tag>
@@ -31678,7 +31125,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KHARAVELA</Tag>
 		<English>Kharavela</English>
-		<French>Kharavela</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KHARAVELA_PEDIA</Tag>
@@ -31692,7 +31138,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KALARIPAYATT</Tag>
 		<English>Kalaripayatt</English>
-		<French>Kalaripayatt</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KALARIPAYATT_PEDIA</Tag>
@@ -31706,7 +31151,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KHARKHUL</Tag>
 		<English>Kharkhul</English>
-		<French>Kharkhul</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KHARKHUL_PEDIA</Tag>
@@ -31720,7 +31164,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OILAT_KESHIK</Tag>
 		<English>Oilat Keshik</English>
-		<French>Oilat Keshik</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OILAT_KESHIK_PEDIA</Tag>
@@ -31734,7 +31177,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JUAN_JOSE_FLORES</Tag>
 		<English>Juan Jose Flores</English>
-		<French>Juan Jose Flores</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JUAN_JOSE_FLORES_PEDIA</Tag>
@@ -31762,7 +31204,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JURI_ULUOTS</Tag>
 		<English>Juri Uluots</English>
-		<French>Juri Uluots</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JURI_ULUOTS_PEDIA</Tag>
@@ -31776,7 +31217,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ERNA</Tag>
 		<English>Erna</English>
-		<French>Erna</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ERNA_PEDIA</Tag>
@@ -31790,7 +31230,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LARS_PORSENA</Tag>
 		<English>Lars Porsena</English>
-		<French>Lars Porsena</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LARS_PORSENA_PEDIA</Tag>
@@ -31804,7 +31243,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HOPLOMACHUS</Tag>
 		<English>Hoplomachus</English>
-		<French>Hoplomachus</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HOPLOMACHUS_PEDIA</Tag>
@@ -31818,7 +31256,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AL_MAHDI_BILLAH</Tag>
 		<English>Al Mahdi Billah</English>
-		<French>Al Mahdi Billah</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AL_MAHDI_BILLAH_PEDIA</Tag>
@@ -31846,7 +31283,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHROCUS</Tag>
 		<English>Chrocus</English>
-		<French>Chrocus</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHROCUS_PEDIA</Tag>
@@ -31860,7 +31296,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FYRDMAN</Tag>
 		<English>Fyrdman</English>
-		<French>Fyrdman</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FYRDMAN_PEDIA</Tag>
@@ -31874,7 +31309,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SERU_EPENISA_CAKOBAU</Tag>
 		<English>Seru Epenisa Cakobau</English>
-		<French>Seru Epenisa Cakobau</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SERU_EPENISA_CAKOBAU_PEDIA</Tag>
@@ -31888,7 +31322,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GONE_DAU</Tag>
 		<English>Gone Dau</English>
-		<French>Gone Dau</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GONE_DAU_PEDIA</Tag>
@@ -31902,7 +31335,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_URHO_KEKKONEN</Tag>
 		<English>Urho Kekkonen</English>
-		<French>Urho Kekkonen</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_URHO_KEKKONEN_PEDIA</Tag>
@@ -31916,7 +31348,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TARKKA_AMPUJA</Tag>
 		<English>Tarkka Ampuja</English>
-		<French>Tarkka Ampuja</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TARKKA_AMPUJA_PEDIA</Tag>
@@ -31930,7 +31361,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JAN_FRANS_WILLEMS</Tag>
 		<English>Jan Frans Willems</English>
-		<French>Jan Frans Willems</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JAN_FRANS_WILLEMS_PEDIA</Tag>
@@ -31958,7 +31388,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAIYIN</Tag>
 		<English>Taiyin</English>
-		<French>Taiyin</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAIYIN_PEDIA</Tag>
@@ -31986,7 +31415,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MOHAMMED_II_TAIRAB</Tag>
 		<English>Mohammed II Tairab</English>
-		<French>Mohammed II Tairab</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MOHAMMED_II_TAIRAB_PEDIA</Tag>
@@ -32014,7 +31442,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BRENNUS</Tag>
 		<English>Brennus</English>
-		<French>Brennus</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BRENNUS_PEDIA</Tag>
@@ -32028,7 +31455,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SOTAROAS</Tag>
 		<English>Sotaroas</English>
-		<French>Sotaroas</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SOTAROAS_PEDIA</Tag>
@@ -32042,7 +31468,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JUAN_MANUEL_DE_ROSAS</Tag>
 		<English>Juan Manuel de Rosas</English>
-		<French>Juan Manuel de Rosas</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JUAN_MANUEL_DE_ROSAS_PEDIA</Tag>
@@ -32070,7 +31495,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VAKHTANG_VI</Tag>
 		<English>Vakhtang VI</English>
-		<French>Vakhtang VI</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VAKHTANG_VI_PEDIA</Tag>
@@ -32098,7 +31522,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KWAME_NKRUMAH</Tag>
 		<English>Kwame Nkrumah</English>
-		<French>Kwame Nkrumah</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KWAME_NKRUMAH_PEDIA</Tag>
@@ -32126,7 +31549,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ALA_AL_DIN_HUSAYN</Tag>
 		<English>Ala al Din Husayn</English>
-		<French>Ala al Din Husayn</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ALA_AL_DIN_HUSAYN_PEDIA</Tag>
@@ -32140,7 +31562,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KETABDAR</Tag>
 		<English>Ketabdar</English>
-		<French>Ketabdar</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KETABDAR_PEDIA</Tag>
@@ -32154,7 +31575,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SKANDERBEG</Tag>
 		<English>Skanderbeg</English>
-		<French>Skanderbeg</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SKANDERBEG_PEDIA</Tag>
@@ -32182,7 +31602,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BATU_KHAN</Tag>
 		<English>Batu Khan</English>
-		<French>Batu Khan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BATU_KHAN_PEDIA</Tag>
@@ -32196,7 +31615,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHAPUL</Tag>
 		<English>Chapul</English>
-		<French>Chapul</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHAPUL_PEDIA</Tag>
@@ -32210,7 +31628,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ASHINA_JIESHESHUAI</Tag>
 		<English>Ashina Jiesheshuai</English>
-		<French>Ashina Jiesheshuai</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ASHINA_JIESHESHUAI_PEDIA</Tag>
@@ -32238,7 +31655,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MATAPANG</Tag>
 		<English>Mata'pang</English>
-		<French>Mata'pang</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MATAPANG_PEDIA</Tag>
@@ -32252,7 +31668,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KALANG_MATAI</Tag>
 		<English>Kalang Matai</English>
-		<French>Kalang Matai</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KALANG_MATAI_PEDIA</Tag>
@@ -32266,7 +31681,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BENCOMO</Tag>
 		<English>Bencomo</English>
-		<French>Bencomo</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BENCOMO_PEDIA</Tag>
@@ -32294,7 +31708,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ANTONIO_RUIZ_DE_MONTOYA</Tag>
 		<English>Antonio Ruiz de Montoya</English>
-		<French>Antonio Ruiz de Montoya</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ANTONIO_RUIZ_DE_MONTOYA_PEDIA</Tag>
@@ -32308,7 +31721,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KARAI_PYHARE</Tag>
 		<English>Karai Pyhare</English>
-		<French>Karai Pyhare</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KARAI_PYHARE_PEDIA</Tag>
@@ -32322,7 +31734,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PEDRO_DE_ALVARADO</Tag>
 		<English>Pedro de Alvarado</English>
-		<French>Pedro de Alvarado</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PEDRO_DE_ALVARADO_PEDIA</Tag>
@@ -32350,7 +31761,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ALFRED_A_THORNE</Tag>
 		<English>Alfred A. Thorne</English>
-		<French>Alfred A. Thorne</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ALFRED_A_THORNE_PEDIA</Tag>
@@ -32378,7 +31788,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DIVICO</Tag>
 		<English>Divico</English>
-		<French>Divico</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DIVICO_PEDIA</Tag>
@@ -32406,7 +31815,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHENGJUN</Tag>
 		<English>Shengjun</English>
-		<French>Shengjun</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHENGJUN_PEDIA</Tag>
@@ -32434,7 +31842,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ABU_KARIBA</Tag>
 		<English>Abu Kariba</English>
-		<French>Abu Kariba</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ABU_KARIBA_PEDIA</Tag>
@@ -32462,7 +31869,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HAYREDDIN</Tag>
 		<English>Hayreddin</English>
-		<French>Hayreddin</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HAYREDDIN_PEDIA</Tag>
@@ -32490,7 +31896,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KAI_HO</Tag>
 		<English>Kai Ho</English>
-		<French>Kai Ho</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KAI_HO_PEDIA</Tag>
@@ -32518,7 +31923,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BROKEN_ARROW</Tag>
 		<English>Broken Arrow</English>
-		<French>Broken Arrow</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BROKEN_ARROW_PEDIA</Tag>
@@ -32546,7 +31950,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEKAQUAPTEWA</Tag>
 		<English>Sekaquaptewa</English>
-		<French>Sekaquaptewa</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEKAQUAPTEWA_PEDIA</Tag>
@@ -32574,7 +31977,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KUCUMATZ</Tag>
 		<English>Kucumatz</English>
-		<French>Kucumatz</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KUCUMATZ_PEDIA</Tag>
@@ -32602,7 +32004,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TISH_ATAL</Tag>
 		<English>Tish-atal</English>
-		<French>Tish-atal</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TISH_ATAL_PEDIA</Tag>
@@ -32630,7 +32031,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KHYAN</Tag>
 		<English>Khyan</English>
-		<French>Khyan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KHYAN_PEDIA</Tag>
@@ -32658,7 +32058,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TEUTA</Tag>
 		<English>Teuta</English>
-		<French>Teuta</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TEUTA_PEDIA</Tag>
@@ -32672,7 +32071,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LIBURNA</Tag>
 		<English>Liburna</English>
-		<French>Liburna</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LIBURNA_PEDIA</Tag>
@@ -32686,7 +32084,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ELPIDIO_QUIRINO</Tag>
 		<English>Elpidio Quirino</English>
-		<French>Elpidio Quirino</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ELPIDIO_QUIRINO_PEDIA</Tag>
@@ -32700,7 +32097,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BILOG</Tag>
 		<English>Bilog</English>
-		<French>Bilog</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BILOG_PEDIA</Tag>
@@ -32742,7 +32138,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KHOMEINI</Tag>
 		<English>Khomeini</English>
-		<French>Khomeini</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KHOMEINI_PEDIA</Tag>
@@ -32756,7 +32151,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PASDARAN</Tag>
 		<English>Pasdaran</English>
-		<French>Pasdaran</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PASDARAN_PEDIA</Tag>
@@ -32770,7 +32164,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TERUO_NAKAMURA</Tag>
 		<English>Teruo Nakamura</English>
-		<French>Teruo Nakamura</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TERUO_NAKAMURA_PEDIA</Tag>
@@ -32784,7 +32177,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PANGCAH_IMPANTERYA</Tag>
 		<English>Pangcah Impanterya</English>
-		<French>Pangcah Impanterya</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PANGCAH_IMPANTERYA_PEDIA</Tag>
@@ -32798,7 +32190,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SADDAM_HUSSEIN</Tag>
 		<English>Saddam Hussein</English>
-		<French>Saddam Hussein</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SADDAM_HUSSEIN_PEDIA</Tag>
@@ -32826,7 +32217,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DIPONEGORO</Tag>
 		<English>Diponegoro</English>
-		<French>Diponegoro</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DIPONEGORO_PEDIA</Tag>
@@ -32854,7 +32244,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JIMMU</Tag>
 		<English>Jimmu</English>
-		<French>Jimmu</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JIMMU_PEDIA</Tag>
@@ -32882,7 +32271,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ABDULLAH_II</Tag>
 		<English>Abdullah II</English>
-		<French>Abdullah II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ABDULLAH_II_PEDIA</Tag>
@@ -32910,7 +32298,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAEJO</Tag>
 		<English>Taejo</English>
-		<French>Taejo</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAEJO_PEDIA</Tag>
@@ -32924,7 +32311,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEOWULF</Tag>
 		<English>Beowulf</English>
-		<French>Beowulf</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEOWULF_PEDIA</Tag>
@@ -32938,7 +32324,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KNARR</Tag>
 		<English>Knarr</English>
-		<French>Knarr</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KNARR_PEDIA</Tag>
@@ -32952,7 +32337,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DEDAN_KIMATHI</Tag>
 		<English>Dedan Kimathi</English>
-		<French>Dedan Kimathi</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DEDAN_KIMATHI_PEDIA</Tag>
@@ -32980,7 +32364,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ABLAI_KHAN</Tag>
 		<English>Ablai Khan</English>
-		<French>Ablai Khan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ABLAI_KHAN_PEDIA</Tag>
@@ -32994,7 +32377,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BATYRS</Tag>
 		<English>Batyrs</English>
-		<French>Batyrs</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BATYRS_PEDIA</Tag>
@@ -33008,7 +32390,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BULAN</Tag>
 		<English>Bulan</English>
-		<French>Bulan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BULAN_PEDIA</Tag>
@@ -33036,7 +32417,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ABAOJI</Tag>
 		<English>Abaoji</English>
-		<French>Abaoji</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ABAOJI_PEDIA</Tag>

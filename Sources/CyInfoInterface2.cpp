@@ -44,10 +44,8 @@ void CyInfoPythonInterface2()
 		.def("getDerivativeCiv", &CvCivilizationInfo::getDerivativeCiv, "int ()")
 
 		// Arrays
-
 		.def("getCivilizationBuildings", &CvCivilizationInfo::getCivilizationBuildings, "int (int i)")
-		.def("getCivilizationUnits", &CvCivilizationInfo::getCivilizationUnits, "int (int i)")
-		.def("getCivilizationFreeUnitsClass", &CvCivilizationInfo::getCivilizationFreeUnitsClass, "int (int i)")
+		.def("getCivilizationFreeUnits", &CvCivilizationInfo::getCivilizationFreeUnits, "int (int i)")
 		.def("getCivilizationInitialCivics", &CvCivilizationInfo::getCivilizationInitialCivics, "int (int i)")
 
 		.def("isLeaders", &CvCivilizationInfo::isLeaders, "bool (int i)")
@@ -227,8 +225,8 @@ void CyInfoPythonInterface2()
 		.def("getDamagePrereq", &CvGoodyInfo::getDamagePrereq, "int ()")
 		.def("getBarbarianUnitProb", &CvGoodyInfo::getBarbarianUnitProb, "int ()")
 		.def("getMinBarbarians", &CvGoodyInfo::getMinBarbarians, "int ()")
-		.def("getUnitClassType", &CvGoodyInfo::getUnitClassType, "int ()")
-		.def("getBarbarianUnitClass", &CvGoodyInfo::getBarbarianUnitClass, "int ()")
+		.def("getGoodyUnit", &CvGoodyInfo::getGoodyUnit, "int ()")
+		.def("getBarbarianUnit", &CvGoodyInfo::getBarbarianUnit, "int ()")
 
 		.def("isTech", &CvGoodyInfo::isTech, "bool ()")
 		.def("isBad", &CvGoodyInfo::isBad, "bool ()")

@@ -10,7 +10,6 @@
 			<Description>TXT_KEY_BUILDING_CORPORATION_1</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_1_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -44,7 +43,6 @@
 			<Description>TXT_KEY_BUILDING_CORPORATION_2</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_2_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -83,7 +81,6 @@
 			<Description>TXT_KEY_BUILDING_CORPORATION_3</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_3_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -99,7 +96,7 @@
 				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 			</HeadquarterCommerces>
-			<BonusProduced>BONUS_OIL_PRODUCTS</BonusProduced>
+			<BonusProduced>BONUS_PETROLEUM_PRODUCTS</BonusProduced>
 			<CommercesProduced>
 				<iCommerceProduced>0</iCommerceProduced>
 				<iCommerceProduced>200</iCommerceProduced>
@@ -118,7 +115,6 @@
 			<Description>TXT_KEY_BUILDING_CORPORATION_4</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_4_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -157,7 +153,6 @@
 			<Description>TXT_KEY_BUILDING_CORPORATION_5</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_5_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -197,7 +192,6 @@
 			<Description>TXT_KEY_BUILDING_CORPORATION_6</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_6_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -232,7 +226,6 @@
 			<Description>TXT_KEY_BUILDING_CORPORATION_7</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_7_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -240,7 +233,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_GOLD_ORE</BonusType>
 				<BonusType>BONUS_SILVER_ORE</BonusType>
-				<BonusType>BONUS_GEMS</BonusType>
+				<BonusType>BONUS_GEMSTONE</BonusType>
 				<BonusType>BONUS_PEARLS</BonusType>
 			</PrereqBonuses>
 			<HeadquarterCommerces>
@@ -268,7 +261,6 @@
 			<Description>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -327,7 +319,6 @@
 			<Description>TXT_KEY_BUILDING_CORPORATION_MOONBEAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MOONBEAN_HQ_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -388,7 +379,6 @@
 			<Description>TXT_KEY_BUILDING_CORPORATION_MCDOWELLS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MCDOWELLS_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -446,7 +436,6 @@
 			<Description>TXT_KEY_BUILDING_CORPORATION_MILEHIGH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MILEHIGH_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -486,7 +475,6 @@
 			<Description>TXT_KEY_BUILDING_CORPORATION_EWTRADE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_EWTRADE_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -525,7 +513,6 @@
 			<Description>TXT_KEY_BUILDING_CORPORATION_BULLSEYE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_BULLSEYE_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -563,7 +550,6 @@
 			<Description>TXT_KEY_BUILDING_CORPORATION_FASHION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_FASHION_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -599,7 +585,6 @@
 			<Description>TXT_KEY_BUILDING_CORPORATION_MAPSTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MAPSTER_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>50</iMaintenance>
@@ -657,7 +642,6 @@
 			<Description>TXT_KEY_BUILDING_CORPORATION_BURGERWORLD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_BURGERWORLD_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -715,7 +699,6 @@
 			<Description>TXT_KEY_BUILDING_CORPORATION_WONKA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_WONKA_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -775,7 +758,6 @@
 			<Description>TXT_KEY_BUILDING_CORPORATION_MOBBY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MOBBY_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -813,7 +795,6 @@
 			<Description>TXT_KEY_BUILDING_CORPORATION_MALLWART</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MALLWART_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -850,7 +831,6 @@
 			<Description>TXT_KEY_BUILDING_CORPORATION_ADVENTURE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_ADVENTURE_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -912,7 +892,6 @@
 			<Description>TXT_KEY_BUILDING_CORPORATION_SAFARI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_SAFARI_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -973,7 +952,6 @@
 			<Description>TXT_KEY_BUILDING_CORPORATION_RED</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_RED_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -1033,7 +1011,6 @@
 			<Description>TXT_KEY_BUILDING_CORPORATION_ULTSOLDIER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_ULTSOLDIER_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>

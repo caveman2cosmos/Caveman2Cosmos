@@ -317,7 +317,7 @@ void PropertySpawns::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ_OBJECT_START(wrapper);
 	WRAPPER_READ_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_PROPERTIES, (int*)& eProperty);
-	WRAPPER_READ_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_UNIT_CLASSES, (int*)& eUnitClass);
+	WRAPPER_READ_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_UNITS, (int*)& eUnit);
 	WRAPPER_READ_OBJECT_END(wrapper);
 }
 
@@ -329,7 +329,7 @@ void PropertySpawns::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
 	WRAPPER_WRITE_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_PROPERTIES, eProperty);
-	WRAPPER_WRITE_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_UNIT_CLASSES, eUnitClass);
+	WRAPPER_WRITE_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_UNITS, eUnit);
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
 

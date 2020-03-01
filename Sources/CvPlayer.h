@@ -36,7 +36,7 @@ typedef std::list<CvDiploParameters*> CvDiploQueue;
 typedef stdext::hash_map<int, int> CvTurnScoreMap;
 typedef stdext::hash_map<EventTypes, EventTriggeredData> CvEventMap;
 typedef std::vector< std::pair<UnitCombatTypes, PromotionTypes> > UnitCombatPromotionArray;
-typedef std::vector< std::pair<UnitClassTypes, PromotionTypes> > UnitClassPromotionArray;
+typedef std::vector< std::pair<UnitTypes, PromotionTypes> > UnitPromotionArray;
 typedef std::vector< std::pair<CivilizationTypes, LeaderHeadTypes> > CivLeaderArray;
 
 //	Forward declaration
@@ -1429,14 +1429,14 @@ public:
 
 	bool isFreePromotion(UnitCombatTypes eUnitCombat, PromotionTypes ePromotion) const;
 	void setFreePromotion(UnitCombatTypes eUnitCombat, PromotionTypes ePromotion, bool bFree);
-	bool isFreePromotion(UnitClassTypes eUnitCombat, PromotionTypes ePromotion) const;
-	void setFreePromotion(UnitClassTypes eUnitCombat, PromotionTypes ePromotion, bool bFree);
+	bool isFreePromotion(UnitTypes eUnit, PromotionTypes ePromotion) const;
+	void setFreePromotion(UnitTypes eUnit, PromotionTypes ePromotion, bool bFree);
 
 	PlayerVoteTypes getVote(int iId) const;
 	void setVote(int iId, PlayerVoteTypes ePlayerVote);
 
-	int getUnitExtraCost(UnitClassTypes eUnitClass) const;
-	void setUnitExtraCost(UnitClassTypes eUnitClass, int iCost);
+	int getUnitExtraCost(UnitTypes eUnit) const;
+	void setUnitExtraCost(UnitTypes eUnit, int iCost);
 
 	bool splitEmpire(int iAreaId);
 	bool canSplitEmpire() const;
@@ -1596,8 +1596,8 @@ public:
 	int getBuildingProductionModifier(BuildingTypes eIndex) const;
 	void changeBuildingProductionModifier(BuildingTypes eIndex, int iChange);
 
-	int getUnitClassProductionModifier(UnitClassTypes eIndex) const;
-	void changeUnitClassProductionModifier(UnitClassTypes eIndex, int iChange);
+	int getUnitProductionModifier(UnitTypes eIndex) const;
+	void changeUnitProductionModifier(UnitTypes eIndex, int iChange);
 
 	bool isAutomatedCanBuild(BuildTypes eBuild) const; //Exposed to Python
 	void setAutomatedCanBuild(BuildTypes eBuild, bool bNewValue); //Exposed to Python
@@ -1759,7 +1759,7 @@ protected:
 	int** m_ppiBonusCommerceModifier;
 	int* m_paiUnitCombatProductionModifier;
 	int* m_paiBuildingProductionModifier;
-	int* m_paiUnitClassProductionModifier;
+	int* m_paiUnitProductionModifier;
 	int* m_paiBonusMintedPercent;
 	int* m_paiPlayerWideAfflictionCount;
 	bool* m_pabAutomatedCanBuild;
@@ -1886,9 +1886,7 @@ public:
 
 	void verifyUnitStacksValid();
 	UnitTypes getTechFreeUnit(TechTypes eTech) const;
-#ifdef C2C_BUILD
 	UnitTypes getTechFreeProphet(TechTypes eTech) const;
-#endif
 
 	// BUG - Trade Totals - start
 	void calculateTradeTotals(YieldTypes eIndex, int& iDomesticYield, int& iDomesticRoutes, int& iForeignYield, int& iForeignRoutes, PlayerTypes eWithPlayer = NO_PLAYER, bool bRound = false, bool bBase = false) const;
@@ -2294,10 +2292,10 @@ protected:
 	CvEventMap m_mapEventsOccured;
 	CvEventMap m_mapEventCountdown;
 	UnitCombatPromotionArray m_aFreeUnitCombatPromotions;
-	UnitClassPromotionArray m_aFreeUnitClassPromotions;
+	UnitPromotionArray m_aFreeUnitPromotions;
 
 	std::vector< std::pair<int, PlayerVoteTypes> > m_aVote;
-	std::vector< std::pair<UnitClassTypes, int> > m_aUnitExtraCosts;
+	std::vector< std::pair<UnitTypes, int> > m_aUnitExtraCosts;
 
 	CvMessageQueue m_listGameMessages;
 	CvPopupQueue m_listPopups;

@@ -13,7 +13,7 @@
 			<iCost>-1</iCost>
 			<iAsset>1</iAsset>
 			<iPower>1</iPower>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!--iHealthPercentPerPopulation>10</iHealthPercentPerPopulation-->
 			<CommerceChanges>
@@ -68,7 +68,7 @@
 			<iCost>-1</iCost>
 			<iAsset>1</iAsset>
 			<iPower>1</iPower>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!--iHealthPercentPerPopulation>10</iHealthPercentPerPopulation-->
 			<CommerceChanges>

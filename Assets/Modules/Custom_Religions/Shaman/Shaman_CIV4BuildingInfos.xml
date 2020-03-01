@@ -415,7 +415,7 @@
 			<HolyCity>RELIGION_SHAMANISM</HolyCity>
 			<ReligionType>RELIGION_SHAMANISM</ReligionType>
 			<GlobalReligionCommerce>RELIGION_SHAMANISM</GlobalReligionCommerce>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>-1</iCost>

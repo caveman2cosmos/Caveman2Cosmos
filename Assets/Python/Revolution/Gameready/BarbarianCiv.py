@@ -701,7 +701,7 @@ class BarbarianCiv:
 			aList = [
 				i1, i1, i2, i2, i2, i2, i3, i3, i4, i4, i5, i5, i5, i5, iGeneral, iGeneral, iGeneral,
 				GC.getInfoTypeForString("UNIT_SCIENTIST"), GC.getInfoTypeForString("UNIT_ENGINEER"),
-				GC.getInfoTypeForString("UNIT_GREAT_SPY"), GC.getInfoTypeForString("UNIT_GREAT_DOCTOR")
+				GC.getInfoTypeForString("UNIT_GREAT_SPY"), GC.getInfoTypeForString("UNIT_DOCTOR")
 			]
 			iMax = int((iEra + 2)**0.8)
 			iLen = len(aList); iCount = 0
