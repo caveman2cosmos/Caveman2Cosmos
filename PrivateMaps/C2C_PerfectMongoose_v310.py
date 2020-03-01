@@ -57,7 +57,7 @@
 ## setting Fuyu's clump limit based on WorldSize, clarified the description of what
 ## the 0 option there actually does, and fixed the random bounds. Added a minimum
 ## value to the StartEra checks to include all Classical resources, improvements and
-## clearing abilities in the plot valuations. Changed allowWonderBonusChance to allow
+## clearing abilities in the plot valuations. Changed allowStrategicBonusChance to allow
 ## any strategic resource (not just Stone or Marble), and the city sweetener to allow
 ## non-strategic resources - both up through Classical (or later). Adjusted lake and
 ## river values again, and added separate controls for them for the two climate
@@ -600,7 +600,7 @@ class MapConstants:
 
 		#Randomly allows strategic bonuses to be used to sweeten starting positions.
 		#(Chance per starting position to allow 1 Classical Era or earlier strategic resource)
-		self.allowWonderBonusChance = 0.0
+		self.allowStrategicBonusChance = 0.0
 
 		#Randomly allows bonuses with continent limiter to be used to sweeting starting positions.
 		#(Chance per attempt to place an area-restricted resource in the wrong area)
@@ -4291,7 +4291,7 @@ class StartingPlotFinder:
 		yields.append(YieldTypes.YIELD_COMMERCE)
 		yields.append(YieldTypes.YIELD_FOOD)
 		#NEW CODE - Fuyu
-		allowBonusWonderClass = (PRand.random() <= mc.allowWonderBonusChance)
+		bAllowStrategicBonus = (PRand.random() <= mc.allowStrategicBonusChance)
 		plotList = []
 		#print "Num city plots: %d" % gc.getNUM_CITY_PLOTS()
 		for i in range(21): # gc.getNUM_CITY_PLOTS()
@@ -4337,11 +4337,10 @@ class StartingPlotFinder:
 							continue
 						if not bp.PlotCanHaveBonus(plot, bonusEnum, False, True):
 							continue
-					if bonusInfo.getBonusClassType() == gc.getInfoTypeForString("BONUSCLASS_WONDER") or bonusInfo.getBonusClassType() == gc.getInfoTypeForString("BONUSCLASS_RUSH") or bonusInfo.getBonusClassType() == gc.getInfoTypeForString("BONUSCLASS_MODERN"):
-						if not allowBonusWonderClass:
+					if bonusInfo.getBonusClassType() == gc.getInfoTypeForString("BONUSCLASS_STRATEGIC"):
+						if not bAllowStrategicBonus:
 							continue
-						else:
-							allowBonusWonderClass = False
+						bAllowStrategicBonus = False
 					plot.setBonusType(bonusEnum)
 					bonusCount += 1
 					break

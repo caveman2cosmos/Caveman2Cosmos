@@ -30221,26 +30221,27 @@ void CvPlayer::getResourceLayerColors(GlobeLayerResourceOptionTypes eOption, std
 				bool bOfInterest = false;
 				switch (eOption)
 				{
-				case SHOW_ALL_RESOURCES:
+				case SHOW_RESOURCES_ALL:
 					bOfInterest = true;
 					break;
-				case SHOW_HAPPY_RESOURCES:
-					bOfInterest = (kBonusInfo.getHappiness() != 0);
+				case SHOW_RESOURCES_STRATEGIC:
+					bOfInterest = kBonusInfo.getBonusClassType() == GC.getInfoTypeForString("BONUSCLASS_STRATEGIC");
 					break;
-				case SHOW_HEALTH_RESOURCES:
-					bOfInterest = (kBonusInfo.getHealth() != 0);
+				case SHOW_RESOURCES_LUXURY:
+					bOfInterest = kBonusInfo.getHappiness() > 0 && kBonusInfo.getHealth() < 1
+						|| kBonusInfo.getBonusClassType() == GC.getInfoTypeForString("BONUSCLASS_LUXURY");
 					break;
-				case SHOW_NEUTRAL_RESOURCES:
-					bOfInterest = (kBonusInfo.getHealth() == 0) && (kBonusInfo.getHappiness() == 0);
+				case SHOW_RESOURCES_PRODUCTION:
+					bOfInterest = kBonusInfo.getBonusClassType() == GC.getInfoTypeForString("BONUSCLASS_PRODUCTION");
 					break;
-				case SHOW_FOOD_RESOURCES:
-					bOfInterest = (kBonusInfo.getYieldChange(0) != 0);
+				case SHOW_RESOURCES_GROWTH:
+					bOfInterest = kBonusInfo.getHealth() > 0 && kBonusInfo.getHappiness() < 1
+						|| kBonusInfo.getBonusClassType() == GC.getInfoTypeForString("BONUSCLASS_CROP")
+						|| kBonusInfo.getBonusClassType() == GC.getInfoTypeForString("BONUSCLASS_LIVESTOCK")
+						|| kBonusInfo.getBonusClassType() == GC.getInfoTypeForString("BONUSCLASS_SEAFOOD");
 					break;
-				case SHOW_PRODUCTION_RESOURCES:
-					bOfInterest = (kBonusInfo.getYieldChange(1) != 0);
-					break;
-				case SHOW_COMMERCE_RESOURCES:
-					bOfInterest = (kBonusInfo.getYieldChange(2) != 0);
+				case SHOW_RESOURCES_MISC:
+					bOfInterest = kBonusInfo.getBonusClassType() == GC.getInfoTypeForString("BONUSCLASS_MISC");
 					break;
 				}
 

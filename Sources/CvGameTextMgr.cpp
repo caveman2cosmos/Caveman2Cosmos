@@ -39077,26 +39077,23 @@ void CvGameTextMgr::getGlobeLayerName(GlobeLayerTypes eType, int iOption, CvWStr
 	case GLOBE_LAYER_RESOURCE:
 		switch(iOption)
 		{
-		case SHOW_ALL_RESOURCES:
-			strName = gDLL->getText("TXT_KEY_GLOBELAYER_RESOURCES_EVERYTHING");
+		case SHOW_RESOURCES_ALL:
+			strName = gDLL->getText("TXT_KEY_GLOBELAYER_RESOURCES_ALL");
 			break;
-		case SHOW_HAPPY_RESOURCES:
-			strName = gDLL->getText("TXT_KEY_GLOBELAYER_RESOURCES_HAPPINESS");
+		case SHOW_RESOURCES_STRATEGIC:
+			strName = gDLL->getText("TXT_KEY_GLOBELAYER_RESOURCES_STRATEGIC");
 			break;
-		case SHOW_HEALTH_RESOURCES:
-			strName = gDLL->getText("TXT_KEY_GLOBELAYER_RESOURCES_HEALTH");
+		case SHOW_RESOURCES_LUXURY:
+			strName = gDLL->getText("TXT_KEY_GLOBELAYER_RESOURCES_LUXURY");
 			break;
-		case SHOW_NEUTRAL_RESOURCES:
-			strName = gDLL->getText("TXT_KEY_GLOBELAYER_RESOURCES_NEUTRAL");
-			break;
-		case SHOW_FOOD_RESOURCES:
-			strName = gDLL->getText("TXT_KEY_GLOBELAYER_RESOURCES_FOOD");
-			break;
-		case SHOW_PRODUCTION_RESOURCES:
+		case SHOW_RESOURCES_PRODUCTION:
 			strName = gDLL->getText("TXT_KEY_GLOBELAYER_RESOURCES_PRODUCTION");
 			break;
-		case SHOW_COMMERCE_RESOURCES:
-			strName = gDLL->getText("TXT_KEY_GLOBELAYER_RESOURCES_COMMERCE");
+		case SHOW_RESOURCES_GROWTH:
+			strName = gDLL->getText("TXT_KEY_GLOBELAYER_RESOURCES_GROWTH");
+			break;
+		case SHOW_RESOURCES_MISC:
+			strName = gDLL->getText("TXT_KEY_GLOBELAYER_RESOURCES_MISC");
 			break;
 		}
 		break;
