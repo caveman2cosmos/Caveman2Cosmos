@@ -11476,10 +11476,6 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_PEAK</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
@@ -11624,10 +11620,6 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_PEAK</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
@@ -11688,9 +11680,6 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 				</BonusTypeStruct>
 			</BonusTypeStructs>
 			<ImprovementUpgrade>IMPROVEMENT_QUARRY</ImprovementUpgrade>
-			<AlternativeImprovementUpgradeTypes>
-				<ImprovementType>IMPROVEMENT_MOUNTAIN_MINE</ImprovementType>
-			</AlternativeImprovementUpgradeTypes>
 		</ImprovementInfo>
 		<!-- Mine -->
 		<ImprovementInfo>
@@ -13595,6 +13584,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
+			<ImprovementPillage>IMPROVEMENT_EARLY_MOUNTAIN_MINE</ImprovementPillage>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
