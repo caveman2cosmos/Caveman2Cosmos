@@ -283,10 +283,12 @@ class CvEventManager:
 					"DOMAIN_LAND"		: GC.getInfoTypeForString('DOMAIN_LAND'),
 					"DOMAIN_SEA"		: GC.getInfoTypeForString('DOMAIN_SEA')
 				}
-				self.TECH_SATELLITES		= GC.getInfoTypeForString("TECH_SATELLITES")
-				self.TECH_STARGAZING		= GC.getInfoTypeForString("TECH_STARGAZING")
-				self.TECH_ASTROLOGY			= GC.getInfoTypeForString("TECH_ASTROLOGY")
-				self.TECH_CRITICAL_THOUGHT	= GC.getInfoTypeForString("TECH_CRITICAL_THOUGHT")
+				# onUnitCreated
+				self.TECH_SATELLITES	= GC.getInfoTypeForString("TECH_SATELLITES")
+				self.TECH_STARGAZING	= GC.getInfoTypeForString("TECH_STARGAZING")
+				self.TECH_ASTROLOGY		= GC.getInfoTypeForString("TECH_ASTROLOGY")
+				self.TECH_ASTRONOMY		= GC.getInfoTypeForString("TECH_ASTRONOMY")
+				self.TECH_REALISM		= GC.getInfoTypeForString("TECH_REALISM")
 				# onUnitBuilt
 				self.mapSettlerPop = {
 					GC.getInfoTypeForString("UNIT_COLONIST")	: 1,
@@ -310,9 +312,11 @@ class CvEventManager:
 					[GC.getInfoTypeForString('PROMOTION_CULTURE_SOUTH_AMERICAN'), GC.getInfoTypeForString('BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN'), GC.getInfoTypeForString('BUILDINGCLASS_CULTURE_NATIVE_SOUTH_AMERICAN')]
 				]
 				self.UNIT_BAND = GC.getInfoTypeForString("UNIT_BAND")
-				# onCombatResult
+
 				self.UNITCOMBAT_RECON		= GC.getInfoTypeForString("UNITCOMBAT_RECON")
 				self.UNITCOMBAT_HUNTER		= GC.getInfoTypeForString("UNITCOMBAT_HUNTER")
+				self.UNITCOMBAT_CIVILIAN	= GC.getInfoTypeForString("UNITCOMBAT_CIVILIAN")
+
 				# onCityBuilt
 				self.PROMO_GUARDIAN_TRIBAL	= GC.getInfoTypeForString("PROMOTION_GUARDIAN_TRIBAL")
 				# onTechAcquired
@@ -2091,15 +2095,14 @@ class CvEventManager:
 		KEY = CvUnitInfo.getType()
 
 		# Star Signs
-		CyTeam = GC.getTeam(CyUnit.getTeam())
-		if CyUnit.getDomainType() == self.mapDomain['DOMAIN_LAND'] \
-		and CyTeam.isHasTech(self.TECH_STARGAZING) \
-		and(CyTeam.isHasTech(self.TECH_ASTROLOGY) or GAME.getSorenRandNum(2, "Half probability before Astrology")) \
-		and not CyTeam.isHasTech(self.TECH_SATELLITES) \
-		and not CyTeam.isHasTech(self.TECH_CRITICAL_THOUGHT) \
-		and not GAME.getSorenRandNum(49, "Seventh son of seventh son"):
-			import StarSigns
-			StarSigns.give(GC, TRNSLTR, GAME, CyUnit, GC.getPlayer(iPlayer))
+		if not CyUnit.isHasUnitCombat(self.UNITCOMBAT_CIVILIAN) and not GAME.getSorenRandNum(49, "Seventh son of seventh son"):
+			CyTeam = GC.getTeam(CyUnit.getTeam())
+			if not CyTeam.isHasTech(self.TECH_SATELLITES) and CyTeam.isHasTech(self.TECH_STARGAZING) \
+			and (CyUnit.getDomainType() != self.mapDomain['DOMAIN_LAND'] or not CyTeam.isHasTech(self.TECH_REALISM)) \
+			and (CyTeam.isHasTech(self.TECH_ASTROLOGY) or GAME.getSorenRandNum(2, "1/2 probability before Astrology")) \
+			and (not CyTeam.isHasTech(self.TECH_ASTRONOMY) or GAME.getSorenRandNum(4, "3/4 probability after Astronomy")):
+				import StarSigns
+				StarSigns.give(GC, TRNSLTR, GAME, CyUnit, GC.getPlayer(iPlayer))
 
 		# Beastmaster
 		if self.UNIT_FEMALE_BEASTMASTER != -1 or self.UNIT_BEASTMASTER != -1:
