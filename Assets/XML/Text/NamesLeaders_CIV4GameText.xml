@@ -419,7 +419,7 @@
 		<Tag>TXT_KEY_LEADER_GENGHIS_KHAN</Tag>
 		<English>Genghis Khan</English>
 		<French>
-			<Text>Gengis</Text>
+			<Text>Gengis Khan</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -463,7 +463,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_GREEN_MAN</Tag>
-		<English>The Green Man</English>
+		<English>Green Man</English>
+		<French>dame Nature</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_GREEN_MAN_PEDIA</Tag>

@@ -124,11 +124,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ANIMALS_STAY_OUT</Tag>
 		<English>Animals Stay Out!</English>
+		<French>Les animaux restent dehors!</French>
 		<German>Tiere müssen draußen bleiben!</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ANIMALS_STAY_OUT_HELP</Tag>
 		<English>Maintains the original game rule that wild animals can never enter a Civilizations national borders.[NEWLINE]This option will be disabled if Dangerous Wildlife option is selected.</English>
+		<French>Maintient la règle de jeu d'origine selon laquelle les animaux sauvages ne peuvent jamais entrer dans les frontières nationales d'une civilisation. [NEWLINE] Cette option sera désactivée si l'option 'Faune dangereuse' est sélectionnée..</French>
 		<German>Wilde Tiere können niemals die kulturellen Grenzen einer Nation überschreiten.</German>
 	</TEXT>
 	<TEXT>
@@ -300,10 +302,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_DANGEROUS_WILDLIFE</Tag>
 		<English>Dangerous Wildlife</English>
+		<French>Faune dangereuse</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_DANGEROUS_WILDLIFE_HELP</Tag>
 		<English>All animals can spawn not only within borders, but on improved tiles too.[NEWLINE]Your civilians are tasty - protect them within your borders too.[NEWLINE]This option is polar opposite of "Keep Animals Out" - Dangerous Wildlife disables it.</English>
+		<French>Tous les animaux peuvent apparaître non seulement à l'intérieur des frontières, mais aussi sur des cases aménagées. [NEWLINE] Vos civils sont savoureux - protégez-les également à l'intérieur de vos frontières. [NEWLINE] Cette option est à l'opposé de "Animaux restent dehors" - Faune dangereuse la désactive.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_DIVINE_PROPHETS</Tag>
@@ -331,6 +335,18 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_DOWNSIZING_IS_PROFITABLE_HELP</Tag>
 		<English>Get gold from disbanding units.</English>
+		<French>Obtenez de l'or des unités dissoutes.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_ECOLOGICAL_ANIMALS</Tag>
+		<English>Ecological Animals</English>
+		<German>Ökologische Tiere</German>
+		<French>Animaux écologiques</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_ECOLOGICAL_ANIMALS_HELP</Tag>
+		<English>UNUSED</English>
+		<French>UNUSED</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_EQUIPMENT</Tag>
@@ -652,6 +668,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_BARBARIANS</Tag>
 		<English>No Barbarians</English>
+		<French>Pas de Barbares</French>
 		<German>Keine Barbaren</German>
 	</TEXT>
 	<TEXT>
@@ -903,10 +920,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS</Tag>
 		<English>No Tech Handicaps for Humans</English>
+		<French>Pas de Tech Diff. pour les Joueurs</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS_HELP</Tag>
 		<English>Keeps Win For Losing and Tech Diffusion benefits from being delivered to Human players while continuing to enable them for AI players.</English>
+		<French>Les avantages de Tech Diffusion ne sont pas appliqués aux joueurs humains, tout en continuant à être actifs pour les joueurs IA.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_TECH_TRADING</Tag>
@@ -987,11 +1006,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS</Tag>
 		<English>C2C Combat Mod - Outbreaks and Afflictions</English>
+		<French>Mod de Combat C2C - Éclosions et afflictions</French>
 		<German>C2C-Kampfmod - Zivile Notstände</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS_HELP</Tag>
 		<English>A more advanced system of emergence and recovery for diseases and crimes.  Units may carry diseases and criminal mindsets and rub off on local cities and other units, sometimes even transferring through battle.  Outbreaks of diseases and crime waves are not automatic at certain disease or crime levels but become more likely, and harder to overcome, the worse these properties get.  There are levels of severity to each disease and crime wave type.  It can usually get worse and sometimes it has to before it's going to get better.  Cities can become resistant to previously experienced diseases.  The goal is a dynamic system which more closely emulates real transfers of these experiences from one community to the next. (IN DEVELOPMENT - ONLY PARTIALLY IMPLEMENTED)</English>
+		<French>Un système plus avancé d'émergence et de guérison des maladies et des délits. Les unités peuvent être porteuses de maladies et de mentalités criminelles et déteindre sur les villes locales et d'autres unités, parfois même transférées au combat. Les éclosions de maladies et les vagues de criminalité ne sont pas automatiques à certains niveaux de maladie ou de criminalité, mais deviennent plus probables et plus difficiles à surmonter, plus ces propriétés s'aggravent. Il existe des niveaux de gravité pour chaque type de vague de maladie et de crime. Elle peut généralement s'aggraver et parfois elle doit avant de s'améliorer. Les villes peuvent devenir résistantes à des maladies déjà connues. L'objectif est un système dynamique qui émule de plus près les transferts réels de ces expériences d'une communauté à l'autre. (EN DÉVELOPPEMENT - UNIQUEMENT PARTIELLEMENT MIS EN ŒUVRE)</French>
 		<German>Hierbei handelt es sich um ein ausgeklügelteres System der Entstehung und Eindämmung von Krankheiten und Straftaten. Einheiten können Krankheiten und kriminelles Gedankengut mitbringen und auf die eigenen Städte und andere Einheiten übertragen, manchmal sogar während der Schlacht. Krankheitsausbrüche und Verbrechenswellen entstehen nicht automatisch auf bestimmten Stufen, aber sie werden je nach Krankheits- und Kriminalitätsrate immer wahrscheinlicher und können immer schwerer überwunden werden. Es gibt Schweregrade für jeden Typ von Seuchenzug oder Verbrechenswelle. Außerdem können Städte nun resistent gegen bereits überstandene Krankheiten werden. Das Ziel ist ein dynamisches System, das die Übertragung von einer Gesellschaft zur anderen besser nachbildet. (NOCH IN DER ENTWICKLUNG UND NUR TEILWEISE IMPLEMENTIERT)</German>
 	</TEXT>
 	<TEXT>
@@ -1376,10 +1397,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UPSCALED_RESEARCH_COSTS</Tag>
 		<English>Upscaled Research Time</English>
+		<French>Temps de recherche accru</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UPSCALED_RESEARCH_COSTS_HELP</Tag>
 		<English>Technology costs have been increased by 40%. Use it if you're an experienced player and want calendar to keep up with you. This option alone will result in overall relaxed game. Pair it with upscaled building and unit costs to have overall longer gameplay.</English>
+		<French>Les coûts technologiques ont augmenté de 40%. Utilisez-le si vous êtes un joueur expérimenté et que vous souhaitez que le calendrier vous suive. Cette option à elle seule entraînera un jeu globalement détendu. Associez-le à des coûts de construction et unitaires améliorés pour un gameplay globalement plus long.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UNITED_NATIONS</Tag>
@@ -1436,6 +1459,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_VANILLA_COMBAT_ENGINE</Tag>
 		<English>Vanilla BTS Combat Engine</English>
+		<French>Moteur de Combat du Jeu d'origine</French>
 		<German>Unmodifiziertes BTS-Kampfsystem</German>
 	</TEXT>
 	<TEXT>
@@ -1447,6 +1471,13 @@
 		For example, first strikes become much more powerful than they were on Vanilla BTS because hits taken before you can even counterattack will make all subsequent attacks you make much weaker.
 
 		In essence, this will mean that overwhelming numbers of units have a better chance to wear down stronger units whereas assumed C2C rules allow superior quality units to be much more powerful against lesser opponent units.</English>
+		<French>Cette option ramène le système de combat à un niveau beaucoup plus proche de l'original.
+
+En combat C2C, les unités recalculent leur force à chaque round en fonction des dégâts qu'elles peuvent avoir subis lors du dernier round de combat. De plus, ce n'est pas seulement une unité qui frappe à chaque tour, mais les deux peuvent frapper et les deux peuvent manquer. La différence change certains aspects et la sensation du combat et ce que vous pouvez attendre des résultats du combat.
+
+Par exemple, les premières frappes deviennent beaucoup plus puissantes qu'elles ne l'étaient sur Vanilla BTS parce que les frappes prises avant que vous ne puissiez même contre-attaquer rendront toutes les attaques suivantes que vous rendez beaucoup plus faibles.
+
+Essentiellement, cela signifie qu'un nombre écrasant d'unités ont de meilleures chances d'user des unités plus fortes, tandis que les règles C2C supposées permettent aux unités de qualité supérieure d'être beaucoup plus puissantes contre des unités adverses moins importantes.</French>
 		<German>Diese Einstellung setzt die durch C2C vorgenommenen Änderungen am Kampfsystem zurück, so dass es wieder viel näher am Original-BTS-Kampfsystem ist.</German>
 	</TEXT>
 	<TEXT>
