@@ -2090,22 +2090,21 @@ class CvEventManager:
 
 	def onUnitCreated(self, argsList): # Enabled in PythonCallbackDefines.xml (USE_ON_UNIT_CREATED_CALLBACK = True)
 		CyUnit, = argsList
-		iPlayer = CyUnit.getOwner()
-		CvUnitInfo = GC.getUnitInfo(CyUnit.getUnitType())
-		KEY = CvUnitInfo.getType()
 
 		# Star Signs
 		if not CyUnit.isHasUnitCombat(self.UNITCOMBAT_CIVILIAN) and not GAME.getSorenRandNum(49, "Seventh son of seventh son"):
 			CyTeam = GC.getTeam(CyUnit.getTeam())
+			bLand = CyUnit.getDomainType() == self.mapDomain['DOMAIN_LAND']
 			if not CyTeam.isHasTech(self.TECH_SATELLITES) and CyTeam.isHasTech(self.TECH_STARGAZING) \
-			and (CyUnit.getDomainType() != self.mapDomain['DOMAIN_LAND'] or not CyTeam.isHasTech(self.TECH_REALISM)) \
+			and (not bLand or not CyTeam.isHasTech(self.TECH_REALISM)) \
 			and (CyTeam.isHasTech(self.TECH_ASTROLOGY) or GAME.getSorenRandNum(2, "1/2 probability before Astrology")) \
 			and (not CyTeam.isHasTech(self.TECH_ASTRONOMY) or GAME.getSorenRandNum(4, "3/4 probability after Astronomy")):
 				import StarSigns
-				StarSigns.give(GC, TRNSLTR, GAME, CyUnit, GC.getPlayer(iPlayer))
+				StarSigns.give(GC, TRNSLTR, GAME, CyUnit, CyUnit.getOwner(), bLand)
 
 		# Beastmaster
 		if self.UNIT_FEMALE_BEASTMASTER != -1 or self.UNIT_BEASTMASTER != -1:
+			KEY = GC.getUnitInfo(CyUnit.getUnitType()).getType()
 			if KEY[:13] == 'UNIT_SUBDUED_' or KEY[:11] == 'UNIT_TAMED_':
 				if self.UNIT_FEMALE_BEASTMASTER != -1 and self.UNIT_BEASTMASTER != -1:
 					if 16 > GAME.getSorenRandNum(100, "Female Beastmaster"):
@@ -2119,10 +2118,11 @@ class CvEventManager:
 
 		# Inspired Missionary
 		aWonderTuple = self.aWonderTuple
-		if "FA_MEN_SI" in aWonderTuple[0]:
-			if iPlayer == aWonderTuple[4][aWonderTuple[0].index("FA_MEN_SI")]:
-				if CvUnitInfo.getPrereqReligion() > -1:
-					CyUnit.setHasPromotion(GC.getInfoTypeForString("PROMOTION_FA_MEN_SI_INSPIRED"), True)
+		if "FA_MEN_SI" in aWonderTuple[0] \
+		and CyUnit.getOwner() == aWonderTuple[4][aWonderTuple[0].index("FA_MEN_SI")] \
+		and GC.getUnitInfo(CyUnit.getUnitType()).getPrereqReligion() > -1:
+
+			CyUnit.setHasPromotion(GC.getInfoTypeForString("PROMOTION_FA_MEN_SI_INSPIRED"), True)
 
 
 	def onUnitBuilt(self, argsList):
