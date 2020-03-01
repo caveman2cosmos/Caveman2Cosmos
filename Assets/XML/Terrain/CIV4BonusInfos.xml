@@ -5986,14 +5986,6 @@
 					<TerrainType>TERRAIN_ICE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
 			</TerrainBooleans>
 			<FeatureBooleans>
 				<FeatureBoolean>
@@ -6632,14 +6624,6 @@
 					<TerrainType>TERRAIN_ICE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
 			</TerrainBooleans>
 			<FeatureBooleans>
 				<FeatureBoolean>
@@ -7151,14 +7135,6 @@
 					<TerrainType>TERRAIN_ICE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
 			</TerrainBooleans>
 			<FeatureBooleans>
 				<FeatureBoolean>
@@ -7664,14 +7640,6 @@
 					<TerrainType>TERRAIN_ICE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
 			</TerrainBooleans>
 			<FeatureBooleans>
 				<FeatureBoolean>
@@ -7920,14 +7888,6 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ICE</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -8181,14 +8141,6 @@
 					<TerrainType>TERRAIN_ICE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
 			</TerrainBooleans>
 			<FeatureBooleans>
 				<FeatureBoolean>
@@ -8439,14 +8391,6 @@
 					<TerrainType>TERRAIN_ICE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
 			</TerrainBooleans>
 			<FeatureBooleans>
 				<FeatureBoolean>
@@ -8662,10 +8606,6 @@
 					<TerrainType>TERRAIN_DUNES</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
 			</TerrainBooleans>
 			<FeatureBooleans>
 				<FeatureBoolean>
@@ -8858,14 +8798,6 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ICE</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -9381,14 +9313,6 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ICE</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -10021,14 +9945,6 @@
 					<TerrainType>TERRAIN_ICE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
 			</TerrainBooleans>
 			<FeatureBooleans>
 				<FeatureBoolean>
@@ -10277,10 +10193,6 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -10655,14 +10567,6 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ICE</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -12723,12 +12627,6 @@
 			<bFlatlands>1</bFlatlands>
 			<bNoRiverSide>1</bNoRiverSide>
 			<bNormalize>1</bNormalize>
-			<FeatureBooleans>
-				<FeatureBoolean>
-					<FeatureType>FEATURE_ASTEROIDS</FeatureType>
-					<bFeature>1</bFeature>
-				</FeatureBoolean>
-			</FeatureBooleans>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ANCIENT_RELICS</Type>
