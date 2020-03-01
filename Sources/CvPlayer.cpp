@@ -30864,16 +30864,24 @@ void CvPlayer::getResourceLayerColors(GlobeLayerResourceOptionTypes eOption, std
 				case SHOW_ALL_RESOURCES:
 					bOfInterest = true;
 					break;
-				case SHOW_STRATEGIC_RESOURCES:
-					bOfInterest = (kBonusInfo.getHappiness() == 0) && (kBonusInfo.getHealth() == 0);
-					break;
 				case SHOW_HAPPY_RESOURCES:
-					bOfInterest = (kBonusInfo.getHappiness() != 0 ) && (kBonusInfo.getHealth() == 0);
+					bOfInterest = (kBonusInfo.getHappiness() != 0);
 					break;
 				case SHOW_HEALTH_RESOURCES:
-					bOfInterest = (kBonusInfo.getHappiness() == 0) && (kBonusInfo.getHealth() != 0);
+					bOfInterest = (kBonusInfo.getHealth() != 0);
 					break;
-
+				case SHOW_NEUTRAL_RESOURCES:
+					bOfInterest = (kBonusInfo.getHealth() == 0) && (kBonusInfo.getHappiness() == 0);
+					break;
+				case SHOW_FOOD_RESOURCES:
+					bOfInterest = (kBonusInfo.getYieldChange(0) != 0);
+					break;
+				case SHOW_PRODUCTION_RESOURCES:
+					bOfInterest = (kBonusInfo.getYieldChange(1) != 0);
+					break;
+				case SHOW_COMMERCE_RESOURCES:
+					bOfInterest = (kBonusInfo.getYieldChange(2) != 0);
+					break;
 				}
 
 				if (bOfInterest)

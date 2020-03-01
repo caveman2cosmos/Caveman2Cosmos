@@ -19,7 +19,7 @@
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
-			<iPlacementOrder>0</iPlacementOrder>
+			<iPlacementOrder>-1</iPlacementOrder>
 			<iConstAppearance>0</iConstAppearance>
 			<iMinAreaSize>0</iMinAreaSize>
 			<iMinLatitude>0</iMinLatitude>

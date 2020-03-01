@@ -9137,4 +9137,32 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 		<French>Carrière antique</French>
 		<Polish>Wczesny Kamieniołom</Polish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_EVERYTHING</Tag>
+		<English>Everything</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_HAPPINESS</Tag>
+		<English>Happiness</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_HEALTH</Tag>
+		<English>Health</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_NEUTRAL</Tag>
+		<English>No Health and Happiness</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_FOOD</Tag>
+		<English>Food</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_PRODUCTION</Tag>
+		<English>Production</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_COMMERCE</Tag>
+		<English>Commerce</English>
+	</TEXT>
 </Civ4GameText>
