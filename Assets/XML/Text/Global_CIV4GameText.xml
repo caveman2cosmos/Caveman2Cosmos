@@ -3246,7 +3246,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_COMMAND_BUNKER</Tag>
 		<English>Build [LINK=IMPROVEMENT_COMMAND_BUNKER]Command Bunker[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_COMMAND_BUNKER]Command Bunker[\LINK]</French>
+		<French>Construire un [LINK=IMPROVEMENT_COMMAND_BUNKER]Bunker de Commandement[\LINK]</French>
 		<German>Errichte einen [LINK=IMPROVEMENT_COMMAND_BUNKER]Command Bunker[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_COMMAND_BUNKER]Command Bunker[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_COMMAND_BUNKER]Refugio de mando[\LINK]</Spanish>
@@ -3345,7 +3345,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_ARCHEOLOGICAL_SITE</Tag>
 		<English>Create [LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Archeological Site[\LINK]</English>
-		<French>[LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Ruines examne[\LINK]</French>
+		<French>Créer un [LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Site archéologique[\LINK]</French>
 		<German>[LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Examne Ruinen[\LINK]</German>
 		<Italian>[LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Esamina le rovine[\LINK]</Italian>
 		<Spanish>[LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Explorar ruinas[\LINK]</Spanish>
@@ -3407,7 +3407,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_FORTIFIED_CAVE_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_FORTIFIED_CAVE]Fortified Cave[\LINK] (Gatherer)</English>
-		<French>Construire une [LINK=IMPROVEMENT_FORTIFIED_CAVE]Caverne fortifiée[\LINK]</French>
+		<French>Construire une [LINK=IMPROVEMENT_FORTIFIED_CAVE]Caverne fortifiée (Ouvrier Détruit)[\LINK]</French>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_FORTIFIED_CAVE]grotta fortificata[\LINK]</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_FORTIFIED_CAVE]Caverna fortificada[\LINK]</Spanish>
 		<Polish>Zbadaj [LINK=IMPROVEMENT_FORTIFIED_CAVE]Ufortyfikowaną Jaskinię[\LINK]</Polish>
@@ -3467,7 +3467,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_GEOTHERMAL_FACTORY</Tag>
 		<English>Build [LINK=IMPROVEMENT_GEOTHERMAL_FACTORY]Geothermal Factory[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_GEOTHERMAL_FACTORY]Forage Géothermique[\LINK]</French>
+		<French>Construire une [LINK=IMPROVEMENT_GEOTHERMAL_FACTORY]Centrale  Géothermique[\LINK]</French>
 		<German>Errichte eine [LINK=IMPROVEMENT_GEOTHERMAL_FACTORY]Geothermalfabrik[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_GEOTHERMAL_FACTORY]Impianto geotermico[\LINK]</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_GEOTHERMAL_FACTORY]Planta geotérmica[\LINK]</Spanish>
@@ -3492,7 +3492,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_GRAPE_GATHERING_CAMP</Tag>
 		<English>Build [LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]Grape Gathering Camp[\LINK]</English>
-		<French>Installer un [LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]camp de récolte de Raisins[\LINK]</French>
+		<French>Installer un [LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]Camp de récolte de Raisins[\LINK]</French>
 		<German>[LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]Trauben sammeln[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]campo di raccolta di uva[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]Campo de cultivo de uvas[\LINK]</Spanish>
@@ -3525,7 +3525,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_COLONY_HABITAT_SMALL</Tag>
 		<English>Build [LINK=IMPROVEMENT_COLONY_HABITAT_SMALL]Colony Habitat (Small)[\LINK]</English>
-		<French>Construire des [LINK=IMPROVEMENT_COLONY_HABITAT_SMALL]Colonie Habitations (Petites)[\LINK]</French>
+		<French>Construire des [LINK=IMPROVEMENT_COLONY_HABITAT_SMALL]Habitations Coloniales (Petites)[\LINK]</French>
 		<German>Bauen ein [LINK=IMPROVEMENT_COLONY_HABITAT_SMALL]Kolonie Lebensraum (Klein)[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_COLONY_HABITAT_SMALL]Colonia Habitat (Piccolo)[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_COLONY_HABITAT_SMALL]Hábitat colonial pequeño[\LINK]</Spanish>
@@ -3534,7 +3534,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_COLONY_HABITAT_MEDIUM</Tag>
 		<English>Build [LINK=IMPROVEMENT_COLONY_HABITAT_MEDIUM]Colony Habitat (Medium)[\LINK]</English>
-		<French>Construire des [LINK=IMPROVEMENT_COLONY_HABITAT_MEDIUM]Colonie Habitations (Moyennes)[\LINK]</French>
+		<French>Construire des [LINK=IMPROVEMENT_COLONY_HABITAT_MEDIUM]Habitations Coloniales (Moyennes)[\LINK]</French>
 		<German>Bauen ein [LINK=IMPROVEMENT_COLONY_HABITAT_MEDIUM]Kolonie Lebensraum (Mittel)[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_COLONY_HABITAT_MEDIUM]Colonia Habitat (Medio)[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_COLONY_HABITAT_MEDIUM]Hábitat colonial mediano[\LINK]</Spanish>
@@ -3543,7 +3543,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_COLONY_HABITAT_LARGE</Tag>
 		<English>Build [LINK=IMPROVEMENT_COLONY_HABITAT_LARGE]Colony Habitat (Large)[\LINK]</English>
-		<French>Construire des [LINK=IMPROVEMENT_COLONY_HABITAT_LARGE]Colonie Habitations (Grandes)[\LINK]</French>
+		<French>Construire des [LINK=IMPROVEMENT_COLONY_HABITAT_LARGE]Habitations Coloniales (Grandes)[\LINK]</French>
 		<German>Bauen ein [LINK=IMPROVEMENT_COLONY_HABITAT_LARGE]Kolonie Lebensraum (Gross)[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_COLONY_HABITAT_LARGE]Colonia Habitat (Grande)[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_COLONY_HABITAT_LARGE]Hábitat colonial grande[\LINK]</Spanish>
@@ -3552,7 +3552,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_COLONY_HABITAT_HUGE</Tag>
 		<English>Build [LINK=IMPROVEMENT_COLONY_HABITAT_HUGE]Colony Habitat (Huge)[\LINK]</English>
-		<French>Construire des [LINK=IMPROVEMENT_COLONY_HABITAT_HUGE]Colonie Habitations (Immenses)[\LINK]</French>
+		<French>Construire des [LINK=IMPROVEMENT_COLONY_HABITAT_HUGE]Habitations Coloniales (Immenses)[\LINK]</French>
 		<German>Bauen ein [LINK=IMPROVEMENT_COLONY_HABITAT_HUGE]Kolonie Lebensraum (Riesig)[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_COLONY_HABITAT_HUGE]Colonia Habitat (Enorme)[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_COLONY_HABITAT_HUGE]Hábitat colonial enorme[\LINK]</Spanish>
@@ -3624,7 +3624,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_INDUSTRIAL_COMPLEX</Tag>
 		<English>Build [LINK=IMPROVEMENT_MANUFACTURING_COMPLEX]Manufacturing Complex[\LINK]</English>
-		<French>Construire une [LINK=IMPROVEMENT_MANUFACTURING_COMPLEX]Complexe Fabrication[\LINK]</French>
+		<French>Construire une [LINK=IMPROVEMENT_MANUFACTURING_COMPLEX]Complexe de Fabrication[\LINK]</French>
 		<German>Bauen ein [LINK=IMPROVEMENT_MANUFACTURING_COMPLEX]Fabrikation Zentrum[\LINK]</German>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_MANUFACTURING_COMPLEX]Complesso Produzione[\LINK]</Italian>
 		<Spanish>Construye un [LINK=IMPROVEMENT_MANUFACTURING_COMPLEX]Polígono Fabrication[\LINK]</Spanish>
@@ -3739,7 +3739,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MODERN_WINDMILL</Tag>
-		<English>Buld [LINK=IMPROVEMENT_MODERN_WINDMILL]Modern Windmill[\LINK]</English>
+		<English>Build [LINK=IMPROVEMENT_MODERN_WINDMILL]Modern Windmill[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_MODERN_WINDMILL]Moulin à vent Moderne[\LINK]</French>
 		<German>Bauen a [LINK=IMPROVEMENT_MODERNWINDMILL]Modern-Windrad[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_MODERNWINDMILL]Moderno Mulino a vento[\LINK]</Italian>
@@ -3758,11 +3758,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_EARLY_MOUNTAIN_MINE</Tag>
 		<English>Build [LINK=IMPROVEMENT_EARLY_MOUNTAIN_MINE]Early Mountain Mine[\LINK]</English>
+		<French>Construire une [LINK=IMPROVEMENT_MOUNTAIN_MINE]Mine de montagne primitive[\LINK]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MOUNTAIN_MINE</Tag>
 		<English>Build [LINK=IMPROVEMENT_MOUNTAIN_MINE]Mountain Mine[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_MOUNTAIN_MINE]Mine de la montagne[\LINK]</French>
+		<French>Construire une [LINK=IMPROVEMENT_MOUNTAIN_MINE]Mine de montagne[\LINK]</French>
 		<German>Errichte eine [LINK=IMPROVEMENT_MOUNTAIN_MINE]Mine des Berges[\LINK]</German>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_MOUNTAIN_MINE]Miniera della montagna[\LINK]</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_MOUNTAIN_MINE]Mina de montana[\LINK]</Spanish>
@@ -3789,7 +3790,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_NATURE_PRESERVE</Tag>
 		<English>Build [LINK=IMPROVEMENT_NATURE_PRESERVE]Nature Preserve[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_NATURE_PRESERVE]Réserve naturelle[\LINK]</French>
+		<French>Construire une [LINK=IMPROVEMENT_NATURE_PRESERVE]Réserve naturelle[\LINK]</French>
 		<German>Bauen ein [LINK=IMPROVEMENT_NATURE_PRESERVE]Natur bewahren[\LINK]</German>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_NATURE_PRESERVE]Riserva Naturale[\LINK]</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_NATURE_PRESERVE]Reserva natural[\LINK]</Spanish>
@@ -3798,7 +3799,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_NOMADIC_HERD</Tag>
 		<English>Bulid [LINK=IMPROVEMENT_NOMADIC_HERD]Nomadic Herd[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_NOMADIC_HERD]Harde Nomade[\LINK]</French>
+		<French>Construire une [LINK=IMPROVEMENT_NOMADIC_HERD]Harde Nomade[\LINK]</French>
 		<German>Bauen ein [LINK=IMPROVEMENT_NOMADIC_HERD]Nomadenherde[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_NOMADIC_HERD]Pascolo nomade[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_NOMADIC_HERD]Pastizal nómada[\LINK]</Spanish>
@@ -3824,7 +3825,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WOODEN_PALISADE_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_WOODEN_PALISADE]Wooden Palisade[\LINK] (Gatherer)</English>
-		<French>Construire une [LINK=IMPROVEMENT_WOODEN_PALISADE]Palissade en bois[\LINK]</French>
+		<French>Construire une [LINK=IMPROVEMENT_WOODEN_PALISADE]Palissade en bois (Cueilleuse)[\LINK]</French>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_WOODEN_PALISADE]palizzata in legno[\LINK]</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_WOODEN_PALISADE]Empalizada de madera[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_WOODEN_PALISADE]Drewnianą Palisadę[\LINK]</Polish>
@@ -3865,7 +3866,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_YOUNG_FOREST</Tag>
 		<English>[LINK=IMPROVEMENT_YOUNG_FOREST]Plant Forest[\LINK]</English>
-		<French>Planter une Forêt</French>
+		<French>[LINK=IMPROVEMENT_YOUNG_FOREST]Planter une Forêt[\LINK]</French>
 		<German>Pflanze Wald</German>
 		<Italian>Pianta una foresta</Italian>
 		<Spanish>Plantar un Bosque</Spanish>
@@ -3874,7 +3875,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PLANT_GATHERING_CAMP</Tag>
 		<English>Build [LINK=IMPROVEMENT_PLANT_GATHERING_CAMP]Plant Gathering Camp[\LINK]</English>
-		<French>Installer un [LINK=IMPROVEMENT_PLANT_GATHERING_CAMP]camp de récolte[\LINK]</French>
+		<French>Installer un [LINK=IMPROVEMENT_PLANT_GATHERING_CAMP]Camp de récolte[\LINK]</French>
 		<German>[LINK=IMPROVEMENT_PLANT_GATHERING_CAMP]Nützliche Pflanzen sammeln[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_PLANT_GATHERING_CAMP]campo di raccolta di piante[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_PLANT_GATHERING_CAMP]Campo de cultivo de plantas[\LINK]</Spanish>
@@ -3883,7 +3884,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PLANT_PICKING_CAMP</Tag>
 		<English>Build [LINK=IMPROVEMENT_PLANT_PICKING_CAMP]Plant Picking Camp[\LINK]</English>
-		<French>Construire un  [LINK=IMPROVEMENT_PLANT_PICKING_CAMP]Camp de récolte de plantes[\LINK]</French>
+		<French>Construire un  [LINK=IMPROVEMENT_PLANT_PICKING_CAMP]Camp de Cueillette[\LINK]</French>
 		<German>[LINK=IMPROVEMENT_PLANT_PICKING_CAMP]Nützliche Pflanzen pflücken[\LINK]</German>
 	</TEXT>
 	<TEXT>
@@ -4131,7 +4132,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SUBURBS</Tag>
 		<English>Build [LINK=IMPROVEMENT_SUBURBS]Suburbs[\LINK]</English>
-		<French>Construire [LINK=IMPROVEMENT_SUBURBS]Banlieue[\LINK]</French>
+		<French>Construire une [LINK=IMPROVEMENT_SUBURBS]Banlieue[\LINK]</French>
 		<German>Errichte [LINK=IMPROVEMENT_SUBURBS]Vorstadt[\LINK]</German>
 		<Italian>Costruisci [LINK=IMPROVEMENT_SUBURBS]Sobborghi[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_SUBURBS]Barrio[\LINK]</Spanish>
@@ -4140,7 +4141,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TAR_GATHERER</Tag>
 		<English>Build [LINK=IMPROVEMENT_TAR_GATHERER]Tar Gatherer[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_TAR_GATHERER]récolteur de goudron[\LINK]</French>
+		<French>Construire un [LINK=IMPROVEMENT_TAR_GATHERER]Récolteur de goudron[\LINK]</French>
 		<German>Bauen a [LINK=IMPROVEMENT_TAR_GATHERER]Tar Gatherer[\LINK]</German>
 		<Italian>Costruisci a [LINK=IMPROVEMENT_TAR_GATHERER]Tar Gatherer[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_TAR_GATHERER]Recolector de alquitrán[\LINK]</Spanish>
@@ -4149,7 +4150,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TAR_GATHERER_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_TAR_GATHERER]Tar Gatherer[\LINK] (Consumed)</English>
-		<French>Construire un [LINK=IMPROVEMENT_TAR_GATHERER]récolteur de goudron[\LINK] (Détruit)</French>
+		<French>Construire un [LINK=IMPROVEMENT_TAR_GATHERER]Récolteur de goudron[\LINK] (Détruit)</French>
 		<German>Bauen a [LINK=IMPROVEMENT_TAR_GATHERER]Tar Gatherer[\LINK] (Consumed)</German>
 		<Italian>Costruisci a [LINK=IMPROVEMENT_TAR_GATHERER]Tar Gatherer[\LINK] (Consumed)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_TAR_GATHERER]Recolector de alquitrán[\LINK] (Consumed)</Spanish>
@@ -4299,7 +4300,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_HYDROCARBON_WELL</Tag>
 		<English>Build [LINK=IMPROVEMENT_HYDROCARBON_WELL]Hydrocarbon Well[\LINK]</English>
-		<French>Construire une [LINK=IMPROVEMENT_HYDROCARBON_WELL]Hydrocarbure Puits[\LINK]</French>
+		<French>Construire un [LINK=IMPROVEMENT_HYDROCARBON_WELL]Puits à Hydrocarbures[\LINK]</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Errichtung eines [LINK=IMPROVEMENT_HYDROCARBON_WELL]Bohrturms[\LINK][COLOR_REVERT]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_HYDROCARBON_WELL]Idrocarburo Pozzo[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_HYDROCARBON_WELL]Pozo petrolífero[\LINK]</Spanish>
@@ -4340,7 +4341,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WOODEN_WATCHTOWER_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Wooden Watchtower[\LINK] (Gatherer)</English>
-		<French>Construire une [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Tour d'observation en bois[\LINK]</French>
+		<French>Construire une [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Tour d'observation en bois[\LINK] (Cueilleuse)</French>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]torre d'osservazione in legno[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Puesto de avanzada de madera[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Drewnianą Wieżę Obserwacyjną[\LINK]</Polish>
@@ -5964,7 +5965,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_COMPLETED_AUTO_BUILD_NOT</Tag>
 		<English>%s1_BldgName has been lost in %s2_CityName</English>
-		<French>[NUM1:Un:Une:Des:Des] %s1_BldgName [NUM1:a:a:ont:ont] été construi[NUM1:t:te:ts:tes] par les citoyens de %s2_CityName</French>
+		<French>[NUM1:Un:Une:Des:Des] %s1_BldgName [NUM1:a:a:ont:ont] été perd[NUM1:u:ue:us:ues] par les citoyens de %s2_CityName</French>
 		<German>Neuer automatischer Effekt in %s2_CityName: %s1_BldgName.</German>
 		<Italian>%s1_BldgName è stato costruito dagli abitanti di %s2_CityName</Italian>
 		<Spanish>Los ciudadanos de %s2_CityName han construido [NUM1:un:una:unos:unas] %s1_BldgName.</Spanish>
@@ -7221,6 +7222,8 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_CITY_MAINT_COST_TOTAL</Tag>
 		<English>------------------------
 		[NEWLINE]TOTAL NATIONWIDE CITY MAINTENANCE COST: %d1[ICON_GOLD]</English>
+		<French>------------------------
+		[NEWLINE]TOTAL COUT ENTRETION DE VILLES AU NIVEAU NATION : %d1[ICON_GOLD]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_INFLATION_NEW</Tag>
@@ -7572,6 +7575,7 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPEED_BLITZ</Tag>
 		<English>Blitz</English>
+		<French>Eclair</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPEED_BLITZ_HELP</Tag>
@@ -14193,9 +14197,9 @@ Time Frame: 2150 AD - 2300 AD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_FORTIFY_HELP</Tag>
-		<English>The unit "digs in" to better withstand enemy attack. A unit gets a cumulative 5% defensive bonus (plus it's Dig In ability) for each turn it is fortified, capping out at 5 rounds. Note that on Hide and Seek games, Fortified units automatically lose all invisibility.</English>
+		<English>The unit "digs in" to better withstand enemy attack. A unit gets a cumulative 5%% defensive bonus (plus it's Dig In ability) for each turn it is fortified, capping out at 5 rounds. Note that on Hide and Seek games, Fortified units automatically lose all invisibility.</English>
+		<French>L'unité s'installe et profite du terrain pour mieux résister aux attaques ennemies. Une unité obtient un bonus défensif cumulatif de 5%% (plus sa capacité de retranchement) pour chaque tour où elle est fortifiée, plafonnant à 5 tours. Notez qu'avec le mode de combat cache-cache, les unités fortifiées perdent automatiquement toute invisibilité.</French>
 		<German>Einheit in Befestigungsmodus versetzen zur besseren Verteidigung im Falle eines Angriffs. Pro befestigter Runde erhält die Einheit einen zusätzlichen Verteidigungsbonus von 5%%, bis zu einem Maximum von 25%%. Befestigte Einheiten verlieren im "Versteckspiel" jegliche Unsichtbarkeit.</German>
-		<French>L'unité se «retranche» pour mieux résister aux attaques ennemies. Une unité obtient un bonus défensif cumulatif de 5%% (plus sa capacité de fouille) pour chaque tour où elle est fortifiée, plafonnant à 5 tours. Notez qu'avec le mode de combat cache-cache, les unités fortifiées perdent automatiquement toute invisibilité.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_FREE_UNIT_SUPPORT</Tag>
@@ -26550,7 +26554,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_VACTRAIN</Tag>
 		<English>Build [LINK=ROUTE_VACTRAIN]Vactrain[\LINK]</English>
-		<French>[LINK=ROUTE_VACTRAIN]Construire Train Hyperloop[\LINK]</French>
+		<French>[LINK=ROUTE_VACTRAIN]Construire Un Train sous vide[\LINK]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_GRAVITY_TRAIN</Tag>
@@ -26560,7 +26564,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	<TEXT>
 		<Tag>TXT_KEY_ROUTE_VACTRAIN</Tag>
 		<English>Vactrain</English>
-		<French>Train Hyperloop</French>
+		<French>Ligne de Train sous vide</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROUTE_GRAVITY_TRAIN</Tag>

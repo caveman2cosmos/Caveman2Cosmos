@@ -44,7 +44,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AGRICULTURAL</Tag>
 		<English>Agricultural</English>
-		<French>Agriculturel</French>
+		<French>Agricole</French>
 		<German>Agrikulturell</German>
 		<Italian>Agricolo</Italian>
 		<Spanish>
@@ -334,7 +334,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CAPITAL_XP_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1%% Free Experience to all units trained in a Capital or Government Center</English>
-		<French>[ICON_BULLET]%D1%% Expérience gratuite à toutes les unités formées dans la capitale ou un centre gouvernemental</French>
+		<French>[ICON_BULLET]%D1%% EXP gratuite à toutes les unités formées dans la capitale ou un centre gouvernemental</French>
 		<Italian>[ICON_BULLET]%D1%% esperienza gratuita a tutte le unità addestrate nella capitale</Italian>
 		<Polish>[ICON_BULLET]%D1%% Darmowego doświadczenia dla jednostek wytrenowanych w Stolicy</Polish>
 	</TEXT>
@@ -552,7 +552,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DISTANCE_MOD</Tag>
 		<English>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1% change to RevIdx City Distance penalty</English>
-		<French>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1% passer à la pénalité de Distance de Ville RevIdx</French>
+		<French>[NEWLINE][SPACE][SPACE][ICON_BULLET]Modif de %D1% à la pénalité de Distance de Ville RevIdx</French>
 		<Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1% a la penalización a la estabilidad revolucionaria por distancia con la capital</Spanish>
 		<Polish>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1% zmiany kary za odleg3ośae od miasta</Polish>
 	</TEXT>
@@ -761,7 +761,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MISSILE_RANGE</Tag>
 		<English>[ICON_BULLET]%D1_Amount Mission Operation Range for Missile units.</English>
-		<French>[ICON_BULLET]%D1_Amount Portée d'opération de mission pour les unités de missiles.</French>
+		<French>[ICON_BULLET]%D1_Amount Portée opérationnelle pour les unités de missiles.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FOREIGN</Tag>
@@ -920,7 +920,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HOLY_CITY_NON_STATE_REL_XP_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1%% Free Experience to all units trained in Holy Cities of Non-State Religions</English>
-		<French>[ICON_BULLET]%D1%% FExpérience ree à toutes les unités formées dans les villes saintes des religions non étatiques</French>
+		<French>[ICON_BULLET]%D1%% EXP Gratuite pour toutes les unités formées dans les Villes Saintes des religions non étatiques</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMANITARIAN</Tag>
@@ -1323,7 +1323,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NON_HOLY_CITY_STATE_REL_XP_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1%% Free Experience to all units trained in the Holy Cities of religions other than your State Religion.</English>
-		<French>[ICON_BULLET]%D1%% Expérience gratuite pour toutes les unités formées dans les villes saintes des religions autres que votre religion d'État.</French>
+		<French>[ICON_BULLET]%D1%% EXP gratuite pour toutes les unités formées dans les villes saintes des religions autres que votre religion d'État.</French>
 		<Italian>[ICON_BULLET]%D1%% esperienza gratuita a tutte le unità addestrate nella Città santa di una religione diversa dalla tua religione di stato.</Italian>
 		<Polish>[ICON_BULLET]%D1%% Darmowego doświadczenia dla jednostek wytrenowanych w Świętym Mieście wszystkich religi Nie Narodowych</Polish>
 	</TEXT>
@@ -1950,7 +1950,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_STATE_REL_SPREAD_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1%% chance to Spread State Religion with your Missionaries.</English>
-		<French>[ICON_BULLET]%D1%% chance de propager la religion d'État avec vos missionnaires.</French>
+		<French>[ICON_BULLET]%D1%% de chances de propager la religion d'État avec vos missionnaires.</French>
 		<Italian>[ICON_BULLET]%D1%% di diffondere la religione di stato con i tuoi missionari.</Italian>
 		<Polish>[ICON_BULLET]%D1%% do szansy rozszerzenia Religi Państwowej przez Misjonarzy.</Polish>
 	</TEXT>
@@ -2138,7 +2138,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNIT_COMBAT_FREE_XP_FIRST</Tag>
 		<English>[ICON_BULLET]%D1 Experience to all newly trained [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</English>
-		<French>[ICON_BULLET]%D1 Expérience à tous les nouvelles unités formées :  [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</French>
+		<French>[ICON_BULLET]%D1 Expérience à tous les nouvelles unités formées de type :  [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNIT_COMBAT_FREE_XP_ADDITIONAL</Tag>
@@ -2148,7 +2148,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNIT_COMBAT_FREE_XP_END</Tag>
 		<English> Unit Types</English>
-		<French> Types d'Unités</French>
+		<French>.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BONUS_HAPPINESS_CHANGE_FIRST</Tag>
@@ -2312,7 +2312,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WOLF</Tag>
 		<English>Ancient Way of the Wolf</English>
-		<French>Ancienne voie du loup</French>
+		<French>Ancienne voie du Loup</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WOLF_PEDIA</Tag>
