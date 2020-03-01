@@ -70,8 +70,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_PARALLEL_UNIVERSE_BUILDING</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DISTANT_PAST_CITY</Type>
@@ -106,8 +106,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COSMOPOLIS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DISTANT_FUTURE_CITY</Type>
@@ -142,8 +142,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COSMOPOLIS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LAYERED_WORLD</Type>
@@ -169,8 +169,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HORIZON_PORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COMPUTRONIUM_FILAMENT</Type>
@@ -217,8 +217,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_UNOBSERVABLE_UNIVERSE_COLONY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COSMOLOGY_RESEARCH_STATION</Type>
@@ -242,8 +242,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COMPUTRONIUM_FILAMENT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BIG_BANG_PROBE</Type>
@@ -277,8 +277,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HORIZON_PORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LOCALIZED_BIG_RIP</Type>
@@ -312,8 +312,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BIG_BANG_PROBE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HORIZON_PORT</Type>
@@ -367,8 +367,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COMPUTRONIUM_FILAMENT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_CHRONOTON</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -397,8 +397,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COSMOPOLIS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DIMENSION_X</Type>
@@ -433,8 +433,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HORIZON_PORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PARALLEL_UNIVERSE_BUILDING</Type>
@@ -470,8 +470,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DIMENSION_X</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BUBBLE_TRANSFER_STATION</Type>
@@ -496,8 +496,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HORIZON_PORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BRANE_THRUSTER</Type>
@@ -522,12 +522,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BUBBLE_TRANSFER_STATION</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BRANE_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOTEL_INFINITE</Type>
@@ -555,8 +555,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BUBBLE_TRANSFER_STATION</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SPACE_PIRATE_BASE</Type>
@@ -582,8 +582,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HORIZON_PORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -615,8 +615,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HORIZON_PORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TIMELINE_STABILIZERS</Type>
@@ -639,8 +639,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COSMIC_EXPLORER_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -680,8 +680,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COMPUTRONIUM_FILAMENT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HACKED_SOURCE_CODE</Type>
@@ -711,8 +711,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_PARANORMAL_BRANESPACE_TOPOLOGY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BIOPHILIC_SUBUNIVERSE</Type>
@@ -773,8 +773,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_LAYERED_WORLD</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DARK_WORLD</Type>
@@ -801,8 +801,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_LAYERED_WORLD</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -849,8 +849,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_LAYERED_WORLD</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MAGIC_WORLD</Type>
@@ -882,8 +882,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_LAYERED_WORLD</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RECURSIVE_WORLD</Type>
@@ -915,8 +915,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_LAYERED_WORLD</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VON_NEUMANN_GALACTIFORMING_FLEET</Type>
@@ -989,8 +989,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BRANE_COLLISION</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KLEIN_BOTTLE_UNIVERSE</Type>
@@ -1017,8 +1017,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_NON_ORIENTABLE_WORMHOLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_ANTIMATTER</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -1048,8 +1048,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DARK_FLOW_GENERATOR</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BRANE_COLLISION</Type>
@@ -1079,8 +1079,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BRANE_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SMART_GRAVITY_GENERATOR</Type>
@@ -1108,8 +1108,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_QUASAR_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MULTIVERSE_MINE</Type>
@@ -1137,8 +1137,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_QUASAR_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERDICTION_FIELD_GENERATOR</Type>
@@ -1162,8 +1162,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_QUASAR_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ARTIFICIAL_SUPERMASSIVE_BLACK_HOLE</Type>
@@ -1187,8 +1187,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_QUASAR_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BLACK_HOLE_CONSTELLATION</Type>
@@ -1217,8 +1217,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_QUASAR_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DARK_FLOW_GENERATOR</Type>
@@ -1243,8 +1243,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_QUASAR_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BRANE_ASSEMBLER</Type>
@@ -1272,8 +1272,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_QUASAR_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BRANESPACE_FOOD_SOURCE</Type>
@@ -1299,8 +1299,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_QUASAR_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ARTISAN_PLANET_DESIGNER</Type>
@@ -1325,8 +1325,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_QUASAR_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_ARTISAN_PLANETS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -1361,8 +1361,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BIG_BANG_PROBE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<bPower>1</bPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1392,8 +1392,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COSMOPOLIS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iRevIdxLocal>-20</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1419,12 +1419,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_INFINITE_SPEED_TACHYON_GENERATOR</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_LAYERED_WORLD</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1469,8 +1469,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DISTANT_FUTURE_CITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HEAVEN</Type>
@@ -1503,12 +1503,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COSMIC_ECONOMY_EFFECT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_INFINITE_SPEED_TACHYON_GENERATOR</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OMELAS</Type>
@@ -1541,8 +1541,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COSMOPOLIS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

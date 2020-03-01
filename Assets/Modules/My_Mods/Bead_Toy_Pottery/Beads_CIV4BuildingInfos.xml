@@ -36,12 +36,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BEADMAKER_WORKSHOP</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_BEADMAKER_WORKSHOP</BuildingType>
@@ -279,8 +279,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BEADMAKER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<!--PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>

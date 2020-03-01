@@ -25,8 +25,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ANDEAN_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_CITY_COUNCIL</BuildingType>

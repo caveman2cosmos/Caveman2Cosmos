@@ -70,8 +70,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARS_COLONY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -123,8 +123,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARS_CITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -171,8 +171,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARS_METRO</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -213,8 +213,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -281,8 +281,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARS_COLONY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_SOLAR_ARRAY</Type>
@@ -344,8 +344,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARS_COLONY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_MARTIAN_VEGETABLES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -492,12 +492,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARS_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARS_RADIATION</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -555,8 +555,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARS_RADIATION</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_MARS_COLONY</BuildingType>
@@ -598,8 +598,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARS_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_MARTIAN_MANUFACTURED_GOODS</Bonus>
 			<FreeBonus>BONUS_MARTIAN_ELECTRONICS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -659,8 +659,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -718,8 +718,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARS_COLONY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_FUSION_PLANT</Type>
@@ -759,8 +759,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARTIAN_DEUTERIUM_MINE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_MARS_COLONY</BuildingType>
@@ -870,8 +870,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARS_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<bPower>1</bPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -899,8 +899,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARS_MINE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARS_TRADE</Type>
@@ -955,8 +955,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARS_ECO</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_FISH</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
@@ -1064,8 +1064,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARS_CYCLER_EFFECT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_MARS_CITY</BuildingType>
@@ -1096,8 +1096,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARS_CYCLER_EFFECT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_MARS_CITY</BuildingType>
@@ -1137,8 +1137,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARS_CYCLER_EFFECT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_MARS_CITY</BuildingType>
@@ -1265,8 +1265,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARS_CYCLER_EFFECT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_MARS_CITY</BuildingType>
@@ -1297,8 +1297,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARS_CYCLER_EFFECT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_MARS_CITY</BuildingType>
@@ -1398,12 +1398,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARS_CITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARS_BIOFACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_ULTRAFUEL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -1466,8 +1466,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARS_ECO</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_MARS_METRO</BuildingType>
@@ -1501,8 +1501,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARTIAN_SPACEPORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_MARS_METRO</BuildingType>
@@ -1595,8 +1595,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARS_RADIATION</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_MARS_METRO</BuildingType>
@@ -1646,8 +1646,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARS_METRO</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_HOTEL</Type>
@@ -1676,8 +1676,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARS_METRO</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_GARDEN</Type>
@@ -1704,8 +1704,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARTIAN_WATER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_MARS_METRO</BuildingType>
@@ -1801,8 +1801,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARTIAN_SPACEPORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
@@ -1959,8 +1959,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARS_HITECH</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
@@ -2001,8 +2001,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARTIAN_SPACEPORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
@@ -2059,8 +2059,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARS_ECO</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
@@ -2093,8 +2093,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARS_ARCOLOGY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_STARPORT</Type>
@@ -2123,12 +2123,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARS_ARCOLOGY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARTIAN_SPACEPORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_URBAN_MARS</Type>
@@ -2175,8 +2175,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARS_ARCOLOGY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARS_TERRA</Type>
@@ -2237,8 +2237,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARS_ARCOLOGY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARS_TERRA_EFFECT</Type>
@@ -2310,8 +2310,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARS_ARCOLOGY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2347,8 +2347,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARS_ARCOLOGY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERAVERSE</Type>

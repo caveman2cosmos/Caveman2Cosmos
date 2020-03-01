@@ -31,12 +31,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
@@ -135,12 +135,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CERAMICS_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_PORCELAIN_WORKSHOP</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_PORCELAIN_WORKSHOP</BuildingType>
@@ -209,8 +209,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_POTTER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<!--PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
@@ -414,8 +414,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_POTTER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_POTTER</BuildingType>
@@ -521,12 +521,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CERAMICS_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TERRACOTTA_WORKSHOP</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_TERRACOTTA_WORKSHOP</BuildingType>
@@ -584,8 +584,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_POTTER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<!--PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>

@@ -189,8 +189,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ALEPH_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYDRAULIC_FRACTURING</Type>
@@ -221,12 +221,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_POWER_LINES</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -269,12 +269,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_POWER_LINES</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<bPower>1</bPower>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -383,8 +383,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqOrCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_DEMOCRACY</CivicOption>
@@ -415,8 +415,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COTTAGE_INDUSTRY</Type>
@@ -447,8 +447,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_FOUNDRY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -521,8 +521,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ROBOTICS_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -555,8 +555,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_OMEGA_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_FEMTOBOTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
@@ -585,8 +585,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_OMEGA_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_FEMTOBOTS</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -613,8 +613,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ALEPH_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -722,12 +722,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ALEPH_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FRAUNHOFER_SOCIETY</Type>
@@ -799,12 +799,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MANUFACTURING_PLANT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_LABORATORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ALPHA_ASSEMBLER</Type>
@@ -835,20 +835,20 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BETA_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_URBAN_PSYCHIC_INTEGRATION</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CONSCIOUS_CITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_SUPERSOLID_MATERIAL</Bonus>
 			<PropertyManipulators>
 				<PropertySource>
@@ -893,16 +893,16 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_IMMATERIAL_CITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SPACESCRAPER2</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ALPHA_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_PERSONAL_SPACECRAFT</Bonus>
 			<PropertyManipulators>
 				<PropertySource>
@@ -947,12 +947,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_OMEGA_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_QUANTUM_GRAVITY_SUPERCOMPUTER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_MEGASTRONG_ALLOY_WARES</Bonus>
 			<PropertyManipulators>
 				<PropertySource>
@@ -993,8 +993,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ALEPH_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1062,8 +1062,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SPACETIME_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1097,8 +1097,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MINING_CAMP</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_BORAX</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
@@ -1203,8 +1203,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_RARE_EARTH_MINERALS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
@@ -1245,8 +1245,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_BERLINITE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
@@ -1341,8 +1341,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CORE_MINE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_VIBRANIUM</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
@@ -1383,8 +1383,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CORE_MINE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1419,8 +1419,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CORE_MINE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_ALUMINUM_WARES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
@@ -1560,8 +1560,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_OMEGA_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<bPower>1</bPower>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -1589,8 +1589,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_METAMATERIAL_WARES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
@@ -1665,8 +1665,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_PLASTIC</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
@@ -1774,8 +1774,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ALPHA_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_PARTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
@@ -1848,8 +1848,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_OMEGA_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_PARTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
@@ -1918,8 +1918,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_OMEGA_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_PARTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
@@ -1982,8 +1982,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ALEPH_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_PARTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
@@ -2071,8 +2071,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<FreeBonus>BONUS_WOODWIND_INSTRUMENTS</FreeBonus>
@@ -2178,8 +2178,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_E_STOCK_MARKET</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERNET_OF_THINGS</Type>
@@ -2213,8 +2213,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CLOUD_SERVER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SEMICONDUCTOR_FACTORY</Type>
@@ -2259,8 +2259,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MANUFACTURING_PLANT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_CARBON_FIBER</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
@@ -2296,8 +2296,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ALPHA_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_COMPUTRONIUM</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
@@ -2340,8 +2340,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MANUFACTURING_PLANT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_CERMET</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
@@ -2383,8 +2383,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_NANO_RESEARCH_DEPARTMENT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_QUANTUM_DOTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
@@ -2426,8 +2426,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MANUFACTURING_PLANT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_METALLIC_HYDROGEN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
@@ -2463,8 +2463,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BETA_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_ATOMICALLY_PRECISE_ALLOYS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
@@ -2519,8 +2519,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -2638,8 +2638,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MANUFACTURING_PLANT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_BARRELS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
@@ -2769,8 +2769,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -2876,8 +2876,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -2970,8 +2970,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iPrereqPopulation>14</iPrereqPopulation>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -3015,12 +3015,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MANUFACTURING_PLANT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_POWER_LINES</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_URANIUM</Bonus>
 			<bPower>1</bPower>
 			<iAIWeight>1</iAIWeight>
@@ -3059,8 +3059,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BLOCKCHAIN_AUTHENTICATION</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iPrereqPopulation>15</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
@@ -3097,8 +3097,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CLOUD_SERVER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -3128,8 +3128,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BLOCKCHAIN_AUTHENTICATION</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iPrereqPopulation>15</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
@@ -3157,8 +3157,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BLOCKCHAIN_AUTHENTICATION</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iPrereqPopulation>15</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
@@ -3200,8 +3200,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CLOUD_SERVER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -3240,8 +3240,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DIGITAL_OFFICES</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
@@ -3270,16 +3270,16 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_RIDESHARE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_EFFECT_GPS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_AUTOMATED_PARKING_GARAGE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -3318,8 +3318,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DIGITAL_OFFICES</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iPrereqPopulation>13</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -3367,8 +3367,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MANUFACTURING_PLANT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
@@ -3416,8 +3416,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MINING_CAMP</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iPrereqPopulation>10</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
@@ -3449,8 +3449,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_FACIAL_RECOGNITION_SOFTWARE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_DIGITAL_ADVERTISING_FIRM</BuildingType>
@@ -3497,8 +3497,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_GERMAN_ASSEMBLY_PLANT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_COPPER_ORE</Bonus>
 			<FreeBonus>BONUS_COPPER_WARES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -3554,8 +3554,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_GERMAN_ASSEMBLY_PLANT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_IRON_ORE</Bonus>
 			<FreeBonus>BONUS_IRON_INGOTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -3623,8 +3623,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CLONING_LABORATORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_RAW_MEAT</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
@@ -3722,12 +3722,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_EPSILON_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_DRIED_MEAT</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
@@ -3828,8 +3828,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HYDROPONICS_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_DRUGS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
@@ -3876,8 +3876,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HYDROPONICS_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_VEGETABLES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
@@ -3919,8 +3919,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_EPSILON_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ACOUSTIC_DRILLING</Type>
@@ -3955,8 +3955,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MINING_CAMP</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iPrereqPopulation>10</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
@@ -4045,8 +4045,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_NATURAL_LANGUAGE_ALGORITHMS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERTEMPORAL_CONSTRUCTION_FIRM</Type>
@@ -4093,8 +4093,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CLOSED_TIMELIKE_CURVE_COMPUTER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -4156,8 +4156,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MEGATOWER_OFFICE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -4266,12 +4266,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CONSTRUCTION_FIRM</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CGI_ANIMATION_STUDIO</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ACOUSTIC_CONSTRUCTION</Type>
@@ -4301,8 +4301,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MEGATOWER_OFFICE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHEMICALS_DISTRICT</Type>
@@ -4329,8 +4329,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DELTA_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_NOVUS_CHEMICALS</Bonus>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<FreeBonus>BONUS_SYNTHETIC_RUBBER</FreeBonus>
@@ -4487,8 +4487,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_POWER_LINES</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_SUPERSOLID_MATERIAL</Bonus>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -4516,8 +4516,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TRANSGENETICS_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_PHARMACEUTICALS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
@@ -4546,12 +4546,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_POWER_LINES</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HELIUM_3_IMPORTER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_SUPERSTRONG_ALLOY_WARES</Bonus>
 			<bPower>1</bPower>
 			<iAIWeight>1</iAIWeight>
@@ -4580,8 +4580,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ALPHA_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_MEGASTRONG_ALLOY_WARES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
@@ -4617,8 +4617,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DELTA_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -4667,8 +4667,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DELTA_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -4721,8 +4721,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ALPHA_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -4755,8 +4755,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BETA_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_ANTI_GRAVITY_FIELD_GENERATORS</Bonus>
 			<FreeBonus>BONUS_PERSONAL_SPACECRAFT</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -4896,12 +4896,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_AERIAL_CITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SPACE_WAREHOUSE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_ORICHALCUM</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -4929,8 +4929,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_EPSILON_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
 			<FreeBonus>BONUS_NANOTRUSSES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -4967,8 +4967,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_EPSILON_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_TRANSPARENT_ALUMINUM</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
@@ -5004,8 +5004,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_NANO_RESEARCH_DEPARTMENT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_AEROGEL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
@@ -5133,8 +5133,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_EPSILON_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_METAL_FOAM</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
@@ -5186,8 +5186,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_NEUROSCIENCE_CENTER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -5225,8 +5225,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_ELECTROACTIVE_POLYMERS</Bonus>
 			<FreeBonus>BONUS_PAPER</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -5302,8 +5302,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_EFFECT_GPS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_CELLPHONE_FACTORY</BuildingType>
@@ -5389,8 +5389,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DELTA_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_AUTOMOBILES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -5428,12 +5428,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ALPHA_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SELF_ASSEMBLY_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANIMAMATERIAL_FACTORY</Type>
@@ -5460,8 +5460,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_GAMMA_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_CLAYTRONIC_ATOMS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
@@ -5503,8 +5503,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_GAMMA_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_SUPERSOLID_MATERIAL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
@@ -5614,8 +5614,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ANTIMATTER_HARVESTER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<bPower>1</bPower>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -5644,8 +5644,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HYBRID_AIRSHIP_PORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -5672,8 +5672,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_EXTREME_FORCE_CONCENTRATOR</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_POCKET_UNIVERSE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
@@ -5703,8 +5703,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_STRINGWORKS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_POCKET_UNIVERSE</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -5731,8 +5731,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SPACETIME_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -5758,12 +5758,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MATHEMATICAL_ORACLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COMPUTATIONAL_METAPHYSICS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -5829,8 +5829,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_STOCKMARKET</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -5873,8 +5873,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HIGHWAY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TIME_ZONES</Type>
@@ -5942,8 +5942,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_OFFICES</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_CENSUS</Type>
@@ -6014,8 +6014,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MEGATOWER_OFFICE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqOrCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_CORPOR_NATION</CivicOption>
@@ -6059,8 +6059,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SECURITY_CENTER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -6100,8 +6100,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SECURITY_CENTER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -6141,8 +6141,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_POLICE_STATION</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -6173,8 +6173,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_PHENOTYPE_STUDIO</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -6211,8 +6211,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_PUBLIC_SCHOOL</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -6249,8 +6249,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -6278,8 +6278,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_OFFICES</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iRevIdxLocal>1</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -6373,12 +6373,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MEGATOWER_POLICE_STATION</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_FACIAL_RECOGNITION_SOFTWARE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
@@ -6416,8 +6416,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MEGATOWER_EDUCATION</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_HOLOGRAPHIC_PROJECTORS</Bonus>
 			<PropertyManipulators>
 				<PropertySource>
@@ -6466,8 +6466,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MEGATOWER_POLICE_STATION</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -6526,8 +6526,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -6567,8 +6567,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ARTIFICIAL_INTELLIGENCE_CORE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -6611,8 +6611,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MEGATOWER_POLICE_STATION</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_NEUROIMPLANTS</Bonus>
 			<PropertyManipulators>
 				<PropertySource>
@@ -6665,12 +6665,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ARTIFICIAL_INTELLIGENCE_CORE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MEGATOWER_POLICE_STATION</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -6697,8 +6697,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_AI_POLICE_FORCE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -6728,8 +6728,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_PALACE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -6851,8 +6851,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_GREENHOUSE</BuildingType>
@@ -6889,12 +6889,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_GENFARM_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_EFFECT_GPS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_DIGITAL_GLOBE</BuildingType>
@@ -6993,8 +6993,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UNMANNED_MARKET</Type>
@@ -7132,8 +7132,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SUBTERRANEAN_CITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -7166,8 +7166,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MATHEMATICS_DEPARTMENT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FUTARCHY_MARKET</Type>
@@ -7190,8 +7190,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_E_STOCK_MARKET</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -7266,8 +7266,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_STOCKMARKET</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PREDICTION_MARKET</Type>
@@ -7289,8 +7289,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_STOCKMARKET</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iRevIdxLocal>-1</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -7319,8 +7319,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_E_STOCK_MARKET</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -7346,8 +7346,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ARTIFICIAL_INTELLIGENCE_CORE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqOrCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_MACHINE_RULE</CivicOption>
@@ -7380,8 +7380,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BINARY_CONSCIOUSNESS_ALGORITHMS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_SLAVE_EM</BuildingMustNotHave>
@@ -7414,8 +7414,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BINARY_CONSCIOUSNESS_ALGORITHMS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_CITIZEN_EM</BuildingMustNotHave>
@@ -7443,8 +7443,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ARTIFICIAL_INTELLIGENCE_CORE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -7474,12 +7474,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CONSCIOUS_CITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SUBTERRANEAN_CITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -7554,8 +7554,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_FORENSICS_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -7591,8 +7591,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SECURITY_CENTER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MATHEMATICAL_ORACLE</Type>
@@ -7615,12 +7615,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CONSCIOUS_CITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_OMEGA_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_COMPUTRONIUM</Bonus>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -7641,8 +7641,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_OMEGA_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -7672,8 +7672,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ADVANCED_SHIELDING</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FIELD_GENERATOR</Type>
@@ -7700,8 +7700,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ALEPH_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -7737,8 +7737,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_APPLIED_SOCIOLOGY_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -7778,8 +7778,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_APPLIED_SOCIOLOGY_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -7820,8 +7820,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_APPLIED_SOCIOLOGY_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -7857,12 +7857,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MATHEMATICS_DEPARTMENT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BIOSPHERE_2</Type>
@@ -7898,8 +7898,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CLIMATOLOGY_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RETREAT_CENTER</Type>
@@ -7928,8 +7928,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_OFFICES</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ENVIRONMENTAL_ART_STUDIO</Type>
@@ -8025,8 +8025,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COMPUTER_SCIENCE_DEPARTMENT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PROGRAMMING_LANGUAGE</Type>
@@ -8050,8 +8050,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COMPUTER_SCIENCE_DEPARTMENT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TABULATION_FIRM</Type>
@@ -8088,8 +8088,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_PUNCH_CARDS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -8118,8 +8118,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COMPUTER_SCIENCE_DEPARTMENT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COMPUTER_SCIENCE_DEPARTMENT</Type>
@@ -8178,8 +8178,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MATHEMATICS_DEPARTMENT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -8214,8 +8214,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MATHEMATICS_DEPARTMENT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FERMATS_LAST_THEOREM</Type>
@@ -8246,8 +8246,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MATHEMATICS_DEPARTMENT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FOUR_COLOR_THEOREM</Type>
@@ -8281,8 +8281,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MATHEMATICS_DEPARTMENT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GODEL_INCOMPLETENESS_THEOREM</Type>
@@ -8312,8 +8312,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MATHEMATICS_DEPARTMENT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MILLENNIUM_PROBLEMS</Type>
@@ -8343,8 +8343,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MATHEMATICS_DEPARTMENT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BUSINESS_SCHOOL</Type>
@@ -8386,8 +8386,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MATHEMATICS_ACADEMY</Type>
@@ -8441,8 +8441,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -8563,8 +8563,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CLOUD_SERVER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ARCTIC_DATA_CENTER</Type>
@@ -8598,8 +8598,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CLOUD_SERVER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CLOUD_SERVER</Type>
@@ -8627,8 +8627,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_FIBER_OPTIC_CABLES</Bonus>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -8660,8 +8660,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CLOUD_SERVER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_MICROGENERATORS</Bonus>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -8715,8 +8715,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_PHYSICS_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -8778,8 +8778,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_PHYSICS_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BELL_LABS</Type>
@@ -8882,8 +8882,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqBonuses>
 				<Bonus>BONUS_PUNCH_CARDS</Bonus>
 				<Bonus>BONUS_DISKETTES</Bonus>
@@ -8955,12 +8955,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_LABORATORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MILITARY_BASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MEDICAL_MEGACOMPLEX</Type>
@@ -9074,8 +9074,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_NANITE_POPULATION</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -9099,8 +9099,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BIONIC_EYE</Type>
@@ -9129,8 +9129,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NOOTROPIC_DISPENSARY</Type>
@@ -9207,8 +9207,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_INTUITIVE_ALGORITHMS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -9240,8 +9240,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HUMANOID_DESIGNER</Type>
@@ -9268,8 +9268,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ANDROID_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MUSEUM_OF_HUMANITY</Type>
@@ -9292,8 +9292,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MUSEUM</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -9349,8 +9349,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_AUGMENTED_EQUIPMENT_CENTER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -9537,8 +9537,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -9564,8 +9564,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DNA_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_RAW_FISH</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
@@ -9600,8 +9600,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MOBILE_PLANT</Type>
@@ -9637,8 +9637,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TRANSGENETICS_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BIOLOGICAL_CARS</Type>
@@ -9661,8 +9661,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_GAMMA_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
 			<PropertyManipulators>
 				<PropertySource>
@@ -9704,8 +9704,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MEGATOWER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -9755,12 +9755,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ANTHROPOMORPHICS_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -9834,8 +9834,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRYSTAL_JEWELLER</Type>
@@ -9859,8 +9859,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DELTA_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_CRYSTALPUNK</Bonus>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -9890,8 +9890,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CRYSTAL_JEWELLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_CRYSTALPUNK</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -9917,8 +9917,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ARTIFICIAL_INTELLIGENCE_CORE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AI_MUSICIAN</Type>
@@ -9943,8 +9943,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ARTIFICIAL_INTELLIGENCE_CORE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRILOBITE_BREEDER</Type>
@@ -9974,8 +9974,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TRANSGENETICS_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RAPTOR_BREEDER</Type>
@@ -10005,8 +10005,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TRANSGENETICS_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TREX_BREEDER</Type>
@@ -10036,8 +10036,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TRANSGENETICS_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PTERADACTYL_BREEDER</Type>
@@ -10067,8 +10067,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TRANSGENETICS_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PALEO_PARK</Type>
@@ -10137,8 +10137,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ARTIFICIAL_INTELLIGENCE_CORE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -10168,8 +10168,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ARTIFICIAL_INTELLIGENCE_CORE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DEATH_COMBAT_ARENA</Type>
@@ -10207,12 +10207,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_RESURRECTION_HUB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UNIVERSAL_LIBRARY</Type>
@@ -10289,8 +10289,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -10364,8 +10364,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MEGATOWER_RESEARCH</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -10450,12 +10450,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_RESURRECTION_HUB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -10498,8 +10498,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ULTIMATE_COMBAT_ARENA</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GRAVITY_CROWD_CONTROL</Type>
@@ -10525,8 +10525,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_AI_POLICE_FORCE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -10572,8 +10572,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_UNIVERSAL_LIBRARY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -10633,8 +10633,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_LABORATORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -10668,8 +10668,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DEEP_THOUGHT</Type>
@@ -10709,8 +10709,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_GALACTIC_EFFECT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -10853,8 +10853,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -10886,8 +10886,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MEMORY_TRANSFER_STATION</Type>
@@ -10936,8 +10936,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MEMORY_TRANSFER_STATION</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -10975,8 +10975,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_UNIVERSAL_LIBRARY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_CHAOS_WANDS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
@@ -11010,8 +11010,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BODY_EXCHANGE_CLINIC</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -11041,8 +11041,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TIME_MACHINE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -11074,8 +11074,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HISTORY_REPAIR</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -11110,8 +11110,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_FIELD_GENERATOR</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MULTIVERSE_STEERING</Type>
@@ -11134,8 +11134,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TIME_MACHINE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -11175,8 +11175,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_INTUITIVE_ALGORITHMS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_ANDROIDS</Bonus>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -11211,8 +11211,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SOCIOBLE_ROBOTS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_ANDROIDS</Bonus>
 			<PropertyManipulators>
 				<PropertySource>
@@ -11271,8 +11271,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_LABORATORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -11333,8 +11333,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CLOUD_SERVER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -11392,8 +11392,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_QUANTUM_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_QUANTUM_SUPERCOMPUTER</Type>
@@ -11439,8 +11439,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ARTIFICIAL_INTELLIGENCE_CORE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_QUANTUM_DOTS</Bonus>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -11482,8 +11482,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_OPTRONIC_SUPERCOMPUTER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_QUANTUM_DOTS</Bonus>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -11507,8 +11507,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CLOSED_TIMELIKE_CURVE_COMPUTER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -11538,8 +11538,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -11568,8 +11568,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_INDUSTRIAL_PARK</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -11602,8 +11602,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -11633,8 +11633,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -11676,8 +11676,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SPEECH_RECOGNITION_SOFTWARE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -11714,12 +11714,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_INTELLIGENT_PERSONAL_ASSISTANT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_NATURAL_LANGUAGE_ALGORITHMS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -11841,8 +11841,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_URBAN_DEPOLLENIZER</Type>
@@ -11866,8 +11866,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BACTERIUM_BIOFORGE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -11910,8 +11910,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_INTERNET_TV_STATION</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -11940,8 +11940,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SIMULATED_WORLD</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -11971,8 +11971,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_OCEAN_ARCOLOGY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -12005,8 +12005,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_AERIAL_CITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -12037,8 +12037,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SUBTERRANEAN_CITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -12068,8 +12068,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_REWILDERNESS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -12105,8 +12105,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_NETWORK_NODE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORACLE_HYPERINTELLIGENCE</Type>
@@ -12129,8 +12129,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CLOSED_TIMELIKE_CURVE_COMPUTER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -12164,8 +12164,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_INTELLIGENCE_AGENCY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GLITCH_IN_THE_MATRIX</Type>
@@ -12189,8 +12189,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TRANSFINITE_ORACLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POCKET_UNIVERSE_STORAGE</Type>
@@ -12216,8 +12216,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_STRINGWORKS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_POCKET_UNIVERSE</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -12237,8 +12237,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SKY_GOD</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -12264,8 +12264,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_UNDERWORLD_GOD</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -12291,8 +12291,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SEA_GOD</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -12322,8 +12322,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASCENSION_STUDIO</Type>
@@ -12369,8 +12369,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BACTERIUM_BIOFORGE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -12411,8 +12411,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COMPUTATIONAL_METAPHYSICS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_SPACEPUNK</Bonus>
 			<PropertyManipulators>
 				<PropertySource>
@@ -12445,8 +12445,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ALEPH_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PHILOSOPHERS_CASTLE</Type>
@@ -12469,8 +12469,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COMPUTATIONAL_METAPHYSICS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_CRYSTALPUNK</Bonus>
 			<PropertyManipulators>
 				<PropertySource>
@@ -12567,8 +12567,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_EXOTIC_MATTER_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -12598,8 +12598,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ORACLE_HYPERINTELLIGENCE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -12635,12 +12635,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_UNMANNED_MARKET</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_AUTOMATED_TAXI</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SUBTERRANEAN_TUNNEL_NETWORK</Type>
@@ -12668,8 +12668,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_AUTOMATED_HIGHWAY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -12717,8 +12717,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MIXED_USE_DEVELOPMENT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_BICYCLES</Bonus>
 			<PropertyManipulators>
 				<PropertySource>
@@ -12761,8 +12761,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MIXED_USE_DEVELOPMENT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_BICYCLES</Bonus>
 			<PropertyManipulators>
 				<PropertySource>
@@ -12882,12 +12882,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MEGATOWER_SYBRIDGE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_UBIQUITOUS_SENSORS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -12919,8 +12919,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_AUTOMATED_HIGHWAY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -12954,8 +12954,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MAGLEV_ELEVATORS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -12992,8 +12992,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MEGATOWER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -13022,8 +13022,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MEGATOWER_OFFICE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_VACTRAIN_TERMINAL</BuildingType>
@@ -13057,8 +13057,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_STRATOSPHERIC_TOWER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_SUPERSOLID_MATERIAL</Bonus>
 			<PropertyManipulators>
 				<PropertySource>
@@ -13092,8 +13092,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COMMERCIAL_AIRPORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -13127,8 +13127,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_STRATOSPHERIC_TOWER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_VACTRAIN_TERMINAL</BuildingType>
@@ -13216,8 +13216,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TIME_MACHINE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYPERSONIC_TERMINAL</Type>
@@ -13242,8 +13242,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COMMERCIAL_AIRPORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WIRELESS_EV_CHARGING</Type>
@@ -13303,8 +13303,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HIGHWAY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -13424,8 +13424,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_GRAVITY_TRAIN</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TIME_MACHINE</Type>
@@ -13453,8 +13453,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ALEPH_ASSEMBLER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iRevIdxLocal>5</iRevIdxLocal>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -13486,8 +13486,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TIME_MACHINE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MEGAVERSE</Type>
@@ -13511,8 +13511,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_UNIVERSE_PORTAL</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TESSERACT_PATHWAYS</Type>
@@ -13536,8 +13536,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_IRREGULAR_ARCHITECTURE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -13571,8 +13571,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_STRINGWORKS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -13650,8 +13650,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MEGATOWER_FIRE_STATION</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_NOVUS_CHEMICALS</Bonus>
 			<Properties>
 				<Property>
@@ -13680,8 +13680,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_STRATOSPHERIC_TOWER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_CLAYTRONIC_ATOMS</Bonus>
 			<Properties>
 				<Property>
@@ -13711,12 +13711,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_IMMATERIAL_CITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CLAYTRONIC_FIRE_SUPPRESSION</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_ATOMICALLY_PRECISE_ALLOYS</Bonus>
 			<Properties>
 				<Property>
@@ -13746,8 +13746,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ATOMIC_FIREPROOFING</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_FEMTOBOTS</Bonus>
 			<Properties>
 				<Property>
@@ -13776,8 +13776,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CLOSED_TIMELIKE_CURVE_COMPUTER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -13860,12 +13860,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CHEMOSYNTHESIS_PLANT_FARM</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_STATE_PARK</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -13903,12 +13903,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_REWILDERNESS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_PARADISE_GARDEN</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -13954,12 +13954,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ATMOSPHERIC_WATER_GENERATOR</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_STATE_PARK</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -13992,8 +13992,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ATMOSPHERIC_WATER_GENERATOR</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -14035,8 +14035,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ARTIFICIAL_REEF</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14085,8 +14085,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BACTERIUM_BIOFORGE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14116,8 +14116,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_E_STOCK_MARKET</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14277,8 +14277,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_STATE_PARK</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14347,8 +14347,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MULTIVERSE_CITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEO_PYRAMID</Type>
@@ -14465,8 +14465,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CHEMISTRY_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SOCIAL_CREDIT_SYSTEM</Type>
@@ -14492,8 +14492,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CLOUD_SERVER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MORSE_CODE</Type>
@@ -14572,8 +14572,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_POST_OFFICE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
@@ -20502,8 +20502,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CLOUD_SERVER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_HUMAN_MOD_DIGITAL_LIFESTYLE</Bonus>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -20530,8 +20530,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_VIRTUAL_WORLD</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_HUMAN_MOD_DIGITAL_IDENTITY</Bonus>
 			<PropertyManipulators>
 				<PropertySource>
@@ -20567,8 +20567,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_VIRTUAL_WORLD</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -20598,8 +20598,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_VIRTUAL_WORLD</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VIRTUAL_ECONOMY</Type>
@@ -20626,8 +20626,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_VIRTUAL_WORLD_GUILD</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_HUMAN_MOD_DIGITAL_IDENTITY</Bonus>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -20654,8 +20654,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_VIRTUAL_ECONOMY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -20692,8 +20692,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_VIRTUAL_GOVERNANCE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -20731,8 +20731,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_VIRTUAL_WORLD_DATA_ANALYSIS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_HUMAN_MOD_NOVEL_SENSES</Bonus>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -20757,8 +20757,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SIMULATED_WORLD</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SIMULATED_WORLD_MANIFESTATION</Type>
@@ -20786,8 +20786,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SIMULATED_WORLD</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GREEN_FLOAT</Type>
@@ -20815,12 +20815,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_OCEAN_COLONY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_CYBERNETIC_CHLOROPLASTS</Bonus>
 			<PropertyManipulators>
 				<PropertySource>
@@ -21138,8 +21138,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_OCEAN_COLONY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iPrereqPopulation>25</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -21165,8 +21165,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_OCEAN_COLONY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -21203,8 +21203,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_OCEAN_COLONY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -21293,8 +21293,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_OCEAN_FLOOR_CITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CLOUD_NINE</Type>
@@ -21316,8 +21316,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HYBRID_AIRSHIP_PORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -21367,8 +21367,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MEGATOWER_HOTEL</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AERIAL_CITY</Type>
@@ -21400,8 +21400,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HYBRID_AIRSHIP_PORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -21425,8 +21425,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_POWER_LINES</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<bPower>1</bPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -21452,12 +21452,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MINING_NANOBOT_CONTROL_CENTER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_GRAVITY_TRAIN</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -21528,8 +21528,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ADVANCED_SHIELDING</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iNukeModifier>-50</iNukeModifier>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -21558,12 +21558,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SUBTERRANEAN_CITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CORE_MINE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SUBTERRANEAN_FARM</Type>
@@ -21593,8 +21593,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SUBTERRANEAN_CITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SUBTERRANEAN_HOTEL</Type>
@@ -21627,8 +21627,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SUBTERRANEAN_CITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SPACE_NEEDLE</Type>
@@ -21714,8 +21714,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DUBAI_CITY_TOWER</Type>
@@ -21752,8 +21752,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MEGATOWER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BIONIC_TOWER</Type>
@@ -21790,8 +21790,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MEGATOWER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AEROPOLIS_2001</Type>
@@ -21824,8 +21824,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MEGATOWER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRYSTAL_ISLAND</Type>
@@ -21860,8 +21860,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MEGATOWER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ECOMEGATOWER</Type>
@@ -22032,8 +22032,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MEGATOWER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -22066,8 +22066,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MEGATOWER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -22134,12 +22134,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_AUTOMATED_TAXI</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_PEERTOPEER_RENTAL</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SPACESCRAPER</Type>
@@ -22178,8 +22178,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SPACESCRAPER2</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STRATOSPHERIC_TOWER</Type>
@@ -22213,8 +22213,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MAGLEV_ELEVATORS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_DIAMOND_NANOTHREADS</Bonus>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -22258,8 +22258,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_STRATOSPHERIC_TOWER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SPACE_CITY</Type>
@@ -22286,12 +22286,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_STRATOSPHERIC_TOWER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MAGLEV_LAUNCH</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BUILDING_MEMBRANE</Type>
@@ -22313,8 +22313,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MEGATOWER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -22345,8 +22345,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_STRATOSPHERIC_TOWER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -22381,8 +22381,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_STRATOSPHERIC_TOWER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_ATOMICALLY_PRECISE_ALLOYS</Bonus>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -22413,8 +22413,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SPACESCRAPER2</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SPACESCRAPER_FARM</Type>
@@ -22441,12 +22441,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SPACESCRAPER2</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_FARMSCRAPER_III</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SPACESCRAPER_INDUSTRIAL</Type>
@@ -22473,12 +22473,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SPACESCRAPER2</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SELF_ASSEMBLY_FACTORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COMPUTRONIUM_TOWER</Type>
@@ -22505,8 +22505,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SPACESCRAPER2</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_COMPUTRONIUM</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -22536,8 +22536,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_STRATOSPHERIC_TOWER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -22562,12 +22562,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SPACESCRAPER2</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_IRREGULAR_ARCHITECTURE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ARCOSANTI</Type>
@@ -22633,12 +22633,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_LIQUID_METALS_FOUNDRY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CONTROL_CENTER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_NANOTRUSSES</Bonus>
 			<PropertyManipulators>
 				<PropertySource>
@@ -22956,8 +22956,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_GEODESIC_DOME</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_ARCOLOGY</BuildingType>
@@ -22999,8 +22999,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CYBERNETIC_ORGAN_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EXODUS</Type>
@@ -23115,8 +23115,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MIXED_USE_DEVELOPMENT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -23147,8 +23147,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MIXED_USE_DEVELOPMENT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AEROTROPOLIS</Type>
@@ -23200,8 +23200,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COMMERCIAL_AIRPORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -23354,12 +23354,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_INDUSTRIAL_PARK</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MONORAIL_STATION</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iPrereqPopulation>40</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -23390,8 +23390,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DIGITAL_OFFICES</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iPrereqPopulation>40</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -23456,8 +23456,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SELF_CONSTRUCTION_FIRM</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iPrereqPopulation>40</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -23507,12 +23507,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MEGATOWER_PARK</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ARTIFICIAL_INTELLIGENCE_CORE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -23665,8 +23665,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_RATIONAL_CITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -23697,8 +23697,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CHRONOPOLIS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -23753,12 +23753,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_IMMATERIAL_CITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MICROWORMHOLE_BUILDING</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -23789,12 +23789,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_IMMATERIAL_CITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MICROWORMHOLE_BUILDING</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_REGIONAL_PLANNING_COMMISSION</Type>
@@ -23859,8 +23859,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ARTIFICIAL_INTELLIGENCE_CORE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_EMP_GRID</BuildingType>
@@ -23920,12 +23920,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_LIVING_BUILDINGS</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ARTIFICIAL_INTELLIGENCE_CORE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -23951,12 +23951,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CONSCIOUS_CITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CLAYTRONIC_TOWER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -23985,12 +23985,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_IMMATERIAL_CITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -24059,12 +24059,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_PALACE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ORBITAL_HEAT_SINK</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ATLANTIS</Type>
@@ -24086,8 +24086,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -24147,8 +24147,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_STRATOSPHERIC_TOWER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_CRYSTALPUNK</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -24186,8 +24186,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BAIKONUR_COSMODROME</Type>
@@ -24219,8 +24219,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -24487,8 +24487,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PROJECT_MERCURY</Type>
@@ -24518,8 +24518,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VOYAGER_PROGRAM</Type>
@@ -24680,8 +24680,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_STARPORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EURO_ELT</Type>
@@ -24712,8 +24712,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_OBSERVATORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EUROPA_PROBE</Type>
@@ -24899,8 +24899,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_OBSERVATORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_JAMESWEBB_TELESCOPE</Type>
@@ -24930,8 +24930,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_OBSERVATORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -24978,8 +24978,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WMAP</Type>
@@ -25066,8 +25066,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CLIMATE_SATELLITE</Type>
@@ -25099,8 +25099,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CLIMATOLOGY_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEUTRINO_OBSERVATORY</Type>
@@ -25140,12 +25140,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_OBSERVATORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_PHYSICS_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASTRONOMY_DATABASE</Type>
@@ -25169,12 +25169,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_PLANETARIUM</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -25222,8 +25222,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_OBSERVATORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GRAVITY_WAVE_DETECTOR</Type>
@@ -25263,8 +25263,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_LABORATORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BREAKTHROUGH_STARSHOT</Type>
@@ -25321,8 +25321,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ASTRONOMY_DATABASE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_METI</Type>
@@ -25370,8 +25370,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ASTROBIOLOGY_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -25549,8 +25549,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_STRATOSPHERIC_TOWER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -25584,8 +25584,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SKYHOOK</Type>
@@ -25615,8 +25615,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORBITAL_RING</Type>
@@ -25658,12 +25658,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SPACESCRAPER2</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_LOFSTROM_LOOP</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SPACE_WAREHOUSE</Type>
@@ -25694,8 +25694,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CAPTURED_ASTEROID</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_IRON_ORE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
@@ -25790,8 +25790,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -25819,8 +25819,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MAGLEV_LAUNCH</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LOFSTROM_LOOP</Type>
@@ -25853,8 +25853,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MAGLEV_LAUNCH</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -25877,8 +25877,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MAGLEV_LAUNCH</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASTEROID_RARE</Type>
@@ -25904,8 +25904,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ASTEROID_MINE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_PLATINUM_ORE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
@@ -26121,8 +26121,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_STARPORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ELLIS_MOON</Type>
@@ -26148,8 +26148,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_STARPORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqOrCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_OPEN_BORDERS</CivicOption>
@@ -26180,8 +26180,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_STARPORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqOrCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_OPEN_BORDERS</CivicOption>
@@ -26248,8 +26248,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_STARPORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_NEUROIMPLANTS</Bonus>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -26293,8 +26293,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ATOMIC_CLOCK</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_MILITARY_SATELLITES</BuildingType>
@@ -26409,8 +26409,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_STARPORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<FreeBonus>BONUS_MITHRIL</FreeBonus>
 			<iNumFreeBonuses>3</iNumFreeBonuses>
 		</BuildingInfo>
@@ -26440,8 +26440,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -26495,8 +26495,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -26555,8 +26555,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_NETWORK_NODE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STARGATE</Type>
@@ -26585,8 +26585,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_INTERGALACTIC_PORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_STARPUNK</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -26729,8 +26729,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ADVANCED_SHIELDING</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -26773,8 +26773,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_STARPORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EYE_IN_SKY</Type>
@@ -26806,8 +26806,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_EFFECT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -26885,8 +26885,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_STARPORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UNITED_FEDERATION_OF_PLANETS</Type>
@@ -26913,12 +26913,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_STARPORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_PALACE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERGALACTIC_CAPITOL</Type>
@@ -26944,12 +26944,12 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_INTERGALACTIC_PORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
+				</BuildingNeeded>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_PALACE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -26983,8 +26983,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_STARPORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<iRevIdxLocal>-20</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -27008,8 +27008,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_STARPORT</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASCENSION_GATE</Type>
@@ -27045,8 +27045,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ASCENDED_CITY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Bonus>BONUS_HUMAN_MOD_METAPHYSICAL</Bonus>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<iGlobalPopulationChange>-30</iGlobalPopulationChange>

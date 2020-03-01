@@ -673,8 +673,7 @@ def updateRevolutionIndices( argsList ) :
 				# TODO: support this with a popup question
 				pass
 			else:
-				capitalClass = CvUtil.findInfoTypeNum(GC.getBuildingClassInfo,GC.getNumBuildingClassInfos(),RevDefs.sXMLPalace)
-				eCapitalBuilding = GC.getCivilizationInfo(newOwner.getCivilizationType()).getCivilizationBuildings(capitalClass)
+				eCapitalBuilding = GC.getInfoTypeForString(RevDefs.sXMLPalace)
 				oldCapital = newOwner.getCapitalCity()
 				oldCapital.setNumRealBuilding(eCapitalBuilding, 0)
 				pCity.setNumRealBuilding(eCapitalBuilding, 1)

@@ -58,8 +58,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SHAMAN_CATHEDRAL</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -118,8 +118,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -183,8 +183,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SHAMAN_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -221,8 +221,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_BISON</BonusType>
@@ -262,8 +262,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_COW</BonusType>
@@ -303,8 +303,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_DEER</BonusType>
@@ -344,8 +344,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_PIG</BonusType>
@@ -385,8 +385,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_SHEEP</BonusType>
@@ -530,8 +530,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SHAMAN_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_BISON</BonusType>
@@ -568,8 +568,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SHAMAN_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_COW</BonusType>
@@ -606,8 +606,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SHAMAN_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_DEER</BonusType>
@@ -644,8 +644,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SHAMAN_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_PIG</BonusType>
@@ -682,8 +682,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SHAMAN_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_SHEEP</BonusType>
@@ -723,8 +723,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_RABBIT</BonusType>
@@ -764,8 +764,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
@@ -805,8 +805,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_WALRUS</BonusType>
@@ -843,8 +843,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SHAMAN_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_RABBIT</BonusType>
@@ -881,8 +881,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SHAMAN_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
@@ -919,8 +919,8 @@
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SHAMAN_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				<BuildingNeeded>>
-			<BuildingNeededs>>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_WALRUS</BonusType>
