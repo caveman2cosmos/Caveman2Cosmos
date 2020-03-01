@@ -8,7 +8,6 @@
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_BIOPUNK_EMBASSY</BuildingClass>
 			<Type>BUILDING_BIOPUNK_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -35,7 +34,6 @@
 			</CommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_PROTEIN_ARTIST</BuildingClass>
 			<Type>BUILDING_PROTEIN_ARTIST</Type>
 			<Description>TXT_KEY_BUILDING_PROTEIN_ARTIST</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PROTEIN_ARTIST_PEDIA</Civilopedia>
@@ -62,17 +60,16 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_PROTEIN_LAB</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_PROTEIN_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>6</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_MICROBIOLOGY_ARTIST</BuildingClass>
 			<Type>BUILDING_MICROBIOLOGY_ARTIST</Type>
 			<Description>TXT_KEY_BUILDING_MICROBIOLOGY_ARTIST</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MICROBIOLOGY_ARTIST_PEDIA</Civilopedia>
@@ -103,12 +100,12 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_MICROBIOLOGY_LAB</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_MICROBIOLOGY_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PropertyManipulators>
@@ -120,7 +117,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ANIMAL_DESIGNER</BuildingClass>
 			<Type>BUILDING_ANIMAL_DESIGNER</Type>
 			<Description>TXT_KEY_BUILDING_ANIMAL_DESIGNER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_DESIGNER_PEDIA</Civilopedia>
@@ -151,12 +147,12 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CLONING_LABORATORY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_CLONING_LABORATORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PropertyManipulators>
@@ -169,7 +165,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DESIGNED_ANIMAL_BATTLE_ARENA</BuildingClass>
 			<Type>BUILDING_DESIGNED_ANIMAL_BATTLE_ARENA</Type>
 			<Description>TXT_KEY_BUILDING_DESIGNED_ANIMAL_BATTLE_ARENA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DESIGNED_ANIMAL_BATTLE_ARENA_PEDIA</Civilopedia>
@@ -193,12 +188,12 @@
 			<CommerceModifiers>
 				<iCommerce>5</iCommerce>
 			</CommerceModifiers>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_DESIGNER</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_ANIMAL_DESIGNER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PropertyManipulators>
@@ -210,7 +205,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DESIGNED_ANIMAL_SHOW</BuildingClass>
 			<Type>BUILDING_DESIGNED_ANIMAL_SHOW</Type>
 			<Description>TXT_KEY_BUILDING_DESIGNED_ANIMAL_SHOW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DESIGNED_ANIMAL_SHOW_PEDIA</Civilopedia>
@@ -240,12 +234,12 @@
 					<iFreeSpecialistCount>3</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_DESIGNER</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_ANIMAL_DESIGNER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PropertyManipulators>
@@ -257,7 +251,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_PURE_ORGANIC_CITY</BuildingClass>
 			<Type>BUILDING_PURE_ORGANIC_CITY</Type>
 			<Description>TXT_KEY_BUILDING_PURE_ORGANIC_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PURE_ORGANIC_CITY_PEDIA</Civilopedia>
@@ -301,7 +294,6 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_BIOPUNK_LAB</BuildingClass>
 			<Type>BUILDING_BIOPUNK_LAB</Type>
 			<Description>TXT_KEY_BUILDING_BIOPUNK_LAB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BIOPUNK_LAB_PEDIA</Civilopedia>
@@ -322,12 +314,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceModifiers>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CLONING_LABORATORY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_CLONING_LABORATORY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PropertyManipulators>
@@ -340,7 +332,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_PHEROMONE_LAB</BuildingClass>
 			<Type>BUILDING_PHEROMONE_LAB</Type>
 			<Description>TXT_KEY_BUILDING_PHEROMONE_LAB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PHEROMONE_LAB_PEDIA</Civilopedia>
@@ -359,12 +350,12 @@
 				<iCommerce>10</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_BIOPUNK_LAB</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_BIOPUNK_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PropertyManipulators>
@@ -376,7 +367,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SPECIES_REVIVAL_LAB</BuildingClass>
 			<Type>BUILDING_SPECIES_REVIVAL_LAB</Type>
 			<Description>TXT_KEY_BUILDING_SPECIES_REVIVAL_LAB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SPECIES_REVIVAL_LAB_PEDIA</Civilopedia>
@@ -396,12 +386,12 @@
 				<iCommerce>10</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_BIOPUNK_LAB</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_BIOPUNK_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PropertyManipulators>
@@ -413,7 +403,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_WEAPONIZED_FLORA</BuildingClass>
 			<Type>BUILDING_WEAPONIZED_FLORA</Type>
 			<Description>TXT_KEY_BUILDING_WEAPONIZED_FLORA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WEAPONIZED_FLORA_PEDIA</Civilopedia>
@@ -433,12 +422,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_BIOPUNK_LAB</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_BIOPUNK_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<iAdjacentDamagePercent>20</iAdjacentDamagePercent>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>6</iPrereqPopulation>
@@ -452,7 +441,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DESIGNED_ANIMAL_ZOO</BuildingClass>
 			<Type>BUILDING_DESIGNED_ANIMAL_ZOO</Type>
 			<Description>TXT_KEY_BUILDING_DESIGNED_ANIMAL_ZOO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DESIGNED_ANIMAL_ZOO_PEDIA</Civilopedia>
@@ -477,16 +465,16 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceModifiers>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_DESIGNER</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_ANIMAL_DESIGNER</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_ZOO</BuildingClassType>
+				<BuildingNeeded>>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_ZOO</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PropertyManipulators>
@@ -503,7 +491,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CHIMERA_SURGERY_CLINIC</BuildingClass>
 			<Type>BUILDING_CHIMERA_SURGERY_CLINIC</Type>
 			<Description>TXT_KEY_BUILDING_CHIMERA_SURGERY_CLINIC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CHIMERA_SURGERY_CLINIC_PEDIA</Civilopedia>
@@ -529,16 +516,16 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceModifiers>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_PLASTICSURGERY_CLINIC</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_PLASTICSURGERY_CLINIC</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_BIOPUNK_LAB</BuildingClassType>
+				<BuildingNeeded>>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_BIOPUNK_LAB</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PropertyManipulators>

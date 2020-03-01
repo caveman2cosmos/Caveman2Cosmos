@@ -8,12 +8,12 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_DJENNE</Type>
-			<GlobalBuildingClassProductionModifiers>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_CAODAI_CATHEDRAL</BuildingClassType>
+			<GlobalBuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_CAODAI_CATHEDRAL</BuildingType>
 					<iProductionModifier>100</iProductionModifier>
-				</BuildingClassProductionModifier>
-			</GlobalBuildingClassProductionModifiers>
+				</BuildingProductionModifier>
+			</GlobalBuildingProductionModifiers>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

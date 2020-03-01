@@ -8,7 +8,6 @@
 	<BuildingInfos>
 		<!-- Mine Warfare Mod -->
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ADVANCED_MINE_TECHNOLOGY_CENTER</BuildingClass>
 			<Type>BUILDING_ADVANCED_MINE_TECHNOLOGY_CENTER</Type>
 			<Description>TXT_KEY_BUILDING_ADVANCED_MINE_TECHNOLOGY_CENTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ADVANCED_MINE_TECHNOLOGY_CENTER_PEDIA</Civilopedia>

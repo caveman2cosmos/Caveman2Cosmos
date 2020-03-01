@@ -4,33 +4,33 @@
 <!-- Copyright Firaxis Games 2005 -->
 <!-- -->
 <!-- Building Class Infos -->
-<Civ4BuildingClassInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
-	<BuildingClassInfos>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_HELLSMOUTH_SANCTUARY</Type>
+<Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
+	<BuildingInfos>
+		<BuildingInfo>
+			<Type>BUILDING_HELLSMOUTH_SANCTUARY</Type>
 			<Description>TXT_KEY_BUILDING_HELLSMOUTH_SANCTUARY</Description>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<DefaultBuilding>BUILDING_HELLSMOUTH_SANCTUARY</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_VOODOO_CATHEDRAL</Type>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_VOODOO_CATHEDRAL</Type>
 			<Description>TXT_KEY_BUILDING_VOODOO_CATHEDRAL</Description>
 			<DefaultBuilding>BUILDING_VOODOO_CATHEDRAL</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_VOODOO_MONASTERY</Type>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_VOODOO_MONASTERY</Type>
 			<Description>TXT_KEY_BUILDING_VOODOO_MONASTERY</Description>
 			<DefaultBuilding>BUILDING_VOODOO_MONASTERY</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_VOODOO_SHRINE</Type>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_VOODOO_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_VOODOO_SHRINE</Description>
 			<DefaultBuilding>BUILDING_VOODOO_SHRINE</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_VOODOO_TEMPLE</Type>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_VOODOO_TEMPLE</Type>
 			<Description>TXT_KEY_BUILDING_VOODOO_TEMPLE</Description>
 			<DefaultBuilding>BUILDING_VOODOO_TEMPLE</DefaultBuilding>
-		</BuildingClassInfo>
-	</BuildingClassInfos>
-</Civ4BuildingClassInfos>
+		</BuildingInfo>
+	</BuildingInfos>
+</Civ4BuildingInfos>

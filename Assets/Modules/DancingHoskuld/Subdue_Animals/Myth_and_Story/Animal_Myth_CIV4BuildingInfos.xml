@@ -4,7 +4,7 @@
 <Civ4BuildingInfos xmlns="x-schema:../../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ANTELOPE_MYTH</BuildingClass>
+			<Building>BUILDING_ANTELOPE_MYTH</Building>
 			<Type>BUILDING_ANTELOPE_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_ANTELOPE_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -17,39 +17,39 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
-			<FreeBuilding>BUILDINGCLASS_ANTELOPE_MYTH_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_ANTELOPE_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_GAZELLE_MYTH_EFFECT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_GEMSBOK_MYTH_EFFECT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_IMPALA_MYTH_EFFECT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_SAIGA_MYTH_EFFECT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_WILDEBEEST_MYTH_EFFECT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_ANTELOPE_MYTH_EFFECT</BuildingClassMustNotHave>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_GAZELLE_MYTH_EFFECT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_GEMSBOK_MYTH_EFFECT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_IMPALA_MYTH_EFFECT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_SAIGA_MYTH_EFFECT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_WILDEBEEST_MYTH_EFFECT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_ANTELOPE_MYTH_EFFECT</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
@@ -69,7 +69,7 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ANTELOPE_MYTH_EFFECT</BuildingClass>
+			<Building>BUILDING_ANTELOPE_MYTH_EFFECT</Building>
 			<Type>BUILDING_ANTELOPE_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_ANTELOPE_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -101,7 +101,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_BULL_MYTH</BuildingClass>
+			<Building>BUILDING_BULL_MYTH</Building>
 			<Type>BUILDING_BULL_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_BULL_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -109,7 +109,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BULL_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
-			<FreeBuilding>BUILDINGCLASS_BULL_MYTH_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_BULL_MYTH_EFFECT</FreeBuilding>
 			<iCost>-1</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -121,12 +121,12 @@
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_BULL_MYTH_EFFECT</BuildingClassMustNotHave>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_BULL_MYTH_EFFECT</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -144,7 +144,7 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_BULL_MYTH_EFFECT</BuildingClass>
+			<Building>BUILDING_BULL_MYTH_EFFECT</Building>
 			<Type>BUILDING_BULL_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_BULL_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
@@ -158,7 +158,7 @@
 			</MapCategoryTypes>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CAMEL_MYTH</BuildingClass>
+			<Building>BUILDING_CAMEL_MYTH</Building>
 			<Type>BUILDING_CAMEL_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_CAMEL_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -177,12 +177,12 @@
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_PALACE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -200,7 +200,7 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DEER_MYTH</BuildingClass>
+			<Building>BUILDING_DEER_MYTH</Building>
 			<Type>BUILDING_DEER_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_DEER_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -213,17 +213,17 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
-			<FreeBuilding>BUILDINGCLASS_DEER_MYTH_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_DEER_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_DEER_MYTH_EFFECT</BuildingClassMustNotHave>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_DEER_MYTH_EFFECT</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
@@ -243,7 +243,7 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DEER_MYTH_EFFECT</BuildingClass>
+			<Building>BUILDING_DEER_MYTH_EFFECT</Building>
 			<Type>BUILDING_DEER_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_DEER_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -275,7 +275,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ELEPHANT_MYTH</BuildingClass>
+			<Building>BUILDING_ELEPHANT_MYTH</Building>
 			<Type>BUILDING_ELEPHANT_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_ELEPHANT_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -288,27 +288,27 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
-			<FreeBuilding>BUILDINGCLASS_ELEPHANT_MYTH_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_ELEPHANT_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_AFRICANELEPHANT_MYTH_EFFECT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ASIANELEPHANT_MYTH_EFFECT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_ELEPHANT_MYTH_EFFECT</BuildingClassMustNotHave>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_AFRICANELEPHANT_MYTH_EFFECT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_ASIANELEPHANT_MYTH_EFFECT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_ELEPHANT_MYTH_EFFECT</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
@@ -328,7 +328,7 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ELEPHANT_MYTH_EFFECT</BuildingClass>
+			<Building>BUILDING_ELEPHANT_MYTH_EFFECT</Building>
 			<Type>BUILDING_ELEPHANT_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_ELEPHANT_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -360,7 +360,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_GOAT_MYTH</BuildingClass>
+			<Building>BUILDING_GOAT_MYTH</Building>
 			<Type>BUILDING_GOAT_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_GOAT_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -379,12 +379,12 @@
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_PALACE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -402,7 +402,7 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_HORSE_MYTH</BuildingClass>
+			<Building>BUILDING_HORSE_MYTH</Building>
 			<Type>BUILDING_HORSE_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_HORSE_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -421,12 +421,12 @@
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_PALACE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -444,7 +444,7 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_MARSUPIAL_MYTH</BuildingClass>
+			<Building>BUILDING_MARSUPIAL_MYTH</Building>
 			<Type>BUILDING_MARSUPIAL_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_MARSUPIAL_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -457,7 +457,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
-			<FreeBuilding>BUILDINGCLASS_MARSUPIAL_MYTH_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_MARSUPIAL_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -470,12 +470,12 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_MARSUPIAL_MYTH_EFFECT</BuildingClassMustNotHave>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_MARSUPIAL_MYTH_EFFECT</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_TRADE</PrereqTech>
@@ -487,7 +487,7 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_MARSUPIAL_MYTH_EFFECT</BuildingClass>
+			<Building>BUILDING_MARSUPIAL_MYTH_EFFECT</Building>
 			<Type>BUILDING_MARSUPIAL_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_MARSUPIAL_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -519,7 +519,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_OLD_MAN_MYTH</BuildingClass>
+			<Building>BUILDING_OLD_MAN_MYTH</Building>
 			<Type>BUILDING_OLD_MAN_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_OLD_MAN_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -538,12 +538,12 @@
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_PALACE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -561,7 +561,7 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SCAVENGER_MYTH</BuildingClass>
+			<Building>BUILDING_SCAVENGER_MYTH</Building>
 			<Type>BUILDING_SCAVENGER_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_SCAVENGER_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -574,7 +574,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
-			<FreeBuilding>BUILDINGCLASS_SCAVENGER_MYTH_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_SCAVENGER_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -587,12 +587,12 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_SCAVENGER_MYTH_EFFECT</BuildingClassMustNotHave>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_SCAVENGER_MYTH_EFFECT</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -604,7 +604,7 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SCAVENGER_MYTH_EFFECT</BuildingClass>
+			<Building>BUILDING_SCAVENGER_MYTH_EFFECT</Building>
 			<Type>BUILDING_SCAVENGER_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_SCAVENGER_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -636,7 +636,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SPOTTED_CAT_MYTH</BuildingClass>
+			<Building>BUILDING_SPOTTED_CAT_MYTH</Building>
 			<Type>BUILDING_SPOTTED_CAT_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_SPOTTED_CAT_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -649,41 +649,41 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
-			<FreeBuilding>BUILDINGCLASS_SPOTTED_CAT_MYTH_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_SPOTTED_CAT_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_JAGUAR_MYTH_EFFECT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CHEETAH_MYTH_EFFECT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_LYNX_MYTH_EFFECT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PANTHER_MYTH_EFFECT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_SNOW_LEOPARD_MYTH_EFFECT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_SPOTTED_CAT_MYTH_EFFECT</BuildingClassMustNotHave>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_JAGUAR_MYTH_EFFECT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_CHEETAH_MYTH_EFFECT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_LYNX_MYTH_EFFECT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_PANTHER_MYTH_EFFECT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_SNOW_LEOPARD_MYTH_EFFECT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_SPOTTED_CAT_MYTH_EFFECT</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -701,7 +701,7 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SPOTTED_CAT_MYTH_EFFECT</BuildingClass>
+			<Building>BUILDING_SPOTTED_CAT_MYTH_EFFECT</Building>
 			<Type>BUILDING_SPOTTED_CAT_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_SPOTTED_CAT_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -733,7 +733,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_TIGER_MYTH</BuildingClass>
+			<Building>BUILDING_TIGER_MYTH</Building>
 			<Type>BUILDING_TIGER_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_TIGER_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -746,25 +746,25 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
-			<FreeBuilding>BUILDINGCLASS_TIGER_MYTH_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_TIGER_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_TIGER_MYTH_EFFECT</BuildingClassMustNotHave>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_TIGER_MYTH_EFFECT</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_PALACE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				</BuildingNeeded>
+			</BuildingNeededs>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -782,7 +782,7 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_TIGER_MYTH_EFFECT</BuildingClass>
+			<Building>BUILDING_TIGER_MYTH_EFFECT</Building>
 			<Type>BUILDING_TIGER_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_TIGER_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -814,7 +814,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_WEASEL_MYTH</BuildingClass>
+			<Building>BUILDING_WEASEL_MYTH</Building>
 			<Type>BUILDING_WEASEL_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_WEASEL_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -827,31 +827,31 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
-			<FreeBuilding>BUILDINGCLASS_WEASEL_MYTH_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_WEASEL_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_SEA_OTTER_MYTH_EFFECT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_SKUNK_MYTH_EFFECT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_WOLVERINE_MYTH_EFFECT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_WEASEL_MYTH_EFFECT</BuildingClassMustNotHave>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_SEA_OTTER_MYTH_EFFECT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_SKUNK_MYTH_EFFECT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_WOLVERINE_MYTH_EFFECT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_WEASEL_MYTH_EFFECT</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
@@ -871,7 +871,7 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_WEASEL_MYTH_EFFECT</BuildingClass>
+			<Building>BUILDING_WEASEL_MYTH_EFFECT</Building>
 			<Type>BUILDING_WEASEL_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_WEASEL_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>

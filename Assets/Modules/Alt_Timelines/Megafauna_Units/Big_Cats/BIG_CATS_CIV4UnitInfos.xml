@@ -221,12 +221,12 @@
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<PrereqBuilding>BUILDING_BIG_CAT_TRAINER_EFFECT</PrereqBuilding>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_BARRACKS</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<PrereqBonuses>
 				<BonusType>BONUS_COPPER_WARES</BonusType>
 				<BonusType>BONUS_IRON_WARES</BonusType>
@@ -354,12 +354,12 @@
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<PrereqBuilding>BUILDING_BIG_CAT_TRAINER_EFFECT</PrereqBuilding>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_GARRISON</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_GARRISON</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<PrereqBonuses>
 				<BonusType>BONUS_COPPER_WARES</BonusType>
 				<BonusType>BONUS_IRON_WARES</BonusType>
@@ -510,12 +510,12 @@
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<PrereqBuilding>BUILDING_BIG_CAT_TRAINER_EFFECT</PrereqBuilding>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_POLICE_CAT</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_POLICE_CAT</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_CAT</BonusType>
@@ -694,12 +694,12 @@
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<PrereqBuilding>BUILDING_BIG_CAT_TRAINER_EFFECT</PrereqBuilding>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_RE_PET_SHOP</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_RE_PET_SHOP</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_CAT</BonusType>

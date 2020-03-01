@@ -4,13 +4,13 @@
 <!-- Copyright Firaxis Games 2005 -->
 <!-- -->
 <!-- Building Class Infos -->
-<Civ4BuildingClassInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
-	<BuildingClassInfos>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_ADVANCED_MINE_TECHNOLOGY_CENTER</Type>
+<Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
+	<BuildingInfos>
+		<BuildingInfo>
+			<Type>BUILDING_ADVANCED_MINE_TECHNOLOGY_CENTER</Type>
 			<Description>TXT_KEY_BUILDING_ADVANCED_MINE_TECHNOLOGY_CENTER</Description>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<DefaultBuilding>BUILDING_ADVANCED_MINE_TECHNOLOGY_CENTER</DefaultBuilding>
-		</BuildingClassInfo>
-	</BuildingClassInfos>
-</Civ4BuildingClassInfos>
+		</BuildingInfo>
+	</BuildingInfos>
+</Civ4BuildingInfos>

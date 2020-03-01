@@ -8,48 +8,48 @@
 <BuildingInfos>
 	<BuildingInfo>
 		<!-- Dependency -->
-		<BuildingClass>BUILDINGCLASS_DJENNE</BuildingClass>
+		<Building>BUILDING_DJENNE</Building>
 		<Type>BUILDING_DJENNE</Type>
 		<!-- Misc. Effects -->
-		<GlobalBuildingClassProductionModifiers>
-			<BuildingClassProductionModifier>
-				<BuildingClassType>BUILDINGCLASS_JAIN_CATHEDRAL</BuildingClassType>
+		<GlobalBuildingProductionModifiers>
+			<BuildingProductionModifier>
+				<BuildingType>BUILDING_JAIN_CATHEDRAL</BuildingType>
 				<iProductionModifier>100</iProductionModifier>
-			</BuildingClassProductionModifier>
-		</GlobalBuildingClassProductionModifiers>
+			</BuildingProductionModifier>
+		</GlobalBuildingProductionModifiers>
 	</BuildingInfo>
 	<BuildingInfo>
 		<!-- Dependency -->
-		<BuildingClass>BUILDINGCLASS_YOGA_SCHOOL</BuildingClass>
+		<Building>BUILDING_YOGA_SCHOOL</Building>
 		<Type>BUILDING_YOGA_SCHOOL</Type>
-		<PrereqOrBuildingClasses>
-			<PrereqOrBuildingClass>
-				<BuildingClassType>BUILDINGCLASS_JAIN_TEMPLE</BuildingClassType>
-				<bPrereqBuildingClass>1</bPrereqBuildingClass>
-			</PrereqOrBuildingClass>
-		</PrereqOrBuildingClasses>
+		<PrereqOrBuildings>
+			<PrereqOrBuilding>
+				<BuildingType>BUILDING_JAIN_TEMPLE</BuildingType>
+				<bPrereqBuilding>1</bPrereqBuilding>
+			</PrereqOrBuilding>
+		</PrereqOrBuildings>
 	</BuildingInfo>
 	<BuildingInfo>
 		<!-- Dependency -->
-		<BuildingClass>BUILDINGCLASS_NATIONAL_BELIEF_KARMA</BuildingClass>
+		<Building>BUILDING_NATIONAL_BELIEF_KARMA</Building>
 		<Type>BUILDING_NATIONAL_BELIEF_KARMA</Type>
-		<PrereqOrBuildingClasses>
-			<PrereqOrBuildingClass>
-				<BuildingClassType>BUILDINGCLASS_JAIN_TEMPLE</BuildingClassType>
-				<bPrereqBuildingClass>1</bPrereqBuildingClass>
-			</PrereqOrBuildingClass>
-		</PrereqOrBuildingClasses>
+		<PrereqOrBuildings>
+			<PrereqOrBuilding>
+				<BuildingType>BUILDING_JAIN_TEMPLE</BuildingType>
+				<bPrereqBuilding>1</bPrereqBuilding>
+			</PrereqOrBuilding>
+		</PrereqOrBuildings>
 	</BuildingInfo>
 	<BuildingInfo>
 		<!-- Dependency -->
-		<BuildingClass>BUILDINGCLASS_NATIONAL_BELIEF_REINCARNATION</BuildingClass>
+		<Building>BUILDING_NATIONAL_BELIEF_REINCARNATION</Building>
 		<Type>BUILDING_NATIONAL_BELIEF_REINCARNATION</Type>
-		<PrereqOrBuildingClasses>
-			<PrereqOrBuildingClass>
-				<BuildingClassType>BUILDINGCLASS_JAIN_TEMPLE</BuildingClassType>
-				<bPrereqBuildingClass>1</bPrereqBuildingClass>
-			</PrereqOrBuildingClass>
-		</PrereqOrBuildingClasses>
+		<PrereqOrBuildings>
+			<PrereqOrBuilding>
+				<BuildingType>BUILDING_JAIN_TEMPLE</BuildingType>
+				<bPrereqBuilding>1</bPrereqBuilding>
+			</PrereqOrBuilding>
+		</PrereqOrBuildings>
 	</BuildingInfo>
 </BuildingInfos>
 </Civ4BuildingInfos>

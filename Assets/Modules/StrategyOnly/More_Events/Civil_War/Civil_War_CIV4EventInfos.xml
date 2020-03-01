@@ -44,7 +44,7 @@
 			<UnitName/>
 			<UnitCombatPromotions/>
 			<UnitClassPromotions/>
-			<BuildingClass>NONE</BuildingClass>
+			<Building>NONE</Building>
 			<iBuildingChange>0</iBuildingChange>
 			<BuildingExtraYields/>
 			<BuildingExtraCommerces/>

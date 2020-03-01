@@ -3,17 +3,17 @@
 	<!-- Modified by Strategyonly -->
 	<!-- Building Class Infos -->
 	<!-- -->
-<Civ4BuildingClassInfos xmlns="x-schema:../../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
-	<BuildingClassInfos>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_MAPINGUARI_COMPOUND</Type>
+<Civ4BuildingInfos xmlns="x-schema:../../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
+	<BuildingInfos>
+		<BuildingInfo>
+			<Type>BUILDING_MAPINGUARI_COMPOUND</Type>
 			<Description>TXT_KEY_BUILDING_MAPINGUARI_COMPOUND</Description>
 			<DefaultBuilding>BUILDING_MAPINGUARI_COMPOUND</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_MAPINGUARI_GUARD</Type>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_MAPINGUARI_GUARD</Type>
 			<Description>TXT_KEY_BUILDING_MAPINGUARI_GUARD</Description>
 			<DefaultBuilding>BUILDING_MAPINGUARI_GUARD</DefaultBuilding>
-		</BuildingClassInfo>
-	</BuildingClassInfos>
-</Civ4BuildingClassInfos>
+		</BuildingInfo>
+	</BuildingInfos>
+</Civ4BuildingInfos>

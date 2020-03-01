@@ -8,7 +8,6 @@
 	<BuildingInfos>
 <!-- Buddhist -->
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CAVES</BuildingClass>
 			<Type>BUILDING_CAVES</Type>
 			<Description>TXT_KEY_BUILDING_CAVES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CAVES_PEDIA</Civilopedia>
@@ -86,7 +85,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
        <BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NARA</BuildingClass>
 			<Type>BUILDING_NARA</Type>
 			<Description>TXT_KEY_BUILDING_NARA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NARA_PEDIA</Civilopedia>
@@ -156,7 +154,6 @@
 		</BuildingInfo>
 <!-- Christian -->
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SAN_MARCOS_CATHEDRAL</BuildingClass>
 			<Type>BUILDING_SAN_MARCOS_CATHEDRAL</Type>
 			<Description>TXT_KEY_BUILDING_SAN_MARCOS_CATHEDRAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SAN_MARCOS_CATHEDRAL_PEDIA</Civilopedia>
@@ -223,12 +220,12 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CHRISTIAN_CATHEDRAL</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_CHRISTIAN_CATHEDRAL</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -253,7 +250,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_VATICAN_LIBRARY</BuildingClass>
 			<Type>BUILDING_VATICAN_LIBRARY</Type>
 			<Description>TXT_KEY_BUILDING_VATICAN_LIBRARY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VATICAN_LIBRARY_PEDIA</Civilopedia>
@@ -306,12 +302,12 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LIBRARY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_LIBRARY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -337,7 +333,6 @@
 		</BuildingInfo>
 <!-- Confusian -->
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CONFUCIAN_SCHOOL</BuildingClass>
 			<Type>BUILDING_CONFUCIAN_SCHOOL</Type>
 			<Description>TXT_KEY_BUILDING_CONFUCIAN_SCHOOL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CONFUCIAN_SCHOOL_PEDIA</Civilopedia>
@@ -436,7 +431,6 @@
 		</BuildingInfo>
 <!-- Judaism -->
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SOLOMON</BuildingClass>
 			<Type>BUILDING_SOLOMON</Type>
 			<Description>TXT_KEY_BUILDING_SOLOMON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SOLOMON_PEDIA</Civilopedia>
@@ -515,7 +509,6 @@
 		</BuildingInfo>
 <!-- Hindu -->
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_AKSHARDHAM</BuildingClass>
 			<Type>BUILDING_AKSHARDHAM</Type>
 			<Description>TXT_KEY_BUILDING_AKSHARDHAM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AKSHARDHAM_PEDIA</Civilopedia>
@@ -598,7 +591,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
  		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_MEENAKSHI</BuildingClass>
 			<Type>BUILDING_MEENAKSHI</Type>
 			<Description>TXT_KEY_BUILDING_MEENAKSHI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MEENAKSHI_PEDIA</Civilopedia>
@@ -687,7 +679,6 @@
 		</BuildingInfo>
 <!-- Islam -->
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_BLUE_MOSQUE</BuildingClass>
 			<Type>BUILDING_BLUE_MOSQUE</Type>
 			<Description>TXT_KEY_BUILDING_BLUE_MOSQUE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BLUE_MOSQUE_PEDIA</Civilopedia>
@@ -739,12 +730,12 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<ConstructSound>AS2D_BUILD_ISLAMIC</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_ISLAMIC_CATHEDRAL</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_ISLAMIC_CATHEDRAL</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -764,7 +755,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DESERT</BuildingClass>
 			<Type>BUILDING_DESERT</Type>
 			<Description>TXT_KEY_BUILDING_DESERT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DESERT_PEDIA</Civilopedia>
@@ -823,12 +813,12 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_ISLAMIC_CATHEDRAL</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_ISLAMIC_CATHEDRAL</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -848,7 +838,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SULTAN</BuildingClass>
 			<Type>BUILDING_SULTAN</Type>
 			<Description>TXT_KEY_BUILDING_SULTAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SULTAN_PEDIA</Civilopedia>
@@ -903,12 +892,12 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<ConstructSound>AS2D_BUILD_ISLAMIC</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_ISLAMIC_CATHEDRAL</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_ISLAMIC_CATHEDRAL</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -929,7 +918,6 @@
 		</BuildingInfo>
 <!-- Toaist -->
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_QUANZHEN</BuildingClass>
 			<Type>BUILDING_QUANZHEN</Type>
 			<Description>TXT_KEY_BUILDING_QUANZHEN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_QUANZHEN_PEDIA</Civilopedia>
@@ -1023,7 +1011,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_WUDANG</BuildingClass>
 			<Type>BUILDING_WUDANG</Type>
 			<Description>TXT_KEY_BUILDING_WUDANG</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WUDANG_PEDIA</Civilopedia>
@@ -1085,12 +1072,12 @@
 					<iExperience>3</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_TAOIST_MONASTERY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_TAOIST_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>

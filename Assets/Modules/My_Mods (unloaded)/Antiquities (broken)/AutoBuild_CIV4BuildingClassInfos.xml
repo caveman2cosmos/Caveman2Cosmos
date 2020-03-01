@@ -4,27 +4,27 @@
 <!-- Copyright Firaxis Games 2005 -->
 <!-- -->
 <!-- Building Class Infos -->
-<Civ4BuildingClassInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
-	<BuildingClassInfos>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_CAVE_NEAR_CITY</Type>
+<Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
+	<BuildingInfos>
+		<BuildingInfo>
+			<Type>BUILDING_CAVE_NEAR_CITY</Type>
 			<Description>TXT_KEY_BUILDING_CAVE_NEAR_CITY</Description>
 			<DefaultBuilding>BUILDING_CAVE_NEAR_CITY</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_CAVE_IN_NATION</Type>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_CAVE_IN_NATION</Type>
 			<Description>TXT_KEY_BUILDING_CAVE_IN_NATION</Description>
 			<DefaultBuilding>BUILDING_CAVE_IN_NATION</DefaultBuilding>
-		</BuildingClassInfo>
-		<BuildingClassInfo>
-			<Type>BUILDINGCLASS_ELITE_HOUSING</Type>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_ELITE_HOUSING</Type>
 			<Description>TXT_KEY_BUILDING_ELITE_HOUSING</Description>
 			<DefaultBuilding>BUILDING_ELITE_HOUSING</DefaultBuilding>
-		</BuildingClassInfo>
-		<!--BuildingClassInfo>
-			<Type>BUILDINGCLASS_ELITE_HOUSING_E1_EXISTS</Type>
+		</BuildingInfo>
+		<!--BuildingInfo>
+			<Type>BUILDING_ELITE_HOUSING_E1_EXISTS</Type>
 			<Description>TXT_KEY_BUILDING_ELITE_HOUSING_E1_EXISTS</Description>
 			<DefaultBuilding>BUILDING_ELITE_HOUSING_E1_EXISTS</DefaultBuilding>
-		</BuildingClassInfo-->
-	</BuildingClassInfos>
-</Civ4BuildingClassInfos>
+		</BuildingInfo-->
+	</BuildingInfos>
+</Civ4BuildingInfos>

@@ -415,7 +415,6 @@
 			<iConquestProb>70</iConquestProb>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CULTURE_LOCAL_ASIAN</BuildingClass>
 			<Type>BUILDING_CULTURE_LOCAL_ASIAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_ASIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
@@ -1822,7 +1821,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Australian) -->
-			<BuildingClass>BUILDINGCLASS_AUSTRALIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_AUSTRALIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -2134,7 +2132,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Basque) -->
-			<BuildingClass>BUILDINGCLASS_BASQUE_EMBASSY</BuildingClass>
 			<Type>BUILDING_BASQUE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -2175,7 +2172,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Belgian) -->
-			<BuildingClass>BUILDINGCLASS_BELGIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_BELGIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -2216,7 +2212,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Bengali) -->
-			<BuildingClass>BUILDINGCLASS_BENGALI_EMBASSY</BuildingClass>
 			<Type>BUILDING_BENGALI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -2263,7 +2258,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Benin) -->
-			<BuildingClass>BUILDINGCLASS_BENIN_EMBASSY</BuildingClass>
 			<Type>BUILDING_BENIN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -2310,7 +2304,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Berber) -->
-			<BuildingClass>BUILDINGCLASS_BERBER_EMBASSY</BuildingClass>
 			<Type>BUILDING_BERBER_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -2357,7 +2350,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Blackfoot) -->
-			<BuildingClass>BUILDINGCLASS_BLACKFOOT_EMBASSY</BuildingClass>
 			<Type>BUILDING_BLACKFOOT_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -2398,7 +2390,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Brazilian) -->
-			<BuildingClass>BUILDINGCLASS_BRAZILIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_BRAZILIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -2456,7 +2447,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Bulgarian) -->
-			<BuildingClass>BUILDINGCLASS_BULGARIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_BULGARIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -2497,7 +2487,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Burmese) -->
-			<BuildingClass>BUILDINGCLASS_BURMESE_EMBASSY</BuildingClass>
 			<Type>BUILDING_BURMESE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -2544,7 +2533,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Byzantine) -->
-			<BuildingClass>BUILDINGCLASS_BYZANTINE_EMBASSY</BuildingClass>
 			<Type>BUILDING_BYZANTINE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -2593,7 +2581,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Californian) -->
-			<BuildingClass>BUILDINGCLASS_CALIFORNIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_CALIFORNIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -2639,7 +2626,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Canadian) -->
-			<BuildingClass>BUILDINGCLASS_CANADIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_CANADIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -2707,7 +2693,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Cantonese) -->
-			<BuildingClass>BUILDINGCLASS_CANTONESE_EMBASSY</BuildingClass>
 			<Type>BUILDING_CANTONESE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -2748,7 +2733,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Carib) -->
-			<BuildingClass>BUILDINGCLASS_CARIB_EMBASSY</BuildingClass>
 			<Type>BUILDING_CARIB_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -2790,7 +2774,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Carthaginian) -->
-			<BuildingClass>BUILDINGCLASS_CARTHAGINIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_CARTHAGINIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -2839,7 +2822,6 @@
 <!-- No units
 		<BuildingInfo>
 			<!- Culture (Castilian) ->
-			<BuildingClass>BUILDINGCLASS_CASTILIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_CASTILIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -2881,7 +2863,6 @@
 -->
 		<BuildingInfo>
 			<!-- Culture (Celtic) -->
-			<BuildingClass>BUILDINGCLASS_CELTIC_EMBASSY</BuildingClass>
 			<Type>BUILDING_CELTIC_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -2955,7 +2936,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Cetacea Sapien) -->
-			<BuildingClass>BUILDINGCLASS_DOLPHIN_EMBASSY</BuildingClass>
 			<Type>BUILDING_DOLPHIN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -2986,7 +2966,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Ceylonese) -->
-			<BuildingClass>BUILDINGCLASS_CEYLONESE_EMBASSY</BuildingClass>
 			<Type>BUILDING_CEYLONESE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -3028,7 +3007,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Cham) -->
-			<BuildingClass>BUILDINGCLASS_CHAM_EMBASSY</BuildingClass>
 			<Type>BUILDING_CHAM_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -3075,7 +3053,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Cherokee) -->
-			<BuildingClass>BUILDINGCLASS_CHEROKEE_EMBASSY</BuildingClass>
 			<Type>BUILDING_CHEROKEE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -3122,7 +3099,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Cheyenne) -->
-			<BuildingClass>BUILDINGCLASS_CHEYENNE_EMBASSY</BuildingClass>
 			<Type>BUILDING_CHEYENNE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -3173,7 +3149,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Chinese) -->
-			<BuildingClass>BUILDINGCLASS_CHINESE_EMBASSY</BuildingClass>
 			<Type>BUILDING_CHINESE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -3281,7 +3256,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Chippewa) -->
-			<BuildingClass>BUILDINGCLASS_CHIPPEWA_EMBASSY</BuildingClass>
 			<Type>BUILDING_CHIPPEWA_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -3322,7 +3296,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Chola) -->
-			<BuildingClass>BUILDINGCLASS_CHOLA_EMBASSY</BuildingClass>
 			<Type>BUILDING_CHOLA_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -3363,7 +3336,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Chumash) -->
-			<BuildingClass>BUILDINGCLASS_CHUMASH_EMBASSY</BuildingClass>
 			<Type>BUILDING_CHUMASH_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -3405,7 +3377,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Colombian) -->
-			<BuildingClass>BUILDINGCLASS_COLOMBIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_COLOMBIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -3450,7 +3421,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Comanche) -->
-			<BuildingClass>BUILDINGCLASS_COMANCHE_EMBASSY</BuildingClass>
 			<Type>BUILDING_COMANCHE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -3501,7 +3471,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Confederates) -->
-			<BuildingClass>BUILDINGCLASS_CONFEDERATE_EMBASSY</BuildingClass>
 			<Type>BUILDING_CONFEDERATE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -3553,7 +3522,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Cree) -->
-			<BuildingClass>BUILDINGCLASS_CREE_EMBASSY</BuildingClass>
 			<Type>BUILDING_CREE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -3594,7 +3562,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Croatian) -->
-			<BuildingClass>BUILDINGCLASS_CROATIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_CROATIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -3635,7 +3602,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Cuban) -->
-			<BuildingClass>BUILDINGCLASS_CUBAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_CUBAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -3677,7 +3643,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Dahomey) -->
-			<BuildingClass>BUILDINGCLASS_DAHOMEY_EMBASSY</BuildingClass>
 			<Type>BUILDING_DAHOMEY_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -3719,7 +3684,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Danish) -->
-			<BuildingClass>BUILDINGCLASS_DANISH_EMBASSY</BuildingClass>
 			<Type>BUILDING_DANISH_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -3760,7 +3724,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Dene) -->
-			<BuildingClass>BUILDINGCLASS_DENE_EMBASSY</BuildingClass>
 			<Type>BUILDING_DENE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -3813,7 +3776,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Dutch) -->
-			<BuildingClass>BUILDINGCLASS_DUTCH_EMBASSY</BuildingClass>
 			<Type>BUILDING_DUTCH_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -3867,7 +3829,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Dzungar) -->
-			<BuildingClass>BUILDINGCLASS_DZUNGAR_EMBASSY</BuildingClass>
 			<Type>BUILDING_DZUNGAR_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -3918,7 +3879,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Egyptian) -->
-			<BuildingClass>BUILDINGCLASS_EGYPTIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_EGYPTIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -3998,7 +3958,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (English) -->
-			<BuildingClass>BUILDINGCLASS_ENGLISH_EMBASSY</BuildingClass>
 			<Type>BUILDING_ENGLISH_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -4105,7 +4064,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Epirus) -->
-			<BuildingClass>BUILDINGCLASS_EPIRUS_EMBASSY</BuildingClass>
 			<Type>BUILDING_EPIRUS_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -4146,7 +4104,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Ethiopian) -->
-			<BuildingClass>BUILDINGCLASS_ETHIOPIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_ETHIOPIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -4199,7 +4156,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Fijian) -->
-			<BuildingClass>BUILDINGCLASS_FIJIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_FIJIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -4241,7 +4197,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Finnish) -->
-			<BuildingClass>BUILDINGCLASS_FINNISH_EMBASSY</BuildingClass>
 			<Type>BUILDING_FINNISH_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -4282,7 +4237,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Franks) -->
-			<BuildingClass>BUILDINGCLASS_FRANKS_EMBASSY</BuildingClass>
 			<Type>BUILDING_FRANKS_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -4323,7 +4277,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (French) -->
-			<BuildingClass>BUILDINGCLASS_FRENCH_EMBASSY</BuildingClass>
 			<Type>BUILDING_FRENCH_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -4433,7 +4386,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Fulani) -->
-			<BuildingClass>BUILDINGCLASS_FULANI_EMBASSY</BuildingClass>
 			<Type>BUILDING_FULANI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -4480,7 +4432,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (German) -->
-			<BuildingClass>BUILDINGCLASS_GERMAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_GERMAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -4562,7 +4513,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Ghana) -->
-			<BuildingClass>BUILDINGCLASS_GHANA_EMBASSY</BuildingClass>
 			<Type>BUILDING_GHANA_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -4603,7 +4553,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Goth) -->
-			<BuildingClass>BUILDINGCLASS_GOTH_EMBASSY</BuildingClass>
 			<Type>BUILDING_GOTH_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -4644,7 +4593,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Greek) -->
-			<BuildingClass>BUILDINGCLASS_GREEK_EMBASSY</BuildingClass>
 			<Type>BUILDING_GREEK_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -4736,7 +4684,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Gypsy) -->
-			<BuildingClass>BUILDINGCLASS_GYPSY_EMBASSY</BuildingClass>
 			<Type>BUILDING_GYPSY_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -4777,7 +4724,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Haida) -->
-			<BuildingClass>BUILDINGCLASS_HAIDA_EMBASSY</BuildingClass>
 			<Type>BUILDING_HAIDA_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -4825,7 +4771,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Haitian) -->
-			<BuildingClass>BUILDINGCLASS_HATTIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_HATTIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -4875,7 +4820,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Hausa) -->
-			<BuildingClass>BUILDINGCLASS_HAUSA_EMBASSY</BuildingClass>
 			<Type>BUILDING_HAUSA_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -4916,7 +4860,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Hawaiian) -->
-			<BuildingClass>BUILDINGCLASS_HAWAIIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_HAWAIIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -4958,7 +4901,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Herero) -->
-			<BuildingClass>BUILDINGCLASS_HERERO_EMBASSY</BuildingClass>
 			<Type>BUILDING_HERERO_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -5005,7 +4947,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Hittite) -->
-			<BuildingClass>BUILDINGCLASS_HITTITE_EMBASSY</BuildingClass>
 			<Type>BUILDING_HITTITE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -5046,7 +4987,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Holy Roman) -->
-			<BuildingClass>BUILDINGCLASS_HOLYROMAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_HOLYROMAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -5106,7 +5046,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Hopi) -->
-			<BuildingClass>BUILDINGCLASS_HOPI_EMBASSY</BuildingClass>
 			<Type>BUILDING_HOPI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -5153,7 +5092,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Huastec) -->
-			<BuildingClass>BUILDINGCLASS_HUASTEC_EMBASSY</BuildingClass>
 			<Type>BUILDING_HUASTEC_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -5194,7 +5132,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Hun) -->
-			<BuildingClass>BUILDINGCLASS_HUN_EMBASSY</BuildingClass>
 			<Type>BUILDING_HUN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -5245,7 +5182,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Hungarian) -->
-			<BuildingClass>BUILDINGCLASS_HUNGARIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_HUNGARIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -5286,7 +5222,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Huron) -->
-			<BuildingClass>BUILDINGCLASS_HURON_EMBASSY</BuildingClass>
 			<Type>BUILDING_HURON_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -5333,7 +5268,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Icelandic) -->
-			<BuildingClass>BUILDINGCLASS_ICELANDIC_EMBASSY</BuildingClass>
 			<Type>BUILDING_ICELANDIC_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -5375,7 +5309,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Incan) -->
-			<BuildingClass>BUILDINGCLASS_INCAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_INCAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -5429,7 +5362,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Indian) -->
-			<BuildingClass>BUILDINGCLASS_INDIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_INDIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -5507,7 +5439,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Indonesian) -->
-			<BuildingClass>BUILDINGCLASS_INDONESIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_INDONESIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -5554,7 +5485,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Inuit) -->
-			<BuildingClass>BUILDINGCLASS_INUIT_EMBASSY</BuildingClass>
 			<Type>BUILDING_INUIT_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -5601,7 +5531,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Irish) -->
-			<BuildingClass>BUILDINGCLASS_IRISH_EMBASSY</BuildingClass>
 			<Type>BUILDING_IRISH_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -5643,7 +5572,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Iroquois) -->
-			<BuildingClass>BUILDINGCLASS_IROQUOIS_EMBASSY</BuildingClass>
 			<Type>BUILDING_IROQUOIS_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -5690,7 +5618,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Israeli) -->
-			<BuildingClass>BUILDINGCLASS_ISRAELI_EMBASSY</BuildingClass>
 			<Type>BUILDING_ISRAELI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -5748,7 +5675,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Italian) -->
-			<BuildingClass>BUILDINGCLASS_ITALIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_ITALIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -5796,7 +5722,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Jamaican) -->
-			<BuildingClass>BUILDINGCLASS_JAMAICAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_JAMAICAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -5846,7 +5771,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Japanese) -->
-			<BuildingClass>BUILDINGCLASS_JAPANESE_EMBASSY</BuildingClass>
 			<Type>BUILDING_JAPANESE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -5921,7 +5845,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Jivaro) -->
-			<BuildingClass>BUILDINGCLASS_JIVARO_EMBASSY</BuildingClass>
 			<Type>BUILDING_JIVARO_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -5968,7 +5891,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Jomon) -->
-			<BuildingClass>BUILDINGCLASS_JOMON_EMBASSY</BuildingClass>
 			<Type>BUILDING_JOMON_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -6010,7 +5932,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Jordanian) -->
-			<BuildingClass>BUILDINGCLASS_JORDANIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_JORDANIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -6057,7 +5978,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Joseon) -->
-			<BuildingClass>BUILDINGCLASS_JOSEON_EMBASSY</BuildingClass>
 			<Type>BUILDING_JOSEON_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -6098,7 +6018,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Kanem-Bornu) -->
-			<BuildingClass>BUILDINGCLASS_KANEMBORNU_EMBASSY</BuildingClass>
 			<Type>BUILDING_KANEMBORNU_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -6139,7 +6058,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Khmer) -->
-			<BuildingClass>BUILDINGCLASS_KHMER_EMBASSY</BuildingClass>
 			<Type>BUILDING_KHMER_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -6197,7 +6115,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Klamath) -->
-			<BuildingClass>BUILDINGCLASS_KLAMATH_EMBASSY</BuildingClass>
 			<Type>BUILDING_KLAMATH_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -6238,7 +6155,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Kongolese) -->
-			<BuildingClass>BUILDINGCLASS_KONGOLESE_EMBASSY</BuildingClass>
 			<Type>BUILDING_KONGOLESE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -6279,7 +6195,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Konjo) -->
-			<BuildingClass>BUILDINGCLASS_KONJO_EMBASSY</BuildingClass>
 			<Type>BUILDING_KONJO_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -6326,7 +6241,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Korean) -->
-			<BuildingClass>BUILDINGCLASS_KOREAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_KOREAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -6385,7 +6299,6 @@
 <!-- No units
 		<BuildingInfo>
 			<!- Culture (Leon) ->
-			<BuildingClass>BUILDINGCLASS_LEON_EMBASSY</BuildingClass>
 			<Type>BUILDING_LEON_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -6427,7 +6340,6 @@
 -->
 		<BuildingInfo>
 			<!-- Culture (Liangzhu) -->
-			<BuildingClass>BUILDINGCLASS_LIANGZHU_EMBASSY</BuildingClass>
 			<Type>BUILDING_LIANGZHU_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -6468,7 +6380,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Luba) -->
-			<BuildingClass>BUILDINGCLASS_LUBA_EMBASSY</BuildingClass>
 			<Type>BUILDING_LUBA_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -6515,7 +6426,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Lydian) -->
-			<BuildingClass>BUILDINGCLASS_LYDIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_LYDIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -6556,7 +6466,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Macedonian) -->
-			<BuildingClass>BUILDINGCLASS_MACEDONIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_MACEDONIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -6597,7 +6506,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Malaysian) -->
-			<BuildingClass>BUILDINGCLASS_MALAYSIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_MALAYSIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -6638,7 +6546,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Malinese) -->
-			<BuildingClass>BUILDINGCLASS_MALINESE_EMBASSY</BuildingClass>
 			<Type>BUILDING_MALINESE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -6694,7 +6601,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Manchurian) -->
-			<BuildingClass>BUILDINGCLASS_MANCHURIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_MANCHURIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -6735,7 +6641,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Mandan) -->
-			<BuildingClass>BUILDINGCLASS_MANDAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_MANDAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -6776,7 +6681,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Maori) -->
-			<BuildingClass>BUILDINGCLASS_MAORI_EMBASSY</BuildingClass>
 			<Type>BUILDING_MAORI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -6818,7 +6722,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Mapuche) -->
-			<BuildingClass>BUILDINGCLASS_MAPUCHE_EMBASSY</BuildingClass>
 			<Type>BUILDING_MAPUCHE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -6859,7 +6762,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Masai) -->
-			<BuildingClass>BUILDINGCLASS_MASAI_EMBASSY</BuildingClass>
 			<Type>BUILDING_MASAI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -6906,7 +6808,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Massagetae) -->
-			<BuildingClass>BUILDINGCLASS_MASSAGETAE_EMBASSY</BuildingClass>
 			<Type>BUILDING_MASSAGETAE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -6947,7 +6848,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Mayan) -->
-			<BuildingClass>BUILDINGCLASS_MAYAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_MAYAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -7009,7 +6909,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Merina) -->
-			<BuildingClass>BUILDINGCLASS_MERINA_EMBASSY</BuildingClass>
 			<Type>BUILDING_MERINA_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -7057,7 +6956,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Mexican) -->
-			<BuildingClass>BUILDINGCLASS_MEXICAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_MEXICAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -7109,7 +7007,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Minoan) -->
-			<BuildingClass>BUILDINGCLASS_MINOAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_MINOAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -7158,7 +7055,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Mississippi) -->
-			<BuildingClass>BUILDINGCLASS_MISSISSIPPI_EMBASSY</BuildingClass>
 			<Type>BUILDING_MISSISSIPPI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -7199,7 +7095,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Mixtec) -->
-			<BuildingClass>BUILDINGCLASS_MIXTEC_EMBASSY</BuildingClass>
 			<Type>BUILDING_MIXTEC_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -7240,7 +7135,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Moche) -->
-			<BuildingClass>BUILDINGCLASS_MOCHE_EMBASSY</BuildingClass>
 			<Type>BUILDING_MOCHE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -7288,7 +7182,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Mongolian) -->
-			<BuildingClass>BUILDINGCLASS_MONGOLIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_MONGOLIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -7339,7 +7232,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Moroccan) -->
-			<BuildingClass>BUILDINGCLASS_MOROCCAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_MOROCCAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -7380,7 +7272,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Mughal) -->
-			<BuildingClass>BUILDINGCLASS_MUGHAL_EMBASSY</BuildingClass>
 			<Type>BUILDING_MUGHAL_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -7434,7 +7325,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Mutapa) -->
-			<BuildingClass>BUILDINGCLASS_MUTAPA_EMBASSY</BuildingClass>
 			<Type>BUILDING_MUTAPA_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -7481,7 +7371,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Nama) -->
-			<BuildingClass>BUILDINGCLASS_NAMA_EMBASSY</BuildingClass>
 			<Type>BUILDING_NAMA_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -7522,7 +7411,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Navajo) -->
-			<BuildingClass>BUILDINGCLASS_NAVAJO_EMBASSY</BuildingClass>
 			<Type>BUILDING_NAVAJO_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -7569,7 +7457,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Nazca) -->
-			<BuildingClass>BUILDINGCLASS_NAZCA_EMBASSY</BuildingClass>
 			<Type>BUILDING_NAZCA_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -7616,7 +7503,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Neanderthal) -->
-			<BuildingClass>BUILDINGCLASS_NEANDERTHAL_EMBASSY</BuildingClass>
 			<Type>BUILDING_NEANDERTHAL_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -7645,7 +7531,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Nepalese) -->
-			<BuildingClass>BUILDINGCLASS_NEPAL_EMBASSY</BuildingClass>
 			<Type>BUILDING_NEPAL_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -7692,7 +7577,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (New Zealand) -->
-			<BuildingClass>BUILDINGCLASS_NEWZEALAND_EMBASSY</BuildingClass>
 			<Type>BUILDING_NEWZEALAND_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -7738,7 +7622,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Nok) -->
-			<BuildingClass>BUILDINGCLASS_NOK_EMBASSY</BuildingClass>
 			<Type>BUILDING_NOK_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -7779,7 +7662,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Nootka) -->
-			<BuildingClass>BUILDINGCLASS_NOOTKA_EMBASSY</BuildingClass>
 			<Type>BUILDING_NOOTKA_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -7826,7 +7708,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Norwegian) -->
-			<BuildingClass>BUILDINGCLASS_NORWEGIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_NORWEGIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -7867,7 +7748,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Nubian) -->
-			<BuildingClass>BUILDINGCLASS_NUBIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_NUBIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -7908,7 +7788,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Olmec) -->
-			<BuildingClass>BUILDINGCLASS_OLMEC_EMBASSY</BuildingClass>
 			<Type>BUILDING_OLMEC_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -7955,7 +7834,6 @@
 		</BuildingInfo>		
 		<BuildingInfo>
 			<!-- Culture (Ottoman) -->
-			<BuildingClass>BUILDINGCLASS_OTTOMAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_OTTOMAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -8015,7 +7893,6 @@
 		</BuildingInfo>		
 		<BuildingInfo>
 			<!-- Culture (Pakistani) -->
-			<BuildingClass>BUILDINGCLASS_PAKISTANI_EMBASSY</BuildingClass>
 			<Type>BUILDING_PAKISTANI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -8056,7 +7933,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Papuan) -->
-			<BuildingClass>BUILDINGCLASS_PAPUAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_PAPUAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -8103,7 +7979,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Parthian) -->
-			<BuildingClass>BUILDINGCLASS_PARTHIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_PARTHIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -8144,7 +8019,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Persian) -->
-			<BuildingClass>BUILDINGCLASS_PERSIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_PERSIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -8220,7 +8094,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Phoenician) -->
-			<BuildingClass>BUILDINGCLASS_PHOENICAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_PHOENICAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -8262,7 +8135,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Pictish) -->
-			<BuildingClass>BUILDINGCLASS_PICTISH_EMBASSY</BuildingClass>
 			<Type>BUILDING_PICTISH_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -8303,7 +8175,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Pima) -->
-			<BuildingClass>BUILDINGCLASS_PIMA_EMBASSY</BuildingClass>
 			<Type>BUILDING_PIMA_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -8344,7 +8215,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Polish) -->
-			<BuildingClass>BUILDINGCLASS_POLISH_EMBASSY</BuildingClass>
 			<Type>BUILDING_POLISH_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -8392,7 +8262,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Polynesian) -->
-			<BuildingClass>BUILDINGCLASS_POLYNESIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_POLYNESIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -8433,7 +8302,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Portuguese) -->
-			<BuildingClass>BUILDINGCLASS_PORTUGUESE_EMBASSY</BuildingClass>
 			<Type>BUILDING_PORTUGUESE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -8474,7 +8342,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Prussian) -->
-			<BuildingClass>BUILDINGCLASS_PRUSSIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_PRUSSIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -8515,7 +8382,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Qiang) -->
-			<BuildingClass>BUILDINGCLASS_QUANG_EMBASSY</BuildingClass>
 			<Type>BUILDING_QUANG_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -8556,7 +8422,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Quechua) -->
-			<BuildingClass>BUILDINGCLASS_QUECHUA_EMBASSY</BuildingClass>
 			<Type>BUILDING_QUECHUA_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -8603,7 +8468,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Rapa Nui) -->
-			<BuildingClass>BUILDINGCLASS_RAPANUI_EMBASSY</BuildingClass>
 			<Type>BUILDING_RAPANUI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -8652,7 +8516,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Rhodesian) -->
-			<BuildingClass>BUILDINGCLASS_RHODESIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_RHODESIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -8697,7 +8560,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Roman) -->
-			<BuildingClass>BUILDINGCLASS_ROMAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_ROMAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -8785,7 +8647,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Roxolani) -->
-			<BuildingClass>BUILDINGCLASS_ROXOLANI_EMBASSY</BuildingClass>
 			<Type>BUILDING_ROXOLANI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -8826,7 +8687,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Russian) -->
-			<BuildingClass>BUILDINGCLASS_RUSSIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_RUSSIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -8910,7 +8770,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Sami) -->
-			<BuildingClass>BUILDINGCLASS_SAMI_EMBASSY</BuildingClass>
 			<Type>BUILDING_SAMI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -8963,7 +8822,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Samoan) -->
-			<BuildingClass>BUILDINGCLASS_SAMOAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_SAMOAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -9005,7 +8863,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Sassanian) -->
-			<BuildingClass>BUILDINGCLASS_SASSANIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_SASSANIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -9052,7 +8909,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Saxon) -->
-			<BuildingClass>BUILDINGCLASS_SAXON_EMBASSY</BuildingClass>
 			<Type>BUILDING_SAXON_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -9093,7 +8949,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Scottish) -->
-			<BuildingClass>BUILDINGCLASS_SCOTTISH_EMBASSY</BuildingClass>
 			<Type>BUILDING_SCOTTISH_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -9147,7 +9002,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Scythian) -->
-			<BuildingClass>BUILDINGCLASS_SCYTHIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_SCYTHIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -9192,7 +9046,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Seminole) -->
-			<BuildingClass>BUILDINGCLASS_SEMINOLE_EMBASSY</BuildingClass>
 			<Type>BUILDING_SEMINOLE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -9239,7 +9092,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Shang) -->
-			<BuildingClass>BUILDINGCLASS_SHANG_EMBASSY</BuildingClass>
 			<Type>BUILDING_SHANG_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -9280,7 +9132,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Siamese) -->
-			<BuildingClass>BUILDINGCLASS_SIAMESE_EMBASSY</BuildingClass>
 			<Type>BUILDING_SIAMESE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -9338,7 +9189,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Siberian) -->
-			<BuildingClass>BUILDINGCLASS_SIBERIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_SIBERIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -9393,7 +9243,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Sioux) -->
-			<BuildingClass>BUILDINGCLASS_SIOUX_EMBASSY</BuildingClass>
 			<Type>BUILDING_SIOUX_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -9444,7 +9293,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Slovak) -->
-			<BuildingClass>BUILDINGCLASS_SLOVAK_EMBASSY</BuildingClass>
 			<Type>BUILDING_SLOVAK_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -9485,7 +9333,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Somali) -->
-			<BuildingClass>BUILDINGCLASS_SOMALI_EMBASSY</BuildingClass>
 			<Type>BUILDING_SOMALI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -9527,7 +9374,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Songhai) -->
-			<BuildingClass>BUILDINGCLASS_SONGHAI_EMBASSY</BuildingClass>
 			<Type>BUILDING_SONGHAI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -9568,7 +9414,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (South African) -->
-			<BuildingClass>BUILDINGCLASS_SOUTHAFRICAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_SOUTHAFRICAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -9613,7 +9458,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Soviet) -->
-			<BuildingClass>BUILDINGCLASS_SOVIET_EMBASSY</BuildingClass>
 			<Type>BUILDING_SOVIET_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -9666,7 +9510,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Spanish) -->
-			<BuildingClass>BUILDINGCLASS_SPANISH_EMBASSY</BuildingClass>
 			<Type>BUILDING_SPANISH_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -9726,7 +9569,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Spartan) -->
-			<BuildingClass>BUILDINGCLASS_SPARTAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_SPARTAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -9767,7 +9609,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Sumerian) -->
-			<BuildingClass>BUILDINGCLASS_SUMERIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_SUMERIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -9814,7 +9655,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Swahili) -->
-			<BuildingClass>BUILDINGCLASS_SWAHILI_EMBASSY</BuildingClass>
 			<Type>BUILDING_SWAHILI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -9855,7 +9695,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Swazi) -->
-			<BuildingClass>BUILDINGCLASS_SWAZI_EMBASSY</BuildingClass>
 			<Type>BUILDING_SWAZI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -9896,7 +9735,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Swiss) -->
-			<BuildingClass>BUILDINGCLASS_SWISS_EMBASSY</BuildingClass>
 			<Type>BUILDING_SWISS_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -9958,7 +9796,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Syrian) -->
-			<BuildingClass>BUILDINGCLASS_SYRIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_SYRIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -9999,7 +9836,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Tahitian) -->
-			<BuildingClass>BUILDINGCLASS_TAHITIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_TAHITIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -10041,7 +9877,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Taiwanese) -->
-			<BuildingClass>BUILDINGCLASS_TAIWANESE_EMBASSY</BuildingClass>
 			<Type>BUILDING_TAIWANESE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -10083,7 +9918,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Tamil) -->
-			<BuildingClass>BUILDINGCLASS_TAMIL_EMBASSY</BuildingClass>
 			<Type>BUILDING_TAMIL_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -10130,7 +9964,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Tarascan) -->
-			<BuildingClass>BUILDINGCLASS_TARASCAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_TARASCAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -10172,7 +10005,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Texan) -->
-			<BuildingClass>BUILDINGCLASS_TEXAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_TEXAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -10217,7 +10049,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Thai) -->
-			<BuildingClass>BUILDINGCLASS_THAI_EMBASSY</BuildingClass>
 			<Type>BUILDING_THAI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -10264,7 +10095,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Tibetan) -->
-			<BuildingClass>BUILDINGCLASS_TIBETAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_TIBETAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -10318,7 +10148,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Timurid) -->
-			<BuildingClass>BUILDINGCLASS_TIMURID_EMBASSY</BuildingClass>
 			<Type>BUILDING_TIMURID_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -10359,7 +10188,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Tlatilco) -->
-			<BuildingClass>BUILDINGCLASS_TLATILCO_EMBASSY</BuildingClass>
 			<Type>BUILDING_TLATILCO_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -10400,7 +10228,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Tlaxcaltec) -->
-			<BuildingClass>BUILDINGCLASS_TLAXCALTEC_EMBASSY</BuildingClass>
 			<Type>BUILDING_TLAXCALTEC_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -10441,7 +10268,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Toltec) -->
-			<BuildingClass>BUILDINGCLASS_TOLTEC_EMBASSY</BuildingClass>
 			<Type>BUILDING_TOLTEC_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -10482,7 +10308,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Tongan) -->
-			<BuildingClass>BUILDINGCLASS_TONGAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_TONGAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -10524,7 +10349,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Totonac) -->
-			<BuildingClass>BUILDINGCLASS_TOTONAC_EMBASSY</BuildingClass>
 			<Type>BUILDING_TOTONAC_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -10565,7 +10389,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Trojan) -->
-			<BuildingClass>BUILDINGCLASS_TROJAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_TROJAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -10606,7 +10429,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Tuareg) -->
-			<BuildingClass>BUILDINGCLASS_TUAREG_EMBASSY</BuildingClass>
 			<Type>BUILDING_TUAREG_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -10653,7 +10475,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Tupi) -->
-			<BuildingClass>BUILDINGCLASS_TUPI_EMBASSY</BuildingClass>
 			<Type>BUILDING_TUPI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -10700,7 +10521,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Turkmen) -->
-			<BuildingClass>BUILDINGCLASS_TURKMEN_EMBASSY</BuildingClass>
 			<Type>BUILDING_TURKMEN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -10741,7 +10561,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Uighur) -->
-			<BuildingClass>BUILDINGCLASS_UIGHUR_EMBASSY</BuildingClass>
 			<Type>BUILDING_UIGHUR_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -10782,7 +10601,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Venetian) -->
-			<BuildingClass>BUILDINGCLASS_VENETIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_VENETIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -10824,7 +10642,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Venezuelan) -->
-			<BuildingClass>BUILDINGCLASS_VENEZUELAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_VENEZUELAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -10865,7 +10682,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Vietnamese) -->
-			<BuildingClass>BUILDINGCLASS_VIETNAMESE_EMBASSY</BuildingClass>
 			<Type>BUILDING_VIETNAMESE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -10912,7 +10728,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Viking) -->
-			<BuildingClass>BUILDINGCLASS_VIKING_EMBASSY</BuildingClass>
 			<Type>BUILDING_VIKING_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -10976,7 +10791,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Wayana) -->
-			<BuildingClass>BUILDINGCLASS_WAYANA_EMBASSY</BuildingClass>
 			<Type>BUILDING_WAYANA_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -11017,7 +10831,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Welsh) -->
-			<BuildingClass>BUILDINGCLASS_WELSH_EMBASSY</BuildingClass>
 			<Type>BUILDING_WELSH_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -11058,7 +10871,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Xiongu) -->
-			<BuildingClass>BUILDINGCLASS_XIONGU_EMBASSY</BuildingClass>
 			<Type>BUILDING_XIONGU_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -11109,7 +10921,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Yaghan) -->
-			<BuildingClass>BUILDINGCLASS_YAGHAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_YAGHAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -11151,7 +10962,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Yamato) -->
-			<BuildingClass>BUILDINGCLASS_YAMATO_EMBASSY</BuildingClass>
 			<Type>BUILDING_YAMATO_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -11193,7 +11003,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Yanomami) -->
-			<BuildingClass>BUILDINGCLASS_YANOMAMI_EMBASSY</BuildingClass>
 			<Type>BUILDING_YANOMAMI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -11234,7 +11043,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Yemen) -->
-			<BuildingClass>BUILDINGCLASS_YEMEN_EMBASSY</BuildingClass>
 			<Type>BUILDING_YEMEN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -11275,7 +11083,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Zapotec) -->
-			<BuildingClass>BUILDINGCLASS_ZAPOTEC_EMBASSY</BuildingClass>
 			<Type>BUILDING_ZAPOTEC_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -11328,7 +11135,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Zulu) -->
-			<BuildingClass>BUILDINGCLASS_ZULU_EMBASSY</BuildingClass>
 			<Type>BUILDING_ZULU_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -11382,7 +11188,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Zuni) -->
-			<BuildingClass>BUILDINGCLASS_ZUNI_EMBASSY</BuildingClass>
 			<Type>BUILDING_ZUNI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -11423,7 +11228,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Abbasid) -->
-			<BuildingClass>BUILDINGCLASS_ABBASID_EMBASSY</BuildingClass>
 			<Type>BUILDING_ABBASID_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -11466,7 +11270,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Adena) -->
-			<BuildingClass>BUILDINGCLASS_ADENA_EMBASSY</BuildingClass>
 			<Type>BUILDING_ADENA_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -11509,7 +11312,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Afghanistan) -->
-			<BuildingClass>BUILDINGCLASS_AFGHANISTAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_AFGHANISTAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -11552,7 +11354,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Aksumite) -->
-			<BuildingClass>BUILDINGCLASS_AKSUMITE_EMBASSY</BuildingClass>
 			<Type>BUILDING_AKSUMITE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -11595,7 +11396,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Alacalufe) -->
-			<BuildingClass>BUILDINGCLASS_ALACALUFE_EMBASSY</BuildingClass>
 			<Type>BUILDING_ALACALUFE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -11638,7 +11438,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Albanian) -->
-			<BuildingClass>BUILDINGCLASS_ALBANIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_ALBANIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -11681,7 +11480,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Alemanni) -->
-			<BuildingClass>BUILDINGCLASS_ALEMANNI_EMBASSY</BuildingClass>
 			<Type>BUILDING_ALEMANNI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -11724,7 +11522,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Algier) -->
-			<BuildingClass>BUILDINGCLASS_ALGIER_EMBASSY</BuildingClass>
 			<Type>BUILDING_ALGIER_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -11767,7 +11564,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Amis) -->
-			<BuildingClass>BUILDINGCLASS_AMIS_EMBASSY</BuildingClass>
 			<Type>BUILDING_AMIS_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -11810,7 +11606,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Andamanese) -->
-			<BuildingClass>BUILDINGCLASS_ANDAMANESE_EMBASSY</BuildingClass>
 			<Type>BUILDING_ANDAMANESE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -11853,7 +11648,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Angolan) -->
-			<BuildingClass>BUILDINGCLASS_ANGOLAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_ANGOLAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -11896,7 +11690,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Aragon) -->
-			<BuildingClass>BUILDINGCLASS_ARAGON_EMBASSY</BuildingClass>
 			<Type>BUILDING_ARAGON_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -11939,7 +11732,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Avars) -->
-			<BuildingClass>BUILDINGCLASS_AVARS_EMBASSY</BuildingClass>
 			<Type>BUILDING_AVARS_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -11982,7 +11774,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Averni) -->
-			<BuildingClass>BUILDINGCLASS_AVERNI_EMBASSY</BuildingClass>
 			<Type>BUILDING_AVERNI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -12025,7 +11816,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Azande) -->
-			<BuildingClass>BUILDINGCLASS_AZANDE_EMBASSY</BuildingClass>
 			<Type>BUILDING_AZANDE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -12068,7 +11858,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Bahrain) -->
-			<BuildingClass>BUILDINGCLASS_BAHRAIN_EMBASSY</BuildingClass>
 			<Type>BUILDING_BAHRAIN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -12111,7 +11900,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Bactric) -->
-			<BuildingClass>BUILDINGCLASS_BACTRIC_EMBASSY</BuildingClass>
 			<Type>BUILDING_BACTRIC_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -12154,7 +11942,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Bangladesh) -->
-			<BuildingClass>BUILDINGCLASS_BANGLADESH_EMBASSY</BuildingClass>
 			<Type>BUILDING_BANGLADESH_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -12197,7 +11984,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Bashkir) -->
-			<BuildingClass>BUILDINGCLASS_BASHKIR_EMBASSY</BuildingClass>
 			<Type>BUILDING_BASHKIR_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -12240,7 +12026,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Batavi) -->
-			<BuildingClass>BUILDINGCLASS_BATAVI_EMBASSY</BuildingClass>
 			<Type>BUILDING_BATAVI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -12283,7 +12068,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Batek) -->
-			<BuildingClass>BUILDINGCLASS_BATEK_EMBASSY</BuildingClass>
 			<Type>BUILDING_BATEK_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -12326,7 +12110,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Bavarian) -->
-			<BuildingClass>BUILDINGCLASS_BAVARIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_BAVARIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -12369,7 +12152,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Bedouin) -->
-			<BuildingClass>BUILDINGCLASS_BEDOUIN_EMBASSY</BuildingClass>
 			<Type>BUILDING_BEDOUIN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -12412,7 +12194,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Belize) -->
-			<BuildingClass>BUILDINGCLASS_BELIZE_EMBASSY</BuildingClass>
 			<Type>BUILDING_BELIZE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -12455,7 +12236,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Bolivian) -->
-			<BuildingClass>BUILDINGCLASS_BOLIVIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_BOLIVIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -12498,7 +12278,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Breton) -->
-			<BuildingClass>BUILDINGCLASS_BRETON_EMBASSY</BuildingClass>
 			<Type>BUILDING_BRETON_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -12541,7 +12320,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Briton) -->
-			<BuildingClass>BUILDINGCLASS_BRITON_EMBASSY</BuildingClass>
 			<Type>BUILDING_BRITON_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -12584,7 +12362,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Burgundi) -->
-			<BuildingClass>BUILDINGCLASS_BURGUNDI_EMBASSY</BuildingClass>
 			<Type>BUILDING_BURGUNDI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -12627,7 +12404,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Cambeba) -->
-			<BuildingClass>BUILDINGCLASS_CAMBEBA_EMBASSY</BuildingClass>
 			<Type>BUILDING_CAMBEBA_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -12670,7 +12446,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Canari) -->
-			<BuildingClass>BUILDINGCLASS_CANARI_EMBASSY</BuildingClass>
 			<Type>BUILDING_CANARI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -12713,7 +12488,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Capayan) -->
-			<BuildingClass>BUILDINGCLASS_CAPAYAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_CAPAYAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -12756,7 +12530,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Caral_Supe) -->
-			<BuildingClass>BUILDINGCLASS_CARAL_SUPE_EMBASSY</BuildingClass>
 			<Type>BUILDING_CARAL_SUPE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -12799,7 +12572,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Catalonian) -->
-			<BuildingClass>BUILDINGCLASS_CATALONIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_CATALONIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -12842,7 +12614,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Celtiberian) -->
-			<BuildingClass>BUILDINGCLASS_CELTIBERIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_CELTIBERIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -12885,7 +12656,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Chachapoya) -->
-			<BuildingClass>BUILDINGCLASS_CHACHAPOYA_EMBASSY</BuildingClass>
 			<Type>BUILDING_CHACHAPOYA_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -12928,7 +12698,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Chavin) -->
-			<BuildingClass>BUILDINGCLASS_CHAVIN_EMBASSY</BuildingClass>
 			<Type>BUILDING_CHAVIN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -12971,7 +12740,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Chechenian) -->
-			<BuildingClass>BUILDINGCLASS_CHECHENIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_CHECHENIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -13014,7 +12782,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Chilean) -->
-			<BuildingClass>BUILDINGCLASS_CHILEAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_CHILEAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -13057,7 +12824,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Chimu) -->
-			<BuildingClass>BUILDINGCLASS_CHIMU_EMBASSY</BuildingClass>
 			<Type>BUILDING_CHIMU_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -13100,7 +12866,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Choresm) -->
-			<BuildingClass>BUILDINGCLASS_CHORESM_EMBASSY</BuildingClass>
 			<Type>BUILDING_CHORESM_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -13143,7 +12908,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Czech) -->
-			<BuildingClass>BUILDINGCLASS_CZECH_EMBASSY</BuildingClass>
 			<Type>BUILDING_CZECH_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -13186,7 +12950,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Dacian) -->
-			<BuildingClass>BUILDINGCLASS_DACIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_DACIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -13229,7 +12992,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Dayak) -->
-			<BuildingClass>BUILDINGCLASS_DAYAK_EMBASSY</BuildingClass>
 			<Type>BUILDING_DAYAK_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -13272,7 +13034,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Dravidian) -->
-			<BuildingClass>BUILDINGCLASS_DRAVIDIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_DRAVIDIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -13315,7 +13076,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Ecuadorian) -->
-			<BuildingClass>BUILDINGCLASS_ECUADORIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_ECUADORIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -13358,7 +13118,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Estonian) -->
-			<BuildingClass>BUILDINGCLASS_ESTONIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_ESTONIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -13401,7 +13160,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Etruscan) -->
-			<BuildingClass>BUILDINGCLASS_ETRUSCAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_ETRUSCAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -13444,7 +13202,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Fatimid) -->
-			<BuildingClass>BUILDINGCLASS_FATIMID_EMBASSY</BuildingClass>
 			<Type>BUILDING_FATIMID_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -13487,7 +13244,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Flemish) -->
-			<BuildingClass>BUILDINGCLASS_FLEMISH_EMBASSY</BuildingClass>
 			<Type>BUILDING_FLEMISH_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -13530,7 +13286,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Fuegian) -->
-			<BuildingClass>BUILDINGCLASS_FUEGIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_FUEGIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -13573,7 +13328,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Furawi) -->
-			<BuildingClass>BUILDINGCLASS_FURAWI_EMBASSY</BuildingClass>
 			<Type>BUILDING_FURAWI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -13616,7 +13370,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Galatian) -->
-			<BuildingClass>BUILDINGCLASS_GALATIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_GALATIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -13659,7 +13412,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Gaucho) -->
-			<BuildingClass>BUILDINGCLASS_GAUCHO_EMBASSY</BuildingClass>
 			<Type>BUILDING_GAUCHO_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -13702,7 +13454,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Georgian) -->
-			<BuildingClass>BUILDINGCLASS_GEORGIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_GEORGIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -13745,7 +13496,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Ghurid) -->
-			<BuildingClass>BUILDINGCLASS_GHURID_EMBASSY</BuildingClass>
 			<Type>BUILDING_GHURID_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -13788,7 +13538,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Gokturk) -->
-			<BuildingClass>BUILDINGCLASS_GOKTURK_EMBASSY</BuildingClass>
 			<Type>BUILDING_GOKTURK_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -13831,7 +13580,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Golden_Horde) -->
-			<BuildingClass>BUILDINGCLASS_GOLDEN_HORDE_EMBASSY</BuildingClass>
 			<Type>BUILDING_GOLDEN_HORDE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -13874,7 +13622,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Guam) -->
-			<BuildingClass>BUILDINGCLASS_GUAM_EMBASSY</BuildingClass>
 			<Type>BUILDING_GUAM_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -13917,7 +13664,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Guanches) -->
-			<BuildingClass>BUILDINGCLASS_GUANCHES_EMBASSY</BuildingClass>
 			<Type>BUILDING_GUANCHES_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -13960,7 +13706,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Guarani) -->
-			<BuildingClass>BUILDINGCLASS_GUARANI_EMBASSY</BuildingClass>
 			<Type>BUILDING_GUARANI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -14003,7 +13748,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Guatemala) -->
-			<BuildingClass>BUILDINGCLASS_GUATEMALA_EMBASSY</BuildingClass>
 			<Type>BUILDING_GUATEMALA_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -14046,7 +13790,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Guyana) -->
-			<BuildingClass>BUILDINGCLASS_GUYANA_EMBASSY</BuildingClass>
 			<Type>BUILDING_GUYANA_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -14089,7 +13832,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Helvetii) -->
-			<BuildingClass>BUILDINGCLASS_HELVETII_EMBASSY</BuildingClass>
 			<Type>BUILDING_HELVETII_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -14132,7 +13874,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Hemudu) -->
-			<BuildingClass>BUILDINGCLASS_HEMUDU_EMBASSY</BuildingClass>
 			<Type>BUILDING_HEMUDU_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -14175,7 +13916,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Himyarite) -->
-			<BuildingClass>BUILDINGCLASS_HIMYARITE_EMBASSY</BuildingClass>
 			<Type>BUILDING_HIMYARITE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -14218,7 +13958,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (HongKong) -->
-			<BuildingClass>BUILDINGCLASS_HONGKONG_EMBASSY</BuildingClass>
 			<Type>BUILDING_HONGKONG_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -14261,7 +14000,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Hopewell) -->
-			<BuildingClass>BUILDINGCLASS_HOPEWELL_EMBASSY</BuildingClass>
 			<Type>BUILDING_HOPEWELL_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -14304,7 +14042,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Hurrians) -->
-			<BuildingClass>BUILDINGCLASS_HURRIANS_EMBASSY</BuildingClass>
 			<Type>BUILDING_HURRIANS_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -14347,7 +14084,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Hyksosi) -->
-			<BuildingClass>BUILDINGCLASS_HYKSOSI_EMBASSY</BuildingClass>
 			<Type>BUILDING_HYKSOSI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -14390,7 +14126,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Illyrian) -->
-			<BuildingClass>BUILDINGCLASS_ILLYRIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_ILLYRIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -14433,7 +14168,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Ilocano) -->
-			<BuildingClass>BUILDINGCLASS_ILOCANO_EMBASSY</BuildingClass>
 			<Type>BUILDING_ILOCANO_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -14476,7 +14210,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Indus) -->
-			<BuildingClass>BUILDINGCLASS_INDUS_EMBASSY</BuildingClass>
 			<Type>BUILDING_INDUS_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -14519,7 +14252,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Iranian) -->
-			<BuildingClass>BUILDINGCLASS_IRANIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_IRANIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -14562,7 +14294,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Iraqui) -->
-			<BuildingClass>BUILDINGCLASS_IRAQUI_EMBASSY</BuildingClass>
 			<Type>BUILDING_IRAQUI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -14605,7 +14336,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Javanese) -->
-			<BuildingClass>BUILDINGCLASS_JAVANESE_EMBASSY</BuildingClass>
 			<Type>BUILDING_JAVANESE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -14648,7 +14378,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Jutes) -->
-			<BuildingClass>BUILDINGCLASS_JUTES_EMBASSY</BuildingClass>
 			<Type>BUILDING_JUTES_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -14691,7 +14420,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Kenyan) -->
-			<BuildingClass>BUILDINGCLASS_KENYAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_KENYAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -14734,7 +14462,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Khazakh) -->
-			<BuildingClass>BUILDINGCLASS_KHAZAK_EMBASSY</BuildingClass>
 			<Type>BUILDING_KHAZAK_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -14777,7 +14504,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Khazars) -->
-			<BuildingClass>BUILDINGCLASS_KHAZARS_EMBASSY</BuildingClass>
 			<Type>BUILDING_KHAZARS_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -14820,7 +14546,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Khitan) -->
-			<BuildingClass>BUILDINGCLASS_KHITAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_KHITAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -14863,7 +14588,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Killke) -->
-			<BuildingClass>BUILDINGCLASS_KILLKE_EMBASSY</BuildingClass>
 			<Type>BUILDING_KILLKE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -14906,7 +14630,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Kitara) -->
-			<BuildingClass>BUILDINGCLASS_KITARA_EMBASSY</BuildingClass>
 			<Type>BUILDING_KITARA_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -14949,7 +14672,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Kogi) -->
-			<BuildingClass>BUILDINGCLASS_KOGI_EMBASSY</BuildingClass>
 			<Type>BUILDING_KOGI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -14992,7 +14714,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Kurdish) -->
-			<BuildingClass>BUILDINGCLASS_KURDISH_EMBASSY</BuildingClass>
 			<Type>BUILDING_KURDISH_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -15035,7 +14756,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Kush) -->
-			<BuildingClass>BUILDINGCLASS_KUSH_EMBASSY</BuildingClass>
 			<Type>BUILDING_KUSH_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -15078,7 +14798,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Kushan) -->
-			<BuildingClass>BUILDINGCLASS_KUSHAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_KUSHAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -15121,7 +14840,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Kuwait) -->
-			<BuildingClass>BUILDINGCLASS_KUWAIT_EMBASSY</BuildingClass>
 			<Type>BUILDING_KUWAIT_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -15164,7 +14882,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Latvian) -->
-			<BuildingClass>BUILDINGCLASS_LATVIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_LATVIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -15207,7 +14924,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (La_Plata) -->
-			<BuildingClass>BUILDINGCLASS_LA_PLATA_EMBASSY</BuildingClass>
 			<Type>BUILDING_LA_PLATA_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -15250,7 +14966,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Lebanon) -->
-			<BuildingClass>BUILDINGCLASS_LEBANON_EMBASSY</BuildingClass>
 			<Type>BUILDING_LEBANON_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -15293,7 +15008,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Libyan) -->
-			<BuildingClass>BUILDINGCLASS_LIBYAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_LIBYAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -15336,7 +15050,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Lithuanian) -->
-			<BuildingClass>BUILDINGCLASS_LITHUANIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_LITHUANIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -15379,7 +15092,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Longobardi) -->
-			<BuildingClass>BUILDINGCLASS_LONGOBARDI_EMBASSY</BuildingClass>
 			<Type>BUILDING_LONGOBARDI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -15422,7 +15134,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Lule) -->
-			<BuildingClass>BUILDINGCLASS_LULE_EMBASSY</BuildingClass>
 			<Type>BUILDING_LULE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -15465,7 +15176,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Lunda) -->
-			<BuildingClass>BUILDINGCLASS_LUNDA_EMBASSY</BuildingClass>
 			<Type>BUILDING_LUNDA_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -15508,7 +15218,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Lusitani) -->
-			<BuildingClass>BUILDINGCLASS_LUSITANI_EMBASSY</BuildingClass>
 			<Type>BUILDING_LUSITANI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -15551,7 +15260,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Malagasy) -->
-			<BuildingClass>BUILDINGCLASS_MALAGASY_EMBASSY</BuildingClass>
 			<Type>BUILDING_MALAGASY_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -15594,7 +15302,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Mameluks) -->
-			<BuildingClass>BUILDINGCLASS_MAMELUKS_EMBASSY</BuildingClass>
 			<Type>BUILDING_MAMELUKS_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -15637,7 +15344,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Mani) -->
-			<BuildingClass>BUILDINGCLASS_MANI_EMBASSY</BuildingClass>
 			<Type>BUILDING_MANI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -15680,7 +15386,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Medes) -->
-			<BuildingClass>BUILDINGCLASS_MEDES_EMBASSY</BuildingClass>
 			<Type>BUILDING_MEDES_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -15723,7 +15428,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Melanesian) -->
-			<BuildingClass>BUILDINGCLASS_MELANESIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_MELANESIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -15766,7 +15470,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Micronesian) -->
-			<BuildingClass>BUILDINGCLASS_MICRONESIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_MICRONESIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -15809,7 +15512,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Ming) -->
-			<BuildingClass>BUILDINGCLASS_MING_EMBASSY</BuildingClass>
 			<Type>BUILDING_MING_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -15852,7 +15554,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Mittanni) -->
-			<BuildingClass>BUILDINGCLASS_MITTANNI_EMBASSY</BuildingClass>
 			<Type>BUILDING_MITTANNI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -15895,7 +15596,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Mocovi) -->
-			<BuildingClass>BUILDINGCLASS_MOCOVI_EMBASSY</BuildingClass>
 			<Type>BUILDING_MOCOVI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -15938,7 +15638,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Mohawk) -->
-			<BuildingClass>BUILDINGCLASS_MOHAWK_EMBASSY</BuildingClass>
 			<Type>BUILDING_MOHAWK_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -15981,7 +15680,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Mollo) -->
-			<BuildingClass>BUILDINGCLASS_MOLLO_EMBASSY</BuildingClass>
 			<Type>BUILDING_MOLLO_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -16024,7 +15722,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Muisca) -->
-			<BuildingClass>BUILDINGCLASS_MUISCA_EMBASSY</BuildingClass>
 			<Type>BUILDING_MUISCA_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -16067,7 +15764,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Murri) -->
-			<BuildingClass>BUILDINGCLASS_MURRI_EMBASSY</BuildingClass>
 			<Type>BUILDING_MURRI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -16110,7 +15806,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Nabateans) -->
-			<BuildingClass>BUILDINGCLASS_NABATEANS_EMBASSY</BuildingClass>
 			<Type>BUILDING_NABATEANS_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -16153,7 +15848,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Nahua) -->
-			<BuildingClass>BUILDINGCLASS_NAHUA_EMBASSY</BuildingClass>
 			<Type>BUILDING_NAHUA_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -16196,7 +15890,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Nigerian) -->
-			<BuildingClass>BUILDINGCLASS_NIGERIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_NIGERIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -16239,7 +15932,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Noongar) -->
-			<BuildingClass>BUILDINGCLASS_NOONGAR_EMBASSY</BuildingClass>
 			<Type>BUILDING_NOONGAR_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -16282,7 +15974,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Norman) -->
-			<BuildingClass>BUILDINGCLASS_NORMAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_NORMAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -16325,7 +16016,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Numidian) -->
-			<BuildingClass>BUILDINGCLASS_NUMIDIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_NUMIDIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -16368,7 +16058,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Odawa) -->
-			<BuildingClass>BUILDINGCLASS_ODAWA_EMBASSY</BuildingClass>
 			<Type>BUILDING_ODAWA_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -16411,7 +16100,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Oman) -->
-			<BuildingClass>BUILDINGCLASS_OMAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_OMAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -16454,7 +16142,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Ophir) -->
-			<BuildingClass>BUILDINGCLASS_OPHIR_EMBASSY</BuildingClass>
 			<Type>BUILDING_OPHIR_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -16497,7 +16184,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Orang Asli) -->
-			<BuildingClass>BUILDINGCLASS_ORANG_ASLI_EMBASSY</BuildingClass>
 			<Type>BUILDING_ORANG_ASLI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -16540,7 +16226,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Paiute) -->
-			<BuildingClass>BUILDINGCLASS_PAIUTE_EMBASSY</BuildingClass>
 			<Type>BUILDING_PAIUTE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -16583,7 +16268,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Palestinian) -->
-			<BuildingClass>BUILDINGCLASS_PALESTINIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_PALESTINIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -16626,7 +16310,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Panaman) -->
-			<BuildingClass>BUILDINGCLASS_PANAMAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_PANAMAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -16669,7 +16352,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Paraguayan) -->
-			<BuildingClass>BUILDINGCLASS_PARAGUAYAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_PARAGUAYAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -16712,7 +16394,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Pashtun) -->
-			<BuildingClass>BUILDINGCLASS_PASHTUN_EMBASSY</BuildingClass>
 			<Type>BUILDING_PASHTUN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -16755,7 +16436,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Peruvian) -->
-			<BuildingClass>BUILDINGCLASS_PERUVIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_PERUVIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -16798,7 +16478,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Filipino) -->
-			<BuildingClass>BUILDINGCLASS_PHILIPINO_EMBASSY</BuildingClass>
 			<Type>BUILDING_PHILIPINO_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -16841,7 +16520,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Philistines) -->
-			<BuildingClass>BUILDINGCLASS_PHILISTINES_EMBASSY</BuildingClass>
 			<Type>BUILDING_PHILISTINES_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -16884,7 +16562,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Pilaga) -->
-			<BuildingClass>BUILDINGCLASS_PILAGA_EMBASSY</BuildingClass>
 			<Type>BUILDING_PILAGA_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -16927,7 +16604,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Poverty Point) -->
-			<BuildingClass>BUILDINGCLASS_POVERTY_POINT_EMBASSY</BuildingClass>
 			<Type>BUILDING_POVERTY_POINT_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -16970,7 +16646,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Poya) -->
-			<BuildingClass>BUILDINGCLASS_POYA_EMBASSY</BuildingClass>
 			<Type>BUILDING_POYA_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -17013,7 +16688,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Puelche) -->
-			<BuildingClass>BUILDINGCLASS_PUELCHE_EMBASSY</BuildingClass>
 			<Type>BUILDING_PUELCHE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -17056,7 +16730,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Puntic) -->
-			<BuildingClass>BUILDINGCLASS_PUNTIC_EMBASSY</BuildingClass>
 			<Type>BUILDING_PUNTIC_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -17099,7 +16772,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Qin) -->
-			<BuildingClass>BUILDINGCLASS_QIN_EMBASSY</BuildingClass>
 			<Type>BUILDING_QIN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -17142,7 +16814,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Qing) -->
-			<BuildingClass>BUILDINGCLASS_QING_EMBASSY</BuildingClass>
 			<Type>BUILDING_QING_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -17185,7 +16856,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Quebec) -->
-			<BuildingClass>BUILDINGCLASS_QUEBEC_EMBASSY</BuildingClass>
 			<Type>BUILDING_QUEBEC_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -17228,7 +16898,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Querandi) -->
-			<BuildingClass>BUILDINGCLASS_QUERANDI_EMBASSY</BuildingClass>
 			<Type>BUILDING_QUERANDI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -17271,7 +16940,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Qulla) -->
-			<BuildingClass>BUILDINGCLASS_QULLA_EMBASSY</BuildingClass>
 			<Type>BUILDING_QULLA_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -17314,7 +16982,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Red_Ocher) -->
-			<BuildingClass>BUILDINGCLASS_RED_OCHER_EMBASSY</BuildingClass>
 			<Type>BUILDING_RED_OCHER_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -17358,7 +17025,6 @@
 <!-- Wrong flag
 		<BuildingInfo>
 			<!- Culture (Sabbatean) ->
-			<BuildingClass>BUILDINGCLASS_SABBATEAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_SABBATEAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -17402,7 +17068,6 @@
 -->
 		<BuildingInfo>
 			<!-- Culture (Safavids) -->
-			<BuildingClass>BUILDINGCLASS_SAFAVIDS_EMBASSY</BuildingClass>
 			<Type>BUILDING_SAFAVIDS_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -17445,7 +17110,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Saffarid) -->
-			<BuildingClass>BUILDINGCLASS_SAFFARID_EMBASSY</BuildingClass>
 			<Type>BUILDING_SAFFARID_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -17488,7 +17152,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Saka) -->
-			<BuildingClass>BUILDINGCLASS_SAKA_EMBASSY</BuildingClass>
 			<Type>BUILDING_SAKA_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -17531,7 +17194,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Sarmatians) -->
-			<BuildingClass>BUILDINGCLASS_SARMATIANS_EMBASSY</BuildingClass>
 			<Type>BUILDING_SARMATIANS_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -17574,7 +17236,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Seljuks) -->
-			<BuildingClass>BUILDINGCLASS_SELJUKS_EMBASSY</BuildingClass>
 			<Type>BUILDING_SELJUKS_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -17617,7 +17278,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Semang) -->
-			<BuildingClass>BUILDINGCLASS_SEMANG_EMBASSY</BuildingClass>
 			<Type>BUILDING_SEMANG_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -17660,7 +17320,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Senegali) -->
-			<BuildingClass>BUILDINGCLASS_SENEGALI_EMBASSY</BuildingClass>
 			<Type>BUILDING_SENEGALI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -17703,7 +17362,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Sennar) -->
-			<BuildingClass>BUILDINGCLASS_SENNAR_EMBASSY</BuildingClass>
 			<Type>BUILDING_SENNAR_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -17746,7 +17404,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Serbian) -->
-			<BuildingClass>BUILDINGCLASS_SERBIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_SERBIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -17789,7 +17446,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Sican) -->
-			<BuildingClass>BUILDINGCLASS_SICAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_SICAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -17832,7 +17488,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Sicilian) -->
-			<BuildingClass>BUILDINGCLASS_SICILIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_SICILIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -17875,7 +17530,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Sintashta) -->
-			<BuildingClass>BUILDINGCLASS_SINTASHTA_EMBASSY</BuildingClass>
 			<Type>BUILDING_SINTASHTA_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -17918,7 +17572,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Slovenian) -->
-			<BuildingClass>BUILDINGCLASS_SLOVENIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_SLOVENIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -17961,7 +17614,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Sudanese) -->
-			<BuildingClass>BUILDINGCLASS_SUDANESE_EMBASSY</BuildingClass>
 			<Type>BUILDING_SUDANESE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -18004,7 +17656,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Sundanese) -->
-			<BuildingClass>BUILDINGCLASS_SUNDANESE_EMBASSY</BuildingClass>
 			<Type>BUILDING_SUNDANESE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -18047,7 +17698,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Surinam) -->
-			<BuildingClass>BUILDINGCLASS_SURINAM_EMBASSY</BuildingClass>
 			<Type>BUILDING_SURINAM_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -18090,7 +17740,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Swedish) -->
-			<BuildingClass>BUILDINGCLASS_SWEDISH_EMBASSY</BuildingClass>
 			<Type>BUILDING_SWEDISH_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -18133,7 +17782,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Tagalog) -->
-			<BuildingClass>BUILDINGCLASS_TAGALOG_EMBASSY</BuildingClass>
 			<Type>BUILDING_TAGALOG_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -18176,7 +17824,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Tairona) -->
-			<BuildingClass>BUILDINGCLASS_TAIRONA_EMBASSY</BuildingClass>
 			<Type>BUILDING_TAIRONA_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -18219,7 +17866,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Tajiks) -->
-			<BuildingClass>BUILDINGCLASS_TAJIKS_EMBASSY</BuildingClass>
 			<Type>BUILDING_TAJIKS_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -18262,7 +17908,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Tang) -->
-			<BuildingClass>BUILDINGCLASS_TANG_EMBASSY</BuildingClass>
 			<Type>BUILDING_TANG_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -18305,7 +17950,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Tanzanian) -->
-			<BuildingClass>BUILDINGCLASS_TANZANIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_TANZANIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -18348,7 +17992,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Tasmanian) -->
-			<BuildingClass>BUILDINGCLASS_TASMANIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_TASMANIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -18391,7 +18034,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Tatars) -->
-			<BuildingClass>BUILDINGCLASS_TATARS_EMBASSY</BuildingClass>
 			<Type>BUILDING_TATARS_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -18434,7 +18076,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Thracian) -->
-			<BuildingClass>BUILDINGCLASS_THRACIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_THRACIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -18477,7 +18118,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Three_Kingdoms) -->
-			<BuildingClass>BUILDINGCLASS_THREE_KINGDOMS_EMBASSY</BuildingClass>
 			<Type>BUILDING_THREE_KINGDOMS_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -18520,7 +18160,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Tiwi) -->
-			<BuildingClass>BUILDINGCLASS_TIWI_EMBASSY</BuildingClass>
 			<Type>BUILDING_TIWI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -18563,7 +18202,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Toba) -->
-			<BuildingClass>BUILDINGCLASS_TOBA_EMBASSY</BuildingClass>
 			<Type>BUILDING_TOBA_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -18606,7 +18244,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Transoxanian) -->
-			<BuildingClass>BUILDINGCLASS_TRANSOXANIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_TRANSOXANIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -18649,7 +18286,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Tucano) -->
-			<BuildingClass>BUILDINGCLASS_TUCANO_EMBASSY</BuildingClass>
 			<Type>BUILDING_TUCANO_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -18692,7 +18328,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Tungus) -->
-			<BuildingClass>BUILDINGCLASS_TUNGUS_EMBASSY</BuildingClass>
 			<Type>BUILDING_TUNGUS_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -18735,7 +18370,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Tunisian) -->
-			<BuildingClass>BUILDINGCLASS_TUNISIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_TUNISIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -18778,7 +18412,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Turkish) -->
-			<BuildingClass>BUILDINGCLASS_TURKISH_EMBASSY</BuildingClass>
 			<Type>BUILDING_TURKISH_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -18821,7 +18454,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Ukrainian) -->
-			<BuildingClass>BUILDINGCLASS_UKRAINIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_UKRAINIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -18864,7 +18496,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Uruguayan) -->
-			<BuildingClass>BUILDINGCLASS_URUGUAYAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_URUGUAYAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -18907,7 +18538,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Uzbeks) -->
-			<BuildingClass>BUILDINGCLASS_UZBEKS_EMBASSY</BuildingClass>
 			<Type>BUILDING_UZBEKS_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -18950,7 +18580,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Valdivia) -->
-			<BuildingClass>BUILDINGCLASS_VALDIVIA_EMBASSY</BuildingClass>
 			<Type>BUILDING_VALDIVIA_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -18993,7 +18622,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Vanatu) -->
-			<BuildingClass>BUILDINGCLASS_VANATU_EMBASSY</BuildingClass>
 			<Type>BUILDING_VANATU_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -19036,7 +18664,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Vandal) -->
-			<BuildingClass>BUILDINGCLASS_VANDAL_EMBASSY</BuildingClass>
 			<Type>BUILDING_VANDAL_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -19079,7 +18706,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Saudi) -->
-			<BuildingClass>BUILDINGCLASS_SAUDI_EMBASSY</BuildingClass>
 			<Type>BUILDING_SAUDI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -19122,7 +18748,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Wallachian) -->
-			<BuildingClass>BUILDINGCLASS_WALLACHIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_WALLACHIAN_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -19165,7 +18790,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Waray) -->
-			<BuildingClass>BUILDINGCLASS_WARAY_EMBASSY</BuildingClass>
 			<Type>BUILDING_WARAY_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -19208,7 +18832,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Wari) -->
-			<BuildingClass>BUILDINGCLASS_WARI_EMBASSY</BuildingClass>
 			<Type>BUILDING_WARI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -19251,7 +18874,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Wayuu) -->
-			<BuildingClass>BUILDINGCLASS_WAYUU_EMBASSY</BuildingClass>
 			<Type>BUILDING_WAYUU_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -19294,7 +18916,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Xia) -->
-			<BuildingClass>BUILDINGCLASS_XIA_EMBASSY</BuildingClass>
 			<Type>BUILDING_XIA_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -19337,7 +18958,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Xianbei) -->
-			<BuildingClass>BUILDINGCLASS_XIANBEI_EMBASSY</BuildingClass>
 			<Type>BUILDING_XIANBEI_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -19380,7 +19000,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Yagua) -->
-			<BuildingClass>BUILDINGCLASS_YAGUA_EMBASSY</BuildingClass>
 			<Type>BUILDING_YAGUA_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -19423,7 +19042,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Yolngu) -->
-			<BuildingClass>BUILDINGCLASS_YOLNGU_EMBASSY</BuildingClass>
 			<Type>BUILDING_YOLNGU_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -19466,7 +19084,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Zanzibar) -->
-			<BuildingClass>BUILDINGCLASS_ZANZIBAR_EMBASSY</BuildingClass>
 			<Type>BUILDING_ZANZIBAR_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -19509,7 +19126,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Zenu) -->
-			<BuildingClass>BUILDINGCLASS_ZENU_EMBASSY</BuildingClass>
 			<Type>BUILDING_ZENU_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
@@ -19552,7 +19168,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Zimbabwe) -->
-			<BuildingClass>BUILDINGCLASS_ZIMBABWE_EMBASSY</BuildingClass>
 			<Type>BUILDING_ZIMBABWE_EMBASSY</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>

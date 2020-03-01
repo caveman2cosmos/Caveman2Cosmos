@@ -7,7 +7,6 @@
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_CATHEDRAL2</BuildingClass>
 			<Type>BUILDING_DRUID_CATHEDRAL2</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CATHEDRAL_II</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_DRUID_CATHEDRAL2</Description>
@@ -47,18 +46,18 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_DRUID_CATHEDRAL</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_DRUID_CATHEDRAL</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_CATHEDRAL</BuildingClassType>
+				</PrereqBuilding>
+			</PrereqBuildings>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_CATHEDRAL</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_WHEAT</BonusType>
@@ -116,7 +115,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_CATHEDRAL</BuildingClass>
 			<Type>BUILDING_DRUID_CATHEDRAL</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CATHEDRAL_II</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_DRUID_CATHEDRAL</Description>
@@ -155,18 +153,18 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_DRUID_MONASTERY</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_MONASTERY</BuildingClassType>
+				</PrereqBuilding>
+			</PrereqBuildings>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -182,7 +180,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY</BuildingClass>
 			<Type>BUILDING_DRUID_MONASTERY</Type>
 			<SpecialBuildingType>SPECIALBUILDING_MONASTERY_II</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY</Description>
@@ -220,12 +217,12 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_TEMPLE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -241,7 +238,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_WHEAT</BuildingClass>
 			<Type>BUILDING_DRUID_MONASTERY_WHEAT</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_WHEAT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
@@ -259,12 +255,12 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_WHEAT</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_MONASTERY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -277,7 +273,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_BARLEY</BuildingClass>
 			<Type>BUILDING_DRUID_MONASTERY_BARLEY</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_BARLEY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
@@ -295,12 +290,12 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_BARLEY</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_MONASTERY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -313,7 +308,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_CORN</BuildingClass>
 			<Type>BUILDING_DRUID_MONASTERY_CORN</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_CORN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
@@ -331,12 +325,12 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_CORN</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_MONASTERY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -349,7 +343,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_RICE</BuildingClass>
 			<Type>BUILDING_DRUID_MONASTERY_RICE</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_RICE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
@@ -367,12 +360,12 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_RICE</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_MONASTERY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -385,7 +378,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_POTATO</BuildingClass>
 			<Type>BUILDING_DRUID_MONASTERY_POTATO</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_POTATO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
@@ -403,12 +395,12 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_POTATOES</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_MONASTERY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -421,7 +413,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_SHRINE</BuildingClass>
 			<Type>BUILDING_DRUID_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_SHRINE_PEDIA</Civilopedia>
@@ -474,7 +465,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_TEMPLE</BuildingClass>
 			<Type>BUILDING_DRUID_TEMPLE</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
@@ -524,7 +514,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_TEMPLE_WHEAT</BuildingClass>
 			<Type>BUILDING_DRUID_TEMPLE_WHEAT</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_WHEAT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
@@ -539,12 +528,12 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_WHEAT</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_TEMPLE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_WHEAT</BonusType>
@@ -563,7 +552,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_TEMPLE_BARLEY</BuildingClass>
 			<Type>BUILDING_DRUID_TEMPLE_BARLEY</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_BARLEY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
@@ -578,12 +566,12 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_BARLEY</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_TEMPLE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_BARLEY</BonusType>
@@ -602,7 +590,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_TEMPLE_CORN</BuildingClass>
 			<Type>BUILDING_DRUID_TEMPLE_CORN</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_CORN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
@@ -617,12 +604,12 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_CORN</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_TEMPLE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_CORN</BonusType>
@@ -641,7 +628,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_TEMPLE_RICE</BuildingClass>
 			<Type>BUILDING_DRUID_TEMPLE_RICE</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_RICE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
@@ -656,12 +642,12 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_RICE</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_TEMPLE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_RICE</BonusType>
@@ -680,7 +666,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_TEMPLE_POTATO</BuildingClass>
 			<Type>BUILDING_DRUID_TEMPLE_POTATO</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_POTATO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
@@ -695,12 +680,12 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_POTATOES</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_TEMPLE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_POTATOES</BonusType>
@@ -719,7 +704,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_ALMOND</BuildingClass>
 			<Type>BUILDING_DRUID_MONASTERY_ALMOND</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_ALMOND</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
@@ -735,12 +719,12 @@
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_ALMONDS</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_MONASTERY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -753,7 +737,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_TEMPLE_ALMOND</BuildingClass>
 			<Type>BUILDING_DRUID_TEMPLE_ALMOND</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_ALMOND</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
@@ -766,12 +749,12 @@
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_ALMONDS</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_TEMPLE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_ALMONDS</BonusType>
@@ -790,7 +773,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_APPLE</BuildingClass>
 			<Type>BUILDING_DRUID_MONASTERY_APPLE</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_APPLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
@@ -806,12 +788,12 @@
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_APPLE</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_MONASTERY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -824,7 +806,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_TEMPLE_APPLE</BuildingClass>
 			<Type>BUILDING_DRUID_TEMPLE_APPLE</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_APPLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
@@ -837,12 +818,12 @@
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_APPLE</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_TEMPLE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_APPLE</BonusType>
@@ -861,7 +842,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_BANANA</BuildingClass>
 			<Type>BUILDING_DRUID_MONASTERY_BANANA</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_BANANA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
@@ -877,12 +857,12 @@
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_BANANA</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_MONASTERY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -895,7 +875,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_TEMPLE_BANANA</BuildingClass>
 			<Type>BUILDING_DRUID_TEMPLE_BANANA</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_BANANA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
@@ -908,12 +887,12 @@
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_BANANA</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_TEMPLE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_BANANA</BonusType>
@@ -932,7 +911,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_COCONUT</BuildingClass>
 			<Type>BUILDING_DRUID_MONASTERY_COCONUT</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_COCONUT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
@@ -948,12 +926,12 @@
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_COCONUT</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_MONASTERY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -966,7 +944,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_TEMPLE_COCONUT</BuildingClass>
 			<Type>BUILDING_DRUID_TEMPLE_COCONUT</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_COCONUT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
@@ -979,12 +956,12 @@
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_COCONUT</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_TEMPLE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_COCONUT</BonusType>
@@ -1003,7 +980,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_DATES</BuildingClass>
 			<Type>BUILDING_DRUID_MONASTERY_DATES</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_DATES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
@@ -1019,12 +995,12 @@
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_DATES</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_MONASTERY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -1037,7 +1013,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_TEMPLE_DATES</BuildingClass>
 			<Type>BUILDING_DRUID_TEMPLE_DATES</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_DATES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
@@ -1050,12 +1025,12 @@
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_DATES</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_TEMPLE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_DATES</BonusType>
@@ -1074,7 +1049,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_FIG</BuildingClass>
 			<Type>BUILDING_DRUID_MONASTERY_FIG</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_FIG</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
@@ -1090,12 +1064,12 @@
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_FIG</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_MONASTERY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -1108,7 +1082,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_TEMPLE_FIG</BuildingClass>
 			<Type>BUILDING_DRUID_TEMPLE_FIG</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_FIG</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
@@ -1121,12 +1094,12 @@
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_FIG</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_TEMPLE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_FIG</BonusType>
@@ -1145,7 +1118,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_GRAPES</BuildingClass>
 			<Type>BUILDING_DRUID_MONASTERY_GRAPES</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_GRAPES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
@@ -1161,12 +1133,12 @@
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_GRAPES</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_MONASTERY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -1179,7 +1151,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_TEMPLE_GRAPES</BuildingClass>
 			<Type>BUILDING_DRUID_TEMPLE_GRAPES</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_GRAPES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
@@ -1192,12 +1163,12 @@
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_GRAPES</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_TEMPLE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_GRAPES</BonusType>
@@ -1216,7 +1187,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_GUAVA</BuildingClass>
 			<Type>BUILDING_DRUID_MONASTERY_GUAVA</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_GUAVA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
@@ -1232,12 +1202,12 @@
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_GUAVAS</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_MONASTERY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -1250,7 +1220,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_TEMPLE_GUAVA</BuildingClass>
 			<Type>BUILDING_DRUID_TEMPLE_GUAVA</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_GUAVA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
@@ -1263,12 +1232,12 @@
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_GUAVAS</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_TEMPLE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_GUAVAS</BonusType>
@@ -1287,7 +1256,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_LEMON</BuildingClass>
 			<Type>BUILDING_DRUID_MONASTERY_LEMON</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_LEMON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
@@ -1303,12 +1271,12 @@
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_LEMONS</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_MONASTERY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -1321,7 +1289,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_TEMPLE_LEMON</BuildingClass>
 			<Type>BUILDING_DRUID_TEMPLE_LEMON</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_LEMON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
@@ -1334,12 +1301,12 @@
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_LEMONS</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_TEMPLE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_LEMONS</BonusType>
@@ -1358,7 +1325,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_MANGO</BuildingClass>
 			<Type>BUILDING_DRUID_MONASTERY_MANGO</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_MANGO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
@@ -1374,12 +1340,12 @@
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_MANGO</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_MONASTERY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -1392,7 +1358,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_TEMPLE_MANGO</BuildingClass>
 			<Type>BUILDING_DRUID_TEMPLE_MANGO</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_MANGO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
@@ -1405,12 +1370,12 @@
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_MANGO</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_TEMPLE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_MANGO</BonusType>
@@ -1429,7 +1394,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_MELON</BuildingClass>
 			<Type>BUILDING_DRUID_MONASTERY_MELON</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_MELON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
@@ -1445,12 +1409,12 @@
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_MELONS</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_MONASTERY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -1463,7 +1427,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_TEMPLE_MELON</BuildingClass>
 			<Type>BUILDING_DRUID_TEMPLE_MELON</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_MELON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
@@ -1476,12 +1439,12 @@
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_MELONS</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_TEMPLE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_MELONS</BonusType>
@@ -1500,7 +1463,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_MUSHROOMS</BuildingClass>
 			<Type>BUILDING_DRUID_MONASTERY_MUSHROOMS</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_MUSHROOMS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
@@ -1516,12 +1478,12 @@
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_MONASTERY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -1534,7 +1496,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_TEMPLE_MUSHROOMS</BuildingClass>
 			<Type>BUILDING_DRUID_TEMPLE_MUSHROOMS</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_MUSHROOMS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
@@ -1547,12 +1508,12 @@
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_TEMPLE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_MUSHROOMS</BonusType>
@@ -1571,7 +1532,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_OLIVES</BuildingClass>
 			<Type>BUILDING_DRUID_MONASTERY_OLIVES</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_OLIVES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
@@ -1587,12 +1547,12 @@
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_OLIVES</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_MONASTERY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -1605,7 +1565,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_TEMPLE_OLIVES</BuildingClass>
 			<Type>BUILDING_DRUID_TEMPLE_OLIVES</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_OLIVES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
@@ -1618,12 +1577,12 @@
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_OLIVES</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_TEMPLE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_OLIVES</BonusType>
@@ -1642,7 +1601,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_PAPAYA</BuildingClass>
 			<Type>BUILDING_DRUID_MONASTERY_PAPAYA</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_PAPAYA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
@@ -1658,12 +1616,12 @@
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_PAPAYA</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_MONASTERY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -1676,7 +1634,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_TEMPLE_PAPAYA</BuildingClass>
 			<Type>BUILDING_DRUID_TEMPLE_PAPAYA</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_PAPAYA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
@@ -1689,12 +1646,12 @@
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_PAPAYA</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_TEMPLE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_PAPAYA</BonusType>
@@ -1713,7 +1670,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_PISTACHIO</BuildingClass>
 			<Type>BUILDING_DRUID_MONASTERY_PISTACHIO</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_PISTACHIO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
@@ -1729,12 +1685,12 @@
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_PISTACHIO</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_MONASTERY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -1747,7 +1703,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_TEMPLE_PISTACHIO</BuildingClass>
 			<Type>BUILDING_DRUID_TEMPLE_PISTACHIO</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_PISTACHIO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
@@ -1760,12 +1715,12 @@
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_PISTACHIO</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_TEMPLE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_PISTACHIO</BonusType>
@@ -1784,7 +1739,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_POMEGRANATE</BuildingClass>
 			<Type>BUILDING_DRUID_MONASTERY_POMEGRANATE</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_POMEGRANATE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
@@ -1800,12 +1754,12 @@
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_POMEGRANATE</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_MONASTERY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -1818,7 +1772,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_TEMPLE_POMEGRANATE</BuildingClass>
 			<Type>BUILDING_DRUID_TEMPLE_POMEGRANATE</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_POMEGRANATE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
@@ -1831,12 +1784,12 @@
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_POMEGRANATE</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_TEMPLE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_POMEGRANATE</BonusType>
@@ -1855,7 +1808,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_PRICKLY_PEAR</BuildingClass>
 			<Type>BUILDING_DRUID_MONASTERY_PRICKLY_PEAR</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_PRICKLY_PEAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
@@ -1871,12 +1823,12 @@
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_PRICKLY_PEAR</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_MONASTERY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -1889,7 +1841,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_TEMPLE_PRICKLY_PEAR</BuildingClass>
 			<Type>BUILDING_DRUID_TEMPLE_PRICKLY_PEAR</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_PRICKLY_PEAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
@@ -1902,12 +1853,12 @@
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_PRICKLY_PEAR</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_TEMPLE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_PRICKLY_PEAR</BonusType>
@@ -1926,7 +1877,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_PUMPKIN</BuildingClass>
 			<Type>BUILDING_DRUID_MONASTERY_PUMPKIN</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_PUMPKIN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
@@ -1942,12 +1892,12 @@
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_PUMPKIN</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_MONASTERY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -1960,7 +1910,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_TEMPLE_PUMPKIN</BuildingClass>
 			<Type>BUILDING_DRUID_TEMPLE_PUMPKIN</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_PUMPKIN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
@@ -1973,12 +1922,12 @@
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_PUMPKIN</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_TEMPLE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_PUMPKIN</BonusType>
@@ -1997,7 +1946,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_SQUASH</BuildingClass>
 			<Type>BUILDING_DRUID_MONASTERY_SQUASH</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_SQUASH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
@@ -2013,12 +1961,12 @@
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_SQUASH</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_MONASTERY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -2031,7 +1979,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_TEMPLE_SQUASH</BuildingClass>
 			<Type>BUILDING_DRUID_TEMPLE_SQUASH</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_SQUASH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
@@ -2044,12 +1991,12 @@
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_SQUASH</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_TEMPLE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_SQUASH</BonusType>
@@ -2068,7 +2015,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_MONASTERY_KAVA</BuildingClass>
 			<Type>BUILDING_DRUID_MONASTERY_KAVA</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_MONASTERY_KAVA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
@@ -2084,12 +2030,12 @@
 			<iAsset>3</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_KAVA</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_MONASTERY</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -2102,7 +2048,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DRUID_TEMPLE_KAVA</BuildingClass>
 			<Type>BUILDING_DRUID_TEMPLE_KAVA</Type>
 			<Description>TXT_KEY_BUILDING_DRUID_TEMPLE_KAVA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
@@ -2115,12 +2060,12 @@
 			<iAsset>4</iAsset>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
 			<VicinityBonus>BONUS_KAVA</VicinityBonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DRUID_TEMPLE</BuildingClassType>
+			<BuildingNeededs>
+				<BuildingNeeded>
+					<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
 					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				<BuildingNeeded>>
+			<BuildingNeededs>>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_KAVA</BonusType>
@@ -2139,18 +2084,17 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DJENNE</BuildingClass>
 			<Type>BUILDING_DJENNE</Type>
-			<GlobalBuildingClassProductionModifiers>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_DRUID_CATHEDRAL</BuildingClassType>
+			<GlobalBuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_DRUID_CATHEDRAL</BuildingType>
 					<iProductionModifier>100</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_DRUID_CATHEDRAL2</BuildingClassType>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_DRUID_CATHEDRAL2</BuildingType>
 					<iProductionModifier>100</iProductionModifier>
-				</BuildingClassProductionModifier>
-			</GlobalBuildingClassProductionModifiers>
+				</BuildingProductionModifier>
+			</GlobalBuildingProductionModifiers>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

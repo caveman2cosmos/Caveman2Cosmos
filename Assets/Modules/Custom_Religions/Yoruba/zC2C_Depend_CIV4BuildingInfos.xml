@@ -11,53 +11,53 @@
 			<AndDependencyTypes>
 				<DependencyType>BUILDING_BIRD_MYTH</DependencyType>
 			</AndDependencyTypes>
-			<GlobalBuildingClassProductionModifiers>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_OBATALA</BuildingClassType>
+			<GlobalBuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_OBATALA</BuildingType>
 					<iProductionModifier>5</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_OGGUN</BuildingClassType>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_OGGUN</BuildingType>
 					<iProductionModifier>5</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_OLOFIN</BuildingClassType>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_OLOFIN</BuildingType>
 					<iProductionModifier>5</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_OLOKUN</BuildingClassType>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_OLOKUN</BuildingType>
 					<iProductionModifier>5</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_OSHOSI</BuildingClassType>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_OSHOSI</BuildingType>
 					<iProductionModifier>5</iProductionModifier>
-				</BuildingClassProductionModifier>
-			</GlobalBuildingClassProductionModifiers>
+				</BuildingProductionModifier>
+			</GlobalBuildingProductionModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NOK</Type>
-			<GlobalBuildingClassProductionModifiers>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_OBATALA</BuildingClassType>
+			<GlobalBuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_OBATALA</BuildingType>
 					<iProductionModifier>5</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_OGGUN</BuildingClassType>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_OGGUN</BuildingType>
 					<iProductionModifier>5</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_OLOFIN</BuildingClassType>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_OLOFIN</BuildingType>
 					<iProductionModifier>5</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_OLOKUN</BuildingClassType>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_OLOKUN</BuildingType>
 					<iProductionModifier>5</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_OSHOSI</BuildingClassType>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_OSHOSI</BuildingType>
 					<iProductionModifier>5</iProductionModifier>
-				</BuildingClassProductionModifier>
-			</GlobalBuildingClassProductionModifiers>
+				</BuildingProductionModifier>
+			</GlobalBuildingProductionModifiers>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>
