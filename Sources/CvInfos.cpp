@@ -13229,8 +13229,6 @@ bool CvCivilizationInfo::read(CvXMLLoadUtility* pXML)
 {
 	MEMORY_TRACE_FUNCTION();
 
-	char szClassVal[256];					// holds the text value of the relevant classinfo
-
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
 	{
