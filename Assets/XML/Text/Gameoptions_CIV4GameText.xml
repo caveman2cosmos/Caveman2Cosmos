@@ -338,17 +338,6 @@
 		<French>Obtenez de l'or des unités dissoutes.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_ECOLOGICAL_ANIMALS</Tag>
-		<English>Ecological Animals</English>
-		<German>Ökologische Tiere</German>
-		<French>Animaux écologiques</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_ECOLOGICAL_ANIMALS_HELP</Tag>
-		<English>UNUSED</English>
-		<French>UNUSED</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_EQUIPMENT</Tag>
 		<English>C2C Combat Mod - Arms and Equipment</English>
 		<French>Mode de Combat C2C - Armes and Equipement</French>
