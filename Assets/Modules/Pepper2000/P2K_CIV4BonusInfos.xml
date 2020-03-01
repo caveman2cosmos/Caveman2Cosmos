@@ -19,7 +19,7 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
-			<iPlacementOrder>4</iPlacementOrder>
+			<iPlacementOrder>-1</iPlacementOrder>
 			<iConstAppearance>35</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<iMinLatitude>0</iMinLatitude>
@@ -87,7 +87,7 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
-			<iPlacementOrder>4</iPlacementOrder>
+			<iPlacementOrder>-1</iPlacementOrder>
 			<iConstAppearance>35</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<iMinLatitude>0</iMinLatitude>
@@ -135,7 +135,7 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
-			<iPlacementOrder>4</iPlacementOrder>
+			<iPlacementOrder>-1</iPlacementOrder>
 			<iConstAppearance>35</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<iMinLatitude>0</iMinLatitude>
@@ -179,7 +179,7 @@
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<iPlacementOrder>4</iPlacementOrder>
+			<iPlacementOrder>-1</iPlacementOrder>
 			<iConstAppearance>35</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<iMinLatitude>0</iMinLatitude>
@@ -251,7 +251,7 @@
 				<iYieldChange>3</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 			</YieldChanges>
-			<iPlacementOrder>4</iPlacementOrder>
+			<iPlacementOrder>-1</iPlacementOrder>
 			<iConstAppearance>35</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<iMinLatitude>0</iMinLatitude>
@@ -311,7 +311,7 @@
 				<iYieldChange>3</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 			</YieldChanges>
-			<iPlacementOrder>4</iPlacementOrder>
+			<iPlacementOrder>-1</iPlacementOrder>
 			<iConstAppearance>35</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<iMinLatitude>0</iMinLatitude>
@@ -379,7 +379,7 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 			</YieldChanges>
-			<iPlacementOrder>4</iPlacementOrder>
+			<iPlacementOrder>-1</iPlacementOrder>
 			<iConstAppearance>35</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<iMinLatitude>0</iMinLatitude>
@@ -447,7 +447,7 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 			</YieldChanges>
-			<iPlacementOrder>4</iPlacementOrder>
+			<iPlacementOrder>-1</iPlacementOrder>
 			<iConstAppearance>35</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<iMinLatitude>0</iMinLatitude>
@@ -515,7 +515,7 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 			</YieldChanges>
-			<iPlacementOrder>4</iPlacementOrder>
+			<iPlacementOrder>-1</iPlacementOrder>
 			<iConstAppearance>35</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<iMinLatitude>0</iMinLatitude>
