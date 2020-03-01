@@ -915,7 +915,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ASSASSIN_TEXT</Tag>
 		<English>[ICON_BULLET]Trait - Assassination: %D1_Change</English>
-		<French>[ICON_BULLET]Trait - Assassination: %D1_Change</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ASTONISHING_ACCUMEN</Tag>
@@ -3833,7 +3832,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_COLD1</Tag>
 		<English>Arctic I</English>
-		<French>Arctique I</French>
+		<French>Combat en zone Arctique I</French>
 		<Italian>Combattente artico I</Italian>
 		<Spanish>Combate ártico I</Spanish>
 		<Polish>Walka Arktyczna I</Polish>
@@ -3841,7 +3840,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_COLD2</Tag>
 		<English>Arctic II</English>
-		<French>Arctique II</French>
+		<French>Combat en zone Arctique II</French>
 		<Italian>Combattente artico II</Italian>
 		<Spanish>Combate ártico II</Spanish>
 		<Polish>Walka Arktyczna II</Polish>
@@ -3849,7 +3848,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_COLD3</Tag>
 		<English>Arctic III</English>
-		<French>Arctique III</French>
+		<French>Combat en zone Arctique III</French>
 		<Italian>Combattente artico III</Italian>
 		<Spanish>Combate ártico III</Spanish>
 		<Polish>Walka Arktyczna III</Polish>
@@ -3857,7 +3856,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_COLD4</Tag>
 		<English>Arctic IV</English>
-		<French>Arctique IV</French>
+		<French>Combat en zone Arctique IV</French>
 		<Italian>Combattente artico IV</Italian>
 		<Spanish>Combate ártico IV</Spanish>
 		<Polish>Walka Arktyczna IV</Polish>
@@ -10712,11 +10711,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_NAVIGATION3</Tag>
 		<English>Navigation III</English>
-		<French>
-			<Text>Navigation III</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
 		<Italian>Navigazione III</Italian>
 		<Spanish>Navegación III</Spanish>
 		<Polish>Nawigacja III</Polish>
@@ -14929,7 +14923,7 @@
 		<Tag>TXT_KEY_PROMOTION_STALK_PREY</Tag>
 		<English>Stalk Prey</English>
 		<French>
-			<Text>Pisteur de proies</Text>
+			<Text>Chien pisteur</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -16993,7 +16987,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WARMTH1</Tag>
 		<English>Heat I</English>
-		<French>Chaleur I</French>
+		<French>Combat dans le désert I</French>
 		<German>Wüstenkampf I</German>
 		<Italian>Combattente del deserto I</Italian>
 		<Spanish>Combate en desierto I</Spanish>
@@ -17002,7 +16996,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WARMTH2</Tag>
 		<English>Heat II</English>
-		<French>Chaleur II</French>
+		<French>Combat dans le désert II</French>
 		<Italian>Combattente del deserto II</Italian>
 		<Spanish>Combate en desierto II</Spanish>
 		<Polish>Walka Pustynna II</Polish>
@@ -17010,7 +17004,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WARMTH3</Tag>
 		<English>Heat III</English>
-		<French>Chaleur III</French>
+		<French>Combat dans le désert III</French>
 		<Italian>Combattente del deserto III</Italian>
 		<Spanish>Combate en desierto III</Spanish>
 		<Polish>Walka Pustynna III</Polish>
@@ -19616,7 +19610,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_SECURITY</Tag>
-		<English>Build Up (Counter Espionage)</English>
+		<English>Build Up (Counter Espionage) I</English>
 		<French>Retranchement (Contre-espionnage)</French>
 	</TEXT>
 	<TEXT>

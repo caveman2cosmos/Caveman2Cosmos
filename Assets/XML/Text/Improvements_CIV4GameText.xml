@@ -1274,6 +1274,7 @@
 		<Polish>Współczesny Wiatrak</Polish>
 	</TEXT>
 	<TEXT>
+<<<<<<< HEAD
 		<Tag>TXT_KEY_IMPROVEMENT_EARLY_MOUNTAIN_MINE</Tag>
 		<English>Early Mountain Mine</English>
 	</TEXT>
@@ -1282,6 +1283,8 @@
 		<English>Ancient mining site for mountains</English>
 	</TEXT>
 	<TEXT>
+=======
+>>>>>>> parent of 526769f3... French Translation
 		<Tag>TXT_KEY_IMPROVEMENT_MOUNTAIN_MINE</Tag>
 		<English>Mountain Mine</English>
 		<French>Mine de la montagne</French>

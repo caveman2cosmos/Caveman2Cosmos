@@ -265,10 +265,13 @@
 		<Polish>Zbuduj [LINK=IMPROVEMENT_SHAFT_MINE]GBbok Kopalni[\LINK] (Prace Przym.)</Polish>
 	</TEXT>
 	<TEXT>
+<<<<<<< HEAD
 		<Tag>TXT_KEY_BUILD_EARLY_MOUNTAIN_MINE_SLAVE</Tag>
 		<English>Build [LINK=IMPROVEMENT_EARLY_MOUNTAIN_MINE]Early Mountain Mine[\LINK] (Forced)</English>
 	</TEXT>
 	<TEXT>
+=======
+>>>>>>> parent of 526769f3... French Translation
 		<Tag>TXT_KEY_BUILD_MOUNTAIN_MINE_SLAVE</Tag>
 		<English>Build [LINK=IMPROVEMENT_MOUNTAIN_MINE]Mountain Mine[\LINK] (Forced)</English>
 		<French>Construire un [LINK=IMPROVEMENT_MOUNTAIN_MINE]Mine de la montagne[\LINK] (Forcé)</French>

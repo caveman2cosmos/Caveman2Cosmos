@@ -2074,7 +2074,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEALION_LAND</Tag>
 		<English>Sealion (Land)</English>
-		<French>Lion de mer (terre)</French>
+		<French>Lion de mer</French>
 		<German>
 			<Text>Seelöwe:Seelöwen:Seelöwen:Seelöwen:Seelöwen:Seelöwen:Seelöwen:Seelöwen</Text>
 			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
@@ -2091,7 +2091,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEALION_SEA</Tag>
 		<English>Sealion (Sea)</English>
-		<French>Lion de mer (eau)</French>
+		<French>Lion de mer</French>
 		<German>
 			<Text>Seelöwe:Seelöwen:Seelöwen:Seelöwen:Seelöwen:Seelöwen:Seelöwen:Seelöwen</Text>
 			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
