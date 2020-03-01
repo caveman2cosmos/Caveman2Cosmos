@@ -37,6 +37,18 @@
 			<Type>BONUSCLASS_FUEL</Type>
 			<iUnique>3</iUnique>
 		</BonusClassInfo>
+		<BonusClassInfo>
+			<Type>BONUSCLASS_EDIBLEPLANT</Type>
+			<iUnique>0</iUnique>
+		</BonusClassInfo>
+		<BonusClassInfo>
+			<Type>BONUSCLASS_PLANT</Type>
+			<iUnique>0</iUnique>
+		</BonusClassInfo>
+		<BonusClassInfo>
+			<Type>BONUSCLASS_MINERAL</Type>
+			<iUnique>0</iUnique>
+		</BonusClassInfo>
 		<!-- Represents resources, that are produced by buildings, and are not meant to be placed on map -->
 		<BonusClassInfo>
 			<Type>BONUSCLASS_MANUFACTURED</Type>
