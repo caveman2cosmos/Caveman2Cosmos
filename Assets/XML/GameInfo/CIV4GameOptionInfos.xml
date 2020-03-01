@@ -178,6 +178,13 @@
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
+			<Type>GAMEOPTION_UNLIMITED_NATIONAL_UNITS</Type>
+			<Description>TXT_KEY_GAMEOPTION_UNLIMITED_NATIONAL_UNITS</Description>
+			<Help>TXT_KEY_GAMEOPTION_UNLIMITED_NATIONAL_UNITS_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
 			<Type>GAMEOPTION_SCALE_CITY_LIMITS</Type>
 			<Description>TXT_KEY_GAMEOPTION_SCALE_CITY_LIMITS</Description>
 			<Help>TXT_KEY_GAMEOPTION_SCALE_CITY_LIMITS_HELP</Help>
@@ -412,13 +419,6 @@
 			<Help>TXT_KEY_GAMEOPTION_RUTHLESS_AI_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>0</bVisible>
-		</GameOptionInfo>		
-		<GameOptionInfo>
-			<Type>GAMEOPTION_ONE_CITY_CHALLENGE</Type>
-			<Description>TXT_KEY_GAMEOPTION_ONE_CITY_CHALLENGE</Description>
-			<Help>TXT_KEY_GAMEOPTION_ONE_CITY_CHALLENGE_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_NO_TECH_TRADING</Type>
@@ -677,13 +677,6 @@
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_UNLIMITED_NATIONAL_UNITS</Type>
-			<Description>TXT_KEY_GAMEOPTION_UNLIMITED_NATIONAL_UNITS</Description>
-			<Help>TXT_KEY_GAMEOPTION_UNLIMITED_NATIONAL_UNITS_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
 			<Type>GAMEOPTION_XP_FROM_ASSIGNED_SPECIALISTS</Type>
 			<Description>TXT_KEY_GAMEOPTION_XP_FROM_ASSIGNED_SPECIALISTS</Description>
 			<Help>TXT_KEY_GAMEOPTION_XP_FROM_ASSIGNED_SPECIALISTS_HELP</Help>
@@ -719,12 +712,19 @@
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
+			<Type>GAMEOPTION_ONE_CITY_CHALLENGE</Type>
+			<Description>TXT_KEY_GAMEOPTION_ONE_CITY_CHALLENGE</Description>
+			<Help>TXT_KEY_GAMEOPTION_ONE_CITY_CHALLENGE_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
 			<Type>GAMEOPTION_CHALLENGE_CUT_LOSERS</Type>
 			<Description>TXT_KEY_GAMEOPTION_CHALLENGE_CUT_LOSERS</Description>
 			<Help>TXT_KEY_GAMEOPTION_CHALLENGE_CUT_LOSERS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
-		</GameOptionInfo>	
+		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_CHALLENGE_HIGH_TO_LOW</Type>
 			<Description>TXT_KEY_GAMEOPTION_CHALLENGE_HIGH_TO_LOW</Description>
