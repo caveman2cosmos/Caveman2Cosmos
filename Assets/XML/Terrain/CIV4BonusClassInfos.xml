@@ -19,23 +19,23 @@
 		</BonusClassInfo>
 		<BonusClassInfo>
 			<Type>BONUSCLASS_RUSH</Type>
-			<iUnique>3</iUnique>
+			<iUnique>2</iUnique>
 		</BonusClassInfo>
 		<BonusClassInfo>
 			<Type>BONUSCLASS_MODERN</Type>
-			<iUnique>3</iUnique>
+			<iUnique>2</iUnique>
 		</BonusClassInfo>
 		<BonusClassInfo>
 			<Type>BONUSCLASS_WONDER</Type>
-			<iUnique>3</iUnique>
+			<iUnique>2</iUnique>
 		</BonusClassInfo>
 		<BonusClassInfo>
 			<Type>BONUSCLASS_LUXURY</Type>
-			<iUnique>3</iUnique>
+			<iUnique>2</iUnique>
 		</BonusClassInfo>
 		<BonusClassInfo>
 			<Type>BONUSCLASS_FUEL</Type>
-			<iUnique>3</iUnique>
+			<iUnique>2</iUnique>
 		</BonusClassInfo>
 		<BonusClassInfo>
 			<Type>BONUSCLASS_EDIBLEPLANT</Type>
