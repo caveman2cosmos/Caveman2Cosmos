@@ -32,31 +32,6 @@
 		<Polish>Tresura, tresowanie (niem. Dressur z fr. dresser) - zespół działań mających na celu przyzwyczajenie, wdrożenie (nauczenie) zwierząt do wykonywania określonych czynności przez wielokrotne ich powtarzanie w jednakowych okolicznościach, wyrabianie lub wytwarzanie przez człowieka odruchów warunkowych u zwierząt, czasem prostych nawyków poprzez stosowanie systemu nagród i kar.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_FEMALE_BEASTMASTER</Tag>
-		<English>Female Beastmaster</English>
-		<French>
-			<Text>Dompteuse:Dompteuses</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</French>
-		<German>
-			<Text>Tierfuehrerin:Tierfuehrerin:Tierfuehrerin:Tierfuehrerin:Tierfuehrerinnen:Tierfuehrerinnen:Tierfuehrerinnen:Tierfuehrerinnen</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
-			<Plural>1:1:1:1:1:1:1:1</Plural>
-		</German>
-		<Italian>
-			<Text>Domatrice:Domatrici</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Beastmaster:Beastmaster</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Treserka Bestii</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_LION</Tag>
 		<English>Tamed Lion</English>
 		<French>
