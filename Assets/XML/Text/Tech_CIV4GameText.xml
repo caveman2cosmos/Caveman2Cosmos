@@ -8848,6 +8848,7 @@ Some call it Evolution,
 	<TEXT>
 		<Tag>TXT_KEY_TECH_EXPERIMENTAL_COSMOLOGY_QUOTE</Tag>
 		<English>"As there are an infinity of possible worlds, there are also an infinity of laws, certain ones appropriate to one; others, to another, and each possible individual of any world involves in its concept the laws of its world."[NEWLINE][SPACE] -Gottfried Leibniz</English>
+		<French>"Comme il existe une infinité de mondes possibles, il existe également une infinité de lois, certaines appropriées à un; d'autres, à un autre, et chaque individu possible de n'importe quel monde implique dans son concept les lois de son monde."[NEWLINE][SPACE] -Gottfried Leibniz</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_EXPERIMENTAL_COSMOLOGY_STRATEGY</Tag>
@@ -14924,6 +14925,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MENSIOKINESIS_QUOTE</Tag>
 		<English>Thief: I have come to a realization. Dragons are not real in a general sense, but they may exist in certain specific cases.[NEWLINE]Fighter: Like how quantum mechanics describes how subatomic particles can spontaneously pop into existence at random![NEWLINE]Thief: No, that's stupid and stop making up words.[NEWLINE][SPACE] -8-bit Theater</English>
+		<French>Voleur: Je suis venu à une réalisation. Les dragons ne sont pas réels dans un sens général, mais ils peuvent exister dans certains cas spécifiques. [NEWLINE] Combattant: Comme la mécanique quantique décrit comment les particules subatomiques peuvent apparaître spontanément au hasard! [NEWLINE] Voleur: Non, c'est stupide et arrêtez inventer des mots.[NEWLINE][SPACE] -8-bit Theater</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MENSIOKINESIS_STRATEGY</Tag>
@@ -19548,6 +19550,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_POSTHUMANISM_QUOTE</Tag>
 		<English>"If only there were evil people somewhere insidiously committing evil deeds, and it were necessary only to separate them from the rest of us and destroy them. But the line dividing good and evil cuts through the heart of every human being. And who is willing to destroy a piece of his own heart?"[NEWLINE][SPACE] -Alexander Solzhenitsyn</English>
+		<French>"Si seulement il y avait des méchants quelque part qui commettaient insidieusement de mauvaises actions, et il fallait seulement les séparer du reste d'entre nous et les détruire. Mais la ligne qui divise le bien et le mal traverse le cœur de chaque être humain. Et qui veut détruire un morceau de son propre coeur?"[NEWLINE][SPACE] -Alexander Solzhenitsyn</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_POSTHUMANISM_STRATEGY</Tag>
@@ -19565,6 +19568,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_POSTMODERNISM_QUOTE</Tag>
 		<English>Despite the best intentions, then, the postmodernist politics of difference not only is ineffective against but can even coincide with and support the functions and practices of imperial rule. The danger is that postmodernist theories focus their attention so resolutely on the old forms of power they are running from, with their heads turned backwards, that they tumble unwittingly into the welcoming arms of the new power.[NEWLINE][SPACE] - Michael Hardt and Antonio Negri</English>
+		<French>Malgré les meilleures intentions, la politique postmoderniste de la différence est non seulement inefficace contre, mais peut même coïncider avec et soutenir les fonctions et les pratiques de la domination impériale. Le danger est que les théories postmodernistes concentrent leur attention si résolument sur les anciennes formes de pouvoir qu'elles fuient, la tête tournée en arrière, qu'elles tombent involontairement dans les bras accueillants du nouveau pouvoir.[NEWLINE][SPACE] - Michael Hardt et Antonio Negri</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_POSTMODERNISM_STRATEGY</Tag>
@@ -23716,6 +23720,15 @@ In a relative way
 And returned on the previous night.
 
 Limerick from 1923 by A. H. Reginald Buller</English>
+		<French>Relativité.
+[NEWLINE]
+[NEWLINE]Il y avait une jeune femme nommée Bright
+[NEWLINE]Dont la vitesse était bien plus rapide que la lumière;
+[NEWLINE]Elle est partie un jour
+[NEWLINE]De manière relative
+[NEWLINE]Et je suis revenu la nuit précédente.
+[NEWLINE]
+[NEWLINE][SPACE]Limerick de 1923 par A. H. Reginald Buller</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TACHYON_COMMUNICATIONS_STRATEGY</Tag>

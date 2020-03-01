@@ -755,7 +755,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ACV_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]ACV[COLOR_REVERT] - The first of the Hi-Tech units line. Weak, but ideal against clone units.</English>
+		<English>[COLOR_UNIT_TEXT]ACV[COLOR_REVERT] - The first of the Hi-Tech units line. Weak, but ideal against clone units.</English>
 		<French>[COLOR_UNIT_TEXT]l'ACV[COLOR_REVERT] - La première des unités Hi-tech. plutôt Faible, mais idéal contre les clones.</French>
 	</TEXT>
 	<TEXT>
@@ -872,7 +872,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AEGIS_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Aegis Cruisers[COLOR_REVERT] carry up to 2 [COLOR_UNIT_TEXT]Missiles[COLOR_REVERT]. They have a 50% chance to intercept [COLOR_UNIT_TEXT]Aircraft[COLOR_REVERT], and they can [COLOR_HIGHLIGHT_TEXT]Bombard[COLOR_HIGHLIGHT_TEXT]cities (-10%/Turn).</English>
-		<French>Le [COLOR_UNIT_TEXT]Croiseur Aegiss[COLOR_REVERT] peut transporter 2 [COLOR_UNIT_TEXT]Missiles[COLOR_REVERT]. Ils ont 50% de chances d'intercepter [COLOR_UNIT_TEXT]Aircraft[COLOR_REVERT], et peut  [COLOR_HIGHLIGHT_TEXT]Bombarder[COLOR_HIGHLIGHT_TEXT]les villes (-10%/Tour).</French>
+		<French>Le [COLOR_UNIT_TEXT]Croiseur Aegiss[COLOR_REVERT] peut transporter 2 [COLOR_UNIT_TEXT]Missiles[COLOR_REVERT]. Ils ont 50% de chances d'intercepter les [COLOR_UNIT_TEXT]Aéronefs[COLOR_REVERT], et peut [COLOR_HIGHLIGHT_TEXT]Bombarder[COLOR_HIGHLIGHT_TEXT]les villes (-10%/Tour).</French>
 		<Spanish>Los [COLOR_UNIT_TEXT]Cruceros AEGIS[COLOR_REVERT] pueden llevar hasta 2 [COLOR_UNIT_TEXT]Misiles[COLOR_REVERT]. Tienen una probabilidad del 50% de interceptar [COLOR_UNIT_TEXT]aeronaves[COLOR_REVERT], y son capaces de [COLOR_HIGHLIGHT_TEXT]bombardear[COLOR_HIGHLIGHT_TEXT] ciudades (-10%/turno).</Spanish>
 		<Polish>[COLOR_UNIT_TEXT]Krążowniki Aegis[COLOR_REVERT] potrafią transportować do 2 [COLOR_UNIT_TEXT]Pocisków[COLOR_REVERT]. Mają 50% szansy na przechwycenie [COLOR_UNIT_TEXT]Samolotu[COLOR_REVERT] i potrafią [COLOR_HIGHLIGHT_TEXT]bombardować[COLOR_HIGHLIGHT_TEXT] miasta (-10%/turę).</Polish>
 	</TEXT>
@@ -941,7 +941,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AFRICAN_PENGUIN_PEDIA</Tag>
-		<English>African Penguins are about 68 cm in length, and weigh between 2.1 and 3.7 kg. Spheniscus is a diminutive of the Greek word spen, meaning a wedge, which refers to their streamlined swimming shape, while demersus is a Latin word meaning plunging.[PARAGRAPH:2]African Penguins are black above and white below, with a black chin and face patch separated from the crown by a broad white band. They have a narrow black band across the chest and down the flanks towards its legs. Some birds show a double bar on the throat and chest, which is a diagnostic feature of Magellanic Penguins. Males tend to be larger with heavier bills, but these differences usually can only be seen when a pair is seen together. Juveniles differ from adults by being entirely blue-grey above, and lacking the white face markings and black breast band of the adults.[PARAGRAPH:2]The African Penguin is the only penguin species that breeds in Africa, and it is found nowhere else. Its distribution coincides roughly with the cold, nutrient rich, Benguela Current. The distribution of African Penguins is further determined by the availability of offshore islands as breeding sites. [PARAGRAPH:2]Source: penguins.cl/african-penguins.htm</English>
+		<English>African Penguins are about 68 cm in length, and weigh between 2.1 and 3.7 kg. Spheniscus is a diminutive of the Greek word spen, meaning a wedge, which refers to their streamlined swimming shape, while demersus is a Latin word meaning plunging.[PARAGRAPH:2]African Penguins are black above and white below, with a black chin and face patch separated from the crown by a broad white band. They have a narrow black band across the chest and down the flanks towards its legs. Some birds show a double bar on the throat and chest, which is a diagnostic feature of Magellanic Penguins. Males tend to be larger with heavier bills, but these differences usually can only be seen when a pair is seen together. Juveniles differ from adults by being entirely blue-grey above, and lacking the white face markings and black breast band of the adults.[PARAGRAPH:2]The African Penguin is the only penguin species that breeds in Africa, and it is found nowhere else. Its distribution coincides roughly with the cold, nutrient rich, Benguela Current. The distribution of African Penguins is further determined by the availability of offshore islands as breeding sites. [PARAGRAPH:2]Source: penguins.cl/african-penguins.htm</English>
 		<Polish>Pingwin przylądkowy, pingwin toniec (Spheniscus demersus) - gatunek ptaka z rodziny pingwinów (Spheniscidae), o czarnym wierzchu ciała i masce, z wyraźną białą brwią. Skóra wokół oczu i nad nimi różowa, dziób czarny z jasną przepaską przy końcu. Spód ciała biały, z czarnym pasem na piersi. Żyje samotnie lub w stadkach, żeruje na morzu.</Polish>
 	</TEXT>
 	<TEXT>
@@ -1035,6 +1035,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AH64_GUNSHIP_STRATEGY</Tag>
 		<English>TBD</English>
+		<French>A compléter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AID</Tag>
@@ -1046,7 +1047,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AID_TOTAL_MODIFIER</Tag>
 		<English>[ICON_BULLET]Aid: Assists the chances for other units in stack to Overcome %s1_Type Afflictions by %s2_Amount</English>
-		<French>[ICON_BULLET]Aide : Augmente les chances pour les autres unités du groupe de surmonter l'affliction %s1_Type Afflictions de %s2_Amount</French>
+		<French>[ICON_BULLET]Santé : Augmente les chances pour les autres unités du groupe de surmonter l'affliction %s1_Type Afflictions de %s2_Amount</French>
 		<Italian>[ICON_BULLET]Supporto: aumenta le chance per le unità nella stessa casella di superare %s1_Type Afflizione del %s2_Amount</Italian>
 		<Polish>[ICON_BULLET]Pomoc: Wspomaga szanse innej jednostki w grupie na wyleczenie dolegliwości o %d1_Amount%%</Polish>
 	</TEXT>
@@ -1177,6 +1178,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AMERICAN_NAVY_SEAL</Tag>
 		<English>Navy SEAL</English>
+		<French>Soldat de la Navy SEAL</French>
 		<German>
 			<Text>Navy SEAL:Navy SEALs:Navy SEAL:Navy SEAL:Navy SEALs:Navy SEALs:Navy SEALs:Navy SEALs</Text>
 			<Gender>male:male:male:male:male:male:male:male</Gender>
@@ -1211,7 +1213,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AMINA_STRATEGY</Tag>
 		<English>The Hausa military hero is [COLOR_UNIT_TEXT]Amina[COLOR_REVERT]. Available in the renaissance era, she starts off with a [COLOR_HIGHLIGHT_TEXT]Merchant[COLOR_REVERT] in his retinue. She can be built once [COLOR_TECH_TEXT]Education[COLOR_REVERT] and [COLOR_TECH_TEXT]Guilds[COLOR_REVERT] are researched.</English>
-		<French>Le Héros militaire Hausa est [COLOR_UNIT_TEXT]Amina[COLOR_REVERT]. Disponible à la Renaissance, elle commence avec un [COLOR_HIGHLIGHT_TEXT]Marchand[COLOR_REVERT] dans sa suite. Elle peut être recrutée lorsque [COLOR_TECH_TEXT]Education[COLOR_REVERT] et [COLOR_TECH_TEXT]Guildes[COLOR_REVERT] sont recherchés.</French>
+		<French>Le Héros militaire Haoussa est [COLOR_UNIT_TEXT]Amina[COLOR_REVERT]. Disponible à la Renaissance, elle commence avec un [COLOR_HIGHLIGHT_TEXT]Marchand[COLOR_REVERT] dans sa suite. Elle peut être recrutée lorsque [COLOR_TECH_TEXT]Education[COLOR_REVERT] et [COLOR_TECH_TEXT]Guildes[COLOR_REVERT] sont recherchés.</French>
 		<Spanish>El héroe militar hausa es [COLOR_UNIT_TEXT]Amina[COLOR_REVERT]. Disponible a partir del Renacimiento, comienza con el ascenso [COLOR_HIGHLIGHT_TEXT]Mercader[COLOR_REVERT] en su séquito. Puede ser entrenado una vez investigadas la [COLOR_TECH_TEXT]Educación[COLOR_REVERT] y los [COLOR_TECH_TEXT]Gremios[COLOR_REVERT].</Spanish>
 		<Polish>Bohater Wojskowy Ludu Hausa to [COLOR_UNIT_TEXT]Amina Sukhera[COLOR_REVERT]. Rozpoczyna w towarzystwie [COLOR_HIGHLIGHT_TEXT]Handlarza[COLOR_REVERT]. Może zostać wyszkolona wraz z odkryciem [COLOR_TECH_TEXT]Edukacji[COLOR_REVERT] i [COLOR_TECH_TEXT]Gildii[COLOR_REVERT].</Polish>
 	</TEXT>
@@ -1240,6 +1242,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ANCIENT_CANNON_STRATEGY</Tag>
 		<English>TBD</English>
+		<French>A compléter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ANCIENT_FLAMETHROWER</Tag>
@@ -1471,7 +1474,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ANTI_PERSONNEL_MECH_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Anti-Personal Mech[COLOR_REVERT] - A mech unit which is specialized in combat against infantry units.</English>
+		<English>[COLOR_UNIT_TEXT]Anti-Personal Mech[COLOR_REVERT] - A mech unit which is specialized in combat against infantry units.</English>
 		<French>[COLOR_UNIT_TEXT]Mech Anti-Personnel[COLOR_REVERT] - Une unité mech spécialisée dans le combat contre les unités d'infanterie.</French>
 	</TEXT>
 	<TEXT>
@@ -1489,6 +1492,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_APACHE_CAVALRY_STRATEGY</Tag>
 		<English>TBD</English>
+		<French>A compléter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARABIA_CAMELARCHER</Tag>
@@ -1531,6 +1535,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARABIAN_ANSAR_STRATEGY</Tag>
 		<English>TBD</English>
+		<French>A compléter</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARCHER</Tag>
@@ -1927,7 +1932,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ASSAULT_DROID_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Assault Droid[COLOR_REVERT] - A droid unit which is specialized in siege. Can bombard cities and cause collateral damage.</English>
+		<English>[COLOR_UNIT_TEXT]Assault Droid[COLOR_REVERT] - A droid unit which is specialized in siege. Can bombard cities and cause collateral damage.</English>
 		<French>[COLOR_UNIT_TEXT]Droide d'Assaut[COLOR_REVERT] - Une unité droïde spécialisée dans le siège. Peut bombarder des villes et causer des dommages collatéraux.</French>
 	</TEXT>
 	<TEXT>
@@ -2719,8 +2724,8 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BANDEIRANTE_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Bandeirante[COLOR_REVERT] are Argentinian culture unit. It is equivalent to the [COLOR_UNIT_TEXT]Musketman[COLOR_REVERT]. They are specialised in forest and hills warfare and have better visibility range.</English>
-		<French>[COLOR_UNIT_TEXT]Bandeirante[COLOR_REVERT] est une unité culturelle d'Argentine. Elle est équivalente au [COLOR_UNIT_TEXT]Soldat à Mousquet[COLOR_REVERT]. Ils sont spécialisés dans les combats des forêts et des collines et ont une meilleure portée de visibilité.</French>
+		<English>[COLOR_UNIT_TEXT]Bandeirante[COLOR_REVERT] are Argentinian culture unit. It is equivalent to the [COLOR_UNIT_TEXT]Musketman[COLOR_REVERT]. They are specialised in forest and hills warfare and have better visibility range.</English>
+		<French>[COLOR_UNIT_TEXT]Bandeirante[COLOR_REVERT] est une unité culturelle d'Argentine. Elle est équivalente au [COLOR_UNIT_TEXT]Soldat à Mousquet[COLOR_REVERT]. Ils sont spécialisés dans les combats des forêts et des collines et ont une meilleure portée de visibilité.</French>
 		<Spanish>El [COLOR_UNIT_TEXT]Bandeirante[COLOR_REVERT].</Spanish>
 		<Polish>[COLOR_UNIT_TEXT]Bandeirante[COLOR_REVERT] to brazylijski odpowiednik [COLOR_UNIT_TEXT]Muszkietera[COLOR_REVERT]. Różni się tym, że rozpoczyna z trzema promocjami dającymi bonusy do walki w trudnym terenie.</Polish>
 	</TEXT>
@@ -3066,7 +3071,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BAYAJIDDA_STRATEGY</Tag>
 		<English>The Hausa national hero is [COLOR_UNIT_TEXT]Bayajidda[COLOR_REVERT], available in the medieval era. He starts off with a [COLOR_HIGHLIGHT_TEXT]Adventurer[COLOR_REVERT] in his retinue. He can be built once [COLOR_TECH_TEXT]Literature[COLOR_REVERT] and [COLOR_TECH_TEXT]Music[COLOR_REVERT] are researched.</English>
-		<French>Le Héros national Hausa est [COLOR_UNIT_TEXT]Bayajidda[COLOR_REVERT], disponible à l'ère médiévale. Il commence avec un [COLOR_HIGHLIGHT_TEXT]Aventurier[COLOR_REVERT] dans sa suite. Il peut être construit lorsque [COLOR_TECH_TEXT]Littérature[COLOR_REVERT] et [COLOR_TECH_TEXT]Music[COLOR_REVERT] sont recherchés.</French>
+		<French>Le Héros national Haoussa est [COLOR_UNIT_TEXT]Bayajidda[COLOR_REVERT], disponible à l'ère médiévale. Il commence avec un [COLOR_HIGHLIGHT_TEXT]Aventurier[COLOR_REVERT] dans sa suite. Il peut être construit lorsque [COLOR_TECH_TEXT]Littérature[COLOR_REVERT] et [COLOR_TECH_TEXT]Music[COLOR_REVERT] sont recherchés.</French>
 		<Spanish>El héroe nacional hausa es [COLOR_UNIT_TEXT]Bayajidda[COLOR_REVERT], disponible a partir de la Edad Media. Comienza con el ascenso [COLOR_HIGHLIGHT_TEXT]Aventurero[COLOR_REVERT] en su séquito. Puede ser entrenado una vez investigadas la [COLOR_TECH_TEXT]Literatura[COLOR_REVERT] y la [COLOR_TECH_TEXT]Música[COLOR_REVERT].</Spanish>
 		<Polish>Bohater Narodowy Ludu Hausa to [COLOR_UNIT_TEXT]Bayajidda[COLOR_REVERT]. Rozpoczyna w towarzystwie [COLOR_HIGHLIGHT_TEXT]Podróżnika[COLOR_REVERT]. Może zostać wyszkolony wraz z odkryciem [COLOR_TECH_TEXT]Literatury[COLOR_REVERT] i [COLOR_TECH_TEXT]Muzyki[COLOR_REVERT].</Polish>
 	</TEXT>
@@ -3087,6 +3092,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BAZOOKA</Tag>
 		<English>Bazooka</English>
+		<French>Infanterie Bazouka</French>
 		<Spanish>
 			<Text>Infantería con lanzacohetes</Text>
 			<Gender>Female</Gender>
@@ -3748,6 +3754,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BULLDOZER</Tag>
 		<English>Bulldozer</English>
+		<French>Pelleteuse</French>
 		<Spanish>
 			<Text>Excavadora</Text>
 			<Gender>Female</Gender>
@@ -3927,7 +3934,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAMEL_RIDER_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Camel Riders[COLOR_REVERT] are early-game mounted units. This particular rider is using [COLOR_HIGHLIGHT_TEXT]Camels[COLOR_REVERT] instead [COLOR_HIGHLIGHT_TEXT]Horses[COLOR_REVERT] and is weaker than the rest of the Riders, but they are great when fighting in Desert.</English>
+		<English>[COLOR_UNIT_TEXT]Camel Riders[COLOR_REVERT] are early-game mounted units. This particular rider is using [COLOR_HIGHLIGHT_TEXT]Camels[COLOR_REVERT] instead [COLOR_HIGHLIGHT_TEXT]Horses[COLOR_REVERT] and is weaker than the rest of the Riders, but they are great when fighting in Desert.</English>
 		<French>Les chameaux peuvent voyager plusieurs jours sans eau ni nourriture.</French>
 		<Spanish>Los camellos pueden viajar muchos días sin comer ni beber. Pueden cargar con más peso. Sus pies en forma de zapatilla hacen que apenas hagan ruido. No necesitan herraduras.</Spanish>
 		<Polish>Jeździec na Wielbłądzie</Polish>
@@ -5410,7 +5417,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CREE_TRACKER_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Cree Tracker[COLOR_REVERT] is a unique unit of the Cree culture. It is more powerful than the normal [COLOR_UNIT_TEXT]Tracker[COLOR_REVERT] with even better bonuses against animals.</English>
+		<English>[COLOR_UNIT_TEXT]Cree Tracker[COLOR_REVERT] is a unique unit of the Cree culture. It is more powerful than the normal [COLOR_UNIT_TEXT]Tracker[COLOR_REVERT] with even better bonuses against animals.</English>
 		<French>Traqueur</French>
 		<Italian>Cercatore di tracce Cree</Italian>
 		<Spanish>El Rastreador cree.</Spanish>
@@ -5710,7 +5717,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DAI_CHUI_PEDIA</Tag>
 		<English>Cantonese Unique Culture Unit.</English>
-		<French>Unité Culturelle Unique du Nigéria (Cantonese).</French>
+		<French>Unité Culturelle Unique du Nigéria (Cantonais).</French>
 		<Italian>Unità unica Cantonese.</Italian>
 		<Polish>Kantońska jednostka kulturowa.</Polish>
 	</TEXT>
@@ -5782,7 +5789,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DECAREME_STRATEGY</Tag>
-		<English>The [COLOR_UNIT_TEXT]Deceres[COLOR_REVERT] is the next stage of medieval sail-and-oar propelled warships. It is more powerful than the [COLOR_UNIT_TEXT]Quinquereme[COLOR_REVERT] but cannot enter ocean tiles (until Astronomy).</English>
+		<English>The [COLOR_UNIT_TEXT]Deceres[COLOR_REVERT] is the next stage of medieval sail-and-oar propelled warships. It is more powerful than the [COLOR_UNIT_TEXT]Quinquereme[COLOR_REVERT] but cannot enter ocean tiles (until Astronomy).</English>
 		<French>La [COLOR_UNIT_TEXT]Galère 'Déceres'[COLOR_REVERT] est l'étape suive des bâteaux de guerre à voiles et rames. Plus puissant que la [COLOR_UNIT_TEXT]Quinquerème[COLOR_REVERT] mais ne peut toujours pas naviguer en mer profonde (jusqu'à Astronomie).</French>
 		<Polish>Dekarema.</Polish>
 	</TEXT>
@@ -6218,8 +6225,8 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DREADNOUGHT_SHIP_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Dreadnoughts[COLOR_REVERT] are a more powerful version of the [COLOR_UNIT_TEXT]Pre-Dreadnought[COLOR_REVERT] warship. Like its predecessor, Dreadnoughts have the Bombard ability, and a bonus against wooden ships.</English>
-		<French>Le [COLOR_UNIT_TEXT]Dreadnought[COLOR_REVERT] est la version plus puissante du [COLOR_UNIT_TEXT]Cuirassé à coque en fer[COLOR_REVERT]. Comme son prédécesseur, les Dreadnoughts ont la capacité Bombardement et un bonus contre les navires en bois.</French>
+		<English>[COLOR_UNIT_TEXT]Dreadnoughts[COLOR_REVERT] are a more powerful version of the [COLOR_UNIT_TEXT]Pre-Dreadnought[COLOR_REVERT] warship. Like its predecessor, Dreadnoughts have the Bombard ability, and a bonus against wooden ships.</English>
+		<French>Le [COLOR_UNIT_TEXT]Dreadnought[COLOR_REVERT] est la version plus puissante du [COLOR_UNIT_TEXT]Cuirassé à coque en fer[COLOR_REVERT]. Comme son prédécesseur, les Dreadnoughts ont la capacité Bombardement et un bonus contre les navires en bois.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DREADNOUGHT_STRATEGY</Tag>
@@ -6826,14 +6833,14 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ELMETI_PEDIA</Tag>
 		<English>The Elmeti were non-noble knights of Italy. Their name is derived from the Italian term for helmet, referring to the headgear they wore along with the finely crafted plate armor. The Elmeti fought in a series of skirmishes between Italy and other European states during the latter half of the fifteenth century. One key battle occurred in 1487 at Ponte di Crevola, where the Milanese army, led by Trivulzio, defeated Swiss forces in a battle that foreshadowed nearly half a century of further European encroaches into Italy - a period now known as the Italian Wars. </English>
-		<French>Unité Culturelle Unique Italian.</French>
+		<French>Unité Culturelle Unique Italienne.</French>
 		<Italian>Unità unica Italiana.</Italian>
 		<Polish>Unikalna jednostka Kultury Włoskiej</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ELMETI_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Elmeti[COLOR_REVERT] are an Italian culture unit. It is equivalent to the [COLOR_UNIT_TEXT]Knight[COLOR_REVERT] but with better bonuses against melee units.</English>
-		<French>Le [COLOR_UNIT_TEXT]Cavalier Elmeti[COLOR_REVERT] est un unité culturelle Italienne. Elle est équivalente au [COLOR_UNIT_TEXT]Chevalier[COLOR_REVERT] mais avec de meilleurs bonus contre les unités de mêlée.</French>
+		<English>[COLOR_UNIT_TEXT]Elmeti[COLOR_REVERT] are an Italian culture unit. It is equivalent to the [COLOR_UNIT_TEXT]Knight[COLOR_REVERT] but with better bonuses against melee units.</English>
+		<French>Le [COLOR_UNIT_TEXT]Cavalier Elmeti[COLOR_REVERT] est un unité culturelle Italienne. Elle est équivalente au [COLOR_UNIT_TEXT]Chevalier[COLOR_REVERT] mais avec de meilleurs bonus contre les unités de mêlée.</French>
 		<Italian>Gli Elmeti sono un'unità molto forte nell'era in cui compaiono.</Italian>
 		<Polish>Potężna, Włoska jednostka specjalna.</Polish>
 	</TEXT>
@@ -7956,7 +7963,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FLAMING_ARROW_STRATEGY</Tag>
-		<English>The [COLOR_UNIT_TEXT]Fire Arrow[COLOR_REVERT] is an early defensive unit. With special bonuses vs archers, melee and gunpowder units, it is ideal to defend against late medieval armies.</English>
+		<English>The [COLOR_UNIT_TEXT]Fire Arrow[COLOR_REVERT] is an early defensive unit. With special bonuses vs archers, melee and gunpowder units, it is ideal to defend against late medieval armies.</English>
 		<French>La [COLOR_UNIT_TEXT]Flèche de Feu[COLOR_REVERT] est une première unité défensive. Avec des bonus spéciaux contre les archers, les unités de mêlée et de poudre à canon, il est idéal pour se défendre contre les armées de la fin du Moyen Âge.</French>
 	</TEXT>
 	<TEXT>
@@ -8577,7 +8584,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FUSION_CRUISER_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Fusion Cruiser[COLOR_REVERT] is a lighter version of the fusion battleship, with smaller guns and a lighter shield.  However the fusion power source and reduced payload mean this ship is very manoeuvrable and can often flank and avoid attacks from submersibles.</English>
+		<English>[COLOR_UNIT_TEXT]Fusion Cruiser[COLOR_REVERT] is a lighter version of the fusion battleship, with smaller guns and a lighter shield.  However the fusion power source and reduced payload mean this ship is very manoeuvrable and can often flank and avoid attacks from submersibles.</English>
 		<French>Le [COLOR_UNIT_TEXT]Croiseur à Fusion[COLOR_REVERT] est une unité version plus légère du cuirassé fusion, avec des canons plus petits et un bouclier plus léger. Cependant, la source d'énergie de fusion et la charge utile réduite signifient que ce navire est très maniable et peut souvent prendre de flanc et éviter les attaques de submersibles.</French>
 		<Polish>Krążownik Fuzyjny może transportować 6 bomb, a także zatapiać wrogie statki wojenne. Dodatkowo bez problemu wykrywa statki podwodne oraz może bronić bombardowanego miasta.</Polish>
 	</TEXT>
@@ -9098,8 +9105,8 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GREAT_ADMIRAL_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Great Admiral[COLOR_REVERT] is the naval version of the [COLOR_UNIT_TEXT]Great General[COLOR_REVERT] unit. Admiral can build special buildings related to sea and navy and can join cities as a GP specialist and add XP to every ship built in that city.</English>
-		<French>L'[COLOR_UNIT_TEXT]Amiral Illustre[COLOR_REVERT] est la version navale du [COLOR_UNIT_TEXT]Général illustre[COLOR_REVERT] . L'amiral peut construire des bâtiments spéciaux liés à la mer et à la marine et peut rejoindre des villes en tant que spécialiste GP et ajouter de l'XP à chaque navire construit dans cette ville.</French>
+		<English>[COLOR_UNIT_TEXT]Great Admiral[COLOR_REVERT] is the naval version of the [COLOR_UNIT_TEXT]Great General[COLOR_REVERT] unit. Admiral can build special buildings related to sea and navy and can join cities as a GP specialist and add XP to every ship built in that city.</English>
+		<French>L'[COLOR_UNIT_TEXT]Amiral Illustre[COLOR_REVERT] est la version navale du [COLOR_UNIT_TEXT]Général illustre[COLOR_REVERT] . L'amiral peut construire des bâtiments spéciaux liés à la mer et à la marine et peut rejoindre des villes en tant que spécialiste GP et ajouter de l'XP à chaque navire construit dans cette ville.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARTIST</Tag>
@@ -10237,7 +10244,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HAITIAN_REBEL_PEDIA</Tag>
 		<English>The Haitian Revolution (1791-1804) was a slave revolt in the French colony of Saint-Domingue, which culminated in the elimination of slavery there and the founding of the Republic of Haiti. The Haitian Revolution was the only slave revolt which led to the founding of a state. The signal to begin the revolt was given by Dutty Boukman, a high priest of vodou and leader of the Maroon slaves, during a religious ceremony at Bois Caïman on the night of 14 August. Within the next ten days, slaves had taken control of the entire Northern Province in an unprecedented slave revolt. Whites kept control of only a few isolated, fortified camps. The slaves sought revenge on their masters through "pillage, rape, torture, mutilation, and death". Because the plantation owners had long feared such a revolt, they were well armed and prepared to defend themselves. Nonetheless, within weeks, the number of slaves who joined the revolt reached some 100,000.</English>
-		<French>Unité Culturelle Unique Haitian.</French>
+		<French>Unité Culturelle Unique Haïtienne.</French>
 		<Italian>Unità unica Haitiana.</Italian>
 		<Polish>Haitański Rebeliant to mobilna jednostka, ktróra świetnie nadaje sie do szybkich ataków na tyły wroga.</Polish>
 	</TEXT>
@@ -10796,7 +10803,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_HERERO_REBEL</Tag>
 		<English>Herero Rebel</English>
 		<French>
-			<Text>Rebelle Herero</Text>
+			<Text>Rebelle Héréro</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -10806,7 +10813,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HERERO_REBEL_PEDIA</Tag>
 		<English>The Hereros were cattle grazers, occupying most of central and northern South-West Africa. During the Scramble for Africa, South-West Africa was claimed by Germany in August 1884. At that time, it was the only overseas German territory deemed suitable for white settlement. German colonists arriving in the following years occupied large areas of land, ignoring any claims by the Herero and other natives. There was continual resistance by the natives. In 1903, some of the Khoi and Herero tribes rose in revolt and about 60 German settlers were killed. Troops were sent from Germany to re-establish order, but only succeeded in dispersing the rebels, led by Chief Samuel Maharero.</English>
-		<French>Unité Culturelle Unique des Herero.</French>
+		<French>Unité Culturelle Unique des Héréro.</French>
 		<Italian>Unità unica Herero.</Italian>
 		<Polish>Jednostka kultury Herero.</Polish>
 	</TEXT>
@@ -13890,6 +13897,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNGE_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Lunge: %d1_Amount%%</English>
+		<French>[ICON_BULLET]Fente: %d1_Amount%%</French>
 		<Italian>[ICON_BULLET]Affondo: %d1_Amount%%</Italian>
 		<Polish>[ICON_BULLET]Pchnięcie: %d1_Amount%%</Polish>
 	</TEXT>
@@ -14440,7 +14448,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAX_HP</Tag>
 		<English>[ICON_BULLET]Max HP: %d1 (usually 100.)</English>
-		<French>[ICON_BULLET]Max HP: %d1 (ref. 100.)</French>
+		<French>[ICON_BULLET]PV Max: %d1 (ref. 100.)</French>
 		<German>[ICON_BULLET]TP-Maximum: %d1 (i.d.R. 100)</German>
 		<Italian>[ICON_BULLET]HP massima: %d1 (solitamente 100)</Italian>
 		<Polish>[ICON_BULLET]Max XP: %d1 (zwykle 100.)</Polish>
@@ -14448,7 +14456,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAX_START_ERA</Tag>
 		<English>[NEWLINE][ICON_BULLET]Can only be Built on %s1_Name and Earlier Starts</English>
-		<French>[NEWLINE][ICON_BULLET]Peut uniquement être constuit par %s1_Name et aux débuts précédents</French>
+		<French>[NEWLINE][ICON_BULLET]Peut uniquement être constuit par %s1_Name et dans les premières Eres</French>
 		<German>[NEWLINE][ICON_BULLET]Kann nur gebaut werden bei %s1_Name und früheren Spielestarts</German>
 		<Italian>[NEWLINE][ICON_BULLET]Può essere construito/a solo nella %s1_Name o precedenti</Italian>
 		<Spanish>[NEWLINE][ICON_BULLET]Solo se puede construir en [NUM1:el:la:los:las] %s1_Name y Épocas anteriores</Spanish>
@@ -16237,7 +16245,11 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_BRUTE</Tag>
 		<English>Neanderthal Brute</English>
-		<French>Brute de Néanderthal</French>
+		<French>
+			<Text>Brute de Néanderthal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>Neandertaler-Schläger</German>
 	</TEXT>
 	<TEXT>
@@ -16263,12 +16275,20 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_ENFORCER</Tag>
 		<English>Neanderthal Enforcer</English>
-		<French>Force de l'Ordre Néanderthal</French>
+		<French>
+			<Text>Force de l'Ordre Néanderthal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_GATHERER</Tag>
 		<English>Neanderthal Gatherer</English>
-		<French>Cueilleuse Néanderthal</French>
+		<French>
+			<Text>Cueilleuse Néanderthal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>Neandertaler-Sammler</German>
 	</TEXT>
 	<TEXT>
@@ -16289,7 +16309,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_LOG_RAM</Tag>
 		<English>Neanderthal Log Ram</English>
-		<French>Bélier Néanderthal</French>
+		<French>Tronc de siège de Néanderthal</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_OBSIDIAN_AXEMAN</Tag>
@@ -16410,7 +16430,11 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_WISE_WOMAN</Tag>
 		<English>Neanderthal Wise Woman</English>
-		<French>Vieille femme de Néanderthal</French>
+		<French>
+			<Text>Vieille femme de Néanderthal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_WOODEN_SPEARMAN</Tag>
@@ -17977,7 +18001,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POISON_NUKE_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]BBM[COLOR_REVERT] is a powerful biological "nuke". Much more powerful than normal [COLOR_UNIT_TEXT]Biological Missile[COLOR_REVERT].</English>
+		<English>[COLOR_UNIT_TEXT]BBM[COLOR_REVERT] is a powerful biological "nuke". Much more powerful than normal [COLOR_UNIT_TEXT]Biological Missile[COLOR_REVERT].</English>
 		<French>Le [COLOR_UNIT_TEXT]Missile Ballistique Biologique[COLOR_REVERT]est un puissant "nucléaire" biologique. Beaucoup plus puissant que le [COLOR_UNIT_TEXT]Missile biologique[COLOR_REVERT] normal.</French>
 	</TEXT>
 	<TEXT>
@@ -20164,7 +20188,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEPOY_PEDIA</Tag>
 		<English>By definition, the "sepoy" is an indigenous soldier serving in the armed forces of a European power. The most commonly known example is a native Indian fighting for the British occupational forces in India, starting in the sixteenth century. The rank of sepoy is the lowest enlisted rank in the British India army, similar to that of a private. Sepoy soldiers were the driving force behind the 1857 uprising associated with the British East India Company, the commercial trade empire that had occupied and exploited the territories of India since as early as 1610</English>
-		<French>Unité Culturelle Unique Bengali.</French>
+		<French>Unité Culturelle Unique Bengalaise.</French>
 		<Italian>Unità unica Bengalese.</Italian>
 		<Polish>Bengalska jednostka kulturowa.</Polish>
 	</TEXT>
@@ -20231,7 +20255,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHAH_RUKH_STRATEGY</Tag>
 		<English>The Turkmen military hero is [COLOR_UNIT_TEXT]Shah Rukh[COLOR_REVERT]. Available in the renaissance era, he starts off with a [COLOR_HIGHLIGHT_TEXT]Minister[COLOR_REVERT] in his retinue. He can be built once [COLOR_TECH_TEXT]Education[COLOR_REVERT] and [COLOR_TECH_TEXT]Gunpowder[COLOR_REVERT] are researched.</English>
-		<French>Le Héros militaire Turkmen est [COLOR_UNIT_TEXT]Shah Rukh[COLOR_REVERT]. Disponible à la Renaissance, il commence avec un [COLOR_HIGHLIGHT_TEXT]Ministre[COLOR_REVERT] dans sa suite. Il peut être construit lorsque [COLOR_TECH_TEXT]Education[COLOR_REVERT] et [COLOR_TECH_TEXT]Poudre à canon[COLOR_REVERT] sont recherchés.</French>
+		<French>Le Héros militaire Turc est [COLOR_UNIT_TEXT]Shah Rukh[COLOR_REVERT]. Disponible à la Renaissance, il commence avec un [COLOR_HIGHLIGHT_TEXT]Ministre[COLOR_REVERT] dans sa suite. Il peut être construit lorsque [COLOR_TECH_TEXT]Education[COLOR_REVERT] et [COLOR_TECH_TEXT]Poudre à canon[COLOR_REVERT] sont recherchés.</French>
 		<Spanish>El héroe militar turcomeno es [COLOR_UNIT_TEXT]Shahruj[COLOR_REVERT]. Disponible a partir del Renacimiento, comienza con el ascenso [COLOR_HIGHLIGHT_TEXT]Ministro[COLOR_REVERT] en su séquito. Puede ser entrenado una vez investigadas la [COLOR_TECH_TEXT]Educación[COLOR_REVERT] y la [COLOR_TECH_TEXT]Pólvora[COLOR_REVERT].</Spanish>
 		<Polish>Bohater Wojskowy Turkmenów to [COLOR_UNIT_TEXT]Szahruch[COLOR_REVERT]. Rozpoczyna w towarzystwie [COLOR_HIGHLIGHT_TEXT]Ministra[COLOR_REVERT]. Może zostać wyszkolony wraz z odkryciem [COLOR_TECH_TEXT]Edukacji[COLOR_REVERT] i [COLOR_TECH_TEXT]Prochu[COLOR_REVERT].</Polish>
 	</TEXT>
@@ -21243,7 +21267,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPARTAN_WARRIOR_PEDIA</Tag>
 		<English>The Spartan army stood at the centre of the Spartan state, whose male and female citizen' were trained in the discipline and honor of the warrior society. Subject to military drill from early manhood, the Spartans were one of the most feared military forces in the Greek world. At the height of Sparta's power - between the 6th and 4th centuries BC - it was commonly accepted that, "one Spartan was worth several men of any other state." According to Thucydides, the famous moment of Spartan surrender at the island of Sphacteria off of Pylos was highly unexpected. He said that 'it was the common perception at the time that Spartans would never lay down their weapons for any reason, be it hunger, or danger.</English>
-		<French>Spartan Culturelle Unique Gallois.</French>
+		<French>Unité Culturelle Unique Spartiate.</French>
 		<Italian>Unità unica Spartana.</Italian>
 		<Polish>Spartańska jednostka kulturowa.</Polish>
 	</TEXT>
@@ -21893,7 +21917,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STRIKE_FIGHTER</Tag>
 		<English>Modern Interceptor</English>
-		<French>Intercepteur F15</French>
+		<French>Intercepteur moderne</French>
 		<German>Kampfjäger F15</German>
 		<Italian>Intercettore moderno</Italian>
 		<Spanish>
@@ -22985,6 +23009,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TERRAFORMER</Tag>
 		<English>Terraformer</English>
+		<French>Terraformeur</French>
 		<Spanish>
 			<Text>Terraformadora</Text>
 			<Gender>Female</Gender>
@@ -23072,7 +23097,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_THERMOBARIC_TANK_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Electric Tank[COLOR_REVERT] is the first of the land dreadnought line of tanks. With high combat strength, bombard ability and high mobility rate, it is vastly superior to conventional tank units.</English>
+		<English>[COLOR_UNIT_TEXT]Electric Tank[COLOR_REVERT] is the first of the land dreadnought line of tanks. With high combat strength, bombard ability and high mobility rate, it is vastly superior to conventional tank units.</English>
 		<French>Le [COLOR_UNIT_TEXT]Char Electrique[COLOR_REVERT] est le premier de la ligne de chars de dreadnought terrestre. Avec une force de combat élevée, une capacité de bombardement et un taux de mobilité élevé, il est largement supérieur aux unités de char conventionnelles.</French>
 	</TEXT>
 	<TEXT>
@@ -24058,7 +24083,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ULUGH_BEG_STRATEGY</Tag>
 		<English>The Turkmen national hero is [COLOR_UNIT_TEXT]Ulugh Beg[COLOR_REVERT], available in the renaissance era. He starts off with a [COLOR_HIGHLIGHT_TEXT]Scholar[COLOR_REVERT] in his retinue. He can be built once [COLOR_TECH_TEXT]Education[COLOR_REVERT] and [COLOR_TECH_TEXT]Astronomy[COLOR_REVERT] are researched.</English>
-		<French>Le Héros national Turkmen est [COLOR_UNIT_TEXT]Ulugh Beg[COLOR_REVERT], disponible à la Renaissance. Il commence avec un [COLOR_HIGHLIGHT_TEXT]Erudit[COLOR_REVERT] dans sa suite. Il peut être construit lorsque [COLOR_TECH_TEXT]Education[COLOR_REVERT] et [COLOR_TECH_TEXT]Astronomie[COLOR_REVERT] sont recherchés.</French>
+		<French>Le Héros national Turc est [COLOR_UNIT_TEXT]Ulugh Beg[COLOR_REVERT], disponible à la Renaissance. Il commence avec un [COLOR_HIGHLIGHT_TEXT]Erudit[COLOR_REVERT] dans sa suite. Il peut être construit lorsque [COLOR_TECH_TEXT]Education[COLOR_REVERT] et [COLOR_TECH_TEXT]Astronomie[COLOR_REVERT] sont recherchés.</French>
 		<Spanish>El héroe nacional turcomeno es [COLOR_UNIT_TEXT]Ulugh Beg[COLOR_REVERT], disponible a partir del Renacimiento. Comienza con el ascenso [COLOR_HIGHLIGHT_TEXT]Erudito[COLOR_REVERT] en su séquito. Puede ser entrenado una vez investigadas la [COLOR_TECH_TEXT]Educación[COLOR_REVERT] y la [COLOR_TECH_TEXT]Astronomía[COLOR_REVERT].</Spanish>
 		<Polish>Bohater Narodowy Turkmenów to [COLOR_UNIT_TEXT]Uług Beg[COLOR_REVERT]. Rozpoczyna w towarzystwie [COLOR_HIGHLIGHT_TEXT]Badacza[COLOR_REVERT]. Może zostać wyszkolony wraz z odkryciem [COLOR_TECH_TEXT]Edukacji[COLOR_REVERT] i [COLOR_TECH_TEXT]Astronomii[COLOR_REVERT].</Polish>
 	</TEXT>
@@ -25286,7 +25311,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WORKANIMAL_STRATEGY</Tag>
-		<English>Use [COLOR_UNIT_TEXT]Workers[COLOR_REVERT] to improve the land around your cities and build roads that help establish trade routes. This particular worker doesn't have any terrain bonuses but it still has a faster work rate than the normal worker.</English>
+		<English>Use [COLOR_UNIT_TEXT]Workers[COLOR_REVERT] to improve the land around your cities and build roads that help establish trade routes. This particular worker doesn't have any terrain bonuses but it still has a faster work rate than the normal worker.</English>
 		<French>Utilisez les [COLOR_UNIT_TEXT]Ouvriers[COLOR_REVERT] pour améliorer le terrain autour de vos villes et construire des routes qui permettent d'établir des routes commerciales. Ce travailleur particulier n'a pas de bonus de terrain mais il a toujours un rythme de travail plus rapide que le travailleur normal.</French>
 	</TEXT>
 	<TEXT>
@@ -26155,7 +26180,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ANDAMAN_PYGMIES_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Andaman Pygmies[COLOR_REVERT] is a Andamanese unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Pygmé Andaman[COLOR_REVERT] est une unité Andamanese unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Pygmé Andaman[COLOR_REVERT] est une unité Andamanaise unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_APU_TAMBO</Tag>
@@ -26650,6 +26675,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MEIONE_CARAVAN</Tag>
 		<English>Meione Caravan</English>
+		<French>Caravane Meione</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MEIONE_CARAVAN_PEDIA</Tag>
@@ -27049,7 +27075,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HUACA_GUARDIANS_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Huaca Guardians[COLOR_REVERT] is a Moche unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Garde Huaca[COLOR_REVERT] est une unité Moche unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Garde Huaca[COLOR_REVERT] est une unité Mochica unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_QUADO</Tag>
@@ -27143,7 +27169,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SIEGE_ELEPHANT_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Siege Elephant[COLOR_REVERT] is a Mughal unique unit.</English>
-		<French>L'[COLOR_UNIT_TEXT]Eléphant de Siège[COLOR_REVERT] est une unité Mughal unique.</French>
+		<French>L'[COLOR_UNIT_TEXT]Eléphant de Siège[COLOR_REVERT] est une unité Moghol unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PEDRO_DE_AGUADO</Tag>
@@ -27592,7 +27618,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PAIUTE_CAVALRY</Tag>
 		<English>Paiute Cavalry</English>
-		<French>Cavalerie Paiute</French>
+		<French>Cavalerie Païute</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PAIUTE_CAVALRY_PEDIA</Tag>
@@ -27601,7 +27627,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PAIUTE_CAVALRY_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Paiute Cavalry[COLOR_REVERT] is a Paiute unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Cavalerie Paiute[COLOR_REVERT] est une unité Paiute unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Cavalerie Païute[COLOR_REVERT] est une unité Païute unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BENAZIR_BHUTTO</Tag>
@@ -27683,7 +27709,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PUBLIC_FORCES_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Public Forces[COLOR_REVERT] is a Panaman unique unit.</English>
-		<French>Les [COLOR_UNIT_TEXT]Forces Publiques panaméennes[COLOR_REVERT] est une unité Panaman unique.</French>
+		<French>Les [COLOR_UNIT_TEXT]Forces Publiques panaméennes[COLOR_REVERT] est une unité Panaméenne unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JOSE_DE_FRANCIA</Tag>
@@ -27789,7 +27815,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KRISS_WARRIOR_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Kriss Warrior[COLOR_REVERT] is a Filipino unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Guerrier Kriss [COLOR_REVERT] est une unité Filipino unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Guerrier Kriss [COLOR_REVERT] est une unité Philipine unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GOLIATH</Tag>
@@ -27807,6 +27833,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LIGHT_HOPLITE</Tag>
 		<English>Light Hoplite</English>
+		<French>Hoplite léger</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LIGHT_HOPLITE_PEDIA</Tag>
@@ -27923,7 +27950,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RED_FOX_ARCHER_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Red Fox Archer[COLOR_REVERT] is a Poverty Point unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Archer Renard roux[COLOR_REVERT] est une unité Poverty Point unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Archer Renard roux[COLOR_REVERT] est une unité Pointe de Pauvreté unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAHUAL</Tag>
@@ -27994,7 +28021,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RESIN_CARAVAN</Tag>
 		<English>Resin Caravan</English>
-		<French>Caravane Resine</French>
+		<French>Caravane Résinee</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RESIN_CARAVAN_PEDIA</Tag>
@@ -28003,7 +28030,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RESIN_CARAVAN_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Resin Caravan[COLOR_REVERT] is a Puntic unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Caravane Resine[COLOR_REVERT] est une unité Puntic unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Caravane Résinee[COLOR_REVERT] est une unité Puntic unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_YAO_CHANG</Tag>
@@ -28126,6 +28153,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BOLA_HUNTER</Tag>
 		<English>Bola Hunter</English>
+		<French>Chasseur Bola</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BOLA_HUNTER_PEDIA</Tag>
@@ -28134,7 +28162,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BOLA_HUNTER_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Bola Hunter[COLOR_REVERT] is a Querandi unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Bola Hunter[COLOR_REVERT] est une unité Querandi unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Bola Hunter[COLOR_REVERT] est une unité Quérandi unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KUBRAT</Tag>
@@ -28259,6 +28287,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEGGAR</Tag>
 		<English>Beggar</English>
+		<French>Mendiant</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEGGAR_PEDIA</Tag>
@@ -28521,7 +28550,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SABAR_DRUMMER_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Sabar Drummer[COLOR_REVERT] is a Senegali unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Tambour Sabar[COLOR_REVERT] est une unité Senegali unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Tambour Sabar[COLOR_REVERT] est une unité Sénégalais unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BADI_VII</Tag>
@@ -28574,7 +28603,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HAJDUK_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Hajduk[COLOR_REVERT] is a Serbian unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Hajduk[COLOR_REVERT] est une unité Serbian unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Hajduk[COLOR_REVERT] est une unité Serbe unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAYLAMP</Tag>
@@ -28605,6 +28634,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARCHIMEDES</Tag>
 		<English>Archimedes</English>
+		<French>Archimède</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARCHIMEDES_PEDIA</Tag>
@@ -28626,7 +28656,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GASTRAPHETES_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Gastraphetes[COLOR_REVERT] is a Sicilian unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Gastraphetes[COLOR_REVERT] est une unité Sicilian unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Gastraphetes[COLOR_REVERT] est une unité Sicilienne unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GANDR</Tag>
@@ -28679,7 +28709,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZBOJNIK_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Zbojnik[COLOR_REVERT] is a Slovakian unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Zbojnik[COLOR_REVERT] est une unité Slovakian unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Zbojnik[COLOR_REVERT] est une unité Slovaques unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JOZE_PUCNIK</Tag>
@@ -28697,6 +28727,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CARANTANIAN_MERCENARY</Tag>
 		<English>Carantanian Mercenary</English>
+		<French>Mercenaire Carantanien</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CARANTANIAN_MERCENARY_PEDIA</Tag>
@@ -28705,7 +28736,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CARANTANIAN_MERCENARY_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Carantanian Mercenary[COLOR_REVERT] is a Slovenian unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Carantanian Mercenary[COLOR_REVERT] est une unité Slovenian unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Carantanian Mercenary[COLOR_REVERT] est une unité Slovénienne unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SANDEH</Tag>
@@ -28785,7 +28816,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DARFUR_MILITIA_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Darfur Militia[COLOR_REVERT] is a Sudanese unique unit.</English>
-		<French>La [COLOR_UNIT_TEXT]Milice du Darfur[COLOR_REVERT] est une unité Sudanese unique.</French>
+		<French>La [COLOR_UNIT_TEXT]Milice du Darfur[COLOR_REVERT] est une unité Soudanaise unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DEWI_SARTIKA</Tag>
@@ -28812,7 +28843,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JAIPONGAN_DANCER_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Jaipongan Dancer[COLOR_REVERT] is a Sundanese unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Danseur Jaipongan[COLOR_REVERT] est une unité Sundanese unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Danseur Jaipongan[COLOR_REVERT] est une unité Sundanaise unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JULES_WIJDENBOSCH</Tag>
@@ -28864,7 +28895,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KAROLINER_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Karoliner[COLOR_REVERT] is a Swedish unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Karoliner[COLOR_REVERT] est une unité Swedish unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Karoliner[COLOR_REVERT] est une unité Suédoise unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BURHANUDDIN_RABBANI</Tag>
@@ -28944,7 +28975,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAHITIAN_RIDERS_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Tahitian Riders[COLOR_REVERT] is a Tahitian unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Cavalier Tahitien[COLOR_REVERT] est une unité Tahitian unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Cavalier Tahitien[COLOR_REVERT] est une unité Tahitien unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CANACUMACO</Tag>
@@ -29077,7 +29108,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SERENGETI_RANGER_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Serengeti Ranger[COLOR_REVERT] is a Tanzanian unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Gardien des forêts Serengeti[COLOR_REVERT] est une unité Tanzanian unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Gardien des forêts Serengeti[COLOR_REVERT] est une unité Tanzanienne unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TARIACURI</Tag>
@@ -29210,7 +29241,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_THRACIAN_PELTAST_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Thracian Peltast[COLOR_REVERT] is a Thracian unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Peltaste Thrace[COLOR_REVERT] est une unité Thracian unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Peltaste Thrace[COLOR_REVERT] est une unité Thracienne unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAO_CAO</Tag>
@@ -29236,7 +29267,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DOUJIAN_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Doujian[COLOR_REVERT] is a Three Kingdoms unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Doujian[COLOR_REVERT] est une unité Three Kingdoms unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Doujian[COLOR_REVERT] est une unité Trois Royaumes unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TIMUR</Tag>
@@ -29416,6 +29447,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAIZE_CARAVAN</Tag>
 		<English>Maize Caravan</English>
+		<French>Caravane Maize</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAIZE_CARAVAN_PEDIA</Tag>
@@ -29451,7 +29483,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KHINGILA_WARRIORS_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Khingila Warriors[COLOR_REVERT] is a Transoxanian unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Guerrier Khingila[COLOR_REVERT] est une unité Transoxanian unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Guerrier Khingila[COLOR_REVERT] est une unité Transoxanienne unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WANANO</Tag>
@@ -29585,7 +29617,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZAPOROZKI_KOZAK_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Zaporozki Kozak[COLOR_REVERT] is a Ukrainian unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Zaporozki Kozak[COLOR_REVERT] est une unité Ukrainian unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Zaporozki Kozak[COLOR_REVERT] est une unité Ukrainienne unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JOSE_MUJICA</Tag>
@@ -29612,7 +29644,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HERNANDARIAS_REGIMENTO_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Hernandarias Regimento[COLOR_REVERT] is a Uruguayan unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Regimento Hernandarias[COLOR_REVERT] est une unité Uruguayan unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Regimento Hernandarias[COLOR_REVERT] est une unité Uruguayenne unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ORANG_KAYA</Tag>
@@ -29638,7 +29670,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BOROBUDUR_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Borobudur[COLOR_REVERT] is a Bandanese unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Borobudur[COLOR_REVERT] est une unité Bandanese unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Borobudur[COLOR_REVERT] est une unité Bandanais unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHAYBANI</Tag>
@@ -29731,7 +29763,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GALLIOT_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Galliot[COLOR_REVERT] is a Venetian unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Galliot[COLOR_REVERT] est une unité Venetian unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Galliot[COLOR_REVERT] est une unité Vénicien unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MUHAMMAD_BIN_SAUD</Tag>
@@ -29758,7 +29790,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SAUD_CAVALRY_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Saud Cavalry[COLOR_REVERT] is a Saudi unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Saud Cavalerie[COLOR_REVERT] est une unité Saudi unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Saud Cavalerie[COLOR_REVERT] est une unité Saoudite unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VLAD_III_DRACULA</Tag>
@@ -29776,6 +29808,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ORDER_OF_THE_DRAGON</Tag>
 		<English>Order of the Dragon</English>
+		<French>Ordre du Dragon</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ORDER_OF_THE_DRAGON_PEDIA</Tag>
@@ -29784,7 +29817,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ORDER_OF_THE_DRAGON_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Order of the Dragon[COLOR_REVERT] is a Wallachian unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Order of the Dragon[COLOR_REVERT] est une unité Wallachian unique.</French>
+		<French>L'[COLOR_UNIT_TEXT]Ordre du Dragon[COLOR_REVERT] est une unité Wallachienne unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GENSERIC</Tag>
@@ -29802,6 +29835,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VANDAL_PILLAGER</Tag>
 		<English>Vandal Pillager</English>
+		<French>Pilleur Vandale</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VANDAL_PILLAGER_PEDIA</Tag>
@@ -29828,6 +29862,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARAY_RIDERS</Tag>
 		<English>Waray Riders</English>
+		<French>Cavalier Waray</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARAY_RIDERS_PEDIA</Tag>
@@ -30252,6 +30287,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHEBA_ELITES</Tag>
 		<English>Sheba Elites</English>
+		<French>Elite Sheba</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHEBA_ELITES_PEDIA</Tag>
@@ -30260,7 +30296,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHEBA_ELITES_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Sheba Elites[COLOR_REVERT] is a Zimbabwe unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Sheba Elites[COLOR_REVERT] est une unité Zimbabwe unique.</French>
+		<French>L'[COLOR_UNIT_TEXT]Elite Sheba[COLOR_REVERT] est une unité Zimbabwe unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUTAKAWI</Tag>
@@ -30278,6 +30314,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CIBOLA_PEASANT</Tag>
 		<English>Cibola Peasant</English>
+		<French>Paysan Cibola</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CIBOLA_PEASANT_PEDIA</Tag>
@@ -30286,7 +30323,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CIBOLA_PEASANT_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Cibola Peasant[COLOR_REVERT] is a Zuni unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Cibola Peasant[COLOR_REVERT] est une unité Zuni unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Paysan Cibola [COLOR_REVERT] est une unité Zuni unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JULIUS_CIVILIS</Tag>
@@ -30344,6 +30381,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HENRY_THE_LION</Tag>
 		<English>Henry the Lion</English>
+		<French>Henry le Lion</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HENRY_THE_LION_PEDIA</Tag>
@@ -30365,7 +30403,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MARHATHEGNOZ_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Marhathegnoz[COLOR_REVERT] is a Bavarian unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Marhathegnoz[COLOR_REVERT] est une unité Bavarian unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Marhathegnoz[COLOR_REVERT] est une unité Bavaroise unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BADIS</Tag>
@@ -30383,6 +30421,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MEHARISTS</Tag>
 		<English>Meharists</English>
+		<French>Méhariste</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MEHARISTS_PEDIA</Tag>
@@ -30391,7 +30430,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MEHARISTS_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Meharists[COLOR_REVERT] is a Bedouin unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Meharists[COLOR_REVERT] est une unité Bedouin unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Méhariste[COLOR_REVERT] est une unité Bedouine unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GEORGE_CADLE_PRICE</Tag>
@@ -30409,6 +30448,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAHOGANY_WOODCUTTER</Tag>
 		<English>Mahogany Woodcutter</English>
+		<French>Bucheron Mahogany</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAHOGANY_WOODCUTTER_PEDIA</Tag>
@@ -30417,7 +30457,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAHOGANY_WOODCUTTER_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Mahogany Woodcutter[COLOR_REVERT] is a Belize unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Mahogany Woodcutter[COLOR_REVERT] est une unité Belize unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Bucheron Mahogany[COLOR_REVERT] est une unité Belize unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AHMAD_SHAH_DURRANI</Tag>
@@ -30470,7 +30510,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DE_SUCRE_DRAGOONS_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]De Sucre Dragoons[COLOR_REVERT] is a Bolivian unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Dragons de Sucre[COLOR_REVERT] est une unité Bolivian unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Dragons de Sucre[COLOR_REVERT] est une unité Bolivienne unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JOSE_BALLIVIAN</Tag>
@@ -30522,7 +30562,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GAEROAS_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Gaeroas[COLOR_REVERT] is a Briton unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Gaeroas[COLOR_REVERT] est une unité Briton unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Gaeroas[COLOR_REVERT] est une unité Britanique unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BOYARS</Tag>
@@ -30535,11 +30575,12 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BOYARS_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Boyars[COLOR_REVERT] is a Bulgarian unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Boyars[COLOR_REVERT] est une unité Bulgarian unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Boyars[COLOR_REVERT] est une unité Bulgare unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PHILIP_THE_BOLD</Tag>
 		<English>Philip the Bold</English>
+		<French>Philippe le Hardi</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PHILIP_THE_BOLD_PEDIA</Tag>
@@ -30607,6 +30648,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CANARI_BOWMANS</Tag>
 		<English>Canari Bowmans</English>
+		<French>Archer Canari</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CANARI_BOWMANS_PEDIA</Tag>
@@ -30615,7 +30657,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CANARI_BOWMANS_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Canari Bowmans[COLOR_REVERT] is a Canari unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Canari Bowmans[COLOR_REVERT] est une unité Canari unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Archer Canari[COLOR_REVERT] est une unité Canari unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JACHAL</Tag>
@@ -30749,7 +30791,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BALEARIC_SLINGERS_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Balearic Slingers[COLOR_REVERT] is a Celtiberian unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Guerrier avec fronde Balearic[COLOR_REVERT] est une unité Celtiberian unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Guerrier avec fronde Balearic[COLOR_REVERT] est une unité Celtibérienne unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MARANON</Tag>
@@ -30830,7 +30872,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GAZAVAT_WARRIORS_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Gazavat Warriors[COLOR_REVERT] is a Chechenian unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Guerrier Gazavat[COLOR_REVERT] est une unité Chechenian unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Guerrier Gazavat[COLOR_REVERT] est une unité Tchétchénienne unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OHIGGINS</Tag>
@@ -30989,7 +31031,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEARCH_BLOC_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Search Bloc[COLOR_REVERT] is a Colombian unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Bloc de Recherche[COLOR_REVERT] est une unité Colombian unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Bloc de Recherche[COLOR_REVERT] est une unité Colombien unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HALAKWULUP</Tag>
@@ -31042,7 +31084,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SAMOSTRELAC_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Samostrelac[COLOR_REVERT] is a Croatian unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Samostrelac[COLOR_REVERT] est une unité Croatian unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Samostrelac[COLOR_REVERT] est une unité Croate unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TOMAS_MASARYK</Tag>
@@ -31068,7 +31110,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VOZOVA_HRADBA_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Vozova Hradba[COLOR_REVERT] is a Czech unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Vozova Hradba[COLOR_REVERT] est une unité Czech unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Vozova Hradba[COLOR_REVERT] est une unité Tchèque unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DECEBALUS</Tag>
@@ -31146,7 +31188,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KALARIPAYATT_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Kalaripayatt[COLOR_REVERT] is a Dravidian unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Kalaripayatt[COLOR_REVERT] est une unité Dravidian unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Kalaripayatt[COLOR_REVERT] est une unité Dravidienne unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KHARKHUL</Tag>
@@ -31199,7 +31241,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_IWIA_BATTALION_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Iwia Battalion[COLOR_REVERT] is a Ecuadorian unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Battalion Iwia[COLOR_REVERT] est une unité Ecuadorian unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Battalion Iwia[COLOR_REVERT] est une unité Equatorienne unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JURI_ULUOTS</Tag>
@@ -31225,7 +31267,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ERNA_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Erna[COLOR_REVERT] is a Estonian unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Erna[COLOR_REVERT] est une unité Estonian unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Erna[COLOR_REVERT] est une unité Estonienne unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LARS_PORSENA</Tag>
@@ -31251,7 +31293,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HOPLOMACHUS_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Hoplomachus[COLOR_REVERT] is a Etruscan unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Hoplomachus[COLOR_REVERT] est une unité Etruscan unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Hoplomachus[COLOR_REVERT] est une unité Etrusque unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AL_MAHDI_BILLAH</Tag>
@@ -31304,7 +31346,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FYRDMAN_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Fyrdman[COLOR_REVERT] is a Alemanni unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Fyrdman[COLOR_REVERT] est une unité Alemanni unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Fyrdman[COLOR_REVERT] est une unité Allémanique unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SERU_EPENISA_CAKOBAU</Tag>
@@ -31330,7 +31372,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GONE_DAU_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Gone Dau[COLOR_REVERT] is a Fijian unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Gone Dau[COLOR_REVERT] est une unité Fijian unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Gone Dau[COLOR_REVERT] est une unité Fidjien unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_URHO_KEKKONEN</Tag>
@@ -31356,7 +31398,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TARKKA_AMPUJA_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Tarkka ampuja[COLOR_REVERT] is a Finnish unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Tarkka ampuja[COLOR_REVERT] est une unité Finnish unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Goudronkka ampuja[COLOR_REVERT] est une unité Finnois unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JAN_FRANS_WILLEMS</Tag>
@@ -31383,7 +31425,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BRABANT_MERCENARIES_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Brabant Mercenaries[COLOR_REVERT] is a Flemish unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Mercenaire Brabant[COLOR_REVERT] est une unité Flemish unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Mercenaire Brabant[COLOR_REVERT] est une unité Flamande unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAIYIN</Tag>
@@ -31410,7 +31452,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEAL_HUNTER_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Seal Hunter[COLOR_REVERT] is a Fuegian unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Chasseur de phoques[COLOR_REVERT] est une unité Fuegian unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Chasseur de phoques[COLOR_REVERT] est une unité Fuegienne unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MOHAMMED_II_TAIRAB</Tag>
@@ -31463,7 +31505,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SOTAROAS_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Sotaroas[COLOR_REVERT] is a Galatian unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Sotaroas[COLOR_REVERT] est une unité Galatian unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Sotaroas[COLOR_REVERT] est une unité Galatienne unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JUAN_MANUEL_DE_ROSAS</Tag>
@@ -31517,7 +31559,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MONASPA_GUARD_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Monaspa Guard[COLOR_REVERT] is a Georgian unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Garde Monaspa[COLOR_REVERT] est une unité Georgian unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Garde Monaspa[COLOR_REVERT] est une unité Georgienne unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KWAME_NKRUMAH</Tag>
@@ -31999,7 +32041,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BALAMOB_SLINGER_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Balamob Slinger[COLOR_REVERT] is a Huastec unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Frondeur Balamob[COLOR_REVERT] est une unité Huastec unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Frondeur Balamob[COLOR_REVERT] est une unité Huaxtèque unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TISH_ATAL</Tag>
@@ -32026,7 +32068,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TESHUB_PRIEST_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Teshub Priest[COLOR_REVERT] is a Hurrians unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Prêtre Teshub[COLOR_REVERT] est une unité Hurrians unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Prêtre Teshub[COLOR_REVERT] est une unité Hurrienne unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KHYAN</Tag>
@@ -32079,7 +32121,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LIBURNA_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Liburna[COLOR_REVERT] is a Illyrian unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Liburna[COLOR_REVERT] est une unité Illyrian unique.</French>
+		<French>Le [COLOR_UNIT_TEXT]Liburna[COLOR_REVERT] est une unité Illyrienne unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ELPIDIO_QUIRINO</Tag>
