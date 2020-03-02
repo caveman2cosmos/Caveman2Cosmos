@@ -185,13 +185,6 @@
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_SCALE_CITY_LIMITS</Type>
-			<Description>TXT_KEY_GAMEOPTION_SCALE_CITY_LIMITS</Description>
-			<Help>TXT_KEY_GAMEOPTION_SCALE_CITY_LIMITS_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>0</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
 			<Type>GAMEOPTION_MAXIMUM_POPULATION</Type>
 			<Description>TXT_KEY_GAMEOPTION_MAXIMUM_POPULATION</Description>
 			<Help>TXT_KEY_GAMEOPTION_MAXIMUM_POPULATION_HELP</Help>

@@ -10797,7 +10797,7 @@ int CvCivicInfo::getCityLimit(PlayerTypes ePlayer) const
 		return 0;
 	}
 	//ls612: Option to scale City Limits by Mapsize
-	else if (ePlayer > NO_PLAYER && GC.getGame().isOption(GAMEOPTION_SCALE_CITY_LIMITS))
+	else if (ePlayer > NO_PLAYER)
 	{
 		int iCityLimit;
 		CvPlayer* pPlayer = &GET_PLAYER(ePlayer);

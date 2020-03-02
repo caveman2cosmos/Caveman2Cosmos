@@ -1246,24 +1246,6 @@ The author of this option also believes that it does not represent a fair combat
 		<Polish>Otocz i zniszcz dodaje militarnych bonusów przeciw otaczaniu wrogich jednostek i miast, symulują prawdziwe zasadzki</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_SCALE_CITY_LIMITS</Tag>
-		<English>Scale City Limits</English>
-		<French>Frontières de Villes adaptées</French>
-		<German>Angepasste Stadtgrenzen</German>
-		<Italian>Scala i limiti cittadini</Italian>
-		<Spanish>Límites de ciudad escalados</Spanish>
-		<Polish>Skalowanie Limitu Miast</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_SCALE_CITY_LIMITS_HELP</Tag>
-		<English>City Limits will be scaled by the size of the map being used, as opposed to being static.</English>
-		<French>Les Frontières des Villes sont adaptées à la taille de la carte.</French>
-		<German>Mit dieser Einstellung sind die Stadtgrenzen nicht mehr statisch, sie werden stattdessen an die aktuelle Kartengröße angepasst.</German>
-		<Italian>I limiti cittadini vengono scalati in relazione alla dimensione della mappa usata.</Italian>
-		<Spanish>Los límites de ciudad estarán escalados según el tamaño de mapa utilizado, en lugar de mantenerse estáticos.</Spanish>
-		<Polish>Limit będzie się skalował wraz ze zmianą wielkości mapy</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_SIZE_MATTERS</Tag>
 		<English>C2C Combat Mod - Size Matters</English>
 		<French>Mode de Combat C2C - La Taille Compte!</French>
