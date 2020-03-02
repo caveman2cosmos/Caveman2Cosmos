@@ -167,7 +167,7 @@
 			<Type>GAMEOPTION_OVEREXPANSION_PENALTIES</Type>
 			<Description>TXT_KEY_GAMEOPTION_OVEREXPANSION_PENALTIES</Description>
 			<Help>TXT_KEY_GAMEOPTION_OVEREXPANSION_PENALTIES_HELP</Help>
-			<bDefault>1</bDefault>
+			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
