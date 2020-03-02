@@ -396,7 +396,7 @@
 			<Type>GAMEOPTION_REVOLUTION</Type>
 			<Description>TXT_KEY_GAMEOPTION_REVOLUTION</Description>
 			<Help>TXT_KEY_GAMEOPTION_REVOLUTION_HELP</Help>
-			<bDefault>1</bDefault>
+			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
