@@ -2,52 +2,32 @@
 <Civ4BonusClassInfos xmlns="x-schema:../Schema/C2C_CIV4TerrainSchema.xml">
 	<BonusClassInfos>
 		<BonusClassInfo>
-			<Type>BONUSCLASS_GENERAL</Type>
+			<Type>BONUSCLASS_MISC</Type>
 			<iUnique>0</iUnique>
 		</BonusClassInfo>
 		<BonusClassInfo>
-			<Type>BONUSCLASS_GRAIN</Type>
+			<Type>BONUSCLASS_CROP</Type>
 			<iUnique>2</iUnique>
 		</BonusClassInfo>
 		<BonusClassInfo>
 			<Type>BONUSCLASS_LIVESTOCK</Type>
-			<iUnique>2</iUnique>
+			<iUnique>3</iUnique>
 		</BonusClassInfo>
 		<BonusClassInfo>
 			<Type>BONUSCLASS_SEAFOOD</Type>
 			<iUnique>0</iUnique>
 		</BonusClassInfo>
 		<BonusClassInfo>
-			<Type>BONUSCLASS_RUSH</Type>
-			<iUnique>2</iUnique>
-		</BonusClassInfo>
-		<BonusClassInfo>
-			<Type>BONUSCLASS_MODERN</Type>
-			<iUnique>2</iUnique>
-		</BonusClassInfo>
-		<BonusClassInfo>
-			<Type>BONUSCLASS_WONDER</Type>
-			<iUnique>2</iUnique>
+			<Type>BONUSCLASS_STRATEGIC</Type>
+			<iUnique>3</iUnique>
 		</BonusClassInfo>
 		<BonusClassInfo>
 			<Type>BONUSCLASS_LUXURY</Type>
 			<iUnique>2</iUnique>
 		</BonusClassInfo>
 		<BonusClassInfo>
-			<Type>BONUSCLASS_FUEL</Type>
+			<Type>BONUSCLASS_PRODUCTION</Type>
 			<iUnique>2</iUnique>
-		</BonusClassInfo>
-		<BonusClassInfo>
-			<Type>BONUSCLASS_EDIBLEPLANT</Type>
-			<iUnique>0</iUnique>
-		</BonusClassInfo>
-		<BonusClassInfo>
-			<Type>BONUSCLASS_PLANT</Type>
-			<iUnique>0</iUnique>
-		</BonusClassInfo>
-		<BonusClassInfo>
-			<Type>BONUSCLASS_MINERAL</Type>
-			<iUnique>0</iUnique>
 		</BonusClassInfo>
 		<!-- Represents resources, that are produced by buildings, and are not meant to be placed on map -->
 		<BonusClassInfo>
@@ -57,11 +37,6 @@
 		<!-- Represents resources, that are produced by cultural wonders, and are not meant to be placed on map -->
 		<BonusClassInfo>
 			<Type>BONUSCLASS_CULTURE</Type>
-			<iUnique>0</iUnique>
-		</BonusClassInfo>
-		<!-- Represents resources, that are are meant to be generated on space tiles only -->
-		<BonusClassInfo>
-			<Type>BONUSCLASS_SPACE</Type>
 			<iUnique>0</iUnique>
 		</BonusClassInfo>
 	</BonusClassInfos>
