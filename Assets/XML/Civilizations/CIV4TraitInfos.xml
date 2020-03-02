@@ -3490,7 +3490,6 @@
 			</CommerceChanges>
 			<iLevelExperienceModifier>25</iLevelExperienceModifier>
 			<iWorkerSpeedModifier>75</iWorkerSpeedModifier>
-			<iMilitaryProductionModifier>35</iMilitaryProductionModifier>
 		</TraitInfo>
 		<!-- BEGIN: Base Level 1 Developing Leader Traits -->
 		<!-- BEGIN: POSITIVE_TRAIT -->
