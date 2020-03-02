@@ -2542,7 +2542,7 @@
 			<Type>BONUS_SUGAR</Type>
 			<Description>TXT_KEY_BONUS_SUGAR</Description>
 			<Civilopedia>TXT_KEY_BONUS_SUGAR_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_PRODUCTION</BonusClassType>
+			<BonusClassType>BONUSCLASS_LUXURY</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SUGAR</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_SPICE_TRADE</TechCityTrade>
@@ -11254,7 +11254,7 @@
 			<Type>BONUS_HYDROTHERMAL_VENT</Type>
 			<Description>TXT_KEY_BONUS_HYDROTHERMAL_VENT</Description>
 			<Civilopedia>TXT_KEY_BONUS_HYDROTHERMAL_VENT_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_STRATEGIC</BonusClassType>
+			<BonusClassType>BONUSCLASS_PRODUCTION</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HYDROTHERMAL_VENT</ArtDefineTag>
 			<TechReveal>TECH_VOLCANOLOGY</TechReveal>
 			<TechCityTrade>TECH_VOLCANOLOGY</TechCityTrade>
@@ -12253,7 +12253,7 @@
 			<Type>BONUS_GEOTHERMAL_ENERGY</Type>
 			<Description>TXT_KEY_BONUS_GEOTHERMAL_ENERGY</Description>
 			<Civilopedia>TXT_KEY_BONUS_GEOTHERMAL_ENERGY_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_STRATEGIC</BonusClassType>
+			<BonusClassType>BONUSCLASS_PRODUCTION</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_GEOTHERMAL_ENERGY</ArtDefineTag>
 			<TechReveal>TECH_MODERN_SEISMOLOGY</TechReveal>
 			<TechCityTrade>TECH_ECOLOGICAL_ENGINEERING</TechCityTrade>
