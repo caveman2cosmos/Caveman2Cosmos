@@ -164,9 +164,9 @@
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_NO_CITY_LIMITS</Type>
-			<Description>TXT_KEY_GAMEOPTION_NO_CITY_LIMITS</Description>
-			<Help>TXT_KEY_GAMEOPTION_NO_CITY_LIMITS_HELP</Help>
+			<Type>GAMEOPTION_OVEREXPANSION_PENALTIES</Type>
+			<Description>TXT_KEY_GAMEOPTION_OVEREXPANSION_PENALTIES</Description>
+			<Help>TXT_KEY_GAMEOPTION_OVEREXPANSION_PENALTIES_HELP</Help>
 			<bDefault>1</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>

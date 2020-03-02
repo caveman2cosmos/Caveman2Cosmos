@@ -10792,12 +10792,7 @@ int CvCivicInfo::getSpecialistCommercePercentChanges(int i, int j ) const
 
 int CvCivicInfo::getCityLimit(PlayerTypes ePlayer) const
 {
-	if (ePlayer > NO_PLAYER && GC.getGame().isOption(GAMEOPTION_NO_CITY_LIMITS))
-	{
-		return 0;
-	}
-	//ls612: Option to scale City Limits by Mapsize
-	else if (ePlayer > NO_PLAYER)
+	if (ePlayer > NO_PLAYER && GC.getGame().isOption(GAMEOPTION_OVEREXPANSION_PENALTIES))
 	{
 		int iCityLimit;
 		CvPlayer* pPlayer = &GET_PLAYER(ePlayer);
@@ -10809,7 +10804,7 @@ int CvCivicInfo::getCityLimit(PlayerTypes ePlayer) const
 	}
 	else
 	{
-		return m_iCityLimit;
+		return 0;
 	}
 }
 

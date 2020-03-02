@@ -686,22 +686,12 @@
 		<Spanish>Las ciudades no pueden cambiar de cultura pacíficamente.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_NO_CITY_LIMITS</Tag>
-		<English>No city limits from civics</English>
-		<French>Pas de limites de villes par les doctrines</French>
-		<German>Keine Stadtbeschränkungen durch Gesellschaftsformen</German>
-		<Italian>Niente limiti di città dalle forme di governo</Italian>
-		<Spanish>Sin límites a las ciudades por principios</Spanish>
-		<Polish>Brak limitu miast z doktryn</Polish>
+		<Tag>TXT_KEY_GAMEOPTION_OVEREXPANSION_PENALTIES</Tag>
+		<English>Happiness penalties from overexpansion</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_NO_CITY_LIMITS_HELP</Tag>
-		<English>No explicit limits or penalties from civic choices for founding any number of cities</English>
-		<French>Aucune limites ou pénalités des Doctrines concernant le nombre de Ville fondées</French>
-		<German>Es können mit jeder gewählten Gesellschaftsform beliebig viele Städte gegründet werden, ohne eine erhöhte Unzufriedenheit der Bürger zu riskieren.</German>
-		<Italian>Nessun limite o penalità dalle form di governo per aver fondato qualsiasi numero di città</Italian>
-		<Spanish>No habrá límites explícitos o penalizaciones a la fundación de ciudades por parte de los principios.</Spanish>
-		<Polish>Opcja powoduje wyłączenie limitu miast przez doktryny</Polish>
+		<Tag>TXT_KEY_GAMEOPTION_OVEREXPANSION_PENALTIES_HELP</Tag>
+		<English>Cities will get unhappiness from overexpansion, scaled by map size. Unhappiness penalties depend on civics.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_CITY_RAZING</Tag>
