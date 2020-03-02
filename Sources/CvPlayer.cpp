@@ -3408,19 +3408,9 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 			}
 		}
 	}
-/************************************************************************************************/
-/* REVOLUTION_MOD                         06/27/10                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/* original code
-	else if (!bTrade)
-*/
+
 	// Silences double ask for accepting new city from Revolution mod
-	else if (!bTrade && (GC.getGame().isOption(GAMEOPTION_NO_REVOLUTION)) )
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+	else if (!bTrade && !GC.getGame().isOption(GAMEOPTION_REVOLUTION))
 	{
 		if (isHuman())
 		{
@@ -3521,48 +3511,23 @@ CvWString CvPlayer::getNewCityName() const
 
 void CvPlayer::getCivilizationCityName(CvWString& szBuffer, CivilizationTypes eCivilization) const
 {
-	int iRandOffset;
-	int iLoopName;
-	int iI;
+	int iRandOffset = 0;
 
-/************************************************************************************************/
-/* REVOLUTION_MOD                         02/29/08                                jdog5000      */
-/*                                                                                              */
-/* Minor Civs                                                                                   */
-/************************************************************************************************/
-/* original code
-	if (isBarbarian() || isMinorCiv())
+	if (GC.getGame().isOption(GAMEOPTION_REVOLUTION) || !GC.getGame().isOption(GAMEOPTION_NO_BARBARIAN_CIV))
+	{
+		if (isNPC())
+		{
+			iRandOffset = GC.getGame().getSorenRandNum(GC.getCivilizationInfo(eCivilization).getNumCityNames(), "Place Units (Player)");
+		}
+	}
+	else if (isNPC() || isMinorCiv())
 	{
 		iRandOffset = GC.getGame().getSorenRandNum(GC.getCivilizationInfo(eCivilization).getNumCityNames(), "Place Units (Player)");
 	}
-	else
-	{
-		iRandOffset = 0;
-	}
-*/
-	iRandOffset = 0;
 
-	if( !GC.getGame().isOption(GAMEOPTION_NO_REVOLUTION) || !GC.getGame().isOption(GAMEOPTION_NO_BARBARIAN_CIV) )
+	for (int iI = 0; iI < GC.getCivilizationInfo(eCivilization).getNumCityNames(); iI++)
 	{
-		if( isNPC() )
-		{
-			iRandOffset = GC.getGame().getSorenRandNum(GC.getCivilizationInfo(eCivilization).getNumCityNames(), "Place Units (Player)");
-		}
-	}
-	else
-	{
-		if (isNPC() || isMinorCiv())
-		{
-			iRandOffset = GC.getGame().getSorenRandNum(GC.getCivilizationInfo(eCivilization).getNumCityNames(), "Place Units (Player)");
-		}
-	}
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
-
-	for (iI = 0; iI < GC.getCivilizationInfo(eCivilization).getNumCityNames(); iI++)
-	{
-		iLoopName = ((iI + iRandOffset) % GC.getCivilizationInfo(eCivilization).getNumCityNames());
+		const int iLoopName = ((iI + iRandOffset) % GC.getCivilizationInfo(eCivilization).getNumCityNames());
 
 		CvWString szName = gDLL->getText(GC.getCivilizationInfo(eCivilization).getCityNames(iLoopName));
 
@@ -6318,18 +6283,12 @@ void CvPlayer::handleDiploEvent(DiploEventTypes eDiploEvent, PlayerTypes ePlayer
 
 	case DIPLOEVENT_JOIN_WAR:
 		AI_changeMemoryCount(ePlayer, MEMORY_ACCEPTED_JOIN_WAR, 1);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      10/02/09                                jdog5000      */
-/*                                                                                              */
-/* AI logging                                                                                   */
-/************************************************************************************************/
+
 		if( gTeamLogLevel >= 2 )
 		{
 			logBBAI("    Team %d (%S) declares war on team %d due to DIPLOEVENT", getTeam(), getCivilizationDescription(0), ePlayer );
 		}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+
 		GET_TEAM(GET_PLAYER(ePlayer).getTeam()).declareWar(((TeamTypes)iData1), false, WARPLAN_DOGPILE);
 
 		for (iI = 0; iI < MAX_PLAYERS; iI++)
@@ -6346,11 +6305,7 @@ void CvPlayer::handleDiploEvent(DiploEventTypes eDiploEvent, PlayerTypes ePlayer
 
 	case DIPLOEVENT_NO_JOIN_WAR:
 		AI_changeMemoryCount(ePlayer, MEMORY_DENIED_JOIN_WAR, 1);
-/************************************************************************************************/
-/* Afforess	                  Start		 05/24/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 		if (m_eDemandWarAgainstTeam != NO_TEAM)
 		{
 			for (iI = 0; iI < MAX_PLAYERS; iI++)
@@ -6368,9 +6323,6 @@ void CvPlayer::handleDiploEvent(DiploEventTypes eDiploEvent, PlayerTypes ePlayer
 			}
 			m_eDemandWarAgainstTeam = NO_TEAM;
 		}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 		break;
 
 	case DIPLOEVENT_STOP_TRADING:
@@ -14578,19 +14530,13 @@ void CvPlayer::setAlive(bool bNewValue)
 			killUnits();
 			killCities();
 			killAllDeals();
-/************************************************************************************************/
-/* Afforess	                  Start		 08/20/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 			clearTileCulture();
-			if (GC.getGame().isOption(GAMEOPTION_NO_REVOLUTION))
+			if (!GC.getGame().isOption(GAMEOPTION_REVOLUTION))
 			{
 				clearCityCulture();
 			}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 			setTurnActive(false);
 
 			gDLL->endMPDiplomacy();
@@ -14601,35 +14547,21 @@ void CvPlayer::setAlive(bool bNewValue)
 				gDLL->closeSlot(getID());
 			}
 
-			if (GC.getGame().getElapsedGameTurns() > 0)
+			if (GC.getGame().getElapsedGameTurns() > 0 && !isNPC())
 			{
-				if (!isNPC())
+				szBuffer = gDLL->getText("TXT_KEY_MISC_CIV_DESTROYED", getCivilizationAdjectiveKey());
+
+				// Report Deaths For Known Teams
+				for (iI = 0; iI < MAX_PC_PLAYERS; iI++)
 				{
-					szBuffer = gDLL->getText("TXT_KEY_MISC_CIV_DESTROYED", getCivilizationAdjectiveKey());
-
-					for (iI = 0; iI < MAX_PLAYERS; iI++)
+					if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).isHasMet(getTeam()))
 					{
-						if (GET_PLAYER((PlayerTypes)iI).isAlive())
-						{
-/************************************************************************************************/
-/* Afforess	                  Start		 04/26/10                                               */
-/*                                                                                              */
-/*  Report Deaths For Known Teams                                                               */
-/************************************************************************************************/
-							if (GET_TEAM(GET_PLAYER((PlayerTypes)iI).getTeam()).isHasMet(getTeam()))
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-							{
-								MEMORY_TRACK_EXEMPT();
-
-								AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CIVDESTROYED", MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_WARNING_TEXT"));
-							}
-						}
+						MEMORY_TRACK_EXEMPT();
+						AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CIVDESTROYED", MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_WARNING_TEXT"));
 					}
-
-					GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getID(), szBuffer, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_WARNING_TEXT"));
 				}
+
+				GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getID(), szBuffer, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_WARNING_TEXT"));
 			}
 		}
 
@@ -19198,15 +19130,12 @@ bool CvPlayer::canDoEspionageMission(EspionageMissionTypes eMission, PlayerTypes
 	CvEspionageMissionInfo& kMission = GC.getEspionageMissionInfo(eMission);
 
 	// Need Tech Prereq, if applicable
-	if (kMission.getTechPrereq() != NO_TECH)
+	if (kMission.getTechPrereq() != NO_TECH && !GET_TEAM(getTeam()).isHasTech((TechTypes)kMission.getTechPrereq()))
 	{
-		if (!GET_TEAM(getTeam()).isHasTech((TechTypes)kMission.getTechPrereq()))
-		{
-			return false;
-		}
+		return false;
 	}
 
-	int iCost = getEspionageMissionCost(eMission, eTargetPlayer, pPlot, iExtraData, pUnit);
+	const int iCost = getEspionageMissionCost(eMission, eTargetPlayer, pPlot, iExtraData, pUnit);
 	if (iCost < 0)
 	{
 		return false;
@@ -19226,10 +19155,8 @@ bool CvPlayer::canDoEspionageMission(EspionageMissionTypes eMission, PlayerTypes
 			return false;
 		}
 	}
-/************************************************************************************************/
-/* SUPER_SPIES                             RevolutionDCM                                                  */
-/************************************************************************************************/
-	// RevolutionDCM - Super Spies
+
+	// Super Spies
 	// Mod espionage mission control to stop a mission from appearing in the interface where
 	// any mission will appear there if it has a cost attached to it. The BTS mission system
 	// has no mission state variable for enabling/disabling individual missions.
@@ -19245,28 +19172,17 @@ bool CvPlayer::canDoEspionageMission(EspionageMissionTypes eMission, PlayerTypes
 	{
 		return false;
 	}
-	// RevolutionDCM - end
-/************************************************************************************************/
-/* SUPER_SPIES                             END                                                  */
-/************************************************************************************************/
+	// ! Super Spies
 
-/************************************************************************************************/
-/* Afforess	                  Start		 06/29/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	if (kMission.getPrereqGameOption() != NO_GAMEOPTION)
+	if (kMission.getPrereqGameOption() != NO_GAMEOPTION && !GC.getGame().isOption((GameOptionTypes)kMission.getPrereqGameOption()))
 	{
-		if (!GC.getGame().isOption((GameOptionTypes)kMission.getPrereqGameOption()))
-		{
-			return false;
-		}
+		return false;
 	}
 	if (kMission.isNuke() && !isNukesValid())
 	{
 		return false;
 	}
-	if (kMission.isRevolt() && GC.getGame().isOption(GAMEOPTION_NO_REVOLUTION))
+	if (kMission.isRevolt() && !GC.getGame().isOption(GAMEOPTION_REVOLUTION))
 	{
 		return false;
 	}
@@ -19286,16 +19202,10 @@ bool CvPlayer::canDoEspionageMission(EspionageMissionTypes eMission, PlayerTypes
 			return false;
 		}
 	}
-	if (kMission.getWarWearinessCounter() > 0)
+	if (kMission.getWarWearinessCounter() > 0 && GET_TEAM(GET_PLAYER(eTargetPlayer).getTeam()).getAtWarCount(true) == 0)
 	{
-		if (GET_TEAM(GET_PLAYER(eTargetPlayer).getTeam()).getAtWarCount(true) == 0)
-		{
-			return false;
-		}
+		return false;
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	return true;
 }
 

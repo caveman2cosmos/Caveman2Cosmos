@@ -12707,15 +12707,7 @@ void CvCity::setCultureLevel(CultureLevelTypes eNewValue, bool bUpdatePlotGroups
 		//	}
 		//}
 
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                       08/08/10                              EmperorFool     */
-/*                                                                                              */
-/* Bugfix, already called by AI_doTurn()                                                        */
-/************************************************************************************************/
 		AI_updateBestBuild();
-		/************************************************************************************************/
-		/* UNOFFICIAL_PATCH                        END                                                  */
-		/************************************************************************************************/
 	}
 }
 
@@ -12726,46 +12718,22 @@ void CvCity::updateCultureLevel(bool bUpdatePlotGroups)
 	{
 		return;
 	}
+	int iMaxOccupationTimer = GC.getDefineINT("BASE_OCCUPATION_TURNS") + getHighestPopulation() * GC.getDefineINT("OCCUPATION_TURNS_POPULATION_PERCENT") / 100;
 
-	CultureLevelTypes eCultureLevel = ((CultureLevelTypes)0);
-
-	/************************************************************************************************/
-	/* REVOLUTION_MOD                         02/08/08                                jdog5000      */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-	// City borders don't collapse during a revolt, only during occupation right after capture
-	/* original BTS
-		if (!isOccupation())
-	*/
-	int iMaxOccupationTimer = GC.getDefineINT("BASE_OCCUPATION_TURNS") + ((getHighestPopulation() * GC.getDefineINT("OCCUPATION_TURNS_POPULATION_PERCENT")) / 100);
-	if (!isOccupation() || ((!GC.getGame().isOption(GAMEOPTION_NO_REVOLUTION) && (GC.getGame().getGameTurn() - getGameTurnAcquired()) > iMaxOccupationTimer)))
-		/************************************************************************************************/
-		/* REVOLUTION_MOD                          END                                                  */
-		/************************************************************************************************/
+	if (!isOccupation() || GC.getGame().isOption(GAMEOPTION_REVOLUTION) && GC.getGame().getGameTurn() - getGameTurnAcquired() > iMaxOccupationTimer)
 	{
 		for (int iI = (GC.getNumCultureLevelInfos() - 1); iI > 0; iI--)
 		{
-			/************************************************************************************************/
-			/* Afforess	                  Start		 07/22/10                                               */
-			/*                                                                                              */
-			/*                                                                                              */
-			/************************************************************************************************/
-			if (GC.getCultureLevelInfo((CultureLevelTypes)iI).getPrereqGameOption() == NO_GAMEOPTION || GC.getGame().isOption((GameOptionTypes)GC.getCultureLevelInfo((CultureLevelTypes)iI).getPrereqGameOption()))
+			if ((GC.getCultureLevelInfo((CultureLevelTypes)iI).getPrereqGameOption() == NO_GAMEOPTION
+				|| GC.getGame().isOption((GameOptionTypes)GC.getCultureLevelInfo((CultureLevelTypes)iI).getPrereqGameOption()))
+			&& getCultureTimes100(getOwner()) / 100 >= GC.getGame().getCultureThreshold((CultureLevelTypes)iI))
 			{
-				if (getCultureTimes100(getOwner()) / 100 >= GC.getGame().getCultureThreshold((CultureLevelTypes)iI))
-				{
-					eCultureLevel = ((CultureLevelTypes)iI);
-					break;
-				}
+				setCultureLevel((CultureLevelTypes)iI, bUpdatePlotGroups);
+				return;
 			}
-			/************************************************************************************************/
-			/* Afforess	                     END                                                            */
-			/************************************************************************************************/
 		}
 	}
-
-	setCultureLevel(eCultureLevel, bUpdatePlotGroups);
+	setCultureLevel((CultureLevelTypes)0, bUpdatePlotGroups);
 }
 
 
@@ -22283,7 +22251,7 @@ void CvCity::emergencyConscript()
 
 int CvCity::getRevTrend() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_NO_REVOLUTION))
+	if (!GC.getGame().isOption(GAMEOPTION_REVOLUTION))
 		return 0;
 
 	//This is the value from python
@@ -22291,7 +22259,7 @@ int CvCity::getRevTrend() const
 	int iRevIndex = std::min(getRevolutionIndex(), iRevInsigatorThreshold);
 	int iDeltaTrend = iRevIndex - getRevIndexAverage();
 	if (iDeltaTrend != 0)
-		iDeltaTrend *= std::max(abs(iDeltaTrend), (iRevInsigatorThreshold / 100) + 1);
+		iDeltaTrend *= std::max(abs(iDeltaTrend), 1 + iRevInsigatorThreshold / 100);
 	return iDeltaTrend;
 }
 

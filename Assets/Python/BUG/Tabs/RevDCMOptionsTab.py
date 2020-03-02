@@ -139,7 +139,7 @@ class RevDCMOptionsTab(BugOptionsTab.BugOptionsTab):
 			if bDebug or bCheat:
 
 				#Revolutions
-				if not GAME.isOption(GameOptionTypes.GAMEOPTION_NO_REVOLUTION):
+				if GAME.isOption(GameOptionTypes.GAMEOPTION_REVOLUTION):
 					self.addLabel(screen, left, "Revolution__Revolution", "Debug Options:")
 					col1, col2, col3, col4 = self.addMultiColumnLayout(screen, right, 4, "Debug Settings")
 					self.addCheckbox(screen, col1, "Revolution__RevDebugMode")

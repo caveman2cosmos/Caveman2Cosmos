@@ -393,9 +393,9 @@
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_NO_REVOLUTION</Type>
-			<Description>TXT_KEY_GAMEOPTION_NO_REVOLUTION</Description>
-			<Help>TXT_KEY_GAMEOPTION_NO_REVOLUTION_HELP</Help>
+			<Type>GAMEOPTION_REVOLUTION</Type>
+			<Description>TXT_KEY_GAMEOPTION_REVOLUTION</Description>
+			<Help>TXT_KEY_GAMEOPTION_REVOLUTION_HELP</Help>
 			<bDefault>1</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>

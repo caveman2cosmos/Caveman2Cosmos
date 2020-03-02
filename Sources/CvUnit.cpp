@@ -33340,7 +33340,7 @@ bool CvUnit::performInquisition()
 
 			//Increase Temp Anger
 			pCity->changeHurryAngerTimer(pCity->flatHurryAngerLength());
-			if (!GC.getGame().isOption(GAMEOPTION_NO_REVOLUTION))
+			if (GC.getGame().isOption(GAMEOPTION_REVOLUTION))
 			{
 				//Avoid setting the Rev Index below 0...
 				pCity->changeLocalRevIndex(-std::min(pCity->getRevolutionIndex(), iCompensationGold));
@@ -33370,7 +33370,7 @@ bool CvUnit::performInquisition()
 			}
 
 			pCity->changeHurryAngerTimer(pCity->flatHurryAngerLength());
-			if (!GC.getGame().isOption(GAMEOPTION_NO_REVOLUTION))
+			if (GC.getGame().isOption(GAMEOPTION_REVOLUTION))
 			{
 				pCity->changeLocalRevIndex(iCompensationGold / 2);
 			}

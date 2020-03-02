@@ -844,17 +844,18 @@
 		<Polish>Wyłącza CAŁA Broń Nuklearną</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_NO_REVOLUTION</Tag>
-		<English>No Revolutions</English>
-		<French>Pas de Revolutions</French>
-		<German>Keine Revolutionen</German>
-		<Italian>Niente Rivoluzioni</Italian>
-		<Spanish>Sin revoluciones</Spanish>
-		<Polish>Brak Rewolucji</Polish>
+		<Tag>TXT_KEY_GAMEOPTION_REVOLUTION</Tag>
+		<English>Revolutions</English>
+		<German>Revolutionen</German>
+		<Italian>Rivoluzioni</Italian>
+		<Spanish>Revoluciones</Spanish>
+		<Polish>Rewolucji</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_NO_REVOLUTION_HELP</Tag>
-		<English>Disables the Revolution mod component: new rebel civs will not attempt to breakaway from an empire if their needs are not being met. [NEWLINE]WARNING: Leaving this option off (No Revolutions being UNSELECTED) makes AI less challenging. Revolution mod isn't officially supported by modding team.</English>
+		<Tag>TXT_KEY_GAMEOPTION_REVOLUTION_HELP</Tag>
+		<English>Enables the Revolution mod component: New rebel civs will attempt to breakaway from an empire if their needs are not being met.
+
+WARNING: This option makes AI less challenging. Revolution mod hasn't been properly maintained and updated in C2C.</English>
 		<French>Désactive le composant de mod de révolution: les nouveaux civs rebelles ne peuvent pas se révolter et devenir indépendante d'un empire si leurs besoins ne sont pas satisfaits.</French>
 		<German>Deaktiviert die Revolution-Mod: Es wird keine Rebellionen und Abspaltungsbestrebungen geben, wenn die Bedürfnisse der Bevölkerung nicht beachtet werden.</German>
 		<Italian>Disabilita il MOD "Revolution": nuove civiltà ribelli no possono tentare la secessione da un impero se i loro bisogni non vengono soddisfatti.</Italian>
@@ -941,9 +942,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ZONE_OF_CONTROL</Tag>
 		<English>Zone of Control</English>
-		<French>Pas de Zones de Contrôle</French>
-		<German>Keine Kontrollzonen</German>
-		<Polish>Brak Strefy Kontroli</Polish>
+		<French>Zones de Contrôle</French>
+		<German>Kontrollzonen</German>
+		<Polish>Strefy Kontroli</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ZONE_OF_CONTROL_HELP</Tag>

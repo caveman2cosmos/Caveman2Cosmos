@@ -638,7 +638,7 @@ void CyEnumsPythonInterface()
 		.value("GAMEOPTION_CULTURALLY_LINKED_STARTS", GAMEOPTION_CULTURALLY_LINKED_STARTS)
 		.value("GAMEOPTION_NO_VASSAL_STATES", GAMEOPTION_NO_VASSAL_STATES)
 		.value("GAMEOPTION_NO_ESPIONAGE", GAMEOPTION_NO_ESPIONAGE)
-		.value("GAMEOPTION_NO_REVOLUTION", GAMEOPTION_NO_REVOLUTION)
+		.value("GAMEOPTION_REVOLUTION", GAMEOPTION_REVOLUTION)
 		.value("GAMEOPTION_AGGRESSIVE_AI", GAMEOPTION_AGGRESSIVE_AI)
 		.value("GAMEOPTION_RUTHLESS_AI", GAMEOPTION_RUTHLESS_AI)
 		.value("GAMEOPTION_NO_TECH_TRADING", GAMEOPTION_NO_TECH_TRADING)
@@ -1614,11 +1614,6 @@ void CyEnumsPythonInterface()
 		.value("TRADE_EMBARGO", TRADE_EMBARGO)
 		.value("TRADE_CIVIC", TRADE_CIVIC)
 		.value("TRADE_RELIGION", TRADE_RELIGION)
-/************************************************************************************************/
-/* Afforess	                  Start		 06/16/10                                               */
-/*                                                                                              */
-/* Advanced Diplomacy                                                                           */
-/************************************************************************************************/
 		.value("TRADE_EMBASSY", TRADE_EMBASSY)
 		.value("TRADE_WORKER", TRADE_WORKER)
 		.value("TRADE_MILITARY_UNIT", TRADE_MILITARY_UNIT)
@@ -1630,14 +1625,12 @@ void CyEnumsPythonInterface()
 		.value("TRADE_PLEDGE_VOTE", TRADE_PLEDGE_VOTE)
 		.value("TRADE_RITE_OF_PASSAGE", TRADE_RITE_OF_PASSAGE)
 		.value("TRADE_FREE_TRADE_ZONE", TRADE_FREE_TRADE_ZONE)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 		.value("NUM_TRADEABLE_HEADINGS", NUM_TRADEABLE_HEADINGS)
 		.value("NUM_TRADEABLE_ITEMS", NUM_TRADEABLE_ITEMS)
 		;
 
 	python::enum_<DiploEventTypes>("DiploEventTypes")
+
 		.value("NO_DIPLOEVENT", NO_DIPLOEVENT)
 		.value("DIPLOEVENT_CONTACT", DIPLOEVENT_CONTACT)
 		.value("DIPLOEVENT_AI_CONTACT", DIPLOEVENT_AI_CONTACT)
@@ -1660,23 +1653,12 @@ void CyEnumsPythonInterface()
 		.value("DIPLOEVENT_RESEARCH_TECH", DIPLOEVENT_RESEARCH_TECH)
 		.value("DIPLOEVENT_TARGET_CITY", DIPLOEVENT_TARGET_CITY)
 		.value("DIPLOEVENT_MADE_DEMAND_VASSAL", DIPLOEVENT_MADE_DEMAND_VASSAL)
-/************************************************************************************************/
-/* Afforess	                  Start		 02/14/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 		.value("DIPLOEVENT_MAKE_PEACE_WITH", DIPLOEVENT_MAKE_PEACE_WITH)
 		.value("DIPLOEVENT_NO_MAKE_PEACE_WITH", DIPLOEVENT_NO_MAKE_PEACE_WITH)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-		// RevolutionDCM start - new diplomacy option
 		.value("DIPLOEVENT_DO_NOT_BOTHER", DIPLOEVENT_DO_NOT_BOTHER)
 		.value("DIPLOEVENT_RESUME_BOTHER", DIPLOEVENT_RESUME_BOTHER)
-		// RevolutionDCM end
-
 		.value("NUM_DIPLOEVENT_TYPES", NUM_DIPLOEVENT_TYPES)
-		;
+	;
 
 	python::enum_<DiploCommentTypes>("DiploCommentTypes")
 		.value("NO_DIPLOCOMMENT", NO_DIPLOCOMMENT)
