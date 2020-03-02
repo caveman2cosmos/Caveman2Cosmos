@@ -11680,7 +11680,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=11,y=28
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -15707,7 +15706,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=15,y=17
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -16732,7 +16730,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=16,y=15
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -44784,7 +44781,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=42,y=51
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_OCEAN_POLAR
 	PlotType=3
 EndPlot
@@ -48911,7 +48907,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=46,y=26
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -50137,7 +50132,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=47,y=51
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_OCEAN_POLAR
 	PlotType=3
 EndPlot
@@ -61766,7 +61760,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=58,y=29
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -64831,7 +64824,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=61,y=15
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -65881,7 +65873,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=62,y=14
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -83131,7 +83122,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=46
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -100005,7 +99995,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=94,y=5
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_OCEAN_POLAR
 	PlotType=3
 EndPlot
@@ -107462,7 +107451,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=101,y=5
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_OCEAN_POLAR
 	PlotType=3
 EndPlot
@@ -120393,7 +120381,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=113,y=40
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot

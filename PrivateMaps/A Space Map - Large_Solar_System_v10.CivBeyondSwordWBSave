@@ -1694,7 +1694,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=1,y=52
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_ICE
 	PlotType=1
 EndPlot
@@ -42318,7 +42317,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=40,y=21
-	BonusType=BONUS_MANGANESE
 	FeatureType=FEATURE_SAVANNA, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
@@ -73357,7 +73355,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=70,y=12
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_SALT_FLATS
 	PlotType=2
 EndPlot
@@ -80854,7 +80851,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=77,y=0
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_ICE
 	PlotType=1
 EndPlot
@@ -102183,7 +102179,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=97,y=32
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_ROCKY
 	PlotType=0
 EndPlot
@@ -108535,7 +108530,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=103,y=40
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -110435,7 +110429,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=105,y=1
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_PERMAFROST
 	PlotType=1
 EndPlot
@@ -112636,7 +112629,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=107,y=12
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -120007,7 +119999,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=114,y=0
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_ICE
 	PlotType=1
 EndPlot

@@ -9756,7 +9756,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=0
-	BonusType=BONUS_MANGANESE
 	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_SEA_POLAR
 	PlotType=3

@@ -8902,7 +8902,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=8,y=35
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -11629,7 +11628,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=10,y=158
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_SEA
 	PlotType=3
 EndPlot
@@ -19548,7 +19546,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=18,y=44
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -21373,7 +21370,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19,y=172
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_SEA
 	PlotType=3
 EndPlot
@@ -21688,7 +21684,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=20,y=33
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -23884,7 +23879,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=22,y=34
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -38685,7 +38679,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=35,y=152
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_SEA
 	PlotType=3
 EndPlot
@@ -59289,7 +59282,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=34
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -76996,7 +76988,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=71,y=86
-	BonusType=BONUS_MANGANESE
 	FeatureType=FEATURE_ICE, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_POLAR
 	PlotType=3
@@ -85769,7 +85760,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=79,y=106
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_MARTIAN_PERMAFROST
 	PlotType=2
 EndPlot
@@ -87530,7 +87520,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=81,y=37
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -90032,7 +90021,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=83,y=105
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_MARTIAN_BARREN
 	PlotType=2
 EndPlot
@@ -107896,7 +107884,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=100,y=36
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -121064,7 +121051,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=112,y=59
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot

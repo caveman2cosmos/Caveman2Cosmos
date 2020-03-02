@@ -3028,7 +3028,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=9,y=16
-	BonusType=BONUS_MANGANESE
 	FeatureType=FEATURE_CORAL_REEF, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
@@ -11916,7 +11915,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=15
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_SEA_TROPICAL
 	PlotType=3
 EndPlot
@@ -14562,7 +14560,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=47,y=20
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_SEA_TROPICAL
 	PlotType=3
 EndPlot
@@ -16396,7 +16393,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=7
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_SEA
 	PlotType=3
 EndPlot
@@ -17978,7 +17974,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=38
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -20494,7 +20489,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=65,y=38
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_LAKE_SHORE
 	PlotType=3
 EndPlot
@@ -21889,7 +21883,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=70,y=25
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -26239,7 +26232,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=84,y=6
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -26702,7 +26694,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=85,y=31
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -27167,7 +27158,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=87,y=1
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
