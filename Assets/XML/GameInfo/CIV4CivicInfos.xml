@@ -302,7 +302,6 @@
 			<Description>TXT_KEY_CIVIC_DESPOTISM</Description>
 			<Civilopedia>TXT_KEY_CIVIC_DESPOTISM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_DESPOTISM_STRATEGY</Strategy>
-			<!--<Help><!-\-TXT_KEY_CIVIC_DESPOTISM_HELP-\-></Help>-->
 			<Button>art/Interface/buttons/civics/sparth/government_despotism.dds</Button>
 			<TechPrereq>TECH_BRONZE_WORKING</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
@@ -449,7 +448,6 @@
 			<Description>TXT_KEY_CIVIC_MONARCHY</Description>
 			<Civilopedia>TXT_KEY_CIVIC_MONARCHY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_MONARCHY_STRATEGY</Strategy>
-			<!--<Help><!-\-TXT_KEY_CIVIC_MONARCHY_HELP-\-></Help>-->
 			<Button>art/Interface/buttons/civics/sparth/government_monarchy.dds</Button>
 			<TechPrereq>TECH_MONARCHY</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
@@ -698,7 +696,6 @@
 			<Description>TXT_KEY_CIVIC_REPUBLIC</Description>
 			<Civilopedia>TXT_KEY_CIVIC_REPUBLIC_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_REPUBLIC_STRATEGY</Strategy>
-			<!--<Help><!-\-TXT_KEY_CIVIC_REPUBLIC_HELP-\-></Help>-->
 			<Button>art/Interface/buttons/civics/sparth/government_republic.dds</Button>
 			<TechPrereq>TECH_DEMOCRACY</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
@@ -848,7 +845,6 @@
 			<Description>TXT_KEY_CIVIC_THEOCRACY</Description>
 			<Civilopedia>TXT_KEY_CIVIC_THEOCRACY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_THEOCRACY_STRATEGY</Strategy>
-			<!--<Help><!-\-TXT_KEY_CIVIC_REPUBLIC_HELP-\-></Help>-->
 			<Button>art/Interface/buttons/civics/sparth/government_theocracy.dds</Button>
 			<TechPrereq>TECH_THEOLOGY</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
@@ -1434,7 +1430,6 @@
 			<Description>TXT_KEY_CIVIC_TECHNOCRACY</Description>
 			<Civilopedia>TXT_KEY_CIVIC_TECHNOCRACY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_TECHNOCRACY_STRATEGY</Strategy>
-			<!--<Help><!-\-TXT_KEY_CIVIC_TECHNOCRACY_HELP-\-></Help>-->
 			<Button>art/Interface/buttons/civics/sparth/government_technocracy.dds</Button>
 			<TechPrereq>TECH_VIRTUAL_SOCIETY</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
@@ -1711,7 +1706,6 @@
 			<Description>TXT_KEY_CIVIC_GERONTOCRACY</Description>
 			<Civilopedia>TXT_KEY_CIVIC_GERONTOCRACY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_GERONTOCRACY_STRATEGY</Strategy>
-			<!--<Help><!-\-TXT_KEY_CIVIC_MONARCHY_HELP-\-></Help>-->
 			<Button>art/Interface/buttons/civics/sparth/government_gerontocracy.dds</Button>
 			<TechPrereq>TECH_GERONTOCRACY</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
@@ -1857,7 +1851,6 @@
 			<Description>TXT_KEY_CIVIC_GALACTIC_FEDERATION</Description>
 			<Civilopedia>TXT_KEY_CIVIC_GALACTIC_FEDERATION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_GALACTIC_FEDERATION_STRATEGY</Strategy>
-			<!--<Help><!-\-TXT_KEY_CIVIC_REPUBLIC_HELP-\-></Help>-->
 			<Button>art/Interface/buttons/civics/sparth/government_galactic_federation.dds</Button>
 			<TechPrereq>TECH_GALACTIC_FEDERATION</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
@@ -5853,7 +5846,6 @@
 			<Description>TXT_KEY_CIVIC_PROLETARIAT</Description>
 			<Civilopedia>TXT_KEY_CIVIC_PROLETARIAT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_PROLETARIAT_STRATEGY</Strategy>
-			<!--<Help><!-\-TXT_KEY_CIVIC_PROLETARIAT_HELP-\-></Help>-->
 			<Button>art/Interface/buttons/civics/sparth/society_proletaryat.dds</Button>
 			<TechPrereq>TECH_DEMOCRACY</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
@@ -6070,7 +6062,6 @@
 			<Description>TXT_KEY_CIVIC_FEUDAL</Description>
 			<Civilopedia>TXT_KEY_CIVIC_FEUDAL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_FEUDAL_STRATEGY</Strategy>
-			<!--<Help><!-\-TXT_KEY_CIVIC_FEUDAL_HELP-\-></Help>-->
 			<Button>art/Interface/buttons/civics/sparth/society_feudal.dds</Button>
 			<TechPrereq>TECH_FEUDALISM</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
@@ -7132,7 +7123,6 @@
 			<Description>TXT_KEY_CIVIC_COMMUNALISM</Description>
 			<Civilopedia>TXT_KEY_CIVIC_COMMUNALISM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_COMMUNALISM_STRATEGY</Strategy>
-			<!--<Help><!-\-TXT_KEY_CIVIC_COMMUNALISM_HELP-\-></Help>-->
 			<Button>art/Interface/buttons/civics/sparth/economy_communalism.dds</Button>
 			<TechPrereq>NONE</TechPrereq>
 			<iAnarchyLength>0</iAnarchyLength>
@@ -7279,7 +7269,6 @@
 			<Description>TXT_KEY_CIVIC_SUBSISTENCE</Description>
 			<Civilopedia>TXT_KEY_CIVIC_SUBSISTENCE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_SUBSISTENCE_STRATEGY</Strategy>
-			<!--<Help><!-\-TXT_KEY_CIVIC_BARTER_HELP-\-></Help>-->
 			<Button>art/Interface/buttons/civics/sparth/economy_subsistence.dds</Button>
 			<TechPrereq>TECH_TRACKING</TechPrereq>
 			<iAnarchyLength>0</iAnarchyLength>
@@ -7389,7 +7378,6 @@
 			<Description>TXT_KEY_CIVIC_BARTER</Description>
 			<Civilopedia>TXT_KEY_CIVIC_BARTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_BARTER_STRATEGY</Strategy>
-			<!--<Help><!-\-TXT_KEY_CIVIC_BARTER_HELP-\-></Help>-->
 			<Button>art/Interface/buttons/civics/sparth/economy_barter.dds</Button>
 			<TechPrereq>TECH_BARTER</TechPrereq>
 			<iAnarchyLength>0</iAnarchyLength>
@@ -8888,7 +8876,6 @@
 			<Description>TXT_KEY_CIVIC_IRRELIGION</Description>
 			<Civilopedia>TXT_KEY_CIVIC_IRRELIGION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_IRRELIGION_STRATEGY</Strategy>
-			<!--<Help><!-\-TXT_KEY_CIVIC_IRRELIGION_HELP-\-></Help>-->
 			<Button>art/Interface/buttons/civics/sparth/religion_irreligion.dds</Button>
 			<TechPrereq>NONE</TechPrereq>
 			<iAnarchyLength>0</iAnarchyLength>
@@ -8989,7 +8976,6 @@
 			<Description>TXT_KEY_CIVIC_FOLKLORE</Description>
 			<Civilopedia>TXT_KEY_CIVIC_FOLKLORE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_FOLKLORE_STRATEGY</Strategy>
-			<!--<Help><!-\-TXT_KEY_CIVIC_FOLKLORE_HELP-\-></Help>-->
 			<Button>art/Interface/buttons/civics/sparth/religion_folklore.dds</Button>
 			<TechPrereq>TECH_RITUALISM</TechPrereq>
 			<iAnarchyLength>0</iAnarchyLength>
@@ -9325,7 +9311,6 @@
 			<Description>TXT_KEY_CIVIC_PROPHETS</Description>
 			<Civilopedia>TXT_KEY_CIVIC_PROPHETS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_PROPHETS_STRATEGY</Strategy>
-			<!--<Help><!-\-TXT_KEY_CIVIC_PROPHETS_HELP-\-></Help>-->
 			<Button>art/Interface/buttons/civics/sparth/religion_prophets.dds</Button>
 			<TechPrereq>TECH_DIVINATION</TechPrereq>
 			<iAnarchyLength>0</iAnarchyLength>
@@ -9793,7 +9778,6 @@
 			<Description>TXT_KEY_CIVIC_INQUISITORIAL</Description>
 			<Civilopedia>TXT_KEY_CIVIC_INQUISITORIAL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_INQUISITORIAL_STRATEGY</Strategy>
-			<!--<Help><!-\-TXT_KEY_CIVIC_INQUISITORIAL_HELP-\-></Help>-->
 			<Button>art/Interface/buttons/civics/sparth/religion_intolerant.dds</Button>
 			<TechPrereq>TECH_FUNDAMENTALISM</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
@@ -10349,7 +10333,6 @@
 			<Description>TXT_KEY_CIVIC_APOTHEOSIS</Description>
 			<Civilopedia>TXT_KEY_CIVIC_APOTHEOSIS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_APOTHEOSIS_STRATEGY</Strategy>
-			<!--<Help><!-\-TXT_KEY_CIVIC_INQUISITORIAL_HELP-\-></Help>-->
 			<Button>art/Interface/buttons/civics/sparth/religion_divinity.dds</Button>
 			<TechPrereq>TECH_DEITIES</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
@@ -10858,7 +10841,6 @@
 			<Description>TXT_KEY_CIVIC_PUBLIC_WORKS</Description>
 			<Civilopedia>TXT_KEY_CIVIC_PUBLIC_WORKS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_PUBLIC_WORKS_STRATEGY</Strategy>
-			<!--<Help><!-\-TXT_KEY_CIVIC_PUBLIC_WORKS_HELP-\-></Help>-->
 			<Button>art/Interface/buttons/civics/sparth/welfare_public_works.dds</Button>
 			<TechPrereq>TECH_CITY_PLANNING</TechPrereq>
 			<iAnarchyLength>0</iAnarchyLength>
@@ -11361,7 +11343,6 @@
 			<Description>TXT_KEY_CIVIC_PRIVATIZED</Description>
 			<Civilopedia>TXT_KEY_CIVIC_PRIVATIZED_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_PRIVATIZED_STRATEGY</Strategy>
-			<!--<Help><!-\-TXT_KEY_CIVIC_PRIVATIZED_HELP-\-></Help>-->
 			<Button>art/Interface/buttons/civics/sparth/welfare_corporate.dds</Button>
 			<TechPrereq>TECH_ASSEMBLY_LINE</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
@@ -11818,7 +11799,6 @@
 			<Description>TXT_KEY_CIVIC_SUPERHUMAN</Description>
 			<Civilopedia>TXT_KEY_CIVIC_SUPERHUMAN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_SUPERHUMAN_STRATEGY</Strategy>
-			<!--<Help><!-\-TXT_KEY_CIVIC_SUPERHUMAN_HELP-\-></Help>-->
 			<Button>art/Interface/buttons/civics/sparth/welfare_superhuman.dds</Button>
 			<TechPrereq>TECH_HOMO_SUPERIOR</TechPrereq>
 			<iAnarchyLength>3</iAnarchyLength>
@@ -12043,7 +12023,6 @@
 			<Description>TXT_KEY_CIVIC_EUDAIMONIA</Description>
 			<Civilopedia>TXT_KEY_CIVIC_EUDAIMONIA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_EUDAIMONIA_STRATEGY</Strategy>
-			<!--<Help><!-\-TXT_KEY_CIVIC_PUBLIC_WORKS_HELP-\-></Help>-->
 			<Button>art/Interface/buttons/civics/sparth/welfare_utility_maximization.dds</Button>
 			<TechPrereq>TECH_OMNIBENEVOLENT_MANDATE</TechPrereq>
 			<iAnarchyLength>0</iAnarchyLength>
