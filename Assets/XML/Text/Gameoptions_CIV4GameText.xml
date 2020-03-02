@@ -949,18 +949,19 @@
 		<Spanish>Desactiva los tratados de estados vasallos, lo cual asegura protección a una civilización contra un rival más fuerte.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_NO_ZOC</Tag>
-		<English>No Zones of Control</English>
+		<Tag>TXT_KEY_GAMEOPTION_ZONE_OF_CONTROL</Tag>
+		<English>Zone of Control</English>
 		<French>Pas de Zones de Contrôle</French>
 		<German>Keine Kontrollzonen</German>
 		<Polish>Brak Strefy Kontroli</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_NO_ZOC_HELP</Tag>
-		<English>Disables all Zone of Control effects.  Suggested at the moment as there is a known bug it creates for pathing and some players may find it terribly frustrating with the current forts.  The author of this option also believes that it does not represent a fair combat scenario in many cases where you'd prefer to take the hit they threaten and would like to eventually make a form of ZOC that instead generates a free Ranged Assault on the offending unit rather than keeping it from moving at all (as that's the concept behind the effect anyhow.)</English>
-		<French>Désactive tous les effets des Zones de contrôle. Suggéré en raison d'un bug connu dans le chemin, certains joueurs pouvant trouver les forts particulièrement frustrants.</French>
-		<German>Alle Kontrollzoneneffekte durch Festungen oder Städte werden deaktiviert. Im Moment sollte diese Option benutzt werden, da sie einen Fehler in der Pfadsuchroutine umgeht und allgemein Frustrationen in Bezug auf die neuen Festungen vermeidet.</German>
-		<Polish>Wyłącza Strefy Kontrolo w grze.</Polish>
+		<Tag>TXT_KEY_GAMEOPTION_ZONE_OF_CONTROL_HELP</Tag>
+		<English>Zone of Control (ZoC) hinders enemy units from walking around manned forts or cities with moats, the effect has a one tile range. A unit that is inside an enemy ZoC cannot move to another plot within the ZoC, but must exit the ZoC before being able to reach other ZoC plots.
+
+Not reccomended at the moment as there is a known bug it creates for pathing and some players may find it terribly frustrating with the current forts.
+
+The author of this option also believes that it does not represent a fair combat scenario in many cases where you'd prefer to take the hit they threaten and would like to eventually make a form of ZoC that instead generates a free Ranged Assault on the offending unit rather than keeping it from moving at all (as that's the concept behind the effect anyhow.)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ONE_CITY_CHALLENGE</Tag>

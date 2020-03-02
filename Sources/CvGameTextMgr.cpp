@@ -13682,17 +13682,17 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		{
 			bIsIgnoreNoEntryLevelSubtract = true;
 		}
-		if (!GC.getGame().isOption(GAMEOPTION_NO_ZOC))
+		if (GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL))
 		{
-			if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isIgnoreZoneofControlAdd() )
+			if (GC.getPromotionInfo(linePromotionsOwned[iI]).isIgnoreZoneofControlAdd())
 			{
 				bIsIgnoreZoneofControlAdd = true;
 			}
-			if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isIgnoreZoneofControlSubtract() )
+			if (GC.getPromotionInfo(linePromotionsOwned[iI]).isIgnoreZoneofControlSubtract())
 			{
 				bIsIgnoreZoneofControlSubtract = true;
 			}
-			if ( GC.getPromotionInfo(linePromotionsOwned[iI]).isZoneOfControl() )
+			if (GC.getPromotionInfo(linePromotionsOwned[iI]).isZoneOfControl())
 			{
 				bIsZoneOfControl = true;
 			}
@@ -23000,7 +23000,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 		}
 	}
 
-	if (!GC.getGame().isOption(GAMEOPTION_NO_ZOC) && kBuilding.isZoneOfControl())
+	if (GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL) && kBuilding.isZoneOfControl())
 	{
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_ZONE_OF_CONTROL"));
@@ -32530,7 +32530,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_IGNORE_NO_ENTRY_LEVEL_SUBTRACT"));
 	}
 
-	if (!GC.getGame().isOption(GAMEOPTION_NO_ZOC))
+	if (GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL))
 	{
 		if (info.isIgnoreZoneofControlAdd())
 		{
@@ -32544,7 +32544,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_IGNORE_ZONE_OF_CONTROL_ADD"));
 		}
-
 		if (info.isIgnoreZoneofControlSubtract())
 		{
 			if (bFirstDisplay)
@@ -32624,7 +32623,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_CAN_LEAD_THROUGH_PEAKS_TEXT"));
 	}
 
-	if (!GC.getGame().isOption(GAMEOPTION_NO_ZOC) && info.isZoneOfControl())
+	if (GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL) && info.isZoneOfControl())
 	{
 		if (bFirstDisplay)
 		{
@@ -39181,11 +39180,7 @@ void CvGameTextMgr::getPlotHelp(CvPlot* pMouseOverPlot, CvCity* pCity, CvPlot* p
 				}
 			}
 		}
-/************************************************************************************************/
-/* Afforess	                  Start		 07/19/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 		if (pMouseOverPlot != NULL)
 		{
 			if (pMouseOverPlot->isRevealed(GC.getGame().getActiveTeam(), true))
@@ -39235,30 +39230,28 @@ void CvGameTextMgr::getPlotHelp(CvPlot* pMouseOverPlot, CvCity* pCity, CvPlot* p
 									}
 									else
 									{
-										if (!GC.getGame().isOption(GAMEOPTION_NO_ZOC))
+										if (GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL))
 										{
-											//Fort ZOC
-											PlayerTypes eDefender = gDLL->getInterfaceIFace()->getHeadSelectedUnit()->plot()->controlsAdjacentZOCSource(gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getTeam());
+											// Fort ZoC
+											const PlayerTypes eDefender = gDLL->getInterfaceIFace()->getHeadSelectedUnit()->plot()->controlsAdjacentZOCSource(gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getTeam());
 											if (eDefender != NO_PLAYER)
 											{
 												const CvPlot* pZoneOfControl = gDLL->getInterfaceIFace()->getHeadSelectedUnit()->plot()->isInFortControl(true, eDefender, gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getOwner());
 												const CvPlot* pForwardZoneOfControl = pMouseOverPlot->isInFortControl(true, eDefender, gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getOwner());
-												if (pZoneOfControl != NULL && pForwardZoneOfControl != NULL)
+												if (pZoneOfControl != NULL && pForwardZoneOfControl != NULL
+												&& pZoneOfControl == pMouseOverPlot->isInFortControl(true, eDefender, gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getOwner(), pZoneOfControl))
 												{
-													if (pZoneOfControl == pMouseOverPlot->isInFortControl(true, eDefender, gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getOwner(), pZoneOfControl))
-													{
-														szTempBuffer.clear();
-														szTempBuffer.append(gDLL->getText("TXT_KEY_PLOT_HOVER_FORT_ZOC"));
-													}
+													szTempBuffer.clear();
+													szTempBuffer.append(gDLL->getText("TXT_KEY_PLOT_HOVER_FORT_ZOC"));
 												}
 											}
-											//City ZoC
+											// City ZoC
 											if (gDLL->getInterfaceIFace()->getHeadSelectedUnit()->plot()->isInCityZoneOfControl(gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getOwner()) && pMouseOverPlot->isInCityZoneOfControl(gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getOwner()))
 											{
 												szTempBuffer.clear();
 												szTempBuffer.append(gDLL->getText("TXT_KEY_PLOT_HOVER_CITY_ZOC"));
 											}
-											//Promotion ZoC
+											// Promotion ZoC
 											if (gDLL->getInterfaceIFace()->getHeadSelectedUnit()->plot()->isInUnitZoneOfControl(gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getOwner()) && pMouseOverPlot->isInUnitZoneOfControl(gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getOwner()))
 											{
 												szTempBuffer.clear();
@@ -39279,9 +39272,6 @@ void CvGameTextMgr::getPlotHelp(CvPlot* pMouseOverPlot, CvCity* pCity, CvPlot* p
 			}
 		}
 
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 		InterfaceModeTypes eInterfaceMode = gDLL->getInterfaceIFace()->getInterfaceMode();
 		if (eInterfaceMode != INTERFACEMODE_SELECTION)
 		{
@@ -40444,7 +40434,7 @@ void CvGameTextMgr::setDefenseHelp(CvWStringBuffer &szBuffer, CvCity& city)
 		}
 	}
 
-	if (!GC.getGame().isOption(GAMEOPTION_NO_ZOC) && city.isZoneOfControl())
+	if (GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL) && city.isZoneOfControl())
 	{// ==========================
 		szBuffer.append(DOUBLE_SEPARATOR);
 		szBuffer.append(NEWLINE);

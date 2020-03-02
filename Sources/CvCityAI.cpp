@@ -5640,7 +5640,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						}
 
 
-						if (!GC.getGame().isOption(GAMEOPTION_NO_ZOC))
+						if (GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL))
 						{
 							iValue += kBuilding.isZoneOfControl() ? 50 : 0;
 						}
@@ -16568,7 +16568,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 	{
 		bool bSAD = false;
 		bool bSIN = false;
-		bool bZOC = false;
+		bool bZoC = false;
 
 		if (GC.getGame().isOption(GAMEOPTION_SAD))
 		{
@@ -16584,9 +16584,9 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			(kBuilding.getFlankSupportPercentModifier() > 0)) ;
 		}
 
-		if (!GC.getGame().isOption(GAMEOPTION_NO_ZOC))
+		if (GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL))
 		{
-			bZOC = kBuilding.isZoneOfControl();
+			bZoC = kBuilding.isZoneOfControl();
 		}
 
 		if ( kBuilding.getDefenseModifier() > 0 ||
@@ -16594,7 +16594,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			 kBuilding.getAllCityDefenseModifier() >  0 ||
 			 kBuilding.isNeverCapture() ||
 			 kBuilding.isNukeImmune() ||
-			 bZOC ||
+			 bZoC ||
 			 kBuilding.getLineOfSight() > 0 ||
 			 kBuilding.getUnitCombatExtraStrength(NO_UNITCOMBAT) > 0 ||
 			 kBuilding.getAdjacentDamagePercent() > 0 ||
@@ -17316,7 +17316,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 								}
 
 
-								if (!GC.getGame().isOption(GAMEOPTION_NO_ZOC))
+								if (GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL))
 								{
 									iValue += kBuilding.isZoneOfControl() ? 50 : 0;
 								}

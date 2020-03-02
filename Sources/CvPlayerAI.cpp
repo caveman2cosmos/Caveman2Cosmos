@@ -34630,35 +34630,28 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
-	if (!GC.getGame().isOption(GAMEOPTION_NO_ZOC))
+	if (pUnit != NULL && GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL))
 	{
 		if (kPromotion.isIgnoreZoneofControlAdd())
 		{
-			if (pUnit != NULL)
+			if (pUnit->canIgnoreZoneofControl())
 			{
-				if (pUnit->canIgnoreZoneofControl())
-				{
-					iValue += 5;
-				}
-				else
-				{
-					iValue += 25;
-				}
+				iValue += 5;
+			}
+			else
+			{
+				iValue += 25;
 			}
 		}
-
 		if (kPromotion.isIgnoreZoneofControlSubtract())
 		{
-			if (pUnit != NULL)
+			if (pUnit->canIgnoreZoneofControl())
 			{
-				if (pUnit->canIgnoreZoneofControl())
-				{
-					iValue -= 25;
-				}
-				else
-				{
-					iValue -= 5;
-				}
+				iValue -= 25;
+			}
+			else
+			{
+				iValue -= 5;
 			}
 		}
 	}
@@ -36863,7 +36856,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 	}
 
 	// TB Combat Mods Begin
-	if (!GC.getGame().isOption(GAMEOPTION_NO_ZOC) && kPromotion.isZoneOfControl())
+	if (GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL) && kPromotion.isZoneOfControl())
 	{
 		iValue += 250;
 	}
@@ -39628,35 +39621,28 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 		}
 	}
 
-	if (!GC.getGame().isOption(GAMEOPTION_NO_ZOC))
+	if (pUnit != NULL && GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL))
 	{
 		if (kUnitCombat.isIgnoreZoneofControlAdd())
 		{
-			if (pUnit != NULL)
+			if (pUnit->canIgnoreZoneofControl())
 			{
-				if (pUnit->canIgnoreZoneofControl())
-				{
-					iValue += 5;
-				}
-				else
-				{
-					iValue += 25;
-				}
+				iValue += 5;
+			}
+			else
+			{
+				iValue += 25;
 			}
 		}
-
 		if (kUnitCombat.isIgnoreZoneofControlSubtract())
 		{
-			if (pUnit != NULL)
+			if (pUnit->canIgnoreZoneofControl())
 			{
-				if (pUnit->canIgnoreZoneofControl())
-				{
-					iValue -= 25;
-				}
-				else
-				{
-					iValue -= 5;
-				}
+				iValue -= 25;
+			}
+			else
+			{
+				iValue -= 5;
 			}
 		}
 	}
@@ -41246,7 +41232,7 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 	}
 
 	// TB Combat Mods Begin
-	if (!GC.getGame().isOption(GAMEOPTION_NO_ZOC) && kUnitCombat.isZoneOfControl())
+	if (GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL) && kUnitCombat.isZoneOfControl())
 	{
 		iValue += 250;
 	}

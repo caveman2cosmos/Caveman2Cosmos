@@ -642,9 +642,9 @@
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_NO_ZOC</Type>
-			<Description>TXT_KEY_GAMEOPTION_NO_ZOC</Description>
-			<Help>TXT_KEY_GAMEOPTION_NO_ZOC_HELP</Help>
+			<Type>GAMEOPTION_ZONE_OF_CONTROL</Type>
+			<Description>TXT_KEY_GAMEOPTION_ZONE_OF_CONTROL</Description>
+			<Help>TXT_KEY_GAMEOPTION_ZONE_OF_CONTROL_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>

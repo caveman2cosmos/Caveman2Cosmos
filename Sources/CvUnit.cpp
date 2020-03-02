@@ -6775,41 +6775,34 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 		}
 	}
 
-	if (!bIgnoreLocation && !GC.getGame().isOption(GAMEOPTION_NO_ZOC))
+	if (!bIgnoreLocation && GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL))
 	{
-		//	ZOCs don't apply into cities of the unit owner
-		if ( pPlot->getPlotCity() == NULL || pPlot->getPlotCity()->getTeam() != getTeam() )
+		//	ZoC don't apply into cities of the unit owner
+		if (pPlot->getPlotCity() == NULL || pPlot->getPlotCity()->getTeam() != getTeam())
 		{
-			//Fort ZOC
-			PlayerTypes eDefender = plot()->controlsAdjacentZOCSource(getTeam());
+			// Fort ZoC
+			const PlayerTypes eDefender = plot()->controlsAdjacentZOCSource(getTeam());
 			if (eDefender != NO_PLAYER)
 			{
 				const CvPlot* pZoneOfControl = plot()->isInFortControl(true, eDefender, getOwner());
 				const CvPlot* pForwardZoneOfControl = pPlot->isInFortControl(true, eDefender, getOwner());
-				if (pZoneOfControl != NULL && pForwardZoneOfControl != NULL)
+				if (pZoneOfControl != NULL && pForwardZoneOfControl != NULL && !canIgnoreZoneofControl()
+				&& pZoneOfControl == pPlot->isInFortControl(true, eDefender, getOwner(), pZoneOfControl))
 				{
-					if (pZoneOfControl == pPlot->isInFortControl(true, eDefender, getOwner(), pZoneOfControl) && !canIgnoreZoneofControl())
-					{
-						return false;
-					}
+					return false;
 				}
 			}
-
-			//City ZoC
+			// City ZoC
 			if (plot()->isInCityZoneOfControl(getOwner()) && pPlot->isInCityZoneOfControl(getOwner()) && !canIgnoreZoneofControl())
 			{
 				return false;
 			}
-
 		}
-
-		//Promotion ZoC
-		if (GC.getGame().isAnyoneHasUnitZoneOfControl())
+		// Promotion ZoC
+		if (GC.getGame().isAnyoneHasUnitZoneOfControl() && !canIgnoreZoneofControl()
+		&& plot()->isInUnitZoneOfControl(getOwner()) && pPlot->isInUnitZoneOfControl(getOwner()))
 		{
-			if (plot()->isInUnitZoneOfControl(getOwner()) && pPlot->isInUnitZoneOfControl(getOwner()) && !canIgnoreZoneofControl())
-			{
-				return false;
-			}
+			return false;
 		}
 	}
 	//City Minimum Defense Level
