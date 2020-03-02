@@ -7798,7 +7798,7 @@
 			<BonusType>BONUS_ABORIGINE</BonusType>
 			<iCost>43</iCost>
 			<iMoves>2</iMoves>
-			<iCombat>4</iCombat>
+			<iCombat>3</iCombat>
 			<iXPValueAttack>3</iXPValueAttack>
 			<iXPValueDefense>1</iXPValueDefense>
 			<iFirstStrikes>1</iFirstStrikes>
