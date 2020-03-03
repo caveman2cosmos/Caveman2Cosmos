@@ -12973,7 +12973,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_BACKUP_TWO_HANDED</Tag>
 		<English>Style(Distance Backup Two-Handed)</English>
 		<French>
-			<Text>Style(Arme de soutien à Distance, Two-Handed)</Text>
+			<Text>Style(Arme de soutien à Distance, à deux mains)</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12988,7 +12988,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_BACKUP_TWO_HANDED_PLUS_SHIELD</Tag>
 		<English>Style(Distance Backup Two-Hand w/Shield)</English>
 		<French>
-			<Text>Style(Arme de soutien à Distance, Two-Hand w/Shield)</Text>
+			<Text>Style(Arme de soutien à Distance, 2 mains et bouclier)</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -13049,7 +13049,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_DIST_TWO_HANDED</Tag>
 		<English>Style(Distance Two-Handed)</English>
 		<French>
-			<Text>Style(Arme à Distancen 2 mains)</Text>
+			<Text>Style(Arme à Distance, à 2 mains)</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>

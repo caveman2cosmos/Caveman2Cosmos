@@ -1,5 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
-
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_AGGREGATION</Tag>
@@ -63,12 +61,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_BASK</Tag>
 		<English>Bask of </English>
-		<French>Panier de </French>
+		<French>(lézardant) </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_BLOAT</Tag>
 		<English>Bloat of </English>
-		<French>gonflement de </French>
+		<French>(bouffi) </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_BUNCH</Tag>
@@ -168,7 +166,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_CRASH</Tag>
 		<English>Crash of </English>
-		<French>Crash de </French>
+		<French>Fracas de </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_DRIFT</Tag>
@@ -314,7 +312,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_KETTLE</Tag>
 		<English>Kettle of </English>
-		<French>Bouillon de </French>
+		<French>Groupe de </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_KIT</Tag>
@@ -572,7 +570,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_STAND</Tag>
 		<English>Stand of </English>
-		<French>Stand de </French>
+		<French>Envol de </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_STREAK</Tag>
@@ -5453,7 +5451,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CREE_TRACKER</Tag>
 		<English>Cree Tracker</English>
-		<French>Traqueur</French>
+		<French>Pisteur Cree</French>
 		<Italian>Cercatore di tracce Cree</Italian>
 		<Spanish>
 			<Text>Rastreador cree</Text>

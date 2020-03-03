@@ -10,7 +10,7 @@
 		<Tag>TXT_KEY_UNIT_TRACKER</Tag>
 		<English>Tracker</English>
 		<French>
-			<Text>Trappeur</Text>
+			<Text>Pisteur</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -2295,7 +2295,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_FLAMINGO</Tag>
 		<English>Subdued Flamingo</English>
-		<French>Flamant (App.)</French>
+		<French>Flamant rose (App.)</French>
 		<Italian>
 			<Text>Fenicottero addomesticato</Text>
 			<Gender>Male</Gender>

@@ -4705,7 +4705,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DCM_BOMB_DAMAGE_TEXT</Tag>
 		<English>[ICON_BULLET]Ranged Assault Damage: %D1_Value%%</English>
-		<French>[ICON_BULLET]Dégâts d'assault à distance: %d1_Value%%</French>
+		<French>[ICON_BULLET]Dégâts d'assaut à distance: %d1_Value%%</French>
 		<Polish>[ICON_BULLET]Obrażenia ataku dystansowego: %D1_Value%%</Polish>
 	</TEXT>
 	<TEXT>
@@ -8096,7 +8096,7 @@
 		<Tag>TXT_KEY_PROMOTION_HIT_AND_RUN</Tag>
 		<English>Hit and run</English>
 		<French>
-			<Text>Escarmouche</Text>
+			<Text>Attaque rapide</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -13308,7 +13308,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RUGGED1_DESC</Tag>
 		<English>Rugged Combat I</English>
-		<French>Combat en terrain Désolé I</French>
+		<French>Terrain Désolé I</French>
 		<Italian>Combattente del terreno aspro I</Italian>
 		<Spanish>Combate en terreno escabroso I</Spanish>
 		<Polish>Walka na Pustkowiach I</Polish>
@@ -13316,7 +13316,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RUGGED2_DESC</Tag>
 		<English>Rugged Combat II</English>
-		<French>Combat en terrain Désolé II</French>
+		<French>Terrain Désolé II</French>
 		<Italian>Combattente del terreno aspro II</Italian>
 		<Spanish>Combate en terreno escabroso II</Spanish>
 		<Polish>Walka na Pustkowiach II</Polish>
@@ -13324,7 +13324,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RUGGED3_DESC</Tag>
 		<English>Rugged Combat III</English>
-		<French>Combat en terrain Désolé III</French>
+		<French>Terrain Désolé III</French>
 		<Italian>Combattente del terreno aspro III</Italian>
 		<Spanish>Combate en terreno escabroso III</Spanish>
 		<Polish>Walka na Pustkowiach III</Polish>
@@ -17169,7 +17169,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WETLAND1_DESC</Tag>
 		<English>Wetland Combat I</English>
-		<French>Combat en zone Humide I</French>
+		<French>Zone Humide I</French>
 		<Italian>Combattente delle paludi I</Italian>
 		<Spanish>Combate en humedal I</Spanish>
 		<Polish>Walka na Bagnach I</Polish>
@@ -17177,7 +17177,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WETLAND2_DESC</Tag>
 		<English>Wetland Combat II</English>
-		<French>Combat en zone Humide II</French>
+		<French>Zone Humide II</French>
 		<Italian>Combattente delle paludi II</Italian>
 		<Spanish>Combate en humedal II</Spanish>
 		<Polish>Walka na Bagnach II</Polish>
@@ -17185,7 +17185,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WETLAND3_DESC</Tag>
 		<English>Wetland Combat III</English>
-		<French>Combat en zone Humide III</French>
+		<French>Zone Humide III</French>
 		<Italian>Combattente delle paludi III</Italian>
 		<Spanish>Combate en humedal III</Spanish>
 		<Polish>Walka na Bagnach III</Polish>
@@ -17940,7 +17940,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_MIGHT</Tag>
 		<English>Might Promotionline</English>
-		<French>Spécialisation Pouvoir</French>
+		<French>Spécialisation Puissance</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_DRILL</Tag>
@@ -18721,7 +18721,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_RUGGED</Tag>
 		<English>Rugged Promotion Line</English>
-		<French>Spécialisation Combat en terrain désolé</French>
+		<French>Spécialisation Terrain désolé</French>
 		<Italian>Combattente del terreno aspro</Italian>
 		<Polish>Linia Promocji: Walka na Pustkowiach</Polish>
 	</TEXT>
@@ -19076,7 +19076,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_WARMTH</Tag>
 		<English>Warmth Promotion Line</English>
-		<French>Spécialisation Combat en Zones chaudes</French>
+		<French>Spécialisation Chaleur</French>
 		<Italian>Combattente del deserto</Italian>
 		<Polish>Linia Promocji: Walka Pustynna</Polish>
 	</TEXT>
@@ -19097,7 +19097,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_WETLAND</Tag>
 		<English>Wetland Promotion Line</English>
-		<French>Spécialisation Combat en Zone humide</French>
+		<French>Spécialisation Zone humide</French>
 		<Italian>Combattente delle paludi</Italian>
 		<Polish>Linia Promocji: Walka na Bagnach</Polish>
 	</TEXT>
@@ -19622,7 +19622,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_HUNTING_STRIKE</Tag>
 		<English>Hunting Strike Promotionline</English>
-		<French>Spécialisation Chasse escarmouche</French>
+		<French>Spécialisation Raid de Chasse</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_FIST</Tag>

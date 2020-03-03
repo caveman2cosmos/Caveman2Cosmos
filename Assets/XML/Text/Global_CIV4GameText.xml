@@ -26399,7 +26399,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	<TEXT>
 		<Tag>TXT_KEY_XP_TOTAL</Tag>
 		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 Total XP.[COLOR_REVERT]</English>
-		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 EXP Total.[COLOR_REVERT]</French>
+		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]Total EXP : %D1[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 [NUM1:Erfahrungspunkt:Erfahrungspunkte][COLOR_REVERT]</German>
 		<Polish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 Całkowita ilość XP.[COLOR_REVERT]</Polish>
 	</TEXT>

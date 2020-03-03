@@ -9,12 +9,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TALESOF_SEA_ANIMALS_PEDIA</Tag>
 		<English>A Unit to enable some game mechanism.</English>
+		<French>Une unité pour activer un mécanisme de jeu.</French>
 		<Italian>Un'unità che non corrisponde a nulla esistente nella vita reale, serve solo a permettere alcune meccaniche di gioco.</Italian>
 		<Polish>Jednostka jest niezbędna dla mechaniki gry.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HUNTER_PEDIA</Tag>
 		<English>Years of living in the wilderness on their own terms have taught these men a thing or two about the importance of stealth, speed and senses. They specialise in the hunting and subduing of animal units.</English>
+		<French>Des années de vie dans la nature selon leurs propres termes ont enseigné à ces hommes une ou deux choses sur l'importance de la furtivité, de la vitesse et des sens. Ils se spécialisent dans la chasse et la maîtrise des unités animales.</French>
 		<Italian>Anni di vita nella natura ed in solitudine hanno insegnato a questi uomini una o due cose sull'importanza della silenziosità, della velocità e delle percezioni. Sono specializzati nella caccia e nell'addomesticazione di animali selvaggi.</Italian>
 		<Polish>Łowy  polowanie było jedną z najważniejszych czynności pierwotnych ludzi przez wiele tysiącleci. Nie było wówczas pojęcia "własności" i zwierzyna była niczyja. Polowania były głównym źródłem utrzymania i przeżycia ludzi  oprócz pożywienia pozyskiwano w ten sposób skóry na okrycia, a kości i rogi na proste narzędzia. Na przestrzeni wieków, w wyniku zachodzących zmian cywilizacyjnych jak i społecznych, z powodu trzebienia puszcz, rozwoju rolnictwa, polowania przestały być głównym zajęciem człowieka, a stały się okazją do wykazania swojej siły, zręczności i męstwa w bezpośrednich spotkaniach z dzikim zwierzem. Poczynając od ok. X w. łowy zaczęły być w coraz większym stopniu przywilejem ludzi "dobrze urodzonych", cesarzy, królów, duchowieństwa i rycerstwa. Łowy stały się również głównym źródłem zaopatrzenia wojsk podczas wypraw wojennych.</Polish>
 	</TEXT>
@@ -30,20 +32,24 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ANIMAL_STRATEGY</Tag>
 		<English>Animals spawn in the wilderness and are barbarian animal units. See also [LINK=CONCEPT_SUBDUED_ANIMALS]Subdued Animals[\LINK] and [LINK=CONCEPT_TAMED_ANIMALS]Tamed Animals[\LINK].</English>
+		<French>Les animaux apparaissent dans la nature et sont des unités animales barbares. Voir également [LINK=CONCEPT_SUBDUED_ANIMALS]Animaux apprivoisés[\LINK] et [LINK=CONCEPT_TAMED_ANIMALS]Animaux dressés[\LINK].</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ANIMAL_STRATEGY</Tag>
 		<English>Subdued animals are primarily meant for use in constructing special buildings in cities.</English>
+		<French>Les animaux apprivoisés sont principalement destinés à la construction de bâtiments spéciaux dans les villes.</French>
 	</TEXT>
 	<!-- CONCEPT SECTION -->
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ANIMALS_TEXT</Tag>
 		<English>Animals in Caveman2Cosmos</English>
+		<French>Les Animaux dans Caveman2Cosmos</French>
 		<Polish>Zwierzęta w Caveman2Cosmos</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_TEXT</Tag>
 		<English>Subdued animals</English>
+		<French>Animaux appriovoisés</French>
 		<Italian>Animali addomesticati</Italian>
 		<Polish>Poskromione zwierzęta</Polish>
 	</TEXT>
@@ -55,47 +61,56 @@
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_SUBDUED_SEA_ANIMALS_PEDIA</Tag>
 		<English>Subdued sea animals are wild (barbarian) sea animals defeated in combat.</English>
+		<French>Les animaux marins apprivoisés sont des animaux marins sauvages (barbares) vaincus au combat.</French>
 		<Italian>Gli animali marini addomesticati sono animali marini che vengono sconfitti in battaglia (vedi Animali addomesticati per maggiori dettagli sui loro utilizzi).</Italian>
 		<Polish>Poskromione zwierzęta morskie są dzikimi (barbarzyńskimi) zwierzętami wodnymi pokonanymi w walce.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_TALESOF_SEA_ANIMALS_PEDIA</Tag>
 		<English>Tales of sea animals are stories about sea animals defeated in combat.</English>
+		<French>Les histoires d'animaux marins sont des histoires d'animaux marins vaincus au combat.</French>
 		<Italian>Le storie di animali marini sono storie riguardanti creature marine sconfitte in combattimento.</Italian>
 		<Polish>Opowieści o morskich zwierzętach są opowieściami o zwierzętach pokonanych w walce.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_MYTHS_LEGENDS_STORIES_TEXT</Tag>
 		<English>Myths, Legends and Stories</English>
+		<French>Mythes, Légendes et Histoires</French>
 		<Polish>Mity, Legendy i Historie</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_MYTHS_LEGENDS_STORIES_PEDIA</Tag>
 		<English>Myth buildings represent oral traditions and have the main aim of simulating the neolithic burst in "scientific" discovery by providing science. Some also provide a small boost to the production of other buildings, eg Crocodile Myth reduces the cost of building the Temple of Set. For the most part Myths are [LINK=CONCEPT_PSEUDO_NATIONAL_WONDERS]pseudo national wonders[/LINK] which means that they can only be built in one city but have effects in all your cities. The myth effects building is free and is used to provide access to the Story buildings.[PARAGRAPH:2]Story and Stories buildings represent the written tradition they don't provide science but do provide Education. You can only build a Story if you have the Writing and the Myth. Stories require Literature and the Story building but effectively provide the Story building effects in all your cities, including new ones.[PARAGRAPH:2] There are Myths about individual animals eg Moon Bear; Myths about animal groups eg Bears; Elemental Myths (Earth, Sky, Sea, etc.), Landscape Myths (a C2C extension to Platyping's Natural Wonders component) and Mythical Beasts.</English>
+		<French>Les bâtiments mythiques représentent les traditions orales et ont pour objectif principal de simuler l'éclatement néolithique de la découverte "scientifique" en fournissant la science. Certains fournissent également un petit coup de pouce à la production d'autres bâtiments, par exemple Mythe Crocodile réduit le coût de construction du Temple de Set. Pour la plupart, les mythes sont [LINK=CONCEPT_PSEUDO_NATIONAL_WONDERS]Pseudo-merveilles nationales[/ LINK], ce qui signifie qu'ils ne peuvent être construits que dans une seule ville mais ont des effets dans toutes vos villes. Le bâtiment des effets mythiques est gratuit et est utilisé pour donner accès aux bâtiments de l'histoire. [PARAGRAPH:2] Les bâtiments de l'histoire et des histoires représentent la tradition écrite qu'ils ne fournissent pas la science mais fournissent l'éducation. Vous ne pouvez construire une histoire que si vous avez l'écriture et le mythe. Les histoires nécessitent de la littérature et la construction de l'histoire mais fournissent efficacement les effets de construction de l'histoire dans toutes vos villes, y compris les nouvelles. [PARAGRAPH:2] Il y a des mythes sur les animaux individuels, par exemple Moon Bear; Mythes sur les groupes d'animaux, par exemple les ours; Mythes élémentaires (Terre, ciel, mer, etc.), Mythes du paysage (une extension C2C du composant Merveilles naturelles de Platyping) et Bêtes mythiques.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_PSEUDO_NATIONAL_WONDERS_TEXT</Tag>
 		<English>Pseudo National Wonders</English>
+		<French>Pseudo-Merveilles Nationales</French>
 		<Polish>Pseudo Cud Narodowy</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_PSEUDO_NATIONAL_WONDERS_PEDIA</Tag>
 		<English>Pseudo National Wonders act like National Wonders in that you can only build one in your nation but they don't count to the count of National Wonders built in the city.[PARAGRAPH:2]This works by having the building (A) give another building (B) free in all cities but requiring that  building B is not in the city for building A to be available to be built.</English>
+		<French>Les pseudo-merveilles nationales agissent comme des merveilles nationales en ce sens que vous ne pouvez en construire qu'une dans votre nation, mais elles ne comptent pas pour le nombre de merveilles nationales construites dans la ville. [PARAGRAPHE: 2] Cela fonctionne en demandant au bâtiment (A) d'en donner un autre bâtiment (B) gratuit dans toutes les villes mais nécessitant que le bâtiment B ne soit pas dans la ville pour que le bâtiment A soit disponible pour être construit.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_TAMED_ANIMALS_TEXT</Tag>
 		<English>Tamed animals</English>
+		<French>Animaux Dressés</French>
 		<Polish>Oswojone zwierzęta</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_TAMED_ANIMALS_PEDIA</Tag>
 		<English>Tamed animals are basically the same as subdued animals except you can build them and they can attack. They were originally included because the unit graphics by SaibotLieh are cool.</English>
+		<French>Les animaux dressés sont fondamentalement les mêmes que les animaux apprivoisés, sauf que vous pouvez les construire et qu'ils peuvent attaquer. Ils ont été initialement inclus parce que les graphiques de l'unité par SaibotLieh sont cool.</French>
 		<Polish>Oswojone zwierzęta są identyczne z poskromionymi zwierzętami oprócz jednej rzeczy - masz możliwość "budowania" tych zwierząt w mieście.</Polish>
 	</TEXT>
 	<!-- BUILDNG KEY SECTION -->
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DOG_KENNEL_PEDIA</Tag>
 		<English>Since the discovery of domestication, mans are mixing diferents dog's races trying to get an animal more usefull to their needs; more strong, or fast, or better hunter, or just bigger or smaller. This building is the military aplication to this ability.</English>
+		<French>Depuis la découverte de la domestication, les hommes mélangent différentes races de chiens en essayant d'obtenir un animal plus utile à leurs besoins; chasseur plus fort, rapide ou meilleur, ou simplement plus grand ou plus petit. Ce bâtiment est l'application militaire de cette capacité.</French>
 		<Italian>Sin dalla scoperta dell'addomesticazione gli uomini hanno incrociato diverse razze di cani cercando di ottenere un animale più utile ai loro bisogni: più forte, più veloce, un cacciatore migliore, o semplicemente più grande o più piccolo. Questo edificio rappresenta l'applicazione militare di questi esperimenti.</Italian>
 		<Polish>Psiarnia to miejsce gdzie są przetrzymywane i rozmnażane psy.</Polish>
 	</TEXT>
