@@ -637,22 +637,19 @@
 		<Spanish>En cada partida se genera una nueva "seed" al azar que, por ejemplo, arrojará resultados diferentes en el combate.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_NO_BARBARIAN_CIV</Tag>
-		<English>No BarbarianCivs</English>
-		<French>Pas de Civs Barbares</French>
-		<German>Keine Barbarenzivilisationen</German>
-		<Italian>Niente civiltà barbariche</Italian>
-		<Spanish>Sin civilizaciones bárbaras</Spanish>
-		<Polish>Brak Barbarzyńskich Cywilizacji</Polish>
+		<Tag>TXT_KEY_GAMEOPTION_BARBARIAN_CIV</Tag>
+		<English>Barbarian Civ</English>
+		<French>Civs Barbares</French>
+		<German>Barbarenzivilisationen</German>
+		<Italian>Civiltà barbariche</Italian>
+		<Spanish>Civilizaciones bárbaras</Spanish>
+		<Polish>Barbarzyńskich Cywilizacji</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_NO_BARBARIAN_CIV_HELP</Tag>
-		<English>Disables the BarbarianCivs: Barbarian cities which are left alone will remain barbarian, they will not spawn new civilizations.</English>
-		<French>Désactive les Civs Barbares: Les Villes Barbares ne feront pas émerger de nouvelles civilizations.</French>
-		<German>Es entstehen keine neuen Zivilisationen aus Barbarenstädten. ACHTUNG! Aktivierte Barbarenzivilisationen können Unmengen an neuen Spielern auf der Karte auftauchen lassen und auch auf leistungsstarken Maschinen zu Speicherproblemen führen.</German>
-		<Italian>Disattiva le civiltà barbariche: le città barbariche rimaste isolate non si organizzeranno in nuove civiltà.</Italian>
-		<Spanish>Se desactiva el componente BarbarianCiv: Las ciudades bárbaras que estén en solitario continuarán siendo bárbaras, no surgirán nuevas civilizaciones a partir de ellas.</Spanish>
-		<Polish>Wyłącza mod BarbCiv: Miasta barbarzyńców nie będą się przemieniać w cywilizacje.</Polish>
+		<Tag>TXT_KEY_GAMEOPTION_BARBARIAN_CIV_HELP</Tag>
+		<English>When enabled: New civilizations may emerge from barbarian cities as minor civs.
+
+If you play with "Start as Minor Civ" then this option will change the rules for becoming a major civ. Achievements and randomness thereof decides when you become a major civ.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_BARBARIANS</Tag>

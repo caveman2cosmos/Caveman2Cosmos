@@ -98,7 +98,7 @@ class RevolutionInit:
 			if bAIAutoPlay:
 				RevInstances.AIAutoPlayInst = AIAutoPlay.AIAutoPlay(self.customEM, self.RevOpt)
 
-			if not GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIAN_CIV):
+			if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_CIV):
 				RevInstances.BarbarianCivInst = BarbarianCiv.BarbarianCiv(self.customEM, self.RevOpt)
 
 			bChangePlayer = RevOpt.isChangePlayerEnable()

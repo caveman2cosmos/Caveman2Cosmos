@@ -240,10 +240,10 @@
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_NO_BARBARIAN_CIV</Type>
-			<Description>TXT_KEY_GAMEOPTION_NO_BARBARIAN_CIV</Description>
-			<Help>TXT_KEY_GAMEOPTION_NO_BARBARIAN_CIV_HELP</Help>
-			<bDefault>1</bDefault>
+			<Type>GAMEOPTION_BARBARIAN_CIV</Type>
+			<Description>TXT_KEY_GAMEOPTION_BARBARIAN_CIV</Description>
+			<Help>TXT_KEY_GAMEOPTION_BARBARIAN_CIV_HELP</Help>
+			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>

@@ -107,7 +107,7 @@ class RevDCMOptionsTab(BugOptionsTab.BugOptionsTab):
 
 			#Barbarian Civ
 			#Standard Options
-			if not GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIAN_CIV):
+			if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_CIV):
 				self.addLabel(screen, left, "Revolution__BarbarianCiv", TRNSLTR.getText("TXT_KEY_REVDCMTAB_BARBCIV_OPTIONS", ()))
 				col1, col2 = self.addMultiColumnLayout(screen, right, 2, "Misc Settings")
 				self.addIntDropdown(screen, col1, col2, "Revolution__MinPopulation")
