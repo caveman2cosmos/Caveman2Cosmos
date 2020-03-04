@@ -98,14 +98,14 @@ class RevolutionInit:
 			if bAIAutoPlay:
 				RevInstances.AIAutoPlayInst = AIAutoPlay.AIAutoPlay(self.customEM, self.RevOpt)
 
-			if not GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIAN_CIV):
+			if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_CIV):
 				RevInstances.BarbarianCivInst = BarbarianCiv.BarbarianCiv(self.customEM, self.RevOpt)
 
 			bChangePlayer = RevOpt.isChangePlayerEnable()
 			if bChangePlayer:
 				RevInstances.ChangePlayerInst = ChangePlayer.ChangePlayer(self.customEM, self.RevOpt)
 
-			if not GAME.isOption(GameOptionTypes.GAMEOPTION_NO_REVOLUTION):
+			if GAME.isOption(GameOptionTypes.GAMEOPTION_REVOLUTION):
 				# RevEvents needs to service beginPlayerTurn events before Revolution
 				RevEvents.init(self.customEM, self.RevOpt)
 				RevInstances.RevolutionInst = Revolution.Revolution(self.customEM, self.RevOpt)

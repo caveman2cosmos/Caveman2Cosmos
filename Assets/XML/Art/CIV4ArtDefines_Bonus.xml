@@ -927,7 +927,7 @@
 			<FontButtonIndex>189</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_GEOTHERMAL_SEA_VENT</Type>
+			<Type>ART_DEF_BONUS_HYDROTHERMAL_VENT</Type>
 			<fScale>2.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Geothermal_Sea_Vent/library.nif</NIF>

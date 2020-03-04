@@ -23,7 +23,7 @@
 			<Description>TXT_KEY_TECH_CAO_DAI</Description>
 			<Civilopedia>TXT_KEY_TECH_CAO_DAI_PEDIA</Civilopedia>
 			<TechPrereq>TECH_CAO_DAI</TechPrereq>
-			<FreeUnitClass>UNITCLASS_CAODAI_MISSIONARY</FreeUnitClass>
+			<FreeUnit>UNIT_CAODAI_MISSIONARY</FreeUnit>
 			<iSpreadFactor>50</iSpreadFactor>
 			<iTGAIndex>24</iTGAIndex>
 			<GlobalReligionCommerces>

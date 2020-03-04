@@ -892,7 +892,7 @@
 
 	<options id="AdvUnitNaming" file="Adv Unit Naming.ini">
 		<section id="UnitName">
-			<option id="ByEraAndClass" key="%s_%s" args="era, class" type="string" default="DEFAULT"/>
+			<option id="ByEraAndType" key="%s_%s" args="era, type" type="string" default="DEFAULT"/>
 		</section>
 	</options>
 

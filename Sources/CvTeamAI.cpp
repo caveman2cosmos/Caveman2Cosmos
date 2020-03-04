@@ -5141,10 +5141,9 @@ void CvTeamAI::AI_doWar()
 
 	int iEnemyPowerPercent = AI_getEnemyPowerPercent();
 
-	// Afforess
 	int iExtraWarExpenses = GC.getDefineINT("ESTIMATED_EXTRA_WAR_COSTS_PER_ERA", 15) * (1 + GET_PLAYER(getLeaderID()).getCurrentEra());
-	//No revolutions means wars are a (bit) less risky, in terms of finances
-	if (GC.getGame().isOption(GAMEOPTION_NO_REVOLUTION))
+	// No revolutions means wars are (a bit) less risky, in terms of finances
+	if (!GC.getGame().isOption(GAMEOPTION_REVOLUTION))
 	{
 		iExtraWarExpenses *= 75;
 		iExtraWarExpenses /= 100;

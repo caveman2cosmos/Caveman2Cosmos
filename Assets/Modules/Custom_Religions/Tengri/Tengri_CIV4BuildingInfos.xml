@@ -193,7 +193,7 @@
 			<HolyCity>RELIGION_TENGRIISM</HolyCity>
 			<ReligionType>RELIGION_TENGRIISM</ReligionType>
 			<GlobalReligionCommerce>RELIGION_TENGRIISM</GlobalReligionCommerce>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>-1</iCost>

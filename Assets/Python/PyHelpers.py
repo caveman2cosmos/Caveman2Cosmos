@@ -981,18 +981,6 @@ class PyInfo:
 			"int - domain type"
 			return self.info.getDomainType()
 
-		def getUnitClassType(self):
-			"str - unit class type"
-			return self.info.getUnitClassType()
-
-		def getListUnitClassID(self):
-			"intList - id list of all unit infos that match combat type with current unit"
-			lUnitClassID = []
-			for i in range(gc.getNumUnitInfos()):
-				if UnitInfo(i).getUnitClassType() == self.getUnitClassType():
-					lUnitClassID.append(i)
-			return lUnitClassID
-
 		def getUnitCombatType(self):
 			"int - combat type"
 			return self.info.getUnitCombatType()

@@ -2,7 +2,6 @@
 <Civ4UnitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_GOLIATH_AIRSHIP</Class>
 			<Type>UNIT_GOLIATH_AIRSHIP</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_BALLOON</Combat>
@@ -97,7 +96,6 @@
 			<bDCMFighterEngage>1</bDCMFighterEngage>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_DRACHE_HELICOPTER</Class>
 			<Type>UNIT_DRACHE_HELICOPTER</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_HELICOPTER</Combat>
@@ -153,7 +151,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_ZEPPELINS</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_DIESELPUNK</BonusType>
 			</PrereqBonuses>
@@ -207,7 +205,6 @@
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_RAILROAD_ARTILLERY</Class>
 			<Type>UNIT_RAILROAD_ARTILLERY</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Capture>UNIT_RAILROAD_ARTILLERY</Capture>
@@ -320,7 +317,6 @@
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_BIG_BERTHA</Class>
 			<Type>UNIT_BIG_BERTHA</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Capture>UNIT_BIG_BERTHA</Capture>
@@ -438,7 +434,6 @@
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TZAR_TANK</Class>
 			<Type>UNIT_TZAR_TANK</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WHEELED</Combat>
@@ -517,16 +512,16 @@
 					<iTerrainAttack>-50</iTerrainAttack>
 				</TerrainAttack>
 			</TerrainAttacks>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_MACHINE_GUN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_EARLY_TANK</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_MACHINE_GUN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_EARLY_TANK</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
@@ -550,7 +545,6 @@
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_DOUBLE_BIPLANE</Class>
 			<Type>UNIT_DOUBLE_BIPLANE</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_EARLY_FIGHTERS</Combat>
@@ -630,7 +624,6 @@
 			<bDCMFighterEngage>1</bDCMFighterEngage>
 		</UnitInfo>
  		<UnitInfo>
-			<Class>UNITCLASS_VERY_HEAVY_ARMOR</Class>
 			<Type>UNIT_VERY_HEAVY_ARMOR</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_TRACKED</Combat>
@@ -688,7 +681,7 @@
 			<PrereqTech>TECH_DIESELPUNK</PrereqTech>
 			<BonusType>BONUS_DIESELPUNK</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_OIL_PRODUCTS</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_BIOFUEL</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
@@ -711,20 +704,20 @@
 			<iFirstStrikes>1</iFirstStrikes>
 			<iCollateralDamageLimit>60</iCollateralDamageLimit>
 			<iCollateralDamageMaxUnits>6</iCollateralDamageMaxUnits>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_MACHINE_GUN</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_EARLY_TANK</UnitClassType>
-					<iUnitClassMod>150</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_LIGHT_TANK</UnitClassType>
-					<iUnitClassMod>30</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_MACHINE_GUN</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_EARLY_TANK</UnitType>
+					<iModifier>150</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_LIGHT_TANK</UnitType>
+					<iModifier>30</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
@@ -754,7 +747,6 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_CHROMIUM_GUNMAN</Class>
 			<Type>UNIT_CHROMIUM_GUNMAN</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_GUN</Combat>
@@ -821,7 +813,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_OIL_PRODUCTS</ID>
+						<ID>BONUS_PETROLEUM_PRODUCTS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>

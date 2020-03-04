@@ -1108,7 +1108,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ANCESTOR_WORSHIP_STRATEGY</Tag>
 		<English>TBD</English>
-		<Polish>Odblokowuje [COLOR_BUILDING_TEXT]Ambasadę Chińską[COLOR_REVERT] i [COLOR_BUILDING_TEXT]Kaplicę Bożka[COLOR_REVERT].</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ANCIENT_BALLISTICS</Tag>
@@ -1340,7 +1339,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ANIMATION</Tag>
 		<English>Animation</English>
-		<French>Animation</French>
 		<Italian>Animazione</Italian>
 		<Spanish>
 			<Text>Animación</Text>
@@ -1595,7 +1593,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECH_APICULTURE</Tag>
 		<English>Apiculture</English>
-		<French>Apiculture</French>
 		<Italian>Apicultura</Italian>
 		<Spanish>
 			<Text>Apicultura</Text>
@@ -2292,7 +2289,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ASSEMBLY_LINE_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Assembly Line[COLOR_REVERT] allows you to build [COLOR_UNIT_TEXT]Early Destroyer[COLOR_REVERT] and [COLOR_UNIT_TEXT]Pre-Dreadnought[COLOR_REVERT] (with [COLOR_TECH_TEXT]Artillery[COLOR_REVERT] and [COLOR_TECH_TEXT]Screw Propeller[COLOR_REVERT]). It also enables construction of the [COLOR_BUILDING_TEXT]Factory[COLOR_REVERT] building and is required for the [COLOR_BUILDING_TEXT]Coal Plant[COLOR_REVERT] and [COLOR_BUILDING_TEXT]Oil Plant[COLOR_REVERT]. The tech enables [COLOR_HIGHLIGHT_TEXT]Corporate[COLOR_REVERT] welfare civic.</English>
-		<French>[COLOR_TECH_TEXT]Travail à la chaîne[COLOR_REVERT] vous permet de fabriquer des [COLOR_UNIT_TEXT]Contre-torpilleurs basiques[COLOR_REVERT] et des [COLOR_UNIT_TEXT]Cuirassés à coque en fer[COLOR_REVERT] (avec [COLOR_TECH_TEXT]Artillerie[COLOR_REVERT] et [COLOR_TECH_TEXT]Vis hélicoïdale[COLOR_REVERT]). Rend également actif la construction des [COLOR_BUILDING_TEXT]Usine[COLOR_REVERT] et est requis pour les [COLOR_BUILDING_TEXT]Centrales thermiques (charbon)[COLOR_REVERT] et les [COLOR_BUILDING_TEXT]Raffineries[COLOR_REVERT]. La Tech. rend actif la doctrine  [COLOR_HIGHLIGHT_TEXT]Société commerciale[COLOR_REVERT].</French>
+		<French>[COLOR_TECH_TEXT]Travail à la chaîne[COLOR_REVERT] vous permet de fabriquer des [COLOR_UNIT_TEXT]Contre-torpilleurs basiques[COLOR_REVERT] et des [COLOR_UNIT_TEXT]Cuirassés à coque en fer[COLOR_REVERT] (avec [COLOR_TECH_TEXT]Artillerie[COLOR_REVERT] et [COLOR_TECH_TEXT]Vis hélicoïdale[COLOR_REVERT]). Rend également actif la construction des [COLOR_BUILDING_TEXT]Usine[COLOR_REVERT] et est requis pour les [COLOR_BUILDING_TEXT]Centrales thermiques (charbon)[COLOR_REVERT] et les [COLOR_BUILDING_TEXT]Raffineries[COLOR_REVERT]. La Tech. rend actif la doctrine  [COLOR_HIGHLIGHT_TEXT]Corporation[COLOR_REVERT].</French>
 		<Spanish>La [COLOR_TECH_TEXT]Cadena de montaje[COLOR_REVERT] te permite construir [COLOR_UNIT_TEXT]Destructores antiguos[COLOR_REVERT] y [COLOR_UNIT_TEXT]Buques de línea pre-Dreadnought[COLOR_REVERT] (con la [COLOR_TECH_TEXT]Artillería[COLOR_REVERT] y la [COLOR_TECH_TEXT]Propulsión a hélice[COLOR_REVERT]). También permite la construcción del edificio de la [COLOR_BUILDING_TEXT]Fábrica[COLOR_REVERT], y se requiere para la [COLOR_BUILDING_TEXT]Central térmica[COLOR_REVERT] y la [COLOR_BUILDING_TEXT]Central térmica de petróleo[COLOR_REVERT]. Esta tecnología desbloquea el principio de Bienestar de las [COLOR_HIGHLIGHT_TEXT]Corporaciones[COLOR_REVERT].</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2458,10 +2455,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ASTROBIOLOGY_QUOTE</Tag>
 		<English>
-"Do you ever wonder if - well, if there are people living on the third planet?"[NEWLINE]
-- "The third planet is incapable of supporting life," stated the husband patiently.
-[NEWLINE]
-- Our scientists have said there's far too much oxygen in their atmosphere.
+"Do you ever wonder if - well, if there are people living on the third planet?"
+
+"The third planet is incapable of supporting life," stated the husband patiently.
+"Our scientists have said there's far too much oxygen in their atmosphere."
 
 	- "The Martian Chronicles" by Ray Bradbury
 		</English>
@@ -4423,7 +4420,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CARVING_QUOTE</Tag>
-		<English>The past is prophetic in that it asserts loudly that wars are poor chisels for carving out peaceful tomorrows.[PARAGRAPH:2]- Martin Luther King, [PARAGRAPH:1][SPACE][SPACE]"In a speech about the Vietnam War"</English>
+		<English>"The past is prophetic in that it asserts loudly that wars are poor chisels for carving out peaceful tomorrows." - Martin Luther King</English>
 		<French>"Le passé est prophétique en ce qu'il affirme haut et fort que les guerres sont des ciseaux pour tailler les pauvres lendemains pacifiques." - Martin Luther King</French>
 		<Polish>"Przeszłość jest prorocza w tym, że głośno stwierdza, że wojna jest kiepskim dłutem do wyrycia naszej pokojowej przyszłości." - Martin Luther King</Polish>
 	</TEXT>
@@ -8069,15 +8066,17 @@ En temps de guerre, certaines organisations de la garde côtière peuvent avoir 
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ECOSYNTHESIS_QUOTE</Tag>
 		<English>Each in his own Tongue (Poem excerpt)
-[NEWLINE][NEWLINE]
-[NEWLINE]A fire-mist and a planet,
-[NEWLINE]A crystal and a cell,
-[NEWLINE]A jellyfish and a saurian,
-[NEWLINE]And caves where the cave-men dwell;
-[NEWLINE]Then a sense of law and beauty,[NEWLINE]And a face turned from the clod, --
-[NEWLINE]Some call it Evolution,
-[NEWLINE]And others call it God.
-[NEWLINE][NEWLINE][SPACE]- William Herbert Carruth (1859 - 1924)
+
+A fire-mist and a planet,
+	A crystal and a cell,
+A jellyfish and a saurian,
+	And caves where the cave-men dwell;
+Then a sense of law and beauty,
+	And a face turned from the clod, --
+Some call it Evolution,
+	And others call it God.
+
+	- William Herbert Carruth (1859 - 1924)
 	</English>
 		<French>Chacun dans sa propre langue (extrait de poème)
 [NEWLINE][NEWLINE]
@@ -8849,7 +8848,7 @@ En temps de guerre, certaines organisations de la garde côtière peuvent avoir 
 	<TEXT>
 		<Tag>TXT_KEY_TECH_EXPERIMENTAL_COSMOLOGY_QUOTE</Tag>
 		<English>"As there are an infinity of possible worlds, there are also an infinity of laws, certain ones appropriate to one; others, to another, and each possible individual of any world involves in its concept the laws of its world."[NEWLINE][SPACE] -Gottfried Leibniz</English>
-		<French>"As there are an infinity of possible worlds, there are also an infinity of laws, certain ones appropriate to one; others, to another, and each possible individual of any world involves in its concept the laws of its world."[NEWLINE][SPACE] -Gottfried Leibniz</French>
+		<French>"Comme il existe une infinité de mondes possibles, il existe également une infinité de lois, certaines appropriées à un; d'autres, à un autre, et chaque individu possible de n'importe quel monde implique dans son concept les lois de son monde."[NEWLINE][SPACE] -Gottfried Leibniz</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_EXPERIMENTAL_COSMOLOGY_STRATEGY</Tag>
@@ -12561,7 +12560,6 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_INVISIBILITY_PEDIA</Tag>
 		<English>Invisibility is the state of an object which cannot be seen. An object in this state is said to be Invisible (literally, "not visible"). Engineers and scientists have performed various kinds of research to investigate the possibility of finding ways to create real optical invisibility for objects. [PARAGRAPH:2]Although it has been shown that making opaque objects perfectly invisible ("non-scattering scatterers") is impossible, 2006 theoretical work predicts that the imperfections need not be serious, and metamaterials may make real-life "cloaking devices" practical. The technique is suspected to be applied to radio waves within five years, and eventually visible light is a possibility. The theory that light waves can be acted upon the same way as radio waves is now a popular idea among scientists and can be compared to a stone in a river, in where the water passes around it, but leaving no trace of a stone being in the water slightly down-stream. Comparing light waves to the water and whatever object that is being "cloaked" to the stone, the desire is to have light waves pass around that object, leaving no visible aspects of it, possibly not even a shadow. [PARAGRAPH:2]Two teams of scientists worked separately to create two "Invisibility Cloaks" from 'metamaterials' engineered at the nanoscale level. They demonstrated for the first time the possibility of cloaking 3-dimensional (3-D) objects with artificially engineered materials that redirect radar, light or other waves around an object, like water flowing around a smooth rock in a stream. While one uses a type of fishnet of metal layers to reverse the direction of light, the other uses tiny silver wires. Xiang Zhang, of the University of California, Berkeley said: "In the case of invisibility cloaks or shields, the material would need to curve light waves completely around the object like a river flowing around a rock. An observer looking at the cloaked object would then see light from behind it, making it seem to disappear." [PARAGRAPH:2]Researcher Jason Valentine's team made a material that affects light near the visible spectrum, in a region used in fibre optics: 'Instead of the fish appearing to be slightly ahead of where it is in the water, it would actually appear to be above the water's surface. It's kind of weird. For a metamaterial to produce negative refraction, it must have a structural array smaller than the wavelength of the electromagnetic radiation being used. Valentine's team created their 'fishnet' material by stacking silver and metal dielectric layers on top of each other and then punched through with holes. The other team used an oxide template and grew silver nanowires inside porous aluminum oxide at tiny distances apart, smaller than the wavelength of visible light. This material refracts visible light.</English>
-<Polish>[COLOR_TECH_TEXT]Niewidzialność[COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_INVISIBILITY_QUOTE</Tag>
@@ -14927,7 +14925,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MENSIOKINESIS_QUOTE</Tag>
 		<English>Thief: I have come to a realization. Dragons are not real in a general sense, but they may exist in certain specific cases.[NEWLINE]Fighter: Like how quantum mechanics describes how subatomic particles can spontaneously pop into existence at random![NEWLINE]Thief: No, that's stupid and stop making up words.[NEWLINE][SPACE] -8-bit Theater</English>
-		<French>Thief: I have come to a realization. Dragons are not real in a general sense, but they may exist in certain specific cases.[NEWLINE]Fighter: Like how quantum mechanics describes how subatomic particles can spontaneously pop into existence at random![NEWLINE]Thief: No, that's stupid and stop making up words.[NEWLINE][SPACE] -8-bit Theater</French>
+		<French>Voleur: Je suis venu à une réalisation. Les dragons ne sont pas réels dans un sens général, mais ils peuvent exister dans certains cas spécifiques. [NEWLINE] Combattant: Comme la mécanique quantique décrit comment les particules subatomiques peuvent apparaître spontanément au hasard! [NEWLINE] Voleur: Non, c'est stupide et arrêtez inventer des mots.[NEWLINE][SPACE] -8-bit Theater</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MENSIOKINESIS_STRATEGY</Tag>
@@ -19552,7 +19550,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_POSTHUMANISM_QUOTE</Tag>
 		<English>"If only there were evil people somewhere insidiously committing evil deeds, and it were necessary only to separate them from the rest of us and destroy them. But the line dividing good and evil cuts through the heart of every human being. And who is willing to destroy a piece of his own heart?"[NEWLINE][SPACE] -Alexander Solzhenitsyn</English>
-		<French>"If only there were evil people somewhere insidiously committing evil deeds, and it were necessary only to separate them from the rest of us and destroy them. But the line dividing good and evil cuts through the heart of every human being. And who is willing to destroy a piece of his own heart?"[NEWLINE][SPACE] -Alexander Solzhenitsyn</French>
+		<French>"Si seulement il y avait des méchants quelque part qui commettaient insidieusement de mauvaises actions, et il fallait seulement les séparer du reste d'entre nous et les détruire. Mais la ligne qui divise le bien et le mal traverse le cœur de chaque être humain. Et qui veut détruire un morceau de son propre coeur?"[NEWLINE][SPACE] -Alexander Solzhenitsyn</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_POSTHUMANISM_STRATEGY</Tag>
@@ -19570,7 +19568,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_POSTMODERNISM_QUOTE</Tag>
 		<English>Despite the best intentions, then, the postmodernist politics of difference not only is ineffective against but can even coincide with and support the functions and practices of imperial rule. The danger is that postmodernist theories focus their attention so resolutely on the old forms of power they are running from, with their heads turned backwards, that they tumble unwittingly into the welcoming arms of the new power.[NEWLINE][SPACE] - Michael Hardt and Antonio Negri</English>
-		<French>Despite the best intentions, then, the postmodernist politics of difference not only is ineffective against but can even coincide with and support the functions and practices of imperial rule. The danger is that postmodernist theories focus their attention so resolutely on the old forms of power they are running from, with their heads turned backwards, that they tumble unwittingly into the welcoming arms of the new power.[NEWLINE][SPACE] - Michael Hardt and Antonio Negri</French>
+		<French>Malgré les meilleures intentions, la politique postmoderniste de la différence est non seulement inefficace contre, mais peut même coïncider avec et soutenir les fonctions et les pratiques de la domination impériale. Le danger est que les théories postmodernistes concentrent leur attention si résolument sur les anciennes formes de pouvoir qu'elles fuient, la tête tournée en arrière, qu'elles tombent involontairement dans les bras accueillants du nouveau pouvoir.[NEWLINE][SPACE] - Michael Hardt et Antonio Negri</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_POSTMODERNISM_STRATEGY</Tag>
@@ -23714,14 +23712,14 @@ The stages of production are as follows:
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TACHYON_COMMUNICATIONS_QUOTE</Tag>
 		<English>Relativity.
-[NEWLINE]
-[NEWLINE]There was a young lady named Bright
-[NEWLINE]Whose speed was far faster than light;
-[NEWLINE]She set out one day
-[NEWLINE]In a relative way
-[NEWLINE]And returned on the previous night.
-[NEWLINE]
-[NEWLINE][SPACE]Limerick from 1923 by A. H. Reginald Buller</English>
+
+There was a young lady named Bright
+Whose speed was far faster than light;
+She set out one day
+In a relative way
+And returned on the previous night.
+
+Limerick from 1923 by A. H. Reginald Buller</English>
 		<French>Relativité.
 [NEWLINE]
 [NEWLINE]Il y avait une jeune femme nommée Bright

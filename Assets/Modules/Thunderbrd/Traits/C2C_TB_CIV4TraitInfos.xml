@@ -1098,13 +1098,13 @@
 				</TechResearchModifier>
 			</TechResearchModifiers>
 			<EraAdvanceFreeSpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</EraAdvanceFreeSpecialistType>
-			<GoldenAgeonBirthofGreatPersonType>UNITCLASS_GREAT_GENERAL</GoldenAgeonBirthofGreatPersonType>
+			<GoldenAgeonBirthofGreatPersonType>UNIT_GREAT_GENERAL</GoldenAgeonBirthofGreatPersonType>
 			<iFreeExperience>2</iFreeExperience>
 			<iExpInBorderModifier>20</iExpInBorderModifier>
 			<iMilitaryProductionModifier>-20</iMilitaryProductionModifier>
 			<iEspionageDefense>20</iEspionageDefense>
 			<iGoldenAgeDurationModifier>-50</iGoldenAgeDurationModifier>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_GENERAL</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_GENERAL</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iUnitUpgradePriceModifier>20</iUnitUpgradePriceModifier>
 			<iCapitalXPModifier>25</iCapitalXPModifier>
@@ -1331,13 +1331,13 @@
 				</TechResearchModifier>
 			</TechResearchModifiers>
 			<EraAdvanceFreeSpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</EraAdvanceFreeSpecialistType>
-			<GoldenAgeonBirthofGreatPersonType>UNITCLASS_GREAT_GENERAL</GoldenAgeonBirthofGreatPersonType>
+			<GoldenAgeonBirthofGreatPersonType>UNIT_GREAT_GENERAL</GoldenAgeonBirthofGreatPersonType>
 			<iFreeExperience>2</iFreeExperience>
 			<iExpInBorderModifier>10</iExpInBorderModifier>
 			<iMilitaryProductionModifier>-20</iMilitaryProductionModifier>
 			<iEspionageDefense>5</iEspionageDefense>
 			<iGoldenAgeDurationModifier>-25</iGoldenAgeDurationModifier>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_GENERAL</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_GENERAL</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iUnitUpgradePriceModifier>10</iUnitUpgradePriceModifier>
 			<iCapitalXPModifier>5</iCapitalXPModifier>
@@ -1522,13 +1522,13 @@
 				</TechResearchModifier>
 			</TechResearchModifiers>
 			<EraAdvanceFreeSpecialistType>SPECIALIST_GREAT_ADMIRAL</EraAdvanceFreeSpecialistType>
-			<GoldenAgeonBirthofGreatPersonType>UNITCLASS_GREAT_ADMIRAL</GoldenAgeonBirthofGreatPersonType>
+			<GoldenAgeonBirthofGreatPersonType>UNIT_GREAT_ADMIRAL</GoldenAgeonBirthofGreatPersonType>
 			<iFreeExperience>2</iFreeExperience>
 			<iExpInBorderModifier>10</iExpInBorderModifier>
 			<iMilitaryProductionModifier>-25</iMilitaryProductionModifier>
 			<iEspionageDefense>10</iEspionageDefense>
 			<iGoldenAgeDurationModifier>-25</iGoldenAgeDurationModifier>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_ADMIRAL</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_ADMIRAL</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iUnitUpgradePriceModifier>10</iUnitUpgradePriceModifier>
 			<iCapitalXPModifier>10</iCapitalXPModifier>
@@ -1657,13 +1657,13 @@
 				</TechResearchModifier>
 			</TechResearchModifiers>
 			<EraAdvanceFreeSpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</EraAdvanceFreeSpecialistType>
-			<GoldenAgeonBirthofGreatPersonType>UNITCLASS_GREAT_GENERAL</GoldenAgeonBirthofGreatPersonType>
+			<GoldenAgeonBirthofGreatPersonType>UNIT_GREAT_GENERAL</GoldenAgeonBirthofGreatPersonType>
 			<iFreeExperience>2</iFreeExperience>
 			<iExpInBorderModifier>10</iExpInBorderModifier>
 			<iMilitaryProductionModifier>-25</iMilitaryProductionModifier>
 			<iEspionageDefense>15</iEspionageDefense>
 			<iGoldenAgeDurationModifier>-25</iGoldenAgeDurationModifier>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_GENERAL</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_GENERAL</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>4</iGreatPeopleRateChange>
 			<iUnitUpgradePriceModifier>20</iUnitUpgradePriceModifier>
 			<iCapitalXPModifier>15</iCapitalXPModifier>
@@ -2070,7 +2070,7 @@
 			<iMilitaryProductionModifier>20</iMilitaryProductionModifier>
 			<iEspionageDefense>-30</iEspionageDefense>
 			<iGoldenAgeDurationModifier>50</iGoldenAgeDurationModifier>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_GENERAL</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_GENERAL</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-2</iGreatPeopleRateChange>
 			<iUnitUpgradePriceModifier>-20</iUnitUpgradePriceModifier>
 			<iCapitalXPModifier>-25</iCapitalXPModifier>
@@ -2301,7 +2301,7 @@
 			<iMilitaryProductionModifier>20</iMilitaryProductionModifier>
 			<iEspionageDefense>-20</iEspionageDefense>
 			<iGoldenAgeDurationModifier>25</iGoldenAgeDurationModifier>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_GENERAL</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_GENERAL</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-2</iGreatPeopleRateChange>
 			<iUnitUpgradePriceModifier>-10</iUnitUpgradePriceModifier>
 			<iCapitalXPModifier>-20</iCapitalXPModifier>
@@ -2490,7 +2490,7 @@
 			<iMilitaryProductionModifier>20</iMilitaryProductionModifier>
 			<iEspionageDefense>-20</iEspionageDefense>
 			<iGoldenAgeDurationModifier>25</iGoldenAgeDurationModifier>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_ADMIRAL</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_ADMIRAL</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-4</iGreatPeopleRateChange>
 			<iUnitUpgradePriceModifier>-15</iUnitUpgradePriceModifier>
 			<iCapitalXPModifier>-20</iCapitalXPModifier>
@@ -2623,7 +2623,7 @@
 			<iMilitaryProductionModifier>25</iMilitaryProductionModifier>
 			<iEspionageDefense>-20</iEspionageDefense>
 			<iGoldenAgeDurationModifier>25</iGoldenAgeDurationModifier>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_GENERAL</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_GENERAL</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-6</iGreatPeopleRateChange>
 			<iUnitUpgradePriceModifier>-20</iUnitUpgradePriceModifier>
 			<iCapitalXPModifier>-20</iCapitalXPModifier>
@@ -9585,6 +9585,14 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_EARLY_MOUNTAIN_MINE</ImprovementType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>-1</iYield>
+						<iYield>0</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_MOUNTAIN_MINE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
@@ -9920,7 +9928,7 @@
 			<iWorkerSpeedModifier>-50</iWorkerSpeedModifier>
 			<iNumCitiesMaintenanceModifier>20</iNumCitiesMaintenanceModifier>
 			<iLargestCityHappiness>-1</iLargestCityHappiness>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_ADMIRAL</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_ADMIRAL</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCoastalTradeRoutes>1</iCoastalTradeRoutes>
 			<iNavalCargoSpace>1</iNavalCargoSpace>
@@ -9968,7 +9976,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
-					<BonusType>BONUS_GEOTHERMAL_SEA_VENT</BonusType>
+					<BonusType>BONUS_HYDROTHERMAL_VENT</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
@@ -10249,7 +10257,7 @@
 			<iWorkerSpeedModifier>-25</iWorkerSpeedModifier>
 			<iNumCitiesMaintenanceModifier>10</iNumCitiesMaintenanceModifier>
 			<iLargestCityHappiness>-1</iLargestCityHappiness>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_ADMIRAL</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_ADMIRAL</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCoastalTradeRoutes>1</iCoastalTradeRoutes>
 			<iNavalCargoSpace>1</iNavalCargoSpace>
@@ -10296,7 +10304,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
-					<BonusType>BONUS_GEOTHERMAL_SEA_VENT</BonusType>
+					<BonusType>BONUS_HYDROTHERMAL_VENT</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
@@ -10391,6 +10399,14 @@
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_SHAFT_MINE</ImprovementType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>-1</iYield>
+						<iYield>0</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_EARLY_MOUNTAIN_MINE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
@@ -10612,7 +10628,7 @@
 			</TechResearchModifiers>
 			<iWorkerSpeedModifier>-25</iWorkerSpeedModifier>
 			<iNumCitiesMaintenanceModifier>20</iNumCitiesMaintenanceModifier>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_ADMIRAL</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_ADMIRAL</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>4</iGreatPeopleRateChange>
 			<iCoastalTradeRoutes>1</iCoastalTradeRoutes>
 			<iNavalCargoSpace>1</iNavalCargoSpace>
@@ -10850,7 +10866,7 @@
 			<iWorkerSpeedModifier>-25</iWorkerSpeedModifier>
 			<iNumCitiesMaintenanceModifier>20</iNumCitiesMaintenanceModifier>
 			<iLargestCityHappiness>-1</iLargestCityHappiness>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_ADMIRAL</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_ADMIRAL</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>6</iGreatPeopleRateChange>
 			<iCoastalTradeRoutes>1</iCoastalTradeRoutes>
 			<iNavalCargoSpace>1</iNavalCargoSpace>
@@ -12370,7 +12386,7 @@
 			<iTradeRoutes>1</iTradeRoutes>
 			<iCityDefenseBonus>-20</iCityDefenseBonus>
 			<iMaxTradeRoutesChange>1</iMaxTradeRoutesChange>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_HUNTER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_HUNTER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
@@ -13648,7 +13664,7 @@
 			<iNumCitiesMaintenanceModifier>10</iNumCitiesMaintenanceModifier>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iCityDefenseBonus>-10</iCityDefenseBonus>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_HUNTER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_HUNTER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
@@ -14742,7 +14758,7 @@
 			<iTradeRoutes>1</iTradeRoutes>
 			<iCityDefenseBonus>-10</iCityDefenseBonus>
 			<iMaxTradeRoutesChange>1</iMaxTradeRoutesChange>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_HUNTER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_HUNTER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>4</iGreatPeopleRateChange>
 		</TraitInfo>
 		<TraitInfo>
@@ -15792,7 +15808,7 @@
 			<iTradeRoutes>1</iTradeRoutes>
 			<iCityDefenseBonus>-15</iCityDefenseBonus>
 			<iMaxTradeRoutesChange>2</iMaxTradeRoutesChange>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_HUNTER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_HUNTER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>6</iGreatPeopleRateChange>
 		</TraitInfo>
 		<TraitInfo>
@@ -16713,7 +16729,7 @@
 			<iLargestCityHappiness>-1</iLargestCityHappiness>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iMaxTradeRoutesChange>1</iMaxTradeRoutesChange>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_GENERAL</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_GENERAL</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iBombardDefense>5</iBombardDefense>
 			<iGlobalAirUnitCapacity>1</iGlobalAirUnitCapacity>
@@ -17520,7 +17536,7 @@
 			<iLargestCityHappiness>-1</iLargestCityHappiness>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iMaxTradeRoutesChange>1</iMaxTradeRoutesChange>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_GENERAL</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_GENERAL</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>4</iGreatPeopleRateChange>
 			<iBombardDefense>5</iBombardDefense>
 			<iGlobalAirUnitCapacity>1</iGlobalAirUnitCapacity>
@@ -17907,7 +17923,7 @@
 			<iLargestCityHappiness>-1</iLargestCityHappiness>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iMaxTradeRoutesChange>1</iMaxTradeRoutesChange>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_GENERAL</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_GENERAL</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>6</iGreatPeopleRateChange>
 			<iBombardDefense>5</iBombardDefense>
 			<iGlobalAirUnitCapacity>2</iGlobalAirUnitCapacity>
@@ -18210,13 +18226,13 @@
 					<iModifier>50</iModifier>
 				</UnitCombatProductionModifier>
 			</UnitCombatProductionModifiers>
-			<GoldenAgeonBirthofGreatPersonType>UNITCLASS_PROPHET</GoldenAgeonBirthofGreatPersonType>
+			<GoldenAgeonBirthofGreatPersonType>UNIT_PROPHET</GoldenAgeonBirthofGreatPersonType>
 			<iWarWearinessAccumulationModifier>40</iWarWearinessAccumulationModifier>
 			<iReligiousAnarchyTimeModifier>-100</iReligiousAnarchyTimeModifier>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iNonStateReligionHappiness>1</iNonStateReligionHappiness>
 			<iGoldenAgeDurationModifier>-50</iGoldenAgeDurationModifier>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHolyCityofStateReligionXPModifier>10</iHolyCityofStateReligionXPModifier>
 			<iHolyCityofNonStateReligionXPModifier>10</iHolyCityofNonStateReligionXPModifier>
@@ -18467,13 +18483,13 @@
 					<iModifier>25</iModifier>
 				</UnitCombatProductionModifier>
 			</UnitCombatProductionModifiers>
-			<GoldenAgeonBirthofGreatPersonType>UNITCLASS_PROPHET</GoldenAgeonBirthofGreatPersonType>
+			<GoldenAgeonBirthofGreatPersonType>UNIT_PROPHET</GoldenAgeonBirthofGreatPersonType>
 			<iWarWearinessAccumulationModifier>20</iWarWearinessAccumulationModifier>
 			<iReligiousAnarchyTimeModifier>-25</iReligiousAnarchyTimeModifier>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iNonStateReligionHappiness>1</iNonStateReligionHappiness>
 			<iGoldenAgeDurationModifier>-25</iGoldenAgeDurationModifier>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHolyCityofStateReligionXPModifier>10</iHolyCityofStateReligionXPModifier>
 			<iHolyCityofNonStateReligionXPModifier>10</iHolyCityofNonStateReligionXPModifier>
@@ -18638,7 +18654,7 @@
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iNonStateReligionHappiness>1</iNonStateReligionHappiness>
 			<iGoldenAgeDurationModifier>-30</iGoldenAgeDurationModifier>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>4</iGreatPeopleRateChange>
 			<iHolyCityofStateReligionXPModifier>10</iHolyCityofStateReligionXPModifier>
 			<iHolyCityofNonStateReligionXPModifier>10</iHolyCityofNonStateReligionXPModifier>
@@ -18808,7 +18824,7 @@
 			<iNonStateReligionHappiness>1</iNonStateReligionHappiness>
 			<iAttitudeModifier>1</iAttitudeModifier>
 			<iGoldenAgeDurationModifier>-35</iGoldenAgeDurationModifier>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>6</iGreatPeopleRateChange>
 			<iHolyCityofStateReligionXPModifier>20</iHolyCityofStateReligionXPModifier>
 			<iHolyCityofNonStateReligionXPModifier>20</iHolyCityofNonStateReligionXPModifier>
@@ -19097,7 +19113,7 @@
 			<iStateReligionFreeExperience>-1</iStateReligionFreeExperience>
 			<iMilitaryProductionModifier>10</iMilitaryProductionModifier>
 			<iGoldenAgeDurationModifier>10</iGoldenAgeDurationModifier>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-2</iGreatPeopleRateChange>
 			<iHolyCityofStateReligionXPModifier>-10</iHolyCityofStateReligionXPModifier>
 			<iHolyCityofNonStateReligionXPModifier>-10</iHolyCityofNonStateReligionXPModifier>
@@ -19256,7 +19272,7 @@
 			<iStateReligionBuildingProductionModifier>-5</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>-1</iStateReligionFreeExperience>
 			<iMilitaryProductionModifier>5</iMilitaryProductionModifier>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<iHolyCityofStateReligionXPModifier>-5</iHolyCityofStateReligionXPModifier>
 			<iHolyCityofNonStateReligionXPModifier>-5</iHolyCityofNonStateReligionXPModifier>
@@ -19423,7 +19439,7 @@
 			<iStateReligionBuildingProductionModifier>-10</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>-1</iStateReligionFreeExperience>
 			<iMilitaryProductionModifier>10</iMilitaryProductionModifier>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-4</iGreatPeopleRateChange>
 			<iHolyCityofStateReligionXPModifier>-10</iHolyCityofStateReligionXPModifier>
 			<iHolyCityofNonStateReligionXPModifier>-10</iHolyCityofNonStateReligionXPModifier>
@@ -19586,7 +19602,7 @@
 			<iStateReligionBuildingProductionModifier>-15</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>-2</iStateReligionFreeExperience>
 			<iMilitaryProductionModifier>10</iMilitaryProductionModifier>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-5</iGreatPeopleRateChange>
 			<iHolyCityofStateReligionXPModifier>-10</iHolyCityofStateReligionXPModifier>
 			<iHolyCityofNonStateReligionXPModifier>-10</iHolyCityofNonStateReligionXPModifier>
@@ -24044,6 +24060,14 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_EARLY_MOUNTAIN_MINE</ImprovementType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+						<iYield>0</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_MOUNTAIN_MINE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
@@ -24149,6 +24173,10 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_SHAFT_MINE</BuildType>
+					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
+				</BuildWorkerSpeedModifierType>
+				<BuildWorkerSpeedModifierType>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -24708,7 +24736,7 @@
 				</TechResearchModifier>
 			</TechResearchModifiers>
 			<iWorkerSpeedModifier>25</iWorkerSpeedModifier>
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<PropertyManipulators>
 				<PropertySource>
@@ -25289,7 +25317,7 @@
 				</TechResearchModifier>
 			</TechResearchModifiers>
 			<iWorkerSpeedModifier>25</iWorkerSpeedModifier>
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<PropertyManipulators>
 				<PropertySource>
@@ -25484,6 +25512,14 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_EARLY_MOUNTAIN_MINE</ImprovementType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+						<iYield>0</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_MOUNTAIN_MINE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
@@ -25521,6 +25557,10 @@
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_SHAFT_MINE</BuildType>
+					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
+				</BuildWorkerSpeedModifierType>
+				<BuildWorkerSpeedModifierType>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -25760,7 +25800,7 @@
 				</TechResearchModifier>
 			</TechResearchModifiers>
 			<iWorkerSpeedModifier>25</iWorkerSpeedModifier>
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>4</iGreatPeopleRateChange>
 			<PropertyManipulators>
 				<PropertySource>
@@ -26179,7 +26219,7 @@
 				</TechResearchModifier>
 			</TechResearchModifiers>
 			<iWorkerSpeedModifier>25</iWorkerSpeedModifier>
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>6</iGreatPeopleRateChange>
 			<PropertyManipulators>
 				<PropertySource>
@@ -26507,6 +26547,14 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_EARLY_MOUNTAIN_MINE</ImprovementType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>-1</iYield>
+						<iYield>0</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_MOUNTAIN_MINE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
@@ -26612,6 +26660,10 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_SHAFT_MINE</BuildType>
+					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
+				</BuildWorkerSpeedModifierType>
+				<BuildWorkerSpeedModifierType>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -27176,7 +27228,7 @@
 				</TechResearchModifier>
 			</TechResearchModifiers>
 			<iWorkerSpeedModifier>-25</iWorkerSpeedModifier>
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-2</iGreatPeopleRateChange>
 			<PropertyManipulators>
 				<PropertySource>
@@ -27753,7 +27805,7 @@
 				</TechResearchModifier>
 			</TechResearchModifiers>
 			<iWorkerSpeedModifier>-25</iWorkerSpeedModifier>
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-2</iGreatPeopleRateChange>
 			<PropertyManipulators>
 				<PropertySource>
@@ -27942,6 +27994,14 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_EARLY_MOUNTAIN_MINE</ImprovementType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>-1</iYield>
+						<iYield>0</iYield>
+					</YieldChanges>
+				</ImprovementYieldChange>
+				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_MOUNTAIN_MINE</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
@@ -27979,6 +28039,10 @@
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_SHAFT_MINE</BuildType>
+					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
+				</BuildWorkerSpeedModifierType>
+				<BuildWorkerSpeedModifierType>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -28218,7 +28282,7 @@
 				</TechResearchModifier>
 			</TechResearchModifiers>
 			<iWorkerSpeedModifier>-25</iWorkerSpeedModifier>
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-4</iGreatPeopleRateChange>
 			<PropertyManipulators>
 				<PropertySource>
@@ -28637,7 +28701,7 @@
 				</TechResearchModifier>
 			</TechResearchModifiers>
 			<iWorkerSpeedModifier>-25</iWorkerSpeedModifier>
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-6</iGreatPeopleRateChange>
 			<PropertyManipulators>
 				<PropertySource>
@@ -29125,7 +29189,7 @@
 			<iCivicAnarchyTimeModifier>50</iCivicAnarchyTimeModifier>
 			<iCorporationMaintenanceModifier>-20</iCorporationMaintenanceModifier>
 			<iTradeRoutes>1</iTradeRoutes>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_STATESMAN</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_STATESMAN</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<PropertyManipulators>
 				<PropertySource>
@@ -29381,7 +29445,7 @@
 			<iCivicAnarchyTimeModifier>25</iCivicAnarchyTimeModifier>
 			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
 			<iTradeRoutes>1</iTradeRoutes>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_STATESMAN</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_STATESMAN</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<PropertyManipulators>
 				<PropertySource>
@@ -29668,7 +29732,7 @@
 			<iCivicAnarchyTimeModifier>35</iCivicAnarchyTimeModifier>
 			<iCorporationMaintenanceModifier>-20</iCorporationMaintenanceModifier>
 			<iMaxTradeRoutesChange>1</iMaxTradeRoutesChange>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_STATESMAN</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_STATESMAN</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>4</iGreatPeopleRateChange>
 			<PropertyManipulators>
 				<PropertySource>
@@ -29918,7 +29982,7 @@
 			<iWarWearinessAccumulationModifier>20</iWarWearinessAccumulationModifier>
 			<iCivicAnarchyTimeModifier>40</iCivicAnarchyTimeModifier>
 			<iCorporationMaintenanceModifier>-40</iCorporationMaintenanceModifier>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_STATESMAN</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_STATESMAN</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>6</iGreatPeopleRateChange>
 			<PropertyManipulators>
 				<PropertySource>
@@ -30398,7 +30462,7 @@
 			<iMaxConscript>2</iMaxConscript>
 			<iNumCitiesMaintenanceModifier>-20</iNumCitiesMaintenanceModifier>
 			<iMilitaryProductionModifier>20</iMilitaryProductionModifier>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_STATESMAN</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_STATESMAN</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bExtraGoody>1</bExtraGoody>
 			<ReplacementCondition>
@@ -30648,7 +30712,7 @@
 			<iMaxConscript>2</iMaxConscript>
 			<iNumCitiesMaintenanceModifier>-20</iNumCitiesMaintenanceModifier>
 			<iMilitaryProductionModifier>0</iMilitaryProductionModifier>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_STATESMAN</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_STATESMAN</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bExtraGoody>1</bExtraGoody>
 			<ReplacementCondition>
@@ -30929,7 +30993,7 @@
 			<iNumCitiesMaintenanceModifier>-20</iNumCitiesMaintenanceModifier>
 			<iMilitaryProductionModifier>15</iMilitaryProductionModifier>
 			<iMaxTradeRoutesChange>-1</iMaxTradeRoutesChange>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_STATESMAN</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_STATESMAN</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>4</iGreatPeopleRateChange>
 		</TraitInfo>
 		<TraitInfo>
@@ -31168,7 +31232,7 @@
 			<iNumCitiesMaintenanceModifier>-20</iNumCitiesMaintenanceModifier>
 			<iMilitaryProductionModifier>15</iMilitaryProductionModifier>
 			<iMaxTradeRoutesChange>-1</iMaxTradeRoutesChange>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_STATESMAN</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_STATESMAN</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>6</iGreatPeopleRateChange>
 		</TraitInfo>
 		<TraitInfo>
@@ -36083,7 +36147,7 @@
 			<iWorkerSpeedModifier>-25</iWorkerSpeedModifier>
 			<iMaxConscript>-2</iMaxConscript>
 			<iMilitaryProductionModifier>-10</iMilitaryProductionModifier>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iEnemyWarWearinessModifier>-20</iEnemyWarWearinessModifier>
 			<iBombardDefense>-10</iBombardDefense>
@@ -36663,7 +36727,7 @@
 			<iWorkerSpeedModifier>-25</iWorkerSpeedModifier>
 			<iMaxConscript>-1</iMaxConscript>
 			<iMilitaryProductionModifier>-5</iMilitaryProductionModifier>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iEnemyWarWearinessModifier>-10</iEnemyWarWearinessModifier>
 			<iBombardDefense>-5</iBombardDefense>
@@ -37163,7 +37227,7 @@
 			<iWorkerSpeedModifier>-25</iWorkerSpeedModifier>
 			<iMaxConscript>-1</iMaxConscript>
 			<iMilitaryProductionModifier>-5</iMilitaryProductionModifier>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>4</iGreatPeopleRateChange>
 			<iEnemyWarWearinessModifier>-10</iEnemyWarWearinessModifier>
 			<iBombardDefense>-5</iBombardDefense>
@@ -37453,7 +37517,7 @@
 			<iWorkerSpeedModifier>-25</iWorkerSpeedModifier>
 			<iMaxConscript>-1</iMaxConscript>
 			<iMilitaryProductionModifier>-5</iMilitaryProductionModifier>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>6</iGreatPeopleRateChange>
 			<iEnemyWarWearinessModifier>-10</iEnemyWarWearinessModifier>
 			<iBombardDefense>-5</iBombardDefense>
@@ -38286,7 +38350,7 @@
 			<iMaxConscript>2</iMaxConscript>
 			<iCityDefenseBonus>10</iCityDefenseBonus>
 			<iMilitaryProductionModifier>10</iMilitaryProductionModifier>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-2</iGreatPeopleRateChange>
 			<iEnemyWarWearinessModifier>20</iEnemyWarWearinessModifier>
 			<iNationalCaptureProbabilityModifier>10</iNationalCaptureProbabilityModifier>
@@ -38785,7 +38849,7 @@
 			<iMaxConscript>1</iMaxConscript>
 			<iCityDefenseBonus>5</iCityDefenseBonus>
 			<iMilitaryProductionModifier>5</iMilitaryProductionModifier>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-2</iGreatPeopleRateChange>
 			<iEnemyWarWearinessModifier>10</iEnemyWarWearinessModifier>
 			<iNationalCaptureProbabilityModifier>10</iNationalCaptureProbabilityModifier>
@@ -39174,7 +39238,7 @@
 			<iMaxConscript>1</iMaxConscript>
 			<iCityDefenseBonus>5</iCityDefenseBonus>
 			<iMilitaryProductionModifier>5</iMilitaryProductionModifier>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-4</iGreatPeopleRateChange>
 			<iEnemyWarWearinessModifier>10</iEnemyWarWearinessModifier>
 			<iNationalCaptureProbabilityModifier>5</iNationalCaptureProbabilityModifier>
@@ -39423,7 +39487,7 @@
 			<iMaxConscript>1</iMaxConscript>
 			<iCityDefenseBonus>5</iCityDefenseBonus>
 			<iMilitaryProductionModifier>5</iMilitaryProductionModifier>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-6</iGreatPeopleRateChange>
 			<iEnemyWarWearinessModifier>10</iEnemyWarWearinessModifier>
 			<iNationalCaptureProbabilityModifier>5</iNationalCaptureProbabilityModifier>
@@ -40185,7 +40249,7 @@
 			<iFreeExperience>-1</iFreeExperience>
 			<iCityDefenseBonus>-10</iCityDefenseBonus>
 			<iEspionageDefense>-10</iEspionageDefense>
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryCostModifier>-25</iHurryCostModifier>
 			<iBombardDefense>-10</iBombardDefense>
@@ -40614,7 +40678,7 @@
 			<iFreeExperience>-1</iFreeExperience>
 			<iCityDefenseBonus>-5</iCityDefenseBonus>
 			<iEspionageDefense>-5</iEspionageDefense>
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryCostModifier>-25</iHurryCostModifier>
 			<iBombardDefense>-5</iBombardDefense>
@@ -40919,7 +40983,7 @@
 			<iFreeExperience>-1</iFreeExperience>
 			<iCityDefenseBonus>-5</iCityDefenseBonus>
 			<iEspionageDefense>-5</iEspionageDefense>
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>4</iGreatPeopleRateChange>
 			<iHurryCostModifier>-25</iHurryCostModifier>
 			<iBombardDefense>-5</iBombardDefense>
@@ -41198,7 +41262,7 @@
 			<iFreeExperience>-1</iFreeExperience>
 			<iCityDefenseBonus>-5</iCityDefenseBonus>
 			<iEspionageDefense>-5</iEspionageDefense>
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>6</iGreatPeopleRateChange>
 			<iHurryCostModifier>-25</iHurryCostModifier>
 			<iBombardDefense>-5</iBombardDefense>
@@ -41952,7 +42016,7 @@
 			<iMaxConscript>2</iMaxConscript>
 			<iCorporationMaintenanceModifier>20</iCorporationMaintenanceModifier>
 			<iBaseFreeUnits>10</iBaseFreeUnits>
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-2</iGreatPeopleRateChange>
 			<iHurryCostModifier>-25</iHurryCostModifier>
 			<PropertyManipulators>
@@ -42376,7 +42440,7 @@
 			<iMaxConscript>1</iMaxConscript>
 			<iCorporationMaintenanceModifier>10</iCorporationMaintenanceModifier>
 			<iBaseFreeUnits>5</iBaseFreeUnits>
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-2</iGreatPeopleRateChange>
 			<iHurryCostModifier>-25</iHurryCostModifier>
 			<PropertyManipulators>
@@ -42674,7 +42738,7 @@
 			<iMaxConscript>2</iMaxConscript>
 			<iCorporationMaintenanceModifier>20</iCorporationMaintenanceModifier>
 			<iBaseFreeUnits>5</iBaseFreeUnits>
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-4</iGreatPeopleRateChange>
 			<iHurryCostModifier>-25</iHurryCostModifier>
 			<PropertyManipulators>
@@ -42952,7 +43016,7 @@
 			<iMaxConscript>2</iMaxConscript>
 			<iCorporationMaintenanceModifier>30</iCorporationMaintenanceModifier>
 			<iBaseFreeUnits>10</iBaseFreeUnits>
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-6</iGreatPeopleRateChange>
 			<iHurryCostModifier>-25</iHurryCostModifier>
 			<PropertyManipulators>
@@ -43572,7 +43636,7 @@
 			<iCivicAnarchyTimeModifier>10</iCivicAnarchyTimeModifier>
 			<iAttitudeModifier>-1</iAttitudeModifier>
 			<iEspionageDefense>20</iEspionageDefense>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iEnemyWarWearinessModifier>-20</iEnemyWarWearinessModifier>
 			<iNationalCaptureResistanceModifier>-20</iNationalCaptureResistanceModifier>
@@ -43922,7 +43986,7 @@
 			<iCivicAnarchyTimeModifier>5</iCivicAnarchyTimeModifier>
 			<iAttitudeModifier>-1</iAttitudeModifier>
 			<iEspionageDefense>10</iEspionageDefense>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iEnemyWarWearinessModifier>-10</iEnemyWarWearinessModifier>
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
@@ -44188,7 +44252,7 @@
 			<iCivicAnarchyTimeModifier>5</iCivicAnarchyTimeModifier>
 			<iAttitudeModifier>-1</iAttitudeModifier>
 			<iEspionageDefense>20</iEspionageDefense>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>4</iGreatPeopleRateChange>
 			<iEnemyWarWearinessModifier>-10</iEnemyWarWearinessModifier>
 			<iNationalCaptureResistanceModifier>-20</iNationalCaptureResistanceModifier>
@@ -44493,7 +44557,7 @@
 			<iCivicAnarchyTimeModifier>5</iCivicAnarchyTimeModifier>
 			<iAttitudeModifier>-1</iAttitudeModifier>
 			<iEspionageDefense>30</iEspionageDefense>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>6</iGreatPeopleRateChange>
 			<iEnemyWarWearinessModifier>-10</iEnemyWarWearinessModifier>
 			<iNationalCaptureResistanceModifier>-20</iNationalCaptureResistanceModifier>
@@ -45129,7 +45193,7 @@
 			<iCivicAnarchyTimeModifier>-10</iCivicAnarchyTimeModifier>
 			<iAttitudeModifier>1</iAttitudeModifier>
 			<iEspionageDefense>-20</iEspionageDefense>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-2</iGreatPeopleRateChange>
 			<PropertyManipulators>
 				<PropertySource>
@@ -45474,7 +45538,7 @@
 			<iCivicAnarchyTimeModifier>-5</iCivicAnarchyTimeModifier>
 			<iAttitudeModifier>1</iAttitudeModifier>
 			<iEspionageDefense>-15</iEspionageDefense>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-2</iGreatPeopleRateChange>
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<PropertyManipulators>
@@ -45734,7 +45798,7 @@
 			<iCivicAnarchyTimeModifier>-10</iCivicAnarchyTimeModifier>
 			<iAttitudeModifier>1</iAttitudeModifier>
 			<iEspionageDefense>-25</iEspionageDefense>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-4</iGreatPeopleRateChange>
 			<PropertyManipulators>
 				<PropertySource>
@@ -46038,7 +46102,7 @@
 			<iCivicAnarchyTimeModifier>-10</iCivicAnarchyTimeModifier>
 			<iAttitudeModifier>1</iAttitudeModifier>
 			<iEspionageDefense>-25</iEspionageDefense>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-6</iGreatPeopleRateChange>
 			<PropertyManipulators>
 				<PropertySource>
@@ -46878,7 +46942,7 @@
 			<iReligiousAnarchyTimeModifier>100</iReligiousAnarchyTimeModifier>
 			<iNonStateReligionHappiness>-1</iNonStateReligionHappiness>
 			<iMilitaryProductionModifier>-20</iMilitaryProductionModifier>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iMissileRange>1</iMissileRange>
 			<iFlightOperationRange>1</iFlightOperationRange>
@@ -47149,7 +47213,7 @@
 			<iReligiousAnarchyTimeModifier>50</iReligiousAnarchyTimeModifier>
 			<iNonStateReligionHappiness>-1</iNonStateReligionHappiness>
 			<iMilitaryProductionModifier>-10</iMilitaryProductionModifier>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iMissileRange>0</iMissileRange>
 			<iFlightOperationRange>0</iFlightOperationRange>
@@ -47563,7 +47627,7 @@
 			<iStateReligionHappiness>-1</iStateReligionHappiness>
 			<iNonStateReligionHappiness>-1</iNonStateReligionHappiness>
 			<iMilitaryProductionModifier>-10</iMilitaryProductionModifier>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>4</iGreatPeopleRateChange>
 			<iMissileRange>0</iMissileRange>
 			<iFlightOperationRange>1</iFlightOperationRange>
@@ -48004,7 +48068,7 @@
 			<iStateReligionHappiness>-2</iStateReligionHappiness>
 			<iNonStateReligionHappiness>-1</iNonStateReligionHappiness>
 			<iMilitaryProductionModifier>-10</iMilitaryProductionModifier>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>6</iGreatPeopleRateChange>
 			<iMissileRange>2</iMissileRange>
 			<iFlightOperationRange>1</iFlightOperationRange>
@@ -48851,7 +48915,7 @@
 			<iLargestCityHappiness>1</iLargestCityHappiness>
 			<iFreeSpecialist>1</iFreeSpecialist>
 			<iMilitaryProductionModifier>10</iMilitaryProductionModifier>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-2</iGreatPeopleRateChange>
 			<PropertyManipulators>
 				<PropertySource>
@@ -49114,7 +49178,7 @@
 			<iReligiousAnarchyTimeModifier>50</iReligiousAnarchyTimeModifier>
 			<iLargestCityHappiness>1</iLargestCityHappiness>
 			<iFreeSpecialist>1</iFreeSpecialist>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-2</iGreatPeopleRateChange>
 			<PropertyManipulators>
 				<PropertySource>
@@ -49505,7 +49569,7 @@
 			<iReligiousAnarchyTimeModifier>25</iReligiousAnarchyTimeModifier>
 			<iFreeSpecialist>1</iFreeSpecialist>
 			<iMilitaryProductionModifier>10</iMilitaryProductionModifier>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-4</iGreatPeopleRateChange>
 		</TraitInfo>
 		<TraitInfo>
@@ -49916,7 +49980,7 @@
 			<iLargestCityHappiness>0</iLargestCityHappiness>
 			<iFreeSpecialist>1</iFreeSpecialist>
 			<iMilitaryProductionModifier>10</iMilitaryProductionModifier>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-6</iGreatPeopleRateChange>
 			<PropertyManipulators>
 				<PropertySource>
@@ -66414,7 +66478,7 @@
 					<iHappinessChange>-1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
-					<BonusType>BONUS_METH</BonusType>
+					<BonusType>BONUS_METHAMPHETAMINE</BonusType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
@@ -66852,7 +66916,7 @@
 					<iHappinessChange>-1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
-					<BonusType>BONUS_METH</BonusType>
+					<BonusType>BONUS_METHAMPHETAMINE</BonusType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
@@ -68082,7 +68146,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
-					<BonusType>BONUS_METH</BonusType>
+					<BonusType>BONUS_METHAMPHETAMINE</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
@@ -68936,7 +69000,7 @@
 			</PropertyManipulators>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
-					<BonusType>BONUS_METH</BonusType>
+					<BonusType>BONUS_METHAMPHETAMINE</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
@@ -69602,13 +69666,13 @@
 					<iModifier>20</iModifier>
 				</UnitCombatProductionModifier>
 			</UnitCombatProductionModifiers>
-			<GoldenAgeonBirthofGreatPersonType>UNITCLASS_DOCTOR</GoldenAgeonBirthofGreatPersonType>
+			<GoldenAgeonBirthofGreatPersonType>UNIT_DOCTOR</GoldenAgeonBirthofGreatPersonType>
 			<iDistanceMaintenanceModifier>20</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>20</iNumCitiesMaintenanceModifier>
 			<iLargestCityHappiness>1</iLargestCityHappiness>
 			<iTradeRoutes>-1</iTradeRoutes>
 			<iGoldenAgeDurationModifier>-20</iGoldenAgeDurationModifier>
-			<GreatPeopleUnitClass>UNITCLASS_DOCTOR</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>25</iHurryAngerModifier>
 			<PropertyManipulators>
@@ -69967,13 +70031,13 @@
 					<iModifier>10</iModifier>
 				</UnitCombatProductionModifier>
 			</UnitCombatProductionModifiers>
-			<GoldenAgeonBirthofGreatPersonType>UNITCLASS_DOCTOR</GoldenAgeonBirthofGreatPersonType>
+			<GoldenAgeonBirthofGreatPersonType>UNIT_DOCTOR</GoldenAgeonBirthofGreatPersonType>
 			<iDistanceMaintenanceModifier>10</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>10</iNumCitiesMaintenanceModifier>
 			<iLargestCityHappiness>0</iLargestCityHappiness>
 			<iTradeRoutes>0</iTradeRoutes>
 			<iGoldenAgeDurationModifier>-10</iGoldenAgeDurationModifier>
-			<GreatPeopleUnitClass>UNITCLASS_DOCTOR</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>75</iHurryAngerModifier>
 			<PropertyManipulators>
@@ -70248,7 +70312,7 @@
 			<iLargestCityHappiness>1</iLargestCityHappiness>
 			<iTradeRoutes>-1</iTradeRoutes>
 			<iGoldenAgeDurationModifier>-10</iGoldenAgeDurationModifier>
-			<GreatPeopleUnitClass>UNITCLASS_DOCTOR</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>4</iGreatPeopleRateChange>
 			<PropertyManipulators>
 				<PropertySource>
@@ -70592,7 +70656,7 @@
 			<iLargestCityHappiness>2</iLargestCityHappiness>
 			<iTradeRoutes>-1</iTradeRoutes>
 			<iGoldenAgeDurationModifier>-10</iGoldenAgeDurationModifier>
-			<GreatPeopleUnitClass>UNITCLASS_DOCTOR</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>6</iGreatPeopleRateChange>
 			<PropertyManipulators>
 				<PropertySource>
@@ -71306,7 +71370,7 @@
 			<iNumCitiesMaintenanceModifier>-20</iNumCitiesMaintenanceModifier>
 			<iLargestCityHappiness>-1</iLargestCityHappiness>
 			<iTradeRoutes>1</iTradeRoutes>
-			<GreatPeopleUnitClass>UNITCLASS_DOCTOR</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>-50</iHurryAngerModifier>
 			<iGlobalPopulationgrowthratepercentage>10</iGlobalPopulationgrowthratepercentage>
@@ -71674,7 +71738,7 @@
 			<iNumCitiesMaintenanceModifier>-10</iNumCitiesMaintenanceModifier>
 			<iLargestCityHappiness>0</iLargestCityHappiness>
 			<iTradeRoutes>0</iTradeRoutes>
-			<GreatPeopleUnitClass>UNITCLASS_DOCTOR</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>-75</iHurryAngerModifier>
 			<iGlobalPopulationgrowthratepercentage>5</iGlobalPopulationgrowthratepercentage>
@@ -71953,7 +72017,7 @@
 			<iLargestCityHappiness>-1</iLargestCityHappiness>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iGoldenAgeDurationModifier>-10</iGoldenAgeDurationModifier>
-			<GreatPeopleUnitClass>UNITCLASS_DOCTOR</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-4</iGreatPeopleRateChange>
 			<iGlobalPopulationgrowthratepercentage>5</iGlobalPopulationgrowthratepercentage>
 			<PropertyManipulators>
@@ -72300,7 +72364,7 @@
 			<iNumCitiesMaintenanceModifier>-20</iNumCitiesMaintenanceModifier>
 			<iLargestCityHappiness>-2</iLargestCityHappiness>
 			<iTradeRoutes>1</iTradeRoutes>
-			<GreatPeopleUnitClass>UNITCLASS_DOCTOR</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-6</iGreatPeopleRateChange>
 			<iGlobalPopulationgrowthratepercentage>5</iGlobalPopulationgrowthratepercentage>
 			<PropertyManipulators>

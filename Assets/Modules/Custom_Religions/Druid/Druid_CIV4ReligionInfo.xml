@@ -12,7 +12,7 @@
 			<Adjective>TXT_KEY_TECH_DRUIDIC_TRADITIONS_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_TECH_DRUIDIC_TRADITIONS_PEDIA</Civilopedia>
 			<TechPrereq>TECH_DRUIDIC_TRADITIONS</TechPrereq>
-			<FreeUnitClass>UNITCLASS_DRUID_MISSIONARY</FreeUnitClass>
+			<FreeUnit>UNIT_DRUID_MISSIONARY</FreeUnit>
 			<iFreeUnits>0</iFreeUnits>
 			<iSpreadFactor>20</iSpreadFactor>
 			<iTGAIndex>21</iTGAIndex>

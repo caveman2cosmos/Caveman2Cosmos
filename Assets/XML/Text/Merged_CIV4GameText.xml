@@ -7332,7 +7332,7 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 		<French>Unités de soins</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_DOCTOR</Tag>
+		<Tag>TXT_KEY_SPECIALIST_DOCTOR</Tag>
 		<English>Doctor</English>
 		<French>
 			<Text>Docteur en médecine</Text>
@@ -7340,8 +7340,17 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 			<Plural>0</Plural>
 		</French>
 	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_SPECIALIST_GREAT_DOCTOR</Tag>
+		<English>Great Doctor</English>
+				<French>
+			<Text>Médecin Illustre</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GREAT_DOCTOR</Tag>
+		<Tag>TXT_KEY_UNIT_DOCTOR</Tag>
 		<English>Great Doctor</English>
 		<French>
 			<Text>Médecin Illustre</Text>
@@ -9160,5 +9169,29 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_ALL</Tag>
+		<English>All Resources</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_GROWTH</Tag>
+		<English>Growth</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_LUXURY</Tag>
+		<English>Luxury</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_MISC</Tag>
+		<English>Misc</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_PRODUCTION</Tag>
+		<English>Production</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_STRATEGIC</Tag>
+		<English>Strategic</English>
 	</TEXT>
 </Civ4GameText>

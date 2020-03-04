@@ -262,9 +262,8 @@ def normalizeAddGoodTerrain():
 	print "-- normalizeAddGoodTerrain()"
 	CyPythonMgr().allowDefaultImpl()
 
-# This function will be called by the system, after the map was generated, after the
-# starting-plots have been choosen, at the end of the normalizing process and
-# before startHumansOnSameTile() which is the last map-function so called.
+# This function will be called by the system after the starting-plots have been choosen
+# at the end of the normalizing process, and is the last map-function called externally.
 # - balance boni (depending on initialization also place missing boni and move minerals)
 # - give names and boni to special regions
 # - print plot-map and the difference-map to the call before

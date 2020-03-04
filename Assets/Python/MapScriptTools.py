@@ -134,12 +134,11 @@ def getModInfo(mapVersion=None, defLatitude=None, sMapInfo=None):
 	################################
 	### define globals for some boni
 	################################
-	global ebAluminum, ebBauxite, ebCopper, ebGold, ebSilver, ebIron, ebOil, ebSulphur, ebUranium, ebCoal,\
-		ebClam, ebFish, ebCrab, ebShrimp, ebHorse, ebBanana, ebCow, ebDeer, ebFur, ebGems, ebMarble, ebSheep
+	global ebBauxite, ebCopper, ebGold, ebSilver, ebIron, ebOil, ebSulphur, ebUranium, ebCoal,\
+		ebClam, ebFish, ebCrab, ebShrimp, ebHorse, ebBanana, ebCow, ebDeer, ebFur, ebMarble, ebSheep
 
 	# strategic boni
 
-	ebAluminum        = GC.getInfoTypeForString('BONUS_ALUMINUM_INGOTS')
 	ebBauxite         = GC.getInfoTypeForString('BONUS_BAUXITE_ORE')
 	ebCopper          = GC.getInfoTypeForString('BONUS_COPPER_ORE')
 	ebHorse           = GC.getInfoTypeForString('BONUS_HORSE')
@@ -158,7 +157,6 @@ def getModInfo(mapVersion=None, defLatitude=None, sMapInfo=None):
 	ebCow             = GC.getInfoTypeForString('BONUS_COW')			# grass, plains
 	ebDeer            = GC.getInfoTypeForString('BONUS_DEER')			# tundra, forest
 	ebFur             = GC.getInfoTypeForString('BONUS_BEAVERS')			# tundra, snow, forest
-	ebGems            = GC.getInfoTypeForString('BONUS_GEMS')			# grass, jungle
 	ebMarble          = GC.getInfoTypeForString('BONUS_MARBLE')			# plains, tundra, snow
 	ebSheep           = GC.getInfoTypeForString('BONUS_SHEEP')			# grass, plains
 
@@ -2489,7 +2487,7 @@ class MapRegions:
 
 		dentBoni = {
 			'Flat':		[ebSilver, ebFur, ebDeer, ebMarble, ebCow, ebHorse],
-			'Hills':	[ebSilver, ebMarble, ebGold, ebGems, ebSheep, None],
+			'Hills':	[ebSilver, ebMarble, ebGold, ebSheep, None],
 			'Terrain':	[etSnow, etTundra, etTundra, etMarsh, etGrass, etGrass]
 		}
 
@@ -2938,7 +2936,7 @@ class MapRegions:
 
 			# place boni and work them
 			pListBoni = [GetPlot(x,y) for x,y in pList if (x,y) != (cx,cy) and not GetPlot(x,y).isPeak()]
-			bonList = [ebGold, ebGems, ebSilver, [ebCopper, ebIron], ebOil, [ebSheep, ebCow], ebCoal, ebSulphur, ebUranium]
+			bonList = [ebGold, ebSilver, [ebCopper, ebIron], ebOil, [ebSheep, ebCow], ebCoal, ebSulphur, ebUranium]
 			chance = iif(bAliens, 90, 60)
 			# try for four landbased boni on the island
 			for i in range(4):
@@ -3423,9 +3421,9 @@ class BonusBalancer:
 	# class variables
 	# Note: The first bonus will be ignored about half the time,
 	#       not all players will have it near their starting-plot
-	resourcesToBalance   = ( 'BONUS_ALUMINUM_INGOTS', 'BONUS_OIL', 'BONUS_HORSE', 'BONUS_URANIUM', 'BONUS_IRON_ORE', 'BONUS_COPPER_ORE', )
+	resourcesToBalance   = ( 'BONUS_BAUXITE_ORE', 'BONUS_OIL', 'BONUS_HORSE', 'BONUS_URANIUM', 'BONUS_IRON_ORE', 'BONUS_COPPER_ORE', )
 	resourcesToEliminate = ('', )
-	mineralsToMove       = ( 'BONUS_COPPER_ORE', 'BONUS_IRON_ORE', 'BONUS_MITHRIL', 'BONUS_SILVER_ORE', 'BONUS_GOLD_ORE', 'BONUS_URANIUM' )
+	mineralsToMove       = ( 'BONUS_COPPER_ORE', 'BONUS_IRON_ORE', 'BONUS_SILVER_ORE', 'BONUS_GOLD_ORE', 'BONUS_URANIUM' )
 
 	def initialize(self, bBalanceOnOff=True, bMissingOnOff=True, bMineralsOnOff=True, bWideRange=False ):
 		print "[MST] ===== BonusBalancer:initialize( %r, %r, %r, %r )" % (bBalanceOnOff, bMissingOnOff, bMineralsOnOff, bWideRange)
@@ -5001,7 +4999,6 @@ class MapPrint:
 		# bonus dictionaries
 		# ------------------
 		self.__bonusDict = {
-			ebAluminum : [ "A", "Aluminum" ],
 			ebCopper   : [ "C", "Copper"   ],
 			ebIron     : [ "I", "Iron"     ],
 			ebOil      : [ "O", "Oil"      ],
@@ -6321,7 +6318,7 @@ print "[MST] ########### pre-init MapScriptTools ########### End"
 #    humans start only on coastal lands near biggest ocean or all on one continent
 # adjust for team-options in 'OccStart'
 # -------------- sooner or later
-# balance on wider scale and two tiers: (aluminum,uranium,mithril,(reagens?),oil,(coal?)) within 7-radius
+# balance on wider scale and two tiers: (uranium,oil,(coal?)) within 7-radius
 #    and other, earlier resources (copper,iron,horses,mana) within 5-radius?
 #    may have to adjust for players / map-plots ratio ?
 # better missing boni recognition? (check all terrain/features against 3 is..() -> build list, check list)
@@ -6800,7 +6797,6 @@ The Map Building Process according to Temudjin
 7.8)     normalizeGoodTerrain()
 7.9)     normalizeAddExtras()
 7.9.1)     isBonusIgnoreLatitude()*
-8 )    startHumansOnSameTile()
 
 * used by default 'CyPythonMgr().allowDefaultImpl()' in:
   addBonuses(), normalizeAddFoodBonuses(), normalizeAddExtras()
@@ -6998,9 +6994,8 @@ def normalizeAddGoodTerrain():
 	print "-- normalizeAddGoodTerrain()"
 	CyPythonMgr().allowDefaultImpl()
 
-# This function will be called by the system, after the map was generated, after the
-# starting-plots have been choosen, at the end of the normalizing process and
-# before startHumansOnSameTile() which is the last map-function so called.
+# This function will be called by the system after the starting-plots have been choosen
+# at the end of the normalizing process, and is the last map-function called externally.
 # - balance boni (depending on initialization also place missing boni and move minerals)
 # - give names and boni to special regions
 # - print plot-map and the difference-map to the call before
