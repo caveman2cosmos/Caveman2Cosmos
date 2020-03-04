@@ -739,8 +739,8 @@ If you play with "Start as Minor Civ" then this option will change the rules for
 		<Spanish>Los espías no estén disponibles, y los puntos del espionaje se convierten en cultura</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_NO_FIXED_BORDERS</Tag>
-		<English>No fixed borders</English>
+		<Tag>TXT_KEY_GAMEOPTION_FIXED_BORDERS</Tag>
+		<English>Fixed borders</English>
 		<French>Pas de frontières fixes</French>
 		<German>Keine festen Grenzen</German>
 		<Italian>Niente confini fissi</Italian>
@@ -748,8 +748,8 @@ If you play with "Start as Minor Civ" then this option will change the rules for
 		<Polish>Brak Stałych Granic</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_NO_FIXED_BORDERS_HELP</Tag>
-		<English>No fixed border mechanics, whether from civics or any other source</English>
+		<Tag>TXT_KEY_GAMEOPTION_FIXED_BORDERS_HELP</Tag>
+		<English>Fixed border mechanics</English>
 		<French>Pas de mécanisme de frontières fixes, ni provenant des doctrines, ni d'autres origines</French>
 		<German>Es können keine festen Landesgrenzen festgelegt werden, weder durch Gesellschaftsformen noch auf anderem Weg.</German>
 		<Italian>Niente confini fissi, nè dalle forme di governo nè da altra fonte</Italian>

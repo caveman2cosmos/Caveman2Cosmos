@@ -30903,7 +30903,7 @@ void CvPlayer::changeCivicHappiness(int iChange)
 //bool CvPlayer::hasFixedBorders()
 //{
 //	int iI;
-//	if (isBarbarian() || GC.getGame().isOption(GAMEOPTION_NO_FIXED_BORDERS) )
+//	if (isBarbarian() || !GC.getGame().isOption(GAMEOPTION_FIXED_BORDERS) )
 //	{
 //		return false;
 //	}
@@ -35420,12 +35420,12 @@ void CvPlayer::endDeferredPlotGroupBonusCalculation()
 
 bool CvPlayer::hasFixedBorders() const
 {
-	if (isNPC() || GC.getGame().isOption(GAMEOPTION_NO_FIXED_BORDERS) )
+	if (!isNPC() || GC.getGame().isOption(GAMEOPTION_FIXED_BORDERS) )
 	{
-		return false;
+		return (m_iFixedBordersCount > 0);
 	}
 
-	return (m_iFixedBordersCount > 0);
+	return false;
 }
 
 void CvPlayer::setFixedBordersCount(int iValue)

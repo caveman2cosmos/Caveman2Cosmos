@@ -631,7 +631,7 @@
 			<Type>GAMEOPTION_REALISTIC_SIEGE</Type>
 			<Description>TXT_KEY_GAMEOPTION_REALISTIC_SIEGE</Description>
 			<Help>TXT_KEY_GAMEOPTION_REALISTIC_SIEGE_HELP</Help>
-			<bDefault>1</bDefault>
+			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
@@ -649,9 +649,9 @@
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_NO_FIXED_BORDERS</Type>
-			<Description>TXT_KEY_GAMEOPTION_NO_FIXED_BORDERS</Description>
-			<Help>TXT_KEY_GAMEOPTION_NO_FIXED_BORDERS_HELP</Help>
+			<Type>GAMEOPTION_FIXED_BORDERS</Type>
+			<Description>TXT_KEY_GAMEOPTION_FIXED_BORDERS</Description>
+			<Help>TXT_KEY_GAMEOPTION_FIXED_BORDERS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
