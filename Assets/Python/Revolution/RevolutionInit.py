@@ -245,10 +245,10 @@ class RevolutionInit:
 
 		revComponentsText += self.sectionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_INQUISITIONS_OPTIONS",())
 		anyOption = False
-		if not GAME.isOption(GameOptionTypes.GAMEOPTION_NO_INQUISITIONS):
+		if GAME.isOption(GameOptionTypes.GAMEOPTION_INQUISITIONS):
 			revComponentsText += self.optionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_INQUISITIONS_ENABLED",())
 			anyOption = True
-		if not GAME.isOption(GameOptionTypes.GAMEOPTION_NO_INQUISITIONS) and RevDCMOpt.isOC_RESPAWN_HOLY_CITIES():
+		if GAME.isOption(GameOptionTypes.GAMEOPTION_INQUISITIONS) and RevDCMOpt.isOC_RESPAWN_HOLY_CITIES():
 			revComponentsText += self.optionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_RESPAWN_HOLY_CITIES",())
 			anyOption = True
 		if not anyOption:

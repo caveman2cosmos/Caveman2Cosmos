@@ -10138,7 +10138,7 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 /*                                                                                              */
 /* Tech Diffusion                                                                               */
 /************************************************************************************************/
-	if(!GC.getGame().isOption(GAMEOPTION_NO_TECH_DIFFUSION) && (!isHuman() || !GC.getGame().isOption(GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS)))
+	if(GC.getGame().isOption(GAMEOPTION_TECH_DIFFUSION) && (!isHuman() || !GC.getGame().isOption(GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS)))
 	{
 		double knownExp = 0.0;
 		// Tech flows better through open borders
@@ -12556,13 +12556,13 @@ void CvPlayer::changeRevIdxGoodReligionMod(float fChange)
 
 bool CvPlayer::isInquisitionConditions() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_NO_INQUISITIONS) || getStateReligion() == NO_RELIGION)
+	if (GC.getGame().isOption(GAMEOPTION_INQUISITIONS) && getStateReligion() != NO_RELIGION)
 	{
-		return false;
+		return (m_iInquisitionCount > 0);
 	}
 	else
 	{
-		return (m_iInquisitionCount > 0);
+		return false;
 	}
 }
 
@@ -12571,7 +12571,7 @@ bool CvPlayer::isInquisitionConditions() const
 //{
 //	m_bInquisitionConditions = false;
 //
-//	if (GC.getGame().isOption(GAMEOPTION_NO_INQUISITIONS) || getStateReligion() == NO_RELIGION)
+//	if (!GC.getGame().isOption(GAMEOPTION_INQUISITIONS) || getStateReligion() == NO_RELIGION)
 //	{
 //		return;
 //	}
@@ -30903,7 +30903,7 @@ void CvPlayer::changeCivicHappiness(int iChange)
 //bool CvPlayer::hasFixedBorders()
 //{
 //	int iI;
-//	if (isBarbarian() || GC.getGame().isOption(GAMEOPTION_NO_FIXED_BORDERS) )
+//	if (isBarbarian() || !GC.getGame().isOption(GAMEOPTION_FIXED_BORDERS) )
 //	{
 //		return false;
 //	}
@@ -35420,12 +35420,12 @@ void CvPlayer::endDeferredPlotGroupBonusCalculation()
 
 bool CvPlayer::hasFixedBorders() const
 {
-	if (isNPC() || GC.getGame().isOption(GAMEOPTION_NO_FIXED_BORDERS) )
+	if (!isNPC() && GC.getGame().isOption(GAMEOPTION_FIXED_BORDERS) )
 	{
-		return false;
+		return (m_iFixedBordersCount > 0);
 	}
 
-	return (m_iFixedBordersCount > 0);
+	return false;
 }
 
 void CvPlayer::setFixedBordersCount(int iValue)

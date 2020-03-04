@@ -81,7 +81,7 @@ class RevDCMOptionsTab(BugOptionsTab.BugOptionsTab):
 				screen.attachHSeparator(right, right + "SepInq2")
 
 			#Religion options
-			bInquisition = not GAME.isOption(GameOptionTypes.GAMEOPTION_NO_INQUISITIONS)
+			bInquisition = GAME.isOption(GameOptionTypes.GAMEOPTION_INQUISITIONS)
 			bLimitedReli = GAME.isOption(GameOptionTypes.GAMEOPTION_LIMITED_RELIGIONS)
 			if bInquisition or bLimitedReli:
 				self.addLabel(screen, left, "RevDCM__Religion", TRNSLTR.getText("TXT_KEY_REVDCMTAB_RELIGION_OPTIONS", ()))

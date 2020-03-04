@@ -1848,11 +1848,6 @@ DenialTypes CvTeamAI::AI_techTrade(TechTypes eTech, TeamTypes eTeam) const
 	FAssertMsg(eTeam != getID(), "shouldn't call this function on ourselves");
 
 
-/************************************************************************************************/
-/* Afforess                      Start         01/14/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	TechTypes eCurrentResearch = GET_PLAYER(getLeaderID()).getCurrentResearch();
 	TeamTypes eStrongestTeam = (TeamTypes)getID();
 	for (iI = 0; iI < MAX_PLAYERS; iI++)
@@ -1876,7 +1871,7 @@ DenialTypes CvTeamAI::AI_techTrade(TechTypes eTech, TeamTypes eTeam) const
 		{
 			if (!kTeam.isHuman())
 			{
-				if ((eTech == eCurrentResearch) || (GC.getGame().isOption(GAMEOPTION_NO_TECH_DIFFUSION)))
+				if ((eTech == eCurrentResearch) || (!GC.getGame().isOption(GAMEOPTION_TECH_DIFFUSION)))
 				{
 					if (2 * kTeam.getResearchProgress(eTech) > kTeam.getResearchCost(eTech))
 					{
@@ -1887,9 +1882,6 @@ DenialTypes CvTeamAI::AI_techTrade(TechTypes eTech, TeamTypes eTeam) const
 		}
 	}
 
-/************************************************************************************************/
-/* Afforess                         END                                                            */
-/************************************************************************************************/
 
 	if (isHuman())
 	{
