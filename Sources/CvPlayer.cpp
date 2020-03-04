@@ -10138,7 +10138,7 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 /*                                                                                              */
 /* Tech Diffusion                                                                               */
 /************************************************************************************************/
-	if(!GC.getGame().isOption(GAMEOPTION_NO_TECH_DIFFUSION) && (!isHuman() || !GC.getGame().isOption(GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS)))
+	if(GC.getGame().isOption(GAMEOPTION_TECH_DIFFUSION) && (!isHuman() || !GC.getGame().isOption(GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS)))
 	{
 		double knownExp = 0.0;
 		// Tech flows better through open borders

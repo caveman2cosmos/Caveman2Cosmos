@@ -877,22 +877,12 @@ WARNING: This option makes AI less challenging. Revolution mod hasn't been prope
 		<Polish>Gracze nie mogą handlować technologiami, których sami nie wynaleźli.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_NO_TECH_DIFFUSION</Tag>
-		<English>No TechDiffusion</English>
-		<French>Pas de Diffusion de Technologies</French>
-		<German>Keine Technologieverbreitung</German>
-		<Italian>Nessuna diffusione di tecnologie</Italian>
-		<Spanish>Sin difusión tecnológica</Spanish>
-		<Polish>Brak Dyfuzji Technologii</Polish>
+		<Tag>TXT_KEY_GAMEOPTION_TECH_DIFFUSION</Tag>
+		<English>Tech Diffusion</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_NO_TECH_DIFFUSION_HELP</Tag>
-		<English>Disables TechDiffusion: tech knowledge will not slowly diffuses to civs that are behind.</English>
-		<French>Désactive la Diffusion des Techs: La Connaissance des Technologies ne sera pas diffusée aux autres civilisations.</French>
-		<German>Verhindert die langsame Verbreitung von technologischem Wissen an Zivilisationen, die noch nicht so weit entwickelt sind.</German>
-		<Italian>Disattiva la diffusione delle tecnologie: la tecnologia non si diffonderà alle civiltà più arretrate.</Italian>
-		<Spanish>Se desactiva el componente TechDiffusion: el conocimiento no se difundirá lentamente hacia las civilizaciones más atrasadas.</Spanish>
-		<Polish>Wyłącza dyfuzję technologii: poznane technologie nie będą powoli dyfuzjowały do cywilizacji które są z tyłu.</Polish>
+		<Tag>TXT_KEY_GAMEOPTION_TECH_DIFFUSION_HELP</Tag>
+		<English>Tech Diffusion: tech knowledge will slowly diffuse to civs that are behind.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS</Tag>

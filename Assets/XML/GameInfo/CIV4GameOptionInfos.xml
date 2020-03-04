@@ -428,9 +428,9 @@
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_NO_TECH_DIFFUSION</Type>
-			<Description>TXT_KEY_GAMEOPTION_NO_TECH_DIFFUSION</Description>
-			<Help>TXT_KEY_GAMEOPTION_NO_TECH_DIFFUSION_HELP</Help>
+			<Type>GAMEOPTION_TECH_DIFFUSION</Type>
+			<Description>TXT_KEY_GAMEOPTION_TECH_DIFFUSION</Description>
+			<Help>TXT_KEY_GAMEOPTION_TECH_DIFFUSION_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>

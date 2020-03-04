@@ -102,7 +102,7 @@ class CvMainInterface:
 		self.GO_NO_ESPIONAGE		= GAME.isOption(GameOptionTypes.GAMEOPTION_NO_ESPIONAGE)
 		self.GO_SIZE_MATTERS		= GAME.isOption(GameOptionTypes.GAMEOPTION_SIZE_MATTERS)
 		self.GO_WIN_FOR_LOSING		= GAME.isOption(GameOptionTypes.GAMEOPTION_WIN_FOR_LOSING)
-		self.GO_NO_TECH_DIFFUSION	= GAME.isOption(GameOptionTypes.GAMEOPTION_NO_TECH_DIFFUSION)
+		self.GO_TECH_DIFFUSION   	= GAME.isOption(GameOptionTypes.GAMEOPTION_TECH_DIFFUSION)
 		self.GO_ONE_CITY_CHALLENGE	= GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE)
 		# First pass initialization.
 		if self.bInitialize:
@@ -2161,7 +2161,7 @@ class CvMainInterface:
 					iResearchRate = CyPlayer.calculateResearchRate(iCurrentResearch)
 					iResearchMod = CyPlayer.calculateResearchModifier(iCurrentResearch)
 					if not bCityScreen:
-						bTDDisplayOption = self.GO_WIN_FOR_LOSING or not self.GO_NO_TECH_DIFFUSION
+						bTDDisplayOption = self.GO_WIN_FOR_LOSING or self.GO_TECH_DIFFUSION
 				iconCommerceList = self.iconCommerceList
 				dY = 0
 				for i in xrange(iRange):
