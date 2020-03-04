@@ -3340,7 +3340,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_COTTAGE</Tag>
 		<English>Build [LINK=IMPROVEMENT_COTTAGE]Cottage[\LINK]</English>
-		<French>Construire une [LINK=IMPROVEMENT_COTTAGE]Cottage[\LINK]</French>
+		<French>Construire une [LINK=IMPROVEMENT_COTTAGE]Chaumière[\LINK]</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Errichtung eines [LINK=IMPROVEMENT_COTTAGE]Gehöfts[\LINK][COLOR_REVERT]</German>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_COTTAGE]Villetta[\LINK]</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_COTTAGE]Villa[\LINK]</Spanish>
@@ -3349,7 +3349,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_DESERT_CAMP</Tag>
 		<English>Build [LINK=IMPROVEMENT_DESERT_CAMP]Desert Camp[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_DESERT_CAMP]Camp de Desert[\LINK]</French>
+		<French>Construire un [LINK=IMPROVEMENT_DESERT_CAMP]Camp de Désert[\LINK]</French>
 		<German>Errichte [LINK=IMPROVEMENT_DESERT_CAMP]Wuste feldlager[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_DESERT_CAMP]campo nella deserto[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_DESERT_CAMP]Campamento de desierto[\LINK]</Spanish>
@@ -3358,7 +3358,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_DESERT_CAMP_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_DESERT_CAMP]Desert Camp[\LINK] (Consumed)</English>
-		<French>Construire un [LINK=IMPROVEMENT_DESERT_CAMP]Camp de Desert[\LINK] (Consommé)</French>
+		<French>Construire un [LINK=IMPROVEMENT_DESERT_CAMP]Camp de Désert[\LINK] (Consommé)</French>
 		<German>Errichte [LINK=IMPROVEMENT_DESERT_CAMP]Wuste feldlager[\LINK] (Consumed)</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_DESERT_CAMP]campo nella deserto[\LINK] (Consumed)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_DESERT_CAMP]Campamento de desierto[\LINK] (Consumed)</Spanish>
@@ -3682,7 +3682,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_LIGHTHOUSE_CORAL</Tag>
 		<English>Build [LINK=IMPROVEMENT_LIGHTHOUSE_CORAL]Lighthouse[\LINK] (Coral)</English>
-		<French>Construire un [LINK=IMPROVEMENT_LIGHTHOUSE]Phare[\LINK] (Coral)</French>
+		<French>Construire un [LINK=IMPROVEMENT_LIGHTHOUSE]Phare[\LINK] (Corail)</French>
 		<German>Bauen ein [LINK=IMPROVEMENT_LIGHTHOUSE]Leuchtturm[\LINK] (Coral)</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_LIGHTHOUSE]Faro[\LINK] (Coral)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_LIGHTHOUSE]Faro[\LINK] (Coral)</Spanish>
@@ -3691,7 +3691,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_LIGHTHOUSE_REEF</Tag>
 		<English>Build [LINK=IMPROVEMENT_LIGHTHOUSE_REEF]Lighthouse[\LINK] (Reef)</English>
-		<French>Construire un [LINK=IMPROVEMENT_LIGHTHOUSE]Phare[\LINK] (Reef)</French>
+		<French>Construire un [LINK=IMPROVEMENT_LIGHTHOUSE]Phare[\LINK] (Récif)</French>
 		<German>Bauen ein [LINK=IMPROVEMENT_LIGHTHOUSE]Leuchtturm[\LINK] (Reef)</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_LIGHTHOUSE]Faro[\LINK] (Reef)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_LIGHTHOUSE]Faro[\LINK] (Reef)</Spanish>
@@ -3873,7 +3873,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PEAT_CUTTER</Tag>
 		<English>Build [LINK=IMPROVEMENT_PEAT_CUTTER]Peat Cutter[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_PEAT_CUTTER]récolteur de Tourbe[\LINK]</French>
+		<French>Construire un [LINK=IMPROVEMENT_PEAT_CUTTER]Récolteur de Tourbe[\LINK]</French>
 		<Spanish>Construir un [LINK=IMPROVEMENT_PEAT_CUTTER]Recolector de turba[\LINK]</Spanish>
 		<Polish>Zbudu [LINK=IMPROVEMENT_PEAT_CUTTER]Obóz Zbieraczy Torfu[\LINK]</Polish>
 	</TEXT>
@@ -12959,7 +12959,7 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_POS_GOLD_PER_TURN_TD_WFL</Tag>
 		<English>[SPACE][COLOR_POSITIVE_TEXT](%D1/Turn %D2 TD/WFL)[COLOR_REVERT]</English>
-		<French>[SPACE][COLOR_POSITIVE_TEXT](%D1/tour %D2 TD/WFL)[COLOR_REVERT]</French>
+		<French>[SPACE][COLOR_POSITIVE_TEXT](%D1/tour %D2 Diff.Tech)[COLOR_REVERT]</French>
 		<German>[SPACE][COLOR_POSITIVE_TEXT](%D1/Runde %D2 TD/WFL)[COLOR_REVERT]</German>
 		<Italian>[SPACE][COLOR_POSITIVE_TEXT](%D1/Turno %D2 TD/WFL)[COLOR_REVERT]</Italian>
 		<Spanish>[SPACE][COLOR_POSITIVE_TEXT](%D1/turno %D2 TD/WFL)[COLOR_REVERT]</Spanish>
@@ -26731,12 +26731,12 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_VACTRAIN</Tag>
 		<English>Build [LINK=ROUTE_VACTRAIN]Vactrain[\LINK]</English>
-		<French>[LINK=ROUTE_VACTRAIN]Construire Un Train sous vide[\LINK]</French>
+		<French>Construire une [LINK=ROUTE_VACTRAIN]Ligne de Train sous vide[\LINK]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_GRAVITY_TRAIN</Tag>
 		<English>Build [LINK=ROUTE_GRAVITY_TRAIN]Gravity Train[\LINK]</English>
-		<French>Construire [LINK=ROUTE_GRAVITY_TRAIN]Train à Gravité[\LINK]</French>
+		<French>Construire une [LINK=ROUTE_GRAVITY_TRAIN]Ligne de Train à Gravité[\LINK]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROUTE_VACTRAIN</Tag>
@@ -26746,7 +26746,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	<TEXT>
 		<Tag>TXT_KEY_ROUTE_GRAVITY_TRAIN</Tag>
 		<English>Gravity Train</English>
-		<French>Train à Gravité</French>
+		<French>Ligne de Train à Gravité</French>
 	</TEXT>
 	<!-- Vanilla improvemenents - to match spelling -->
 	<TEXT>

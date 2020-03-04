@@ -650,6 +650,9 @@
 		<English>When enabled: New civilizations may emerge from barbarian cities as minor civs.
 
 If you play with "Start as Minor Civ" then this option will change the rules for becoming a major civ. Achievements and randomness thereof decides when you become a major civ.</English>
+		<French>Lorsque activé : de nouvelles civilizations peuvent émerger des villes barbares, en tant que Civ mineures.
+
+Si vous jouez avec "Civs Mineures au départ", cette option changera les règles pour devenir une civilisation majeure. Les réalisations et leur caractère aléatoire décident quand vous devenez une civilisation majeure.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_BARBARIANS</Tag>
@@ -834,6 +837,7 @@ If you play with "Start as Minor Civ" then this option will change the rules for
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_REVOLUTION</Tag>
 		<English>Revolutions</English>
+		<French>Révolutions</French>
 		<German>Revolutionen</German>
 		<Italian>Rivoluzioni</Italian>
 		<Spanish>Revoluciones</Spanish>
@@ -844,7 +848,9 @@ If you play with "Start as Minor Civ" then this option will change the rules for
 		<English>Enables the Revolution mod component: New rebel civs will attempt to breakaway from an empire if their needs are not being met.
 
 WARNING: This option makes AI less challenging. Revolution mod hasn't been properly maintained and updated in C2C.</English>
-		<French>Désactive le composant de mod de révolution: les nouveaux civs rebelles ne peuvent pas se révolter et devenir indépendante d'un empire si leurs besoins ne sont pas satisfaits.</French>
+		<French>Active le composant de mod de révolution: Des rebelles peuvent tenter de se révolter et devenir indépendants d'un empire si leurs besoins ne sont pas satisfaits.
+		
+AVERTISSEMENT: cette option rend l'IA moins difficile. Le mod Revolution n'a pas été correctement entretenu et mis à jour dans C2C.</French>
 		<German>Deaktiviert die Revolution-Mod: Es wird keine Rebellionen und Abspaltungsbestrebungen geben, wenn die Bedürfnisse der Bevölkerung nicht beachtet werden.</German>
 		<Italian>Disabilita il MOD "Revolution": nuove civiltà ribelli no possono tentare la secessione da un impero se i loro bisogni non vengono soddisfatti.</Italian>
 		<Spanish>Se desactiva el componente Revolution: no habrá civilizaciones rebeldes que intenten independizarse de un imperio si sus necesidades no son satisfechas.</Spanish>
@@ -878,12 +884,12 @@ WARNING: This option makes AI less challenging. Revolution mod hasn't been prope
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS</Tag>
 		<English>No Tech Handicaps for Humans</English>
-		<French>Pas de Tech Diff. pour les Joueurs</French>
+		<French>Pas de Diff. Tech pour les Joueurs</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS_HELP</Tag>
 		<English>Keeps Win For Losing and Tech Diffusion benefits from being delivered to Human players while continuing to enable them for AI players.</English>
-		<French>Les avantages de Tech Diffusion ne sont pas appliqués aux joueurs humains, tout en continuant à être actifs pour les joueurs IA.</French>
+		<French>Les avantages de la Diffusion des Technologies ne sont pas appliqués aux joueurs humains, tout en continuant à être actifs pour les joueurs IA.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_TECH_TRADING</Tag>
@@ -931,6 +937,11 @@ WARNING: This option makes AI less challenging. Revolution mod hasn't been prope
 Not reccomended at the moment as there is a known bug it creates for pathing and some players may find it terribly frustrating with the current forts.
 
 The author of this option also believes that it does not represent a fair combat scenario in many cases where you'd prefer to take the hit they threaten and would like to eventually make a form of ZoC that instead generates a free Ranged Assault on the offending unit rather than keeping it from moving at all (as that's the concept behind the effect anyhow.)</English>
+		<French>La zone de contrôle (ZoC) empêche les unités ennemies de marcher autour des forts habités ou des villes avec des douves, l'effet a une portée d'une case. Une unité qui se trouve à l'intérieur d'un ZoC ennemi ne peut pas se déplacer vers une autre parcelle dans le ZoC, mais doit quitter le ZoC avant de pouvoir atteindre d'autres parcelles ZoC.
+
+Non recommandé pour le moment car il existe un bug connu qu'il crée pour calcul des chemins et certains joueurs peuvent le trouver terriblement frustrant avec les forts actuels.
+
+L'auteur de cette option estime également que cela ne représente pas un scénario de combat équitable dans de nombreux cas où vous préféreriez prendre le coup qu'ils menacent et souhaitez éventuellement créer une forme de ZoC qui génère à la place un assaut à distance gratuit contre le délinquant. l'unité plutôt que de l'empêcher de bouger (comme c'est le concept derrière l'effet de toute façon.)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ONE_CITY_CHALLENGE</Tag>
@@ -1246,7 +1257,7 @@ The author of this option also believes that it does not represent a fair combat
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_START_AS_MINORS</Tag>
 		<English>Start as minor civs</English>
-		<French>Civs barbares au départ</French>
+		<French>Civs mineures au départ</French>
 		<German>Start als unbedeutende Zivilisation</German>
 		<Italian>Inizi come civs secondari</Italian>
 		<Spanish>Empezar como civilizaciones menores</Spanish>

@@ -255,7 +255,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STRINGWORKS</Tag>
 		<English>Stringworks</English>
-		<French>Stringworks</French>
+		<French>Atelier de cordes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STRINGWORKS_STRATEGY</Tag>
@@ -264,12 +264,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STRINGWORKS_PEDIA</Tag>
 		<English>This factory operates with strings.</English>
-		<French>This factory operates with strings.</French>
+		<French>Cette usine fonctionne avec des cordes.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ADVANCED_EARTHWORKS</Tag>
 		<English>Modern Earthworks</English>
-		<French>Modern Earthworks</French>
+		<French>Terrassements modernes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ADVANCED_EARTHWORKS_STRATEGY</Tag>
@@ -278,7 +278,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ADVANCED_EARTHWORKS_PEDIA</Tag>
 		<English>This large, high tech earthworks vertically integrates several industries, thereby producing several important resources</English>
-		<French>This large, high tech earthworks vertically integrates several industries, thereby producing several important resources</French>
+		<French>Ce grand terrassement de haute technologie intègre verticalement plusieurs industries, produisant ainsi plusieurs ressources importantes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RARE_EARTH_MINERAL_MINE</Tag>
@@ -6387,7 +6387,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EURO_ELT_PEDIA</Tag>
 		<English>The European Extremely Large Telescope (E-ELT) is an astronomical observatory and the worlds largest optical/near-infrared extremely large telescope now under construction. Part of the European Southern Observatory (ESO) it is located on top of Cerro Armazones in the Atacama Desert of northern Chile. The design comprises a reflecting telescope with a 39.3-metre-diameter segmented primary mirror, a 4.2-metre-diameter secondary mirror, and will be supported by adaptive optics, 6 laser guide star units and multiple large science instruments. The observatory aims to gather 13 times more light than the largest optical telescopes existing today, able to correct for atmospheric distortions and provide images 16 times sharper than those from the Hubble Space Telescope.[PARAGRAPH:2]The E-ELT is intented to vastly advance astrophysical knowledge by enabling detailed studies of planets around other stars, the first galaxies in the Universe, super-massive black holes, the nature of the Universe's dark sector and to detect water and organic molecules in protoplanetary disks around other stars. The facility is expected to take 11 years to construct.[PARAGRAPH:2]On 11 June 2012, the ESO Council approved the E-ELT programme's plans to begin civil works at the telescope site, with construction of the telescope itself pending final agreement with governments of some member states. Construction work on the E-ELT site started in June 2014. In December 2014 ESO had secured over 90% funding and authorized to start construction of the telescope, which will cost around one billion euros for the first construction phase. First light is planned for 2024.[PARAGRAPH:2]Source: Wikipedia</English>
-		<French>The European Extremely Large Telescope (E-ELT) is an astronomical observatory and the worlds largest optical/near-infrared extremely large telescope now under construction. Part of the European Southern Observatory (ESO) it is located on top of Cerro Armazones in the Atacama Desert of northern Chile. The design comprises a reflecting telescope with a 39.3-metre-diameter segmented primary mirror, a 4.2-metre-diameter secondary mirror, and will be supported by adaptive optics, 6 laser guide star units and multiple large science instruments. The observatory aims to gather 13 times more light than the largest optical telescopes existing today, able to correct for atmospheric distortions and provide images 16 times sharper than those from the Hubble Space Telescope.[PARAGRAPH:2]The E-ELT is intented to vastly advance astrophysical knowledge by enabling detailed studies of planets around other stars, the first galaxies in the Universe, super-massive black holes, the nature of the Universe's dark sector and to detect water and organic molecules in protoplanetary disks around other stars. The facility is expected to take 11 years to construct.[PARAGRAPH:2]On 11 June 2012, the ESO Council approved the E-ELT programme's plans to begin civil works at the telescope site, with construction of the telescope itself pending final agreement with governments of some member states. Construction work on the E-ELT site started in June 2014. In December 2014 ESO had secured over 90% funding and authorized to start construction of the telescope, which will cost around one billion euros for the first construction phase. First light is planned for 2024.[PARAGRAPH:2]Source: Wikipedia</French>
+		<French>The European Extremely Large Telescope (E-ELT) is an astronomical observatory and the worlds largest optical/near-infrared extremely large telescope now under construction. Part of the European Southern Observatoire (ESO) it is located on top of Cerro Armazones in the Atacama Desert of northern Chile. The design comprises a reflecting telescope with a 39.3-metre-diameter segmented primary mirror, a 4.2-metre-diameter secondary mirror, and will be supported by adaptive optics, 6 laser guide star units and multiple large science instruments. The observatory aims to gather 13 times more light than the largest optical telescopes existing today, able to correct for atmospheric distortions and provide images 16 times sharper than those from the Hubble Space Telescope.[PARAGRAPH:2]The E-ELT is intented to vastly advance astrophysical knowledge by enabling detailed studies of planets around other stars, the first galaxies in the Universe, super-massive black holes, the nature of the Universe's dark sector and to detect water and organic molecules in protoplanetary disks around other stars. The facility is expected to take 11 years to construct.[PARAGRAPH:2]On 11 June 2012, the ESO Council approved the E-ELT programme's plans to begin civil works at the telescope site, with construction of the telescope itself pending final agreement with governments of some member states. Construction work on the E-ELT site started in June 2014. In December 2014 ESO had secured over 90% funding and authorized to start construction of the telescope, which will cost around one billion euros for the first construction phase. First light is planned for 2024.[PARAGRAPH:2]Source: Wikipedia</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EUROPA_PROBE</Tag>
@@ -6457,7 +6457,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SDSS_PEDIA</Tag>
 		<English>The Sloan Digital Sky Survey or SDSS is a major multi-spectral imaging and spectroscopic redshift survey using a dedicated 2.5-m wide-angle optical telescope at Apache Point Observatory in New Mexico, United States. The project was named after the Alfred P. Sloan Foundation, which contributed significant funding.[PARAGRAPH:2]Source: Wikipedia</English>
-		<French>The Sloan Digital Sky Survey or SDSS is a major multi-spectral imaging and spectroscopic redshift survey using a dedicated 2.5-m wide-angle optical telescope at Apache Point Observatory in New Mexico, United States. The project was named after the Alfred P. Sloan Foundation, which contributed significant funding.[PARAGRAPH:2]Source: Wikipedia</French>
+		<French>The Sloan Digital Sky Survey or SDSS is a major multi-spectral imaging and spectroscopic redshift survey using a dedicated 2.5-m wide-angle optical telescope at Apache Point Observatoire in New Mexico, United States. The project was named after the Alfred P. Sloan Foundation, which contributed significant funding.[PARAGRAPH:2]Source: Wikipedia</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JAMESWEBB_TELESCOPE</Tag>
@@ -6532,7 +6532,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEUTRINO_OBSERVATORY</Tag>
 		<English>Neutrino Observatory</English>
-		<French>Neutrino Observatory</French>
+		<French>Neutrino Observatoire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEUTRINO_OBSERVATORY_STRATEGY</Tag>
@@ -6569,7 +6569,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DARK_MATTER_DETECTOR_PEDIA</Tag>
 		<English>The Laser Interferometer Gravitational-Wave Observatory (LIGO) is a large-scale physics experiment aiming to directly detect gravitational waves. Cofounded in 1992 by Kip Thorne and Ronald Drever of Caltech and Rainer Weiss of MIT, LIGO is a joint project between scientists at MIT, Caltech, and many other colleges and universities. Scientists involved in the project and the analysis of the data for gravitational-wave astronomy are organised by the LIGO Scientific Collaboration which includes more than 900 scientists worldwide.</English>
-		<French>The Laser Interferometer Gravitational-Wave Observatory (LIGO) is a large-scale physics experiment aiming to directly detect gravitational waves. Cofounded in 1992 by Kip Thorne and Ronald Drever of Caltech and Rainer Weiss of MIT, LIGO is a joint project between scientists at MIT, Caltech, and many other colleges and universities. Scientists involved in the project and the analysis of the data for gravitational-wave astronomy are organised by the LIGO Scientific Collaboration which includes more than 900 scientists worldwide.</French>
+		<French>The Laser Interferometer Gravitational-Wave Observatoire (LIGO) is a large-scale physics experiment aiming to directly detect gravitational waves. Cofounded in 1992 by Kip Thorne and Ronald Drever of Caltech and Rainer Weiss of MIT, LIGO is a joint project between scientists at MIT, Caltech, and many other colleges and universities. Scientists involved in the project and the analysis of the data for gravitational-wave astronomy are organised by the LIGO Scientific Collaboration which includes more than 900 scientists worldwide.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GRAVITY_WAVE_DETECTOR</Tag>
@@ -6583,7 +6583,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GRAVITY_WAVE_DETECTOR_PEDIA</Tag>
 		<English>The Laser Interferometer Gravitational-Wave Observatory (LIGO) is a large-scale physics experiment aiming to directly detect gravitational waves. Cofounded in 1992 by Kip Thorne and Ronald Drever of Caltech and Rainer Weiss of MIT, LIGO is a joint project between scientists at MIT, Caltech, and many other colleges and universities. Scientists involved in the project and the analysis of the data for gravitational-wave astronomy are organised by the LIGO Scientific Collaboration which includes more than 900 scientists worldwide.</English>
-		<French>The Laser Interferometer Gravitational-Wave Observatory (LIGO) is a large-scale physics experiment aiming to directly detect gravitational waves. Cofounded in 1992 by Kip Thorne and Ronald Drever of Caltech and Rainer Weiss of MIT, LIGO is a joint project between scientists at MIT, Caltech, and many other colleges and universities. Scientists involved in the project and the analysis of the data for gravitational-wave astronomy are organised by the LIGO Scientific Collaboration which includes more than 900 scientists worldwide.</French>
+		<French>The Laser Interferometer Gravitational-Wave Observatoire (LIGO) is a large-scale physics experiment aiming to directly detect gravitational waves. Cofounded in 1992 by Kip Thorne and Ronald Drever of Caltech and Rainer Weiss of MIT, LIGO is a joint project between scientists at MIT, Caltech, and many other colleges and universities. Scientists involved in the project and the analysis of the data for gravitational-wave astronomy are organised by the LIGO Scientific Collaboration which includes more than 900 scientists worldwide.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BREAKTHROUGH_STARSHOT</Tag>
@@ -6946,12 +6946,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEUROIMPLANT_EXPORTER_PEDIA</Tag>
-		<English/>
-</English>
-		<French>TXT_KEY_BUILDING_NEUROIMPLANT_EXPORTER_PEDIA</Tag>
-		<English/>
-</French>XT_KEY_BUILDING_NEUROIMPLANT_EXPORTER_PEDIA</Tag>
-		<English/>
+		<English>TBD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEUROIMPLANT_EXPORTER_EFFECT</Tag>
@@ -7264,7 +7259,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_STATION</Tag>
 		<English>Cislunar Colony</English>
-		<French>Cislunar Colony</French>
+		<French>Colony Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_STATION_STRATEGY</Tag>
@@ -7273,12 +7268,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_STATION_PEDIA</Tag>
 		<English>Lagrange point colonization is the colonization of the five equilibrium points in the orbit of a planet or its primary moon, called Lagrangian points. The most obvious such points for colonization are those in the Earth-Moon and in the Sun-Earth systems. Although it would generally take days or even weeks to reach these latter with current technology, it would be possible to generate energy from sunlight at them nearly continuously since they would, due to their considerable distance from Earth, be shaded from the Sun only seldom and then only shortly. (Source: Wikipedia)[PARAGRAPH:2]In C2C, the Cislunar Space Station is your first quasi-autonomous off-planet habitat.</English>
-		<French>Lagrange point colonization is the colonization of the five equilibrium points in the orbit of a planet or its primary moon, called Lagrangian points. The most obvious such points for colonization are those in the Earth-Moon and in the Sun-Earth systems. Although it would generally take days or even weeks to reach these latter with current technology, it would be possible to generate energy from sunlight at them nearly continuously since they would, due to their considerable distance from Earth, be shaded from the Sun only seldom and then only shortly. (Source: Wikipedia)[PARAGRAPH:2]In C2C, the Cislunar Space Station is your first quasi-autonomous off-planet habitat.</French>
+		<French>Lagrange point colonization is the colonization of the five equilibrium points in the orbit of a planet or its primary moon, called Lagrangian points. The most obvious such points for colonization are those in the Earth-Moon and in the Sun-Earth systems. Although it would generally take days or even weeks to reach these latter with current technology, it would be possible to generate energy from sunlight at them nearly continuously since they would, due to their considerable distance from Earth, be shaded from the Sun only seldom and then only shortly. (Source: Wikipedia)[PARAGRAPH:2]In C2C, the Cislunaire Space Station is your first quasi-autonomous off-planet habitat.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_STORM_SHELTER</Tag>
 		<English>Cislunar Solar Monitor</English>
-		<French>Cislunar Solar Monitor</French>
+		<French>Solar Monitor Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_STORM_SHELTER_STRATEGY</Tag>
@@ -7292,7 +7287,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_TELESCOPE</Tag>
 		<English>Cislunar Telescope</English>
-		<French>Cislunar Telescope</French>
+		<French>Telescope Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_TELESCOPE_STRATEGY</Tag>
@@ -7306,7 +7301,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_AGRICULTURAL_LAB</Tag>
 		<English>Cislunar Agricultural Lab</English>
-		<French>Cislunar Agricultural Lab</French>
+		<French>Agricultural Lab Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_AGRICULTURAL_LAB_STRATEGY</Tag>
@@ -7320,7 +7315,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_MATERIALS_LAB</Tag>
 		<English>Cislunar Materials Lab</English>
-		<French>Cislunar Materials Lab</French>
+		<French>Materials Lab Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_MATERIALS_LAB_STRATEGY</Tag>
@@ -7334,7 +7329,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_SATELLITE_FACTORY</Tag>
 		<English>Cislunar Satellite Factory</English>
-		<French>Cislunar Satellite Factory</French>
+		<French>Satellite Factory Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_SATELLITE_FACTORY_STRATEGY</Tag>
@@ -7348,7 +7343,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_SUPPLY_BASE</Tag>
 		<English>Cislunar Resupply</English>
-		<French>Cislunar Resupply</French>
+		<French>Resupply Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_SUPPLY_BASE_STRATEGY</Tag>
@@ -7357,12 +7352,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_SUPPLY_BASE_PEDIA</Tag>
 		<English>A space gun, sometimes called a Verne gun because of its appearance in From the Earth to the Moon by Jules Verne, is a method of launching an object into space using a large gun- or cannonlike structure. Space guns could thus potentially provide a method of non-rocket spacelaunch. It has been conjectured that space guns could place satellites into Earth's orbit (although after-launch propulsion of the satellite would be necessary to achieve a stable orbit), and could also launch spacecraft beyond Earth's gravitational pull and into other parts of the Solar System by exceeding Earth's escape velocity of about 11.2 km/s or 40,320 km/h (25,050 mph). However, these speeds are too far into the hypersonic range for most practical propulsion systems and also would cause most objects to burn up due to aerodynamic heating or be torn apart by aerodynamic drag. Therefore, a more likely future use of space guns would be to launch objects into near Earth orbit, from where attached rockets could be fired or the objects could be 'collected' by maneuverable orbiting satellites.[PARAGRAPH:2]In Project HARP, a 1960s joint United States and Canada defence project, a U.S. Navy 16 in (410 mm) 100 caliber gun was used to fire a 180 kg (400 lb) projectile at 3600 m/s or 12,960 km/h (8,050 mph), reaching an apogee of 180 km (110 mi), hence performing a suborbital spaceflight. However, a space gun has never been successfully used to launch an object into orbit or out of Earth's gravitational pull.[PARAGRAPH:2]In C2C, the Cislunar Supply Base is a coilgun launching system for supplying your Cislunar Space Station. This reduces costs, improves quality of life on the station, and creates commerce between the station and the ground.</English>
-		<French>A space gun, sometimes called a Verne gun because of its appearance in From the Earth to the Moon by Jules Verne, is a method of launching an object into space using a large gun- or cannonlike structure. Space guns could thus potentially provide a method of non-rocket spacelaunch. It has been conjectured that space guns could place satellites into Earth's orbit (although after-launch propulsion of the satellite would be necessary to achieve a stable orbit), and could also launch spacecraft beyond Earth's gravitational pull and into other parts of the Solar System by exceeding Earth's escape velocity of about 11.2 km/s or 40,320 km/h (25,050 mph). However, these speeds are too far into the hypersonic range for most practical propulsion systems and also would cause most objects to burn up due to aerodynamic heating or be torn apart by aerodynamic drag. Therefore, a more likely future use of space guns would be to launch objects into near Earth orbit, from where attached rockets could be fired or the objects could be 'collected' by maneuverable orbiting satellites.[PARAGRAPH:2]In Project HARP, a 1960s joint United States and Canada defence project, a U.S. Navy 16 in (410 mm) 100 caliber gun was used to fire a 180 kg (400 lb) projectile at 3600 m/s or 12,960 km/h (8,050 mph), reaching an apogee of 180 km (110 mi), hence performing a suborbital spaceflight. However, a space gun has never been successfully used to launch an object into orbit or out of Earth's gravitational pull.[PARAGRAPH:2]In C2C, the Cislunar Supply Base is a coilgun launching system for supplying your Cislunar Space Station. This reduces costs, improves quality of life on the station, and creates commerce between the station and the ground.</French>
+		<French>A space gun, sometimes called a Verne gun because of its appearance in From the Earth to the Moon by Jules Verne, is a method of launching an object into space using a large gun- or cannonlike structure. Space guns could thus potentially provide a method of non-rocket spacelaunch. It has been conjectured that space guns could place satellites into Earth's orbit (although after-launch propulsion of the satellite would be necessary to achieve a stable orbit), and could also launch spacecraft beyond Earth's gravitational pull and into other parts of the Solar System by exceeding Earth's escape velocity of about 11.2 km/s or 40,320 km/h (25,050 mph). However, these speeds are too far into the hypersonic range for most practical propulsion systems and also would cause most objects to burn up due to aerodynamic heating or be torn apart by aerodynamic drag. Therefore, a more likely future use of space guns would be to launch objects into near Earth orbit, from where attached rockets could be fired or the objects could be 'collected' by maneuverable orbiting satellites.[PARAGRAPH:2]In Project HARP, a 1960s joint United States and Canada defence project, a U.S. Navy 16 in (410 mm) 100 caliber gun was used to fire a 180 kg (400 lb) projectile at 3600 m/s or 12,960 km/h (8,050 mph), reaching an apogee of 180 km (110 mi), hence performing a suborbital spaceflight. However, a space gun has never been successfully used to launch an object into orbit or out of Earth's gravitational pull.[PARAGRAPH:2]In C2C, the Cislunaire Supply Base is a coilgun launching system for supplying your Cislunaire Space Station. This reduces costs, improves quality of life on the station, and creates commerce between the station and the ground.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_EMP</Tag>
 		<English>Cislunar EMP Power Supply</English>
-		<French>Cislunar EMP Power Supply</French>
+		<French>EMP Power Supply Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_EMP_STRATEGY</Tag>
@@ -7371,12 +7366,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_EMP_PEDIA</Tag>
 		<English>A network of powerful EMP transmitters on Earth's mountain peaks are used to beam power to your Cislunar stations.  This not only gives the stations more power, it also reduces station construction cost and allows easier and faster movement.</English>
-		<French>A network of powerful EMP transmitters on Earth's mountain peaks are used to beam power to your Cislunar stations.  This not only gives the stations more power, it also reduces station construction cost and allows easier and faster movement.</French>
+		<French>A network of powerful EMP transmitters on Earth's mountain peaks are used to beam power to your Cislunaire stations.  This not only gives the stations more power, it also reduces station construction cost and allows easier and faster movement.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_GOV</Tag>
 		<English>Cislunar Governance</English>
-		<French>Cislunar Governance</French>
+		<French>Governance Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_GOV_STRATEGY</Tag>
@@ -7390,7 +7385,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_VR</Tag>
 		<English>Simulated World (Cislunar)</English>
-		<French>Simulated World (Cislunar)</French>
+		<French>Simulated World (Cislunaire)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_VR_STRATEGY</Tag>
@@ -7404,7 +7399,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPACE_JUNK</Tag>
 		<English>Cislunar Space Junk Removal</English>
-		<French>Cislunar Space Junk Removal</French>
+		<French>Space Junk Removal Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPACE_JUNK_STRATEGY</Tag>
@@ -7418,7 +7413,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_STATION_CONTROL_SYSTEM</Tag>
 		<English>Cislunar Control System</English>
-		<French>Cislunar Control System</French>
+		<French>Control System Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_STATION_CONTROL_SYSTEM_STRATEGY</Tag>
@@ -7432,7 +7427,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_STATION_SANITATION_SYSTEM</Tag>
 		<English>Cislunar Sanitation System</English>
-		<French>Cislunar Sanitation System</French>
+		<French>Sanitation System Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_STATION_SANITATION_SYSTEM_STRATEGY</Tag>
@@ -7446,7 +7441,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DOCKING_BAY</Tag>
 		<English>Cislunar Docking Bay</English>
-		<French>Cislunar Docking Bay</French>
+		<French>Docking Bay Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DOCKING_BAY_STRATEGY</Tag>
@@ -7460,7 +7455,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AEROGEL_SHIELDING</Tag>
 		<English>Cislunar Aerogel Shielding</English>
-		<French>Cislunar Aerogel Shielding</French>
+		<French>Aerogel Shielding Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AEROGEL_SHIELDING_STRATEGY</Tag>
@@ -7474,7 +7469,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INFLATABLE_HABITAT</Tag>
 		<English>Cislunar Inflatable Habitat</English>
-		<French>Cislunar Inflatable Habitat</French>
+		<French>Inflatable Habitat Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INFLATABLE_HABITAT_STRATEGY</Tag>
@@ -7488,7 +7483,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_SOLAR_ARRAY</Tag>
 		<English>Cislunar Solar Array</English>
-		<French>Cislunar Solar Array</French>
+		<French>Solar Array Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_SOLAR_ARRAY_STRATEGY</Tag>
@@ -7502,7 +7497,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_ION_CANNON</Tag>
 		<English>Cislunar Ion Cannon</English>
-		<French>Cislunar Ion Cannon</French>
+		<French>Ion Cannon Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_ION_CANNON_STRATEGY</Tag>
@@ -7516,7 +7511,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TURBOLIFT</Tag>
 		<English>Cislunar Turbolifts</English>
-		<French>Cislunar Turbolifts</French>
+		<French>Turbolifts Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TURBOLIFT_STRATEGY</Tag>
@@ -7530,7 +7525,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_REFUELING_STATION</Tag>
 		<English>Cislunar Refueling Station</English>
-		<French>Cislunar Refueling Station</French>
+		<French>Refueling Station Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_REFUELING_STATION_STRATEGY</Tag>
@@ -7544,7 +7539,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_ASTEROID_MINE</Tag>
 		<English>Cislunar Asteroid Mine</English>
-		<French>Cislunar Asteroid Mine</French>
+		<French>Asteroid Mine Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_ASTEROID_MINE_STRATEGY</Tag>
@@ -7572,7 +7567,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_ENHANCED_ALGAE_FARM</Tag>
 		<English>Cislunar Enhanced Algae Farm</English>
-		<French>Cislunar Enhanced Algae Farm</French>
+		<French>Enhanced Algae Farm Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_ENHANCED_ALGAE_FARM_STRATEGY</Tag>
@@ -7586,7 +7581,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_SHIELDING</Tag>
 		<English>Cislunar Shielding</English>
-		<French>Cislunar Shielding</French>
+		<French>Shielding Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_SHIELDING_STRATEGY</Tag>
@@ -7600,7 +7595,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_CLOAKING</Tag>
 		<English>Cislunar Cloaking</English>
-		<French>Cislunar Cloaking</French>
+		<French>Cloaking Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_CLOAKING_STRATEGY</Tag>
@@ -7614,7 +7609,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_PHASED_ARRAY_OPTICS</Tag>
 		<English>Cislunar Phased Array Optics</English>
-		<French>Cislunar Phased Array Optics</French>
+		<French>Phased Array Optics Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_PHASED_ARRAY_OPTICS_STRATEGY</Tag>
@@ -7628,7 +7623,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_HOTEL</Tag>
 		<English>Cislunar Hotel</English>
-		<French>Cislunar Hotel</French>
+		<French>Hotel Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_HOTEL_STRATEGY</Tag>
@@ -7636,17 +7631,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_HOTEL_PEDIA</Tag>
-		<English/>
-</English>
-		<French>TXT_KEY_BUILDING_CISLUNAR_HOTEL_PEDIA</Tag>
-		<English/>
-</French>XT_KEY_BUILDING_CISLUNAR_HOTEL_PEDIA</Tag>
-		<English/>
+		<English>TBD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BIG_BANG_OBSERVATORY</Tag>
 		<English>Cislunar Big Bang Observatory</English>
-		<French>Cislunar Big Bang Observatory</French>
+		<French>Big Bang Observatoire Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BIG_BANG_OBSERVATORY_STRATEGY</Tag>
@@ -7660,7 +7650,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_BIOFACTORY</Tag>
 		<English>Cislunar Biofactory</English>
-		<French>Cislunar Biofactory</French>
+		<French>Biofactory Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_BIOFACTORY_STRATEGY</Tag>
@@ -7674,7 +7664,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_SPACEPORT</Tag>
 		<English>Cislunar Spaceport</English>
-		<French>Cislunar Spaceport</French>
+		<French>Spaceport Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_SPACEPORT_STRATEGY</Tag>
@@ -7688,7 +7678,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ADVANCED_COOLING_SYSTEM</Tag>
 		<English>Cislunar Cooling System</English>
-		<French>Cislunar Cooling System</French>
+		<French>Cooling System Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ADVANCED_COOLING_SYSTEM_STRATEGY</Tag>
@@ -7702,7 +7692,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_ORGANIC_COLONY</Tag>
 		<English>Cislunar Organic Colony</English>
-		<French>Cislunar Organic Colony</French>
+		<French>Organic Colony Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_ORGANIC_COLONY_STRATEGY</Tag>
@@ -7716,7 +7706,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORBITAL_ACCELERATOR</Tag>
 		<English>Cislunar Particle Accelerator</English>
-		<French>Cislunar Particle Accelerator</French>
+		<French>Particle Accelerator Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORBITAL_ACCELERATOR_STRATEGY</Tag>
@@ -7730,7 +7720,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_SOCIAL_ENGINEERING</Tag>
 		<English>Cislunar Social Engineering</English>
-		<French>Cislunar Social Engineering</French>
+		<French>Social Engineering Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_SOCIAL_ENGINEERING_STRATEGY</Tag>
@@ -7744,7 +7734,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CRYONIC_BODY_STORAGE</Tag>
 		<English>Cislunar Cryonic Body Storage</English>
-		<French>Cislunar Cryonic Body Storage</French>
+		<French>Cryonic Body Storage Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CRYONIC_BODY_STORAGE_STRATEGY</Tag>
@@ -7758,7 +7748,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_BIOLOGICAL_CORE</Tag>
 		<English>Cislunar Bionic Core</English>
-		<French>Cislunar Bionic Core</French>
+		<French>Bionic Core Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_BIOLOGICAL_CORE_STRATEGY</Tag>
@@ -7772,7 +7762,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_ONEILL_CYLINDER</Tag>
 		<English>Cislunar O'Neill Cylinder</English>
-		<French>Cislunar O'Neill Cylinder</French>
+		<French>O'Neill Cylinder Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_ONEILL_CYLINDER_STRATEGY</Tag>
@@ -7786,7 +7776,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_DEFENSES</Tag>
 		<English>Cislunar Death Ray</English>
-		<French>Cislunar Death Ray</French>
+		<French>Death Ray Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_DEFENSES_STRATEGY</Tag>
@@ -7800,7 +7790,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_SECURITY</Tag>
 		<English>Cislunar Omnisurveillance</English>
-		<French>Cislunar Omnisurveillance</French>
+		<French>Omnisurveillance Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_SECURITY_STRATEGY</Tag>
@@ -7814,7 +7804,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_QUANTUM_THRUSTERS</Tag>
 		<English>Cislunar Quantum Thrusters</English>
-		<French>Cislunar Quantum Thrusters</French>
+		<French>Quantum Thrusters Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_QUANTUM_THRUSTERS_STRATEGY</Tag>
@@ -7828,7 +7818,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NUCLEAR_DAMPER</Tag>
 		<English>Cislunar Nuclear Damper</English>
-		<French>Cislunar Nuclear Damper</French>
+		<French>Nuclear Damper Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NUCLEAR_DAMPER_STRATEGY</Tag>
@@ -7842,7 +7832,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DYSON_HARROP_SATELLITE</Tag>
 		<English>Dyson-Harrop Satellite (Cislunar)</English>
-		<French>Dyson-Harrop Satellite (Cislunar)</French>
+		<French>Dyson-Harrop Satellite (Cislunaire)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DYSON_HARROP_SATELLITE_STRATEGY</Tag>
@@ -7856,7 +7846,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_CLAYTRONIC</Tag>
 		<English>Cislunar Claytronic Station</English>
-		<French>Cislunar Claytronic Station</French>
+		<French>Claytronic Station Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_CLAYTRONIC_STRATEGY</Tag>
@@ -7870,7 +7860,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRASH_ATOMIZER</Tag>
 		<English>Cislunar Garbage Atomizer</English>
-		<French>Cislunar Garbage Atomizer</French>
+		<French>Garbage Atomizer Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRASH_ATOMIZER_STRATEGY</Tag>
@@ -7884,7 +7874,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WORMHOLE_TO_EARTH</Tag>
 		<English>Cislunar Wormhole to Earth</English>
-		<French>Cislunar Wormhole to Earth</French>
+		<French>Wormhole to Earth Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WORMHOLE_TO_EARTH_STRATEGY</Tag>
@@ -7898,7 +7888,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_BLACK_HOLE</Tag>
 		<English>Cislunar Black Hole</English>
-		<French>Cislunar Black Hole</French>
+		<French>Black Hole Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_BLACK_HOLE_STRATEGY</Tag>
@@ -7912,7 +7902,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DILATON_GENERATOR</Tag>
 		<English>Cislunar Dilaton Generator</English>
-		<French>Cislunar Dilaton Generator</French>
+		<French>Dilaton Generator Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DILATON_GENERATOR_STRATEGY</Tag>
@@ -7940,7 +7930,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_METAMORPHIC_CISLUNAR_STATION</Tag>
 		<English>Cislunar Metamorphic Station</English>
-		<French>Cislunar Metamorphic Station</French>
+		<French>Metamorphic Station Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_METAMORPHIC_CISLUNAR_STATION_STRATEGY</Tag>
@@ -7954,7 +7944,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOOD_REPLICATOR</Tag>
 		<English>Cislunar Food Replicator</English>
-		<French>Cislunar Food Replicator</French>
+		<French>Food Replicator Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOOD_REPLICATOR_STRATEGY</Tag>
@@ -7991,12 +7981,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENERGY_BEAM_NETWORK_PEDIA</Tag>
 		<English>Cislunar space is now filled with energy transfer satellites, for rapid power transfer and sail beaming.</English>
-		<French>Cislunar space is now filled with energy transfer satellites, for rapid power transfer and sail beaming.</French>
+		<French>space is now filled with energy transfer satellites, for rapid power transfer and sail beaming. Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_ANTIMATTER</Tag>
 		<English>Cislunar Antimatter Harvester</English>
-		<French>Cislunar Antimatter Harvester</French>
+		<French>Antimatter Harvester Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_ANTIMATTER_STRATEGY</Tag>
@@ -11561,7 +11551,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HAUMEA_COLONY_PEDIA</Tag>
 		<English>Haumea, minor-planet designation 136108 Haumea, is a dwarf planet located beyond Neptune's orbit. It was discovered in 2004 by a team headed by Mike Brown of Caltech at the Palomar Observatory in the United States and independently in 2005, by a team headed by Jose Luis Ortiz Moreno at the Sierra Nevada Observatory in Spain, though the latter claim has been contested. On September 17, 2008, it was recognized as a dwarf planet by the International Astronomical Union (IAU) and named after Haumea, the Hawaiian goddess of childbirth.[PARAGRAPH:2] Wikipedia</English>
-		<French>Haumea, minor-planet designation 136108 Haumea, is a dwarf planet located beyond Neptune's orbit. It was discovered in 2004 by a team headed by Mike Brown of Caltech at the Palomar Observatory in the United States and independently in 2005, by a team headed by Jose Luis Ortiz Moreno at the Sierra Nevada Observatory in Spain, though the latter claim has been contested. On September 17, 2008, it was recognized as a dwarf planet by the International Astronomical Union (IAU) and named after Haumea, the Hawaiian goddess of childbirth.[PARAGRAPH:2] Wikipedia</French>
+		<French>Haumea, minor-planet designation 136108 Haumea, is a dwarf planet located beyond Neptune's orbit. It was discovered in 2004 by a team headed by Mike Brown of Caltech at the Palomar Observatoire in the United States and independently in 2005, by a team headed by Jose Luis Ortiz Moreno at the Sierra Nevada Observatoire in Spain, though the latter claim has been contested. On September 17, 2008, it was recognized as a dwarf planet by the International Astronomical Union (IAU) and named after Haumea, the Hawaiian goddess of childbirth.[PARAGRAPH:2] Wikipedia</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PLUTO_BASE</Tag>
@@ -18328,7 +18318,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_ECONOMY</Tag>
 		<English>Cislunar Economy</English>
-		<French>Cislunar Economy</French>
+		<French>Economy Cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_ECONOMY_STRATEGY</Tag>
@@ -18398,7 +18388,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_EFFECT</Tag>
 		<English>Effect - Cislunar Economy</English>
-		<French>Effect - Cislunar Economy</French>
+		<French>Effect - Cislunaire Economy</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_EFFECT_STRATEGY</Tag>
@@ -19532,7 +19522,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_OBSERVATORY</Tag>
 		<English>Lunar Observatory</English>
-		<French>Observatory Lunaire</French>
+		<French>Observatoire Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_OBSERVATORY_STRATEGY</Tag>
@@ -19558,7 +19548,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_ORGANIC_MATERIAL_STORAGE</Tag>
 		<English>Lunar Organic Material Storage</English>
-		<French>Organic Material Storage Lunaire</French>
+		<French>Entrepot de matières organiques Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_ORGANIC_MATERIAL_STORAGE_STRATEGY</Tag>
@@ -19571,7 +19561,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_FERTILIZER_STORAGE</Tag>
 		<English>Lunar Fertilizer Storage</English>
-		<French>Fertilizer Storage Lunaire</French>
+		<French>Entrepot de fertilisants Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_FERTILIZER_STORAGE_STRATEGY</Tag>
@@ -19584,7 +19574,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_SOLAR_PANELS</Tag>
 		<English>Lunar Solar Panels</English>
-		<French>Solar Panels Lunaire</French>
+		<French>Panneaux solaires Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_SOLAR_PANELS_STRATEGY</Tag>
@@ -19597,7 +19587,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_BUG_FARM</Tag>
 		<English>Lunar Bug Farm</English>
-		<French>Bug Farm Lunaire</French>
+		<French>Ferme à insectes Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_BUG_FARM_STRATEGY</Tag>
@@ -19610,7 +19600,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_FISH_FARM</Tag>
 		<English>Lunar Fish Farm</English>
-		<French>Fish Farm Lunaire</French>
+		<French>Ferme à poissons Lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_FISH_FARM_STRATEGY</Tag>
