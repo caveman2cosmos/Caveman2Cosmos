@@ -12556,7 +12556,7 @@ void CvPlayer::changeRevIdxGoodReligionMod(float fChange)
 
 bool CvPlayer::isInquisitionConditions() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_INQUISITIONS) || getStateReligion() != NO_RELIGION)
+	if (GC.getGame().isOption(GAMEOPTION_INQUISITIONS) && getStateReligion() != NO_RELIGION)
 	{
 		return (m_iInquisitionCount > 0);
 	}
@@ -35420,7 +35420,7 @@ void CvPlayer::endDeferredPlotGroupBonusCalculation()
 
 bool CvPlayer::hasFixedBorders() const
 {
-	if (!isNPC() || GC.getGame().isOption(GAMEOPTION_FIXED_BORDERS) )
+	if (!isNPC() && GC.getGame().isOption(GAMEOPTION_FIXED_BORDERS) )
 	{
 		return (m_iFixedBordersCount > 0);
 	}
