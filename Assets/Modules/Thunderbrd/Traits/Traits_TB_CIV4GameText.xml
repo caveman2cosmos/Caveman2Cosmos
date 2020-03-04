@@ -4312,7 +4312,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL</Tag>
 		<English>Agricultural</English>
-		<French>Agricol</French>
+		<French>Agricole</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL_STRATEGY</Tag>
@@ -8047,12 +8047,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FOREIGN</Tag>
 		<English>Foreigner</English>
-		<French>Lointainer</French>
+		<French>Etranger</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FOREIGN_STRATEGY</Tag>
 		<English>Has difficulty with resistance to his authority and government doesn't function very well as a result.  Others resist any changes he wishes to implement.  National Pride is lacking (-Culture) and foreign sympathies leaves him blinded (-Espionage)</English>
-		<French>A du mal à résister à son autorité et le gouvernement ne fonctionne pas très bien en conséquence. D'autres résistent à tout changement qu'il souhaite mettre en œuvre. La fierté nationale fait défaut (-Culture) et les sympathies étrangères le rendent aveugle (-Espionnage)</French>
+		<French>A du mal avec l'opposition à son autorité et le gouvernement ne fonctionne pas très bien en conséquence. D'autres résistent à tout changement qu'il souhaite mettre en oeuvre. La fierté nationale fait défaut (-Culture) et les sympathies étrangères le rendent aveugle (-Espionnage)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FOREIGN_PEDIA</Tag>
@@ -8089,7 +8089,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FOREIGN1</Tag>
 		<English>Foreigner I</English>
-		<French>Lointainer I</French>
+		<French>Etranger I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FOREIGN1_PEDIA</Tag>
@@ -8124,7 +8124,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FOREIGN2</Tag>
 		<English>Foreigner II</English>
-		<French>Lointainer II</French>
+		<French>Etranger II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FOREIGN2_PEDIA</Tag>
@@ -8160,7 +8160,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FOREIGN3</Tag>
 		<English>Foreigner III</English>
-		<French>Lointainer III</French>
+		<French>Etranger III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FOREIGN3_PEDIA</Tag>

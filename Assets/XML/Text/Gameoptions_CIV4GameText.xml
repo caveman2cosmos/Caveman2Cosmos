@@ -136,7 +136,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_BARBARIAN_ALWAYS_RAZE</Tag>
 		<English>Barbarians Always Raze</English>
-		<French>Barbares Rasent les Villes</French>
+		<French>Les Barbares Rasent les Villes</French>
 		<German>Barbaren zerstören Städte immer</German>
 		<Italian>I barbari razziano sempre</Italian>
 		<Spanish>Los bárbaros siempre arrasan</Spanish>
@@ -154,7 +154,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_BARBARIAN_WORLD</Tag>
 		<English>Barbarian World</English>
-		<French>Monde Barbare</French>
+		<French>Monde plein de Barbares</French>
 		<German>Barbarenwelt</German>
 		<Italian>Mondo Barbarico</Italian>
 		<Spanish>Mundo bárbaro</Spanish>
@@ -276,7 +276,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_COMPLEX_TRAITS_HELP</Tag>
 		<English>Adds new traits and deepens and strengthens existing traits</English>
-		<French>Ajoute de nouveaux Traits, et rends les existants plus profonds et forts</French>
+		<French>Ajoute de nouveaux Traits, et rend les existants plus profonds et marqués</French>
 		<German>Die bereits existierenden Charakterzüge für Staatsoberhäupter werden vertieft und um vollkommen neue ergänzt.</German>
 		<Italian>Aggiunge nuove caratteristiche per i leader, approfondendo e rafforzando le caratteristiche esistenti</Italian>
 		<Polish>Dodaje nowe cechy oraz pogłębia i wzmacnia istniejące</Polish>
@@ -688,10 +688,12 @@ Si vous jouez avec "Civs Mineures au départ", cette option changera les règles
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_OVEREXPANSION_PENALTIES</Tag>
 		<English>Happiness penalties from overexpansion</English>
+		<French>Pénalités de Bonheur en cas de sur-expansion</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_OVEREXPANSION_PENALTIES_HELP</Tag>
 		<English>Cities will get unhappiness from overexpansion, scaled by map size. Unhappiness penalties depend on civics.</English>
+		<French>Les populations des villes seront mécontentes à cause de la surexpansion, à l'échelle de la taille de la carte. Les pénalités de mécontentement dépendent de la doctrine.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_CITY_RAZING</Tag>
@@ -859,7 +861,7 @@ AVERTISSEMENT: cette option rend l'IA moins difficile. Le mod Revolution n'a pas
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_TECH_BROKERING</Tag>
 		<English>No Tech. Brokering</English>
-		<French>Pas de commerce de technologie</French>
+		<French>Pas de Commerce de Technologies</French>
 		<German>Kein Technologieaustausch</German>
 		<Italian>Nessuna vendita di tecnologie</Italian>
 		<Spanish>Sin intermediación con tecnología</Spanish>
@@ -894,7 +896,7 @@ AVERTISSEMENT: cette option rend l'IA moins difficile. Le mod Revolution n'a pas
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_TECH_TRADING</Tag>
 		<English>No Technology Trading</English>
-		<French>Aucun échange de technologies</French>
+		<French>Aucun échange de Technologies</French>
 		<German>Kein Technologiehandel</German>
 		<Italian>Nessuno scambio di tecnologie</Italian>
 		<Spanish>Sin intercambio de tecnología</Spanish>
@@ -1244,14 +1246,14 @@ L'auteur de cette option estime également que cela ne représente pas un scéna
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_SIZE_MATTERS_UNCUT</Tag>
 		<English>Size Matters Uncut</English>
-		<French>Question de Taille (version 'Uncut')</French>
+		<French>Mode de Combat C2C - La Taille Compte! (version 'Uncut')</French>
 		<German>Größe ist wichtig (ungeschnittene Version)</German>
 		<Polish>Rozmiar ma znaczenie - wersja rozszerzona</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_SIZE_MATTERS_UNCUT_HELP</Tag>
 		<English>MUST ALSO PLAY WITH Size Matters option ON!  Forces all units start with their normal base strength and HP values.  Normal Size Matters alone will introduce some strength adjustments to units that differ from the core.  This enforces adherence to the core unit strengths.</English>
-		<French>DOIT ETRE SELECTIONNE avec La Question de taille. Active automatiquement les principes de l'option Question de Taille, mais force les unités à démarrer avec leurs valeurs standard de puissance et PV. Sinon, l'option Question de taille ajuste les valeurs des unités</French>
+		<French>DOIT ETRE SELECTIONNE avec le mod C2C : La Taille Compte! Actif ! .Force les unités à démarrer avec leurs valeurs standard de puissance et PV. Sinon, l'option La Taille Compte! ajuste les valeurs des unités. Cela renforce l'adhésion aux forces des l'unités.</French>
 		<German>FUNKTIONIERT NUR IN VERBINDUNG MIT DER GRUNDMOD "Größe ist wichtig"!  Mit dieser Zusatzoption starten alle Einheiten mit ihren normalen Basiswerten aus dem Standardspiel. Die Funktionalität der Mod "Größe ist wichtig" bleibt erhalten, aber die Änderung der Grundwerte wird hiermit unterbunden.</German>
 	</TEXT>
 	<TEXT>
@@ -1436,7 +1438,7 @@ Essentiellement, cela signifie qu'un nombre écrasant d'unités ont de meilleure
 		<Tag>TXT_KEY_GAMEOPTION_WIN_FOR_LOSING</Tag>
 		<English>Win for Losing</English>
 		<German>Gewinne für Verlierer</German>
-		<French>Bonus pour les perdants</French>
+		<French>Bonus de Technologies pour les perdants</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_WIN_FOR_LOSING_HELP</Tag>

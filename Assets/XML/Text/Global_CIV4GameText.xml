@@ -998,7 +998,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_AIAUTOPLAY_CIV_DIED</Tag>
 		<English>Your civ has died.[NEWLINE]Would you like to lead another civ?[NEWLINE]</English>
-		<French>Votre civ est éteinte.[NEWLINE]Souhaitez-vous diriger une autre civ  [NEWLINE]</French>
+		<French>Votre civ s'est éteinte.[NEWLINE]Souhaitez-vous diriger une autre civ ?[NEWLINE]</French>
 		<German>Ihre Zivilisation ist untergegangen.[NEWLINE]Möchten Sie eine andere Zivilisation führen?[NEWLINE]</German>
 		<Italian>La tua civiltà è scomparsa.[NEWLINE]Vuoi guidarne un'altra?[NEWLINE]</Italian>
 		<Spanish>Tu civilización ha sido derrotada.[NEWLINE]¿Le gustaría dirigir otra civilización?[NEWLINE]</Spanish>
@@ -2816,7 +2816,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BARRACKS_CIVIC_EXTRA_UNHAPPINESS</Tag>
 		<English>[ICON_UNHAPPY] from [LINK=BUILDING_BARRACKS]Barracks[\LINK]</English>
-		<French>[ICON_UNHAPPY]  de [LINK=BUILDING_BARRACKS]Caserne[\LINK]</French>
+		<French>[ICON_UNHAPPY] de [LINK=BUILDING_BARRACKS]Caserne[\LINK]</French>
 		<German>[[ICON_UNHAPPY] von [LINK=BUILDING_BARRACKS]Kasernen[\LINK]</German>
 		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_BARRACKS]Caserma[\LINK]</Italian>
 		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_BARRACKS]Barracones[\LINK]</Spanish>
@@ -3523,7 +3523,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_GRAPE_PICKING_CAMP</Tag>
 		<English>Build [LINK=IMPROVEMENT_GRAPE_PICKING_CAMP]Grape Picking Camp[\LINK]</English>
-		<French>Construire un  [LINK=IMPROVEMENT_GRAPE_PICKING_CAMP]Camp de vendanges[\LINK]</French>
+		<French>Construire un [LINK=IMPROVEMENT_GRAPE_PICKING_CAMP]Camp de vendanges[\LINK]</French>
 		<German>[LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]Trauben lesen[\LINK]</German>
 	</TEXT>
 	<TEXT>
@@ -3906,7 +3906,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PLANT_PICKING_CAMP</Tag>
 		<English>Build [LINK=IMPROVEMENT_PLANT_PICKING_CAMP]Plant Picking Camp[\LINK]</English>
-		<French>Construire un  [LINK=IMPROVEMENT_PLANT_PICKING_CAMP]Camp de Cueillette[\LINK]</French>
+		<French>Construire un [LINK=IMPROVEMENT_PLANT_PICKING_CAMP]Camp de Cueillette[\LINK]</French>
 		<German>[LINK=IMPROVEMENT_PLANT_PICKING_CAMP]Nützliche Pflanzen pflücken[\LINK]</German>
 	</TEXT>
 	<TEXT>
@@ -4455,7 +4455,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BURGERWORLD_STRATEGY</Tag>
 		<English>Build the [COLOR_BUILDING_TEXT]Burgerworld[COLOR_REVERT] Headquarters to create the [COLOR_HIGHLIGHT_TEXT]Burgerworld Corporation[COLOR_REVERT] which consumes [COLOR_HIGHLIGHT_TEXT]Cow[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Pig[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Potato[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Wheat[COLOR_REVERT] or [COLOR_HIGHLIGHT_TEXT]Coffee[COLOR_REVERT] and adds a culture bonus to every city where the [COLOR_HIGHLIGHT_TEXT]Burgerworld Corporation[COLOR_REVERT] is present. The Headquarters provide gold for each city in the world with a Burgerworld franchise.</English>
-		<French>Construire le Siège de [COLOR_BUILDING_TEXT]MondoBurger[COLOR_REVERT] pour fonder la corporation  [COLOR_HIGHLIGHT_TEXT]MondoBurger Corporation[COLOR_REVERT] qui consomme  [COLOR_HIGHLIGHT_TEXT]vache[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]cochon[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Pommes de terres[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Blé[COLOR_REVERT] ou [COLOR_HIGHLIGHT_TEXT]Café[COLOR_REVERT] et ajoute un bonus de culture à chaque ville où la [COLOR_HIGHLIGHT_TEXT]Corporation MondoBurger[COLOR_REVERT] est présente. Le siège social fournit de l'or pour chaque ville du monde avec une franchise MondoBurger.</French>
+		<French>Construire le Siège de [COLOR_BUILDING_TEXT]MondoBurger[COLOR_REVERT] pour fonder la corporation [COLOR_HIGHLIGHT_TEXT]MondoBurger Corporation[COLOR_REVERT] qui consomme [COLOR_HIGHLIGHT_TEXT]vache[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]cochon[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Pommes de terres[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Blé[COLOR_REVERT] ou [COLOR_HIGHLIGHT_TEXT]Café[COLOR_REVERT] et ajoute un bonus de culture à chaque ville où la [COLOR_HIGHLIGHT_TEXT]Corporation MondoBurger[COLOR_REVERT] est présente. Le siège social fournit de l'or pour chaque ville du monde avec une franchise MondoBurger.</French>
 		<Italian>Costruisci il [COLOR_BUILDING_TEXT]QG di Burgerworld[COLOR_REVERT] per creare la corporazione [COLOR_HIGHLIGHT_TEXT]Burgerworld[COLOR_REVERT] che consuma [COLOR_HIGHLIGHT_TEXT]Mucca[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Maiale[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Patata[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Grano[COLOR_REVERT] o [COLOR_HIGHLIGHT_TEXT]Caffè[COLOR_REVERT] e aggiunge un bonus alla cultura in ogni città dove [COLOR_HIGHLIGHT_TEXT]Burgerworld[COLOR_REVERT] è presente. Il QG fornisce oro per ogni città nel mondo dove Burgerworld è presente.</Italian>
 		<Spanish>Construye la maravilla [COLOR_BUILDING_TEXT]Burgerworld[COLOR_REVERT] para crear la corporación [COLOR_HIGHLIGHT_TEXT]Burgerworld[COLOR_REVERT], que consume [COLOR_HIGHLIGHT_TEXT]Reses[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cerdos[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Patatas[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Trigo[COLOR_REVERT] y [COLOR_HIGHLIGHT_TEXT]Café[COLOR_REVERT] y añade una bonificación a los alimentos en todas las ciudades donde [COLOR_HIGHLIGHT_TEXT]Burgerworld[COLOR_REVERT] esté presente. La sede proporciona oro por cada ciudad del mapa en la que haya una franquicia de Burgerworld.</Spanish>
 		<Polish>Zbuduj siedzibę [COLOR_BUILDING_TEXT]Świata Hamburgerów[COLOR_REVERT]by utworzyć [COLOR_HIGHLIGHT_TEXT]Korporacje Świata Hamburgerów[COLOR_REVERT] która zużywa [COLOR_HIGHLIGHT_TEXT]Krowy[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Świnie[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Ziemniaki[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Pszenicę[COLOR_REVERT] lub [COLOR_HIGHLIGHT_TEXT]Kawę[COLOR_REVERT] i daje bonus do kultury każdemu miastu w którym znajduje się [COLOR_HIGHLIGHT_TEXT]Korporacja Świata Hamburgerów[COLOR_REVERT]. Siedziba zapewnia złoto dla każdego mista w którym znajduje się ta korporacja.</Polish>
@@ -11346,14 +11346,14 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_DEFENDER_KNOCKEDBACK</Tag>
 		<English>The %s1_Enemy %s2_EnUName forced our %s3_UnitName to pull back.</English>
-		<French>[NUM2:Un:Une:Des:Des] %s2_EnUName %s1_Enemy [NUM2:a:a:ont:ont] réussi à créer une brèche dans les positions défensives de [NUM1:notre:notre:nos:nos]  %s3_UnitName, [NUM1:l':l':les:les ]obligeant à battre en retraite à découvert.</French>
+		<French>[NUM2:Un:Une:Des:Des] %s2_EnUName %s1_Enemy [NUM2:a:a:ont:ont] réussi à créer une brèche dans les positions défensives de [NUM1:notre:notre:nos:nos] %s3_UnitName, [NUM1:l':l':les:les ]obligeant à battre en retraite à découvert.</French>
 		<Italian>Una terribile unità %s1_Enemy di %s2_EnUName ha lanciato un inferno di fuoco nelle posizioni difensive della nostra unità %s3_UnitName, costringendoci alla ritirata.</Italian>
 		<Polish>Przerażająca jednostka: %s2_EnUName %s1_Enemy zmusiła naszą jednostkę: %s3_UnitName do ucieczki i walki w otwartym polu.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_DEFENDER_KNOCKEDBACK_HIDDEN</Tag>
 		<English>The %s1_Enemy forced our %s2_UnitName to pull back.</English>
-		<French>[NUM2:Un:Une:Des:Des]%s1_Enemy [NUM2:a:a:ont:ont] réussi à créer une brèche dans les positions défensives de [NUM1:notre:notre:nos:nos]  %s3_UnitName, [NUM1:l':l':les:les ]obligeant à battre en retraite à découvert.</French>
+		<French>[NUM2:Un:Une:Des:Des]%s1_Enemy [NUM2:a:a:ont:ont] réussi à créer une brèche dans les positions défensives de [NUM1:notre:notre:nos:nos] %s3_UnitName, [NUM1:l':l':les:les ]obligeant à battre en retraite à découvert.</French>
 		<Italian>Una terribile unità %s1_Enemy di ha lanciato un inferno di fuoco nelle posizioni difensive della nostra unità %s3_UnitName, costringendoci alla ritirata.</Italian>
 		<Polish>Przerażająca jednostka: %s2_EnUName %s1_Enemy zmusiła naszą jednostkę: %s3_UnitName do ucieczki i walki w otwartym polu.</Polish>
 	</TEXT>
@@ -14520,7 +14520,7 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_PLUNDER_CITY_HELP</Tag>
 		<English>This will order the [COLOR_UNIT_TEXT]Barbarian Leader[COLOR_REVERT] to plunder the city. Barbarians will sabotage [ICON_FOOD], [ICON_PRODUCTION] and steal [ICON_GOLD] for you. Citizens may be [COLOR_HIGHLIGHT_TEXT]enslaved[COLOR_REVERT] and the city's [ICON_CULTURE] will decrease.</English>
-		<French>Ordonne au [COLOR_UNIT_TEXT]Chef Barbare[COLOR_REVERT] de pillet la ville. Les Barbares saboteront  [ICON_FOOD], [ICON_PRODUCTION] et voleront [ICON_GOLD] pour vous. Les citoyens peuvent se retrouvés [COLOR_HIGHLIGHT_TEXT]esclaves[COLOR_REVERT] et la [ICON_CULTURE] va diminuer.</French>
+		<French>Ordonne au [COLOR_UNIT_TEXT]Chef Barbare[COLOR_REVERT] de piller la ville. Les Barbares saboteront de la [ICON_FOOD], [ICON_PRODUCTION] et voleront de l'[ICON_GOLD] pour vous. Les citoyens peuvent se retrouvés [COLOR_HIGHLIGHT_TEXT]esclaves[COLOR_REVERT] et la [ICON_CULTURE] va diminuer.</French>
 		<German>Der [COLOR_UNIT_TEXT]Barbarenanführer[COLOR_REVERT] wird angewiesen, die Stadt zu plündern. Die Barbaren werden die Produktion von [ICON_FOOD] und [ICON_PRODUCTION] sabotieren und [ICON_GOLD] stehlen. Außerdem sinkt die [ICON_CULTURE] der Stadt und mitunter werden sogar Bürger [COLOR_HIGHLIGHT_TEXT]versklavt[COLOR_REVERT].</German>
 		<Italian>Ordina al [COLOR_UNIT_TEXT]Leader barbaro[COLOR_REVERT] di saccheggiare la città. I barbari saboteranno [ICON_FOOD], [ICON_PRODUCTION] e ruberanno [ICON_GOLD] per te. Gli abitanti potrebbero essere [COLOR_HIGHLIGHT_TEXT]schiavizzati[COLOR_REVERT] e la [ICON_CULTURE] della città diminuirà.</Italian>
 		<Spanish>Esto ordenará al [COLOR_UNIT_TEXT]Líder bárbaro[COLOR_REVERT] saquear la ciudad. Los bárbaros sabotearán la [ICON_FOOD], [ICON_PRODUCTION] y robarán [ICON_GOLD] para tí. Algunos ciudadanos podrían ser [COLOR_HIGHLIGHT_TEXT]esclavizados[COLOR_REVERT] y la [ICON_CULTURE] de la ciudad disminuirá.</Spanish>

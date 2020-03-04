@@ -9,14 +9,18 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TARGETS_UNIT_FIRST</Tag>
 		<English>[ICON_BULLET]Targets any %s1_unit_list first in combat. If Assassination is possible, these units are also the list of units that may be targeted for assassination.</English>
+		<French>[ICON_BULLET]Cible les unités de type any %s1_unit_list en premier au combat. Si l'assassinat est possible, ces unités sont également la liste des unités qui peuvent être ciblées pour l'assassinat.
+</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_INFILTRATE_HELP</Tag>
 		<English>This order will have the Spy or Criminal infiltrate a foreign city to bring home useful information (Espionage Points) about the rival. Spies use Espionage Points and are consumed.  Criminals must pass an investigation check to be successful.  If they are, they are sent back to the capital.  Otherwise, they become wanted and lose the rest of their movement for that turn.</English>
+		<French>Cet ordre obligera l'Espion ou le Criminel à s'infiltrer dans une ville étrangère pour ramener à la maison des informations utiles (Points d'Espionnage) sur le rival. Les espions utilisent des points d'espionnage et sont consommés. Les criminels doivent réussir un contrôle d'enquête pour réussir. S'ils le sont, ils sont renvoyés dans la capitale. Sinon, ils deviennent recherchés et perdent le reste de leur mouvement pour ce tour.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CONDUCT_TRADE_MISSION_HELP</Tag>
 		<English>Conduct a trade mission in this city. The amount of gold created is relative to the size of the city and distance to the city the unit was trained or born in, as well as if the city is foreign. It consumes a Great Person, but sends regular merchants and criminals back to the capital.  Criminals, attempting to trade their contraband, may fail an investigation check for this mission and thus fail to derive the gold, lose their movement for the turn and become 'Wanted'.</English>
+		<French>Menez une mission commerciale dans cette ville. La quantité d'or créée est fonction de la taille de la ville et de la distance à la ville dans laquelle l'unité a été formée ou née, ainsi que si la ville est étrangère. Il consomme un personnage illustre, mais renvoie des marchands et des criminels réguliers dans la capitale. Les criminels, tentant d'échanger leur contrebande, peuvent échouer à un contrôle d'enquête pour cette mission et donc ne pas dériver l'or, perdre leur mouvement pour le tour et devenir «Recherché».</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRADE_MISSION</Tag>
@@ -27,3 +31,8 @@
 		<Spanish>[ICON_BULLET]Puede realizar una misión comercial (Base: %d1, Mult: x%d2)</Spanish>
 	</TEXT>
 </Civ4GameText>
+
+
+
+
+

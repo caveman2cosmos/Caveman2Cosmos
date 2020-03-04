@@ -6122,7 +6122,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DOCTOR_STRATEGY</Tag>
 		<English>Build [COLOR_UNIT_TEXT]Doctors[COLOR_REVERT] to heal stack units faster.</English>
-		<French>Construisez des  [COLOR_UNIT_TEXT]Médecins[COLOR_REVERT] pour guérir des groupes d'unités plus rapidement.</French>
+		<French>Construisez des [COLOR_UNIT_TEXT]Médecins[COLOR_REVERT] pour guérir des groupes d'unités plus rapidement.</French>
 		<Spanish>Entrena [COLOR_UNIT_TEXT]Médicos[COLOR_REVERT] para curar grupos de unidades más rápido.</Spanish>
 		<Polish>[COLOR_UNIT_TEXT]Doktor[COLOR_REVERT] pomaga szybciej wyleczyć grupę jednostek.</Polish>
 	</TEXT>
@@ -16166,7 +16166,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAGUALISM_MISSIONARY_STRATEGY</Tag>
 		<English>Use this missionary to actively spread [COLOR_HIGHLIGHT_TEXT]Naghualism[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]). This increases your income if you have the [COLOR_BUILDING_TEXT]Teotihuacan[COLOR_REVERT].</English>
-		<French>Utiliser ce missionnaire pour propager activement la religion [COLOR_HIGHLIGHT_TEXT]Nagualisme[COLOR_REVERT] dans les villes amies (ou les villes rivales avec lesquelles vous avez [COLOR_HIGHLIGHT_TEXT]Ouverture des Frontières[COLOR_REVERT]). Cela augmente vos revenus si vous avez  [COLOR_BUILDING_TEXT]Teotihuacan[COLOR_REVERT].</French>
+		<French>Utiliser ce missionnaire pour propager activement la religion [COLOR_HIGHLIGHT_TEXT]Nagualisme[COLOR_REVERT] dans les villes amies (ou les villes rivales avec lesquelles vous avez [COLOR_HIGHLIGHT_TEXT]Ouverture des Frontières[COLOR_REVERT]). Cela augmente vos revenus si vous avez [COLOR_BUILDING_TEXT]Teotihuacan[COLOR_REVERT].</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAKHARAR</Tag>
@@ -21427,7 +21427,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPARTACUS_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Spartacus[COLOR_REVERT] has a 25% chance "recruits" a new [COLOR_UNIT_TEXT]Gladiator[COLOR_REVERT] after every combat victory.</English>
-		<French>[COLOR_UNIT_TEXT]Spartacus[COLOR_REVERT]  a 25% des chances de "recruter" un nouveau [COLOR_UNIT_TEXT]Gladiateur[COLOR_REVERT] après chaque victoire.</French>
+		<French>[COLOR_UNIT_TEXT]Spartacus[COLOR_REVERT] a 25% des chances de "recruter" un nouveau [COLOR_UNIT_TEXT]Gladiateur[COLOR_REVERT] après chaque victoire.</French>
 		<Italian>[COLOR_UNIT_TEXT]Spartaco[COLOR_REVERT] ha il 25% di chance di recrutare un nuovo [COLOR_UNIT_TEXT]Gladiatore[COLOR_REVERT] dopo ogni vittoria in combattimento.</Italian>
 		<Spanish>[COLOR_UNIT_TEXT]Espartaco[COLOR_REVERT] tiene una probabilidad del 25% de reclutar un nuevo [COLOR_UNIT_TEXT]Gladiador[COLOR_REVERT] después de cada combate victorioso.</Spanish>
 		<Polish>[COLOR_UNIT_TEXT]Spartakus[COLOR_REVERT] ma 25% szans "zwerbować" nowego [COLOR_UNIT_TEXT]Gladiatora[COLOR_REVERT] po każdym zwycięstwie w walce.</Polish>
@@ -25595,7 +25595,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WORKER_ANDROID_STRATEGY</Tag>
 		<English>Like [COLOR_UNIT_TEXT]Workers[COLOR_REVERT], [COLOR_UNIT_TEXT]Androids[COLOR_REVERT] improve the land around your cities and build roads that help establish trade routes. (They are twice as fast as [COLOR_UNIT_TEXT]Workers[COLOR_REVERT] and their movement isn't slowed down by terrain)</English>
-		<French>Comme les  [COLOR_UNIT_TEXT]Ouvriers[COLOR_REVERT], les [COLOR_UNIT_TEXT]Androides[COLOR_REVERT] améliorent les terres autour de vos villes et construisent des routes qui aident à établir des routes commerciales. (Ils sont deux fois plus rapides que les [COLOR_UNIT_TEXT]Ouvriers[COLOR_REVERT] et leur déplacement n'est pas ralenti par le terrain)</French>
+		<French>Comme les [COLOR_UNIT_TEXT]Ouvriers[COLOR_REVERT], les [COLOR_UNIT_TEXT]Androides[COLOR_REVERT] améliorent les terres autour de vos villes et construisent des routes qui aident à établir des routes commerciales. (Ils sont deux fois plus rapides que les [COLOR_UNIT_TEXT]Ouvriers[COLOR_REVERT] et leur déplacement n'est pas ralenti par le terrain)</French>
 		<Spanish>Al igual que los [COLOR_UNIT_TEXT]Trabajadores[COLOR_REVERT], los [COLOR_UNIT_TEXT]Androides[COLOR_REVERT] mejoran el terreno que rodea a tus ciudades y construyen caminos que te ayuden a establecer rutas comerciales. (Son el doble de rápidos que los [COLOR_UNIT_TEXT]Trabajadores[COLOR_REVERT] y no sufren costes adicionales de movimiento por terreno)</Spanish>
 		<Polish>Tak jak [COLOR_UNIT_TEXT]Robotnicy[COLOR_REVERT], [COLOR_UNIT_TEXT]Androidy[COLOR_REVERT] poprawiają teren wokół miast oraz budują drogi które pomagają w założeniu szlaków handlowych. (Sa szybsze niż [COLOR_UNIT_TEXT]Robotników[COLOR_REVERT].</Polish>
 	</TEXT>
@@ -26206,7 +26206,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRAP_DISABLE_TYPE</Tag>
 		<English>[ICON_BULLET]%d1_Change%% Disable Traps vs [LINK=%s2_Type]%s3_TypeName[\LINK]</English>
-		<French>[ICON_BULLET]%d1_Change%% Désactive les pièges  [LINK=%s2_Type]%s3_TypeName[\LINK]</French>
+		<French>[ICON_BULLET]%d1_Change%% Désactive les pièges [LINK=%s2_Type]%s3_TypeName[\LINK]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRAP_AVOID_TYPE</Tag>

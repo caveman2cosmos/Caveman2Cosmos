@@ -547,7 +547,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DISALLOWED</Tag>
 		<English>[ICON_BULLET][COLOR_WARNING_TEXT]Leaders with this trait may not select %s1_Trait Trait[COLOR_REVERT]</English>
-		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Les leaders possédant ce trait ne peuvent pas sélectionner %s1_Trait Trait[COLOR_REVERT]</French>
+		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Les leaders possédant ce trait ne peuvent pas sélectionner le Trait : %s1_Trait[COLOR_REVERT]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DISTANCE_MOD</Tag>
@@ -2138,7 +2138,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNIT_COMBAT_FREE_XP_FIRST</Tag>
 		<English>[ICON_BULLET]%D1 Experience to all newly trained [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</English>
-		<French>[ICON_BULLET]%D1 Expérience à tous les nouvelles unités formées de type :  [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</French>
+		<French>[ICON_BULLET]%D1 Expérience à tous les nouvelles unités formées de type : [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNIT_COMBAT_FREE_XP_ADDITIONAL</Tag>
