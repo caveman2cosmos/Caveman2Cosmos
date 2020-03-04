@@ -2665,7 +2665,8 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_MECHANICAL</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
-            <MapCategoryTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_SPACE</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
                 <MapCategoryType>MAPCATEGORY_TITANIC</MapCategoryType>
 			</MapCategoryTypes>
@@ -2675,6 +2676,7 @@
 			<Strategy>TXT_KEY_UNIT_WORKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
+			<bCanMoveImpassable>1</bCanMoveImpassable>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>

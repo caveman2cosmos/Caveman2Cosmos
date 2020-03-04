@@ -4333,6 +4333,14 @@ Current techs which are not in this file:-
 					<bTerrainTrade>1</bTerrainTrade>
 				</TerrainTrade>
 				<TerrainTrade>
+					<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
+					<bTerrainTrade>1</bTerrainTrade>
+				</TerrainTrade>
+				<TerrainTrade>
+					<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
+					<bTerrainTrade>1</bTerrainTrade>
+				</TerrainTrade>
+				<TerrainTrade>
 					<TerrainType>TERRAIN_LAKE</TerrainType>
 					<bTerrainTrade>1</bTerrainTrade>
 				</TerrainTrade>

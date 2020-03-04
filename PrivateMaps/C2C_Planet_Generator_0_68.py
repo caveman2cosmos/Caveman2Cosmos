@@ -3723,10 +3723,6 @@ def enumeratePlaceableBonusTypes():
 			arr[i] = [i, bonusInfo]
 	return arr
 
-def startHumansOnSameTile():
-	"Returns true if all human units should	start on the same tile"
-	return False
-
 #----------------------------------------------
 """Helpers"""
 #----------------------------------------------
