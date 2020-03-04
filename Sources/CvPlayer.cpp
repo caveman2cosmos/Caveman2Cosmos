@@ -4782,11 +4782,11 @@ void CvPlayer::dumpStats() const
 		logBBAI("            Commerce trade yield: %d", pLoopCity->getTradeYield(YIELD_COMMERCE));
 		logBBAI("            Properties:");
 
-		CvProperties* pProperties = pLoopCity->getGameObject()->getProperties();
+		const CvProperties* pProperties = pLoopCity->getGameObject()->getProperties();
 
 		for(int iJ = 0; iJ < pProperties->getNumProperties(); iJ++)
 		{
-			PropertyTypes	eProperty = (PropertyTypes)pProperties->getProperty(iJ);
+			const PropertyTypes eProperty = (PropertyTypes)pProperties->getProperty(iJ);
 
 			logBBAI("                %S: value(%d) change(%d)", GC.getPropertyInfo(eProperty).getDescription(), pProperties->getValue(iJ), pProperties->getChangeByProperty(eProperty));
 
@@ -4796,14 +4796,14 @@ void CvPlayer::dumpStats() const
 
 		for(int iJ = 0; iJ < pProperties->getNumProperties(); iJ++)
 		{
-			PropertyTypes eProperty = (PropertyTypes)pProperties->getProperty(iJ);
-			CvPropertyInfo& kInfo = GC.getPropertyInfo(eProperty);
+			const PropertyTypes eProperty = (PropertyTypes)pProperties->getProperty(iJ);
+			const CvPropertyInfo& kInfo = GC.getPropertyInfo(eProperty);
 
-			int num = kInfo.getNumPropertyBuildings();
+			const int num = kInfo.getNumPropertyBuildings();
 
 			for (int i = 0; i < num; i++)
 			{
-				PropertyBuilding& kBuilding = kInfo.getPropertyBuilding(i);
+				const PropertyBuilding& kBuilding = kInfo.getPropertyBuilding(i);
 				if (pLoopCity->getNumBuilding(kBuilding.eBuilding) > 0)
 				{
 					logBBAI("                %S: %S", kInfo.getDescription(), GC.getBuildingInfo(kBuilding.eBuilding).getDescription());
