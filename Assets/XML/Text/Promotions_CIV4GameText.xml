@@ -915,7 +915,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ASSASSIN_TEXT</Tag>
 		<English>[ICON_BULLET]Trait - Assassination: %D1_Change</English>
-		<French>[ICON_BULLET]Trait - Assassination: %D1_Change</French>
+		<French>[ICON_BULLET]Trait - Assassinat: %D1_Change</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ASTONISHING_ACCUMEN</Tag>
@@ -4608,30 +4608,37 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURE_AFRICAN</Tag>
 		<English>African</English>
+		<French>Africain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURE_ASIAN</Tag>
 		<English>Asian</English>
+		<French>Asiatique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURE_EUROPEAN</Tag>
 		<English>European</English>
+		<French>Européen</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURE_MIDDLE_EASTERN</Tag>
 		<English>Middle Eastern</English>
+		<French>Moyen-Orient</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURE_NORTH_AMERICAN</Tag>
 		<English>North American</English>
+		<French>Nord-américain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURE_OCEANIAN</Tag>
 		<English>Oceanian</English>
+		<French>Océanique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURE_SOUTH_AMERICAN</Tag>
 		<English>South American</English>
+		<French>Sud-américain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CURE_AFFLICTION_TEXT</Tag>
@@ -8714,6 +8721,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INITIATIVE1</Tag>
 		<English>Initiative I</English>
+		<French>Initiative I</French>
 		<Italian>Iniziativa I</Italian>
 		<Spanish>Iniciativa I</Spanish>
 		<Polish>Inicjatywa I</Polish>
@@ -8721,6 +8729,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INITIATIVE2</Tag>
 		<English>Initiative II</English>
+		<French>Initiative II</French>
 		<Italian>Iniziativa II</Italian>
 		<Spanish>Iniciativa II</Spanish>
 		<Polish>Inicjatywa II</Polish>
@@ -8728,6 +8737,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INITIATIVE3</Tag>
 		<English>Initiative III</English>
+		<French>Initiative III</French>
 		<Italian>Iniziativa III</Italian>
 		<Spanish>Iniciativa III</Spanish>
 		<Polish>Inicjatywa III</Polish>
@@ -8735,6 +8745,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INITIATIVE4</Tag>
 		<English>Initiative IV</English>
+		<French>Initiative IV</French>
 		<Italian>Iniziativa IV</Italian>
 		<Spanish>Iniciativa IV</Spanish>
 		<Polish>Inicjatywa IV</Polish>
@@ -9093,6 +9104,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_KANAI</Tag>
 		<English>Kanai</English>
+		<French>Kanaï</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_KEEN_EARS1</Tag>
@@ -15538,6 +15550,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SUPER_CAVITATION</Tag>
 		<English>Super Cavitation</English>
+		<French>Supercavitation</French>
 		<German>Super-Kavitation</German>
 		<Italian>Super Cavitazione</Italian>
 		<Spanish>Supercavitación</Spanish>
@@ -15546,7 +15559,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SUPER_GUERRILLA</Tag>
 		<English>Super Guerrilla</English>
-		<French>Super Guerilla</French>
+		<French>Super Guérilla</French>
 		<German>Superguerrilla</German>
 		<Italian>Super-guerrigliero</Italian>
 		<Spanish>Súperguerrilla</Spanish>
@@ -17040,6 +17053,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAIDAN</Tag>
 		<English>Waidan</English>
+		<French>Alchimie Waidan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WALL_BREAKER</Tag>

@@ -288,12 +288,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_MEEK_PROMOTION</Tag>
 		<English>Meek Promotion Line</English>
-		<French>Spécialisation Meek</French>
+		<French>Spécialisation Doux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_SEAFARING_PROMOTION</Tag>
 		<English>Seafaring Promotion Line</English>
-		<French>Spécialisation Seafaring</French>
+		<French>Spécialisation Marin</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_NOMADIC_PROMOTION</Tag>
@@ -473,17 +473,17 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_PROTECTIVE1</Tag>
 		<English>Protective I</English>
-		<French>Protective I</French>
+		<French>Protecteur I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_PROTECTIVE2</Tag>
 		<English>Protective II</English>
-		<French>Protective II</French>
+		<French>Protecteur II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_PROTECTIVE3</Tag>
 		<English>Protective III</English>
-		<French>Protective III</French>
+		<French>Protecteur III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_NEGLIGENT</Tag>
@@ -528,42 +528,42 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MEEK</Tag>
 		<English>Meek</English>
-		<French>Meek</French>
+		<French>Doux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MEEK1</Tag>
 		<English>Meek I</English>
-		<French>Meek I</French>
+		<French>Doux I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MEEK2</Tag>
 		<English>Meek II</English>
-		<French>Meek II</French>
+		<French>Doux II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MEEK3</Tag>
 		<English>Meek III</English>
-		<French>Meek III</French>
+		<French>Doux III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SEAFARING</Tag>
 		<English>Seafaring</English>
-		<French>Seafaring</French>
+		<French>Marin</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SEAFARING1</Tag>
 		<English>Seafaring I</English>
-		<French>Seafaring I</French>
+		<French>Marin I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SEAFARING2</Tag>
 		<English>Seafaring II</English>
-		<French>Seafaring II</French>
+		<French>Marin II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SEAFARING3</Tag>
 		<English>Seafaring III</English>
-		<French>Seafaring III</French>
+		<French>Marin III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_NOMADIC</Tag>
@@ -588,22 +588,22 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_AERIAL</Tag>
 		<English>Aerial</English>
-		<French>Aerial</French>
+		<French>Aérien</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_AERIAL_STRATEGIES</Tag>
 		<English>Aerial Strategies</English>
-		<French>Aerial Strategies</French>
+		<French>Stratégies Aériennes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_AERIAL_WEAPONRY</Tag>
 		<English>Aerial Weaponry</English>
-		<French>Aerial Weaponry</French>
+		<French>Armement Aérien</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_AERIAL_SUPERIORITY</Tag>
 		<English>Aerial Superiority</English>
-		<French>Aerial Superiority</French>
+		<French>Supériorité Aérienne</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DEVOTION</Tag>

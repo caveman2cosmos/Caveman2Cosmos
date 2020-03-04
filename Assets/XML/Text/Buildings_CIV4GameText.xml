@@ -7610,131 +7610,162 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_LIANGZHU_STRATEGY</Tag>
 		<English>Flavour culture for the Chinese culture. Allows special Jade buildings and trade goods.</English>
-		<French>Flavour culture for the Chinese culture. Allows special Jade buildings and trade goods.</French>
+		<French>Culture favorite pour la culture chinoise. Permet des bâtiments spéciaux en jade et des biens commerciaux.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE</Tag>
 		<English>Active Culture</English>
+		<French>Culture Active</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_AFRICAN</Tag>
 		<English>C.Ac. African</English>
+		<French>Cult. Act. Africaine</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_ASIAN</Tag>
 		<English>C.Ac. Asian</English>
+		<French>Cult. Act. Asiatique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_EUROPEAN</Tag>
 		<English>C.Ac. European</English>
+		<French>Cult. Act. Européenne</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</Tag>
 		<English>C.Ac. Middle Eastern</English>
+		<French>Cult. Act. du Moyen-Orient</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_NEANDERTHAL</Tag>
 		<English>C.Ac. Neanderthal</English>
+		<French>Cult. Act. Néanderthal</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</Tag>
 		<English>C.Ac. North American</English>
+		<French>Cult. Act. Nord-américaine</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_OCEANIAN</Tag>
 		<English>C.Ac. Oceanian</English>
+		<French>Cult. Act. Océanique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Tag>
 		<English>C.Ac. = Culture Active[NEWLINE] This building shows that the culture is an integrated and recognized part of your nation's culture.</English>
+		<French>Cult. Act. = Culture active[NEWLINE] Ce bâtiment montre que la culture fait partie intégrante et reconnue de la culture de votre nation.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</Tag>
 		<English>C.Ac. South American</English>
+		<French>Cult. Act. Sud-américaine</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED</Tag>
 		<English>Adopted Culture</English>
+		<French>Culture Adoptée</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_AFRICAN</Tag>
 		<English>C.Ad. African</English>
+		<French>Cult. Adopt. Africaine</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_ASIAN</Tag>
 		<English>C.Ad. Asian</English>
+		<French>Cult. Adopt. Asiatique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_EUROPEAN</Tag>
 		<English>C.Ad. European</English>
+		<French>Cult. Adopt. Européenne</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_MIDDLE_EASTERN</Tag>
 		<English>C.Ad. Middle Eastern</English>
+		<French>Cult. Adopt. du Moyen-Orient</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_NEANDERTHAL</Tag>
 		<English>C.Ad. Neanderthal</English>
+		<French>Cult. Adopt. Néanderthal</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_NORTH_AMERICAN</Tag>
 		<English>C.Ad. North American</English>
+		<French>Cult. Adopt. Nord-américaine</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_OCEANIAN</Tag>
 		<English>C.Ad. Oceanian</English>
+		<French>Cult. Adopt. Océanique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Tag>
-		<English>C.Ad. = Culture Adopted[NEWLINE]By owning 3 cities with the same foreign (Not your native culture) "Local Culture" you will get that foreign culture as an "Adopted Culture".</English>
+		<English>C.Ad. = Culture Adopted[NEWLINE] En possédant 3 villes avec la même "culture locale" étrangère (pas votre culture d'origine), vous obtiendrez cette culture étrangère en tant que "culture adoptée".</English>
+		<French>Cult. Adopt. = Culture adoptée : </French>		
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_SOUTH_AMERICAN</Tag>
 		<English>C.Ad. South American</English>
+		<French>Cult. Adopt. Sud-américaine</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_BARBARIAN</Tag>
 		<English>Barbarian Culture</English>
+		<French>Culture Barbare</French>		
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL</Tag>
 		<English>Local Culture</English>
+		<French>Culture Locale</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_AFRICAN</Tag>
 		<English>C.L. African</English>
+		<French>Cult. Loc. Africaine</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_ASIAN</Tag>
 		<English>C.L. Asian</English>
+		<French>Cult. Loc. Asiatique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_EUROPEAN</Tag>
 		<English>C.L. European</English>
+		<French>Cult. Loc. Européenne</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</Tag>
 		<English>C.L. Middle Eastern</English>
+		<French>Cult. Loc. du Moyen-Orient</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_NEANDERTHAL</Tag>
 		<English>C.L. Neanderthal</English>
+		<French>Cult. Loc. Néanderthal</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</Tag>
 		<English>C.L. North American</English>
+		<French>Cult. Loc. Nord-américaine</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_OCEANIAN</Tag>
 		<English>C.L. Oceanian</English>
+		<French>Cult. Loc. Océanique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Tag>
 		<English>C.L. = Culture Local[NEWLINE]Each city has one or more local cultures, settlers bring these local cultures from the city they originate from to the new city they found. When the culture is made active, either by being your native culture or by becoming an adopted culture, it will be possible to build these local cultures.</English>
+		<French>Cult. Loc. = Culture localeAfricaine[NEWLINE] Chaque ville a une ou plusieurs cultures locales, les colons amènent ces cultures locales de la ville dont ils sont originaires à la nouvelle ville qu'ils ont trouvée. Lorsque la culture sera rendue active, soit en étant votre culture d'origine, soit en devenant une culture adoptée, il sera possible de construire ces cultures locales.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</Tag>
 		<English>C.L. South American</English>
+		<French>Cult. Loc. Sud-américaine</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE</Tag>
@@ -7759,42 +7790,52 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_AFRICAN</Tag>
 		<English>C.N. African</English>
+		<French>Cult. Orig. Africaine</French>		
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_ASIAN</Tag>
 		<English>C.N. Asian</English>
+		<French>Cult. Orig. Asiatique</French>		
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_EUROPEAN</Tag>
 		<English>C.N. European</English>
+		<French>Cult. Orig. Européenne</French>		
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</Tag>
 		<English>C.N. Middle Eastern</English>
+		<French>Cult. Orig. du Moyen-Orient</French>		
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_NEANDERTHAL</Tag>
 		<English>C.N. Neanderthal</English>
+		<French>Cult. Orig. Néanderthal</French>		
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</Tag>
 		<English>C.N. North American</English>
+		<French>Cult. Orig. Nord-américaine</French>		
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_OCEANIAN</Tag>
 		<English>C.N. Oceanian</English>
+		<French>Cult. Orig. Océanique</French>		
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Tag>
 		<English>C.N. = Culture Native[NEWLINE]Every civilization have one explicit native culture.</English>
+		<French>Cult. Orig. = Culture d'Origine[NEWLINE]Chaque civilisation a une culture native explicite.</French>		
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</Tag>
 		<English>C.N. South American</English>
+		<French>Cult. Orig. Sud-américaine</French>		
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_NEANDERTHAL</Tag>
 		<English>C.N. Neanderthal Culture</English>
+		<French>Culture Néanderthal</French>		
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_PEDIA</Tag>
@@ -30175,7 +30216,7 @@ Un aspect horrible d'être trop étiré sur le support est les bruits forts de c
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNSANCTIONED_ASSASSINS_DEN</Tag>
 		<English>Assassin's Den (Unsanctioned)</English>
-		<French>Assassin's Den (Impuni)</French>
+		<French>Repaire d'Assassins (Impuni)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNSANCTIONED_BANDITS_HIDEOUT1</Tag>

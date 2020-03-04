@@ -5227,6 +5227,11 @@
 		<Polish>[NEWLINE]Stagnacja: %d1/%d2 [ICON_FOOD]</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CITY_TAB_CLOSE_TAB</Tag>
+		<English>Close tab</English>
+		<French>Fermer l'onglet</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_FOOD_STARVE</Tag>
 		<English>[NEWLINE]%d1 [ICON_BAD_FOOD]/Turn[NEWLINE][COLOR_WARNING_TEXT]STARVATION: %d2/%d3 [ICON_FOOD][COLOR_REVERT]</English>
 		<French>[NEWLINE]%d1 [ICON_BAD_FOOD]/tour[NEWLINE][COLOR_WARNING_TEXT]FAMINE: %d2/%d3 [ICON_FOOD][COLOR_REVERT]</French>
@@ -6809,7 +6814,7 @@ Time Frame: 12 000 BC - 1200 BC</English>
 		<Tag>TXT_KEY_ERA_CLASSICAL</Tag>
 		<English>Classical</English>
 		<French>
-			<Text>Ere classique</Text>
+			<Text>Classique</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -6905,7 +6910,7 @@ Time Frame: 2300 AD - 3000 AD</English>
 		<Tag>TXT_KEY_ERA_INDUSTRIAL</Tag>
 		<English>Industrial</English>
 		<French>
-			<Text>Ere industrielle</Text>
+			<Text>Industrielle</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -7593,6 +7598,16 @@ Time Frame: 2150 AD - 2300 AD</English>
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Jednostka</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOBJECT_BUILDING</Tag>
+		<English>Building</English>
+		<French>Bâtiment</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOBJECT_WONDER</Tag>
+		<English>Wonders</English>
+		<French>Merveilles</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPEED_BLITZ</Tag>
@@ -26399,7 +26414,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	<TEXT>
 		<Tag>TXT_KEY_XP_TOTAL</Tag>
 		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 Total XP.[COLOR_REVERT]</English>
-		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]Total EXP : %D1[COLOR_REVERT]</French>
+		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]Total d'EXP : %D1[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 [NUM1:Erfahrungspunkt:Erfahrungspunkte][COLOR_REVERT]</German>
 		<Polish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 Całkowita ilość XP.[COLOR_REVERT]</Polish>
 	</TEXT>
