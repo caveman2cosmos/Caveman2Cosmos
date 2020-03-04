@@ -2349,7 +2349,7 @@ Consider removing freeUnitClass from civilization info as this is the only place
 
 bool CvPlayer::addStartUnitAI(const UnitAITypes eUnitAI, const int iCount)
 {
-	UnitTypes eBestUnit = NO_UNIT;
+	UnitTypes eUnit = NO_UNIT;
 	int iBestValue = 0;
 
 	// Temp solution to get Wrub of the neanderthals to start with neanderthal units.
@@ -2410,50 +2410,21 @@ The "BonusTypes neanderthal" variable can be removed when that is done. and this
 			}
 			if (iValue > iBestValue)
 			{
-				eBestUnit = (UnitTypes) iI;
+				eUnit = (UnitTypes) iI;
 				iBestValue = iValue;
 			}
 		}
 	}
-	if (eBestUnit != NO_UNIT)
+	if (eUnit != NO_UNIT)
 	{
+		CvPlot* pBestPlot = getStartingPlot();
 		for (int iI = 0; iI < iCount; iI++)
 		{
-			addStartUnit(eBestUnit, eUnitAI);
+			initUnit(eUnit, pBestPlot->getX(), pBestPlot->getY(), eUnitAI, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 		}
 		return true;
 	}
 	return false;
-}
-
-void CvPlayer::addStartUnit(const UnitTypes eUnit, const UnitAITypes eUnitAI)
-{
-	CvPlot* pBestPlot = NULL;
-	if (!GC.getUnitInfo(eUnit).isFound())
-	{
-		bool startOnSameTile = false;
-		if (!Cy::call_optional(gDLL->getPythonIFace()->getMapScriptModule(), "startHumansOnSameTile", startOnSameTile) || !startOnSameTile)
-		{
-			const int iRandOffset = GC.getGame().getSorenRandNum(NUM_CITY_PLOTS, "Place Units (Player)");
-
-			for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
-			{
-				CvPlot* pLoopPlot = plotCity(getStartingPlot()->getX(), getStartingPlot()->getY(), ((iI + iRandOffset) % NUM_CITY_PLOTS));
-
-				if (pLoopPlot != NULL && pLoopPlot->getArea() == getStartingPlot()->getArea()
-				&& !pLoopPlot->isImpassable(getTeam()) && !pLoopPlot->isUnit() && !pLoopPlot->isGoody())
-				{
-					pBestPlot = pLoopPlot;
-					break;
-				}
-			}
-		}
-	}
-	if (pBestPlot == NULL)
-	{
-		pBestPlot = getStartingPlot();
-	}
-	initUnit(eUnit, pBestPlot->getX(), pBestPlot->getY(), eUnitAI, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 }
 
 /************************************************************************************************/

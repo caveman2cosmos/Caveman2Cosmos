@@ -4639,13 +4639,10 @@ def normalizeAddLakes(): return
 def normalizeRemoveBadFeatures(): return
 def normalizeRemoveBadTerrain(): return
 def normalizeAddFoodBonuses(): return
-def normalizeAddExtras(): return
 def normalizeAddGoodTerrain(): return
-
-def startHumansOnSameTile():
+def normalizeAddExtras():
 	# This is the last function processed before the game begins.
-	# Clean up memory usage.
-	return True
+	return
 
 ###############################################################################
 ## Additional Global functions
