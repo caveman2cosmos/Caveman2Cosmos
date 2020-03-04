@@ -8019,7 +8019,7 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<bStateReligion>1</bStateReligion>
-			<NotGameOption>GAMEOPTION_NO_INQUISITIONS</NotGameOption>
+			<PrereqGameOption>GAMEOPTION_INQUISITIONS</PrereqGameOption>
 			<PrereqOrCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_INQUISITORIAL</CivicOption>

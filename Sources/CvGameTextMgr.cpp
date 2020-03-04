@@ -11757,7 +11757,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 
 		}
 
-		if (!GC.getGame().isOption(GAMEOPTION_NO_INQUISITIONS))
+		if (GC.getGame().isOption(GAMEOPTION_INQUISITIONS))
 		{
 			if (GC.getTraitInfo(eTrait).isAllowsInquisitions())
 			{
@@ -16613,7 +16613,7 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 		szHelpText.append(gDLL->getText("TXT_KEY_CAN_UPGRADE_ANYWHERE"));
 	}
 
-	if (!GC.getGame().isOption(GAMEOPTION_NO_INQUISITIONS))
+	if (GC.getGame().isOption(GAMEOPTION_INQUISITIONS))
 	{
 		if (GC.getCivicInfo(eCivic).isAllowInquisitions())
 		{
@@ -16622,7 +16622,7 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 		}
 	}
 
-	if (!GC.getGame().isOption(GAMEOPTION_NO_INQUISITIONS))
+	if (GC.getGame().isOption(GAMEOPTION_INQUISITIONS))
 	{
 		if (GC.getCivicInfo(eCivic).isDisallowInquisitions())
 		{

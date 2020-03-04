@@ -15544,7 +15544,7 @@ bool CvCityAI::AI_trainInquisitor()
 {
 	CvPlayerAI& kPlayerAI = GET_PLAYER(getOwner());
 
-	if( GC.getGame().isOption(GAMEOPTION_NO_INQUISITIONS)
+	if( !GC.getGame().isOption(GAMEOPTION_INQUISITIONS)
 	|| !kPlayerAI.isInquisitionConditions() )
 	{
 		return false;

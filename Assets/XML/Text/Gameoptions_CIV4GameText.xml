@@ -791,22 +791,12 @@ If you play with "Start as Minor Civ" then this option will change the rules for
 		<Spanish>El generador aleatorio de mapas no pone en ellos aldeas tribales (con sus típicas "golosinas").</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_NO_INQUISITIONS</Tag>
-		<English>No Inquisitions</English>
-		<French>Pas d'Inquisitions</French>
-		<German>Keine Inquisitionen</German>
-		<Italian>Niente Inquisizioni</Italian>
-		<Spanish>Sin inquisiciones</Spanish>
-		<Polish>Brak Inkwizycji</Polish>
+		<Tag>TXT_KEY_GAMEOPTION_INQUISITIONS</Tag>
+		<English>Inquisitions</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_NO_INQUISITIONS_HELP</Tag>
-		<English>Disables Inquisitions.  Inquisitors may not be trained and non-state religions may not be purged in order to reduce the threat of rebellion.</English>
-		<French>Désactive les Inquisitions. Les Inquisiteurs ne ne peuvent pas être recrutés et les religions non-officielles ne peuvent pas non plus être éradiquées dans un ville pour en améliorer la stabilité.</French>
-		<German>Die Inquisition wird deaktiviert. Dadurch können keine Inquisitoren ausgebildet werden, und die Möglichkeit zur Entfernung fremder Religionen zur Rebellionsvermeidung entfällt.</German>
-		<Italian>Disattiva le inquisizioni. Gli inquisitori non possono essere reclutati, e le religioni non di stato non possono essere purgate per ridurre il rischio di ribellione.</Italian>
-		<Spanish>Desactiva las inquisiciones. Los inquisidores no pueden ser entrenados y las religiones no oficiales no pueden ser eliminadas para reducir la amenaza de rebelión.</Spanish>
-		<Polish>Wyłącza inkwizycje. Inkwizytorzy mogą prowadzić przesłuchania w miastach gdzie rozwija sie nie narodowa religia, aby, zmniejszyć szanse buntu. Wszystkie konstrukcje religii nie narodowej zostaną zniszczone oraz nie narodowa religia zostanie wyeliminowana.</Polish>
+		<Tag>TXT_KEY_GAMEOPTION_INQUISITIONS_HELP</Tag>
+		<English>Enables Inquisitions. Inquisitors may be trained and non-state religions may be purged in order to reduce the threat of rebellion.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_NEGATIVE_TRAITS</Tag>

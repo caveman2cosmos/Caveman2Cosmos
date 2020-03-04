@@ -12556,13 +12556,13 @@ void CvPlayer::changeRevIdxGoodReligionMod(float fChange)
 
 bool CvPlayer::isInquisitionConditions() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_NO_INQUISITIONS) || getStateReligion() == NO_RELIGION)
+	if (GC.getGame().isOption(GAMEOPTION_INQUISITIONS) || getStateReligion() != NO_RELIGION)
 	{
-		return false;
+		return (m_iInquisitionCount > 0);
 	}
 	else
 	{
-		return (m_iInquisitionCount > 0);
+		return false;
 	}
 }
 
@@ -12571,7 +12571,7 @@ bool CvPlayer::isInquisitionConditions() const
 //{
 //	m_bInquisitionConditions = false;
 //
-//	if (GC.getGame().isOption(GAMEOPTION_NO_INQUISITIONS) || getStateReligion() == NO_RELIGION)
+//	if (!GC.getGame().isOption(GAMEOPTION_INQUISITIONS) || getStateReligion() == NO_RELIGION)
 //	{
 //		return;
 //	}
