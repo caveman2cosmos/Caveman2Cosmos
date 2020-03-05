@@ -28,7 +28,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_CAO_DAI</PrereqReligion>
-			<PrereqBuilding>BUILDING_CAODAI_MONASTERY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_CAODAI_MONASTERY</BuildingType>
+			</PrereqBuildings>
 			<iCost>110</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>

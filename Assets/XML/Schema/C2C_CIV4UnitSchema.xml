@@ -1453,14 +1453,8 @@
 	<ElementType name="bPrereq" content="textOnly" dt:type="boolean"/>
 	<ElementType name="TechOverride" content="textOnly"/>
 	<ElementType name="EraOverride" content="textOnly"/>
-	<ElementType name="PrereqBuilding" content="eltOnly">
-		<element type="BuildingType"/>
-		<element type="bPrereq"/>
-		<element type="TechOverride" minOccurs="0" />
-		<element type="EraOverride" minOccurs="0" />
-	</ElementType>
 	<ElementType name="PrereqBuildings" content="eltOnly">
-		<element type="PrereqBuilding" minOccurs="0" maxOccurs="*"/>
+		<element type="BuildingType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="SupersedingUnits" content="eltOnly">
 		<element type="UnitType"/>
@@ -1470,7 +1464,6 @@
 	<ElementType name="StateReligion" content="textOnly"/>
 	<ElementType name="PrereqReligion" content="textOnly"/>
 	<ElementType name="PrereqCorporation" content="textOnly"/>
-	<ElementType name="PrereqBuilding" content="textOnly"/>
 	<ElementType name="PrereqOrBuildings" content="eltOnly">
 		<element type="BuildingType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
@@ -1968,7 +1961,6 @@
 		<element type="StateReligion" minOccurs="0"/>
 		<element type="PrereqReligion" minOccurs="0"/>
 		<element type="PrereqCorporation" minOccurs="0"/>
-		<element type="PrereqBuilding" minOccurs="0"/>
 		<element type="PrereqOrBuildings" minOccurs="0"/>
 		<element type="PrereqTech" minOccurs="0"/>
 		<element type="TechTypes" minOccurs="0"/>

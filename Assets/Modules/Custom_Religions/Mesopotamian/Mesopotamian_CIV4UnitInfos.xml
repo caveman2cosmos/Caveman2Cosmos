@@ -33,7 +33,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
-			<PrereqBuilding>BUILDING_AN</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_AN</BuildingType>
+			</PrereqBuildings>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>

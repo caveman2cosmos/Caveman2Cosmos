@@ -33,7 +33,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_SCIENTOLOGY</PrereqReligion>
-			<PrereqBuilding>BUILDING_SCIENTOLOGY_MONASTERY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_SCIENTOLOGY_MONASTERY</BuildingType>
+			</PrereqBuildings>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>

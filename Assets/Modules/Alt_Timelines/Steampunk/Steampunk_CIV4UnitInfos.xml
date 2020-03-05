@@ -217,7 +217,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_NEMO_ACADEMY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_NEMO_ACADEMY</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			<BonusType>BONUS_COAL</BonusType>
 			<PrereqBonuses>
@@ -315,7 +317,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_TR_WORKSHOP</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_TR_WORKSHOP</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			<BonusType>BONUS_COAL</BonusType>
 			<PrereqBonuses>
@@ -415,7 +419,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_TR_WORKSHOP</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_TR_WORKSHOP</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			<BonusType>BONUS_COAL</BonusType>
 			<PrereqBonuses>
