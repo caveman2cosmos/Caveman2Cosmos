@@ -1178,7 +1178,6 @@ DPII < Maintenance Modifiers >
 	<ElementType name="SpecialistValids" content="eltOnly">
 		<element type="SpecialistValid" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="BuildingType" content="textOnly"/>
 	<ElementType name="iHappinessChange" content="textOnly" dt:type="int"/>
 	<ElementType name="BuildingHappinessChange" content="eltOnly">
 		<element type="BuildingType"/>
@@ -2379,9 +2378,6 @@ DPII < Revolution Mod End >
 	<ElementType name="bNotCity" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bCapture" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iExtraChance" content="textOnly" dt:type="int"/>
-	<ElementType name="PrereqBuildings" content="eltOnly">
-		<element type="BuildingType" minOccurs="0"/>
-	</ElementType>
 	<ElementType name="ExtraChancePromotion" content="eltOnly">
 		<element type="PromotionType"/>
 		<element type="iExtraChance"/>

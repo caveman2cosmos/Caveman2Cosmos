@@ -33,7 +33,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<PrereqBuilding>BUILDING_DRUID_MONASTERY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
+			</PrereqBuildings>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>

@@ -28,7 +28,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_ASATRU</PrereqReligion>
-			<PrereqBuilding>BUILDING_ASATRU_MONASTERY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_ASATRU_MONASTERY</BuildingType>
+			</PrereqBuildings>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
@@ -92,7 +94,9 @@
 			<ReligionType>RELIGION_ASATRU</ReligionType>
 			<StateReligion>RELIGION_ASATRU</StateReligion>
 			<PrereqReligion>RELIGION_ASATRU</PrereqReligion>
-			<PrereqBuilding>BUILDING_LOKI_SANCTUARY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_LOKI_SANCTUARY</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<PrereqBonuses>
 				<BonusType>BONUS_BRONZE_WARES</BonusType>

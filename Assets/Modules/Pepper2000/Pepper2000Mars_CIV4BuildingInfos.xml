@@ -2155,12 +2155,12 @@
 			</YieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_MARS_MEGACITY</Building>
+					<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_MARS_ARCOLOGY</Building>
+					<BuildingType>BUILDING_MARS_ARCOLOGY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>

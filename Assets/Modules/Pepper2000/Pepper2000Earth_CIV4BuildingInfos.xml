@@ -2199,12 +2199,12 @@
 			</TechTypes>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_MECHATRONICS_LAB</Building>
+					<BuildingType>BUILDING_MECHATRONICS_LAB</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_DIGITAL_OFFICES</Building>
+					<BuildingType>BUILDING_DIGITAL_OFFICES</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -4031,12 +4031,12 @@
 			<iCost>7330</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_NATURAL_LANGUAGE_ALGORITHMS</Building>
+					<BuildingType>BUILDING_NATURAL_LANGUAGE_ALGORITHMS</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_E_STOCK_MARKET</Building>
+					<BuildingType>BUILDING_E_STOCK_MARKET</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -5895,12 +5895,12 @@
 			</YieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_PUBLIC_TRANSPORTATION</Building>
+					<BuildingType>BUILDING_PUBLIC_TRANSPORTATION</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_COMMERCIAL_AIRPORT</Building>
+					<BuildingType>BUILDING_COMMERCIAL_AIRPORT</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -5960,12 +5960,12 @@
 			<iCost>1260</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_METROPOLITAN_ADMINISTRATION</Building>
+					<BuildingType>BUILDING_METROPOLITAN_ADMINISTRATION</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_CAPITAL_ADMINISTRATION</Building>
+					<BuildingType>BUILDING_CAPITAL_ADMINISTRATION</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -7728,7 +7728,7 @@
 			</YieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_INTUITIVE_ALGORITHMS</Building>
+					<BuildingType>BUILDING_INTUITIVE_ALGORITHMS</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -7769,7 +7769,7 @@
 			</YieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_BIOINFO_LAB</Building>
+					<BuildingType>BUILDING_BIOINFO_LAB</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -7811,7 +7811,7 @@
 			</YieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_NANO_RESEARCH_DEPARTMENT</Building>
+					<BuildingType>BUILDING_NANO_RESEARCH_DEPARTMENT</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -9965,7 +9965,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_PALEO_PARK</Building>
+					<BuildingType>BUILDING_PALEO_PARK</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -9996,7 +9996,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_PALEO_PARK</Building>
+					<BuildingType>BUILDING_PALEO_PARK</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -10027,7 +10027,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_PALEO_PARK</Building>
+					<BuildingType>BUILDING_PALEO_PARK</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -10058,7 +10058,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_PALEO_PARK</Building>
+					<BuildingType>BUILDING_PALEO_PARK</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -11593,7 +11593,7 @@
 			<iCost>12630</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_COMPUTER_NETWORK</Building>
+					<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -11826,7 +11826,7 @@
 			<iHappiness>5</iHappiness>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_MEDICAL_CENTER</Building>
+					<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -13207,7 +13207,7 @@
 			<iHappiness>10</iHappiness>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_TIME_MACHINE</Building>
+					<BuildingType>BUILDING_TIME_MACHINE</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -13335,17 +13335,17 @@
 			</YieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_URBAN_HIGH_SPEED_RAIL</Building>
+					<BuildingType>BUILDING_URBAN_HIGH_SPEED_RAIL</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_GRAVITY_TRAIN</Building>
+					<BuildingType>BUILDING_GRAVITY_TRAIN</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>6</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_VACTRAIN_TERMINAL</Building>
+					<BuildingType>BUILDING_VACTRAIN_TERMINAL</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -14382,7 +14382,7 @@
 			</GlobalBuildingProductionModifiers>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_IMMATERIAL_CITY</Building>
+					<BuildingType>BUILDING_IMMATERIAL_CITY</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -20916,7 +20916,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_ENERGY_ISLAND</Building>
+					<BuildingType>BUILDING_ENERGY_ISLAND</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -21651,17 +21651,17 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_JET_AIRCRAFT_FACTORY</Building>
+					<BuildingType>BUILDING_JET_AIRCRAFT_FACTORY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_AIRCRAFT_FACTORY</Building>
+					<BuildingType>BUILDING_AIRCRAFT_FACTORY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</Building>
+					<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>6</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -22249,7 +22249,7 @@
 			</GlobalBuildingProductionModifiers>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_STRATOSPHERIC_TOWER</Building>
+					<BuildingType>BUILDING_STRATOSPHERIC_TOWER</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -22883,12 +22883,12 @@
 			</YieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_GRAVITY_TRAIN</Building>
+					<BuildingType>BUILDING_GRAVITY_TRAIN</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>7</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_VACTRAIN_TERMINAL</Building>
+					<BuildingType>BUILDING_VACTRAIN_TERMINAL</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>7</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -23441,7 +23441,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_MEGATOWER_HOLOGRAM_ADVERTISING</Building>
+					<BuildingType>BUILDING_MEGATOWER_HOLOGRAM_ADVERTISING</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -24030,27 +24030,27 @@
 			<iCost>46830</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_ARCOLOGY</Building>
+					<BuildingType>BUILDING_ARCOLOGY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_COLONY_ARCO</Building>
+					<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_LAUNCH_ARCO</Building>
+					<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_STRATOSPHERIC_TOWER</Building>
+					<BuildingType>BUILDING_STRATOSPHERIC_TOWER</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_SPACESCRAPER2</Building>
+					<BuildingType>BUILDING_SPACESCRAPER2</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -24177,7 +24177,7 @@
 			</GlobalBuildingProductionModifiers>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_CALLISTO_RESUPPLY_BASE</Building>
+					<BuildingType>BUILDING_CALLISTO_RESUPPLY_BASE</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -24249,7 +24249,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_ENCELADUS_BASE</Building>
+					<BuildingType>BUILDING_ENCELADUS_BASE</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>10</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -24280,7 +24280,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_CAPTURED_ASTEROID</Building>
+					<BuildingType>BUILDING_CAPTURED_ASTEROID</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -24311,7 +24311,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_PLANETARIUM</Building>
+					<BuildingType>BUILDING_PLANETARIUM</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -24343,7 +24343,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_IO_BASE</Building>
+					<BuildingType>BUILDING_IO_BASE</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>10</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -24375,7 +24375,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_VENUS_COLONY</Building>
+					<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -24407,7 +24407,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_MARTIAN_GEOLOGY_LAB</Building>
+					<BuildingType>BUILDING_MARTIAN_GEOLOGY_LAB</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -24509,7 +24509,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_ROCKET_FUEL_REFINERY</Building>
+					<BuildingType>BUILDING_ROCKET_FUEL_REFINERY</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>10</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -24541,7 +24541,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_PLANETARIUM</Building>
+					<BuildingType>BUILDING_PLANETARIUM</BuildingType>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -24639,7 +24639,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_TITAN_BASE</Building>
+					<BuildingType>BUILDING_TITAN_BASE</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>10</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -24703,7 +24703,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_OBSERVATORY</Building>
+					<BuildingType>BUILDING_OBSERVATORY</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -24734,7 +24734,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_EUROPA_COLONY</Building>
+					<BuildingType>BUILDING_EUROPA_COLONY</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>10</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -24766,7 +24766,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_JPL</Building>
+					<BuildingType>BUILDING_JPL</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -24812,7 +24812,7 @@
 			</GlobalBuildingProductionModifiers>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_ASTROBIOLOGY_LAB</Building>
+					<BuildingType>BUILDING_ASTROBIOLOGY_LAB</BuildingType>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -24890,7 +24890,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_PLANETARIUM</Building>
+					<BuildingType>BUILDING_PLANETARIUM</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -24969,7 +24969,7 @@
 			<iGlobalHappiness>1</iGlobalHappiness>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_COMMERCIAL_SATELLITES</Building>
+					<BuildingType>BUILDING_COMMERCIAL_SATELLITES</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -25000,7 +25000,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_PHYSICS_LAB</Building>
+					<BuildingType>BUILDING_PHYSICS_LAB</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -25032,32 +25032,32 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_MARTIAN_HYDROPONICS</Building>
+					<BuildingType>BUILDING_MARTIAN_HYDROPONICS</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_MARS_HYDROPONICS</Building>
+					<BuildingType>BUILDING_MARS_HYDROPONICS</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_MARTIAN_VERTICAL_FARM</Building>
+					<BuildingType>BUILDING_MARTIAN_VERTICAL_FARM</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_MARTIAN_EXPANDED_HABITAT</Building>
+					<BuildingType>BUILDING_MARTIAN_EXPANDED_HABITAT</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_MARTIAN_SKYSCRAPER</Building>
+					<BuildingType>BUILDING_MARTIAN_SKYSCRAPER</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_MARTIAN_SOLAR_ARRAY</Building>
+					<BuildingType>BUILDING_MARTIAN_SOLAR_ARRAY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -25392,12 +25392,12 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_LUNAR_BASE</Building>
+					<BuildingType>BUILDING_LUNAR_BASE</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_LUNAR_OUTPOST</Building>
+					<BuildingType>BUILDING_LUNAR_OUTPOST</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>20</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -25485,7 +25485,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_TRITON_BASE</Building>
+					<BuildingType>BUILDING_TRITON_BASE</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>20</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -25516,7 +25516,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_UMBRIEL_BASE</Building>
+					<BuildingType>BUILDING_UMBRIEL_BASE</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>20</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -25606,7 +25606,7 @@
 			</YieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_CISLUNAR_STATION</Building>
+					<BuildingType>BUILDING_CISLUNAR_STATION</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>10</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -25639,17 +25639,17 @@
 			<FreeBuilding>BUILDING_LOFSTROM_LOOP</FreeBuilding>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_LOFSTROM_LOOP</Building>
+					<BuildingType>BUILDING_LOFSTROM_LOOP</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_SPACE_CITY</Building>
+					<BuildingType>BUILDING_SPACE_CITY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_STRATOSPHERIC_MAGLEV</Building>
+					<BuildingType>BUILDING_STRATOSPHERIC_MAGLEV</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -26215,7 +26215,7 @@
 			</YieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_MARS_MAGLEV</Building>
+					<BuildingType>BUILDING_MARS_MAGLEV</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -26678,7 +26678,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_CAPTURED_ASTEROID</Building>
+					<BuildingType>BUILDING_CAPTURED_ASTEROID</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -26758,7 +26758,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_INTERSTELLAR_COLONY</Building>
+					<BuildingType>BUILDING_INTERSTELLAR_COLONY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -27117,12 +27117,12 @@
 			</PrereqOrBuildings>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_HOCKEY_RINK</Building>
+					<BuildingType>BUILDING_HOCKEY_RINK</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_ATHLETIC_MEGACOMPLEX</Building>
+					<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>

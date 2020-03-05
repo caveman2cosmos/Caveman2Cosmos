@@ -33,7 +33,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_CANAANISM</PrereqReligion>
-			<PrereqBuilding>BUILDING_CANAANISM_MONASTERY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_CANAANISM_MONASTERY</BuildingType>
+			</PrereqBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>

@@ -935,14 +935,6 @@
 		<element type="City" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="BuildingType" content="textOnly"/>
-	<ElementType name="BuildingType" content="textOnly"/>
-	<ElementType name="Building" content="eltOnly">
-		<element type="BuildingType"/>
-		<element type="BuildingType"/>
-	</ElementType>
-	<ElementType name="Buildings" content="eltOnly">
-		<element type="Building" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
 	<ElementType name="UnitType" content="textOnly"/>
 	<ElementType name="iFreeUnits" content="textOnly" dt:type="int"/>
 	<ElementType name="FreeUnit" content="eltOnly">
@@ -1018,7 +1010,6 @@
 		<element type="iSpawnRateModifier" minOccurs="0"/>
 		<element type="iSpawnRateNPCPeaceModifier" minOccurs="0"/>
 		<element type="Cities" minOccurs="0"/>
-		<element type="Buildings" minOccurs="0"/>
 		<element type="FreeUnits" minOccurs="0"/>
 		<element type="FreeBuildings" minOccurs="0"/>
 		<element type="FreeTechs" minOccurs="0"/>

@@ -2089,12 +2089,12 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_APOTHECARY_SHOP</Building>
+					<BuildingType>BUILDING_APOTHECARY_SHOP</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_PHARMACY</Building>
+					<BuildingType>BUILDING_PHARMACY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2156,7 +2156,7 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_ARTIST_GUILD</Building>
+					<BuildingType>BUILDING_ARTIST_GUILD</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2218,7 +2218,7 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_BAKERY</Building>
+					<BuildingType>BUILDING_BAKERY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2284,12 +2284,12 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_FORGE</Building>
+					<BuildingType>BUILDING_FORGE</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_FOUNDRY</Building>
+					<BuildingType>BUILDING_FOUNDRY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2352,12 +2352,12 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_BUTCHERY</Building>
+					<BuildingType>BUILDING_BUTCHERY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_MEATPACKING_PLANT</Building>
+					<BuildingType>BUILDING_MEATPACKING_PLANT</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2416,7 +2416,7 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_CARPENTERS_WORKSHOP</Building>
+					<BuildingType>BUILDING_CARPENTERS_WORKSHOP</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2482,12 +2482,12 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_PAPER_MAKER</Building>
+					<BuildingType>BUILDING_PAPER_MAKER</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_PAPER_FACTORY</Building>
+					<BuildingType>BUILDING_PAPER_FACTORY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2553,12 +2553,12 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_CRAFT_HUT</Building>
+					<BuildingType>BUILDING_CRAFT_HUT</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_AMERICAN_MALL</Building>
+					<BuildingType>BUILDING_AMERICAN_MALL</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2628,17 +2628,17 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_SEAMSTRESS_HUT</Building>
+					<BuildingType>BUILDING_SEAMSTRESS_HUT</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_TEXTILE_MILL</Building>
+					<BuildingType>BUILDING_TEXTILE_MILL</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_TEXTILE_FACTORY</Building>
+					<BuildingType>BUILDING_TEXTILE_FACTORY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2704,12 +2704,12 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_KNIGHT_STABLE</Building>
+					<BuildingType>BUILDING_KNIGHT_STABLE</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_MODERN_STABLE</Building>
+					<BuildingType>BUILDING_MODERN_STABLE</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2771,7 +2771,7 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_FISHMONGER</Building>
+					<BuildingType>BUILDING_FISHMONGER</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2833,7 +2833,7 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_GLASSSMITH</Building>
+					<BuildingType>BUILDING_GLASSSMITH</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2895,7 +2895,7 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_JEWELLERY</Building>
+					<BuildingType>BUILDING_JEWELLERY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2961,12 +2961,12 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_GROCER</Building>
+					<BuildingType>BUILDING_GROCER</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_SUPERMARKET</Building>
+					<BuildingType>BUILDING_SUPERMARKET</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -3028,7 +3028,7 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_LUMBER_CAMP</Building>
+					<BuildingType>BUILDING_LUMBER_CAMP</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -3094,12 +3094,12 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_BRICK_MASON</Building>
+					<BuildingType>BUILDING_BRICK_MASON</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_BRICK_FACTORY</Building>
+					<BuildingType>BUILDING_BRICK_FACTORY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -3165,12 +3165,12 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_BAZAAR</Building>
+					<BuildingType>BUILDING_BAZAAR</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_AMERICAN_MALL</Building>
+					<BuildingType>BUILDING_AMERICAN_MALL</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -3232,7 +3232,7 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_POTTERS_WORKSHOP</Building>
+					<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -3298,7 +3298,7 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_SERVANTS_QUARTERS</Building>
+					<BuildingType>BUILDING_SERVANTS_QUARTERS</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -3360,7 +3360,7 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_TAILOR_SHOP</Building>
+					<BuildingType>BUILDING_TAILOR_SHOP</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -3426,12 +3426,12 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_PUB</Building>
+					<BuildingType>BUILDING_PUB</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_DIVE_BAR</Building>
+					<BuildingType>BUILDING_DIVE_BAR</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
