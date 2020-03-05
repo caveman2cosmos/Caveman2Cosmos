@@ -112,6 +112,10 @@ def showDomesticAdvisor(argsList):
 	if CyGame().getActivePlayer() != -1:
 		screenMap[DOMESTIC_ADVISOR].interfaceScreen()
 
+def showMilitaryAdvisor():
+	if CyGame().getActivePlayer() != -1:
+		screenMap[MILITARY_ADVISOR].interfaceScreen()
+
 def showEspionageAdvisor():
 	if CyGame().getActivePlayer() != -1:
 		screenMap[ESPIONAGE_ADVISOR].interfaceScreen()

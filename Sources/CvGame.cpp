@@ -7802,7 +7802,6 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 		iRand /= 2;
 	}
 
-	if (!isOption(GAMEOPTION_NO_BARBARIAN_CIV))
 	// Odds based on handicap
 	if (iRand >= 10 * GC.getHandicapInfo(getHandicapType()).getBarbarianCityCreationProb())
 	{
@@ -7835,7 +7834,7 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 	int iOccupiedAreaMultiplier = 50;
 	int iOwnedPlots = 0;
 
-	if(!isOption(GAMEOPTION_NO_BARBARIAN_CIV))
+	if (isOption(GAMEOPTION_BARBARIAN_CIV))
 	{
 		for (int iI = 0; iI < GC.getMAX_PLAYERS(); iI++)
 		{
@@ -7892,7 +7891,7 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 				iValue *= 100 + getSorenRandNum(50, "Variance");
 				iValue /= 100;
 
-				if (!isOption(GAMEOPTION_NO_BARBARIAN_CIV))
+				if (isOption(GAMEOPTION_BARBARIAN_CIV))
 				{
 					if (pLoopPlot->area()->getNumCities() == pLoopPlot->area()->getCitiesPerPlayer(ePlayer))
 					{
@@ -8082,7 +8081,7 @@ void CvGame::createBarbarianUnits()
 		}
 
 		// Give barb cities in occupied areas free workers so that if the city settles it has some infrastructure
-		if (!isOption(GAMEOPTION_NO_BARBARIAN_CIV))
+		if (isOption(GAMEOPTION_BARBARIAN_CIV))
 		{
 			const int iBarbCities = pLoopArea->getCitiesPerPlayer(BARBARIAN_PLAYER);
 
@@ -11447,16 +11446,12 @@ bool CvGame::foundBarbarianCity()
 
 			if( bOccupiedArea )
 			{
-				iValue += (!isOption(GAMEOPTION_NO_BARBARIAN_CIV) ? 1000 : 250);
+				iValue += (isOption(GAMEOPTION_BARBARIAN_CIV) ? 1000 : 250);
 			}
-			else
+			else if (isOption(GAMEOPTION_BARBARIAN_CIV))
 			{
-				if( !isOption(GAMEOPTION_NO_BARBARIAN_CIV) )
-				{
-					bValid = false;
-				}
+				bValid = false;
 			}
-
 		}
 
 		if (bValid)

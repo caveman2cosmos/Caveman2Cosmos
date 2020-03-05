@@ -752,7 +752,7 @@ void CvGameObject::eventPropertyChanged(PropertyTypes eProperty, int iNewValue)
 void CvGameObjectCity::eventPropertyChanged(PropertyTypes eProperty, int iNewValue)
 {
 	//CvString szBuffer;
-	CvPropertyInfo& kInfo = GC.getPropertyInfo(eProperty);
+	const CvPropertyInfo& kInfo = GC.getPropertyInfo(eProperty);
 	const int iNum = kInfo.getNumPropertyBuildings();
 	//TB Combat Mods (disease special manifestation and removal system)
 	//PropertyTypes eDiseaseType = (PropertyTypes)GC.getInfoTypeForString("PROPERTY_DISEASE");
@@ -809,7 +809,7 @@ void CvGameObjectUnit::eventPropertyChanged(PropertyTypes eProperty, int iNewVal
 {
 	PROFILE_FUNC();
 
-	CvPropertyInfo& kInfo = GC.getPropertyInfo(eProperty);
+	const CvPropertyInfo& kInfo = GC.getPropertyInfo(eProperty);
 	const int iNum = kInfo.getNumPropertyPromotions();
 
 	for (int i=0; i<iNum; i++)

@@ -65975,7 +65975,7 @@
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 			<ExtendsBuildingClass>BUILDINGCLASS_CASTLE</ExtendsBuildingClass>
-			<NotGameOption>GAMEOPTION_NO_ZOC</NotGameOption>
+			<PrereqGameOption>GAMEOPTION_ZONE_OF_CONTROL</PrereqGameOption>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
 			<!-- Construction cost -->

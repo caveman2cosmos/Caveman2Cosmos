@@ -57,7 +57,7 @@ protected:
 	CvGameObjectPlayer m_GameObject;
 
 public:
-	// < M.A.D. Nukes Start >
+	// M.A.D. Nukes
 	int getMADDeterrent() const;
 	void setMADDeterrent(int iValue);
 	void changeMADDeterrent(int iValue);
@@ -78,46 +78,25 @@ protected:
 	int m_iMADOutgoing;
 	int m_iMADNukesCount;
 	bool m_bMADTrigger[MAX_PLAYERS];
+	// ! M.A.D. Nukes
 
 public:
-	// < M.A.D. Nukes End   >
 
 
 	DllExport void init(PlayerTypes eID);
 	DllExport void setupGraphical();
 	DllExport void reset(PlayerTypes eID = NO_PLAYER, bool bConstructorCall = false);
 
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD                      12/30/08                                jdog5000      */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-		// REVOLUTION_MOD:  Customized version of initInGame below
+	// REVOLUTION_MOD:  Customized version of initInGame below
 	void resetPlotAndCityData();
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD                       END                                                  */
-	/************************************************************************************************/
 
-	/************************************************************************************************/
-	/* CHANGE_PLAYER                          12/30/08                                jdog5000      */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
 	void logMsg(char* format, ...);
 	void changePersonalityType();
 	void resetCivTypeEffects();
 	void changeLeader(LeaderHeadTypes eNewLeader);
 	void changeCiv(CivilizationTypes eNewCiv);
 	void setIsHuman(bool bNewValue);
-	/************************************************************************************************/
-	/* CHANGE_PLAYER                           END                                                  */
-	/************************************************************************************************/
 
-	/************************************************************************************************/
-	/* REVOLUTION_MOD                         01/04/09                                jdog5000      */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
 	void initInGame(PlayerTypes eID, bool bSetAlive);
 	void setIsRebel(bool bNewValue);
 	bool isRebel() const;
@@ -127,11 +106,8 @@ public:
 	int getStabilityIndexAverage() const;
 	void setStabilityIndexAverage(int iNewValue);
 	void updateStabilityIndexAverage();
-	/************************************************************************************************/
-	/* REVOLUTION_MOD                          END                                                  */
-	/************************************************************************************************/
-	//protected:
 
+	//protected:
 	void uninit();
 
 public:
@@ -149,7 +125,6 @@ public:
 /************************************************************************************************/
 	int getBestUnitTypeCargoVolume(UnitAITypes eUnitAI) const;
 	bool addStartUnitAI(const UnitAITypes eUnitAI, const int iCount);
-	void addStartUnit(const UnitTypes eUnit, const UnitAITypes eUnitAI = NO_UNITAI);
 
 	int startingPlotRange() const; // Exposed to Python
 	bool startingPlotWithinRange(CvPlot* pPlot, PlayerTypes ePlayer, int iRange, int iPass) const; // Exposed to Python

@@ -1,41 +1,6 @@
 Version=11
 BeginGame
 	Speed=GAMESPEED_NORMAL
-	Option=GAMEOPTION_NO_CITY_RAZING
-	Option=GAMEOPTION_FLIPPING_AFTER_CONQUEST
-	Option=GAMEOPTION_NO_BARBARIANS
-	Option=GAMEOPTION_NO_VASSAL_STATES
-	Option=GAMEOPTION_NO_REVOLUTION
-	Option=GAMEOPTION_NO_BARBARIAN_CIV
-	Option=GAMEOPTION_SAD
-	Option=GAMEOPTION_ADVANCED_DIPLOMACY
-	Option=GAMEOPTION_UNLIMITED_WONDERS
-	Option=GAMEOPTION_NO_ZOC
-	Option=GAMEOPTION_GREAT_COMMANDERS
-	Option=GAMEOPTION_ADVANCED_ECONOMY
-	Option=GAMEOPTION_REALISTIC_CULTURE_SPREAD
-	Option=GAMEOPTION_LARGER_CITIES
-	Option=GAMEOPTION_REALISTIC_CORPORATIONS
-	Option=GAMEOPTION_UNITED_NATIONS
-	Option=GAMEOPTION_ADVANCED_ESPIONAGE
-	Option=GAMEOPTION_ADVANCED_NUKES
-	Option=GAMEOPTION_DIVINE_PROPHETS
-	Option=GAMEOPTION_NO_CITY_LIMITS
-	Option=GAMEOPTION_INFINITE_XP
-	Option=GAMEOPTION_LEADERHEAD_LEVELUPS
-	Option=GAMEOPTION_START_NO_POSITIVE_TRAITS
-	Option=GAMEOPTION_NO_NUKES
-	Option=GAMEOPTION_FIGHT_OR_FLIGHT
-	Option=GAMEOPTION_SIZE_MATTERS
-	Option=GAMEOPTION_MORE_RIVERS
-	Option=GAMEOPTION_XP_FROM_ASSIGNED_SPECIALISTS
-	Option=GAMEOPTION_TELEPORT_HUNTING_AWARDS
-	Option=GAMEOPTION_HIDE_AND_SEEK
-	Option=GAMEOPTION_1_CITY_TILE_FOUNDING
-	Option=GAMEOPTION_REALISTIC_SIEGE
-	Option=GAMEOPTION_WITHOUT_WARNING
-	Option=GAMEOPTION_DOWNSIZING_IS_PROFITABLE
-	Victory=VICTORY_TIME
 	StartYear=-200000
 	Description=This space map contains no AIs and has 11 space zones.
 	ModPath=
@@ -199,46 +164,6 @@ EndTeam
 BeginTeam
 	TeamID=39
 	ContactWithTeam=39
-EndTeam
-BeginTeam
-	TeamID=40
-	ContactWithTeam=40
-EndTeam
-BeginTeam
-	TeamID=41
-	ContactWithTeam=41
-EndTeam
-BeginTeam
-	TeamID=42
-	ContactWithTeam=42
-EndTeam
-BeginTeam
-	TeamID=43
-	ContactWithTeam=43
-EndTeam
-BeginTeam
-	TeamID=44
-	ContactWithTeam=44
-EndTeam
-BeginTeam
-	TeamID=45
-	ContactWithTeam=45
-EndTeam
-BeginTeam
-	TeamID=46
-	ContactWithTeam=46
-EndTeam
-BeginTeam
-	TeamID=47
-	ContactWithTeam=47
-EndTeam
-BeginTeam
-	TeamID=48
-	ContactWithTeam=48
-EndTeam
-BeginTeam
-	TeamID=49
-	ContactWithTeam=49
 EndTeam
 BeginPlayer
 	Team=0
@@ -439,56 +364,6 @@ BeginPlayer
 EndPlayer
 BeginPlayer
 	Team=39
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=40
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=41
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=42
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=43
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=44
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=45
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=46
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=47
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=48
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=49
 	LeaderType=NONE
 	CivType=NONE
 EndPlayer
@@ -9881,7 +9756,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=0
-	BonusType=BONUS_MANGANESE
 	FeatureType=FEATURE_SEA_GRASS, FeatureVariety=0
 	TerrainType=TERRAIN_SEA_POLAR
 	PlotType=3

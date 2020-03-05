@@ -2655,14 +2655,14 @@ int CvBuildingInfo::getNumFreePromoTypes() const
 {
 	return (int)m_aFreePromoTypes.size();
 }
-
+/*
 FreePromoTypes& CvBuildingInfo::getFreePromoType(int iPromotion)
 {
 	FAssertMsg(iPromotion < (int)m_aFreePromoTypes.size(), "Index out of bounds");
 	FAssertMsg(iPromotion > -1, "Index out of bounds");
 	return m_aFreePromoTypes[iPromotion];
 }
-
+*/
 const FreePromoTypes& CvBuildingInfo::getFreePromoType(int iPromotion) const
 {
 	FAssertMsg(iPromotion < (int)m_aFreePromoTypes.size(), "Index out of bounds");
@@ -2687,7 +2687,7 @@ int CvBuildingInfo::getNumHealUnitCombatTypes() const
 	return (int)m_aHealUnitCombatTypes.size();
 }
 
-HealUnitCombat& CvBuildingInfo::getHealUnitCombatType(int iUnitCombat)
+const HealUnitCombat& CvBuildingInfo::getHealUnitCombatType(int iUnitCombat) const
 {
 	FAssertMsg(iUnitCombat < (int)m_aHealUnitCombatTypes.size(), "Index out of bounds");
 	FAssertMsg(iUnitCombat > -1, "Index out of bounds");
@@ -2699,7 +2699,7 @@ int CvBuildingInfo::getNumBonusAidModifiers() const
 	return (int)m_aBonusAidModifiers.size();
 }
 
-BonusAidModifiers& CvBuildingInfo::getBonusAidModifier(int iIndex)
+const BonusAidModifiers& CvBuildingInfo::getBonusAidModifier(int iIndex) const
 {
 	return m_aBonusAidModifiers[iIndex];
 }
@@ -2709,7 +2709,7 @@ int CvBuildingInfo::getNumAidRateChanges() const
 	return (int)m_aAidRateChanges.size();
 }
 
-AidRateChanges& CvBuildingInfo::getAidRateChange(int iIndex)
+const AidRateChanges& CvBuildingInfo::getAidRateChange(int iIndex) const
 {
 	return m_aAidRateChanges[iIndex];
 }
@@ -2719,7 +2719,7 @@ int CvBuildingInfo::getNumEnabledCivilizationTypes() const
 	return (int)m_aEnabledCivilizationTypes.size();
 }
 
-EnabledCivilizations& CvBuildingInfo::getEnabledCivilizationType(int iIndex)
+const EnabledCivilizations& CvBuildingInfo::getEnabledCivilizationType(int iIndex) const
 {
 	return m_aEnabledCivilizationTypes[iIndex];
 }

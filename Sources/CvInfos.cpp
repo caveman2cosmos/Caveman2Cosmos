@@ -1086,7 +1086,7 @@ int CvSpecialistInfo::getNumTechHappinessTypes() const
 	return (int)m_aTechHappinessTypes.size();
 }
 
-TechModifier& CvSpecialistInfo::getTechHappinessType(int iTech)
+const TechModifier& CvSpecialistInfo::getTechHappinessType(int iTech) const
 {
 	FAssertMsg(iTech < (int)m_aTechHappinessTypes.size(), "Index out of bounds");
 	FAssertMsg(iTech > -1, "Index out of bounds");
@@ -1098,7 +1098,7 @@ int CvSpecialistInfo::getNumTechHealthTypes() const
 	return (int)m_aTechHealthTypes.size();
 }
 
-TechModifier& CvSpecialistInfo::getTechHealthType(int iTech)
+const TechModifier& CvSpecialistInfo::getTechHealthType(int iTech) const
 {
 	FAssertMsg(iTech < (int)m_aTechHealthTypes.size(), "Index out of bounds");
 	FAssertMsg(iTech > -1, "Index out of bounds");
@@ -1110,7 +1110,7 @@ int CvSpecialistInfo::getNumUnitCombatExperienceTypes() const
 	return (int)m_aUnitCombatExperienceTypes.size();
 }
 
-UnitCombatModifier& CvSpecialistInfo::getUnitCombatExperienceType(int iUnitCombat, bool bForLoad)
+const UnitCombatModifier& CvSpecialistInfo::getUnitCombatExperienceType(int iUnitCombat, bool bForLoad) const
 {
 	FAssertMsg(iUnitCombat < (int)m_aUnitCombatExperienceTypes.size(), "Index out of bounds");
 	FAssertMsg(iUnitCombat < (int)m_aUnitCombatExperienceTypesNull.size(), "Index out of bounds");
@@ -1981,7 +1981,7 @@ int CvTechInfo::getNumPrereqBuildings() const
 	return (int)m_aPrereqBuilding.size();
 }
 
-PrereqBuilding& CvTechInfo::getPrereqBuilding(int iIndex)
+const PrereqBuilding& CvTechInfo::getPrereqBuilding(int iIndex) const
 {
 	return m_aPrereqBuilding[iIndex];
 }
@@ -2001,7 +2001,7 @@ int CvTechInfo::getNumPrereqOrBuildings() const
 	return (int)m_aPrereqOrBuilding.size();
 }
 
-PrereqBuilding& CvTechInfo::getPrereqOrBuilding(int iIndex)
+const PrereqBuilding& CvTechInfo::getPrereqOrBuilding(int iIndex) const
 {
 	return m_aPrereqOrBuilding[iIndex];
 }
@@ -5604,13 +5604,12 @@ bool CvPromotionInfo::isVisibilityIntensityRangeChangeType(int iInvisibility) co
 	return false;
 }
 
-// int vector utilizing struct with delayed resolution
 int CvPromotionInfo::getNumAIWeightbyUnitCombatTypes() const
 {
 	return (int)m_aAIWeightbyUnitCombatTypes.size();
 }
 
-UnitCombatModifier& CvPromotionInfo::getAIWeightbyUnitCombatType(int iUnitCombat)
+const UnitCombatModifier& CvPromotionInfo::getAIWeightbyUnitCombatType(int iUnitCombat) const
 {
 	FAssertMsg(iUnitCombat < (int)m_aAIWeightbyUnitCombatTypes.size(), "Index out of bounds");
 	FAssertMsg(iUnitCombat > -1, "Index out of bounds");
@@ -5622,7 +5621,7 @@ int CvPromotionInfo::getNumAfflictionFortitudeChangeModifiers() const
 	return (int)m_aAfflictionFortitudeChangeModifiers.size();
 }
 
-PromotionLineModifier& CvPromotionInfo::getAfflictionFortitudeChangeModifier(int iAfflictionLine)
+const PromotionLineModifier& CvPromotionInfo::getAfflictionFortitudeChangeModifier(int iAfflictionLine) const
 {
 	FAssertMsg(iAfflictionLine < (int)m_aAfflictionFortitudeChangeModifiers.size(), "Index out of bounds");
 	FAssertMsg(iAfflictionLine > -1, "Index out of bounds");
@@ -5634,7 +5633,7 @@ int CvPromotionInfo::getNumAfflictOnAttackChangeTypes() const
 	return (int)m_aAfflictOnAttackChangeTypes.size();
 }
 
-AfflictOnAttackChange& CvPromotionInfo::getAfflictOnAttackChangeType(int iAfflictionLine)
+const AfflictOnAttackChange& CvPromotionInfo::getAfflictOnAttackChangeType(int iAfflictionLine) const
 {
 	FAssertMsg(iAfflictionLine < (int)m_aAfflictOnAttackChangeTypes.size(), "Index out of bounds");
 	FAssertMsg(iAfflictionLine > -1, "Index out of bounds");
@@ -5646,7 +5645,7 @@ int CvPromotionInfo::getNumInvisibleTerrainChanges() const
 	return (int)m_aInvisibleTerrainChanges.size();
 }
 
-InvisibleTerrainChanges& CvPromotionInfo::getInvisibleTerrainChange(int iIndex)
+const InvisibleTerrainChanges& CvPromotionInfo::getInvisibleTerrainChange(int iIndex) const
 {
 	return m_aInvisibleTerrainChanges[iIndex];
 }
@@ -5656,7 +5655,7 @@ int CvPromotionInfo::getNumInvisibleFeatureChanges() const
 	return (int)m_aInvisibleFeatureChanges.size();
 }
 
-InvisibleFeatureChanges& CvPromotionInfo::getInvisibleFeatureChange(int iIndex)
+const InvisibleFeatureChanges& CvPromotionInfo::getInvisibleFeatureChange(int iIndex) const
 {
 	return m_aInvisibleFeatureChanges[iIndex];
 }
@@ -5666,7 +5665,7 @@ int CvPromotionInfo::getNumInvisibleImprovementChanges() const
 	return (int)m_aInvisibleImprovementChanges.size();
 }
 
-InvisibleImprovementChanges& CvPromotionInfo::getInvisibleImprovementChange(int iIndex)
+const InvisibleImprovementChanges& CvPromotionInfo::getInvisibleImprovementChange(int iIndex) const
 {
 	return m_aInvisibleImprovementChanges[iIndex];
 }
@@ -5676,7 +5675,7 @@ int CvPromotionInfo::getNumVisibleTerrainChanges() const
 	return (int)m_aVisibleTerrainChanges.size();
 }
 
-InvisibleTerrainChanges& CvPromotionInfo::getVisibleTerrainChange(int iIndex)
+const InvisibleTerrainChanges& CvPromotionInfo::getVisibleTerrainChange(int iIndex) const
 {
 	return m_aVisibleTerrainChanges[iIndex];
 }
@@ -5686,7 +5685,7 @@ int CvPromotionInfo::getNumVisibleFeatureChanges() const
 	return (int)m_aVisibleFeatureChanges.size();
 }
 
-InvisibleFeatureChanges& CvPromotionInfo::getVisibleFeatureChange(int iIndex)
+const InvisibleFeatureChanges& CvPromotionInfo::getVisibleFeatureChange(int iIndex) const
 {
 	return m_aVisibleFeatureChanges[iIndex];
 }
@@ -5696,7 +5695,7 @@ int CvPromotionInfo::getNumVisibleImprovementChanges() const
 	return (int)m_aVisibleImprovementChanges.size();
 }
 
-InvisibleImprovementChanges& CvPromotionInfo::getVisibleImprovementChange(int iIndex)
+const InvisibleImprovementChanges& CvPromotionInfo::getVisibleImprovementChange(int iIndex) const
 {
 	return m_aVisibleImprovementChanges[iIndex];
 }
@@ -5706,7 +5705,7 @@ int CvPromotionInfo::getNumVisibleTerrainRangeChanges() const
 	return (int)m_aVisibleTerrainRangeChanges.size();
 }
 
-InvisibleTerrainChanges& CvPromotionInfo::getVisibleTerrainRangeChange(int iIndex)
+const InvisibleTerrainChanges& CvPromotionInfo::getVisibleTerrainRangeChange(int iIndex) const
 {
 	return m_aVisibleTerrainRangeChanges[iIndex];
 }
@@ -5716,7 +5715,7 @@ int CvPromotionInfo::getNumVisibleFeatureRangeChanges() const
 	return (int)m_aVisibleFeatureRangeChanges.size();
 }
 
-InvisibleFeatureChanges& CvPromotionInfo::getVisibleFeatureRangeChange(int iIndex)
+const InvisibleFeatureChanges& CvPromotionInfo::getVisibleFeatureRangeChange(int iIndex) const
 {
 	return m_aVisibleFeatureRangeChanges[iIndex];
 }
@@ -5726,7 +5725,7 @@ int CvPromotionInfo::getNumVisibleImprovementRangeChanges() const
 	return (int)m_aVisibleImprovementRangeChanges.size();
 }
 
-InvisibleImprovementChanges& CvPromotionInfo::getVisibleImprovementRangeChange(int iIndex)
+const InvisibleImprovementChanges& CvPromotionInfo::getVisibleImprovementRangeChange(int iIndex) const
 {
 	return m_aVisibleImprovementRangeChanges[iIndex];
 }
@@ -5736,7 +5735,7 @@ int CvPromotionInfo::getNumDistanceAttackCommunicabilityTypeChanges() const
 	return (int)m_aDistanceAttackCommunicabilityTypeChanges.size();
 }
 
-AfflictionLineChanges& CvPromotionInfo::getDistanceAttackCommunicabilityTypeChange(int iIndex)
+const AfflictionLineChanges& CvPromotionInfo::getDistanceAttackCommunicabilityTypeChange(int iIndex) const
 {
 	return m_aDistanceAttackCommunicabilityTypeChanges[iIndex];
 }
@@ -5746,7 +5745,7 @@ int CvPromotionInfo::getNumHealUnitCombatChangeTypes() const
 	return (int)m_aHealUnitCombatChangeTypes.size();
 }
 
-HealUnitCombat& CvPromotionInfo::getHealUnitCombatChangeType(int iUnitCombat)
+const HealUnitCombat& CvPromotionInfo::getHealUnitCombatChangeType(int iUnitCombat) const
 {
 	FAssertMsg(iUnitCombat < (int)m_aHealUnitCombatChangeTypes.size(), "Index out of bounds");
 	FAssertMsg(iUnitCombat > -1, "Index out of bounds");
@@ -10687,12 +10686,7 @@ int CvCivicInfo::getSpecialistCommercePercentChanges(int i, int j ) const
 
 int CvCivicInfo::getCityLimit(PlayerTypes ePlayer) const
 {
-	if (ePlayer > NO_PLAYER && GC.getGame().isOption(GAMEOPTION_NO_CITY_LIMITS))
-	{
-		return 0;
-	}
-	//ls612: Option to scale City Limits by Mapsize
-	else if (ePlayer > NO_PLAYER && GC.getGame().isOption(GAMEOPTION_SCALE_CITY_LIMITS))
+	if (ePlayer > NO_PLAYER && GC.getGame().isOption(GAMEOPTION_OVEREXPANSION_PENALTIES))
 	{
 		int iCityLimit;
 		CvPlayer* pPlayer = &GET_PLAYER(ePlayer);
@@ -10704,7 +10698,7 @@ int CvCivicInfo::getCityLimit(PlayerTypes ePlayer) const
 	}
 	else
 	{
-		return m_iCityLimit;
+		return 0;
 	}
 }
 
@@ -39293,7 +39287,7 @@ CvPropertyManipulators* CvPropertyInfo::getPropertyManipulators()
 	return &m_PropertyManipulators;
 }
 
-PropertyBuilding& CvPropertyInfo::getPropertyBuilding(int index)
+const PropertyBuilding& CvPropertyInfo::getPropertyBuilding(int index) const
 {
 	FAssertMsg(index < (int)m_aPropertyBuildings.size(), "Index out of bounds");
 	FAssertMsg(index > -1, "Index out of bounds");
@@ -39305,7 +39299,7 @@ int CvPropertyInfo::getNumPropertyBuildings() const
 	return (int)m_aPropertyBuildings.size();
 }
 
-PropertyPromotion& CvPropertyInfo::getPropertyPromotion(int index)
+const PropertyPromotion& CvPropertyInfo::getPropertyPromotion(int index) const
 {
 	FAssertMsg(index < (int)m_aPropertyPromotions.size(), "Index out of bounds");
 	FAssertMsg(index > -1, "Index out of bounds");
@@ -41993,7 +41987,7 @@ int CvUnitCombatInfo::getNumAfflictionFortitudeChangeModifiers() const
 	return (int)m_aAfflictionFortitudeChangeModifiers.size();
 }
 
-PromotionLineModifier& CvUnitCombatInfo::getAfflictionFortitudeChangeModifier(int iAfflictionLine)
+const PromotionLineModifier& CvUnitCombatInfo::getAfflictionFortitudeChangeModifier(int iAfflictionLine) const
 {
 	FAssertMsg(iAfflictionLine < (int)m_aAfflictionFortitudeChangeModifiers.size(), "Index out of bounds");
 	FAssertMsg(iAfflictionLine > -1, "Index out of bounds");
@@ -42005,7 +41999,7 @@ int CvUnitCombatInfo::getNumTerrainAttackChangeModifiers() const
 	return (int)m_aTerrainAttackChangeModifiers.size();
 }
 
-TerrainModifier& CvUnitCombatInfo::getTerrainAttackChangeModifier(int iTerrain)
+const TerrainModifier& CvUnitCombatInfo::getTerrainAttackChangeModifier(int iTerrain) const
 {
 	FAssertMsg(iTerrain < (int)m_aTerrainAttackChangeModifiers.size(), "Index out of bounds");
 	FAssertMsg(iTerrain > -1, "Index out of bounds");
@@ -42017,7 +42011,7 @@ int CvUnitCombatInfo::getNumTerrainDefenseChangeModifiers() const
 	return (int)m_aTerrainDefenseChangeModifiers.size();
 }
 
-TerrainModifier& CvUnitCombatInfo::getTerrainDefenseChangeModifier(int iTerrain)
+const TerrainModifier& CvUnitCombatInfo::getTerrainDefenseChangeModifier(int iTerrain) const
 {
 	FAssertMsg(iTerrain < (int)m_aTerrainDefenseChangeModifiers.size(), "Index out of bounds");
 	FAssertMsg(iTerrain > -1, "Index out of bounds");
@@ -42029,7 +42023,7 @@ int CvUnitCombatInfo::getNumTerrainWorkChangeModifiers() const
 	return (int)m_aTerrainWorkChangeModifiers.size();
 }
 
-TerrainModifier& CvUnitCombatInfo::getTerrainWorkChangeModifier(int iTerrain)
+const TerrainModifier& CvUnitCombatInfo::getTerrainWorkChangeModifier(int iTerrain) const
 {
 	FAssertMsg(iTerrain < (int)m_aTerrainWorkChangeModifiers.size(), "Index out of bounds");
 	FAssertMsg(iTerrain > -1, "Index out of bounds");
@@ -42041,7 +42035,7 @@ int CvUnitCombatInfo::getNumBuildWorkChangeModifiers() const
 	return (int)m_aBuildWorkChangeModifiers.size();
 }
 
-BuildModifier& CvUnitCombatInfo::getBuildWorkChangeModifier(int iBuild)
+const BuildModifier& CvUnitCombatInfo::getBuildWorkChangeModifier(int iBuild) const
 {
 	FAssertMsg(iBuild < (int)m_aBuildWorkChangeModifiers.size(), "Index out of bounds");
 	FAssertMsg(iBuild > -1, "Index out of bounds");
@@ -42053,7 +42047,7 @@ int CvUnitCombatInfo::getNumFeatureAttackChangeModifiers() const
 	return (int)m_aFeatureAttackChangeModifiers.size();
 }
 
-FeatureModifier& CvUnitCombatInfo::getFeatureAttackChangeModifier(int iFeature)
+const FeatureModifier& CvUnitCombatInfo::getFeatureAttackChangeModifier(int iFeature) const
 {
 	FAssertMsg(iFeature < (int)m_aFeatureAttackChangeModifiers.size(), "Index out of bounds");
 	FAssertMsg(iFeature > -1, "Index out of bounds");
@@ -42065,7 +42059,7 @@ int CvUnitCombatInfo::getNumFeatureDefenseChangeModifiers() const
 	return (int)m_aFeatureDefenseChangeModifiers.size();
 }
 
-FeatureModifier& CvUnitCombatInfo::getFeatureDefenseChangeModifier(int iFeature)
+const FeatureModifier& CvUnitCombatInfo::getFeatureDefenseChangeModifier(int iFeature) const
 {
 	FAssertMsg(iFeature < (int)m_aFeatureDefenseChangeModifiers.size(), "Index out of bounds");
 	FAssertMsg(iFeature > -1, "Index out of bounds");
@@ -42077,7 +42071,7 @@ int CvUnitCombatInfo::getNumFeatureWorkChangeModifiers() const
 	return (int)m_aFeatureWorkChangeModifiers.size();
 }
 
-FeatureModifier& CvUnitCombatInfo::getFeatureWorkChangeModifier(int iFeature)
+const FeatureModifier& CvUnitCombatInfo::getFeatureWorkChangeModifier(int iFeature) const
 {
 	FAssertMsg(iFeature < (int)m_aFeatureWorkChangeModifiers.size(), "Index out of bounds");
 	FAssertMsg(iFeature > -1, "Index out of bounds");
@@ -42089,7 +42083,7 @@ int CvUnitCombatInfo::getNumUnitCombatChangeModifiers() const
 	return (int)m_aUnitCombatChangeModifiers.size();
 }
 
-UnitCombatModifier& CvUnitCombatInfo::getUnitCombatChangeModifier(int iUnitCombat)
+const UnitCombatModifier& CvUnitCombatInfo::getUnitCombatChangeModifier(int iUnitCombat) const
 {
 	FAssertMsg(iUnitCombat < (int)m_aUnitCombatChangeModifiers.size(), "Index out of bounds");
 	FAssertMsg(iUnitCombat > -1, "Index out of bounds");
@@ -42101,7 +42095,7 @@ int CvUnitCombatInfo::getNumFlankingStrengthbyUnitCombatTypesChange() const
 	return (int)m_aFlankingStrengthbyUnitCombatTypeChange.size();
 }
 
-UnitCombatModifier& CvUnitCombatInfo::getFlankingStrengthbyUnitCombatTypeChange(int iUnitCombat)
+const UnitCombatModifier& CvUnitCombatInfo::getFlankingStrengthbyUnitCombatTypeChange(int iUnitCombat) const
 {
 	FAssertMsg(iUnitCombat < (int)m_aFlankingStrengthbyUnitCombatTypeChange.size(), "Index out of bounds");
 	FAssertMsg(iUnitCombat > -1, "Index out of bounds");
@@ -42113,7 +42107,7 @@ int CvUnitCombatInfo::getNumWithdrawVSUnitCombatTypesChange() const
 	return (int)m_aWithdrawVSUnitCombatTypeChange.size();
 }
 
-UnitCombatModifier& CvUnitCombatInfo::getWithdrawVSUnitCombatTypeChange(int iUnitCombat)
+const UnitCombatModifier& CvUnitCombatInfo::getWithdrawVSUnitCombatTypeChange(int iUnitCombat) const
 {
 	FAssertMsg(iUnitCombat < (int)m_aWithdrawVSUnitCombatTypeChange.size(), "Index out of bounds");
 	FAssertMsg(iUnitCombat > -1, "Index out of bounds");
@@ -42125,7 +42119,7 @@ int CvUnitCombatInfo::getNumPursuitVSUnitCombatTypesChange() const
 	return (int)m_aPursuitVSUnitCombatTypeChange.size();
 }
 
-UnitCombatModifier& CvUnitCombatInfo::getPursuitVSUnitCombatTypeChange(int iUnitCombat)
+const UnitCombatModifier& CvUnitCombatInfo::getPursuitVSUnitCombatTypeChange(int iUnitCombat) const
 {
 	FAssertMsg(iUnitCombat < (int)m_aPursuitVSUnitCombatTypeChange.size(), "Index out of bounds");
 	FAssertMsg(iUnitCombat > -1, "Index out of bounds");
@@ -42138,7 +42132,7 @@ int CvUnitCombatInfo::getNumRepelVSUnitCombatTypesChange() const
 	return (int)m_aRepelVSUnitCombatTypeChange.size();
 }
 
-UnitCombatModifier& CvUnitCombatInfo::getRepelVSUnitCombatTypeChange(int iUnitCombat)
+const UnitCombatModifier& CvUnitCombatInfo::getRepelVSUnitCombatTypeChange(int iUnitCombat) const
 {
 	FAssertMsg(iUnitCombat < (int)m_aRepelVSUnitCombatTypeChange.size(), "Index out of bounds");
 	FAssertMsg(iUnitCombat > -1, "Index out of bounds");
@@ -42150,7 +42144,7 @@ int CvUnitCombatInfo::getNumKnockbackVSUnitCombatTypesChange() const
 	return (int)m_aKnockbackVSUnitCombatTypeChange.size();
 }
 
-UnitCombatModifier& CvUnitCombatInfo::getKnockbackVSUnitCombatTypeChange(int iUnitCombat)
+const UnitCombatModifier& CvUnitCombatInfo::getKnockbackVSUnitCombatTypeChange(int iUnitCombat) const
 {
 	FAssertMsg(iUnitCombat < (int)m_aKnockbackVSUnitCombatTypeChange.size(), "Index out of bounds");
 	FAssertMsg(iUnitCombat > -1, "Index out of bounds");
@@ -42162,7 +42156,7 @@ int CvUnitCombatInfo::getNumPunctureVSUnitCombatTypesChange() const
 	return (int)m_aPunctureVSUnitCombatTypeChange.size();
 }
 
-UnitCombatModifier& CvUnitCombatInfo::getPunctureVSUnitCombatTypeChange(int iUnitCombat)
+const UnitCombatModifier& CvUnitCombatInfo::getPunctureVSUnitCombatTypeChange(int iUnitCombat) const
 {
 	FAssertMsg(iUnitCombat < (int)m_aPunctureVSUnitCombatTypeChange.size(), "Index out of bounds");
 	FAssertMsg(iUnitCombat > -1, "Index out of bounds");
@@ -42174,7 +42168,7 @@ int CvUnitCombatInfo::getNumArmorVSUnitCombatTypesChange() const
 	return (int)m_aArmorVSUnitCombatTypeChange.size();
 }
 
-UnitCombatModifier& CvUnitCombatInfo::getArmorVSUnitCombatTypeChange(int iUnitCombat)
+const UnitCombatModifier& CvUnitCombatInfo::getArmorVSUnitCombatTypeChange(int iUnitCombat) const
 {
 	FAssertMsg(iUnitCombat < (int)m_aArmorVSUnitCombatTypeChange.size(), "Index out of bounds");
 	FAssertMsg(iUnitCombat > -1, "Index out of bounds");
@@ -42186,7 +42180,7 @@ int CvUnitCombatInfo::getNumDodgeVSUnitCombatTypesChange() const
 	return (int)m_aDodgeVSUnitCombatTypeChange.size();
 }
 
-UnitCombatModifier& CvUnitCombatInfo::getDodgeVSUnitCombatTypeChange(int iUnitCombat)
+const UnitCombatModifier& CvUnitCombatInfo::getDodgeVSUnitCombatTypeChange(int iUnitCombat) const
 {
 	FAssertMsg(iUnitCombat < (int)m_aDodgeVSUnitCombatTypeChange.size(), "Index out of bounds");
 	FAssertMsg(iUnitCombat > -1, "Index out of bounds");
@@ -42198,7 +42192,7 @@ int CvUnitCombatInfo::getNumPrecisionVSUnitCombatTypesChange() const
 	return (int)m_aPrecisionVSUnitCombatTypeChange.size();
 }
 
-UnitCombatModifier& CvUnitCombatInfo::getPrecisionVSUnitCombatTypeChange(int iUnitCombat)
+const UnitCombatModifier& CvUnitCombatInfo::getPrecisionVSUnitCombatTypeChange(int iUnitCombat) const
 {
 	FAssertMsg(iUnitCombat < (int)m_aPrecisionVSUnitCombatTypeChange.size(), "Index out of bounds");
 	FAssertMsg(iUnitCombat > -1, "Index out of bounds");
@@ -42210,7 +42204,7 @@ int CvUnitCombatInfo::getNumCriticalVSUnitCombatTypesChange() const
 	return (int)m_aCriticalVSUnitCombatTypeChange.size();
 }
 
-UnitCombatModifier& CvUnitCombatInfo::getCriticalVSUnitCombatTypeChange(int iUnitCombat)
+const UnitCombatModifier& CvUnitCombatInfo::getCriticalVSUnitCombatTypeChange(int iUnitCombat) const
 {
 	FAssertMsg(iUnitCombat < (int)m_aCriticalVSUnitCombatTypeChange.size(), "Index out of bounds");
 	FAssertMsg(iUnitCombat > -1, "Index out of bounds");
@@ -42222,7 +42216,7 @@ int CvUnitCombatInfo::getNumRoundStunVSUnitCombatTypesChange() const
 	return (int)m_aRoundStunVSUnitCombatTypeChange.size();
 }
 
-UnitCombatModifier& CvUnitCombatInfo::getRoundStunVSUnitCombatTypeChange(int iUnitCombat)
+const UnitCombatModifier& CvUnitCombatInfo::getRoundStunVSUnitCombatTypeChange(int iUnitCombat) const
 {
 	FAssertMsg(iUnitCombat < (int)m_aRoundStunVSUnitCombatTypeChange.size(), "Index out of bounds");
 	FAssertMsg(iUnitCombat > -1, "Index out of bounds");
@@ -42234,7 +42228,7 @@ int CvUnitCombatInfo::getNumTrapAvoidanceUnitCombatTypes() const
 	return (int)m_aTrapAvoidanceUnitCombatTypes.size();
 }
 
-UnitCombatModifier& CvUnitCombatInfo::getTrapAvoidanceUnitCombatType(int iIndex)
+const UnitCombatModifier& CvUnitCombatInfo::getTrapAvoidanceUnitCombatType(int iIndex) const
 {
 	return m_aTrapAvoidanceUnitCombatTypes[iIndex];
 }
@@ -42244,7 +42238,7 @@ int CvUnitCombatInfo::getNumAfflictOnAttackChangeTypes() const
 	return (int)m_aAfflictOnAttackChangeTypes.size();
 }
 
-AfflictOnAttackChange& CvUnitCombatInfo::getAfflictOnAttackChangeType(int iAfflictionLine)
+const AfflictOnAttackChange& CvUnitCombatInfo::getAfflictOnAttackChangeType(int iAfflictionLine) const
 {
 	FAssertMsg(iAfflictionLine < (int)m_aAfflictOnAttackChangeTypes.size(), "Index out of bounds");
 	FAssertMsg(iAfflictionLine > -1, "Index out of bounds");
@@ -42256,7 +42250,7 @@ int CvUnitCombatInfo::getNumInvisibleTerrainChanges() const
 	return (int)m_aInvisibleTerrainChanges.size();
 }
 
-InvisibleTerrainChanges& CvUnitCombatInfo::getInvisibleTerrainChange(int iIndex)
+const InvisibleTerrainChanges& CvUnitCombatInfo::getInvisibleTerrainChange(int iIndex) const
 {
 	return m_aInvisibleTerrainChanges[iIndex];
 }
@@ -42266,7 +42260,7 @@ int CvUnitCombatInfo::getNumInvisibleFeatureChanges() const
 	return (int)m_aInvisibleFeatureChanges.size();
 }
 
-InvisibleFeatureChanges& CvUnitCombatInfo::getInvisibleFeatureChange(int iIndex)
+const InvisibleFeatureChanges& CvUnitCombatInfo::getInvisibleFeatureChange(int iIndex) const
 {
 	return m_aInvisibleFeatureChanges[iIndex];
 }
@@ -42276,7 +42270,7 @@ int CvUnitCombatInfo::getNumInvisibleImprovementChanges() const
 	return (int)m_aInvisibleImprovementChanges.size();
 }
 
-InvisibleImprovementChanges& CvUnitCombatInfo::getInvisibleImprovementChange(int iIndex)
+const InvisibleImprovementChanges& CvUnitCombatInfo::getInvisibleImprovementChange(int iIndex) const
 {
 	return m_aInvisibleImprovementChanges[iIndex];
 }
@@ -42286,7 +42280,7 @@ int CvUnitCombatInfo::getNumVisibleTerrainChanges() const
 	return (int)m_aVisibleTerrainChanges.size();
 }
 
-InvisibleTerrainChanges& CvUnitCombatInfo::getVisibleTerrainChange(int iIndex)
+const InvisibleTerrainChanges& CvUnitCombatInfo::getVisibleTerrainChange(int iIndex) const
 {
 	return m_aVisibleTerrainChanges[iIndex];
 }
@@ -42296,7 +42290,7 @@ int CvUnitCombatInfo::getNumVisibleFeatureChanges() const
 	return (int)m_aVisibleFeatureChanges.size();
 }
 
-InvisibleFeatureChanges& CvUnitCombatInfo::getVisibleFeatureChange(int iIndex)
+const InvisibleFeatureChanges& CvUnitCombatInfo::getVisibleFeatureChange(int iIndex) const
 {
 	return m_aVisibleFeatureChanges[iIndex];
 }
@@ -42306,7 +42300,7 @@ int CvUnitCombatInfo::getNumVisibleImprovementChanges() const
 	return (int)m_aVisibleImprovementChanges.size();
 }
 
-InvisibleImprovementChanges& CvUnitCombatInfo::getVisibleImprovementChange(int iIndex)
+const InvisibleImprovementChanges& CvUnitCombatInfo::getVisibleImprovementChange(int iIndex) const
 {
 	return m_aVisibleImprovementChanges[iIndex];
 }
@@ -42316,7 +42310,7 @@ int CvUnitCombatInfo::getNumVisibleTerrainRangeChanges() const
 	return (int)m_aVisibleTerrainRangeChanges.size();
 }
 
-InvisibleTerrainChanges& CvUnitCombatInfo::getVisibleTerrainRangeChange(int iIndex)
+const InvisibleTerrainChanges& CvUnitCombatInfo::getVisibleTerrainRangeChange(int iIndex) const
 {
 	return m_aVisibleTerrainRangeChanges[iIndex];
 }
@@ -42326,7 +42320,7 @@ int CvUnitCombatInfo::getNumVisibleFeatureRangeChanges() const
 	return (int)m_aVisibleFeatureRangeChanges.size();
 }
 
-InvisibleFeatureChanges& CvUnitCombatInfo::getVisibleFeatureRangeChange(int iIndex)
+const InvisibleFeatureChanges& CvUnitCombatInfo::getVisibleFeatureRangeChange(int iIndex) const
 {
 	return m_aVisibleFeatureRangeChanges[iIndex];
 }
@@ -42336,7 +42330,7 @@ int CvUnitCombatInfo::getNumVisibleImprovementRangeChanges() const
 	return (int)m_aVisibleImprovementRangeChanges.size();
 }
 
-InvisibleImprovementChanges& CvUnitCombatInfo::getVisibleImprovementRangeChange(int iIndex)
+const InvisibleImprovementChanges& CvUnitCombatInfo::getVisibleImprovementRangeChange(int iIndex) const
 {
 	return m_aVisibleImprovementRangeChanges[iIndex];
 }
@@ -42346,7 +42340,7 @@ int CvUnitCombatInfo::getNumDistanceAttackCommunicabilityTypeChanges() const
 	return (int)m_aDistanceAttackCommunicabilityTypeChanges.size();
 }
 
-AfflictionLineChanges& CvUnitCombatInfo::getDistanceAttackCommunicabilityTypeChange(int iIndex)
+const AfflictionLineChanges& CvUnitCombatInfo::getDistanceAttackCommunicabilityTypeChange(int iIndex) const
 {
 	return m_aDistanceAttackCommunicabilityTypeChanges[iIndex];
 }
