@@ -27307,6 +27307,9 @@ Base XP gained when defending
 			<UnitUpgrades>
 				<UnitType>UNIT_CLASSIC_WORKBOAT</UnitType>
 			</UnitUpgrades>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_WORKBOAT</UnitType>
+			</SupersedingUnits>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER_SEA</UnitAIType>
@@ -49324,6 +49327,9 @@ Base XP gained when defending
 			<UnitUpgrades>
 				<UnitType>UNIT_STALKERS</UnitType>
 			</UnitUpgrades>
+			<SupersedingUnits>
+				<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
+			</SupersedingUnits>
 			<iCost>92</iCost>
 			<iMoves>2</iMoves>
 			<Invisible>INVISIBLE_CAMOUFLAGE</Invisible>
@@ -57096,7 +57102,7 @@ Base XP gained when defending
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_NEANDERTHAL_WORKBOAT</Type>
-			<Capture>UNIT_WORKBOAT</Capture>
+			<Capture>UNIT_NEANDERTHAL_WORKBOAT</Capture>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
