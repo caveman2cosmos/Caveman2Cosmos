@@ -190,14 +190,8 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
 			<PrereqBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuilding>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_MYTH_EFFECT</BuildingType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuilding>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_MYTH_EFFECT</BuildingType>
 			</PrereqBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STABLE</BuildingType>
@@ -269,14 +263,8 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuilding>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuilding>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 			</PrereqBuildings>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_MAMMOTH_RIDER</Description>

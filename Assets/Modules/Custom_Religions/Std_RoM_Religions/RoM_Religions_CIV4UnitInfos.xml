@@ -69,7 +69,9 @@
 			<ReligionType>RELIGION_KEMETISM</ReligionType>
 			<StateReligion>RELIGION_KEMETISM</StateReligion>
 			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
-			<PrereqBuilding>BUILDING_EGYPT_MYTH_MONASTERY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_EGYPT_MYTH_MONASTERY</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
 			<BonusType>BONUS_IRON_WARES</BonusType>
 			<iCost>330</iCost>
@@ -177,7 +179,9 @@
 			<ReligionType>RELIGION_KEMETISM</ReligionType>
 			<StateReligion>RELIGION_KEMETISM</StateReligion>
 			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
-			<PrereqBuilding>BUILDING_EGYPT_MYTH_MONASTERY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_EGYPT_MYTH_MONASTERY</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
 			<BonusType>BONUS_HORSE</BonusType>
 			<PrereqBonuses>

@@ -31,7 +31,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_JUDAISM</PrereqReligion>
-			<PrereqBuilding>BUILDING_JEWISH_MONASTERY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_JEWISH_MONASTERY</BuildingType>
+			</PrereqBuildings>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
@@ -79,7 +81,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_CHRISTIANITY</PrereqReligion>
-			<PrereqBuilding>BUILDING_CHRISTIAN_MONASTERY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_CHRISTIAN_MONASTERY</BuildingType>
+			</PrereqBuildings>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
@@ -127,7 +131,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
-			<PrereqBuilding>BUILDING_ISLAMIC_MONASTERY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_ISLAMIC_MONASTERY</BuildingType>
+			</PrereqBuildings>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
@@ -175,7 +181,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_HINDUISM</PrereqReligion>
-			<PrereqBuilding>BUILDING_HINDU_MONASTERY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_HINDU_MONASTERY</BuildingType>
+			</PrereqBuildings>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
@@ -223,7 +231,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_BUDDHISM</PrereqReligion>
-			<PrereqBuilding>BUILDING_BUDDHIST_MONASTERY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_BUDDHIST_MONASTERY</BuildingType>
+			</PrereqBuildings>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
@@ -271,7 +281,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_CONFUCIANISM</PrereqReligion>
-			<PrereqBuilding>BUILDING_CONFUCIAN_MONASTERY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_CONFUCIAN_MONASTERY</BuildingType>
+			</PrereqBuildings>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
@@ -319,7 +331,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_TAOISM</PrereqReligion>
-			<PrereqBuilding>BUILDING_TAOIST_MONASTERY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_TAOIST_MONASTERY</BuildingType>
+			</PrereqBuildings>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
@@ -367,7 +381,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_ANDEANISM</PrereqReligion>
-			<PrereqBuilding>BUILDING_ANDEAN_MONASTERY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_ANDEAN_MONASTERY</BuildingType>
+			</PrereqBuildings>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
@@ -415,7 +431,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_ASATRU</PrereqReligion>
-			<PrereqBuilding>BUILDING_ASATRU_MONASTERY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_ASATRU_MONASTERY</BuildingType>
+			</PrereqBuildings>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
@@ -463,7 +481,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<PrereqBuilding>BUILDING_DRUID_MONASTERY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
+			</PrereqBuildings>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
@@ -511,7 +531,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_HELLENISM</PrereqReligion>
-			<PrereqBuilding>BUILDING_HELLENIC_MONASTERY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_HELLENIC_MONASTERY</BuildingType>
+			</PrereqBuildings>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
@@ -559,7 +581,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
-			<PrereqBuilding>BUILDING_EGYPT_MYTH_MONASTERY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_EGYPT_MYTH_MONASTERY</BuildingType>
+			</PrereqBuildings>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
@@ -607,7 +631,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
-			<PrereqBuilding>BUILDING_AN</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_AN</BuildingType>
+			</PrereqBuildings>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
@@ -655,7 +681,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
-			<PrereqBuilding>BUILDING_SHAMAN_MONASTERY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
+			</PrereqBuildings>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
@@ -703,7 +731,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_SHINTO</PrereqReligion>
-			<PrereqBuilding>BUILDING_SHINTO_MONASTERY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_SHINTO_MONASTERY</BuildingType>
+			</PrereqBuildings>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
@@ -751,7 +781,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_TENGRIISM</PrereqReligion>
-			<PrereqBuilding>BUILDING_SHAMANS_YURTA</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_SHAMANS_YURTA</BuildingType>
+			</PrereqBuildings>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
@@ -799,7 +831,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_BAHAI</PrereqReligion>
-			<PrereqBuilding>BUILDING_BAHAI_MONASTERY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_BAHAI_MONASTERY</BuildingType>
+			</PrereqBuildings>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
@@ -847,7 +881,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_MORMON</PrereqReligion>
-			<PrereqBuilding>BUILDING_MORMON_MONASTERY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_MORMON_MONASTERY</BuildingType>
+			</PrereqBuildings>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
@@ -895,7 +931,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_SCIENTOLOGY</PrereqReligion>
-			<PrereqBuilding>BUILDING_SCIENTOLOGY_MONASTERY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_SCIENTOLOGY_MONASTERY</BuildingType>
+			</PrereqBuildings>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
@@ -943,7 +981,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_SIKHISM</PrereqReligion>
-			<PrereqBuilding>BUILDING_SIKH_TEMPLE</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_SIKH_TEMPLE</BuildingType>
+			</PrereqBuildings>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
@@ -991,7 +1031,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_VOODOO</PrereqReligion>
-			<PrereqBuilding>BUILDING_VOODOO_MONASTERY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_VOODOO_MONASTERY</BuildingType>
+			</PrereqBuildings>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
@@ -1039,7 +1081,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_YORUBA</PrereqReligion>
-			<PrereqBuilding>BUILDING_OLOFIN</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_OLOFIN</BuildingType>
+			</PrereqBuildings>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
@@ -1087,7 +1131,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_CANAANISM</PrereqReligion>
-			<PrereqBuilding>BUILDING_CANAANISM_MONASTERY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_CANAANISM_MONASTERY</BuildingType>
+			</PrereqBuildings>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>

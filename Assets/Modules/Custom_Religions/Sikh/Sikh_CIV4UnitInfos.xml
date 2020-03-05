@@ -33,7 +33,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_SIKHISM</PrereqReligion>
-			<PrereqBuilding>BUILDING_SIKH_TEMPLE</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_SIKH_TEMPLE</BuildingType>
+			</PrereqBuildings>
 			<iCost>110</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>

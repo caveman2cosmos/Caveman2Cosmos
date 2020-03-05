@@ -249,7 +249,9 @@
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
-			<PrereqBuilding>BUILDING_COMMERCIAL_SPACEPORT</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_LUNAR_BASES</PrereqTech>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
 			<iCost>2700</iCost>
@@ -310,7 +312,9 @@
 				<BuildingType>BUILDING_LUNAR_FERTILIZER_STORAGE</BuildingType>
 				<BuildingType>BUILDING_LUNAR_SOLAR_PANELS</BuildingType>
 			</Buildings>
-			<PrereqBuilding>BUILDING_COMMERCIAL_SPACEPORT</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
 			<iCost>4850</iCost>
@@ -498,7 +502,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_ORBITAL_FACTORY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<iCost>1000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -590,7 +596,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_ORBITAL_FACTORY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
 			<iCost>1000</iCost>
@@ -693,7 +701,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_ORBITAL_FACTORY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_PLANETARY_COLONIZATION</PrereqTech>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
 			<iCost>1000</iCost>
@@ -908,7 +918,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_ORBITAL_SPACECRAFT_FACTORY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_ORBITAL_SPACECRAFT_FACTORY</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_INTERSTELLAR_TRAVEL</PrereqTech>
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -1013,7 +1025,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_INTERSTELLAR_STARPORT</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_INTERSTELLAR_STARPORT</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_ADVANCED_SEEDSHIPS</PrereqTech>
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -1436,7 +1450,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_ORBITAL_SPACECRAFT_FACTORY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_ORBITAL_SPACECRAFT_FACTORY</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_FUSION_SPACECRAFT</PrereqTech>
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -1490,7 +1506,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_ORBITAL_DRYDOCK</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_ORBITAL_DRYDOCK</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_WARMACHINES</PrereqTech>
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -1544,7 +1562,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_INTERSTELLAR_COLONY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_INTERSTELLAR_COLONY</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_WEAPONIZED_ANTIMATTER</PrereqTech>
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -1598,7 +1618,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_INTERSTELLAR_DEFENSIVE_PERIMETER</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_INTERSTELLAR_DEFENSIVE_PERIMETER</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_TRANSTANGIBLE_NEUTRINO_ACCELERATORS</PrereqTech>
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -1649,7 +1671,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_ELECTROWEAK_STAR_BASE</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_ELECTROWEAK_STAR_BASE</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_NEUTRONIUM</PrereqTech>
 			<BonusType>BONUS_NEUTRONIUM</BonusType>
 			<iCost>4850</iCost>
@@ -1730,7 +1754,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_ORBITAL_FACTORY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_ELECTRIC_ARC_WEAPONRY</PrereqTech>
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -1811,7 +1837,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_DEEP_SPACE_MAGLEV</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_DEEP_SPACE_MAGLEV</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_BINARY_PSYCHOKINESIS</PrereqTech>
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -1898,7 +1926,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_INTERSTELLAR_COLONY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_INTERSTELLAR_COLONY</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_COLONY_GOVERNANCE</PrereqTech>
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -1984,7 +2014,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_LUNAR_MANUFACTURING_PLANT</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_LUNAR_MANUFACTURING_PLANT</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -2070,7 +2102,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_MARS_HITECH</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_MARS_HITECH</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_ION_BEAMS</PrereqTech>
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -2156,7 +2190,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_VENUS_COLONY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_ION_BEAMS</PrereqTech>
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -2444,7 +2480,9 @@
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
-			<PrereqBuilding>BUILDING_MARS_FACTORY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_MARS_FACTORY</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_SUPERSONIC_RAILS</PrereqTech>
 			<iCost>1500</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -2515,7 +2553,9 @@
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
-			<PrereqBuilding>BUILDING_VENUS_CARBONWORKS</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_VENUS_CARBONWORKS</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_SUPERSONIC_RAILS</PrereqTech>
 			<iCost>1500</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -2575,7 +2615,9 @@
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
-			<PrereqBuilding>BUILDING_DOCKING_BAY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_DOCKING_BAY</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_COILGUN</PrereqTech>
 			<iCost>1000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -2638,7 +2680,9 @@
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
-			<PrereqBuilding>BUILDING_HOUSING_WORKING_CLASS</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_HOUSING_WORKING_CLASS</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_ASTROGATION_CONSTELLATION</PrereqTech>
 			<iCost>2000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -2692,7 +2736,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_MARS_FACTORY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_MARS_FACTORY</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -2745,7 +2791,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_VENUS_CARBONWORKS</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_VENUS_CARBONWORKS</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
 			<iCost>3000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -2869,7 +2917,9 @@
 					</ActionOutcomes>
 				</Action>
 			</Actions>
-			<PrereqBuilding>BUILDING_LAUNCH_SITE_EFFECT</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_SOLAR_PROPULSION</PrereqTech>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -3217,7 +3267,9 @@
 					</ActionOutcomes>
 				</Action>
 			</Actions>
-			<PrereqBuilding>BUILDING_DEEP_SPACE_DOCKING_BAY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_DEEP_SPACE_DOCKING_BAY</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_NANOTROIDS</PrereqTech>
 			<iCost>5000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -3652,7 +3704,9 @@
 					<PassableTech>TECH_HORIZON_BREAKING</PassableTech>
 				</TerrainPassableTech>
 			</TerrainPassableTechs>
-			<PrereqBuilding>BUILDING_CHRONOTON</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_CHRONOTON</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_STABLE_TIME_LOOPS</PrereqTech>
 			<iCost>5000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -3710,7 +3764,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_COMMERCIAL_SPACEPORT</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_MASS_DRIVER</PrereqTech>
 			<iCost>5000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -3773,7 +3829,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_MAGLEV_LAUNCH</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_MAGLEV_LAUNCH</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_NEURON_ENGINEERING</PrereqTech>
 			<iCost>5500</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -3838,7 +3896,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_STARPORT</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_STARPORT</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_TRANSHUMANISM</PrereqTech>
 			<iCost>6000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -3905,7 +3965,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_STARPORT</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_STARPORT</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_ASTROIMPERIALISM</PrereqTech>
 			<iCost>6500</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -3973,7 +4035,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_INTERGALACTIC_PORT</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_PORT</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_GALACTIFORMING</PrereqTech>
 			<iCost>7000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -4042,7 +4106,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_INTERGALACTIC_PORT</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_PORT</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_SHAPESHIFTING</PrereqTech>
 			<iCost>7500</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -4097,7 +4163,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_MICROWORMHOLE_BUILDING</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_MICROWORMHOLE_BUILDING</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_HYPERINTELLIGENCE</PrereqTech>
 			<iCost>8000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -4180,7 +4248,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_WORLDHOUSE</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_WORLDHOUSE</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_DIRECTED_PANSPERMIA</PrereqTech>
 			<iCost>7500</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -4270,7 +4340,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_CHIRAL_FLEXIBLE_LIFEFORMS</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_CHIRAL_FLEXIBLE_LIFEFORMS</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_GRAND_UNIFICATION_BIOLOGY</PrereqTech>
 			<iCost>7500</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -4325,7 +4397,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_HYPERFACTORY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_HYPERFACTORY</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_SENTIENT_ENERGY_FIELDS</PrereqTech>
 			<iCost>7500</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -4463,7 +4537,9 @@
 					</ActionOutcomes>
 				</Action>
 			</Actions>
-			<PrereqBuilding>BUILDING_LAUNCH_SITE_EFFECT</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_SATELLITES</PrereqTech>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -4528,7 +4604,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_LAUNCH_SITE_EFFECT</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_SPACE_STATIONS</PrereqTech>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -5323,7 +5401,9 @@
 					</ActionOutcomes>
 				</Action>
 			</Actions>
-			<PrereqBuilding>BUILDING_LAUNCH_SITE_EFFECT</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_PLANETARY_EXPLORATION</PrereqTech>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -5525,7 +5605,9 @@
 					</ActionOutcomes>
 				</Action>
 			</Actions>
-			<PrereqBuilding>BUILDING_DEEP_SPACE_TELESCOPE</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_DEEP_SPACE_TELESCOPE</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_ASTROGATION_CONSTELLATION</PrereqTech>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -5682,7 +5764,9 @@
 					</ActionOutcomes>
 				</Action>
 			</Actions>
-			<PrereqBuilding>BUILDING_SELF_REPLICATING_FACTORY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_SELF_REPLICATING_FACTORY</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_ACNP_PROPULSION</PrereqTech>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -5807,7 +5891,9 @@
 					</ActionOutcomes>
 				</Action>
 			</Actions>
-			<PrereqBuilding>BUILDING_INTERSTELLAR_STARPORT</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_INTERSTELLAR_STARPORT</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_FOLDING_SPACE</PrereqTech>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -5899,7 +5985,9 @@
 					</ActionOutcomes>
 				</Action>
 			</Actions>
-			<PrereqBuilding>BUILDING_INTERGALACTIC_STARPORT</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_STARPORT</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_QUANTUM_RAMJET</PrereqTech>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -6024,7 +6112,9 @@
 					</ActionOutcomes>
 				</Action>
 			</Actions>
-			<PrereqBuilding>BUILDING_HORIZON_PORT</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_HORIZON_PORT</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_ENDLESS_EXPLORATION</PrereqTech>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -6083,7 +6173,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_COMMERCIAL_SPACEPORT</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_COMMERCIAL_SPACEFLIGHT</PrereqTech>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -6426,7 +6518,9 @@
 			<PrereqTech>TECH_ASTEROID_BELT_PROBES</PrereqTech>
 			<iCost>2000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<PrereqBuilding>BUILDING_CERES_TRADING_POST</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_CERES_TRADING_POST</BuildingType>
+			</PrereqBuildings>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
@@ -6502,7 +6596,9 @@
 			<PrereqTech>TECH_ASTEROID_EXTRACTION</PrereqTech>
 			<iCost>2000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<PrereqBuilding>BUILDING_KBO_OUTPOST</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_KBO_OUTPOST</BuildingType>
+			</PrereqBuildings>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
@@ -6634,7 +6730,9 @@
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
-			<PrereqBuilding>BUILDING_PLANETARY_LANDING</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_INTERSTELLAR_TRADE</PrereqTech>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -9785,7 +9883,9 @@
 				</Build>
 			</Builds>
 			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
-			<PrereqBuilding>BUILDING_LUNAR_ASSEMBLY_PLANT</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_LUNAR_ASSEMBLY_PLANT</BuildingType>
+			</PrereqBuildings>
 			<iCost>1700</iCost>
 			<iMoves>1</iMoves>
 			<iWorkRate>400</iWorkRate>
@@ -9889,7 +9989,9 @@
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
-			<PrereqBuilding>BUILDING_LUNAR_DROID_FACTORY</PrereqBuilding>
+			<PrereqBuildings>
+				<BuildingType>BUILDING_LUNAR_DROID_FACTORY</BuildingType>
+			</PrereqBuildings>
 			<PrereqTech>TECH_ANDROIDS</PrereqTech>
 			<iCost>2000</iCost>
 			<iMoves>3</iMoves>
