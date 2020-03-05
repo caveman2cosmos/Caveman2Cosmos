@@ -4329,7 +4329,6 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	int j=0;				//loop counter
 	int k=0;				//loop counter
 	int iNumSibs=0;				// the number of siblings the current xml node has
-	int iNumChildren;
 	int iIndexVal;
 
 	pXML->GetOptionalChildXmlValByName(&m_iMaxGlobalInstances, L"iMaxGlobalInstances", -1);

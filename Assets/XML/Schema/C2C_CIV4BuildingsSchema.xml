@@ -775,7 +775,6 @@
 		<element type="GenericBuildingInfo" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="BuildingInfo" content="eltOnly">
-		<element type="Building" minOccurs="0"/>
 		<element type="Type"/>
 		<element type="bNoLimit" minOccurs="0"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
