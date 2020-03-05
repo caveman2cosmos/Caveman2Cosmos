@@ -323,23 +323,23 @@
 			<iWeight>200</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_JEWISH_CATHEDRAL</BuildingType>
-				<BuildingType>BUILDING_CHRISTIAN_CATHEDRAL</BuildingType>
-				<BuildingType>BUILDING_ISLAMIC_CATHEDRAL</BuildingType>
-				<BuildingType>BUILDING_HINDU_CATHEDRAL</BuildingType>
-				<BuildingType>BUILDING_BUDDHIST_CATHEDRAL</BuildingType>
-				<BuildingType>BUILDING_CONFUCIAN_CATHEDRAL</BuildingType>
-				<BuildingType>BUILDING_TAOIST_CATHEDRAL</BuildingType>
-				<BuildingType>BUILDING_HELLENIC_CATHEDRAL</BuildingType>
-				<BuildingType>BUILDING_ZOROASTRIAN_CATHEDRAL</BuildingType>
-				<BuildingType>BUILDING_MESOAMERICAN_CATHEDRAL</BuildingType>
+				<Building>BUILDING_JEWISH_CATHEDRAL</Building>
+				<Building>BUILDING_CHRISTIAN_CATHEDRAL</Building>
+				<Building>BUILDING_ISLAMIC_CATHEDRAL</Building>
+				<Building>BUILDING_HINDU_CATHEDRAL</Building>
+				<Building>BUILDING_BUDDHIST_CATHEDRAL</Building>
+				<Building>BUILDING_CONFUCIAN_CATHEDRAL</Building>
+				<Building>BUILDING_TAOIST_CATHEDRAL</Building>
+				<Building>BUILDING_HELLENIC_CATHEDRAL</Building>
+				<Building>BUILDING_ZOROASTRIAN_CATHEDRAL</Building>
+				<Building>BUILDING_MESOAMERICAN_CATHEDRAL</Building>
 				<!--Building>BUILDING_CANAANISM_CATHEDRAL</Building-->
 				<!--Building>BUILDING_JAIN_CATHEDRAL</Building-->
-				<BuildingType>BUILDING_MORMON_CATHEDRAL</BuildingType>
-				<BuildingType>BUILDING_SCIENTOLOGY_CATHEDRAL</BuildingType>
-				<BuildingType>BUILDING_SHINTO_CATHEDRAL</BuildingType>
-				<BuildingType>BUILDING_SIKH_CATHEDRAL</BuildingType>
-				<BuildingType>BUILDING_VOODOO_CATHEDRAL</BuildingType>
+				<Building>BUILDING_MORMON_CATHEDRAL</Building>
+				<Building>BUILDING_SCIENTOLOGY_CATHEDRAL</Building>
+				<Building>BUILDING_SHINTO_CATHEDRAL</Building>
+				<Building>BUILDING_SIKH_CATHEDRAL</Building>
+				<Building>BUILDING_VOODOO_CATHEDRAL</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<iNumBuildingsGlobal>10</iNumBuildingsGlobal>
@@ -371,7 +371,7 @@
 			<iWeight>200</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_FORGE</BuildingType>
+				<Building>BUILDING_FORGE</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>
@@ -442,7 +442,7 @@
 			<iMinPopulation>4</iMinPopulation>
 			<iAngry>5</iAngry>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_WV_SLAVERY</BuildingType>
+				<Building>BUILDING_WV_SLAVERY</Building>
 			<BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>
@@ -2284,7 +2284,7 @@
 			<iWeight>200</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<Building>BUILDING_LIBRARY</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>
@@ -2310,7 +2310,7 @@
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_FORGE</BuildingType>
+				<Building>BUILDING_FORGE</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>
@@ -2336,7 +2336,7 @@
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_GROCER</BuildingType>
+				<Building>BUILDING_GROCER</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>
@@ -2362,7 +2362,7 @@
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_MARKET</BuildingType>
+				<Building>BUILDING_MARKET</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>
@@ -2621,7 +2621,7 @@
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<iMinPopulation>25</iMinPopulation>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_PUBLIC_TRANSPORTATION</BuildingType>
+				<Building>BUILDING_PUBLIC_TRANSPORTATION</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>
@@ -2677,7 +2677,7 @@
 			<iWeight>150</iWeight>
 			<iMinPopulation>10</iMinPopulation>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_DISEASE_COMMONCOLD</BuildingType>
+				<Building>BUILDING_DISEASE_COMMONCOLD</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>
@@ -2840,17 +2840,17 @@
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_BUDDHIST_MONASTERY</BuildingType>
-				<BuildingType>BUILDING_CHRISTIAN_MONASTERY</BuildingType>
-				<BuildingType>BUILDING_CONFUCIAN_MONASTERY</BuildingType>
-				<BuildingType>BUILDING_HINDU_MONASTERY</BuildingType>
-				<BuildingType>BUILDING_ISLAMIC_MONASTERY</BuildingType>
-				<BuildingType>BUILDING_JEWISH_MONASTERY</BuildingType>
-				<BuildingType>BUILDING_TAOIST_MONASTERY</BuildingType>
-				<BuildingType>BUILDING_HELLENIC_MONASTERY</BuildingType>
-				<BuildingType>BUILDING_ZOROASTRIAN_MONASTERY</BuildingType>
+				<Building>BUILDING_BUDDHIST_MONASTERY</Building>
+				<Building>BUILDING_CHRISTIAN_MONASTERY</Building>
+				<Building>BUILDING_CONFUCIAN_MONASTERY</Building>
+				<Building>BUILDING_HINDU_MONASTERY</Building>
+				<Building>BUILDING_ISLAMIC_MONASTERY</Building>
+				<Building>BUILDING_JEWISH_MONASTERY</Building>
+				<Building>BUILDING_TAOIST_MONASTERY</Building>
+				<Building>BUILDING_HELLENIC_MONASTERY</Building>
+				<Building>BUILDING_ZOROASTRIAN_MONASTERY</Building>
 				<!--Building>BUILDING_JAIN_MONASTERY</Building-->
-				<BuildingType>BUILDING_VOODOO_MONASTERY</BuildingType>
+				<Building>BUILDING_VOODOO_MONASTERY</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
@@ -2893,7 +2893,7 @@
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>100</iWeight>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_TV_STUDIO</BuildingType>
+				<Building>BUILDING_TV_STUDIO</Building>
 			</BuildingsRequired>
 			<iNumBuildingsGlobal>3</iNumBuildingsGlobal>
 			<bOwnPlot>1</bOwnPlot>
@@ -2921,7 +2921,7 @@
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>200</iWeight>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_OLYMPIC_GAMES</BuildingType>
+				<Building>BUILDING_OLYMPIC_GAMES</Building>
 			</BuildingsRequired>
 			<iNumBuildingsGlobal>1</iNumBuildingsGlobal>
 			<Events>
@@ -3351,7 +3351,7 @@
 			<iWeight>200</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_THEATRE</BuildingType>
+				<Building>BUILDING_THEATRE</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -3673,24 +3673,24 @@
 			<iWeight>200</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_BUDDHIST_TEMPLE</BuildingType>
-				<BuildingType>BUILDING_HINDU_TEMPLE</BuildingType>
-				<BuildingType>BUILDING_JEWISH_TEMPLE</BuildingType>
-				<BuildingType>BUILDING_CONFUCIAN_TEMPLE</BuildingType>
-				<BuildingType>BUILDING_TAOIST_TEMPLE</BuildingType>
-				<BuildingType>BUILDING_CHRISTIAN_TEMPLE</BuildingType>
-				<BuildingType>BUILDING_ISLAMIC_TEMPLE</BuildingType>
+				<Building>BUILDING_BUDDHIST_TEMPLE</Building>
+				<Building>BUILDING_HINDU_TEMPLE</Building>
+				<Building>BUILDING_JEWISH_TEMPLE</Building>
+				<Building>BUILDING_CONFUCIAN_TEMPLE</Building>
+				<Building>BUILDING_TAOIST_TEMPLE</Building>
+				<Building>BUILDING_CHRISTIAN_TEMPLE</Building>
+				<Building>BUILDING_ISLAMIC_TEMPLE</Building>
 				<!--Building>BUILDING_CANAANISM_TEMPLE</Building-->
 				<!--Building>BUILDING_JAIN_TEMPLE</Building-->
-				<BuildingType>BUILDING_MORMON_TEMPLE</BuildingType>
-				<BuildingType>BUILDING_SCIENTOLOGY_TEMPLE</BuildingType>
-				<BuildingType>BUILDING_SHINTO_TEMPLE</BuildingType>
-				<BuildingType>BUILDING_SIKH_TEMPLE</BuildingType>
-				<BuildingType>BUILDING_VOODOO_TEMPLE</BuildingType>
-				<BuildingType>BUILDING_HELLENIC_TEMPLE</BuildingType>
-				<BuildingType>BUILDING_ZOROASTRIAN_TEMPLE</BuildingType>
-				<BuildingType>BUILDING_EGYPT_MYTH_TEMPLE</BuildingType>
-				<BuildingType>BUILDING_MESOAMERICAN_TEMPLE</BuildingType>
+				<Building>BUILDING_MORMON_TEMPLE</Building>
+				<Building>BUILDING_SCIENTOLOGY_TEMPLE</Building>
+				<Building>BUILDING_SHINTO_TEMPLE</Building>
+				<Building>BUILDING_SIKH_TEMPLE</Building>
+				<Building>BUILDING_VOODOO_TEMPLE</Building>
+				<Building>BUILDING_HELLENIC_TEMPLE</Building>
+				<Building>BUILDING_ZOROASTRIAN_TEMPLE</Building>
+				<Building>BUILDING_EGYPT_MYTH_TEMPLE</Building>
+				<Building>BUILDING_MESOAMERICAN_TEMPLE</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
@@ -3782,7 +3782,7 @@
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_FORGE</BuildingType>
+				<Building>BUILDING_FORGE</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<BonusesRequired>
@@ -3812,21 +3812,21 @@
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_JEWISH_CATHEDRAL</BuildingType>
-				<BuildingType>BUILDING_CHRISTIAN_CATHEDRAL</BuildingType>
-				<BuildingType>BUILDING_ISLAMIC_CATHEDRAL</BuildingType>
-				<BuildingType>BUILDING_HINDU_CATHEDRAL</BuildingType>
-				<BuildingType>BUILDING_BUDDHIST_CATHEDRAL</BuildingType>
-				<BuildingType>BUILDING_CONFUCIAN_CATHEDRAL</BuildingType>
-				<BuildingType>BUILDING_TAOIST_CATHEDRAL</BuildingType>
-				<BuildingType>BUILDING_HELLENIC_CATHEDRAL</BuildingType>
-				<BuildingType>BUILDING_ZOROASTRIAN_CATHEDRAL</BuildingType>
+				<Building>BUILDING_JEWISH_CATHEDRAL</Building>
+				<Building>BUILDING_CHRISTIAN_CATHEDRAL</Building>
+				<Building>BUILDING_ISLAMIC_CATHEDRAL</Building>
+				<Building>BUILDING_HINDU_CATHEDRAL</Building>
+				<Building>BUILDING_BUDDHIST_CATHEDRAL</Building>
+				<Building>BUILDING_CONFUCIAN_CATHEDRAL</Building>
+				<Building>BUILDING_TAOIST_CATHEDRAL</Building>
+				<Building>BUILDING_HELLENIC_CATHEDRAL</Building>
+				<Building>BUILDING_ZOROASTRIAN_CATHEDRAL</Building>
 				<!--Building>BUILDING_CANAANISM_CATHEDRAL</Building-->
 				<!--Building>BUILDING_JAIN_CATHEDRAL</Building-->
-				<BuildingType>BUILDING_MORMON_CATHEDRAL</BuildingType>
-				<BuildingType>BUILDING_SCIENTOLOGY_CATHEDRAL</BuildingType>
-				<BuildingType>BUILDING_SHINTO_CATHEDRAL</BuildingType>
-				<BuildingType>BUILDING_SIKH_CATHEDRAL</BuildingType>
+				<Building>BUILDING_MORMON_CATHEDRAL</Building>
+				<Building>BUILDING_SCIENTOLOGY_CATHEDRAL</Building>
+				<Building>BUILDING_SHINTO_CATHEDRAL</Building>
+				<Building>BUILDING_SIKH_CATHEDRAL</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<BonusesRequired>
@@ -3855,7 +3855,7 @@
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>100</iWeight>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_SCULPTOR</BuildingType>
+				<Building>BUILDING_SCULPTOR</Building>
 			</BuildingsRequired>
 			<iNumBuildingsGlobal>3</iNumBuildingsGlobal>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
@@ -3901,7 +3901,7 @@
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_GROCER</BuildingType>
+				<Building>BUILDING_GROCER</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
@@ -3933,7 +3933,7 @@
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_FACTORY</BuildingType>
+				<Building>BUILDING_FACTORY</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -3960,7 +3960,7 @@
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_COMPUTER_FACTORY</BuildingType>
+				<Building>BUILDING_COMPUTER_FACTORY</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -3987,7 +3987,7 @@
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_PUBLIC_TRANSPORTATION</BuildingType>
+				<Building>BUILDING_PUBLIC_TRANSPORTATION</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -4055,8 +4055,8 @@
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_COMMERCIAL_PORT</BuildingType>
-				<BuildingType>BUILDING_INTERNATIONAL_PORT</BuildingType>
+				<Building>BUILDING_COMMERCIAL_PORT</Building>
+				<Building>BUILDING_INTERNATIONAL_PORT</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<ImprovementsRequired>
@@ -4101,7 +4101,7 @@
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_TEXTILE_FACTORY</BuildingType>
+				<Building>BUILDING_TEXTILE_FACTORY</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<iNumBuildingsGlobal>1</iNumBuildingsGlobal>
@@ -4146,7 +4146,7 @@
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_STABLE</BuildingType>
+				<Building>BUILDING_STABLE</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<iNumBuildingsGlobal>1</iNumBuildingsGlobal>
@@ -4190,8 +4190,8 @@
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_FORGE</BuildingType>
-				<BuildingType>BUILDING_JEWELLERY</BuildingType>
+				<Building>BUILDING_FORGE</Building>
+				<Building>BUILDING_JEWELLERY</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<iNumBuildingsGlobal>1</iNumBuildingsGlobal>
@@ -4287,7 +4287,7 @@
 			<iWeight>-1</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_STABLE</BuildingType>
+				<Building>BUILDING_STABLE</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -4316,7 +4316,7 @@
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>500</iWeight>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_HARBORMASTER_OFFICE</BuildingType>
+				<Building>BUILDING_HARBORMASTER_OFFICE</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -4346,7 +4346,7 @@
 			<iWeight>-1</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_PORT</BuildingType>
+				<Building>BUILDING_PORT</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -4377,7 +4377,7 @@
 			<iWeight>400</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_SCROLL_MAKER</BuildingType>
+				<Building>BUILDING_SCROLL_MAKER</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -4407,7 +4407,7 @@
 			<iWeight>-1</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<Building>BUILDING_LIBRARY</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -4438,7 +4438,7 @@
 			<iWeight>400</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_FORGE</BuildingType>
+				<Building>BUILDING_FORGE</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -4466,7 +4466,7 @@
 			<iWeight>-1</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_FORGE</BuildingType>
+				<Building>BUILDING_FORGE</Building>
 			</BuildingsRequired>
 			<Events>
 				<Event>EVENT_MASTER_BLACKSMITH_DONE_1</Event>
@@ -4495,7 +4495,7 @@
 			<iWeight>400</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_HIGH_WALLS</BuildingType>
+				<Building>BUILDING_HIGH_WALLS</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -4654,8 +4654,8 @@
 			<iWeight>200</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_WALLS</BuildingType>
-				<BuildingType>BUILDING_HIGH_WALLS</BuildingType>
+				<Building>BUILDING_WALLS</Building>
+				<Building>BUILDING_HIGH_WALLS</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bPickReligion>1</bPickReligion>
@@ -4684,7 +4684,7 @@
 			<iWeight>200</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_THEATRE</BuildingType>
+				<Building>BUILDING_THEATRE</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -4710,7 +4710,7 @@
 			<iWeight>200</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_COLOSSEUM</BuildingType>
+				<Building>BUILDING_COLOSSEUM</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -4738,18 +4738,18 @@
 			<iWeight>200</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_BUDDHIST_MONASTERY</BuildingType>
-				<BuildingType>BUILDING_CHRISTIAN_MONASTERY</BuildingType>
-				<BuildingType>BUILDING_CONFUCIAN_MONASTERY</BuildingType>
-				<BuildingType>BUILDING_HINDU_MONASTERY</BuildingType>
-				<BuildingType>BUILDING_ISLAMIC_MONASTERY</BuildingType>
-				<BuildingType>BUILDING_JEWISH_MONASTERY</BuildingType>
-				<BuildingType>BUILDING_TAOIST_MONASTERY</BuildingType>
-				<BuildingType>BUILDING_HELLENIC_MONASTERY</BuildingType>
-				<BuildingType>BUILDING_ZOROASTRIAN_MONASTERY</BuildingType>
-				<BuildingType>BUILDING_EGYPT_MYTH_MONASTERY</BuildingType>
+				<Building>BUILDING_BUDDHIST_MONASTERY</Building>
+				<Building>BUILDING_CHRISTIAN_MONASTERY</Building>
+				<Building>BUILDING_CONFUCIAN_MONASTERY</Building>
+				<Building>BUILDING_HINDU_MONASTERY</Building>
+				<Building>BUILDING_ISLAMIC_MONASTERY</Building>
+				<Building>BUILDING_JEWISH_MONASTERY</Building>
+				<Building>BUILDING_TAOIST_MONASTERY</Building>
+				<Building>BUILDING_HELLENIC_MONASTERY</Building>
+				<Building>BUILDING_ZOROASTRIAN_MONASTERY</Building>
+				<Building>BUILDING_EGYPT_MYTH_MONASTERY</Building>
 				<!--Building>BUILDING_JAIN_MONASTERY</Building-->
-				<BuildingType>BUILDING_VOODOO_MONASTERY</BuildingType>
+				<Building>BUILDING_VOODOO_MONASTERY</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -4777,7 +4777,7 @@
 			<iWeight>200</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_CASTLE</BuildingType>
+				<Building>BUILDING_CASTLE</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -4808,7 +4808,7 @@
 			<iWeight>200</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_GRANARY</BuildingType>
+				<Building>BUILDING_GRANARY</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -4832,7 +4832,7 @@
 			<iWeight>200</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_HOSPITAL</BuildingType>
+				<Building>BUILDING_HOSPITAL</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bPickReligion>1</bPickReligion>
@@ -4859,9 +4859,9 @@
 			<iWeight>200</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_AIRFIELD</BuildingType>
-				<BuildingType>BUILDING_AIRPORT</BuildingType>
-				<BuildingType>BUILDING_COMMERCIAL_AIRPORT</BuildingType>
+				<Building>BUILDING_AIRFIELD</Building>
+				<Building>BUILDING_AIRPORT</Building>
+				<Building>BUILDING_COMMERCIAL_AIRPORT</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -4885,7 +4885,7 @@
 			<iWeight>200</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_FACTORY</BuildingType>
+				<Building>BUILDING_FACTORY</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -4915,7 +4915,7 @@
 			<iWeight>200</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_LABORATORY</BuildingType>
+				<Building>BUILDING_LABORATORY</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -4987,7 +4987,7 @@
 			<iNumUnits>1</iNumUnits>
 			<iUnitExperienceWeight>1</iUnitExperienceWeight>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_DRYDOCK</BuildingType>
+				<Building>BUILDING_DRYDOCK</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -5057,7 +5057,7 @@
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<Civic>CIVIC_MONARCHY</Civic>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_PALACE</BuildingType>
+				<Building>BUILDING_PALACE</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bPickReligion>1</bPickReligion>
@@ -5745,7 +5745,7 @@
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_INTELLIGENCE_AGENCY</BuildingType>
+				<Building>BUILDING_INTELLIGENCE_AGENCY</Building>
 			</BuildingsRequired>
 			<iNumBuildingsGlobal>5</iNumBuildingsGlobal>
 			<Events>
@@ -5770,7 +5770,7 @@
 			<iWeight>200</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_JAIL</BuildingType>
+				<Building>BUILDING_JAIL</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -5882,7 +5882,7 @@
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_HYDRO_PLANT</BuildingType>
+				<Building>BUILDING_HYDRO_PLANT</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -5908,7 +5908,7 @@
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_JEWISH_MONASTERY</BuildingType>
+				<Building>BUILDING_JEWISH_MONASTERY</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<ReligionsRequired>
@@ -5945,7 +5945,7 @@
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_GOLDSMITH</BuildingType>
+				<Building>BUILDING_GOLDSMITH</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<ReligionsRequired>
@@ -5978,7 +5978,7 @@
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_CHRISTIAN_MONASTERY</BuildingType>
+				<Building>BUILDING_CHRISTIAN_MONASTERY</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<ReligionsRequired>
@@ -6012,7 +6012,7 @@
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<iNumUnits>1</iNumUnits>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
+				<Building>BUILDING_COURTHOUSE</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<BonusesRequired>
@@ -6109,7 +6109,7 @@
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<Civic>CIVIC_PLANNED</Civic>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_BROADCAST_TOWER</BuildingType>
+				<Building>BUILDING_BROADCAST_TOWER</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -6214,7 +6214,7 @@
 			<iWeight>250</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_MINOR_LEAGUE_STADIUM</BuildingType>
+				<Building>BUILDING_MINOR_LEAGUE_STADIUM</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -6276,7 +6276,7 @@
 			<iWeight>200</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_BROADCAST_TOWER</BuildingType>
+				<Building>BUILDING_BROADCAST_TOWER</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -6383,7 +6383,7 @@
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<Civic>CIVIC_FIAT_MONEY</Civic>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_BANK</BuildingType>
+				<Building>BUILDING_BANK</Building>
 			</BuildingsRequired>
 			<iNumBuildingsGlobal>1</iNumBuildingsGlobal>
 			<Events>
@@ -6470,7 +6470,7 @@
 			<iWeight>200</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_RESEARCH_HOSPITAL</BuildingType>
+				<Building>BUILDING_RESEARCH_HOSPITAL</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -6530,7 +6530,7 @@
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<iMinTreasury>30000</iMinTreasury>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_COAL_MINE</BuildingType>
+				<Building>BUILDING_COAL_MINE</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -6600,7 +6600,7 @@
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<Civic>CIVIC_FIAT_MONEY</Civic>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_BANK</BuildingType>
+				<Building>BUILDING_BANK</Building>
 			</BuildingsRequired>
 			<iNumBuildingsGlobal>1</iNumBuildingsGlobal>
 			<Events>
@@ -6629,7 +6629,7 @@
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<iAngry>1</iAngry>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_FACTORY</BuildingType>
+				<Building>BUILDING_FACTORY</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -6914,8 +6914,8 @@
 			<iWeight>200</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_FORGE</BuildingType>
-				<BuildingType>BUILDING_ARMOURER</BuildingType>
+				<Building>BUILDING_FORGE</Building>
+				<Building>BUILDING_ARMOURER</Building>
 			</BuildingsRequired>
 			<iNumBuildings>2</iNumBuildings>
 			<BonusesRequired>
@@ -7081,7 +7081,7 @@
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
+				<Building>BUILDING_SCHOOL_OF_SCRIBES</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>
@@ -7135,8 +7135,8 @@
 			<iWeight>300</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_STABLE</BuildingType>
-				<BuildingType>BUILDING_CHARIOT_WORKSHOP</BuildingType>
+				<Building>BUILDING_STABLE</Building>
+				<Building>BUILDING_CHARIOT_WORKSHOP</Building>
 			</BuildingsRequired>
 			<iNumBuildings>2</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>
@@ -7300,7 +7300,7 @@
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_TANNERY</BuildingType>
+				<Building>BUILDING_TANNERY</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>
@@ -7349,7 +7349,7 @@
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_ARMOURER</BuildingType>
+				<Building>BUILDING_ARMOURER</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -7381,7 +7381,7 @@
 			</UnitsRequired>
 			<iNumUnits>2</iNumUnits>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_IRONSMITH</BuildingType>
+				<Building>BUILDING_IRONSMITH</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>
@@ -7444,7 +7444,7 @@
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_SHIPYARD</BuildingType>
+				<Building>BUILDING_SHIPYARD</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>
@@ -7595,7 +7595,7 @@
 			<iWeight>200</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_STONEHENGE</BuildingType>
+				<Building>BUILDING_STONEHENGE</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>
@@ -7623,7 +7623,7 @@
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<iMinTreasury>1000</iMinTreasury>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_TREASURY</BuildingType>
+				<Building>BUILDING_TREASURY</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>
@@ -7653,7 +7653,7 @@
 			<iWeight>150</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_CHEMISTRY_LAB</BuildingType>
+				<Building>BUILDING_CHEMISTRY_LAB</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>
@@ -7683,7 +7683,7 @@
 			<iWeight>200</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_ACCELERATOR</BuildingType>
+				<Building>BUILDING_ACCELERATOR</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>
@@ -7707,7 +7707,7 @@
 			<iWeight>500</iWeight>
 			<iMinPopulation>10</iMinPopulation>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_DISEASE_PLAGUE</BuildingType>
+				<Building>BUILDING_DISEASE_PLAGUE</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>
@@ -7734,7 +7734,7 @@
 			<iWeight>500</iWeight>
 			<iMinPopulation>10</iMinPopulation>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_DISEASE_SMALLPOX</BuildingType>
+				<Building>BUILDING_DISEASE_SMALLPOX</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>
@@ -7761,7 +7761,7 @@
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_OIL_REFINERY</BuildingType>
+				<Building>BUILDING_OIL_REFINERY</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>
@@ -7787,7 +7787,7 @@
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_SECRET_ARMY_BASE</BuildingType>
+				<Building>BUILDING_SECRET_ARMY_BASE</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>
@@ -7835,7 +7835,7 @@
 			<iWeight>140</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
+				<Building>BUILDING_UNIVERSITY</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -7960,10 +7960,10 @@
 			<iWeight>120</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_WATERMILL</BuildingType>
-				<BuildingType>BUILDING_WINDMILL</BuildingType>
-				<BuildingType>BUILDING_OXEN_MILL</BuildingType>
-				<BuildingType>BUILDING_DONKEY_MILL</BuildingType>
+				<Building>BUILDING_WATERMILL</Building>
+				<Building>BUILDING_WINDMILL</Building>
+				<Building>BUILDING_OXEN_MILL</Building>
+				<Building>BUILDING_DONKEY_MILL</Building>
 			</BuildingsRequired>
 			<iNumBuildings>2</iNumBuildings>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
@@ -8187,7 +8187,7 @@
 			<iWeight>150</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_OBELISK</BuildingType>
+				<Building>BUILDING_OBELISK</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>
@@ -8325,7 +8325,7 @@
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<Civic>CIVIC_TOTALITARIANISM</Civic>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_PALACE</BuildingType>
+				<Building>BUILDING_PALACE</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -8354,7 +8354,7 @@
 			<Civic>CIVIC_MONARCHY</Civic>
 			<iMinTreasury>50</iMinTreasury>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_PALACE</BuildingType>
+				<Building>BUILDING_PALACE</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -8381,7 +8381,7 @@
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<Civic>CIVIC_FREE_MARKET</Civic>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_ACADEMY</BuildingType>
+				<Building>BUILDING_ACADEMY</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -8406,7 +8406,7 @@
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<Civic>CIVIC_EGALITARIAN</Civic>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
+				<Building>BUILDING_UNIVERSITY</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -8474,7 +8474,7 @@
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_SHEARING_BARN</BuildingType>
+				<Building>BUILDING_SHEARING_BARN</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
@@ -8665,10 +8665,10 @@
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<Civic>CIVIC_BARTER</Civic>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_HARBOR</BuildingType>
-				<BuildingType>BUILDING_PORT</BuildingType>
-				<BuildingType>BUILDING_COMMERCIAL_PORT</BuildingType>
-				<BuildingType>BUILDING_MARKET</BuildingType>
+				<Building>BUILDING_HARBOR</Building>
+				<Building>BUILDING_PORT</Building>
+				<Building>BUILDING_COMMERCIAL_PORT</Building>
+				<Building>BUILDING_MARKET</Building>
 			</BuildingsRequired>
 			<iNumBuildings>2</iNumBuildings>
 			<Events>
@@ -8695,7 +8695,7 @@
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<Civic>CIVIC_EGALITARIAN</Civic>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_BROADCAST_TOWER</BuildingType>
+				<Building>BUILDING_BROADCAST_TOWER</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -9373,7 +9373,7 @@
 			<iWeight>0</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_MODERN_MILL</BuildingType>
+				<Building>BUILDING_MODERN_MILL</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -9667,7 +9667,7 @@
 			<iMinTreasury>1000</iMinTreasury>
 			<iMinPopulation>10</iMinPopulation>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_HOSPITAL</BuildingType>
+				<Building>BUILDING_HOSPITAL</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -9728,11 +9728,11 @@
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<iMinPopulation>6</iMinPopulation>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_RIVER_PORT</BuildingType>
-				<BuildingType>BUILDING_HARBOR</BuildingType>
-				<BuildingType>BUILDING_PORT</BuildingType>
-				<BuildingType>BUILDING_COMMERCIAL_PORT</BuildingType>
-				<BuildingType>BUILDING_INTERNATIONAL_PORT</BuildingType>
+				<Building>BUILDING_RIVER_PORT</Building>
+				<Building>BUILDING_HARBOR</Building>
+				<Building>BUILDING_PORT</Building>
+				<Building>BUILDING_COMMERCIAL_PORT</Building>
+				<Building>BUILDING_INTERNATIONAL_PORT</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -9764,7 +9764,7 @@
 			<iWeight>-1</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_AGRICULTURAL_ACHIEVEMENT</BuildingType>
+				<Building>BUILDING_AGRICULTURAL_ACHIEVEMENT</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -9783,7 +9783,7 @@
 			<iWeight>-1</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_COMMERCIAL_ACHIEVEMENT</BuildingType>
+				<Building>BUILDING_COMMERCIAL_ACHIEVEMENT</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -9802,7 +9802,7 @@
 			<iWeight>-1</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_INDUSTRIAL_ACHIEVEMENT</BuildingType>
+				<Building>BUILDING_INDUSTRIAL_ACHIEVEMENT</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -9821,7 +9821,7 @@
 			<iWeight>-1</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_CULTURAL_ACHIEVEMENT</BuildingType>
+				<Building>BUILDING_CULTURAL_ACHIEVEMENT</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -9840,7 +9840,7 @@
 			<iWeight>-1</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
+				<Building>BUILDING_MILITARY_ACHIEVEMENT</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -9859,7 +9859,7 @@
 			<iWeight>-1</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
+				<Building>BUILDING_POLITICAL_ACHIEVEMENT</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -9878,7 +9878,7 @@
 			<iWeight>-1</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
+				<Building>BUILDING_SCIENTIFIC_ACHIEVEMENT</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -9897,7 +9897,7 @@
 			<iWeight>-1</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
+				<Building>BUILDING_SEAFARING_ACHIEVEMENT</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -9919,11 +9919,11 @@
 			<iWeight>200</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_LIGHTHOUSE</BuildingType>
-				<BuildingType>BUILDING_HARBOR</BuildingType>
-				<BuildingType>BUILDING_PORT</BuildingType>
-				<BuildingType>BUILDING_DRYDOCK</BuildingType>
-				<BuildingType>BUILDING_CUSTOM_HOUSE</BuildingType>
+				<Building>BUILDING_LIGHTHOUSE</Building>
+				<Building>BUILDING_HARBOR</Building>
+				<Building>BUILDING_PORT</Building>
+				<Building>BUILDING_DRYDOCK</Building>
+				<Building>BUILDING_CUSTOM_HOUSE</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>
@@ -9947,11 +9947,11 @@
 			<iWeight>200</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_LIGHTHOUSE</BuildingType>
-				<BuildingType>BUILDING_HARBOR</BuildingType>
-				<BuildingType>BUILDING_PORT</BuildingType>
-				<BuildingType>BUILDING_DRYDOCK</BuildingType>
-				<BuildingType>BUILDING_CUSTOM_HOUSE</BuildingType>
+				<Building>BUILDING_LIGHTHOUSE</Building>
+				<Building>BUILDING_HARBOR</Building>
+				<Building>BUILDING_PORT</Building>
+				<Building>BUILDING_DRYDOCK</Building>
+				<Building>BUILDING_CUSTOM_HOUSE</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>
@@ -10021,7 +10021,7 @@
 			<iWeight>-1</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_COLOSSEUM</BuildingType>
+				<Building>BUILDING_COLOSSEUM</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
@@ -10172,7 +10172,7 @@
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_CHICKEN_COOP</BuildingType>
+				<Building>BUILDING_CHICKEN_COOP</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -10202,7 +10202,7 @@
 			<iMinTreasury>100</iMinTreasury>
 			<iUnhealthy>1</iUnhealthy>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_DOCTOR</BuildingType>
+				<Building>BUILDING_DOCTOR</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -10226,7 +10226,7 @@
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>200</iWeight>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_SLED_DOGS</BuildingType>
+				<Building>BUILDING_SLED_DOGS</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -10257,7 +10257,7 @@
 			<iWeight>200</iWeight>
 			<iAngry>1</iAngry>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_SALOON</BuildingType>
+				<Building>BUILDING_SALOON</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -10605,7 +10605,7 @@
 			<iWeight>50</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_POLLUTION_GLOBALWARMING3</BuildingType>
+				<Building>BUILDING_POLLUTION_GLOBALWARMING3</Building>
 			</BuildingsRequired>
 			<iNumBuildingsGlobal>1</iNumBuildingsGlobal>
 			<Events>
@@ -10837,7 +10837,7 @@
 			<iUnitExperienceWeight>0</iUnitExperienceWeight>
 			<bUnitsOnPlot>0</bUnitsOnPlot>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_BLARNEY</BuildingType>
+				<Building>BUILDING_BLARNEY</Building>
 			</BuildingsRequired>
 			<iNumBuildings>0</iNumBuildings>
 			<iNumBuildingsGlobal>1</iNumBuildingsGlobal>
@@ -10906,7 +10906,7 @@
 			<iUnitExperienceWeight>0</iUnitExperienceWeight>
 			<bUnitsOnPlot>0</bUnitsOnPlot>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_DINO_PARK</BuildingType>
+				<Building>BUILDING_DINO_PARK</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<iNumBuildingsGlobal>0</iNumBuildingsGlobal>
@@ -10971,7 +10971,7 @@
 			<iUnitExperienceWeight>0</iUnitExperienceWeight>
 			<bUnitsOnPlot>0</bUnitsOnPlot>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_DISNEYLAND</BuildingType>
+				<Building>BUILDING_DISNEYLAND</Building>
 			</BuildingsRequired>
 			<iNumBuildings>0</iNumBuildings>
 			<iNumBuildingsGlobal>2</iNumBuildingsGlobal>
@@ -11036,7 +11036,7 @@
 			<iUnitExperienceWeight>0</iUnitExperienceWeight>
 			<bUnitsOnPlot>0</bUnitsOnPlot>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_LAS_VEGAS_STRIP</BuildingType>
+				<Building>BUILDING_LAS_VEGAS_STRIP</Building>
 			</BuildingsRequired>
 			<iNumBuildings>0</iNumBuildings>
 			<iNumBuildingsGlobal>1</iNumBuildingsGlobal>
@@ -11101,7 +11101,7 @@
 			<iUnitExperienceWeight>0</iUnitExperienceWeight>
 			<bUnitsOnPlot>0</bUnitsOnPlot>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_MONTE_CARLO</BuildingType>
+				<Building>BUILDING_MONTE_CARLO</Building>
 			</BuildingsRequired>
 			<iNumBuildings>0</iNumBuildings>
 			<iNumBuildingsGlobal>1</iNumBuildingsGlobal>
@@ -11166,7 +11166,7 @@
 			<iUnitExperienceWeight>0</iUnitExperienceWeight>
 			<bUnitsOnPlot>0</bUnitsOnPlot>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_PLEISTO_PARK</BuildingType>
+				<Building>BUILDING_PLEISTO_PARK</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<iNumBuildingsGlobal>0</iNumBuildingsGlobal>
@@ -11231,7 +11231,7 @@
 			<iUnitExperienceWeight>0</iUnitExperienceWeight>
 			<bUnitsOnPlot>0</bUnitsOnPlot>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_WOODSTOCK</BuildingType>
+				<Building>BUILDING_WOODSTOCK</Building>
 			</BuildingsRequired>
 			<iNumBuildings>0</iNumBuildings>
 			<iNumBuildingsGlobal>1</iNumBuildingsGlobal>

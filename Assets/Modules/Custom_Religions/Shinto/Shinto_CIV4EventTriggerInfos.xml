@@ -12,13 +12,13 @@
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_WININGMONKS</Type>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_SHINTO_MONASTERY</BuildingType>
+				<Building>BUILDING_SHINTO_MONASTERY</Building>
 			</BuildingsRequired>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_SECRET_KNOWLEDGE</Type>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_SHINTO_MONASTERY</BuildingType>
+				<Building>BUILDING_SHINTO_MONASTERY</Building>
 			</BuildingsRequired>
 		</EventTriggerInfo>
 	</EventTriggerInfos>

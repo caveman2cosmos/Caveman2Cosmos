@@ -8,7 +8,7 @@
 <BuildingInfos>
 	<BuildingInfo>
 		<!-- Dependency -->
-		<BuildingType>BUILDING_DJENNE</BuildingType>
+		<Building>BUILDING_DJENNE</Building>
 		<Type>BUILDING_DJENNE</Type>
 		<!-- Misc. Effects -->
 		<GlobalBuildingProductionModifiers>
@@ -20,7 +20,7 @@
 	</BuildingInfo>
 	<BuildingInfo>
 		<!-- Dependency -->
-		<BuildingType>BUILDING_YOGA_SCHOOL</BuildingType>
+		<Building>BUILDING_YOGA_SCHOOL</Building>
 		<Type>BUILDING_YOGA_SCHOOL</Type>
 		<PrereqOrBuildings>
 			<PrereqOrBuilding>
@@ -31,7 +31,7 @@
 	</BuildingInfo>
 	<BuildingInfo>
 		<!-- Dependency -->
-		<BuildingType>BUILDING_NATIONAL_BELIEF_KARMA</BuildingType>
+		<Building>BUILDING_NATIONAL_BELIEF_KARMA</Building>
 		<Type>BUILDING_NATIONAL_BELIEF_KARMA</Type>
 		<PrereqOrBuildings>
 			<PrereqOrBuilding>
@@ -42,7 +42,7 @@
 	</BuildingInfo>
 	<BuildingInfo>
 		<!-- Dependency -->
-		<BuildingType>BUILDING_NATIONAL_BELIEF_REINCARNATION</BuildingType>
+		<Building>BUILDING_NATIONAL_BELIEF_REINCARNATION</Building>
 		<Type>BUILDING_NATIONAL_BELIEF_REINCARNATION</Type>
 		<PrereqOrBuildings>
 			<PrereqOrBuilding>

@@ -19330,7 +19330,7 @@
 			<iConquestProb>100</iConquestProb>
 		</BuildingInfo>
 		<BuildingInfo>
-            <BuildingType>BUILDING_MASTER_SEA_HUNTER</BuildingType>
+            <Building>BUILDING_MASTER_SEA_HUNTER</Building>
             <Type>BUILDING_MASTER_SEA_HUNTER</Type>
             <Description>TXT_KEY_BUILDING_MASTER_SEA_HUNTER</Description>
             <Civilopedia>TXT_KEY_BUILDING_MASTER_SEA_HUNTER_PEDIA</Civilopedia>

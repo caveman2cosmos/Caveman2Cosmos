@@ -41,7 +41,7 @@
 			<iUnitImmobileTurns>0</iUnitImmobileTurns>
 			<UnitName/>
 			<UnitCombatPromotions/>
-			<BuildingType>NONE</BuildingType>
+			<Building>NONE</Building>
 			<iBuildingChange>0</iBuildingChange>
 			<BuildingExtraYields/>
 			<BuildingExtraCommerces/>
@@ -119,12 +119,12 @@
 			<iUnitImmobileTurns>0</iUnitImmobileTurns>
 			<UnitName/>
 			<UnitCombatPromotions/>
-			<BuildingType>NONE</BuildingType>
+			<Building>NONE</Building>
 			<iBuildingChange>0</iBuildingChange>
 			<BuildingExtraYields/>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_LIBRARY</BuildingType>
+					<Building>BUILDING_LIBRARY</Building>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -203,7 +203,7 @@
 			<iUnitImmobileTurns>0</iUnitImmobileTurns>
 			<UnitName/>
 			<UnitCombatPromotions/>
-			<BuildingType>BUILDING_GUILD_APOTHECARY</BuildingType>
+			<Building>BUILDING_GUILD_APOTHECARY</Building>
 			<iBuildingChange>1</iBuildingChange>
 			<BuildingExtraYields/>
 			<BuildingExtraCommerces/>
@@ -281,7 +281,7 @@
 			<iUnitImmobileTurns>0</iUnitImmobileTurns>
 			<UnitName/>
 			<UnitCombatPromotions/>
-			<BuildingType>NONE</BuildingType>
+			<Building>NONE</Building>
 			<iBuildingChange>0</iBuildingChange>
 			<BuildingExtraYields/>
 			<BuildingExtraHappies/>

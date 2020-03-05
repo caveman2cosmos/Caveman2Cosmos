@@ -7,7 +7,7 @@
 <Civ4BuildingInfos xmlns="x-schema:../../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<BuildingType>BUILDING_BEAR_TRAINER</BuildingType>
+			<Building>BUILDING_BEAR_TRAINER</Building>
 			<Type>BUILDING_BEAR_TRAINER</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -107,7 +107,7 @@
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_BEAR_TRAINER_HERITAGE</BuildingType>
+			<Building>BUILDING_BEAR_TRAINER_HERITAGE</Building>
 			<Type>BUILDING_BEAR_TRAINER_HERITAGE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -153,7 +153,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_BEAR_TRAINER_EFFECT</BuildingType>
+			<Building>BUILDING_BEAR_TRAINER_EFFECT</Building>
 			<Type>BUILDING_BEAR_TRAINER_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_BEAR_TRAINER_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BEAR_TRAINER_PEDIA</Civilopedia>
@@ -173,7 +173,7 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_ANIMAL_TOTEM_BEARS</BuildingType>
+			<Building>BUILDING_ANIMAL_TOTEM_BEARS</Building>
 			<Type>BUILDING_ANIMAL_TOTEM_BEARS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

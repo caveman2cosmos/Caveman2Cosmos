@@ -8,7 +8,7 @@
 <BuildingInfos>
 	<BuildingInfo>
 		<!-- Dependency -->
-		<BuildingType>BUILDING_DJENNE</BuildingType>
+		<Building>BUILDING_DJENNE</Building>
 		<Type>BUILDING_DJENNE</Type>
 		<!-- Misc. Effects -->
 		<GlobalBuildingProductionModifiers>
@@ -20,7 +20,7 @@
 	</BuildingInfo>
 	<BuildingInfo>
 		<!-- Dependency -->
-		<BuildingType>BUILDING_NATIONAL_BELIEF_RESURRECTION</BuildingType>
+		<Building>BUILDING_NATIONAL_BELIEF_RESURRECTION</Building>
 		<Type>BUILDING_NATIONAL_BELIEF_RESURRECTION</Type>
 		<PrereqOrBuildings>
 			<PrereqOrBuilding>

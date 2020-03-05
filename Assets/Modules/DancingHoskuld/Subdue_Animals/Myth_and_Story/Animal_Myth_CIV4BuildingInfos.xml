@@ -4,7 +4,7 @@
 <Civ4BuildingInfos xmlns="x-schema:../../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<BuildingType>BUILDING_ANTELOPE_MYTH</BuildingType>
+			<Building>BUILDING_ANTELOPE_MYTH</Building>
 			<Type>BUILDING_ANTELOPE_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_ANTELOPE_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -69,7 +69,7 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_ANTELOPE_MYTH_EFFECT</BuildingType>
+			<Building>BUILDING_ANTELOPE_MYTH_EFFECT</Building>
 			<Type>BUILDING_ANTELOPE_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_ANTELOPE_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -101,7 +101,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_BULL_MYTH</BuildingType>
+			<Building>BUILDING_BULL_MYTH</Building>
 			<Type>BUILDING_BULL_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_BULL_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -144,7 +144,7 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_BULL_MYTH_EFFECT</BuildingType>
+			<Building>BUILDING_BULL_MYTH_EFFECT</Building>
 			<Type>BUILDING_BULL_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_BULL_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_PEDIA</Civilopedia>
@@ -158,7 +158,7 @@
 			</MapCategoryTypes>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_CAMEL_MYTH</BuildingType>
+			<Building>BUILDING_CAMEL_MYTH</Building>
 			<Type>BUILDING_CAMEL_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_CAMEL_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -200,7 +200,7 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_DEER_MYTH</BuildingType>
+			<Building>BUILDING_DEER_MYTH</Building>
 			<Type>BUILDING_DEER_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_DEER_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -243,7 +243,7 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_DEER_MYTH_EFFECT</BuildingType>
+			<Building>BUILDING_DEER_MYTH_EFFECT</Building>
 			<Type>BUILDING_DEER_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_DEER_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -275,7 +275,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_ELEPHANT_MYTH</BuildingType>
+			<Building>BUILDING_ELEPHANT_MYTH</Building>
 			<Type>BUILDING_ELEPHANT_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_ELEPHANT_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -328,7 +328,7 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_ELEPHANT_MYTH_EFFECT</BuildingType>
+			<Building>BUILDING_ELEPHANT_MYTH_EFFECT</Building>
 			<Type>BUILDING_ELEPHANT_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_ELEPHANT_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -360,7 +360,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_GOAT_MYTH</BuildingType>
+			<Building>BUILDING_GOAT_MYTH</Building>
 			<Type>BUILDING_GOAT_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_GOAT_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -402,7 +402,7 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_HORSE_MYTH</BuildingType>
+			<Building>BUILDING_HORSE_MYTH</Building>
 			<Type>BUILDING_HORSE_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_HORSE_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -444,7 +444,7 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_MARSUPIAL_MYTH</BuildingType>
+			<Building>BUILDING_MARSUPIAL_MYTH</Building>
 			<Type>BUILDING_MARSUPIAL_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_MARSUPIAL_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -487,7 +487,7 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_MARSUPIAL_MYTH_EFFECT</BuildingType>
+			<Building>BUILDING_MARSUPIAL_MYTH_EFFECT</Building>
 			<Type>BUILDING_MARSUPIAL_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_MARSUPIAL_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -519,7 +519,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_OLD_MAN_MYTH</BuildingType>
+			<Building>BUILDING_OLD_MAN_MYTH</Building>
 			<Type>BUILDING_OLD_MAN_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_OLD_MAN_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -561,7 +561,7 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_SCAVENGER_MYTH</BuildingType>
+			<Building>BUILDING_SCAVENGER_MYTH</Building>
 			<Type>BUILDING_SCAVENGER_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_SCAVENGER_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -604,7 +604,7 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_SCAVENGER_MYTH_EFFECT</BuildingType>
+			<Building>BUILDING_SCAVENGER_MYTH_EFFECT</Building>
 			<Type>BUILDING_SCAVENGER_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_SCAVENGER_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -636,7 +636,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_SPOTTED_CAT_MYTH</BuildingType>
+			<Building>BUILDING_SPOTTED_CAT_MYTH</Building>
 			<Type>BUILDING_SPOTTED_CAT_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_SPOTTED_CAT_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -701,7 +701,7 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_SPOTTED_CAT_MYTH_EFFECT</BuildingType>
+			<Building>BUILDING_SPOTTED_CAT_MYTH_EFFECT</Building>
 			<Type>BUILDING_SPOTTED_CAT_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_SPOTTED_CAT_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -733,7 +733,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_TIGER_MYTH</BuildingType>
+			<Building>BUILDING_TIGER_MYTH</Building>
 			<Type>BUILDING_TIGER_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_TIGER_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -782,7 +782,7 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_TIGER_MYTH_EFFECT</BuildingType>
+			<Building>BUILDING_TIGER_MYTH_EFFECT</Building>
 			<Type>BUILDING_TIGER_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_TIGER_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -814,7 +814,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_WEASEL_MYTH</BuildingType>
+			<Building>BUILDING_WEASEL_MYTH</Building>
 			<Type>BUILDING_WEASEL_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_WEASEL_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -871,7 +871,7 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_WEASEL_MYTH_EFFECT</BuildingType>
+			<Building>BUILDING_WEASEL_MYTH_EFFECT</Building>
 			<Type>BUILDING_WEASEL_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_WEASEL_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>

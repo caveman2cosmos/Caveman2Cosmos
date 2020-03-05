@@ -64,14 +64,14 @@ public:
 	//const wchar* getGenericCategoryKey() const;
 
 	// for python wide string handling
-	std::wstring pyGetTextKey() const		{ return getTextKeyWide(); }					// Exposed to Python
-	std::wstring pyGetDescription() const	{ return getDescription(0); }					// Exposed to Python
-	std::wstring pyGetDescriptionForm(uint uiForm) const { return getDescription(uiForm); }	// Exposed to Python
-	std::wstring pyGetText() const			{ return getText(); }							// Exposed to Python
-	std::wstring pyGetCivilopedia() const	{ return getCivilopedia(); }					// Exposed to Python
-	std::wstring pyGetHelp() const			{ return getHelp(); }							// Exposed to Python
-	std::wstring pyGetStrategy() const		{ return getStrategy(); }						// Exposed to Python
-/*	std::wstring pyGetGenericCategory()		{ return getGenericCategory(); }*/				// Exposed to Python
+	std::wstring pyGetTextKey() { return getTextKeyWide(); }				// Exposed to Python
+	std::wstring pyGetDescription() { return getDescription(0); }			// Exposed to Python
+	std::wstring pyGetDescriptionForm(uint uiForm) { return getDescription(uiForm); }	// Exposed to Python
+	std::wstring pyGetText() { return getText(); }							// Exposed to Python
+	std::wstring pyGetCivilopedia() { return getCivilopedia(); }			// Exposed to Python
+	std::wstring pyGetHelp() { return getHelp(); }							// Exposed to Python
+	std::wstring pyGetStrategy() { return getStrategy(); }					// Exposed to Python
+/*	std::wstring pyGetGenericCategory() { return getGenericCategory(); }*/	// Exposed to Python
 
 	DllExport const wchar* getTextKeyWide() const;
 	DllExport const wchar* getDescription(uint uiForm = 0) const;
@@ -4088,9 +4088,7 @@ public:
 /* Afforess						 END															*/
 /************************************************************************************************/
 
-	bool readPass2(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvBuildingInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
-	void copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL, bool bOver = false);
 	//Alberts2 PrereqBonuses
 	int getNumPrereqOrBonuses() const;	// Exposed to Python
 	BonusTypes getPrereqOrBonuses(int i) const;	// Exposed to Python

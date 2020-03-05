@@ -4589,7 +4589,7 @@
 		</BuildingInfo>
 		<!-- <BuildingInfo>-->
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
-			<!-- <BuildingType>BUILDING_KNOWLEDGE_BASE_INDUSTRIAL</BuildingType>
+			<!-- <Building>BUILDING_KNOWLEDGE_BASE_INDUSTRIAL</Building>
 			<Type>BUILDING_KNOWLEDGE_BASE_INDUSTRIAL</Type>
 			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_INDUSTRIAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_INDUSTRIAL_PEDIA</Civilopedia>
@@ -4622,7 +4622,7 @@
 		</BuildingInfo>
 		<BuildingInfo>-->
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
-			<!-- <BuildingType>BUILDING_KNOWLEDGE_BASE_MODERN</BuildingType>
+			<!-- <Building>BUILDING_KNOWLEDGE_BASE_MODERN</Building>
 			<Type>BUILDING_KNOWLEDGE_BASE_MODERN</Type>
 			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MODERN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MODERN_PEDIA</Civilopedia>
@@ -4655,7 +4655,7 @@
 		</BuildingInfo>
 		<BuildingInfo>-->
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
-			<!-- <BuildingType>BUILDING_KNOWLEDGE_BASE_INFORMATION</BuildingType>
+			<!-- <Building>BUILDING_KNOWLEDGE_BASE_INFORMATION</Building>
 			<Type>BUILDING_KNOWLEDGE_BASE_INFORMATION</Type>
 			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_INFORMATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_INFORMATION_PEDIA</Civilopedia>
@@ -4688,7 +4688,7 @@
 		</BuildingInfo>
 		<BuildingInfo>-->
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
-			<!-- <BuildingType>BUILDING_KNOWLEDGE_BASE_NANOTECH</BuildingType>
+			<!-- <Building>BUILDING_KNOWLEDGE_BASE_NANOTECH</Building>
 			<Type>BUILDING_KNOWLEDGE_BASE_NANOTECH</Type>
 			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_NANOTECH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_NANOTECH_PEDIA</Civilopedia>
@@ -4721,7 +4721,7 @@
 		</BuildingInfo>
 		<BuildingInfo>-->
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
-			<!-- <BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSHUMAN</BuildingType>
+			<!-- <Building>BUILDING_KNOWLEDGE_BASE_TRANSHUMAN</Building>
 			<Type>BUILDING_KNOWLEDGE_BASE_TRANSHUMAN</Type>
 			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_TRANSHUMAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_TRANSHUMAN_PEDIA</Civilopedia>
@@ -4754,7 +4754,7 @@
 		</BuildingInfo>
 		<BuildingInfo>-->
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
-			<!-- <BuildingType>BUILDING_KNOWLEDGE_BASE_GALACTIC</BuildingType>
+			<!-- <Building>BUILDING_KNOWLEDGE_BASE_GALACTIC</Building>
 			<Type>BUILDING_KNOWLEDGE_BASE_GALACTIC</Type>
 			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_GALACTIC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_GALACTIC_PEDIA</Civilopedia>
@@ -4787,7 +4787,7 @@
 		</BuildingInfo>
 		<BuildingInfo>-->
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
-			<!-- <BuildingType>BUILDING_KNOWLEDGE_BASE_COSMIC</BuildingType>
+			<!-- <Building>BUILDING_KNOWLEDGE_BASE_COSMIC</Building>
 			<Type>BUILDING_KNOWLEDGE_BASE_COSMIC</Type>
 			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_COSMIC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_COSMIC_PEDIA</Civilopedia>
@@ -4820,7 +4820,7 @@
 		</BuildingInfo>
 		<BuildingInfo>-->
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
-			<!-- <BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</BuildingType>
+			<!-- <Building>BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</Building>
 			<Type>BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</Type>
 			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_TRANSCENDENT_PEDIA</Civilopedia>

@@ -12,31 +12,31 @@
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_HYMNS_AND_SCULPTURES</Type>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_JAIN_CATHEDRAL</BuildingType>
+				<Building>BUILDING_JAIN_CATHEDRAL</Building>
 			</BuildingsRequired>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_WININGMONKS</Type>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_JAIN_MONASTERY</BuildingType>
+				<Building>BUILDING_JAIN_MONASTERY</Building>
 			</BuildingsRequired>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_HOLY_RITUAL</Type>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_JAIN_TEMPLE</BuildingType>
+				<Building>BUILDING_JAIN_TEMPLE</Building>
 			</BuildingsRequired>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_STAINED_GLASS</Type>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_JAIN_CATHEDRAL</BuildingType>
+				<Building>BUILDING_JAIN_CATHEDRAL</Building>
 			</BuildingsRequired>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_SECRET_KNOWLEDGE</Type>
 			<BuildingsRequired>
-				<BuildingType>BUILDING_JAIN_MONASTERY</BuildingType>
+				<Building>BUILDING_JAIN_MONASTERY</Building>
 			</BuildingsRequired>
 		</EventTriggerInfo>
 	</EventTriggerInfos>

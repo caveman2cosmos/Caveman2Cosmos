@@ -42,7 +42,7 @@
 			<iUnitImmobileTurns>0</iUnitImmobileTurns>
 			<UnitName/>
 			<UnitCombatPromotions/>
-			<BuildingType>NONE</BuildingType>
+			<Building>NONE</Building>
 			<iBuildingChange>0</iBuildingChange>
 			<BuildingExtraYields/>
 			<BuildingExtraCommerces/>

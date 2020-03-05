@@ -4,7 +4,7 @@
 <Civ4BuildingInfos xmlns="x-schema:../../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<BuildingType>BUILDING_PALEOLITHIC_BIRD_MYTH</BuildingType>
+			<Building>BUILDING_PALEOLITHIC_BIRD_MYTH</Building>
 			<Type>BUILDING_PALEOLITHIC_BIRD_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_BIRD_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -70,7 +70,7 @@
 			</PrereqNotBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_PALEOLITHIC_BIRD_MYTH_EFFECT</BuildingType>
+			<Building>BUILDING_PALEOLITHIC_BIRD_MYTH_EFFECT</Building>
 			<Type>BUILDING_PALEOLITHIC_BIRD_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_BIRD_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -84,7 +84,7 @@
 			</MapCategoryTypes>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_PALEOLITHIC_CAT_MYTH</BuildingType>
+			<Building>BUILDING_PALEOLITHIC_CAT_MYTH</Building>
 			<Type>BUILDING_PALEOLITHIC_CAT_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_CAT_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -149,7 +149,7 @@
 			</PrereqNotBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_PALEOLITHIC_CAT_MYTH_EFFECT</BuildingType>
+			<Building>BUILDING_PALEOLITHIC_CAT_MYTH_EFFECT</Building>
 			<Type>BUILDING_PALEOLITHIC_CAT_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_CAT_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -163,7 +163,7 @@
 			</MapCategoryTypes>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_MYTH</BuildingType>
+			<Building>BUILDING_PALEOLITHIC_MARSUPIAL_MYTH</Building>
 			<Type>BUILDING_PALEOLITHIC_MARSUPIAL_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_MARSUPIAL_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -228,7 +228,7 @@
 			</PrereqNotBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_MYTH_EFFECT</BuildingType>
+			<Building>BUILDING_PALEOLITHIC_MARSUPIAL_MYTH_EFFECT</Building>
 			<Type>BUILDING_PALEOLITHIC_MARSUPIAL_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_MARSUPIAL_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>

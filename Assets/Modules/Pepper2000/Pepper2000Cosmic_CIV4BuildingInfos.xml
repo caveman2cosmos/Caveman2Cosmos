@@ -2975,7 +2975,7 @@
 			</YieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
+					<Building>BUILDING_GALACTIC_COLONY</Building>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>20</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -3042,7 +3042,7 @@
 			</YieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
+					<Building>BUILDING_GALACTIC_COLONY</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>20</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -3105,7 +3105,7 @@
 			<iTradeRouteModifier>50</iTradeRouteModifier>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
+					<Building>BUILDING_GALACTIC_COLONY</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>20</iExtraCommerce>
 				</BuildingExtraCommerce>

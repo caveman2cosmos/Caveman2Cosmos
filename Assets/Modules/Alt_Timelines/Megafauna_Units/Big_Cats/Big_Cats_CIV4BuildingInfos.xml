@@ -4,7 +4,7 @@
 <Civ4BuildingInfos xmlns="x-schema:../../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<BuildingType>BUILDING_BIG_CAT_TRAINER</BuildingType>
+			<Building>BUILDING_BIG_CAT_TRAINER</Building>
 			<Type>BUILDING_BIG_CAT_TRAINER</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -109,7 +109,7 @@
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_BIG_CAT_TRAINER_EFFECT</BuildingType>
+			<Building>BUILDING_BIG_CAT_TRAINER_EFFECT</Building>
 			<Type>BUILDING_BIG_CAT_TRAINER_EFFECT</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -128,7 +128,7 @@
 			</MapCategoryTypes>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_ANIMAL_TOTEM_CATS</BuildingType>
+			<Building>BUILDING_ANIMAL_TOTEM_CATS</Building>
 			<Type>BUILDING_ANIMAL_TOTEM_CATS</Type>
 			<Description>TXT_KEY_BUILDING_ANIMAL_TOTEM_CATS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TOTEM_PEDIA</Civilopedia>
@@ -189,7 +189,7 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_POLICE_CAT</BuildingType>
+			<Building>BUILDING_POLICE_CAT</Building>
 			<Type>BUILDING_POLICE_CAT</Type>
 			<Description>TXT_KEY_BUILDING_POLICE_CAT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_POLICE_CAT_PEDIA</Civilopedia>

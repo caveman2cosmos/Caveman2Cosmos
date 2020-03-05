@@ -4,7 +4,7 @@
 <Civ4BuildingInfos xmlns="x-schema:../../../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<BuildingType>BUILDING_DONKEY_MYTH</BuildingType>
+			<Building>BUILDING_DONKEY_MYTH</Building>
 			<Type>BUILDING_DONKEY_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_DONKEY_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -54,7 +54,7 @@
 			</PrereqNotBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_DONKEY_MYTH_EFFECT</BuildingType>
+			<Building>BUILDING_DONKEY_MYTH_EFFECT</Building>
 			<Type>BUILDING_DONKEY_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_DONKEY_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -68,7 +68,7 @@
 			</MapCategoryTypes>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_DONKEY_STORY</BuildingType>
+			<Building>BUILDING_DONKEY_STORY</Building>
 			<Type>BUILDING_DONKEY_STORY</Type>
 			<Description>TXT_KEY_BUILDING_DONKEY_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
@@ -115,7 +115,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_DONKEY_STORIES</BuildingType>
+			<Building>BUILDING_DONKEY_STORIES</Building>
 			<Type>BUILDING_DONKEY_STORIES</Type>
 			<Description>TXT_KEY_BUILDING_DONKEY_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
@@ -163,7 +163,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_DONKEY_STORIES_EFFECT</BuildingType>
+			<Building>BUILDING_DONKEY_STORIES_EFFECT</Building>
 			<Type>BUILDING_DONKEY_STORIES_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_DONKEY_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>

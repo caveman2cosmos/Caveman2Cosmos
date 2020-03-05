@@ -4,7 +4,7 @@
 <Civ4BuildingInfos xmlns="x-schema:../../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<BuildingType>BUILDING_PALEOLITHIC_BIRD_STORY</BuildingType>
+			<Building>BUILDING_PALEOLITHIC_BIRD_STORY</Building>
 			<Type>BUILDING_PALEOLITHIC_BIRD_STORY</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_BIRD_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
@@ -61,7 +61,7 @@
 	           </PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_PALEOLITHIC_BIRD_STORIES</BuildingType>
+			<Building>BUILDING_PALEOLITHIC_BIRD_STORIES</Building>
 			<Type>BUILDING_PALEOLITHIC_BIRD_STORIES</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_BIRD_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
@@ -108,7 +108,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_PALEOLITHIC_BIRD_STORIES_EFFECT</BuildingType>
+			<Building>BUILDING_PALEOLITHIC_BIRD_STORIES_EFFECT</Building>
 			<Type>BUILDING_PALEOLITHIC_BIRD_STORIES_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_BIRD_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
@@ -149,7 +149,7 @@
 	           </PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_PALEOLITHIC_CAT_STORY</BuildingType>
+			<Building>BUILDING_PALEOLITHIC_CAT_STORY</Building>
 			<Type>BUILDING_PALEOLITHIC_CAT_STORY</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_CAT_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
@@ -206,7 +206,7 @@
 	           </PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_PALEOLITHIC_CAT_STORIES</BuildingType>
+			<Building>BUILDING_PALEOLITHIC_CAT_STORIES</Building>
 			<Type>BUILDING_PALEOLITHIC_CAT_STORIES</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_CAT_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
@@ -253,7 +253,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_PALEOLITHIC_CAT_STORIES_EFFECT</BuildingType>
+			<Building>BUILDING_PALEOLITHIC_CAT_STORIES_EFFECT</Building>
 			<Type>BUILDING_PALEOLITHIC_CAT_STORIES_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_CAT_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
@@ -294,7 +294,7 @@
 	           </PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_PALEOLITHIC_DOG_STORY</BuildingType>
+			<Building>BUILDING_PALEOLITHIC_DOG_STORY</Building>
 			<Type>BUILDING_PALEOLITHIC_DOG_STORY</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_DOG_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
@@ -351,7 +351,7 @@
 	           </PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_PALEOLITHIC_DOG_STORIES</BuildingType>
+			<Building>BUILDING_PALEOLITHIC_DOG_STORIES</Building>
 			<Type>BUILDING_PALEOLITHIC_DOG_STORIES</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_DOG_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
@@ -398,7 +398,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_PALEOLITHIC_DOG_STORIES_EFFECT</BuildingType>
+			<Building>BUILDING_PALEOLITHIC_DOG_STORIES_EFFECT</Building>
 			<Type>BUILDING_PALEOLITHIC_DOG_STORIES_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_DOG_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
@@ -439,7 +439,7 @@
 	           </PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_STORY</BuildingType>
+			<Building>BUILDING_PALEOLITHIC_MARSUPIAL_STORY</Building>
 			<Type>BUILDING_PALEOLITHIC_MARSUPIAL_STORY</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_MARSUPIAL_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
@@ -496,7 +496,7 @@
 	           </PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_STORIES</BuildingType>
+			<Building>BUILDING_PALEOLITHIC_MARSUPIAL_STORIES</Building>
 			<Type>BUILDING_PALEOLITHIC_MARSUPIAL_STORIES</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_MARSUPIAL_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
@@ -543,7 +543,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_STORIES_EFFECT</BuildingType>
+			<Building>BUILDING_PALEOLITHIC_MARSUPIAL_STORIES_EFFECT</Building>
 			<Type>BUILDING_PALEOLITHIC_MARSUPIAL_STORIES_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_MARSUPIAL_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>

@@ -2018,7 +2018,7 @@
 			<FreeBuilding>BUILDING_COLONY_ECOSYSTEM</FreeBuilding>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_COLONY_ECOSYSTEM</BuildingType>
+					<Building>BUILDING_COLONY_ECOSYSTEM</Building>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2114,7 +2114,7 @@
 			<FreeBuilding>BUILDING_LASER_HIGHWAY_RELAY</FreeBuilding>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_INTERSTELLAR_BROADCAST_NODE</BuildingType>
+					<Building>BUILDING_INTERSTELLAR_BROADCAST_NODE</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2408,7 +2408,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_GALACTIC_BIOMARKER_CATALOGUE</BuildingType>
+					<Building>BUILDING_GALACTIC_BIOMARKER_CATALOGUE</Building>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2646,7 +2646,7 @@
 			</YieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_MERCURY_COLONY</BuildingType>
+					<Building>BUILDING_MERCURY_COLONY</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>10</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2856,22 +2856,22 @@
 			</GlobalBuildingProductionModifiers>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_MARTIAN_SKYHOOK</BuildingType>
+					<Building>BUILDING_MARTIAN_SKYHOOK</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_MARTIAN_MASS_DRIVER</BuildingType>
+					<Building>BUILDING_MARTIAN_MASS_DRIVER</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_MARTIAN_HOTEL</BuildingType>
+					<Building>BUILDING_MARTIAN_HOTEL</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_MARTIAN_SPACEPORT</BuildingType>
+					<Building>BUILDING_MARTIAN_SPACEPORT</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -3776,7 +3776,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_HELIOFORMED_GAS_GIANT</BuildingType>
+					<Building>BUILDING_HELIOFORMED_GAS_GIANT</Building>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -5340,12 +5340,12 @@
 			</YieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_COMET_DUST_COLLECTOR</BuildingType>
+					<Building>BUILDING_COMET_DUST_COLLECTOR</Building>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_MILKY_WAY_COLONY</BuildingType>
+					<Building>BUILDING_MILKY_WAY_COLONY</Building>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -5391,7 +5391,7 @@
 			</YieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_ROGUE_OUTPOST</BuildingType>
+					<Building>BUILDING_ROGUE_OUTPOST</Building>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
