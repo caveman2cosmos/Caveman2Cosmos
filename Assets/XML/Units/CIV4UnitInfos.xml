@@ -55065,16 +55065,16 @@ Base XP gained when defending
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_WARRIOR</UnitType>
 			</UnitUpgrades>
@@ -55146,16 +55146,16 @@ Base XP gained when defending
 			<bMilitarySupport>1</bMilitarySupport>
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_SHARPENING</PrereqTech>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_SPEARMAN</UnitType>
 			</UnitUpgrades>
@@ -55237,16 +55237,16 @@ Base XP gained when defending
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bPillage>1</bPillage>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_WARRIOR</UnitType>
 			</UnitUpgrades>
@@ -55341,16 +55341,16 @@ Base XP gained when defending
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bPillage>1</bPillage>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_SLINGER</UnitType>
 			</UnitUpgrades>
@@ -55452,16 +55452,16 @@ Base XP gained when defending
 			<bMilitarySupport>1</bMilitarySupport>
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_BINDING</PrereqTech>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_ARCHER</UnitType>
 			</UnitUpgrades>
@@ -55586,16 +55586,16 @@ Base XP gained when defending
 				</FreePromotion>
 			</FreePromotions>
 			<PrereqTech>TECH_DECEPTION</PrereqTech>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_LOOKOUT_POST</BuildingType>
 				<BuildingType>BUILDING_SENTRY_POST</BuildingType>
@@ -55724,16 +55724,16 @@ Base XP gained when defending
 				</FreePromotion>
 			</FreePromotions>
 			<PrereqTech>TECH_CONDUCT</PrereqTech>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SENTRY_POST</BuildingType>
 				<BuildingType>BUILDING_TOWNWATCH</BuildingType>
@@ -55842,16 +55842,16 @@ Base XP gained when defending
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_NOMADISM</PrereqTech>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_SCOUT</UnitType>
 				<UnitType>UNIT_NEANDERTHAL_CHASER</UnitType>
@@ -55916,16 +55916,16 @@ Base XP gained when defending
 			<bFood>1</bFood>
 			<bWorkerTrade>1</bWorkerTrade>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_WORKER</UnitType>
 			</UnitUpgrades>
@@ -56111,16 +56111,16 @@ Base XP gained when defending
 			<bNoCapture>1</bNoCapture>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_HERBALISM</PrereqTech>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<PrereqBuilding>BUILDING_WILD_HERBS</PrereqBuilding>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_HEALER</UnitType>
@@ -56230,16 +56230,16 @@ Base XP gained when defending
 			<bNoCapture>1</bNoCapture>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<PrereqBuilding>BUILDING_HEALERHUT</PrereqBuilding>
 			<UnitUpgrades>
 				<UnitType>UNIT_MEDICINE_MAN</UnitType>
@@ -56361,16 +56361,16 @@ Base XP gained when defending
 				<BonusType>BONUS_HORSE</BonusType>
 				<BonusType>BONUS_LLAMA</BonusType>
 			</PrereqBonuses>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_VET</UnitType>
 			</UnitUpgrades>
@@ -56491,16 +56491,16 @@ Base XP gained when defending
 			<PrereqBonuses>
 				<BonusType>BONUS_DOG</BonusType>
 			</PrereqBonuses>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<PrereqBuilding>BUILDING_DOG_BREEDER</PrereqBuilding>
 			<UnitUpgrades>
 				<UnitType>UNIT_WARDOG</UnitType>
@@ -56573,16 +56573,16 @@ Base XP gained when defending
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_ENFORCERS</UnitType>
 			</UnitUpgrades>
@@ -56675,16 +56675,16 @@ Base XP gained when defending
 				<BonusType>BONUS_WOOD</BonusType>
 			</PrereqBonuses>
 			<PrereqBuilding>BUILDING_CANOEBUILDERS_HUT</PrereqBuilding>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_OUTRIGGER</UnitType>
 			</UnitUpgrades>
@@ -56793,16 +56793,16 @@ Base XP gained when defending
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<PrereqTech>TECH_HARPOON_MAKING</PrereqTech>
 			<PrereqBuilding>BUILDING_CANOEBUILDERS_HUT</PrereqBuilding>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_WARGALLEY</UnitType>
 			</UnitUpgrades>
@@ -56910,16 +56910,16 @@ Base XP gained when defending
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<PrereqTech>TECH_BOAT_BUILDING</PrereqTech>
 			<PrereqBuilding>BUILDING_CANOEBUILDERS_HUT</PrereqBuilding>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_GALLEY</UnitType>
 			</UnitUpgrades>
@@ -57034,16 +57034,16 @@ Base XP gained when defending
 				<BonusType>BONUS_WOOD</BonusType>
 				<BonusType>BONUS_REEDS</BonusType>
 			</PrereqBonuses>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_CANOE</UnitType>
 				<UnitType>UNIT_NEANDERTHAL_WAR_CANOE</UnitType>
@@ -57153,16 +57153,16 @@ Base XP gained when defending
 			<bMechanized>1</bMechanized>
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<PrereqTech>TECH_FISHING</PrereqTech>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_CLASSIC_WORKBOAT</UnitType>
 			</UnitUpgrades>
@@ -57298,16 +57298,16 @@ Base XP gained when defending
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<PrereqTech>TECH_WARFARE</PrereqTech>
 			<PrereqBuilding>BUILDING_LUMBER_CAMP</PrereqBuilding>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_BATTERING_RAM</UnitType>
 			</UnitUpgrades>
@@ -57419,16 +57419,16 @@ Base XP gained when defending
 			</TechTypes>
 			<BonusType>BONUS_ELEPHANTS</BonusType>
 			<PrereqBuilding>BUILDING_ELEPHANT_TRAINER</PrereqBuilding>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_WAR_ELEPHANT</UnitType>
 			</UnitUpgrades>
@@ -57535,16 +57535,16 @@ Base XP gained when defending
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
 			<BonusType>BONUS_OBSIDIAN</BonusType>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_SPEARMAN</UnitType>
 			</UnitUpgrades>
@@ -57642,16 +57642,16 @@ Base XP gained when defending
 			<bMilitarySupport>1</bMilitarySupport>
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_SPEAR_MAKING</PrereqTech>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_OBSIDIAN_SPEARMAN</UnitType>
 			</UnitUpgrades>
@@ -57756,16 +57756,16 @@ Base XP gained when defending
 			<bMilitarySupport>1</bMilitarySupport>
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_STONE_AGE_SPEARMAN</UnitType>
 			</UnitUpgrades>
@@ -57863,16 +57863,16 @@ Base XP gained when defending
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
 			<BonusType>BONUS_OBSIDIAN</BonusType>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_LIGHT_SWORDSMAN</UnitType>
 			</UnitUpgrades>
@@ -57968,16 +57968,16 @@ Base XP gained when defending
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
 			<BonusType>BONUS_OBSIDIAN</BonusType>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_AXEMAN</UnitType>
 			</UnitUpgrades>
@@ -58078,16 +58078,16 @@ Base XP gained when defending
 			<bMilitarySupport>1</bMilitarySupport>
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_AXE_MAKING</PrereqTech>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_OBSIDIAN_AXEMAN</UnitType>
 			</UnitUpgrades>
@@ -58189,16 +58189,16 @@ Base XP gained when defending
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
 			<BonusType>BONUS_OBSIDIAN</BonusType>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_EARLY_MACEMAN</UnitType>
 			</UnitUpgrades>
@@ -58299,16 +58299,16 @@ Base XP gained when defending
 			<bMilitarySupport>1</bMilitarySupport>
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_COMPOSITE_TOOLS</PrereqTech>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_OBSIDIAN_MACEMAN</UnitType>
 				<UnitType>UNIT_NEANDERTHAL_OBSIDIAN_SWORDSMAN</UnitType>
@@ -58428,16 +58428,16 @@ Base XP gained when defending
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bAssassin>1</bAssassin>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_RANGER</UnitType>
 			</UnitUpgrades>
@@ -58526,16 +58526,16 @@ Base XP gained when defending
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bAssassin>1</bAssassin>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_HUNTER</UnitType>
 			</UnitUpgrades>
@@ -58623,16 +58623,16 @@ Base XP gained when defending
 				</FreePromotion>
 			</FreePromotions>
 			<PrereqTech>TECH_PERSISTENCE_HUNTING</PrereqTech>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_TRACKER</UnitType>
 			</UnitUpgrades>
@@ -58726,16 +58726,16 @@ Base XP gained when defending
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_TRAILS</PrereqTech>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_NEANDERTHAL</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_GUIDE</UnitType>
 			</UnitUpgrades>
@@ -62812,12 +62812,12 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_DRYDOCK</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_DRYDOCK</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<PrereqBuilding>BUILDING_HOSPITAL</PrereqBuilding>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<BonusType>BONUS_COAL</BonusType>
@@ -62941,12 +62941,12 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_NAVAL_YARD</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_NAVAL_YARD</BuildingType>
 					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<PrereqBuilding>BUILDING_HOSPITAL</PrereqBuilding>
 			<PrereqTech>TECH_GLOBALIZATION</PrereqTech>
 			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
