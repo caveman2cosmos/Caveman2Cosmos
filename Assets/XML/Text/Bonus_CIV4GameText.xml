@@ -73,6 +73,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AB_MATTER</Tag>
 		<English>AB Matter</English>
+		<French>Matière AB</French>
 		<Italian>Materia AB</Italian>
 	</TEXT>
 	<TEXT>
@@ -83,6 +84,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ABBASID</Tag>
 		<English>Abbasid</English>
+		<French>Abbaside</French>
 		<Italian>Abbaside</Italian>
 	</TEXT>
 	<TEXT>
@@ -100,6 +102,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ADVANCED_REPLICATORS</Tag>
 		<English>Advanced Replicators</English>
+		<French>Réplicateurs avancés</French>
 		<Italian>Replicatori avanzati</Italian>
 	</TEXT>
 	<TEXT>
@@ -110,6 +113,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AEROGEL</Tag>
 		<English>Aerogel</English>
+		<French>Aérogel</French>
 		<Italian>Aerogel</Italian>
 	</TEXT>
 	<TEXT>
@@ -120,6 +124,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AFGHAN</Tag>
 		<English>Afghan</English>
+		<French>Afghane</French>
 		<Italian>Afghano</Italian>
 	</TEXT>
 	<TEXT>
@@ -167,6 +172,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ALBANIAN</Tag>
 		<English>Albanian</English>
+		<French>Albanaise</French>
 		<Italian>Albanese</Italian>
 	</TEXT>
 	<TEXT>
@@ -186,6 +192,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ALEMANNI</Tag>
 		<English>Alemanni</English>
+		<French>Allémanique</French>
 		<Italian>Alemanno</Italian>
 	</TEXT>
 	<TEXT>
@@ -204,11 +211,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ALGERIAN</Tag>
 		<English>Algerian</English>
+		<French>Algérien</French>
 		<Italian>Algerino</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ALICE_MATTER</Tag>
 		<English>Alice Matter</English>
+		<French>Matière Spéculative</French>
 		<Italian>Materia speculare</Italian>
 	</TEXT>
 	<TEXT>
@@ -293,6 +302,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ANDAMANESE</Tag>
 		<English>Andamanese</English>
+		<French>Andamanaise</French>
 		<Italian>Andamanese</Italian>
 	</TEXT>
 	<TEXT>
@@ -310,6 +320,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ANGOLAN</Tag>
 		<English>Angolan</English>
+		<French>Angolaise</French>
 		<Italian>Angolano</Italian>
 	</TEXT>
 	<TEXT>
@@ -366,6 +377,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ARAGONESE</Tag>
 		<English>Aragonese</English>
+		<French>Aragone</French>
 		<Italian>Aragonese</Italian>
 	</TEXT>
 	<TEXT>
@@ -390,6 +402,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ARTISAN_PLANETS</Tag>
 		<English>Artisan Planets</English>
+		<French>Planètes Artisan</French>
 		<Italian>Pianeti artigianali</Italian>
 	</TEXT>
 	<TEXT>
@@ -420,6 +433,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ATOMICALLY_PRECISE_ALLOYS</Tag>
 		<English>Atomically Precise Alloys</English>
+		<French>Alliages à précision atomique</French>
 		<Italian>Leghe atomicamente precise</Italian>
 	</TEXT>
 	<TEXT>
@@ -444,6 +458,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AUTOMOBILES</Tag>
 		<English>Automobiles</English>
+		<French>Automobiles</French>
 		<Italian>Automobili</Italian>
 		<Polish>Samochody Osobowe</Polish>
 	</TEXT>
@@ -460,6 +475,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ARVERNIAN</Tag>
 		<English>Arvernian</English>
+		<French>Arvernien</French>
 		<Italian>Arverno</Italian>
 	</TEXT>
 	<TEXT>
@@ -490,6 +506,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BACTRIC</Tag>
 		<English>Bactric</English>
+		<French>Bactrique</French>
 		<Italian>Battriano</Italian>
 	</TEXT>
 	<TEXT>
@@ -533,6 +550,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BANGLADESHI</Tag>
 		<English>Bangladeshi</English>
+		<French>Bangladeshe</French>
 		<Italian>Bangladese</Italian>
 	</TEXT>
 	<TEXT>
@@ -576,6 +594,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BASHKIR</Tag>
 		<English>Bashkir</English>
+		<French>Bashkir</French>
 		<Italian>Baschiro</Italian>
 	</TEXT>
 	<TEXT>
@@ -599,6 +618,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BATAVIAN</Tag>
 		<English>Batavian</English>
+		<French>Batavienne</French>
 		<Italian>Batavo</Italian>
 	</TEXT>
 	<TEXT>
@@ -621,6 +641,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BAVARIAN</Tag>
 		<English>Bavarian</English>
+		<French>Bavaroise</French>
 		<Italian>Bavarese</Italian>
 	</TEXT>
 	<TEXT>
@@ -650,6 +671,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BEDOUIN</Tag>
 		<English>Bedouin</English>
+		<French>Bedouine</French>
 		<Italian>Beduino</Italian>
 	</TEXT>
 	<TEXT>
@@ -662,6 +684,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BELIZEAN</Tag>
 		<English>Belizean</English>
+		<French>Bélizéane</French>
 		<Italian>Beliziano</Italian>
 	</TEXT>
 	<TEXT>
@@ -790,6 +813,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BOLIVIAN</Tag>
 		<English>Bolivian</English>
+		<French>Bolivienne</French>
 		<Italian>Boliviano</Italian>
 	</TEXT>
 	<TEXT>
@@ -861,6 +885,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BRETON</Tag>
 		<English>Breton</English>
+		<French>Bretonne</French>
 		<Italian>Bretone</Italian>
 	</TEXT>
 	<TEXT>
@@ -878,6 +903,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BRITON</Tag>
 		<English>Briton</English>
+		<French>Britanique</French>
 		<Italian>Britanno</Italian>
 	</TEXT>
 	<TEXT>
@@ -902,6 +928,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SYNTHETIC_DIAMOND</Tag>
 		<English>Synthetic Diamond</English>
+		<French>Diamant Synthétique</French>
 		<Italian>Diamanti sintetici</Italian>
 	</TEXT>
 	<TEXT>
@@ -912,6 +939,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BURGUNDIAN</Tag>
 		<English>Burgundian</English>
+		<French>Burgonde</French>
 		<Italian>Burgundo</Italian>
 	</TEXT>
 	<TEXT>
@@ -963,6 +991,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CAMBEBA</Tag>
 		<English>Cambeba</English>
+		<French>Cambeba</French>
 		<Italian>Cambeba</Italian>
 	</TEXT>
 	<TEXT>
@@ -1060,6 +1089,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CARBON_FIBER</Tag>
 		<English>Carbon Fiber</English>
+		<French>Fibre de Carbone</French>
 		<Italian>Fibra di carbonio</Italian>
 	</TEXT>
 	<TEXT>
@@ -1150,6 +1180,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CATALONIAN</Tag>
 		<English>Catalonian</English>
+		<French>Catalane</French>
 		<Italian>Catalano</Italian>
 	</TEXT>
 	<TEXT>
@@ -1179,6 +1210,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CELTIBERIAN</Tag>
 		<English>Celtiberian</English>
+		<French>Celtibérienne</French>
 		<Italian>Celtiberico</Italian>
 	</TEXT>
 	<TEXT>
@@ -1214,7 +1246,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CETACEA_SAPIENS</Tag>
 		<English>Cetacea Sapiens</English>
-		<French>Cetacea Sapiens</French>
+		<French>Sapiens Cétacés</French>
 		<Italian>Cetacea Sapiens</Italian>
 	</TEXT>
 	<TEXT>
@@ -1227,6 +1259,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHACHAPOYA</Tag>
 		<English>Chachapoya</English>
+		<French>Chachapoya</French>
 		<Italian>Chachapoya</Italian>
 	</TEXT>
 	<TEXT>
@@ -1249,6 +1282,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHAOS_WANDS</Tag>
 		<English>Chaos Wands</English>
+		<French>Baguettes du Chaos</French>
 		<Italian>Bacchette del caos</Italian>
 	</TEXT>
 	<TEXT>
@@ -1276,6 +1310,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHECHENIAN</Tag>
 		<English>Chechenian</English>
+		<French>Tchétchénienne</French>
 		<Italian>Ceceno</Italian>
 	</TEXT>
 	<TEXT>
@@ -1317,6 +1352,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHILEAN</Tag>
 		<English>Chilean</English>
+		<French>Chilienne</French>
 		<Italian>Cileno</Italian>
 	</TEXT>
 	<TEXT>
@@ -1414,6 +1450,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CLAYTRONIC_ATOMS</Tag>
 		<English>Claytronic Atoms</English>
+		<French>Atomes Claytroniques</French>
 		<Italian>Atomi claytronici</Italian>
 	</TEXT>
 	<TEXT>
@@ -1586,6 +1623,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CONSCIOUS_MATERIALS</Tag>
 		<English>Conscious Materials</English>
+		<French>Matériaux conscients</French>
 		<Italian>Materiali coscienti</Italian>
 	</TEXT>
 	<TEXT>
@@ -1719,12 +1757,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CZECH</Tag>
 		<English>Czech</English>
+		<French>Tchèque</French>
 		<Italian>Ceco</Italian>
 	</TEXT>
 <!-- D -->
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_DACIAN</Tag>
 		<English>Dacian</English>
+		<French>Dacienne</French>
 		<Italian>Dacico</Italian>
 	</TEXT>
 	<TEXT>
@@ -1743,6 +1783,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_DARK_MATTER</Tag>
 		<English>Dark Matter</English>
+		<French>Matière Noire</French>
 		<Italian>Materia oscura</Italian>
 	</TEXT>
 	<TEXT>
@@ -1772,6 +1813,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_DEEP_SPACE_LIFEFORMS</Tag>
 		<English>Deep Space Lifeforms</English>
+		<French>Formes de vie de l'espace lointain</French>
 		<Italian>Forme di vita spaziali</Italian>
 	</TEXT>
 	<TEXT>
@@ -1782,6 +1824,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_DEEP_SPACE_NANOBOTS</Tag>
 		<English>Deep Space Nanobots</English>
+		<French>Nanobots de l'espace lointain</French>
 		<Italian>Nanobot spaziali</Italian>
 	</TEXT>
 	<TEXT>
@@ -1826,6 +1869,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_DIAMOND_NANOTHREADS</Tag>
 		<English>Diamond Nanothreads</English>
+		<French>Diamant Nanothreads</French>
 		<Italian>Nanofilamenti in diamante</Italian>
 	</TEXT>
 	<TEXT>
@@ -1898,6 +1942,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_DRAVIDIAN</Tag>
 		<English>Dravidian</English>
+		<French>Dravidienne</French>
 		<Italian>Dravidiano</Italian>
 	</TEXT>
 	<TEXT>
@@ -1993,6 +2038,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ECUADORIAN</Tag>
 		<English>Ecuadorian</English>
+		<French>Equatorienne</French>
 		<Italian>Ecuadoriano</Italian>
 	</TEXT>
 	<TEXT>
@@ -2090,6 +2136,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ESTONIAN</Tag>
 		<English>Estonian</English>
+		<French>Estonienne</French>
 		<Italian>Estone</Italian>
 	</TEXT>
 	<TEXT>
@@ -2102,6 +2149,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ETRUSCAN</Tag>
 		<English>Etruscan</English>
+		<French>Etrusque</French>
 		<Italian>Etrusco</Italian>
 	</TEXT>
 	<TEXT>
@@ -2120,6 +2168,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_FATIMID</Tag>
 		<English>Fatimid</English>
+		<French>Fatimide</French>
 		<Italian>Fatimide</Italian>
 	</TEXT>
 	<TEXT>
@@ -2137,6 +2186,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_FEMTOBOTS</Tag>
 		<English>Femtobots</English>
+		<French>Femtobots</French>
 		<Italian>Femtobot</Italian>
 	</TEXT>
 	<TEXT>
@@ -2206,6 +2256,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_FILIPINO</Tag>
 		<English>Filipino</English>
+		<French>Philipine</French>
 		<Italian>Filippino</Italian>
 	</TEXT>
 	<TEXT>
@@ -2332,6 +2383,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_FLEMISH</Tag>
 		<English>Flemish</English>
+		<French>Flamande</French>
 		<Italian>Fiammingo</Italian>
 	</TEXT>
 	<TEXT>
@@ -2412,6 +2464,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_FRUIT</Tag>
 		<English>Fruit</English>
+		<French>Fruits</French>
 		<Italian>Frutta</Italian>
 		<Polish>Owoce</Polish>
 	</TEXT>
@@ -2423,6 +2476,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_FUEGIAN</Tag>
 		<English>Fuegian</English>
+		<French>Fuegienne</French>
 		<Italian>Fuegino</Italian>
 	</TEXT>
 	<TEXT>
@@ -2434,6 +2488,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_FULLERENE</Tag>
 		<English>Fullerene</English>
+		<French>Fullerène</French>
 		<Italian>Fullerene</Italian>
 	</TEXT>
 	<TEXT>
@@ -2476,6 +2531,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_GALATIAN</Tag>
 		<English>Galatian</English>
+		<French>Galatienne</French>
 		<Italian>Galato</Italian>
 	</TEXT>
 	<TEXT>
@@ -2524,6 +2580,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_GEORGIAN</Tag>
 		<English>Georgian</English>
+		<French>Georgienne</French>
 		<Italian>Georgiano</Italian>
 	</TEXT>
 	<TEXT>
@@ -2582,6 +2639,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_GHURID</Tag>
 		<English>Ghurid</English>
+		<French>Ghuride</French>
 		<Italian>Ghurida</Italian>
 	</TEXT>
 	<TEXT>
@@ -2623,6 +2681,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_GOTH</Tag>
 		<English>Goth</English>
+		<French>Gothique</French>
 		<Italian>Gotico</Italian>
 		<Polish>Gocka</Polish>
 	</TEXT>
@@ -2758,6 +2817,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_GUYANESE</Tag>
 		<English>Guyanese</English>
+		<French>Guyanaise</French>
 		<Italian>Guyanense</Italian>
 	</TEXT>
 <!-- H -->
@@ -2863,6 +2923,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HELVETIAN</Tag>
 		<English>Helvetian</English>
+		<French>Helvète</French>
 		<Italian>Elvetico</Italian>
 	</TEXT>
 	<TEXT>
@@ -3063,6 +3124,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ALIEN_HYBRID</Tag>
 		<English>Human Mod (Alien Hybrid)</English>
+		<French>Modif. Humain (Hybridation Alien)</French>
 		<Italian>Umano augmentato (Ibrido alieno)</Italian>
 	</TEXT>
 	<TEXT>
@@ -3073,6 +3135,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ARCHAILECT</Tag>
 		<English>Human Mod (Archailect)</English>
+		<French>Modif. Humain(Archailecte)</French>
 		<Italian>Umano augmentato (IArchetipica)</Italian>
 	</TEXT>
 	<TEXT>
@@ -3083,6 +3146,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ATEMPORAL</Tag>
 		<English>Human Mod (Atemporal)</English>
+		<French>Modif. Humain (Atemporel)</French>
 		<Italian>Umano augmentato (Atemporale)</Italian>
 	</TEXT>
 	<TEXT>
@@ -3093,6 +3157,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_COGNITIVE_ENHANCEMENT</Tag>
 		<English>Human Mod (Cognitive Enhancement)</English>
+		<French>Modif. Humain (Amélioration cognitive)</French>
 		<Italian>Umano augmentato (Potenziamento cognitivo)</Italian>
 	</TEXT>
 	<TEXT>
@@ -3103,6 +3168,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_COLD_TOLERANCE</Tag>
 		<English>Human Mod (Cold Tolerance)</English>
+		<French>Modif. Humain (Tolérance au froid)</French>
 		<Italian>Umano augmentato (Tolleranza al freddo)</Italian>
 	</TEXT>
 	<TEXT>
@@ -3113,6 +3179,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_COLLECTIVE_CONSCIOUSNESS</Tag>
 		<English>Human Mod (Collective Consciousness)</English>
+		<French>Modif. Humain (Conscience collective)</French>
 		<Italian>Umano augmentato (Coscienza collettiva)</Italian>
 	</TEXT>
 	<TEXT>
@@ -3123,6 +3190,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_DESIGNER_BABIES</Tag>
 		<English>Human Mod (Designer Babies)</English>
+		<French>Modif. Humain (Design de Embryons)</French>
 		<Italian>Umano augmentato (Bambini su misura)</Italian>
 	</TEXT>
 	<TEXT>
@@ -3133,6 +3201,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_DIGITAL_IDENTITY</Tag>
 		<English>Human Mod (Digital Identity)</English>
+		<French>Modif. Humain (Identité numérique)</French>
 		<Italian>Umano augmentato (Identità digitale)</Italian>
 	</TEXT>
 	<TEXT>
@@ -3143,6 +3212,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_DIGITAL_LIFESTYLE</Tag>
 		<English>Human Mod (Digital Lifestyle)</English>
+		<French>Modif. Humain (Forme de vie numérique)</French>
 		<Italian>Umano augmentato (Stile di vita digitale)</Italian>
 	</TEXT>
 	<TEXT>
@@ -3153,6 +3223,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ENLIGHTENED</Tag>
 		<English>Human Mod (Enlightened)</English>
+		<French>Modif. Humain (Illumination)</French>
 		<Italian>Umano augmentato (Illuminazione)</Italian>
 	</TEXT>
 	<TEXT>
@@ -3163,6 +3234,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_GENE_EDITING</Tag>
 		<English>Human Mod (Gene Editing)</English>
+		<French>Modif. Humain (Edition des Gènes)</French>
 		<Italian>Umano augmentato (Modifica genetica)</Italian>
 	</TEXT>
 	<TEXT>
@@ -3173,6 +3245,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_GILLS</Tag>
 		<English>Human Mod (Gills)</English>
+		<French>Modif. Humain (Branchies)</French>
 		<Italian>Umano augmentato (Branchie)</Italian>
 	</TEXT>
 	<TEXT>
@@ -3183,6 +3256,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_HEAT_TOLERANCE</Tag>
 		<English>Human Mod (Heat Tolerance)</English>
+		<French>Modif. Humain (Tolérance à la chaleur)</French>
 		<Italian>Umano augmentato (Tolleranza al calore)</Italian>
 	</TEXT>
 	<TEXT>
@@ -3193,6 +3267,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_HIGH_DIMENSIONAL</Tag>
 		<English>Human Mod (High-Dimensional)</English>
+		<French>Modif. Humain (Haute dimension)</French>
 		<Italian>Umano augmentato (Dimensione superiore)</Italian>
 	</TEXT>
 	<TEXT>
@@ -3203,6 +3278,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_IMMORTAL</Tag>
 		<English>Human Mod (Immortal)</English>
+		<French>Modif. Humain (Immortel)</French>
 		<Italian>Umano augmentato (Immortale)</Italian>
 	</TEXT>
 	<TEXT>
@@ -3213,6 +3289,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_INDEFINITE_LIFESPAN</Tag>
 		<English>Human Mod (Indefinite Lifespan)</English>
+		<French>Modif. Humain (Durée de vie indéfinie)</French>
 		<Italian>Umano augmentato (Durata di vita indefinita)</Italian>
 	</TEXT>
 	<TEXT>
@@ -3223,6 +3300,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_INFORMATION_BASED</Tag>
 		<English>Human Mod (Information-Based)</English>
+		<French>Modif. Humain (Basée sur l'information)</French>
 		<Italian>Umano augmentato (Basato su informazione)</Italian>
 	</TEXT>
 	<TEXT>
@@ -3233,6 +3311,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_LUNARIS</Tag>
 		<English>Human Mod (Lunaris)</English>
+		<French>Modif. Humain (Lunaris)</French>
 		<Italian>Umano augmentato (Selenita)</Italian>
 	</TEXT>
 	<TEXT>
@@ -3243,6 +3322,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_MARTIAN</Tag>
 		<English>Human Mod (Martian)</English>
+		<French>Modif. Humain (Martien)</French>
 		<Italian>Umano augmentato (Marziano)</Italian>
 	</TEXT>
 	<TEXT>
@@ -3253,6 +3333,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_METAPHYSICAL</Tag>
 		<English>Human Mod (Metaphysical)</English>
+		<French>Modif. Humain (Métaphysique)</French>
 		<Italian>Umano augmentato (Metafisico)</Italian>
 	</TEXT>
 	<TEXT>
@@ -3263,6 +3344,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_NANOMORPHISM</Tag>
 		<English>Human Mod (Nanomorphism)</English>
+		<French>Modif. Humain (Nanomorphisme)</French>
 		<Italian>Umano augmentato (Nanomorfismo)</Italian>
 	</TEXT>
 	<TEXT>
@@ -3273,6 +3355,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_NONSPATIAL</Tag>
 		<English>Human Mod (Nonspatial)</English>
+		<French>Modif. Humain (Nonspatial)</French>
 		<Italian>Umano augmentato (Nonspaziale)</Italian>
 	</TEXT>
 	<TEXT>
@@ -3283,6 +3366,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_NOVEL_SENSES</Tag>
 		<English>Human Mod (Novel Senses)</English>
+		<French>Modif. Humain (Nouveaux Sens)</French>
 		<Italian>Umano augmentato (Nuovi sensi)</Italian>
 	</TEXT>
 	<TEXT>
@@ -3293,6 +3377,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_PURE_ENERGY</Tag>
 		<English>Human Mod (Pure Energy)</English>
+		<French>Modif. Humain (Energie pure)</French>
 		<Italian>Umano augmentato (Pura energia)</Italian>
 	</TEXT>
 	<TEXT>
@@ -3303,6 +3388,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_RADIATION_TOLERANCE</Tag>
 		<English>Human Mod (Radiation Tolerance)</English>
+		<French>Modif. Humain (Tolérance aux Radiations)</French>
 		<Italian>Umano augmentato (Tolleranza alle radiazioni)</Italian>
 	</TEXT>
 	<TEXT>
@@ -3313,6 +3399,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ROBOTIC_BODY</Tag>
 		<English>Human Mod (Robotic Body)</English>
+		<French>Modif. Humain (Corps Robotique)</French>
 		<Italian>Umano augmentato (Corpo robotico)</Italian>
 	</TEXT>
 	<TEXT>
@@ -3323,6 +3410,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_TRANSAPIENT</Tag>
 		<English>Human Mod (Transapient)</English>
+		<French>Modif. Humain (Transapient)</French>
 		<Italian>Umano augmentato (Transapiente)</Italian>
 	</TEXT>
 	<TEXT>
@@ -3333,6 +3421,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_WINGS</Tag>
 		<English>Human Mod (Wings)</English>
+		<French>Modif. Humain (Ailes)</French>
 		<Italian>Umano augmentato (Ali)</Italian>
 	</TEXT>
 	<TEXT>
@@ -3343,6 +3432,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ZERO_G_ADAPTATION</Tag>
 		<English>Human Mod (Zero G Adaptation)</English>
+		<French>Modif. Humain (Adaptation Zero G)</French>
 		<Italian>Umano augmentato (Adattamento a zero G)</Italian>
 	</TEXT>
 	<TEXT>
@@ -3372,6 +3462,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HURRIANS</Tag>
 		<English>Hurrians</English>
+		<French>Hurrienne</French>
 		<Italian>Hurrita</Italian>
 	</TEXT>
 	<TEXT>
@@ -3426,6 +3517,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ILLYRIAN</Tag>
 		<English>Illyrian</English>
+		<French>Illyrienne</French>
 		<Italian>Illirico</Italian>
 	</TEXT>
 	<TEXT>
@@ -3593,6 +3685,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_IRANIAN</Tag>
 		<English>Iranian</English>
+		<French>Iranienne</French>
 		<Italian>Iraniano</Italian>
 	</TEXT>
 	<TEXT>
@@ -3625,6 +3718,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_IROQUOIS</Tag>
 		<English>Iroquois</English>
+		<French>Iroquois</French>
 		<Italian>Irochese</Italian>
 		<Polish>Irokezów</Polish>
 	</TEXT>
@@ -3702,6 +3796,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_JAVANESE</Tag>
 		<English>Javanese</English>
+		<French>Javanaise</French>
 		<Italian>Giavanese</Italian>
 	</TEXT>
 	<TEXT>
@@ -3748,6 +3843,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_JOSEON</Tag>
 		<English>Joseon</English>
+		<French>Joséon</French>
 		<Italian>Joseon</Italian>
 	</TEXT>
 	<TEXT>
@@ -3788,6 +3884,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KENYAN</Tag>
 		<English>Kenyan</English>
+		<French>Kenyane</French>
 		<Italian>Keniota</Italian>
 	</TEXT>
 	<TEXT>
@@ -3885,6 +3982,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KURDISH</Tag>
 		<English>Kurdish</English>
+		<French>Kurde</French>
 		<Italian>Curdo</Italian>
 	</TEXT>
 	<TEXT>
@@ -3936,6 +4034,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LATVIAN</Tag>
 		<English>Latvian</English>
+		<French>Létone</French>
 		<Italian>Lettone</Italian>
 	</TEXT>
 	<TEXT>
@@ -3978,6 +4077,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LEBANESE</Tag>
 		<English>Lebanese</English>
+		<French>Libanaise</French>
 		<Italian>Libanese</Italian>
 	</TEXT>
 	<TEXT>
@@ -4014,6 +4114,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LIANGZHU</Tag>
 		<English>Liangzhu</English>
+		<French>Liangzhu</French>
 		<Italian>Liangzhu</Italian>
 	</TEXT>
 	<TEXT>
@@ -4031,6 +4132,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LIBYAN</Tag>
 		<English>Libyan</English>
+		<French>Libyenne</French>
 		<Italian>Libico</Italian>
 	</TEXT>
 	<TEXT>
@@ -4046,6 +4148,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LITHUANIAN</Tag>
 		<English>Lithuanian</English>
+		<French>Lithuanienne</French>
 		<Italian>Lituano</Italian>
 	</TEXT>
 	<TEXT>
@@ -4088,6 +4191,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LONGOBARDIAN</Tag>
 		<English>Longobardian</English>
+		<French>Lombarde</French>
 		<Italian>Longobardo</Italian>
 	</TEXT>
 	<TEXT>
@@ -4118,6 +4222,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LUSITANIAN</Tag>
 		<English>Lusitanian</English>
+		<French>Lusitanean</French>
 		<Italian>Lusitano</Italian>
 	</TEXT>
 	<TEXT>
@@ -4167,6 +4272,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MAGNETIC_MONOPOLES</Tag>
 		<English>Magnetic Monopoles</English>
+		<French>Monopoles Magnétiques</French>
 		<Italian>Monopoli magnetici</Italian>
 	</TEXT>
 	<TEXT>
@@ -4176,6 +4282,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MALAGASY</Tag>
 		<English>Malagasy</English>
+		<French>Malagache</French>
 		<Italian>Malgascio</Italian>
 	</TEXT>
 	<TEXT>
@@ -4272,6 +4379,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARTIAN_ALGAE</Tag>
 		<English>Martian Algae</English>
+		<French>Algues Martiennes</French>
 		<Italian>Alghe marziane</Italian>
 	</TEXT>
 	<TEXT>
@@ -4281,6 +4389,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARTIAN_CROPS</Tag>
 		<English>Martian Crops</English>
+		<French>Céréales Martiens</French>
 		<Italian>Colture marziane</Italian>
 	</TEXT>
 	<TEXT>
@@ -4290,6 +4399,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARTIAN_ELECTRONICS</Tag>
 		<English>Martian Electronics</English>
+		<French>Electroniques Martiennes</French>
 		<Italian>Elettronica marziana</Italian>
 	</TEXT>
 	<TEXT>
@@ -4299,6 +4409,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARTIAN_FRUIT</Tag>
 		<English>Martian Fruit</English>
+		<French>Fruits Martiens</French>
 		<Italian>Frutta marziana</Italian>
 	</TEXT>
 	<TEXT>
@@ -4308,6 +4419,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARTIAN_MANUFACTURED_GOODS</Tag>
 		<English>Martian Manufactured Goods</English>
+		<French>Marchandises martiennes</French>
 		<Italian>Manufatti marziani</Italian>
 	</TEXT>
 	<TEXT>
@@ -4329,6 +4441,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARTIAN_VEGETABLES</Tag>
 		<English>Martian Vegetables</English>
+		<French>Légumes Martiens</French>
 		<Italian>Vegetali marziani</Italian>
 	</TEXT>
 	<TEXT>
@@ -4350,6 +4463,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MASAI</Tag>
 		<English>Masai</English>
+		<French>Masaï</French>
 		<Italian>Masai</Italian>
 		<Polish>Masajska</Polish>
 	</TEXT>
@@ -4392,6 +4506,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MECHS</Tag>
 		<English>Mechs</English>
+		<French>Mécas</French>
 		<Italian>Mecha</Italian>
 		<Polish>Mechy</Polish>
 	</TEXT>
@@ -4420,6 +4535,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MELANESIAN</Tag>
 		<English>Melanesian</English>
+		<French>Mélanésienne</French>
 		<Italian>Melanesiano</Italian>
 	</TEXT>
 	<TEXT>
@@ -4443,6 +4559,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_METALLIC_HYDROGEN</Tag>
 		<English>Metallic Hydrogen</English>
+		<French>Hydrogène Métallique</French>
 		<Italian>Idrogeno metallico</Italian>
 	</TEXT>
 	<TEXT>
@@ -4452,6 +4569,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_METAL_FOAM</Tag>
 		<English>Metal Foam</English>
+		<French>Mousse Métallique</French>
 		<Italian>Schiuma di metallo</Italian>
 	</TEXT>
 	<TEXT>
@@ -4516,6 +4634,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MICRONESIAN</Tag>
 		<English>Micronesian</English>
+		<French>Micronésienne</French>
 		<Italian>Micronesiano</Italian>
 	</TEXT>
 	<TEXT>
@@ -4579,6 +4698,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MIXTEC</Tag>
 		<English>Mixtec</English>
+		<French>Mixtèque</French>
 		<Italian>Mixteco</Italian>
 		<Polish>Mixteków</Polish>
 	</TEXT>
@@ -4680,6 +4800,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NABATEANS</Tag>
 		<English>Nabateans</English>
+		<French>Nabatéennes</French>
 		<Italian>Nabateo</Italian>
 	</TEXT>
 	<TEXT>
@@ -4731,6 +4852,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NANOMORPHIC_HABITATS</Tag>
 		<English>Nanomorphic Habitats</English>
+		<French>Habitats Nanomorphiques</French>
 		<Italian>Habitat nanomorfici</Italian>
 	</TEXT>
 	<TEXT>
@@ -4763,7 +4885,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NATRON</Tag>
 		<English>Natron</English>
-		<French>Natron</French>
+		<French>Soude</French>
 		<Italian>Natron</Italian>
 	</TEXT>
 	<TEXT>
@@ -4816,7 +4938,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NEUROIMPLANTS</Tag>
 		<English>Neuroimplants</English>
-		<French>Neuroimplants</French>
+		<French>Neuro-implants</French>
 		<Italian>Neuroimpianti</Italian>
 		<Polish>Neuroimplanty</Polish>
 	</TEXT>
@@ -4869,6 +4991,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NIGERIAN</Tag>
 		<English>Nigerian</English>
+		<French>Nigérienne</French>
 		<Italian>Nigeriano</Italian>
 	</TEXT>
 	<TEXT>
@@ -4900,6 +5023,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NORMAN</Tag>
 		<English>Norman</English>
+		<French>Normand</French>
 		<Italian>Normanno</Italian>
 	</TEXT>
 	<TEXT>
@@ -4930,6 +5054,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NUMIDIAN</Tag>
 		<English>Numidian</English>
+		<French>Numidienne</French>
 		<Italian>Numido</Italian>
 	</TEXT>
 	<TEXT>
@@ -5041,6 +5166,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_OLMEC</Tag>
 		<English>Olmec</English>
+		<French>Olmèque</French>
 		<Italian>Olmeco</Italian>
 		<Polish>Olmecka</Polish>
 	</TEXT>
@@ -5123,6 +5249,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ORICHALCUM</Tag>
 		<English>Orichalcum</English>
+		<French>Orichalque</French>
 		<Italian>Oricalco</Italian>
 	</TEXT>
 	<TEXT>
@@ -5145,6 +5272,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_OSTRICH_LEATHER</Tag>
 		<English>Ostrich Leather</English>
+		<French>Cuir d'autruches</French>
 		<Italian>Pelli di struzzo</Italian>
 	</TEXT>
 	<TEXT>
@@ -5155,6 +5283,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_OTTOMAN</Tag>
 		<English>Ottoman</English>
+		<French>Ottomane</French>
 		<Italian>Ottomano</Italian>
 		<Polish>Turecka</Polish>
 	</TEXT>
@@ -5175,11 +5304,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PALESTINIAN</Tag>
 		<English>Palestinian</English>
+		<French>Palestinienne</French>
 		<Italian>Palestinese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PANAMAN</Tag>
 		<English>Panaman</English>
+		<French>Panaméenne</French>
 		<Italian>Panamense</Italian>
 	</TEXT>
 	<TEXT>
@@ -5229,6 +5360,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PARAGUAYAN</Tag>
 		<English>Paraguayan</English>
+		<French>Paraguayenne</French>
 		<Italian>Paraguaiano</Italian>
 	</TEXT>
 	<TEXT>
@@ -5266,6 +5398,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PASHTUN</Tag>
 		<English>Pashtun</English>
+		<French>Pashtoune</French>
 		<Italian>Pashtun</Italian>
 	</TEXT>
 	<TEXT>
@@ -5374,6 +5507,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PERSONAL_HYPERCRAFT</Tag>
 		<English>Personal Hypercraft</English>
+		<French>Hypercraft Personnel</French>
 		<Italian>Ipernave personale</Italian>
 	</TEXT>
 	<TEXT>
@@ -5383,6 +5517,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PERSONAL_SPACECRAFT</Tag>
 		<English>Personal Spacecraft</English>
+		<French>Vaisseau spatial Personnel</French>
 		<Italian>Navicella spaziale personale</Italian>
 	</TEXT>
 	<TEXT>
@@ -5392,6 +5527,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PERSONAL_STARCRAFT</Tag>
 		<English>Personal Starcraft</English>
+		<French>Vaisseau Stellaire  Personnel</French>
 		<Italian>Astronave personale</Italian>
 	</TEXT>
 	<TEXT>
@@ -5401,11 +5537,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PERUVIAN</Tag>
 		<English>Peruvian</English>
+		<French>Péruvienne</French>
 		<Italian>Peruviano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PEYOTE</Tag>
 		<English>Peyote</English>
+		<French>Peyote</French>
 		<German>Peyote</German>
 		<Italian>Peyote</Italian>
 		<Spanish>Peyotes</Spanish>
@@ -5510,6 +5648,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PLASTEEL</Tag>
 		<English>Plasteel</English>
+		<French>Plastacier</French>
 		<Italian>Plasticacciaio</Italian>
 	</TEXT>
 	<TEXT>
@@ -5542,6 +5681,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_POCKET_UNIVERSE</Tag>
 		<English>Pocket Universe</English>
+		<French>Univers de poche</French>
 		<Italian>Universo tascabile</Italian>
 	</TEXT>
 	<TEXT>
@@ -5662,6 +5802,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_POVERTY_POINT</Tag>
 		<English>Poverty Point</English>
+		<French>Pointe de Pauvreté</French>
 		<Italian>Poverty Point</Italian>
 	</TEXT>
 	<TEXT>
@@ -5751,6 +5892,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PUNCH_CARDS</Tag>
 		<English>Punch Cards</English>
+		<French>Cartes à puce</French>
 		<Italian>Schede perforate</Italian>
 	</TEXT>
 	<TEXT>
@@ -5777,6 +5919,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_QIANG</Tag>
 		<English>Qiang</English>
+		<French>Qiang</French>
 		<Italian>Qiang</Italian>
 	</TEXT>
 	<TEXT>
@@ -5805,6 +5948,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_QUANTUM_DOTS</Tag>
 		<English>Quantum Dots</English>
+		<French>Points Quantiques</French>
 		<Italian>Punti quantici</Italian>
 	</TEXT>
 	<TEXT>
@@ -5865,6 +6009,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RARE_EARTH_MINERALS</Tag>
 		<English>Rare Earth Minerals</English>
+		<French>Métaux rares terriens</French>
 		<Italian>Terre rare</Italian>
 	</TEXT>
 	<TEXT>
@@ -6038,7 +6183,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ROMANI</Tag>
 		<English>Romanì</English>
-		<French>Romanì</French>
+		<French>Romaine</French>
 		<Italian>Romanì</Italian>
 	</TEXT>
 	<TEXT>
@@ -6098,6 +6243,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SABBATEAN</Tag>
 		<English>Sabbatean</English>
+		<French>Sabbatéenne</French>
 		<Italian>Sabbateo</Italian>
 	</TEXT>
 	<TEXT>
@@ -6121,6 +6267,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SAFFARID</Tag>
 		<English>Saffarid</English>
+		<French>Saffaride</French>
 		<Italian>Saffaride</Italian>
 	</TEXT>
 	<TEXT>
@@ -6204,6 +6351,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SAUDI</Tag>
 		<English>Saudi</English>
+		<French>Saoudite</French>
 		<Italian>Saudita</Italian>
 	</TEXT>
 	<TEXT>
@@ -6308,6 +6456,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SENEGALI</Tag>
 		<English>Senegali</English>
+		<French>Sénégalais</French>
 		<Italian>Senegalese</Italian>
 	</TEXT>
 	<TEXT>
@@ -6318,6 +6467,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SERBIAN</Tag>
 		<English>Serbian</English>
+		<French>Serbe</French>
 		<Italian>Serbo</Italian>
 	</TEXT>
 	<TEXT>
@@ -6438,6 +6588,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SICILIAN</Tag>
 		<English>Sicilian</English>
+		<French>Sicilienne</French>
 		<Italian>Siciliano</Italian>
 	</TEXT>
 	<TEXT>
@@ -6479,6 +6630,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SIOUX</Tag>
 		<English>Sioux</English>
+		<French>Sioux</French>
 		<Italian>Sioux</Italian>
 	</TEXT>
 	<TEXT>
@@ -6503,6 +6655,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SLOVENIAN</Tag>
 		<English>Slovenian</English>
+		<French>Slovénienne</French>
 		<Italian>Sloveno</Italian>
 	</TEXT>
 	<TEXT>
@@ -6565,6 +6718,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SOVIET</Tag>
 		<English>Soviet</English>
+		<French>Soviete</French>
 		<Italian>Sovietico</Italian>
 		<Polish>Sowiecka</Polish>
 	</TEXT>
@@ -6642,6 +6796,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_STIM_PACKS</Tag>
 		<English>Stim Packs</English>
+		<French>Pack de Stimulants</French>
 		<Italian>Pacchetti di stimolazione</Italian>
 		<Polish>Stimpaki</Polish>
 	</TEXT>
@@ -6710,6 +6865,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SUDANESE</Tag>
 		<English>Sudanese</English>
+		<French>Soudanaise</French>
 		<Italian>Sudanese</Italian>
 	</TEXT>
 	<TEXT>
@@ -6754,11 +6910,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SUNDANESE</Tag>
 		<English>Sundanese</English>
+		<French>Sundanaise</French>
 		<Italian>Sundanese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SUPERINTELLIGENT_COMPUTERS</Tag>
 		<English>Superintelligent Computers</English>
+		<French>Ordinateurs Superintelligents</French>
 		<Italian>Computer superintelligenti</Italian>
 	</TEXT>
 	<TEXT>
@@ -6768,6 +6926,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SUPERSOLID_MATERIAL</Tag>
 		<English>Supersolid Material</English>
+		<French>Matériau supersolide</French>
 		<Italian>Materiali supersolidi</Italian>
 	</TEXT>
 	<TEXT>
@@ -6793,6 +6952,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SWEDISH</Tag>
 		<English>Swedish</English>
+		<French>Suédoise</French>
 		<Italian>Svedese</Italian>
 	</TEXT>
 	<TEXT>
@@ -6899,6 +7059,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TANZANIAN</Tag>
 		<English>Tanzanian</English>
+		<French>Tanzanienne</French>
 		<Italian>Tanzaniano</Italian>
 	</TEXT>
 	<TEXT>
@@ -6979,6 +7140,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TESSERACT</Tag>
 		<English>Tesseract</English>
+		<French>Tesseracte</French>
 		<Italian>Tesseract</Italian>
 	</TEXT>
 	<TEXT>
@@ -6988,6 +7150,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TEXAN</Tag>
 		<English>Texan</English>
+		<French>Texane</French>
 		<Italian>Texano</Italian>
 		<Polish>Teksańska</Polish>
 	</TEXT>
@@ -7000,11 +7163,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_THRACIAN</Tag>
 		<English>Thracian</English>
+		<French>Thracienne</French>
 		<Italian>Trace</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_THREE_KINGDOMS</Tag>
 		<English>Three Kingdoms</English>
+		<French>Trois Royaumes</French>
 		<Italian>Trimonarchico</Italian>
 	</TEXT>
 	<TEXT>
@@ -7017,6 +7182,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TIME_CRYSTALS</Tag>
 		<English>Time Crystals</English>
+		<French>Crystaux Temporels</French>
 		<Italian>Cristalli del tempo</Italian>
 	</TEXT>
 	<TEXT>
@@ -7026,6 +7192,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TIMURID</Tag>
 		<English>Timurid</English>
+		<French>Timuride</French>
 		<Italian>Timuride</Italian>
 		<Polish>Timuridzka</Polish>
 	</TEXT>
@@ -7103,6 +7270,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TOLTEC</Tag>
 		<English>Toltec</English>
+		<French>Toltèque</French>
 		<Italian>Tolteco</Italian>
 		<Polish>Toltecka</Polish>
 	</TEXT>
@@ -7146,6 +7314,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TRANSISTORS</Tag>
 		<English>Transistors</English>
+		<French>Transisteurs</French>
 		<Italian>Transistor</Italian>
 		<Polish>Tranzystory</Polish>
 	</TEXT>
@@ -7157,11 +7326,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TRANSOXANIAN</Tag>
 		<English>Transoxanian</English>
+		<French>Transoxanienne</French>
 		<Italian>Transoxiano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TRANSPARENT_ALUMINUM</Tag>
 		<English>Transparent Aluminum</English>
+		<French>Aluminium Transparent</French>
 		<Italian>Alluminio trasparente</Italian>
 	</TEXT>
 	<TEXT>
@@ -7189,6 +7360,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TUNGSTEN</Tag>
 		<English>Tungsten</English>
+		<French>Tungstène</French>
 		<Italian>Tungsteno</Italian>
 		<Spanish>Tungsteno</Spanish>
 		<Polish>Wolfram</Polish>
@@ -7207,6 +7379,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TUNISIAN</Tag>
 		<English>Tunisian</English>
+		<French>Tunisienne</French>
 		<Italian>Tunisino</Italian>
 	</TEXT>
 	<TEXT>
@@ -7217,6 +7390,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TURKISH</Tag>
 		<English>Turkish</English>
+		<French>Turque</French>
 		<Italian>Turco</Italian>
 	</TEXT>
 	<TEXT>
@@ -7261,6 +7435,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_UKRAINIAN</Tag>
 		<English>Ukrainian</English>
+		<French>Ukrainienne</French>
 		<Italian>Ucraino</Italian>
 	</TEXT>
 	<TEXT>
@@ -7290,6 +7465,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_UNOBTAINIUM</Tag>
 		<English>Unobtainium</English>
+		<French>Indéfinium</French>
 		<Italian>Unobtainio</Italian>
 	</TEXT>
 	<TEXT>
@@ -7316,11 +7492,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_URUGUAYAN</Tag>
 		<English>Uruguayan</English>
+		<French>Uruguayenne</French>
 		<Italian>Uruguaiano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_UZBEK</Tag>
 		<English>Uzbek</English>
+		<French>Ouzbèque</French>
 		<Italian>Uzbeco</Italian>
 	</TEXT>
 <!-- V -->
@@ -7349,6 +7527,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_VANDAL</Tag>
 		<English>Vandal</English>
+		<French>Vandale</French>
 		<Italian>Vandalo</Italian>
 	</TEXT>
 	<TEXT>
@@ -7477,6 +7656,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WALLACHIAN</Tag>
 		<English>Wallachian</English>
+		<French>Wallachienne</French>
 		<Italian>Valacco</Italian>
 	</TEXT>
 	<TEXT>
@@ -7675,6 +7855,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WARP_DRIVES</Tag>
 		<English>Warp Drives</English>
+		<French>Moteurs Warp</French>
 		<Italian>Motori a curvatura</Italian>
 	</TEXT>
 	<TEXT>
@@ -7862,6 +8043,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_YGGDRASIL_SEEDS</Tag>
 		<English>Yggdrasil Seeds</English>
+		<French>Semences Yggdrasil</French>
 		<Italian>Semi di Yggdrasil</Italian>
 	</TEXT>
 	<TEXT>

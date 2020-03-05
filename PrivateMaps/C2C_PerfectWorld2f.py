@@ -460,7 +460,7 @@ class MapConstants :
 
 				#Randomly allows wonder class bonuses (stone and marble) to be used to sweeten starting positions.
 				#(Chance per starting position to allow 1 wonder bonus)
-				self.allowWonderBonusChance = 0.05
+				self.allowStrategicBonusChance = 0.05
 
 				#Randomly allows bonuses with continent limiter to be used to sweeten starting positions.
 				#(Chance per attempt to place an area-restricted resource in the wrong area)
@@ -4610,7 +4610,7 @@ class StartingPlotFinder:
 		yields.append(YieldTypes.YIELD_COMMERCE)
 		yields.append(YieldTypes.YIELD_FOOD)
 		#NEW CODE - Fuyu
-		allowBonusWonderClass = (PRand.random() <= mc.allowWonderBonusChance)
+		bAllowStrategicBonus = (PRand.random() <= mc.allowStrategicBonusChance)
 		plotList = []
 		#print "Num city plots: %d" % gc.getNUM_CITY_PLOTS()
 		for i in range(21): # gc.getNUM_CITY_PLOTS()
@@ -4656,11 +4656,11 @@ class StartingPlotFinder:
 							continue
 						if not bp.PlotCanHaveBonus(plot, bonusEnum, False, True):
 							continue
-					if bonusInfo.getBonusClassType() == gc.getInfoTypeForString("BONUSCLASS_WONDER") or bonusInfo.getBonusClassType() == gc.getInfoTypeForString("BONUSCLASS_RUSH") or bonusInfo.getBonusClassType() == gc.getInfoTypeForString("BONUSCLASS_MODERN"):
-						if not allowBonusWonderClass:
+					if bonusInfo.getBonusClassType() == gc.getInfoTypeForString("BONUSCLASS_STRATEGIC"):
+						if not bAllowStrategicBonus:
 							continue
 						else:
-							allowBonusWonderClass = False
+							bAllowStrategicBonus = False
 					plot.setBonusType(bonusEnum)
 					bonusCount += 1
 					break

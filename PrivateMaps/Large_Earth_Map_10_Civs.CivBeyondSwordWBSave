@@ -1,6 +1,5 @@
 Version=11
 BeginGame
-	Victory=VICTORY_SPACE_RACE
 	StartYear=-200000
 	Description= C2C Large Earth Map with 10 Civs. By Harrier. 
 	ModPath=
@@ -164,46 +163,6 @@ EndTeam
 BeginTeam
 	TeamID=39
 	ContactWithTeam=39
-EndTeam
-BeginTeam
-	TeamID=40
-	ContactWithTeam=40
-EndTeam
-BeginTeam
-	TeamID=41
-	ContactWithTeam=41
-EndTeam
-BeginTeam
-	TeamID=42
-	ContactWithTeam=42
-EndTeam
-BeginTeam
-	TeamID=43
-	ContactWithTeam=43
-EndTeam
-BeginTeam
-	TeamID=44
-	ContactWithTeam=44
-EndTeam
-BeginTeam
-	TeamID=45
-	ContactWithTeam=45
-EndTeam
-BeginTeam
-	TeamID=46
-	ContactWithTeam=46
-EndTeam
-BeginTeam
-	TeamID=47
-	ContactWithTeam=47
-EndTeam
-BeginTeam
-	TeamID=48
-	ContactWithTeam=48
-EndTeam
-BeginTeam
-	TeamID=49
-	ContactWithTeam=49
 EndTeam
 BeginPlayer
 	Team=0
@@ -422,56 +381,6 @@ BeginPlayer
 EndPlayer
 BeginPlayer
 	Team=39
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=40
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=41
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=42
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=43
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=44
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=45
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=46
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=47
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=48
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=49
 	LeaderType=NONE
 	CivType=NONE
 EndPlayer
@@ -15465,7 +15374,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=40,y=24
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -17839,7 +17747,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=47,y=32
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -19653,7 +19560,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=52,y=28
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_SEA_TROPICAL
 	PlotType=3
 EndPlot
@@ -21948,7 +21854,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=58,y=13
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -24336,7 +24241,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=63,y=49
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -27439,7 +27343,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=71,y=47
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -29546,7 +29449,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=77,y=33
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_COAST_TROPICAL
 	PlotType=3
 EndPlot
@@ -31486,7 +31388,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=82,y=44
-	BonusType=BONUS_MANGANESE
 	FeatureType=FEATURE_FOREST, FeatureVariety=2
 	TerrainType=TERRAIN_ICE
 	PlotType=0
@@ -31689,7 +31590,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=83,y=15
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -35093,7 +34993,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=91,y=45
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -35248,7 +35147,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=92,y=7
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_SEA
 	PlotType=3
 EndPlot
