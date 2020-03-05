@@ -1637,7 +1637,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_DISTANT_PAST_CITY</Building>
+					<BuildingType>BUILDING_DISTANT_PAST_CITY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -1670,17 +1670,17 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_GALACTIC_AC</Building>
+					<BuildingType>BUILDING_GALACTIC_AC</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_MULTIVAC</Building>
+					<BuildingType>BUILDING_MULTIVAC</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_UNIVERSAL_AC</Building>
+					<BuildingType>BUILDING_UNIVERSAL_AC</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>

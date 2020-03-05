@@ -4589,8 +4589,7 @@
 		</BuildingInfo>
 		<!-- <BuildingInfo>-->
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
-			<!-- <Building>BUILDING_KNOWLEDGE_BASE_INDUSTRIAL</Building>
-			<Type>BUILDING_KNOWLEDGE_BASE_INDUSTRIAL</Type>
+			<!--<Type>BUILDING_KNOWLEDGE_BASE_INDUSTRIAL</Type>
 			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_INDUSTRIAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_INDUSTRIAL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_KNOWLEDGE_BASE_INDUSTRIAL_STRATEGY</Strategy>
@@ -4622,8 +4621,7 @@
 		</BuildingInfo>
 		<BuildingInfo>-->
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
-			<!-- <Building>BUILDING_KNOWLEDGE_BASE_MODERN</Building>
-			<Type>BUILDING_KNOWLEDGE_BASE_MODERN</Type>
+			<!--<Type>BUILDING_KNOWLEDGE_BASE_MODERN</Type>
 			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MODERN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MODERN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MODERN_STRATEGY</Strategy>
@@ -4655,8 +4653,7 @@
 		</BuildingInfo>
 		<BuildingInfo>-->
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
-			<!-- <Building>BUILDING_KNOWLEDGE_BASE_INFORMATION</Building>
-			<Type>BUILDING_KNOWLEDGE_BASE_INFORMATION</Type>
+			<!--<Type>BUILDING_KNOWLEDGE_BASE_INFORMATION</Type>
 			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_INFORMATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_INFORMATION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_KNOWLEDGE_BASE_INFORMATION_STRATEGY</Strategy>
@@ -4688,8 +4685,7 @@
 		</BuildingInfo>
 		<BuildingInfo>-->
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
-			<!-- <Building>BUILDING_KNOWLEDGE_BASE_NANOTECH</Building>
-			<Type>BUILDING_KNOWLEDGE_BASE_NANOTECH</Type>
+			<!--<Type>BUILDING_KNOWLEDGE_BASE_NANOTECH</Type>
 			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_NANOTECH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_NANOTECH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_KNOWLEDGE_BASE_NANOTECH_STRATEGY</Strategy>
@@ -4721,8 +4717,7 @@
 		</BuildingInfo>
 		<BuildingInfo>-->
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
-			<!-- <Building>BUILDING_KNOWLEDGE_BASE_TRANSHUMAN</Building>
-			<Type>BUILDING_KNOWLEDGE_BASE_TRANSHUMAN</Type>
+			<!--<Type>BUILDING_KNOWLEDGE_BASE_TRANSHUMAN</Type>
 			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_TRANSHUMAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_TRANSHUMAN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_KNOWLEDGE_BASE_TRANSHUMAN_STRATEGY</Strategy>
@@ -4754,8 +4749,7 @@
 		</BuildingInfo>
 		<BuildingInfo>-->
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
-			<!-- <Building>BUILDING_KNOWLEDGE_BASE_GALACTIC</Building>
-			<Type>BUILDING_KNOWLEDGE_BASE_GALACTIC</Type>
+			<!--<Type>BUILDING_KNOWLEDGE_BASE_GALACTIC</Type>
 			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_GALACTIC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_GALACTIC_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_KNOWLEDGE_BASE_GALACTIC_STRATEGY</Strategy>
@@ -4787,8 +4781,7 @@
 		</BuildingInfo>
 		<BuildingInfo>-->
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
-			<!-- <Building>BUILDING_KNOWLEDGE_BASE_COSMIC</Building>
-			<Type>BUILDING_KNOWLEDGE_BASE_COSMIC</Type>
+			<!--<Type>BUILDING_KNOWLEDGE_BASE_COSMIC</Type>
 			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_COSMIC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_COSMIC_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_KNOWLEDGE_BASE_COSMIC_STRATEGY</Strategy>
@@ -4820,8 +4813,7 @@
 		</BuildingInfo>
 		<BuildingInfo>-->
 			<!-- Education Increasing Cost(Knowledge Base 1) -->
-			<!-- <Building>BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</Building>
-			<Type>BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</Type>
+			<!--<Type>BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</Type>
 			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_TRANSCENDENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_KNOWLEDGE_BASE_TRANSCENDENT_STRATEGY</Strategy>

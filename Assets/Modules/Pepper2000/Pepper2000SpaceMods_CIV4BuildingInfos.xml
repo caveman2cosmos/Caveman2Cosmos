@@ -199,12 +199,12 @@
 			<iCost>10910</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_LUNAR_BASE</Building>
+					<BuildingType>BUILDING_LUNAR_BASE</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_LUNAR_PARCOLOGY</Building>
+					<BuildingType>BUILDING_LUNAR_PARCOLOGY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -235,22 +235,22 @@
 			<iCost>10910</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_MARS_ARCOLOGY</Building>
+					<BuildingType>BUILDING_MARS_ARCOLOGY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_MARS_MEGACITY</Building>
+					<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_MARS_CITY</Building>
+					<BuildingType>BUILDING_MARS_CITY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_MARS_METRO</Building>
+					<BuildingType>BUILDING_MARS_METRO</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -281,7 +281,7 @@
 			<iCost>11810</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_MARS_HITECH</Building>
+					<BuildingType>BUILDING_MARS_HITECH</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -336,7 +336,7 @@
 			<iCost>12310</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_ORBITAL_FACTORY</Building>
+					<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -361,7 +361,7 @@
 			<iCost>12810</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_ASTEROID_INTERIOR_CITY</Building>
+					<BuildingType>BUILDING_ASTEROID_INTERIOR_CITY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -386,7 +386,7 @@
 			<iCost>12810</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_EUROPA_COLONY</Building>
+					<BuildingType>BUILDING_EUROPA_COLONY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -411,7 +411,7 @@
 			<iCost>13310</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_VENUS_COLONY</Building>
+					<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -436,12 +436,12 @@
 			<iCost>13310</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_UMBRIEL_BASE</Building>
+					<BuildingType>BUILDING_UMBRIEL_BASE</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_TRITON_BASE</Building>
+					<BuildingType>BUILDING_TRITON_BASE</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -466,7 +466,7 @@
 			<iCost>13810</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_MERCURY_COLONY</Building>
+					<BuildingType>BUILDING_MERCURY_COLONY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -568,7 +568,7 @@
 			<iCost>21910</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_INTERSTELLAR_BROADCAST_NODE</Building>
+					<BuildingType>BUILDING_INTERSTELLAR_BROADCAST_NODE</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -600,7 +600,7 @@
 			<iCost>24310</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_MATRIOSHKA_BRAIN</Building>
+					<BuildingType>BUILDING_MATRIOSHKA_BRAIN</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>10</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -638,12 +638,12 @@
 			<iCost>26310</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_INTERGALACTIC_PORT</Building>
+					<BuildingType>BUILDING_INTERGALACTIC_PORT</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_ECUMENOPOLIS</Building>
+					<BuildingType>BUILDING_ECUMENOPOLIS</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -698,7 +698,7 @@
 			<iCost>31710</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_ETERNAL_INTELLIGENCE</Building>
+					<BuildingType>BUILDING_ETERNAL_INTELLIGENCE</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -734,12 +734,12 @@
 			<iCost>39510</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_NEUTRON_STAR_COMPUTATIONAL_SUBSTRATE</Building>
+					<BuildingType>BUILDING_NEUTRON_STAR_COMPUTATIONAL_SUBSTRATE</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_BLACKHOLE_COLONY</Building>
+					<BuildingType>BUILDING_BLACKHOLE_COLONY</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -764,12 +764,12 @@
 			<iCost>43910</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_HYPERFACTORY</Building>
+					<BuildingType>BUILDING_HYPERFACTORY</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_ESCHER_CITY</Building>
+					<BuildingType>BUILDING_ESCHER_CITY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -810,7 +810,7 @@
 			<FreeBuilding>BUILDING_KOLMOGOROV_COMPRESSION</FreeBuilding>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_KOLMOGOROV_COMPRESSION</Building>
+					<BuildingType>BUILDING_KOLMOGOROV_COMPRESSION</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>10</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -848,7 +848,7 @@
 			<iCost>52110</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_COSMIC_NODE</Building>
+					<BuildingType>BUILDING_COSMIC_NODE</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -905,12 +905,12 @@
 			<iCost>57510</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_QUATERNIONIC_PROJECTIVE_SPACE_COLONY</Building>
+					<BuildingType>BUILDING_QUATERNIONIC_PROJECTIVE_SPACE_COLONY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_TRANSFINITE_SUPERCOMPUTER</Building>
+					<BuildingType>BUILDING_TRANSFINITE_SUPERCOMPUTER</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -950,7 +950,7 @@
 			<iCost>5730</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_BACTERIUM_BIOFORGE</Building>
+					<BuildingType>BUILDING_BACTERIUM_BIOFORGE</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -978,7 +978,7 @@
 			<iCost>5730</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_GENFARM_LAB</Building>
+					<BuildingType>BUILDING_GENFARM_LAB</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -1006,7 +1006,7 @@
 			<iCost>5730</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_BACTERIUM_BIOFORGE</Building>
+					<BuildingType>BUILDING_BACTERIUM_BIOFORGE</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>

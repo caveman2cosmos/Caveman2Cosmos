@@ -1907,7 +1907,7 @@
 			<FreeBuilding>BUILDING_CISLUNAR_ONEILL_CYLINDER</FreeBuilding>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_CISLUNAR_ONEILL_CYLINDER</Building>
+					<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>10</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2110,7 +2110,7 @@
 			</YieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_CISLUNAR_ONEILL_CYLINDER</Building>
+					<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2144,7 +2144,7 @@
 			</YieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_CISLUNAR_SPACEPORT</Building>
+					<BuildingType>BUILDING_CISLUNAR_SPACEPORT</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
