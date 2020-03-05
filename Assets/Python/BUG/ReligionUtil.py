@@ -211,7 +211,7 @@ def isTemple(info, iReligion):
 	"""
 	Returns True if <info> is the Temple for <iReligion>.
 	"""
-	if not isWorldWonderClass(info.getBuildingClassType()) and info.getSpecialBuildingType() == CvUtil.findInfoTypeNum(GC.getSpecialBuildingInfo,GC.getNumSpecialBuildingInfos(),'SPECIALBUILDING_TEMPLE'):
+	if not isWorldWonderClass(GC.getInfoTypeForString(info.getType())) and info.getSpecialBuildingType() == CvUtil.findInfoTypeNum(GC.getSpecialBuildingInfo,GC.getNumSpecialBuildingInfos(),'SPECIALBUILDING_TEMPLE'):
 		return info.getStateReligionHappiness() > 0
 	return False
 

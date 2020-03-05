@@ -333,7 +333,6 @@
 	<ElementType name="iMaxPlayerInstances" content="textOnly" dt:type="int"/>
 	<ElementType name="iExtraPlayerInstances" content="textOnly" dt:type="int"/>
 	<ElementType name="bNoLimit" content="textOnly" dt:type="boolean"/>
-	<ElementType name="DefaultBuilding" content="textOnly"/>
 	<ElementType name="VictoryType" content="textOnly"/>
 	<ElementType name="iThreshold" content="textOnly" dt:type="int"/>
 	<ElementType name="VictoryThreshold" content="eltOnly">
@@ -342,23 +341,6 @@
 	</ElementType>
 	<ElementType name="VictoryThresholds" content="eltOnly">
 		<element type="VictoryThreshold" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="BuildingInfo" content="eltOnly">
-		<element type="Type"/>
-<!-- XMLCOPY				02/20/2008			MRGENIE		-->
-		<element type="bForceOverwrite" minOccurs="0"/>
-		<element type="bForceDelete" minOccurs="0"/>
-		<element type="iForceInsertLocation" minOccurs="0"/>
-		<element type="AndDependencyTypes" minOccurs="0"/>
-		<element type="OrDependencyTypes" minOccurs="0"/>
-<!-- XMLCOPY				END					MRGENIE		-->
-		<element type="Description" minOccurs="0"/>
-		<element type="iMaxGlobalInstances" minOccurs="0"/>
-		<element type="iMaxTeamInstances" minOccurs="0"/>
-		<element type="iMaxPlayerInstances" minOccurs="0"/>
-		<element type="iExtraPlayerInstances" minOccurs="0"/>
-		<element type="DefaultBuilding" minOccurs="0"/>
-		<element type="VictoryThresholds" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="SpecialBuildingType" content="textOnly"/>
 	<ElementType name="Description" content="textOnly"/>
@@ -713,7 +695,6 @@
 	<ElementType name="BuildingHappinessChanges" content="eltOnly">
 		<element type="BuildingHappinessChange" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="BuildingType" content="textOnly"/>
 	<ElementType name="iNumBuildingNeeded" content="textOnly" dt:type="int"/>
 	<ElementType name="PrereqBuilding" content="eltOnly">
 		<element type="BuildingType"/>
