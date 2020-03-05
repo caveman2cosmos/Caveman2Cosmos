@@ -40,7 +40,7 @@
 			<iUnitExperience>0</iUnitExperience>
 			<iUnitImmobileTurns>0</iUnitImmobileTurns>
 			<UnitName/>
-			<Building>NONE</Building>
+			<BuildingType>NONE</BuildingType>
 			<iBuildingChange>0</iBuildingChange>
 			<BuildingExtraYields/>
 			<BuildingExtraCommerces/>
@@ -113,12 +113,12 @@
 			<iUnitExperience>0</iUnitExperience>
 			<iUnitImmobileTurns>0</iUnitImmobileTurns>
 			<UnitName/>
-			<Building>NONE</Building>
+			<BuildingType>NONE</BuildingType>
 			<iBuildingChange>0</iBuildingChange>
 			<BuildingExtraYields/>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_KNOWLEDGE_INHERITANCE</Building>
+					<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>

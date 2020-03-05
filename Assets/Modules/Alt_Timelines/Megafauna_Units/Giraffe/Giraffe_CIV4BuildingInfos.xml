@@ -7,7 +7,7 @@
 <Civ4BuildingInfos xmlns="x-schema:../../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<Building>BUILDING_GIRAFFE_TRAINER</Building>
+			<BuildingType>BUILDING_GIRAFFE_TRAINER</BuildingType>
 			<Type>BUILDING_GIRAFFE_TRAINER</Type>
 			<Description>TXT_KEY_BUILDING_GIRAFFE_TRAINER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GIRAFFE_TRAINER_PEDIA</Civilopedia>
@@ -65,7 +65,7 @@
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_GIRAFFE_TRAINER_HERITAGE</Building>
+			<BuildingType>BUILDING_GIRAFFE_TRAINER_HERITAGE</BuildingType>
 			<Type>BUILDING_GIRAFFE_TRAINER_HERITAGE</Type>
 			<Description>TXT_KEY_BUILDING_GIRAFFE_TRAINER_HERITAGE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GIRAFFE_TRAINER_HERITAGE_PEDIA</Civilopedia>
@@ -111,7 +111,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_GIRAFFE_TRAINER_EFFECT</Building>
+			<BuildingType>BUILDING_GIRAFFE_TRAINER_EFFECT</BuildingType>
 			<Type>BUILDING_GIRAFFE_TRAINER_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_GIRAFFE_TRAINER_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GIRAFFE_TRAINER_PEDIA</Civilopedia>
@@ -135,7 +135,7 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_ANIMAL_TOTEM_GIRAFFE</Building>
+			<BuildingType>BUILDING_ANIMAL_TOTEM_GIRAFFE</BuildingType>
 			<Type>BUILDING_ANIMAL_TOTEM_GIRAFFE</Type>
 			<Description>TXT_KEY_BUILDING_ANIMAL_TOTEM_GIRAFFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TOTEM_PEDIA</Civilopedia>
@@ -186,7 +186,7 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_STABLE</Building>
+			<BuildingType>BUILDING_STABLE</BuildingType>
 			<Type>BUILDING_STABLE</Type>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>

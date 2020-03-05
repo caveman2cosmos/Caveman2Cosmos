@@ -4,7 +4,7 @@
 <Civ4BuildingInfos xmlns="x-schema:../../../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<Building>BUILDING_AMPHIBIAN_MYTH</Building>
+			<BuildingType>BUILDING_AMPHIBIAN_MYTH</BuildingType>
 			<Type>BUILDING_AMPHIBIAN_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_AMPHIBIAN_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -55,7 +55,7 @@
 			</PrereqNotBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_AMPHIBIAN_MYTH_EFFECT</Building>
+			<BuildingType>BUILDING_AMPHIBIAN_MYTH_EFFECT</BuildingType>
 			<Type>BUILDING_AMPHIBIAN_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_AMPHIBIAN_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -69,7 +69,7 @@
 			</MapCategoryTypes>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_AMPHIBIAN_STORY</Building>
+			<BuildingType>BUILDING_AMPHIBIAN_STORY</BuildingType>
 			<Type>BUILDING_AMPHIBIAN_STORY</Type>
 			<Description>TXT_KEY_BUILDING_AMPHIBIAN_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
@@ -117,7 +117,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_AMPHIBIAN_STORIES</Building>
+			<BuildingType>BUILDING_AMPHIBIAN_STORIES</BuildingType>
 			<Type>BUILDING_AMPHIBIAN_STORIES</Type>
 			<Description>TXT_KEY_BUILDING_AMPHIBIAN_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
@@ -166,7 +166,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_AMPHIBIAN_STORIES_EFFECT</Building>
+			<BuildingType>BUILDING_AMPHIBIAN_STORIES_EFFECT</BuildingType>
 			<Type>BUILDING_AMPHIBIAN_STORIES_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_AMPHIBIAN_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AMPHIBIAN_PEDIA</Civilopedia>
@@ -197,7 +197,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_BIRD_MYTH</Building>
+			<BuildingType>BUILDING_BIRD_MYTH</BuildingType>
 			<Type>BUILDING_BIRD_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_BIRD_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -248,7 +248,7 @@
 			</PrereqNotBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_BIRD_MYTH_EFFECT</Building>
+			<BuildingType>BUILDING_BIRD_MYTH_EFFECT</BuildingType>
 			<Type>BUILDING_BIRD_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_BIRD_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -262,7 +262,7 @@
 			</MapCategoryTypes>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_BIRD_STORY</Building>
+			<BuildingType>BUILDING_BIRD_STORY</BuildingType>
 			<Type>BUILDING_BIRD_STORY</Type>
 			<Description>TXT_KEY_BUILDING_BIRD_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
@@ -310,7 +310,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_BIRD_STORIES</Building>
+			<BuildingType>BUILDING_BIRD_STORIES</BuildingType>
 			<Type>BUILDING_BIRD_STORIES</Type>
 			<Description>TXT_KEY_BUILDING_BIRD_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
@@ -359,7 +359,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_BIRD_STORIES_EFFECT</Building>
+			<BuildingType>BUILDING_BIRD_STORIES_EFFECT</BuildingType>
 			<Type>BUILDING_BIRD_STORIES_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_BIRD_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
@@ -390,7 +390,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_BUG_MYTH</Building>
+			<BuildingType>BUILDING_BUG_MYTH</BuildingType>
 			<Type>BUILDING_BUG_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_BUG_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -447,7 +447,7 @@
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_BUG_MYTH_EFFECT</Building>
+			<BuildingType>BUILDING_BUG_MYTH_EFFECT</BuildingType>
 			<Type>BUILDING_BUG_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_BUG_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -461,7 +461,7 @@
 			</MapCategoryTypes>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_BUG_STORY</Building>
+			<BuildingType>BUILDING_BUG_STORY</BuildingType>
 			<Type>BUILDING_BUG_STORY</Type>
 			<Description>TXT_KEY_BUILDING_BUG_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
@@ -509,7 +509,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_BUG_STORIES</Building>
+			<BuildingType>BUILDING_BUG_STORIES</BuildingType>
 			<Type>BUILDING_BUG_STORIES</Type>
 			<Description>TXT_KEY_BUILDING_BUG_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
@@ -558,7 +558,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_BUG_STORIES_EFFECT</Building>
+			<BuildingType>BUILDING_BUG_STORIES_EFFECT</BuildingType>
 			<Type>BUILDING_BUG_STORIES_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_BUG_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
@@ -589,7 +589,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_FISH_MYTH</Building>
+			<BuildingType>BUILDING_FISH_MYTH</BuildingType>
 			<Type>BUILDING_FISH_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_FISH_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -640,7 +640,7 @@
 			</PrereqNotBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_FISH_MYTH_EFFECT</Building>
+			<BuildingType>BUILDING_FISH_MYTH_EFFECT</BuildingType>
 			<Type>BUILDING_FISH_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_FISH_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -654,7 +654,7 @@
 			</MapCategoryTypes>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_FISH_STORY</Building>
+			<BuildingType>BUILDING_FISH_STORY</BuildingType>
 			<Type>BUILDING_FISH_STORY</Type>
 			<Description>TXT_KEY_BUILDING_FISH_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
@@ -702,7 +702,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_FISH_STORIES</Building>
+			<BuildingType>BUILDING_FISH_STORIES</BuildingType>
 			<Type>BUILDING_FISH_STORIES</Type>
 			<Description>TXT_KEY_BUILDING_FISH_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
@@ -751,7 +751,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_FISH_STORIES_EFFECT</Building>
+			<BuildingType>BUILDING_FISH_STORIES_EFFECT</BuildingType>
 			<Type>BUILDING_FISH_STORIES_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_FISH_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
@@ -782,7 +782,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_LOCAL_FISH_MYTH</Building>
+			<BuildingType>BUILDING_LOCAL_FISH_MYTH</BuildingType>
 			<Type>BUILDING_LOCAL_FISH_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_LOCAL_FISH_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -850,7 +850,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_FLIGHTLESS_BIRD_MYTH</Building>
+			<BuildingType>BUILDING_FLIGHTLESS_BIRD_MYTH</BuildingType>
 			<Type>BUILDING_FLIGHTLESS_BIRD_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_FLIGHTLESS_BIRD_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -901,7 +901,7 @@
 			</PrereqNotBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_FLIGHTLESS_BIRD_MYTH_EFFECT</Building>
+			<BuildingType>BUILDING_FLIGHTLESS_BIRD_MYTH_EFFECT</BuildingType>
 			<Type>BUILDING_FLIGHTLESS_BIRD_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_FLIGHTLESS_BIRD_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -915,7 +915,7 @@
 			</MapCategoryTypes>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_FLIGHTLESS_BIRD_STORY</Building>
+			<BuildingType>BUILDING_FLIGHTLESS_BIRD_STORY</BuildingType>
 			<Type>BUILDING_FLIGHTLESS_BIRD_STORY</Type>
 			<Description>TXT_KEY_BUILDING_FLIGHTLESS_BIRD_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
@@ -963,7 +963,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_FLIGHTLESS_BIRD_STORIES</Building>
+			<BuildingType>BUILDING_FLIGHTLESS_BIRD_STORIES</BuildingType>
 			<Type>BUILDING_FLIGHTLESS_BIRD_STORIES</Type>
 			<Description>TXT_KEY_BUILDING_FLIGHTLESS_BIRD_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
@@ -1012,7 +1012,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_FLIGHTLESS_BIRD_STORIES_EFFECT</Building>
+			<BuildingType>BUILDING_FLIGHTLESS_BIRD_STORIES_EFFECT</BuildingType>
 			<Type>BUILDING_FLIGHTLESS_BIRD_STORIES_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_FLIGHTLESS_BIRD_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
@@ -1043,7 +1043,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_OWL_MYTH</Building>
+			<BuildingType>BUILDING_OWL_MYTH</BuildingType>
 			<Type>BUILDING_OWL_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_OWL_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -1094,7 +1094,7 @@
 			</PrereqNotBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_OWL_MYTH_EFFECT</Building>
+			<BuildingType>BUILDING_OWL_MYTH_EFFECT</BuildingType>
 			<Type>BUILDING_OWL_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_OWL_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -1108,7 +1108,7 @@
 			</MapCategoryTypes>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_OWL_STORY</Building>
+			<BuildingType>BUILDING_OWL_STORY</BuildingType>
 			<Type>BUILDING_OWL_STORY</Type>
 			<Description>TXT_KEY_BUILDING_OWL_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
@@ -1156,7 +1156,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_OWL_STORIES</Building>
+			<BuildingType>BUILDING_OWL_STORIES</BuildingType>
 			<Type>BUILDING_OWL_STORIES</Type>
 			<Description>TXT_KEY_BUILDING_OWL_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
@@ -1205,7 +1205,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_OWL_STORIES_EFFECT</Building>
+			<BuildingType>BUILDING_OWL_STORIES_EFFECT</BuildingType>
 			<Type>BUILDING_OWL_STORIES_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_OWL_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
@@ -1236,7 +1236,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_PENGUIN_MYTH</Building>
+			<BuildingType>BUILDING_PENGUIN_MYTH</BuildingType>
 			<Type>BUILDING_PENGUIN_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_PENGUIN_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -1305,7 +1305,7 @@
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_PENGUIN_MYTH_EFFECT</Building>
+			<BuildingType>BUILDING_PENGUIN_MYTH_EFFECT</BuildingType>
 			<Type>BUILDING_PENGUIN_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_PENGUIN_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -1319,7 +1319,7 @@
 			</MapCategoryTypes>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_PENGUIN_STORY</Building>
+			<BuildingType>BUILDING_PENGUIN_STORY</BuildingType>
 			<Type>BUILDING_PENGUIN_STORY</Type>
 			<Description>TXT_KEY_BUILDING_PENGUIN_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
@@ -1367,7 +1367,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_PENGUIN_STORIES</Building>
+			<BuildingType>BUILDING_PENGUIN_STORIES</BuildingType>
 			<Type>BUILDING_PENGUIN_STORIES</Type>
 			<Description>TXT_KEY_BUILDING_PENGUIN_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
@@ -1416,7 +1416,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_PENGUIN_STORIES_EFFECT</Building>
+			<BuildingType>BUILDING_PENGUIN_STORIES_EFFECT</BuildingType>
 			<Type>BUILDING_PENGUIN_STORIES_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_PENGUIN_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
@@ -1447,7 +1447,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_RAPTOR_MYTH</Building>
+			<BuildingType>BUILDING_RAPTOR_MYTH</BuildingType>
 			<Type>BUILDING_RAPTOR_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_RAPTOR_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -1518,7 +1518,7 @@
 			</PrereqNotBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_RAPTOR_MYTH_EFFECT</Building>
+			<BuildingType>BUILDING_RAPTOR_MYTH_EFFECT</BuildingType>
 			<Type>BUILDING_RAPTOR_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_RAPTOR_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -1532,7 +1532,7 @@
 			</MapCategoryTypes>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_RAPTOR_STORY</Building>
+			<BuildingType>BUILDING_RAPTOR_STORY</BuildingType>
 			<Type>BUILDING_RAPTOR_STORY</Type>
 			<Description>TXT_KEY_BUILDING_RAPTOR_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
@@ -1580,7 +1580,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_RAPTOR_STORIES</Building>
+			<BuildingType>BUILDING_RAPTOR_STORIES</BuildingType>
 			<Type>BUILDING_RAPTOR_STORIES</Type>
 			<Description>TXT_KEY_BUILDING_RAPTOR_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
@@ -1629,7 +1629,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_RAPTOR_STORIES_EFFECT</Building>
+			<BuildingType>BUILDING_RAPTOR_STORIES_EFFECT</BuildingType>
 			<Type>BUILDING_RAPTOR_STORIES_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_RAPTOR_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
@@ -1660,7 +1660,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_REPTILE_MYTH</Building>
+			<BuildingType>BUILDING_REPTILE_MYTH</BuildingType>
 			<Type>BUILDING_REPTILE_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_REPTILE_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -1711,7 +1711,7 @@
 			</PrereqNotBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_REPTILE_MYTH_EFFECT</Building>
+			<BuildingType>BUILDING_REPTILE_MYTH_EFFECT</BuildingType>
 			<Type>BUILDING_REPTILE_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_REPTILE_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -1725,7 +1725,7 @@
 			</MapCategoryTypes>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_REPTILE_STORY</Building>
+			<BuildingType>BUILDING_REPTILE_STORY</BuildingType>
 			<Type>BUILDING_REPTILE_STORY</Type>
 			<Description>TXT_KEY_BUILDING_REPTILE_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
@@ -1773,7 +1773,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_REPTILE_STORIES</Building>
+			<BuildingType>BUILDING_REPTILE_STORIES</BuildingType>
 			<Type>BUILDING_REPTILE_STORIES</Type>
 			<Description>TXT_KEY_BUILDING_REPTILE_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
@@ -1822,7 +1822,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_REPTILE_STORIES_EFFECT</Building>
+			<BuildingType>BUILDING_REPTILE_STORIES_EFFECT</BuildingType>
 			<Type>BUILDING_REPTILE_STORIES_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_REPTILE_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
@@ -1853,7 +1853,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_RODENT_MYTH</Building>
+			<BuildingType>BUILDING_RODENT_MYTH</BuildingType>
 			<Type>BUILDING_RODENT_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_RODENT_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -1904,7 +1904,7 @@
 			</PrereqNotBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_RODENT_MYTH_EFFECT</Building>
+			<BuildingType>BUILDING_RODENT_MYTH_EFFECT</BuildingType>
 			<Type>BUILDING_RODENT_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_RODENT_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -1918,7 +1918,7 @@
 			</MapCategoryTypes>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_RODENT_STORY</Building>
+			<BuildingType>BUILDING_RODENT_STORY</BuildingType>
 			<Type>BUILDING_RODENT_STORY</Type>
 			<Description>TXT_KEY_BUILDING_RODENT_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
@@ -1966,7 +1966,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_RODENT_STORIES</Building>
+			<BuildingType>BUILDING_RODENT_STORIES</BuildingType>
 			<Type>BUILDING_RODENT_STORIES</Type>
 			<Description>TXT_KEY_BUILDING_RODENT_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
@@ -2015,7 +2015,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_RODENT_STORIES_EFFECT</Building>
+			<BuildingType>BUILDING_RODENT_STORIES_EFFECT</BuildingType>
 			<Type>BUILDING_RODENT_STORIES_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_RODENT_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
@@ -2046,7 +2046,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_SEA_BIRD_MYTH</Building>
+			<BuildingType>BUILDING_SEA_BIRD_MYTH</BuildingType>
 			<Type>BUILDING_SEA_BIRD_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_SEA_BIRD_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -2097,7 +2097,7 @@
 			</PrereqNotBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_SEA_BIRD_MYTH_EFFECT</Building>
+			<BuildingType>BUILDING_SEA_BIRD_MYTH_EFFECT</BuildingType>
 			<Type>BUILDING_SEA_BIRD_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_SEA_BIRD_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -2111,7 +2111,7 @@
 			</MapCategoryTypes>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_SEA_BIRD_STORY</Building>
+			<BuildingType>BUILDING_SEA_BIRD_STORY</BuildingType>
 			<Type>BUILDING_SEA_BIRD_STORY</Type>
 			<Description>TXT_KEY_BUILDING_SEA_BIRD_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
@@ -2159,7 +2159,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_SEA_BIRD_STORIES</Building>
+			<BuildingType>BUILDING_SEA_BIRD_STORIES</BuildingType>
 			<Type>BUILDING_SEA_BIRD_STORIES</Type>
 			<Description>TXT_KEY_BUILDING_SEA_BIRD_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
@@ -2208,7 +2208,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_SEA_BIRD_STORIES_EFFECT</Building>
+			<BuildingType>BUILDING_SEA_BIRD_STORIES_EFFECT</BuildingType>
 			<Type>BUILDING_SEA_BIRD_STORIES_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_SEA_BIRD_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
@@ -2239,7 +2239,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_WOLF_MYTH</Building>
+			<BuildingType>BUILDING_WOLF_MYTH</BuildingType>
 			<Type>BUILDING_WOLF_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_WOLF_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -2332,7 +2332,7 @@
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_WOLF_MYTH_EFFECT</Building>
+			<BuildingType>BUILDING_WOLF_MYTH_EFFECT</BuildingType>
 			<Type>BUILDING_WOLF_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_WOLF_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -2346,7 +2346,7 @@
 			</MapCategoryTypes>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_WOLF_STORY</Building>
+			<BuildingType>BUILDING_WOLF_STORY</BuildingType>
 			<Type>BUILDING_WOLF_STORY</Type>
 			<Description>TXT_KEY_BUILDING_WOLF_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
@@ -2394,7 +2394,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_WOLF_STORIES</Building>
+			<BuildingType>BUILDING_WOLF_STORIES</BuildingType>
 			<Type>BUILDING_WOLF_STORIES</Type>
 			<Description>TXT_KEY_BUILDING_WOLF_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
@@ -2443,7 +2443,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_WOLF_STORIES_EFFECT</Building>
+			<BuildingType>BUILDING_WOLF_STORIES_EFFECT</BuildingType>
 			<Type>BUILDING_WOLF_STORIES_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_WOLF_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>

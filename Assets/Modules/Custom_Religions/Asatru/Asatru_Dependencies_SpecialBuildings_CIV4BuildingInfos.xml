@@ -8,7 +8,7 @@
 <BuildingInfos>
 	<BuildingInfo>
 		<!-- National Belief (Reincarnation) -->
-		<Building>BUILDING_NATIONAL_BELIEF_REINCARNATION</Building>
+		<BuildingType>BUILDING_NATIONAL_BELIEF_REINCARNATION</BuildingType>
 		<Type>BUILDING_NATIONAL_BELIEF_REINCARNATION</Type>
 		<PrereqOrBuildings>
 			<PrereqOrBuilding>

@@ -12,31 +12,31 @@
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_HYMNS_AND_SCULPTURES</Type>
 			<BuildingsRequired>
-				<Building>BUILDING_CAODAI_CATHEDRAL</Building>
+				<BuildingType>BUILDING_CAODAI_CATHEDRAL</BuildingType>
 			</BuildingsRequired>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_WININGMONKS</Type>
 			<BuildingsRequired>
-				<Building>BUILDING_CAODAI_MONASTERY</Building>
+				<BuildingType>BUILDING_CAODAI_MONASTERY</BuildingType>
 			</BuildingsRequired>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_HOLY_RITUAL</Type>
 			<BuildingsRequired>
-				<Building>BUILDING_CAODAI_TEMPLE</Building>
+				<BuildingType>BUILDING_CAODAI_TEMPLE</BuildingType>
 			</BuildingsRequired>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_STAINED_GLASS</Type>
 			<BuildingsRequired>
-				<Building>BUILDING_CAODAI_CATHEDRAL</Building>
+				<BuildingType>BUILDING_CAODAI_CATHEDRAL</BuildingType>
 			</BuildingsRequired>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_SECRET_KNOWLEDGE</Type>
 			<BuildingsRequired>
-				<Building>BUILDING_CAODAI_MONASTERY</Building>
+				<BuildingType>BUILDING_CAODAI_MONASTERY</BuildingType>
 			</BuildingsRequired>
 		</EventTriggerInfo>
 	</EventTriggerInfos>

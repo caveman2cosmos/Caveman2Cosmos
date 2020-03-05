@@ -4,7 +4,7 @@
 <Civ4BuildingInfos xmlns="x-schema:../../../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<Building>BUILDING_HORSE_MYTH</Building>
+			<BuildingType>BUILDING_HORSE_MYTH</BuildingType>
 			<Type>BUILDING_HORSE_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_HORSE_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -53,7 +53,7 @@
 			</PrereqNotBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_HORSE_MYTH_EFFECT</Building>
+			<BuildingType>BUILDING_HORSE_MYTH_EFFECT</BuildingType>
 			<Type>BUILDING_HORSE_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_HORSE_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -67,7 +67,7 @@
 			</MapCategoryTypes>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_HORSE_STORY</Building>
+			<BuildingType>BUILDING_HORSE_STORY</BuildingType>
 			<Type>BUILDING_HORSE_STORY</Type>
 			<Description>TXT_KEY_BUILDING_HORSE_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
@@ -114,7 +114,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_HORSE_STORIES</Building>
+			<BuildingType>BUILDING_HORSE_STORIES</BuildingType>
 			<Type>BUILDING_HORSE_STORIES</Type>
 			<Description>TXT_KEY_BUILDING_HORSE_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
@@ -162,7 +162,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_HORSE_STORIES_EFFECT</Building>
+			<BuildingType>BUILDING_HORSE_STORIES_EFFECT</BuildingType>
 			<Type>BUILDING_HORSE_STORIES_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_HORSE_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>

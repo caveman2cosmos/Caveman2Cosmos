@@ -4,7 +4,7 @@
 <Civ4BuildingInfos xmlns="x-schema:../../../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<Building>BUILDING_DUCK_FLOCKS</Building>
+			<BuildingType>BUILDING_DUCK_FLOCKS</BuildingType>
 			<Type>BUILDING_DUCK_FLOCKS</Type>
 			<Description>TXT_KEY_BUILDING_DUCK_FLOCKS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DUCK_FLOCKS_PEDIA</Civilopedia>
@@ -43,7 +43,7 @@
 			</PrereqNotBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_DUCK_FLOCKS_EFFECT</Building>
+			<BuildingType>BUILDING_DUCK_FLOCKS_EFFECT</BuildingType>
 			<Type>BUILDING_DUCK_FLOCKS_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_DUCK_FLOCKS_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DUCK_FLOCKS_PEDIA</Civilopedia>
@@ -60,7 +60,7 @@
 			<iCost>-1</iCost>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_PEACOCK_FLOCKS</Building>
+			<BuildingType>BUILDING_PEACOCK_FLOCKS</BuildingType>
 			<Type>BUILDING_PEACOCK_FLOCKS</Type>
 			<Description>TXT_KEY_BUILDING_PEACOCK_FLOCKS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PEACOCK_FLOCKS_PEDIA</Civilopedia>
@@ -99,7 +99,7 @@
 			</PrereqNotBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_PEACOCK_FLOCKS_EFFECT</Building>
+			<BuildingType>BUILDING_PEACOCK_FLOCKS_EFFECT</BuildingType>
 			<Type>BUILDING_PEACOCK_FLOCKS_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_PEACOCK_FLOCKS_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PEACOCK_FLOCKS_PEDIA</Civilopedia>
@@ -116,7 +116,7 @@
 			<iCost>-1</iCost>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_TURKEY_FLOCKS</Building>
+			<BuildingType>BUILDING_TURKEY_FLOCKS</BuildingType>
 			<Type>BUILDING_TURKEY_FLOCKS</Type>
 			<Description>TXT_KEY_BUILDING_TURKEY_FLOCKS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TURKEY_FLOCKS_PEDIA</Civilopedia>
@@ -155,7 +155,7 @@
 			</PrereqNotBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_TURKEY_FLOCKS_EFFECT</Building>
+			<BuildingType>BUILDING_TURKEY_FLOCKS_EFFECT</BuildingType>
 			<Type>BUILDING_TURKEY_FLOCKS_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_TURKEY_FLOCKS_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TURKEY_FLOCKS_PEDIA</Civilopedia>

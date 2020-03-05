@@ -12,7 +12,7 @@
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_SECRET_KNOWLEDGE</Type>
 			<BuildingsRequired>
-				<Building>BUILDING_DRUID_MONASTERY</Building>
+				<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
 			</BuildingsRequired>
 		</EventTriggerInfo>
 	</EventTriggerInfos>

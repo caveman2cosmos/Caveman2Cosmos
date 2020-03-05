@@ -41,7 +41,7 @@
 			<iUnitExperienceWeight>0</iUnitExperienceWeight>
 			<bUnitsOnPlot>0</bUnitsOnPlot>
 			<BuildingsRequired>
-				<Building>BUILDING_KNOWLEDGE_INHERITANCE</Building>
+				<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<iNumBuildingsGlobal>0</iNumBuildingsGlobal>

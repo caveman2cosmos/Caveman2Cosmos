@@ -1536,7 +1536,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_BUSSARD_RAMJET_PORT</Building>
+					<BuildingType>BUILDING_BUSSARD_RAMJET_PORT</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -7170,7 +7170,7 @@
 			<FreeBuilding>BUILDING_MATRIOSHKA_BRAIN</FreeBuilding>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_MATRIOSHKA_BRAIN</Building>
+					<BuildingType>BUILDING_MATRIOSHKA_BRAIN</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -7212,17 +7212,17 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_NEUTRINO_SCANNER</Building>
+					<BuildingType>BUILDING_NEUTRINO_SCANNER</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>10</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_GRAVITON_DETECTOR</Building>
+					<BuildingType>BUILDING_GRAVITON_DETECTOR</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>10</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_INTERSTELLAR_DATA_COLLECTION</Building>
+					<BuildingType>BUILDING_INTERSTELLAR_DATA_COLLECTION</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>10</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -7255,7 +7255,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_INTERSTELLAR_STARPORT</Building>
+					<BuildingType>BUILDING_INTERSTELLAR_STARPORT</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -7289,7 +7289,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_UNIVERSAL_LIBRARY</Building>
+					<BuildingType>BUILDING_UNIVERSAL_LIBRARY</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -7471,7 +7471,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_ANDROMEDA_COLONY</Building>
+					<BuildingType>BUILDING_ANDROMEDA_COLONY</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>50</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -7548,7 +7548,7 @@
 			</YieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_DYSON_SPHERE</Building>
+					<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -7715,7 +7715,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_INTERSTELLAR_STADIUM</Building>
+					<BuildingType>BUILDING_INTERSTELLAR_STADIUM</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -8080,12 +8080,12 @@
 			</YieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_RINGWORLD_CITY</Building>
+					<BuildingType>BUILDING_RINGWORLD_CITY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>15</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_ARTIFICIAL_MOON</Building>
+					<BuildingType>BUILDING_ARTIFICIAL_MOON</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -8131,7 +8131,7 @@
 			</YieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_INTERSTELLAR_STARPORT</Building>
+					<BuildingType>BUILDING_INTERSTELLAR_STARPORT</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>10</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -8172,7 +8172,7 @@
 			</YieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_WORMHOLE_TRADE</Building>
+					<BuildingType>BUILDING_WORMHOLE_TRADE</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>20</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -8225,7 +8225,7 @@
 			</YieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_ARTIFICIAL_PLANET</Building>
+					<BuildingType>BUILDING_ARTIFICIAL_PLANET</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>20</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -8276,7 +8276,7 @@
 			</YieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_XENOARCHEOLOGIST</Building>
+					<BuildingType>BUILDING_XENOARCHEOLOGIST</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>20</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -8324,7 +8324,7 @@
 			</YieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_MATRIOSHKA_BRAIN</Building>
+					<BuildingType>BUILDING_MATRIOSHKA_BRAIN</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>20</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -8422,7 +8422,7 @@
 			</YieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_STAR_CLUSTER_COLONY</Building>
+					<BuildingType>BUILDING_STAR_CLUSTER_COLONY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>20</iExtraCommerce>
 				</BuildingExtraCommerce>

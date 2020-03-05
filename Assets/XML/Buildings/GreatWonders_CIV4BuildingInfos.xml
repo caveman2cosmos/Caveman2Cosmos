@@ -2027,12 +2027,12 @@
 			<!-- Special Yield and Commerce modifiers -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_CONFUCIAN_TEMPLE</Building>
+					<BuildingType>BUILDING_CONFUCIAN_TEMPLE</BuildingType>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_CONFUCIAN_TEMPLE</Building>
+					<BuildingType>BUILDING_CONFUCIAN_TEMPLE</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -3638,32 +3638,32 @@
 			<!-- Special Yield and Commerce modifiers -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_BIOINFO_LAB</Building>
+					<BuildingType>BUILDING_BIOINFO_LAB</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_PROTEIN_LAB</Building>
+					<BuildingType>BUILDING_PROTEIN_LAB</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_DNA_LAB</Building>
+					<BuildingType>BUILDING_DNA_LAB</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_BIOLOGY_LAB</Building>
+					<BuildingType>BUILDING_BIOLOGY_LAB</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_ANIMAL_LAB</Building>
+					<BuildingType>BUILDING_ANIMAL_LAB</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_MICROBIOLOGY_LAB</Building>
+					<BuildingType>BUILDING_MICROBIOLOGY_LAB</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -6879,22 +6879,22 @@
 			<!-- Special Yield and Commerce modifiers -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_HINDU_TEMPLE</Building>
+					<BuildingType>BUILDING_HINDU_TEMPLE</BuildingType>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_HINDU_TEMPLE</Building>
+					<BuildingType>BUILDING_HINDU_TEMPLE</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_BUDDHIST_TEMPLE</Building>
+					<BuildingType>BUILDING_BUDDHIST_TEMPLE</BuildingType>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_BUDDHIST_TEMPLE</Building>
+					<BuildingType>BUILDING_BUDDHIST_TEMPLE</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -8391,7 +8391,7 @@
 			<!-- Special Yield and Commerce modifiers -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_MANOR</Building>
+					<BuildingType>BUILDING_MANOR</BuildingType>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -8593,7 +8593,7 @@
 			<!-- Special Yield and Commerce modifiers -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_MANOR</Building>
+					<BuildingType>BUILDING_MANOR</BuildingType>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -9237,12 +9237,12 @@
 			<!-- Special Yield and Commerce modifiers -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_BIOINFO_LAB</Building>
+					<BuildingType>BUILDING_BIOINFO_LAB</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_PROTEIN_LAB</Building>
+					<BuildingType>BUILDING_PROTEIN_LAB</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -9995,17 +9995,17 @@
 			<!-- Special Yield and Commerce modifiers -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_HINDU_TEMPLE</Building>
+					<BuildingType>BUILDING_HINDU_TEMPLE</BuildingType>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>6</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_CONFUCIAN_TEMPLE</Building>
+					<BuildingType>BUILDING_CONFUCIAN_TEMPLE</BuildingType>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>6</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_TAOIST_TEMPLE</Building>
+					<BuildingType>BUILDING_TAOIST_TEMPLE</BuildingType>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>6</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -13465,22 +13465,22 @@
 			<!-- Special Yield and Commerce modifiers -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_ZOO</Building>
+					<BuildingType>BUILDING_ZOO</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_AQUARIUM</Building>
+					<BuildingType>BUILDING_AQUARIUM</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_STATE_PARK</Building>
+					<BuildingType>BUILDING_STATE_PARK</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_COASTAL_PRESERVE</Building>
+					<BuildingType>BUILDING_COASTAL_PRESERVE</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -19454,7 +19454,7 @@
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_BANK</Building>
+					<BuildingType>BUILDING_BANK</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -19594,12 +19594,12 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_HEROIC_EPIC</Building>
+					<BuildingType>BUILDING_HEROIC_EPIC</BuildingType>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>10</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_NATIONAL_EPIC</Building>
+					<BuildingType>BUILDING_NATIONAL_EPIC</BuildingType>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>10</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -19902,7 +19902,7 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_TUMULUS</Building>
+					<BuildingType>BUILDING_TUMULUS</BuildingType>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -19961,27 +19961,27 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_MOVIETHEATRE</Building>
+					<BuildingType>BUILDING_MOVIETHEATRE</BuildingType>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_VR_THEATER</Building>
+					<BuildingType>BUILDING_VR_THEATER</BuildingType>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_BROADCAST_TOWER</Building>
+					<BuildingType>BUILDING_BROADCAST_TOWER</BuildingType>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_COMMUNICATION_TOWER</Building>
+					<BuildingType>BUILDING_COMMUNICATION_TOWER</BuildingType>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_NETWORK_NODE</Building>
+					<BuildingType>BUILDING_NETWORK_NODE</BuildingType>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -20055,22 +20055,22 @@
 			</Properties>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_FIRE_BRIGADE</Building>
+					<BuildingType>BUILDING_FIRE_BRIGADE</BuildingType>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_FIRE_STATION</Building>
+					<BuildingType>BUILDING_FIRE_STATION</BuildingType>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_FIRE_DOCK</Building>
+					<BuildingType>BUILDING_FIRE_DOCK</BuildingType>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_FIRE_HANGER</Building>
+					<BuildingType>BUILDING_FIRE_HANGER</BuildingType>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -20229,7 +20229,7 @@
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_PALEONTOLOGY_LAB</Building>
+					<BuildingType>BUILDING_PALEONTOLOGY_LAB</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>10</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -20584,12 +20584,12 @@
 			</BuildingHappinessChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_ART_GALLERY</Building>
+					<BuildingType>BUILDING_ART_GALLERY</BuildingType>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_ART_PATRONAGE</Building>
+					<BuildingType>BUILDING_ART_PATRONAGE</BuildingType>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -20802,7 +20802,7 @@
 			</PrereqOrBuildings>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_HOCKEY_RINK</Building>
+					<BuildingType>BUILDING_HOCKEY_RINK</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -20929,7 +20929,7 @@
 			<Help>TXT_KEY_BUILDING_KENTUCKY_DERBY_HELP</Help>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_ANIMAL_RACETRACK</Building>
+					<BuildingType>BUILDING_ANIMAL_RACETRACK</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -21162,7 +21162,7 @@
 			</PropertyManipulators>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_CASINO</Building>
+					<BuildingType>BUILDING_CASINO</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -21366,47 +21366,47 @@
 			</SpecialistYieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_AD_AGENCY</Building>
+					<BuildingType>BUILDING_AD_AGENCY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_AD_AGENCY</Building>
+					<BuildingType>BUILDING_AD_AGENCY</BuildingType>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_BAZAAR</Building>
+					<BuildingType>BUILDING_BAZAAR</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_GROCER</Building>
+					<BuildingType>BUILDING_GROCER</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_MARKET</Building>
+					<BuildingType>BUILDING_MARKET</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_SHOPPING_DISTRICT</Building>
+					<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_SUPERMARKET</Building>
+					<BuildingType>BUILDING_SUPERMARKET</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_AMERICAN_MALL</Building>
+					<BuildingType>BUILDING_AMERICAN_MALL</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_HYPERMARKET</Building>
+					<BuildingType>BUILDING_HYPERMARKET</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -21504,7 +21504,7 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_CASINO</Building>
+					<BuildingType>BUILDING_CASINO</BuildingType>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -21577,7 +21577,7 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_RAILROAD_STATION</Building>
+					<BuildingType>BUILDING_RAILROAD_STATION</BuildingType>
 					<CommerceType>COMMERCE_ESPIONAGE</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -21959,22 +21959,22 @@
 			</CommerceChangeDoubleTimes>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_MUSEUM</Building>
+					<BuildingType>BUILDING_MUSEUM</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_MUSEUM</Building>
+					<BuildingType>BUILDING_MUSEUM</BuildingType>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_ARCHAEOLOGY_LAB</Building>
+					<BuildingType>BUILDING_ARCHAEOLOGY_LAB</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_ANTHROPOLOGY_LAB</Building>
+					<BuildingType>BUILDING_ANTHROPOLOGY_LAB</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -22140,17 +22140,17 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_BAZAAR</Building>
+					<BuildingType>BUILDING_BAZAAR</BuildingType>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_GROCER</Building>
+					<BuildingType>BUILDING_GROCER</BuildingType>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_MARKET</Building>
+					<BuildingType>BUILDING_MARKET</BuildingType>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -22216,7 +22216,7 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_TUMULUS</Building>
+					<BuildingType>BUILDING_TUMULUS</BuildingType>
 					<CommerceType>COMMERCE_RESEARCH</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -22575,17 +22575,17 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_BAZAAR</Building>
+					<BuildingType>BUILDING_BAZAAR</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_GROCER</Building>
+					<BuildingType>BUILDING_GROCER</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_MARKET</Building>
+					<BuildingType>BUILDING_MARKET</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -22731,12 +22731,12 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_ART_GALLERY</Building>
+					<BuildingType>BUILDING_ART_GALLERY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_ART_PATRONAGE</Building>
+					<BuildingType>BUILDING_ART_PATRONAGE</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>

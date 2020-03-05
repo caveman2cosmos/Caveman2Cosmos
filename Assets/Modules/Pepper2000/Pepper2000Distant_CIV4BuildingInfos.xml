@@ -1454,7 +1454,7 @@
 			<iGlobalHappiness>1</iGlobalHappiness>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_DISTANT_FUTURE_CITY</Building>
+					<BuildingType>BUILDING_DISTANT_FUTURE_CITY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -1532,7 +1532,7 @@
 			<iHealth>10</iHealth>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_UTOPIA</Building>
+					<BuildingType>BUILDING_UTOPIA</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>10</iExtraCommerce>
 				</BuildingExtraCommerce>
