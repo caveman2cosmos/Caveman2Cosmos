@@ -1451,7 +1451,6 @@
 		<element type="PrereqCivic" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="bPrereq" content="textOnly" dt:type="boolean"/>
-	<ElementType name="BuildingType" content="textOnly"/>
 	<ElementType name="TechOverride" content="textOnly"/>
 	<ElementType name="EraOverride" content="textOnly"/>
 	<ElementType name="PrereqBuilding" content="eltOnly">

@@ -1178,7 +1178,6 @@ DPII < Maintenance Modifiers >
 	<ElementType name="SpecialistValids" content="eltOnly">
 		<element type="SpecialistValid" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="BuildingType" content="textOnly"/>
 	<ElementType name="iHappinessChange" content="textOnly" dt:type="int"/>
 	<ElementType name="BuildingHappinessChange" content="eltOnly">
 		<element type="BuildingType"/>
