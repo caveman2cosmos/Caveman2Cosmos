@@ -7,7 +7,6 @@
 <Civ4BuildingInfos xmlns="x-schema:../../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<Building>BUILDING_MAMMOTH_HERD</Building>
 			<Type>BUILDING_MAMMOTH_HERD</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -51,7 +50,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_MAMMOTH_TRAINER</Building>
 			<Type>BUILDING_MAMMOTH_TRAINER</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -139,7 +137,6 @@
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_MAMMOTH_TRAINER_HERITAGE</Building>
 			<Type>BUILDING_MAMMOTH_TRAINER_HERITAGE</Type>
 			<Description>TXT_KEY_BUILDING_MAMMOTH_TRAINER_HERITAGE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MAMMOTH_TRAINER_HERITAGE_PEDIA</Civilopedia>
@@ -185,7 +182,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_MAMMOTH_TRAINER_EFFECT</Building>
 			<Type>BUILDING_MAMMOTH_TRAINER_EFFECT</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -258,7 +254,6 @@
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Building>BUILDING_CARAVAN_POST</Building>
 			<Type>BUILDING_CARAVAN_POST</Type>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
