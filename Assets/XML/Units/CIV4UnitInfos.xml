@@ -56807,7 +56807,7 @@ Base XP gained when defending
 				<UnitType>UNIT_WARGALLEY</UnitType>
 			</UnitUpgrades>
 			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<iCost>140</iCost>
+			<iCost>154</iCost>
 			<iMinAreaSize>5</iMinAreaSize>
 			<iMoves>2</iMoves>
 			<TerrainImpassableTypes>
@@ -56924,7 +56924,7 @@ Base XP gained when defending
 				<UnitType>UNIT_GALLEY</UnitType>
 			</UnitUpgrades>
 			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<iCost>160</iCost>
+			<iCost>134</iCost>
 			<iMinAreaSize>5</iMinAreaSize>
 			<iMoves>1</iMoves>
 			<TerrainImpassableTypes>
