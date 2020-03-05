@@ -1335,7 +1335,7 @@
 	<ElementType name="CommerceType" content="textOnly"/>
 	<ElementType name="iExtraCommerce" content="textOnly" dt:type="int"/>
 	<ElementType name="BuildingExtraCommerce" content="eltOnly">
-		<element type="Building"/>
+		<element type="BuildingType"/>
 		<element type="CommerceType"/>
 		<element type="iExtraCommerce"/>
 	</ElementType>
