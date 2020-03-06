@@ -21276,7 +21276,6 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool
 	CvWString szTempBuffer;
 	PlayerTypes ePlayer;
 	bool bFirst;
-	int iProduction;
 	int iI;
 	//TB SubCombat Mod Begin
 	//UnitCombatTypes eSubCombatType;
@@ -21738,18 +21737,17 @@ iMaxTeamInstances was unused in CvUnit(Class)Info and removed as part of us shed
 			else
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_TURNS", pCity->getProductionTurnsLeft(eUnit, ((gDLL->ctrlKey() || !(gDLL->shiftKey())) ? 0 : pCity->getOrderQueueLength())), pCity->getProductionNeeded(eUnit), GC.getYieldInfo(YIELD_PRODUCTION).getChar()));
+				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_TURNS", pCity->getProductionTurnsLeft(eUnit,((gDLL->ctrlKey() || !(gDLL->shiftKey())) ? 0 : pCity->getOrderQueueLength())), pCity->getProductionNeeded(eUnit), GC.getYieldInfo(YIELD_PRODUCTION).getChar()));
 
-				iProduction = pCity->getUnitProduction(eUnit);
-
-				if (iProduction > 0)
+				if (pCity->getUnitProduction(eUnit) > 0)
 				{
-					szTempBuffer.Format(L" - %d/%d%c", iProduction, pCity->getProductionNeeded(eUnit), GC.getYieldInfo(YIELD_PRODUCTION).getChar());
+					szTempBuffer.Format(L" - %d/%d%c", pCity->getUnitProduction(eUnit), pCity->getProductionNeeded(eUnit), GC.getYieldInfo(YIELD_PRODUCTION).getChar());
 					szBuffer.append(szTempBuffer);
 
 					if (getBugOptionBOOL("CityScreen__ProductionDecayHover", true, "BUG_PRODUCTION_DECAY_HOVER"))
 					{
-						setProductionDecayHelp(szBuffer, pCity->getUnitProductionDecayTurns(eUnit), getBugOptionINT("CityScreen__ProductionDecayHoverUnitThreshold", 5, "BUG_PRODUCTION_DECAY_HOVER_UNIT_THRESHOLD"), pCity->getUnitProductionDecay(eUnit), pCity->getProductionUnit() == eUnit);
+						setProductionDecayHelp(szBuffer, pCity->getUnitProductionDecayTurns(eUnit), getBugOptionINT("CityScreen__ProductionDecayHoverUnitThreshold",
+							5, "BUG_PRODUCTION_DECAY_HOVER_UNIT_THRESHOLD"), pCity->getUnitProductionDecay(eUnit), pCity->getProductionUnit() == eUnit);
 					}
 				}
 				else
@@ -22080,7 +22078,6 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 	PlayerTypes ePlayer;
 	TeamTypes eTeam = NO_TEAM;
 	bool bFirst;
-	int iProduction;
 	int iLast;
 	//int iI;
 //Team Project (1)
@@ -24883,25 +24880,22 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_NUM_TURNS", pCity->getProductionTurnsLeft(eBuilding, ((gDLL->ctrlKey() || !(gDLL->shiftKey())) ? 0 : pCity->getOrderQueueLength()))));
 
-				iProduction = pCity->getBuildingProduction(eBuilding);
-
-				int iProductionNeeded = pCity->getProductionNeeded(eBuilding);
-				if (iProduction > 0)
+				if (pCity->getBuildingProduction(eBuilding) > 0)
 				{
-					szTempBuffer.Format(L" - %d/%d%c", iProduction, iProductionNeeded, GC.getYieldInfo(YIELD_PRODUCTION).getChar());
+					szTempBuffer.Format(L" - %d/%d%c", pCity->getBuildingProduction(eBuilding), pCity->getProductionNeeded(eBuilding), GC.getYieldInfo(YIELD_PRODUCTION).getChar());
 					szBuffer.append(szTempBuffer);
+
+					if (getBugOptionBOOL("CityScreen__ProductionDecayHover", true, "BUG_PRODUCTION_DECAY_HOVER"))
+					{
+						setProductionDecayHelp(szBuffer, pCity->getBuildingProductionDecayTurns(eBuilding), getBugOptionINT("CityScreen__ProductionDecayHoverBuildingThreshold",
+							5, "BUG_PRODUCTION_DECAY_HOVER_BUILDING_THRESHOLD"), pCity->getBuildingProductionDecay(eBuilding), pCity->getProductionBuilding() == eBuilding);
+					}
 				}
 				else
 				{
-					szTempBuffer.Format(L" - %d%c", iProductionNeeded, GC.getYieldInfo(YIELD_PRODUCTION).getChar());
+					szTempBuffer.Format(L" - %d%c", pCity->getProductionNeeded(eBuilding), GC.getYieldInfo(YIELD_PRODUCTION).getChar());
 					szBuffer.append(szTempBuffer);
 				}
-// BUG - Production Decay - start
-				if (getBugOptionBOOL("CityScreen__ProductionDecayHover", true, "BUG_PRODUCTION_DECAY_HOVER"))
-				{
-					setProductionDecayHelp(szBuffer, pCity->getBuildingProductionDecayTurns(eBuilding), getBugOptionINT("CityScreen__ProductionDecayHoverBuildingThreshold", 5, "BUG_PRODUCTION_DECAY_HOVER_BUILDING_THRESHOLD"), pCity->getBuildingProductionDecay(eBuilding), pCity->getProductionBuilding() == eBuilding);
-				}
-// BUG - Production Decay - end
 			}
 		}
 
@@ -25710,7 +25704,6 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 	}
 }
 
-// BUG - Production Decay - start
 void CvGameTextMgr::setProductionDecayHelp(CvWStringBuffer &szBuffer, int iTurnsLeft, int iThreshold, int iDecay, bool bProducing)
 {
 	if (iTurnsLeft <= 1)
@@ -25726,24 +25719,20 @@ void CvGameTextMgr::setProductionDecayHelp(CvWStringBuffer &szBuffer, int iTurns
 			szBuffer.append(gDLL->getText("TXT_KEY_PRODUCTION_DECAY", iDecay));
 		}
 	}
-	else
+	else if (iTurnsLeft <= iThreshold)
 	{
-		if (iTurnsLeft <= iThreshold)
+		if (bProducing)
 		{
-			if (bProducing)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_PRODUCTION_DECAY_TURNS_PRODUCING", iDecay, iTurnsLeft));
-			}
-			else
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_PRODUCTION_DECAY_TURNS", iDecay, iTurnsLeft));
-			}
+			szBuffer.append(NEWLINE);
+			szBuffer.append(gDLL->getText("TXT_KEY_PRODUCTION_DECAY_TURNS_PRODUCING", iDecay, iTurnsLeft));
+		}
+		else
+		{
+			szBuffer.append(NEWLINE);
+			szBuffer.append(gDLL->getText("TXT_KEY_PRODUCTION_DECAY_TURNS", iDecay, iTurnsLeft));
 		}
 	}
 }
-// BUG - Production Decay - end
 
 void CvGameTextMgr::setProjectHelp(CvWStringBuffer &szBuffer, ProjectTypes eProject, bool bCivilopediaText, CvCity* pCity)
 {
