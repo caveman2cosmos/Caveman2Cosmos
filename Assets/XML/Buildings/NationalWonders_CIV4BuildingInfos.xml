@@ -6066,6 +6066,7 @@
 			<!-- Palace -->
 			<Type>BUILDING_PALACE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>1</iExtraPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
