@@ -217,12 +217,12 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_LUNAR_BASE</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<Bonus>BONUS_HUMAN_MOD_NOVEL_SENSES</Bonus>
 			<FreeBonus>BONUS_HUMAN_MOD_LUNARIS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -264,12 +264,12 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_MARS_CITY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<Bonus>BONUS_HUMAN_MOD_NOVEL_SENSES</Bonus>
 			<FreeBonus>BONUS_HUMAN_MOD_MARTIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -1014,12 +1014,12 @@
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_CRISPR_CAS9_BACTERIA</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1043,12 +1043,12 @@
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_CRISPR_CAS9_BACTERIA</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1065,12 +1065,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PROTOTYPED_PATHOGENS</PrereqTech>
 			<iCost>6490</iCost>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_CRISPR_CAS9_BACTERIA</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>

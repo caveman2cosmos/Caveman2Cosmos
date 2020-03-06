@@ -82,12 +82,12 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingNeeded>
 			</BuildingNeededs>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_TOY_MAKER</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<!-- Construction cost -->
 			<iCost>1030</iCost>
 			<!-- Main effects -->
@@ -148,12 +148,12 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingNeeded>
 			</BuildingNeededs>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_TOYCARVER</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<!-- Obsolescence -->
 			<!--ReplaceBuildings>
 				<ReplaceBuilding>

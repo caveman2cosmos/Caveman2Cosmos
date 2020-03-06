@@ -709,7 +709,7 @@
 				<iYield>0</iYield>
 				<iYield>200</iYield>
 			</YieldModifiers>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_HI_TECH_NUCLEAR_REACTOR</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
@@ -718,7 +718,7 @@
 					<BuildingType>BUILDING_URANIUM_MINE</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_FACTORY</BuildingType>

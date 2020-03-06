@@ -110,12 +110,12 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingNeeded>
 			</BuildingNeededs>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_CULTURE_LOCAL_AFRICAN</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_CULTURE_NATIVE_AFRICAN</BuildingMustNotHave>
@@ -142,12 +142,12 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingNeeded>
 			</BuildingNeededs>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_CULTURE_NATIVE_ASIAN</BuildingMustNotHave>
@@ -174,12 +174,12 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingNeeded>
 			</BuildingNeededs>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_CULTURE_LOCAL_EUROPEAN</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingMustNotHave>
@@ -206,12 +206,12 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingNeeded>
 			</BuildingNeededs>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingMustNotHave>
@@ -238,12 +238,12 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingNeeded>
 			</BuildingNeededs>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_CULTURE_NATIVE_NEANDERTHAL</BuildingMustNotHave>
@@ -270,12 +270,12 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingNeeded>
 			</BuildingNeededs>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</BuildingMustNotHave>
@@ -302,12 +302,12 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingNeeded>
 			</BuildingNeededs>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_CULTURE_NATIVE_OCEANIAN</BuildingMustNotHave>
@@ -334,12 +334,12 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingNeeded>
 			</BuildingNeededs>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</BuildingMustNotHave>

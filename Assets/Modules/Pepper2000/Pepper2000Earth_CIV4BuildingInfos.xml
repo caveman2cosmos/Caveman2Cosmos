@@ -5797,12 +5797,12 @@
 				<iYield>35</iYield>
 			</YieldModifiers>
 			<iMilitaryProductionModifier>-35</iMilitaryProductionModifier>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_HYPERSPACE_CONSTRUCTION_CENTER</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FINANCIAL_RISK_MONITOR</Type>
@@ -10584,12 +10584,12 @@
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
 			<FreeBuilding>BUILDING_UNIVERSAL_LIBRARY</FreeBuilding>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_UNIVERSAL_LIBRARY</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
 					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
@@ -10720,7 +10720,7 @@
 				<iCommerce>42</iCommerce>
 				<iCommerce>42</iCommerce>
 			</CommerceChanges>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_CLOSED_TIMELIKE_CURVE_COMPUTER</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
@@ -10733,7 +10733,7 @@
 					<BuildingType>BUILDING_BLACK_HOLE_COMPUTER</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_GALACTIC_EFFECT</BuildingType>
@@ -13623,12 +13623,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BACILLUS_CONCRETE</Type>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_STRUCTURAL_BACTERIA</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PUBLIC_HEALTH_AGENCY</Type>
@@ -14440,12 +14440,12 @@
 			</GlobalBuildingExtraCommerces>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_PYRAMID</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
 					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
@@ -22230,7 +22230,7 @@
 				<iYield>20</iYield>
 			</YieldChanges>
 			<FreeBuilding>BUILDING_SPACESCRAPER2</FreeBuilding>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_PLANET_CLOUD</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
@@ -22239,7 +22239,7 @@
 					<BuildingType>BUILDING_ECUMENOPOLIS_EARTH</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SPACESCRAPER2</BuildingType>
@@ -23103,12 +23103,12 @@
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<iGlobalPopulationChange>-1</iGlobalPopulationChange>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -23648,12 +23648,12 @@
 			</CommerceChanges>
 			<FreeBuilding>BUILDING_RATIONAL_CITY</FreeBuilding>
 			<iMilitaryProductionModifier>-50</iMilitaryProductionModifier>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_RATIONAL_CITY</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHRONOPOLIS</Type>
@@ -24345,12 +24345,12 @@
 					<iExtraCommerce>10</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_JPL</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DAWN</Type>
@@ -24377,12 +24377,12 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_JPL</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEW_HORIZONS</Type>
@@ -24409,12 +24409,12 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_JPL</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GALILEO</Type>
@@ -24442,12 +24442,12 @@
 					<iExtraCommerce>10</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_JPL</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARINER_PROGRAM</Type>
@@ -24475,12 +24475,12 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_JPL</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARS_SCIENCE_LAB</Type>
@@ -24508,12 +24508,12 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_JPL</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -24548,12 +24548,12 @@
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_JPL</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PROJECT_GEMINI</Type>
@@ -24646,12 +24646,12 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_JPL</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -24684,12 +24684,12 @@
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_JPL</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_IKAROS</Type>
@@ -24715,12 +24715,12 @@
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_JPL</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TITAN_PROBE</Type>
@@ -24747,12 +24747,12 @@
 					<iExtraCommerce>10</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_JPL</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_PROBE</Type>
@@ -24845,12 +24845,12 @@
 					<iExtraCommerce>10</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_JPL</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KEPLER</Type>
@@ -24878,12 +24878,12 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_JPL</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -24925,7 +24925,7 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_ASTRONOMY_DATABASE</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
@@ -24942,7 +24942,7 @@
 					<BuildingType>BUILDING_SETI_PROGRAM</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SEDNA_PROBE</Type>
@@ -24972,12 +24972,12 @@
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_JPL</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SDSS</Type>
@@ -25031,12 +25031,12 @@
 				<iCommerce>20</iCommerce>
 			</CommerceChanges>
 			<FreeBuilding>BUILDING_OBSERVATORY</FreeBuilding>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_JPL</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_OBSERVATORY</BuildingType>
@@ -25118,12 +25118,12 @@
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_JPL</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MISSION_MARS</Type>
@@ -25401,12 +25401,12 @@
 			</CommerceChanges>
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_JPL</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
 					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
@@ -25859,12 +25859,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>20</iCommerce>
 			</CommerceChanges>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_AEROSPACE_COMPLEX</BuildingType>
@@ -25968,12 +25968,12 @@
 				<iYield>0</iYield>
 				<iYield>15</iYield>
 			</YieldChanges>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_MAGLEV_LAUNCH</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MAGLEV_LAUNCH</BuildingType>
@@ -26347,12 +26347,12 @@
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_MARS_ARCOLOGY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEUROIMPLANT_EXPORTER</Type>
@@ -26529,12 +26529,12 @@
 			</CommerceChanges>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_MITHRIL_FOUNDRY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_STARPORT</BuildingType>
@@ -26560,12 +26560,12 @@
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_LUNAR_HE3_EXTRACTION_FACILITY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
@@ -26590,12 +26590,12 @@
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_MERCURY_ANTIMATTER</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<FreeBonus>BONUS_ANTIMATTER</FreeBonus>
 			<iNumFreeBonuses>3</iNumFreeBonuses>
 		</BuildingInfo>
@@ -26816,12 +26816,12 @@
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_SENTINEL</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_MILITARY_SPACEPORT</BuildingType>
@@ -26898,12 +26898,12 @@
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_INTERSTELLAR_COLONY</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_STARPORT</BuildingType>
@@ -27171,7 +27171,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<bForceOverwrite>1</bForceOverwrite>
 			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_UNOBTAINIUM</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
@@ -27180,7 +27180,7 @@
 					<BuildingType>BUILDING_UNIVERSE</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ASCENDED_CITY</BuildingType>

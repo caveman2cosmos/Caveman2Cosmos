@@ -33,9 +33,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_MORMON</PrereqReligion>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_MORMON_MONASTERY</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
@@ -97,9 +97,9 @@
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoCapture>1</bNoCapture>
 			<PrereqReligion>RELIGION_MORMON</PrereqReligion>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_MORMON_MONASTERY</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_RESERVE</UnitAIType>

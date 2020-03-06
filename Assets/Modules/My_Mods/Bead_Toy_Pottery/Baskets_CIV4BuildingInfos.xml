@@ -41,12 +41,12 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingNeeded>
 			</BuildingNeededs>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_BASKETY_WORKSHOP</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<!-- Construction cost -->
 			<iCost>710</iCost>
 			<!-- Main effects -->
@@ -118,12 +118,12 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingNeeded>
 			</BuildingNeededs>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_BASKETWEAVER</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<!-- Obsolescence -->
 			<!--ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<ReplaceBuildings>

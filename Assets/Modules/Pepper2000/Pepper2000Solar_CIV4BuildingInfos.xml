@@ -1981,12 +1981,12 @@
 				<iYield>12</iYield>
 			</YieldChanges>
 			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_MEGAVERSE</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COLD_FUSION2</BuildingType>
@@ -2296,12 +2296,12 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_MCKENDREE_CYLINDER</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_ANTIMATTER</BonusType>
@@ -2363,12 +2363,12 @@
 				<iCommerce>100</iCommerce>
 			</CommerceChanges>
 			<iFreeTechs>1</iFreeTechs>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_SOLAR_DYSON_SPHERE</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_COMPUTRONIUM</BonusType>
@@ -3881,12 +3881,12 @@
 				<iYield>0</iYield>
 				<iYield>30</iYield>
 			</YieldChanges>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_JUPITER_CLOUD_LIFE</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BISHOP_RING_REGULAR</BuildingType>
@@ -4698,12 +4698,12 @@
 				<iYield>100</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_NEPTUNE_ORBITAL_RING</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_NEPTUNE_WIND_TURBINE</BuildingType>
@@ -4741,12 +4741,12 @@
 				<iYield>50</iYield>
 				<iYield>25</iYield>
 			</YieldChanges>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_NEPTUNE_ORBITAL_RING</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ORBITAL_BASE</BuildingType>

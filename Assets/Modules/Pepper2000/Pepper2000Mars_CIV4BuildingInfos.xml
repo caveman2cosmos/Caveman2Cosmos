@@ -1055,12 +1055,12 @@
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_CYBERNETIC_CHLOROPLAST_FACTORY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARS_CYCLER_EFFECT</BuildingType>
@@ -1128,12 +1128,12 @@
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_DIAMOND_NANOTHREAD_FOUNDRY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARS_CYCLER_EFFECT</BuildingType>
@@ -1256,12 +1256,12 @@
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_NOVUS_REFINERY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARS_CYCLER_EFFECT</BuildingType>
@@ -2168,12 +2168,12 @@
 					<iExtraCommerce>3</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_MARS_ARCOLOGY</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARS_ARCOLOGY</BuildingType>
@@ -2203,7 +2203,7 @@
 				<iCommerce>100</iCommerce>
 			</CommerceChanges>
 			<FreeBuilding>BUILDING_MARS_TERRA_EFFECT</FreeBuilding>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_MARTIAN_CO2_SUBLIMATION</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
@@ -2236,7 +2236,7 @@
 					<BuildingType>BUILDING_MARTIAN_ORBITAL_MIRROR_ARRAY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MARS_ARCOLOGY</BuildingType>
@@ -2376,12 +2376,12 @@
 				<iYield>9</iYield>
 			</YieldChanges>
 			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_MEGAVERSE</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_MARTIAN_STARPORT</BuildingType>

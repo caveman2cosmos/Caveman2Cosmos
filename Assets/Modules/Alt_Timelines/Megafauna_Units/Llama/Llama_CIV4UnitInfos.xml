@@ -70,9 +70,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_LLAMA_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_CAMELID_DOMESTICATION</PrereqTech>
@@ -222,9 +222,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_LLAMA_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>

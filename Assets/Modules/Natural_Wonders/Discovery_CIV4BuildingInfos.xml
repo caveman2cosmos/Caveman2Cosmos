@@ -756,12 +756,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ANIMATION</PrereqTech>
 			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
                 <PrereqBuilding>
 																				<BuildingType>BUILDING_NATURAL_WONDER_AUYANTEPUI</BuildingType>
                     <iNumBuildingNeeded>1</iNumBuildingNeeded>
                 </PrereqBuilding>
-            </PrereqBuildings>
+            </PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ANIMATION_STUDIO</BuildingType>

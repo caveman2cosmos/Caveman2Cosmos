@@ -44,12 +44,12 @@
 				<iYield>100</iYield>
 			</YieldChanges>
 			<FreeBuilding>BUILDING_LUNAR_ARCOLOGY</FreeBuilding>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_LUNAR_ARCOLOGY</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_LUNAR_ARCOLOGY</BuildingType>
@@ -77,7 +77,7 @@
 				<iYield>10</iYield>
 			</YieldChanges>
 			<FreeBuilding>BUILDING_MOON_TERRA_EFFECT</FreeBuilding>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_LUNAR_SOIL_GENERATOR</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
@@ -90,7 +90,7 @@
 					<BuildingType>BUILDING_LUNAR_SEA</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>

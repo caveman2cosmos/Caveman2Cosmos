@@ -54,9 +54,9 @@
 				</UnitAI>
 			</UnitAIs>
 			<ForceObsoleteTech>TECH_MODERN_WARFARE</ForceObsoleteTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CLOCKWORK_WORKSHOP</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_CLOCKPUNK</PrereqTech>
 			<BonusType>BONUS_CLOCKPUNK</BonusType>
 			<PrereqBonuses>
@@ -246,9 +246,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_CLOCKPUNK</PrereqTech>
 			<BonusType>BONUS_CLOCKPUNK</BonusType>
 			<PrereqBonuses>
@@ -433,9 +433,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_HOT_AIR_BALLOON</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_CLOCKPUNK</PrereqTech>

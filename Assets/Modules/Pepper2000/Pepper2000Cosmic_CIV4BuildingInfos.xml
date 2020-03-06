@@ -999,12 +999,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>20</iCommerce>
 			</CommerceChanges>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_DEGENERATE_ERA_SURVIVAL_PLAN</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_GALACTIC_GROUP_COLONY</BuildingType>
@@ -1334,12 +1334,12 @@
 				<iYield>20</iYield>
 				<iYield>20</iYield>
 			</YieldChanges>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_GALACTIC_SHKADOV_THRUSTER</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_INTERGALACTIC_GOVERNMENT</BuildingType>
@@ -2574,12 +2574,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>250</iCommerce>
 			</CommerceChanges>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_MICROVAC</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_INTERGALACTIC_SUPERCOMPUTER</BuildingType>
@@ -2840,12 +2840,12 @@
 				<iYield>18</iYield>
 			</YieldChanges>
 			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_EXAVERSE</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TEMPORAL_RIFT</BuildingType>

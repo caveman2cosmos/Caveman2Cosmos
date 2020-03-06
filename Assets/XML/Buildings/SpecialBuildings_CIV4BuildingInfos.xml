@@ -19339,12 +19339,12 @@
 			<Description>TXT_KEY_BUILDING_CANNIBALISM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WV_CANNIBALISM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_WV_CANNIBALISM_STRATEGY</Strategy>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_WV_CANNIBALISM</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<iCost>-1</iCost>
 			<bAutoBuild>1</bAutoBuild>
 			<bNeverCapture>1</bNeverCapture>
@@ -19359,12 +19359,12 @@
 			<Description>TXT_KEY_BUILDING_CANNIBALISM_BAD_I</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WORLDVIEW_BAD_PEDIA</Civilopedia>
 			<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_WV_CANNIBALISM</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<iCost>-1</iCost>
 			<iHappiness>-1</iHappiness>
 			<bAutoBuild>1</bAutoBuild>
@@ -19380,12 +19380,12 @@
 			<Description>TXT_KEY_BUILDING_CANNIBALISM_BAD_II</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WORLDVIEW_BAD_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_WV_CANNIBALISM</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<iCost>-1</iCost>
 			<iHappiness>-2</iHappiness>
 			<bAutoBuild>1</bAutoBuild>
@@ -19401,12 +19401,12 @@
 			<Description>TXT_KEY_BUILDING_CANNIBALISM_BAD_III</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WORLDVIEW_BAD_PEDIA</Civilopedia>
 			<PrereqTech>TECH_HUMANISM</PrereqTech>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_WV_CANNIBALISM</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<iCost>-1</iCost>
 			<iHappiness>-1</iHappiness>
 			<bAutoBuild>1</bAutoBuild>
@@ -19422,12 +19422,12 @@
 			<Description>TXT_KEY_BUILDING_DISEASE_KURU</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DISEASE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DISEASE_STRATEGY</Strategy>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_WV_CANNIBALISM</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<iCost>-1</iCost>
 			<iHealth>-1</iHealth>
 			<YieldModifiers>

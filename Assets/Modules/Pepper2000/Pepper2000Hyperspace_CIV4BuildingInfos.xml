@@ -1025,12 +1025,12 @@
 				<iYield>21</iYield>
 			</YieldChanges>
 			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_EXAVERSE</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_11_DIMENSIONAL_FACTORY</BuildingType>
@@ -1151,12 +1151,12 @@
 				<iCommerce>150</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_PAN_DIMENSIONAL_LIFE</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SIMULATED_CIVILIZATION</Type>
@@ -1316,12 +1316,12 @@
 				<iCommerce>100</iCommerce>
 			</CommerceChanges>
 			<iHappiness>1</iHappiness>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_DARK_ERA_SURVIVAL_PLAN</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_EKPYROTIC_UNIVERSE</BuildingType>
@@ -1688,7 +1688,7 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_GALACTIC_AC</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
@@ -1697,7 +1697,7 @@
 					<BuildingType>BUILDING_UNIVERSAL_AC</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
 					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
@@ -1733,12 +1733,12 @@
 				<iYield>30</iYield>
 			</YieldChanges>
 			<FreeBuilding>BUILDING_SIMULATED_UNIVERSE</FreeBuilding>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_SIMULATED_UNIVERSE</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COSMIC_ECONOMY_EFFECT</BuildingType>

@@ -37,12 +37,12 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingNeeded>
 			</BuildingNeededs>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_ROPE_WEAVER</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<!-- Construction cost -->
 			<iCost>1030</iCost>
 			<!-- Main effects -->

@@ -451,12 +451,12 @@
 					<iExperience>3</iExperience>
 				</DomainFreeExperience>
 			</DomainFreeExperiences>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_NAVAL_ACADEMY</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_NAVAL_ACADEMY</BuildingType>

@@ -424,12 +424,12 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_GAS_STATION</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
@@ -798,12 +798,12 @@
 					</Has>
 				</And>
 			</ConstructCondition>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_PARADISE_GARDEN</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_PARADISE_GARDEN</BuildingType>
@@ -1066,12 +1066,12 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CLOCKWORKS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_TOWNCLOCK</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TOWNCLOCK</BuildingType>
@@ -2402,12 +2402,12 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CHARIOTRY</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_BYZANTINE_HIPPODROME</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BYZANTINE_HIPPODROME</BuildingType>
@@ -2504,12 +2504,12 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_NATIONAL_TV_STATION</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<!-- Cost -->
 			<iCost>7080</iCost>
 			<BonusProductionModifiers>
@@ -2806,12 +2806,12 @@
 			<PrereqReligion>RELIGION_CONFUCIANISM</PrereqReligion>
 			<ReligionType>RELIGION_CONFUCIANISM</ReligionType>
 			<StateReligion>RELIGION_CONFUCIANISM</StateReligion>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_COMPULSORY_EDUCATION</ObsoleteTech>
 			<!-- Cost -->
@@ -2947,12 +2947,12 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_CASTLE</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HIGH_WALLS</BuildingType>
@@ -3529,12 +3529,12 @@
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_GOLD_INGOTS</Bonus>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_BANK</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BANK</BuildingType>
@@ -3673,7 +3673,7 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_COMPUTERS</Bonus>
 			</PrereqBonuses>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_BIOINFO_LAB</BuildingType>
 					<iNumBuildingNeeded>10</iNumBuildingNeeded>
@@ -3682,7 +3682,7 @@
 					<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
 					<iNumBuildingNeeded>10</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<!-- Cost -->
 			<iCost>13830</iCost>
 			<!-- Main effects -->
@@ -3800,12 +3800,12 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_THEATRE</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_THEATRE</BuildingType>
@@ -7172,12 +7172,12 @@
 			<fVisibilityPriority>10</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_IDEOGRAMS</PrereqTech>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_TABLET_MAKER</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_TABLET_MAKER</BuildingType>
@@ -8632,12 +8632,12 @@
 				<PrereqTech>TECH_ATHLETICS</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_COLOSSEUM</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<!-- Cost -->
 			<iCost>1404</iCost>
 			<!-- Main effects -->
@@ -9108,12 +9108,12 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
@@ -9345,7 +9345,7 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_COMPUTERS</Bonus>
 			</PrereqBonuses>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_BIOINFO_LAB</BuildingType>
 					<iNumBuildingNeeded>10</iNumBuildingNeeded>
@@ -9354,7 +9354,7 @@
 					<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
 					<iNumBuildingNeeded>10</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<!-- Cost -->
 			<iCost>13830</iCost>
 			<!-- Main effects -->
@@ -9737,12 +9737,12 @@
 				<PrereqTech>TECH_EARLY_COMPUTING</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_RADIO_TELESCOPE</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<!-- Cost -->
 			<iCost>7680</iCost>
 			<BonusProductionModifiers>
@@ -9945,12 +9945,12 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_SILK</Bonus>
 			</PrereqBonuses>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_BAZAAR</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BAZAAR</BuildingType>
@@ -10192,12 +10192,12 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_MUSEUM</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_MUSEUM</BuildingType>
@@ -10405,12 +10405,12 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_COMPUTERS</Bonus>
 			</PrereqBonuses>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_BIOINFO_LAB</BuildingType>
 					<iNumBuildingNeeded>10</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<!-- Cost -->
 			<iCost>17910</iCost>
 			<!-- Main effects -->
@@ -10987,12 +10987,12 @@
 			<PrereqTech>TECH_REALISM</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<bWater>1</bWater>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_OPERA_HOUSE</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_OPERA_HOUSE</BuildingType>
@@ -12429,12 +12429,12 @@
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 			<StateReligion>RELIGION_MESOPOTAMISM</StateReligion>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_GLASSSMITH</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_WALLS</BuildingType>
@@ -12770,12 +12770,12 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_LOGISTICS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_MILITARY_BASE</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<!-- Cost -->
 			<iCost>6780</iCost>
 			<!-- Special Yield and Commerce modifiers -->
@@ -13192,12 +13192,12 @@
 			<PrereqTech>TECH_REPRESENTATIVE_DEMOCRACY</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bWater>1</bWater>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_STEEL_MILL</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_EGALITARIAN</CivicOption>
@@ -13696,12 +13696,12 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_DRAMA</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_THEATRE</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_THEATRE</BuildingType>
@@ -14002,12 +14002,12 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_CONSTRUCTION_FIRM</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
@@ -14424,12 +14424,12 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_STOCK_BROKERING</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_STOCKMARKET</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_STOCKMARKET</BuildingType>
@@ -14632,12 +14632,12 @@
 			<PrereqTech>TECH_ONLINE_COMMUNITY</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_COMPUTERS</Bonus>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_WIKIA</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_WIKIA</BuildingType>
@@ -15084,12 +15084,12 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_EXTREME_SPORTS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_MAJOR_LEAGUE_STADIUM</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<!-- Cost -->
 			<iCost>9630</iCost>
 			<!-- Main effects -->
@@ -15188,7 +15188,7 @@
 				<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
@@ -15197,7 +15197,7 @@
 					<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -15314,7 +15314,7 @@
 				<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
@@ -15323,7 +15323,7 @@
 					<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -15440,7 +15440,7 @@
 				<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
@@ -15449,7 +15449,7 @@
 					<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -15566,7 +15566,7 @@
 				<PrereqTech>TECH_EDUCATION</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
@@ -15575,7 +15575,7 @@
 					<BuildingType>BUILDING_ANTHROPOLOGY_LAB</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -15695,7 +15695,7 @@
 				<PrereqTech>TECH_EDUCATION</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
@@ -15704,7 +15704,7 @@
 					<BuildingType>BUILDING_ANTHROPOLOGY_LAB</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -15824,7 +15824,7 @@
 				<PrereqTech>TECH_EDUCATION</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
@@ -15833,7 +15833,7 @@
 					<BuildingType>BUILDING_ANTHROPOLOGY_LAB</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -15953,7 +15953,7 @@
 				<PrereqTech>TECH_EDUCATION</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
@@ -15962,7 +15962,7 @@
 					<BuildingType>BUILDING_ARTIST_GUILD</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -16080,7 +16080,7 @@
 				<PrereqTech>TECH_EDUCATION</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
@@ -16089,7 +16089,7 @@
 					<BuildingType>BUILDING_ARTIST_GUILD</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -16207,7 +16207,7 @@
 				<PrereqTech>TECH_EDUCATION</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
@@ -16216,7 +16216,7 @@
 					<BuildingType>BUILDING_ARTIST_GUILD</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -16334,7 +16334,7 @@
 				<PrereqTech>TECH_BANKING</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
@@ -16343,7 +16343,7 @@
 					<BuildingType>BUILDING_BANK</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -16459,7 +16459,7 @@
 				<PrereqTech>TECH_BANKING</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
@@ -16468,7 +16468,7 @@
 					<BuildingType>BUILDING_BANK</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -16589,7 +16589,7 @@
 				<PrereqTech>TECH_BANKING</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
@@ -16598,7 +16598,7 @@
 					<BuildingType>BUILDING_BANK</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -16711,12 +16711,12 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -16802,12 +16802,12 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -16893,12 +16893,12 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -17087,12 +17087,12 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingNeeded>
 			</BuildingNeededs>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_ASTROLOGY_SCHOOL</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<!-- Misc. Effects -->
 			<iTradeRoutes>1</iTradeRoutes>
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
@@ -17134,12 +17134,12 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingNeeded>
 			</BuildingNeededs>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_OBSERVATORY</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<!-- Misc. Effects -->
 			<iTradeRoutes>2</iTradeRoutes>
 			<SpecialistCounts>
@@ -18148,12 +18148,12 @@
 			<PrereqTech>TECH_ORNAMENTATION</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Bonus>BONUS_TURQUOISE</Bonus>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
                 <PrereqBuilding>
                     <BuildingType>BUILDING_GLAZE_MAKER</BuildingType>
                     <iNumBuildingNeeded>1</iNumBuildingNeeded>
                 </PrereqBuilding>
-            </PrereqBuildings>
+            </PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BEADMAKER</BuildingType>
@@ -18216,12 +18216,12 @@
 			<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<VicinityBonus>BONUS_FINE_CLAY</VicinityBonus>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
                 <PrereqBuilding>
                     <BuildingType>BUILDING_GLAZE_MAKER</BuildingType>
                     <iNumBuildingNeeded>1</iNumBuildingNeeded>
                 </PrereqBuilding>
-            </PrereqBuildings>
+            </PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_PORCELAIN_WORKSHOP</BuildingType>
@@ -18286,12 +18286,12 @@
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<VicinityBonus>BONUS_FINE_CLAY</VicinityBonus>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
                 <PrereqBuilding>
                     <BuildingType>BUILDING_GLAZE_MAKER</BuildingType>
                     <iNumBuildingNeeded>1</iNumBuildingNeeded>
                 </PrereqBuilding>
-            </PrereqBuildings>
+            </PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_POTTER</BuildingType>
@@ -18358,12 +18358,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LEAD_GLASS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
                 <PrereqBuilding>
                     <BuildingType>BUILDING_GLAZE_MAKER</BuildingType>
                     <iNumBuildingNeeded>1</iNumBuildingNeeded>
                 </PrereqBuilding>
-            </PrereqBuildings>
+            </PrereqAmountBuildings>
 			<iCost>2640</iCost>
 			<!-- Main effects -->
 			<FreeBonus>BONUS_CRYSTAL_GLASSWARE</FreeBonus>
@@ -18455,12 +18455,12 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_ZOO</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ZOO</BuildingType>
@@ -19547,12 +19547,12 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<ConstructSound>AS2D_BUILD_MAX_PRISON</ConstructSound>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_POLICE_STATION</BuildingType>
 					<iNumBuildingNeeded>6</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_JAIL</BuildingType>
@@ -19603,12 +19603,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_PAVED_ROADS</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Help>TXT_KEY_HELP_APPIAN_WAY</Help>
 		</BuildingInfo>
@@ -19857,12 +19857,12 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_OPERA_HOUSE</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
@@ -20230,12 +20230,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>12</iCommerce>
 			</CommerceModifiers>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_MOVIE_STUDIO</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
@@ -20502,12 +20502,12 @@
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_CLONING_FACTORY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
@@ -21207,12 +21207,12 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_ANIMAL_RACETRACK</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
@@ -21299,12 +21299,12 @@
 					<iExperience>4</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_TOURNAMENT</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_KNIGHT_STABLE</BuildingType>
@@ -21641,12 +21641,12 @@
 					<iSpecialistCount>2</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_AD_AGENCY</BuildingType>
 					<iNumBuildingNeeded>6</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
@@ -22115,12 +22115,12 @@
 				<iCommerce>5</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceModifiers>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_CLONING_FACTORY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PropertyManipulators>
 				<PropertySource>
@@ -22639,12 +22639,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_REFIGERATOR_FACTORY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
 					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
@@ -23380,12 +23380,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>20</iCommerce>
 			</CommerceModifiers>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_ZURICH_ORBITAL</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<iPrereqPopulation>6</iPrereqPopulation>
 		</BuildingInfo>
 	</BuildingInfos>

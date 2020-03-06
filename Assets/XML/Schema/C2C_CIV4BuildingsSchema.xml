@@ -699,7 +699,7 @@
 		<element type="BuildingType"/>
 		<element type="iNumBuildingNeeded"/>
 	</ElementType>
-	<ElementType name="PrereqBuildings" content="eltOnly">
+	<ElementType name="PrereqAmountBuildings" content="eltOnly">
 		<element type="PrereqBuilding" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="bNeededInCity" content="textOnly" dt:type="boolean"/>

@@ -15726,9 +15726,9 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_HOT_AIR_BALLOON</PrereqTech>
 			<BonusType>BONUS_MEXICAN</BonusType>
 			<iCost>2200</iCost>
@@ -15918,9 +15918,9 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<BonusType>BONUS_COMANCHE</BonusType>
 			<iCost>2150</iCost>

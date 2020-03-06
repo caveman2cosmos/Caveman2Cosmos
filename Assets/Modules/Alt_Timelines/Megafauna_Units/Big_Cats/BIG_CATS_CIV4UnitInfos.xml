@@ -63,9 +63,9 @@
 			<TechTypes>
 				<PrereqTech>TECH_FELINE_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_BIG_CAT_TRAINER_EFFECT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_CAT</BonusType>
@@ -220,10 +220,10 @@
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_BIG_CAT_TRAINER_EFFECT</BuildingType>
 				<BuildingType>BUILDING_BARRACKS</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqBonuses>
 				<BonusType>BONUS_COPPER_WARES</BonusType>
 				<BonusType>BONUS_IRON_WARES</BonusType>
@@ -349,10 +349,10 @@
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_BIG_CAT_TRAINER_EFFECT</BuildingType>
 				<BuildingType>BUILDING_GARRISON</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqBonuses>
 				<BonusType>BONUS_COPPER_WARES</BonusType>
 				<BonusType>BONUS_IRON_WARES</BonusType>
@@ -501,10 +501,10 @@
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_BIG_CAT_TRAINER_EFFECT</BuildingType>
 				<BuildingType>BUILDING_POLICE_CAT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_CAT</BonusType>
@@ -681,10 +681,10 @@
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_BIG_CAT_TRAINER_EFFECT</BuildingType>
 				<BuildingType>BUILDING_RE_PET_SHOP</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_CAT</BonusType>

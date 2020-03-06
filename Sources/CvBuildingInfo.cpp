@@ -5314,7 +5314,7 @@ bool CvBuildingInfo::readPass2(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"FreeAreaBuilding");
 	m_iFreeAreaBuilding = pXML->GetInfoClass(szTextVal);
 
-	pXML->SetVariableListTagPair(&m_piPrereqNumOfBuilding, L"PrereqBuildings",  GC.getNumBuildingInfos());
+	pXML->SetVariableListTagPair(&m_piPrereqNumOfBuilding, L"PrereqAmountBuildings",  GC.getNumBuildingInfos());
 	pXML->SetVariableListTagPair(&m_pbBuildingNeededInCity, L"BuildingNeededs",  GC.getNumBuildingInfos());
 
 	m_aGlobalBuildingCommerceChanges.clear();

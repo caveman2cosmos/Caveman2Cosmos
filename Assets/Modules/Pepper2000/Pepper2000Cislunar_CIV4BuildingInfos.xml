@@ -249,12 +249,12 @@
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_MAGLEV_LAUNCH</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_STATION</BuildingType>
@@ -723,12 +723,12 @@
 				<iYield>5</iYield>
 			</YieldChanges>
 			<iHealth>1</iHealth>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_AEROGEL</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_DOCKING_BAY</BuildingType>
@@ -850,12 +850,12 @@
 				<iYield>0</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_LUNAR_WATER_EXTRACTION_FACILITY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_DOCKING_BAY</BuildingType>
@@ -1817,12 +1817,12 @@
 				<iYield>6</iYield>
 			</YieldChanges>
 			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_MEGAVERSE</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_METAMORPHIC_CISLUNAR_STATION</BuildingType>
@@ -1913,7 +1913,7 @@
 					<iExtraCommerce>10</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_ECUMENOPOLIS_EARTH</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
@@ -1922,7 +1922,7 @@
 					<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
@@ -2032,7 +2032,7 @@
 				<iCommerce>2000</iCommerce>
 			</CommerceChanges>
 			<FreeBuilding>BUILDING_SOLAR_SATELLITE</FreeBuilding>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_LUNAR_LAUNCH_SITE</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
@@ -2041,7 +2041,7 @@
 					<BuildingType>BUILDING_LUNAR_SILICON_EXTRACTION_FACILITY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
@@ -2069,7 +2069,7 @@
 				<iCommerce>4000</iCommerce>
 			</CommerceChanges>
 			<FreeBuilding>BUILDING_ASTEROID_MINING_COMPLEX_EFFECT</FreeBuilding>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_CISLUNAR_ASTEROID_MINE</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
@@ -2086,7 +2086,7 @@
 					<BuildingType>BUILDING_SKYHOOK</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_L5_COLONY</Type>

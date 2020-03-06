@@ -670,12 +670,12 @@
 				<iCommerce>20</iCommerce>
 				<iCommerce>20</iCommerce>
 			</CommerceChanges>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_BLACK_HOLE_ERA_SURVIVAL_PLAN</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COMPUTRONIUM_FILAMENT</BuildingType>
@@ -1069,12 +1069,12 @@
 				<iYield>0</iYield>
 				<iYield>60</iYield>
 			</YieldChanges>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_BRANE_THRUSTER</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_BRANE_ASSEMBLER</BuildingType>
@@ -1493,7 +1493,7 @@
 			</MapCategoryTypes>
 			<FreeBuilding>BUILDING_COSMIC_NODE</FreeBuilding>
 			<iHappiness>50</iHappiness>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_COSMIC_NODE</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
@@ -1502,7 +1502,7 @@
 					<BuildingType>BUILDING_METAPHYSICAL</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<BuildingNeededs>
 				<BuildingNeeded>
 					<BuildingType>BUILDING_COSMIC_ECONOMY_EFFECT</BuildingType>

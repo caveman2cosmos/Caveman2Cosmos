@@ -395,9 +395,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_COMMERCIAL_AIRPORT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_JET_PROPULSION</PrereqTech>
 			<BonusType>BONUS_JET_ENGINES</BonusType>
 			<PrereqBonuses>
@@ -1509,9 +1509,9 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_BUFFALO_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<ForceObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ForceObsoleteTech>
 			<iCost>150</iCost>
@@ -1839,9 +1839,9 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_MULE_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<ForceObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ForceObsoleteTech>
 			<BonusType>BONUS_DONKEY</BonusType>
@@ -2166,9 +2166,9 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ELEPHANT_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<ForceObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ForceObsoleteTech>
 			<iCost>150</iCost>
@@ -2486,9 +2486,9 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_LLAMA_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<ForceObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ForceObsoleteTech>
 			<iCost>150</iCost>
@@ -2812,9 +2812,9 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CAMEL_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<ForceObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ForceObsoleteTech>
 			<iCost>150</iCost>
@@ -3987,9 +3987,9 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CLONING_LABORATORY</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_MAINSTREAM_CLONING</PrereqTech>
 			<iCost>2800</iCost>
 			<iAdvancedStartCost>80</iAdvancedStartCost>
@@ -4379,9 +4379,9 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANDROID_FACTORY</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ANDROIDS</PrereqTech>
 			<iCost>3500</iCost>
 			<iMoves>3</iMoves>
@@ -4871,9 +4871,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_LLAMA_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_CAMELID_DOMESTICATION</PrereqTech>
 			<BonusType>BONUS_LLAMA</BonusType>
 			<iCost>70</iCost>
@@ -4954,9 +4954,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_MULE_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<BonusType>BONUS_DONKEY</BonusType>
 			<iCost>115</iCost>
@@ -5050,9 +5050,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_COMPASS</PrereqTech>
 			<BonusType>BONUS_HORSE</BonusType>
 			<iCost>285</iCost>
@@ -5222,9 +5222,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_NASA</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_LUNAR_EXPLORATION</PrereqTech>
 			<BonusType>BONUS_AUTOMOBILES</BonusType>
 			<PrereqBonuses>
@@ -6065,9 +6065,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_INTELLIGENCE_AGENCY</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ELECTRONICS</PrereqTech>
 			<Flavors>
 				<Flavor>
@@ -6148,9 +6148,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SCOTLAND_YARD</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ELECTRONICS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_AVIATION</PrereqTech>
@@ -6335,9 +6335,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SPY_TRAINING_FACILITY</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_POLITICAL_PHILOSOPHY</PrereqTech>
 			<iCost>300</iCost>
 			<iMoves>2</iMoves>
@@ -6399,9 +6399,9 @@ Base XP gained when defending
 				</CorporationSpread>
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_1</PrereqCorporation>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CORPORATION_1_HQ</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
@@ -6449,9 +6449,9 @@ Base XP gained when defending
 				</CorporationSpread>
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_2</PrereqCorporation>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CORPORATION_2_HQ</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
@@ -6499,9 +6499,9 @@ Base XP gained when defending
 				</CorporationSpread>
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_3</PrereqCorporation>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CORPORATION_3_HQ</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
@@ -6549,9 +6549,9 @@ Base XP gained when defending
 				</CorporationSpread>
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_4</PrereqCorporation>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CORPORATION_4_HQ</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
@@ -6599,9 +6599,9 @@ Base XP gained when defending
 				</CorporationSpread>
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_5</PrereqCorporation>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CORPORATION_5_HQ</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
@@ -6649,9 +6649,9 @@ Base XP gained when defending
 				</CorporationSpread>
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_6</PrereqCorporation>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CORPORATION_6_HQ</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
@@ -6699,9 +6699,9 @@ Base XP gained when defending
 				</CorporationSpread>
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_7</PrereqCorporation>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CORPORATION_7_HQ</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
@@ -6749,9 +6749,9 @@ Base XP gained when defending
 				</CorporationSpread>
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_ADVENTURE</PrereqCorporation>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CORPORATION_ADVENTURE_HQ</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>3</iAsset>
@@ -6799,9 +6799,9 @@ Base XP gained when defending
 				</CorporationSpread>
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_BULLSEYE</PrereqCorporation>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CORPORATION_BULLSEYE_HQ</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>3</iAsset>
@@ -6849,9 +6849,9 @@ Base XP gained when defending
 				</CorporationSpread>
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_BURGERWORLD</PrereqCorporation>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CORPORATION_BURGERWORLD_HQ</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>3</iAsset>
@@ -6899,9 +6899,9 @@ Base XP gained when defending
 				</CorporationSpread>
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_EMPCLOTH</PrereqCorporation>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CORPORATION_EMPCLOTH_HQ</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
@@ -6949,9 +6949,9 @@ Base XP gained when defending
 				</CorporationSpread>
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_EWTRADE</PrereqCorporation>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CORPORATION_EWTRADE_HQ</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>3</iAsset>
@@ -6999,9 +6999,9 @@ Base XP gained when defending
 				</CorporationSpread>
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_FASHION</PrereqCorporation>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CORPORATION_FASHION_HQ</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
@@ -7049,9 +7049,9 @@ Base XP gained when defending
 				</CorporationSpread>
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_MALLWART</PrereqCorporation>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CORPORATION_MALLWART_HQ</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>3</iAsset>
@@ -7099,9 +7099,9 @@ Base XP gained when defending
 				</CorporationSpread>
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_MAPSTER</PrereqCorporation>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CORPORATION_MAPSTER_HQ</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
@@ -7149,9 +7149,9 @@ Base XP gained when defending
 				</CorporationSpread>
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_MCDOWELLS</PrereqCorporation>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CORPORATION_MCDOWELLS_HQ</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>3</iAsset>
@@ -7199,9 +7199,9 @@ Base XP gained when defending
 				</CorporationSpread>
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_MILEHIGH</PrereqCorporation>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CORPORATION_MILEHIGH_HQ</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>3</iAsset>
@@ -7249,9 +7249,9 @@ Base XP gained when defending
 				</CorporationSpread>
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_MOBBY</PrereqCorporation>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CORPORATION_MOBBY_HQ</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
@@ -7299,9 +7299,9 @@ Base XP gained when defending
 				</CorporationSpread>
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_MOONBEAN</PrereqCorporation>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CORPORATION_MOONBEAN_HQ</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
@@ -7349,9 +7349,9 @@ Base XP gained when defending
 				</CorporationSpread>
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_RED</PrereqCorporation>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CORPORATION_RED_HQ</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>3</iAsset>
@@ -7399,9 +7399,9 @@ Base XP gained when defending
 				</CorporationSpread>
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_SAFARI</PrereqCorporation>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CORPORATION_SAFARI_HQ</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>3</iAsset>
@@ -7449,9 +7449,9 @@ Base XP gained when defending
 				</CorporationSpread>
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_ULTSOLDIER</PrereqCorporation>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CORPORATION_ULTSOLDIER_HQ</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>3</iAsset>
@@ -7499,9 +7499,9 @@ Base XP gained when defending
 				</CorporationSpread>
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_WONKA</PrereqCorporation>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CORPORATION_WONKA_HQ</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
@@ -7549,9 +7549,9 @@ Base XP gained when defending
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_JUDAISM</PrereqReligion>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_JEWISH_MONASTERY</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iMoves>2</iMoves>
 			<iExtraCost>1</iExtraCost>
@@ -7599,9 +7599,9 @@ Base XP gained when defending
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_CHRISTIANITY</PrereqReligion>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CHRISTIAN_MONASTERY</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iMoves>2</iMoves>
 			<iExtraCost>1</iExtraCost>
@@ -7649,9 +7649,9 @@ Base XP gained when defending
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ISLAMIC_MONASTERY</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iMoves>2</iMoves>
 			<iExtraCost>1</iExtraCost>
@@ -7699,9 +7699,9 @@ Base XP gained when defending
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_HINDUISM</PrereqReligion>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HINDU_MONASTERY</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iMoves>2</iMoves>
 			<iExtraCost>1</iExtraCost>
@@ -7749,9 +7749,9 @@ Base XP gained when defending
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_BUDDHISM</PrereqReligion>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_BUDDHIST_MONASTERY</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iMoves>2</iMoves>
 			<iExtraCost>1</iExtraCost>
@@ -7799,9 +7799,9 @@ Base XP gained when defending
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_CONFUCIANISM</PrereqReligion>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CONFUCIAN_MONASTERY</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iMoves>2</iMoves>
 			<iExtraCost>1</iExtraCost>
@@ -7849,9 +7849,9 @@ Base XP gained when defending
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_TAOISM</PrereqReligion>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_TAOIST_MONASTERY</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iMoves>2</iMoves>
 			<iExtraCost>1</iExtraCost>
@@ -7899,9 +7899,9 @@ Base XP gained when defending
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_HELLENISM</PrereqReligion>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HELLENIC_MONASTERY</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iMoves>2</iMoves>
 			<iExtraCost>1</iExtraCost>
@@ -7949,9 +7949,9 @@ Base XP gained when defending
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_ZOROASTRIANISM</PrereqReligion>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ZOROASTRIAN_MONASTERY</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iMoves>1</iMoves>
 			<iExtraCost>1</iExtraCost>
@@ -8014,9 +8014,9 @@ Base XP gained when defending
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_EGYPT_MYTH_MONASTERY</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iMoves>1</iMoves>
 			<iExtraCost>1</iExtraCost>
@@ -8064,9 +8064,9 @@ Base XP gained when defending
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_NAGHUALISM</PrereqReligion>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_MESOAMERICAN_MONASTERY</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iMoves>1</iMoves>
 			<iExtraCost>1</iExtraCost>
@@ -9671,9 +9671,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CRUSADE</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_FUNDAMENTALISM</PrereqTech>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>200</iAdvancedStartCost>
@@ -13369,9 +13369,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CLONING_LABORATORY</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_BIONICS</PrereqTech>
 			<BonusType>BONUS_AMMUNITION</BonusType>
 			<PrereqBonuses>
@@ -13549,9 +13549,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CLONING_FACTORY</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_CYBERNETICS</PrereqTech>
 			<BonusType>BONUS_BIONIC_SUITS</BonusType>
 			<PrereqBonuses>
@@ -14239,9 +14239,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CHARIOT_WORKSHOP</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_CHARIOTRY</PrereqTech>
 			<BonusType>BONUS_HORSE</BonusType>
 			<iCost>120</iCost>
@@ -14340,9 +14340,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CHARIOT_WORKSHOP</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_CHARIOTRY</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_ARCHERY</PrereqTech>
@@ -14445,9 +14445,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CHARIOT_WORKSHOP</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_CHARIOTRY</PrereqTech>
@@ -14551,9 +14551,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<BonusType>BONUS_HORSE</BonusType>
 			<PrereqBonuses>
@@ -14659,9 +14659,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CANNON_FORGE</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_METALLURGY</PrereqTech>
 			<BonusType>BONUS_HORSE</BonusType>
 			<PrereqBonuses>
@@ -14769,9 +14769,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
@@ -14912,9 +14912,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
 			<BonusType>BONUS_HORSE</BonusType>
 			<iCost>210</iCost>
@@ -15054,9 +15054,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ANCIENT_BALLISTICS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
@@ -15216,9 +15216,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_HORSE_BREEDING</PrereqTech>
 			<BonusType>BONUS_HORSE</BonusType>
 			<PrereqBonuses>
@@ -15368,9 +15368,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_STIRRUP</PrereqTech>
 			<BonusType>BONUS_HORSE</BonusType>
 			<PrereqBonuses>
@@ -15531,9 +15531,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_INVENTION</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_HORSE_BREEDING</PrereqTech>
@@ -15668,9 +15668,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<BonusType>BONUS_HORSE</BonusType>
 			<PrereqBonuses>
@@ -15797,9 +15797,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
 			<BonusType>BONUS_HORSE</BonusType>
 			<PrereqBonuses>
@@ -15937,9 +15937,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<BonusType>BONUS_SULPHUR</BonusType>
 			<TrainCondition>
@@ -16119,9 +16119,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
 			<BonusType>BONUS_SULPHUR</BonusType>
 			<TrainCondition>
@@ -16311,9 +16311,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_CAVALRY_TACTICS</PrereqTech>
 			<BonusType>BONUS_SULPHUR</BonusType>
 			<TrainCondition>
@@ -16464,9 +16464,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_CAVALRY_TACTICS</PrereqTech>
 			<BonusType>BONUS_SULPHUR</BonusType>
 			<TrainCondition>
@@ -16648,9 +16648,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
 			<PrereqBonuses>
 				<BonusType>BONUS_HORSE</BonusType>
@@ -16844,9 +16844,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_TRENCH_WARFARE</PrereqTech>
 			<BonusType>BONUS_AMMUNITION</BonusType>
 			<TrainCondition>
@@ -17028,9 +17028,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
 			<BonusType>BONUS_HORSE</BonusType>
 			<PrereqBonuses>
@@ -17155,9 +17155,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ELEPHANT_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_ELEPHANT_DOMESTICATION</PrereqTech>
@@ -17270,9 +17270,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ELEPHANT_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<BonusType>BONUS_ELEPHANTS</BonusType>
 			<PrereqBonuses>
@@ -17394,9 +17394,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ELEPHANT_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_ELEPHANT_DOMESTICATION</PrereqTech>
@@ -17532,9 +17532,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ELEPHANT_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_CAVALRY_TACTICS</PrereqTech>
 			<BonusType>BONUS_ELEPHANTS</BonusType>
 			<PrereqBonuses>
@@ -17667,9 +17667,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ELEPHANT_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
 			<BonusType>BONUS_ELEPHANTS</BonusType>
 			<TrainCondition>
@@ -17792,9 +17792,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CAMEL_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_CAMELID_DOMESTICATION</PrereqTech>
@@ -17924,9 +17924,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CAMEL_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
 			<BonusType>BONUS_CAMEL</BonusType>
 			<iCost>210</iCost>
@@ -18048,9 +18048,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CAMEL_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<BonusType>BONUS_CAMEL</BonusType>
 			<PrereqBonuses>
@@ -18180,9 +18180,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CAMEL_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
 			<PrereqBonuses>
 				<BonusType>BONUS_CAMEL</BonusType>
@@ -20677,9 +20677,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_LUMBER_CAMP</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_WARFARE</PrereqTech>
 			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
 			<iCost>82</iCost>
@@ -20781,9 +20781,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CARPENTERS_WORKSHOP</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
 			<iCost>125</iCost>
 			<iMoves>1</iMoves>
@@ -20880,9 +20880,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<PrereqBonuses>
 				<BonusType>BONUS_IRON_WARES</BonusType>
@@ -20988,9 +20988,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<BonusType>BONUS_PRIME_TIMBER</BonusType>
 			<PrereqBonuses>
@@ -21089,9 +21089,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ANCIENT_MACHINERY</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_IRON_WORKING</PrereqTech>
@@ -21204,9 +21204,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ANCIENT_BALLISTICS</PrereqTech>
 			<iCost>245</iCost>
 			<iMoves>1</iMoves>
@@ -21316,9 +21316,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<iCost>250</iCost>
 			<iMoves>1</iMoves>
@@ -21428,9 +21428,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<iCost>300</iCost>
 			<iMoves>1</iMoves>
@@ -21545,9 +21545,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CANNON_FORGE</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
 			<BonusType>BONUS_IRON_WARES</BonusType>
 			<PrereqBonuses>
@@ -21650,9 +21650,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ANCIENT_MACHINERY</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_IRON_WORKING</PrereqTech>
@@ -21754,9 +21754,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ANCIENT_BALLISTICS</PrereqTech>
 			<iCost>245</iCost>
 			<iMoves>1</iMoves>
@@ -21855,9 +21855,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<iCost>250</iCost>
 			<iMoves>1</iMoves>
@@ -21961,9 +21961,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ANCIENT_BALLISTICS</PrereqTech>
 			<BonusType>BONUS_HORSE</BonusType>
 			<PrereqBonuses>
@@ -22073,9 +22073,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<iCost>300</iCost>
 			<iMoves>1</iMoves>
@@ -22176,9 +22176,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CANNON_FORGE</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
 			<BonusType>BONUS_IRON_WARES</BonusType>
 			<PrereqBonuses>
@@ -22274,9 +22274,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CANNON_FORGE</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 			<BonusType>BONUS_IRON_WARES</BonusType>
 			<PrereqBonuses>
@@ -22382,9 +22382,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CANNON_FORGE</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_GRAND_WAR</PrereqTech>
 			<BonusType>BONUS_IRON_WARES</BonusType>
 			<PrereqBonuses>
@@ -22495,9 +22495,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CANNON_FORGE</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
 			<BonusType>BONUS_IRON_WARES</BonusType>
 			<PrereqBonuses>
@@ -22604,9 +22604,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CANNON_FORGE</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_METALLURGY</PrereqTech>
 			<BonusType>BONUS_IRON_WARES</BonusType>
 			<PrereqBonuses>
@@ -22708,9 +22708,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CANNON_FORGE</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_METALLURGY</PrereqTech>
@@ -22814,9 +22814,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CANNON_FORGE</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_METALLURGY</PrereqTech>
@@ -22930,9 +22930,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CANNON_FORGE</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_NATIONALISM</PrereqTech>
 			<BonusType>BONUS_IRON_WARES</BonusType>
 			<PrereqBonuses>
@@ -23034,9 +23034,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CANNON_FORGE</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SEMI_AUTOMATIC_WEAPONS</PrereqTech>
 			<BonusType>BONUS_IRON_WARES</BonusType>
 			<PrereqBonuses>
@@ -24457,9 +24457,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ALCHEMY</PrereqTech>
 			<BonusType>BONUS_SULPHUR</BonusType>
 			<PrereqBonuses>
@@ -24563,9 +24563,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<BonusType>BONUS_SULPHUR</BonusType>
 			<PrereqBonuses>
@@ -25218,9 +25218,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ALCHEMY</PrereqTech>
 			<BonusType>BONUS_TAR</BonusType>
 			<iCost>290</iCost>
@@ -26174,9 +26174,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ROBOTICS_LAB</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_AUTOMATED_ROBOTICS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_COILGUN</PrereqTech>
@@ -26297,9 +26297,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ROBOTICS_LAB</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_WARMACHINES</PrereqTech>
 			<BonusType>BONUS_SERVICE_BOTS</BonusType>
 			<PrereqBonuses>
@@ -26417,9 +26417,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ROBOTICS_LAB</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_DROIDS</PrereqTech>
 			<BonusType>BONUS_SERVICE_BOTS</BonusType>
 			<PrereqBonuses>
@@ -26538,9 +26538,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ROBOTICS_LAB</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ANDROIDS</PrereqTech>
 			<BonusType>BONUS_ANDROIDS</BonusType>
 			<PrereqBonuses>
@@ -26658,9 +26658,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ROBOTICS_LAB</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_BINARY_SUBCONSCIOUSNESS</PrereqTech>
 			<BonusType>BONUS_ANDROIDS</BonusType>
 			<PrereqBonuses>
@@ -26778,9 +26778,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ROBOTICS_LAB</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SAPIENTROIDS</PrereqTech>
 			<BonusType>BONUS_ANDROIDS</BonusType>
 			<PrereqBonuses>
@@ -26992,9 +26992,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ROBOTICS_LAB</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_MACHINE_LEARNING</PrereqTech>
 			<BonusType>BONUS_MICROCHIPS</BonusType>
 			<PrereqBonuses>
@@ -27717,9 +27717,9 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<iCost>80</iCost>
 			<iMoves>2</iMoves>
@@ -27870,9 +27870,9 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_RUDDER</PrereqTech>
 			<iCost>180</iCost>
 			<iMoves>3</iMoves>
@@ -28566,9 +28566,9 @@ Base XP gained when defending
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_CANOE</UnitType>
 			</SupersedingUnits>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CANOEBUILDERS_HUT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_BOAT_BUILDING</PrereqTech>
 			<iCost>67</iCost>
 			<iMinAreaSize>5</iMinAreaSize>
@@ -28672,9 +28672,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<iCost>145</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
@@ -28807,9 +28807,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_RUDDER</PrereqTech>
 			<iCost>280</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
@@ -28938,9 +28938,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ASTROLABE</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_GUNPOWDER</PrereqTech>
@@ -29042,9 +29042,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_NAVAL_CANNON</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_ASTROLABE</PrereqTech>
@@ -29602,9 +29602,9 @@ Base XP gained when defending
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_WAR_CANOE</UnitType>
 			</SupersedingUnits>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CANOEBUILDERS_HUT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_HARPOON_MAKING</PrereqTech>
 			<iCost>77</iCost>
 			<iMinAreaSize>5</iMinAreaSize>
@@ -29715,9 +29715,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_NAVAL_WARFARE</PrereqTech>
 			<iCost>150</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
@@ -29853,9 +29853,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SEAFARING</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
@@ -29963,9 +29963,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
 			<iCost>240</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
@@ -30061,9 +30061,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ANCIENT_BALLISTICS</PrereqTech>
 			<iCost>270</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
@@ -30164,9 +30164,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ANCIENT_BALLISTICS</PrereqTech>
 			<BonusType>BONUS_SULPHUR</BonusType>
 			<iCost>300</iCost>
@@ -30279,9 +30279,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ANCIENT_MACHINERY</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
@@ -30385,9 +30385,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_RUDDER</PrereqTech>
@@ -30549,9 +30549,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_METALLURGY</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_ASTROLABE</PrereqTech>
@@ -30672,9 +30672,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_GRAND_WAR</PrereqTech>
 			<BonusType>BONUS_IRON_WARES</BonusType>
 			<PrereqBonuses>
@@ -30800,9 +30800,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_NAVAL_TACTICS</PrereqTech>
 			<BonusType>BONUS_IRON_WARES</BonusType>
 			<PrereqBonuses>
@@ -32353,9 +32353,9 @@ Base XP gained when defending
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_KAYAK</UnitType>
 			</SupersedingUnits>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CANOEBUILDERS_HUT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_BOAT_BUILDING</PrereqTech>
 			<PrereqBonuses>
 				<BonusType>BONUS_PRIME_TIMBER</BonusType>
@@ -32463,9 +32463,9 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<ForceObsoleteTech>TECH_OPTICS</ForceObsoleteTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CANOEBUILDERS_HUT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<iCost>105</iCost>
 			<iMinAreaSize>5</iMinAreaSize>
@@ -32598,9 +32598,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_COMPASS</PrereqTech>
 			<iCost>300</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
@@ -32702,9 +32702,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_METALLURGY</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_ASTROLABE</PrereqTech>
@@ -32838,9 +32838,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_NAVAL_CANNON</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_NAVIGATION</PrereqTech>
@@ -33603,9 +33603,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_REMOTE_NAVAL</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_DISASTER_ROBOTS</PrereqTech>
 			<BonusType>BONUS_URANIUM</BonusType>
 			<TrainCondition>
@@ -34478,9 +34478,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_REMOTE_NAVAL</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_DISASTER_ROBOTS</PrereqTech>
 			<BonusType>BONUS_NANOTUBES</BonusType>
 			<PrereqBonuses>
@@ -35243,9 +35243,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_COMPASS</PrereqTech>
 			<BonusType>BONUS_IRON_WARES</BonusType>
 			<iCost>420</iCost>
@@ -35548,9 +35548,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SMUGGLERS_SHANTY</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
 			<iCost>215</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
@@ -35759,9 +35759,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SMUGGLERS_SHANTY</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ASTROLABE</PrereqTech>
 			<iCost>410</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
@@ -35903,9 +35903,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_MERCANTILISM</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_NAVAL_CANNON</PrereqTech>
@@ -36466,9 +36466,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_REMOTE_NAVAL</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_DISASTER_ROBOTS</PrereqTech>
 			<BonusType>BONUS_URANIUM</BonusType>
 			<TrainCondition>
@@ -36860,9 +36860,9 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<ForceObsoleteTech>TECH_CHEMISTRY</ForceObsoleteTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ASTROLABE</PrereqTech>
 			<Flavors>
 				<Flavor>
@@ -36950,9 +36950,9 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<ForceObsoleteTech>TECH_SUBMARINE_WARFARE</ForceObsoleteTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_CHEMISTRY</PrereqTech>
 			<Flavors>
 				<Flavor>
@@ -38823,9 +38823,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_AVIATION</PrereqTech>
 			<BonusType>BONUS_AIRCRAFT</BonusType>
 			<PrereqBonuses>
@@ -38997,9 +38997,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SEMICONDUCTORS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_JET_PROPULSION</PrereqTech>
@@ -39104,9 +39104,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_COMPOSITES</PrereqTech>
 			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqBonuses>
@@ -39616,9 +39616,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SEMICONDUCTORS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_JET_PROPULSION</PrereqTech>
@@ -39718,9 +39718,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_COMPOSITES</PrereqTech>
 			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqBonuses>
@@ -40581,9 +40581,9 @@ Base XP gained when defending
 			<Strategy>TXT_KEY_UNIT_FIGHTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Help>TXT_KEY_UNIT_CARRIER_OPS_HELP</Help>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bIgnoreBuildingDefense>1</bIgnoreBuildingDefense>
@@ -40712,9 +40712,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SEMICONDUCTORS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_JET_PROPULSION</PrereqTech>
@@ -40838,9 +40838,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_GUIDED_WEAPONS</PrereqTech>
 			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqBonuses>
@@ -40955,9 +40955,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_COMPOSITES</PrereqTech>
 			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqBonuses>
@@ -41072,9 +41072,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SEMICONDUCTORS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_JET_PROPULSION</PrereqTech>
@@ -41274,9 +41274,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_WAR_SIMULATIONS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_STEALTH</PrereqTech>
@@ -41372,9 +41372,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SECRET_ARMY_BASE</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_JET_PROPULSION</PrereqTech>
 			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqBonuses>
@@ -41463,9 +41463,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SECRET_ARMY_BASE</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SUPERSONIC_FLIGHT</PrereqTech>
 			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqBonuses>
@@ -41558,9 +41558,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SECRET_ARMY_BASE</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_UNMANNED_AIR_VEHICLES</PrereqTech>
 			<BonusType>BONUS_UNMANNED_AIRCRAFTS</BonusType>
 			<PrereqBonuses>
@@ -42028,9 +42028,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_BIOLOGICAL_WARFARE_LAB</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_GUIDED_WEAPONS</PrereqTech>
 			<iCost>1765</iCost>
 			<iAdvancedStartCost>90</iAdvancedStartCost>
@@ -42093,9 +42093,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_BIOLOGICAL_WARFARE_LAB</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_GENE_MANIPULATION</PrereqTech>
 			<iCost>2030</iCost>
 			<iAdvancedStartCost>120</iAdvancedStartCost>
@@ -42156,9 +42156,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_BIOLOGICAL_WARFARE_LAB</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_DNA_COMPUTING</PrereqTech>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>260</iAdvancedStartCost>
@@ -42220,9 +42220,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_FUSION</PrereqTech>
 			<iCost>4200</iCost>
 			<iAdvancedStartCost>500</iAdvancedStartCost>
@@ -42282,9 +42282,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SHIELDING</PrereqTech>
 			<iCost>7700</iCost>
 			<iAdvancedStartCost>500</iAdvancedStartCost>
@@ -42405,9 +42405,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_MIND_CONTROL_CENTER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_MIND_UPLOADING</PrereqTech>
 			<iCost>6200</iCost>
 			<iMoves>1</iMoves>
@@ -42700,9 +42700,9 @@ Base XP gained when defending
 			<bPassage>1</bPassage>
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
 			<BonusType>BONUS_DOG</BonusType>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_DOG_BREEDER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_WARDOG</UnitType>
 				<UnitType>UNIT_NEANDERTHAL_TRAINEDDOG</UnitType>
@@ -42808,9 +42808,9 @@ Base XP gained when defending
 				<BonusType>BONUS_IRON_WARES</BonusType>
 				<BonusType>BONUS_OBSIDIAN</BonusType>
 			</PrereqBonuses>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_WAR_DOGS</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_GUARDDOG</UnitType>
 			</UnitUpgrades>
@@ -42915,9 +42915,9 @@ Base XP gained when defending
 				<BonusType>BONUS_COPPER_WARES</BonusType>
 				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_GUARD_DOG</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_POLICE_DOG</UnitType>
 			</UnitUpgrades>
@@ -43029,9 +43029,9 @@ Base XP gained when defending
 			</UnitCombatTargets>
 			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
 			<BonusType>BONUS_DOG</BonusType>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_POLICE_DOG</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_CANIS_SUPERIOR</UnitType>
 			</UnitUpgrades>
@@ -43168,9 +43168,9 @@ Base XP gained when defending
 			</UnitCombatTargets>
 			<PrereqTech>TECH_HOMO_SUPERIOR</PrereqTech>
 			<BonusType>BONUS_DOG</BonusType>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_RE_PET_SHOP</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<iCost>2600</iCost>
 			<iMoves>3</iMoves>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
@@ -43299,9 +43299,9 @@ Base XP gained when defending
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqOrCivics>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<PrereqBonuses>
 				<BonusType>BONUS_IRON_WARES</BonusType>
@@ -43402,9 +43402,9 @@ Base XP gained when defending
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqOrCivics>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
 			<PrereqBonuses>
 				<BonusType>BONUS_SULPHUR</BonusType>
@@ -43511,9 +43511,9 @@ Base XP gained when defending
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqOrCivics>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_AUTOMATIC_WEAPONS</PrereqTech>
 			<PrereqBonuses>
 				<BonusType>BONUS_AMMUNITION</BonusType>
@@ -43616,9 +43616,9 @@ Base XP gained when defending
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqOrCivics>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ANDROIDS</PrereqTech>
 			<PrereqBonuses>
 				<BonusType>BONUS_NANOTUBES</BonusType>
@@ -44764,9 +44764,9 @@ Base XP gained when defending
 			</UnitCombatDefenders>
 			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
 			<ObsoleteTech>TECH_FORENSICS</ObsoleteTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -45086,9 +45086,9 @@ Base XP gained when defending
 			</UnitCombatDefenders>
 			<PrereqTech>TECH_MECHANIZED_WARFARE</PrereqTech>
 			<ObsoleteTech>TECH_DISASTER_ROBOTS</ObsoleteTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -45427,9 +45427,9 @@ Base XP gained when defending
 					</Or>
 				</And>
 			</TrainCondition>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_POLICE_MECH</UnitType>
 			</UnitUpgrades>
@@ -45592,9 +45592,9 @@ Base XP gained when defending
 			</UnitCombatDefenders>
 			<PrereqTech>TECH_DISASTER_ROBOTS</PrereqTech>
 			<BonusType>BONUS_MECHS</BonusType>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<iCost>3580</iCost>
 			<iMoves>4</iMoves>
 			<VisibilityIntensityTypes>
@@ -45747,9 +45747,9 @@ Base XP gained when defending
 					</Has>
 				</And>
 			</TrainCondition>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<VisibilityIntensityTypes>
 				<VisibilityIntensityType>
 					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
@@ -45918,9 +45918,9 @@ Base XP gained when defending
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqTech>TECH_DECEPTION</PrereqTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_EXILE_PRACTICES</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_THIEF</UnitType>
 				<UnitType>UNIT_ROGUE</UnitType>
@@ -46100,9 +46100,9 @@ Base XP gained when defending
 				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<PrereqTech>TECH_THEFT</PrereqTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_BANDITS_HIDEOUT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_ROGUE</UnitType>
 			</UnitUpgrades>
@@ -46284,9 +46284,9 @@ Base XP gained when defending
 				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<PrereqTech>TECH_NOCTURNALISM</PrereqTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_BANDITS_HIDEOUT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_BURGLAR</UnitType>
 			</UnitUpgrades>
@@ -46881,9 +46881,9 @@ Base XP gained when defending
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CONSPIRATORS_HIDEOUT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_GUNFIGHTER</UnitType>
 				<UnitType>UNIT_OUTLAW</UnitType>
@@ -47103,9 +47103,9 @@ Base XP gained when defending
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SALOON</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_THUG</UnitType>
 			</UnitUpgrades>
@@ -47570,9 +47570,9 @@ Base XP gained when defending
 				<PrereqTech>TECH_SEMI_AUTOMATIC_WEAPONS</PrereqTech>
 			</TechTypes>
 			<ForceObsoleteTech>TECH_CONSUMERISM</ForceObsoleteTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_MOB_STOREFRONT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<BonusType>BONUS_AUTOMOBILES</BonusType>
 			<TrainCondition>
 				<And>
@@ -47767,9 +47767,9 @@ Base XP gained when defending
 					</Has>
 				</And>
 			</TrainCondition>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_PAWN_SHOP</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_TECHNARCHIST</UnitType>
 			</UnitUpgrades>
@@ -47970,9 +47970,9 @@ Base XP gained when defending
 					</Has>
 				</And>
 			</TrainCondition>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_MOTORCYCLE_CLUB</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_TECHNARCHIST</UnitType>
 			</UnitUpgrades>
@@ -48178,9 +48178,9 @@ Base XP gained when defending
 					</Has>
 				</And>
 			</TrainCondition>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_METH_LAB</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_TECHNARCHIST</UnitType>
 			</UnitUpgrades>
@@ -48374,9 +48374,9 @@ Base XP gained when defending
 					</Or>
 				</And>
 			</TrainCondition>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_BLACK_HAT_HIDEOUT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_TECHNARCHIST</UnitType>
 			</UnitUpgrades>
@@ -48792,9 +48792,9 @@ Base XP gained when defending
 			</UnitCombatTargets>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<ForceObsoleteTech>TECH_RIFLING</ForceObsoleteTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_MERCENARY_CAMP</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_CUTTHROAT</UnitType>
 				<UnitType>UNIT_PARTISAN</UnitType>
@@ -49123,9 +49123,9 @@ Base XP gained when defending
 			</TechTypes>
 			<ForceObsoleteTech>TECH_MATCHLOCK</ForceObsoleteTech>
 			<BonusType>BONUS_HORSE</BonusType>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_MERCENARY_STABLES</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_HIGHWAYMAN</UnitType>
 			</UnitUpgrades>
@@ -49289,9 +49289,9 @@ Base XP gained when defending
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<ForceObsoleteTech>TECH_DEPUTIZATION</ForceObsoleteTech>
 			<BonusType>BONUS_HORSE</BonusType>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HIGHWAY_HIDEOUT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -49500,9 +49500,9 @@ Base XP gained when defending
 			<PrereqTech>TECH_DEPUTIZATION</PrereqTech>
 			<ForceObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ForceObsoleteTech>
 			<BonusType>BONUS_HORSE</BonusType>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SALOON</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -49708,9 +49708,9 @@ Base XP gained when defending
 			</UnitCombatTargets>
 			<PrereqTech>TECH_NOCTURNALISM</PrereqTech>
 			<ForceObsoleteTech>TECH_CODE_OF_LAWS</ForceObsoleteTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_POISONCRAFTERS_HUT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_STALKERS</UnitType>
 			</UnitUpgrades>
@@ -49832,9 +49832,9 @@ Base XP gained when defending
 				<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
 			</TechTypes>
 			<ForceObsoleteTech>TECH_MATCHLOCK</ForceObsoleteTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_POISONCRAFTERS_HUT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_ASSASSIN</UnitType>
 			</UnitUpgrades>
@@ -50041,9 +50041,9 @@ Base XP gained when defending
 			</UnitCombatTargets>
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			<ForceObsoleteTech>TECH_MATCHLOCK</ForceObsoleteTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ASSASSINS_DEN</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_CUTTHROAT</UnitType>
 				<UnitType>UNIT_SHARPSHOOTER</UnitType>
@@ -50577,9 +50577,9 @@ Base XP gained when defending
 					</Has>
 				</And>
 			</TrainCondition>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_REBEL_CAMP</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_MSNIPER</UnitType>
 			</UnitUpgrades>
@@ -50977,9 +50977,9 @@ Base XP gained when defending
 				<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
 			</TechTypes>
 			<ForceObsoleteTech>TECH_SUPERSTRONG_ALLOYS</ForceObsoleteTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_BIVOUAC_GROUNDS</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -51166,9 +51166,9 @@ Base XP gained when defending
 			</UnitCombatTargets>
 			<PrereqTech>TECH_SUPERSTRONG_ALLOYS</PrereqTech>
 			<BonusType>BONUS_BIONIC_SUITS</BonusType>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ORBITAL_TARGETS</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<iCost>4750</iCost>
 			<iMoves>3</iMoves>
 			<iDropRange>10</iDropRange>
@@ -51449,9 +51449,9 @@ Base XP gained when defending
 				<BuildingType>BUILDING_NATIONAL_PROSTITUTION_BAN</BuildingType>
 				<BuildingType>BUILDING_NATIONAL_GAMBLING_BAN</BuildingType>
 			</Buildings>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			<Flavors>
 				<Flavor>
@@ -55467,10 +55467,10 @@ Base XP gained when defending
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_WARRIOR</UnitType>
 			</UnitUpgrades>
@@ -55542,10 +55542,10 @@ Base XP gained when defending
 			<bMilitarySupport>1</bMilitarySupport>
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_SHARPENING</PrereqTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_SPEARMAN</UnitType>
 			</UnitUpgrades>
@@ -55627,10 +55627,10 @@ Base XP gained when defending
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bPillage>1</bPillage>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_WARRIOR</UnitType>
 			</UnitUpgrades>
@@ -55725,10 +55725,10 @@ Base XP gained when defending
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bPillage>1</bPillage>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_SLINGER</UnitType>
 			</UnitUpgrades>
@@ -55830,10 +55830,10 @@ Base XP gained when defending
 			<bMilitarySupport>1</bMilitarySupport>
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_BINDING</PrereqTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_ARCHER</UnitType>
 			</UnitUpgrades>
@@ -55958,10 +55958,10 @@ Base XP gained when defending
 				</FreePromotion>
 			</FreePromotions>
 			<PrereqTech>TECH_DECEPTION</PrereqTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_LOOKOUT_POST</BuildingType>
 				<BuildingType>BUILDING_SENTRY_POST</BuildingType>
@@ -56090,10 +56090,10 @@ Base XP gained when defending
 				</FreePromotion>
 			</FreePromotions>
 			<PrereqTech>TECH_CONDUCT</PrereqTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SENTRY_POST</BuildingType>
 				<BuildingType>BUILDING_TOWNWATCH</BuildingType>
@@ -56202,10 +56202,10 @@ Base XP gained when defending
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_NOMADISM</PrereqTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_SCOUT</UnitType>
 				<UnitType>UNIT_NEANDERTHAL_CHASER</UnitType>
@@ -56270,10 +56270,10 @@ Base XP gained when defending
 			<bFood>1</bFood>
 			<bWorkerTrade>1</bWorkerTrade>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_WORKER</UnitType>
 			</UnitUpgrades>
@@ -56459,11 +56459,11 @@ Base XP gained when defending
 			<bNoCapture>1</bNoCapture>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_HERBALISM</PrereqTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_WILD_HERBS</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_HEALER</UnitType>
 				<UnitType>UNIT_NEANDERTHAL_SHEPHERD</UnitType>
@@ -56572,11 +56572,11 @@ Base XP gained when defending
 			<bNoCapture>1</bNoCapture>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_HEALERHUT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_MEDICINE_MAN</UnitType>
 			</UnitUpgrades>
@@ -56697,10 +56697,10 @@ Base XP gained when defending
 				<BonusType>BONUS_HORSE</BonusType>
 				<BonusType>BONUS_LLAMA</BonusType>
 			</PrereqBonuses>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_VET</UnitType>
 			</UnitUpgrades>
@@ -56821,11 +56821,11 @@ Base XP gained when defending
 			<PrereqBonuses>
 				<BonusType>BONUS_DOG</BonusType>
 			</PrereqBonuses>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_DOG_BREEDER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_WARDOG</UnitType>
 			</UnitUpgrades>
@@ -56897,10 +56897,10 @@ Base XP gained when defending
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_ENFORCERS</UnitType>
 			</UnitUpgrades>
@@ -56992,11 +56992,11 @@ Base XP gained when defending
 				<BonusType>BONUS_BAMBOO</BonusType>
 				<BonusType>BONUS_WOOD</BonusType>
 			</PrereqBonuses>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CANOEBUILDERS_HUT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_OUTRIGGER</UnitType>
 			</UnitUpgrades>
@@ -57104,11 +57104,11 @@ Base XP gained when defending
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<PrereqTech>TECH_HARPOON_MAKING</PrereqTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CANOEBUILDERS_HUT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_WARGALLEY</UnitType>
 			</UnitUpgrades>
@@ -57215,11 +57215,11 @@ Base XP gained when defending
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<PrereqTech>TECH_BOAT_BUILDING</PrereqTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CANOEBUILDERS_HUT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_GALLEY</UnitType>
 			</UnitUpgrades>
@@ -57334,10 +57334,10 @@ Base XP gained when defending
 				<BonusType>BONUS_WOOD</BonusType>
 				<BonusType>BONUS_REEDS</BonusType>
 			</PrereqBonuses>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_CANOE</UnitType>
 				<UnitType>UNIT_NEANDERTHAL_WAR_CANOE</UnitType>
@@ -57447,10 +57447,10 @@ Base XP gained when defending
 			<bMechanized>1</bMechanized>
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<PrereqTech>TECH_FISHING</PrereqTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_CLASSIC_WORKBOAT</UnitType>
 			</UnitUpgrades>
@@ -57585,11 +57585,11 @@ Base XP gained when defending
 			<bMechanized>1</bMechanized>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<PrereqTech>TECH_WARFARE</PrereqTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_LUMBER_CAMP</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_BATTERING_RAM</UnitType>
 			</UnitUpgrades>
@@ -57700,11 +57700,11 @@ Base XP gained when defending
 				<PrereqTech>TECH_ELEPHANT_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_ELEPHANTS</BonusType>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_ELEPHANT_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_WAR_ELEPHANT</UnitType>
 			</UnitUpgrades>
@@ -57811,10 +57811,10 @@ Base XP gained when defending
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
 			<BonusType>BONUS_OBSIDIAN</BonusType>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_SPEARMAN</UnitType>
 			</UnitUpgrades>
@@ -57912,10 +57912,10 @@ Base XP gained when defending
 			<bMilitarySupport>1</bMilitarySupport>
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_SPEAR_MAKING</PrereqTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_OBSIDIAN_SPEARMAN</UnitType>
 			</UnitUpgrades>
@@ -58020,10 +58020,10 @@ Base XP gained when defending
 			<bMilitarySupport>1</bMilitarySupport>
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_STONE_AGE_SPEARMAN</UnitType>
 			</UnitUpgrades>
@@ -58121,10 +58121,10 @@ Base XP gained when defending
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
 			<BonusType>BONUS_OBSIDIAN</BonusType>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_LIGHT_SWORDSMAN</UnitType>
 			</UnitUpgrades>
@@ -58220,10 +58220,10 @@ Base XP gained when defending
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
 			<BonusType>BONUS_OBSIDIAN</BonusType>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_AXEMAN</UnitType>
 			</UnitUpgrades>
@@ -58324,10 +58324,10 @@ Base XP gained when defending
 			<bMilitarySupport>1</bMilitarySupport>
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_AXE_MAKING</PrereqTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_OBSIDIAN_AXEMAN</UnitType>
 			</UnitUpgrades>
@@ -58429,10 +58429,10 @@ Base XP gained when defending
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
 			<BonusType>BONUS_OBSIDIAN</BonusType>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_EARLY_MACEMAN</UnitType>
 			</UnitUpgrades>
@@ -58533,10 +58533,10 @@ Base XP gained when defending
 			<bMilitarySupport>1</bMilitarySupport>
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_COMPOSITE_TOOLS</PrereqTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_OBSIDIAN_MACEMAN</UnitType>
 				<UnitType>UNIT_NEANDERTHAL_OBSIDIAN_SWORDSMAN</UnitType>
@@ -58656,10 +58656,10 @@ Base XP gained when defending
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bAssassin>1</bAssassin>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_RANGER</UnitType>
 			</UnitUpgrades>
@@ -58748,10 +58748,10 @@ Base XP gained when defending
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bAssassin>1</bAssassin>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_HUNTER</UnitType>
 			</UnitUpgrades>
@@ -58839,10 +58839,10 @@ Base XP gained when defending
 				</FreePromotion>
 			</FreePromotions>
 			<PrereqTech>TECH_PERSISTENCE_HUNTING</PrereqTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_TRACKER</UnitType>
 			</UnitUpgrades>
@@ -58936,10 +58936,10 @@ Base XP gained when defending
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_TRAILS</PrereqTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_GUIDE</UnitType>
 			</UnitUpgrades>
@@ -59132,9 +59132,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_WHEELWRIGHT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_CHARIOTRY</PrereqTech>
 			<BonusType>BONUS_WOOD</BonusType>
 			<PrereqBonuses>
@@ -59229,9 +59229,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANCIENT_VETERINARIAN</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_VETERINARY_MEDICINE</PrereqTech>
 			<BonusType>BONUS_SOAP</BonusType>
 			<PrereqBonuses>
@@ -59322,9 +59322,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ANCIENT_MACHINERY</PrereqTech>
 			<BonusType>BONUS_TOOLS</BonusType>
 			<iCost>155</iCost>
@@ -59414,9 +59414,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_FIELD_HOSPITAL</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -59520,9 +59520,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_WATCHMAKERS_SHOP</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_CLOCKWORKS</PrereqTech>
 			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqBonuses>
@@ -59617,9 +59617,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_VETRTINARIAN</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -59730,9 +59730,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_PARTS_MAKER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_MACHINE_TOOLS</PrereqTech>
 			<BonusType>BONUS_PARTS</BonusType>
 			<PrereqBonuses>
@@ -59824,9 +59824,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_AUTOREPAIR_SHOP</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<BonusType>BONUS_PARTS</BonusType>
 			<PrereqBonuses>
@@ -59917,9 +59917,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_AIRCRAFT_FACTORY</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_FLIGHT</PrereqTech>
 			<BonusType>BONUS_AIRCRAFT</BonusType>
 			<PrereqBonuses>
@@ -60015,9 +60015,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_AUTOREPAIR_SHOP</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_MECHANIZED_WARFARE</PrereqTech>
 			<BonusType>BONUS_PARTS</BonusType>
 			<PrereqBonuses>
@@ -60122,9 +60122,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_AIRCRAFT_FACTORY</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ADVANCED_AVIATION</PrereqTech>
 			<BonusType>BONUS_AIRCRAFT</BonusType>
 			<PrereqBonuses>
@@ -60226,9 +60226,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_AUTOREPAIR_SHOP</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SEMICONDUCTORS</PrereqTech>
 			<BonusType>BONUS_POWER_TOOLS</BonusType>
 			<PrereqBonuses>
@@ -60333,9 +60333,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_JET_AIRCRAFT_FACTORY</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_JET_PROPULSION</PrereqTech>
 			<BonusType>BONUS_JET_ENGINES</BonusType>
 			<PrereqBonuses>
@@ -60426,9 +60426,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_DESIGN_STUDIO</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_PERSONAL_COMPUTERS</PrereqTech>
 			<BonusType>BONUS_COMPUTERS</BonusType>
 			<PrereqBonuses>
@@ -60738,9 +60738,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_DESIGN_STUDIO</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_MICROPROCESSOR</PrereqTech>
 			<BonusType>BONUS_PERSONAL_ELECTRONICS</BonusType>
 			<PrereqBonuses>
@@ -60863,9 +60863,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ARTIFICIAL_INTELLIGENCE_CORE</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_QUANTUM_COMPUTING</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_DROIDS</PrereqTech>
@@ -60966,9 +60966,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ARTIFICIAL_INTELLIGENCE_CORE</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_QUANTUM_COMPUTING</PrereqTech>
 			<BonusType>BONUS_NEUROIMPLANTS</BonusType>
 			<PrereqBonuses>
@@ -61368,9 +61368,9 @@ Base XP gained when defending
 			<bNoCapture>1</bNoCapture>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_HERBALISM</PrereqTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_WILD_HERBS</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_HEALER</UnitType>
 				<UnitType>UNIT_SHEPHERD</UnitType>
@@ -61475,9 +61475,9 @@ Base XP gained when defending
 			<bNoCapture>1</bNoCapture>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HEALERHUT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_MEDICINE_MAN</UnitType>
 				<UnitType>UNIT_NEANDERTHAL_HEALER</UnitType>
@@ -61584,9 +61584,9 @@ Base XP gained when defending
 				<BonusType>BONUS_ALCOHOL</BonusType>
 				<BonusType>BONUS_SOAP</BonusType>
 			</PrereqBonuses>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HEALERHUT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_APOTHECARY</UnitType>
 			</UnitUpgrades>
@@ -61689,9 +61689,9 @@ Base XP gained when defending
 			<PrereqBonuses>
 				<BonusType>BONUS_SCROLLS</BonusType>
 			</PrereqBonuses>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_APOTHECARY_SHOP</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_DR</UnitType>
 			</UnitUpgrades>
@@ -61895,9 +61895,9 @@ Base XP gained when defending
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_ELIXIRS_AND_TONICS</PrereqTech>
 			<BonusType>BONUS_DRUGS</BonusType>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_MEDIC</UnitType>
 			</UnitUpgrades>
@@ -61999,9 +61999,9 @@ Base XP gained when defending
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_MEDICINE</PrereqTech>
 			<BonusType>BONUS_PHARMACEUTICALS</BonusType>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HOSPITAL</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_AMBULANCE</UnitType>
 				<UnitType>UNIT_MEDICAL_LAB_TECH</UnitType>
@@ -62117,9 +62117,9 @@ Base XP gained when defending
 					</Has>
 				</And>
 			</TrainCondition>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HOSPITAL</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_AMBULANCE_II</UnitType>
 			</UnitUpgrades>
@@ -62244,9 +62244,9 @@ Base XP gained when defending
 					</Has>
 				</And>
 			</TrainCondition>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HOSPITAL</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_MEDEVAC_DROPSHIP</UnitType>
 			</UnitUpgrades>
@@ -62365,9 +62365,9 @@ Base XP gained when defending
 			<PrereqBonuses>
 				<BonusType>BONUS_PHARMACEUTICALS</BonusType>
 			</PrereqBonuses>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HOSPITAL</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -62496,9 +62496,9 @@ Base XP gained when defending
 			<PrereqBonuses>
 				<BonusType>BONUS_PHARMACEUTICALS</BonusType>
 			</PrereqBonuses>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -62621,9 +62621,9 @@ Base XP gained when defending
 					</Has>
 				</And>
 			</TrainCondition>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_MEGATOWER_MEDICAL</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoCapture>1</bNoCapture>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -62738,9 +62738,9 @@ Base XP gained when defending
 			<PrereqBonuses>
 				<BonusType>BONUS_PHARMACEUTICALS</BonusType>
 			</PrereqBonuses>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_MEGATOWER_MEDICAL</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -63074,10 +63074,10 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HOSPITAL</BuildingType>
 				<BuildingType>BUILDING_DRYDOCK</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<BonusType>BONUS_COAL</BonusType>
 			<PrereqBonuses>
@@ -63200,10 +63200,10 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HOSPITAL</BuildingType>
 				<BuildingType>BUILDING_NAVAL_YARD</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_GLOBALIZATION</PrereqTech>
 			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqBonuses>
@@ -63404,9 +63404,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_FERTILITY_CLINIC</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_GENE_ENHANCEMENT</PrereqTech>
 			<BonusType>BONUS_AMMUNITION</BonusType>
 			<PrereqBonuses>
@@ -63496,9 +63496,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CLONING_LABORATORY</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_MAINSTREAM_CLONING</PrereqTech>
 			<BonusType>BONUS_AMMUNITION</BonusType>
 			<PrereqBonuses>
@@ -64067,9 +64067,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CAMEL_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<BonusType>BONUS_SULPHUR</BonusType>
 			<TrainCondition>
@@ -64216,9 +64216,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CAMEL_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
 			<PrereqBonuses>
 				<BonusType>BONUS_CAMEL</BonusType>
@@ -64363,9 +64363,9 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CAMEL_TRAINER</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_TRENCH_WARFARE</PrereqTech>
 			<PrereqBonuses>
 				<BonusType>BONUS_CAMEL</BonusType>
@@ -65272,9 +65272,9 @@ iTradeMultiplier>3</iTradeMultiplier>
 				</UnitAI>
 			</UnitAIs>
 			<ForceObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ForceObsoleteTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CARAVAN_POST</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<Flavors>
 				<Flavor>
@@ -65612,9 +65612,9 @@ iTradeMultiplier>3</iTradeMultiplier>
 				</UnitAI>
 			</UnitAIs>
 			<ForceObsoleteTech>TECH_ENGINEERING</ForceObsoleteTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CARAVAN_POST</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<Flavors>
 				<Flavor>
@@ -65724,9 +65724,9 @@ iTradeMultiplier>3</iTradeMultiplier>
 				</UnitAI>
 			</UnitAIs>
 			<ForceObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ForceObsoleteTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<iCost>240</iCost>
 			<iMoves>2</iMoves>
@@ -68079,9 +68079,9 @@ iTradeMultiplier>3</iTradeMultiplier>
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqTech>TECH_FUNDAMENTALISM</PrereqTech>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ALAMUT</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<BonusType>BONUS_DRUGS</BonusType>
 			<UnitUpgrades>
 				<UnitType>UNIT_SHARPSHOOTER</UnitType>
@@ -68333,9 +68333,9 @@ iTradeMultiplier>3</iTradeMultiplier>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuildings>
+			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SHAOLIN</BuildingType>
-			</PrereqBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_MARTIAL_ARTS</PrereqTech>
 			<BonusType>BONUS_SOAP</BonusType>
 			<PrereqBonuses>

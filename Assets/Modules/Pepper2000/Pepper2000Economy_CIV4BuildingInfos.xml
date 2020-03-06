@@ -16,7 +16,7 @@
 			<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
 			<iCost>9310</iCost>
 			<FreeBuilding>BUILDING_CISLUNAR_EFFECT</FreeBuilding>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 					<iNumBuildingNeeded>5</iNumBuildingNeeded>
@@ -57,7 +57,7 @@
 					<BuildingType>BUILDING_LUNAR_ASSEMBLY_PLANT</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -91,7 +91,7 @@
 			<PrereqTech>TECH_PLANETARY_MEGASTRUCTURES</PrereqTech>
 			<iCost>15610</iCost>
 			<FreeBuilding>BUILDING_SOLAR_EFFECT</FreeBuilding>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_STARPORT</BuildingType>
 					<iNumBuildingNeeded>5</iNumBuildingNeeded>
@@ -124,7 +124,7 @@
 					<BuildingType>BUILDING_CISLUNAR_ONEILL_CYLINDER</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -142,7 +142,7 @@
 			<PrereqTech>TECH_FOLDING_SPACE</PrereqTech>
 			<iCost>26310</iCost>
 			<FreeBuilding>BUILDING_GALACTIC_EFFECT</FreeBuilding>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_ECUMENOPOLIS</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
@@ -187,7 +187,7 @@
 					<BuildingType>BUILDING_BLACKHOLE_COLONY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -205,7 +205,7 @@
 			<PrereqTech>TECH_COSMIC_ENGINEERING</PrereqTech>
 			<iCost>39510</iCost>
 			<FreeBuilding>BUILDING_UNIVERSAL_EFFECT</FreeBuilding>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_INTERGALACTIC_WORMHOLE_HIVEMIND</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
@@ -242,7 +242,7 @@
 					<BuildingType>BUILDING_INTERGALACTIC_COLONY</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -260,7 +260,7 @@
 			<PrereqTech>TECH_REALITY_REPROGRAMMING</PrereqTech>
 			<iCost>57510</iCost>
 			<FreeBuilding>BUILDING_COSMIC_ECONOMY_EFFECT</FreeBuilding>
-			<PrereqBuildings>
+			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_COSMIC_EXPLORER_BASE</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
@@ -289,7 +289,7 @@
 					<BuildingType>BUILDING_NEUTRONIUM</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
-			</PrereqBuildings>
+			</PrereqAmountBuildings>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
