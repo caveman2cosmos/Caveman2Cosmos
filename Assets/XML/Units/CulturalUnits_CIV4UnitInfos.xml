@@ -23946,7 +23946,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
-			<BonusType>BONUS_MEDES</BonusType>
+			<BonusType>BONUS_MEDIAN</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_COPPER_WARES</BonusType>
 				<BonusType>BONUS_BRONZE_WARES</BonusType>
@@ -32085,7 +32085,7 @@
 				<PrereqTech>TECH_HORSE_BREEDING</PrereqTech>
 				<PrereqTech>TECH_HERALDRY</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_SELJUKS</BonusType>
+			<BonusType>BONUS_SELJUK</BonusType>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -35797,7 +35797,7 @@
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_HORSE_TRAINER</PrereqBuilding>
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
-			<BonusType>BONUS_TATARS</BonusType>
+			<BonusType>BONUS_TATAR</BonusType>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -44464,7 +44464,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_RIFLING</PrereqTech>
-			<BonusType>BONUS_CHECHENIAN</BonusType>
+			<BonusType>BONUS_CHECHEN</BonusType>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -46520,7 +46520,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
-			<BonusType>BONUS_ALEMANNI</BonusType>
+			<BonusType>BONUS_ALEMANNIC</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_COPPER_WARES</BonusType>
 				<BonusType>BONUS_IRON_WARES</BonusType>
@@ -51288,7 +51288,7 @@
 			</UnitAIs>
 			<PrereqBuilding>BUILDING_SHIPWRIGHT</PrereqBuilding>
 			<PrereqTech>TECH_RUDDER</PrereqTech>
-			<BonusType>BONUS_JUTES</BonusType>
+			<BonusType>BONUS_JUTE</BonusType>
 			<iCost>310</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iMoves>3</iMoves>

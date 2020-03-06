@@ -103,12 +103,12 @@
 		<Tag>TXT_KEY_BONUS_ADVANCED_REPLICATORS</Tag>
 		<English>Advanced Replicators</English>
 		<French>Réplicateurs avancés</French>
-		<Italian>Replicatori avanzati</Italian>
+		<Italian>Duplicatori avanzati</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ADVANCED_REPLICATORS_PEDIA</Tag>
 		<English>An advanced replicator is a highly intelligent and versatile replicator that, if instructed, can create manufactured goods, structures, and copies of itself.</English>
-		<Italian>Un replicatore avanzato è un replicatore altamente intelligente e versatile che, se programmato, può creare oggetti, strutture oppure altri replicatori.</Italian>
+		<Italian>Un duplicatore avanzato è un duplicatore altamente intelligente e versatile che, se programmato, può creare oggetti, strutture oppure altri duplicatore.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AEROGEL</Tag>
@@ -190,8 +190,8 @@
 		<Italian>Una bevanda alcolica è una bevanda che contiene una quantità considerevole di etanolo (chiamato informalmente anche "alcool"). Nonostante bere bevande alcoliche rivesta un ruolo sociale molto importante in molte culture, l'alcool può generare dipendenza o il suo consumo può esserne abusato. Quasi tutti i paesi del mondo ne regolano la produzione, la vendita e il consumo, da quelli che lo bandiscono completamente a quelli che ne limitano vendita e consumo ai soli maggiorenni.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_ALEMANNI</Tag>
-		<English>Alemanni</English>
+		<Tag>TXT_KEY_BONUS_ALEMANNIC</Tag>
+		<English>Alemannic</English>
 		<French>Allémanique</French>
 		<Italian>Alemanno</Italian>
 	</TEXT>
@@ -217,7 +217,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ALICE_MATTER</Tag>
 		<English>Alice Matter</English>
-		<French>Matière Spéculative</French>
+		<French>Matière spéculative</French>
 		<Italian>Materia speculare</Italian>
 	</TEXT>
 	<TEXT>
@@ -296,7 +296,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ANCIENT_RELICS_PEDIA</Tag>
-		<English>A relic is an object relative to a saint or venerated person, preserved for purposes of veneration as a tangible memorial. It can consist of the physical remains of the venerated person (such as the body or parts of it) or of objects possessed or associated to the person (such as weapons, furnitures, clothing, etc.). The term is also used to define something that has survived the passage of time, especially an object or custom whose original culture has disappeared, but also an object cherished for historical or memorial value (such as a keepsake or heirloom). Relics are an important aspect of many religions and cultures.</English>
+		<English>A relic is an object relative to a saint or venerated person, preserved for purposes of veneration as a tangible memorial. It can consist of the physical remains of the venerated person (such as the body or parts of it) or of objects possessed or associated to the person (such as weapons, furniture, clothing, etc.). The term is also used to define something that has survived the passage of time, especially an object or custom whose original culture has disappeared, but also an object cherished for historical or memorial value (such as a keepsake or heirloom). Relics are an important aspect of many religions and cultures.</English>
 		<Italian>Una reliquia è un oggetto relativo a un santo o una persona venerata, conservato come memoriale tangibile a fini di venerazione, come i resti fisici della persona venerata (come il corpo o parti di esso) oppure oggetti posseduti o associati alla persona (come armi, mobili, vestiti, ecc.). Il termine è anche usato per definire qualcosa che è sopravvissuto al passare del tempo, in particolare un oggetto o un'usanza la cui cultura originale è scomparsa, ma anche un oggetto apprezzato per il valore storico o commemorativo (come un ricordo o un cimelio). Le reliquie sono un aspetto importante di molte religioni e culture.</Italian>
 	</TEXT>
 	<TEXT>
@@ -400,9 +400,15 @@
 		<Polish>Ormiańska</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_ARVERNIAN</Tag>
+		<English>Arvernian</English>
+		<French>Arvernien</French>
+		<Italian>Arverno</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_ARTISAN_PLANETS</Tag>
 		<English>Artisan Planets</English>
-		<French>Planètes Artisan</French>
+		<French>Planètes artisan</French>
 		<Italian>Pianeti artigianali</Italian>
 	</TEXT>
 	<TEXT>
@@ -464,19 +470,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AUTOMOBILES_PEDIA</Tag>
-		<English>An automobile, autocar, motor car or car is a wheeled motor vehicle used for transporting passengers. Most definitions of the term specify that automobiles are designed to run primarily on roads, to have seating for one to eight people, to typically have four wheels, and to be constructed principally for the transport of people rather than goods.</English>
+		<English>An automobile, also called car, is a wheeled motor vehicle used for transporting passengers. Most definitions of the term specify that automobiles are designed to run primarily on roads, to have seating for one to eight people, to typically have four wheels, and to be constructed principally for the transport of people rather than goods.</English>
 		<Italian>Un'automobile è un veicolo a motore, usato principalmente per il trasporto di passeggeri o, secondariamente, di oggetti. Le automobili sono progettate per procedere su percorsi appositi, come le strade, possono avere posti disponibili fino a otto persone e hanno solitamente quattro ruote.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AVARIC</Tag>
 		<English>Avaric</English>
 		<Italian>Avaro</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_ARVERNIAN</Tag>
-		<English>Arvernian</English>
-		<French>Arvernien</French>
-		<Italian>Arverno</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AYMARA</Tag>
@@ -524,8 +524,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BAMBOO_PEDIA</Tag>
-		<English>Bamboo is an evergreen perennial flowering plant, whose height can vary from a few centimeters to considerable dimensions: it can reach even 40 mt (131 ft) of height and 30 cm (11.81 in) in diameter. Bamboos are of notable economic and cultural significance in South, Southeast and East Asia, being used for building materials, as a food source, and as a versatile raw product (ropes, weapons, traps, paper, sails, fabrics, frames). Bamboo, like wood, is a natural composite material with a high strength-to-weight ratio useful for structures, and its strength is generally similar to a strong softwood or hardwood timber.</English>
-		<Italian>Il bambù è una pianta da fiore perenne sempreverde, la cui altezza può variare da pochi centimetri a dimensioni considerevoli: può raggiungere anche 40 mt di altezza e 30 cm di diametro. I bambù hanno un notevole significato economico e culturale in Asia meridionale, sud-orientale e orientale, essendo usati come materiali da costruzione, come fonte di cibo e come prodotto grezzo versatile (corde, armi, trappole, carta, vele, tessuti, cornici). Il bambù, come il legno, è un materiale composito naturale con un elevato rapporto resistenza-peso utile per le strutture e la sua resistenza è generalmente simile a quella del legno.</Italian>
+		<English>Bamboo is an evergreen perennial flowering plant, whose height can vary from a few centimeters to considerable dimensions: it can reach even 40 m (131 ft) of height and 30 cm (11.81 in) in diameter. Bamboos are of notable economic and cultural significance in South, Southeast and East Asia, being used for building materials, as a food source, and as a versatile raw product (ropes, weapons, traps, paper, sails, fabrics, frames). Bamboo, like wood, is a natural composite material with a high strength-to-weight ratio useful for structures, and its strength is generally similar to a strong softwood or hardwood timber.</English>
+		<Italian>Il bambù è una pianta da fiore perenne sempreverde, la cui altezza può variare da pochi centimetri a dimensioni considerevoli: può raggiungere anche 40 m di altezza e 30 cm di diametro. I bambù hanno un notevole significato economico e culturale in Asia meridionale, sud-orientale e orientale, essendo usati come materiali da costruzione, come fonte di cibo e come prodotto grezzo versatile (corde, armi, trappole, carta, vele, tessuti, cornici). Il bambù, come il legno, è un materiale composito naturale con un elevato rapporto resistenza-peso utile per le strutture e la sua resistenza è generalmente simile a quella del legno.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BANANA</Tag>
@@ -538,8 +538,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BANANA_PEDIA</Tag>
-		<English>Banana is the fruit of the banana tree. Native to the Southeast Asia tropical area, bananas develop (in their edible varieties) in bunches. They typically weigh between 90 and 200 grams (3.2-7 oz) and are typically eaten raw, although in some traditions they can also be cooked.</English>
-		<Italian>La banana è il frutto dell'albero di banano. Originaria dell'area tropicale dell'Asia sud-orientale, si sviluppa (nelle sue varietà commestibili) in una serie di grappoli. Pesa tipicamente fra i 90 e i 200 grammi e viene tipicamente consumata crude, sebbene in alcune tradizioni sia consumata anche cotta.</Italian>
+		<English>Banana is the fruit of the banana tree. Native to the Southeast Asia tropical area, bananas develop (in their edible varieties) in bunches. They typically weigh between 90 and 200 g (3.2-7 oz) and are typically eaten raw, although in some traditions they can also be cooked.</English>
+		<Italian>La banana è il frutto dell'albero di banano. Originaria dell'area tropicale dell'Asia sud-orientale, si sviluppa (nelle sue varietà commestibili) in una serie di grappoli. Pesa tipicamente fra i 90 e i 200 g e viene tipicamente consumata crude, sebbene in alcune tradizioni sia consumata anche cotta.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BANDANESE</Tag>
@@ -666,7 +666,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BEAVERS_PEDIA</Tag>
 		<English>A beaver is a large, primarily nocturnal, semi-aquatic rodent. Beavers are known for their natural trait of building dams on rivers and streams, and building their homes in the resulting pond. Beavers also build canals to float building materials that are difficult to haul over land. Beavers were hunted for millennia, mainly for their fur and for their bitter-tasting secretion (called "castoreum") contained in their sacs, that is used in traditional medicine or as a taste enhancer for vanilla, strawberry and raspberry flavorings.</English>
-		<Italian>Il castoro è un grande roditore semiaquatico, principalmente notturno. I castori sono noti per la loro caratteristica naturale di costruire dighe su fiumi e torrenti e di costruire le loro case nello stagno risultante. I castori costruiscono anche canali per far galleggiare materiali da costruzione difficili da trasportare via terra. I castori sono stati cacciati per millenni, principalmente per la loro pelliccia e per la loro secrezione dal sapore amaro (chiamata "castoreum") contenuta nelle loro sacche, che viene utilizzata nella medicina tradizionale o come esaltatore di gusto per gli aromi di vaniglia, fragola e lampone.</Italian>
+		<Italian>Il castoro è un grande roditore semi-acquatico, principalmente notturno. I castori sono noti per la loro caratteristica naturale di costruire dighe su fiumi e torrenti e di costruire le loro case nello stagno risultante. I castori costruiscono anche canali per far galleggiare materiali da costruzione difficili da trasportare via terra. I castori sono stati cacciati per millenni, principalmente per la loro pelliccia e per la loro secrezione dal sapore amaro (chiamata "castoreum") contenuta nelle loro sacche, che viene utilizzata nella medicina tradizionale o come esaltatore di gusto per gli aromi di vaniglia, fragola e lampone.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BEDOUIN</Tag>
@@ -715,7 +715,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BERLINITE_PEDIA</Tag>
 		<English>Berlinite is a rare, high-temperature hydro-thermal or meta-somatic phosphate mineral. It was first described in 1868 for an occurrence in the Västanå iron mine (Sweden), and named for Nils Johan Berlin of Lund University. It has the same crystal structure as quartz, and can vary from colorless to grayish or pale pink.</English>
-		<Italian>La berlinite è un raro minerale idrotermico o metasomatico ad alta temperatura. Fu descritto per la prima volta nel 1868, quando fu trovato nella miniera di ferro di Västanå (Svezia), e fu chiamato così in onore di Nils Johan Berlin dell'Università di Lund. Ha la stessa struttura cristallina del quarzo e può variare da incolore a grigiastro o rosa pallido.</Italian>
+		<Italian>La berlinite è un raro minerale idro-termico o meta-somatico ad alta temperatura. Fu descritto per la prima volta nel 1868, quando fu trovato nella miniera di ferro di Västanå (Svezia), e fu chiamato così in onore di Nils Johan Berlin dell'Università di Lund. Ha la stessa struttura cristallina del quarzo e può variare da incolore a grigiastro o rosa pallido.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BERRIES</Tag>
@@ -739,7 +739,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BICYCLES_PEDIA</Tag>
 		<English>A bicycle, also called a bike or cycle, is a human-powered or motor-powered, pedal-driven, single-track vehicle, having two wheels attached to a frame, one behind the other. Bicycles were introduced in the late 19th century in Europe, and by the early 21st century, more than 1 billion were in existence at a given time, far exceeding the number of cars, both in total and ranked by the number of individual models produced. They are the principal means of transportation in many regions. They also provide a popular form of recreation, and have been adapted for use as children's toys, general fitness, military and police applications, courier services, bicycle racing, and bicycle stunts.</English>
-		<Italian>Una bicicletta è un veicolo a pedali, azionato dalla forza muscolare degli arti inferiori di un essere umano o provvisto di motore, con due ruote attaccate a un telaio, una dietro l'altra. Le biciclette furono introdotte alla fine del XIX secolo in Europa e all'inizio del XXI secolo ne esistevano più di 1 miliardo, superando di gran lunga le automobili sia come numero complessivo, sia come numero di singoli modelli prodotti. Sono i principali mezzi di trasporto in molte regioni e offrono anche una forma popolare di svago. Sono impiegate anche come giocattoli per bambini, a scopo di fitness, per applicazioni militari e di polizia, servizi di corriere oppure corse o eventi sportivi.</Italian>
+		<Italian>Una bicicletta è un veicolo a pedali, azionato dalla forza muscolare degli arti inferiori di un essere umano o provvisto di motore, con due ruote attaccate a un telaio, una dietro l'altra. Le biciclette furono introdotte alla fine del XIX secolo in Europa e all'inizio del XXI secolo ne esistevano più di un miliardo, superando di gran lunga le automobili sia come numero complessivo, sia come numero di singoli modelli prodotti. Sono i principali mezzi di trasporto in molte regioni e offrono anche una forma popolare di svago. Sono impiegate anche come giocattoli per bambini, a scopo di fitness, per applicazioni militari e di polizia, servizi di corriere oppure corse o eventi sportivi.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BIOFUEL</Tag>
@@ -776,7 +776,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BIOPOLYMERS_PEDIA</Tag>
-		<English>Biopolymers are polymers produced by living organisms, that contain monomeric units that are covalently bonded to form larger structures. There are three main classes of biopolymers: polynucleotides (RNA and DNA), which are long polymers composed of 13 or more nucleotide monomers; polypeptides, which are short polymers of amino acids; and polysaccharides, which are often linear bonded polymeric carbohydrate structures. Other examples of biopolymers include rubber, suberin, melanin and lignin.</English>
+		<English>Biopolymers are polymers produced by living organisms, that contain monomeric units that are covalently bonded to form larger structures. There are three main classes of biopolymers: polynucleotides (RNA and DNA), which are long polymers composed of 13 or more nucleotide monomers; polypeptides, which are short polymers of amino-acids; and polysaccharides, which are often linear bonded polymeric carbohydrate structures. Other examples of biopolymers include rubber, suberin, melanin and lignin.</English>
 		<Italian>I biopolimeri sono polimeri prodotti da organismi viventi, che contengono unità monomeriche che sono covalentemente legate per formare strutture più grandi. Esistono tre classi principali di biopolimeri: i polinucleotidi (RNA e DNA), polimeri lunghi composti da 13 o più monomeri nucleotidici; i polipeptidi, brevi polimeri di aminoacidi; i polisaccaridi, che sono spesso strutture di carboidrati polimerici a legame lineare. Fra gli altri esempi di biopolimeri ci sono la gomma, la suberina, la melanina e la lignina.</Italian>
 	</TEXT>
 	<TEXT>
@@ -789,7 +789,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BISON_PEDIA</Tag>
-		<English>Bison are large ungulated ruminants, similar in appearance to other bovines such as cattle and buffalos. They are broad and muscular with shaggy coats of long hair, and travel in herds. Adults of the American species grow up to 2 m (6 ft 7 in) in height and 3.35 m (11.0 ft) in length, and can weigh from around 400 to 1,270 kg (880 to 2,800 lb); European bisons can reach up to 2.1 m (6 ft 11 in) in height and 2.9 m (9 ft 6 in) in length, and can weigh from 800 to 1,000 kg (1,800 to 2,200 lb).</English>
+		<English>A bison is a large ungulated ruminant, similar in appearance to other bovines such as cattle and buffaloes. They are broad and muscular with shaggy coats of long hair, and travel in herds. Adults of the American species grow up to 2 m (6 ft 7 in) in height and 3.35 m (11 ft) in length, and can weigh from around 400 to 1,270 kg (880 to 2,800 lb); European bisons can reach up to 2.1 m (6 ft 11 in) in height and 2.9 m (9 ft 6 in) in length, and can weigh from 800 to 1,000 kg (1,800 to 2,200 lb).</English>
 		<Italian>Un bisonte è un grande ruminante ungulato, simile nell'aspetto ad altri bovini come bovini e bufali. È un animale largo e muscoloso, con una pelliccia lunga e ispida, che viaggia in branchi. Gli adulti della specie americana crescono fino a 2 m di altezza e 3,35 m di lunghezza e possono pesare da circa 400 a 1.270 kg; i bisonti europei possono raggiungere fino a 2,1 metri di altezza e 2,9 metri di lunghezza e possono pesare da 800 a 1.000 kg.</Italian>
 	</TEXT>
 	<TEXT>
@@ -807,7 +807,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BLENDER_PEDIA</Tag>
-		<English>A blender is a kitchen and laboratory appliance used to mix, purée, or emulsify food and other substances. A stationary blender consists of a blender container with a rotating metal blade at the bottom, powered by an electric motor that is in the base. An immersion blender has a motor on top connected by a shaft to a rotating blade at the bottom, which can be used with any container.</English>
+		<English>A blender is a kitchen and laboratory appliance used to mix, puree, or emulsify food and other substances. A stationary blender consists of a blender container with a rotating metal blade at the bottom, powered by an electric motor that is in the base. An immersion blender has a motor on top connected by a shaft to a rotating blade at the bottom, which can be used with any container.</English>
 		<Italian>Un frullatore è un apparecchio da cucina e da laboratorio utilizzato per miscelare, frullare o emulsionare alimenti e altre sostanze. Un frullatore fisso è costituito da un contenitore con una lama metallica rotante nella parte inferiore, alimentato da un motore elettrico che si trova nella base. Un frullatore a immersione ha invece il motore nella parte superiore, collegato da un albero a una lama rotante nella parte inferiore e può essere utilizzato con qualsiasi contenitore.</Italian>
 	</TEXT>
 	<TEXT>
@@ -915,7 +915,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BUGS_PEDIA</Tag>
-		<English>Bug is a collective name for an order of animals comprising some 50,000 to 80,000 species such as the cicadas, aphids, planthoppers, leafhoppers, and shield bugs. They range in size from 1 mm (0.04 in) to around 15 cm (6 in), and share a common arrangement of sucking mouthparts. Most feed on plants, using their sucking and piercing mouthparts to extract plant sap. Some are parasitic, while others are predators that feed on other insects or small invertebrates. Some species are significant agricultural pests, damaging crops or being the vectors of serious viral diseases. Other species have been used for biological control of insect pests.</English>
+		<English>Bug is a collective name for an order of animals comprising some 50,000 to 80,000 species such as the cicadas, aphids, plant-hoppers, leaf-hoppers, and shield bugs. They range in size from 1 mm (0.04 in) to around 15 cm (6 in), and share a common arrangement of sucking mouthparts. Most feed on plants, using their sucking and piercing mouthparts to extract plant sap. Some are parasitic, while others are predators that feed on other insects or small invertebrates. Some species are significant agricultural pests, damaging crops or being the vectors of serious viral diseases. Other species have been used for biological control of insect pests.</English>
 		<Italian>Insetto è un nome collettivo per un ordine di animali che comprende fra le 50.000 e le 80.000 specie animali, fra cui cicale, afidi, cavallette, cavallette e insetti scudo. Le dimensioni variano da 1 mm a circa 15 cm e condividono una disposizione comune di boccagli succhianti. La maggior parte si nutre di piante, usando i loro boccagli per estrarre linfa vegetale. Alcuni sono parassiti, mentre altri sono predatori che si nutrono di altri insetti o piccoli invertebrati. Alcune specie sono considerate dei parassiti in ambito agricolo, danneggiando colture o essendo vettori di gravi malattie virali. Altre specie sono state utilizzate per il controllo biologico dei parassiti.</Italian>
 	</TEXT>
 	<TEXT>
@@ -924,17 +924,6 @@
 		<French>Bulgare</French>
 		<Italian>Bulgaro</Italian>
 		<Polish>Bułgarska</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_SYNTHETIC_DIAMOND</Tag>
-		<English>Synthetic Diamond</English>
-		<French>Diamant Synthétique</French>
-		<Italian>Diamanti sintetici</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_SYNTHETIC_DIAMOND_PEDIA</Tag>
-		<English>A synthetic diamond is diamond produced by an artificial controlled process, instead of the natural geological process. Synthetic diamonds are made of the same material as natural diamonds, i.e. pure carbon, although their properties depend on the details of the manufacturing processes. Some varieties have superior hardness, thermal conductivity and electron mobility to those of most naturally formed diamonds. It is estimated that 98% of industrial grade diamond demand is supplied with synthetic diamonds.</English>
-		<Italian>Un diamante sintetico è un diamante prodotto da un processo artificiale controllato, anziché dal naturale processo geologico. I diamanti sintetici sono realizzati con lo stesso materiale dei diamanti naturali, ossia il carbonio puro, anche se le loro proprietà dipendono dai dettagli dei processi di fabbricazione. Alcune varietà di diamanti hanno durezza, conducibilità termica e mobilità elettronica superiori a quelle dei diamanti naturali. Si stima che il 98% della domanda di diamanti di livello industriale venga soddisfatta da diamanti sintetici.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BURGUNDIAN</Tag>
@@ -1156,7 +1145,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CARVED_EMU_EGGS_PEDIA</Tag>
 		<English>Carved emu eggs are an art form made by carving a kalthi-parti, or emu egg. The practice began in the mid to late 19th century and, while it has been practiced by people in Australia from many backgrounds, it is often strongly associated with Aboriginal art. Some of the earliest carvers were not strictly Aboriginal and these carvers created very decorative and complicated designs that were popular at the time.</English>
-		<Italian>Le uova di Emu intagliate sono una forma d'arte creata scolpendo un kalthi-parti, o uovo di emu. La pratica è iniziata tra la metà e la fine del XIX secolo e, sebbene sia stata praticata da australiani di diversa estrazione etnico-sociale, è spesso fortemente associata all'arte aborigena. Alcuni dei primi intagliatori non erano aborigeni e questi intagliatori crearono disegni molto decorativi e complicati, molto popolari all'epoca.</Italian>
+		<Italian>Le uova di emu intagliate sono una forma d'arte creata scolpendo un kalthi-parti, o uovo di emu. La pratica è iniziata tra la metà e la fine del XIX secolo e, sebbene sia stata praticata da australiani di diversa estrazione etnico-sociale, è spesso fortemente associata all'arte aborigena. Alcuni dei primi intagliatori non erano aborigeni e questi intagliatori crearono disegni molto decorativi e complicati, molto popolari all'epoca.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CASTILIAN</Tag>
@@ -1241,7 +1230,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CERMET_PEDIA</Tag>
 		<English>A cermet is a composite material composed of ceramic (cer) and metallic (met) materials. It is ideally designed to have the optimal properties of both a ceramic, such as high temperature resistance and hardness, and those of a metal, such as the ability to undergo plastic deformation. Cermets are used in the manufacture of resistors (especially potentiometers), capacitors, and other electronic components which may experience high temperature. Some types of cermets are also being considered for use as spacecraft shielding, as they resist the high velocity impacts of micrometeoroids and orbital debris much more effectively than more traditional spacecraft materials.</English>
-		<Italian>Un cermet è un materiale composito composto da materiali ceramici (cer) e metallici (met). È progettato idealmente per avere le proprietà ottimali sia di una ceramica (come resistenza alle alte temperature e durezza), sia quelle di un metallo (come la capacità di subire una deformazione plastica). I cermet vengono utilizzati nella fabbricazione di resistori (in particolare potenziometri), condensatori e altri componenti elettronici che potrebbero raggiungere temperature elevate. Alcuni tipi di cermet vengono anche considerati per la schermatura di veicoli spaziali, poiché resistono agli impatti ad alta velocità dei micrometeoroidi e dei detriti orbitali in modo molto più efficace rispetto ai più tradizionali materiali spaziali.</Italian>
+		<Italian>Un cermet è un materiale composito composto da materiali ceramici (cer) e metallici (met). È progettato idealmente per avere le proprietà ottimali sia di una ceramica (come resistenza alle alte temperature e durezza), sia quelle di un metallo (come la capacità di subire una deformazione plastica). I cermet vengono utilizzati nella fabbricazione di resistori (in particolare potenziometri), condensatori e altri componenti elettronici che potrebbero raggiungere temperature elevate. Alcuni tipi di cermet vengono anche considerati per la schermatura di veicoli spaziali, poiché resistono agli impatti ad alta velocità dei micro-meteoroidi e dei detriti orbitali in modo molto più efficace rispetto ai più tradizionali materiali spaziali.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CETACEA_SAPIENS</Tag>
@@ -1280,6 +1269,11 @@
 		<Italian>Cham</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_CHAMORRAN</Tag>
+		<English>Chamorran</English>
+		<Italian>Chamorro</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHAOS_WANDS</Tag>
 		<English>Chaos Wands</English>
 		<French>Baguettes du Chaos</French>
@@ -1308,8 +1302,8 @@
 		<Italian>Chavín</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_CHECHENIAN</Tag>
-		<English>Chechenian</English>
+		<Tag>TXT_KEY_BONUS_CHECHEN</Tag>
+		<English>Chechen</English>
 		<French>Tchétchénienne</French>
 		<Italian>Ceceno</Italian>
 	</TEXT>
@@ -1390,11 +1384,6 @@
 		<Italian>Chola</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_KHWARAZMIAN</Tag>
-		<English>Khwarazmian</English>
-		<Italian>Corasmio</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHROMITE_ORE</Tag>
 		<English>Chromite Ore</English>
 		<French>Minerai de chromite</French>
@@ -1403,7 +1392,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHROMITE_ORE_PEDIA</Tag>
-		<English>Chromite is an iron chromium oxide mineral. Chromite is mined particularly to make stainless steel through the production of ferrochrome, which is an iron-chromium alloy. Chromite grains are commonly found in large mafic igneous intrusions, such as the Bushveld in South Africa and India. Chromite can be used as a refractory material, because it has a high heat stability. Chromium is extracted from chromite, and it is primarily used for production of corrosion-resistant superalloys, nichrome, and stainless steel.</English>
+		<English>Chromite is an iron chromium oxide mineral. Chromite is mined particularly to make stainless steel through the production of ferrochrome, which is an iron-chromium alloy. Chromite grains are commonly found in large mafic igneous intrusions, such as the Bushveld in South Africa and India. Chromite can be used as a refractory material, because it has a high heat stability. Chromium is extracted from chromite, and it is primarily used for production of corrosion-resistant super-alloys, nichrome, and stainless steel.</English>
 		<Italian>La cromite è un minerale ossido di ferro e cromo. La cromite viene estratta in particolare per produrre acciaio inossidabile attraverso la produzione di ferrocromo, una lega di ferro e cromo. I grani di cromite si trovano comunemente nelle grandi intrusioni femiche, come il Bushveld in Sudafrica e in India. La cromite può essere utilizzata come materiale refrattario, perché ha un'alta stabilità al calore. Dalla cromite viene estratto il cromo, che viene primariamente usato per la produzione di superleghe resistenti alla corrosione, nichelcromo e acciaio inossidabile.</Italian>
 	</TEXT>
 	<TEXT>
@@ -1448,9 +1437,23 @@
 		<Italian>Mollusco è un nome comune per diversi tipi di molluschi bivalvi. La parola viene spesso applicata solo a coloro che sono commestibili e vivono come endofauna, trascorrendo la maggior parte della loro vita sepolti a metà nella sabbia del fondale marino. Le vongole hanno due gusci di uguali dimensioni, collegati da due muscoli adduttori, e hanno un potente piede scavatore. Vivono in ambienti sia di acqua dolce che marina; nel primo, preferiscono scavare nel fango. Le vongole sono state e sono ancora una risorsa alimentare per tutti i tipi di fauna, compresi gli umani.</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_CLAY</Tag>
+		<English>Clay</English>
+		<French>Argile</French>
+		<German>Lehm</German>
+		<Italian>Argilla</Italian>
+		<Spanish>Arcilla</Spanish>
+		<Polish>Glina</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_CLAY_PEDIA</Tag>
+		<English>Clay is an aluminum silicate composed mainly of fine-grained materials. Clay minerals have peculiar physical-chemical characteristics that give them a sensitive plasticity (if mixed with water) or refractory (if dehydrated) - properties that have allowed the development of the brick and ceramic industries.</English>
+		<Italian>L'argilla è un silicato d'alluminio composto principalmente di materiali a grana fine. I minerali argillosi hanno caratteristiche fisico-chimiche peculiari che conferiscono loro una sensibile plasticità (se miscelato con acqua) o refrattarietà (se disidratato) - proprietà che hanno permesso lo sviluppo dell'industria laterizia e ceramica.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_CLAYTRONIC_ATOMS</Tag>
 		<English>Claytronic Atoms</English>
-		<French>Atomes Claytroniques</French>
+		<French>Atomes claytroniques</French>
 		<Italian>Atomi claytronici</Italian>
 	</TEXT>
 	<TEXT>
@@ -1520,8 +1523,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_COCA_PEDIA</Tag>
-		<English>Coca is a plant native to western South America, that resembles a blackthorn bush, and grows to a height of 2 to 3 mt (7 to 10 ft). The branches are straight, and the leaves are thin, opaque, oval, and taper at the extremities. A marked characteristic of the leaf is an areolated portion bounded by two longitudinal curved lines, one line on each side of the midrib, and more conspicuous on the under face of the leaf. Coca is known throughout the world for its psychoactive alkaloid, cocaine, used by natives as a stimulant.</English>
-		<Italian>La coca è una pianta originaria del Sud America occidentale, che ricorda un cespuglio di prugnolo e cresce fino a un'altezza di 2-3 metri. I rami sono dritti e le foglie sono sottili, opache, ovali e affusolate alle estremità. Una caratteristica marcata della foglia è una porzione areolata delimitata da due linee curve longitudinali, una linea su ciascun lato della parte centrale e più evidente sulla faccia inferiore della foglia. La coca è conosciuta in tutto il mondo per il suo alcaloide psicoattivo, la cocaina, usata dai nativi come stimolante.</Italian>
+		<English>Coca is a plant native to western South America, that resembles a blackthorn bush, and grows to a height of 2-3 m (7-10 ft). The branches are straight, and the leaves are thin, opaque, oval, and taper at the extremities. A marked characteristic of the leaf is an areolated portion bounded by two longitudinal curved lines, one line on each side of the midrib, and more conspicuous on the under face of the leaf. Coca is known throughout the world for its psychoactive alkaloid, cocaine, used by natives as a stimulant.</English>
+		<Italian>La coca è una pianta originaria del Sud America occidentale, che ricorda un cespuglio di prugnolo e cresce fino a un'altezza di 2-3 m. I rami sono dritti e le foglie sono sottili, opache, ovali e affusolate alle estremità. Una caratteristica marcata della foglia è una porzione areolata delimitata da due linee curve longitudinali, una linea su ciascun lato della parte centrale e più evidente sulla faccia inferiore della foglia. La coca è conosciuta in tutto il mondo per il suo alcaloide psicoattivo, la cocaina, usata dai nativi come stimolante.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_COCOA</Tag>
@@ -1534,8 +1537,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_COCOA_PEDIA</Tag>
-		<English>The cocoa tree is a small evergreen tree, native to the deep tropical regions of Mesoamerica. It is 4 to 8 mt (13 to 26 ft) tall, with 1-2 cm (0.39-0-79 in) flowers. Its fruit, called a "cacao pod", is ovoid, 15–30 cm (5.9–11.8 in) long and 8–10 cm (3.1–3.9 in) wide, ripening yellow to orange, and weighs about 500 g (1.1 lb) when ripe. The pod contains 20 to 60 seeds, usually called "beans", embedded in a white pulp. Seeds are the main ingredient of chocolate, while the pulp can be used to prepare juices, smoothies, jellies, and can also be distilled into an alcoholic beverage.</English>
-		<Italian>L'albero di cacao è un piccolo albero sempreverde, originario delle regioni tropicali profonde della Mesoamerica. È alto da 4 a 8 mt, con fiori di 1-2 cm. Il suo frutto, chiamato "baccello di cacao", è ovoidale, lungo 15-30 cm e largo 8-10 cm, pesa circa 500 g quando matura ed cambia colore da giallo ad arancione a seconda del grado di maturazione. Il baccello contiene da 20 a 60 semi, generalmente chiamati "fagioli", incorporati in una polpa bianca. I semi sono l'ingrediente principale del cioccolato, mentre la polpa può essere utilizzata per preparare succhi, frullati, gelatine e può anche essere distillata per farne una bevanda alcolica.</Italian>
+		<English>The cocoa tree is a small evergreen tree, native to the deep tropical regions of Mesoamerica. It is 4 to 8 m (13 to 26 ft) tall, with 1-2 cm (0.39-0-79 in) flowers. Its fruit, called a "cocoa pod", is ovoid, 15–30 cm (5.9–11.8 in) long and 8–10 cm (3.1–3.9 in) wide, ripening yellow to orange, and weighs about 500 g (1.1 lb) when ripe. The pod contains 20 to 60 seeds, usually called "beans", embedded in a white pulp. Seeds are the main ingredient of chocolate, while the pulp can be used to prepare juices, smoothies, jellies, and can also be distilled into an alcoholic beverage.</English>
+		<Italian>L'albero di cacao è un piccolo albero sempreverde, originario delle regioni tropicali profonde della Mesoamerica. È alto da 4 a 8 m, con fiori di 1-2 cm. Il suo frutto, chiamato "baccello di cacao", è ovoidale, lungo 15-30 cm e largo 8-10 cm, pesa circa 500 g quando matura ed cambia colore da giallo ad arancione a seconda del grado di maturazione. Il baccello contiene da 20 a 60 semi, generalmente chiamati "fagioli", incorporati in una polpa bianca. I semi sono l'ingrediente principale del cioccolato, mentre la polpa può essere utilizzata per preparare succhi, frullati, gelatine e può anche essere distillata per farne una bevanda alcolica.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_COCONUT</Tag>
@@ -1563,7 +1566,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_COFFEE_PEDIA</Tag>
 		<English>Coffee is a darkly colored, bitter, slightly acidic brewed drink, prepared from roasted coffee beans, the seeds of berries from certain Coffea species that, once ripe, are picked, processed, and dried. Dried coffee seeds (referred to as "beans") are roasted to varying degrees, depending on the desired flavor. Roasted beans are ground and then brewed with near-boiling water to produce the beverage. Coffee has a stimulating effect in humans, primarily due to its caffeine content, and it is one of the most popular drinks in the world.</English>
-		<Italian>Il caffè è una bevanda di colore scuro, amaro, leggermente acido, preparato con chicchi di caffè tostati, i semi di bacche di alcune specie di Coffea che, una volta maturi, vengono raccolti, trasformati ed essiccati. I semi di caffè essiccati (chiamati "chicchi") vengono tostati a vari livelli, a seconda del sapore desiderato. I chicchi arrostiti vengono macinati e quindi preparati con acqua quasi bollente per produrre la bevanda. Il caffè ha un effetto stimolante sull'uomo, principalmente a causa del suo contenuto di caffeina, ed è una delle bevande più popolari al mondo.</Italian>
+		<Italian>Il caffè è una bevanda di colore scuro, amaro, leggermente acido, preparato con chicchi di caffè tostati, ossia i semi di bacche di alcune specie di Coffea che, una volta maturi, vengono raccolti, processati ed essiccati. I semi di caffè essiccati (chiamati "chicchi") vengono più o meno tostati, a seconda del sapore desiderato. I chicchi vengono poi macinati e quindi preparati con acqua quasi bollente per produrre la bevanda. Il caffè ha un effetto stimolante sull'uomo, principalmente a causa del suo contenuto di caffeina, ed è una delle bevande più popolari al mondo.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_COLOMBIAN</Tag>
@@ -1576,20 +1579,6 @@
 		<Tag>TXT_KEY_BONUS_COMANCHE</Tag>
 		<English>Comanche</English>
 		<Italian>Comanche</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_CLAY</Tag>
-		<English>Clay</English>
-		<French>Argile</French>
-		<German>Lehm</German>
-		<Italian>Argilla</Italian>
-		<Spanish>Arcilla</Spanish>
-		<Polish>Glina</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_CLAY_PEDIA</Tag>
-		<English>Clay is an aluminum silicate composed mainly of fine-grained materials. Clay minerals have peculiar physical-chemical characteristics that give them a sensitive plasticity (if mixed with water) or refractory (if dehydrated) - properties that have allowed the development of the brick and ceramic industries.</English>
-		<Italian>L'argilla è un silicato d'alluminio composto principalmente di materiali a grana fine. I minerali argillosi hanno caratteristiche fisico-chimiche peculiari che conferiscono loro una sensibile plasticità (se miscelato con acqua) o refrattarietà (se disidratato) - proprietà che hanno permesso lo sviluppo dell'industria laterizia e ceramica.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_COMPUTERS</Tag>
@@ -1783,7 +1772,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_DARK_MATTER</Tag>
 		<English>Dark Matter</English>
-		<French>Matière Noire</French>
+		<French>Matière noire</French>
 		<Italian>Materia oscura</Italian>
 	</TEXT>
 	<TEXT>
@@ -1803,7 +1792,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_DATES_PEDIA</Tag>
 		<English>Dates are the edible sweet fruits of the palm tree, a flowering plant species in the palm family that can typically reach about 21–23 m (69–75 ft) in height. Dates are oval-cylindrical, 3 to 7 cm (1.2 to 2.8 in) long, and about 2.5 cm (0.98 in) in diameter. Dates have been a staple food of the Middle East and the Indus Valley for thousands of years. There is archaeological evidence of date cultivation in Arabia from the 6th millennium BCE.</English>
-		<Italian>I datteri sono i frutti dolci commestibili della palma da dattero, una pianta della famiglia delle palme che può raggiungere in genere un'altezza di circa 21-23 metri in altezza. I datteri hanno una forma ovale-cilindrica, sono lunghi 3-7 cm e hanno un diametro di circa 2,5 cm. I datteri sono un alimento base del Medio Oriente e della valle dell'Indo da migliaia di anni. Esistono prove archeologiche della coltivazione di datteri in Arabia dal VI millennio a.C.</Italian>
+		<Italian>I datteri sono i frutti dolci commestibili della palma da dattero, una pianta della famiglia delle palme che può raggiungere in genere un'altezza di circa 21-23 m in altezza. I datteri hanno una forma ovale-cilindrica, sono lunghi 3-7 cm e hanno un diametro di circa 2,5 cm. I datteri sono un alimento base del Medio Oriente e della valle dell'Indo da migliaia di anni. Esistono prove archeologiche della coltivazione di datteri in Arabia dal VI millennio a.C.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_DAYAK</Tag>
@@ -1863,13 +1852,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_DIAMOND_PEDIA</Tag>
-		<English>Diamond is a solid form of carbon with its atoms arranged in a crystal structure. Because the arrangement of atoms is extremely rigid, few types of impurity can contaminate it: small numbers of defects or impurities may color diamond blue (boron), yellow (nitrogen), brown (defects), green (radiation exposure), purple, pink, orange or red. Diamonds have the highest hardness and thermal conductivity of any natural material, properties that are utilized in major industrial applications such as cutting and polishing tools. Most natural diamonds have ages between 1 billion and 3.5 billion years.</English>
-		<Italian>Il diamante è una forma solida di carbonio, i cui atomi sono disposti in una struttura cristallina. Poiché la disposizione degli atomi è estremamente rigida, pochi tipi di impurità possono contaminarla: piccoli difetti o impurità possono dare al diamante un colore blu (boro), giallo (azoto), marrone (difetti), verde (esposizione alle radiazioni), viola, rosa, arancione o rosso. I diamanti hanno il più alto grado di durezza e conducibilità termica di qualsiasi altro materiale naturale e per questo sono usati come utensili da taglio e lucidatura. La maggior parte dei diamanti naturali ha un'età compresa tra 1 miliardo e 3,5 miliardi di anni.</Italian>
+		<English>Diamond is a solid form of carbon with its atoms arranged in a crystal structure. Because the arrangement of atoms is extremely rigid, few types of impurity can contaminate it: small numbers of defects or impurities may color diamond blue (boron), yellow (nitrogen), brown (defects), green (radiation exposure), purple, pink, orange or red. Diamonds have the highest hardness and thermal conductivity of any natural material, properties that are utilized in major industrial applications such as cutting and polishing tools. Most natural diamonds have ages between 1 and 3.5 billion years.</English>
+		<Italian>Il diamante è una forma solida di carbonio, i cui atomi sono disposti in una struttura cristallina. Poiché la disposizione degli atomi è estremamente rigida, pochi tipi di impurità possono contaminarla: piccoli difetti o impurità possono dare al diamante un colore blu (boro), giallo (azoto), marrone (difetti), verde (esposizione alle radiazioni), viola, rosa, arancione o rosso. I diamanti hanno il più alto grado di durezza e conducibilità termica di qualsiasi altro materiale naturale e per questo sono usati come utensili da taglio e lucidatura. La maggior parte dei diamanti naturali ha un'età compresa tra 1 e 3,5 miliardi di anni.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_DIAMOND_NANOTHREADS</Tag>
 		<English>Diamond Nanothreads</English>
-		<French>Diamant Nanothreads</French>
+		<French>Diamant nanothreads</French>
 		<Italian>Nanofilamenti in diamante</Italian>
 	</TEXT>
 	<TEXT>
@@ -1898,7 +1887,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_DISHWASHERS_PEDIA</Tag>
-		<English>A dishwasher is a machine for cleaning dishware and cutlery automatically. Unlike manual dishwashing, which relies largely on physical scrubbing to remove soiling, the mechanical dishwasher cleans by spraying hot water, typically between 45 and 75 °C (110 and 170 °F), at the dishes, with lower temperatures used for delicate items. In addition to domestic units, industrial dishwashers are available for use in commercial establishments, such as hotels and restaurants, where many dishes must be cleaned.</English>
+		<English>A dishwasher is a machine for cleaning dishware and cutlery automatically. Unlike manual dish-washing, which relies largely on physical scrubbing to remove soiling, the mechanical dishwasher cleans by spraying hot water, typically between 45 and 75 °C (110 and 170 °F), at the dishes, with lower temperatures used for delicate items. In addition to domestic units, industrial dishwashers are available for use in commercial establishments, such as hotels and restaurants, where many dishes must be cleaned.</English>
 		<Italian>Una lavastoviglie è una macchina per la pulizia automatica di stoviglie e posate. A differenza del lavaggio manuale delle stoviglie, che si basa in gran parte sul lavaggio fisico per rimuovere lo sporco, la lavastoviglie meccanica pulisce spruzzando acqua calda (in genere tra 45 e 75 °C) ai piatti, con temperature più basse utilizzate per oggetti delicati. Oltre alle unità domestiche, lavastoviglie industriali sono disponibili per l'uso in strutture commerciali, come hotel e ristoranti, dove è necessario pulire molti piatti.</Italian>
 	</TEXT>
 	<TEXT>
@@ -2106,7 +2095,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ENERGY_DRINK_PEDIA</Tag>
-		<English>An energy drink is a type of beverage containing stimulant compounds, usually caffeine, which is marketed as providing mental and physical stimulation. They may or may not be carbonated and may also contain sugar, other sweeteners, herbal extracts, taurine, and aminoacids. Most effects of energy drinks on cognitive performance, such as increased attention and reaction speed, are primarily due to the presence of caffeine.</English>
+		<English>An energy drink is a type of beverage containing stimulant compounds, usually caffeine, which is marketed as providing mental and physical stimulation. They may or may not be carbonated and may also contain sugar, other sweeteners, herbal extracts, taurine, and amino-acids. Most effects of energy drinks on cognitive performance, such as increased attention and reaction speed, are primarily due to the presence of caffeine.</English>
 		<Italian>Una bevanda energetica è un tipo di bevanda contenente composti stimolanti, generalmente caffeina, che viene commercializzata come stimolante mentale e fisico. Possono essere o meno gassate e possono contenere anche zucchero, altri dolcificanti, estratti di erbe, taurina e aminoacidi. La maggior parte degli effetti delle bevande energetiche sulle prestazioni cognitive, come una maggiore attenzione e velocità di reazione, sono principalmente dovuti alla presenza di caffeina.</Italian>
 	</TEXT>
 	<TEXT>
@@ -2191,7 +2180,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_FEMTOBOTS_PEDIA</Tag>
-		<English>A femtobot is a robot that is built on the subatomic level. It is used to manipulate excited energy states within atomic nuclei, specifically nuclear isomers, to produce metastable (or otherwise stabilized) states with unusual properties or to tailor the behavioral properties of these particles.</English>
+		<English>A femtobot is a robot that is built on the subatomic level. It is used to manipulate excited energy states within atomic nuclei, specifically nuclear isomers, to produce meta-stable (or otherwise stabilized) states with unusual properties or to tailor the behavioral properties of these particles.</English>
 		<Italian>Un femtobot è un robot costruito a livello subatomico. È usato per manipolare gli stati energetici eccitati all'interno di nuclei atomici, in particolare gli isomeri nucleari, per produrre stati metastabili (o altrimenti stabilizzati) con proprietà insolite o per personalizzare le proprietà comportamentali di queste particelle.</Italian>
 	</TEXT>
 	<TEXT>
@@ -2243,8 +2232,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_FIG_PEDIA</Tag>
-		<English>A fig is the fruit of the Ficus carica tree, an Asian species of flowering plant in the mulberry family. The fruit is 3–5 cm (1.2–2.0 in) long, with a green skin that sometimes ripens toward purple or brown. Figs can be eaten fresh or dried, or used in jam-making. Most commercial production is in dried or otherwise processed forms, since the ripe fruit does not transport well, and once picked does not keep well.</English>
-		<Italian>Un fico è il frutto dell'albero del Ficus carica, una specie asiatica di pianta fiorita della famiglia del gelso. Il frutto è lungo 3-5 centimetri, con una buccia verde che a volte matura verso il viola o il marrone. I fichi possono essere consumati freschi o essiccati, oppure utilizzati per la marmellata. La maggior parte della produzione commerciale avviene in forme essiccate o altrimenti trasformate, poiché i fichi giunti a maturazione sono difficili da trasportare e da conservare.</Italian>
+		<English>A fig is the fruit of the Ficus carica tree, an Asian species of flowering plant in the mulberry family. The fruit is 3-5 cm (1.2-2.0 in) long, with a green skin that sometimes ripens toward purple or brown. Figs can be eaten fresh or dried, or used in jam-making. Most commercial production is in dried or otherwise processed forms, since the ripe fruit does not transport well, and once picked does not keep well.</English>
+		<Italian>Un fico è il frutto dell'albero del Ficus carica, una specie asiatica di pianta fiorita della famiglia del gelso. Il frutto è lungo 3-5 cm, con una buccia verde che a volte matura verso il viola o il marrone. I fichi possono essere consumati freschi o essiccati, oppure utilizzati per la marmellata. La maggior parte della produzione commerciale avviene in forme essiccate o altrimenti trasformate, poiché i fichi giunti a maturazione sono difficili da trasportare e da conservare.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_FIJIAN</Tag>
@@ -2550,7 +2539,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_GEMSTONE_PEDIA</Tag>
-		<English>A gemstone is a piece of mineral crystal which, in a cut and polished form, is used to make jewelry or other adornments. Certain rocks (such as lapislazuli and opal) and occasionally organic materials (such as amber, jet, and pearl) that are also used for jewelry are often considered to be gemstones as well. Most gemstones are hard, but some soft minerals are used in jewelry because of their luster or other physical properties that have aesthetic value. Rarity is another characteristic that lends value to a gemstone. Apart from jewelry, from earliest antiquity engraved gems and hardstone carvings, such as cups, were major luxury art forms.</English>
+		<English>A gemstone is a piece of mineral crystal which, in a cut and polished form, is used to make jewelry or other adornments. Certain rocks (such as lapis lazuli and opal) and occasionally organic materials (such as amber, jet, and pearl) that are also used for jewelry are often considered to be gemstones as well. Most gemstones are hard, but some soft minerals are used in jewelry because of their luster or other physical properties that have aesthetic value. Rarity is another characteristic that lends value to a gemstone. Apart from jewelry, from earliest antiquity engraved gems and hardstone carvings, such as cups, were major luxury art forms.</English>
 		<Italian>Una pietra preziosa è un pezzo di cristallo minerale che, in una forma tagliata e lucidata, viene utilizzato per realizzare gioielli o altri ornamenti. Anche alcune pietre (come lapislazzuli e opali) e occasionalmente materiali organici (come ambra, giaietto e perla) utilizzate per realizzare gioielli sono spesso considerate pietre preziose. La maggior parte di esse sono dure, ma anche alcuni materiali morbidi sono usati in gioielleria a causa della loro lucentezza o altre proprietà fisiche di alto valore estetico. La rarità è un'altra caratteristica che conferisce valore a una pietra preziosa. Oltre ai gioielli, le prime gemme incise nell'antichità e le sculture in pietra dura, come le tazze, erano le principali forme d'arte di lusso.</Italian>
 	</TEXT>
 	<TEXT>
@@ -2596,19 +2585,6 @@
 		<Tag>TXT_KEY_BONUS_GEOTHERMAL_ENERGY_PEDIA</Tag>
 		<English>Geothermal energy is thermal energy generated and stored in the Earth. This kind of energy originates from the original formation of the planet and from radioactive decay of materials. With water from hot springs, geothermal energy has been used for bathing since Paleolithic times and for space heating since ancient Roman times, but it is now better known for electricity generation. Geothermal power is cost-effective, reliable, sustainable, and environmentally friendly, but has historically been limited to areas near tectonic plate boundaries. Technological advances during 20th and 21st century have dramatically expanded the range and size of viable resources, especially for applications such as home heating, opening a potential for widespread exploitation.</English>
 		<Italian>L'energia geotermica è l'energia termica generata e immagazzinata nella Terra. Questo tipo di energia proviene dalla formazione originale del pianeta e dal decadimento radioattivo dei materiali. Assieme all'acqua proveniente da sorgenti termali, l'energia geotermica è stata utilizzata per la balneazione fin dal Paleolitico e per il riscaldamento degli spazi fin dai tempi dei romani, ma ora è meglio conosciuta per la generazione di elettricità. L'energia geotermica è economica, affidabile, sostenibile e rispettosa dell'ambiente, ma è stata storicamente limitata alle aree a ridosso dei confini fra placche tettoniche. I progressi tecnologici nel XX e XXI secolo hanno notevolmente ampliato la gamma e le dimensioni degli utilizzi, in particolare per il riscaldamento domestico, aprendo un potenziale sfruttamento diffuso.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HYDROTHERMAL_VENT</Tag>
-		<English>Hydrothermal Vent</English>
-		<French>Sources hydrothermales</French>
-		<Italian>Sorgente idrotermale</Italian>
-		<Spanish>Fuente geotérmica submarina</Spanish>
-		<Polish>Energia Geotermalna</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HYDROTHERMAL_VENT_PEDIA</Tag>
-		<English>A hydrothermal vent is a fissure on the seafloor from which geothermally heated water issues. They are commonly found near volcanically or geologically active places, ocean basins, and hotspots. Under the sea, hydrothermal vents may form features called black smokers or white smokers. Relative to the majority of the deep sea, the areas around submarine hydrothermal vents are biologically more productive, often hosting complex communities of lifeforms, fueled by the chemicals dissolved in the vent fluids. Active hydrothermal vents are thought to exist on Europa and Enceladus, and it is speculated that ancient hydrothermal vents once existed on Mars.</English>
-		<Italian>Una sorgente idrotermale è una fessura sul fondo del mare da cui vengono emesse colonne d'acqua calda. Si trovano spesso in luoghi vulcanicamente o geologicamente attivi, bacini oceanici e punti caldi. Sotto il mare, le sorgenti possono formare delle fumarole di colore nero o bianco. Rispetto al resto del mare profondo, le aree intorno alle sorgenti sono biologicamente più produttive, ospitando spesso comunità complesse di forme di vita, alimentate dalle sostanze chimiche disciolte nei fluidi di sfiato. Si pensa che esistano sorgenti idrotermali attive su Europa ed Encelado, e si ipotizza che in passato esistessero anche su Marte.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_GERMAN</Tag>
@@ -2674,11 +2650,6 @@
 		<Italian>L'oro è un metallo brillante, leggermente rossastro, denso, morbido, malleabile e duttile nella sua forma più pura. Si presenta spesso in forma elementare libera, sotto forma di pepite o granaglie, nelle rocce, nelle vene e nei depositi alluvionali. Elemento relativamente raro, l'alta malleabilità, la duttilità, la resistenza alla corrosione e la maggior parte delle altre reazioni chimiche e la conduttività dell'elettricità dell'oro hanno portato al suo uso per monete, gioielli e altre opere d'arte nel corso della storia, così come nei connettori elettrici dei computer, nelle schermature a infrarossi, nella produzione di vetri colorati e foglie d'oro e nel restauro dei denti.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_KIPCHAK</Tag>
-		<English>Kipchak</English>
-		<Italian>Kipchak</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_GOTH</Tag>
 		<English>Goth</English>
 		<French>Gothique</French>
@@ -2695,7 +2666,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_GRAINS_PEDIA</Tag>
 		<English>A grain is a small, hard, dry seed, with or without an attached hull or fruit layer, harvested for human or animal consumption. The two main types of commercial grain crops are cereals and legumes. Because of their properties, they can be stored, measured, and transported more readily than can other kinds of food crops such as fresh fruits, roots and tubers. The development of grain agriculture allowed excess food to be produced and stored easily which could have led to the creation of the first permanent settlements and the division of society into classes.</English>
-		<Italian>Un grano è un seme piccolo, duro, secco, con o senza guccio o buccia, che viene raccolto per essere consumato da umani o animali. I due principali tipi di colture commerciali sono cereali e legumi. Per le loro proprietà, possono essere immagazzinati, misurati e trasportati più facilmente rispetto ad altri tipi di colture alimentari come frutta fresca, radici e tuberi. Lo sviluppo dell'agricoltura cerealicola ha permesso di produrre e conservare facilmente il cibo in eccesso, il che avrebbe potuto portare alla creazione dei primi insediamenti permanenti e a una primordiale divisione della società in classi.</Italian>
+		<Italian>Un grano è un seme piccolo, duro, secco, con o senza guscio o buccia, che viene raccolto per essere consumato da umani o animali. I due principali tipi di colture commerciali sono cereali e legumi. Per le loro proprietà, possono essere immagazzinati, misurati e trasportati più facilmente rispetto ad altri tipi di colture alimentari come frutta fresca, radici e tuberi. Lo sviluppo dell'agricoltura cerealicola ha permesso di produrre e conservare facilmente il cibo in eccesso, il che avrebbe potuto portare alla creazione dei primi insediamenti permanenti e a una primordiale divisione della società in classi.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_GRAPES</Tag>
@@ -2708,8 +2679,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_GRAPES_PEDIA</Tag>
-		<English>A grape is a berry of the deciduous woody vines of the flowering plant genus Vitis. Grapes row in clusters of 15 to 300, and can be crimson, black, dark blue, yellow, green, orange, and pink. The cultivation of the domesticated grape began 6,000–8,000 years ago in the Near East, and they can be eaten fresh as table grapes or they can be used for making wine, jam, grape juice, jelly, grape seed extract, raisins, vinegar, and grape seed oil.</English>
-		<Italian>L'uva è una bacca delle viti legnose decidue del genere di pianta fiorita Vitis. L'uva cresce in grappoli da 15 a 300 chicchi l'uno e può essere di colore cremisi, neri, blu scuro, gialli, verdi, arancioni o rosa. La coltivazione dell'uva domestica è iniziata 6.000–8.000 anni fa nel Vicino Oriente e può essere consumata fresca come uva da tavola o può essere usata per produrre vino, marmellata, succhi, gelatina, estratto di semi, uva passa, aceto e olio di semi d'uva.</Italian>
+		<English>A grape is a berry of the deciduous woody vines of the flowering plant genus Vitis. Grapes row in clusters of 15 to 300, and can be crimson, black, dark blue, yellow, green, orange, and pink. The cultivation of the domesticated grape began 6,000-8,000 years ago in the Near East, and they can be eaten fresh as table grapes or they can be used for making wine, jam, grape juice, jelly, grape seed extract, raisins, vinegar, and grape seed oil.</English>
+		<Italian>L'uva è una bacca delle viti legnose decidue del genere di pianta fiorita Vitis. L'uva cresce in grappoli da 15 a 300 chicchi l'uno e può essere di colore cremisi, neri, blu scuro, gialli, verdi, arancioni o rosa. La coltivazione dell'uva domestica è iniziata 6.000-8.000 anni fa nel Vicino Oriente e può essere consumata fresca come uva da tavola o può essere usata per produrre vino, marmellata, succhi, gelatina, estratto di semi, uva passa, aceto e olio di semi d'uva.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_GRAPHENE</Tag>
@@ -2765,11 +2736,6 @@
 		<French>Grec</French>
 		<Italian>Greco</Italian>
 		<Polish>Grecka</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_CHAMORRAN</Tag>
-		<English>Chamorran</English>
-		<Italian>Chamorro</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_GUANCHES</Tag>
@@ -2949,8 +2915,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HEMP_FIBERS_PEDIA</Tag>
-		<English>Hemp fiber was widely used throughout history. Items ranging from rope, to fabrics, to industrial materials were made from hemp fiber. Hemp was often used to make sail canvas, and the word canvas derives from cannabis. Today, a modest hemp fabric industry exists, and hemp fibers can be used in clothing. Pure hemp has a texture similar to linen.</English>
-		<Polish>Włókna konopnego był powszechnie stosowany w całej historii. Produkty od liny, tkanin, materiałów przemysłowych, były wykonane z włókna konopi. Konopie był często używany do żagli płótno, a płótno Słowo pochodzi od marihuany. Dziś skromna tkaniny konopi istnieje przemysł, a włókna konopne mogą być stosowane w odzieży. Czysta konopi ma tekstury podobny do płótna.</Polish>
+		<English>Hemp fiber has been extensively used throughout history for items ranging from rope to fabrics. Pure hemp has a texture similar to linen and, because of its versatility, today it is used in a number of consumer goods, including clothing, shoes, accessories, dog collars, and home wares.</English>
+		<Italian>La fibra di canapa è stata ampiamente utilizzata nel corso della storia per oggetti che vanno dalla corda ai tessuti. La canapa pura ha una consistenza simile al lino e, per la sua versatilità d'uso, viene utilizzata in numerosi beni di consumo, tra cui abbigliamento, scarpe, accessori, collari per cani e articoli per la casa.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HEMUDU</Tag>
@@ -2968,7 +2934,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HENNA_PEDIA</Tag>
 		<English>Henna is a dye prepared from the plant Lawsonia inermis, also known as hina or henna tree. Henna can also refer to the temporary body art resulting from the staining of the skin from the dyes. Henna has been used since antiquity to dye skin, hair and fingernails, as well as fabrics including silk, wool and leather. Historically, henna was used in the Arabian Peninsula, Indian subcontinent, Near and Middle East, Carthage, other parts of North Africa and the Horn of Africa. The name is used in other skin and hair dyes, such as black henna and neutral henna, neither of which is derived from the henna plant.</English>
-		<Italian>L'henné è un colorante derivato dalla pianta Lawsonia inermis, nota anche come hina o albero di henné. L'henné può anche riferirsi alla tradizione di dipingere parti del corpo con il colorante. L'henné è stato utilizzato fin dall'antichità per tingere la pelle, i capelli e le unghie, nonché tessuti come seta, lana e pelle. Storicamente, l'henné veniva usato nella Penisola arabica, nel Subcontinente indiano, nel Vicino e Medio oriente, a Cartagine, in altre parti del Nord Africa e nel Corno d'Africa. Il nome è usato in altre tinture per pelle e capelli, come l'henné nero e l'henné neutro, che non derivano dalla pianta di henné.</Italian>
+		<Italian>L'hennè è un colorante derivato dalla pianta Lawsonia inermis, nota anche come hina o albero di hennè. L'hennè può anche riferirsi alla tradizione di dipingere parti del corpo con il colorante. L'hennè è stato utilizzato fin dall'antichità per tingere la pelle, i capelli e le unghie, nonché tessuti come seta, lana e pelle. Storicamente, l'hennè veniva usato nella Penisola arabica, nel Subcontinente indiano, nel Vicino e Medio Oriente, a Cartagine, in altre parti del Nord Africa e nel Corno d'Africa. Il nome è usato in altre tinture per pelle e capelli, come l'hennè nero e l'hennè neutro, che non derivano dalla pianta di hennè.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HERERO</Tag>
@@ -2985,8 +2951,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HIDE_PEDIA</Tag>
-		<English>A hide is an animal skin treated for human use. Hides include leather from cattle and other livestock animals, alligator skins, snake skins for shoes and fashion accessories and furs from wild cats, mink and bears. In some areas, leather is produced on a domestic or small industrial scale, but most leather making is done on a large scale.</English>
-		<Italian>La pelle animale viene trattata per gli usi degli animali. Le pelli includon cuoi dagli animali da allevamento, pelli di alligatori e pelli di serpente per scarpe e accessori alla moda, oltre alle pelliccie provenienti dagli animali selvaggi. In alcune zone la pelle viene lavorata artigianalmente, ma molto più spesso viene prodotta su scala industriale.</Italian>
+		<English>A hide is an animal skin treated for human use. Although they are usually from large animals such as cows or buffalos, it can also refer to skins of smaller animals, such as goats, sheeps, deers, pigs, fishes, alligators, snakes, etc. All are used for shoes, clothes, leather bags, belts and other fashion accessories. Leather is also used in cars, upholstery, interior decorating, horse tack and harnesses. Skins are sometimes still gathered from hunting and processed at a domestic or artisanal level, but most leather making is now industrialized and large-scale.</English>
+		<Italian>Una pelle trattata è una pelle di animale trattata per uso umano. Sebbene di solito provengano da grandi animali come mucche o bufali, può anche riferirsi a pelli di animali più piccoli, come capre, pecore, cervi, maiali, pesci, alligatori, serpenti, ecc. Tutti questi tipi di pelle sono usati per produrre scarpe, vestiti, borse, cinture e altri accessori, ma anche per tappezzerie e decorazioni d'interni o di automobili, finimenti per cavalli e imbracature. Talvolta, alcune pelli possono provenire da animali cacciati e lavorate a livello domestico o artigianale, ma la maggior parte della produzione di pelletteria è ora industrializzata e su larga scala.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HIMYARITE</Tag>
@@ -3113,7 +3079,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HOVERCRAFTS_PEDIA</Tag>
-		<English>A hovercraft, also known as an air-cushion vehicle or ACV, is a craft capable of travelling over land, water, mud or ice and other surfaces both at speed and when stationary. Hovercraft are hybrid vessels operated by a pilot as an aircraft rather than a captain as a marine vessel. They operate by creating a cushion of low-pressure, high volume air between the hull of the vessel and the surface below. Typically this cushion is contained within a flexible "skirt". They typically hover at heights between 200 mm (7.9 in) and 600 mm (24 in) above any surface and operate above 20 knots (23 mph) and can clear gradients up to 20 degrees. The first practical design for hovercraft derived from a British invention in the 1950s to 1960s. They are now used throughout the world as specialised transports in disaster relief, coastguard, military and survey applications as well as for sport or passenger service. Very large versions have been used to transport hundreds of people and vehicles across the English Channel whilst others have military applications used to transport tanks, soldiers and large equipment in hostile environments and terrain.</English>
+		<English>A hovercraft, also known as an air-cushion vehicle or ACV, is an amphibious craft capable of travelling over land, water, mud, ice, and other surfaces. Hovercraft use blowers to produce a large volume of air below the hull, or air cushion, that is slightly above atmospheric pressure. The pressure difference produces a lift, which causes the hull to float above the running surface. For stability reasons, the air is typically blown through slots or holes around the outside of a disk- or oval-shaped platform, giving most hovercraft a characteristic rounded-rectangle shape. Typically this cushion is contained within a flexible "skirt", which allows the vehicle to travel over small obstructions without damage.</English>
+		<Italian>Un hovercraft è un velivolo anfibio in grado di viaggiare su terra, acqua, fango, ghiaccio e altre superfici. Un hovercraft utilizza i soffiatori per produrre un "cuscino d'aria" sotto lo scafo, di pressione leggermente superiore a quella atmosferica. La differenza di pressione produce un sollevamento, che fa galleggiare lo scafo sopra la superficie. Per motivi di stabilità, l'aria viene generalmente soffiata attraverso fessure o fori praticate in una piattaforma ovale o discoidale, conferendo alla maggior parte degli hovercraft una caratteristica forma rettangolare. In genere, questo cuscino è contenuto in una "gonna" flessibile, che consente al veicolo di spostarsi su piccoli ostacoli senza danni.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUASTEC</Tag>
@@ -3474,8 +3441,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HYDROGEN_PEDIA</Tag>
-		<English>Hydrogen can be prepared in several different ways, but economically the most important processes involve removal of hydrogen from hydrocarbons. Commercial bulk hydrogen is usually produced by the steam reforming of natural gas.</English>
-		<Italian>L'idrogeno viene isolato in vari modi, ma la via più economica è quella basata sugli idrocarburi; commercialmente, l'idrogenoviene estratto dai vapori del gas naturale.</Italian>
+		<English>Hydrogen is a colorless, odorless, tasteless, non-toxic, nonmetallic, highly combustible gas, and it is the most abundant chemical substance in the Universe, constituting roughly 75% of all baryonic mass. The most common isotope of hydrogen, protium, has one proton and no neutrons; since hydrogen readily forms covalent compounds with most nonmetallic elements, study of the energetics and bonding of the hydrogen atom has played a key role in the development of quantum mechanics. Industrial production is mainly from steam reforming natural gas, and less often from more energy-intensive methods such as the electrolysis of water.</English>
+		<Italian>L'idrogeno è un gas incolore, inodore, insapore, non tossico, non metallico, altamente combustibile ed è la sostanza chimica più abbondante nell'Universo, costituendo il 75% circa di tutta la massa barionica. L'isotopo più comune dell'idrogeno, il protio, ha un protone e nessun neutrone; poiché l'idrogeno forma prontamente composti covalenti con la maggior parte degli elementi non metallici, lo studio dell'energia e dei legami degli atomi di idrogeno ha svolto un ruolo chiave nello sviluppo della meccanica quantistica. La produzione industriale proviene principalmente dai vapori di gas naturale e, meno spesso, da metodi a più alta intensità energetica, come l'elettrolisi dell'acqua.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_HYDROTHERMAL_VENT</Tag>
+		<English>Hydrothermal Vent</English>
+		<French>Sources hydrothermales</French>
+		<Italian>Sorgente idrotermale</Italian>
+		<Spanish>Fuente geotérmica submarina</Spanish>
+		<Polish>Energia Geotermalna</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_HYDROTHERMAL_VENT_PEDIA</Tag>
+		<English>A hydrothermal vent is a fissure on the seafloor from which geothermally heated water issues. They are commonly found near volcanically or geologically active places, ocean basins, and hotspots. Under the sea, hydrothermal vents may form features called black smokers or white smokers. Relative to the majority of the deep sea, the areas around submarine hydrothermal vents are biologically more productive, often hosting complex communities of lifeforms, fueled by the chemicals dissolved in the vent fluids. Active hydrothermal vents are thought to exist on Europa and Enceladus, and it is speculated that ancient hydrothermal vents once existed on Mars.</English>
+		<Italian>Una sorgente idrotermale è una fessura sul fondo del mare da cui vengono emesse colonne d'acqua calda. Si trovano spesso in luoghi vulcanicamente o geologicamente attivi, bacini oceanici e punti caldi. Sotto il mare, le sorgenti possono formare delle fumarole di colore nero o bianco. Rispetto al resto del mare profondo, le aree intorno alle sorgenti sono biologicamente più produttive, ospitando spesso comunità complesse di forme di vita, alimentate dalle sostanze chimiche disciolte nei fluidi di sfiato. Si pensa che esistano sorgenti idrotermali attive su Europa ed Encelado, e si ipotizza che in passato esistessero anche su Marte.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HYKSOSI</Tag>
@@ -3776,8 +3756,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_JADE_DEATH_MASKS_PEDIA</Tag>
-		<English>A death mask is a likeness (typically in wax or plaster cast) of a person's face after their death, usually made by taking a cast or impression from the corpse. Death masks may be mementos of the dead, or be used for creation of portraits. It is sometimes possible to identify portraits that have been painted from death masks, because of the characteristic slight distortions of the features caused by the weight of the plaster during the making of the mold.</English>
-		<Polish>Jadeit to minerał o znacznej twardości był ceniony przez wiele kultur np. w starożytnych Chinach, w państwach Mezoameryki i przez ludy maoryskie (pounamu). Z jadeitu wyrabiano ozdoby oraz ze względu na twardość - narzędzia i kosztowną broń.</Polish>
+		<English>A jade death mask is an impression of a person's face after their death, usually made by putting together several pieces of jade. Death masks may be mementos of the dead, or be used for creation of portraits. It is sometimes possible to identify portraits that have been painted from death masks, because of the characteristic slight distortions of the face features.</English>
+		<Italian>Una maschera mortuaria di giada è un'impressione del volto di una persona dopo la sua morte, di solito realizzata mettendo insieme diversi pezzi di giada. Le maschere mortuarie possono essere ricordi dei morti o essere utilizzate per la creazione di ritratti. A volte è possibile identificare i ritratti che sono stati dipinti dalle maschere, a causa delle lievi distorsioni caratteristiche dei lineamenti del viso.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_JAMAICAN</Tag>
@@ -3847,8 +3827,8 @@
 		<Italian>Joseon</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_JUTES</Tag>
-		<English>Jutes</English>
+		<Tag>TXT_KEY_BONUS_JUTE</Tag>
+		<English>Jute</English>
 		<Italian>Iuto</Italian>
 	</TEXT>
 <!-- K -->
@@ -3931,9 +3911,19 @@
 		<Polish>Khmerska</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_KHWARAZMIAN</Tag>
+		<English>Khwarazmian</English>
+		<Italian>Corasmio</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_KILLKE</Tag>
 		<English>Killke</English>
 		<Italian>Killke</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_KIPCHAK</Tag>
+		<English>Kipchak</English>
+		<Italian>Kipchak</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KITARAN</Tag>
@@ -3976,7 +3966,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KUGELBLITZ_PEDIA</Tag>
-		<English>A kugelblitz (German for "ball lightning") is a concentration of heat, light or radiation so intense that its energy forms an event horizon and becomes self-trapped: according to general relativity and the equivalence of mass and energy, if enough radiation is aimed into a region, the concentration of energy can warp spacetime enough for the region to become a black hole. In simpler terms, a kugelblitz is a black hole formed from radiation as opposed to matter. Such a black hole would nonetheless have properties identical to one of equivalent mass and angular momentum formed in a more conventional way. Kugelblitz drives have been considered as possible future black hole starship engines.</English>
+		<English>A kugelblitz (German for "ball lightning") is a concentration of heat, light or radiation so intense that its energy forms an event horizon and becomes self-trapped: according to general relativity and the equivalence of mass and energy, if enough radiation is aimed into a region, the concentration of energy can warp space-time enough for the region to become a black hole. In simpler terms, a kugelblitz is a black hole formed from radiation as opposed to matter. Such a black hole would nonetheless have properties identical to one of equivalent mass and angular momentum formed in a more conventional way. Kugelblitz drives have been considered as possible future black hole starship engines.</English>
 		<Italian>Un kugelblitz (tedesco per "sfera di lampo") è una concentrazione di calore, luce o radiazione così intensa che l'energia emessa forma un orizzonte degli eventi e si auto-intrappola: secondo la relatività generale e l'equivalenza di massa ed energia, se la radiazione è sufficientemente concentrata in una regione, la concentrazione di energia può deformare lo spaziotempo al punto da rendere la regione un buco nero. In termini più semplici, un kugelblitz è un buco nero formato da radiazioni, piuttosto che da materia. Un simile buco nero avrebbe comunque proprietà identiche a uno di massa e momento angolare equivalente formatosi in un modo convenzionale. Un motore alimentato da kugelblitz è stato considerato come un potenziale motore per astronavi alimentato a buchi neri.</Italian>
 	</TEXT>
 	<TEXT>
@@ -4272,7 +4262,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MAGNETIC_MONOPOLES</Tag>
 		<English>Magnetic Monopoles</English>
-		<French>Monopoles Magnétiques</French>
+		<French>Monopoles magnétiques</French>
 		<Italian>Monopoli magnetici</Italian>
 	</TEXT>
 	<TEXT>
@@ -4377,9 +4367,14 @@
 		<English>Marble is a kind of limestone, used by man for millennia. It is a useful material for construction, especially in dry climates. Marble is an excellent material from which to make statues, as well. Marble surfaces can be polished to a beautiful sheen, but the rock remains attractive even when the surface is left rough. The Egyptians used marble blocks to line the outside of the Pyramid of Cheops. The Greeks used blocks of marble to construct some of their buildings; they also used the material to sculpt some of the world's great artworks. The Romans were the first to use slabs of marble as wall coverings. Marble remains one of the most popular construction and artistic materials extant.</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_MARRI</Tag>
+		<English>Marri</English>
+		<Italian>Marri</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARTIAN_ALGAE</Tag>
 		<English>Martian Algae</English>
-		<French>Algues Martiennes</French>
+		<French>Algues martiennes</French>
 		<Italian>Alghe marziane</Italian>
 	</TEXT>
 	<TEXT>
@@ -4389,7 +4384,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARTIAN_CROPS</Tag>
 		<English>Martian Crops</English>
-		<French>Céréales Martiens</French>
+		<French>Céréales martiens</French>
 		<Italian>Colture marziane</Italian>
 	</TEXT>
 	<TEXT>
@@ -4399,7 +4394,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARTIAN_ELECTRONICS</Tag>
 		<English>Martian Electronics</English>
-		<French>Electroniques Martiennes</French>
+		<French>Electroniques martiennes</French>
 		<Italian>Elettronica marziana</Italian>
 	</TEXT>
 	<TEXT>
@@ -4409,7 +4404,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARTIAN_FRUIT</Tag>
 		<English>Martian Fruit</English>
-		<French>Fruits Martiens</French>
+		<French>Fruits martiens</French>
 		<Italian>Frutta marziana</Italian>
 	</TEXT>
 	<TEXT>
@@ -4441,7 +4436,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARTIAN_VEGETABLES</Tag>
 		<English>Martian Vegetables</English>
-		<French>Légumes Martiens</French>
+		<French>Légumes martiens</French>
 		<Italian>Vegetali marziani</Italian>
 	</TEXT>
 	<TEXT>
@@ -4516,8 +4511,8 @@
 		<Polish>Mecha - duże, najczęściej humanoidalne roboty, sterowane przez umieszczonego w jego wnętrzu pilota, autonomiczne bądź też zdalnie.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_MEDES</Tag>
-		<English>Medes</English>
+		<Tag>TXT_KEY_BONUS_MEDIAN</Tag>
+		<English>Median</English>
 		<Italian>Medo</Italian>
 	</TEXT>
 	<TEXT>
@@ -4530,7 +4525,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MEDICAL_TRICORDERS_PEDIA</Tag>
 		<English>A medical tricorder is a handheld portable scanning device to be used by consumers to self-diagnose medical conditions within seconds and take basic vital measurements, such as blood pressure, temperature, and flow in a noninvasive way. It can diagnose a person's state of health either as a standalone device or as a connection to medical databases via an Internet connection. The idea of a medical tricorder comes from an imaginary device on the science fiction TV show Star Trek.</English>
-		<Italian>Un tricorder medico è un dispositivo medico portatile che può essere utilizzato per autodiagnosticare condizioni mediche in pochi secondi e per eseguire misurazioni vitali di base, come la pressione, la temperatura e il flusso sanguigno in modo non invasivo. Può diagnosticare lo stato di salute di una persona come dispositivo autonomo oppure connettendosi tramite Internet a dei database medici. L'idea di un tricorder medico proviene da un dispositivo immaginario dello show televisivo di fantascienza Star Trek.</Italian>
+		<Italian>Un tricorder medico è un dispositivo medico portatile che può essere utilizzato per auto-diagnosticare condizioni mediche in pochi secondi e per eseguire misurazioni vitali di base, come la pressione, la temperatura e il flusso sanguigno in modo non invasivo. Può diagnosticare lo stato di salute di una persona come dispositivo autonomo oppure connettendosi tramite Internet a dei database medici. L'idea di un tricorder medico proviene da un dispositivo immaginario dello show televisivo di fantascienza Star Trek.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MELANESIAN</Tag>
@@ -4559,7 +4554,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_METALLIC_HYDROGEN</Tag>
 		<English>Metallic Hydrogen</English>
-		<French>Hydrogène Métallique</French>
+		<French>Hydrogène métallique</French>
 		<Italian>Idrogeno metallico</Italian>
 	</TEXT>
 	<TEXT>
@@ -4569,7 +4564,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_METAL_FOAM</Tag>
 		<English>Metal Foam</English>
-		<French>Mousse Métallique</French>
+		<French>Mousse métallique</French>
 		<Italian>Schiuma di metallo</Italian>
 	</TEXT>
 	<TEXT>
@@ -4774,11 +4769,6 @@
 		<English>Murex is a genus of medium to large sized predatory tropical sea snails. These are carnivorous marine gastropod molluscs in the family Muricidae, commonly called "murexes" or "rock snails". The common name murex is still used for a large number of species in the family Muricidae which were originally given the Latin generic name Murex in the past, but have more recently been regrouped into different newer genera. The word murex was used by Aristotle in reference to these kinds of snails, thus making it one of the oldest classical seashell names still in use by the scientific community.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_MARRI</Tag>
-		<English>Marri</English>
-		<Italian>Marri</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_MUSHROOMS</Tag>
 		<English>Mushrooms</English>
 		<French>Champignons</French>
@@ -4852,7 +4842,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NANOMORPHIC_HABITATS</Tag>
 		<English>Nanomorphic Habitats</English>
-		<French>Habitats Nanomorphiques</French>
+		<French>Habitats nanomorphiques</French>
 		<Italian>Habitat nanomorfici</Italian>
 	</TEXT>
 	<TEXT>
@@ -4862,7 +4852,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NANOTRUSSES</Tag>
 		<English>Nanotrusses</English>
-		<Italian>Nano-tralicci</Italian>
+		<Italian>Nanotralicci</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NANOTRUSSES_PEDIA</Tag>
@@ -4874,7 +4864,7 @@
 		<English>Nanotubes</English>
 		<French>Nano-tubes</French>
 		<German>Nanoröhrchen</German>
-		<Italian>Nano-tubi</Italian>
+		<Italian>Nanotubi</Italian>
 		<Spanish>Nanotubos</Spanish>
 		<Polish>Nanorurki</Polish>
 	</TEXT>
@@ -5126,20 +5116,6 @@
 		<Spanish>Los humanos conocen el petróleo desde la antigüedad. Los yacimientos de petróleo encontrados en la superficie se usaron durante siglos como impermeabilizador y combustible. Pero no fue hasta la llegada de la Revolución Industrial cuando las civilizaciones comenzaron a tener dependencia de los productos derivados del petróleo. El amplio uso del petróleo como combustible, lubricante, etc. ha llevado a una búsqueda constante de yacimientos todavía más grandes. A mediados del siglo XIX, se perforaron los primeros pozos petrolíferos en Pensilvania, lo que marcó el inicio de una industria tremendamente importante y beneficiosa. Hoy en día, con la reducción de las reservas mundiales y el crecimiento constante de la demanda, el petróleo es un recurso más valioso que nunca.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_PETROLEUM_PRODUCTS</Tag>
-		<English>Petroleum Products</English>
-		<French>Produits pétroliers</French>
-		<German>Ölprodukte</German>
-		<Italian>Derivati del petrolio</Italian>
-		<Spanish>Derivados del petróleo</Spanish>
-		<Polish>Produkty Naftowe</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_PETROLEUM_PRODUCTS_PEDIA</Tag>
-		<English>Petroleum products are materials derived from crude oil (petroleum) as it is processed in oil refineries. The largest share of oil products are the various grades of fuel oil and gasoline. Heavier (less volatile) fractions can also be used to produce asphalt, tar, paraffin wax, lubricating and other heavy oils. Refineries also produce other chemicals, some of which are used to produce plastics. Over 6,000 items are made from petroleum waste by-products, including fertilizers, floorings (floor coverings), perfumes, insecticides, petroleum jellies, soaps, vitamins and some essential aminoacids.</English>
-		<Italian>I derivati del petrolio sono materiali derivati dal petrolio greggio trasformato nelle raffinerie. I principali derivati sono le varie gradazioni di benzina e altri oli combustibili. Le parti più pesanti (ossia meno volatili) possono essere invece usate per produrre asfalto, catrame, cera di paraffina, lubrificanti e altri oli pesanti. Le raffinerie producono anche altri prodotti chimici, alcuni dei quali vengono utilizzati per realizzare materie plastiche. Oltre 6.000 prodotti vengono realizzati con gli scarti delle raffinazioni, tra cui tra cui fertilizzanti, pavimentazioni (rivestimenti per pavimenti), profumi, insetticidi, gelatine di petrolio, saponi, vitamine e alcuni aminoacidi essenziali.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_OLIVE_OIL</Tag>
 		<English>Olive Oil</English>
 		<French>Huile d'olive</French>
@@ -5191,9 +5167,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_OMEGA_FATTY_ACID</Tag>
 		<English>Omega Fatty Acid</English>
-		<French>Acides gras oméga-3</French>
-		<Italian>Acidi grassi omega-3</Italian>
-		<Polish>Kwasy tłuszczowe omega-3</Polish>
+		<French>Acides gras oméga</French>
+		<Italian>Acidi grassi omega</Italian>
+		<Polish>Kwasy tłuszczowe omega</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_OMEGA_FATTY_ACID_PEDIA</Tag>
@@ -5507,7 +5483,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PERSONAL_HYPERCRAFT</Tag>
 		<English>Personal Hypercraft</English>
-		<French>Hypercraft Personnel</French>
+		<French>Hypercraft personnel</French>
 		<Italian>Ipernave personale</Italian>
 	</TEXT>
 	<TEXT>
@@ -5517,7 +5493,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PERSONAL_SPACECRAFT</Tag>
 		<English>Personal Spacecraft</English>
-		<French>Vaisseau spatial Personnel</French>
+		<French>Vaisseau spatial personnel</French>
 		<Italian>Navicella spaziale personale</Italian>
 	</TEXT>
 	<TEXT>
@@ -5527,7 +5503,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PERSONAL_STARCRAFT</Tag>
 		<English>Personal Starcraft</English>
-		<French>Vaisseau Stellaire  Personnel</French>
+		<French>Vaisseau stellaire personnel</French>
 		<Italian>Astronave personale</Italian>
 	</TEXT>
 	<TEXT>
@@ -5539,6 +5515,20 @@
 		<English>Peruvian</English>
 		<French>Péruvienne</French>
 		<Italian>Peruviano</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_PETROLEUM_PRODUCTS</Tag>
+		<English>Petroleum Products</English>
+		<French>Produits pétroliers</French>
+		<German>Ölprodukte</German>
+		<Italian>Derivati del petrolio</Italian>
+		<Spanish>Derivados del petróleo</Spanish>
+		<Polish>Produkty Naftowe</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_PETROLEUM_PRODUCTS_PEDIA</Tag>
+		<English>Petroleum products are materials derived from crude oil (petroleum) as it is processed in oil refineries. The largest share of oil products are the various grades of fuel oil and gasoline. Heavier (less volatile) fractions can also be used to produce asphalt, tar, paraffin wax, lubricating and other heavy oils. Refineries also produce other chemicals, some of which are used to produce plastics. Over 6,000 items are made from petroleum waste by-products, including fertilizers, floor coverings, perfumes, insecticides, petroleum jellies, soaps, vitamins and some essential amino-acids.</English>
+		<Italian>I derivati del petrolio sono materiali derivati dal petrolio greggio trasformato nelle raffinerie. I principali derivati sono le varie gradazioni di benzina e altri oli combustibili. Le parti più pesanti (ossia meno volatili) possono essere invece usate per produrre asfalto, catrame, cera di paraffina, lubrificanti e altri oli pesanti. Le raffinerie producono anche altri prodotti chimici, alcuni dei quali vengono utilizzati per realizzare materie plastiche. Oltre 6.000 prodotti vengono realizzati con gli scarti delle raffinazioni, tra cui tra cui fertilizzanti, pavimentazioni (rivestimenti per pavimenti), profumi, insetticidi, gelatine di petrolio, saponi, vitamine e alcuni aminoacidi essenziali.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PEYOTE</Tag>
@@ -5756,7 +5746,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_POTATOES_PEDIA</Tag>
-		<English>A potato is a root vegetable and a starchy tuber. Potatoes were domesticated approximately 7,000–10,000 years ago in an area comprised between southern Peru and extreme northwestern Bolivia. Then they spread throughout the Americas, and were introduced to Europe in the second half of the 16th century. Today they are a staple food in many parts of the world (especially Northern and Eastern Europe), and an integral part of much of the world's food supply.</English>
+		<English>A potato is a root vegetable and a starchy tuber. Potatoes were domesticated approximately 7,000-10,000 years ago in an area comprised between southern Peru and extreme northwestern Bolivia. Then they spread throughout the Americas, and were introduced to Europe in the second half of the 16th century. Today they are a staple food in many parts of the world (especially Northern and Eastern Europe), and an integral part of much of the world's food supply.</English>
 		<Italian>Una patata è un ortaggio a radice e un tubero amidaceo. Le patate sono state addomesticate circa 7.000-10.000 anni fa in un'area compresa tra il Perù meridionale e la Bolivia nord-occidentale. Si diffusero successivamente in tutte le Americhe e, nella seconda metà del XVI secolo, furono introdotte in Europa. Oggi sono un alimento base in molte parti del mondo (specialmente in Europa settentrionale e orientale) e parte integrante di gran parte dell'offerta alimentare mondiale.</Italian>
 	</TEXT>
 	<TEXT>
@@ -5942,22 +5932,24 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_QUANTONIUM_CRYSTAL_PEDIA</Tag>
-		<English>Quantonium Crystal - Unique crystal structure makes this resource invaluable to science and industry.</English>
-		<French>Crystal de Quantonium - Crystal ayant une structure spécifique, utilisée pour la technologie laser.</French>
+		<English>A quantonium crystal is a powerful radioactive energy crystal that can fuel spaceships. It also has the significant contraindication of turning humans into giants.</English>
+		<Italian>Un cristallo di quantonio è un potente cristallo di energia radioattiva che può alimentare astronavi. Ha anche la significativa controindicazione di trasformare gli umani in giganti.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_QUANTUM_DOTS</Tag>
 		<English>Quantum Dots</English>
-		<French>Points Quantiques</French>
+		<French>Points quantiques</French>
 		<Italian>Punti quantici</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_QUANTUM_DOTS_PEDIA</Tag>
-		<English>Quantum dots (QD) are very small semiconductor particles, only several nanometers in size, so small that their optical and electronic properties differ from those of larger particles. They are a central theme in nanotechnology. Many types of quantum dot will emit light of specific frequencies if electricity or light is applied to them, and these frequencies can be precisely tuned by changing the dots' size, shape and material, giving rise to many applications.</English>
+		<English>Quantum dots are tiny semiconductor particles, a few nanometers in size, having optical and electronic properties that differ from larger particles due to quantum mechanics. Quantum dots are sometimes referred to as artificial atoms, emphasizing their singularity, having bound, discrete electronic states, like naturally occurring atoms or molecules. Potential applications of quantum dots include single-electron transistors, solar cells, LEDs, lasers, single-photon sources, second-harmonic generation, quantum computing, and medical imaging.</English>
+		<Italian>I punti quantici sono minuscole particelle semiconduttrici, di dimensioni di alcuni nanometri, con proprietà ottiche ed elettroniche che differiscono dalle particelle più grandi a causa della meccanica quantistica. I punti quantici sono talvolta chiamati "atomi artificiali", per enfatizzare la loro singolarità, avendo stati elettronici legati e discreti, come atomi o molecole presenti in natura. Le potenziali applicazioni dei punti quantici includono transistor a singolo elettrone, celle solari, LED, laser, sorgenti a singolo fotone, generazione di seconda armonica, calcolo quantico e imaging medico.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_QUEBECKER</Tag>
 		<English>Quebecker</English>
+		<French>Québécois</French>
 		<Italian>Quebecchese</Italian>
 	</TEXT>
 	<TEXT>
@@ -6042,7 +6034,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RED_AND_BLACK_WARE</Tag>
-		<English>Red And Black Ware</English>
+		<English>Red and Black Ware</English>
 		<French>Objets à figures rouges et noires</French>
 		<Italian>Ceramiche rosse e nere</Italian>
 		<Polish>Ceramika czarno-czerwona</Polish>
@@ -6103,7 +6095,7 @@
 		<English>Replicators</English>
 		<French>Réplicateurs</French>
 		<German>Replikatoren</German>
-		<Italian>Replicatori</Italian>
+		<Italian>Duplicatori</Italian>
 		<Spanish>Replicadores</Spanish>
 		<Polish>Replikatory</Polish>
 	</TEXT>
@@ -6413,7 +6405,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SEA_LION_AND_SEAL</Tag>
-		<English>Sea Lion And Seal</English>
+		<English>Sea Lion and Seal</English>
 		<French>Lion de mer et phoque</French>
 		<German>Seelöwe und Siegel</German>
 		<Italian>Leoni marini e foche</Italian>
@@ -6438,8 +6430,8 @@
 		<Polish>Przyprawa - składnik potraw, zwykle stosowany w niewielkich ilościach dla poprawienia ich walorów smakowych, zapachowych i w rzadkich przypadkach (takich jak kurkuma czy szafran) - wizualnych. W odróżnieniu od głównych składników potraw, przyprawy zwykle nie mają istotnego znaczenia odżywczego. Nierzadko jednak pobudzają trawienie, konserwują potrawy lub działają leczniczo, a dawniej wielu przypisywano też działanie magiczne (stanowiły istotny składnik napojów czarodziejskich i miłosnych). Przyprawy pozwalają w końcu zróżnicować pożywienie bazujące na niewielkiej liczbie produktów podstawowych. Niegdyś odgrywały istotną rolę i należały wielokroć do najcenniejszych surowców, obok kamieni i metali szlachetnych. Z czasem rosnące zróżnicowanie dostępnych produktów podstawowych, łatwość utrzymania walorów smakowych potraw poprzez zamrażanie lub stosowanie środków konserwujących spowodowało spadek znaczenia przypraw. Szczególną rolę odgrywają w kuchni obszarów tropikalnych i subtropikalnych, gdzie warunki klimatyczne sprzyjają osłabianiu apetytu i zaburzeniom trawiennym.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_SELJUKS</Tag>
-		<English>Seljuks</English>
+		<Tag>TXT_KEY_BONUS_SELJUK</Tag>
+		<English>Seljuk</English>
 		<Italian>Selgiuchide</Italian>
 	</TEXT>
 	<TEXT>
@@ -6599,6 +6591,11 @@
 		<Italian>Seta</Italian>
 		<Spanish>Seda</Spanish>
 		<Polish>Jedwab</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_SILK_PEDIA</Tag>
+		<English>Silk is a natural protein fiber, consisting of two main proteins, sericin and fibroin. It is one of the strongest natural fibers, while being also smooth, soft, and durable. It is mainly produced by the larvae of insects undergoing complete metamorphosis, but many insects and arachnids produce silk throughout their lives. Generally only the silk of moth caterpillars has been used for textile manufacturing. Silk's absorbency makes it comfortable to wear in warm weather and protects from insect bites. It is often used for clothing or for industrial uses, such as parachutes, bicycle tires, comforter filling and artillery gunpowder bags.</English>
+		<Italian>La seta è una fibra proteica naturale, composta da due proteine principali, sericina e fibroina. È una delle fibre naturali più resistenti, pur essendo liscia, morbida e resistente. È prodotta principalmente dalle larve di insetti che compiono una completa metamorfosi, ma molti insetti e aracnidi producono seta durante la loro esistenza. Generalmente solo la seta dei bruchi falena viene utilizzata per la produzione tessile. La capacità di assorbenza della seta la rende comoda da indossare quando fa caldo e protegge dalle punture di insetti. È spesso usata per l'abbigliamento o per usi industriali, come paracadute, pneumatici per biciclette, imbottitura di piumini e sacchi di polvere da sparo per artiglieria.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SILK_FIBERS</Tag>
@@ -6802,8 +6799,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_STIM_PACKS_PEDIA</Tag>
-		<English>Stim Packs, or stimulation delivery package, is a type of hand-held medication used for healing the body. This item consists of a syringe for containing and delivering the medication and a gauge for measuring the status of the stimpak's contents. When the medicine is injected, it provides immediate healing of the body's minor wounds. </English>
-		<Polish>Futurystyczne strzykawki lecznicze.</Polish>
+		<English>A stimulation delivery package, or stim pack, is a type of hand-held medication used for healing the body. This item consists of a syringe for delivering the medication and a gauge for measuring the status of the stim pack's contents. When the medicine is injected, it provides immediate healing of the body's minor wounds.</English>
+		<Italian>Un pacchetto di erogazione di stimolanti, o pacchetto di stimolazione, è un tipo di farmaco portatile utilizzato per curare il corpo. Questo articolo è costituito da una siringa per erogare il farmaco e un misuratore per misurare lo stato del contenuto della confezione di stimolanti. Il medicinale, quando iniettato, fornisce una guarigione immediata delle ferite minori del corpo.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_STONE</Tag>
@@ -6916,7 +6913,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SUPERINTELLIGENT_COMPUTERS</Tag>
 		<English>Superintelligent Computers</English>
-		<French>Ordinateurs Superintelligents</French>
+		<French>Ordinateurs superintelligents</French>
 		<Italian>Computer superintelligenti</Italian>
 	</TEXT>
 	<TEXT>
@@ -6931,7 +6928,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SUPERSOLID_MATERIAL_PEDIA</Tag>
-		<English>A supersolid material (also known as Bose–Einstein condensate or BEC, and sometimes called the fifth state of matter) is a state of matter which is typically formed when a gas of bosons at low densities is cooled to temperatures very close to absolute zero (-273.15 °C). Under such conditions, a large fraction of bosons occupy the lowest quantum state, at which point microscopic quantum phenomena, particularly wavefunction interference, become apparent macroscopically. A supersolid material is formed by cooling a gas of extremely low density, about one-hundred-thousandth (1/100,000) the density of normal air, to ultra-low temperatures.</English>
+		<English>A supersolid material (also known as Bose–Einstein condensate or BEC, and sometimes called "the fifth state of matter") is a state of matter which is typically formed when a gas of bosons at low densities is cooled to temperatures very close to absolute zero (-273.15 °C). Under such conditions, a large fraction of bosons occupy the lowest quantum state, at which point microscopic quantum phenomena, particularly wavefunction interference, become apparent macroscopically. A supersolid material is formed by cooling a gas of extremely low density, about one-hundred-thousandth (1/100,000) the density of normal air, to ultra-low temperatures.</English>
 		<Italian>Un materiale supersolido (anche conosciuto come condensato di Bose-Einstein o come "il quinto stato della materia") è uno stato della materia che si forma tipicamente quando un gas di bosoni a bassa densità viene raffreddato a temperature molto vicine allo zero assoluto (-273,15 °C). In tali condizioni una grande frazione di bosoni occupa lo stato quantico più basso e quindi i fenomeni quantistici microscopici, in particolare l'interferenza della funzione d'onda, diventano apparenti macroscopicamente. Un materiale supersolido si forma raffreddando un gas di densità estremamente bassa (circa 1/100.000 della densità dell'aria normale) a temperature ultra-basse.</Italian>
 	</TEXT>
 	<TEXT>
@@ -6963,6 +6960,17 @@
 		<Polish>Szwajcarska</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_SYNTHETIC_DIAMOND</Tag>
+		<English>Synthetic Diamond</English>
+		<French>Diamant synthétique</French>
+		<Italian>Diamanti sintetici</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_SYNTHETIC_DIAMOND_PEDIA</Tag>
+		<English>A synthetic diamond is diamond produced by an artificial controlled process, instead of the natural geological process. Synthetic diamonds are made of the same material as natural diamonds, i.e. pure carbon, although their properties depend on the details of the manufacturing processes. Some varieties have superior hardness, thermal conductivity and electron mobility to those of most naturally formed diamonds. It is estimated that 98% of industrial grade diamond demand is supplied with synthetic diamonds.</English>
+		<Italian>Un diamante sintetico è un diamante prodotto da un processo artificiale controllato, anziché dal naturale processo geologico. I diamanti sintetici sono realizzati con lo stesso materiale dei diamanti naturali, ossia il carbonio puro, anche se le loro proprietà dipendono dai dettagli dei processi di fabbricazione. Alcune varietà di diamanti hanno durezza, conducibilità termica e mobilità elettronica superiori a quelle dei diamanti naturali. Si stima che il 98% della domanda di diamanti di livello industriale venga soddisfatta da diamanti sintetici.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_SYNTHETIC_RUBBER</Tag>
 		<English>Synthetic Rubber</English>
 		<French>Caoutchouc synthétique</French>
@@ -6970,6 +6978,11 @@
 		<Italian>Gomma sintetica</Italian>
 		<Spanish>Caucho sintético</Spanish>
 		<Polish>Guma Syntetyczna</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_SYNTHETIC_RUBBER_PEDIA</Tag>
+		<English>A synthetic rubber is any artificial elastomer. These are mainly polymers synthesized from petroleum byproducts. The first synthesized rubber was produced in 1909, by a German team at Bayer laboratory in Elberfeld, Germany; production then expanded greatly during 1940s. Synthetic rubber is used a great deal in printing on textiles, in which case it is called rubber paste, and has uses in the automotive industry for tires, door and window profiles, hoses, belts, matting, and flooring.</English>
+		<Italian>Una gomma sintetica è un qualsiasi elastomero artificiale. Questi sono principalmente polimeri sintetizzati da sottoprodotti del petrolio. La prima gomma sintetizzata fu prodotta nel 1909, da un team tedesco del laboratorio Bayer di Elberfeld, in Germania; la produzione si espanse notevolmente durante gli anni quaranta del XX secolo. La gomma sintetica è molto usata nella stampa di tessuti (nel qual caso viene chiamata pasta di gomma) e trova impiego nell'industria automobilistica per pneumatici, profili di porte e finestre, tubi flessibili, cinture, stuoie e pavimenti.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SYRIAN</Tag>
@@ -7101,8 +7114,8 @@
 		<Polish>Tasmańska</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_TATARS</Tag>
-		<English>Tatars</English>
+		<Tag>TXT_KEY_BONUS_TATAR</Tag>
+		<English>Tatar</English>
 		<Italian>Tataro</Italian>
 	</TEXT>
 	<TEXT>
@@ -7182,7 +7195,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TIME_CRYSTALS</Tag>
 		<English>Time Crystals</English>
-		<French>Crystaux Temporels</French>
+		<French>Crystaux temporels</French>
 		<Italian>Cristalli del tempo</Italian>
 	</TEXT>
 	<TEXT>
@@ -7332,7 +7345,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TRANSPARENT_ALUMINUM</Tag>
 		<English>Transparent Aluminum</English>
-		<French>Aluminium Transparent</French>
+		<French>Aluminium transparent</French>
 		<Italian>Alluminio trasparente</Italian>
 	</TEXT>
 	<TEXT>
@@ -7470,7 +7483,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_UNOBTAINIUM_PEDIA</Tag>
-		<English>What is this and how did you get it? Better not to ask.</English>
+		<English>Unobtainium is any hypothetical, fictional, extremely rare, costly, or impossible material. Less commonly, it can refer to a device with desirable engineering properties for an application, but which are difficult or impossible to achieve. The properties of any particular unobtainium depend on the intended use. The concept of unobtainium is often applied hand-waving flippantly or humorously.</English>
+		<Italian>L'unobtainio (anche inottenio) è qualsiasi materiale ipotetico, immaginario, estremamente raro, costoso o impossibile. Meno comunemente, può fare riferimento a un dispositivo con proprietà ingegneristiche desiderabili per un'applicazione, ma che sono difficili o impossibili da raggiungere. Le proprietà di ogni particolare unobtainio dipendono dall'uso previsto. Il concetto viene spesso applicato agitando le mani in modo irriverente o umoristico.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_URANIUM</Tag>
@@ -7652,6 +7666,11 @@
 		<Spanish>Caucho vulcanizado</Spanish>
 		<Polish>Guma Wulkanizowana</Polish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_VULCANIZED_RUBBER_PEDIA</Tag>
+		<English>Vulcanized rubber is a chemically processed rubber. The term "vulcanization" traditionally referred to the treatment of natural rubber with sulfur in order to harden it, then with time grew to include also hardening of other (synthetic) rubbers via various means. Vulcanization works by forming cross-links between sections of polymer chain which results in increased rigidity and durability, as well as other changes in the mechanical and electrical properties of the material.</English>
+		<Italian>La gomma vulcanizzata è una gomma trattata chimicamente. Il termine "vulcanizzazione" si riferiva tradizionalmente al trattamento della gomma naturale con lo zolfo per indurirla, poi con il tempo è stato esteso per includere anche il processo di indurimento di altre gomme (sintetiche) attraverso vari mezzi. La vulcanizzazione agisce formando collegamenti incrociati tra le sezioni della catena polimerica, che si traducono in una maggiore rigidità e durata, nonché in altri cambiamenti nelle proprietà meccaniche ed elettriche del materiale.</Italian>
+	</TEXT>
 <!-- W -->
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WALLACHIAN</Tag>
@@ -7756,7 +7775,7 @@
 		<Tag>TXT_KEY_BONUS_MEGASTRONG_ALLOY_WARES</Tag>
 		<English>Megastrong Alloy Wares</English>
 		<French>Outils en alliages méga-résistants</French>
-		<Italian>Utensili in leghe mega-resistenti</Italian>
+		<Italian>Utensili in leghe megaresistenti</Italian>
 		<Polish>Wyroby z MegaStopu</Polish>
 	</TEXT>
 	<TEXT>
@@ -8088,8 +8107,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ZINC_ORE_PEDIA</Tag>
-		<English>Zinc, in commerce also spelter, is a metallic chemical element; it has the symbol Zn and atomic number 30. Many alloys contain zinc, including brass, an alloy of copper and zinc. Other metals long known to form binary alloys with zinc are aluminium, antimony, bismuth, gold, iron, lead, mercury, silver, tin, magnesium, cobalt, nickel, tellurium and sodium.</English>
-		<Polish>Cynk na skalę przemysłową otrzymuje się metodą pirometalurgiczną bądź hydrometalurgiczną. Proces pirometalurgiczny polega zazwyczaj na prażeniu spiekającym koncentratów zawierających siarczek cynku, a następnie redukcji otrzymanego w wyniku prażenia tlenku cynku w piecach szybowych specjalnej konstrukcji, wyposażonych w kondensator do szybkiego skraplania powstających par cynku. Dawniej proces ten prowadzono najczęściej w tzw. muflach poziomych. W procesie hydrometalurgicznym koncentrat poddaje się ługowaniu roztworem kwasu siarkowego, otrzymany roztwór siarczanu cynku oczyszcza się i wydziela z niego metaliczny cynk drogą elektrolizy. Następnie okresowo zdziera się cynk z katod, przetapia i odlewa w tzw. gąski.</Polish>
+		<English>Zinc is a blue-silvery, slightly brittle metal. It is refined by froth flotation of the ore, roasting, and final extraction using electricity (electrowinning). Zinc is used, in various proportions, with copper to produce brass alloys. Corrosion-resistant zinc plating of iron is the major application for zinc, as well as in electrical batteries. It is also an essential mineral for humans, including to prenatal and postnatal development.</English>
+		<Italian>Lo zinco è un metallo di colore blu-argenteo e leggermente fragile. Viene raffinato mediante la flottazione, la torrefazione e l'estrazione finale mediante elettricità (elettro-estrazione). Lo zinco viene utilizzato, in varie proporzioni, con il rame per produrre leghe di ottone. La zincatura del ferro a fini anti-corrosivi è l'applicazione principale per lo zinco, ma viene usato anche per le batterie elettriche. È anche un minerale essenziale per l'uomo, soprattutto durante lo sviluppo prenatale e postnatale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ZULU</Tag>

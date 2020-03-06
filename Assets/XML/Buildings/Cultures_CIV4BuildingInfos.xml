@@ -11763,7 +11763,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_ALEMANNI</FreeBonus>
+			<FreeBonus>BONUS_ALEMANNIC</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -13053,7 +13053,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_CHECHENIAN</FreeBonus>
+			<FreeBonus>BONUS_CHECHEN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -14730,7 +14730,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_JUTES</FreeBonus>
+			<FreeBonus>BONUS_JUTE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -15762,7 +15762,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_MEDES</FreeBonus>
+			<FreeBonus>BONUS_MEDIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -17656,7 +17656,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_SELJUKS</FreeBonus>
+			<FreeBonus>BONUS_SELJUK</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->
@@ -18473,7 +18473,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_TATARS</FreeBonus>
+			<FreeBonus>BONUS_TATAR</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc. Effects -->
 			<!-- Special properties -->

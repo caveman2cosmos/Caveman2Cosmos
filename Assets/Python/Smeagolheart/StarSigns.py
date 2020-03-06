@@ -1,15 +1,3 @@
-# Star Signs
-#
-# Original code by Smeagolheart
-#
-# Feb 2020 adjusted for Caveman2Cosmos to limit the timeframe that these promotions can occur. See if test in CvEventManager.py
-
-# Posible future improvements if someone wants to do them
-#
-# 1. Make promotions Culturally apropriate rather than just using the European/Mid-East zodiac for all nations.
-#
-# 2. Currently it is possible that the given promotion is of no use to the unit, eg attack boost to a unit that can't attack. No promotion given would be better.
-
 from CvPythonExtensions import *
 import CvUtil
 
@@ -19,6 +7,7 @@ def give(GC, TRNSLTR, GAME, CyUnit, iPlayer, bLand):
 		"PROMOTION_AQUARIUS",
 		"PROMOTION_ARIES",
 		"PROMOTION_CANCER",
+		"PROMOTION_CAPRICORN",
 		"PROMOTION_GEMINI",
 		"PROMOTION_LEO",
 		"PROMOTION_LIBRA",
@@ -26,7 +15,6 @@ def give(GC, TRNSLTR, GAME, CyUnit, iPlayer, bLand):
 		"PROMOTION_SAGITTARIUS",
 		"PROMOTION_SCORPIO",
 		"PROMOTION_TAURUS",
-		"PROMOTION_CAPRICORN",
 		"PROMOTION_VIRGO"
 	)
 	if bLand:
