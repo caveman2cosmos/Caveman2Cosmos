@@ -3477,7 +3477,12 @@ public:
 	CvBuildingInfo();
 	virtual ~CvBuildingInfo();
 
+	int getMaxGlobalInstances() const   { return m_iMaxGlobalInstances; }	// Exposed to Python
+	int getMaxTeamInstances() const     { return m_iMaxTeamInstances; }		// Exposed to Python
+	int getMaxPlayerInstances() const   { return m_iMaxPlayerInstances; }	// Exposed to Python
+	int getExtraPlayerInstances() const { return m_iExtraPlayerInstances; }	// Exposed to Python
 	bool isNoLimit() const;						// Exposed to Python
+
 	int getVictoryPrereq() const;				// Exposed to Python
 	int getFreeStartEra() const;				// Exposed to Python
 	int getMaxStartEra() const;					// Exposed to Python
@@ -3988,13 +3993,6 @@ public:
 	bool isNewCityFree(CvGameObject* pObject);
 
 	BoolExpr* getConstructCondition() const;
-
-	int getMaxGlobalInstances() const   { return m_iMaxGlobalInstances; }
-	int getMaxTeamInstances() const     { return m_iMaxTeamInstances; }
-	int getMaxPlayerInstances() const   { return m_iMaxPlayerInstances; }
-	int getExtraPlayerInstances() const { return m_iExtraPlayerInstances; }
-
-	bool isMonument() const;
 
 	int getVictoryThreshold(int i) const;
 

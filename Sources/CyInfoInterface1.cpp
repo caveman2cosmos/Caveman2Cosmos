@@ -705,6 +705,13 @@ void CyInfoPythonInterface1()
 		;
 
 	python::class_<CvBuildingInfo, python::bases<CvInfoBase, CvScalableInfo> >("CvBuildingInfo")
+
+		.def("getMaxGlobalInstances", &CvBuildingInfo::getMaxGlobalInstances, "int ()")
+		.def("getMaxTeamInstances", &CvBuildingInfo::getMaxTeamInstances, "int ()")
+		.def("getMaxPlayerInstances", &CvBuildingInfo::getMaxPlayerInstances, "int ()")
+		.def("getExtraPlayerInstances", &CvBuildingInfo::getExtraPlayerInstances, "bool ()")
+		.def("isNoLimit", &CvBuildingInfo::isNoLimit, "bool ()")
+
 		.def("getVictoryPrereq", &CvBuildingInfo::getVictoryPrereq, "int ()")
 		.def("getFreeStartEra", &CvBuildingInfo::getFreeStartEra, "int ()")
 		.def("getMaxStartEra", &CvBuildingInfo::getMaxStartEra, "int ()")
@@ -804,7 +811,6 @@ void CyInfoPythonInterface1()
 		.def("getVoteSourceType", &CvBuildingInfo::getVoteSourceType, "int ()")
 		.def("getPrereqVicinityBonus", &CvBuildingInfo::getPrereqVicinityBonus, "int ()")
 
-		.def("isNoLimit", &CvBuildingInfo::isNoLimit, "bool ()")
 		.def("isTeamShare", &CvBuildingInfo::isTeamShare, "bool ()")
 		.def("isAutoBuild", &CvBuildingInfo::isAutoBuild, "bool ()")
 		.def("isRequiresActiveCivics", &CvBuildingInfo::isRequiresActiveCivics, "bool ()")
