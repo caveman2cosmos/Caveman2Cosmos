@@ -72,7 +72,6 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 		.def("getRevIdxNational", &CyPlayer::getRevIdxNational, "int ()")
 		.def("isInquisitionConditions", &CyPlayer::isInquisitionConditions, "bool ()")
 		.def("canFoundReligion", &CyPlayer::canFoundReligion, "bool ()")
-		.def("isBuildingRequiredToTrain", &CyPlayer::isBuildingRequiredToTrain, "bool ((BuildingTypes)iBuilding, (UnitTypes)iUnit)")
 		/************************************************************************************************/
 		/* REVDCM                                  END                                                  */
 		/************************************************************************************************/

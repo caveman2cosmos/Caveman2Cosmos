@@ -380,25 +380,18 @@ void CyInfoPythonInterface1()
 		.def("getNumSeeInvisibleTypes", &CvUnitInfo::getNumSeeInvisibleTypes, "int ()")
 		.def("getSeeInvisibleType", &CvUnitInfo::getSeeInvisibleType, "int (int)")
 		.def("getAdvisorType", &CvUnitInfo::getAdvisorType, "int ()")
-/************************************************************************************************/
-/* REVDCM                                 02/16/10                                phungus420    */
-/*                                                                                              */
-/* CanTrain                                                                                     */
-/************************************************************************************************/
+
 		.def("getMaxStartEra", &CvUnitInfo::getMaxStartEra, "int ()")
 		.def("getForceObsoleteTech", &CvUnitInfo::getForceObsoleteTech, "int ()")
 		.def("isStateReligion", &CvUnitInfo::isStateReligion, "bool ()")
 		.def("getPrereqGameOption", &CvUnitInfo::getPrereqGameOption, "int ()")
 		.def("getNotGameOption", &CvUnitInfo::getNotGameOption, "int ()")
-/************************************************************************************************/
-/* REVDCM                                  END                                                  */
-/************************************************************************************************/
+
 		.def("getHolyCity", &CvUnitInfo::getHolyCity, "int ()")
 		.def("getReligionType", &CvUnitInfo::getReligionType, "int ()")
 		.def("getStateReligion", &CvUnitInfo::getStateReligion, "int ()")
 		.def("getPrereqReligion", &CvUnitInfo::getPrereqReligion, "int ()")
 		.def("getPrereqCorporation", &CvUnitInfo::getPrereqCorporation, "int ()")
-		.def("getPrereqBuilding", &CvUnitInfo::getPrereqBuilding, "int ()")
 		.def("getPrereqOrBuildingsNum", &CvUnitInfo::getPrereqOrBuildingsNum, "int ()")
 		.def("getPrereqOrBuilding", &CvUnitInfo::getPrereqOrBuilding, "int (int)")
 		.def("getPrereqAndTech", &CvUnitInfo::getPrereqAndTech, "int ()")
@@ -412,15 +405,7 @@ void CyInfoPythonInterface1()
 
 		.def("isFoodProduction", &CvUnitInfo::isFoodProduction, "bool ()")
 		.def("isNoBadGoodies", &CvUnitInfo::isNoBadGoodies, "bool ()")
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                       03/20/10                       Afforess & jdog5000    */
-/*                                                                                              */
-/* Bugfix                                                                                       */
-/************************************************************************************************/
 		.def("isOnlyDefensive", &CvUnitInfo::isOnlyDefensive, "bool ()")
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                        END                                                  */
-/************************************************************************************************/
 		.def("isNoCapture", &CvUnitInfo::isNoCapture, "bool ()")
 		.def("isRivalTerritory", &CvUnitInfo::isRivalTerritory, "bool ()")
 		.def("isMilitaryHappiness", &CvUnitInfo::isMilitaryHappiness, "bool ()")
@@ -510,9 +495,10 @@ void CyInfoPythonInterface1()
 		.def("getUnitGroupRequired", &CvUnitInfo::getUnitGroupRequired, "int (int i)")
 
 		.def("isPrereqOrCivics", &CvUnitInfo::isPrereqOrCivics, "bool (int i)")
-		.def("isPrereqBuilding", &CvUnitInfo::isPrereqBuilding, "bool (int i)")
-		.def("getPrereqBuildingOverrideTech", &CvUnitInfo::getPrereqBuildingOverrideTech, "int (int i)")
-		.def("getPrereqBuildingOverrideEra", &CvUnitInfo::getPrereqBuildingOverrideEra, "int (int i)")
+
+		.def("getPrereqAndBuilding", &CvUnitInfo::getPrereqAndBuilding, "int (int i)")
+		.def("getNumPrereqAndBuildings", &CvUnitInfo::getNumPrereqAndBuildings, "int ()")
+		.def("isPrereqAndBuilding", &CvUnitInfo::isPrereqAndBuilding, "bool (int i)")
 
 		.def("isTargetUnit", &CvUnitInfo::isTargetUnit, "bool (int i)")
 		.def("isDefendAgainstUnit", &CvUnitInfo::isDefendAgainstUnit, "bool (int i)")

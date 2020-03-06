@@ -1346,11 +1346,6 @@ bool CyPlayer::canFoundReligion()
 {
 	return m_pPlayer ? m_pPlayer->canFoundReligion() : false;
 }
-
-bool CyPlayer::isBuildingRequiredToTrain(int /*BuildingTypes*/ iBuilding, int /*UnitTypes*/ iUnit)
-{
-	return m_pPlayer ? m_pPlayer->isBuildingRequiredToTrain((BuildingTypes)iBuilding, (UnitTypes)iUnit) : false;
-}
 /************************************************************************************************/
 /* REVDCM                                  END                                                  */
 /************************************************************************************************/

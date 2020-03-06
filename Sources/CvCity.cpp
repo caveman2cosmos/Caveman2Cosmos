@@ -2432,35 +2432,15 @@ bool CvCity::isPlotTrainable(UnitTypes eUnit, bool bContinue, bool bTestVisible)
 			}
 		}
 
-		if (kUnit.getPrereqBuilding() != NO_BUILDING)
+		for (int iI = 0; iI < kUnit.getNumPrereqAndBuildings(); ++iI)
 		{
-
-			if (!getNumBuilding((BuildingTypes)kUnit.getPrereqBuilding()))
+			if (!getNumBuilding((BuildingTypes)kUnit.getPrereqAndBuilding(iI)))
 			{
-				SpecialBuildingTypes eSpecialBuilding = ((SpecialBuildingTypes)(GC.getBuildingInfo((BuildingTypes)(kUnit.getPrereqBuilding())).getSpecialBuildingType()));
+				SpecialBuildingTypes eSpecialBuilding = (SpecialBuildingTypes)GC.getBuildingInfo((BuildingTypes)kUnit.getPrereqAndBuilding(iI)).getSpecialBuildingType();
 
 				if ((eSpecialBuilding == NO_SPECIALBUILDING) || !(pPlayer.isSpecialBuildingNotRequired(eSpecialBuilding)))
 				{
 					return false;
-				}
-			}
-		}
-
-		if (kUnit.isPrereqBuilding(NO_BUILDING))
-		{
-			int const numBuildingInfos = GC.getNumBuildingInfos();
-
-			for (int iI = 0; iI < numBuildingInfos; iI++)
-			{
-				if (kUnit.isPrereqBuilding(iI))
-				{
-					if (pPlayer.isBuildingRequiredToTrain((BuildingTypes)iI, eUnit))
-					{
-						if (!getNumBuilding((BuildingTypes)iI))
-						{
-							return false;
-						}
-					}
 				}
 			}
 		}

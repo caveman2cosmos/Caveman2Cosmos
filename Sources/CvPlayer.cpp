@@ -12536,25 +12536,6 @@ bool CvPlayer::canFoundReligion() const
 	return true;
 }
 
-bool CvPlayer::isBuildingRequiredToTrain(BuildingTypes eBuilding, UnitTypes eUnit) const
-{
-	CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
-	if (kUnit.isPrereqBuilding(eBuilding))
-	{
-		const TechTypes eOverrideTech = (TechTypes) kUnit.getPrereqBuildingOverrideTech(eBuilding);
-		if (eOverrideTech != NO_TECH && GET_TEAM(getTeam()).isHasTech(TechTypes(eOverrideTech)))
-		{
-			return false;
-		}
-		const EraTypes eOverrideEra = (EraTypes) kUnit.getPrereqBuildingOverrideEra(eBuilding);
-		if (eOverrideEra != NO_ERA && EraTypes(getCurrentEra()) >= eOverrideEra)
-		{
-			return false;
-		}
-		return true;
-	}
-	return false;
-}
 /************************************************************************************************/
 /* REVDCM                                  END                                                  */
 /************************************************************************************************/

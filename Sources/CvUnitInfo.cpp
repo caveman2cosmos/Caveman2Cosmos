@@ -107,7 +107,6 @@ m_iReligionType(NO_RELIGION),
 m_iStateReligion(NO_RELIGION),
 m_iPrereqReligion(NO_RELIGION),
 m_iPrereqCorporation(NO_CORPORATION),
-m_iPrereqBuilding(NO_BUILDING),
 m_iPrereqAndTech(NO_TECH),
 m_iPrereqAndBonus(NO_BONUS),
 m_iGroupSize(0),
@@ -165,9 +164,6 @@ m_iLeaderPromotion(NO_PROMOTION),
 m_fUnitMaxSpeed(0.0f),
 m_fUnitPadTime(0.0f),
 m_pbPrereqOrCivics(NULL),
-m_pbPrereqBuilding(NULL),
-m_piPrereqBuildingOverrideTech(NULL),
-m_piPrereqBuildingOverrideEra(NULL),
 m_pbTargetUnitCombat(NULL),
 m_pbDefenderUnitCombat(NULL),
 m_piFlankingStrikeUnit(NULL),
@@ -336,9 +332,6 @@ m_bGatherHerd(false)
 CvUnitInfo::~CvUnitInfo()
 {
 	SAFE_DELETE_ARRAY(m_pbPrereqOrCivics);
-	SAFE_DELETE_ARRAY(m_pbPrereqBuilding);
-	SAFE_DELETE_ARRAY(m_piPrereqBuildingOverrideTech);
-	SAFE_DELETE_ARRAY(m_piPrereqBuildingOverrideEra);
 	SAFE_DELETE_ARRAY(m_pbTargetUnitCombat);
 	SAFE_DELETE_ARRAY(m_pbDefenderUnitCombat);
 	SAFE_DELETE_ARRAY(m_piFlankingStrikeUnit);
@@ -373,7 +366,6 @@ CvUnitInfo::~CvUnitInfo()
 	SAFE_DELETE_ARRAY(m_paszLateArtDefineTags);
 	SAFE_DELETE_ARRAY(m_paszMiddleArtDefineTags);
 	SAFE_DELETE_ARRAY(m_paszUnitNames);
-	SAFE_DELETE_ARRAY(m_pbPrereqBuilding);
 	SAFE_DELETE_ARRAY(m_piPrereqOrVicinityBonuses);
 	SAFE_DELETE_ARRAY(m_pbPassableRouteNeeded);
 	SAFE_DELETE_ARRAY(m_paszClassicalArtDefineTags);
@@ -901,21 +893,16 @@ int CvUnitInfo::getPrereqCorporation() const
 	return m_iPrereqCorporation;
 }
 
-int CvUnitInfo::getPrereqBuilding() const
-{
-	return m_iPrereqBuilding;
-}
-
 int CvUnitInfo::getPrereqOrBuildingsNum() const
 {
-	return m_aePrereqOrBuildings.size();
+	return m_aiPrereqOrBuildings.size();
 }
 
 BuildingTypes CvUnitInfo::getPrereqOrBuilding(int i) const
 {
 	FAssertMsg(i < getPrereqOrBuildingsNum(), "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
-	return (BuildingTypes)m_aePrereqOrBuildings[i];
+	return (BuildingTypes)m_aiPrereqOrBuildings[i];
 }
 
 int CvUnitInfo::getPrereqAndTech() const
@@ -1258,29 +1245,21 @@ bool CvUnitInfo::isPrereqOrCivics(int i) const
 	return m_pbPrereqOrCivics ? m_pbPrereqOrCivics[i] : false;
 }
 
-bool CvUnitInfo::isPrereqBuilding(int i) const
+int CvUnitInfo::getPrereqAndBuilding(int i) const
 {
-	FAssertMsg(i < GC.getNumBuildingInfos(), "Index out of bounds");
-	FAssertMsg(i >= -1, "Index out of bounds");
-	if (i == NO_BUILDING)
+	return m_aiPrereqAndBuildings[i];
+}
+int CvUnitInfo::getNumPrereqAndBuildings() const
+{
+	return (int)m_aiPrereqAndBuildings.size();
+}
+bool CvUnitInfo::isPrereqAndBuilding(int i) const
+{
+	if (find(m_aiPrereqAndBuildings.begin(), m_aiPrereqAndBuildings.end(), i) == m_aiPrereqAndBuildings.end())
 	{
-		return m_pbPrereqBuilding != NULL;
+		return false;
 	}
-	return m_pbPrereqBuilding ? m_pbPrereqBuilding[i] : false;
-}
-
-int CvUnitInfo::getPrereqBuildingOverrideTech(int i) const
-{
-	FAssertMsg(i < GC.getNumBuildingInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
-	return m_piPrereqBuildingOverrideTech ? m_piPrereqBuildingOverrideTech[i] : -1;
-}
-
-int CvUnitInfo::getPrereqBuildingOverrideEra(int i) const
-{
-	FAssertMsg(i < GC.getNumBuildingInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
-	return m_piPrereqBuildingOverrideEra ? m_piPrereqBuildingOverrideEra[i] : -1;
+	return true;
 }
 
 //Struct Vector
@@ -3913,9 +3892,6 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum)
 	CheckSum(iSum, m_iStateReligion);
 	CheckSum(iSum, m_iPrereqReligion);
 	CheckSum(iSum, m_iPrereqCorporation);
-	CheckSum(iSum, m_iPrereqBuilding);
-
-	CheckSumC(iSum, m_aePrereqOrBuildings);
 
 	CheckSum(iSum, m_iPrereqAndTech);
 	CheckSum(iSum, m_iPrereqAndBonus);
@@ -3990,11 +3966,10 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum)
 	CheckSumI(iSum, NUM_DOMAIN_TYPES, m_piDomainModifier);
 	CheckSumI(iSum, GC.getNumBonusInfos(), m_piBonusProductionModifier);
 	//CheckSumI(iSum, m_iGroupDefinitions, m_piUnitGroupRequired);
-
 	CheckSumI(iSum, GC.getNumCivicInfos(), m_pbPrereqOrCivics);
-	CheckSumI(iSum, GC.getNumBuildingInfos(), m_pbPrereqBuilding);
-	CheckSumI(iSum, GC.getNumBuildingInfos(), m_piPrereqBuildingOverrideTech);
-	CheckSumI(iSum, GC.getNumBuildingInfos(), m_piPrereqBuildingOverrideEra);
+
+	CheckSumC(iSum, m_aiPrereqAndBuildings);
+	CheckSumC(iSum, m_aiPrereqOrBuildings);
 
 	CheckSumC(iSum, m_aiTargetUnit);
 	CheckSumC(iSum, m_aiDefendAgainstUnit);
@@ -4035,7 +4010,6 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum)
 	CheckSum(iSum, m_iCommandRange);
 
 	CheckSumI(iSum, GC.getNUM_UNIT_PREREQ_OR_BONUSES(), m_piPrereqOrVicinityBonuses);
-	CheckSumI(iSum, GC.getNumBuildingInfos(), m_pbPrereqBuilding);
 	CheckSumI(iSum, GC.getNumRouteInfos(), m_pbPassableRouteNeeded);
 
 	getKillOutcomeList()->getCheckSum(iSum);
@@ -4480,12 +4454,6 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->SetVariableListTagPair(&m_pbPrereqOrCivics, L"PrereqOrCivics", GC.getNumCivicInfos());
 
-	pXML->SetVariableListTagPair(&m_pbPrereqBuilding, L"PrereqBuildings", GC.getNumBuildingInfos());
-
-	pXML->SetVariableListTagPair(&m_piPrereqBuildingOverrideTech, L"PrereqBuildings", GC.getNumBuildingInfos(), L"TechOverride", GC.getNumTechInfos());
-
-	pXML->SetVariableListTagPair(&m_piPrereqBuildingOverrideEra, L"PrereqBuildings", GC.getNumBuildingInfos(), L"EraOverride", GC.getNumEraInfos());
-
 	pXML->SetOptionalIntVectorWithDelayedResolution(m_aiTargetUnit, L"UnitTargets");
 	pXML->SetOptionalIntVectorWithDelayedResolution(m_aiDefendAgainstUnit, L"DefendAgainstUnit");
 	pXML->SetOptionalIntVectorWithDelayedResolution(m_aiSupersedingUnits, L"SupersedingUnits");
@@ -4506,10 +4474,8 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PrereqCorporation");
 	m_iPrereqCorporation = pXML->GetInfoClass(szTextVal);
 
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"PrereqBuilding");
-	m_iPrereqBuilding = pXML->GetInfoClass(szTextVal);
-
-	pXML->SetOptionalIntVector(&m_aePrereqOrBuildings, L"PrereqOrBuildings");
+	pXML->SetOptionalIntVector(&m_aiPrereqAndBuildings, L"PrereqBuildings");
+	pXML->SetOptionalIntVector(&m_aiPrereqOrBuildings, L"PrereqOrBuildings");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PrereqTech");
 	m_iPrereqAndTech = pXML->GetInfoClass(szTextVal);
@@ -4765,7 +4731,6 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"VicinityBonusType");
 	m_iPrereqVicinityBonus = pXML->GetInfoClass(szTextVal);
 	pXML->SetVariableListTagPair(&m_pbPassableRouteNeeded, L"PassableRouteNeededs", GC.getNumRouteInfos(), false);
-	pXML->SetVariableListTagPair(&m_pbPrereqBuilding, L"PrereqBuildings", GC.getNumBuildingInfos());
 	pXML->GetOptionalChildXmlValByName(&m_iBaseFoodChange, L"iBaseFoodChange");
 	pXML->GetOptionalChildXmlValByName(&m_iControlPoints, L"iControlPoints");
 	pXML->GetOptionalChildXmlValByName(&m_iCommandRange, L"iCommandRange");
@@ -5740,42 +5705,6 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 		}
 	}
 
-	for ( int i = 0; i < GC.getNumBuildingInfos(); i++)
-	{
-		if ( isPrereqBuilding(i) == bDefault && pClassInfo->isPrereqBuilding(i) != bDefault)
-		{
-			if ( NULL == m_pbPrereqBuilding )
-			{
-				CvXMLLoadUtility::InitList(&m_pbPrereqBuilding,GC.getNumBuildingInfos(),bDefault);
-			}
-			m_pbPrereqBuilding[i] = pClassInfo->isPrereqBuilding(i);
-		}
-	}
-
-	for ( int i = 0; i < GC.getNumBuildingInfos(); i++)
-	{
-		if ( getPrereqBuildingOverrideTech(i) == -1 && pClassInfo->getPrereqBuildingOverrideTech(i) != -1 )
-		{
-			if ( NULL == m_piPrereqBuildingOverrideTech )
-			{
-				CvXMLLoadUtility::InitList(&m_piPrereqBuildingOverrideTech,GC.getNumBuildingInfos(),-1);
-			}
-			m_piPrereqBuildingOverrideTech[i] = pClassInfo->getPrereqBuildingOverrideTech(i);
-		}
-	}
-
-	for ( int i = 0; i < GC.getNumBuildingInfos(); i++)
-	{
-		if ( getPrereqBuildingOverrideEra(i) == -1 && pClassInfo->getPrereqBuildingOverrideEra(i) != -1 )
-		{
-			if ( NULL == m_piPrereqBuildingOverrideEra )
-			{
-				CvXMLLoadUtility::InitList(&m_piPrereqBuildingOverrideEra,GC.getNumBuildingInfos(),-1);
-			}
-			m_piPrereqBuildingOverrideEra[i] = pClassInfo->getPrereqBuildingOverrideEra(i);
-		}
-	}
-
 	//Struct Vector
 	if (getNumTargetUnits() == 0)
 	{
@@ -5859,8 +5788,8 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 	if ( m_iStateReligion == iTextDefault ) m_iStateReligion = pClassInfo->getStateReligion();
 	if ( m_iPrereqReligion == iTextDefault ) m_iPrereqReligion = pClassInfo->getPrereqReligion();
 	if ( m_iPrereqCorporation == iTextDefault ) m_iPrereqCorporation = pClassInfo->getPrereqCorporation();
-	if ( m_iPrereqBuilding == iTextDefault ) m_iPrereqBuilding = pClassInfo->getPrereqBuilding();
-	CvXMLLoadUtility::CopyNonDefaultsFromIntVector(m_aePrereqOrBuildings, pClassInfo->m_aePrereqOrBuildings);
+	CvXMLLoadUtility::CopyNonDefaultsFromIntVector(m_aiPrereqAndBuildings, pClassInfo->m_aiPrereqAndBuildings);
+	CvXMLLoadUtility::CopyNonDefaultsFromIntVector(m_aiPrereqOrBuildings, pClassInfo->m_aiPrereqOrBuildings);
 	if ( m_iPrereqAndTech == iTextDefault ) m_iPrereqAndTech = pClassInfo->getPrereqAndTech();
 	if ( m_iPrereqAndBonus == iTextDefault ) m_iPrereqAndBonus = pClassInfo->getPrereqAndBonus();
 

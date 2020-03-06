@@ -372,7 +372,6 @@ public:
 	bool isInquisitionConditions();
 	int getUnitUpgradePriceModifier();
 	bool canFoundReligion();
-	bool isBuildingRequiredToTrain(int /*BuildingTypes*/ iBuilding, int /*UnitTypes*/ iUnit);
 /************************************************************************************************/
 /* REVDCM                                  END                                                  */
 /************************************************************************************************/

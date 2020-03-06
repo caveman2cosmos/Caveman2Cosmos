@@ -1856,7 +1856,6 @@ public:
 	int getStateReligion() const;					// Exposed to Python
 	int getPrereqReligion() const;					// Exposed to Python
 	int getPrereqCorporation() const;				// Exposed to Python
-	int getPrereqBuilding() const;					// Exposed to Python
 	int getPrereqOrBuildingsNum() const;			// Exposed to Python
 	BuildingTypes getPrereqOrBuilding(int i) const;	// Exposed to Python
 	int getPrereqAndTech() const;					// Exposed to Python
@@ -2379,9 +2378,10 @@ public:
 	int getFlankingStrikeUnit(int i) const;			// Exposed to Python
 
 	bool isPrereqOrCivics(int i) const;				// Exposed to Python
-	bool isPrereqBuilding(int i) const; 		// Exposed to Python
-	int getPrereqBuildingOverrideTech(int i) const;	//Exposed to Python
-	int getPrereqBuildingOverrideEra(int i) const; 	//Exposed to Python
+
+	int CvUnitInfo::getPrereqAndBuilding(int i) const;
+	int CvUnitInfo::getNumPrereqAndBuildings() const;
+	bool CvUnitInfo::isPrereqAndBuilding(int i) const;
 
 	int getTargetUnit(int i) const;
 	int getNumTargetUnits() const;
@@ -2530,11 +2530,12 @@ protected:
 	int m_iStateReligion;
 	int m_iPrereqReligion;
 	int m_iPrereqCorporation;
-	int m_iPrereqBuilding;
 	int m_iPrereqAndTech;
 	int m_iPrereqAndBonus;
 
-	std::vector<int> m_aePrereqOrBuildings;
+	std::vector<int> m_aiPrereqAndBuildings;
+	std::vector<int> m_aiPrereqOrBuildings;
+
 	std::vector<int> m_aiTargetUnit;
 	std::vector<int> m_aiDefendAgainstUnit;
 	std::vector<int> m_aiSupersedingUnits;
@@ -2624,9 +2625,6 @@ protected:
 	int* m_piFlankingStrikeUnit;
 
 	bool* m_pbPrereqOrCivics;
-	bool* m_pbPrereqBuilding;
-	int* m_piPrereqBuildingOverrideTech;
-	int* m_piPrereqBuildingOverrideEra;
 
 	bool* m_pbTargetUnitCombat;
 	bool* m_pbDefenderUnitCombat;
