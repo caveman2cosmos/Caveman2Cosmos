@@ -7855,18 +7855,13 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 /* REVOLUTION_MOD                          END                                                  */
 /************************************************************************************************/
 
-#ifdef BARBARIAN_CITY_SPAWN_MAPCATEGORY_CHECK
-	const MapCategoryTypes eEarth = (MapCategoryTypes)GC.getInfoTypeForString("MAPCATEGORY_EARTH");
-#endif
+	static const MapCategoryTypes earth = static_cast<MapCategoryTypes>(GC.getInfoTypeForString("MAPCATEGORY_EARTH"));
+
 	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
 		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
-#ifdef BARBARIAN_CITY_SPAWN_MAPCATEGORY_CHECK
-		if (!pLoopPlot->isMapCategoryType(eEarth))
-			continue;
-#endif
-		if (!pLoopPlot->isWater() && !pLoopPlot->isVisibleToCivTeam())
+		if (pLoopPlot->isMapCategoryType(earth) && !pLoopPlot->isWater() && !pLoopPlot->isVisibleToCivTeam())
 		{
 			int iTargetCities = pLoopPlot->area()->getNumUnownedTiles();
 
