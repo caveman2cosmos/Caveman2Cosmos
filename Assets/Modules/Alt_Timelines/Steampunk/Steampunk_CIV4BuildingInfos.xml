@@ -284,12 +284,9 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_POWER_LINES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_POWER_LINES</BuildingType>
+			</PrereqInCityBuildings>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -337,12 +334,9 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_POWER_LINES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_POWER_LINES</BuildingType>
+			</PrereqInCityBuildings>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -390,12 +384,9 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_POWER_LINES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_POWER_LINES</BuildingType>
+			</PrereqInCityBuildings>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -457,12 +448,9 @@
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_NAVAL_ACADEMY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_NAVAL_ACADEMY</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>

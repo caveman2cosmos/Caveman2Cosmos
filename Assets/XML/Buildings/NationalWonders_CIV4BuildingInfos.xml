@@ -206,12 +206,9 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_VIDEO_GAMES</Bonus>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ANIMA_STUDIO</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ANIMA_STUDIO</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>11810</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -246,12 +243,9 @@
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_LIBRARY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>450</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -578,12 +572,9 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_SOCIAL_CONTRACT</PrereqTech>
 			<iPrereqPopulation>30</iPrereqPopulation>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqCultureLevel>CULTURELEVEL_INFLUENTIAL</PrereqCultureLevel>
 			<!-- Cost -->
 			<iCost>950</iCost>
@@ -640,12 +631,9 @@
 			<Strategy>TXT_KEY_BUILDING_CAPTURED_FIRE_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CONTROLLED_FIRE</PrereqTech>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_STICK_GATHERER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_STICK_GATHERER</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_FIRE_MAKING</ObsoleteTech>
 			<!-- Cost -->
@@ -697,12 +685,9 @@
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_LABORATORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_LABORATORY</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>2560</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -759,12 +744,9 @@
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_BANK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_BANK</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_CORPORATISM</CivicOption>
@@ -835,16 +817,10 @@
 			<Strategy>TXT_KEY_BUILDING_CHIEFS_PYRE_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CHIEFDOM</PrereqTech>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_FUNERAL_PYRE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_CHIEFS_HUT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FUNERAL_PYRE</BuildingType>
+				<BuildingType>BUILDING_CHIEFS_HUT</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_CHIEFDOM</CivicOption>
@@ -903,12 +879,9 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_ADVANCED_COMPUTERS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>7950</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -977,12 +950,9 @@
 			<PrereqTech>TECH_ASTRO_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_LABORATORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_LABORATORY</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>3080</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -1078,12 +1048,9 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CYBERWARFARE</PrereqTech>
 			<Bonus>BONUS_COMPUTERS</Bonus>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>4010</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -1121,16 +1088,10 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_ASTRONAUTICS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_OFFICES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_LABORATORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_LABORATORY</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>2950</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -1182,12 +1143,9 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_COMPULSORY_EDUCATION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>1740</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -1243,12 +1201,9 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_POWER_LINES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_POWER_LINES</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
@@ -1352,12 +1307,9 @@
 				<Bonus>BONUS_PETROLEUM_PRODUCTS</Bonus>
 				<Bonus>BONUS_BIOFUEL</Bonus>
 			</PrereqBonuses>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_OFFICES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_OFFICES</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
 			<!-- Cost -->
@@ -1475,12 +1427,9 @@
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_COURTHOUSE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>880</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -1595,12 +1544,9 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_COMPUTERS</Bonus>
 			</PrereqBonuses>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>2950</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -1706,12 +1652,9 @@
 				<Bonus>BONUS_FUR</Bonus>
 				<Bonus>BONUS_BASKETS</Bonus>
 			</PrereqBonuses>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
@@ -1965,12 +1908,9 @@
 			<Strategy>TXT_KEY_BUILDING_GREAT_BONFIRE_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_FIRE_MAKING</PrereqTech>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_BONFIRE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_BONFIRE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_FIREFIGHTING</ObsoleteTech>
 			<!-- Cost -->
@@ -2014,12 +1954,9 @@
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_COURTHOUSE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>468</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -2159,12 +2096,9 @@
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ARTIST_GUILD</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ARTIST_GUILD</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
 			<!-- Cost -->
@@ -2222,12 +2156,9 @@
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_BAKERY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_BAKERY</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<!-- Cost -->
@@ -2426,12 +2357,9 @@
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_CARPENTERS_WORKSHOP</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CARPENTERS_WORKSHOP</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<!-- Cost -->
@@ -2786,12 +2714,9 @@
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_FISHMONGER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FISHMONGER</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<!-- Cost -->
@@ -2849,12 +2774,9 @@
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GLASSSMITH</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GLASSSMITH</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<!-- Cost -->
@@ -2912,12 +2834,9 @@
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_JEWELLERY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_JEWELLERY</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<!-- Cost -->
@@ -3047,12 +2966,9 @@
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_LUMBER_CAMP</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_LUMBER_CAMP</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<!-- Cost -->
@@ -3254,12 +3170,9 @@
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<!-- Cost -->
@@ -3317,16 +3230,10 @@
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SERVANTS_QUARTERS</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SERVANTS_QUARTERS</BuildingType>
+				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_LABOR_UNIONS</ObsoleteTech>
 			<!-- Cost -->
@@ -3384,12 +3291,9 @@
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TAILOR_SHOP</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_TAILOR_SHOP</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<!-- Cost -->
@@ -3662,12 +3566,9 @@
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>1980</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -3992,12 +3893,9 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>2160</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -4096,12 +3994,9 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MIND_UPLOADING</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>11310</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -4259,16 +4154,10 @@
 			<PrereqTech>TECH_KNOWLEDGE_MANAGEMENT</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_HOSPITAL</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_HOSPITAL</BuildingType>
+				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>4010</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -4314,12 +4203,9 @@
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>2690</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -4386,16 +4272,10 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_COMPUTERS</Bonus>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
+				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>4010</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -4484,12 +4364,9 @@
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_EPIC_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_LITERATURE</PrereqTech>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_LIBRARY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>450</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -4752,16 +4629,10 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_COMPUTERS</Bonus>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
+				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>4010</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -4808,12 +4679,9 @@
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_LIBRARY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
@@ -5030,12 +4898,9 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>950</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -5649,16 +5514,10 @@
 			<PrereqTech>TECH_MODERN_SPORTS</PrereqTech>
 			<ObsoleteTech>TECH_BINARY_PSYCHOKINESIS</ObsoleteTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_MAJOR_LEAGUE_STADIUM</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_OFFICES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_MAJOR_LEAGUE_STADIUM</BuildingType>
+				<BuildingType>BUILDING_OFFICES</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>2460</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -5702,16 +5561,10 @@
 			<PrereqTech>TECH_TELEVISION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_OFFICES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TV_STUDIO</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_TV_STUDIO</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_BROADCAST_TOWER</BuildingType>
@@ -5844,12 +5697,9 @@
 				<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_OFFICES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_OFFICES</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_BROADCAST_TOWER</BuildingType>
@@ -5973,16 +5823,10 @@
 			<Strategy>TXT_KEY_BUILDING_ONLINE_UNIVERSITY_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_VIRTUAL_SOCIETY</PrereqTech>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
+				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_ONLINE</CivicOption>
@@ -6035,12 +5879,9 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_NANOTUBES</Bonus>
 			</PrereqBonuses>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_MILITARY_SPACEPORT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_MILITARY_SPACEPORT</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>6490</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -6121,12 +5962,9 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_POLICE_STATION</BuildingType>
@@ -6300,12 +6138,9 @@
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>2560</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -6358,12 +6193,9 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_RAILROAD</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_MUSEUM</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_MUSEUM</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>1310</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -6438,12 +6270,9 @@
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_HOSPITAL</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_HOSPITAL</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>1540</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -6499,16 +6328,10 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_PHARMACEUTICALS</Bonus>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_HOSPITAL</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_LABORATORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_HOSPITAL</BuildingType>
+				<BuildingType>BUILDING_LABORATORY</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>8290</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -6562,16 +6385,10 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_SUPERCONDUCTORS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_LABORATORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_OFFICES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_LABORATORY</BuildingType>
+				<BuildingType>BUILDING_OFFICES</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>3690</iCost>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -6948,12 +6765,9 @@
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_LABORATORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_LABORATORY</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>3690</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -7006,12 +6820,9 @@
 					<iNumBuildingNeeded>5</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_DISTRICT_COURTHOUSE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_DISTRICT_COURTHOUSE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>880</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -7481,12 +7292,9 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_TOURISM</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_OFFICES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_OFFICES</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SPACE_TOURISM</ObsoleteTech>
 			<!-- Cost -->
@@ -7617,12 +7425,9 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MONARCHY</PrereqTech>
 			<iCitiesPrereq>4</iCitiesPrereq>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>400</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -7767,12 +7572,9 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_GLOBALIZATION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_BANK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_BANK</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>2360</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -7824,16 +7626,10 @@
 			<PrereqTech>TECH_MYTHOLOCIAL_BEASTIARY</PrereqTech>
 			<iPrereqPopulation>23</iPrereqPopulation>
 			<Bonus>BONUS_ORGANIC_COMPUTERS</Bonus>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_CULTURE_LOCAL_AFRICAN</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_LOCAL_AFRICAN</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_JACKALOPE_BREEDER</BuildingMustNotHave>
@@ -7892,12 +7688,9 @@
 			<PrereqTech>TECH_MYTHOLOCIAL_BEASTIARY</PrereqTech>
 			<iPrereqPopulation>23</iPrereqPopulation>
 			<Bonus>BONUS_ORGANIC_COMPUTERS</Bonus>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_HIERACOSPHINX_BREEDER</BuildingMustNotHave>
@@ -7956,12 +7749,9 @@
 			<PrereqTech>TECH_MYTHOLOCIAL_BEASTIARY</PrereqTech>
 			<iPrereqPopulation>23</iPrereqPopulation>
 			<Bonus>BONUS_ORGANIC_COMPUTERS</Bonus>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_CULTURE_LOCAL_EUROPEAN</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CULTURE_LOCAL_EUROPEAN</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_HIERACOSPHINX_BREEDER</BuildingMustNotHave>
@@ -8020,12 +7810,9 @@
 			<PrereqTech>TECH_MYTHOLOCIAL_BEASTIARY</PrereqTech>
 			<iPrereqPopulation>23</iPrereqPopulation>
 			<Bonus>BONUS_ORGANIC_COMPUTERS</Bonus>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_HIERACOSPHINX_BREEDER</BuildingMustNotHave>
@@ -8084,12 +7871,9 @@
 			<PrereqTech>TECH_MYTHOLOCIAL_BEASTIARY</PrereqTech>
 			<iPrereqPopulation>23</iPrereqPopulation>
 			<Bonus>BONUS_ORGANIC_COMPUTERS</Bonus>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_HIERACOSPHINX_BREEDER</BuildingMustNotHave>
@@ -8148,12 +7932,9 @@
 			<PrereqTech>TECH_MYTHOLOCIAL_BEASTIARY</PrereqTech>
 			<iPrereqPopulation>23</iPrereqPopulation>
 			<Bonus>BONUS_ORGANIC_COMPUTERS</Bonus>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_HIERACOSPHINX_BREEDER</BuildingMustNotHave>
@@ -8212,12 +7993,9 @@
 			<PrereqTech>TECH_MYTHOLOCIAL_BEASTIARY</PrereqTech>
 			<iPrereqPopulation>23</iPrereqPopulation>
 			<Bonus>BONUS_ORGANIC_COMPUTERS</Bonus>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_HIERACOSPHINX_BREEDER</BuildingMustNotHave>
@@ -8343,12 +8121,9 @@
 			<iPrereqPopulation>12</iPrereqPopulation>
 			<bRiver>1</bRiver>
 			<bPrereqPower>1</bPrereqPower>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_FACTORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FACTORY</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>2060</iCost>
 			<!-- Main effects -->
@@ -8433,16 +8208,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUSION</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_LABORATORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_POWER_LINES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_LABORATORY</BuildingType>
+				<BuildingType>BUILDING_POWER_LINES</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>6490</iCost>
 			<!-- Main effects -->

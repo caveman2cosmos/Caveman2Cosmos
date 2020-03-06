@@ -16,16 +16,10 @@
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALEOLITHIC_BIRD_MYTH_EFFECT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ANIMAL_STORY_REQUIRE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALEOLITHIC_BIRD_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORY_REQUIRE</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -73,16 +67,10 @@
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<FreeBuilding>BUILDING_PALEOLITHIC_BIRD_STORIES_EFFECT</FreeBuilding>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALEOLITHIC_BIRD_STORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_LIBRARY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALEOLITHIC_BIRD_STORY</BuildingType>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_PALEOLITHIC_BIRD_STORIES_EFFECT</BuildingMustNotHave>
@@ -158,16 +146,10 @@
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALEOLITHIC_CAT_MYTH_EFFECT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ANIMAL_STORY_REQUIRE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALEOLITHIC_CAT_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORY_REQUIRE</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -215,16 +197,10 @@
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<FreeBuilding>BUILDING_PALEOLITHIC_CAT_STORIES_EFFECT</FreeBuilding>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALEOLITHIC_CAT_STORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_LIBRARY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALEOLITHIC_CAT_STORY</BuildingType>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_PALEOLITHIC_CAT_STORIES_EFFECT</BuildingMustNotHave>
@@ -300,16 +276,10 @@
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALEOLITHIC_DOG_MYTH_EFFECT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ANIMAL_STORY_REQUIRE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALEOLITHIC_DOG_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORY_REQUIRE</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -357,16 +327,10 @@
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<FreeBuilding>BUILDING_PALEOLITHIC_DOG_STORIES_EFFECT</FreeBuilding>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALEOLITHIC_DOG_STORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_LIBRARY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALEOLITHIC_DOG_STORY</BuildingType>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_PALEOLITHIC_DOG_STORIES_EFFECT</BuildingMustNotHave>
@@ -442,16 +406,10 @@
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_MYTH_EFFECT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ANIMAL_STORY_REQUIRE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_STORY_REQUIRE</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -499,16 +457,10 @@
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<FreeBuilding>BUILDING_PALEOLITHIC_MARSUPIAL_STORIES_EFFECT</FreeBuilding>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_STORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_LIBRARY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALEOLITHIC_MARSUPIAL_STORY</BuildingType>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_PALEOLITHIC_MARSUPIAL_STORIES_EFFECT</BuildingMustNotHave>

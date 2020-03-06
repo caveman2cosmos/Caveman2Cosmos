@@ -38,16 +38,10 @@
 			<!-- Misc. Effects -->
 			<iWarWearinessModifier>-5</iWarWearinessModifier>
 			<iMilitaryProductionModifier>5</iMilitaryProductionModifier>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_WAR_DANCE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_WAR_DANCE</BuildingType>
+				<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_ABORIGINE_EMBASSY</BuildingType>

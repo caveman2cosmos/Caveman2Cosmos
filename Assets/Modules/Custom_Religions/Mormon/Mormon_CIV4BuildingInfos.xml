@@ -107,12 +107,9 @@
 				</ReligionChange>
 			</ReligionChanges>
 			<ConstructSound>AS2D_BUILD_MORMON</ConstructSound>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_MORMON_TEMPLE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_MORMON_TEMPLE</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>

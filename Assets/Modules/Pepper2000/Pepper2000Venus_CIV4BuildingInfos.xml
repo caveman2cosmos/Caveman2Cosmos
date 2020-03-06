@@ -73,12 +73,9 @@
 				<iYield>1</iYield>
 			</YieldChanges>
 			<iMaintenanceModifier>-5</iMaintenanceModifier>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 			<Bonus>BONUS_NANOTUBES</Bonus>
 			<iRevIdxLocal>-10</iRevIdxLocal>
 		</BuildingInfo>
@@ -116,12 +113,9 @@
 			</TechCommerceChanges>
 			<iMaintenanceModifier>-5</iMaintenanceModifier>
 			<iWorkableRadius>3</iWorkableRadius>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_VENUS_CITY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_CITY</BuildingType>
+			</PrereqInCityBuildings>
 			<Bonus>BONUS_PLASTEEL</Bonus>
 			<iRevIdxLocal>-10</iRevIdxLocal>
 		</BuildingInfo>
@@ -163,12 +157,9 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<iMaintenanceModifier>-5</iMaintenanceModifier>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_VENUS_SURFACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_SURFACE</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_SKY_ARCOLOGY</Type>
@@ -194,12 +185,9 @@
 				<iYield>4</iYield>
 			</YieldChanges>
 			<iMaintenanceModifier>-5</iMaintenanceModifier>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_VENUS_ARCOLOGY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_ARCOLOGY</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_SOLAR_ARRAY</Type>
@@ -428,12 +416,9 @@
 				<iYield>0</iYield>
 				<iYield>20</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_GOVERNING_COUNCIL</Type>
@@ -528,16 +513,10 @@
 			<CommerceChanges>
 				<iCommerce>1000</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_VENUS_TRADE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_VENUS_HYDROGEN_GENERATOR</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_TRADE</BuildingType>
+				<BuildingType>BUILDING_VENUS_HYDROGEN_GENERATOR</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_BROADBAND</Type>
@@ -596,12 +575,9 @@
 				<iYield>0</iYield>
 				<iYield>5</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_SURFACE_SCOOP</Type>
@@ -625,12 +601,9 @@
 				<iYield>0</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_VENUS_CITY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_CITY</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_ORBITAL_SOLAR_ARRAY</Type>
@@ -653,12 +626,9 @@
 				<iYield>0</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_VENUS_CITY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_CITY</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_SURFACE_FACTORY</Type>
@@ -681,12 +651,9 @@
 				<iYield>0</iYield>
 				<iYield>100</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_VENUS_SURFACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_SURFACE</BuildingType>
+			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_NOVUS_CHEMICALS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -708,12 +675,9 @@
 				<iYield>0</iYield>
 				<iYield>150</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_VENUS_SURFACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_SURFACE</BuildingType>
+			</PrereqInCityBuildings>
 			<bPower>1</bPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -746,20 +710,11 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_VENUS_ECOSYSTEM</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SULFURIC_ACID_LIFE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_VENUS_SURFACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_ECOSYSTEM</BuildingType>
+				<BuildingType>BUILDING_SULFURIC_ACID_LIFE</BuildingType>
+				<BuildingType>BUILDING_VENUS_SURFACE</BuildingType>
+			</PrereqInCityBuildings>
 			<Bonus>BONUS_NOVUS_CHEMICALS</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -793,16 +748,10 @@
 					<iFreeSpecialistCount>1</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_VENUS_TRADE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_VENUS_SURFACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_TRADE</BuildingType>
+				<BuildingType>BUILDING_VENUS_SURFACE</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_CO2_REMOVAL</Type>
@@ -824,12 +773,9 @@
 			<YieldChanges>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_CALCIUM_MINE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CALCIUM_MINE</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CALCIUM_MINE</Type>
@@ -849,12 +795,9 @@
 				<iYield>0</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_VENUS_SURFACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_SURFACE</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CALCIUM_CARBONATE</Type>
@@ -876,12 +819,9 @@
 				<iYield>10</iYield>
 			</YieldChanges>
 			<iMaintenanceModifier>-10</iMaintenanceModifier>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_VENUS_CO2_REMOVAL</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_CO2_REMOVAL</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AGRODOME</Type>
@@ -903,12 +843,9 @@
 			<YieldChanges>
 				<iYield>25</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_VENUS_SURFACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_SURFACE</BuildingType>
+			</PrereqInCityBuildings>
 			<Bonus>BONUS_NOVUS_CHEMICALS</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -933,12 +870,9 @@
 				<iYield>0</iYield>
 				<iYield>200</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_VENUS_FUSION_PLANT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_FUSION_PLANT</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_CLAYTRONIC_CITY</Type>
@@ -959,16 +893,10 @@
 				<iYield>50</iYield>
 			</YieldChanges>
 			<iHappiness>1</iHappiness>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_VENUS_SURFACE_FACTORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_VENUS_FUSION_PLANT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_SURFACE_FACTORY</BuildingType>
+				<BuildingType>BUILDING_VENUS_FUSION_PLANT</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_DEATH_RAY</Type>
@@ -993,12 +921,9 @@
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_VENUS_FUSION_PLANT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_FUSION_PLANT</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_TERRA</Type>
@@ -1037,20 +962,11 @@
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_CALCIUM_CARBONATE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_VENUS_SURFACE_FACTORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_VENUS_ARCOLOGY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CALCIUM_CARBONATE</BuildingType>
+				<BuildingType>BUILDING_VENUS_SURFACE_FACTORY</BuildingType>
+				<BuildingType>BUILDING_VENUS_ARCOLOGY</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERRAFORMED_VENUS_EFFECT</Type>
@@ -1121,12 +1037,9 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_VENUS_ARCOLOGY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_ARCOLOGY</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_ARTIFICIAL_ROTATION</Type>
@@ -1154,16 +1067,10 @@
 					<iExtraCommerce>10</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_VENUS_ORBITAL_SOLAR_ARRAY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_VENUS_SKY_ARCOLOGY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VENUS_ORBITAL_SOLAR_ARRAY</BuildingType>
+				<BuildingType>BUILDING_VENUS_SKY_ARCOLOGY</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

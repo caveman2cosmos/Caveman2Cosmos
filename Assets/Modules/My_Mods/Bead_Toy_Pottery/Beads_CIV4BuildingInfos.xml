@@ -32,16 +32,10 @@
 				<Bonus>BONUS_FINE_CLAY</Bonus>
 				<Bonus>BONUS_CLAY</Bonus>
 			</PrereqBonuses>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_FACTORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_BEADMAKER_WORKSHOP</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FACTORY</BuildingType>
+				<BuildingType>BUILDING_BEADMAKER_WORKSHOP</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_BEADMAKER_WORKSHOP</BuildingType>
@@ -275,12 +269,9 @@
 				<Bonus>BONUS_FINE_CLAY</Bonus>
 				<Bonus>BONUS_CLAY</Bonus>
 			</PrereqBonuses>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_BEADMAKER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_BEADMAKER</BuildingType>
+			</PrereqInCityBuildings>
 			<!--PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>

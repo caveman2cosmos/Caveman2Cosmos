@@ -92,12 +92,9 @@
 				<iYield>0</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_OORT_CLOUD_BASE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_OORT_CLOUD_BASE</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OORT_CLOUD_SOLAR_ARRAY</Type>
@@ -133,12 +130,9 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_OORT_CLOUD_BASE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_OORT_CLOUD_BASE</BuildingType>
+			</PrereqInCityBuildings>
 			<bPower>1</bPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -240,12 +234,9 @@
 				<iYield>10</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ROGUE_OUTPOST</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ROGUE_OUTPOST</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ROGUE_BEACON</Type>
@@ -278,12 +269,9 @@
 				<iYield>5</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ROGUE_OUTPOST</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ROGUE_OUTPOST</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ROGUE_REBEL</Type>
@@ -331,12 +319,9 @@
 					<iExperience>3</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ROGUE_OUTPOST</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ROGUE_OUTPOST</BuildingType>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -367,12 +352,9 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ROGUE_OUTPOST</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ROGUE_OUTPOST</BuildingType>
+			</PrereqInCityBuildings>
 			<CommerceChanges>
 				<iCommerce>50</iCommerce>
 			</CommerceChanges>
@@ -405,12 +387,9 @@
 				<iYield>0</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TRANSTELLAR_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_TRANSTELLAR_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRANSTELLAR_SUBTERRANEAN_FARM</Type>
@@ -434,12 +413,9 @@
 				<iYield>0</iYield>
 				<iYield>0</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TRANSTELLAR_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_TRANSTELLAR_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRANSTELLAR_CUSTOMS_CENTER</Type>
@@ -466,12 +442,9 @@
 				<iYield>0</iYield>
 				<iYield>25</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TRANSTELLAR_REST_STOP</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_TRANSTELLAR_REST_STOP</BuildingType>
+			</PrereqInCityBuildings>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -567,12 +540,9 @@
 				<iYield>0</iYield>
 				<iYield>100</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_FUSION_MEGACOMPLEX</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FUSION_MEGACOMPLEX</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_HYDROGEN_MAP</Type>
@@ -592,12 +562,9 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>125</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TRANSTELLAR_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_TRANSTELLAR_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LASER_HIGHWAY_RELAY</Type>
@@ -618,12 +585,9 @@
 				<iYield>25</iYield>
 				<iYield>25</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PULSAR_NAVIGATION</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PULSAR_NAVIGATION</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BUSSARD_RAMJET_PORT</Type>
@@ -647,12 +611,9 @@
 				<iYield>0</iYield>
 				<iYield>25</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERSTELLAR_HYDROGEN_MAP</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERSTELLAR_HYDROGEN_MAP</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STARLIGHT_POWER_PLANT</Type>
@@ -709,12 +670,9 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TRANSTELLAR_ARTIFICIAL_RED_DWARF</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_TRANSTELLAR_ARTIFICIAL_RED_DWARF</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ALDERSON_DISK</Type>
@@ -744,12 +702,9 @@
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TRANSTELLAR_ARTIFICIAL_RED_DWARF</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_TRANSTELLAR_ARTIFICIAL_RED_DWARF</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ALDERSON_DISK_TERACITY</Type>
@@ -774,12 +729,9 @@
 				<iYield>10</iYield>
 			</YieldChanges>
 			<iMaintenanceModifier>-5</iMaintenanceModifier>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ALDERSON_DISK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ALDERSON_DISK</BuildingType>
+			</PrereqInCityBuildings>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -810,12 +762,9 @@
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ALDERSON_DISK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ALDERSON_DISK</BuildingType>
+			</PrereqInCityBuildings>
 			<Bonus>BONUS_YGGDRASIL_SEEDS</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -845,12 +794,9 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ALDERSON_DISK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ALDERSON_DISK</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOROIDAL_PLANET</Type>
@@ -873,12 +819,9 @@
 				<iYield>15</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TRANSTELLAR_ARTIFICIAL_ROCKY_PLANET</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_TRANSTELLAR_ARTIFICIAL_ROCKY_PLANET</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HELIOFORMED_GAS_GIANT</Type>
@@ -901,12 +844,9 @@
 				<iYield>10</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TRANSTELLAR_ROGUE_GAS_GIANT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_TRANSTELLAR_ROGUE_GAS_GIANT</BuildingType>
+			</PrereqInCityBuildings>
 			<Bonus>BONUS_KUGELBLITZ</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -929,12 +869,9 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>25</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERSTELLAR_DATA_COLLECTION</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERSTELLAR_DATA_COLLECTION</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERPLANETARY_HIVEMIND</Type>
@@ -956,12 +893,9 @@
 				<iCommerce>30</iCommerce>
 			</CommerceChanges>
 			<iMilitaryProductionModifier>10</iMilitaryProductionModifier>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TRANSTELLAR_SCOUTING_FLEET</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_TRANSTELLAR_SCOUTING_FLEET</BuildingType>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -993,12 +927,9 @@
 				<iYield>0</iYield>
 				<iYield>20</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TRANSTELLAR_DYSON_SPHERE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_TRANSTELLAR_DYSON_SPHERE</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRANSTELLAR_ARTIFICIAL_BROWN_DWARF</Type>
@@ -1022,12 +953,9 @@
 				<iYield>0</iYield>
 				<iYield>25</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TRANSTELLAR_ROGUE_GAS_GIANT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_TRANSTELLAR_ROGUE_GAS_GIANT</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRANSTELLAR_ARTIFICIAL_ROCKY_PLANET</Type>
@@ -1048,12 +976,9 @@
 				<iYield>0</iYield>
 				<iYield>25</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_FUSION_MEGACOMPLEX</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FUSION_MEGACOMPLEX</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRANSTELLAR_ROGUE_GAS_GIANT</Type>
@@ -1074,12 +999,9 @@
 				<iCommerce>25</iCommerce>
 				<iCommerce>50</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TRANSTELLAR_ARTIFICIAL_ROCKY_PLANET</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_TRANSTELLAR_ARTIFICIAL_ROCKY_PLANET</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRANSTELLAR_ARTIFICIAL_RED_DWARF</Type>
@@ -1099,12 +1021,9 @@
 				<iYield>10</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TRANSTELLAR_ARTIFICIAL_BROWN_DWARF</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_TRANSTELLAR_ARTIFICIAL_BROWN_DWARF</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRANSTELLAR_DYSON_SPHERE</Type>
@@ -1125,12 +1044,9 @@
 				<iYield>150</iYield>
 			</YieldChanges>
 			<iWorkableRadius>3</iWorkableRadius>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TRANSTELLAR_ARTIFICIAL_RED_DWARF</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_TRANSTELLAR_ARTIFICIAL_RED_DWARF</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ADVANCED_NUCLEAR_ENGINE</Type>
@@ -1387,12 +1303,9 @@
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ALDERSON_DISK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ALDERSON_DISK</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GODWHEEL</Type>
@@ -1419,12 +1332,9 @@
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ALDERSON_DISK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ALDERSON_DISK</BuildingType>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1466,12 +1376,9 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TRANSTELLAR_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_TRANSTELLAR_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PROJECT_PERSEPHONE</Type>
@@ -1512,12 +1419,9 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_CIRCULAR_WASTE_MANAGEMENT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CIRCULAR_WASTE_MANAGEMENT</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STARDATE_CALENDAR</Type>
@@ -1546,12 +1450,9 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERSTELLAR_DATA_COLLECTION</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERSTELLAR_DATA_COLLECTION</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_COLONY</Type>
@@ -2191,12 +2092,9 @@
 			</CommerceChanges>
 			<iHappiness>3</iHappiness>
 			<iMaintenanceModifier>-5</iMaintenanceModifier>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_CULTURE_PARADISE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CULTURE_PARADISE</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_MEDIA_CENTER</Type>
@@ -2234,12 +2132,9 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_WORMHOLE_BEACON</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_WORMHOLE_BEACON</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PLANETARY_LANDING</Type>
@@ -2259,12 +2154,9 @@
 				<iYield>10</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SOLAR_EFFECT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SOLAR_EFFECT</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_SETTLEMENT</Type>
@@ -2285,12 +2177,9 @@
 				<iYield>25</iYield>
 				<iYield>5</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAPITAL_CITY</Type>
@@ -2336,12 +2225,9 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
+			</PrereqInCityBuildings>
 			<iRevIdxLocal>-10</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2445,16 +2331,10 @@
 				<iYield>0</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_RINGWORLD</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ECUMENOPOLIS</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_RINGWORLD</BuildingType>
+				<BuildingType>BUILDING_ECUMENOPOLIS</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SPHEREWORLD</Type>
@@ -2487,16 +2367,10 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ECUMENOPOLIS</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
+				<BuildingType>BUILDING_ECUMENOPOLIS</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_METROPOLIS</Type>
@@ -2517,12 +2391,9 @@
 				<iYield>30</iYield>
 				<iYield>5</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
+			</PrereqInCityBuildings>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2560,12 +2431,9 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<iMaintenanceModifier>-5</iMaintenanceModifier>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ECUMENOPOLIS</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ECUMENOPOLIS</BuildingType>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2876,16 +2744,10 @@
 			</CommerceChanges>
 			<iHappiness>20</iHappiness>
 			<iHealth>20</iHealth>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SPHEREWORLD</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_COSMIC_ECONOMY_EFFECT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SPHEREWORLD</BuildingType>
+				<BuildingType>BUILDING_COSMIC_ECONOMY_EFFECT</BuildingType>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2919,12 +2781,9 @@
 				<iYield>10</iYield>
 				<iYield>20</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_MATRIOSHKA_BRAIN</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_MATRIOSHKA_BRAIN</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_FARM</Type>
@@ -2947,12 +2806,9 @@
 				<iYield>10</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SELF_REPLICATING_FACTORY</Type>
@@ -3075,12 +2931,9 @@
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SELF_REPLICATING_FACTORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SELF_REPLICATING_FACTORY</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INDUSTRIAL_PLANET</Type>
@@ -3151,12 +3004,9 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SELF_REPLICATING_FACTORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SELF_REPLICATING_FACTORY</BuildingType>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -3191,12 +3041,9 @@
 			<YieldChanges>
 				<iYield>25</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TERRAFORMED_PLANET</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_TERRAFORMED_PLANET</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BLACKHOLE_POWER</Type>
@@ -3229,12 +3076,9 @@
 				<iYield>0</iYield>
 				<iYield>250</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INDUSTRIAL_PLANET</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INDUSTRIAL_PLANET</BuildingType>
+			</PrereqInCityBuildings>
 			<bPower>1</bPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -3259,12 +3103,9 @@
 				<iYield>0</iYield>
 				<iYield>120</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INDUSTRIAL_PLANET</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INDUSTRIAL_PLANET</BuildingType>
+			</PrereqInCityBuildings>
 			<Bonus>BONUS_KUGELBLITZ</Bonus>
 			<bPower>1</bPower>
 		</BuildingInfo>
@@ -3290,12 +3131,9 @@
 				<iYield>0</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SELF_REPLICATING_FACTORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SELF_REPLICATING_FACTORY</BuildingType>
+			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_ANTIMATTER</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -3321,12 +3159,9 @@
 				<iYield>0</iYield>
 				<iYield>25</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INDUSTRIAL_PLANET</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INDUSTRIAL_PLANET</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STELLAR_FUSION_POWER_PLANT</Type>
@@ -3347,12 +3182,9 @@
 				<iYield>0</iYield>
 				<iYield>100</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_STAR_SCOOP</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_STAR_SCOOP</BuildingType>
+			</PrereqInCityBuildings>
 			<bPower>1</bPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -3393,12 +3225,9 @@
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_CAPTURED_NEUTRON_STAR</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CAPTURED_NEUTRON_STAR</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PRECIOUS_METAL_GENERATOR</Type>
@@ -3422,12 +3251,9 @@
 				<iYield>0</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PAIR_PRODUCTION_PLANT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PAIR_PRODUCTION_PLANT</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WHITE_HOLE</Type>
@@ -3464,12 +3290,9 @@
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_BLACKHOLE_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_BLACKHOLE_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AEROPONICS_ARCOLOGY</Type>
@@ -3522,12 +3345,9 @@
 				<iYield>0</iYield>
 				<iYield>5</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
+			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_CONSCIOUS_MATERIALS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -3553,12 +3373,9 @@
 				<iYield>0</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_DARK_MATTER_REACTOR</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_DARK_MATTER_REACTOR</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AB_FOUNDRY</Type>
@@ -3582,16 +3399,10 @@
 				<iYield>0</iYield>
 				<iYield>25</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INDUSTRIAL_PLANET</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_STELLAR_FUSION_POWER_PLANT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INDUSTRIAL_PLANET</BuildingType>
+				<BuildingType>BUILDING_STELLAR_FUSION_POWER_PLANT</BuildingType>
+			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_AB_MATTER</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -3625,12 +3436,9 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INDUSTRIAL_PLANET</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INDUSTRIAL_PLANET</BuildingType>
+			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_KUGELBLITZ</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -3656,12 +3464,9 @@
 				<iYield>0</iYield>
 				<iYield>25</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INDUSTRIAL_PLANET</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INDUSTRIAL_PLANET</BuildingType>
+			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_COMPUTRONIUM</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -3686,12 +3491,9 @@
 				<iCommerce>20</iCommerce>
 			</CommerceChanges>
 			<iHappiness>1</iHappiness>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UNOBTAINIUM</Type>
@@ -3711,12 +3513,9 @@
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
+			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_UNOBTAINIUM</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -3742,12 +3541,9 @@
 				<iYield>0</iYield>
 				<iYield>25</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_DYSON_SPHERE_INDUSTRIAL_QUARTER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_DYSON_SPHERE_INDUSTRIAL_QUARTER</BuildingType>
+			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_PERSONAL_STARCRAFT</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -3769,12 +3565,9 @@
 				<iYield>0</iYield>
 				<iYield>100</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TIDALLY_LOCKED</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_TIDALLY_LOCKED</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANIMATED_PREON_STAR</Type>
@@ -3801,12 +3594,9 @@
 				<iYield>0</iYield>
 				<iYield>150</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
+			</PrereqInCityBuildings>
 			<Bonus>BONUS_CONSCIOUS_MATERIALS</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -3831,12 +3621,9 @@
 				<iYield>0</iYield>
 				<iYield>35</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_DYSON_SPHERE_INDUSTRIAL_QUARTER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_DYSON_SPHERE_INDUSTRIAL_QUARTER</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DYSON_SPHERE_INDUSTRIAL_QUARTER</Type>
@@ -3887,16 +3674,10 @@
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INDUSTRIAL_PLANET</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_PLANET</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DARK_MATTER_REACTOR</Type>
@@ -3920,12 +3701,9 @@
 				<iYield>0</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_DYSON_SPHERE_INDUSTRIAL_QUARTER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_DYSON_SPHERE_INDUSTRIAL_QUARTER</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ZERO_POINT_POWER_INTERSTELLAR</Type>
@@ -3954,12 +3732,9 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_DYSON_SPHERE_INDUSTRIAL_QUARTER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_DYSON_SPHERE_INDUSTRIAL_QUARTER</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAPTURED_ROGUE_PLANET</Type>
@@ -3980,12 +3755,9 @@
 				<iYield>20</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SELF_REPLICATING_FACTORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SELF_REPLICATING_FACTORY</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RINGWORLD</Type>
@@ -4077,12 +3849,9 @@
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
 			<iHappiness>3</iHappiness>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_MATRIOSHKA_BRAIN</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_MATRIOSHKA_BRAIN</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DYSON_SPHERE</Type>
@@ -4104,12 +3873,9 @@
 				<iYield>200</iYield>
 			</YieldChanges>
 			<iWorkableRadius>3</iWorkableRadius>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_DYSON_SWARM</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_DYSON_SWARM</BuildingType>
+			</PrereqInCityBuildings>
 			<bPower>1</bPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -4184,16 +3950,10 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_STAR_SCOOP</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
+				<BuildingType>BUILDING_STAR_SCOOP</BuildingType>
+			</PrereqInCityBuildings>
 			<iRevIdxLocal>-10</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -4219,12 +3979,9 @@
 				<iYield>0</iYield>
 				<iYield>30</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_RINGWORLD</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_RINGWORLD</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ARTIFICIAL_MOON</Type>
@@ -4292,12 +4049,9 @@
 				<iYield>0</iYield>
 				<iYield>25</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SHKADOV_THRUSTER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SHKADOV_THRUSTER</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOLLOW_PLANET</Type>
@@ -4318,12 +4072,9 @@
 				<iYield>10</iYield>
 				<iYield>25</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ARTIFICIAL_MOON</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ARTIFICIAL_MOON</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OSMIUM_CORE_PLANET</Type>
@@ -4344,16 +4095,10 @@
 				<iYield>12</iYield>
 				<iYield>60</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PRECIOUS_METAL_GENERATOR</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ARTIFICIAL_MOON</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PRECIOUS_METAL_GENERATOR</BuildingType>
+				<BuildingType>BUILDING_ARTIFICIAL_MOON</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERRAFORMED_PLANET</Type>
@@ -4439,12 +4184,9 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TERRAFORMED_PLANET</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_TERRAFORMED_PLANET</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERRAFORMED_GAS_GIANT</Type>
@@ -4471,16 +4213,10 @@
 				<iYield>0</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TERRAFORMED_PLANET</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GAS_GIANT_SURFACE_SHELL</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_TERRAFORMED_PLANET</BuildingType>
+				<BuildingType>BUILDING_GAS_GIANT_SURFACE_SHELL</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_ASTEROID_MINE</Type>
@@ -4507,12 +4243,9 @@
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COMET_DUST_COLLECTOR</Type>
@@ -4542,12 +4275,9 @@
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERIOR_STAR</Type>
@@ -4571,12 +4301,9 @@
 				<iYield>5</iYield>
 				<iYield>100</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_HOLLOW_PLANET</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_HOLLOW_PLANET</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WORLDHOUSE</Type>
@@ -4596,12 +4323,9 @@
 			<YieldChanges>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_AEROPONICS_ARCOLOGY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_AEROPONICS_ARCOLOGY</BuildingType>
+			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_YGGDRASIL_SEEDS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -4628,12 +4352,9 @@
 				<iYield>50</iYield>
 				<iYield>3</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SELF_REPLICATING_FACTORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SELF_REPLICATING_FACTORY</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ARTIFICIAL_PLANET</Type>
@@ -4658,12 +4379,9 @@
 				<iYield>0</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ARTIFICIAL_MOON</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ARTIFICIAL_MOON</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_COMET_DUST_COLLECTOR</BuildingType>
@@ -4697,12 +4415,9 @@
 				<iYield>10</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ARTIFICIAL_PLANET</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ARTIFICIAL_PLANET</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COMPUTRONIUM_PLANET</Type>
@@ -4725,12 +4440,9 @@
 				<iYield>5</iYield>
 			</YieldChanges>
 			<iHappiness>1</iHappiness>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ARTIFICIAL_PLANET</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ARTIFICIAL_PLANET</BuildingType>
+			</PrereqInCityBuildings>
 			<Bonus>BONUS_COMPUTRONIUM</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -4767,12 +4479,9 @@
 				<iYield>100</iYield>
 			</YieldChanges>
 			<iHappiness>2</iHappiness>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_BLACK_HOLE_EM_POPULATION</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_BLACK_HOLE_EM_POPULATION</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GALACTIC_BIOMARKER_CATALOGUE</Type>
@@ -4852,12 +4561,9 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>180</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_BLACKHOLE_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_BLACKHOLE_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ETERNAL_INTELLIGENCE</Type>
@@ -4896,16 +4602,10 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALACTIC_EFFECT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_BLACK_HOLE_COMPUTER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GALACTIC_EFFECT</BuildingType>
+				<BuildingType>BUILDING_BLACK_HOLE_COMPUTER</BuildingType>
+			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_TIME_CRYSTALS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -4928,12 +4628,9 @@
 				<iCommerce>10</iCommerce>
 				<iCommerce>125</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_MATRIOSHKA_BRAIN</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_MATRIOSHKA_BRAIN</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SELECTIVE_DECOHERENCE</Type>
@@ -4955,12 +4652,9 @@
 				<iCommerce>100</iCommerce>
 			</CommerceChanges>
 			<iHappiness>1</iHappiness>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_FULL_SPATIAL_EMULATION_STUDIO</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FULL_SPATIAL_EMULATION_STUDIO</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEUTRON_STAR_COMPUTATIONAL_SUBSTRATE</Type>
@@ -5011,12 +4705,9 @@
 				<iCommerce>-70</iCommerce>
 				<iCommerce>250</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SELF_REPLICATING_FACTORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SELF_REPLICATING_FACTORY</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_XENOARCHEOLOGIST</Type>
@@ -5075,12 +4766,9 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>125</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_MATRIOSHKA_BRAIN</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_MATRIOSHKA_BRAIN</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GALACTIC_AC</Type>
@@ -5112,12 +4800,9 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALACTIC_SUPERCOMPUTER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GALACTIC_SUPERCOMPUTER</BuildingType>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -5146,12 +4831,9 @@
 				<iYield>0</iYield>
 				<iYield>20</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_STAR_SCOOP</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_STAR_SCOOP</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EVENT_HORIZON_PROBE</Type>
@@ -5183,12 +4865,9 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_BLACKHOLE_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_BLACKHOLE_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BLACK_HOLE_INTERIOR_PLANET</Type>
@@ -5223,12 +4902,9 @@
 				<iYield>25</iYield>
 				<iYield>5</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_EVENT_HORIZON_PROBE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_EVENT_HORIZON_PROBE</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STAR_CLUSTER_COLONY</Type>
@@ -5256,12 +4932,9 @@
 				<iYield>50</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INDUSTRIAL_PLANET</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INDUSTRIAL_PLANET</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GALACTIC_CORE_COLONY</Type>
@@ -5288,12 +4961,9 @@
 				<iYield>50</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_KUGELBLITZ_POWER_PLANT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_KUGELBLITZ_POWER_PLANT</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERAEARTH</Type>
@@ -5325,12 +4995,9 @@
 				<iYield>0</iYield>
 				<iYield>30</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALACTIC_CORE_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GALACTIC_CORE_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -5390,12 +5057,9 @@
 					<iExperience>3</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_WORMHOLE_BEACON</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_WORMHOLE_BEACON</BuildingType>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -5434,12 +5098,9 @@
 				<iYield>60</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WHITE_DWARF_COLONY</Type>
@@ -5467,16 +5128,10 @@
 				<iYield>60</iYield>
 				<iYield>15</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_MEMORY_CRYSTAL</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ARTIFICIAL_PLANET</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_MEMORY_CRYSTAL</BuildingType>
+				<BuildingType>BUILDING_ARTIFICIAL_PLANET</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EVENT_HORIZON_CITY</Type>
@@ -5507,12 +5162,9 @@
 				<iYield>50</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_BLACKHOLE_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_BLACKHOLE_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BLACK_HOLE_EM_POPULATION</Type>
@@ -5544,12 +5196,9 @@
 				<iCommerce>30</iCommerce>
 				<iCommerce>30</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_BLACKHOLE_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_BLACKHOLE_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEUTRON_STAR_COLONY</Type>
@@ -5579,12 +5228,9 @@
 				<iYield>10</iYield>
 				<iYield>25</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_CAPTURED_NEUTRON_STAR</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CAPTURED_NEUTRON_STAR</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LILLIPUTIAN_CITY</Type>
@@ -5607,12 +5253,9 @@
 			<YieldChanges>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SPHEREWORLD</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SPHEREWORLD</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_DEFENSIVE_PERIMETER</Type>
@@ -5630,12 +5273,9 @@
 				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
 			</MapCategoryTypes>
 			<iDefense>50</iDefense>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ARTIFICIAL_MOON</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ARTIFICIAL_MOON</BuildingType>
+			</PrereqInCityBuildings>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -5659,12 +5299,9 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>50</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PLANETARY_AWARENESS</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PLANETARY_AWARENESS</BuildingType>
+			</PrereqInCityBuildings>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -5756,12 +5393,9 @@
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_DARK_MATTER_REACTOR</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_DARK_MATTER_REACTOR</BuildingType>
+			</PrereqInCityBuildings>
 			<Bonus>BONUS_CHRONOTON</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -5785,12 +5419,9 @@
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_DARK_MATTER_REACTOR</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_DARK_MATTER_REACTOR</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRACTOR_BEAM</Type>
@@ -5813,12 +5444,9 @@
 				<iYield>30</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERSTELLAR_STARPORT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERSTELLAR_STARPORT</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_REINFORCED_DYSON_SPHERE</Type>
@@ -5839,12 +5467,9 @@
 			<CommerceChanges>
 				<iCommerce>-20</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DARK_LIGHT_BEACON</Type>
@@ -5867,12 +5492,9 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>20</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_NEUTRINO_SCANNER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_NEUTRINO_SCANNER</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PARADISE_PLANET</Type>
@@ -5896,12 +5518,9 @@
 			</CommerceChanges>
 			<iHappiness>1</iHappiness>
 			<iHealth>1</iHealth>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ECUMENOPOLIS</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ECUMENOPOLIS</BuildingType>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -5964,12 +5583,9 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SPHEREWORLD</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SPHEREWORLD</BuildingType>
+			</PrereqInCityBuildings>
 			<Bonus>BONUS_YGGDRASIL_SEEDS</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -6038,12 +5654,9 @@
 				<iYield>0</iYield>
 				<iYield>5</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ECUMENOPOLIS</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ECUMENOPOLIS</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ADAPTED_HUMAN</Type>
@@ -6127,16 +5740,10 @@
 					<iFreeSpecialistCount>1</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ARTIFICIAL_PLANET</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ADAPTED_HUMAN</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ARTIFICIAL_PLANET</BuildingType>
+				<BuildingType>BUILDING_ADAPTED_HUMAN</BuildingType>
+			</PrereqInCityBuildings>
 			<Bonus>BONUS_TIME_CRYSTALS</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -6166,12 +5773,9 @@
 				<iYield>0</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DYSON_SHUTTER</Type>
@@ -6194,12 +5798,9 @@
 				<iCommerce>10</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WORMHOLE_BEACON</Type>
@@ -6231,12 +5832,9 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<iMaintenanceModifier>-5</iMaintenanceModifier>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
+			</PrereqInCityBuildings>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -6281,12 +5879,9 @@
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_WORMHOLE_BEACON</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_WORMHOLE_BEACON</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TIMEHOLE</Type>
@@ -6315,12 +5910,9 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_WORMHOLE_TRADE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_WORMHOLE_TRADE</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_SAIL_NETWORK</Type>
@@ -6348,12 +5940,9 @@
 				<iYield>0</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_STAR_CLUSTER_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_STAR_CLUSTER_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEUTRINO_BEACON</Type>
@@ -6375,12 +5964,9 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>15</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_WORMHOLE_BEACON</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_WORMHOLE_BEACON</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SHKADOV_THRUSTER</Type>
@@ -6398,12 +5984,9 @@
 				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
 			</MapCategoryTypes>
 			<iDefense>20</iDefense>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_STARPORT</Type>
@@ -6471,12 +6054,9 @@
 				<iYield>20</iYield>
 			</YieldChanges>
 			<iTradeRouteModifier>5</iTradeRouteModifier>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERSTELLAR_STARPORT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERSTELLAR_STARPORT</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_TOURIST_AGENCY</Type>
@@ -6496,12 +6076,9 @@
 			<CommerceChanges>
 				<iCommerce>100</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALACTIC_PORT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GALACTIC_PORT</BuildingType>
+			</PrereqInCityBuildings>
 			<Bonus>BONUS_PERSONAL_STARCRAFT</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -6530,16 +6107,10 @@
 					<iProductionModifier>5</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SHKADOV_THRUSTER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_WORMHOLE_TRADE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SHKADOV_THRUSTER</BuildingType>
+				<BuildingType>BUILDING_WORMHOLE_TRADE</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_NETWORK_NODE</Type>
@@ -6566,12 +6137,9 @@
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_WORMHOLE_TRADE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_WORMHOLE_TRADE</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COSMIC_NODE</Type>
@@ -6602,16 +6170,10 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PHILOTE_PRODUCER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_WORMHOLE_TRADE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PHILOTE_PRODUCER</BuildingType>
+				<BuildingType>BUILDING_WORMHOLE_TRADE</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BUSINESS_DISTRICT</Type>
@@ -6635,12 +6197,9 @@
 				<iYield>0</iYield>
 				<iYield>5</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RESIDENTIAL_DISTRICT</Type>
@@ -6666,12 +6225,9 @@
 				<iYield>25</iYield>
 				<iYield>3</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STAR_ROAD</Type>
@@ -6696,12 +6252,9 @@
 				<iYield>0</iYield>
 				<iYield>25</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INDUSTRIAL_PLANET</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INDUSTRIAL_PLANET</BuildingType>
+			</PrereqInCityBuildings>
 			<Bonus>BONUS_AB_MATTER</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -6727,12 +6280,9 @@
 				<iYield>0</iYield>
 				<iYield>20</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_STAR_ROAD</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_STAR_ROAD</BuildingType>
+			</PrereqInCityBuildings>
 			<Bonus>BONUS_MAGNETIC_MONOPOLES</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -6769,12 +6319,9 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TIMEHOLE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_TIMEHOLE</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_HYPERPORT</Type>
@@ -6799,12 +6346,9 @@
 				<iYield>0</iYield>
 				<iYield>15</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALACTIC_PORT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GALACTIC_PORT</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_ADMINISTRATION</Type>
@@ -6942,12 +6486,9 @@
 				<iYield>0</iYield>
 				<iYield>5</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_CONTROLLED_BREEDING</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CONTROLLED_BREEDING</BuildingType>
+			</PrereqInCityBuildings>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -6978,12 +6519,9 @@
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
 			</MapCategoryTypes>
 			<iMaintenanceModifier>-5</iMaintenanceModifier>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_CONTROLLED_BREEDING</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CONTROLLED_BREEDING</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DESIGNER_CASTE_MISSION_CONTROL</Type>
@@ -7004,12 +6542,9 @@
 				<iYield>25</iYield>
 			</YieldChanges>
 			<iMilitaryProductionModifier>5</iMilitaryProductionModifier>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_CONTROLLED_BREEDING</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CONTROLLED_BREEDING</BuildingType>
+			</PrereqInCityBuildings>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -7137,12 +6672,9 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PRISON_PLANET</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PRISON_PLANET</BuildingType>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -7187,12 +6719,9 @@
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_MATRIOSHKA_BRAIN</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_MATRIOSHKA_BRAIN</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ARGUS_ARRAY</Type>
@@ -7234,12 +6763,9 @@
 					<iExtraCommerce>10</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ARTIFICIAL_MOON</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ARTIFICIAL_MOON</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GALACTIC_CORE</Type>
@@ -7268,12 +6794,9 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERSTELLAR_STARPORT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERSTELLAR_STARPORT</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EARTH_BACKUP</Type>
@@ -7309,12 +6832,9 @@
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_MEMORY_CRYSTAL</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_MEMORY_CRYSTAL</BuildingType>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -7344,12 +6864,9 @@
 				<iCommerce>150</iCommerce>
 			</CommerceChanges>
 			<FreeBuilding>BUILDING_WORMHOLE_TRADE</FreeBuilding>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_WORMHOLE_TRADE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_WORMHOLE_TRADE</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GALACTIC_NEWS</Type>
@@ -7423,12 +6940,9 @@
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SHKADOV_THRUSTER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SHKADOV_THRUSTER</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EARTH_20</Type>
@@ -7457,12 +6971,9 @@
 					<iFreeSpecialistCount>3</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_MATRIOSHKA_BRAIN</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_MATRIOSHKA_BRAIN</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANDROMEDA</Type>
@@ -7490,12 +7001,9 @@
 					<iExtraCommerce>50</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERSTELLAR_STARPORT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERSTELLAR_STARPORT</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GALACTIC_CORE_BASE</Type>
@@ -7523,12 +7031,9 @@
 				<iYield>40</iYield>
 			</YieldChanges>
 			<iMilitaryProductionModifier>50</iMilitaryProductionModifier>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_WORMHOLE_TRADE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_WORMHOLE_TRADE</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GALACTIC_CORE_DYSON_SPHERE</Type>
@@ -7569,12 +7074,9 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALACTIC_CORE_BASE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GALACTIC_CORE_BASE</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRANTOR</Type>
@@ -7615,12 +7117,9 @@
 					<iFreeSpecialistCount>2</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ECUMENOPOLIS</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ECUMENOPOLIS</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ONYX</Type>
@@ -7641,12 +7140,9 @@
 			</MapCategoryTypes>
 			<FreeBuilding>BUILDING_INTERSTELLAR_DEFENSIVE_PERIMETER</FreeBuilding>
 			<iMilitaryProductionModifier>20</iMilitaryProductionModifier>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ARTIFICIAL_PLANET</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ARTIFICIAL_PLANET</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PROTOS_MANDATE</Type>
@@ -7702,16 +7198,10 @@
 				<iYield>20</iYield>
 			</YieldChanges>
 			<iMilitaryProductionModifier>40</iMilitaryProductionModifier>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TRACTOR_BEAM</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALACTIC_PORT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_TRACTOR_BEAM</BuildingType>
+				<BuildingType>BUILDING_GALACTIC_PORT</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_OLYMPICS</Type>
@@ -7747,12 +7237,9 @@
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERSTELLAR_STADIUM</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERSTELLAR_STADIUM</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GLIESE_667CC</Type>
@@ -8519,12 +8006,9 @@
 					<iProductionModifier>100</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_BLACKHOLE_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_BLACKHOLE_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

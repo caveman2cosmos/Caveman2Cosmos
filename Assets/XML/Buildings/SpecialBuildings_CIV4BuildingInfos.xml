@@ -3863,12 +3863,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Misc. Effects -->
@@ -3886,12 +3883,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Misc. Effects -->
@@ -3909,12 +3903,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Misc. Effects -->
@@ -3932,12 +3923,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Misc. Effects -->
@@ -3955,12 +3943,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Misc. Effects -->
@@ -3978,12 +3963,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Misc. Effects -->
@@ -4001,12 +3983,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Misc. Effects -->
@@ -4024,12 +4003,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Misc. Effects -->
@@ -4047,12 +4023,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Misc. Effects -->
@@ -4070,12 +4043,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Misc. Effects -->
@@ -4093,12 +4063,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Misc. Effects -->
@@ -4116,12 +4083,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Misc. Effects -->
@@ -4139,12 +4103,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Misc. Effects -->
@@ -4162,12 +4123,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Misc. Effects -->
@@ -4186,12 +4144,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Misc. Effects -->
@@ -4210,12 +4165,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Misc. Effects -->
@@ -4234,12 +4186,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Misc. Effects -->
@@ -4258,12 +4207,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Misc. Effects -->
@@ -4282,12 +4228,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Misc. Effects -->
@@ -4306,12 +4249,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Misc. Effects -->
@@ -4330,12 +4270,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Misc. Effects -->
@@ -4354,12 +4291,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Misc. Effects -->
@@ -4378,12 +4312,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Misc. Effects -->
@@ -4402,12 +4333,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Misc. Effects -->
@@ -4426,12 +4354,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Misc. Effects -->
@@ -4450,12 +4375,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Misc. Effects -->
@@ -4912,12 +4834,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CIVICCASTE</ArtDefineTag>
 			<!-- Prerequisites -->
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_CASTE_SYSTEM</CivicOption>
@@ -4953,12 +4872,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CIVICDEMOCRACY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_DEMOCRACY</CivicOption>
@@ -4994,12 +4910,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CIVICEGALITARIAN</ArtDefineTag>
 			<!-- Prerequisites -->
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_EGALITARIAN</CivicOption>
@@ -5034,12 +4947,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CIVICFEUDAL</ArtDefineTag>
 			<!-- Prerequisites -->
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_FEUDAL</CivicOption>
@@ -5073,12 +4983,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CIVICFREEMARKET</ArtDefineTag>
 			<!-- Prerequisites -->
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_FREE_MARKET</CivicOption>
@@ -5114,12 +5021,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CIVICMARTIALLAW</ArtDefineTag>
 			<!-- Prerequisites -->
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_MARTIAL_LAW</CivicOption>
@@ -5210,12 +5114,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CIVICMINDCONTROL</ArtDefineTag>
 			<!-- Prerequisites -->
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_MIND_CONTROL</CivicOption>
@@ -5250,12 +5151,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CIVICPOSTSCARCITY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_AUTOMATED</CivicOption>
@@ -5290,12 +5188,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CIVICREPUBLIC</ArtDefineTag>
 			<!-- Prerequisites -->
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_REPUBLIC</CivicOption>
@@ -5557,12 +5452,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BANKING</PrereqTech>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_BANK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_BANK</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Main effects -->
@@ -7126,12 +7018,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_STOCK_BROKERING</PrereqTech>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_STOCKMARKET</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_STOCKMARKET</BuildingType>
+			</PrereqInCityBuildings>
 			<iInsidiousness>5</iInsidiousness>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -8618,12 +8507,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MAINSTREAM_CLONING</PrereqTech>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_CLONING_FACTORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CLONING_FACTORY</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Main effects -->
@@ -8762,12 +8648,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LABOR_UNIONS</PrereqTech>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_WELFARE_OFFICE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_WELFARE_OFFICE</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_SOCIALIZED</CivicOption>
@@ -8913,16 +8796,10 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PREHISTORIC_DANCE</PrereqTech>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_CHILDBIRTH_HUT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_CHILDCAREHUT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CHILDBIRTH_HUT</BuildingType>
+				<BuildingType>BUILDING_CHILDCAREHUT</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_DANCE_HUT</BuildingType>
@@ -9311,12 +9188,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PEST_FLEAS</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PEST_FLEAS</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SMART_DRUGS</ObsoleteTech>
 			<!-- Construction cost -->
@@ -9607,12 +9481,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRIBALISM</PrereqTech>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PEST_MOSQUITOES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PEST_MOSQUITOES</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SMART_DRUGS</ObsoleteTech>
 			<!-- Construction cost -->
@@ -10953,12 +10824,9 @@
 				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			</TechTypes>
 			<Bonus>BONUS_HIDE</Bonus>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_STICK_GATHERER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_STICK_GATHERER</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -11019,20 +10887,11 @@
 			<PrereqTech>TECH_TELEPHONE</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_WATER_PIPES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
+				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
+				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -11076,24 +10935,12 @@
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_WATER_PIPES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ARCOLOGY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
+				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
+				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
+				<BuildingType>BUILDING_ARCOLOGY</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -11141,28 +10988,13 @@
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_WATER_PIPES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ARCOLOGY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
+				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
+				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
+				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
+				<BuildingType>BUILDING_ARCOLOGY</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -11203,28 +11035,13 @@
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_MARBLE</Bonus>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_WATER_PIPES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ARCOLOGY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
+				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
+				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
+				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
+				<BuildingType>BUILDING_ARCOLOGY</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -11393,16 +11210,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TELEPHONE</PrereqTech>
 			<bPrereqPower>1</bPrereqPower>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_WATER_PIPES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
+				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -11448,24 +11259,12 @@
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_MARBLE</Bonus>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_WATER_PIPES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
+				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
+				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
+				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -11621,20 +11420,11 @@
 			<PrereqTech>TECH_TELEPHONE</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_WATER_PIPES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
+				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
+				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -11788,20 +11578,11 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<bPrereqPower>1</bPrereqPower>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_WATER_PIPES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
+				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
+				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -11848,12 +11629,9 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_BRICKS</Bonus>
 			</PrereqBonuses>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -11903,12 +11681,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
 			<Bonus>BONUS_ALCOHOL</Bonus>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<bAutoBuild>1</bAutoBuild>
@@ -11945,16 +11720,10 @@
 			<PrereqTech>TECH_TELEPHONE</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_WATER_PIPES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
+				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -12071,24 +11840,12 @@
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_WATER_PIPES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
+				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
+				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
+				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -12139,24 +11896,12 @@
 			<PrereqTech>TECH_TELEPHONE</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_WATER_PIPES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
+				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
+				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
+				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -12200,24 +11945,12 @@
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_WATER_PIPES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
+				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
+				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
+				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -12258,24 +11991,12 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_MARBLE</Bonus>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_WATER_PIPES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
+				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
+				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
+				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -12315,28 +12036,13 @@
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_WATER_PIPES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
+				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
+				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
+				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
+				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -12445,28 +12151,13 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_MARBLE</Bonus>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_WATER_PIPES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
+				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
+				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
+				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
+				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -12890,12 +12581,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_STICK_GATHERER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_STICK_GATHERER</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -13032,12 +12720,9 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_BRICKS</Bonus>
 			</PrereqBonuses>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -13088,20 +12773,11 @@
 			<PrereqTech>TECH_TELEPHONE</PrereqTech>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_MARBLE</Bonus>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_WATER_PIPES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
+				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
+				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -13217,12 +12893,9 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_BRICKS</Bonus>
 			</PrereqBonuses>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -13278,24 +12951,12 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_MARBLE</Bonus>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_WATER_PIPES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
+				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
+				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
+				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -13342,20 +13003,11 @@
 			<PrereqTech>TECH_TELEPHONE</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_WATER_PIPES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
+				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
+				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -13478,20 +13130,11 @@
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_WATER_PIPES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
+				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
+				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -13720,24 +13363,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<bPrereqPower>1</bPrereqPower>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_WATER_PIPES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
+				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
+				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
+				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -13778,12 +13409,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_WOMENS_SUFFRAGE</PrereqTech>
 			<Bonus>BONUS_ALCOHOL</Bonus>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<bAutoBuild>1</bAutoBuild>
@@ -13938,20 +13566,11 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TELEPHONE</PrereqTech>
 			<bPrereqPower>1</bPrereqPower>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_WATER_PIPES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
+				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
+				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -14250,12 +13869,9 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_MARBLE</Bonus>
 			</PrereqBonuses>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -14517,12 +14133,9 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_WOMENS_SUFFRAGE</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_COURTHOUSE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Main effects -->
@@ -14547,16 +14160,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_DMV</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_COURTHOUSE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_DMV</BuildingType>
+				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
 			<!-- Construction cost -->
@@ -14609,16 +14216,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_DMV</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_COURTHOUSE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_DMV</BuildingType>
+				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
 			<!-- Construction cost -->
@@ -14671,16 +14272,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_DOE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_COURTHOUSE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_DOE</BuildingType>
+				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>150</iCost>
 			<!-- Main effects -->
@@ -14732,16 +14327,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_WATER_DEPARTMENT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_COURTHOUSE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_WATER_DEPARTMENT</BuildingType>
+				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>150</iCost>
 			<!-- Main effects -->
@@ -14793,16 +14382,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_DMV</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_COURTHOUSE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_DMV</BuildingType>
+				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
 			<!-- Construction cost -->
@@ -14852,12 +14435,9 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_COUNTERCULTURE</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_COURTHOUSE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Main effects -->
@@ -14882,16 +14462,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_NFS</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_COURTHOUSE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_NFS</BuildingType>
+				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>150</iCost>
 			<!-- Main effects -->
@@ -14930,12 +14504,9 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_LEGALIZED_GAMBLING</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_COURTHOUSE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Main effects -->
@@ -14961,16 +14532,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_POLICE_ACADEMY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_COURTHOUSE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_POLICE_ACADEMY</BuildingType>
+				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>150</iCost>
 			<!-- Main effects -->
@@ -15015,12 +14580,9 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_PAPACY</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_COURTHOUSE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Main effects -->
@@ -15046,16 +14608,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ELECTRONICS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_NFS</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_COURTHOUSE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_NFS</BuildingType>
+				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>150</iCost>
 			<!-- Main effects -->
@@ -15094,12 +14650,9 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_URBAN_CULTURE</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_COURTHOUSE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Obsolescence -->
@@ -15139,16 +14692,10 @@
 			<PrereqTech>TECH_RECYCLING</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_TIRES</Bonus>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GCA</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_COURTHOUSE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GCA</BuildingType>
+				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>150</iCost>
 			<!-- Main effects -->
@@ -15203,16 +14750,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COMPULSORY_EDUCATION</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_POLICE_ACADEMY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_COURTHOUSE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_POLICE_ACADEMY</BuildingType>
+				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>150</iCost>
 			<!-- Main effects -->
@@ -17058,12 +16599,9 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CYBERWARFARE</PrereqTech>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_INQUISITORIAL</CivicOption>
@@ -17304,12 +16842,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NATIONALISM</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Special Yield and Commerce modifiers -->
@@ -18785,16 +18320,10 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SCULPTURE</PrereqTech>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PYRAMID</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SPHINX</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PYRAMID</BuildingType>
+				<BuildingType>BUILDING_SPHINX</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<bAutoBuild>1</bAutoBuild>
@@ -19190,12 +18719,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COMMUNICATION_NETWORKS</PrereqTech>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_WIRELESS_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_WIRELESS_NETWORK</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
 			<!-- Main effects -->
@@ -19308,12 +18834,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_WV_CANNIBALISM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_WV_CANNIBALISM_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_WV_CANNIBALISM_HELP</Help>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<iCost>-1</iCost>
 			<iAsset>3</iAsset>
 			<Flavors>
@@ -19456,12 +18979,9 @@
 			<iAsset>3</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_CEREMONIAL_ALTAR</ConstructSound>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
@@ -19614,12 +19134,9 @@
 			<Strategy>TXT_KEY_BUILDING_MILITARY_TRADITION_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_ARCHERY</PrereqTech>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_FLETCHER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FLETCHER</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<!-- Cost -->
@@ -20216,16 +19733,10 @@
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_EARTH_MYTH_EFFECT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_FIRE_MYTH_EFFECT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_EARTH_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FIRE_MYTH_EFFECT</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -20254,12 +19765,9 @@
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
+			</PrereqInCityBuildings>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_ENTERTAINER</UnitCombatType>
@@ -20294,16 +19802,10 @@
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_FIRE_MYTH_EFFECT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SKY_MYTH_EFFECT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FIRE_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_SKY_MYTH_EFFECT</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -20583,12 +20085,9 @@
 			<iAsset>3</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
@@ -20870,12 +20369,9 @@
 			<iAsset>3</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SLAVERY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SLAVERY</BuildingType>
+			</PrereqInCityBuildings>
 			<bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -20894,12 +20390,9 @@
 			<iAsset>3</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SLAVERY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SLAVERY</BuildingType>
+			</PrereqInCityBuildings>
 			<bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -20934,12 +20427,9 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SLAVERY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SLAVERY</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
@@ -20990,12 +20480,9 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
@@ -21066,12 +20553,9 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
@@ -21109,12 +20593,9 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
@@ -21158,12 +20639,9 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
@@ -21203,12 +20681,9 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
@@ -21238,12 +20713,9 @@
 			<iAsset>3</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
+			</PrereqInCityBuildings>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_SLAVES</SpecialistType>
@@ -21321,12 +20793,9 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
+			</PrereqInCityBuildings>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_SLAVES</SpecialistType>

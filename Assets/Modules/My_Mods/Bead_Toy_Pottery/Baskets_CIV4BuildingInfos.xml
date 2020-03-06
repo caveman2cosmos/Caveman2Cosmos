@@ -31,16 +31,10 @@
 				<Bonus>BONUS_STRAW</Bonus>
 				<Bonus>BONUS_PLASTIC</Bonus>
 			</PrereqBonuses>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_FACTORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_BASKETY_WORKSHOP</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FACTORY</BuildingType>
+				<BuildingType>BUILDING_BASKETY_WORKSHOP</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_BASKETY_WORKSHOP</BuildingType>
@@ -112,12 +106,9 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings-->
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_BASKETWEAVER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_BASKETWEAVER</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_BASKETWEAVER</BuildingType>

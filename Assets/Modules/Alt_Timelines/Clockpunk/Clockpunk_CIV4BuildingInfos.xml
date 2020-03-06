@@ -69,12 +69,9 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TOWNCLOCK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_TOWNCLOCK</BuildingType>
+			</PrereqInCityBuildings>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<iAIWeight>1</iAIWeight>
@@ -115,12 +112,9 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_OPERA_HOUSE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_OPERA_HOUSE</BuildingType>
+			</PrereqInCityBuildings>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<iAIWeight>1</iAIWeight>
@@ -198,12 +192,9 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ENGINEERING_SCHOOL</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ENGINEERING_SCHOOL</BuildingType>
+			</PrereqInCityBuildings>
 			<iAsset>2</iAsset>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -231,12 +222,9 @@
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
 			<iTradeRoutes>1</iTradeRoutes>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_CLOCKWORK_WORKSHOP</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CLOCKWORK_WORKSHOP</BuildingType>
+			</PrereqInCityBuildings>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<ReplaceBuildings>
 				<ReplaceBuilding>

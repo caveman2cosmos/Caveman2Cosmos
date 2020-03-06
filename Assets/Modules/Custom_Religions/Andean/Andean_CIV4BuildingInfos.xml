@@ -21,12 +21,9 @@
 			<!-- Prerequisites -->
 			<PrereqReligion>RELIGION_ANDEANISM</PrereqReligion>
 			<ReligionType>RELIGION_ANDEANISM</ReligionType>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ANDEAN_TEMPLE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ANDEAN_TEMPLE</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_CITY_COUNCIL</BuildingType>

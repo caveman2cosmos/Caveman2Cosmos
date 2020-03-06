@@ -849,12 +849,9 @@
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_MORMON_CATHEDRAL</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_MORMON_CATHEDRAL</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -950,12 +947,9 @@
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_MORMON_CATHEDRAL</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_MORMON_CATHEDRAL</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -1065,13 +1059,10 @@
 					<iHealthChange>1</iHealthChange>
 				</BonusHealthChange>
 			</BonusHealthChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_MORMON_TEMPLE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_MORMON_TEMPLE</BuildingType>
 				<!-- aka mormon meetinghouse -->
-			</BuildingNeededs>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
@@ -1142,12 +1133,9 @@
 					<iNumBuildingNeeded>5</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_BISHOPS_STOREHOUSE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_BISHOPS_STOREHOUSE</BuildingType>
+			</PrereqInCityBuildings>
 			<ImprovementFreeSpecialists>
 				<ImprovementFreeSpecialist>
 					<ImprovementType>IMPROVEMENT_FARM</ImprovementType>
@@ -1222,20 +1210,11 @@
 					<iProductionModifier>25</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_LIBRARY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PRIVATE_SCHOOL</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_HIGH_SCHOOL</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
+				<BuildingType>BUILDING_PRIVATE_SCHOOL</BuildingType>
+				<BuildingType>BUILDING_HIGH_SCHOOL</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_CULTURE</FlavorType>

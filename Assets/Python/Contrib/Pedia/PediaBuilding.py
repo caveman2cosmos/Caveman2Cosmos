@@ -393,7 +393,7 @@ class PediaBuilding:
 			if CyPlayer:
 				if iPrereqNumOfBuilding > 0:
 					iPrereqNumOfBuilding = int(iPrereqNumOfBuilding * (100 + GC.getWorldInfo(GC.getMap().getWorldSize()).getBuildingPrereqModifier()) / 100.0)
-			if CvTheBuildingInfo.isBuildingNeededInCity(j):
+			if CvTheBuildingInfo.isPrereqInCityBuilding(j):
 				aList1.append(j)
 				if iPrereqNumOfBuilding > 1:
 					aList3.append((j, iPrereqNumOfBuilding))

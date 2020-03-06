@@ -21470,16 +21470,9 @@ int CvPlayer::getAdvancedStartBuildingCost(BuildingTypes eBuilding, bool bAdd, c
 			{
 				const BuildingTypes eBuildingLoop = static_cast<BuildingTypes>(iBuildingLoop);
 
-				if (pCity->getNumBuilding(eBuildingLoop) > 0)
+				if (pCity->getNumBuilding(eBuildingLoop) > 0 && GC.getBuildingInfo(eBuildingLoop).getNumPrereqInCityBuildings() > 0)
 				{
-					// Loop through present Building's requirements
-					for (int iBuildingPrereqLoop = 0; iBuildingPrereqLoop < GC.getNumBuildingInfos(); iBuildingPrereqLoop++)
-					{
-						if (GC.getBuildingInfo(eBuildingLoop).isBuildingNeededInCity(iBuildingPrereqLoop))
-						{
-							return -1;
-						}
-					}
+					return -1;
 				}
 			}
 		}

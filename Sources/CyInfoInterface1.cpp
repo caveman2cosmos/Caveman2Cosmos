@@ -899,7 +899,7 @@ void CyInfoPythonInterface1()
 /************************************************************************************************/
 		.def("isCommerceFlexible", &CvBuildingInfo::isCommerceFlexible, "bool (int i)")
 		.def("isCommerceChangeOriginalOwner", &CvBuildingInfo::isCommerceChangeOriginalOwner, "bool (int i)")
-		.def("isBuildingNeededInCity", &CvBuildingInfo::isBuildingNeededInCity, "bool (int i)")
+		.def("isPrereqInCityBuilding", &CvBuildingInfo::isPrereqInCityBuilding, "bool (int i)")
 
 		.def("getSpecialistYieldChange", &CvBuildingInfo::getSpecialistYieldChange, "int (int i, int j)")
 		.def("getBonusYieldModifier", &CvBuildingInfo::getBonusYieldModifier, "int (int i, int j)")

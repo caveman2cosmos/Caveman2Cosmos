@@ -27,16 +27,10 @@
 				<Bonus>BONUS_FINE_CLAY</Bonus>
 				<Bonus>BONUS_CLAY</Bonus>
 			</PrereqBonuses>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_FACTORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FACTORY</BuildingType>
+				<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
@@ -131,16 +125,10 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_STONE</Bonus>
 			</PrereqBonuses>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_CERAMICS_FACTORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PORCELAIN_WORKSHOP</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CERAMICS_FACTORY</BuildingType>
+				<BuildingType>BUILDING_PORCELAIN_WORKSHOP</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_PORCELAIN_WORKSHOP</BuildingType>
@@ -205,12 +193,9 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_STONE</Bonus>
 			</PrereqBonuses>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_POTTER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_POTTER</BuildingType>
+			</PrereqInCityBuildings>
 			<!--PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
@@ -410,12 +395,9 @@
 				<Bonus>BONUS_FINE_CLAY</Bonus>
 				<Bonus>BONUS_CLAY</Bonus>
 			</PrereqBonuses>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_POTTER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_POTTER</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_POTTER</BuildingType>
@@ -517,16 +499,10 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_MARBLE</Bonus>
 			</PrereqBonuses>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_CERAMICS_FACTORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TERRACOTTA_WORKSHOP</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CERAMICS_FACTORY</BuildingType>
+				<BuildingType>BUILDING_TERRACOTTA_WORKSHOP</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_TERRACOTTA_WORKSHOP</BuildingType>
@@ -580,12 +556,9 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_MARBLE</Bonus>
 			</PrereqBonuses>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_POTTER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_POTTER</BuildingType>
+			</PrereqInCityBuildings>
 			<!--PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>

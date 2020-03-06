@@ -48,16 +48,10 @@
 				<iYield>50</iYield>
 			</YieldChanges>
 			<iMaintenanceModifier>-3</iMaintenanceModifier>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALACTIC_EFFECT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_COLONY</BuildingType>
+				<BuildingType>BUILDING_GALACTIC_EFFECT</BuildingType>
+			</PrereqInCityBuildings>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -89,12 +83,9 @@
 				<iYield>50</iYield>
 			</YieldChanges>
 			<iMaintenanceModifier>-3</iMaintenanceModifier>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -122,12 +113,9 @@
 				<iYield>50</iYield>
 			</YieldChanges>
 			<iMaintenanceModifier>-3</iMaintenanceModifier>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALACTIC_GROUP_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GALACTIC_GROUP_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -200,12 +188,9 @@
 				<iYield>20</iYield>
 				<iYield>30</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ASTROPOLIS</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ASTROPOLIS</BuildingType>
+			</PrereqInCityBuildings>
 			<Bonus>BONUS_CHRONOTON</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -261,16 +246,10 @@
 				<iYield>10</iYield>
 				<iYield>5</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ANCIENT_CIVILIZATION</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_DARK_ENERGY_POWER_PLANT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ANCIENT_CIVILIZATION</BuildingType>
+				<BuildingType>BUILDING_DARK_ENERGY_POWER_PLANT</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MEGAGALACTIC_CAPITOL</Type>
@@ -292,16 +271,10 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>50</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_MERGED_MEGAGALAXY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ASTROPOLIS</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_MERGED_MEGAGALAXY</BuildingType>
+				<BuildingType>BUILDING_ASTROPOLIS</BuildingType>
+			</PrereqInCityBuildings>
 			<iRevIdxLocal>-20</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -331,12 +304,9 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_WORMHOLE_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_WORMHOLE_NETWORK</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TACHYON_DETECTOR</Type>
@@ -358,12 +328,9 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>20</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_SUPERCOMPUTER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_SUPERCOMPUTER</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KOLMOGOROV_COMPRESSION</Type>
@@ -385,12 +352,9 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>30</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_SUPERCOMPUTER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_SUPERCOMPUTER</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GRAVITON_COMMUNICATION_CENTER</Type>
@@ -417,16 +381,10 @@
 				<iYield>0</iYield>
 				<iYield>5</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_DYSON_SPHERES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_RESEARCH_BASE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_DYSON_SPHERES</BuildingType>
+				<BuildingType>BUILDING_INTERGALACTIC_RESEARCH_BASE</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TACHYON_COMMUNICATION_CENTER</Type>
@@ -458,12 +416,9 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TACHYON_DETECTOR</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_TACHYON_DETECTOR</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERGALACTIC_TRADING_CENTER</Type>
@@ -545,16 +500,10 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_CITY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_TRADING_CENTER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_CITY</BuildingType>
+				<BuildingType>BUILDING_INTERGALACTIC_TRADING_CENTER</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DARK_MATTER_HIGHWAY</Type>
@@ -578,12 +527,9 @@
 				<iYield>0</iYield>
 				<iYield>30</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_STARPORT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_STARPORT</BuildingType>
+			</PrereqInCityBuildings>
 			<Bonus>BONUS_DARK_MATTER</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -629,20 +575,11 @@
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_CORE_DYSON_SPHERE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_DYSON_SPHERES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_YOTTAFACTORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_CORE_DYSON_SPHERE</BuildingType>
+				<BuildingType>BUILDING_INTERGALACTIC_DYSON_SPHERES</BuildingType>
+				<BuildingType>BUILDING_YOTTAFACTORY</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERGALACTIC_TOURIST_AGENCY</Type>
@@ -663,12 +600,9 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_STARPORT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_STARPORT</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERGALACTIC_WORMHOLE</Type>
@@ -709,12 +643,9 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<iMaintenanceModifier>-5</iMaintenanceModifier>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_MECHANOSYNTHESIS</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_MECHANOSYNTHESIS</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERGALACTIC_WORMHOLE_NETWORK</Type>
@@ -738,12 +669,9 @@
 				<iYield>0</iYield>
 				<iYield>25</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERGALACTIC_LOGISTICS_CENTER</Type>
@@ -768,16 +696,10 @@
 				<iYield>0</iYield>
 				<iYield>20</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALACTIC_GROUP_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_CITY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GALACTIC_GROUP_COLONY</BuildingType>
+				<BuildingType>BUILDING_INTERGALACTIC_CITY</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_VIRGO_SUPERCLUSTER</TerrainType>
@@ -811,12 +733,9 @@
 				<iYield>0</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_LOGISTICS_CENTER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_LOGISTICS_CENTER</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_VIRGO_SUPERCLUSTER</TerrainType>
@@ -850,16 +769,10 @@
 				<iYield>0</iYield>
 				<iYield>20</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_KOLMOGOROV_COMPRESSION</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_WORMHOLE_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_KOLMOGOROV_COMPRESSION</BuildingType>
+				<BuildingType>BUILDING_INTERGALACTIC_WORMHOLE_NETWORK</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INSTANT_TELEPORTATION_PORTAL</Type>
@@ -917,12 +830,9 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>25</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 			<iRevIdxLocal>-10</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -944,12 +854,9 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>100</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_CULTURE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_CULTURE</BuildingType>
+			</PrereqInCityBuildings>
 			<Bonus>BONUS_TIME_CRYSTALS</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -971,12 +878,9 @@
 				<iCommerce>50</iCommerce>
 				<iCommerce>100</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 			<iRevIdxLocal>-10</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1005,12 +909,9 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALACTIC_GROUP_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GALACTIC_GROUP_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_VIRGO_SUPERCLUSTER</TerrainType>
@@ -1065,16 +966,10 @@
 				<iCommerce>20</iCommerce>
 			</CommerceChanges>
 			<iMaintenanceModifier>-5</iMaintenanceModifier>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_COMMAND_CENTER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
+				<BuildingType>BUILDING_INTERGALACTIC_COMMAND_CENTER</BuildingType>
+			</PrereqInCityBuildings>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1098,12 +993,9 @@
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
 			<iMaintenanceModifier>-5</iMaintenanceModifier>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1138,12 +1030,9 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<iMaintenanceModifier>-5</iMaintenanceModifier>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_GOVERNMENT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_GOVERNMENT</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_INTERGALACTIC_REPUBLIC</BuildingMustNotHave>
@@ -1184,12 +1073,9 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<iMaintenanceModifier>-5</iMaintenanceModifier>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_GOVERNMENT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_GOVERNMENT</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_INTERGALACTIC_EMPIRE</BuildingMustNotHave>
@@ -1218,12 +1104,9 @@
 			<YieldChanges>
 				<iYield>5</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_COMMAND_CENTER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_COMMAND_CENTER</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GUIDED_PLANETARY_EVOLUTION</Type>
@@ -1244,12 +1127,9 @@
 				<iCommerce>100</iCommerce>
 				<iCommerce>20</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_TERRAFORMING_BASE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_TERRAFORMING_BASE</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_QUASAR_ECOSYSTEM</Type>
@@ -1277,12 +1157,9 @@
 			<YieldChanges>
 				<iYield>5</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_TERRAFORMING_BASE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_TERRAFORMING_BASE</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BIRCH_PLANET</Type>
@@ -1303,12 +1180,9 @@
 				<iYield>250</iYield>
 			</YieldChanges>
 			<iWorkableRadius>3</iWorkableRadius>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_YOTTAFACTORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_YOTTAFACTORY</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MERGED_MEGAGALAXY</Type>
@@ -1340,16 +1214,10 @@
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_GOVERNMENT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_BIRCH_PLANET</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_GOVERNMENT</BuildingType>
+				<BuildingType>BUILDING_BIRCH_PLANET</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERGALACTIC_CORE_DYSON_SPHERE</Type>
@@ -1370,12 +1238,9 @@
 				<iYield>80</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SUPERMASSIVE_BLACK_HOLE_POWER_PLANT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SUPERMASSIVE_BLACK_HOLE_POWER_PLANT</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERGALACTIC_DYSON_SPHERES</Type>
@@ -1396,16 +1261,10 @@
 				<iYield>50</iYield>
 				<iYield>20</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_VON_NEUMANN_PROBES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
+				<BuildingType>BUILDING_VON_NEUMANN_PROBES</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RED_GLOBULAR_GALAXY</Type>
@@ -1425,12 +1284,9 @@
 				<iYield>10</iYield>
 				<iYield>100</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_DYSON_SPHERES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_DYSON_SPHERES</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VON_NEUMANN_PROBES</Type>
@@ -1457,12 +1313,9 @@
 				<iYield>50</iYield>
 			</YieldChanges>
 			<iMaintenanceModifier>-5</iMaintenanceModifier>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_FUSION_PLANTS</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_FUSION_PLANTS</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COMPUTRONIUM_CONVERSION_SHIP</Type>
@@ -1488,12 +1341,9 @@
 				<iYield>0</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_VON_NEUMANN_PROBES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VON_NEUMANN_PROBES</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_QUARK_STAR_BASE</Type>
@@ -1513,12 +1363,9 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>200</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_STARPORT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_STARPORT</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ELECTROWEAK_STAR_BASE</Type>
@@ -1538,12 +1385,9 @@
 				<iCommerce>100</iCommerce>
 				<iCommerce>100</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_STARPORT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_STARPORT</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KLIKISS_TORCH</Type>
@@ -1593,12 +1437,9 @@
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_DYSON_SPHERES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_DYSON_SPHERES</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SPIRAL_GALAXY</Type>
@@ -1628,12 +1469,9 @@
 				<iYield>0</iYield>
 				<iYield>100</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_CORE_DYSON_SPHERE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_CORE_DYSON_SPHERE</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ELLIPTICAL_GALAXY</Type>
@@ -1662,12 +1500,9 @@
 				<iYield>10</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_CORE_DYSON_SPHERE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_CORE_DYSON_SPHERE</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GALACTIC_VOID_COLONY</Type>
@@ -1694,12 +1529,9 @@
 				<iYield>50</iYield>
 				<iYield>5</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_VOID_BASE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VOID_BASE</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERGALACTIC_FUSION_PLANTS</Type>
@@ -1744,12 +1576,9 @@
 				<iYield>0</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_MECHANOSYNTHESIS</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_MECHANOSYNTHESIS</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ZERO_POINT_POWER_PLANT</Type>
@@ -1769,12 +1598,9 @@
 				<iYield>0</iYield>
 				<iYield>100</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_MECHANOSYNTHESIS</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_MECHANOSYNTHESIS</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GAMMA_RAY_BURST_POWER</Type>
@@ -1794,12 +1620,9 @@
 				<iYield>0</iYield>
 				<iYield>200</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_MINE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_MINE</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_QUASAR_POWER_PLANT</Type>
@@ -1825,12 +1648,9 @@
 				<iYield>0</iYield>
 				<iYield>500</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_MINE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_MINE</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ZERO_POINT_FACTORIES</Type>
@@ -1853,12 +1673,9 @@
 				<iYield>0</iYield>
 				<iYield>100</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ZERO_POINT_POWER_PLANT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ZERO_POINT_POWER_PLANT</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DARK_MATTER_FUEL_SUPPLY</Type>
@@ -1881,12 +1698,9 @@
 				<iYield>0</iYield>
 				<iYield>75</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SUPERMASSIVE_BLACK_HOLE_POWER_PLANT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SUPERMASSIVE_BLACK_HOLE_POWER_PLANT</BuildingType>
+			</PrereqInCityBuildings>
 			<Bonus>BONUS_DARK_MATTER</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1916,16 +1730,10 @@
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_MECHANOSYNTHESIS</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_MINE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_MECHANOSYNTHESIS</BuildingType>
+				<BuildingType>BUILDING_INTERGALACTIC_MINE</BuildingType>
+			</PrereqInCityBuildings>
 			<bPower>1</bPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1972,12 +1780,9 @@
 				<iYield>30</iYield>
 				<iYield>20</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_WORMHOLE_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_WORMHOLE_NETWORK</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DARK_MATTER_SCOOP</Type>
@@ -2001,12 +1806,9 @@
 				<iYield>0</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_MINE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_MINE</BuildingType>
+			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_DARK_MATTER</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -2047,12 +1849,9 @@
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_FUSION_PLANTS</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_FUSION_PLANTS</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_YOTTAFACTORY</Type>
@@ -2075,12 +1874,9 @@
 				<iYield>0</iYield>
 				<iYield>150</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EXOTIC_PARTICLE_FOUNDRY</Type>
@@ -2104,12 +1900,9 @@
 				<iYield>0</iYield>
 				<iYield>25</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_DYSON_SPHERES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_DYSON_SPHERES</BuildingType>
+			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_ALICE_MATTER</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -2134,12 +1927,9 @@
 				<iYield>0</iYield>
 				<iYield>25</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_MECHANOSYNTHESIS</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_MECHANOSYNTHESIS</BuildingType>
+			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_CHRONOTON</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -2164,12 +1954,9 @@
 				<iYield>0</iYield>
 				<iYield>3</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ELECTROWEAK_STAR_BASE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ELECTROWEAK_STAR_BASE</BuildingType>
+			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_NEUTRONIUM</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -2195,12 +1982,9 @@
 				<iYield>0</iYield>
 				<iYield>25</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_MECHANOSYNTHESIS</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_MECHANOSYNTHESIS</BuildingType>
+			</PrereqInCityBuildings>
 			<Bonus>BONUS_CHRONOTON</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2224,12 +2008,9 @@
 				<iYield>0</iYield>
 				<iYield>100</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_MECHANOSYNTHESIS</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_MECHANOSYNTHESIS</BuildingType>
+			</PrereqInCityBuildings>
 			<Bonus>BONUS_MAGNETIC_MONOPOLES</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2250,12 +2031,9 @@
 				<iCommerce>50</iCommerce>
 				<iCommerce>50</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_MATTER_PRESERVER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_MATTER_PRESERVER</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GRAVITATIONAL_CRANE</Type>
@@ -2276,12 +2054,9 @@
 				<iYield>10</iYield>
 			</YieldModifiers>
 			<iMilitaryProductionModifier>-10</iMilitaryProductionModifier>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_MECHANOSYNTHESIS</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_MECHANOSYNTHESIS</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ULTRA_HIGH_PRESSURE_FORGE</Type>
@@ -2304,12 +2079,9 @@
 				<iYield>0</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ZERO_POINT_POWER_PLANT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ZERO_POINT_POWER_PLANT</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERGALACTIC_RESEARCH_BASE</Type>
@@ -2350,12 +2122,9 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>200</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_DYSON_SPHERES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_DYSON_SPHERES</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERGALACTIC_LIBRARY</Type>
@@ -2377,12 +2146,9 @@
 				<iCommerce>25</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_RESEARCH_BASE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_RESEARCH_BASE</BuildingType>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2412,12 +2178,9 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<iHappiness>5</iHappiness>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_RESEARCH_BASE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_RESEARCH_BASE</BuildingType>
+			</PrereqInCityBuildings>
 			<iRevIdxLocal>-20</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2440,12 +2203,9 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_CORE_DYSON_SPHERE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_CORE_DYSON_SPHERE</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CONSCIOUS_GALAXY</Type>
@@ -2475,20 +2235,11 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALAXY_SCAN</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_SUPERCOMPUTER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_WORMHOLE_HIVEMIND</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GALAXY_SCAN</BuildingType>
+				<BuildingType>BUILDING_INTERGALACTIC_SUPERCOMPUTER</BuildingType>
+				<BuildingType>BUILDING_INTERGALACTIC_WORMHOLE_HIVEMIND</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERGALACTIC_SUPERCOMPUTER</Type>
@@ -2518,12 +2269,9 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_RESEARCH_BASE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_RESEARCH_BASE</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERGALACTIC_ACCELERATOR</Type>
@@ -2547,12 +2295,9 @@
 				<iYield>0</iYield>
 				<iYield>50</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_SUPERCOMPUTER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_SUPERCOMPUTER</BuildingType>
+			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_MAGNETIC_MONOPOLES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
@@ -2580,12 +2325,9 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_SUPERCOMPUTER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_SUPERCOMPUTER</BuildingType>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2609,12 +2351,9 @@
 				<MapCategoryType>MAPCATEGORY_UNIVERSAL</MapCategoryType>
 			</MapCategoryTypes>
 			<iGreatGeneralRateModifier>5</iGreatGeneralRateModifier>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_COMMAND_CENTER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_COMMAND_CENTER</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BERSERKER</Type>
@@ -2641,12 +2380,9 @@
 				<iYield>50</iYield>
 			</YieldChanges>
 			<iMilitaryProductionModifier>20</iMilitaryProductionModifier>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_COMMAND_CENTER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_COMMAND_CENTER</BuildingType>
+			</PrereqInCityBuildings>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2677,12 +2413,9 @@
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_COMMAND_CENTER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_COMMAND_CENTER</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VOID_BASE</Type>
@@ -2710,16 +2443,10 @@
 				<iCommerce>100</iCommerce>
 			</CommerceChanges>
 			<iMilitaryProductionModifier>10</iMilitaryProductionModifier>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_WORMHOLE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_COMMAND_CENTER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_WORMHOLE</BuildingType>
+				<BuildingType>BUILDING_INTERGALACTIC_COMMAND_CENTER</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STAR_CANNON</Type>
@@ -2746,12 +2473,9 @@
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 			</PrereqOrTerrain>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_COMMAND_CENTER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_COMMAND_CENTER</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STARKILLER_BASE</Type>
@@ -2768,16 +2492,10 @@
 				<MapCategoryType>MAPCATEGORY_UNIVERSAL</MapCategoryType>
 			</MapCategoryTypes>
 			<iMilitaryProductionModifier>30</iMilitaryProductionModifier>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_COMMAND_CENTER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERGALACTIC_FUSION_PLANTS</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_COMMAND_CENTER</BuildingType>
+				<BuildingType>BUILDING_INTERGALACTIC_FUSION_PLANTS</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TEMPORAL_RIFT</Type>
@@ -2846,12 +2564,9 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TEMPORAL_RIFT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_TEMPORAL_RIFT</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASCENDED_GALAXY</Type>
@@ -2872,12 +2587,9 @@
 			</CommerceChanges>
 			<iHappiness>20</iHappiness>
 			<iHealth>20</iHealth>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_COSMIC_ECONOMY_EFFECT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_COSMIC_ECONOMY_EFFECT</BuildingType>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2917,12 +2629,9 @@
 				<iCommerce>1000</iCommerce>
 			</CommerceChanges>
 			<FreeBuilding>BUILDING_COSMIC_EXPANSION_POWER_PLANT</FreeBuilding>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALACTIC_SUPERCLUSTER_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GALACTIC_SUPERCLUSTER_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COSMIC_EXPANSION_POWER_PLANT_EFFECT</Type>
@@ -2982,12 +2691,9 @@
 					<iExtraCommerce>20</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_LARGE_MAGELLANIC_CLOUD</BuildingMustNotHave>
@@ -3050,12 +2756,9 @@
 					<iExtraCommerce>20</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_SMALL_MAGELLANIC_CLOUD</BuildingMustNotHave>
@@ -3114,12 +2817,9 @@
 					<iExtraCommerce>20</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_SMALL_MAGELLANIC_CLOUD</BuildingMustNotHave>
@@ -3180,12 +2880,9 @@
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_SMALL_MAGELLANIC_CLOUD</BuildingMustNotHave>
@@ -3246,12 +2943,9 @@
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GALACTIC_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_SMALL_MAGELLANIC_CLOUD</BuildingMustNotHave>
@@ -3303,12 +2997,9 @@
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALACTIC_GROUP_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GALACTIC_GROUP_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_MAFFEI_GROUP</BuildingMustNotHave>
@@ -3361,12 +3052,9 @@
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALACTIC_GROUP_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GALACTIC_GROUP_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_SCULPTOR_GROUP</BuildingMustNotHave>
@@ -3419,12 +3107,9 @@
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALACTIC_GROUP_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GALACTIC_GROUP_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_SCULPTOR_GROUP</BuildingMustNotHave>
@@ -3478,12 +3163,9 @@
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALACTIC_GROUP_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GALACTIC_GROUP_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_SCULPTOR_GROUP</BuildingMustNotHave>
@@ -3535,12 +3217,9 @@
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALACTIC_GROUP_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GALACTIC_GROUP_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_SCULPTOR_GROUP</BuildingMustNotHave>
@@ -3591,12 +3270,9 @@
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALACTIC_SUPERCLUSTER_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GALACTIC_SUPERCLUSTER_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_HYDRA_SUPERCLUSTER</BuildingMustNotHave>
@@ -3644,12 +3320,9 @@
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALACTIC_SUPERCLUSTER_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GALACTIC_SUPERCLUSTER_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_COMA_SUPERCLUSTER</BuildingMustNotHave>
@@ -3698,12 +3371,9 @@
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALACTIC_SUPERCLUSTER_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GALACTIC_SUPERCLUSTER_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_COMA_SUPERCLUSTER</BuildingMustNotHave>
@@ -3751,12 +3421,9 @@
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALACTIC_SUPERCLUSTER_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GALACTIC_SUPERCLUSTER_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_COMA_SUPERCLUSTER</BuildingMustNotHave>
@@ -3805,12 +3472,9 @@
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALACTIC_SUPERCLUSTER_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GALACTIC_SUPERCLUSTER_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_SLOAN_GREAT_WALL</BuildingMustNotHave>
@@ -3854,12 +3518,9 @@
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALACTIC_SUPERCLUSTER_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GALACTIC_SUPERCLUSTER_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_HERCULES_CORONA_BOREALIS_GREAT_WALL</BuildingMustNotHave>
@@ -3905,12 +3566,9 @@
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALACTIC_SUPERCLUSTER_COLONY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GALACTIC_SUPERCLUSTER_COLONY</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_HERCULES_CORONA_BOREALIS_GREAT_WALL</BuildingMustNotHave>
@@ -3944,12 +3602,9 @@
 				<iCommerce>2000</iCommerce>
 			</CommerceChanges>
 			<FreeBuilding>BUILDING_MAGITEK_ARENA</FreeBuilding>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_BIRCH_PLANET</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_BIRCH_PLANET</BuildingType>
+			</PrereqInCityBuildings>
 			<Bonus>BONUS_ALICE_MATTER</Bonus>
 		</BuildingInfo>
 	</BuildingInfos>

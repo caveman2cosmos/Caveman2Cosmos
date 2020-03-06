@@ -42,12 +42,9 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MAPINGUARI_GUARD</ArtDefineTag>
 			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_MAPINGUARI_COMPOUND</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_MAPINGUARI_COMPOUND</BuildingType>
+			</PrereqInCityBuildings>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

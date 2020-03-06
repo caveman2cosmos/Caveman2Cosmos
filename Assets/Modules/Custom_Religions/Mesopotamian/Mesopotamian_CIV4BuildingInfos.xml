@@ -133,12 +133,9 @@
 					<iExperience>2</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_AN</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_AN</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -208,12 +205,9 @@
 					<iExperience>2</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_AN</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_AN</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -283,12 +277,9 @@
 					<iExperience>2</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_AN</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_AN</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -351,12 +342,9 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<ConstructSound>AS2D_BUILD_MESOPOTAMIAN</ConstructSound>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_AN</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_AN</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -381,12 +369,9 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_WHEAT</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_KI</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_KI</BuildingType>
+			</PrereqInCityBuildings>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_WHEAT</BonusType>
@@ -421,12 +406,9 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_CORN</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_KI</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_KI</BuildingType>
+			</PrereqInCityBuildings>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_CORN</BonusType>
@@ -461,12 +443,9 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_RICE</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_KI</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_KI</BuildingType>
+			</PrereqInCityBuildings>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_RICE</BonusType>
@@ -501,12 +480,9 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_POTATOES</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_KI</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_KI</BuildingType>
+			</PrereqInCityBuildings>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_POTATOES</BonusType>

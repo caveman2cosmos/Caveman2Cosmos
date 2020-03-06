@@ -26,12 +26,9 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_POULTRY_HERD</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_POULTRY_HERD</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_DUCK_FLOCKS_EFFECT</BuildingMustNotHave>
@@ -80,12 +77,9 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_POULTRY_HERD</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_POULTRY_HERD</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_PEACOCK_FLOCKS_EFFECT</BuildingMustNotHave>
@@ -134,12 +128,9 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_POULTRY_HERD</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_POULTRY_HERD</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_TURKEY_FLOCKS_EFFECT</BuildingMustNotHave>

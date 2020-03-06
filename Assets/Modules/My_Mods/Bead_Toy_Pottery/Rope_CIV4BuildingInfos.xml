@@ -27,16 +27,10 @@
 				<Bonus>BONUS_LEATHER</Bonus>
 				<Bonus>BONUS_NYLON</Bonus>
 			</PrereqBonuses>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_FACTORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ROPE_WEAVER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FACTORY</BuildingType>
+				<BuildingType>BUILDING_ROPE_WEAVER</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_ROPE_WEAVER</BuildingType>

@@ -16,12 +16,9 @@
 			<PrereqTech>TECH_ONLINE_COMMUNITY</PrereqTech>
 			<iCost>4210</iCost>
 			<FreeBuilding>BUILDING_MARKET_RESEARCH</FreeBuilding>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_DIGITAL_OFFICES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_DIGITAL_OFFICES</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_SOCIAL_NETWORKS</BuildingType>
@@ -56,12 +53,9 @@
 			<PrereqTech>TECH_VIRTUAL_SOCIETY</PrereqTech>
 			<iCost>4810</iCost>
 			<FreeBuilding>BUILDING_SOCIAL_NETWORKS</FreeBuilding>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_VIRTUAL_WORLD</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VIRTUAL_WORLD</BuildingType>
+			</PrereqInCityBuildings>
 			<Bonus>BONUS_HUMAN_MOD_DIGITAL_LIFESTYLE</Bonus>
 			<FreeBonus>BONUS_HUMAN_MOD_DIGITAL_IDENTITY</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -82,12 +76,9 @@
 			<PrereqTech>TECH_GENE_ENHANCEMENT</PrereqTech>
 			<iCost>6770</iCost>
 			<FreeBuilding>BUILDING_STEM_CELL_LAB</FreeBuilding>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_STEM_CELL_LAB</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_STEM_CELL_LAB</BuildingType>
+			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_HUMAN_MOD_GENE_EDITING</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>1</iAIWeight>
@@ -296,12 +287,9 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ANIMA_CHAMBER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ANIMA_CHAMBER</BuildingType>
+			</PrereqInCityBuildings>
 			<Bonus>BONUS_HUMAN_MOD_DIGITAL_IDENTITY</Bonus>
 			<FreeBonus>BONUS_HUMAN_MOD_ROBOTIC_BODY</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -321,12 +309,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRANSHUMANISM</PrereqTech>
 			<iCost>12310</iCost>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_RESURRECTION_HUB</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_RESURRECTION_HUB</BuildingType>
+			</PrereqInCityBuildings>
 			<Bonus>BONUS_HUMAN_MOD_ENLIGHTENED</Bonus>
 			<FreeBonus>BONUS_HUMAN_MOD_INDEFINITE_LIFESPAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -515,12 +500,9 @@
 			<PrereqTech>TECH_SENTIENT_EARTH</PrereqTech>
 			<iCost>13810</iCost>
 			<FreeBuilding>BUILDING_NETWORK_NODE</FreeBuilding>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_NETWORK_NODE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_NETWORK_NODE</BuildingType>
+			</PrereqInCityBuildings>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -626,12 +608,9 @@
 					<iExtraCommerce>10</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_OPTRONIC_SUPERCOMPUTER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_OPTRONIC_SUPERCOMPUTER</BuildingType>
+			</PrereqInCityBuildings>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -670,12 +649,9 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GALACTIC_CANTINA</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GALACTIC_CANTINA</BuildingType>
+			</PrereqInCityBuildings>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -841,12 +817,9 @@
 					<iExtraCommerce>10</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_QUANTUM_GRAVITY_SUPERCOMPUTER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_QUANTUM_GRAVITY_SUPERCOMPUTER</BuildingType>
+			</PrereqInCityBuildings>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -985,12 +958,9 @@
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_BACTERIUM_BIOFORGE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_BACTERIUM_BIOFORGE</BuildingType>
+			</PrereqInCityBuildings>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1103,12 +1073,9 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TRANSGENETICS_LAB</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_TRANSGENETICS_LAB</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SILICON_LIFE</Type>
@@ -1169,12 +1136,9 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_LUNAR_SILICON_EXTRACTION_FACILITY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_LUNAR_SILICON_EXTRACTION_FACILITY</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYDROGEN_PEROXIDE_LIFE</Type>
@@ -1301,12 +1265,9 @@
 					<iProductionModifier>30</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ORBITAL_BASE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ORBITAL_BASE</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AMMONIA_LIFE</Type>
@@ -1345,12 +1306,9 @@
 					<iProductionModifier>30</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TITAN_BIOFACTORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_TITAN_BIOFACTORY</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_METHANE_LIFE</Type>
@@ -1380,12 +1338,9 @@
 					<iProductionModifier>30</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TITAN_BIOFACTORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_TITAN_BIOFACTORY</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LIQUID_NITROGEN_LIFE</Type>
@@ -1422,12 +1377,9 @@
 					<iProductionModifier>30</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_KBO_OUTPOST</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_KBO_OUTPOST</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_JUPITER_CLOUD_LIFE</Type>
@@ -1498,12 +1450,9 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_CHTHONIAN_PLANET_BASE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CHTHONIAN_PLANET_BASE</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SUPERCRITICAL_CO2_LIFE</Type>
@@ -1547,12 +1496,9 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SUPER_EARTH</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SUPER_EARTH</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PARTICLE_LIFEFORMS</Type>
@@ -1576,12 +1522,9 @@
 			<YieldChanges>
 				<iYield>5</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_OSMIUM_CORE_PLANET</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_OSMIUM_CORE_PLANET</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DUST_PLASMA_LIFE</Type>
@@ -1626,12 +1569,9 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INTERSTELLAR_HYDROGEN_MAP</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_INTERSTELLAR_HYDROGEN_MAP</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHIRAL_FLEXIBLE_LIFEFORMS</Type>
@@ -1687,12 +1627,9 @@
 			<YieldChanges>
 				<iYield>20</iYield>
 			</YieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SPACE_WHALE_HUNTER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SPACE_WHALE_HUNTER</BuildingType>
+			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PAN_DIMENSIONAL_LIFE</Type>

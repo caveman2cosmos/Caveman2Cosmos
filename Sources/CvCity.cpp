@@ -3469,13 +3469,9 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 	}
 
 	/************************************************************************************************/
-	/* Koshling - moved this so non-met vicinity required buildings get hidden in city screen even */
-	/* when not ordinarily hiding uncosntructable (since you cannot influence your vicinity bonuses */
+	/* Koshling - moved this so non-met vicinity required buildings get hidden in city screen even	*/
+	/* when not ordinarily hiding uncosntructable (since you cannot influence your vicinity bonuses	*/
 	/* so its not useful information for the most part												*/
-	/*																								*/
-	/* Afforess	                  Start		 06/13/10                                               */
-	/*                                                                                              */
-	/*                                                                                              */
 	/************************************************************************************************/
 	const int numBuildingInfos = GC.getNumBuildingInfos();
 	if (!bExposed)
@@ -3502,28 +3498,18 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 				return false;
 			}
 		}
-		/************************************************************************************************/
-		/* Afforess	                     END                                                            */
-		/************************************************************************************************/
 		if (!bTestVisible && !bIgnoreBuildings)
 		{
-			if (kBuilding.isBuildingNeededInCity(NO_BUILDING))
+			for (int iI = 0; iI < kBuilding.getNumPrereqInCityBuildings(); iI++)
 			{
-				for (int iI = 0; iI < numBuildingInfos; iI++)
+				const BuildingTypes ePrereqBuilding = static_cast<BuildingTypes>(kBuilding.getPrereqInCityBuilding(iI));
+				if (ePrereqBuilding != withExtraBuilding && 0 == getNumBuilding(ePrereqBuilding))
 				{
-					if (kBuilding.isBuildingNeededInCity(iI))
+					if (probabilityEverConstructable != NULL)
 					{
-						const BuildingTypes ePrereqBuilding = static_cast<BuildingTypes>(iI);
-						if (0 == getNumBuilding(ePrereqBuilding) /* && (bContinue || (getFirstBuildingOrder(ePrereqBuilding) == -1))*/ &&
-							ePrereqBuilding != withExtraBuilding)
-						{
-							if (probabilityEverConstructable != NULL)
-							{
-								*probabilityEverConstructable = 25;
-							}
-							return false;
-						}
+						*probabilityEverConstructable = 25;
 					}
+					return false;
 				}
 			}
 		}

@@ -244,12 +244,9 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_HELLENIC_CATHEDRAL</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_HELLENIC_CATHEDRAL</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -338,12 +335,9 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SCULPTOR</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SCULPTOR</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -430,12 +424,9 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_HELLENIC_CATHEDRAL</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_HELLENIC_CATHEDRAL</BuildingType>
+			</PrereqInCityBuildings>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
 					<SpecialistType>SPECIALIST_PRIEST</SpecialistType>
@@ -945,12 +936,9 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_BURIAL_TRADITION_SKY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_BURIAL_TRADITION_SKY</BuildingType>
+			</PrereqInCityBuildings>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>

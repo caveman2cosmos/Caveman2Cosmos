@@ -105,12 +105,9 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_DREAM_SIMULATION_CENTER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_DREAM_SIMULATION_CENTER</BuildingType>
+			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>6</iPrereqPopulation>
 		</BuildingInfo>
@@ -179,12 +176,9 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_BIOLOGY_LAB</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_BIOLOGY_LAB</BuildingType>
+			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>6</iPrereqPopulation>
 		</BuildingInfo>
@@ -254,12 +248,9 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceModifiers>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_DREAM_SIMULATION_CENTER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_DREAM_SIMULATION_CENTER</BuildingType>
+			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PropertyManipulators>

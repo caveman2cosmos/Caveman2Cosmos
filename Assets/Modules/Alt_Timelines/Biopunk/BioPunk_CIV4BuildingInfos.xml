@@ -61,12 +61,9 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PROTEIN_LAB</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PROTEIN_LAB</BuildingType>
+			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>6</iPrereqPopulation>
 		</BuildingInfo>
@@ -101,12 +98,9 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_MICROBIOLOGY_LAB</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_MICROBIOLOGY_LAB</BuildingType>
+			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PropertyManipulators>
@@ -148,12 +142,9 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_CLONING_LABORATORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CLONING_LABORATORY</BuildingType>
+			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PropertyManipulators>
@@ -189,12 +180,9 @@
 			<CommerceModifiers>
 				<iCommerce>5</iCommerce>
 			</CommerceModifiers>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ANIMAL_DESIGNER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ANIMAL_DESIGNER</BuildingType>
+			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PropertyManipulators>
@@ -236,12 +224,9 @@
 					<iFreeSpecialistCount>3</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ANIMAL_DESIGNER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ANIMAL_DESIGNER</BuildingType>
+			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PropertyManipulators>
@@ -316,12 +301,9 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceModifiers>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_CLONING_LABORATORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CLONING_LABORATORY</BuildingType>
+			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PropertyManipulators>
@@ -352,12 +334,9 @@
 				<iCommerce>10</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_BIOPUNK_LAB</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_BIOPUNK_LAB</BuildingType>
+			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PropertyManipulators>
@@ -388,12 +367,9 @@
 				<iCommerce>10</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_BIOPUNK_LAB</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_BIOPUNK_LAB</BuildingType>
+			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PropertyManipulators>
@@ -424,12 +400,9 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_BIOPUNK_LAB</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_BIOPUNK_LAB</BuildingType>
+			</PrereqInCityBuildings>
 			<iAdjacentDamagePercent>20</iAdjacentDamagePercent>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>6</iPrereqPopulation>
@@ -467,16 +440,10 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceModifiers>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ANIMAL_DESIGNER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ZOO</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ANIMAL_DESIGNER</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
+			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PropertyManipulators>
@@ -518,16 +485,10 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceModifiers>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PLASTICSURGERY_CLINIC</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_BIOPUNK_LAB</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PLASTICSURGERY_CLINIC</BuildingType>
+				<BuildingType>BUILDING_BIOPUNK_LAB</BuildingType>
+			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PropertyManipulators>

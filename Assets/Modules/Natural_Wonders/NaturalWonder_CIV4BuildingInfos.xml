@@ -1611,16 +1611,10 @@
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_EARTH_MYTH_EFFECT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_EARTH_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_OASIS</FeatureType>
@@ -1683,16 +1677,10 @@
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_EARTH_MYTH_EFFECT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SKY_MYTH_EFFECT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_EARTH_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_SKY_MYTH_EFFECT</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_CRATER</FeatureType>
@@ -1769,16 +1757,10 @@
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_EARTH_MYTH_EFFECT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SKY_MYTH_EFFECT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_EARTH_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_SKY_MYTH_EFFECT</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
@@ -1923,16 +1905,10 @@
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_STONE_MYTH_EFFECT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_FIRE_MYTH_EFFECT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_STONE_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FIRE_MYTH_EFFECT</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_VOLCANO_ACTIVE</FeatureType>
@@ -2009,16 +1985,10 @@
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_STONE_MYTH_EFFECT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_STONE_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_CORAL_REEF</FeatureType>
@@ -2103,16 +2073,10 @@
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_STONE_MYTH_EFFECT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_STONE_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_REEF</FeatureType>

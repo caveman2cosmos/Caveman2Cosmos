@@ -89,12 +89,9 @@
 					<iFlavor>5</iFlavor>
 				</Flavor>
 			</Flavors>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_RHINO_TRAINER</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_RHINO_TRAINER</BuildingType>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -147,12 +144,9 @@
 			<iConquestProb>25</iConquestProb>
 			<iAsset>2</iAsset>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_RHINO_TRAINER</BuildingType>

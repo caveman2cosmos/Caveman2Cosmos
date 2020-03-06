@@ -762,12 +762,9 @@
                     <iNumBuildingNeeded>1</iNumBuildingNeeded>
                 </PrereqBuilding>
             </PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ANIMATION_STUDIO</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ANIMATION_STUDIO</BuildingType>
+			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_HIT_ANIMATED_MOVIE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAsset>18</iAsset>

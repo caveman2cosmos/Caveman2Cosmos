@@ -3694,7 +3694,10 @@ public:
 	bool isCommerceFlexible(int i) const;				// Exposed to Python
 	bool isCommerceChangeOriginalOwner(int i) const;	// Exposed to Python
 
-	bool isBuildingNeededInCity(int i) const;			// Exposed to Python
+	int getPrereqInCityBuilding(int i) const;
+	int getNumPrereqInCityBuildings() const;
+	bool isPrereqInCityBuilding(int i) const;	// Exposed to Python
+
 
 	int getSpecialistYieldChange(int i, int j) const;	// Exposed to Python
 	int* getSpecialistYieldChangeArray(int i) const;
@@ -4292,6 +4295,7 @@ protected:
 	bool m_bAnyDomainFreeExperience;
 	int* m_piDomainProductionModifier;
 	int* m_piBuildingHappinessChanges;
+	std::vector<int> m_aiPrereqInCityBuildings;
 	int* m_piPrereqNumOfBuilding;
 	int* m_piFlavorValue;
 	int* m_piImprovementFreeSpecialist;
@@ -4299,7 +4303,6 @@ protected:
 
 	bool* m_pbCommerceFlexible;
 	bool* m_pbCommerceChangeOriginalOwner;
-	bool* m_pbBuildingNeededInCity;
 
 	int** m_ppaiSpecialistYieldChange;
 	int** m_ppaiSpecialistCommerceChange;

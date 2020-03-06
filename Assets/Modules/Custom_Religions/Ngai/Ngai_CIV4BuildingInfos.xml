@@ -54,12 +54,9 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<ConstructSound>AS2D_BUILD_CONFUCIAN</ConstructSound>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_NGAI</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_NGAI</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -181,12 +178,9 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<ConstructSound>AS2D_BUILD_CONFUCIAN</ConstructSound>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_NGAI</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_NGAI</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -254,12 +248,9 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<ConstructSound>AS2D_BUILD_CONFUCIAN</ConstructSound>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_NGAI</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_NGAI</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -292,12 +283,9 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_COW</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_NGAINAROK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_NGAINAROK</BuildingType>
+			</PrereqInCityBuildings>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_COW</BonusType>
@@ -333,12 +321,9 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_PIG</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_NGAINAROK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_NGAINAROK</BuildingType>
+			</PrereqInCityBuildings>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_PIG</BonusType>
@@ -374,12 +359,9 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_SHEEP</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_NGAINAROK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_NGAINAROK</BuildingType>
+			</PrereqInCityBuildings>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_SHEEP</BonusType>

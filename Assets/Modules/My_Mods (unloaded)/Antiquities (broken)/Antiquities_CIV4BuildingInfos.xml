@@ -17,16 +17,10 @@
 			<iCost>-1</iCost>
 			<FreeBonus>BONUS_ANTIQUITIES_GRAVE_GOODS_CAVE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_BURIAL_TRADITION_CAVE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GRAVE_GOODS</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_BURIAL_TRADITION_CAVE</BuildingType>
+				<BuildingType>BUILDING_GRAVE_GOODS</BuildingType>
+			</PrereqInCityBuildings>
 			<bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -40,16 +34,10 @@
 			<iCost>-1</iCost>
 			<FreeBonus>BONUS_ANTIQUITIES_GRAVE_GOODS_EARTH</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_BURIAL_TRADITION_EARTH</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GRAVE_GOODS</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_BURIAL_TRADITION_EARTH</BuildingType>
+				<BuildingType>BUILDING_GRAVE_GOODS</BuildingType>
+			</PrereqInCityBuildings>
 			<bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -63,16 +51,10 @@
 			<iCost>-1</iCost>
 			<FreeBonus>BONUS_ANTIQUITIES_GRAVE_GOODS_FIRE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_BURIAL_TRADITION_FIRE</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GRAVE_GOODS</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_BURIAL_TRADITION_FIRE</BuildingType>
+				<BuildingType>BUILDING_GRAVE_GOODS</BuildingType>
+			</PrereqInCityBuildings>
 			<bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -86,16 +68,10 @@
 			<iCost>-1</iCost>
 			<FreeBonus>BONUS_ANTIQUITIES_GRAVE_GOODS_SKY</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_BURIAL_TRADITION_SKY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_GRAVE_GOODS</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_BURIAL_TRADITION_SKY</BuildingType>
+				<BuildingType>BUILDING_GRAVE_GOODS</BuildingType>
+			</PrereqInCityBuildings>
 			<bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -113,12 +89,9 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_ELITE_HOUSING</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ELITE_HOUSING</BuildingType>
+			</PrereqInCityBuildings>
 			<bAutoBuild>1</bAutoBuild>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>

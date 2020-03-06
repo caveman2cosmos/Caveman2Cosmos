@@ -24558,15 +24558,13 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 	{
 		const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
 
-		if (GC.getBuildingInfo(eLoopBuilding).isBuildingNeededInCity(eBuilding))
+		if (GC.getBuildingInfo(eLoopBuilding).isPrereqInCityBuilding(eBuilding)
+		&& (pCity == NULL || pCity->canConstruct(eLoopBuilding, false, true)))
 		{
-			if ((pCity == NULL) || pCity->canConstruct(eLoopBuilding, false, true))
-			{
-				szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDING_REQUIRED_TO_BUILD").c_str());
-				szTempBuffer.Format(SETCOLR L"<link=%s>%s</link>" ENDCOLR, TEXT_COLOR("COLOR_BUILDING_TEXT"), CvWString(GC.getBuildingInfo(eLoopBuilding).getType()).GetCString(), GC.getBuildingInfo(eLoopBuilding).getDescription());
-				setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
-				bFirst = false;
-			}
+			szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDING_REQUIRED_TO_BUILD").c_str());
+			szTempBuffer.Format(SETCOLR L"<link=%s>%s</link>" ENDCOLR, TEXT_COLOR("COLOR_BUILDING_TEXT"), CvWString(GC.getBuildingInfo(eLoopBuilding).getType()).GetCString(), GC.getBuildingInfo(eLoopBuilding).getDescription());
+			setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
+			bFirst = false;
 		}
 	}
 
@@ -25104,13 +25102,11 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 					szBuffer.append(szTempBuffer);
 				}
 			}
-			else if (kBuilding.isBuildingNeededInCity(iI))
+			else if (kBuilding.isPrereqInCityBuilding(iI)
+			&& (pCity == NULL || pCity->getNumBuilding((BuildingTypes)iI) <= 0))
 			{
-				if (pCity == NULL || pCity->getNumBuilding((BuildingTypes)iI) <= 0)
-				{
-					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_STRING", CvWString(GC.getBuildingInfo((BuildingTypes)iI).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes)iI).getTextKeyWide()));
-				}
+				szBuffer.append(NEWLINE);
+				szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_STRING", CvWString(GC.getBuildingInfo((BuildingTypes)iI).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes)iI).getTextKeyWide()));
 			}
 		}
 

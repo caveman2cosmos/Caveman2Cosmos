@@ -80,12 +80,9 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_FACTORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FACTORY</BuildingType>
+			</PrereqInCityBuildings>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingType>BUILDING_CLEAN_NUCLEAR_REACTOR</BuildingType>
@@ -135,12 +132,9 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
+			</PrereqInCityBuildings>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
@@ -485,12 +479,9 @@
 					</YieldChanges>
 				</BonusYieldChange>
 			</BonusYieldChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_CANNERY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CANNERY</BuildingType>
+			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<iAIWeight>1</iAIWeight>
@@ -520,20 +511,11 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_PUSHBUTTON_AUTOMAT</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_WATER_PIPES</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PUSHBUTTON_AUTOMAT</BuildingType>
+				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
+				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_VIDEOPHONE_NETWORK</BuildingType>
@@ -598,12 +580,9 @@
 			<CommerceChanges>
 				<iCommerce>-15</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_FACTORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FACTORY</BuildingType>
+			</PrereqInCityBuildings>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingType>BUILDING_HI_TECH_NUCLEAR_REACTOR</BuildingType>
@@ -644,12 +623,9 @@
 			<CommerceChanges>
 				<iCommerce>-25</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_FACTORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FACTORY</BuildingType>
+			</PrereqInCityBuildings>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -719,12 +695,9 @@
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_FACTORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FACTORY</BuildingType>
+			</PrereqInCityBuildings>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -852,12 +825,9 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_FACTORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FACTORY</BuildingType>
+			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Properties>
@@ -935,16 +905,10 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingNeededs>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_LABORATORY</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-				<BuildingNeeded>
-					<BuildingType>BUILDING_INDUSTRIAL_PARK</BuildingType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingNeeded>
-			</BuildingNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_LABORATORY</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_PARK</BuildingType>
+			</PrereqInCityBuildings>
 			<iPrereqPopulation>13</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>

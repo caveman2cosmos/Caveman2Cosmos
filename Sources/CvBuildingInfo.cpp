@@ -215,7 +215,6 @@ m_piFlavorValue(NULL),
 m_piImprovementFreeSpecialist(NULL),
 m_pbCommerceFlexible(NULL),
 m_pbCommerceChangeOriginalOwner(NULL),
-m_pbBuildingNeededInCity(NULL),
 m_ppaiSpecialistYieldChange(NULL),
 m_ppaiSpecialistCommerceChange(NULL),
 m_ppaiBonusYieldModifier(NULL)
@@ -419,7 +418,6 @@ CvBuildingInfo::~CvBuildingInfo()
 	SAFE_DELETE_ARRAY(m_piImprovementFreeSpecialist);
 	SAFE_DELETE_ARRAY(m_pbCommerceFlexible);
 	SAFE_DELETE_ARRAY(m_pbCommerceChangeOriginalOwner);
-	SAFE_DELETE_ARRAY(m_pbBuildingNeededInCity);
 	SAFE_DELETE_ARRAY2(m_ppaiSpecialistYieldChange, GC.getNumSpecialistInfos());
 	SAFE_DELETE_ARRAY2(m_ppaiSpecialistCommerceChange, GC.getNumSpecialistInfos());
 	SAFE_DELETE_ARRAY2(m_ppaiLocalSpecialistYieldChange, GC.getNumSpecialistInfos());
@@ -462,19 +460,24 @@ CvBuildingInfo::~CvBuildingInfo()
 	SAFE_DELETE_ARRAY(m_pabHurry);
 	//SAFE_DELETE(m_pExprFreePromotionCondition);
 
-	for (int i=0; i<(int)m_aEnabledCivilizationTypes.size(); i++)
+	for (int i = 0; i < (int)m_aEnabledCivilizationTypes.size(); i++)
 	{
 		GC.removeDelayedResolution((int*)&(m_aEnabledCivilizationTypes[i]));
 	}
 
-	for (int i=0; i<(int)m_aAidRateChanges.size(); i++)
+	for (int i = 0; i < (int)m_aAidRateChanges.size(); i++)
 	{
 		GC.removeDelayedResolution((int*)&(m_aAidRateChanges[i]));
 	}
 
-	for (int i=0; i < (int)m_aiFreeTraitTypes.size(); i++)
+	for (int i = 0; i < (int)m_aiFreeTraitTypes.size(); i++)
 	{
 		GC.removeDelayedResolution((int*)&(m_aiFreeTraitTypes[i]));
+	}
+
+	for (int i = 0; i < (int)m_aiPrereqInCityBuildings.size(); i++)
+	{
+		GC.removeDelayedResolution((int*)&(m_aiPrereqInCityBuildings[i]));
 	}
 	//TB Combat Mods (Buildings) end
 }
@@ -1683,20 +1686,26 @@ bool CvBuildingInfo::isCommerceChangeOriginalOwner(int i) const
 	return m_pbCommerceChangeOriginalOwner ? m_pbCommerceChangeOriginalOwner[i] : false;
 }
 
-bool CvBuildingInfo::isBuildingNeededInCity(int i) const
-{
-	FAssertMsg(i < GC.getNumBuildingInfos(), "Index out of bounds");
-	FAssertMsg(i >= -1, "Index out of bounds");
 
-	if ( i == -1 )
-	{
-		return (m_pbBuildingNeededInCity != NULL);
-	}
-	else
-	{
-		return m_pbBuildingNeededInCity ? m_pbBuildingNeededInCity[i] : false;
-	}
+int CvBuildingInfo::getPrereqInCityBuilding(int i) const
+{
+	return m_aiPrereqInCityBuildings[i];
 }
+
+int CvBuildingInfo::getNumPrereqInCityBuildings() const
+{
+	return (int)m_aiPrereqInCityBuildings.size();
+}
+
+bool CvBuildingInfo::isPrereqInCityBuilding(int i) const
+{
+	if (find(m_aiPrereqInCityBuildings.begin(), m_aiPrereqInCityBuildings.end(), i) == m_aiPrereqInCityBuildings.end())
+	{
+		return false;
+	}
+	return true;
+}
+
 
 int CvBuildingInfo::getSpecialistYieldChange(int i, int j) const
 {
@@ -3019,8 +3028,8 @@ bool CvBuildingInfo::EnablesOtherBuildings() const
 
 		for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
 		{
-			if (GC.getBuildingInfo((BuildingTypes)iJ).isBuildingNeededInCity(iId) ||
-				GC.getBuildingInfo((BuildingTypes)iJ).isPrereqOrBuilding(iId))
+			if(GC.getBuildingInfo((BuildingTypes)iJ).isPrereqInCityBuilding(iId)
+			|| GC.getBuildingInfo((BuildingTypes)iJ).isPrereqOrBuilding(iId))
 			{
 				m_bEnablesOtherBuildingsValue = true;
 				break;
@@ -3337,7 +3346,6 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum)
 
 	CheckSumI(iSum, NUM_COMMERCE_TYPES, m_pbCommerceFlexible);
 	CheckSumI(iSum, NUM_COMMERCE_TYPES, m_pbCommerceChangeOriginalOwner);
-	CheckSumI(iSum, GC.getNumBuildingInfos(), m_pbBuildingNeededInCity);
 
 	if (m_ppaiSpecialistYieldChange)
 	{
@@ -3537,6 +3545,7 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum)
 			m_aFreePromoTypes[i].m_pExprFreePromotionCondition->getCheckSum(iSum);
 	}
 
+	CheckSumC(iSum, m_aiPrereqInCityBuildings);
 	CheckSumC(iSum, m_aiFreeTraitTypes);
 
 	iNumElements = m_aHealUnitCombatTypes.size();
@@ -5138,6 +5147,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	}
 
 	pXML->SetOptionalIntVectorWithDelayedResolution(m_aiFreeTraitTypes, L"FreeTraitTypes");
+	pXML->SetOptionalIntVectorWithDelayedResolution(m_aiPrereqInCityBuildings, L"PrereqInCityBuildings");
 
 	if(pXML->TryMoveToXmlFirstChild(L"HealUnitCombatTypes"))
 	{
@@ -5315,7 +5325,6 @@ bool CvBuildingInfo::readPass2(CvXMLLoadUtility* pXML)
 	m_iFreeAreaBuilding = pXML->GetInfoClass(szTextVal);
 
 	pXML->SetVariableListTagPair(&m_piPrereqNumOfBuilding, L"PrereqAmountBuildings",  GC.getNumBuildingInfos());
-	pXML->SetVariableListTagPair(&m_pbBuildingNeededInCity, L"BuildingNeededs",  GC.getNumBuildingInfos());
 
 	m_aGlobalBuildingCommerceChanges.clear();
 	if (pXML->TryMoveToXmlFirstChild(L"GlobalBuildingExtraCommerces"))
@@ -6648,6 +6657,16 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 		}
 	}
 
+	if (getNumPrereqInCityBuildings() == 0)
+	{
+		const int iNum = pClassInfo->getNumPrereqInCityBuildings();
+		m_aiPrereqInCityBuildings.resize(iNum);
+		for (int i = 0; i < iNum; i++)
+		{
+			GC.copyNonDefaultDelayedResolution((int*)&(m_aiPrereqInCityBuildings[i]), (int*)&(pClassInfo->m_aiPrereqInCityBuildings[i]));
+		}
+	}
+
 	if (getNumHealUnitCombatTypes() == 0)
 	{
 		CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aHealUnitCombatTypes, pClassInfo->m_aHealUnitCombatTypes);
@@ -6875,15 +6894,6 @@ void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLL
 				CvXMLLoadUtility::InitList(&m_piPrereqNumOfBuilding,GC.getNumBuildingInfos(),iDefault);
 			}
 			m_piPrereqNumOfBuilding[j] = pClassInfo->getPrereqNumOfBuilding(j);
-		}
-
-		if ( isBuildingNeededInCity(j) == bDefault && pClassInfo->isBuildingNeededInCity(j) != bDefault)
-		{
-			if ( NULL == m_pbBuildingNeededInCity )
-			{
-				CvXMLLoadUtility::InitList(&m_pbBuildingNeededInCity,GC.getNumBuildingInfos(),bDefault);
-			}
-			m_pbBuildingNeededInCity[j] = pClassInfo->isBuildingNeededInCity(j);
 		}
 
 		if ( getBuildingHappinessChanges(j) == iDefault && pClassInfo->getBuildingHappinessChanges(j) != iDefault)

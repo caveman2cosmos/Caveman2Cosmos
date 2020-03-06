@@ -5033,9 +5033,8 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 				// TODO OPT: convert the masks to vectors so this look is faster
 				for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
 				{
-					if ((GC.getBuildingInfo((BuildingTypes)iJ).isBuildingNeededInCity(building) || GC.getBuildingInfo((BuildingTypes)iJ).isPrereqOrBuilding(building)) &&
-						getNumBuilding((BuildingTypes)iJ) == 0 &&
-						canConstructInternal((BuildingTypes)iJ, false, false, false, true, building))
+					if ((GC.getBuildingInfo((BuildingTypes)iJ).isPrereqInCityBuilding(building) || GC.getBuildingInfo((BuildingTypes)iJ).isPrereqOrBuilding(building))
+					&& getNumBuilding((BuildingTypes)iJ) == 0 && canConstructInternal((BuildingTypes)iJ, false, false, false, true, building))
 					{
 						PROFILE("AI_bestBuildingThreshold.Enablement");
 
@@ -16673,9 +16672,9 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 			{
 				for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
 				{
-					if (buildingsToCalculate.find((BuildingTypes)iJ) == buildingsToCalculate.end() &&
-						(GC.getBuildingInfo((BuildingTypes)iJ).isBuildingNeededInCity(iBuilding) ||
-						 GC.getBuildingInfo((BuildingTypes)iJ).isPrereqOrBuilding(iBuilding)))
+					if (buildingsToCalculate.find((BuildingTypes)iJ) == buildingsToCalculate.end()
+					&& (GC.getBuildingInfo((BuildingTypes)iJ).isPrereqInCityBuilding(iBuilding)
+						|| GC.getBuildingInfo((BuildingTypes)iJ).isPrereqOrBuilding(iBuilding)))
 					{
 						if ( getNumBuilding((BuildingTypes)iJ) == 0 &&
 							 canConstructInternal((BuildingTypes)iJ, false, false, false, true, eBuilding))
