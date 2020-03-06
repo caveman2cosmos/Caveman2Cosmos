@@ -9,6 +9,7 @@
 		<BuildingInfo>
 			<!-- Abu Simbel -->
 			<Type>BUILDING_ABU</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -78,6 +79,7 @@
 		<BuildingInfo>
 			<!-- Adam Smith's Trading Company -->
 			<Type>BUILDING_ADAM_SMITH</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -143,6 +145,7 @@
 		<BuildingInfo>
 			<!-- Aesop's Fables -->
 			<Type>BUILDING_AESOP</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -178,6 +181,7 @@
 		<BuildingInfo>
 			<!-- Alhambra -->
 			<Type>BUILDING_ALHAMBRA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -273,6 +277,7 @@
 		<BuildingInfo>
 			<!-- Angkor Wat -->
 			<Type>BUILDING_ANGKOR_WAT</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -356,6 +361,7 @@
 		<BuildingInfo>
 			<!-- Antikythera Mechanism -->
 			<Type>BUILDING_ANTIKYTHERA_MECHANISM</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -400,6 +406,7 @@
 		<BuildingInfo>
 			<!-- Aon Center -->
 			<Type>BUILDING_AON_CENTER</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -473,6 +480,7 @@
 		<BuildingInfo>
 			<!-- Apadana Palace -->
 			<Type>BUILDING_APADANA_PALACE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -542,6 +550,7 @@
 		<BuildingInfo>
 			<!-- Arc de Triomphe -->
 			<Type>BUILDING_ARC</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -611,6 +620,7 @@
 		<BuildingInfo>
 			<!-- Archimede's Workshop -->
 			<Type>BUILDING_ARCHIMEDES_WORKSHOP</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -690,6 +700,7 @@
 		<BuildingInfo>
 			<!-- Ark of the Covenant -->
 			<Type>BUILDING_ARK</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -758,6 +769,7 @@
 		<BuildingInfo>
 			<!-- Ascension Gate -->
 			<Type>BUILDING_ASCENSION_GATE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -822,6 +834,7 @@
 		<BuildingInfo>
 			<!-- Azadi Tower -->
 			<Type>BUILDING_AZADI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -912,6 +925,7 @@
 		<BuildingInfo>
 			<!-- Baray -->
 			<Type>BUILDING_KHMER_BARAY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -979,6 +993,7 @@
 		<BuildingInfo>
 			<!-- Bell Rock Lighthouse -->
 			<Type>BUILDING_BELL_ROCK</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1037,6 +1052,7 @@
 		<BuildingInfo>
 			<!-- Big Ben -->
 			<Type>BUILDING_BIG_BEN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1109,6 +1125,7 @@
 		<BuildingInfo>
 			<!-- Bird's Nest Stadium -->
 			<Type>BUILDING_BNS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1175,6 +1192,7 @@
 		<BuildingInfo>
 			<!-- Blackwater Draw -->
 			<Type>BUILDING_BLACKWATER_DRAW</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_LEGENDARY_LANDSCAPES</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1212,6 +1230,7 @@
 		<BuildingInfo>
 			<!-- Blombos Cave -->
 			<Type>BUILDING_BLOMBOS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1260,6 +1279,7 @@
 		<BuildingInfo>
 			<!-- Bluefish Caves -->
 			<Type>BUILDING_BLUEFISH_CAVES</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1308,6 +1328,7 @@
 		<BuildingInfo>
 			<!-- Bolshoi -->
 			<Type>BUILDING_BOLSHOI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1379,6 +1400,7 @@
 		<BuildingInfo>
 			<!-- Bonnevile Speedway -->
 			<Type>BUILDING_BONNEVILE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1438,6 +1460,7 @@
 		<BuildingInfo>
 			<!-- Brandenburg Gate -->
 			<Type>BUILDING_BRANDENBURG_GATE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1514,6 +1537,7 @@
 		<BuildingInfo>
 			<!-- Broadway -->
 			<Type>BUILDING_BROADWAY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1576,6 +1600,7 @@
 		<BuildingInfo>
 			<!-- Burj Al-Arab -->
 			<Type>BUILDING_BURJ_DUBAI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1665,6 +1690,7 @@
 		<BuildingInfo>
 			<!-- Burj Khalifa -->
 			<Type>BUILDING_BURJ_KHALIFA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1743,6 +1769,7 @@
 		<BuildingInfo>
 			<!-- Cactus Hill -->
 			<Type>BUILDING_CACTUS_HILL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1780,6 +1807,7 @@
 		<BuildingInfo>
 			<!-- Capitol Records Building -->
 			<Type>BUILDING_CAPITAL_RECORDS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1841,6 +1869,7 @@
 		<BuildingInfo>
 			<!-- Capuchin Crypt -->
 			<Type>BUILDING_CAPUCHIN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1906,6 +1935,7 @@
 		<BuildingInfo>
 			<!-- Carhenge -->
 			<Type>BUILDING_CARHENGE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1948,6 +1978,7 @@
 		<BuildingInfo>
 			<!-- Cave of Altamira -->
 			<Type>BUILDING_ALTAMIRA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1996,6 +2027,7 @@
 		<BuildingInfo>
 			<!-- Changdeokgung -->
 			<Type>BUILDING_CHANGDEO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2063,6 +2095,7 @@
 		<BuildingInfo>
 			<!-- Charlie Lake Cave -->
 			<Type>BUILDING_CHARLIE_LAKE_CAVE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2111,6 +2144,7 @@
 		<BuildingInfo>
 			<!-- Cheomseongdae -->
 			<Type>BUILDING_CHEOMSEONGDAE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2193,6 +2227,7 @@
 		<BuildingInfo>
 			<!-- Chichen Itza -->
 			<Type>BUILDING_CHICHEN_ITZA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2268,6 +2303,7 @@
 		<BuildingInfo>
 			<!-- Circus Circus Casino -->
 			<Type>BUILDING_CCC</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2351,6 +2387,7 @@
 		<BuildingInfo>
 			<!-- Circus Maximus -->
 			<Type>BUILDING_CIRCUS_MAXIMUS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2453,6 +2490,7 @@
 		<BuildingInfo>
 			<!-- CN Tower -->
 			<Type>BUILDING_CN_TOWER</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2520,6 +2558,7 @@
 		<BuildingInfo>
 			<!-- Copernicus' Observatory -->
 			<Type>BUILDING_COPERNICUS_OBSERVATORY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2616,6 +2655,7 @@
 		<BuildingInfo>
 			<!-- Coral Castle -->
 			<Type>BUILDING_CORAL_CASTLE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2691,6 +2731,7 @@
 		<BuildingInfo>
 			<!-- Cristo Redentor -->
 			<Type>BUILDING_CRISTO_REDENTOR</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2746,6 +2787,7 @@
 		<BuildingInfo>
 			<!-- Dosan Seowon -->
 			<Type>BUILDING_DOSAN_SEOWON</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2830,6 +2872,7 @@
 		<BuildingInfo>
 			<!-- East India Company -->
 			<Type>BUILDING_INDIAN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2889,6 +2932,7 @@
 		<BuildingInfo>
 			<!-- Edinburgh's Castle -->
 			<Type>BUILDING_EDINBURGH_CASTLE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2978,6 +3022,7 @@
 		<BuildingInfo>
 			<!-- Edison's Workshop -->
 			<Type>BUILDING_EDISON</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3054,6 +3099,7 @@
 		<BuildingInfo>
 			<!-- Einstein's Laboratory -->
 			<Type>BUILDING_EINSTEIN_LAB</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3143,6 +3189,7 @@
 		<BuildingInfo>
 			<!-- Ekal Masharti -->
 			<Type>BUILDING_ASSYRIA_EKAL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3196,6 +3243,7 @@
 		<BuildingInfo>
 			<!-- Emu Egg Carver -->
 			<Type>BUILDING_EMU_EGG</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3248,6 +3296,7 @@
 		<BuildingInfo>
 			<!-- Feitoria -->
 			<Type>BUILDING_PORTUGAL_FEITORIA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3318,6 +3367,7 @@
 		<BuildingInfo>
 			<!-- Fine Stoneware Carvers -->
 			<Type>BUILDING_STONEWARE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3367,6 +3417,7 @@
 		<BuildingInfo>
 			<!-- Flavian Amphitheatre -->
 			<Type>BUILDING_FLAVIAN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3463,6 +3514,7 @@
 		<BuildingInfo>
 			<!-- Fort Knox -->
 			<Type>BUILDING_FORT_KNOX</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3533,6 +3585,7 @@
 		<BuildingInfo>
 			<!-- Gardens by the Bay -->
 			<Type>BUILDING_BAY_GARDENS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3602,6 +3655,7 @@
 		<BuildingInfo>
 			<!-- Genomic Encylopedia -->
 			<Type>BUILDING_GENOMIC_E</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3687,6 +3741,7 @@
 		<BuildingInfo>
 			<!-- Global Stock Exchange -->
 			<Type>BUILDING_GLOBAL_STOCK_EXCHANGE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3735,6 +3790,7 @@
 		<BuildingInfo>
 			<!-- Globe Theatre -->
 			<Type>BUILDING_GLOBE_THEATRE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3819,6 +3875,7 @@
 		<BuildingInfo>
 			<!-- Gobekli Tepe -->
 			<Type>BUILDING_GOBEKLI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3878,6 +3935,7 @@
 		<BuildingInfo>
 			<!-- Golden Gate Bridge -->
 			<Type>BUILDING_GOLDEN_GATE_BRIDGE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3946,6 +4004,7 @@
 		<BuildingInfo>
 			<!-- Grand Earth Festival -->
 			<Type>BUILDING_EARTH_FESTIVAL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4169,6 +4228,7 @@
 		<BuildingInfo>
 			<!-- Grand Fire Festival -->
 			<Type>BUILDING_FIRE_FESTIVAL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4397,6 +4457,7 @@
 		<BuildingInfo>
 			<!-- Grand Marine Festival -->
 			<Type>BUILDING_MARINE_FESTIVAL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4655,6 +4716,7 @@
 		<BuildingInfo>
 			<!-- Grand Sky Festival -->
 			<Type>BUILDING_SKY_FESTIVAL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4878,6 +4940,7 @@
 		<BuildingInfo>
 			<!-- Grauman's Chinese Theatre -->
 			<Type>BUILDING_GRAUMAN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4939,6 +5002,7 @@
 		<BuildingInfo>
 			<!-- Great Firewall -->
 			<Type>BUILDING_GREAT_FIREWALL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5021,6 +5085,7 @@
 		<BuildingInfo>
 			<!-- Ha'amonga 'a Maui -->
 			<Type>BUILDING_MAUI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5094,6 +5159,7 @@
 		<BuildingInfo>
 			<!-- Hadrian's Wall -->
 			<Type>BUILDING_ADRIANOS_WALL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5169,6 +5235,7 @@
 		<BuildingInfo>
 			<!-- Hammam -->
 			<Type>BUILDING_OTTOMAN_HAMMAM</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5234,6 +5301,7 @@
 		<BuildingInfo>
 			<!-- Hawaiian Surfboard Carver -->
 			<Type>BUILDING_SURFBOARD</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5282,6 +5350,7 @@
 		<BuildingInfo>
 			<!-- Hermitage -->
 			<Type>BUILDING_HERMITAGE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5334,6 +5403,7 @@
 		<BuildingInfo>
 			<!-- Hierapolis Sawmill -->
 			<Type>BUILDING_HIERAPOLIS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5382,6 +5452,7 @@
 		<BuildingInfo>
 			<!-- Himeji Samurai Castle -->
 			<Type>BUILDING_HIMEJI_CASTLE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5457,6 +5528,7 @@
 		<BuildingInfo>
 			<!-- Hippocratic Oath -->
 			<Type>BUILDING_HIPOCRATIC_OATH</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5538,6 +5610,7 @@
 		<BuildingInfo>
 			<!-- Ho Trai Library -->
 			<Type>BUILDING_SIAM_HO_TRAI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5610,6 +5683,7 @@
 		<BuildingInfo>
 			<!-- Hollywood -->
 			<Type>BUILDING_HOLLYWOOD</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5672,6 +5746,7 @@
 		<BuildingInfo>
 			<!-- Human Rights Declaration -->
 			<Type>BUILDING_HUMAN_RIGHTS_DECLARATION</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5728,6 +5803,7 @@
 		<BuildingInfo>
 			<!-- Humphrey Metrodome -->
 			<Type>BUILDING_HUMPHREY_METRODOME</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5776,6 +5852,7 @@
 		<BuildingInfo>
 			<!-- Ikhanda -->
 			<Type>BUILDING_ZULU_IKHANDA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5854,6 +5931,7 @@
 		<BuildingInfo>
 			<!-- Independence Hall -->
 			<Type>BUILDING_INDEPENDENCE_HALL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5901,6 +5979,7 @@
 		<BuildingInfo>
 			<!-- International Dog Show -->
 			<Type>BUILDING_DOG_SHOW</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5965,6 +6044,7 @@
 		<BuildingInfo>
 			<!-- Isaac Newton's College -->
 			<Type>BUILDING_NEWTONS_UNIVERSITY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6054,6 +6134,7 @@
 		<BuildingInfo>
 			<!-- Jade Death Mask Carver -->
 			<Type>BUILDING_JADE_MASK</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6121,6 +6202,7 @@
 		<BuildingInfo>
 			<!-- J.S. Bach's Cathedral -->
 			<Type>BUILDING_JSBACH_CATHEDRAL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6210,6 +6292,7 @@
 		<BuildingInfo>
 			<!-- Kerala School of Mathematics -->
 			<Type>BUILDING_KERALA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6273,6 +6356,7 @@
 		<BuildingInfo>
 			<!-- Kilgii Gwaay -->
 			<Type>BUILDING_KILGII_GWAAY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6311,6 +6395,7 @@
 		<BuildingInfo>
 			<!-- King Richard's Crusade -->
 			<Type>BUILDING_CRUSADE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6390,6 +6475,7 @@
 		<BuildingInfo>
 			<!-- Kingdom Centre -->
 			<Type>BUILDING_KINGDOM_CENTRE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6468,6 +6554,7 @@
 		<BuildingInfo>
 			<!-- Klasies River Caves -->
 			<Type>BUILDING_KLASIES</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6516,6 +6603,7 @@
 		<BuildingInfo>
 			<!-- Kotoku-in -->
 			<Type>BUILDING_KOTOKU</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6591,6 +6679,7 @@
 		<BuildingInfo>
 			<!-- La Brea Tar Pits -->
 			<Type>BUILDING_LA_BREA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6673,6 +6762,7 @@
 		<BuildingInfo>
 			<!-- Labyrinth of Knossos -->
 			<Type>BUILDING_LABYRINTH</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6755,6 +6845,7 @@
 		<BuildingInfo>
 			<!-- Lascaux Paints -->
 			<Type>BUILDING_LASCAUX</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6844,6 +6935,7 @@
 		<BuildingInfo>
 			<!-- Laxminarayan Temple -->
 			<Type>BUILDING_LAXMIN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6925,6 +7017,7 @@
 		<BuildingInfo>
 			<!-- Leaning Tower of Pisa -->
 			<Type>BUILDING_PISA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6987,6 +7080,7 @@
 		<BuildingInfo>
 			<!-- Leonardo's Workshop -->
 			<Type>BUILDING_LEONARDO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7065,6 +7159,7 @@
 		<BuildingInfo>
 			<!-- Library of Nineveh -->
 			<Type>BUILDING_NINEVEH</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7136,6 +7231,7 @@
 		<BuildingInfo>
 			<!-- Louvre Museum -->
 			<Type>BUILDING_LOUVRE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7223,6 +7319,7 @@
 		<BuildingInfo>
 			<!-- Luxor Casino -->
 			<Type>BUILDING_LUXOR</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7306,6 +7403,7 @@
 		<BuildingInfo>
 			<!-- Magellan's Voyage -->
 			<Type>BUILDING_MAGELLAN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7387,6 +7485,7 @@
 		<BuildingInfo>
 			<!-- Marco Polo's Embassy -->
 			<Type>BUILDING_MARCO_POLO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7461,6 +7560,7 @@
 		<BuildingInfo>
 			<!-- Masada -->
 			<Type>BUILDING_JEWISH_MASADA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7550,6 +7650,7 @@
 		<BuildingInfo>
 			<!-- Mausoleum of Maussollos -->
 			<Type>BUILDING_MAUSOLEUM_OF_MAUSSOLLOS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7627,6 +7728,7 @@
 		<BuildingInfo>
 			<!-- McCallum -->
 			<Type>BUILDING_MCCALLUM</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7665,6 +7767,7 @@
 		<BuildingInfo>
 			<!-- Meadowcroft Rockshelter -->
 			<Type>BUILDING_MEADOWCRAFT</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7709,6 +7812,7 @@
 		<BuildingInfo>
 			<!-- Mesa Verde -->
 			<Type>BUILDING_MESA_VERDE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7782,6 +7886,7 @@
 		<BuildingInfo>
 			<!-- Mission to Challenger Deep -->
 			<Type>BUILDING_DEEPSEA_MISSION</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7832,6 +7937,7 @@
 		<BuildingInfo>
 			<!-- Mission to Earth's Core -->
 			<Type>BUILDING_EARTHCORE_MISSION</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7880,6 +7986,7 @@
 		<BuildingInfo>
 			<!-- Moai Statues -->
 			<Type>BUILDING_MOAI_STATUES</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7943,6 +8050,7 @@
 		<BuildingInfo>
 			<!-- Monte Verde -->
 			<Type>BUILDING_MONTE_VERDE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7978,6 +8086,7 @@
 		<BuildingInfo>
 			<!-- Mt. Rushmore -->
 			<Type>BUILDING_MT_RUSHMORE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8043,6 +8152,7 @@
 		<BuildingInfo>
 			<!-- Muiderslot Castle -->
 			<Type>BUILDING_MUIDERSLOT</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8103,6 +8213,7 @@
 		<BuildingInfo>
 			<!-- Nanite Defuser -->
 			<Type>BUILDING_NANITE_DEFUSER</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8158,6 +8269,7 @@
 		<BuildingInfo>
 			<!-- National Shield -->
 			<Type>BUILDING_NATIONAL_SHIELD</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8200,6 +8312,7 @@
 		<BuildingInfo>
 			<!-- Neuschwanstein -->
 			<Type>BUILDING_NEUSCHWANSTEIN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8290,6 +8403,7 @@
 		<BuildingInfo>
 			<!-- Nok Sculpture Workshop -->
 			<Type>BUILDING_NOK</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8347,6 +8461,7 @@
 		<BuildingInfo>
 			<!-- Nonsuch Palace -->
 			<Type>BUILDING_NONSUCH</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8426,6 +8541,7 @@
 		<BuildingInfo>
 			<!-- Notre Dame -->
 			<Type>BUILDING_NOTRE_DAME</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8500,6 +8616,7 @@
 		<BuildingInfo>
 			<!-- Olympic Games -->
 			<Type>BUILDING_OLYMPIC_GAMES</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8551,6 +8668,7 @@
 		<BuildingInfo>
 			<!-- Palace of Beaulieu -->
 			<Type>BUILDING_BEAULIEU</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8628,6 +8746,7 @@
 		<BuildingInfo>
 			<!-- Palace of Potala -->
 			<Type>BUILDING_POTALA_PALACE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8715,6 +8834,7 @@
 		<BuildingInfo>
 			<!-- Pedra Furada -->
 			<Type>BUILDING_PEDRA_FURADA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8763,6 +8883,7 @@
 		<BuildingInfo>
 			<!-- Penicillin -->
 			<Type>BUILDING_PENICILLIN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8821,6 +8942,7 @@
 		<BuildingInfo>
 			<!-- Petra -->
 			<Type>BUILDING_PETRA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8915,6 +9037,7 @@
 		<BuildingInfo>
 			<!-- Piazza San Marco -->
 			<Type>BUILDING_SAN_MARCO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8971,6 +9094,7 @@
 		<BuildingInfo>
 			<!-- Plato's Academy -->
 			<Type>BUILDING_PLATOS_ACADEMY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -9061,6 +9185,7 @@
 		<BuildingInfo>
 			<!-- Pont du Gard -->
 			<Type>BUILDING_PONT_DU_GARD_AQUEDUCT</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -9125,6 +9250,7 @@
 		<BuildingInfo>
 			<!-- Porcelain Tower -->
 			<Type>BUILDING_PORCELAIN_TOWER</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -9201,6 +9327,7 @@
 		<BuildingInfo>
 			<!-- Proetomic Encylopedia -->
 			<Type>BUILDING_PROTEOMIC_E</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -9270,6 +9397,7 @@
 		<BuildingInfo>
 			<!-- Pyramid of the Magician -->
 			<Type>BUILDING_MESOAMERICAN_MAGICIAN_PYRAMID</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -9364,6 +9492,7 @@
 		<BuildingInfo>
 			<!-- Red and Black Ware Painter -->
 			<Type>BUILDING_RED_AND_BLACK</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -9428,6 +9557,7 @@
 		<BuildingInfo>
 			<!-- Richardson Island -->
 			<Type>BUILDING_RICHARDSON</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -9464,6 +9594,7 @@
 		<BuildingInfo>
 			<!-- Rock N Roll -->
 			<Type>BUILDING_ROCKNROLL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -9524,6 +9655,7 @@
 		<BuildingInfo>
 			<!-- Salon -->
 			<Type>BUILDING_FRENCH_SALON</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -9587,6 +9719,7 @@
 		<BuildingInfo>
 			<!-- SETI Program -->
 			<Type>BUILDING_SETI_PROGRAM</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -9667,6 +9800,7 @@
 		<BuildingInfo>
 			<!-- Shwedagon Paya -->
 			<Type>BUILDING_SHWEDAGON_PAYA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -9738,6 +9872,7 @@
 		<BuildingInfo>
 			<!-- Silicon Valley -->
 			<Type>BUILDING_SILICON_VALLEY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -9789,6 +9924,7 @@
 		<BuildingInfo>
 			<!-- Silk Road -->
 			<Type>BUILDING_SILK_ROAD</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -9893,6 +10029,7 @@
 		<BuildingInfo>
 			<!-- Singapore Flyer -->
 			<Type>BUILDING_SING_FLYER</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -9951,6 +10088,7 @@
 		<BuildingInfo>
 			<!-- Six Harmonies Pagoda -->
 			<Type>BUILDING_FAME</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -10040,6 +10178,7 @@
 		<BuildingInfo>
 			<!-- Smithsonian Institution -->
 			<Type>BUILDING_SMITHSONIAN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -10121,6 +10260,7 @@
 		<BuildingInfo>
 			<!-- SnowCastle of Kemi -->
 			<Type>BUILDING_ICE_HOTEL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -10187,6 +10327,7 @@
 		<BuildingInfo>
 			<!-- Solar Updraft Tower -->
 			<Type>BUILDING_SOLAR_TOWER</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -10245,6 +10386,7 @@
 		<BuildingInfo>
 			<!-- Species Recovery Center -->
 			<Type>BUILDING_SRC</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -10584,6 +10726,7 @@
 		<BuildingInfo>
 			<!-- Stonehenge -->
 			<Type>BUILDING_STONEHENGE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -10646,6 +10789,7 @@
 		<BuildingInfo>
 			<!-- Stratosphere Casino -->
 			<Type>BUILDING_STRATOSPHERE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -10721,6 +10865,7 @@
 		<BuildingInfo>
 			<!-- Su Song's Workshop -->
 			<Type>BUILDING_SU_SONG</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -10787,6 +10932,7 @@
 		<BuildingInfo>
 			<!-- Sun Tzu's Art of War -->
 			<Type>BUILDING_ART_OF_WAR</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -10826,6 +10972,7 @@
 		<BuildingInfo>
 			<!-- Sydney Opera House -->
 			<Type>BUILDING_SYDNEY_OPERA_HOUSE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -10907,6 +11054,7 @@
 		<BuildingInfo>
 			<!-- Technological Capital -->
 			<Type>BUILDING_TECHNOLOGICAL_CAPITAL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -10973,6 +11121,7 @@
 		<BuildingInfo>
 			<!-- Temple of Ah Cacao -->
 			<Type>BUILDING_GREAT_JAGUAR_TEMPLE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -11040,6 +11189,7 @@
 		<BuildingInfo>
 			<!-- Terracotta Army -->
 			<Type>BUILDING_TERRACOTTA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -11101,6 +11251,7 @@
 		<BuildingInfo>
 			<!-- The Apostolic Palace -->
 			<Type>BUILDING_APOSTOLIC_PALACE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -11162,6 +11313,7 @@
 		<BuildingInfo>
 			<!-- The Brihadeeswarar Temple -->
 			<Type>BUILDING_HINDU_BRIHADEESWARAR</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -11255,6 +11407,7 @@
 		<BuildingInfo>
 			<!-- The CERN Accelerator -->
 			<Type>BUILDING_CERN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -11316,6 +11469,7 @@
 		<BuildingInfo>
 			<!-- The Colossus -->
 			<Type>BUILDING_COLOSSUS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -11400,6 +11554,7 @@
 		<BuildingInfo>
 			<!-- The Eiffel Tower -->
 			<Type>BUILDING_EIFFEL_TOWER</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -11477,6 +11632,7 @@
 		<BuildingInfo>
 			<!-- The Gate of the Sun -->
 			<Type>BUILDING_GATE_OF_THE_SUN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -11536,6 +11692,7 @@
 		<BuildingInfo>
 			<!-- The Gateway Arch -->
 			<Type>BUILDING_GATEWAY_ARCH</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -11593,6 +11750,7 @@
 		<BuildingInfo>
 			<!-- The Getty Center -->
 			<Type>BUILDING_GETTY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -11654,6 +11812,7 @@
 		<BuildingInfo>
 			<!-- The Great Bath of Mohenjo-daro -->
 			<Type>BUILDING_GREAT_BATH</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -11720,6 +11879,7 @@
 		<BuildingInfo>
 			<!-- The Great Library -->
 			<Type>BUILDING_GREAT_LIBRARY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -11811,6 +11971,7 @@
 		<BuildingInfo>
 			<!-- The Great Lighthouse -->
 			<Type>BUILDING_GREAT_LIGHTHOUSE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -11894,6 +12055,7 @@
 		<BuildingInfo>
 			<!-- The Great Mosque of Djenn -->
 			<Type>BUILDING_DJENNE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -12018,6 +12180,7 @@
 		<BuildingInfo>
 			<!-- The Great Wall -->
 			<Type>BUILDING_GREAT_WALL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -12096,6 +12259,7 @@
 		<BuildingInfo>
 			<!-- The Hagia Sophia -->
 			<Type>BUILDING_HAGIA_SOPHIA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -12164,6 +12328,7 @@
 		<BuildingInfo>
 			<!-- The Hanging Gardens -->
 			<Type>BUILDING_HANGING_GARDEN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -12241,6 +12406,7 @@
 		<BuildingInfo>
 			<!-- The Ishtar Gate -->
 			<Type>BUILDING_ISHTAR</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -12350,6 +12516,7 @@
 		<BuildingInfo>
 			<!-- The Kremlin -->
 			<Type>BUILDING_KREMLIN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -12412,6 +12579,7 @@
 		<BuildingInfo>
 			<!-- The Oracle -->
 			<Type>BUILDING_ORACLE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -12485,6 +12653,7 @@
 		<BuildingInfo>
 			<!-- The Parthenon -->
 			<Type>BUILDING_PARTHENON</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -12587,6 +12756,7 @@
 		<BuildingInfo>
 			<!-- The Pentagon -->
 			<Type>BUILDING_PENTAGON</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -12640,6 +12810,7 @@
 		<BuildingInfo>
 			<!-- The Pyramids -->
 			<Type>BUILDING_PYRAMID</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -12708,6 +12879,7 @@
 		<BuildingInfo>
 			<!-- The Sistine Chapel -->
 			<Type>BUILDING_SISTINE_CHAPEL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -12782,6 +12954,7 @@
 		<BuildingInfo>
 			<!-- The Space Elevator -->
 			<Type>BUILDING_SPACE_ELEVATOR</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -12860,6 +13033,7 @@
 		<BuildingInfo>
 			<!-- The Sphinx -->
 			<Type>BUILDING_SPHINX</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -12933,6 +13107,7 @@
 		<BuildingInfo>
 			<!-- The Spiral Minaret -->
 			<Type>BUILDING_SPIRAL_MINARET</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -13002,6 +13177,7 @@
 		<BuildingInfo>
 			<!-- The Statue of Liberty -->
 			<Type>BUILDING_STATUE_OF_LIBERTY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -13082,6 +13258,7 @@
 		<BuildingInfo>
 			<!-- The Taj Mahal -->
 			<Type>BUILDING_TAJ_MAHAL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -13143,6 +13320,7 @@
 		<BuildingInfo>
 			<!-- The Temple of Artemis -->
 			<Type>BUILDING_ARTEMIS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -13217,6 +13395,7 @@
 		<BuildingInfo>
 			<!-- The Temple of Heaven -->
 			<Type>BUILDING_TAOIST_TEMPLE_OF_HEAVEN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -13313,6 +13492,7 @@
 		<BuildingInfo>
 			<!-- The Three Gorges Dam -->
 			<Type>BUILDING_GREAT_DAM</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -13377,6 +13557,7 @@
 		<BuildingInfo>
 			<!-- The United Nations -->
 			<Type>BUILDING_UNITED_NATIONS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -13429,6 +13610,7 @@
 		<BuildingInfo>
 			<!-- The World Wide Fund for Nature -->
 			<Type>BUILDING_WWF</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -13504,6 +13686,7 @@
 		<BuildingInfo>
 			<!-- Theatre of Dionysus -->
 			<Type>BUILDING_THEATRE_OF_DIONYSUS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -13587,6 +13770,7 @@
 		<BuildingInfo>
 			<!-- Tlaloc's Altar -->
 			<Type>BUILDING_AZTEC_SACRIFICIAL_ALTAR</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -13667,6 +13851,7 @@
 		<BuildingInfo>
 			<!-- Topkapi Palace -->
 			<Type>BUILDING_TOPKAPI_PALACE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -13726,6 +13911,7 @@
 		<BuildingInfo>
 			<!-- Transamerica Tower -->
 			<Type>BUILDING_TRANSAMERICA_PYRAMID</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -13798,6 +13984,7 @@
 		<BuildingInfo>
 			<!-- Trump World Tower -->
 			<Type>BUILDING_TRUMP_TOWER</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -13871,6 +14058,7 @@
 		<BuildingInfo>
 			<!-- Tumen Amugulang Palace -->
 			<Type>BUILDING_TUMEN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -13941,6 +14129,7 @@
 		<BuildingInfo>
 			<!-- University of Sankore -->
 			<Type>BUILDING_SANKORE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -14022,6 +14211,7 @@
 		<BuildingInfo>
 			<!-- Venetian Arsenal -->
 			<Type>BUILDING_VENETIAN_ARSENAL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -14086,6 +14276,7 @@
 		<BuildingInfo>
 			<!-- Venus of Willendorf -->
 			<Type>BUILDING_VENUS_WILLENDORF</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -14143,6 +14334,7 @@
 		<BuildingInfo>
 			<!-- Versailles -->
 			<Type>BUILDING_VERSAILLES</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -14218,6 +14410,7 @@
 		<BuildingInfo>
 			<!-- Wall Street -->
 			<Type>BUILDING_WALL_STREET</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -14283,6 +14476,7 @@
 		<BuildingInfo>
 			<!-- Wang Zhen's Workshop -->
 			<Type>BUILDING_WANG_ZHEN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -14358,6 +14552,7 @@
 		<BuildingInfo>
 			<!-- West Point -->
 			<Type>BUILDING_WEST_POINT</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -14422,6 +14617,7 @@
 		<BuildingInfo>
 			<!-- Wikipedia -->
 			<Type>BUILDING_WIKIPEDIA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -14472,6 +14668,7 @@
 		<BuildingInfo>
 			<!-- Willis Tower -->
 			<Type>BUILDING_WILLIS_TOWER</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -14545,6 +14742,7 @@
 		<BuildingInfo>
 			<!-- Winery - Champagne -->
 			<Type>BUILDING_CHAMPAGNE_WINERY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_DELUXE_WINERIES</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -14595,6 +14793,7 @@
 		<BuildingInfo>
 			<!-- Winery - Vintage Red -->
 			<Type>BUILDING_VINTAGE_RED_WINERY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_DELUXE_WINERIES</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -14644,6 +14843,7 @@
 		<BuildingInfo>
 			<!-- Winery - Vintage White -->
 			<Type>BUILDING_VINTAGE_WHITE_WINERY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_DELUXE_WINERIES</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -14694,6 +14894,7 @@
 		<BuildingInfo>
 			<!-- Women's Suffrage -->
 			<Type>BUILDING_SUFFRAGE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -14738,6 +14939,7 @@
 		<BuildingInfo>
 			<!-- World News Network -->
 			<Type>BUILDING_WORLD_NEWS_NETWORK</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -14815,6 +15017,7 @@
 		<BuildingInfo>
 			<!-- World Trade Center -->
 			<Type>BUILDING_WORLD_TRADE_CENTER</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -14868,6 +15071,7 @@
 		<BuildingInfo>
 			<!-- X-Games -->
 			<Type>BUILDING_X_GAMES</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -14916,6 +15120,7 @@
 		<BuildingInfo>
 			<!-- Zheng He's Voyage -->
 			<Type>BUILDING_ZHENG_HE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -14966,6 +15171,7 @@
 		<BuildingInfo>
 			<!-- Harvard University -->
 			<Type>BUILDING_HARVARD_UNIVERSITY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -15091,6 +15297,7 @@
 		<BuildingInfo>
 			<!-- University of Bologna-->
 			<Type>BUILDING_UNIVERSITY_OF_BOLOGNA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -15216,6 +15423,7 @@
 		<BuildingInfo>
 			<!-- University of Salamanca -->
 			<Type>BUILDING_UNIVERSITY_OF_SALAMANCA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -15341,6 +15549,7 @@
 		<BuildingInfo>
 			<!-- University of Coimbra -->
 			<Type>BUILDING_UNIVERSITY_OF_COIMBRA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -15469,6 +15678,7 @@
 		<BuildingInfo>
 			<!-- University of Barcelona -->
 			<Type>BUILDING_UNIVERSITY_OF_BARCELONA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -15597,6 +15807,7 @@
 		<BuildingInfo>
 			<!-- Montpellier University -->
 			<Type>BUILDING_MONTPELLIER_UNIVERSITY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -15725,6 +15936,7 @@
 		<BuildingInfo>
 			<!-- Sorbonne University -->
 			<Type>BUILDING_SORBONNE_UNIVERSITY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -15851,6 +16063,7 @@
 		<BuildingInfo>
 			<!-- University of Basel -->
 			<Type>BUILDING_UNIVERSITY_OF_BASEL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -15977,6 +16190,7 @@
 		<BuildingInfo>
 			<!-- Jagiellonian University -->
 			<Type>BUILDING_JAGIELLONIAN_UNIVERSITY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -16103,6 +16317,7 @@
 		<BuildingInfo>
 			<!-- University of Murcia -->
 			<Type>BUILDING_UNIVERSITY_OF_MURCIA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -16227,6 +16442,7 @@
 		<BuildingInfo>
 			<!-- Oxford University -->
 			<Type>BUILDING_OXFORD_UNIVERSITY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -16356,6 +16572,7 @@
 		<BuildingInfo>
 			<!-- University of Edinburgh -->
 			<Type>BUILDING_UNIVERSITY_OF_EDINBURGH</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -16480,6 +16697,7 @@
 		<BuildingInfo>
 			<!-- University of Padova -->
 			<Type>BUILDING_UNIVERSITY_OF_PADUA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -16570,6 +16788,7 @@
 		<BuildingInfo>
 			<!-- University of Cambridge -->
 			<Type>BUILDING_UNIVERSITY_OF_CAMBRIDGE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -16660,6 +16879,7 @@
 		<BuildingInfo>
 			<!-- Heidelberg University -->
 			<Type>BUILDING_HEIDELBERG_UNIVERSITY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -16749,6 +16969,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHILEHAUS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -16793,6 +17014,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DALI_THEATRE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -16837,6 +17059,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_THE_ALMAGEST</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -16885,6 +17108,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RUDOLPHINE_TABLES</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -16938,6 +17162,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LAS_MEDULAS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -16976,6 +17201,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_THE_ATOMIUM</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17033,6 +17259,7 @@
 		<BuildingInfo>
 			<!-- Evelpidon Military Academy -->
 			<Type>BUILDING_EVELPIDON_MILITARY_ACADEMY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17095,6 +17322,7 @@
 		<BuildingInfo>
 			<!-- Repbulic of China Naval Academy -->
 			<Type>BUILDING_REPUBLIC_OF_CHINA_NAVAL_ACADEMY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17157,6 +17385,7 @@
 		<BuildingInfo>
 			<!-- Imperial Japanese Naval Academy -->
 			<Type>BUILDING_IMPERIAL_JAPANESE_NAVAL_ACADEMY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17219,6 +17448,7 @@
 		<BuildingInfo>
 			<!-- Royal Air Force Academy -->
 			<Type>BUILDING_ROYAL_AIR_FORCE_ACADEMY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17281,6 +17511,7 @@
 		<BuildingInfo>
 			<!-- Accademia Aeronautica -->
 			<Type>BUILDING_ACCADEMIA_AERONAUTICA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17343,6 +17574,7 @@
 		<BuildingInfo>
 			<!-- Brazen Bull -->
 			<Type>BUILDING_BRAZEN_BULL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17400,6 +17632,7 @@
 		<BuildingInfo>
 			<!-- Ancient Way of the Fist -->
 			<Type>BUILDING_ANCIENT_WAY_OF_THE_FIST</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17446,6 +17679,7 @@
 		<BuildingInfo>
 			<!-- Ancient Way of the Feather -->
 			<Type>BUILDING_ANCIENT_WAY_OF_THE_FEATHER</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17498,6 +17732,7 @@
 		<BuildingInfo>
 			<!-- Ancient Way of the Shadows -->
 			<Type>BUILDING_ANCIENT_WAY_OF_THE_SHADOWS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17552,6 +17787,7 @@
 		<BuildingInfo>
 			<!-- Ancient Way of the Centaur -->
 			<Type>BUILDING_ANCIENT_WAY_OF_THE_CENTAUR</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17607,6 +17843,7 @@
 		<BuildingInfo>
 			<!-- Ancient Way of the Warrior -->
 			<Type>BUILDING_ANCIENT_WAY_OF_THE_WARRIOR</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17653,6 +17890,7 @@
 		<BuildingInfo>
 			<!-- Ancient Way of the Waves -->
 			<Type>BUILDING_ANCIENT_WAY_OF_THE_WAVES</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17703,6 +17941,7 @@
 		<BuildingInfo>
 			<!-- Ancient Way of the Wind -->
 			<Type>BUILDING_ANCIENT_WAY_OF_THE_WIND</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17749,6 +17988,7 @@
 		<BuildingInfo>
 			<!-- Ancient Way of the Wild -->
 			<Type>BUILDING_ANCIENT_WAY_OF_THE_WILD</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17795,6 +18035,7 @@
 		<BuildingInfo>
 			<!-- Ancient Way of the Leech -->
 			<Type>BUILDING_ANCIENT_WAY_OF_THE_LEECH</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17841,6 +18082,7 @@
 		<BuildingInfo>
 			<!-- Ancient Way of the Wolf -->
 			<Type>BUILDING_ANCIENT_WAY_OF_THE_WOLF</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17890,6 +18132,7 @@
 		<BuildingInfo>
 			<!-- Harappan Fake Gems -->
 			<Type>BUILDING_HARAPPAN_FAKE_GEMS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17957,6 +18200,7 @@
 		<BuildingInfo>
 			<!-- Ming Vase Workshop -->
 			<Type>BUILDING_MING_VASE_WORKSHOP</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -18026,6 +18270,7 @@
 		<BuildingInfo>
 			<!-- Terra Sigilliata Workshop -->
 			<Type>BUILDING_TERRA_SIGILLIATA_WORKSHOP</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -18098,6 +18343,7 @@
 		<BuildingInfo>
 			<!-- Murano Glassmakers -->
 			<Type>BUILDING_MURANO_GLASSMAKERS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_MURANO_GLASSMAKERS</Description>
 			<Civilopedia>TXT_KEY_BONUS_CRYSTAL_GLASSWARE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MURANO_GLASSMAKERS_STRATEGY</Strategy>
@@ -18158,6 +18404,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BIODOME</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_BIODOME</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BIODOME_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BIODOME_STRATEGY</Strategy>
@@ -18236,6 +18483,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CATACOMBS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_CATACOMBS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CATACOMBS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CATACOMBS_STRATEGY</Strategy>
@@ -18290,6 +18538,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CYRUS_CYLINDER</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_CYRUS_CYLINDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CYRUS_CYLINDER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CYRUS_CYLINDER_STRATEGY</Strategy>
@@ -18322,6 +18571,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CYRUS_TOMB</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_CYRUS_TOMB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CYRUS_TOMB_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CYRUS_TOMB_STRATEGY</Strategy>
@@ -18375,6 +18625,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EMPIRE_STATE_BUILDING</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_EMPIRE_STATE_BUILDING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EMPIRE_STATE_BUILDING_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_EMPIRE_STATE_BUILDING_STRATEGY</Strategy>
@@ -18423,6 +18674,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FA_MEN_SI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_FA_MEN_SI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FA_MEN_SI_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_FA_MEN_SI_STRATEGY</Strategy>
@@ -18475,6 +18727,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NAZCA_LINES</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_NAZCA_LINES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NAZCA_LINES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NAZCA_LINES_STRATEGY</Strategy>
@@ -18552,6 +18805,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PERGAMON</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_PERGAMON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PERGAMON_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PERGAMON_STRATEGY</Strategy>
@@ -18605,6 +18859,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TAIPEI_101</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_TAIPEI_101</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TAIPEI_101_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TAIPEI_101_STRATEGY</Strategy>
@@ -18655,6 +18910,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TSUKIJI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_TSUKIJI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TSUKIJI_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TSUKIJI_STRATEGY</Strategy>
@@ -18716,6 +18972,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WEMBLEY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_WEMBLEY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WEMBLEY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_WEMBLEY_STRATEGY</Strategy>
@@ -18754,6 +19011,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ZIZKOV</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_ZIZKOV</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ZIZKOV_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ZIZKOV_STRATEGY</Strategy>
@@ -18799,6 +19057,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CLEOPATRA_NEEDLE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_CLEOPATRA_NEEDLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CLEOPATRA_NEEDLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CLEOPATRA_NEEDLE_STRATEGY</Strategy>
@@ -18841,6 +19100,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GREAT_ZIMBABWE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_GREAT_ZIMBABWE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GREAT_ZIMBABWE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GREAT_ZIMBABWE_STRATEGY</Strategy>
@@ -18902,6 +19162,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HELSINKI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_HELSINKI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HELSINKI_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HELSINKI_STRATEGY</Strategy>
@@ -18959,6 +19220,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_THE_MOTHERLAND_CALLS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_THE_MOTHERLAND_CALLS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_THE_MOTHERLAND_CALLS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_THE_MOTHERLAND_CALLS_STRATEGY</Strategy>
@@ -19012,6 +19274,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_REICHSTAG</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_REICHSTAG</Description>
 			<Civilopedia>TXT_KEY_BUILDING_REICHSTAG_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_REICHSTAG_STRATEGY</Strategy>
@@ -19071,6 +19334,7 @@
 		<!-- Aachen Cathedral -->
 		<BuildingInfo>
 			<Type>BUILDING_AACHENCATHEDRAL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_AACHENCATHEDRAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AACHENCATHEDRAL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_AACHENCATHEDRAL_STRATEGY</Strategy>
@@ -19119,6 +19383,7 @@
 		<!-- The Alamo -->
 		<BuildingInfo>
 			<Type>BUILDING_ALAMO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_ALAMO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ALAMO_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ALAMO_STRATEGY</Strategy>
@@ -19160,6 +19425,7 @@
 		<!-- Alamut -->
 		<BuildingInfo>
 			<Type>BUILDING_ALAMUT</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_ALAMUT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ALAMUT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ALAMUT_STRATEGY</Strategy>
@@ -19237,6 +19503,7 @@
 		<!-- Alcatraz -->
 		<BuildingInfo>
 			<Type>BUILDING_ALCATRAZ</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_ALCATRAZ</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ALCATRAZ_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ALCATRAZ_STRATEGY</Strategy>
@@ -19304,6 +19571,7 @@
 		<!-- Via Appia -->
 		<BuildingInfo>
 			<Type>BUILDING_APPIAN_WAY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_APPIAN_WAY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_APPIAN_WAY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_APPIAN_WAY_STRATEGY</Strategy>
@@ -19347,6 +19615,7 @@
 		<!-- 221B Baker Street -->
 		<BuildingInfo>
 			<Type>BUILDING_BAKER_STREET</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_BAKER_STREET</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BAKER_STREET_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BAKER_STREET_STRATEGY</Strategy>
@@ -19416,6 +19685,7 @@
 		<!-- Bank of China Tower -->
 		<BuildingInfo>
 			<Type>BUILDING_BANK_OF_CHINA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_BANK_OF_CHINA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BANK_OF_CHINA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BANK_OF_CHINA_STRATEGY</Strategy>
@@ -19470,6 +19740,7 @@
 		<!-- Bauhaus School -->
 		<BuildingInfo>
 			<Type>BUILDING_BAUHAUS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_BAUHAUS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BAUHAUS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BAUHAUS_STRATEGY</Strategy>
@@ -19552,6 +19823,7 @@
 		<!-- Bayreuth Festspielhaus -->
 		<BuildingInfo>
 			<Type>BUILDING_BAYREUTH</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_BAYREUTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BAYREUTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BAYREUTH_STRATEGY</Strategy>
@@ -19633,6 +19905,7 @@
 		<!-- Berlin Wall -->
 		<BuildingInfo>
 			<Type>BUILDING_BERLIN_WALL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_BERLIN_WALL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BERLIN_WALL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BERLIN_WALL_STRATEGY</Strategy>
@@ -19694,6 +19967,7 @@
 		<!-- Blarney Castle -->
 		<BuildingInfo>
 			<Type>BUILDING_BLARNEY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_BLARNEY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BLARNEY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BLARNEY_STRATEGY</Strategy>
@@ -19761,6 +20035,7 @@
 		<!-- Burning Man -->
 		<BuildingInfo>
 			<Type>BUILDING_BURNINGMAN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_BURNINGMAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BURNINGMAN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BURNINGMAN_STRATEGY</Strategy>
@@ -19810,6 +20085,7 @@
 		<!-- Cabaret Voltaire -->
 		<BuildingInfo>
 			<Type>BUILDING_CABARET_VOLTAIRE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_CABARET_VOLTAIRE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CABARET_VOLTAIRE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CABARET_VOLTAIRE_STRATEGY</Strategy>
@@ -19858,6 +20134,7 @@
 		<!-- Cahokia Mounds -->
 		<BuildingInfo>
 			<Type>BUILDING_CAHOKIA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_CAHOKIA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CAHOKIA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CAHOKIA_STRATEGY</Strategy>
@@ -19924,6 +20201,7 @@
 		<!-- Cannes Film Festival -->
 		<BuildingInfo>
 			<Type>BUILDING_CANNES_FF</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_CANNES_FF</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CANNES_FF_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CANNES_FF_STRATEGY</Strategy>
@@ -19996,6 +20274,7 @@
 		<!-- Coit Tower -->
 		<BuildingInfo>
 			<Type>BUILDING_COIT_TOWER</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_COIT_TOWER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COIT_TOWER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_COIT_TOWER_STRATEGY</Strategy>
@@ -20086,6 +20365,7 @@
 		<!-- Crystal Palace -->
 		<BuildingInfo>
 			<Type>BUILDING_CRYSTAL_PALACE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_CRYSTAL_PALACE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRYSTAL_PALACE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CRYSTAL_PALACE_STRATEGY</Strategy>
@@ -20135,6 +20415,7 @@
 		<!-- Congress of Vienna -->
 		<BuildingInfo>
 			<Type>BUILDING_CONGVIENNA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_CONGVIENNA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CONGVIENNA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CONGVIENNA_STRATEGY</Strategy>
@@ -20178,6 +20459,7 @@
 		<!-- Dinosaur Park -->
 		<BuildingInfo>
 			<Type>BUILDING_DINO_PARK</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_DINO_PARK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DINO_PARK_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DINO_PARK_STRATEGY</Strategy>
@@ -20251,6 +20533,7 @@
 		<!-- Disneyland -->
 		<BuildingInfo>
 			<Type>BUILDING_DISNEYLAND</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_DISNEYLAND</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DISNEYLAND_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DISNEYLAND_STRATEGY</Strategy>
@@ -20311,6 +20594,7 @@
 		<!-- El Camino de Santiago -->
 		<BuildingInfo>
 			<Type>BUILDING_ELCAMINODESANTIAGO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_ELCAMINODESANTIAGO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ELCAMINODESANTIAGO_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ELCAMINODESANTIAGO_STRATEGY</Strategy>
@@ -20373,6 +20657,7 @@
 		<!-- Ellis Island -->
 		<BuildingInfo>
 			<Type>BUILDING_ELLIS_ISLAND</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_ELLIS_ISLAND</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ELLIS_ISLAND_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ELLIS_ISLAND_STRATEGY</Strategy>
@@ -20435,6 +20720,7 @@
 		<!-- El Escorial -->
 		<BuildingInfo>
 			<Type>BUILDING_ESCORIAL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_ESCORIAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ESCORIAL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ESCORIAL_STRATEGY</Strategy>
@@ -20490,6 +20776,7 @@
 		<!-- Field of the Cloth of Gold -->
 		<BuildingInfo>
 			<Type>BUILDING_FIELD_GOLD</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_FIELD_GOLD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FIELD_GOLD_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_FIELD_GOLD_STRATEGY</Strategy>
@@ -20542,6 +20829,7 @@
 		<!-- Giverny -->
 		<BuildingInfo>
 			<Type>BUILDING_GIVERNY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_GIVERNY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GIVERNY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GIVERNY_STRATEGY</Strategy>
@@ -20605,6 +20893,7 @@
 		<!-- The Golden Spike -->
 		<BuildingInfo>
 			<Type>BUILDING_GOLDEN_SPIKE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_GOLDEN_SPIKE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GOLDEN_SPIKE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GOLDEN_SPIKE_STRATEGY</Strategy>
@@ -20686,6 +20975,7 @@
 		<!-- Hill of Tara -->
 		<BuildingInfo>
 			<Type>BUILDING_HILLTARA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_HILLTARA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HILLTARA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HILLTARA_STRATEGY</Strategy>
@@ -20751,6 +21041,7 @@
 		<!-- National Night of Hockey -->
 		<BuildingInfo>
 			<Type>BUILDING_HNIC</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_HNIC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HNIC_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HNIC_STRATEGY</Strategy>
@@ -20811,6 +21102,7 @@
 		<!-- House of Wisdom -->
 		<BuildingInfo>
 			<Type>BUILDING_HOUSE_OF_WISDOM</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_HOUSE_OF_WISDOM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_OF_WISDOM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HOUSE_OF_WISDOM_STRATEGY</Strategy>
@@ -20879,6 +21171,7 @@
 		<!-- Kentucky Derby -->
 		<BuildingInfo>
 			<Type>BUILDING_KENTUCKY_DERBY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_KENTUCKY_DERBY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KENTUCKY_DERBY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_KENTUCKY_DERBY_STRATEGY</Strategy>
@@ -20945,6 +21238,7 @@
 		<!-- King's Tournament -->
 		<BuildingInfo>
 			<Type>BUILDING_KINGS_TOURNAMENT</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_KINGS_TOURNAMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KINGS_TOURNAMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_KINGS_TOURNAMENT_STRATEGY</Strategy>
@@ -21043,6 +21337,7 @@
 		<!-- Krak des Chevaliers -->
 		<BuildingInfo>
 			<Type>BUILDING_KRAK_DES_CHEVS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_KRAK_DES_CHEVS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KRAK_DES_CHEVS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_KRAK_DES_CHEVS_STRATEGY</Strategy>
@@ -21094,6 +21389,7 @@
 		<!-- Las Vegas Strip -->
 		<BuildingInfo>
 			<Type>BUILDING_LAS_VEGAS_STRIP</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_LAS_VEGAS_STRIP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LAS_VEGAS_STRIP_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_LAS_VEGAS_STRIP_STRATEGY</Strategy>
@@ -21191,6 +21487,7 @@
 		<!-- London Eye -->
 		<BuildingInfo>
 			<Type>BUILDING_LONDONEYE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_LONDONEYE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LONDONEYE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_LONDONEYE_STRATEGY</Strategy>
@@ -21249,6 +21546,7 @@
 		<!-- Advertising Agency -->
 		<BuildingInfo>
 			<Type>BUILDING_AD_AGENCY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_AD_AGENCY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AD_AGENCY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_AD_AGENCY_STRATEGY</Strategy>
@@ -21300,6 +21598,7 @@
 		<!-- Madison Avenue -->
 		<BuildingInfo>
 			<Type>BUILDING_MADISON_AVENUE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_MADISON_AVENUE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MADISON_AVENUE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MADISON_AVENUE_STRATEGY</Strategy>
@@ -21422,6 +21721,7 @@
 		<!-- Maginot Line -->
 		<BuildingInfo>
 			<Type>BUILDING_MAGINOTLINE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_MAGINOTLINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MAGINOTLINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MAGINOTLINE_STRATEGY</Strategy>
@@ -21452,6 +21752,7 @@
 		<!-- Monte Carlo -->
 		<BuildingInfo>
 			<Type>BUILDING_MONTE_CARLO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_MONTE_CARLO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MONTE_CARLO_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MONTE_CARLO_STRATEGY</Strategy>
@@ -21532,6 +21833,7 @@
 		<!-- Orient Express -->
 		<BuildingInfo>
 			<Type>BUILDING_ORIENT_EXPRESS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_ORIENT_EXPRESS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ORIENT_EXPRESS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ORIENT_EXPRESS_STRATEGY</Strategy>
@@ -21586,6 +21888,7 @@
 		<!-- Palace of the Soviets -->
 		<BuildingInfo>
 			<Type>BUILDING_PALACE_SOV</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_PALACE_SOV</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PALACE_SOV_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PALACE_SOV_STRATEGY</Strategy>
@@ -21654,6 +21957,7 @@
 		<!-- Pearl Harbor -->
 		<BuildingInfo>
 			<Type>BUILDING_PEARL_HARBOR</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_PEARL_HARBOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PEARL_HARBOR_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PEARL_HARBOR_STRATEGY</Strategy>
@@ -21724,6 +22028,7 @@
 		<!-- Pere Lachaise Cemetery -->
 		<BuildingInfo>
 			<Type>BUILDING_PERE_LACHAISE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_PERE_LACHAISE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PERE_LACHAISE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PERE_LACHAISE_STRATEGY</Strategy>
@@ -21768,6 +22073,7 @@
 		<!-- Pleistocene Park -->
 		<BuildingInfo>
 			<Type>BUILDING_PLEISTO_PARK</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_PLEISTO_PARK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PLEISTO_PARK_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PLEISTO_PARK_STRATEGY</Strategy>
@@ -21827,6 +22133,7 @@
 		<!-- River Rouge Complex -->
 		<BuildingInfo>
 			<Type>BUILDING_RIVERROUGE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_RIVERROUGE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RIVERROUGE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_RIVERROUGE_STRATEGY</Strategy>
@@ -21927,6 +22234,7 @@
 		<!-- Rosetta Stone -->
 		<BuildingInfo>
 			<Type>BUILDING_ROSETTA_STONE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_ROSETTA_STONE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ROSETTA_STONE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ROSETTA_STONE_STRATEGY</Strategy>
@@ -21990,6 +22298,7 @@
 		<!-- Route 66 -->
 		<BuildingInfo>
 			<Type>BUILDING_ROUTE_66</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_ROUTE_66</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ROUTE_66_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ROUTE_66_STRATEGY</Strategy>
@@ -22021,6 +22330,7 @@
 		<!-- Scapa Flow -->
 		<BuildingInfo>
 			<Type>BUILDING_SCAPA_FLOW</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_SCAPA_FLOW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SCAPA_FLOW_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SCAPA_FLOW_STRATEGY</Strategy>
@@ -22092,6 +22402,7 @@
 		<!-- Scarborough Fair -->
 		<BuildingInfo>
 			<Type>BUILDING_SCARBOROUGH_FAIR</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_SCARBOROUGH_FAIR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SCARBOROUGH_FAIR_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SCARBOROUGH_FAIR_STRATEGY</Strategy>
@@ -22172,6 +22483,7 @@
 		<!-- Serpent Mound -->
 		<BuildingInfo>
 			<Type>BUILDING_SERPENT_MOUND</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_SERPENT_MOUND</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SERPENT_MOUND_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SERPENT_MOUND_STRATEGY</Strategy>
@@ -22232,6 +22544,7 @@
 		<!-- Shaolin Temple -->
 		<BuildingInfo>
 			<Type>BUILDING_SHAOLIN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_TAOISM</DependencyType>
 			</AndDependencyTypes>
@@ -22283,6 +22596,7 @@
 		<!-- Svalbard Global Seed Vault -->
 		<BuildingInfo>
 			<Type>BUILDING_SVALBARD</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_SVALBARD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SVALBARD_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SVALBARD_STRATEGY</Strategy>
@@ -22429,6 +22743,7 @@
 		<!-- Tokyo Sky Tree -->
 		<BuildingInfo>
 			<Type>BUILDING_TOKYO_SKY_TREE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_TOKYO_SKY_TREE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TOKYO_SKY_TREE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TOKYO_SKY_TREE_STRATEGY</Strategy>
@@ -22480,6 +22795,7 @@
 		<!-- Tokyo Tower -->
 		<BuildingInfo>
 			<Type>BUILDING_TOKYO_TOWER</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_TOKYO_TOWER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TOKYO_TOWER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TOKYO_TOWER_STRATEGY</Strategy>
@@ -22527,6 +22843,7 @@
 		<!-- Troyes Trade Fair -->
 		<BuildingInfo>
 			<Type>BUILDING_TROYES_FAIR</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_TROYES_FAIR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TROYES_FAIR_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TROYES_FAIR_STRATEGY</Strategy>
@@ -22607,6 +22924,7 @@
 		<!-- Walk of Fame -->
 		<BuildingInfo>
 			<Type>BUILDING_WALK_OF_FAME</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_WALK_OF_FAME</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WALK_OF_FAME_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_WALK_OF_FAME_STRATEGY</Strategy>
@@ -22695,6 +23013,7 @@
 		<!-- Warhol's Factory -->
 		<BuildingInfo>
 			<Type>BUILDING_WARHOL_FACTORY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_WARHOL_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WARHOL_FACTORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_WARHOL_FACTORY_STRATEGY</Strategy>
@@ -22780,6 +23099,7 @@
 		<!-- Westminster Abbey -->
 		<BuildingInfo>
 			<Type>BUILDING_WESTMINSTER</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_WESTMINSTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WESTMINSTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_WESTMINSTER_STRATEGY</Strategy>
@@ -22830,6 +23150,7 @@
 		<!-- Willow Run -->
 		<BuildingInfo>
 			<Type>BUILDING_WILLOWRUN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_WILLOWRUN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WILLOWRUN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_WILLOWRUN_STRATEGY</Strategy>
@@ -22892,6 +23213,7 @@
 		<!-- Woodstock -->
 		<BuildingInfo>
 			<Type>BUILDING_WOODSTOCK</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_WOODSTOCK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WOODSTOCK_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_WOODSTOCK_STRATEGY</Strategy>
@@ -22946,6 +23268,7 @@
 		<!-- Yasnaya Polyana -->
 		<BuildingInfo>
 			<Type>BUILDING_YASNAYA_POLYANA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_YASNAYA_POLYANA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_YASNAYA_POLYANA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_YASNAYA_POLYANA_STRATEGY</Strategy>
@@ -22986,6 +23309,7 @@
 		<!-- Zurich-Orbital -->
 		<BuildingInfo>
 			<Type>BUILDING_ZURICH_ORBITAL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_ZURICH_ORBITAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ZURICH_ORBITAL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ZURICH_ORBITAL_STRATEGY</Strategy>
@@ -23032,6 +23356,7 @@
 		<!-- Zurich-Orbital Uplink -->
 		<BuildingInfo>
 			<Type>BUILDING_ZURICH_ORBITAL_UPLINK</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_ZURICH_ORBITAL_UPLINK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ZURICH_ORBITAL_UPLINK_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ZURICH_ORBITAL_UPLINK_STRATEGY</Strategy>

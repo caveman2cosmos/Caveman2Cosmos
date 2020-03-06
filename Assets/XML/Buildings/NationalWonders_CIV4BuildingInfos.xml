@@ -9,6 +9,7 @@
 		<BuildingInfo>
 			<!-- National Aircraft Museum -->
 			<Type>BUILDING_AIRCRAFT_MUSEUM</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -193,6 +194,7 @@
 		<BuildingInfo>
 			<!-- Anima Gaming League -->
 			<Type>BUILDING_ANIMA_GAMING_LEAGUE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -228,6 +230,7 @@
 		<BuildingInfo>
 			<!-- National Archives -->
 			<Type>BUILDING_ARCHIVES</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -297,6 +300,7 @@
 		<BuildingInfo>
 			<!-- Aerial Basket Ropeways -->
 			<Type>BUILDING_BASKETROPEWAYS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -362,6 +366,7 @@
 		<BuildingInfo>
 			<!-- Bureau of Farm Management -->
 			<Type>BUILDING_BFM</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -420,6 +425,7 @@
 		<BuildingInfo>
 			<!-- Botanical Gardens -->
 			<Type>BUILDING_BOTANICAL_GARDENS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -479,6 +485,7 @@
 		<BuildingInfo>
 			<!-- Bull Leaping -->
 			<Type>BUILDING_BULL_LEAPING</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -561,6 +568,7 @@
 		<BuildingInfo>
 			<!-- Capital Administration -->
 			<Type>BUILDING_CAPITAL_ADMINISTRATION</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -623,6 +631,7 @@
 		<BuildingInfo>
 			<!-- Captured Fire -->
 			<Type>BUILDING_CAPTURED_FIRE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -668,6 +677,7 @@
 		<BuildingInfo>
 			<!-- Centers for Disease Control -->
 			<Type>BUILDING_CENTERS_FOR_DISEASE_CONTROL</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -733,6 +743,7 @@
 		<BuildingInfo>
 			<!-- Central Bank -->
 			<Type>BUILDING_CENTRAL_BANK</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -815,6 +826,7 @@
 		<BuildingInfo>
 			<!-- Chief's Funeral Pyre -->
 			<Type>BUILDING_CHIEFS_PYRE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -881,6 +893,7 @@
 		<BuildingInfo>
 			<!-- Computer Center -->
 			<Type>BUILDING_COMPUTER_CENTER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -953,6 +966,7 @@
 		<BuildingInfo>
 			<!-- Cosmonaut Training Center -->
 			<Type>BUILDING_COSMONAUT_TRAINING_CENTRE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -991,6 +1005,7 @@
 		<BuildingInfo>
 			<!-- National Courier System -->
 			<Type>BUILDING_COURIER_SYSTEM</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1053,6 +1068,7 @@
 		<BuildingInfo>
 			<!-- National Cybersecurity Center -->
 			<Type>BUILDING_CYBERSECURITY_CENTER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1094,6 +1110,7 @@
 		<BuildingInfo>
 			<!-- Deep Space Research Institute -->
 			<Type>BUILDING_DEEP_SPACE_RESEARCH</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<SpecialBuildingType>SPECIALBUILDING_DEEP_SPACE_RESEARCH</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1155,6 +1172,7 @@
 		<BuildingInfo>
 			<!-- Department of Education -->
 			<Type>BUILDING_DEPARTMENT_EDUCATION</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1215,6 +1233,7 @@
 		<BuildingInfo>
 			<!-- Department of Energy -->
 			<Type>BUILDING_DOE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1264,6 +1283,7 @@
 		<BuildingInfo>
 			<!-- Department of Foreign Policy -->
 			<Type>BUILDING_DEPT_FOREIGN_POLICY</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1317,6 +1337,7 @@
 		<BuildingInfo>
 			<!-- Department of Motor Vehicles -->
 			<Type>BUILDING_DMV</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1383,6 +1404,7 @@
 		<BuildingInfo>
 			<!-- Department of Water -->
 			<Type>BUILDING_WATER_DEPARTMENT</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1437,6 +1459,7 @@
 		<BuildingInfo>
 			<!-- District Courthouse -->
 			<Type>BUILDING_DISTRICT_COURTHOUSE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1504,6 +1527,7 @@
 		<BuildingInfo>
 			<!-- Dutch Dike -->
 			<Type>BUILDING_NETHERLANDS_DIKE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1556,6 +1580,7 @@
 		<BuildingInfo>
 			<!-- Electronic Gaming League -->
 			<Type>BUILDING_ELECTRONIC_GAMING_LEAGUE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1594,6 +1619,7 @@
 		<BuildingInfo>
 			<!-- Maximum Security Prison -->
 			<Type>BUILDING_FEDERAL_PRISON</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1667,6 +1693,7 @@
 		<BuildingInfo>
 			<!-- Fertility Festival -->
 			<Type>BUILDING_FERTILITYFESTIVAL</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1710,6 +1737,7 @@
 		<BuildingInfo>
 			<!-- Flak Tower -->
 			<Type>BUILDING_FLAK_TOWER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1752,6 +1780,7 @@
 		<BuildingInfo>
 			<!-- Foundling Hospital -->
 			<Type>BUILDING_FOUNDLING_HOSPITAL</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1817,6 +1846,7 @@
 		<BuildingInfo>
 			<!-- Garbage Collection Agency -->
 			<Type>BUILDING_GCA</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1881,6 +1911,7 @@
 		<BuildingInfo>
 			<!-- Grand Central Station -->
 			<Type>BUILDING_GRANDCENTRAL_STATION</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1925,6 +1956,7 @@
 		<BuildingInfo>
 			<!-- Great Bonfire -->
 			<Type>BUILDING_GREAT_BONFIRE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1966,6 +1998,7 @@
 		<BuildingInfo>
 			<!-- Forbidden Palace -->
 			<Type>BUILDING_GREAT_PALACE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2035,6 +2068,7 @@
 		<BuildingInfo>
 			<!-- Apothecary Guild -->
 			<Type>BUILDING_GUILD_APOTHECARY</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2106,6 +2140,7 @@
 		<BuildingInfo>
 			<!-- Artist Guild -->
 			<Type>BUILDING_GUILD_ARTIST</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2168,6 +2203,7 @@
 		<BuildingInfo>
 			<!-- Baker Guild -->
 			<Type>BUILDING_GUILD_BAKER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2230,6 +2266,7 @@
 		<BuildingInfo>
 			<!-- Blacksmith Guild -->
 			<Type>BUILDING_GUILD_BLACKSMITH</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2301,6 +2338,7 @@
 		<BuildingInfo>
 			<!-- Butcher Guild -->
 			<Type>BUILDING_GUILD_BUTCHER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2369,6 +2407,7 @@
 		<BuildingInfo>
 			<!-- Carpenter Guild -->
 			<Type>BUILDING_GUILD_CARPENTER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2431,6 +2470,7 @@
 		<BuildingInfo>
 			<!-- Printers Guild -->
 			<Type>BUILDING_GUILD_CLERKS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2502,6 +2542,7 @@
 		<BuildingInfo>
 			<!-- Artisans Guild -->
 			<Type>BUILDING_GUILD_CRAFTS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2573,6 +2614,7 @@
 		<BuildingInfo>
 			<!-- Drapers Guild -->
 			<Type>BUILDING_GUILD_DRAPERS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2653,6 +2695,7 @@
 		<BuildingInfo>
 			<!-- Hostler Guild -->
 			<Type>BUILDING_GUILD_EQUESTRIAN</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2724,6 +2767,7 @@
 		<BuildingInfo>
 			<!-- Fishmonger Guild -->
 			<Type>BUILDING_GUILD_FISHMONGER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2786,6 +2830,7 @@
 		<BuildingInfo>
 			<!-- Glassblowers Guild -->
 			<Type>BUILDING_GUILD_GLASSBLOWERS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2848,6 +2893,7 @@
 		<BuildingInfo>
 			<!-- Goldsmith Guild -->
 			<Type>BUILDING_GUILD_GOLDSMITH</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2910,6 +2956,7 @@
 		<BuildingInfo>
 			<!-- Grocers Guild -->
 			<Type>BUILDING_GUILD_GROCERS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2981,6 +3028,7 @@
 		<BuildingInfo>
 			<!-- Woodcutter Guild -->
 			<Type>BUILDING_GUILD_LUMBER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3043,6 +3091,7 @@
 		<BuildingInfo>
 			<!-- Masons Guild -->
 			<Type>BUILDING_GUILD_MASON</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3114,6 +3163,7 @@
 		<BuildingInfo>
 			<!-- Merchants Guild -->
 			<Type>BUILDING_GUILD_MERCERS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3185,6 +3235,7 @@
 		<BuildingInfo>
 			<!-- Potters Guild -->
 			<Type>BUILDING_GUILD_POTTERS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3247,6 +3298,7 @@
 		<BuildingInfo>
 			<!-- Servants Guild -->
 			<Type>BUILDING_GUILD_SERVANTS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3313,6 +3365,7 @@
 		<BuildingInfo>
 			<!-- Tailor Guild -->
 			<Type>BUILDING_GUILD_TAILOR</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3375,6 +3428,7 @@
 		<BuildingInfo>
 			<!-- Victuallers Guild -->
 			<Type>BUILDING_GUILD_VICTUALLERS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3447,6 +3501,7 @@
 		<BuildingInfo>
 			<!-- Heroic Epic -->
 			<Type>BUILDING_HEROIC_EPIC</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3496,6 +3551,7 @@
 		<BuildingInfo>
 			<!-- Great Holmegaard Hunt -->
 			<Type>BUILDING_HHUNTINGBOW</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3548,6 +3604,7 @@
 		<BuildingInfo>
 			<!-- Holographic Gaming League -->
 			<Type>BUILDING_HOLOGRAPHIC_GAMING_LEAGUE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3590,6 +3647,7 @@
 		<BuildingInfo>
 			<!-- Homeland Security Agency -->
 			<Type>BUILDING_HOMELAND_SECURITY</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3661,6 +3719,7 @@
 		<BuildingInfo>
 			<!-- House of Parliament -->
 			<Type>BUILDING_HOUSE_OF_PARLIMENT</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3725,6 +3784,7 @@
 		<BuildingInfo>
 			<!-- Ironworks -->
 			<Type>BUILDING_IRON_WORKS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3809,6 +3869,7 @@
 		<BuildingInfo>
 			<!-- Labor Union -->
 			<Type>BUILDING_LABOR_UNION</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3846,6 +3907,7 @@
 		<BuildingInfo>
 			<!-- Log Roller System -->
 			<Type>BUILDING_LOGROLLERS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3906,6 +3968,7 @@
 		<BuildingInfo>
 			<!-- Manhattan Project -->
 			<Type>BUILDING_MANHATTAN</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3972,6 +4035,7 @@
 		<BuildingInfo>
 			<!-- Microlith Workshop -->
 			<Type>BUILDING_MICROLITH_WORKSHOP</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4022,6 +4086,7 @@
 		<BuildingInfo>
 			<!-- Mind Storage -->
 			<Type>BUILDING_MIND_STORAGE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4068,6 +4133,7 @@
 		<BuildingInfo>
 			<!-- Modern Art Theatre -->
 			<Type>BUILDING_MODERN_ART_THEATRE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4134,6 +4200,7 @@
 		<BuildingInfo>
 			<!-- Movie Studio -->
 			<Type>BUILDING_MOVIE_STUDIO</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4181,6 +4248,7 @@
 		<BuildingInfo>
 			<!-- National Medical Database -->
 			<Type>BUILDING_MEDICAL_DATABASE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4230,6 +4298,7 @@
 		<BuildingInfo>
 			<!-- National Aerospace Agency -->
 			<Type>BUILDING_NASA</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4305,6 +4374,7 @@
 		<BuildingInfo>
 			<!-- National Academic Database -->
 			<Type>BUILDING_NATIONAL_ACADEMIC_DATABASE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4348,6 +4418,7 @@
 		<BuildingInfo>
 			<!-- National Aquarium -->
 			<Type>BUILDING_NATIONAL_AQUA</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4404,6 +4475,7 @@
 		<BuildingInfo>
 			<!-- National Epic -->
 			<Type>BUILDING_NATIONAL_EPIC</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4466,6 +4538,7 @@
 		<BuildingInfo>
 			<!-- National Camel Breeder -->
 			<Type>BUILDING_CAMEL_NATIONAL</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4512,6 +4585,7 @@
 		<BuildingInfo>
 			<!-- National Elephant Breeder -->
 			<Type>BUILDING_ELEPHANT_NATIONAL</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4563,6 +4637,7 @@
 		<BuildingInfo>
 			<!-- National Horse Breeder -->
 			<Type>BUILDING_HORSE_NATIONAL</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4614,6 +4689,7 @@
 		<BuildingInfo>
 			<!-- National Fire Service -->
 			<Type>BUILDING_NFS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4664,6 +4740,7 @@
 		<BuildingInfo>
 			<!-- National Legal Database -->
 			<Type>BUILDING_NATIONAL_LEGAL_DATABASE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4709,6 +4786,7 @@
 		<BuildingInfo>
 			<!-- National Library Service -->
 			<Type>BUILDING_NATIONAL_LIBRARY_SERVICE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4785,6 +4863,7 @@
 		<BuildingInfo>
 			<!-- National Mint -->
 			<Type>BUILDING_NATIONAL_MINT</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4881,6 +4960,7 @@
 		<BuildingInfo>
 			<!-- National Park -->
 			<Type>BUILDING_NATIONAL_PARK</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4940,6 +5020,7 @@
 		<BuildingInfo>
 			<!-- National Science Foundation -->
 			<Type>BUILDING_NSF</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4986,6 +5067,7 @@
 		<BuildingInfo>
 			<!-- National Aluminum Smelter -->
 			<Type>BUILDING_NATIONAL_SMELTER_ALUMINUM</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5051,6 +5133,7 @@
 		<BuildingInfo>
 			<!-- National Copper Smelter -->
 			<Type>BUILDING_NATIONAL_SMELTER_COPPER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5113,6 +5196,7 @@
 		<BuildingInfo>
 			<!-- National Gold Smelter -->
 			<Type>BUILDING_NATIONAL_SMELTER_GOLD</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5175,6 +5259,7 @@
 		<BuildingInfo>
 			<!-- National Iron Smelter -->
 			<Type>BUILDING_NATIONAL_SMELTER_IRON</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5237,6 +5322,7 @@
 		<BuildingInfo>
 			<!-- National Lead Smelter -->
 			<Type>BUILDING_NATIONAL_SMELTER_LEAD</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5299,6 +5385,7 @@
 		<BuildingInfo>
 			<!-- National Platinum Smelter -->
 			<Type>BUILDING_NATIONAL_SMELTER_PLATINUM</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5361,6 +5448,7 @@
 		<BuildingInfo>
 			<!-- National Silver Smelter -->
 			<Type>BUILDING_NATIONAL_SMELTER_SILVER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5423,6 +5511,7 @@
 		<BuildingInfo>
 			<!-- National Tin Smelter -->
 			<Type>BUILDING_NATIONAL_SMELTER_TIN</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5485,6 +5574,7 @@
 		<BuildingInfo>
 			<!-- National Titanium Smelter -->
 			<Type>BUILDING_NATIONAL_SMELTER_TITANIUM</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5548,6 +5638,7 @@
 		<BuildingInfo>
 			<!-- National Sports League -->
 			<Type>BUILDING_NHL</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5600,6 +5691,7 @@
 		<BuildingInfo>
 			<!-- National TV-Station -->
 			<Type>BUILDING_NATIONAL_TV_STATION</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5682,6 +5774,7 @@
 		<BuildingInfo>
 			<!-- Noblegarden -->
 			<Type>BUILDING_NOBLEGARDEN</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_NOBLEGARDEN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NOBLEGARDEN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NOBLEGARDEN_STRATEGY</Strategy>
@@ -5737,6 +5830,7 @@
 		<BuildingInfo>
 			<!-- National Weather Service -->
 			<Type>BUILDING_NWS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5813,6 +5907,7 @@
 		<BuildingInfo>
 			<!-- National Zoo -->
 			<Type>BUILDING_NATIONAL_ZOO</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5869,6 +5964,7 @@
 		<BuildingInfo>
 			<!-- Online University -->
 			<Type>BUILDING_ONLINE_UNIVERSITY</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5924,6 +6020,7 @@
 		<BuildingInfo>
 			<!-- Orbital Prison -->
 			<Type>BUILDING_ORBITAL_PRISON</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5968,6 +6065,7 @@
 		<BuildingInfo>
 			<!-- Palace -->
 			<Type>BUILDING_PALACE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6012,6 +6110,7 @@
 		<BuildingInfo>
 			<!-- Police Academy -->
 			<Type>BUILDING_POLICE_ACADEMY</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6105,6 +6204,7 @@
 		<BuildingInfo>
 			<!-- Propaganda Net -->
 			<Type>BUILDING_PROPAGANDA_NET</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6178,6 +6278,7 @@
 		<BuildingInfo>
 			<!-- Radio Telescope -->
 			<Type>BUILDING_RADIO_TELESCOPE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6246,6 +6347,7 @@
 		<BuildingInfo>
 			<!-- National Railroad Museum -->
 			<Type>BUILDING_RAILROAD_MUSEUM</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6319,6 +6421,7 @@
 		<BuildingInfo>
 			<!-- Red Cross -->
 			<Type>BUILDING_RED_CROSS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6383,6 +6486,7 @@
 		<BuildingInfo>
 			<!-- Research Hospital -->
 			<Type>BUILDING_RESEARCH_HOSPITAL</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6447,6 +6551,7 @@
 		<BuildingInfo>
 			<!-- Research Institute -->
 			<Type>BUILDING_RUSSIAN_RESEARCH_INSTITUTE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6529,6 +6634,7 @@
 		<BuildingInfo>
 			<!-- Secret Army Base -->
 			<Type>BUILDING_SECRET_ARMY_BASE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6591,6 +6697,7 @@
 		<BuildingInfo>
 			<!-- Space Laboratory -->
 			<Type>BUILDING_SPACE_LABORATORY</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6661,6 +6768,7 @@
 		<BuildingInfo>
 			<!-- Statue of Champion -->
 			<Type>BUILDING_STATUE_OF_CHAMPION</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6745,6 +6853,7 @@
 		<BuildingInfo>
 			<!-- Strategic Grain Reserve -->
 			<Type>BUILDING_STRATEGIC_GRAIN_RESERVE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6821,6 +6930,7 @@
 		<BuildingInfo>
 			<!-- Supercollider -->
 			<Type>BUILDING_SUPERCOLLIDER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6879,6 +6989,7 @@
 		<BuildingInfo>
 			<!-- Supreme Court -->
 			<Type>BUILDING_SUPREME_COURT</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6950,6 +7061,7 @@
 		<BuildingInfo>
 			<!-- Temple of Isis -->
 			<Type>BUILDING_TEMPLE_OF_ISIS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7031,6 +7143,7 @@
 		<BuildingInfo>
 			<!-- Temple of Osiris -->
 			<Type>BUILDING_TEMPLE_OF_OSIRIS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7120,6 +7233,7 @@
 		<BuildingInfo>
 			<!-- Temple of Set -->
 			<Type>BUILDING_TEMPLE_OF_SET</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7203,6 +7317,7 @@
 		<BuildingInfo>
 			<!-- Royal Tomb -->
 			<Type>BUILDING_TOMB</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7302,6 +7417,7 @@
 		<BuildingInfo>
 			<!-- Toxic Waste Dump -->
 			<Type>BUILDING_TOXIC_WASTE_DUMP</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7354,6 +7470,7 @@
 		<BuildingInfo>
 			<!-- Travel Agency -->
 			<Type>BUILDING_TRAVEL_AGENCY</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7489,6 +7606,7 @@
 		<BuildingInfo>
 			<!-- Treasury -->
 			<Type>BUILDING_TREASURY</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7537,6 +7655,7 @@
 		<BuildingInfo>
 			<!-- Triumph Column -->
 			<Type>BUILDING_TRIUMPH_COLUMN</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7594,6 +7713,7 @@
 		<BuildingInfo>
 			<!-- UN Mission -->
 			<Type>BUILDING_UN_MISSION</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<VictoryPrereq>VICTORY_DIPLOMATIC</VictoryPrereq>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -7635,6 +7755,7 @@
 		<BuildingInfo>
 			<!-- World Bank -->
 			<Type>BUILDING_WORLD_BANK</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7691,6 +7812,7 @@
 		<BuildingInfo>
 			<!-- Hieracosphinx Breeder -->
 			<Type>BUILDING_HIERACOSPHINX_BREEDER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7758,6 +7880,7 @@
 		<BuildingInfo>
 			<!-- Jackalope Breeder -->
 			<Type>BUILDING_JACKALOPE_BREEDER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7821,6 +7944,7 @@
 		<BuildingInfo>
 			<!-- Pegasus Breeder -->
 			<Type>BUILDING_PEGASUS_BREEDER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7884,6 +8008,7 @@
 		<BuildingInfo>
 			<!-- Phoenix Breeder -->
 			<Type>BUILDING_PHOENIX_BREEDER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7947,6 +8072,7 @@
 		<BuildingInfo>
 			<!-- Qilin Breeder -->
 			<Type>BUILDING_QILIN_BREEDER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8010,6 +8136,7 @@
 		<BuildingInfo>
 			<!-- Quetzalcoatl Breeder -->
 			<Type>BUILDING_QUETZALCOATL_BREEDER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8073,6 +8200,7 @@
 		<BuildingInfo>
 			<!-- Rainbow Serpent Breeder -->
 			<Type>BUILDING_RAINBOW_SERPENT_BREEDER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8136,6 +8264,7 @@
 		<BuildingInfo>
 			<!-- Spy Training Facility -->
 			<Type>BUILDING_SPY_TRAINING_FACILITY</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<NotGameOption>GAMEOPTION_NO_ESPIONAGE</NotGameOption>
 			<Description>TXT_KEY_BUILDING_SPY_TRAINING_FACILITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SPY_TRAINING_FACILITY_PEDIA</Civilopedia>
@@ -8197,6 +8326,7 @@
 		<BuildingInfo>
 			<!-- Heavy Water Production Plant -->
 			<Type>BUILDING_HEAVY_WATER_PRODUCTION_PLANT</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_HEAVY_WATER_PRODUCTION_PLANT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HEAVY_WATER_PRODUCTION_PLANT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HEAVY_WATER_PRODUCTION_PLANT_STRATEGY</Strategy>
@@ -8253,6 +8383,7 @@
 		<BuildingInfo>
 			<!-- Garden City -->
 			<Type>BUILDING_GARDEN_CITY</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_GARDEN_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GARDEN_CITY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GARDEN_CITY_STRATEGY</Strategy>
@@ -8286,6 +8417,7 @@
 		<BuildingInfo>
 			<!-- Fusion Power Plant -->
 			<Type>BUILDING_FUSION_PLANT</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<SpecialBuildingType>SPECIALBUILDING_FUSION_PLANT</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_FUSION_PLANT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FUSION_PLANT_PEDIA</Civilopedia>
