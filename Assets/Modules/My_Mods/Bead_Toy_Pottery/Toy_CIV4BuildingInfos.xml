@@ -21,7 +21,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_BOARDGAMES</PrereqTech>
+			<PrereqTech>TECH_BOARD_GAMES</PrereqTech>
 			<!-- Obsolescence -->
 			<!--ObsoleteTech>TECH_INDUSTRIALISM</ObsoleteTech>
 			<ReplaceBuildings>
@@ -142,8 +142,8 @@
 				<Bonus>BONUS_FINE_CLAY</Bonus>
 				<Bonus>BONUS_CLAY</Bonus>
 				<Bonus>BONUS_WOOD</Bonus>
-				<Bonus>BONUS_TIMBER</Bonus>
-				<Bonus>BONUS_WARE_TIN</Bonus>
+				<Bonus>BONUS_PRIME_TIMBER</Bonus>
+				<Bonus>BONUS_TIN_WARES</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>

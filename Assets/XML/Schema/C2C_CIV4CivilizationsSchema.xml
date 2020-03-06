@@ -112,7 +112,7 @@
 	<ElementType name="TraitPrereqOr1" content="textOnly"/>
 	<ElementType name="TraitPrereqOr2" content="textOnly"/>
 	<ElementType name="PromotionLine" content="textOnly"/>
-	<ElementType name="GreatPeopleUnitClass" content="textOnly"/>
+	<ElementType name="GreatPeopleUnitType" content="textOnly"/>
 	<ElementType name="PrereqTech" content="textOnly"/>
 	<ElementType name="EraAdvanceFreeSpecialistType" content="textOnly"/>
 	<ElementType name="GoldenAgeonBirthofGreatPersonType" content="textOnly"/>
@@ -883,7 +883,7 @@
 		<element type="iMinAnarchy" minOccurs="0"/>
 		<element type="iMaxTradeRoutesChange" minOccurs="0"/>
 		<element type="iGoldenAgeDurationModifier" minOccurs="0"/>
-		<element type="GreatPeopleUnitClass" minOccurs="0"/>
+		<element type="GreatPeopleUnitType" minOccurs="0"/>
 		<element type="iGreatPeopleRateChange" minOccurs="0"/>
 		<element type="iHurryAngerModifier" minOccurs="0"/>
 		<element type="iHurryCostModifier" minOccurs="0"/>
@@ -943,22 +943,14 @@
 	<ElementType name="Buildings" content="eltOnly">
 		<element type="Building" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="UnitClassType" content="textOnly"/>
 	<ElementType name="UnitType" content="textOnly"/>
-	<ElementType name="Unit" content="eltOnly">
-		<element type="UnitClassType"/>
-		<element type="UnitType"/>
-	</ElementType>
-	<ElementType name="Units" content="eltOnly">
-		<element type="Unit" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
 	<ElementType name="iFreeUnits" content="textOnly" dt:type="int"/>
-	<ElementType name="FreeUnitClass" content="eltOnly">
-		<element type="UnitClassType"/>
+	<ElementType name="FreeUnit" content="eltOnly">
+		<element type="UnitType"/>
 		<element type="iFreeUnits"/>
 	</ElementType>
-	<ElementType name="FreeUnitClasses" content="eltOnly">
-		<element type="FreeUnitClass" minOccurs="0" maxOccurs="*"/>
+	<ElementType name="FreeUnits" content="eltOnly">
+		<element type="FreeUnit" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="bFreeBuildingClass" content="textOnly" dt:type="boolean"/>
 	<ElementType name="FreeBuildingClass" content="eltOnly">
@@ -1027,8 +1019,7 @@
 		<element type="iSpawnRateNPCPeaceModifier" minOccurs="0"/>
 		<element type="Cities" minOccurs="0"/>
 		<element type="Buildings" minOccurs="0"/>
-		<element type="Units" minOccurs="0"/>
-		<element type="FreeUnitClasses" minOccurs="0"/>
+		<element type="FreeUnits" minOccurs="0"/>
 		<element type="FreeBuildingClasses" minOccurs="0"/>
 		<element type="FreeTechs" minOccurs="0"/>
 		<element type="DisableTechs" minOccurs="0"/>

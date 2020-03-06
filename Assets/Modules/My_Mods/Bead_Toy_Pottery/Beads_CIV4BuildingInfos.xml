@@ -27,7 +27,7 @@
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqBonuses>
 				<Bonus>BONUS_PLASTIC</Bonus>
-				<Bonus>BONUS_GLASS</Bonus>
+				<Bonus>BONUS_GLASSWARE</Bonus>
 				<Bonus>BONUS_SHELLFISH</Bonus>
 				<Bonus>BONUS_OBSIDIAN</Bonus>
 				<Bonus>BONUS_FINE_CLAY</Bonus>
@@ -73,7 +73,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_GEMS</BonusType>
+					<BonusType>BONUS_GEMSTONE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -103,7 +103,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_GLASS</BonusType>
+					<BonusType>BONUS_GLASSWARE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -158,7 +158,7 @@
 			<PrereqTech>TECH_BEAD_MAKING</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_BONE</Bonus>
-				<Bonus>BONUS_GLASS</Bonus>
+				<Bonus>BONUS_GLASSWARE</Bonus>
 				<Bonus>BONUS_SHELLFISH</Bonus>
 				<Bonus>BONUS_OBSIDIAN</Bonus>
 				<Bonus>BONUS_FINE_CLAY</Bonus>
@@ -213,7 +213,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_GEMS</BonusType>
+					<BonusType>BONUS_GEMSTONE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -272,7 +272,7 @@
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_BONE</Bonus>
-				<Bonus>BONUS_GLASS</Bonus>
+				<Bonus>BONUS_GLASSWARE</Bonus>
 				<Bonus>BONUS_SHELLFISH</Bonus>
 				<Bonus>BONUS_OBSIDIAN</Bonus>
 				<Bonus>BONUS_FINE_CLAY</Bonus>
@@ -327,7 +327,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_GEMS</BonusType>
+					<BonusType>BONUS_GEMSTONE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -351,7 +351,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_GLASS</BonusType>
+					<BonusType>BONUS_GLASSWARE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>

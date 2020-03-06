@@ -4,7 +4,6 @@
 <Civ4UnitInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_AARDVARK</Class>
 			<Type>UNIT_AARDVARK</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -59,8 +58,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -119,7 +118,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_AFRICANGREY</Class>
 			<Type>UNIT_AFRICANGREY</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -180,8 +178,8 @@
 				<TerrainType>TERRAIN_PEAK</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -189,7 +187,7 @@
 			</TerrainImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
@@ -247,7 +245,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_AFRICAN_PENGUIN</Class>
 			<Type>UNIT_AFRICAN_PENGUIN</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -314,20 +311,20 @@
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
-				<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+				<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
 			</FeatureImpassableTypes>
@@ -375,7 +372,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_ANIMAL_JAGUAR</Class>
 			<Type>UNIT_ANIMAL_JAGUAR</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -458,8 +454,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -523,7 +519,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_ANTEATER</Class>
 			<Type>UNIT_ANTEATER</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -569,7 +564,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -585,8 +580,8 @@
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -596,7 +591,7 @@
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
@@ -652,7 +647,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_ARCTICFOX</Class>
 			<Type>UNIT_ARCTICFOX</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -751,17 +745,17 @@
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 			</TerrainImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
@@ -813,7 +807,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_ARMADILLO</Class>
 			<Type>UNIT_ARMADILLO</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -860,12 +853,12 @@
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -893,7 +886,7 @@
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 			</FeaturePassableTechs>
@@ -941,7 +934,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_ASIANBEAR</Class>
 			<Type>UNIT_ASIANBEAR</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -1008,7 +1000,7 @@
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -1023,11 +1015,11 @@
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 			</FeaturePassableTechs>
@@ -1075,7 +1067,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_BABIRUSA</Class>
 			<Type>UNIT_BABIRUSA</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -1150,7 +1141,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -1168,11 +1159,11 @@
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
@@ -1197,7 +1188,7 @@
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 			</FeaturePassableTechs>
@@ -1256,7 +1247,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_BADGER</Class>
 			<Type>UNIT_BADGER</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -1314,8 +1304,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -1364,7 +1354,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_BALLPYTHON</Class>
 			<Type>UNIT_BALLPYTHON</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -1408,14 +1397,14 @@
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
 			</FeatureImpassableTypes>
@@ -1477,7 +1466,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_BARBARYAPE</Class>
 			<Type>UNIT_BARBARYAPE</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -1540,8 +1528,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -1552,7 +1540,7 @@
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
@@ -1609,7 +1597,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_BARNOWL</Class>
 			<Type>UNIT_BARNOWL</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -1648,8 +1635,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SEA</TerrainType>
 				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
@@ -1705,7 +1692,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_BARREDOWL</Class>
 			<Type>UNIT_BARREDOWL</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -1752,8 +1738,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SEA</TerrainType>
 				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
@@ -1772,7 +1758,7 @@
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 			</FeaturePassableTechs>
@@ -1791,24 +1777,12 @@
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
-			<UnitClassTargets>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_DUCK</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_LIZARD</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_OPOSSUM</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_PHEASANT</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-			</UnitClassTargets>
+			<UnitTargets>
+				<UnitType>UNIT_DUCK</UnitType>
+				<UnitType>UNIT_LIZARD</UnitType>
+				<UnitType>UNIT_OPOSSUM</UnitType>
+				<UnitType>UNIT_PHEASANT</UnitType>
+			</UnitTargets>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -1843,7 +1817,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_BEAR</Class>
 			<Type>UNIT_BEAR</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -1922,8 +1895,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
@@ -1986,7 +1959,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_BEAVER</Class>
 			<Type>UNIT_BEAVER</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -2046,8 +2018,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -2079,7 +2051,7 @@
 				<Outcome>
 					<OutcomeType>OUTCOME_BONUS_SPAWNED</OutcomeType>
 					<iChance>2</iChance>
-					<BonusType>BONUS_FUR</BonusType>
+					<BonusType>BONUS_BEAVERS</BonusType>
 					<Yields>
 						<iYield>1</iYield>
 						<iYield>1</iYield>
@@ -2111,7 +2083,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_BELUGA</Class>
 			<Type>UNIT_BELUGA</Type>
 			<Combat>UNITCOMBAT_SEA_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -2258,7 +2229,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_BENGALTIGER</Class>
 			<Type>UNIT_BENGALTIGER</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -2339,8 +2309,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -2391,7 +2361,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_BISON</Class>
 			<Type>UNIT_BISON</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -2471,8 +2440,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -2531,7 +2500,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_BLACKBEAR</Class>
 			<Type>UNIT_BLACKBEAR</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -2595,8 +2563,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -2611,7 +2579,7 @@
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 			</FeaturePassableTechs>
@@ -2659,7 +2627,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_BOAR</Class>
 			<Type>UNIT_BOAR</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -2728,7 +2695,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 			</InvisibleFeatureChanges>
@@ -2738,8 +2705,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -2758,7 +2725,7 @@
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
@@ -2821,7 +2788,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_BONGO</Class>
 			<Type>UNIT_BONGO</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -2883,14 +2849,14 @@
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -2898,7 +2864,7 @@
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
@@ -2960,7 +2926,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_BOOBY</Class>
 			<Type>UNIT_BOOBY</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -3031,8 +2996,8 @@
 				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
 				<TerrainType>TERRAIN_PEAK</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -3083,7 +3048,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_BUFFALO</Class>
 			<Type>UNIT_BUFFALO</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -3132,8 +3096,8 @@
 					<Title>TXT_KEY_GROUPTITLE_OBSTINANCY</Title>
 				</GroupSpawnUnitCombatType>
 			</GroupSpawnUnitCombatTypes>
-			<Description>TXT_KEY_UNIT_BUFFALO_CAPE</Description>
-			<Civilopedia>TXT_KEY_UNIT_BUFFALO_CAPE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_UNIT_BUFFALO</Description>
+			<Civilopedia>TXT_KEY_UNIT_BUFFALO_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -3156,8 +3120,8 @@
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -3184,7 +3148,7 @@
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 			</FeaturePassableTechs>
@@ -3232,7 +3196,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_CAIMAN</Class>
 			<Type>UNIT_CAIMAN</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -3270,8 +3233,8 @@
 					<Title>TXT_KEY_GROUPTITLE_CONGREGATION</Title>
 				</GroupSpawnUnitCombatType>
 			</GroupSpawnUnitCombatTypes>
-			<Description>TXT_KEY_UNIT_CAIMAN_BLACK</Description>
-			<Civilopedia>TXT_KEY_UNIT_CAIMAN_BLACK_PEDIA</Civilopedia>
+			<Description>TXT_KEY_UNIT_CAIMAN</Description>
+			<Civilopedia>TXT_KEY_UNIT_CAIMAN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -3313,8 +3276,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -3322,7 +3285,7 @@
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
@@ -3379,7 +3342,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_CAMEL</Class>
 			<Type>UNIT_CAMEL</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -3449,13 +3411,13 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
 			</FeatureImpassableTypes>
@@ -3514,7 +3476,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_CAPUCHIN</Class>
 			<Type>UNIT_CAPUCHIN</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -3583,7 +3544,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -3634,7 +3595,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_CAPYBARA</Class>
 			<Type>UNIT_CAPYBARA</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -3700,12 +3660,12 @@
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -3775,7 +3735,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_CARIBOU</Class>
 			<Type>UNIT_CARIBOU</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -3854,7 +3813,7 @@
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 			</TerrainImpassableTypes>
@@ -3866,7 +3825,7 @@
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 			</FeaturePassableTechs>
@@ -3925,7 +3884,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_CASSOWARY</Class>
 			<Type>UNIT_CASSOWARY</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -3982,8 +3940,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -4053,7 +4011,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_CAVEBEAR</Class>
 			<Type>UNIT_CAVEBEAR</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -4109,8 +4066,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -4165,7 +4122,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_CAVE_LION</Class>
 			<Type>UNIT_CAVE_LION</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -4240,7 +4196,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
@@ -4250,11 +4206,11 @@
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
@@ -4312,7 +4268,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_CHEETAH</Class>
 			<Type>UNIT_CHEETAH</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -4384,14 +4339,14 @@
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
@@ -4443,7 +4398,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_CHIMPANZEE</Class>
 			<Type>UNIT_CHIMPANZEE</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -4530,8 +4484,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -4589,7 +4543,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_COBRA</Class>
 			<Type>UNIT_COBRA</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -4639,7 +4592,7 @@
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -4690,7 +4643,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_COD</Class>
 			<Type>UNIT_COD</Type>
 			<Combat>UNITCOMBAT_SEA_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -4825,7 +4777,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_COW</Class>
 			<Type>UNIT_COW</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -4898,7 +4849,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -4961,7 +4912,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_CRAB</Class>
 			<Type>UNIT_CRAB</Type>
 			<Combat>UNITCOMBAT_SEA_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -5088,7 +5038,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_CROW</Class>
 			<Type>UNIT_CROW</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -5202,7 +5151,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_CUSCUS</Class>
 			<Type>UNIT_CUSCUS</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -5256,8 +5204,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -5307,7 +5255,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_DARTFROG</Class>
 			<Type>UNIT_DARTFROG</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -5364,13 +5311,13 @@
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -5440,7 +5387,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_DESERT_TORTOISE</Class>
 			<Type>UNIT_DESERT_TORTOISE</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -5458,8 +5404,8 @@
 				<SubCombatType>UNITCOMBAT_SIZE_TINY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
-			<Description>TXT_KEY_UNIT_TORTOISE</Description>
-			<Civilopedia>TXT_KEY_UNIT_TORTOISE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_UNIT_DESERT_TORTOISE</Description>
+			<Civilopedia>TXT_KEY_UNIT_DESERT_TORTOISE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -5482,7 +5428,7 @@
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -5535,7 +5481,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_DHOLE</Class>
 			<Type>UNIT_DHOLE</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -5629,8 +5574,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
@@ -5683,7 +5628,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_DINGO</Class>
 			<Type>UNIT_DINGO</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -5748,7 +5692,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -5802,7 +5746,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_DIREWOLF</Class>
 			<Type>UNIT_DIREWOLF</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -5876,11 +5819,11 @@
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
@@ -5934,7 +5877,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_DOLPHIN</Class>
 			<Type>UNIT_DOLPHIN</Type>
 			<Combat>UNITCOMBAT_SEA_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -6063,7 +6005,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_DONKEY</Class>
 			<Type>UNIT_DONKEY</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -6123,7 +6064,7 @@
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -6187,7 +6128,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_DUCK</Class>
 			<Type>UNIT_DUCK</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -6246,8 +6186,8 @@
 				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
 				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
 				<TerrainType>TERRAIN_TRENCH</TerrainType>
@@ -6307,7 +6247,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_DUGONG</Class>
 			<Type>UNIT_DUGONG</Type>
 			<Combat>UNITCOMBAT_SEA_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -6430,7 +6369,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_EAGLE</Class>
 			<Type>UNIT_EAGLE</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -6546,7 +6484,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_EAGLE_BALD</Class>
 			<Type>UNIT_EAGLE_BALD</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -6660,8 +6597,7 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_ELEPHANT_AFRICAN</Class>
-			<Type>UNIT_AFRICANELEPHANT</Type>
+			<Type>UNIT_ELEPHANT_AFRICAN</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WILD</SubCombatType>
@@ -6728,8 +6664,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -6761,7 +6697,7 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_AFRICANELEPHANT</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_ELEPHANT_AFRICAN</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
@@ -6773,7 +6709,7 @@
 						<iYield>5</iYield>
 						<iYield>2</iYield>
 					</Yields>
-					<BonusType>BONUS_ELEPHANT</BonusType>
+					<BonusType>BONUS_ELEPHANTS</BonusType>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_SUBDUE</OutcomeType>
@@ -6801,8 +6737,7 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_ELEPHANT_ASIAN</Class>
-			<Type>UNIT_ELEPHANT</Type>
+			<Type>UNIT_ELEPHANT_ASIAN</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WILD</SubCombatType>
@@ -6864,8 +6799,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -6887,7 +6822,7 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_ELEPHANT</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_ELEPHANT_ASIAN</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
@@ -6895,7 +6830,7 @@
 				<Outcome>
 					<OutcomeType>OUTCOME_BONUS_SPAWNED</OutcomeType>
 					<iChance>2</iChance>
-					<BonusType>BONUS_ELEPHANT</BonusType>
+					<BonusType>BONUS_ELEPHANTS</BonusType>
 					<Yields>
 						<iYield>5</iYield>
 						<iYield>2</iYield>
@@ -6927,7 +6862,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_EMU</Class>
 			<Type>UNIT_EMU</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -6991,8 +6925,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -7001,7 +6935,7 @@
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
@@ -7049,7 +6983,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_EWOLF</Class>
 			<Type>UNIT_EWOLF</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -7122,8 +7055,8 @@
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -7179,7 +7112,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_FENNECFOX</Class>
 			<Type>UNIT_FENNECFOX</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -7241,7 +7173,7 @@
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -7294,7 +7226,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_FLAMINGO</Class>
 			<Type>UNIT_FLAMINGO</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -7370,7 +7301,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SEA</TerrainType>
 				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
@@ -7427,7 +7358,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_GALAPAGOS_PENGUIN</Class>
 			<Type>UNIT_GALAPAGOS_PENGUIN</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -7493,12 +7423,12 @@
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 			</TerrainImpassableTypes>
@@ -7506,7 +7436,7 @@
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>1</iCombat>
@@ -7553,7 +7483,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_GALAPOGOS_TORTOISE</Class>
 			<Type>UNIT_GALAPOGOS_TORTOISE</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -7572,8 +7501,8 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
-			<Description>TXT_KEY_UNIT_TORTOISE2</Description>
-			<Civilopedia>TXT_KEY_UNIT_TORTOISE2_PEDIA</Civilopedia>
+			<Description>TXT_KEY_UNIT_GALAPOGOS_TORTOISE</Description>
+			<Civilopedia>TXT_KEY_UNIT_GALAPOGOS_TORTOISE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -7594,7 +7523,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -7643,7 +7572,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_GATOR</Class>
 			<Type>UNIT_GATOR</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -7703,14 +7631,14 @@
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_HILL</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -7773,7 +7701,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_GATOR_ASIAN</Class>
 			<Type>UNIT_GATOR_ASIAN</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -7830,14 +7757,14 @@
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_HILL</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -7886,7 +7813,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_GAZELLE</Class>
 			<Type>UNIT_GAZELLE</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -7952,7 +7878,7 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -8007,7 +7933,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_GELADA</Class>
 			<Type>UNIT_GELADA</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -8072,14 +7997,14 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
@@ -8130,7 +8055,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_GEMSBOK</Class>
 			<Type>UNIT_GEMSBOK</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -8198,7 +8122,7 @@
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -8254,7 +8178,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_GERENUK</Class>
 			<Type>UNIT_GERENUK</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -8309,20 +8232,20 @@
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_NEW</FeatureType>
+					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
@@ -8376,7 +8299,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_GHARIAL</Class>
 			<Type>UNIT_GHARIAL</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -8443,7 +8365,7 @@
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_HILL</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
@@ -8451,8 +8373,8 @@
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -8512,7 +8434,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_GIANT_SQUID</Class>
 			<Type>UNIT_GIANT_SQUID</Type>
 			<Combat>UNITCOMBAT_SEA_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -8617,7 +8538,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_GIRAFFE</Class>
 			<Type>UNIT_GIRAFFE</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -8677,7 +8597,7 @@
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -8685,7 +8605,7 @@
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
@@ -8734,7 +8654,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_GLYPTO</Class>
 			<Type>UNIT_GLYPTO</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -8791,14 +8710,14 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
@@ -8847,7 +8766,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_GORILLA</Class>
 			<Type>UNIT_GORILLA</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -8911,8 +8829,8 @@
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -8920,7 +8838,7 @@
 			</TerrainImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
@@ -8978,7 +8896,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_GREATWHITE</Class>
 			<Type>UNIT_GREATWHITE</Type>
 			<Combat>UNITCOMBAT_SEA_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -9087,7 +9004,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_GRIZZLY</Class>
 			<Type>UNIT_GRIZZLY</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -9132,7 +9048,7 @@
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
@@ -9182,7 +9098,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_GROUNDSLOTH</Class>
 			<Type>UNIT_GROUNDSLOTH</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -9240,8 +9155,8 @@
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -9304,7 +9219,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_GUANACO</Class>
 			<Type>UNIT_GUANACO</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -9371,7 +9285,7 @@
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
@@ -9445,7 +9359,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_GULL</Class>
 			<Type>UNIT_GULL</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -9554,7 +9467,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_HAAST_EAGLE</Class>
 			<Type>UNIT_HAAST_EAGLE</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -9668,7 +9580,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_HAMMERHEAD</Class>
 			<Type>UNIT_HAMMERHEAD</Type>
 			<Combat>UNITCOMBAT_SEA_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -9786,7 +9697,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_HARPYEAGLE</Class>
 			<Type>UNIT_HARPYEAGLE</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -9823,28 +9733,13 @@
 			<iAnimalIgnoresBorders>2</iAnimalIgnoresBorders>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bAssassin>1</bAssassin>
-			<UnitClassTargets>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_AARDVARK</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_ANTEATER</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_ARMADILLO</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_IGUANA</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_TREESLOTH</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-			</UnitClassTargets>
+			<UnitTargets>
+				<UnitType>UNIT_AARDVARK</UnitType>
+				<UnitType>UNIT_ANTEATER</UnitType>
+				<UnitType>UNIT_ARMADILLO</UnitType>
+				<UnitType>UNIT_IGUANA</UnitType>
+				<UnitType>UNIT_TREESLOTH</UnitType>
+			</UnitTargets>
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_BIRD_PARROT</UnitCombatTargetType>
@@ -9874,8 +9769,8 @@
 				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -9931,7 +9826,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_HAWK</Class>
 			<Type>UNIT_HAWK</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -10042,7 +9936,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_HIPPO</Class>
 			<Type>UNIT_HIPPO</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -10108,8 +10001,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -10117,7 +10010,7 @@
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
@@ -10185,7 +10078,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_PYGMYHIPPO</Class>
 			<Type>UNIT_PYGMYHIPPO</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -10237,12 +10129,12 @@
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -10310,7 +10202,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_HORNEDOWL</Class>
 			<Type>UNIT_HORNEDOWL</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -10343,32 +10234,14 @@
 			<iAnimalIgnoresBorders>2</iAnimalIgnoresBorders>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bAssassin>1</bAssassin>
-			<UnitClassTargets>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_ARMADILLO</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_CRAB</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_OPOSSUM</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_SKUNK</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_JUNGLE_TARANTULA</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_DESERT_TARANTULA</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-			</UnitClassTargets>
+			<UnitTargets>
+				<UnitType>UNIT_ARMADILLO</UnitType>
+				<UnitType>UNIT_CRAB</UnitType>
+				<UnitType>UNIT_OPOSSUM</UnitType>
+				<UnitType>UNIT_SKUNK</UnitType>
+				<UnitType>UNIT_JUNGLE_TARANTULA</UnitType>
+				<UnitType>UNIT_DESERT_TARANTULA</UnitType>
+			</UnitTargets>
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_BIRD_GAMEBIRD</UnitCombatTargetType>
@@ -10461,7 +10334,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_HORSE</Class>
 			<Type>UNIT_HORSE</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -10528,8 +10400,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -10600,7 +10472,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_HUMPBACK_WHALE</Class>
 			<Type>UNIT_HUMPBACK_WHALE</Type>
 			<Combat>UNITCOMBAT_SEA_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -10712,7 +10583,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_HYENA</Class>
 			<Type>UNIT_HYENA</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -10763,27 +10633,18 @@
 				</UnitAI>
 			</UnitAIs>
 			<bAssassin>1</bAssassin>
-			<UnitClassTargets>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_BOAR</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_DESERT_TORTOISE</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_DONKEY</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-			</UnitClassTargets>
+			<UnitTargets>
+				<UnitType>UNIT_BOAR</UnitType>
+				<UnitType>UNIT_DESERT_TORTOISE</UnitType>
+				<UnitType>UNIT_DONKEY</UnitType>
+			</UnitTargets>
 			<iCost>-1</iCost>
 			<iMoves>2</iMoves>
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -10835,7 +10696,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_IBEX</Class>
 			<Type>UNIT_IBEX</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -10896,7 +10756,7 @@
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -10951,7 +10811,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_IGUANA</Class>
 			<Type>UNIT_IGUANA</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -10995,7 +10854,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -11044,7 +10903,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_IMPALA</Class>
 			<Type>UNIT_IMPALA</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -11111,7 +10969,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -11162,7 +11020,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_KANGAROO_GREY</Class>
 			<Type>UNIT_KANGAROO_GREY</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -11222,14 +11079,14 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
@@ -11286,7 +11143,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_KANGAROO_RED</Class>
 			<Type>UNIT_KANGAROO_RED</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -11346,14 +11202,14 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>3</iCombat>
 			<iAggression>1</iAggression>
@@ -11410,7 +11266,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_KOALA</Class>
 			<Type>UNIT_KOALA</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -11451,8 +11306,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -11507,7 +11362,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_KOMODO_DRAGON</Class>
 			<Type>UNIT_KOMODO_DRAGON</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -11605,7 +11459,7 @@
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -11658,7 +11512,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_KOOKABURRA</Class>
 			<Type>UNIT_KOOKABURRA</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -11731,8 +11584,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SEA</TerrainType>
 				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
@@ -11787,7 +11640,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_LEMUR</Class>
 			<Type>UNIT_LEMUR</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -11850,8 +11702,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -11903,7 +11755,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_LION</Class>
 			<Type>UNIT_LION</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -11957,20 +11808,11 @@
 				</UnitAI>
 			</UnitAIs>
 			<bAssassin>1</bAssassin>
-			<UnitClassTargets>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_BUFFALO</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_WILDEBEEST</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_ZEBRA</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-			</UnitClassTargets>
+			<UnitTargets>
+				<UnitType>UNIT_BUFFALO</UnitType>
+				<UnitType>UNIT_WILDEBEEST</UnitType>
+				<UnitType>UNIT_ZEBRA</UnitType>
+			</UnitTargets>
 			<iCost>-1</iCost>
 			<iMoves>2</iMoves>
 			<InvisibleTerrainChanges>
@@ -12001,7 +11843,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -12057,7 +11899,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_LIZARD</Class>
 			<Type>UNIT_LIZARD</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -12096,8 +11937,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -12146,7 +11987,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_LOCUST</Class>
 			<Type>UNIT_LOCUST</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -12197,7 +12037,7 @@
 				<TerrainType>TERRAIN_LAKE_SHORE</TerrainType>
 				<TerrainType>TERRAIN_PEAK</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -12219,7 +12059,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_LOCUST_HUGE_SWARM</Class>
 			<Type>UNIT_LOCUST_HUGE_SWARM</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -12270,7 +12109,7 @@
 				<TerrainType>TERRAIN_LAKE_SHORE</TerrainType>
 				<TerrainType>TERRAIN_PEAK</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -12292,7 +12131,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_LOCUST_LARGE_SWARM</Class>
 			<Type>UNIT_LOCUST_LARGE_SWARM</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -12343,7 +12181,7 @@
 				<TerrainType>TERRAIN_LAKE_SHORE</TerrainType>
 				<TerrainType>TERRAIN_PEAK</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -12365,7 +12203,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_LOCUST_SMALL_SWARM</Class>
 			<Type>UNIT_LOCUST_SMALL_SWARM</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -12416,7 +12253,7 @@
 				<TerrainType>TERRAIN_LAKE_SHORE</TerrainType>
 				<TerrainType>TERRAIN_PEAK</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -12438,7 +12275,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_LOON</Class>
 			<Type>UNIT_LOON</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -12543,7 +12379,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_LYNX</Class>
 			<Type>UNIT_LYNX</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -12672,7 +12507,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_MACAW</Class>
 			<Type>UNIT_MACAW</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -12724,8 +12558,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PEAK</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SEA</TerrainType>
 				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
@@ -12782,7 +12616,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_MACKEREL</Class>
 			<Type>UNIT_MACKEREL</Type>
 			<Combat>UNITCOMBAT_SEA_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -12911,7 +12744,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_MAMMOTH</Class>
 			<Type>UNIT_MAMMOTH</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -12960,7 +12792,7 @@
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<TerrainImpassableTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
@@ -13008,7 +12840,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_MANEDWOLF</Class>
 			<Type>UNIT_MANEDWOLF</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -13064,8 +12895,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -13116,7 +12947,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_MANDRILL</Class>
 			<Type>UNIT_MANDRILL</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -13197,8 +13027,8 @@
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -13210,7 +13040,7 @@
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
@@ -13273,7 +13103,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_RAY_MANTA</Class>
 			<Type>UNIT_RAY_MANTA</Type>
 			<Combat>UNITCOMBAT_SEA_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -13363,7 +13192,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_MARLIN</Class>
 			<Type>UNIT_MARLIN</Type>
 			<Combat>UNITCOMBAT_SEA_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -13479,7 +13307,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_MINKIE_WHALE</Class>
 			<Type>UNIT_MINKIE_WHALE</Type>
 			<Combat>UNITCOMBAT_SEA_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -13587,7 +13414,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_MOA</Class>
 			<Type>UNIT_MOA</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -13648,8 +13474,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -13657,7 +13483,7 @@
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>4</iCombat>
 			<iAggression>1</iAggression>
@@ -13706,7 +13532,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_MONITOR</Class>
 			<Type>UNIT_MONITOR</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -13777,8 +13602,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -13838,7 +13663,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_MOOSE</Class>
 			<Type>UNIT_MOOSE</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -13883,8 +13707,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 			</TerrainImpassableTypes>
@@ -13893,7 +13717,7 @@
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 			</FeaturePassableTechs>
@@ -13943,7 +13767,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_MOUFLON</Class>
 			<Type>UNIT_MOUFLON</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -13997,7 +13820,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
@@ -14056,7 +13879,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_MUSKOX</Class>
 			<Type>UNIT_MUSKOX</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -14116,7 +13938,7 @@
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 			</TerrainImpassableTypes>
@@ -14169,7 +13991,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_NARWHAL</Class>
 			<Type>UNIT_NARWHAL</Type>
 			<Combat>UNITCOMBAT_SEA_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -14299,7 +14120,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_NILECROC</Class>
 			<Type>UNIT_NILECROC</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -14375,8 +14195,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -14384,7 +14204,7 @@
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
@@ -14401,7 +14221,7 @@
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 			</FeaturePassableTechs>
@@ -14449,7 +14269,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_NUMBAT</Class>
 			<Type>UNIT_NUMBAT</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -14494,7 +14313,7 @@
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -14548,7 +14367,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_OKAPI</Class>
 			<Type>UNIT_OKAPI</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -14589,7 +14407,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -14644,7 +14462,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_OPOSSUM</Class>
 			<Type>UNIT_OPOSSUM</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -14685,7 +14502,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -14735,7 +14552,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_ORANGUTAN</Class>
 			<Type>UNIT_ORANGUTAN</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -14777,8 +14593,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -14828,7 +14644,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_ORCA</Class>
 			<Type>UNIT_ORCA</Type>
 			<Combat>UNITCOMBAT_SEA_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -14944,7 +14759,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_OSTRICH</Class>
 			<Type>UNIT_OSTRICH</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -15009,8 +14823,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
@@ -15018,7 +14832,7 @@
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>3</iCombat>
 			<iAggression>2</iAggression>
@@ -15066,7 +14880,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_OXPECKER</Class>
 			<Type>UNIT_OXPECKER</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -15124,8 +14937,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SEA</TerrainType>
 				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
@@ -15183,7 +14996,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_PANDA_BEAR</Class>
 			<Type>UNIT_PANDA_BEAR</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -15228,8 +15040,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -15290,7 +15102,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_PANTHER</Class>
 			<Type>UNIT_PANTHER</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -15335,8 +15146,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -15392,7 +15203,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_PARROT</Class>
 			<Type>UNIT_PARROT</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -15434,8 +15244,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -15495,7 +15305,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_PEACOCK</Class>
 			<Type>UNIT_PEACOCK</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -15538,8 +15347,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PEAK</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -15611,7 +15420,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_PENGUIN</Class>
 			<Type>UNIT_PENGUIN</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -15686,12 +15494,12 @@
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 			</TerrainImpassableTypes>
@@ -15699,7 +15507,7 @@
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>1</iCombat>
@@ -15748,7 +15556,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_PHEASANT</Class>
 			<Type>UNIT_PHEASANT</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -15806,8 +15613,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PEAK</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -15856,7 +15663,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_PIGEON</Class>
 			<Type>UNIT_PIGEON</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -15975,7 +15781,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_PIG_NEW</Class>
 			<Type>UNIT_PIG_NEW</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -16032,8 +15837,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -16096,7 +15901,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_PLATYPUS</Class>
 			<Type>UNIT_PLATYPUS</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -16146,8 +15950,8 @@
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -16212,7 +16016,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_POLARBEAR</Class>
 			<Type>UNIT_POLARBEAR</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -16273,11 +16076,11 @@
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 			</TerrainImpassableTypes>
@@ -16301,7 +16104,7 @@
 			<iPursuit>30</iPursuit>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<iTerrainAttack>10</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -16323,7 +16126,7 @@
 			</TerrainAttacks>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<iTerrainDefense>10</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -16382,7 +16185,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_POSSUM</Class>
 			<Type>UNIT_POSSUM</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -16422,7 +16224,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -16471,7 +16273,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_PROCOPTODON</Class>
 			<Type>UNIT_PROCOPTODON</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -16530,7 +16331,7 @@
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
@@ -16596,7 +16397,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_PUFFADDER</Class>
 			<Type>UNIT_PUFFADDER</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -16668,8 +16468,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -16731,7 +16531,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_QUOLL</Class>
 			<Type>UNIT_QUOLL</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -16775,7 +16574,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -16827,7 +16626,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_RACCOON</Class>
 			<Type>UNIT_RACCOON</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -16881,8 +16679,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -16937,7 +16735,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_RATEL</Class>
 			<Type>UNIT_RATEL</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -16994,27 +16791,18 @@
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
-			<UnitClassTargets>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_IGUANA</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_LIZARD</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_MONITOR</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-			</UnitClassTargets>
+			<UnitTargets>
+				<UnitType>UNIT_IGUANA</UnitType>
+				<UnitType>UNIT_LIZARD</UnitType>
+				<UnitType>UNIT_MONITOR</UnitType>
+			</UnitTargets>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -17064,7 +16852,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_RAVEN</Class>
 			<Type>UNIT_RAVEN</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -17127,8 +16914,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -17177,7 +16964,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_RAY_EAGLE</Class>
 			<Type>UNIT_RAY_EAGLE</Type>
 			<Combat>UNITCOMBAT_SEA_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -17269,7 +17055,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_RAZORBILL</Class>
 			<Type>UNIT_RAZORBILL</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -17334,7 +17119,7 @@
 				<TerrainType>TERRAIN_OCEAN</TerrainType>
 				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
 				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
@@ -17343,7 +17128,7 @@
 				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 			</FeatureImpassableTypes>
@@ -17391,7 +17176,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_REDFOX</Class>
 			<Type>UNIT_REDFOX</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -17524,7 +17308,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_REDPANDA</Class>
 			<Type>UNIT_REDPANDA</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -17567,8 +17350,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -17631,7 +17414,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_RHEA</Class>
 			<Type>UNIT_RHEA</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -17691,8 +17473,8 @@
 				<TerrainType>TERRAIN_HILL</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -17701,7 +17483,7 @@
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>2</iCombat>
 			<iAggression>1</iAggression>
@@ -17749,7 +17531,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_ELASMOTHERIUM</Class>
 			<Type>UNIT_ELASMOTHERIUM</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -17807,7 +17588,7 @@
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 			</FeatureImpassableTypes>
@@ -17858,7 +17639,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_BLACK_RHINO</Class>
 			<Type>UNIT_BLACK_RHINO</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -17910,13 +17690,13 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
@@ -17965,7 +17745,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_INDIAN_RHINO</Class>
 			<Type>UNIT_INDIAN_RHINO</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -18019,14 +17798,14 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>4</iCombat>
@@ -18073,7 +17852,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_JAVA_RHINO</Class>
 			<Type>UNIT_JAVA_RHINO</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -18125,14 +17903,14 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>3</iCombat>
@@ -18179,7 +17957,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_WHITE_RHINO</Class>
 			<Type>UNIT_WHITE_RHINO</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -18239,14 +18016,14 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
@@ -18295,7 +18072,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_RIVER_CROC_LARGE</Class>
 			<Type>UNIT_RIVER_CROC_LARGE</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -18371,8 +18147,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -18380,7 +18156,7 @@
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
@@ -18397,7 +18173,7 @@
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 			</FeaturePassableTechs>
@@ -18445,7 +18221,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_RIVER_CROC_SMALL</Class>
 			<Type>UNIT_RIVER_CROC_SMALL</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -18523,8 +18298,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -18532,7 +18307,7 @@
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
@@ -18549,7 +18324,7 @@
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_SWORD_GRASS</FeatureType>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 			</FeaturePassableTechs>
@@ -18597,7 +18372,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_ROCKHOPPER</Class>
 			<Type>UNIT_ROCKHOPPER</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -18672,18 +18446,18 @@
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 			</FeatureImpassableTypes>
@@ -18732,7 +18506,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SABRETOOTH</Class>
 			<Type>UNIT_SABRETOOTH</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -18844,7 +18617,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SAIGA</Class>
 			<Type>UNIT_SAIGA</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -18912,8 +18684,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -18921,7 +18693,7 @@
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
@@ -18978,7 +18750,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SALTWATER_CROC_LARGE</Class>
 			<Type>UNIT_SALTWATER_CROC_LARGE</Type>
 			<Combat>UNITCOMBAT_SEA_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -19082,7 +18853,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SALTWATER_CROC_SMALL</Class>
 			<Type>UNIT_SALTWATER_CROC_SMALL</Type>
 			<Combat>UNITCOMBAT_SEA_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -19194,7 +18964,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SEAEAGLE</Class>
 			<Type>UNIT_SEAEAGLE</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -19253,8 +19022,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SEA</TerrainType>
 				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
@@ -19312,7 +19081,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SEALION_LAND</Class>
 			<Type>UNIT_SEALION_LAND</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -19359,7 +19127,7 @@
 					<Title>TXT_KEY_GROUPTITLE_ROOKERY</Title>
 				</GroupSpawnUnitCombatType>
 			</GroupSpawnUnitCombatTypes>
-			<Description>TXT_KEY_UNIT_SEALION</Description>
+			<Description>TXT_KEY_UNIT_SEALION_LAND</Description>
 			<Civilopedia>TXT_KEY_UNIT_SEALION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
@@ -19380,16 +19148,16 @@
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
@@ -19419,7 +19187,7 @@
 				<Outcome>
 					<OutcomeType>OUTCOME_BONUS_SPAWNED</OutcomeType>
 					<iChance>2</iChance>
-					<BonusType>BONUS_SEA_LIONS</BonusType>
+					<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_SUBDUE</OutcomeType>
@@ -19447,7 +19215,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SEALION_SEA</Class>
 			<Type>UNIT_SEALION_SEA</Type>
 			<Combat>UNITCOMBAT_SEA_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -19488,7 +19255,7 @@
 					<Title>TXT_KEY_GROUPTITLE_HERD</Title>
 				</GroupSpawnUnitCombatType>
 			</GroupSpawnUnitCombatTypes>
-			<Description>TXT_KEY_UNIT_SEALION</Description>
+			<Description>TXT_KEY_UNIT_SEALION_SEA</Description>
 			<Civilopedia>TXT_KEY_UNIT_SEALION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
@@ -19573,7 +19340,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SEAOTTER</Class>
 			<Type>UNIT_SEAOTTER</Type>
 			<Combat>UNITCOMBAT_SEA_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -19694,7 +19460,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SEATURTLE</Class>
 			<Type>UNIT_SEATURTLE</Type>
 			<Combat>UNITCOMBAT_SEA_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -19818,7 +19583,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SECRETARYBIRD</Class>
 			<Type>UNIT_SECRETARYBIRD</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -19888,7 +19652,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SEA</TerrainType>
 				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
@@ -19902,7 +19666,7 @@
 			<FeatureImpassableTypes>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>1</iCombat>
 			<iAggression>2</iAggression>
@@ -19948,7 +19712,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_REEF_SHARK</Class>
 			<Type>UNIT_REEF_SHARK</Type>
 			<Combat>UNITCOMBAT_SEA_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -20083,7 +19846,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SIBERIANTIGER</Class>
 			<Type>UNIT_SIBERIANTIGER</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -20147,8 +19909,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
@@ -20201,7 +19963,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SKUNK</Class>
 			<Type>UNIT_SKUNK</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -20255,8 +20016,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -20307,7 +20068,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SLOTHBEAR</Class>
 			<Type>UNIT_SLOTHBEAR</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -20352,8 +20112,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -20407,7 +20167,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SNOWLEOPARD</Class>
 			<Type>UNIT_SNOWLEOPARD</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -20462,24 +20221,12 @@
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
-			<UnitClassTargets>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_IBEX</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_MOUFLON</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_REDPANDA</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_STAG_DEER</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-			</UnitClassTargets>
+			<UnitTargets>
+				<UnitType>UNIT_IBEX</UnitType>
+				<UnitType>UNIT_MOUFLON</UnitType>
+				<UnitType>UNIT_REDPANDA</UnitType>
+				<UnitType>UNIT_STAG_DEER</UnitType>
+			</UnitTargets>
 			<iCost>-1</iCost>
 			<iMoves>2</iMoves>
 			<TerrainImpassableTypes>
@@ -20488,7 +20235,7 @@
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 			</TerrainImpassableTypes>
@@ -20509,7 +20256,7 @@
 			<iEarlyWithdraw>60</iEarlyWithdraw>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<iTerrainAttack>10</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -20531,7 +20278,7 @@
 			</TerrainAttacks>
 			<TerrainDefenses>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<iTerrainDefense>10</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -20590,7 +20337,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SPECTACLEDBEAR</Class>
 			<Type>UNIT_SPECTACLEDBEAR</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -20649,20 +20395,11 @@
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
-			<UnitClassTargets>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_COW</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_GUANACO</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_STAG_DEER</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-			</UnitClassTargets>
+			<UnitTargets>
+				<UnitType>UNIT_COW</UnitType>
+				<UnitType>UNIT_GUANACO</UnitType>
+				<UnitType>UNIT_STAG_DEER</UnitType>
+			</UnitTargets>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<TerrainImpassableTypes>
@@ -20671,8 +20408,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
@@ -20725,7 +20462,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_STAG_DEER</Class>
 			<Type>UNIT_STAG_DEER</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -20787,8 +20523,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 			</TerrainImpassableTypes>
 			<iCombat>2</iCombat>
@@ -20846,7 +20582,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUNBEAR</Class>
 			<Type>UNIT_SUNBEAR</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -20893,8 +20628,8 @@
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -20954,7 +20689,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAPIR</Class>
 			<Type>UNIT_TAPIR</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -21007,13 +20741,13 @@
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -21083,7 +20817,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_BRAZILIAN_TAPIR</Class>
 			<Type>UNIT_BRAZILIAN_TAPIR</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -21124,13 +20857,13 @@
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -21199,7 +20932,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_MALAYAN_TAPIR</Class>
 			<Type>UNIT_MALAYAN_TAPIR</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -21240,13 +20972,13 @@
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -21316,7 +21048,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_MOUNTAIN_TAPIR</Class>
 			<Type>UNIT_MOUNTAIN_TAPIR</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -21354,13 +21085,13 @@
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -21430,7 +21161,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_JUNGLE_TARANTULA</Class>
 			<Type>UNIT_JUNGLE_TARANTULA</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -21470,11 +21200,11 @@
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
@@ -21504,7 +21234,6 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
-			<PrereqGameOption>GAMEOPTION_ECOLOGICAL_ANIMALS</PrereqGameOption>
 			<KillOutcomes>
 				<Outcome>
 					<OutcomeType>OUTCOME_SUBDUE</OutcomeType>
@@ -21530,7 +21259,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_DESERT_TARANTULA</Class>
 			<Type>UNIT_DESERT_TARANTULA</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -21567,13 +21295,13 @@
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<TerrainImpassableTypes>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -21601,7 +21329,6 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
-			<PrereqGameOption>GAMEOPTION_ECOLOGICAL_ANIMALS</PrereqGameOption>
 			<KillOutcomes>
 				<Outcome>
 					<OutcomeType>OUTCOME_SUBDUE</OutcomeType>
@@ -21627,7 +21354,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TASMANIANDEVIL</Class>
 			<Type>UNIT_TASMANIANDEVIL</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -21693,12 +21419,9 @@
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
-			<UnitClassTargets>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_WOMBAT</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-			</UnitClassTargets>
+			<UnitTargets>
+				<UnitType>UNIT_WOMBAT</UnitType>
+			</UnitTargets>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<TerrainImpassableTypes>
@@ -21708,7 +21431,7 @@
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -21765,7 +21488,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TERN</Class>
 			<Type>UNIT_TERN</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -21832,7 +21554,7 @@
 				<TerrainType>TERRAIN_OCEAN</TerrainType>
 				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
 				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TRENCH</TerrainType>
 				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
@@ -21882,7 +21604,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_THYLACINE</Class>
 			<Type>UNIT_THYLACINE</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -21953,19 +21674,16 @@
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
-			<UnitClassTargets>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_WOMBAT</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-			</UnitClassTargets>
+			<UnitTargets>
+				<UnitType>UNIT_WOMBAT</UnitType>
+			</UnitTargets>
 			<iCost>-1</iCost>
 			<iMoves>2</iMoves>
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -22020,7 +21738,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TOUCAN</Class>
 			<Type>UNIT_TOUCAN</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -22076,7 +21793,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
@@ -22133,7 +21850,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TREESLOTH</Class>
 			<Type>UNIT_TREESLOTH</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -22175,8 +21891,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -22227,7 +21943,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TUNA</Class>
 			<Type>UNIT_TUNA</Type>
 			<Combat>UNITCOMBAT_SEA_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -22350,7 +22065,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TURKEY</Class>
 			<Type>UNIT_TURKEY</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -22414,8 +22128,8 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PEAK</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainImpassableTypes>
@@ -22473,7 +22187,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_VIPER</Class>
 			<Type>UNIT_VIPER</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -22523,7 +22236,7 @@
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -22574,7 +22287,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_VIPER_CHAIN</Class>
 			<Type>UNIT_VIPER_CHAIN</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -22627,7 +22339,7 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -22683,7 +22395,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_VULTURE</Class>
 			<Type>UNIT_VULTURE</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -22749,7 +22460,7 @@
 				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
 				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
 				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -22807,7 +22518,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_WALLABY</Class>
 			<Type>UNIT_WALLABY</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -22867,8 +22577,8 @@
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -22881,7 +22591,7 @@
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
@@ -22979,7 +22689,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_WALLAROO</Class>
 			<Type>UNIT_WALLAROO</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -23018,7 +22727,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -23072,7 +22781,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_WALRUS</Class>
 			<Type>UNIT_WALRUS</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -23140,10 +22848,10 @@
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 			</TerrainImpassableTypes>
@@ -23151,7 +22859,7 @@
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_BAMBOO</FeatureType>
 				<FeatureType>FEATURE_FOREST</FeatureType>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 			</FeatureImpassableTypes>
 			<iCombat>3</iCombat>
 			<iAggression>0</iAggression>
@@ -23206,7 +22914,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_WARTHOG</Class>
 			<Type>UNIT_WARTHOG</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -23269,8 +22976,8 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -23346,7 +23053,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_WHALESHARK</Class>
 			<Type>UNIT_WHALESHARK</Type>
 			<Combat>UNITCOMBAT_SEA_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -23441,7 +23147,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_WILDEBEEST</Class>
 			<Type>UNIT_WILDEBEEST</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -23513,7 +23218,7 @@
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -23569,7 +23274,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_WOLF</Class>
 			<Type>UNIT_WOLF</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -23628,7 +23332,7 @@
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_ICE</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
@@ -23682,7 +23386,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_WOLVERINE</Class>
 			<Type>UNIT_WOLVERINE</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -23741,31 +23444,22 @@
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
-			<UnitClassTargets>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_ARCTICFOX</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_LYNX</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_REDFOX</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-			</UnitClassTargets>
+			<UnitTargets>
+				<UnitType>UNIT_ARCTICFOX</UnitType>
+				<UnitType>UNIT_LYNX</UnitType>
+				<UnitType>UNIT_REDFOX</UnitType>
+			</UnitTargets>
 			<iCost>-1</iCost>
 			<iMoves>2</iMoves>
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_GRASS</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_MUDDY</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+				<TerrainType>TERRAIN_BADLAND</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_SCRUB</TerrainType>
 			</TerrainImpassableTypes>
@@ -23782,7 +23476,7 @@
 			</FeatureImpassableTypes>
 			<FeaturePassableTechs>
 				<FeaturePassableTech>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<PassableTech>NONE</PassableTech>
 				</FeaturePassableTech>
 				<FeaturePassableTech>
@@ -23835,7 +23529,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_WOMBAT</Class>
 			<Type>UNIT_WOMBAT</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -23877,7 +23570,7 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
 				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-				<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+				<TerrainType>TERRAIN_JAGGED</TerrainType>
 				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
@@ -23934,7 +23627,6 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_ZEBRA</Class>
 			<Type>UNIT_ZEBRA</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -23999,7 +23691,7 @@
 				<TerrainType>TERRAIN_ICE</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
-				<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 				<FeatureType>FEATURE_JUNGLE</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>

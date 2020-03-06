@@ -10,7 +10,7 @@
 			<BuildingClass>BUILDINGCLASS_CROCODILE_MYTH</BuildingClass>
 			<Type>BUILDING_CROCODILE_MYTH</Type>
 			<AndDependencyTypes>
-             	<DependencyType>RELIGION_EGYPT_MYTHOLOGY</DependencyType>
+             	<DependencyType>RELIGION_KEMETISM</DependencyType>
  			</AndDependencyTypes>
 			<GlobalBuildingClassProductionModifiers>
 				<BuildingClassProductionModifier>
@@ -24,7 +24,7 @@
 			<Type>BUILDING_SPOTTED_CAT_MYTH</Type>
 			<AndDependencyTypes>
              	<DependencyType>BUILDINGCLASS_SPOTTED_CAT_MYTH</DependencyType>
-             	<DependencyType>RELIGION_EGYPT_MYTHOLOGY</DependencyType>
+             	<DependencyType>RELIGION_KEMETISM</DependencyType>
  			</AndDependencyTypes>
 			<GlobalBuildingClassProductionModifiers>
 				<BuildingClassProductionModifier>

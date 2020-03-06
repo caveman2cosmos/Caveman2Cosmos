@@ -44,7 +44,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AGRICULTURAL</Tag>
 		<English>Agricultural</English>
-		<French>Agriculturel</French>
+		<French>Agricole</French>
 		<German>Agrikulturell</German>
 		<Italian>Agricolo</Italian>
 		<Spanish>
@@ -334,6 +334,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CAPITAL_XP_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1%% Free Experience to all units trained in a Capital or Government Center</English>
+		<French>[ICON_BULLET]%D1%% EXP gratuite à toutes les unités formées dans la capitale ou un centre gouvernemental</French>
 		<Italian>[ICON_BULLET]%D1%% esperienza gratuita a tutte le unità addestrate nella capitale</Italian>
 		<Polish>[ICON_BULLET]%D1%% Darmowego doświadczenia dla jednostek wytrenowanych w Stolicy</Polish>
 	</TEXT>
@@ -400,6 +401,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMMERCE_MODIFIERS_C2C</Tag>
 		<English>[ICON_BULLET]%D1%% %F2_commerce</English>
+		<French>[ICON_BULLET]%D1%% au %F2_commerce</French>
 		<Spanish>[ICON_BULLET]%D1%% [NUM2:al:a la:a los:a las] %F2_commerce</Spanish>
 	</TEXT>
 	<TEXT>
@@ -545,10 +547,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DISALLOWED</Tag>
 		<English>[ICON_BULLET][COLOR_WARNING_TEXT]Leaders with this trait may not select %s1_Trait Trait[COLOR_REVERT]</English>
+		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Les leaders possédant ce trait ne peuvent pas sélectionner %s1_Trait Trait[COLOR_REVERT]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DISTANCE_MOD</Tag>
 		<English>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1% change to RevIdx City Distance penalty</English>
+		<French>[NEWLINE][SPACE][SPACE][ICON_BULLET]Modif de %D1% à la pénalité de Distance de Ville RevIdx</French>
 		<Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1% a la penalización a la estabilidad revolucionaria por distancia con la capital</Spanish>
 		<Polish>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1% zmiany kary za odleg3ośae od miasta</Polish>
 	</TEXT>
@@ -757,6 +761,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MISSILE_RANGE</Tag>
 		<English>[ICON_BULLET]%D1_Amount Mission Operation Range for Missile units.</English>
+		<French>[ICON_BULLET]%D1_Amount Portée opérationnelle pour les unités de missiles.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FOREIGN</Tag>
@@ -822,6 +827,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FREE_PROMOTION_UNITCOMBAT</Tag>
 		<English>[ICON_BULLET]Free [COLOR_BUILDING_TEXT][LINK=%s1_PromotionType]%s2_PromotionName[\LINK][COLOR_REVERT] Promotion for[SPACE]</English>
+		<French>[ICON_BULLET]Promotion [COLOR_BUILDING_TEXT][LINK=%s1_PromotionType]%s2_PromotionName[\LINK][COLOR_REVERT] gratuite pour[SPACE]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FREE_SPEC_NW</Tag>
@@ -877,6 +883,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DOMESTIC_GREAT_GENERAL_MODIFIER_C2C</Tag>
 		<English>[ICON_BULLET]%D1%% Great Military People Emergence inside Cultural Borders</English>
+		<French>[ICON_BULLET]%D1%% Émergence des militaires illustres à l'intérieur des frontières culturelles</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GREAT_PEOPLE_MODIFIER_C2C</Tag>
@@ -906,12 +913,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HOLY_CITY_STATE_REL_XP_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1%% Free Experience to all units trained in the Holy City of your State Religion</English>
+		<French>[ICON_BULLET]%D1%% Expérience gratuite pour toutes les unités formées dans la ville sainte de votre religion d'État</French>
 		<Italian>[ICON_BULLET]%D1%% esperienza gratuita a tutte le unità addestrate nella Città santa della tua religione di stato.</Italian>
 		<Polish>[ICON_BULLET]%D1%% Darmowego doświadczenia dla jednostek wytrenowanych w Świętym Mieście Twojej Religi Narodowej</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HOLY_CITY_NON_STATE_REL_XP_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1%% Free Experience to all units trained in Holy Cities of Non-State Religions</English>
+		<French>[ICON_BULLET]%D1%% EXP Gratuite pour toutes les unités formées dans les Villes Saintes des religions non étatiques</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMANITARIAN</Tag>
@@ -935,6 +944,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMANITARIAN_SHORT</Tag>
 		<English>Hum</English>
+		<French>Hum</French>
 		<Italian>Uma</Italian>
 	</TEXT>
 	<TEXT>
@@ -1075,8 +1085,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_INDUSTRIOUS_PEDIA</Tag>
-		<English>If Aggressive is the warmonger's trait, Industrious is the builder's trait. Wonders are cheaper, enhancing their "ooo--shiny" appeal and giving you a leg up in the competitions to get them built. In addition, forges, a building that makes other buildings faster to build, is, well, faster to build.[PARAGRAPH:1]As of the Beyond the Sword expansion pack, this is now Civilization IV's most exclusive club, though not by much. All the other traits have 9 or 10 leaders who possess them, while Industrious is shared by only 8 leaders. And no, there's still no Industrious/Philosophical trait combination; it's obviously regarded by the game designers as overpowered.[PARAGRAPH:1][H1]High-Priority Technologies[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MASONRY]Masonry[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MONOTHEISM]Monotheism[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_METAL_CASTING]Metal Casting[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_ASSEMBLY_LINE]Assembly Line[\LINK][PARAGRAPH:1][H1]Useful Wonders[\H1][PARAGRAPH:1][ICON_BULLET]Er... pretty much all of them. Well, maybe except for Chichen Itza.[PARAGRAPH:1][H1]Best Buildings[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_FORGE]Forge[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_FACTORY]Factory[\LINK][PARAGRAPH:1][H1]Useful Civics[\H1][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_ORGANIZED_RELIGION]Organized Religion[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_STATE_PROPERTY]State Property[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_CASTE_SYSTEM]Caste System[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_ENVIRONMENTALISM]Environmentalism[\LINK][PARAGRAPH:1][H1]How to Use It[\H1][PARAGRAPH:1]Build wonders, of course. Build them and leverage them and keep them out of the AI's grubby little hands. Also look for and claim the wonder-hurrying resources such as copper, iron, marble, and stone. Remember that the accelerated wonder production applies to the national wonders as well.[PARAGRAPH:1]Also, prioritize the Metal Casting tech in order to access your cheap building. A tactic with a great deal of synergy for Industrious leaders is to build the Oracle (a wonder, so it's cheaper) and select Metal Casting as your free technology. Then go build forges. Remember forges are also required for additional wonders like the Ironworks, the Colossus, the Eiffel Tower, and the Statue of Liberty. Since Metal Casting enables it, the Colossus is usually built right after its future city's forge is finished.[PARAGRAPH:1][H1]The Downside[\H1][PARAGRAPH:1]When you're playing as an Industrious leader, the siren-like allure of being a "buildaholic" is even greater. Even though wonders are cheaper, they're still not dirt cheap. They require a considerable investment of hammers that could be put to better uses. As always, make sure the wonders you choose to build fit into your strategy and the circumstances of the game.</English>
-		<German>If Aggressive is the warmonger's trait, Industrious is the builder's trait. Wonders are cheaper, enhancing their "ooo--shiny" appeal and giving you a leg up in the competitions to get them built. In addition, forges, a building that makes other buildings faster to build, is, well, faster to build.[PARAGRAPH:1]As of the Beyond the Sword expansion pack, this is now Civilization IV's most exclusive club, though not by much. All the other traits have 9 or 10 leaders who possess them, while Industrious is shared by only 8 leaders. And no, there's still no Industrious/Philosophical trait combination; it's obviously regarded by the game designers as overpowered.[PARAGRAPH:1][H1]Wichtige Technologien[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MASONRY]Steinmetzkunst[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MONOTHEISM]Monotheismus[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_METAL_CASTING]Metallguss[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_ASSEMBLY_LINE]Fließband[\LINK][PARAGRAPH:1][H1]Nützliche Wunder[\H1][PARAGRAPH:1][ICON_BULLET]Hmm... eigentlich so gut wie alle, vielleicht außer Chichén Itzá.[PARAGRAPH:1][H1]Bevorzugte Gebäude[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_FORGE]Schmiede[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_FACTORY]Fabrik[\LINK][PARAGRAPH:1][H1]Nützliche Gesellschaftsformen[\H1][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_ORGANIZED_RELIGION]Organisierte Religion[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_STATE_PROPERTY]Staatseigentum[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_CASTE_SYSTEM]Kastensystem[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_ENVIRONMENTALISM]Umweltschutz[\LINK][PARAGRAPH:1][H1]Einsatzmöglichkeiten[\H1][PARAGRAPH:1]Build wonders, of course. Build them and leverage them and keep them out of the AI's grubby little hands. Also look for and claim the wonder-hurrying resources such as copper, iron, marble, and stone. Remember that the accelerated wonder production applies to the national wonders as well.[PARAGRAPH:1]Also, prioritize the Metal Casting tech in order to access your cheap building. A tactic with a great deal of synergy for Industrious leaders is to build the Oracle (a wonder, so it's cheaper) and select Metal Casting as your free technology. Then go build forges. Remember forges are also required for additional wonders like the Ironworks, the Colossus, the Eiffel Tower, and the Statue of Liberty. Since Metal Casting enables it, the Colossus is usually built right after its future city's forge is finished.[PARAGRAPH:1][H1]Nachteile[\H1][PARAGRAPH:1]When you're playing as an Industrious leader, the siren-like allure of being a "buildaholic" is even greater. Even though wonders are cheaper, they're still not dirt cheap. They require a considerable investment of hammers that could be put to better uses. As always, make sure the wonders you choose to build fit into your strategy and the circumstances of the game.</German>
+		<English>If Aggressive is the warmonger's trait, Industrious is the builder's trait. Wonders are cheaper, enhancing their "ooo--shiny" appeal and giving you a leg up in the competitions to get them built. In addition, forges, a building that makes other buildings faster to build, is, well, faster to build.[PARAGRAPH:1]As of the Beyond the Sword expansion pack, this is now Civilization IV's most exclusive club, though not by much. All the other traits have 9 or 10 leaders who possess them, while Industrious is shared by only 8 leaders. And no, there's still no Industrious/Philosophical trait combination; it's obviously regarded by the game designers as overpowered.[PARAGRAPH:1][H1]High-Priority Technologies[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MASONRY]Masonry[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MONOTHEISM]Monotheism[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_METAL_CASTING]Metal Casting[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_ASSEMBLY_LINE]Assembly Line[\LINK][PARAGRAPH:1][H1]Useful Wonders[\H1][PARAGRAPH:1][ICON_BULLET]Er... pretty much all of them. Well, maybe except for Chichen Itza.[PARAGRAPH:1][H1]Best Buildings[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_FORGE]Forge[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_FACTORY]Factory[\LINK][PARAGRAPH:1][H1]Useful Civics[\H1][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_ORGANIZED_RELIGION]Organized Religion[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_STATE_PROPERTY]State Property[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_CASTE_SYSTEM]Caste System[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_GREEN]Environmentalism[\LINK][PARAGRAPH:1][H1]How to Use It[\H1][PARAGRAPH:1]Build wonders, of course. Build them and leverage them and keep them out of the AI's grubby little hands. Also look for and claim the wonder-hurrying resources such as copper, iron, marble, and stone. Remember that the accelerated wonder production applies to the national wonders as well.[PARAGRAPH:1]Also, prioritize the Metal Casting tech in order to access your cheap building. A tactic with a great deal of synergy for Industrious leaders is to build the Oracle (a wonder, so it's cheaper) and select Metal Casting as your free technology. Then go build forges. Remember forges are also required for additional wonders like the Ironworks, the Colossus, the Eiffel Tower, and the Statue of Liberty. Since Metal Casting enables it, the Colossus is usually built right after its future city's forge is finished.[PARAGRAPH:1][H1]The Downside[\H1][PARAGRAPH:1]When you're playing as an Industrious leader, the siren-like allure of being a "buildaholic" is even greater. Even though wonders are cheaper, they're still not dirt cheap. They require a considerable investment of hammers that could be put to better uses. As always, make sure the wonders you choose to build fit into your strategy and the circumstances of the game.</English>
+		<German>If Aggressive is the warmonger's trait, Industrious is the builder's trait. Wonders are cheaper, enhancing their "ooo--shiny" appeal and giving you a leg up in the competitions to get them built. In addition, forges, a building that makes other buildings faster to build, is, well, faster to build.[PARAGRAPH:1]As of the Beyond the Sword expansion pack, this is now Civilization IV's most exclusive club, though not by much. All the other traits have 9 or 10 leaders who possess them, while Industrious is shared by only 8 leaders. And no, there's still no Industrious/Philosophical trait combination; it's obviously regarded by the game designers as overpowered.[PARAGRAPH:1][H1]Wichtige Technologien[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MASONRY]Steinmetzkunst[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MONOTHEISM]Monotheismus[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_METAL_CASTING]Metallguss[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_ASSEMBLY_LINE]Fließband[\LINK][PARAGRAPH:1][H1]Nützliche Wunder[\H1][PARAGRAPH:1][ICON_BULLET]Hmm... eigentlich so gut wie alle, vielleicht außer Chichén Itzá.[PARAGRAPH:1][H1]Bevorzugte Gebäude[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_FORGE]Schmiede[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_FACTORY]Fabrik[\LINK][PARAGRAPH:1][H1]Nützliche Gesellschaftsformen[\H1][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_ORGANIZED_RELIGION]Organisierte Religion[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_STATE_PROPERTY]Staatseigentum[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_CASTE_SYSTEM]Kastensystem[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_GREEN]Umweltschutz[\LINK][PARAGRAPH:1][H1]Einsatzmöglichkeiten[\H1][PARAGRAPH:1]Build wonders, of course. Build them and leverage them and keep them out of the AI's grubby little hands. Also look for and claim the wonder-hurrying resources such as copper, iron, marble, and stone. Remember that the accelerated wonder production applies to the national wonders as well.[PARAGRAPH:1]Also, prioritize the Metal Casting tech in order to access your cheap building. A tactic with a great deal of synergy for Industrious leaders is to build the Oracle (a wonder, so it's cheaper) and select Metal Casting as your free technology. Then go build forges. Remember forges are also required for additional wonders like the Ironworks, the Colossus, the Eiffel Tower, and the Statue of Liberty. Since Metal Casting enables it, the Colossus is usually built right after its future city's forge is finished.[PARAGRAPH:1][H1]Nachteile[\H1][PARAGRAPH:1]When you're playing as an Industrious leader, the siren-like allure of being a "buildaholic" is even greater. Even though wonders are cheaper, they're still not dirt cheap. They require a considerable investment of hammers that could be put to better uses. As always, make sure the wonders you choose to build fit into your strategy and the circumstances of the game.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ISOLATIONIST</Tag>
@@ -1239,6 +1249,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MISSILE_CARGO_SPACE</Tag>
 		<English>[ICON_BULLET]%D1_Amount Cargo Space for all Missile Carrying units.</English>
+		<French>[ICON_BULLET]%D1_Amount Espace de chargement pour toutes les unités de transport de missiles.</French>
 		<Italian>[ICON_BULLET]%D1_Amount allo spazio di trasporto per tutte le unità che trasportano missili.</Italian>
 		<Polish>[ICON_BULLET]%D1_Amount Miejsc dla Rakiet dla jednostek przewożących rakiety.</Polish>
 	</TEXT>
@@ -1254,6 +1265,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NAVAL_CARGO_SPACE</Tag>
 		<English>[ICON_BULLET]%D1_Amount Cargo Space for all transport-capable Naval units.</English>
+		<French>[ICON_BULLET]%D1_Amount Espace de chargement pour toutes les unités navales de transport.</French>
 		<Italian>[ICON_BULLET]%D1_Amount allo spazio di trasporto per tutte le unità navali da trasporto.</Italian>
 		<Polish>[ICON_BULLET]%D1_Amount Miejsc dla wszystkich jednostek transportujących - morskich.</Polish>
 	</TEXT>
@@ -1311,12 +1323,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NON_HOLY_CITY_STATE_REL_XP_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1%% Free Experience to all units trained in the Holy Cities of religions other than your State Religion.</English>
+		<French>[ICON_BULLET]%D1%% EXP gratuite pour toutes les unités formées dans les villes saintes des religions autres que votre religion d'État.</French>
 		<Italian>[ICON_BULLET]%D1%% esperienza gratuita a tutte le unità addestrate nella Città santa di una religione diversa dalla tua religione di stato.</Italian>
 		<Polish>[ICON_BULLET]%D1%% Darmowego doświadczenia dla jednostek wytrenowanych w Świętym Mieście wszystkich religi Nie Narodowych</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NON_STATE_REL_SPREAD_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1%% chance to Spread Non State Religion with your Missionaries.</English>
+		<French>[ICON_BULLET]%D1%% chances de propager la religion non étatique avec vos missionnaires.</French>
 		<Italian>[ICON_BULLET]%D1%% di diffondere una religione non di stato con i tuoi missionari.</Italian>
 		<Polish>[ICON_BULLET]%D1%% do szansy rozszerzenia Religi Nie-Państwowej przez Misjonarzy.</Polish>
 	</TEXT>
@@ -1804,6 +1818,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SCIENTIFIC_SHORT</Tag>
 		<English>Sci</English>
+		<French>Sci</French>
 		<German>Wis</German>
 		<Spanish>Cie</Spanish>
 		<Polish>Nau</Polish>
@@ -1935,6 +1950,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_STATE_REL_SPREAD_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1%% chance to Spread State Religion with your Missionaries.</English>
+		<French>[ICON_BULLET]%D1%% de chances de propager la religion d'État avec vos missionnaires.</French>
 		<Italian>[ICON_BULLET]%D1%% di diffondere la religione di stato con i tuoi missionari.</Italian>
 		<Polish>[ICON_BULLET]%D1%% do szansy rozszerzenia Religi Państwowej przez Misjonarzy.</Polish>
 	</TEXT>
@@ -1971,10 +1987,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TECH_RESEARCH_MODIFIER_FIRST</Tag>
 		<English>[ICON_BULLET]Research %D1_Change%% as fast as normal when researching [LINK=%s2_Tech]%s3_Tech[\LINK]</English>
+		<French>[ICON_BULLET]Recherche %D1_Change%% plus vite que la normale lors de la recherche de [LINK=%s2_Tech]%s3_Tech[\LINK]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TECH_RESEARCH_MODIFIER_ADDITIONAL</Tag>
 		<English>, [LINK=%s1_Tech]%s2_Tech[\LINK]</English>
+		<French>, [LINK=%s1_Tech]%s2_Tech[\LINK]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TECH_RESEARCH_MODIFIER_END</Tag>
@@ -2120,38 +2138,47 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNIT_COMBAT_FREE_XP_FIRST</Tag>
 		<English>[ICON_BULLET]%D1 Experience to all newly trained [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</English>
+		<French>[ICON_BULLET]%D1 Expérience à tous les nouvelles unités formées de type :  [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNIT_COMBAT_FREE_XP_ADDITIONAL</Tag>
 		<English>, [LINK=%s1_CombatClass]%s2_CombatClass[\LINK]</English>
+		<French>, [LINK=%s1_CombatClass]%s2_CombatClass[\LINK]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNIT_COMBAT_FREE_XP_END</Tag>
 		<English> Unit Types</English>
+		<French>.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BONUS_HAPPINESS_CHANGE_FIRST</Tag>
 		<English>[ICON_BULLET]%D1_Change%F2_HappyOrHealth from access to [LINK=%s3_Bonus]%s4_Bonus[\LINK]</English>
+		<French>[ICON_BULLET]%D1_Change%F2_HappyOrHealth de l'accès aux Ressources : [LINK=%s3_Bonus]%s4_Bonus[\LINK]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BONUS_HAPPINESS_CHANGE_ADDITIONAL</Tag>
 		<English>, [LINK=%s1_Bonus]%s2_Bonus[\LINK]</English>
+		<French>, [LINK=%s1_Bonus]%s2_Bonus[\LINK]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BONUS_HAPPINESS_CHANGE_END</Tag>
 		<English> Resources</English>
+		<French>.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNIT_PRODUCTION_FIRST</Tag>
 		<English>[ICON_BULLET]%D1%% Production speed when training [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</English>
+		<French>[ICON_BULLET]%D1%% Vitesse de production lors de l'entraînement des unités de type : [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNIT_PRODUCTION_ADDITIONAL</Tag>
 		<English>, [LINK=%s1_CombatClass]%s2_CombatClass[\LINK]</English>
+		<French>, [LINK=%s1_CombatClass]%s2_CombatClass[\LINK]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNIT_PRODUCTION_END</Tag>
 		<English> Unit Types</English>
+		<French>.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNIT_PRODUCTION</Tag>
@@ -2204,6 +2231,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_FIST</Tag>
 		<English>Ancient Way of the Fist</English>
+		<French>Ancienne voie du poing</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_FIST_PEDIA</Tag>
@@ -2212,6 +2240,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_CENTAUR</Tag>
 		<English>Ancient Way of the Centaur</English>
+		<French>Ancienne voie du centaure</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_CENTAUR_PEDIA</Tag>
@@ -2220,6 +2249,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WILD</Tag>
 		<English>Ancient Way of the Wild</English>
+		<French>Ancienne Voie de la Nature Sauvage</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WILD_PEDIA</Tag>
@@ -2228,6 +2258,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WAVES</Tag>
 		<English>Ancient Way of the Waves</English>
+		<French>Ancienne Voie des Vagues</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WAVES_PEDIA</Tag>
@@ -2236,6 +2267,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WIND</Tag>
 		<English>Ancient Way of the Wind</English>
+		<French>Ancienne Voie du Vent</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WIND_PEDIA</Tag>
@@ -2244,6 +2276,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WARRIOR</Tag>
 		<English>Ancient Way of the Warrior</English>
+		<French>Ancienne Voie du Guerrier</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WARRIOR_PEDIA</Tag>
@@ -2252,6 +2285,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_FEATHER</Tag>
 		<English>Ancient Way of the Feather</English>
+		<French>Ancienne Voie de la Plume</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_FEATHER_PEDIA</Tag>
@@ -2260,6 +2294,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_LEECH</Tag>
 		<English>Ancient Way of the Leech</English>
+		<French>Ancienne Voie de la Goule</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_LEECH_PEDIA</Tag>
@@ -2268,6 +2303,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_SHADOWS</Tag>
 		<English>Ancient Way of the Shadows</English>
+		<French>Ancienne Voie des Ombres</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_SHADOWS_PEDIA</Tag>
@@ -2276,7 +2312,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WOLF</Tag>
 		<English>Ancient Way of the Wolf</English>
-		<French>Ancienne voie du loup</French>
+		<French>Ancienne voie du Loup</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WOLF_PEDIA</Tag>

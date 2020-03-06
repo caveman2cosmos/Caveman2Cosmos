@@ -90,7 +90,7 @@
 			</YieldChanges>
 			<TechYieldModifiers>
 				<TechYieldModifier>
-					<PrereqTech>TECH_PACHYDERM_DOMESTICATION</PrereqTech>
+					<PrereqTech>TECH_ELEPHANT_DOMESTICATION</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>1</iYield>

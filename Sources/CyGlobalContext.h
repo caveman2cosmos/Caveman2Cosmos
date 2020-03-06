@@ -36,13 +36,14 @@ public:
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
+	bool multiMapsEnabled() const;
 	void switchMap(int iMap);
 	int getNumMapInfos() const;
 	CvMapInfo* getMapInfo(int iMap) const;
-	int getNumMapSwitchInfos() const;
-	CvMapSwitchInfo* getMapSwitchInfo(int iMapSwitch) const;
 	CyMap* getMapByIndex(int iIndex);
+	void updateMaps();
 	void initializeMap(int iMap);
+	bool mapInitialized(int iMap) const;
 /*******************************/
 /***** Parallel Maps - End *****/
 /*******************************/	
@@ -80,7 +81,6 @@ public:
 	CvCommandInfo* getCommandInfo(int i) const;
 	CvAutomateInfo* getAutomateInfo(int i) const;
 	CvActionInfo* getActionInfo(int i) const;
-	CvUnitClassInfo* getUnitClassInfo(int i) const;
 	CvInfoBase* getUnitCombatInfo(int i) const;
 	//TB Promotion Line Mod begin
 	CvPromotionLineInfo* getPromotionLineInfo(int i) const;
@@ -208,7 +208,6 @@ public:
 	int getNumTurnTimerInfos() const { return GC.getNumTurnTimerInfos(); }
 	int getNumBuildingClassInfos() const { return GC.getNumBuildingClassInfos(); }
 	int getNumBuildingInfos() const { return GC.getNumBuildingInfos(); }
-	int getNumUnitClassInfos() const { return GC.getNumUnitClassInfos(); }
 	int getNumUnitCombatInfos() const { return GC.getNumUnitCombatInfos(); }
 	//TB Promotion Line Mod begin
 	int getNumPromotionLineInfos() const { return GC.getNumPromotionLineInfos(); }
@@ -417,26 +416,26 @@ public:
 	int getMAX_TEAMS() const { return GC.getMAX_TEAMS(); }
 	int getBARBARIAN_PLAYER() const { return GC.getBARBARIAN_PLAYER(); }
 	int getBARBARIAN_TEAM() const { return GC.getBARBARIAN_TEAM(); }
-	int getAGGRESSIVE_ANIMAL_PLAYER() const { return GC.getAGGRESSIVE_ANIMAL_PLAYER(); }
-	int getAGGRESSIVE_ANIMAL_TEAM() const { return GC.getAGGRESSIVE_ANIMAL_TEAM(); }
-	int getPASSIVE_ANIMAL_PLAYER() const { return GC.getPASSIVE_ANIMAL_PLAYER(); }
-	int getPASSIVE_ANIMAL_TEAM() const { return GC.getPASSIVE_ANIMAL_TEAM(); }
-	int getNPC1_PLAYER() const { return GC.getNPC1_PLAYER(); }
-	int getNPC1_TEAM() const { return GC.getNPC1_TEAM(); }
-	int getNPC2_PLAYER() const { return GC.getNPC2_PLAYER(); }
-	int getNPC2_TEAM() const { return GC.getNPC2_TEAM(); }
-	int getNPC3_PLAYER() const { return GC.getNPC3_PLAYER(); }
-	int getNPC3_TEAM() const { return GC.getNPC3_TEAM(); }
+	int getNEANDERTHAL_PLAYER() const { return GC.getNEANDERTHAL_PLAYER(); }
+	int getNEANDERTHAL_TEAM() const { return GC.getNEANDERTHAL_TEAM(); }
+	int getBEAST_PLAYER() const { return GC.getBEAST_PLAYER(); }
+	int getBEAST_TEAM() const { return GC.getBEAST_TEAM(); }
+	int getPREDATOR_PLAYER() const { return GC.getPREDATOR_PLAYER(); }
+	int getPREDATOR_TEAM() const { return GC.getPREDATOR_TEAM(); }
+	int getPREY_PLAYER() const { return GC.getPREY_PLAYER(); }
+	int getPREY_TEAM() const { return GC.getPREY_TEAM(); }
+	int getINSECT_PLAYER() const { return GC.getINSECT_PLAYER(); }
+	int getINSECT_TEAM() const { return GC.getINSECT_TEAM(); }
 	int getNPC4_PLAYER() const { return GC.getNPC4_PLAYER(); }
 	int getNPC4_TEAM() const { return GC.getNPC4_TEAM(); }
-	int getNPC5_PLAYER() const { return GC.getNPC5_PLAYER(); }
-	int getNPC5_TEAM() const { return GC.getNPC5_TEAM(); }
-	int getNPC6_PLAYER() const { return GC.getNPC6_PLAYER(); }
-	int getNPC6_TEAM() const { return GC.getNPC6_TEAM(); }
-	int getNPC7_PLAYER() const { return GC.getNPC7_PLAYER(); }
-	int getNPC7_TEAM() const { return GC.getNPC7_TEAM(); }
-	int getNPC8_PLAYER() const { return GC.getNPC8_PLAYER(); }
-	int getNPC8_TEAM() const { return GC.getNPC8_TEAM(); }
+	int getNPC3_PLAYER() const { return GC.getNPC3_PLAYER(); }
+	int getNPC3_TEAM() const { return GC.getNPC3_TEAM(); }
+	int getNPC2_PLAYER() const { return GC.getNPC2_PLAYER(); }
+	int getNPC2_TEAM() const { return GC.getNPC2_TEAM(); }
+	int getNPC1_PLAYER() const { return GC.getNPC1_PLAYER(); }
+	int getNPC1_TEAM() const { return GC.getNPC1_TEAM(); }
+	int getNPC0_PLAYER() const { return GC.getNPC0_PLAYER(); }
+	int getNPC0_TEAM() const { return GC.getNPC0_TEAM(); }
 	int getINVALID_PLOT_COORD() const { return GC.getINVALID_PLOT_COORD(); }
 	int getNUM_CITY_PLOTS() const { return GC.getNUM_CITY_PLOTS(); }
 	int getCITY_HOME_PLOT() const { return GC.getCITY_HOME_PLOT(); }

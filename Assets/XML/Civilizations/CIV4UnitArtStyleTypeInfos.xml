@@ -2477,7 +2477,7 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_HEAVY_TANK_M26</UnitType>
+					<UnitType>UNIT_HEAVY_TANK</UnitType>
 					<UnitMeshGroup>
 						<EarlyArtDefineTag>ART_DEF_UNIT_HEAVY_TANK_RUSSIAN</EarlyArtDefineTag>
 						<LateArtDefineTag>ART_DEF_UNIT_HEAVY_TANK_RUSSIAN</LateArtDefineTag>
@@ -3478,7 +3478,7 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_HEAVY_TANK_M26</UnitType>
+					<UnitType>UNIT_HEAVY_TANK</UnitType>
 					<UnitMeshGroup>
 						<EarlyArtDefineTag>ART_DEF_UNIT_HEAVY_TANK_GERMAN</EarlyArtDefineTag>
 						<LateArtDefineTag>ART_DEF_UNIT_HEAVY_TANK_GERMAN</LateArtDefineTag>
@@ -5241,7 +5241,7 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_P59</UnitType>
+					<UnitType>UNIT_EARLYJET</UnitType>
 					<UnitMeshGroup>
 						<EarlyArtDefineTag>ART_DEF_UNIT_EARLY_JET_FIGHTER_ENGLISH</EarlyArtDefineTag>
 						<LateArtDefineTag>ART_DEF_UNIT_EARLY_JET_FIGHTER_ENGLISH</LateArtDefineTag>
@@ -18337,7 +18337,7 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_P59</UnitType>
+					<UnitType>UNIT_EARLYJET</UnitType>
 					<UnitMeshGroup>
 						<EarlyArtDefineTag>ART_DEF_UNIT_EARLY_JET_FIGHTER_AMERICAN</EarlyArtDefineTag>
 						<LateArtDefineTag>ART_DEF_UNIT_EARLY_JET_FIGHTER_AMERICAN</LateArtDefineTag>
@@ -33206,7 +33206,7 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_P59</UnitType>
+					<UnitType>UNIT_EARLYJET</UnitType>
 					<UnitMeshGroup>
 						<EarlyArtDefineTag>ART_DEF_UNIT_EARLY_JET_FIGHTER_ROMAN</EarlyArtDefineTag>
 						<LateArtDefineTag>ART_DEF_UNIT_EARLY_JET_FIGHTER_ROMAN</LateArtDefineTag>
@@ -34699,7 +34699,7 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_P59</UnitType>
+					<UnitType>UNIT_EARLYJET</UnitType>
 					<UnitMeshGroup>
 						<EarlyArtDefineTag>ART_DEF_UNIT_EARLY_JET_FIGHTER_AMERICAN</EarlyArtDefineTag>
 						<LateArtDefineTag>ART_DEF_UNIT_EARLY_JET_FIGHTER_AMERICAN</LateArtDefineTag>
@@ -37728,7 +37728,7 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_P59</UnitType>
+					<UnitType>UNIT_EARLYJET</UnitType>
 					<UnitMeshGroup>
 						<EarlyArtDefineTag>ART_DEF_UNIT_EARLY_JET_FIGHTER_ENGLISH</EarlyArtDefineTag>
 						<LateArtDefineTag>ART_DEF_UNIT_EARLY_JET_FIGHTER_ENGLISH</LateArtDefineTag>
@@ -38313,7 +38313,7 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_P59</UnitType>
+					<UnitType>UNIT_EARLYJET</UnitType>
 					<UnitMeshGroup>
 						<EarlyArtDefineTag>ART_DEF_UNIT_EARLY_JET_FIGHTER_JAPAN</EarlyArtDefineTag>
 						<LateArtDefineTag>ART_DEF_UNIT_EARLY_JET_FIGHTER_JAPAN</LateArtDefineTag>
@@ -52604,7 +52604,7 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_F15</UnitType>
+					<UnitType>UNIT_STRIKE_FIGHTER</UnitType>
 					<UnitMeshGroup>
 						<EarlyArtDefineTag>ART_DEF_UNIT_MODERN_INTERCEPTOR_RUSSIAN</EarlyArtDefineTag>
 						<LateArtDefineTag>ART_DEF_UNIT_MODERN_INTERCEPTOR_RUSSIAN</LateArtDefineTag>
@@ -52764,7 +52764,7 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_HEAVY_TANK_M26</UnitType>
+					<UnitType>UNIT_HEAVY_TANK</UnitType>
 					<UnitMeshGroup>
 						<EarlyArtDefineTag>ART_DEF_UNIT_HEAVY_TANK_RUSSIAN</EarlyArtDefineTag>
 						<LateArtDefineTag>ART_DEF_UNIT_HEAVY_TANK_RUSSIAN</LateArtDefineTag>
@@ -53068,7 +53068,7 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_P59</UnitType>
+					<UnitType>UNIT_EARLYJET</UnitType>
 					<UnitMeshGroup>
 						<EarlyArtDefineTag>ART_DEF_UNIT_EARLY_JET_FIGHTER_RUSSIAN</EarlyArtDefineTag>
 						<LateArtDefineTag>ART_DEF_UNIT_EARLY_JET_FIGHTER_RUSSIAN</LateArtDefineTag>
@@ -55335,7 +55335,7 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_HEAVY_TANK_M26</UnitType>
+					<UnitType>UNIT_HEAVY_TANK</UnitType>
 					<UnitMeshGroup>
 						<EarlyArtDefineTag>ART_DEF_UNIT_HEAVY_TANK_GERMAN</EarlyArtDefineTag>
 						<LateArtDefineTag>ART_DEF_UNIT_HEAVY_TANK_GERMAN</LateArtDefineTag>

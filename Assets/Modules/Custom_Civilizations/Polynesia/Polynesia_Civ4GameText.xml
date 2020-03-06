@@ -17,7 +17,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIV_POLYNESIA_SHORT_DESC</Tag>
 		<English>Polynesia</English>
-		<French>Polynesie</French>
+		<French>Polynésie</French>
 		<German>Polynesien</German>
 		<Italian>Polinesia</Italian>
 		<Spanish>Polinesia</Spanish>
@@ -26,7 +26,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIV_POLYNESIA_ADJECTIVE</Tag>
 		<English>Polynesian</English>
-		<French>Polynesien</French>
+		<French>Polynésien</French>
 		<German>Polynesische</German>
 		<Italian>
 			<Text>Polinesiano:Polinesiana:Polinesiani:Polinesiane</Text>

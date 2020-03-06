@@ -225,7 +225,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_SPYVSPY_TAB</Tag>
 		<English>Spy vs Spy</English>
-		<French>CONTRE-ESPIONNAGE</French>
+		<French>Contre-espionnage</French>
 		<German>Gegenspionage</German>
 		<Spanish>Contraespionaje</Spanish>
 	</TEXT>
@@ -280,7 +280,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_USED_RADIATION</Tag>
 		<English>A dirty bomb was used, radioactive fallout has covered the area!</English>
-		<French>Un bombe nucléaire a été utilisée, un nuage radioactif a recouvert la zone!</French>
+		<French>Une bombe nucléaire a été utilisée, un nuage radioactif a recouvert la zone!</French>
 		<German>Eine niederträtige Bombe wurde benutzt, radioaktiver Niederschlag bedeckt hat das Gebiet!</German>
 		<Italian>E' stata usata una "bomba sporca", l'area è ricoperta da scorie radioattive!</Italian>
 		<Spanish>Una bomba sucia ha sido detonada, ¡recubriendo la zona de Lluvia radiactiva!</Spanish>

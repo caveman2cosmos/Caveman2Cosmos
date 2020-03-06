@@ -1395,7 +1395,7 @@
 		<Polish>Niedźwiedź brunatny (Ursus arctos) - gatunek drapieżnego ssaka z rodziny niedźwiedziowatych. Zamieszkuje Azję, Europę Północną i Amerykę Północną. Niezagrożony wyginięciem. Sierść niedźwiedzia brunatnego ma barwę ciemnobrązową, choć niektóre jego podgatunki mogą mieć futro jaśniejsze. W pozycji wyprostowanej Ursus arctos mierzy - w zależności od płci - od 1,8 m do 3 m. Masa ciała poszczególnych osobników waha się między 200 a 780 kg. Niedźwiedzica wydaje na świat co dwa lata dwoje-troje młodych. Ciąża trwa około 8 miesięcy. Poród następuje zwykle między grudniem a lutym.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_BUFFALO_CAPE</Tag>
+		<Tag>TXT_KEY_UNIT_BUFFALO</Tag>
 		<English>Cape Buffalo</English>
 		<French>
 			<Text>Buffle d'eau</Text>
@@ -1411,7 +1411,7 @@
 		<Polish>Bawół Wodny</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_BUFFALO_CAPE_PEDIA</Tag>
+		<Tag>TXT_KEY_UNIT_BUFFALO_PEDIA</Tag>
 		<English>The Cape buffalo or African buffalo (Syncerus caffer), is a large African bovine. It is not closely related to the slightly larger wild Asian water buffalo, and its ancestry remains unclear.  The adult buffalo's horns are its characteristic feature; they have fused bases, forming a continuous bone shield referred to as a "boss". It is widely regarded as a very dangerous animal, as it gores and kills over 200 people every year. The African buffalo is not an ancestor of domestic cattle, and is only distantly related to other larger bovines. Owing to its unpredictable nature, which makes it highly dangerous to humans, the African buffalo has never been domesticated unlike its Asian counterpart, the water buffalo. Other than humans, African Cape buffaloes have few predators aside from lions and are capable of defending themselves.</English>
 	</TEXT>
 	<TEXT>
@@ -2072,9 +2072,26 @@
 		<Polish>Bielik olbrzymi (Haliaeetus pelagicus) - gatunek ptaka drapieżnego z rodziny jastrzębiowatych (Accipitridae). Największy ze wszystkich gatunków bielików - osiąga rozpiętość skrzydeł do 2,5 m. Występuje na północnopacyficznym wybrzeżu Azji. Żywi się rybami, ptakami i ssakami morskimi. Prowadzi dzienny tryb życia. Wyprowadza jeden lęg w roku - samica składa dwa jaja. Wysiadywanie jaj trwa 39 - 45 dni.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SEALION</Tag>
-		<English>Sealion</English>
-		<French>Lion de mer</French>
+		<Tag>TXT_KEY_UNIT_SEALION_LAND</Tag>
+		<English>Sealion (Land)</English>
+		<French>Lion de mer (terre)</French>
+		<German>
+			<Text>Seelöwe:Seelöwen:Seelöwen:Seelöwen:Seelöwen:Seelöwen:Seelöwen:Seelöwen</Text>
+			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
+		<Italian>Leone marino</Italian>
+		<Spanish>
+			<Text>Lobo marino</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Lew Morski</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SEALION_SEA</Tag>
+		<English>Sealion (Sea)</English>
+		<French>Lion de mer (eau)</French>
 		<German>
 			<Text>Seelöwe:Seelöwen:Seelöwen:Seelöwen:Seelöwen:Seelöwen:Seelöwen:Seelöwen</Text>
 			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
@@ -2877,12 +2894,12 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 		<Polish>Efekt Historii - Aligator Chiński</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CAIMAN_BLACK</Tag>
+		<Tag>TXT_KEY_UNIT_CAIMAN</Tag>
 		<English>Black Caiman</English>
 		<French>Caïman noir</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CAIMAN_BLACK_PEDIA</Tag>
+		<Tag>TXT_KEY_UNIT_CAIMAN_PEDIA</Tag>
 		<English>TBD</English>
 		<French>TBD</French>
 		<Polish>Kajmany (Caimaninae)  podrodzina gadów z rodziny aligatorów, obejmująca gatunki z rodzajów Caiman, Melanosuchus i Paleosuchus. Kajmany mają duże płytki kostne wzmacniające rogowe tarczki brzuszne. Długość dorosłych kajmanów od 1,5  kajman Schneidera (Paleosuchus trigonatus)  do 4,5 m  kajman czarny (Melanosuchus niger) (choć prehistoryczne kajmany, takie jak Purussaurus, osiągały nawet 11 m długości). Występują w Ameryce Zrodkowej i Południowej.</Polish>

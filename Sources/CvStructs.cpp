@@ -316,27 +316,8 @@ void PropertySpawns::read(FDataStreamBase* pStream)
 	wrapper.AttachToStream(pStream);
 
 	WRAPPER_READ_OBJECT_START(wrapper);
-
-	// @SAVEBREAK REPLACE 31/8/2018
-	// Replace this code at the next save break.
-	// Backwards compat loading of prop spawns that weren't being remapped correctly
-	WRAPPER_READ(wrapper, "PropertySpawns", (int*)&eProperty);
-	if (eProperty == -2)
-	{
-		PropertyTypes eRemappedProperty;
-		WRAPPER_READ_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_PROPERTIES, (int*)&eRemappedProperty);
-		eProperty = eRemappedProperty;
-		WRAPPER_READ_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_UNIT_CLASSES, (int*)&eUnitClass);
-	}
-	else
-	{
-		WRAPPER_READ(wrapper, "PropertySpawns", (int*)&eUnitClass);
-	}
-	// REPLACE WITH
-	// WRAPPER_READ_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_PROPERTIES, (int*)& eProperty);
-	// WRAPPER_READ_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_UNIT_CLASSES, (int*)& eUnitClass);
-	// SAVEBREAK@
-
+	WRAPPER_READ_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_PROPERTIES, (int*)& eProperty);
+	WRAPPER_READ_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_UNITS, (int*)& eUnit);
 	WRAPPER_READ_OBJECT_END(wrapper);
 }
 
@@ -347,19 +328,8 @@ void PropertySpawns::write(FDataStreamBase* pStream)
 	wrapper.AttachToStream(pStream);
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
-
-	// @SAVEBREAK REPLACE 31/8/2018
-	// Replace this code at the next save break.
-	// Backwards compat loading of prop spawns that weren't being remapped correctly
-	WRAPPER_WRITE_DECORATED(wrapper, "PropertySpawns", -2, "eProperty");
-	PropertyTypes eRemappedProperty = eProperty;
-	WRAPPER_WRITE_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_PROPERTIES, eRemappedProperty);
-	WRAPPER_WRITE_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_UNIT_CLASSES, eUnitClass);
-	// REPLACE WITH
-	// WRAPPER_WRITE_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_PROPERTIES, eRemappedProperty);
-	// WRAPPER_WRITE_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_UNIT_CLASSES, eUnitClass);
-	// SAVEBREAK@
-
+	WRAPPER_WRITE_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_PROPERTIES, eProperty);
+	WRAPPER_WRITE_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_UNITS, eUnit);
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
 

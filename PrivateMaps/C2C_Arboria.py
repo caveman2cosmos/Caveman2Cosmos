@@ -235,8 +235,8 @@ def normalizeAddExtras():
 # Sirian's "Sahara Regional Bonus Placement" system.
 
 # Init all bonuses. This is your master key.
-forest = ('BONUS_SILVER', 'BONUS_DEER')
-silver = ('BONUS_SILVER')
+forest = ('BONUS_SILVER_ORE', 'BONUS_DEER')
+silver = ('BONUS_SILVER_ORE')
 deer = ('BONUS_DEER')
 
 def addBonusType(argsList):

@@ -105,11 +105,13 @@ class CvMilitaryAdvisor:
 		H_MAP_MAX = yRes - Y_MAP - 10
 
 		MAP = CyMap()
+
 		iMap_W = MAP.getViewportWidth()
-		iMap_H = float(MAP.getViewportHeight())
-		self.H_MAP = H_MAP = int(W_MAP * iMap_H / iMap_W)
+		iMap_H = MAP.getViewportHeight()
+
+		self.H_MAP = H_MAP = int(W_MAP * iMap_H * 1.0 / iMap_W)
 		if H_MAP > H_MAP_MAX:
-			self.W_MAP = W_MAP = int(H_MAP_MAX * iMap_W / iMap_H)
+			self.W_MAP = W_MAP = int(H_MAP_MAX * iMap_W * 1.0 / iMap_H)
 			self.H_MAP = H_MAP = H_MAP_MAX
 
 		self.xUnitList	= xUnitList	= 30 + W_MAP
@@ -123,7 +125,7 @@ class CvMilitaryAdvisor:
 		screen.addPanel("MA_PnlMM", "", "", False, False, 8, yMainPnl, W_MAP + 12, H_MAP + 18, ePnlBlue50)
 		screen.initMinimap(14, 14 + W_MAP, Y_MAP, Y_MAP + H_MAP, 0)
 
-		if MAP.viewportsEnabled():
+		if GAME.isDebugMode():
 			screen.updateMinimapSection(True, True)
 		else:
 			screen.updateMinimapSection(False, False)
@@ -132,7 +134,6 @@ class CvMilitaryAdvisor:
 		screen.setMinimapMode(MinimapModeTypes.MINIMAPMODE_MILITARY)
 		# Set minimap visibility
 		screen.updateMinimapVisibility()
-		screen.bringMinimapToFront()
 
 		# Unit grouping dropboxes
 		x1 = xUnitList - 2

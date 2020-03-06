@@ -5701,7 +5701,7 @@ bool CvPlot::isNPC() const
 
 bool CvPlot::isHominid() const
 {
-	return (getOwner() == BARBARIAN_PLAYER || getOwner() == NPC7_PLAYER);
+	return (getOwner() == BARBARIAN_PLAYER || getOwner() == NEANDERTHAL_PLAYER);
 }
 
 
@@ -8108,7 +8108,7 @@ TerrainTypes CvPlot::getTerrainTypeExternal() const
 		}
 		else
 		{
-			return (TerrainTypes)GC.getInfoTypeForString("TERRAIN_GRASS");
+			return (TerrainTypes)GC.getInfoTypeForString("TERRAIN_GRASSLAND");
 		}
 	}
 	else

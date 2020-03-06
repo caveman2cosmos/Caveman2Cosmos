@@ -27,7 +27,7 @@
 			<Bonus>BONUS_RESIN</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOD</Bonus>
-				<Bonus>BONUS_TIMBER</Bonus>
+				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -123,7 +123,7 @@
 			<Bonus>BONUS_RESIN</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOD</Bonus>
-				<Bonus>BONUS_TIMBER</Bonus>
+				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			</PrereqBonuses>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
@@ -211,7 +211,7 @@
 			<Bonus>BONUS_RESIN</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOD</Bonus>
-				<Bonus>BONUS_TIMBER</Bonus>
+				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			</PrereqBonuses>
 			<!--PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>

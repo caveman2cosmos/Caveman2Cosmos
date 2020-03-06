@@ -45,6 +45,11 @@ CyMap* CyGlobalContext::getCyMap() const
 /***** Parallel Maps - Begin *****/
 /*********************************/
 
+bool CyGlobalContext::multiMapsEnabled() const
+{
+	return GC.multiMapsEnabled();
+}
+
 void CyGlobalContext::switchMap(int iMap)
 {
 	GC.switchMap((MapTypes)iMap);
@@ -60,16 +65,6 @@ CvMapInfo* CyGlobalContext::getMapInfo(int iMap) const
 	return &(GC.getMapInfo((MapTypes)iMap));
 }
 
-int CyGlobalContext::getNumMapSwitchInfos() const
-{
-	return GC.getNumMapSwitchInfos();
-}
-
-CvMapSwitchInfo* CyGlobalContext::getMapSwitchInfo(int iMapSwitch) const
-{
-	return &(GC.getMapSwitchInfo((MapSwitchTypes)iMapSwitch));
-}
-
 CyMap* CyGlobalContext::getMapByIndex(int iIndex)
 {
 	static CyMap cyMap;
@@ -77,9 +72,19 @@ CyMap* CyGlobalContext::getMapByIndex(int iIndex)
 	return &cyMap;
 }
 
+void CyGlobalContext::updateMaps()
+{
+	GC.updateMaps();
+}
+
 void CyGlobalContext::initializeMap(int iMap)
 {
-	return GC.initializeMap((MapTypes)iMap);
+	GC.initializeMap((MapTypes)iMap);
+}
+
+bool CyGlobalContext::mapInitialized(int iMap) const
+{
+	return GC.mapInitialized((MapTypes)iMap);
 }
 
 /*******************************/
@@ -251,11 +256,6 @@ CvBuildingClassInfo* CyGlobalContext::getBuildingClassInfo(int i) const
 CvBuildingInfo* CyGlobalContext::getBuildingInfo(int i) const
 {
 	return (i>=0 && i<GC.getNumBuildingInfos()) ? &GC.getBuildingInfo((BuildingTypes) i) : NULL;
-}
-
-CvUnitClassInfo* CyGlobalContext::getUnitClassInfo(int i) const
-{
-	return (i>=0 && i<GC.getNumUnitClassInfos()) ? &GC.getUnitClassInfo((UnitClassTypes) i) : NULL;
 }
 
 

@@ -36,7 +36,7 @@ typedef std::list<CvDiploParameters*> CvDiploQueue;
 typedef stdext::hash_map<int, int> CvTurnScoreMap;
 typedef stdext::hash_map<EventTypes, EventTriggeredData> CvEventMap;
 typedef std::vector< std::pair<UnitCombatTypes, PromotionTypes> > UnitCombatPromotionArray;
-typedef std::vector< std::pair<UnitClassTypes, PromotionTypes> > UnitClassPromotionArray;
+typedef std::vector< std::pair<UnitTypes, PromotionTypes> > UnitPromotionArray;
 typedef std::vector< std::pair<CivilizationTypes, LeaderHeadTypes> > CivLeaderArray;
 
 //	Forward declaration
@@ -57,7 +57,7 @@ protected:
 	CvGameObjectPlayer m_GameObject;
 
 public:
-	// < M.A.D. Nukes Start >
+	// M.A.D. Nukes
 	int getMADDeterrent() const;
 	void setMADDeterrent(int iValue);
 	void changeMADDeterrent(int iValue);
@@ -78,46 +78,25 @@ protected:
 	int m_iMADOutgoing;
 	int m_iMADNukesCount;
 	bool m_bMADTrigger[MAX_PLAYERS];
+	// ! M.A.D. Nukes
 
 public:
-	// < M.A.D. Nukes End   >
 
 
 	DllExport void init(PlayerTypes eID);
 	DllExport void setupGraphical();
 	DllExport void reset(PlayerTypes eID = NO_PLAYER, bool bConstructorCall = false);
 
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD                      12/30/08                                jdog5000      */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-		// REVOLUTION_MOD:  Customized version of initInGame below
+	// REVOLUTION_MOD:  Customized version of initInGame below
 	void resetPlotAndCityData();
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD                       END                                                  */
-	/************************************************************************************************/
 
-	/************************************************************************************************/
-	/* CHANGE_PLAYER                          12/30/08                                jdog5000      */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
 	void logMsg(char* format, ...);
 	void changePersonalityType();
 	void resetCivTypeEffects();
 	void changeLeader(LeaderHeadTypes eNewLeader);
 	void changeCiv(CivilizationTypes eNewCiv);
 	void setIsHuman(bool bNewValue);
-	/************************************************************************************************/
-	/* CHANGE_PLAYER                           END                                                  */
-	/************************************************************************************************/
 
-	/************************************************************************************************/
-	/* REVOLUTION_MOD                         01/04/09                                jdog5000      */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
 	void initInGame(PlayerTypes eID, bool bSetAlive);
 	void setIsRebel(bool bNewValue);
 	bool isRebel() const;
@@ -127,11 +106,8 @@ public:
 	int getStabilityIndexAverage() const;
 	void setStabilityIndexAverage(int iNewValue);
 	void updateStabilityIndexAverage();
-	/************************************************************************************************/
-	/* REVOLUTION_MOD                          END                                                  */
-	/************************************************************************************************/
-	//protected:
 
+	//protected:
 	void uninit();
 
 public:
@@ -149,7 +125,6 @@ public:
 /************************************************************************************************/
 	int getBestUnitTypeCargoVolume(UnitAITypes eUnitAI) const;
 	bool addStartUnitAI(const UnitAITypes eUnitAI, const int iCount);
-	void addStartUnit(const UnitTypes eUnit, const UnitAITypes eUnitAI = NO_UNITAI);
 
 	int startingPlotRange() const; // Exposed to Python
 	bool startingPlotWithinRange(CvPlot* pPlot, PlayerTypes ePlayer, int iRange, int iPass) const; // Exposed to Python
@@ -354,7 +329,7 @@ public:
 	bool canConstructInternal(BuildingTypes eBuilding, bool bContinue = false, bool bTestVisible = false, bool bIgnoreCost = false, TechTypes eIgnoreTechReq = NO_TECH, int* probabilityEverConstructable = NULL, bool bAffliction = false, bool bExposed = false) const;
 	bool canCreate(ProjectTypes eProject, bool bContinue = false, bool bTestVisible = false) const; // Exposed to Python
 	bool canMaintain(ProcessTypes eProcess, bool bContinue = false) const; // Exposed to Python
-	bool isProductionMaxedUnitClass(UnitClassTypes eUnitClass) const; // Exposed to Python
+	bool isProductionMaxedUnit(UnitTypes eUnit) const; // Exposed to Python
 	bool isProductionMaxedBuildingClass(BuildingClassTypes eBuildingClass, bool bAcquireCity = false) const; // Exposed to Python
 	bool isProductionMaxedProject(ProjectTypes eProject) const; // Exposed to Python
 	int getProductionNeeded(UnitTypes eUnit) const; // Exposed to Python
@@ -1146,40 +1121,20 @@ public:
 	void changeFreeAreaBuildingCount(BuildingTypes eIndex, const CvArea* area, int iChange);
 
 	int getExtraBuildingHappiness(BuildingTypes eIndex) const; // Exposed to Python
-/********************************************************************************/
-/* 	New Civic AI						02.08.2010				Fuyu			*/
-/********************************************************************************/
-//Fuyu bLimited
 	void changeExtraBuildingHappiness(BuildingTypes eIndex, int iChange, bool bLimited = false);
-	/********************************************************************************/
-	/* 	New Civic AI												END 			*/
-	/********************************************************************************/
+
 	int getExtraBuildingHealth(BuildingTypes eIndex) const; // Exposed to Python
-/********************************************************************************/
-/* 	New Civic AI						02.08.2010				Fuyu			*/
-/********************************************************************************/
-//Fuyu bLimited
 	void changeExtraBuildingHealth(BuildingTypes eIndex, int iChange, bool bLimited = false);
-	/********************************************************************************/
-	/* 	New Civic AI												END 			*/
-	/********************************************************************************/
 
 	int getFeatureHappiness(FeatureTypes eIndex) const; // Exposed to Python
-/********************************************************************************/
-/* 	New Civic AI						02.08.2010				Fuyu			*/
-/********************************************************************************/
-//Fuyu bLimited
 	void changeFeatureHappiness(FeatureTypes eIndex, int iChange, bool bLimited = false);
-	/********************************************************************************/
-	/* 	New Civic AI												END 			*/
-	/********************************************************************************/
 
-	int getUnitClassCount(UnitClassTypes eIndex) const; // Exposed to Python
-	bool isUnitClassMaxedOut(UnitClassTypes eIndex, int iExtra = 0) const; // Exposed to Python
-	void changeUnitClassCount(UnitClassTypes eIndex, int iChange);
-	int getUnitClassMaking(UnitClassTypes eIndex) const; // Exposed to Python
-	void changeUnitClassMaking(UnitClassTypes eIndex, int iChange);
-	int getUnitClassCountPlusMaking(UnitClassTypes eIndex) const; // Exposed to Python
+	int getUnitCount(UnitTypes eIndex) const; // Exposed to Python
+	bool isUnitMaxedOut(const UnitTypes eIndex, const int iExtra = 0) const; // Exposed to Python
+	void changeUnitCount(UnitTypes eIndex, int iChange);
+	int getUnitMaking(UnitTypes eIndex) const; // Exposed to Python
+	void changeUnitMaking(UnitTypes eIndex, int iChange);
+	int getUnitCountPlusMaking(UnitTypes eIndex) const; // Exposed to Python
 
 	int getBuildingClassCount(BuildingClassTypes eIndex) const;
 	int getBuildingGroupCount(SpecialBuildingTypes eIndex) const; // Exposed to Python
@@ -1229,14 +1184,8 @@ public:
 
 	CvProperties* getProperties();
 	const CvProperties* getPropertiesConst() const;
-	/********************************************************************************/
-	/* 	New Civic AI						19.08.2010				Fuyu			*/
-	/********************************************************************************/
-	//Fuyu bLimited
+
 	void changeSpecialistValidCount(SpecialistTypes eIndex, int iChange, bool bLimited = false);
-	/********************************************************************************/
-	/* 	New Civic AI												END 			*/
-	/********************************************************************************/
 
 	bool isResearchingTech(TechTypes eIndex) const; // Exposed to Python
 	void setResearchingTech(TechTypes eIndex, bool bNewValue);
@@ -1455,14 +1404,14 @@ public:
 
 	bool isFreePromotion(UnitCombatTypes eUnitCombat, PromotionTypes ePromotion) const;
 	void setFreePromotion(UnitCombatTypes eUnitCombat, PromotionTypes ePromotion, bool bFree);
-	bool isFreePromotion(UnitClassTypes eUnitCombat, PromotionTypes ePromotion) const;
-	void setFreePromotion(UnitClassTypes eUnitCombat, PromotionTypes ePromotion, bool bFree);
+	bool isFreePromotion(UnitTypes eUnit, PromotionTypes ePromotion) const;
+	void setFreePromotion(UnitTypes eUnit, PromotionTypes ePromotion, bool bFree);
 
 	PlayerVoteTypes getVote(int iId) const;
 	void setVote(int iId, PlayerVoteTypes ePlayerVote);
 
-	int getUnitExtraCost(UnitClassTypes eUnitClass) const;
-	void setUnitExtraCost(UnitClassTypes eUnitClass, int iCost);
+	int getUnitExtraCost(UnitTypes eUnit) const;
+	void setUnitExtraCost(UnitTypes eUnit, int iCost);
 
 	bool splitEmpire(int iAreaId);
 	bool canSplitEmpire() const;
@@ -1622,8 +1571,8 @@ public:
 	int getBuildingClassProductionModifier(BuildingClassTypes eIndex) const;
 	void changeBuildingClassProductionModifier(BuildingClassTypes eIndex, int iChange);
 
-	int getUnitClassProductionModifier(UnitClassTypes eIndex) const;
-	void changeUnitClassProductionModifier(UnitClassTypes eIndex, int iChange);
+	int getUnitProductionModifier(UnitTypes eIndex) const;
+	void changeUnitProductionModifier(UnitTypes eIndex, int iChange);
 
 	bool isAutomatedCanBuild(BuildTypes eBuild) const; //Exposed to Python
 	void setAutomatedCanBuild(BuildTypes eBuild, bool bNewValue); //Exposed to Python
@@ -1736,7 +1685,7 @@ public:
 	void changeBonusMintedPercent(BonusTypes eIndex, int iChange);
 
 	//	Moved from unit to player to allow for caching
-	bool upgradeAvailable(UnitTypes eFromUnit, UnitClassTypes eToUnitClass) const;
+	bool upgradeAvailable(UnitTypes eFromUnit, UnitTypes eToUnit) const;
 
 	// Building list for filtering, grouping and sorting
 	void setBuildingListInvalid();
@@ -1785,7 +1734,7 @@ protected:
 	int** m_ppiBonusCommerceModifier;
 	int* m_paiUnitCombatProductionModifier;
 	int* m_paiBuildingClassProductionModifier;
-	int* m_paiUnitClassProductionModifier;
+	int* m_paiUnitProductionModifier;
 	int* m_paiBonusMintedPercent;
 	int* m_paiPlayerWideAfflictionCount;
 	bool* m_pabAutomatedCanBuild;
@@ -1912,9 +1861,7 @@ public:
 
 	void verifyUnitStacksValid();
 	UnitTypes getTechFreeUnit(TechTypes eTech) const;
-#ifdef C2C_BUILD
 	UnitTypes getTechFreeProphet(TechTypes eTech) const;
-#endif
 
 	// BUG - Trade Totals - start
 	void calculateTradeTotals(YieldTypes eIndex, int& iDomesticYield, int& iDomesticRoutes, int& iForeignYield, int& iForeignRoutes, PlayerTypes eWithPlayer = NO_PLAYER, bool bRound = false, bool bBase = false) const;
@@ -2275,8 +2222,8 @@ protected:
 	int** m_paiExtraBuildingYield;
 	int** m_paiExtraBuildingCommerce;
 	int* m_paiFeatureHappiness;
-	int* m_paiUnitClassCount;
-	int* m_paiUnitClassMaking;
+	int* m_paiUnitCount;
+	int* m_paiUnitMaking;
 	int* m_paiBuildingClassCount;
 	int* m_paiBuildingGroupCount;
 	int* m_paiBuildingClassMaking;
@@ -2320,10 +2267,10 @@ protected:
 	CvEventMap m_mapEventsOccured;
 	CvEventMap m_mapEventCountdown;
 	UnitCombatPromotionArray m_aFreeUnitCombatPromotions;
-	UnitClassPromotionArray m_aFreeUnitClassPromotions;
+	UnitPromotionArray m_aFreeUnitPromotions;
 
 	std::vector< std::pair<int, PlayerVoteTypes> > m_aVote;
-	std::vector< std::pair<UnitClassTypes, int> > m_aUnitExtraCosts;
+	std::vector< std::pair<UnitTypes, int> > m_aUnitExtraCosts;
 
 	CvMessageQueue m_listGameMessages;
 	CvPopupQueue m_listPopups;
@@ -2403,7 +2350,7 @@ protected:
 	void getDebugLayerColors(GlobeLayerResourceOptionTypes eOption, std::vector<NiColorA>& aColors, std::vector<CvPlotIndicatorData>& aIndicators) const; // used by Globeview resource layer
 
 	void processTrait(TraitTypes eTrait, int iChange);
-	void recalculateUnitClassCounts();
+	void recalculateUnitCounts();
 
 	//TB Traits begin
 public:

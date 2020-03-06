@@ -295,12 +295,6 @@ void CyCityPythonInterface2(python::class_<CyCity>& x)
 		.def("changeProjectProduction", &CyCity::changeProjectProduction, "void (int /*ProjectTypes*/ eIndex, int iChange)")
 // BUG - Project Production - end
 
-
-/************************************************************************************************/
-/* Afforess	                  Start		 03/10/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 		.def("AI_isDefended", &CyCity::AI_isDefended, "bool (int iExtra)")
 		.def("getArea", &CyCity::getArea, "int ()")
 		.def("isWeLoveTheKingDay", &CyCity::isWeLoveTheKingDay, "bool ()")
@@ -313,26 +307,23 @@ void CyCityPythonInterface2(python::class_<CyCity>& x)
 		.def("isValidTerrainForBuildings", &CyCity::isValidTerrainForBuildings, "bool (int /*BuildingTypes*/)")
 		.def("hasFreshWater", &CyCity::hasFreshWater, "bool ()")
 		.def("canUpgradeUnit", &CyCity::canUpgradeUnit, "bool (int /*UnitTypes*/)")
-		.def("changeUnitClassProductionModifier", &CyCity::changeUnitClassProductionModifier, "void (int /*UnitClassTypes*/, int iChange)")
+		.def("getUnitProductionModifier", &CyCity::getUnitProductionModifier, "int (int /*UnitTypes*/)")
+		.def("changeUnitProductionModifier", &CyCity::changeUnitProductionModifier, "void (int /*UnitTypes*/, int iChange)")
 		.def("getBuildingClassProductionModifier", &CyCity::getBuildingClassProductionModifier, "int (int /*BuildingClassTypes*/)")
 		.def("changeBuildingClassProductionModifier", &CyCity::changeBuildingClassProductionModifier, "void (int /*BuildingClassTypes*/, int iChange)")
 		.def("getBonusDefenseChanges", &CyCity::getBonusDefenseChanges, "int (int /*CommerceTypes*/)")
-		.def("changeBonusDefenseChanges", &CyCity::changeBonusDefenseChanges, "void (int /*UnitClassTypes*/, int iChange)")
+		.def("changeBonusDefenseChanges", &CyCity::changeBonusDefenseChanges, "void (int /*BonusTypes*/, int iChange)")
 		.def("getBonusCommerceRateModifier", &CyCity::getBonusCommerceRateModifier, "int (int /*CommerceTypes*/)")
 		.def("changeBonusCommerceRateModifier", &CyCity::changeBonusCommerceRateModifier, "void (int /*CommerceTypes*/, int iChange)")
 		.def("changePowerCount", &CyCity::changePowerCount, "void (int iChange, bool bDirty)")
-		
+
 		.def("getEventAnger", &CyCity::getEventAnger, "void ()")
 		.def("changeEventAnger", &CyCity::changeEventAnger, "void (int iChange)")
 		.def("getNumPopulationEmployed", &CyCity::getNumPopulationEmployed, "int ()")
-		
+
 		.def("getBonusCommercePercentChanges", &CyCity::getBonusCommercePercentChanges, "int (eCommerce, eBuilding)")
 		.def("isAutomatedCanBuild", &CyCity::isAutomatedCanBuild, "bool ()")
 		.def("setAutomatedCanBuild", &CyCity::setAutomatedCanBuild, "void ()")
-
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 		.def("getProperties", &CyCity::getProperties, python::return_value_policy<python::reference_existing_object>(), "CvProperties ()")
 

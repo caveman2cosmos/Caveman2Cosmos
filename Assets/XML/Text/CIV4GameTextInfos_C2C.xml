@@ -178,11 +178,6 @@
 		<German>[SPACE]Die Informationen der Dorfbewohner haben zu einem großen Durchbruch bei Euren Forschungen geführt!</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GOODY_HUNTER</Tag>
-		<English>[SPACE]After a night of feasting and telling stories, a Hunter has agreed to accompany you!</English>
-		<French>[SPACE]Après une nuit autour du feu, à raconter ses histoires de chasse, un Chasseur accepte de se joindre à vous!</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GOODY_WISE_WOMAN</Tag>
 		<English>[SPACE]One of the tribe's women has taken a liking to your explorers!</English>
 		<French>[SPACE]Une femme de la tribu est tombée amoureuse d'un de vos éclaireurs!</French>

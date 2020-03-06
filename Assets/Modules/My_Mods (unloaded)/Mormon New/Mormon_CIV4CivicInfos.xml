@@ -50,7 +50,7 @@
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_GOVERNMENT</CivicOptionType>
-			<Type>CIVIC_FASCIST</Type>
+			<Type>CIVIC_TOTALITARIANISM</Type>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
 					<BuildingType>BUILDINGCLASS_MORMON_TEMPLE</BuildingType>
@@ -98,7 +98,7 @@
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_RELIGION</CivicOptionType>
-			<Type>CIVIC_ATHEIST</Type>
+			<Type>CIVIC_ANTIRELIGION</Type>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
 					<BuildingType>BUILDINGCLASS_MORMON_TEMPLE</BuildingType>
@@ -128,7 +128,7 @@
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_EDUCATION</CivicOptionType>
-			<Type>CIVIC_RELIGIOUS_TRAINING</Type>
+			<Type>CIVIC_RELIGIOUS</Type>
 			<BuildingClassProductionModifiers>
 				<BuildingClassProductionModifier>
 					<BuildingClassType>BUILDINGCLASS_MISSIONARY_TRAINING_CENTER</BuildingClassType>
@@ -138,7 +138,7 @@
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_LANGUAGE</CivicOptionType>
-			<Type>CIVIC_EDUCATION_SPEAK</Type>
+			<Type>CIVIC_CODIFIED</Type>
 			<BuildingClassProductionModifiers>
 				<BuildingClassProductionModifier>
 					<BuildingClassType>BUILDINGCLASS_MISSIONARY_TRAINING_CENTER</BuildingClassType>
@@ -147,8 +147,8 @@
 			</BuildingClassProductionModifiers>
 		</CivicInfo>
 		<CivicInfo>
-			<CivicOptionType>CIVICOPTION_LABOR</CivicOptionType>
-			<Type>CIVIC_SOCIALISM</Type>
+			<CivicOptionType>CIVICOPTION_WORKFORCE</CivicOptionType>
+			<Type>CIVIC_COLLECTIVIST</Type>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
 					<BuildingType>BUILDINGCLASS_MORMON_TEMPLE</BuildingType>

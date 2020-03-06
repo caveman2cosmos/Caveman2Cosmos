@@ -80,12 +80,7 @@ struct FreePromoTypes
 	operator int() const {return (int)ePromotion;}
 	bool operator< (const FreePromoTypes& rhs) const {return (int)ePromotion < (int)rhs.ePromotion;}
 };
-struct FreeTraitTypes
-{	
-	TraitTypes eTrait;
-	operator int() const {return (int)eTrait;}
-	bool operator< (const FreeTraitTypes& rhs) const {return (int)eTrait < (int)rhs.eTrait;}
-};
+
 struct AfflictOnAttack
 {	
 	PromotionLineTypes eAfflictionLine;
@@ -744,11 +739,11 @@ struct BuildingCommerceChange
 struct PropertySpawns
 {
 	PropertyTypes eProperty;
-	UnitClassTypes eUnitClass;
+	UnitTypes eUnit;
 
 	PropertySpawns()
 		: eProperty(NO_PROPERTY)
-		, eUnitClass(NO_UNITCLASS)
+		, eUnit(NO_UNIT)
 	{}
 
 	void read(FDataStreamBase* pStream);

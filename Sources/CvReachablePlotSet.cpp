@@ -119,7 +119,7 @@ CvReachablePlotSet::~CvReachablePlotSet()
 CvReachablePlotSet::const_iterator CvReachablePlotSet::begin() const
 {
 	CvReachablePlotSet::const_iterator result = CvReachablePlotSet::const_iterator(this, (m_proxyTo == NULL ? m_reachablePlots->begin() : m_proxyTo->m_reachablePlots->begin()));
-	
+
 	while( result != end() && result.stepDistance() > m_iRange )
 	{
 		++result;
@@ -344,46 +344,40 @@ bool CvReachablePlotSet::canMoveBetweenWithFlags(const CvSelectionGroup* group, 
 		}
 	}
 
-	if (!GC.getGame().isOption(GAMEOPTION_NO_ZOC))
+	if (GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL))
 	{
-		//	Need to handle ZOCs
-		//	ZOCs don't apply into cities of the unit owner
-		TeamTypes	eTeam = group->getTeam();
-		PlayerTypes eOwner = group->getHeadOwner();
-	
-		if ( pToPlot->getPlotCity() == NULL || pToPlot->getPlotCity()->getTeam() != eTeam )
+		const TeamTypes eTeam = group->getTeam();
+		const PlayerTypes eOwner = group->getHeadOwner();
+
+		// ZoC don't apply into cities of the unit owner
+		if (pToPlot->getPlotCity() == NULL || pToPlot->getPlotCity()->getTeam() != eTeam)
 		{
-			//Fort ZOC
-			PlayerTypes eDefender = pFromPlot->controlsAdjacentZOCSource(eTeam);
+			// Fort ZoC
+			const PlayerTypes eDefender = pFromPlot->controlsAdjacentZOCSource(eTeam);
 			if (eDefender != NO_PLAYER)
 			{
 				const CvPlot* pZoneOfControl = pFromPlot->isInFortControl(true, eDefender, eOwner);
 				const CvPlot* pForwardZoneOfControl = pToPlot->isInFortControl(true, eDefender, eOwner);
-				if (pZoneOfControl != NULL && pForwardZoneOfControl != NULL)
+				if (pZoneOfControl != NULL && pForwardZoneOfControl != NULL
+				&& pZoneOfControl == pToPlot->isInFortControl(true, eDefender, eOwner, pZoneOfControl)
+				&& !group->canIgnoreZoneofControl())
 				{
-					if (pZoneOfControl == pToPlot->isInFortControl(true, eDefender, eOwner, pZoneOfControl) && !group->canIgnoreZoneofControl())
-					{
-						return false;
-					}
+					return false;
 				}
 			}
-			
-			//City ZoC
+			// City ZoC
 			if (pFromPlot->isInCityZoneOfControl(eOwner) && pToPlot->isInCityZoneOfControl(eOwner) && !group->canIgnoreZoneofControl())
 			{
 				return false;
 			}
 		}
-		//Promotion ZoC
-		if (GC.getGame().isAnyoneHasUnitZoneOfControl())
+		// Promotion ZoC
+		if (GC.getGame().isAnyoneHasUnitZoneOfControl() && !group->canIgnoreZoneofControl()
+		&& pFromPlot->isInUnitZoneOfControl(eOwner) && pToPlot->isInUnitZoneOfControl(eOwner))
 		{
-			if (pFromPlot->isInUnitZoneOfControl(eOwner) && pToPlot->isInUnitZoneOfControl(eOwner) && !group->canIgnoreZoneofControl())
-			{
-				return false;
-			}
+			return false;
 		}
 	}
-
 	return moveToValid(group, pToPlot, iFlags);
 }
 

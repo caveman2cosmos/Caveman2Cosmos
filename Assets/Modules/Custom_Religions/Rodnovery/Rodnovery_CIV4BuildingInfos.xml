@@ -15,8 +15,8 @@
 			<Strategy>TXT_KEY_BUILDING_RODNOVERY_CATHEDRAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RODNOVERY_CATHEDRAL</ArtDefineTag>
-			<ReligionType>RELIGION_RODNOVERY</ReligionType>
-			<PrereqReligion>RELIGION_RODNOVERY</PrereqReligion>
+			<ReligionType>RELIGION_RODNOVERA</ReligionType>
+			<PrereqReligion>RELIGION_RODNOVERA</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>280</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -33,7 +33,7 @@
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_RODNOVERY</ReligionType>
+					<ReligionType>RELIGION_RODNOVERA</ReligionType>
 					<iReligionChange>3</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -99,8 +99,8 @@
 			<Strategy>TXT_KEY_BUILDING_RODNOVERY_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RODNOVERY_MONASTERY</ArtDefineTag>
-			<ReligionType>RELIGION_RODNOVERY</ReligionType>
-			<PrereqReligion>RELIGION_RODNOVERY</PrereqReligion>
+			<ReligionType>RELIGION_RODNOVERA</ReligionType>
+			<PrereqReligion>RELIGION_RODNOVERA</PrereqReligion>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_FURNITURE</Bonus>
@@ -135,7 +135,7 @@
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_RODNOVERY</ReligionType>
+					<ReligionType>RELIGION_RODNOVERA</ReligionType>
 					<iReligionChange>2</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -163,8 +163,8 @@
 			<Strategy>TXT_KEY_BUILDING_RODNOVERY_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RODNOVERY_TEMPLE</ArtDefineTag>
-			<ReligionType>RELIGION_RODNOVERY</ReligionType>
-			<PrereqReligion>RELIGION_RODNOVERY</PrereqReligion>
+			<ReligionType>RELIGION_RODNOVERA</ReligionType>
+			<PrereqReligion>RELIGION_RODNOVERA</PrereqReligion>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
@@ -189,7 +189,7 @@
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_RODNOVERY</ReligionType>
+					<ReligionType>RELIGION_RODNOVERA</ReligionType>
 					<iReligionChange>2</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -222,10 +222,10 @@
 			<Strategy>TXT_KEY_BUILDING_RODNOVERY_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RODNOVERY_SHRINE</ArtDefineTag>
-			<HolyCity>RELIGION_RODNOVERY</HolyCity>
-			<ReligionType>RELIGION_RODNOVERY</ReligionType>
-			<GlobalReligionCommerce>RELIGION_RODNOVERY</GlobalReligionCommerce>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<HolyCity>RELIGION_RODNOVERA</HolyCity>
+			<ReligionType>RELIGION_RODNOVERA</ReligionType>
+			<GlobalReligionCommerce>RELIGION_RODNOVERA</GlobalReligionCommerce>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>-1</iCost>
@@ -244,7 +244,7 @@
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes><ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_RODNOVERY</ReligionType>
+					<ReligionType>RELIGION_RODNOVERA</ReligionType>
 					<iReligionChange>1</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>

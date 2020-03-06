@@ -13,9 +13,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ABU_SIMBEL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ABU_SIMBEL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ABU_SIMBEL_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_ABU</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ABU_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ABU_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MONARCHY</PrereqTech>
 			<PrereqOrTerrain>
@@ -52,7 +52,7 @@
 				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>16</iAsset>
@@ -121,7 +121,7 @@
 				</SpecialistYieldChange>
 			</SpecialistYieldChanges>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iTradeRouteModifier>50</iTradeRouteModifier>
@@ -168,7 +168,7 @@
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<FreeBuilding>BUILDINGCLASS_AESOP_CRIME</FreeBuilding>
@@ -235,7 +235,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Security -->
 			<iAllCityDefense>30</iAllCityDefense>
@@ -293,7 +293,7 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_COMPUTERS</ObsoleteTech>
+			<ObsoleteTech>TECH_PERSONAL_COMPUTERS</ObsoleteTech>
 			<!-- Cost -->
 			<iCost>1512</iCost>
 			<BonusProductionModifiers>
@@ -335,7 +335,7 @@
 				</SpecialistYieldChange>
 			</SpecialistYieldChanges>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>12</iAsset>
@@ -369,12 +369,12 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANTIKYTHERA_MECHANISM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANTIKYTHERA_MECHANISM_STRATEGY</Strategy>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_GEAR</PrereqTech>
+			<PrereqTech>TECH_GEARS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_SUNDIAL</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<Bonus>BONUS_WARE_BRONZE</Bonus>
+			<Bonus>BONUS_BRONZE_WARES</Bonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_STARGAZERS_HUT</BuildingClassType>
@@ -394,7 +394,7 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Global -->
 			<iFreeTechs>1</iFreeTechs>
@@ -422,7 +422,7 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_STEEL</Bonus>
+				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
 			<PrereqBuildingClasses>
 				<PrereqBuildingClass>
@@ -452,7 +452,7 @@
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<FreeBuilding>BUILDINGCLASS_GAS_STATION</FreeBuilding>
@@ -516,7 +516,7 @@
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Units -->
 			<FreePromotion>PROMOTION_ORDER_OF_ORMAZD</FreePromotion>
@@ -591,7 +591,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iGreatGeneralRateModifier>25</iGreatGeneralRateModifier>
 			<!-- Misc. Effects -->
@@ -662,7 +662,7 @@
 				</SpecialistYieldChange>
 			</SpecialistYieldChanges>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Units -->
 			<UnitCombatFreeExperiences>
@@ -709,9 +709,9 @@
 			<Strategy>TXT_KEY_BUILDING_ARK_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_PRIESTHOOD</PrereqTech>
-			<Bonus>BONUS_WARE_GOLD</Bonus>
+			<Bonus>BONUS_GOLD_WARES</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_TIMBER</Bonus>
+				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			</PrereqBonuses>
 			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_JUDAISM</PrereqReligion>
@@ -747,7 +747,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 			</SpecialistYieldChanges>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Global -->
 			<iGlobalHappiness>1</iGlobalHappiness>
@@ -891,7 +891,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_ANCIENTTEMPLE</BonusType>
+					<BonusType>BONUS_ANCIENT_RELICS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -907,7 +907,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -939,7 +939,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_WATERWORKS</PrereqTech>
+			<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -962,7 +962,7 @@
 			<!-- Special Health and Happiness  modifiers -->
 			<iGlobalHealth>1</iGlobalHealth>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_DOCTOR</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Security -->
 			<iDCMAirbombMission>2</iDCMAirbombMission>
@@ -1031,7 +1031,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iCoastalTradeRoutes>1</iCoastalTradeRoutes>
@@ -1097,7 +1097,7 @@
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iMaintenanceModifier>10</iMaintenanceModifier>
@@ -1165,7 +1165,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<bGoldenAge>1</bGoldenAge>
@@ -1247,7 +1247,7 @@
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -1296,7 +1296,7 @@
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -1350,7 +1350,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_WEARABLE_ELECTRONICS</ObsoleteTech>
+			<ObsoleteTech>TECH_WEARABLE_COMPUTERS</ObsoleteTech>
 			<!-- Cost -->
 			<iCost>4620</iCost>
 			<!-- Special Yield and Commerce modifiers -->
@@ -1372,7 +1372,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<FreeBuilding>BUILDINGCLASS_THEATRE</FreeBuilding>
@@ -1413,7 +1413,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_MOTER_SPORTS</PrereqTech>
+			<PrereqTech>TECH_MOTORSPORTS</PrereqTech>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
 			<PrereqAndTerrain>
 				<PrereqTerrain>
@@ -1440,7 +1440,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Units -->
 			<FreePromotion>PROMOTION_SPEED</FreePromotion>
@@ -1505,7 +1505,7 @@
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Units -->
 			<iGlobalExperience>1</iGlobalExperience>
@@ -1565,7 +1565,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>12</iCommerce>
 			</CommerceModifiers>
-			<FreeBonus>BONUS_DRAMA</FreeBonus>
+			<FreeBonus>BONUS_HIT_MUSICALS</FreeBonus>
 			<iNumFreeBonuses>6</iNumFreeBonuses>
 			<!-- Special Yield and Commerce modifiers -->
 			<CommerceChangeOriginalOwners>
@@ -1574,7 +1574,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>18</iAsset>
@@ -1658,7 +1658,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iCoastalTradeRoutes>1</iCoastalTradeRoutes>
@@ -1706,7 +1706,7 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_STEEL</Bonus>
+				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -1741,7 +1741,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iCoastalTradeRoutes>1</iCoastalTradeRoutes>
@@ -1796,7 +1796,7 @@
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_STONETOOLS</FreeBonus>
+			<FreeBonus>BONUS_STONE_TOOLS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -1849,7 +1849,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<FreeBuilding>BUILDINGCLASS_RECORDING_STUDIO</FreeBuilding>
@@ -1911,7 +1911,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -1957,7 +1957,7 @@
 			<iGlobalHealth>1</iGlobalHealth>
 			<iGlobalHappiness>1</iGlobalHappiness>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<FreeBuilding>BUILDINGCLASS_RECYCLING_CENTER</FreeBuilding>
@@ -1995,7 +1995,7 @@
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -2077,7 +2077,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -2112,7 +2112,7 @@
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -2190,7 +2190,7 @@
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iGoldenAgeModifier>20</iGoldenAgeModifier>
@@ -2241,7 +2241,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_BLOOD_CULT</PrereqTech>
+				<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<!-- Obsolescence -->
@@ -2271,7 +2271,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Security -->
 			<iAllCityDefense>25</iAllCityDefense>
@@ -2363,7 +2363,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -2457,7 +2457,7 @@
 			</BonusHappinessChanges>
 			<iAreaHappiness>1</iAreaHappiness>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Units -->
 			<UnitCombatFreeExperiences>
@@ -2514,7 +2514,7 @@
 			<iCost>7080</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_ALUMINUM</BonusType>
+					<BonusType>BONUS_ALUMINUM_WARES</BonusType>
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -2530,7 +2530,7 @@
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iGlobalWarWearinessModifier>-75</iGlobalWarWearinessModifier>
@@ -2623,7 +2623,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>12</iAsset>
@@ -2672,15 +2672,15 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqOrFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_CORAL</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_CORAL_WITH_BEACON</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_BEACON</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_CORAL_WITH_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_LIGHTHOUSE</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
@@ -2688,11 +2688,11 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_GREAT_BARRIER_WITH_BEACON</FeatureType>
+					<FeatureType>FEATURE_GREAT_BARRIER_REEF_BEACON</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_GREAT_BARRIER_WITH_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -2713,7 +2713,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -2764,7 +2764,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iAnarchyModifier>-100</iAnarchyModifier>
@@ -2840,7 +2840,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iMaintenanceModifier>-50</iMaintenanceModifier>
@@ -2911,7 +2911,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iForeignTradeRouteModifier>100</iForeignTradeRouteModifier>
@@ -2987,7 +2987,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Security -->
 			<iDefense>100</iDefense>
@@ -3038,7 +3038,7 @@
 			<PrereqTech>TECH_INCANDESCENT_LIGHTING</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_MAGLEV</ObsoleteTech>
+			<ObsoleteTech>TECH_MAGNETIC_LEVITATION</ObsoleteTech>
 			<!-- Cost -->
 			<iCost>4800</iCost>
 			<!-- Main effects -->
@@ -3073,7 +3073,7 @@
 				</SpecialistYieldChange>
 			</SpecialistYieldChanges>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>12</iAsset>
@@ -3121,7 +3121,7 @@
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_SUPERSTRINGTHEORY</ObsoleteTech>
+			<ObsoleteTech>TECH_SUPERSTRING_THEORY</ObsoleteTech>
 			<!-- Cost -->
 			<iCost>5940</iCost>
 			<!-- Main effects -->
@@ -3157,7 +3157,7 @@
 				</SpecialistYieldChange>
 			</SpecialistYieldChanges>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>12</iAsset>
@@ -3217,7 +3217,7 @@
 			<!-- Cost -->
 			<iCost>1296</iCost>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_GENERAL</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_GENERAL</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Units -->
 			<DomainFreeExperiences>
@@ -3259,7 +3259,7 @@
 			<PrereqTech>TECH_PICTOGRAPHS</PrereqTech>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_OCEANIAN</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_OCEANIAN</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 				<BuildingClassNeeded>
@@ -3275,7 +3275,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_EMU_EGG</FreeBonus>
+			<FreeBonus>BONUS_CARVED_EMU_EGGS</FreeBonus>
 			<iNumFreeBonuses>6</iNumFreeBonuses>
 			<!-- Specialist effects -->
 			<SpecialistCounts>
@@ -3285,7 +3285,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -3334,7 +3334,7 @@
 				<iYield>1</iYield>
 			</SeaPlotYieldChanges>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Units -->
 			<UnitCombatFreeExperiences>
@@ -3384,7 +3384,7 @@
 			<VicinityBonus>BONUS_STONE</VicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_MIDDLEEASTERN</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
@@ -3406,7 +3406,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -3469,7 +3469,7 @@
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Units -->
 			<UnitCombatFreeExperiences>
@@ -3528,7 +3528,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<Bonus>BONUS_INGOT_GOLD</Bonus>
+			<Bonus>BONUS_GOLD_INGOTS</Bonus>
 			<PrereqBuildingClasses>
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_BANK</BuildingClassType>
@@ -3558,7 +3558,7 @@
 				<iCommerce>5</iCommerce>
 			</GlobalCommerceModifiers>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iGlobalHurryModifier>-25</iGlobalHurryModifier>
@@ -3623,7 +3623,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<FreeBuilding>BUILDINGCLASS_ECOSCRAPER</FreeBuilding>
@@ -3667,7 +3667,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_GENOMIC_E</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_GENCYCLOPEDIA</PrereqTech>
+			<PrereqTech>TECH_GENOMIC_ENCYCLOPEDIA</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqBonuses>
@@ -3730,7 +3730,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -3845,7 +3845,7 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 			</SpecialistYieldChanges>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<PropertyManipulators>
 				<PropertySource>
@@ -3915,7 +3915,7 @@
 				<iCommerce>8</iCommerce>
 			</CommerceChanges>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<FreeBuilding>BUILDINGCLASS_SHAMANHUT</FreeBuilding>
@@ -3952,7 +3952,7 @@
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bRiver>1</bRiver>
-			<Bonus>BONUS_WARE_STEEL</Bonus>
+			<Bonus>BONUS_STEEL_WARES</Bonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_LARGE_SUSPENSION_BRIDGE</BuildingClassType>
@@ -3981,7 +3981,7 @@
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<!-- Security -->
 			<iDefense>-5</iDefense>
@@ -4022,8 +4022,8 @@
 				<Bonus>BONUS_MARBLE</Bonus>
 				<Bonus>BONUS_JADE</Bonus>
 				<Bonus>BONUS_AMBER</Bonus>
-				<Bonus>BONUS_RUBY</Bonus>
-				<Bonus>BONUS_SAPPHIRE</Bonus>
+				<Bonus>BONUS_RUBIES</Bonus>
+				<Bonus>BONUS_SAPPHIRES</Bonus>
 				<Bonus>BONUS_TURQUOISE</Bonus>
 			</PrereqBonuses>
 			<PrereqOrFeature>
@@ -4032,7 +4032,7 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -4071,7 +4071,7 @@
 				</PrereqNotBuildingClass>
 			</PrereqNotBuildingClasses>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_WILDERNESSC</ObsoleteTech>
+			<ObsoleteTech>TECH_WILDLIFE_CONSERVATION</ObsoleteTech>
 			<!-- Cost -->
 			<iCost>516</iCost>
 			<!-- Main effects -->
@@ -4105,13 +4105,13 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_RUBY</BonusType>
+					<BonusType>BONUS_RUBIES</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_SAPPHIRE</BonusType>
+					<BonusType>BONUS_SAPPHIRES</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -4163,7 +4163,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_MUSIC</PrereqTech>
+					<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -4247,16 +4247,16 @@
 				<Bonus>BONUS_SULPHUR</Bonus>
 				<Bonus>BONUS_OBSIDIAN</Bonus>
 				<Bonus>BONUS_DIAMOND</Bonus>
-				<Bonus>BONUS_SILVER</Bonus>
-				<Bonus>BONUS_GOLD</Bonus>
+				<Bonus>BONUS_SILVER_ORE</Bonus>
+				<Bonus>BONUS_GOLD_ORE</Bonus>
 			</PrereqBonuses>
 			<PrereqOrFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_VOLCANO2</FeatureType>
+					<FeatureType>FEATURE_VOLCANO_DORMANT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_VOLCANO</FeatureType>
+					<FeatureType>FEATURE_VOLCANO_ACTIVE</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -4341,13 +4341,13 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_SILVER</BonusType>
+					<BonusType>BONUS_SILVER_ORE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_GOLD</BonusType>
+					<BonusType>BONUS_GOLD_ORE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -4387,7 +4387,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_MUSIC</PrereqTech>
+					<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -4485,19 +4485,19 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_SEAGRASS</FeatureType>
+					<FeatureType>FEATURE_SEA_GRASS</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_CORAL</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_CORAL_WITH_BEACON</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_BEACON</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_CORAL_WITH_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF_LIGHTHOUSE</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
@@ -4505,11 +4505,11 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_REEF_WITH_BEACON</FeatureType>
+					<FeatureType>FEATURE_REEF_BEACON</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_REEF_WITH_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_REEF_LIGHTHOUSE</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
@@ -4517,11 +4517,11 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_GREAT_BARRIER_WITH_BEACON</FeatureType>
+					<FeatureType>FEATURE_GREAT_BARRIER_REEF_BEACON</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_GREAT_BARRIER_WITH_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -4652,7 +4652,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_MUSIC</PrereqTech>
+					<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -4843,7 +4843,7 @@
 			</BonusCommerceModifiers>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_BLOOD_CULT</PrereqTech>
+					<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -4875,7 +4875,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_MUSIC</PrereqTech>
+					<PrereqTech>TECH_MUSICAL_NOTATION</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -4982,7 +4982,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<FreeBuilding>BUILDINGCLASS_MOVIETHEATRE</FreeBuilding>
@@ -5029,11 +5029,11 @@
 			</PrereqNotBuildingClasses>
 			<PrereqOrCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_INTOLERANT</CivicOption>
+					<CivicOption>CIVIC_INQUISITORIAL</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_FASCIST</CivicOption>
+					<CivicOption>CIVIC_TOTALITARIANISM</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -5113,7 +5113,7 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_GENERAL</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_GENERAL</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -5163,8 +5163,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HADRIAN_WALL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HADRIAN_WALL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ADRIANOS_WALL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ADRIANOS_WALL_PEDIA</Civilopedia>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>
@@ -5205,7 +5205,7 @@
 				</SpecialistYieldChange>
 			</SpecialistYieldChanges>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Global -->
 			<bTeamShare>1</bTeamShare>
@@ -5249,7 +5249,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_WATERWORKS</PrereqTech>
+			<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -5270,7 +5270,7 @@
 			<!-- Special Health and Happiness  modifiers -->
 			<iGlobalHealth>1</iGlobalHealth>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_DOCTOR</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Security -->
 			<iDCMAirbombMission>2</iDCMAirbombMission>
@@ -5312,7 +5312,7 @@
 			<PrereqTech>TECH_MARTIAL_ARTS</PrereqTech>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_OCEANIAN</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_OCEANIAN</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
@@ -5327,7 +5327,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_H_SURFBOARD</FreeBonus>
+			<FreeBonus>BONUS_HAWAIIAN_SURFBOARDS</FreeBonus>
 			<iNumFreeBonuses>6</iNumFreeBonuses>
 			<!-- Specialist effects -->
 			<SpecialistCounts>
@@ -5337,7 +5337,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -5379,7 +5379,7 @@
 				<iCommerce>25</iCommerce>
 			</CommerceModifiers>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>8</iAsset>
@@ -5440,7 +5440,7 @@
 					<iSpecialistCount>2</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -5498,7 +5498,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>12</iAsset>
@@ -5573,7 +5573,7 @@
 				</SpecialistYieldChange>
 			</SpecialistYieldChanges>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_DOCTOR</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<FreeBuilding>BUILDINGCLASS_HEALERHUT</FreeBuilding>
@@ -5653,7 +5653,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Security -->
 			<iDCMAirbombMission>2</iDCMAirbombMission>
@@ -5711,7 +5711,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>12</iCommerce>
 			</CommerceModifiers>
-			<FreeBonus>BONUS_MOVIES</FreeBonus>
+			<FreeBonus>BONUS_HIT_MOVIES</FreeBonus>
 			<iNumFreeBonuses>6</iNumFreeBonuses>
 			<!-- Special Yield and Commerce modifiers -->
 			<CommerceChangeOriginalOwners>
@@ -5727,7 +5727,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>18</iAsset>
@@ -5815,7 +5815,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_HUMPHREY_METRODOME</MovieDefineTag>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MODERN_SPORTS</PrereqTech>
-			<ObsoleteTech>TECH_BINARY_PYSCHOKINESIS</ObsoleteTech>
+			<ObsoleteTech>TECH_BINARY_PSYCHOKINESIS</ObsoleteTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -5834,7 +5834,7 @@
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<FreeBuilding>BUILDINGCLASS_SOFTBALL_FIELD</FreeBuilding>
@@ -5882,7 +5882,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_GENERAL</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_GENERAL</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Units -->
 			<UnitCombatFreeExperiences>
@@ -6020,7 +6020,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<FreeBuilding>BUILDINGCLASS_PET_SHOP</FreeBuilding>
@@ -6102,7 +6102,7 @@
 				</SpecialistYieldChange>
 			</SpecialistYieldChanges>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>14</iAsset>
@@ -6147,7 +6147,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_PERSONAL_ADORNMENT</PrereqTech>
+			<PrereqTech>TECH_PERSONAL_ADORNMENTS</PrereqTech>
 			<Bonus>BONUS_JADE</Bonus>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
@@ -6165,7 +6165,7 @@
 			</PrereqOrBuildingClasses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_SAMERICAN</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 				<BuildingClassNeeded>
@@ -6181,7 +6181,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_JADE_MASK</FreeBonus>
+			<FreeBonus>BONUS_JADE_DEATH_MASKS</FreeBonus>
 			<iNumFreeBonuses>6</iNumFreeBonuses>
 			<!-- Specialist effects -->
 			<SpecialistCounts>
@@ -6191,7 +6191,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -6262,7 +6262,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>8</iAsset>
@@ -6336,7 +6336,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<FreeBuilding>BUILDINGCLASS_MATHEMATICS_ACADEMY</FreeBuilding>
@@ -6443,7 +6443,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iGreatGeneralRateModifier>50</iGreatGeneralRateModifier>
 			<!-- Misc -->
@@ -6491,7 +6491,7 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_STEEL</Bonus>
+				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -6526,7 +6526,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iCoastalTradeRoutes>1</iCoastalTradeRoutes>
@@ -6571,7 +6571,7 @@
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>		
 			<PrereqOrFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -6649,7 +6649,7 @@
 				</ReligionChange>
 			</ReligionChanges>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iGlobalHealth>2</iGlobalHealth>
@@ -6695,7 +6695,7 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqOrFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_TARPIT</FeatureType>
+					<FeatureType>FEATURE_TAR_PIT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -6722,7 +6722,7 @@
 			</CommerceChangeOriginalOwners>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_FOSSIL</BonusType>
+					<BonusType>BONUS_FOSSIL_BEDS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 						<iCommerce>1</iCommerce>
@@ -6744,7 +6744,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -6813,7 +6813,7 @@
 				<iCommerce>6</iCommerce>
 			</ObsoleteSafeCommerceChanges>
 			<!-- Units -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<DomainFreeExperiences>
 				<DomainFreeExperience>
@@ -6857,7 +6857,7 @@
 			<PrereqTech>TECH_PETROGLYPHS</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -6906,7 +6906,7 @@
 				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Global -->
 			<FreeBuilding>BUILDINGCLASS_LASCAUX_EFFECT</FreeBuilding>
@@ -6999,7 +6999,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -7053,7 +7053,7 @@
 				<iCommerce>2</iCommerce>
 			</GlobalCommerceModifiers>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iGlobalGreatPeopleRateModifier>20</iGlobalGreatPeopleRateModifier>
 			<!-- Misc -->
@@ -7131,7 +7131,7 @@
 				</SpecialistYieldChange>
 			</SpecialistYieldChanges>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iFreeTechs>1</iFreeTechs>
@@ -7199,7 +7199,7 @@
 				<iCommerce>2</iCommerce>
 			</GlobalCommerceModifiers>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<FreeBuilding>BUILDINGCLASS_TABLET_MAKER</FreeBuilding>
@@ -7287,7 +7287,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>14</iAsset>
@@ -7379,7 +7379,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -7446,7 +7446,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Units -->
 			<DomainFreeExperiences>
@@ -7501,7 +7501,7 @@
 			<PrereqTech>TECH_COMPASS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_UTOPIA</ObsoleteTech>
+			<ObsoleteTech>TECH_COMMUNISM</ObsoleteTech>
 			<!-- Cost -->
 			<iCost>2280</iCost>
 			<!-- Special Yield and Commerce modifiers -->
@@ -7532,7 +7532,7 @@
 				</SpecialistYieldChange>
 			</SpecialistYieldChanges>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iTradeRoutes>1</iTradeRoutes>
@@ -7622,7 +7622,7 @@
 				</SpecialistYieldChange>
 			</SpecialistYieldChanges>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Security -->
 			<iDefense>50</iDefense>
@@ -7706,7 +7706,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iGoldenAgeModifier>30</iGoldenAgeModifier>
@@ -7864,7 +7864,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Units -->
 			<FreePromotion>PROMOTION_WARMTH1</FreePromotion>
@@ -7902,8 +7902,8 @@
 			<bWater>1</bWater>
 			<PrereqBonuses>
 				<Bonus>BONUS_NANOTUBES</Bonus>
-				<Bonus>BONUS_WARE_TITANIUM</Bonus>
-				<Bonus>BONUS_WARE_STEEL</Bonus>
+				<Bonus>BONUS_TITANIUM_WARES</Bonus>
+				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -7926,7 +7926,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iFreeTechs>1</iFreeTechs>
@@ -7952,7 +7952,7 @@
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<PrereqBonuses>
 				<Bonus>BONUS_NANOTUBES</Bonus>
-				<Bonus>BONUS_WARE_TITANIUM</Bonus>
+				<Bonus>BONUS_TITANIUM_WARES</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -7975,7 +7975,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iFreeTechs>1</iFreeTechs>
@@ -8025,7 +8025,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>5</iAsset>
@@ -8125,7 +8125,7 @@
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iGlobalWarWearinessModifier>-25</iGlobalWarWearinessModifier>
@@ -8192,7 +8192,7 @@
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Security -->
 			<iDefense>100</iDefense>
@@ -8292,7 +8292,7 @@
 			<!-- Cost -->
 			<iCost>38430</iCost>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>4</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<FreeBuilding>BUILDINGCLASS_ADVANCED_SHIELDING</FreeBuilding>
@@ -8339,7 +8339,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_GLASS</ID>
+						<ID>BONUS_GLASSWARE</ID>
 					</Has>
 				</And>
 			</ConstructCondition>
@@ -8371,7 +8371,7 @@
 				</SpecialistYieldChange>
 			</SpecialistYieldChanges>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<bGoldenAge>1</bGoldenAge>
@@ -8420,7 +8420,7 @@
 			<VicinityBonus>BONUS_FINE_CLAY</VicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_AFRICAN</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_AFRICAN</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
@@ -8433,10 +8433,10 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_SCULPTURE_NOK</FreeBonus>
+			<FreeBonus>BONUS_NOK_SCULPTURES</FreeBonus>
 			<iNumFreeBonuses>6</iNumFreeBonuses>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -8476,9 +8476,9 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_HUMANISM</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<Bonus>BONUS_WARE_GOLD</Bonus>
+			<Bonus>BONUS_GOLD_WARES</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARES_TERRACOTTA</Bonus>
+				<Bonus>BONUS_TERRACOTTA_WARES</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -8523,7 +8523,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -8584,7 +8584,7 @@
 			<!-- Special Health and Happiness  modifiers -->
 			<iAreaHappiness>2</iAreaHappiness>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>14</iAsset>
@@ -8683,7 +8683,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_HUMANISM</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<Bonus>BONUS_WARE_SILVER</Bonus>
+			<Bonus>BONUS_SILVER_WARES</Bonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_MANOR</BuildingClassType>
@@ -8698,7 +8698,7 @@
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_PESTICIDES</ObsoleteTech>
+			<ObsoleteTech>TECH_AGRICULTURAL_ENGINEERING</ObsoleteTech>
 			<!-- Cost -->
 			<iCost>2460</iCost>
 			<!-- Main effects -->
@@ -8728,7 +8728,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -8805,7 +8805,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iFoodKept>20</iFoodKept>
@@ -8851,7 +8851,7 @@
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_CAVE</FeatureType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -8915,7 +8915,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_DOCTOR</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>14</iAsset>
@@ -9005,7 +9005,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iGlobalTradeRoutes>1</iGlobalTradeRoutes>
@@ -9066,7 +9066,7 @@
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<FreeBuilding>BUILDINGCLASS_MARKET</FreeBuilding>
@@ -9153,7 +9153,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>8</iAsset>
@@ -9199,7 +9199,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>10240000</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_WATERWORKS</PrereqTech>
+			<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<iCitiesPrereq>4</iCitiesPrereq>
 			<!-- Cost -->
@@ -9225,7 +9225,7 @@
 			<!-- Special Health and Happiness  modifiers -->
 			<iAreaHealth>2</iAreaHealth>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>4</iAsset>
@@ -9293,7 +9293,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Security -->
 			<iEspionageDefense>25</iEspionageDefense>
@@ -9339,7 +9339,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_PROTEOMIC_E</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_GENCYCLOPEDIA</PrereqTech>
+			<PrereqTech>TECH_GENOMIC_ENCYCLOPEDIA</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqBonuses>
@@ -9384,7 +9384,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<FreeBuilding>BUILDINGCLASS_ENHANCED_SPECIES</FreeBuilding>
@@ -9413,9 +9413,9 @@
 			<PrereqTech>TECH_CALENDAR</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<bStateReligion>1</bStateReligion>
-			<PrereqReligion>RELIGION_MESOAMERICANISM</PrereqReligion>
-			<ReligionType>RELIGION_MESOAMERICANISM</ReligionType>
-			<StateReligion>RELIGION_MESOAMERICANISM</StateReligion>
+			<PrereqReligion>RELIGION_NAGHUALISM</PrereqReligion>
+			<ReligionType>RELIGION_NAGHUALISM</ReligionType>
+			<StateReligion>RELIGION_NAGHUALISM</StateReligion>
 			<!-- Cost -->
 			<iCost>1404</iCost>
 			<BonusProductionModifiers>
@@ -9443,7 +9443,7 @@
 			<!-- Special Health and Happiness  modifiers -->
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_MESOAMERICANISM</ReligionType>
+					<ReligionType>RELIGION_NAGHUALISM</ReligionType>
 					<iReligionChange>3</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -9461,7 +9461,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iGlobalTradeRoutes>1</iGlobalTradeRoutes>
@@ -9509,7 +9509,7 @@
 			<VicinityBonus>BONUS_FINE_CLAY</VicinityBonus>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_EUROPEAN</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_EUROPEAN</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 				<BuildingClassNeeded>
@@ -9529,7 +9529,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_RED_AND_BLACK</FreeBonus>
+			<FreeBonus>BONUS_RED_AND_BLACK_WARE</FreeBonus>
 			<iNumFreeBonuses>6</iNumFreeBonuses>
 			<!-- Specialist effects -->
 			<SpecialistCounts>
@@ -9539,7 +9539,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Units -->
 			<UnitCombatFreeExperiences>
@@ -9616,7 +9616,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceModifiers>
-			<FreeBonus>BONUS_MUSIC</FreeBonus>
+			<FreeBonus>BONUS_HIT_SINGLES</FreeBonus>
 			<iNumFreeBonuses>6</iNumFreeBonuses>
 			<!-- Special Yield and Commerce modifiers -->
 			<CommerceChangeOriginalOwners>
@@ -9636,7 +9636,7 @@
 				</SpecialistYieldChange>
 			</SpecialistYieldChanges>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>18</iAsset>
@@ -9702,7 +9702,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Security -->
 			<iDCMAirbombMission>2</iDCMAirbombMission>
@@ -9747,7 +9747,7 @@
 			<iCost>7680</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_ALUMINUM</BonusType>
+					<BonusType>BONUS_ALUMINUM_WARES</BonusType>
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -9773,7 +9773,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iSpaceProductionModifier>50</iSpaceProductionModifier>
@@ -9819,13 +9819,13 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_GOLD</Bonus>
+				<Bonus>BONUS_GOLD_WARES</Bonus>
 			</PrereqBonuses>
 			<!-- Cost -->
 			<iCost>1566</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_GOLD</BonusType>
+					<BonusType>BONUS_GOLD_WARES</BonusType>
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -9846,7 +9846,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>12</iAsset>
@@ -9887,7 +9887,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_COMPUTER_NETWORKS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<Bonus>BONUS_SEMICONDUCTORS</Bonus>
+			<Bonus>BONUS_MICROCHIPS</Bonus>
 			<!-- Cost -->
 			<iCost>8850</iCost>
 			<!-- Special Yield and Commerce modifiers -->
@@ -9903,7 +9903,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<FreeBuilding>BUILDINGCLASS_COMPUTER_NETWORK</FreeBuilding>
@@ -10001,7 +10001,7 @@
 				</SpecialistYieldChange>
 			</SpecialistYieldChanges>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iTradeRoutes>1</iTradeRoutes>
@@ -10046,7 +10046,7 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_STEEL</Bonus>
+				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_MEGASTRUCTURE_ENGINEERING</ObsoleteTech>
@@ -10070,7 +10070,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -10160,7 +10160,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -10216,7 +10216,7 @@
 			<!-- Special Health and Happiness  modifiers -->
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
-					<BonusType>BONUS_ANCIENTTEMPLE</BonusType>
+					<BonusType>BONUS_ANCIENT_RELICS</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
@@ -10236,7 +10236,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<FreeBuilding>BUILDINGCLASS_MUSEUM</FreeBuilding>
@@ -10304,7 +10304,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>6</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -10340,10 +10340,10 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<Bonus>BONUS_GLASS</Bonus>
+			<Bonus>BONUS_GLASSWARE</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_TITANIUM</Bonus>
-				<Bonus>BONUS_WARE_STEEL</Bonus>
+				<Bonus>BONUS_TITANIUM_WARES</Bonus>
+				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -10375,7 +10375,7 @@
 				<iCommerce>-100</iCommerce>
 			</CommerceChanges>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<bPower>1</bPower>
@@ -10399,7 +10399,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_GBIOLOGY</PrereqTech>
+			<PrereqTech>TECH_GENESIS_BIOLOGY</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqBonuses>
@@ -10430,7 +10430,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_POTATO</FreeBonus>
+					<FreeBonus>BONUS_POTATOES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -10446,7 +10446,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FUR</FreeBonus>
+					<FreeBonus>BONUS_BEAVERS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -10474,7 +10474,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SEA_LIONS</FreeBonus>
+					<FreeBonus>BONUS_SEA_LION_AND_SEAL</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -10538,7 +10538,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_LEMON</FreeBonus>
+					<FreeBonus>BONUS_LEMONS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -10546,7 +10546,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_MELON</FreeBonus>
+					<FreeBonus>BONUS_MELONS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -10598,7 +10598,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_ELEPHANT</FreeBonus>
+					<FreeBonus>BONUS_ELEPHANTS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -10630,11 +10630,11 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WINE</FreeBonus>
+					<FreeBonus>BONUS_GRAPES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CANNABIS</FreeBonus>
+					<FreeBonus>BONUS_HEMP</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -10690,11 +10690,11 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_GUINEA_PIG</FreeBonus>
+					<FreeBonus>BONUS_GUINEA_PIGS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TIMBER</FreeBonus>
+					<FreeBonus>BONUS_PRIME_TIMBER</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -10702,7 +10702,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_GUAVA</FreeBonus>
+					<FreeBonus>BONUS_GUAVAS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -10715,7 +10715,7 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -10763,7 +10763,7 @@
 				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Global -->
 			<FreeBuilding>BUILDINGCLASS_OBELISK</FreeBuilding>
@@ -10841,7 +10841,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -10911,7 +10911,7 @@
 					<iSpecialistCount>2</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Global -->
 			<FreeBuilding>BUILDINGCLASS_WATERCLOCK</FreeBuilding>
@@ -11020,7 +11020,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iHappinessPercentPerPopulation>20</iHappinessPercentPerPopulation>
@@ -11162,7 +11162,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>12</iAsset>
@@ -11217,7 +11217,7 @@
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iDomesticGreatGeneralRateModifier>100</iDomesticGreatGeneralRateModifier>
 			<!-- Misc. Effects -->
@@ -11288,7 +11288,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<VictoryPrereq>VICTORY_DIPLOMATIC</VictoryPrereq>
@@ -11448,7 +11448,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<FreeBuilding>BUILDINGCLASS_ACCELERATOR</FreeBuilding>
@@ -11502,7 +11502,7 @@
 			<iCost>1104</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -11528,7 +11528,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -11604,7 +11604,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<FreeBuilding>BUILDINGCLASS_BROADCAST_TOWER</FreeBuilding>
@@ -11674,7 +11674,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -11723,7 +11723,7 @@
 			<!-- Specialist effects -->
 			<iAreaFreeSpecialist>1</iAreaFreeSpecialist>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iGreatGeneralRateModifier>75</iGreatGeneralRateModifier>
 			<!-- Misc -->
@@ -11792,7 +11792,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<FreeBuilding>BUILDINGCLASS_ART_GALLERY</FreeBuilding>
@@ -11853,7 +11853,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_DOCTOR</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -11939,7 +11939,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -12015,7 +12015,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iCoastalTradeRoutes>2</iCoastalTradeRoutes>
@@ -12103,7 +12103,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<GlobalBuildingClassProductionModifiers>
@@ -12229,7 +12229,7 @@
 				</SpecialistYieldChange>
 			</SpecialistYieldChanges>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iDomesticGreatGeneralRateModifier>100</iDomesticGreatGeneralRateModifier>
 			<!-- Unique effects -->
@@ -12300,7 +12300,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iWorkerSpeedModifier>50</iWorkerSpeedModifier>
@@ -12372,7 +12372,7 @@
 			<!-- Special Health and Happiness  modifiers -->
 			<iGlobalHealth>1</iGlobalHealth>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iGlobalPopulationChange>1</iGlobalPopulationChange>
@@ -12420,15 +12420,15 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_MESO</DependencyType>
+				<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
 			</AndDependencyTypes>
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_GLASS_BLOWING</PrereqTech>
 			</TechTypes>
-			<PrereqReligion>RELIGION_MESO</PrereqReligion>
-			<ReligionType>RELIGION_MESO</ReligionType>
-			<StateReligion>RELIGION_MESO</StateReligion>
+			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
+			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
+			<StateReligion>RELIGION_MESOPOTAMISM</StateReligion>
 			<PrereqBuildingClasses>
 				<PrereqBuildingClass>
 					<BuildingClassType>BUILDINGCLASS_GLASSSMITH</BuildingClassType>
@@ -12478,7 +12478,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -12528,7 +12528,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_KREMLIN</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_UTOPIA</PrereqTech>
+			<PrereqTech>TECH_COMMUNISM</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_FIBER_OPTICS</ObsoleteTech>
@@ -12554,7 +12554,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iGlobalHurryModifier>-33</iGlobalHurryModifier>
@@ -12619,7 +12619,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iFreeTechs>1</iFreeTechs>
@@ -12729,7 +12729,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iGlobalGreatPeopleRateModifier>50</iGlobalGreatPeopleRateModifier>
 			<!-- Misc -->
@@ -12785,7 +12785,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Units -->
 			<iGlobalExperience>2</iGlobalExperience>
@@ -12857,7 +12857,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<FreeBuilding>BUILDINGCLASS_IRRIGATION_CANALS</FreeBuilding>
@@ -12928,7 +12928,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>14</iAsset>
@@ -12984,7 +12984,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iGlobalSpaceProductionModifier>25</iGlobalSpaceProductionModifier>
@@ -13087,7 +13087,7 @@
 			<!-- Special Health and Happiness  modifiers -->
 			<iAreaHappiness>1</iAreaHappiness>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -13122,7 +13122,7 @@
 			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_COMPUTERS</ObsoleteTech>
+			<ObsoleteTech>TECH_PERSONAL_COMPUTERS</ObsoleteTech>
 			<!-- Cost -->
 			<iCost>2640</iCost>
 			<BonusProductionModifiers>
@@ -13151,7 +13151,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>14</iAsset>
@@ -13200,7 +13200,7 @@
 			</PrereqBuildingClasses>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_LIBERAL</CivicOption>
+					<CivicOption>CIVIC_EGALITARIAN</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -13209,7 +13209,7 @@
 			<iCost>3480</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -13232,7 +13232,7 @@
 			<!-- Specialist effects -->
 			<iAreaFreeSpecialist>1</iAreaFreeSpecialist>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>16</iAsset>
@@ -13292,7 +13292,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<bGoldenAge>1</bGoldenAge>
@@ -13368,7 +13368,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iTradeRouteModifier>100</iTradeRouteModifier>
@@ -13410,7 +13410,7 @@
 			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_BRICKS</Bonus>
-				<Bonus>BONUS_TIMBER</Bonus>
+				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 				<Bonus>BONUS_WOOD</Bonus>
 			</PrereqBonuses>
 			<bStateReligion>1</bStateReligion>
@@ -13463,7 +13463,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iGreatGeneralRateModifier>10</iGreatGeneralRateModifier>
 			<!-- Misc. Effects -->
@@ -13509,8 +13509,8 @@
 			<bRiver>1</bRiver>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_IRON</Bonus>
-				<Bonus>BONUS_WARE_STEEL</Bonus>
+				<Bonus>BONUS_IRON_WARES</Bonus>
+				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -13535,7 +13535,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<bPower>1</bPower>
@@ -13592,7 +13592,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<VictoryPrereq>VICTORY_DIPLOMATIC</VictoryPrereq>
@@ -13675,7 +13675,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -13738,7 +13738,7 @@
 					<iSpecialistCount>3</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<PropertyManipulators>
 				<PropertySource>
@@ -13774,9 +13774,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_WONDER_SACRIFICIAL_ALTAR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WONDER_SACRIFICIAL_ALTAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_WONDER_SACRIFICIAL_ALTAR_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_AZTEC_SACRIFICIAL_ALTAR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_AZTEC_SACRIFICIAL_ALTAR_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_AZTEC_SACRIFICIAL_ALTAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AZTEC_SACRIFICIAL_ALTAR</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_CEREMONIAL_ALTAR</ConstructSound>
@@ -13784,7 +13784,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqReligion>RELIGION_MESOAMERICANISM</PrereqReligion>
+			<PrereqReligion>RELIGION_NAGHUALISM</PrereqReligion>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
 					<BuildingClassType>BUILDINGCLASS_MESOAMERICAN_CATHEDRAL</BuildingClassType>
@@ -13793,7 +13793,7 @@
 			</BuildingClassNeededs>
 			<PrereqAndCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_DIVINE_RULE</CivicOption>
+					<CivicOption>CIVIC_DIVINE_CULT</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqAndCivics>
@@ -13884,7 +13884,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>13</iAsset>
@@ -13927,7 +13927,7 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_STEEL</Bonus>
+				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -13956,7 +13956,7 @@
 				<iCommerce>5</iCommerce>
 			</GlobalCommerceModifiers>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<FreeBuilding>BUILDINGCLASS_INSURANCE_OFFICE</FreeBuilding>
@@ -14000,7 +14000,7 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_STEEL</Bonus>
+				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
 			<PrereqBuildingClasses>
 				<PrereqBuildingClass>
@@ -14030,7 +14030,7 @@
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<FreeBuilding>BUILDINGCLASS_CONSTRUCTION_FIRM</FreeBuilding>
@@ -14073,12 +14073,12 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_WATERWORKS</PrereqTech>
+				<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Bonus>BONUS_SCULPTURES</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_SILVER</Bonus>
+				<Bonus>BONUS_SILVER_WARES</Bonus>
 			</PrereqBonuses>
 			<PrereqOrBuildingClasses>
 				<PrereqOrBuildingClass>
@@ -14091,7 +14091,7 @@
 				</PrereqOrBuildingClass>
 			</PrereqOrBuildingClasses>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_VIRTUALSOCIETY</ObsoleteTech>
+			<ObsoleteTech>TECH_VIRTUAL_SOCIETY</ObsoleteTech>
 			<!-- Cost -->
 			<iCost>1566</iCost>
 			<!-- Main effects -->
@@ -14109,7 +14109,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<FreeBuilding>BUILDINGCLASS_FOUNTAIN</FreeBuilding>
@@ -14144,7 +14144,7 @@
 			<PrereqTech>TECH_PAPER</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_COMPUTERS</ObsoleteTech>
+			<ObsoleteTech>TECH_PERSONAL_COMPUTERS</ObsoleteTech>
 			<!-- Cost -->
 			<iCost>2064</iCost>
 			<BonusProductionModifiers>
@@ -14179,7 +14179,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>14</iAsset>
@@ -14238,7 +14238,7 @@
 			<!-- Cost -->
 			<iCost>2460</iCost>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Units -->
 			<DomainFreeExperiences>
@@ -14382,7 +14382,7 @@
 				</SpecialistYieldChange>
 			</SpecialistYieldChanges>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<bGovernmentCenter>1</bGovernmentCenter>
@@ -14422,7 +14422,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_WALL_STREET</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_STOCK_EXCHANGING</PrereqTech>
+			<PrereqTech>TECH_STOCK_BROKERING</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqBuildingClasses>
 				<PrereqBuildingClass>
@@ -14459,7 +14459,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>8</iAsset>
@@ -14533,7 +14533,7 @@
 					<iSpecialistCount>2</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -14584,7 +14584,7 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_GENERAL</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_GENERAL</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>4</iGreatPeopleRateChange>
 			<!-- Units -->
 			<DomainFreeExperiences>
@@ -14629,7 +14629,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_WIKIPEDIA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_MMO</PrereqTech>
+			<PrereqTech>TECH_ONLINE_COMMUNITY</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_COMPUTERS</Bonus>
 			<PrereqBuildingClasses>
@@ -14647,7 +14647,7 @@
 			<!-- Cost -->
 			<iCost>12630</iCost>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iFreeTechs>1</iFreeTechs>
@@ -14684,7 +14684,7 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_STEEL</Bonus>
+				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -14714,7 +14714,7 @@
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<FreeBuilding>BUILDINGCLASS_DEPARTMENT_STORE</FreeBuilding>
@@ -14771,7 +14771,7 @@
 			<!-- Cost -->
 			<iCost>1280</iCost>
 			<!-- Main effects -->
-			<FreeBonus>BONUS_CHAMPAGNE</FreeBonus>
+			<FreeBonus>BONUS_WINE_CHAMPAGNE</FreeBonus>
 			<iNumFreeBonuses>3</iNumFreeBonuses>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -14822,7 +14822,7 @@
 			<!-- Cost -->
 			<iCost>1280</iCost>
 			<!-- Main effects -->
-			<FreeBonus>BONUS_VINTAGE_RED_WINE</FreeBonus>
+			<FreeBonus>BONUS_WINE_VINTAGE_RED</FreeBonus>
 			<iNumFreeBonuses>3</iNumFreeBonuses>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -14872,7 +14872,7 @@
 			<!-- Cost -->
 			<iCost>1280</iCost>
 			<!-- Main effects -->
-			<FreeBonus>BONUS_VINTAGE_WHITE_WINE</FreeBonus>
+			<FreeBonus>BONUS_WINE_VINTAGE_WHITE</FreeBonus>
 			<iNumFreeBonuses>3</iNumFreeBonuses>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
@@ -14986,7 +14986,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iAnarchyModifier>-25</iAnarchyModifier>
@@ -15034,12 +15034,12 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_CEMENT</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_STEEL</Bonus>
+				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
 			<!-- Cost -->
 			<iCost>7080</iCost>
 			<!-- Main effects -->
-			<FreeBonus>BONUS_INGOT_GOLD</FreeBonus>
+			<FreeBonus>BONUS_GOLD_INGOTS</FreeBonus>
 			<iNumFreeBonuses>3</iNumFreeBonuses>
 			<!-- Special Yield and Commerce modifiers -->
 			<ObsoleteSafeCommerceChanges>
@@ -15052,7 +15052,7 @@
 				<iCommerce>5</iCommerce>
 			</GlobalCommerceModifiers>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>20</iAsset>
@@ -15151,7 +15151,7 @@
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Units -->
 			<DomainFreeExperiences>
@@ -15268,7 +15268,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_STATESMAN</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_STATESMAN</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>8</iAsset>
@@ -15394,7 +15394,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_STATESMAN</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_STATESMAN</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>8</iAsset>
@@ -15520,7 +15520,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_STATESMAN</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_STATESMAN</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>8</iAsset>
@@ -15649,7 +15649,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_DOCTOR</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>8</iAsset>
@@ -15778,7 +15778,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_DOCTOR</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>8</iAsset>
@@ -15907,7 +15907,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_DOCTOR</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>8</iAsset>
@@ -16039,7 +16039,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>8</iAsset>
@@ -16166,7 +16166,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>8</iAsset>
@@ -16293,7 +16293,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>8</iAsset>
@@ -16418,7 +16418,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>8</iAsset>
@@ -16543,7 +16543,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>8</iAsset>
@@ -16673,7 +16673,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>8</iAsset>
@@ -16764,7 +16764,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>8</iAsset>
@@ -16855,7 +16855,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>8</iAsset>
@@ -16946,7 +16946,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>8</iAsset>
@@ -16994,7 +16994,7 @@
 					<iSpecialistCount>2</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_STATESMAN</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_STATESMAN</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<GlobalBuildingClassProductionModifiers>
 				<BuildingClassProductionModifier>
@@ -17045,7 +17045,7 @@
 					<iSpecialistCount>2</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>4</iGreatPeopleRateChange>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<!-- Properties diffusion -->
@@ -17095,7 +17095,7 @@
 			</PrereqBuildingClasses>
 			<!-- Misc. Effects -->
 			<iTradeRoutes>1</iTradeRoutes>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<!-- Properties diffusion -->
 			<PropertyManipulators>
@@ -17148,7 +17148,7 @@
 					<iSpecialistCount>2</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<!-- Properties diffusion -->
@@ -17183,7 +17183,7 @@
 			<CommerceChanges>
 				<iCommerce>6</iCommerce>
 			</CommerceChanges>
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<BuildingClassNeededs>
 				<BuildingClassNeeded>
@@ -17226,7 +17226,7 @@
 					<iHappinessChange>2</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
@@ -17289,7 +17289,7 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_GENERAL</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_GENERAL</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>6</iGreatPeopleRateChange>
 			<!-- Units -->
 			<DomainFreeExperiences>
@@ -17352,7 +17352,7 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_ADMIRAL</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_ADMIRAL</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>4</iGreatPeopleRateChange>
 			<!-- Units -->
 			<DomainFreeExperiences>
@@ -17415,7 +17415,7 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_ADMIRAL</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_ADMIRAL</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>6</iGreatPeopleRateChange>
 			<!-- Units -->
 			<DomainFreeExperiences>
@@ -17478,7 +17478,7 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_GENERAL</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_GENERAL</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>6</iGreatPeopleRateChange>
 			<!-- Units -->
 			<DomainFreeExperiences>
@@ -17541,7 +17541,7 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_GENERAL</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_GENERAL</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>4</iGreatPeopleRateChange>
 			<!-- Units -->
 			<DomainFreeExperiences>
@@ -17587,7 +17587,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_DUALISM</PrereqTech>
 			<PrereqBonuses>
-				<Bonus>BONUS_WARE_COPPER</Bonus>
+				<Bonus>BONUS_COPPER_WARES</Bonus>
 			</PrereqBonuses>
 			<iPrereqPopulation>15</iPrereqPopulation>
 			<!-- Obsolescence -->
@@ -17610,7 +17610,7 @@
 			<iHealth>-1</iHealth>
 			<iHappiness>-1</iHappiness>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_DETECTIVE</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_DETECTIVE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<!-- Properties diffusion -->
 			<PropertyManipulators>
@@ -17656,9 +17656,7 @@
 				</UnitCombatProdModifier>
 			</UnitCombatProdModifiers>
 			<FreeTraitTypes>
-				<FreeTraitType>
-					<TraitType>TRAIT_ANCIENT_WAY_OF_THE_FIST</TraitType>
-				</FreeTraitType>
+				<TraitType>TRAIT_ANCIENT_WAY_OF_THE_FIST</TraitType>
 			</FreeTraitTypes>
 			<!-- Misc -->
 			<iAsset>3</iAsset>
@@ -17711,9 +17709,7 @@
 				</UnitCombatProdModifier>
 			</UnitCombatProdModifiers>
 			<FreeTraitTypes>
-				<FreeTraitType>
-					<TraitType>TRAIT_ANCIENT_WAY_OF_THE_FEATHER</TraitType>
-				</FreeTraitType>
+				<TraitType>TRAIT_ANCIENT_WAY_OF_THE_FEATHER</TraitType>
 			</FreeTraitTypes>
 			<!-- Misc -->
 			<iAsset>3</iAsset>
@@ -17768,9 +17764,7 @@
 				</UnitCombatProdModifier>
 			</UnitCombatProdModifiers>
 			<FreeTraitTypes>
-				<FreeTraitType>
-					<TraitType>TRAIT_ANCIENT_WAY_OF_THE_SHADOWS</TraitType>
-				</FreeTraitType>
+				<TraitType>TRAIT_ANCIENT_WAY_OF_THE_SHADOWS</TraitType>
 			</FreeTraitTypes>
 			<!-- Misc -->
 			<iAsset>3</iAsset>
@@ -17810,7 +17804,7 @@
 			</TechTypes>
 			<PrereqBonuses>
 				<Bonus>BONUS_HORSE</Bonus>
-				<Bonus>BONUS_ELEPHANT</Bonus>
+				<Bonus>BONUS_ELEPHANTS</Bonus>
 				<Bonus>BONUS_CAMEL</Bonus>
 				<Bonus>BONUS_LLAMA</Bonus>
 			</PrereqBonuses>
@@ -17826,9 +17820,7 @@
 				</UnitCombatProdModifier>
 			</UnitCombatProdModifiers>
 			<FreeTraitTypes>
-				<FreeTraitType>
-					<TraitType>TRAIT_ANCIENT_WAY_OF_THE_CENTAUR</TraitType>
-				</FreeTraitType>
+				<TraitType>TRAIT_ANCIENT_WAY_OF_THE_CENTAUR</TraitType>
 			</FreeTraitTypes>
 			<!-- Misc -->
 			<iAsset>3</iAsset>
@@ -17875,9 +17867,7 @@
 				</UnitCombatProdModifier>
 			</UnitCombatProdModifiers>
 			<FreeTraitTypes>
-				<FreeTraitType>
-					<TraitType>TRAIT_ANCIENT_WAY_OF_THE_WARRIOR</TraitType>
-				</FreeTraitType>
+				<TraitType>TRAIT_ANCIENT_WAY_OF_THE_WARRIOR</TraitType>
 			</FreeTraitTypes>
 			<!-- Misc -->
 			<iAsset>3</iAsset>
@@ -17928,9 +17918,7 @@
 				</UnitCombatProdModifier>
 			</UnitCombatProdModifiers>
 			<FreeTraitTypes>
-				<FreeTraitType>
-					<TraitType>TRAIT_ANCIENT_WAY_OF_THE_WAVES</TraitType>
-				</FreeTraitType>
+				<TraitType>TRAIT_ANCIENT_WAY_OF_THE_WAVES</TraitType>
 			</FreeTraitTypes>
 			<!-- Misc -->
 			<iAsset>3</iAsset>
@@ -17977,9 +17965,7 @@
 				</UnitCombatProdModifier>
 			</UnitCombatProdModifiers>
 			<FreeTraitTypes>
-				<FreeTraitType>
-					<TraitType>TRAIT_ANCIENT_WAY_OF_THE_WIND</TraitType>
-				</FreeTraitType>
+				<TraitType>TRAIT_ANCIENT_WAY_OF_THE_WIND</TraitType>
 			</FreeTraitTypes>
 			<!-- Misc -->
 			<iAsset>3</iAsset>
@@ -18026,9 +18012,7 @@
 				</UnitCombatProdModifier>
 			</UnitCombatProdModifiers>
 			<FreeTraitTypes>
-				<FreeTraitType>
-					<TraitType>TRAIT_ANCIENT_WAY_OF_THE_WILD</TraitType>
-				</FreeTraitType>
+				<TraitType>TRAIT_ANCIENT_WAY_OF_THE_WILD</TraitType>
 			</FreeTraitTypes>
 			<!-- Misc -->
 			<iAsset>3</iAsset>
@@ -18075,9 +18059,7 @@
 				</UnitCombatProdModifier>
 			</UnitCombatProdModifiers>
 			<FreeTraitTypes>
-				<FreeTraitType>
-					<TraitType>TRAIT_ANCIENT_WAY_OF_THE_LEECH</TraitType>
-				</FreeTraitType>
+				<TraitType>TRAIT_ANCIENT_WAY_OF_THE_LEECH</TraitType>
 			</FreeTraitTypes>
 			<!-- Misc -->
 			<iAsset>3</iAsset>
@@ -18127,9 +18109,7 @@
 				</UnitCombatProdModifier>
 			</UnitCombatProdModifiers>
 			<FreeTraitTypes>
-				<FreeTraitType>
-					<TraitType>TRAIT_ANCIENT_WAY_OF_THE_WOLF</TraitType>
-				</FreeTraitType>
+				<TraitType>TRAIT_ANCIENT_WAY_OF_THE_WOLF</TraitType>
 			</FreeTraitTypes>
 			<!-- Misc -->
 			<iAsset>3</iAsset>
@@ -18180,7 +18160,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_ASIAN</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_ASIAN</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
@@ -18200,7 +18180,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>4</iAsset>
@@ -18248,7 +18228,7 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GOOD_ASIAN</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_ASIAN</BuildingClassType>
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
@@ -18270,7 +18250,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>4</iAsset>
@@ -18343,7 +18323,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>4</iAsset>
@@ -18405,7 +18385,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>4</iAsset>
@@ -18436,7 +18416,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bWater>1</bWater>
 			<bNukeImmune>1</bNukeImmune>
@@ -18463,11 +18443,11 @@
 			</CommerceChangeOriginalOwners>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
-					<BonusType>BONUS_ELEPHANT</BonusType>
+					<BonusType>BONUS_ELEPHANTS</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
-					<BonusType>BONUS_FUR</BonusType>
+					<BonusType>BONUS_BEAVERS</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
@@ -18489,7 +18469,7 @@
 			</BuildingClassNeededs>
 			<ImprovementFreeSpecialists>
 				<ImprovementFreeSpecialist>
-					<ImprovementType>IMPROVEMENT_CAMP</ImprovementType>
+					<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
 					<iFreeSpecialistCount>1</iFreeSpecialistCount>
 				</ImprovementFreeSpecialist>
 			</ImprovementFreeSpecialists>
@@ -18515,7 +18495,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>876</iCost>
@@ -18570,7 +18550,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>1200</iCost>
@@ -18603,7 +18583,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>1200</iCost>
@@ -18657,7 +18637,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>6180</iCost>
@@ -18706,7 +18686,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>1296</iCost>
@@ -18733,7 +18713,7 @@
 			</CommerceChangeOriginalOwners>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_GOLD</BonusType>
+					<BonusType>BONUS_GOLD_WARES</BonusType>
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -18761,7 +18741,7 @@
 			</MapCategoryTypes>
 			<FreeBonus>BONUS_GEOGLYPH_PLANS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>1296</iCost>
@@ -18837,7 +18817,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>1104</iCost>
@@ -18891,7 +18871,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>7680</iCost>
@@ -18942,7 +18922,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bWater>1</bWater>
 			<bNukeImmune>1</bNukeImmune>
@@ -19000,11 +18980,11 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WEMBLEY</ArtDefineTag>
 			<PrereqTech>TECH_SATELLITES</PrereqTech>
-			<ObsoleteTech>TECH_BINARY_PYSCHOKINESIS</ObsoleteTech>
+			<ObsoleteTech>TECH_BINARY_PSYCHOKINESIS</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>2820</iCost>
@@ -19043,7 +19023,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>7080</iCost>
@@ -19089,7 +19069,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_IDEOGRAMS</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>708</iCost>
@@ -19133,7 +19113,7 @@
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_IMPERIALISM</ObsoleteTech>
 			<PrereqTech>TECH_CITY_PLANNING</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>1404</iCost>
@@ -19194,7 +19174,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_IMPERIALISM</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>4800</iCost>
@@ -19253,7 +19233,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COMPOSITES</PrereqTech>
 			<FreePromotion>PROMOTION_PATRIOTIC1</FreePromotion>
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>10110</iCost>
@@ -19306,7 +19286,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_IMPERIALISM</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>4800</iCost>
@@ -19364,7 +19344,7 @@
 			<bStateReligion>1</bStateReligion>
 			<ObsoleteTech>TECH_NATIONALISM</ObsoleteTech>
 			<PrereqTech>TECH_PAPACY</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>1860</iCost>
@@ -19411,7 +19391,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ALAMO</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ALAMO</MovieDefineTag>
 			<PrereqTech>TECH_NATIONALISM</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>3330</iCost>
@@ -19466,7 +19446,7 @@
 				<BonusType>BONUS_STONE</BonusType>
 			</PrereqBonuses>
 			<FreePromotion>PROMOTION_FANATIC</FreePromotion>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>1860</iCost>
@@ -19499,7 +19479,7 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqOrCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_DIVINE_RULE</CivicOption>
+					<CivicOption>CIVIC_DIVINE_CULT</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -19507,7 +19487,7 @@
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_INTOLERANT</CivicOption>
+					<CivicOption>CIVIC_INQUISITORIAL</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqOrCivics>
@@ -19532,7 +19512,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_ALCATRAZ</MovieDefineTag>
 			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
 			<FreeBuilding>BUILDINGCLASS_GOOD_ALCATRAZ</FreeBuilding>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bWater>1</bWater>
 			<bNukeImmune>1</bNukeImmune>
@@ -19601,7 +19581,7 @@
 			<ObsoleteTech>TECH_RAILROAD</ObsoleteTech>
 			<PrereqTech>TECH_PAVED_ROADS</PrereqTech>
 			<Bonus>BONUS_STONE</Bonus>
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>1680</iCost>
@@ -19645,7 +19625,7 @@
 			<ObsoleteTech>TECH_HOMO_SUPERIOR</ObsoleteTech>
 			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
 			<FreePromotion>PROMOTION_SECURITY2</FreePromotion>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_DETECTIVE</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_DETECTIVE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>4800</iCost>
@@ -19713,8 +19693,8 @@
 			<ArtDefineTag>ART_DEF_BUILDING_BANK_OF_CHINA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BANK_OF_CHINA</MovieDefineTag>
 			<PrereqTech>TECH_CONGLOMERATES</PrereqTech>
-			<Bonus>BONUS_WARE_STEEL</Bonus>
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<Bonus>BONUS_STEEL_WARES</Bonus>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>7380</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -19769,7 +19749,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_BAUHAUS</MovieDefineTag>
 			<ObsoleteTech>TECH_METAMATERIALS</ObsoleteTech>
 			<PrereqTech>TECH_MODERN_ART</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>6480</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -19852,7 +19832,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_BAYREUTH</MovieDefineTag>
 			<ObsoleteTech>TECH_VIRTUAL_REALITY</ObsoleteTech>
 			<PrereqTech>TECH_REALISM</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>4620</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -19898,7 +19878,7 @@
 			</GlobalBuildingExtraCommerces>
 			<LocalSpecialistCommerceChanges>
 				<LocalSpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_GENERAL</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</SpecialistType>
 					<CommerceChanges>
 				            <iCommerce>0</iCommerce>
 				            <iCommerce>0</iCommerce>
@@ -19937,12 +19917,12 @@
 			<TechTypes>
 				<PrereqTech>TECH_FASCISM</PrereqTech>
 			</TechTypes>
-			<Bonus>BONUS_WARE_STEEL</Bonus>
+			<Bonus>BONUS_STEEL_WARES</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_CEMENT</Bonus>
 			</PrereqBonuses>
 			<FreeBuilding>BUILDINGCLASS_CEMENT_BARRIER</FreeBuilding>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>5940</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -19997,7 +19977,7 @@
 			<ObsoleteTech>TECH_TELEGRAPH</ObsoleteTech>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
 			<FreePromotion>PROMOTION_DECEPTION1</FreePromotion>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>2208</iCost>
@@ -20069,7 +20049,7 @@
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 			</PrereqOrTerrain>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>8460</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -20114,7 +20094,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_CABARET_VOLTAIRE</MovieDefineTag>
 			<ObsoleteTech>TECH_COMMUNICATION_NETWORKS</ObsoleteTech>
 			<PrereqTech>TECH_DADA</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>6780</iCost>
@@ -20163,7 +20143,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_CAHOKIA</MovieDefineTag>
 			<ObsoleteTech>TECH_THEOLOGY</ObsoleteTech>
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>876</iCost>
@@ -20229,7 +20209,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CANNES_FF</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CANNES_FF</MovieDefineTag>
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>7080</iCost>
@@ -20306,7 +20286,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_CEMENT</BonusType>
 			</PrereqBonuses>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>6480</iCost>
@@ -20393,11 +20373,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRYSTAL_PALACE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CRYSTAL_PALACE</MovieDefineTag>
 			<PrereqTech>TECH_IMPERIALISM</PrereqTech>
-			<Bonus>BONUS_GLASS</Bonus>
+			<Bonus>BONUS_GLASSWARE</Bonus>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_STEEL</BonusType>
+				<BonusType>BONUS_STEEL_WARES</BonusType>
 			</PrereqBonuses>
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bGoldenAge>1</bGoldenAge>
 			<iCost>4800</iCost>
@@ -20444,7 +20424,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_CONGVIENNA</MovieDefineTag>
 			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
 			<PrereqTech>TECH_GRAND_WAR</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<DiploVoteType>DIPLOVOTE_CVIENNA</DiploVoteType>
 			<bForceTeamVoteEligible>1</bForceTeamVoteEligible>
@@ -20487,7 +20467,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DINO_PARK</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DINO_PARK</MovieDefineTag>
 			<PrereqTech>TECH_TIME_TRAVEL</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>84930</iCost>
@@ -20567,7 +20547,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_CEMENT</BonusType>
 			</PrereqBonuses>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>5220</iCost>
@@ -20623,7 +20603,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_ELCAMINODESANTIAGO</MovieDefineTag>
 			<bStateReligion>1</bStateReligion>
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>1800</iCost>
@@ -20685,8 +20665,8 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ELLIS_ISLAND</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ELLIS_ISLAND</MovieDefineTag>
 			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
-			<FreeBuilding>BUILDINGCLASS_GOOD_EUROPEAN</FreeBuilding>
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<FreeBuilding>BUILDINGCLASS_CULTURE_LOCAL_EUROPEAN</FreeBuilding>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bWater>1</bWater>
 			<bNukeImmune>1</bNukeImmune>
@@ -20750,7 +20730,7 @@
 			<bStateReligion>1</bStateReligion>
 			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
 			<Bonus>BONUS_STONE</Bonus>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bGovernmentCenter>1</bGovernmentCenter>
 			<bNukeImmune>1</bNukeImmune>
@@ -20805,7 +20785,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_FIELD_GOLD</MovieDefineTag>
 			<ObsoleteTech>TECH_REPRESENTATIVE_DEMOCRACY</ObsoleteTech>
 			<PrereqTech>TECH_TOURNAMENTS</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>2280</iCost>
@@ -20828,7 +20808,7 @@
 			</CommerceChangeDoubleTimes>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_GOLD</BonusType>
+					<BonusType>BONUS_GOLD_WARES</BonusType>
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -20836,7 +20816,7 @@
 			<Help>TXT_KEY_HELP_FIELD_GOLD</Help>
 			<PrereqOrCivics>
 				<PrereqCivic>
-					<CivicOption>CIVIC_FUEDALISM</CivicOption>
+					<CivicOption>CIVIC_VASSAL_LEVIES</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -20858,7 +20838,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_GIVERNY</MovieDefineTag>
 			<ObsoleteTech>TECH_HYDROPONICS</ObsoleteTech>
 			<PrereqTech>TECH_IMPRESSIONISM</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bRiver>1</bRiver>
 			<bNukeImmune>1</bNukeImmune>
@@ -20920,15 +20900,15 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GOLDEN_SPIKE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GOLDEN_SPIKE</MovieDefineTag>
-			<ObsoleteTech>TECH_MAGLEV</ObsoleteTech>
+			<ObsoleteTech>TECH_MAGNETIC_LEVITATION</ObsoleteTech>
 			<PrereqTech>TECH_RAILROAD</PrereqTech>
-			<Bonus>BONUS_WARE_STEEL</Bonus>
+			<Bonus>BONUS_STEEL_WARES</Bonus>
 			<PrereqBonuses>
 				<BonusType>BONUS_COAL</BonusType>
 				<BonusType>BONUS_OIL</BonusType>
-				<BonusType>BONUS_DIESEL</BonusType>
+				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			</PrereqBonuses>
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>3930</iCost>
@@ -20952,38 +20932,38 @@
 			</CommerceChangeDoubleTimes>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_GOLD</BonusType>
+					<BonusType>BONUS_GOLD_WARES</BonusType>
 					<iProductonModifier>50</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Help>TXT_KEY_HELP_GOLDEN_SPIKE</Help>
-			<UnitClassProductionModifiers>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_PIONEER</UnitClassType>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_PIONEER</UnitType>
 					<iProductionModifier>50</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_WORKER</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_WORKER</UnitType>
 					<iProductionModifier>25</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_WORKER_INDUSTRIAL</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_WORKER_INDUSTRIAL</UnitType>
 					<iProductionModifier>25</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_WORKER_MODERN</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_WORKER_MODERN</UnitType>
 					<iProductionModifier>25</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_CLONES</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_CLONES</UnitType>
 					<iProductionModifier>25</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_WORKER_ANDROID</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_WORKER_ANDROID</UnitType>
 					<iProductionModifier>25</iProductionModifier>
-				</UnitClassProductionModifier>
-			</UnitClassProductionModifiers>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -21011,7 +20991,7 @@
 				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<FreeBuilding>BUILDINGCLASS_CHIEFS_HUT</FreeBuilding>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>624</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -21041,7 +21021,7 @@
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_HEREDITARY_RULE</CivicOption>
+					<CivicOption>CIVIC_MONARCHY</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
@@ -21069,7 +21049,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HNIC</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HNIC</MovieDefineTag>
 			<PrereqTech>TECH_MODERN_SPORTS</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>7380</iCost>
@@ -21138,7 +21118,7 @@
 				<Bonus>BONUS_BOOKS</Bonus>
 				<Bonus>BONUS_PAPER</Bonus>
 			</PrereqBonuses>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>1800</iCost>
@@ -21168,7 +21148,7 @@
 					</CommerceChanges>
 				</SpecialistCommerceChange>
 				<SpecialistCommerceChange>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
+					<SpecialistType>SPECIALIST_GREAT_PROPHET</SpecialistType>
 					<CommerceChanges>
 				            <iCommerce>-1</iCommerce>
 				            <iCommerce>1</iCommerce>
@@ -21199,7 +21179,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_KENTUCKY_DERBY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_KENTUCKY_DERBY</MovieDefineTag>
 			<PrereqTech>TECH_LAWN_SPORTS</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>4620</iCost>
@@ -21269,10 +21249,10 @@
 			<PrereqTech>TECH_TOURNAMENTS</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_HORSE</Bonus>
-				<Bonus>BONUS_ELEPHANT</Bonus>
+				<Bonus>BONUS_ELEPHANTS</Bonus>
 				<Bonus>BONUS_CAMEL</Bonus>
 			</PrereqBonuses>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
@@ -21348,7 +21328,7 @@
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 				<PrereqCivic>
-					<CivicOption>CIVIC_FUEDALISM</CivicOption>
+					<CivicOption>CIVIC_VASSAL_LEVIES</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
 			</PrereqOrCivics>
@@ -21371,7 +21351,7 @@
 				<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			</TechTypes>
 			<Bonus>BONUS_STONE</Bonus>
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>1800</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -21428,7 +21408,7 @@
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 			</PrereqOrTerrain>
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>8070</iCost>
@@ -21516,8 +21496,8 @@
 			<MovieDefineTag>ART_DEF_MOVIE_LONDONEYE</MovieDefineTag>
 			<ObsoleteTech>TECH_MEGASTRUCTURE_ENGINEERING</ObsoleteTech>
 			<PrereqTech>TECH_TOURISM</PrereqTech>
-			<Bonus>BONUS_WARE_STEEL</Bonus>
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<Bonus>BONUS_STEEL_WARES</Bonus>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>7680</iCost>
@@ -21627,7 +21607,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_MADISON_AVENUE</MovieDefineTag>
 			<ObsoleteTech>TECH_ANDROIDS</ObsoleteTech>
 			<PrereqTech>TECH_CONSUMERISM</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>6180</iCost>
@@ -21750,7 +21730,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_MAGINOTLINE</MovieDefineTag>
 			<ObsoleteTech>TECH_MECHANIZED_WARFARE</ObsoleteTech>
 			<PrereqTech>TECH_TRENCH_WARFARE</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>5700</iCost>
@@ -21784,9 +21764,9 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_CEMENT</BonusType>
 				<BonusType>BONUS_MARBLE</BonusType>
-				<BonusType>BONUS_WARE_STEEL</BonusType>
+				<BonusType>BONUS_STEEL_WARES</BonusType>
 			</PrereqBonuses>
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>8070</iCost>
@@ -21812,7 +21792,7 @@
 			</CommerceModifiers>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_GOLD</BonusType>
+					<BonusType>BONUS_GOLD_WARES</BonusType>
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -21860,9 +21840,9 @@
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ORIENT_EXPRESS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ORIENT_EXPRESS</MovieDefineTag>
-			<ObsoleteTech>TECH_MAGLEV</ObsoleteTech>
+			<ObsoleteTech>TECH_MAGNETIC_LEVITATION</ObsoleteTech>
 			<PrereqTech>TECH_RAILROAD</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>3930</iCost>
@@ -21915,9 +21895,9 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PALACE_SOV</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_PALACE_SOV</MovieDefineTag>
-			<PrereqTech>TECH_UTOPIA</PrereqTech>
-			<Bonus>BONUS_WARE_STEEL</Bonus>
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<PrereqTech>TECH_COMMUNISM</PrereqTech>
+			<Bonus>BONUS_STEEL_WARES</Bonus>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>5940</iCost>
@@ -21986,7 +21966,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_PEARL_HARBOR</MovieDefineTag>
 			<ObsoleteTech>TECH_FUSION</ObsoleteTech>
 			<PrereqTech>TECH_IMPERIALISM</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bWater>1</bWater>
 			<bNukeImmune>1</bNukeImmune>
@@ -22056,7 +22036,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PERE_LACHAISE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_PERE_LACHAISE</MovieDefineTag>
 			<PrereqTech>TECH_MEDICINE</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>4620</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -22107,7 +22087,7 @@
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 			</PrereqOrTerrain>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>21150</iCost>
@@ -22164,7 +22144,7 @@
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<FreeBonus>BONUS_AUTOMOBILES</FreeBonus>
 			<iNumFreeBonuses>10</iNumFreeBonuses>
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bRiver>1</bRiver>
 			<bNukeImmune>1</bNukeImmune>
@@ -22203,7 +22183,7 @@
 					</YieldModifiers>
 				</BonusYieldModifier>
 				<BonusYieldModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<YieldModifiers>
 						<iYield>0</iYield>
 						<iYield>20</iYield>
@@ -22217,14 +22197,14 @@
 					</YieldModifiers>
 				</BonusYieldModifier>
 				<BonusYieldModifier>
-					<BonusType>BONUS_WARE_ALUMINUM</BonusType>
+					<BonusType>BONUS_ALUMINUM_WARES</BonusType>
 					<YieldModifiers>
 						<iYield>0</iYield>
 						<iYield>5</iYield>
 					</YieldModifiers>
 				</BonusYieldModifier>
 				<BonusYieldModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<YieldModifiers>
 						<iYield>0</iYield>
 						<iYield>5</iYield>
@@ -22263,8 +22243,8 @@
 			<MovieDefineTag>ART_DEF_MOVIE_ROSETTA_STONE</MovieDefineTag>
 			<ObsoleteTech>TECH_UNIVERSAL_TRANSLATOR</ObsoleteTech>
 			<PrereqTech>TECH_ARCHEOLOGY</PrereqTech>
-			<Bonus>BONUS_ANCIENTTEMPLE</Bonus>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<Bonus>BONUS_ANCIENT_RELICS</Bonus>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>3210</iCost>
@@ -22332,7 +22312,7 @@
 				<Bonus>BONUS_OIL</Bonus>
 				<Bonus>BONUS_TAR</Bonus>
 			</PrereqBonuses>
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>6780</iCost>
@@ -22359,7 +22339,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_SCAPA_FLOW</MovieDefineTag>
 			<ObsoleteTech>TECH_FUSION</ObsoleteTech>
 			<PrereqTech>TECH_IMPERIALISM</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bWater>1</bWater>
 			<bNukeImmune>1</bNukeImmune>
@@ -22431,7 +22411,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_SCARBOROUGH_FAIR</MovieDefineTag>
 			<ObsoleteTech>TECH_RAILROAD</ObsoleteTech>
 			<PrereqTech>TECH_CHARTERS</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>2136</iCost>
@@ -22512,7 +22492,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_SERPENT_MOUND</MovieDefineTag>
 			<ObsoleteTech>TECH_THEOLOGY</ObsoleteTech>
 			<PrereqTech>TECH_STARGAZING</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>876</iCost>
@@ -22577,7 +22557,7 @@
 			<ObsoleteTech>TECH_HOMO_SUPERIOR</ObsoleteTech>
 			<PrereqTech>TECH_MARTIAL_ARTS</PrereqTech>
 			<FreePromotion>PROMOTION_MARTIAL_ARTS</FreePromotion>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>2064</iCost>
@@ -22641,7 +22621,7 @@
 			</PrereqOrTerrain>
 			<FreeBonus>BONUS_ALMONDS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>-50</iHurryAngerModifier>
 			<bNukeImmune>1</bNukeImmune>
@@ -22699,7 +22679,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_LEMON</FreeBonus>
+					<FreeBonus>BONUS_LEMONS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -22707,7 +22687,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_MELON</FreeBonus>
+					<FreeBonus>BONUS_MELONS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -22719,7 +22699,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_POTATO</FreeBonus>
+					<FreeBonus>BONUS_POTATOES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -22755,7 +22735,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WINE</FreeBonus>
+					<FreeBonus>BONUS_GRAPES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -22771,8 +22751,8 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TOKYO_SKY_TREE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TOKYO_SKY_TREE</MovieDefineTag>
 			<PrereqTech>TECH_COMMUNICATION_NETWORKS</PrereqTech>
-			<Bonus>BONUS_WARE_STEEL</Bonus>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<Bonus>BONUS_STEEL_WARES</Bonus>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>11550</iCost>
@@ -22823,8 +22803,8 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TOKYO_TOWER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TOKYO_TOWER</MovieDefineTag>
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
-			<Bonus>BONUS_WARE_STEEL</Bonus>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<Bonus>BONUS_STEEL_WARES</Bonus>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>7080</iCost>
@@ -22872,7 +22852,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_TROYES_FAIR</MovieDefineTag>
 			<ObsoleteTech>TECH_RAILROAD</ObsoleteTech>
 			<PrereqTech>TECH_CHARTERS</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>2136</iCost>
@@ -22952,7 +22932,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_WALK_OF_FAME</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_WALK_OF_FAME</MovieDefineTag>
 			<PrereqTech>TECH_TOURISM</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>7680</iCost>
@@ -23041,7 +23021,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_WARHOL_FACTORY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_WARHOL_FACTORY</MovieDefineTag>
 			<PrereqTech>TECH_POP_ART</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>7380</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -23063,7 +23043,7 @@
 			</CommerceChangeDoubleTimes>
 			<BonusHealthChanges>
 				<BonusHealthChange>
-					<BonusType>BONUS_MUSIC</BonusType>
+					<BonusType>BONUS_HIT_SINGLES</BonusType>
 					<iHealthChange>-1</iHealthChange>
 				</BonusHealthChange>
 			</BonusHealthChanges>
@@ -23128,7 +23108,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_WESTMINSTER</MovieDefineTag>
 			<ObsoleteTech>TECH_VIRTUAL_REALITY</ObsoleteTech>
 			<PrereqTech>TECH_NATIONALISM</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>3330</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -23177,11 +23157,11 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WILLOWRUN</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_WILLOWRUN</MovieDefineTag>
-			<ObsoleteTech>TECH_LUNAR_LUNAR_MANUFACTURING</ObsoleteTech>
+			<ObsoleteTech>TECH_LUNAR_MANUFACTURING</ObsoleteTech>
 			<PrereqTech>TECH_AVIATION</PrereqTech>
 			<FreeBonus>BONUS_AIRCRAFT</FreeBonus>
 			<iNumFreeBonuses>3</iNumFreeBonuses>
-			<GreatPeopleUnitClass>UNITCLASS_ENGINEER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>6180</iCost>
@@ -23241,7 +23221,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_WOODSTOCK</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_WOODSTOCK</MovieDefineTag>
 			<PrereqTech>TECH_COUNTERCULTURE</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>8460</iCost>
@@ -23266,13 +23246,13 @@
 			</CommerceChangeDoubleTimes>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
-					<BonusType>BONUS_MUSIC</BonusType>
+					<BonusType>BONUS_HIT_SINGLES</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_MUSIC</BonusType>
+					<BonusType>BONUS_HIT_SINGLES</BonusType>
 					<iProductonModifier>50</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -23296,8 +23276,8 @@
 			<ArtDefineTag>ART_DEF_BUILDING_YASNAYA_POLYANA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_YASNAYA_POLYANA</MovieDefineTag>
 			<ObsoleteTech>TECH_VERTICAL_FARMING</ObsoleteTech>
-			<PrereqTech>TECH_LABOR_UNION</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<PrereqTech>TECH_LABOR_UNIONS</PrereqTech>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>4620</iCost>
@@ -23341,7 +23321,7 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_COMPUTERS</Bonus>
 			</PrereqBonuses>
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>26910</iCost>

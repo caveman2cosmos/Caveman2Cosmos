@@ -164,14 +164,14 @@ public:
 	void promote(int /*PromotionTypes*/ ePromotion, int iLeaderUnitId);
 
 	int upgradePrice(int /*UnitTypes*/ eUnit);
-	bool upgradeAvailable(int /*UnitTypes*/ eFromUnit, int /*UnitClassTypes*/ eToUnitClass, int iCount);
+	bool upgradeAvailable(int /*UnitTypes*/ eFromUnit, int /*UnitTypes*/ eToUnit, int iCount);
 	bool canUpgrade(int /*UnitTypes*/ eUnit, bool bTestVisible);
 	bool hasUpgrade(bool bSearch);
 
 	int /*HandicapTypes*/ getHandicapType();
 	int /*CivilizationTypes*/ getCivilizationType();
 	int /*SpecialUnitTypes*/ getSpecialUnitType();
-	int /*UnitTypes*/ getCaptureUnitType(int /*CivilizationTypes*/ eCivilization);
+	int /*UnitTypes*/ getCaptureUnitType();
 	int /*UnitCombatTypes*/ getUnitCombatType();
 	int /*DomainTypes*/ getDomainType();
 	int /*InvisibleTypes*/ getInvisibleType();
@@ -347,8 +347,8 @@ public:
 	int terrainDefenseModifier(int /*TerrainTypes*/ eTerrain);
 	int featureAttackModifier(int /*FeatureTypes*/ eFeature);
 	int featureDefenseModifier(int /*FeatureTypes*/ eFeature);
-	int unitClassAttackModifier(int /*UnitClassTypes*/ eUnitClass);
-	int unitClassDefenseModifier(int /*UnitClassTypes*/ eUnitClass);
+	int unitAttackModifier(int /*UnitTypes*/ eUnit);
+	int unitDefenseModifier(int /*UnitTypes*/ eUnit);
 	int unitCombatModifier(int /*UnitCombatTypes*/ eUnitCombat);
 	int domainModifier(int /*DomainTypes*/ eDomain);
 
@@ -508,7 +508,6 @@ public:
 	int getTeam();
 
 	int /*UnitTypes*/ getUnitType();
-	int /*UnitClassTypes*/ getUnitClassType();
 	int /*UnitTypes*/ getLeaderUnitType();
 	void setLeaderUnitType(int /*UnitTypes*/ leaderUnitType);
 
