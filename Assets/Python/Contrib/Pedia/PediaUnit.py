@@ -154,7 +154,7 @@ class PediaUnit:
 		#Combat types
 		aList0 = []
 		aList1 = []
-		for k in range(GC.getNumUnitCombatInfos()):
+		for k in xrange(GC.getNumUnitCombatInfos()):
 			if CvTheUnitInfo.isSubCombatType(k):
 				CvUnitCombatInfo = GC.getUnitCombatInfo(k)
 				if not CvUnitCombatInfo.isGraphicalOnly():
@@ -189,7 +189,7 @@ class PediaUnit:
 		if iType != -1:
 			aReqList.append([szChild + str(iType) + "|" + str(n), GC.getTechInfo(iType).getButton()])
 			n += 1
-		for j in range(GC.getDefineINT("NUM_UNIT_AND_TECH_PREREQS")):
+		for j in xrange(GC.getDefineINT("NUM_UNIT_AND_TECH_PREREQS")):
 			iType = CvTheUnitInfo.getPrereqAndTechs(j)
 			if iType == -1:
 				break
@@ -198,7 +198,7 @@ class PediaUnit:
 		# Bonus Req
 		szChild = PF + "BONUS"
 		nOr = 0
-		for j in range(GC.getNUM_UNIT_PREREQ_OR_BONUSES()):
+		for j in xrange(GC.getNUM_UNIT_PREREQ_OR_BONUSES()):
 			iType = CvTheUnitInfo.getPrereqOrBonuses(j)
 			if iType == -1:
 				break
@@ -228,7 +228,7 @@ class PediaUnit:
 				nOr = 0
 		# Civic Req
 		szChild = PF + "CIVIC"
-		for iType in range(GC.getNumCivicInfos()):
+		for iType in xrange(GC.getNumCivicInfos()):
 			if CvTheUnitInfo.isPrereqOrCivics(iType):
 				aList0.append(iType)
 				nOr += 1
@@ -256,13 +256,10 @@ class PediaUnit:
 			n += 1
 		# Building Req
 		szChild = PF + "BUILDING"
-		iType = CvTheUnitInfo.getPrereqBuilding()
-		if iType != -1:
-			aList0.append(iType)
-		for i in range(GC.getNumBuildingInfos()):
-			if CvTheUnitInfo.isPrereqBuilding(i):
-				aList0.append(i)
-		for i in range(CvTheUnitInfo.getPrereqOrBuildingsNum()):
+		for i in xrange(CvTheUnitInfo.getNumPrereqAndBuildings()):
+			aList0.append(CvTheUnitInfo.getPrereqAndBuilding(i))
+
+		for i in xrange(CvTheUnitInfo.getPrereqOrBuildingsNum()):
 			iType = CvTheUnitInfo.getPrereqOrBuilding(i)
 			if iType == -1:
 				break
@@ -293,7 +290,7 @@ class PediaUnit:
 		# Upgrades To
 		aUpgList = []
 		szChild = PF + "UNIT"
-		for i in range(CvTheUnitInfo.getNumUnitUpgrades()):
+		for i in xrange(CvTheUnitInfo.getNumUnitUpgrades()):
 			iUnit = CvTheUnitInfo.getUnitUpgrade(i)
 			aUpgList.append([szChild + str(iUnit),  GC.getUnitInfo(iUnit).getButton()])
 
@@ -368,7 +365,7 @@ class PediaUnit:
 
 		# Promotions
 		aList0 = []
-		for k in range(GC.getNumPromotionInfos()):
+		for k in xrange(GC.getNumPromotionInfos()):
 			if CvTheUnitInfo.isQualifiedPromotionType(k):
 				CvPromotionInfo = GC.getPromotionInfo(k)
 				if not CvPromotionInfo.isGraphicalOnly():

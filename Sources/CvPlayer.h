@@ -650,7 +650,6 @@ public:
 
 	bool canFoundReligion() const; // Exposed to Python
 
-	bool isBuildingRequiredToTrain(BuildingTypes eBuilding, UnitTypes eUnit) const; // Exposed to Python
 /************************************************************************************************/
 /* REVDCM                                  END                                                  */
 /************************************************************************************************/

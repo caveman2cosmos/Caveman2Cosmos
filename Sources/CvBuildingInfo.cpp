@@ -3088,7 +3088,7 @@ bool CvBuildingInfo::EnablesUnits() const
 		{
 			CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes)iI);
 
-			if (kUnit.getPrereqBuilding() == eBuilding)
+			if (kUnit.isPrereqAndBuilding(eBuilding))
 			{
 				m_bEnablesUnits = true;
 				return m_bEnablesUnits;

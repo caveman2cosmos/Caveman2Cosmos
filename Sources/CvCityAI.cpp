@@ -5955,13 +5955,26 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 						{
 							CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes)iI);
-							bool bUnitIsEnabler = (kUnit.getPrereqBuilding() == eBuilding);
-							bool bUnitIsOtherwiseEnabled = (bUnitIsEnabler ||
-															(BuildingTypes)kUnit.getPrereqBuilding() == NO_BUILDING ||
-															getNumBuilding((BuildingTypes)kUnit.getPrereqBuilding()) > 0) &&
-														   GET_TEAM(getTeam()).isHasTech((TechTypes)kUnit.getPrereqAndTech());
+							bool bUnitIsEnabler = kUnit.isPrereqAndBuilding((int)eBuilding);
+							bool bUnitIsOtherwiseEnabled = false;
 
-							if ( bUnitIsOtherwiseEnabled )
+							if (GET_TEAM(getTeam()).isHasTech((TechTypes)kUnit.getPrereqAndTech()))
+							{
+								bUnitIsOtherwiseEnabled = bUnitIsEnabler || kUnit.getNumPrereqAndBuildings() == 0;
+								if (!bUnitIsOtherwiseEnabled)
+								{
+									for (int iI = 0; iI < kUnit.getNumPrereqAndBuildings(); ++iI)
+									{
+										if (getNumBuilding((BuildingTypes)kUnit.getPrereqAndBuilding(iI)) > 0)
+										{
+											bUnitIsOtherwiseEnabled = true;
+											break;
+										}
+									}
+								}
+							}
+
+							if (bUnitIsOtherwiseEnabled)
 							{
 								bool bUnitIsBonusEnabled = true;
 								if ( kUnit.getPrereqAndBonus() != NO_BONUS )
@@ -6733,7 +6746,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 					{
 						PROFILE("CvCityAI::AI_buildingValueThresholdOriginal.Units");
 
-						if (GC.getUnitInfo((UnitTypes)iI).getPrereqBuilding() == eBuilding)
+						if (GC.getUnitInfo((UnitTypes)iI).isPrereqAndBuilding((int)eBuilding))
 						{
 							// BBAI TODO: Smarter monastary construction, better support for mods
 
@@ -17397,13 +17410,26 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 								for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 								{
 									CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes)iI);
-									bool bUnitIsEnabler = (kUnit.getPrereqBuilding() == eBuilding);
-									bool bUnitIsOtherwiseEnabled = (bUnitIsEnabler ||
-																	(BuildingTypes)kUnit.getPrereqBuilding() == NO_BUILDING ||
-																	getNumBuilding((BuildingTypes)kUnit.getPrereqBuilding()) > 0) &&
-																   GET_TEAM(getTeam()).isHasTech((TechTypes)kUnit.getPrereqAndTech());
+									bool bUnitIsEnabler = kUnit.isPrereqAndBuilding((int)eBuilding);
+									bool bUnitIsOtherwiseEnabled = false;
 
-									if ( bUnitIsOtherwiseEnabled )
+									if (GET_TEAM(getTeam()).isHasTech((TechTypes)kUnit.getPrereqAndTech()))
+									{
+										bUnitIsOtherwiseEnabled = bUnitIsEnabler || kUnit.getNumPrereqAndBuildings() == 0;
+										if (!bUnitIsOtherwiseEnabled)
+										{
+											for (int iI = 0; iI < kUnit.getNumPrereqAndBuildings(); ++iI)
+											{
+												if (getNumBuilding((BuildingTypes)kUnit.getPrereqAndBuilding(iI)) > 0)
+												{
+													bUnitIsOtherwiseEnabled = true;
+													break;
+												}
+											}
+										}
+									}
+
+									if (bUnitIsOtherwiseEnabled)
 									{
 										bool bUnitIsBonusEnabled = true;
 										if ( kUnit.getPrereqAndBonus() != NO_BONUS )
@@ -18232,7 +18258,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 							int religiousBuildingValue = 0;
 							for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 							{
-								if (GC.getUnitInfo((UnitTypes)iI).getPrereqBuilding() == eBuilding)
+								if (GC.getUnitInfo((UnitTypes)iI).isPrereqAndBuilding((int)eBuilding))
 								{
 									// BBAI TODO: Smarter monastary construction, better support for mods
 

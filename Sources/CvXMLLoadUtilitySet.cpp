@@ -989,7 +989,7 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	}
 
 	LoadGlobalClassInfo(GC.getSpecialBuildingInfos(), "CIV4SpecialBuildingInfos", "Buildings", L"/Civ4SpecialBuildingInfos/SpecialBuildingInfos/SpecialBuildingInfo", false, GC.getSpecialBuildingInfoReplacements());
-	LoadGlobalClassInfo(GC.getBuildingInfos(), "CIV4BuildingInfos", "Buildings", L"/Civ4BuildingInfos/BuildingInfos/BuildingInfo", false, GC.getBuildingInfoReplacements());
+	LoadGlobalClassInfo(GC.getBuildingInfos(), "CIV4BuildingInfos", "Buildings", L"/Civ4BuildingInfos/BuildingInfos/BuildingInfo", true, GC.getBuildingInfoReplacements());
 	LoadGlobalClassInfo(GC.getCivicInfos(), "CIV4CivicInfos", "GameInfo", L"/Civ4CivicInfos/CivicInfos/CivicInfo", false, GC.getCivicInfoReplacements());
 	for (int i=0; i < GC.getNumVoteSourceInfos(); ++i)
 	{

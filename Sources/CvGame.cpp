@@ -7942,8 +7942,6 @@ namespace {
 			&& GET_PLAYER(BARBARIAN_PLAYER).canTrain(unitType)
 			// Either has no pre-requisites, or they are met
 			&& (unitInfo.getPrereqAndBonus() == NO_BONUS || GET_TEAM(BARBARIAN_TEAM).isHasTech((TechTypes)GC.getBonusInfo((BonusTypes)unitInfo.getPrereqAndBonus()).getTechCityTrade()))
-			// Need to ignore pre-requisite buildings or no ships can be built
-			// && unitInfo.getPrereqBuilding() == NO_BUILDING
 			// Another attempt to deny the spawning of barb heroes.
 			&& !isHeroUnit(unitInfo)
 			&& GET_TEAM(BARBARIAN_TEAM).isUnitPrereqOrBonusesMet(unitInfo)
@@ -13167,9 +13165,12 @@ bool CvGame::canEverTrain(UnitTypes eUnit) const
 		return false;
 	}
 
-	if (kUnit.getPrereqBuilding() != NO_BUILDING && !canEverConstruct((BuildingTypes)kUnit.getPrereqBuilding()))
+	for (int iI = 0; iI < kUnit.getNumPrereqAndBuildings(); ++iI)
 	{
-		return false;
+		if (!canEverConstruct((BuildingTypes)kUnit.getPrereqAndBuilding(iI)))
+		{
+			return false;
+		}
 	}
 	return true;
 }

@@ -21567,12 +21567,12 @@ iMaxTeamInstances was unused in CvUnit(Class)Info and removed as part of us shed
 
 			if (!bCivilopediaText)
 			{
-				if (GC.getUnitInfo(eUnit).getPrereqBuilding() != NO_BUILDING)
+				for (iI = 0; iI < GC.getUnitInfo(eUnit).getNumPrereqAndBuildings(); ++iI)
 				{
-					if ((pCity == NULL) || (pCity->getNumBuilding((BuildingTypes)(GC.getUnitInfo(eUnit).getPrereqBuilding())) <= 0))
+					if (pCity == NULL || pCity->getNumBuilding((BuildingTypes)GC.getUnitInfo(eUnit).getPrereqAndBuilding(iI)) < 1)
 					{
 						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_UNIT_REQUIRES_STRING", GC.getBuildingInfo((BuildingTypes)(GC.getUnitInfo(eUnit).getPrereqBuilding())).getTextKeyWide()));
+						szBuffer.append(gDLL->getText("TXT_KEY_UNIT_REQUIRES_STRING", GC.getBuildingInfo((BuildingTypes)GC.getUnitInfo(eUnit).getPrereqAndBuilding(iI)).getTextKeyWide()));
 					}
 				}
 
@@ -21698,40 +21698,10 @@ iMaxTeamInstances was unused in CvUnit(Class)Info and removed as part of us shed
 					}
 				}
 
-				for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+				for (iI = 0; iI < GC.getUnitInfo(eUnit).getNumPrereqAndBuildings(); ++iI)
 				{
-					if (GC.getUnitInfo(eUnit).isPrereqBuilding(iI))
-					{
-						BuildingTypes eRequiredBuilding = NO_BUILDING;
-						if (!pCity)
-						{
-							if (ePlayer != NO_PLAYER)
-							{
-								if (GET_PLAYER(ePlayer).isBuildingRequiredToTrain(BuildingTypes(iI), eUnit))
-								{
-									eRequiredBuilding = (BuildingTypes)iI;
-								}
-							}
-							else
-							{
-								// show default building
-								eRequiredBuilding = (BuildingTypes)iI;
-							}
-						}
-						// show unique building for city's owner if city doesn't have any
-						else if (GET_PLAYER(ePlayer).isBuildingRequiredToTrain(BuildingTypes(iI), eUnit))
-						{
-							if (pCity->getNumBuilding((BuildingTypes)iI))
-							{
-								eRequiredBuilding = NO_BUILDING;
-							}
-						}
-						if (eRequiredBuilding != NO_BUILDING)
-						{
-							szBuffer.append(NEWLINE);
-							szBuffer.append(gDLL->getText("TXT_KEY_UNIT_REQUIRES_STRING", GC.getBuildingInfo(eRequiredBuilding).getTextKeyWide()));
-						}
-					}
+					szBuffer.append(NEWLINE);
+					szBuffer.append(gDLL->getText("TXT_KEY_UNIT_REQUIRES_STRING", GC.getBuildingInfo((BuildingTypes)GC.getUnitInfo(eUnit).getPrereqAndBuilding(iI)).getTextKeyWide()));
 				}
 
 				if (GC.getUnitInfo(eUnit).isStateReligion())
@@ -24505,18 +24475,10 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 
 		for (iI = 0; iI < GC.getNumUnitInfos(); ++iI)
 		{
-			if (GC.getUnitInfo((UnitTypes)iI).getPrereqBuilding() == eBuilding)
+			if (GC.getUnitInfo((UnitTypes)iI).isPrereqAndBuilding((int)eBuilding))
 			{
 				szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDING_REQUIRED_TO_TRAIN").c_str());
 
-	/************************************************************************************************/
-	/* Afforess	                  Start		 08/25/10                                               */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-	/*
-				szTempBuffer.Format( SETCOLR L"<link=%s>%s</link>" ENDCOLR , TEXT_COLOR("COLOR_UNIT_TEXT"), CvWString(GC.getUnitInfo((UnitTypes)iI).getType()).GetCString(), GC.getUnitInfo((UnitTypes)iI).getDescription());
-	*/
 				if (ePlayer != NO_PLAYER)
 				{
 					szTempBuffer.Format( SETCOLR L"<link=%s>%s</link>" ENDCOLR , TEXT_COLOR("COLOR_UNIT_TEXT"), CvWString(GC.getUnitInfo((UnitTypes)iI).getType()).GetCString(), GC.getUnitInfo((UnitTypes)iI).getDescription(GET_PLAYER(ePlayer).getCivilizationType()));
@@ -24525,9 +24487,6 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 				{
 					szTempBuffer.Format( SETCOLR L"<link=%s>%s</link>" ENDCOLR , TEXT_COLOR("COLOR_UNIT_TEXT"), CvWString(GC.getUnitInfo((UnitTypes)iI).getType()).GetCString(), GC.getUnitInfo((UnitTypes)iI).getDescription());
 				}
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
 
 				setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
 				bFirst = false;
@@ -24549,14 +24508,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 				}
 
 				szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_UNIT_REQUIRED_TO_BUILD").c_str());
-	/************************************************************************************************/
-	/* Afforess	                  Start		 08/25/10                                               */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-	/*
-				szTempBuffer.Format( SETCOLR L"<link=%s>%s</link>" ENDCOLR , TEXT_COLOR("COLOR_UNIT_TEXT"), CvWString(GC.getUnitInfo((UnitTypes)iI).getType()).GetCString(), GC.getUnitInfo((UnitTypes)iI).getDescription());
-	*/
+
 				if (ePlayer != NO_PLAYER)
 				{
 					szTempBuffer.Format( SETCOLR L"<link=%s>%s</link>" ENDCOLR , TEXT_COLOR("COLOR_UNIT_TEXT"), CvWString(GC.getUnitInfo((UnitTypes)iI).getType()).GetCString(), GC.getUnitInfo((UnitTypes)iI).getDescription(GET_PLAYER(ePlayer).getCivilizationType()));
@@ -24565,9 +24517,6 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 				{
 					szTempBuffer.Format( SETCOLR L"<link=%s>%s</link>" ENDCOLR , TEXT_COLOR("COLOR_UNIT_TEXT"), CvWString(GC.getUnitInfo((UnitTypes)iI).getType()).GetCString(), GC.getUnitInfo((UnitTypes)iI).getDescription());
 				}
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
 				setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
 				bFirst = false;
 			}
