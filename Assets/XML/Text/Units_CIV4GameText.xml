@@ -11140,7 +11140,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Kusznik Konny</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_HORSE_CROSSBOWMAN_PEDIA_STRATEGY</Tag>
+		<Tag>TXT_KEY_UNIT_HORSE_CROSSBOWMAN_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Horse Crossbowman[COLOR_REVERT] is similar to [COLOR_UNIT_TEXT]Horse Archer[COLOR_REVERT] but with better bonuses against melee and archer type of units.</English>
 	</TEXT>
 	<TEXT>
