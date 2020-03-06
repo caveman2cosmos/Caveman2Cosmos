@@ -17,45 +17,6 @@ There was Toffer's suggestion to separate religious/punk techs to RELIGION_/CULT
 That is some religious/cultural techs would be in separate tree - Maybe that could fit Ideas project?
 ========================
 
-There are some nested tags, that contains booleans to turn them off/on.
-They can be removed and or vectorized in code/xml.
-Count Type
-5065 <bUnitAI>
-2720 <bGreatPeople>
-2552 <bUnitCombat>
-1993 <bBuild>
-1900 <bPrereqBuilding>
-1887 <bFreePromotion>
-1565 <bReplace>
-1149 <bTerrain>
-0929 <bFeature>
-0833 <bMakesValid>
-0812 <bTrait>
-0725 <bPrereqNot>
-0689 <bFeatureTerrain>
-0529 <bLeaderType>
-0424 <bPrereqTerrain>
-0406 <bUnitCombatTarget>
-0338 <bAttitudeType>
-0331 <bPrereqCivic>
-0284 <bPrereqFeature>
-0185 <bDiplomacyPowerType>
-0152 <bLeaderAvailability>
-0114 <bFreeBuilding>
-0041 <bTerrainDoubleMove>
-0027 <bFeatureDoubleMove>
-0025 <bUnitCombatDefender>
-0024 <bValid>
-0021 <bHurry>
-0020 <bTerrainTrade>
-0006 <bPrereqImprovement>
-0005 <bFreeTech>
-0004 <bNotRequired>
-0003 <bEnforcesGameOptionOn>
-0003 <bEnforcesGameOptionOff>
-0001 <bDisableTech>
-0001 <bCivicOptionNoUpkeep>
-
 CODE CHANGES
 
 Mark up sections of code with the @SAVEBREAK tag to indicate changes that should happen to code:
