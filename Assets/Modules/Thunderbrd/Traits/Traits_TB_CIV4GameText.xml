@@ -591,7 +591,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE</Tag>
 		<English>Aggressive</English>
-		<French>Agr....essif:Agressive:Agressifs:Agressives</French>
+		<French>Agressif:Agressive:Agressifs:Agressives</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE_STRATEGY</Tag>
@@ -7740,7 +7740,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POPULIST</Tag>
 		<English>Populist</English>
-		<French>Poppuliste</French>
+		<French>Populiste</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POPULIST_STRATEGY</Tag>
@@ -7786,7 +7786,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POPULIST1</Tag>
 		<English>Populist I</English>
-		<French>Poppuliste I</French>
+		<French>Populiste I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POPULIST1_PEDIA</Tag>
@@ -7822,7 +7822,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POPULIST2</Tag>
 		<English>Populist II</English>
-		<French>Poppuliste II</French>
+		<French>Populiste II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POPULIST2_PEDIA</Tag>
@@ -7858,7 +7858,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POPULIST3</Tag>
 		<English>Populist III</English>
-		<French>Poppuliste III</French>
+		<French>Populiste III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POPULIST3_PEDIA</Tag>

@@ -10963,7 +10963,7 @@ Un aspect horrible d'être trop étiré sur le support est les bruits forts de c
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FREE_PROMO_CONDITION</Tag>
 		<English>[ICON_BULLET]Gives %s1_Promotion if Unit meets requirements.</English>
-		<French>[ICON_BULLET]Donne %s1_Promotion si l'unité possède tous les pré-requis.</French>
+		<French>[ICON_BULLET]Donne [COLOR_CYAN]%s1_Promotion[COLOR_REVERT] si l'unité possède tous les pré-requis.</French>
 		<Italian>[ICON_BULLET]Fornisce la promozione %s1_Promotion se l'unità ha i requisiti necessari.</Italian>
 		<Polish>[ICON_BULLET]Daje: %s1_Promotion jeśli jednostka spełni wymagania.</Polish>
 	</TEXT>
@@ -13724,7 +13724,7 @@ Un aspect horrible d'être trop étiré sur le support est les bruits forts de c
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HUNTING_INSTRUCTION_STRATEGY</Tag>
 		<English>The [COLOR_BUILDING_TEXT]Hunting Instructions[COLOR_REVERT] is a prehistoric era building that awards the promotion [COLOR_CYAN]Hunter I[COLOR_REVERT] to [COLOR_UNIT_TEXT]Hunter[COLOR_REVERT] units trained in a city. It also raises [COLOR_GREEN]Education[COLOR_REVERT] generation.</English>
-		<French>Construisez des[COLOR_BUILDING_TEXT]Instructions de Chasse[COLOR_REVERT] pour améliorer l'expérience de vos Chasseurs.</French>
+		<French>Construisez des [COLOR_BUILDING_TEXT]Instructions de Chasse[COLOR_REVERT] pour améliorer l'expérience de vos Chasseurs.</French>
 		<Spanish>Construye una [COLOR_BUILDING_TEXT]Instrucción de caza[COLOR_REVERT] para aumentar la eficacia de tus cazadores.</Spanish>
 		<Polish>Wybuduj [COLOR_BUILDING_TEXT]Szałas Łowcy[COLOR_REVERT] że by zwiększyć efektywność Twoich myśliwych.</Polish>
 	</TEXT>
@@ -26135,8 +26135,8 @@ Un aspect horrible d'être trop étiré sur le support est les bruits forts de c
 		<Tag>TXT_KEY_BUILDING_STONEWORKER</Tag>
 		<English>Stoneworker</English>
 		<French>
-			<Text>Hutte du Tailleur de Pierres</Text>
-			<Gender>Female</Gender>
+			<Text>Tailleur de Pierres</Text>
+			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
 		<German>Steinmetzhütte</German>
@@ -26186,7 +26186,7 @@ Un aspect horrible d'être trop étiré sur le support est les bruits forts de c
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STORAGE_PIT_STRATEGY</Tag>
 		<English>The [COLOR_BUILDING_TEXT]Storing Pit[COLOR_REVERT] is a prehistoric era building that allows a city to store [COLOR_GREEN]Food[COLOR_REVERT] after growing. The building is also important for being a prerequisite to enable other buildings ([COLOR_BUILDING_TEXT]Dining Hall[COLOR_REVERT], for example).</English>
-		<French>Conserve la Nourriture avant le Grenier.</French>
+		<French>La [COLOR_BUILDING_TEXT]Fosse de stockage[COLOR_REVERT] est un bâtiment de l'ère préhistorique qui permet à une ville de stocker de la [COLOR_GREEN]Nourriture[COLOR_REVERT] après sa croissance. Le bâtiment est également important pour être une condition préalable à l'activation d'autres bâtiments ([COLOR_BUILDING_TEXT] Salle à manger [COLOR_REVERT], par exemple)</French>
 		<German>Die [COLOR_BUILDING_TEXT]Vorratsgrube[COLOR_REVERT] speichert einen geringen Nahrungsanteil zur [COLOR_HIGHLIGHT_TEXT]Steigerung des Bevölkerungswachstums[COLOR_REVERT].</German>
 		<Italian>Conserva il cibo prima dell'invenzione del granaio.</Italian>
 		<Polish>Przechowuje żywność przed wynalezieniem Spichlerza</Polish>

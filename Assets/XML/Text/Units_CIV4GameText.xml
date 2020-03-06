@@ -173,7 +173,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_DRIFT</Tag>
 		<English>Drift of </English>
-		<French>Dérapage de </French>
+		<French>(errant) </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_DROVE</Tag>
@@ -11511,7 +11511,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HURRY_FOOD</Tag>
 		<English>[ICON_BULLET]Can Hurry Food (Adds Base: %d1)</English>
-		<French>[ICON_BULLET]Peut Créer un Surplus de Nourriture (Adds Base: %d1)</French>
+		<French>[ICON_BULLET]Peut Créer un Surplus de Nourriture (Ajoute de Base: %d1)</French>
 		<German>[ICON_BULLET]Kann Nahrungsproduktion beschleunigen (Adds Base: %d1)</German>
 		<Italian>[ICON_BULLET]Può dare un surplus di cibo (Adds Base: %d1)</Italian>
 		<Spanish>[ICON_BULLET]Puede Enviar alimentos (Adds Base: %d1)</Spanish>
@@ -21427,7 +21427,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPARTACUS_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Spartacus[COLOR_REVERT] has a 25% chance "recruits" a new [COLOR_UNIT_TEXT]Gladiator[COLOR_REVERT] after every combat victory.</English>
-		<French>[COLOR_UNIT_TEXT]Spartacus[COLOR_REVERT] a 25% des chances de "recruter" un nouveau [COLOR_UNIT_TEXT]Gladiateur[COLOR_REVERT] après chaque victoire.</French>
+		<French>[COLOR_UNIT_TEXT]Spartacus[COLOR_REVERT] a 25%% des chances de "recruter" un nouveau [COLOR_UNIT_TEXT]Gladiateur[COLOR_REVERT] après chaque victoire.</French>
 		<Italian>[COLOR_UNIT_TEXT]Spartaco[COLOR_REVERT] ha il 25% di chance di recrutare un nuovo [COLOR_UNIT_TEXT]Gladiatore[COLOR_REVERT] dopo ogni vittoria in combattimento.</Italian>
 		<Spanish>[COLOR_UNIT_TEXT]Espartaco[COLOR_REVERT] tiene una probabilidad del 25% de reclutar un nuevo [COLOR_UNIT_TEXT]Gladiador[COLOR_REVERT] después de cada combate victorioso.</Spanish>
 		<Polish>[COLOR_UNIT_TEXT]Spartakus[COLOR_REVERT] ma 25% szans "zwerbować" nowego [COLOR_UNIT_TEXT]Gladiatora[COLOR_REVERT] po każdym zwycięstwie w walce.</Polish>
@@ -26241,7 +26241,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRAP_NUM_ACTIVE_TRIGGERS</Tag>
 		<English>[ICON_BULLET]May be triggered %d1_value times before final destruction.(%d2_rem remaining)</English>
-		<French>[ICON_BULLET]Peut être déclenché %d1_value fois avant sa destruction finale.(%d2_rem remaining)</French>
+		<French>[ICON_BULLET]Peut être déclenché %d1_value fois avant sa destruction finale.(%d2_rem restant)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRAP_TRIGGER_BEFORE_ATTACK</Tag>

@@ -22670,7 +22670,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TREE_HALLOW_PEDIA</Tag>
 		<English>A Tree Hollow is a type of natural shelter.</English>
-		<French>A Tree Hollow is a type of natural shelter.</French>
+		<French>Un arbre creux est un type d'abri naturel.</French>
 		<Polish>Dziupla to naturalne schronienie.</Polish>
 	</TEXT>
 	<TEXT>
@@ -22740,7 +22740,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELEPHANT_CAMP</Tag>
 		<English>Camp (Elephant)</English>
-		<French>Camp de Chasseur d'un Eléphants</French>
+		<French>Camp de Chasseurs d'Eléphants</French>
 		<Italian>Campo dei cacciatori di elefanti</Italian>
 		<Polish>Obóz Łowców Słoni</Polish>
 	</TEXT>
@@ -30069,9 +30069,9 @@
 		<Tag>TXT_KEY_BUILDING_MUREX_DIVER</Tag>
 		<English>Murex Diver</English>
 		<French>
-			<Text>Chercheurs de Murex</Text>
+			<Text>Chercheur de Mollusques</Text>
 			<Gender>Male</Gender>
-			<Plural>1</Plural>
+			<Plural>0</Plural>
 		</French>
 		<Italian>Cercatori di murici</Italian>
 		<Polish>Poławiacz Rozkolców</Polish>
@@ -30079,14 +30079,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUREX_DIVER_STRATEGY</Tag>
 		<English>Build Murex Diver to increase your cities wealth.</English>
-		<French>Construisez un [COLOR_BUILDING_TEXT]Chercheurs de Murex[COLOR_REVERT] pour augmenter la richesse de votre ville.</French>
+		<French>Construisez un [COLOR_BUILDING_TEXT]Chercheur de Mollusques[COLOR_REVERT] pour augmenter la richesse de votre ville.</French>
 		<Italian>Costruisci dei cercatori di murici per incrementare la ricchezza della tua città.</Italian>
 		<Polish>Zbuduj Murex Diver by zwiększyć bogactwo w Twoich miastach.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUREX_DIVER_PEDIA</Tag>
 		<English>Murex is a species of medium-sized predatory sea snail, an edible marine gastropod mollusk in the family Muricidae, the murex snails or the rock snails.</English>
-		<French>Murex is a species of medium-sized predatory sea snail, an edible marine gastropod mollusk in the family Muricidae, the murex snails or the rock snails.</French>
+		<French>Le murex est une espèce d'escargot de mer prédateur de taille moyenne, un mollusque gastéropode marin comestible de la famille des Muricidae, des escargots murex ou des escargots rocheux.</French>
 		<Polish>Rozkolce to bardzo liczna rodzina skupiająca blisko 400 gatunków podzielonych na około 20 rodzajów. Zamieszkują wody morskie całego świata, od równika po umiarkowaną strefę klimatyczną (głównie dzielnica Indopacyfiku i Panamy).</Polish>
 	</TEXT>
 	<TEXT>
