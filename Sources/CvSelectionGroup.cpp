@@ -3679,25 +3679,6 @@ int CvSelectionGroup::getRBombardDamageMaxUnits() const
 	return iHighest;
 }
 
-bool CvSelectionGroup::visibilityRange() const
-{
-	int iMaxRange = 0;
-
-	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
-	{
-		const int iRange = (*unitItr)->visibilityRange();
-		if (iRange > iMaxRange)
-		{
-			iMaxRange = iRange;
-		}
-	}
-
-	return iMaxRange;
-
-	// Matt: Why search for max, then return bool?
-	return algo::any_of(units(), CvUnit::fn::visibilityRange() > 0);
-}
-
 //
 // Approximate how many turns this group would take to reduce pCity's defense modifier to zero
 //
