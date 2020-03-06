@@ -14,7 +14,7 @@ sXMLGeneral = 'UNIT_GREAT_GENERAL'
 
 # Buildings
 # Used by Rev when rebels capture a tiny city first
-sXMLPalace = "BUILDINGCLASS_PALACE"
+sXMLPalace = "BUILDING_PALACE"
 
 # Techs
 # Used by Rev, weight of nationality effects increases after discovery

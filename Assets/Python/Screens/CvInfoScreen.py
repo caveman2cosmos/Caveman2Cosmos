@@ -2289,7 +2289,7 @@ class CvInfoScreen:
 									self.iNumWonders += 1
 
 							# National/Team Wonder Mode
-							elif (self.szWonderDisplayMode == self.szWDM_NatnlWonder and isNationalWonder(iBuildingLoop) or isTeamWonder(iBuildingLoop))):
+							elif self.szWonderDisplayMode == self.szWDM_NatnlWonder and (isNationalWonder(iBuildingLoop) or isTeamWonder(iBuildingLoop)):
 
 								# Is this city building a wonder?
 								if (iBuildingProd == iBuildingLoop):
