@@ -9,6 +9,7 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_CYBERPUNK_EMBASSY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CYBERPUNK_EMBASSY</Description>

@@ -8,6 +8,7 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_RHINO_TRAINER</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_RHINO_TRAINER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RHINO_TRAINER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_RHINO_TRAINER_STRATEGY</Strategy>

@@ -300,6 +300,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DORADO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_DORADO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DORADO_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DORADO_STRATEGY</Strategy>
@@ -379,6 +380,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MACHU_PICCHU</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_MACHU_PICCHU</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MACHU_PICCHU_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MACHU_PICCHU_STRATEGY</Strategy>

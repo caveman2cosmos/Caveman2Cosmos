@@ -3,6 +3,7 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_DIGITAL_LIFESTYLE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_DIGITAL_LIFESTYLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DIGITAL_LIFESTYLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DIGITAL_LIFESTYLE_STRATEGY</Strategy>
@@ -42,6 +43,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DIGITAL_IDENTITY</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_DIGITAL_IDENTITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DIGITAL_IDENTITY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DIGITAL_IDENTITY_STRATEGY</Strategy>
@@ -67,6 +69,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GENE_EDITING</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_GENE_EDITING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GENE_EDITING_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GENE_EDITING_STRATEGY</Strategy>
@@ -91,6 +94,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DESIGNER_BABIES</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_DESIGNER_BABIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DESIGNER_BABIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DESIGNER_BABIES_STRATEGY</Strategy>
@@ -109,6 +113,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COGNITIVE_ENHANCEMENT</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_COGNITIVE_ENHANCEMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COGNITIVE_ENHANCEMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_COGNITIVE_ENHANCEMENT_STRATEGY</Strategy>
@@ -128,6 +133,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NOVEL_SENSES</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_NOVEL_SENSES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NOVEL_SENSES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NOVEL_SENSES_STRATEGY</Strategy>
@@ -157,6 +163,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ENLIGHTENMENT</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_ENLIGHTENMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ENLIGHTENMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ENLIGHTENMENT_STRATEGY</Strategy>
@@ -186,6 +193,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNARIS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_LUNARIS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNARIS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_LUNARIS_STRATEGY</Strategy>
@@ -222,6 +230,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_MARTIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MARTIAN_STRATEGY</Strategy>
@@ -268,6 +277,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ROBOTIC_BODY</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_ROBOTIC_BODY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ROBOTIC_BODY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ROBOTIC_BODY_STRATEGY</Strategy>
@@ -299,6 +309,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INDEFINITE_LIFESPAN</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_INDEFINITE_LIFESPAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INDEFINITE_LIFESPAN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_INDEFINITE_LIFESPAN_STRATEGY</Strategy>
@@ -323,6 +334,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ZERO_G</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_ZERO_G</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ZERO_G_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ZERO_G_STRATEGY</Strategy>
@@ -348,6 +360,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WINGS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_WINGS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WINGS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_WINGS_STRATEGY</Strategy>
@@ -373,6 +386,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GILLS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_GILLS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GILLS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GILLS_STRATEGY</Strategy>
@@ -398,6 +412,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HEAT_TOLERANCE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_HEAT_TOLERANCE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HEAT_TOLERANCE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HEAT_TOLERANCE_STRATEGY</Strategy>
@@ -423,6 +438,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COLD_TOLERANCE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_COLD_TOLERANCE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COLD_TOLERANCE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_COLD_TOLERANCE_STRATEGY</Strategy>
@@ -453,6 +469,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RADIATION_TOLERANCE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_RADIATION_TOLERANCE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RADIATION_TOLERANCE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_RADIATION_TOLERANCE_STRATEGY</Strategy>
@@ -485,6 +502,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COLLECTIVE_CONSCIOUSNESS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_COLLECTIVE_CONSCIOUSNESS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COLLECTIVE_CONSCIOUSNESS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_COLLECTIVE_CONSCIOUSNESS_STRATEGY</Strategy>
@@ -521,6 +539,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NANOMORPHICS_BEINGS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_NANOMORPHICS_BEINGS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NANOMORPHICS_BEINGS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NANOMORPHICS_BEINGS_STRATEGY</Strategy>
@@ -555,6 +574,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INFORMATION_BEING</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_INFORMATION_BEING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INFORMATION_BEING_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_INFORMATION_BEING_STRATEGY</Strategy>
@@ -587,6 +607,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRANSAPIENT</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_TRANSAPIENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRANSAPIENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TRANSAPIENT_STRATEGY</Strategy>
@@ -625,6 +646,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HUMAN_ALIEN_HYBRID</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_HUMAN_ALIEN_HYBRID</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HUMAN_ALIEN_HYBRID_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HUMAN_ALIEN_HYBRID_STRATEGY</Strategy>
@@ -685,6 +707,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_IMMORTAL_BEING</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_IMMORTAL_BEING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_IMMORTAL_BEING_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_IMMORTAL_BEING_STRATEGY</Strategy>
@@ -721,6 +744,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PURE_INFORMATION_BEING</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_PURE_INFORMATION_BEING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PURE_INFORMATION_BEING_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PURE_INFORMATION_BEING_STRATEGY</Strategy>
@@ -751,6 +775,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HIGH_DIMENSIONAL_BEING</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_HIGH_DIMENSIONAL_BEING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HIGH_DIMENSIONAL_BEING_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HIGH_DIMENSIONAL_BEING_STRATEGY</Strategy>
@@ -796,6 +821,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ARCHAILECT</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_ARCHAILECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ARCHAILECT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ARCHAILECT_STRATEGY</Strategy>
@@ -835,6 +861,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NONSPATIAL_BEINGS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_NONSPATIAL_BEINGS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NONSPATIAL_BEINGS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NONSPATIAL_BEINGS_STRATEGY</Strategy>
@@ -867,6 +894,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ATEMPORAL_BEINGS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_ATEMPORAL_BEINGS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ATEMPORAL_BEINGS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ATEMPORAL_BEINGS_STRATEGY</Strategy>
@@ -892,6 +920,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_METAPHYSICAL</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_METAPHYSICAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_METAPHYSICAL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_METAPHYSICAL_STRATEGY</Strategy>
@@ -937,6 +966,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRISPR_CAS9_BACTERIA</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_CRISPR_CAS9_BACTERIA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRISPR_CAS9_BACTERIA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CRISPR_CAS9_BACTERIA_STRATEGY</Strategy>
@@ -965,6 +995,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_C4_CROPS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_C4_CROPS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_C4_CROPS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_C4_CROPS_STRATEGY</Strategy>
@@ -993,6 +1024,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FLUORESCENT_BACTERIA</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_FLUORESCENT_BACTERIA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FLUORESCENT_BACTERIA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_FLUORESCENT_BACTERIA_STRATEGY</Strategy>
@@ -1021,6 +1053,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STRUCTURAL_BACTERIA</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_STRUCTURAL_BACTERIA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_STRUCTURAL_BACTERIA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_STRUCTURAL_BACTERIA_STRATEGY</Strategy>
@@ -1042,6 +1075,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NONPHOTOSYNTHETIC_PLANTS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_NONPHOTOSYNTHETIC_PLANTS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NONPHOTOSYNTHETIC_PLANTS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NONPHOTOSYNTHETIC_PLANTS_STRATEGY</Strategy>
@@ -1078,6 +1112,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SILICON_LIFE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_SILICON_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SILICON_LIFE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SILICON_LIFE_STRATEGY</Strategy>
@@ -1143,6 +1178,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYDROGEN_PEROXIDE_LIFE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_HYDROGEN_PEROXIDE_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYDROGEN_PEROXIDE_LIFE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HYDROGEN_PEROXIDE_LIFE_STRATEGY</Strategy>
@@ -1171,6 +1207,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SULFURIC_ACID_LIFE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_SULFURIC_ACID_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SULFURIC_ACID_LIFE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SULFURIC_ACID_LIFE_STRATEGY</Strategy>
@@ -1196,6 +1233,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_METAL_OXIDE_LIFE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_METAL_OXIDE_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_METAL_OXIDE_LIFE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_METAL_OXIDE_LIFE_STRATEGY</Strategy>
@@ -1231,6 +1269,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYDROGEN_SULFIDE_LIFE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_HYDROGEN_SULFIDE_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYDROGEN_SULFIDE_LIFE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HYDROGEN_SULFIDE_LIFE_STRATEGY</Strategy>
@@ -1271,6 +1310,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AMMONIA_LIFE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_AMMONIA_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AMMONIA_LIFE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_AMMONIA_LIFE_STRATEGY</Strategy>
@@ -1314,6 +1354,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_METHANE_LIFE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_METHANE_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_METHANE_LIFE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_METHANE_LIFE_STRATEGY</Strategy>
@@ -1348,6 +1389,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LIQUID_NITROGEN_LIFE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_LIQUID_NITROGEN_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LIQUID_NITROGEN_LIFE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_LIQUID_NITROGEN_LIFE_STRATEGY</Strategy>
@@ -1389,6 +1431,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_JUPITER_CLOUD_LIFE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_JUPITER_CLOUD_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_JUPITER_CLOUD_LIFE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_JUPITER_CLOUD_LIFE_STRATEGY</Strategy>
@@ -1414,6 +1457,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SILICON_DIOXIDE_LIFE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_SILICON_DIOXIDE_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SILICON_DIOXIDE_LIFE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SILICON_DIOXIDE_LIFE_STRATEGY</Strategy>
@@ -1463,6 +1507,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SUPERCRITICAL_CO2_LIFE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_SUPERCRITICAL_CO2_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SUPERCRITICAL_CO2_LIFE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SUPERCRITICAL_CO2_LIFE_STRATEGY</Strategy>
@@ -1511,6 +1556,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PARTICLE_LIFEFORMS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_PARTICLE_LIFEFORMS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PARTICLE_LIFEFORMS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PARTICLE_LIFEFORMS_STRATEGY</Strategy>
@@ -1539,6 +1585,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DUST_PLASMA_LIFE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_DUST_PLASMA_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DUST_PLASMA_LIFE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DUST_PLASMA_LIFE_STRATEGY</Strategy>
@@ -1588,6 +1635,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHIRAL_FLEXIBLE_LIFEFORMS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_CHIRAL_FLEXIBLE_LIFEFORMS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CHIRAL_FLEXIBLE_LIFEFORMS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CHIRAL_FLEXIBLE_LIFEFORMS_STRATEGY</Strategy>
@@ -1619,6 +1667,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRUE_VACUUM_LIFE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_TRUE_VACUUM_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRUE_VACUUM_LIFE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TRUE_VACUUM_LIFE_STRATEGY</Strategy>
@@ -1647,6 +1696,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PAN_DIMENSIONAL_LIFE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_PAN_DIMENSIONAL_LIFE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PAN_DIMENSIONAL_LIFE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PAN_DIMENSIONAL_LIFE_STRATEGY</Strategy>

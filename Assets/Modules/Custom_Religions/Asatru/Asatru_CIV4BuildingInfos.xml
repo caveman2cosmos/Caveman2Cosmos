@@ -299,6 +299,7 @@
 		</BuildingInfo>
          <BuildingInfo>
 			<Type>BUILDING_FREYA_SANCTUARY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_FREYA_SANCTUARY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FREYA_SANCTUARY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_FREYA_SANCTUARY_STRATEGY</Strategy>
@@ -366,6 +367,7 @@
 		</BuildingInfo>
         <BuildingInfo>
 			<Type>BUILDING_HEIMDALL_SANCTUARY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_HEIMDALL_SANCTUARY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HEIMDALL_SANCTUARY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HEIMDALL_SANCTUARY_STRATEGY</Strategy>
@@ -428,6 +430,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LOKI_SANCTUARY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_LOKI_SANCTUARY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LOKI_SANCTUARY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_LOKI_SANCTUARY_STRATEGY</Strategy>
@@ -542,6 +545,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_THOR_SANCTUARY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_THOR_SANCTUARY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_THOR_SANCTUARY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_THOR_SANCTUARY_STRATEGY</Strategy>

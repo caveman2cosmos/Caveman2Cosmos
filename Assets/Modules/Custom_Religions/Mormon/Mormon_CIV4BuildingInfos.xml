@@ -72,6 +72,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MORMON_MONASTERY</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_MORMON_MONASTERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MORMON_MONASTERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MORMON_MONASTERY_STRATEGY</Strategy>

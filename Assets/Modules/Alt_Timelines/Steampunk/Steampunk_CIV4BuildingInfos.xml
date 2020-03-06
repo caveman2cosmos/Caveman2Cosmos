@@ -9,6 +9,7 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_STEAMPUNK_EMBASSY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_STEAMPUNK_EMBASSY</Description>
@@ -412,6 +413,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEMO_ACADEMY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_NEMO_ACADEMY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NEMO_ACADEMY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NEMO_ACADEMY_STRATEGY</Strategy>

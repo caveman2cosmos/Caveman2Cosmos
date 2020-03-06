@@ -9,6 +9,7 @@
 <!-- Buddhist -->
 		<BuildingInfo>
 			<Type>BUILDING_CAVES</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_CAVES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CAVES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CAVES_STRATEGY</Strategy>
@@ -86,6 +87,7 @@
 		</BuildingInfo>
        <BuildingInfo>
 			<Type>BUILDING_NARA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_NARA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NARA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NARA_STRATEGY</Strategy>
@@ -155,6 +157,7 @@
 <!-- Christian -->
 		<BuildingInfo>
 			<Type>BUILDING_SAN_MARCOS_CATHEDRAL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_SAN_MARCOS_CATHEDRAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SAN_MARCOS_CATHEDRAL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SAN_MARCOS_CATHEDRAL_STRATEGY</Strategy>
@@ -251,6 +254,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VATICAN_LIBRARY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_VATICAN_LIBRARY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VATICAN_LIBRARY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_VATICAN_LIBRARY_STRATEGY</Strategy>
@@ -334,6 +338,7 @@
 <!-- Confusian -->
 		<BuildingInfo>
 			<Type>BUILDING_CONFUCIAN_SCHOOL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_CONFUCIAN_SCHOOL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CONFUCIAN_SCHOOL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CONFUCIAN_SCHOOL_STRATEGY</Strategy>
@@ -432,6 +437,7 @@
 <!-- Judaism -->
 		<BuildingInfo>
 			<Type>BUILDING_SOLOMON</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_SOLOMON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SOLOMON_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SOLOMON_STRATEGY</Strategy>
@@ -510,6 +516,7 @@
 <!-- Hindu -->
 		<BuildingInfo>
 			<Type>BUILDING_AKSHARDHAM</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_AKSHARDHAM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AKSHARDHAM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_AKSHARDHAM_STRATEGY</Strategy>
@@ -592,6 +599,7 @@
 		</BuildingInfo>
  		<BuildingInfo>
 			<Type>BUILDING_MEENAKSHI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_MEENAKSHI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MEENAKSHI_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MEENAKSHI_STRATEGY</Strategy>
@@ -680,6 +688,7 @@
 <!-- Islam -->
 		<BuildingInfo>
 			<Type>BUILDING_BLUE_MOSQUE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_BLUE_MOSQUE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BLUE_MOSQUE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BLUE_MOSQUE_STRATEGY</Strategy>
@@ -756,6 +765,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DESERT</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_DESERT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DESERT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DESERT_STRATEGY</Strategy>
@@ -839,6 +849,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SULTAN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_SULTAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SULTAN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SULTAN_STRATEGY</Strategy>
@@ -919,6 +930,7 @@
 <!-- Toaist -->
 		<BuildingInfo>
 			<Type>BUILDING_QUANZHEN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_QUANZHEN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_QUANZHEN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_QUANZHEN_STRATEGY</Strategy>
@@ -1012,6 +1024,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WUDANG</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_WUDANG</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WUDANG_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_WUDANG_STRATEGY</Strategy>

@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Building Infos -->
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
-		<!-- Mine Warfare Mod -->
 		<BuildingInfo>
 			<Type>BUILDING_ADVANCED_MINE_TECHNOLOGY_CENTER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_ADVANCED_MINE_TECHNOLOGY_CENTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ADVANCED_MINE_TECHNOLOGY_CENTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ADVANCED_MINE_TECHNOLOGY_CENTER_STRATEGY</Strategy>
@@ -32,6 +27,5 @@
 				</Flavor>
 			</Flavors>
 		</BuildingInfo>
-		<!-- End Mine Warfare Mod -->
 	</BuildingInfos>
 </Civ4BuildingInfos>

@@ -210,6 +210,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MORMON_MONASTERY</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_MORMON_MONASTERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MORMON_MONASTERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MORMON_MONASTERY_STRATEGY</Strategy>
@@ -586,6 +587,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TEMPLE_SQUARE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_TEMPLE_SQUARE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_SQUARE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TEMPLE_SQUARE_STRATEGY</Strategy>
@@ -873,6 +875,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MISSIONARY_TRAINING_CENTER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_MISSIONARY_TRAINING_CENTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MISSIONARY_TRAINING_CENTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MISSIONARY_TRAINING_CENTER_STRATEGY</Strategy>
@@ -1079,6 +1082,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WELFARE_SQUARE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_WELFARE_SQUARE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WELFARE_SQUARE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_WELFARE_SQUARE_STRATEGY</Strategy>

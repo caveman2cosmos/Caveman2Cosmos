@@ -5,11 +5,7 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_BIG_CAT_TRAINER</Type>
-			<EnabledCivilizationTypes>
-				<EnabledCivilizationType>
-					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
-				</EnabledCivilizationType>
-			</EnabledCivilizationTypes>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_BIG_CAT_TRAINER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BIG_CAT_TRAINER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BIG_CAT_TRAINER_STRATEGY</Strategy>

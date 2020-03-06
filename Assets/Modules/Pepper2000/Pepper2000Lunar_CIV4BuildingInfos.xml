@@ -3,6 +3,7 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_OUTPOST</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_LUNAR_OUTPOST</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_OUTPOST_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_LUNAR_OUTPOST_STRATEGY</Strategy>
@@ -23,6 +24,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_URBAN_MOON</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_URBAN_MOON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_URBAN_MOON_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_URBAN_MOON_STRATEGY</Strategy>
@@ -57,6 +59,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MOON_TERRA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_MOON_TERRA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MOON_TERRA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MOON_TERRA_STRATEGY</Strategy>
@@ -138,6 +141,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNA_RING</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_LUNA_RING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNA_RING_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_LUNA_RING_STRATEGY</Strategy>
@@ -343,6 +347,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MITHRIL_FOUNDRY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_MITHRIL_FOUNDRY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MITHRIL_FOUNDRY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MITHRIL_FOUNDRY_STRATEGY</Strategy>
@@ -1775,6 +1780,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_SOLAR_ARRAY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_LUNAR_SOLAR_ARRAY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_SOLAR_ARRAY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_LUNAR_SOLAR_ARRAY_STRATEGY</Strategy>

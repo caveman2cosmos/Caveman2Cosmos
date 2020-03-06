@@ -8,6 +8,7 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_HELLSMOUTH_SANCTUARY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_HELLSMOUTH_SANCTUARY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HELLSMOUTH_SANCTUARY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HELLSMOUTH_SANCTUARY_STRATEGY</Strategy>

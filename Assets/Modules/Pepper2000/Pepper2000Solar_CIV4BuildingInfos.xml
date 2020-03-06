@@ -1996,6 +1996,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EDEN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_EDEN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EDEN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_EDEN_STRATEGY</Strategy>
@@ -2064,6 +2065,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HALO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_HALO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HALO_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HALO_STRATEGY</Strategy>
@@ -2091,6 +2093,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LASER_STARWAY</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_LASER_STARWAY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LASER_STARWAY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_LASER_STARWAY_STRATEGY</Strategy>
@@ -2132,6 +2135,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BRACEWELL_PROBES</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_BRACEWELL_PROBES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BRACEWELL_PROBES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BRACEWELL_PROBES_STRATEGY</Strategy>
@@ -2160,6 +2164,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SOLAR_CORE_PROBE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_SOLAR_CORE_PROBE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SOLAR_CORE_PROBE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SOLAR_CORE_PROBE_STRATEGY</Strategy>
@@ -2203,6 +2208,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GRAND_UNIFICATION_ACCELERATOR</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_GRAND_UNIFICATION_ACCELERATOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GRAND_UNIFICATION_ACCELERATOR_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GRAND_UNIFICATION_ACCELERATOR_STRATEGY</Strategy>
@@ -2263,6 +2269,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SOLAR_DYSON_SPHERE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_SOLAR_DYSON_SPHERE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SOLAR_DYSON_SPHERE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SOLAR_DYSON_SPHERE_STRATEGY</Strategy>
@@ -2336,6 +2343,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SOLAR_MATRIOSHKA_BRAIN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_SOLAR_MATRIOSHKA_BRAIN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SOLAR_MATRIOSHKA_BRAIN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SOLAR_MATRIOSHKA_BRAIN_STRATEGY</Strategy>
@@ -2383,6 +2391,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASTEROID_BELT_ASTRONOMICAL_TELESCOPE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_ASTEROID_BELT_ASTRONOMICAL_TELESCOPE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ASTEROID_BELT_ASTRONOMICAL_TELESCOPE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ASTEROID_BELT_ASTRONOMICAL_TELESCOPE_STRATEGY</Strategy>
@@ -2506,6 +2515,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MERCURY_ANTIMATTER</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_MERCURY_ANTIMATTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MERCURY_ANTIMATTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MERCURY_ANTIMATTER_STRATEGY</Strategy>
@@ -2621,6 +2631,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MERCURY_SUNSHADE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_MERCURY_SUNSHADE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MERCURY_SUNSHADE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MERCURY_SUNSHADE_STRATEGY</Strategy>
@@ -2660,6 +2671,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERRAFORMED_MERCURY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_TERRAFORMED_MERCURY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRAFORMED_MERCURY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_MERCURY_STRATEGY</Strategy>
@@ -2817,6 +2829,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARTIAN_SUPPLY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_MARTIAN_SUPPLY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_SUPPLY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MARTIAN_SUPPLY_STRATEGY</Strategy>
@@ -3201,6 +3214,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERRAFORMED_CERES</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_TERRAFORMED_CERES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRAFORMED_CERES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_CERES_STRATEGY</Strategy>
@@ -3272,6 +3286,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERRAFORMED_CALLISTO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_TERRAFORMED_CALLISTO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRAFORMED_CALLISTO_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_CALLISTO_STRATEGY</Strategy>
@@ -3466,6 +3481,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERRAFORMED_EUROPA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_TERRAFORMED_EUROPA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRAFORMED_EUROPA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_EUROPA_STRATEGY</Strategy>
@@ -3613,6 +3629,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERRAFORMED_GANYMEDE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_TERRAFORMED_GANYMEDE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRAFORMED_GANYMEDE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_GANYMEDE_STRATEGY</Strategy>
@@ -3718,6 +3735,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_JOVIAN_MAGNETOSPHERE_POWER_PLANT</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_JOVIAN_MAGNETOSPHERE_POWER_PLANT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_JOVIAN_MAGNETOSPHERE_POWER_PLANT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_JOVIAN_MAGNETOSPHERE_POWER_PLANT_STRATEGY</Strategy>
@@ -3751,6 +3769,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_JUPITER_CORE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_JUPITER_CORE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_JUPITER_CORE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_JUPITER_CORE_STRATEGY</Strategy>
@@ -3837,6 +3856,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERRAFORMED_JUPITER</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_TERRAFORMED_JUPITER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRAFORMED_JUPITER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_JUPITER_STRATEGY</Strategy>
@@ -3916,6 +3936,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RHEA_MILITARY_BASE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_RHEA_MILITARY_BASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RHEA_MILITARY_BASE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_RHEA_MILITARY_BASE_STRATEGY</Strategy>
@@ -4042,6 +4063,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERRAFORMED_SATURN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_TERRAFORMED_SATURN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRAFORMED_SATURN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_SATURN_STRATEGY</Strategy>
@@ -4117,6 +4139,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_URANUS_MINE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_URANUS_MINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_URANUS_MINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_URANUS_MINE_STRATEGY</Strategy>
@@ -4215,6 +4238,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERRAFORMED_TITANIA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_TERRAFORMED_TITANIA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRAFORMED_TITANIA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_TITANIA_STRATEGY</Strategy>
@@ -4258,6 +4282,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERRAFORMED_OBERON</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_TERRAFORMED_OBERON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRAFORMED_OBERON_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_OBERON_STRATEGY</Strategy>
@@ -4395,6 +4420,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERRAFORMED_URANUS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_TERRAFORMED_URANUS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRAFORMED_URANUS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_URANUS_STRATEGY</Strategy>
@@ -4533,6 +4559,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERRAFORMED_TRITON</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_TERRAFORMED_TRITON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRAFORMED_TRITON_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_TRITON_STRATEGY</Strategy>
@@ -4566,6 +4593,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRITON_MILITARY_BASE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_TRITON_MILITARY_BASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRITON_MILITARY_BASE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TRITON_MILITARY_BASE_STRATEGY</Strategy>
@@ -4728,6 +4756,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEPTUNE_ORBITAL_RING</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_NEPTUNE_ORBITAL_RING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NEPTUNE_ORBITAL_RING_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NEPTUNE_ORBITAL_RING_STRATEGY</Strategy>
@@ -4763,6 +4792,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERRAFORMED_NEPTUNE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_TERRAFORMED_NEPTUNE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRAFORMED_NEPTUNE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_NEPTUNE_STRATEGY</Strategy>
@@ -4804,6 +4834,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ERIS_COLONY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_ERIS_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ERIS_COLONY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ERIS_COLONY_STRATEGY</Strategy>
@@ -4856,6 +4887,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MAKEMAKE_COLONY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_MAKEMAKE_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MAKEMAKE_COLONY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MAKEMAKE_COLONY_STRATEGY</Strategy>
@@ -4909,6 +4941,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HAUMEA_COLONY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_HAUMEA_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HAUMEA_COLONY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HAUMEA_COLONY_STRATEGY</Strategy>
@@ -4962,6 +4995,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PLUTO_BASE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_PLUTO_BASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PLUTO_BASE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PLUTO_BASE_STRATEGY</Strategy>
@@ -5013,6 +5047,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TERRAFORMED_PLUTO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_TERRAFORMED_PLUTO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRAFORMED_PLUTO_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_PLUTO_STRATEGY</Strategy>
@@ -5314,6 +5349,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SEDNA_COLONY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_SEDNA_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SEDNA_COLONY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SEDNA_COLONY_STRATEGY</Strategy>
@@ -5365,6 +5401,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PLANET_NINE_COLONY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_PLANET_NINE_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PLANET_NINE_COLONY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PLANET_NINE_COLONY_STRATEGY</Strategy>

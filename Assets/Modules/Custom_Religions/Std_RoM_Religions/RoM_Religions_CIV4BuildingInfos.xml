@@ -9,6 +9,7 @@
 <!-- EgyptMyth -->
 		<BuildingInfo>
 			<Type>BUILDING_PTAH</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_PTAH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PTAH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PTAH_STRATEGY</Strategy>
@@ -78,6 +79,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOTH</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_TOTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TOTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TOTH_STRATEGY</Strategy>
@@ -173,6 +175,7 @@
 <!-- Hellenism -->
 		<BuildingInfo>
 			<Type>BUILDING_ERECTION</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_ERECTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ERECTION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ERECTION_STRATEGY</Strategy>
@@ -267,6 +270,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FIDIAS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_FIDIAS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FIDIAS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_FIDIAS_STRATEGY</Strategy>
@@ -360,6 +364,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NECROMANTEION</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_NECROMANTEION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NECROMANTEION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NECROMANTEION_STRATEGY</Strategy>
@@ -458,6 +463,7 @@
 <!-- Nagualismo -->
 		<BuildingInfo>
 			<Type>BUILDING_PYRAMID_OF_THE_MOON</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_PYRAMID_OF_THE_MOON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PYRAMID_OF_THE_MOON_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PYRAMID_OF_THE_MOON_STRATEGY</Strategy>
@@ -536,6 +542,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PYRAMID_OF_THE_SUN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_PYRAMID_OF_THE_SUN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PYRAMID_OF_THE_SUN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PYRAMID_OF_THE_SUN_STRATEGY</Strategy>
@@ -623,6 +630,7 @@
 			<AndDependencyTypes>
              	<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
  			</AndDependencyTypes>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_HAMMURABI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HAMMURABI_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HAMMURABI_STRATEGY</Strategy>
@@ -691,6 +699,7 @@
 			<AndDependencyTypes>
              	<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
  			</AndDependencyTypes>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_NIMRUD_PALACE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NIMRUD_PALACE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NIMRUD_PALACE_STRATEGY</Strategy>
@@ -770,6 +779,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BEHISTUN_INSCRIPTION</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_BEHISTUN_INSCRIPTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BEHISTUN_INSCRIPTION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BEHISTUN_INSCRIPTION_STRATEGY</Strategy>
@@ -812,6 +822,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PIR_E_NARAKI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_PIR_E_NARAKI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PIR_E_NARAKI_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PIR_E_NARAKI_STRATEGY</Strategy>
@@ -858,6 +869,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SETI_PIR</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_SETI_PIR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SETI_PIR_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SETI_PIR_STRATEGY</Strategy>

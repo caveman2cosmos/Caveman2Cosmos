@@ -261,6 +261,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MATSUMOTO_CASTLE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_MATSUMOTO_CASTLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MATSUMOTO_CASTLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MATSUMOTO_CASTLE_STRATEGY</Strategy>
@@ -319,6 +320,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ITSUKUSHIMA_SHRINE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_ITSUKUSHIMA_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ITSUKUSHIMA_SHRINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ITSUKUSHIMA_SHRINE_STRATEGY</Strategy>

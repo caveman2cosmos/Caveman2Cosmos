@@ -1367,6 +1367,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BASILISK</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_BASILISK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BASILISK_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BASILISK_STRATEGY</Strategy>
@@ -1398,6 +1399,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LIBRARY_OF_BABEL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_LIBRARY_OF_BABEL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LIBRARY_OF_BABEL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_LIBRARY_OF_BABEL_STRATEGY</Strategy>
@@ -1435,6 +1437,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MILLIWAYS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_MILLIWAYS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MILLIWAYS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MILLIWAYS_STRATEGY</Strategy>
@@ -1474,6 +1477,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HEAVEN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_HEAVEN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HEAVEN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HEAVEN_STRATEGY</Strategy>
@@ -1512,6 +1516,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OMELAS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_OMELAS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_OMELAS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_OMELAS_STRATEGY</Strategy>

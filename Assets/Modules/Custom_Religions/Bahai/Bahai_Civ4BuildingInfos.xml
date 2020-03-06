@@ -273,6 +273,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LOTUS_TEMPLE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_LOTUS_TEMPLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LOTUS_TEMPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_LOTUS_TEMPLE_STRATEGY</Strategy>

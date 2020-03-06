@@ -37,6 +37,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ZEBRA_TRAINER</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_ZEBRA_TRAINER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ZEBRA_TRAINER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ZEBRA_TRAINER_STRATEGY</Strategy>

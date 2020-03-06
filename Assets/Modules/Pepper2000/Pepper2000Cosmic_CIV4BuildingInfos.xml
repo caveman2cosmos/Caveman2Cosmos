@@ -2894,6 +2894,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COSMIC_EXPANSION_POWER_PLANT</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_COSMIC_EXPANSION_POWER_PLANT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COSMIC_EXPANSION_POWER_PLANT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_COSMIC_EXPANSION_POWER_PLANT_STRATEGY</Strategy>
@@ -2941,6 +2942,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SMALL_MAGELLANIC_CLOUD</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_SMALL_MAGELLANIC_CLOUD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SMALL_MAGELLANIC_CLOUD_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SMALL_MAGELLANIC_CLOUD_STRATEGY</Strategy>
@@ -3007,6 +3009,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LARGE_MAGELLANIC_CLOUD</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_LARGE_MAGELLANIC_CLOUD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LARGE_MAGELLANIC_CLOUD_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_LARGE_MAGELLANIC_CLOUD_STRATEGY</Strategy>
@@ -3074,6 +3077,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SAGITTARIUS_DWARF_ELLIPTICAL_GALAXY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_SAGITTARIUS_DWARF_ELLIPTICAL_GALAXY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SAGITTARIUS_DWARF_ELLIPTICAL_GALAXY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SAGITTARIUS_DWARF_ELLIPTICAL_GALAXY_STRATEGY</Strategy>
@@ -3137,6 +3141,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANDROMEDA_COLONY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_ANDROMEDA_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANDROMEDA_COLONY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANDROMEDA_COLONY_STRATEGY</Strategy>
@@ -3202,6 +3207,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRIANGULUM</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_TRIANGULUM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRIANGULUM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TRIANGULUM_STRATEGY</Strategy>
@@ -3267,6 +3273,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SCULPTOR_GROUP</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_SCULPTOR_GROUP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SCULPTOR_GROUP_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SCULPTOR_GROUP_STRATEGY</Strategy>
@@ -3323,6 +3330,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MAFFEI_GROUP</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_MAFFEI_GROUP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MAFFEI_GROUP_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MAFFEI_GROUP_STRATEGY</Strategy>
@@ -3380,6 +3388,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FORNAX_CLUSTER</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_FORNAX_CLUSTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FORNAX_CLUSTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_FORNAX_CLUSTER_STRATEGY</Strategy>
@@ -3437,6 +3446,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VIRGO_CLUSTER</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_VIRGO_CLUSTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VIRGO_CLUSTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_VIRGO_CLUSTER_STRATEGY</Strategy>
@@ -3495,6 +3505,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ERIDANUS_CLUSTER</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_ERIDANUS_CLUSTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ERIDANUS_CLUSTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ERIDANUS_CLUSTER_STRATEGY</Strategy>
@@ -3551,6 +3562,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COMA_SUPERCLUSTER</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_COMA_SUPERCLUSTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COMA_SUPERCLUSTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_COMA_SUPERCLUSTER_STRATEGY</Strategy>
@@ -3602,6 +3614,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYDRA_SUPERCLUSTER</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_HYDRA_SUPERCLUSTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYDRA_SUPERCLUSTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HYDRA_SUPERCLUSTER_STRATEGY</Strategy>
@@ -3654,6 +3667,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CENTAURUS_SUPERCLUSTER</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_CENTAURUS_SUPERCLUSTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CENTAURUS_SUPERCLUSTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CENTAURUS_SUPERCLUSTER_STRATEGY</Strategy>
@@ -3707,6 +3721,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PERSEUS_PISCES_SUPERCLUSTER</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_PERSEUS_PISCES_SUPERCLUSTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PERSEUS_PISCES_SUPERCLUSTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PERSEUS_PISCES_SUPERCLUSTER_STRATEGY</Strategy>
@@ -3759,6 +3774,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HERCULES_CORONA_BOREALIS_GREAT_WALL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_HERCULES_CORONA_BOREALIS_GREAT_WALL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HERCULES_CORONA_BOREALIS_GREAT_WALL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HERCULES_CORONA_BOREALIS_GREAT_WALL_STRATEGY</Strategy>
@@ -3808,6 +3824,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SLOAN_GREAT_WALL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_SLOAN_GREAT_WALL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SLOAN_GREAT_WALL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SLOAN_GREAT_WALL_STRATEGY</Strategy>
@@ -3856,6 +3873,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CFA2_GREAT_WALL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_CFA2_GREAT_WALL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CFA2_GREAT_WALL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CFA2_GREAT_WALL_STRATEGY</Strategy>
@@ -3906,6 +3924,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FEYMARCH</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_FEYMARCH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FEYMARCH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_FEYMARCH_STRATEGY</Strategy>

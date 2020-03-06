@@ -8,6 +8,7 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_GIRAFFE_TRAINER</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_GIRAFFE_TRAINER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GIRAFFE_TRAINER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GIRAFFE_TRAINER_STRATEGY</Strategy>

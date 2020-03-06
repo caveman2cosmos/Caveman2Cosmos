@@ -1886,6 +1886,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PLANET_CLOUD</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_PLANET_CLOUD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PLANET_CLOUD_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PLANET_CLOUD_STRATEGY</Strategy>
@@ -1955,6 +1956,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ENERGY_BEAM_NETWORK</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_ENERGY_BEAM_NETWORK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ENERGY_BEAM_NETWORK_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ENERGY_BEAM_NETWORK_STRATEGY</Strategy>
@@ -1986,6 +1988,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_ANTIMATTER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_ANTIMATTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_ANTIMATTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CISLUNAR_ANTIMATTER_STRATEGY</Strategy>
@@ -2012,6 +2015,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_SOLAR_SATELLITES</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_SOLAR_SATELLITES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_SOLAR_SATELLITES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CISLUNAR_SOLAR_SATELLITES_STRATEGY</Strategy>
@@ -2047,6 +2051,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASTEROID_MINING_COMPLEX</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_ASTEROID_MINING_COMPLEX</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ASTEROID_MINING_COMPLEX_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ASTEROID_MINING_COMPLEX_STRATEGY</Strategy>
@@ -2085,6 +2090,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_L5_COLONY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_L5_COLONY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_L5_COLONY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_L5_COLONY_STRATEGY</Strategy>
@@ -2124,6 +2130,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERPLANETARY_TRANSPORT_NETWORK</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_INTERPLANETARY_TRANSPORT_NETWORK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INTERPLANETARY_TRANSPORT_NETWORK_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_INTERPLANETARY_TRANSPORT_NETWORK_STRATEGY</Strategy>
@@ -2158,6 +2165,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ELYSIUM</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_ELYSIUM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ELYSIUM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ELYSIUM_STRATEGY</Strategy>
@@ -2207,6 +2215,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ZEUS_CANNON</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_ZEUS_CANNON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ZEUS_CANNON_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ZEUS_CANNON_STRATEGY</Strategy>

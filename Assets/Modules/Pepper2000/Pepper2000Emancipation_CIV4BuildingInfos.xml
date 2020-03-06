@@ -3,6 +3,7 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_EMANCIPATION_PROCLAMATION</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_EMANCIPATION_PROCLAMATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EMANCIPATION_PROCLAMATION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_EMANCIPATION_PROCLAMATION_STRATEGY</Strategy>
