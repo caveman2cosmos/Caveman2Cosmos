@@ -11069,9 +11069,8 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 								{
 									iTempValue += kLoopBuilding.getPowerYieldModifier(iJ);
 								}
-								//Remember, these are all divided by 10 at the end...
-								//	This is supposed to be a per-city value so since we're multiplying by the number we
-								//	have of this building class, divide by the total number of cities
+								// Remember, these are all divided by 10 at the end...
+								// Divide by number of cities as this is supposed to be a per-city value.
 								iTempValue += (kLoopBuilding.getBonusYieldChanges(eBonus, iJ) * iBuildingCount * 60)/std::max(1,getNumCities());
 								iTempValue += (kLoopBuilding.getBonusYieldModifier(eBonus, iJ)  * iBuildingCount * 10)/std::max(1,getNumCities());
 							}
@@ -15943,11 +15942,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	{
 		iTempValue += (kCivic.getBuildingProductionModifier(iI) * 2) / 5;
 	}
-	if ( gPlayerLogLevel > 2 && iTempValue != 0 )
+	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S building class production modifier value %d",
-				 kCivic.getDescription(),
-				 iTempValue);
+		logBBAI("Civic %S building production modifier value %d", kCivic.getDescription(), iTempValue);
 	}
 	iValue += iTempValue;
 

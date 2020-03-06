@@ -5499,7 +5499,7 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 			GET_PLAYER(getOwner()).noteOrbitalInfrastructureCountDirty();
 		}
 	}
-	//TB: Makes it possible to use old built buildings to qualify for x building class built anywhere prerequisites so as to get around
+	//TB: Makes it possible to use old built buildings to qualify for x buildings built anywhere prerequisites so as to get around
 	//Obsoletion and replacement issues.  However, this does still mean that the building needed to have BEEN built previously.
 	//Moving here also fixes from other prereqs that may be eliminating or upsetting the count.
 	GET_TEAM(getTeam()).changeBuildingCount(eBuilding, iChange);

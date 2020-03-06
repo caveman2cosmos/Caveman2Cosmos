@@ -4226,7 +4226,6 @@ protected:
 	int m_iMaxTeamInstances;
 	int m_iMaxPlayerInstances;
 	int m_iExtraPlayerInstances;
-	int m_iDefaultBuildingIndex;
 
 	float m_fVisibilityPriority;
 

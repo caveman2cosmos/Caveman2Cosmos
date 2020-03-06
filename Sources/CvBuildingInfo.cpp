@@ -3611,7 +3611,6 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum)
 	CheckSum(iSum, m_iMaxTeamInstances);
 	CheckSum(iSum, m_iMaxPlayerInstances);
 	CheckSum(iSum, m_iExtraPlayerInstances);
-	CheckSum(iSum, m_iDefaultBuildingIndex);
 	CheckSum(iSum, m_piVictoryThreshold, GC.getNumVictoryInfos());
 }
 
