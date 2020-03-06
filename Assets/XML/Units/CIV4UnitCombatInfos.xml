@@ -8195,7 +8195,7 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_CULTURE_ALEMANNI</Type>
 			<Description>TXT_KEY_UNITCOMBAT_CULTURE_ALEMANNI</Description>
-			<CultureType>BONUS_ALEMANNI</CultureType>
+			<CultureType>BONUS_ALEMANNIC</CultureType>
 			<Button>Art/categories/culture_newcultures.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -8375,7 +8375,7 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_CULTURE_CHECHENIAN</Type>
 			<Description>TXT_KEY_UNITCOMBAT_CULTURE_CHECHENIAN</Description>
-			<CultureType>BONUS_CHECHENIAN</CultureType>
+			<CultureType>BONUS_CHECHEN</CultureType>
 			<Button>Art/categories/culture_newcultures.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -8603,7 +8603,7 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_CULTURE_JUTES</Type>
 			<Description>TXT_KEY_UNITCOMBAT_CULTURE_JUTES</Description>
-			<CultureType>BONUS_JUTES</CultureType>
+			<CultureType>BONUS_JUTE</CultureType>
 			<Button>Art/categories/culture_newcultures.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -8747,7 +8747,7 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_CULTURE_MEDES</Type>
 			<Description>TXT_KEY_UNITCOMBAT_CULTURE_MEDES</Description>
-			<CultureType>BONUS_MEDES</CultureType>
+			<CultureType>BONUS_MEDIAN</CultureType>
 			<Button>Art/categories/culture_newcultures.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -9013,7 +9013,7 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_CULTURE_SELJUKS</Type>
 			<Description>TXT_KEY_UNITCOMBAT_CULTURE_SELJUKS</Description>
-			<CultureType>BONUS_SELJUKS</CultureType>
+			<CultureType>BONUS_SELJUK</CultureType>
 			<Button>Art/categories/culture_newcultures.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -9127,7 +9127,7 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_CULTURE_TATARS</Type>
 			<Description>TXT_KEY_UNITCOMBAT_CULTURE_TATARS</Description>
-			<CultureType>BONUS_TATARS</CultureType>
+			<CultureType>BONUS_TATAR</CultureType>
 			<Button>Art/categories/culture_newcultures.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>

@@ -15131,7 +15131,7 @@
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
-			<BonusType>BONUS_SELJUKS</BonusType>
+			<BonusType>BONUS_SELJUK</BonusType>
 			<iCost>1200</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
@@ -24373,7 +24373,7 @@
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_HORSE_BREEDING</PrereqTech>
-			<BonusType>BONUS_MEDES</BonusType>
+			<BonusType>BONUS_MEDIAN</BonusType>
 			<iCost>900</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
@@ -33696,7 +33696,7 @@
 				</GreatPeople>
 			</GreatPeoples>
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
-			<BonusType>BONUS_TATARS</BonusType>
+			<BonusType>BONUS_TATAR</BonusType>
 			<iCost>2300</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
@@ -41141,7 +41141,7 @@
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_ARTILLERY</PrereqTech>
-			<BonusType>BONUS_CHECHENIAN</BonusType>
+			<BonusType>BONUS_CHECHEN</BonusType>
 			<iCost>3300</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>33</iCombat>
@@ -43366,7 +43366,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_ALEMANNI</BonusType>
+			<BonusType>BONUS_ALEMANNIC</BonusType>
 			<iCost>850</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>12</iCombat>
@@ -47747,7 +47747,7 @@
 				</GreatPeople>
 			</GreatPeoples>
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
-			<BonusType>BONUS_JUTES</BonusType>
+			<BonusType>BONUS_JUTE</BonusType>
 			<iCost>900</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>11</iCombat>

@@ -190,7 +190,7 @@
 		<Italian>Una bevanda alcolica è una bevanda che contiene una quantità considerevole di etanolo (chiamato informalmente anche "alcool"). Nonostante bere bevande alcoliche rivesta un ruolo sociale molto importante in molte culture, l'alcool può generare dipendenza o il suo consumo può esserne abusato. Quasi tutti i paesi del mondo ne regolano la produzione, la vendita e il consumo, da quelli che lo bandiscono completamente a quelli che ne limitano vendita e consumo ai soli maggiorenni.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_ALEMANNI</Tag>
+		<Tag>TXT_KEY_BONUS_ALEMANNIC</Tag>
 		<English>Alemannic</English>
 		<French>Allémanique</French>
 		<Italian>Alemanno</Italian>
@@ -1302,7 +1302,7 @@
 		<Italian>Chavín</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_CHECHENIAN</Tag>
+		<Tag>TXT_KEY_BONUS_CHECHEN</Tag>
 		<English>Chechen</English>
 		<French>Tchétchénienne</French>
 		<Italian>Ceceno</Italian>
@@ -3827,7 +3827,7 @@
 		<Italian>Joseon</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_JUTES</Tag>
+		<Tag>TXT_KEY_BONUS_JUTE</Tag>
 		<English>Jute</English>
 		<Italian>Iuto</Italian>
 	</TEXT>
@@ -4511,7 +4511,7 @@
 		<Polish>Mecha - duże, najczęściej humanoidalne roboty, sterowane przez umieszczonego w jego wnętrzu pilota, autonomiczne bądź też zdalnie.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_MEDES</Tag>
+		<Tag>TXT_KEY_BONUS_MEDIAN</Tag>
 		<English>Median</English>
 		<Italian>Medo</Italian>
 	</TEXT>
@@ -6430,7 +6430,7 @@
 		<Polish>Przyprawa - składnik potraw, zwykle stosowany w niewielkich ilościach dla poprawienia ich walorów smakowych, zapachowych i w rzadkich przypadkach (takich jak kurkuma czy szafran) - wizualnych. W odróżnieniu od głównych składników potraw, przyprawy zwykle nie mają istotnego znaczenia odżywczego. Nierzadko jednak pobudzają trawienie, konserwują potrawy lub działają leczniczo, a dawniej wielu przypisywano też działanie magiczne (stanowiły istotny składnik napojów czarodziejskich i miłosnych). Przyprawy pozwalają w końcu zróżnicować pożywienie bazujące na niewielkiej liczbie produktów podstawowych. Niegdyś odgrywały istotną rolę i należały wielokroć do najcenniejszych surowców, obok kamieni i metali szlachetnych. Z czasem rosnące zróżnicowanie dostępnych produktów podstawowych, łatwość utrzymania walorów smakowych potraw poprzez zamrażanie lub stosowanie środków konserwujących spowodowało spadek znaczenia przypraw. Szczególną rolę odgrywają w kuchni obszarów tropikalnych i subtropikalnych, gdzie warunki klimatyczne sprzyjają osłabianiu apetytu i zaburzeniom trawiennym.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_SELJUKS</Tag>
+		<Tag>TXT_KEY_BONUS_SELJUK</Tag>
 		<English>Seljuk</English>
 		<Italian>Selgiuchide</Italian>
 	</TEXT>
@@ -7114,7 +7114,7 @@
 		<Polish>Tasmańska</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_TATARS</Tag>
+		<Tag>TXT_KEY_BONUS_TATAR</Tag>
 		<English>Tatar</English>
 		<Italian>Tataro</Italian>
 	</TEXT>
