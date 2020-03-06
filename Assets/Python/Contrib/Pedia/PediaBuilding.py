@@ -402,7 +402,7 @@ class PediaBuilding:
 				if iPrereqNumOfBuilding > 0:
 					aList3.append((j, iPrereqNumOfBuilding))
 			elif iPrereqNumOfBuilding > 0:
-				aList3.append((iType, iPrereqNumOfBuilding))
+				aList3.append((j, iPrereqNumOfBuilding))
 		if aList1 or aList2 or aList3:
 			if bPlus:
 				screen.attachLabel(panelName, "", szAnd)
