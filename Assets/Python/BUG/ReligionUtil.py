@@ -210,7 +210,7 @@ def isTemple(info, iReligion):
 	"""
 	Returns True if <info> is the Temple for <iReligion>.
 	"""
-	if not isWorldWonderClass(GC.getInfoTypeForString(info.getType())) and info.getSpecialBuildingType() == GC.getInfoTypeForString('SPECIALBUILDING_TEMPLE'):
+	if not isWorldWonder(GC.getInfoTypeForString(info.getType())) and info.getSpecialBuildingType() == GC.getInfoTypeForString('SPECIALBUILDING_TEMPLE'):
 		return info.getStateReligionHappiness() > 0
 	return False
 
@@ -219,7 +219,7 @@ def isCathedral(info, iReligion):
 	Returns True if <info> is the Cathedral for <iReligion>.
 	"""
 	iNum = GC.getNumSpecialBuildingInfos()
-	if not isWorldWonderClass(GC.getInfoTypeForString(info.getType())) and info.getSpecialBuildingType() in (GC.getInfoTypeForString('SPECIALBUILDING_CATHEDRAL'), GC.getInfoTypeForString('SPECIALBUILDING_PANTHEON')):
+	if not isWorldWonder(GC.getInfoTypeForString(info.getType())) and info.getSpecialBuildingType() in (GC.getInfoTypeForString('SPECIALBUILDING_CATHEDRAL'), GC.getInfoTypeForString('SPECIALBUILDING_PANTHEON')):
 		return info.getCommerceModifier(CommerceTypes.COMMERCE_CULTURE) > 0
 	return False
 
@@ -227,7 +227,7 @@ def isMonastery(info, iReligion):
 	"""
 	Returns True if <info> is the Monastery for <iReligion>.
 	"""
-	if not isWorldWonderClass(GC.getInfoTypeForString(info.getType())) and info.getSpecialBuildingType() == GC.getInfoTypeForString('SPECIALBUILDING_MONASTERY'):
+	if not isWorldWonder(GC.getInfoTypeForString(info.getType())) and info.getSpecialBuildingType() == GC.getInfoTypeForString('SPECIALBUILDING_MONASTERY'):
 		return info.getCommerceModifier(CommerceTypes.COMMERCE_RESEARCH) > 0
 	return False
 

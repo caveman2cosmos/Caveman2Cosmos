@@ -942,9 +942,9 @@ class Pedia:
 			return 5
 		elif CvBuildingInfo.getProductionCost() == -1 or CvBuildingInfo.isAutoBuild():
 			return 3
-		elif isWorldWonderClass(iBuilding):
+		elif isWorldWonder(iBuilding):
 			return 1
-		elif isNationalWonderClass(iBuilding):
+		elif isNationalWonder(iBuilding):
 			return 0
 		else:
 			return -1
