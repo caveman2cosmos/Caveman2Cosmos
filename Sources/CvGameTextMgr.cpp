@@ -17618,7 +17618,7 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 	{
 		if (kCivic.getBuildingProductionModifier(iI) != 0)
 		{
-			szFirstBuffer.Format(L"%s%c%d%s", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), abs(kCivic.getBuildingProductionModifier(iI)), (kCivic.getBuildingProductionModifier(iI) > 0 ? gDLL->getText("TXT_KEY_CIVIC_BUILDING_CLASS_PRODUCTION_MOD") : gDLL->getText("TXT_KEY_CIVIC_BUILDING_CLASS_PRODUCTION_SLOW")).c_str());
+			szFirstBuffer.Format(L"%s%c%d%s", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), abs(kCivic.getBuildingProductionModifier(iI)), (kCivic.getBuildingProductionModifier(iI) > 0 ? gDLL->getText("TXT_KEY_CIVIC_BUILDING_PRODUCTION_MOD") : gDLL->getText("TXT_KEY_CIVIC_BUILDING_PRODUCTION_SLOW")).c_str());
 			szBuilding.Format(L"<link=%s>%s</link>", CvWString(GC.getBuildingInfo((BuildingTypes)iI).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes)iI).getDescription());
 			setListHelp(szHelpText, szFirstBuffer, szBuilding, L", ", (kCivic.getBuildingProductionModifier(iI) != iLast));
 			iLast = kCivic.getBuildingProductionModifier(iI);
@@ -24339,7 +24339,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 				{
 					if (kBuilding.getBuildingProductionModifier(iI) != 0)
 					{
-						szFirstBuffer.Format(L"%s%c%d%s", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), abs(kBuilding.getBuildingProductionModifier(iI)), (kBuilding.getBuildingProductionModifier(iI) > 0 ? gDLL->getText("TXT_KEY_CIVIC_BUILDING_CLASS_PRODUCTION_MOD") : gDLL->getText("TXT_KEY_CIVIC_BUILDING_CLASS_PRODUCTION_SLOW")).c_str());
+						szFirstBuffer.Format(L"%s%c%d%s", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), abs(kBuilding.getBuildingProductionModifier(iI)), (kBuilding.getBuildingProductionModifier(iI) > 0 ? gDLL->getText("TXT_KEY_CIVIC_BUILDING_PRODUCTION_MOD") : gDLL->getText("TXT_KEY_CIVIC_BUILDING_PRODUCTION_SLOW")).c_str());
 						szBuilding.Format(L"<link=%s>%s</link>", CvWString(GC.getBuildingInfo(eLoopBuilding).getType()).GetCString(), GC.getBuildingInfo(eLoopBuilding).getDescription());
 						setListHelp(szBuffer, szFirstBuffer, szBuilding, L", ", (kBuilding.getBuildingProductionModifier(iI) != iLast));
 						iLast = kBuilding.getBuildingProductionModifier(iI);
@@ -24363,7 +24363,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 						if (bGlobal && kBuilding.getGlobalBuildingProductionModifier(iI) != iLast)
 							szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_GLOBAL"));
 						bGlobal = true;
-						szFirstBuffer.Format(L"%s%c%d%s", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), abs(kBuilding.getGlobalBuildingProductionModifier(iI)), (kBuilding.getGlobalBuildingProductionModifier(iI) > 0 ? gDLL->getText("TXT_KEY_CIVIC_BUILDING_CLASS_PRODUCTION_MOD") : gDLL->getText("TXT_KEY_CIVIC_BUILDING_CLASS_PRODUCTION_SLOW")).c_str());
+						szFirstBuffer.Format(L"%s%c%d%s", NEWLINE, gDLL->getSymbolID(BULLET_CHAR), abs(kBuilding.getGlobalBuildingProductionModifier(iI)), (kBuilding.getGlobalBuildingProductionModifier(iI) > 0 ? gDLL->getText("TXT_KEY_CIVIC_BUILDING_PRODUCTION_MOD") : gDLL->getText("TXT_KEY_CIVIC_BUILDING_PRODUCTION_SLOW")).c_str());
 						szBuilding.Format(L"<link=%s>%s</link>", CvWString(GC.getBuildingInfo(eLoopBuilding).getType()).GetCString(), GC.getBuildingInfo(eLoopBuilding).getDescription());
 						setListHelp(szBuffer, szFirstBuffer, szBuilding, L", ", (kBuilding.getGlobalBuildingProductionModifier(iI) != iLast));
 						iLast = kBuilding.getGlobalBuildingProductionModifier(iI);
