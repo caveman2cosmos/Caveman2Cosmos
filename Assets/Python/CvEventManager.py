@@ -283,6 +283,12 @@ class CvEventManager:
 					"DOMAIN_LAND"		: GC.getInfoTypeForString('DOMAIN_LAND'),
 					"DOMAIN_SEA"		: GC.getInfoTypeForString('DOMAIN_SEA')
 				}
+				# onUnitCreated
+				self.TECH_SATELLITES	= GC.getInfoTypeForString("TECH_SATELLITES")
+				self.TECH_STARGAZING	= GC.getInfoTypeForString("TECH_STARGAZING")
+				self.TECH_ASTROLOGY		= GC.getInfoTypeForString("TECH_ASTROLOGY")
+				self.TECH_ASTRONOMY		= GC.getInfoTypeForString("TECH_ASTRONOMY")
+				self.TECH_REALISM		= GC.getInfoTypeForString("TECH_REALISM")
 				# onUnitBuilt
 				self.mapSettlerPop = {
 					GC.getInfoTypeForString("UNIT_COLONIST")	: 1,
@@ -306,9 +312,11 @@ class CvEventManager:
 					[GC.getInfoTypeForString('PROMOTION_CULTURE_SOUTH_AMERICAN'), GC.getInfoTypeForString('BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN'), GC.getInfoTypeForString('BUILDINGCLASS_CULTURE_NATIVE_SOUTH_AMERICAN')]
 				]
 				self.UNIT_BAND = GC.getInfoTypeForString("UNIT_BAND")
-				# onCombatResult
+
 				self.UNITCOMBAT_RECON		= GC.getInfoTypeForString("UNITCOMBAT_RECON")
 				self.UNITCOMBAT_HUNTER		= GC.getInfoTypeForString("UNITCOMBAT_HUNTER")
+				self.UNITCOMBAT_CIVILIAN	= GC.getInfoTypeForString("UNITCOMBAT_CIVILIAN")
+
 				# onCityBuilt
 				self.PROMO_GUARDIAN_TRIBAL	= GC.getInfoTypeForString("PROMOTION_GUARDIAN_TRIBAL")
 				# onTechAcquired
@@ -722,7 +730,7 @@ class CvEventManager:
 				elif KEY == "ZIZKOV":
 					MAP = GC.getMap()
 					iPlayerAct = GAME.getActivePlayer()
-					TECH_SATELLITES = GC.getInfoTypeForString("TECH_SATELLITES")
+					TECH_SATELLITES = self.TECH_SATELLITES
 					iChance = 50 + (MAP.getWorldSize() + 3)**2 + 64 * self.iVictoryDelayPrcntGS / 100
 					iTeam = CyPlayer.getTeam()
 					for iPlayerX in xrange(self.MAX_PC_PLAYERS):
@@ -1390,7 +1398,7 @@ class CvEventManager:
 					if CyPlayerX.isAlive():
 						CyPlayerX.AI_changeAttitudeExtra(iTeam, 3)
 			elif KEY == "ZIZKOV":
-				TECH_SATELLITES = GC.getInfoTypeForString("TECH_SATELLITES")
+				TECH_SATELLITES = self.TECH_SATELLITES
 				iTeam = CyPlayer.getTeam()
 				for iTeamX in xrange(GC.getMAX_PC_TEAMS()):
 					if iTeamX == iTeam:
@@ -2082,18 +2090,21 @@ class CvEventManager:
 
 	def onUnitCreated(self, argsList): # Enabled in PythonCallbackDefines.xml (USE_ON_UNIT_CREATED_CALLBACK = True)
 		CyUnit, = argsList
-		iPlayer = CyUnit.getOwner()
-		CvUnitInfo = GC.getUnitInfo(CyUnit.getUnitType())
-		KEY = CvUnitInfo.getType()
 
 		# Star Signs
-		if CyUnit.isNPC() and not GAME.getSorenRandNum(100, "Random to get a Sign"):
-			# 1% chance of getting a "sign promotion"
-			import StarSigns
-			StarSigns.give(GC, TRNSLTR, GAME, CyUnit, GC.getPlayer(iPlayer))
+		if not CyUnit.isHasUnitCombat(self.UNITCOMBAT_CIVILIAN) and not GAME.getSorenRandNum(49, "Seventh son of seventh son"):
+			CyTeam = GC.getTeam(CyUnit.getTeam())
+			bLand = CyUnit.getDomainType() == self.mapDomain['DOMAIN_LAND']
+			if not CyTeam.isHasTech(self.TECH_SATELLITES) and CyTeam.isHasTech(self.TECH_STARGAZING) \
+			and (not bLand or not CyTeam.isHasTech(self.TECH_REALISM)) \
+			and (CyTeam.isHasTech(self.TECH_ASTROLOGY) or GAME.getSorenRandNum(2, "1/2 probability before Astrology")) \
+			and (not CyTeam.isHasTech(self.TECH_ASTRONOMY) or GAME.getSorenRandNum(4, "3/4 probability after Astronomy")):
+				import StarSigns
+				StarSigns.give(GC, TRNSLTR, GAME, CyUnit, CyUnit.getOwner(), bLand)
 
 		# Beastmaster
 		if self.UNIT_FEMALE_BEASTMASTER != -1 or self.UNIT_BEASTMASTER != -1:
+			KEY = GC.getUnitInfo(CyUnit.getUnitType()).getType()
 			if KEY[:13] == 'UNIT_SUBDUED_' or KEY[:11] == 'UNIT_TAMED_':
 				if self.UNIT_FEMALE_BEASTMASTER != -1 and self.UNIT_BEASTMASTER != -1:
 					if 16 > GAME.getSorenRandNum(100, "Female Beastmaster"):
@@ -2107,10 +2118,11 @@ class CvEventManager:
 
 		# Inspired Missionary
 		aWonderTuple = self.aWonderTuple
-		if "FA_MEN_SI" in aWonderTuple[0]:
-			if iPlayer == aWonderTuple[4][aWonderTuple[0].index("FA_MEN_SI")]:
-				if CvUnitInfo.getPrereqReligion() > -1:
-					CyUnit.setHasPromotion(GC.getInfoTypeForString("PROMOTION_FA_MEN_SI_INSPIRED"), True)
+		if "FA_MEN_SI" in aWonderTuple[0] \
+		and CyUnit.getOwner() == aWonderTuple[4][aWonderTuple[0].index("FA_MEN_SI")] \
+		and GC.getUnitInfo(CyUnit.getUnitType()).getPrereqReligion() > -1:
+
+			CyUnit.setHasPromotion(GC.getInfoTypeForString("PROMOTION_FA_MEN_SI_INSPIRED"), True)
 
 
 	def onUnitBuilt(self, argsList):
@@ -2132,11 +2144,6 @@ class CvEventManager:
 			popupInfo.setText("showWonderMovie")
 			popupInfo.addPopup(iPlayer)
 		'''
-		# Star Signs
-		if not CyUnit.isNPC() and not GAME.getSorenRandNum(100, "Random to get a Sign"):
-			# 1% chance of getting a "sign promotion"
-			import StarSigns
-			StarSigns.give(GC, TRNSLTR, GAME, CyUnit, CyPlayer)
 
 		# Technocracy - Free Promotion
 		if CyPlayer.getCivics(self.CIVICOPTION_POWER) == self.CIVIC_TECHNOCRACY:

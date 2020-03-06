@@ -637,22 +637,19 @@
 		<Spanish>En cada partida se genera una nueva "seed" al azar que, por ejemplo, arrojará resultados diferentes en el combate.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_NO_BARBARIAN_CIV</Tag>
-		<English>No BarbarianCivs</English>
-		<French>Pas de Civs Barbares</French>
-		<German>Keine Barbarenzivilisationen</German>
-		<Italian>Niente civiltà barbariche</Italian>
-		<Spanish>Sin civilizaciones bárbaras</Spanish>
-		<Polish>Brak Barbarzyńskich Cywilizacji</Polish>
+		<Tag>TXT_KEY_GAMEOPTION_BARBARIAN_CIV</Tag>
+		<English>Barbarian Civ</English>
+		<French>Civs Barbares</French>
+		<German>Barbarenzivilisationen</German>
+		<Italian>Civiltà barbariche</Italian>
+		<Spanish>Civilizaciones bárbaras</Spanish>
+		<Polish>Barbarzyńskich Cywilizacji</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_NO_BARBARIAN_CIV_HELP</Tag>
-		<English>Disables the BarbarianCivs: Barbarian cities which are left alone will remain barbarian, they will not spawn new civilizations.</English>
-		<French>Désactive les Civs Barbares: Les Villes Barbares ne feront pas émerger de nouvelles civilizations.</French>
-		<German>Es entstehen keine neuen Zivilisationen aus Barbarenstädten. ACHTUNG! Aktivierte Barbarenzivilisationen können Unmengen an neuen Spielern auf der Karte auftauchen lassen und auch auf leistungsstarken Maschinen zu Speicherproblemen führen.</German>
-		<Italian>Disattiva le civiltà barbariche: le città barbariche rimaste isolate non si organizzeranno in nuove civiltà.</Italian>
-		<Spanish>Se desactiva el componente BarbarianCiv: Las ciudades bárbaras que estén en solitario continuarán siendo bárbaras, no surgirán nuevas civilizaciones a partir de ellas.</Spanish>
-		<Polish>Wyłącza mod BarbCiv: Miasta barbarzyńców nie będą się przemieniać w cywilizacje.</Polish>
+		<Tag>TXT_KEY_GAMEOPTION_BARBARIAN_CIV_HELP</Tag>
+		<English>When enabled: New civilizations may emerge from barbarian cities as minor civs.
+
+If you play with "Start as Minor Civ" then this option will change the rules for becoming a major civ. Achievements and randomness thereof decides when you become a major civ.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_BARBARIANS</Tag>
@@ -686,22 +683,12 @@
 		<Spanish>Las ciudades no pueden cambiar de cultura pacíficamente.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_NO_CITY_LIMITS</Tag>
-		<English>No city limits from civics</English>
-		<French>Pas de limites de villes par les doctrines</French>
-		<German>Keine Stadtbeschränkungen durch Gesellschaftsformen</German>
-		<Italian>Niente limiti di città dalle forme di governo</Italian>
-		<Spanish>Sin límites a las ciudades por principios</Spanish>
-		<Polish>Brak limitu miast z doktryn</Polish>
+		<Tag>TXT_KEY_GAMEOPTION_OVEREXPANSION_PENALTIES</Tag>
+		<English>Happiness penalties from overexpansion</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_NO_CITY_LIMITS_HELP</Tag>
-		<English>No explicit limits or penalties from civic choices for founding any number of cities</English>
-		<French>Aucune limites ou pénalités des Doctrines concernant le nombre de Ville fondées</French>
-		<German>Es können mit jeder gewählten Gesellschaftsform beliebig viele Städte gegründet werden, ohne eine erhöhte Unzufriedenheit der Bürger zu riskieren.</German>
-		<Italian>Nessun limite o penalità dalle form di governo per aver fondato qualsiasi numero di città</Italian>
-		<Spanish>No habrá límites explícitos o penalizaciones a la fundación de ciudades por parte de los principios.</Spanish>
-		<Polish>Opcja powoduje wyłączenie limitu miast przez doktryny</Polish>
+		<Tag>TXT_KEY_GAMEOPTION_OVEREXPANSION_PENALTIES_HELP</Tag>
+		<English>Cities will get unhappiness from overexpansion, scaled by map size. Unhappiness penalties depend on civics.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_CITY_RAZING</Tag>
@@ -752,8 +739,8 @@
 		<Spanish>Los espías no estén disponibles, y los puntos del espionaje se convierten en cultura</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_NO_FIXED_BORDERS</Tag>
-		<English>No fixed borders</English>
+		<Tag>TXT_KEY_GAMEOPTION_FIXED_BORDERS</Tag>
+		<English>Fixed borders</English>
 		<French>Pas de frontières fixes</French>
 		<German>Keine festen Grenzen</German>
 		<Italian>Niente confini fissi</Italian>
@@ -761,8 +748,8 @@
 		<Polish>Brak Stałych Granic</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_NO_FIXED_BORDERS_HELP</Tag>
-		<English>No fixed border mechanics, whether from civics or any other source</English>
+		<Tag>TXT_KEY_GAMEOPTION_FIXED_BORDERS_HELP</Tag>
+		<English>Fixed border mechanics</English>
 		<French>Pas de mécanisme de frontières fixes, ni provenant des doctrines, ni d'autres origines</French>
 		<German>Es können keine festen Landesgrenzen festgelegt werden, weder durch Gesellschaftsformen noch auf anderem Weg.</German>
 		<Italian>Niente confini fissi, nè dalle forme di governo nè da altra fonte</Italian>
@@ -804,22 +791,12 @@
 		<Spanish>El generador aleatorio de mapas no pone en ellos aldeas tribales (con sus típicas "golosinas").</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_NO_INQUISITIONS</Tag>
-		<English>No Inquisitions</English>
-		<French>Pas d'Inquisitions</French>
-		<German>Keine Inquisitionen</German>
-		<Italian>Niente Inquisizioni</Italian>
-		<Spanish>Sin inquisiciones</Spanish>
-		<Polish>Brak Inkwizycji</Polish>
+		<Tag>TXT_KEY_GAMEOPTION_INQUISITIONS</Tag>
+		<English>Inquisitions</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_NO_INQUISITIONS_HELP</Tag>
-		<English>Disables Inquisitions.  Inquisitors may not be trained and non-state religions may not be purged in order to reduce the threat of rebellion.</English>
-		<French>Désactive les Inquisitions. Les Inquisiteurs ne ne peuvent pas être recrutés et les religions non-officielles ne peuvent pas non plus être éradiquées dans un ville pour en améliorer la stabilité.</French>
-		<German>Die Inquisition wird deaktiviert. Dadurch können keine Inquisitoren ausgebildet werden, und die Möglichkeit zur Entfernung fremder Religionen zur Rebellionsvermeidung entfällt.</German>
-		<Italian>Disattiva le inquisizioni. Gli inquisitori non possono essere reclutati, e le religioni non di stato non possono essere purgate per ridurre il rischio di ribellione.</Italian>
-		<Spanish>Desactiva las inquisiciones. Los inquisidores no pueden ser entrenados y las religiones no oficiales no pueden ser eliminadas para reducir la amenaza de rebelión.</Spanish>
-		<Polish>Wyłącza inkwizycje. Inkwizytorzy mogą prowadzić przesłuchania w miastach gdzie rozwija sie nie narodowa religia, aby, zmniejszyć szanse buntu. Wszystkie konstrukcje religii nie narodowej zostaną zniszczone oraz nie narodowa religia zostanie wyeliminowana.</Polish>
+		<Tag>TXT_KEY_GAMEOPTION_INQUISITIONS_HELP</Tag>
+		<English>Enables Inquisitions. Inquisitors may be trained and non-state religions may be purged in order to reduce the threat of rebellion.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_NEGATIVE_TRAITS</Tag>
@@ -854,17 +831,18 @@
 		<Polish>Wyłącza CAŁA Broń Nuklearną</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_NO_REVOLUTION</Tag>
-		<English>No Revolutions</English>
-		<French>Pas de Revolutions</French>
-		<German>Keine Revolutionen</German>
-		<Italian>Niente Rivoluzioni</Italian>
-		<Spanish>Sin revoluciones</Spanish>
-		<Polish>Brak Rewolucji</Polish>
+		<Tag>TXT_KEY_GAMEOPTION_REVOLUTION</Tag>
+		<English>Revolutions</English>
+		<German>Revolutionen</German>
+		<Italian>Rivoluzioni</Italian>
+		<Spanish>Revoluciones</Spanish>
+		<Polish>Rewolucji</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_NO_REVOLUTION_HELP</Tag>
-		<English>Disables the Revolution mod component: new rebel civs will not attempt to breakaway from an empire if their needs are not being met. [NEWLINE]WARNING: Leaving this option off (No Revolutions being UNSELECTED) makes AI less challenging. Revolution mod isn't officially supported by modding team.</English>
+		<Tag>TXT_KEY_GAMEOPTION_REVOLUTION_HELP</Tag>
+		<English>Enables the Revolution mod component: New rebel civs will attempt to breakaway from an empire if their needs are not being met.
+
+WARNING: This option makes AI less challenging. Revolution mod hasn't been properly maintained and updated in C2C.</English>
 		<French>Désactive le composant de mod de révolution: les nouveaux civs rebelles ne peuvent pas se révolter et devenir indépendante d'un empire si leurs besoins ne sont pas satisfaits.</French>
 		<German>Deaktiviert die Revolution-Mod: Es wird keine Rebellionen und Abspaltungsbestrebungen geben, wenn die Bedürfnisse der Bevölkerung nicht beachtet werden.</German>
 		<Italian>Disabilita il MOD "Revolution": nuove civiltà ribelli no possono tentare la secessione da un impero se i loro bisogni non vengono soddisfatti.</Italian>
@@ -889,22 +867,12 @@
 		<Polish>Gracze nie mogą handlować technologiami, których sami nie wynaleźli.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_NO_TECH_DIFFUSION</Tag>
-		<English>No TechDiffusion</English>
-		<French>Pas de Diffusion de Technologies</French>
-		<German>Keine Technologieverbreitung</German>
-		<Italian>Nessuna diffusione di tecnologie</Italian>
-		<Spanish>Sin difusión tecnológica</Spanish>
-		<Polish>Brak Dyfuzji Technologii</Polish>
+		<Tag>TXT_KEY_GAMEOPTION_TECH_DIFFUSION</Tag>
+		<English>Tech Diffusion</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_NO_TECH_DIFFUSION_HELP</Tag>
-		<English>Disables TechDiffusion: tech knowledge will not slowly diffuses to civs that are behind.</English>
-		<French>Désactive la Diffusion des Techs: La Connaissance des Technologies ne sera pas diffusée aux autres civilisations.</French>
-		<German>Verhindert die langsame Verbreitung von technologischem Wissen an Zivilisationen, die noch nicht so weit entwickelt sind.</German>
-		<Italian>Disattiva la diffusione delle tecnologie: la tecnologia non si diffonderà alle civiltà più arretrate.</Italian>
-		<Spanish>Se desactiva el componente TechDiffusion: el conocimiento no se difundirá lentamente hacia las civilizaciones más atrasadas.</Spanish>
-		<Polish>Wyłącza dyfuzję technologii: poznane technologie nie będą powoli dyfuzjowały do cywilizacji które są z tyłu.</Polish>
+		<Tag>TXT_KEY_GAMEOPTION_TECH_DIFFUSION_HELP</Tag>
+		<English>Tech Diffusion: tech knowledge will slowly diffuse to civs that are behind.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS</Tag>
@@ -949,18 +917,19 @@
 		<Spanish>Desactiva los tratados de estados vasallos, lo cual asegura protección a una civilización contra un rival más fuerte.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_NO_ZOC</Tag>
-		<English>No Zones of Control</English>
-		<French>Pas de Zones de Contrôle</French>
-		<German>Keine Kontrollzonen</German>
-		<Polish>Brak Strefy Kontroli</Polish>
+		<Tag>TXT_KEY_GAMEOPTION_ZONE_OF_CONTROL</Tag>
+		<English>Zone of Control</English>
+		<French>Zones de Contrôle</French>
+		<German>Kontrollzonen</German>
+		<Polish>Strefy Kontroli</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_NO_ZOC_HELP</Tag>
-		<English>Disables all Zone of Control effects.  Suggested at the moment as there is a known bug it creates for pathing and some players may find it terribly frustrating with the current forts.  The author of this option also believes that it does not represent a fair combat scenario in many cases where you'd prefer to take the hit they threaten and would like to eventually make a form of ZOC that instead generates a free Ranged Assault on the offending unit rather than keeping it from moving at all (as that's the concept behind the effect anyhow.)</English>
-		<French>Désactive tous les effets des Zones de contrôle. Suggéré en raison d'un bug connu dans le chemin, certains joueurs pouvant trouver les forts particulièrement frustrants.</French>
-		<German>Alle Kontrollzoneneffekte durch Festungen oder Städte werden deaktiviert. Im Moment sollte diese Option benutzt werden, da sie einen Fehler in der Pfadsuchroutine umgeht und allgemein Frustrationen in Bezug auf die neuen Festungen vermeidet.</German>
-		<Polish>Wyłącza Strefy Kontrolo w grze.</Polish>
+		<Tag>TXT_KEY_GAMEOPTION_ZONE_OF_CONTROL_HELP</Tag>
+		<English>Zone of Control (ZoC) hinders enemy units from walking around manned forts or cities with moats, the effect has a one tile range. A unit that is inside an enemy ZoC cannot move to another plot within the ZoC, but must exit the ZoC before being able to reach other ZoC plots.
+
+Not reccomended at the moment as there is a known bug it creates for pathing and some players may find it terribly frustrating with the current forts.
+
+The author of this option also believes that it does not represent a fair combat scenario in many cases where you'd prefer to take the hit they threaten and would like to eventually make a form of ZoC that instead generates a free Ranged Assault on the offending unit rather than keeping it from moving at all (as that's the concept behind the effect anyhow.)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ONE_CITY_CHALLENGE</Tag>
@@ -1243,24 +1212,6 @@
 		<Italian>Circonda e distruggi aggiunge bonus militari per aver circondato città e truppe nemiche, simulando le imboscate come nel mondo reale.</Italian>
 		<Spanish>Rodea y destruye añade bonificaciones militares por rodear a las tropas y ciudades enemigas, simulando las emboscadas del mundo real.</Spanish>
 		<Polish>Otocz i zniszcz dodaje militarnych bonusów przeciw otaczaniu wrogich jednostek i miast, symulują prawdziwe zasadzki</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_SCALE_CITY_LIMITS</Tag>
-		<English>Scale City Limits</English>
-		<French>Frontières de Villes adaptées</French>
-		<German>Angepasste Stadtgrenzen</German>
-		<Italian>Scala i limiti cittadini</Italian>
-		<Spanish>Límites de ciudad escalados</Spanish>
-		<Polish>Skalowanie Limitu Miast</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_SCALE_CITY_LIMITS_HELP</Tag>
-		<English>City Limits will be scaled by the size of the map being used, as opposed to being static.</English>
-		<French>Les Frontières des Villes sont adaptées à la taille de la carte.</French>
-		<German>Mit dieser Einstellung sind die Stadtgrenzen nicht mehr statisch, sie werden stattdessen an die aktuelle Kartengröße angepasst.</German>
-		<Italian>I limiti cittadini vengono scalati in relazione alla dimensione della mappa usata.</Italian>
-		<Spanish>Los límites de ciudad estarán escalados según el tamaño de mapa utilizado, en lugar de mantenerse estáticos.</Spanish>
-		<Polish>Limit będzie się skalował wraz ze zmianą wielkości mapy</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_SIZE_MATTERS</Tag>

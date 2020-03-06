@@ -36,13 +36,14 @@ public:
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
+	bool multiMapsEnabled() const;
 	void switchMap(int iMap);
 	int getNumMapInfos() const;
 	CvMapInfo* getMapInfo(int iMap) const;
-	int getNumMapSwitchInfos() const;
-	CvMapSwitchInfo* getMapSwitchInfo(int iMapSwitch) const;
 	CyMap* getMapByIndex(int iIndex);
+	void updateMaps();
 	void initializeMap(int iMap);
+	bool mapInitialized(int iMap) const;
 /*******************************/
 /***** Parallel Maps - End *****/
 /*******************************/	

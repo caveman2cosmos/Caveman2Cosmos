@@ -97,12 +97,12 @@ class CvMainInterface:
 		self.bMultiPlayer	= GAME.isGameMultiPlayer()
 		self.bDebugMode		= GAME.isDebugMode()
 		# Cache Game Options
-		self.GO_NO_REVOLUTION = bNoRev = GAME.isOption(GameOptionTypes.GAMEOPTION_NO_REVOLUTION)
+		self.GO_REVOLUTION			= GAME.isOption(GameOptionTypes.GAMEOPTION_REVOLUTION)
 		self.GO_PICK_RELIGION		= GAME.isOption(GameOptionTypes.GAMEOPTION_PICK_RELIGION)
 		self.GO_NO_ESPIONAGE		= GAME.isOption(GameOptionTypes.GAMEOPTION_NO_ESPIONAGE)
 		self.GO_SIZE_MATTERS		= GAME.isOption(GameOptionTypes.GAMEOPTION_SIZE_MATTERS)
 		self.GO_WIN_FOR_LOSING		= GAME.isOption(GameOptionTypes.GAMEOPTION_WIN_FOR_LOSING)
-		self.GO_NO_TECH_DIFFUSION	= GAME.isOption(GameOptionTypes.GAMEOPTION_NO_TECH_DIFFUSION)
+		self.GO_TECH_DIFFUSION   	= GAME.isOption(GameOptionTypes.GAMEOPTION_TECH_DIFFUSION)
 		self.GO_ONE_CITY_CHALLENGE	= GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE)
 		# First pass initialization.
 		if self.bInitialize:
@@ -751,7 +751,7 @@ class CvMainInterface:
 		self.yCityStackBarBot = y + 2
 		#-- Revolution Bar
 		y -= h
-		if not bNoRev:
+		if self.GO_REVOLUTION:
 			screen.addStackedBarGFC("CS|RevBar0", 8, y, w, h, InfoBarTypes.NUM_INFOBAR_TYPES, eWidGen, -1, -1)
 			screen.hide("CS|RevBar0")
 		#-- Great People Bar
@@ -807,7 +807,7 @@ class CvMainInterface:
 		y = 22
 		dx = 24
 		# Partisan:
-		if not bNoRev:
+		if self.GO_REVOLUTION:
 			btn = "AdvisorButton9"
 			screen.setImageButton(btn, "Art/Interface/Buttons/revbtn.dds", x, y, iSize, iSize, eWidGen, 0, 0)
 			screen.setStyle(btn, "Button_HUDSmall_Style")
@@ -2161,7 +2161,7 @@ class CvMainInterface:
 					iResearchRate = CyPlayer.calculateResearchRate(iCurrentResearch)
 					iResearchMod = CyPlayer.calculateResearchModifier(iCurrentResearch)
 					if not bCityScreen:
-						bTDDisplayOption = self.GO_WIN_FOR_LOSING or not self.GO_NO_TECH_DIFFUSION
+						bTDDisplayOption = self.GO_WIN_FOR_LOSING or self.GO_TECH_DIFFUSION
 				iconCommerceList = self.iconCommerceList
 				dY = 0
 				for i in xrange(iRange):
@@ -2779,7 +2779,7 @@ class CvMainInterface:
 			screen.show("NationalityBar")
 
 			yTop = self.yCityStackBarTop
-			if not (self.GO_NO_REVOLUTION or RevInstances.RevolutionInst is None):
+			if self.GO_REVOLUTION and not RevInstances.RevolutionInst is None:
 				# < Revolution Mod Start >
 				RevInstances.RevolutionInst.updateLocalRevIndices(GAME.getGameTurn(), iPlayer, subCityList = [CyCity], bIsRevWatch = True)
 
