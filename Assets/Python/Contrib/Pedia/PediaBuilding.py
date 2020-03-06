@@ -74,9 +74,9 @@ class PediaBuilding:
 
 		# Main Panel
 		szBuildingName = CvTheBuildingInfo.getDescription()
-		iMaxGlobalInstances = GC.getBuildingInfo(iTheBuilding).getMaxGlobalInstances()
-		iMaxPlayerInstances = GC.getBuildingInfo(iTheBuilding).getMaxPlayerInstances()
-		iMaxTeamInstances = GC.getBuildingInfo(iTheBuilding).getMaxTeamInstances()
+		iMaxGlobalInstances = CvTheBuildingInfo.getMaxGlobalInstances()
+		iMaxPlayerInstances = CvTheBuildingInfo.getMaxPlayerInstances()
+		iMaxTeamInstances = CvTheBuildingInfo.getMaxTeamInstances()
 		if iMaxGlobalInstances > 0:
 			szBuildingName += "<color=192,192,128,255> | " + TRNSLTR.getText("TXT_KEY_PEDIA_WORLD_WONDER",()) + " - Max. " + str(iMaxGlobalInstances)
 		elif iMaxPlayerInstances > 0:
