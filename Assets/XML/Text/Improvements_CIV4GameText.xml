@@ -124,8 +124,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_HUNTING_CAMP_PEDIA</Tag>
-		<English>The term camp comes from the Latin word campus, meaning "field". Therefore, a campsite consists typically of open pieces of ground where a camper can pitch a tent or park a camper. More specifically a campsite is a dedicated area set aside for camping and for which often a user fee is charged. Campsites typically feature a few (but sometimes no) improvements. Wikipedia</English>
-		<French>Provenant du latin campus, signifiant "champ". Ainsi, un campement est généralement un lieu plat ou le campeur peut installer une tente, avec éventuellement quelques aménagements pour améliorer son confort. Wikipedia</French>
+		<English>The term camp comes from the Latin word campus, meaning "field". Therefore, a campsite consists typically of open pieces of ground where a camper can pitch a tent or park a camper. More specifically a campsite is a dedicated area set aside for camping and for which often a user fee is charged. Campsites typically feature a few (but sometimes no) improvements.</English>
+		<French>Provenant du latin campus, signifiant "champ". Ainsi, un campement est généralement un lieu plat ou le campeur peut installer une tente, avec éventuellement quelques aménagements pour améliorer son confort.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_CHANGE_REMOVE</Tag>
@@ -156,7 +156,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_CITY_RUINS_PEDIA</Tag>
-		<English>Ruins are the remains of human-made architecture: structures that were once complete, as time went by, have fallen into a state of partial or complete disrepair, due to lack of maintenance or deliberate acts of destruction. Disasters, war and depopulation are the most common root causes, with many structures becoming progressively derelict over time due to long-term weathering and scavenging. Wikipedia</English>
+		<English>Ruins are the remains of human-made architecture: structures that were once complete, as time went by, have fallen into a state of partial or complete disrepair, due to lack of maintenance or deliberate acts of destruction. Disasters, war and depopulation are the most common root causes, with many structures becoming progressively derelict over time due to long-term weathering and scavenging.</English>
 		<Polish>Ruina lub ruiny (z łac. ruere - przewracać się) - widoczne pozostałości zniszczonego, lecz niecałkowicie rozebranego obiektu budowlanego. Ruiny powstają na skutek opuszczenia przez użytkowników budowli lub budynków, których dalsze użytkowanie nie jest możliwe lub opłacalne. Proces przekształcania obiektu w ruinę może być również zainicjowany przez zniszczenia wojenne czy katastrofy naturalne. Dalsze niszczenie następuje np. poprzez wpływ warunków atmosferycznych lub pozyskiwanie elementów budowlanych z opuszczonego obiektu (kamień, złom stalowy itp.).</Polish>
 	</TEXT>
 	<TEXT>
@@ -261,7 +261,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_COTTAGE_PEDIA</Tag>
-		<English>In modern usage, a cottage is usually a modest, often cozy dwelling, typically in a rural or semi-rural location. However there are cottage-style dwellings in cities, and in places such as Canada the term exists with no connotations of size at all (cf. vicarage or hermitage). In the United Kingdom the term cottage also tends to denote rural dwellings of traditional build, although it can also be applied to dwellings of modern construction which are designed to resemble traditional ones ("mock cottages") Wikipedia</English>
+		<English>In modern usage, a cottage is usually a modest, often cozy dwelling, typically in a rural or semi-rural location. However there are cottage-style dwellings in cities, and in places such as Canada the term exists with no connotations of size at all (cf. vicarage or hermitage). In the United Kingdom the term cottage also tends to denote rural dwellings of traditional build, although it can also be applied to dwellings of modern construction which are designed to resemble traditional ones ("mock cottages").</English>
 		<Polish>Chaty często składały się z trzech izb: środkowej - sieni i dwóch bocznych - czarnej i białej. Izba czarna była głównym pomieszczeniem, stał w niej piec. Pełniła rolę kuchni a czasem sypialni. Izba biała była pomieszczeniem bardziej reprezentacyjnym. Służyła tylko celom mieszkaniowym. Obok białej izby budowano często dodatkowe pomieszczenie - komorę, służącą jako magazyn. Jeszcze innym pomieszczeniem był służący jako sypialnia alkierz.</Polish>
 	</TEXT>
 	<TEXT>
@@ -397,7 +397,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_FARM_PEDIA</Tag>
-		<English>A farm is an area of land, including various structures, devoted primarily to the practice of producing and managing food (produce, grains, or livestock), fibres and, increasingly, fuel. It is the basic production facility in food production. Farms may be owned and operated by a single individual, family, community, corporation or a company. A farm can be a holding of any size from a fraction of a hectare to several thousand hectares. Wikipedia</English>
+		<English>A farm is an area of land, including various structures, devoted primarily to the practice of producing and managing food (produce, grains, or livestock), fibres and, increasingly, fuel. It is the basic production facility in food production. Farms may be owned and operated by a single individual, family, community, corporation or a company. A farm can be a holding of any size from a fraction of a hectare to several thousand hectares.</English>
 		<Polish>Farma - zazwyczaj duże gospodarstwo rolne, zmechanizowane i specjalizujące się w uprawie wybranych roślin lub hodowli wybranych zwierząt. Z reguły zatrudnia najemną siłę roboczą.</Polish>
 	</TEXT>
 	<TEXT>
@@ -449,7 +449,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_FISHING_BOATS_PEDIA</Tag>
-		<English>A fishing vessel is a boat or ship used to catch fish in the sea, or on a lake or river. Many different kinds of vessels are used in commercial, artisanal and recreational fishing. Wikipedia</English>
+		<English>A fishing vessel is a boat or ship used to catch fish in the sea, or on a lake or river. Many different kinds of vessels are used in commercial, artisanal and recreational fishing.</English>
 		<Polish>Kuter rybacki - najmniejsza jednostka połowowa, która służy rybakom do połowu ryb w systemie zbliżonym do połowu trawlerami.</Polish>
 	</TEXT>
 	<TEXT>
@@ -475,7 +475,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_FOREST_PRESERVE_PEDIA</Tag>
-		<English>A nature reserve (natural reserve, nature preserve, natural preserve) is a protected area of importance for wildlife, flora, fauna or features of geological or other special interest, which is reserved and managed for conservation and to provide special opportunities for study or research. Nature reserves may be designated by government institutions in some countries, or by private landowners, such as charities and research institutions, regardless of nationality. Nature reserves fall into different IUCN categories depending on the level of protection afforded by local laws. Wikipedia</English>
+		<English>A nature reserve (natural reserve, nature preserve, natural preserve) is a protected area of importance for wildlife, flora, fauna or features of geological or other special interest, which is reserved and managed for conservation and to provide special opportunities for study or research. Nature reserves may be designated by government institutions in some countries, or by private landowners, such as charities and research institutions, regardless of nationality. Nature reserves fall into different IUCN categories depending on the level of protection afforded by local laws.</English>
 		<Polish>Rezerwat przyrody - obszarowa forma ochrony przyrody w Polsce. Podobne pod względem funkcji tereny chronione powoływane są też w wielu innych krajach na świecie.</Polish>
 	</TEXT>
 	<TEXT>
@@ -505,7 +505,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_FORT_PEDIA</Tag>
-		<English>Fortifications are military constructions and buildings designed for defence in warfare and military bases. Humans have constructed defensive works for many thousands of years, in a variety of increasingly complex designs. The term is derived from the Latin fortis ("strong") and facere ("to make"). Wikipedia</English>
+		<English>Fortifications are military constructions and buildings designed for defence in warfare and military bases. Humans have constructed defensive works for many thousands of years, in a variety of increasingly complex designs. The term is derived from the Latin fortis ("strong") and facere ("to make").</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_FORTIFIED_CAVE</Tag>
@@ -873,7 +873,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_HAMLET_PEDIA</Tag>
-		<English>A hamlet is usually a rural settlement which is too small to be considered a village, though sometimes the word is used for a different sort of community. The name comes from Anglo-Norman hamelet (t)e; Old French hamelet, the diminutive of Old French hamel. Another diminutive of Old French ham is possibly a cognate with similar words of Germanic origin. Compare with Dutch heem, German Heim, Swiss German cham or -kon, Old English ham and Modern English home, all derived from the Proto-Germanic *kham-. Historically, when a hamlet became large enough to justify building a church, it was then classified as a village. One example of a hamlet is a small cluster of houses surrounding a mill. Wikipedia</English>
+		<English>A hamlet is usually a rural settlement which is too small to be considered a village, though sometimes the word is used for a different sort of community. The name comes from Anglo-Norman hamelet (t)e; Old French hamelet, the diminutive of Old French hamel. Another diminutive of Old French ham is possibly a cognate with similar words of Germanic origin. Compare with Dutch heem, German Heim, Swiss German cham or -kon, Old English ham and Modern English home, all derived from the Proto-Germanic *kham-. Historically, when a hamlet became large enough to justify building a church, it was then classified as a village. One example of a hamlet is a small cluster of houses surrounding a mill.</English>
 		<Polish>Według definicji etnologicznych osada jest miejscem dłuższego pobytu grupy ludzi wraz z szeregiem urządzeń wykonanych przez nich dla zapewnienia sobie warunków niezbędnych do prowadzenia przyjętego przez tę grupę ludzką trybu i poziomu życia.</Polish>
 	</TEXT>
 	<TEXT>
@@ -1051,7 +1051,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Tag>
-		<English>Land may refer to: The part of the Earth that is not covered by water Terrestrial ecoregion, an ecoregion based on soil instead of water. Wikipedia</English>
+		<English>Land may refer to: The part of the Earth that is not covered by water Terrestrial ecoregion, an ecoregion based on soil instead of water.</English>
 		<Polish>Teren - każdy dowolnie określony fragment powierzchni lądowej. Termin spełniający taką samą funkcję jak akwen w odniesieniu do powierzchni wodnej.</Polish>
 	</TEXT>
 	<TEXT>
@@ -1090,8 +1090,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_PEDIA</Tag>
-		<English>Can only be built on Reefs and Coral[PARAGRAPH:2]Before the development of clearly defined ports mariners were guided by fires built on hilltops. Since raising the fire would improve the visibility, placing the fire on a platform became a practice that led to the development of the lighthouse. In antiquity, the lighthouse functioned more as an entrance marker to ports than as a warning signal for reefs and promontories, unlike many modern lighthouses. (Source: Wikipedia)</English>
-		<Italian>Può essere costruito solo su scogli e coralli[PARAGRAPH:2]Prima dello sviluppo di porti chiaramente definiti, i marinai erano guidati da fuochi accesi in cima alle colline. Dato che alzare il fuoco migliorava la visibilità, posizionare il fuoco su una piattaforma divenne una pratica che portò allo sviluppo del faro. Nell'antichità, il faro funzionava più come segnale d'entrata ai porti piuttosto che segnale per scogli e promontori, a differenza della maggior parte dei fari moderni. (Source: Wikipedia)</Italian>
+		<English>Can only be built on Reefs and Coral. Before the development of clearly defined ports mariners were guided by fires built on hilltops. Since raising the fire would improve the visibility, placing the fire on a platform became a practice that led to the development of the lighthouse. In antiquity, the lighthouse functioned more as an entrance marker to ports than as a warning signal for reefs and promontories, unlike many modern lighthouses.</English>
+		<Italian>Può essere costruito solo su scogli e coralli. Prima dello sviluppo di porti chiaramente definiti, i marinai erano guidati da fuochi accesi in cima alle colline. Dato che alzare il fuoco migliorava la visibilità, posizionare il fuoco su una piattaforma divenne una pratica che portò allo sviluppo del faro. Nell'antichità, il faro funzionava più come segnale d'entrata ai porti piuttosto che segnale per scogli e promontori, a differenza della maggior parte dei fari moderni.</Italian>
 		<Polish>Latarnia morska - znak nawigacyjny w postaci charakterystycznej wieży umieszczonej na brzegu lub w wodzie (latarniowiec). Wbrew nazwie może występować również na brzegu odpowiednio dużego zbiornika śródlądowego (jeziora), na którym prowadzona jest żegluga.</Polish>
 	</TEXT>
 	<TEXT>
@@ -1142,7 +1142,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LUMBERMILL_PEDIA</Tag>
-		<English>A sawmill is a facility where logs are cut into boards. Wikipedia</English>
+		<English>A sawmill is a facility where logs are cut into boards.</English>
 		<Polish>Tartak - zakład, w którym dokonuje się przerobu drewna okrągłego na tarcicę w procesie technologicznym tarcia (inaczej: przecierania), czyli rozpiłowywania za pomocą urządzenia zwanego trakiem. Tarcicę przerabia się na elementy drewniane określonego przeznaczenia (łaty giętarskie, części meblarskie, stolarkę budowlaną, a także fryzy posadzkowe).</Polish>
 	</TEXT>
 	<TEXT>
@@ -1205,7 +1205,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_MINE_PEDIA</Tag>
-		<English>Mine or mines can refer to: Mining, extraction of mineral resources from the ground. Wikipedia</English>
+		<English>Mine or mines can refer to: Mining, extraction of mineral resources from the ground.</English>
 		<Polish>Kopalnia - zakład i przedsiębiorstwo górnicze zajmujące się wydobyciem (eksploatacją) z ziemi kopalin użytecznych.</Polish>
 	</TEXT>
 	<TEXT>
@@ -1400,7 +1400,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_OFFSHORE_PLATFORM_PEDIA</Tag>
-		<English>An offshore platform, also referred to as an oil platform or oil rig, is a large structure with facilities to drill wells and extract and process oil and natural gas and export the products to shore. Wikipedia</English>
+		<English>An offshore platform, also referred to as an oil platform or oil rig, is a large structure with facilities to drill wells and extract and process oil and natural gas and export the products to shore.</English>
 		<Polish>Platforma wiertnicza - najczęściej konstrukcja pływająca wyposażona w urządzenie wiertnicze, przeznaczona do wykonywania odwiertów pod dnem akwenu. Sporadycznie bywają wykorzystywane do eksploatacji podmorskich złóż węglowodorów (gaz ziemny, ropa naftowa) - w odróżnieniu od platform wydobywczych.</Polish>
 	</TEXT>
 	<TEXT>
@@ -1455,7 +1455,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_PASTURE_PEDIA</Tag>
-		<English>Pasture is land with vegetation cover used for grazing of livestock as part of a farm, or in ranching or other unenclosed pastoral systems or used by wild animals for grazing or browsing. Prior to the advent of factory farming, pasture was the primary source of food for grazing animals such as cattle and horses. It is still used extensively, particularly in arid regions where pasture land is unsuitable for any other agricultural production. In more humid regions, pasture grazing is exploited extensively for free range and organic farming. Wikipedia</English>
+		<English>Pasture is land with vegetation cover used for grazing of livestock as part of a farm, or in ranching or other unenclosed pastoral systems or used by wild animals for grazing or browsing. Prior to the advent of factory farming, pasture was the primary source of food for grazing animals such as cattle and horses. It is still used extensively, particularly in arid regions where pasture land is unsuitable for any other agricultural production. In more humid regions, pasture grazing is exploited extensively for free range and organic farming.</English>
 		<Polish>Pastwisko - rodzaj użytków zielonych porośniętych głównie wieloletnimi trawami, których wegetacja trwa niezależnie od tego, czy są to tereny uprawowe, czy też nieużytki. Zwykle od wiosny do jesieni na pastwiskach wypasa się zwierzęta hodowlane, takie jak bydło domowe, owce czy też kozy. Pastwiska uprawowe powstają najczęściej w trzecim roku tzw. płodozmianu, a ich okres eksploatowania wynosi najczęściej kilka lat (3-5). Corocznie wymagają pewnych zabiegów rolniczych jak włókowanie, bronowanie i nawożenie. Włókowanie i bronowanie ma na celu pobudzenie systemu korzennego traw, ale również zniwelowanie kretowisk i usunięcie tzw. "niedojadów". Użytkowe pastwiska są najczęściej ogrodzone i umożliwiają dowóz wody dla zwierząt. Pastwiska-nieużytki najczęściej są eksploatowane przez hodowców owiec i kóz, ze względu na ich skromniejsze wymagania żywieniowe. Nie oznacza to jednak, że tego typu pastwiska nie wymagają pewnych zabiegów pratotechnicznych. Często stosuje się ogrodzenia np. płot elektryczny, w celu uniemożliwienia zwierzętom przekroczenia granicy pastwiska.</Polish>
 	</TEXT>
 	<TEXT>
@@ -1475,7 +1475,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_PEAT_CUTTER_PEDIA</Tag>
-		<English>Peat is harvested as an important source of fuel in certain parts of the world. By volume, there are about 4 trillion cubic meters of peat in the world covering a total of around 2% of global land area (about 3 million square kms), containing about 8 billion terajoules of energy.[PARAGRAPH:2]Source: Wikipedia</English>
+		<English>Peat is harvested as an important source of fuel in certain parts of the world. By volume, there are about 4 trillion cubic meters of peat in the world covering a total of around 2% of global land area (about 3 million square kms), containing about 8 billion terajoules of energy.</English>
 		<Polish>Torf - skała osadowa powstała w wyniku zachodzących w szczególnych warunkach przemian obumarłych szczątków roślinnych, najmłodszy węgiel kopalny. Zawiera mniej niż 60% węgla. Torf jest utworem będącym efektem niepełnego rozkładu szczątków roślinnych, zachodzącego w warunkach długotrwałego lub stałego zabagnienia wierzchniej warstwy gleby. Torf składa się z nierozłożonych szczątków roślin oraz amorficznej masy humusu. Torf jest w różnym stopniu nasycony substancjami mineralnymi. Najczęściej jest to piasek, czasami wytrącone związki żelaza, rzadko związki fosforu.</Polish>
 	</TEXT>
 	<TEXT>
@@ -1553,7 +1553,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_PLANTATION_PEDIA</Tag>
-		<English>A plantation is a large artificially established forest, farm or estate, where crops are grown for sale, often in distant markets rather than for local on-site consumption. The term plantation is informal and not precisely defined. Wikipedia</English>
+		<English>A plantation is a large artificially established forest, farm or estate, where crops are grown for sale, often in distant markets rather than for local on-site consumption. The term plantation is informal and not precisely defined.</English>
 		<Polish>Plantacja - duży teren przeznaczony pod uprawę jednej rośliny (monokultura).</Polish>
 	</TEXT>
 	<TEXT>
@@ -1605,7 +1605,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_QUARRY_PEDIA</Tag>
-		<English>A quarry is a type of open-pit mine from which rock or minerals are extracted. Quarries are generally used for extracting building materials, such as dimension stone, construction aggregate, riprap, sand, and gravel. They are often colocated with concrete and asphalt plants due to the requirement for large amounts of aggregate in those materials. The word quarry can include underground quarrying for stone, such as Bath stone. Wikipedia</English>
+		<English>A quarry is a type of open-pit mine from which rock or minerals are extracted. Quarries are generally used for extracting building materials, such as dimension stone, construction aggregate, riprap, sand, and gravel. They are often colocated with concrete and asphalt plants due to the requirement for large amounts of aggregate in those materials. The word quarry can include underground quarrying for stone, such as Bath stone.</English>
 		<Polish>Kamieniołom - kopalnia odkrywkowa kamienia użytkowego (skały zwięzłej o dużej twardości). Kamieniołomów nie należy mylić z kopalniami odkrywkowymi wydobywającymi skały sypkie (piaskownie, żwirownie). Nie są nimi także odkrywkowe zakłady górnicze eksploatujące skały zwięzłe o stosunkowo małej twardości (węgiel brunatny, glinka ogniotrwała), czyli takie, które można urabiać za pomocą koparek. W Polsce w kamieniołomach wydobywa się głównie: granit, bazalt, wapień, piaskowiec, marmur, melafir, sjenit.</Polish>
 	</TEXT>
 	<TEXT>
@@ -1966,7 +1966,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SUBURBS_PEDIA</Tag>
-		<English>A suburb is a residential area or a mixed use area, either existing as part of a city or urban area, or as a separate residential community within commuting distance of a city. Wikipedia</English>
+		<English>A suburb is a residential area or a mixed use area, either existing as part of a city or urban area, or as a separate residential community within commuting distance of a city.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_TAR_GATHERER</Tag>
@@ -2004,7 +2004,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_THATCH_CUTTER_PEDIA</Tag>
-		<English>Thatching is the craft of building a roof with dry vegetation such as straw, water reed, sedge (Cladium mariscus), rushes, or heather, layering the vegetation so as to shed water away from the inner roof. It is a very old roofing method and has been used in both tropical and temperate climates. Thatch is still employed by builders in developing countries, usually with low-cost, local vegetation. By contrast in some developed countries it is now the choice of affluent people who desire a rustic look for their home, would like a more ecologically friendly roof, or who have purchased an originally thatched abode.[PARAGRAPH:2]Source: Wikipedia</English>
+		<English>Thatching is the craft of building a roof with dry vegetation such as straw, water reed, sedge (Cladium mariscus), rushes, or heather, layering the vegetation so as to shed water away from the inner roof. It is a very old roofing method and has been used in both tropical and temperate climates. Thatch is still employed by builders in developing countries, usually with low-cost, local vegetation. By contrast in some developed countries it is now the choice of affluent people who desire a rustic look for their home, would like a more ecologically friendly roof, or who have purchased an originally thatched abode.</English>
 		<Polish>Strzecha - pokrycie dachowe ze słomy lub trzciny wykonywane na dachach o dużym spadku. Obecnie przeżywa renesans w budownictwie regionalnym (zajazdy) jak i w budownictwie mieszkalnym. Grubość strzechy na budynkach mieszkalnych to ok. 35 cm. Oryginalne dachy kryte strzechą można spotkać m.in. na Pogórzu Karpackim, Mazowszu, Polesiu, Kaszubach i w Zachodniopomorskim. Strzechę dawniej wykonywano ze słomy żytniej. Słoma musiała być skoszona wcześnie - kiedy była jeszcze zielona - nie nadawała się stara, przestała i krótka. Strzecharz oczyszczał materiał przez wytrząsanie. Robił to chwytając słomę za kłosy i mocno potrząsając. Wtedy trawa, chwasty i krótkie źdźbła wypadały. Słoma żytnia musiała być dokładnie wymłócona, w przeciwnym wypadku pozostałe w słomie ziarna mogły kiełkować jak i zwabić myszy, które mogły uszkodzić strzechę. Następnym zabiegiem było kręcenie, w specjalnych skrzynkach, głowaczy zwanych też kiczkami (podwójnych skręconych snopów). Rzemieślnik brał dwa snopy, układał je jeden na drugim w skrzyni, wiązał powrósło. Następnie dwa snopy związywał powrósłem tuż pod kłosami, wsadzał kijek między snopki i obracał jeden snopek wokół drugiego o 360 stopni. Taki wykręcak następnie kładło się na dach i przywiązywało do łat. Słomę układało się od dołu warstwowo w taki sposób, aby następna warstwa zakrywała przewiąsła poprzedniej. Na koniec na kalenicy układało się drewniane kozły i przybijało się kolki w poprzek dachu dla ochrony przed wiatrem.</Polish>
 	</TEXT>
 	<TEXT>
@@ -2046,7 +2046,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_TOWN_PEDIA</Tag>
-		<English>A town is a human settlement larger than a village but smaller than a city. The size a settlement must be in order to be called a "town" varies considerably in different parts of the world, so that, for example, many American "small towns" seem to British people to be no more than villages, while many British "small towns" would qualify as cities in the United States. Wikipedia</English>
+		<English>A town is a human settlement larger than a village but smaller than a city. The size a settlement must be in order to be called a "town" varies considerably in different parts of the world, so that, for example, many American "small towns" seem to British people to be no more than villages, while many British "small towns" would qualify as cities in the United States.</English>
 		<Polish>Miasteczko (łac. oppidum, niem. Stadtlein, Stadtchen, Markt, Flecken, jid. sztetl) - prawno-administracyjna jednostka osadnicza o charakterze przejściowym między miastem a wsią, z charakterystycznym handlowo-przemysłowym (dawniej rzemieślniczym) wyodrębnieniem specjalności i analogiczną morfologią oraz infrastrukturą co (małe) miasto.</Polish>
 	</TEXT>
 	<TEXT>
@@ -2154,7 +2154,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_VILLAGE_PEDIA</Tag>
-		<English>A village is a clustered human settlement or community, larger than a hamlet with the population ranging from a few hundred to a few thousands (sometimes tens of thousands), Though often located in rural areas, the term urban village is also applied to certain urban neighbourhoods, such as the West Village in Manhattan, New York City and the Saifi Village in Beirut, Lebanon, as well as Hampstead Village in the London conurbation. Villages are normally permanent, with fixed dwellings; however, transient villages can occur. Further, the dwellings of a village are fairly close to one another, not scattered broadly over the landscape, as a dispersed settlement. Wikipedia</English>
+		<English>A village is a clustered human settlement or community, larger than a hamlet with the population ranging from a few hundred to a few thousands (sometimes tens of thousands), Though often located in rural areas, the term urban village is also applied to certain urban neighbourhoods, such as the West Village in Manhattan, New York City and the Saifi Village in Beirut, Lebanon, as well as Hampstead Village in the London conurbation. Villages are normally permanent, with fixed dwellings; however, transient villages can occur. Further, the dwellings of a village are fairly close to one another, not scattered broadly over the landscape, as a dispersed settlement.</English>
 		<Polish>Wieś (łac. pagus, rus) - jednostka osadnicza o zwartej, skupionej lub rozproszonej zabudowie i istniejących funkcjach rolniczych lub związanych z nimi usługowych lub turystycznych, nieposiadająca praw miejskich lub statusumiasta (art. 2 ustawy z 29 sierpnia 2003 o urzędowych nazwach miejscowości i obiektów fizjograficznych).</Polish>
 	</TEXT>
 	<TEXT>
@@ -2189,7 +2189,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_WATER_WORKED_PEDIA</Tag>
-		<English>Water is a chemical substance with the chemical formula H2O. Its molecule contains one oxygen and two hydrogen atoms connected by covalent bonds. Water is a liquid at ambient conditions, but it often co-exists on Earth with its solid state, ice, and gaseous state (water vapor or steam). Water also exists in a liquid crystal state near hydrophilic surfaces. Wikipedia</English>
+		<English>Water is a chemical substance with the chemical formula H2O. Its molecule contains one oxygen and two hydrogen atoms connected by covalent bonds. Water is a liquid at ambient conditions, but it often co-exists on Earth with its solid state, ice, and gaseous state (water vapor or steam). Water also exists in a liquid crystal state near hydrophilic surfaces.</English>
 		<Polish>Irygacja (nawadnianie, system irygacyjny) - jeden z systemów melioracji polegający na dostarczaniu wody do gleby w celu zapewnienia odpowiednich warunków wegetacji roślin uprawnych. Stosowana od starożytności (starożytny Egipt, Mezopotamia, starożytny Iran, Indie, Sri Lanka, Chiny, Peru). Wielowiekowy rozwój rolnictwa nawadnianego doprowadził do wykształcenia się odmiennych systemów nawadniania. Różnią się one od siebie czynnościami nieznanymi innym systemom rolnictwa: sposobami poboru wód i ich doprowadzenia na miejsce przeznaczenia (na pole uprawne), sposobami rozprowadzania wód po polu, sposobami podnoszenia wód (gdy ich poziom jest niższy niż poziom pola, wyrównywaniem lub niwelacją poziomu pól, jeśli są one nierówne oraz ewentualnie sposobem odprowadzenia nadmiaru wód).</Polish>
 	</TEXT>
 	<TEXT>
@@ -2215,7 +2215,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_WATERMILL_PEDIA</Tag>
-		<English>A watermill is a structure that uses a water wheel or turbine to drive a mechanical process such as flour, lumber or textile production, or metal shaping (rolling, grinding or wire drawing). Wikipedia</English>
+		<English>A watermill is a structure that uses a water wheel or turbine to drive a mechanical process such as flour, lumber or textile production, or metal shaping (rolling, grinding or wire drawing).</English>
 		<Polish>Młyn wodny - budowla z urządzeniem do przemiału ziarna na mąkę i kaszę, poruszanym za pomocą koła wodnego lub turbiny wodnej, usytuowana nad rzekami. Bardzo rzadko budowane były młyny pływające</Polish>
 	</TEXT>
 	<TEXT>
@@ -2241,7 +2241,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_HYDROCARBON_WELL_PEDIA</Tag>
-		<English>An oil well is a general term for any boring through the earth's surface that is designed to find and acquire petroleum oil hydrocarbons. Usually some natural gas is produced along with the oil. A well that is designed to produce mainly or only gas may be termed a gas well. Wikipedia</English>
+		<English>An oil well is a general term for any boring through the earth's surface that is designed to find and acquire petroleum oil hydrocarbons. Usually some natural gas is produced along with the oil. A well that is designed to produce mainly or only gas may be termed a gas well.</English>
 		<Polish>Szyb naftowy - otwór wiertniczy (odwiert) wykonany w górotworze oraz zespół urządzeń zlokalizowanych w pobliżu otworu służących do wydobywania ropy naftowej otworem. W przeszłości szyby naftowe wykonywane były ręcznie.</Polish>
 	</TEXT>
 	<TEXT>
@@ -2327,7 +2327,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_WINDMILL_PEDIA</Tag>
-		<English>A windmill is a machine which converts the energy of wind into rotational motion by means of adjustable vanes called sails or blades. The main use was originally for a grinding mill powered by the wind, reducing a solid or coarse substance into pulp or minute grains, by crushing, grinding, or pressing. Windmills have also been used to power sawmills and other industrial processes and as windpumps for obtaining fresh water from underground or for drainage of land. Wikipedia</English>
+		<English>A windmill is a machine which converts the energy of wind into rotational motion by means of adjustable vanes called sails or blades. The main use was originally for a grinding mill powered by the wind, reducing a solid or coarse substance into pulp or minute grains, by crushing, grinding, or pressing. Windmills have also been used to power sawmills and other industrial processes and as windpumps for obtaining fresh water from underground or for drainage of land.</English>
 		<Polish>Wiatrak - budowla drewniana, niekiedy murowana, wyposażona w skrzydła poruszane siłą wiatru i napędzające urządzenia. Jest najstarszym silnikiem wiatrowym - przetwarza energię wiatru na energię kinetyczną wruchu obrotowym. Jest poprzednikiem turbiny wiatrowej, którą czasami również nazywa się wiatrakiem.</Polish>
 	</TEXT>
 	<TEXT>
@@ -2357,7 +2357,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_WINERY_PEDIA</Tag>
-		<English>A winery is a building or property that produces wine, or a business involved in the production of wine, such as a wine company. Some wine companies own many wineries. Besides wine making equipment, larger wineries may also feature warehouses, bottling lines, laboratories, and large expanses of tanks known as tank farms. The oldest winery in the world found to date is a 6,000 year old winery in the Areni region of Armenia, which is still a wine making region today Wikipedia</English>
+		<English>A winery is a building or property that produces wine, or a business involved in the production of wine, such as a wine company. Some wine companies own many wineries. Besides wine making equipment, larger wineries may also feature warehouses, bottling lines, laboratories, and large expanses of tanks known as tank farms. The oldest winery in the world found to date is a 6,000 year old winery in the Areni region of Armenia, which is still a wine making region today.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_WOOD_GATHERER</Tag>
@@ -2415,7 +2415,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_WORKSHOP_PEDIA</Tag>
-		<English>A workshop is a room or building which provides both the area and tools (or machinery) that may be required for the manufacture or repair of manufactured goods. Apart from the larger factories, workshops were the only places of production in the days before industrialisation. Wikipedia</English>
+		<English>A workshop is a room or building which provides both the area and tools (or machinery) that may be required for the manufacture or repair of manufactured goods. Apart from the larger factories, workshops were the only places of production in the days before industrialisation.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_GROW_FOREST</Tag>
