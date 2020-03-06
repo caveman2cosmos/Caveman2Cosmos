@@ -7788,7 +7788,7 @@ def doMajorFire(argsList):
 		for j in xrange(GC.getNumBuildingInfos()):
 			if CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1: continue
 			CvBuilding = GC.getBuildingInfo(j)
-			if CvBuilding.getProductionCost() > 0 and not CvBuilding.isAutoBuild() and not isLimitedWonder(j)):
+			if CvBuilding.getProductionCost() > 0 and not CvBuilding.isAutoBuild() and not isLimitedWonder(j):
 
 				for k in xrange(GC.getNumBuildingInfos()):
 					if CyCity.getNumRealBuilding(k) > 0 and CvBuilding.isReplaceBuilding(k):
