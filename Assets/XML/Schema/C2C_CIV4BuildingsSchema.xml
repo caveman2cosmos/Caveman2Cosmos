@@ -329,7 +329,6 @@
 	</ElementType>
 <!-- XMLCOPY				END					MRGENIE		-->
 	<ElementType name="iMaxGlobalInstances" content="textOnly" dt:type="int"/>
-	<ElementType name="iMaxTeamInstances" content="textOnly" dt:type="int"/>
 	<ElementType name="iMaxPlayerInstances" content="textOnly" dt:type="int"/>
 	<ElementType name="iExtraPlayerInstances" content="textOnly" dt:type="int"/>
 	<ElementType name="bNoLimit" content="textOnly" dt:type="boolean"/>
@@ -777,6 +776,9 @@
 	<ElementType name="BuildingInfo" content="eltOnly">
 		<element type="Type"/>
 		<element type="bNoLimit" minOccurs="0"/>
+		<element type="iMaxGlobalInstances" minOccurs="0"/>
+		<element type="iMaxPlayerInstances" minOccurs="0"/>
+		<element type="iExtraPlayerInstances" minOccurs="0"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
