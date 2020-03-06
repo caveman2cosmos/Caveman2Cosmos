@@ -20,11 +20,13 @@ def init():
 	paths += glob.glob(os.path.join(verifyModDir(SP.modDir), "Assets", "Python", "Matt", "xml", "**", "*.xml"))
 	paths += glob.glob(os.path.join(verifyModDir(SP.modDir), "Assets", "Python", "Matt", "xml", "**", "**", "*.xml"))
 	paths += glob.glob(os.path.join(verifyModDir(SP.modDir), "Assets", "Python", "Matt", "xml", "**", "**", "**", "*.xml"))
+
+	cachedInfo = buildCache()
 	for path in paths:
 		if os.path.isfile(path):
 			if RemoveTag:
 				writeFile(removeTags(readFile(path)), open(path, "w"))
-			writeFile(moveTags(readFile(path), buildCache()), open(path, "w"))
+			writeFile(moveTags(readFile(path), cachedInfo), open(path, "w"))
 
 
 def writeFile(lines, file):
@@ -48,32 +50,32 @@ def buildCache():
 		j = info.getMaxGlobalInstances()
 		if j > 0:
 			line = "			<iMaxGlobalInstances>%d</iMaxGlobalInstances>\n" %j
-			maxGlobal.append(MoveTag(GC.getBuildingInfo(info.getDefaultBuildingIndex()).getType(), j))
+			maxGlobal.append(MoveTag(GC.getBuildingInfo(info.getDefaultBuildingIndex()).getType(), j, line))
 
 		j = info.getMaxTeamInstances()
 		if j > 0:
 			line = "			<iMaxTeamInstances>%d</iMaxTeamInstances>\n" %j
-			maxTeam.append(MoveTag(GC.getBuildingInfo(info.getDefaultBuildingIndex()).getType(), j))
+			maxTeam.append(MoveTag(GC.getBuildingInfo(info.getDefaultBuildingIndex()).getType(), j, line))
 
 		j = info.getMaxPlayerInstances()
 		if j > 0:
 			line = "			<iMaxPlayerInstances>%d</iMaxPlayerInstances>\n" %j
-			maxPlayer.append(MoveTag(GC.getBuildingInfo(info.getDefaultBuildingIndex()).getType(), j))
+			maxPlayer.append(MoveTag(GC.getBuildingInfo(info.getDefaultBuildingIndex()).getType(), j, line))
 
 		j = info.getExtraPlayerInstances()
 		if j > 0:
 			line = "			<iExtraPlayerInstances>%d</iExtraPlayerInstances>\n" %j
-			extraPlayer.append(MoveTag(GC.getBuildingInfo(info.getDefaultBuildingIndex()).getType(), j))
+			extraPlayer.append(MoveTag(GC.getBuildingInfo(info.getDefaultBuildingIndex()).getType(), j, line))
 
 		j = info.isNoLimit()
 		if j > 0:
 			line = "			<bNoLimit>%d</bNoLimit>\n" %j
-			noLimit.append(MoveTag(GC.getBuildingInfo(info.getDefaultBuildingIndex()).getType(), j))
+			noLimit.append(MoveTag(GC.getBuildingInfo(info.getDefaultBuildingIndex()).getType(), j, line))
 
 		j = info.isMonument()
 		if j > 0:
 			line = "			<bMonument>%d</bMonument>\n" %j
-			monument.append(MoveTag(GC.getBuildingInfo(info.getDefaultBuildingIndex()).getType(), j))
+			monument.append(MoveTag(GC.getBuildingInfo(info.getDefaultBuildingIndex()).getType(), j, line))
 
 	return (maxGlobal, maxTeam, maxPlayer, extraPlayer, noLimit, monument)
 
