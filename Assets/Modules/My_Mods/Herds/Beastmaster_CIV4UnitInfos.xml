@@ -122,7 +122,9 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_HORSE_BREEDER</BuildingType>
 			</Buildings>
-			<PrereqBuilding>BUILDING_HORSE_MYTH_EFFECT</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_HORSE_MYTH_EFFECT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HORSE_BREEDER</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -221,7 +223,9 @@
 				<BuildingType>BUILDING_POLICE_DOG</BuildingType>
 				<BuildingType>BUILDING_WOLF_CAGE</BuildingType>
 			</Buildings>
-			<PrereqBuilding>BUILDING_DOG_KENNEL</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_DOG_KENNEL</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_WOLF_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_ARCTICFOX_MYTH_EFFECT</BuildingType>

@@ -438,16 +438,9 @@ int getTechScore(TechTypes eTech)
 	return (GC.getTechInfo(eTech).getEra() + 1);
 }
 
-int getWonderScore(BuildingClassTypes eWonderClass)
+int getWonderScore(BuildingTypes eWonder)
 {
-	if (isLimitedWonderClass(eWonderClass))
-	{
-		return 5;
-	}
-	else
-	{
-		return 0;
-	}
+	return isLimitedWonder(eWonder) ? 5 : 0;
 }
 
 ImprovementTypes finalImprovementUpgrade(ImprovementTypes eImprovement, int iCount)
@@ -582,29 +575,25 @@ bool isLimitedUnit(UnitTypes eUnit)
 	return (isWorldUnit(eUnit) || isNationalUnit(eUnit));
 }
 
-bool isWorldWonderClass(BuildingClassTypes eBuildingClass)
+bool isWorldWonder(BuildingTypes building)
 {
-	return (GC.getBuildingClassInfo(eBuildingClass).getMaxGlobalInstances() != -1);
+	return GC.getBuildingInfo(building).getMaxGlobalInstances() != -1;
 }
 
-bool isTeamWonderClass(BuildingClassTypes eBuildingClass)
+bool isTeamWonder(BuildingTypes building)
 {
-	return (GC.getBuildingClassInfo(eBuildingClass).getMaxTeamInstances() != -1);
+	return GC.getBuildingInfo(building).getMaxTeamInstances() != -1;
 }
 
-bool isNationalWonderClass(BuildingClassTypes eBuildingClass)
+bool isNationalWonder(BuildingTypes building)
 {
-	return (GC.getBuildingClassInfo(eBuildingClass).getMaxPlayerInstances() != -1);
+	return GC.getBuildingInfo(building).getMaxPlayerInstances() != -1;
 }
 
-bool isNationalWonderGroupClass(BuildingClassTypes eBuildingClass)
+bool isNationalWonderGroup(BuildingTypes building)
 {
-	const SpecialBuildingTypes eSpecialBuilding = (SpecialBuildingTypes)GC.getBuildingInfo((BuildingTypes)GC.getBuildingClassInfo(eBuildingClass).getDefaultBuildingIndex()).getSpecialBuildingType();
-	if (eSpecialBuilding == NO_SPECIALBUILDING)
-	{
-		return false;
-	}
-	return (GC.getSpecialBuildingInfo(eSpecialBuilding).getMaxPlayerInstances() != -1);
+	const SpecialBuildingTypes eSpecialBuilding = static_cast<SpecialBuildingTypes>(GC.getBuildingInfo(building).getSpecialBuildingType());
+	return eSpecialBuilding != NO_SPECIALBUILDING && GC.getSpecialBuildingInfo(eSpecialBuilding).getMaxPlayerInstances() != -1;
 }
 
 bool isNationalWonderGroupSpecialBuilding(SpecialBuildingTypes eSpecialBuilding)
@@ -612,50 +601,46 @@ bool isNationalWonderGroupSpecialBuilding(SpecialBuildingTypes eSpecialBuilding)
 	return (GC.getSpecialBuildingInfo(eSpecialBuilding).getMaxPlayerInstances() != -1);
 }
 
-bool isLimitedWonderClass(BuildingClassTypes eBuildingClass)
+bool isLimitedWonder(BuildingTypes eBuilding)
 {
-	return (isWorldWonderClass(eBuildingClass) || isTeamWonderClass(eBuildingClass) || isNationalWonderClass(eBuildingClass));
+	return (isWorldWonder(eBuilding) || isTeamWonder(eBuilding) || isNationalWonder(eBuilding));
 }
 
-int limitedWonderClassLimit(BuildingClassTypes eBuildingClass)
+int limitedWonderLimit(BuildingTypes eBuilding)
 {
-	int iMax;
 	int iCount = 0;
 	bool bIsLimited = false;
-	const CvBuildingClassInfo& kBuildingClass = GC.getBuildingClassInfo(eBuildingClass);
+	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 
-	iMax = kBuildingClass.getMaxGlobalInstances();
+	int iMax = kBuilding.getMaxGlobalInstances();
 	if (iMax != -1)
 	{
 		iCount += iMax;
 		bIsLimited = true;
 	}
 
-	iMax = kBuildingClass.getMaxTeamInstances();
+	iMax = kBuilding.getMaxTeamInstances();
 	if (iMax != -1)
 	{
 		iCount += iMax;
 		bIsLimited = true;
 	}
 
-	iMax = kBuildingClass.getMaxPlayerInstances();
+	iMax = kBuilding.getMaxPlayerInstances();
 	if (iMax != -1)
 	{
 		iCount += iMax;
 		bIsLimited = true;
 	}
 
-	if (kBuildingClass.getDefaultBuildingIndex() != NO_BUILDING)
+	const SpecialBuildingTypes eSpecialBuilding = static_cast<SpecialBuildingTypes>(kBuilding.getSpecialBuildingType());
+	if (eSpecialBuilding != NO_SPECIALBUILDING)
 	{
-		const SpecialBuildingTypes eSpecialBuilding = (SpecialBuildingTypes)GC.getBuildingInfo((BuildingTypes)kBuildingClass.getDefaultBuildingIndex()).getSpecialBuildingType();
-		if (eSpecialBuilding != NO_SPECIALBUILDING)
+		iMax = GC.getSpecialBuildingInfo(eSpecialBuilding).getMaxPlayerInstances();
+		if (iMax != -1)
 		{
-			iMax = GC.getSpecialBuildingInfo(eSpecialBuilding).getMaxPlayerInstances();
-			if (iMax != -1)
-			{
-				iCount += iMax;
-				bIsLimited = true;
-			}
+			iCount += iMax;
+			bIsLimited = true;
 		}
 	}
 

@@ -568,14 +568,11 @@ def WorldBuilderHandleCityEditCorporationCB( argsList ):
 def WorldBuilderHandleCorporationCommandsCB( argsList ):
 	worldBuilderScreen.handleCorporationCommandsCB(argsList)
 
-def WorldBuilderHandleCityEditBuildingClassCB( argsList ):
-	worldBuilderScreen.handleCityEditBuildingClassCB(argsList)
+def WorldBuilderHandleCityEditBuildingCB(argsList):
+	worldBuilderScreen.handleCityEditBuildingCB(argsList)
 
 def WorldBuilderHandleCityEditModiferCB( argsList ):
 	worldBuilderScreen.handleCityEditModiferCB(argsList)
-
-def WorldBuilderHandleCityEditModifyBuildingClassCB( argsList ):
-	worldBuilderScreen.handleCityEditModifyBuildingClassCB(argsList)
 
 def WorldBuilderHandleCityEditChooseProductionCB( argsList ):
 	worldBuilderScreen.handleCityEditChooseProductionCB(argsList)

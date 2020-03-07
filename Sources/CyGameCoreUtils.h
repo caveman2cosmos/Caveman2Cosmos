@@ -46,7 +46,7 @@ int cyGetPopulationPower(int iPopulation);
 int cyGetPopulationScore(int iPopulation);
 int cyGetLandPlotsScore(int iPopulation);
 int cyGetTechScore(int /*TechTypes*/ eTech);
-int cyGetWonderScore(int /*BuildingClassTypes*/ eWonderClass);
+int cyGetWonderScore(int /*BuildingTypes*/ eWonder);
 int /*ImprovementTypes*/ cyFinalImprovementUpgrade(int /*ImprovementTypes*/ eImprovement, int iCount);
 
 int cyGetWorldSizeMaxConscript(int /*CivicTypes*/ eCivic);
@@ -59,10 +59,10 @@ bool cyIsTechRequiredForProject(int /*TechTypes*/ eTech, int /*ProjectTypes*/ eP
 bool cyIsWorldUnit(int /*UnitTypes*/ eUnit);
 bool cyIsNationalUnit(int /*UnitTypes*/ eUnit);
 bool cyIsLimitedUnit(int /*UnitTypes*/ eUnit);
-bool cyIsWorldWonderClass(int /*BuildingClassTypes*/ eBuildingClass);
-bool cyIsTeamWonderClass(int /*BuildingClassTypes*/ eBuildingClass);
-bool cyIsNationalWonderClass(int /*BuildingClassTypes*/ eBuildingClass);
-bool cyIsLimitedWonderClass(int /*BuildingClassTypes*/ eBuildingClass);
+bool cyIsWorldWonder(int /*BuildingTypes*/ eBuilding);
+bool cyIsTeamWonder(int /*BuildingTypes*/ eBuilding);
+bool cyIsNationalWonder(int /*BuildingTypes*/ eBuilding);
+bool cyIsLimitedWonder(int /*BuildingTypes*/ eBuilding);
 bool cyIsWorldProject(int /*ProjectTypes*/ eProject);
 bool cyIsTeamProject(int /*ProjectTypes*/ eProject);
 bool cyIsLimitedProject(int /*ProjectTypes*/ eProject);

@@ -575,17 +575,6 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 			m_stream->WriteString(info.getType());
 		}
 		break;
-	case REMAPPED_CLASS_TYPE_BUILDING_CLASSES:
-		entry.numClasses = GC.getNumBuildingClassInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
-		for(int i = 0; i < entry.numClasses; i++)
-		{
-			CvBuildingClassInfo& info = GC.getBuildingClassInfo((BuildingClassTypes)i);
-
-			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
-			m_stream->WriteString(info.getType());
-		}
-		break;
 	case REMAPPED_CLASS_TYPE_UNITS:
 		entry.numClasses = GC.getNumUnitInfos();
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
@@ -1074,7 +1063,6 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTables()
 
 	//	Write out mapping tables for all mappable enum types
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_BUILDINGS);
-	WriteClassMappingTable(REMAPPED_CLASS_TYPE_BUILDING_CLASSES);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_UNITS);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_PROJECTS);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_BONUSES);
@@ -1140,9 +1128,6 @@ CvTaggedSaveFormatWrapper::getNumClassEnumValues(RemappedClassType classType)
 		{
 		case REMAPPED_CLASS_TYPE_BUILDINGS:
 			result = GC.getNumBuildingInfos();
-			break;
-		case REMAPPED_CLASS_TYPE_BUILDING_CLASSES:
-			result = GC.getNumBuildingClassInfos();
 			break;
 		case REMAPPED_CLASS_TYPE_UNITS:
 			result = GC.getNumUnitInfos();

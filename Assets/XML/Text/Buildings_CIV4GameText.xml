@@ -4371,7 +4371,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 		<Polish>[ICON_BULLET]%D1_Mod%% do produkcji budynków</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BUILDS_FASTER_BUILDINGCLASS</Tag>
+		<Tag>TXT_KEY_BUILDING_BUILDS_FASTER_BUILDING</Tag>
 		<English>[ICON_BULLET]Builds %s1 %d2%% Faster</English>
 		<French>[ICON_BULLET]Vitesse de production de "%s1": %d2%%</French>
 		<German>[ICON_BULLET]Errichtet die Einheit %s1 %d2%% schneller</German>
@@ -22918,7 +22918,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Polish>[COLOR_POSITIVE_TEXT]Wymaga doktryny do działania[COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_REQUIRES_ANY_BUILDINGCLASS</Tag>
+		<Tag>TXT_KEY_BUILDING_REQUIRES_ANY_BUILDING</Tag>
 		<English>[COLOR_WARNING_TEXT]Requires Anyone to have constructed %s1[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Requiert la construction de %s1[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]%s1 muss bereits von irgendjemandem gebaut worden sein.[COLOR_REVERT]</German>

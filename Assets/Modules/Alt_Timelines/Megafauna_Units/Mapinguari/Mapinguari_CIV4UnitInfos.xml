@@ -46,7 +46,9 @@
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<PrereqBuilding>BUILDING_MAPINGUARI_COMPOUND</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_MAPINGUARI_COMPOUND</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
 			<UnitUpgrades>
 				<UnitType>UNIT_MAPINGUARI_STONE</UnitType>
@@ -130,7 +132,9 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<PrereqTech>TECH_SPEAR_MAKING</PrereqTech>
-			<PrereqBuilding>BUILDING_MAPINGUARI_COMPOUND</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_MAPINGUARI_COMPOUND</BuildingType>
+			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_MAPINGUARI_OBSIDIAN</UnitType>
 			</UnitUpgrades>
@@ -212,7 +216,9 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
-			<PrereqBuilding>BUILDING_MAPINGUARI_COMPOUND</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_MAPINGUARI_COMPOUND</BuildingType>
+			</PrereqAndBuildings>
 			<BonusType>BONUS_OBSIDIAN</BonusType>
 			<UnitUpgrades>
 				<UnitType>UNIT_MAPINGUARI</UnitType>
@@ -296,7 +302,9 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
-			<PrereqBuilding>BUILDING_MAPINGUARI_COMPOUND</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_MAPINGUARI_COMPOUND</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqBonuses>
 				<BonusType>BONUS_COPPER_WARES</BonusType>
 				<BonusType>BONUS_BRONZE_WARES</BonusType>
@@ -384,7 +392,9 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
-			<PrereqBuilding>BUILDING_MAPINGUARI_COMPOUND</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_MAPINGUARI_COMPOUND</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqBonuses>
 				<BonusType>BONUS_BRONZE_WARES</BonusType>
 				<BonusType>BONUS_IRON_WARES</BonusType>

@@ -76,7 +76,6 @@ public:
 	CvHandicapInfo* getHandicapInfo(int i) const;
 	CvGameSpeedInfo* getGameSpeedInfo(int i) const;
 	CvTurnTimerInfo* getTurnTimerInfo(int i) const;
-	CvBuildingClassInfo* getBuildingClassInfo(int i) const;
 	CvMissionInfo* getMissionInfo(int i) const;
 	CvCommandInfo* getCommandInfo(int i) const;
 	CvAutomateInfo* getAutomateInfo(int i) const;
@@ -206,7 +205,6 @@ public:
 	int getNumHandicapInfos() const { return GC.getNumHandicapInfos(); }
 	int getNumGameSpeedInfos() const { return GC.getNumGameSpeedInfos(); }
 	int getNumTurnTimerInfos() const { return GC.getNumTurnTimerInfos(); }
-	int getNumBuildingClassInfos() const { return GC.getNumBuildingClassInfos(); }
 	int getNumBuildingInfos() const { return GC.getNumBuildingInfos(); }
 	int getNumUnitCombatInfos() const { return GC.getNumUnitCombatInfos(); }
 	//TB Promotion Line Mod begin

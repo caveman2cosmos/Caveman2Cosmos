@@ -673,8 +673,7 @@ def updateRevolutionIndices( argsList ) :
 				# TODO: support this with a popup question
 				pass
 			else:
-				capitalClass = CvUtil.findInfoTypeNum(GC.getBuildingClassInfo,GC.getNumBuildingClassInfos(),RevDefs.sXMLPalace)
-				eCapitalBuilding = GC.getCivilizationInfo(newOwner.getCivilizationType()).getCivilizationBuildings(capitalClass)
+				eCapitalBuilding = GC.getInfoTypeForString(RevDefs.sXMLPalace)
 				oldCapital = newOwner.getCapitalCity()
 				oldCapital.setNumRealBuilding(eCapitalBuilding, 0)
 				pCity.setNumRealBuilding(eCapitalBuilding, 1)
@@ -742,9 +741,8 @@ def onBuildingBuilt(argsList):
 	pCity, iBuildingType = argsList
 
 	buildingInfo = GC.getBuildingInfo(iBuildingType)
-	buildingClassInfo = GC.getBuildingClassInfo(buildingInfo.getBuildingClassType())
 
-	if( buildingClassInfo.getMaxGlobalInstances() == 1 and buildingInfo.getPrereqReligion() < 0 and buildingInfo.getProductionCost() > 10 ) :
+	if buildingInfo.getMaxGlobalInstances() == 1 and buildingInfo.getPrereqReligion() < 0 and buildingInfo.getProductionCost() > 10:
 		if( LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - World wonder %s build in %s"%(buildingInfo.getDescription(),pCity.getName()))
 		curRevIdx = pCity.getRevolutionIndex()
 		pCity.changeRevolutionIndex( -max([150,int(0.25*curRevIdx)]) )
@@ -757,7 +755,7 @@ def onBuildingBuilt(argsList):
 			revIdxHist['Events'][0] += iRevIdxChange
 			RevData.updateCityVal( pCity, 'RevIdxHistory', revIdxHist )
 
-	elif( buildingClassInfo.getMaxPlayerInstances() == 1 and buildingInfo.getPrereqReligion() < 0 and buildingInfo.getProductionCost() > 10 ) :
+	elif buildingInfo.getMaxPlayerInstances() == 1 and buildingInfo.getPrereqReligion() < 0 and buildingInfo.getProductionCost() > 10:
 		if( LOG_DEBUG ) : CvUtil.pyPrint("  Revolt - National wonder %s build in %s"%(buildingInfo.getDescription(),pCity.getName()))
 		curRevIdx = pCity.getRevolutionIndex()
 		pCity.changeRevolutionIndex( -max([80,int(0.12*curRevIdx)]) )

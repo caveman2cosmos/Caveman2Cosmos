@@ -61,10 +61,10 @@ public:
 	int getDefensivePactCount();
 	bool isAVassal() const;
 
+	int getBuildingMaking(int /*BuildingTypes*/ eBuilding) const;
+	int getBuildingCountPlusMaking(int /*BuildingTypes*/ eBuilding) const;
 	int getUnitMaking(int /*UnitTypes*/ eUnit);
 	int getUnitCountPlusMaking(int /*UnitTypes*/ eUnit);
-	int getBuildingClassMaking(int /*BuildingClassTypes*/ eBuildingClass);
-	int getBuildingClassCountPlusMaking(int /*BuildingClassTypes*/ eBuildingClass);
 	int getHasReligionCount(int /*ReligionTypes*/ eReligion);
 	int getHasCorporationCount(int /*CorporationTypes*/ eCorporation);
 
@@ -203,10 +203,10 @@ public:
 	bool isProjectAndArtMaxedOut(int /*ProjectTypes*/ eIndex);
 	void changeProjectCount(int /*ProjectTypes*/ eIndex, int iChange);
 	int getProjectMaking(int /*ProjectTypes*/ eIndex);
+	int getBuildingCount(int /*BuildingTypes*/ eIndex);
+	bool isBuildingMaxedOut(int /*BuildingTypes*/ eIndex, int iExtra);
 	int getUnitCount(int /*UnitTypes*/ eIndex);
 	bool isUnitMaxedOut(int /*UnitTypes*/ eIndex, int iExtra);
-	int getBuildingClassCount(int /*BuildingClassTypes*/ eIndex);
-	bool isBuildingClassMaxedOut(int /*BuildingClassTypes*/ eIndex, int iExtra);
 	int getObsoleteBuildingCount(int /*BuildingTypes*/ eIndex);
 	bool isObsoleteBuilding(int /*BuildingTypes*/ eIndex);
 

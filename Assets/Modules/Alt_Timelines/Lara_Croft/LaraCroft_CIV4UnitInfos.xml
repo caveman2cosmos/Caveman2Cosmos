@@ -57,7 +57,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_MUSEUM</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_MUSEUM</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
 			<BonusType>BONUS_HIT_MOVIES</BonusType>
 			<iCost>4720</iCost>

@@ -1056,9 +1056,7 @@ bool CvGameObjectGame::hasGOM(GOMTypes eType, int iID)
 		case GOM_BUILDING:
 		{
 			// If there is any building of that type created, return true
-			const BuildingTypes eBuilding = (BuildingTypes) iID;
-			return GC.getGame().getBuildingClassCreatedCount((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType()) > 0;
-			//break;
+			return GC.getGame().getBuildingCreatedCount((BuildingTypes)iID) > 0;
 		}
 
 		case GOM_PROMOTION:
@@ -1174,9 +1172,7 @@ bool CvGameObjectTeam::hasGOM(GOMTypes eType, int iID)
 		case GOM_BUILDING:
 		{
 			// If there is any building of that type in the team, return true
-			const BuildingTypes eBuilding = (BuildingTypes) iID;
-			return m_pTeam->getBuildingClassCount((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType()) > 0;
-			//break;
+			return m_pTeam->getBuildingCount(static_cast<BuildingTypes>(iID)) > 0;
 		}
 
 		case GOM_PROMOTION:
@@ -1300,9 +1296,7 @@ bool CvGameObjectPlayer::hasGOM(GOMTypes eType, int iID)
 		case GOM_BUILDING:
 		{
 			// If there is any building of that type of the player, return true
-			const BuildingTypes eBuilding = (BuildingTypes) iID;
-			return m_pPlayer->getBuildingClassCount((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType()) > 0;
-			//break;
+			return m_pPlayer->getBuildingCount(static_cast<BuildingTypes>(iID)) > 0;
 		}
 
 		case GOM_PROMOTION:

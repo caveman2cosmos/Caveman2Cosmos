@@ -8,8 +8,8 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<!-- National Aircraft Museum -->
-			<BuildingClass>BUILDINGCLASS_AIRCRAFT_MUSEUM</BuildingClass>
 			<Type>BUILDING_AIRCRAFT_MUSEUM</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -193,8 +193,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Anima Gaming League -->
-			<BuildingClass>BUILDINGCLASS_ANIMA_GAMING_LEAGUE</BuildingClass>
 			<Type>BUILDING_ANIMA_GAMING_LEAGUE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -206,12 +206,9 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_VIDEO_GAMES</Bonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_ANIMA_STUDIO</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ANIMA_STUDIO</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>11810</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -229,8 +226,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National Archives -->
-			<BuildingClass>BUILDINGCLASS_ARCHIVES</BuildingClass>
 			<Type>BUILDING_ARCHIVES</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -240,18 +237,15 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_LIBRARY</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_LIBRARY</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LIBRARY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>450</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -299,8 +293,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Aerial Basket Ropeways -->
-			<BuildingClass>BUILDINGCLASS_BASKETROPEWAYS</BuildingClass>
 			<Type>BUILDING_BASKETROPEWAYS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -320,16 +314,16 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_TRAVOIS_MAKER</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_WHEELWRIGHT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_TRAVOIS_MAKER</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_WHEELWRIGHT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_MACHINERY</ObsoleteTech>
 			<!-- Cost -->
@@ -365,8 +359,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Bureau of Farm Management -->
-			<BuildingClass>BUILDINGCLASS_BFM</BuildingClass>
 			<Type>BUILDING_BFM</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -376,16 +370,16 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CHEMISTRY</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_VIKING_TRADING_POST</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_OFFICES</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_OFFICES</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<!-- Cost -->
 			<iCost>990</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -403,7 +397,7 @@
 			</SpecialistCounts>
 			<!-- Global -->
 			<iGlobalHealth>1</iGlobalHealth>
-			<FreeBuilding>BUILDINGCLASS_WAREHOUSE</FreeBuilding>
+			<FreeBuilding>BUILDING_WAREHOUSE</FreeBuilding>
 			<!-- Misc -->
 			<iAsset>20</iAsset>
 			<iPower>10</iPower>
@@ -424,8 +418,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Botanical Gardens -->
-			<BuildingClass>BUILDINGCLASS_BOTANICAL_GARDENS</BuildingClass>
 			<Type>BUILDING_BOTANICAL_GARDENS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -435,12 +429,12 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_BOTANY</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ARBORETUM</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_ARBORETUM</BuildingType>
 					<iNumBuildingNeeded>5</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
 			<!-- Cost -->
 			<iCost>1070</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -484,8 +478,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Bull Leaping -->
-			<BuildingClass>BUILDINGCLASS_BULL_LEAPING</BuildingClass>
 			<Type>BUILDING_BULL_LEAPING</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -494,36 +488,36 @@
 			<Strategy>TXT_KEY_BUILDING_BULL_LEAPING_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_PREHISTORIC_DANCE</PrereqTech>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BULL_MYTH_EFFECT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BISON_HERD</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BISON_CAMP</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_COW_HERD</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_COW_FARM</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ICEAGEBISON_CAMP</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_AUROCHS_CAMP</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_BULL_MYTH_EFFECT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_BISON_HERD</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_BISON_CAMP</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_COW_HERD</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_COW_FARM</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_ICEAGEBISON_CAMP</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_AUROCHS_CAMP</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_COMBAT_SPORTS</ObsoleteTech>
 			<!-- Cost -->
@@ -567,8 +561,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Capital Administration -->
-			<BuildingClass>BUILDINGCLASS_CAPITAL_ADMINISTRATION</BuildingClass>
 			<Type>BUILDING_CAPITAL_ADMINISTRATION</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -578,12 +572,9 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_SOCIAL_CONTRACT</PrereqTech>
 			<iPrereqPopulation>30</iPrereqPopulation>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqCultureLevel>CULTURELEVEL_INFLUENTIAL</PrereqCultureLevel>
 			<!-- Cost -->
 			<iCost>950</iCost>
@@ -630,8 +621,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Captured Fire -->
-			<BuildingClass>BUILDINGCLASS_CAPTURED_FIRE</BuildingClass>
 			<Type>BUILDING_CAPTURED_FIRE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -640,12 +631,9 @@
 			<Strategy>TXT_KEY_BUILDING_CAPTURED_FIRE_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CONTROLLED_FIRE</PrereqTech>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_STICK_GATHERER</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_STICK_GATHERER</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_FIRE_MAKING</ObsoleteTech>
 			<!-- Cost -->
@@ -663,12 +651,12 @@
 			</CommerceChanges>
 			<!-- Global -->
 			<bGoldenAge>1</bGoldenAge>
-			<GlobalBuildingClassProductionModifiers>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_FIREPIT</BuildingClassType>
+			<GlobalBuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_FIREPIT</BuildingType>
 					<iProductionModifier>100</iProductionModifier>
-				</BuildingClassProductionModifier>
-			</GlobalBuildingClassProductionModifiers>
+				</BuildingProductionModifier>
+			</GlobalBuildingProductionModifiers>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -676,8 +664,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Centers for Disease Control -->
-			<BuildingClass>BUILDINGCLASS_CENTERS_FOR_DISEASE_CONTROL</BuildingClass>
 			<Type>BUILDING_CENTERS_FOR_DISEASE_CONTROL</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -687,22 +675,19 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MODERN_HEALTH_CARE</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_LABORATORY</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_LABORATORY</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_HOSPITAL</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_HOSPITAL</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LABORATORY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_LABORATORY</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>2560</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -742,8 +727,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Central Bank -->
-			<BuildingClass>BUILDINGCLASS_CENTRAL_BANK</BuildingClass>
 			<Type>BUILDING_CENTRAL_BANK</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -753,18 +738,15 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MERCANTILISM</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BANK</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_BANK</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_BANK</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_BANK</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_CORPORATISM</CivicOption>
@@ -825,8 +807,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Chief's Funeral Pyre -->
-			<BuildingClass>BUILDINGCLASS_CHIEFS_PYRE</BuildingClass>
 			<Type>BUILDING_CHIEFS_PYRE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -835,16 +817,10 @@
 			<Strategy>TXT_KEY_BUILDING_CHIEFS_PYRE_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CHIEFDOM</PrereqTech>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_FUNERAL_PYRE</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CHIEFS_HUT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FUNERAL_PYRE</BuildingType>
+				<BuildingType>BUILDING_CHIEFS_HUT</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_CHIEFDOM</CivicOption>
@@ -892,8 +868,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Computer Center -->
-			<BuildingClass>BUILDINGCLASS_COMPUTER_CENTER</BuildingClass>
 			<Type>BUILDING_COMPUTER_CENTER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -903,12 +879,9 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_ADVANCED_COMPUTERS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_COMPUTER_NETWORK</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>7950</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -965,8 +938,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Cosmonaut Training Center -->
-			<BuildingClass>BUILDINGCLASS_COSMONAUT_TRAINING_CENTRE</BuildingClass>
 			<Type>BUILDING_COSMONAUT_TRAINING_CENTRE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -977,12 +950,9 @@
 			<PrereqTech>TECH_ASTRO_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LABORATORY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_LABORATORY</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>3080</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -1004,8 +974,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National Courier System -->
-			<BuildingClass>BUILDINGCLASS_COURIER_SYSTEM</BuildingClass>
 			<Type>BUILDING_COURIER_SYSTEM</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1067,8 +1037,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National Cybersecurity Center -->
-			<BuildingClass>BUILDINGCLASS_CYBERSECURITY_CENTER</BuildingClass>
 			<Type>BUILDING_CYBERSECURITY_CENTER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1078,12 +1048,9 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CYBERWARFARE</PrereqTech>
 			<Bonus>BONUS_COMPUTERS</Bonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_COMPUTER_NETWORK</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>4010</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -1101,7 +1068,7 @@
 			<!-- Security -->
 			<iEspionageDefense>15</iEspionageDefense>
 			<!-- Global -->
-			<FreeBuilding>BUILDINGCLASS_CYBERSECURITY_OFFICE</FreeBuilding>
+			<FreeBuilding>BUILDING_CYBERSECURITY_OFFICE</FreeBuilding>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_CYBERSECURITY_CENTER</ArtDefineTag>
@@ -1109,8 +1076,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Deep Space Research Institute -->
-			<BuildingClass>BUILDINGCLASS_DEEP_SPACE_RESEARCH</BuildingClass>
 			<Type>BUILDING_DEEP_SPACE_RESEARCH</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<SpecialBuildingType>SPECIALBUILDING_DEEP_SPACE_RESEARCH</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1121,16 +1088,10 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_ASTRONAUTICS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_OFFICES</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LABORATORY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_LABORATORY</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>2950</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -1171,8 +1132,8 @@
 		<!--↓ Departments ↓-->
 		<BuildingInfo>
 			<!-- Department of Education -->
-			<BuildingClass>BUILDINGCLASS_DEPARTMENT_EDUCATION</BuildingClass>
 			<Type>BUILDING_DEPARTMENT_EDUCATION</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1182,12 +1143,9 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_COMPULSORY_EDUCATION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_UNIVERSITY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>1740</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -1211,7 +1169,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<!-- Global -->
-			<FreeBuilding>BUILDINGCLASS_PUBLIC_SCHOOL</FreeBuilding>
+			<FreeBuilding>BUILDING_PUBLIC_SCHOOL</FreeBuilding>
 			<!-- Misc -->
 			<iAsset>3</iAsset>
 			<Flavors>
@@ -1232,8 +1190,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Department of Energy -->
-			<BuildingClass>BUILDINGCLASS_DOE</BuildingClass>
 			<Type>BUILDING_DOE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1243,22 +1201,19 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_POWER_LINES</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_VIKING_TRADING_POST</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_OFFICES</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_POWER_LINES</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_OFFICES</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<!-- Cost -->
 			<iCost>1540</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -1274,7 +1229,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Global -->
-			<FreeBuilding>BUILDINGCLASS_POWER_LINES</FreeBuilding>
+			<FreeBuilding>BUILDING_POWER_LINES</FreeBuilding>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_DOE</ArtDefineTag>
@@ -1282,8 +1237,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Department of Foreign Policy -->
-			<BuildingClass>BUILDINGCLASS_DEPT_FOREIGN_POLICY</BuildingClass>
 			<Type>BUILDING_DEPT_FOREIGN_POLICY</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1315,7 +1270,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<!-- Global -->
-			<FreeBuilding>BUILDINGCLASS_DEPT_FOREIGN_POLICY_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_DEPT_FOREIGN_POLICY_EFFECT</FreeBuilding>
 			<!-- Security -->
 			<iEspionageDefense>15</iEspionageDefense>
 			<!-- Units -->
@@ -1336,8 +1291,8 @@
 		</BuildingInfo>		
 		<BuildingInfo>
 			<!-- Department of Motor Vehicles -->
-			<BuildingClass>BUILDINGCLASS_DMV</BuildingClass>
 			<Type>BUILDING_DMV</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1352,12 +1307,9 @@
 				<Bonus>BONUS_PETROLEUM_PRODUCTS</Bonus>
 				<Bonus>BONUS_BIOFUEL</Bonus>
 			</PrereqBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_OFFICES</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_OFFICES</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
 			<!-- Cost -->
@@ -1403,8 +1355,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Department of Water -->
-			<BuildingClass>BUILDINGCLASS_WATER_DEPARTMENT</BuildingClass>
 			<Type>BUILDING_WATER_DEPARTMENT</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1414,16 +1366,16 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_PLUMBING</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_VIKING_TRADING_POST</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_OFFICES</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_OFFICES</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<!-- Cost -->
 			<iCost>368</iCost>
 			<BonusProductionModifiers>
@@ -1449,7 +1401,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Global -->
-			<FreeBuilding>BUILDINGCLASS_WATER_PIPES</FreeBuilding>
+			<FreeBuilding>BUILDING_WATER_PIPES</FreeBuilding>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_WATER_DEPARTMENT</ArtDefineTag>
@@ -1458,8 +1410,8 @@
 		<!--↑ Departments ↑-->
 		<BuildingInfo>
 			<!-- District Courthouse -->
-			<BuildingClass>BUILDINGCLASS_DISTRICT_COURTHOUSE</BuildingClass>
 			<Type>BUILDING_DISTRICT_COURTHOUSE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1469,18 +1421,15 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_JURISPRUDENCE</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_COURTHOUSE</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_COURTHOUSE</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>880</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -1526,8 +1475,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Dutch Dike -->
-			<BuildingClass>BUILDINGCLASS_NETHERLANDS_DIKE</BuildingClass>
 			<Type>BUILDING_NETHERLANDS_DIKE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1579,8 +1528,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Electronic Gaming League -->
-			<BuildingClass>BUILDINGCLASS_ELECTRONIC_GAMING_LEAGUE</BuildingClass>
 			<Type>BUILDING_ELECTRONIC_GAMING_LEAGUE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1595,12 +1544,9 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_COMPUTERS</Bonus>
 			</PrereqBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_COMPUTER_NETWORK</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>2950</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -1618,8 +1564,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Maximum Security Prison -->
-			<BuildingClass>BUILDINGCLASS_FEDERAL_PRISON</BuildingClass>
 			<Type>BUILDING_FEDERAL_PRISON</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1636,7 +1582,7 @@
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
 				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_SAFETY_ORBITAL_PRISON</BuildingClassType>
+					<BuildingType>BUILDING_SAFETY_ORBITAL_PRISON</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings>
@@ -1671,7 +1617,7 @@
 			</PropertyManipulators>
 			<!-- Global -->
 			<iGlobalHappiness>1</iGlobalHappiness>
-			<FreeBuilding>BUILDINGCLASS_GOOD_FEDERAL_PRISON</FreeBuilding>
+			<FreeBuilding>BUILDING_GOOD_FEDERAL_PRISON</FreeBuilding>
 			<!-- Misc -->
 			<iAsset>4</iAsset>
 			<iPower>6</iPower>
@@ -1692,8 +1638,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Fertility Festival -->
-			<BuildingClass>BUILDINGCLASS_FERTILITYFESTIVAL</BuildingClass>
 			<Type>BUILDING_FERTILITYFESTIVAL</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1706,18 +1652,15 @@
 				<Bonus>BONUS_FUR</Bonus>
 				<Bonus>BONUS_BASKETS</Bonus>
 			</PrereqBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_FERTILTY_DANCE</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_FERTILTY_DANCE</BuildingClassType>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_WOMENS_SUFFRAGE</ObsoleteTech>
 			<!-- Cost -->
@@ -1728,7 +1671,7 @@
 			<iHappiness>1</iHappiness>
 			<iAreaHappiness>1</iAreaHappiness>
 			<!-- Global -->
-			<FreeBuilding>BUILDINGCLASS_FERTILITYFESTIVAL_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_FERTILITYFESTIVAL_EFFECT</FreeBuilding>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_FERTILITYFESTIVAL</ArtDefineTag>
@@ -1736,8 +1679,8 @@
 		</BuildingInfo>		
 		<BuildingInfo>
 			<!-- Flak Tower -->
-			<BuildingClass>BUILDINGCLASS_FLAK_TOWER</BuildingClass>
 			<Type>BUILDING_FLAK_TOWER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1779,8 +1722,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Foundling Hospital -->
-			<BuildingClass>BUILDINGCLASS_FOUNDLING_HOSPITAL</BuildingClass>
 			<Type>BUILDING_FOUNDLING_HOSPITAL</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1845,8 +1788,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Garbage Collection Agency -->
-			<BuildingClass>BUILDINGCLASS_GCA</BuildingClass>
 			<Type>BUILDING_GCA</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1910,8 +1853,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Grand Central Station -->
-			<BuildingClass>BUILDINGCLASS_GRANDCENTRAL_STATION</BuildingClass>
 			<Type>BUILDING_GRANDCENTRAL_STATION</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1944,7 +1887,7 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<FreeAreaBuilding>BUILDINGCLASS_RAILROAD_STATION</FreeAreaBuilding>
+			<FreeAreaBuilding>BUILDING_RAILROAD_STATION</FreeAreaBuilding>
 			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
@@ -1955,8 +1898,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Great Bonfire -->
-			<BuildingClass>BUILDINGCLASS_GREAT_BONFIRE</BuildingClass>
 			<Type>BUILDING_GREAT_BONFIRE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1965,12 +1908,9 @@
 			<Strategy>TXT_KEY_BUILDING_GREAT_BONFIRE_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_FIRE_MAKING</PrereqTech>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_BONFIRE</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_BONFIRE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_FIREFIGHTING</ObsoleteTech>
 			<!-- Cost -->
@@ -1985,7 +1925,7 @@
 				<iCommerce>6</iCommerce>
 			</CommerceChanges>
 			<!-- Global -->
-			<FreeBuilding>BUILDINGCLASS_BONFIRE</FreeBuilding>
+			<FreeBuilding>BUILDING_BONFIRE</FreeBuilding>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<bNeverCapture>1</bNeverCapture>
@@ -1997,8 +1937,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Forbidden Palace -->
-			<BuildingClass>BUILDINGCLASS_GREAT_PALACE</BuildingClass>
 			<Type>BUILDING_GREAT_PALACE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2008,18 +1948,15 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CITY_PLANNING</PrereqTech>
 			<iCitiesPrereq>8</iCitiesPrereq>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_COURTHOUSE</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_COURTHOUSE</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>468</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -2067,8 +2004,8 @@
 		<!--↓ Guilds ↓-->
 		<BuildingInfo>
 			<!-- Apothecary Guild -->
-			<BuildingClass>BUILDINGCLASS_GUILD_APOTHECARY</BuildingClass>
 			<Type>BUILDING_GUILD_APOTHECARY</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2081,22 +2018,22 @@
 				<PrereqTech>TECH_ALCHEMY</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_APOTHECARY_SHOP</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_APOTHECARY_SHOP</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_APOTHECARY_SHOP</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PHARMACY</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_APOTHECARY_SHOP</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_PHARMACY</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_MODERN_HEALTH_CARE</ObsoleteTech>
 			<!-- Cost -->
@@ -2123,12 +2060,12 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_APOTHECARY_SHOP</BuildingClass>
+					<BuildingType>BUILDING_APOTHECARY_SHOP</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_PHARMACY</BuildingClass>
+					<BuildingType>BUILDING_PHARMACY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2139,8 +2076,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Artist Guild -->
-			<BuildingClass>BUILDINGCLASS_GUILD_ARTIST</BuildingClass>
 			<Type>BUILDING_GUILD_ARTIST</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2153,18 +2090,15 @@
 				<PrereqTech>TECH_GUILDS</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ARTIST_GUILD</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_ARTIST_GUILD</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_ARTIST_GUILD</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ARTIST_GUILD</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
 			<!-- Cost -->
@@ -2191,7 +2125,7 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_ARTIST_GUILD</BuildingClass>
+					<BuildingType>BUILDING_ARTIST_GUILD</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2202,8 +2136,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Baker Guild -->
-			<BuildingClass>BUILDINGCLASS_GUILD_BAKER</BuildingClass>
 			<Type>BUILDING_GUILD_BAKER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2216,18 +2150,15 @@
 				<PrereqTech>TECH_AGRICULTURAL_TOOLS</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BAKERY</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_BAKERY</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_BAKERY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_BAKERY</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<!-- Cost -->
@@ -2254,7 +2185,7 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_BAKERY</BuildingClass>
+					<BuildingType>BUILDING_BAKERY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2265,8 +2196,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Blacksmith Guild -->
-			<BuildingClass>BUILDINGCLASS_GUILD_BLACKSMITH</BuildingClass>
 			<Type>BUILDING_GUILD_BLACKSMITH</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2279,22 +2210,22 @@
 				<PrereqTech>TECH_SMITHING</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_FORGE</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_FORGE</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_FORGE</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_FOUNDRY</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_FORGE</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_FOUNDRY</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<!-- Cost -->
@@ -2321,12 +2252,12 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_FORGE</BuildingClass>
+					<BuildingType>BUILDING_FORGE</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_FOUNDRY</BuildingClass>
+					<BuildingType>BUILDING_FOUNDRY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2337,8 +2268,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Butcher Guild -->
-			<BuildingClass>BUILDINGCLASS_GUILD_BUTCHER</BuildingClass>
 			<Type>BUILDING_GUILD_BUTCHER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2348,22 +2279,22 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BUTCHERY</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_BUTCHERY</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BUTCHERY</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_MEATPACKING_PLANT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_BUTCHERY</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_MEATPACKING_PLANT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<!-- Cost -->
@@ -2390,12 +2321,12 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_BUTCHERY</BuildingClass>
+					<BuildingType>BUILDING_BUTCHERY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_MEATPACKING_PLANT</BuildingClass>
+					<BuildingType>BUILDING_MEATPACKING_PLANT</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2406,8 +2337,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Carpenter Guild -->
-			<BuildingClass>BUILDINGCLASS_GUILD_CARPENTER</BuildingClass>
 			<Type>BUILDING_GUILD_CARPENTER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2420,18 +2351,15 @@
 				<PrereqTech>TECH_SURVEYING</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CARPENTERS_WORKSHOP</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CARPENTERS_WORKSHOP</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CARPENTERS_WORKSHOP</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CARPENTERS_WORKSHOP</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<!-- Cost -->
@@ -2455,7 +2383,7 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_CARPENTERS_WORKSHOP</BuildingClass>
+					<BuildingType>BUILDING_CARPENTERS_WORKSHOP</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2469,8 +2397,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Printers Guild -->
-			<BuildingClass>BUILDINGCLASS_GUILD_CLERKS</BuildingClass>
 			<Type>BUILDING_GUILD_CLERKS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2483,22 +2411,22 @@
 				<PrereqTech>TECH_GUILDS</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PAPER_MAKER</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_PAPER_MAKER</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PAPER_MAKER</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PAPER_FACTORY</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_PAPER_MAKER</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_PAPER_FACTORY</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<!-- Cost -->
@@ -2522,12 +2450,12 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_PAPER_MAKER</BuildingClass>
+					<BuildingType>BUILDING_PAPER_MAKER</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_PAPER_FACTORY</BuildingClass>
+					<BuildingType>BUILDING_PAPER_FACTORY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2541,8 +2469,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Artisans Guild -->
-			<BuildingClass>BUILDINGCLASS_GUILD_CRAFTS</BuildingClass>
 			<Type>BUILDING_GUILD_CRAFTS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2555,22 +2483,22 @@
 				<PrereqTech>TECH_GUILDS</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CRAFT_HUT</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CRAFT_HUT</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CRAFT_HUT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_AMERICAN_MALL</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_CRAFT_HUT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_AMERICAN_MALL</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_APPLIED_ECONOMICS</ObsoleteTech>
 			<!-- Cost -->
@@ -2594,12 +2522,12 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_CRAFT_HUT</BuildingClass>
+					<BuildingType>BUILDING_CRAFT_HUT</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_AMERICAN_MALL</BuildingClass>
+					<BuildingType>BUILDING_AMERICAN_MALL</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2613,8 +2541,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Drapers Guild -->
-			<BuildingClass>BUILDINGCLASS_GUILD_DRAPERS</BuildingClass>
 			<Type>BUILDING_GUILD_DRAPERS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2627,26 +2555,26 @@
 				<PrereqTech>TECH_HERALDRY</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_SEAMSTRESS_HUT</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_SEAMSTRESS_HUT</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_SEAMSTRESS_HUT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_TEXTILE_MILL</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_TEXTILE_FACTORY</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_SEAMSTRESS_HUT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_TEXTILE_MILL</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_TEXTILE_FACTORY</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<!-- Cost -->
@@ -2670,17 +2598,17 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_SEAMSTRESS_HUT</BuildingClass>
+					<BuildingType>BUILDING_SEAMSTRESS_HUT</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_TEXTILE_MILL</BuildingClass>
+					<BuildingType>BUILDING_TEXTILE_MILL</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_TEXTILE_FACTORY</BuildingClass>
+					<BuildingType>BUILDING_TEXTILE_FACTORY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2694,8 +2622,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Hostler Guild -->
-			<BuildingClass>BUILDINGCLASS_GUILD_EQUESTRIAN</BuildingClass>
 			<Type>BUILDING_GUILD_EQUESTRIAN</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2708,22 +2636,22 @@
 				<PrereqTech>TECH_GUILDS</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_KNIGHT_STABLE</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_KNIGHT_STABLE</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_KNIGHT_STABLE</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_MODERN_STABLE</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_KNIGHT_STABLE</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_MODERN_STABLE</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
 			<!-- Cost -->
@@ -2747,12 +2675,12 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_KNIGHT_STABLE</BuildingClass>
+					<BuildingType>BUILDING_KNIGHT_STABLE</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_MODERN_STABLE</BuildingClass>
+					<BuildingType>BUILDING_MODERN_STABLE</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2766,8 +2694,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Fishmonger Guild -->
-			<BuildingClass>BUILDINGCLASS_GUILD_FISHMONGER</BuildingClass>
 			<Type>BUILDING_GUILD_FISHMONGER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2780,18 +2708,15 @@
 				<PrereqTech>TECH_RUDDER</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_FISHMONGER</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_FISHMONGER</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_FISHMONGER</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FISHMONGER</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<!-- Cost -->
@@ -2815,7 +2740,7 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_FISHMONGER</BuildingClass>
+					<BuildingType>BUILDING_FISHMONGER</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2829,8 +2754,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Glassblowers Guild -->
-			<BuildingClass>BUILDINGCLASS_GUILD_GLASSBLOWERS</BuildingClass>
 			<Type>BUILDING_GUILD_GLASSBLOWERS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2843,18 +2768,15 @@
 				<PrereqTech>TECH_STAINED_GLASS</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_GLASSSMITH</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_GLASSSMITH</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GLASSSMITH</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_GLASSSMITH</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<!-- Cost -->
@@ -2878,7 +2800,7 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_GLASSSMITH</BuildingClass>
+					<BuildingType>BUILDING_GLASSSMITH</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2892,8 +2814,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Goldsmith Guild -->
-			<BuildingClass>BUILDINGCLASS_GUILD_GOLDSMITH</BuildingClass>
 			<Type>BUILDING_GUILD_GOLDSMITH</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2906,18 +2828,15 @@
 				<PrereqTech>TECH_GUILDS</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_JEWELLERY</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_JEWELLERY</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_JEWELLERY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_JEWELLERY</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<!-- Cost -->
@@ -2941,7 +2860,7 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_JEWELLERY</BuildingClass>
+					<BuildingType>BUILDING_JEWELLERY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2955,8 +2874,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Grocers Guild -->
-			<BuildingClass>BUILDINGCLASS_GUILD_GROCERS</BuildingClass>
 			<Type>BUILDING_GUILD_GROCERS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2969,22 +2888,22 @@
 				<PrereqTech>TECH_AGRICULTURAL_TOOLS</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_GROCER</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_GROCER</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_GROCER</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_SUPERMARKET</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_GROCER</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_SUPERMARKET</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<!-- Cost -->
@@ -3008,12 +2927,12 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_GROCER</BuildingClass>
+					<BuildingType>BUILDING_GROCER</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_SUPERMARKET</BuildingClass>
+					<BuildingType>BUILDING_SUPERMARKET</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -3027,8 +2946,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Woodcutter Guild -->
-			<BuildingClass>BUILDINGCLASS_GUILD_LUMBER</BuildingClass>
 			<Type>BUILDING_GUILD_LUMBER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3041,18 +2960,15 @@
 				<PrereqTech>TECH_SURVEYING</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_LUMBER_CAMP</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_LUMBER_CAMP</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LUMBER_CAMP</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_LUMBER_CAMP</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<!-- Cost -->
@@ -3076,7 +2992,7 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_LUMBER_CAMP</BuildingClass>
+					<BuildingType>BUILDING_LUMBER_CAMP</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -3090,8 +3006,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Masons Guild -->
-			<BuildingClass>BUILDINGCLASS_GUILD_MASON</BuildingClass>
 			<Type>BUILDING_GUILD_MASON</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3104,22 +3020,22 @@
 				<PrereqTech>TECH_ARCHITECTURE</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BRICK_MASON</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_BRICK_MASON</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BRICK_MASON</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BRICK_FACTORY</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_BRICK_MASON</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_BRICK_FACTORY</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<!-- Cost -->
@@ -3143,12 +3059,12 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_BRICK_MASON</BuildingClass>
+					<BuildingType>BUILDING_BRICK_MASON</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_BRICK_FACTORY</BuildingClass>
+					<BuildingType>BUILDING_BRICK_FACTORY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -3162,8 +3078,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Merchants Guild -->
-			<BuildingClass>BUILDINGCLASS_GUILD_MERCERS</BuildingClass>
 			<Type>BUILDING_GUILD_MERCERS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3176,22 +3092,22 @@
 				<PrereqTech>TECH_USURY</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BAZAAR</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_BAZAAR</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BAZAAR</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_AMERICAN_MALL</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_BAZAAR</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_AMERICAN_MALL</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_APPLIED_ECONOMICS</ObsoleteTech>
 			<!-- Cost -->
@@ -3215,12 +3131,12 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_BAZAAR</BuildingClass>
+					<BuildingType>BUILDING_BAZAAR</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_AMERICAN_MALL</BuildingClass>
+					<BuildingType>BUILDING_AMERICAN_MALL</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -3234,8 +3150,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Potters Guild -->
-			<BuildingClass>BUILDINGCLASS_GUILD_POTTERS</BuildingClass>
 			<Type>BUILDING_GUILD_POTTERS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3248,18 +3164,15 @@
 				<PrereqTech>TECH_STAINED_GLASS</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_POTTERS_WORKSHOP</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_POTTERS_WORKSHOP</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<!-- Cost -->
@@ -3283,7 +3196,7 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_POTTERS_WORKSHOP</BuildingClass>
+					<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -3297,8 +3210,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Servants Guild -->
-			<BuildingClass>BUILDINGCLASS_GUILD_SERVANTS</BuildingClass>
 			<Type>BUILDING_GUILD_SERVANTS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3311,22 +3224,16 @@
 				<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_SERVANTS_QUARTERS</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_SERVANTS_QUARTERS</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SERVANTS_QUARTERS</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_VIKING_TRADING_POST</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SERVANTS_QUARTERS</BuildingType>
+				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_LABOR_UNIONS</ObsoleteTech>
 			<!-- Cost -->
@@ -3350,7 +3257,7 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_SERVANTS_QUARTERS</BuildingClass>
+					<BuildingType>BUILDING_SERVANTS_QUARTERS</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -3364,8 +3271,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Tailor Guild -->
-			<BuildingClass>BUILDINGCLASS_GUILD_TAILOR</BuildingClass>
 			<Type>BUILDING_GUILD_TAILOR</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3378,18 +3285,15 @@
 				<PrereqTech>TECH_HERALDRY</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_TAILOR_SHOP</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_TAILOR_SHOP</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_TAILOR_SHOP</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_TAILOR_SHOP</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<!-- Cost -->
@@ -3413,7 +3317,7 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_TAILOR_SHOP</BuildingClass>
+					<BuildingType>BUILDING_TAILOR_SHOP</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -3427,8 +3331,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Victuallers Guild -->
-			<BuildingClass>BUILDINGCLASS_GUILD_VICTUALLERS</BuildingClass>
 			<Type>BUILDING_GUILD_VICTUALLERS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3441,22 +3345,22 @@
 				<PrereqTech>TECH_AGRICULTURAL_TOOLS</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PUB</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_PUB</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PUB</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_DIVE_BAR</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_PUB</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_DIVE_BAR</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<!-- Cost -->
@@ -3480,12 +3384,12 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_PUB</BuildingClass>
+					<BuildingType>BUILDING_PUB</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_DIVE_BAR</BuildingClass>
+					<BuildingType>BUILDING_DIVE_BAR</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -3500,8 +3404,8 @@
 		<!--↑ Guilds ↑-->
 		<BuildingInfo>
 			<!-- Heroic Epic -->
-			<BuildingClass>BUILDINGCLASS_HEROIC_EPIC</BuildingClass>
 			<Type>BUILDING_HEROIC_EPIC</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3550,8 +3454,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Great Holmegaard Hunt -->
-			<BuildingClass>BUILDINGCLASS_HHUNTINGBOW</BuildingClass>
 			<Type>BUILDING_HHUNTINGBOW</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3565,20 +3469,20 @@
 				<Bonus>BONUS_WOOD</Bonus>
 				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			</PrereqBonuses>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_FLETCHER</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_HUNTING_INSTRUCTION</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_MASTER_HUNTER_TRADITION</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_FLETCHER</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_HUNTING_INSTRUCTION</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_MASTER_HUNTER_TRADITION</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<!-- Cost -->
@@ -3603,8 +3507,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Holographic Gaming League -->
-			<BuildingClass>BUILDINGCLASS_HOLOGRAPHIC_GAMING_LEAGUE</BuildingClass>
 			<Type>BUILDING_HOLOGRAPHIC_GAMING_LEAGUE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3619,16 +3523,16 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_HOLOGRAPHIC_PROJECTORS</Bonus>
 			</PrereqBonuses>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_HOLOGRAPHIC_NETWORKS</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_EXOCORTEX_NETWORKS</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_HOLOGRAPHIC_NETWORKS</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_EXOCORTEX_NETWORKS</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<!-- Cost -->
 			<iCost>7050</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -3646,8 +3550,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Homeland Security Agency -->
-			<BuildingClass>BUILDINGCLASS_HOMELAND_SECURITY</BuildingClass>
 			<Type>BUILDING_HOMELAND_SECURITY</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3656,18 +3560,15 @@
 			<Strategy>TXT_KEY_BUILDING_HOMELAND_SECURITY_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_FASCISM</PrereqTech>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_NATIONAL_SECURITY</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_NATIONAL_SECURITY</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>1980</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -3718,8 +3619,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- House of Parliament -->
-			<BuildingClass>BUILDINGCLASS_HOUSE_OF_PARLIMENT</BuildingClass>
 			<Type>BUILDING_HOUSE_OF_PARLIMENT</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3783,8 +3684,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Ironworks -->
-			<BuildingClass>BUILDINGCLASS_IRON_WORKS</BuildingClass>
 			<Type>BUILDING_IRON_WORKS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3794,16 +3695,16 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_STEEL</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_VIKING_TRADING_POST</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_FACTORY</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_FACTORY</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<!-- Cost -->
 			<iCost>1480</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -3868,8 +3769,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Labor Union -->
-			<BuildingClass>BUILDINGCLASS_LABOR_UNION</BuildingClass>
 			<Type>BUILDING_LABOR_UNION</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3906,8 +3807,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Log Roller System -->
-			<BuildingClass>BUILDINGCLASS_LOGROLLERS</BuildingClass>
 			<Type>BUILDING_LOGROLLERS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3967,8 +3868,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Manhattan Project -->
-			<BuildingClass>BUILDINGCLASS_MANHATTAN</BuildingClass>
 			<Type>BUILDING_MANHATTAN</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3982,22 +3883,19 @@
 				<Bonus>BONUS_URANIUM</Bonus>
 				<Bonus>BONUS_HEAVY_WATER</Bonus>
 			</PrereqBonuses>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_MILITARY_AIRBASE</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_AEROSPACE_COMPLEX</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_UNIVERSITY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_AEROSPACE_COMPLEX</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>2160</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -4034,8 +3932,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Microlith Workshop -->
-			<BuildingClass>BUILDINGCLASS_MICROLITH_WORKSHOP</BuildingClass>
 			<Type>BUILDING_MICROLITH_WORKSHOP</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4047,16 +3945,16 @@
 			<TechTypes>
 				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			</TechTypes>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_STORAGE_PIT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_GRANARY</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_GRANARY</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_IRON_WORKING</ObsoleteTech>
 			<!-- Cost -->
@@ -4085,8 +3983,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Mind Storage -->
-			<BuildingClass>BUILDINGCLASS_MIND_STORAGE</BuildingClass>
 			<Type>BUILDING_MIND_STORAGE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4096,12 +3994,9 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MIND_UPLOADING</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_COMPUTER_NETWORK</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>11310</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -4132,8 +4027,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Modern Art Theatre -->
-			<BuildingClass>BUILDINGCLASS_MODERN_ART_THEATRE</BuildingClass>
 			<Type>BUILDING_MODERN_ART_THEATRE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4143,16 +4038,16 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_REALISM</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_THEATRE</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_THEATRE</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_OPERA_HOUSE</BuildingClassType>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_OPERA_HOUSE</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
 			<!-- Cost -->
 			<iCost>1540</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -4199,8 +4094,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Movie Studio -->
-			<BuildingClass>BUILDINGCLASS_MOVIE_STUDIO</BuildingClass>
 			<Type>BUILDING_MOVIE_STUDIO</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4247,8 +4142,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National Medical Database -->
-			<BuildingClass>BUILDINGCLASS_MEDICAL_DATABASE</BuildingClass>
 			<Type>BUILDING_MEDICAL_DATABASE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4259,16 +4154,10 @@
 			<PrereqTech>TECH_KNOWLEDGE_MANAGEMENT</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_HOSPITAL</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_COMPUTER_NETWORK</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_HOSPITAL</BuildingType>
+				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>4010</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -4289,7 +4178,7 @@
 			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Global -->
-			<FreeBuilding>BUILDINGCLASS_MEDICAL_DATABASE_GOOD</FreeBuilding>
+			<FreeBuilding>BUILDING_MEDICAL_DATABASE_GOOD</FreeBuilding>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_MEDICAL_DATABASE</ArtDefineTag>
@@ -4297,8 +4186,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National Aerospace Agency -->
-			<BuildingClass>BUILDINGCLASS_NASA</BuildingClass>
 			<Type>BUILDING_NASA</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4308,18 +4197,15 @@
 			<PrereqTech>TECH_ADVANCED_ROCKETRY</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_ROCKET_FUEL</Bonus>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_MILITARY_AIRBASE</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_MILITARY_AIRBASE</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>2690</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -4373,8 +4259,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National Academic Database -->
-			<BuildingClass>BUILDINGCLASS_NATIONAL_ACADEMIC_DATABASE</BuildingClass>
 			<Type>BUILDING_NATIONAL_ACADEMIC_DATABASE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4386,16 +4272,10 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_COMPUTERS</Bonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_COMPUTER_NETWORK</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_UNIVERSITY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
+				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>4010</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -4409,7 +4289,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</GlobalCommerceModifiers>
-			<FreeBuilding>BUILDINGCLASS_EFFECT_NATIONAL_ACADEMY_DATABASE</FreeBuilding>
+			<FreeBuilding>BUILDING_EFFECT_NATIONAL_ACADEMY_DATABASE</FreeBuilding>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_ACADEMIC_DATABASE</ArtDefineTag>
@@ -4417,8 +4297,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National Aquarium -->
-			<BuildingClass>BUILDINGCLASS_NATIONAL_AQUA</BuildingClass>
 			<Type>BUILDING_NATIONAL_AQUA</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4428,12 +4308,12 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MARINE_BIOLOGY</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_AQUARIUM</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_AQUARIUM</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
 			<!-- Cost -->
 			<iCost>1260</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -4462,7 +4342,7 @@
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Global -->
-			<FreeBuilding>BUILDINGCLASS_AQUARIUM</FreeBuilding>
+			<FreeBuilding>BUILDING_AQUARIUM</FreeBuilding>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<bCenterInCity>1</bCenterInCity>
@@ -4474,8 +4354,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National Epic -->
-			<BuildingClass>BUILDINGCLASS_NATIONAL_EPIC</BuildingClass>
 			<Type>BUILDING_NATIONAL_EPIC</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4484,12 +4364,9 @@
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_EPIC_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_LITERATURE</PrereqTech>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LIBRARY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>450</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -4537,8 +4414,8 @@
 		<!--↓ National Breeders ↓-->
 		<BuildingInfo>
 			<!-- National Camel Breeder -->
-			<BuildingClass>BUILDINGCLASS_CAMEL_NATIONAL</BuildingClass>
 			<Type>BUILDING_CAMEL_NATIONAL</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4550,12 +4427,12 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_CAMEL</Bonus>
 			</PrereqBonuses>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_AUTOBUILD_CAMEL_NEAR</BuildingClassMustNotHave>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_AUTOBUILD_CAMEL_NEAR</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
 			<!-- Cost -->
@@ -4584,8 +4461,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National Elephant Breeder -->
-			<BuildingClass>BUILDINGCLASS_ELEPHANT_NATIONAL</BuildingClass>
 			<Type>BUILDING_ELEPHANT_NATIONAL</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4597,12 +4474,12 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_ELEPHANTS</Bonus>
 			</PrereqBonuses>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_AUTOBUILD_ELEPHANT_NEAR</BuildingClassMustNotHave>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_AUTOBUILD_ELEPHANT_NEAR</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
 			<!-- Cost -->
@@ -4636,8 +4513,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National Horse Breeder -->
-			<BuildingClass>BUILDINGCLASS_HORSE_NATIONAL</BuildingClass>
 			<Type>BUILDING_HORSE_NATIONAL</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4649,12 +4526,12 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_HORSE</Bonus>
 			</PrereqBonuses>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_AUTOBUILD_HORSE_NEAR</BuildingClassMustNotHave>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_AUTOBUILD_HORSE_NEAR</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
 			<!-- Cost -->
@@ -4688,8 +4565,8 @@
 		<!--↑ National Breeders ↑-->
 		<BuildingInfo>
 			<!-- National Fire Service -->
-			<BuildingClass>BUILDINGCLASS_NFS</BuildingClass>
 			<Type>BUILDING_NFS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4739,8 +4616,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National Legal Database -->
-			<BuildingClass>BUILDINGCLASS_NATIONAL_LEGAL_DATABASE</BuildingClass>
 			<Type>BUILDING_NATIONAL_LEGAL_DATABASE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4752,16 +4629,10 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_COMPUTERS</Bonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_COMPUTER_NETWORK</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_POLICE_PRECINCT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
+				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>4010</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -4777,7 +4648,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
 			</GlobalCommerceModifiers>
-			<FreeBuilding>BUILDINGCLASS_SAFETY_NAT_LEGAL_DATABASE</FreeBuilding>
+			<FreeBuilding>BUILDING_SAFETY_NAT_LEGAL_DATABASE</FreeBuilding>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_LEGAL_DATABASE</ArtDefineTag>
@@ -4785,8 +4656,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National Library Service -->
-			<BuildingClass>BUILDINGCLASS_NATIONAL_LIBRARY_SERVICE</BuildingClass>
 			<Type>BUILDING_NATIONAL_LIBRARY_SERVICE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4802,28 +4673,25 @@
 				<Bonus>BONUS_BOOKS</Bonus>
 				<Bonus>BONUS_PAPER</Bonus>
 			</PrereqBonuses>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_LIBRARY</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_LIBRARY</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LIBRARY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_VIKING_TRADING_POST</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_OFFICES</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_OFFICES</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<!-- Cost -->
 			<iCost>1030</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -4844,7 +4712,7 @@
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Global -->
-			<FreeBuilding>BUILDINGCLASS_LIBRARY</FreeBuilding>
+			<FreeBuilding>BUILDING_LIBRARY</FreeBuilding>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<Flavors>
@@ -4862,8 +4730,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National Mint -->
-			<BuildingClass>BUILDINGCLASS_NATIONAL_MINT</BuildingClass>
 			<Type>BUILDING_NATIONAL_MINT</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4874,12 +4742,12 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_BANKING</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BANK</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_BANK</BuildingType>
 					<iNumBuildingNeeded>5</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
 			<PrereqOrCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_COINAGE</CivicOption>
@@ -4959,8 +4827,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National Park -->
-			<BuildingClass>BUILDINGCLASS_NATIONAL_PARK</BuildingClass>
 			<Type>BUILDING_NATIONAL_PARK</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5019,8 +4887,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National Science Foundation -->
-			<BuildingClass>BUILDINGCLASS_NSF</BuildingClass>
 			<Type>BUILDING_NSF</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5030,12 +4898,9 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_UNIVERSITY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>950</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -5066,8 +4931,8 @@
 		<!--↓ National Smelters  noe Not Near A City Smelters↓-->
 		<BuildingInfo>
 			<!-- National Aluminum Smelter -->
-			<BuildingClass>BUILDINGCLASS_NATIONAL_SMELTER_ALUMINUM</BuildingClass>
 			<Type>BUILDING_NATIONAL_SMELTER_ALUMINUM</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5089,12 +4954,12 @@
 				</Or>
 			</ConstructCondition>
 			<Bonus>BONUS_BAUXITE_ORE</Bonus>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_AUTOBUILD_ALUMINUM_NEAR</BuildingClassMustNotHave>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_AUTOBUILD_ALUMINUM_NEAR</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 			<!-- Cost -->
 			<iCost>1900</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -5132,8 +4997,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National Copper Smelter -->
-			<BuildingClass>BUILDINGCLASS_NATIONAL_SMELTER_COPPER</BuildingClass>
 			<Type>BUILDING_NATIONAL_SMELTER_COPPER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5155,12 +5020,12 @@
 				</Or>
 			</ConstructCondition>
 			<Bonus>BONUS_COPPER_ORE</Bonus>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_AUTOBUILD_COPPER_NEAR</BuildingClassMustNotHave>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_AUTOBUILD_COPPER_NEAR</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 			<!-- Cost -->
 			<iCost>292</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -5195,8 +5060,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National Gold Smelter -->
-			<BuildingClass>BUILDINGCLASS_NATIONAL_SMELTER_GOLD</BuildingClass>
 			<Type>BUILDING_NATIONAL_SMELTER_GOLD</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5218,12 +5083,12 @@
 				</Or>
 			</ConstructCondition>
 			<Bonus>BONUS_GOLD_ORE</Bonus>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_AUTOBUILD_GOLD_NEAR</BuildingClassMustNotHave>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_AUTOBUILD_GOLD_NEAR</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 			<!-- Cost -->
 			<iCost>306</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -5258,8 +5123,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National Iron Smelter -->
-			<BuildingClass>BUILDINGCLASS_NATIONAL_SMELTER_IRON</BuildingClass>
 			<Type>BUILDING_NATIONAL_SMELTER_IRON</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5281,12 +5146,12 @@
 				</Or>
 			</ConstructCondition>
 			<Bonus>BONUS_IRON_ORE</Bonus>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_AUTOBUILD_IRON_NEAR</BuildingClassMustNotHave>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_AUTOBUILD_IRON_NEAR</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 			<!-- Cost -->
 			<iCost>432</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -5321,8 +5186,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National Lead Smelter -->
-			<BuildingClass>BUILDINGCLASS_NATIONAL_SMELTER_LEAD</BuildingClass>
 			<Type>BUILDING_NATIONAL_SMELTER_LEAD</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5344,12 +5209,12 @@
 				</Or>
 			</ConstructCondition>
 			<Bonus>BONUS_LEAD_ORE</Bonus>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_AUTOBUILD_LEAD_NEAR</BuildingClassMustNotHave>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_AUTOBUILD_LEAD_NEAR</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 			<!-- Cost -->
 			<iCost>292</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -5384,8 +5249,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National Platinum Smelter -->
-			<BuildingClass>BUILDINGCLASS_NATIONAL_SMELTER_PLATINUM</BuildingClass>
 			<Type>BUILDING_NATIONAL_SMELTER_PLATINUM</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5407,12 +5272,12 @@
 				</Or>
 			</ConstructCondition>
 			<Bonus>BONUS_PLATINUM_ORE</Bonus>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_AUTOBUILD_PLATINUM_NEAR</BuildingClassMustNotHave>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_AUTOBUILD_PLATINUM_NEAR</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 			<!-- Cost -->
 			<iCost>432</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -5447,8 +5312,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National Silver Smelter -->
-			<BuildingClass>BUILDINGCLASS_NATIONAL_SMELTER_SILVER</BuildingClass>
 			<Type>BUILDING_NATIONAL_SMELTER_SILVER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5470,12 +5335,12 @@
 				</Or>
 			</ConstructCondition>
 			<Bonus>BONUS_SILVER_ORE</Bonus>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_AUTOBUILD_SILVER_NEAR</BuildingClassMustNotHave>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_AUTOBUILD_SILVER_NEAR</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 			<!-- Cost -->
 			<iCost>306</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -5510,8 +5375,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National Tin Smelter -->
-			<BuildingClass>BUILDINGCLASS_NATIONAL_SMELTER_TIN</BuildingClass>
 			<Type>BUILDING_NATIONAL_SMELTER_TIN</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5533,12 +5398,12 @@
 				</Or>
 			</ConstructCondition>
 			<Bonus>BONUS_TIN_ORE</Bonus>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_AUTOBUILD_TIN_NEAR</BuildingClassMustNotHave>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_AUTOBUILD_TIN_NEAR</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 			<!-- Cost -->
 			<iCost>368</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -5573,8 +5438,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National Titanium Smelter -->
-			<BuildingClass>BUILDINGCLASS_NATIONAL_SMELTER_TITANIUM</BuildingClass>
 			<Type>BUILDING_NATIONAL_SMELTER_TITANIUM</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5596,12 +5461,12 @@
 				</Or>
 			</ConstructCondition>
 			<Bonus>BONUS_TITANIUM_ORE</Bonus>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_AUTOBUILD_TITANIUM_NEAR</BuildingClassMustNotHave>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_AUTOBUILD_TITANIUM_NEAR</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 			<!-- Cost -->
 			<iCost>1980</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -5637,8 +5502,8 @@
 		<!--↑ National Smelters ↑-->
 		<BuildingInfo>
 			<!-- National Sports League -->
-			<BuildingClass>BUILDINGCLASS_NHL</BuildingClass>
 			<Type>BUILDING_NHL</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5649,16 +5514,10 @@
 			<PrereqTech>TECH_MODERN_SPORTS</PrereqTech>
 			<ObsoleteTech>TECH_BINARY_PSYCHOKINESIS</ObsoleteTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_MAJOR_LEAGUE_STADIUM</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_OFFICES</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_MAJOR_LEAGUE_STADIUM</BuildingType>
+				<BuildingType>BUILDING_OFFICES</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>2460</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -5690,8 +5549,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National TV-Station -->
-			<BuildingClass>BUILDINGCLASS_NATIONAL_TV_STATION</BuildingClass>
 			<Type>BUILDING_NATIONAL_TV_STATION</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5702,30 +5561,24 @@
 			<PrereqTech>TECH_TELEVISION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_OFFICES</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_TV_STUDIO</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BROADCAST_TOWER</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_COMMUNICATION_TOWER</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_NETWORK_NODE</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_TV_STUDIO</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_BROADCAST_TOWER</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_COMMUNICATION_TOWER</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_NETWORK_NODE</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<!-- Cost -->
 			<iCost>2260</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -5773,8 +5626,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Noblegarden -->
-			<BuildingClass>BUILDINGCLASS_NOBLEGARDEN</BuildingClass>
 			<Type>BUILDING_NOBLEGARDEN</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_NOBLEGARDEN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NOBLEGARDEN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NOBLEGARDEN_STRATEGY</Strategy>
@@ -5829,8 +5682,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National Weather Service -->
-			<BuildingClass>BUILDINGCLASS_NWS</BuildingClass>
 			<Type>BUILDING_NWS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5844,26 +5697,23 @@
 				<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
 			</TechTypes>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_OFFICES</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BROADCAST_TOWER</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_COMMUNICATION_TOWER</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_NETWORK_NODE</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_OFFICES</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_BROADCAST_TOWER</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_COMMUNICATION_TOWER</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_NETWORK_NODE</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_WEATHER_CONTROL</ObsoleteTech>
 			<!-- Cost -->
@@ -5906,8 +5756,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National Zoo -->
-			<BuildingClass>BUILDINGCLASS_NATIONAL_ZOO</BuildingClass>
 			<Type>BUILDING_NATIONAL_ZOO</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5917,12 +5767,12 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_ZOOLOGY</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ZOO</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_ZOO</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
 			<!-- Cost -->
 			<iCost>1070</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -5951,7 +5801,7 @@
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Global -->
-			<FreeBuilding>BUILDINGCLASS_ZOO</FreeBuilding>
+			<FreeBuilding>BUILDING_ZOO</FreeBuilding>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<bCenterInCity>1</bCenterInCity>
@@ -5963,8 +5813,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Online University -->
-			<BuildingClass>BUILDINGCLASS_ONLINE_UNIVERSITY</BuildingClass>
 			<Type>BUILDING_ONLINE_UNIVERSITY</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5973,16 +5823,10 @@
 			<Strategy>TXT_KEY_BUILDING_ONLINE_UNIVERSITY_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_VIRTUAL_SOCIETY</PrereqTech>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_UNIVERSITY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_COMPUTER_NETWORK</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
+				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_ONLINE</CivicOption>
@@ -6019,8 +5863,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Orbital Prison -->
-			<BuildingClass>BUILDINGCLASS_ORBITAL_PRISON</BuildingClass>
 			<Type>BUILDING_ORBITAL_PRISON</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6035,12 +5879,9 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_NANOTUBES</Bonus>
 			</PrereqBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_MILITARY_SPACEPORT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_MILITARY_SPACEPORT</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>6490</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -6057,15 +5898,16 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>50</iCommerce>
 			</GlobalCommerceModifiers>
-			<FreeBuilding>BUILDINGCLASS_SAFETY_ORBITAL_PRISON</FreeBuilding>
+			<FreeBuilding>BUILDING_SAFETY_ORBITAL_PRISON</FreeBuilding>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_ORBITAL_PRISON</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Palace -->
-			<BuildingClass>BUILDINGCLASS_PALACE</BuildingClass>
 			<Type>BUILDING_PALACE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<iExtraPlayerInstances>1</iExtraPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6109,8 +5951,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Police Academy -->
-			<BuildingClass>BUILDINGCLASS_POLICE_ACADEMY</BuildingClass>
 			<Type>BUILDING_POLICE_ACADEMY</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6120,22 +5962,19 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_UNIVERSITY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_POLICE_STATION</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_POLICE_PRECINCT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_POLICE_STATION</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<!-- Cost -->
 			<iCost>1600</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -6182,7 +6021,7 @@
 			<!-- Security -->
 			<iEspionageDefense>25</iEspionageDefense>
 			<!-- Global -->
-			<FreeBuilding>BUILDINGCLASS_GOOD_POLICE_ACADEMY</FreeBuilding>
+			<FreeBuilding>BUILDING_GOOD_POLICE_ACADEMY</FreeBuilding>
 			<!-- Misc -->
 			<iAsset>1</iAsset>
 			<Flavors>
@@ -6203,8 +6042,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Propaganda Net -->
-			<BuildingClass>BUILDINGCLASS_PROPAGANDA_NET</BuildingClass>
 			<Type>BUILDING_PROPAGANDA_NET</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6213,16 +6052,16 @@
 			<Strategy>TXT_KEY_BUILDING_PROPAGANDA_NET_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_PROPAGANDA</PrereqTech>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_OFFICES</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_VIKING_TRADING_POST</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_OFFICES</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_PROPAGANDA</CivicOption>
@@ -6277,8 +6116,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Radio Telescope -->
-			<BuildingClass>BUILDINGCLASS_RADIO_TELESCOPE</BuildingClass>
 			<Type>BUILDING_RADIO_TELESCOPE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6293,18 +6132,15 @@
 				<Bonus>BONUS_COPPER_WIRES</Bonus>
 				<Bonus>BONUS_FIBER_OPTIC_CABLES</Bonus>
 			</PrereqBonuses>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_UNIVERSITY</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_UNIVERSITY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>2560</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -6346,8 +6182,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National Railroad Museum -->
-			<BuildingClass>BUILDINGCLASS_RAILROAD_MUSEUM</BuildingClass>
 			<Type>BUILDING_RAILROAD_MUSEUM</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6357,12 +6193,9 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_RAILROAD</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_MUSEUM</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_MUSEUM</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>1310</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -6420,8 +6253,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Red Cross -->
-			<BuildingClass>BUILDINGCLASS_RED_CROSS</BuildingClass>
 			<Type>BUILDING_RED_CROSS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6431,18 +6264,15 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MEDICINE</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_HOSPITAL</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_HOSPITAL</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_HOSPITAL</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_HOSPITAL</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>1540</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -6485,8 +6315,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Research Hospital -->
-			<BuildingClass>BUILDINGCLASS_RESEARCH_HOSPITAL</BuildingClass>
 			<Type>BUILDING_RESEARCH_HOSPITAL</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6498,16 +6328,10 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_PHARMACEUTICALS</Bonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_HOSPITAL</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LABORATORY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_HOSPITAL</BuildingType>
+				<BuildingType>BUILDING_LABORATORY</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>8290</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -6550,8 +6374,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Research Institute -->
-			<BuildingClass>BUILDINGCLASS_RUSSIAN_RESEARCH_INSTITUTE</BuildingClass>
 			<Type>BUILDING_RUSSIAN_RESEARCH_INSTITUTE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6561,16 +6385,10 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_SUPERCONDUCTORS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LABORATORY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_OFFICES</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_LABORATORY</BuildingType>
+				<BuildingType>BUILDING_OFFICES</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>3690</iCost>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -6633,8 +6451,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Secret Army Base -->
-			<BuildingClass>BUILDINGCLASS_SECRET_ARMY_BASE</BuildingClass>
 			<Type>BUILDING_SECRET_ARMY_BASE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6696,8 +6514,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Space Laboratory -->
-			<BuildingClass>BUILDINGCLASS_SPACE_LABORATORY</BuildingClass>
 			<Type>BUILDING_SPACE_LABORATORY</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6708,20 +6526,20 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_SPACE_STATIONS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_NASA</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_COMMERCIAL_SPACEPORT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_MILITARY_SPACEPORT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_NASA</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_MILITARY_SPACEPORT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<!-- Cost -->
 			<iCost>3370</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -6767,8 +6585,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Statue of Champion -->
-			<BuildingClass>BUILDINGCLASS_STATUE_OF_CHAMPION</BuildingClass>
 			<Type>BUILDING_STATUE_OF_CHAMPION</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6783,28 +6601,28 @@
 				<Bonus>BONUS_BRICKS</Bonus>
 				<Bonus>BONUS_CEMENT</Bonus>
 			</PrereqBonuses>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ARENA</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_COLOSSEUM</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_FLAVIAN</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_MINOR_LEAGUE_STADIUM</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_MAJOR_LEAGUE_STADIUM</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_ARENA</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_COLOSSEUM</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_FLAVIAN</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_MINOR_LEAGUE_STADIUM</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_MAJOR_LEAGUE_STADIUM</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<!-- Cost -->
 			<iCost>468</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -6852,8 +6670,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Strategic Grain Reserve -->
-			<BuildingClass>BUILDINGCLASS_STRATEGIC_GRAIN_RESERVE</BuildingClass>
 			<Type>BUILDING_STRATEGIC_GRAIN_RESERVE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6863,16 +6681,16 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_POTTERY</PrereqTech>
 			<bRiver>1</bRiver>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_GRANARY</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_MODERN_GRANARY</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_GRANARY</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_MODERN_GRANARY</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<!-- Cost -->
 			<iCost>250</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -6912,7 +6730,7 @@
 			<!-- Global -->
 			<bTeamShare>1</bTeamShare>
 			<iGlobalHealth>1</iGlobalHealth>
-			<FreeBuilding>BUILDINGCLASS_GRANARY</FreeBuilding>
+			<FreeBuilding>BUILDING_GRANARY</FreeBuilding>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<Flavors>
@@ -6929,8 +6747,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Supercollider -->
-			<BuildingClass>BUILDINGCLASS_SUPERCOLLIDER</BuildingClass>
 			<Type>BUILDING_SUPERCOLLIDER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6941,18 +6759,15 @@
 			<PrereqTech>TECH_SUPERCONDUCTORS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ACCELERATOR</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_ACCELERATOR</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LABORATORY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_LABORATORY</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>3690</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -6988,8 +6803,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Supreme Court -->
-			<BuildingClass>BUILDINGCLASS_SUPREME_COURT</BuildingClass>
 			<Type>BUILDING_SUPREME_COURT</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6999,18 +6814,15 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_JURISPRUDENCE</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_COURTHOUSE</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 					<iNumBuildingNeeded>5</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DISTRICT_COURTHOUSE</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_DISTRICT_COURTHOUSE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>880</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -7039,7 +6851,7 @@
 			</PropertyManipulators>
 			<!-- Global -->
 			<iAnarchyModifier>-25</iAnarchyModifier>
-			<FreeBuilding>BUILDINGCLASS_LOCAL_COURTHOUSE</FreeBuilding>
+			<FreeBuilding>BUILDING_LOCAL_COURTHOUSE</FreeBuilding>
 			<!-- Misc -->
 			<iAsset>4</iAsset>
 			<Flavors>
@@ -7060,8 +6872,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Temple of Isis -->
-			<BuildingClass>BUILDINGCLASS_TEMPLE_OF_ISIS</BuildingClass>
 			<Type>BUILDING_TEMPLE_OF_ISIS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7076,16 +6888,16 @@
 			</PrereqBonuses>
 			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
 			<StateReligion>RELIGION_KEMETISM</StateReligion>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_TEMPLE_OF_SET</BuildingClassMustNotHave>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_TEMPLE_OF_SET</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_TEMPLE_OF_OSIRIS</BuildingClassMustNotHave>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_TEMPLE_OF_OSIRIS</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 			<!-- Cost -->
 			<iCost>320</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -7142,8 +6954,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Temple of Osiris -->
-			<BuildingClass>BUILDINGCLASS_TEMPLE_OF_OSIRIS</BuildingClass>
 			<Type>BUILDING_TEMPLE_OF_OSIRIS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7158,16 +6970,16 @@
 			</PrereqBonuses>
 			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
 			<StateReligion>RELIGION_KEMETISM</StateReligion>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_TEMPLE_OF_SET</BuildingClassMustNotHave>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_TEMPLE_OF_SET</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_TEMPLE_OF_ISIS</BuildingClassMustNotHave>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_TEMPLE_OF_ISIS</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 			<!-- Cost -->
 			<iCost>352</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -7232,8 +7044,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Temple of Set -->
-			<BuildingClass>BUILDINGCLASS_TEMPLE_OF_SET</BuildingClass>
 			<Type>BUILDING_TEMPLE_OF_SET</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7248,16 +7060,16 @@
 			</PrereqBonuses>
 			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
 			<StateReligion>RELIGION_KEMETISM</StateReligion>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_TEMPLE_OF_OSIRIS</BuildingClassMustNotHave>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_TEMPLE_OF_OSIRIS</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_TEMPLE_OF_ISIS</BuildingClassMustNotHave>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_TEMPLE_OF_ISIS</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 			<!-- Cost -->
 			<iCost>432</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -7316,8 +7128,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Royal Tomb -->
-			<BuildingClass>BUILDINGCLASS_TOMB</BuildingClass>
 			<Type>BUILDING_TOMB</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7382,15 +7194,15 @@
 			<!-- Synergy -->
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDINGCLASS_PALACE</BuildingType>
+					<BuildingType>BUILDING_PALACE</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDINGCLASS_GREAT_PALACE</BuildingType>
+					<BuildingType>BUILDING_GREAT_PALACE</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDINGCLASS_VERSAILLES</BuildingType>
+					<BuildingType>BUILDING_VERSAILLES</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -7416,8 +7228,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Toxic Waste Dump -->
-			<BuildingClass>BUILDINGCLASS_TOXIC_WASTE_DUMP</BuildingClass>
 			<Type>BUILDING_TOXIC_WASTE_DUMP</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7469,8 +7281,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Travel Agency -->
-			<BuildingClass>BUILDINGCLASS_TRAVEL_AGENCY</BuildingClass>
 			<Type>BUILDING_TRAVEL_AGENCY</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7480,12 +7292,9 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_TOURISM</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_OFFICES</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_OFFICES</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SPACE_TOURISM</ObsoleteTech>
 			<!-- Cost -->
@@ -7509,88 +7318,88 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</GlobalCommerceModifiers>
-			<GlobalBuildingClassProductionModifiers>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_COMMERCIAL_AIRPORT</BuildingClassType>
+			<GlobalBuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_COMMERCIAL_AIRPORT</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_VACATION_RESORT</BuildingClassType>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_VACATION_RESORT</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_STATE_PARK</BuildingClassType>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_STATE_PARK</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_CRUISE_PORT</BuildingClassType>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_CRUISE_PORT</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_UNESCO_SITE</BuildingClassType>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_UNESCO_SITE</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_AMUSEMENT_PARK</BuildingClassType>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_AMUSEMENT_PARK</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_WATER_PARK</BuildingClassType>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_WATER_PARK</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_NHL</BuildingClassType>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_NHL</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_HOTEL</BuildingClassType>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_HOTEL</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_MOTEL</BuildingClassType>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_MOTEL</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_TOURIST_TRAP</BuildingClassType>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_TOURIST_TRAP</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_PUBLIC_BEACH</BuildingClassType>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_PUBLIC_BEACH</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_CAMP_GROUNDS</BuildingClassType>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_CAMP_GROUNDS</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_UNDERWATER_HOTEL</BuildingClassType>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_UNDERWATER_HOTEL</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_POLAR_HOTEL</BuildingClassType>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_POLAR_HOTEL</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_OUTBACK_HOTEL</BuildingClassType>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_OUTBACK_HOTEL</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_SAFARI_HOTEL</BuildingClassType>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_SAFARI_HOTEL</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_JUNGLE_HOTEL</BuildingClassType>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_JUNGLE_HOTEL</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_WILDWEST_HOTEL</BuildingClassType>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_WILDWEST_HOTEL</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_RIVER_RAFTING_DOCK</BuildingClassType>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_RIVER_RAFTING_DOCK</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
-				</BuildingClassProductionModifier>
-			</GlobalBuildingClassProductionModifiers>
+				</BuildingProductionModifier>
+			</GlobalBuildingProductionModifiers>
 			<!-- Misc -->
 			<iAsset>2</iAsset>
 			<Flavors>
@@ -7605,8 +7414,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Treasury -->
-			<BuildingClass>BUILDINGCLASS_TREASURY</BuildingClass>
 			<Type>BUILDING_TREASURY</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7616,12 +7425,9 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MONARCHY</PrereqTech>
 			<iCitiesPrereq>4</iCitiesPrereq>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>400</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -7654,8 +7460,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Triumph Column -->
-			<BuildingClass>BUILDINGCLASS_TRIUMPH_COLUMN</BuildingClass>
 			<Type>BUILDING_TRIUMPH_COLUMN</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7712,8 +7518,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- UN Mission -->
-			<BuildingClass>BUILDINGCLASS_UN_MISSION</BuildingClass>
 			<Type>BUILDING_UN_MISSION</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<VictoryPrereq>VICTORY_DIPLOMATIC</VictoryPrereq>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -7725,16 +7531,16 @@
 			<iTeamsPrereq>3</iTeamsPrereq>
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_OFFICES</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_SKYSCRAPER</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_OFFICES</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<!-- Cost -->
 			<iCost>2360</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -7754,8 +7560,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- World Bank -->
-			<BuildingClass>BUILDINGCLASS_WORLD_BANK</BuildingClass>
 			<Type>BUILDING_WORLD_BANK</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7766,12 +7572,9 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_GLOBALIZATION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_BANK</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_BANK</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>2360</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -7811,8 +7614,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Hieracosphinx Breeder -->
-			<BuildingClass>BUILDINGCLASS_HIERACOSPHINX_BREEDER</BuildingClass>
 			<Type>BUILDING_HIERACOSPHINX_BREEDER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7823,42 +7626,36 @@
 			<PrereqTech>TECH_MYTHOLOCIAL_BEASTIARY</PrereqTech>
 			<iPrereqPopulation>23</iPrereqPopulation>
 			<Bonus>BONUS_ORGANIC_COMPUTERS</Bonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_ACTIVE_AFRICAN</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_AFRICAN</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_JACKALOPE_BREEDER</BuildingClassMustNotHave>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_LOCAL_AFRICAN</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_JACKALOPE_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_PEGASUS_BREEDER</BuildingClassMustNotHave>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_PEGASUS_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_PHOENIX_BREEDER</BuildingClassMustNotHave>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_PHOENIX_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_QILIN_BREEDER</BuildingClassMustNotHave>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_QILIN_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_QUETZALCOATL_BREEDER</BuildingClassMustNotHave>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_QUETZALCOATL_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_RAINBOW_SERPENT_BREEDER</BuildingClassMustNotHave>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 			<!-- Cost -->
 			<iCost>12310</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -7879,8 +7676,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Jackalope Breeder -->
-			<BuildingClass>BUILDINGCLASS_JACKALOPE_BREEDER</BuildingClass>
 			<Type>BUILDING_JACKALOPE_BREEDER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7891,38 +7688,35 @@
 			<PrereqTech>TECH_MYTHOLOCIAL_BEASTIARY</PrereqTech>
 			<iPrereqPopulation>23</iPrereqPopulation>
 			<Bonus>BONUS_ORGANIC_COMPUTERS</Bonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NORTH_AMERICAN</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_HIERACOSPHINX_BREEDER</BuildingClassMustNotHave>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_HIERACOSPHINX_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_PEGASUS_BREEDER</BuildingClassMustNotHave>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_PEGASUS_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_PHOENIX_BREEDER</BuildingClassMustNotHave>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_PHOENIX_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_QILIN_BREEDER</BuildingClassMustNotHave>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_QILIN_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_QUETZALCOATL_BREEDER</BuildingClassMustNotHave>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_QUETZALCOATL_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_RAINBOW_SERPENT_BREEDER</BuildingClassMustNotHave>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 			<!-- Cost -->
 			<iCost>12310</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -7943,8 +7737,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Pegasus Breeder -->
-			<BuildingClass>BUILDINGCLASS_PEGASUS_BREEDER</BuildingClass>
 			<Type>BUILDING_PEGASUS_BREEDER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7955,38 +7749,35 @@
 			<PrereqTech>TECH_MYTHOLOCIAL_BEASTIARY</PrereqTech>
 			<iPrereqPopulation>23</iPrereqPopulation>
 			<Bonus>BONUS_ORGANIC_COMPUTERS</Bonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_EUROPEAN</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_HIERACOSPHINX_BREEDER</BuildingClassMustNotHave>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CULTURE_LOCAL_EUROPEAN</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_HIERACOSPHINX_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_JACKALOPE_BREEDER</BuildingClassMustNotHave>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_JACKALOPE_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_PHOENIX_BREEDER</BuildingClassMustNotHave>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_PHOENIX_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_QILIN_BREEDER</BuildingClassMustNotHave>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_QILIN_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_QUETZALCOATL_BREEDER</BuildingClassMustNotHave>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_QUETZALCOATL_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_RAINBOW_SERPENT_BREEDER</BuildingClassMustNotHave>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 			<!-- Cost -->
 			<iCost>12310</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -8007,8 +7798,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Phoenix Breeder -->
-			<BuildingClass>BUILDINGCLASS_PHOENIX_BREEDER</BuildingClass>
 			<Type>BUILDING_PHOENIX_BREEDER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8019,38 +7810,35 @@
 			<PrereqTech>TECH_MYTHOLOCIAL_BEASTIARY</PrereqTech>
 			<iPrereqPopulation>23</iPrereqPopulation>
 			<Bonus>BONUS_ORGANIC_COMPUTERS</Bonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_HIERACOSPHINX_BREEDER</BuildingClassMustNotHave>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_HIERACOSPHINX_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_JACKALOPE_BREEDER</BuildingClassMustNotHave>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_JACKALOPE_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_PEGASUS_BREEDER</BuildingClassMustNotHave>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_PEGASUS_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_QILIN_BREEDER</BuildingClassMustNotHave>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_QILIN_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_QUETZALCOATL_BREEDER</BuildingClassMustNotHave>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_QUETZALCOATL_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_RAINBOW_SERPENT_BREEDER</BuildingClassMustNotHave>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 			<!-- Cost -->
 			<iCost>12310</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -8071,8 +7859,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Qilin Breeder -->
-			<BuildingClass>BUILDINGCLASS_QILIN_BREEDER</BuildingClass>
 			<Type>BUILDING_QILIN_BREEDER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8083,38 +7871,35 @@
 			<PrereqTech>TECH_MYTHOLOCIAL_BEASTIARY</PrereqTech>
 			<iPrereqPopulation>23</iPrereqPopulation>
 			<Bonus>BONUS_ORGANIC_COMPUTERS</Bonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_ASIAN</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_HIERACOSPHINX_BREEDER</BuildingClassMustNotHave>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_HIERACOSPHINX_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_JACKALOPE_BREEDER</BuildingClassMustNotHave>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_JACKALOPE_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_PEGASUS_BREEDER</BuildingClassMustNotHave>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_PEGASUS_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_PHOENIX_BREEDER</BuildingClassMustNotHave>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_PHOENIX_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_QUETZALCOATL_BREEDER</BuildingClassMustNotHave>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_QUETZALCOATL_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_RAINBOW_SERPENT_BREEDER</BuildingClassMustNotHave>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 			<!-- Cost -->
 			<iCost>12310</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -8135,8 +7920,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Quetzalcoatl Breeder -->
-			<BuildingClass>BUILDINGCLASS_QUETZALCOATL_BREEDER</BuildingClass>
 			<Type>BUILDING_QUETZALCOATL_BREEDER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8147,38 +7932,35 @@
 			<PrereqTech>TECH_MYTHOLOCIAL_BEASTIARY</PrereqTech>
 			<iPrereqPopulation>23</iPrereqPopulation>
 			<Bonus>BONUS_ORGANIC_COMPUTERS</Bonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_HIERACOSPHINX_BREEDER</BuildingClassMustNotHave>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_HIERACOSPHINX_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_JACKALOPE_BREEDER</BuildingClassMustNotHave>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_JACKALOPE_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_PEGASUS_BREEDER</BuildingClassMustNotHave>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_PEGASUS_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_PHOENIX_BREEDER</BuildingClassMustNotHave>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_PHOENIX_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_QILIN_BREEDER</BuildingClassMustNotHave>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_QILIN_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_RAINBOW_SERPENT_BREEDER</BuildingClassMustNotHave>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 			<!-- Cost -->
 			<iCost>12310</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -8199,8 +7981,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Rainbow Serpent Breeder -->
-			<BuildingClass>BUILDINGCLASS_RAINBOW_SERPENT_BREEDER</BuildingClass>
 			<Type>BUILDING_RAINBOW_SERPENT_BREEDER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8211,38 +7993,35 @@
 			<PrereqTech>TECH_MYTHOLOCIAL_BEASTIARY</PrereqTech>
 			<iPrereqPopulation>23</iPrereqPopulation>
 			<Bonus>BONUS_ORGANIC_COMPUTERS</Bonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_OCEANIAN</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_HIERACOSPHINX_BREEDER</BuildingClassMustNotHave>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_HIERACOSPHINX_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_JACKALOPE_BREEDER</BuildingClassMustNotHave>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_JACKALOPE_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_PEGASUS_BREEDER</BuildingClassMustNotHave>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_PEGASUS_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_PHOENIX_BREEDER</BuildingClassMustNotHave>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_PHOENIX_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_QILIN_BREEDER</BuildingClassMustNotHave>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_QILIN_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_QUETZALCOATL_BREEDER</BuildingClassMustNotHave>
+				</PrereqNotBuilding>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_QUETZALCOATL_BREEDER</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 			<!-- Cost -->
 			<iCost>12310</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -8263,8 +8042,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Spy Training Facility -->
-			<BuildingClass>BUILDINGCLASS_SPY_TRAINING_FACILITY</BuildingClass>
 			<Type>BUILDING_SPY_TRAINING_FACILITY</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<NotGameOption>GAMEOPTION_NO_ESPIONAGE</NotGameOption>
 			<Description>TXT_KEY_BUILDING_SPY_TRAINING_FACILITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SPY_TRAINING_FACILITY_PEDIA</Civilopedia>
@@ -8325,8 +8104,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Heavy Water Production Plant -->
-			<BuildingClass>BUILDINGCLASS_HEAVY_WATER_PRODUCTION_PLANT</BuildingClass>
 			<Type>BUILDING_HEAVY_WATER_PRODUCTION_PLANT</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_HEAVY_WATER_PRODUCTION_PLANT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HEAVY_WATER_PRODUCTION_PLANT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HEAVY_WATER_PRODUCTION_PLANT_STRATEGY</Strategy>
@@ -8342,12 +8121,9 @@
 			<iPrereqPopulation>12</iPrereqPopulation>
 			<bRiver>1</bRiver>
 			<bPrereqPower>1</bPrereqPower>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_FACTORY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FACTORY</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>2060</iCost>
 			<!-- Main effects -->
@@ -8382,8 +8158,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Garden City -->
-			<BuildingClass>BUILDINGCLASS_GARDEN_CITY</BuildingClass>
 			<Type>BUILDING_GARDEN_CITY</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_GARDEN_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GARDEN_CITY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GARDEN_CITY_STRATEGY</Strategy>
@@ -8416,8 +8192,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Fusion Power Plant -->
-			<BuildingClass>BUILDINGCLASS_FUSION_PLANT</BuildingClass>
 			<Type>BUILDING_FUSION_PLANT</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<SpecialBuildingType>SPECIALBUILDING_FUSION_PLANT</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_FUSION_PLANT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FUSION_PLANT_PEDIA</Civilopedia>
@@ -8432,16 +8208,10 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUSION</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LABORATORY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_POWER_LINES</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_LABORATORY</BuildingType>
+				<BuildingType>BUILDING_POWER_LINES</BuildingType>
+			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>6490</iCost>
 			<!-- Main effects -->
@@ -8453,7 +8223,7 @@
 			<!-- Misc. Effects -->
 			<bPower>1</bPower>
 			<iNumPopulationEmployed>1</iNumPopulationEmployed>
-			<FreeAreaBuilding>BUILDINGCLASS_GOOD_FUSION</FreeAreaBuilding>
+			<FreeAreaBuilding>BUILDING_GOOD_FUSION</FreeAreaBuilding>
 			<!-- Other -->
 			<Flavors>
 				<Flavor>

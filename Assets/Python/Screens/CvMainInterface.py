@@ -301,14 +301,13 @@ class CvMainInterface:
 			iNumBuildingInfos = GC.getNumBuildingInfos()
 			for iBuilding in xrange(iNumBuildingInfos):
 				CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-				iBuildingClass = CvBuildingInfo.getBuildingClassType()
 				szName = CvBuildingInfo.getDescription()
 				if CvBuildingInfo.getProductionCost() < 1:
-					aBuildingList2.append((szName, iBuilding, CvBuildingInfo, iBuildingClass))
-				elif isLimitedWonderClass(iBuildingClass):
-					aBuildingList1.append((szName, iBuilding, CvBuildingInfo, iBuildingClass))
+					aBuildingList2.append((szName, iBuilding, CvBuildingInfo))
+				elif isLimitedWonder(iBuilding):
+					aBuildingList1.append((szName, iBuilding, CvBuildingInfo))
 				else:
-					aBuildingList0.append((szName, iBuilding, CvBuildingInfo, iBuildingClass))
+					aBuildingList0.append((szName, iBuilding, CvBuildingInfo))
 			# Bonus infos:
 			aBonusList1 = []
 			aBonusList2 = []
@@ -2948,7 +2947,7 @@ class CvMainInterface:
 		ROW_0 = "BldgListRow%d"
 		iRow = 0
 		y = -2
-		for szName, i, CvBuildingInfo, iBuildingClass in aBuildingList:
+		for szName, i, CvBuildingInfo in aBuildingList:
 			iBuilt = CyCity.getNumBuilding(i)
 			if iBuilt:
 				szStat = ""
@@ -2973,7 +2972,7 @@ class CvMainInterface:
 							szStat += str(-iHappiness) + iconUnhappy
 
 					for j in xrange(YieldTypes.NUM_YIELD_TYPES):
-						iYield = iBuilt * (CvBuildingInfo.getYieldChange(j) +  CyCity.getBuildingYieldChange(iBuildingClass, j) + CyTeam.getBuildingYieldChange(i, j))
+						iYield = iBuilt * (CvBuildingInfo.getYieldChange(j) +  CyCity.getBuildingYieldChange(i, j) + CyTeam.getBuildingYieldChange(i, j))
 						if iYield:
 							szStat += str(iYield) + iconYieldList[j]
 							self.yields.addBuilding(j, iYield)
@@ -3619,8 +3618,7 @@ class CvMainInterface:
 			i = 0
 			while i < iNumInGroup:
 				iType = CyCity.getBuildingListType(0, i)
-				iBuildingClass = GC.getBuildingInfo(iType).getBuildingClassType()
-				if isLimitedWonderClass(iBuildingClass):
+				if isLimitedWonder(iType):
 					break
 				i += 1
 				BTN = GC.getBuildingInfo(iType).getButton()
@@ -3660,18 +3658,18 @@ class CvMainInterface:
 					continue
 				for i in xrange(iNumInGroup):
 					iType = CyCity.getBuildingListType(iGroup, i)
-					CvBuildingInfo = GC.getBuildingInfo(iType)
-					iBuildingClass = CvBuildingInfo.getBuildingClassType()
-					if not isLimitedWonderClass(iBuildingClass):
+
+					if not isLimitedWonder(iType):
 						break
+					CvBuildingInfo = GC.getBuildingInfo(iType)
 
 					if CvBuildingInfo.isNoLimit():
 						aList0.append(iType)
 
-					elif isNationalWonderClass(iBuildingClass):
+					elif isNationalWonder(iType):
 						aList1.append(iType)
 
-					elif isTeamWonderClass(iBuildingClass):
+					elif isTeamWonder(iType):
 						aList2.append(iType)
 					else:
 						aList3.append(iType)

@@ -440,11 +440,6 @@ int CyCity::getCurrentProductionDifference(bool bIgnoreFood, bool bOverflow)
 	) : -1;
 }
 
-int CyCity::getBuildingProductionModifier(int /*BuildingTypes*/ iBuilding)
-{
-	return m_pCity ? m_pCity->getProductionModifier((BuildingTypes)iBuilding) : -1;
-}
-
 int CyCity::getProjectProductionModifier(int /*ProjectTypes*/ eProject)
 {
 	return m_pCity ? m_pCity->getProductionModifier((ProjectTypes)eProject) : -1;
@@ -2750,55 +2745,55 @@ int CyCity::visiblePopulation()
 	return 0;
 }
 
-int CyCity::getBuildingYieldChange(int /*BuildingClassTypes*/ eBuildingClass, int /*YieldTypes*/ eYield) const
+int CyCity::getBuildingYieldChange(int /*BuildingTypes*/ eBuilding, int /*YieldTypes*/ eYield) const
 {
-	return m_pCity ? m_pCity->getBuildingYieldChange((BuildingClassTypes)eBuildingClass, (YieldTypes)eYield) : 0;
+	return m_pCity ? m_pCity->getBuildingYieldChange((BuildingTypes)eBuilding, (YieldTypes)eYield) : 0;
 }
 
-void CyCity::setBuildingYieldChange(int /*BuildingClassTypes*/ eBuildingClass, int /*YieldTypes*/ eYield, int iChange)
+void CyCity::setBuildingYieldChange(int /*BuildingTypes*/ eBuilding, int /*YieldTypes*/ eYield, int iChange)
 {
 	if (m_pCity)
 	{
-		m_pCity->setBuildingYieldChange((BuildingClassTypes)eBuildingClass, (YieldTypes)eYield, iChange);
+		m_pCity->setBuildingYieldChange((BuildingTypes)eBuilding, (YieldTypes)eYield, iChange);
 	}
 }
 
-int CyCity::getBuildingCommerceChange(int /*BuildingClassTypes*/ eBuildingClass, int /*CommerceTypes*/ eCommerce) const
+int CyCity::getBuildingCommerceChange(int /*BuildingTypes*/ eBuilding, int /*CommerceTypes*/ eCommerce) const
 {
-	return m_pCity ? m_pCity->getBuildingCommerceChange((BuildingClassTypes)eBuildingClass, (CommerceTypes)eCommerce) : 0;
+	return m_pCity ? m_pCity->getBuildingCommerceChange((BuildingTypes)eBuilding, (CommerceTypes)eCommerce) : 0;
 }
 
-void CyCity::setBuildingCommerceChange(int /*BuildingClassTypes*/ eBuildingClass, int /*CommerceTypes*/ eCommerce, int iChange)
+void CyCity::setBuildingCommerceChange(int /*BuildingTypes*/ eBuilding, int /*CommerceTypes*/ eCommerce, int iChange)
 {
 	if (m_pCity)
 	{
-		m_pCity->setBuildingCommerceChange((BuildingClassTypes)eBuildingClass, (CommerceTypes)eCommerce, iChange);
+		m_pCity->setBuildingCommerceChange((BuildingTypes)eBuilding, (CommerceTypes)eCommerce, iChange);
 	}
 }
 
-int CyCity::getBuildingHappyChange(int /*BuildingClassTypes*/ eBuildingClass) const
+int CyCity::getBuildingHappyChange(int /*BuildingTypes*/ eBuilding) const
 {
-	return m_pCity ? m_pCity->getBuildingHappyChange((BuildingClassTypes)eBuildingClass) : 0;
+	return m_pCity ? m_pCity->getBuildingHappyChange((BuildingTypes)eBuilding) : 0;
 }
 
-void CyCity::setBuildingHappyChange(int /*BuildingClassTypes*/ eBuildingClass, int iChange)
+void CyCity::setBuildingHappyChange(int /*BuildingTypes*/ eBuilding, int iChange)
 {
 	if (m_pCity)
 	{
-		m_pCity->setBuildingHappyChange((BuildingClassTypes)eBuildingClass, iChange);
+		m_pCity->setBuildingHappyChange((BuildingTypes)eBuilding, iChange);
 	}
 }
 
-int CyCity::getBuildingHealthChange(int /*BuildingClassTypes*/ eBuildingClass) const
+int CyCity::getBuildingHealthChange(int /*BuildingTypes*/ eBuilding) const
 {
-	return m_pCity ? m_pCity->getBuildingHealthChange((BuildingClassTypes)eBuildingClass) : 0;
+	return m_pCity ? m_pCity->getBuildingHealthChange((BuildingTypes)eBuilding) : 0;
 }
 
-void CyCity::setBuildingHealthChange(int /*BuildingClassTypes*/ eBuildingClass, int iChange)
+void CyCity::setBuildingHealthChange(int /*BuildingTypes*/ eBuilding, int iChange)
 {
 	if (m_pCity)
 	{
-		m_pCity->setBuildingHealthChange((BuildingClassTypes)eBuildingClass, iChange);
+		m_pCity->setBuildingHealthChange((BuildingTypes)eBuilding, iChange);
 	}
 }
 
@@ -2889,16 +2884,16 @@ void CyCity::changeUnitProductionModifier(int /*UnitTypes*/ eIndex, int iChange)
 	}
 }
 
-int CyCity::getBuildingClassProductionModifier(int /*BuildingClassTypes*/ eIndex) const
+int CyCity::getBuildingProductionModifier(int /*BuildingTypes*/ eIndex) const
 {
-	return (m_pCity ? m_pCity->getBuildingClassProductionModifier((BuildingClassTypes)eIndex) : 0);
+	return (m_pCity ? m_pCity->getBuildingProductionModifier((BuildingTypes)eIndex) : 0);
 }
 
-void CyCity::changeBuildingClassProductionModifier(int /*BuildingClassTypes*/ eIndex, int iChange)
+void CyCity::changeBuildingProductionModifier(int /*BuildingTypes*/ eIndex, int iChange)
 {
 	if (m_pCity)
 	{
-		m_pCity->changeBuildingClassProductionModifier((BuildingClassTypes)eIndex, iChange);
+		m_pCity->changeBuildingProductionModifier((BuildingTypes)eIndex, iChange);
 	}
 }
 

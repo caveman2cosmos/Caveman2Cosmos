@@ -13,7 +13,7 @@
 			<Type>EVENT_ANTIMONARCHISTS_2</Type>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_ANDEAN_CATHEDRAL</BuildingClass>
+					<Building>BUILDING_ANDEAN_CATHEDRAL</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -23,7 +23,7 @@
 			<Type>EVENT_STAINED_GLASS_1</Type>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_ANDEAN_CATHEDRAL</BuildingClass>
+					<Building>BUILDING_ANDEAN_CATHEDRAL</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
