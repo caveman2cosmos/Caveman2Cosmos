@@ -985,17 +985,10 @@ void CvCityAI::AI_chooseProduction()
 
 	// only clear the dirty bit if we actually do a check, multiple items might be queued
 	AI_setChooseProductionDirty(false);
-/************************************************************************************************/
-/* Afforess	                  Start		 04/22/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	if(GC.getUSE_AI_CHOOSE_PRODUCTION_CALLBACK())
+
+	if(GC.getUSE_AI_CHOOSE_PRODUCTION_CALLBACK() && Cy::call<bool>(PYGameModule, "AI_chooseProduction", Cy::Args() << this))
 	{
-		if (Cy::call<bool>(PYGameModule, "AI_chooseProduction", Cy::Args() << this))
-		{
-			return;
-		}
+		return;
 	}
 
 	bool bInhibitUnits = false;
@@ -1024,10 +1017,6 @@ void CvCityAI::AI_chooseProduction()
 			}
 		}
 	}
-
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	CvArea* pArea = area();
 	CvArea* pWaterArea = waterArea(true);
@@ -1182,17 +1171,6 @@ void CvCityAI::AI_chooseProduction()
 			}
 		}
 	}
-/************************************************************************************************/
-/* Afforess	                  Start		 06/29/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	// AIAndy: Not used here at the moment
-	//bool bDevelopingCity = isDevelopingCity();
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-
 
 	bool bChooseWorker = false;
 
@@ -4254,12 +4232,9 @@ void CvCityAI::AI_chooseProduction()
 	}
 	commerceWeights[COMMERCE_ESPIONAGE] = 10;	//	Is this ever really worthwhile?
 
-	if (!AI_chooseProcess(NO_COMMERCE, commerceWeights))
+	if (!AI_chooseProcess(NO_COMMERCE, commerceWeights) && !AI_finalProcessSelection())
 	{
-		if (!AI_finalProcessSelection())
-		{
-			FErrorMsg(CvString::format("AI could not choose production for city %S", m_szName.c_str()).c_str());
-		}
+		FErrorMsg(CvString::format("AI could not choose production for city %S", m_szName.c_str()).c_str());
 	}
 }
 /************************************************************************************************/

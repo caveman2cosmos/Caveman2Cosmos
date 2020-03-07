@@ -3086,8 +3086,6 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 {
 	PROFILE_FUNC()
 
-	const CvCivilizationInfo& kCivilization = GC.getCivilizationInfo(getCivilizationType());
-
 	if (probabilityEverConstructable != NULL)
 	{
 		*probabilityEverConstructable = 0;
@@ -3102,7 +3100,7 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 
 
 	bool bQual = false;
-	if (kCivilization.isStronglyRestricted() && isNPC())
+	if (GC.getCivilizationInfo(getCivilizationType()).isStronglyRestricted() && isNPC())
 	{
 		for (int iI = 0; iI < kBuilding.getNumEnabledCivilizationTypes(); iI++)
 		{
@@ -3343,11 +3341,6 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 			{
 				return false;
 			}
-			/************************************************************************************************/
-			/* Afforess	                  Start		 02/17/10                                               */
-			/*                                                                                              */
-			/*                                                                                              */
-			/************************************************************************************************/
 			bool bValid = false;
 			bool bRequiresBonus = false;
 			for (int i = 0; i < GC.getNUM_CORPORATION_PREREQ_BONUSES(); ++i)
@@ -3372,9 +3365,6 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 				}
 				return false;
 			}
-			/************************************************************************************************/
-			/* Afforess	                     END                                                            */
-			/************************************************************************************************/
 		}
 
 		if (!bAffliction) //bAffliction ONLY applies during the Outbreaks and Afflictions option being on!
