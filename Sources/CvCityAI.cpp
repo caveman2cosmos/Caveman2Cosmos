@@ -16620,7 +16620,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 		PROFILE("CvCityAI::CalculateAllBuildingValues.PreLoop");
 		for (int iBuilding = 0; iBuilding < numBuildingInfos; iBuilding++)
 		{
-			const BuildingTypes eBuilding = static_cast<BuildingTypes>(iI);
+			const BuildingTypes eBuilding = static_cast<BuildingTypes>(iBuilding);
 			if ( !canConstruct(eBuilding) )
 			{
 				continue;
@@ -16630,7 +16630,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 			for (int iJ = 0; iJ < numBuildingInfos; iJ++)
 			{
-				const BuildingTypes eJLoopBuilding = static_cast<BuildingTypes>(iI);
+				const BuildingTypes eJLoopBuilding = static_cast<BuildingTypes>(iJ);
 				if (buildingsToCalculate.find(eJLoopBuilding) == buildingsToCalculate.end())
 				{
 					if (GC.getBuildingInfo(eJLoopBuilding).isReplaceBuilding(iBuilding))
