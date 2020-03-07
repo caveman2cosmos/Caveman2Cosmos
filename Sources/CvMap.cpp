@@ -1746,8 +1746,6 @@ void CvMap::toggleUnitsDisplay()
 			{
 				for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 				{
-					//CvBuildingInfo & kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
-					//if (isNationalWonderClass((BuildingClassTypes)(GC.getBuildingInfo((BuildingTypes)iI).getBuildingClassType())))
 					if (pCity->getNumRealBuilding((BuildingTypes)iI) > 0)
 					{
 						int iBuiltTime = pCity->getBuildingOriginalTime((BuildingTypes)iI);
@@ -1798,34 +1796,6 @@ void CvMap::toggleUnitsDisplay()
 		}
 	}
 
-	/*for (int iPlayer = 0; iPlayer < MAX_PLAYERS; ++iPlayer)
-	{
-		CvPlayerAI& kPlayer = GET_PLAYER((PlayerTypes) iPlayer);
-		if (kPlayer.isAlive())
-		{
-			int iLoop;
-			for (CvCity* pCity = kPlayer.firstCity(&iLoop); pCity != NULL; pCity = kPlayer.nextCity(&iLoop))
-			{
-				for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
-				{
-					//CvBuildingInfo & kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
-					//if (isNationalWonderClass((BuildingClassTypes)(GC.getBuildingInfo((BuildingTypes)iI).getBuildingClassType())))
-					if (pCity->getNumRealBuilding((BuildingTypes)iI) > 0)
-					{
-						//if (pCity->getBuildingOriginalTime((BuildingTypes)iI) < pabFirstBuilt[iI])
-						//{
-						//	pabFirstBuilt[iI] = pCity->getBuildingOriginalTime((BuildingTypes)iI);
-						//}
-						if (paiFirstBuilt[iI] > 400)
-						{
-							pCity->setNumRealBuilding((BuildingTypes)iI, 0);
-						}
-					}
-				}
-			}
-		}
-	}*/
-
 	// Assemble table
 	CvWString szTable;
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
@@ -1833,12 +1803,12 @@ void CvMap::toggleUnitsDisplay()
 		/*if ((pabFirstBuilt[iI] > 400) && (pabFirstBuilt[iI] <= 600))
 		{
 			CvWString szBuffer;
-			szBuffer.Format(L"%s : %d, %d ", GC.getBuildingInfo((BuildingTypes)iI).getText(), pabFirstBuilt[iI], GC.getGame().getBuildingClassCreatedCount((BuildingClassTypes)GC.getBuildingInfo((BuildingTypes)iI).getBuildingClassType()));
+			szBuffer.Format(L"%s : %d, %d ", GC.getBuildingInfo((BuildingTypes)iI).getText(), pabFirstBuilt[iI], GC.getGame().getBuildingCreatedCount((BuildingTypes)iI));
 			szBuffer.append(CvWString(GC.getBuildingInfo((BuildingTypes)iI).getArtInfo()->getNIF()));
 			AddDLLMessage(GC.getGame().getActivePlayer(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_EXPOSED", MESSAGE_TYPE_INFO);
 		}*/
 		CvWString szBuffer;
-		szBuffer.Format(L"%s,%d,%d,", GC.getBuildingInfo((BuildingTypes)iI).getText(), paiFirstBuilt[iI], GC.getGame().getBuildingClassCreatedCount((BuildingClassTypes)GC.getBuildingInfo((BuildingTypes)iI).getBuildingClassType()));
+		szBuffer.Format(L"%s,%d,%d,", GC.getBuildingInfo((BuildingTypes)iI).getText(), paiFirstBuilt[iI], GC.getGame().getBuildingCreatedCount((BuildingTypes)iI));
 		szBuffer.append(CvWString(GC.getBuildingInfo((BuildingTypes)iI).getArtInfo()->getNIF()));
 		szTable.append(szBuffer);
 		szBuffer.clear();

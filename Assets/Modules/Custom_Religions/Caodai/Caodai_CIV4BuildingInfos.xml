@@ -7,7 +7,6 @@
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CAODAI_CATHEDRAL</BuildingClass>
 			<Type>BUILDING_CAODAI_CATHEDRAL</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_CAO_DAI</DependencyType>
@@ -56,12 +55,12 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CAODAI_TEMPLE</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CAODAI_TEMPLE</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -70,7 +69,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CAODAI_MONASTERY</BuildingClass>
 			<Type>BUILDING_CAODAI_MONASTERY</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_CAO_DAI</DependencyType>
@@ -116,11 +114,11 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CAODAI_SHRINE</BuildingClass>
 			<Type>BUILDING_CAODAI_SHRINE</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_CAO_DAI</DependencyType>
 			</AndDependencyTypes>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_CAODAI_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CAODAI_SHRINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CAODAI_SHRINE_STRATEGY</Strategy>
@@ -157,7 +155,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CAODAI_TEMPLE</BuildingClass>
 			<Type>BUILDING_CAODAI_TEMPLE</Type>
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_CAO_DAI</DependencyType>

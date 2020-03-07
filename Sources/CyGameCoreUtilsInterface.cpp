@@ -44,7 +44,7 @@ void CyGameCoreUtilsPythonInterface()
 	python::def("getPopulationScore", cyGetPopulationScore, "int (int iPopulation)");
 	python::def("getLandPlotsScore", cyGetLandPlotsScore, "int (int iPopulation)");
 	python::def("getTechScore", cyGetTechScore, "int (int /*TechTypes*/ eTech)");
-	python::def("getWonderScore", cyGetWonderScore, "int (int /*BuildingClassTypes*/ eWonderClass)");
+	python::def("getWonderScore", cyGetWonderScore, "int (int /*BuildingTypes*/ eWonder)");
 	python::def("finalImprovementUpgrade", cyFinalImprovementUpgrade, "int /*ImprovementTypes*/ (int /*ImprovementTypes*/ eImprovement, int iCount)");
 
 	python::def("getWorldSizeMaxConscript", cyGetWorldSizeMaxConscript, "int (int /*CivicTypes*/ eCivic)");
@@ -56,10 +56,10 @@ void CyGameCoreUtilsPythonInterface()
 	python::def("isWorldUnit", cyIsWorldUnit, "bool (int /*UnitTypes*/ eUnit)");
 	python::def("isNationalUnit", cyIsNationalUnit, "bool (int /*UnitTypes*/ eUnit)");
 	python::def("isLimitedUnit", cyIsLimitedUnit, "bool (int /*UnitTypes*/ eUnit)");
-	python::def("isWorldWonderClass", cyIsWorldWonderClass, "bool (int /*BuildingClassTypes*/ eBuildingClass)");
-	python::def("isTeamWonderClass", cyIsTeamWonderClass, "bool (int /*BuildingClassTypes*/ eBuildingClass)");
-	python::def("isNationalWonderClass", cyIsNationalWonderClass, "bool (int /*BuildingClassTypes*/ eBuildingClass)");
-	python::def("isLimitedWonderClass", cyIsLimitedWonderClass, "bool (int /*BuildingClassTypes*/ eBuildingClass)");
+	python::def("isWorldWonder", cyIsWorldWonder, "bool (int /*BuildingTypes*/ eBuilding)");
+	python::def("isTeamWonder", cyIsTeamWonder, "bool (int /*BuildingTypes*/ eBuilding)");
+	python::def("isNationalWonder", cyIsNationalWonder, "bool (int /*BuildingTypes*/ eBuilding)");
+	python::def("isLimitedWonder", cyIsLimitedWonder, "bool (int /*BuildingTypes*/ eBuilding)");
 	python::def("isWorldProject", cyIsWorldProject, "bool (int /*ProjectTypes*/ eProject)");
 	python::def("isTeamProject", cyIsTeamProject, "bool (int /*ProjectTypes*/ eProject)");
 	python::def("isLimitedProject", cyIsLimitedProject, "bool (int /*ProjectTypes*/ eProject)");

@@ -128,7 +128,6 @@ public:
 	void changeProduction(int iChange);
 	int getProductionModifier();
 	int getCurrentProductionDifference(bool bIgnoreFood, bool bOverflow);
-	int getBuildingProductionModifier(int /*BuildingTypes*/ iBuilding);
 	int getProjectProductionModifier(int /*ProjectTypes*/ eProject);
 
 	int getExtraProductionDifference(int iExtra);
@@ -489,10 +488,10 @@ public:
 	bool isValidTerrainForBuildings(int /*BuildingTypes*/ eIndex) const;
 	bool hasFreshWater() const;
 	bool canUpgradeUnit(int /*UnitTypes*/ eUnit) const;
+	int getBuildingProductionModifier(int /*BuildingTypes*/ eIndex) const;
+	void changeBuildingProductionModifier(int /*BuildingTypes*/ eIndex, int iChange);
 	int getUnitProductionModifier(int /*UnitTypes*/ eIndex) const; //Exposed to Python
 	void changeUnitProductionModifier(int /*UnitTypes*/ eIndex, int iChange);
-	int getBuildingClassProductionModifier(int /*BuildingClassTypes*/ eIndex) const;
-	void changeBuildingClassProductionModifier(int /*BuildingClassTypes*/ eIndex, int iChange);
 	int getBonusDefenseChanges(int /*CommerceTypes*/ eIndex) const;
 	void changeBonusDefenseChanges(int /*CommerceTypes*/ eIndex, int iChange);
 	int getBonusCommerceRateModifier(int /*CommerceTypes*/ eIndex) const;
@@ -633,14 +632,14 @@ public:
 	void setWallOverridePoints(const python::tuple& kPoints); /* points are given in world space ... i.e. PlotXToPointX, etc */
 	python::tuple getWallOverridePoints() const;
 
-	int getBuildingYieldChange(int /*BuildingClassTypes*/ eBuildingClass, int /*YieldTypes*/ eYield) const;
-	void setBuildingYieldChange(int /*BuildingClassTypes*/ eBuildingClass, int /*YieldTypes*/ eYield, int iChange);
-	int getBuildingCommerceChange(int /*BuildingClassTypes*/ eBuildingClass, int /*CommerceTypes*/ eCommerce) const;
-	void setBuildingCommerceChange(int /*BuildingClassTypes*/ eBuildingClass, int /*CommerceTypes*/ eCommerce, int iChange);
-	int getBuildingHappyChange(int /*BuildingClassTypes*/ eBuildingClass) const;
-	void setBuildingHappyChange(int /*BuildingClassTypes*/ eBuildingClass, int iChange);
-	int getBuildingHealthChange(int /*BuildingClassTypes*/ eBuildingClass) const;
-	void setBuildingHealthChange(int /*BuildingClassTypes*/ eBuildingClass, int iChange);
+	int getBuildingYieldChange(int /*BuildingTypes*/ eBuilding, int /*YieldTypes*/ eYield) const;
+	void setBuildingYieldChange(int /*BuildingTypes*/ eBuilding, int /*YieldTypes*/ eYield, int iChange);
+	int getBuildingCommerceChange(int /*BuildingTypes*/ eBuilding, int /*CommerceTypes*/ eCommerce) const;
+	void setBuildingCommerceChange(int /*BuildingTypes*/ eBuilding, int /*CommerceTypes*/ eCommerce, int iChange);
+	int getBuildingHappyChange(int /*BuildingTypes*/ eBuilding) const;
+	void setBuildingHappyChange(int /*BuildingTypes*/ eBuilding, int iChange);
+	int getBuildingHealthChange(int /*BuildingTypes*/ eBuilding) const;
+	void setBuildingHealthChange(int /*BuildingTypes*/ eBuilding, int iChange);
 
 	int getLiberationPlayer(bool bConquest);
 	void liberate(bool bConquest);

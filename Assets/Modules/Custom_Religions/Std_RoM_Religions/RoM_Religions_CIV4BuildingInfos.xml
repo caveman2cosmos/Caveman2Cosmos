@@ -8,8 +8,8 @@
 	<BuildingInfos>
 <!-- EgyptMyth -->
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_PTAH</BuildingClass>
 			<Type>BUILDING_PTAH</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_PTAH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PTAH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PTAH_STRATEGY</Strategy>
@@ -26,7 +26,7 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_SCULPTURES</Bonus>
 			</PrereqBonuses>
-			<FreeBuilding>BUILDINGCLASS_SCHOOL_OF_SCRIBES</FreeBuilding>
+			<FreeBuilding>BUILDING_SCHOOL_OF_SCRIBES</FreeBuilding>
 			<iCost>1056</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -78,8 +78,8 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_TOTH</BuildingClass>
 			<Type>BUILDING_TOTH</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_TOTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TOTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TOTH_STRATEGY</Strategy>
@@ -169,14 +169,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_EGYPT_MYTH_SHRINE</BuildingClass>
 			<Type>BUILDING_EGYPT_MYTH_SHRINE</Type>
 			<MovieDefineTag>ART_DEF_MOVIE_EGYPT_MYTH_SHRINE</MovieDefineTag>
 		</BuildingInfo>
 <!-- Hellenism -->
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ERECTION</BuildingClass>
 			<Type>BUILDING_ERECTION</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_ERECTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ERECTION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ERECTION_STRATEGY</Strategy>
@@ -245,12 +244,9 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_HELLENIC_CATHEDRAL</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_HELLENIC_CATHEDRAL</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -270,8 +266,8 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FIDIAS</BuildingClass>
 			<Type>BUILDING_FIDIAS</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_FIDIAS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FIDIAS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_FIDIAS_STRATEGY</Strategy>
@@ -339,12 +335,9 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SCULPTOR</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SCULPTOR</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -364,8 +357,8 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NECROMANTEION</BuildingClass>
 			<Type>BUILDING_NECROMANTEION</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_NECROMANTEION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NECROMANTEION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NECROMANTEION_STRATEGY</Strategy>
@@ -431,12 +424,9 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_HELLENIC_CATHEDRAL</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_HELLENIC_CATHEDRAL</BuildingType>
+			</PrereqInCityBuildings>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
 					<SpecialistType>SPECIALIST_PRIEST</SpecialistType>
@@ -463,8 +453,8 @@
 		</BuildingInfo>
 <!-- Nagualismo -->
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_PYRAMID_OF_THE_MOON</BuildingClass>
 			<Type>BUILDING_PYRAMID_OF_THE_MOON</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_PYRAMID_OF_THE_MOON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PYRAMID_OF_THE_MOON_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PYRAMID_OF_THE_MOON_STRATEGY</Strategy>
@@ -542,8 +532,8 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_PYRAMID_OF_THE_SUN</BuildingClass>
 			<Type>BUILDING_PYRAMID_OF_THE_SUN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_PYRAMID_OF_THE_SUN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PYRAMID_OF_THE_SUN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PYRAMID_OF_THE_SUN_STRATEGY</Strategy>
@@ -622,17 +612,16 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_MESOAMERICAN_SHRINE</BuildingClass>
 			<Type>BUILDING_MESOAMERICAN_SHRINE</Type>
 			<MovieDefineTag>ART_DEF_MOVIE_MESOAMERICAN_SHRINE</MovieDefineTag>
 		</BuildingInfo>
 <!-- Zoroasterism -->
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_HAMMURABI</BuildingClass>
 			<Type>BUILDING_HAMMURABI</Type>
 			<AndDependencyTypes>
              	<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
  			</AndDependencyTypes>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_HAMMURABI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HAMMURABI_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HAMMURABI_STRATEGY</Strategy>
@@ -644,7 +633,7 @@
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<PrereqTech>TECH_DUALISM</PrereqTech>
 			<Bonus>BONUS_STONE</Bonus>
-			<FreeBuilding>BUILDINGCLASS_COURTHOUSE</FreeBuilding>
+			<FreeBuilding>BUILDING_COURTHOUSE</FreeBuilding>
 			<iCost>1008</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -697,11 +686,11 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NIMRUD_PALACE</BuildingClass>
 			<Type>BUILDING_NIMRUD_PALACE</Type>
 			<AndDependencyTypes>
              	<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
  			</AndDependencyTypes>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_NIMRUD_PALACE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NIMRUD_PALACE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NIMRUD_PALACE_STRATEGY</Strategy>
@@ -780,8 +769,8 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_BEHISTUN_INSCRIPTION</BuildingClass>
 			<Type>BUILDING_BEHISTUN_INSCRIPTION</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_BEHISTUN_INSCRIPTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BEHISTUN_INSCRIPTION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BEHISTUN_INSCRIPTION_STRATEGY</Strategy>
@@ -823,8 +812,8 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_PIR_E_NARAKI</BuildingClass>
 			<Type>BUILDING_PIR_E_NARAKI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_PIR_E_NARAKI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PIR_E_NARAKI_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PIR_E_NARAKI_STRATEGY</Strategy>
@@ -870,8 +859,8 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SETI_PIR</BuildingClass>
 			<Type>BUILDING_SETI_PIR</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_SETI_PIR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SETI_PIR_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SETI_PIR_STRATEGY</Strategy>
@@ -913,7 +902,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_TOWER_OF_SILENCE</BuildingClass>
 			<Type>BUILDING_TOWER_OF_SILENCE</Type>
 			<Description>TXT_KEY_BUILDING_TOWER_OF_SILENCE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TOWER_OF_SILENCE_PEDIA</Civilopedia>
@@ -948,15 +936,12 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_BURIAL_TRADITION_SKY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_BURIAL_TRADITION_SKY</BuildingType>
+			</PrereqInCityBuildings>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_FUNERARY_SERVICES</BuildingClassType>
+					<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings>

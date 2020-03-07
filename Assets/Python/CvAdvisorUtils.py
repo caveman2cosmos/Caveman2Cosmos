@@ -479,9 +479,9 @@ def cityAdvise(CyCity, iPlayer):
 
 						for iBuildingX in xrange(GC.getNumBuildingInfos()):
 
-							CvBuildingInfoX = GC.getBuildingInfo(iBuildingX)
+							if isLimitedWonder(iBuildingX): continue
 
-							if isLimitedWonderClass(CvBuildingInfoX.getBuildingClassType()): continue
+							CvBuildingInfoX = GC.getBuildingInfo(iBuildingX)
 
 							iValue = CvBuildingInfoX.getHealth()
 							if iValue <= iBestValue: continue
@@ -517,9 +517,9 @@ def cityAdvise(CyCity, iPlayer):
 
 						for iBuildingX in xrange(GC.getNumBuildingInfos()):
 
-							CvBuildingInfoX = GC.getBuildingInfo(iBuildingX)
+							if isLimitedWonder(iBuildingX): continue
 
-							if isLimitedWonderClass(CvBuildingInfoX.getBuildingClassType()): continue
+							CvBuildingInfoX = GC.getBuildingInfo(iBuildingX)
 
 							iValue = CvBuildingInfoX.getHappiness()
 							if iValue <= iBestValue: continue
@@ -555,9 +555,9 @@ def cityAdvise(CyCity, iPlayer):
 
 						for iBuildingX in xrange(GC.getNumBuildingInfos()):
 
-							CvBuildingInfoX = GC.getBuildingInfo(iBuildingX)
+							if isLimitedWonder(iBuildingX): continue
 
-							if isLimitedWonderClass(CvBuildingInfoX.getBuildingClassType()): continue
+							CvBuildingInfoX = GC.getBuildingInfo(iBuildingX)
 
 							iValue = CvBuildingInfoX.getDefenseModifier()
 							if iValue <= iBestValue: continue
@@ -593,9 +593,9 @@ def cityAdvise(CyCity, iPlayer):
 
 						for iBuildingX in xrange(GC.getNumBuildingInfos()):
 
-							CvBuildingInfoX = GC.getBuildingInfo(iBuildingX)
+							if isLimitedWonder(iBuildingX): continue
 
-							if isLimitedWonderClass(CvBuildingInfoX.getBuildingClassType()): continue
+							CvBuildingInfoX = GC.getBuildingInfo(iBuildingX)
 
 							iValue = CvBuildingInfoX.getMaintenanceModifier()
 							if iValue >= iBestValue: continue
@@ -631,9 +631,9 @@ def cityAdvise(CyCity, iPlayer):
 
 						for iBuildingX in xrange(GC.getNumBuildingInfos()):
 
-							CvBuildingInfoX = GC.getBuildingInfo(iBuildingX)
+							if isLimitedWonder(iBuildingX): continue
 
-							if isLimitedWonderClass(CvBuildingInfoX.getBuildingClassType()): continue
+							CvBuildingInfoX = GC.getBuildingInfo(iBuildingX)
 
 							iValue = CvBuildingInfoX.getObsoleteSafeCommerceChange(CommerceTypes.COMMERCE_CULTURE)
 							if iValue <= iBestValue: continue
@@ -669,9 +669,9 @@ def cityAdvise(CyCity, iPlayer):
 
 						for iBuildingX in xrange(GC.getNumBuildingInfos()):
 
-							CvBuildingInfoX = GC.getBuildingInfo(iBuildingX)
+							if isLimitedWonder(iBuildingX): continue
 
-							if isLimitedWonderClass(CvBuildingInfoX.getBuildingClassType()): continue
+							CvBuildingInfoX = GC.getBuildingInfo(iBuildingX)
 
 							iValue = CvBuildingInfoX.getCommerceModifier(CommerceTypes.COMMERCE_GOLD)
 							if iValue <= iBestValue: continue
@@ -707,9 +707,9 @@ def cityAdvise(CyCity, iPlayer):
 
 						for iBuildingX in xrange(GC.getNumBuildingInfos()):
 
-							CvBuildingInfoX = GC.getBuildingInfo(iBuildingX)
+							if isLimitedWonder(iBuildingX): continue
 
-							if isLimitedWonderClass(CvBuildingInfoX.getBuildingClassType()): continue
+							CvBuildingInfoX = GC.getBuildingInfo(iBuildingX)
 
 							iValue = CvBuildingInfoX.getCommerceModifier(CommerceTypes.COMMERCE_RESEARCH)
 							if iValue <= iBestValue: continue
@@ -745,9 +745,9 @@ def cityAdvise(CyCity, iPlayer):
 
 						for iBuildingX in xrange(GC.getNumBuildingInfos()):
 
-							CvBuildingInfoX = GC.getBuildingInfo(iBuildingX)
+							if isLimitedWonder(iBuildingX): continue
 
-							if isLimitedWonderClass(CvBuildingInfoX.getBuildingClassType()): continue
+							CvBuildingInfoX = GC.getBuildingInfo(iBuildingX)
 
 							iValue = CvBuildingInfoX.getSeaPlotYieldChange(YieldTypes.YIELD_FOOD)
 							if iValue <= iBestValue: continue

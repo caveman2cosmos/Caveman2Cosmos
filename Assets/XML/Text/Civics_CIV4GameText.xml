@@ -4623,22 +4623,22 @@
 		<Polish>[ICON_BULLET]Umożliwia budowę jednostek specjalnych bez: [COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_BUILDING_CLASS_PRODUCTION_MOD</Tag>
-		<English>%[SPACE]Faster Construction of[SPACE]</English>
-		<French>%[SPACE]Construction rapide de [SPACE]</French>
-		<German>%[SPACE]schnellere Konstruktion von[SPACE]</German>
-		<Italian>%[SPACE]costruzione più veloce di[SPACE]</Italian>
-		<Spanish>%[SPACE]de aumento de velocidad de construcción de[SPACE]</Spanish>
-		<Polish>%[SPACE]szybciej:[SPACE]</Polish>
+		<Tag>TXT_KEY_CIVIC_BUILDING_PRODUCTION_MOD</Tag>
+		<English>% Faster Construction of[SPACE]</English>
+		<French>% Construction rapide de[SPACE]</French>
+		<German>% schnellere Konstruktion von[SPACE]</German>
+		<Italian>% costruzione più veloce di[SPACE]</Italian>
+		<Spanish>% de aumento de velocidad de construcción de[SPACE]</Spanish>
+		<Polish>% szybciej:[SPACE]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_BUILDING_CLASS_PRODUCTION_SLOW</Tag>
-		<English>%[SPACE]Slower Construction of[SPACE]</English>
-		<French>%[SPACE]Construction Lente de[SPACE]</French>
-		<German>%[SPACE]langsamere Konstruktion von[SPACE]</German>
-		<Italian>%[SPACE]costruzione più lenta di[SPACE]</Italian>
-		<Spanish>%[SPACE]de disminución de velocidad de construcción de[SPACE]</Spanish>
-		<Polish>%[SPACE]wolniejsza budowa jeśli w mieście jest:[SPACE]</Polish>
+		<Tag>TXT_KEY_CIVIC_BUILDING_PRODUCTION_SLOW</Tag>
+		<English>% Slower Construction of[SPACE]</English>
+		<French>% Construction Lente de[SPACE]</French>
+		<German>% langsamere Konstruktion von[SPACE]</German>
+		<Italian>% costruzione più lenta di[SPACE]</Italian>
+		<Spanish>% de disminución de velocidad de construcción de[SPACE]</Spanish>
+		<Polish>% wolniejsza budowa jeśli w mieście jest:[SPACE]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_BUILDING_COMMERCE_CHANGE</Tag>

@@ -320,14 +320,13 @@ void CyInfoPythonInterface3()
 		.def("isFreePromotionUnitCombats", &CvTraitInfo::isFreePromotionUnitCombats, "bool (int i, int j)")
 	;
 
-
 	python::class_<CvWorldInfo, python::bases<CvInfoBase> >("CvWorldInfo")
 
 		.def("getDefaultPlayers", &CvWorldInfo::getDefaultPlayers, "int ()")
 		.def("getUnitNameModifier", &CvWorldInfo::getUnitNameModifier, "int ()")
 		.def("getTargetNumCities", &CvWorldInfo::getTargetNumCities, "int ()")
 		.def("getNumFreeBuildingBonuses", &CvWorldInfo::getNumFreeBuildingBonuses, "int ()")
-		.def("getBuildingClassPrereqModifier", &CvWorldInfo::getBuildingClassPrereqModifier, "int ()")
+		.def("getBuildingPrereqModifier", &CvWorldInfo::getBuildingPrereqModifier, "int ()")
 		.def("getMaxConscriptModifier", &CvWorldInfo::getMaxConscriptModifier, "int ()")
 		.def("getWarWearinessModifier", &CvWorldInfo::getWarWearinessModifier, "int ()")
 		.def("getGridWidth", &CvWorldInfo::getGridWidth, "int ()")

@@ -272,7 +272,7 @@ void BuildingYieldChange::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ_OBJECT_START(wrapper);
 
-	WRAPPER_READ_CLASS_ENUM(wrapper, "BuildingYieldChange", REMAPPED_CLASS_TYPE_BUILDING_CLASSES,(int*)&eBuildingClass);
+	WRAPPER_READ_CLASS_ENUM(wrapper, "BuildingYieldChange", REMAPPED_CLASS_TYPE_BUILDINGS,(int*)&eBuilding);
 	WRAPPER_READ(wrapper, "BuildingYieldChange",(int*)&eYield);
 	WRAPPER_READ(wrapper, "BuildingYieldChange",&iChange);
 
@@ -287,7 +287,7 @@ void BuildingYieldChange::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
 
-	WRAPPER_WRITE_CLASS_ENUM(wrapper, "BuildingYieldChange", REMAPPED_CLASS_TYPE_BUILDING_CLASSES, eBuildingClass);
+	WRAPPER_WRITE_CLASS_ENUM(wrapper, "BuildingYieldChange", REMAPPED_CLASS_TYPE_BUILDINGS, eBuilding);
 	WRAPPER_WRITE(wrapper, "BuildingYieldChange", eYield);
 	WRAPPER_WRITE(wrapper, "BuildingYieldChange", iChange);
 
@@ -302,7 +302,7 @@ void BuildingCommerceChange::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ_OBJECT_START(wrapper);
 
-	WRAPPER_READ_CLASS_ENUM(wrapper, "BuildingCommerceChange",REMAPPED_CLASS_TYPE_BUILDING_CLASSES,(int*)&eBuildingClass);
+	WRAPPER_READ_CLASS_ENUM(wrapper, "BuildingCommerceChange",REMAPPED_CLASS_TYPE_BUILDINGS,(int*)&eBuilding);
 	WRAPPER_READ(wrapper, "BuildingCommerceChange",(int*)&eCommerce);
 	WRAPPER_READ(wrapper, "BuildingCommerceChange",&iChange);
 
@@ -341,7 +341,7 @@ void BuildingCommerceChange::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
 
-	WRAPPER_WRITE_CLASS_ENUM(wrapper, "BuildingCommerceChange", REMAPPED_CLASS_TYPE_BUILDING_CLASSES, eBuildingClass);
+	WRAPPER_WRITE_CLASS_ENUM(wrapper, "BuildingCommerceChange", REMAPPED_CLASS_TYPE_BUILDINGS, eBuilding);
 	WRAPPER_WRITE(wrapper, "BuildingCommerceChange", eCommerce);
 	WRAPPER_WRITE(wrapper, "BuildingCommerceChange", iChange);
 
@@ -361,7 +361,7 @@ void BuildingYieldModifier::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ_OBJECT_START(wrapper);
 
-	WRAPPER_READ_CLASS_ENUM(wrapper, "BuildingYieldModifier",REMAPPED_CLASS_TYPE_BUILDING_CLASSES,(int*)&eBuildingClass);
+	WRAPPER_READ_CLASS_ENUM(wrapper, "BuildingYieldModifier",REMAPPED_CLASS_TYPE_BUILDINGS,(int*)&eBuilding);
 	WRAPPER_READ(wrapper, "BuildingYieldModifier",(int*)&eYield);
 	WRAPPER_READ(wrapper, "BuildingYieldModifier",&iChange);
 
@@ -376,7 +376,7 @@ void BuildingYieldModifier::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
 
-	WRAPPER_WRITE_CLASS_ENUM(wrapper, "BuildingYieldModifier", REMAPPED_CLASS_TYPE_BUILDING_CLASSES, eBuildingClass);
+	WRAPPER_WRITE_CLASS_ENUM(wrapper, "BuildingYieldModifier", REMAPPED_CLASS_TYPE_BUILDINGS, eBuilding);
 	WRAPPER_WRITE(wrapper, "BuildingYieldModifier", eYield);
 	WRAPPER_WRITE(wrapper, "BuildingYieldModifier", iChange);
 
@@ -391,7 +391,7 @@ void BuildingCommerceModifier::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ_OBJECT_START(wrapper);
 
-	WRAPPER_READ_CLASS_ENUM(wrapper, "BuildingCommerceModifier",REMAPPED_CLASS_TYPE_BUILDING_CLASSES,(int*)&eBuildingClass);
+	WRAPPER_READ_CLASS_ENUM(wrapper, "BuildingCommerceModifier",REMAPPED_CLASS_TYPE_BUILDINGS,(int*)&eBuilding);
 	WRAPPER_READ(wrapper, "BuildingCommerceModifier",(int*)&eCommerce);
 	WRAPPER_READ(wrapper, "BuildingCommerceModifier",&iChange);
 
@@ -406,7 +406,7 @@ void BuildingCommerceModifier::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
 
-	WRAPPER_WRITE_CLASS_ENUM(wrapper, "BuildingCommerceModifier", REMAPPED_CLASS_TYPE_BUILDING_CLASSES, eBuildingClass);
+	WRAPPER_WRITE_CLASS_ENUM(wrapper, "BuildingCommerceModifier", REMAPPED_CLASS_TYPE_BUILDINGS, eBuilding);
 	WRAPPER_WRITE(wrapper, "BuildingCommerceModifier", eCommerce);
 	WRAPPER_WRITE(wrapper, "BuildingCommerceModifier", iChange);
 

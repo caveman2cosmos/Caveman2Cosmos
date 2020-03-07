@@ -53,17 +53,17 @@ bool BuildingFilterCanBuild::isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity
 
 bool BuildingFilterIsWonder::isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
 {
-	return isLimitedWonderClass((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType());
+	return isLimitedWonder(eBuilding);
 }
 
 bool BuildingFilterIsGreatWonder::isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
 {
-	return isWorldWonderClass((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType());
+	return isWorldWonder(eBuilding);
 }
 
 bool BuildingFilterIsNationalWonder::isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
 {
-	return isNationalWonderClass((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType());
+	return isNationalWonder(eBuilding);
 }
 
 BuildingFilterIsCommerce::BuildingFilterIsCommerce(CommerceTypes eCommerce, bool bInvert) : BuildingFilterBase(bInvert)

@@ -95,7 +95,6 @@ class CvTurnTimerInfo;
 class CvProcessInfo;
 class CvVoteInfo;
 class CvProjectInfo;
-class CvBuildingClassInfo;
 class CvBuildingInfo;
 class CvSpecialBuildingInfo;
 class CvActionInfo;
@@ -786,11 +785,6 @@ public:
 	std::vector<CvProjectInfo*>& getProjectInfos();
 	CvProjectInfo& getProjectInfo(ProjectTypes e) const;
 	CvInfoReplacements<CvProjectInfo>* getProjectInfoReplacements();
-
-	int getNumBuildingClassInfos() const;
-	std::vector<CvBuildingClassInfo*>& getBuildingClassInfos();
-	CvBuildingClassInfo& getBuildingClassInfo(BuildingClassTypes eBuildingClassNum) const;
-	CvInfoReplacements<CvBuildingClassInfo>* getBuildingClassInfoReplacements();
 
 	int getNumBuildingInfos() const;
 	std::vector<CvBuildingInfo*>& getBuildingInfos();
@@ -1505,8 +1499,6 @@ protected:
 	std::vector<CvVoteInfo*> m_paVoteInfo;
 	std::vector<CvProjectInfo*> m_paProjectInfo;
 	CvInfoReplacements<CvProjectInfo> m_ProjectInfoReplacements;
-	std::vector<CvBuildingClassInfo*> m_paBuildingClassInfo;
-	CvInfoReplacements<CvBuildingClassInfo> m_BuildingClassInfoReplacements;
 	std::vector<CvBuildingInfo*> m_paBuildingInfo;
 	CvInfoReplacements<CvBuildingInfo> m_BuildingInfoReplacements;
 	std::vector<CvSpecialBuildingInfo*> m_paSpecialBuildingInfo;

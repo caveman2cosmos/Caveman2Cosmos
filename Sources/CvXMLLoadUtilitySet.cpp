@@ -978,7 +978,6 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	LoadGlobalClassInfo(GC.getPromotionLineInfos(), "CIV4PromotionLineInfos", "Units", L"/Civ4PromotionLineInfos/PromotionLineInfos/PromotionLineInfo", false);
 	//TB Promotion Line Mod begin
 	LoadGlobalClassInfo(GC.getPromotionInfos(), "CIV4PromotionInfos", "Units", L"/Civ4PromotionInfos/PromotionInfos/PromotionInfo", true, GC.getPromotionInfoReplacements());
-	LoadGlobalClassInfo(GC.getBuildingClassInfos(), "CIV4BuildingClassInfos", "Buildings", L"/Civ4BuildingClassInfos/BuildingClassInfos/BuildingClassInfo", false, GC.getBuildingClassInfoReplacements());
 	LoadGlobalClassInfo(GC.getHurryInfos(), "CIV4HurryInfo", "GameInfo", L"/Civ4HurryInfo/HurryInfos/HurryInfo", false);
 	LoadGlobalClassInfo(GC.getCorporationInfos(), "CIV4CorporationInfo", "GameInfo", L"/Civ4CorporationInfo/CorporationInfos/CorporationInfo", false, GC.getCorporationInfoReplacements());
 	// TGA indexation - important must do before anything else
@@ -990,12 +989,7 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	}
 
 	LoadGlobalClassInfo(GC.getSpecialBuildingInfos(), "CIV4SpecialBuildingInfos", "Buildings", L"/Civ4SpecialBuildingInfos/SpecialBuildingInfos/SpecialBuildingInfo", false, GC.getSpecialBuildingInfoReplacements());
-	LoadGlobalClassInfo(GC.getBuildingInfos(), "CIV4BuildingInfos", "Buildings", L"/Civ4BuildingInfos/BuildingInfos/BuildingInfo", false, GC.getBuildingInfoReplacements());
-	for (int i=0; i < GC.getNumBuildingClassInfos(); ++i)
-	{
-		GC.getBuildingClassInfo((BuildingClassTypes)i).readPass3();
-		GC.getBuildingClassInfoReplacements()->readPass3();
-	}
+	LoadGlobalClassInfo(GC.getBuildingInfos(), "CIV4BuildingInfos", "Buildings", L"/Civ4BuildingInfos/BuildingInfos/BuildingInfo", true, GC.getBuildingInfoReplacements());
 	LoadGlobalClassInfo(GC.getCivicInfos(), "CIV4CivicInfos", "GameInfo", L"/Civ4CivicInfos/CivicInfos/CivicInfo", false, GC.getCivicInfoReplacements());
 	for (int i=0; i < GC.getNumVoteSourceInfos(); ++i)
 	{

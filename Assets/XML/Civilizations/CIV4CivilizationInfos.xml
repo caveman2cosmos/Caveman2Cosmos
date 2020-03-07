@@ -82,16 +82,16 @@
 				<City>TXT_KEY_CITY_NAME_COLUMBUS</City>
 				<City>TXT_KEY_CITY_NAME_LE_BAM</City>
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_NORTH_AMERICAN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -192,16 +192,16 @@
 				<City>TXT_KEY_CITY_NAME_AD_DAR_AL_BAIDAA</City><!-- 1068–1200 -->
 				<City>TXT_KEY_CITY_NAME_EL_MANSURA</City><!-- 1219 -->
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -291,16 +291,16 @@
 				<City>TXT_KEY_CITY_NAME_GASUR</City>
 				<City>TXT_KEY_CITY_NAME_CALAH</City>
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -387,16 +387,16 @@
 				<City>Xitla</City>
 				<City>Taxco</City>
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_NORTH_AMERICAN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -485,16 +485,16 @@
 				<City>TXT_KEY_CITY_NAME_AWAN</City>
 				<City>TXT_KEY_CITY_NAME_RIBLAH</City>
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -583,16 +583,16 @@
 				<City>TXT_KEY_CITY_NAME_CHERSON</City>
 				<City>TXT_KEY_CITY_NAME_IUSTINIANA_NOVA</City>
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -686,16 +686,16 @@
 				<City>TXT_KEY_CITY_NAME_OLBIA</City>
 				<City>TXT_KEY_CITY_NAME_ZAMA</City>
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_AFRICAN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_AFRICAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -796,16 +796,16 @@
 				<City>TXT_KEY_CITY_NAME_DIVONA</City><!-- Named after a celtic godess, today Cahors (France) -->
 				<City>TXT_KEY_CITY_NAME_CATUMAGOS</City><!-- Means battlefield -->
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_EUROPEAN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -896,16 +896,16 @@
 				<City>TXT_KEY_CITY_NAME_XIKANG</City>
 				<City>Paikang</City>
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_ASIAN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_ASIAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -1004,16 +1004,16 @@
 				<City>TXT_KEY_CITY_NAME_SEMNA</City>
 				<City>TXT_KEY_CITY_NAME_AMARA</City>
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_AFRICAN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_AFRICAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -1108,16 +1108,16 @@
 				<City>TXT_KEY_CITY_NAME_LANCASTER</City>
 				<City>TXT_KEY_CITY_NAME_BLACKPOOL</City>
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_EUROPEAN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -1212,16 +1212,16 @@
 				<City>Bishoftu</City>
 				<City>Finote Selam</City>
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_AFRICAN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_AFRICAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -1316,16 +1316,16 @@
 				<City>Saint Denis</City>
 				<City>Meaux</City>
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_EUROPEAN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -1427,16 +1427,16 @@
 				<City>TXT_KEY_CITY_NAME_HILDESHEIM</City>
 				<City>TXT_KEY_CITY_NAME_ERLANGEN</City>
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_EUROPEAN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -1540,16 +1540,16 @@
 				<City>TXT_KEY_CITY_NAME_KIOS</City>
 				<City>TXT_KEY_CITY_NAME_DEMETRIAS</City><!-- 294 BC -->
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_EUROPEAN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -1674,16 +1674,16 @@
 				<City>Til Barsip</City>
 				<City>Sam'al</City>
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -1770,16 +1770,16 @@
 				<City>TXT_KEY_CITY_NAME_PASSAU</City>
 				<City>TXT_KEY_CITY_NAME_HAGENAU</City>
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_EUROPEAN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -1876,16 +1876,16 @@
 				<City>TXT_KEY_CITY_NAME_TITIQAQA</City>
 				<City>TXT_KEY_CITY_NAME_WILLKAPAMPA</City><!-- 1539 -->
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_SOUTH_AMERICAN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -2020,16 +2020,16 @@
 				<City>TXT_KEY_CITY_NAME_NAINITAL</City><!-- 1841 -->
 				<City>TXT_KEY_CITY_NAME_KALYANI</City><!-- 1950 -->
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_ASIAN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_ASIAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -2123,16 +2123,16 @@
 				<City>Echigo</City>
 				<City>TXT_KEY_CITY_NAME_SUO</City>
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_ASIAN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_ASIAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -2219,16 +2219,16 @@
 				<City>Khum Sare</City>
 				<City>Kaoh Nheaek</City>
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_ASIAN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_ASIAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -2314,16 +2314,16 @@
 				<City>Ulijin</City>
 				<City>Sacheon</City>
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_ASIAN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_ASIAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -2415,16 +2415,16 @@
 				<City>TXT_KEY_CITY_NAME_NIORO</City>
 				<City>TXT_KEY_CITY_NAME_SEGOU_KOURA</City>
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_AFRICAN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_AFRICAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -2510,16 +2510,16 @@
 				<City>TXT_KEY_CITY_NAME_MANI</City>
 				<City>Belise</City>
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_NORTH_AMERICAN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -2610,16 +2610,16 @@
 				<City>TXT_KEY_CITY_NAME_BAYANHONGOR</City>
 				<City>TXT_KEY_CITY_NAME_ALTAI</City>
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_ASIAN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_ASIAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -2728,16 +2728,16 @@
 				<City>TXT_KEY_CITY_NAME_AYUHWASI</City><!-- 1700-1745 -->
 				<City>TXT_KEY_CITY_NAME_KYKOTSMOVI</City><!-- 1890 -->
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_NORTH_AMERICAN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -2828,16 +2828,16 @@
 				<City>TXT_KEY_CITY_NAME_LELYSTAD</City>
 				<City>TXT_KEY_CITY_NAME_ALMERE</City>
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_EUROPEAN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -2926,16 +2926,16 @@
 				<City>Eleskirt</City>
 				<City>Ahlat</City>
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -3040,16 +3040,16 @@
 				<City>TXT_KEY_CITY_NAME_HECATOMPYLOS</City>
 				<City>TXT_KEY_CITY_NAME_GANDUTAVA</City>
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -3144,16 +3144,16 @@
 				<City>TXT_KEY_CITY_NAME_ALMADA</City>
 				<City>TXT_KEY_CITY_NAME_LEIXOES</City>
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_EUROPEAN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -3258,16 +3258,16 @@
 				<City>TXT_KEY_CITY_NAME_ADRIA</City>
 				<City>TXT_KEY_CITY_NAME_ARTAXATA</City>
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_EUROPEAN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -3358,16 +3358,16 @@
 				<City>Petrozavodsk</City>
 				<City>Kaliningrad</City>
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_EUROPEAN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -3466,16 +3466,16 @@
 				<City>TXT_KEY_CITY_NAME_KANCHANABURI</City>
 				<City>TXT_KEY_CITY_NAME_PRACHUAP_KHIRI_KHAN</City>
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_ASIAN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_ASIAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -3565,16 +3565,16 @@
 				<City>Puertollano</City>
 				<City>Oliva</City>
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_EUROPEAN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -3663,16 +3663,16 @@
 				<City>Erumma</City>
 				<City>Parasu</City>
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -3766,16 +3766,16 @@
 				<City>TXT_KEY_CITY_NAME_SKARA</City><!-- 1100 -->
 				<City>TXT_KEY_CITY_NAME_THRAELLBORG</City>
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_EUROPEAN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -3865,16 +3865,16 @@
 				<City>TXT_KEY_CITY_NAME_MPONGOZA</City>
 				<City>TXT_KEY_CITY_NAME_INANDA</City>
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_AFRICAN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_AFRICAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -3960,16 +3960,16 @@
 				<City>Collie</City>
 				<City>Northam</City>
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_OCEANIAN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_OCEANIAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -4060,16 +4060,16 @@
 				<City>Storvorde</City>
 				<City>Nibe</City>
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_EUROPEAN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -4177,16 +4177,16 @@
 				<City>TXT_KEY_CITY_NAME_TINAWATAWA</City><!-- 1665-1670 -->
 				<City>TXT_KEY_CITY_NAME_GANNEIOUS</City><!-- 1665-1670 -->
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_NORTH_AMERICAN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
@@ -4386,16 +4386,16 @@
 				<City>Ord</City>
 				<City>Zga</City>
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_NEANDERTHAL</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_LOCAL_NEANDERTHAL</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_NEANDERTHAL</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<FreeTechs>
 				<FreeTech>
 					<TechType>TECH_CAVE_DWELLING</TechType>

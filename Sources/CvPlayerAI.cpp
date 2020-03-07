@@ -1903,11 +1903,11 @@ void CvPlayerAI::AI_doCentralizedProduction()
 	{
 		if( pLoopCity->isProductionBuilding() )
 		{
-			if( isLimitedWonderClass((BuildingClassTypes)(GC.getBuildingInfo(pLoopCity->getProductionBuilding()).getBuildingClassType())))
+			if (isLimitedWonder(pLoopCity->getProductionBuilding()))
 			{
 				iLimitedWonderCities++;
 
-				if (isWorldWonderClass((BuildingClassTypes)(GC.getBuildingInfo(pLoopCity->getProductionBuilding()).getBuildingClassType())))
+				if (isWorldWonder(pLoopCity->getProductionBuilding()))
 				{
 					iWorldWonderCities++;
 				}
@@ -1924,16 +1924,6 @@ void CvPlayerAI::AI_doCentralizedProduction()
 					iWorldWonderCities++;
 				}
 			}
-		}
-	}
-
-	// Check for any global wonders to build
-	for (iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
-	{
-		if (isWorldWonderClass((BuildingClassTypes)iI))
-		{
-
-			//canConstruct(
 		}
 	}
 
@@ -6811,26 +6801,23 @@ int CvPlayerAI::AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bE
 	int iBestLandBuildingValue = 0;
 	bool bIsCultureBuilding = false;
 #endif
-	BuildingTypes eLoopBuilding;
 	int iValue = 0;
 	int iExistingCultureBuildingCount = 0;
 
 	bEnablesWonder = false;
 
-	CvCivilizationInfo& kCivilizationInfo = GC.getCivilizationInfo(getCivilizationType());
-
-	for (int iJ = 0; iJ < GC.getNumBuildingClassInfos(); iJ++)
+	for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
 	{
-		eLoopBuilding = ((BuildingTypes)(kCivilizationInfo.getCivilizationBuildings(iJ)));
+		const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iJ);
 
 		if (GC.getGame().canEverConstruct(eLoopBuilding))
 		{
 			CvBuildingInfo& kLoopBuilding = GC.getBuildingInfo(eLoopBuilding);
-			if (isTechRequiredForBuilding((eTech), eLoopBuilding))
+			if (isTechRequiredForBuilding(eTech, eLoopBuilding))
 			{
-				if (isWorldWonderClass((BuildingClassTypes)iJ))
+				if (isWorldWonder(eLoopBuilding))
 				{
-					if (!(GC.getGame().isBuildingClassMaxedOut((BuildingClassTypes)iJ)))
+					if (!GC.getGame().isBuildingMaxedOut(eLoopBuilding))
 					{
 						bEnablesWonder = true;
 					}
@@ -6891,13 +6878,7 @@ int CvPlayerAI::AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bE
 				//	it somwhat if its a special build
 				iBuildingValue += kLoopBuilding.getAIWeight()/(kLoopBuilding.getProductionCost() == -1 ? 5 : 1);
 
-				if ((GC.getBuildingClassInfo((BuildingClassTypes)iJ).getDefaultBuildingIndex()) != (kCivilizationInfo.getCivilizationBuildings(iJ)))
-				{
-					//UB
-					iBuildingValue += 600;
-				}
-
-				if( !isLimitedWonderClass((BuildingClassTypes)iJ) )
+				if (!isLimitedWonder(eLoopBuilding))
 				{
 					if (kLoopBuilding.getCommerceChange(COMMERCE_CULTURE) > 0 || kLoopBuilding.getObsoleteSafeCommerceChange(COMMERCE_CULTURE) > 0)
 					{
@@ -6905,12 +6886,12 @@ int CvPlayerAI::AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bE
 					}
 				}
 
-				if (AI_isDoVictoryStrategy(AI_VICTORY_CULTURE2))
-				{
-					int iMultiplier = (isLimitedWonderClass((BuildingClassTypes)iJ) ? 1 : 3);
-					iBuildingValue += (150 * (kLoopBuilding.getCommerceChange(COMMERCE_CULTURE) + kLoopBuilding.getObsoleteSafeCommerceChange(COMMERCE_CULTURE))) * iMultiplier;
-					iBuildingValue += kLoopBuilding.getCommerceModifier(COMMERCE_CULTURE) * 4 * iMultiplier ;
-				}
+                if (AI_isDoVictoryStrategy(AI_VICTORY_CULTURE2))
+                {
+                    const int iMultiplier = (isLimitedWonder(eLoopBuilding) ? 1 : 3);
+                    iBuildingValue += (150 * (kLoopBuilding.getCommerceChange(COMMERCE_CULTURE) + kLoopBuilding.getObsoleteSafeCommerceChange(COMMERCE_CULTURE))) * iMultiplier;
+                    iBuildingValue += kLoopBuilding.getCommerceModifier(COMMERCE_CULTURE) * 4 * iMultiplier ;
+                }
 
 				if (bFinancialTrouble)
 				{
@@ -6927,7 +6908,7 @@ int CvPlayerAI::AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bE
 					// reduce by a factor based on how many cities we have with that relgion
 					if (iTeamCityCount > 0)
 					{
-						int iCitiesWithReligion = GET_TEAM(getTeam()).getHasReligionCount(eReligion);
+						const int iCitiesWithReligion = GET_TEAM(getTeam()).getHasReligionCount(eReligion);
 
 						iBuildingValue *= (4 + iCitiesWithReligion);
 						iBuildingValue /= (4 + iTeamCityCount);
@@ -6952,9 +6933,9 @@ int CvPlayerAI::AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bE
 					{
 						if (getTotalPopulation() > 5)
 						{
-							if (isWorldWonderClass((BuildingClassTypes)iJ))
+							if (isWorldWonder(eLoopBuilding))
 							{
-								if (!(GC.getGame().isBuildingClassMaxedOut((BuildingClassTypes)iJ)))
+								if (!GC.getGame().isBuildingMaxedOut(eLoopBuilding))
 								{
 									bEnablesWonder = true;
 
@@ -7078,15 +7059,14 @@ int CvPlayerAI::AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bE
 				iBestValue = iRepresentativeBuildingValueInCity;
 				iTotalValue = (iRepresentativeBuildingValueInCity*iTotalWeight)/100;
 
-				if (isWorldWonderClass((BuildingClassTypes)(kLoopBuilding.getBuildingClassType())))
+				if (isWorldWonder(eLoopBuilding))
 				{
-					if (!(GC.getGame().isBuildingClassMaxedOut((BuildingClassTypes)iJ)))
+					if (!GC.getGame().isBuildingMaxedOut(eLoopBuilding))
 					{
 						iBuildingValue += (3*iBestValue) / 2;	//	Opportunity cost for denying others
 					}
 				}
-				else if (isTeamWonderClass((BuildingClassTypes)(kLoopBuilding.getBuildingClassType())) ||
-						 isNationalWonderClass((BuildingClassTypes)(kLoopBuilding.getBuildingClassType())))
+				else if (isTeamWonder(eLoopBuilding) || isNationalWonder(eLoopBuilding))
 				{
 					iBuildingValue += iBestValue;
 				}
@@ -7111,7 +7091,7 @@ int CvPlayerAI::AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bE
 			{
 				if (canConstruct(eLoopBuilding))
 				{
-					if (!isLimitedWonderClass((BuildingClassTypes)iJ))
+					if (!isLimitedWonder(eLoopBuilding))
 					{
 						if (kLoopBuilding.getCommerceChange(COMMERCE_CULTURE) > 0 ||
 							kLoopBuilding.getCommercePerPopChange(COMMERCE_CULTURE) > 0 ||
@@ -10788,7 +10768,6 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 	{
 		PROFILE("CvPlayerAI::AI_baseBonusVal::recalculate");
 
-		BuildingTypes eLoopBuilding;
 		int iDiff;
 		int iValue = 0;
 		int iTradeValue = 0;
@@ -10957,15 +10936,13 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 				}
 			}
 
-
-			const CvCivilizationInfo& kCivilizationInfo = GC.getCivilizationInfo(getCivilizationType());
 			{
 			PROFILE("CvPlayerAI::AI_baseBonusVal::recalculate Building Value");
-			for (iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
+			for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 			{
-				eLoopBuilding = ((BuildingTypes)(kCivilizationInfo.getCivilizationBuildings(iI)));
+				const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
 
-				if (eLoopBuilding != NO_BUILDING && !GET_TEAM(getTeam()).isObsoleteBuilding(eLoopBuilding))
+				if (!GET_TEAM(getTeam()).isObsoleteBuilding(eLoopBuilding))
 				{
 					CvBuildingInfo& kLoopBuilding = GC.getBuildingInfo(eLoopBuilding);
 					int iBuildingTechDistance;
@@ -10985,7 +10962,7 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 					iTempTradeValue = 0;
 					iTempNonTradeValue = 0;
 
-					TechTypes eBuildingTech = (TechTypes)kLoopBuilding.getPrereqAndTech();
+					const TechTypes eBuildingTech = (TechTypes)kLoopBuilding.getPrereqAndTech();
 
 					if ( eBuildingTech != NO_TECH )
 					{
@@ -11083,7 +11060,7 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 								iTempValue += 60;
 							}
 
-							int iBuildingClassCount = std::max(1, getBuildingClassCount((BuildingClassTypes)iI));
+							const int iBuildingCount = std::max(1, getBuildingCount((BuildingTypes)iI));
 
 							for (iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 							{
@@ -11092,23 +11069,22 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 								{
 									iTempValue += kLoopBuilding.getPowerYieldModifier(iJ);
 								}
-								//Remember, these are all divided by 10 at the end...
-								//	This is supposed to be a per-city value so since we're multiplying by the number we
-								//	have of this building class, divide by the total number of cities
-								iTempValue += (kLoopBuilding.getBonusYieldChanges(eBonus, iJ) * iBuildingClassCount * 60)/std::max(1,getNumCities());
-								iTempValue += (kLoopBuilding.getBonusYieldModifier(eBonus, iJ)  * iBuildingClassCount * 10)/std::max(1,getNumCities());
+								// Remember, these are all divided by 10 at the end...
+								// Divide by number of cities as this is supposed to be a per-city value.
+								iTempValue += (kLoopBuilding.getBonusYieldChanges(eBonus, iJ) * iBuildingCount * 60)/std::max(1,getNumCities());
+								iTempValue += (kLoopBuilding.getBonusYieldModifier(eBonus, iJ)  * iBuildingCount * 10)/std::max(1,getNumCities());
 							}
 
 							for (iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
 							{
 								//	Percent modifier on commerce estimate per city as that modifer applied to the player's total commerce divided by num cities
-								iTempValue += (kLoopBuilding.getBonusCommercePercentChanges(eBonus, iJ) * iBuildingClassCount * getCommerceRate((CommerceTypes)iJ))/(10*std::max(1,getNumCities()*getNumCities()));
-								iTempValue += (kLoopBuilding.getBonusCommerceModifier(eBonus, iJ)  * iBuildingClassCount * 10)/std::max(1,getNumCities());
+								iTempValue += (kLoopBuilding.getBonusCommercePercentChanges(eBonus, iJ) * iBuildingCount * getCommerceRate((CommerceTypes)iJ))/(10*std::max(1,getNumCities()*getNumCities()));
+								iTempValue += (kLoopBuilding.getBonusCommerceModifier(eBonus, iJ)  * iBuildingCount * 10)/std::max(1,getNumCities());
 							}
 
-							iTempValue += (iBuildingClassCount * kLoopBuilding.getBonusHappinessChanges(eBonus) * 120)/std::max(1,getNumCities());
-							iTempValue += (iBuildingClassCount * kLoopBuilding.getBonusHealthChanges(eBonus) * 80)/std::max(1,getNumCities());
-							iTempValue += (iBuildingClassCount * kLoopBuilding.getBonusDefenseChanges(eBonus) * 10)/std::max(1,getNumCities());
+							iTempValue += (iBuildingCount * kLoopBuilding.getBonusHappinessChanges(eBonus) * 120)/std::max(1,getNumCities());
+							iTempValue += (iBuildingCount * kLoopBuilding.getBonusHealthChanges(eBonus) * 80)/std::max(1,getNumCities());
+							iTempValue += (iBuildingCount * kLoopBuilding.getBonusDefenseChanges(eBonus) * 10)/std::max(1,getNumCities());
 							{
 								// determine whether we have the tech for this building
 								bool bHasTechForBuilding = true;
@@ -11150,7 +11126,7 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 								iTempValue = 0;
 
 								// if non-limited water building, weight by coastal cities
-								if (kLoopBuilding.isWater() && !isLimitedWonderClass((BuildingClassTypes)(kLoopBuilding.getBuildingClassType())))
+								if (kLoopBuilding.isWater() && !isLimitedWonder(eLoopBuilding))
 								{
 									iTempNonTradeValue *= iCoastalCityCount;
 									iTempNonTradeValue /= std::max(1, iCityCount/2);
@@ -11202,10 +11178,10 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 								}
 							}
 							//Special Wonder Considerations...
-							if (isLimitedWonderClass((BuildingClassTypes)iI) && bCanConstruct)
+							if (isLimitedWonder((BuildingTypes)iI) && bCanConstruct)
 							{
 								//	World wonders we are competing for so boost them higher
-								int iWonderModifier = (isWorldWonderClass((BuildingClassTypes)iI) ? 3 : 1)*kLoopBuilding.getBonusProductionModifier(eBonus);
+								int iWonderModifier = (isWorldWonder((BuildingTypes)iI) ? 3 : 1)*kLoopBuilding.getBonusProductionModifier(eBonus);
 								iTempTradeValue = (iTempTradeValue*iWonderModifier)/100;
 								iTempNonTradeValue = (iTempNonTradeValue*iWonderModifier)/100;
 							}
@@ -11654,11 +11630,11 @@ int CvPlayerAI::AI_cityTradeVal(CvCity* pCity) const
 	{
 		if (pCity->getNumBuilding((BuildingTypes)iI) > 0)
 		{
-			if (isWorldWonderClass((BuildingClassTypes)GC.getBuildingInfo((BuildingTypes)iI).getBuildingClassType()))
+			if (isWorldWonder((BuildingTypes)iI))
 			{
 				iValue += pCity->getNumBuilding((BuildingTypes)iI) * GC.getBuildingInfo((BuildingTypes)iI).getProductionCost() / 3;
 			}
-			else if (isLimitedWonderClass((BuildingClassTypes)GC.getBuildingInfo((BuildingTypes)iI).getBuildingClassType()))
+			else if (isLimitedWonder((BuildingTypes)iI))
 			{
 				iValue += pCity->getNumBuilding((BuildingTypes)iI) * GC.getBuildingInfo((BuildingTypes)iI).getProductionCost() / 5;
 			}
@@ -11805,11 +11781,11 @@ int CvPlayerAI::AI_ourCityValue(CvCity* pCity) const
 	{
 		if (pCity->getNumBuilding((BuildingTypes)iI) > 0)
 		{
-			if (isWorldWonderClass((BuildingClassTypes)GC.getBuildingInfo((BuildingTypes)iI).getBuildingClassType()))
+			if (isWorldWonder((BuildingTypes)iI))
 			{
 				iValue += pCity->getNumBuilding((BuildingTypes)iI) * GC.getBuildingInfo((BuildingTypes)iI).getProductionCost() / 3;
 			}
-			else if (isLimitedWonderClass((BuildingClassTypes)GC.getBuildingInfo((BuildingTypes)iI).getBuildingClassType()))
+			else if (isLimitedWonder((BuildingTypes)iI))
 			{
 				iValue += pCity->getNumBuilding((BuildingTypes)iI) * GC.getBuildingInfo((BuildingTypes)iI).getProductionCost() / 5;
 			}
@@ -15962,15 +15938,13 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	iValue += iTempValue;
 
 	iTempValue = 0;
-	for (iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
+	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		iTempValue += (kCivic.getBuildingClassProductionModifier(iI) * 2) / 5;
+		iTempValue += (kCivic.getBuildingProductionModifier(iI) * 2) / 5;
 	}
-	if ( gPlayerLogLevel > 2 && iTempValue != 0 )
+	if (gPlayerLogLevel > 2 && iTempValue != 0)
 	{
-		logBBAI("Civic %S building class production modifier value %d",
-				 kCivic.getDescription(),
-				 iTempValue);
+		logBBAI("Civic %S building production modifier value %d", kCivic.getDescription(), iTempValue);
 	}
 	iValue += iTempValue;
 
@@ -16195,38 +16169,76 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	}
 	iValue += iTempValue;
 
-	CvCivilizationInfo& kCivilizationInfo = GC.getCivilizationInfo(getCivilizationType());
-
 	if (pCapital != NULL)
 	{
 		//	Warm up the can train cache for the capital
 		pCapital->populateCanTrainCache(false);
 
-		CivicTypes eCurrentCivic = getCivics((CivicOptionTypes)kCivic.getCivicOptionType());
+		const CivicTypes eCurrentCivic = getCivics((CivicOptionTypes)kCivic.getCivicOptionType());
 
-		for (iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
+		for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 		{
-			BuildingTypes eLoopBuilding = ((BuildingTypes)(kCivilizationInfo.getCivilizationBuildings(iI)));
+			const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
 			bool bValidCivicsWith = true;
 			bool bValidCivicsWithout = true;
 			bool bCivicIsEnabler = false;
-			if (eLoopBuilding != NO_BUILDING)
+
+			if (GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech() == NO_TECH || GC.getTechInfo((TechTypes)GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech()).getEra() <= getCurrentEra())
 			{
-				if (GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech() == NO_TECH || GC.getTechInfo((TechTypes)GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech()).getEra() <= getCurrentEra())
+				if ((GC.getBuildingInfo(eLoopBuilding).isPrereqAndCivics(eCivic) || GC.getBuildingInfo(eLoopBuilding).isPrereqOrCivics(eCivic)) ||
+					(eCurrentCivic != NO_CIVIC && (GC.getBuildingInfo(eLoopBuilding).isPrereqAndCivics(eCurrentCivic) || GC.getBuildingInfo(eLoopBuilding).isPrereqOrCivics(eCurrentCivic))))
 				{
-					if ((GC.getBuildingInfo(eLoopBuilding).isPrereqAndCivics(eCivic) || GC.getBuildingInfo(eLoopBuilding).isPrereqOrCivics(eCivic)) ||
-						(eCurrentCivic != NO_CIVIC && (GC.getBuildingInfo(eLoopBuilding).isPrereqAndCivics(eCurrentCivic) || GC.getBuildingInfo(eLoopBuilding).isPrereqOrCivics(eCurrentCivic))))
+					if (!GC.getGame().isBuildingMaxedOut(eLoopBuilding) || getBuildingCount((BuildingTypes)iI) > 0)
 					{
-						if (!GC.getGame().isBuildingClassMaxedOut((BuildingClassTypes)iI) || getBuildingClassCount((BuildingClassTypes)iI) > 0)
+						bool bValidWith = false;
+						bool bValidWithout = false;
+						bool bHasMultipleEnablingCivicCategories = false;
+						CivicOptionTypes eEnablingCategory = NO_CIVICOPTION;
+
+						for (int iJ = 0; iJ < GC.getNumCivicInfos(); iJ++)
 						{
-							bool bValidWith = false;
-							bool bValidWithout = false;
-							bool bHasMultipleEnablingCivicCategories = false;
-							CivicOptionTypes eEnablingCategory = NO_CIVICOPTION;
+							if (GC.getBuildingInfo(eLoopBuilding).isPrereqAndCivics(iJ))
+							{
+								if (eEnablingCategory == NO_CIVICOPTION)
+								{
+									eEnablingCategory = (CivicOptionTypes)GC.getCivicInfo((CivicTypes)iJ).getCivicOptionType();
+								}
+								else
+								{
+									bHasMultipleEnablingCivicCategories = true;
+								}
+
+								if (eCivic != iJ)
+								{
+									if (kCivic.getCivicOptionType() == GC.getCivicInfo((CivicTypes)iJ).getCivicOptionType())
+									{
+										bValidCivicsWith = false;
+										bValidCivicsWithout = (!bCivicOptionVacuum && eCurrentCivic == iJ);
+									}
+									else
+									{
+										if (!isCivic((CivicTypes)iJ))
+										{
+											bValidCivicsWith = false;
+											bValidCivicsWithout = false;
+										}
+									}
+								}
+								else
+								{
+									bCivicIsEnabler = true;
+									bValidCivicsWithout = false;
+								}
+							}
+						}
+						//Make sure we have the correct prereq Or Civics. We need just one
+						if (bValidCivicsWith || bValidCivicsWithout)
+						{
+							bool bHasOrCivicReq = false;
 
 							for (int iJ = 0; iJ < GC.getNumCivicInfos(); iJ++)
 							{
-								if (GC.getBuildingInfo(eLoopBuilding).isPrereqAndCivics(iJ))
+								if (GC.getBuildingInfo(eLoopBuilding).isPrereqOrCivics(iJ))
 								{
 									if (eEnablingCategory == NO_CIVICOPTION)
 									{
@@ -16237,131 +16249,89 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 										bHasMultipleEnablingCivicCategories = true;
 									}
 
-									if (eCivic != iJ)
+									bHasOrCivicReq = true;
+
+									if (kCivic.getCivicOptionType() != GC.getCivicInfo((CivicTypes)iJ).getCivicOptionType())
 									{
-										if (kCivic.getCivicOptionType() == GC.getCivicInfo((CivicTypes)iJ).getCivicOptionType())
+										if (isCivic((CivicTypes)iJ))
 										{
-											bValidCivicsWith = false;
-											bValidCivicsWithout = (!bCivicOptionVacuum && eCurrentCivic == iJ);
+											bValidWithout = true;
+											bValidWith = true;
 										}
-										else
-										{
-											if (!isCivic((CivicTypes)iJ))
-											{
-												bValidCivicsWith = false;
-												bValidCivicsWithout = false;
-											}
-										}
+									}
+									else if (eCivic == (CivicTypes)iJ)
+									{
+										bValidWith = true;
+										bCivicIsEnabler = true;
 									}
 									else
 									{
-										bCivicIsEnabler = true;
-										bValidCivicsWithout = false;
+										bValidWithout |= (!bCivicOptionVacuum && eCurrentCivic == iJ);
 									}
 								}
 							}
-							//Make sure we have the correct prereq Or Civics. We need just one
-							if (bValidCivicsWith || bValidCivicsWithout)
+
+							if (bHasOrCivicReq)
 							{
-								bool bHasOrCivicReq = false;
-
-								for (int iJ = 0; iJ < GC.getNumCivicInfos(); iJ++)
-								{
-									if (GC.getBuildingInfo(eLoopBuilding).isPrereqOrCivics(iJ))
-									{
-										if (eEnablingCategory == NO_CIVICOPTION)
-										{
-											eEnablingCategory = (CivicOptionTypes)GC.getCivicInfo((CivicTypes)iJ).getCivicOptionType();
-										}
-										else
-										{
-											bHasMultipleEnablingCivicCategories = true;
-										}
-
-										bHasOrCivicReq = true;
-
-										if (kCivic.getCivicOptionType() != GC.getCivicInfo((CivicTypes)iJ).getCivicOptionType())
-										{
-											if (isCivic((CivicTypes)iJ))
-											{
-												bValidWithout = true;
-												bValidWith = true;
-											}
-										}
-										else if (eCivic == (CivicTypes)iJ)
-										{
-											bValidWith = true;
-											bCivicIsEnabler = true;
-										}
-										else
-										{
-											bValidWithout |= (!bCivicOptionVacuum && eCurrentCivic == iJ);
-										}
-									}
-								}
-
-								if (bHasOrCivicReq)
-								{
-									bValidCivicsWith &= bValidWith;
-									bValidCivicsWithout &= bValidWithout;
-								}
+								bValidCivicsWith &= bValidWith;
+								bValidCivicsWithout &= bValidWithout;
 							}
-
-							iTempValue = 0;
-							int iValueDivisor = 1;
-
-							if (GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech() != NO_TECH &&
-								!pTeam.isHasTech((TechTypes)GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech()))
-							{
-								iValueDivisor = 2;
-							}
-
-							bool bIsWonder = isNationalWonderClass((BuildingClassTypes)iI) || isWorldWonderClass((BuildingClassTypes)iI) || isTeamWonderClass((BuildingClassTypes)iI);
-							int iNumInstancesToScore = (bIsWonder ? 1 : std::max(getNumCities(), getBuildingClassCount((BuildingClassTypes)iI) + getNumCities() / 4));
-
-							//	If the building is enabled by multiple categories just count it at half value always
-							//	This isn't strictly accurate, but because civic evaluation works by linarly combining
-							//	evaluations in different categories, cross-category couplings like this have to give
-							//	stable result or else civic choices will oscillate
-							if (bHasMultipleEnablingCivicCategories && bValidCivicsWith && bCivicIsEnabler)
-							{
-								//Estimate value from capital city
-								iTempValue = (pCapital->AI_buildingValue(eLoopBuilding, 0) * iNumInstancesToScore) / (12 * iValueDivisor);
-								if (gPlayerLogLevel > 2)
-								{
-									logBBAI("Civic %S jointly enables building %S with value %d",
-										kCivic.getDescription(),
-										GC.getBuildingInfo(eLoopBuilding).getDescription(),
-										iTempValue);
-								}
-							}
-							else if (bValidCivicsWith && !bValidCivicsWithout)
-							{
-								//Estimate value from capital city
-								iTempValue = (pCapital->AI_buildingValue(eLoopBuilding, 0) * iNumInstancesToScore) / (6 * iValueDivisor);
-								if (gPlayerLogLevel > 2)
-								{
-									logBBAI("Civic %S enables building %S with value %d",
-										kCivic.getDescription(),
-										GC.getBuildingInfo(eLoopBuilding).getDescription(),
-										iTempValue);
-								}
-							}
-							else if (!bValidCivicsWith && bValidCivicsWithout)
-							{
-								//Loses us the ability to construct the building
-								iTempValue = -(pCapital->AI_buildingValue(eLoopBuilding, 0) * iNumInstancesToScore) / (6 * iValueDivisor);
-								if (gPlayerLogLevel > 2)
-								{
-									logBBAI("Civic %S disables building %S with value %d",
-										kCivic.getDescription(),
-										GC.getBuildingInfo(eLoopBuilding).getDescription(),
-										iTempValue);
-								}
-							}
-
-							iValue += iTempValue;
 						}
+
+						iTempValue = 0;
+						int iValueDivisor = 1;
+
+						if (GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech() != NO_TECH &&
+							!pTeam.isHasTech((TechTypes)GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech()))
+						{
+							iValueDivisor = 2;
+						}
+
+						bool bIsWonder = isNationalWonder(eLoopBuilding) || isWorldWonder(eLoopBuilding) || isTeamWonder(eLoopBuilding);
+						int iNumInstancesToScore = (bIsWonder ? 1 : std::max(getNumCities(), getBuildingCount(eLoopBuilding) + getNumCities() / 4));
+
+						//	If the building is enabled by multiple categories just count it at half value always
+						//	This isn't strictly accurate, but because civic evaluation works by linarly combining
+						//	evaluations in different categories, cross-category couplings like this have to give
+						//	stable result or else civic choices will oscillate
+						if (bHasMultipleEnablingCivicCategories && bValidCivicsWith && bCivicIsEnabler)
+						{
+							//Estimate value from capital city
+							iTempValue = (pCapital->AI_buildingValue(eLoopBuilding, 0) * iNumInstancesToScore) / (12 * iValueDivisor);
+							if (gPlayerLogLevel > 2)
+							{
+								logBBAI("Civic %S jointly enables building %S with value %d",
+									kCivic.getDescription(),
+									GC.getBuildingInfo(eLoopBuilding).getDescription(),
+									iTempValue);
+							}
+						}
+						else if (bValidCivicsWith && !bValidCivicsWithout)
+						{
+							//Estimate value from capital city
+							iTempValue = (pCapital->AI_buildingValue(eLoopBuilding, 0) * iNumInstancesToScore) / (6 * iValueDivisor);
+							if (gPlayerLogLevel > 2)
+							{
+								logBBAI("Civic %S enables building %S with value %d",
+									kCivic.getDescription(),
+									GC.getBuildingInfo(eLoopBuilding).getDescription(),
+									iTempValue);
+							}
+						}
+						else if (!bValidCivicsWith && bValidCivicsWithout)
+						{
+							//Loses us the ability to construct the building
+							iTempValue = -(pCapital->AI_buildingValue(eLoopBuilding, 0) * iNumInstancesToScore) / (6 * iValueDivisor);
+							if (gPlayerLogLevel > 2)
+							{
+								logBBAI("Civic %S disables building %S with value %d",
+									kCivic.getDescription(),
+									GC.getBuildingInfo(eLoopBuilding).getDescription(),
+									iTempValue);
+							}
+						}
+
+						iValue += iTempValue;
 					}
 				}
 			}
@@ -16381,55 +16351,53 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 				bool bHasEnablingCivic = (hasAllReligionsActive());
 				bool bHasMultipleEnablingCivicCategories = (getAllReligionsActiveCount() > 1);
 
-				for (iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
+				for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 				{
-					BuildingTypes eLoopBuilding = ((BuildingTypes)(kCivilizationInfo.getCivilizationBuildings(iI)));
-					if (eLoopBuilding != NO_BUILDING)
+					const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
+
+					if (GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech() == NO_TECH || GC.getTechInfo((TechTypes)GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech()).getEra() <= getCurrentEra())
 					{
-						if (GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech() == NO_TECH || GC.getTechInfo((TechTypes)GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech()).getEra() <= getCurrentEra())
+						if (getBuildingCount(eLoopBuilding) > 0)
 						{
-							if (getBuildingClassCount((BuildingClassTypes)iI) > 0)
+							if (GC.getBuildingInfo(eLoopBuilding).getReligionType() != eCurrentReligion)
 							{
-								if (GC.getBuildingInfo(eLoopBuilding).getReligionType() != eCurrentReligion)
+								int iValueDivisor = 1;
+
+								if (GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech() != NO_TECH &&
+									!pTeam.isHasTech((TechTypes)GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech()))
 								{
-									int iValueDivisor = 1;
+									iValueDivisor = 2;
+								}
 
-									if (GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech() != NO_TECH &&
-										!pTeam.isHasTech((TechTypes)GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech()))
+								bool bIsWonder = isNationalWonder(eLoopBuilding) || isWorldWonder(eLoopBuilding) || isTeamWonder(eLoopBuilding);
+								int iNumInstancesToScore = (bIsWonder ? 1 : std::max(getNumCities(), getBuildingCount(eLoopBuilding) + getNumCities() / 4));
+
+								//	If the building is enabled by multiple categories just count it at half value always
+								//	This isn't strictly accurate, but because civic evaluation works by linarly combining
+								//	evaluations in different categories, cross-category couplings like this have to give
+								//	stable result or else civic choices will oscillate
+								if (bHasMultipleEnablingCivicCategories || bHasEnablingCivic)
+								{
+									//Estimate value from capital city
+									iTempValue = (pCapital->AI_buildingValue(eLoopBuilding, 0) * iNumInstancesToScore) / (12 * iValueDivisor);
+									if (gPlayerLogLevel > 2)
 									{
-										iValueDivisor = 2;
+										logBBAI("Civic %S jointly religiously enables building %S with value %d",
+											kCivic.getDescription(),
+											GC.getBuildingInfo(eLoopBuilding).getDescription(),
+											iTempValue);
 									}
-
-									bool bIsWonder = isNationalWonderClass((BuildingClassTypes)iI) || isWorldWonderClass((BuildingClassTypes)iI) || isTeamWonderClass((BuildingClassTypes)iI);
-									int iNumInstancesToScore = (bIsWonder ? 1 : std::max(getNumCities(), getBuildingClassCount((BuildingClassTypes)iI) + getNumCities() / 4));
-
-									//	If the building is enabled by multiple categories just count it at half value always
-									//	This isn't strictly accurate, but because civic evaluation works by linarly combining
-									//	evaluations in different categories, cross-category couplings like this have to give
-									//	stable result or else civic choices will oscillate
-									if (bHasMultipleEnablingCivicCategories || bHasEnablingCivic)
+								}
+								else if (!bHasEnablingCivic)
+								{
+									//Estimate value from capital city
+									iTempValue = (pCapital->AI_buildingValue(eLoopBuilding, 0) * iNumInstancesToScore) / (6 * iValueDivisor);
+									if (gPlayerLogLevel > 2)
 									{
-										//Estimate value from capital city
-										iTempValue = (pCapital->AI_buildingValue(eLoopBuilding, 0) * iNumInstancesToScore) / (12 * iValueDivisor);
-										if (gPlayerLogLevel > 2)
-										{
-											logBBAI("Civic %S jointly religiously enables building %S with value %d",
-												kCivic.getDescription(),
-												GC.getBuildingInfo(eLoopBuilding).getDescription(),
-												iTempValue);
-										}
-									}
-									else if (!bHasEnablingCivic)
-									{
-										//Estimate value from capital city
-										iTempValue = (pCapital->AI_buildingValue(eLoopBuilding, 0) * iNumInstancesToScore) / (6 * iValueDivisor);
-										if (gPlayerLogLevel > 2)
-										{
-											logBBAI("Civic %S religiously enables building %S with value %d",
-												kCivic.getDescription(),
-												GC.getBuildingInfo(eLoopBuilding).getDescription(),
-												iTempValue);
-										}
+										logBBAI("Civic %S religiously enables building %S with value %d",
+											kCivic.getDescription(),
+											GC.getBuildingInfo(eLoopBuilding).getDescription(),
+											iTempValue);
 									}
 								}
 							}
@@ -16446,55 +16414,53 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 				bool bHasEnablingCivic = (hasAllReligionsActive());
 				bool bHasMultipleEnablingCivicCategories = (getAllReligionsActiveCount() > 1);
 
-				for (iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
+				for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 				{
-					BuildingTypes eLoopBuilding = ((BuildingTypes)(kCivilizationInfo.getCivilizationBuildings(iI)));
-					if (eLoopBuilding != NO_BUILDING)
+					const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
+
+					if (GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech() == NO_TECH || GC.getTechInfo((TechTypes)GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech()).getEra() <= getCurrentEra())
 					{
-						if (GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech() == NO_TECH || GC.getTechInfo((TechTypes)GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech()).getEra() <= getCurrentEra())
+						if (getBuildingCount((BuildingTypes)iI) > 0)
 						{
-							if (getBuildingClassCount((BuildingClassTypes)iI) > 0)
+							if (GC.getBuildingInfo(eLoopBuilding).getReligionType() != eCurrentReligion)
 							{
-								if (GC.getBuildingInfo(eLoopBuilding).getReligionType() != eCurrentReligion)
+								int iValueDivisor = 1;
+
+								if (GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech() != NO_TECH &&
+									!GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech()))
 								{
-									int iValueDivisor = 1;
-
-									if (GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech() != NO_TECH &&
-										!GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech()))
-									{
-										iValueDivisor = 2;
-									}
-
-									bool bIsWonder = isNationalWonderClass((BuildingClassTypes)iI) || isWorldWonderClass((BuildingClassTypes)iI) || isTeamWonderClass((BuildingClassTypes)iI);
-									int iNumInstancesToScore = (bIsWonder ? 1 : std::max(getNumCities(), getBuildingClassCount((BuildingClassTypes)iI) + getNumCities() / 4));
-
-									if (bHasMultipleEnablingCivicCategories)
-									{
-										//Loses us the ability to construct the building
-										iTempValue = -(pCapital->AI_buildingValue(eLoopBuilding, 0) * iNumInstancesToScore) / (12 * iValueDivisor);
-										if (gPlayerLogLevel > 2)
-										{
-											logBBAI("Civic %S religiously disables building %S with value %d",
-												kCivic.getDescription(),
-												GC.getBuildingInfo(eLoopBuilding).getDescription(),
-												iTempValue);
-										}
-									}
-									else if (bHasEnablingCivic)
-									{
-										//Loses us the ability to construct the building
-										iTempValue = -(pCapital->AI_buildingValue(eLoopBuilding, 0) * iNumInstancesToScore) / (6 * iValueDivisor);
-										if (gPlayerLogLevel > 2)
-										{
-											logBBAI("Civic %S religiously disables building %S with value %d",
-												kCivic.getDescription(),
-												GC.getBuildingInfo(eLoopBuilding).getDescription(),
-												iTempValue);
-										}
-									}
-
-									iValue += iTempValue;
+									iValueDivisor = 2;
 								}
+
+								bool bIsWonder = isNationalWonder(eLoopBuilding) || isWorldWonder(eLoopBuilding) || isTeamWonder(eLoopBuilding);
+								int iNumInstancesToScore = (bIsWonder ? 1 : std::max(getNumCities(), getBuildingCount(eLoopBuilding) + getNumCities() / 4));
+
+								if (bHasMultipleEnablingCivicCategories)
+								{
+									//Loses us the ability to construct the building
+									iTempValue = -(pCapital->AI_buildingValue(eLoopBuilding, 0) * iNumInstancesToScore) / (12 * iValueDivisor);
+									if (gPlayerLogLevel > 2)
+									{
+										logBBAI("Civic %S religiously disables building %S with value %d",
+											kCivic.getDescription(),
+											GC.getBuildingInfo(eLoopBuilding).getDescription(),
+											iTempValue);
+									}
+								}
+								else if (bHasEnablingCivic)
+								{
+									//Loses us the ability to construct the building
+									iTempValue = -(pCapital->AI_buildingValue(eLoopBuilding, 0) * iNumInstancesToScore) / (6 * iValueDivisor);
+									if (gPlayerLogLevel > 2)
+									{
+										logBBAI("Civic %S religiously disables building %S with value %d",
+											kCivic.getDescription(),
+											GC.getBuildingInfo(eLoopBuilding).getDescription(),
+											iTempValue);
+									}
+								}
+
+								iValue += iTempValue;
 							}
 						}
 					}
@@ -16504,23 +16470,21 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	}
 
 	iTempValue = 0;
-	for (iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
+	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		BuildingTypes eLoopBuilding = ((BuildingTypes)(kCivilizationInfo.getCivilizationBuildings(iI)));
-		if (eLoopBuilding != NO_BUILDING)
+		const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
+
+		for (iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
 		{
-			for (iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
+			if (kCivic.getBuildingCommerceModifier(eLoopBuilding, iJ) != 0)
 			{
-				if (kCivic.getBuildingCommerceModifier(eLoopBuilding, iJ) != 0)
-				{
-					int iMulitplier = (iJ == COMMERCE_GOLD && bFinancialTrouble) ? 6 : 4;
-					iTempValue += getBuildingClassCount((BuildingClassTypes)iI) * kCivic.getBuildingCommerceModifier(eLoopBuilding, iJ) * iMulitplier;
-				}
-				if (kCivic.getBuildingClassCommerceChange(iI, iJ) != 0)
-				{
-					int iMulitplier = (iJ == COMMERCE_GOLD && bFinancialTrouble) ? 12 : 8;
-					iTempValue += getBuildingClassCount((BuildingClassTypes)iI) * kCivic.getBuildingClassCommerceChange(iI, iJ) * iMulitplier;
-				}
+				const int iMulitplier = (iJ == COMMERCE_GOLD && bFinancialTrouble) ? 6 : 4;
+				iTempValue += getBuildingCount((BuildingTypes)iI) * kCivic.getBuildingCommerceModifier(eLoopBuilding, iJ) * iMulitplier;
+			}
+			if (kCivic.getBuildingCommerceChange(iI, iJ) != 0)
+			{
+				const int iMulitplier = (iJ == COMMERCE_GOLD && bFinancialTrouble) ? 12 : 8;
+				iTempValue += getBuildingCount((BuildingTypes)iI) * kCivic.getBuildingCommerceChange(iI, iJ) * iMulitplier;
 			}
 		}
 	}
@@ -16980,24 +16944,22 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 
 	if (kCivic.isAnyBuildingHappinessChange())
 	{
-		for (iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
+		for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 		{
 			iTempValue = kCivic.getBuildingHappinessChanges(iI);
 			if (iTempValue != 0)
 			{
 				// Nationalism
-				if( !isLimitedWonderClass((BuildingClassTypes)iI))
+				if (!isLimitedWonder((BuildingTypes)iI))
 				{
-					BuildingTypes eBuilding = ((BuildingTypes)(kCivilizationInfo.getCivilizationBuildings(iI)));
-
-					if ( eBuilding != NO_BUILDING &&
-						 (GC.getBuildingInfo(eBuilding).getPrereqAndTech() == NO_TECH ||
-						  GC.getTechInfo((TechTypes)GC.getBuildingInfo(eBuilding).getPrereqAndTech()).getEra() <= getCurrentEra()) &&
-						 (GC.getBuildingInfo(eBuilding).getObsoleteTech() == NO_TECH ||
-							pTeam.isHasTech((TechTypes)GC.getBuildingInfo(eBuilding).getObsoleteTech())))
+					const CvBuildingInfo& buildingInfo = GC.getBuildingInfo((BuildingTypes)iI);
+					if (buildingInfo.getPrereqAndTech() == NO_TECH ||
+						  GC.getTechInfo((TechTypes)buildingInfo.getPrereqAndTech()).getEra() <= getCurrentEra() &&
+						 (buildingInfo.getObsoleteTech() == NO_TECH ||
+							pTeam.isHasTech((TechTypes)buildingInfo.getObsoleteTech())))
 					{
 						//+0.5 per city that does not yet have that building
-						iTempValue = (iTempValue * std::min(getNumCities(), (getNumCities()*GC.getCITY_MAX_NUM_BUILDINGS() - getBuildingClassCount((BuildingClassTypes)iI))))/2;
+						iTempValue = (iTempValue * std::min(getNumCities(), (getNumCities()*GC.getCITY_MAX_NUM_BUILDINGS() - getBuildingCount((BuildingTypes)iI))))/2;
 						if ( gPlayerLogLevel > 2 && iTempValue != 0 )
 						{
 							logBBAI("Civic %S nat wonder happiness change value %d",
@@ -17007,27 +16969,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 						iValue += iTempValue;
 					}
 				}
-				//happiness is handled in CvCity::getAdditionalHappinessByCivic
-				//iValue += (iTempValue * getBuildingClassCountPlusMaking((BuildingClassTypes)iI) * 2);
 			}
 		}
 	}
-
-	//happiness is handled in CvCity::getAdditionalHappinessByCivic
-/*
-	for (iI = 0; iI < GC.getNumFeatureInfos(); iI++)
-	{
-		// Environmentalism
-		iHappiness = kCivic.getFeatureHappinessChanges(iI);
-
-		if (iHappiness != 0)
-		{
-			iValue += (iHappiness * countCityFeatures((FeatureTypes)iI) * 5);
-		}
-	}
-*/
-	//#1: Happinesss - end
-
 
 	//#2: Health
 	if ( (getNumCities() > 0) &&
@@ -17313,19 +17257,17 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	iTempValue = 0;
 	if (kCivic.isAnyBuildingHealthChange())
 	{
-		for (iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
+		for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 		{
 			iTempValue = kCivic.getBuildingHealthChanges(iI);
 			if (iTempValue != 0)
 			{
 				// Nationalism
-				if( !isLimitedWonderClass((BuildingClassTypes)iI) )
+				if (!isLimitedWonder((BuildingTypes)iI))
 				{
 						//+0.5 per city that does not yet have that building
-						iTempValue += (iTempValue * std::min(getNumCities(), (getNumCities()*GC.getCITY_MAX_NUM_BUILDINGS() - getBuildingClassCount((BuildingClassTypes)iI))))/2;
+						iTempValue += (iTempValue * std::min(getNumCities(), (getNumCities()*GC.getCITY_MAX_NUM_BUILDINGS() - getBuildingCount((BuildingTypes)iI))))/2;
 				}
-				//health is handled in CvCity::getAdditionalHealthByCivic
-				//iValue += (iTempValue * getBuildingClassCountPlusMaking((BuildingClassTypes)iI) * 2);
 			}
 		}
 	}
@@ -18092,113 +18034,6 @@ int CvPlayerAI::AI_religionValue(ReligionTypes eReligion) const
 
 ////Team Project (5)
 	int iTempValueModifier = 100;
-	//@Koshling: Something within the following commented out code causes an overloaded building id reference in the canConstruct routine somehow.
-	//Can you spot what I did wrong here?
-//	CvCity* pCapital = getCapitalCity();
-//	if (pCapital != NULL)
-//	{
-//		for (iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
-//		{
-//			BuildingTypes eLoopBuilding = ((BuildingTypes)(GC.getCivilizationInfo(getCivilizationType()).getCivilizationBuildings(iI)));
-//			//Strengthen attachment to current religion if we've built up a significant amount of buildings based on that religion
-//			if (eLoopBuilding != NO_BUILDING)
-//			{
-//				if (!hasAllReligionsActive() && getStateReligion() == eReligion)
-//				{
-//					if ( getBuildingClassCount((BuildingClassTypes)iI) > 0 )
-//					{
-//						if (GC.getBuildingInfo(eLoopBuilding).getReligionType() == eReligion)
-//						{
-//							int iValueDivisor = 1;
-//
-//							if ( GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech() != NO_TECH &&
-//								 !GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech()) )
-//							{
-//								iValueDivisor = 2;
-//							}
-//
-//							bool bIsWonder = isNationalWonderClass((BuildingClassTypes)iI) || isWorldWonderClass((BuildingClassTypes)iI) || isTeamWonderClass((BuildingClassTypes)iI);
-//							int iNumInstancesToScore = (bIsWonder ? 1 : std::max(getNumCities(), getBuildingClassCount((BuildingClassTypes)iI) + getNumCities() / 4));
-//
-//							//Estimate value from capital city
-//							iTempValueModifier = (pCapital->AI_buildingValue(eLoopBuilding, 0) * iNumInstancesToScore) / (10*iValueDivisor);
-//						}
-//					}
-//				}
-//				//Consider again ALL the buildings we could build that we don't have if we switched and those buildings would all stay active!
-//				if (hasAllReligionsActive() && getStateReligion() != eReligion)
-//				{
-//					bool bIsWonder = isNationalWonderClass((BuildingClassTypes)iI) || isWorldWonderClass((BuildingClassTypes)iI) || isTeamWonderClass((BuildingClassTypes)iI);
-//					if ( getBuildingClassCount((BuildingClassTypes)iI) < getNumCities() ||  (bIsWonder && getBuildingClassCount((BuildingClassTypes)iI) < 1))
-//					{
-//						if (GC.getBuildingInfo(eLoopBuilding).getReligionType() == eReligion)
-//						{
-//							int iValueDivisor = 1;
-//
-//							if ( GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech() != NO_TECH &&
-//								 !GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech()) )
-//							{
-//								iValueDivisor = 2;
-//							}
-//
-//							int iNumInstancesToScore = (bIsWonder ? 1 : std::max(getNumCities(), getBuildingClassCount((BuildingClassTypes)iI) + getNumCities() / 4));
-//
-//							//Estimate value from capital city
-//							iTempValueModifier = (pCapital->AI_buildingValue(eLoopBuilding, 0) * iNumInstancesToScore) / (10*iValueDivisor);
-//						}
-//					}
-//				}
-//				//Consider all the Wonders we could build if we switched!
-//				if (getStateReligion() != eReligion)
-//				{
-//					if ( getBuildingClassCount((BuildingClassTypes)iI) < 1)
-//					{
-//						if (GC.getBuildingInfo(eLoopBuilding).getPrereqReligion() == eReligion)
-//						{
-//							int iValueDivisor = 1;
-//							//if we can't build it yet, we may still want to plan for it but not as strongly
-//							if ( GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech() != NO_TECH &&
-//								 !GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech()) )
-//							{
-//								iValueDivisor = 2;
-//							}
-//							bool bIsWonder = isNationalWonderClass((BuildingClassTypes)iI) || isWorldWonderClass((BuildingClassTypes)iI) || isTeamWonderClass((BuildingClassTypes)iI);
-//							int iNumInstancesToScore = (bIsWonder ? 1 : std::max(getNumCities(), getBuildingClassCount((BuildingClassTypes)iI) + getNumCities() / 4));
-//							if (bIsWonder)
-//							{
-//								//Estimate value from capital city
-//								iTempValueModifier = ((pCapital->AI_buildingValue(eLoopBuilding, 0) * iNumInstancesToScore) / iValueDivisor);
-//							}
-//						}
-//					}
-//				}
-//				//Consider all the Wonders we can't build if we switched!
-//				if (getStateReligion() != eReligion)
-//				{
-//					if ( getBuildingClassCount((BuildingClassTypes)iI) < 1)
-//					{
-//						if (getStateReligion() == GC.getBuildingInfo(eLoopBuilding).getPrereqReligion())
-//						{
-//							int iValueDivisor = 1;
-//							//if we can't build it yet, we may still want to plan for it but not as strongly
-//							if ( GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech() != NO_TECH &&
-//								 !GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBuildingInfo(eLoopBuilding).getPrereqAndTech()) )
-//							{
-//								iValueDivisor = 2;
-//							}
-//							bool bIsWonder = isNationalWonderClass((BuildingClassTypes)iI) || isWorldWonderClass((BuildingClassTypes)iI) || isTeamWonderClass((BuildingClassTypes)iI);
-//							int iNumInstancesToScore = (bIsWonder ? 1 : std::max(getNumCities(), getBuildingClassCount((BuildingClassTypes)iI) + getNumCities() / 4));
-//							if (bIsWonder)
-//							{
-//								//Estimate value from capital city
-//								iTempValueModifier = -((pCapital->AI_buildingValue(eLoopBuilding, 0) * iNumInstancesToScore) / iValueDivisor);
-//							}
-//						}
-//					}
-//				}
-//			}
-//		}
-//	}
 	//Consider what kind of delay a change in Religion would mean
 	if (getReligionAnarchyLength() != 0 && getStateReligion() != eReligion)
 	{
@@ -18206,7 +18041,6 @@ int CvPlayerAI::AI_religionValue(ReligionTypes eReligion) const
 	}
 	iValue *= iTempValueModifier;
 	iValue /= 100;
-
 
 	return iValue;
 }
@@ -18729,8 +18563,8 @@ int CvPlayerAI::AI_espionageVal(PlayerTypes eTargetPlayer, EspionageMissionTypes
 			{
 				if (pCity->getNumRealBuilding((BuildingTypes)iData) > 0)
 				{
-					CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iData);
-					if ((kBuilding.getProductionCost() > 1) && !isWorldWonderClass((BuildingClassTypes)kBuilding.getBuildingClassType()))
+					const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iData);
+					if (kBuilding.getProductionCost() > 1 && !isWorldWonder((BuildingTypes)iData))
 					{
 						// BBAI TODO: Should this be based on production cost of building?  Others are
 						/*int iEspionageFlags = 0;
@@ -18768,7 +18602,7 @@ int CvPlayerAI::AI_espionageVal(PlayerTypes eTargetPlayer, EspionageMissionTypes
 		FAssert(pCity != NULL);
 		if (pCity != NULL)
 		{
-			int iTempValue = pCity->getProduction();
+			const int iTempValue = pCity->getProduction();
 			if (iTempValue > 0)
 			{
 				if (pCity->getProductionProject() != NO_PROJECT)
@@ -18778,8 +18612,7 @@ int CvPlayerAI::AI_espionageVal(PlayerTypes eTargetPlayer, EspionageMissionTypes
 				}
 				else if (pCity->getProductionBuilding() != NO_BUILDING)
 				{
-					CvBuildingInfo& kBuilding = GC.getBuildingInfo(pCity->getProductionBuilding());
-					if (isWorldWonderClass((BuildingClassTypes)kBuilding.getBuildingClassType()))
+					if (isWorldWonder(pCity->getProductionBuilding()))
 					{
 						iValue += 3 * iTempValue;
 					}
@@ -24296,28 +24129,21 @@ int CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTrig
 		}
 	}
 
-	if (kEvent.getBuildingClass() != NO_BUILDINGCLASS)
+	const BuildingTypes eBuilding = static_cast<BuildingTypes>(kEvent.getBuilding());
+	if (eBuilding != NO_BUILDING && pCity)
 	{
-		BuildingTypes eBuilding = (BuildingTypes)GC.getCivilizationInfo(getCivilizationType()).getCivilizationBuildings(kEvent.getBuildingClass());
-		if (eBuilding != NO_BUILDING)
+		int iBuildingValue = GC.getBuildingInfo(eBuilding).getProductionCost();
+		if (iBuildingValue > 0)
 		{
-			if (pCity)
-			{
-				//iValue += kEvent.getBuildingChange() * pCity->AI_buildingValue(eBuilding);
-				int iBuildingValue = GC.getBuildingInfo(eBuilding).getProductionCost();
-				if (iBuildingValue > 0)
-				{
-					iBuildingValue *= 2;
-				}
-				else if (iBuildingValue == -1)
-				{
-					iBuildingValue = 300; //Shrine?
-				}
-
-				iBuildingValue *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
-				iValue += kEvent.getBuildingChange() * iBuildingValue;
-			}
+			iBuildingValue *= 2;
 		}
+		else if (iBuildingValue == -1)
+		{
+			iBuildingValue = 300; //Shrine?
+		}
+
+		iBuildingValue *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
+		iValue += kEvent.getBuildingChange() * iBuildingValue;
 	}
 
 	TechTypes eBestTech = NO_TECH;
@@ -24356,39 +24182,39 @@ int CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTrig
 	{	//Yield and other changes
 		if (kEvent.getNumBuildingYieldChanges() > 0)
 		{
-			for (int iBuildingClass = 0; iBuildingClass < GC.getNumBuildingClassInfos(); ++iBuildingClass)
+			for (int iBuilding = 0; iBuilding < GC.getNumBuildingInfos(); ++iBuilding)
 			{
 				for (int iYield = 0; iYield < NUM_YIELD_TYPES; ++iYield)
 				{
-					aiYields[iYield] += kEvent.getBuildingYieldChange(iBuildingClass, iYield);
+					aiYields[iYield] += kEvent.getBuildingYieldChange(iBuilding, iYield);
 				}
 			}
 		}
 
 		if (kEvent.getNumBuildingCommerceChanges() > 0)
 		{
-			for (int iBuildingClass = 0; iBuildingClass < GC.getNumBuildingClassInfos(); ++iBuildingClass)
+			for (int iBuilding = 0; iBuilding < GC.getNumBuildingInfos(); ++iBuilding)
 			{
 				for (int iCommerce = 0; iCommerce < NUM_COMMERCE_TYPES; ++iCommerce)
 				{
-					aiCommerceYields[iCommerce] += kEvent.getBuildingCommerceChange(iBuildingClass, iCommerce);
+					aiCommerceYields[iCommerce] += kEvent.getBuildingCommerceChange(iBuilding, iCommerce);
 				}
 			}
 		}
 
 		if (kEvent.getNumBuildingHappyChanges() > 0)
 		{
-			for (int iBuildingClass = 0; iBuildingClass < GC.getNumBuildingClassInfos(); ++iBuildingClass)
+			for (int iBuilding = 0; iBuilding < GC.getNumBuildingInfos(); ++iBuilding)
 			{
-				iHappy += kEvent.getBuildingHappyChange(iBuildingClass);
+				iHappy += kEvent.getBuildingHappyChange(iBuilding);
 			}
 		}
 
 		if (kEvent.getNumBuildingHealthChanges() > 0)
 		{
-			for (int iBuildingClass = 0; iBuildingClass < GC.getNumBuildingClassInfos(); ++iBuildingClass)
+			for (int iBuilding = 0; iBuilding < GC.getNumBuildingInfos(); ++iBuilding)
 			{
-				iHealth += kEvent.getBuildingHealthChange(iBuildingClass);
+				iHealth += kEvent.getBuildingHealthChange(iBuilding);
 			}
 		}
 	}
@@ -25242,26 +25068,16 @@ int CvPlayerAI::AI_cultureVictoryTechValue(TechTypes eTech) const
 
 	CvCivilizationInfo& kCivilizationInfo = GC.getCivilizationInfo(getCivilizationType());
 	//cultural things
-	for (int iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		BuildingTypes eLoopBuilding = ((BuildingTypes)(kCivilizationInfo.getCivilizationBuildings(iI)));
+		const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
 
-		if (eLoopBuilding != NO_BUILDING)
+		if (isTechRequiredForBuilding(eTech, eLoopBuilding))
 		{
-			if (isTechRequiredForBuilding((eTech), eLoopBuilding))
-			{
-				CvBuildingInfo& kLoopBuilding = GC.getBuildingInfo(eLoopBuilding);
+			CvBuildingInfo& kLoopBuilding = GC.getBuildingInfo(eLoopBuilding);
 
-				if ((GC.getBuildingClassInfo((BuildingClassTypes)iI).getDefaultBuildingIndex()) != (kCivilizationInfo.getCivilizationBuildings(iI)))
-				{
-					//UB
-					iValue += 100;
-				}
-
-				iValue += (150 * (kLoopBuilding.getCommerceChange(COMMERCE_CULTURE) + kLoopBuilding.getCommercePerPopChange(COMMERCE_CULTURE) + kLoopBuilding.getObsoleteSafeCommerceChange(COMMERCE_CULTURE))) / 20;
-
-				iValue += kLoopBuilding.getCommerceModifier(COMMERCE_CULTURE) * 2;
-			}
+			iValue += (150 * (kLoopBuilding.getCommerceChange(COMMERCE_CULTURE) + kLoopBuilding.getCommercePerPopChange(COMMERCE_CULTURE) + kLoopBuilding.getObsoleteSafeCommerceChange(COMMERCE_CULTURE))) / 20;
+			iValue += kLoopBuilding.getCommerceModifier(COMMERCE_CULTURE) * 2;
 		}
 	}
 

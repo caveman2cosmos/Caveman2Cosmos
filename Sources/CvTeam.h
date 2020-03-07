@@ -5,7 +5,6 @@
 #ifndef CIV4_TEAM_H
 #define CIV4_TEAM_H
 
-//#include "CvEnums.h"
 #include "CvGameObject.h"
 
 class CvArea;
@@ -126,10 +125,10 @@ public:
 	bool isAVassal() const; // Exposed to Python
 	bool canVassalRevolt(TeamTypes eMaster) const;
 
+	int getBuildingMaking(BuildingTypes eBuilding) const; // Exposed to Python
+	int getBuildingCountPlusMaking(BuildingTypes eIndex) const; // Exposed to Python
 	int getUnitMaking(UnitTypes eIndex) const; // Exposed to Python
 	int getUnitCountPlusMaking(UnitTypes eIndex) const; // Exposed to Python
-	int getBuildingClassMaking(BuildingClassTypes eBuildingClass) const; // Exposed to Python
-	int getBuildingClassCountPlusMaking(BuildingClassTypes eIndex) const; // Exposed to Python
 	int getHasReligionCount(ReligionTypes eReligion) const; // Exposed to Python
 	int getHasCorporationCount(CorporationTypes eCorporation) const; // Exposed to Python
 
@@ -442,9 +441,9 @@ public:
 	bool isUnitMaxedOut(UnitTypes eIndex, int iExtra = 0) const; // Exposed to Python
 	void changeUnitCount(UnitTypes eIndex, int iChange);
 
-	int getBuildingClassCount(BuildingClassTypes eIndex) const; // Exposed to Python
-	bool isBuildingClassMaxedOut(BuildingClassTypes eIndex, int iExtra = 0) const; // Exposed to Python
-	void changeBuildingClassCount(BuildingClassTypes eIndex, int iChange);
+	int getBuildingCount(BuildingTypes eIndex) const; // Exposed to Python
+	bool isBuildingMaxedOut(BuildingTypes eIndex, int iExtra = 0) const; // Exposed to Python
+	void changeBuildingCount(BuildingTypes eIndex, int iChange);
 
 	int getObsoleteBuildingCount(BuildingTypes eIndex) const;
 	bool isObsoleteBuilding(BuildingTypes eIndex) const; // Exposed to Python
@@ -675,8 +674,8 @@ protected:
 	int* m_paiProjectDefaultArtTypes;
 	std::vector<int> *m_pavProjectArtTypes;
 	int* m_paiProjectMaking;
+	int* m_paiBuildingCount;
 	int* m_paiUnitCount;
-	int* m_paiBuildingClassCount;
 	int* m_paiObsoleteBuildingCount;
 	int* m_paiResearchProgress;
 	int* m_paiTechCount;

@@ -65,7 +65,9 @@
 			</UnitAIs>
 			<PrereqTech>TECH_FUNDAMENTALISM</PrereqTech>
 			<BonusType>BONUS_DOG</BonusType>
-			<PrereqBuilding>BUILDING_HELLSMOUTH_SANCTUARY</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_HELLSMOUTH_SANCTUARY</BuildingType>
+			</PrereqAndBuildings>
 			<ReligionType>RELIGION_VOODOO</ReligionType>
 			<StateReligion>RELIGION_VOODOO</StateReligion>
 			<PrereqReligion>RELIGION_VOODOO</PrereqReligion>
@@ -366,7 +368,9 @@
 			<ReligionType>RELIGION_VOODOO</ReligionType>
 			<StateReligion>RELIGION_VOODOO</StateReligion>
 			<PrereqReligion>RELIGION_VOODOO</PrereqReligion>
-			<PrereqBuilding>BUILDING_VOODOO_MONASTERY</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_VOODOO_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
 			<iCost>250</iCost>
 			<iMoves>2</iMoves>
 			<iWorkRate>150</iWorkRate>
@@ -412,7 +416,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_VOODOO</PrereqReligion>
-			<PrereqBuilding>BUILDING_VOODOO_MONASTERY</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_VOODOO_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>

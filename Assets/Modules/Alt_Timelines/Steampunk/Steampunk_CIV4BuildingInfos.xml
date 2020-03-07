@@ -8,8 +8,8 @@
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_STEAMPUNK_EMBASSY</BuildingClass>
 			<Type>BUILDING_STEAMPUNK_EMBASSY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_STEAMPUNK_EMBASSY</Description>
@@ -37,7 +37,6 @@
 			<iAsset>5</iAsset>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_MUNICIP_COMP</BuildingClass>
 			<Type>BUILDING_MUNICIP_COMP</Type>
 			<Description>TXT_KEY_BUILDING_MUNICIP_COMP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MUNICIP_COMP_PEDIA</Civilopedia>
@@ -75,7 +74,6 @@
 			<iAsset>5</iAsset>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_TR_WORKSHOP</BuildingClass>
 			<Type>BUILDING_TR_WORKSHOP</Type>
 			<Description>TXT_KEY_BUILDING_TR_WORKSHOP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TR_WORKSHOP_PEDIA</Civilopedia>
@@ -130,7 +128,6 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_PANOPTICON_PRISON</BuildingClass>
 			<Type>BUILDING_PANOPTICON_PRISON</Type>
 			<Description>TXT_KEY_BUILDING_PANOPTICON_PRISON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PANOPTICON_PRISON_PEDIA</Civilopedia>
@@ -177,7 +174,6 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_MADSCIENTIST_CASTLE</BuildingClass>
 			<Type>BUILDING_MADSCIENTIST_CASTLE</Type>
 			<Description>TXT_KEY_BUILDING_MADSCIENTIST_CASTLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MADSCIENTIST_CASTLE_PEDIA</Civilopedia>
@@ -257,7 +253,6 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_COAL_DYNAMO</BuildingClass>
 			<Type>BUILDING_COAL_DYNAMO</Type>
 			<Description>TXT_KEY_BUILDING_COAL_DYNAMO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COAL_DYNAMO_PEDIA</Civilopedia>
@@ -289,12 +284,9 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_POWER_LINES</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_POWER_LINES</BuildingType>
+			</PrereqInCityBuildings>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -311,7 +303,6 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_WOOD_DYNAMO</BuildingClass>
 			<Type>BUILDING_WOOD_DYNAMO</Type>
 			<Description>TXT_KEY_BUILDING_WOOD_DYNAMO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WOOD_DYNAMO_PEDIA</Civilopedia>
@@ -343,12 +334,9 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_POWER_LINES</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_POWER_LINES</BuildingType>
+			</PrereqInCityBuildings>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -365,7 +353,6 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_PEAT_DYNAMO</BuildingClass>
 			<Type>BUILDING_PEAT_DYNAMO</Type>
 			<Description>TXT_KEY_BUILDING_PEAT_DYNAMO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PEAT_DYNAMO_PEDIA</Civilopedia>
@@ -397,12 +384,9 @@
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_POWER_LINES</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_POWER_LINES</BuildingType>
+			</PrereqInCityBuildings>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -419,8 +403,8 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NEMO_ACADEMY</BuildingClass>
 			<Type>BUILDING_NEMO_ACADEMY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_NEMO_ACADEMY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NEMO_ACADEMY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NEMO_ACADEMY_STRATEGY</Strategy>
@@ -458,18 +442,15 @@
 					<iExperience>3</iExperience>
 				</DomainFreeExperience>
 			</DomainFreeExperiences>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_NAVAL_ACADEMY</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_NAVAL_ACADEMY</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_NAVAL_ACADEMY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_NAVAL_ACADEMY</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
@@ -479,14 +460,13 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_INDIAN_EMBASSY</BuildingClass>
 			<Type>BUILDING_INDIAN_EMBASSY</Type>
-			<BuildingClassProductionModifiers>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_NEMO_ACADEMY</BuildingClassType>
+			<BuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_NEMO_ACADEMY</BuildingType>
 					<iProductionModifier>50</iProductionModifier>
-				</BuildingClassProductionModifier>
-			</BuildingClassProductionModifiers>
+				</BuildingProductionModifier>
+			</BuildingProductionModifiers>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

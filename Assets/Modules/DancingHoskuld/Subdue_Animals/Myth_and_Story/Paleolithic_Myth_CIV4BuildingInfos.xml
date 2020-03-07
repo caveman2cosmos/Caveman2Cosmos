@@ -1,10 +1,7 @@
 <?xml version="1.0"?>
-<!-- Modified by Strategyonly -->
-<!-- ###################################################################################### -->
 <Civ4BuildingInfos xmlns="x-schema:../../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_PALEOLITHIC_BIRD_MYTH</BuildingClass>
 			<Type>BUILDING_PALEOLITHIC_BIRD_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_BIRD_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -18,7 +15,7 @@
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
-			<FreeBuilding>BUILDINGCLASS_PALEOLITHIC_BIRD_MYTH_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_PALEOLITHIC_BIRD_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -48,29 +45,28 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_STORYTELLERS_HUT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_KNOWLEDGE_INHERITANCE</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_LIBRARY</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_PALEOLITHIC_BIRD_MYTH_EFFECT</BuildingClassMustNotHave>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_LIBRARY</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_PALEOLITHIC_BIRD_MYTH_EFFECT</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_PALEOLITHIC_BIRD_MYTH_EFFECT</BuildingClass>
 			<Type>BUILDING_PALEOLITHIC_BIRD_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_BIRD_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -84,7 +80,6 @@
 			</MapCategoryTypes>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_PALEOLITHIC_CAT_MYTH</BuildingClass>
 			<Type>BUILDING_PALEOLITHIC_CAT_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_CAT_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -97,7 +92,7 @@
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
-			<FreeBuilding>BUILDINGCLASS_PALEOLITHIC_CAT_MYTH_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_PALEOLITHIC_CAT_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -127,29 +122,28 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_STORYTELLERS_HUT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_KNOWLEDGE_INHERITANCE</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_LIBRARY</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_PALEOLITHIC_CAT_MYTH_EFFECT</BuildingClassMustNotHave>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_LIBRARY</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_PALEOLITHIC_CAT_MYTH_EFFECT</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_PALEOLITHIC_CAT_MYTH_EFFECT</BuildingClass>
 			<Type>BUILDING_PALEOLITHIC_CAT_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_CAT_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -163,7 +157,6 @@
 			</MapCategoryTypes>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_PALEOLITHIC_MARSUPIAL_MYTH</BuildingClass>
 			<Type>BUILDING_PALEOLITHIC_MARSUPIAL_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_MARSUPIAL_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
@@ -176,7 +169,7 @@
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
-			<FreeBuilding>BUILDINGCLASS_PALEOLITHIC_MARSUPIAL_MYTH_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_PALEOLITHIC_MARSUPIAL_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -206,29 +199,28 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_STORYTELLERS_HUT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_KNOWLEDGE_INHERITANCE</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_LIBRARY</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
-			<PrereqNotBuildingClasses>
-				<PrereqNotBuildingClass>
-					<BuildingClassMustNotHave>BUILDINGCLASS_PALEOLITHIC_MARSUPIAL_MYTH_EFFECT</BuildingClassMustNotHave>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_LIBRARY</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_PALEOLITHIC_MARSUPIAL_MYTH_EFFECT</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuildingClass>
-			</PrereqNotBuildingClasses>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_PALEOLITHIC_MARSUPIAL_MYTH_EFFECT</BuildingClass>
 			<Type>BUILDING_PALEOLITHIC_MARSUPIAL_MYTH_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_PALEOLITHIC_MARSUPIAL_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>

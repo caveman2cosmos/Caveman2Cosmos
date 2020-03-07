@@ -8896,12 +8896,12 @@ Current techs which are not in this file:-
 			<OrPreReqs>
 				<PrereqTech>TECH_CONCRETE</PrereqTech>
 			</OrPreReqs>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_LAVA_ROCK_QUARRY</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_LAVA_ROCK_QUARRY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<Quote>TXT_KEY_TECH_WATERPROOF_CONCRETE_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
 			<SoundMP/>
@@ -12613,12 +12613,12 @@ Current techs which are not in this file:-
 			<OrPreReqs>
 				<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
 			</OrPreReqs>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_GLASSSMITH</BuildingClassType>
+			<PrereqBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_GLASSSMITH</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqBuildings>
 			<Quote>TXT_KEY_TECH_LEAD_GLASS_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
 			<SoundMP/>

@@ -49,8 +49,8 @@ m_Properties(this)
 	m_paiProjectDefaultArtTypes = NULL;
 	m_pavProjectArtTypes = NULL;
 	m_paiProjectMaking = NULL;
+	m_paiBuildingCount = NULL;
 	m_paiUnitCount = NULL;
-	m_paiBuildingClassCount = NULL;
 	m_paiObsoleteBuildingCount = NULL;
 	m_paiResearchProgress = NULL;
 	m_paiTechCount = NULL;
@@ -187,8 +187,8 @@ void CvTeam::uninit()
 	SAFE_DELETE_ARRAY(m_paiProjectDefaultArtTypes);
 	SAFE_DELETE_ARRAY(m_pavProjectArtTypes);
 	SAFE_DELETE_ARRAY(m_paiProjectMaking);
+	SAFE_DELETE_ARRAY(m_paiBuildingCount);
 	SAFE_DELETE_ARRAY(m_paiUnitCount);
-	SAFE_DELETE_ARRAY(m_paiBuildingClassCount);
 	SAFE_DELETE_ARRAY(m_paiObsoleteBuildingCount);
 	SAFE_DELETE_ARRAY(m_paiResearchProgress);
 	SAFE_DELETE_ARRAY(m_paiTechCount);
@@ -386,11 +386,11 @@ void CvTeam::reset(TeamTypes eID, bool bConstructorCall)
 			m_paiUnitCount[iI] = 0;
 		}
 
-		FAssertMsg(m_paiBuildingClassCount==NULL, "about to leak memory, CvTeam::m_paiBuildingClassCount");
-		m_paiBuildingClassCount = new int [GC.getNumBuildingClassInfos()];
-		for (iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
+		FAssertMsg(m_paiBuildingCount==NULL, "about to leak memory, CvTeam::m_paiBuildingCount");
+		m_paiBuildingCount = new int [GC.getNumBuildingInfos()];
+		for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 		{
-			m_paiBuildingClassCount[iI] = 0;
+			m_paiBuildingCount[iI] = 0;
 		}
 
 		FAssertMsg(m_paiObsoleteBuildingCount==NULL, "about to leak memory, CvTeam::m_paiObsoleteBuildingCount");
@@ -1190,9 +1190,9 @@ void CvTeam::shareCounters(TeamTypes eTeam)
 		changeUnitCount(((UnitTypes)iI), GET_TEAM(eTeam).getUnitCount((UnitTypes)iI));
 	}
 
-	for (iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
+	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		changeBuildingClassCount(((BuildingClassTypes)iI), GET_TEAM(eTeam).getBuildingClassCount((BuildingClassTypes)iI));
+		changeBuildingCount((BuildingTypes)iI, GET_TEAM(eTeam).getBuildingCount((BuildingTypes)iI));
 	}
 
 	for (iI = 0; iI < GC.getNumTechInfos(); iI++)
@@ -3130,7 +3130,7 @@ int CvTeam::getUnitCountPlusMaking(UnitTypes eIndex) const
 }
 
 
-int CvTeam::getBuildingClassMaking(BuildingClassTypes eBuildingClass) const
+int CvTeam::getBuildingMaking(BuildingTypes eBuilding) const
 {
 	int iCount = 0;
 
@@ -3138,7 +3138,7 @@ int CvTeam::getBuildingClassMaking(BuildingClassTypes eBuildingClass) const
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
 		{
-			iCount += GET_PLAYER((PlayerTypes)iI).getBuildingClassMaking(eBuildingClass);
+			iCount += GET_PLAYER((PlayerTypes)iI).getBuildingMaking(eBuilding);
 		}
 	}
 
@@ -3146,9 +3146,9 @@ int CvTeam::getBuildingClassMaking(BuildingClassTypes eBuildingClass) const
 }
 
 
-int CvTeam::getBuildingClassCountPlusMaking(BuildingClassTypes eIndex) const
+int CvTeam::getBuildingCountPlusMaking(BuildingTypes eIndex) const
 {
-	return (getBuildingClassCount(eIndex) + getBuildingClassMaking(eIndex));
+	return (getBuildingCount(eIndex) + getBuildingMaking(eIndex));
 }
 
 
@@ -5825,42 +5825,42 @@ void CvTeam::changeUnitCount(UnitTypes eIndex, int iChange)
 }
 
 
-int CvTeam::getBuildingClassCount(BuildingClassTypes eIndex) const
+int CvTeam::getBuildingCount(BuildingTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumBuildingClassInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
-	return m_paiBuildingClassCount[eIndex];
+	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	return m_paiBuildingCount[eIndex];
 }
 
 
-bool CvTeam::isBuildingClassMaxedOut(BuildingClassTypes eIndex, int iExtra) const
+bool CvTeam::isBuildingMaxedOut(BuildingTypes eIndex, int iExtra) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumBuildingClassInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
-	if (!isTeamWonderClass(eIndex))
+	if (!isTeamWonder(eIndex))
 	{
 		return false;
 	}
 
-	FAssertMsg(getBuildingClassCount(eIndex) <= GC.getBuildingClassInfo(eIndex).getMaxTeamInstances(), "The current building class count is expected not to exceed the maximum number of instances allowed for this team");
+	FAssertMsg(getBuildingCount(eIndex) <= GC.getBuildingInfo(eIndex).getMaxTeamInstances(), "The current building count is expected not to exceed the maximum number of instances allowed for this team");
 
-	return ((getBuildingClassCount(eIndex) + iExtra) >= GC.getBuildingClassInfo(eIndex).getMaxTeamInstances());
+	return ((getBuildingCount(eIndex) + iExtra) >= GC.getBuildingInfo(eIndex).getMaxTeamInstances());
 }
 
 
-void CvTeam::changeBuildingClassCount(BuildingClassTypes eIndex, int iChange)
+void CvTeam::changeBuildingCount(BuildingTypes eIndex, int iChange)
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumBuildingClassInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
-	int iValue = m_paiBuildingClassCount[eIndex] + iChange;
+	int iValue = m_paiBuildingCount[eIndex] + iChange;
 	if (iValue < 0)
 	{
 		iValue = 0;
 	}
-	m_paiBuildingClassCount[eIndex] = iValue;
-	FAssert(getBuildingClassCount(eIndex) >= 0);
+	m_paiBuildingCount[eIndex] = iValue;
+	FAssert(getBuildingCount(eIndex) >= 0);
 }
 
 
@@ -7778,8 +7778,8 @@ void CvTeam::read(FDataStreamBase* pStream)
 	}
 
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_PROJECTS, GC.getNumProjectInfos(), m_paiProjectMaking);
+	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingCount);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiUnitCount);
-	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_BUILDING_CLASSES, GC.getNumBuildingClassInfos(), m_paiBuildingClassCount);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiObsoleteBuildingCount);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_paiResearchProgress);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_paiTechCount);
@@ -7950,9 +7950,8 @@ void CvTeam::write(FDataStreamBase* pStream)
 	}
 
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_PROJECTS, GC.getNumProjectInfos(), m_paiProjectMaking);
+	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingCount);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiUnitCount);
-	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_BUILDING_CLASSES, GC.getNumBuildingClassInfos(), m_paiBuildingClassCount);
-	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiObsoleteBuildingCount);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_paiResearchProgress);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_paiTechCount);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_TERRAINS, GC.getNumTerrainInfos(), m_paiTerrainTradeCount);
@@ -8673,11 +8672,11 @@ int CvTeam::getTotalVictoryScore() const
 
 	int globalLand = GC.getMap().getLandPlots();
 
-	for (int iK = 0; iK < GC.getNumBuildingClassInfos(); iK++)
+	for (int iK = 0; iK < GC.getNumBuildingInfos(); iK++)
 	{
-		if (GC.getBuildingClassInfo((BuildingClassTypes)iK).getMaxGlobalInstances() == 1)
+		if (GC.getBuildingInfo((BuildingTypes)iK).getMaxGlobalInstances() == 1)
 		{
-			globalWonderScore ++;
+			globalWonderScore++;
 		}
 	}
 
@@ -8833,7 +8832,7 @@ void CvTeam::changeBuildingCommerceChange(BuildingTypes eIndex1, CommerceTypes e
 
 	if (iChange != 0)
 	{
-		int iOldValue = m_ppiBuildingCommerceChange[eIndex1][eIndex2];
+		const int iOldValue = m_ppiBuildingCommerceChange[eIndex1][eIndex2];
 		m_ppiBuildingCommerceChange[eIndex1][eIndex2] += iChange;
 
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
@@ -8851,7 +8850,7 @@ void CvTeam::changeBuildingCommerceChange(BuildingTypes eIndex1, CommerceTypes e
 						{
 							if (!pLoopCity->isReligiouslyDisabledBuilding(eIndex1))
 							{
-								int iExistingValue = pLoopCity->getBuildingCommerceChange((BuildingClassTypes)GC.getBuildingInfo(eIndex1).getBuildingClassType(), eIndex2);
+								const int iExistingValue = pLoopCity->getBuildingCommerceChange(eIndex1, eIndex2);
 								// set the new
 								pLoopCity->updateCommerceRateByBuilding(eIndex1, eIndex2, (iExistingValue - iOldValue + getBuildingCommerceChange(eIndex1, eIndex2)));
 							}
@@ -8971,7 +8970,7 @@ void CvTeam::changeBuildingCommerceModifier(BuildingTypes eIndex1, CommerceTypes
 
 	if (iChange != 0)
 	{
-		int iOldValue = getBuildingCommerceModifier(eIndex1, eIndex2);
+		const int iOldValue = getBuildingCommerceModifier(eIndex1, eIndex2);
 		m_ppiBuildingCommerceModifier[eIndex1][eIndex2] += iChange;
 
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
@@ -8989,7 +8988,7 @@ void CvTeam::changeBuildingCommerceModifier(BuildingTypes eIndex1, CommerceTypes
 						{
 							if (!pLoopCity->isReligiouslyDisabledBuilding(eIndex1))
 							{
-								int iExistingValue = pLoopCity->getBuildingCommerceModifier((BuildingClassTypes)GC.getBuildingInfo(eIndex1).getBuildingClassType(), eIndex2);
+								const int iExistingValue = pLoopCity->getBuildingCommerceModifier(eIndex1, eIndex2);
 								// set the new
 								pLoopCity->updateCommerceModifierByBuilding(eIndex1, eIndex2, (iExistingValue - iOldValue + getBuildingCommerceModifier(eIndex1, eIndex2)));
 							}
@@ -9019,7 +9018,7 @@ void CvTeam::changeBuildingYieldModifier(BuildingTypes eIndex1, YieldTypes eInde
 
 	if (iChange != 0)
 	{
-		int iOldValue = getBuildingYieldModifier(eIndex1, eIndex2);
+		const int iOldValue = getBuildingYieldModifier(eIndex1, eIndex2);
 		m_ppiBuildingYieldModifier[eIndex1][eIndex2] += iChange;
 
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
@@ -9037,7 +9036,7 @@ void CvTeam::changeBuildingYieldModifier(BuildingTypes eIndex1, YieldTypes eInde
 						{
 							if (!pLoopCity->isReligiouslyDisabledBuilding(eIndex1))
 							{
-								int iExistingValue = pLoopCity->getBuildingYieldModifier((BuildingClassTypes)GC.getBuildingInfo(eIndex1).getBuildingClassType(), eIndex2);
+								const int iExistingValue = pLoopCity->getBuildingYieldModifier(eIndex1, eIndex2);
 								// set the new
 								pLoopCity->updateYieldModifierByBuilding(eIndex1, eIndex2, (iExistingValue - iOldValue + getBuildingYieldModifier(eIndex1, eIndex2)));
 							}
@@ -9322,23 +9321,11 @@ void CvTeam::recalculateModifiers()
 	m_iRiverTradeCount = 0;
 	m_iNukeInterception = 0;
 
-	for (iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
-	{
-		m_paiBuildingClassCount[iI] = 0;
-	}
-
 	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
+		m_paiBuildingCount[iI] = 0;
 		m_paiObsoleteBuildingCount[iI] = 0;
-	}
-
-	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
-	{
 		m_paiTechExtraBuildingHappiness[iI] = 0;
-	}
-
-	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
-	{
 		m_paiTechExtraBuildingHealth[iI] = 0;
 	}
 

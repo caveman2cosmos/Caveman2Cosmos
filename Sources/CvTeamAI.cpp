@@ -2018,11 +2018,11 @@ DenialTypes CvTeamAI::AI_techTrade(TechTypes eTech, TeamTypes eTeam) const
 
 	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		if (isTechRequiredForBuilding(eTech, ((BuildingTypes)iI)))
+		if (isTechRequiredForBuilding(eTech, (BuildingTypes)iI))
 		{
-			if (isWorldWonderClass((BuildingClassTypes)(GC.getBuildingInfo((BuildingTypes)iI).getBuildingClassType())))
+			if (isWorldWonder((BuildingTypes)iI))
 			{
-				if (getBuildingClassMaking((BuildingClassTypes)(GC.getBuildingInfo((BuildingTypes)iI).getBuildingClassType())) > 0)
+				if (getBuildingMaking((BuildingTypes)iI) > 0)
 				{
 					return DENIAL_MYSTERY;
 				}
@@ -6124,19 +6124,15 @@ int CvTeamAI::AI_getTechMonopolyValue(TechTypes eTech, TeamTypes eTeam) const
 	}
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		if (isTechRequiredForBuilding(eTech, ((BuildingTypes)iI)))
+		if (isTechRequiredForBuilding(eTech, (BuildingTypes)iI))
 		{
-			CvBuildingInfo& kLoopBuilding = GC.getBuildingInfo((BuildingTypes)iI);
-			if (kLoopBuilding.getReligionType() == NO_RELIGION)
+			if (GC.getBuildingInfo((BuildingTypes)iI).getReligionType() == NO_RELIGION)
 			{
 				iValue += 30;
 			}
-			if (isWorldWonderClass((BuildingClassTypes)kLoopBuilding.getBuildingClassType()))
+			if (isWorldWonder((BuildingTypes)iI) && !GC.getGame().isBuildingMaxedOut((BuildingTypes)iI))
 			{
-				if (!(GC.getGame().isBuildingClassMaxedOut((BuildingClassTypes)kLoopBuilding.getBuildingClassType())))
-				{
-					iValue += 50;
-				}
+				iValue += 50;
 			}
 		}
 	}

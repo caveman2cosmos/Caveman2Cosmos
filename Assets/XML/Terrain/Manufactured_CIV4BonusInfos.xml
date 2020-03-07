@@ -2433,7 +2433,7 @@
 		<BonusInfo>
 			<Type>BONUS_SYNTHETIC_RUBBER</Type>
 			<Description>TXT_KEY_BONUS_SYNTHETIC_RUBBER</Description>
-			<Civilopedia>TXT_KEY_BONUS_SYNTHETIC_RUBBER</Civilopedia>
+			<Civilopedia>TXT_KEY_BONUS_SYNTHETIC_RUBBER_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_VULCANIZED_RUBBER</ArtDefineTag>
 			<TechReveal>TECH_POLYMERIZATION</TechReveal>

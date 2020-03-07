@@ -306,8 +306,8 @@
 				<iYieldProduced>0</iYieldProduced>
 				<iYieldProduced>0</iYieldProduced>
 			</YieldChanges>
-			<PrereqBuildingClasses>
-			</PrereqBuildingClasses>
+			<PrereqBuildings>
+			</PrereqBuildings>
 			<Button>Art/Interface/Buttons/corporations/emperors_clothing.dds</Button>
 			<MovieFile>NONE</MovieFile>
 			<MovieSound>NONE</MovieSound>
@@ -366,8 +366,8 @@
 				<iYieldProduced>0</iYieldProduced>
 				<iYieldProduced>0</iYieldProduced>
 			</YieldChanges>
-			<PrereqBuildingClasses>
-			</PrereqBuildingClasses>
+			<PrereqBuildings>
+			</PrereqBuildings>
 			<Button>Art/Interface/Buttons/corporations/moon_bean.dds</Button>
 			<MovieFile>NONE</MovieFile>
 			<MovieSound>NONE</MovieSound>
@@ -423,8 +423,8 @@
 				<iYieldProduced>0</iYieldProduced>
 				<iYieldProduced>0</iYieldProduced>
 			</YieldChanges>
-			<PrereqBuildingClasses>
-			</PrereqBuildingClasses>
+			<PrereqBuildings>
+			</PrereqBuildings>
 			<Button>Art/Interface/Buttons/corporations/mcdowells.dds</Button>
 			<MovieFile>NONE</MovieFile>
 			<MovieSound>NONE</MovieSound>
@@ -630,8 +630,8 @@
 				<iYieldProduced>0</iYieldProduced>
 				<iYieldProduced>0</iYieldProduced>
 			</YieldChanges>
-			<PrereqBuildingClasses>
-			</PrereqBuildingClasses>
+			<PrereqBuildings>
+			</PrereqBuildings>
 			<Button>Art/Interface/Buttons/corporations/sparth/mapster.dds</Button>
 			<MovieFile>NONE</MovieFile>
 			<MovieSound>NONE</MovieSound>
@@ -686,8 +686,8 @@
 				<iYieldProduced>0</iYieldProduced>
 				<iYieldProduced>0</iYieldProduced>
 			</YieldChanges>
-			<PrereqBuildingClasses>
-			</PrereqBuildingClasses>
+			<PrereqBuildings>
+			</PrereqBuildings>
 			<Button>Art/Interface/Buttons/corporations/BurgerWorld.dds</Button>
 			<MovieFile>NONE</MovieFile>
 			<MovieSound>NONE</MovieSound>
@@ -745,8 +745,8 @@
 				<iYieldProduced>0</iYieldProduced>
 				<iYieldProduced>0</iYieldProduced>
 			</YieldChanges>
-			<PrereqBuildingClasses>
-			</PrereqBuildingClasses>
+			<PrereqBuildings>
+			</PrereqBuildings>
 			<Button>Art/Interface/Buttons/corporations/sparth/wonka.dds</Button>
 			<MovieFile>NONE</MovieFile>
 			<MovieSound>NONE</MovieSound>
@@ -879,8 +879,8 @@
 				<iYieldProduced>0</iYieldProduced>
 				<iYieldProduced>0</iYieldProduced>
 			</YieldChanges>
-			<PrereqBuildingClasses>
-			</PrereqBuildingClasses>
+			<PrereqBuildings>
+			</PrereqBuildings>
 			<Button>Art/Interface/Buttons/corporations/Adventure.dds</Button>
 			<MovieFile>NONE</MovieFile>
 			<MovieSound>NONE</MovieSound>
@@ -939,8 +939,8 @@
 				<iYieldProduced>0</iYieldProduced>
 				<iYieldProduced>0</iYieldProduced>
 			</YieldChanges>
-			<PrereqBuildingClasses>
-			</PrereqBuildingClasses>
+			<PrereqBuildings>
+			</PrereqBuildings>
 			<Button>Art/Interface/Buttons/corporations/Safari.dds</Button>
 			<MovieFile>NONE</MovieFile>
 			<MovieSound>NONE</MovieSound>
@@ -998,8 +998,8 @@
 				<iYieldProduced>0</iYieldProduced>
 				<iYieldProduced>0</iYieldProduced>
 			</YieldChanges>
-			<PrereqBuildingClasses>
-			</PrereqBuildingClasses>
+			<PrereqBuildings>
+			</PrereqBuildings>
 			<Button>Art/Interface/Buttons/corporations/Red.dds</Button>
 			<MovieFile>NONE</MovieFile>
 			<MovieSound>NONE</MovieSound>
@@ -1058,8 +1058,8 @@
 				<iYieldProduced>0</iYieldProduced>
 				<iYieldProduced>0</iYieldProduced>
 			</YieldChanges>
-			<PrereqBuildingClasses>
-			</PrereqBuildingClasses>
+			<PrereqBuildings>
+			</PrereqBuildings>
 			<Button>Art/Interface/Buttons/corporations/Soldier.dds</Button>
 			<MovieFile>NONE</MovieFile>
 			<MovieSound>NONE</MovieSound>

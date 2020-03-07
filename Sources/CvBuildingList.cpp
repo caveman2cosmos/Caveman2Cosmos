@@ -193,8 +193,7 @@ int CvBuildingList::getBuildingSelectionRow()
 	{
 		for (int j = 0; j < static_cast<int>(m_aaiGroupedBuildingList[i].size()); j++)
 		{
-			BuildingTypes eBuilding = m_aaiGroupedBuildingList[i][j];
-			if (!isLimitedWonderClass((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType()))
+			if (!isLimitedWonder(static_cast<BuildingTypes>(m_aaiGroupedBuildingList[i][j])))
 				return i;
 		}
 	}
@@ -217,8 +216,7 @@ int CvBuildingList::getWonderSelectionRow()
 	{
 		for (int j = 0; j < static_cast<int>(m_aaiGroupedBuildingList[i].size()); j++)
 		{
-			BuildingTypes eBuilding = m_aaiGroupedBuildingList[i][j];
-			if (isLimitedWonderClass((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType()))
+			if (!isLimitedWonder(static_cast<BuildingTypes>(m_aaiGroupedBuildingList[i][j])))
 				return i;
 		}
 	}

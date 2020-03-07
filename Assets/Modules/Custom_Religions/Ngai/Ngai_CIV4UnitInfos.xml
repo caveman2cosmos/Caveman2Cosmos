@@ -33,7 +33,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_NGAIISM</PrereqReligion>
-			<PrereqBuilding>BUILDING_NGAI</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_NGAI</BuildingType>
+			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>

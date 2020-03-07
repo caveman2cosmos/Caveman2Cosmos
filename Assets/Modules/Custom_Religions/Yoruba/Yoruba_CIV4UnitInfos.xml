@@ -33,7 +33,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_YORUBA</PrereqReligion>
-			<PrereqBuilding>BUILDING_OLOFIN</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_OLOFIN</BuildingType>
+			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>

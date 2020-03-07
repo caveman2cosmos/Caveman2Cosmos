@@ -934,15 +934,7 @@
 	<ElementType name="Cities" content="eltOnly">
 		<element type="City" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="BuildingClassType" content="textOnly"/>
 	<ElementType name="BuildingType" content="textOnly"/>
-	<ElementType name="Building" content="eltOnly">
-		<element type="BuildingClassType"/>
-		<element type="BuildingType"/>
-	</ElementType>
-	<ElementType name="Buildings" content="eltOnly">
-		<element type="Building" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
 	<ElementType name="UnitType" content="textOnly"/>
 	<ElementType name="iFreeUnits" content="textOnly" dt:type="int"/>
 	<ElementType name="FreeUnit" content="eltOnly">
@@ -952,13 +944,13 @@
 	<ElementType name="FreeUnits" content="eltOnly">
 		<element type="FreeUnit" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="bFreeBuildingClass" content="textOnly" dt:type="boolean"/>
-	<ElementType name="FreeBuildingClass" content="eltOnly">
-		<element type="BuildingClassType"/>
-		<element type="bFreeBuildingClass"/>
+	<ElementType name="bFreeBuilding" content="textOnly" dt:type="boolean"/>
+	<ElementType name="FreeBuilding" content="eltOnly">
+		<element type="BuildingType"/>
+		<element type="bFreeBuilding"/>
 	</ElementType>
-	<ElementType name="FreeBuildingClasses" content="eltOnly">
-		<element type="FreeBuildingClass" minOccurs="0" maxOccurs="*"/>
+	<ElementType name="FreeBuildings" content="eltOnly">
+		<element type="FreeBuilding" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="TechType" content="textOnly"/>
 	<ElementType name="bFreeTech" content="textOnly" dt:type="boolean"/>
@@ -1018,9 +1010,8 @@
 		<element type="iSpawnRateModifier" minOccurs="0"/>
 		<element type="iSpawnRateNPCPeaceModifier" minOccurs="0"/>
 		<element type="Cities" minOccurs="0"/>
-		<element type="Buildings" minOccurs="0"/>
 		<element type="FreeUnits" minOccurs="0"/>
-		<element type="FreeBuildingClasses" minOccurs="0"/>
+		<element type="FreeBuildings" minOccurs="0"/>
 		<element type="FreeTechs" minOccurs="0"/>
 		<element type="DisableTechs" minOccurs="0"/>
 		<element type="InitialCivics" minOccurs="0"/>

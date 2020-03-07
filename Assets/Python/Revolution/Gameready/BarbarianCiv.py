@@ -404,7 +404,7 @@ class BarbarianCiv:
 			if isLimitedUnit(iUnit): continue
 
 			CvUnitInfo = GC.getUnitInfo(iUnit)
-			if CvUnitInfo.getDomainType() != DomainTypes.DOMAIN_LAND or CvUnitInfo.isPrereqBuildingClass(-1):
+			if CvUnitInfo.getDomainType() != DomainTypes.DOMAIN_LAND or CvUnitInfo.getNumPrereqAndBuildings() > 0:
 				continue
 
 			if not CyPlayer.canTrain(iUnit, False, False): continue

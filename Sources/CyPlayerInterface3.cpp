@@ -72,7 +72,6 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 		.def("getRevIdxNational", &CyPlayer::getRevIdxNational, "int ()")
 		.def("isInquisitionConditions", &CyPlayer::isInquisitionConditions, "bool ()")
 		.def("canFoundReligion", &CyPlayer::canFoundReligion, "bool ()")
-		.def("isBuildingClassRequiredToTrain", &CyPlayer::isBuildingClassRequiredToTrain, "bool ((BuildingClassTypes)iBuildingClass, (UnitTypes)iUnit)")
 		/************************************************************************************************/
 		/* REVDCM                                  END                                                  */
 		/************************************************************************************************/
@@ -244,10 +243,10 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 		.def("getUnitMaking", &CyPlayer::getUnitMaking, "int (int (UnitTypes) eIndex)")
 		.def("getUnitCountPlusMaking", &CyPlayer::getUnitCountPlusMaking, "int (int (UnitTypes) eIndex)")
 
-		.def("getBuildingClassCount", &CyPlayer::getBuildingClassCount, "int (int /*BuildingClassTypes*/ eIndex)")
-		.def("isBuildingClassMaxedOut", &CyPlayer::isBuildingClassMaxedOut, "bool (int /*BuildingClassTypes*/ iIndex, int iExtra)")
-		.def("getBuildingClassMaking", &CyPlayer::getBuildingClassMaking, "int (int /*BuildingClassTypes*/ iIndex)")
-		.def("getBuildingClassCountPlusMaking", &CyPlayer::getBuildingClassCountPlusMaking, "int (int /*BuildingClassTypes*/ iIndex)")
+		.def("getBuildingCount", &CyPlayer::getBuildingCount, "int (int /*BuildingTypes*/ eIndex)")
+		.def("isBuildingMaxedOut", &CyPlayer::isBuildingMaxedOut, "bool (int /*BuildingTypes*/ iIndex, int iExtra)")
+		.def("getBuildingMaking", &CyPlayer::getBuildingMaking, "int (int /*BuildingTypes*/ iIndex)")
+		.def("getBuildingCountPlusMaking", &CyPlayer::getBuildingCountPlusMaking, "int (int /*BuildingTypes*/ iIndex)")
 		.def("getHurryCount", &CyPlayer::getHurryCount, "int (int (HurryTypes) eIndex)")
 		.def("canHurry", &CyPlayer::canHurry, "int (int (HurryTypes) eIndex)")
 		.def("getSpecialBuildingNotRequiredCount", &CyPlayer::getSpecialBuildingNotRequiredCount, "int (int (SpecialBuildingTypes) eIndex)")

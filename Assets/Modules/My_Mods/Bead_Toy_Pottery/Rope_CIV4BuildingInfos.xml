@@ -8,7 +8,6 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<!-- Rope Factory -->
-			<BuildingClass>BUILDINGCLASS_ROPE_FACTORY</BuildingClass>
 			<Type>BUILDING_ROPE_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_ROPE_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ROPE_FACTORY_PEDIA</Civilopedia>
@@ -28,22 +27,16 @@
 				<Bonus>BONUS_LEATHER</Bonus>
 				<Bonus>BONUS_NYLON</Bonus>
 			</PrereqBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_FACTORY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_ROPE_WEAVER</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ROPE_WEAVER</BuildingClassType>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FACTORY</BuildingType>
+				<BuildingType>BUILDING_ROPE_WEAVER</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_ROPE_WEAVER</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
 			<!-- Construction cost -->
 			<iCost>1030</iCost>
 			<!-- Main effects -->
@@ -86,7 +79,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Rope Weaver's Hut -->
-			<BuildingClass>BUILDINGCLASS_ROPE_WEAVER</BuildingClass>
 			<Type>BUILDING_ROPE_WEAVER</Type>
 			<Description>TXT_KEY_BUILDING_ROPE_WEAVER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ROPE_WEAVER_PEDIA</Civilopedia>
@@ -104,25 +96,25 @@
 				<Bonus>BONUS_CLOTH</Bonus>
 				<Bonus>BONUS_LEATHER</Bonus>
 			</PrereqBonuses>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_STORAGE_PIT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BARTER_POST</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_VIKING_TRADING_POST</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_BARTER_POST</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<!-- Obsolescence -->
 			<!--ObsoleteTech>TECH_INDUSTRIALISM</ObsoleteTech>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_ROPE_FACTORY</BuildingClassType>
+					<BuildingType>BUILDING_ROPE_FACTORY</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings-->
