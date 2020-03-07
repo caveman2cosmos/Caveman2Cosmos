@@ -5653,18 +5653,9 @@ bool CvGame::isOption(GameOptionTypes eIndex) const
 	{
 		return false;
 	}
-/*************************************************************************************************/
-/**	Xienwolf Tweak							02/06/09											**/
-/**																								**/
-/**						Rigid assurance that we never have bad options							**/
-/*************************************************************************************************/
-	if (eIndex >= NUM_GAMEOPTION_TYPES || eIndex < 0)
-	{
-		return false;
-	}
-/*************************************************************************************************/
-/**	Tweak									END													**/
-/*************************************************************************************************/
+
+	FAssert(eIndex > NO_GAMEOPTION && eIndex < NUM_GAMEOPTION_TYPES);
+
 	return GC.getInitCore().getOption(eIndex);
 }
 
