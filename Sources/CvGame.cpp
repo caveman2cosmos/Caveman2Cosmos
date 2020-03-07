@@ -5654,8 +5654,6 @@ bool CvGame::isOption(GameOptionTypes eIndex) const
 		return false;
 	}
 
-	FAssert(eIndex > NO_GAMEOPTION && eIndex < NUM_GAMEOPTION_TYPES);
-
 	return GC.getInitCore().getOption(eIndex);
 }
 
