@@ -2975,7 +2975,7 @@ def applySecretKnowledge2(argsList):
   player = GC.getPlayer(kTriggeredData.ePlayer)
 
   city = player.getCity(kTriggeredData.iCityId)
-  city.setBuildingCommerceChange(GC.getBuildingInfo(kTriggeredData.eBuilding), CommerceTypes.COMMERCE_CULTURE, 4)
+  city.setBuildingCommerceChange(kTriggeredData.eBuilding, CommerceTypes.COMMERCE_CULTURE, 4)
 
 ######## HIGH_WARLORD ###########
 
