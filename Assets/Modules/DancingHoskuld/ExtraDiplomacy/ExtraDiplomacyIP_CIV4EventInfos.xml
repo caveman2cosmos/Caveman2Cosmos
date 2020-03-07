@@ -41,7 +41,7 @@
 			<iUnitImmobileTurns>0</iUnitImmobileTurns>
 			<UnitName/>
 			<UnitCombatPromotions/>
-			<BuildingClass>NONE</BuildingClass>
+			<Building>NONE</Building>
 			<iBuildingChange>0</iBuildingChange>
 			<BuildingExtraYields/>
 			<BuildingExtraCommerces/>
@@ -119,7 +119,7 @@
 			<iUnitImmobileTurns>0</iUnitImmobileTurns>
 			<UnitName/>
 			<UnitCombatPromotions/>
-			<BuildingClass>NONE</BuildingClass>
+			<Building>NONE</Building>
 			<iBuildingChange>0</iBuildingChange>
 			<BuildingExtraYields/>
 			<BuildingExtraCommerces/>
@@ -197,7 +197,7 @@
 			<iUnitImmobileTurns>0</iUnitImmobileTurns>
 			<UnitName/>
 			<UnitCombatPromotions/>
-			<BuildingClass>NONE</BuildingClass>
+			<Building>NONE</Building>
 			<iBuildingChange>0</iBuildingChange>
 			<BuildingExtraYields/>
 			<BuildingExtraCommerces/>
@@ -275,7 +275,7 @@
 			<iUnitImmobileTurns>0</iUnitImmobileTurns>
 			<UnitName/>
 			<UnitCombatPromotions/>
-			<BuildingClass>NONE</BuildingClass>
+			<Building>NONE</Building>
 			<iBuildingChange>0</iBuildingChange>
 			<BuildingExtraYields/>
 			<BuildingExtraCommerces/>
@@ -353,7 +353,7 @@
 			<iUnitImmobileTurns>0</iUnitImmobileTurns>
 			<UnitName/>
 			<UnitCombatPromotions/>
-			<BuildingClass>NONE</BuildingClass>
+			<Building>NONE</Building>
 			<iBuildingChange>0</iBuildingChange>
 			<BuildingExtraYields/>
 			<BuildingExtraCommerces/>
@@ -431,7 +431,7 @@
 			<iUnitImmobileTurns>0</iUnitImmobileTurns>
 			<UnitName/>
 			<UnitCombatPromotions/>
-			<BuildingClass>NONE</BuildingClass>
+			<Building>NONE</Building>
 			<iBuildingChange>0</iBuildingChange>
 			<BuildingExtraYields/>
 			<BuildingExtraCommerces/>

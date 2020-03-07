@@ -12823,7 +12823,12 @@
 					<OutcomeType>OUTCOME_SUBDUE</OutcomeType>
 					<iChance>10</iChance>
 					<UnitType>UNIT_SUBDUED_MAMMOTH</UnitType>
-					<bUnitToCity><Has><GOMType>GOM_TECH</GOMType><ID>TECH_SEDENTARY_LIFESTYLE</ID></Has></bUnitToCity>
+					<bUnitToCity>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
+						</Has>
+					</bUnitToCity>
 					<Yields>
 						<iYield>7</iYield>
 						<iYield>3</iYield>

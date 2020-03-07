@@ -1730,7 +1730,7 @@ class CvInfoScreen:
 					pBuilding = gc.getBuildingInfo(iBuildingLoop)
 
 					# If this building is a wonder...
-					if (isWorldWonderClass(gc.getBuildingInfo(iBuildingLoop).getBuildingClassType())):
+					if (isWorldWonder(iBuildingLoop)):
 
 						if (pCity.getNumBuilding(iBuildingLoop) > 0):
 
@@ -2270,7 +2270,7 @@ class CvInfoScreen:
 							pBuilding = gc.getBuildingInfo(iBuildingLoop)
 
 							# World Wonder Mode
-							if (self.szWonderDisplayMode == self.szWDM_WorldWonder and isWorldWonderClass(gc.getBuildingInfo(iBuildingLoop).getBuildingClassType())):
+							if (self.szWonderDisplayMode == self.szWDM_WorldWonder and isWorldWonder(iBuildingLoop)):
 
 								# Is this city building a wonder?
 								if (iBuildingProd == iBuildingLoop):
@@ -2289,7 +2289,7 @@ class CvInfoScreen:
 									self.iNumWonders += 1
 
 							# National/Team Wonder Mode
-							elif (self.szWonderDisplayMode == self.szWDM_NatnlWonder and (isNationalWonderClass(gc.getBuildingInfo(iBuildingLoop).getBuildingClassType()) or isTeamWonderClass(gc.getBuildingInfo(iBuildingLoop).getBuildingClassType()))):
+							elif self.szWonderDisplayMode == self.szWDM_NatnlWonder and (isNationalWonder(iBuildingLoop) or isTeamWonder(iBuildingLoop)):
 
 								# Is this city building a wonder?
 								if (iBuildingProd == iBuildingLoop):
@@ -2389,7 +2389,7 @@ class CvInfoScreen:
 #							pBuilding = gc.getBuildingInfo(iBuildingLoop)
 
 							# World Wonder Mode
-							if (self.szWonderDisplayMode == self.szWDM_WorldWonder and isWorldWonderClass(gc.getBuildingInfo(iBuildingLoop).getBuildingClassType())):
+							if (self.szWonderDisplayMode == self.szWDM_WorldWonder and isWorldWonder(iBuildingLoop)):
 								# Is this city building a wonder?
 								if (iBuildingProd == iBuildingLoop):
 									if (iPlayerTeam == self.iActiveTeam):
@@ -2409,7 +2409,7 @@ class CvInfoScreen:
 									self.iNumWonders += 1
 
 							# National/Team Wonder Mode
-							elif (self.szWonderDisplayMode == self.szWDM_NatnlWonder and (isNationalWonderClass(gc.getBuildingInfo(iBuildingLoop).getBuildingClassType()) or isTeamWonderClass(gc.getBuildingInfo(iBuildingLoop).getBuildingClassType()))):
+							elif self.szWonderDisplayMode == self.szWDM_NatnlWonder and (isNationalWonder(iBuildingLoop) or isTeamWonder(iBuildingLoop)):
 
 								# Is this city building a wonder?
 								if (iBuildingProd == iBuildingLoop):

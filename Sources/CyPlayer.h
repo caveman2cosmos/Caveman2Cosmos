@@ -175,8 +175,8 @@ public:
 	bool canConstruct(int /*BuildingTypes*/eBuilding, bool bContinue, bool bTestVisible, bool bIgnoreCost);
 	bool canCreate(int /*ProjectTypes*/ eProject, bool bContinue, bool bTestVisible);
 	bool canMaintain(int /*ProcessTypes*/ eProcess, bool bContinue);
+	bool isProductionMaxedBuilding(int /*BuildingTypes*/ eBuilding, bool bAcquireCity);
 	bool isProductionMaxedUnit(int /*UnitTypes*/ eUnit);
-	bool isProductionMaxedBuildingClass(int /*BuildingClassTypes*/ eBuildingClass, bool bAcquireCity);
 	bool isProductionMaxedProject(int /*ProjectTypes*/ eProject);
 	int getUnitProductionNeeded(int /*UnitTypes*/ iIndex);
 	int getBuildingProductionNeeded(int /*BuildingTypes*/ iIndex);
@@ -184,9 +184,9 @@ public:
 
 	void chooseTech(int iDiscover, std::wstring szText, bool bFront);
 
-	int getBuildingClassPrereqBuilding(int /*BuildingTypes*/ eBuilding, int /*BuildingClassTypes*/ ePrereqBuildingClass, int iExtra);
+	int getBuildingPrereqBuilding(int /*BuildingTypes*/ eBuilding, int /*BuildingTypes*/ ePrereqBuilding, int iExtra);
 
-	void removeBuildingClass(int /*BuildingClassTypes*/ eBuildingClass);
+	void removeBuilding(int /*BuildingTypes*/ eBuilding);
 	bool canBuild(CyPlot* pPlot, int /*BuildTypes*/ eBuild, bool bTestEra, bool bTestVisible);
 	int /*RouteTypes*/ getBestRoute(CyPlot* pPlot) const;
 	int getImprovementUpgradeRate(int /*ImprovementTypes*/ eImprovement) const;
@@ -372,7 +372,6 @@ public:
 	bool isInquisitionConditions();
 	int getUnitUpgradePriceModifier();
 	bool canFoundReligion();
-	bool isBuildingClassRequiredToTrain(int /*BuildingClassTypes*/ iBuildingClass, int /*UnitTypes*/ iUnit);
 /************************************************************************************************/
 /* REVDCM                                  END                                                  */
 /************************************************************************************************/
@@ -559,10 +558,10 @@ public:
 	int getUnitMaking(int /*UnitTypes*/ eIndex);
 	int getUnitCountPlusMaking(int /*UnitTypes*/ eIndex);
 
-	int getBuildingClassCount(int /*BuildingClassTypes*/ iIndex);
-	bool isBuildingClassMaxedOut(int /*BuildingClassTypes*/ iIndex, int iExtra);
-	int getBuildingClassMaking(int /*BuildingClassTypes*/ iIndex);
-	int getBuildingClassCountPlusMaking(int /*BuildingClassTypes*/ iIndex);
+	int getBuildingCount(int /*BuildingTypes*/ iIndex);
+	bool isBuildingMaxedOut(int /*BuildingTypes*/ iIndex, int iExtra);
+	int getBuildingMaking(int /*BuildingTypes*/ iIndex);
+	int getBuildingCountPlusMaking(int /*BuildingTypes*/ iIndex);
 	int getHurryCount(int /*HurryTypes*/ eIndex);
 	bool canHurry(int /*HurryTypes*/ eIndex);
 	int getSpecialBuildingNotRequiredCount(int /*SpecialBuildingTypes*/ eIndex);
@@ -707,7 +706,7 @@ public:
 	
 	void setShowLandmarks(bool bNewVal);
 	bool isShowLandmarks() const;
-	int getBuildingClassCountWithUpgrades(int /*BuildingClassTypes*/ iBuilding) const;
+	int getBuildingCountWithUpgrades(int /*BuildingTypes*/ iBuilding) const;
 	void setColor(int /*PlayerColorTypes*/ iColor);
 	void setHandicap(int iNewVal);
 	

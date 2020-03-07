@@ -96,16 +96,6 @@
 			<Button>art/Goods/goodantimatter.dds</Button>
 			<FontButtonIndex>170</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Ash -->
-		<!--BonusArtInfo>
-			<Type>ART_DEF_BONUS_ASH</Type>
-			<fScale>1.0</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Empty.nif</NIF>
-			<KFM></KFM>
-			<Button>art/Goods/goodash.dds</Button>
-			<FontButtonIndex>130</FontButtonIndex>
-		</BonusArtInfo-->
 	<!-- Automobiles -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_AUTOMOBILES</Type>

@@ -1959,7 +1959,7 @@
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_ALEMANNI</Type>
+			<Type>ART_DEF_BONUS_ALEMANNIC</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2229,7 +2229,7 @@
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_CHECHENIAN</Type>
+			<Type>ART_DEF_BONUS_CHECHEN</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2580,7 +2580,7 @@
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_JUTES</Type>
+			<Type>ART_DEF_BONUS_JUTE</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -3158,7 +3158,7 @@
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_SELJUKS</Type>
+			<Type>ART_DEF_BONUS_SELJUK</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -3338,7 +3338,7 @@
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_TATARS</Type>
+			<Type>ART_DEF_BONUS_TATAR</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -3374,7 +3374,7 @@
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_MEDES</Type>
+			<Type>ART_DEF_BONUS_MEDIAN</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>

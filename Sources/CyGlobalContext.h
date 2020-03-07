@@ -36,13 +36,14 @@ public:
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
+	bool multiMapsEnabled() const;
 	void switchMap(int iMap);
 	int getNumMapInfos() const;
 	CvMapInfo* getMapInfo(int iMap) const;
-	int getNumMapSwitchInfos() const;
-	CvMapSwitchInfo* getMapSwitchInfo(int iMapSwitch) const;
 	CyMap* getMapByIndex(int iIndex);
+	void updateMaps();
 	void initializeMap(int iMap);
+	bool mapInitialized(int iMap) const;
 /*******************************/
 /***** Parallel Maps - End *****/
 /*******************************/	
@@ -75,7 +76,6 @@ public:
 	CvHandicapInfo* getHandicapInfo(int i) const;
 	CvGameSpeedInfo* getGameSpeedInfo(int i) const;
 	CvTurnTimerInfo* getTurnTimerInfo(int i) const;
-	CvBuildingClassInfo* getBuildingClassInfo(int i) const;
 	CvMissionInfo* getMissionInfo(int i) const;
 	CvCommandInfo* getCommandInfo(int i) const;
 	CvAutomateInfo* getAutomateInfo(int i) const;
@@ -205,7 +205,6 @@ public:
 	int getNumHandicapInfos() const { return GC.getNumHandicapInfos(); }
 	int getNumGameSpeedInfos() const { return GC.getNumGameSpeedInfos(); }
 	int getNumTurnTimerInfos() const { return GC.getNumTurnTimerInfos(); }
-	int getNumBuildingClassInfos() const { return GC.getNumBuildingClassInfos(); }
 	int getNumBuildingInfos() const { return GC.getNumBuildingInfos(); }
 	int getNumUnitCombatInfos() const { return GC.getNumUnitCombatInfos(); }
 	//TB Promotion Line Mod begin

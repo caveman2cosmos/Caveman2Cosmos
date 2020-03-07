@@ -253,9 +253,9 @@ public:
 	bool isMPOption(int /*MultiplayerOptionTypes*/ eIndex);
 	bool isForcedControl(int /*ForceControlTypes*/ eIndex);
 	int getUnitCreatedCount(int /*UnitTypes*/ eIndex);
+	int getBuildingCreatedCount(int /*BuildingTypes*/ eIndex) const;
+	bool isBuildingMaxedOut(int /*BuildingTypes*/ eIndex, int iExtra);
 	bool isUnitMaxedOut(int /*UnitTypes*/ eIndex, int iExtra);
-	int getBuildingClassCreatedCount(int /*BuildingClassTypes*/ eIndex);
-	bool isBuildingClassMaxedOut(int /*BuildingClassTypes*/ eIndex, int iExtra);
 
 	int getProjectCreatedCount(int /*ProjectTypes*/ eIndex);
 	bool isProjectMaxedOut(int /*ProjectTypes*/ eIndex, int iExtra);

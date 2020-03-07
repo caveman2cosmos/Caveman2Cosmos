@@ -258,8 +258,8 @@
 		<element type="bDCMAirBombTech1" minOccurs="0"/>
 		<element type="bDCMAirBombTech2" minOccurs="0"/>
 		<!--Afforess-->
-		<element type="PrereqBuildingClasses" minOccurs="0"/>
-		<element type="PrereqOrBuildingClasses" minOccurs="0"/>
+		<element type="PrereqBuildings" minOccurs="0"/>
+		<element type="PrereqOrBuildings" minOccurs="0"/>
 		<!--Afforess-->
 	</ElementType>
 	<ElementType name="TechInfos" content="eltOnly">
@@ -269,21 +269,21 @@
 		<element type="TechInfos" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<!--Afforess-->
-	<ElementType name="BuildingClassType" content="textOnly"/>
+	<ElementType name="BuildingType" content="textOnly"/>
 	<ElementType name="iNumBuildingNeeded" content="textOnly" dt:type="int"/>
-	<ElementType name="PrereqBuildingClass" content="eltOnly">
-		<element type="BuildingClassType"/>
+	<ElementType name="PrereqBuilding" content="eltOnly">
+		<element type="BuildingType"/>
 		<element type="iNumBuildingNeeded"/>
 	</ElementType>
-	<ElementType name="PrereqBuildingClasses" content="eltOnly">
-		<element type="PrereqBuildingClass" minOccurs="0" maxOccurs="*"/>
+	<ElementType name="PrereqBuildings" content="eltOnly">
+		<element type="PrereqBuilding" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="PrereqOrBuildingClass" content="eltOnly">
-		<element type="BuildingClassType"/>
+	<ElementType name="PrereqOrBuilding" content="eltOnly">
+		<element type="BuildingType"/>
 		<element type="iNumBuildingNeeded"/>
 	</ElementType>
-	<ElementType name="PrereqOrBuildingClasses" content="eltOnly">
-		<element type="PrereqOrBuildingClass" minOccurs="0" maxOccurs="*"/>
+	<ElementType name="PrereqOrBuildings" content="eltOnly">
+		<element type="PrereqOrBuilding" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 
 	<ElementType name="SpecialistType" content="textOnly"/>

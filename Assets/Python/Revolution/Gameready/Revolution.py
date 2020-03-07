@@ -5388,11 +5388,11 @@ class Revolution:
 						RevData.updateCityVal(pCity, 'RevolutionCiv', -1 )
 
 						# Store building types in city
-						buildingClassList = []
+						buildingList = []
 						for buildingType in xrange(GC.getNumBuildingInfos()) :
 							if( pCity.getNumRealBuilding(buildingType) > 0 ) :
 								buildingInfo = GC.getBuildingInfo(buildingType)
-								buildingClassList.append([buildingInfo.getBuildingClassType(),pCity.getNumRealBuilding(buildingType)])
+								buildingList.append([buildingType,pCity.getNumRealBuilding(buildingType)])
 
 #***********************************
 						# Acquire city
@@ -5430,8 +5430,7 @@ class Revolution:
 #*************************************
 
 						# Save most buildings - should some be destroyed?
-						for [buildingClass,iNum] in buildingClassList :
-							buildingType = GC.getCivilizationInfo(pRevPlayer.getCivilizationType()).getCivilizationBuildings(buildingClass)
+						for [buildingType,iNum] in buildingList :
 							if( pCity.getNumRealBuilding(buildingType) < iNum ) :
 								buildingInfo = GC.getBuildingInfo(buildingType)
 								if( not buildingInfo.isGovernmentCenter() ) :
@@ -6504,11 +6503,11 @@ class Revolution:
 							unit.kill(False, pRevPlayer.getID())
 
 				# Store building types in city
-				buildingClassList = []
+				buildingList = []
 				for buildingType in xrange(GC.getNumBuildingInfos()):
 					if pCity.getNumRealBuilding(buildingType) > 0:
 						buildingInfo = GC.getBuildingInfo(buildingType)
-						buildingClassList.append([buildingInfo.getBuildingClassType(),pCity.getNumRealBuilding(buildingType)])
+						buildingList.append([buildingType,pCity.getNumRealBuilding(buildingType)])
 
 # ***************************************************************
 				# Acquire city by cultural conversion
@@ -6626,8 +6625,7 @@ class Revolution:
 							pRevPlayer.initUnit(iSpy, ix, iy, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 
 				# Should buildings stay or some destroyed?
-				for [buildingClass,iNum] in buildingClassList:
-					buildingType = GC.getCivilizationInfo(pRevPlayer.getCivilizationType()).getCivilizationBuildings(buildingClass)
+				for [buildingType,iNum] in buildingList:
 					if pCity.getNumRealBuilding(buildingType) < iNum:
 						buildingInfo = GC.getBuildingInfo(buildingType)
 						if not buildingInfo.isGovernmentCenter():

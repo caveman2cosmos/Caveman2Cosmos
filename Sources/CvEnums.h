@@ -1306,11 +1306,6 @@ enum TaskTypes				// Exposed to Python
 #endif
 };
 
-enum BuildingClassTypes				// Exposed to Python 
-{
-	NO_BUILDINGCLASS = -1,
-};
-
 enum BuildingTypes						// Exposed to Python
 {
 	NO_BUILDING = -1,

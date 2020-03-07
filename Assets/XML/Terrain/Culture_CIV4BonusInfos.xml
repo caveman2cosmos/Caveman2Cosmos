@@ -2298,11 +2298,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_ALEMANNI</Type>
-			<Description>TXT_KEY_BONUS_ALEMANNI</Description>
+			<Type>BONUS_ALEMANNIC</Type>
+			<Description>TXT_KEY_BONUS_ALEMANNIC</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_ALEMANNI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_ALEMANNIC</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -2778,11 +2778,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_CHECHENIAN</Type>
-			<Description>TXT_KEY_BONUS_CHECHENIAN</Description>
+			<Type>BONUS_CHECHEN</Type>
+			<Description>TXT_KEY_BONUS_CHECHEN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_CHECHENIAN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_CHECHEN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -3402,11 +3402,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_JUTES</Type>
-			<Description>TXT_KEY_BONUS_JUTES</Description>
+			<Type>BONUS_JUTE</Type>
+			<Description>TXT_KEY_BONUS_JUTE</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_JUTES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_JUTE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -3786,11 +3786,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_MEDES</Type>
-			<Description>TXT_KEY_BONUS_MEDES</Description>
+			<Type>BONUS_MEDIAN</Type>
+			<Description>TXT_KEY_BONUS_MEDIAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_MEDES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_MEDIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -4492,11 +4492,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_SELJUKS</Type>
-			<Description>TXT_KEY_BONUS_SELJUKS</Description>
+			<Type>BONUS_SELJUK</Type>
+			<Description>TXT_KEY_BONUS_SELJUK</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_SELJUKS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_SELJUK</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -4796,11 +4796,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_TATARS</Type>
-			<Description>TXT_KEY_BONUS_TATARS</Description>
+			<Type>BONUS_TATAR</Type>
+			<Description>TXT_KEY_BONUS_TATAR</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_TATARS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_TATAR</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>

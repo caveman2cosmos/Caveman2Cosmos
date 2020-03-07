@@ -956,8 +956,8 @@
 	<ElementType name="PrereqPlotBonusTypes" content="eltOnly">
 		<element type="BonusType"/>
 	</ElementType>
-	<ElementType name="PrereqLocalBuildingClassTypes" content="eltOnly">
-		<element type="BuildingClassType"/>
+	<ElementType name="PrereqLocalBuildingTypes" content="eltOnly">
+		<element type="BuildingType"/>
 	</ElementType>
 	<ElementType name="TrapSetWithPromotionTypes" content="eltOnly">
 		<element type="PromotionType"/>
@@ -1450,19 +1450,6 @@
 	<ElementType name="PrereqOrCivics" content="eltOnly">
 		<element type="PrereqCivic" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="bPrereq" content="textOnly" dt:type="boolean"/>
-	<ElementType name="BuildingClassType" content="textOnly"/>
-	<ElementType name="TechOverride" content="textOnly"/>
-	<ElementType name="EraOverride" content="textOnly"/>
-	<ElementType name="PrereqBuildingClass" content="eltOnly">
-		<element type="BuildingClassType"/>
-		<element type="bPrereq"/>
-		<element type="TechOverride" minOccurs="0" />
-		<element type="EraOverride" minOccurs="0" />
-	</ElementType>
-	<ElementType name="PrereqBuildingClasses" content="eltOnly">
-		<element type="PrereqBuildingClass" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
 	<ElementType name="SupersedingUnits" content="eltOnly">
 		<element type="UnitType"/>
 	</ElementType>
@@ -1471,7 +1458,9 @@
 	<ElementType name="StateReligion" content="textOnly"/>
 	<ElementType name="PrereqReligion" content="textOnly"/>
 	<ElementType name="PrereqCorporation" content="textOnly"/>
-	<ElementType name="PrereqBuilding" content="textOnly"/>
+	<ElementType name="PrereqAndBuildings" content="eltOnly">
+		<element type="BuildingType" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
 	<ElementType name="PrereqOrBuildings" content="eltOnly">
 		<element type="BuildingType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
@@ -1961,7 +1950,7 @@
 		<element type="PrereqGameOption" minOccurs="0"/>
 		<element type="NotGameOption" minOccurs="0"/>
 		<element type="PrereqOrCivics" minOccurs="0"/>
-		<element type="PrereqBuildingClasses" minOccurs="0"/>
+		<element type="PrereqAndBuildings" minOccurs="0"/>
 		<element type="SupersedingUnits" minOccurs="0"/>
 		<!-- RevDCM end -->
 		<element type="HolyCity" minOccurs="0"/>
@@ -1969,7 +1958,6 @@
 		<element type="StateReligion" minOccurs="0"/>
 		<element type="PrereqReligion" minOccurs="0"/>
 		<element type="PrereqCorporation" minOccurs="0"/>
-		<element type="PrereqBuilding" minOccurs="0"/>
 		<element type="PrereqOrBuildings" minOccurs="0"/>
 		<element type="PrereqTech" minOccurs="0"/>
 		<element type="TechTypes" minOccurs="0"/>
@@ -2406,7 +2394,7 @@
 		<element type="PrereqFeatureTypes" minOccurs="0"/>
 		<element type="PrereqImprovementTypes" minOccurs="0"/>
 		<element type="PrereqPlotBonusTypes" minOccurs="0"/>
-		<element type="PrereqLocalBuildingClassTypes" minOccurs="0"/>
+		<element type="PrereqLocalBuildingTypes" minOccurs="0"/>
 		<element type="DistanceAttackCommunicabilityTypeChanges" minOccurs="0"/>
 		<element type="iAssetMultiplierPercent" minOccurs="0"/>
 		<element type="iPowerMultiplierPercent" minOccurs="0"/>

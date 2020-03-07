@@ -1256,11 +1256,11 @@ bool CvDLLButtonPopup::launchProductionPopup(CvPopup* pPopup, CvPopupInfo &info)
 	{
 		if (bFinish)
 		{
-			szPopupHeader = gDLL->getText(((isLimitedWonderClass((BuildingClassTypes)(GC.getBuildingInfo(eConstructBuilding).getBuildingClassType()))) ? "TXT_KEY_POPUP_CONSTRUCTED_WORK_ON_NEXT_LIMITED" : "TXT_KEY_POPUP_CONSTRUCTED_WORK_ON_NEXT"), GC.getBuildingInfo(eConstructBuilding).getTextKeyWide(), pCity->getNameKey());
+			szPopupHeader = gDLL->getText(isLimitedWonder(eConstructBuilding) ? "TXT_KEY_POPUP_CONSTRUCTED_WORK_ON_NEXT_LIMITED" : "TXT_KEY_POPUP_CONSTRUCTED_WORK_ON_NEXT", GC.getBuildingInfo(eConstructBuilding).getTextKeyWide(), pCity->getNameKey());
 		}
 		else
 		{
-			szPopupHeader = gDLL->getText(((isLimitedWonderClass((BuildingClassTypes)(GC.getBuildingInfo(eConstructBuilding).getBuildingClassType()))) ? "TXT_KEY_POPUP_CANNOT_CONSTRUCT_WORK_NEXT_LIMITED" : "TXT_KEY_POPUP_CANNOT_CONSTRUCT_WORK_NEXT"), GC.getBuildingInfo(eConstructBuilding).getTextKeyWide(), pCity->getNameKey());
+			szPopupHeader = gDLL->getText(isLimitedWonder(eConstructBuilding) ? "TXT_KEY_POPUP_CANNOT_CONSTRUCT_WORK_NEXT_LIMITED" : "TXT_KEY_POPUP_CANNOT_CONSTRUCT_WORK_NEXT", GC.getBuildingInfo(eConstructBuilding).getTextKeyWide(), pCity->getNameKey());
 		}
 		szArtFilename = GC.getBuildingInfo(eConstructBuilding).getButton();
 	}
@@ -1346,12 +1346,12 @@ bool CvDLLButtonPopup::launchProductionPopup(CvPopup* pPopup, CvPopupInfo &info)
 	if (eProductionBuilding == NO_BUILDING)
 	{
 		std::vector<BuildingTypes> possibleBuildings;
-		for (int idx = 0; idx < GC.getNumBuildingClassInfos(); idx++)
+		for (int idx = 0; idx < GC.getNumBuildingInfos(); idx++)
 		{
-			BuildingTypes building = ((BuildingTypes)(GC.getCivilizationInfo(pCity->getCivilizationType()).getCivilizationBuildings(idx)));
+			const BuildingTypes building = static_cast<BuildingTypes>(idx);
 
 			// Make sure to exclude Palace from the recommended list (it is the only one with isCaptial)!
-			if (building != NO_BUILDING && building != eProductionBuilding && pCity->canConstruct(building) && !GC.getBuildingInfo(building).isCapital())
+			if (building != eProductionBuilding && pCity->canConstruct(building) && !GC.getBuildingInfo(building).isCapital())
 			{
 				possibleBuildings.push_back(building);
 			}
@@ -1374,16 +1374,16 @@ bool CvDLLButtonPopup::launchProductionPopup(CvPopup* pPopup, CvPopupInfo &info)
 				AdvisorTypes advisor = (AdvisorTypes)(GC.getBuildingInfo(building).getAdvisorType());
 				if (bestBuildings[idx].score > cutOff && advisor != NO_ADVISOR)
 				{
-					int iTurns = pCity->getProductionTurnsLeft(building, 0);
+					const int iTurns = pCity->getProductionTurnsLeft(building, 0);
 					CvWString szBuildingText = gDLL->getText("TXT_KEY_POPUP_RECOMMENDED", GC.getBuildingInfo(building).getTextKeyWide(), iTurns, GC.getAdvisorInfo(advisor).getTextKeyWide());
-					gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, szBuildingText, GC.getBuildingInfo(building).getButton(), GC.getBuildingInfo(building).getBuildingClassType(), WIDGET_CONSTRUCT, GC.getBuildingInfo(building).getBuildingClassType(), pCity->getID(), true, POPUP_LAYOUT_STRETCH, DLL_FONT_LEFT_JUSTIFY);
+					gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, szBuildingText, GC.getBuildingInfo(building).getButton(), building, WIDGET_CONSTRUCT, building, pCity->getID(), true, POPUP_LAYOUT_STRETCH, DLL_FONT_LEFT_JUSTIFY);
 				}
 				else
 				{
-					int iTurns = pCity->getProductionTurnsLeft(building, 0);
+					const int iTurns = pCity->getProductionTurnsLeft(building, 0);
 					CvWString szBuildingText = gDLL->getText("TXT_KEY_POPUP_RECOMMENDED_NO_ADV", GC.getBuildingInfo(building).getTextKeyWide(), iTurns);
 					// CvWString szBuildingText = CvWString::format(L"%s (%d)", GC.getBuildingInfo(building).getDescription(), iTurns);
-					gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, szBuildingText, GC.getBuildingInfo(building).getButton(), GC.getBuildingInfo(building).getBuildingClassType(), WIDGET_CONSTRUCT, GC.getBuildingInfo(building).getBuildingClassType(), pCity->getID(), true, POPUP_LAYOUT_STRETCH, DLL_FONT_LEFT_JUSTIFY);
+					gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, szBuildingText, GC.getBuildingInfo(building).getButton(), building, WIDGET_CONSTRUCT, building, pCity->getID(), true, POPUP_LAYOUT_STRETCH, DLL_FONT_LEFT_JUSTIFY);
 				}
 				iNumBuilds++;
 			}

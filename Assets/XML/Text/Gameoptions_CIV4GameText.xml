@@ -716,7 +716,8 @@ If you play with "Start as Minor Civ" then this option will change the rules for
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_EVENTS_HELP</Tag>
-		<English>Random Events do not occur</English>
+		<English>Random Events do not occur.
+		Events are currently unsupported - may be buggy and or unbalanced.</English>
 		<French>Les événements aléatoires ne se produisent pas</French>
 		<German>Es finden keine Zufallsereignisse statt.</German>
 		<Italian>Non si verificano eventi casuali</Italian>

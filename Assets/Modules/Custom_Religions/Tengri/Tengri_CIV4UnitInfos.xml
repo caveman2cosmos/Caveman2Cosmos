@@ -33,7 +33,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_TENGRIISM</PrereqReligion>
-			<PrereqBuilding>BUILDING_SHAMANS_YURTA</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_SHAMANS_YURTA</BuildingType>
+			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>

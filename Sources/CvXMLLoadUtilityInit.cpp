@@ -296,35 +296,6 @@ void CvXMLLoadUtility::InitImprovementBonusList(CvImprovementBonusInfo** ppImpro
 
 //------------------------------------------------------------------------------------------------------
 //
-//  FUNCTION:   InitBuildingDefaults(int **ppiDefaults)
-//
-//  PURPOSE :   allocate and initialize the civilization's default buildings
-//
-//------------------------------------------------------------------------------------------------------
-void CvXMLLoadUtility::InitBuildingDefaults(int **ppiDefaults)
-{
-	// SPEEDUP
-	PROFILE_FUNC();
-
-	int i;
-	int* piDefaults;
-
-	FAssertMsg(*ppiDefaults == NULL,"memory leak?");
-	// allocate memory based on the number of building classes
-	*ppiDefaults = new int[GC.getNumBuildingClassInfos()];
-	// set the local pointer to the new memory
-	piDefaults = *ppiDefaults;
-
-	// loop through all the pointers and set their default values
-	for (i=0;i<GC.getNumBuildingClassInfos();i++)
-	{
-		piDefaults[i] = GC.getBuildingClassInfo((BuildingClassTypes) i).getDefaultBuildingIndex();
-	}
-
-}
-
-//------------------------------------------------------------------------------------------------------
-//
 //  FUNCTION:   CleanUpGlobals()
 //
 //  PURPOSE :   free the variables that are in globals.cpp/h
@@ -332,5 +303,5 @@ void CvXMLLoadUtility::InitBuildingDefaults(int **ppiDefaults)
 //------------------------------------------------------------------------------------------------------
 void CvXMLLoadUtility::CleanUpGlobalVariables()
 {
-	GC.deleteInfoArrays();	
+	GC.deleteInfoArrays();
 }

@@ -63,7 +63,9 @@
 			<TechTypes>
 				<PrereqTech>TECH_FELINE_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<PrereqBuilding>BUILDING_BIG_CAT_TRAINER_EFFECT</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_BIG_CAT_TRAINER_EFFECT</BuildingType>
+			</PrereqAndBuildings>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_CAT</BonusType>
@@ -218,13 +220,10 @@
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<PrereqBuilding>BUILDING_BIG_CAT_TRAINER_EFFECT</PrereqBuilding>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_BIG_CAT_TRAINER_EFFECT</BuildingType>
+				<BuildingType>BUILDING_BARRACKS</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqBonuses>
 				<BonusType>BONUS_COPPER_WARES</BonusType>
 				<BonusType>BONUS_IRON_WARES</BonusType>
@@ -350,13 +349,10 @@
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<PrereqBuilding>BUILDING_BIG_CAT_TRAINER_EFFECT</PrereqBuilding>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_GARRISON</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_BIG_CAT_TRAINER_EFFECT</BuildingType>
+				<BuildingType>BUILDING_GARRISON</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqBonuses>
 				<BonusType>BONUS_COPPER_WARES</BonusType>
 				<BonusType>BONUS_IRON_WARES</BonusType>
@@ -505,13 +501,10 @@
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<PrereqBuilding>BUILDING_BIG_CAT_TRAINER_EFFECT</PrereqBuilding>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_POLICE_CAT</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_BIG_CAT_TRAINER_EFFECT</BuildingType>
+				<BuildingType>BUILDING_POLICE_CAT</BuildingType>
+			</PrereqAndBuildings>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_CAT</BonusType>
@@ -688,13 +681,10 @@
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<PrereqBuilding>BUILDING_BIG_CAT_TRAINER_EFFECT</PrereqBuilding>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_RE_PET_SHOP</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_BIG_CAT_TRAINER_EFFECT</BuildingType>
+				<BuildingType>BUILDING_RE_PET_SHOP</BuildingType>
+			</PrereqAndBuildings>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_CAT</BonusType>

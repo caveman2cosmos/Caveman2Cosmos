@@ -15131,7 +15131,7 @@
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
-			<BonusType>BONUS_SELJUKS</BonusType>
+			<BonusType>BONUS_SELJUK</BonusType>
 			<iCost>1200</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>
@@ -15726,7 +15726,9 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<PrereqBuilding>BUILDING_HORSE_TRAINER</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_HOT_AIR_BALLOON</PrereqTech>
 			<BonusType>BONUS_MEXICAN</BonusType>
 			<iCost>2200</iCost>
@@ -15916,7 +15918,9 @@
 				<BuildingType>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
-			<PrereqBuilding>BUILDING_HORSE_TRAINER</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<BonusType>BONUS_COMANCHE</BonusType>
 			<iCost>2150</iCost>
@@ -16551,7 +16555,7 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_LEADER_PO_NGBE</Description>
 			<Civilopedia>TXT_KEY_LEADER_PO_NGBE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_LEADER_PO_NGBE_PEDIA</Strategy>
+			<Strategy>TXT_KEY_LEADER_PO_NGBE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -24373,7 +24377,7 @@
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_HORSE_BREEDING</PrereqTech>
-			<BonusType>BONUS_MEDES</BonusType>
+			<BonusType>BONUS_MEDIAN</BonusType>
 			<iCost>900</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>17</iCombat>
@@ -33696,7 +33700,7 @@
 				</GreatPeople>
 			</GreatPeoples>
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
-			<BonusType>BONUS_TATARS</BonusType>
+			<BonusType>BONUS_TATAR</BonusType>
 			<iCost>2300</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>19</iCombat>
@@ -41141,7 +41145,7 @@
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_ARTILLERY</PrereqTech>
-			<BonusType>BONUS_CHECHENIAN</BonusType>
+			<BonusType>BONUS_CHECHEN</BonusType>
 			<iCost>3300</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>33</iCombat>
@@ -43366,7 +43370,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_ALEMANNI</BonusType>
+			<BonusType>BONUS_ALEMANNIC</BonusType>
 			<iCost>850</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>12</iCombat>
@@ -47747,7 +47751,7 @@
 				</GreatPeople>
 			</GreatPeoples>
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
-			<BonusType>BONUS_JUTES</BonusType>
+			<BonusType>BONUS_JUTE</BonusType>
 			<iCost>900</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>11</iCombat>

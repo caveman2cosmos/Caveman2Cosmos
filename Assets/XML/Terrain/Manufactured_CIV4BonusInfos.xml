@@ -108,17 +108,6 @@
 			<TechCityTrade>TECH_ACNP_PROPULSION</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Ash -->
-		<!--BonusInfo> Commented out because it was a pointless bonus.
-			<Type>BONUS_ASH</Type>
-			<Description>TXT_KEY_BONUS_ASH</Description>
-			<Civilopedia>TXT_KEY_BONUS_ASH_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_ASH</ArtDefineTag>
-			<TechReveal>TECH_CONTROLLED_FIRE</TechReveal>
-			<TechCityTrade>TECH_CONTROLLED_FIRE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
-		</BonusInfo-->
 	<!-- Automobiles -->
 		<BonusInfo>
 			<Type>BONUS_AUTOMOBILES</Type>
@@ -222,7 +211,7 @@
 		<BonusInfo>
 			<Type>BONUS_BIOFUEL</Type>
 			<Description>TXT_KEY_BONUS_BIOFUEL</Description>
-			<Civilopedia>TXT_KEY_TECH_BIOMATERIALS_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BONUS_BIOFUEL_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_BIOFUEL</ArtDefineTag>
 			<TechReveal>TECH_BIOMATERIALS</TechReveal>
@@ -2444,7 +2433,7 @@
 		<BonusInfo>
 			<Type>BONUS_SYNTHETIC_RUBBER</Type>
 			<Description>TXT_KEY_BONUS_SYNTHETIC_RUBBER</Description>
-			<Civilopedia>TXT_KEY_BONUS_RUBBER_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BONUS_SYNTHETIC_RUBBER_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_VULCANIZED_RUBBER</ArtDefineTag>
 			<TechReveal>TECH_POLYMERIZATION</TechReveal>
@@ -2657,7 +2646,7 @@
 		<BonusInfo>
 			<Type>BONUS_VULCANIZED_RUBBER</Type>
 			<Description>TXT_KEY_BONUS_VULCANIZED_RUBBER</Description>
-			<Civilopedia>TXT_KEY_BONUS_RUBBER_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BONUS_VULCANIZED_RUBBER_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_VULCANIZED_RUBBER</ArtDefineTag>
 			<TechReveal>TECH_REFINING</TechReveal>

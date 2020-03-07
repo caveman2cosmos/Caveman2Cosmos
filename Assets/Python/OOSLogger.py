@@ -114,8 +114,8 @@ def writeLog():
 
 			pFile.write("\n\nBuilding Info:\n--------------------\n")
 
-			for iBuildingClass in xrange(GC.getNumBuildingClassInfos()):
-				pFile.write("Player %d, %s, Building class count plus making: %d\n" % (iPlayer, CvUtil.convertToStr(GC.getBuildingClassInfo(iBuildingClass).getDescription()), pPlayer.getBuildingClassCountPlusMaking(iBuildingClass)))
+			for iBuilding in xrange(GC.getNumBuildingInfos()):
+				pFile.write("Player %d, %s, Building class count plus making: %d\n" % (iPlayer, CvUtil.convertToStr(GC.getBuildingInfo(iBuilding).getDescription()), pPlayer.getBuildingCountPlusMaking(iBuilding)))
 
 			pFile.write("\n\nUnit Class Info:\n--------------------\n")
 

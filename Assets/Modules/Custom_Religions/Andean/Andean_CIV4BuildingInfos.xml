@@ -8,7 +8,6 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<!-- Andean Cathedral -->
-			<BuildingClass>BUILDINGCLASS_ANDEAN_CATHEDRAL</BuildingClass>
 			<Type>BUILDING_ANDEAN_CATHEDRAL</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CATHEDRAL</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ANDEAN_CATHEDRAL</Description>
@@ -22,26 +21,23 @@
 			<!-- Prerequisites -->
 			<PrereqReligion>RELIGION_ANDEANISM</PrereqReligion>
 			<ReligionType>RELIGION_ANDEANISM</ReligionType>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_ANDEAN_TEMPLE</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CITY_COUNCIL</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_METROPOLITAN_ADMINISTRATION</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CAPITAL_ADMINISTRATION</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ANDEAN_TEMPLE</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_CITY_COUNCIL</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_METROPOLITAN_ADMINISTRATION</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_CAPITAL_ADMINISTRATION</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<!-- Construction cost -->
 			<iCost>280</iCost>
 			<BonusProductionModifiers>
@@ -110,7 +106,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Andean Monastery -->
-			<BuildingClass>BUILDINGCLASS_ANDEAN_MONASTERY</BuildingClass>
 			<Type>BUILDING_ANDEAN_MONASTERY</Type>
 			<SpecialBuildingType>SPECIALBUILDING_MONASTERY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ANDEAN_MONASTERY</Description>
@@ -176,7 +171,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Andean Temple -->
-			<BuildingClass>BUILDINGCLASS_ANDEAN_TEMPLE</BuildingClass>
 			<Type>BUILDING_ANDEAN_TEMPLE</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ANDEAN_TEMPLE</Description>
@@ -246,7 +240,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Coricancha -->
-			<BuildingClass>BUILDINGCLASS_ANDEAN_SHRINE</BuildingClass>
 			<Type>BUILDING_ANDEAN_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_ANDEAN_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANDEAN_SHRINE_PEDIA</Civilopedia>
@@ -303,8 +296,8 @@
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DORADO</BuildingClass>
 			<Type>BUILDING_DORADO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_DORADO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DORADO_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DORADO_STRATEGY</Strategy>
@@ -383,8 +376,8 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_MACHU_PICCHU</BuildingClass>
 			<Type>BUILDING_MACHU_PICCHU</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_MACHU_PICCHU</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MACHU_PICCHU_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MACHU_PICCHU_STRATEGY</Strategy>

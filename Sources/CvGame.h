@@ -539,9 +539,9 @@ public:
 	void incrementUnitCreatedCount(UnitTypes eIndex);
 	bool isUnitMaxedOut(UnitTypes eIndex, int iExtra = 0) const;						// Exposed to Python
 
-	int getBuildingClassCreatedCount(BuildingClassTypes eIndex) const;								// Exposed to Python
-	bool isBuildingClassMaxedOut(BuildingClassTypes eIndex, int iExtra = 0) const;		// Exposed to Python
-	void incrementBuildingClassCreatedCount(BuildingClassTypes eIndex);
+	int getBuildingCreatedCount(BuildingTypes eIndex) const;								// Exposed to Python
+	bool isBuildingMaxedOut(BuildingTypes eIndex, int iExtra = 0) const;		// Exposed to Python
+	void incrementBuildingCreatedCount(BuildingTypes eIndex);
 
 	int getProjectCreatedCount(ProjectTypes eIndex) const;														// Exposed to Python
 	bool isProjectMaxedOut(ProjectTypes eIndex, int iExtra = 0) const;								// Exposed to Python
@@ -892,7 +892,7 @@ protected:
 
 	int* m_paiImprovementCount;
 	int* m_paiUnitCreatedCount;
-	int* m_paiBuildingClassCreatedCount;
+	int* m_paiBuildingCreatedCount;
 	int* m_paiProjectCreatedCount;
 	int* m_paiForceCivicCount;
 	PlayerVoteTypes* m_paiVoteOutcome;
