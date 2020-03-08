@@ -3099,6 +3099,7 @@ class BonusPlacer:
 			return False
 		GC = CyGlobalContext()
 		MAP = GC.getMap()
+		GAME = GC.getGame()
 		bonusInfo = GC.getBonusInfo(indeXML)
 		plotListLength = len(plotIndexList)
 		lastI = 0
@@ -3117,29 +3118,29 @@ class BonusPlacer:
 			bonus.currentBonusCount += 1
 			# Clustering
 			groupRange = bonusInfo.getGroupRange()
-			if not groupRange: break
-			maxAdd = groupRange * (iWorldSize + 2) / 3
+			if 1 > groupRange: break
+			iRand = bonusInfo.getGroupRand()
+			if 1 > iRand: break
+			groupRange += iWorldSize / 3
+			maxAdd = groupRange + (iWorldSize + 1) / 2
 			iDeficit = iDesired - bonus.currentBonusCount
 			if maxAdd > iDeficit:
 				maxAdd = iDeficit
-			if maxAdd < 1: break
 			added = 0
 			szType = bonusInfo.getType()
-			fRand = bonusInfo.getGroupRand() / 100.0
 			x = CyPlot.getX()
 			y = CyPlot.getY()
 			for dx in xrange(-groupRange, groupRange + 1):
 				for dy in xrange(-groupRange, groupRange + 1):
-					if added == maxAdd:
-						return (lastI + 1) % plotListLength
 					CyPlotX = self.plotXY(x, y, dx, dy)
-					if not CyPlotX: continue
-					if self.CanPlaceBonus(CyPlotX, indeXML, False) and random() <= fRand:
+					if CyPlotX and self.PlotCanHaveBonus(CyPlotX, indeXML, False) and GAME.getSorenRandNum(100, "0-99") < iRand:
 						#place bonus
 						CyPlotX.setBonusType(indeXML)
 						print "Group Placed: " + szType
 						bonus.currentBonusCount += 1
 						added += 1
+						if added == maxAdd:
+							return (lastI + 1) % plotListLength
 			break
 		return (lastI + 1) % plotListLength
 
