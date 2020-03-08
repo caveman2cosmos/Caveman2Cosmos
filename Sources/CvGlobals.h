@@ -169,7 +169,7 @@ inline info& getInfo(const std::vector<info*>& vector, index i)
 {
 	FAssertMsg(i > -1, "Index out of bounds");
 	FAssertMsg(i < vector.size(), "Index out of bounds");
-	return *vector[i];
+	return *(vector[i]);
 }
 
 extern CvDLLUtilityIFaceBase* g_DLL;
@@ -299,9 +299,6 @@ public:
 	void LogMissingType( const char* szType ) const;
 
 	bool hasInfoTypeForString(const char* szType, bool hideAssert = false) const;
-/*
-	DllExport void setInfoTypeFromString(const char* szType, int idx);
-*/
 	void setInfoTypeFromString(const char* szType, int idx);
 	void logInfoTypeMap(const char* tagMsg = "");
 /************************************************************************************************/
@@ -351,7 +348,6 @@ public:
 
 	int getNumWorldInfos() const { return m_paWorldInfo.size(); }
 	CvWorldInfo& getWorldInfo(WorldSizeTypes e) const { return getInfo(m_paWorldInfo, e); }
-	CvInfoReplacements<CvWorldInfo>* getWorldInfoReplacements() { return &m_WorldInfoReplacements; }
 
 	int getNumClimateInfos() const { return m_paClimateInfo.size(); }
 	CvClimateInfo& getClimateInfo(ClimateTypes e) const { return getInfo(m_paClimateInfo, e); }
@@ -452,34 +448,26 @@ public:
 
 	int getNumTerrainInfos() const { return m_paTerrainInfo.size(); }
 	CvTerrainInfo& getTerrainInfo(TerrainTypes eTerrainNum) const { return getInfo(m_paTerrainInfo, eTerrainNum); }
-	CvInfoReplacements<CvTerrainInfo>* getTerrainInfoReplacements() { return &m_TerrainInfoReplacements; }
 
 	int getNumBonusClassInfos() const { return m_paBonusClassInfo.size(); }
 	CvBonusClassInfo& getBonusClassInfo(BonusClassTypes eBonusNum) const { return getInfo(m_paBonusClassInfo, eBonusNum); }
-	CvInfoReplacements<CvBonusClassInfo>* getBonusClassInfoReplacements() { return &m_BonusClassInfoReplacements; }
 
 	int getNumBonusInfos() const { return m_paBonusInfo.size(); }
-	const std::vector<CvBonusInfo*>& getBonusInfos() const { return m_paBonusInfo; }
 	CvBonusInfo& getBonusInfo(BonusTypes eBonusNum) const { return getInfo(m_paBonusInfo, eBonusNum); }
-	CvInfoReplacements<CvBonusInfo>* getBonusInfoReplacements() { return &m_BonusInfoReplacements; }
 
 	int getNumFeatureInfos() const { return m_paFeatureInfo.size(); }
 	CvFeatureInfo& getFeatureInfo(FeatureTypes eFeatureNum) const { return getInfo(m_paFeatureInfo, eFeatureNum); }
-	CvInfoReplacements<CvFeatureInfo>* getFeatureInfoReplacements() { return &m_FeatureInfoReplacements; }
 
 	int& getNumPlayableCivilizationInfos() { return m_iNumPlayableCivilizationInfos; }
 	int& getNumAIPlayableCivilizationInfos() { return m_iNumAIPlayableCivilizationInfos; }
 	int getNumCivilizationInfos() const { return m_paCivilizationInfo.size(); }
 	CvCivilizationInfo& getCivilizationInfo(CivilizationTypes eCivilizationNum) const { return getInfo(m_paCivilizationInfo, eCivilizationNum); }
-	CvInfoReplacements<CvCivilizationInfo>* getCivilizationInfoReplacements() { return &m_CivilizationInfoReplacements; }
 
 	int getNumLeaderHeadInfos() const { return m_paLeaderHeadInfo.size(); }
 	CvLeaderHeadInfo& getLeaderHeadInfo(LeaderHeadTypes eLeaderHeadNum) const { return getInfo(m_paLeaderHeadInfo, eLeaderHeadNum); }
-	CvInfoReplacements<CvLeaderHeadInfo>* getLeaderHeadInfoReplacements() { return &m_LeaderHeadInfoReplacements; }
 
 	int getNumTraitInfos() const { return m_paTraitInfo.size(); }
 	CvTraitInfo& getTraitInfo(TraitTypes eTraitNum) const { return getInfo(m_paTraitInfo, eTraitNum); }
-	CvInfoReplacements<CvTraitInfo>* getTraitInfoReplacements() { return &m_TraitInfoReplacements; }
 
 	int getNumCursorInfos() const { return m_paCursorInfo.size(); }
 	CvCursorInfo& getCursorInfo(CursorTypes eCursorNum) const { return getInfo(m_paCursorInfo, eCursorNum); }
@@ -507,11 +495,9 @@ public:
 
 	int getNumUnitInfos() const { return m_paUnitInfo.size(); }
 	CvUnitInfo& getUnitInfo(UnitTypes eUnitNum) const { return getInfo(m_paUnitInfo, eUnitNum); }
-	CvInfoReplacements<CvUnitInfo>* getUnitInfoReplacements() { return &m_UnitInfoReplacements; }
 
 	int getNumSpawnInfos() const { return m_paSpawnInfo.size(); }
 	CvSpawnInfo& getSpawnInfo(SpawnTypes eSpawnNum) const { return getInfo(m_paSpawnInfo, eSpawnNum); }
-	CvInfoReplacements<CvSpawnInfo>* getSpawnInfoReplacements() { return &m_SpawnInfoReplacements; }
 
 	int getNumSpecialUnitInfos() const { return m_paSpecialUnitInfo.size(); }
 	CvSpecialUnitInfo& getSpecialUnitInfo(SpecialUnitTypes eSpecialUnitNum) const { return getInfo(m_paSpecialUnitInfo, eSpecialUnitNum); }
@@ -680,48 +666,39 @@ public:
 
 	int getNumRouteInfos() const { return m_paRouteInfo.size(); }
 	CvRouteInfo& getRouteInfo(RouteTypes eRouteNum) const { return getInfo(m_paRouteInfo, eRouteNum); }
-	CvInfoReplacements<CvRouteInfo>* getRouteInfoReplacements() { return &m_RouteInfoReplacements; }
 
 	int getNumImprovementInfos() const { return m_paImprovementInfo.size(); }
 	CvImprovementInfo& getImprovementInfo(ImprovementTypes eImprovementNum) const { return getInfo(m_paImprovementInfo, eImprovementNum); }
-	CvInfoReplacements<CvImprovementInfo>* getImprovementInfoReplacements() { return &m_ImprovementInfoReplacements; }
 
 	int getNumGoodyInfos() const { return m_paGoodyInfo.size(); }
 	CvGoodyInfo& getGoodyInfo(GoodyTypes eGoodyNum) const { return getInfo(m_paGoodyInfo, eGoodyNum); }
 
 	int getNumBuildInfos() const { return m_paBuildInfo.size(); }
 	CvBuildInfo& getBuildInfo(BuildTypes eBuildNum) const { return getInfo(m_paBuildInfo, eBuildNum); }
-	CvInfoReplacements<CvBuildInfo>* getBuildInfoReplacements() { return &m_BuildInfoReplacements; }
 
 	int getNumHandicapInfos() const { return m_paHandicapInfo.size(); }
 	CvHandicapInfo& getHandicapInfo(HandicapTypes eHandicapNum) const { return getInfo(m_paHandicapInfo, eHandicapNum); }
-	CvInfoReplacements<CvHandicapInfo>* getHandicapInfoReplacements() { return &m_HandicapInfoReplacements; }
 
 	int getNumGameSpeedInfos() const { return m_paGameSpeedInfo.size(); }
 	CvGameSpeedInfo& getGameSpeedInfo(GameSpeedTypes eGameSpeedNum) const { return getInfo(m_paGameSpeedInfo, eGameSpeedNum); }
-	CvInfoReplacements<CvGameSpeedInfo>* getGameSpeedInfoReplacements() { return &m_GameSpeedInfoReplacements; }
 
 	int getNumTurnTimerInfos() const { return m_paTurnTimerInfo.size(); }
 	CvTurnTimerInfo& getTurnTimerInfo(TurnTimerTypes eTurnTimerNum) const { return getInfo(m_paTurnTimerInfo, eTurnTimerNum); }
 
 	int getNumProcessInfos() const { return m_paProcessInfo.size(); }
 	CvProcessInfo& getProcessInfo(ProcessTypes e) const { return getInfo(m_paProcessInfo, e); }
-	CvInfoReplacements<CvProcessInfo>* getProcessInfoReplacements() { return &m_ProcessInfoReplacements; }
 
 	int getNumVoteInfos() const { return m_paVoteInfo.size(); }
 	CvVoteInfo& getVoteInfo(VoteTypes e) const { return getInfo(m_paVoteInfo, e); }
 
 	int getNumProjectInfos() const { return m_paProjectInfo.size(); }
 	CvProjectInfo& getProjectInfo(ProjectTypes e) const { return getInfo(m_paProjectInfo, e); }
-	CvInfoReplacements<CvProjectInfo>* getProjectInfoReplacements() { return &m_ProjectInfoReplacements; }
 
 	int getNumBuildingInfos() const { return m_paBuildingInfo.size(); }
 	CvBuildingInfo& getBuildingInfo(BuildingTypes eBuildingNum) const { return getInfo(m_paBuildingInfo, eBuildingNum); }
-	CvInfoReplacements<CvBuildingInfo>* getBuildingInfoReplacements() { return &m_BuildingInfoReplacements; }
 
 	int getNumSpecialBuildingInfos() const { return m_paSpecialBuildingInfo.size(); }
 	CvSpecialBuildingInfo& getSpecialBuildingInfo(SpecialBuildingTypes eSpecialBuildingNum) const { return getInfo(m_paSpecialBuildingInfo, eSpecialBuildingNum); }
-	CvInfoReplacements<CvSpecialBuildingInfo>* getSpecialBuildingInfoReplacements() { return &m_SpecialBuildingInfoReplacements; }
 
 	int getNumActionInfos() const { return m_paActionInfo.size(); }
 	CvActionInfo& getActionInfo(int i) const { return getInfo(m_paActionInfo, i); }
@@ -737,39 +714,32 @@ public:
 
 	int getNumPromotionInfos() const { return m_paPromotionInfo.size(); }
 	CvPromotionInfo& getPromotionInfo(PromotionTypes ePromotionNum) const { return getInfo(m_paPromotionInfo, ePromotionNum); }
-	CvInfoReplacements<CvPromotionInfo>* getPromotionInfoReplacements() { return &m_PromotionInfoReplacements; }
 	typedef bst::function<bool(const CvPromotionInfo*, PromotionTypes)> PromotionPredicateFn;
 	PromotionTypes findPromotion(PromotionPredicateFn predicateFn) const;
 
 	int getNumTechInfos() const { return m_paTechInfo.size(); }
 	CvTechInfo& getTechInfo(TechTypes eTechNum) const { return getInfo(m_paTechInfo, eTechNum); }
-	CvInfoReplacements<CvTechInfo>* getTechInfoReplacements() { return &m_TechInfoReplacements; }
 
 	int getNumReligionInfos() const { return m_paReligionInfo.size(); }
 	CvReligionInfo& getReligionInfo(ReligionTypes eReligionNum) const { return getInfo(m_paReligionInfo, eReligionNum); }
-	CvInfoReplacements<CvReligionInfo>* getReligionInfoReplacements() { return &m_ReligionInfoReplacements; }
 
 	int getNumCorporationInfos() const { return m_paCorporationInfo.size(); }
 	CvCorporationInfo& getCorporationInfo(CorporationTypes eCorporationNum) const { return getInfo(m_paCorporationInfo, eCorporationNum); }
-	CvInfoReplacements<CvCorporationInfo>* getCorporationInfoReplacements() { return &m_CorporationInfoReplacements; }
 
 	int getNumSpecialistInfos() const { return m_paSpecialistInfo.size(); }
 	CvSpecialistInfo& getSpecialistInfo(SpecialistTypes eSpecialistNum) const { return getInfo(m_paSpecialistInfo, eSpecialistNum); }
-	CvInfoReplacements<CvSpecialistInfo>* getSpecialistInfoReplacements() { return &m_SpecialistInfoReplacements; }
 
 	int getNumCivicOptionInfos() const { return m_paCivicOptionInfo.size(); }
 	CvCivicOptionInfo& getCivicOptionInfo(CivicOptionTypes eCivicOptionNum) const { return getInfo(m_paCivicOptionInfo, eCivicOptionNum); }
 
 	int getNumCivicInfos() const { return m_paCivicInfo.size(); }
 	CvCivicInfo& getCivicInfo(CivicTypes eCivicNum) const { return getInfo(m_paCivicInfo, eCivicNum); }
-	CvInfoReplacements<CvCivicInfo>* getCivicInfoReplacements() { return &m_CivicInfoReplacements; }
 
 	int getNumDiplomacyInfos() const { return m_paDiplomacyInfo.size(); }
 	CvDiplomacyInfo& getDiplomacyInfo(int iDiplomacyNum) const { return getInfo(m_paDiplomacyInfo, iDiplomacyNum); }
 
 	int getNumEraInfos() const { return m_aEraInfo.size(); }
 	CvEraInfo& getEraInfo(EraTypes eEraNum) const { return getInfo(m_aEraInfo, eEraNum); }
-	CvInfoReplacements<CvEraInfo>* getEraInfoReplacements() { return &m_EraInfoReplacements; }
 
 	int getNumHurryInfos() const { return m_paHurryInfo.size(); }
 	CvHurryInfo& getHurryInfo(HurryTypes eHurryNum) const { return getInfo(m_paHurryInfo, eHurryNum); }
@@ -782,7 +752,6 @@ public:
 
 	int getNumCultureLevelInfos() const { return m_paCultureLevelInfo.size(); }
 	CvCultureLevelInfo& getCultureLevelInfo(CultureLevelTypes eCultureLevelNum) const { return getInfo(m_paCultureLevelInfo, eCultureLevelNum); }
-	CvInfoReplacements<CvCultureLevelInfo>* getCultureLevelInfoReplacements() { return &m_CultureLevelInfoReplacements; }
 
 	int getNumVictoryInfos() const { return m_paVictoryInfo.size(); }
 	CvVictoryInfo& getVictoryInfo(VictoryTypes eVictoryNum) const { return getInfo(m_paVictoryInfo, eVictoryNum); }
@@ -795,11 +764,9 @@ public:
 
 	int getNumEventTriggerInfos() const { return m_paEventTriggerInfo.size(); }
 	CvEventTriggerInfo& getEventTriggerInfo(EventTriggerTypes eEventTrigger) const { return getInfo(m_paEventTriggerInfo, eEventTrigger); }
-	CvInfoReplacements<CvEventTriggerInfo>* getEventTriggerInfoReplacements() { return &m_EventTriggerInfoReplacements; }
 
 	int getNumEventInfos() const { return m_paEventInfo.size(); }
 	CvEventInfo& getEventInfo(EventTypes eEvent) const { return getInfo(m_paEventInfo, eEvent); }
-	CvInfoReplacements<CvEventInfo>* getEventInfoReplacements() { return &m_EventInfoReplacements; }
 
 	int getNumEspionageMissionInfos() const { return m_paEspionageMissionInfo.size(); }
 	CvEspionageMissionInfo& getEspionageMissionInfo(EspionageMissionTypes eEspionageMissionNum) const { return getInfo(m_paEspionageMissionInfo, eEspionageMissionNum); }
