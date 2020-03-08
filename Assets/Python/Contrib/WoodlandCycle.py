@@ -85,6 +85,6 @@ class WoodlandCycle:
 				else:
 					CyPlot.setFeatureType(self.FEATURE_FOREST_OLD, 0)
 
-			elif iFeature == self.FEATURE_FOREST:
+			elif iFeature == self.FEATURE_FOREST_OLD:
 				if not GAME.getSorenRandNum(9, "Burn"):
 					CyPlot.setFeatureType(self.FEATURE_FOREST_BURNT, 0)
