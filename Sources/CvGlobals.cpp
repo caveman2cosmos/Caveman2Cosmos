@@ -1118,16 +1118,6 @@ int cvInternalGlobals::getNumMapSwitchInfos() const
 	return m_paMapSwitchInfo.size();
 }
 
-std::vector<CvMapInfo*>& cvInternalGlobals::getMapInfos()
-{
-	return m_paMapInfo;
-}
-
-std::vector<CvMapSwitchInfo*>& cvInternalGlobals::getMapSwitchInfos()
-{
-	return m_paMapSwitchInfo;
-}
-
 CvMapInfo& cvInternalGlobals::getMapInfo(const MapTypes eMap) const
 {
 	FAssertMsg(eMap > NO_MAP && eMap < GC.getNumMapInfos(), "MapInfo index out of bounds");
@@ -1171,31 +1161,6 @@ bool cvInternalGlobals::getResourceLayer() const
 /*******************************/
 /***** Parallel Maps - End *****/
 /*******************************/
-
-std::vector<CvWorldInfo*>& cvInternalGlobals::getWorldInfos()
-{
-	return m_paWorldInfo;
-}
-
-std::vector<CvClimateInfo*>& cvInternalGlobals::getClimateInfos()
-{
-	return m_paClimateInfo;
-}
-
-std::vector<CvSeaLevelInfo*>& cvInternalGlobals::getSeaLevelInfos()
-{
-	return m_paSeaLevelInfo;
-}
-
-std::vector<CvInfoBase*>& cvInternalGlobals::getHints()
-{
-	return m_paHints;
-}
-
-std::vector<CvMainMenuInfo*>& cvInternalGlobals::getMainMenus()
-{
-	return m_paMainMenus;
-}
 
 CvMainMenuInfo& cvInternalGlobals::getMainMenus(int i) const
 {
@@ -1256,47 +1221,35 @@ CvModLoadControlInfo& cvInternalGlobals::getModLoadControlInfos(int iIndex) cons
 void cvInternalGlobals::updateReplacements()
 {
 //ReplacementStep
-	m_WorldInfoReplacements.updateReplacements(getWorldInfos());
-	m_UnitInfoReplacements.updateReplacements(getUnitInfos());
-	m_TechInfoReplacements.updateReplacements(getTechInfos());
-	m_TraitInfoReplacements.updateReplacements(getTraitInfos());
-	m_PromotionInfoReplacements.updateReplacements(getPromotionInfos());
-	m_BonusClassInfoReplacements.updateReplacements(getBonusClassInfos());
-	m_BonusInfoReplacements.updateReplacements(getBonusInfos());
-	m_ImprovementInfoReplacements.updateReplacements(getImprovementInfos());
-	m_BuildingInfoReplacements.updateReplacements(getBuildingInfos());
-	m_CivicInfoReplacements.updateReplacements(getCivicInfos());
-	m_LeaderHeadInfoReplacements.updateReplacements(getLeaderHeadInfos());
-
-	m_CivilizationInfoReplacements.updateReplacements(getCivilizationInfos());
-
-	m_CultureLevelInfoReplacements.updateReplacements(getCultureLevelInfos());
-
-	m_EventInfoReplacements.updateReplacements(getEventInfos());
-	m_EventTriggerInfoReplacements.updateReplacements(getEventTriggerInfos());
-	m_ProcessInfoReplacements.updateReplacements(getProcessInfos());
-	m_TerrainInfoReplacements.updateReplacements(getTerrainInfos());
-
-	m_SpecialistInfoReplacements.updateReplacements(getSpecialistInfos());
-
-	m_FeatureInfoReplacements.updateReplacements(getFeatureInfos());
-
-	m_ReligionInfoReplacements.updateReplacements(getReligionInfos());
-	m_CorporationInfoReplacements.updateReplacements(getCorporationInfos());
-
-	m_RouteInfoReplacements.updateReplacements(getRouteInfos());
-	
-	m_ProjectInfoReplacements.updateReplacements(getProjectInfos());
-
-	m_BuildInfoReplacements.updateReplacements(getBuildInfos());
-	
-	m_SpawnInfoReplacements.updateReplacements(getSpawnInfos());
-	m_GameSpeedInfoReplacements.updateReplacements(getGameSpeedInfos());
-	m_EraInfoReplacements.updateReplacements(getEraInfos());
-	
-	m_SpecialBuildingInfoReplacements.updateReplacements(getSpecialBuildingInfos());
-	
-	m_HandicapInfoReplacements.updateReplacements(getHandicapInfos());
+	m_WorldInfoReplacements.updateReplacements(m_paWorldInfo);
+	m_UnitInfoReplacements.updateReplacements(m_paUnitInfo);
+	m_TechInfoReplacements.updateReplacements(m_paTechInfo);
+	m_TraitInfoReplacements.updateReplacements(m_paTraitInfo);
+	m_PromotionInfoReplacements.updateReplacements(m_paPromotionInfo);
+	m_BonusClassInfoReplacements.updateReplacements(m_paBonusClassInfo);
+	m_BonusInfoReplacements.updateReplacements(m_paBonusInfo);
+	m_ImprovementInfoReplacements.updateReplacements(m_paImprovementInfo);
+	m_BuildingInfoReplacements.updateReplacements(m_paBuildingInfo);
+	m_CivicInfoReplacements.updateReplacements(m_paCivicInfo);
+	m_LeaderHeadInfoReplacements.updateReplacements(m_paLeaderHeadInfo);
+	m_CivilizationInfoReplacements.updateReplacements(m_paCivilizationInfo);
+	m_CultureLevelInfoReplacements.updateReplacements(m_paCultureLevelInfo);
+	m_EventInfoReplacements.updateReplacements(m_paEventInfo);
+	m_EventTriggerInfoReplacements.updateReplacements(m_paEventTriggerInfo);
+	m_ProcessInfoReplacements.updateReplacements(m_paProcessInfo);
+	m_TerrainInfoReplacements.updateReplacements(m_paTerrainInfo);
+	m_SpecialistInfoReplacements.updateReplacements(m_paSpecialistInfo);
+	m_FeatureInfoReplacements.updateReplacements(m_paFeatureInfo);
+	m_ReligionInfoReplacements.updateReplacements(m_paReligionInfo);
+	m_CorporationInfoReplacements.updateReplacements(m_paCorporationInfo);
+	m_RouteInfoReplacements.updateReplacements(m_paRouteInfo);
+	m_ProjectInfoReplacements.updateReplacements(m_paProjectInfo);
+	m_BuildInfoReplacements.updateReplacements(m_paBuildInfo);
+	m_SpawnInfoReplacements.updateReplacements(m_paSpawnInfo);
+	m_GameSpeedInfoReplacements.updateReplacements(m_paGameSpeedInfo);
+	m_EraInfoReplacements.updateReplacements(m_aEraInfo);
+	m_SpecialBuildingInfoReplacements.updateReplacements(m_paSpecialBuildingInfo);
+	m_HandicapInfoReplacements.updateReplacements(m_paHandicapInfo);
 //ReplacementStep: search down here for 'CvInfoReplacements'
 }
 
@@ -1321,261 +1274,6 @@ std::string cvInternalGlobals::getModDir() const
 /* XML_MODULAR_ART_LOADING                 END                                                  */
 /************************************************************************************************/
 
-std::vector<CvColorInfo*>& cvInternalGlobals::getColorInfos()
-{
-	return m_paColorInfo;
-}
-
-std::vector<CvPlayerColorInfo*>& cvInternalGlobals::getPlayerColorInfos()
-{
-	return m_paPlayerColorInfo;
-}
-
-std::vector<CvAdvisorInfo*>& cvInternalGlobals::getAdvisorInfos()
-{
-	return m_paAdvisorInfo;
-}
-
-std::vector<CvRouteModelInfo*>& cvInternalGlobals::getRouteModelInfos()
-{
-	return m_paRouteModelInfo;
-}
-
-std::vector<CvRiverInfo*>& cvInternalGlobals::getRiverInfos()
-{
-	return m_paRiverInfo;
-}
-
-std::vector<CvRiverModelInfo*>& cvInternalGlobals::getRiverModelInfos()
-{
-	return m_paRiverModelInfo;
-}
-
-std::vector<CvWaterPlaneInfo*>& cvInternalGlobals::getWaterPlaneInfos()		// For Moose - CvDecal and CvWater
-{
-	return m_paWaterPlaneInfo;
-}
-
-std::vector<CvTerrainPlaneInfo*>& cvInternalGlobals::getTerrainPlaneInfos()
-{
-	return m_paTerrainPlaneInfo;
-}
-
-std::vector<CvCameraOverlayInfo*>& cvInternalGlobals::getCameraOverlayInfos()
-{
-	return m_paCameraOverlayInfo;
-}
-
-std::vector<CvAnimationPathInfo*>& cvInternalGlobals::getAnimationPathInfos()
-{
-	return m_paAnimationPathInfo;
-}
-
-std::vector<CvAnimationCategoryInfo*>& cvInternalGlobals::getAnimationCategoryInfos()
-{
-	return m_paAnimationCategoryInfo;
-}
-
-std::vector<CvEntityEventInfo*>& cvInternalGlobals::getEntityEventInfos()
-{
-	return m_paEntityEventInfo;
-}
-
-std::vector<CvEffectInfo*>& cvInternalGlobals::getEffectInfos()
-{
-	return m_paEffectInfo;
-}
-
-std::vector<CvAttachableInfo*>& cvInternalGlobals::getAttachableInfos()
-{
-	return m_paAttachableInfo;
-}
-
-std::vector<CvCameraInfo*>& cvInternalGlobals::getCameraInfos()
-{
-	return m_paCameraInfo;
-}
-
-std::vector<CvUnitFormationInfo*>& cvInternalGlobals::getUnitFormationInfos()		// For Moose - CvUnitEntity
-{
-	return m_paUnitFormationInfo;
-}
-
-std::vector<CvGameText*>& cvInternalGlobals::getGameTextXMLs()
-{
-	return m_paGameTextXML;
-}
-
-std::vector<CvLandscapeInfo*>& cvInternalGlobals::getLandscapeInfos()
-{
-	return m_paLandscapeInfo;
-}
-
-std::vector<CvTerrainInfo*>& cvInternalGlobals::getTerrainInfos()		// For Moose - XML Load Util, CvInfos, CvTerrainTypeWBPalette
-{
-	return m_paTerrainInfo;
-}
-
-std::vector<CvBonusClassInfo*>& cvInternalGlobals::getBonusClassInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paBonusClassInfo;
-}
-
-std::vector<CvBonusInfo*>& cvInternalGlobals::getBonusInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paBonusInfo;
-}
-
-std::vector<CvFeatureInfo*>& cvInternalGlobals::getFeatureInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paFeatureInfo;
-}
-
-std::vector<CvCivilizationInfo*>& cvInternalGlobals::getCivilizationInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paCivilizationInfo;
-}
-
-std::vector<CvLeaderHeadInfo*>& cvInternalGlobals::getLeaderHeadInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paLeaderHeadInfo;
-}
-
-std::vector<CvTraitInfo*>& cvInternalGlobals::getTraitInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paTraitInfo;
-}
-
-std::vector<CvCursorInfo*>& cvInternalGlobals::getCursorInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paCursorInfo;
-}
-
-std::vector<CvThroneRoomCamera*>& cvInternalGlobals::getThroneRoomCameras()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paThroneRoomCamera;
-}
-
-std::vector<CvThroneRoomInfo*>& cvInternalGlobals::getThroneRoomInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paThroneRoomInfo;
-}
-
-std::vector<CvThroneRoomStyleInfo*>& cvInternalGlobals::getThroneRoomStyleInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paThroneRoomStyleInfo;
-}
-
-std::vector<CvSlideShowInfo*>& cvInternalGlobals::getSlideShowInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paSlideShowInfo;
-}
-
-std::vector<CvSlideShowRandomInfo*>& cvInternalGlobals::getSlideShowRandomInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paSlideShowRandomInfo;
-}
-
-std::vector<CvWorldPickerInfo*>& cvInternalGlobals::getWorldPickerInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paWorldPickerInfo;
-}
-
-std::vector<CvSpaceShipInfo*>& cvInternalGlobals::getSpaceShipInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paSpaceShipInfo;
-}
-
-std::vector<CvUnitInfo*>& cvInternalGlobals::getUnitInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paUnitInfo;
-}
-
-std::vector<CvSpawnInfo*>& cvInternalGlobals::getSpawnInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paSpawnInfo;
-}
-
-std::vector<CvSpecialUnitInfo*>& cvInternalGlobals::getSpecialUnitInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paSpecialUnitInfo;
-}
-
-std::vector<CvInfoBase*>& cvInternalGlobals::getConceptInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paConceptInfo;
-}
-
-std::vector<CvInfoBase*>& cvInternalGlobals::getNewConceptInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paNewConceptInfo;
-}
-
-std::vector<CvInfoBase*>& cvInternalGlobals::getCityTabInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paCityTabInfo;
-}
-
-std::vector<CvInfoBase*>& cvInternalGlobals::getCalendarInfos()
-{
-	return m_paCalendarInfo;
-}
-
-std::vector<CvInfoBase*>& cvInternalGlobals::getSeasonInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paSeasonInfo;
-}
-
-std::vector<CvInfoBase*>& cvInternalGlobals::getMonthInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paMonthInfo;
-}
-
-std::vector<CvInfoBase*>& cvInternalGlobals::getDenialInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paDenialInfo;
-}
-
-std::vector<CvInvisibleInfo*>& cvInternalGlobals::getInvisibleInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paInvisibleInfo;
-}
-
-std::vector<CvVoteSourceInfo*>& cvInternalGlobals::getVoteSourceInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paVoteSourceInfo;
-}
-
-std::vector<CvUnitCombatInfo*>& cvInternalGlobals::getUnitCombatInfos()
-{
-	return m_paUnitCombatInfo;
-}
-
-std::vector<CvInfoBase*>& cvInternalGlobals::getDomainInfos()
-{
-	return m_paDomainInfo;
-}
-
-std::vector<CvPromotionLineInfo*>& cvInternalGlobals::getPromotionLineInfos()
-{
-	return m_paPromotionLineInfo;
-}
-
-std::vector<CvMapCategoryInfo*>& cvInternalGlobals::getMapCategoryInfos()
-{
-	return m_paMapCategoryInfo;
-}
-
-std::vector<CvIdeaClassInfo*>& cvInternalGlobals::getIdeaClassInfos()
-{
-	return m_paIdeaClassInfo;
-}
-
-std::vector<CvIdeaInfo*>& cvInternalGlobals::getIdeaInfos()
-{
-	return m_paIdeaInfo;
-}
-
 //int cvInternalGlobals::getNumTraitOptionEditsInfos() const
 //{
 //	return (int)m_paTraitOptionEditsInfo.size();
@@ -1592,11 +1290,6 @@ std::vector<CvIdeaInfo*>& cvInternalGlobals::getIdeaInfos()
 //	FAssert(e < GC.getNumTraitOptionEditsInfos());
 //	return *(m_paTraitOptionEditsInfo[e]);
 //}
-
-std::vector<CvInfoBase*>& cvInternalGlobals::getUnitAIInfos()
-{
-	return m_paUnitAIInfos;
-}
 
 //	Koshling - added internal registration of supported UnitAI types, not reliant
 //	on external definition in XML
@@ -1949,141 +1642,6 @@ void cvInternalGlobals::registerMissions()
 	REGISTER_MISSION(MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_TRACKER);
 }
 
-std::vector<CvInfoBase*>& cvInternalGlobals::getAttitudeInfos()
-{
-	return m_paAttitudeInfos;
-}
-
-std::vector<CvInfoBase*>& cvInternalGlobals::getMemoryInfos()
-{
-	return m_paMemoryInfos;
-}
-
-std::vector<CvGameOptionInfo*>& cvInternalGlobals::getGameOptionInfos()
-{
-	return m_paGameOptionInfos;
-}
-
-std::vector<CvMPOptionInfo*>& cvInternalGlobals::getMPOptionInfos()
-{
-	 return m_paMPOptionInfos;
-}
-
-std::vector<CvForceControlInfo*>& cvInternalGlobals::getForceControlInfos()
-{
-	return m_paForceControlInfos;
-}
-
-std::vector<CvPlayerOptionInfo*>& cvInternalGlobals::getPlayerOptionInfos()
-{
-	return m_paPlayerOptionInfos;
-}
-
-std::vector<CvGraphicOptionInfo*>& cvInternalGlobals::getGraphicOptionInfos()
-{
-	return m_paGraphicOptionInfos;
-}
-
-std::vector<CvYieldInfo*>& cvInternalGlobals::getYieldInfos()	// For Moose - XML Load Util
-{
-	return m_paYieldInfo;
-}
-
-std::vector<CvCommerceInfo*>& cvInternalGlobals::getCommerceInfos()	// For Moose - XML Load Util
-{
-	return m_paCommerceInfo;
-}
-
-std::vector<CvRouteInfo*>& cvInternalGlobals::getRouteInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paRouteInfo;
-}
-
-std::vector<CvImprovementInfo*>& cvInternalGlobals::getImprovementInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paImprovementInfo;
-}
-
-std::vector<CvGoodyInfo*>& cvInternalGlobals::getGoodyInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paGoodyInfo;
-}
-
-std::vector<CvBuildInfo*>& cvInternalGlobals::getBuildInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paBuildInfo;
-}
-
-std::vector<CvHandicapInfo*>& cvInternalGlobals::getHandicapInfos()	// Do NOT export outside of the DLL	// For Moose - XML Load Util
-{
-	return m_paHandicapInfo;
-}
-
-std::vector<CvGameSpeedInfo*>& cvInternalGlobals::getGameSpeedInfos()	// Do NOT export outside of the DLL	// For Moose - XML Load Util
-{
-	return m_paGameSpeedInfo;
-}
-
-std::vector<CvTurnTimerInfo*>& cvInternalGlobals::getTurnTimerInfos()	// Do NOT export outside of the DLL	// For Moose - XML Load Util
-{
-	return m_paTurnTimerInfo;
-}
-
-std::vector<CvProcessInfo*>& cvInternalGlobals::getProcessInfos()
-{
-	return m_paProcessInfo;
-}
-
-std::vector<CvVoteInfo*>& cvInternalGlobals::getVoteInfos()
-{
-	return m_paVoteInfo;
-}
-
-std::vector<CvProjectInfo*>& cvInternalGlobals::getProjectInfos()
-{
-	return m_paProjectInfo;
-}
-
-std::vector<CvBuildingInfo*>& cvInternalGlobals::getBuildingInfos()	// For Moose - XML Load Util, CvInfos, CvCacheObject
-{
-	return m_paBuildingInfo;
-}
-
-std::vector<CvSpecialBuildingInfo*>& cvInternalGlobals::getSpecialBuildingInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paSpecialBuildingInfo;
-}
-
-std::vector<CvActionInfo*>& cvInternalGlobals::getActionInfos()	// For Moose - XML Load Util
-{
-	return m_paActionInfo;
-}
-
-std::vector<CvMissionInfo*>& cvInternalGlobals::getMissionInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paMissionInfo;
-}
-
-std::vector<CvControlInfo*>& cvInternalGlobals::getControlInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paControlInfo;
-}
-
-std::vector<CvCommandInfo*>& cvInternalGlobals::getCommandInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paCommandInfo;
-}
-
-std::vector<CvAutomateInfo*>& cvInternalGlobals::getAutomateInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paAutomateInfo;
-}
-
-std::vector<CvPromotionInfo*>& cvInternalGlobals::getPromotionInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paPromotionInfo;
-}
-
 PromotionTypes cvInternalGlobals::findPromotion(PromotionPredicateFn predicateFn) const
 {
 	for (int idx = 0; idx < static_cast<int>(m_paPromotionInfo.size()); ++idx)
@@ -2094,96 +1652,6 @@ PromotionTypes cvInternalGlobals::findPromotion(PromotionPredicateFn predicateFn
 		}
 	}
 	return static_cast<PromotionTypes>(-1);
-}
-
-std::vector<CvTechInfo*>& cvInternalGlobals::getTechInfos()	// For Moose - XML Load Util, CvInfos, CvCacheObject
-{
-	return m_paTechInfo;
-}
-
-std::vector<CvReligionInfo*>& cvInternalGlobals::getReligionInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paReligionInfo;
-}
-
-std::vector<CvCorporationInfo*>& cvInternalGlobals::getCorporationInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paCorporationInfo;
-}
-
-std::vector<CvSpecialistInfo*>& cvInternalGlobals::getSpecialistInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paSpecialistInfo;
-}
-
-std::vector<CvCivicOptionInfo*>& cvInternalGlobals::getCivicOptionInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paCivicOptionInfo;
-}
-
-std::vector<CvCivicInfo*>& cvInternalGlobals::getCivicInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paCivicInfo;
-}
-
-std::vector<CvDiplomacyInfo*>& cvInternalGlobals::getDiplomacyInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paDiplomacyInfo;
-}
-
-std::vector<CvEraInfo*>& cvInternalGlobals::getEraInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_aEraInfo;
-}
-
-std::vector<CvHurryInfo*>& cvInternalGlobals::getHurryInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paHurryInfo;
-}
-
-std::vector<CvEmphasizeInfo*>& cvInternalGlobals::getEmphasizeInfos()	// For Moose - XML Load Util
-{
-	return m_paEmphasizeInfo;
-}
-
-std::vector<CvUpkeepInfo*>& cvInternalGlobals::getUpkeepInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paUpkeepInfo;
-}
-
-std::vector<CvCultureLevelInfo*>& cvInternalGlobals::getCultureLevelInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paCultureLevelInfo;
-}
-
-std::vector<CvVictoryInfo*>& cvInternalGlobals::getVictoryInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paVictoryInfo;
-}
-
-std::vector<CvQuestInfo*>& cvInternalGlobals::getQuestInfos()
-{
-	return m_paQuestInfo;
-}
-
-std::vector<CvTutorialInfo*>& cvInternalGlobals::getTutorialInfos()
-{
-	return m_paTutorialInfo;
-}
-
-std::vector<CvEventTriggerInfo*>& cvInternalGlobals::getEventTriggerInfos()
-{
-	return m_paEventTriggerInfo;
-}
-
-std::vector<CvEventInfo*>& cvInternalGlobals::getEventInfos()
-{
-	return m_paEventInfo;
-}
-
-std::vector<CvEspionageMissionInfo*>& cvInternalGlobals::getEspionageMissionInfos()
-{
-	return m_paEspionageMissionInfo;
 }
 
 int& cvInternalGlobals::getNumEntityEventTypes()
@@ -2266,11 +1734,6 @@ CvString& cvInternalGlobals::getArtStyleTypes(ArtStyleTypes e)
 	return m_paszArtStyleTypes[e];
 }
 
-std::vector<CvUnitArtStyleTypeInfo*>& cvInternalGlobals::getUnitArtStyleTypeInfos()
-{
-	return m_paUnitArtStyleTypeInfo;
-}
-
 int& cvInternalGlobals::getNumCitySizeTypes()
 {
 	return m_iNumCitySizeTypes;
@@ -2334,16 +1797,6 @@ CvString& cvInternalGlobals::getDirectionTypes(AutomateTypes e)
 	FAssert(e > -1);
 	FAssert(e < NUM_AUTOMATE_TYPES);
 	return m_paszDirectionTypes[e];
-}
-
-std::vector<CvPropertyInfo*>& cvInternalGlobals::getPropertyInfos()
-{
-	return m_paPropertyInfo;
-}
-
-std::vector<CvOutcomeInfo*>& cvInternalGlobals::getOutcomeInfos()
-{
-	return m_paOutcomeInfo;
 }
 
 int& cvInternalGlobals::getNumFootstepAudioTypes()

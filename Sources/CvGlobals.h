@@ -224,8 +224,6 @@ public:
 	bool getReprocessGreatWallDynamically() const;
 	int getNumMapInfos() const;
 	int getNumMapSwitchInfos() const;
-	std::vector<CvMapInfo*>& getMapInfos();
-	std::vector<CvMapSwitchInfo*>& getMapSwitchInfos();
 	CvMapInfo& getMapInfo(const MapTypes eMap) const;
 	CvMapSwitchInfo& getMapSwitchInfo(const MapSwitchTypes eMapSwitch) const;
 	
@@ -352,36 +350,28 @@ public:
 	void resolveDelayedResolution();
 
 	int getNumWorldInfos() const { return m_paWorldInfo.size(); }
-	std::vector<CvWorldInfo*>& getWorldInfos();
 	CvWorldInfo& getWorldInfo(WorldSizeTypes e) const { return getInfo(m_paWorldInfo, e); }
 	CvInfoReplacements<CvWorldInfo>* getWorldInfoReplacements() { return &m_WorldInfoReplacements; }
 
 	int getNumClimateInfos() const { return m_paClimateInfo.size(); }
-	std::vector<CvClimateInfo*>& getClimateInfos();
 	CvClimateInfo& getClimateInfo(ClimateTypes e) const { return getInfo(m_paClimateInfo, e); }
 
 	int getNumSeaLevelInfos() const { return m_paSeaLevelInfo.size(); }
-	std::vector<CvSeaLevelInfo*>& getSeaLevelInfos();
 	CvSeaLevelInfo& getSeaLevelInfo(SeaLevelTypes e) const { return getInfo(m_paSeaLevelInfo, e); }
 
 	int getNumColorInfos() const { return m_paColorInfo.size(); }
-	std::vector<CvColorInfo*>& getColorInfos();
 	CvColorInfo& getColorInfo(ColorTypes e) const { return getInfo(m_paColorInfo, e); }
 
 	int getNumPlayerColorInfos() const { return m_paPlayerColorInfo.size(); }
-	std::vector<CvPlayerColorInfo*>& getPlayerColorInfos();
 	CvPlayerColorInfo& getPlayerColorInfo(PlayerColorTypes e) const { return getInfo(m_paPlayerColorInfo, e); }
 
 	int getNumAdvisorInfos() const { return m_paAdvisorInfo.size(); }
-	std::vector<CvAdvisorInfo*>& getAdvisorInfos();
 	CvAdvisorInfo& getAdvisorInfo(AdvisorTypes e) const { return getInfo(m_paAdvisorInfo, e); }
 
 	int getNumHints() const { return m_paHints.size(); }
-	std::vector<CvInfoBase*>& getHints();
 	CvInfoBase& getHints(int i) const { return getInfo(m_paHints, i); }
 
 	int getNumMainMenus() const { return m_paMainMenus.size(); }
-	std::vector<CvMainMenuInfo*>& getMainMenus();
 	CvMainMenuInfo& getMainMenus(int i) const;
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 10/30/07                            MRGENIE          */
@@ -415,163 +405,127 @@ public:
 /************************************************************************************************/
 
 	int getNumRouteModelInfos() const { return m_paRouteModelInfo.size(); }
-	std::vector<CvRouteModelInfo*>& getRouteModelInfos();
 	CvRouteModelInfo& getRouteModelInfo(int i) const { return getInfo(m_paRouteModelInfo, i); }
 
 	int getNumRiverInfos() const { return m_paRiverInfo.size(); }
-	std::vector<CvRiverInfo*>& getRiverInfos();
 	CvRiverInfo& getRiverInfo(RiverTypes e) const { return getInfo(m_paRiverInfo, e); }
 
 	int getNumRiverModelInfos() const { return m_paRiverModelInfo.size(); }
-	std::vector<CvRiverModelInfo*>& getRiverModelInfos();
 	CvRiverModelInfo& getRiverModelInfo(int i) const { return getInfo(m_paRiverModelInfo, i); }
 
 	int getNumWaterPlaneInfos() const { return m_paWaterPlaneInfo.size(); }
-	std::vector<CvWaterPlaneInfo*>& getWaterPlaneInfos();
 	CvWaterPlaneInfo& getWaterPlaneInfo(int i) const { return getInfo(m_paWaterPlaneInfo, i); }
 
 	int getNumTerrainPlaneInfos() const { return m_paTerrainPlaneInfo.size(); }
-	std::vector<CvTerrainPlaneInfo*>& getTerrainPlaneInfos();
 	CvTerrainPlaneInfo& getTerrainPlaneInfo(int i) const { return getInfo(m_paTerrainPlaneInfo, i); }
 
 	int getNumCameraOverlayInfos() const { return m_paCameraOverlayInfo.size(); }
-	std::vector<CvCameraOverlayInfo*>& getCameraOverlayInfos();
 	CvCameraOverlayInfo& getCameraOverlayInfo(int i) const { return getInfo(m_paCameraOverlayInfo, i); }
 
 	int getNumAnimationPathInfos() const { return m_paAnimationPathInfo.size(); }
-	std::vector<CvAnimationPathInfo*>& getAnimationPathInfos();
 	CvAnimationPathInfo& getAnimationPathInfo(AnimationPathTypes e) const { return getInfo(m_paAnimationPathInfo, e); }
 
 	int getNumAnimationCategoryInfos() const { return m_paAnimationCategoryInfo.size(); }
-	std::vector<CvAnimationCategoryInfo*>& getAnimationCategoryInfos();
 	CvAnimationCategoryInfo& getAnimationCategoryInfo(AnimationCategoryTypes e) const { return getInfo(m_paAnimationCategoryInfo, e); }
 
 	int getNumEntityEventInfos() const { return m_paEntityEventInfo.size(); }
-	std::vector<CvEntityEventInfo*>& getEntityEventInfos();
 	CvEntityEventInfo& getEntityEventInfo(EntityEventTypes e) const { return getInfo(m_paEntityEventInfo, e); }
 
 	int getNumEffectInfos() const { return m_paEffectInfo.size(); }
-	std::vector<CvEffectInfo*>& getEffectInfos();
 	CvEffectInfo& getEffectInfo(int i) const { return getInfo(m_paEffectInfo, i); }
 
 	int getNumAttachableInfos() const { return m_paAttachableInfo.size(); }
-	std::vector<CvAttachableInfo*>& getAttachableInfos();
 	CvAttachableInfo& getAttachableInfo(int i) const { return getInfo(m_paAttachableInfo, i); }
 
 	int getNumCameraInfos() const { return m_paCameraInfo.size(); }
-	std::vector<CvCameraInfo*>& getCameraInfos();
 	CvCameraInfo& getCameraInfo(CameraAnimationTypes eCameraAnimationNum) const { return getInfo(m_paCameraInfo, eCameraAnimationNum); }
 
 	int getNumUnitFormationInfos() const { return m_paUnitFormationInfo.size(); }
-	std::vector<CvUnitFormationInfo*>& getUnitFormationInfos();
 	CvUnitFormationInfo& getUnitFormationInfo(int i) const { return getInfo(m_paUnitFormationInfo, i); }
 
 	int getNumGameTextXML() const { return m_paGameTextXML.size(); }
-	std::vector<CvGameText*>& getGameTextXMLs();
 
 	int getNumLandscapeInfos() const { return m_paLandscapeInfo.size(); }
-	std::vector<CvLandscapeInfo*>& getLandscapeInfos();
 	CvLandscapeInfo& getLandscapeInfo(int iIndex) const { return getInfo(m_paLandscapeInfo, iIndex); }
 	int getActiveLandscapeID() const { return m_iActiveLandscapeID; }
 	void setActiveLandscapeID(int iLandscapeID) { m_iActiveLandscapeID = iLandscapeID; }
 
 	int getNumTerrainInfos() const { return m_paTerrainInfo.size(); }
-	std::vector<CvTerrainInfo*>& getTerrainInfos();
 	CvTerrainInfo& getTerrainInfo(TerrainTypes eTerrainNum) const { return getInfo(m_paTerrainInfo, eTerrainNum); }
 	CvInfoReplacements<CvTerrainInfo>* getTerrainInfoReplacements() { return &m_TerrainInfoReplacements; }
 
 	int getNumBonusClassInfos() const { return m_paBonusClassInfo.size(); }
-	std::vector<CvBonusClassInfo*>& getBonusClassInfos();
 	CvBonusClassInfo& getBonusClassInfo(BonusClassTypes eBonusNum) const { return getInfo(m_paBonusClassInfo, eBonusNum); }
 	CvInfoReplacements<CvBonusClassInfo>* getBonusClassInfoReplacements() { return &m_BonusClassInfoReplacements; }
 
 	int getNumBonusInfos() const { return m_paBonusInfo.size(); }
-	std::vector<CvBonusInfo*>& getBonusInfos();
+	const std::vector<CvBonusInfo*>& getBonusInfos() const { return m_paBonusInfo; }
 	CvBonusInfo& getBonusInfo(BonusTypes eBonusNum) const { return getInfo(m_paBonusInfo, eBonusNum); }
 	CvInfoReplacements<CvBonusInfo>* getBonusInfoReplacements() { return &m_BonusInfoReplacements; }
 
 	int getNumFeatureInfos() const { return m_paFeatureInfo.size(); }
-	std::vector<CvFeatureInfo*>& getFeatureInfos();
 	CvFeatureInfo& getFeatureInfo(FeatureTypes eFeatureNum) const { return getInfo(m_paFeatureInfo, eFeatureNum); }
 	CvInfoReplacements<CvFeatureInfo>* getFeatureInfoReplacements() { return &m_FeatureInfoReplacements; }
 
 	int& getNumPlayableCivilizationInfos() { return m_iNumPlayableCivilizationInfos; }
 	int& getNumAIPlayableCivilizationInfos() { return m_iNumAIPlayableCivilizationInfos; }
 	int getNumCivilizationInfos() const { return m_paCivilizationInfo.size(); }
-	std::vector<CvCivilizationInfo*>& getCivilizationInfos();
 	CvCivilizationInfo& getCivilizationInfo(CivilizationTypes eCivilizationNum) const { return getInfo(m_paCivilizationInfo, eCivilizationNum); }
 	CvInfoReplacements<CvCivilizationInfo>* getCivilizationInfoReplacements() { return &m_CivilizationInfoReplacements; }
 
 	int getNumLeaderHeadInfos() const { return m_paLeaderHeadInfo.size(); }
-	std::vector<CvLeaderHeadInfo*>& getLeaderHeadInfos();
 	CvLeaderHeadInfo& getLeaderHeadInfo(LeaderHeadTypes eLeaderHeadNum) const { return getInfo(m_paLeaderHeadInfo, eLeaderHeadNum); }
 	CvInfoReplacements<CvLeaderHeadInfo>* getLeaderHeadInfoReplacements() { return &m_LeaderHeadInfoReplacements; }
 
 	int getNumTraitInfos() const { return m_paTraitInfo.size(); }
-	std::vector<CvTraitInfo*>& getTraitInfos();
 	CvTraitInfo& getTraitInfo(TraitTypes eTraitNum) const { return getInfo(m_paTraitInfo, eTraitNum); }
 	CvInfoReplacements<CvTraitInfo>* getTraitInfoReplacements() { return &m_TraitInfoReplacements; }
 
 	int getNumCursorInfos() const { return m_paCursorInfo.size(); }
-	std::vector<CvCursorInfo*>& getCursorInfos();
 	CvCursorInfo& getCursorInfo(CursorTypes eCursorNum) const { return getInfo(m_paCursorInfo, eCursorNum); }
 
 	int getNumThroneRoomCameras() const { return m_paThroneRoomCamera.size(); }
-	std::vector<CvThroneRoomCamera*>& getThroneRoomCameras();
 	CvThroneRoomCamera& getThroneRoomCamera(int iIndex) const { return getInfo(m_paThroneRoomCamera, iIndex); }
 
 	int getNumThroneRoomInfos() const { return m_paThroneRoomInfo.size(); }
-	std::vector<CvThroneRoomInfo*>& getThroneRoomInfos();
 	CvThroneRoomInfo& getThroneRoomInfo(int iIndex) const { return getInfo(m_paThroneRoomInfo, iIndex); }
 
 	int getNumThroneRoomStyleInfos() const { return m_paThroneRoomStyleInfo.size(); }
-	std::vector<CvThroneRoomStyleInfo*>& getThroneRoomStyleInfos();
 	CvThroneRoomStyleInfo& getThroneRoomStyleInfo(int iIndex) const { return getInfo(m_paThroneRoomStyleInfo, iIndex); }
 
 	int getNumSlideShowInfos() const { return m_paSlideShowInfo.size(); }
-	std::vector<CvSlideShowInfo*>& getSlideShowInfos();
 	CvSlideShowInfo& getSlideShowInfo(int iIndex) const { return getInfo(m_paSlideShowInfo, iIndex); }
 
 	int getNumSlideShowRandomInfos() const { return m_paSlideShowRandomInfo.size(); }
-	std::vector<CvSlideShowRandomInfo*>& getSlideShowRandomInfos();
 	CvSlideShowRandomInfo& getSlideShowRandomInfo(int iIndex) const { return getInfo(m_paSlideShowRandomInfo, iIndex); }
 
 	int getNumWorldPickerInfos() const { return m_paWorldPickerInfo.size(); }
-	std::vector<CvWorldPickerInfo*>& getWorldPickerInfos();
 	CvWorldPickerInfo& getWorldPickerInfo(int iIndex) const { return getInfo(m_paWorldPickerInfo, iIndex); }
 
 	int getNumSpaceShipInfos() const { return m_paSpaceShipInfo.size(); }
-	std::vector<CvSpaceShipInfo*>& getSpaceShipInfos();
 	CvSpaceShipInfo& getSpaceShipInfo(int iIndex) const { return getInfo(m_paSpaceShipInfo, iIndex); }
 
 	int getNumUnitInfos() const { return m_paUnitInfo.size(); }
-	std::vector<CvUnitInfo*>& getUnitInfos();
 	CvUnitInfo& getUnitInfo(UnitTypes eUnitNum) const { return getInfo(m_paUnitInfo, eUnitNum); }
 	CvInfoReplacements<CvUnitInfo>* getUnitInfoReplacements() { return &m_UnitInfoReplacements; }
 
 	int getNumSpawnInfos() const { return m_paSpawnInfo.size(); }
-	std::vector<CvSpawnInfo*>& getSpawnInfos();
 	CvSpawnInfo& getSpawnInfo(SpawnTypes eSpawnNum) const { return getInfo(m_paSpawnInfo, eSpawnNum); }
 	CvInfoReplacements<CvSpawnInfo>* getSpawnInfoReplacements() { return &m_SpawnInfoReplacements; }
 
 	int getNumSpecialUnitInfos() const { return m_paSpecialUnitInfo.size(); }
-	std::vector<CvSpecialUnitInfo*>& getSpecialUnitInfos();
 	CvSpecialUnitInfo& getSpecialUnitInfo(SpecialUnitTypes eSpecialUnitNum) const { return getInfo(m_paSpecialUnitInfo, eSpecialUnitNum); }
 
 	int getNumConceptInfos() const { return m_paConceptInfo.size(); }
-	std::vector<CvInfoBase*>& getConceptInfos();
 	CvInfoBase& getConceptInfo(ConceptTypes e) const { return getInfo(m_paConceptInfo, e); }
 
 	int getNumNewConceptInfos() const { return m_paNewConceptInfo.size(); }
-	std::vector<CvInfoBase*>& getNewConceptInfos();
 	CvInfoBase& getNewConceptInfo(NewConceptTypes e) const { return getInfo(m_paNewConceptInfo, e); }
 
 	int getNumPropertyInfos() const { return m_paPropertyInfo.size(); }
-	std::vector<CvPropertyInfo*>& getPropertyInfos();
 	CvPropertyInfo& getPropertyInfo(PropertyTypes ePropertyNum) const { return getInfo(m_paPropertyInfo, ePropertyNum); }
 
 	int getNumOutcomeInfos() const { return m_paOutcomeInfo.size(); }
-	std::vector<CvOutcomeInfo*>& getOutcomeInfos();
 	CvOutcomeInfo& getOutcomeInfo(OutcomeTypes eOutcomeNum) const { return getInfo(m_paOutcomeInfo, eOutcomeNum); }
 
 /************************************************************************************************/
@@ -644,59 +598,45 @@ public:
 /************************************************************************************************/
 
 	int getNumCityTabInfos() const { return m_paCityTabInfo.size(); }
-	std::vector<CvInfoBase*>& getCityTabInfos();
 	CvInfoBase& getCityTabInfo(CityTabTypes e) const { return getInfo(m_paCityTabInfo, e); }
 
 	int getNumCalendarInfos() const { return m_paCalendarInfo.size(); }
-	std::vector<CvInfoBase*>& getCalendarInfos();
 	CvInfoBase& getCalendarInfo(CalendarTypes e) const { return getInfo(m_paCalendarInfo, e); }
 
 	int getNumSeasonInfos() const { return m_paSeasonInfo.size(); }
-	std::vector<CvInfoBase*>& getSeasonInfos();
 	CvInfoBase& getSeasonInfo(SeasonTypes e) const { return getInfo(m_paSeasonInfo, e); }
 
 	int getNumMonthInfos() const { return m_paMonthInfo.size(); }
-	std::vector<CvInfoBase*>& getMonthInfos();
 	CvInfoBase& getMonthInfo(MonthTypes e) const { return getInfo(m_paMonthInfo, e); }
 
 	int getNumDenialInfos() const { return m_paDenialInfo.size(); }
-	std::vector<CvInfoBase*>& getDenialInfos();
 	CvInfoBase& getDenialInfo(DenialTypes e) const { return getInfo(m_paDenialInfo, e); }
 
 	int getNumInvisibleInfos() const { return m_paInvisibleInfo.size(); }
-	std::vector<CvInvisibleInfo*>& getInvisibleInfos();
 	CvInvisibleInfo& getInvisibleInfo(InvisibleTypes e) const { return getInfo(m_paInvisibleInfo, e); }
 
 	int getNumVoteSourceInfos() const { return m_paVoteSourceInfo.size(); }
-	std::vector<CvVoteSourceInfo*>& getVoteSourceInfos();
 	CvVoteSourceInfo& getVoteSourceInfo(VoteSourceTypes e) const { return getInfo(m_paVoteSourceInfo, e); }
 
 	int getNumUnitCombatInfos() const { return m_paUnitCombatInfo.size(); }
-	std::vector<CvUnitCombatInfo*>& getUnitCombatInfos();
 	CvUnitCombatInfo& getUnitCombatInfo(UnitCombatTypes e) const { return getInfo(m_paUnitCombatInfo, e); }
 
-	std::vector<CvInfoBase*>& getDomainInfos();
 	CvInfoBase& getDomainInfo(DomainTypes e) const { return getInfo(m_paDomainInfo, e); }
 
 	//TB Promotion Line Mod begin
 	int getNumPromotionLineInfos() const { return m_paPromotionLineInfo.size(); }
-	std::vector<CvPromotionLineInfo*>& getPromotionLineInfos();
 	CvPromotionLineInfo& getPromotionLineInfo(PromotionLineTypes e) const { return getInfo(m_paPromotionLineInfo, e); }
 	//TB Promotion Line Mod end
 
 	int getNumMapCategoryInfos() const { return m_paMapCategoryInfo.size(); }
-	std::vector<CvMapCategoryInfo*>& getMapCategoryInfos();
 	CvMapCategoryInfo& getMapCategoryInfo(MapCategoryTypes e) const { return getInfo(m_paMapCategoryInfo, e); }
 
 	int getNumIdeaClassInfos() const { return m_paIdeaClassInfo.size(); }
-	std::vector<CvIdeaClassInfo*>& getIdeaClassInfos();
 	CvIdeaClassInfo& getIdeaClassInfo(IdeaClassTypes e) const { return getInfo(m_paIdeaClassInfo, e); }
 
 	int getNumIdeaInfos() const { return m_paIdeaInfo.size(); }
-	std::vector<CvIdeaInfo*>& getIdeaInfos();
 	CvIdeaInfo& getIdeaInfo(IdeaTypes e) const { return getInfo(m_paIdeaInfo, e); }
 
-	std::vector<CvInfoBase*>& getUnitAIInfos();
 	CvInfoBase& getUnitAIInfo(UnitAITypes eUnitAINum) const { return getInfo(m_paUnitAIInfos, eUnitAINum); }
 
 	//	Koshling - added internal registration of supported UnitAI types, not reliant
@@ -717,200 +657,154 @@ public:
 	void registerPropertyPropagators();
 	void registerMissions();
 
-	std::vector<CvInfoBase*>& getAttitudeInfos();
 	CvInfoBase& getAttitudeInfo(AttitudeTypes eAttitudeNum) const { return getInfo(m_paAttitudeInfos, eAttitudeNum); }
 
-	std::vector<CvInfoBase*>& getMemoryInfos();
 	CvInfoBase& getMemoryInfo(MemoryTypes eMemoryNum) const { return getInfo(m_paMemoryInfos, eMemoryNum); }
 
 	int getNumGameOptionInfos() const { return m_paGameOptionInfos.size(); }
-	std::vector<CvGameOptionInfo*>& getGameOptionInfos();
 	CvGameOptionInfo& getGameOptionInfo(GameOptionTypes eGameOptionNum) const { return getInfo(m_paGameOptionInfos, eGameOptionNum); }
 
 	int getNumMPOptionInfos() const { return m_paMPOptionInfos.size(); }
-	std::vector<CvMPOptionInfo*>& getMPOptionInfos();
 	CvMPOptionInfo& getMPOptionInfo(MultiplayerOptionTypes eMPOptionNum) const { return getInfo(m_paMPOptionInfos, eMPOptionNum); }
 
 	int getNumForceControlInfos() const { return m_paForceControlInfos.size(); }
-	std::vector<CvForceControlInfo*>& getForceControlInfos();
 	CvForceControlInfo& getForceControlInfo(ForceControlTypes eForceControlNum) const { return getInfo(m_paForceControlInfos, eForceControlNum); }
 
-	std::vector<CvPlayerOptionInfo*>& getPlayerOptionInfos();
 	CvPlayerOptionInfo& getPlayerOptionInfo(PlayerOptionTypes ePlayerOptionNum) const { return getInfo(m_paPlayerOptionInfos, ePlayerOptionNum); }
 
-	std::vector<CvGraphicOptionInfo*>& getGraphicOptionInfos();
 	CvGraphicOptionInfo& getGraphicOptionInfo(GraphicOptionTypes eGraphicOptionNum) const { return getInfo(m_paGraphicOptionInfos, eGraphicOptionNum); }
 
-	std::vector<CvYieldInfo*>& getYieldInfos();
 	CvYieldInfo& getYieldInfo(YieldTypes eYieldNum) const { return getInfo(m_paYieldInfo, eYieldNum); }
 
-	std::vector<CvCommerceInfo*>& getCommerceInfos();
 	CvCommerceInfo& getCommerceInfo(CommerceTypes eCommerceNum) const { return getInfo(m_paCommerceInfo, eCommerceNum); }
 
 	int getNumRouteInfos() const { return m_paRouteInfo.size(); }
-	std::vector<CvRouteInfo*>& getRouteInfos();
 	CvRouteInfo& getRouteInfo(RouteTypes eRouteNum) const { return getInfo(m_paRouteInfo, eRouteNum); }
 	CvInfoReplacements<CvRouteInfo>* getRouteInfoReplacements() { return &m_RouteInfoReplacements; }
 
 	int getNumImprovementInfos() const { return m_paImprovementInfo.size(); }
-	std::vector<CvImprovementInfo*>& getImprovementInfos();
 	CvImprovementInfo& getImprovementInfo(ImprovementTypes eImprovementNum) const { return getInfo(m_paImprovementInfo, eImprovementNum); }
 	CvInfoReplacements<CvImprovementInfo>* getImprovementInfoReplacements() { return &m_ImprovementInfoReplacements; }
 
 	int getNumGoodyInfos() const { return m_paGoodyInfo.size(); }
-	std::vector<CvGoodyInfo*>& getGoodyInfos();
 	CvGoodyInfo& getGoodyInfo(GoodyTypes eGoodyNum) const { return getInfo(m_paGoodyInfo, eGoodyNum); }
 
 	int getNumBuildInfos() const { return m_paBuildInfo.size(); }
-	std::vector<CvBuildInfo*>& getBuildInfos();
 	CvBuildInfo& getBuildInfo(BuildTypes eBuildNum) const { return getInfo(m_paBuildInfo, eBuildNum); }
 	CvInfoReplacements<CvBuildInfo>* getBuildInfoReplacements() { return &m_BuildInfoReplacements; }
 
 	int getNumHandicapInfos() const { return m_paHandicapInfo.size(); }
-	std::vector<CvHandicapInfo*>& getHandicapInfos();
 	CvHandicapInfo& getHandicapInfo(HandicapTypes eHandicapNum) const { return getInfo(m_paHandicapInfo, eHandicapNum); }
 	CvInfoReplacements<CvHandicapInfo>* getHandicapInfoReplacements() { return &m_HandicapInfoReplacements; }
 
 	int getNumGameSpeedInfos() const { return m_paGameSpeedInfo.size(); }
-	std::vector<CvGameSpeedInfo*>& getGameSpeedInfos();
 	CvGameSpeedInfo& getGameSpeedInfo(GameSpeedTypes eGameSpeedNum) const { return getInfo(m_paGameSpeedInfo, eGameSpeedNum); }
 	CvInfoReplacements<CvGameSpeedInfo>* getGameSpeedInfoReplacements() { return &m_GameSpeedInfoReplacements; }
 
 	int getNumTurnTimerInfos() const { return m_paTurnTimerInfo.size(); }
-	std::vector<CvTurnTimerInfo*>& getTurnTimerInfos();
 	CvTurnTimerInfo& getTurnTimerInfo(TurnTimerTypes eTurnTimerNum) const { return getInfo(m_paTurnTimerInfo, eTurnTimerNum); }
 
 	int getNumProcessInfos() const { return m_paProcessInfo.size(); }
-	std::vector<CvProcessInfo*>& getProcessInfos();
 	CvProcessInfo& getProcessInfo(ProcessTypes e) const { return getInfo(m_paProcessInfo, e); }
 	CvInfoReplacements<CvProcessInfo>* getProcessInfoReplacements() { return &m_ProcessInfoReplacements; }
 
 	int getNumVoteInfos() const { return m_paVoteInfo.size(); }
-	std::vector<CvVoteInfo*>& getVoteInfos();
 	CvVoteInfo& getVoteInfo(VoteTypes e) const { return getInfo(m_paVoteInfo, e); }
 
 	int getNumProjectInfos() const { return m_paProjectInfo.size(); }
-	std::vector<CvProjectInfo*>& getProjectInfos();
 	CvProjectInfo& getProjectInfo(ProjectTypes e) const { return getInfo(m_paProjectInfo, e); }
 	CvInfoReplacements<CvProjectInfo>* getProjectInfoReplacements() { return &m_ProjectInfoReplacements; }
 
 	int getNumBuildingInfos() const { return m_paBuildingInfo.size(); }
-	std::vector<CvBuildingInfo*>& getBuildingInfos();
 	CvBuildingInfo& getBuildingInfo(BuildingTypes eBuildingNum) const { return getInfo(m_paBuildingInfo, eBuildingNum); }
 	CvInfoReplacements<CvBuildingInfo>* getBuildingInfoReplacements() { return &m_BuildingInfoReplacements; }
 
 	int getNumSpecialBuildingInfos() const { return m_paSpecialBuildingInfo.size(); }
-	std::vector<CvSpecialBuildingInfo*>& getSpecialBuildingInfos();
 	CvSpecialBuildingInfo& getSpecialBuildingInfo(SpecialBuildingTypes eSpecialBuildingNum) const { return getInfo(m_paSpecialBuildingInfo, eSpecialBuildingNum); }
 	CvInfoReplacements<CvSpecialBuildingInfo>* getSpecialBuildingInfoReplacements() { return &m_SpecialBuildingInfoReplacements; }
 
 	int getNumActionInfos() const { return m_paActionInfo.size(); }
-	std::vector<CvActionInfo*>& getActionInfos();
 	CvActionInfo& getActionInfo(int i) const { return getInfo(m_paActionInfo, i); }
 
-	std::vector<CvMissionInfo*>& getMissionInfos();
 	CvMissionInfo& getMissionInfo(MissionTypes eMissionNum) const { return getInfo(m_paMissionInfo, eMissionNum); }
 
-	std::vector<CvControlInfo*>& getControlInfos();
 	CvControlInfo& getControlInfo(ControlTypes eControlNum) const { return getInfo(m_paControlInfo, eControlNum); }
 
-	std::vector<CvCommandInfo*>& getCommandInfos();
 	CvCommandInfo& getCommandInfo(CommandTypes eCommandNum) const { return getInfo(m_paCommandInfo, eCommandNum); }
 
 	int getNumAutomateInfos() const { return m_paAutomateInfo.size(); }
-	std::vector<CvAutomateInfo*>& getAutomateInfos();
 	CvAutomateInfo& getAutomateInfo(int iAutomateNum) const { return getInfo(m_paAutomateInfo, iAutomateNum); }
 
 	int getNumPromotionInfos() const { return m_paPromotionInfo.size(); }
-	std::vector<CvPromotionInfo*>& getPromotionInfos();
 	CvPromotionInfo& getPromotionInfo(PromotionTypes ePromotionNum) const { return getInfo(m_paPromotionInfo, ePromotionNum); }
 	CvInfoReplacements<CvPromotionInfo>* getPromotionInfoReplacements() { return &m_PromotionInfoReplacements; }
 	typedef bst::function<bool(const CvPromotionInfo*, PromotionTypes)> PromotionPredicateFn;
 	PromotionTypes findPromotion(PromotionPredicateFn predicateFn) const;
 
 	int getNumTechInfos() const { return m_paTechInfo.size(); }
-	std::vector<CvTechInfo*>& getTechInfos();
 	CvTechInfo& getTechInfo(TechTypes eTechNum) const { return getInfo(m_paTechInfo, eTechNum); }
 	CvInfoReplacements<CvTechInfo>* getTechInfoReplacements() { return &m_TechInfoReplacements; }
 
 	int getNumReligionInfos() const { return m_paReligionInfo.size(); }
-	std::vector<CvReligionInfo*>& getReligionInfos();
 	CvReligionInfo& getReligionInfo(ReligionTypes eReligionNum) const { return getInfo(m_paReligionInfo, eReligionNum); }
 	CvInfoReplacements<CvReligionInfo>* getReligionInfoReplacements() { return &m_ReligionInfoReplacements; }
 
 	int getNumCorporationInfos() const { return m_paCorporationInfo.size(); }
-	std::vector<CvCorporationInfo*>& getCorporationInfos();
 	CvCorporationInfo& getCorporationInfo(CorporationTypes eCorporationNum) const { return getInfo(m_paCorporationInfo, eCorporationNum); }
 	CvInfoReplacements<CvCorporationInfo>* getCorporationInfoReplacements() { return &m_CorporationInfoReplacements; }
 
 	int getNumSpecialistInfos() const { return m_paSpecialistInfo.size(); }
-	std::vector<CvSpecialistInfo*>& getSpecialistInfos();
 	CvSpecialistInfo& getSpecialistInfo(SpecialistTypes eSpecialistNum) const { return getInfo(m_paSpecialistInfo, eSpecialistNum); }
 	CvInfoReplacements<CvSpecialistInfo>* getSpecialistInfoReplacements() { return &m_SpecialistInfoReplacements; }
 
 	int getNumCivicOptionInfos() const { return m_paCivicOptionInfo.size(); }
-	std::vector<CvCivicOptionInfo*>& getCivicOptionInfos();
 	CvCivicOptionInfo& getCivicOptionInfo(CivicOptionTypes eCivicOptionNum) const { return getInfo(m_paCivicOptionInfo, eCivicOptionNum); }
 
 	int getNumCivicInfos() const { return m_paCivicInfo.size(); }
-	std::vector<CvCivicInfo*>& getCivicInfos();
 	CvCivicInfo& getCivicInfo(CivicTypes eCivicNum) const { return getInfo(m_paCivicInfo, eCivicNum); }
 	CvInfoReplacements<CvCivicInfo>* getCivicInfoReplacements() { return &m_CivicInfoReplacements; }
 
 	int getNumDiplomacyInfos() const { return m_paDiplomacyInfo.size(); }
-	std::vector<CvDiplomacyInfo*>& getDiplomacyInfos();
 	CvDiplomacyInfo& getDiplomacyInfo(int iDiplomacyNum) const { return getInfo(m_paDiplomacyInfo, iDiplomacyNum); }
 
 	int getNumEraInfos() const { return m_aEraInfo.size(); }
-	std::vector<CvEraInfo*>& getEraInfos();
 	CvEraInfo& getEraInfo(EraTypes eEraNum) const { return getInfo(m_aEraInfo, eEraNum); }
 	CvInfoReplacements<CvEraInfo>* getEraInfoReplacements() { return &m_EraInfoReplacements; }
 
 	int getNumHurryInfos() const { return m_paHurryInfo.size(); }
-	std::vector<CvHurryInfo*>& getHurryInfos();
 	CvHurryInfo& getHurryInfo(HurryTypes eHurryNum) const { return getInfo(m_paHurryInfo, eHurryNum); }
 
 	int getNumEmphasizeInfos() const { return m_paEmphasizeInfo.size(); }
-	std::vector<CvEmphasizeInfo*>& getEmphasizeInfos();
 	CvEmphasizeInfo& getEmphasizeInfo(EmphasizeTypes eEmphasizeNum) const { return getInfo(m_paEmphasizeInfo, eEmphasizeNum); }
 
 	int getNumUpkeepInfos() const { return m_paUpkeepInfo.size(); }
-	std::vector<CvUpkeepInfo*>& getUpkeepInfos();
 	CvUpkeepInfo& getUpkeepInfo(UpkeepTypes eUpkeepNum) const { return getInfo(m_paUpkeepInfo, eUpkeepNum); }
 
 	int getNumCultureLevelInfos() const { return m_paCultureLevelInfo.size(); }
-	std::vector<CvCultureLevelInfo*>& getCultureLevelInfos();
 	CvCultureLevelInfo& getCultureLevelInfo(CultureLevelTypes eCultureLevelNum) const { return getInfo(m_paCultureLevelInfo, eCultureLevelNum); }
 	CvInfoReplacements<CvCultureLevelInfo>* getCultureLevelInfoReplacements() { return &m_CultureLevelInfoReplacements; }
 
 	int getNumVictoryInfos() const { return m_paVictoryInfo.size(); }
-	std::vector<CvVictoryInfo*>& getVictoryInfos();
 	CvVictoryInfo& getVictoryInfo(VictoryTypes eVictoryNum) const { return getInfo(m_paVictoryInfo, eVictoryNum); }
 
 	int getNumQuestInfos() const { return m_paQuestInfo.size(); }
-	std::vector<CvQuestInfo*>& getQuestInfos();
 	CvQuestInfo& getQuestInfo(int iIndex) const { return getInfo(m_paQuestInfo, iIndex); }
 
 	int getNumTutorialInfos() const { return m_paTutorialInfo.size(); }
-	std::vector<CvTutorialInfo*>& getTutorialInfos();
 	CvTutorialInfo& getTutorialInfo(int i) const { return getInfo(m_paTutorialInfo, i); }
 
 	int getNumEventTriggerInfos() const { return m_paEventTriggerInfo.size(); }
-	std::vector<CvEventTriggerInfo*>& getEventTriggerInfos();
 	CvEventTriggerInfo& getEventTriggerInfo(EventTriggerTypes eEventTrigger) const { return getInfo(m_paEventTriggerInfo, eEventTrigger); }
 	CvInfoReplacements<CvEventTriggerInfo>* getEventTriggerInfoReplacements() { return &m_EventTriggerInfoReplacements; }
 
 	int getNumEventInfos() const { return m_paEventInfo.size(); }
-	std::vector<CvEventInfo*>& getEventInfos();
 	CvEventInfo& getEventInfo(EventTypes eEvent) const { return getInfo(m_paEventInfo, eEvent); }
 	CvInfoReplacements<CvEventInfo>* getEventInfoReplacements() { return &m_EventInfoReplacements; }
 
 	int getNumEspionageMissionInfos() const { return m_paEspionageMissionInfo.size(); }
-	std::vector<CvEspionageMissionInfo*>& getEspionageMissionInfos();
 	CvEspionageMissionInfo& getEspionageMissionInfo(EspionageMissionTypes eEspionageMissionNum) const { return getInfo(m_paEspionageMissionInfo, eEspionageMissionNum); }
 
 	int getNumUnitArtStyleTypeInfos() const { return m_paUnitArtStyleTypeInfo.size(); }
-	std::vector<CvUnitArtStyleTypeInfo*>& getUnitArtStyleTypeInfos();
 	CvUnitArtStyleTypeInfo& getUnitArtStyleTypeInfo(UnitArtStyleTypes eUnitArtStyleTypeNum) const { return getInfo(m_paUnitArtStyleTypeInfo, eUnitArtStyleTypeNum); }
 
 	//
@@ -1255,40 +1149,40 @@ public:
 	//
 
 	void setInterface(CvInterface* pVal);
-	 void setDiplomacyScreen(CvDiplomacyScreen* pVal);
-	 void setMPDiplomacyScreen(CMPDiplomacyScreen* pVal);
-	 void setMessageQueue(CMessageQueue* pVal);
-	 void setHotJoinMessageQueue(CMessageQueue* pVal);
-	 void setMessageControl(CMessageControl* pVal);
-	 void setSetupData(CvSetupData* pVal);
-	 void setMessageCodeTranslator(CvMessageCodeTranslator* pVal);
-	 void setDropMgr(CvDropMgr* pVal);
-	 void setPortal(CvPortal* pVal);
-	 void setStatsReport(CvStatsReporter* pVal);
-	 void setPathFinder(FAStar* pVal);
-	 void setInterfacePathFinder(FAStar* pVal);
-	 void setStepFinder(FAStar* pVal);
-	 void setRouteFinder(FAStar* pVal);
-	 void setBorderFinder(FAStar* pVal);
-	 void setAreaFinder(FAStar* pVal);
-	 void setPlotGroupFinder(FAStar* pVal);
+	void setDiplomacyScreen(CvDiplomacyScreen* pVal);
+	void setMPDiplomacyScreen(CMPDiplomacyScreen* pVal);
+	void setMessageQueue(CMessageQueue* pVal);
+	void setHotJoinMessageQueue(CMessageQueue* pVal);
+	void setMessageControl(CMessageControl* pVal);
+	void setSetupData(CvSetupData* pVal);
+	void setMessageCodeTranslator(CvMessageCodeTranslator* pVal);
+	void setDropMgr(CvDropMgr* pVal);
+	void setPortal(CvPortal* pVal);
+	void setStatsReport(CvStatsReporter* pVal);
+	void setPathFinder(FAStar* pVal);
+	void setInterfacePathFinder(FAStar* pVal);
+	void setStepFinder(FAStar* pVal);
+	void setRouteFinder(FAStar* pVal);
+	void setBorderFinder(FAStar* pVal);
+	void setAreaFinder(FAStar* pVal);
+	void setPlotGroupFinder(FAStar* pVal);
 
 	// So that CvEnums are moddable in the DLL
-	 int getNumDirections() const;
-	 int getNumGameOptions() const;
-	 int getNumMPOptions() const;
-	 int getNumSpecialOptions() const;
-	 int getNumGraphicOptions() const;
-	 int getNumTradeableItems() const;
-	 int getNumBasicItems() const;
-	 int getNumTradeableHeadings() const;
-	 int getNumCommandInfos() const;
-	 int getNumControlInfos() const;
-	 int getNumMissionInfos() const;
-	 int getNumPlayerOptionInfos() const;
-	 int getMaxNumSymbols() const;
-	 int getNumGraphicLevels() const;
-	 int getNumGlobeLayers() const;
+	int getNumDirections() const;
+	int getNumGameOptions() const;
+	int getNumMPOptions() const;
+	int getNumSpecialOptions() const;
+	int getNumGraphicOptions() const;
+	int getNumTradeableItems() const;
+	int getNumBasicItems() const;
+	int getNumTradeableHeadings() const;
+	int getNumCommandInfos() const;
+	int getNumControlInfos() const;
+	int getNumMissionInfos() const;
+	int getNumPlayerOptionInfos() const;
+	int getMaxNumSymbols() const;
+	int getNumGraphicLevels() const;
+	int getNumGlobeLayers() const;
 
 // BUG - BUG Info - start
 	void setIsBug(bool bIsBug);
@@ -2657,7 +2551,7 @@ public:
 		PROXY_TRACK("getNumThroneRoomInfos");
 		return gGlobals->getNumThroneRoomInfos();
 	}
-	DllExport	CvThroneRoomInfo& getThroneRoomInfo(int iIndex)
+	DllExport CvThroneRoomInfo& getThroneRoomInfo(int iIndex)
 	{
 		PROXY_TRACK("getThroneRoomInfo");
 		return gGlobals->getThroneRoomInfo(iIndex);
@@ -2668,12 +2562,7 @@ public:
 		PROXY_TRACK("getNumThroneRoomStyleInfos");
 		return gGlobals->getNumThroneRoomStyleInfos();
 	}
-	std::vector<CvThroneRoomStyleInfo*>& getThroneRoomStyleInfo()
-	{
-		PROXY_TRACK("getThroneRoomStyleInfo");
-		return gGlobals->getThroneRoomStyleInfos();
-	}
-	DllExport	CvThroneRoomStyleInfo& getThroneRoomStyleInfo(int iIndex)
+	DllExport CvThroneRoomStyleInfo& getThroneRoomStyleInfo(int iIndex)
 	{
 		PROXY_TRACK("getThroneRoomStyleInfo");
 		return gGlobals->getThroneRoomStyleInfo(iIndex);
@@ -2684,7 +2573,7 @@ public:
 		PROXY_TRACK("getNumSlideShowInfos");
 		return gGlobals->getNumSlideShowInfos();
 	}
-	DllExport	CvSlideShowInfo& getSlideShowInfo(int iIndex)
+	DllExport CvSlideShowInfo& getSlideShowInfo(int iIndex)
 	{
 		PROXY_TRACK("getSlideShowInfo");
 		return gGlobals->getSlideShowInfo(iIndex);
@@ -2695,7 +2584,7 @@ public:
 		PROXY_TRACK("getNumSlideShowRandomInfos");
 		return gGlobals->getNumSlideShowRandomInfos();
 	}
-	DllExport	CvSlideShowRandomInfo& getSlideShowRandomInfo(int iIndex)
+	DllExport CvSlideShowRandomInfo& getSlideShowRandomInfo(int iIndex)
 	{
 		PROXY_TRACK("getSlideShowRandomInfo");
 		return gGlobals->getSlideShowRandomInfo(iIndex);

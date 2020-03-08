@@ -8,18 +8,17 @@ CvDLLUtilityIFaceBase* SCvInternalGlobals::engineUtils()
 
 CvBonusInfo* SCvInternalGlobals::getBonusInfoByType(const std::string& szType)
 {
-	std::vector<CvBonusInfo*>& bonuses = cvInternalGlobals::getInstance().getBonusInfos();
-	for (std::vector<CvBonusInfo*>::iterator i = bonuses.begin(); i != bonuses.end(); ++i)
-		if ((*i)->getType() == szType) 
-			return *i;
+	for (int i = 0; i < GC.getNumBonusInfos(); ++i)
+		const CvBonusInfo& bonusInfo = GC.getBonusInfo(static_cast<BonusTypes>(i));
+		if (bonusInfo.getType() == szType)
+			return bonusInfo;
 	return NULL;
 }
 
 int SCvInternalGlobals::getBonusInfoIndexByType(const std::string& szType)
 {
-	std::vector<CvBonusInfo*>& bonuses = cvInternalGlobals::getInstance().getBonusInfos();
-	for (int i = 0; i != bonuses.size(); ++i)
-		if (bonuses[i]->getType() == szType)
+	for (int i = 0; i < GC.getNumBonusInfos(); ++i)
+		if (GC.getBonusInfo(static_cast<BonusTypes>(i)).getType() == szType)
 			return i;
 	return -1;
 }
