@@ -4625,7 +4625,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_BUILDING_PRODUCTION_MOD</Tag>
 		<English>% Faster Construction of[SPACE]</English>
-		<French>% Construction rapide de[SPACE]</French>
+		<French>% Construction plus rapide de[SPACE]</French>
 		<German>% schnellere Konstruktion von[SPACE]</German>
 		<Italian>% costruzione più veloce di[SPACE]</Italian>
 		<Spanish>% de aumento de velocidad de construcción de[SPACE]</Spanish>
@@ -4634,7 +4634,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_BUILDING_PRODUCTION_SLOW</Tag>
 		<English>% Slower Construction of[SPACE]</English>
-		<French>% Construction Lente de[SPACE]</French>
+		<French>% Construction plus lente de[SPACE]</French>
 		<German>% langsamere Konstruktion von[SPACE]</German>
 		<Italian>% costruzione più lenta di[SPACE]</Italian>
 		<Spanish>% de disminución de velocidad de construcción de[SPACE]</Spanish>

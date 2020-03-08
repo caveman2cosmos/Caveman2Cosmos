@@ -747,17 +747,17 @@ Si vous jouez avec "Civs Mineures au départ", cette option changera les règles
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_FIXED_BORDERS</Tag>
 		<English>Fixed borders</English>
-		<French>Pas de frontières fixes</French>
-		<German>Keine festen Grenzen</German>
-		<Italian>Niente confini fissi</Italian>
-		<Spanish>Sin fronteras fijables</Spanish>
-		<Polish>Brak Stałych Granic</Polish>
+		<French>Frontières fixes</French>
+		<German>Festen Grenzen</German>
+		<Italian>Confini fissi</Italian>
+		<Spanish>Fronteras fijables</Spanish>
+		<Polish>Stałych Granic</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_FIXED_BORDERS_HELP</Tag>
 		<English>Fixed border mechanics</English>
-		<French>Pas de mécanisme de frontières fixes, ni provenant des doctrines, ni d'autres origines</French>
-		<German>Es können keine festen Landesgrenzen festgelegt werden, weder durch Gesellschaftsformen noch auf anderem Weg.</German>
+		<French>Mécanisme de frontières fixes, provenant des doctrines ou d'autres origines</French>
+		<German>Es können festen Landesgrenzen festgelegt werden, durch Gesellschaftsformen oder auf anderem Weg.</German>
 		<Italian>Niente confini fissi, nè dalle forme di governo nè da altra fonte</Italian>
 		<Spanish>No se usará la mecánica de fronteras fijables, ni por principios ni por cualquier otro origen.</Spanish>
 		<Polish>Wyłącza mechanizm stałych granic.</Polish>
@@ -799,10 +799,18 @@ Si vous jouez avec "Civs Mineures au départ", cette option changera les règles
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_INQUISITIONS</Tag>
 		<English>Inquisitions</English>
+		<French>Inquisitions</French>
+		<German>Inquisitionen</German>
+		<Italian>Inquisizioni</Italian>
+		<Spanish>Inquisiciones</Spanish>
+		<Polish>Inkwizycji</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_INQUISITIONS_HELP</Tag>
 		<English>Enables Inquisitions. Inquisitors may be trained and non-state religions may be purged in order to reduce the threat of rebellion.</English>
+		<French>Active les Inquisitions. Les Inquisiteurs peuvent être recrutés et peuvent éradiquer les religions non-officielles dans un ville, pour en améliorer la stabilité.</French>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_NEGATIVE_TRAITS</Tag>
@@ -878,10 +886,20 @@ AVERTISSEMENT: cette option rend l'IA moins difficile. Le mod Revolution n'a pas
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_TECH_DIFFUSION</Tag>
 		<English>Tech Diffusion</English>
+		<French>Diffusion des Technologies</French>
+		<German>Technologieverbreitung</German>
+		<Italian>Diffusione di tecnologie</Italian>
+		<Spanish>Difusión tecnológica</Spanish>
+		<Polish>Dyfuzji Technologii</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_TECH_DIFFUSION_HELP</Tag>
 		<English>Tech Diffusion: tech knowledge will slowly diffuse to civs that are behind.</English>
+		<French>Diffusion des Techs: La Connaissance des Technologies sera lentement diffusée aux autres civilisations.</French>
+		<German>Langsame Verbreitung von technologischem Wissen an Zivilisationen, die noch nicht so weit entwickelt sind.</German>
+		<Italian>Diffusione delle tecnologie: la tecnologia non si diffonderà alle civiltà più arretrate.</Italian>
+		<Spanish>Componente TechDiffusion: el conocimiento no se difundirá lentamente hacia las civilizaciones más atrasadas.</Spanish>
+		<Polish>dyfuzję technologii: poznane technologie nie będą powoli dyfuzjowały do cywilizacji które są z tyłu.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS</Tag>

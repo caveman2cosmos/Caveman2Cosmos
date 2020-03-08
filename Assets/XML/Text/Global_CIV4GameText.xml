@@ -87,21 +87,25 @@
 	<TEXT>
 		<Tag>INTERFACE_UNIT_TAB</Tag>
 		<English>Unit Tab</English>
+		<French>Unités</French>
 		<German>Einheiten bauen</German>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_BUILDING_TAB</Tag>
 		<English>Building Tab</English>
+		<French>Bâtiments</French>
 		<German>Gebäude bauen</German>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_WONDER_TAB</Tag>
 		<English>Wonder Tab</English>
+		<French>Merveilles</French>
 		<German>Wunder bauen</German>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CLOSE_TAB</Tag>
 		<English>Close Tab</English>
+		<French>Fermer l'Onglet</French>
 		<German>Menü verlassen</German>
 	</TEXT>
 	<TEXT>
@@ -26812,11 +26816,13 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	<TEXT>
 		<Tag>TXT_KEY_CITY_SCREEN_DEMOLISH</Tag>
 		<English>Demolish</English>
+		<French>Démolir</French>
 		<German>Abreißen</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_SCREEN_CONCEPTUAL</Tag>
 		<English>Conceptual</English>
+		<French>Effets</French>
 		<German>Effekte</German>
 	</TEXT>
 </Civ4GameText>

@@ -42,7 +42,7 @@
 		<Tag>TXT_KEY_IMPROVEMENT_BEACON_CORAL</Tag>
 		<English>Beacon (Coral)</English>
 		<French>
-			<Text>Balise</Text>
+			<Text>Balise (Corail)</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -58,7 +58,7 @@
 		<Tag>TXT_KEY_IMPROVEMENT_BEACON_REEF</Tag>
 		<English>Beacon (Reef)</English>
 		<French>
-			<Text>Balise</Text>
+			<Text>Balise (Récif)</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1058,7 +1058,7 @@
 		<Tag>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_CORAL</Tag>
 		<English>Lighthouse (Coral)</English>
 		<French>
-			<Text>Phare</Text>
+			<Text>Phare (Corail)</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1075,7 +1075,7 @@
 		<Tag>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_REEF</Tag>
 		<English>Lighthouse (Reef)</English>
 		<French>
-			<Text>Phare</Text>
+			<Text>Phare (Récif)</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
