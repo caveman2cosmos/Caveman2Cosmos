@@ -1143,9 +1143,8 @@ CvMapSwitchInfo& cvInternalGlobals::getMapSwitchInfo(const MapSwitchTypes eMapSw
 void cvInternalGlobals::updateMaps()
 {
 	CvMap* pMap = NULL;
-	int i;
 	
-	for (i = 1; i < GC.getNumMapInfos(); i++)
+	for (int i = 1; i < GC.getNumMapInfos(); i++)
 	{
 		m_maps.push_back(pMap);
 	}
@@ -1173,34 +1172,9 @@ bool cvInternalGlobals::getResourceLayer() const
 /***** Parallel Maps - End *****/
 /*******************************/
 
-int cvInternalGlobals::getNumWorldInfos() const
-{
-	return (int)m_paWorldInfo.size();
-}
-
 std::vector<CvWorldInfo*>& cvInternalGlobals::getWorldInfos()
 {
 	return m_paWorldInfo;
-}
-
-CvWorldInfo& cvInternalGlobals::getWorldInfo(WorldSizeTypes e) const
-{
-	FAssertMsg(e >= 0 && e < GC.getNumWorldInfos(), "WorldInfo index out of bounds");
-	return *(m_paWorldInfo[e]);
-}
-
-CvInfoReplacements<CvWorldInfo>* cvInternalGlobals::getWorldInfoReplacements()
-{
-	return &m_WorldInfoReplacements;
-}
-
-/////////////////////////////////////////////
-// CLIMATE
-/////////////////////////////////////////////
-
-int cvInternalGlobals::getNumClimateInfos() const
-{
-	return (int)m_paClimateInfo.size();
 }
 
 std::vector<CvClimateInfo*>& cvInternalGlobals::getClimateInfos()
@@ -1208,50 +1182,14 @@ std::vector<CvClimateInfo*>& cvInternalGlobals::getClimateInfos()
 	return m_paClimateInfo;
 }
 
-CvClimateInfo& cvInternalGlobals::getClimateInfo(ClimateTypes e) const
-{
-	FAssertMsg(e >= 0 && e < GC.getNumClimateInfos(), "ClimateInfo index out of bounds");
-	return *(m_paClimateInfo[e]);
-}
-
-/////////////////////////////////////////////
-// SEALEVEL
-/////////////////////////////////////////////
-
-int cvInternalGlobals::getNumSeaLevelInfos() const
-{
-	return (int)m_paSeaLevelInfo.size();
-}
-
 std::vector<CvSeaLevelInfo*>& cvInternalGlobals::getSeaLevelInfos()
 {
 	return m_paSeaLevelInfo;
 }
 
-CvSeaLevelInfo& cvInternalGlobals::getSeaLevelInfo(SeaLevelTypes e) const
-{
-	FAssertMsg(e >= 0 && e < GC.getNumSeaLevelInfos(), "SeaLevelInfo index out of bounds");
-	return *(m_paSeaLevelInfo[e]);
-}
-
-int cvInternalGlobals::getNumHints() const
-{
-	return (int)m_paHints.size();
-}
-
 std::vector<CvInfoBase*>& cvInternalGlobals::getHints()
 {
 	return m_paHints;
-}
-
-CvInfoBase& cvInternalGlobals::getHints(int i) const
-{
-	return *(m_paHints[i]);
-}
-
-int cvInternalGlobals::getNumMainMenus() const
-{
-	return (int)m_paMainMenus.size();
 }
 
 std::vector<CvMainMenuInfo*>& cvInternalGlobals::getMainMenus()
@@ -1261,12 +1199,7 @@ std::vector<CvMainMenuInfo*>& cvInternalGlobals::getMainMenus()
 
 CvMainMenuInfo& cvInternalGlobals::getMainMenus(int i) const
 {
-	if (i >= getNumMainMenus())
-	{
-		return *(m_paMainMenus[0]);
-	}
-
-	return *(m_paMainMenus[i]);
+	return i >= getNumMainMenus() ? *(m_paMainMenus[0]) : *(m_paMainMenus[i]);
 }
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 10/30/07                            MRGENIE          */
@@ -1388,26 +1321,9 @@ std::string cvInternalGlobals::getModDir() const
 /* XML_MODULAR_ART_LOADING                 END                                                  */
 /************************************************************************************************/
 
-int cvInternalGlobals::getNumColorInfos() const
-{
-	return (int)m_paColorInfo.size();
-}
-
 std::vector<CvColorInfo*>& cvInternalGlobals::getColorInfos()
 {
 	return m_paColorInfo;
-}
-
-CvColorInfo& cvInternalGlobals::getColorInfo(ColorTypes e) const
-{
-	FAssertMsg(e >= 0 && e < GC.getNumColorInfos(), "ColorInfo index out of bounds");
-	return *(m_paColorInfo[e]);
-}
-
-
-int cvInternalGlobals::getNumPlayerColorInfos() const
-{
-	return (int)m_paPlayerColorInfo.size();
 }
 
 std::vector<CvPlayerColorInfo*>& cvInternalGlobals::getPlayerColorInfos()
@@ -1415,31 +1331,9 @@ std::vector<CvPlayerColorInfo*>& cvInternalGlobals::getPlayerColorInfos()
 	return m_paPlayerColorInfo;
 }
 
-CvPlayerColorInfo& cvInternalGlobals::getPlayerColorInfo(PlayerColorTypes e) const
-{
-	FAssertMsg(e >= 0 && e < GC.getNumPlayerColorInfos(), "PlayerColorInfo index out of bounds");
-	return *(m_paPlayerColorInfo[e]);
-}
-
-int cvInternalGlobals::getNumAdvisorInfos() const
-{
-	return (int)m_paAdvisorInfo.size();
-}
-
 std::vector<CvAdvisorInfo*>& cvInternalGlobals::getAdvisorInfos()
 {
 	return m_paAdvisorInfo;
-}
-
-CvAdvisorInfo& cvInternalGlobals::getAdvisorInfo(AdvisorTypes e) const
-{
-	FAssertMsg(e >= 0 && e < GC.getNumAdvisorInfos(), "AdvisorInfo index out of bounds");
-	return *(m_paAdvisorInfo[e]);
-}
-
-int cvInternalGlobals::getNumRouteModelInfos() const
-{
-	return (int)m_paRouteModelInfo.size();
 }
 
 std::vector<CvRouteModelInfo*>& cvInternalGlobals::getRouteModelInfos()
@@ -1447,31 +1341,9 @@ std::vector<CvRouteModelInfo*>& cvInternalGlobals::getRouteModelInfos()
 	return m_paRouteModelInfo;
 }
 
-CvRouteModelInfo& cvInternalGlobals::getRouteModelInfo(int i) const
-{
-	FAssertMsg(i >= 0 && i < GC.getNumRouteModelInfos(), "RouteModelInfo index out of bounds");
-	return *(m_paRouteModelInfo[i]);
-}
-
-int cvInternalGlobals::getNumRiverInfos() const
-{
-	return (int)m_paRiverInfo.size();
-}
-
 std::vector<CvRiverInfo*>& cvInternalGlobals::getRiverInfos()
 {
 	return m_paRiverInfo;
-}
-
-CvRiverInfo& cvInternalGlobals::getRiverInfo(RiverTypes e) const
-{
-	FAssertMsg(e >= 0 && e < GC.getNumRiverInfos(), "RiverInfo index out of bounds");
-	return *(m_paRiverInfo[e]);
-}
-
-int cvInternalGlobals::getNumRiverModelInfos() const
-{
-	return (int)m_paRiverModelInfo.size();
 }
 
 std::vector<CvRiverModelInfo*>& cvInternalGlobals::getRiverModelInfos()
@@ -1479,31 +1351,9 @@ std::vector<CvRiverModelInfo*>& cvInternalGlobals::getRiverModelInfos()
 	return m_paRiverModelInfo;
 }
 
-CvRiverModelInfo& cvInternalGlobals::getRiverModelInfo(int i) const
-{
-	FAssertMsg(i >= 0 && i < GC.getNumRiverModelInfos(), "RiverModelInfo index out of bounds");
-	return *(m_paRiverModelInfo[i]);
-}
-
-int cvInternalGlobals::getNumWaterPlaneInfos() const
-{
-	return (int)m_paWaterPlaneInfo.size();
-}
-
 std::vector<CvWaterPlaneInfo*>& cvInternalGlobals::getWaterPlaneInfos()		// For Moose - CvDecal and CvWater
 {
 	return m_paWaterPlaneInfo;
-}
-
-CvWaterPlaneInfo& cvInternalGlobals::getWaterPlaneInfo(int i) const
-{
-	FAssertMsg(i >= 0 && i < GC.getNumWaterPlaneInfos(), "WaterPlaneInfo index out of bounds");
-	return *(m_paWaterPlaneInfo[i]);
-}
-
-int cvInternalGlobals::getNumTerrainPlaneInfos() const
-{
-	return (int)m_paTerrainPlaneInfo.size();
 }
 
 std::vector<CvTerrainPlaneInfo*>& cvInternalGlobals::getTerrainPlaneInfos()
@@ -1511,31 +1361,9 @@ std::vector<CvTerrainPlaneInfo*>& cvInternalGlobals::getTerrainPlaneInfos()
 	return m_paTerrainPlaneInfo;
 }
 
-CvTerrainPlaneInfo& cvInternalGlobals::getTerrainPlaneInfo(int i) const
-{
-	FAssertMsg(i >= 0 && i < GC.getNumTerrainPlaneInfos(), "TerrainPlaneInfo index out of bounds");
-	return *(m_paTerrainPlaneInfo[i]);
-}
-
-int cvInternalGlobals::getNumCameraOverlayInfos() const
-{
-	return (int)m_paCameraOverlayInfo.size();
-}
-
 std::vector<CvCameraOverlayInfo*>& cvInternalGlobals::getCameraOverlayInfos()
 {
 	return m_paCameraOverlayInfo;
-}
-
-CvCameraOverlayInfo& cvInternalGlobals::getCameraOverlayInfo(int i) const
-{
-	FAssertMsg(i >= 0 && i < GC.getNumCameraOverlayInfos(), "CameraOverlayInfo index out of bounds");
-	return *(m_paCameraOverlayInfo[i]);
-}
-
-int cvInternalGlobals::getNumAnimationPathInfos() const
-{
-	return (int)m_paAnimationPathInfo.size();
 }
 
 std::vector<CvAnimationPathInfo*>& cvInternalGlobals::getAnimationPathInfos()
@@ -1543,31 +1371,9 @@ std::vector<CvAnimationPathInfo*>& cvInternalGlobals::getAnimationPathInfos()
 	return m_paAnimationPathInfo;
 }
 
-CvAnimationPathInfo& cvInternalGlobals::getAnimationPathInfo(AnimationPathTypes e) const
-{
-	FAssertMsg(e >= 0 && e < GC.getNumAnimationPathInfos(), "AnimationPathInfo index out of bounds");
-	return *(m_paAnimationPathInfo[e]);
-}
-
-int cvInternalGlobals::getNumAnimationCategoryInfos() const
-{
-	return (int)m_paAnimationCategoryInfo.size();
-}
-
 std::vector<CvAnimationCategoryInfo*>& cvInternalGlobals::getAnimationCategoryInfos()
 {
 	return m_paAnimationCategoryInfo;
-}
-
-CvAnimationCategoryInfo& cvInternalGlobals::getAnimationCategoryInfo(AnimationCategoryTypes e) const
-{
-	FAssertMsg(e >= 0 && e < GC.getNumAnimationCategoryInfos(), "AnimationCategoryInfo index out of bounds");
-	return *(m_paAnimationCategoryInfo[e]);
-}
-
-int cvInternalGlobals::getNumEntityEventInfos() const
-{
-	return (int)m_paEntityEventInfo.size();
 }
 
 std::vector<CvEntityEventInfo*>& cvInternalGlobals::getEntityEventInfos()
@@ -1575,32 +1381,9 @@ std::vector<CvEntityEventInfo*>& cvInternalGlobals::getEntityEventInfos()
 	return m_paEntityEventInfo;
 }
 
-CvEntityEventInfo& cvInternalGlobals::getEntityEventInfo(EntityEventTypes e) const
-{
-	FAssertMsg(e >= 0 && e < GC.getNumEntityEventInfos(), "EntityEventInfo index out of bounds");
-	return *(m_paEntityEventInfo[e]);
-}
-
-int cvInternalGlobals::getNumEffectInfos() const
-{
-	return (int)m_paEffectInfo.size();
-}
-
 std::vector<CvEffectInfo*>& cvInternalGlobals::getEffectInfos()
 {
 	return m_paEffectInfo;
-}
-
-CvEffectInfo& cvInternalGlobals::getEffectInfo(int i) const
-{
-	FAssertMsg(i >= 0 && i < GC.getNumEffectInfos(), "EffectInfo index out of bounds");
-	return *(m_paEffectInfo[i]);
-}
-
-
-int cvInternalGlobals::getNumAttachableInfos() const
-{
-	return (int)m_paAttachableInfo.size();
 }
 
 std::vector<CvAttachableInfo*>& cvInternalGlobals::getAttachableInfos()
@@ -1608,30 +1391,9 @@ std::vector<CvAttachableInfo*>& cvInternalGlobals::getAttachableInfos()
 	return m_paAttachableInfo;
 }
 
-CvAttachableInfo& cvInternalGlobals::getAttachableInfo(int i) const
-{
-	FAssertMsg(i >= 0 && i < GC.getNumAttachableInfos(), "AttachableInfo index out of bounds");
-	return *(m_paAttachableInfo[i]);
-}
-
-int cvInternalGlobals::getNumCameraInfos() const
-{
-	return (int)m_paCameraInfo.size();
-}
-
 std::vector<CvCameraInfo*>& cvInternalGlobals::getCameraInfos()
 {
 	return m_paCameraInfo;
-}
-
-CvCameraInfo& cvInternalGlobals::getCameraInfo(CameraAnimationTypes eCameraAnimationNum) const
-{
-	return *(m_paCameraInfo[eCameraAnimationNum]);
-}
-
-int cvInternalGlobals::getNumUnitFormationInfos() const
-{
-	return (int)m_paUnitFormationInfo.size();
 }
 
 std::vector<CvUnitFormationInfo*>& cvInternalGlobals::getUnitFormationInfos()		// For Moose - CvUnitEntity
@@ -1639,27 +1401,9 @@ std::vector<CvUnitFormationInfo*>& cvInternalGlobals::getUnitFormationInfos()		/
 	return m_paUnitFormationInfo;
 }
 
-CvUnitFormationInfo& cvInternalGlobals::getUnitFormationInfo(int i) const
-{
-	FAssertMsg(i >= 0 && i < GC.getNumUnitFormationInfos(), "UnitFormationInfo index out of bounds");
-	return *(m_paUnitFormationInfo[i]);
-}
-
-// TEXT
-int cvInternalGlobals::getNumGameTextXML() const
-{
-	return (int)m_paGameTextXML.size();
-}
-
 std::vector<CvGameText*>& cvInternalGlobals::getGameTextXMLs()
 {
 	return m_paGameTextXML;
-}
-
-// Landscape INFOS
-int cvInternalGlobals::getNumLandscapeInfos() const
-{
-	return (int)m_paLandscapeInfo.size();
 }
 
 std::vector<CvLandscapeInfo*>& cvInternalGlobals::getLandscapeInfos()
@@ -1667,47 +1411,9 @@ std::vector<CvLandscapeInfo*>& cvInternalGlobals::getLandscapeInfos()
 	return m_paLandscapeInfo;
 }
 
-CvLandscapeInfo& cvInternalGlobals::getLandscapeInfo(int iIndex) const
-{
-	FAssertMsg(iIndex >= 0 && iIndex < GC.getNumLandscapeInfos(), "LandscapeInfo index out of bounds");
-	return *(m_paLandscapeInfo[iIndex]);
-}
-
-int cvInternalGlobals::getActiveLandscapeID() const
-{
-	return m_iActiveLandscapeID;
-}
-
-void cvInternalGlobals::setActiveLandscapeID(int iLandscapeID)
-{
-	m_iActiveLandscapeID = iLandscapeID;
-}
-
-
-int cvInternalGlobals::getNumTerrainInfos() const
-{
-	return (int)m_paTerrainInfo.size();
-}
-
 std::vector<CvTerrainInfo*>& cvInternalGlobals::getTerrainInfos()		// For Moose - XML Load Util, CvInfos, CvTerrainTypeWBPalette
 {
 	return m_paTerrainInfo;
-}
-
-CvTerrainInfo& cvInternalGlobals::getTerrainInfo(TerrainTypes eTerrainNum) const
-{
-	FAssertMsg(eTerrainNum >= 0 && eTerrainNum < GC.getNumTerrainInfos(), "TerrainInfo index out of bounds");
-	return *(m_paTerrainInfo[eTerrainNum]);
-}
-
-CvInfoReplacements<CvTerrainInfo>* cvInternalGlobals::getTerrainInfoReplacements()
-{
-	return &m_TerrainInfoReplacements;
-}
-
-int cvInternalGlobals::getNumBonusClassInfos() const
-{
-	return (int)m_paBonusClassInfo.size();
 }
 
 std::vector<CvBonusClassInfo*>& cvInternalGlobals::getBonusClassInfos()	// For Moose - XML Load Util, CvInfos
@@ -1715,42 +1421,9 @@ std::vector<CvBonusClassInfo*>& cvInternalGlobals::getBonusClassInfos()	// For M
 	return m_paBonusClassInfo;
 }
 
-CvBonusClassInfo& cvInternalGlobals::getBonusClassInfo(BonusClassTypes eBonusNum) const
-{
-	FAssertMsg(eBonusNum >= 0 && eBonusNum < GC.getNumBonusClassInfos(), "BonusClassInfo index out of bounds");
-	return *(m_paBonusClassInfo[eBonusNum]);
-}
-
-CvInfoReplacements<CvBonusClassInfo>* cvInternalGlobals::getBonusClassInfoReplacements()
-{
-	return &m_BonusClassInfoReplacements;
-}
-
-
-int cvInternalGlobals::getNumBonusInfos() const
-{
-	return (int)m_paBonusInfo.size();
-}
-
 std::vector<CvBonusInfo*>& cvInternalGlobals::getBonusInfos()	// For Moose - XML Load Util, CvInfos
 {
 	return m_paBonusInfo;
-}
-
-CvBonusInfo& cvInternalGlobals::getBonusInfo(BonusTypes eBonusNum) const
-{
-	FAssertMsg(eBonusNum >= 0 && eBonusNum < GC.getNumBonusInfos(), "BonusInfo index out of bounds");
-	return *(m_paBonusInfo[eBonusNum]);
-}
-
-CvInfoReplacements<CvBonusInfo>* cvInternalGlobals::getBonusInfoReplacements()
-{
-	return &m_BonusInfoReplacements;
-}
-
-int cvInternalGlobals::getNumFeatureInfos() const
-{
-	return (int)m_paFeatureInfo.size();
 }
 
 std::vector<CvFeatureInfo*>& cvInternalGlobals::getFeatureInfos()	// For Moose - XML Load Util, CvInfos
@@ -1758,52 +1431,9 @@ std::vector<CvFeatureInfo*>& cvInternalGlobals::getFeatureInfos()	// For Moose -
 	return m_paFeatureInfo;
 }
 
-CvFeatureInfo& cvInternalGlobals::getFeatureInfo(FeatureTypes eFeatureNum) const
-{
-	FAssertMsg(eFeatureNum >= 0 && eFeatureNum < GC.getNumFeatureInfos(), "FeatureInfo index out of bounds");
-	return *(m_paFeatureInfo[eFeatureNum]);
-}
-
-CvInfoReplacements<CvFeatureInfo>* cvInternalGlobals::getFeatureInfoReplacements()
-{
-	return &m_FeatureInfoReplacements;
-}
-
-int& cvInternalGlobals::getNumPlayableCivilizationInfos()
-{
-	return m_iNumPlayableCivilizationInfos;
-}
-
-int& cvInternalGlobals::getNumAIPlayableCivilizationInfos()
-{
-	return m_iNumAIPlayableCivilizationInfos;
-}
-
-int cvInternalGlobals::getNumCivilizationInfos() const
-{
-	return (int)m_paCivilizationInfo.size();
-}
-
 std::vector<CvCivilizationInfo*>& cvInternalGlobals::getCivilizationInfos()	// For Moose - XML Load Util, CvInfos
 {
 	return m_paCivilizationInfo;
-}
-
-CvCivilizationInfo& cvInternalGlobals::getCivilizationInfo(CivilizationTypes eCivilizationNum) const
-{
-	FAssertMsg(eCivilizationNum >= 0 && eCivilizationNum < GC.getNumCivilizationInfos(), "CivilizationInfo index out of bounds");
-	return *(m_paCivilizationInfo[eCivilizationNum]);
-}
-
-CvInfoReplacements<CvCivilizationInfo>* cvInternalGlobals::getCivilizationInfoReplacements()
-{
-	return &m_CivilizationInfoReplacements;
-}
-
-
-int cvInternalGlobals::getNumLeaderHeadInfos() const
-{
-	return (int)m_paLeaderHeadInfo.size();
 }
 
 std::vector<CvLeaderHeadInfo*>& cvInternalGlobals::getLeaderHeadInfos()	// For Moose - XML Load Util, CvInfos
@@ -1811,43 +1441,9 @@ std::vector<CvLeaderHeadInfo*>& cvInternalGlobals::getLeaderHeadInfos()	// For M
 	return m_paLeaderHeadInfo;
 }
 
-CvLeaderHeadInfo& cvInternalGlobals::getLeaderHeadInfo(LeaderHeadTypes eLeaderHeadNum) const
-{
-	FAssertMsg(eLeaderHeadNum >= 0 && eLeaderHeadNum < GC.getNumLeaderHeadInfos(), "LeaderHeadInfo index out of bounds");
-	return *(m_paLeaderHeadInfo[eLeaderHeadNum]);
-}
-
-CvInfoReplacements<CvLeaderHeadInfo>* cvInternalGlobals::getLeaderHeadInfoReplacements()
-{
-	return &m_LeaderHeadInfoReplacements;
-}
-
-
-int cvInternalGlobals::getNumTraitInfos() const
-{
-	return (int)m_paTraitInfo.size();
-}
-
 std::vector<CvTraitInfo*>& cvInternalGlobals::getTraitInfos()	// For Moose - XML Load Util, CvInfos
 {
 	return m_paTraitInfo;
-}
-
-CvTraitInfo& cvInternalGlobals::getTraitInfo(TraitTypes eTraitNum) const
-{
-	FAssertMsg(eTraitNum >= 0 && eTraitNum < GC.getNumTraitInfos(), "TraitInfo index out of bounds");
-	return *(m_paTraitInfo[eTraitNum]);
-}
-
-CvInfoReplacements<CvTraitInfo>* cvInternalGlobals::getTraitInfoReplacements()
-{
-	return &m_TraitInfoReplacements;
-}
-
-
-int cvInternalGlobals::getNumCursorInfos() const
-{
-	return (int)m_paCursorInfo.size();
 }
 
 std::vector<CvCursorInfo*>& cvInternalGlobals::getCursorInfos()	// For Moose - XML Load Util, CvInfos
@@ -1855,31 +1451,9 @@ std::vector<CvCursorInfo*>& cvInternalGlobals::getCursorInfos()	// For Moose - X
 	return m_paCursorInfo;
 }
 
-CvCursorInfo& cvInternalGlobals::getCursorInfo(CursorTypes eCursorNum) const
-{
-	FAssertMsg(eCursorNum >= 0 && eCursorNum < GC.getNumCursorInfos(), "CursorInfo index out of bounds");
-	return *(m_paCursorInfo[eCursorNum]);
-}
-
-int cvInternalGlobals::getNumThroneRoomCameras() const
-{
-	return (int)m_paThroneRoomCamera.size();
-}
-
 std::vector<CvThroneRoomCamera*>& cvInternalGlobals::getThroneRoomCameras()	// For Moose - XML Load Util, CvInfos
 {
 	return m_paThroneRoomCamera;
-}
-
-CvThroneRoomCamera& cvInternalGlobals::getThroneRoomCamera(int iIndex) const
-{
-	FAssertMsg(iIndex >= 0 && iIndex < GC.getNumThroneRoomCameras(), "ThroneRoomCamera index out of bounds");
-	return *(m_paThroneRoomCamera[iIndex]);
-}
-
-int cvInternalGlobals::getNumThroneRoomInfos() const
-{
-	return (int)m_paThroneRoomInfo.size();
 }
 
 std::vector<CvThroneRoomInfo*>& cvInternalGlobals::getThroneRoomInfos()	// For Moose - XML Load Util, CvInfos
@@ -1887,31 +1461,9 @@ std::vector<CvThroneRoomInfo*>& cvInternalGlobals::getThroneRoomInfos()	// For M
 	return m_paThroneRoomInfo;
 }
 
-CvThroneRoomInfo& cvInternalGlobals::getThroneRoomInfo(int iIndex) const
-{
-	FAssertMsg(iIndex >= 0 && iIndex < GC.getNumThroneRoomInfos(), "ThroneRoomInfo index out of bounds");
-	return *(m_paThroneRoomInfo[iIndex]);
-}
-
-int cvInternalGlobals::getNumThroneRoomStyleInfos() const
-{
-	return (int)m_paThroneRoomStyleInfo.size();
-}
-
 std::vector<CvThroneRoomStyleInfo*>& cvInternalGlobals::getThroneRoomStyleInfos()	// For Moose - XML Load Util, CvInfos
 {
 	return m_paThroneRoomStyleInfo;
-}
-
-CvThroneRoomStyleInfo& cvInternalGlobals::getThroneRoomStyleInfo(int iIndex) const
-{
-	FAssertMsg(iIndex >= 0 && iIndex < GC.getNumThroneRoomStyleInfos(), "ThroneRoomStyleInfo index out of bounds");
-	return *(m_paThroneRoomStyleInfo[iIndex]);
-}
-
-int cvInternalGlobals::getNumSlideShowInfos() const
-{
-	return (int)m_paSlideShowInfo.size();
 }
 
 std::vector<CvSlideShowInfo*>& cvInternalGlobals::getSlideShowInfos()	// For Moose - XML Load Util, CvInfos
@@ -1919,31 +1471,9 @@ std::vector<CvSlideShowInfo*>& cvInternalGlobals::getSlideShowInfos()	// For Moo
 	return m_paSlideShowInfo;
 }
 
-CvSlideShowInfo& cvInternalGlobals::getSlideShowInfo(int iIndex) const
-{
-	FAssertMsg(iIndex >= 0 && iIndex < GC.getNumSlideShowInfos(), "SlideShowInfo index out of bounds");
-	return *(m_paSlideShowInfo[iIndex]);
-}
-
-int cvInternalGlobals::getNumSlideShowRandomInfos() const
-{
-	return (int)m_paSlideShowRandomInfo.size();
-}
-
 std::vector<CvSlideShowRandomInfo*>& cvInternalGlobals::getSlideShowRandomInfos()	// For Moose - XML Load Util, CvInfos
 {
 	return m_paSlideShowRandomInfo;
-}
-
-CvSlideShowRandomInfo& cvInternalGlobals::getSlideShowRandomInfo(int iIndex) const
-{
-	FAssertMsg(iIndex >= 0 && iIndex < GC.getNumSlideShowRandomInfos(), "SlideShowRandomInfo index out of bounds");
-	return *(m_paSlideShowRandomInfo[iIndex]);
-}
-
-int cvInternalGlobals::getNumWorldPickerInfos() const
-{
-	return (int)m_paWorldPickerInfo.size();
 }
 
 std::vector<CvWorldPickerInfo*>& cvInternalGlobals::getWorldPickerInfos()	// For Moose - XML Load Util, CvInfos
@@ -1951,31 +1481,9 @@ std::vector<CvWorldPickerInfo*>& cvInternalGlobals::getWorldPickerInfos()	// For
 	return m_paWorldPickerInfo;
 }
 
-CvWorldPickerInfo& cvInternalGlobals::getWorldPickerInfo(int iIndex) const
-{
-	FAssertMsg(iIndex >= 0 && iIndex < GC.getNumWorldPickerInfos(), "WorldPickerInfo index out of bounds");
-	return *(m_paWorldPickerInfo[iIndex]);
-}
-
-int cvInternalGlobals::getNumSpaceShipInfos() const
-{
-	return (int)m_paSpaceShipInfo.size();
-}
-
 std::vector<CvSpaceShipInfo*>& cvInternalGlobals::getSpaceShipInfos()	// For Moose - XML Load Util, CvInfos
 {
 	return m_paSpaceShipInfo;
-}
-
-CvSpaceShipInfo& cvInternalGlobals::getSpaceShipInfo(int iIndex) const
-{
-	FAssertMsg(iIndex >= 0 && iIndex < GC.getNumSpaceShipInfos(), "SpaceShipInfo index out of bounds");
-	return *(m_paSpaceShipInfo[iIndex]);
-}
-
-int cvInternalGlobals::getNumUnitInfos() const
-{
-	return (int)m_paUnitInfo.size();
 }
 
 std::vector<CvUnitInfo*>& cvInternalGlobals::getUnitInfos()	// For Moose - XML Load Util, CvInfos
@@ -1983,41 +1491,9 @@ std::vector<CvUnitInfo*>& cvInternalGlobals::getUnitInfos()	// For Moose - XML L
 	return m_paUnitInfo;
 }
 
-CvUnitInfo& cvInternalGlobals::getUnitInfo(UnitTypes eUnitNum) const
-{
-	FAssertMsg(eUnitNum >= 0 && eUnitNum < GC.getNumUnitInfos(), "UnitInfo index out of bounds");
-	return *(m_paUnitInfo[eUnitNum]);
-}
-
-CvInfoReplacements<CvUnitInfo>* cvInternalGlobals::getUnitInfoReplacements()
-{
-	return &m_UnitInfoReplacements;
-}
-
-int cvInternalGlobals::getNumSpawnInfos() const
-{
-	return (int)m_paSpawnInfo.size();
-}
-
 std::vector<CvSpawnInfo*>& cvInternalGlobals::getSpawnInfos()	// For Moose - XML Load Util, CvInfos
 {
 	return m_paSpawnInfo;
-}
-
-CvSpawnInfo& cvInternalGlobals::getSpawnInfo(SpawnTypes eSpawnNum) const
-{
-	FAssertMsg(eSpawnNum >= 0 && eSpawnNum < GC.getNumSpawnInfos(), "SpawnInfo index out of bounds");
-	return *(m_paSpawnInfo[eSpawnNum]);
-}
-
-CvInfoReplacements<CvSpawnInfo>* cvInternalGlobals::getSpawnInfoReplacements()
-{
-	return &m_SpawnInfoReplacements;
-}
-
-int cvInternalGlobals::getNumSpecialUnitInfos() const
-{
-	return (int)m_paSpecialUnitInfo.size();
 }
 
 std::vector<CvSpecialUnitInfo*>& cvInternalGlobals::getSpecialUnitInfos()	// For Moose - XML Load Util, CvInfos
@@ -2025,33 +1501,9 @@ std::vector<CvSpecialUnitInfo*>& cvInternalGlobals::getSpecialUnitInfos()	// For
 	return m_paSpecialUnitInfo;
 }
 
-CvSpecialUnitInfo& cvInternalGlobals::getSpecialUnitInfo(SpecialUnitTypes eSpecialUnitNum) const
-{
-	FAssertMsg(eSpecialUnitNum >= 0 && eSpecialUnitNum < GC.getNumSpecialUnitInfos(), "SpecialUnitInfo index out of bounds");
-	return *(m_paSpecialUnitInfo[eSpecialUnitNum]);
-}
-
-
-int cvInternalGlobals::getNumConceptInfos() const
-{
-	return (int)m_paConceptInfo.size();
-}
-
 std::vector<CvInfoBase*>& cvInternalGlobals::getConceptInfos()	// For Moose - XML Load Util, CvInfos
 {
 	return m_paConceptInfo;
-}
-
-CvInfoBase& cvInternalGlobals::getConceptInfo(ConceptTypes e) const
-{
-	FAssertMsg(e >= 0 && e < GC.getNumConceptInfos(), "ConceptInfo index out of bounds");
-	return *(m_paConceptInfo[e]);
-}
-
-
-int cvInternalGlobals::getNumNewConceptInfos() const
-{
-	return (int)m_paNewConceptInfo.size();
 }
 
 std::vector<CvInfoBase*>& cvInternalGlobals::getNewConceptInfos()	// For Moose - XML Load Util, CvInfos
@@ -2059,33 +1511,9 @@ std::vector<CvInfoBase*>& cvInternalGlobals::getNewConceptInfos()	// For Moose -
 	return m_paNewConceptInfo;
 }
 
-CvInfoBase& cvInternalGlobals::getNewConceptInfo(NewConceptTypes e) const
-{
-	FAssertMsg(e >= 0 && e < GC.getNumNewConceptInfos(), "NewConceptInfo index out of bounds");
-	return *(m_paNewConceptInfo[e]);
-}
-
-
-int cvInternalGlobals::getNumCityTabInfos() const
-{
-	return (int)m_paCityTabInfo.size();
-}
-
 std::vector<CvInfoBase*>& cvInternalGlobals::getCityTabInfos()	// For Moose - XML Load Util, CvInfos
 {
 	return m_paCityTabInfo;
-}
-
-CvInfoBase& cvInternalGlobals::getCityTabInfo(CityTabTypes e) const
-{
-	FAssertMsg(e >= 0 && e < GC.getNumCityTabInfos(), "CityTabInfo index out of bounds");
-	return *(m_paCityTabInfo[e]);
-}
-
-
-int cvInternalGlobals::getNumCalendarInfos() const
-{
-	return (int)m_paCalendarInfo.size();
 }
 
 std::vector<CvInfoBase*>& cvInternalGlobals::getCalendarInfos()
@@ -2093,33 +1521,9 @@ std::vector<CvInfoBase*>& cvInternalGlobals::getCalendarInfos()
 	return m_paCalendarInfo;
 }
 
-CvInfoBase& cvInternalGlobals::getCalendarInfo(CalendarTypes e) const
-{
-	FAssertMsg(e >= 0 && e < GC.getNumCalendarInfos(), "CalendarInfo index out of bounds");
-	return *(m_paCalendarInfo[e]);
-}
-
-
-int cvInternalGlobals::getNumSeasonInfos() const
-{
-	return (int)m_paSeasonInfo.size();
-}
-
 std::vector<CvInfoBase*>& cvInternalGlobals::getSeasonInfos()	// For Moose - XML Load Util, CvInfos
 {
 	return m_paSeasonInfo;
-}
-
-CvInfoBase& cvInternalGlobals::getSeasonInfo(SeasonTypes e) const
-{
-	FAssertMsg(e >= 0 && e < GC.getNumSeasonInfos(), "SeasonInfo index out of bounds");
-	return *(m_paSeasonInfo[e]);
-}
-
-
-int cvInternalGlobals::getNumMonthInfos() const
-{
-	return (int)m_paMonthInfo.size();
 }
 
 std::vector<CvInfoBase*>& cvInternalGlobals::getMonthInfos()	// For Moose - XML Load Util, CvInfos
@@ -2127,33 +1531,9 @@ std::vector<CvInfoBase*>& cvInternalGlobals::getMonthInfos()	// For Moose - XML 
 	return m_paMonthInfo;
 }
 
-CvInfoBase& cvInternalGlobals::getMonthInfo(MonthTypes e) const
-{
-	FAssertMsg(e >= 0 && e < GC.getNumMonthInfos(), "MonthInfo index out of bounds");
-	return *(m_paMonthInfo[e]);
-}
-
-
-int cvInternalGlobals::getNumDenialInfos() const
-{
-	return (int)m_paDenialInfo.size();
-}
-
 std::vector<CvInfoBase*>& cvInternalGlobals::getDenialInfos()	// For Moose - XML Load Util, CvInfos
 {
 	return m_paDenialInfo;
-}
-
-CvInfoBase& cvInternalGlobals::getDenialInfo(DenialTypes e) const
-{
-	FAssertMsg(e >= 0 && e < GC.getNumDenialInfos(), "DenialInfo index out of bounds");
-	return *(m_paDenialInfo[e]);
-}
-
-
-int cvInternalGlobals::getNumInvisibleInfos() const
-{
-	return (int)m_paInvisibleInfo.size();
 }
 
 std::vector<CvInvisibleInfo*>& cvInternalGlobals::getInvisibleInfos()	// For Moose - XML Load Util, CvInfos
@@ -2161,33 +1541,9 @@ std::vector<CvInvisibleInfo*>& cvInternalGlobals::getInvisibleInfos()	// For Moo
 	return m_paInvisibleInfo;
 }
 
-CvInvisibleInfo& cvInternalGlobals::getInvisibleInfo(InvisibleTypes e) const
-{
-	FAssertMsg(e >= 0 && e < GC.getNumInvisibleInfos(), "InvisibleInfo index out of bounds");
-	return *(m_paInvisibleInfo[e]);
-}
-
-
-int cvInternalGlobals::getNumVoteSourceInfos() const
-{
-	return (int)m_paVoteSourceInfo.size();
-}
-
 std::vector<CvVoteSourceInfo*>& cvInternalGlobals::getVoteSourceInfos()	// For Moose - XML Load Util, CvInfos
 {
 	return m_paVoteSourceInfo;
-}
-
-CvVoteSourceInfo& cvInternalGlobals::getVoteSourceInfo(VoteSourceTypes e) const
-{
-	FAssertMsg(e >= 0 && e < GC.getNumVoteSourceInfos(), "VoteSourceInfo index out of bounds");
-	return *(m_paVoteSourceInfo[e]);
-}
-
-
-int cvInternalGlobals::getNumUnitCombatInfos() const
-{
-	return (int)m_paUnitCombatInfo.size();
 }
 
 std::vector<CvUnitCombatInfo*>& cvInternalGlobals::getUnitCombatInfos()
@@ -2195,28 +1551,9 @@ std::vector<CvUnitCombatInfo*>& cvInternalGlobals::getUnitCombatInfos()
 	return m_paUnitCombatInfo;
 }
 
-CvUnitCombatInfo& cvInternalGlobals::getUnitCombatInfo(UnitCombatTypes e) const
-{
-	FAssertMsg(e >= 0 && e < GC.getNumUnitCombatInfos(), "UnitCombatInfo index out of bounds");
-	return *(m_paUnitCombatInfo[e]);
-}
-
-
 std::vector<CvInfoBase*>& cvInternalGlobals::getDomainInfos()
 {
 	return m_paDomainInfo;
-}
-
-CvInfoBase& cvInternalGlobals::getDomainInfo(DomainTypes e) const
-{
-	FAssertMsg(e >= 0 && e < NUM_DOMAIN_TYPES, "DomainInfo index out of bounds");
-	return *(m_paDomainInfo[e]);
-}
-
-//TB Promotion Line Mod begin
-int cvInternalGlobals::getNumPromotionLineInfos() const
-{
-	return (int)m_paPromotionLineInfo.size();
 }
 
 std::vector<CvPromotionLineInfo*>& cvInternalGlobals::getPromotionLineInfos()
@@ -2224,32 +1561,9 @@ std::vector<CvPromotionLineInfo*>& cvInternalGlobals::getPromotionLineInfos()
 	return m_paPromotionLineInfo;
 }
 
-CvPromotionLineInfo& cvInternalGlobals::getPromotionLineInfo(PromotionLineTypes e) const
-{
-	FAssertMsg(e >= 0 && e < GC.getNumPromotionLineInfos(), "PromotionLineInfo index out of bounds");
-	return *(m_paPromotionLineInfo[e]);
-}
-//TB Promotion Line Mod end
-
-int cvInternalGlobals::getNumMapCategoryInfos() const
-{
-	return (int)m_paMapCategoryInfo.size();
-}
-
 std::vector<CvMapCategoryInfo*>& cvInternalGlobals::getMapCategoryInfos()
 {
 	return m_paMapCategoryInfo;
-}
-
-CvMapCategoryInfo& cvInternalGlobals::getMapCategoryInfo(MapCategoryTypes e) const
-{
-	FAssertMsg(e >= 0 && e < GC.getNumMapCategoryInfos(), "MapCategoryInfo index out of bounds");
-	return *(m_paMapCategoryInfo[e]);
-}
-
-int cvInternalGlobals::getNumIdeaClassInfos() const
-{
-	return (int)m_paIdeaClassInfo.size();
 }
 
 std::vector<CvIdeaClassInfo*>& cvInternalGlobals::getIdeaClassInfos()
@@ -2257,27 +1571,11 @@ std::vector<CvIdeaClassInfo*>& cvInternalGlobals::getIdeaClassInfos()
 	return m_paIdeaClassInfo;
 }
 
-CvIdeaClassInfo& cvInternalGlobals::getIdeaClassInfo(IdeaClassTypes e) const
-{
-	FAssertMsg(e >= 0 && e < GC.getNumIdeaClassInfos(), "IdeaClassInfo index out of bounds");
-	return *(m_paIdeaClassInfo[e]);
-}
-
-int cvInternalGlobals::getNumIdeaInfos() const
-{
-	return (int)m_paIdeaInfo.size();
-}
-
 std::vector<CvIdeaInfo*>& cvInternalGlobals::getIdeaInfos()
 {
 	return m_paIdeaInfo;
 }
 
-CvIdeaInfo& cvInternalGlobals::getIdeaInfo(IdeaTypes e) const
-{
-	FAssertMsg(e >= 0 && e < GC.getNumIdeaInfos(), "IdeaInfo index out of bounds");
-	return *(m_paIdeaInfo[e]);
-}
 //int cvInternalGlobals::getNumTraitOptionEditsInfos() const
 //{
 //	return (int)m_paTraitOptionEditsInfo.size();
@@ -2298,12 +1596,6 @@ CvIdeaInfo& cvInternalGlobals::getIdeaInfo(IdeaTypes e) const
 std::vector<CvInfoBase*>& cvInternalGlobals::getUnitAIInfos()
 {
 	return m_paUnitAIInfos;
-}
-
-CvInfoBase& cvInternalGlobals::getUnitAIInfo(UnitAITypes eUnitAINum) const
-{
-	FAssertMsg(eUnitAINum >= 0 && eUnitAINum < NUM_UNITAI_TYPES, "UnitAIInfo index out of bounds");
-	return *(m_paUnitAIInfos[eUnitAINum]);
 }
 
 //	Koshling - added internal registration of supported UnitAI types, not reliant
@@ -2662,30 +1954,9 @@ std::vector<CvInfoBase*>& cvInternalGlobals::getAttitudeInfos()
 	return m_paAttitudeInfos;
 }
 
-CvInfoBase& cvInternalGlobals::getAttitudeInfo(AttitudeTypes eAttitudeNum) const
-{
-	FAssert(eAttitudeNum >= 0);
-	FAssert(eAttitudeNum < NUM_ATTITUDE_TYPES);
-	return *(m_paAttitudeInfos[eAttitudeNum]);
-}
-
-
 std::vector<CvInfoBase*>& cvInternalGlobals::getMemoryInfos()
 {
 	return m_paMemoryInfos;
-}
-
-CvInfoBase& cvInternalGlobals::getMemoryInfo(MemoryTypes eMemoryNum) const
-{
-	FAssert(eMemoryNum >= 0);
-	FAssert(eMemoryNum < NUM_MEMORY_TYPES);
-	return *(m_paMemoryInfos[eMemoryNum]);
-}
-
-
-int cvInternalGlobals::getNumGameOptionInfos() const
-{
-	return (int)m_paGameOptionInfos.size();
 }
 
 std::vector<CvGameOptionInfo*>& cvInternalGlobals::getGameOptionInfos()
@@ -2693,33 +1964,9 @@ std::vector<CvGameOptionInfo*>& cvInternalGlobals::getGameOptionInfos()
 	return m_paGameOptionInfos;
 }
 
-CvGameOptionInfo& cvInternalGlobals::getGameOptionInfo(GameOptionTypes eGameOptionNum) const
-{
-	FAssert(eGameOptionNum >= 0);
-	FAssert(eGameOptionNum < GC.getNumGameOptionInfos());
-	return *(m_paGameOptionInfos[eGameOptionNum]);
-}
-
-int cvInternalGlobals::getNumMPOptionInfos() const
-{
-	return (int)m_paMPOptionInfos.size();
-}
-
 std::vector<CvMPOptionInfo*>& cvInternalGlobals::getMPOptionInfos()
 {
 	 return m_paMPOptionInfos;
-}
-
-CvMPOptionInfo& cvInternalGlobals::getMPOptionInfo(MultiplayerOptionTypes eMPOptionNum) const
-{
-	FAssert(eMPOptionNum >= 0);
-	FAssert(eMPOptionNum < GC.getNumMPOptionInfos());
-	return *(m_paMPOptionInfos[eMPOptionNum]);
-}
-
-int cvInternalGlobals::getNumForceControlInfos() const
-{
-	return (int)m_paForceControlInfos.size();
 }
 
 std::vector<CvForceControlInfo*>& cvInternalGlobals::getForceControlInfos()
@@ -2727,23 +1974,9 @@ std::vector<CvForceControlInfo*>& cvInternalGlobals::getForceControlInfos()
 	return m_paForceControlInfos;
 }
 
-CvForceControlInfo& cvInternalGlobals::getForceControlInfo(ForceControlTypes eForceControlNum) const
-{
-	FAssert(eForceControlNum >= 0);
-	FAssert(eForceControlNum < GC.getNumForceControlInfos());
-	return *(m_paForceControlInfos[eForceControlNum]);
-}
-
 std::vector<CvPlayerOptionInfo*>& cvInternalGlobals::getPlayerOptionInfos()
 {
 	return m_paPlayerOptionInfos;
-}
-
-CvPlayerOptionInfo& cvInternalGlobals::getPlayerOptionInfo(PlayerOptionTypes ePlayerOptionNum) const
-{
-	FAssert(ePlayerOptionNum >= 0);
-	FAssert(ePlayerOptionNum < NUM_PLAYEROPTION_TYPES);
-	return *(m_paPlayerOptionInfos[ePlayerOptionNum]);
 }
 
 std::vector<CvGraphicOptionInfo*>& cvInternalGlobals::getGraphicOptionInfos()
@@ -2751,42 +1984,14 @@ std::vector<CvGraphicOptionInfo*>& cvInternalGlobals::getGraphicOptionInfos()
 	return m_paGraphicOptionInfos;
 }
 
-CvGraphicOptionInfo& cvInternalGlobals::getGraphicOptionInfo(GraphicOptionTypes eGraphicOptionNum) const
-{
-	FAssert(eGraphicOptionNum >= 0);
-	FAssert(eGraphicOptionNum < NUM_GRAPHICOPTION_TYPES);
-	return *(m_paGraphicOptionInfos[eGraphicOptionNum]);
-}
-
-
 std::vector<CvYieldInfo*>& cvInternalGlobals::getYieldInfos()	// For Moose - XML Load Util
 {
 	return m_paYieldInfo;
 }
 
-CvYieldInfo& cvInternalGlobals::getYieldInfo(YieldTypes eYieldNum) const
-{
-	FAssert(eYieldNum > -1);
-	FAssert(eYieldNum < NUM_YIELD_TYPES);
-	return *(m_paYieldInfo[eYieldNum]);
-}
-
-
 std::vector<CvCommerceInfo*>& cvInternalGlobals::getCommerceInfos()	// For Moose - XML Load Util
 {
 	return m_paCommerceInfo;
-}
-
-CvCommerceInfo& cvInternalGlobals::getCommerceInfo(CommerceTypes eCommerceNum) const
-{
-	FAssert(eCommerceNum > -1);
-	FAssert(eCommerceNum < NUM_COMMERCE_TYPES);
-	return *(m_paCommerceInfo[eCommerceNum]);
-}
-
-int cvInternalGlobals::getNumRouteInfos() const
-{
-	return (int)m_paRouteInfo.size();
 }
 
 std::vector<CvRouteInfo*>& cvInternalGlobals::getRouteInfos()	// For Moose - XML Load Util, CvInfos
@@ -2794,43 +1999,9 @@ std::vector<CvRouteInfo*>& cvInternalGlobals::getRouteInfos()	// For Moose - XML
 	return m_paRouteInfo;
 }
 
-CvRouteInfo& cvInternalGlobals::getRouteInfo(RouteTypes eRouteNum) const
-{
-	FAssert(eRouteNum > -1);
-	FAssert(eRouteNum < GC.getNumRouteInfos());
-	return *(m_paRouteInfo[eRouteNum]);
-}
-
-CvInfoReplacements<CvRouteInfo>* cvInternalGlobals::getRouteInfoReplacements()
-{
-	return &m_RouteInfoReplacements;
-}
-
-int cvInternalGlobals::getNumImprovementInfos() const
-{
-	return (int)m_paImprovementInfo.size();
-}
-
 std::vector<CvImprovementInfo*>& cvInternalGlobals::getImprovementInfos()	// For Moose - XML Load Util, CvInfos
 {
 	return m_paImprovementInfo;
-}
-
-CvImprovementInfo& cvInternalGlobals::getImprovementInfo(ImprovementTypes eImprovementNum) const
-{
-	FAssert(eImprovementNum > -1);
-	FAssert(eImprovementNum < GC.getNumImprovementInfos());
-	return *(m_paImprovementInfo[eImprovementNum]);
-}
-
-CvInfoReplacements<CvImprovementInfo>* cvInternalGlobals::getImprovementInfoReplacements()
-{
-	return &m_ImprovementInfoReplacements;
-}
-
-int cvInternalGlobals::getNumGoodyInfos() const
-{
-	return (int)m_paGoodyInfo.size();
 }
 
 std::vector<CvGoodyInfo*>& cvInternalGlobals::getGoodyInfos()	// For Moose - XML Load Util, CvInfos
@@ -2838,38 +2009,9 @@ std::vector<CvGoodyInfo*>& cvInternalGlobals::getGoodyInfos()	// For Moose - XML
 	return m_paGoodyInfo;
 }
 
-CvGoodyInfo& cvInternalGlobals::getGoodyInfo(GoodyTypes eGoodyNum) const
-{
-	FAssert(eGoodyNum > -1);
-	FAssert(eGoodyNum < GC.getNumGoodyInfos());
-	return *(m_paGoodyInfo[eGoodyNum]);
-}
-
-int cvInternalGlobals::getNumBuildInfos() const
-{
-	return (int)m_paBuildInfo.size();
-}
-
 std::vector<CvBuildInfo*>& cvInternalGlobals::getBuildInfos()	// For Moose - XML Load Util, CvInfos
 {
 	return m_paBuildInfo;
-}
-
-CvBuildInfo& cvInternalGlobals::getBuildInfo(BuildTypes eBuildNum) const
-{
-	FAssert(eBuildNum > -1);
-	FAssert(eBuildNum < GC.getNumBuildInfos());
-	return *(m_paBuildInfo[eBuildNum]);
-}
-
-CvInfoReplacements<CvBuildInfo>* cvInternalGlobals::getBuildInfoReplacements()
-{
-	return &m_BuildInfoReplacements;
-}
-
-int cvInternalGlobals::getNumHandicapInfos() const
-{
-	return (int)m_paHandicapInfo.size();
 }
 
 std::vector<CvHandicapInfo*>& cvInternalGlobals::getHandicapInfos()	// Do NOT export outside of the DLL	// For Moose - XML Load Util
@@ -2877,43 +2019,9 @@ std::vector<CvHandicapInfo*>& cvInternalGlobals::getHandicapInfos()	// Do NOT ex
 	return m_paHandicapInfo;
 }
 
-CvHandicapInfo& cvInternalGlobals::getHandicapInfo(HandicapTypes eHandicapNum) const
-{
-	FAssert(eHandicapNum > -1);
-	FAssert(eHandicapNum < GC.getNumHandicapInfos());
-	return *(m_paHandicapInfo[eHandicapNum]);
-}
-
-CvInfoReplacements<CvHandicapInfo>* cvInternalGlobals::getHandicapInfoReplacements()
-{
-	return &m_HandicapInfoReplacements;
-}
-
-int cvInternalGlobals::getNumGameSpeedInfos() const
-{
-	return (int)m_paGameSpeedInfo.size();
-}
-
 std::vector<CvGameSpeedInfo*>& cvInternalGlobals::getGameSpeedInfos()	// Do NOT export outside of the DLL	// For Moose - XML Load Util
 {
 	return m_paGameSpeedInfo;
-}
-
-CvGameSpeedInfo& cvInternalGlobals::getGameSpeedInfo(GameSpeedTypes eGameSpeedNum) const
-{
-	FAssert(eGameSpeedNum > -1);
-	FAssert(eGameSpeedNum < GC.getNumGameSpeedInfos());
-	return *(m_paGameSpeedInfo[eGameSpeedNum]);
-}
-
-CvInfoReplacements<CvGameSpeedInfo>* cvInternalGlobals::getGameSpeedInfoReplacements()
-{
-	return &m_GameSpeedInfoReplacements;
-}
-
-int cvInternalGlobals::getNumTurnTimerInfos() const
-{
-	return (int)m_paTurnTimerInfo.size();
 }
 
 std::vector<CvTurnTimerInfo*>& cvInternalGlobals::getTurnTimerInfos()	// Do NOT export outside of the DLL	// For Moose - XML Load Util
@@ -2921,38 +2029,9 @@ std::vector<CvTurnTimerInfo*>& cvInternalGlobals::getTurnTimerInfos()	// Do NOT 
 	return m_paTurnTimerInfo;
 }
 
-CvTurnTimerInfo& cvInternalGlobals::getTurnTimerInfo(TurnTimerTypes eTurnTimerNum) const
-{
-	FAssert(eTurnTimerNum > -1);
-	FAssert(eTurnTimerNum < GC.getNumTurnTimerInfos());
-	return *(m_paTurnTimerInfo[eTurnTimerNum]);
-}
-
-int cvInternalGlobals::getNumProcessInfos() const
-{
-	return (int)m_paProcessInfo.size();
-}
-
 std::vector<CvProcessInfo*>& cvInternalGlobals::getProcessInfos()
 {
 	return m_paProcessInfo;
-}
-
-CvProcessInfo& cvInternalGlobals::getProcessInfo(ProcessTypes e) const
-{
-	FAssert(e > -1);
-	FAssert(e < GC.getNumProcessInfos());
-	return *(m_paProcessInfo[e]);
-}
-
-CvInfoReplacements<CvProcessInfo>* cvInternalGlobals::getProcessInfoReplacements()
-{
-	return &m_ProcessInfoReplacements;
-}
-
-int cvInternalGlobals::getNumVoteInfos() const
-{
-	return (int)m_paVoteInfo.size();
 }
 
 std::vector<CvVoteInfo*>& cvInternalGlobals::getVoteInfos()
@@ -2960,38 +2039,9 @@ std::vector<CvVoteInfo*>& cvInternalGlobals::getVoteInfos()
 	return m_paVoteInfo;
 }
 
-CvVoteInfo& cvInternalGlobals::getVoteInfo(VoteTypes e) const
-{
-	FAssert(e > -1);
-	FAssert(e < GC.getNumVoteInfos());
-	return *(m_paVoteInfo[e]);
-}
-
-int cvInternalGlobals::getNumProjectInfos() const
-{
-	return (int)m_paProjectInfo.size();
-}
-
 std::vector<CvProjectInfo*>& cvInternalGlobals::getProjectInfos()
 {
 	return m_paProjectInfo;
-}
-
-CvProjectInfo& cvInternalGlobals::getProjectInfo(ProjectTypes e) const
-{
-	FAssert(e > -1);
-	FAssert(e < GC.getNumProjectInfos());
-	return *(m_paProjectInfo[e]);
-}
-
-CvInfoReplacements<CvProjectInfo>* cvInternalGlobals::getProjectInfoReplacements()
-{
-	return &m_ProjectInfoReplacements;
-}
-
-int cvInternalGlobals::getNumBuildingInfos() const
-{
-	return (int)m_paBuildingInfo.size();
 }
 
 std::vector<CvBuildingInfo*>& cvInternalGlobals::getBuildingInfos()	// For Moose - XML Load Util, CvInfos, CvCacheObject
@@ -2999,43 +2049,9 @@ std::vector<CvBuildingInfo*>& cvInternalGlobals::getBuildingInfos()	// For Moose
 	return m_paBuildingInfo;
 }
 
-CvBuildingInfo& cvInternalGlobals::getBuildingInfo(BuildingTypes eBuildingNum) const
-{
-	FAssert(eBuildingNum > -1);
-	FAssert(eBuildingNum < GC.getNumBuildingInfos());
-	return *(m_paBuildingInfo[eBuildingNum]);
-}
-
-CvInfoReplacements<CvBuildingInfo>* cvInternalGlobals::getBuildingInfoReplacements()
-{
-	return &m_BuildingInfoReplacements;
-}
-
-int cvInternalGlobals::getNumSpecialBuildingInfos() const
-{
-	return (int)m_paSpecialBuildingInfo.size();
-}
-
 std::vector<CvSpecialBuildingInfo*>& cvInternalGlobals::getSpecialBuildingInfos()	// For Moose - XML Load Util, CvInfos
 {
 	return m_paSpecialBuildingInfo;
-}
-
-CvSpecialBuildingInfo& cvInternalGlobals::getSpecialBuildingInfo(SpecialBuildingTypes eSpecialBuildingNum) const
-{
-	FAssert(eSpecialBuildingNum > -1);
-	FAssert(eSpecialBuildingNum < GC.getNumSpecialBuildingInfos());
-	return *(m_paSpecialBuildingInfo[eSpecialBuildingNum]);
-}
-
-CvInfoReplacements<CvSpecialBuildingInfo>* cvInternalGlobals::getSpecialBuildingInfoReplacements()
-{
-	return &m_SpecialBuildingInfoReplacements;
-}
-
-int cvInternalGlobals::getNumActionInfos() const
-{
-	return (int)m_paActionInfo.size();
 }
 
 std::vector<CvActionInfo*>& cvInternalGlobals::getActionInfos()	// For Moose - XML Load Util
@@ -3043,23 +2059,9 @@ std::vector<CvActionInfo*>& cvInternalGlobals::getActionInfos()	// For Moose - X
 	return m_paActionInfo;
 }
 
-CvActionInfo& cvInternalGlobals::getActionInfo(int i) const
-{
-	FAssertMsg(i < getNumActionInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
-	return *(m_paActionInfo[i]);
-}
-
 std::vector<CvMissionInfo*>& cvInternalGlobals::getMissionInfos()	// For Moose - XML Load Util, CvInfos
 {
 	return m_paMissionInfo;
-}
-
-CvMissionInfo& cvInternalGlobals::getMissionInfo(MissionTypes eMissionNum) const
-{
-	FAssert(eMissionNum > -1);
-	FAssert(eMissionNum < NUM_MISSION_TYPES);
-	return *(m_paMissionInfo[eMissionNum]);
 }
 
 std::vector<CvControlInfo*>& cvInternalGlobals::getControlInfos()	// For Moose - XML Load Util, CvInfos
@@ -3067,29 +2069,9 @@ std::vector<CvControlInfo*>& cvInternalGlobals::getControlInfos()	// For Moose -
 	return m_paControlInfo;
 }
 
-CvControlInfo& cvInternalGlobals::getControlInfo(ControlTypes eControlNum) const
-{
-	FAssert(eControlNum > -1);
-	FAssert(eControlNum < NUM_CONTROL_TYPES);
-	FAssert(!m_paControlInfo.empty());
-	return *(m_paControlInfo[eControlNum]);
-}
-
 std::vector<CvCommandInfo*>& cvInternalGlobals::getCommandInfos()	// For Moose - XML Load Util, CvInfos
 {
 	return m_paCommandInfo;
-}
-
-CvCommandInfo& cvInternalGlobals::getCommandInfo(CommandTypes eCommandNum) const
-{
-	FAssert(eCommandNum > -1);
-	FAssert(eCommandNum < NUM_COMMAND_TYPES);
-	return *(m_paCommandInfo[eCommandNum]);
-}
-
-int cvInternalGlobals::getNumAutomateInfos() const
-{
-	return (int)m_paAutomateInfo.size();
 }
 
 std::vector<CvAutomateInfo*>& cvInternalGlobals::getAutomateInfos()	// For Moose - XML Load Util, CvInfos
@@ -3097,33 +2079,9 @@ std::vector<CvAutomateInfo*>& cvInternalGlobals::getAutomateInfos()	// For Moose
 	return m_paAutomateInfo;
 }
 
-CvAutomateInfo& cvInternalGlobals::getAutomateInfo(int iAutomateNum) const
-{
-	FAssertMsg(iAutomateNum < getNumAutomateInfos(), "Index out of bounds");
-	FAssertMsg(iAutomateNum > -1, "Index out of bounds");
-	return *(m_paAutomateInfo[iAutomateNum]);
-}
-
-int cvInternalGlobals::getNumPromotionInfos() const
-{
-	return (int)m_paPromotionInfo.size();
-}
-
 std::vector<CvPromotionInfo*>& cvInternalGlobals::getPromotionInfos()	// For Moose - XML Load Util, CvInfos
 {
 	return m_paPromotionInfo;
-}
-
-CvPromotionInfo& cvInternalGlobals::getPromotionInfo(PromotionTypes ePromotionNum) const
-{
-	FAssert(ePromotionNum > -1);
-	FAssert(ePromotionNum < GC.getNumPromotionInfos());
-	return *(m_paPromotionInfo[ePromotionNum]);
-}
-
-CvInfoReplacements<CvPromotionInfo>* cvInternalGlobals::getPromotionInfoReplacements()
-{
-	return &m_PromotionInfoReplacements;
 }
 
 PromotionTypes cvInternalGlobals::findPromotion(PromotionPredicateFn predicateFn) const
@@ -3138,31 +2096,9 @@ PromotionTypes cvInternalGlobals::findPromotion(PromotionPredicateFn predicateFn
 	return static_cast<PromotionTypes>(-1);
 }
 
-int cvInternalGlobals::getNumTechInfos() const
-{
-	return (int)m_paTechInfo.size();
-}
-
 std::vector<CvTechInfo*>& cvInternalGlobals::getTechInfos()	// For Moose - XML Load Util, CvInfos, CvCacheObject
 {
 	return m_paTechInfo;
-}
-
-CvTechInfo& cvInternalGlobals::getTechInfo(TechTypes eTechNum) const
-{
-	FAssert(eTechNum > -1);
-	FAssert(eTechNum < GC.getNumTechInfos());
-	return *(m_paTechInfo[eTechNum]);
-}
-
-CvInfoReplacements<CvTechInfo>* cvInternalGlobals::getTechInfoReplacements()
-{
-	return &m_TechInfoReplacements;
-}
-
-int cvInternalGlobals::getNumReligionInfos() const
-{
-	return (int)m_paReligionInfo.size();
 }
 
 std::vector<CvReligionInfo*>& cvInternalGlobals::getReligionInfos()	// For Moose - XML Load Util, CvInfos
@@ -3170,43 +2106,9 @@ std::vector<CvReligionInfo*>& cvInternalGlobals::getReligionInfos()	// For Moose
 	return m_paReligionInfo;
 }
 
-CvReligionInfo& cvInternalGlobals::getReligionInfo(ReligionTypes eReligionNum) const
-{
-	FAssert(eReligionNum > -1);
-	FAssert(eReligionNum < GC.getNumReligionInfos());
-	return *(m_paReligionInfo[eReligionNum]);
-}
-
-CvInfoReplacements<CvReligionInfo>* cvInternalGlobals::getReligionInfoReplacements()
-{
-	return &m_ReligionInfoReplacements;
-}
-
-int cvInternalGlobals::getNumCorporationInfos() const
-{
-	return (int)m_paCorporationInfo.size();
-}
-
 std::vector<CvCorporationInfo*>& cvInternalGlobals::getCorporationInfos()	// For Moose - XML Load Util, CvInfos
 {
 	return m_paCorporationInfo;
-}
-
-CvCorporationInfo& cvInternalGlobals::getCorporationInfo(CorporationTypes eCorporationNum) const
-{
-	FAssert(eCorporationNum > -1);
-	FAssert(eCorporationNum < GC.getNumCorporationInfos());
-	return *(m_paCorporationInfo[eCorporationNum]);
-}
-
-CvInfoReplacements<CvCorporationInfo>* cvInternalGlobals::getCorporationInfoReplacements()
-{
-	return &m_CorporationInfoReplacements;
-}
-
-int cvInternalGlobals::getNumSpecialistInfos() const
-{
-	return (int)m_paSpecialistInfo.size();
 }
 
 std::vector<CvSpecialistInfo*>& cvInternalGlobals::getSpecialistInfos()	// For Moose - XML Load Util, CvInfos
@@ -3214,38 +2116,9 @@ std::vector<CvSpecialistInfo*>& cvInternalGlobals::getSpecialistInfos()	// For M
 	return m_paSpecialistInfo;
 }
 
-CvSpecialistInfo& cvInternalGlobals::getSpecialistInfo(SpecialistTypes eSpecialistNum) const
-{
-	FAssert(eSpecialistNum > -1);
-	FAssert(eSpecialistNum < GC.getNumSpecialistInfos());
-	return *(m_paSpecialistInfo[eSpecialistNum]);
-}
-
-CvInfoReplacements<CvSpecialistInfo>* cvInternalGlobals::getSpecialistInfoReplacements()
-{
-	return &m_SpecialistInfoReplacements;
-}
-
-int cvInternalGlobals::getNumCivicOptionInfos() const
-{
-	return (int)m_paCivicOptionInfo.size();
-}
-
 std::vector<CvCivicOptionInfo*>& cvInternalGlobals::getCivicOptionInfos()	// For Moose - XML Load Util, CvInfos
 {
 	return m_paCivicOptionInfo;
-}
-
-CvCivicOptionInfo& cvInternalGlobals::getCivicOptionInfo(CivicOptionTypes eCivicOptionNum) const
-{
-	FAssert(eCivicOptionNum > -1);
-	FAssert(eCivicOptionNum < GC.getNumCivicOptionInfos());
-	return *(m_paCivicOptionInfo[eCivicOptionNum]);
-}
-
-int cvInternalGlobals::getNumCivicInfos() const
-{
-	return (int)m_paCivicInfo.size();
 }
 
 std::vector<CvCivicInfo*>& cvInternalGlobals::getCivicInfos()	// For Moose - XML Load Util, CvInfos
@@ -3253,38 +2126,9 @@ std::vector<CvCivicInfo*>& cvInternalGlobals::getCivicInfos()	// For Moose - XML
 	return m_paCivicInfo;
 }
 
-CvCivicInfo& cvInternalGlobals::getCivicInfo(CivicTypes eCivicNum) const
-{
-	FAssert(eCivicNum > -1);
-	FAssert(eCivicNum < GC.getNumCivicInfos());
-	return *(m_paCivicInfo[eCivicNum]);
-}
-
-CvInfoReplacements<CvCivicInfo>* cvInternalGlobals::getCivicInfoReplacements()
-{
-	return &m_CivicInfoReplacements;
-}
-
-int cvInternalGlobals::getNumDiplomacyInfos() const
-{
-	return (int)m_paDiplomacyInfo.size();
-}
-
 std::vector<CvDiplomacyInfo*>& cvInternalGlobals::getDiplomacyInfos()	// For Moose - XML Load Util, CvInfos
 {
 	return m_paDiplomacyInfo;
-}
-
-CvDiplomacyInfo& cvInternalGlobals::getDiplomacyInfo(int iDiplomacyNum) const
-{
-	FAssertMsg(iDiplomacyNum < getNumDiplomacyInfos(), "Index out of bounds");
-	FAssertMsg(iDiplomacyNum > -1, "Index out of bounds");
-	return *(m_paDiplomacyInfo[iDiplomacyNum]);
-}
-
-int cvInternalGlobals::getNumEraInfos() const
-{
-	return (int)m_aEraInfo.size();
 }
 
 std::vector<CvEraInfo*>& cvInternalGlobals::getEraInfos()	// For Moose - XML Load Util, CvInfos
@@ -3292,38 +2136,9 @@ std::vector<CvEraInfo*>& cvInternalGlobals::getEraInfos()	// For Moose - XML Loa
 	return m_aEraInfo;
 }
 
-CvEraInfo& cvInternalGlobals::getEraInfo(EraTypes eEraNum) const
-{
-	FAssert(eEraNum > -1);
-	FAssert(eEraNum < GC.getNumEraInfos());
-	return *(m_aEraInfo[eEraNum]);
-}
-
-CvInfoReplacements<CvEraInfo>* cvInternalGlobals::getEraInfoReplacements()
-{
-	return &m_EraInfoReplacements;
-}
-
-int cvInternalGlobals::getNumHurryInfos() const
-{
-	return (int)m_paHurryInfo.size();
-}
-
 std::vector<CvHurryInfo*>& cvInternalGlobals::getHurryInfos()	// For Moose - XML Load Util, CvInfos
 {
 	return m_paHurryInfo;
-}
-
-CvHurryInfo& cvInternalGlobals::getHurryInfo(HurryTypes eHurryNum) const
-{
-	FAssert(eHurryNum > -1);
-	FAssert(eHurryNum < GC.getNumHurryInfos());
-	return *(m_paHurryInfo[eHurryNum]);
-}
-
-int cvInternalGlobals::getNumEmphasizeInfos() const
-{
-	return (int)m_paEmphasizeInfo.size();
 }
 
 std::vector<CvEmphasizeInfo*>& cvInternalGlobals::getEmphasizeInfos()	// For Moose - XML Load Util
@@ -3331,33 +2146,9 @@ std::vector<CvEmphasizeInfo*>& cvInternalGlobals::getEmphasizeInfos()	// For Moo
 	return m_paEmphasizeInfo;
 }
 
-CvEmphasizeInfo& cvInternalGlobals::getEmphasizeInfo(EmphasizeTypes eEmphasizeNum) const
-{
-	FAssert(eEmphasizeNum > -1);
-	FAssert(eEmphasizeNum < GC.getNumEmphasizeInfos());
-	return *(m_paEmphasizeInfo[eEmphasizeNum]);
-}
-
-int cvInternalGlobals::getNumUpkeepInfos() const
-{
-	return (int)m_paUpkeepInfo.size();
-}
-
 std::vector<CvUpkeepInfo*>& cvInternalGlobals::getUpkeepInfos()	// For Moose - XML Load Util, CvInfos
 {
 	return m_paUpkeepInfo;
-}
-
-CvUpkeepInfo& cvInternalGlobals::getUpkeepInfo(UpkeepTypes eUpkeepNum) const
-{
-	FAssert(eUpkeepNum > -1);
-	FAssert(eUpkeepNum < GC.getNumUpkeepInfos());
-	return *(m_paUpkeepInfo[eUpkeepNum]);
-}
-
-int cvInternalGlobals::getNumCultureLevelInfos() const
-{
-	return (int)m_paCultureLevelInfo.size();
 }
 
 std::vector<CvCultureLevelInfo*>& cvInternalGlobals::getCultureLevelInfos()	// For Moose - XML Load Util, CvInfos
@@ -3365,38 +2156,9 @@ std::vector<CvCultureLevelInfo*>& cvInternalGlobals::getCultureLevelInfos()	// F
 	return m_paCultureLevelInfo;
 }
 
-CvCultureLevelInfo& cvInternalGlobals::getCultureLevelInfo(CultureLevelTypes eCultureLevelNum) const
-{
-	FAssert(eCultureLevelNum > -1);
-	FAssert(eCultureLevelNum < GC.getNumCultureLevelInfos());
-	return *(m_paCultureLevelInfo[eCultureLevelNum]);
-}
-
-CvInfoReplacements<CvCultureLevelInfo>* cvInternalGlobals::getCultureLevelInfoReplacements()
-{
-	return &m_CultureLevelInfoReplacements;
-}
-
-int cvInternalGlobals::getNumVictoryInfos() const
-{
-	return (int)m_paVictoryInfo.size();
-}
-
 std::vector<CvVictoryInfo*>& cvInternalGlobals::getVictoryInfos()	// For Moose - XML Load Util, CvInfos
 {
 	return m_paVictoryInfo;
-}
-
-CvVictoryInfo& cvInternalGlobals::getVictoryInfo(VictoryTypes eVictoryNum) const
-{
-	FAssert(eVictoryNum > -1);
-	FAssert(eVictoryNum < GC.getNumVictoryInfos());
-	return *(m_paVictoryInfo[eVictoryNum]);
-}
-
-int cvInternalGlobals::getNumQuestInfos() const
-{
-	return (int)m_paQuestInfo.size();
 }
 
 std::vector<CvQuestInfo*>& cvInternalGlobals::getQuestInfos()
@@ -3404,33 +2166,9 @@ std::vector<CvQuestInfo*>& cvInternalGlobals::getQuestInfos()
 	return m_paQuestInfo;
 }
 
-CvQuestInfo& cvInternalGlobals::getQuestInfo(int iIndex) const
-{
-	FAssert(iIndex > -1);
-	FAssert(iIndex < GC.getNumQuestInfos());
-	return *(m_paQuestInfo[iIndex]);
-}
-
-int cvInternalGlobals::getNumTutorialInfos() const
-{
-	return (int)m_paTutorialInfo.size();
-}
-
 std::vector<CvTutorialInfo*>& cvInternalGlobals::getTutorialInfos()
 {
 	return m_paTutorialInfo;
-}
-
-CvTutorialInfo& cvInternalGlobals::getTutorialInfo(int iIndex) const
-{
-	FAssert(iIndex > -1);
-	FAssert(iIndex < GC.getNumTutorialInfos());
-	return *(m_paTutorialInfo[iIndex]);
-}
-
-int cvInternalGlobals::getNumEventTriggerInfos() const
-{
-	return (int)m_paEventTriggerInfo.size();
 }
 
 std::vector<CvEventTriggerInfo*>& cvInternalGlobals::getEventTriggerInfos()
@@ -3438,55 +2176,14 @@ std::vector<CvEventTriggerInfo*>& cvInternalGlobals::getEventTriggerInfos()
 	return m_paEventTriggerInfo;
 }
 
-CvEventTriggerInfo& cvInternalGlobals::getEventTriggerInfo(EventTriggerTypes eEventTrigger) const
-{
-	FAssert(eEventTrigger > -1);
-	FAssert(eEventTrigger < GC.getNumEventTriggerInfos());
-	return *(m_paEventTriggerInfo[eEventTrigger]);
-}
-
-CvInfoReplacements<CvEventTriggerInfo>* cvInternalGlobals::getEventTriggerInfoReplacements()
-{
-	return &m_EventTriggerInfoReplacements;
-}
-
-int cvInternalGlobals::getNumEventInfos() const
-{
-	return (int)m_paEventInfo.size();
-}
-
 std::vector<CvEventInfo*>& cvInternalGlobals::getEventInfos()
 {
 	return m_paEventInfo;
 }
 
-CvEventInfo& cvInternalGlobals::getEventInfo(EventTypes eEvent) const
-{
-	FAssert(eEvent > -1);
-	FAssert(eEvent < GC.getNumEventInfos());
-	return *(m_paEventInfo[eEvent]);
-}
-
-CvInfoReplacements<CvEventInfo>* cvInternalGlobals::getEventInfoReplacements()
-{
-	return &m_EventInfoReplacements;
-}
-
-int cvInternalGlobals::getNumEspionageMissionInfos() const
-{
-	return (int)m_paEspionageMissionInfo.size();
-}
-
 std::vector<CvEspionageMissionInfo*>& cvInternalGlobals::getEspionageMissionInfos()
 {
 	return m_paEspionageMissionInfo;
-}
-
-CvEspionageMissionInfo& cvInternalGlobals::getEspionageMissionInfo(EspionageMissionTypes eEspionageMissionNum) const
-{
-	FAssert(eEspionageMissionNum > -1);
-	FAssert(eEspionageMissionNum < GC.getNumEspionageMissionInfos());
-	return *(m_paEspionageMissionInfo[eEspionageMissionNum]);
 }
 
 int& cvInternalGlobals::getNumEntityEventTypes()
@@ -3569,21 +2266,9 @@ CvString& cvInternalGlobals::getArtStyleTypes(ArtStyleTypes e)
 	return m_paszArtStyleTypes[e];
 }
 
-int cvInternalGlobals::getNumUnitArtStyleTypeInfos() const
-{
-	return (int)m_paUnitArtStyleTypeInfo.size();
-}
-
 std::vector<CvUnitArtStyleTypeInfo*>& cvInternalGlobals::getUnitArtStyleTypeInfos()
 {
 	return m_paUnitArtStyleTypeInfo;
-}
-
-CvUnitArtStyleTypeInfo& cvInternalGlobals::getUnitArtStyleTypeInfo(UnitArtStyleTypes eUnitArtStyleTypeNum) const
-{
-	FAssert(eUnitArtStyleTypeNum > -1);
-	FAssert(eUnitArtStyleTypeNum < GC.getNumUnitArtStyleTypeInfos());
-	return *(m_paUnitArtStyleTypeInfo[eUnitArtStyleTypeNum]);
 }
 
 int& cvInternalGlobals::getNumCitySizeTypes()
@@ -3651,38 +2336,14 @@ CvString& cvInternalGlobals::getDirectionTypes(AutomateTypes e)
 	return m_paszDirectionTypes[e];
 }
 
-int cvInternalGlobals::getNumPropertyInfos() const
-{
-	return (int)m_paPropertyInfo.size();
-}
-
 std::vector<CvPropertyInfo*>& cvInternalGlobals::getPropertyInfos()
 {
 	return m_paPropertyInfo;
 }
 
-CvPropertyInfo& cvInternalGlobals::getPropertyInfo(PropertyTypes ePropertyNum) const
-{
-	FAssert(ePropertyNum > -1);
-	FAssert(ePropertyNum < GC.getNumPropertyInfos());
-	return *(m_paPropertyInfo[ePropertyNum]);
-}
-
-int cvInternalGlobals::getNumOutcomeInfos() const
-{
-	return (int)m_paOutcomeInfo.size();
-}
-
 std::vector<CvOutcomeInfo*>& cvInternalGlobals::getOutcomeInfos()
 {
 	return m_paOutcomeInfo;
-}
-
-CvOutcomeInfo& cvInternalGlobals::getOutcomeInfo(OutcomeTypes eOutcomeNum) const
-{
-	FAssert(eOutcomeNum > -1);
-	FAssert(eOutcomeNum < GC.getNumOutcomeInfos());
-	return *(m_paOutcomeInfo[eOutcomeNum]);
 }
 
 int& cvInternalGlobals::getNumFootstepAudioTypes()
