@@ -662,6 +662,46 @@
 		<Spanish>Id con cuidado al firmar acuerdos de apertura de fronteras. Aseguraos de que vuestro "amigo" no esté analizando vuestras tierras para vendérselas al mejor postor.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HINT_INTERFACE_24</Tag>
+		<English>Press [CTRL + B] to toggle Bare Map view...</English>
+		<French>Appuyez sur [CTRL + B] pour afficher ou masquer la carte vierge.</French>
+		<German>Tipp... Mit der Tastenkombination [STRG + B] lässt sich die Kartenübersicht ein-/ausschalten.</German>
+		<Italian>Premi [CTRL + B] per attivare/disattivare la visuale mappa semplificata...</Italian>
+		<Spanish>Pulsar [CTRL + B] para activar la vista del mapa limpio...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HINT_INTERFACE_25</Tag>
+		<English>Press [CTRL + R] to toggle Flag Resources view...</English>
+		<French>Appuyez sur [CTRL + R] pour afficher ou masquer les ressources.</French>
+		<German>Tipp... Mit der Tastenkombination [STRG + R] lassen sich zusätzliche Ressourcen-Hinweise ein-/ausblenden.</German>
+		<Italian>Premi [CTRL + R] per visualizzare/nascondere la segnalazione risorse...</Italian>
+		<Spanish>Pulsar [CTRL + R] para activar las marcas de recursos...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HINT_INTERFACE_26</Tag>
+		<English>Press [CTRL + Y] to toggle Show Yields view...</English>
+		<French>Appuyez sur [CTRL + Y] pour afficher ou masquer les icones de production.</French>
+		<German>Tipp... Mit der Tastenkombination [STRG + Y] lässt sich eine zusätzliche Geländefeld-Ertragsanzeige ein-/ausblenden.</German>
+		<Italian>Premi [CTRL + Y] per visualizzare/nascondere la produzione...</Italian>
+		<Spanish>Pulsar [CTRL + Y] para activar la vista Mostrar rendimientos...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HINT_INTERFACE_28</Tag>
+		<English>Press [CTRL + T] to toggle the Tile Grid</English>
+		<French>Appuyez sur [CTRL + T] pour afficher ou masquer la grille.</French>
+		<German>Tipp... Mit der Tastenkombination [STRG + T] lässt sich das Spielfeld-Raster (Gitter) ein-/ausblenden.</German>
+		<Italian>Premi [CTRL + T] per attivare la griglia delle caselle...</Italian>
+		<Spanish>Pulsar [CTRL + T] para activar la cuadr&#237;cula.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HINT_INTERFACE_47</Tag>
+		<English>Press [CTRL + M] to toggle the music on and off...</English>
+		<French>Appuyez sur [CTRL + VIRGULE] pour activer ou d&#233;sactiver la musique.</French>
+		<German>Tipp... Mit der Tastenkombination [STRG + M] lässt sich die Hintergrundmusik ein-/ausschalten.</German>
+		<Italian>Premi [CTRL + M] attivare e disattivare la musica...</Italian>
+		<Spanish>Pulsar [CTRL + M] para encender o apagar la m&#250;sica...</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_1</Tag>
 		<English>*Revolutions Mod Hint*: The Revolution Watch Advisor screen is totally customisable in the same way as the Domestic Advisor Screen.</English>
 		<French>*Conseil Mod Revolution*: l'Ecran de Conseiller de Révolution est entièrement configurable de la même manière que l'écran du Conseiller Domestique (CDA).</French>

@@ -218,12 +218,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_C2C_CULTURES</Tag>
-		<English>C2C Cultures</English>
-		<French>Cultures C2C</French>
+		<English>Cultures</English>
 		<German>Kulturen</German>
-		<Italian>C2C Culture</Italian>
-		<Spanish>Culturas de C2C</Spanish>
-		<Polish>Kultury C2C</Polish>
+		<Italian>Culture</Italian>
+		<Spanish>Culturas</Spanish>
+		<Polish>Kultury</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_CHRONOLOGY</Tag>

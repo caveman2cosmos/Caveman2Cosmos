@@ -101,6 +101,11 @@
 		<Tag>TXT_KEY_LAWYER_SPECIALIST</Tag>
 		<English>Lawyer</English>
 		<French>Avocat</French>
+		<German>
+			<Text>Anwalt:Anwalts:Anwalt:Anwalt:Anwälte:Anwälte:Anwälten:Anwälte</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Avvocato</Italian>
 		<Polish>Prawnik</Polish>
 	</TEXT>
