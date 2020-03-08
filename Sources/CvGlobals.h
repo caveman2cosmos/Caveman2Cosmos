@@ -168,7 +168,7 @@ template <class info, class index >
 inline info& getInfo(const std::vector<info*>& vector, index i)
 {
 	FAssertMsg(i > -1, "Index out of bounds");
-	FAssertMsg(i < vector.size(), "Index out of bounds");
+	FAssertMsg(i < static_cast<int>(vector.size()), "Index out of bounds");
 	return *(vector[i]);
 }
 

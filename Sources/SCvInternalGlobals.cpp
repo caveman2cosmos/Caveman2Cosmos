@@ -9,9 +9,9 @@ CvDLLUtilityIFaceBase* SCvInternalGlobals::engineUtils()
 CvBonusInfo* SCvInternalGlobals::getBonusInfoByType(const std::string& szType)
 {
 	for (int i = 0; i < GC.getNumBonusInfos(); ++i)
-		const CvBonusInfo& bonusInfo = GC.getBonusInfo(static_cast<BonusTypes>(i));
+		CvBonusInfo& bonusInfo = GC.getBonusInfo(static_cast<BonusTypes>(i));
 		if (bonusInfo.getType() == szType)
-			return bonusInfo;
+			return &bonusInfo;
 	return NULL;
 }
 
