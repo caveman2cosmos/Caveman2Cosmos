@@ -568,14 +568,11 @@ def WorldBuilderHandleCityEditCorporationCB( argsList ):
 def WorldBuilderHandleCorporationCommandsCB( argsList ):
 	worldBuilderScreen.handleCorporationCommandsCB(argsList)
 
-def WorldBuilderHandleCityEditBuildingClassCB( argsList ):
-	worldBuilderScreen.handleCityEditBuildingClassCB(argsList)
+def WorldBuilderHandleCityEditBuildingCB(argsList):
+	worldBuilderScreen.handleCityEditBuildingCB(argsList)
 
 def WorldBuilderHandleCityEditModiferCB( argsList ):
 	worldBuilderScreen.handleCityEditModiferCB(argsList)
-
-def WorldBuilderHandleCityEditModifyBuildingClassCB( argsList ):
-	worldBuilderScreen.handleCityEditModifyBuildingClassCB(argsList)
 
 def WorldBuilderHandleCityEditChooseProductionCB( argsList ):
 	worldBuilderScreen.handleCityEditChooseProductionCB(argsList)
@@ -1187,7 +1184,7 @@ def featAccomplishedOnClickedCallback(argsList):
 		if iData1 == FeatTypes.FEAT_TRADE_ROUTE:
 			showDomesticAdvisor(())
 		elif (iData1 >= FeatTypes.FEAT_UNITCOMBAT_ARCHER) and (iData1 <= FeatTypes.FEAT_UNIT_SPY):
-			showMilitaryAdvisor()
+			CyGlobalContext().getGame().doControl(ControlTypes.CONTROL_MILITARY_SCREEN)
 		elif (iData1 >= FeatTypes.FEAT_COPPER_CONNECTED) and (iData1 <= FeatTypes.FEAT_FOOD_CONNECTED):
 			showForeignAdvisorScreen([0])
 		elif iData1 == FeatTypes.FEAT_NATIONAL_WONDER:

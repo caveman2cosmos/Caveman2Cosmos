@@ -8,7 +8,6 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<!-- Basket Factory -->
-			<BuildingClass>BUILDINGCLASS_BASKETY_FACTORY</BuildingClass>
 			<Type>BUILDING_BASKETY_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_BASKETY_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BASKETY_FACTORY_PEDIA</Civilopedia>
@@ -32,22 +31,16 @@
 				<Bonus>BONUS_STRAW</Bonus>
 				<Bonus>BONUS_PLASTIC</Bonus>
 			</PrereqBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_FACTORY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_BASKETY_WORKSHOP</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BASKETY_WORKSHOP</BuildingClassType>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FACTORY</BuildingType>
+				<BuildingType>BUILDING_BASKETY_WORKSHOP</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_BASKETY_WORKSHOP</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
 			<!-- Construction cost -->
 			<iCost>710</iCost>
 			<!-- Main effects -->
@@ -87,7 +80,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Basket Maker's Workshop -->
-			<BuildingClass>BUILDINGCLASS_BASKETY_WORKSHOP</BuildingClass>
 			<Type>BUILDING_BASKETY_WORKSHOP</Type>
 			<Description>TXT_KEY_BUILDING_BASKETY_WORKSHOP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BASKETY_WORKSHOP_PEDIA</Civilopedia>
@@ -108,29 +100,26 @@
 				<Bonus>BONUS_VINES</Bonus>
 				<Bonus>BONUS_STRAW</Bonus>
 			</PrereqBonuses>
-			<!--PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_VIKING_TRADING_POST</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses-->
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_BASKETWEAVER</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BASKETWEAVER</BuildingClassType>
+			<!--PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings-->
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_BASKETWEAVER</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_BASKETWEAVER</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
 			<!-- Obsolescence -->
 			<!--ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_BASKETY_FACTORY</BuildingClassType>
+					<BuildingType>BUILDING_BASKETY_FACTORY</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings-->
@@ -161,7 +150,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Basketweaver's Hut -->
-			<BuildingClass>BUILDINGCLASS_BASKETWEAVER</BuildingClass>
 			<Type>BUILDING_BASKETWEAVER</Type>
 			<Description>TXT_KEY_BUILDING_BASKETWEAVER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BASKETWEAVER_PEDIA</Civilopedia>
@@ -185,29 +173,29 @@
 				<Bonus>BONUS_VINES</Bonus>
 				<Bonus>BONUS_STRAW</Bonus>
 			</PrereqBonuses>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_STORAGE_PIT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BARTER_POST</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_VIKING_TRADING_POST</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_BARTER_POST</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<!-- Obsolescence -->
 			<!--ObsoleteTech>TECH_INDUSTRIALISM</ObsoleteTech>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_BASKETY_WORKSHOP</BuildingClassType>
+					<BuildingType>BUILDING_BASKETY_WORKSHOP</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_BASKETY_FACTORY</BuildingClassType>
+					<BuildingType>BUILDING_BASKETY_FACTORY</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings-->
@@ -219,13 +207,6 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_BASKETS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<!-- Special Health and Happiness  modifiers -->
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_NOMAD</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<!-- Special properties -->
 			<Flavors>
 				<Flavor>

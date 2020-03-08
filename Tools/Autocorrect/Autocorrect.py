@@ -414,7 +414,7 @@ if __name__ == "__main__":
     flattened_files = [f for files in expanded_files for f in files]
     unique_files = list(set(flattened_files))
     if len(unique_files) == 0:
-        print(Fore.YELLOW + 'No files found matching the provided blobs!')
+        print(Fore.YELLOW + 'No files found matching the provided globs!')
     else:
         if len(unique_files) > 1:
             print('Processing %d files...' % len(unique_files))

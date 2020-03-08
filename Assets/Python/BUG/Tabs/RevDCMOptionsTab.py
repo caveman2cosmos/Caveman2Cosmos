@@ -81,7 +81,7 @@ class RevDCMOptionsTab(BugOptionsTab.BugOptionsTab):
 				screen.attachHSeparator(right, right + "SepInq2")
 
 			#Religion options
-			bInquisition = not GAME.isOption(GameOptionTypes.GAMEOPTION_NO_INQUISITIONS)
+			bInquisition = GAME.isOption(GameOptionTypes.GAMEOPTION_INQUISITIONS)
 			bLimitedReli = GAME.isOption(GameOptionTypes.GAMEOPTION_LIMITED_RELIGIONS)
 			if bInquisition or bLimitedReli:
 				self.addLabel(screen, left, "RevDCM__Religion", TRNSLTR.getText("TXT_KEY_REVDCMTAB_RELIGION_OPTIONS", ()))
@@ -107,7 +107,7 @@ class RevDCMOptionsTab(BugOptionsTab.BugOptionsTab):
 
 			#Barbarian Civ
 			#Standard Options
-			if not GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIAN_CIV):
+			if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_CIV):
 				self.addLabel(screen, left, "Revolution__BarbarianCiv", TRNSLTR.getText("TXT_KEY_REVDCMTAB_BARBCIV_OPTIONS", ()))
 				col1, col2 = self.addMultiColumnLayout(screen, right, 2, "Misc Settings")
 				self.addIntDropdown(screen, col1, col2, "Revolution__MinPopulation")
@@ -139,7 +139,7 @@ class RevDCMOptionsTab(BugOptionsTab.BugOptionsTab):
 			if bDebug or bCheat:
 
 				#Revolutions
-				if not GAME.isOption(GameOptionTypes.GAMEOPTION_NO_REVOLUTION):
+				if GAME.isOption(GameOptionTypes.GAMEOPTION_REVOLUTION):
 					self.addLabel(screen, left, "Revolution__Revolution", "Debug Options:")
 					col1, col2, col3, col4 = self.addMultiColumnLayout(screen, right, 4, "Debug Settings")
 					self.addCheckbox(screen, col1, "Revolution__RevDebugMode")

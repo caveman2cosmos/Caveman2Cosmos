@@ -80,12 +80,7 @@ struct FreePromoTypes
 	operator int() const {return (int)ePromotion;}
 	bool operator< (const FreePromoTypes& rhs) const {return (int)ePromotion < (int)rhs.ePromotion;}
 };
-struct FreeTraitTypes
-{	
-	TraitTypes eTrait;
-	operator int() const {return (int)eTrait;}
-	bool operator< (const FreeTraitTypes& rhs) const {return (int)eTrait < (int)rhs.eTrait;}
-};
+
 struct AfflictOnAttack
 {	
 	PromotionLineTypes eAfflictionLine;
@@ -277,12 +272,12 @@ struct AidRateChanges
 	operator int() const {return (int)ePropertyType;}
 	bool operator< (const AidRateChanges& rhs) const {return (int)ePropertyType < (int)rhs.ePropertyType;}
 };
-struct PrereqBuildingClass
+struct PrereqBuilding
 {	
-	BuildingClassTypes eBuildingClass;
+	BuildingTypes eBuilding;
 	int iMinimumRequired;
-	operator int() const {return (int)eBuildingClass;}
-	bool operator< (const PrereqBuildingClass& rhs) const {return (int)eBuildingClass < (int)rhs.eBuildingClass;}
+	operator int() const {return (int)eBuilding;}
+	bool operator< (const PrereqBuilding& rhs) const {return (int)eBuilding < (int)rhs.eBuilding;}
 };
 struct TerrainStructs
 {	
@@ -702,16 +697,16 @@ struct PlotExtraCost
 	void write(FDataStreamBase* pStream);
 };
 
-typedef std::vector< std::pair<BuildingClassTypes, int> > BuildingChangeArray;
+typedef std::vector< std::pair<BuildingTypes, int> > BuildingChangeArray;
 
 struct BuildingYieldChange
 {
-	BuildingClassTypes eBuildingClass;
+	BuildingTypes eBuilding;
 	YieldTypes eYield;
 	int iChange;
 
 	BuildingYieldChange()
-		: eBuildingClass(NO_BUILDINGCLASS)
+		: eBuilding(NO_BUILDING)
 		, eYield(NO_YIELD)
 		, iChange(0)
 	{}
@@ -722,12 +717,12 @@ struct BuildingYieldChange
 
 struct BuildingCommerceChange
 {
-	BuildingClassTypes eBuildingClass;
+	BuildingTypes eBuilding;
 	CommerceTypes eCommerce;
 	int iChange;
 
 	BuildingCommerceChange()
-		: eBuildingClass(NO_BUILDINGCLASS)
+		: eBuilding(NO_BUILDING)
 		, eCommerce(NO_COMMERCE)
 		, iChange(0)
 	{}
@@ -744,11 +739,11 @@ struct BuildingCommerceChange
 struct PropertySpawns
 {
 	PropertyTypes eProperty;
-	UnitClassTypes eUnitClass;
+	UnitTypes eUnit;
 
 	PropertySpawns()
 		: eProperty(NO_PROPERTY)
-		, eUnitClass(NO_UNITCLASS)
+		, eUnit(NO_UNIT)
 	{}
 
 	void read(FDataStreamBase* pStream);
@@ -756,12 +751,12 @@ struct PropertySpawns
 };
 struct BuildingYieldModifier
 {
-	BuildingClassTypes eBuildingClass;
+	BuildingTypes eBuilding;
 	YieldTypes eYield;
 	int iChange;
 
 	BuildingYieldModifier()
-		: eBuildingClass(NO_BUILDINGCLASS)
+		: eBuilding(NO_BUILDING)
 		, eYield(NO_YIELD)
 		, iChange(0)
 	{}
@@ -772,12 +767,12 @@ struct BuildingYieldModifier
 
 struct BuildingCommerceModifier
 {
-	BuildingClassTypes eBuildingClass;
+	BuildingTypes eBuilding;
 	CommerceTypes eCommerce;
 	int iChange;
 
 	BuildingCommerceModifier()
-		: eBuildingClass(NO_BUILDINGCLASS)
+		: eBuilding(NO_BUILDING)
 		, eCommerce(NO_COMMERCE)
 		, iChange(0)
 	{}

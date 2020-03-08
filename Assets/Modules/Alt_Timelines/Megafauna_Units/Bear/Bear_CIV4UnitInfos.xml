@@ -1,12 +1,9 @@
 <?xml version="1.0"?>
-	<!-- Created with Notepad by strategyonly -->
-	<!-- Assets\Modules\Alt_Timelines\MegaFauna\Bear_Rider\bearrider_CIV4UnitInfos.xml -->
-	<!-- ###################################################################################### -->
 <Civ4UnitInfos xmlns="x-schema:../../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_BEARRIDER</Class>
 			<Type>UNIT_BEARRIDER</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -37,9 +34,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_BEAR_RIDER</Description>
-			<Civilopedia>TXT_KEY_UNIT_BEAR_RIDER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BEAR_RIDER_STRATEGY</Strategy>
+			<Description>TXT_KEY_UNIT_BEARRIDER</Description>
+			<Civilopedia>TXT_KEY_UNIT_BEARRIDER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_BEARRIDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -48,19 +45,16 @@
 			<bFirstStrikeImmune>1</bFirstStrikeImmune>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_BEARKNIGHT</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_BEARKNIGHT</UnitType>
+			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CATAPULT</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TREBUCHET</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -108,8 +102,8 @@
 			<ForceObsoleteTech>TECH_ARMORED_CAVALRY</ForceObsoleteTech>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_BEARKNIGHT</Class>
 			<Type>UNIT_BEARKNIGHT</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -141,9 +135,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_BEAR_KNIGHT</Description>
-			<Civilopedia>TXT_KEY_UNIT_BEAR_KNIGHT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BEAR_KNIGHT_STRATEGY</Strategy>
+			<Description>TXT_KEY_UNIT_BEARKNIGHT</Description>
+			<Civilopedia>TXT_KEY_UNIT_BEARKNIGHT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_BEARKNIGHT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -151,23 +145,17 @@
 			<bPillage>1</bPillage>
 			<bFirstStrikeImmune>1</bFirstStrikeImmune>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_AUTOGYRO</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_ARMORED_CAR</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_AUTOGYRO</UnitType>
+				<UnitType>UNIT_ARMORED_CAR</UnitType>
+			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CATAPULT</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TREBUCHET</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -189,7 +177,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_WARE_IRON</BonusType>
+			<BonusType>BONUS_IRON_WARES</BonusType>
 			<iCost>375</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>14</iCombat>
@@ -279,7 +267,6 @@
 			</Buildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_GREAT_HUNTER</Class>
 			<Type>UNIT_GREAT_HUNTER</Type>
 			<Buildings>
 				<BuildingType>BUILDING_BEAR_TRAINER_HERITAGE</BuildingType>

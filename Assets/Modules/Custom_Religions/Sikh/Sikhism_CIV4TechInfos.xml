@@ -5,20 +5,20 @@
 		<TechInfo>
 			<!-- Sikhism -->
 			<Type>TECH_SIKHISM</Type>
-			<Description>TXT_KEY_RELIGION_SIKHISM</Description>
-			<Civilopedia>TXT_KEY_RELIGION_SIKHISM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_RELIGION_SIKHISM_STRATEGY</Strategy>
+			<Description>TXT_KEY_TECH_SIKHISM</Description>
+			<Civilopedia>TXT_KEY_TECH_SIKHISM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_TECH_SIKHISM_STRATEGY</Strategy>
 			<OrPreReqs>
 				<PrereqTech>TECH_HUMANISM</PrereqTech>
 			</OrPreReqs>
-			<Era>ERA_RENAISSANCE</Era>
+			<Era>C2C_ERA_RENAISSANCE</Era>
 			<bGlobal>1</bGlobal>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iGridX>52</iGridX>
 			<iGridY>11</iGridY>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<iCost>2528</iCost>
-			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<iAsset>8</iAsset>
 			<Flavors>
 				<Flavor>
@@ -34,7 +34,7 @@
 					<iFlavor>5</iFlavor>
 				</Flavor>
 			</Flavors>
-			<Quote>TXT_KEY_RELIGION_SIKHISM_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_SIKHISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_SIKHISM</Sound>
 			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/sikhism.dds</Button>

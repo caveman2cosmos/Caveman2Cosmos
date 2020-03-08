@@ -33,7 +33,7 @@ void CvBuildingList::setPlayerToOwner()
 {
 	if (m_pCity && !m_pPlayer)
 	{
-		CvPlayer* pPlayer = &GET_PLAYER(m_pCity->getOwnerINLINE());
+		CvPlayer* pPlayer = &GET_PLAYER(m_pCity->getOwner());
 		m_pPlayer = pPlayer;
 		m_BuildingFilters.setPlayer(pPlayer);
 		m_BuildingGrouping.setPlayer(pPlayer);
@@ -193,8 +193,7 @@ int CvBuildingList::getBuildingSelectionRow()
 	{
 		for (int j = 0; j < static_cast<int>(m_aaiGroupedBuildingList[i].size()); j++)
 		{
-			BuildingTypes eBuilding = m_aaiGroupedBuildingList[i][j];
-			if (!isLimitedWonderClass((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType()))
+			if (!isLimitedWonder(static_cast<BuildingTypes>(m_aaiGroupedBuildingList[i][j])))
 				return i;
 		}
 	}
@@ -217,8 +216,7 @@ int CvBuildingList::getWonderSelectionRow()
 	{
 		for (int j = 0; j < static_cast<int>(m_aaiGroupedBuildingList[i].size()); j++)
 		{
-			BuildingTypes eBuilding = m_aaiGroupedBuildingList[i][j];
-			if (isLimitedWonderClass((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType()))
+			if (!isLimitedWonder(static_cast<BuildingTypes>(m_aaiGroupedBuildingList[i][j])))
 				return i;
 		}
 	}

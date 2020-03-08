@@ -8,10 +8,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_WARMONGER</Tag>
 		<English>Warmonger</English>
+		<French>Seigneur de Guerre</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_WARMONGER_STRATEGY</Tag>
 		<English>Military concept with a balanced strategy focused on high volume forces with improved training.</English>
+		<French>Concept militaire avec une stratégie équilibrée axée sur des forces à fort volume avec un entraînement amélioré.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_WARMONGER_PEDIA</Tag>
@@ -46,6 +48,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_WARMONGER1</Tag>
 		<English>Warmonger I</English>
+		<French>Seigneur de Guerre I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_WARMONGER1_PEDIA</Tag>
@@ -79,6 +82,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_WARMONGER2</Tag>
 		<English>Warmonger II</English>
+		<French>Seigneur de Guerre II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_WARMONGER2_PEDIA</Tag>
@@ -112,6 +116,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_WARMONGER3</Tag>
 		<English>Warmonger III</English>
+		<French>Seigneur de Guerre III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_WARMONGER3_PEDIA</Tag>
@@ -145,10 +150,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PACIFIST</Tag>
 		<English>Pacifist</English>
+		<French>Pacifiste</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PACIFIST_STRATEGY</Tag>
 		<English>Allows a weak military in favor of more domestic concerns.</English>
+		<French>Permet à une armée faible de favoriser des préoccupations plus nationales.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PACIFIST_PEDIA</Tag>
@@ -182,6 +189,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PACIFIST1</Tag>
 		<English>Pacifist I</English>
+		<French>Pacifistee I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PACIFIST1_PEDIA</Tag>
@@ -210,6 +218,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PACIFIST2</Tag>
 		<English>Pacifist II</English>
+		<French>Pacifistee II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PACIFIST2_PEDIA</Tag>
@@ -243,6 +252,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PACIFIST3</Tag>
 		<English>Pacifist III</English>
+		<French>Pacifistee III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PACIFIST3_PEDIA</Tag>
@@ -275,10 +285,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_STRATEGIST</Tag>
 		<English>Strategist</English>
+		<French>Stratège</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_STRATEGIST_STRATEGY</Tag>
 		<English>Quality over quantity.  Highest priority is an experience driven military led by masterful commanders.</English>
+		<French>La qualité plutôt que la quantité. La plus haute priorité est une expérience militaire dirigée par des commandants magistraux.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_STRATEGIST_PEDIA</Tag>
@@ -317,6 +329,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_STRATEGIST1</Tag>
 		<English>Strategist I</English>
+		<French>Stratège I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_STRATEGIST1_PEDIA</Tag>
@@ -355,6 +368,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_STRATEGIST2</Tag>
 		<English>Strategist II</English>
+		<French>Stratège II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_STRATEGIST2_PEDIA</Tag>
@@ -393,6 +407,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_STRATEGIST3</Tag>
 		<English>Strategist III</English>
+		<French>Stratège III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_STRATEGIST3_PEDIA</Tag>
@@ -431,10 +446,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CARELESS</Tag>
 		<English>Careless</English>
+		<French>Négligent</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CARELESS_STRATEGY</Tag>
 		<English>Undisciplined military at every level.</English>
+		<French>Des militaires indisciplinés à tous les niveaux.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CARELESS_PEDIA</Tag>
@@ -469,6 +486,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CARELESS1</Tag>
 		<English>Careless I</English>
+		<French>Négligent I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CARELESS1_PEDIA</Tag>
@@ -503,6 +521,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CARELESS2</Tag>
 		<English>Careless II</English>
+		<French>Négligent II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CARELESS2_PEDIA</Tag>
@@ -537,6 +556,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CARELESS3</Tag>
 		<English>Careless III</English>
+		<French>Négligent III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CARELESS3_PEDIA</Tag>
@@ -571,10 +591,12 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE</Tag>
 		<English>Aggressive</English>
+		<French>Agr....essif:Agressive:Agressifs:Agressives</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE_STRATEGY</Tag>
 		<English>Prepares a hostile military, ready to attack.  Operates under the theory that the best defense is a good offense.</English>
+		<French>Prépare une armée hostile, prête à attaquer. Fonctionne selon la théorie selon laquelle la meilleure défense est une bonne attaque.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE_PEDIA</Tag>
@@ -615,6 +637,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE1</Tag>
 		<English>Aggressive I</English>
+		<French>Agressif:Agressive:Agressifs:Agressives I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE1_PEDIA</Tag>
@@ -654,6 +677,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE2</Tag>
 		<English>Aggressive II</English>
+		<French>Agressif:Agressive:Agressifs:Agressives II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE2_PEDIA</Tag>
@@ -693,6 +717,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE3</Tag>
 		<English>Aggressive III</English>
+		<French>Agressif:Agressive:Agressifs:Agressives III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE3_PEDIA</Tag>
@@ -731,10 +756,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TIMID</Tag>
 		<English>Timid</English>
+		<French>Timide</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TIMID_STRATEGY</Tag>
 		<English>Gains some diplomatic bonus at the cost of having weak units - particularly on the attack. A little bit stronger when backed into a corner though.</English>
+		<French>Gagne un bonus diplomatique au prix d'avoir des unités faibles - en particulier sur l'attaque. Un peu plus fort quand on est dans un coin cependant.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TIMID_PEDIA</Tag>
@@ -774,6 +801,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TIMID1</Tag>
 		<English>Timid I</English>
+		<French>Timidee I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TIMID1_PEDIA</Tag>
@@ -812,6 +840,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TIMID2</Tag>
 		<English>Timid II</English>
+		<French>Timidee II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TIMID2_PEDIA</Tag>
@@ -851,6 +880,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TIMID3</Tag>
 		<English>Timid III</English>
+		<French>Timidee III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TIMID3_PEDIA</Tag>
@@ -889,10 +919,12 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DEFENSIVE</Tag>
 		<English>Defensive</English>
+		<French>Défensif</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DEFENSIVE_STRATEGY</Tag>
 		<English>Military focused with a 'Hold your ground' ideal.</English>
+		<French>Militaire concentré avec un idéal «Tenez votre terrain».</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DEFENSIVE_PEDIA</Tag>
@@ -930,6 +962,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DEFENSIVE1</Tag>
 		<English>Defensive I</English>
+		<French>Défensif I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DEFENSIVE1_PEDIA</Tag>
@@ -966,6 +999,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DEFENSIVE2</Tag>
 		<English>Defensive II</English>
+		<French>Défensif II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DEFENSIVE2_PEDIA</Tag>
@@ -1002,6 +1036,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DEFENSIVE3</Tag>
 		<English>Defensive III</English>
+		<French>Défensif III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DEFENSIVE3_PEDIA</Tag>
@@ -1037,10 +1072,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COWARDLY</Tag>
 		<English>Cowardly</English>
+		<French>Couard</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COWARDLY_STRATEGY</Tag>
 		<English>Units are very weak when defending but there are some diplomatic benefits.</English>
+		<French>Les unités sont très faibles lors de la défense mais il y a des avantages diplomatiques.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COWARDLY_PEDIA</Tag>
@@ -1076,6 +1113,7 @@ Bonuses:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COWARDLY1</Tag>
 		<English>Cowardly I</English>
+		<French>Couard I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COWARDLY1_PEDIA</Tag>
@@ -1110,6 +1148,7 @@ Bonuses:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COWARDLY2</Tag>
 		<English>Cowardly II</English>
+		<French>Couard II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COWARDLY2_PEDIA</Tag>
@@ -1145,6 +1184,7 @@ Bonuses:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COWARDLY3</Tag>
 		<English>Cowardly III</English>
+		<French>Couard III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COWARDLY3_PEDIA</Tag>
@@ -1180,10 +1220,12 @@ Bonuses:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_PROTECTIVE</Tag>
 		<English>Protective</English>
+		<French>Protecteur</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_PROTECTIVE_STRATEGY</Tag>
 		<English>Strong city and domestic defenses and military benefits but it all comes at some expense.</English>
+		<French>De solides défenses urbaines et nationales et des avantages militaires, mais tout cela coûte cher.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_PROTECTIVE_PEDIA</Tag>
@@ -1224,6 +1266,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_PROTECTIVE1</Tag>
 		<English>Protective I</English>
+		<French>Protecteur I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_PROTECTIVE1_PEDIA</Tag>
@@ -1263,6 +1306,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_PROTECTIVE2</Tag>
 		<English>Protective II</English>
+		<French>Protecteur II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_PROTECTIVE2_PEDIA</Tag>
@@ -1302,6 +1346,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_PROTECTIVE3</Tag>
 		<English>Protective III</English>
+		<French>Protecteur III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_PROTECTIVE3_PEDIA</Tag>
@@ -1340,10 +1385,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NEGLIGENT</Tag>
 		<English>Negligent</English>
+		<French>Négligent</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NEGLIGENT_STRATEGY</Tag>
 		<English>Ignores city defenses in favor of other goals.</English>
+		<French>Ignore les défenses de la ville au profit d'autres objectifs.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NEGLIGENT_PEDIA</Tag>
@@ -1381,6 +1428,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NEGLIGENT1</Tag>
 		<English>Negligent I</English>
+		<French>Négligent I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NEGLIGENT1_PEDIA</Tag>
@@ -1418,6 +1466,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NEGLIGENT2</Tag>
 		<English>Negligent II</English>
+		<French>Négligent II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NEGLIGENT2_PEDIA</Tag>
@@ -1455,6 +1504,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NEGLIGENT3</Tag>
 		<English>Negligent III</English>
+		<French>Négligent III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NEGLIGENT3_PEDIA</Tag>
@@ -1492,10 +1542,12 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_IMPERIALIST</Tag>
 		<English>Imperialist</English>
+		<French>Impérialiste</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_IMPERIALIST_STRATEGY</Tag>
 		<English>Strong City Attack forces and a government that is well structured for conquest.</English>
+		<French>Des forces d'attaque de la ville fortes et un gouvernement bien structuré pour la conquête.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_IMPERIALIST_PEDIA</Tag>
@@ -1538,6 +1590,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_IMPERIALIST1</Tag>
 		<English>Imperialist I</English>
+		<French>Impérialiste I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_IMPERIALIST1_PEDIA</Tag>
@@ -1578,6 +1631,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_IMPERIALIST2</Tag>
 		<English>Imperialist II</English>
+		<French>Impérialiste II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_IMPERIALIST2_PEDIA</Tag>
@@ -1616,6 +1670,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_IMPERIALIST3</Tag>
 		<English>Imperialist III</English>
+		<French>Impérialiste III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_IMPERIALIST3_PEDIA</Tag>
@@ -1653,10 +1708,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEEK</Tag>
 		<English>Meek</English>
+		<French>Docile</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEEK_STRATEGY</Tag>
 		<English>Weak city attack forces and more expensive to maintain a larger empire but some enhanced personal liberties and diplomacy and better behaved citizens.</English>
+		<French>Forces d'attaque de la ville faibles et plus coûteuses pour maintenir un empire plus grand, mais certaines libertés et diplomatie personnelles améliorées et des citoyens mieux comportés.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEEK_PEDIA</Tag>
@@ -1697,6 +1754,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEEK1</Tag>
 		<English>Meek I</English>
+		<French>Docile I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEEK1_PEDIA</Tag>
@@ -1736,6 +1794,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEEK2</Tag>
 		<English>Meek II</English>
+		<French>Docile II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEEK2_PEDIA</Tag>
@@ -1775,6 +1834,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEEK3</Tag>
 		<English>Meek III</English>
+		<French>Docile III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEEK3_PEDIA</Tag>
@@ -1814,10 +1874,12 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SEAFARING</Tag>
 		<English>Seafaring</English>
+		<French>Marin</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SEAFARING_STRATEGY</Tag>
 		<English>Dominance over the water terrains in every way possible.</English>
+		<French>Domination sur les terrains aquatiques de toutes les manières possibles.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SEAFARING_PEDIA</Tag>
@@ -1861,6 +1923,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SEAFARING1</Tag>
 		<English>Seafaring I</English>
+		<French>Marin I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SEAFARING1_PEDIA</Tag>
@@ -1903,6 +1966,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SEAFARING2</Tag>
 		<English>Seafaring II</English>
+		<French>Marin II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SEAFARING2_PEDIA</Tag>
@@ -1944,6 +2008,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SEAFARING3</Tag>
 		<English>Seafaring III</English>
+		<French>Marin III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SEAFARING3_PEDIA</Tag>
@@ -1986,10 +2051,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_NOMADIC</Tag>
 		<English>Nomadic</English>
+		<French>Nomade</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_NOMADIC_STRATEGY</Tag>
 		<English>Fast units but lagging cities.  Animal resource focus.</English>
+		<French>Unités rapides mais villes en retard. Accent sur les ressources animales.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_NOMADIC_PEDIA</Tag>
@@ -2033,6 +2100,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_NOMADIC1</Tag>
 		<English>Nomadic I</English>
+		<French>Nomade I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_NOMADIC1_PEDIA</Tag>
@@ -2072,6 +2140,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_NOMADIC2</Tag>
 		<English>Nomadic II</English>
+		<French>Nomade II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_NOMADIC2_PEDIA</Tag>
@@ -2112,6 +2181,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_NOMADIC3</Tag>
 		<English>Nomadic III</English>
+		<French>Nomade III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_NOMADIC3_PEDIA</Tag>
@@ -2152,10 +2222,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AERIAL</Tag>
 		<English>Aerial</English>
+		<French>Aérien</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AERIAL_STRATEGY</Tag>
 		<English>Air based military strength, empowering throwing, archery, gun and flying units.</English>
+		<French>Force militaire aérienne, habilitant les unités de lancer, de tir à l'arc, de canon et de vol.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AERIAL_PEDIA</Tag>
@@ -2208,6 +2280,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AERIAL1</Tag>
 		<English>Aerial I</English>
+		<French>Aérien I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AERIAL1_PEDIA</Tag>
@@ -2246,6 +2319,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AERIAL2</Tag>
 		<English>Aerial II</English>
+		<French>Aérien II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AERIAL2_PEDIA</Tag>
@@ -2294,6 +2368,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AERIAL3</Tag>
 		<English>Aerial III</English>
+		<French>Aérien III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AERIAL3_PEDIA</Tag>
@@ -2339,10 +2414,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SPIRITUAL</Tag>
 		<English>Spiritual</English>
+		<French>Spirituel:Spirituelle:Spirituels:Spirituelles</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SPIRITUAL_STRATEGY</Tag>
 		<English>Agile at switching religions and getting the most benefit from collecting as many religions as possible.</English>
+		<French>Agile pour changer de religion et tirer le meilleur parti de la collecte du plus de religions possible.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SPIRITUAL_PEDIA</Tag>
@@ -2383,6 +2460,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SPIRITUAL1</Tag>
 		<English>Spiritual I</English>
+		<French>Spirituel:Spirituelle:Spirituels:Spirituelles I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SPIRITUAL1_PEDIA</Tag>
@@ -2422,6 +2500,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SPIRITUAL2</Tag>
 		<English>Spiritual II</English>
+		<French>Spirituel:Spirituelle:Spirituels:Spirituelles II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SPIRITUAL2_PEDIA</Tag>
@@ -2462,6 +2541,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SPIRITUAL3</Tag>
 		<English>Spiritual III</English>
+		<French>Spirituel:Spirituelle:Spirituels:Spirituelles III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SPIRITUAL3_PEDIA</Tag>
@@ -2501,10 +2581,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ANTI_CLERICAL</Tag>
 		<English>Anti-Clerical</English>
+		<French>Anti-Clérical</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ANTI_CLERICAL_STRATEGY</Tag>
 		<English>Greatly impedes any benefit from religions.</English>
+		<French>Entrave considérablement tout avantage des religions.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ANTI_CLERICAL_PEDIA</Tag>
@@ -2549,6 +2631,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ANTI_CLERICAL1</Tag>
 		<English>Anti-Clerical I</English>
+		<French>Anti-Clérical I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ANTI_CLERICAL1_PEDIA</Tag>
@@ -2589,6 +2672,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ANTI_CLERICAL2</Tag>
 		<English>Anti-Clerical II</English>
+		<French>Anti-Clérical II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ANTI_CLERICAL2_PEDIA</Tag>
@@ -2629,6 +2713,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ANTI_CLERICAL3</Tag>
 		<English>Anti-Clerical III</English>
+		<French>Anti-Clérical III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ANTI_CLERICAL3_PEDIA</Tag>
@@ -2668,10 +2753,12 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PIOUS</Tag>
 		<English>Pious</English>
+		<French>Pieux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PIOUS_STRATEGY</Tag>
 		<English>Extremely dedicated to one religion and is not agile at all at switching between them.  Experiences very strong benefits for supporting the chosen state religion.</English>
+		<French>Extrêmement dédié à une religion et n'est pas du tout agile pour basculer entre les deux. Expérimente des avantages très forts pour soutenir la religion d'État choisie.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PIOUS_PEDIA</Tag>
@@ -2717,6 +2804,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PIOUS1</Tag>
 		<English>Pious I</English>
+		<French>Pieux I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PIOUS1_PEDIA</Tag>
@@ -2760,6 +2848,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PIOUS2</Tag>
 		<English>Pious II</English>
+		<French>Pieux II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PIOUS2_PEDIA</Tag>
@@ -2802,6 +2891,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PIOUS3</Tag>
 		<English>Pious III</English>
+		<French>Pieux III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PIOUS3_PEDIA</Tag>
@@ -2842,10 +2932,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ZEALOUS</Tag>
 		<English>Zealous</English>
+		<French>Zélé</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ZEALOUS_STRATEGY</Tag>
 		<English>Gains some benefits for the state religion but severe penalties for non-state religions.</English>
+		<French>Bénéficie de certains avantages pour la religion d'État mais de lourdes sanctions pour les religions non étatiques.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ZEALOUS_PEDIA</Tag>
@@ -2890,6 +2982,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ZEALOUS1</Tag>
 		<English>Zealous I</English>
+		<French>Zélé I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ZEALOUS1_PEDIA</Tag>
@@ -2928,6 +3021,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ZEALOUS2</Tag>
 		<English>Zealous II</English>
+		<French>Zélé II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ZEALOUS2_PEDIA</Tag>
@@ -2970,6 +3064,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ZEALOUS3</Tag>
 		<English>Zealous III</English>
+		<French>Zélé III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ZEALOUS3_PEDIA</Tag>
@@ -3010,10 +3105,12 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLORIOUS</Tag>
 		<English>Glorious</English>
+		<French>Glorieux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLORIOUS_STRATEGY</Tag>
 		<English>Golden Age enhancement with secondary religious elements.</English>
+		<French>Amélioration de l'âge d'or avec des éléments religieux secondaires.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLORIOUS_PEDIA</Tag>
@@ -3051,6 +3148,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLORIOUS1</Tag>
 		<English>Glorious I</English>
+		<French>Glorieux I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLORIOUS1_PEDIA</Tag>
@@ -3085,6 +3183,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLORIOUS2</Tag>
 		<English>Glorious II</English>
+		<French>Glorieux II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLORIOUS2_PEDIA</Tag>
@@ -3120,6 +3219,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLORIOUS3</Tag>
 		<English>Glorious III</English>
+		<French>Glorieux III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLORIOUS3_PEDIA</Tag>
@@ -3155,10 +3255,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLOOMY</Tag>
 		<English>Gloomy</English>
+		<French>Morne</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLOOMY_STRATEGY</Tag>
 		<English>Golden Ages are much less valuable for this leader and his people, and there are some secondary impediments to religion.</English>
+		<French>Les âges d'or sont beaucoup moins précieux pour ce chef et son peuple, et il existe des obstacles secondaires à la religion.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLOOMY_PEDIA</Tag>
@@ -3197,6 +3299,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLOOMY1</Tag>
 		<English>Gloomy I</English>
+		<French>Morne I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLOOMY1_PEDIA</Tag>
@@ -3233,6 +3336,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLOOMY2</Tag>
 		<English>Gloomy II</English>
+		<French>Morne II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLOOMY2_PEDIA</Tag>
@@ -3269,6 +3373,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLOOMY3</Tag>
 		<English>Gloomy III</English>
+		<French>Morne III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLOOMY3_PEDIA</Tag>
@@ -3305,10 +3410,12 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PREEMINENT</Tag>
 		<English>Preeminent</English>
+		<French>Prééminent</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PREEMINENT_STRATEGY</Tag>
 		<English>Benefits to both the Capital and any possessed Holy Cities but not as strongly expansive.</English>
+		<French>Avantages à la fois pour la capitale et pour toutes les villes saintes possédées, mais pas aussi fortement étendues.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PREEMINENT_PEDIA</Tag>
@@ -3346,6 +3453,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PREEMINENT1</Tag>
 		<English>Preeminent I</English>
+		<French>Prééminent I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PREEMINENT1_PEDIA</Tag>
@@ -3382,6 +3490,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PREEMINENT2</Tag>
 		<English>Preeminent II</English>
+		<French>Prééminent II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PREEMINENT2_PEDIA</Tag>
@@ -3419,6 +3528,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PREEMINENT3</Tag>
 		<English>Preeminent III</English>
+		<French>Prééminent III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PREEMINENT3_PEDIA</Tag>
@@ -3455,10 +3565,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ALOOF</Tag>
 		<English>Aloof</English>
+		<French>Distant</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ALOOF_STRATEGY</Tag>
 		<English>Although there are dramatic decreases in upkeep for large empires, this Leader is highly penalized in his centers of power, the capital and holy cities.</English>
+		<French>Bien qu'il y ait une diminution spectaculaire de l'entretien des grands empires, ce chef est fortement pénalisé dans ses centres de pouvoir, la capitale et les villes saintes.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ALOOF_PEDIA</Tag>
@@ -3496,6 +3608,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ALOOF1</Tag>
 		<English>Aloof I</English>
+		<French>Distant I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ALOOF1_PEDIA</Tag>
@@ -3532,6 +3645,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ALOOF2</Tag>
 		<English>Aloof II</English>
+		<French>Distant II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ALOOF2_PEDIA</Tag>
@@ -3569,6 +3683,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ALOOF3</Tag>
 		<English>Aloof III</English>
+		<French>Distant III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ALOOF3_PEDIA</Tag>
@@ -3605,10 +3720,12 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_INDUSTRIOUS</Tag>
 		<English>Industrious</English>
+		<French>Travailleur:Travailleuse:Travailleurs:Travailleuses</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_INDUSTRIOUS_STRATEGY</Tag>
 		<English>Strong production. Toil makes less happy folk though.</English>
+		<French>Forte production. Mais le travail rend les gens moins heureux.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_INDUSTRIOUS_PEDIA</Tag>
@@ -3645,6 +3762,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_INDUSTRIOUS1</Tag>
 		<English>Industrious I</English>
+		<French>Travailleur:Travailleuse:Travailleurs:Travailleuses I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_INDUSTRIOUS1_PEDIA</Tag>
@@ -3679,6 +3797,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_INDUSTRIOUS2</Tag>
 		<English>Industrious II</English>
+		<French>Travailleur:Travailleuse:Travailleurs:Travailleuses II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_INDUSTRIOUS2_PEDIA</Tag>
@@ -3713,6 +3832,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_INDUSTRIOUS3</Tag>
 		<English>Industrious III</English>
+		<French>Travailleur:Travailleuse:Travailleurs:Travailleuses III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_INDUSTRIOUS3_PEDIA</Tag>
@@ -3747,10 +3867,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LAZY</Tag>
 		<English>Lazy</English>
+		<French>Paresseux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LAZY_STRATEGY</Tag>
 		<English>Poor production but does gain some happiness out of it.</English>
+		<French>Mauvaise production mais en tire un peu de bonheur.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LAZY_PEDIA</Tag>
@@ -3786,6 +3908,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LAZY1</Tag>
 		<English>Lazy I</English>
+		<French>Paresseux I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LAZY1_PEDIA</Tag>
@@ -3820,6 +3943,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LAZY2</Tag>
 		<English>Lazy II</English>
+		<French>Paresseux II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LAZY2_PEDIA</Tag>
@@ -3854,6 +3978,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LAZY3</Tag>
 		<English>Lazy III</English>
+		<French>Paresseux III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LAZY3_PEDIA</Tag>
@@ -3888,10 +4013,12 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EFFICIENT</Tag>
 		<English>Efficient</English>
+		<French>Efficient</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EFFICIENT_STRATEGY</Tag>
 		<English>Strong Commerce income.  A little extra anarchy time from the added struggle of having to reallocate investments to suit the new legal structure.</English>
+		<French>Fort revenu du commerce. Un peu de temps d'anarchie supplémentaire de la lutte supplémentaire d'avoir à réaffecter des investissements en fonction de la nouvelle structure juridique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EFFICIENT_PEDIA</Tag>
@@ -3926,6 +4053,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EFFICIENT1</Tag>
 		<English>Efficient I</English>
+		<French>Efficient I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EFFICIENT1_PEDIA</Tag>
@@ -3959,6 +4087,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EFFICIENT2</Tag>
 		<English>Efficient II</English>
+		<French>Efficient II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EFFICIENT2_PEDIA</Tag>
@@ -3993,6 +4122,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EFFICIENT3</Tag>
 		<English>Efficient III</English>
+		<French>Efficient III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EFFICIENT3_PEDIA</Tag>
@@ -4026,10 +4156,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_EXCESSIVE</Tag>
 		<English>Excessive</English>
+		<French>Excessif</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_EXCESSIVE_STRATEGY</Tag>
 		<English>Serious Commerce penalties. Wonders and Military are generated faster but people are malcontent.</English>
+		<French>Pénalités commerciales graves. Les merveilles et les militaires sont générés plus rapidement, mais les gens sont mécontents.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_EXCESSIVE_PEDIA</Tag>
@@ -4067,6 +4199,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_EXCESSIVE1</Tag>
 		<English>Excessive I</English>
+		<French>Excessif I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_EXCESSIVE1_PEDIA</Tag>
@@ -4103,6 +4236,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_EXCESSIVE2</Tag>
 		<English>Excessive II</English>
+		<French>Excessif II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_EXCESSIVE2_PEDIA</Tag>
@@ -4140,6 +4274,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_EXCESSIVE3</Tag>
 		<English>Excessive III</English>
+		<French>Excessif III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_EXCESSIVE3_PEDIA</Tag>
@@ -4177,10 +4312,12 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL</Tag>
 		<English>Agricultural</English>
+		<French>Agricol</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL_STRATEGY</Tag>
 		<English>Strong Food production.  Hard work in the fields can be a burden to happiness and your citizens prefer more rural lifestyles.</English>
+		<French>Forte production alimentaire. Le travail acharné dans les champs peut être un fardeau pour le bonheur et vos citoyens préfèrent des modes de vie plus ruraux.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL_PEDIA</Tag>
@@ -4219,6 +4356,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL1</Tag>
 		<English>Agricultural I</English>
+		<French>Agricol I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL1_PEDIA</Tag>
@@ -4256,6 +4394,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL2</Tag>
 		<English>Agricultural II</English>
+		<French>Agricol II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL2_PEDIA</Tag>
@@ -4291,6 +4430,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL3</Tag>
 		<English>Agricultural III</English>
+		<French>Agricol III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL3_PEDIA</Tag>
@@ -4326,10 +4466,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLUTTONOUS</Tag>
 		<English>Gluttonous</English>
+		<French>Glouton</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLUTTONOUS_STRATEGY</Tag>
 		<English>Poor food, mostly due to extra consumption.  Happier people thinking things are always plentiful when in reality they often deplete their food stores.</English>
+		<French>Mauvaise nourriture, principalement en raison d'une consommation supplémentaire. Les gens plus heureux qui pensent que les choses sont toujours abondantes alors qu'en réalité, ils épuisent souvent leurs magasins d'alimentation.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLUTTONOUS_PEDIA</Tag>
@@ -4370,6 +4512,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLUTTONOUS1</Tag>
 		<English>Gluttonous I</English>
+		<French>Glouton I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLUTTONOUS1_PEDIA</Tag>
@@ -4407,6 +4550,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLUTTONOUS2</Tag>
 		<English>Gluttonous II</English>
+		<French>Glouton II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLUTTONOUS2_PEDIA</Tag>
@@ -4443,6 +4587,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLUTTONOUS3</Tag>
 		<English>Gluttonous III</English>
+		<French>Glouton III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLUTTONOUS3_PEDIA</Tag>
@@ -4479,10 +4624,12 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CREATIVE</Tag>
 		<English>Creative</English>
+		<French>Créatif:Créative:Créatifs:Créatives</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CREATIVE_STRATEGY</Tag>
 		<English>Strong Culture output.  People are happy with their beautified society but are a little soft as a result, sometimes unable to cope with harsh realities.</English>
+		<French>Forte production culturelle. Les gens sont satisfaits de leur société embellie mais sont un peu mous en conséquence, parfois incapables de faire face aux dures réalités.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CREATIVE_PEDIA</Tag>
@@ -4529,6 +4676,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CREATIVE1</Tag>
 		<English>Creative I</English>
+		<French>Créatif:Créative:Créatifs:Créatives I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CREATIVE1_PEDIA</Tag>
@@ -4573,6 +4721,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CREATIVE2</Tag>
 		<English>Creative II</English>
+		<French>Créatif:Créative:Créatifs:Créatives II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CREATIVE2_PEDIA</Tag>
@@ -4617,6 +4766,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CREATIVE3</Tag>
 		<English>Creative III</English>
+		<French>Créatif:Créative:Créatifs:Créatives III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CREATIVE3_PEDIA</Tag>
@@ -4661,10 +4811,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNREFINED</Tag>
 		<English>Unrefined</English>
+		<French>Non raffiné</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNREFINED_STRATEGY</Tag>
 		<English>Poor Culture  People are unhappy lacking for identity and expression.  But they are roughshod by nature as a result.</English>
+		<French>Pauvre culture Les gens sont malheureux et manquent d'identité et d'expression. Mais ils sont par conséquent grossiers par nature.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNREFINED_PEDIA</Tag>
@@ -4712,6 +4864,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNREFINED1</Tag>
 		<English>Unrefined I</English>
+		<French>Non raffiné I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNREFINED1_PEDIA</Tag>
@@ -4756,6 +4909,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNREFINED2</Tag>
 		<English>Unrefined II</English>
+		<French>Non raffiné II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNREFINED2_PEDIA</Tag>
@@ -4800,6 +4954,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNREFINED3</Tag>
 		<English>Unrefined III</English>
+		<French>Non raffiné III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNREFINED3_PEDIA</Tag>
@@ -4845,10 +5000,12 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FINANCIAL</Tag>
 		<English>Financial</English>
+		<French>Financier:Financière:Financiers:Financières</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FINANCIAL_STRATEGY</Tag>
 		<English>Strong Gold generation.  People are happy the leader efficiently utilizes their taxes.  Budget cutting leads to less quality in some areas such as training and defense.</English>
+		<French>Forte génération d'or. Les gens sont heureux que le leader utilise efficacement ses impôts. La réduction budgétaire entraîne une baisse de la qualité dans certains domaines tels que la formation et la défense.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FINANCIAL_PEDIA</Tag>
@@ -4893,6 +5050,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FINANCIAL1</Tag>
 		<English>Financial I</English>
+		<French>Financier:Financière:Financiers:Financières I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FINANCIAL1_PEDIA</Tag>
@@ -4936,6 +5094,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FINANCIAL2</Tag>
 		<English>Financial II</English>
+		<French>Financier:Financière:Financiers:Financières II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FINANCIAL2_PEDIA</Tag>
@@ -4979,6 +5138,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FINANCIAL3</Tag>
 		<English>Financial III</English>
+		<French>Financier:Financière:Financiers:Financières III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FINANCIAL3_PEDIA</Tag>
@@ -5022,10 +5182,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GREEDY</Tag>
 		<English>Greedy</English>
+		<French>Avide</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GREEDY_STRATEGY</Tag>
 		<English>Weak Gold generation and increased upkeep.  Some construction projects are completed faster.</English>
+		<French>Faible génération d'or et entretien accru. Certains projets de construction sont achevés plus rapidement.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GREEDY_PEDIA</Tag>
@@ -5069,6 +5231,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GREEDY1</Tag>
 		<English>Greedy I</English>
+		<French>Avide I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GREEDY1_PEDIA</Tag>
@@ -5111,6 +5274,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GREEDY2</Tag>
 		<English>Greedy II</English>
+		<French>Avide II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GREEDY2_PEDIA</Tag>
@@ -5153,6 +5317,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GREEDY3</Tag>
 		<English>Greedy III</English>
+		<French>Avide III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GREEDY3_PEDIA</Tag>
@@ -5195,10 +5360,12 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_DECEIVER</Tag>
 		<English>Deceiver</English>
+		<French>Sournois</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_DECEIVER_STRATEGY</Tag>
 		<English>Strong Espionage.  People mistrust your leader.</English>
+		<French>Espionnage fort. Les gens se méfient de votre chef.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_DECEIVER_PEDIA</Tag>
@@ -5240,6 +5407,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_DECEIVER1</Tag>
 		<English>Deceiver I</English>
+		<French>Sournois I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_DECEIVER1_PEDIA</Tag>
@@ -5278,6 +5446,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_DECEIVER2</Tag>
 		<English>Deceiver II</English>
+		<French>Sournois II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_DECEIVER2_PEDIA</Tag>
@@ -5317,6 +5486,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_DECEIVER3</Tag>
 		<English>Deceiver III</English>
+		<French>Sournois III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_DECEIVER3_PEDIA</Tag>
@@ -5357,10 +5527,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NAIVE</Tag>
 		<English>Naive</English>
+		<French>Naïf</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NAIVE_STRATEGY</Tag>
 		<English>Poor Espionage.  People are happy with an honest leader.</English>
+		<French>Pauvre espionnage. Les gens sont satisfaits d'un leader honnête.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NAIVE_PEDIA</Tag>
@@ -5401,6 +5573,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NAIVE1</Tag>
 		<English>Naive I</English>
+		<French>Naïf I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NAIVE1_PEDIA</Tag>
@@ -5439,6 +5612,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NAIVE2</Tag>
 		<English>Naive II</English>
+		<French>Naïf II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NAIVE2_PEDIA</Tag>
@@ -5477,6 +5651,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NAIVE3</Tag>
 		<English>Naive III</English>
+		<French>Naïf III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NAIVE3_PEDIA</Tag>
@@ -5516,10 +5691,12 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SCIENTIFIC</Tag>
 		<English>Scientific</English>
+		<French>Scientifique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SCIENTIFIC_STRATEGY</Tag>
 		<English>Strong Research and Team Project construction.  Suffers some Religious and Military penalties and can be challenged with extra Air Pollution.</English>
+		<French>Construction solide de projets de recherche et d'équipe. Subit des sanctions religieuses et militaires et peut être contestée avec une pollution atmosphérique supplémentaire.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SCIENTIFIC_PEDIA</Tag>
@@ -5562,6 +5739,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SCIENTIFIC1</Tag>
 		<English>Scientific I</English>
+		<French>Scientifique I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SCIENTIFIC1_PEDIA</Tag>
@@ -5601,6 +5779,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SCIENTIFIC2</Tag>
 		<English>Scientific II</English>
+		<French>Scientifique II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SCIENTIFIC2_PEDIA</Tag>
@@ -5643,6 +5822,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SCIENTIFIC3</Tag>
 		<English>Scientific III</English>
+		<French>Scientifique III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SCIENTIFIC3_PEDIA</Tag>
@@ -5686,10 +5866,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TRADITIONAL</Tag>
 		<English>Traditional</English>
+		<French>Traditionnel</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TRADITIONAL_STRATEGY</Tag>
 		<English>Poor Research, slow to recover from anarchy inducing changes, and Great People emergence is weak, as pushing in a new direction is frowned upon. But the people feel content and secure and do get efficient, being well practiced with the existing knowledge and methods, resulting in free specialists and some education benefit.</English>
+		<French>Pauvre recherche, lent à se remettre de changements induisant l'anarchie, et l'émergence de Great People est faible, car pousser dans une nouvelle direction est mal vu. Mais les gens se sentent satisfaits et en sécurité et deviennent efficaces, étant bien entraînés avec les connaissances et les méthodes existantes, ce qui donne des spécialistes gratuits et certains avantages éducatifs.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TRADITIONAL_PEDIA</Tag>
@@ -5730,6 +5912,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TRADITIONAL1</Tag>
 		<English>Traditional I</English>
+		<French>Traditionnel I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TRADITIONAL1_PEDIA</Tag>
@@ -5766,6 +5949,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TRADITIONAL2</Tag>
 		<English>Traditional II</English>
+		<French>Traditionnel II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TRADITIONAL2_PEDIA</Tag>
@@ -5803,6 +5987,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TRADITIONAL3</Tag>
 		<English>Traditional III</English>
+		<French>Traditionnel III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TRADITIONAL3_PEDIA</Tag>
@@ -5841,10 +6026,12 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NEGOTIATOR</Tag>
 		<English>Negotiator</English>
+		<French>Négociateur</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NEGOTIATOR_STRATEGY</Tag>
 		<English>Strong Trade benefits.  A little lax on warfare, an impediment to trade. Reductions in anarchy time and upkeep.  Diplomatic benefit. Espionage defense reduced as enhanced trade efforts opens up potential for infiltration.  Tourism grows as you appear friendly to visitors.</English>
+		<French>Avantages commerciaux importants. Un peu relâché sur la guerre, un obstacle au commerce. Réduction du temps d'anarchie et de l'entretien. Avantage diplomatique. La défense contre l'espionnage a été réduite à mesure que l'intensification des efforts commerciaux ouvre un potentiel d'infiltration. Le tourisme se développe à mesure que vous paraissez sympathique aux visiteurs.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NEGOTIATOR_PEDIA</Tag>
@@ -5884,6 +6071,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NEGOTIATOR1</Tag>
 		<English>Negotiator I</English>
+		<French>Négociateur I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NEGOTIATOR1_PEDIA</Tag>
@@ -5922,6 +6110,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NEGOTIATOR2</Tag>
 		<English>Negotiator II</English>
+		<French>Négociateur II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NEGOTIATOR2_PEDIA</Tag>
@@ -5961,6 +6150,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NEGOTIATOR3</Tag>
 		<English>Negotiator III</English>
+		<French>Négociateur III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NEGOTIATOR3_PEDIA</Tag>
@@ -6000,10 +6190,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ISOLATIONIST</Tag>
 		<English>Isolationist</English>
+		<French>Isolationiste</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ISOLATIONIST_STRATEGY</Tag>
 		<English>Takes serious trade and diplomacy penalties but is a touch better internally.</English>
+		<French>Prend de sérieuses sanctions commerciales et diplomatiques mais est un peu mieux en interne.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ISOLATIONIST_PEDIA</Tag>
@@ -6043,6 +6235,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ISOLATIONIST1</Tag>
 		<English>Isolationist I</English>
+		<French>Isolationistee I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ISOLATIONIST1_PEDIA</Tag>
@@ -6081,6 +6274,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ISOLATIONIST2</Tag>
 		<English>Isolationist II</English>
+		<French>Isolationistee II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ISOLATIONIST2_PEDIA</Tag>
@@ -6120,6 +6314,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ISOLATIONIST3</Tag>
 		<English>Isolationist III</English>
+		<French>Isolationistee III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ISOLATIONIST3_PEDIA</Tag>
@@ -6159,10 +6354,12 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_INNOVATIVE</Tag>
 		<English>Innovative</English>
+		<French>Innovant</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_INNOVATIVE_STRATEGY</Tag>
 		<English>Takes advantage of trade to improve espionage and is compelled to stay on the tech forefront.</English>
+		<French>Profite du commerce pour améliorer l'espionnage et est obligé de rester à la pointe de la technologie.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_INNOVATIVE_PEDIA</Tag>
@@ -6201,6 +6398,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_INNOVATIVE1</Tag>
 		<English>Innovative I</English>
+		<French>Innovant I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_INNOVATIVE1_PEDIA</Tag>
@@ -6236,6 +6434,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_INNOVATIVE2</Tag>
 		<English>Innovative II</English>
+		<French>Innovant II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_INNOVATIVE2_PEDIA</Tag>
@@ -6272,6 +6471,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_INNOVATIVE3</Tag>
 		<English>Innovative III</English>
+		<French>Innovant III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_INNOVATIVE3_PEDIA</Tag>
@@ -6308,10 +6508,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COVETOUS</Tag>
 		<English>Covetous</English>
+		<French>Cupide</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COVETOUS_STRATEGY</Tag>
 		<English>Some trade and diplomatic benefits but loses a lot of strength at home and is weak against espionage.</English>
+		<French>Certains avantages commerciaux et diplomatiques, mais perd beaucoup de force à la maison et est faible contre l'espionnage.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COVETOUS_PEDIA</Tag>
@@ -6349,6 +6551,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COVETOUS1</Tag>
 		<English>Covetous I</English>
+		<French>Cupide I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COVETOUS1_PEDIA</Tag>
@@ -6385,6 +6588,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COVETOUS2</Tag>
 		<English>Covetous II</English>
+		<French>Cupide II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COVETOUS2_PEDIA</Tag>
@@ -6422,6 +6626,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COVETOUS3</Tag>
 		<English>Covetous III</English>
+		<French>Cupide III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COVETOUS3_PEDIA</Tag>
@@ -6459,10 +6664,12 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMBLE</Tag>
 		<English>Humble</English>
+		<French>Humble</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMBLE_STRATEGY</Tag>
 		<English>Generically good in almost all areas of governing.  Investment strategies and warnings are followed (+Gold) and Intelligence Advisors are often sought for advice (+Espionage).  However, lacks for some aggression and in times of great disagreements can greatly struggle to find a good solution to make all sides happy.</English>
+		<French>Généralement bon dans presque tous les domaines de la gouvernance. Les stratégies d'investissement et les avertissements sont suivis (+ or) et les conseillers en renseignement sont souvent recherchés pour des conseils (+ espionnage). Cependant, il manque une certaine agressivité et en période de grands désaccords, il peut être très difficile de trouver une bonne solution pour rendre toutes les parties heureuses.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMBLE_PEDIA</Tag>
@@ -6499,6 +6706,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMBLE1</Tag>
 		<English>Humble I</English>
+		<French>Humble I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMBLE1_PEDIA</Tag>
@@ -6534,6 +6742,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMBLE2</Tag>
 		<English>Humble II</English>
+		<French>Humble II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMBLE2_PEDIA</Tag>
@@ -6570,6 +6779,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMBLE3</Tag>
 		<English>Humble III</English>
+		<French>Humble III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMBLE3_PEDIA</Tag>
@@ -6606,10 +6816,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_MEGALOMANIAC</Tag>
 		<English>Megalomaniac</English>
+		<French>Mégalomaniac</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_MEGALOMANIAC_STRATEGY</Tag>
 		<English>Generically bad in almost all areas of governing.  Bad investments due to arrogance (-Gold) and Intelligence advisors know they will not be heard (-Espionage).</English>
+		<French>Généralement mauvais dans presque tous les domaines de la gouvernance. Mauvais investissements en raison de l'arrogance (-Or) et les conseillers du renseignement savent qu'ils ne seront pas entendus (-Espionnage).</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_MEGALOMANIAC_PEDIA</Tag>
@@ -6646,6 +6858,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_MEGALOMANIAC1</Tag>
 		<English>Megalomaniac I</English>
+		<French>Mégalomaniac I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_MEGALOMANIAC1_PEDIA</Tag>
@@ -6681,6 +6894,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_MEGALOMANIAC2</Tag>
 		<English>Megalomaniac II</English>
+		<French>Mégalomaniac II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_MEGALOMANIAC2_PEDIA</Tag>
@@ -6717,6 +6931,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_MEGALOMANIAC3</Tag>
 		<English>Megalomaniac III</English>
+		<French>Mégalomaniac III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_MEGALOMANIAC3_PEDIA</Tag>
@@ -6753,10 +6968,12 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CIVILIZED</Tag>
 		<English>Civilized</English>
+		<French>Civilisé</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CIVILIZED_STRATEGY</Tag>
 		<English>Weak at war but strong at research and culture.  Builds Wonders faster.</English>
+		<French>Faible en guerre mais fort en recherche et en culture. Construit des merveilles plus rapidement.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CIVILIZED_PEDIA</Tag>
@@ -6796,6 +7013,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CIVILIZED1</Tag>
 		<English>Civilized I</English>
+		<French>Civilisé I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CIVILIZED1_PEDIA</Tag>
@@ -6835,6 +7053,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CIVILIZED2</Tag>
 		<English>Civilized II</English>
+		<French>Civilisé II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CIVILIZED2_PEDIA</Tag>
@@ -6874,6 +7093,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CIVILIZED3</Tag>
 		<English>Civilized III</English>
+		<French>Civilisé III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CIVILIZED3_PEDIA</Tag>
@@ -6913,10 +7133,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_BARBARIC</Tag>
 		<English>Barbaric</English>
+		<French>Barbare</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_BARBARIC_STRATEGY</Tag>
 		<English>Horrible for research and gold but strong with military production and units are decent.  Builds wonders slower.</English>
+		<French>Horrible pour la recherche et l'or mais solide avec la production militaire et les unités sont décentes. Construit des merveilles plus lentement.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_BARBARIC_PEDIA</Tag>
@@ -6956,6 +7178,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_BARBARIC1</Tag>
 		<English>Barbaric I</English>
+		<French>Barbare I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_BARBARIC1_PEDIA</Tag>
@@ -6994,6 +7217,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_BARBARIC2</Tag>
 		<English>Barbaric II</English>
+		<French>Barbare II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_BARBARIC2_PEDIA</Tag>
@@ -7033,6 +7257,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_BARBARIC3</Tag>
 		<English>Barbaric III</English>
+		<French>Barbare III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_BARBARIC3_PEDIA</Tag>
@@ -7072,10 +7297,12 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CHARISMATIC</Tag>
 		<English>Charismatic</English>
+		<French>Charismatique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CHARISMATIC_STRATEGY</Tag>
 		<English>Military benefit from loyalty and strong diplomatic benefits with foreign leaders and the people alike.  Loose lips can sink ships, however, and this guy's got the loosest of all.  Speaks passionately, persuasively, eloquently, and honestly to a fault as he thinks more about how to inspire and less about how to protect his secrets.  Unfortunately, pre-eminent entertainers and politicians tend to follow his example of open expression. Production and Commerce thrive under the security of leadership industry believes in.</English>
+		<French>Les militaires bénéficient de la loyauté et de solides avantages diplomatiques avec les dirigeants étrangers et le peuple. Les lèvres lâches peuvent couler, cependant, et ce gars a le plus lâche de tous. Parle avec passion, persuasion, éloquence et honnêteté d'une faute alors qu'il réfléchit davantage à la façon d'inspirer et moins à la façon de protéger ses secrets. Malheureusement, des artistes et des politiciens de premier plan ont tendance à suivre son exemple d'expression ouverte. La production et le commerce prospèrent sous la sécurité de l'industrie de leadership croit en.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CHARISMATIC_PEDIA</Tag>
@@ -7109,6 +7336,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CHARISMATIC1</Tag>
 		<English>Charismatic I</English>
+		<French>Charismatique I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CHARISMATIC1_PEDIA</Tag>
@@ -7142,6 +7370,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CHARISMATIC2</Tag>
 		<English>Charismatic II</English>
+		<French>Charismatique II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CHARISMATIC2_PEDIA</Tag>
@@ -7175,6 +7404,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CHARISMATIC3</Tag>
 		<English>Charismatic III</English>
+		<French>Charismatique III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CHARISMATIC3_PEDIA</Tag>
@@ -7208,10 +7438,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_TEMPERAMENTAL</Tag>
 		<English>Temperamental</English>
+		<French>Tempéré</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_TEMPERAMENTAL_STRATEGY</Tag>
 		<English>Diplomatically terrible and lacks for troop loyalty.  Less Anarchy time as he has zero tolerance for disagreement.  Less Crime because his punishments are severe.</English>
+		<French>Diplomatiquement terrible et manque de loyauté envers les troupes. Moins de temps d'anarchie car il n'a aucune tolérance aux désaccords. Moins de criminalité car ses peines sont sévères.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_TEMPERAMENTAL_PEDIA</Tag>
@@ -7245,6 +7477,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_TEMPERAMENTAL1</Tag>
 		<English>Temperamental I</English>
+		<French>Tempéré I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_TEMPERAMENTAL1_PEDIA</Tag>
@@ -7278,6 +7511,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_TEMPERAMENTAL2</Tag>
 		<English>Temperamental II</English>
+		<French>Tempéré II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_TEMPERAMENTAL2_PEDIA</Tag>
@@ -7311,6 +7545,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_TEMPERAMENTAL3</Tag>
 		<English>Temperamental III</English>
+		<French>Tempéré III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_TEMPERAMENTAL3_PEDIA</Tag>
@@ -7345,10 +7580,12 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_PHILOSOPHICAL</Tag>
 		<English>Philosophical</English>
+		<French>Philosophe:Philosophe:Philosophes:Philosophes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_PHILOSOPHICAL_STRATEGY</Tag>
 		<English>Strong Great People Growth and improved specialists.  Deep thought is encouraged (+Research) and the financially elite are in favor in governmental policy so are happy to invest (+Gold)</English>
+		<French>Forte croissance de Personnages Illustres et de spécialistes. Une réflexion approfondie est encouragée (+ Recherche) et l'élite financière est favorable à la politique gouvernementale et est donc heureuse d'investir (+ Or)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_PHILOSOPHICAL_PEDIA</Tag>
@@ -7390,6 +7627,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_PHILOSOPHICAL1</Tag>
 		<English>Philosophical I</English>
+		<French>Philosophe:Philosophe:Philosophes:Philosophes I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_PHILOSOPHICAL1_PEDIA</Tag>
@@ -7425,6 +7663,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_PHILOSOPHICAL2</Tag>
 		<English>Philosophical II</English>
+		<French>Philosophe:Philosophe:Philosophes:Philosophes II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_PHILOSOPHICAL2_PEDIA</Tag>
@@ -7461,6 +7700,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_PHILOSOPHICAL3</Tag>
 		<English>Philosophical III</English>
+		<French>Philosophe:Philosophe:Philosophes:Philosophes III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_PHILOSOPHICAL3_PEDIA</Tag>
@@ -7500,10 +7740,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POPULIST</Tag>
 		<English>Populist</English>
+		<French>Poppuliste</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POPULIST_STRATEGY</Tag>
 		<English>Great People rates and specialists are impacted heavily here.  Experts are disdained (-Research) and the Wealthy are compelled to keep a low profile (-Gold) but this keeps government streamlined for the people's needs somewhat.</English>
+		<French>Taux des Personnages illustres et des spécialistes sont fortement impactés ici. Les experts sont dédaignés (-Recherche) et les riches sont obligés de garder un profil bas (-Or) mais cela maintient le gouvernement rationalisé pour les besoins des gens quelque peu.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POPULIST_PEDIA</Tag>
@@ -7544,6 +7786,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POPULIST1</Tag>
 		<English>Populist I</English>
+		<French>Poppuliste I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POPULIST1_PEDIA</Tag>
@@ -7579,6 +7822,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POPULIST2</Tag>
 		<English>Populist II</English>
+		<French>Poppuliste II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POPULIST2_PEDIA</Tag>
@@ -7614,6 +7858,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POPULIST3</Tag>
 		<English>Populist III</English>
+		<French>Poppuliste III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POPULIST3_PEDIA</Tag>
@@ -7651,10 +7896,12 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POLITICIAN</Tag>
 		<English>Politician</English>
+		<French>Politicien</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POLITICIAN_STRATEGY</Tag>
 		<English>Very good at minimizing/eliminating anarchy from civic changes.  Good diplomacy and is compelled to present the nation as a leader on the international scene (+culture) and is savvy of other leader's machinations (+Espionage).  Spends more on upkeep to ensure the best possible governmental functioning.</English>
+		<French>Très bon pour minimiser / éliminer l'anarchie des changements civiques. Bonne diplomatie et est obligé de présenter la nation comme un leader sur la scène internationale (+ culture) et est averti des machinations des autres leaders (+ espionnage). Dépense davantage pour l'entretien afin d'assurer le meilleur fonctionnement gouvernemental possible.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POLITICIAN_PEDIA</Tag>
@@ -7691,6 +7938,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POLITICIAN1</Tag>
 		<English>Politician I</English>
+		<French>Politicien I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POLITICIAN1_PEDIA</Tag>
@@ -7726,6 +7974,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POLITICIAN2</Tag>
 		<English>Politician II</English>
+		<French>Politicien II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POLITICIAN2_PEDIA</Tag>
@@ -7762,6 +8011,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POLITICIAN3</Tag>
 		<English>Politician III</English>
+		<French>Politicien III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POLITICIAN3_PEDIA</Tag>
@@ -7797,10 +8047,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FOREIGN</Tag>
 		<English>Foreigner</English>
+		<French>Lointainer</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FOREIGN_STRATEGY</Tag>
 		<English>Has difficulty with resistance to his authority and government doesn't function very well as a result.  Others resist any changes he wishes to implement.  National Pride is lacking (-Culture) and foreign sympathies leaves him blinded (-Espionage)</English>
+		<French>A du mal à résister à son autorité et le gouvernement ne fonctionne pas très bien en conséquence. D'autres résistent à tout changement qu'il souhaite mettre en œuvre. La fierté nationale fait défaut (-Culture) et les sympathies étrangères le rendent aveugle (-Espionnage)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FOREIGN_PEDIA</Tag>
@@ -7837,6 +8089,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FOREIGN1</Tag>
 		<English>Foreigner I</English>
+		<French>Lointainer I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FOREIGN1_PEDIA</Tag>
@@ -7871,6 +8124,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FOREIGN2</Tag>
 		<English>Foreigner II</English>
+		<French>Lointainer II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FOREIGN2_PEDIA</Tag>
@@ -7906,6 +8160,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FOREIGN3</Tag>
 		<English>Foreigner III</English>
+		<French>Lointainer III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FOREIGN3_PEDIA</Tag>
@@ -7940,10 +8195,12 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_REVOLUTIONARY</Tag>
 		<English>Revolutionary</English>
+		<French>Révolutionaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_REVOLUTIONARY_STRATEGY</Tag>
 		<English>Good Happiness, Strong Specialists, Extremely good at avoiding revolt.  A little less productive but compensates when building military. Extra expenses in setting up government. National Pride is high (+Culture) and innovative traders are enjoying their new freedoms (+Gold)</English>
+		<French>Bon bonheur, spécialistes solides, extrêmement bon pour éviter la révolte. Un peu moins productif mais compense lors de la construction militaire. Dépenses supplémentaires pour la mise en place du gouvernement. La fierté nationale est élevée (+ Culture) et les commerçants innovants profitent de leurs nouvelles libertés (+ Gold)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_REVOLUTIONARY_PEDIA</Tag>
@@ -7983,6 +8240,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_REVOLUTIONARY1</Tag>
 		<English>Revolutionary I</English>
+		<French>Révolutionaire I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_REVOLUTIONARY1_PEDIA</Tag>
@@ -8021,6 +8279,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_REVOLUTIONARY2</Tag>
 		<English>Revolutionary II</English>
+		<French>Révolutionaire II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_REVOLUTIONARY2_PEDIA</Tag>
@@ -8060,6 +8319,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_REVOLUTIONARY3</Tag>
 		<English>Revolutionary III</English>
+		<French>Révolutionaire III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_REVOLUTIONARY3_PEDIA</Tag>
@@ -8099,10 +8359,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_USURPER</Tag>
 		<English>Usurper</English>
+		<French>Usurpateur</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_USURPER_STRATEGY</Tag>
 		<English>Large national instability problems. Less government expenses as bureaucracy has been eliminated so all authority is focused on new leader.  The nation is ashamed of itself (-Culture) and economic uncertainty is high (-Gold).</English>
+		<French>Grands problèmes d'instabilité nationale. Moins de dépenses gouvernementales car la bureaucratie a été éliminée, donc toute autorité est concentrée sur le nouveau chef. La nation a honte d'elle-même (-Culture) et l'incertitude économique est élevée (-Or).</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_USURPER_PEDIA</Tag>
@@ -8138,6 +8400,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_USURPER1</Tag>
 		<English>Usurper I</English>
+		<French>Usurpateur I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_USURPER1_PEDIA</Tag>
@@ -8171,6 +8434,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_USURPER2</Tag>
 		<English>Usurper II</English>
+		<French>Usurpateur II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_USURPER2_PEDIA</Tag>
@@ -8206,6 +8470,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_USURPER3</Tag>
 		<English>Usurper III</English>
+		<French>Usurpateur III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_USURPER3_PEDIA</Tag>
@@ -8242,10 +8507,12 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_EXPANSIVE</Tag>
 		<English>Expansive</English>
+		<French>Accessible:Accessible:Accessibles:Accessibles</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_EXPANSIVE_STRATEGY</Tag>
 		<English>Fast Development of the land and seeding of new cities</English>
+		<French>Développement rapide des terres et ensemencement de nouvelles villes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_EXPANSIVE_PEDIA</Tag>
@@ -8282,6 +8549,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_EXPANSIVE1</Tag>
 		<English>Expansive I</English>
+		<French>Accessible:Accessible:Accessibles:Accessibles I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_EXPANSIVE1_PEDIA</Tag>
@@ -8318,6 +8586,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_EXPANSIVE2</Tag>
 		<English>Expansive II</English>
+		<French>Accessible:Accessible:Accessibles:Accessibles II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_EXPANSIVE2_PEDIA</Tag>
@@ -8354,6 +8623,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_EXPANSIVE3</Tag>
 		<English>Expansive III</English>
+		<French>Accessible:Accessible:Accessibles:Accessibles III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_EXPANSIVE3_PEDIA</Tag>
@@ -8390,10 +8660,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MINIMALIST</Tag>
 		<English>Minimalist</English>
+		<French>Minimaliste</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MINIMALIST_STRATEGY</Tag>
 		<English>Poor land development and city seeding speed.</English>
+		<French>Mauvais développement des terres et vitesse d'ensemencement des villes.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MINIMALIST_PEDIA</Tag>
@@ -8431,6 +8703,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MINIMALIST1</Tag>
 		<English>Minimalist I</English>
+		<French>Minimaliste I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MINIMALIST1_PEDIA</Tag>
@@ -8468,6 +8741,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MINIMALIST2</Tag>
 		<English>Minimalist II</English>
+		<French>Minimaliste II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MINIMALIST2_PEDIA</Tag>
@@ -8505,6 +8779,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MINIMALIST3</Tag>
 		<English>Minimalist III</English>
+		<French>Minimaliste III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MINIMALIST3_PEDIA</Tag>
@@ -8542,10 +8817,12 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROLIFIC</Tag>
 		<English>Prolific</English>
+		<French>Prolifique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROLIFIC_STRATEGY</Tag>
 		<English>Population growth benefits with some Gold penalties</English>
+		<French>La croissance de la population profite de quelques pénalités d'or</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROLIFIC_PEDIA</Tag>
@@ -8578,6 +8855,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROLIFIC1</Tag>
 		<English>Prolific I</English>
+		<French>Prolifique I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROLIFIC1_PEDIA</Tag>
@@ -8608,6 +8886,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROLIFIC2</Tag>
 		<English>Prolific II</English>
+		<French>Prolifique II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROLIFIC2_PEDIA</Tag>
@@ -8641,6 +8920,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROLIFIC3</Tag>
 		<English>Prolific III</English>
+		<French>Prolifique III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROLIFIC3_PEDIA</Tag>
@@ -8673,10 +8953,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GRIM</Tag>
 		<English>Grim</English>
+		<French>Sinistre</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GRIM_STRATEGY</Tag>
 		<English>Poor Food and Commerce and Population growth but improved Gold income</English>
+		<French>Pauvre alimentation et commerce et croissance de la population mais amélioration du revenu de l'or</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GRIM_PEDIA</Tag>
@@ -8717,6 +8999,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GRIM1</Tag>
 		<English>Grim I</English>
+		<French>Sinistre I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GRIM1_PEDIA</Tag>
@@ -8756,6 +9039,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GRIM2</Tag>
 		<English>Grim II</English>
+		<French>Sinistre II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GRIM2_PEDIA</Tag>
@@ -8796,6 +9080,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GRIM3</Tag>
 		<English>Grim III</English>
+		<French>Sinistre III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GRIM3_PEDIA</Tag>
@@ -8836,10 +9121,12 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ORGANIZED</Tag>
 		<English>Organized</English>
+		<French>Organisé:Organisée:Organisés:Organisées</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ORGANIZED_STRATEGY</Tag>
 		<English>Gains a highly lubricated government.  Low upkeep and faster results.  Leader and his followers are not as mentally agile so since war is chaotic it is irritating to the habit driven people, and it takes longer to reorganize the government properly after a change in policies.</English>
+		<French>Obtient un gouvernement hautement lubrifié. Faible entretien et résultats plus rapides. Leader et ses partisans ne sont pas aussi agiles mentalement, donc comme la guerre est chaotique, elle est irritante pour les gens qui ont des habitudes, et il faut plus de temps pour réorganiser correctement le gouvernement après un changement de politique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ORGANIZED_PEDIA</Tag>
@@ -8877,6 +9164,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ORGANIZED1</Tag>
 		<English>Organized I</English>
+		<French>Organisé:Organisée:Organisés:Organisées I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ORGANIZED1_PEDIA</Tag>
@@ -8912,6 +9200,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ORGANIZED2</Tag>
 		<English>Organized II</English>
+		<French>Organisé:Organisée:Organisés:Organisées II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ORGANIZED2_PEDIA</Tag>
@@ -8948,6 +9237,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ORGANIZED3</Tag>
 		<English>Organized III</English>
+		<French>Organisé:Organisée:Organisés:Organisées III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ORGANIZED3_PEDIA</Tag>
@@ -8984,10 +9274,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IMPULSIVE</Tag>
 		<English>Impulsive</English>
+		<French>Impulsif</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IMPULSIVE_STRATEGY</Tag>
 		<English>You suffer from a lot more upkeep and your people aren't as productive and suffer from a lack of organization.  However, your military isn't as scared to specialize in whatever seems needed at the time.</English>
+		<French>Vous souffrez de beaucoup plus d'entretien et vos employés ne sont pas aussi productifs et souffrent d'un manque d'organisation. Cependant, vos militaires n'ont pas aussi peur de se spécialiser dans ce qui semble nécessaire à l'époque.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IMPULSIVE_PEDIA</Tag>
@@ -9025,6 +9317,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IMPULSIVE1</Tag>
 		<English>Impulsive I</English>
+		<French>Impulsif I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IMPULSIVE1_PEDIA</Tag>
@@ -9060,6 +9353,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IMPULSIVE2</Tag>
 		<English>Impulsive II</English>
+		<French>Impulsif II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IMPULSIVE2_PEDIA</Tag>
@@ -9097,6 +9391,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IMPULSIVE3</Tag>
 		<English>Impulsive III</English>
+		<French>Impulsif III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IMPULSIVE3_PEDIA</Tag>
@@ -9134,10 +9429,12 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DYNAMIC</Tag>
 		<English>Dynamic</English>
+		<French>Dynamique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DYNAMIC_STRATEGY</Tag>
 		<English>Production bonuses and efficiency benefits but can lack for quality and can lead to long term unnecessary expenses due to accounting errors in the system.  Runs out of patience even with positive things.  Fast wonder builder.</English>
+		<French>Des primes de production et des gains d'efficacité mais peuvent manquer de qualité et entraîner des dépenses inutiles à long terme en raison d'erreurs comptables dans le système. Manque de patience même avec des choses positives. Constructeur de merveilles rapide.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DYNAMIC_PEDIA</Tag>
@@ -9177,6 +9474,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DYNAMIC1</Tag>
 		<English>Dynamic I</English>
+		<French>Dynamique I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DYNAMIC1_PEDIA</Tag>
@@ -9214,6 +9512,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DYNAMIC2</Tag>
 		<English>Dynamic II</English>
+		<French>Dynamique II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DYNAMIC2_PEDIA</Tag>
@@ -9253,6 +9552,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DYNAMIC3</Tag>
 		<English>Dynamic III</English>
+		<French>Dynamique III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DYNAMIC3_PEDIA</Tag>
@@ -9292,10 +9592,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_STUBBORN</Tag>
 		<English>Stubborn</English>
+		<French>Têtu</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_STUBBORN_STRATEGY</Tag>
 		<English>A lot gets done a lot slower in this empire but there are a few places where the extra care and attention can pay off.  This leader almost seems to balk at all suggestions and thus avoid good decisions specifically because others want him to make them.</English>
+		<French>Beaucoup se fait beaucoup plus lentement dans cet empire, mais il y a quelques endroits où le soin et l'attention supplémentaires peuvent porter leurs fruits. Ce leader semble presque reculer devant toutes les suggestions et éviter ainsi les bonnes décisions, notamment parce que d'autres veulent qu'il les fasse.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_STUBBORN_PEDIA</Tag>
@@ -9334,6 +9636,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_STUBBORN1</Tag>
 		<English>Stubborn I</English>
+		<French>Têtu I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_STUBBORN1_PEDIA</Tag>
@@ -9370,6 +9673,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_STUBBORN2</Tag>
 		<English>Stubborn II</English>
+		<French>Têtu II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_STUBBORN2_PEDIA</Tag>
@@ -9408,6 +9712,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_STUBBORN3</Tag>
 		<English>Stubborn III</English>
+		<French>Têtu III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_STUBBORN3_PEDIA</Tag>
@@ -9446,10 +9751,12 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PRAGMATIC</Tag>
 		<English>Pragmatic</English>
+		<French>Pragmatique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PRAGMATIC_STRATEGY</Tag>
 		<English>Gains wide ranging benefits but can be unpopular with his people as he seems to be a bit of a downer. Invests a little more than he could but gets what he pays for.</English>
+		<French>Bénéficie de nombreux avantages mais peut être impopulaire auprès de son peuple car il semble être un peu déprimant. Investit un peu plus qu'il ne pouvait, mais obtient ce pour quoi il paie.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PRAGMATIC_PEDIA</Tag>
@@ -9484,6 +9791,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PRAGMATIC1</Tag>
 		<English>Pragmatic I</English>
+		<French>Pragmatique I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PRAGMATIC1_PEDIA</Tag>
@@ -9518,6 +9826,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PRAGMATIC2</Tag>
 		<English>Pragmatic II</English>
+		<French>Pragmatique II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PRAGMATIC2_PEDIA</Tag>
@@ -9552,6 +9861,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PRAGMATIC3</Tag>
 		<English>Pragmatic III</English>
+		<French>Pragmatique III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PRAGMATIC3_PEDIA</Tag>
@@ -9586,10 +9896,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_IDEALISTIC</Tag>
 		<English>Idealistic</English>
+		<French>Idéaliste</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_IDEALISTIC_STRATEGY</Tag>
 		<English>Suffers penalties in almost all areas but minor ones, and gains a few benefits in the process, such as in diplomacy and happiness.</English>
+		<French>Subit des pénalités dans presque tous les domaines sauf les mineurs, et gagne quelques avantages dans le processus, comme dans la diplomatie et le bonheur.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_IDEALISTIC_PEDIA</Tag>
@@ -9624,6 +9936,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_IDEALISTIC1</Tag>
 		<English>Idealistic I</English>
+		<French>Idéaliste I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_IDEALISTIC1_PEDIA</Tag>
@@ -9658,6 +9971,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_IDEALISTIC2</Tag>
 		<English>Idealistic II</English>
+		<French>Idéaliste II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_IDEALISTIC2_PEDIA</Tag>
@@ -9692,6 +10006,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_IDEALISTIC3</Tag>
 		<English>Idealistic III</English>
+		<French>Idéaliste III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_IDEALISTIC3_PEDIA</Tag>
@@ -9726,10 +10041,12 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_HUMANITARIAN</Tag>
 		<English>Humanitarian</English>
+		<French>Humanitaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_HUMANITARIAN_STRATEGY</Tag>
 		<English>Strong Happiness and Health and well insulated against revolution and reduces both Crime and Disease. Powerful Healers.  Takes a slight production hit for redirected efforts of kindness.</English>
+		<French>Fort bonheur et santé et bien isolé contre la révolution et réduit à la fois le crime et les maladies. Guérisseurs puissants. Prend un léger coup de production pour rediriger les efforts de gentillesse.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_HUMANITARIAN_PEDIA</Tag>
@@ -9771,6 +10088,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_HUMANITARIAN1</Tag>
 		<English>Humanitarian I</English>
+		<French>Humanitaire I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_HUMANITARIAN1_PEDIA</Tag>
@@ -9812,6 +10130,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_HUMANITARIAN2</Tag>
 		<English>Humanitarian II</English>
+		<French>Humanitaire II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_HUMANITARIAN2_PEDIA</Tag>
@@ -9853,6 +10172,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_HUMANITARIAN3</Tag>
 		<English>Humanitarian III</English>
+		<French>Humanitaire III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_HUMANITARIAN3_PEDIA</Tag>
@@ -9890,10 +10210,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CRUEL</Tag>
 		<English>Cruel</English>
+		<French>Cruel</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CRUEL_STRATEGY</Tag>
 		<English>Gets some small production benefit at the cost of less happiness, health, and empire stability</English>
+		<French>Obtient de petits avantages de production au prix de moins de bonheur, de santé et de stabilité de l'empire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CRUEL_PEDIA</Tag>
@@ -9935,6 +10257,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CRUEL1</Tag>
 		<English>Cruel I</English>
+		<French>Cruel I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CRUEL1_PEDIA</Tag>
@@ -9976,6 +10299,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CRUEL2</Tag>
 		<English>Cruel II</English>
+		<French>Cruel II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CRUEL2_PEDIA</Tag>
@@ -10017,6 +10341,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CRUEL3</Tag>
 		<English>Cruel III</English>
+		<French>Cruel III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CRUEL3_PEDIA</Tag>
@@ -10054,10 +10379,12 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LAWFUL</Tag>
 		<English>Lawful</English>
+		<French>Légitime</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LAWFUL_STRATEGY</Tag>
 		<English>No society is fit to function until all of its people can learn to follow the laws as established.  Enforcing them is of the utmost importance.</English>
+		<French>Aucune société n'est apte à fonctionner tant que tous ses habitants ne peuvent pas apprendre à suivre les lois établies. Leur application est de la plus haute importance.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LAWFUL_PEDIA</Tag>
@@ -10106,6 +10433,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LAWFUL1</Tag>
 		<English>Lawful I</English>
+		<French>Légitime I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LAWFUL1_PEDIA</Tag>
@@ -10150,6 +10478,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LAWFUL2</Tag>
 		<English>Lawful II</English>
+		<French>Légitime II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LAWFUL2_PEDIA</Tag>
@@ -10194,6 +10523,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LAWFUL3</Tag>
 		<English>Lawful III</English>
+		<French>Légitime III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LAWFUL3_PEDIA</Tag>
@@ -10238,10 +10568,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CROOKED</Tag>
 		<English>Crooked</English>
+		<French>Cagneux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CROOKED_STRATEGY</Tag>
 		<English>Suffers great crime for some small benefits.  Does train more potent criminals.</English>
+		<French>Subit un grand crime pour quelques petits avantages. Entraîne des criminels plus puissants.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CROOKED_PEDIA</Tag>
@@ -10290,6 +10622,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CROOKED1</Tag>
 		<English>Crooked I</English>
+		<French>Cagneux I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CROOKED1_PEDIA</Tag>
@@ -10335,6 +10668,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CROOKED2</Tag>
 		<English>Crooked II</English>
+		<French>Cagneux II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CROOKED2_PEDIA</Tag>
@@ -10382,6 +10716,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CROOKED3</Tag>
 		<English>Crooked III</English>
+		<French>Cagneux III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CROOKED3_PEDIA</Tag>
@@ -10429,10 +10764,12 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEDICAL</Tag>
 		<English>Medical</English>
+		<French>Médical</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEDICAL_STRATEGY</Tag>
 		<English>Strong Disease Fighting and Health.  A little expensive to maintain.  Focused more on the clinical side of healing than overall caring for the people.  Powerful healers and inspiring Doctors.</English>
+		<French>Forte lutte contre les maladies et santé. Un peu cher à entretenir. Plus axé sur l'aspect clinique de la guérison que sur la prise en charge globale des personnes. Guérisseurs puissants et médecins inspirants.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEDICAL_PEDIA</Tag>
@@ -10473,6 +10810,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEDICAL1</Tag>
 		<English>Medical I</English>
+		<French>Médical I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEDICAL1_PEDIA</Tag>
@@ -10511,6 +10849,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEDICAL2</Tag>
 		<English>Medical II</English>
+		<French>Médical II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEDICAL2_PEDIA</Tag>
@@ -10550,6 +10889,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEDICAL3</Tag>
 		<English>Medical III</English>
+		<French>Médical III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEDICAL3_PEDIA</Tag>
@@ -10590,10 +10930,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNSANITARY</Tag>
 		<English>Unsanitary</English>
+		<French>Malsain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNSANITARY_STRATEGY</Tag>
 		<English>Suffers from high disease rates.  People worry about becoming sick without proper medical care.</English>
+		<French>Souffre de taux de maladie élevés. Les gens craignent de tomber malades sans soins médicaux appropriés.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNSANITARY_PEDIA</Tag>
@@ -10635,6 +10977,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNSANITARY1</Tag>
 		<English>Unsanitary I</English>
+		<French>Malsain I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNSANITARY1_PEDIA</Tag>
@@ -10674,6 +11017,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNSANITARY2</Tag>
 		<English>Unsanitary II</English>
+		<French>Malsain II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNSANITARY2_PEDIA</Tag>
@@ -10714,6 +11058,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNSANITARY3</Tag>
 		<English>Unsanitary III</English>
+		<French>Malsain III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNSANITARY3_PEDIA</Tag>
@@ -10755,10 +11100,12 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NATURALIST</Tag>
 		<English>Naturalist</English>
+		<French>Naturaliste</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NATURALIST_STRATEGY</Tag>
 		<English>Very good at combating pollution.  People are happy living in cleanliness.</English>
+		<French>Très bon pour lutter contre la pollution. Les gens sont heureux de vivre dans la propreté.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NATURALIST_PEDIA</Tag>
@@ -10801,6 +11148,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NATURALIST1</Tag>
 		<English>Naturalist I</English>
+		<French>Naturaliste I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NATURALIST1_PEDIA</Tag>
@@ -10841,6 +11189,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NATURALIST2</Tag>
 		<English>Naturalist II</English>
+		<French>Naturaliste II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NATURALIST2_PEDIA</Tag>
@@ -10879,6 +11228,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NATURALIST3</Tag>
 		<English>Naturalist III</English>
+		<French>Naturaliste III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NATURALIST3_PEDIA</Tag>
@@ -10916,10 +11266,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SLOB</Tag>
 		<English>Slob</English>
+		<French>Plouc</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SLOB_STRATEGY</Tag>
 		<English>Suffers from high pollution.  People are often disgusted with their own nation.</English>
+		<French>Souffre d'une forte pollution. Les gens sont souvent dégoûtés de leur propre nation.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SLOB_PEDIA</Tag>
@@ -10960,6 +11312,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SLOB1</Tag>
 		<English>Slob I</English>
+		<French>Plouc I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SLOB1_PEDIA</Tag>
@@ -10996,6 +11349,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SLOB2</Tag>
 		<English>Slob II</English>
+		<French>Plouc II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SLOB2_PEDIA</Tag>
@@ -11032,6 +11386,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SLOB3</Tag>
 		<English>Slob III</English>
+		<French>Plouc III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SLOB3_PEDIA</Tag>
@@ -11067,10 +11422,12 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HONEST</Tag>
 		<English>Honest</English>
+		<French>Honnête</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HONEST_STRATEGY</Tag>
 		<English>Education benefits.  Political and trade benefits.  Nation is much more powerful during Golden Ages, though those are a bit shorter.  Popular.  Can suffer with some Espionage penalties.</English>
+		<French>Avantages d'éducation. Avantages politiques et commerciaux. Nation est beaucoup plus puissant pendant l'âge d'or, bien que ceux-ci soient un peu plus courts. Populaire. Peut souffrir avec quelques pénalités d'espionnage.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HONEST_PEDIA</Tag>
@@ -11105,6 +11462,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HONEST1</Tag>
 		<English>Honest I</English>
+		<French>Honnête I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HONEST1_PEDIA</Tag>
@@ -11137,6 +11495,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HONEST2</Tag>
 		<English>Honest II</English>
+		<French>Honnête II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HONEST2_PEDIA</Tag>
@@ -11169,6 +11528,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HONEST3</Tag>
 		<English>Honest III</English>
+		<French>Honnête III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HONEST3_PEDIA</Tag>
@@ -11202,10 +11562,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LIAR</Tag>
 		<English>Liar</English>
+		<French>Menteur</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LIAR_STRATEGY</Tag>
 		<English>Gets some espionage benefits but is not trusted.  Education penalized, which can be a benefit to a leader who doesn't want people understanding what they are up to.</English>
+		<French>Obtient des avantages d'espionnage mais n'est pas fiable. L'éducation est pénalisée, ce qui peut être un avantage pour un leader qui ne veut pas que les gens comprennent ce qu'ils font.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LIAR_PEDIA</Tag>
@@ -11240,6 +11602,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LIAR1</Tag>
 		<English>Liar I</English>
+		<French>Menteur I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LIAR1_PEDIA</Tag>
@@ -11272,6 +11635,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LIAR2</Tag>
 		<English>Liar II</English>
+		<French>Menteur II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LIAR2_PEDIA</Tag>
@@ -11304,6 +11668,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LIAR3</Tag>
 		<English>Liar III</English>
+		<French>Menteur III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LIAR3_PEDIA</Tag>
@@ -11337,10 +11702,12 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROGRESSIVE</Tag>
 		<English>Progressive</English>
+		<French>Progressiste</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROGRESSIVE_STRATEGY</Tag>
 		<English>Numerous very unique benefits are derived from valuing Human rights.  Golden Ages last a lot longer.  Cities don't require as much food to grow.  You gain free Specialists from Wonders.  Crime, Disease and Education are improved.</English>
+		<French>De nombreux avantages très uniques découlent de la valorisation des droits de l'homme. L'âge d'or dure beaucoup plus longtemps. Les villes n'ont pas besoin d'autant de nourriture pour grandir. Vous obtenez gratuitement des spécialistes des merveilles. La criminalité, les maladies et l'éducation sont améliorées.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROGRESSIVE_PEDIA</Tag>
@@ -11375,6 +11742,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROGRESSIVE1</Tag>
 		<English>Progressive I</English>
+		<French>Progressiste I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROGRESSIVE1_PEDIA</Tag>
@@ -11407,6 +11775,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROGRESSIVE2</Tag>
 		<English>Progressive II</English>
+		<French>Progressiste II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROGRESSIVE2_PEDIA</Tag>
@@ -11440,6 +11809,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROGRESSIVE3</Tag>
 		<English>Progressive III</English>
+		<French>Progressiste III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROGRESSIVE3_PEDIA</Tag>
@@ -11471,10 +11841,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BIGOT</Tag>
 		<English>Bigot</English>
+		<French>Bigot</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BIGOT_STRATEGY</Tag>
 		<English>Less happy.  Not as quick to birth Great People or grow cities.  Stronger slaves and a more conscriptable populace and you draft a segment of any conquered population as soon as you invade a city.  Reluctant to adopt new religious views and more judgmental and suppressive of those not adopted, but cities automatically adopt your State Religion.  Diplomatic and foreign trade penalty.  Suffers from higher crime and disease and lower education.</English>
+		<French>Moins heureux. Pas aussi rapide pour faire naître des Personnages illustres ou développer des villes. Des esclaves plus forts et une population plus enrôlable et vous rédigez un segment de toute population conquise dès que vous envahissez une ville. Réticents à adopter de nouvelles opinions religieuses et plus de jugement et de suppression de ceux qui ne sont pas adoptés, mais les villes adoptent automatiquement votre religion d'État. Sanction diplomatique et commerce extérieur. Souffre d'une criminalité et d'une maladie plus élevées et d'une éducation plus faible.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BIGOT_PEDIA</Tag>
@@ -11513,6 +11885,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BIGOT1</Tag>
 		<English>Bigot I</English>
+		<French>Bigot I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BIGOT1_PEDIA</Tag>
@@ -11548,6 +11921,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BIGOT2</Tag>
 		<English>Bigot II</English>
+		<French>Bigot II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BIGOT2_PEDIA</Tag>
@@ -11584,6 +11958,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BIGOT3</Tag>
 		<English>Bigot III</English>
+		<French>Bigot III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BIGOT3_PEDIA</Tag>
@@ -11620,10 +11995,12 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_HUNTER_GATHERER</Tag>
 		<English>Hunter-Gatherer</English>
+		<French>Chasseur-Cueilleur</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_HUNTER_GATHERER_STRATEGY</Tag>
 		<English>A very humble leader who wishes to minimize the impact of his civilization.  Fewer Great People, Slower wonders, Less Commerces and Production but a bit more Food and Reduced Pollution.  Less Education.</English>
+		<French>Un leader très humble qui souhaite minimiser l'impact de sa civilisation. Moins de gens formidables, des merveilles plus lentes, moins de commerce et de production mais un peu plus de nourriture et une pollution réduite. Moins d'éducation.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_HUNTER_GATHERER_PEDIA</Tag>
@@ -11659,6 +12036,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_HUNTER_GATHERER1</Tag>
 		<English>Hunter-Gatherer I</English>
+		<French>Chasseur-Cueilleur I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_HUNTER_GATHERER1_PEDIA</Tag>
@@ -11691,6 +12069,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_HUNTER_GATHERER2</Tag>
 		<English>Hunter-Gatherer II</English>
+		<French>Chasseur-Cueilleur II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_HUNTER_GATHERER2_PEDIA</Tag>
@@ -11726,6 +12105,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_HUNTER_GATHERER3</Tag>
 		<English>Hunter-Gatherer III</English>
+		<French>Chasseur-Cueilleur III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_HUNTER_GATHERER3_PEDIA</Tag>

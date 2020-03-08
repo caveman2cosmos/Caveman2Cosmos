@@ -8,7 +8,6 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<!-- Bead Factory -->
-			<BuildingClass>BUILDINGCLASS_BEAD_FACTORY</BuildingClass>
 			<Type>BUILDING_BEAD_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_BEAD_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BEAD_FACTORY_PEDIA</Civilopedia>
@@ -27,36 +26,24 @@
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqBonuses>
 				<Bonus>BONUS_PLASTIC</Bonus>
-				<Bonus>BONUS_GLASS</Bonus>
+				<Bonus>BONUS_GLASSWARE</Bonus>
 				<Bonus>BONUS_SHELLFISH</Bonus>
 				<Bonus>BONUS_OBSIDIAN</Bonus>
 				<Bonus>BONUS_FINE_CLAY</Bonus>
 				<Bonus>BONUS_CLAY</Bonus>
 			</PrereqBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_FACTORY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_BEADMAKER_WORKSHOP</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BEADMAKER_WORKSHOP</BuildingClassType>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FACTORY</BuildingType>
+				<BuildingType>BUILDING_BEADMAKER_WORKSHOP</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_BEADMAKER_WORKSHOP</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
 			<!-- Construction cost -->
 			<iCost>710</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_NOMAD</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<CommerceChanges>
@@ -79,7 +66,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_GEMS</BonusType>
+					<BonusType>BONUS_GEMSTONE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -109,7 +96,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_GLASS</BonusType>
+					<BonusType>BONUS_GLASSWARE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -147,7 +134,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Beadmaker's Hut -->
-			<BuildingClass>BUILDINGCLASS_BEADMAKER</BuildingClass>
 			<Type>BUILDING_BEADMAKER</Type>
 			<Description>TXT_KEY_BUILDING_BEADMAKER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BEADMAKER_PEDIA</Civilopedia>
@@ -164,46 +150,40 @@
 			<PrereqTech>TECH_BEAD_MAKING</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_BONE</Bonus>
-				<Bonus>BONUS_GLASS</Bonus>
+				<Bonus>BONUS_GLASSWARE</Bonus>
 				<Bonus>BONUS_SHELLFISH</Bonus>
 				<Bonus>BONUS_OBSIDIAN</Bonus>
 				<Bonus>BONUS_FINE_CLAY</Bonus>
 				<Bonus>BONUS_CLAY</Bonus>
 			</PrereqBonuses>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_STORAGE_PIT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BARTER_POST</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_VIKING_TRADING_POST</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_BARTER_POST</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<!-- Obsolescence -->
 			<!--ObsoleteTech>TECH_INDUSTRIALISM</ObsoleteTech>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_BEADMAKER_WORKSHOP</BuildingClassType>
+					<BuildingType>BUILDING_BEADMAKER_WORKSHOP</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_BEAD_FACTORY</BuildingClassType>
+					<BuildingType>BUILDING_BEAD_FACTORY</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings-->
 			<!-- Construction cost -->
 			<iCost>56</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_NOMAD</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
@@ -225,7 +205,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_GEMS</BonusType>
+					<BonusType>BONUS_GEMSTONE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -267,7 +247,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Beadmaker's Workshop -->
-			<BuildingClass>BUILDINGCLASS_BEADMAKER_WORKSHOP</BuildingClass>
 			<Type>BUILDING_BEADMAKER_WORKSHOP</Type>
 			<Description>TXT_KEY_BUILDING_BEADMAKER_WORKSHOP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BEADMAKER_WORKSHOP_PEDIA</Civilopedia>
@@ -284,46 +263,37 @@
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_BONE</Bonus>
-				<Bonus>BONUS_GLASS</Bonus>
+				<Bonus>BONUS_GLASSWARE</Bonus>
 				<Bonus>BONUS_SHELLFISH</Bonus>
 				<Bonus>BONUS_OBSIDIAN</Bonus>
 				<Bonus>BONUS_FINE_CLAY</Bonus>
 				<Bonus>BONUS_CLAY</Bonus>
 			</PrereqBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_BEADMAKER</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<!--PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_VIKING_TRADING_POST</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses-->
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BEADMAKER</BuildingClassType>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_BEADMAKER</BuildingType>
+			</PrereqInCityBuildings>
+			<!--PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings-->
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_BEADMAKER</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
 			<!-- Obsolescence -->
 			<!--ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_BEAD_FACTORY</BuildingClassType>
+					<BuildingType>BUILDING_BEAD_FACTORY</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings-->
 			<!-- Construction cost -->
 			<iCost>332</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_NOMAD</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
@@ -345,7 +315,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_GEMS</BonusType>
+					<BonusType>BONUS_GEMSTONE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -369,7 +339,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_GLASS</BonusType>
+					<BonusType>BONUS_GLASSWARE</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>

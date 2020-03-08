@@ -38,7 +38,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
@@ -98,8 +98,8 @@
 		</ImprovementInfo>
 		<!-- Stone Circle -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_STONECIRCLE</Type>
-			<Description>TXT_KEY_IMPROVEMENT_STONECIRCLE</Description>
+			<Type>IMPROVEMENT_STONE_CIRCLE</Type>
+			<Description>TXT_KEY_IMPROVEMENT_STONE_CIRCLE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SACRED_SITE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_STONEHENGE</ArtDefineTag>
 			<YieldChanges>
@@ -123,7 +123,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
@@ -293,7 +293,7 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_FOREST_OLD</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
@@ -378,15 +378,15 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>

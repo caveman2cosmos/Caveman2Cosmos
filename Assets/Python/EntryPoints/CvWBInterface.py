@@ -30,8 +30,8 @@ def adjustMap( fileName ):
 	print "--- adjustMap(fileName) --- %s" % (fileName)
 	global lastFileChecked
 	global addTeam, addPlayer
-	maxTeams = GC.getMAX_CIV_TEAMS()
-	maxPlayers = GC.getMAX_CIV_PLAYERS()
+	maxTeams = GC.getMAX_PC_TEAMS()
+	maxPlayers = GC.getMAX_PC_PLAYERS()
 
 	# test if file already adjusted
 	if fileName == lastFileChecked:
@@ -267,7 +267,7 @@ def isRandomMap():
 # after reading a save file, return player data as a tuple, terminated by -1
 def getPlayerData():
 	t = ()
-	for i in xrange(GC.getMAX_CIV_PLAYERS()):
+	for i in xrange(GC.getMAX_PC_PLAYERS()):
 		t += (
 			GC.getInfoTypeForString(WBDesc.playersDesc[i].civType), WBDesc.playersDesc[i].isPlayableCiv, GC.getInfoTypeForString(WBDesc.playersDesc[i].leaderType),
 			GC.getInfoTypeForString(WBDesc.playersDesc[i].handicap), WBDesc.playersDesc[i].team, GC.getInfoTypeForString(WBDesc.playersDesc[i].color),
@@ -278,6 +278,6 @@ def getPlayerData():
 # after reading a save file, return player description data (wide strings) as a tuple
 def getPlayerDesc():
 	t = ()
-	for i in xrange(GC.getMAX_CIV_PLAYERS()):
+	for i in xrange(GC.getMAX_PC_PLAYERS()):
 		t += (WBDesc.playersDesc[i].szCivDesc, WBDesc.playersDesc[i].szCivShortDesc, WBDesc.playersDesc[i].szLeaderName, WBDesc.playersDesc[i].szCivAdjective, WBDesc.playersDesc[i].szFlagDecal)
 	return t

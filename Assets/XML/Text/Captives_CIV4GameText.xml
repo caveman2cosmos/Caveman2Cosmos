@@ -28,6 +28,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAPTIVE_MILITARY_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Upgrade to Military or Worker unit. Force build [COLOR_UNIT_TEXT]Improvement[COLOR_REVERT] or [COLOR_UNIT_TEXT]Building[COLOR_REVERT]. Sacrifice or join city.</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Peut être converti en unité militaire ou ouvrière. Peut construire de manière forcée un [COLOR_UNIT_TEXT]aménagement[COLOR_REVERT] ou [COLOR_UNIT_TEXT]Bâtiment[COLOR_REVERT]. Peut être Sacrifié ou rejoindre une ville.</French>
 		<Italian>Può essere migliorato in un lavoratore o in un'unità militare. Può essere costretto a realizzare [COLOR_UNIT_TEXT]Miglioramenti[COLOR_REVERT] o [COLOR_UNIT_TEXT]Edifici[COLOR_REVERT]. Può essere sacrificato o essere aggiunto alla città.</Italian>
 	</TEXT>
 	<TEXT>
@@ -39,6 +40,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAPTIVE_MILITARY_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Captive - Military[COLOR_REVERT] can upgrade to Military or Worker unit. Force build [COLOR_UNIT_TEXT]Improvement[COLOR_REVERT] or [COLOR_UNIT_TEXT]Building[COLOR_REVERT]. Sacrifice or join city.</English>
+		<French>[COLOR_UNIT_TEXT]Prisonnier - Militaire[COLOR_REVERT] Peut être converti en unité militaire ou ouvrière. Peut construire de manière forcée un [COLOR_UNIT_TEXT]aménagement[COLOR_REVERT] ou [COLOR_UNIT_TEXT]Bâtiment[COLOR_REVERT]. Peut être Sacrifié ou rejoindre une ville.</French>
 		<Italian>Un [COLOR_UNIT_TEXT]Prigioniero - Militare[COLOR_REVERT] può essere migliorato in un lavoratore o in un'unità militare. Può essere costretto a realizzare [COLOR_UNIT_TEXT]Miglioramenti[COLOR_REVERT] o [COLOR_UNIT_TEXT]Edifici[COLOR_REVERT]. Può essere sacrificato o essere aggiunto alla città.</Italian>
 	</TEXT>
 	<TEXT>
@@ -64,11 +66,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAPTIVE_CIVILIAN_PEDIA</Tag>
 		<English>Civilian units captured in battle or from raising cities.</English>
+		<French>Unités civiles capturées au combat ou lors des attaques dans les villes.</French>
 		<Italian>Unità civili catturate in battaglia o dai saccheggi cittadini.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAPTIVE_CIVILIAN_STRATEGY</Tag>
 		<English>Captured civilian units may join your cities or become slaves.</English>
+		<French>Les unités civiles capturées peuvent rejoindre vos villes ou devenir des esclaves.</French>
 		<Italian>Le unità civili catturate possono stabilirsi nelle tue città o diventare schiavi.</Italian>
 	</TEXT>
 	<TEXT>
@@ -76,26 +80,6 @@
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]May join your cities (of less than size 7) or be sacraficed for culture or production. If you are running Slavery can be sold into slavery.</English>
 		<French>peut rejoindre vos villes (de moins de 7 de population) ou être sacrifiés pour de la culture ou de la production. Si vous acceptez l'esclavage, peux être vendus en tant qu'esclave.</French>
 		<Italian>Può unirsi alla tua città (se la popolazione è minore di 7) oppure essere sacrificato in cambio di cultura o produzione. Se la schiavitù è attiva nel tuo impero, quest'unità può essere venduta come schiava.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_CAPTIVE_SPECIALIST</Tag>
-		<English>Captive - Specialist</English>
-		<French>Prisonnier - Spécialiste</French>
-		<Italian>
-			<Text>Prigioniero - Specialista</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_CAPTIVE_SPECIALIST_PEDIA</Tag>
-		<English>Specialists may be captured when razing a city that has specialists present.</English>
-		<Italian>Gli specialisti possono essere catturati razziando una città in cui sono presenti specialisti.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_CAPTIVE_SPECIALIST_STRATEGY</Tag>
-		<English>Captured Specialists are almost Great People they can only join your cities.</English>
-		<Italian>Gli specialisti catturati sono quasi come i grandi personaggi, dato che possono solo unirsi alle tue città.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FREED_SLAVE</Tag>
@@ -110,6 +94,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FREED_SLAVE_PEDIA</Tag>
 		<English>If you capture a city which has settled slaves in it some of them will become eligible for upgrade into workers. The cost of the upgrade represents the cost of providing them with the tools and infrastructure your other workers have.</English>
+		<French>Si vous capturez une ville qui y a installé des esclaves, certains d'entre eux deviendront éligibles pour être améliorés en ouvriers. Le coût de la mise à niveau représente le coût de leur fournir les outils et l'infrastructure dont disposent vos autres employés.</French>
 		<Italian>Se catturi una città in cui sono stanziati degli schiavi, alcuni di essi potrebbero diventare lavoratori. Il costo dei miglioramenti rappresenta il costo del fornirli con gli utensili e le infrastrutture che gli altri tuoi lavoratori hanno.</Italian>
 	</TEXT>
 	<TEXT>
@@ -313,14 +298,6 @@
 		<Polish>Ulepsz Jeńca do Wojownika Neandertalczyków.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_GATHERER</Tag>
-		<English>Upgrade a Captive to a Neanderthal Gatherer.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_TRACKER</Tag>
-		<English>Upgrade a Captive to a Neanderthal Tracker.</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_NEANDERTHAL_WARRIOR</Tag>
 		<English>Upgrade to Neanderthal Warrior.</English>
 		<French>Convertir en Guerrier Néanderthal.</French>
@@ -330,33 +307,39 @@
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_NEANDERTHAL_WARRIOR_MESSAGE</Tag>
 		<English>Your Captive has been upgraded to a Neanderthal Warrior.</English>
-		<French>Votre Prisonnier a été converti enGuerrier Néanderthal.</French>
+		<French>Votre Prisonnier a été converti en Guerrier Néanderthal.</French>
 		<Italian>Il tuo prigioniero è diventato un guerriero Neanderthal.</Italian>
 		<Polish>Twój jeniec został ulepszony do Wojownika Neandertalczyków.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_TRACKER</Tag>
 		<English>Upgrade a Captive to a Neanderthal Tracker.</English>
+		<French>Améliorez un prisonnier en un traqueur néandertalien.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_NEANDERTHAL_TRACKER</Tag>
 		<English>Upgrade to Neanderthal Tracker.</English>
+		<French>Améliorer en Traqueur néandertalien.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_NEANDERTHAL_TRACKER_MESSAGE</Tag>
 		<English>Your Captive has been upgraded to a Neanderthal Tracker.</English>
+		<French>Votre prisonnier a été converti en un traqueur néandertalien.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_GATHERER</Tag>
 		<English>Upgrade a Captive to a Neanderthal Gatherer.</English>
+		<French>Convertit une Prisonnière en une Cueilleuse Néanderthal.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_NEANDERTHAL_GATHERER</Tag>
 		<English>Upgrade to Neanderthal Gatherer.</English>
+		<French>Améliorer en Cueilleuse Néanderthal.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_NEANDERTHAL_GATHERER_MESSAGE</Tag>
 		<English>Your Captive has been upgraded to a Neanderthal Gatherer.</English>
+		<French>Votre Prisonnière a été convertie en Cueilleuse Néanderthal.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MESSAGE_MILITARY_CAPTIVE</Tag>
@@ -527,7 +510,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_FREE_CAPTIVE_HELP</Tag>
 		<English>Setting a captive free adds food to the city store as in Civ IV food represents population growth.</English>
-		<French>Le fait de libérer un esclave augmenta le stock de nourriture (dans Civ4, la nourriture représente l'accroissement de la population).</French>
+		<French>Le fait de libérer un esclave augmente le stock de nourriture (dans Civ4, la nourriture représente l'accroissement de la population).</French>
 		<Italian>Liberare un prigioniero aggiunge cibo alle riserve cittadine, dato che in Civilization IV il cibo rappresenta la crescita di popolazione.</Italian>
 		<Polish>Uwolnienie jeńca dodaje dostarcza miastu odrobinę żywności, która w CIV4 reprezentuje wzrost populację.</Polish>
 	</TEXT>

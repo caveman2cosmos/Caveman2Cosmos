@@ -95,10 +95,8 @@ class CvTurnTimerInfo;
 class CvProcessInfo;
 class CvVoteInfo;
 class CvProjectInfo;
-class CvBuildingClassInfo;
 class CvBuildingInfo;
 class CvSpecialBuildingInfo;
-class CvUnitClassInfo;
 class CvActionInfo;
 class CvMissionInfo;
 class CvControlInfo;
@@ -166,48 +164,6 @@ class CvMapSwitchInfo;
 #include "CvInfoReplacements.h"
 #include <stack>
 
-//	KOSHLING - granular control over callback enabling
-#define GRANULAR_CALLBACK_CONTROL
-#ifdef GRANULAR_CALLBACK_CONTROL
-typedef enum
-{
-	CALLBACK_TYPE_CAN_TRAIN = 1,
-	CALLBACK_TYPE_CANNOT_TRAIN = 2,
-	CALLBACK_TYPE_CAN_BUILD = 3
-} PythonCallbackTypes;
-
-class GranularCallbackController
-{
-public:
-	GranularCallbackController()
-	{
-		m_rawInputProcessed = false;
-	}
-
-	//	Unit list for a named (unit based) callback which must be enabled
-	//	Logically OR'd into the current set
-	void RegisterUnitCallback(PythonCallbackTypes eCallbackType, const char* unitList);
-	//	Unit list for a named (improvement based) callback which must be enabled
-	//	Logically OR'd into the current set
-	void RegisterBuildCallback(PythonCallbackTypes eCallbackType, const char* buildList);
-	
-	bool IsUnitCallbackEnabled(PythonCallbackTypes eCallbackType, UnitTypes eUnit) const;
-	bool IsBuildCallbackEnabled(PythonCallbackTypes eCallbackType, BuildTypes eBuild) const;
-
-	void Read(FDataStreamBase *);
-	void Write(FDataStreamBase *) const;
-
-private:
-	void ProcessRawInput() const;
-
-	std::map<PythonCallbackTypes,std::vector<CvString> > m_rawUnitCallbacks;			//	Raw strings aggregated from each registartion call
-	std::map<PythonCallbackTypes,std::vector<CvString> > m_rawBuildCallbacks;		//	Raw strings aggregated from each registartion call
-	mutable std::map<PythonCallbackTypes,std::map<UnitTypes,bool> > m_unitCallbacks;			//	Processed list indexed by unit types
-	mutable std::map<PythonCallbackTypes,std::map<BuildTypes,bool> > m_buildCallbacks;	//	Processed list indexed by improvement types
-	mutable bool m_rawInputProcessed;
-};
-#endif
-
 extern CvDLLUtilityIFaceBase* g_DLL;
 
 class cvInternalGlobals
@@ -226,8 +182,8 @@ public:
 	void uninit();
 	void clearTypesMap();
 
-	CvDiplomacyScreen* getDiplomacyScreen();
-	CMPDiplomacyScreen* getMPDiplomacyScreen();
+	CvDiplomacyScreen* getDiplomacyScreen() const;
+	CMPDiplomacyScreen* getMPDiplomacyScreen() const;
 
 	FMPIManager*& getFMPMgrPtr();
 	CvPortal& getPortal();
@@ -237,18 +193,16 @@ public:
 	CvInitCore& getIniInitCore();
 	CvMessageCodeTranslator& getMessageCodes();
 	CvStatsReporter& getStatsReporter();
-	CvStatsReporter* getStatsReporterPtr();
+	CvStatsReporter* getStatsReporterPtr() const;
 	CvInterface& getInterface();
-	CvInterface* getInterfacePtr();
+	CvInterface* getInterfacePtr() const;
 	int getMaxCivPlayers() const;
 	int getMaxPCPlayers() const;
 
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
-	CvMap& getMapINLINE();	//	Synonym for GetMap() currently as internal callers don't usually need the viewport
-// PARALLEL MAPS MODIFIED FUNCTION
-	CvMap& getMap();
+	inline CvMap& getMap() const;
 	CvViewport* getCurrentViewport();
 	int	getViewportSizeX() const;
 	int	getViewportSizeY() const;
@@ -260,12 +214,12 @@ public:
 	bool multiMapsEnabled() const;
 	bool viewportsEnabled() const;
 	bool getReprocessGreatWallDynamically() const;
-	int getNumMapInfos();
-	int getNumMapSwitchInfos();
+	int getNumMapInfos() const;
+	int getNumMapSwitchInfos() const;
 	std::vector<CvMapInfo*>& getMapInfos();
 	std::vector<CvMapSwitchInfo*>& getMapSwitchInfos();
-	CvMapInfo& getMapInfo(MapTypes eMap);
-	CvMapSwitchInfo& getMapSwitchInfo(MapSwitchTypes eMapSwitch);
+	CvMapInfo& getMapInfo(const MapTypes eMap) const;
+	CvMapSwitchInfo& getMapSwitchInfo(const MapSwitchTypes eMapSwitch) const;
 	
 	void switchMap(MapTypes eMap);
 	CvMap& getMapByIndex(MapTypes eIndex);
@@ -279,10 +233,9 @@ public:
 	bool getResourceLayer() const;
 /*******************************/
 /***** Parallel Maps - End *****/
-/*******************************/	
-	CvGameAI& getGameINLINE() { return *m_game; }
-	CvGameAI& getGame();
-	CvGameAI *getGamePointer();
+/*******************************/
+	inline CvGameAI& getGame() const { return *m_game; }
+	CvGameAI* getGamePointer();
 	CvRandom& getASyncRand();
 	CMessageQueue& getMessageQueue();
 	CMessageQueue& getHotMessageQueue();
@@ -310,19 +263,19 @@ public:
 	inline bool	getIsInPedia() const { return m_bIsInPedia; }
 	inline void	setIsInPedia(bool bNewValue) { m_bIsInPedia = bNewValue; }
 
-	int* getPlotDirectionX();
-	int* getPlotDirectionY();
-	int* getPlotCardinalDirectionX();
-	int* getPlotCardinalDirectionY();
-	int* getCityPlotX();
-	int* getCityPlotY();
-	int* getCityPlotPriority();
-	int getXYCityPlot(int i, int j);
-	DirectionTypes* getTurnLeftDirection();
-	DirectionTypes getTurnLeftDirection(int i);
-	DirectionTypes* getTurnRightDirection();
-	DirectionTypes getTurnRightDirection(int i);
-	DirectionTypes getXYDirection(int i, int j);
+	int* getPlotDirectionX() const;
+	int* getPlotDirectionY() const;
+	int* getPlotCardinalDirectionX() const;
+	int* getPlotCardinalDirectionY() const;
+	int* getCityPlotX() const;
+	int* getCityPlotY() const;
+	int* getCityPlotPriority() const;
+	int getXYCityPlot(const int i, const int j) const;
+	DirectionTypes* getTurnLeftDirection() const;
+	DirectionTypes getTurnLeftDirection(const int i) const;
+	DirectionTypes* getTurnRightDirection() const;
+	DirectionTypes getTurnRightDirection(int i) const;
+	DirectionTypes getXYDirection(const int i, const int j) const;
 
 /************************************************************************************************/
 /* SORT_ALPHABET                           11/19/07                                MRGENIE      */
@@ -390,38 +343,38 @@ public:
 	}
 	void resolveDelayedResolution();
 
-	int getNumWorldInfos();
+	int getNumWorldInfos() const;
 	std::vector<CvWorldInfo*>& getWorldInfos();
-	CvWorldInfo& getWorldInfo(WorldSizeTypes e);
+	CvWorldInfo& getWorldInfo(WorldSizeTypes e) const;
 	CvInfoReplacements<CvWorldInfo>* getWorldInfoReplacements();
 
-	int getNumClimateInfos();
+	int getNumClimateInfos() const;
 	std::vector<CvClimateInfo*>& getClimateInfos();
-	CvClimateInfo& getClimateInfo(ClimateTypes e);
+	CvClimateInfo& getClimateInfo(ClimateTypes e) const;
 
-	int getNumSeaLevelInfos();
+	int getNumSeaLevelInfos() const;
 	std::vector<CvSeaLevelInfo*>& getSeaLevelInfos();
-	CvSeaLevelInfo& getSeaLevelInfo(SeaLevelTypes e);
+	CvSeaLevelInfo& getSeaLevelInfo(SeaLevelTypes e) const;
 
-	int getNumColorInfos();
+	int getNumColorInfos() const;
 	std::vector<CvColorInfo*>& getColorInfos();
-	CvColorInfo& getColorInfo(ColorTypes e);
+	CvColorInfo& getColorInfo(ColorTypes e) const;
 
-	int getNumPlayerColorInfos();
+	int getNumPlayerColorInfos() const;
 	std::vector<CvPlayerColorInfo*>& getPlayerColorInfos();
-	CvPlayerColorInfo& getPlayerColorInfo(PlayerColorTypes e);
+	CvPlayerColorInfo& getPlayerColorInfo(PlayerColorTypes e) const;
 
-	int getNumAdvisorInfos();
+	int getNumAdvisorInfos() const;
 	std::vector<CvAdvisorInfo*>& getAdvisorInfos();
-	CvAdvisorInfo& getAdvisorInfo(AdvisorTypes e);
+	CvAdvisorInfo& getAdvisorInfo(AdvisorTypes e) const;
 
-	int getNumHints();
+	int getNumHints() const;
 	std::vector<CvInfoBase*>& getHints();
-	CvInfoBase& getHints(int i);
+	CvInfoBase& getHints(int i) const;
 
-	int getNumMainMenus();
+	int getNumMainMenus() const;
 	std::vector<CvMainMenuInfo*>& getMainMenus();
-	CvMainMenuInfo& getMainMenus(int i);
+	CvMainMenuInfo& getMainMenus(int i) const;
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 10/30/07                            MRGENIE          */
 /*                                                                                              */
@@ -429,15 +382,15 @@ public:
 /************************************************************************************************/
 	// MLF loading
 	void resetModLoadControlVector();
-	int getModLoadControlVectorSize();
+	int getModLoadControlVectorSize() const;
 	void setModLoadControlVector(const char* szModule);
-	CvString getModLoadControlVector(int i);
+	CvString getModLoadControlVector(int i) const;
 
-	int getTotalNumModules();
+	int getTotalNumModules() const;
 	void setTotalNumModules();
-	int getNumModLoadControlInfos();
+	int getNumModLoadControlInfos() const;
 	std::vector<CvModLoadControlInfo*>& getModLoadControlInfos();
-	CvModLoadControlInfo& getModLoadControlInfos(int i);
+	CvModLoadControlInfo& getModLoadControlInfos(int i) const;
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 END                                                  */
 /************************************************************************************************/
@@ -447,218 +400,218 @@ public:
 /*                                                                                              */
 /************************************************************************************************/
 	void setModDir(const char* szModDir);
-	std::string getModDir();
+	std::string getModDir() const;
 	std::string m_cszModDir;
 /************************************************************************************************/
 /* XML_MODULAR_ART_LOADING                 END                                                  */
-/************************************************************************************************/	
+/************************************************************************************************/
 
-	int getNumRouteModelInfos();
+	int getNumRouteModelInfos() const;
 	std::vector<CvRouteModelInfo*>& getRouteModelInfos();
-	CvRouteModelInfo& getRouteModelInfo(int i);
+	CvRouteModelInfo& getRouteModelInfo(int i) const;
 
-	int getNumRiverInfos();
+	int getNumRiverInfos() const;
 	std::vector<CvRiverInfo*>& getRiverInfos();
-	CvRiverInfo& getRiverInfo(RiverTypes e);
+	CvRiverInfo& getRiverInfo(RiverTypes e) const;
 
-	int getNumRiverModelInfos();
+	int getNumRiverModelInfos() const;
 	std::vector<CvRiverModelInfo*>& getRiverModelInfos();
-	CvRiverModelInfo& getRiverModelInfo(int i);
+	CvRiverModelInfo& getRiverModelInfo(int i) const;
 
-	int getNumWaterPlaneInfos();
+	int getNumWaterPlaneInfos() const;
 	std::vector<CvWaterPlaneInfo*>& getWaterPlaneInfos();
-	CvWaterPlaneInfo& getWaterPlaneInfo(int i);
+	CvWaterPlaneInfo& getWaterPlaneInfo(int i) const;
 
-	int getNumTerrainPlaneInfos();
+	int getNumTerrainPlaneInfos() const;
 	std::vector<CvTerrainPlaneInfo*>& getTerrainPlaneInfos();
-	CvTerrainPlaneInfo& getTerrainPlaneInfo(int i);
+	CvTerrainPlaneInfo& getTerrainPlaneInfo(int i) const;
 
-	int getNumCameraOverlayInfos();
+	int getNumCameraOverlayInfos() const;
 	std::vector<CvCameraOverlayInfo*>& getCameraOverlayInfos();
-	CvCameraOverlayInfo& getCameraOverlayInfo(int i);
+	CvCameraOverlayInfo& getCameraOverlayInfo(int i) const;
 
-	int getNumAnimationPathInfos();
+	int getNumAnimationPathInfos() const;
 	std::vector<CvAnimationPathInfo*>& getAnimationPathInfos();
-	CvAnimationPathInfo& getAnimationPathInfo(AnimationPathTypes e);
+	CvAnimationPathInfo& getAnimationPathInfo(AnimationPathTypes e) const;
 
-	int getNumAnimationCategoryInfos();
+	int getNumAnimationCategoryInfos() const;
 	std::vector<CvAnimationCategoryInfo*>& getAnimationCategoryInfos();
-	CvAnimationCategoryInfo& getAnimationCategoryInfo(AnimationCategoryTypes e);
+	CvAnimationCategoryInfo& getAnimationCategoryInfo(AnimationCategoryTypes e) const;
 
-	int getNumEntityEventInfos();
+	int getNumEntityEventInfos() const;
 	std::vector<CvEntityEventInfo*>& getEntityEventInfos();
-	CvEntityEventInfo& getEntityEventInfo(EntityEventTypes e);
+	CvEntityEventInfo& getEntityEventInfo(EntityEventTypes e) const;
 
-	int getNumEffectInfos();
+	int getNumEffectInfos() const;
 	std::vector<CvEffectInfo*>& getEffectInfos();
-	CvEffectInfo& getEffectInfo(int i);
+	CvEffectInfo& getEffectInfo(int i) const;
 
-	int getNumAttachableInfos();
+	int getNumAttachableInfos() const;
 	std::vector<CvAttachableInfo*>& getAttachableInfos();
-	CvAttachableInfo& getAttachableInfo(int i);
+	CvAttachableInfo& getAttachableInfo(int i) const;
 
-	int getNumCameraInfos();
+	int getNumCameraInfos() const;
 	std::vector<CvCameraInfo*>& getCameraInfos();
-	CvCameraInfo& getCameraInfo(CameraAnimationTypes eCameraAnimationNum);
+	CvCameraInfo& getCameraInfo(CameraAnimationTypes eCameraAnimationNum) const;
 
-	int getNumUnitFormationInfos();
+	int getNumUnitFormationInfos() const;
 	std::vector<CvUnitFormationInfo*>& getUnitFormationInfos();
-	CvUnitFormationInfo& getUnitFormationInfo(int i);
+	CvUnitFormationInfo& getUnitFormationInfo(int i) const;
 
-	int getNumGameTextXML();
+	int getNumGameTextXML() const;
 	std::vector<CvGameText*>& getGameTextXMLs();
 
-	int getNumLandscapeInfos();
+	int getNumLandscapeInfos() const;
 	std::vector<CvLandscapeInfo*>& getLandscapeInfos();
-	CvLandscapeInfo& getLandscapeInfo(int iIndex);
-	int getActiveLandscapeID();
+	CvLandscapeInfo& getLandscapeInfo(int iIndex) const;
+	int getActiveLandscapeID() const;
 	void setActiveLandscapeID(int iLandscapeID);
 
-	int getNumTerrainInfos();
+	int getNumTerrainInfos() const;
 	std::vector<CvTerrainInfo*>& getTerrainInfos();
-	CvTerrainInfo& getTerrainInfo(TerrainTypes eTerrainNum);
+	CvTerrainInfo& getTerrainInfo(TerrainTypes eTerrainNum) const;
 	CvInfoReplacements<CvTerrainInfo>* getTerrainInfoReplacements();
 
-	int getNumBonusClassInfos();
+	int getNumBonusClassInfos() const;
 	std::vector<CvBonusClassInfo*>& getBonusClassInfos();
-	CvBonusClassInfo& getBonusClassInfo(BonusClassTypes eBonusNum);
+	CvBonusClassInfo& getBonusClassInfo(BonusClassTypes eBonusNum) const;
 	CvInfoReplacements<CvBonusClassInfo>* getBonusClassInfoReplacements();
 
-	int getNumBonusInfos();
+	int getNumBonusInfos() const;
 	std::vector<CvBonusInfo*>& getBonusInfos();
-	CvBonusInfo& getBonusInfo(BonusTypes eBonusNum);
+	CvBonusInfo& getBonusInfo(BonusTypes eBonusNum) const;
 	CvInfoReplacements<CvBonusInfo>* getBonusInfoReplacements();
 
-	int getNumFeatureInfos();
+	int getNumFeatureInfos() const;
 	std::vector<CvFeatureInfo*>& getFeatureInfos();
-	CvFeatureInfo& getFeatureInfo(FeatureTypes eFeatureNum);
+	CvFeatureInfo& getFeatureInfo(FeatureTypes eFeatureNum) const;
 	CvInfoReplacements<CvFeatureInfo>* getFeatureInfoReplacements();
 
 	int& getNumPlayableCivilizationInfos();
 	int& getNumAIPlayableCivilizationInfos();
-	int getNumCivilizationInfos();
+	int getNumCivilizationInfos() const;
 	std::vector<CvCivilizationInfo*>& getCivilizationInfos();
-	CvCivilizationInfo& getCivilizationInfo(CivilizationTypes eCivilizationNum);
+	CvCivilizationInfo& getCivilizationInfo(CivilizationTypes eCivilizationNum) const;
 	CvInfoReplacements<CvCivilizationInfo>* getCivilizationInfoReplacements();
 
-	int getNumLeaderHeadInfos();
+	int getNumLeaderHeadInfos() const;
 	std::vector<CvLeaderHeadInfo*>& getLeaderHeadInfos();
-	CvLeaderHeadInfo& getLeaderHeadInfo(LeaderHeadTypes eLeaderHeadNum);
+	CvLeaderHeadInfo& getLeaderHeadInfo(LeaderHeadTypes eLeaderHeadNum) const;
 	CvInfoReplacements<CvLeaderHeadInfo>* getLeaderHeadInfoReplacements();
 
-	int getNumTraitInfos();
+	int getNumTraitInfos() const;
 	std::vector<CvTraitInfo*>& getTraitInfos();
-	CvTraitInfo& getTraitInfo(TraitTypes eTraitNum);
+	CvTraitInfo& getTraitInfo(TraitTypes eTraitNum) const;
 	CvInfoReplacements<CvTraitInfo>* getTraitInfoReplacements();
 
-	int getNumCursorInfos();
+	int getNumCursorInfos() const;
 	std::vector<CvCursorInfo*>& getCursorInfos();
-	CvCursorInfo& getCursorInfo(CursorTypes eCursorNum);
+	CvCursorInfo& getCursorInfo(CursorTypes eCursorNum) const;
 
-	int getNumThroneRoomCameras();
+	int getNumThroneRoomCameras() const;
 	std::vector<CvThroneRoomCamera*>& getThroneRoomCameras();
-	CvThroneRoomCamera& getThroneRoomCamera(int iIndex);
+	CvThroneRoomCamera& getThroneRoomCamera(int iIndex) const;
 
-	int getNumThroneRoomInfos();
+	int getNumThroneRoomInfos() const;
 	std::vector<CvThroneRoomInfo*>& getThroneRoomInfos();
-	CvThroneRoomInfo& getThroneRoomInfo(int iIndex);
+	CvThroneRoomInfo& getThroneRoomInfo(int iIndex) const;
 
-	int getNumThroneRoomStyleInfos();
+	int getNumThroneRoomStyleInfos() const;
 	std::vector<CvThroneRoomStyleInfo*>& getThroneRoomStyleInfos();
-	CvThroneRoomStyleInfo& getThroneRoomStyleInfo(int iIndex);
+	CvThroneRoomStyleInfo& getThroneRoomStyleInfo(int iIndex) const;
 
-	int getNumSlideShowInfos();
+	int getNumSlideShowInfos() const;
 	std::vector<CvSlideShowInfo*>& getSlideShowInfos();
-	CvSlideShowInfo& getSlideShowInfo(int iIndex);
+	CvSlideShowInfo& getSlideShowInfo(int iIndex) const;
 
-	int getNumSlideShowRandomInfos();
+	int getNumSlideShowRandomInfos() const;
 	std::vector<CvSlideShowRandomInfo*>& getSlideShowRandomInfos();
-	CvSlideShowRandomInfo& getSlideShowRandomInfo(int iIndex);
+	CvSlideShowRandomInfo& getSlideShowRandomInfo(int iIndex) const;
 
-	int getNumWorldPickerInfos();
+	int getNumWorldPickerInfos() const;
 	std::vector<CvWorldPickerInfo*>& getWorldPickerInfos();
-	CvWorldPickerInfo& getWorldPickerInfo(int iIndex);
+	CvWorldPickerInfo& getWorldPickerInfo(int iIndex) const;
 
-	int getNumSpaceShipInfos();
+	int getNumSpaceShipInfos() const;
 	std::vector<CvSpaceShipInfo*>& getSpaceShipInfos();
-	CvSpaceShipInfo& getSpaceShipInfo(int iIndex);
+	CvSpaceShipInfo& getSpaceShipInfo(int iIndex) const;
 
-	int getNumUnitInfos();
+	int getNumUnitInfos() const;
 	std::vector<CvUnitInfo*>& getUnitInfos();
-	CvUnitInfo& getUnitInfo(UnitTypes eUnitNum);
+	CvUnitInfo& getUnitInfo(UnitTypes eUnitNum) const;
 	CvInfoReplacements<CvUnitInfo>* getUnitInfoReplacements();
 
-	int getNumSpawnInfos();
+	int getNumSpawnInfos() const;
 	std::vector<CvSpawnInfo*>& getSpawnInfos();
-	CvSpawnInfo& getSpawnInfo(SpawnTypes eSpawnNum);
+	CvSpawnInfo& getSpawnInfo(SpawnTypes eSpawnNum) const;
 	CvInfoReplacements<CvSpawnInfo>* getSpawnInfoReplacements();
 
-	int getNumSpecialUnitInfos();
+	int getNumSpecialUnitInfos() const;
 	std::vector<CvSpecialUnitInfo*>& getSpecialUnitInfos();
-	CvSpecialUnitInfo& getSpecialUnitInfo(SpecialUnitTypes eSpecialUnitNum);
+	CvSpecialUnitInfo& getSpecialUnitInfo(SpecialUnitTypes eSpecialUnitNum) const;
 
-	int getNumConceptInfos();
+	int getNumConceptInfos() const;
 	std::vector<CvInfoBase*>& getConceptInfos();
-	CvInfoBase& getConceptInfo(ConceptTypes e);
+	CvInfoBase& getConceptInfo(ConceptTypes e) const;
 
-	int getNumNewConceptInfos();
+	int getNumNewConceptInfos() const;
 	std::vector<CvInfoBase*>& getNewConceptInfos();
-	CvInfoBase& getNewConceptInfo(NewConceptTypes e);
+	CvInfoBase& getNewConceptInfo(NewConceptTypes e) const;
 
-	int getNumPropertyInfos();
+	int getNumPropertyInfos() const;
 	std::vector<CvPropertyInfo*>& getPropertyInfos();
-	CvPropertyInfo& getPropertyInfo(PropertyTypes ePropertyNum);
+	CvPropertyInfo& getPropertyInfo(PropertyTypes ePropertyNum) const;
 
-	int getNumOutcomeInfos();
+	int getNumOutcomeInfos() const;
 	std::vector<CvOutcomeInfo*>& getOutcomeInfos();
-	CvOutcomeInfo& getOutcomeInfo(OutcomeTypes eOutcomeNum);
+	CvOutcomeInfo& getOutcomeInfo(OutcomeTypes eOutcomeNum) const;
 
 /************************************************************************************************/
 /*Afforess                                     12/21/09                                         */
 /************************************************************************************************/
-	int getPEAK_EXTRA_DEFENSE();
-	int getPEAK_EXTRA_MOVEMENT();
+	int getPEAK_EXTRA_DEFENSE() const;
+	int getPEAK_EXTRA_MOVEMENT() const;
 	
 	int iStuckUnitID;
 	int iStuckUnitCount;
-	
+
 	bool isLoadedPlayerOptions() const;
 	void setLoadedPlayerOptions(bool bNewVal);
 	
-	bool isXMLLogging();
+	bool isXMLLogging() const;
 	void setXMLLogging(bool bNewVal);
-	
+
 	void updateReplacements();
 	
-	int getSCORE_FREE_PERCENT();
-	int getSCORE_POPULATION_FACTOR();
-	int getSCORE_LAND_FACTOR();
-	int getSCORE_TECH_FACTOR();
-	int getSCORE_WONDER_FACTOR();
+	int getSCORE_FREE_PERCENT() const;
+	int getSCORE_POPULATION_FACTOR() const;
+	int getSCORE_LAND_FACTOR() const;
+	int getSCORE_TECH_FACTOR() const;
+	int getSCORE_WONDER_FACTOR() const;
 	
-	int getUSE_CAN_CREATE_PROJECT_CALLBACK();
-	int getUSE_CANNOT_CREATE_PROJECT_CALLBACK();
-	int getUSE_CAN_DO_MELTDOWN_CALLBACK();
-	int getUSE_CAN_MAINTAIN_PROCESS_CALLBACK();
-	int getUSE_CANNOT_MAINTAIN_PROCESS_CALLBACK();
-	int getUSE_CAN_DO_GROWTH_CALLBACK();
-	int getUSE_CAN_DO_CULTURE_CALLBACK();
-	int getUSE_CAN_DO_PLOT_CULTURE_CALLBACK();
-	int getUSE_CAN_DO_PRODUCTION_CALLBACK();
-	int getUSE_CAN_DO_RELIGION_CALLBACK();
-	int getUSE_CAN_DO_GREATPEOPLE_CALLBACK();
-	int getUSE_CAN_RAZE_CITY_CALLBACK();
-	int getUSE_CAN_DO_GOLD_CALLBACK();
-	int getUSE_CAN_DO_RESEARCH_CALLBACK();
-	int getUSE_UPGRADE_UNIT_PRICE_CALLBACK();
-	int getUSE_IS_VICTORY_CALLBACK();
-	int getUSE_AI_UPDATE_UNIT_CALLBACK();
-	int getUSE_AI_CHOOSE_PRODUCTION_CALLBACK();
-	int getUSE_EXTRA_PLAYER_COSTS_CALLBACK();
-	int getUSE_AI_DO_DIPLO_CALLBACK();
-	int getUSE_AI_BESTTECH_CALLBACK();
-	int getUSE_CAN_DO_COMBAT_CALLBACK();
-	int getUSE_AI_CAN_DO_WARPLANS_CALLBACK();
+	int getUSE_CAN_CREATE_PROJECT_CALLBACK() const;
+	int getUSE_CANNOT_CREATE_PROJECT_CALLBACK() const;
+	int getUSE_CAN_DO_MELTDOWN_CALLBACK() const;
+	int getUSE_CAN_MAINTAIN_PROCESS_CALLBACK() const;
+	int getUSE_CANNOT_MAINTAIN_PROCESS_CALLBACK() const;
+	int getUSE_CAN_DO_GROWTH_CALLBACK() const;
+	int getUSE_CAN_DO_CULTURE_CALLBACK() const;
+	int getUSE_CAN_DO_PLOT_CULTURE_CALLBACK() const;
+	int getUSE_CAN_DO_PRODUCTION_CALLBACK() const;
+	int getUSE_CAN_DO_RELIGION_CALLBACK() const;
+	int getUSE_CAN_DO_GREATPEOPLE_CALLBACK() const;
+	int getUSE_CAN_RAZE_CITY_CALLBACK() const;
+	int getUSE_CAN_DO_GOLD_CALLBACK() const;
+	int getUSE_CAN_DO_RESEARCH_CALLBACK() const;
+	int getUSE_UPGRADE_UNIT_PRICE_CALLBACK() const;
+	int getUSE_IS_VICTORY_CALLBACK() const;
+	int getUSE_AI_UPDATE_UNIT_CALLBACK() const;
+	int getUSE_AI_CHOOSE_PRODUCTION_CALLBACK() const;
+	int getUSE_EXTRA_PLAYER_COSTS_CALLBACK() const;
+	int getUSE_AI_DO_DIPLO_CALLBACK() const;
+	int getUSE_AI_BESTTECH_CALLBACK() const;
+	int getUSE_CAN_DO_COMBAT_CALLBACK() const;
+	int getUSE_AI_CAN_DO_WARPLANS_CALLBACK() const;
 	int getLAND_UNITS_CAN_ATTACK_WATER_CITIES() const;
 	int getBASE_UNIT_UPGRADE_COST() const;
 	int getUPGRADE_ROUND_LIMIT() const;
@@ -682,61 +635,61 @@ public:
 /* Afforess                                END                                                  */
 /************************************************************************************************/
 
-	int getNumCityTabInfos();
+	int getNumCityTabInfos() const;
 	std::vector<CvInfoBase*>& getCityTabInfos();
-	CvInfoBase& getCityTabInfo(CityTabTypes e);
+	CvInfoBase& getCityTabInfo(CityTabTypes e) const;
 
-	int getNumCalendarInfos();
+	int getNumCalendarInfos() const;
 	std::vector<CvInfoBase*>& getCalendarInfos();
-	CvInfoBase& getCalendarInfo(CalendarTypes e);
+	CvInfoBase& getCalendarInfo(CalendarTypes e) const;
 
-	int getNumSeasonInfos();
+	int getNumSeasonInfos() const;
 	std::vector<CvInfoBase*>& getSeasonInfos();
-	CvInfoBase& getSeasonInfo(SeasonTypes e);
+	CvInfoBase& getSeasonInfo(SeasonTypes e) const;
 
-	int getNumMonthInfos();
+	int getNumMonthInfos() const;
 	std::vector<CvInfoBase*>& getMonthInfos();
-	CvInfoBase& getMonthInfo(MonthTypes e);
+	CvInfoBase& getMonthInfo(MonthTypes e) const;
 
-	int getNumDenialInfos();
+	int getNumDenialInfos() const;
 	std::vector<CvInfoBase*>& getDenialInfos();
-	CvInfoBase& getDenialInfo(DenialTypes e);
+	CvInfoBase& getDenialInfo(DenialTypes e) const;
 
-	int getNumInvisibleInfos();
+	int getNumInvisibleInfos() const;
 	std::vector<CvInvisibleInfo*>& getInvisibleInfos();
-	CvInvisibleInfo& getInvisibleInfo(InvisibleTypes e);
+	CvInvisibleInfo& getInvisibleInfo(InvisibleTypes e) const;
 
-	int getNumVoteSourceInfos();
+	int getNumVoteSourceInfos() const;
 	std::vector<CvVoteSourceInfo*>& getVoteSourceInfos();
-	CvVoteSourceInfo& getVoteSourceInfo(VoteSourceTypes e);
+	CvVoteSourceInfo& getVoteSourceInfo(VoteSourceTypes e) const;
 
-	int getNumUnitCombatInfos();
+	int getNumUnitCombatInfos() const;
 	std::vector<CvUnitCombatInfo*>& getUnitCombatInfos();
-	CvUnitCombatInfo& getUnitCombatInfo(UnitCombatTypes e);
+	CvUnitCombatInfo& getUnitCombatInfo(UnitCombatTypes e) const;
 
 	std::vector<CvInfoBase*>& getDomainInfos();
-	CvInfoBase& getDomainInfo(DomainTypes e);
+	CvInfoBase& getDomainInfo(DomainTypes e) const;
 
 	//TB Promotion Line Mod begin
-	int getNumPromotionLineInfos();
+	int getNumPromotionLineInfos() const;
 	std::vector<CvPromotionLineInfo*>& getPromotionLineInfos();
-	CvPromotionLineInfo& getPromotionLineInfo(PromotionLineTypes e);
+	CvPromotionLineInfo& getPromotionLineInfo(PromotionLineTypes e) const;
 	//TB Promotion Line Mod end
 
-	int getNumMapCategoryInfos();
+	int getNumMapCategoryInfos() const;
 	std::vector<CvMapCategoryInfo*>& getMapCategoryInfos();
-	CvMapCategoryInfo& getMapCategoryInfo(MapCategoryTypes e);
+	CvMapCategoryInfo& getMapCategoryInfo(MapCategoryTypes e) const;
 
-	int getNumIdeaClassInfos();
+	int getNumIdeaClassInfos() const;
 	std::vector<CvIdeaClassInfo*>& getIdeaClassInfos();
-	CvIdeaClassInfo& getIdeaClassInfo(IdeaClassTypes e);
+	CvIdeaClassInfo& getIdeaClassInfo(IdeaClassTypes e) const;
 
-	int getNumIdeaInfos();
+	int getNumIdeaInfos() const;
 	std::vector<CvIdeaInfo*>& getIdeaInfos();
-	CvIdeaInfo& getIdeaInfo(IdeaTypes e);
+	CvIdeaInfo& getIdeaInfo(IdeaTypes e) const;
 
 	std::vector<CvInfoBase*>& getUnitAIInfos();
-	CvInfoBase& getUnitAIInfo(UnitAITypes eUnitAINum);
+	CvInfoBase& getUnitAIInfo(UnitAITypes eUnitAINum) const;
 
 	//	Koshling - added internal registration of supported UnitAI types, not reliant
 	//	on external definition in XML
@@ -757,212 +710,200 @@ public:
 	void registerMissions();
 
 	std::vector<CvInfoBase*>& getAttitudeInfos();
-	CvInfoBase& getAttitudeInfo(AttitudeTypes eAttitudeNum);
+	CvInfoBase& getAttitudeInfo(AttitudeTypes eAttitudeNum) const;
 
 	std::vector<CvInfoBase*>& getMemoryInfos();
-	CvInfoBase& getMemoryInfo(MemoryTypes eMemoryNum);
+	CvInfoBase& getMemoryInfo(MemoryTypes eMemoryNum) const;
 
-	int getNumGameOptionInfos();
+	int getNumGameOptionInfos() const;
 	std::vector<CvGameOptionInfo*>& getGameOptionInfos();
-	CvGameOptionInfo& getGameOptionInfo(GameOptionTypes eGameOptionNum);
+	CvGameOptionInfo& getGameOptionInfo(GameOptionTypes eGameOptionNum) const;
 
-	int getNumMPOptionInfos();
+	int getNumMPOptionInfos() const;
 	std::vector<CvMPOptionInfo*>& getMPOptionInfos();
-	CvMPOptionInfo& getMPOptionInfo(MultiplayerOptionTypes eMPOptionNum);
+	CvMPOptionInfo& getMPOptionInfo(MultiplayerOptionTypes eMPOptionNum) const;
 
-	int getNumForceControlInfos();
+	int getNumForceControlInfos() const;
 	std::vector<CvForceControlInfo*>& getForceControlInfos();
-	CvForceControlInfo& getForceControlInfo(ForceControlTypes eForceControlNum);
+	CvForceControlInfo& getForceControlInfo(ForceControlTypes eForceControlNum) const;
 
 	std::vector<CvPlayerOptionInfo*>& getPlayerOptionInfos();
-	CvPlayerOptionInfo& getPlayerOptionInfo(PlayerOptionTypes ePlayerOptionNum);
+	CvPlayerOptionInfo& getPlayerOptionInfo(PlayerOptionTypes ePlayerOptionNum) const;
 
 	std::vector<CvGraphicOptionInfo*>& getGraphicOptionInfos();
-	CvGraphicOptionInfo& getGraphicOptionInfo(GraphicOptionTypes eGraphicOptionNum);
+	CvGraphicOptionInfo& getGraphicOptionInfo(GraphicOptionTypes eGraphicOptionNum) const;
 
 	std::vector<CvYieldInfo*>& getYieldInfos();
-	CvYieldInfo& getYieldInfo(YieldTypes eYieldNum);
+	CvYieldInfo& getYieldInfo(YieldTypes eYieldNum) const;
 
 	std::vector<CvCommerceInfo*>& getCommerceInfos();
-	CvCommerceInfo& getCommerceInfo(CommerceTypes eCommerceNum);
+	CvCommerceInfo& getCommerceInfo(CommerceTypes eCommerceNum) const;
 
-	int getNumRouteInfos();
+	int getNumRouteInfos() const;
 	std::vector<CvRouteInfo*>& getRouteInfos();
-	CvRouteInfo& getRouteInfo(RouteTypes eRouteNum);
+	CvRouteInfo& getRouteInfo(RouteTypes eRouteNum) const;
 	CvInfoReplacements<CvRouteInfo>* getRouteInfoReplacements();
 
-	int getNumImprovementInfos();
+	int getNumImprovementInfos() const;
 	std::vector<CvImprovementInfo*>& getImprovementInfos();
-	CvImprovementInfo& getImprovementInfo(ImprovementTypes eImprovementNum);
+	CvImprovementInfo& getImprovementInfo(ImprovementTypes eImprovementNum) const;
 	CvInfoReplacements<CvImprovementInfo>* getImprovementInfoReplacements();
 
-	int getNumGoodyInfos();
+	int getNumGoodyInfos() const;
 	std::vector<CvGoodyInfo*>& getGoodyInfos();
-	CvGoodyInfo& getGoodyInfo(GoodyTypes eGoodyNum);
+	CvGoodyInfo& getGoodyInfo(GoodyTypes eGoodyNum) const;
 
-	int getNumBuildInfos();
+	int getNumBuildInfos() const;
 	std::vector<CvBuildInfo*>& getBuildInfos();
-	CvBuildInfo& getBuildInfo(BuildTypes eBuildNum);
+	CvBuildInfo& getBuildInfo(BuildTypes eBuildNum) const;
 	CvInfoReplacements<CvBuildInfo>* getBuildInfoReplacements();
 
-	int getNumHandicapInfos();
+	int getNumHandicapInfos() const;
 	std::vector<CvHandicapInfo*>& getHandicapInfos();
-	CvHandicapInfo& getHandicapInfo(HandicapTypes eHandicapNum);
+	CvHandicapInfo& getHandicapInfo(HandicapTypes eHandicapNum) const;
 	CvInfoReplacements<CvHandicapInfo>* getHandicapInfoReplacements();
 
-	int getNumGameSpeedInfos();
+	int getNumGameSpeedInfos() const;
 	std::vector<CvGameSpeedInfo*>& getGameSpeedInfos();
-	CvGameSpeedInfo& getGameSpeedInfo(GameSpeedTypes eGameSpeedNum);
+	CvGameSpeedInfo& getGameSpeedInfo(GameSpeedTypes eGameSpeedNum) const;
 	CvInfoReplacements<CvGameSpeedInfo>* getGameSpeedInfoReplacements();
 
-	int getNumTurnTimerInfos();
+	int getNumTurnTimerInfos() const;
 	std::vector<CvTurnTimerInfo*>& getTurnTimerInfos();
-	CvTurnTimerInfo& getTurnTimerInfo(TurnTimerTypes eTurnTimerNum);
+	CvTurnTimerInfo& getTurnTimerInfo(TurnTimerTypes eTurnTimerNum) const;
 
-	int getNumProcessInfos();
+	int getNumProcessInfos() const;
 	std::vector<CvProcessInfo*>& getProcessInfos();
-	CvProcessInfo& getProcessInfo(ProcessTypes e);
+	CvProcessInfo& getProcessInfo(ProcessTypes e) const;
 	CvInfoReplacements<CvProcessInfo>* getProcessInfoReplacements();
 
-	int getNumVoteInfos();
+	int getNumVoteInfos() const;
 	std::vector<CvVoteInfo*>& getVoteInfos();
-	CvVoteInfo& getVoteInfo(VoteTypes e);
+	CvVoteInfo& getVoteInfo(VoteTypes e) const;
 
-	int getNumProjectInfos();
+	int getNumProjectInfos() const;
 	std::vector<CvProjectInfo*>& getProjectInfos();
-	CvProjectInfo& getProjectInfo(ProjectTypes e);
+	CvProjectInfo& getProjectInfo(ProjectTypes e) const;
 	CvInfoReplacements<CvProjectInfo>* getProjectInfoReplacements();
 
-	int getNumBuildingClassInfos();
-	std::vector<CvBuildingClassInfo*>& getBuildingClassInfos();
-	CvBuildingClassInfo& getBuildingClassInfo(BuildingClassTypes eBuildingClassNum);
-	CvInfoReplacements<CvBuildingClassInfo>* getBuildingClassInfoReplacements();
-
-	int getNumBuildingInfos();
+	int getNumBuildingInfos() const;
 	std::vector<CvBuildingInfo*>& getBuildingInfos();
-	CvBuildingInfo& getBuildingInfo(BuildingTypes eBuildingNum);
+	CvBuildingInfo& getBuildingInfo(BuildingTypes eBuildingNum) const;
 	CvInfoReplacements<CvBuildingInfo>* getBuildingInfoReplacements();
 
-	int getNumSpecialBuildingInfos();
+	int getNumSpecialBuildingInfos() const;
 	std::vector<CvSpecialBuildingInfo*>& getSpecialBuildingInfos();
-	CvSpecialBuildingInfo& getSpecialBuildingInfo(SpecialBuildingTypes eSpecialBuildingNum);
+	CvSpecialBuildingInfo& getSpecialBuildingInfo(SpecialBuildingTypes eSpecialBuildingNum) const;
 	CvInfoReplacements<CvSpecialBuildingInfo>* getSpecialBuildingInfoReplacements();
 
-	int getNumUnitClassInfos();
-	std::vector<CvUnitClassInfo*>& getUnitClassInfos();
-	CvUnitClassInfo& getUnitClassInfo(UnitClassTypes eUnitClassNum);
-	const CvUnitClassInfo& getUnitClassInfo(UnitClassTypes eUnitClassNum) const;
-
-	CvInfoReplacements<CvUnitClassInfo>* getUnitClassInfoReplacements();
-
-	int getNumActionInfos();
+	int getNumActionInfos() const;
 	std::vector<CvActionInfo*>& getActionInfos();
-	CvActionInfo& getActionInfo(int i);
+	CvActionInfo& getActionInfo(int i) const;
 
 	std::vector<CvMissionInfo*>& getMissionInfos();
-	CvMissionInfo& getMissionInfo(MissionTypes eMissionNum);
+	CvMissionInfo& getMissionInfo(MissionTypes eMissionNum) const;
 
 	std::vector<CvControlInfo*>& getControlInfos();
-	CvControlInfo& getControlInfo(ControlTypes eControlNum);
+	CvControlInfo& getControlInfo(ControlTypes eControlNum) const;
 
 	std::vector<CvCommandInfo*>& getCommandInfos();
-	CvCommandInfo& getCommandInfo(CommandTypes eCommandNum);
+	CvCommandInfo& getCommandInfo(CommandTypes eCommandNum) const;
 
-	int getNumAutomateInfos();
+	int getNumAutomateInfos() const;
 	std::vector<CvAutomateInfo*>& getAutomateInfos();
-	CvAutomateInfo& getAutomateInfo(int iAutomateNum);
+	CvAutomateInfo& getAutomateInfo(int iAutomateNum) const;
 
-	int getNumPromotionInfos();
+	int getNumPromotionInfos() const;
 	std::vector<CvPromotionInfo*>& getPromotionInfos();
-	CvPromotionInfo& getPromotionInfo(PromotionTypes ePromotionNum);
+	CvPromotionInfo& getPromotionInfo(PromotionTypes ePromotionNum) const;
 	CvInfoReplacements<CvPromotionInfo>* getPromotionInfoReplacements();
 	typedef bst::function<bool(const CvPromotionInfo*, PromotionTypes)> PromotionPredicateFn;
 	PromotionTypes findPromotion(PromotionPredicateFn predicateFn) const;
 
-	int getNumTechInfos();
+	int getNumTechInfos() const;
 	std::vector<CvTechInfo*>& getTechInfos();
-	CvTechInfo& getTechInfo(TechTypes eTechNum);
+	CvTechInfo& getTechInfo(TechTypes eTechNum) const;
 	CvInfoReplacements<CvTechInfo>* getTechInfoReplacements();
 
-	int getNumReligionInfos();
+	int getNumReligionInfos() const;
 	std::vector<CvReligionInfo*>& getReligionInfos();
-	CvReligionInfo& getReligionInfo(ReligionTypes eReligionNum);
+	CvReligionInfo& getReligionInfo(ReligionTypes eReligionNum) const;
 	CvInfoReplacements<CvReligionInfo>* getReligionInfoReplacements();
 
-	int getNumCorporationInfos();
+	int getNumCorporationInfos() const;
 	std::vector<CvCorporationInfo*>& getCorporationInfos();
-	CvCorporationInfo& getCorporationInfo(CorporationTypes eCorporationNum);
+	CvCorporationInfo& getCorporationInfo(CorporationTypes eCorporationNum) const;
 	CvInfoReplacements<CvCorporationInfo>* getCorporationInfoReplacements();
 
-	int getNumSpecialistInfos();
+	int getNumSpecialistInfos() const;
 	std::vector<CvSpecialistInfo*>& getSpecialistInfos();
-	CvSpecialistInfo& getSpecialistInfo(SpecialistTypes eSpecialistNum);
+	CvSpecialistInfo& getSpecialistInfo(SpecialistTypes eSpecialistNum) const;
 	CvInfoReplacements<CvSpecialistInfo>* getSpecialistInfoReplacements();
 
-	int getNumCivicOptionInfos();
+	int getNumCivicOptionInfos() const;
 	std::vector<CvCivicOptionInfo*>& getCivicOptionInfos();
-	CvCivicOptionInfo& getCivicOptionInfo(CivicOptionTypes eCivicOptionNum);
+	CvCivicOptionInfo& getCivicOptionInfo(CivicOptionTypes eCivicOptionNum) const;
 
-	int getNumCivicInfos();
+	int getNumCivicInfos() const;
 	std::vector<CvCivicInfo*>& getCivicInfos();
-	CvCivicInfo& getCivicInfo(CivicTypes eCivicNum);
+	CvCivicInfo& getCivicInfo(CivicTypes eCivicNum) const;
 	CvInfoReplacements<CvCivicInfo>* getCivicInfoReplacements();
 
-	int getNumDiplomacyInfos();
+	int getNumDiplomacyInfos() const;
 	std::vector<CvDiplomacyInfo*>& getDiplomacyInfos();
-	CvDiplomacyInfo& getDiplomacyInfo(int iDiplomacyNum);
+	CvDiplomacyInfo& getDiplomacyInfo(int iDiplomacyNum) const;
 
-	int getNumEraInfos();
+	int getNumEraInfos() const;
 	std::vector<CvEraInfo*>& getEraInfos();
-	CvEraInfo& getEraInfo(EraTypes eEraNum);
+	CvEraInfo& getEraInfo(EraTypes eEraNum) const;
 	CvInfoReplacements<CvEraInfo>* getEraInfoReplacements();
 
-	int getNumHurryInfos();
+	int getNumHurryInfos() const;
 	std::vector<CvHurryInfo*>& getHurryInfos();
-	CvHurryInfo& getHurryInfo(HurryTypes eHurryNum);
+	CvHurryInfo& getHurryInfo(HurryTypes eHurryNum) const;
 
-	int getNumEmphasizeInfos();
+	int getNumEmphasizeInfos() const;
 	std::vector<CvEmphasizeInfo*>& getEmphasizeInfos();
-	CvEmphasizeInfo& getEmphasizeInfo(EmphasizeTypes eEmphasizeNum);
+	CvEmphasizeInfo& getEmphasizeInfo(EmphasizeTypes eEmphasizeNum) const;
 
-	int getNumUpkeepInfos();
+	int getNumUpkeepInfos() const;
 	std::vector<CvUpkeepInfo*>& getUpkeepInfos();
-	CvUpkeepInfo& getUpkeepInfo(UpkeepTypes eUpkeepNum);
+	CvUpkeepInfo& getUpkeepInfo(UpkeepTypes eUpkeepNum) const;
 
-	int getNumCultureLevelInfos();
+	int getNumCultureLevelInfos() const;
 	std::vector<CvCultureLevelInfo*>& getCultureLevelInfos();
-	CvCultureLevelInfo& getCultureLevelInfo(CultureLevelTypes eCultureLevelNum);
+	CvCultureLevelInfo& getCultureLevelInfo(CultureLevelTypes eCultureLevelNum) const;
 	CvInfoReplacements<CvCultureLevelInfo>* getCultureLevelInfoReplacements();
 
-	int getNumVictoryInfos();
+	int getNumVictoryInfos() const;
 	std::vector<CvVictoryInfo*>& getVictoryInfos();
-	CvVictoryInfo& getVictoryInfo(VictoryTypes eVictoryNum);
+	CvVictoryInfo& getVictoryInfo(VictoryTypes eVictoryNum) const;
 
-	int getNumQuestInfos();
+	int getNumQuestInfos() const;
 	std::vector<CvQuestInfo*>& getQuestInfos();
-	CvQuestInfo& getQuestInfo(int iIndex);
+	CvQuestInfo& getQuestInfo(int iIndex) const;
 
-	int getNumTutorialInfos();
+	int getNumTutorialInfos() const;
 	std::vector<CvTutorialInfo*>& getTutorialInfos();
-	CvTutorialInfo& getTutorialInfo(int i);
+	CvTutorialInfo& getTutorialInfo(int i) const;
 
-	int getNumEventTriggerInfos();
+	int getNumEventTriggerInfos() const;
 	std::vector<CvEventTriggerInfo*>& getEventTriggerInfos();
-	CvEventTriggerInfo& getEventTriggerInfo(EventTriggerTypes eEventTrigger);
+	CvEventTriggerInfo& getEventTriggerInfo(EventTriggerTypes eEventTrigger) const;
 	CvInfoReplacements<CvEventTriggerInfo>* getEventTriggerInfoReplacements();
 
-	int getNumEventInfos();
+	int getNumEventInfos() const;
 	std::vector<CvEventInfo*>& getEventInfos();
-	CvEventInfo& getEventInfo(EventTypes eEvent);
+	CvEventInfo& getEventInfo(EventTypes eEvent) const;
 	CvInfoReplacements<CvEventInfo>* getEventInfoReplacements();
 
-	int getNumEspionageMissionInfos();
+	int getNumEspionageMissionInfos() const;
 	std::vector<CvEspionageMissionInfo*>& getEspionageMissionInfos();
-	CvEspionageMissionInfo& getEspionageMissionInfo(EspionageMissionTypes eEspionageMissionNum);
+	CvEspionageMissionInfo& getEspionageMissionInfo(EspionageMissionTypes eEspionageMissionNum) const;
 
-	int getNumUnitArtStyleTypeInfos();
+	int getNumUnitArtStyleTypeInfos() const;
 	std::vector<CvUnitArtStyleTypeInfo*>& getUnitArtStyleTypeInfos();
-	CvUnitArtStyleTypeInfo& getUnitArtStyleTypeInfo(UnitArtStyleTypes eUnitArtStyleTypeNum);
+	CvUnitArtStyleTypeInfo& getUnitArtStyleTypeInfo(UnitArtStyleTypes eUnitArtStyleTypeNum) const;
 
 	//
 	// Global Types
@@ -1033,7 +974,7 @@ public:
 	// THESE ARE READ-ONLY
 	//
 
-	FVariableSystem* getDefinesVarSystem();
+	FVariableSystem* getDefinesVarSystem() const;
 	void cacheGlobals();
 
 	// ***** EXPOSED TO PYTHON *****
@@ -1052,57 +993,57 @@ public:
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	bool isDCM_BATTLE_EFFECTS();
-	int getBATTLE_EFFECT_LESS_FOOD();
-	int getBATTLE_EFFECT_LESS_PRODUCTION();
-	int getBATTLE_EFFECT_LESS_COMMERCE();
-	int getBATTLE_EFFECTS_MINIMUM_TURN_INCREMENTS();
-	int getMAX_BATTLE_TURNS();
+	bool isDCM_BATTLE_EFFECTS() const;
+	int getBATTLE_EFFECT_LESS_FOOD() const;
+	int getBATTLE_EFFECT_LESS_PRODUCTION() const;
+	int getBATTLE_EFFECT_LESS_COMMERCE() const;
+	int getBATTLE_EFFECTS_MINIMUM_TURN_INCREMENTS() const;
+	int getMAX_BATTLE_TURNS() const;
 
-	bool isDCM_AIR_BOMBING();
-	bool isDCM_RANGE_BOMBARD();
-	int getDCM_RB_CITY_INACCURACY();
-	int getDCM_RB_CITYBOMBARD_CHANCE();
-	bool isDCM_ATTACK_SUPPORT();
-	bool isDCM_STACK_ATTACK();
-	bool isDCM_OPP_FIRE();
-	bool isDCM_ACTIVE_DEFENSE();
-	bool isDCM_ARCHER_BOMBARD();
-	bool isDCM_FIGHTER_ENGAGE();
+	bool isDCM_AIR_BOMBING() const;
+	bool isDCM_RANGE_BOMBARD() const;
+	int getDCM_RB_CITY_INACCURACY() const;
+	int getDCM_RB_CITYBOMBARD_CHANCE() const;
+	bool isDCM_ATTACK_SUPPORT() const;
+	bool isDCM_STACK_ATTACK() const;
+	bool isDCM_OPP_FIRE() const;
+	bool isDCM_ACTIVE_DEFENSE() const;
+	bool isDCM_ARCHER_BOMBARD() const;
+	bool isDCM_FIGHTER_ENGAGE() const;
 
-	bool isDYNAMIC_CIV_NAMES();
+	bool isDYNAMIC_CIV_NAMES() const;
 
-	bool isLIMITED_RELIGIONS_EXCEPTIONS();
-	bool isOC_RESPAWN_HOLY_CITIES();
+	bool isLIMITED_RELIGIONS_EXCEPTIONS() const;
+	bool isOC_RESPAWN_HOLY_CITIES() const;
 
-	bool isIDW_ENABLED();
-	float getIDW_BASE_COMBAT_INFLUENCE();
-	float getIDW_NO_CITY_DEFENDER_MULTIPLIER();
-	float getIDW_FORT_CAPTURE_MULTIPLIER();
-	float getIDW_EXPERIENCE_FACTOR();
-	float getIDW_WARLORD_MULTIPLIER();
-	int getIDW_INFLUENCE_RADIUS();
-	float getIDW_PLOT_DISTANCE_FACTOR();
-	float getIDW_WINNER_PLOT_MULTIPLIER();
-	float getIDW_LOSER_PLOT_MULTIPLIER();
-	bool isIDW_EMERGENCY_DRAFT_ENABLED();
-	int getIDW_EMERGENCY_DRAFT_MIN_POPULATION();
-	float getIDW_EMERGENCY_DRAFT_STRENGTH();
-	float getIDW_EMERGENCY_DRAFT_ANGER_MULTIPLIER();
-	bool isIDW_NO_BARBARIAN_INFLUENCE();
-	bool isIDW_NO_NAVAL_INFLUENCE();
-	bool isIDW_PILLAGE_INFLUENCE_ENABLED();
-	float getIDW_BASE_PILLAGE_INFLUENCE();
-	float getIDW_CITY_TILE_MULTIPLIER();
+	bool isIDW_ENABLED() const;
+	float getIDW_BASE_COMBAT_INFLUENCE() const;
+	float getIDW_NO_CITY_DEFENDER_MULTIPLIER() const;
+	float getIDW_FORT_CAPTURE_MULTIPLIER() const;
+	float getIDW_EXPERIENCE_FACTOR() const;
+	float getIDW_WARLORD_MULTIPLIER() const;
+	int getIDW_INFLUENCE_RADIUS() const;
+	float getIDW_PLOT_DISTANCE_FACTOR() const;
+	float getIDW_WINNER_PLOT_MULTIPLIER() const;
+	float getIDW_LOSER_PLOT_MULTIPLIER() const;
+	bool isIDW_EMERGENCY_DRAFT_ENABLED() const;
+	int getIDW_EMERGENCY_DRAFT_MIN_POPULATION() const;
+	float getIDW_EMERGENCY_DRAFT_STRENGTH() const;
+	float getIDW_EMERGENCY_DRAFT_ANGER_MULTIPLIER() const;
+	bool isIDW_NO_BARBARIAN_INFLUENCE() const;
+	bool isIDW_NO_NAVAL_INFLUENCE() const;
+	bool isIDW_PILLAGE_INFLUENCE_ENABLED() const;
+	float getIDW_BASE_PILLAGE_INFLUENCE() const;
+	float getIDW_CITY_TILE_MULTIPLIER() const;
 
-	bool isSS_ENABLED();
-	bool isSS_BRIBE();
-	bool isSS_ASSASSINATE();
+	bool isSS_ENABLED() const;
+	bool isSS_BRIBE() const;
+	bool isSS_ASSASSINATE() const;
 /************************************************************************************************/
 /* Mod Globals                        END                                           phungus420  */
 /************************************************************************************************/
 	void setGraphicalDetailPagingEnabled(bool bEnabled);
-	bool getGraphicalDetailPagingEnabled();
+	bool getGraphicalDetailPagingEnabled() const;
 	int getGraphicalDetailPageInRange();
 
 	int getDefineINT( const char * szName ) const;
@@ -1121,129 +1062,128 @@ public:
 /************************************************************************************************/
 
 
-	int getMOVE_DENOMINATOR();
-	int getNUM_UNIT_PREREQ_OR_BONUSES();
-	int getNUM_BUILDING_PREREQ_OR_BONUSES();
-	int getFOOD_CONSUMPTION_PER_POPULATION();
-	int getMAX_HIT_POINTS();
-	int getPATH_DAMAGE_WEIGHT();
-	int getHILLS_EXTRA_DEFENSE();
-	int getRIVER_ATTACK_MODIFIER();
-	int getAMPHIB_ATTACK_MODIFIER();
-	int getHILLS_EXTRA_MOVEMENT();
-	int getRIVER_EXTRA_MOVEMENT();
-	int getMAX_PLOT_LIST_ROWS();
-	int getUNIT_MULTISELECT_MAX();
-	int getPERCENT_ANGER_DIVISOR();
-	int getEVENT_MESSAGE_TIME();
-	int getROUTE_FEATURE_GROWTH_MODIFIER();
-	int getFEATURE_GROWTH_MODIFIER();
-	int getMIN_CITY_RANGE();
-	int getCITY_MAX_NUM_BUILDINGS();
-	int getNUM_UNIT_AND_TECH_PREREQS();
-	int getNUM_AND_TECH_PREREQS();
-	int getNUM_OR_TECH_PREREQS();
-	int getLAKE_MAX_AREA_SIZE();
-	int getNUM_ROUTE_PREREQ_OR_BONUSES();
-	int getNUM_BUILDING_AND_TECH_PREREQS();
-	int getMIN_WATER_SIZE_FOR_OCEAN();
-	int getFORTIFY_MODIFIER_PER_TURN();
-	int getESTABLISH_MODIFIER_PER_TURN();
-	int getESCAPE_MODIFIER_PER_TURN();
-	int getMAX_CITY_DEFENSE_DAMAGE();
-	int getNUM_CORPORATION_PREREQ_BONUSES();
-	int getPEAK_SEE_THROUGH_CHANGE();
-	int getHILLS_SEE_THROUGH_CHANGE();
-	int getSEAWATER_SEE_FROM_CHANGE();
-	int getPEAK_SEE_FROM_CHANGE();
-	int getHILLS_SEE_FROM_CHANGE();
-	int getUSE_SPIES_NO_ENTER_BORDERS();
+	int getMOVE_DENOMINATOR() const;
+	int getNUM_UNIT_PREREQ_OR_BONUSES() const;
+	int getNUM_BUILDING_PREREQ_OR_BONUSES() const;
+	int getFOOD_CONSUMPTION_PER_POPULATION() const;
+	int getMAX_HIT_POINTS() const;
+	int getPATH_DAMAGE_WEIGHT() const;
+	int getHILLS_EXTRA_DEFENSE() const;
+	int getRIVER_ATTACK_MODIFIER() const;
+	int getAMPHIB_ATTACK_MODIFIER() const;
+	int getHILLS_EXTRA_MOVEMENT() const;
+	int getRIVER_EXTRA_MOVEMENT() const;
+	int getMAX_PLOT_LIST_ROWS() const;
+	int getUNIT_MULTISELECT_MAX() const;
+	int getPERCENT_ANGER_DIVISOR() const;
+	int getEVENT_MESSAGE_TIME() const;
+	int getROUTE_FEATURE_GROWTH_MODIFIER() const;
+	int getFEATURE_GROWTH_MODIFIER() const;
+	int getMIN_CITY_RANGE() const;
+	int getCITY_MAX_NUM_BUILDINGS() const;
+	int getNUM_UNIT_AND_TECH_PREREQS() const;
+	int getNUM_AND_TECH_PREREQS() const;
+	int getNUM_OR_TECH_PREREQS() const;
+	int getLAKE_MAX_AREA_SIZE() const;
+	int getNUM_ROUTE_PREREQ_OR_BONUSES() const;
+	int getNUM_BUILDING_AND_TECH_PREREQS() const;
+	int getMIN_WATER_SIZE_FOR_OCEAN() const;
+	int getFORTIFY_MODIFIER_PER_TURN() const;
+	int getESTABLISH_MODIFIER_PER_TURN() const;
+	int getESCAPE_MODIFIER_PER_TURN() const;
+	int getMAX_CITY_DEFENSE_DAMAGE() const;
+	int getNUM_CORPORATION_PREREQ_BONUSES() const;
+	int getPEAK_SEE_THROUGH_CHANGE() const;
+	int getHILLS_SEE_THROUGH_CHANGE() const;
+	int getSEAWATER_SEE_FROM_CHANGE() const;
+	int getPEAK_SEE_FROM_CHANGE() const;
+	int getHILLS_SEE_FROM_CHANGE() const;
+	int getUSE_SPIES_NO_ENTER_BORDERS() const;
 
-	float getCAMERA_MIN_YAW();
-	float getCAMERA_MAX_YAW();
-	float getCAMERA_FAR_CLIP_Z_HEIGHT();
-	float getCAMERA_MAX_TRAVEL_DISTANCE();
-	float getCAMERA_START_DISTANCE();
-	float getAIR_BOMB_HEIGHT();
-	float getPLOT_SIZE();
-	float getCAMERA_SPECIAL_PITCH();
-	float getCAMERA_MAX_TURN_OFFSET();
-	float getCAMERA_MIN_DISTANCE();
-	float getCAMERA_UPPER_PITCH();
-	float getCAMERA_LOWER_PITCH();
-	float getFIELD_OF_VIEW();
-	float getSHADOW_SCALE();
-	float getUNIT_MULTISELECT_DISTANCE();
+	float getCAMERA_MIN_YAW() const;
+	float getCAMERA_MAX_YAW() const;
+	float getCAMERA_FAR_CLIP_Z_HEIGHT() const;
+	float getCAMERA_MAX_TRAVEL_DISTANCE() const;
+	float getCAMERA_START_DISTANCE() const;
+	float getAIR_BOMB_HEIGHT() const;
+	float getPLOT_SIZE() const;
+	float getCAMERA_SPECIAL_PITCH() const;
+	float getCAMERA_MAX_TURN_OFFSET() const;
+	float getCAMERA_MIN_DISTANCE() const;
+	float getCAMERA_UPPER_PITCH() const;
+	float getCAMERA_LOWER_PITCH() const;
+	float getFIELD_OF_VIEW() const;
+	float getSHADOW_SCALE() const;
+	float getUNIT_MULTISELECT_DISTANCE() const;
 
-	int getUSE_CANNOT_FOUND_CITY_CALLBACK();
-	int getUSE_CAN_FOUND_CITIES_ON_WATER_CALLBACK();
-	int getUSE_IS_PLAYER_RESEARCH_CALLBACK();
-	int getUSE_CAN_RESEARCH_CALLBACK();
-	int getUSE_CANNOT_DO_CIVIC_CALLBACK();
-	int getUSE_CAN_DO_CIVIC_CALLBACK();
-	int getUSE_CANNOT_CONSTRUCT_CALLBACK();
-	int getUSE_CAN_CONSTRUCT_CALLBACK();
-	int getUSE_CAN_DECLARE_WAR_CALLBACK();
-	int getUSE_CANNOT_RESEARCH_CALLBACK();
-	int getUSE_GET_UNIT_COST_MOD_CALLBACK();
-	int getUSE_GET_BUILDING_COST_MOD_CALLBACK();
-	int getUSE_GET_CITY_FOUND_VALUE_CALLBACK();
-	int getUSE_CANNOT_HANDLE_ACTION_CALLBACK();
-	int getUSE_CAN_TRAIN_CALLBACK();
-	int getUSE_CANNOT_TRAIN_CALLBACK();
-	int getUSE_CAN_BUILD_CALLBACK();
-	int getUSE_CAN_TRAIN_CALLBACK(UnitTypes eUnit);
-	int getUSE_CANNOT_TRAIN_CALLBACK(UnitTypes eUnit);
-	int getUSE_CAN_BUILD_CALLBACK(BuildTypes eBuild);
-	int getUSE_UNIT_CANNOT_MOVE_INTO_CALLBACK();
-	int getUSE_USE_CANNOT_SPREAD_RELIGION_CALLBACK();
-	int getUSE_FINISH_TEXT_CALLBACK();
-	int getUSE_ON_UNIT_SET_XY_CALLBACK();
-	int getUSE_ON_UNIT_SELECTED_CALLBACK();
-	int getUSE_ON_UPDATE_CALLBACK();
-	int getUSE_ON_UNIT_CREATED_CALLBACK();
-	int getUSE_ON_UNIT_LOST_CALLBACK();
+	int getUSE_CANNOT_FOUND_CITY_CALLBACK() const;
+	int getUSE_CAN_FOUND_CITIES_ON_WATER_CALLBACK() const;
+	int getUSE_IS_PLAYER_RESEARCH_CALLBACK() const;
+	int getUSE_CAN_RESEARCH_CALLBACK() const;
+	int getUSE_CANNOT_DO_CIVIC_CALLBACK() const;
+	int getUSE_CAN_DO_CIVIC_CALLBACK() const;
+	int getUSE_CANNOT_CONSTRUCT_CALLBACK() const;
+	int getUSE_CAN_CONSTRUCT_CALLBACK() const;
+	int getUSE_CAN_DECLARE_WAR_CALLBACK() const;
+	int getUSE_CANNOT_RESEARCH_CALLBACK() const;
+	int getUSE_GET_UNIT_COST_MOD_CALLBACK() const;
+	int getUSE_GET_BUILDING_COST_MOD_CALLBACK() const;
+	int getUSE_GET_CITY_FOUND_VALUE_CALLBACK() const;
+	int getUSE_CANNOT_HANDLE_ACTION_CALLBACK() const;
+	int getUSE_CAN_TRAIN_CALLBACK() const;
+	int getUSE_CANNOT_TRAIN_CALLBACK() const;
+	int getUSE_CAN_BUILD_CALLBACK() const;
+	int getUSE_CAN_TRAIN_CALLBACK(UnitTypes eUnit) const;
+	int getUSE_CANNOT_TRAIN_CALLBACK(UnitTypes eUnit) const;
+	int getUSE_CAN_BUILD_CALLBACK(BuildTypes eBuild) const;
+	int getUSE_UNIT_CANNOT_MOVE_INTO_CALLBACK() const;
+	int getUSE_USE_CANNOT_SPREAD_RELIGION_CALLBACK() const;
+	int getUSE_FINISH_TEXT_CALLBACK() const;
+	int getUSE_ON_UNIT_SET_XY_CALLBACK() const;
+	int getUSE_ON_UNIT_SELECTED_CALLBACK() const;
+	int getUSE_ON_UPDATE_CALLBACK() const;
+	int getUSE_ON_UNIT_CREATED_CALLBACK() const;
+	int getUSE_ON_UNIT_LOST_CALLBACK() const;
 /************************************************************************************************/
 /* MODULES                                 11/13/07                            MRGENIE          */
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	int getTGA_RELIGIONS();								// GAMEFONT
-	int getTGA_CORPORATIONS();
+	int getTGA_RELIGIONS() const;								// GAMEFONT
+	int getTGA_CORPORATIONS() const;
 /************************************************************************************************/
 /* MODULES                                 END                                                  */
 /************************************************************************************************/
-	int getMAX_CIV_PLAYERS();
-	int getMAX_PC_PLAYERS();
-	int getMAX_PLAYERS();
-	int getMAX_CIV_TEAMS();
-	int getMAX_PC_TEAMS();
-	int getMAX_TEAMS();
-	int getBARBARIAN_PLAYER();
-	int getBARBARIAN_TEAM();
-	int getAGGRESSIVE_ANIMAL_PLAYER();
-	int getAGGRESSIVE_ANIMAL_TEAM();
-	int getPASSIVE_ANIMAL_PLAYER();
-	int getPASSIVE_ANIMAL_TEAM();
-	int getNPC1_PLAYER();
-	int getNPC1_TEAM();
-	int getNPC2_PLAYER();
-	int getNPC2_TEAM();
-	int getNPC3_PLAYER();
-	int getNPC3_TEAM();
-	int getNPC4_PLAYER();
-	int getNPC4_TEAM();
-	int getNPC5_PLAYER();
-	int getNPC5_TEAM();
-	int getNPC6_PLAYER();
-	int getNPC6_TEAM();
-	int getNPC7_PLAYER();
-	int getNPC7_TEAM();
-	int getNPC8_PLAYER();
-	int getNPC8_TEAM();
-	int getINVALID_PLOT_COORD();
-	int getNUM_CITY_PLOTS();
-	int getCITY_HOME_PLOT();
+	int getMAX_CIV_PLAYERS() const;
+	int getMAX_PC_PLAYERS() const;
+	int getMAX_PLAYERS() const;
+	int getMAX_PC_TEAMS() const;
+	int getMAX_TEAMS() const;
+	int getBARBARIAN_PLAYER() const;
+	int getBARBARIAN_TEAM() const;
+	int getNEANDERTHAL_PLAYER() const;
+	int getNEANDERTHAL_TEAM() const;
+	int getBEAST_PLAYER() const;
+	int getBEAST_TEAM() const;
+	int getPREDATOR_PLAYER() const;
+	int getPREDATOR_TEAM() const;
+	int getPREY_PLAYER() const;
+	int getPREY_TEAM() const;
+	int getINSECT_PLAYER() const;
+	int getINSECT_TEAM() const;
+	int getNPC4_PLAYER() const;
+	int getNPC4_TEAM() const;
+	int getNPC3_PLAYER() const;
+	int getNPC3_TEAM() const;
+	int getNPC2_PLAYER() const;
+	int getNPC2_TEAM() const;
+	int getNPC1_PLAYER() const;
+	int getNPC1_TEAM() const;
+	int getNPC0_PLAYER() const;
+	int getNPC0_TEAM() const;
+	int getINVALID_PLOT_COORD() const;
+	int getNUM_CITY_PLOTS() const;
+	int getCITY_HOME_PLOT() const;
 
 	// ***** END EXPOSED TO PYTHON *****
 
@@ -1254,7 +1194,7 @@ public:
 #endif
 	CvDLLUtilityIFaceBase* getDLLIFaceNonInl();
 	void setDLLProfiler(FProfiler* prof);
-	FProfiler* getDLLProfiler();
+	FProfiler* getDLLProfiler() const;
 	void enableDLLProfiler(bool bEnable);
 	bool isDLLProfilerEnabled() const;
 	const char* alternateProfileSampleName() const;
@@ -1442,7 +1382,7 @@ protected:
 	************************************************************************************************************************/
 
 	// Hash function for zero terminated strings.
-	struct SZStringHash { 
+	struct SZStringHash {
 		enum { // parameters for hash table
 			bucket_size = 4, // 0 < bucket_size
 			min_buckets = 4096,
@@ -1452,7 +1392,7 @@ protected:
 		// Hashing from https://create.stephan-brumme.com/fnv-hash/
 		static const size_t Prime = 0x01000193; //   16777619
 		static const size_t Seed = 0x811C9DC5;  // 2166136261
-		
+
 		// hash a single byte
 		static inline size_t fnv1a(unsigned char oneByte, size_t hash = Seed)
 		{
@@ -1473,7 +1413,7 @@ protected:
 		{
 			return fnv1a(key, strlen(key));
 		}
-		
+
 		bool operator()(const Key& key1, const Key& key2) const
 		{
 			return strcmp(key1, key2) > 0;
@@ -1485,7 +1425,7 @@ protected:
 	InfosMap m_infosMap;
 	std::vector<std::vector<CvInfoBase *> *> m_aInfoVectors;
 
-	int m_iLastTypeID; // last generic type ID assigned (for type strings that do not have an assigned info class) 
+	int m_iLastTypeID; // last generic type ID assigned (for type strings that do not have an assigned info class)
 
 	// AIAndy: Delayed resolution of type strings
 	typedef std::map<int*,std::pair<CvString,CvString> > DelayedResolutionMap;
@@ -1559,14 +1499,10 @@ protected:
 	std::vector<CvVoteInfo*> m_paVoteInfo;
 	std::vector<CvProjectInfo*> m_paProjectInfo;
 	CvInfoReplacements<CvProjectInfo> m_ProjectInfoReplacements;
-	std::vector<CvBuildingClassInfo*> m_paBuildingClassInfo;
-	CvInfoReplacements<CvBuildingClassInfo> m_BuildingClassInfoReplacements;
 	std::vector<CvBuildingInfo*> m_paBuildingInfo;
 	CvInfoReplacements<CvBuildingInfo> m_BuildingInfoReplacements;
 	std::vector<CvSpecialBuildingInfo*> m_paSpecialBuildingInfo;
 	CvInfoReplacements<CvSpecialBuildingInfo> m_SpecialBuildingInfoReplacements;
-	std::vector<CvUnitClassInfo*> m_paUnitClassInfo;
-	CvInfoReplacements<CvUnitClassInfo> m_UnitClassInfoReplacements;
 	std::vector<CvUnitInfo*> m_paUnitInfo;
 	CvInfoReplacements<CvUnitInfo> m_UnitInfoReplacements;
 	std::vector<CvSpawnInfo*> m_paSpawnInfo;
@@ -1780,13 +1716,13 @@ protected:
 	int m_iPEAK_EXTRA_MOVEMENT;
 	bool m_bXMLLogging;
 	bool m_bLoadedPlayerOptions;
-	
+
 	int m_iSCORE_FREE_PERCENT;
 	int m_iSCORE_POPULATION_FACTOR;
 	int m_iSCORE_LAND_FACTOR;
 	int m_iSCORE_TECH_FACTOR;
 	int m_iSCORE_WONDER_FACTOR;
-	
+
 	int m_iUSE_CAN_CREATE_PROJECT_CALLBACK;
 	int m_iUSE_CANNOT_CREATE_PROJECT_CALLBACK;
 	int m_iUSE_CAN_DO_MELTDOWN_CALLBACK;
@@ -1931,21 +1867,15 @@ protected:
 /*                                                                                              */
 /* Efficiency, Options                                                                          */
 /************************************************************************************************/
-	//	Koshling - granular callback control
-#ifdef GRANULAR_CALLBACK_CONTROL
-public:
-	mutable GranularCallbackController	m_pythonCallbackController;
-#endif
-
 public:
 	int getDefineINT( const char * szName, const int iDefault ) const;
-	
+
 // BBAI Options
 public:
-	bool getBBAI_AIR_COMBAT();
-	bool getBBAI_HUMAN_VASSAL_WAR_BUILD();
-	int getBBAI_DEFENSIVE_PACT_BEHAVIOR();
-	bool getBBAI_HUMAN_AS_VASSAL_OPTION();
+	bool getBBAI_AIR_COMBAT() const;
+	bool getBBAI_HUMAN_VASSAL_WAR_BUILD() const;
+	int getBBAI_DEFENSIVE_PACT_BEHAVIOR() const;
+	bool getBBAI_HUMAN_AS_VASSAL_OPTION() const;
 
 protected:
 	bool m_bBBAI_AIR_COMBAT;
@@ -1955,11 +1885,11 @@ protected:
 
 // BBAI AI Variables
 public:
-	int getWAR_SUCCESS_CITY_CAPTURING();
-	int getBBAI_ATTACK_CITY_STACK_RATIO();
-	int getBBAI_SKIP_BOMBARD_BEST_ATTACK_ODDS();
-	int getBBAI_SKIP_BOMBARD_BASE_STACK_RATIO();
-	int getBBAI_SKIP_BOMBARD_MIN_STACK_RATIO();
+	int getWAR_SUCCESS_CITY_CAPTURING() const;
+	int getBBAI_ATTACK_CITY_STACK_RATIO() const;
+	int getBBAI_SKIP_BOMBARD_BEST_ATTACK_ODDS() const;
+	int getBBAI_SKIP_BOMBARD_BASE_STACK_RATIO() const;
+	int getBBAI_SKIP_BOMBARD_MIN_STACK_RATIO() const;
 
 protected:
 	int m_iWAR_SUCCESS_CITY_CAPTURING;
@@ -1970,16 +1900,16 @@ protected:
 
 // Tech Diffusion
 public:
-	bool getTECH_DIFFUSION_ENABLE();
-	int getTECH_DIFFUSION_KNOWN_TEAM_MODIFIER();
-	int getTECH_DIFFUSION_WELFARE_THRESHOLD();
-	int getTECH_DIFFUSION_WELFARE_MODIFIER();
-	int getTECH_COST_FIRST_KNOWN_PREREQ_MODIFIER();
-	int getTECH_COST_KNOWN_PREREQ_MODIFIER();
-	int getTECH_COST_MODIFIER();
-	int getUNIT_PRODUCTION_PERCENT_SM();
-	int getUNIT_PRODUCTION_PERCENT();
-	int getBUILDING_PRODUCTION_PERCENT();
+	bool getTECH_DIFFUSION_ENABLE() const;
+	int getTECH_DIFFUSION_KNOWN_TEAM_MODIFIER() const;
+	int getTECH_DIFFUSION_WELFARE_THRESHOLD() const;
+	int getTECH_DIFFUSION_WELFARE_MODIFIER() const;
+	int getTECH_COST_FIRST_KNOWN_PREREQ_MODIFIER() const;
+	int getTECH_COST_KNOWN_PREREQ_MODIFIER() const;
+	int getTECH_COST_MODIFIER() const;
+	int getUNIT_PRODUCTION_PERCENT_SM() const;
+	int getUNIT_PRODUCTION_PERCENT() const;
+	int getBUILDING_PRODUCTION_PERCENT() const;
 
 protected:
 	bool m_bTECH_DIFFUSION_ENABLE;
@@ -1992,10 +1922,10 @@ protected:
 	int m_iUNIT_PRODUCTION_PERCENT_SM;
 	int m_iUNIT_PRODUCTION_PERCENT;
 	int m_iBUILDING_PRODUCTION_PERCENT;
-	
+
 public:
-	int getCOMBAT_DIE_SIDES();
-	int getCOMBAT_DAMAGE();
+	int getCOMBAT_DIE_SIDES() const;
+	int getCOMBAT_DAMAGE() const;
 protected:
 	int m_iCOMBAT_DIE_SIDES;
 	int m_iCOMBAT_DAMAGE;
@@ -2069,276 +1999,276 @@ public:
 
 	DllExport void init()
 	{
-		PROXY_TRACK("init");	
-		gGlobals->init();	
+		PROXY_TRACK("init");
+		gGlobals->init();
 	}
 	DllExport void uninit()
 	{
-		PROXY_TRACK("uninit");	
-		gGlobals->uninit();	
+		PROXY_TRACK("uninit");
+		gGlobals->uninit();
 	}
 
 	void clearTypesMap()
 	{
-		PROXY_TRACK("clearTypesMap");	
-		gGlobals->clearTypesMap();	
+		PROXY_TRACK("clearTypesMap");
+		gGlobals->clearTypesMap();
 	}
 
 	DllExport CvDiplomacyScreen* getDiplomacyScreen()
 	{
-		PROXY_TRACK("getDiplomacyScreen");	
-		return gGlobals->getDiplomacyScreen();	
+		PROXY_TRACK("getDiplomacyScreen");
+		return gGlobals->getDiplomacyScreen();
 	}
 
 	DllExport CMPDiplomacyScreen* getMPDiplomacyScreen()
 	{
-		PROXY_TRACK("getMPDiplomacyScreen");	
-		return gGlobals->getMPDiplomacyScreen();	
+		PROXY_TRACK("getMPDiplomacyScreen");
+		return gGlobals->getMPDiplomacyScreen();
 	}
 
 	DllExport FMPIManager*& getFMPMgrPtr()
 	{
-		PROXY_TRACK("getFMPMgrPtr");	
-		return gGlobals->getFMPMgrPtr();	
+		PROXY_TRACK("getFMPMgrPtr");
+		return gGlobals->getFMPMgrPtr();
 	}
 	DllExport CvPortal& getPortal()
 	{
-		PROXY_TRACK("getPortal");	
-		return gGlobals->getPortal();	
+		PROXY_TRACK("getPortal");
+		return gGlobals->getPortal();
 	}
 	DllExport CvSetupData& getSetupData()
 	{
-		PROXY_TRACK("getSetupData");	
-		return gGlobals->getSetupData();	
+		PROXY_TRACK("getSetupData");
+		return gGlobals->getSetupData();
 	}
 	DllExport CvInitCore& getInitCore()
 	{
-		PROXY_TRACK("getInitCore");	
-		return gGlobals->getInitCore();	
+		PROXY_TRACK("getInitCore");
+		return gGlobals->getInitCore();
 	}
 	DllExport CvInitCore& getLoadedInitCore()
 	{
-		PROXY_TRACK("getLoadedInitCore");	
-		return gGlobals->getLoadedInitCore();	
+		PROXY_TRACK("getLoadedInitCore");
+		return gGlobals->getLoadedInitCore();
 	}
 	DllExport CvInitCore& getIniInitCore()
 	{
-		PROXY_TRACK("getIniInitCore");	
-		return gGlobals->getIniInitCore();	
+		PROXY_TRACK("getIniInitCore");
+		return gGlobals->getIniInitCore();
 	}
 	DllExport CvMessageCodeTranslator& getMessageCodes()
 	{
-		PROXY_TRACK("getMessageCodes");	
-		return gGlobals->getMessageCodes();	
+		PROXY_TRACK("getMessageCodes");
+		return gGlobals->getMessageCodes();
 	}
 	DllExport CvStatsReporter& getStatsReporter()
 	{
-		PROXY_TRACK("getStatsReporter");	
-		return gGlobals->getStatsReporter();	
+		PROXY_TRACK("getStatsReporter");
+		return gGlobals->getStatsReporter();
 	}
 	CvStatsReporter* getStatsReporterPtr()
 	{
-		PROXY_TRACK("getStatsReporterPtr");	
-		return gGlobals->getStatsReporterPtr();	
+		PROXY_TRACK("getStatsReporterPtr");
+		return gGlobals->getStatsReporterPtr();
 	}
 	DllExport CvInterface& getInterface()
 	{
-		PROXY_TRACK("getInterface");	
-		return gGlobals->getInterface();	
+		PROXY_TRACK("getInterface");
+		return gGlobals->getInterface();
 	}
 	DllExport CvInterface* getInterfacePtr()
 	{
-		PROXY_TRACK("getInterfacePtr");	
-		return gGlobals->getInterfacePtr();	
+		PROXY_TRACK("getInterfacePtr");
+		return gGlobals->getInterfacePtr();
 	}
 	DllExport int getMaxCivPlayers() const
 	{
-		PROXY_TRACK("getMaxCivPlayers");	
-		return gGlobals->getMaxCivPlayers();	
+		PROXY_TRACK("getMaxCivPlayers");
+		return gGlobals->getMaxCivPlayers();
 	}
 	DllExport CvMapExternal& getMap()
 	{
-		PROXY_TRACK("getMap");	
-		return gGlobals->getMapExternal();	
+		PROXY_TRACK("getMap");
+		return gGlobals->getMapExternal();
 	}
 	DllExport CvGameAI& getGame()
 	{
-		PROXY_TRACK("getGame");	
-		return gGlobals->getGame();	
+		PROXY_TRACK("getGame");
+		return gGlobals->getGame();
 	}
 	DllExport CvGameAI *getGamePointer()
 	{
-		PROXY_TRACK("getGamePointer");	
-		return gGlobals->getGamePointer();	
+		PROXY_TRACK("getGamePointer");
+		return gGlobals->getGamePointer();
 	}
 	DllExport CvRandom& getASyncRand()
 	{
-		PROXY_TRACK("getASyncRand");	
-		return gGlobals->getASyncRand();	
+		PROXY_TRACK("getASyncRand");
+		return gGlobals->getASyncRand();
 	}
 	DllExport CMessageQueue& getMessageQueue()
 	{
-		PROXY_TRACK("getMessageQueue");	
-		return gGlobals->getMessageQueue();	
+		PROXY_TRACK("getMessageQueue");
+		return gGlobals->getMessageQueue();
 	}
 	DllExport CMessageQueue& getHotMessageQueue()
 	{
-		PROXY_TRACK("getHotMessageQueue");	
-		return gGlobals->getHotMessageQueue();	
+		PROXY_TRACK("getHotMessageQueue");
+		return gGlobals->getHotMessageQueue();
 	}
 	DllExport CMessageControl& getMessageControl()
 	{
-		PROXY_TRACK("getMessageControl");	
-		return gGlobals->getMessageControl();	
+		PROXY_TRACK("getMessageControl");
+		return gGlobals->getMessageControl();
 	}
 	DllExport CvDropMgr& getDropMgr()
 	{
-		PROXY_TRACK("getDropMgr");	
-		return gGlobals->getDropMgr();	
+		PROXY_TRACK("getDropMgr");
+		return gGlobals->getDropMgr();
 	}
 	DllExport FAStar& getPathFinder()
 	{
-		PROXY_TRACK("getPathFinder");	
-		return gGlobals->getPathFinder();	
+		PROXY_TRACK("getPathFinder");
+		return gGlobals->getPathFinder();
 	}
 	DllExport FAStar& getInterfacePathFinder()
 	{
-		PROXY_TRACK("getInterfacePathFinder");	
-		return gGlobals->getInterfacePathFinder();	
+		PROXY_TRACK("getInterfacePathFinder");
+		return gGlobals->getInterfacePathFinder();
 	}
 	DllExport FAStar& getStepFinder()
 	{
-		PROXY_TRACK("getStepFinder");	
-		return gGlobals->getStepFinder();	
+		PROXY_TRACK("getStepFinder");
+		return gGlobals->getStepFinder();
 	}
 	DllExport FAStar& getRouteFinder()
 	{
-		PROXY_TRACK("getRouteFinder");	
-		return gGlobals->getRouteFinder();	
+		PROXY_TRACK("getRouteFinder");
+		return gGlobals->getRouteFinder();
 	}
 	DllExport FAStar& getBorderFinder()
 	{
-		PROXY_TRACK("getBorderFinder");	
-		return gGlobals->getBorderFinder();	
+		PROXY_TRACK("getBorderFinder");
+		return gGlobals->getBorderFinder();
 	}
 	DllExport FAStar& getAreaFinder()
 	{
-		PROXY_TRACK("getAreaFinder");	
-		return gGlobals->getAreaFinder();	
+		PROXY_TRACK("getAreaFinder");
+		return gGlobals->getAreaFinder();
 	}
 	DllExport FAStar& getPlotGroupFinder()
 	{
-		PROXY_TRACK("getPlotGroupFinder");	
-		return gGlobals->getPlotGroupFinder();	
+		PROXY_TRACK("getPlotGroupFinder");
+		return gGlobals->getPlotGroupFinder();
 	}
 	NiPoint3& getPt3Origin()
 	{
-		PROXY_TRACK("getPt3Origin");	
-		return gGlobals->getPt3Origin();	
+		PROXY_TRACK("getPt3Origin");
+		return gGlobals->getPt3Origin();
 	}
 
 	DllExport std::vector<CvInterfaceModeInfo*>& getInterfaceModeInfo()
 	{
-		PROXY_TRACK("getInterfaceModeInfo");	
-		return gGlobals->getInterfaceModeInfos();	
+		PROXY_TRACK("getInterfaceModeInfo");
+		return gGlobals->getInterfaceModeInfos();
 	}
 	DllExport CvInterfaceModeInfo& getInterfaceModeInfo(InterfaceModeTypes e)
 	{
-		PROXY_TRACK("getInterfaceModeInfo");	
-		return gGlobals->getInterfaceModeInfo(e);	
+		PROXY_TRACK("getInterfaceModeInfo");
+		return gGlobals->getInterfaceModeInfo(e);
 	}
 
 	NiPoint3& getPt3CameraDir()
 	{
-		PROXY_TRACK("getPt3CameraDir");	
-		return gGlobals->getPt3CameraDir();	
+		PROXY_TRACK("getPt3CameraDir");
+		return gGlobals->getPt3CameraDir();
 	}
 
 	DllExport bool& getLogging()
 	{
-		PROXY_TRACK("getLogging");	
-		return gGlobals->getLogging();	
+		PROXY_TRACK("getLogging");
+		return gGlobals->getLogging();
 	}
 	DllExport bool& getRandLogging()
 	{
-		PROXY_TRACK("getRandLogging");	
-		return gGlobals->getRandLogging();	
+		PROXY_TRACK("getRandLogging");
+		return gGlobals->getRandLogging();
 	}
 	DllExport bool& getSynchLogging()
 	{
-		PROXY_TRACK("getSynchLogging");	
-		return gGlobals->getSynchLogging();	
+		PROXY_TRACK("getSynchLogging");
+		return gGlobals->getSynchLogging();
 	}
 	DllExport bool& overwriteLogs()
 	{
-		PROXY_TRACK("overwriteLogs");	
-		return gGlobals->overwriteLogs();	
+		PROXY_TRACK("overwriteLogs");
+		return gGlobals->overwriteLogs();
 	}
 
 	DllExport int* getPlotDirectionX()
 	{
-		PROXY_TRACK("getPlotDirectionX");	
-		return gGlobals->getPlotDirectionX();	
+		PROXY_TRACK("getPlotDirectionX");
+		return gGlobals->getPlotDirectionX();
 	}
 	DllExport int* getPlotDirectionY()
 	{
-		PROXY_TRACK("getPlotDirectionY");	
-		return gGlobals->getPlotDirectionY();	
+		PROXY_TRACK("getPlotDirectionY");
+		return gGlobals->getPlotDirectionY();
 	}
 	DllExport int* getPlotCardinalDirectionX()
 	{
-		PROXY_TRACK("getPlotCardinalDirectionX");	
-		return gGlobals->getPlotCardinalDirectionX();	
+		PROXY_TRACK("getPlotCardinalDirectionX");
+		return gGlobals->getPlotCardinalDirectionX();
 	}
 	DllExport int* getPlotCardinalDirectionY()
 	{
-		PROXY_TRACK("getPlotCardinalDirectionY");	
-		return gGlobals->getPlotCardinalDirectionY();	
+		PROXY_TRACK("getPlotCardinalDirectionY");
+		return gGlobals->getPlotCardinalDirectionY();
 	}
 	int* getCityPlotX()
 	{
-		PROXY_TRACK("getCityPlotX");	
-		return gGlobals->getCityPlotX();	
+		PROXY_TRACK("getCityPlotX");
+		return gGlobals->getCityPlotX();
 	}
 	int* getCityPlotY()
 	{
-		PROXY_TRACK("getCityPlotY");	
-		return gGlobals->getCityPlotY();	
+		PROXY_TRACK("getCityPlotY");
+		return gGlobals->getCityPlotY();
 	}
 	int* getCityPlotPriority()
 	{
-		PROXY_TRACK("getCityPlotPriority");	
-		return gGlobals->getCityPlotPriority();	
+		PROXY_TRACK("getCityPlotPriority");
+		return gGlobals->getCityPlotPriority();
 	}
 	int getXYCityPlot(int i, int j)
 	{
-		PROXY_TRACK("getXYCityPlot");	
-		return gGlobals->getXYCityPlot(i,j);	
+		PROXY_TRACK("getXYCityPlot");
+		return gGlobals->getXYCityPlot(i,j);
 	}
 	DirectionTypes* getTurnLeftDirection()
 	{
-		PROXY_TRACK("getTurnLeftDirection");	
-		return gGlobals->getTurnLeftDirection();	
+		PROXY_TRACK("getTurnLeftDirection");
+		return gGlobals->getTurnLeftDirection();
 	}
 	DirectionTypes getTurnLeftDirection(int i)
 	{
-		PROXY_TRACK("getTurnLeftDirection(i)");	
-		return gGlobals->getTurnLeftDirection(i);	
+		PROXY_TRACK("getTurnLeftDirection(i)");
+		return gGlobals->getTurnLeftDirection(i);
 	}
 	DirectionTypes* getTurnRightDirection()
 	{
-		PROXY_TRACK("getTurnRightDirection");	
-		return gGlobals->getTurnRightDirection();	
+		PROXY_TRACK("getTurnRightDirection");
+		return gGlobals->getTurnRightDirection();
 	}
 	DirectionTypes getTurnRightDirection(int i)
 	{
-		PROXY_TRACK("getTurnRightDirection(i)");	
-		return gGlobals->getTurnRightDirection(i);	
+		PROXY_TRACK("getTurnRightDirection(i)");
+		return gGlobals->getTurnRightDirection(i);
 	}
 	DllExport DirectionTypes getXYDirection(int i, int j)
 	{
-		PROXY_TRACK("getXYDirection");	
-		return gGlobals->getXYDirection(i,j);	
+		PROXY_TRACK("getXYDirection");
+		return gGlobals->getXYDirection(i,j);
 	}
 	//
 	// Global Infos
@@ -2346,8 +2276,8 @@ public:
 	//
 	DllExport int getInfoTypeForString(const char* szType, bool hideAssert = false) const			// returns the infos index, use this when searching for an info type string
 	{
-		PROXY_TRACK("getInfoTypeForString");	
-		return gGlobals->getInfoTypeForString(szType, hideAssert);	
+		PROXY_TRACK("getInfoTypeForString");
+		return gGlobals->getInfoTypeForString(szType, hideAssert);
 	}
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 11/30/07                                MRGENIE      */
@@ -2356,98 +2286,98 @@ public:
 /************************************************************************************************/
 	DllExport void infoTypeFromStringReset()
 	{
-		PROXY_TRACK("infoTypeFromStringReset");	
-		gGlobals->infoTypeFromStringReset();	
+		PROXY_TRACK("infoTypeFromStringReset");
+		gGlobals->infoTypeFromStringReset();
 	}
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 END                                                  */
 /************************************************************************************************/
 	void addToInfosVectors(void *infoVector)
 	{
-		PROXY_TRACK("addToInfosVectors");	
-		gGlobals->addToInfosVectors(infoVector);	
+		PROXY_TRACK("addToInfosVectors");
+		gGlobals->addToInfosVectors(infoVector);
 	}
 	DllExport void infosReset()
 	{
-		PROXY_TRACK("infosReset");	
-		gGlobals->infosReset();	
+		PROXY_TRACK("infosReset");
+		gGlobals->infosReset();
 	}
 
 	DllExport int getNumWorldInfos()
 	{
-		PROXY_TRACK("getNumWorldInfos");	
-		return gGlobals->getNumWorldInfos();	
+		PROXY_TRACK("getNumWorldInfos");
+		return gGlobals->getNumWorldInfos();
 	}
 	DllExport CvWorldInfo& getWorldInfo(WorldSizeTypes e)
 	{
-		PROXY_TRACK("getWorldInfo");	
-		return gGlobals->getWorldInfo(e);	
+		PROXY_TRACK("getWorldInfo");
+		return gGlobals->getWorldInfo(e);
 	}
 
 	DllExport int getNumClimateInfos()
 	{
-		PROXY_TRACK("getNumClimateInfos");	
-		return gGlobals->getNumClimateInfos();	
+		PROXY_TRACK("getNumClimateInfos");
+		return gGlobals->getNumClimateInfos();
 	}
 	DllExport CvClimateInfo& getClimateInfo(ClimateTypes e)
 	{
-		PROXY_TRACK("getClimateInfo");	
-		return gGlobals->getClimateInfo(e);	
+		PROXY_TRACK("getClimateInfo");
+		return gGlobals->getClimateInfo(e);
 	}
 
 	DllExport int getNumSeaLevelInfos()
 	{
-		PROXY_TRACK("getNumSeaLevelInfos");	
-		return gGlobals->getNumSeaLevelInfos();	
+		PROXY_TRACK("getNumSeaLevelInfos");
+		return gGlobals->getNumSeaLevelInfos();
 	}
 	DllExport CvSeaLevelInfo& getSeaLevelInfo(SeaLevelTypes e)
 	{
-		PROXY_TRACK("getSeaLevelInfo");	
-		return gGlobals->getSeaLevelInfo(e);	
+		PROXY_TRACK("getSeaLevelInfo");
+		return gGlobals->getSeaLevelInfo(e);
 	}
 
 	int getNumColorInfos()
 	{
-		PROXY_TRACK("getNumColorInfos");	
-		return gGlobals->getNumColorInfos();	
+		PROXY_TRACK("getNumColorInfos");
+		return gGlobals->getNumColorInfos();
 	}
 	DllExport CvColorInfo& getColorInfo(ColorTypes e)
 	{
-		PROXY_TRACK("getColorInfo");	
-		return gGlobals->getColorInfo(e);	
+		PROXY_TRACK("getColorInfo");
+		return gGlobals->getColorInfo(e);
 	}
 
 	DllExport int getNumPlayerColorInfos()
 	{
-		PROXY_TRACK("getNumPlayerColorInfos");	
-		return gGlobals->getNumPlayerColorInfos();	
+		PROXY_TRACK("getNumPlayerColorInfos");
+		return gGlobals->getNumPlayerColorInfos();
 	}
 	DllExport CvPlayerColorInfo& getPlayerColorInfo(PlayerColorTypes e)
 	{
-		PROXY_TRACK("getPlayerColorInfo");	
-		return gGlobals->getPlayerColorInfo(e);	
+		PROXY_TRACK("getPlayerColorInfo");
+		return gGlobals->getPlayerColorInfo(e);
 	}
 
 	DllExport  int getNumHints()
 	{
-		PROXY_TRACK("getNumHints");	
-		return gGlobals->getNumHints();	
+		PROXY_TRACK("getNumHints");
+		return gGlobals->getNumHints();
 	}
 	DllExport CvInfoBase& getHints(int i)
 	{
-		PROXY_TRACK("getHints");	
-		return gGlobals->getHints(i);	
+		PROXY_TRACK("getHints");
+		return gGlobals->getHints(i);
 	}
 
 	int getNumMainMenus()
 	{
-		PROXY_TRACK("getNumMainMenus");	
-		return gGlobals->getNumMainMenus();	
+		PROXY_TRACK("getNumMainMenus");
+		return gGlobals->getNumMainMenus();
 	}
 	DllExport CvMainMenuInfo& getMainMenus(int i)
 	{
-		PROXY_TRACK("getMainMenus");	
-		return gGlobals->getMainMenus(i);	
+		PROXY_TRACK("getMainMenus");
+		return gGlobals->getMainMenus(i);
 	}
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 10/30/07                            MRGENIE          */
@@ -2456,8 +2386,8 @@ public:
 /************************************************************************************************/
 	CvModLoadControlInfo& getModLoadControlInfos(int i)
 	{
-		PROXY_TRACK("getModLoadControlInfos");	
-		return gGlobals->getModLoadControlInfos(i);	
+		PROXY_TRACK("getModLoadControlInfos");
+		return gGlobals->getModLoadControlInfos(i);
 	}
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 END                                                  */
@@ -2465,508 +2395,508 @@ public:
 
 	DllExport int getNumRouteModelInfos()
 	{
-		PROXY_TRACK("getNumRouteModelInfos");	
-		return gGlobals->getNumRouteModelInfos();	
+		PROXY_TRACK("getNumRouteModelInfos");
+		return gGlobals->getNumRouteModelInfos();
 	}
 	DllExport CvRouteModelInfo& getRouteModelInfo(int i)
 	{
-		PROXY_TRACK("getRouteModelInfo");	
-		return gGlobals->getRouteModelInfo(i);	
+		PROXY_TRACK("getRouteModelInfo");
+		return gGlobals->getRouteModelInfo(i);
 	}
 
 	int getNumRiverInfos()
 	{
-		PROXY_TRACK("getNumRiverInfos");	
-		return gGlobals->getNumRiverInfos();	
+		PROXY_TRACK("getNumRiverInfos");
+		return gGlobals->getNumRiverInfos();
 	}
 	CvRiverInfo& getRiverInfo(RiverTypes e)
 	{
-		PROXY_TRACK("getRiverInfo");	
-		return gGlobals->getRiverInfo(e);	
+		PROXY_TRACK("getRiverInfo");
+		return gGlobals->getRiverInfo(e);
 	}
 
 	DllExport int getNumRiverModelInfos()
 	{
-		PROXY_TRACK("getNumRiverModelInfos");	
-		return gGlobals->getNumRiverModelInfos();	
+		PROXY_TRACK("getNumRiverModelInfos");
+		return gGlobals->getNumRiverModelInfos();
 	}
 	DllExport CvRiverModelInfo& getRiverModelInfo(int i)
 	{
-		PROXY_TRACK("getRiverModelInfo");	
-		return gGlobals->getRiverModelInfo(i);	
+		PROXY_TRACK("getRiverModelInfo");
+		return gGlobals->getRiverModelInfo(i);
 	}
 
 	int getNumWaterPlaneInfos()
 	{
-		PROXY_TRACK("getNumWaterPlaneInfos");	
-		return gGlobals->getNumWaterPlaneInfos();	
+		PROXY_TRACK("getNumWaterPlaneInfos");
+		return gGlobals->getNumWaterPlaneInfos();
 	}
 	DllExport CvWaterPlaneInfo& getWaterPlaneInfo(int i)
 	{
-		PROXY_TRACK("getWaterPlaneInfo");	
-		return gGlobals->getWaterPlaneInfo(i);	
+		PROXY_TRACK("getWaterPlaneInfo");
+		return gGlobals->getWaterPlaneInfo(i);
 	}
 
 	DllExport int getNumTerrainPlaneInfos()
 	{
-		PROXY_TRACK("getNumTerrainPlaneInfos");	
-		return gGlobals->getNumTerrainPlaneInfos();	
+		PROXY_TRACK("getNumTerrainPlaneInfos");
+		return gGlobals->getNumTerrainPlaneInfos();
 	}
 	DllExport CvTerrainPlaneInfo& getTerrainPlaneInfo(int i)
 	{
-		PROXY_TRACK("getTerrainPlaneInfo");	
-		return gGlobals->getTerrainPlaneInfo(i);	
+		PROXY_TRACK("getTerrainPlaneInfo");
+		return gGlobals->getTerrainPlaneInfo(i);
 	}
 
 	DllExport int getNumCameraOverlayInfos()
 	{
-		PROXY_TRACK("getNumCameraOverlayInfos");	
-		return gGlobals->getNumCameraOverlayInfos();	
+		PROXY_TRACK("getNumCameraOverlayInfos");
+		return gGlobals->getNumCameraOverlayInfos();
 	}
 	DllExport CvCameraOverlayInfo& getCameraOverlayInfo(int i)
 	{
-		PROXY_TRACK("getCameraOverlayInfo");	
-		return gGlobals->getCameraOverlayInfo(i);	
+		PROXY_TRACK("getCameraOverlayInfo");
+		return gGlobals->getCameraOverlayInfo(i);
 	}
 
 	int getNumAnimationPathInfos()
 	{
-		PROXY_TRACK("getNumAnimationPathInfos");	
-		return gGlobals->getNumAnimationPathInfos();	
+		PROXY_TRACK("getNumAnimationPathInfos");
+		return gGlobals->getNumAnimationPathInfos();
 	}
 	DllExport CvAnimationPathInfo& getAnimationPathInfo(AnimationPathTypes e)
 	{
-		PROXY_TRACK("getAnimationPathInfo");	
-		return gGlobals->getAnimationPathInfo(e);	
+		PROXY_TRACK("getAnimationPathInfo");
+		return gGlobals->getAnimationPathInfo(e);
 	}
 
 	int getNumAnimationCategoryInfos()
 	{
-		PROXY_TRACK("getNumAnimationCategoryInfos");	
-		return gGlobals->getNumAnimationCategoryInfos();	
+		PROXY_TRACK("getNumAnimationCategoryInfos");
+		return gGlobals->getNumAnimationCategoryInfos();
 	}
 	DllExport CvAnimationCategoryInfo& getAnimationCategoryInfo(AnimationCategoryTypes e)
 	{
-		PROXY_TRACK("getAnimationCategoryInfo");	
-		return gGlobals->getAnimationCategoryInfo(e);	
+		PROXY_TRACK("getAnimationCategoryInfo");
+		return gGlobals->getAnimationCategoryInfo(e);
 	}
 
 	int getNumEntityEventInfos()
 	{
-		PROXY_TRACK("getNumEntityEventInfos");	
-		return gGlobals->getNumEntityEventInfos();	
+		PROXY_TRACK("getNumEntityEventInfos");
+		return gGlobals->getNumEntityEventInfos();
 	}
 	DllExport CvEntityEventInfo& getEntityEventInfo(EntityEventTypes e)
 	{
-		PROXY_TRACK("getEntityEventInfo");	
-		return gGlobals->getEntityEventInfo(e);	
+		PROXY_TRACK("getEntityEventInfo");
+		return gGlobals->getEntityEventInfo(e);
 	}
 
 	int getNumEffectInfos()
 	{
-		PROXY_TRACK("getNumEffectInfos");	
-		return gGlobals->getNumEffectInfos();	
+		PROXY_TRACK("getNumEffectInfos");
+		return gGlobals->getNumEffectInfos();
 	}
 	DllExport CvEffectInfo& getEffectInfo(int i)
 	{
-		PROXY_TRACK("getEffectInfo");	
-		return gGlobals->getEffectInfo(i);	
+		PROXY_TRACK("getEffectInfo");
+		return gGlobals->getEffectInfo(i);
 	}
 
 	int getNumAttachableInfos()
 	{
-		PROXY_TRACK("getNumAttachableInfos");	
-		return gGlobals->getNumAttachableInfos();	
+		PROXY_TRACK("getNumAttachableInfos");
+		return gGlobals->getNumAttachableInfos();
 	}
 	DllExport CvAttachableInfo& getAttachableInfo(int i)
 	{
-		PROXY_TRACK("getAttachableInfo");	
-		return gGlobals->getAttachableInfo(i);	
+		PROXY_TRACK("getAttachableInfo");
+		return gGlobals->getAttachableInfo(i);
 	}
 
 	int getNumCameraInfos()
 	{
-		PROXY_TRACK("getNumCameraInfos");	
-		return gGlobals->getNumCameraInfos();	
+		PROXY_TRACK("getNumCameraInfos");
+		return gGlobals->getNumCameraInfos();
 	}
 	CvCameraInfo& getCameraInfo(CameraAnimationTypes eCameraAnimationNum)
 	{
-		PROXY_TRACK("getCameraInfo");	
-		return gGlobals->getCameraInfo(eCameraAnimationNum);	
+		PROXY_TRACK("getCameraInfo");
+		return gGlobals->getCameraInfo(eCameraAnimationNum);
 	}
 
 	DllExport int getNumUnitFormationInfos()
 	{
-		PROXY_TRACK("getNumUnitFormationInfos");	
-		return gGlobals->getNumUnitFormationInfos();	
+		PROXY_TRACK("getNumUnitFormationInfos");
+		return gGlobals->getNumUnitFormationInfos();
 	}
 	DllExport CvUnitFormationInfo& getUnitFormationInfo(int i)
 	{
-		PROXY_TRACK("getUnitFormationInfo");	
-		return gGlobals->getUnitFormationInfo(i);	
+		PROXY_TRACK("getUnitFormationInfo");
+		return gGlobals->getUnitFormationInfo(i);
 	}
 
 	int getNumLandscapeInfos()
 	{
-		PROXY_TRACK("getNumLandscapeInfos");	
-		return gGlobals->getNumLandscapeInfos();	
+		PROXY_TRACK("getNumLandscapeInfos");
+		return gGlobals->getNumLandscapeInfos();
 	}
 	DllExport CvLandscapeInfo& getLandscapeInfo(int iIndex)
 	{
-		PROXY_TRACK("getLandscapeInfo");	
-		return gGlobals->getLandscapeInfo(iIndex);	
+		PROXY_TRACK("getLandscapeInfo");
+		return gGlobals->getLandscapeInfo(iIndex);
 	}
 	DllExport int getActiveLandscapeID()
 	{
-		PROXY_TRACK("getActiveLandscapeID");	
-		return gGlobals->getActiveLandscapeID();	
+		PROXY_TRACK("getActiveLandscapeID");
+		return gGlobals->getActiveLandscapeID();
 	}
 	DllExport void setActiveLandscapeID(int iLandscapeID)
 	{
-		PROXY_TRACK("setActiveLandscapeID");	
-		return gGlobals->setActiveLandscapeID(iLandscapeID);	
+		PROXY_TRACK("setActiveLandscapeID");
+		return gGlobals->setActiveLandscapeID(iLandscapeID);
 	}
 
 	DllExport int getNumTerrainInfos()
 	{
-		PROXY_TRACK("getNumTerrainInfos");	
-		return gGlobals->getNumTerrainInfos();	
+		PROXY_TRACK("getNumTerrainInfos");
+		return gGlobals->getNumTerrainInfos();
 	}
 	DllExport CvTerrainInfo& getTerrainInfo(TerrainTypes eTerrainNum)
 	{
-		PROXY_TRACK("getTerrainInfo");	
-		return gGlobals->getTerrainInfo(eTerrainNum);	
+		PROXY_TRACK("getTerrainInfo");
+		return gGlobals->getTerrainInfo(eTerrainNum);
 	}
 
 	DllExport int getNumBonusInfos()
 	{
-		PROXY_TRACK("getNumBonusInfos");	
-		return gGlobals->getNumBonusInfos();	
+		PROXY_TRACK("getNumBonusInfos");
+		return gGlobals->getNumBonusInfos();
 	}
 	DllExport CvBonusInfo& getBonusInfo(BonusTypes eBonusNum)
 	{
-		PROXY_TRACK("getBonusInfo");	
-		return gGlobals->getBonusInfo(eBonusNum);	
+		PROXY_TRACK("getBonusInfo");
+		return gGlobals->getBonusInfo(eBonusNum);
 	}
 
 	DllExport int getNumFeatureInfos()
 	{
-		PROXY_TRACK("getNumFeatureInfos");	
-		return gGlobals->getNumFeatureInfos();	
+		PROXY_TRACK("getNumFeatureInfos");
+		return gGlobals->getNumFeatureInfos();
 	}
 	DllExport CvFeatureInfo& getFeatureInfo(FeatureTypes eFeatureNum)
 	{
-		PROXY_TRACK("getFeatureInfo");	
-		return gGlobals->getFeatureInfo(eFeatureNum);	
+		PROXY_TRACK("getFeatureInfo");
+		return gGlobals->getFeatureInfo(eFeatureNum);
 	}
 
 	DllExport int& getNumPlayableCivilizationInfos()
 	{
-		PROXY_TRACK("getNumPlayableCivilizationInfos");	
-		return gGlobals->getNumPlayableCivilizationInfos();	
+		PROXY_TRACK("getNumPlayableCivilizationInfos");
+		return gGlobals->getNumPlayableCivilizationInfos();
 	}
 	DllExport int& getNumAIPlayableCivilizationInfos()
 	{
-		PROXY_TRACK("getNumAIPlayableCivilizationInfos");	
-		return gGlobals->getNumAIPlayableCivilizationInfos();	
+		PROXY_TRACK("getNumAIPlayableCivilizationInfos");
+		return gGlobals->getNumAIPlayableCivilizationInfos();
 	}
 	DllExport int getNumCivilizationInfos()
 	{
-		PROXY_TRACK("getNumCivilizationInfos");	
-		return gGlobals->getNumCivilizationInfos();	
+		PROXY_TRACK("getNumCivilizationInfos");
+		return gGlobals->getNumCivilizationInfos();
 	}
 	DllExport CvCivilizationInfo& getCivilizationInfo(CivilizationTypes eCivilizationNum)
 	{
-		PROXY_TRACK("getCivilizationInfo");	
-		return gGlobals->getCivilizationInfo(eCivilizationNum);	
+		PROXY_TRACK("getCivilizationInfo");
+		return gGlobals->getCivilizationInfo(eCivilizationNum);
 	}
 
 	DllExport int getNumLeaderHeadInfos()
 	{
-		PROXY_TRACK("getNumLeaderHeadInfos");	
-		return gGlobals->getNumLeaderHeadInfos();	
+		PROXY_TRACK("getNumLeaderHeadInfos");
+		return gGlobals->getNumLeaderHeadInfos();
 	}
 	DllExport CvLeaderHeadInfo& getLeaderHeadInfo(LeaderHeadTypes eLeaderHeadNum)
 	{
-		PROXY_TRACK("getLeaderHeadInfo");	
-		return gGlobals->getLeaderHeadInfo(eLeaderHeadNum);	
+		PROXY_TRACK("getLeaderHeadInfo");
+		return gGlobals->getLeaderHeadInfo(eLeaderHeadNum);
 	}
 
 	DllExport int getNumCursorInfos()
 	{
-		PROXY_TRACK("getNumCursorInfos");	
-		return gGlobals->getNumCursorInfos();	
+		PROXY_TRACK("getNumCursorInfos");
+		return gGlobals->getNumCursorInfos();
 	}
 	DllExport	CvCursorInfo& getCursorInfo(CursorTypes eCursorNum)
 	{
-		PROXY_TRACK("getCursorInfo");	
-		return gGlobals->getCursorInfo(eCursorNum);	
+		PROXY_TRACK("getCursorInfo");
+		return gGlobals->getCursorInfo(eCursorNum);
 	}
 
 	int getNumThroneRoomCameras()
 	{
-		PROXY_TRACK("getNumThroneRoomCameras");	
-		return gGlobals->getNumThroneRoomCameras();	
+		PROXY_TRACK("getNumThroneRoomCameras");
+		return gGlobals->getNumThroneRoomCameras();
 	}
 	DllExport	CvThroneRoomCamera& getThroneRoomCamera(int iIndex)
 	{
-		PROXY_TRACK("getThroneRoomCamera");	
-		return gGlobals->getThroneRoomCamera(iIndex);	
+		PROXY_TRACK("getThroneRoomCamera");
+		return gGlobals->getThroneRoomCamera(iIndex);
 	}
 
 	DllExport int getNumThroneRoomInfos()
 	{
-		PROXY_TRACK("getNumThroneRoomInfos");	
-		return gGlobals->getNumThroneRoomInfos();	
+		PROXY_TRACK("getNumThroneRoomInfos");
+		return gGlobals->getNumThroneRoomInfos();
 	}
 	DllExport	CvThroneRoomInfo& getThroneRoomInfo(int iIndex)
 	{
-		PROXY_TRACK("getThroneRoomInfo");	
-		return gGlobals->getThroneRoomInfo(iIndex);	
+		PROXY_TRACK("getThroneRoomInfo");
+		return gGlobals->getThroneRoomInfo(iIndex);
 	}
 
 	DllExport int getNumThroneRoomStyleInfos()
 	{
-		PROXY_TRACK("getNumThroneRoomStyleInfos");	
-		return gGlobals->getNumThroneRoomStyleInfos();	
+		PROXY_TRACK("getNumThroneRoomStyleInfos");
+		return gGlobals->getNumThroneRoomStyleInfos();
 	}
 	std::vector<CvThroneRoomStyleInfo*>& getThroneRoomStyleInfo()
 	{
-		PROXY_TRACK("getThroneRoomStyleInfo");	
-		return gGlobals->getThroneRoomStyleInfos();	
+		PROXY_TRACK("getThroneRoomStyleInfo");
+		return gGlobals->getThroneRoomStyleInfos();
 	}
 	DllExport	CvThroneRoomStyleInfo& getThroneRoomStyleInfo(int iIndex)
 	{
-		PROXY_TRACK("getThroneRoomStyleInfo");	
-		return gGlobals->getThroneRoomStyleInfo(iIndex);	
+		PROXY_TRACK("getThroneRoomStyleInfo");
+		return gGlobals->getThroneRoomStyleInfo(iIndex);
 	}
 
 	DllExport int getNumSlideShowInfos()
 	{
-		PROXY_TRACK("getNumSlideShowInfos");	
-		return gGlobals->getNumSlideShowInfos();	
+		PROXY_TRACK("getNumSlideShowInfos");
+		return gGlobals->getNumSlideShowInfos();
 	}
 	DllExport	CvSlideShowInfo& getSlideShowInfo(int iIndex)
 	{
-		PROXY_TRACK("getSlideShowInfo");	
-		return gGlobals->getSlideShowInfo(iIndex);	
+		PROXY_TRACK("getSlideShowInfo");
+		return gGlobals->getSlideShowInfo(iIndex);
 	}
 
 	DllExport int getNumSlideShowRandomInfos()
 	{
-		PROXY_TRACK("getNumSlideShowRandomInfos");	
-		return gGlobals->getNumSlideShowRandomInfos();	
+		PROXY_TRACK("getNumSlideShowRandomInfos");
+		return gGlobals->getNumSlideShowRandomInfos();
 	}
 	DllExport	CvSlideShowRandomInfo& getSlideShowRandomInfo(int iIndex)
 	{
-		PROXY_TRACK("getSlideShowRandomInfo");	
-		return gGlobals->getSlideShowRandomInfo(iIndex);	
+		PROXY_TRACK("getSlideShowRandomInfo");
+		return gGlobals->getSlideShowRandomInfo(iIndex);
 	}
 
 	DllExport int getNumWorldPickerInfos()
 	{
-		PROXY_TRACK("getNumWorldPickerInfos");	
-		return gGlobals->getNumWorldPickerInfos();	
+		PROXY_TRACK("getNumWorldPickerInfos");
+		return gGlobals->getNumWorldPickerInfos();
 	}
 	DllExport	CvWorldPickerInfo& getWorldPickerInfo(int iIndex)
 	{
-		PROXY_TRACK("getWorldPickerInfo");	
-		return gGlobals->getWorldPickerInfo(iIndex);	
+		PROXY_TRACK("getWorldPickerInfo");
+		return gGlobals->getWorldPickerInfo(iIndex);
 	}
 
 	DllExport int getNumSpaceShipInfos()
 	{
-		PROXY_TRACK("getNumSpaceShipInfos");	
-		return gGlobals->getNumSpaceShipInfos();	
+		PROXY_TRACK("getNumSpaceShipInfos");
+		return gGlobals->getNumSpaceShipInfos();
 	}
 	DllExport	CvSpaceShipInfo& getSpaceShipInfo(int iIndex)
 	{
-		PROXY_TRACK("getSpaceShipInfo");	
-		return gGlobals->getSpaceShipInfo(iIndex);	
+		PROXY_TRACK("getSpaceShipInfo");
+		return gGlobals->getSpaceShipInfo(iIndex);
 	}
 
 	int getNumGameOptionInfos()
 	{
-		PROXY_TRACK("getNumGameOptionInfos");	
-		return gGlobals->getNumGameOptionInfos();	
+		PROXY_TRACK("getNumGameOptionInfos");
+		return gGlobals->getNumGameOptionInfos();
 	}
 	DllExport	CvGameOptionInfo& getGameOptionInfo(GameOptionTypes eGameOptionNum)
 	{
-		PROXY_TRACK("getGameOptionInfo");	
-		return gGlobals->getGameOptionInfo(eGameOptionNum);	
+		PROXY_TRACK("getGameOptionInfo");
+		return gGlobals->getGameOptionInfo(eGameOptionNum);
 	}
 
 	int getNumMPOptionInfos()
 	{
-		PROXY_TRACK("getNumMPOptionInfos");	
-		return gGlobals->getNumMPOptionInfos();	
+		PROXY_TRACK("getNumMPOptionInfos");
+		return gGlobals->getNumMPOptionInfos();
 	}
 	DllExport	CvMPOptionInfo& getMPOptionInfo(MultiplayerOptionTypes eMPOptionNum)
 	{
-		PROXY_TRACK("getMPOptionInfo");	
-		return gGlobals->getMPOptionInfo(eMPOptionNum);	
+		PROXY_TRACK("getMPOptionInfo");
+		return gGlobals->getMPOptionInfo(eMPOptionNum);
 	}
 
 	int getNumForceControlInfos()
 	{
-		PROXY_TRACK("getNumForceControlInfos");	
-		return gGlobals->getNumForceControlInfos();	
+		PROXY_TRACK("getNumForceControlInfos");
+		return gGlobals->getNumForceControlInfos();
 	}
 	CvForceControlInfo& getForceControlInfo(ForceControlTypes eForceControlNum)
 	{
-		PROXY_TRACK("getForceControlInfo");	
-		return gGlobals->getForceControlInfo(eForceControlNum);	
+		PROXY_TRACK("getForceControlInfo");
+		return gGlobals->getForceControlInfo(eForceControlNum);
 	}
 
 	DllExport	CvPlayerOptionInfo& getPlayerOptionInfo(PlayerOptionTypes ePlayerOptionNum)
 	{
-		PROXY_TRACK("getPlayerOptionInfo");	
-		return gGlobals->getPlayerOptionInfo(ePlayerOptionNum);	
+		PROXY_TRACK("getPlayerOptionInfo");
+		return gGlobals->getPlayerOptionInfo(ePlayerOptionNum);
 	}
 
 	DllExport	CvGraphicOptionInfo& getGraphicOptionInfo(GraphicOptionTypes eGraphicOptionNum)
 	{
-		PROXY_TRACK("getGraphicOptionInfo");	
-		return gGlobals->getGraphicOptionInfo(eGraphicOptionNum);	
+		PROXY_TRACK("getGraphicOptionInfo");
+		return gGlobals->getGraphicOptionInfo(eGraphicOptionNum);
 	}
 
 	DllExport int getNumRouteInfos()
 	{
-		PROXY_TRACK("getNumRouteInfos");	
-		return gGlobals->getNumRouteInfos();	
+		PROXY_TRACK("getNumRouteInfos");
+		return gGlobals->getNumRouteInfos();
 	}
 	CvRouteInfo& getRouteInfo(RouteTypes eRouteNum)
 	{
-		PROXY_TRACK("getRouteInfo");	
-		return gGlobals->getRouteInfo(eRouteNum);	
+		PROXY_TRACK("getRouteInfo");
+		return gGlobals->getRouteInfo(eRouteNum);
 	}
 
 	DllExport int getNumImprovementInfos()
 	{
-		PROXY_TRACK("getNumImprovementInfos");	
-		return gGlobals->getNumImprovementInfos();	
+		PROXY_TRACK("getNumImprovementInfos");
+		return gGlobals->getNumImprovementInfos();
 	}
 	DllExport CvImprovementInfo& getImprovementInfo(ImprovementTypes eImprovementNum)
 	{
-		PROXY_TRACK("getImprovementInfo");	
-		return gGlobals->getImprovementInfo(eImprovementNum);	
+		PROXY_TRACK("getImprovementInfo");
+		return gGlobals->getImprovementInfo(eImprovementNum);
 	}
 
 	int getNumGoodyInfos()
 	{
-		PROXY_TRACK("getNumGoodyInfos");	
-		return gGlobals->getNumGoodyInfos();	
+		PROXY_TRACK("getNumGoodyInfos");
+		return gGlobals->getNumGoodyInfos();
 	}
 	CvGoodyInfo& getGoodyInfo(GoodyTypes eGoodyNum)
 	{
-		PROXY_TRACK("getGoodyInfo");	
-		return gGlobals->getGoodyInfo(eGoodyNum);	
+		PROXY_TRACK("getGoodyInfo");
+		return gGlobals->getGoodyInfo(eGoodyNum);
 	}
 
 	int getNumBuildInfos()
 	{
-		PROXY_TRACK("getNumBuildInfos");	
-		return gGlobals->getNumBuildInfos();	
+		PROXY_TRACK("getNumBuildInfos");
+		return gGlobals->getNumBuildInfos();
 	}
 	DllExport CvBuildInfo& getBuildInfo(BuildTypes eBuildNum)
 	{
-		PROXY_TRACK("getBuildInfo");	
-		return gGlobals->getBuildInfo(eBuildNum);	
+		PROXY_TRACK("getBuildInfo");
+		return gGlobals->getBuildInfo(eBuildNum);
 	}
 
 	DllExport int getNumHandicapInfos()
 	{
-		PROXY_TRACK("getNumHandicapInfos");	
-		return gGlobals->getNumHandicapInfos();	
+		PROXY_TRACK("getNumHandicapInfos");
+		return gGlobals->getNumHandicapInfos();
 	}
 	DllExport CvHandicapInfo& getHandicapInfo(HandicapTypes eHandicapNum)
 	{
-		PROXY_TRACK("getHandicapInfo");	
-		return gGlobals->getHandicapInfo(eHandicapNum);	
+		PROXY_TRACK("getHandicapInfo");
+		return gGlobals->getHandicapInfo(eHandicapNum);
 	}
 
 	DllExport int getNumGameSpeedInfos()
 	{
-		PROXY_TRACK("getNumGameSpeedInfos");	
-		return gGlobals->getNumGameSpeedInfos();	
+		PROXY_TRACK("getNumGameSpeedInfos");
+		return gGlobals->getNumGameSpeedInfos();
 	}
 	DllExport CvGameSpeedInfo& getGameSpeedInfo(GameSpeedTypes eGameSpeedNum)
 	{
-		PROXY_TRACK("getGameSpeedInfo");	
-		return gGlobals->getGameSpeedInfo(eGameSpeedNum);	
+		PROXY_TRACK("getGameSpeedInfo");
+		return gGlobals->getGameSpeedInfo(eGameSpeedNum);
 	}
 
 	DllExport int getNumTurnTimerInfos()
 	{
-		PROXY_TRACK("getNumTurnTimerInfos");	
-		return gGlobals->getNumTurnTimerInfos();	
+		PROXY_TRACK("getNumTurnTimerInfos");
+		return gGlobals->getNumTurnTimerInfos();
 	}
 	DllExport CvTurnTimerInfo& getTurnTimerInfo(TurnTimerTypes eTurnTimerNum)
 	{
-		PROXY_TRACK("getTurnTimerInfo");	
-		return gGlobals->getTurnTimerInfo(eTurnTimerNum);	
+		PROXY_TRACK("getTurnTimerInfo");
+		return gGlobals->getTurnTimerInfo(eTurnTimerNum);
 	}
 
 	DllExport int getNumActionInfos()
 	{
-		PROXY_TRACK("getNumActionInfos");	
-		return gGlobals->getNumActionInfos();	
+		PROXY_TRACK("getNumActionInfos");
+		return gGlobals->getNumActionInfos();
 	}
 	DllExport CvActionInfo& getActionInfo(int i)
 	{
-		PROXY_TRACK("getActionInfo");	
-		return gGlobals->getActionInfo(i);	
+		PROXY_TRACK("getActionInfo");
+		return gGlobals->getActionInfo(i);
 	}
 
 	DllExport CvMissionInfo& getMissionInfo(MissionTypes eMissionNum)
 	{
-		PROXY_TRACK("getMissionInfo");	
-		return gGlobals->getMissionInfo(eMissionNum);	
+		PROXY_TRACK("getMissionInfo");
+		return gGlobals->getMissionInfo(eMissionNum);
 	}
 
 	CvControlInfo& getControlInfo(ControlTypes eControlNum)
 	{
-		PROXY_TRACK("getControlInfo");	
-		return gGlobals->getControlInfo(eControlNum);	
+		PROXY_TRACK("getControlInfo");
+		return gGlobals->getControlInfo(eControlNum);
 	}
 
 	CvCommandInfo& getCommandInfo(CommandTypes eCommandNum)
 	{
-		PROXY_TRACK("getCommandInfo");	
-		return gGlobals->getCommandInfo(eCommandNum);	
+		PROXY_TRACK("getCommandInfo");
+		return gGlobals->getCommandInfo(eCommandNum);
 	}
 
 	int getNumAutomateInfos()
 	{
-		PROXY_TRACK("getNumAutomateInfos");	
-		return gGlobals->getNumAutomateInfos();	
+		PROXY_TRACK("getNumAutomateInfos");
+		return gGlobals->getNumAutomateInfos();
 	}
 	CvAutomateInfo& getAutomateInfo(int iAutomateNum)
 	{
-		PROXY_TRACK("getAutomateInfo");	
-		return gGlobals->getAutomateInfo(iAutomateNum);	
+		PROXY_TRACK("getAutomateInfo");
+		return gGlobals->getAutomateInfo(iAutomateNum);
 	}
 
 	DllExport int getNumEraInfos()
 	{
-		PROXY_TRACK("getNumEraInfos");	
-		return gGlobals->getNumEraInfos();	
+		PROXY_TRACK("getNumEraInfos");
+		return gGlobals->getNumEraInfos();
 	}
 	DllExport CvEraInfo& getEraInfo(EraTypes eEraNum)
 	{
-		PROXY_TRACK("getEraInfo");	
-		return gGlobals->getEraInfo(eEraNum);	
+		PROXY_TRACK("getEraInfo");
+		return gGlobals->getEraInfo(eEraNum);
 	}
 
 	DllExport int getNumVictoryInfos()
 	{
-		PROXY_TRACK("getNumVictoryInfos");	
-		return gGlobals->getNumVictoryInfos();	
+		PROXY_TRACK("getNumVictoryInfos");
+		return gGlobals->getNumVictoryInfos();
 	}
 	DllExport CvVictoryInfo& getVictoryInfo(VictoryTypes eVictoryNum)
 	{
-		PROXY_TRACK("getVictoryInfo");	
-		return gGlobals->getVictoryInfo(eVictoryNum);	
+		PROXY_TRACK("getVictoryInfo");
+		return gGlobals->getVictoryInfo(eVictoryNum);
 	}
 
 	//
@@ -2976,126 +2906,126 @@ public:
 	//
 	DllExport int getTypesEnum(const char* szType) const				// use this when searching for a type
 	{
-		PROXY_TRACK("getTypesEnum");	
-		return gGlobals->getTypesEnum(szType);	
+		PROXY_TRACK("getTypesEnum");
+		return gGlobals->getTypesEnum(szType);
 	}
 	void setTypesEnum(const char* szType, int iEnum)
 	{
-		PROXY_TRACK("setTypesEnum");	
-		gGlobals->setTypesEnum(szType, iEnum);	
+		PROXY_TRACK("setTypesEnum");
+		gGlobals->setTypesEnum(szType, iEnum);
 	}
 
 	DllExport int getNUM_ENGINE_DIRTY_BITS() const
 	{
-		PROXY_TRACK("getNUM_ENGINE_DIRTY_BITS");	
-		return gGlobals->getNUM_ENGINE_DIRTY_BITS();	
+		PROXY_TRACK("getNUM_ENGINE_DIRTY_BITS");
+		return gGlobals->getNUM_ENGINE_DIRTY_BITS();
 	}
 	DllExport int getNUM_INTERFACE_DIRTY_BITS() const
 	{
-		PROXY_TRACK("getNUM_INTERFACE_DIRTY_BITS");	
-		return gGlobals->getNUM_INTERFACE_DIRTY_BITS();	
+		PROXY_TRACK("getNUM_INTERFACE_DIRTY_BITS");
+		return gGlobals->getNUM_INTERFACE_DIRTY_BITS();
 	}
 	DllExport int getNUM_YIELD_TYPES() const
 	{
-		PROXY_TRACK("getNUM_YIELD_TYPES");	
-		return gGlobals->getNUM_YIELD_TYPES();	
+		PROXY_TRACK("getNUM_YIELD_TYPES");
+		return gGlobals->getNUM_YIELD_TYPES();
 	}
 	int getNUM_COMMERCE_TYPES() const
 	{
-		PROXY_TRACK("getNUM_COMMERCE_TYPES");	
-		return gGlobals->getNUM_COMMERCE_TYPES();	
+		PROXY_TRACK("getNUM_COMMERCE_TYPES");
+		return gGlobals->getNUM_COMMERCE_TYPES();
 	}
 	DllExport int getNUM_FORCECONTROL_TYPES() const
 	{
-		PROXY_TRACK("getNUM_FORCECONTROL_TYPES");	
-		return gGlobals->getNUM_FORCECONTROL_TYPES();	
+		PROXY_TRACK("getNUM_FORCECONTROL_TYPES");
+		return gGlobals->getNUM_FORCECONTROL_TYPES();
 	}
 	DllExport int getNUM_INFOBAR_TYPES() const
 	{
-		PROXY_TRACK("getNUM_INFOBAR_TYPES");	
-		return gGlobals->getNUM_INFOBAR_TYPES();	
+		PROXY_TRACK("getNUM_INFOBAR_TYPES");
+		return gGlobals->getNUM_INFOBAR_TYPES();
 	}
 	DllExport int getNUM_HEALTHBAR_TYPES() const
 	{
-		PROXY_TRACK("getNUM_HEALTHBAR_TYPES");	
-		return gGlobals->getNUM_HEALTHBAR_TYPES();	
+		PROXY_TRACK("getNUM_HEALTHBAR_TYPES");
+		return gGlobals->getNUM_HEALTHBAR_TYPES();
 	}
 	int getNUM_CONTROL_TYPES() const
 	{
-		PROXY_TRACK("getNUM_CONTROL_TYPES");	
-		return gGlobals->getNUM_CONTROL_TYPES();	
+		PROXY_TRACK("getNUM_CONTROL_TYPES");
+		return gGlobals->getNUM_CONTROL_TYPES();
 	}
 	DllExport int getNUM_LEADERANIM_TYPES() const
 	{
-		PROXY_TRACK("getNUM_LEADERANIM_TYPES");	
-		return gGlobals->getNUM_LEADERANIM_TYPES();	
+		PROXY_TRACK("getNUM_LEADERANIM_TYPES");
+		return gGlobals->getNUM_LEADERANIM_TYPES();
 	}
 
 	int& getNumEntityEventTypes()
 	{
-		PROXY_TRACK("getNumEntityEventTypes");	
-		return gGlobals->getNumEntityEventTypes();	
+		PROXY_TRACK("getNumEntityEventTypes");
+		return gGlobals->getNumEntityEventTypes();
 	}
 	CvString& getEntityEventTypes(EntityEventTypes e)
 	{
-		PROXY_TRACK("getEntityEventTypes");	
-		return gGlobals->getEntityEventTypes(e);	
+		PROXY_TRACK("getEntityEventTypes");
+		return gGlobals->getEntityEventTypes(e);
 	}
 
 	int& getNumAnimationOperatorTypes()
 	{
-		PROXY_TRACK("getNumAnimationOperatorTypes");	
-		return gGlobals->getNumAnimationOperatorTypes();	
+		PROXY_TRACK("getNumAnimationOperatorTypes");
+		return gGlobals->getNumAnimationOperatorTypes();
 	}
 	CvString& getAnimationOperatorTypes(AnimationOperatorTypes e)
 	{
-		PROXY_TRACK("getAnimationOperatorTypes");	
-		return gGlobals->getAnimationOperatorTypes(e);	
+		PROXY_TRACK("getAnimationOperatorTypes");
+		return gGlobals->getAnimationOperatorTypes(e);
 	}
 
 	CvString& getFunctionTypes(FunctionTypes e)
 	{
-		PROXY_TRACK("getFunctionTypes");	
-		return gGlobals->getFunctionTypes(e);	
+		PROXY_TRACK("getFunctionTypes");
+		return gGlobals->getFunctionTypes(e);
 	}
 
 	DllExport int& getNumArtStyleTypes()
 	{
-		PROXY_TRACK("getNumArtStyleTypes");	
-		return gGlobals->getNumArtStyleTypes();	
+		PROXY_TRACK("getNumArtStyleTypes");
+		return gGlobals->getNumArtStyleTypes();
 	}
 	DllExport CvString& getArtStyleTypes(ArtStyleTypes e)
 	{
-		PROXY_TRACK("getArtStyleTypes");	
-		return gGlobals->getArtStyleTypes(e);	
+		PROXY_TRACK("getArtStyleTypes");
+		return gGlobals->getArtStyleTypes(e);
 	}
 
 	CvString& getDirectionTypes(AutomateTypes e)
 	{
-		PROXY_TRACK("getDirectionTypes");	
-		return gGlobals->getDirectionTypes(e);	
+		PROXY_TRACK("getDirectionTypes");
+		return gGlobals->getDirectionTypes(e);
 	}
 
 	DllExport int& getNumFootstepAudioTypes()
 	{
-		PROXY_TRACK("getNumFootstepAudioTypes");	
-		return gGlobals->getNumFootstepAudioTypes();	
+		PROXY_TRACK("getNumFootstepAudioTypes");
+		return gGlobals->getNumFootstepAudioTypes();
 	}
 	CvString& getFootstepAudioTypes(int i)
 	{
-		PROXY_TRACK("getFootstepAudioTypes");	
-		return gGlobals->getFootstepAudioTypes(i);	
+		PROXY_TRACK("getFootstepAudioTypes");
+		return gGlobals->getFootstepAudioTypes(i);
 	}
 	int getFootstepAudioTypeByTag(CvString strTag)
 	{
-		PROXY_TRACK("getFootstepAudioTypeByTag");	
-		return gGlobals->getFootstepAudioTypeByTag(strTag);	
+		PROXY_TRACK("getFootstepAudioTypeByTag");
+		return gGlobals->getFootstepAudioTypeByTag(strTag);
 	}
 
 	DllExport CvString& getFootstepAudioTags(int i)
 	{
-		PROXY_TRACK("getFootstepAudioTags");	
-		return gGlobals->getFootstepAudioTags(i);	
+		PROXY_TRACK("getFootstepAudioTags");
+		return gGlobals->getFootstepAudioTags(i);
 	}
 
 	//
@@ -3105,13 +3035,13 @@ public:
 
 	DllExport FVariableSystem* getDefinesVarSystem()
 	{
-		PROXY_TRACK("getDefinesVarSystem");	
-		return gGlobals->getDefinesVarSystem();	
+		PROXY_TRACK("getDefinesVarSystem");
+		return gGlobals->getDefinesVarSystem();
 	}
 	void cacheGlobals()
 	{
-		PROXY_TRACK("cacheGlobals");	
-		gGlobals->cacheGlobals();	
+		PROXY_TRACK("cacheGlobals");
+		gGlobals->cacheGlobals();
 	}
 
 	// ***** EXPOSED TO PYTHON *****
@@ -3122,8 +3052,8 @@ public:
 /************************************************************************************************/
 	bool getDefineBOOL( const char * szName ) const
 	{
-		PROXY_TRACK("getDefineBOOL");	
-		return gGlobals->getDefineBOOL(szName);	
+		PROXY_TRACK("getDefineBOOL");
+		return gGlobals->getDefineBOOL(szName);
 	}
 /************************************************************************************************/
 /* MOD_COMPONENT_CONTROL                   END                                                  */
@@ -3131,18 +3061,18 @@ public:
 
 	DllExport int getDefineINT( const char * szName ) const
 	{
-		PROXY_TRACK("getDefineINT");	
-		return gGlobals->getDefineINT(szName);	
+		PROXY_TRACK("getDefineINT");
+		return gGlobals->getDefineINT(szName);
 	}
 	DllExport float getDefineFLOAT( const char * szName ) const
 	{
-		PROXY_TRACK("getDefineFLOAT");	
-		return gGlobals->getDefineFLOAT(szName);	
+		PROXY_TRACK("getDefineFLOAT");
+		return gGlobals->getDefineFLOAT(szName);
 	}
 	DllExport const char * getDefineSTRING( const char * szName ) const
 	{
-		PROXY_TRACK("getDefineSTRING");	
-		return gGlobals->getDefineSTRING(szName);	
+		PROXY_TRACK("getDefineSTRING");
+		return gGlobals->getDefineSTRING(szName);
 	}
 /************************************************************************************************/
 /* Afforess	                  Start		 08/18/10                                               */
@@ -3151,18 +3081,18 @@ public:
 /************************************************************************************************/
 	void setDefineINT( const char * szName, int iValue, bool bUpdate = true)
 	{
-		PROXY_TRACK("setDefineINT");	
-		gGlobals->setDefineINT(szName, iValue, bUpdate);	
+		PROXY_TRACK("setDefineINT");
+		gGlobals->setDefineINT(szName, iValue, bUpdate);
 	}
 	void setDefineFLOAT( const char * szName, float fValue, bool bUpdate = true )
 	{
-		PROXY_TRACK("setDefineFLOAT");	
-		gGlobals->setDefineFLOAT(szName, fValue, bUpdate);	
+		PROXY_TRACK("setDefineFLOAT");
+		gGlobals->setDefineFLOAT(szName, fValue, bUpdate);
 	}
 	void setDefineSTRING( const char * szName, const char * szValue, bool bUpdate = true )
 	{
-		PROXY_TRACK("setDefineSTRING");	
-		gGlobals->setDefineSTRING(szName, szValue, bUpdate);	
+		PROXY_TRACK("setDefineSTRING");
+		gGlobals->setDefineSTRING(szName, szValue, bUpdate);
 	}
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
@@ -3170,258 +3100,265 @@ public:
 
 	DllExport int getMAX_PLOT_LIST_ROWS()
 	{
-		PROXY_TRACK("getMAX_PLOT_LIST_ROWS");	
-		return gGlobals->getMAX_PLOT_LIST_ROWS();	
+		PROXY_TRACK("getMAX_PLOT_LIST_ROWS");
+		return gGlobals->getMAX_PLOT_LIST_ROWS();
 	}
 	DllExport int getUNIT_MULTISELECT_MAX()
 	{
-		PROXY_TRACK("getUNIT_MULTISELECT_MAX");	
-		return gGlobals->getUNIT_MULTISELECT_MAX();	
+		PROXY_TRACK("getUNIT_MULTISELECT_MAX");
+		return gGlobals->getUNIT_MULTISELECT_MAX();
 	}
 	DllExport int getEVENT_MESSAGE_TIME()
 	{
-		PROXY_TRACK("getEVENT_MESSAGE_TIME");	
-		return gGlobals->getEVENT_MESSAGE_TIME();	
+		PROXY_TRACK("getEVENT_MESSAGE_TIME");
+		return gGlobals->getEVENT_MESSAGE_TIME();
 	}
 
 	DllExport float getCAMERA_MIN_YAW()
 	{
-		PROXY_TRACK("getCAMERA_MIN_YAW");	
-		return gGlobals->getCAMERA_MIN_YAW();	
+		PROXY_TRACK("getCAMERA_MIN_YAW");
+		return gGlobals->getCAMERA_MIN_YAW();
 	}
 	DllExport float getCAMERA_MAX_YAW()
 	{
-		PROXY_TRACK("getCAMERA_MAX_YAW");	
-		return gGlobals->getCAMERA_MAX_YAW();	
+		PROXY_TRACK("getCAMERA_MAX_YAW");
+		return gGlobals->getCAMERA_MAX_YAW();
 	}
 	DllExport float getCAMERA_FAR_CLIP_Z_HEIGHT()
 	{
-		PROXY_TRACK("getCAMERA_FAR_CLIP_Z_HEIGHT");	
-		return gGlobals->getCAMERA_FAR_CLIP_Z_HEIGHT();	
+		PROXY_TRACK("getCAMERA_FAR_CLIP_Z_HEIGHT");
+		return gGlobals->getCAMERA_FAR_CLIP_Z_HEIGHT();
 	}
 	DllExport float getCAMERA_MAX_TRAVEL_DISTANCE()
 	{
-		PROXY_TRACK("getCAMERA_MAX_TRAVEL_DISTANCE");	
-		return gGlobals->getCAMERA_MAX_TRAVEL_DISTANCE();	
+		PROXY_TRACK("getCAMERA_MAX_TRAVEL_DISTANCE");
+		return gGlobals->getCAMERA_MAX_TRAVEL_DISTANCE();
 	}
 	DllExport float getCAMERA_START_DISTANCE()
 	{
-		PROXY_TRACK("getCAMERA_START_DISTANCE");	
-		return gGlobals->getCAMERA_START_DISTANCE();	
+		PROXY_TRACK("getCAMERA_START_DISTANCE");
+		return gGlobals->getCAMERA_START_DISTANCE();
 	}
 	DllExport float getAIR_BOMB_HEIGHT()
 	{
-		PROXY_TRACK("getAIR_BOMB_HEIGHT");	
-		return gGlobals->getAIR_BOMB_HEIGHT();	
+		PROXY_TRACK("getAIR_BOMB_HEIGHT");
+		return gGlobals->getAIR_BOMB_HEIGHT();
 	}
 	DllExport float getPLOT_SIZE()
 	{
-		PROXY_TRACK("getPLOT_SIZE");	
-		return gGlobals->getPLOT_SIZE();	
+		PROXY_TRACK("getPLOT_SIZE");
+		return gGlobals->getPLOT_SIZE();
 	}
 	DllExport float getCAMERA_SPECIAL_PITCH()
 	{
-		PROXY_TRACK("getCAMERA_SPECIAL_PITCH");	
-		return gGlobals->getCAMERA_SPECIAL_PITCH();	
+		PROXY_TRACK("getCAMERA_SPECIAL_PITCH");
+		return gGlobals->getCAMERA_SPECIAL_PITCH();
 	}
 	DllExport float getCAMERA_MAX_TURN_OFFSET()
 	{
-		PROXY_TRACK("getCAMERA_MAX_TURN_OFFSET");	
-		return gGlobals->getCAMERA_MAX_TURN_OFFSET();	
+		PROXY_TRACK("getCAMERA_MAX_TURN_OFFSET");
+		return gGlobals->getCAMERA_MAX_TURN_OFFSET();
 	}
 	DllExport float getCAMERA_MIN_DISTANCE()
 	{
-		PROXY_TRACK("getCAMERA_MIN_DISTANCE");	
-		return gGlobals->getCAMERA_MIN_DISTANCE();	
+		PROXY_TRACK("getCAMERA_MIN_DISTANCE");
+		return gGlobals->getCAMERA_MIN_DISTANCE();
 	}
 	DllExport float getCAMERA_UPPER_PITCH()
 	{
-		PROXY_TRACK("getCAMERA_UPPER_PITCH");	
-		return gGlobals->getCAMERA_UPPER_PITCH();	
+		PROXY_TRACK("getCAMERA_UPPER_PITCH");
+		return gGlobals->getCAMERA_UPPER_PITCH();
 	}
 	DllExport float getCAMERA_LOWER_PITCH()
 	{
-		PROXY_TRACK("getCAMERA_LOWER_PITCH");	
-		return gGlobals->getCAMERA_LOWER_PITCH();	
+		PROXY_TRACK("getCAMERA_LOWER_PITCH");
+		return gGlobals->getCAMERA_LOWER_PITCH();
 	}
 	DllExport float getFIELD_OF_VIEW()
 	{
-		PROXY_TRACK("getFIELD_OF_VIEW");	
-		return gGlobals->getFIELD_OF_VIEW();	
+		PROXY_TRACK("getFIELD_OF_VIEW");
+		return gGlobals->getFIELD_OF_VIEW();
 	}
 	DllExport float getSHADOW_SCALE()
 	{
-		PROXY_TRACK("getSHADOW_SCALE");	
-		return gGlobals->getSHADOW_SCALE();	
+		PROXY_TRACK("getSHADOW_SCALE");
+		return gGlobals->getSHADOW_SCALE();
 	}
 	DllExport float getUNIT_MULTISELECT_DISTANCE()
 	{
-		PROXY_TRACK("getUNIT_MULTISELECT_DISTANCE");	
-		return gGlobals->getUNIT_MULTISELECT_DISTANCE();	
+		PROXY_TRACK("getUNIT_MULTISELECT_DISTANCE");
+		return gGlobals->getUNIT_MULTISELECT_DISTANCE();
 	}
 
 	DllExport int getUSE_FINISH_TEXT_CALLBACK()
 	{
-		PROXY_TRACK("getUSE_FINISH_TEXT_CALLBACK");	
-		return gGlobals->getUSE_FINISH_TEXT_CALLBACK();	
+		PROXY_TRACK("getUSE_FINISH_TEXT_CALLBACK");
+		return gGlobals->getUSE_FINISH_TEXT_CALLBACK();
 	}
 
 	DllExport int getMAX_CIV_PLAYERS()
 	{
-		PROXY_TRACK("getMAX_CIV_PLAYERS");	
-		return gGlobals->getMAX_CIV_PLAYERS();	
+		PROXY_TRACK("getMAX_CIV_PLAYERS");
+		return gGlobals->getMAX_CIV_PLAYERS();
 	}
 
 	int getMAX_PC_PLAYERS()
 	{
-		PROXY_TRACK("getMAX_PC_PLAYERS");	
-		return gGlobals->getMAX_PC_PLAYERS();	
+		PROXY_TRACK("getMAX_PC_PLAYERS");
+		return gGlobals->getMAX_PC_PLAYERS();
 	}
 
 	int getMAX_PLAYERS()
 	{
-		PROXY_TRACK("getMAX_PLAYERS");	
-		return gGlobals->getMAX_PLAYERS();	
-	}
-	int getMAX_CIV_TEAMS()
-	{
-		PROXY_TRACK("getMAX_CIV_TEAMS");	
-		return gGlobals->getMAX_CIV_TEAMS();	
+		PROXY_TRACK("getMAX_PLAYERS");
+		return gGlobals->getMAX_PLAYERS();
 	}
 	int getMAX_PC_TEAMS()
 	{
-		PROXY_TRACK("getMAX_PC_TEAMS");	
-		return gGlobals->getMAX_PC_TEAMS();	
+		PROXY_TRACK("getMAX_PC_TEAMS");
+		return gGlobals->getMAX_PC_TEAMS();
 	}
 	int getMAX_TEAMS()
 	{
-		PROXY_TRACK("getMAX_TEAMS");	
-		return gGlobals->getMAX_TEAMS();	
+		PROXY_TRACK("getMAX_TEAMS");
+		return gGlobals->getMAX_TEAMS();
 	}
+
 	int getBARBARIAN_PLAYER()
 	{
-		PROXY_TRACK("getBARBARIAN_PLAYER");	
-		return gGlobals->getBARBARIAN_PLAYER();	
+		PROXY_TRACK("getBARBARIAN_PLAYER");
+		return gGlobals->getBARBARIAN_PLAYER();
 	}
 	int getBARBARIAN_TEAM()
 	{
-		PROXY_TRACK("getBARBARIAN_TEAM");	
-		return gGlobals->getBARBARIAN_TEAM();	
+		PROXY_TRACK("getBARBARIAN_TEAM");
+		return gGlobals->getBARBARIAN_TEAM();
 	}
-	int getAGGRESSIVE_ANIMAL_PLAYER()
+
+	int getNEANDERTHAL_PLAYER()
 	{
-		PROXY_TRACK("getAGGRESSIVE_ANIMAL_PLAYER");	
-		return gGlobals->getAGGRESSIVE_ANIMAL_PLAYER();	
+		PROXY_TRACK("getNEANDERTHAL_PLAYER");
+		return gGlobals->getNEANDERTHAL_PLAYER();
 	}
-	int getAGGRESSIVE_ANIMAL_TEAM()
+	int getNEANDERTHAL_TEAM()
 	{
-		PROXY_TRACK("getAGGRESSIVE_ANIMAL_TEAM");	
-		return gGlobals->getAGGRESSIVE_ANIMAL_TEAM();	
+		PROXY_TRACK("getNEANDERTHAL_TEAM");
+		return gGlobals->getNEANDERTHAL_TEAM();
 	}
-	int getPASSIVE_ANIMAL_PLAYER()
+
+	int getBEAST_PLAYER()
 	{
-		PROXY_TRACK("getPASSIVE_ANIMAL_PLAYER");	
-		return gGlobals->getPASSIVE_ANIMAL_PLAYER();	
+		PROXY_TRACK("getBEAST_PLAYER");
+		return gGlobals->getBEAST_PLAYER();
 	}
-	int getPASSIVE_ANIMAL_TEAM()
+	int getBEAST_TEAM()
 	{
-		PROXY_TRACK("getPASSIVE_ANIMAL_TEAM");	
-		return gGlobals->getPASSIVE_ANIMAL_TEAM();	
+		PROXY_TRACK("getBEAST_TEAM");
+		return gGlobals->getBEAST_TEAM();
 	}
-	int getNPC1_PLAYER()
+
+	int getPREDATOR_PLAYER()
 	{
-		PROXY_TRACK("getNPC1_PLAYER");	
-		return gGlobals->getNPC1_PLAYER();	
+		PROXY_TRACK("getPREDATOR_PLAYER");
+		return gGlobals->getPREDATOR_PLAYER();
 	}
-	int getNPC1_TEAM()
+	int getPREDATOR_TEAM()
 	{
-		PROXY_TRACK("getNPC1_TEAM");	
-		return gGlobals->getNPC1_TEAM();	
+		PROXY_TRACK("getPREDATOR_TEAM");
+		return gGlobals->getPREDATOR_TEAM();
 	}
-	int getNPC2_PLAYER()
+
+	int getPREY_PLAYER()
 	{
-		PROXY_TRACK("getNPC2_PLAYER");	
-		return gGlobals->getNPC2_PLAYER();	
+		PROXY_TRACK("getPREY_PLAYER");
+		return gGlobals->getPREY_PLAYER();
 	}
-	int getNPC2_TEAM()
+	int getPREY_TEAM()
 	{
-		PROXY_TRACK("getNPC2_TEAM");	
-		return gGlobals->getNPC2_TEAM();	
+		PROXY_TRACK("getPREY_TEAM");
+		return gGlobals->getPREY_TEAM();
 	}
-	int getNPC3_PLAYER()
+
+	int getINSECT_PLAYER()
 	{
-		PROXY_TRACK("getNPC3_PLAYER");	
-		return gGlobals->getNPC3_PLAYER();	
+		PROXY_TRACK("getINSECT_PLAYER");
+		return gGlobals->getINSECT_PLAYER();
 	}
-	int getNPC3_TEAM()
+	int getINSECT_TEAM()
 	{
-		PROXY_TRACK("getNPC3_TEAM");	
-		return gGlobals->getNPC3_TEAM();	
+		PROXY_TRACK("getINSECT_TEAM");
+		return gGlobals->getINSECT_TEAM();
 	}
+
 	int getNPC4_PLAYER()
 	{
-		PROXY_TRACK("getNPC4_PLAYER");	
-		return gGlobals->getNPC4_PLAYER();	
+		PROXY_TRACK("getNPC4_PLAYER");
+		return gGlobals->getNPC4_PLAYER();
 	}
 	int getNPC4_TEAM()
 	{
-		PROXY_TRACK("getNPC4_TEAM");	
-		return gGlobals->getNPC4_TEAM();	
+		PROXY_TRACK("getNPC4_TEAM");
+		return gGlobals->getNPC4_TEAM();
 	}
-	int getNPC5_PLAYER()
+
+	int getNPC3_PLAYER()
 	{
-		PROXY_TRACK("getNPC5_PLAYER");	
-		return gGlobals->getNPC5_PLAYER();	
+		PROXY_TRACK("getNPC3_PLAYER");
+		return gGlobals->getNPC3_PLAYER();
 	}
-	int getNPC5_TEAM()
+	int getNPC3_TEAM()
 	{
-		PROXY_TRACK("getNPC5_TEAM");	
-		return gGlobals->getNPC5_TEAM();	
+		PROXY_TRACK("getNPC3_TEAM");
+		return gGlobals->getNPC3_TEAM();
 	}
-	int getNPC6_PLAYER()
+
+	int getNPC2_PLAYER()
 	{
-		PROXY_TRACK("getNPC6_PLAYER");	
-		return gGlobals->getNPC6_PLAYER();	
+		PROXY_TRACK("getNPC2_PLAYER");
+		return gGlobals->getNPC2_PLAYER();
 	}
-	int getNPC6_TEAM()
+	int getNPC2_TEAM()
 	{
-		PROXY_TRACK("getNPC6_TEAM");	
-		return gGlobals->getNPC6_TEAM();	
+		PROXY_TRACK("getNPC2_TEAM");
+		return gGlobals->getNPC2_TEAM();
 	}
-	int getNPC7_PLAYER()
+
+	int getNPC1_PLAYER()
 	{
-		PROXY_TRACK("getNPC7_PLAYER");	
-		return gGlobals->getNPC7_PLAYER();	
+		PROXY_TRACK("getNPC1_PLAYER");
+		return gGlobals->getNPC1_PLAYER();
 	}
-	int getNPC7_TEAM()
+	int getNPC1_TEAM()
 	{
-		PROXY_TRACK("getNPC7_TEAM");	
-		return gGlobals->getNPC7_TEAM();	
+		PROXY_TRACK("getNPC1_TEAM");
+		return gGlobals->getNPC1_TEAM();
 	}
-	int getNPC8_PLAYER()
+
+	int getNPC0_PLAYER()
 	{
-		PROXY_TRACK("getNPC8_PLAYER");	
-		return gGlobals->getNPC8_PLAYER();	
+		PROXY_TRACK("getNPC0_PLAYER");
+		return gGlobals->getNPC0_PLAYER();
 	}
-	int getNPC8_TEAM()
+	int getNPC0_TEAM()
 	{
-		PROXY_TRACK("getNPC8_TEAM");	
-		return gGlobals->getNPC8_TEAM();	
+		PROXY_TRACK("getNPC0_TEAM");
+		return gGlobals->getNPC0_TEAM();
 	}
+
 	int getINVALID_PLOT_COORD()
 	{
-		PROXY_TRACK("getINVALID_PLOT_COORD");	
-		return gGlobals->getINVALID_PLOT_COORD();	
+		PROXY_TRACK("getINVALID_PLOT_COORD");
+		return gGlobals->getINVALID_PLOT_COORD();
 	}
 	int getNUM_CITY_PLOTS()
 	{
-		PROXY_TRACK("getNUM_CITY_PLOTS");	
-		return gGlobals->getNUM_CITY_PLOTS();	
+		PROXY_TRACK("getNUM_CITY_PLOTS");
+		return gGlobals->getNUM_CITY_PLOTS();
 	}
 	int getCITY_HOME_PLOT()
 	{
-		PROXY_TRACK("getCITY_HOME_PLOT");	
-		return gGlobals->getCITY_HOME_PLOT();	
+		PROXY_TRACK("getCITY_HOME_PLOT");
+		return gGlobals->getCITY_HOME_PLOT();
 	}
 
 	// ***** END EXPOSED TO PYTHON *****
@@ -3453,173 +3390,173 @@ public:
 
 	DllExport CvDLLUtilityIFaceBase* getDLLIFaceNonInl()
 	{
-		//PROXY_TRACK("getDLLIFaceNonInl");	
-		return gGlobals->getDLLIFaceNonInl();	
+		//PROXY_TRACK("getDLLIFaceNonInl");
+		return gGlobals->getDLLIFaceNonInl();
 	}
 	DllExport void setDLLProfiler(FProfiler* prof)
 	{
-		PROXY_TRACK("setDLLProfiler");	
-		gGlobals->setDLLProfiler(prof);	
+		PROXY_TRACK("setDLLProfiler");
+		gGlobals->setDLLProfiler(prof);
 	}
 	DllExport void enableDLLProfiler(bool bEnable)
 	{
-		PROXY_TRACK("enableDLLProfiler");	
-		gGlobals->enableDLLProfiler(bEnable);	
+		PROXY_TRACK("enableDLLProfiler");
+		gGlobals->enableDLLProfiler(bEnable);
 	}
 
 	DllExport bool IsGraphicsInitialized() const
 	{
-		PROXY_TRACK("IsGraphicsInitialized");	
-		return gGlobals->IsGraphicsInitialized();	
+		PROXY_TRACK("IsGraphicsInitialized");
+		return gGlobals->IsGraphicsInitialized();
 	}
 	DllExport void SetGraphicsInitialized(bool bVal)
 	{
-		PROXY_TRACK("SetGraphicsInitialized");	
-		gGlobals->SetGraphicsInitialized(bVal);	
+		PROXY_TRACK("SetGraphicsInitialized");
+		gGlobals->SetGraphicsInitialized(bVal);
 	}
 
 	// for caching
 	DllExport bool readBuildingInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("readBuildingInfoArray");	
-		return gGlobals->readBuildingInfoArray(pStream);	
+		PROXY_TRACK("readBuildingInfoArray");
+		return gGlobals->readBuildingInfoArray(pStream);
 	}
 	DllExport void writeBuildingInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("writeBuildingInfoArray");	
-		gGlobals->writeBuildingInfoArray(pStream);	
+		PROXY_TRACK("writeBuildingInfoArray");
+		gGlobals->writeBuildingInfoArray(pStream);
 	}
 
 	DllExport bool readTechInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("readTechInfoArray");	
-		return gGlobals->readTechInfoArray(pStream);	
+		PROXY_TRACK("readTechInfoArray");
+		return gGlobals->readTechInfoArray(pStream);
 	}
 	DllExport void writeTechInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("writeTechInfoArray");	
-		gGlobals->writeTechInfoArray(pStream);	
+		PROXY_TRACK("writeTechInfoArray");
+		gGlobals->writeTechInfoArray(pStream);
 	}
 
 	DllExport bool readUnitInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("readUnitInfoArray");	
-		return gGlobals->readUnitInfoArray(pStream);	
+		PROXY_TRACK("readUnitInfoArray");
+		return gGlobals->readUnitInfoArray(pStream);
 	}
 	DllExport void writeUnitInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("writeUnitInfoArray");	
-		gGlobals->writeUnitInfoArray(pStream);	
+		PROXY_TRACK("writeUnitInfoArray");
+		gGlobals->writeUnitInfoArray(pStream);
 	}
 
 	DllExport bool readLeaderHeadInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("readLeaderHeadInfoArray");	
-		return gGlobals->readLeaderHeadInfoArray(pStream);	
+		PROXY_TRACK("readLeaderHeadInfoArray");
+		return gGlobals->readLeaderHeadInfoArray(pStream);
 	}
 	DllExport void writeLeaderHeadInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("writeLeaderHeadInfoArray");	
-		gGlobals->writeLeaderHeadInfoArray(pStream);	
+		PROXY_TRACK("writeLeaderHeadInfoArray");
+		gGlobals->writeLeaderHeadInfoArray(pStream);
 	}
 
 	DllExport bool readCivilizationInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("readCivilizationInfoArray");	
-		return gGlobals->readCivilizationInfoArray(pStream);	
+		PROXY_TRACK("readCivilizationInfoArray");
+		return gGlobals->readCivilizationInfoArray(pStream);
 	}
 	DllExport void writeCivilizationInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("writeCivilizationInfoArray");	
-		gGlobals->writeCivilizationInfoArray(pStream);	
+		PROXY_TRACK("writeCivilizationInfoArray");
+		gGlobals->writeCivilizationInfoArray(pStream);
 	}
 
 	DllExport bool readPromotionInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("readPromotionInfoArray");	
-		return gGlobals->readPromotionInfoArray(pStream);	
+		PROXY_TRACK("readPromotionInfoArray");
+		return gGlobals->readPromotionInfoArray(pStream);
 	}
 	DllExport void writePromotionInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("writePromotionInfoArray");	
-		gGlobals->writePromotionInfoArray(pStream);	
+		PROXY_TRACK("writePromotionInfoArray");
+		gGlobals->writePromotionInfoArray(pStream);
 	}
 
 	DllExport bool readDiplomacyInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("readDiplomacyInfoArray");	
-		return gGlobals->readDiplomacyInfoArray(pStream);	
+		PROXY_TRACK("readDiplomacyInfoArray");
+		return gGlobals->readDiplomacyInfoArray(pStream);
 	}
 	DllExport void writeDiplomacyInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("writeDiplomacyInfoArray");	
-		gGlobals->writeDiplomacyInfoArray(pStream);	
+		PROXY_TRACK("writeDiplomacyInfoArray");
+		gGlobals->writeDiplomacyInfoArray(pStream);
 	}
 
 	DllExport bool readCivicInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("readCivicInfoArray");	
-		return gGlobals->readCivicInfoArray(pStream);	
+		PROXY_TRACK("readCivicInfoArray");
+		return gGlobals->readCivicInfoArray(pStream);
 	}
 	DllExport void writeCivicInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("writeCivicInfoArray");	
-		gGlobals->writeCivicInfoArray(pStream);	
+		PROXY_TRACK("writeCivicInfoArray");
+		gGlobals->writeCivicInfoArray(pStream);
 	}
 
 	DllExport bool readHandicapInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("readHandicapInfoArray");	
-		return gGlobals->readHandicapInfoArray(pStream);	
+		PROXY_TRACK("readHandicapInfoArray");
+		return gGlobals->readHandicapInfoArray(pStream);
 	}
 	DllExport void writeHandicapInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("writeHandicapInfoArray");	
-		gGlobals->writeHandicapInfoArray(pStream);	
+		PROXY_TRACK("writeHandicapInfoArray");
+		gGlobals->writeHandicapInfoArray(pStream);
 	}
 
 	DllExport bool readBonusInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("readBonusInfoArray");	
-		return gGlobals->readBonusInfoArray(pStream);	
+		PROXY_TRACK("readBonusInfoArray");
+		return gGlobals->readBonusInfoArray(pStream);
 	}
 	DllExport void writeBonusInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("writeBonusInfoArray");	
-		gGlobals->writeBonusInfoArray(pStream);	
+		PROXY_TRACK("writeBonusInfoArray");
+		gGlobals->writeBonusInfoArray(pStream);
 	}
 
 	DllExport bool readImprovementInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("readImprovementInfoArray");	
-		return gGlobals->readImprovementInfoArray(pStream);	
+		PROXY_TRACK("readImprovementInfoArray");
+		return gGlobals->readImprovementInfoArray(pStream);
 	}
 	DllExport void writeImprovementInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("writeImprovementInfoArray");	
-		gGlobals->writeImprovementInfoArray(pStream);	
+		PROXY_TRACK("writeImprovementInfoArray");
+		gGlobals->writeImprovementInfoArray(pStream);
 	}
 
 	DllExport bool readEventInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("readEventInfoArray");	
-		return gGlobals->readEventInfoArray(pStream);	
+		PROXY_TRACK("readEventInfoArray");
+		return gGlobals->readEventInfoArray(pStream);
 	}
 	DllExport void writeEventInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("writeEventInfoArray");	
-		gGlobals->writeEventInfoArray(pStream);	
+		PROXY_TRACK("writeEventInfoArray");
+		gGlobals->writeEventInfoArray(pStream);
 	}
 
 	DllExport bool readEventTriggerInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("readEventTriggerInfoArray");	
-		return gGlobals->readEventTriggerInfoArray(pStream);	
+		PROXY_TRACK("readEventTriggerInfoArray");
+		return gGlobals->readEventTriggerInfoArray(pStream);
 	}
 	DllExport void writeEventTriggerInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("writeEventTriggerInfoArray");	
-		gGlobals->writeEventTriggerInfoArray(pStream);	
+		PROXY_TRACK("writeEventTriggerInfoArray");
+		gGlobals->writeEventTriggerInfoArray(pStream);
 	}
 
 	//
@@ -3628,170 +3565,170 @@ public:
 
 	DllExport void setInterface(CvInterface* pVal)
 	{
-		PROXY_TRACK("setInterface");	
-		gGlobals->setInterface(pVal);	
+		PROXY_TRACK("setInterface");
+		gGlobals->setInterface(pVal);
 	}
 	DllExport void setDiplomacyScreen(CvDiplomacyScreen* pVal)
 	{
-		PROXY_TRACK("setDiplomacyScreen");	
-		gGlobals->setDiplomacyScreen(pVal);	
+		PROXY_TRACK("setDiplomacyScreen");
+		gGlobals->setDiplomacyScreen(pVal);
 	}
 	DllExport void setMPDiplomacyScreen(CMPDiplomacyScreen* pVal)
 	{
-		PROXY_TRACK("setMPDiplomacyScreen");	
-		gGlobals->setMPDiplomacyScreen(pVal);	
+		PROXY_TRACK("setMPDiplomacyScreen");
+		gGlobals->setMPDiplomacyScreen(pVal);
 	}
 	DllExport void setMessageQueue(CMessageQueue* pVal)
 	{
-		PROXY_TRACK("setMessageQueue");	
-		gGlobals->setMessageQueue(pVal);	
+		PROXY_TRACK("setMessageQueue");
+		gGlobals->setMessageQueue(pVal);
 	}
 	DllExport void setHotJoinMessageQueue(CMessageQueue* pVal)
 	{
-		PROXY_TRACK("setHotJoinMessageQueue");	
-		gGlobals->setHotJoinMessageQueue(pVal);	
+		PROXY_TRACK("setHotJoinMessageQueue");
+		gGlobals->setHotJoinMessageQueue(pVal);
 	}
 	DllExport void setMessageControl(CMessageControl* pVal)
 	{
-		PROXY_TRACK("setMessageControl");	
-		gGlobals->setMessageControl(pVal);	
+		PROXY_TRACK("setMessageControl");
+		gGlobals->setMessageControl(pVal);
 	}
 	DllExport void setSetupData(CvSetupData* pVal)
 	{
-		PROXY_TRACK("setSetupData");	
-		gGlobals->setSetupData(pVal);	
+		PROXY_TRACK("setSetupData");
+		gGlobals->setSetupData(pVal);
 	}
 	DllExport void setMessageCodeTranslator(CvMessageCodeTranslator* pVal)
 	{
-		PROXY_TRACK("setMessageCodeTranslator");	
-		gGlobals->setMessageCodeTranslator(pVal);	
+		PROXY_TRACK("setMessageCodeTranslator");
+		gGlobals->setMessageCodeTranslator(pVal);
 	}
 	DllExport void setDropMgr(CvDropMgr* pVal)
 	{
-		PROXY_TRACK("setDropMgr");	
-		gGlobals->setDropMgr(pVal);	
+		PROXY_TRACK("setDropMgr");
+		gGlobals->setDropMgr(pVal);
 	}
 	DllExport void setPortal(CvPortal* pVal)
 	{
-		PROXY_TRACK("setPortal");	
-		gGlobals->setPortal(pVal);	
+		PROXY_TRACK("setPortal");
+		gGlobals->setPortal(pVal);
 	}
 	DllExport void setStatsReport(CvStatsReporter* pVal)
 	{
-		PROXY_TRACK("setStatsReport");	
-		gGlobals->setStatsReport(pVal);	
+		PROXY_TRACK("setStatsReport");
+		gGlobals->setStatsReport(pVal);
 	}
 	DllExport void setPathFinder(FAStar* pVal)
 	{
-		PROXY_TRACK("setPathFinder");	
-		gGlobals->setPathFinder(pVal);	
+		PROXY_TRACK("setPathFinder");
+		gGlobals->setPathFinder(pVal);
 	}
 	DllExport void setInterfacePathFinder(FAStar* pVal)
 	{
-		PROXY_TRACK("setInterfacePathFinder");	
-		gGlobals->setInterfacePathFinder(pVal);	
+		PROXY_TRACK("setInterfacePathFinder");
+		gGlobals->setInterfacePathFinder(pVal);
 	}
 	DllExport void setStepFinder(FAStar* pVal)
 	{
-		PROXY_TRACK("setStepFinder");	
-		gGlobals->setStepFinder(pVal);	
+		PROXY_TRACK("setStepFinder");
+		gGlobals->setStepFinder(pVal);
 	}
 	DllExport void setRouteFinder(FAStar* pVal)
 	{
-		PROXY_TRACK("setRouteFinder");	
-		gGlobals->setRouteFinder(pVal);	
+		PROXY_TRACK("setRouteFinder");
+		gGlobals->setRouteFinder(pVal);
 	}
 	DllExport void setBorderFinder(FAStar* pVal)
 	{
-		PROXY_TRACK("setBorderFinder");	
-		gGlobals->setBorderFinder(pVal);	
+		PROXY_TRACK("setBorderFinder");
+		gGlobals->setBorderFinder(pVal);
 	}
 	DllExport void setAreaFinder(FAStar* pVal)
 	{
-		PROXY_TRACK("setAreaFinder");	
-		gGlobals->setAreaFinder(pVal);	
+		PROXY_TRACK("setAreaFinder");
+		gGlobals->setAreaFinder(pVal);
 	}
 	DllExport void setPlotGroupFinder(FAStar* pVal)
 	{
-		PROXY_TRACK("setPlotGroupFinder");	
-		gGlobals->setPlotGroupFinder(pVal);	
+		PROXY_TRACK("setPlotGroupFinder");
+		gGlobals->setPlotGroupFinder(pVal);
 	}
 
 	// So that CvEnums are moddable in the DLL
 	DllExport int getNumDirections() const
 	{
-		PROXY_TRACK("getNumDirections");	
-		return gGlobals->getNumDirections();	
+		PROXY_TRACK("getNumDirections");
+		return gGlobals->getNumDirections();
 	}
 	DllExport int getNumGameOptions() const
 	{
-		PROXY_TRACK("getNumGameOptions");	
-		return gGlobals->getNumGameOptions();	
+		PROXY_TRACK("getNumGameOptions");
+		return gGlobals->getNumGameOptions();
 	}
 	DllExport int getNumMPOptions() const
 	{
-		PROXY_TRACK("getNumMPOptions");	
-		return gGlobals->getNumMPOptions();	
+		PROXY_TRACK("getNumMPOptions");
+		return gGlobals->getNumMPOptions();
 	}
 	DllExport int getNumSpecialOptions() const
 	{
-		PROXY_TRACK("getNumSpecialOptions");	
-		return gGlobals->getNumSpecialOptions();	
+		PROXY_TRACK("getNumSpecialOptions");
+		return gGlobals->getNumSpecialOptions();
 	}
 	DllExport int getNumGraphicOptions() const
 	{
-		PROXY_TRACK("getNumGraphicOptions");	
-		return gGlobals->getNumGraphicOptions();	
+		PROXY_TRACK("getNumGraphicOptions");
+		return gGlobals->getNumGraphicOptions();
 	}
 	DllExport int getNumTradeableItems() const
 	{
-		PROXY_TRACK("getNumTradeableItems");	
-		return gGlobals->getNumTradeableItems();	
+		PROXY_TRACK("getNumTradeableItems");
+		return gGlobals->getNumTradeableItems();
 	}
 	DllExport int getNumBasicItems() const
 	{
-		PROXY_TRACK("getNumBasicItems");	
-		return gGlobals->getNumBasicItems();	
+		PROXY_TRACK("getNumBasicItems");
+		return gGlobals->getNumBasicItems();
 	}
 	DllExport int getNumTradeableHeadings() const
 	{
-		PROXY_TRACK("getNumTradeableHeadings");	
-		return gGlobals->getNumTradeableHeadings();	
+		PROXY_TRACK("getNumTradeableHeadings");
+		return gGlobals->getNumTradeableHeadings();
 	}
 	int getNumCommandInfos() const
 	{
-		PROXY_TRACK("getNumCommandInfos");	
-		return gGlobals->getNumCommandInfos();	
+		PROXY_TRACK("getNumCommandInfos");
+		return gGlobals->getNumCommandInfos();
 	}
 	int getNumControlInfos() const
 	{
-		PROXY_TRACK("getNumControlInfos");	
-		return gGlobals->getNumControlInfos();	
+		PROXY_TRACK("getNumControlInfos");
+		return gGlobals->getNumControlInfos();
 	}
 	int getNumMissionInfos() const
 	{
-		PROXY_TRACK("getNumMissionInfos");	
-		return gGlobals->getNumMissionInfos();	
+		PROXY_TRACK("getNumMissionInfos");
+		return gGlobals->getNumMissionInfos();
 	}
 	DllExport int getNumPlayerOptionInfos() const
 	{
-		PROXY_TRACK("getNumPlayerOptionInfos");	
-		return gGlobals->getNumPlayerOptionInfos();	
+		PROXY_TRACK("getNumPlayerOptionInfos");
+		return gGlobals->getNumPlayerOptionInfos();
 	}
 	DllExport int getMaxNumSymbols() const
 	{
-		PROXY_TRACK("getMaxNumSymbols");	
-		return gGlobals->getMaxNumSymbols();	
+		PROXY_TRACK("getMaxNumSymbols");
+		return gGlobals->getMaxNumSymbols();
 	}
 	DllExport int getNumGraphicLevels() const
 	{
-		PROXY_TRACK("getNumGraphicLevels");	
-		return gGlobals->getNumGraphicLevels();	
+		PROXY_TRACK("getNumGraphicLevels");
+		return gGlobals->getNumGraphicLevels();
 	}
 	int getNumGlobeLayers() const
 	{
-		PROXY_TRACK("getNumGlobeLayers");	
-		return gGlobals->getNumGlobeLayers();	
+		PROXY_TRACK("getNumGlobeLayers");
+		return gGlobals->getNumGlobeLayers();
 	}
 };
 

@@ -130,7 +130,7 @@ def makeTooltip(screen, xPos, yPos, szTxt, uFont, listBox):
 	dy = len(aList) * 22 + 16
 	# Find best position.
 	if xPos > xRes / 2:
-		x = xPos - 24 - dx
+		x = xPos - 32 - dx
 	else: # Left side of screen.
 		x = xPos + 24
 	'''

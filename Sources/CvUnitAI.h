@@ -258,10 +258,8 @@ protected:
 	bool AI_heal(int iDamagePercent = 0, int iMaxPath = MAX_INT);
 	bool AI_afterAttack();
 	/*TB Prophet Mod begin*/
-#ifdef C2C_BUILD
 	bool AI_foundReligion();
 	bool AI_cureAffliction(PromotionLineTypes eAfflictionLine);
-#endif
 	/*TB Prophet Mod end*/
 	bool AI_goldenAge();
 	bool AI_spreadReligion();
@@ -357,7 +355,7 @@ protected:
 	bool AI_rangeAttack(int iRange);
 	bool AI_leaveAttack(int iRange, int iThreshold, int iStrengthThreshold);
 	bool AI_blockade();
-	int  AI_blockadeValue(CvPlot* pLoopPlot, CvCity* pCity, CvPlot*& endTurnPlot) const;
+	int  AI_blockadeValue(CvPlot* pLoopPlot, const CvCity* pCity, CvPlot*& endTurnPlot) const;
 	bool AI_pirateBlockade();
 	bool AI_seaBombardRange(int iMaxRange);
 	bool AI_pillage(int iBonusValueThreshold = 0);

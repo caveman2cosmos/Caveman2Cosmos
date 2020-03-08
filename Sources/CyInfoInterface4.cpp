@@ -166,9 +166,9 @@ void CyInfoPythonInterface4()
 		.def("getTechCostPercent", &CvEventInfo::getTechCostPercent, "int ()")
 		.def("getTechMinTurnsLeft", &CvEventInfo::getTechMinTurnsLeft, "int ()")
 		.def("getPrereqTech", &CvEventInfo::getPrereqTech, "int ()")
-		.def("getUnitClass", &CvEventInfo::getUnitClass, "int ()")
-		.def("getNumUnits", &CvEventTriggerInfo::getNumUnits, "int ()")
-		.def("getBuildingClass", &CvEventInfo::getBuildingClass, "int ()")
+		.def("getFreeUnit", &CvEventInfo::getFreeUnit, "int ()")
+		.def("getNumUnits", &CvEventInfo::getNumUnits, "int ()")
+		.def("getBuilding", &CvEventInfo::getBuilding, "int ()")
 		.def("getBuildingChange", &CvEventInfo::getBuildingChange, "int ()")
 		.def("getHappy", &CvEventInfo::getHappy, "int ()")
 		.def("getHealth", &CvEventInfo::getHealth, "int ()")
@@ -198,7 +198,6 @@ void CyInfoPythonInterface4()
 		.def("getRevoltTurns", &CvEventInfo::getRevoltTurns, "int ()")
 		.def("getMinPillage", &CvEventInfo::getMinPillage, "int ()")
 		.def("getMaxPillage", &CvEventInfo::getMaxPillage, "int ()")
-		.def("getUnitPromotion", &CvEventInfo::getUnitPromotion, "int ()")
 		.def("getFreeUnitSupport", &CvEventInfo::getFreeUnitSupport, "int ()")
 		.def("getInflationModifier", &CvEventInfo::getInflationModifier, "int ()")
 		.def("getSpaceProductionModifier", &CvEventInfo::getSpaceProductionModifier, "int ()")
@@ -211,15 +210,15 @@ void CyInfoPythonInterface4()
 		.def("getPlotExtraYield", &CvEventInfo::getPlotExtraYield, "int (int)")
 		.def("getFreeSpecialistCount", &CvEventInfo::getFreeSpecialistCount, "int (int)")
 		.def("getUnitCombatPromotion", &CvEventInfo::getUnitCombatPromotion, "int (int)")
-		.def("getUnitClassPromotion", &CvEventInfo::getUnitClassPromotion, "int (int)")
+		.def("getUnitPromotion", &CvEventInfo::getUnitPromotion, "int (int)")
 
-		.def("getBuildingYieldChange", &CvEventInfo::getBuildingYieldChange, "int (int /*BuildingClassTypes*/, int /*YieldTypes*/)")
+		.def("getBuildingYieldChange", &CvEventInfo::getBuildingYieldChange, "int (int /*BuildingTypes*/, int /*YieldTypes*/)")
 		.def("getNumBuildingYieldChanges", &CvEventInfo::getNumBuildingYieldChanges, "int ()")
-		.def("getBuildingCommerceChange", &CvEventInfo::getBuildingCommerceChange, "int (int /*BuildingClassTypes*/, int /*CommerceTypes*/)")
+		.def("getBuildingCommerceChange", &CvEventInfo::getBuildingCommerceChange, "int (int /*BuildingTypes*/, int /*CommerceTypes*/)")
 		.def("getNumBuildingCommerceChanges", &CvEventInfo::getNumBuildingCommerceChanges, "int ()")
-		.def("getBuildingHappyChange", &CvEventInfo::getBuildingHappyChange, "int (int /*BuildingClassTypes*/)")
+		.def("getBuildingHappyChange", &CvEventInfo::getBuildingHappyChange, "int (int /*BuildingTypes*/)")
 		.def("getNumBuildingHappyChanges", &CvEventInfo::getNumBuildingHappyChanges, "int ()")
-		.def("getBuildingHealthChange", &CvEventInfo::getBuildingHealthChange, "int (int /*BuildingClassTypes*/)")
+		.def("getBuildingHealthChange", &CvEventInfo::getBuildingHealthChange, "int (int /*BuildingTypes*/)")
 		.def("getNumBuildingHealthChanges", &CvEventInfo::getNumBuildingHealthChanges, "int ()")
 		;
 
@@ -276,25 +275,4 @@ void CyInfoPythonInterface4()
 		.def("getChar", &CvPropertyInfo::getChar, "int ()")
 		.def("isSourceDrain", &CvPropertyInfo::isSourceDrain, "bool ()")
 		;
-
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 10/24/07                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-// Python Modular Loading
-	python::class_<CvPythonModulesInfo, python::bases<CvInfoBase> >("CvPythonModulesInfo")
-		.def("isMainInterfaceScreen", &CvPythonModulesInfo::isMainInterfaceScreen, "bool ()")
-		.def("isCivicScreen", &CvPythonModulesInfo::isCivicScreen, "bool ()")
-		.def("isCorporationScreen", &CvPythonModulesInfo::isCorporationScreen, "bool ()")
-		.def("isDomesticAdvisor", &CvPythonModulesInfo::isDomesticAdvisor, "bool ()")
-		.def("isEspionageAdvisor", &CvPythonModulesInfo::isEspionageAdvisor, "bool ()")
-		.def("isForeignAdvisor", &CvPythonModulesInfo::isForeignAdvisor, "bool ()")
-		.def("isMilitaryAdvisor", &CvPythonModulesInfo::isMilitaryAdvisor, "bool ()")
-		.def("isVictoryScreen", &CvPythonModulesInfo::isVictoryScreen, "bool ()")
-		.def("getScreen", &CvPythonModulesInfo::getScreen, "int ()")
-		;
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
 }

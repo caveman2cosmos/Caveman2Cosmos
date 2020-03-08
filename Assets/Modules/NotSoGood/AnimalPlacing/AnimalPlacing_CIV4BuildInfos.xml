@@ -8,7 +8,7 @@
 	<BuildInfos>
 		<BuildInfo>
 			<Type>BUILD_BONUS_DONKEY</Type>
-			<Description>TXT_KEY_PLACE_DONKEY</Description>
+			<Description>TXT_KEY_BUILD_BONUS_DONKEY</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -27,7 +27,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_HORSE</Type>
-			<Description>TXT_KEY_PLACE_HORSE</Description>
+			<Description>TXT_KEY_BUILD_BONUS_HORSE</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -45,14 +45,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,4,2</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_ELEPHANT</Type>
-			<Description>TXT_KEY_PLACE_ELEPHANT</Description>
+			<Type>BUILD_BONUS_ELEPHANTS</Type>
+			<Description>TXT_KEY_BUILD_BONUS_ELEPHANTS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_ELEPHANT</ImprovementType>
+			<ImprovementType>IMPROVEMENT_BONUS_ELEPHANTS</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -65,7 +65,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_BISON</Type>
-			<Description>TXT_KEY_PLACE_BISON</Description>
+			<Description>TXT_KEY_BUILD_BONUS_BISON</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -84,7 +84,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_CAMEL</Type>
-			<Description>TXT_KEY_PLACE_CAMEL</Description>
+			<Description>TXT_KEY_BUILD_BONUS_CAMEL</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -103,7 +103,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_COW</Type>
-			<Description>TXT_KEY_PLACE_COW</Description>
+			<Description>TXT_KEY_BUILD_BONUS_COW</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -122,7 +122,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_DEER</Type>
-			<Description>TXT_KEY_PLACE_DEER</Description>
+			<Description>TXT_KEY_BUILD_BONUS_DEER</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -140,14 +140,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,1,4</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_FUR</Type>
-			<Description>TXT_KEY_PLACE_FUR</Description>
+			<Type>BUILD_BONUS_BEAVERS</Type>
+			<Description>TXT_KEY_BUILD_BONUS_BEAVERS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_FUR</ImprovementType>
+			<ImprovementType>IMPROVEMENT_BONUS_BEAVERS</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -160,7 +160,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_KANGAROO</Type>
-			<Description>TXT_KEY_PLACE_KANGAROO</Description>
+			<Description>TXT_KEY_BUILD_BONUS_KANGAROO</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -179,7 +179,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_LLAMA</Type>
-			<Description>TXT_KEY_PLACE_LLAMA</Description>
+			<Description>TXT_KEY_BUILD_BONUS_LLAMA</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -198,7 +198,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_MAMMOTH</Type>
-			<Description>TXT_KEY_PLACE_MAMMOTH</Description>
+			<Description>TXT_KEY_BUILD_BONUS_MAMMOTH</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -217,7 +217,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_PIG</Type>
-			<Description>TXT_KEY_PLACE_PIG</Description>
+			<Description>TXT_KEY_BUILD_BONUS_PIG</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -236,7 +236,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_POULTRY</Type>
-			<Description>TXT_KEY_PLACE_POULTRY</Description>
+			<Description>TXT_KEY_BUILD_BONUS_POULTRY</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -255,7 +255,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_RABBIT</Type>
-			<Description>TXT_KEY_PLACE_RABBIT</Description>
+			<Description>TXT_KEY_BUILD_BONUS_RABBIT</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -273,14 +273,14 @@
 			<Button>Art/Interface/Buttons/Bonus/Rabbits.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_SEA_LIONS</Type>
-			<Description>TXT_KEY_PLACE_SEA_LIONS</Description>
+			<Type>BUILD_BONUS_SEA_LION_AND_SEAL</Type>
+			<Description>TXT_KEY_BUILD_BONUS_SEA_LION_AND_SEAL</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_SEA_LIONS</ImprovementType>
+			<ImprovementType>IMPROVEMENT_BONUS_SEA_LION_AND_SEAL</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -293,7 +293,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_SHEEP</Type>
-			<Description>TXT_KEY_PLACE_SHEEP</Description>
+			<Description>TXT_KEY_BUILD_BONUS_SHEEP</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -312,7 +312,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_WALRUS</Type>
-			<Description>TXT_KEY_PLACE_WALRUS</Description>
+			<Description>TXT_KEY_BUILD_BONUS_WALRUS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -330,14 +330,14 @@
 			<Button>Art/Interface/Buttons/Resources/walrus.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_GUINEA_PIG</Type>
-			<Description>TXT_KEY_PLACE_GUINEA_PIG</Description>
+			<Type>BUILD_BONUS_GUINEA_PIGS</Type>
+			<Description>TXT_KEY_BUILD_BONUS_GUINEA_PIGS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_GUINEA_PIG</ImprovementType>
+			<ImprovementType>IMPROVEMENT_BONUS_GUINEA_PIGS</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -350,7 +350,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_PARROTS</Type>
-			<Description>TXT_KEY_PLACE_PARROTS</Description>
+			<Description>TXT_KEY_BUILD_BONUS_PARROTS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -369,7 +369,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_BARLEY</Type>
-			<Description>TXT_KEY_PLACE_BARLEY</Description>
+			<Description>TXT_KEY_BUILD_BONUS_BARLEY</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -388,7 +388,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_CORN</Type>
-			<Description>TXT_KEY_PLACE_CORN</Description>
+			<Description>TXT_KEY_BUILD_BONUS_CORN</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -407,7 +407,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_FLAX</Type>
-			<Description>TXT_KEY_PLACE_FLAX</Description>
+			<Description>TXT_KEY_BUILD_BONUS_FLAX</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -426,7 +426,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_POMEGRANATE</Type>
-			<Description>TXT_KEY_PLACE_POMEGRANATE</Description>
+			<Description>TXT_KEY_BUILD_BONUS_POMEGRANATE</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -445,7 +445,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_KAVA</Type>
-			<Description>TXT_KEY_PLACE_KAVA</Description>
+			<Description>TXT_KEY_BUILD_BONUS_KAVA</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -463,14 +463,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,3,7</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_GUAVA</Type>
-			<Description>TXT_KEY_PLACE_GUAVA</Description>
+			<Type>BUILD_BONUS_GUAVAS</Type>
+			<Description>TXT_KEY_BUILD_BONUS_GUAVAS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_GUAVA</ImprovementType>
+			<ImprovementType>IMPROVEMENT_BONUS_GUAVAS</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -482,14 +482,14 @@
 			<Button>Art/Interface/Buttons/Bonus/Guava.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_MELON</Type>
-			<Description>TXT_KEY_PLACE_MELON</Description>
+			<Type>BUILD_BONUS_MELONS</Type>
+			<Description>TXT_KEY_BUILD_BONUS_MELONS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_MELON</ImprovementType>
+			<ImprovementType>IMPROVEMENT_BONUS_MELONS</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -501,14 +501,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,8,5</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_POTATO</Type>
-			<Description>TXT_KEY_PLACE_POTATO</Description>
+			<Type>BUILD_BONUS_POTATOES</Type>
+			<Description>TXT_KEY_BUILD_BONUS_POTATOES</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_POTATO</ImprovementType>
+			<ImprovementType>IMPROVEMENT_BONUS_POTATOES</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -521,7 +521,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_PUMPKIN</Type>
-			<Description>TXT_KEY_PLACE_PUMPKIN</Description>
+			<Description>TXT_KEY_BUILD_BONUS_PUMPKIN</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -540,7 +540,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_RICE</Type>
-			<Description>TXT_KEY_PLACE_RICE</Description>
+			<Description>TXT_KEY_BUILD_BONUS_RICE</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -559,7 +559,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_SQUASH</Type>
-			<Description>TXT_KEY_PLACE_SQUASH</Description>
+			<Description>TXT_KEY_BUILD_BONUS_SQUASH</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -578,7 +578,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_WHEAT</Type>
-			<Description>TXT_KEY_PLACE_WHEAT</Description>
+			<Description>TXT_KEY_BUILD_BONUS_WHEAT</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -597,7 +597,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_ALMONDS</Type>
-			<Description>TXT_KEY_PLACE_ALMONDS</Description>
+			<Description>TXT_KEY_BUILD_BONUS_ALMONDS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -616,7 +616,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_APPLE</Type>
-			<Description>TXT_KEY_PLACE_APPLE</Description>
+			<Description>TXT_KEY_BUILD_BONUS_APPLE</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -635,7 +635,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_BANANA</Type>
-			<Description>TXT_KEY_PLACE_BANANA</Description>
+			<Description>TXT_KEY_BUILD_BONUS_BANANA</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -654,7 +654,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_COCONUT</Type>
-			<Description>TXT_KEY_PLACE_COCONUT</Description>
+			<Description>TXT_KEY_BUILD_BONUS_COCONUT</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -673,7 +673,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_DATES</Type>
-			<Description>TXT_KEY_PLACE_DATES</Description>
+			<Description>TXT_KEY_BUILD_BONUS_DATES</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -692,7 +692,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_FIG</Type>
-			<Description>TXT_KEY_PLACE_FIG</Description>
+			<Description>TXT_KEY_BUILD_BONUS_FIG</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -710,14 +710,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,5,6</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_LEMON</Type>
-			<Description>TXT_KEY_PLACE_LEMON</Description>
+			<Type>BUILD_BONUS_LEMONS</Type>
+			<Description>TXT_KEY_BUILD_BONUS_LEMONS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_LEMON</ImprovementType>
+			<ImprovementType>IMPROVEMENT_BONUS_LEMONS</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -730,7 +730,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_MANGO</Type>
-			<Description>TXT_KEY_PLACE_MANGO</Description>
+			<Description>TXT_KEY_BUILD_BONUS_MANGO</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -749,7 +749,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_OLIVES</Type>
-			<Description>TXT_KEY_PLACE_OLIVES</Description>
+			<Description>TXT_KEY_BUILD_BONUS_OLIVES</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -768,7 +768,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_PAPAYA</Type>
-			<Description>TXT_KEY_PLACE_PAPAYA</Description>
+			<Description>TXT_KEY_BUILD_BONUS_PAPAYA</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -787,7 +787,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_PISTACHIO</Type>
-			<Description>TXT_KEY_PLACE_PISTACHIO</Description>
+			<Description>TXT_KEY_BUILD_BONUS_PISTACHIO</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -805,14 +805,14 @@
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,6,7</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_WINE</Type>
-			<Description>TXT_KEY_PLACE_WINE</Description>
+			<Type>BUILD_BONUS_GRAPES</Type>
+			<Description>TXT_KEY_BUILD_BONUS_GRAPES</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_WINE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_BONUS_GRAPES</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -825,7 +825,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_HENNA</Type>
-			<Description>TXT_KEY_PLACE_HENNA</Description>
+			<Description>TXT_KEY_BUILD_BONUS_HENNA</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -844,7 +844,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_INDIGO</Type>
-			<Description>TXT_KEY_PLACE_INDIGO</Description>
+			<Description>TXT_KEY_BUILD_BONUS_INDIGO</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -863,7 +863,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_RUBBER</Type>
-			<Description>TXT_KEY_PLACE_RUBBER</Description>
+			<Description>TXT_KEY_BUILD_BONUS_RUBBER</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -881,14 +881,14 @@
 			<Button>Art/Interface/Buttons/Bonus/Rubber.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_TIMBER</Type>
-			<Description>TXT_KEY_PLACE_TIMBER</Description>
+			<Type>BUILD_BONUS_PRIME_TIMBER</Type>
+			<Description>TXT_KEY_BUILD_BONUS_PRIME_TIMBER</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_TIMBER</ImprovementType>
+			<ImprovementType>IMPROVEMENT_BONUS_PRIME_TIMBER</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -900,14 +900,14 @@
 			<Button>Art/Interface/Buttons/Resources/Timber_button.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_BONUS_CANNABIS</Type>
-			<Description>TXT_KEY_PLACE_CANNABIS</Description>
+			<Type>BUILD_BONUS_HEMP</Type>
+			<Description>TXT_KEY_BUILD_BONUS_HEMP</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>50</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_BONUS_CANNABIS</ImprovementType>
+			<ImprovementType>IMPROVEMENT_BONUS_HEMP</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<EntityEvent>ENTITY_EVENT_IRRIGATE</EntityEvent>
 			<FeatureStructs/>
@@ -920,7 +920,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_COCA</Type>
-			<Description>TXT_KEY_PLACE_COCA</Description>
+			<Description>TXT_KEY_BUILD_BONUS_COCA</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -939,7 +939,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_COCOA</Type>
-			<Description>TXT_KEY_PLACE_COCOA</Description>
+			<Description>TXT_KEY_BUILD_BONUS_COCOA</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -958,7 +958,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_COFFEE</Type>
-			<Description>TXT_KEY_PLACE_COFFEE</Description>
+			<Description>TXT_KEY_BUILD_BONUS_COFFEE</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -977,7 +977,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_COTTON</Type>
-			<Description>TXT_KEY_PLACE_COTTON</Description>
+			<Description>TXT_KEY_BUILD_BONUS_COTTON</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -996,7 +996,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_INCENSE</Type>
-			<Description>TXT_KEY_PLACE_INCENSE</Description>
+			<Description>TXT_KEY_BUILD_BONUS_INCENSE</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -1015,7 +1015,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_MUSHROOMS</Type>
-			<Description>TXT_KEY_PLACE_MUSHROOMS</Description>
+			<Description>TXT_KEY_BUILD_BONUS_MUSHROOMS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -1034,7 +1034,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_OPIUM</Type>
-			<Description>TXT_KEY_PLACE_OPIUM</Description>
+			<Description>TXT_KEY_BUILD_BONUS_OPIUM</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -1053,7 +1053,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_PAPYRUS</Type>
-			<Description>TXT_KEY_PLACE_PAPYRUS</Description>
+			<Description>TXT_KEY_BUILD_BONUS_PAPYRUS</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -1072,7 +1072,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_PEYOTE</Type>
-			<Description>TXT_KEY_PLACE_PEYOTE</Description>
+			<Description>TXT_KEY_BUILD_BONUS_PEYOTE</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -1091,7 +1091,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_PRICKLY_PEAR</Type>
-			<Description>TXT_KEY_PLACE_PRICKLY_PEAR</Description>
+			<Description>TXT_KEY_BUILD_BONUS_PRICKLY_PEAR</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -1110,7 +1110,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_RESIN</Type>
-			<Description>TXT_KEY_PLACE_RESIN</Description>
+			<Description>TXT_KEY_BUILD_BONUS_RESIN</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -1129,7 +1129,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_SILK</Type>
-			<Description>TXT_KEY_PLACE_SILK</Description>
+			<Description>TXT_KEY_BUILD_BONUS_SILK</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -1148,7 +1148,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_SPICES</Type>
-			<Description>TXT_KEY_PLACE_SPICES</Description>
+			<Description>TXT_KEY_BUILD_BONUS_SPICES</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -1167,7 +1167,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_SUGAR</Type>
-			<Description>TXT_KEY_PLACE_SUGAR</Description>
+			<Description>TXT_KEY_BUILD_BONUS_SUGAR</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -1186,7 +1186,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_TEA</Type>
-			<Description>TXT_KEY_PLACE_TEA</Description>
+			<Description>TXT_KEY_BUILD_BONUS_TEA</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -1205,7 +1205,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_TOBACCO</Type>
-			<Description>TXT_KEY_PLACE_TOBACCO</Description>
+			<Description>TXT_KEY_BUILD_BONUS_TOBACCO</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>
@@ -1224,7 +1224,7 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_BONUS_VANILLA</Type>
-			<Description>TXT_KEY_PLACE_VANILLA</Description>
+			<Description>TXT_KEY_BUILD_BONUS_VANILLA</Description>
 			<Help/>
 			<PrereqTech>NONE</PrereqTech>
 			<iTime>2000</iTime>

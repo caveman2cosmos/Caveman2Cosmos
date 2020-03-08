@@ -176,7 +176,7 @@ def getClosestCityXY( iPlotX, iPlotY, iPlayer, maxRange = 10, bIncludeBase = Tru
 
 def getSpawnablePlots( iPlotX, iPlotY, pSpawnPlayer, bLand = True, bIncludePlot = True, bIncludeCities = False, bIncludeForts = False, bSameArea = True, iRange = 2, iSpawnPlotOwner = -1, bCheckForEnemy = True, bAtWarPlots = True, bOpenBordersPlots = True ) :
 
-	spawnablePlots = list()
+	spawnablePlots = []
 
 	gameMap = GC.getMap()
 	basePlot = gameMap.plot(iPlotX,iPlotY)
@@ -237,7 +237,7 @@ def getEnemyUnits( iPlotX, iPlotY, iEnemyOfPlayer, domain = -1, bOnlyMilitary = 
 	gameMap = GC.getMap()
 	pPlot = gameMap.plot(iPlotX,iPlotY)
 
-	enemyUnits = list()
+	enemyUnits = []
 
 	for i in xrange(pPlot.getNumUnits()) :
 		pUnit = pPlot.getUnit(i)
@@ -254,7 +254,7 @@ def getPlayerUnits( iPlotX, iPlotY, iPlayer, domain = -1 ) :
 	gameMap = GC.getMap()
 	pPlot = gameMap.plot(iPlotX,iPlotY)
 
-	playerUnits = list()
+	playerUnits = []
 
 	for i in xrange(pPlot.getNumUnits()) :
 		pUnit = pPlot.getUnit(i)
@@ -280,7 +280,7 @@ def moveEnemyUnits( iPlotX, iPlotY, iEnemyOfPlayer, iMoveToX, iMoveToY, iInjureM
 
 	pPlot = GC.getMap().plot(iMoveToX,iMoveToY)
 
-	toKillList = list()
+	toKillList = []
 	for pUnit in unitList :
 		if not pUnit.getDomainType() == DomainTypes.DOMAIN_LAND or not pUnit.canMoveInto(pPlot,False,False,True):
 			if bDestroyNonLand:
@@ -355,199 +355,69 @@ def clearOutCity( pCity, pPlayer, pEnemyPlayer ) :
 ########################## Revolution helper functions ###############################
 
 
-def getHandoverUnitTypes(city, pPlayer, compPlayer=None):
+def getHandoverUnitTypes(CyCity):
 
-		warriorClass = CvUtil.findInfoTypeNum(GC.getUnitClassInfo, GC.getNumUnitClassInfos(), RevDefs.sXMLWarrior)
-		iWarrior = GC.getCivilizationInfo( pPlayer.getCivilizationType() ).getCivilizationUnits(warriorClass)
-		workerClass = CvUtil.findInfoTypeNum(GC.getUnitClassInfo,GC.getNumUnitClassInfos(),RevDefs.sXMLWorker)
-		iWorker = GC.getCivilizationInfo( pPlayer.getCivilizationType() ).getCivilizationUnits(workerClass)
-		iBestDefender = UnitTypes.NO_UNIT
-		iCounter = UnitTypes.NO_UNIT
-		iAttack = UnitTypes.NO_UNIT
-		if compPlayer:
-			compPy = PyPlayer(compPlayer.getID())
+	iBestDefender = UnitTypes.NO_UNIT
+	iCounter = UnitTypes.NO_UNIT
+	iAttack = UnitTypes.NO_UNIT
 
-		for unitClass in xrange(GC.getNumUnitClassInfos()) :
-			cityUnitType = GC.getCivilizationInfo(city.getCivilizationType()).getCivilizationUnits(unitClass)
+	for iUnit in xrange(GC.getNumUnitInfos()):
+		CvUnitInfo = GC.getUnitInfo(iUnit)
 
-			if GC.getUnitClassInfo(unitClass).getMaxGlobalInstances() > 0 or GC.getUnitClassInfo(unitClass).getMaxPlayerInstances() > 0 or GC.getUnitClassInfo(unitClass).getMaxTeamInstances() > 0:
-				continue
+		if CvUnitInfo.getDomainType() != DomainTypes.DOMAIN_LAND or CvUnitInfo.getPrereqAndTech() == TechTypes.NO_TECH:
+			continue
+		if CvUnitInfo.getMaxGlobalInstances() > 0 or CvUnitInfo.getMaxPlayerInstances() > 0:
+			continue
 
-			if pPlayer.isNPC():
-				playerUnitType = cityUnitType
-			else :
-				playerUnitType = GC.getCivilizationInfo( pPlayer.getCivilizationType() ).getCivilizationUnits(unitClass)
+		if not CyCity.canTrain(iUnit, False, False, False, False): continue
 
-			if( playerUnitType < 0 and cityUnitType < 0 ) :
-				print "WARNING: Civ types %d and %d have no unit of class type %d"%(city.getCivilizationType(),pPlayer.getCivilizationType(),unitClass)
-				continue
+		# Defender (Archer,Longbow)
+		if CvUnitInfo.getDefaultUnitAIType() == UnitAITypes.UNITAI_CITY_DEFENSE:
+			if iBestDefender == UnitTypes.NO_UNIT or CvUnitInfo.getCombat() >= GC.getUnitInfo(iBestDefender).getCombat():
+				iBestDefender = iUnit
 
-			if( playerUnitType < 0 ) :
-				playerUnitType = cityUnitType
-			elif( cityUnitType < 0 ) :
-				cityUnitType = playerUnitType
+		# Counter (Axemen,Phalanx)
+		if CvUnitInfo.getUnitAIType(UnitAITypes.UNITAI_COUNTER):
+			if iCounter == UnitTypes.NO_UNIT or CvUnitInfo.getCombat() >= GC.getUnitInfo(iCounter).getCombat():
+				iCounter = iUnit
 
-			if( GC.getUnitInfo(cityUnitType).getDomainType() == DomainTypes.DOMAIN_LAND and city.canTrain(cityUnitType,False,False,False,False) ):
+		# Assault units
+		if CvUnitInfo.getUnitAIType(UnitAITypes.UNITAI_ATTACK):
+			if iAttack == UnitTypes.NO_UNIT or CvUnitInfo.getCombat() > GC.getUnitInfo(iAttack).getCombat():
+				iAttack = iUnit
 
-				unitInfo = GC.getUnitInfo(playerUnitType)
-				if( not unitInfo.getPrereqAndTech() == TechTypes.NO_TECH ) :
-					unitTechInfo = GC.getTechInfo( unitInfo.getPrereqAndTech() )
+	if iBestDefender == UnitTypes.NO_UNIT:
+		if not iCounter == UnitTypes.NO_UNIT:
+			iBestDefender = iCounter
+		else:
+			iBestDefender = GC.getInfoTypeForString("UNIT_CLUBMAN")
+	if iCounter == UnitTypes.NO_UNIT: iCounter = iBestDefender
+	if iAttack == UnitTypes.NO_UNIT: iAttack = iCounter
 
-					# Defender (Archer,Longbow)
-					if unitInfo.getDefaultUnitAIType() == UnitAITypes.UNITAI_CITY_DEFENSE:
-						if iBestDefender == UnitTypes.NO_UNIT or unitInfo.getCombat() >= GC.getUnitInfo(iBestDefender).getCombat():
-							if compPlayer == None:
-								iBestDefender = playerUnitType
-							else :
-								compUnitType = GC.getCivilizationInfo( compPlayer.getCivilizationType() ).getCivilizationUnits(unitClass)
-								if compPy.getUnitsOfType(compUnitType):
-									iBestDefender = playerUnitType
-								elif unitTechInfo.getEra() < compPlayer.getCurrentEra():
-									iBestDefender = playerUnitType
+	return [GC.getInfoTypeForString("UNIT_WORKER"), iBestDefender, iCounter, iAttack]
 
-					# Counter (Axemen,Phalanx)
-					if( unitInfo.getUnitAIType(UnitAITypes.UNITAI_COUNTER) ):
-						if( (iCounter == UnitTypes.NO_UNIT) or unitInfo.getCombat() >= GC.getUnitInfo(iCounter).getCombat() ) :
-							if( compPlayer == None ) :
-								iCounter = playerUnitType
-							else :
-								compUnitType = GC.getCivilizationInfo( compPlayer.getCivilizationType() ).getCivilizationUnits(unitClass)
-								if len(compPy.getUnitsOfType(compUnitType)) > 1:
-									iCounter = playerUnitType
+def getUprisingUnitTypes(CyCity):
+	# Returns list of units that can be given to violent rebel uprisings, odds of giving are set by the relative number of times a unit type appears in list
+	aList = []
+	for iUnit in xrange(GC.getNumUnitInfos()):
+		CvUnitInfo = GC.getUnitInfo(iUnit)
 
-					# Assault units
-					if( unitInfo.getUnitAIType( UnitAITypes.UNITAI_ATTACK ) ):
-						if( (iAttack == UnitTypes.NO_UNIT) or unitInfo.getCombat() > GC.getUnitInfo(iAttack).getCombat() ) :
-							if( compPlayer == None ) :
-								iAttack = playerUnitType
-							else :
-								compUnitID = GC.getCivilizationInfo( compPlayer.getCivilizationType() ).getCivilizationUnits(unitClass)
-								if( len(compPy.getUnitsOfType(compUnitID)) > 1 ) :
-									iAttack = playerUnitType
+		if CvUnitInfo.getDomainType() != DomainTypes.DOMAIN_LAND:
+			continue
 
+		if CvUnitInfo.getMaxGlobalInstances() > 0 or CvUnitInfo.getMaxPlayerInstances() > 0:
+			continue
 
-		if( iBestDefender == UnitTypes.NO_UNIT ) :
-			if( not iCounter == UnitTypes.NO_UNIT ) :
-				iBestDefender = iCounter
-			else :
-				iBestDefender = iWarrior
-		if( iCounter == UnitTypes.NO_UNIT ) : iCounter = iBestDefender
-		if( iAttack == UnitTypes.NO_UNIT ) : iAttack = iCounter
+		iCombat = CvUnitInfo.getCombat()
+		if iCombat < 1: continue
 
-		return [iWorker,iBestDefender,iCounter,iAttack]
+		if not CvUnitInfo.hasUnitCombat(UnitCombatTypes(GC.getInfoTypeForString("UNITCOMBAT_COMBATANT"))):
+			continue
 
-def getUprisingUnitTypes( pCity, pRevPlayer, isCheckEnemy, bSilent = False ) :
-		# Returns list of units that can be given to violent rebel uprisings, odds of giving are set by the relative number of times a unit type appears in list
-
-		spawnableUnits = list()
-		trainableUnits = list()
-
-		owner = GC.getPlayer( pCity.getOwner() )
-		ownerPy = PyPlayer( pCity.getOwner() )
-		iOwnerEra = owner.getCurrentEra()
-
-		bIsBarb = pRevPlayer.isBarbarian()
-		enemyPy = None
-		if( isCheckEnemy and not pRevPlayer.isNPC() ) :
-			enemyPy = PyPlayer( pRevPlayer.getID() )
-
-		for unitClass in xrange(GC.getNumUnitClassInfos()) :
-			ownerUnitType = GC.getCivilizationInfo( owner.getCivilizationType() ).getCivilizationUnits(unitClass)
-			ownerUnits = ownerPy.getUnitsOfType( ownerUnitType )
-			unitInfo = GC.getUnitInfo(ownerUnitType)
-
-			if( GC.getUnitClassInfo(unitClass).getMaxGlobalInstances() > 0 or GC.getUnitClassInfo(unitClass).getMaxPlayerInstances() > 0 or GC.getUnitClassInfo(unitClass).getMaxTeamInstances() > 0 ) :
-				continue
-
-			if( unitInfo == None ) :
-				continue
-
-			if( not unitInfo.getDomainType() == DomainTypes.DOMAIN_LAND ) :
-				continue
-
-			if( GC.getUnitClassInfo(unitClass).getMaxGlobalInstances() > 0 or GC.getUnitClassInfo(unitClass).getMaxPlayerInstances() > 0 or GC.getUnitClassInfo(unitClass).getMaxTeamInstances() > 0 ) :
-				continue
-
-			# First check what units there are nearby
-			if( not unitInfo.getPrereqAndTech() == TechTypes.NO_TECH ) :
-				unitTechInfo = GC.getTechInfo( unitInfo.getPrereqAndTech() )
-
-				if( unitTechInfo.getEra() > iOwnerEra - 3 ) :
-					if( len(ownerUnits) > 0 ) :
-						if( ownerUnits[0].canAttack() ) :
-
-							if( unitInfo.getUnitAIType(UnitAITypes.UNITAI_ATTACK) or unitInfo.getUnitAIType(UnitAITypes.UNITAI_COUNTER) ):
-
-								# Probability of spawning units based on those nearby
-								for unit in ownerUnits :
-									if( plotDistance( unit.getX(), unit.getY(), pCity.getX(), pCity.getY() ) < 7 ) :
-										if( bIsBarb ) :
-											spawnUnitID = ownerUnitType
-										else :
-											spawnUnitID = GC.getCivilizationInfo( pRevPlayer.getCivilizationType() ).getCivilizationUnits(unitClass)
-										spawnableUnits.append( spawnUnitID )
-										if( unitInfo.getDefaultUnitAIType() == UnitAITypes.UNITAI_CITY_DEFENSE ) :
-											if( unitTechInfo.getEra() == iOwnerEra ) :
-												if( spawnableUnits.count( spawnUnitID ) > 1 ) :
-													break
-											else :
-												if( spawnableUnits.count( spawnUnitID ) > 3 ) :
-													break
-										else :
-											if( unitTechInfo.getEra() == iOwnerEra ) :
-												if( spawnableUnits.count( spawnUnitID ) > 3 ) :
-													break
-											else :
-												if( spawnableUnits.count( spawnUnitID ) > 5 ) :
-													break
-
-								if( unitTechInfo.getEra() < iOwnerEra and unitTechInfo.getEra() >= iOwnerEra - 2) :
-									# Can spawn old units from further away
-									for unit in ownerUnits :
-										if( unit.area().getID() == pCity.area().getID() ):
-											if bIsBarb:
-												spawnUnitID = ownerUnitType
-											else: spawnUnitID = GC.getCivilizationInfo(pRevPlayer.getCivilizationType()).getCivilizationUnits(unitClass)
-
-											if( pCity.canTrain(ownerUnitType,False,False, False, False) ) :
-												spawnableUnits.append( spawnUnitID )
-
-											break
-
-					if( not enemyPy == None ) :
-						enemyUnitType = GC.getCivilizationInfo( pRevPlayer.getCivilizationType() ).getCivilizationUnits(unitClass)
-						enemyUnits = enemyPy.getUnitsOfType( enemyUnitType )
-						if( len( enemyUnits ) > 0 ) :
-							if( enemyUnits[0].canAttack() ) :
-								if( unitInfo.getUnitAIType( UnitAITypes.UNITAI_ATTACK )  ):
-									iCount = 0
-									for unit in enemyUnits :
-										if( plotDistance( unit.getX(), unit.getY(), pCity.getX(), pCity.getY() ) < 7 ) :
-											spawnableUnits.append( enemyUnitType )
-
-											iCount += 1
-											if( unitInfo.getDefaultUnitAIType() == UnitAITypes.UNITAI_CITY_DEFENSE and iCount > 1 ) :
-												break
-											elif( iCount > 3 ) :
-												break
-
-			if( pCity.canTrain(ownerUnitType,False,False,False,False) ):
-				if( unitInfo.getUnitAIType( UnitAITypes.UNITAI_ATTACK ) ):
-					if( bIsBarb ) :
-						spawnUnitID = ownerUnitType
-					else :
-						spawnUnitID = GC.getCivilizationInfo( pRevPlayer.getCivilizationType() ).getCivilizationUnits(unitClass)
-
-					trainableUnits.append( spawnUnitID )
-					if( unitInfo.getCombat() > 4 ) :
-						trainableUnits.append( spawnUnitID )
-						if( unitInfo.getCombat() > 15 ) :
-							trainableUnits.append( spawnUnitID )
-
-		if( len(spawnableUnits) < 1 ) :
-			spawnableUnits = trainableUnits
-
-		return spawnableUnits
+		if CyCity.canTrain(iUnit, False, False, False, False):
+			for i in xrange(iCombat/4 + 1):
+				aList.append(iUnit)
+	return aList
 
 
 def computeWarOdds(CyPlayerA, CyPlayerB, CyArea, allowAttackerVassal=True, allowVictimVassal=True, allowBreakVassal=True):
@@ -704,7 +574,7 @@ def giveCityCulture(CyCity, iPlayer, newCityVal, newPlotVal):
 	# Places this culture value in city and city plot
 	# Places half this value in neighboring plots
 
-	if iPlayer < 0 or iPlayer > GC.getMAX_CIV_PLAYERS():
+	if iPlayer < 0 or iPlayer >= GC.getMAX_PC_PLAYERS():
 		return
 	CyPlot = CyCity.plot()
 
