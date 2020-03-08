@@ -85,6 +85,26 @@
 		<English>%s1 (%d2)</English>
 	</TEXT>
 	<TEXT>
+		<Tag>INTERFACE_UNIT_TAB</Tag>
+		<English>Unit Tab</English>
+		<German>Einheiten bauen</German>
+	</TEXT>
+	<TEXT>
+		<Tag>INTERFACE_BUILDING_TAB</Tag>
+		<English>Building Tab</English>
+		<German>Gebäude bauen</German>
+	</TEXT>
+	<TEXT>
+		<Tag>INTERFACE_WONDER_TAB</Tag>
+		<English>Wonder Tab</English>
+		<German>Wunder bauen</German>
+	</TEXT>
+	<TEXT>
+		<Tag>INTERFACE_CLOSE_TAB</Tag>
+		<English>Close Tab</English>
+		<German>Menü verlassen</German>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_ACO_AttackModifiers</Tag>
 		<English>[NEWLINE][COLOR_POSITIVE_TEXT]Attack modifiers:[COLOR_REVERT]</English>
 		<French>[NEWLINE][COLOR_POSITIVE_TEXT]Modificateurs d'Attaque:[COLOR_REVERT]</French>
@@ -376,10 +396,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_ABANDON_CITY_HEADER2</Tag>
 		<English>Demolition value is based on the building production cost.[NEWLINE]The abandon city value is based on population size.</English>
+		<German>Der Abrisswert eines Gebäudes basiert auf den Produktionskosten.[NEWLINE]Der Geldwert einer aufgegebenen Stadt errechnet sich aus der Bevölkerungsanzahl.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ABANDON_CITY_HEADER3</Tag>
 		<English>Abandoning a City where the majority nationality is not your own will give a diplomatic penalty.</English>
+		<German>Eine Stadt, in der überwiegend fremde Nationalitäten leben, aufzugeben, hat schwere diplomatische Konsequenzen.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ABANDON_FREE</Tag>
@@ -9438,7 +9460,7 @@
 		<Tag>TXT_KEY_LIST_BUILDING_FILTER_SHOW_AIR_POLLUTION</Tag>
 		<English>Show only buildings that influence air pollution</English>
 		<French>Voir uniquement les bâtiments qui influencent la pollution de l'air</French>
-		<German>Zeige nur Gebäude, die die air pollution beeinflussen</German>
+		<German>Zeige nur Gebäude, die die Luftverschmutzung beeinflussen</German>
 		<Italian>Mostra solo edifici che influenzano air pollution</Italian>
 		<Spanish>Mostrar solo edificios que influyan en la air pollution</Spanish>
 		<Polish>Pokaż tylko budynki mające air pollution</Polish>
@@ -9483,7 +9505,7 @@
 		<Tag>TXT_KEY_LIST_BUILDING_FILTER_SHOW_DISEASE</Tag>
 		<English>Show only buildings that influence disease</English>
 		<French>Voir uniquement les bâtiments qui influencent les maladies</French>
-		<German>Zeige nur Gebäude, die die disease beeinflussen</German>
+		<German>Zeige nur Gebäude, die Einfluss auf Krankheiten haben</German>
 		<Italian>Mostra solo edifici che influenzano l'disease</Italian>
 		<Spanish>Mostrar solo edificios que influyan en la disease</Spanish>
 		<Polish>Pokaż tylko budynki mające disease</Polish>
@@ -9492,7 +9514,7 @@
 		<Tag>TXT_KEY_LIST_BUILDING_FILTER_SHOW_EDUCATION</Tag>
 		<English>Show only buildings that influence education</English>
 		<French>Voir uniquement les bâtiments qui influencent l'éducation</French>
-		<German>Zeige nur Gebäude, die die education beeinflussen</German>
+		<German>Zeige nur Gebäude, die die Bildung beeinflussen</German>
 		<Italian>Mostra solo edifici che influenzano l'education</Italian>
 		<Spanish>Mostrar solo edificios que influyan en la education</Spanish>
 		<Polish>Pokaż tylko budynki mające education</Polish>
@@ -9582,7 +9604,7 @@
 		<Tag>TXT_KEY_LIST_BUILDING_FILTER_SHOW_TOURISM</Tag>
 		<English>Show only buildings that influence Tourism</English>
 		<French>Voir uniquement les bâtiments qui influencent le tourisme</French>
-		<German>Zeige nur Gebäude, die die Tourism beeinflussen</German>
+		<German>Zeige nur Gebäude, die den Tourismus beeinflussen</German>
 		<Italian>Mostra solo edifici che influenzano Tourism</Italian>
 		<Spanish>Mostrar solo edificios que influyan en la Tourism</Spanish>
 		<Polish>Pokaż tylko budynki mające Tourism</Polish>
@@ -9591,7 +9613,7 @@
 		<Tag>TXT_KEY_LIST_BUILDING_FILTER_SHOW_WATER_POLLUTION</Tag>
 		<English>Show only buildings that influence water pollution</English>
 		<French>Voir uniquement les bâtiments qui influencent la pollution de l'eau</French>
-		<German>Zeige nur Gebäude, die die water pollution beeinflussen</German>
+		<German>Zeige nur Gebäude, die die Wasserverschmutzung beeinflussen</German>
 		<Italian>Mostra solo edifici che influenzano water pollution</Italian>
 		<Spanish>Mostrar solo edificios que influyan en la water pollution</Spanish>
 		<Polish>Pokaż tylko budynki mające water pollution</Polish>
@@ -21154,7 +21176,11 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>Star</German>
+		<German>
+			<Text>Star:Stars:Star:Star:Stars:Stars:Stars:Stars</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Celebrità</Italian>
 		<Spanish>
 			<Text>Famoso</Text>
@@ -21491,6 +21517,11 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_INVESTIGATOR</Tag>
 		<English>Investigator</English>
+		<German>
+			<Text>Ermittler:Ermittlers:Ermittler:Ermittler:Ermittler:Ermittler:Ermittlern:Ermittler</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_INVESTIGATOR_STRATEGY</Tag>
@@ -21524,7 +21555,11 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_NOBLE</Tag>
 		<English>Noble</English>
-		<German>Feudalherr</German>
+		<German>
+			<Text>Adliger:Adligen:Adligen:Adligen:Adligen:Adligen:Adligen:Adligen</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Nobile</Italian>
 		<Spanish>
 			<Text>Noble</Text>
@@ -21614,7 +21649,11 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>Sklave</German>
+		<German>
+			<Text>Sklave:Sklaven:Sklaven:Sklaven:Sklaven:Sklaven:Sklaven:Sklaven</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Schiavo</Italian>
 		<Spanish>
 			<Text>Esclavo:Esclavos</Text>
@@ -21631,7 +21670,11 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>Sklaven</German>
+		<German>
+			<Text>Sklave:Sklaven:Sklaven:Sklaven:Sklaven:Sklaven:Sklaven:Sklaven</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Schiavi</Italian>
 		<Spanish>
 			<Text>Esclavo</Text>
@@ -26387,5 +26430,15 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	<TEXT>
 		<Tag>TXT_KEY_ROUTE_GRAVITY_TRAIN</Tag>
 		<English>Gravity Train</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_SCREEN_DEMOLISH</Tag>
+		<English>Demolish</English>
+		<German>Abreißen</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_SCREEN_CONCEPTUAL</Tag>
+		<English>Conceptual</English>
+		<German>Effekte</German>
 	</TEXT>
 </Civ4GameText>

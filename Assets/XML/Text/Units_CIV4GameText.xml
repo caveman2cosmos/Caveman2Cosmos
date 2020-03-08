@@ -27278,6 +27278,11 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DR</Tag>
 		<English>Doctor</English>
+		<German>
+			<Text>Arzt:Arztes:Arzt:Arzt:Ärzte:Ärzte:Ärzten:Ärzte</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DR_STRATEGY</Tag>
