@@ -15032,7 +15032,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MIDDLE_WORKBOAT_STRATEGY</Tag>
 		<English>Medieval [COLOR_UNIT_TEXT]Workboat[COLOR_REVERT] unit with moderate work rate and movement. Unarmed vessels that can create fishing boats, whaling boats, and (in late game) oil rigs. [COLOR_UNIT_TEXT]Work Boats[COLOR_REVERT] cannot enter Ocean spaces. </English>
-		<French>[COLOR_UNIT_TEXT]Bateau-Atelier médiéval[COLOR_REVERT] avec un rythme de travail et un mouvement modérés. Navires non armés qui peuvent créer des bateaux de pêche, des baleiniers et (en fin de partie) des plates-formes pétrolières. [COLOR_UNIT_TEXT] Les bateaux de travail [COLOR_REVERT] ne peuvent pas entrer dans les espaces océaniques.</French>
+		<French>[COLOR_UNIT_TEXT]Bateau-Atelier médiéval[COLOR_REVERT], avec un rythme de travail et un mouvement modérés. Navires non armés qui peuvent créer des bateaux de pêche, des baleiniers et (en fin de partie) des plates-formes pétrolières. Les [COLOR_UNIT_TEXT]Bateaux-ateliers[COLOR_REVERT] ne peuvent pas entrer dans les espaces océaniques.</French>
 		<Polish>Myśliwiec MiG-29</Polish>
 	</TEXT>
 	<TEXT>
@@ -25479,7 +25479,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WORKBOAT_ANCIENT_STRATEGY</Tag>
 		<English>Earliest [COLOR_UNIT_TEXT]Workboat[COLOR_REVERT] unit with slowest work rate. Unarmed vessels that can create fishing boats, whaling boats, and (in late game) oil rigs. [COLOR_UNIT_TEXT]Work Boats[COLOR_REVERT] cannot enter Ocean spaces. </English>
-		<French>Unité la plus ancienne de [COLOR_UNIT_TEXT]bateau-atelier[COLOR_REVERT]avec un rythme de travail le plus lent. Ce sont des bateaux non armés, qui peuvent installer des bateaux de pêche, des baleiniers et (en fin de partie) des plates-formes pétrolières. [COLOR_UNIT_TEXT] Les bateaux-atelier [COLOR_REVERT] ne peuvent pas entrer dans les cases d'océan.</French>
+		<French>Unité la plus ancienne de [COLOR_UNIT_TEXT]bateaux-ateliers[COLOR_REVERT], avec un rythme de travail le plus lent. Ce sont des bateaux non armés, qui peuvent installer des bateaux de pêche, des baleiniers et (en fin de partie) des plates-formes pétrolières. Les [COLOR_UNIT_TEXT]bateaux-ateliers[COLOR_REVERT] ne peuvent pas entrer dans les cases d'océan.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WORKANIMAL</Tag>
