@@ -2831,26 +2831,6 @@ bool CvUnitInfo::isFeatureImpassableType(int i) const
 	return true;
 }
 
-int CvUnitInfo::getMapCategoryType(int i) const
-{
-	return m_aiMapCategoryTypes[i];
-}
-
-int CvUnitInfo::getNumMapCategoryTypes() const
-{
-	return (int)m_aiMapCategoryTypes.size();
-}
-
-bool CvUnitInfo::isMapCategoryType(int i)
-{
-	FAssert (i > -1 && i < GC.getNumMapCategoryInfos()); // do not include this line if for delayed resolution
-	if (find(m_aiMapCategoryTypes.begin(), m_aiMapCategoryTypes.end(), i) == m_aiMapCategoryTypes.end())
-	{
-		return false;
-	}
-	return true;
-}
-
 int CvUnitInfo::getTrapSetWithPromotionType(int i) const
 {
 	return m_aiTrapSetWithPromotionTypes[i];

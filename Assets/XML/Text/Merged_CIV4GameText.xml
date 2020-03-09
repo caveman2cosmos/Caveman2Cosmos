@@ -7339,6 +7339,11 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Arzt:Arztes:Arzt:Arzt:Ärzte:Ärzte:Ärzten:Ärzte</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 	</TEXT>
 		<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_GREAT_DOCTOR</Tag>

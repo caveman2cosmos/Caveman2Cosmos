@@ -487,7 +487,8 @@ class CvMainInterface:
 		panel = "CityScreenAdjustPanel"
 		screen.addPanel(panel, "", "", True, False, 4, yComCon, wComCon, hComCon, ePanelSTD)
 		screen.setStyle(panel, "Panel_City_Info_Style")
-		screen.setLabel("MaintenanceText", "", "<font=1>Maintenance:", 1<<0, 8, 34, 0, eFontSmall, WidgetTypes.WIDGET_HELP_MAINTENANCE, 0, 0)
+		maintenanceText = "<font=1>" + TRNSLTR.getText("TXT_KEY_CONCEPT_MAINTENANCE", ()) + ":"
+		screen.setLabel("MaintenanceText", "", maintenanceText, 1<<0, 8, 34, 0, eFontSmall, WidgetTypes.WIDGET_HELP_MAINTENANCE, 0, 0)
 		yTradeRoutesTop = yComCon + hComCon
 		# City Top Right Religions and Corp. Panel
 		yComCon = 32
@@ -5266,36 +5267,38 @@ class CvMainInterface:
 
 			elif BASE == "BldgList":
 				if TYPE == "Demolish":
-					self.updateTooltip(screen, "Demolish")
+					self.updateTooltip(screen, TRNSLTR.getText("TXT_KEY_CITY_SCREEN_DEMOLISH", ()))
 				elif TYPE == "BUILDING":
 					szTxt = CyGameTextMgr().getBuildingHelp(ID, False, False, True, CyCity, True)
 					self.updateTooltip(screen, szTxt)
 				else:
-					aList = ["Buildings","Wonders","Conceptual"]
+					aList = [TRNSLTR.getText("TXT_KEY_CONCEPT_BUILDINGS", ()), TRNSLTR.getText("TXT_KEY_CONCEPT_WONDERS", ()), TRNSLTR.getText("TXT_KEY_CITY_SCREEN_CONCEPTUAL", ())]
 					self.updateTooltip(screen, aList[ID])
 
 			elif BASE == "BonusList":
-				aList = ["Properties","Map Bonuses","Manufacture","Cultures"]
+				aList = [TRNSLTR.getText("TXT_KEY_PROPERTIES_PROPERTIES", ()), TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_BONUS_MAP", ()), TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_BONUS_MANDFACTURED", ()), TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_C2C_CULTURES", ())]
 				self.updateTooltip(screen, aList[ID])
 
 			elif BASE == "CityTab":
 				if TYPE == "BG":
-					szTxt = "Close tab"
+					szTxt = TRNSLTR.getText("INTERFACE_CLOSE_TAB", ())
 					x = y = -1
 				else:
 					x = self.xPopProgBar
 					y = self.yBotBar + 12
 					if not ID:
-						szTxt = "Unit"
+						szTxt = TRNSLTR.getText("INTERFACE_UNIT_TAB", ())
 						szKey = "A"
 					elif ID == 1:
-						szTxt = "Building"
+						szTxt = TRNSLTR.getText("INTERFACE_BUILDING_TAB", ())
 						szKey = "S"
 					else:
-						szTxt = "Wonder"
+						szTxt = TRNSLTR.getText("INTERFACE_WONDER_TAB", ())
 						szKey = "D"
-					szTxt += " Tab  <color=144,255,72>&#60" + szKey + "&#62"
+
+					szTxt += " <color=144,255,72>&#60" + szKey + "&#62"
 				self.updateTooltip(screen, szTxt, x, y)
+
 			elif BASE == "CT":
 				# City Tab
 				if TYPE == "UnitFilter":

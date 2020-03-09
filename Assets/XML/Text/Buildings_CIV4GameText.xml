@@ -12173,21 +12173,23 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Harems</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
+			<Text>Harem:Harems:Harem:Harem:Harems:Harems:Harems:Harems</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Polish>Harem</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HAREMS_PEDIA</Tag>
 		<English>A stable of polygynous women maintained by an Alpha Male, and who are sexually exclusive to himself and males he believes are worthy of procreation.</English>
+		<German>Mit dem Begriff Harem wird ein abgeschlossener und bewachter Wohnbereich für Ehefrauen, weibliche Angehörige und Kinder eines muslimischen Familienoberhaupts bezeichnet. Die Bezeichnung stammt aus dem arabischen Raum, ist aber so populär geworden, dass sie inzwischen auch auf die polygynen Ehen (Vielweiberei) in anderen, auch früheren Kulturen ausgedehnt wurde. In vielen Harems großer Herrscher befanden sich neben einvernehmlich angeheirateten Frauen auch unfreie Sklavinnen, die ihnen verkauft wurden oder als Kriegsbeute in ihren Besitz gelangten.</German>
 		<Polish>Harem (z arab. ulga, zakaz); od arab. harim ("miejsce zakazane lub święte") inaczej perski: saray, zenana - prywatna strefa w tradycyjnym muzułmańskim domu. Do części domu określonej jako harem nie mają wstępu obcy mężczyźni. Termin odnosi się również do kobiet przebywających w haremie.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HAREMS_STRATEGY</Tag>
 		<English>The [COLOR_BUILDING_TEXT]Harems[COLOR_REVERT] is a prehistoric era building that increases a city's [COLOR_GREEN]Gold[COLOR_REVERT] production and provides [COLOR_GREEN]Happiness[COLOR_REVERT] at the cost of raising [COLOR_RED]Disease[COLOR_REVERT] generation.</English>
 		<French>Une source facile de [ICON_HAPPY] et d'[ICON_GOLD], Le Harem développe les maladies.</French>
+		<German>Ein [COLOR_BUILDING_TEXT]Harem[COLOR_REVERT] steigert die Nahrungsproduktion und nach Entwicklung des Handels stattdessen Reichtum und Zufriedenheit einer Stadt.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HARPYEAGLE_MYTH</Tag>

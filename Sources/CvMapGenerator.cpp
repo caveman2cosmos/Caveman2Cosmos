@@ -76,12 +76,10 @@ bool CvMapGenerator::canPlaceBonusAt(BonusTypes eBonus, int iX, int iY, bool bIg
 	const int iBonusClassType = pInfo.getBonusClassType();
 	const CvBonusClassInfo& pClassInfo = GC.getBonusClassInfo((BonusClassTypes) iBonusClassType);
 
-	if (pPlot->isWater())
+	if (pPlot->isWater()
+	&& GC.getMap().getNumBonusesOnLand(eBonus) * 100 / (GC.getMap().getNumBonuses(eBonus) + 1) < pInfo.getMinLandPercent())
 	{
-		if (((GC.getMap().getNumBonusesOnLand(eBonus) * 100) / (GC.getMap().getNumBonuses(eBonus) + 1)) < pInfo.getMinLandPercent())
-		{
-			return false;
-		}
+		return false;
 	}
 	// Make sure there are no bonuses of the same class (but a different type) nearby:
 	int iRange0 = pClassInfo.getUniqueRange();
@@ -661,21 +659,31 @@ void CvMapGenerator::addBonuses()
 	}
 }
 
-void CvMapGenerator::addUniqueBonusType(BonusTypes eBonusType)
+void CvMapGenerator::addUniqueBonusType(BonusTypes eBonus)
 {
+	int iBonusCount = calculateNumBonusesToAdd(eBonus);
+	if (iBonusCount == 0)
+	{
+		return;
+	}
+
 	int* piAreaTried = new int[GC.getMap().getNumAreas()];
 
 	for (int iI = 0; iI < GC.getMap().getNumAreas(); iI++)
 	{
 		piAreaTried[iI] = FFreeList::INVALID_INDEX;
 	}
-
-	const CvBonusInfo& pBonusInfo = GC.getBonusInfo(eBonusType);
-
-	const int iBonusCount = calculateNumBonusesToAdd(eBonusType);
+	const CvBonusInfo& pBonusInfo = GC.getBonusInfo(eBonus);
 
 	const bool bIgnoreLatitude = GC.getGame().pythonIsBonusIgnoreLatitudes();
 
+	int iGroupRange = pBonusInfo.getGroupRange();
+	const int iGroupRand = pBonusInfo.getGroupRand();
+	if (iGroupRange > 0)
+	{
+		if (iGroupRand < 1) iGroupRange = 0;
+		else iGroupRange += GC.getMap().getWorldSize() / 3;
+	}
 	FAssertMsg(pBonusInfo.isOneArea(), "addUniqueBonusType called with non-unique bonus type");
 
 	while (true)
@@ -698,9 +706,9 @@ void CvMapGenerator::addUniqueBonusType(BonusTypes eBonusType)
 
 			if (!bTried)
 			{
-				int iNumUniqueBonusesOnArea = pLoopArea->countNumUniqueBonusTypes() + 1; // number of unique bonuses starting on the area, plus this one
-				int iNumTiles = pLoopArea->getNumTiles();
-				int iValue = iNumTiles / iNumUniqueBonusesOnArea;
+				const int iNumUniqueBonusesOnArea = pLoopArea->countNumUniqueBonusTypes() + 1; // number of unique bonuses starting on the area, plus this one
+				const int iNumTiles = pLoopArea->getNumTiles();
+				const int iValue = iNumTiles / iNumUniqueBonusesOnArea;
 
 				if (iValue > iBestValue)
 				{
@@ -733,60 +741,56 @@ void CvMapGenerator::addUniqueBonusType(BonusTypes eBonusType)
 			CvPlot* pPlot = GC.getMap().plotByIndex(piShuffle[iI]);
 			FAssertMsg(pPlot != NULL, "addUniqueBonusType(): pPlot is null");
 
-			if (GC.getMap().getNumBonuses(eBonusType) >= iBonusCount)
+			if (pBestArea == pPlot->area() && canPlaceBonusAt(eBonus, pPlot->getX(), pPlot->getY(), bIgnoreLatitude))
 			{
-				break; // We already have enough
-			}
+				pPlot->setBonusType(eBonus);
+				iBonusCount--;
 
-			if (pBestArea == pPlot->area())
-			{
-				if (canPlaceBonusAt(eBonusType, pPlot->getX(), pPlot->getY(), bIgnoreLatitude))
+				for (int iDX = -iGroupRange; iDX <= iGroupRange; iDX++)
 				{
-					pPlot->setBonusType(eBonusType);
+					if (iBonusCount == 0) break;
 
-					for (int iDX = -(pBonusInfo.getGroupRange()); iDX <= pBonusInfo.getGroupRange(); iDX++)
+					for (int iDY = -iGroupRange; iDY <= iGroupRange; iDY++)
 					{
-						for (int iDY = -(pBonusInfo.getGroupRange()); iDY <= pBonusInfo.getGroupRange(); iDY++)
-						{
-							if (GC.getMap().getNumBonuses(eBonusType) < iBonusCount)
-							{
-								CvPlot* pLoopPlot	= plotXY(pPlot->getX(), pPlot->getY(), iDX, iDY);
+						if (iBonusCount == 0) break;
 
-								if (pLoopPlot != NULL && (pLoopPlot->area() == pBestArea))
-								{
-									if (canPlaceBonusAt(eBonusType, pLoopPlot->getX(), pLoopPlot->getY(), bIgnoreLatitude))
-									{
-										if (GC.getGame().getMapRandNum(100, "addUniqueBonusType") < pBonusInfo.getGroupRand())
-										{
-											pLoopPlot->setBonusType(eBonusType);
-										}
-									}
-								}
-							}
+						CvPlot* pLoopPlot	= plotXY(pPlot->getX(), pPlot->getY(), iDX, iDY);
+
+						if (pLoopPlot != NULL && (pLoopPlot->area() == pBestArea)
+						&& pLoopPlot->canHaveBonus(eBonus, bIgnoreLatitude)
+						&& GC.getGame().getMapRandNum(100, "addUniqueBonusType") < iGroupRand)
+						{
+							pLoopPlot->setBonusType(eBonus);
+							iBonusCount--;
 						}
 					}
 				}
+				if (iBonusCount == 0) break;
 			}
 		}
-
 		SAFE_DELETE_ARRAY(piShuffle);
+		if (iBonusCount == 0) break;
 	}
-
 	SAFE_DELETE_ARRAY(piAreaTried);
 }
 
-void CvMapGenerator::addNonUniqueBonusType(BonusTypes eBonusType)
+void CvMapGenerator::addNonUniqueBonusType(BonusTypes eBonus)
 {
-	int iBonusCount = calculateNumBonusesToAdd(eBonusType);
-
+	int iBonusCount = calculateNumBonusesToAdd(eBonus);
 	if (iBonusCount == 0)
 	{
 		return;
 	}
+	const CvBonusInfo& pBonusInfo = GC.getBonusInfo(eBonus);
 
+	int iGroupRange = pBonusInfo.getGroupRange();
+	const int iGroupRand = pBonusInfo.getGroupRand();
+	if (iGroupRange > 0)
+	{
+		if (iGroupRand < 1) iGroupRange = 0;
+		else iGroupRange += GC.getMap().getWorldSize() / 3;
+	}
 	int* piShuffle = shuffle(GC.getMap().numPlots(), GC.getGame().getMapRand());
-
-	const CvBonusInfo& pBonusInfo = GC.getBonusInfo(eBonusType);
 
 	const bool bIgnoreLatitude = GC.getGame().pythonIsBonusIgnoreLatitudes();
 
@@ -794,43 +798,35 @@ void CvMapGenerator::addNonUniqueBonusType(BonusTypes eBonusType)
 	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
 		pPlot = GC.getMap().plotByIndex(piShuffle[iI]);
-		if (canPlaceBonusAt(eBonusType, pPlot->getX(), pPlot->getY(), bIgnoreLatitude))
+		if (canPlaceBonusAt(eBonus, pPlot->getX(), pPlot->getY(), bIgnoreLatitude))
 		{
-			pPlot->setBonusType(eBonusType);
+			pPlot->setBonusType(eBonus);
 			iBonusCount--;
 
-			for (int iDX = -(pBonusInfo.getGroupRange()); iDX <= pBonusInfo.getGroupRange(); iDX++)
+			for (int iDX = -iGroupRange; iDX <= iGroupRange; iDX++)
 			{
-				for (int iDY = -(pBonusInfo.getGroupRange()); iDY <= pBonusInfo.getGroupRange(); iDY++)
-				{
-					if (iBonusCount > 0)
-					{
-						CvPlot* pLoopPlot	= plotXY(pPlot->getX(), pPlot->getY(), iDX, iDY);
+				if (iBonusCount == 0) break;
 
-						if (pLoopPlot != NULL)
-						{
-							if (canPlaceBonusAt(eBonusType, pLoopPlot->getX(), pLoopPlot->getY(), bIgnoreLatitude))
-							{
-								if (GC.getGame().getMapRandNum(100, "addNonUniqueBonusType") < pBonusInfo.getGroupRand())
-								{
-									pLoopPlot->setBonusType(eBonusType);
-									iBonusCount--;
-								}
-							}
-						}
+				for (int iDY = -iGroupRange; iDY <= iGroupRange; iDY++)
+				{
+					if (iBonusCount == 0) break;
+
+					CvPlot* pLoopPlot	= plotXY(pPlot->getX(), pPlot->getY(), iDX, iDY);
+
+					if (pLoopPlot != NULL
+					&& pLoopPlot->canHaveBonus(eBonus, bIgnoreLatitude)
+					&& GC.getGame().getMapRandNum(100, "addNonUniqueBonusType") < iGroupRand)
+					{
+						pLoopPlot->setBonusType(eBonus);
+						iBonusCount--;
 					}
 				}
 			}
-
 			FAssertMsg(iBonusCount >= 0, "iBonusCount must be >= 0");
 
-			if (iBonusCount == 0)
-			{
-				break;
-			}
+			if (iBonusCount == 0) break;
 		}
 	}
-
 	SAFE_DELETE_ARRAY(piShuffle);
 }
 
@@ -885,9 +881,7 @@ void CvMapGenerator::addGoodies()
 
 void CvMapGenerator::eraseRivers()
 {
-	int i;
-
-	for (i = 0; i < GC.getMap().numPlots(); i++)
+	for (int i = 0; i < GC.getMap().numPlots(); i++)
 	{
 		CvPlot* pPlot = GC.getMap().plotByIndex(i);
 		if (pPlot->isNOfRiver())
@@ -903,9 +897,7 @@ void CvMapGenerator::eraseRivers()
 
 void CvMapGenerator::eraseFeatures()
 {
-	int i;
-
-	for (i = 0; i < GC.getMap().numPlots(); i++)
+	for (int i = 0; i < GC.getMap().numPlots(); i++)
 	{
 		CvPlot* pPlot = GC.getMap().plotByIndex(i);
 		pPlot->setFeatureType(NO_FEATURE);
@@ -914,9 +906,7 @@ void CvMapGenerator::eraseFeatures()
 
 void CvMapGenerator::eraseBonuses()
 {
-	int i;
-
-	for (i = 0; i < GC.getMap().numPlots(); i++)
+	for (int i = 0; i < GC.getMap().numPlots(); i++)
 	{
 		CvPlot* pPlot = GC.getMap().plotByIndex(i);
 		pPlot->setBonusType(NO_BONUS);
@@ -925,9 +915,7 @@ void CvMapGenerator::eraseBonuses()
 
 void CvMapGenerator::eraseGoodies()
 {
-	int i;
-
-	for (i = 0; i < GC.getMap().numPlots(); i++)
+	for (int i = 0; i < GC.getMap().numPlots(); i++)
 	{
 		CvPlot* pPlot = GC.getMap().plotByIndex(i);
 		if (pPlot->isGoody())
