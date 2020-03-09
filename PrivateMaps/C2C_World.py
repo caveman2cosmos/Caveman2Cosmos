@@ -3945,13 +3945,13 @@ class MapOptions:
 	def __init__(self):
 		self.bfirstRun = True
 		self.optionList = [ # Title, Default, Random, Choices)
-							["Hills:",			1,	True, 5],
-							["Peaks:",			1,	True, 5],
+							["Hills:",			2,	True, 5],
+							["Peaks:",			2,	True, 5],
 							["Landform:",		2,	True, 5],
 							["World Wrap:",		0, False, 3],
 							["Start:",			1, False, 2],
 							["Rivers:",			4,	True, 9],
-							["Resources:",		2,	True, 7],
+							["Resources:",		3,	True, 7],
 							["Pangea Breaker:",	0, False, 2]
 						] # When dding/removing options: Update the return of getNumCustomMapOptions().
 
