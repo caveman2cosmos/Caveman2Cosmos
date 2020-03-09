@@ -9725,6 +9725,20 @@
 		<Polish>Manewrowanie III</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_MARAUDER</Tag>
+		<English>Marauder</English>
+		<French>Maraudeur</French>
+		<Italian>Predone</Italian>
+		<Polish>Maruder</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_MARAUDER_HELP</Tag>
+		<English>[ICON_BULLET]Plunders 4% of Enemy [ICON_GOLD] Reserves on Combat Victory</English>
+		<French>[ICON_BULLET]Pille 4% de la réserve d'[ICON_GOLD] en cas de Victoire au Combat</French>
+		<Italian>[ICON_BULLET]Ruba 4% delle riserve nemiche di [ICON_GOLD] quando vince una battaglia</Italian>
+		<Polish>[ICON_BULLET]Po zwycięstwie w walce grabi 4% rezerw wrogiego [ICON_GOLD]</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MARAUDER_PILLAGE_TEXT</Tag>
 		<English>[ICON_BULLET]Pillages twice the [ICON_GOLD] and potentially twice the Improvement</English>
 		<French>[ICON_BULLET]Les pillages rapportent deux fois plus d'[ICON_GOLD], y compris pour les aménagements</French>
@@ -14555,6 +14569,22 @@
 		<Italian>Bombe a diametro ridotto</Italian>
 		<Spanish>Bombas de diámetro reducido</Spanish>
 		<Polish>Bomby o Małej Średnicy</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_SNEAK</Tag>
+		<English>Sneak</English>
+		<French>Furtif</French>
+		<German>Schleichen</German>
+		<Italian>Furtivo</Italian>
+		<Polish>Skradanie się</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_SNEAK_HELP</Tag>
+		<English>[ICON_BULLET]Plunders 4% of Enemy [ICON_ESPIONAGE] Reserves on Combat Victory</English>
+		<French>[ICON_BULLET]Pille 4% de la réserve d'[ICON_ESPIONAGE] après une Victoire au Combat</French>
+		<German>[ICON_BULLET]Plündert 4% der gegnesichen [ICON_ESPIONAGE] anch einem Sieg im Kampf</German>
+		<Italian>[ICON_BULLET]Ruba 4% delle riserve nemiche di [ICON_ESPIONAGE] vincendo una battaglia</Italian>
+		<Polish>[ICON_BULLET]Po zwycięstwie grabi 4% wrogich zapasów [ICON_ESPIONAGE]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SNIPER</Tag>

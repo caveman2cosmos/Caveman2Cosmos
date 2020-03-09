@@ -8666,18 +8666,6 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>Przyrost</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_INDUSTRYESPIONAGE_FROM</Tag>
-		<English>[COLOR_SELECTED_TEXT]%s1 has plundered %d2 [ICON_RESEARCH] from you![COLOR_REVERT]</English>
-		<French>[COLOR_SELECTED_TEXT]%s1 vous a volé %d2 [ICON_RESEARCH]![COLOR_REVERT]</French>
-		<Polish>[COLOR_SELECTED_TEXT]%s1 złupił %d2 [ICON_RESEARCH] z Twojego imperium![COLOR_REVERT]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_INDUSTRYESPIONAGE_YOU</Tag>
-		<English>[COLOR_SELECTED_TEXT]You have plundered %d2 [ICON_RESEARCH] from %s1![COLOR_REVERT]</English>
-		<French>[COLOR_SELECTED_TEXT]Vous avez pillé %d2 [ICON_RESEARCH] à %s1![COLOR_REVERT]</French>
-		<Polish>[COLOR_SELECTED_TEXT]Złupiłeś %d2 [ICON_RESEARCH] z Imperium %s1![COLOR_REVERT]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_INFLATION_OUTLOOK_IMPROVING</Tag>
 		<English>improving</English>
 		<French>s'améliore</French>
@@ -9166,6 +9154,11 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Italian>[ICON_UNHEALTHY] da [LINK=BUILDING_JEWISH_MONASTERY]Monastero giudaico[\LINK]</Italian>
 		<Spanish>[ICON_UNHEALTHY] por [LINK=BUILDING_JEWISH_MONASTERY]Monasterio judío[\LINK]</Spanish>
 		<Polish>[ICON_UNHEALTHY] od [LINK=BUILDING_JEWISH_MONASTERY]Klasztor Żydowski[\LINK]</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_JOIN_CITY_MOUSE_OVER</Tag>
+		<English>Join City</English>
+		<French>Rejoindre la Ville</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LABOR_UNION_CIVIC_EXTRA_HAPPINESS</Tag>
@@ -10039,6 +10032,16 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Spanish>Tectonics - un mapa que simula la tectónica de placas. Versión 3.16_mst</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MARAUDER_FROM</Tag>
+		<English>[COLOR_SELECTED_TEXT]%s1 has plundered %d2 [ICON_GOLD] from you![COLOR_REVERT]</English>
+		<French>[COLOR_SELECTED_TEXT]%s1 vous a volé %d2 [ICON_GOLD]![COLOR_REVERT]</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MARAUDER_YOU</Tag>
+		<English>[COLOR_SELECTED_TEXT]You have plundered %d2 [ICON_GOLD] from %s1![COLOR_REVERT]</English>
+		<French>[COLOR_SELECTED_TEXT]Vous avez pillé %d2 [ICON_GOLD] à %s1![COLOR_REVERT]</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MARKET_CIVIC_EXTRA_HAPPINESS</Tag>
 		<English>[ICON_HAPPY] from [LINK=BUILDING_MARKET]Market[\LINK]</English>
 		<French>[ICON_HAPPY] de [LINK=BUILDING_MARKET]Marché[\LINK]</French>
@@ -10254,6 +10257,23 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>Silny - słabszy: Cele osiągnięte, teraz wygraj grę! (etap 3/3)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_IMMIGRATION</Tag>
+		<English>%s1_city welcomes the new immigrants with open arms.</English>
+		<French>%s1_city accueille les nouveaux immigrants à bras ouverts.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_INDUSTRYESPIONAGE</Tag>
+		<English>[COLOR_SELECTED_TEXT]%s1 has plundered %d2 [ICON_RESEARCH] from you![COLOR_REVERT]</English>
+		<French>[COLOR_SELECTED_TEXT]%s1 vous a volé %d2 [ICON_RESEARCH]![COLOR_REVERT]</French>
+		<Polish>[COLOR_SELECTED_TEXT]%s1 złupił %d2 [ICON_RESEARCH] z Twojego imperium![COLOR_REVERT]</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_INDUSTRYESPIONAGE_YOU</Tag>
+		<English>[COLOR_SELECTED_TEXT]You have plundered %d2 [ICON_RESEARCH] from %s1![COLOR_REVERT]</English>
+		<French>[COLOR_SELECTED_TEXT]Vous avez pillé %d2 [ICON_RESEARCH] à %s1![COLOR_REVERT]</French>
+		<Polish>[COLOR_SELECTED_TEXT]Złupiłeś %d2 [ICON_RESEARCH] z Imperium %s1![COLOR_REVERT]</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MESSAGE_INQUISITION</Tag>
 		<English>An inquisition in %s1_city has successfully purged all non-state religions and gold was confiscated from the victims.</English>
 		<French>Une inquisition à %s1_city a permis de purger toutes les religions non officielles et l'or des infidèles à été confisqué.</French>
@@ -10302,6 +10322,16 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>Posadziłeś drzewa na sawannie.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_SNEAK_YOU</Tag>
+		<English>[COLOR_SELECTED_TEXT]You have plundered %d2 [ICON_ESPIONAGE] from %s1![COLOR_REVERT]</English>
+		<French>[COLOR_SELECTED_TEXT]Vous avez pillé %d2 [ICON_ESPIONAGE] à %s1![COLOR_REVERT]</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_SNEAK</Tag>
+		<English>[COLOR_SELECTED_TEXT]%s1 has plundered %d2 [ICON_ESPIONAGE] from you![COLOR_REVERT]</English>
+		<French>[COLOR_SELECTED_TEXT]%s1 vous a volé %d2 [ICON_ESPIONAGE]![COLOR_REVERT]</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MESSAGE_STARSIGN_BUILD</Tag>
 		<English>The stars have favored a unit produced in %s1!</English>
 		<French>Les Astres ont favorisé l'unité produite à %s1!</French>
@@ -10314,6 +10344,34 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<French>Les Astres favorisent l'unité nouvellement créé!</French>
 		<Spanish>¡Parece que los astros han favorecido a una unidad recién entrenada!</Spanish>
 		<Polish>Gwiazdy sprzyjają nowo zwerbowanej jednostce!</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_WONDER_CAPTURED</Tag>
+		<English>%s1 has captured the wonder %s2!</English>
+		<French>%s1 a capturé la merveille: %s2!</French>
+		<German>%s1 hat das Wunder %s2 erobert!</German>
+		<Italian>%s1 ha catturato la meraviglia %s2!</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_WONDER_CAPTURED_YOU</Tag>
+		<English>You have captured the wonder %s2!</English>
+		<French>Vous avez capturé la merveille: %s2!</French>
+		<German>Ihr habt das Wunder %s2 erobert!</German>
+		<Italian>Hai catturato la meraviglia %s2!</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_WONDER_DESTROYED</Tag>
+		<English>%s1 has destroyed the wonder %s2!</English>
+		<French>%s1 a détruit la merveille: %s2!</French>
+		<German>%s1 hat das Wunder %s2 zerstört!</German>
+		<Italian>%s1 ha distrutto la meraviglia %s2!</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_WONDER_DESTROYED_YOU</Tag>
+		<English>You have destroyed the wonder %s2!</English>
+		<French>Vous avez détruit la merveille: %s2!</French>
+		<German>Ihr habt das Wunder %s2 zerstört!</German>
+		<Italian>Hai distrutto la meraviglia %s2!</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MILEHIGH_STRATEGY</Tag>
@@ -21703,29 +21761,9 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>Wielki Naukowiec</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GREAT_SPY</Tag>
-		<English>Great Spy</English>
-		<French>
-			<Text>Espion illustre:Espions illustres</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</French>
-		<German>
-			<Text>Großer Spion:Großen Spions:Großen Spion:Großen Spion:Große Spione:Großen Spione:Großen Spionen:Großen Spione</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
-			<Plural>0:0:0:0:1:1:1:1</Plural>
-		</German>
-		<Italian>
-			<Text>Grande Spia:Grandi Spie</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Gran espía:Grandes espías</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Wielki Szpieg</Polish>
+		<Tag>TXT_KEY_UNKNOWN_NATION</Tag>
+		<English>An Unknown Nation</English>
+		<French>Une Nation inconnue</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_GREAT_SPY</Tag>
@@ -25209,16 +25247,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_UNITED_NATIONS]Le Nazioni Unite[\LINK]</Italian>
 		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_UNITED_NATIONS]Naciones Unidas[\LINK]</Spanish>
 		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_UNITED_NATIONS]ONZ[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_GREAT_DETECTIVE</Tag>
-		<English>Great Detective</English>
-		<French>Détective illustre</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_GREAT_DETECTIVE_STRATEGY</Tag>
-		<English>Use the Great Detective to fight crime and hunt down criminals.</English>
-		<French>Utilisez le détective illustre pour combattre le crime et traquer les criminels.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NUM_STEALTH_STRIKES_ATTACK</Tag>

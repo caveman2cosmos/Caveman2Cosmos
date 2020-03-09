@@ -41,112 +41,6 @@
 		<French>Le [COLOR_BUILDING_TEXT]Serment d'Hippocrate[COLOR_REVERT] procure une [COLOR_BUILDING_TEXT]cabane de guérisseur [COLOR_REVERT] dans chacune de vos villes.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_HOSPITAL_SHIP</Tag>
-		<English>Hospital Ship</English>
-		<French>Navire Hôpital</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_HOSPITAL_SHIP_PEDIA</Tag>
-		<English>A hospital ship is a ship designated for primary function as a floating medical treatment facility or hospital. Most are operated by the military forces (mostly navies) of various countries, as they are intended to be used in or near war zones. Although attacking a hospital ship is a war crime, belligerent navies have the right to board such ships for inspections.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_HOSPITAL_SHIP_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Hospital Ship[COLOR_REVERT] is medical navy unit which heal every unit in the same tile.</English>
-		<German>Hospital Ships are used to heal units.  Graphics by Aungi and Nsftpoeopas.</German>
-		<Italian>Hospital Ships are used to heal units.  Graphics by Aungi and Nsftpoeopas.</Italian>
-		<Spanish>Hospital Ships are used to heal units.  Graphics by Aungi and Nsftpoeopas.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_HOSPITAL_SHIP_2</Tag>
-		<English>Hospital Ship II</English>
-		<French>Navire Hôpital II</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_HOSPITAL_SHIP_2_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Hospital Ship II[COLOR_REVERT] is medical navy unit which heal every unit in the same tile.</English>
-		<German>Hospital Ships are used to heal units.  Graphics by Aungi and Nsftpoeopas.</German>
-		<Italian>Hospital Ships are used to heal units.  Graphics by Aungi and Nsftpoeopas.</Italian>
-		<Spanish>Hospital Ships are used to heal units.  Graphics by Aungi and Nsftpoeopas.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_AMBULANCE</Tag>
-		<English>Ambulance (WWI)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_AMBULANCE_II</Tag>
-		<English>Ambulance (WWII)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_AMBULANCE_STRATEGY</Tag>
-		<English>Ambulances are used to heal units.  Graphics by 	Aungi and Nuvoloblu.</English>
-		<French>Les Ambulances sont utilisés pour soigner les unités.  Graphiques: Aungi et Nuvoloblu.</French>
-	</TEXT>
-	<!-- Immigration Mod -->
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_IMMIGRANT</Tag>
-		<English>Immigrant</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_IMMIGRANT_PEDIA</Tag>
-		<English>City must have a population of at least 10 and will loose 2 population points to train 1 immigrant.  The Immigrant will add 1 population point when joined to a city having a population of less than 7.  The maintenance cost of 2 gold per turn ends when the immigrant joins a city.</English>
-		<French>La Ville doit avoir une population d'au moins 2, et perdra 2 de population pour entrainer un immigrant. L'Immigrant ajoute 1 de population à une ville de population inférieure à 7. Le cout d'entretien de 2 or par tour s'applique jusqu'à ce que l'immigrant a rejoint une ville.</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_IMMIGRANT_STRATEGY</Tag>
-		<English>Build immigrants in cities that are suffering from unrest due to over population.  Use the Immigrant to increase the population and the productive capacity of a new city.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_IMMIGRANT_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Adds 1 population point when joined to a city.[NEWLINE]Decreases the population in the city where it is built by 2</English>
-		<French>[ICON_BULLET]Ajoute 1 de population lorsqu'il rejoint une ville.</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MESSAGE_IMMIGRATION</Tag>
-		<English>%s1_city welcomes the new immigrants with open arms.</English>
-		<French>%s1_city accueille les nouveaux immigrants à bras ouverts.</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_JOIN_CITY_MOUSE_OVER</Tag>
-		<English>Join City</English>
-		<French>Rejoindre la Ville</French>
-	</TEXT>
-	<!-- End Immigration Mod -->
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ISHTAR</Tag>
-		<English>The Ishtar Gate</English>
-		<French>La Porte d'Ishtar</French>
-		<Italian>
-			<Text>Porta di Ishtar</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Brama Isztar</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ISHTAR_PEDIA</Tag>
-		<English>The Ishtar Gate was the eighth gate to the inner city of Babylon. It was constructed in about 575 BC by order of King Nebuchadnezzar II on the north side of the city. Dedicated to the Assyrian goddess Ishtar, the Gate was constructed of blue glazed tiles with alternating rows of bas-relief sirrush (dragons) and aurochs. The roof and doors of the gate were of cedar, according to the dedication plaque. Through the gate ran the Processional Way which was lined with walls covered in lions on glazed bricks (about 120 of them). Statues of the gods were paraded through the gate and down the Processional Way each year during the New Year's celebration. It was originally considered one of the Seven Wonders of the world until, in the 6th century AD, it was replaced with the Lighthouse of Alexandria.[NEWLINE][NEWLINE][TAB]A reconstruction of the Ishtar Gate and Processional Way was built at the Pergamon Museum in Berlin out of material excavated by Robert Koldewey and finished in the 1930s. It includes the inscription plaque. It stands 47 feet high and 100 feet wide (14 meters by 30 meters). The excavation ran from 1902-1914 and during that time 45 ft of the foundation of the gate was uncovered. Parts of the gate and lions from the Processional Way are in various other museums around the world. A reproduction of the gate was built in Iraq as the entrance to a museum that was never completed. Damage to the gate has supposedly occurred since the Iraq war.</English>
-		<French>La porte d'Ishtar est une des huit portes de la cité intérieure de Babylone, elle fut construite au nord de la cité aux alentours de -575 (empire néobabylonien) sur ordre du roi Nabuchodonosor II. Cette porte est dédiée à la déesse éponyme Ishtar. La porte d'Ishtar est l'aboutissement de la voie processionnelle au nord de Babylone. Elle est le symbole même de Babylone. Son nom cultuel est "Ishtar Sakipat Tebisha", ou "Ishtar est victorieuse de ses ennemis". La porte est construite selon le principe de la double porte, c'est-à-dire qu'il y a un mur extérieur et un mur intérieur. La première porte (intérieure) fait 28m de large, 11m de long et est flanquée de deux tours de part et d'autre du passage. La seconde porte (extérieure) est la plus grande. Elle est encastrée dans le rempart intérieur, et est flanquée de deux tours de 9,50m de haut. Entre les deux tours se trouve une cour ouverte. Il y a eu différentes phases de constructions pour la porte d'Ishtar, qui ont à chaque fois modifié son décor: La première phase est caractérisée par un décor émaillé, et la dernière par des bas-reliefs en brique émaillée et colorée. Sur les murs des portes, on trouve des rangées de taureau et de dragons. Le taureau symbolise le dieu Adad (dieu de l'orage). Le dragon est une créature hybride: une queue et un corps de serpent, les pattes arrières en serres d'aigle. La tête du dragon (Mushkhushu) est une représentation du dieu Marduk (et le dragon lui-même est un attribut du dieu Marduk). On note que le lion d'Ishtar n'est pas présent dans les représentations. Sur la porte on peut également noter la présence d'une inscription de Nabuchodonosor II signifiant les détails de la construction, comme sur la voie processionnelle.</French>
-		<German>Das Ischtar-Tor - eines der Stadttore von Babylon - sowie die Prozessionsstrasse wurde von Nebukadnezar II. (605-562 v. Chr.) errichtet. Babylon war die Hauptstadt Babyloniens und lag am Euphrat im heutigen Zentral-Irak. Das Ischtar-Tor befindet sich heute im Vorderasiatischen Museum, das im Pergamonmuseum in Berlin untergebracht ist, und ist dort seit 1930 zugänglich. Das Ischtar-Tor befand sich in Babylon am Ende einer von Mauern umgebenen Prozessionsstrasse, die ursprünglich zwischen 20 und 24 Meter breit war und eine Länge von etwa 250 Metern hatte. Diese Prozessionsstrasse wurde von den Babyloniern alljährlich für das Neujahrsfest im Frühling benutzt. Die Mauern, die mit hauptsächlich blau glasierten Ziegeln verkleidet war, war mit Tierdarstellungen verziert, wie sie sich auch am Ischtar-Tor selbst befanden. Das Tor bewachte den Zugang zu einer 90 m hohen Zikkurat, die von einem Marduk-Schrein gekrönt war. Das Ischtar-Tor und die Prozessionsstrasse wurden im Pergamonmuseum unter Verwendung der glasierten Originalziegel rekonstruiert. Die Wände des Tors sind ausgeschmückt mit Darstellungen von Löwen, Stieren und Drachen, die Symbole für die Hauptgottheiten Babylons sind. Die dargestellten Löwen sind Symbole der Göttin Ischtar, Herrin des Himmels, Liebesgöttin und Beschützerin der Armee. Die schlangenähnliche Drachen stellen Muschku (auch Bel genannt), den Gott der Stadt und der Fruchtbarkeit dar, der ewiges Leben schenkte. Die wilden Stiere symbolisierten den Wettergott Adad. "Für Gott Muschku und Nabu befestigte ich das Innere der Strasse und darüber legte ich eine mächtige Anfüllung aus glänzendem Staub. Möget ihr Götter fröhlich wandeln auf diesem Weg", steht auf den ca. 20000 Ziegeln.</German>
-		<Italian>La Porta di Ishtar era l'ottavo cancello nel centro urbano di Babilonia; venne costruita intorno al 575 a.C. per ordine del re Nebuchadrezzar II sul lato nord della città. Dedicato alla dea Ishtar, il cancello venne costruito con mattonelle lustrate blu con file alternate di bassorilievi di draghi e tori. Il tetto e le porte del cancello erano di cedro, secondo la piastra di dedica. Attraverso il cancello passava la Via Processionale, delimitata da pareti ornate con circa 120 leoni. Le statue degli dei venivano portate in processione attraverso il cancello e lungo la Via Processionale ogni anno durante la celebrazione del nuovo anno. Una ricostruzione del cancello di Ishtar e della Vua Processionale è stata realizzata al Museo di Pergamo a Berlino, grazie a materiale scavato nelle vicinanze da Robert Koldewey e rifinito negli anni '30, tra cui la piastra dell'iscrizione. Era alta circa 47 piedi e larga 32 piedi. Lo scavo durò dal 1902 al 1914 e durante quel tempo vennero rimossi 45 piedi di terreno fino alle fondamenta del cancello. Le parti del cancello e dei leoni della Via Processionale sono divise in vari musei intorno al mondo: soltanto due musei hanno acquistato i draghi mentre i leoni sono andato a parecchi musei. Ad esempio il museo di archeologia di Costantinopoli ha i leoni, i draghi e i tori; l'Istituto delle arti di Detroit possiede un drago; il Louvre, il Museo metropolitano di arte a New York, l'Istituto orientale di Chicago, la Scuola del Rhode Island di disegno e il Museo delle arti di Boston hanno ciascuno dei leoni. Una riproduzione del cancello è stata realizzata in Irak come entrata ad un museo, che però non è mai stato completato.</Italian>
-		<Spanish>La Puerta de Istar (o de Ishtar) era originalmente una de las 8 puertas monumentales  (14 metros de altura por 10 de ancho) de la muralla interior de Babilonia, a través de la cual se accedía al templo de Bel, donde se celebraban las fiestas propias del año nuevo. El nombre de Istar lo recibe de la diosa del mismo nombre a la cual estaba consagrada. Fue construida en el año 575 adC por Nabucodonosor II en el lado norte de la ciudad. Se compone de numerosos ladrillos de adobe, la mayoría pintados de color azul (lo que la hacía contrastar fuertemente con todos los edificios de su alrededor), mientras que otros son dorados o rojizos. éstos últimos se disponen dibujando la silueta de dragones, toros, leones y seres mitológicos. La parte inferior y el arco de la puerta están decoradas por filas de grandes flores semejantes a margaritas. La Puerta de Istar contaba originalmente con dos esfinges dentro del arco de la puerta, que se han perdido hoy en día. Los restos de la puerta original fueron descubiertos en Babilonia durante las campañas arqueológicas alemanas de 1902 a 1914. La mayoría se trasladó a Alemania, donde se reconstruyó la puerta en el Museo Pergamon de Berlín, en 1930, que sigue actualmente en exposición. Algunos de los relieves originales de leones, dragones y toros se encuentran actualmente en el Museo Arqueológico de Estambul, el Instituto de Artes de Detroit, el Museo Metropolitano de Arte de Nueva York, el Instituto Oriental de Chicago, el Museo de la Escuela de Diseño de Rhode Island y el Museo de Bellas Artes de Boston.</Spanish>
-		<Polish>Brama Isztar - brama w Babilonie, wzniesiona za panowania królaNabuchodonozora II i poświęcona była bogini Isztar. Była ona północną bramą miasta, otwierającą tzw. drogę procesyjną, która ciągnęła się aż doE-sagili - świątyni boga Marduka. Obiekt tworzyły w zasadzie dwie bramy połączone przejściem, czyli był to tzw. obiekt bramy, składający się z czterech wież na planie kwadratu, zwieńczonych krenelażem, który zresztą był również na murach łączących wieże. Taka konstrukcja miała swoje konkretne, obronne cele i wynikała m.in. z techniki obrony przejścia umieszczonego w dwóch rzędach murów obronnych, w których odrębne bramy połączono dla skuteczniejszej obrony przed napastnikami. Poza tym pozwalało to lepiej kontrolować przybyszów przechodzących przez bramę.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ISHTAR_STRATEGY</Tag>
-		<English>The [COLOR_BUILDING_TEXT]Ishtar Gate[COLOR_REVERT] allows you to contact and trade with all civilizations on your continent in addition to granting you espionage for buildings belonging to your state religion.</English>
-		<French>La [COLOR_BUILDING_TEXT]Porte d'Ishtar[COLOR_REVERT] vous permet de prendre contact et de faire du commerce avec toutes les civilisations de votre continent, et augmente la production d'espionnage pour tous les bâtiments liés à votre Religion d'Etat.</French>
-		<Italian>La [COLOR_BUILDING_TEXT]Porta di Ishtar[COLOR_REVERT] permette di contattare tutte le civiltà presenti sul tuo stesso continente; inoltre, fornisce spionaggio dagli edifici della tua religione di stato.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ISHTAR_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Establishes Contact With All Civilizations on Same Continent</English>
-		<French>[ICON_BULLET]Etablit le contact avec toutes les Civilisations du Continent</French>
-		<German>[ICON_BULLET]</German>
-		<Italian>[ICON_BULLET]Stabilisce un contatto con tutte le civiltà nello stesso continente</Italian>
-		<Spanish>[ICON_BULLET]Constrúyela para añadir comercio y +1 ruta comercial</Spanish>
-		<Polish>[ICON_BULLET]Zwiększa dochód oraz +1 do Szlaków Handlowych</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREAT_JAGUAR_TEMPLE</Tag>
 		<English>Temple of Ah Cacao</English>
 		<French>Temple de Ah Cacao</French>
@@ -175,58 +69,6 @@
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]20% Chance for Units to Heal after Combat Victory</English>
 		<French>[ICON_BULLET]20% de Chances de se soigner après une victoire</French>
 		<Italian>[ICON_BULLET]20% Chance di guarire per le unità dopo le vittorie in combattimento</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MARAUDER</Tag>
-		<English>Marauder</English>
-		<French>Maraudeur</French>
-		<Italian>Predone</Italian>
-		<Polish>Maruder</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_MARAUDER_HELP</Tag>
-		<English>[ICON_BULLET]Plunders 4% of Enemy [ICON_GOLD] Reserves on Combat Victory</English>
-		<French>[ICON_BULLET]Pille 4% de la réserve d'[ICON_GOLD] en cas de Victoire au Combat</French>
-		<Italian>[ICON_BULLET]Ruba 4% delle riserve nemiche di [ICON_GOLD] quando vince una battaglia</Italian>
-		<Polish>[ICON_BULLET]Po zwycięstwie w walce grabi 4% rezerw wrogiego [ICON_GOLD]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MARAUDER_YOU</Tag>
-		<English>[COLOR_SELECTED_TEXT]You have plundered %d2 [ICON_GOLD] from %s1![COLOR_REVERT]</English>
-		<French>[COLOR_SELECTED_TEXT]Vous avez pillé %d2 [ICON_GOLD] à %s1![COLOR_REVERT]</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MARAUDER_FROM</Tag>
-		<English>[COLOR_SELECTED_TEXT]%s1 has plundered %d2 [ICON_GOLD] from you![COLOR_REVERT]</English>
-		<French>[COLOR_SELECTED_TEXT]%s1 vous a volé %d2 [ICON_GOLD]![COLOR_REVERT]</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CAPTURED_WONDER</Tag>
-		<English>%s1 has captured the wonder %s2!</English>
-		<French>%s1 a capturé la merveille: %s2!</French>
-		<German>%s1 hat das Wunder %s2 erobert!</German>
-		<Italian>%s1 ha catturato la meraviglia %s2!</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_YOU_CAPTURED_WONDER</Tag>
-		<English>You have captured the wonder %s2!</English>
-		<French>Vous avez capturé la merveille: %s2!</French>
-		<German>Ihr habt das Wunder %s2 erobert!</German>
-		<Italian>Hai catturato la meraviglia %s2!</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DESTROYED_WONDER</Tag>
-		<English>%s1 has destroyed the wonder %s2!</English>
-		<French>%s1 a détruit la merveille: %s2!</French>
-		<German>%s1 hat das Wunder %s2 zerstört!</German>
-		<Italian>%s1 ha distrutto la meraviglia %s2!</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_YOU_DESTROYED_WONDER</Tag>
-		<English>You have destroyed the wonder %s2!</English>
-		<French>Vous avez détruit la merveille: %s2!</French>
-		<German>Ihr habt das Wunder %s2 zerstört!</German>
-		<Italian>Hai distrutto la meraviglia %s2!</Italian>
 	</TEXT>
 	<!-- Library of Nineveh-->
 	<TEXT>
@@ -260,37 +102,6 @@
 		<French>Un vagabond est arrivé dans votre capitale, et il parle d'une religion, fondée récemment dans un pays lointain. La découverte de cette nouvelle religion appelée %s1 a convaincu cet homme de fonder une école dans votre ville, pour y enseigner les préceptes à vos cityoens.</French>
 		<German>Ein Reisender hat deinen Palast erreicht, und er erzählt von einer Religion, die in den letzten Jahren in einem fernen Land begründet wurde. Die neue Religion wird %s1 genannt, und der weise Mann ist so sehr von ihr begeistert, dass er beschlossen hat, eine neue Schule in euerer Stadt zu errichten, um eure Bürger diese Religion zu lehren.</German>
 		<Italian>Un uomo è arrivato nella tua capitale e sta parlando di una nuova religione, fondata di recente in una terra lontana. La nuova religione è chiamata %s1 e l'uomo è cos' ammirato da questa religione che ha deciso di fondare una scuola nella tua città per diffonderla tra i tuoi cittadini.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SNEAK</Tag>
-		<English>Sneak</English>
-		<French>Furtif</French>
-		<German>Schleichen</German>
-		<Italian>Furtivo</Italian>
-		<Polish>Skradanie się</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SNEAK_HELP</Tag>
-		<English>[ICON_BULLET]Plunders 4% of Enemy [ICON_ESPIONAGE] Reserves on Combat Victory</English>
-		<French>[ICON_BULLET]Pille 4% de la réserve d'[ICON_ESPIONAGE] après une Victoire au Combat</French>
-		<German>[ICON_BULLET]Plündert 4% der gegnesichen [ICON_ESPIONAGE] anch einem Sieg im Kampf</German>
-		<Italian>[ICON_BULLET]Ruba 4% delle riserve nemiche di [ICON_ESPIONAGE] vincendo una battaglia</Italian>
-		<Polish>[ICON_BULLET]Po zwycięstwie grabi 4% wrogich zapasów [ICON_ESPIONAGE]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SNEAK_YOU</Tag>
-		<English>[COLOR_SELECTED_TEXT]You have plundered %d2 [ICON_ESPIONAGE] from %s1![COLOR_REVERT]</English>
-		<French>[COLOR_SELECTED_TEXT]Vous avez pillé %d2 [ICON_ESPIONAGE] à %s1![COLOR_REVERT]</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SNEAK_FROM</Tag>
-		<English>[COLOR_SELECTED_TEXT]%s1 has plundered %d2 [ICON_ESPIONAGE] from you![COLOR_REVERT]</English>
-		<French>[COLOR_SELECTED_TEXT]%s1 vous a volé %d2 [ICON_ESPIONAGE]![COLOR_REVERT]</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SNEAK_HIDDEN</Tag>
-		<English>An Unknown Nation</English>
-		<French>Une Nation inconnue</French>
 	</TEXT>
 	<!-- Strategic Grain Reserve Wonder -->
 	<TEXT>

@@ -208,7 +208,7 @@
 			<Strategy>TXT_KEY_SPECIALIST_ENGINEER_STRATEGY</Strategy>
 			<Texture>Art/Interface/MainScreen/CityScreen/engineer.dds</Texture>
 			<bVisible>1</bVisible>
-			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
+			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<Yields>
 				<iYield>0</iYield>

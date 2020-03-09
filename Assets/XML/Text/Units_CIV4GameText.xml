@@ -1152,6 +1152,19 @@
 		<Polish>[COLOR_UNIT_TEXT]Aloska[COLOR_REVERT] była "Bohaterem".</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_AMBULANCE</Tag>
+		<English>Ambulance (WWI)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_AMBULANCE_II</Tag>
+		<English>Ambulance (WWII)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_AMBULANCE_STRATEGY</Tag>
+		<English>Ambulances are used to heal units.  Graphics by 	Aungi and Nuvoloblu.</English>
+		<French>Les Ambulances sont utilisés pour soigner les unités.  Graphiques: Aungi et Nuvoloblu.</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_AMBUSHER</Tag>
 		<English>Ambusher</English>
 		<French>Chasseur embusqué</French>
@@ -9209,7 +9222,17 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>[COLOR_UNIT_TEXT]Wielka Bombarda[COLOR_REVERT] znakomita jednostka do atakowania miast.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ENGINEER</Tag>
+		<Tag>TXT_KEY_UNIT_GREAT_DETECTIVE</Tag>
+		<English>Great Detective</English>
+		<French>Détective illustre</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_GREAT_DETECTIVE_STRATEGY</Tag>
+		<English>Use the Great Detective to fight crime and hunt down criminals.</English>
+		<French>Utilisez le détective illustre pour combattre le crime et traquer les criminels.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_GREAT_ENGINEER</Tag>
 		<English>Great Engineer</English>
 		<French>Ingénieur illustre</French>
 		<German>
@@ -9228,6 +9251,14 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Wielki Inżynier</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_GREAT_ENGINEER_STRATEGY</Tag>
+		<English>[COLOR_UNIT_TEXT]Great Engineers[COLOR_REVERT] can instantly complete a city's active production.</English>
+		<French>Les [COLOR_UNIT_TEXT]ingénieurs illustres[COLOR_REVERT] peuvent achever instantanément la production en cours d'une ville.</French>
+		<German>[COLOR_UNIT_TEXT]Große Ingenieure[COLOR_REVERT] stellen die aktuelle Produktion einer Stadt umgehend fertig.</German>
+		<Italian>I [COLOR_UNIT_TEXT]Grandi Ingegneri[COLOR_REVERT] possono completare istantaneamente la produzione attuale di una città.</Italian>
+		<Spanish>Los [COLOR_UNIT_TEXT]Grandes ingenieros[COLOR_REVERT] pueden completar al instante la producción en activo de una ciudad.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GREAT_FARMER_PEDIA</Tag>
@@ -9346,6 +9377,39 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Utilisez votre [COLOR_UNIT_TEXT]Prêtre Illustre[COLOR_REVERT]pour l'attacher comme [BOLD]Prêtre[\BOLD] à votre ville. Vous pouvez également l'utiliser pour créer un [COLOR_BUILDING_TEXT]Autel Sacré[COLOR_REVERT].</French>
 		<Spanish>Usa tu [COLOR_UNIT_TEXT]Gran sacerdote[COLOR_REVERT] para hacer que se una como [BOLD]Gran sacerdote[\BOLD] a tu ciudad. Puedes usarlo también para construir un [COLOR_BUILDING_TEXT]Santuario[COLOR_REVERT].</Spanish>
 		<Polish>[COLOR_UNIT_TEXT]Wielki Prorok[COLOR_REVERT] możesz go dołączyć do miasta jako [BOLD]Kapłana[\BOLD]. Możesz też użyć go by wybudować [COLOR_BUILDING_TEXT]Sakntuarium[COLOR_REVERT].</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_GREAT_SPY</Tag>
+		<English>Great Spy</English>
+		<French>
+			<Text>Espion illustre:Espions illustres</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</French>
+		<German>
+			<Text>Großer Spion:Großen Spions:Großen Spion:Großen Spion:Große Spione:Großen Spione:Großen Spionen:Großen Spione</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
+		<Italian>
+			<Text>Grande Spia:Grandi Spie</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Gran espía:Grandes espías</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Wielki Szpieg</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_GREAT_SPY_STRATEGY</Tag>
+		<English>Use the [COLOR_UNIT_TEXT]Great Spy[COLOR_REVERT] to explore enemy territory, receive a massive Espionage point bonus against one opponent or build a [COLOR_BUILDING_TEXT]Scotland Yard[COLOR_REVERT] building for increased Espionage output.</English>
+		<French>Utilisez l'[COLOR_UNIT_TEXT]Espion illustre[COLOR_REVERT] pour explorer le territoire ennemi, obtenir un important bonus de points d'espionnage contre un adversaire ou construire [COLOR_BUILDING_TEXT]Scotland Yard[COLOR_REVERT] et améliorer votre production d'espionnage.</French>
+		<German>Mit dem [COLOR_UNIT_TEXT]Großen Spion[COLOR_REVERT] können Sie feindliches Territorium erkunden, sich einen bedeutenden Spionagepunktbonus gegen eine feindliche Zivilisation sichern oder das Gebäude [COLOR_BUILDING_TEXT]Scotland Yard[COLOR_REVERT] errichten, um Ihre Spionageerfolge zu verbessern.</German>
+		<Italian>Usa la [COLOR_UNIT_TEXT]Grande Spia[COLOR_REVERT] per esplorare il territorio nemico, ricevere un grande bonus di punti spionaggio nei confronti di un rivale oppure costruire [COLOR_BUILDING_TEXT]Scotland Yard[COLOR_REVERT] per aumentare la produzione di spionaggio.</Italian>
+		<Spanish>El [COLOR_UNIT_TEXT]Gran espía[COLOR_REVERT] se utiliza para explorar territorio enemigo, recibir una gran bonificación a los puntos de espionaje contra un rival o construir un edificio de [COLOR_BUILDING_TEXT]Scotland Yard[COLOR_REVERT] para aumentar el rendimiento del espionaje.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PROPHET</Tag>
@@ -11237,6 +11301,31 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Jest pierwszą jednostką konną przydatną do oskrzydlania wrogich jednostek oblężniczych.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_HOSPITAL_SHIP</Tag>
+		<English>Hospital Ship</English>
+		<French>Navire Hôpital</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HOSPITAL_SHIP_PEDIA</Tag>
+		<English>A hospital ship is a ship designated for primary function as a floating medical treatment facility or hospital. Most are operated by the military forces (mostly navies) of various countries, as they are intended to be used in or near war zones. Although attacking a hospital ship is a war crime, belligerent navies have the right to board such ships for inspections.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HOSPITAL_SHIP_STRATEGY</Tag>
+		<English>[COLOR_UNIT_TEXT]Hospital Ship[COLOR_REVERT] is medical navy unit which heal every unit in the same tile.</English>
+		<German>Hospital Ships are used to heal units.  Graphics by Aungi and Nsftpoeopas.</German>
+		<Italian>Hospital Ships are used to heal units.  Graphics by Aungi and Nsftpoeopas.</Italian>
+		<Spanish>Hospital Ships are used to heal units.  Graphics by Aungi and Nsftpoeopas.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HOSPITAL_SHIP_2</Tag>
+		<English>Hospital Ship II</English>
+		<French>Navire Hôpital II</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HOSPITAL_SHIP_2_STRATEGY</Tag>
+		<English>[COLOR_UNIT_TEXT]Hospital Ship II[COLOR_REVERT] is medical navy unit which heal every unit in the same tile.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_HOVER_ARTILLERY</Tag>
 		<English>Hover Artillery</English>
 		<French>Aéroglisseur Artillerie</French>
@@ -11661,6 +11750,24 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_IMMIGRANT</Tag>
+		<English>Immigrant</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_IMMIGRANT_HELP</Tag>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Adds 1 population point when joined to a city.[NEWLINE]Decreases the population in the city where it is built by 2</English>
+		<French>[ICON_BULLET]Ajoute 1 de population lorsqu'il rejoint une ville.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_IMMIGRANT_PEDIA</Tag>
+		<English>City must have a population of at least 10 and will loose 2 population points to train 1 immigrant.  The Immigrant will add 1 population point when joined to a city having a population of less than 7.  The maintenance cost of 2 gold per turn ends when the immigrant joins a city.</English>
+		<French>La Ville doit avoir une population d'au moins 2, et perdra 2 de population pour entrainer un immigrant. L'Immigrant ajoute 1 de population à une ville de population inférieure à 7. Le cout d'entretien de 2 or par tour s'applique jusqu'à ce que l'immigrant a rejoint une ville.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_IMMIGRANT_STRATEGY</Tag>
+		<English>Build immigrants in cities that are suffering from unrest due to over population.  Use the Immigrant to increase the population and the productive capacity of a new city.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_IMMUNITY_TO_COLD_DAMAGE</Tag>
