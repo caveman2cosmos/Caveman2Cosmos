@@ -1191,6 +1191,34 @@
 		<Polish>Pałac Apostolski</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_APOSTOLIC_PALACE_PEDIA</Tag>
+		<English>The Apostolic Palace, located in Vatican City, Italy, is the home of the Pope and the heart of the Catholic Church. Having only been occupied by the Pope since the breakup of the Papal State in 1871, the current Apostolic Palace is a relatively new addition to the Church's assets. Sitting adjacent to the iconic St. Peter's Square, the Palace acts as the administrative center for all business of the Catholic Church. Further, it is from here that the Pope issues decrees which affect Catholics throughout the world. And with nearly one in six people on Earth prescribing to Catholicism, this means the Apostolic Palace is the headquarters for one of the most influential organizations on the planet.[PARAGRAPH:1]While the palace's importance as a world administrative center cannot be doubted, the Apostolic Palace also houses one of the most famous art collections on Earth. Contained within the walls of the Apostolic Palace is the Vatican Museum, which displays the works of master artisans Caravaggio, Raphael and Da Vinci. Michelangelo's famous Sistine Chapel is also a part of the Apostolic Palace.</English>
+		<French>Le palais apostolique, situé dans la cité du Vatican, en Italie, est la demeure du pape et le coeur de l'Eglise catholique. N'ayant été occupé par le pape que depuis la rupture de l'Etat papal en 1871, le palais apostolique actuel ne fait partie des biens de l'Eglise que depuis peu de temps. Jouxtant la place St Pierre, le palais sert de centre administratif pour toutes les affaires de l'Eglise catholique. En outre, c'est d'ici que le pape émet les décrets qui affectent les catholiques à travers le monde. Et avec environ un sixième de la population humaine adhérant au catholicisme, cela signifie que le palais apostolique est le siège de l'une des organisations les plus influentes de la planète.[PARAGRAPH:1]Alors que l'importance du palais en tant que centre administratif mondial ne saurait être mise en doute, le palais apostolique abrite aussi l'une des plus célèbres collections d'oeuvres d'art sur Terre. En effet, à l'intérieur des murs de ce palais se trouve le musée du Vatican, qui renferme les oeuvres de maîtres artisans tels que Le Caravage, Raphaël et de Vinci. La fameuse chapelle Sixtine de Michel-Ange fait également partie du palais apostolique.</French>
+		<German>Der Apostolische Palast in der Vatikanstadt in Italien ist die Residenz des Papstes und das Zentrum der katholischen Kirche. Der Papst nutzt dieses Gebäude erst seit der Zerschlagung des Kirchenstaates im Jahre 1871, der Apostolische Palast ist also eine relativ neue Anschaffung der Kirche. Angrenzend an den ikonischen Petersplatz, fungiert der Palast als Verwaltungszentrum der Katholischen Kirche. Außerdem veröffentlicht der Papst von hier aus Dekrete, die Katholiken der ganzen Welt betreffen. Da sich fast jeder sechste Mensch auf der Welt zur Katholischen Religion bekennt, ist der Apostolische Palast das Hauptquartier einer der einflussreichsten Organisationen des Planeten.[PARAGRAPH:1]Neben der Wichtigkeit des Palastes als Weltverwaltungszentrum beherbergt er außerdem eine der wichtigsten Kunstsammlungen der Welt. Innerhalb der Mauern des Apostolischen Palastes befindet sich das Vatikanmuseum, das Werke der großen Meister Caravaggio, Raffael und Da Vinci ausstellt. Auch Michelangelos berühmte Sixtinische Kapelle befindet sich im Apostolischen Palast.</German>
+		<Italian>Il Palazzo Apostolico si trova nella Città del Vaticano ed è la sede del papa e il cuore della Chiesa Cattolica. Essendo stato occupato dal papa solo dalla caduta dello Stato Pontificio, nel 1871, l'attuale Palazzo Apostolico è un'aggiunta relativamente recente ai beni della Chiesa. Si trova a fianco di Piazza San Pietro e funziona da centro amministrativo per tutti gli affari della Chiesa Cattolica. Inoltre è da qui che il papa enuncia i decreti che riguardano i cattolici di tutto il mondo. E, considerando che quasi una persona su sei al mondo si dichiara cattolica, significa che il Palazzo Apostolico è il quartier generale di una delle più influenti organizzazioni del pianeta.[PARAGRAPH:1]Pur non dubitando dell'importanza quale centro amministrativo mondiale, c'è da considerare che il Palazzo Apostolico ospita una delle più famose collezioni d'arte della Terra. All'interno delle mura del Palazzo Apostolico si trova infatti il Museo Vaticano, in cui si trovano capolavori di maestri come Caravaggio, Raffaello, e Leonardo da Vinci. Anche la famosa Cappella Sistina di Michelangelo fa parte del Palazzo Apostolico.</Italian>
+		<Spanish>El Palacio Apostólico, situado en la ciudad del Vaticano, Italia, es la casa del Papa y el corazón de la Iglesia católica. Ocupado por los papas solo desde la desaparición de los Estados Pontificios en 1871, el palacio de nuestros días es un añadido relativamente moderno a las posesiones de la Iglesia. Situado frente a la Plaza de San Pedro, el palacio actúa como centro administrativo para todos los asuntos de la Iglesia. Además, es desde allí desde donde el Papa emite los decretos para los católicos de todo el mundo. Y, si tenemos en cuenta que prácticamente la sexta parte de la población de la Tierra profesa el catolicismo, eso significa que el Palacio Apostólico es el cuartel general de una de las organizaciones más influyentes del planeta.[PARAGRAPH:1]Aunque la importancia del Palacio Apostólico como centro administrativo no puede ponerse en duda, cuenta además con una de las colecciones de arte más famosas del mundo. Tras los muros del palacio se encuentran los Museos Vaticanos, que contienen obras de maestros como Caravaggio, Rafael y Da Vinci. La famosa Capilla Sixtina de Miguel Ángel también forma parte de él.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_APOTHECARY_SHOP</Tag>
+		<English>Apothecary Shop</English>
+		<French>
+			<Text>Boutique de l'Apothicaire</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Polish>Apteka</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_APOTHECARY_SHOP_PEDIA</Tag>
+		<English>In colonial times, the apothecary was more than simply a druggist. An apothecary often provided medical treatment, prescribed medicine, trained apprentices, performed surgery and served as man-midwives. Records kept by 18th-century Williamsburg's apothecaries show they practiced as doctor and even made house calls to treat patients.  Williamsburg apothecaries also sold cooking spices, candles, salad oil, anchovies, toothbrushes, and tobacco, making them true precursors of today's drugstores.</English>
+		<Polish>Apteka - placówka handlowa zajmująca się sprzedażą leków i innych produktów medycznych (np. opatrunków, środków higienicznych). Apteki recepturowe zajmują się także przygotowywaniem leków recepturowychzgodnie z przepisaną przez lekarza receptą. W praktyce pacjencikorzystają w aptekach także z konsultacji medycznych w sprawie stosowania poszczególnych leków w przypadku konkretnych dolegliwości, a nawet, w nagłych przypadkach, z najbardziej podstawowej pomocy medycznej, polegającej na udzieleniu pierwszej pomocy i wezwaniu innego wykwalifikowanego personelu (lekarza, felczera, zespołupogotowia ratunkowego itp.).</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_APOTHECARY_SHOP_STRATEGY</Tag>
+		<English>[SPACE]The Apothecary shop provides health to your city and heals units a small amount.</English>
+		<French>La Boutique de l'Apothicaire procure de la santé à votre ville, et améliore la guérison des unités.</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_APPLIANCE_STORE</Tag>
 		<English>Appliance Store</English>
 		<French>
@@ -9894,6 +9922,14 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Polish>Fabryka</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FACTORY_PEDIA</Tag>
+		<English>Early examples of factory-like production, where a number of individuals work cooperatively to produce goods for sale or trade, can be found as far back as ancient Greece and Rome. Modern factories, however, evolved from the concept of specialized labor, where each worker performed a single step in the overall production of an item. This specialization allows factories to increase the speed and efficiency of the manufacturing process, far surpassing earlier means of production. The development of the factory system as a means of production played a key role in the Industrial Revolution.</English>
+		<French>Les premiers exemples s'assimilant à de la production industrielle, au cours de laquelle plusieurs ouvriers coopéraient afin de produire des biens à vendre ou à échanger, remontent à la Grèce et à la Rome antiques. Les usines modernes se sont toutefois développées à partir du concept de travail spécialisé, où chaque ouvrier accomplit une seule tâche dans la production d'ensemble d'un objet. Cette spécialisation permet aux entreprises d'augmenter la rapidité et l'efficacité du processus de fabrication, dépassant largement les premiers moyens de production. Le développement de la production industrielle comme moyen de production joua un grand rôle lors de la révolution industrielle.</French>
+		<German>Frühe Beispiele für fabrikähnliche Fertigungsverfahren, wobei mehrere Arbeiter gemeinschaftlich an der Herstellung von Verkaufs- oder Handelsgütern beteiligt waren, fanden sich schon im antiken Griechenland und im Römischen Reich. In modernen Fabriken kommt statt dieser Art des Teamworks jedoch eher das Prinzip der Spezialisierung zum Tragen: Jeder Mitarbeiter leistet einen eigenen kleinen Beitrag zum Herstellungsprozess eines Produkts, was sich nicht nur positiv auf die Produktionsgeschwindigkeit, sondern auch auf die Qualität der gefertigten Waren auswirkt. Die Einführung der fabrikgesteuerten Herstellung spielte eine Schlüsselrolle bei der Industriellen Revolution.</German>
+		<Italian>I primi esempi di produzione da fabbrica, rappresentati da gruppi di individui che lavoravano insieme per produrre dei beni, risalgono all'antica Roma e in Grecia. I moderni complessi industriali, però, si basano sulla specializzazione del lavoro, in cui ogni operaio è responsabile di una fase della produzione del bene; ciò consente di aumentarne l'efficienza surclassando i vecchi sistemi di produzione. Lo sviluppo di un sistema di fabbriche quale mezzo di produzione ha occupato un ruolo fondamentale nella Rivoluzione Industriale.</Italian>
+		<Spanish>Los primeros ejemplos de producción cuasi-fabril, en los que cierto número de individuos trabajan de manera coordinada para producir mercancías para la venta o el intercambio, se pueden encontrar en la Grecia o la Roma antiguas. Sin embargo, las fábricas modernas evolucionaron a partir del concepto de la especialización del trabajo, en el que cada trabajador solo llevaba a cabo un paso en la producción global de un objeto. Esta especialización permite a las fábricas aumentar la velocidad y eficacia del proceso de fabricación, superando con diferencia a los medios de producción anteriores. El desarrollo del sistema de la fábrica como medio de producción desempeñó un papel clave en la revolución industrial.</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FALCONRY_INSTRUCTION_STRATEGY</Tag>
 		<English>Build a [COLOR_BUILDING_TEXT]Falconry Instruction[COLOR_REVERT] to increase your [COLOR_UNIT_TEXT]Hawks'[COLOR_REVERT] abilities.</English>
 		<Spanish>Construye una [COLOR_BUILDING_TEXT]Instrucción de halconer÷a[COLOR_REVERT] para incrementar las capacidades de tus [COLOR_UNIT_TEXT]Halcones[COLOR_REVERT].</Spanish>
@@ -12295,11 +12331,34 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Polish>Chatka Uzdrowiciela</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HEALERHUT_PEDIA</Tag>
+		<English>The Healers Hut contains a collection of various herbs and spices that are used to help cure ailments and restore health.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HEALERHUT_STRATEGY</Tag>
 		<English>The [COLOR_BUILDING_TEXT]Healer's Hut[COLOR_REVERT] is a prehistoric era building that lowers a city's [COLOR_GREEN]Disease[COLOR_REVERT] generation while also providing additional [COLOR_GREEN]Healthiness[COLOR_REVERT]. Once built a city can then train [COLOR_UNIT_TEXT]Healer[COLOR_REVERT] units that can help combat [COLOR_GREEN]Disease[COLOR_REVERT] generation. It also passively heals [COLOR_UNIT_TEXT]People[COLOR_REVERT] and [COLOR_UNIT_TEXT]Animal[COLOR_REVERT] units that are inside the city by [COLOR_GREEN]+4%[COLOR_REVERT] and [COLOR_GREEN]+2%[COLOR_REVERT] every turn, respectively.</English>
 		<French>Les Guérisseurs améliore la santé de la population, et soigne également les unités.</French>
 		<Spanish>La Cabaña del curandero proporciona salud a tu ciudad, y ayuda ligeramente a curar a las unidades.</Spanish>
 		<Polish>Chata w której zamieszkał wioskowy uzdrowiciel.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HEALTH_SPA</Tag>
+		<English>Health Spa</English>
+		<French>
+			<Text>Station Thermale</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Polish>Spa</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HEALTH_SPA_PEDIA</Tag>
+		<English>Often found at natural springs Health Spas are places for taking the waters and hopefully getting healthy.  they have existed since antuquity.</English>
+		<Polish>Uzdrowisko - miejscowość dysponująca naturalnymi czynnikami leczniczymi, do których zalicza się wody mineralne oraz właściwości klimatyczne. Warunkiem powstania miejscowości uzdrowiskowej jest występowanie walorów przyrodniczych. Wody mineralne służą do kąpieli leczniczych i do kuracji pitnej, a właściwości klimatyczne stosowane są wklimatoterapii.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HEALTH_SPA_STRATEGY</Tag>
+		<English>An Health Spa provides a health boost to the city it is built in plus provides some protection against disease.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HEAVY_GATES</Tag>
@@ -20864,6 +20923,16 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Polish>Zbuduj Perfume Factory by zwiększyć ilość złota w Twoim mieście.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PERSIAN_APOTHECARY</Tag>
+		<English>Persian Cusine Supply Store</English>
+		<French>
+			<Text>Magasin de Cuisine Perse</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Polish>Perska Restauracja</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PERSONAL_ELECTRONICS_FACTORY</Tag>
 		<English>Factory (Personal Electronics)</English>
 		<French>
@@ -27687,6 +27756,32 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Polish>Zwiększa kulturę, zadowolenie, zdrowie i znużenie wojną. Wymaga doktryny Sekularyzm.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_UNIVERSAL_HEALTH_CARE</Tag>
+		<English>Universal Health Care</English>
+		<French>
+			<Text>Couverture Santé Universelle</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Polish>Powszechna Opieka Zdrowotna</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_UNIVERSAL_HEALTH_CARE_PEDIA</Tag>
+		<English>Universal health care is a socialist government system that seeks to provide health care access and coverage to all members of society.  It is implemented through legislation, regulation and increased taxation (Redistribution of Wealth).</English>
+		<Polish>Opieka zdrowotna - ogół środków mających na celu zapobieganie i leczenie chorób. Realizowana jest za pomocą systemu opieki zdrowotnej.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_UNIVERSAL_HEALTH_CARE_STRATEGY</Tag>
+		<English>The [COLOR_BUILDING_TEXT]Universal Health Care[COLOR_REVERT] National Wonder increases the population in every city by 1.</English>
+		<French>La [COLOR_BUILDING_TEXT]Couverture Santé Universelle[COLOR_REVERT] est une Merveille Nationale qui augment d'1 la population de chaque Ville.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_UNIVERSAL_HEALTH_CARE_HELP</Tag>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]All cities receive a one time +1 Population increase.</English>
+		<French>[ICON_BULLET]Chaque ville reçoit un bonus de +1 en Population.</French>
+		<Polish>[ICON_BULLET]Populacja we wszystkich miastach jednorazowo zwiększa się o 1.</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSAL_TRANSLATOR</Tag>
 		<English>Universal Translator</English>
 		<French>Le Traducteur Universel</French>
@@ -30301,14 +30396,6 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Spanish>Stonehenge es quizás el monumento prehistórico más asombroso que aún se mantiene en pie. Aunque ya no quedan más que las ruinas, esta imponente reliquia todavía tiene el poder de maravillarnos, asombrarnos y sobrecogernos. [PARAGRAPH:2]Stonehenge se construyó en la Inglaterra meridional. Se compone de círculos concéntricos de piedra rodeados por un foso (llamado "henge"), y se construyó en varias fases durante miles de años. El foso se excavó hace unos cinco mil años; el círculo interior de piedra arenisca azulada se añadió unos mil años después, aproximadamente en el 2000 a. C., y el anillo exterior de enormes piedras rectangulares se terminó quinientos años después. [PARAGRAPH:2]Nadie sabe a ciencia cierta quién erigió Stonehenge. Durante años existió la creencia, tan romántica como errónea, de que fueron los druidas quienes construyeron tal maravilla, pero en realidad éstos no aparecieron hasta dos mil años después. Todo lo que sabemos es que la construcción la empezó un pueblo del periodo Neolítico y la terminaron aquéllos que los sustituyeron. [PARAGRAPH:2]Stonehenge es un prodigio de ingeniería construido con las herramientas más primitivas. Al parecer, el foso exterior se excavó con herramientas de madera y hueso. Las ochenta rocas de arenisca azul del interior, que pesan unas cuatro toneladas cada una, fueron transportadas desde una cantera situada a más de trescientos cincuenta kilómetros. Los científicos creen que las piedras fueron arrastradas sobre troncos y trineos de madera durante parte del camino, y el resto del viaje se transportaron en barcazas por el río. La más pesada de las piedras del círculo exterior pesa unas cincuenta toneladas; arrastrarla desde la cantera, a más de treinta kilómetros de distancia, costaría aproximadamente el esfuerzo de seiscientos hombres. Estas monstruosas piedras tuvieron que ponerse de pie y en la posición exacta por hombres que contaban solo con cuerdas y palancas de madera. [PARAGRAPH:2]Se debate mucho sobre el propósito de Stonehenge. Algunos piensan que se construyó como templo en honor a los dioses de la tierra, mientras que otros creen que era un cementerio para antiguos nobles y reyes. Otra teoría sostiene que se trata de un antiguo observatorio astronómico, que traza el mapa de los movimientos de las estrellas, de las cuales los hombres creían que controlaban su destino.[PARAGRAPH:2]Sea cual fuera su propósito original, hoy en día permanece como un monumento duradero y hermoso a la sorprendente habilidad y dedicación de sus "primitivos" constructores.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_APOSTOLIC_PALACE_PEDIA</Tag>
-		<English>The Apostolic Palace, located in Vatican City, Italy, is the home of the Pope and the heart of the Catholic Church. Having only been occupied by the Pope since the breakup of the Papal State in 1871, the current Apostolic Palace is a relatively new addition to the Church's assets. Sitting adjacent to the iconic St. Peter's Square, the Palace acts as the administrative center for all business of the Catholic Church. Further, it is from here that the Pope issues decrees which affect Catholics throughout the world. And with nearly one in six people on Earth prescribing to Catholicism, this means the Apostolic Palace is the headquarters for one of the most influential organizations on the planet.[PARAGRAPH:1]While the palace's importance as a world administrative center cannot be doubted, the Apostolic Palace also houses one of the most famous art collections on Earth. Contained within the walls of the Apostolic Palace is the Vatican Museum, which displays the works of master artisans Caravaggio, Raphael and Da Vinci. Michelangelo's famous Sistine Chapel is also a part of the Apostolic Palace.</English>
-		<French>Le palais apostolique, situé dans la cité du Vatican, en Italie, est la demeure du pape et le coeur de l'Eglise catholique. N'ayant été occupé par le pape que depuis la rupture de l'Etat papal en 1871, le palais apostolique actuel ne fait partie des biens de l'Eglise que depuis peu de temps. Jouxtant la place St Pierre, le palais sert de centre administratif pour toutes les affaires de l'Eglise catholique. En outre, c'est d'ici que le pape émet les décrets qui affectent les catholiques à travers le monde. Et avec environ un sixième de la population humaine adhérant au catholicisme, cela signifie que le palais apostolique est le siège de l'une des organisations les plus influentes de la planète.[PARAGRAPH:1]Alors que l'importance du palais en tant que centre administratif mondial ne saurait être mise en doute, le palais apostolique abrite aussi l'une des plus célèbres collections d'oeuvres d'art sur Terre. En effet, à l'intérieur des murs de ce palais se trouve le musée du Vatican, qui renferme les oeuvres de maîtres artisans tels que Le Caravage, Raphaël et de Vinci. La fameuse chapelle Sixtine de Michel-Ange fait également partie du palais apostolique.</French>
-		<German>Der Apostolische Palast in der Vatikanstadt in Italien ist die Residenz des Papstes und das Zentrum der katholischen Kirche. Der Papst nutzt dieses Gebäude erst seit der Zerschlagung des Kirchenstaates im Jahre 1871, der Apostolische Palast ist also eine relativ neue Anschaffung der Kirche. Angrenzend an den ikonischen Petersplatz, fungiert der Palast als Verwaltungszentrum der Katholischen Kirche. Außerdem veröffentlicht der Papst von hier aus Dekrete, die Katholiken der ganzen Welt betreffen. Da sich fast jeder sechste Mensch auf der Welt zur Katholischen Religion bekennt, ist der Apostolische Palast das Hauptquartier einer der einflussreichsten Organisationen des Planeten.[PARAGRAPH:1]Neben der Wichtigkeit des Palastes als Weltverwaltungszentrum beherbergt er außerdem eine der wichtigsten Kunstsammlungen der Welt. Innerhalb der Mauern des Apostolischen Palastes befindet sich das Vatikanmuseum, das Werke der großen Meister Caravaggio, Raffael und Da Vinci ausstellt. Auch Michelangelos berühmte Sixtinische Kapelle befindet sich im Apostolischen Palast.</German>
-		<Italian>Il Palazzo Apostolico si trova nella Città del Vaticano ed è la sede del papa e il cuore della Chiesa Cattolica. Essendo stato occupato dal papa solo dalla caduta dello Stato Pontificio, nel 1871, l'attuale Palazzo Apostolico è un'aggiunta relativamente recente ai beni della Chiesa. Si trova a fianco di Piazza San Pietro e funziona da centro amministrativo per tutti gli affari della Chiesa Cattolica. Inoltre è da qui che il papa enuncia i decreti che riguardano i cattolici di tutto il mondo. E, considerando che quasi una persona su sei al mondo si dichiara cattolica, significa che il Palazzo Apostolico è il quartier generale di una delle più influenti organizzazioni del pianeta.[PARAGRAPH:1]Pur non dubitando dell'importanza quale centro amministrativo mondiale, c'è da considerare che il Palazzo Apostolico ospita una delle più famose collezioni d'arte della Terra. All'interno delle mura del Palazzo Apostolico si trova infatti il Museo Vaticano, in cui si trovano capolavori di maestri come Caravaggio, Raffaello, e Leonardo da Vinci. Anche la famosa Cappella Sistina di Michelangelo fa parte del Palazzo Apostolico.</Italian>
-		<Spanish>El Palacio Apostólico, situado en la ciudad del Vaticano, Italia, es la casa del Papa y el corazón de la Iglesia católica. Ocupado por los papas solo desde la desaparición de los Estados Pontificios en 1871, el palacio de nuestros días es un añadido relativamente moderno a las posesiones de la Iglesia. Situado frente a la Plaza de San Pedro, el palacio actúa como centro administrativo para todos los asuntos de la Iglesia. Además, es desde allí desde donde el Papa emite los decretos para los católicos de todo el mundo. Y, si tenemos en cuenta que prácticamente la sexta parte de la población de la Tierra profesa el catolicismo, eso significa que el Palacio Apostólico es el cuartel general de una de las organizaciones más influyentes del planeta.[PARAGRAPH:1]Aunque la importancia del Palacio Apostólico como centro administrativo no puede ponerse en duda, cuenta además con una de las colecciones de arte más famosas del mundo. Tras los muros del palacio se encuentran los Museos Vaticanos, que contienen obras de maestros como Caravaggio, Rafael y Da Vinci. La famosa Capilla Sixtina de Miguel Ángel también forma parte de él.</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COLOSSUS_PEDIA</Tag>
 		<English>The Colossus of Rhodes was a bronze statue of Helios, the Greek God of the Sun, erected near the mouth of the city harbor. It stood over 100 feet (30.48 m) high, about two-thirds the height of the Statue of Liberty. Unfortunately, an earthquake toppled it only 56 years after its construction. Taking the counsel of an oracle, the city elected to leave the statue where it lay. For over 900 years, people from all over the ancient world came to Rhodes to see the Colossus. It remained where it was until 654 AD when the Muslims who plundered the city sold the statue for scrap.</English>
 		<French>Le colosse de Rhodes était une statue de bronze d'Hélios, le roi grec du soleil, érigée à proximité de l'embouche du port de la ville. Elle s'élevait à 32 m, soit les deux tiers de la Statue de la Liberté, avant d'être malheureusement renversée par un tremblement de terre 56 ans après sa construction. Sur le conseil d'un oracle, la ville avait décidé de la laisser là où elle se trouvait. Pendant plus de 900 ans, des personnes originaires de tout le monde antique venaient à Rhodes pour voir le colosse. Il est resté intact jusqu'en 654 ap. J.-C., lorsque les musulmans pillèrent la ville et se débarrassèrent de la statue.</French>
@@ -30935,10 +31022,6 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 			<Plural>0</Plural>
 		</French>
 		<Polish>Swiatynia Famen</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_FA_MEN_SI_INSPIRED</Tag>
-		<English>Famen Inspired</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FA_MEN_SI_PEDIA</Tag>

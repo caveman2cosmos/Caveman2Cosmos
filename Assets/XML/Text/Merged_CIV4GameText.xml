@@ -2,197 +2,6 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HEALTH_SPA</Tag>
-		<English>Health Spa</English>
-		<French>
-			<Text>Station Thermale</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Polish>Spa</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HEALTH_SPA_PEDIA</Tag>
-		<English>Often found at natural springs Health Spas are places for taking the waters and hopefully getting healthy.  they have existed since antuquity.</English>
-		<Polish>Uzdrowisko - miejscowość dysponująca naturalnymi czynnikami leczniczymi, do których zalicza się wody mineralne oraz właściwości klimatyczne. Warunkiem powstania miejscowości uzdrowiskowej jest występowanie walorów przyrodniczych. Wody mineralne służą do kąpieli leczniczych i do kuracji pitnej, a właściwości klimatyczne stosowane są wklimatoterapii.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HEALTH_SPA_STRATEGY</Tag>
-		<English>An Health Spa provides a health boost to the city it is built in plus provides some protection against disease.</English>
-	</TEXT>
-	<!-- Universal -->
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_UNIVERSAL_HEALTH_CARE</Tag>
-		<English>Universal Health Care</English>
-		<French>
-			<Text>Couverture Santé Universelle</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Polish>Powszechna Opieka Zdrowotna</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_UNIVERSAL_HEALTH_CARE_PEDIA</Tag>
-		<English>Universal health care is a socialist government system that seeks to provide health care access and coverage to all members of society.  It is implemented through legislation, regulation and increased taxation (Redistribution of Wealth).</English>
-		<Polish>Opieka zdrowotna - ogół środków mających na celu zapobieganie i leczenie chorób. Realizowana jest za pomocą systemu opieki zdrowotnej.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_UNIVERSAL_HEALTH_CARE_STRATEGY</Tag>
-		<English>The [COLOR_BUILDING_TEXT]Universal Health Care[COLOR_REVERT] National Wonder increases the population in every city by 1.</English>
-		<French>La [COLOR_BUILDING_TEXT]Couverture Santé Universelle[COLOR_REVERT] est une Merveille Nationale qui augment d'1 la population de chaque Ville.</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_UNIVERSAL_HEALTH_CARE_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]All cities receive a one time +1 Population increase.</English>
-		<French>[ICON_BULLET]Chaque ville reçoit un bonus de +1 en Population.</French>
-		<Polish>[ICON_BULLET]Populacja we wszystkich miastach jednorazowo zwiększa się o 1.</Polish>
-	</TEXT>
-	<!-- End Universal -->
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PERSIAN_APOTHECARY</Tag>
-		<English>Persian Cusine Supply Store</English>
-		<French>
-			<Text>Magasin de Cuisine Perse</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Polish>Perska Restauracja</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_WISE_WOMAN</Tag>
-		<English>Wise Woman</English>
-		<French>
-			<Text>Vieille Femme</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_WISE_WOMAN_PEDIA</Tag>
-		<English>As gatherers explored their surroundings and what the results of consuming various native substances they began to learn what would make a person sick, what would provide sustenance, and what would assist in alleviating various symptoms of disease, injury and discomfort.  The wise women who had spent their younger years gathering, keeping and sharing verbal records of what was beneficial for various purposes would often be turned to by the tribe as a source of healing and guidance.  This role grew in significance as the human mind evolved into more and more advanced forms deepening the capacity for knowledge retention and application.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_WISE_WOMAN_STRATEGY</Tag>
-		<English>Use the [COLOR_UNIT_TEXT]Wise Woman[COLOR_REVERT] to heal units, develop early healing experience awards, and aid in keeping disease under control in your earliest cities. They are extremely useful, but expensive to produce and maintain.  Additionally, Wise Women require Wild Herbs in the city in which they are built. The Wise Woman can be upgraded to an [COLOR_UNIT_TEXT]Healer[COLOR_REVERT], after discovering Naturopathy.</English>
-		<French>Utilisez les [COLOR_UNIT_TEXT]Vieilles femmes[COLOR_REVERT] pour soigner vos unités, développer de l'expérience en soin, et garder sous contrôle la prolifération de maladies dans vos villes primitives. Elles sont extrêmement utiles, mais cher à produire et entretenir. De plus, il est nécessaire d'avoir une parcelle d'herbes sauvages pour pouvoir recruter une vieille femme. Après la découverte de la Naturopathie, elles peuvent être améliorées en [COLOR_UNIT_TEXT]Guérisseurs[COLOR_REVERT].</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_HEALER</Tag>
-		<English>Healer</English>
-		<French>
-			<Text>Guérisseur</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_HEALER_PEDIA</Tag>
-		<English>The Healer provides his patients with medicinal herbs, which were very effective in healing the allergies, and raising and renewing the body vitality.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_HEALER_STRATEGY</Tag>
-		<English>Use the [COLOR_UNIT_TEXT]Healer[COLOR_REVERT] to heal troops. They are fast moving, but expensive to produce and maintain.  Additionally, Healers require the Healer's Hut in the city in which they are built. The Healer can be upgraded to an [COLOR_UNIT_TEXT]Apothecary[COLOR_REVERT], after discovering Education.</English>
-		<French>Le [COLOR_UNIT_TEXT]Guérisseur[COLOR_REVERT] permet de guérir les troupes. Ils se déplacent rapidement, mais sont coûteux à produire et à entretenir. En outre, les guérisseurs ont besoin d'une cabane de Guérisseur dans la ville dans laquelle ils sont construits. Le guérisseur peut être amélioré en [COLOR_UNIT_TEXT] Apothicaire [COLOR_REVERT], après avoir découvert l'éducation.</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_APOTHECARY</Tag>
-		<English>Apothecary</English>
-		<French>
-			<Text>Apothicaire</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_APOTHECARY_PEDIA</Tag>
-		<English>The Apothecary provides his patients with medicinal herbs, which were very effective in healing the allergies, and raising and renewing the body vitality.</English>
-		<French>L'Apothicaire fournit à ses patients des plantes médicinales, très efficaces pour la guérison des allergies, et permettant d'am renouveler la vitalité du corps.</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_APOTHECARY_STRATEGY</Tag>
-		<English>Use the [COLOR_UNIT_TEXT]Apothecary[COLOR_REVERT] to heal troops. They are fast moving, but expensive to produce and maintain. The Apothecary starts out with the [COLOR_UNIT_TEXT]Medic1[COLOR_REVERT] promotion.  Additionally, Apothecary require the Apothecary's Shop in the city in which they are built. The Apothecary can be upgraded to an [COLOR_UNIT_TEXT]Medic[COLOR_REVERT], after discovering Medicine.</English>
-		<French>L'[COLOR_UNIT_TEXT]Apothicaire[COLOR_REVERT] permet de guérir les troupes. Il se déplace rapidement, mais est plutôt coûteux à produire et à entretenir. Il commence avec la promotion Médecine I. En outre, les Apothicaires ont besoin d'une Herboristerie dans la ville dans laquelle ils sont construits. L'Apothicaire peut être amélioré en [COLOR_UNIT_TEXT]Médecin[COLOR_REVERT], après avoir découvert la Médecine.</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HEALERHUT_PEDIA</Tag>
-		<English>The Healers Hut contains a collection of various herbs and spices that are used to help cure ailments and restore health.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_APOTHECARY_SHOP</Tag>
-		<English>Apothecary Shop</English>
-		<French>
-			<Text>Boutique de l'Apothicaire</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Polish>Apteka</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_APOTHECARY_SHOP_PEDIA</Tag>
-		<English>In colonial times, the apothecary was more than simply a druggist. An apothecary often provided medical treatment, prescribed medicine, trained apprentices, performed surgery and served as man-midwives. Records kept by 18th-century Williamsburg's apothecaries show they practiced as doctor and even made house calls to treat patients.  Williamsburg apothecaries also sold cooking spices, candles, salad oil, anchovies, toothbrushes, and tobacco, making them true precursors of today's drugstores.</English>
-		<Polish>Apteka - placówka handlowa zajmująca się sprzedażą leków i innych produktów medycznych (np. opatrunków, środków higienicznych). Apteki recepturowe zajmują się także przygotowywaniem leków recepturowychzgodnie z przepisaną przez lekarza receptą. W praktyce pacjencikorzystają w aptekach także z konsultacji medycznych w sprawie stosowania poszczególnych leków w przypadku konkretnych dolegliwości, a nawet, w nagłych przypadkach, z najbardziej podstawowej pomocy medycznej, polegającej na udzieleniu pierwszej pomocy i wezwaniu innego wykwalifikowanego personelu (lekarza, felczera, zespołupogotowia ratunkowego itp.).</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_APOTHECARY_SHOP_STRATEGY</Tag>
-		<English>[SPACE]The Apothecary shop provides health to your city and heals units a small amount.</English>
-		<French>La Boutique de l'Apothicaire procure de la santé à votre ville, et améliore la guérison des unités.</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HERBAL_CURES</Tag>
-		<English>Herbal Cures</English>
-		<French>
-			<Text>Remèdes à base de plantes</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<Polish>Leczenie Ziołami</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_HEALTH_CARE</Tag>
-		<English>Health Care Units</English>
-		<French>Unités de soins</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_DOCTOR</Tag>
-		<English>Doctor</English>
-		<French>
-			<Text>Docteur en médecine</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Arzt:Arztes:Arzt:Arzt:Ärzte:Ärzte:Ärzten:Ärzte</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
-			<Plural>0:0:0:0:1:1:1:1</Plural>
-		</German>
-	</TEXT>
-		<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_GREAT_DOCTOR</Tag>
-		<English>Great Doctor</English>
-				<French>
-			<Text>Médecin Illustre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_DOCTOR</Tag>
-		<English>Great Doctor</English>
-		<French>
-			<Text>Médecin Illustre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_DOCTOR_STRATEGY</Tag>
-		<English>Build the [LINK=BUILDING_HEALERHUT]Healer's Hut[\LINK], [LINK=BUILDING_APOTHECARY_SHOP]Apothecary Shop[\LINK], or a [LINK=BUILDING_HOSPITAL]Hospital[\LINK] to add specialist doctors and increase the odds of getting a Great Doctor.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_DOCTOR_STRATEGY</Tag>
-		<English>Use the Great Doctor to build the [LINK=BUILDING_UNIVERSAL_HEALTH_CARE]Universal Health Care[\LINK] National Wonder, discover a new technology or add to a city as a super specialist.</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREAT_BATH</Tag>
 		<English>Great Bath of Mohenjo-daro</English>
 		<French>Le Grand Bain de Mohenjo-daro</French>
@@ -230,20 +39,6 @@
 		<Tag>TXT_KEY_BUILDING_HIPOCRATIC_OATH_STRATEGY</Tag>
 		<English>The [COLOR_BUILDING_TEXT]Hippocratic Oath[COLOR_REVERT] provides a free  [COLOR_BUILDING_TEXT]healer's hut[COLOR_REVERT] in all your cities.</English>
 		<French>Le [COLOR_BUILDING_TEXT]Serment d'Hippocrate[COLOR_REVERT] procure une [COLOR_BUILDING_TEXT]cabane de guérisseur [COLOR_REVERT] dans chacune de vos villes.</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SURGEON</Tag>
-		<English>Surgeon</English>
-		<French>Chirurgien</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SURGEON_STRATEGY</Tag>
-		<English>More skilled than a medic, surgeons can heal soldiers in the battlefield better and faster.</English>
-		<French>Plus expérimenté que le médecin, les Chirurgiens peuvent soigner plus rapidement les soldats sur le champ de bataille.</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SURGEON_PEDIA</Tag>
-		<English>In medicine, a surgeon is a specialist in surgery. Surgery is a broad category of invasive medical treatment that involves the cutting of a body, whether that of a human or a other animal, for a specific reason such as the removal of diseased tissue or to repair a tear or breakage. Surgeons may be physicians, podiatrists, dentists, or veterinarians. Surgeons usually train for longer than other medical specialists.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HOSPITAL_SHIP</Tag>
@@ -1310,48 +1105,6 @@
 		<English>Those jaded Drone Copters are really showing their age.  Well never mind, because here's a smarter, fully robotic helicopter to replace them with.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CAMEL_CUIRASSIER</Tag>
-		<English>Camel Cuirassier</English>
-		<French>Cuirassier à dos de Chameau</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_CAMEL_CUIRASSIER_STRATEGY</Tag>
-		<English>The mounted matchlock unit for when you've got camels but no horses. Generally slightly weaker than the standard cuirassier, except in desert of course.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_CAMEL_CUIRASSIER_PEDIA</Tag>
-		<English>Even in the age of gunpowder, desert civilizations, especially those of the Sahara, found that the camel's endurance - and its sand-adapted hooves - gave it a slight edge over the horse as a mount for desert campaigns.</English>
-		<French>Even in the age of gunpowder, desert civilizations, especially those du Sahara, found that the camel's endurance - and its sand-adapted hooves - gave it a slight edge over the horse as a mount for desert campaigns.</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_CAMEL_CAVALRY</Tag>
-		<English>Camel Cavalry</English>
-		<French>Cavalerie à dos de Chameau</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_CAMEL_CAVALRY_STRATEGY</Tag>
-		<English>The mounted rifle-equipped unit for when you've got camels but no horses. Generally slightly weaker than horse cavalry, except in desert of course.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_CAMEL_CAVALRY_PEDIA</Tag>
-		<English>Even in the age of the rifle, desert civilizations, especially those of the Sahara, found that the camel's endurance - and its sand-adapted hooves - gave it a slight edge over the horse as a mount for desert campaigns.  Of course it has its disadvantages, but if camels are all that is readily available to you, you find them a very competitive substitute.</English>
-		<French>Even in the age du rifle, desert civilizations, especially those du Sahara, found that the camel's endurance - and its sand-adapted hooves - gave it a slight edge over the horse as a mount for desert campaigns.  Of course it has its disadvantages, but if camels are all that is readily available to you, you find them a very competitive substitute.</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_CAMEL_TRENCH_CAVALRY</Tag>
-		<English>Camel Trench Cavalry</English>
-		<French>Cavalerie Camélidée des Tranchées</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_CAMEL_TRENCH_CAVALRY_STRATEGY</Tag>
-		<English>If you've camels but no horses, in the twilight era of mounted warfare, this is the unit you need. Generally slightly weaker than the standard trench cavalry, except in desert of course.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_CAMEL_TRENCH_CAVALRY_PEDIA</Tag>
-		<English>Even in the late Industrial era, to the extent that mounted warfare was persisted with, it was believed that the camel's endurance - and its sand-adapted hooves - gave it a slight edge over the horse as a mount for desert campaigns.</English>
-	</TEXT>
-	<!-- National Archives -->
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARCHIVES</Tag>
 		<English>National Archives</English>
 		<French>Les Archives Nationales</French>
@@ -1367,7 +1120,6 @@
 		<Tag>TXT_KEY_BUILDING_ARCHIVES_STRATEGY</Tag>
 		<English>The [COLOR_BUILDING_TEXT]The National Archives[COLOR_REVERT] is a National Wonder that increases research by +15 percent for the city in which it is produced. It also provides a free scientist and increases the amount of scientists the city may have by 1.  The city, in which it is produced, is also more likely to produce a Great Scientist.</English>
 	</TEXT>
-	<!-- End National Archives -->
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARK</Tag>
 		<English>Ark of the Covenant</English>
@@ -1387,91 +1139,9 @@
 		<French>The [COLOR_BUILDING_TEXT]Ark du Covenant[COLOR_REVERT] has no unhappiness in the city in which it is built and provides +1 happines in all cities.  It also provides +1 gold from ALL state religious buildings and it increases it's city's odds of generating a Great Prophet.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_INDUSTRYESPIONAGE</Tag>
-		<English>Industry Espionage</English>
-		<French>Espionnage Industriel</French>
-		<German>Industrie-Spion</German>
-		<Italian>Spionaggio industriale</Italian>
-		<Polish>Szpiegostwo Przemysłowe</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_INDUSTRYESPIONAGE_HELP</Tag>
-		<English>[ICON_BULLET]Plunders 4% of Enemy [ICON_RESEARCH] Reserves on Combat Victory</English>
-		<French>[ICON_BULLET]Pille 4% de la réserve de [ICON_RESEARCH] ennemie en cas de Victoire au Combat</French>
-		<German>[ICON_BULLET]Plündert 4% der feindlichen [ICON_RESEARCH] nach einem Sieg im Kampf</German>
-		<Italian>[ICON_BULLET]Ruba 4% delle risorse nemiche di [ICON_RESEARCH] quando vince una battaglia</Italian>
-		<Polish>[ICON_BULLET]Po zwycięstwie w walce grabi 4% rezerw wrogiego [ICON_RESEARCH]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_INDUSTRYESPIONAGE_YOU</Tag>
-		<English>[COLOR_SELECTED_TEXT]You have plundered %d2 [ICON_RESEARCH] from %s1![COLOR_REVERT]</English>
-		<French>[COLOR_SELECTED_TEXT]Vous avez pillé %d2 [ICON_RESEARCH] à %s1![COLOR_REVERT]</French>
-		<Polish>[COLOR_SELECTED_TEXT]Złupiłeś %d2 [ICON_RESEARCH] z Imperium %s1![COLOR_REVERT]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_INDUSTRYESPIONAGE_FROM</Tag>
-		<English>[COLOR_SELECTED_TEXT]%s1 has plundered %d2 [ICON_RESEARCH] from you![COLOR_REVERT]</English>
-		<French>[COLOR_SELECTED_TEXT]%s1 vous a volé %d2 [ICON_RESEARCH]![COLOR_REVERT]</French>
-		<Polish>[COLOR_SELECTED_TEXT]%s1 złupił %d2 [ICON_RESEARCH] z Twojego imperium![COLOR_REVERT]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILD_EARLY_QUARRY</Tag>
 		<English>Build [LINK=IMPROVEMENT_EARLY_QUARRY]Early Quarry[\LINK]</English>
 		<French>Construire une [COLOR_BUILDING_TEXT]carrière antique[COLOR_REVERT]</French>
 		<Polish>Zbuduj Wczesny Kamieniołom</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_EARLY_QUARRY</Tag>
-		<English>Early Quarry</English>
-		<French>Carrière antique</French>
-		<Polish>Wczesny Kamieniołom</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_GREAT_MILITARY_INSTRUCTOR</Tag>
-		<English>Great Military Instructor</English>
-		<French>
-			<Text>Instructeur militaire illustre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Großer Militärausbilder</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</German>
-		<Italian>
-			<Text>Grande istruttore militare:Grandi istruttori militari</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Gran instructor militar:Grandes instructores militares</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_ALL</Tag>
-		<English>All Resources</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_GROWTH</Tag>
-		<English>Growth</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_LUXURY</Tag>
-		<English>Luxury</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_MISC</Tag>
-		<English>Misc</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_PRODUCTION</Tag>
-		<English>Production</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_STRATEGIC</Tag>
-		<English>Strategic</English>
 	</TEXT>
 </Civ4GameText>

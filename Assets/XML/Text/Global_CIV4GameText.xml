@@ -7787,6 +7787,30 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Polish>W tym mieście dla wszystkich [COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT] za Ziemi</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_ALL</Tag>
+		<English>All Resources</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_GROWTH</Tag>
+		<English>Growth</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_LUXURY</Tag>
+		<English>Luxury</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_MISC</Tag>
+		<English>Misc</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_PRODUCTION</Tag>
+		<English>Production</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_STRATEGIC</Tag>
+		<English>Strategic</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_GODS_INQUISTOR_CLEANSE_MOUSE_OVER</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Religious Persecution[COLOR_REVERT][NEWLINE]Removes all religions except the state religion from this city. This will consume the Inquisitor.</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Persécution religieuse[COLOR_REVERT][NEWLINE]Supprime toutes les religions d'une ville à l'exception de la religion d'état. Cet ordre détruira l'inquisiteur.</French>
@@ -8640,6 +8664,18 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<English>Increment</English>
 		<French>Incrément</French>
 		<Polish>Przyrost</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INDUSTRYESPIONAGE_FROM</Tag>
+		<English>[COLOR_SELECTED_TEXT]%s1 has plundered %d2 [ICON_RESEARCH] from you![COLOR_REVERT]</English>
+		<French>[COLOR_SELECTED_TEXT]%s1 vous a volé %d2 [ICON_RESEARCH]![COLOR_REVERT]</French>
+		<Polish>[COLOR_SELECTED_TEXT]%s1 złupił %d2 [ICON_RESEARCH] z Twojego imperium![COLOR_REVERT]</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INDUSTRYESPIONAGE_YOU</Tag>
+		<English>[COLOR_SELECTED_TEXT]You have plundered %d2 [ICON_RESEARCH] from %s1![COLOR_REVERT]</English>
+		<French>[COLOR_SELECTED_TEXT]Vous avez pillé %d2 [ICON_RESEARCH] à %s1![COLOR_REVERT]</French>
+		<Polish>[COLOR_SELECTED_TEXT]Złupiłeś %d2 [ICON_RESEARCH] z Imperium %s1![COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INFLATION_OUTLOOK_IMPROVING</Tag>
@@ -21382,6 +21418,24 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>Obywatel</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_SPECIALIST_DOCTOR</Tag>
+		<English>Doctor</English>
+		<French>
+			<Text>Docteur en médecine</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Arzt:Arztes:Arzt:Arzt:Ärzte:Ärzte:Ärzten:Ärzte</Text>
+			<Gender>male:male:male:male:male:male:male:male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPECIALIST_DOCTOR_STRATEGY</Tag>
+		<English>Build the [LINK=BUILDING_HEALERHUT]Healer's Hut[\LINK], [LINK=BUILDING_APOTHECARY_SHOP]Apothecary Shop[\LINK], or a [LINK=BUILDING_HOSPITAL]Hospital[\LINK] to add specialist doctors and increase the odds of getting a Great Doctor.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_ENGINEER</Tag>
 		<English>Engineer</English>
 		<French>
@@ -21448,6 +21502,19 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Wielki Artysta</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPECIALIST_GREAT_DOCTOR</Tag>
+		<English>Great Doctor</English>
+		<French>
+			<Text>Médecin Illustre</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GREAT_DOCTOR_STRATEGY</Tag>
+		<English>Use the Great Doctor to build the [LINK=BUILDING_UNIVERSAL_HEALTH_CARE]Universal Health Care[\LINK] National Wonder, discover a new technology or add to a city as a super specialist.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_GREAT_ENGINEER</Tag>
@@ -21560,6 +21627,30 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Wielki Kupiec</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPECIALIST_GREAT_MILITARY_INSTRUCTOR</Tag>
+		<English>Great Military Instructor</English>
+		<French>
+			<Text>Instructeur militaire illustre</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Großer Militärausbilder</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</German>
+		<Italian>
+			<Text>Grande istruttore militare:Grandi istruttori militari</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Gran instructor militar:Grandes instructores militares</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_GREAT_PROPHET</Tag>

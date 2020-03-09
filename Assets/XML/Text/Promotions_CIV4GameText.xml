@@ -6154,6 +6154,10 @@
 		<English>[ICON_BULLET]+%d1 [ICON_STRENGTH]</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_FA_MEN_SI_INSPIRED</Tag>
+		<English>Famen Inspired</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FAKE_IDENTITY1</Tag>
 		<English>Fake Identity I</English>
 		<French>Identité d'Emprunt I</French>
@@ -7816,6 +7820,16 @@
 		<Polish>Ciężki</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_HERBAL_CURES</Tag>
+		<English>Herbal Cures</English>
+		<French>
+			<Text>Remèdes à base de plantes</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Polish>Leczenie Ziołami</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HERDING1</Tag>
 		<English>Herding I</English>
 		<French>
@@ -8664,6 +8678,22 @@
 		<Italian>Improvvisazione V</Italian>
 		<Spanish>Improvisación V</Spanish>
 		<Polish>Improwizacja V</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_INDUSTRYESPIONAGE</Tag>
+		<English>Industry Espionage</English>
+		<French>Espionnage Industriel</French>
+		<German>Industrie-Spion</German>
+		<Italian>Spionaggio industriale</Italian>
+		<Polish>Szpiegostwo Przemysłowe</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_INDUSTRYESPIONAGE_HELP</Tag>
+		<English>[ICON_BULLET]Plunders 4% of Enemy [ICON_RESEARCH] Reserves on Combat Victory</English>
+		<French>[ICON_BULLET]Pille 4% de la réserve de [ICON_RESEARCH] ennemie en cas de Victoire au Combat</French>
+		<German>[ICON_BULLET]Plündert 4% der feindlichen [ICON_RESEARCH] nach einem Sieg im Kampf</German>
+		<Italian>[ICON_BULLET]Ruba 4% delle risorse nemiche di [ICON_RESEARCH] quando vince una battaglia</Italian>
+		<Polish>[ICON_BULLET]Po zwycięstwie w walce grabi 4% rezerw wrogiego [ICON_RESEARCH]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INFILTRATION</Tag>
