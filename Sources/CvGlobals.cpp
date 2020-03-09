@@ -1162,10 +1162,6 @@ bool cvInternalGlobals::getResourceLayer() const
 /***** Parallel Maps - End *****/
 /*******************************/
 
-CvMainMenuInfo& cvInternalGlobals::getMainMenus(int i) const
-{
-	return i >= getNumMainMenus() ? *(m_paMainMenus[0]) : *(m_paMainMenus[i]);
-}
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 10/30/07                            MRGENIE          */
 /*                                                                                              */

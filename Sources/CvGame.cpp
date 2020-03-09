@@ -198,7 +198,7 @@ void CvGame::init(HandicapTypes eHandicap)
 	//AlbertS2 set hidden options to their default setting
 	for (int iI = 0; iI < NUM_GAMEOPTION_TYPES; iI++)
 	{
-		CvGameOptionInfo& kGameOption = GC.getGameOptionInfo((GameOptionTypes)iI);
+		const CvGameOptionInfo& kGameOption = GC.getGameOptionInfo((GameOptionTypes)iI);
 		if (!kGameOption.getVisible())
 		{
 			setOption((GameOptionTypes)iI, kGameOption.getDefault());
@@ -1040,7 +1040,7 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 	//Establish speedy promotion & Building reference by line
 	for (iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
 	{
-		PromotionLineTypes ePromotionLine = (PromotionLineTypes)iI;
+		const PromotionLineTypes ePromotionLine = (PromotionLineTypes)iI;
 		GC.getPromotionLineInfo(ePromotionLine).setPromotions();
 		GC.getPromotionLineInfo(ePromotionLine).setBuildings();
 	}
@@ -3353,7 +3353,7 @@ void CvGame::clearSecretaryGeneral(VoteSourceTypes eVoteSource)
 {
 	for (int j = 0; j < GC.getNumVoteInfos(); ++j)
 	{
-		CvVoteInfo& kVote = GC.getVoteInfo((VoteTypes)j);
+		const CvVoteInfo& kVote = GC.getVoteInfo((VoteTypes)j);
 
 		if (kVote.isVoteSourceType(eVoteSource) && kVote.isSecretaryGeneral())
 		{
@@ -7032,7 +7032,7 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 	for(int j = 0; j < GC.getNumSpawnInfos(); j++)
 	{
 		const SpawnTypes eSpawn = (SpawnTypes)j;
-		CvSpawnInfo& spawnInfo = GC.getSpawnInfo((SpawnTypes)j);
+		const CvSpawnInfo& spawnInfo = GC.getSpawnInfo((SpawnTypes)j);
 
 		//TB Note: It is at this point that we need to isolate out the player type on spawn info.
 		//I think for the sake of speed and data efficiency we can get away with a singular player reference rather than
@@ -8887,7 +8887,7 @@ void CvGame::processVote(const VoteTriggeredData& kData, int iChange)
 {
 	PROFILE_FUNC();
 
-	CvVoteInfo& kVote = GC.getVoteInfo(kData.kVoteOption.eVote);
+	const CvVoteInfo& kVote = GC.getVoteInfo(kData.kVoteOption.eVote);
 
 	changeTradeRoutes(kVote.getTradeRoutes() * iChange);
 	changeFreeTradeCount(kVote.isFreeTrade() ? iChange : 0);
@@ -10716,10 +10716,10 @@ void CvGame::doUpdateCacheOnTurn()
 	{
 		if (isVictoryValid((VictoryTypes) iI))
 		{
-			CvVictoryInfo& kVictoryInfo = GC.getVictoryInfo((VictoryTypes) iI);
+			const CvVictoryInfo& kVictoryInfo = GC.getVictoryInfo((VictoryTypes) iI);
 			if (kVictoryInfo.getCityCulture() > 0)
 			{
-				int iNumCultureCities = kVictoryInfo.getNumCultureCities();
+				const int iNumCultureCities = kVictoryInfo.getNumCultureCities();
 				if (iNumCultureCities > m_iNumCultureVictoryCities)
 				{
 					m_iNumCultureVictoryCities = iNumCultureCities;

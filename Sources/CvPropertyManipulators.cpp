@@ -170,8 +170,8 @@ bool CvPropertyManipulators::read(CvXMLLoadUtility *pXML, const wchar_t* szTagNa
 				{
 					CvString szTextVal;
 					pXML->GetChildXmlValByName(szTextVal, L"PropertySourceType");
-					int iType = pXML->GetInfoClass(szTextVal);
-					int iPos = addSource((PropertySourceTypes)iType);
+					const int iType = pXML->GetInfoClass(szTextVal);
+					const int iPos = addSource((PropertySourceTypes)iType);
 					if (iPos != -1)
 					{
 						m_apSources[iPos]->read(pXML);
@@ -184,8 +184,8 @@ bool CvPropertyManipulators::read(CvXMLLoadUtility *pXML, const wchar_t* szTagNa
 				{
 					CvString szTextVal;
 					pXML->GetChildXmlValByName(szTextVal, L"PropertyInteractionType");
-					int iType = pXML->GetInfoClass(szTextVal);
-					int iPos = addInteraction((PropertyInteractionTypes)iType);
+					const int iType = pXML->GetInfoClass(szTextVal);
+					const int iPos = addInteraction((PropertyInteractionTypes)iType);
 					if (iPos != -1)
 						m_apInteractions[iPos]->read(pXML);
 				} while(pXML->TryMoveToXmlNextSibling(L"PropertyInteraction"));
@@ -196,8 +196,8 @@ bool CvPropertyManipulators::read(CvXMLLoadUtility *pXML, const wchar_t* szTagNa
 				{
 					CvString szTextVal;
 					pXML->GetChildXmlValByName(szTextVal, L"PropertyPropagatorType");
-					int iType = pXML->GetInfoClass(szTextVal);
-					int iPos = addPropagator((PropertyPropagatorTypes)iType);
+					const int iType = pXML->GetInfoClass(szTextVal);
+					const int iPos = addPropagator((PropertyPropagatorTypes)iType);
 					if (iPos != -1)
 						m_apPropagators[iPos]->read(pXML);
 				} while(pXML->TryMoveToXmlNextSibling(L"PropertyPropagator"));
@@ -214,33 +214,33 @@ void CvPropertyManipulators::copyNonDefaults(CvPropertyManipulators *pProp, CvXM
 {
 	//if (m_apSources.empty())
 	{
-		int iNum = pProp->getNumSources();
+		const int iNum = pProp->getNumSources();
 		for (int i=0; i<iNum; i++)
 		{
 			CvPropertySource* pSource = pProp->getSource(i);
-			int iPos = addSource(pSource->getType());
+			const int iPos = addSource(pSource->getType());
 			if (iPos != -1)
 				m_apSources[iPos]->copyNonDefaults(pSource, pXML);
 		}
 	}
 	//if (m_apInteractions.empty())
 	{
-		int iNum = pProp->getNumInteractions();
+		const int iNum = pProp->getNumInteractions();
 		for (int i=0; i<iNum; i++)
 		{
 			CvPropertyInteraction* pInteraction = pProp->getInteraction(i);
-			int iPos = addInteraction(pInteraction->getType());
+			const int iPos = addInteraction(pInteraction->getType());
 			if (iPos != -1)
 				m_apInteractions[iPos]->copyNonDefaults(pInteraction, pXML);
 		}
 	}
 	//if (m_apPropagators.empty())
 	{
-		int iNum = pProp->getNumPropagators();
+		const int iNum = pProp->getNumPropagators();
 		for (int i=0; i<iNum; i++)
 		{
 			CvPropertyPropagator* pPropagator = pProp->getPropagator(i);
-			int iPos = addPropagator(pPropagator->getType());
+			const int iPos = addPropagator(pPropagator->getType());
 			if (iPos != -1)
 				m_apPropagators[iPos]->copyNonDefaults(pPropagator, pXML);
 		}

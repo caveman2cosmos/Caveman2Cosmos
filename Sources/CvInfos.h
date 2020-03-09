@@ -5173,10 +5173,10 @@ public:
 
 	//Struct Vector with delayed resolution
 	int getNumTerrainStructs() const;
-	TerrainStructs& getTerrainStruct(int iIndex);
+	const TerrainStructs& getTerrainStruct(int iIndex) const;
 
 	int getNumPlaceBonusTypes() const;
-	PlaceBonusTypes& getPlaceBonusType(int iIndex);
+	const PlaceBonusTypes& getPlaceBonusType(int iIndex) const;
 
 	bool read(CvXMLLoadUtility* pXML);
 	void read(FDataStreamBase* stream) {}

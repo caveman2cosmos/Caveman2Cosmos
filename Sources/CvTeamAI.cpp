@@ -1145,8 +1145,8 @@ int CvTeamAI::AI_chooseElection(const VoteSelectionData& kVoteSelectionData) con
 
 	for (int iI = 0; iI < (int)kVoteSelectionData.aVoteOptions.size(); iI++)
 	{
-		VoteTypes eVote = kVoteSelectionData.aVoteOptions[iI].eVote;
-		CvVoteInfo& kVoteInfo = GC.getVoteInfo(eVote);
+		const VoteTypes eVote = kVoteSelectionData.aVoteOptions[iI].eVote;
+		const CvVoteInfo& kVoteInfo = GC.getVoteInfo(eVote);
 
 		FAssert(kVoteInfo.isVoteSourceType(eVoteSource));
 

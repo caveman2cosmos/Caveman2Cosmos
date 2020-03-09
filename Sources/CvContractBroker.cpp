@@ -291,7 +291,7 @@ void CvContractBroker::finalizeTenderContracts()
 				}
 				else
 				{
-					CvInfoBase& AIType = GC.getUnitAIInfo(m_workRequests[iI].eAIType);
+					const CvInfoBase& AIType = GC.getUnitAIInfo(m_workRequests[iI].eAIType);
 					unitAIType = AIType.getType();
 				}
 
@@ -490,7 +490,7 @@ void CvContractBroker::finalizeTenderContracts()
 					}
 					else
 					{
-						CvInfoBase& AIType = GC.getUnitAIInfo(m_workRequests[iI].eAIType);
+						const CvInfoBase& AIType = GC.getUnitAIInfo(m_workRequests[iI].eAIType);
 						unitAIType = AIType.getType();
 					}
 

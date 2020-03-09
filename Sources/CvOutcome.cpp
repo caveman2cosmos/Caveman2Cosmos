@@ -521,12 +521,12 @@ bool CvOutcome::isPossible(const CvUnit& kUnit) const
 	if (m_eEventTrigger != NO_EVENTTRIGGER)
 	{
 		CvPlayer& kOwner = GET_PLAYER(kUnit.getOwner());
-		CvEventTriggerInfo& kTriggerInfo = GC.getEventTriggerInfo(m_eEventTrigger);
 		if (!kOwner.isEventTriggerPossible(m_eEventTrigger, true))
 		{
 			return false;
 		}
 
+		const CvEventTriggerInfo& kTriggerInfo = GC.getEventTriggerInfo(m_eEventTrigger);
 		if (kTriggerInfo.isPickCity())
 		{
 			CvCity* pCity = kUnit.plot()->getPlotCity();
@@ -865,12 +865,12 @@ bool CvOutcome::isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool 
 	if (m_eEventTrigger != NO_EVENTTRIGGER)
 	{
 		CvPlayer& kOwner = GET_PLAYER(kUnit.getOwner());
-		CvEventTriggerInfo& kTriggerInfo = GC.getEventTriggerInfo(m_eEventTrigger);
 		if (!kOwner.isEventTriggerPossible(m_eEventTrigger, true))
 		{
 			return false;
 		}
 
+		const CvEventTriggerInfo& kTriggerInfo = GC.getEventTriggerInfo(m_eEventTrigger);
 		if (kTriggerInfo.isPickCity())
 		{
 			CvCity* pCity = kPlot.getPlotCity();
@@ -1372,7 +1372,7 @@ int CvOutcome::AI_getValueInPlot(const CvUnit &kUnit, const CvPlot &kPlot, bool 
 		int iTempValue;
 		EventTriggeredData* pTriggerData;
 
-		CvEventTriggerInfo& kTriggerInfo = GC.getEventTriggerInfo(m_eEventTrigger);
+		const CvEventTriggerInfo& kTriggerInfo = GC.getEventTriggerInfo(m_eEventTrigger);
 		if (kTriggerInfo.isPickCity() && (kPlot.getPlotCity() != NULL))
 		{
 			pTriggerData = kPlayer.initTriggeredData(m_eEventTrigger, false, kPlot.getPlotCity()->getID());

@@ -993,7 +993,7 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	LoadGlobalClassInfo(GC.m_paCivicInfo, "CIV4CivicInfos", "GameInfo", L"/Civ4CivicInfos/CivicInfos/CivicInfo", false, &GC.m_CivicInfoReplacements);
 	for (int i=0; i < GC.getNumVoteSourceInfos(); ++i)
 	{
-		GC.getVoteSourceInfo((VoteSourceTypes)i).readPass3();
+		GC.m_paVoteSourceInfo[i]->readPass3();
 	}
 	LoadGlobalClassInfo(GC.m_paPlayerColorInfo, "CIV4PlayerColorInfos", "Interface", L"/Civ4PlayerColorInfos/PlayerColorInfos/PlayerColorInfo", false);
 	LoadGlobalClassInfo(GC.m_paBuildInfo, "CIV4BuildInfos", "Units", L"/Civ4BuildInfos/BuildInfos/BuildInfo", false, &GC.m_BuildInfoReplacements);
@@ -1069,55 +1069,55 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 
 	for (int i=0; i < GC.getNumBuildingInfos(); ++i)
 	{
-		GC.getBuildingInfo((BuildingTypes)i).readPass3();
+		GC.m_paBuildingInfo[i]->readPass3();
 		GC.m_BuildingInfoReplacements.readPass3();
 	}
 
 	for (int i=0; i < GC.getNumCivicInfos(); ++i)
 	{
-		GC.getCivicInfo((CivicTypes)i).readPass3();
+		GC.m_paCivicInfo[i]->readPass3();
 		GC.m_CivicInfoReplacements.readPass3();
 	}
 
 	for (int i=0; i < GC.getNumCorporationInfos(); ++i)
 	{
-		GC.getCorporationInfo((CorporationTypes)i).readPass3();
+		GC.m_paCorporationInfo[i]->readPass3();
 		GC.m_CorporationInfoReplacements.readPass3();
 	}
 
 	for (int i=0; i < GC.getNumReligionInfos(); ++i)
 	{
-		GC.getReligionInfo((ReligionTypes)i).readPass3();
+		GC.m_paReligionInfo[i]->readPass3();
 		GC.m_ReligionInfoReplacements.readPass3();
 	}
 
 	for (int i=0; i < GC.getNumEventInfos(); ++i)
 	{
-		GC.getEventInfo((EventTypes)i).readPass3();
+		GC.m_paEventInfo[i]->readPass3();
 		GC.m_EventInfoReplacements.readPass3();
 	}
 
 	for (int i=0; i < GC.getNumProjectInfos(); ++i)
 	{
-		GC.getProjectInfo((ProjectTypes)i).readPass3();
+		GC.m_paProjectInfo[i]->readPass3();
 		GC.m_ProjectInfoReplacements.readPass3();
 	}
 
 	for (int i=0; i < GC.getNumTechInfos(); ++i)
 	{
-		GC.getTechInfo((TechTypes)i).readPass3();
+		GC.m_paTechInfo[i]->readPass3();
 		GC.m_TechInfoReplacements.readPass3();
 	}
 
 	for (int i=0; i < GC.getNumUnitInfos(); ++i)
 	{
-		GC.getUnitInfo((UnitTypes)i).readPass3();
+		GC.m_paUnitInfo[i]->readPass3();
 		GC.m_UnitInfoReplacements.readPass3();
 	}
 
 	for (int i=0; i < GC.getNumSpecialistInfos(); ++i)
 	{
-		GC.getSpecialistInfo((SpecialistTypes)i).readPass3();
+		GC.m_paSpecialistInfo[i]->readPass3();
 		GC.m_SpecialistInfoReplacements.readPass3();
 	}
 	OutputDebugString("Pass3 processing complete\n");

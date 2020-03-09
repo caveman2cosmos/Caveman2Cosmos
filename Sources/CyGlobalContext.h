@@ -39,7 +39,7 @@ public:
 	bool multiMapsEnabled() const;
 	void switchMap(int iMap);
 	int getNumMapInfos() const;
-	CvMapInfo* getMapInfo(int iMap) const;
+	const CvMapInfo* getMapInfo(int iMap) const;
 	CyMap* getMapByIndex(int iIndex);
 	void updateMaps();
 	void initializeMap(int iMap);
@@ -57,65 +57,65 @@ public:
 	CyTeam* getCyTeam(int i);
 	CyArtFileMgr* getCyArtFileMgr() const;
 
-	CvEffectInfo* getEffectInfo(int i) const;
-	CvTerrainInfo* getTerrainInfo(int i) const;
-	CvBonusClassInfo* getBonusClassInfo(int i) const;
-	CvBonusInfo* getBonusInfo(int i) const;
-	CvFeatureInfo* getFeatureInfo(int i) const;
-	CvCivilizationInfo* getCivilizationInfo(int idx) const;
-	CvLeaderHeadInfo* getLeaderHeadInfo(int i) const;
-	CvTraitInfo* getTraitInfo(int i) const;
-	CvUnitInfo* getUnitInfo(int i) const;
-	CvSpecialUnitInfo* getSpecialUnitInfo(int i) const;
-	CvYieldInfo* getYieldInfo(int i) const;
-	CvCommerceInfo* getCommerceInfo(int i) const;
-	CvRouteInfo* getRouteInfo(int i) const;
-	CvImprovementInfo* getImprovementInfo(int i) const;
-	CvGoodyInfo* getGoodyInfo(int i) const;
-	CvBuildInfo* getBuildInfo(int i) const;
-	CvHandicapInfo* getHandicapInfo(int i) const;
-	CvGameSpeedInfo* getGameSpeedInfo(int i) const;
-	CvTurnTimerInfo* getTurnTimerInfo(int i) const;
-	CvMissionInfo* getMissionInfo(int i) const;
-	CvCommandInfo* getCommandInfo(int i) const;
-	CvAutomateInfo* getAutomateInfo(int i) const;
-	CvActionInfo* getActionInfo(int i) const;
-	CvInfoBase* getUnitCombatInfo(int i) const;
+	const CvEffectInfo* getEffectInfo(int i) const;
+	const CvTerrainInfo* getTerrainInfo(int i) const;
+	const CvBonusClassInfo* getBonusClassInfo(int i) const;
+	const CvBonusInfo* getBonusInfo(int i) const;
+	const CvFeatureInfo* getFeatureInfo(int i) const;
+	const CvCivilizationInfo* getCivilizationInfo(int idx) const;
+	const CvLeaderHeadInfo* getLeaderHeadInfo(int i) const;
+	const CvTraitInfo* getTraitInfo(int i) const;
+	const CvUnitInfo* getUnitInfo(int i) const;
+	const CvSpecialUnitInfo* getSpecialUnitInfo(int i) const;
+	const CvYieldInfo* getYieldInfo(int i) const;
+	const CvCommerceInfo* getCommerceInfo(int i) const;
+	const CvRouteInfo* getRouteInfo(int i) const;
+	const CvImprovementInfo* getImprovementInfo(int i) const;
+	const CvGoodyInfo* getGoodyInfo(int i) const;
+	const CvBuildInfo* getBuildInfo(int i) const;
+	const CvHandicapInfo* getHandicapInfo(int i) const;
+	const CvGameSpeedInfo* getGameSpeedInfo(int i) const;
+	const CvTurnTimerInfo* getTurnTimerInfo(int i) const;
+	const CvMissionInfo* getMissionInfo(int i) const;
+	const CvCommandInfo* getCommandInfo(int i) const;
+	const CvAutomateInfo* getAutomateInfo(int i) const;
+	const CvActionInfo* getActionInfo(int i) const;
+	const CvInfoBase* getUnitCombatInfo(int i) const;
 	//TB Promotion Line Mod begin
-	CvPromotionLineInfo* getPromotionLineInfo(int i) const;
+	const CvPromotionLineInfo* getPromotionLineInfo(int i) const;
 	//TB Promotion Line Mod end
-	CvMapCategoryInfo* getMapCategoryInfo(int i) const;
-	CvIdeaClassInfo* getIdeaClassInfo(int i) const;
-	CvIdeaInfo* getIdeaInfo(int i) const;
+	const CvMapCategoryInfo* getMapCategoryInfo(int i) const;
+	const CvIdeaClassInfo* getIdeaClassInfo(int i) const;
+	const CvIdeaInfo* getIdeaInfo(int i) const;
 	//CvTraitOptionEditsInfo* getTraitOptionEditsInfo(int i) const;
-	CvInfoBase* getDomainInfo(int i) const;
-	CvBuildingInfo* getBuildingInfo(int i) const;
-	CvCivicOptionInfo* getCivicOptionInfo(int i) const;
-	CvCivicInfo* getCivicInfo(int i) const;
-	CvDiplomacyInfo* getDiplomacyInfo(int i) const;
-	CvProjectInfo* getProjectInfo(int i) const;
-	CvVoteInfo* getVoteInfo(int i) const;
-	CvProcessInfo* getProcessInfo(int i) const;
-	CvSpecialistInfo* getSpecialistInfo(int i) const;
-	CvReligionInfo* getReligionInfo(int i) const;
-	CvCorporationInfo* getCorporationInfo(int i) const;
-	CvControlInfo* getControlInfo(int i) const;
-	CvTechInfo* getTechInfo(int i) const;
-	CvSpecialBuildingInfo* getSpecialBuildingInfo(int i) const;
-	CvPromotionInfo* getPromotionInfo(int i) const;
-	CvAnimationPathInfo * getAnimationPathInfo(int i) const;
-	CvEmphasizeInfo * getEmphasizeInfo(int i) const;
-	CvUpkeepInfo * getUpkeepInfo(int i) const;
-	CvCultureLevelInfo * getCultureLevelInfo(int i) const;
-	CvEraInfo * getEraInfo(int i) const;
-	CvVictoryInfo * getVictoryInfo(int i) const;
-	CvWorldInfo * getWorldInfo(int i) const;
-	CvClimateInfo * getClimateInfo(int i) const;
-	CvSeaLevelInfo * getSeaLevelInfo(int i) const;
-	CvInfoBase * getUnitAIInfo(int i) const;
-	CvColorInfo* getColorInfo(int i) const;
-	CvUnitArtStyleTypeInfo* getUnitArtStyleTypeInfo(int i) const;
-	CvPropertyInfo* getPropertyInfo(int i) const;
+	const CvInfoBase* getDomainInfo(int i) const;
+	const CvBuildingInfo* getBuildingInfo(int i) const;
+	const CvCivicOptionInfo* getCivicOptionInfo(int i) const;
+	const CvCivicInfo* getCivicInfo(int i) const;
+	const CvDiplomacyInfo* getDiplomacyInfo(int i) const;
+	const CvProjectInfo* getProjectInfo(int i) const;
+	const CvVoteInfo* getVoteInfo(int i) const;
+	const CvProcessInfo* getProcessInfo(int i) const;
+	const CvSpecialistInfo* getSpecialistInfo(int i) const;
+	const CvReligionInfo* getReligionInfo(int i) const;
+	const CvCorporationInfo* getCorporationInfo(int i) const;
+	const CvControlInfo* getControlInfo(int i) const;
+	const CvTechInfo* getTechInfo(int i) const;
+	const CvSpecialBuildingInfo* getSpecialBuildingInfo(int i) const;
+	const CvPromotionInfo* getPromotionInfo(int i) const;
+	const CvAnimationPathInfo * getAnimationPathInfo(int i) const;
+	const CvEmphasizeInfo * getEmphasizeInfo(int i) const;
+	const CvUpkeepInfo * getUpkeepInfo(int i) const;
+	const CvCultureLevelInfo * getCultureLevelInfo(int i) const;
+	const CvEraInfo * getEraInfo(int i) const;
+	const CvVictoryInfo * getVictoryInfo(int i) const;
+	const CvWorldInfo * getWorldInfo(int i) const;
+	const CvClimateInfo * getClimateInfo(int i) const;
+	const CvSeaLevelInfo * getSeaLevelInfo(int i) const;
+	const CvInfoBase * getUnitAIInfo(int i) const;
+	const CvColorInfo* getColorInfo(int i) const;
+	const CvUnitArtStyleTypeInfo* getUnitArtStyleTypeInfo(int i) const;
+	const CvPropertyInfo* getPropertyInfo(int i) const;
 
 	int getInfoTypeForString(const char* szInfoType) const;
 /************************************************************************************************/
@@ -130,48 +130,48 @@ public:
 	int getTypesEnum(const char* szType) const;
 
 	int getNumPlayerColorInfos() const { return GC.getNumPlayerColorInfos(); }
-	CvPlayerColorInfo* getPlayerColorInfo(int i) const;
+	const CvPlayerColorInfo* getPlayerColorInfo(int i) const;
 
-	CvInfoBase* getHints(int i) const;
-	CvMainMenuInfo* getMainMenus(int i) const;
-	CvInvisibleInfo* getInvisibleInfo(int i) const;
-	CvVoteSourceInfo* getVoteSourceInfo(int i) const;
-	CvInfoBase* getAttitudeInfo(int i) const;
-	CvInfoBase* getMemoryInfo(int i) const;
-	CvInfoBase* getConceptInfo(int i) const;
-	CvInfoBase* getNewConceptInfo(int i) const;
-	CvInfoBase* getCityTabInfo(int i) const;
-	CvInfoBase* getCalendarInfo(int i) const;
-	CvInfoBase* getGameOptionInfo(int i) const;
-	CvInfoBase* getMPOptionInfo(int i) const;
-	CvInfoBase* getForceControlInfo(int i) const;
-	CvInfoBase* getSeasonInfo(int i) const;
-	CvInfoBase* getMonthInfo(int i) const;
-	CvInfoBase* getDenialInfo(int i) const;
-	CvQuestInfo* getQuestInfo(int i) const;
-	CvTutorialInfo* getTutorialInfo(int i) const;
-	CvEventTriggerInfo* getEventTriggerInfo(int i) const;
-	CvEventInfo* getEventInfo(int i) const;
-	CvEspionageMissionInfo* getEspionageMissionInfo(int i) const;
-	CvHurryInfo* getHurryInfo(int i) const;
-	CvPlayerOptionInfo* getPlayerOptionInfo(int i) const;
-	CvPlayerOptionInfo* getPlayerOptionsInfoByIndex(int i) const;
+	const CvInfoBase* getHints(int i) const;
+	const CvMainMenuInfo* getMainMenus(int i) const;
+	const CvInvisibleInfo* getInvisibleInfo(int i) const;
+	const CvVoteSourceInfo* getVoteSourceInfo(int i) const;
+	const CvInfoBase* getAttitudeInfo(int i) const;
+	const CvInfoBase* getMemoryInfo(int i) const;
+	const CvInfoBase* getConceptInfo(int i) const;
+	const CvInfoBase* getNewConceptInfo(int i) const;
+	const CvInfoBase* getCityTabInfo(int i) const;
+	const CvInfoBase* getCalendarInfo(int i) const;
+	const CvInfoBase* getGameOptionInfo(int i) const;
+	const CvInfoBase* getMPOptionInfo(int i) const;
+	const CvInfoBase* getForceControlInfo(int i) const;
+	const CvInfoBase* getSeasonInfo(int i) const;
+	const CvInfoBase* getMonthInfo(int i) const;
+	const CvInfoBase* getDenialInfo(int i) const;
+	const CvQuestInfo* getQuestInfo(int i) const;
+	const CvTutorialInfo* getTutorialInfo(int i) const;
+	const CvEventTriggerInfo* getEventTriggerInfo(int i) const;
+	const CvEventInfo* getEventInfo(int i) const;
+	const CvEspionageMissionInfo* getEspionageMissionInfo(int i) const;
+	const CvHurryInfo* getHurryInfo(int i) const;
+	const CvPlayerOptionInfo* getPlayerOptionInfo(int i) const;
+	const CvPlayerOptionInfo* getPlayerOptionsInfoByIndex(int i) const;
 
-	CvGraphicOptionInfo* getGraphicOptionInfo(int i) const;
-	CvGraphicOptionInfo* getGraphicOptionsInfoByIndex(int i) const;
+	const CvGraphicOptionInfo* getGraphicOptionInfo(int i) const;
+	const CvGraphicOptionInfo* getGraphicOptionsInfoByIndex(int i) const;
 
 	// ArtInfos
-	CvArtInfoInterface* getInterfaceArtInfo(int i) const;
-	CvArtInfoMovie* getMovieArtInfo(int i) const;
-	CvArtInfoMisc* getMiscArtInfo(int i) const;
-	CvArtInfoUnit* getUnitArtInfo(int i) const;
-	CvArtInfoBuilding* getBuildingArtInfo(int i) const;
-	CvArtInfoCivilization* getCivilizationArtInfo(int i) const;
-	CvArtInfoLeaderhead* getLeaderheadArtInfo(int i) const;
-	CvArtInfoBonus* getBonusArtInfo(int i) const;
-	CvArtInfoImprovement* getImprovementArtInfo(int i) const;
-	CvArtInfoTerrain* getTerrainArtInfo(int i) const;
-	CvArtInfoFeature* getFeatureArtInfo(int i) const;
+	const CvArtInfoInterface* getInterfaceArtInfo(int i) const;
+	const CvArtInfoMovie* getMovieArtInfo(int i) const;
+	const CvArtInfoMisc* getMiscArtInfo(int i) const;
+	const CvArtInfoUnit* getUnitArtInfo(int i) const;
+	const CvArtInfoBuilding* getBuildingArtInfo(int i) const;
+	const CvArtInfoCivilization* getCivilizationArtInfo(int i) const;
+	const CvArtInfoLeaderhead* getLeaderheadArtInfo(int i) const;
+	const CvArtInfoBonus* getBonusArtInfo(int i) const;
+	const CvArtInfoImprovement* getImprovementArtInfo(int i) const;
+	const CvArtInfoTerrain* getTerrainArtInfo(int i) const;
+	const CvArtInfoFeature* getFeatureArtInfo(int i) const;
 
 
 	// Structs
@@ -184,8 +184,8 @@ public:
 	const char* getCitySizeTypes(int i) const { return GC.getCitySizeTypes(i); }
 	const char* getContactTypes(int i) const { return GC.getContactTypes((ContactTypes) i); }
 	const char* getDiplomacyPowerTypes(int i) const { return GC.getDiplomacyPowerTypes((DiplomacyPowerTypes) i); }
-	const char *getFootstepAudioTypes(int i) { return GC.getFootstepAudioTypes(i); }
-	const char *getFootstepAudioTags(int i) { return GC.getFootstepAudioTags(i); }
+	const char* getFootstepAudioTypes(int i) const { return GC.getFootstepAudioTypes(i); }
+	const char* getFootstepAudioTags(int i) const { return GC.getFootstepAudioTags(i); }
 
 	int getNumEffectInfos() const { return GC.getNumEffectInfos(); }
 	int getNumTerrainInfos() const { return GC.getNumTerrainInfos(); }

@@ -10926,7 +10926,7 @@ bool CvCityAI::AI_chooseUnit(const char* reason, UnitAITypes eUnitAI, int iOdds,
 		CvString unitAIType;
 		if (eUnitAI != NO_UNITAI)
 		{
-			CvInfoBase& AIType = GC.getUnitAIInfo(eUnitAI);
+			const CvInfoBase& AIType = GC.getUnitAIInfo(eUnitAI);
 			unitAIType = AIType.getType();
 		}
 		else
@@ -11002,7 +11002,7 @@ bool CvCityAI::AI_chooseUnitImmediate(const char* reason, UnitAITypes eUnitAI, C
 
 			if (eUnitAI != NO_UNITAI)
 			{
-				CvInfoBase& AIType = GC.getUnitAIInfo(eUnitAI);
+				const CvInfoBase& AIType = GC.getUnitAIInfo(eUnitAI);
 				unitAIType = AIType.getType();
 			}
 			else

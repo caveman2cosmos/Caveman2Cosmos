@@ -23367,7 +23367,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 
 	if (ePromotionLine != NO_PROMOTIONLINE && GC.getPromotionLineInfo(ePromotionLine).getNumNotOnUnitCombatTypes() > 0)
 	{
-		CvPromotionLineInfo& kPromotionLine = GC.getPromotionLineInfo(ePromotionLine);
+		const CvPromotionLineInfo& kPromotionLine = GC.getPromotionLineInfo(ePromotionLine);
 		for (int iI = 0; iI < kPromotionLine.getNumNotOnUnitCombatTypes(); iI++)
 		{
 			if (isHasUnitCombat((UnitCombatTypes)kPromotionLine.getNotOnUnitCombatType(iI)))
@@ -23440,11 +23440,11 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 	//Must have the next less promotionline priority unless this is an affliction, equipment, or BuildUp or Status.
 	if (ePromotionLine != NO_PROMOTIONLINE && !bAfflict && !bEquip && !kPromotion.isCritical() && !bForBuildUp && !bForStatus && kPromotion.getLinePriority() > 1)
 	{
-		CvPromotionLineInfo& kPromotionLine = GC.getPromotionLineInfo(ePromotionLine);
+		const CvPromotionLineInfo& kPromotionLine = GC.getPromotionLineInfo(ePromotionLine);
 		const int numPromotions = kPromotionLine.getNumPromotions();
 		for (int iJ = 0; iJ < numPromotions; iJ++)
 		{
-			PromotionTypes ePrereq = (PromotionTypes)kPromotionLine.getPromotion(iJ);
+			const PromotionTypes ePrereq = (PromotionTypes)kPromotionLine.getPromotion(iJ);
 			if (GC.getPromotionInfo(ePrereq).getLinePriority() == kPromotion.getLinePriority() - 1)
 			{
 				if (!isHasPromotion(ePrereq))
@@ -30114,7 +30114,7 @@ void CvUnit::getDefenderCombatValues(CvUnit& kDefender, const CvPlot* pPlot, int
 
 int CvUnit::getTriggerValue(EventTriggerTypes eTrigger, const CvPlot* pPlot, bool bCheckPlot) const
 {
-	CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(eTrigger);
+	const CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(eTrigger);
 	if (kTrigger.getNumUnits() <= 0)
 	{
 		return MIN_INT;
@@ -30188,7 +30188,7 @@ int CvUnit::getTriggerValue(EventTriggerTypes eTrigger, const CvPlot* pPlot, boo
 
 bool CvUnit::canApplyEvent(EventTypes eEvent) const
 {
-	CvEventInfo& kEvent = GC.getEventInfo(eEvent);
+	const CvEventInfo& kEvent = GC.getEventInfo(eEvent);
 
 	if (0 != kEvent.getUnitExperience())
 	{
@@ -30215,7 +30215,7 @@ void CvUnit::applyEvent(EventTypes eEvent)
 		return;
 	}
 
-	CvEventInfo& kEvent = GC.getEventInfo(eEvent);
+	const CvEventInfo& kEvent = GC.getEventInfo(eEvent);
 
 	if (0 != kEvent.getUnitExperience())
 	{
@@ -35304,7 +35304,7 @@ bool CvUnit::CureAffliction(PromotionLineTypes eAfflictionLine)
 
 int CvUnit::getTotalCommunicableExposure(PromotionLineTypes eAfflictionLine) const
 {
-	CvPromotionLineInfo& kAffliction = GC.getPromotionLineInfo(eAfflictionLine);
+	const CvPromotionLineInfo& kAffliction = GC.getPromotionLineInfo(eAfflictionLine);
 	CvPlot* pPlot = plot();
 	if (pPlot == NULL)
 	{

@@ -164,7 +164,7 @@ class CvMapSwitchInfo;
 #include "CvInfoReplacements.h"
 #include <stack>
 
-template <class info, class index >
+template <class info, typename index >
 inline info& getInfo(const std::vector<info*>& vector, index i)
 {
 	FAssertMsg(i > -1, "Index out of bounds");
@@ -346,29 +346,6 @@ public:
 	}
 	void resolveDelayedResolution();
 
-	int getNumWorldInfos() const { return m_paWorldInfo.size(); }
-	const CvWorldInfo& getWorldInfo(WorldSizeTypes e) const { return getInfo(m_paWorldInfo, e); }
-
-	int getNumClimateInfos() const { return m_paClimateInfo.size(); }
-	const CvClimateInfo& getClimateInfo(ClimateTypes e) const { return getInfo(m_paClimateInfo, e); }
-
-	int getNumSeaLevelInfos() const { return m_paSeaLevelInfo.size(); }
-	const CvSeaLevelInfo& getSeaLevelInfo(SeaLevelTypes e) const { return getInfo(m_paSeaLevelInfo, e); }
-
-	int getNumColorInfos() const { return m_paColorInfo.size(); }
-	const CvColorInfo& getColorInfo(ColorTypes e) const { return getInfo(m_paColorInfo, e); }
-
-	int getNumPlayerColorInfos() const { return m_paPlayerColorInfo.size(); }
-	const CvPlayerColorInfo& getPlayerColorInfo(PlayerColorTypes e) const { return getInfo(m_paPlayerColorInfo, e); }
-
-	int getNumAdvisorInfos() const { return m_paAdvisorInfo.size(); }
-	const CvAdvisorInfo& getAdvisorInfo(AdvisorTypes e) const { return getInfo(m_paAdvisorInfo, e); }
-
-	int getNumHints() const { return m_paHints.size(); }
-	const CvInfoBase& getHints(int i) const { return getInfo(m_paHints, i); }
-
-	int getNumMainMenus() const { return m_paMainMenus.size(); }
-	const CvMainMenuInfo& getMainMenus(int i) const;
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 10/30/07                            MRGENIE          */
 /*                                                                                              */
@@ -399,6 +376,29 @@ public:
 /************************************************************************************************/
 /* XML_MODULAR_ART_LOADING                 END                                                  */
 /************************************************************************************************/
+	int getNumWorldInfos() const { return m_paWorldInfo.size(); }
+	const CvWorldInfo& getWorldInfo(WorldSizeTypes e) const { return getInfo(m_paWorldInfo, e); }
+
+	int getNumClimateInfos() const { return m_paClimateInfo.size(); }
+	const CvClimateInfo& getClimateInfo(ClimateTypes e) const { return getInfo(m_paClimateInfo, e); }
+
+	int getNumSeaLevelInfos() const { return m_paSeaLevelInfo.size(); }
+	const CvSeaLevelInfo& getSeaLevelInfo(SeaLevelTypes e) const { return getInfo(m_paSeaLevelInfo, e); }
+
+	int getNumColorInfos() const { return m_paColorInfo.size(); }
+	const CvColorInfo& getColorInfo(ColorTypes e) const { return getInfo(m_paColorInfo, e); }
+
+	int getNumPlayerColorInfos() const { return m_paPlayerColorInfo.size(); }
+	const CvPlayerColorInfo& getPlayerColorInfo(PlayerColorTypes e) const { return getInfo(m_paPlayerColorInfo, e); }
+
+	int getNumAdvisorInfos() const { return m_paAdvisorInfo.size(); }
+	const CvAdvisorInfo& getAdvisorInfo(AdvisorTypes e) const { return getInfo(m_paAdvisorInfo, e); }
+
+	int getNumHints() const { return m_paHints.size(); }
+	const CvInfoBase& getHints(int i) const { return getInfo(m_paHints, i); }
+
+	int getNumMainMenus() const { return m_paMainMenus.size(); }
+	const CvMainMenuInfo& getMainMenus(int i) const { return i >= getNumMainMenus() ? *(m_paMainMenus[0]) : *(m_paMainMenus[i]); }
 
 	int getNumRouteModelInfos() const { return m_paRouteModelInfo.size(); }
 	const CvRouteModelInfo& getRouteModelInfo(int i) const { return getInfo(m_paRouteModelInfo, i); }
@@ -447,31 +447,27 @@ public:
 	void setActiveLandscapeID(int iLandscapeID) { m_iActiveLandscapeID = iLandscapeID; }
 
 	int getNumTerrainInfos() const { return m_paTerrainInfo.size(); }
-	const CvTerrainInfo& getTerrainInfo(TerrainTypes eTerrainNum) const { return getInfo(m_paTerrainInfo, eTerrainNum); }
+	CvTerrainInfo& getTerrainInfo(TerrainTypes eTerrainNum) const { return getInfo(m_paTerrainInfo, eTerrainNum); }
 
 	int getNumBonusClassInfos() const { return m_paBonusClassInfo.size(); }
 	const CvBonusClassInfo& getBonusClassInfo(BonusClassTypes eBonusNum) const { return getInfo(m_paBonusClassInfo, eBonusNum); }
 
 	int getNumBonusInfos() const { return m_paBonusInfo.size(); }
-	const CvBonusInfo& getBonusInfo(BonusTypes eBonusNum) const { return getInfo(m_paBonusInfo, eBonusNum); }
-	CvBonusInfo& getBonusInfo(BonusTypes eBonusNum) { return getInfo(m_paBonusInfo, eBonusNum); }
+	CvBonusInfo& getBonusInfo(BonusTypes eBonusNum) const { return getInfo(m_paBonusInfo, eBonusNum); }
 
 	int getNumFeatureInfos() const { return m_paFeatureInfo.size(); }
-	const CvFeatureInfo& getFeatureInfo(FeatureTypes eFeatureNum) const { return getInfo(m_paFeatureInfo, eFeatureNum); }
+	CvFeatureInfo& getFeatureInfo(FeatureTypes eFeatureNum) const { return getInfo(m_paFeatureInfo, eFeatureNum); }
 
 	int& getNumPlayableCivilizationInfos() { return m_iNumPlayableCivilizationInfos; }
 	int& getNumAIPlayableCivilizationInfos() { return m_iNumAIPlayableCivilizationInfos; }
 	int getNumCivilizationInfos() const { return m_paCivilizationInfo.size(); }
-	const CvCivilizationInfo& getCivilizationInfo(CivilizationTypes eCivilizationNum) const { return getInfo(m_paCivilizationInfo, eCivilizationNum); }
-	CvCivilizationInfo& getCivilizationInfo(CivilizationTypes eCivilizationNum) { return getInfo(m_paCivilizationInfo, eCivilizationNum); }
+	CvCivilizationInfo& getCivilizationInfo(CivilizationTypes eCivilizationNum) const { return getInfo(m_paCivilizationInfo, eCivilizationNum); }
 
 	int getNumLeaderHeadInfos() const { return m_paLeaderHeadInfo.size(); }
-	const CvLeaderHeadInfo& getLeaderHeadInfo(LeaderHeadTypes eLeaderHeadNum) const { return getInfo(m_paLeaderHeadInfo, eLeaderHeadNum); }
-	CvLeaderHeadInfo& getLeaderHeadInfo(LeaderHeadTypes eLeaderHeadNum) { return getInfo(m_paLeaderHeadInfo, eLeaderHeadNum); }
+	CvLeaderHeadInfo& getLeaderHeadInfo(LeaderHeadTypes eLeaderHeadNum) const { return getInfo(m_paLeaderHeadInfo, eLeaderHeadNum); }
 
 	int getNumTraitInfos() const { return m_paTraitInfo.size(); }
-	const CvTraitInfo& getTraitInfo(TraitTypes eTraitNum) const { return getInfo(m_paTraitInfo, eTraitNum); }
-	CvTraitInfo& getTraitInfo(TraitTypes eTraitNum) { return getInfo(m_paTraitInfo, eTraitNum); }
+	CvTraitInfo& getTraitInfo(TraitTypes eTraitNum) const { return getInfo(m_paTraitInfo, eTraitNum); }
 
 	int getNumCursorInfos() const { return m_paCursorInfo.size(); }
 	const CvCursorInfo& getCursorInfo(CursorTypes eCursorNum) const { return getInfo(m_paCursorInfo, eCursorNum); }
@@ -498,8 +494,7 @@ public:
 	const CvSpaceShipInfo& getSpaceShipInfo(int iIndex) const { return getInfo(m_paSpaceShipInfo, iIndex); }
 
 	int getNumUnitInfos() const { return m_paUnitInfo.size(); }
-	const CvUnitInfo& getUnitInfo(UnitTypes eUnitNum) const { return getInfo(m_paUnitInfo, eUnitNum); }
-	CvUnitInfo& getUnitInfo(UnitTypes eUnitNum) { return getInfo(m_paUnitInfo, eUnitNum); }
+	CvUnitInfo& getUnitInfo(UnitTypes eUnitNum) const { return getInfo(m_paUnitInfo, eUnitNum); }
 
 	int getNumSpawnInfos() const { return m_paSpawnInfo.size(); }
 	const CvSpawnInfo& getSpawnInfo(SpawnTypes eSpawnNum) const { return getInfo(m_paSpawnInfo, eSpawnNum); }
@@ -514,105 +509,36 @@ public:
 	const CvInfoBase& getNewConceptInfo(NewConceptTypes e) const { return getInfo(m_paNewConceptInfo, e); }
 
 	int getNumPropertyInfos() const { return m_paPropertyInfo.size(); }
-	const CvPropertyInfo& getPropertyInfo(PropertyTypes ePropertyNum) const { return getInfo(m_paPropertyInfo, ePropertyNum); }
+	CvPropertyInfo& getPropertyInfo(PropertyTypes ePropertyNum) const { return getInfo(m_paPropertyInfo, ePropertyNum); }
 
 	int getNumOutcomeInfos() const { return m_paOutcomeInfo.size(); }
 	const CvOutcomeInfo& getOutcomeInfo(OutcomeTypes eOutcomeNum) const { return getInfo(m_paOutcomeInfo, eOutcomeNum); }
 
-/************************************************************************************************/
-/*Afforess                                     12/21/09                                         */
-/************************************************************************************************/
-	int getPEAK_EXTRA_DEFENSE() const;
-	int getPEAK_EXTRA_MOVEMENT() const;
-	
-	int iStuckUnitID;
-	int iStuckUnitCount;
-
-	bool isLoadedPlayerOptions() const;
-	void setLoadedPlayerOptions(bool bNewVal);
-	
-	bool isXMLLogging() const;
-	void setXMLLogging(bool bNewVal);
-
-	void updateReplacements();
-	
-	int getSCORE_FREE_PERCENT() const;
-	int getSCORE_POPULATION_FACTOR() const;
-	int getSCORE_LAND_FACTOR() const;
-	int getSCORE_TECH_FACTOR() const;
-	int getSCORE_WONDER_FACTOR() const;
-	
-	int getUSE_CAN_CREATE_PROJECT_CALLBACK() const;
-	int getUSE_CANNOT_CREATE_PROJECT_CALLBACK() const;
-	int getUSE_CAN_DO_MELTDOWN_CALLBACK() const;
-	int getUSE_CAN_MAINTAIN_PROCESS_CALLBACK() const;
-	int getUSE_CANNOT_MAINTAIN_PROCESS_CALLBACK() const;
-	int getUSE_CAN_DO_GROWTH_CALLBACK() const;
-	int getUSE_CAN_DO_CULTURE_CALLBACK() const;
-	int getUSE_CAN_DO_PLOT_CULTURE_CALLBACK() const;
-	int getUSE_CAN_DO_PRODUCTION_CALLBACK() const;
-	int getUSE_CAN_DO_RELIGION_CALLBACK() const;
-	int getUSE_CAN_DO_GREATPEOPLE_CALLBACK() const;
-	int getUSE_CAN_RAZE_CITY_CALLBACK() const;
-	int getUSE_CAN_DO_GOLD_CALLBACK() const;
-	int getUSE_CAN_DO_RESEARCH_CALLBACK() const;
-	int getUSE_UPGRADE_UNIT_PRICE_CALLBACK() const;
-	int getUSE_IS_VICTORY_CALLBACK() const;
-	int getUSE_AI_UPDATE_UNIT_CALLBACK() const;
-	int getUSE_AI_CHOOSE_PRODUCTION_CALLBACK() const;
-	int getUSE_EXTRA_PLAYER_COSTS_CALLBACK() const;
-	int getUSE_AI_DO_DIPLO_CALLBACK() const;
-	int getUSE_AI_BESTTECH_CALLBACK() const;
-	int getUSE_CAN_DO_COMBAT_CALLBACK() const;
-	int getUSE_AI_CAN_DO_WARPLANS_CALLBACK() const;
-	int getLAND_UNITS_CAN_ATTACK_WATER_CITIES() const;
-	int getBASE_UNIT_UPGRADE_COST() const;
-	int getUPGRADE_ROUND_LIMIT() const;
-	int getCITY_BARBARIAN_DEFENSE_MODIFIER() const;
-	int getUNIT_VISIBILITY_RANGE() const;
-	int getMAX_UNIT_VISIBILITY_RANGE() const;
-	int getGREATER_COMMERCE_SWITCH_POINT() const;
-	int getWORKER_TRADE_VALUE_PERCENT_ADJUSTMENT() const;
-	int getTRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT() const;
-	int getINFILTRATE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT() const;
-	int getESPIONAGE_MISSION_COST_END_TOTAL_PERCENT_ADJUSTMENT() const;
-	int getWATER_POTENTIAL_CITY_WORK_FOR_AREA() const;
-	int getSAD_MAX_MODIFIER() const;
-	int getUPSCALED_RESEARCH_COST_MODIFIER() const;
-	int getENABLE_DYNAMIC_UNIT_ENTITIES() const;
-	float getSAD_FACTOR_1() const;
-	float getSAD_FACTOR_2() const;
-	float getSAD_FACTOR_3() const;
-	float getSAD_FACTOR_4() const;
-/************************************************************************************************/
-/* Afforess                                END                                                  */
-/************************************************************************************************/
-
 	int getNumCityTabInfos() const { return m_paCityTabInfo.size(); }
-	CvInfoBase& getCityTabInfo(CityTabTypes e) const { return getInfo(m_paCityTabInfo, e); }
+	const CvInfoBase& getCityTabInfo(CityTabTypes e) const { return getInfo(m_paCityTabInfo, e); }
 
 	int getNumCalendarInfos() const { return m_paCalendarInfo.size(); }
-	CvInfoBase& getCalendarInfo(CalendarTypes e) const { return getInfo(m_paCalendarInfo, e); }
+	const CvInfoBase& getCalendarInfo(CalendarTypes e) const { return getInfo(m_paCalendarInfo, e); }
 
 	int getNumSeasonInfos() const { return m_paSeasonInfo.size(); }
-	CvInfoBase& getSeasonInfo(SeasonTypes e) const { return getInfo(m_paSeasonInfo, e); }
+	const CvInfoBase& getSeasonInfo(SeasonTypes e) const { return getInfo(m_paSeasonInfo, e); }
 
 	int getNumMonthInfos() const { return m_paMonthInfo.size(); }
-	CvInfoBase& getMonthInfo(MonthTypes e) const { return getInfo(m_paMonthInfo, e); }
+	const CvInfoBase& getMonthInfo(MonthTypes e) const { return getInfo(m_paMonthInfo, e); }
 
 	int getNumDenialInfos() const { return m_paDenialInfo.size(); }
-	CvInfoBase& getDenialInfo(DenialTypes e) const { return getInfo(m_paDenialInfo, e); }
+	const CvInfoBase& getDenialInfo(DenialTypes e) const { return getInfo(m_paDenialInfo, e); }
 
 	int getNumInvisibleInfos() const { return m_paInvisibleInfo.size(); }
 	CvInvisibleInfo& getInvisibleInfo(InvisibleTypes e) const { return getInfo(m_paInvisibleInfo, e); }
 
 	int getNumVoteSourceInfos() const { return m_paVoteSourceInfo.size(); }
-	CvVoteSourceInfo& getVoteSourceInfo(VoteSourceTypes e) const { return getInfo(m_paVoteSourceInfo, e); }
+	const CvVoteSourceInfo& getVoteSourceInfo(VoteSourceTypes e) const { return getInfo(m_paVoteSourceInfo, e); }
 
 	int getNumUnitCombatInfos() const { return m_paUnitCombatInfo.size(); }
 	CvUnitCombatInfo& getUnitCombatInfo(UnitCombatTypes e) const { return getInfo(m_paUnitCombatInfo, e); }
 
-	CvInfoBase& getDomainInfo(DomainTypes e) const { return getInfo(m_paDomainInfo, e); }
+	const CvInfoBase& getDomainInfo(DomainTypes e) const { return getInfo(m_paDomainInfo, e); }
 
 	//TB Promotion Line Mod begin
 	int getNumPromotionLineInfos() const { return m_paPromotionLineInfo.size(); }
@@ -620,50 +546,32 @@ public:
 	//TB Promotion Line Mod end
 
 	int getNumMapCategoryInfos() const { return m_paMapCategoryInfo.size(); }
-	CvMapCategoryInfo& getMapCategoryInfo(MapCategoryTypes e) const { return getInfo(m_paMapCategoryInfo, e); }
+	const CvMapCategoryInfo& getMapCategoryInfo(MapCategoryTypes e) const { return getInfo(m_paMapCategoryInfo, e); }
 
 	int getNumIdeaClassInfos() const { return m_paIdeaClassInfo.size(); }
-	CvIdeaClassInfo& getIdeaClassInfo(IdeaClassTypes e) const { return getInfo(m_paIdeaClassInfo, e); }
+	const CvIdeaClassInfo& getIdeaClassInfo(IdeaClassTypes e) const { return getInfo(m_paIdeaClassInfo, e); }
 
 	int getNumIdeaInfos() const { return m_paIdeaInfo.size(); }
-	CvIdeaInfo& getIdeaInfo(IdeaTypes e) const { return getInfo(m_paIdeaInfo, e); }
+	const CvIdeaInfo& getIdeaInfo(IdeaTypes e) const { return getInfo(m_paIdeaInfo, e); }
 
-	CvInfoBase& getUnitAIInfo(UnitAITypes eUnitAINum) const { return getInfo(m_paUnitAIInfos, eUnitAINum); }
+	const CvInfoBase& getUnitAIInfo(UnitAITypes eUnitAINum) const { return getInfo(m_paUnitAIInfos, eUnitAINum); }
 
-	//	Koshling - added internal registration of supported UnitAI types, not reliant
-	//	on external definition in XML
-private:
-	void registerUnitAI(const char* szType, int enumVal);
-	void registerMission(const char* szType, int enumVal);
-public:
-	void registerUnitAIs();
-	void registerAIScales();
-	void registerGameObjects();
-	void registerGOMs();
-	void registerRelations();
-	void registerAttributes();
-	void registerTags();
-	void registerPropertySources();
-	void registerPropertyInteractions();
-	void registerPropertyPropagators();
-	void registerMissions();
+	const CvInfoBase& getAttitudeInfo(AttitudeTypes eAttitudeNum) const { return getInfo(m_paAttitudeInfos, eAttitudeNum); }
 
-	CvInfoBase& getAttitudeInfo(AttitudeTypes eAttitudeNum) const { return getInfo(m_paAttitudeInfos, eAttitudeNum); }
-
-	CvInfoBase& getMemoryInfo(MemoryTypes eMemoryNum) const { return getInfo(m_paMemoryInfos, eMemoryNum); }
+	const CvInfoBase& getMemoryInfo(MemoryTypes eMemoryNum) const { return getInfo(m_paMemoryInfos, eMemoryNum); }
 
 	int getNumGameOptionInfos() const { return m_paGameOptionInfos.size(); }
 	CvGameOptionInfo& getGameOptionInfo(GameOptionTypes eGameOptionNum) const { return getInfo(m_paGameOptionInfos, eGameOptionNum); }
 
 	int getNumMPOptionInfos() const { return m_paMPOptionInfos.size(); }
-	CvMPOptionInfo& getMPOptionInfo(MultiplayerOptionTypes eMPOptionNum) const { return getInfo(m_paMPOptionInfos, eMPOptionNum); }
+	const CvMPOptionInfo& getMPOptionInfo(MultiplayerOptionTypes eMPOptionNum) const { return getInfo(m_paMPOptionInfos, eMPOptionNum); }
 
 	int getNumForceControlInfos() const { return m_paForceControlInfos.size(); }
-	CvForceControlInfo& getForceControlInfo(ForceControlTypes eForceControlNum) const { return getInfo(m_paForceControlInfos, eForceControlNum); }
+	const CvForceControlInfo& getForceControlInfo(ForceControlTypes eForceControlNum) const { return getInfo(m_paForceControlInfos, eForceControlNum); }
 
-	CvPlayerOptionInfo& getPlayerOptionInfo(PlayerOptionTypes ePlayerOptionNum) const { return getInfo(m_paPlayerOptionInfos, ePlayerOptionNum); }
+	const CvPlayerOptionInfo& getPlayerOptionInfo(PlayerOptionTypes ePlayerOptionNum) const { return getInfo(m_paPlayerOptionInfos, ePlayerOptionNum); }
 
-	CvGraphicOptionInfo& getGraphicOptionInfo(GraphicOptionTypes eGraphicOptionNum) const { return getInfo(m_paGraphicOptionInfos, eGraphicOptionNum); }
+	const CvGraphicOptionInfo& getGraphicOptionInfo(GraphicOptionTypes eGraphicOptionNum) const { return getInfo(m_paGraphicOptionInfos, eGraphicOptionNum); }
 
 	CvYieldInfo& getYieldInfo(YieldTypes eYieldNum) const { return getInfo(m_paYieldInfo, eYieldNum); }
 
@@ -676,7 +584,7 @@ public:
 	CvImprovementInfo& getImprovementInfo(ImprovementTypes eImprovementNum) const { return getInfo(m_paImprovementInfo, eImprovementNum); }
 
 	int getNumGoodyInfos() const { return m_paGoodyInfo.size(); }
-	CvGoodyInfo& getGoodyInfo(GoodyTypes eGoodyNum) const { return getInfo(m_paGoodyInfo, eGoodyNum); }
+	const CvGoodyInfo& getGoodyInfo(GoodyTypes eGoodyNum) const { return getInfo(m_paGoodyInfo, eGoodyNum); }
 
 	int getNumBuildInfos() const { return m_paBuildInfo.size(); }
 	CvBuildInfo& getBuildInfo(BuildTypes eBuildNum) const { return getInfo(m_paBuildInfo, eBuildNum); }
@@ -688,13 +596,13 @@ public:
 	CvGameSpeedInfo& getGameSpeedInfo(GameSpeedTypes eGameSpeedNum) const { return getInfo(m_paGameSpeedInfo, eGameSpeedNum); }
 
 	int getNumTurnTimerInfos() const { return m_paTurnTimerInfo.size(); }
-	CvTurnTimerInfo& getTurnTimerInfo(TurnTimerTypes eTurnTimerNum) const { return getInfo(m_paTurnTimerInfo, eTurnTimerNum); }
+	const CvTurnTimerInfo& getTurnTimerInfo(TurnTimerTypes eTurnTimerNum) const { return getInfo(m_paTurnTimerInfo, eTurnTimerNum); }
 
 	int getNumProcessInfos() const { return m_paProcessInfo.size(); }
-	CvProcessInfo& getProcessInfo(ProcessTypes e) const { return getInfo(m_paProcessInfo, e); }
+	const CvProcessInfo& getProcessInfo(ProcessTypes e) const { return getInfo(m_paProcessInfo, e); }
 
 	int getNumVoteInfos() const { return m_paVoteInfo.size(); }
-	CvVoteInfo& getVoteInfo(VoteTypes e) const { return getInfo(m_paVoteInfo, e); }
+	const CvVoteInfo& getVoteInfo(VoteTypes e) const { return getInfo(m_paVoteInfo, e); }
 
 	int getNumProjectInfos() const { return m_paProjectInfo.size(); }
 	CvProjectInfo& getProjectInfo(ProjectTypes e) const { return getInfo(m_paProjectInfo, e); }
@@ -703,10 +611,10 @@ public:
 	CvBuildingInfo& getBuildingInfo(BuildingTypes eBuildingNum) const { return getInfo(m_paBuildingInfo, eBuildingNum); }
 
 	int getNumSpecialBuildingInfos() const { return m_paSpecialBuildingInfo.size(); }
-	CvSpecialBuildingInfo& getSpecialBuildingInfo(SpecialBuildingTypes eSpecialBuildingNum) const { return getInfo(m_paSpecialBuildingInfo, eSpecialBuildingNum); }
+	const CvSpecialBuildingInfo& getSpecialBuildingInfo(SpecialBuildingTypes eSpecialBuildingNum) const { return getInfo(m_paSpecialBuildingInfo, eSpecialBuildingNum); }
 
 	int getNumActionInfos() const { return m_paActionInfo.size(); }
-	CvActionInfo& getActionInfo(int i) const { return getInfo(m_paActionInfo, i); }
+	const CvActionInfo& getActionInfo(int i) const { return getInfo(m_paActionInfo, i); }
 
 	CvMissionInfo& getMissionInfo(MissionTypes eMissionNum) const { return getInfo(m_paMissionInfo, eMissionNum); }
 
@@ -735,37 +643,37 @@ public:
 	CvSpecialistInfo& getSpecialistInfo(SpecialistTypes eSpecialistNum) const { return getInfo(m_paSpecialistInfo, eSpecialistNum); }
 
 	int getNumCivicOptionInfos() const { return m_paCivicOptionInfo.size(); }
-	CvCivicOptionInfo& getCivicOptionInfo(CivicOptionTypes eCivicOptionNum) const { return getInfo(m_paCivicOptionInfo, eCivicOptionNum); }
+	const CvCivicOptionInfo& getCivicOptionInfo(CivicOptionTypes eCivicOptionNum) const { return getInfo(m_paCivicOptionInfo, eCivicOptionNum); }
 
 	int getNumCivicInfos() const { return m_paCivicInfo.size(); }
 	CvCivicInfo& getCivicInfo(CivicTypes eCivicNum) const { return getInfo(m_paCivicInfo, eCivicNum); }
 
 	int getNumDiplomacyInfos() const { return m_paDiplomacyInfo.size(); }
-	CvDiplomacyInfo& getDiplomacyInfo(int iDiplomacyNum) const { return getInfo(m_paDiplomacyInfo, iDiplomacyNum); }
+	const CvDiplomacyInfo& getDiplomacyInfo(int iDiplomacyNum) const { return getInfo(m_paDiplomacyInfo, iDiplomacyNum); }
 
 	int getNumEraInfos() const { return m_aEraInfo.size(); }
-	CvEraInfo& getEraInfo(EraTypes eEraNum) const { return getInfo(m_aEraInfo, eEraNum); }
+	const CvEraInfo& getEraInfo(EraTypes eEraNum) const { return getInfo(m_aEraInfo, eEraNum); }
 
 	int getNumHurryInfos() const { return m_paHurryInfo.size(); }
-	CvHurryInfo& getHurryInfo(HurryTypes eHurryNum) const { return getInfo(m_paHurryInfo, eHurryNum); }
+	const CvHurryInfo& getHurryInfo(HurryTypes eHurryNum) const { return getInfo(m_paHurryInfo, eHurryNum); }
 
 	int getNumEmphasizeInfos() const { return m_paEmphasizeInfo.size(); }
-	CvEmphasizeInfo& getEmphasizeInfo(EmphasizeTypes eEmphasizeNum) const { return getInfo(m_paEmphasizeInfo, eEmphasizeNum); }
+	const CvEmphasizeInfo& getEmphasizeInfo(EmphasizeTypes eEmphasizeNum) const { return getInfo(m_paEmphasizeInfo, eEmphasizeNum); }
 
 	int getNumUpkeepInfos() const { return m_paUpkeepInfo.size(); }
-	CvUpkeepInfo& getUpkeepInfo(UpkeepTypes eUpkeepNum) const { return getInfo(m_paUpkeepInfo, eUpkeepNum); }
+	const CvUpkeepInfo& getUpkeepInfo(UpkeepTypes eUpkeepNum) const { return getInfo(m_paUpkeepInfo, eUpkeepNum); }
 
 	int getNumCultureLevelInfos() const { return m_paCultureLevelInfo.size(); }
-	CvCultureLevelInfo& getCultureLevelInfo(CultureLevelTypes eCultureLevelNum) const { return getInfo(m_paCultureLevelInfo, eCultureLevelNum); }
+	const CvCultureLevelInfo& getCultureLevelInfo(CultureLevelTypes eCultureLevelNum) const { return getInfo(m_paCultureLevelInfo, eCultureLevelNum); }
 
 	int getNumVictoryInfos() const { return m_paVictoryInfo.size(); }
-	CvVictoryInfo& getVictoryInfo(VictoryTypes eVictoryNum) const { return getInfo(m_paVictoryInfo, eVictoryNum); }
+	const CvVictoryInfo& getVictoryInfo(VictoryTypes eVictoryNum) const { return getInfo(m_paVictoryInfo, eVictoryNum); }
 
 	int getNumQuestInfos() const { return m_paQuestInfo.size(); }
-	CvQuestInfo& getQuestInfo(int iIndex) const { return getInfo(m_paQuestInfo, iIndex); }
+	const CvQuestInfo& getQuestInfo(int iIndex) const { return getInfo(m_paQuestInfo, iIndex); }
 
 	int getNumTutorialInfos() const { return m_paTutorialInfo.size(); }
-	CvTutorialInfo& getTutorialInfo(int i) const { return getInfo(m_paTutorialInfo, i); }
+	const CvTutorialInfo& getTutorialInfo(int i) const { return getInfo(m_paTutorialInfo, i); }
 
 	int getNumEventTriggerInfos() const { return m_paEventTriggerInfo.size(); }
 	CvEventTriggerInfo& getEventTriggerInfo(EventTriggerTypes eEventTrigger) const { return getInfo(m_paEventTriggerInfo, eEventTrigger); }
@@ -774,10 +682,28 @@ public:
 	CvEventInfo& getEventInfo(EventTypes eEvent) const { return getInfo(m_paEventInfo, eEvent); }
 
 	int getNumEspionageMissionInfos() const { return m_paEspionageMissionInfo.size(); }
-	CvEspionageMissionInfo& getEspionageMissionInfo(EspionageMissionTypes eEspionageMissionNum) const { return getInfo(m_paEspionageMissionInfo, eEspionageMissionNum); }
+	const CvEspionageMissionInfo& getEspionageMissionInfo(EspionageMissionTypes eEspionageMissionNum) const { return getInfo(m_paEspionageMissionInfo, eEspionageMissionNum); }
 
 	int getNumUnitArtStyleTypeInfos() const { return m_paUnitArtStyleTypeInfo.size(); }
-	CvUnitArtStyleTypeInfo& getUnitArtStyleTypeInfo(UnitArtStyleTypes eUnitArtStyleTypeNum) const { return getInfo(m_paUnitArtStyleTypeInfo, eUnitArtStyleTypeNum); }
+	const CvUnitArtStyleTypeInfo& getUnitArtStyleTypeInfo(UnitArtStyleTypes eUnitArtStyleTypeNum) const { return getInfo(m_paUnitArtStyleTypeInfo, eUnitArtStyleTypeNum); }
+
+	//	Koshling - added internal registration of supported UnitAI types, not reliant
+	//	on external definition in XML
+private:
+	void registerUnitAI(const char* szType, int enumVal);
+	void registerMission(const char* szType, int enumVal);
+public:
+	void registerUnitAIs();
+	void registerAIScales();
+	void registerGameObjects();
+	void registerGOMs();
+	void registerRelations();
+	void registerAttributes();
+	void registerTags();
+	void registerPropertySources();
+	void registerPropertyInteractions();
+	void registerPropertyPropagators();
+	void registerMissions();
 
 	//
 	// Global Types
@@ -860,6 +786,75 @@ public:
 	bool getDefineBOOL( const char * szName ) const;
 /************************************************************************************************/
 /* MOD_COMPONENT_CONTROL                   END                                                  */
+/************************************************************************************************/
+
+/************************************************************************************************/
+/*Afforess                                     12/21/09                                         */
+/************************************************************************************************/
+	int getPEAK_EXTRA_DEFENSE() const;
+	int getPEAK_EXTRA_MOVEMENT() const;
+	
+	int iStuckUnitID;
+	int iStuckUnitCount;
+
+	bool isLoadedPlayerOptions() const;
+	void setLoadedPlayerOptions(bool bNewVal);
+	
+	bool isXMLLogging() const;
+	void setXMLLogging(bool bNewVal);
+
+	void updateReplacements();
+	
+	int getSCORE_FREE_PERCENT() const;
+	int getSCORE_POPULATION_FACTOR() const;
+	int getSCORE_LAND_FACTOR() const;
+	int getSCORE_TECH_FACTOR() const;
+	int getSCORE_WONDER_FACTOR() const;
+	
+	int getUSE_CAN_CREATE_PROJECT_CALLBACK() const;
+	int getUSE_CANNOT_CREATE_PROJECT_CALLBACK() const;
+	int getUSE_CAN_DO_MELTDOWN_CALLBACK() const;
+	int getUSE_CAN_MAINTAIN_PROCESS_CALLBACK() const;
+	int getUSE_CANNOT_MAINTAIN_PROCESS_CALLBACK() const;
+	int getUSE_CAN_DO_GROWTH_CALLBACK() const;
+	int getUSE_CAN_DO_CULTURE_CALLBACK() const;
+	int getUSE_CAN_DO_PLOT_CULTURE_CALLBACK() const;
+	int getUSE_CAN_DO_PRODUCTION_CALLBACK() const;
+	int getUSE_CAN_DO_RELIGION_CALLBACK() const;
+	int getUSE_CAN_DO_GREATPEOPLE_CALLBACK() const;
+	int getUSE_CAN_RAZE_CITY_CALLBACK() const;
+	int getUSE_CAN_DO_GOLD_CALLBACK() const;
+	int getUSE_CAN_DO_RESEARCH_CALLBACK() const;
+	int getUSE_UPGRADE_UNIT_PRICE_CALLBACK() const;
+	int getUSE_IS_VICTORY_CALLBACK() const;
+	int getUSE_AI_UPDATE_UNIT_CALLBACK() const;
+	int getUSE_AI_CHOOSE_PRODUCTION_CALLBACK() const;
+	int getUSE_EXTRA_PLAYER_COSTS_CALLBACK() const;
+	int getUSE_AI_DO_DIPLO_CALLBACK() const;
+	int getUSE_AI_BESTTECH_CALLBACK() const;
+	int getUSE_CAN_DO_COMBAT_CALLBACK() const;
+	int getUSE_AI_CAN_DO_WARPLANS_CALLBACK() const;
+	int getLAND_UNITS_CAN_ATTACK_WATER_CITIES() const;
+	int getBASE_UNIT_UPGRADE_COST() const;
+	int getUPGRADE_ROUND_LIMIT() const;
+	int getCITY_BARBARIAN_DEFENSE_MODIFIER() const;
+	int getUNIT_VISIBILITY_RANGE() const;
+	int getMAX_UNIT_VISIBILITY_RANGE() const;
+	int getGREATER_COMMERCE_SWITCH_POINT() const;
+	int getWORKER_TRADE_VALUE_PERCENT_ADJUSTMENT() const;
+	int getTRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT() const;
+	int getINFILTRATE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT() const;
+	int getESPIONAGE_MISSION_COST_END_TOTAL_PERCENT_ADJUSTMENT() const;
+	int getWATER_POTENTIAL_CITY_WORK_FOR_AREA() const;
+	int getSAD_MAX_MODIFIER() const;
+	int getUPSCALED_RESEARCH_COST_MODIFIER() const;
+	int getENABLE_DYNAMIC_UNIT_ENTITIES() const;
+	float getSAD_FACTOR_1() const;
+	float getSAD_FACTOR_2() const;
+	float getSAD_FACTOR_3() const;
+	float getSAD_FACTOR_4() const;
+/************************************************************************************************/
+/* Afforess                                END                                                  */
 /************************************************************************************************/
 
 /************************************************************************************************/
