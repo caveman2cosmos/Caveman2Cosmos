@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
-
-	<!-- Strategic Grain Reserve Wonder -->
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STRATEGIC_GRAIN_RESERVE</Tag>
 		<English>Strategic Grain Reserve</English>
@@ -20,7 +18,6 @@
 		<English>The [COLOR_BUILDING_TEXT]Strategic Grain Reserve[COLOR_REVERT] provides a free Ganary in all of your cities and a 20% food bonus in the founding city.  It increases it's city's odds of generating a Great Engineer.</English>
 		<French>[COLOR_BUILDING_TEXT]La Réserve Stratégique de Céréales[COLOR_REVERT] fournit un grenir gratuit dans chaque ville, et un bonus de 20% de nourriture lors de l'établissement d'une ville. Elle augmente la probabilité de donner naissance à un ingénieur illustre.</French>
 	</TEXT>
-	<!-- END Strategic Grain Reserve Wonder -->
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOPKAPI_PALACE</Tag>
 		<English>Topkapi Palace</English>
@@ -35,14 +32,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOPKAPI_PALACE_PEDIA</Tag>
 		<English>The Topkapi Palace is a palace in Istanbul, Turkey, which was the official and primary residence in the city of the Ottoman Sultans, from 1465 to 1853. The palace was a setting for state occasions and royal entertainments and is a major tourist attraction today. The name directly translates as "Cannongate Palace", from the palace being named after a nearby, now lost gate.[NEWLINE][NEWLINE][TAB]Initial construction started in 1459, ordered by Sultan Mehmed II, the conqueror of Byzantine Constantinople. The palace is a complex made up of four main courtyards and many smaller buildings. At the height of its existence as a royal residence, the palace was home to as many as 4,000 people, formerly covering a larger area with a long shoreline. The complex has been expanded over the centuries, with many renovations such as after the 1509 earthquake and 1665 fire.[NEWLINE][NEWLINE][TAB]Topkapi Palace gradually lost its importance at the end of the 17th century, as the Sultans preferred to spend more time in their new palaces along the Bosporus. In 1853, Sultan Abdül Mecid I decided to move the court to the newly built Dolmabahçe Palace, the first European-style palace in the city. Some functions, such as the imperial treasury, the library, mosque and mint, were retained though.[NEWLINE][NEWLINE][TAB]After the end of the Ottoman Empire in 1921, Topkapi Palace was transformed by government decree on April 3, 1924 into a museum of the imperial era. The Topkapi Palace Museum is under the administration of the Ministry of Culture and Tourism. The palace complex has hundreds of rooms and chambers, but only the most important are accessible to the public today. The complex is guarded by officials of the ministry as well as armed guards of the Turkish military. The palace is full of examples of Ottoman architecture and also contains large collections of porcelain, robes, weapons, shields, armor, Ottoman miniatures, Islamic calligraphic manuscripts and murals, as well as a display of Ottoman treasure and jewelry.[NEWLINE][NEWLINE][TAB]Topkapi Palace is among those monuments belonging to the "Historic Areas of Istanbul", which became a UNESCO World Heritage Site in 1985, and is described in Criterion iv as "the best example[s] of ensembles of palaces [...] of the Ottoman period."</English>
-		<French>The Topkapi Palace is a palace in Istanbul, Turkey, which was the official and primary residence in the city du Ottoman Sultans, from 1465 to 1853. The palace was a setting for state occasions and royal entertainments and is a major tourist attraction today. The name directly translates as "Cannongate Palace", from the palace being named after a nearby, now lost gate.[NEWLINE][NEWLINE][TAB]Initial construction started in 1459, ordered by Sultan Mehmed II, the conqueror of Byzantine Constantinople. The palace is a complex made up of four main courtyards and many smaller buildings. At the height of its existence as a royal residence, the palace was home to as many as 4,000 people, formerly covering a larger area with a long shoreline. The complex has been expanded over the centuries, with many renovations such as after the 1509 earthquake and 1665 fire.[NEWLINE][NEWLINE][TAB]Topkapi Palace gradually lost its importance at the end du 17th century, as the Sultans preferred to spend more time in their new palaces along the Bosporus. In 1853, Sultan Abdül Mecid I decided to move the court to the newly built Dolmabahçe Palace, the first European-style palace in the city. Some functions, such as the imperial treasury, the library, mosque and mint, were retained though.[NEWLINE][NEWLINE][TAB]After the end du Ottoman Empire in 1921, Topkapi Palace was transformed by government decree on Avril  3, 1924 into a museum du imperial era. The Topkapi Palace Museum is under the administration du Ministry of Culture and Tourism. The palace complex has hundreds of rooms and chambers, but only the most important are accessible to the public today. The complex is guarded by officials du ministry as well as armed guards du Turc military. The palace is full of examples of Ottoman architecture and also contains large collections of porcelain, robes, weapons, shields, armor, Ottoman miniatures, Islamic calligraphic manuscripts and murals, as well as a display of Ottoman treasure and jewelry.[NEWLINE][NEWLINE][TAB]Topkapi Palace is among those monuments belonging to the "Historic Areas of Istanbul", which became a UNESCO World Heritage Site in 1985, and is described in Criterion iv as "the best example[s] of ensembles of palaces [...] du Ottoman period."</French>
 		<Italian>Il Palazzo Topkapi è un palazzo di Istanbul, in Turchia, che fu usato dei sultani Ottomani come residenza dal 1465 al 1853; il palazzo era il luogo designato per gli incontri di stato e l'intrattenimento della famiglia reale, mentre al giorno d'oggi è una grande attrazione turistica. Il nome viene tradotto con "Palazzo della Porta del Cannone", basandosi su una porta vicina ora distrutta.[NEWLINE][NEWLINE][TAB]La costruzione iniziò nel 1459 su ordine del Sultano Mehmed II, il conquistatore di Costantinopoli. Il palazzo è un complesso formato da 4 cortili principlai e molti edifici più piccoli; nel suo periodo di massimo splendore il palazzo ospitava più di 4,000 persone, occupando un'area sempre più grande lungo la costa; il complesso si è quindi ingrandito nel corso dei secoli, con molti restauri come il territorio del 1509 e l'incendio del 1665.[NEWLINE][NEWLINE][TAB]Il Palazzo Topkapi perse gradualmente importanza alla fine del XVII secolo, quando i Sultani iniziarono a trascorrere più tempo nei loro nuovi palazzi lungo il Bosforo. Nel 1853 il Sultano Abdül Mecid I decise di spostare la propria corte nel Palazzo Dolmabahçe, il primo palazzo in stile europeo della città. Alcune funzioni rimasero però al Palazzo Topkapi, come il tesoro, la biblioteca, la moschea e la zecca.[NEWLINE][NEWLINE][TAB]Dopo la fine dell'Impero Ottomano nel 1921 il palazzo Topkapi fu trasformato dal decreto governativo del 3 aprile 1924 nel museo dell'Era imperiale. Il Museo del Palazzo Topkapi è sotto la giurisdizione del Ministero della cultura e del turismo; il complesso ha centinaia di stanze, ma solo le più importanti possono essere visitate. Il complesso è sorvegliato da ufficiali del ministero e da guardie armate dell'esercito turco. Il palazzo è pieno di esampi di architettura e contiene grandi collezioni di porcellane, abiti, armi, scudi, armature, miniature Ottomane, manoscritti di calligrafia islamica e murali, oltre a mostre del tesoro e dei gioielli ottomani.[NEWLINE][NEWLINE][TAB]Il Palazzo Topkapi è uno dei monumenti appartenenti alla "Area storica di Istanbul", che fu dichiarato dall'UNESCO Patrimonio dell'umanità nel 1985, descritto da Criterion IV come "the best example[s] of ensembles of palaces [...] of the Ottoman period."</Italian>
 		<Polish>Topkapi Sarayi - pałac w centrum Stambułu, który był rezydencją sułtanówprzez ponad 380 lat, od 1453 roku. Budowę rozpoczęto za panowania sułtanaMehmeda II Zdobywcy w 1453 roku, zaraz po zdobyciu Konstantynopola, a zakończono w 1465 roku. Ostatnim używającym pałacu sułtanem byłMahmud II (do 1839 roku). Sułtan Abdulmecid I przeniósł siedzibę władców do pałacu DolmabahCe.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOPKAPI_PALACE_STRATEGY</Tag>
 		<English>[COLOR_BUILDING_TEXT]Topkapi Palace[COLOR_REVERT] strengthens all vassals under your rule by granting them a gold and combat experience bonus every turn. Additionally, you will have a 20% chance of training your vassal's UU instead of the standard unit when training a unit of the same unit class.</English>
-		<French>[COLOR_BUILDING_TEXT]Topkapi Palace[COLOR_REVERT] strengthens all vassals under your rule by granting them a gold and combat experience bonus every turn. Additionally, you will have a 20% chance of training your vassal's UU instead du standard unit when training a unit du same unit class.</French>
 		<Italian>Il [COLOR_BUILDING_TEXT]Palazzo Topkapi[COLOR_REVERT] rinforza i tuoi vassalli fornendo loro oro e bonus all'esperienza in combattimento ogni turno. In più, hai una chance del 20% di addestrare l'unità unica del tuo vassallo quando addestri un'unità standard delle stessa categoria.</Italian>
 	</TEXT>
 	<TEXT>
@@ -51,7 +46,6 @@
 		<French>[ICON_BULLET]Renforce les vassaux[NEWLINE][ICON_BULLET]20% Chance d'enrôler une unité unique de Vassal</French>
 		<Italian>[ICON_BULLET]Rinforza i vassalli[NEWLINE][ICON_BULLET]20% Chance di addestrare l'unità unica di un vassallo</Italian>
 	</TEXT>
-	<!-- UNIT KEY SECTION -->
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UN_MISSION</Tag>
 		<English>UN Mission</English>
@@ -77,7 +71,6 @@
 		</Spanish>
 		<Polish>Misja ONZ</Polish>
 	</TEXT>
-	<!-- STRATEGY SECTION -->
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UN_MISSION_STRATEGY</Tag>
 		<English>UN Missions allow for the construction of UN Peacekeeping Forces.</English>
@@ -87,7 +80,6 @@
 		<Spanish>Las Misiones de la ONU permiten el entrenamiento de las Fuerzas pacificadoras de la ONU.</Spanish>
 		<Polish>Organizacja Narodów Zjednoczonych – uniwersalna organizacja międzynarodowa. ONZ stawia sobie za cel zapewnienie pokoju i bezpieczeństwa międzynarodowego, rozwój współpracy między narodami oraz popieranie przestrzegania praw człowieka. Idea powołania nowej organizacji, powstała jeszcze w czasie trwania II wojny światowej, na konferencji w Teheranie w 1943. Jej głównym pomysłodawcą był prezydent USA Franklin Delano Roosevelt, a jej nazwę zaproponował premier Wielkiej Brytanii Winston Churchill (określenie "narody zjednoczone" w trakcie wojny stosowano nieraz dla Aliantów). W drugiej połowie 1944 przedstawiciele Francji, Chin, Wielkiej Brytanii, USA oraz ZSRR spotkali się w Waszyngtonie, gdzie przedyskutowano zakres, cele i sposoby działania nowej organizacji. 25 kwietnia 1945 roku zwołano pierwszą konferencję ONZ w San Francisco, w której uczestniczyło 50 państw z całego świata – pierwszych członków organizacji. Za członka ONZ od założenia uznawana jest też Polska, której przedstawiciele z powodów politycznych nie mogli uczestniczyć w konferencji w San Francisco. Podczas konferencji, 26 czerwca, podpisano Kartę Narodów Zjednoczonych, akt prawny regulujący działalność ONZ. Organizację Narodów Zjednoczonych powołano do życia 24 października 1945, kiedy postanowienia konferencji ratyfikowało pięciu przyszłych stałych członków Rady Bezpieczeństwa (Chiny, Francja, ZSRR, Wielka Brytania i USA), oraz większość pozostałych państw członkowskich. Powołanie ONZ położyło jednocześnie kres działalności Ligi Narodów, która rozwiązała się formalnie 18 kwietnia 1946, przekazując pełnienie swej misji nowej organizacji. W grudniu 1945 Kongres USA wystosował propozycję, aby siedziba ONZ mieściła się w Nowym Jorku, co zostało przez organizację zaakceptowane. Budynek siedziby głównej otwarto 9 stycznia 1951 roku na terenach podarowanych ONZ przez Johna Rockefellera, gdzie mieści się do dziś. Część instytucji funkcjonuje jednak w innych miastach świata, m.in. w Genewie, Hadze, Nairobi i Wiedniu.</Polish>
 	</TEXT>
-	<!-- PEDIA SECTION -->
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UN_MISSION_PEDIA</Tag>
 		<English>The United Nations (UN) is an international organization whose stated aims are to facilitate cooperation in international law, international security, economic development, social progress and human rights issues. The UN was founded in 1945 to replace the League of Nations, to stop wars between nations and provide a platform for dialogue.</English>
@@ -104,7 +96,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MATNU_STRATEGY</Tag>
 		<English>The Matnu is the unique Composite Bowman of the Akkadian culture. It has an extra 50% defence bonus in a city, extra 25% defence on a hill, and more uniquely, is immune to collateral damage from all siege units. Additionally, it starts with City Garrison I. Quite simply the best city defender until the longbow, and perhaps even beyond...</English>
-		<French>The Matnu is the unique Composite Bowman du Akkadian culture. It has an extra 50% defence bonus in a city, extra 25% defence on a hill, and more uniquely, is immune to collateral damage from all siege units. Additionally, it starts with City Garrison I. Quite simply the best city defender until the longbow, and perhaps even beyond.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MATNU_PEDIA</Tag>
@@ -142,7 +133,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_YURUPARI_PEDIA</Tag>
 		<English>In many of the Indian cultures these rites take a central position among other important ceremonies such as funerals and fertility rites. In the Guianas and the northwest Amazon region, the initiation of the boys is very complex. The Yurupary celebration inducts the boys into the secret society of mature men. Special rites are revealed to them; they are shown the sacred trumpets or the masks representing ancestral spirits. They are subjected to violent whippings, which they must tolerate without the least expression of pain. </English>
-		<French>In many du Indian cultures these rites take a central position among other important ceremonies such as funerals and fertility rites. In the Guianas and the northwest Amazon region, the initiation du boys is very complex. The Yurupary celebration inducts the boys into the secret society of mature men. Special rites are revealed to them; they are shown the sacred trumpets or the masks representing ancestral spirits. They are subjected to violent whippings, which they must tolerate without the least expression of pain. </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_THORAX_HOPLITE</Tag>
@@ -217,13 +207,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FORTY_NINER_STRATEGY</Tag>
 		<English>The Forty-Niner is the unique Industrial-era Worker of the Californian culture. It starts with three Hill Worker promotions, so if you've changed your mind about that mine, he's your man.</English>
-		<French>The Forty-Niner is the unique Industrial-era Worker du Californian culture. It starts with three Hill Worker promotions, so if you've changed your mind about that mine, he's your man.</French>
 		<Italian>Il Forty-Niner è il lavoratore dell'era industriale tipico della cultura Californiana. Inizia con tutte e tre le promozioni Lavoratore delle colline, per cui se hai cambiato idea riguardo a quella miniera questo ragazzo fa proprio al caso tuo.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FORTY_NINER_PEDIA</Tag>
 		<English>The hardy fortune-seeking miners of the California goldrush became known as Forty-Niners.</English>
-		<French>The hardy fortune-seeking miners du California goldrush became known as Forty-Niners.</French>
 		<Italian>I cercatori d'oro della corsa all'oro in California divenero noti come Forty-Niners.</Italian>
 	</TEXT>
 	<TEXT>
@@ -239,18 +227,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DAHOMEY_MINO_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Mino[COLOR_REVERT] is a [COLOR_UNIT_TEXT]Rifleman[COLOR_REVERT] who starts with Drill I and II and is immune to first strikes.</English>
-		<French>Mino</French>
-		<German>Mino</German>
 		<Italian>La [COLOR_UNIT_TEXT]Mino[COLOR_REVERT] è un [COLOR_UNIT_TEXT]Fuciliere[COLOR_REVERT] che inizia con le promozioni Addestramento I e Addestramento II, oltre ad essere immune agli attacchi improvvisi.</Italian>
-		<Spanish>Mino</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DAHOMEY_MINO_PEDIA</Tag>
 		<English>The Dahomey Amazons or Mino were a Fon all-female military regiment of the Kingdom of Dahomey (now Benin) which lasted until the end of the 19th century. They were so named by Western observers and historians due to their similarity to the semi-mythical Amazons of ancient Anatolia and the Black Sea. For many years, the Black Sea was called the Amazon.[PARAGRAPH:1]The Origins of the Dahomey Amazons were from a group of elephant hunters organized by king Houegbadja. They were soon professionaly trained and some even ended up as his bodyguards. During the rule of Houegbadja's son, Agadja, the bodyguard were further developed into a milita and used when deafeating the neighbouring Savi. For the next hundred years, they got a reputation as fearless warriors.[PARAGRAPH:1]The group of female warriors was referred to as Mino, meaning "Our Mothers" in the Fon language by the male army of Dahomey. From the time of King Ghezo (ruling from 1818 to 1858), Dahomey became increasingly militaristic. Ghezo placed great importance on the army and increased its budget and formalized its structures. The Mino were rigorously trained, given uniforms, and equipped with Danish guns (obtained via the slave trade). By this time the Mino consisted of between 4000 and 6000 women, about a third of the entire Dahomey army.[PARAGRAPH:1]The Mino were recruited from among the ahosi ("king's wives") of which there were often hundreds. Some women in Fon society became ahosi voluntarily, while others were involuntarily enrolled if their husbands or fathers complained to the King about their behaviour. Membership among the Mino was supposed to hone any aggressive character traits for the purpose of war. During their membership they were not allowed to have children or be part of married life. Many of them were virgins. The regiment had a semi-sacred status, which was intertwined with the Fon belief in Vodun.[PARAGRAPH:1]The Mino trained with intense physical exercise. Discipline was emphasised. In the latter period, they were armed with Winchester rifles, clubs and knives. Units were under female command. Captives who fell into the hands of the Amazons were often decapitated.[PARAGRAPH:1]During the Franco-Dahomey Wars in the late 19th Century, the French, who tried to invade the country, suffered heavy casulties and lost several battles to the amazons, described as "the equal of every contemporary body of male elite soldiers from among the colonial powers". Ultimately, bolstered by the Foreign Legion, and armed with superior weaponry, including machine guns, as well as cavalry and Marine infantry, the French inflicted casualties that were ten times worse on the Dahomey side. After several battles, the French prevailed. The Legionnaires later wrote about the "incredible courage and audacity" of the Amazons. The last surviving Amazon of Dahomey died in 1979.[PARAGRAPH:1]</English>
-		<French>Mino</French>
-		<German>Mino</German>
 		<Italian>Le Amazzoni del Dahomey, note anche come Mino, erano un reggimento militare di sole donne del Regno del Dahomey (oggi Benin), che durò fino alla fine del 19° secolo. Vennero chiamate cos' dagli osservatori e storici occidentali per la loro somiglianza con le semi-mitiche Amazzoni dell'antica Anatolia e del Mar Nero; per molti anni infatti il Mar Nero venne chiamato Amazzonia.[PARAGRAPH:1] Le origini delle Amazzoni del Dahomey erano da un gruppo di cacciatrici di elefanti organizzato dal re Houégbadja. Erano professionalmente addestrate fin da giovani, e alcune diventavano addirittura sue guardie del corpo. Durante il regno del figlio di Houégbadja, Agadja, le guardie del corpo vennero trasformate in una milizia che venne utilizzata nella guerra contro i Savi. Nei seguenti cento anni ottennero la fama di guerrieri impavidi.[PARAGRAPH:1] Il gruppo di donne guerriere veniva indicato come Mino, che significa "Le nostri Madri" nella lingua Fon da parte dell'esercito maschile del Dahomey. Dal tempo del re Ghezo (che regnò nel periodo 1818-1858), il Dahomey divenne sempre più militarista. Ghezo pose grande importanza nell'esercito, aumentando il suo budget e formalizzando le sue strutture. Le Mino erano rigorosamente addestrate, dotate di uniformi e equipaggiate con armi danesi (ottenute tramite il commercio degli schiavi). A questo punto le Mino erano tra 4000 e 6000 donne, circa un terzo di tutto l'esercito Dahomey.[PARAGRAPH:1]Le Mino venivano reclutate tra le ahosi ("mogli del re") che erano spesso centinaia. Alcune donne nella società Fon divennero ahosi volontariamente, mentre altre venivano involontariamente arruolate se i loro mariti o padri si lamentavono con il Re per il loro comportamento. Per essere una Mino era necessario un carattere aggressivo per andare in guerra. Durante la loro adesione non erano autorizzate ad avere figli o avere una vita coniugale. Molte di loro erano vergini. Il reggimento aveva uno status semi-sacro, intrecciato con la credenza Fon nel Vodun.[PARAGRAPH:1]Le Mino si allenavano con un intenso esercizio fisico. La disciplina veniva enfatizzata. Negli ultimi periodi, erano armati di fucili Winchester, bastoni e coltelli. Le unità erano sotto il comando di sesso femminile. I Prigionieri caduti nelle mani delle Amazzoni venivano spesso decapitati.[PARAGRAPH:1]Durante le guerre tra Francia e Dahomey nel tardo 19° secolo i francesi, che tentarono di invadere il paese, subirono pesanti perdite e persero diverse battaglie contro le amazzoni, descritte come "alla pari di ogni corpo contemporaneo di soldati d'elite di sesso maschile tra le potenze coloniali". Alla fine, sostenuta dalla Legione Straniera e armata con armi superiori, tra cui mitragliatrici, cavalleria e fanteria marina, i francesi inflissero perdite che erano dieci volte peggiori sul lato Dahomey. Dopo varie battaglie vinsero i francesi. I Legionari in seguito scrisse di un "incredibile coraggio e audacia" da parte delle Amazzoni. L'ultima Amazzone del Dahomey superstite mor' nel 1979.[PARAGRAPH:1]</Italian>
-		<Spanish>Mino</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DENE_SLED_DOGS</Tag>
@@ -297,7 +279,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HAIDA_WAR_CANOE_STRATEGY</Tag>
 		<English>The Haida War Canoe is obviously the unique War Canoe of the Haida culture.  It starts with one Coastal Assault promotion.  Unless you are attacking a lot of rafts, or can afford to build large numbers of these, or to promote one highly, you are unlikely to derive any benefit from this unit.  Nevertheless, if you are building a War Canoe anyway, it is worth building this one for its free promo.</English>
-		<French>The Haida War Canoe is obviously the unique War Canoe du Haida culture.  It starts with one Coastal Assault promotion.  Unless you are attacking a lot of rafts, or can afford to build large numbers of these, or to promote one highly, you are unlikely to derive any benefit from this unit.  Nevertheless, if you are building a War Canoe anyway, it is worth building this one for its free promo.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HAIDA_WAR_CANOE_PEDIA</Tag>
@@ -316,13 +297,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PLUMED_ARCHER_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Plumed Archer[COLOR_REVERT] is the unique Archer of the Huastec culture. It has a 50% bonus in City and Hill Defence, and starts with the Mobility promotion.</English>
-		<French>The [COLOR_UNIT_TEXT]Plumed Archer[COLOR_REVERT] is the unique Archer du Huastec culture. It has a 50% bonus in City and Hill Defence, and starts with the Mobility promotion.</French>
 		<Italian>[COLOR_UNIT_TEXT]L'arciere piumato[COLOR_REVERT] è l'unità unica della cultura huasteca. Ha un bonus del 50% alla difesa in città e sulle colline, oltre alla promozione Mobilità.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PLUMED_ARCHER_PEDIA</Tag>
 		<English>The natives of Central America had developed the bow and used it in combat. Their bow technology was not far advanced, however, in comparison to the Asian composite bow or English longbow. Archers could be ordered to wound when capture of enemies was more important than killing. Like all other Mayan warriors, archers wore distinctive costumes so commanders could distinguish their troops and place the right group where needed. The status of archers was low in comparison to other warrior ranks, so men of lower standing and skill entered their ranks. Men of status and ambition joined the ranks of the Eagle Warrior where they could have the opportunity to take captives. The better skilled and experienced bowmen became Elite Plumed Archers. They were especially important when absolute victory was required because they had the ability to kill enemies quickly and break enemy army morale under a barrage of well-aimed arrows.</English>
-		<French>The natives of Central America had developed the bow and used it in combat. Their bow technology was not far advanced, however, in comparison to the Asian composite bow or English longbow. Archers could be ordered to wound when capture of enemies was more important than killing. Like all other Mayan warriors, archers wore distinctive costumes so commanders could distinguish their troops and place the right group where needed. The status of archers was low in comparison to other warrior ranks, so men of lower standing and skill entered their ranks. Men of status and ambition joined the ranks du Eagle Warrior where they could have the opportunity to take captives. The better skilled and experienced bowmen became Elite Plumed Archers. They were especially important when absolute victory was required because they had the ability to kill enemies quickly and break enemy army morale under a barrage of well-aimed arrows.</French>
 		<Italian>L'arciere piumato è un'unità unica della cultura huasteca che sostituisce l'arciere standard; oltre alle normali ailità di un arciere, ottiene anche la promozione Mobilità.</Italian>
 	</TEXT>
 	<TEXT>
@@ -338,13 +317,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LEIDANG_STRATEGY</Tag>
 		<English>The Leidang is the unique Heavy Axeman of the Icelandic culture. Like the Axeman line in general, it has a hefty 50% bonus against all melee units. It starts with the Amphibious and City Raider I promotions.</English>
-		<French>The Leidang is the unique Heavy Axeman du Icelandic culture. Like the Axeman line in general, it has a hefty 50% bonus against all melee units. It starts with the Amphibious and City Raider I promotions.</French>
 		<Italian>Il Leidang sostituisce il guerriero con ascia corazzato nella cultura islandese; come tutti i guerrieri con ascia, ha un bonus del 50% contro le unità da combattimento ravvicinato. Inizia con le promozioni Anfibio e Razziatore I.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LEIDANG_PEDIA</Tag>
 		<English>The Leidang is an Icelandic unique unit, a replacement for the Heavy Axeman.  Because of the Norse specialization in seaborne raids, it starts with the Amphibious promotion. Its other starting promotion, City Raider I, is for much the same reason.  Thus it makes an ideal "Marine" for the Medieval and Renaissance eras.</English>
-		<French>The Leidang is an Icelandic unique unit, a replacement for the Heavy Axeman.  Because du Norse specialization in seaborne raids, it starts with the Amphibious promotion. Its other starting promotion, City Raider I, is for much the same reason.  Thus it makes an ideal "Marine" for the Medieval and Renaissance eras.</French>
 		<Italian>Il Leidang è l'unità unica islandese che sostituisce il guerriero con ascia corazzato. Le sue promozioni, Anfibio e Razziatore I, derivano dal fatto che i popoli norreni di discendenza vichinga erano specializzati nei raid dal mare contro le città nemiche. Per questo motivo il Leidang è un perfetto "Marine" per le età medievali e rinascimentali.</Italian>
 	</TEXT>
 	<TEXT>
@@ -360,13 +337,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAROON_STRATEGY</Tag>
 		<English>The Maroon is the unique Musketman of the Jamaican culture. It starts with Guerrilla I, Guerrilla II and Hillsman.  Once he gets up in the hills, he's hard to dislodge.</English>
-		<French>The Maroon is the unique Musketman du Jamaican culture. It starts with Guerrilla I, Guerrilla II and Hillsman.  Once he gets up in the hills, he's hard to dislodge.</French>
 		<Italian>Il Maroon è il moschettiere unico della cultura Giamaicana; inizia con le promozioni Guerriglia I, Guerriglia II e Guerriero delle Colline. Una volta che si rintana su una collina, è difficile da stanare.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAROON_PEDIA</Tag>
 		<English>The escaped slaves of the Caribbean region became known as Maroons.  They formed their own communities in the inaccessible jungles, and in many cases proved impossible to recapture.</English>
-		<French>The escaped slaves du Caribbean region became known as Maroons.  They formed their own communities in the inaccessible jungles, and in many cases proved impossible to recapture.</French>
 		<Italian>Gli schiavi che scappavano nelle regioni Caraibiche divennero noti come Maroon. Formarono le loro comunità nelle giungle più inaccessibili e in molti casi non vennero più ricatturati.</Italian>
 	</TEXT>
 	<TEXT>
@@ -382,13 +357,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEADHUNTER_STRATEGY</Tag>
 		<English>The Headhunter is the Jivaro culture's version of the Hunter...but with a twist. As the name suggests, he hunts humans rather than animals.  His bonus is therefore not in animal combat, but against other hunters!</English>
-		<French>The Headhunter is the Jivaro culture's version du Hunter...but with a twist. As the name suggests, he hunts humans rather than animals.  His bonus is therefore not in animal combat, but against other hunters!</French>
 		<Italian>Il cacciatore di teste è le versione dei Jivaro del cacciatore, ma invece di animali lui caccia gli uomini. Perciò i suoi bonus si riferiscono non agli animali, ma ad altri cacciatori!</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEADHUNTER_PEDIA</Tag>
 		<English>The pursuit of head-hunting is central to Jivaro culture.  The Jivaro warrior's collection of heads is one of the most important indicators of his status and martial prowess.</English>
-		<French>The pursuit of head-hunting is central to Jivaro culture.  The Jivaro warrior's collection of heads is one du most important indicators of his status and martial prowess.</French>
 		<Italian>La caccia delle teste è molto importante nella cultura Jivaro; la collezione di teste di un guerriero Jivaro è uno degli indicatori più importanti del suo status sociale.</Italian>
 	</TEXT>
 	<TEXT>
@@ -435,10 +408,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HYPASPISTAI_PEDIA</Tag>
 		<English>Hail, Basileu! Before you stand your Hypaspistai: the elite of the elite and your personal guard. They are armed and armored in the finest equipment of the traditional hoplite: aspis, greaves, cuirass, helmet, spear, and sword. They are the best and richest of your men; far too worthy to risk in unwise actions. And yet they are without a doubt capable of multiplying the power of your army. Forming the right wing of the battle line or leading the assault on fortifications their heavy armor and weapons allow them to stand against even the hardiest of opponents and triumph with ease. They should be deployed where the fighting will be at its absolute thickest or nearby to fight with and to protect you.[NEWLINE][TAB]Historically, the Hypaspistai (shield-bearers) first appear with Alexandros at the beginning of his reign as his elite troops and bodyguard. He used them extensively throughout his anabasis for special missions, assault of fortifications, and in support of light troops in rough terrain; however, details of the unit seem to disappear by the time Alexandros reaches India and remain as such until appearing in various sources for the three remaining Diadochoi kingdoms in different forms and perhaps briefly in Epeiros with Pyrrhos. Such examples of their deployment count them as possibly numbering a fifth of the 10,000 Argyraspides corps of the Seleukid kings or as the military police and closest guard of the Makedonian kings. Yet, despite their prowess, the Hypaspistai were either forced to evolve past the antiquated hoplite model as in the east or vanish with the fall of their kingdom as in the west.</English>
-		<French>Historically, the Hypaspistai (shield-bearers) first appear with Alexandros at the beginning of his reign as his elite troops and bodyguard. He used them extensively throughout his anabasis for special missions, assault of fortifications, and in support of light troops in rough terrain; however, details du unit seem to disappear by the time Alexandros reaches India and remain as such until appearing in various sources for the three remaining Diadochoi kingdoms in different forms and perhaps briefly in Epeiros with Pyrrhos. Such examples of their deployment count them as possibly numbering a fifth du 10,000 Argyraspides corps du Seleukid kings or as the military police and closest guard du Makedonian kings. Yet, despite their prowess, the Hypaspistai were either forced to evolve past the antiquated hoplite model as in the east or vanish with the fall of their kingdom as in the west.</French>
-		<German>Historically, the Hypaspistai (shield-bearers) first appear with Alexandros at the beginning of his reign as his elite troops and bodyguard. He used them extensively throughout his anabasis for special missions, assault of fortifications, and in support of light troops in rough terrain; however, details of the unit seem to disappear by the time Alexandros reaches India and remain as such until appearing in various sources for the three remaining Diadochoi kingdoms in different forms and perhaps briefly in Epeiros with Pyrrhos. Such examples of their deployment count them as possibly numbering a fifth of the 10,000 Argyraspides corps of the Seleukid kings or as the military police and closest guard of the Makedonian kings. Yet, despite their prowess, the Hypaspistai were either forced to evolve past the antiquated hoplite model as in the east or vanish with the fall of their kingdom as in the west.</German>
 		<Italian>Storicamente gli Hypaspistai (portatori di scudi) comparvero all'inizio del regno di Alessandro Magno come truppe d'elite e guardie del corpo. Venivano usati molto in missioni speciali, assalti, fortificazioni e come supporto alle truppe leggere nei terreni più accidentati; tuttavia, scomparvero quasi del tutto quando Alessandro raggiunse l'India. Soldati simili esistevano con nomi diversi all'interno dei successivi regni ellenistici, forse anche in Epiro durante il regno di Pirro. Probabilmente costituivano circa un quinto dei 10000 Argiraspidi dei re Seleucidi, oltre alle forze di polizia e alle guardie del corpo dei re di Macedonia. Nonostante la loro forza, gli Hypaspistai furono costretti ad evolversi dall'antiquato modello di oplita o a scomparire con la caduta dei regni ellenistici.</Italian>
-		<Spanish>Historically, the Hypaspistai (shield-bearers) first appear with Alexandros at the beginning of his reign as his elite troops and bodyguard. He used them extensively throughout his anabasis for special missions, assault of fortifications, and in support of light troops in rough terrain; however, details of the unit seem to disappear by the time Alexandros reaches India and remain as such until appearing in various sources for the three remaining Diadochoi kingdoms in different forms and perhaps briefly in Epeiros with Pyrrhos. Such examples of their deployment count them as possibly numbering a fifth of the 10,000 Argyraspides corps of the Seleukid kings or as the military police and closest guard of the Makedonian kings. Yet, despite their prowess, the Hypaspistai were either forced to evolve past the antiquated hoplite model as in the east or vanish with the fall of their kingdom as in the west.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HYPASPISTAI_STRATEGY</Tag>
@@ -478,336 +448,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CUACHIC_STRATEGY</Tag>
 		<English>The Cuachic is the unique Stone or Obsidian Swordsman of the Mixtec culture. Like the Swordsman line in general, it has bonuses to City Attack. It starts with Mobility and Shock I.</English>
-		<French>The Cuachic is the unique Stone or Obsidian Swordsman du Mixtec culture. Like the Swordsman line in general, it has bonuses to City Attack. It starts with Mobility and Shock I.</French>
 		<Italian>Il Cuachic è il guerriero con spada in ossidiana unico della cultura Mixteca; ha un bonus all'attacco contro le città. Inoltre, inizia anche con le promozioni Mobilità e Shock I.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CUACHIC_PEDIA</Tag>
 		<English>The Cuachic is a Mixtec warrior wielding a wooden club lined with Stone or Obsidian blades on either side.  It is a Mixtec unique unit, and starts with Shock I and Mobility, in addition to the standard swordsman's city attack bonus.</English>
 		<Italian>Il Cuachic è un guerriero Mixteco che utilizza un'asta di legno con lame di pietra o ossidiana. Si tratta dell'unità unica Mixteca ed ottiene bonus contro le unità da combattimento ravvicinato e attaccando le città, oltre a muoversi più velocemente sul terreno.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SI_WARRIOR</Tag>
-		<English>Si Warrior</English>
-		<French>Guerrier Si</French>
-		<Italian>
-			<Text>Guerriero Si</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SI_WARRIOR_STRATEGY</Tag>
-		<English>The Si Warrior is the Moche culture's equivalent of the Maceman. It starts with the promotions Shock I and II, in addition to its bonuses in city attack and against melee units.  Thus it is likely to be your best unit against melee opposition, and as good as any before the Light Swordsman against cities.</English>
-		<French>The Si Warrior is the Moche culture's equivalent du Maceman. It starts with the promotions Shock I and II, in addition to its bonuses in city attack and against melee units.  Thus it is likely to be your best unit against melee opposition, and as good as any before the Light Swordsman against cities.</French>
-		<Italian>Il guerriero Si è l'equivalente Moche del guerriero con mazza. Inizia con le promozioni Shock I e Shock II, oltre ai bonus all'attacco contro le città e contro le unità da combattimento ravvicinato. Perciò è l'unità ideale per attaccare le città prima degli spadaccini leggeri.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SI_WARRIOR_PEDIA</Tag>
-		<English>The Si Warrior is a unique unit of the Moche culture, equivalent to the Maceman.  It starts with the promotions Shock I and II, and additional bonuses in city attack and against melee.</English>
-		<French>The Si Warrior is a unique unit du Moche culture, equivalent to the Maceman.  It starts with the promotions Shock I and II, and additional bonuses in city attack and against melee.</French>
-		<Italian>Il guerriero Si è l'equivalente Moche del guerriero con mazza. Inizia con le promozioni Shock I e Shock II, oltre ai bonus all'attacco contro le città e contro le unità da combattimento ravvicinato.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_PICTISH_WARRIOR</Tag>
-		<English>Pictish Warrior</English>
-		<French>Guerrier Picte</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_PICTISH_WARRIOR_STRATEGY</Tag>
-		<English>The Pictish Warrior is the Pict culture's equivalent of the Light Swordsman. It starts with the Formation I and Goad I promotions, and has the standard swordsman's bonus when attacking a city.</English>
-		<French>The Pictish Warrior is the Pict culture's equivalent du Light Swordsman. It starts with the Formation I and Goad I promotions, and has the standard swordsman's bonus when attacking a city.</French>
-		<Italian>Il guerriero pict sostituisce lo spadaccino leggero. Inizia con le promozioni Formazione I e Goad I, oltre ad avere i bonus standard degli spadaccini attaccando una città.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_PICTISH_WARRIOR_PEDIA</Tag>
-		<English>The Pictish Warrior is a unique unit of the Pict culture, equivalent to the Light Swordsman.  This warpainted ('picti' is Latin for 'painted [ones]') savage 'barbarian' was a formidable opponent, doubly so in the rugged terrain of his familiar homeland.  He was the reason that the Romans never conquered modern-day Scotland, and instead built Hadrian's and the Antonine Wall.</English>
-		<French>The Pictish Warrior is a unique unit du Pict culture, equivalent to the Light Swordsman.  This warpainted ('picti' is Latin for 'painted [ones]') savage 'barbarian' was a formidable opponent, doubly so in the rugged terrain of his familiar homeland.  He was the reason that the Romans never conquered modern-day Scotland, and instead built Hadrian's and the Antonine Wall.</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_QIANG_PIKEMAN</Tag>
-		<English>Qiang Pikeman</English>
-		<French>Piquier Qiang</French>
-		<Italian>
-			<Text>Picchiere Qiang:Picchieri Qiang</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_QIANG_PIKEMAN_STRATEGY</Tag>
-		<English>The Qiang Pikeman is the unique Heavy Pikeman of the Quang culture. It starts with promotions Formation I and II, which almost doubles its standard Pikeman bonus against mounted units.</English>
-		<French>The Qiang Pikeman is the unique Heavy Pikeman du Quang culture. It starts with promotions Formation I and II, which almost doubles its standard Pikeman bonus against mounted units.</French>
-		<Italian>Il picchiere Qiang è il picchiere pesante unico della cultura Quang. Inizia con le promozioni Formazione I e Formazione II, che raddoppiano le sue abilità contro le unià montate.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_QIANG_PIKEMAN_PEDIA</Tag>
-		<English>The Pikeman of the Qiang culture in China developed the art of the pike to a level comparable with the legendary pikemen of Switzerland.</English>
-		<French>The Pikeman du Qiang culture in China developed the art du pike to a level comparable with the legendary pikemen of Switzerland.</French>
-		<Italian>I picchieri della cultura Qiang svilupparono la costruzione di picche ad un livello comparabile a quello dei leggendari picchieri svizzeri.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_AXEMAN_ROXOLANI</Tag>
-		<English>Roxolani Axeman</English>
-		<French>Guerrier Roxolani avec Hache</French>
-		<Italian>
-			<Text>Guerriero con ascia Rossolano:Guerrieri con ascia Rossolani</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_AXEMAN_ROXOLANI_STRATEGY</Tag>
-		<English>The Roxolani Axeman is the unique Axeman alternative from the Roxolani culture. It starts with two Formation promotions, and thus meets both melee and mounted units of its era at a considerable advantage.</English>
-		<Italian>Il guerriero con ascia Rossolano inizia con le promozioni Formazione I e Formazione II: per questo motivo, ha un discreto vantaggio sia contro le unità da combattimento ravvicinato, sia contro le unità montate.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_AXEMAN_ROXOLANI_PEDIA</Tag>
-		<English>The Roxolani were a people of the Wallachian plain, near the mouth of the Danube on the Black Sea (modern-day Romania/Moldova).  They were enemies of the Romans from around 100 BC until being conquered by the Huns in the 4th century.  The Romans found their axemen to be especially potent adversaries, especially the Legio XXI Rapax, which was destroyed by a combined force of Roxolani and Dacians in 92 AD.</English>
-		<French>The Roxolani were a people du Wallachian plain, near the mouth du Danube on the Black Sea (modern-day Romania/Moldova).  They were enemies du Romans from around 100 BC until being conquered by the Huns in the 4th century.  The Romans found their axemen to be especially potent adversaries, especially the Legio XXI Rapax, which was destroyed by a combined force of Roxolani and Dacians in 92 AD.</French>
-		<Italian>I Rossolani erano un popolo delle pianure della Valacchia, vicino alla foce del Danubio nel Mar Nero (gli attuali Romania e Moldavia). Furono nemici dei Romani dal 100 a.C. fino a quando furono conquistati dagli Unni nel 4° secolo. I Romani scopriorno che i loro guerrieri con ascia erano avversari estremamente pericolosi, in particolare quando la Legio XXI Rapax venne annientata da una forza congiunta di Rossolani e Daci nel 92 d.C.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SAVARAN</Tag>
-		<English>Savaran Cavalry</English>
-		<French>Chevaliers Savaran</French>
-		<Italian>
-			<Text>Cavalleria Savaran</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>Caballeros Savaran</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SAVARAN_STRATEGY</Tag>
-		<English>The Savaran Cavalry is the unique Knight alternative from the Sassanian (or Sassanid) culture. A specially-trained, elite unit, it starts with Combat I and II, and of course Commando.  That leaves plenty of starting experience for Shock, Formation, and other specialist promotions.</English>
-		<Italian>La cavalleria Savaran sostituisce il cavaliere nella cultura sassanide. Essendo un'unità d'elite altamente addestrata, inizia con le promozioni Combattimento I, Combattimento II e Commando. Questo permette di scegliere dall'inizio promozioni per specializzare quest'unità.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SAVARAN_PEDIA</Tag>
-		<English>The Sassanid Savaran were the knights who formed the armour guard of the emperor himself.  Unlike knights elsewhere who were born into the role - or were there because they could afford a horse - the Savaran were highly trained, as only the best were selected for this coveted role.</English>
-		<French>The Sassanid Savaran were the knights who formed the armour guard du emperor himself.  Unlike knights elsewhere who were born into the role - or were there because they could afford a horse - the Savaran were highly trained, as only the best were selected for this coveted role.</French>
-		<Italian>I Savaran sassanidi erano i cavalieri che formavano la guardia dell'imperatore sassanide. A differenza dei cavalieri europei, che diventavano tali per nascita, i Savaran erano altamente addestrati, poichè solo i migliori potevano essere scelti per questo ruolo.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SCYTHIAN_HORSE_ARCHER</Tag>
-		<English>Scythian Horse Archer</English>
-		<French>Archer monté Scythe</French>
-		<Italian>
-			<Text>Arciere a cavallo scita:Arcieri a cavallo sciti</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SCYTHIAN_HORSE_ARCHER_STRATEGY</Tag>
-		<English>The Scythian Horse Archer, unsurprisingly, is the unique supplementary Horse Archer from the Scythian culture. In addition to Commando, it starts with Hit and Run and Marksmanship I.  These make it faster cross-country, and stronger overall and especially against mounted units.  The two additional First Strike Chances, and a Withdrawal Chance that with all bonuses starts at 55%, make it a force to be reckoned with.</English>
-		<French>The Scythian Horse Archer, unsurprisingly, is the unique supplementary Horse Archer from the Scythian culture. In addition to Commando, it starts with Hit and Run and Marksmanship I.  These make it faster cross-country, and stronger overall and especially against mounted units.  The two additional First Strike Chances, et un Withdrawal Chance that with all bonuses starts at 55%, make it a force to be reckoned with.</French>
-		<Italian>L'arciere a cavallo Scita inizia con le promozioni Mordi e fuggi, Commando e Tiratore scelto I. Queste promozioni lo rendono più veloce nelle tue campagne, oltre a più forte in generale e in particolare contro le unità montate. Le due chance di attacchi improvvisi supplementari, oltre alle chance di ritirarsi, lo rendono una forza decisamente temibile sul campo di battaglia.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SCYTHIAN_HORSE_ARCHER_PEDIA</Tag>
-		<English>The Horse Archers of the Scythians would appear out of nowhere, striking where you least expected it.  Their accuracy with the bow was also the stuff of legend, and rendered them even more lethal.</English>
-		<French>The Horse Archers du Scythians would appear out of nowhere, striking where you least expected it.  Their accuracy with the bow was also the stuff of legend, and rendered them even more lethal.</French>
-		<Italian>Gli arcieri a cavallo Sciti comparivano dal nulla, colpendo in luoghi inaspettati. La loro accuratezza con l'arco era leggendaria, e li rendeva ancora più letali.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SIBERIAN_TRACKER</Tag>
-		<English>Siberian Tracker</English>
-		<French>Traqueur Sibérien</French>
-		<Italian>
-			<Text>Cercatore di tracce Siberiano:Cercatori di tracce Siberiani</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SIBERIAN_TRACKER_STRATEGY</Tag>
-		<English>The Siberian Tracker is the Siberian culture's version of the Warden. Completely at home no matter how low the temperature, it starts with the promotions Arctic Combat I, II and III, as well as Hunting Sight I and II. The ideal hunter for extreme latitudes. Useful also in battle, but not against cities, where it gets a large penalty.</English>
-		<French>The Siberian Tracker is the Siberian culture's version du Warden. Completely at home no matter how low the temperature, it starts with the promotions Arctic Combat I, II and III, as well as Hunting Sight I and II. The ideal hunter for extreme latitudes. Useful also in battle, but not against cities, where it gets a large penalty.</French>
-		<Italian>Il cercatore di tracce Siberiano è la versione Siberiana del guardiacaccia. Si trova a su agio con temperature estremamente basse, perciò inizia con le promozioni Combattente artico I, Combattente artico II e Combattente artico III, oltre a Occhio del cacciatore I e Occhio del cacciatore II. E' il cacciatore ideale delle alte latitudini; è utile anche in battaglia ma non per assaltare le città, dove riceve delle gravi penalità.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SIBERIAN_TRACKER_PEDIA</Tag>
-		<English>The Siberian Tracker is a unique unit of the Siberian culture, equivalent to the Warden.  It starts with the Arctic Combat promotions I, II and III, as well as the standard Warden's Hunting Sight I and II.</English>
-		<French>The Siberian Tracker is a unique unit du Siberian culture, equivalent to the Warden.  It starts with the Arctic Combat promotions I, II and III, as well as the standard Warden's Hunting Sight I and II.</French>
-		<Italian>Il cercatore di tracce siberiano è l'equivalente siberiano del guardiacaccia; come tale, ottiene le abilità del guardiacaccia e le promozioni per combattere nei terreni artici.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_MIG_29</Tag>
-		<English>MiG-29</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_MIG_29_STRATEGY</Tag>
-		<English>The MiG-29 is the unique Modern Fighter of the Soviet culture. It starts with Air-to-air I, Air-to-air II and Range I.  Naturally this will give it air supremacy over less advanced (ie. less promoted) modern fighters.</English>
-		<French>The MiG-29 is the unique Modern Fighter du Soviet culture. It starts with Air-to-air I, Air-to-air II and Range I.  Naturally this will give it air supremacy over less advanced (ie. less promoted) modern fighters.</French>
-		<Italian>Il MiG-29 è il caccia moderno della cultura Sovietica. Inizia con le promozioni Missili aria-aria I, Missili aria-aria II e Raggio d'azione I; per questo motivo ottiene facilmente la supremazia aerea contro i caccia meno avanzati (o con meno esperienza).</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_MIG_29_PEDIA</Tag>
-		<English>The Mikoyan-Gurevich (MiG) 29 (codename 'Fulcrum') represents the pinnacle of Soviet jet fighter technology.</English>
-		<Italian>Il Mikoyan-Gurevich (MiG) 29 (nome in codice 'Fulcrum') rappresenta l'apice della tecnologia sovietica nei caccia a reazione.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_KUOMINTANG</Tag>
-		<English>Kuomintang</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_KUOMINTANG_STRATEGY</Tag>
-		<English>The Kuomintang is the unique Infantry unit of the Taiwanese culture. It starts with the promotions Patrol I and II and Dedication.  It is thus an excellent city defender, with the added bonus of discouraging rebellion.</English>
-		<French>The Kuomintang is the unique Infantry unit du Taiwanese culture. It starts with the promotions Patrol I and II and Dedication.  It is thus an excellent city defender, with the added bonus of discouraging rebellion.</French>
-		<Italian>Il Kuomintang è la fanteria unica della cultura taiwanes. Inizia con le promozioni Pattuglia I, Pattuglia II e Dedicazione; perciò è eccellente per difendere le città, con il bonus di scoraggiare le ribellioni.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_KUOMINTANG_PEDIA</Tag>
-		<English>Originally a revolutionary league working for the overthrow of the Chinese monarchy, the Nationalists became a political party in the first year of the Chinese republic (1912). The party participated in the first Chinese parliament, which was soon dissolved by a coup d'état (1913). This defeat moved its leader, Sun Yat-sen, to organize it more tightly, first (1914) on the model of a Chinese secret society and, later (1923-24), under Soviet guidance, on that of the Bolshevik party. The Nationalist Party owed its early successes largely to Soviet aid and advice and to close collaboration with the Chinese communists (1924-27).</English>
-		<French>Originally a revolutionary league working for the overthrow du Chinese monarchy, the Nationalists became a political party in the first year du Chinese republic (1912). The party participated in the first Chinese parliament, which was soon dissolved by a coup d'état (1913). This defeat moved its leader, Sun Yat-sen, to organize it more tightly, first (1914) on the model of a Chinese secret society and, later (1923-24), under Soviet guidance, on that du Bolshevik party. The Nationalist Party owed its early successes largely to Soviet aid and advice and to close collaboration with the Chinese communists (1924-27).</French>
-		<Italian>Il Kuomintang è l'unità taiwanese che sostituisce la fanteria. Inizia con le promozioni Pattgulia I, Pattuglia II e Dedicazione.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TLATILCO_WAR_PRIEST</Tag>
-		<English>Tlatilco War Priest</English>
-		<French>Prêtre-Guerrier Tlatilco</French>
-		<Italian>
-			<Text>Sacerdote guerriero Tlatilco:Sacerdoti guerrieri Tlatilco</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TLATILCO_WAR_PRIEST_STRATEGY</Tag>
-		<English>The Tlatilco War Priest is the Tlatilco culture's equivalent of the Obsidian Swordsman. As a priestly unit, it starts with the Fanatic and Herbal Cures promotions, while retaining the standard swordsman's bonus when attacking a city.  Thus it needs favourable terrain if it is to defend, but excels all others for rushing early cities.</English>
-		<French>The Tlatilco War Priest is the Tlatilco culture's equivalent du Obsidian Swordsman. As a priestly unit, it starts with the Fanatic and Herbal Cures promotions, while retaining the standard swordsman's bonus when attacking a city.  Thus it needs favourable terrain if it is to defend, but excels all others for rushing early cities.</French>
-		<Italian>Il sacerdote guerriero tlatilco sosituisce il guerriero con spada d'ossidiana. Inizia con le promozioni Fanatico ed Erbe mediche, oltre a mantenere i bonus standard degli spadaccini quando attacca una città. Non è ottimo in un ruolo difensivo, ma è l'ideale per razziare le città nemiche appena fondate.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TLATILCO_WAR_PRIEST_PEDIA</Tag>
-		<English>The Tlatilco War Priest is a unique unit of the Tlatilco culture, equivalent to the Obsidian Swordsman.  It starts with the Fanatic and Herbal Cures promotions, and the standard swordsman's bonus for city attack.</English>
-		<French>The Tlatilco War Priest is a unique unit du Tlatilco culture, equivalent to the Obsidian Swordsman.  It starts with the Fanatic and Herbal Cures promotions, and the standard swordsman's bonus for city attack.</French>
-		<Italian>Il sacerdote guerriero tlatilco sosituisce il guerriero con spada d'ossidiana. Inizia con le promozioni Fanatico ed Erbe mediche, oltre a mantenere i bonus standard degli spadaccini quando attacca una città.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TLAXCALTEC_WARRIOR</Tag>
-		<English>Tlaxcaltec Warrior</English>
-		<French>Guerrier Tlaxcaltec</French>
-		<Italian>
-			<Text>Guerriero Tlaxcalteco:Guerrieri Tlaxcaltechi</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TLAXCALTEC_WARRIOR_STRATEGY</Tag>
-		<English>The Tlaxcaltec Warrior is the Tlaxcaltec culture's equivalent of the Light Swordsman. It starts with the Shock I and Drill I promotions, and has the standard swordsman's bonus when attacking a city.</English>
-		<French>The Tlaxcaltec Warrior is the Tlaxcaltec culture's equivalent du Light Swordsman. It starts with the Shock I and Drill I promotions, and has the standard swordsman's bonus when attacking a city.</French>
-		<Italian>Il guerriero tlaxcalteco sostituisce lo spadaccino leggero. Inizia con le promozioni Shock I e Addestramento I, oltre ad avere i bonus standard degli spadaccini attaccando una città.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TLAXCALTEC_WARRIOR_PEDIA</Tag>
-		<English>The Tlaxcaltec Warrior is a unique unit of the Tlaxcaltec culture, equivalent to the Light Swordsman (even though he wields a sword of obsidian).  It starts with the Shock I and Drill I promotion, and the standard swordsman's bonus for city attack.  Thus it will be especially effective for storming a Classical city defended mostly by Melee units.</English>
-		<French>The Tlaxcaltec Warrior is a unique unit du Tlaxcaltec culture, equivalent to the Light Swordsman (even though he wields a sword of obsidian).  It starts with the Shock I and Drill I promotion, and the standard swordsman's bonus for city attack.  Thus it will be especially effective for storming a Classical city defended mostly by Melee units.</French>
-		<Italian>Il guerriero tlaxcalteco equivale allo spadaccino leggero, anche se utilizza una spada di ossidiana. Inizia con le promozioni Shock I e Addestramento I, oltre ad avere i normali bonus attaccando le città. Perciò è l'ideale per attaccare una città difesa principalmente da unità da combattimento ravvicinato.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_APOLLONIAN_GUARD</Tag>
-		<English>Apollonian Guard</English>
-		<French>Garde Apollinien</French>
-		<Italian>
-			<Text>Guardia Apolloniana</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_APOLLONIAN_GUARD_STRATEGY</Tag>
-		<English>The Apollonian Guard is the unique Spearman of the Trojan culture. Like the Spearman line in general, it starts with a bonus against Mounted units (and against animals in general). It starts with the Policing I and City Garrison I promotions.</English>
-		<French>The Apollonian Guard is the unique Spearman du Trojan culture. Like the Spearman line in general, it starts with a bonus against Mounted units (and against animals in general). It starts with the Policing I and City Garrison I promotions.</French>
-		<Italian>La guardia Apolloniana è il lanciere unico della cultura troiana; come tutti i lancieri, ottiene un bonus contro le unità montate e gli animali. Inizia con le promozioni Polizia I e Guarnigione I.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_APOLLONIAN_GUARD_PEDIA</Tag>
-		<English>The Apollonian Guard is a Trojan unique unit, an alternative to the Spearman.  Because it is a palace guard type of unit, it comes with the promotions Policing I and City Garrison I.  Thus it is the ideal unit for defending cities against mounted units, and better than the Town Watchmen at keeping Crime in check.</English>
-		<Italian>La guardia Apolloniana è l'unità unica troiana, sostituta del lanciere. Dato che era assegnata alla difesa di un palazzo, inizia con le promozioni Polizia I e Guarnigione I. Per questo motivo è l'unità ideale per difendere le città dalle unità montate, oltre ad essere meglio delle sentinelle cittadine a tenere sotto controllo il crimine.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_CHROME_INFANTRY</Tag>
-		<English>Chrome Infantry</English>
-		<French>Infanterie Chrome</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_CHROME_INFANTRY_STRATEGY</Tag>
-		<English>The Chrome Infantry is the first genetically-enhanced infantry unit of the Transhuman era.  You can expect them to give you an edge over the Modern Infantry of your rivals.  Welcome... to the Future!...</English>
-		<French>The Chrome Infantry is the first genetically-enhanced infantry unit du Transhuman era.  You can expect them to give you an edge over the Modern Infantry of your rivals.  Welcome... to the Future!...</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_CHROME_INFANTRY_PEDIA</Tag>
-		<English>Years of secret experimentation with "discarded" IVF foetuses has led us to this.  We can now reliably enhance the genetic makeup of a pre-born human... so as to better suit our purposes.  Forget cloning (cos we can't do that yet...) - we will enhance each human killing machine individually for you.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_CLONE_INFANTRY</Tag>
-		<English>Clone Infantry</English>
-		<French>Infanterie Clonée</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_CLONE_INFANTRY_STRATEGY</Tag>
-		<English>The Clone Infantry is the most basic infantry unit of the Transhuman 'clone era'.  Time to upgrade your garrison top defenders yet again.</English>
-		<French>The Clone Infantry is the most basic infantry unit du Transhuman 'clone era'.  Time to upgrade your garrison top defenders yet again.</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_CLONE_INFANTRY_PEDIA</Tag>
-		<English>Now that cloning is a mainstream technology, it was only a matter of time before the mad scientists of the 'defence' sector got their hands on it.  At first activists were up in arms about people bred in labs purely as killing machines.  However, the clones themselves pointed out that they are not automatons, even going so far as to claim that the military was their chosen profession.  Of course, not everyone was convinced, but - what can you do?</English>
-		<French>Now that cloning is a mainstream technology, it was only a matter of time before the mad scientists du 'defence' sector got their hands on it.  At first activists were up in arms about people bred in labs purely as killing machines.  However, the clones themselves pointed out that they are not automatons, even going so far as to claim that the military was their chosen profession.  Of course, not everyone was convinced, but - what can you do?</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SHOCKWAVE_APC</Tag>
-		<English>Shockwave APC</English>
-		<French>Blindé APC à ondes de choc</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SHOCKWAVE_APC_STRATEGY</Tag>
-		<English>This is the Armoured Personnel Carrier upgraded to Shockwave propulsion - thus it does not require oil-based fuel.  It is also somewhat stronger than its predecessor.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SHOCKWAVE_APC_PEDIA</Tag>
-		<English>Now that the Internal Shockwave Engine has largely superseded internal combustion, it is only natural that an armoured personnel carrier has been developed using the new technology.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_UNMANNED_TRIKE</Tag>
-		<English>Unmanned Trike</English>
-		<French>Trike sans pilote</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_UNMANNED_TRIKE_STRATEGY</Tag>
-		<English>The Unmanned Trike is an autonomous, fast, motorcycle-sized recon unit.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_UNMANNED_TRIKE_PEDIA</Tag>
-		<English>The recent advances in robotics have led to the development of this marvellous recon unit.  All the benefits of conventional motorbike recon, but without risking any valuable men.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_UNMANNED_HELICOPTER</Tag>
-		<English>Drone Helicopter</English>
-		<French>Drone Hélicoptère</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_UNMANNED_HELICOPTER_STRATEGY</Tag>
-		<English>The Drone Helicopter is a generation more advanced than the Stealth Gunship, and operates without the need for a costly aircrew.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_UNMANNED_HELICOPTER_PEDIA</Tag>
-		<English>The Drone Helicopter is a more maneuvrable - and more intelligent - version of the fixed-wing drones that you may have heard about...</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_DROID_HELICOPTER</Tag>
-		<English>Droid Helicopter</English>
-		<French>Hélicoptère Droïde</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_DROID_HELICOPTER_STRATEGY</Tag>
-		<English>Another upgrade of the 'drone' aircraft - this rotary-winged machine has all the tactical nous of a true robot.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_DROID_HELICOPTER_PEDIA</Tag>
-		<English>Those jaded Drone Copters are really showing their age.  Well never mind, because here's a smarter, fully robotic helicopter to replace them with.</English>
 	</TEXT>
 </Civ4GameText>

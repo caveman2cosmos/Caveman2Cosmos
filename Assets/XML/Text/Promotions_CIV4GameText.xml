@@ -185,6 +185,11 @@
 		<French>[ICON_BULLET]Ajoute %s1_Build aux possibilité de construction de l'unité.</French>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_ADDS_CANNOT_CAPTURE</Tag>
+		<English>[ICON_BULLET]Gives cause for unit to be unable to capture enemy Cities or Units</English>
+		<French>[ICON_BULLET]Rend l'unité incapable de capturer les villes ou unités ennemies</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ADDS_COLD_IMMUNITY_TEXT</Tag>
 		<English>[ICON_BULLET]Causes unit to be immune to Cold Damage penalties.</English>
 		<French>[ICON_BULLET]Rend l'unité immunisée contre les pénalités engendrées par les dégâts liés au froid.</French>
@@ -12593,6 +12598,11 @@
 		<French>[ICON_BULLET]Elimine une source du comportement suicidaire.</French>
 		<Italian>[ICON_BULLET]Elimina una fonte dell'abilità Suicidio.</Italian>
 		<Polish>[ICON_BULLET]Eliminuje jedno źródło Popłochu.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_REMOVES_CANNOT_CAPTURE</Tag>
+		<English>[ICON_BULLET]Removes a cause for unit to be unable to capture enemy Cities or Units</English>
+		<French>[ICON_BULLET]Enlève l'incapacité de l'unité de capturer les villes ou unités ennemies</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REMOVES_COLD_IMMUNITY_TEXT</Tag>
