@@ -12696,12 +12696,12 @@ void CvPlot::doFeature()
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-		int iStorm = GC.getInfoTypeForString("FEATURE_STORM", true);
-		bool bNoStorms = GC.getGame().isModderGameOption(MODDERGAMEOPTION_NO_STORMS);
+		const int iStorm = GC.getInfoTypeForString("FEATURE_STORM", true);
+		const bool bNoStorms = GC.getGame().isModderGameOption(MODDERGAMEOPTION_NO_STORMS);
 
 		for (iI = 0; iI < GC.getNumFeatureInfos(); ++iI)
 		{
-			CvFeatureInfo& kFeature = GC.getFeatureInfo((FeatureTypes)iI);
+			const CvFeatureInfo& kFeature = GC.getFeatureInfo((FeatureTypes)iI);
 			if ((kFeature.getGrowthProbability() > 0 && !isUnit()) || kFeature.getSpreadProbability() > 0)
 			{
 				if (getImprovementType() == NO_IMPROVEMENT || (kFeature.isCanGrowAnywhere() && !isBeingWorked() && !isWater()))
@@ -14706,7 +14706,7 @@ bool CvPlot::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible) const
 /*                                                                                              */
 /* CanTrain Performance                                                                         */
 /************************************************************************************************/
-	CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
+	const CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
 	int iI;
 
 	if (kUnit.isPrereqReligion())
@@ -16540,12 +16540,12 @@ int CvPlot::countSeeInvisibleActive(PlayerTypes ePlayer, InvisibleTypes eVisible
 int CvPlot::getCommunicability(PromotionLineTypes ePromotionLine, bool bWorkedTile, bool bVicinity, bool bAccessVolume) const
 {
 	int iCommunicability = 0;
-	TerrainTypes eTerrain = getTerrainType();
+	const TerrainTypes eTerrain = getTerrainType();
 	if (eTerrain != NO_TERRAIN)
 	{
 		iCommunicability += GC.getTerrainInfo(eTerrain).getAfflictionCommunicabilityType(ePromotionLine, bWorkedTile, bVicinity, false).iModifier;
 	}
-	FeatureTypes eFeature = getFeatureType();
+	const FeatureTypes eFeature = getFeatureType();
 	if (eFeature != NO_FEATURE)
 	{
 		iCommunicability += GC.getFeatureInfo(eFeature).getAfflictionCommunicabilityType(ePromotionLine, bWorkedTile, bVicinity, false).iModifier;

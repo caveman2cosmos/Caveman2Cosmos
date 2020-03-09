@@ -176,10 +176,10 @@ extern CvDLLUtilityIFaceBase* g_DLL;
 
 class cvInternalGlobals
 {
-//	friend class CvDLLUtilityIFace;
+	friend class CvGlobals;
 	friend class CvXMLLoadUtility;
-public:
 
+public:
 	// singleton accessor
 	inline static cvInternalGlobals& getInstance();
 
@@ -347,28 +347,28 @@ public:
 	void resolveDelayedResolution();
 
 	int getNumWorldInfos() const { return m_paWorldInfo.size(); }
-	CvWorldInfo& getWorldInfo(WorldSizeTypes e) const { return getInfo(m_paWorldInfo, e); }
+	const CvWorldInfo& getWorldInfo(WorldSizeTypes e) const { return getInfo(m_paWorldInfo, e); }
 
 	int getNumClimateInfos() const { return m_paClimateInfo.size(); }
-	CvClimateInfo& getClimateInfo(ClimateTypes e) const { return getInfo(m_paClimateInfo, e); }
+	const CvClimateInfo& getClimateInfo(ClimateTypes e) const { return getInfo(m_paClimateInfo, e); }
 
 	int getNumSeaLevelInfos() const { return m_paSeaLevelInfo.size(); }
-	CvSeaLevelInfo& getSeaLevelInfo(SeaLevelTypes e) const { return getInfo(m_paSeaLevelInfo, e); }
+	const CvSeaLevelInfo& getSeaLevelInfo(SeaLevelTypes e) const { return getInfo(m_paSeaLevelInfo, e); }
 
 	int getNumColorInfos() const { return m_paColorInfo.size(); }
-	CvColorInfo& getColorInfo(ColorTypes e) const { return getInfo(m_paColorInfo, e); }
+	const CvColorInfo& getColorInfo(ColorTypes e) const { return getInfo(m_paColorInfo, e); }
 
 	int getNumPlayerColorInfos() const { return m_paPlayerColorInfo.size(); }
-	CvPlayerColorInfo& getPlayerColorInfo(PlayerColorTypes e) const { return getInfo(m_paPlayerColorInfo, e); }
+	const CvPlayerColorInfo& getPlayerColorInfo(PlayerColorTypes e) const { return getInfo(m_paPlayerColorInfo, e); }
 
 	int getNumAdvisorInfos() const { return m_paAdvisorInfo.size(); }
-	CvAdvisorInfo& getAdvisorInfo(AdvisorTypes e) const { return getInfo(m_paAdvisorInfo, e); }
+	const CvAdvisorInfo& getAdvisorInfo(AdvisorTypes e) const { return getInfo(m_paAdvisorInfo, e); }
 
 	int getNumHints() const { return m_paHints.size(); }
-	CvInfoBase& getHints(int i) const { return getInfo(m_paHints, i); }
+	const CvInfoBase& getHints(int i) const { return getInfo(m_paHints, i); }
 
 	int getNumMainMenus() const { return m_paMainMenus.size(); }
-	CvMainMenuInfo& getMainMenus(int i) const;
+	const CvMainMenuInfo& getMainMenus(int i) const;
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 10/30/07                            MRGENIE          */
 /*                                                                                              */
@@ -401,118 +401,123 @@ public:
 /************************************************************************************************/
 
 	int getNumRouteModelInfos() const { return m_paRouteModelInfo.size(); }
-	CvRouteModelInfo& getRouteModelInfo(int i) const { return getInfo(m_paRouteModelInfo, i); }
+	const CvRouteModelInfo& getRouteModelInfo(int i) const { return getInfo(m_paRouteModelInfo, i); }
 
 	int getNumRiverInfos() const { return m_paRiverInfo.size(); }
-	CvRiverInfo& getRiverInfo(RiverTypes e) const { return getInfo(m_paRiverInfo, e); }
+	const CvRiverInfo& getRiverInfo(RiverTypes e) const { return getInfo(m_paRiverInfo, e); }
 
 	int getNumRiverModelInfos() const { return m_paRiverModelInfo.size(); }
-	CvRiverModelInfo& getRiverModelInfo(int i) const { return getInfo(m_paRiverModelInfo, i); }
+	const CvRiverModelInfo& getRiverModelInfo(int i) const { return getInfo(m_paRiverModelInfo, i); }
 
 	int getNumWaterPlaneInfos() const { return m_paWaterPlaneInfo.size(); }
-	CvWaterPlaneInfo& getWaterPlaneInfo(int i) const { return getInfo(m_paWaterPlaneInfo, i); }
+	const CvWaterPlaneInfo& getWaterPlaneInfo(int i) const { return getInfo(m_paWaterPlaneInfo, i); }
 
 	int getNumTerrainPlaneInfos() const { return m_paTerrainPlaneInfo.size(); }
-	CvTerrainPlaneInfo& getTerrainPlaneInfo(int i) const { return getInfo(m_paTerrainPlaneInfo, i); }
+	const CvTerrainPlaneInfo& getTerrainPlaneInfo(int i) const { return getInfo(m_paTerrainPlaneInfo, i); }
 
 	int getNumCameraOverlayInfos() const { return m_paCameraOverlayInfo.size(); }
-	CvCameraOverlayInfo& getCameraOverlayInfo(int i) const { return getInfo(m_paCameraOverlayInfo, i); }
+	const CvCameraOverlayInfo& getCameraOverlayInfo(int i) const { return getInfo(m_paCameraOverlayInfo, i); }
 
 	int getNumAnimationPathInfos() const { return m_paAnimationPathInfo.size(); }
-	CvAnimationPathInfo& getAnimationPathInfo(AnimationPathTypes e) const { return getInfo(m_paAnimationPathInfo, e); }
+	const CvAnimationPathInfo& getAnimationPathInfo(AnimationPathTypes e) const { return getInfo(m_paAnimationPathInfo, e); }
 
 	int getNumAnimationCategoryInfos() const { return m_paAnimationCategoryInfo.size(); }
-	CvAnimationCategoryInfo& getAnimationCategoryInfo(AnimationCategoryTypes e) const { return getInfo(m_paAnimationCategoryInfo, e); }
+	const CvAnimationCategoryInfo& getAnimationCategoryInfo(AnimationCategoryTypes e) const { return getInfo(m_paAnimationCategoryInfo, e); }
 
 	int getNumEntityEventInfos() const { return m_paEntityEventInfo.size(); }
-	CvEntityEventInfo& getEntityEventInfo(EntityEventTypes e) const { return getInfo(m_paEntityEventInfo, e); }
+	const CvEntityEventInfo& getEntityEventInfo(EntityEventTypes e) const { return getInfo(m_paEntityEventInfo, e); }
 
 	int getNumEffectInfos() const { return m_paEffectInfo.size(); }
-	CvEffectInfo& getEffectInfo(int i) const { return getInfo(m_paEffectInfo, i); }
+	const CvEffectInfo& getEffectInfo(int i) const { return getInfo(m_paEffectInfo, i); }
 
 	int getNumAttachableInfos() const { return m_paAttachableInfo.size(); }
-	CvAttachableInfo& getAttachableInfo(int i) const { return getInfo(m_paAttachableInfo, i); }
+	const CvAttachableInfo& getAttachableInfo(int i) const { return getInfo(m_paAttachableInfo, i); }
 
 	int getNumCameraInfos() const { return m_paCameraInfo.size(); }
-	CvCameraInfo& getCameraInfo(CameraAnimationTypes eCameraAnimationNum) const { return getInfo(m_paCameraInfo, eCameraAnimationNum); }
+	const CvCameraInfo& getCameraInfo(CameraAnimationTypes eCameraAnimationNum) const { return getInfo(m_paCameraInfo, eCameraAnimationNum); }
 
 	int getNumUnitFormationInfos() const { return m_paUnitFormationInfo.size(); }
-	CvUnitFormationInfo& getUnitFormationInfo(int i) const { return getInfo(m_paUnitFormationInfo, i); }
+	const CvUnitFormationInfo& getUnitFormationInfo(int i) const { return getInfo(m_paUnitFormationInfo, i); }
 
 	int getNumGameTextXML() const { return m_paGameTextXML.size(); }
 
 	int getNumLandscapeInfos() const { return m_paLandscapeInfo.size(); }
-	CvLandscapeInfo& getLandscapeInfo(int iIndex) const { return getInfo(m_paLandscapeInfo, iIndex); }
+	const CvLandscapeInfo& getLandscapeInfo(int iIndex) const { return getInfo(m_paLandscapeInfo, iIndex); }
 	int getActiveLandscapeID() const { return m_iActiveLandscapeID; }
 	void setActiveLandscapeID(int iLandscapeID) { m_iActiveLandscapeID = iLandscapeID; }
 
 	int getNumTerrainInfos() const { return m_paTerrainInfo.size(); }
-	CvTerrainInfo& getTerrainInfo(TerrainTypes eTerrainNum) const { return getInfo(m_paTerrainInfo, eTerrainNum); }
+	const CvTerrainInfo& getTerrainInfo(TerrainTypes eTerrainNum) const { return getInfo(m_paTerrainInfo, eTerrainNum); }
 
 	int getNumBonusClassInfos() const { return m_paBonusClassInfo.size(); }
-	CvBonusClassInfo& getBonusClassInfo(BonusClassTypes eBonusNum) const { return getInfo(m_paBonusClassInfo, eBonusNum); }
+	const CvBonusClassInfo& getBonusClassInfo(BonusClassTypes eBonusNum) const { return getInfo(m_paBonusClassInfo, eBonusNum); }
 
 	int getNumBonusInfos() const { return m_paBonusInfo.size(); }
-	CvBonusInfo& getBonusInfo(BonusTypes eBonusNum) const { return getInfo(m_paBonusInfo, eBonusNum); }
+	const CvBonusInfo& getBonusInfo(BonusTypes eBonusNum) const { return getInfo(m_paBonusInfo, eBonusNum); }
+	CvBonusInfo& getBonusInfo(BonusTypes eBonusNum) { return getInfo(m_paBonusInfo, eBonusNum); }
 
 	int getNumFeatureInfos() const { return m_paFeatureInfo.size(); }
-	CvFeatureInfo& getFeatureInfo(FeatureTypes eFeatureNum) const { return getInfo(m_paFeatureInfo, eFeatureNum); }
+	const CvFeatureInfo& getFeatureInfo(FeatureTypes eFeatureNum) const { return getInfo(m_paFeatureInfo, eFeatureNum); }
 
 	int& getNumPlayableCivilizationInfos() { return m_iNumPlayableCivilizationInfos; }
 	int& getNumAIPlayableCivilizationInfos() { return m_iNumAIPlayableCivilizationInfos; }
 	int getNumCivilizationInfos() const { return m_paCivilizationInfo.size(); }
-	CvCivilizationInfo& getCivilizationInfo(CivilizationTypes eCivilizationNum) const { return getInfo(m_paCivilizationInfo, eCivilizationNum); }
+	const CvCivilizationInfo& getCivilizationInfo(CivilizationTypes eCivilizationNum) const { return getInfo(m_paCivilizationInfo, eCivilizationNum); }
+	CvCivilizationInfo& getCivilizationInfo(CivilizationTypes eCivilizationNum) { return getInfo(m_paCivilizationInfo, eCivilizationNum); }
 
 	int getNumLeaderHeadInfos() const { return m_paLeaderHeadInfo.size(); }
-	CvLeaderHeadInfo& getLeaderHeadInfo(LeaderHeadTypes eLeaderHeadNum) const { return getInfo(m_paLeaderHeadInfo, eLeaderHeadNum); }
+	const CvLeaderHeadInfo& getLeaderHeadInfo(LeaderHeadTypes eLeaderHeadNum) const { return getInfo(m_paLeaderHeadInfo, eLeaderHeadNum); }
+	CvLeaderHeadInfo& getLeaderHeadInfo(LeaderHeadTypes eLeaderHeadNum) { return getInfo(m_paLeaderHeadInfo, eLeaderHeadNum); }
 
 	int getNumTraitInfos() const { return m_paTraitInfo.size(); }
-	CvTraitInfo& getTraitInfo(TraitTypes eTraitNum) const { return getInfo(m_paTraitInfo, eTraitNum); }
+	const CvTraitInfo& getTraitInfo(TraitTypes eTraitNum) const { return getInfo(m_paTraitInfo, eTraitNum); }
+	CvTraitInfo& getTraitInfo(TraitTypes eTraitNum) { return getInfo(m_paTraitInfo, eTraitNum); }
 
 	int getNumCursorInfos() const { return m_paCursorInfo.size(); }
-	CvCursorInfo& getCursorInfo(CursorTypes eCursorNum) const { return getInfo(m_paCursorInfo, eCursorNum); }
+	const CvCursorInfo& getCursorInfo(CursorTypes eCursorNum) const { return getInfo(m_paCursorInfo, eCursorNum); }
 
 	int getNumThroneRoomCameras() const { return m_paThroneRoomCamera.size(); }
-	CvThroneRoomCamera& getThroneRoomCamera(int iIndex) const { return getInfo(m_paThroneRoomCamera, iIndex); }
+	const CvThroneRoomCamera& getThroneRoomCamera(int iIndex) const { return getInfo(m_paThroneRoomCamera, iIndex); }
 
 	int getNumThroneRoomInfos() const { return m_paThroneRoomInfo.size(); }
-	CvThroneRoomInfo& getThroneRoomInfo(int iIndex) const { return getInfo(m_paThroneRoomInfo, iIndex); }
+	const CvThroneRoomInfo& getThroneRoomInfo(int iIndex) const { return getInfo(m_paThroneRoomInfo, iIndex); }
 
 	int getNumThroneRoomStyleInfos() const { return m_paThroneRoomStyleInfo.size(); }
-	CvThroneRoomStyleInfo& getThroneRoomStyleInfo(int iIndex) const { return getInfo(m_paThroneRoomStyleInfo, iIndex); }
+	const CvThroneRoomStyleInfo& getThroneRoomStyleInfo(int iIndex) const { return getInfo(m_paThroneRoomStyleInfo, iIndex); }
 
 	int getNumSlideShowInfos() const { return m_paSlideShowInfo.size(); }
-	CvSlideShowInfo& getSlideShowInfo(int iIndex) const { return getInfo(m_paSlideShowInfo, iIndex); }
+	const CvSlideShowInfo& getSlideShowInfo(int iIndex) const { return getInfo(m_paSlideShowInfo, iIndex); }
 
 	int getNumSlideShowRandomInfos() const { return m_paSlideShowRandomInfo.size(); }
-	CvSlideShowRandomInfo& getSlideShowRandomInfo(int iIndex) const { return getInfo(m_paSlideShowRandomInfo, iIndex); }
+	const CvSlideShowRandomInfo& getSlideShowRandomInfo(int iIndex) const { return getInfo(m_paSlideShowRandomInfo, iIndex); }
 
 	int getNumWorldPickerInfos() const { return m_paWorldPickerInfo.size(); }
-	CvWorldPickerInfo& getWorldPickerInfo(int iIndex) const { return getInfo(m_paWorldPickerInfo, iIndex); }
+	const CvWorldPickerInfo& getWorldPickerInfo(int iIndex) const { return getInfo(m_paWorldPickerInfo, iIndex); }
 
 	int getNumSpaceShipInfos() const { return m_paSpaceShipInfo.size(); }
-	CvSpaceShipInfo& getSpaceShipInfo(int iIndex) const { return getInfo(m_paSpaceShipInfo, iIndex); }
+	const CvSpaceShipInfo& getSpaceShipInfo(int iIndex) const { return getInfo(m_paSpaceShipInfo, iIndex); }
 
 	int getNumUnitInfos() const { return m_paUnitInfo.size(); }
-	CvUnitInfo& getUnitInfo(UnitTypes eUnitNum) const { return getInfo(m_paUnitInfo, eUnitNum); }
+	const CvUnitInfo& getUnitInfo(UnitTypes eUnitNum) const { return getInfo(m_paUnitInfo, eUnitNum); }
+	CvUnitInfo& getUnitInfo(UnitTypes eUnitNum) { return getInfo(m_paUnitInfo, eUnitNum); }
 
 	int getNumSpawnInfos() const { return m_paSpawnInfo.size(); }
-	CvSpawnInfo& getSpawnInfo(SpawnTypes eSpawnNum) const { return getInfo(m_paSpawnInfo, eSpawnNum); }
+	const CvSpawnInfo& getSpawnInfo(SpawnTypes eSpawnNum) const { return getInfo(m_paSpawnInfo, eSpawnNum); }
 
 	int getNumSpecialUnitInfos() const { return m_paSpecialUnitInfo.size(); }
-	CvSpecialUnitInfo& getSpecialUnitInfo(SpecialUnitTypes eSpecialUnitNum) const { return getInfo(m_paSpecialUnitInfo, eSpecialUnitNum); }
+	const CvSpecialUnitInfo& getSpecialUnitInfo(SpecialUnitTypes eSpecialUnitNum) const { return getInfo(m_paSpecialUnitInfo, eSpecialUnitNum); }
 
 	int getNumConceptInfos() const { return m_paConceptInfo.size(); }
-	CvInfoBase& getConceptInfo(ConceptTypes e) const { return getInfo(m_paConceptInfo, e); }
+	const CvInfoBase& getConceptInfo(ConceptTypes e) const { return getInfo(m_paConceptInfo, e); }
 
 	int getNumNewConceptInfos() const { return m_paNewConceptInfo.size(); }
-	CvInfoBase& getNewConceptInfo(NewConceptTypes e) const { return getInfo(m_paNewConceptInfo, e); }
+	const CvInfoBase& getNewConceptInfo(NewConceptTypes e) const { return getInfo(m_paNewConceptInfo, e); }
 
 	int getNumPropertyInfos() const { return m_paPropertyInfo.size(); }
-	CvPropertyInfo& getPropertyInfo(PropertyTypes ePropertyNum) const { return getInfo(m_paPropertyInfo, ePropertyNum); }
+	const CvPropertyInfo& getPropertyInfo(PropertyTypes ePropertyNum) const { return getInfo(m_paPropertyInfo, ePropertyNum); }
 
 	int getNumOutcomeInfos() const { return m_paOutcomeInfo.size(); }
-	CvOutcomeInfo& getOutcomeInfo(OutcomeTypes eOutcomeNum) const { return getInfo(m_paOutcomeInfo, eOutcomeNum); }
+	const CvOutcomeInfo& getOutcomeInfo(OutcomeTypes eOutcomeNum) const { return getInfo(m_paOutcomeInfo, eOutcomeNum); }
 
 /************************************************************************************************/
 /*Afforess                                     12/21/09                                         */
@@ -1300,7 +1305,7 @@ protected:
 	typedef std::map<int*,std::pair<CvString,CvString> > DelayedResolutionMap;
 	DelayedResolutionMap m_delayedResolutionMap;
 
-
+private:
 	std::vector<CvColorInfo*> m_paColorInfo;
 	std::vector<CvPlayerColorInfo*> m_paPlayerColorInfo;
 	std::vector<CvAdvisorInfo*> m_paAdvisorInfo;
@@ -1467,6 +1472,7 @@ protected:
 	// Game Text
 	std::vector<CvGameText*> m_paGameTextXML;
 
+protected:
 	//////////////////////////////////////////////////////////////////////////
 	// GLOBAL TYPES
 	//////////////////////////////////////////////////////////////////////////
@@ -2094,42 +2100,42 @@ public:
 		PROXY_TRACK("getPlotCardinalDirectionY");
 		return gGlobals->getPlotCardinalDirectionY();
 	}
-	int* getCityPlotX()
+	int* getCityPlotX() const
 	{
 		PROXY_TRACK("getCityPlotX");
 		return gGlobals->getCityPlotX();
 	}
-	int* getCityPlotY()
+	int* getCityPlotY() const
 	{
 		PROXY_TRACK("getCityPlotY");
 		return gGlobals->getCityPlotY();
 	}
-	int* getCityPlotPriority()
+	int* getCityPlotPriority() const
 	{
 		PROXY_TRACK("getCityPlotPriority");
 		return gGlobals->getCityPlotPriority();
 	}
-	int getXYCityPlot(int i, int j)
+	int getXYCityPlot(int i, int j) const
 	{
 		PROXY_TRACK("getXYCityPlot");
 		return gGlobals->getXYCityPlot(i,j);
 	}
-	DirectionTypes* getTurnLeftDirection()
+	DirectionTypes* getTurnLeftDirection() const
 	{
 		PROXY_TRACK("getTurnLeftDirection");
 		return gGlobals->getTurnLeftDirection();
 	}
-	DirectionTypes getTurnLeftDirection(int i)
+	DirectionTypes getTurnLeftDirection(int i) const
 	{
 		PROXY_TRACK("getTurnLeftDirection(i)");
 		return gGlobals->getTurnLeftDirection(i);
 	}
-	DirectionTypes* getTurnRightDirection()
+	DirectionTypes* getTurnRightDirection() const
 	{
 		PROXY_TRACK("getTurnRightDirection");
 		return gGlobals->getTurnRightDirection();
 	}
-	DirectionTypes getTurnRightDirection(int i)
+	DirectionTypes getTurnRightDirection(int i) const
 	{
 		PROXY_TRACK("getTurnRightDirection(i)");
 		return gGlobals->getTurnRightDirection(i);
@@ -2180,7 +2186,7 @@ public:
 	DllExport CvWorldInfo& getWorldInfo(WorldSizeTypes e)
 	{
 		PROXY_TRACK("getWorldInfo");
-		return gGlobals->getWorldInfo(e);
+		return getInfo(gGlobals->m_paWorldInfo, e);
 	}
 
 	DllExport int getNumClimateInfos()
@@ -2191,7 +2197,7 @@ public:
 	DllExport CvClimateInfo& getClimateInfo(ClimateTypes e)
 	{
 		PROXY_TRACK("getClimateInfo");
-		return gGlobals->getClimateInfo(e);
+		return getInfo(gGlobals->m_paClimateInfo, e);
 	}
 
 	DllExport int getNumSeaLevelInfos()
@@ -2202,10 +2208,10 @@ public:
 	DllExport CvSeaLevelInfo& getSeaLevelInfo(SeaLevelTypes e)
 	{
 		PROXY_TRACK("getSeaLevelInfo");
-		return gGlobals->getSeaLevelInfo(e);
+		return getInfo(gGlobals->m_paSeaLevelInfo, e);
 	}
 
-	int getNumColorInfos()
+	int getNumColorInfos() const
 	{
 		PROXY_TRACK("getNumColorInfos");
 		return gGlobals->getNumColorInfos();
@@ -2213,7 +2219,7 @@ public:
 	DllExport CvColorInfo& getColorInfo(ColorTypes e)
 	{
 		PROXY_TRACK("getColorInfo");
-		return gGlobals->getColorInfo(e);
+		return getInfo(gGlobals->m_paColorInfo, e);
 	}
 
 	DllExport int getNumPlayerColorInfos()
@@ -2224,7 +2230,7 @@ public:
 	DllExport CvPlayerColorInfo& getPlayerColorInfo(PlayerColorTypes e)
 	{
 		PROXY_TRACK("getPlayerColorInfo");
-		return gGlobals->getPlayerColorInfo(e);
+		return getInfo(gGlobals->m_paPlayerColorInfo, e);
 	}
 
 	DllExport  int getNumHints()
@@ -2235,10 +2241,10 @@ public:
 	DllExport CvInfoBase& getHints(int i)
 	{
 		PROXY_TRACK("getHints");
-		return gGlobals->getHints(i);
+		return getInfo(gGlobals->m_paHints, i);
 	}
 
-	int getNumMainMenus()
+	int getNumMainMenus() const
 	{
 		PROXY_TRACK("getNumMainMenus");
 		return gGlobals->getNumMainMenus();
@@ -2246,14 +2252,14 @@ public:
 	DllExport CvMainMenuInfo& getMainMenus(int i)
 	{
 		PROXY_TRACK("getMainMenus");
-		return gGlobals->getMainMenus(i);
+		return getInfo(gGlobals->m_paMainMenus, i);
 	}
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 10/30/07                            MRGENIE          */
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	CvModLoadControlInfo& getModLoadControlInfos(int i)
+	const CvModLoadControlInfo& getModLoadControlInfos(int i) const
 	{
 		PROXY_TRACK("getModLoadControlInfos");
 		return gGlobals->getModLoadControlInfos(i);
@@ -2270,15 +2276,15 @@ public:
 	DllExport CvRouteModelInfo& getRouteModelInfo(int i)
 	{
 		PROXY_TRACK("getRouteModelInfo");
-		return gGlobals->getRouteModelInfo(i);
+		return getInfo(gGlobals->m_paRouteModelInfo, i);
 	}
 
-	int getNumRiverInfos()
+	int getNumRiverInfos() const
 	{
 		PROXY_TRACK("getNumRiverInfos");
 		return gGlobals->getNumRiverInfos();
 	}
-	CvRiverInfo& getRiverInfo(RiverTypes e)
+	const CvRiverInfo& getRiverInfo(RiverTypes e) const
 	{
 		PROXY_TRACK("getRiverInfo");
 		return gGlobals->getRiverInfo(e);
@@ -2292,10 +2298,10 @@ public:
 	DllExport CvRiverModelInfo& getRiverModelInfo(int i)
 	{
 		PROXY_TRACK("getRiverModelInfo");
-		return gGlobals->getRiverModelInfo(i);
+		return getInfo(gGlobals->m_paRiverModelInfo, i);
 	}
 
-	int getNumWaterPlaneInfos()
+	int getNumWaterPlaneInfos() const
 	{
 		PROXY_TRACK("getNumWaterPlaneInfos");
 		return gGlobals->getNumWaterPlaneInfos();
@@ -2303,7 +2309,7 @@ public:
 	DllExport CvWaterPlaneInfo& getWaterPlaneInfo(int i)
 	{
 		PROXY_TRACK("getWaterPlaneInfo");
-		return gGlobals->getWaterPlaneInfo(i);
+		return getInfo(gGlobals->m_paWaterPlaneInfo, i);
 	}
 
 	DllExport int getNumTerrainPlaneInfos()
@@ -2314,7 +2320,7 @@ public:
 	DllExport CvTerrainPlaneInfo& getTerrainPlaneInfo(int i)
 	{
 		PROXY_TRACK("getTerrainPlaneInfo");
-		return gGlobals->getTerrainPlaneInfo(i);
+		return getInfo(gGlobals->m_paTerrainPlaneInfo, i);
 	}
 
 	DllExport int getNumCameraOverlayInfos()
@@ -2325,10 +2331,10 @@ public:
 	DllExport CvCameraOverlayInfo& getCameraOverlayInfo(int i)
 	{
 		PROXY_TRACK("getCameraOverlayInfo");
-		return gGlobals->getCameraOverlayInfo(i);
+		return getInfo(gGlobals->m_paCameraOverlayInfo, i);
 	}
 
-	int getNumAnimationPathInfos()
+	int getNumAnimationPathInfos() const
 	{
 		PROXY_TRACK("getNumAnimationPathInfos");
 		return gGlobals->getNumAnimationPathInfos();
@@ -2336,10 +2342,10 @@ public:
 	DllExport CvAnimationPathInfo& getAnimationPathInfo(AnimationPathTypes e)
 	{
 		PROXY_TRACK("getAnimationPathInfo");
-		return gGlobals->getAnimationPathInfo(e);
+		return getInfo(gGlobals->m_paAnimationPathInfo, e);
 	}
 
-	int getNumAnimationCategoryInfos()
+	int getNumAnimationCategoryInfos() const
 	{
 		PROXY_TRACK("getNumAnimationCategoryInfos");
 		return gGlobals->getNumAnimationCategoryInfos();
@@ -2347,10 +2353,10 @@ public:
 	DllExport CvAnimationCategoryInfo& getAnimationCategoryInfo(AnimationCategoryTypes e)
 	{
 		PROXY_TRACK("getAnimationCategoryInfo");
-		return gGlobals->getAnimationCategoryInfo(e);
+		return getInfo(gGlobals->m_paAnimationCategoryInfo, e);
 	}
 
-	int getNumEntityEventInfos()
+	int getNumEntityEventInfos() const
 	{
 		PROXY_TRACK("getNumEntityEventInfos");
 		return gGlobals->getNumEntityEventInfos();
@@ -2358,10 +2364,10 @@ public:
 	DllExport CvEntityEventInfo& getEntityEventInfo(EntityEventTypes e)
 	{
 		PROXY_TRACK("getEntityEventInfo");
-		return gGlobals->getEntityEventInfo(e);
+		return getInfo(gGlobals->m_paEntityEventInfo, e);
 	}
 
-	int getNumEffectInfos()
+	int getNumEffectInfos() const
 	{
 		PROXY_TRACK("getNumEffectInfos");
 		return gGlobals->getNumEffectInfos();
@@ -2369,10 +2375,10 @@ public:
 	DllExport CvEffectInfo& getEffectInfo(int i)
 	{
 		PROXY_TRACK("getEffectInfo");
-		return gGlobals->getEffectInfo(i);
+		return getInfo(gGlobals->m_paEffectInfo, i);
 	}
 
-	int getNumAttachableInfos()
+	int getNumAttachableInfos() const
 	{
 		PROXY_TRACK("getNumAttachableInfos");
 		return gGlobals->getNumAttachableInfos();
@@ -2380,15 +2386,15 @@ public:
 	DllExport CvAttachableInfo& getAttachableInfo(int i)
 	{
 		PROXY_TRACK("getAttachableInfo");
-		return gGlobals->getAttachableInfo(i);
+		return getInfo(gGlobals->m_paAttachableInfo, i);
 	}
 
-	int getNumCameraInfos()
+	int getNumCameraInfos() const
 	{
 		PROXY_TRACK("getNumCameraInfos");
 		return gGlobals->getNumCameraInfos();
 	}
-	CvCameraInfo& getCameraInfo(CameraAnimationTypes eCameraAnimationNum)
+	const CvCameraInfo& getCameraInfo(CameraAnimationTypes eCameraAnimationNum) const
 	{
 		PROXY_TRACK("getCameraInfo");
 		return gGlobals->getCameraInfo(eCameraAnimationNum);
@@ -2402,10 +2408,10 @@ public:
 	DllExport CvUnitFormationInfo& getUnitFormationInfo(int i)
 	{
 		PROXY_TRACK("getUnitFormationInfo");
-		return gGlobals->getUnitFormationInfo(i);
+		return getInfo(gGlobals->m_paUnitFormationInfo, i);
 	}
 
-	int getNumLandscapeInfos()
+	int getNumLandscapeInfos() const
 	{
 		PROXY_TRACK("getNumLandscapeInfos");
 		return gGlobals->getNumLandscapeInfos();
@@ -2413,7 +2419,7 @@ public:
 	DllExport CvLandscapeInfo& getLandscapeInfo(int iIndex)
 	{
 		PROXY_TRACK("getLandscapeInfo");
-		return gGlobals->getLandscapeInfo(iIndex);
+		return getInfo(gGlobals->m_paLandscapeInfo, iIndex);
 	}
 	DllExport int getActiveLandscapeID()
 	{
@@ -2434,7 +2440,7 @@ public:
 	DllExport CvTerrainInfo& getTerrainInfo(TerrainTypes eTerrainNum)
 	{
 		PROXY_TRACK("getTerrainInfo");
-		return gGlobals->getTerrainInfo(eTerrainNum);
+		return getInfo(gGlobals->m_paTerrainInfo, eTerrainNum);
 	}
 
 	DllExport int getNumBonusInfos()
@@ -2445,7 +2451,7 @@ public:
 	DllExport CvBonusInfo& getBonusInfo(BonusTypes eBonusNum)
 	{
 		PROXY_TRACK("getBonusInfo");
-		return gGlobals->getBonusInfo(eBonusNum);
+		return getInfo(gGlobals->m_paBonusInfo, eBonusNum);
 	}
 
 	DllExport int getNumFeatureInfos()
@@ -2456,7 +2462,7 @@ public:
 	DllExport CvFeatureInfo& getFeatureInfo(FeatureTypes eFeatureNum)
 	{
 		PROXY_TRACK("getFeatureInfo");
-		return gGlobals->getFeatureInfo(eFeatureNum);
+		return getInfo(gGlobals->m_paFeatureInfo, eFeatureNum);
 	}
 
 	DllExport int& getNumPlayableCivilizationInfos()
@@ -2477,7 +2483,7 @@ public:
 	DllExport CvCivilizationInfo& getCivilizationInfo(CivilizationTypes eCivilizationNum)
 	{
 		PROXY_TRACK("getCivilizationInfo");
-		return gGlobals->getCivilizationInfo(eCivilizationNum);
+		return getInfo(gGlobals->m_paCivilizationInfo, eCivilizationNum);
 	}
 
 	DllExport int getNumLeaderHeadInfos()
@@ -2488,7 +2494,7 @@ public:
 	DllExport CvLeaderHeadInfo& getLeaderHeadInfo(LeaderHeadTypes eLeaderHeadNum)
 	{
 		PROXY_TRACK("getLeaderHeadInfo");
-		return gGlobals->getLeaderHeadInfo(eLeaderHeadNum);
+		return getInfo(gGlobals->m_paLeaderHeadInfo, eLeaderHeadNum);
 	}
 
 	DllExport int getNumCursorInfos()
@@ -2496,21 +2502,21 @@ public:
 		PROXY_TRACK("getNumCursorInfos");
 		return gGlobals->getNumCursorInfos();
 	}
-	DllExport	CvCursorInfo& getCursorInfo(CursorTypes eCursorNum)
+	DllExport CvCursorInfo& getCursorInfo(CursorTypes eCursorNum)
 	{
 		PROXY_TRACK("getCursorInfo");
-		return gGlobals->getCursorInfo(eCursorNum);
+		return getInfo(gGlobals->m_paCursorInfo, eCursorNum);
 	}
 
-	int getNumThroneRoomCameras()
+	int getNumThroneRoomCameras() const
 	{
 		PROXY_TRACK("getNumThroneRoomCameras");
 		return gGlobals->getNumThroneRoomCameras();
 	}
-	DllExport	CvThroneRoomCamera& getThroneRoomCamera(int iIndex)
+	DllExport CvThroneRoomCamera& getThroneRoomCamera(int iIndex)
 	{
 		PROXY_TRACK("getThroneRoomCamera");
-		return gGlobals->getThroneRoomCamera(iIndex);
+		return getInfo(gGlobals->m_paThroneRoomCamera, iIndex);
 	}
 
 	DllExport int getNumThroneRoomInfos()
@@ -2521,7 +2527,7 @@ public:
 	DllExport CvThroneRoomInfo& getThroneRoomInfo(int iIndex)
 	{
 		PROXY_TRACK("getThroneRoomInfo");
-		return gGlobals->getThroneRoomInfo(iIndex);
+		return getInfo(gGlobals->m_paThroneRoomInfo, iIndex);
 	}
 
 	DllExport int getNumThroneRoomStyleInfos()
@@ -2532,7 +2538,7 @@ public:
 	DllExport CvThroneRoomStyleInfo& getThroneRoomStyleInfo(int iIndex)
 	{
 		PROXY_TRACK("getThroneRoomStyleInfo");
-		return gGlobals->getThroneRoomStyleInfo(iIndex);
+		return getInfo(gGlobals->m_paThroneRoomStyleInfo, iIndex);
 	}
 
 	DllExport int getNumSlideShowInfos()
@@ -2543,7 +2549,7 @@ public:
 	DllExport CvSlideShowInfo& getSlideShowInfo(int iIndex)
 	{
 		PROXY_TRACK("getSlideShowInfo");
-		return gGlobals->getSlideShowInfo(iIndex);
+		return getInfo(gGlobals->m_paSlideShowInfo, iIndex);
 	}
 
 	DllExport int getNumSlideShowRandomInfos()
@@ -2554,7 +2560,7 @@ public:
 	DllExport CvSlideShowRandomInfo& getSlideShowRandomInfo(int iIndex)
 	{
 		PROXY_TRACK("getSlideShowRandomInfo");
-		return gGlobals->getSlideShowRandomInfo(iIndex);
+		return getInfo(gGlobals->m_paSlideShowRandomInfo, iIndex);
 	}
 
 	DllExport int getNumWorldPickerInfos()
@@ -2562,10 +2568,10 @@ public:
 		PROXY_TRACK("getNumWorldPickerInfos");
 		return gGlobals->getNumWorldPickerInfos();
 	}
-	DllExport	CvWorldPickerInfo& getWorldPickerInfo(int iIndex)
+	DllExport CvWorldPickerInfo& getWorldPickerInfo(int iIndex)
 	{
 		PROXY_TRACK("getWorldPickerInfo");
-		return gGlobals->getWorldPickerInfo(iIndex);
+		return getInfo(gGlobals->m_paWorldPickerInfo, iIndex);
 	}
 
 	DllExport int getNumSpaceShipInfos()
@@ -2573,55 +2579,55 @@ public:
 		PROXY_TRACK("getNumSpaceShipInfos");
 		return gGlobals->getNumSpaceShipInfos();
 	}
-	DllExport	CvSpaceShipInfo& getSpaceShipInfo(int iIndex)
+	DllExport CvSpaceShipInfo& getSpaceShipInfo(int iIndex)
 	{
 		PROXY_TRACK("getSpaceShipInfo");
-		return gGlobals->getSpaceShipInfo(iIndex);
+		return getInfo(gGlobals->m_paSpaceShipInfo, iIndex);
 	}
 
-	int getNumGameOptionInfos()
+	int getNumGameOptionInfos() const
 	{
 		PROXY_TRACK("getNumGameOptionInfos");
 		return gGlobals->getNumGameOptionInfos();
 	}
-	DllExport	CvGameOptionInfo& getGameOptionInfo(GameOptionTypes eGameOptionNum)
+	DllExport CvGameOptionInfo& getGameOptionInfo(GameOptionTypes eGameOptionNum)
 	{
 		PROXY_TRACK("getGameOptionInfo");
-		return gGlobals->getGameOptionInfo(eGameOptionNum);
+		return getInfo(gGlobals->m_paGameOptionInfos, eGameOptionNum);
 	}
 
-	int getNumMPOptionInfos()
+	int getNumMPOptionInfos() const
 	{
 		PROXY_TRACK("getNumMPOptionInfos");
 		return gGlobals->getNumMPOptionInfos();
 	}
-	DllExport	CvMPOptionInfo& getMPOptionInfo(MultiplayerOptionTypes eMPOptionNum)
+	DllExport CvMPOptionInfo& getMPOptionInfo(MultiplayerOptionTypes eMPOptionNum)
 	{
 		PROXY_TRACK("getMPOptionInfo");
-		return gGlobals->getMPOptionInfo(eMPOptionNum);
+		return getInfo(gGlobals->m_paMPOptionInfos, eMPOptionNum);
 	}
 
-	int getNumForceControlInfos()
+	int getNumForceControlInfos() const
 	{
 		PROXY_TRACK("getNumForceControlInfos");
 		return gGlobals->getNumForceControlInfos();
 	}
-	CvForceControlInfo& getForceControlInfo(ForceControlTypes eForceControlNum)
+	const CvForceControlInfo& getForceControlInfo(ForceControlTypes eForceControlNum) const
 	{
 		PROXY_TRACK("getForceControlInfo");
 		return gGlobals->getForceControlInfo(eForceControlNum);
 	}
 
-	DllExport	CvPlayerOptionInfo& getPlayerOptionInfo(PlayerOptionTypes ePlayerOptionNum)
+	DllExport CvPlayerOptionInfo& getPlayerOptionInfo(PlayerOptionTypes ePlayerOptionNum)
 	{
 		PROXY_TRACK("getPlayerOptionInfo");
-		return gGlobals->getPlayerOptionInfo(ePlayerOptionNum);
+		return getInfo(gGlobals->m_paPlayerOptionInfos, ePlayerOptionNum);
 	}
 
-	DllExport	CvGraphicOptionInfo& getGraphicOptionInfo(GraphicOptionTypes eGraphicOptionNum)
+	DllExport CvGraphicOptionInfo& getGraphicOptionInfo(GraphicOptionTypes eGraphicOptionNum)
 	{
 		PROXY_TRACK("getGraphicOptionInfo");
-		return gGlobals->getGraphicOptionInfo(eGraphicOptionNum);
+		return getInfo(gGlobals->m_paGraphicOptionInfos, eGraphicOptionNum);
 	}
 
 	DllExport int getNumRouteInfos()
@@ -2629,7 +2635,7 @@ public:
 		PROXY_TRACK("getNumRouteInfos");
 		return gGlobals->getNumRouteInfos();
 	}
-	CvRouteInfo& getRouteInfo(RouteTypes eRouteNum)
+	const CvRouteInfo& getRouteInfo(RouteTypes eRouteNum) const
 	{
 		PROXY_TRACK("getRouteInfo");
 		return gGlobals->getRouteInfo(eRouteNum);
@@ -2643,21 +2649,21 @@ public:
 	DllExport CvImprovementInfo& getImprovementInfo(ImprovementTypes eImprovementNum)
 	{
 		PROXY_TRACK("getImprovementInfo");
-		return gGlobals->getImprovementInfo(eImprovementNum);
+		return getInfo(gGlobals->m_paImprovementInfo, eImprovementNum);
 	}
 
-	int getNumGoodyInfos()
+	int getNumGoodyInfos() const
 	{
 		PROXY_TRACK("getNumGoodyInfos");
 		return gGlobals->getNumGoodyInfos();
 	}
-	CvGoodyInfo& getGoodyInfo(GoodyTypes eGoodyNum)
+	const CvGoodyInfo& getGoodyInfo(GoodyTypes eGoodyNum) const
 	{
 		PROXY_TRACK("getGoodyInfo");
 		return gGlobals->getGoodyInfo(eGoodyNum);
 	}
 
-	int getNumBuildInfos()
+	int getNumBuildInfos() const
 	{
 		PROXY_TRACK("getNumBuildInfos");
 		return gGlobals->getNumBuildInfos();
@@ -2665,7 +2671,7 @@ public:
 	DllExport CvBuildInfo& getBuildInfo(BuildTypes eBuildNum)
 	{
 		PROXY_TRACK("getBuildInfo");
-		return gGlobals->getBuildInfo(eBuildNum);
+		return getInfo(gGlobals->m_paBuildInfo, eBuildNum);
 	}
 
 	DllExport int getNumHandicapInfos()
@@ -2676,7 +2682,7 @@ public:
 	DllExport CvHandicapInfo& getHandicapInfo(HandicapTypes eHandicapNum)
 	{
 		PROXY_TRACK("getHandicapInfo");
-		return gGlobals->getHandicapInfo(eHandicapNum);
+		return getInfo(gGlobals->m_paHandicapInfo, eHandicapNum);
 	}
 
 	DllExport int getNumGameSpeedInfos()
@@ -2687,7 +2693,7 @@ public:
 	DllExport CvGameSpeedInfo& getGameSpeedInfo(GameSpeedTypes eGameSpeedNum)
 	{
 		PROXY_TRACK("getGameSpeedInfo");
-		return gGlobals->getGameSpeedInfo(eGameSpeedNum);
+		return getInfo(gGlobals->m_paGameSpeedInfo, eGameSpeedNum);
 	}
 
 	DllExport int getNumTurnTimerInfos()
@@ -2698,7 +2704,7 @@ public:
 	DllExport CvTurnTimerInfo& getTurnTimerInfo(TurnTimerTypes eTurnTimerNum)
 	{
 		PROXY_TRACK("getTurnTimerInfo");
-		return gGlobals->getTurnTimerInfo(eTurnTimerNum);
+		return getInfo(gGlobals->m_paTurnTimerInfo, eTurnTimerNum);
 	}
 
 	DllExport int getNumActionInfos()
@@ -2709,33 +2715,33 @@ public:
 	DllExport CvActionInfo& getActionInfo(int i)
 	{
 		PROXY_TRACK("getActionInfo");
-		return gGlobals->getActionInfo(i);
+		return getInfo(gGlobals->m_paActionInfo, i);
 	}
 
 	DllExport CvMissionInfo& getMissionInfo(MissionTypes eMissionNum)
 	{
 		PROXY_TRACK("getMissionInfo");
-		return gGlobals->getMissionInfo(eMissionNum);
+		return getInfo(gGlobals->m_paMissionInfo, eMissionNum);
 	}
 
-	CvControlInfo& getControlInfo(ControlTypes eControlNum)
+	const CvControlInfo& getControlInfo(ControlTypes eControlNum) const
 	{
 		PROXY_TRACK("getControlInfo");
 		return gGlobals->getControlInfo(eControlNum);
 	}
 
-	CvCommandInfo& getCommandInfo(CommandTypes eCommandNum)
+	const CvCommandInfo& getCommandInfo(CommandTypes eCommandNum) const
 	{
 		PROXY_TRACK("getCommandInfo");
 		return gGlobals->getCommandInfo(eCommandNum);
 	}
 
-	int getNumAutomateInfos()
+	int getNumAutomateInfos() const
 	{
 		PROXY_TRACK("getNumAutomateInfos");
 		return gGlobals->getNumAutomateInfos();
 	}
-	CvAutomateInfo& getAutomateInfo(int iAutomateNum)
+	const CvAutomateInfo& getAutomateInfo(int iAutomateNum) const
 	{
 		PROXY_TRACK("getAutomateInfo");
 		return gGlobals->getAutomateInfo(iAutomateNum);
@@ -2749,7 +2755,7 @@ public:
 	DllExport CvEraInfo& getEraInfo(EraTypes eEraNum)
 	{
 		PROXY_TRACK("getEraInfo");
-		return gGlobals->getEraInfo(eEraNum);
+		return getInfo(gGlobals->m_aEraInfo, eEraNum);
 	}
 
 	DllExport int getNumVictoryInfos()
@@ -2760,7 +2766,7 @@ public:
 	DllExport CvVictoryInfo& getVictoryInfo(VictoryTypes eVictoryNum)
 	{
 		PROXY_TRACK("getVictoryInfo");
-		return gGlobals->getVictoryInfo(eVictoryNum);
+		return getInfo(gGlobals->m_paVictoryInfo, eVictoryNum);
 	}
 
 	//
@@ -3066,160 +3072,160 @@ public:
 		return gGlobals->getMAX_CIV_PLAYERS();
 	}
 
-	int getMAX_PC_PLAYERS()
+	int getMAX_PC_PLAYERS() const
 	{
 		PROXY_TRACK("getMAX_PC_PLAYERS");
 		return gGlobals->getMAX_PC_PLAYERS();
 	}
 
-	int getMAX_PLAYERS()
+	int getMAX_PLAYERS() const
 	{
 		PROXY_TRACK("getMAX_PLAYERS");
 		return gGlobals->getMAX_PLAYERS();
 	}
-	int getMAX_PC_TEAMS()
+	int getMAX_PC_TEAMS() const
 	{
 		PROXY_TRACK("getMAX_PC_TEAMS");
 		return gGlobals->getMAX_PC_TEAMS();
 	}
-	int getMAX_TEAMS()
+	int getMAX_TEAMS() const
 	{
 		PROXY_TRACK("getMAX_TEAMS");
 		return gGlobals->getMAX_TEAMS();
 	}
 
-	int getBARBARIAN_PLAYER()
+	int getBARBARIAN_PLAYER() const
 	{
 		PROXY_TRACK("getBARBARIAN_PLAYER");
 		return gGlobals->getBARBARIAN_PLAYER();
 	}
-	int getBARBARIAN_TEAM()
+	int getBARBARIAN_TEAM() const
 	{
 		PROXY_TRACK("getBARBARIAN_TEAM");
 		return gGlobals->getBARBARIAN_TEAM();
 	}
 
-	int getNEANDERTHAL_PLAYER()
+	int getNEANDERTHAL_PLAYER() const
 	{
 		PROXY_TRACK("getNEANDERTHAL_PLAYER");
 		return gGlobals->getNEANDERTHAL_PLAYER();
 	}
-	int getNEANDERTHAL_TEAM()
+	int getNEANDERTHAL_TEAM() const
 	{
 		PROXY_TRACK("getNEANDERTHAL_TEAM");
 		return gGlobals->getNEANDERTHAL_TEAM();
 	}
 
-	int getBEAST_PLAYER()
+	int getBEAST_PLAYER() const
 	{
 		PROXY_TRACK("getBEAST_PLAYER");
 		return gGlobals->getBEAST_PLAYER();
 	}
-	int getBEAST_TEAM()
+	int getBEAST_TEAM() const
 	{
 		PROXY_TRACK("getBEAST_TEAM");
 		return gGlobals->getBEAST_TEAM();
 	}
 
-	int getPREDATOR_PLAYER()
+	int getPREDATOR_PLAYER() const
 	{
 		PROXY_TRACK("getPREDATOR_PLAYER");
 		return gGlobals->getPREDATOR_PLAYER();
 	}
-	int getPREDATOR_TEAM()
+	int getPREDATOR_TEAM() const
 	{
 		PROXY_TRACK("getPREDATOR_TEAM");
 		return gGlobals->getPREDATOR_TEAM();
 	}
 
-	int getPREY_PLAYER()
+	int getPREY_PLAYER() const
 	{
 		PROXY_TRACK("getPREY_PLAYER");
 		return gGlobals->getPREY_PLAYER();
 	}
-	int getPREY_TEAM()
+	int getPREY_TEAM() const
 	{
 		PROXY_TRACK("getPREY_TEAM");
 		return gGlobals->getPREY_TEAM();
 	}
 
-	int getINSECT_PLAYER()
+	int getINSECT_PLAYER() const
 	{
 		PROXY_TRACK("getINSECT_PLAYER");
 		return gGlobals->getINSECT_PLAYER();
 	}
-	int getINSECT_TEAM()
+	int getINSECT_TEAM() const
 	{
 		PROXY_TRACK("getINSECT_TEAM");
 		return gGlobals->getINSECT_TEAM();
 	}
 
-	int getNPC4_PLAYER()
+	int getNPC4_PLAYER() const
 	{
 		PROXY_TRACK("getNPC4_PLAYER");
 		return gGlobals->getNPC4_PLAYER();
 	}
-	int getNPC4_TEAM()
+	int getNPC4_TEAM() const
 	{
 		PROXY_TRACK("getNPC4_TEAM");
 		return gGlobals->getNPC4_TEAM();
 	}
 
-	int getNPC3_PLAYER()
+	int getNPC3_PLAYER() const
 	{
 		PROXY_TRACK("getNPC3_PLAYER");
 		return gGlobals->getNPC3_PLAYER();
 	}
-	int getNPC3_TEAM()
+	int getNPC3_TEAM() const
 	{
 		PROXY_TRACK("getNPC3_TEAM");
 		return gGlobals->getNPC3_TEAM();
 	}
 
-	int getNPC2_PLAYER()
+	int getNPC2_PLAYER() const
 	{
 		PROXY_TRACK("getNPC2_PLAYER");
 		return gGlobals->getNPC2_PLAYER();
 	}
-	int getNPC2_TEAM()
+	int getNPC2_TEAM() const
 	{
 		PROXY_TRACK("getNPC2_TEAM");
 		return gGlobals->getNPC2_TEAM();
 	}
 
-	int getNPC1_PLAYER()
+	int getNPC1_PLAYER() const
 	{
 		PROXY_TRACK("getNPC1_PLAYER");
 		return gGlobals->getNPC1_PLAYER();
 	}
-	int getNPC1_TEAM()
+	int getNPC1_TEAM() const
 	{
 		PROXY_TRACK("getNPC1_TEAM");
 		return gGlobals->getNPC1_TEAM();
 	}
 
-	int getNPC0_PLAYER()
+	int getNPC0_PLAYER() const
 	{
 		PROXY_TRACK("getNPC0_PLAYER");
 		return gGlobals->getNPC0_PLAYER();
 	}
-	int getNPC0_TEAM()
+	int getNPC0_TEAM() const
 	{
 		PROXY_TRACK("getNPC0_TEAM");
 		return gGlobals->getNPC0_TEAM();
 	}
 
-	int getINVALID_PLOT_COORD()
+	int getINVALID_PLOT_COORD() const
 	{
 		PROXY_TRACK("getINVALID_PLOT_COORD");
 		return gGlobals->getINVALID_PLOT_COORD();
 	}
-	int getNUM_CITY_PLOTS()
+	int getNUM_CITY_PLOTS() const
 	{
 		PROXY_TRACK("getNUM_CITY_PLOTS");
 		return gGlobals->getNUM_CITY_PLOTS();
 	}
-	int getCITY_HOME_PLOT()
+	int getCITY_HOME_PLOT() const
 	{
 		PROXY_TRACK("getCITY_HOME_PLOT");
 		return gGlobals->getCITY_HOME_PLOT();
@@ -3603,11 +3609,6 @@ extern CvGlobals gGlobalsProxy;	// for debugging
 //
 inline cvInternalGlobals& cvInternalGlobals::getInstance()
 {
-	// AIAndy: This function is called so often, it is not worth it to do this safety check on something that will not happen with the code changes we do nowadays
-	//if ( gGlobals == NULL )
-	//{
-	//	::MessageBoxA(NULL, "cvInternalGlobals::getInstance() called prior to instantiation\n","CvGameCore",MB_OK);
-	//}
 	return *gGlobals;
 }
 

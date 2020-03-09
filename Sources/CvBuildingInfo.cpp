@@ -3095,7 +3095,7 @@ bool CvBuildingInfo::EnablesUnits() const
 
 		for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 		{
-			CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes)iI);
+			const CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes)iI);
 
 			if (kUnit.isPrereqAndBuilding(eBuilding))
 			{

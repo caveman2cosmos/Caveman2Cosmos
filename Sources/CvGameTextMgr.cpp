@@ -4312,8 +4312,8 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 #endif
 			for (std::map<int, PlayerUnitInfo>::const_iterator itr = a_units.begin(); itr != a_units.end(); ++itr)
 			{
-				CvPlayer&	kPlayer = GET_PLAYER(itr->second.m_eOwner);
-				CvUnitInfo& kUnit = GC.getUnitInfo(itr->second.m_eUnitType);
+				CvPlayer& kPlayer = GET_PLAYER(itr->second.m_eOwner);
+				const CvUnitInfo& kUnit = GC.getUnitInfo(itr->second.m_eUnitType);
 
 				if (iCount < 5 || bFirst)
 				{
@@ -11268,7 +11268,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 
 		for (iI = 0; iI < GC.getTraitInfo(eTrait).getNumDisallowedTraitTypes(); iI++)
 		{
-			TraitTypes eDisallowedTrait = GC.getTraitInfo(eTrait).isDisallowedTraitType(iI).eTrait;
+			const TraitTypes eDisallowedTrait = GC.getTraitInfo(eTrait).isDisallowedTraitType(iI).eTrait;
 			if (eDisallowedTrait != NO_TRAIT)
 			{
 				szHelpString.append(NEWLINE);
@@ -16101,7 +16101,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	// AIAndy: Help display for increasing specific outcomes
 	for (iI = 0; iI < GC.getNumOutcomeInfos(); iI++)
 	{
-		CvOutcomeInfo& kOutcome = GC.getOutcomeInfo((OutcomeTypes)iI);
+		const CvOutcomeInfo& kOutcome = GC.getOutcomeInfo((OutcomeTypes)iI);
 
 		int iExtraChancePromotion = 0;
 		for( iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
@@ -18503,7 +18503,7 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 		{
 			for (iI = 0; iI < GC.getNumUnitInfos(); ++iI)
 			{
-				CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes)iI);
+				const CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes)iI);
 
 				if (kUnit.getBaseDiscover() > 0 || kUnit.getDiscoverMultiplier() > 0)
 				{
@@ -22454,7 +22454,7 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 
 	if (kBuilding.getNoBonus() != NO_BONUS)
 	{
-		CvBonusInfo& kBonus = GC.getBonusInfo((BonusTypes) kBuilding.getNoBonus());
+		const CvBonusInfo& kBonus = GC.getBonusInfo((BonusTypes) kBuilding.getNoBonus());
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_DISABLES", CvWString(kBonus.getType()).GetCString(), kBonus.getTextKeyWide(), kBonus.getChar()));
 	}
@@ -22483,10 +22483,10 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 		}
 	}
 
-	int iNum = kBuilding.getNumExtraFreeBonuses();
+	const int iNum = kBuilding.getNumExtraFreeBonuses();
 	for (int iI=0; iI<iNum; iI++)
 	{
-		CvBonusInfo& kBonus = GC.getBonusInfo(kBuilding.getExtraFreeBonus(iI));
+		const CvBonusInfo& kBonus = GC.getBonusInfo(kBuilding.getExtraFreeBonus(iI));
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_PROVIDES", kBuilding.getExtraFreeBonusNum(iI), CvWString(kBonus.getType()).GetCString(), kBonus.getTextKeyWide(), kBonus.getChar()));
 
@@ -24735,8 +24735,8 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 	//AIAndy: Display in which range of a property this building is auto built
 	for (int i=0; i<GC.getNumPropertyInfos(); i++)
 	{
-		CvPropertyInfo& kInfo = GC.getPropertyInfo((PropertyTypes)i);
-		int iNum = kInfo.getNumPropertyBuildings();
+		const CvPropertyInfo& kInfo = GC.getPropertyInfo((PropertyTypes)i);
+		const int iNum = kInfo.getNumPropertyBuildings();
 		for (int j=0; j<iNum; j++)
 		{
 			if (kInfo.getPropertyBuilding(j).eBuilding == eBuilding)
@@ -33900,7 +33900,7 @@ void CvGameTextMgr::setTerrainHelp(CvWStringBuffer &szBuffer, TerrainTypes eTerr
 	{
 		return;
 	}
-	CvTerrainInfo& terrain = GC.getTerrainInfo(eTerrain);
+	const CvTerrainInfo& terrain = GC.getTerrainInfo(eTerrain);
 
 	int aiYields[NUM_YIELD_TYPES];
 	if (!bCivilopediaText)
@@ -34663,7 +34663,7 @@ void CvGameTextMgr::setProductionHelp(CvWStringBuffer &szBuffer, CvCity& city)
 	UnitTypes eUnit = city.getProductionUnit();
 	if (NO_UNIT != eUnit)
 	{
-		CvUnitInfo& unit = GC.getUnitInfo(eUnit);
+		const CvUnitInfo& unit = GC.getUnitInfo(eUnit);
 
 		// Domain
 		const int iDomainMod = city.getDomainProductionModifier((DomainTypes)unit.getDomainType());

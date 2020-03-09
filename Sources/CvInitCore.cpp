@@ -1917,7 +1917,7 @@ void CvInitCore::read(FDataStreamBase* pStream)
 				{
 					if ( !bWarned )
 					{
-						CvLeaderHeadInfo& leader = GC.getLeaderHeadInfo((LeaderHeadTypes)j);
+						const CvLeaderHeadInfo& leader = GC.getLeaderHeadInfo((LeaderHeadTypes)j);
 						wrapper.warning(CvString::format("An in-use leader is no longer defined.  Using leader %S in its place (others may also have been replaced)", leader.getDescription()));
 						bWarned = true;
 					}

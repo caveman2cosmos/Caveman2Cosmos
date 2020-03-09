@@ -311,9 +311,9 @@ void CvOutcome::compilePython()
 int CvOutcome::getChance(const CvUnit &kUnit) const
 {
 	int iChance = m_iChance->evaluate(const_cast<CvUnit&>(kUnit).getGameObject());
-	CvOutcomeInfo& kInfo = GC.getOutcomeInfo(m_eType);
+	const CvOutcomeInfo& kInfo = GC.getOutcomeInfo(m_eType);
 
-	CvCity* pCity = kUnit.plot()->getPlotCity();
+	const CvCity* pCity = kUnit.plot()->getPlotCity();
 
 	if (pCity)
 	{
@@ -332,8 +332,8 @@ int CvOutcome::getChance(const CvUnit &kUnit) const
 
 bool CvOutcome::isPossible(const CvUnit& kUnit) const
 {
-	CvTeam& kTeam = GET_TEAM(kUnit.getTeam());
-	CvOutcomeInfo& kInfo = GC.getOutcomeInfo(m_eType);
+	const CvTeam& kTeam = GET_TEAM(kUnit.getTeam());
+	const CvOutcomeInfo& kInfo = GC.getOutcomeInfo(m_eType);
 
 	if (!kTeam.isHasTech(kInfo.getPrereqTech()))
 	{
@@ -464,7 +464,7 @@ bool CvOutcome::isPossible(const CvUnit& kUnit) const
 
 	if (m_eBonusType != NO_BONUS)
 	{
-		CvBonusInfo& kBonus = GC.getBonusInfo(m_eBonusType);
+		const CvBonusInfo& kBonus = GC.getBonusInfo(m_eBonusType);
 		if (!kTeam.isHasTech((TechTypes)kBonus.getTechReveal()))
 		{
 			return false;
@@ -590,8 +590,8 @@ bool CvOutcome::isPossible(const CvUnit& kUnit) const
 // Can return a false positive if an outcome requires a building combination
 bool CvOutcome::isPossibleSomewhere(const CvUnit& kUnit) const
 {
-	CvTeam& kTeam = GET_TEAM(kUnit.getTeam());
-	CvOutcomeInfo& kInfo = GC.getOutcomeInfo(m_eType);
+	const CvTeam& kTeam = GET_TEAM(kUnit.getTeam());
+	const CvOutcomeInfo& kInfo = GC.getOutcomeInfo(m_eType);
 
 	if (!kTeam.isHasTech(kInfo.getPrereqTech()))
 	{
@@ -648,7 +648,7 @@ bool CvOutcome::isPossibleSomewhere(const CvUnit& kUnit) const
 
 	if (m_eBonusType != NO_BONUS)
 	{
-		CvBonusInfo& kBonus = GC.getBonusInfo(m_eBonusType);
+		const CvBonusInfo& kBonus = GC.getBonusInfo(m_eBonusType);
 		if (!kTeam.isHasTech((TechTypes)kBonus.getTechReveal()))
 		{
 			return false;
@@ -684,8 +684,8 @@ bool CvOutcome::isPossibleSomewhere(const CvUnit& kUnit) const
 
 bool CvOutcome::isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool bForTrade) const
 {
-	CvTeam& kTeam = GET_TEAM(kUnit.getTeam());
-	CvOutcomeInfo& kInfo = GC.getOutcomeInfo(m_eType);
+	const CvTeam& kTeam = GET_TEAM(kUnit.getTeam());
+	const CvOutcomeInfo& kInfo = GC.getOutcomeInfo(m_eType);
 
 	if (!kTeam.isHasTech(kInfo.getPrereqTech()))
 	{
@@ -808,7 +808,7 @@ bool CvOutcome::isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool 
 
 	if (m_eBonusType != NO_BONUS)
 	{
-		CvBonusInfo& kBonus = GC.getBonusInfo(m_eBonusType);
+		const CvBonusInfo& kBonus = GC.getBonusInfo(m_eBonusType);
 		if (!kTeam.isHasTech((TechTypes)kBonus.getTechReveal()))
 		{
 			return false;
@@ -933,8 +933,8 @@ bool CvOutcome::isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool 
 
 bool CvOutcome::isPossible(const CvPlayerAI& kPlayer) const
 {
-	CvTeam& kTeam = GET_TEAM(kPlayer.getTeam());
-	CvOutcomeInfo& kInfo = GC.getOutcomeInfo(m_eType);
+	const CvTeam& kTeam = GET_TEAM(kPlayer.getTeam());
+	const CvOutcomeInfo& kInfo = GC.getOutcomeInfo(m_eType);
 
 	if (!kTeam.isHasTech(kInfo.getPrereqTech()))
 	{
@@ -976,7 +976,7 @@ bool CvOutcome::isPossible(const CvPlayerAI& kPlayer) const
 
 	if (m_eBonusType != NO_BONUS)
 	{
-		CvBonusInfo& kBonus = GC.getBonusInfo(m_eBonusType);
+		const CvBonusInfo& kBonus = GC.getBonusInfo(m_eBonusType);
 		if (!kTeam.isHasTech((TechTypes)kBonus.getTechReveal()))
 		{
 			return false;
@@ -1011,7 +1011,7 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 	CvWStringBuffer szBuffer;
 
 	CvPlayer& kPlayer = GET_PLAYER(kUnit.getOwner());
-	bool bToCoastalCity = GC.getOutcomeInfo(getType()).getToCoastalCity();
+	const bool bToCoastalCity = GC.getOutcomeInfo(getType()).getToCoastalCity();
 	CvUnitInfo* pUnitInfo;
 	if (eDefeatedUnitType > NO_UNIT)
 		pUnitInfo = &GC.getUnitInfo(eDefeatedUnitType);
@@ -1306,7 +1306,7 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 
 	if (m_eEventTrigger != NO_EVENTTRIGGER)
 	{
-		CvEventTriggerInfo& kTriggerInfo = GC.getEventTriggerInfo(m_eEventTrigger);
+		const CvEventTriggerInfo& kTriggerInfo = GC.getEventTriggerInfo(m_eEventTrigger);
 		if (kTriggerInfo.isPickCity() && (kUnit.plot()->getPlotCity() != NULL))
 		{
 			kPlayer.initTriggeredData(m_eEventTrigger, true, kUnit.plot()->getPlotCity()->getID());

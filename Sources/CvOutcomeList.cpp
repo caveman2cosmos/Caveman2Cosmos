@@ -95,11 +95,11 @@ void CvOutcomeList::clear()
 
 void insertReplaceOutcomesRecursive(std::set<OutcomeTypes>& aeReplacedOutcomes, OutcomeTypes eOutcome)
 {
-	CvOutcomeInfo& kInfo = GC.getOutcomeInfo(eOutcome);
-	int iNumReplaced = kInfo.getNumReplaceOutcomes();
+	const CvOutcomeInfo& kInfo = GC.getOutcomeInfo(eOutcome);
+	const int iNumReplaced = kInfo.getNumReplaceOutcomes();
 	for (int j=0; j<iNumReplaced; j++)
 	{
-		OutcomeTypes eReplOutcome = kInfo.getReplaceOutcome(j);
+		const OutcomeTypes eReplOutcome = kInfo.getReplaceOutcome(j);
 		aeReplacedOutcomes.insert(eReplOutcome);
 		insertReplaceOutcomesRecursive(aeReplacedOutcomes, eReplOutcome);
 	}

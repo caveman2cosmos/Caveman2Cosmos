@@ -72,9 +72,9 @@ bool CvMapGenerator::canPlaceBonusAt(BonusTypes eBonus, int iX, int iY, bool bIg
 		}
 	}
 
-	CvBonusInfo& pInfo = GC.getBonusInfo(eBonus);
-	int iBonusClassType = pInfo.getBonusClassType();
-	CvBonusClassInfo& pClassInfo = GC.getBonusClassInfo((BonusClassTypes) iBonusClassType);
+	const CvBonusInfo& pInfo = GC.getBonusInfo(eBonus);
+	const int iBonusClassType = pInfo.getBonusClassType();
+	const CvBonusClassInfo& pClassInfo = GC.getBonusClassInfo((BonusClassTypes) iBonusClassType);
 
 	if (pPlot->isWater())
 	{
@@ -670,11 +670,11 @@ void CvMapGenerator::addUniqueBonusType(BonusTypes eBonusType)
 		piAreaTried[iI] = FFreeList::INVALID_INDEX;
 	}
 
-	CvBonusInfo& pBonusInfo = GC.getBonusInfo(eBonusType);
+	const CvBonusInfo& pBonusInfo = GC.getBonusInfo(eBonusType);
 
-	int iBonusCount = calculateNumBonusesToAdd(eBonusType);
+	const int iBonusCount = calculateNumBonusesToAdd(eBonusType);
 
-	bool bIgnoreLatitude = GC.getGame().pythonIsBonusIgnoreLatitudes();
+	const bool bIgnoreLatitude = GC.getGame().pythonIsBonusIgnoreLatitudes();
 
 	FAssertMsg(pBonusInfo.isOneArea(), "addUniqueBonusType called with non-unique bonus type");
 
@@ -786,9 +786,9 @@ void CvMapGenerator::addNonUniqueBonusType(BonusTypes eBonusType)
 
 	int* piShuffle = shuffle(GC.getMap().numPlots(), GC.getGame().getMapRand());
 
-	CvBonusInfo& pBonusInfo = GC.getBonusInfo(eBonusType);
+	const CvBonusInfo& pBonusInfo = GC.getBonusInfo(eBonusType);
 
-	bool bIgnoreLatitude = GC.getGame().pythonIsBonusIgnoreLatitudes();
+	const bool bIgnoreLatitude = GC.getGame().pythonIsBonusIgnoreLatitudes();
 
 	CvPlot* pPlot = NULL;
 	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
@@ -1098,7 +1098,7 @@ int CvMapGenerator::getRiverValueAtPlot(CvPlot* pPlot)
 
 int CvMapGenerator::calculateNumBonusesToAdd(BonusTypes eBonusType)
 {
-	CvBonusInfo& pBonusInfo = GC.getBonusInfo(eBonusType);
+	const CvBonusInfo& pBonusInfo = GC.getBonusInfo(eBonusType);
 
 	// Calculate iBonusCount, the amount of this bonus to be placed:
 	int iBaseCount =
