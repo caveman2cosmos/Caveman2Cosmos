@@ -136,7 +136,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_BARBARIAN_ALWAYS_RAZE</Tag>
 		<English>Barbarians Always Raze</English>
-		<French>Barbares Rasent les Villes</French>
+		<French>Les Barbares Rasent les Villes</French>
 		<German>Barbaren zerstören Städte immer</German>
 		<Italian>I barbari razziano sempre</Italian>
 		<Spanish>Los bárbaros siempre arrasan</Spanish>
@@ -154,7 +154,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_BARBARIAN_WORLD</Tag>
 		<English>Barbarian World</English>
-		<French>Monde Barbare</French>
+		<French>Monde plein de Barbares</French>
 		<German>Barbarenwelt</German>
 		<Italian>Mondo Barbarico</Italian>
 		<Spanish>Mundo bárbaro</Spanish>
@@ -276,7 +276,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_COMPLEX_TRAITS_HELP</Tag>
 		<English>Adds new traits and deepens and strengthens existing traits</English>
-		<French>Ajoute de nouveaux Traits, et rends les existants plus profonds et forts</French>
+		<French>Ajoute de nouveaux Traits, et rend les existants plus profonds et marqués</French>
 		<German>Die bereits existierenden Charakterzüge für Staatsoberhäupter werden vertieft und um vollkommen neue ergänzt.</German>
 		<Italian>Aggiunge nuove caratteristiche per i leader, approfondendo e rafforzando le caratteristiche esistenti</Italian>
 		<Polish>Dodaje nowe cechy oraz pogłębia i wzmacnia istniejące</Polish>
@@ -650,6 +650,9 @@
 		<English>When enabled: New civilizations may emerge from barbarian cities as minor civs.
 
 If you play with "Start as Minor Civ" then this option will change the rules for becoming a major civ. Achievements and randomness thereof decides when you become a major civ.</English>
+		<French>Lorsque activé : de nouvelles civilizations peuvent émerger des villes barbares, en tant que Civ mineures.
+
+Si vous jouez avec "Civs Mineures au départ", cette option changera les règles pour devenir une civilisation majeure. Les réalisations et leur caractère aléatoire décident quand vous devenez une civilisation majeure.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_BARBARIANS</Tag>
@@ -685,10 +688,12 @@ If you play with "Start as Minor Civ" then this option will change the rules for
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_OVEREXPANSION_PENALTIES</Tag>
 		<English>Happiness penalties from overexpansion</English>
+		<French>Pénalités de Bonheur en cas de sur-expansion</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_OVEREXPANSION_PENALTIES_HELP</Tag>
 		<English>Cities will get unhappiness from overexpansion, scaled by map size. Unhappiness penalties depend on civics.</English>
+		<French>Les populations des villes seront mécontentes à cause de la surexpansion, à l'échelle de la taille de la carte. Les pénalités de mécontentement dépendent de la doctrine.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_CITY_RAZING</Tag>
@@ -742,17 +747,17 @@ If you play with "Start as Minor Civ" then this option will change the rules for
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_FIXED_BORDERS</Tag>
 		<English>Fixed borders</English>
-		<French>Pas de frontières fixes</French>
-		<German>Keine festen Grenzen</German>
-		<Italian>Niente confini fissi</Italian>
-		<Spanish>Sin fronteras fijables</Spanish>
-		<Polish>Brak Stałych Granic</Polish>
+		<French>Frontières fixes</French>
+		<German>Festen Grenzen</German>
+		<Italian>Confini fissi</Italian>
+		<Spanish>Fronteras fijables</Spanish>
+		<Polish>Stałych Granic</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_FIXED_BORDERS_HELP</Tag>
 		<English>Fixed border mechanics</English>
-		<French>Pas de mécanisme de frontières fixes, ni provenant des doctrines, ni d'autres origines</French>
-		<German>Es können keine festen Landesgrenzen festgelegt werden, weder durch Gesellschaftsformen noch auf anderem Weg.</German>
+		<French>Mécanisme de frontières fixes, provenant des doctrines ou d'autres origines</French>
+		<German>Es können festen Landesgrenzen festgelegt werden, durch Gesellschaftsformen oder auf anderem Weg.</German>
 		<Italian>Niente confini fissi, nè dalle forme di governo nè da altra fonte</Italian>
 		<Spanish>No se usará la mecánica de fronteras fijables, ni por principios ni por cualquier otro origen.</Spanish>
 		<Polish>Wyłącza mechanizm stałych granic.</Polish>
@@ -794,10 +799,18 @@ If you play with "Start as Minor Civ" then this option will change the rules for
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_INQUISITIONS</Tag>
 		<English>Inquisitions</English>
+		<French>Inquisitions</French>
+		<German>Inquisitionen</German>
+		<Italian>Inquisizioni</Italian>
+		<Spanish>Inquisiciones</Spanish>
+		<Polish>Inkwizycji</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_INQUISITIONS_HELP</Tag>
 		<English>Enables Inquisitions. Inquisitors may be trained and non-state religions may be purged in order to reduce the threat of rebellion.</English>
+		<French>Active les Inquisitions. Les Inquisiteurs peuvent être recrutés et peuvent éradiquer les religions non-officielles dans un ville, pour en améliorer la stabilité.</French>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_NEGATIVE_TRAITS</Tag>
@@ -834,6 +847,7 @@ If you play with "Start as Minor Civ" then this option will change the rules for
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_REVOLUTION</Tag>
 		<English>Revolutions</English>
+		<French>Révolutions</French>
 		<German>Revolutionen</German>
 		<Italian>Rivoluzioni</Italian>
 		<Spanish>Revoluciones</Spanish>
@@ -844,7 +858,9 @@ If you play with "Start as Minor Civ" then this option will change the rules for
 		<English>Enables the Revolution mod component: New rebel civs will attempt to breakaway from an empire if their needs are not being met.
 
 WARNING: This option makes AI less challenging. Revolution mod hasn't been properly maintained and updated in C2C.</English>
-		<French>Désactive le composant de mod de révolution: les nouveaux civs rebelles ne peuvent pas se révolter et devenir indépendante d'un empire si leurs besoins ne sont pas satisfaits.</French>
+		<French>Active le composant de mod de révolution: Des rebelles peuvent tenter de se révolter et devenir indépendants d'un empire si leurs besoins ne sont pas satisfaits.
+		
+AVERTISSEMENT: cette option rend l'IA moins difficile. Le mod Revolution n'a pas été correctement entretenu et mis à jour dans C2C.</French>
 		<German>Deaktiviert die Revolution-Mod: Es wird keine Rebellionen und Abspaltungsbestrebungen geben, wenn die Bedürfnisse der Bevölkerung nicht beachtet werden.</German>
 		<Italian>Disabilita il MOD "Revolution": nuove civiltà ribelli no possono tentare la secessione da un impero se i loro bisogni non vengono soddisfatti.</Italian>
 		<Spanish>Se desactiva el componente Revolution: no habrá civilizaciones rebeldes que intenten independizarse de un imperio si sus necesidades no son satisfechas.</Spanish>
@@ -853,7 +869,7 @@ WARNING: This option makes AI less challenging. Revolution mod hasn't been prope
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_TECH_BROKERING</Tag>
 		<English>No Tech. Brokering</English>
-		<French>Pas de commerce de technologie</French>
+		<French>Pas de Commerce de Technologies</French>
 		<German>Kein Technologieaustausch</German>
 		<Italian>Nessuna vendita di tecnologie</Italian>
 		<Spanish>Sin intermediación con tecnología</Spanish>
@@ -870,25 +886,35 @@ WARNING: This option makes AI less challenging. Revolution mod hasn't been prope
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_TECH_DIFFUSION</Tag>
 		<English>Tech Diffusion</English>
+		<French>Diffusion des Technologies</French>
+		<German>Technologieverbreitung</German>
+		<Italian>Diffusione di tecnologie</Italian>
+		<Spanish>Difusión tecnológica</Spanish>
+		<Polish>Dyfuzji Technologii</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_TECH_DIFFUSION_HELP</Tag>
 		<English>Tech Diffusion: tech knowledge will slowly diffuse to civs that are behind.</English>
+		<French>Diffusion des Techs: La Connaissance des Technologies sera lentement diffusée aux autres civilisations.</French>
+		<German>Langsame Verbreitung von technologischem Wissen an Zivilisationen, die noch nicht so weit entwickelt sind.</German>
+		<Italian>Diffusione delle tecnologie: la tecnologia non si diffonderà alle civiltà più arretrate.</Italian>
+		<Spanish>Componente TechDiffusion: el conocimiento no se difundirá lentamente hacia las civilizaciones más atrasadas.</Spanish>
+		<Polish>dyfuzję technologii: poznane technologie nie będą powoli dyfuzjowały do cywilizacji które są z tyłu.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS</Tag>
 		<English>No Tech Handicaps for Humans</English>
-		<French>Pas de Tech Diff. pour les Joueurs</French>
+		<French>Pas de Diff. Tech pour les Joueurs</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS_HELP</Tag>
 		<English>Keeps Win For Losing and Tech Diffusion benefits from being delivered to Human players while continuing to enable them for AI players.</English>
-		<French>Les avantages de Tech Diffusion ne sont pas appliqués aux joueurs humains, tout en continuant à être actifs pour les joueurs IA.</French>
+		<French>Les avantages de la Diffusion des Technologies ne sont pas appliqués aux joueurs humains, tout en continuant à être actifs pour les joueurs IA.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_TECH_TRADING</Tag>
 		<English>No Technology Trading</English>
-		<French>Aucun échange de technologies</French>
+		<French>Aucun échange de Technologies</French>
 		<German>Kein Technologiehandel</German>
 		<Italian>Nessuno scambio di tecnologie</Italian>
 		<Spanish>Sin intercambio de tecnología</Spanish>
@@ -931,6 +957,11 @@ WARNING: This option makes AI less challenging. Revolution mod hasn't been prope
 Not reccomended at the moment as there is a known bug it creates for pathing and some players may find it terribly frustrating with the current forts.
 
 The author of this option also believes that it does not represent a fair combat scenario in many cases where you'd prefer to take the hit they threaten and would like to eventually make a form of ZoC that instead generates a free Ranged Assault on the offending unit rather than keeping it from moving at all (as that's the concept behind the effect anyhow.)</English>
+		<French>La zone de contrôle (ZoC) empêche les unités ennemies de marcher autour des forts habités ou des villes avec des douves, l'effet a une portée d'une case. Une unité qui se trouve à l'intérieur d'un ZoC ennemi ne peut pas se déplacer vers une autre parcelle dans le ZoC, mais doit quitter le ZoC avant de pouvoir atteindre d'autres parcelles ZoC.
+
+Non recommandé pour le moment car il existe un bug connu qu'il crée pour calcul des chemins et certains joueurs peuvent le trouver terriblement frustrant avec les forts actuels.
+
+L'auteur de cette option estime également que cela ne représente pas un scénario de combat équitable dans de nombreux cas où vous préféreriez prendre le coup qu'ils menacent et souhaitez éventuellement créer une forme de ZoC qui génère à la place un assaut à distance gratuit contre le délinquant. l'unité plutôt que de l'empêcher de bouger (comme c'est le concept derrière l'effet de toute façon.)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ONE_CITY_CHALLENGE</Tag>
@@ -1233,20 +1264,20 @@ The author of this option also believes that it does not represent a fair combat
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_SIZE_MATTERS_UNCUT</Tag>
 		<English>Size Matters Uncut</English>
-		<French>Question de Taille (version 'Uncut')</French>
+		<French>Mode de Combat C2C - La Taille Compte! (version 'Uncut')</French>
 		<German>Größe ist wichtig (ungeschnittene Version)</German>
 		<Polish>Rozmiar ma znaczenie - wersja rozszerzona</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_SIZE_MATTERS_UNCUT_HELP</Tag>
 		<English>MUST ALSO PLAY WITH Size Matters option ON!  Forces all units start with their normal base strength and HP values.  Normal Size Matters alone will introduce some strength adjustments to units that differ from the core.  This enforces adherence to the core unit strengths.</English>
-		<French>DOIT ETRE SELECTIONNE avec La Question de taille. Active automatiquement les principes de l'option Question de Taille, mais force les unités à démarrer avec leurs valeurs standard de puissance et PV. Sinon, l'option Question de taille ajuste les valeurs des unités</French>
+		<French>DOIT ETRE SELECTIONNE avec le mod C2C : La Taille Compte! Actif ! .Force les unités à démarrer avec leurs valeurs standard de puissance et PV. Sinon, l'option La Taille Compte! ajuste les valeurs des unités. Cela renforce l'adhésion aux forces des l'unités.</French>
 		<German>FUNKTIONIERT NUR IN VERBINDUNG MIT DER GRUNDMOD "Größe ist wichtig"!  Mit dieser Zusatzoption starten alle Einheiten mit ihren normalen Basiswerten aus dem Standardspiel. Die Funktionalität der Mod "Größe ist wichtig" bleibt erhalten, aber die Änderung der Grundwerte wird hiermit unterbunden.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_START_AS_MINORS</Tag>
 		<English>Start as minor civs</English>
-		<French>Civs barbares au départ</French>
+		<French>Civs mineures au départ</French>
 		<German>Start als unbedeutende Zivilisation</German>
 		<Italian>Inizi come civs secondari</Italian>
 		<Spanish>Empezar como civilizaciones menores</Spanish>
@@ -1425,7 +1456,7 @@ Essentiellement, cela signifie qu'un nombre écrasant d'unités ont de meilleure
 		<Tag>TXT_KEY_GAMEOPTION_WIN_FOR_LOSING</Tag>
 		<English>Win for Losing</English>
 		<German>Gewinne für Verlierer</German>
-		<French>Bonus pour les perdants</French>
+		<French>Bonus de Technologies pour les perdants</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_WIN_FOR_LOSING_HELP</Tag>

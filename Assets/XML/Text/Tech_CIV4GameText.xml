@@ -894,7 +894,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ALCHEMY_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Alchemy[COLOR_REVERT] allows you to train [COLOR_UNIT_TEXT]Heavy Cavalry[COLOR_REVERT] unit (with [COLOR_TECH_TEXT]Heraldry[COLOR_REVERT] and [COLOR_TECH_TEXT]Horse Breeding[COLOR_REVERT]) and build the [COLOR_BUILDING_TEXT]Alchemist's Lab[COLOR_REVERT] and [COLOR_BUILDING_TEXT]Artesian Well[COLOR_REVERT] city improvements. This tech also reveals [COLOR_HIGHLIGHT_TEXT]Rubber[COLOR_REVERT] resource.</English>
-		<French>[COLOR_TECH_TEXT]Alchimie[COLOR_REVERT] vous permet d'entraîner des [COLOR_UNIT_TEXT]Cavaleries Lourdes[COLOR_REVERT] (avec [COLOR_TECH_TEXT]Héraldique[COLOR_REVERT] et [COLOR_TECH_TEXT]Elevage des Chevaux[COLOR_REVERT]) et de construire des [COLOR_BUILDING_TEXT]Ateliers d'Alchimiste[COLOR_REVERT] et des [COLOR_BUILDING_TEXT]Puits Artésien[COLOR_REVERT] (bâtiments). Cette tech. révèle également la ressource  [COLOR_HIGHLIGHT_TEXT]caouthouc[COLOR_REVERT].</French>
+		<French>[COLOR_TECH_TEXT]Alchimie[COLOR_REVERT] vous permet d'entraîner des [COLOR_UNIT_TEXT]Cavaleries Lourdes[COLOR_REVERT] (avec [COLOR_TECH_TEXT]Héraldique[COLOR_REVERT] et [COLOR_TECH_TEXT]Elevage des Chevaux[COLOR_REVERT]) et de construire des [COLOR_BUILDING_TEXT]Ateliers d'Alchimiste[COLOR_REVERT] et des [COLOR_BUILDING_TEXT]Puits Artésien[COLOR_REVERT] (bâtiments). Cette tech. révèle également la ressource [COLOR_HIGHLIGHT_TEXT]caouthouc[COLOR_REVERT].</French>
 		<Spanish>La [COLOR_TECH_TEXT]Alquimia[COLOR_REVERT] te permite entrenar a la [COLOR_UNIT_TEXT]Caballería pesada[COLOR_REVERT] (con la [COLOR_TECH_TEXT]Heráldica[COLOR_REVERT] y la [COLOR_TECH_TEXT]Cría de caballos[COLOR_REVERT]) y construir los edificios del [COLOR_BUILDING_TEXT]Taller del alquimista[COLOR_REVERT] y el [COLOR_BUILDING_TEXT]Pozo artesiano[COLOR_REVERT]. Esta tecnología también revela el recurso del [COLOR_HIGHLIGHT_TEXT]Caucho[COLOR_REVERT].</Spanish>
 	</TEXT>
 	<TEXT>
@@ -968,7 +968,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ALPHABET_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Alphabet[COLOR_REVERT] allows you to build [COLOR_HIGHLIGHT_TEXT]Research[COLOR_REVERT] and lets you build [COLOR_HIGHLIGHT_TEXT]Research[COLOR_REVERT] in cities.</English>
-		<French>[COLOR_TECH_TEXT]Alphabet[COLOR_REVERT] vous permet de générer de la  [COLOR_HIGHLIGHT_TEXT]Recherche[COLOR_REVERT] dans les villes.</French>
+		<French>[COLOR_TECH_TEXT]Alphabet[COLOR_REVERT] vous permet de générer de la [COLOR_HIGHLIGHT_TEXT]Recherche[COLOR_REVERT] dans les villes.</French>
 		<Spanish>El [COLOR_TECH_TEXT]Alfabeto[COLOR_REVERT] te permite generar [COLOR_HIGHLIGHT_TEXT]Investigación[COLOR_REVERT] en las ciudades.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1020,7 +1020,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECH_AMPHIBIOUS_WARFARE_STRATEGY</Tag>
 		<English>Cities can train [COLOR_UNIT_TEXT]Marine units.[COLOR_REVERT]</English>
-		<French>Vos Villes peuvent entraîner des  [COLOR_UNIT_TEXT]Marines[COLOR_REVERT].</French>
+		<French>Vos Villes peuvent entraîner des [COLOR_UNIT_TEXT]Marines[COLOR_REVERT].</French>
 		<Spanish>Las ciudades pueden entrenar [COLOR_UNIT_TEXT]Infantería de marina[COLOR_REVERT].</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1236,7 +1236,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ANDROIDS_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Androids[COLOR_REVERT] tech allows you to train [COLOR_UNIT_TEXT]Android[COLOR_REVERT] worker units and to build [COLOR_BUILDING_TEXT]Android Factory[COLOR_REVERT]. The tech improves [COLOR_HIGHLIGHT_TEXT]Quarry[COLOR_REVERT] output and enables [COLOR_HIGHLIGHT_TEXT]Post-Scarcity[COLOR_REVERT] future civic option.</English>
-		<French>[COLOR_TECH_TEXT]Androides[COLOR_REVERT] vous permet d'entraîner les  [COLOR_UNIT_TEXT]ouvriers Androides[COLOR_REVERT] des de construire des [COLOR_BUILDING_TEXT]Fabriques d'Androïdes[COLOR_REVERT]. La Tech améliore la [COLOR_HIGHLIGHT_TEXT]Carrière[COLOR_REVERT] et rend active la doctrine  [COLOR_HIGHLIGHT_TEXT]Post-Scarcity[COLOR_REVERT].</French>
+		<French>[COLOR_TECH_TEXT]Androides[COLOR_REVERT] vous permet d'entraîner les [COLOR_UNIT_TEXT]ouvriers Androides[COLOR_REVERT] des de construire des [COLOR_BUILDING_TEXT]Fabriques d'Androïdes[COLOR_REVERT]. La Tech améliore la [COLOR_HIGHLIGHT_TEXT]Carrière[COLOR_REVERT] et rend active la doctrine [COLOR_HIGHLIGHT_TEXT]Post-Scarcity[COLOR_REVERT].</French>
 		<German>erlaubt Arbeitstrupps die Errichtung von [COLOR_HIGHLIGHT_TEXT]Gehegen[COLOR_REVERT], macht die Ressource [COLOR_HIGHLIGHT_TEXT]Pferde[COLOR_REVERT] sichtbar, ermöglicht den Bau von [COLOR_BUILDING_TEXT]Metzgereien[COLOR_REVERT] und [COLOR_BUILDING_TEXT]Gerbereien[COLOR_REVERT].</German>
 		<Spanish>La tecnología de los [COLOR_TECH_TEXT]Androides[COLOR_REVERT] te permite entrenar a los trabajadores [COLOR_UNIT_TEXT]Androides[COLOR_REVERT], y construir la [COLOR_BUILDING_TEXT]Fábrica de androides[COLOR_REVERT]. La tecnología mejora el rendimiento de las [COLOR_HIGHLIGHT_TEXT]Canteras[COLOR_REVERT], y desbloquea el principio futuro del [COLOR_HIGHLIGHT_TEXT]Posapocalipsis[COLOR_REVERT].</Spanish>
 	</TEXT>
@@ -1737,7 +1737,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECH_AQUACULTURE_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Aquaculture[COLOR_REVERT] increases the food and gold production of [COLOR_HIGHLIGHT_TEXT]Fishing Boats[COLOR_REVERT] by +1 each and allows you to train [COLOR_UNIT_TEXT]Submerged Town[COLOR_REVERT] platforms which are used to construct [COLOR_HIGHLIGHT_TEXT]Submerged Town[COLOR_REVERT] coastal improvement.</English>
-		<French>[COLOR_TECH_TEXT]Aquaculture[COLOR_REVERT] augmente la production d'or et de nourriture des  [COLOR_HIGHLIGHT_TEXT]bâteaux de pêche[COLOR_REVERT] de +1 chacun, et permet d'entraîner des [COLOR_UNIT_TEXT]plateformes villes sous-marines[COLOR_REVERT] qui permettent de construire les aménagements [COLOR_HIGHLIGHT_TEXT]Villes sous-marines[COLOR_REVERT]</French>
+		<French>[COLOR_TECH_TEXT]Aquaculture[COLOR_REVERT] augmente la production d'or et de nourriture des [COLOR_HIGHLIGHT_TEXT]bâteaux de pêche[COLOR_REVERT] de +1 chacun, et permet d'entraîner des [COLOR_UNIT_TEXT]plateformes villes sous-marines[COLOR_REVERT] qui permettent de construire les aménagements [COLOR_HIGHLIGHT_TEXT]Villes sous-marines[COLOR_REVERT]</French>
 		<Spanish>La [COLOR_TECH_TEXT]Acuicultura[COLOR_REVERT] aumenta la producción de alimentos y comercio de los [COLOR_HIGHLIGHT_TEXT]Barcos pesqueros[COLOR_REVERT] en +1, y te permite entrenar [COLOR_UNIT_TEXT]Plataformas habitables sumergibles[COLOR_REVERT], que se utilizan para construir la mejora costera del [COLOR_HIGHLIGHT_TEXT]Asentamiento submarino[COLOR_REVERT].</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1897,7 +1897,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ARISTOCRACY_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Aristocracy[COLOR_REVERT] enables [COLOR_HIGHLIGHT_TEXT]Nobility[COLOR_REVERT] and [COLOR_HIGHLIGHT_TEXT]Bourgeois[COLOR_REVERT] civic options.</English>
-		<French>[COLOR_TECH_TEXT]Aristocracie[COLOR_REVERT] rend actif les doctrinces  [COLOR_HIGHLIGHT_TEXT]Noblesse[COLOR_REVERT] et [COLOR_HIGHLIGHT_TEXT]Bourgeoisie[COLOR_REVERT].</French>
+		<French>[COLOR_TECH_TEXT]Aristocracie[COLOR_REVERT] rend actif les doctrines [COLOR_HIGHLIGHT_TEXT]Noblesse[COLOR_REVERT] et [COLOR_HIGHLIGHT_TEXT]Bourgeoisie[COLOR_REVERT].</French>
 		<Spanish>La [COLOR_TECH_TEXT]Aristocracia[COLOR_REVERT] desbloquea los principios de la [COLOR_HIGHLIGHT_TEXT]Nobleza[COLOR_REVERT] y la [COLOR_HIGHLIGHT_TEXT]Burguesía[COLOR_REVERT].</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2077,7 +2077,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ARTIFICIAL_LIFE_STRATEGY</Tag>
 		<English>First to discover [COLOR_TECH_TEXT]Artificial Life[COLOR_REVERT] receives free [COLOR_UNIT_TEXT]Great Scientist[COLOR_REVERT]. The tech allows you to construct [COLOR_BUILDING_TEXT]Body Exchange Clinics[COLOR_REVERT] and improves the food procution of [COLOR_HIGHLIGHT_TEXT]Soylent Green Facility[COLOR_REVERT] by +1.</English>
-		<French>Le permier à découvrir  [COLOR_TECH_TEXT]Vie Artificielle[COLOR_REVERT] reçoit un [COLOR_UNIT_TEXT]Scientifique Illustre[COLOR_REVERT] gratuit. La Tech. vous permet de construire des [COLOR_BUILDING_TEXT] Cliniques de Remplacement Corporels[COLOR_REVERT] et augmente de +1 la production de nourriture de [COLOR_HIGHLIGHT_TEXT]l'Installation Soleil vert[COLOR_REVERT].</French>
+		<French>Le premier à découvrir [COLOR_TECH_TEXT]Vie Artificielle[COLOR_REVERT] reçoit un [COLOR_UNIT_TEXT]Scientifique Illustre[COLOR_REVERT] gratuit. La Tech. vous permet de construire des [COLOR_BUILDING_TEXT] Cliniques de Remplacement Corporels[COLOR_REVERT] et augmente de +1 la production de nourriture de [COLOR_HIGHLIGHT_TEXT]l'Installation Soleil vert[COLOR_REVERT].</French>
 		<Spanish>El primero en descubrir la [COLOR_TECH_TEXT]Vida artificial[COLOR_REVERT] recibirá un [COLOR_UNIT_TEXT]Gran científico[COLOR_REVERT]. Esta tecnología te permite construir [COLOR_BUILDING_TEXT]Clínicas de intercambio de órganos[COLOR_REVERT] y aumenta la producción de alimentos de las [COLOR_HIGHLIGHT_TEXT]Instalaciones de cultivo de Sol Verde[COLOR_REVERT] en +1.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2289,7 +2289,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ASSEMBLY_LINE_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Assembly Line[COLOR_REVERT] allows you to build [COLOR_UNIT_TEXT]Early Destroyer[COLOR_REVERT] and [COLOR_UNIT_TEXT]Pre-Dreadnought[COLOR_REVERT] (with [COLOR_TECH_TEXT]Artillery[COLOR_REVERT] and [COLOR_TECH_TEXT]Screw Propeller[COLOR_REVERT]). It also enables construction of the [COLOR_BUILDING_TEXT]Factory[COLOR_REVERT] building and is required for the [COLOR_BUILDING_TEXT]Coal Plant[COLOR_REVERT] and [COLOR_BUILDING_TEXT]Oil Plant[COLOR_REVERT]. The tech enables [COLOR_HIGHLIGHT_TEXT]Corporate[COLOR_REVERT] welfare civic.</English>
-		<French>[COLOR_TECH_TEXT]Travail à la chaîne[COLOR_REVERT] vous permet de fabriquer des [COLOR_UNIT_TEXT]Contre-torpilleurs basiques[COLOR_REVERT] et des [COLOR_UNIT_TEXT]Cuirassés à coque en fer[COLOR_REVERT] (avec [COLOR_TECH_TEXT]Artillerie[COLOR_REVERT] et [COLOR_TECH_TEXT]Vis hélicoïdale[COLOR_REVERT]). Rend également actif la construction des [COLOR_BUILDING_TEXT]Usine[COLOR_REVERT] et est requis pour les [COLOR_BUILDING_TEXT]Centrales thermiques (charbon)[COLOR_REVERT] et les [COLOR_BUILDING_TEXT]Raffineries[COLOR_REVERT]. La Tech. rend actif la doctrine  [COLOR_HIGHLIGHT_TEXT]Corporation[COLOR_REVERT].</French>
+		<French>[COLOR_TECH_TEXT]Travail à la chaîne[COLOR_REVERT] vous permet de fabriquer des [COLOR_UNIT_TEXT]Contre-torpilleurs basiques[COLOR_REVERT] et des [COLOR_UNIT_TEXT]Cuirassés à coque en fer[COLOR_REVERT] (avec [COLOR_TECH_TEXT]Artillerie[COLOR_REVERT] et [COLOR_TECH_TEXT]Vis hélicoïdale[COLOR_REVERT]). Rend également actif la construction des [COLOR_BUILDING_TEXT]Usine[COLOR_REVERT] et est requis pour les [COLOR_BUILDING_TEXT]Centrales thermiques (charbon)[COLOR_REVERT] et les [COLOR_BUILDING_TEXT]Raffineries[COLOR_REVERT]. La Tech. rend actif la doctrine [COLOR_HIGHLIGHT_TEXT]Corporation[COLOR_REVERT].</French>
 		<Spanish>La [COLOR_TECH_TEXT]Cadena de montaje[COLOR_REVERT] te permite construir [COLOR_UNIT_TEXT]Destructores antiguos[COLOR_REVERT] y [COLOR_UNIT_TEXT]Buques de línea pre-Dreadnought[COLOR_REVERT] (con la [COLOR_TECH_TEXT]Artillería[COLOR_REVERT] y la [COLOR_TECH_TEXT]Propulsión a hélice[COLOR_REVERT]). También permite la construcción del edificio de la [COLOR_BUILDING_TEXT]Fábrica[COLOR_REVERT], y se requiere para la [COLOR_BUILDING_TEXT]Central térmica[COLOR_REVERT] y la [COLOR_BUILDING_TEXT]Central térmica de petróleo[COLOR_REVERT]. Esta tecnología desbloquea el principio de Bienestar de las [COLOR_HIGHLIGHT_TEXT]Corporaciones[COLOR_REVERT].</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2781,7 +2781,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ATHLETICS_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Athletics[COLOR_REVERT] allows [COLOR_BUILDING_TEXT]Arenas[COLOR_REVERT], Wonders [COLOR_BUILDING_TEXT]Circus Maximus[COLOR_REVERT] and [COLOR_BUILDING_TEXT]Olympic Games[COLOR_REVERT] and the national Wonder [COLOR_BUILDING_TEXT]Statue of Champion.[COLOR_REVERT]</English>
-		<French>[COLOR_TECH_TEXT]Athlétisme[COLOR_REVERT] permet des [COLOR_BUILDING_TEXT]Arênes[COLOR_REVERT], Les Merveilles du [COLOR_BUILDING_TEXT]Cirque Maxime[COLOR_REVERT] et des  [COLOR_BUILDING_TEXT]Jeux Olympiques[COLOR_REVERT], Et la merveilles nationale:[COLOR_BUILDING_TEXT]Statue de Champion[COLOR_REVERT].</French>
+		<French>[COLOR_TECH_TEXT]Athlétisme[COLOR_REVERT] permet des [COLOR_BUILDING_TEXT]Arênes[COLOR_REVERT], Les Merveilles du [COLOR_BUILDING_TEXT]Cirque Maxime[COLOR_REVERT] et des [COLOR_BUILDING_TEXT]Jeux Olympiques[COLOR_REVERT], Et la merveilles nationale:[COLOR_BUILDING_TEXT]Statue de Champion[COLOR_REVERT].</French>
 		<Spanish>El [COLOR_TECH_TEXT]Atletismo[COLOR_REVERT] permite la construcción de [COLOR_BUILDING_TEXT]Arenas[COLOR_REVERT], de las maravillas [COLOR_BUILDING_TEXT]Circo Máximo[COLOR_REVERT] y [COLOR_BUILDING_TEXT]Juegos Olímpicos[COLOR_REVERT] y de la maravilla nacional [COLOR_BUILDING_TEXT]Estatua del Campeón[COLOR_REVERT].</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3319,7 +3319,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BASKETRY_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Basketry[COLOR_REVERT] is a prehistoric era technology that allows the construction of the [COLOR_BUILDING_TEXT]Basketweaver's Hut[COLOR_REVERT] which provides [COLOR_CYAN]Baskets[COLOR_REVERT], one of the resources that can help enable the [COLOR_BUILDING_TEXT]Omega Child Crew[COLOR_REVERT], a very important building that increases a city's overall [ICON_PRODUCTION][COLOR_GREEN]Hammer[COLOR_REVERT] output.</English>
-		<French>[COLOR_TECH_TEXT]Vannerie[COLOR_REVERT] est une technologie de l'ère préhistorique qui permet la construction de [COLOR_BUILDING_TEXT]Hutte du Vannier[COLOR_REVERT] qui procure des [COLOR_CYAN]Paniers[COLOR_REVERT], l'une des ressources qui permet d'accéder à l'  [COLOR_BUILDING_TEXT]Equipe de jeunes travailleurs[COLOR_REVERT], un bâtiment important permettant d'augmenter la production globale de  [ICON_PRODUCTION].</French>
+		<French>[COLOR_TECH_TEXT]Vannerie[COLOR_REVERT] est une technologie de l'ère préhistorique qui permet la construction de [COLOR_BUILDING_TEXT]Hutte du Vannier[COLOR_REVERT] qui procure des [COLOR_CYAN]Paniers[COLOR_REVERT], l'une des ressources qui permet d'accéder à l' [COLOR_BUILDING_TEXT]Equipe de jeunes travailleurs[COLOR_REVERT], un bâtiment important permettant d'augmenter la production globale de [ICON_PRODUCTION].</French>
 		<Polish>Odblokowuje [COLOR_BUILDING_TEXT]Gaj Rotangowy[COLOR_REVERT] i [COLOR_BUILDING_TEXT]Chatkę Wikliniarza[COLOR_REVERT]. Udostępnia [COLOR_HIGHLIGHT_TEXT]Kosze[COLOR_REVERT].</Polish>
 	</TEXT>
 	<TEXT>
@@ -4397,7 +4397,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CARPENTRY_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Carpentry[COLOR_REVERT] is a prehistoric era technology that allows the construction of the [COLOR_BUILDING_TEXT]Carpenter's Workshop[COLOR_REVERT] which increases a city's overall [ICON_PRODUCTION][COLOR_GREEN]Hammer[COLOR_REVERT] output. It also reveals [COLOR_CYAN]Bamboo[COLOR_REVERT] and permits [COLOR_UNIT_TEXT]Worker[COLOR_REVERT] units to construct the [COLOR_HIGHLIGHT_TEXT]Wooden Palisade[COLOR_REVERT] and [COLOR_HIGHLIGHT_TEXT]Wooden Watchtower[COLOR_REVERT] improvements that can be used to [COLOR_HIGHLIGHT_TEXT]claim territory[COLOR_REVERT] (dependent on game options).</English>
-		<French>[COLOR_TECH_TEXT]Menuiserie[COLOR_REVERT] est une technologie de l'ère préhistorique qui permet la construction de [COLOR_BUILDING_TEXT]Menuiseries[COLOR_REVERT] qui augmente le rendement global de  [ICON_PRODUCTION][COLOR_GREEN]Production[COLOR_REVERT]. Révèle également le [COLOR_CYAN]Bambou[COLOR_REVERT] et permet aux [COLOR_UNIT_TEXT]Ouvriers[COLOR_REVERT] de construire les aménagements [COLOR_HIGHLIGHT_TEXT]Palissade en bois[COLOR_REVERT] et [COLOR_HIGHLIGHT_TEXT]Tour d'observation en bois[COLOR_REVERT] qui peuvent être utilisés pour [COLOR_HIGHLIGHT_TEXT]réclamer du territoire[COLOR_REVERT] (en fonction des options du jeu).</French>
+		<French>[COLOR_TECH_TEXT]Menuiserie[COLOR_REVERT] est une technologie de l'ère préhistorique qui permet la construction de [COLOR_BUILDING_TEXT]Menuiseries[COLOR_REVERT] qui augmente le rendement global de [ICON_PRODUCTION][COLOR_GREEN]Production[COLOR_REVERT]. Révèle également le [COLOR_CYAN]Bambou[COLOR_REVERT] et permet aux [COLOR_UNIT_TEXT]Ouvriers[COLOR_REVERT] de construire les aménagements [COLOR_HIGHLIGHT_TEXT]Palissade en bois[COLOR_REVERT] et [COLOR_HIGHLIGHT_TEXT]Tour d'observation en bois[COLOR_REVERT] qui peuvent être utilisés pour [COLOR_HIGHLIGHT_TEXT]réclamer du territoire[COLOR_REVERT] (en fonction des options du jeu).</French>
 		<Polish>Odblokowuje wiele budynków. Sprawia, że [COLOR_BUILDING_TEXT]Oparte Namioty[COLOR_REVERT] stają się przestarzałe.</Polish>
 	</TEXT>
 	<TEXT>
@@ -4699,7 +4699,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CHARIOTRY_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Chariotry[COLOR_REVERT] enables your first horse unit the [COLOR_UNIT_TEXT]Chariots[COLOR_REVERT], leads to future mounted units and allows [COLOR_BUILDING_TEXT]stable[COLOR_REVERT] which provides additional training to mounted units.</English>
-		<French>[COLOR_TECH_TEXT]Charrerie[COLOR_REVERT] rend actif votre première unité avec des chevaux, les [COLOR_UNIT_TEXT]Chars équestres[COLOR_REVERT], mène vers des unités futures montées et permet la construction des  [COLOR_BUILDING_TEXT]Ecuries[COLOR_REVERT] qui procure de l'expérience supplémentaire pour les unités montées.</French>
+		<French>[COLOR_TECH_TEXT]Charrerie[COLOR_REVERT] rend actif votre première unité avec des chevaux, les [COLOR_UNIT_TEXT]Chars équestres[COLOR_REVERT], mène vers des unités futures montées et permet la construction des [COLOR_BUILDING_TEXT]Ecuries[COLOR_REVERT] qui procure de l'expérience supplémentaire pour les unités montées.</French>
 		<Spanish>El [COLOR_TECH_TEXT]Carruaje[COLOR_REVERT] te permite entrenar tu primera unidad montada, los [COLOR_UNIT_TEXT]Carros[COLOR_REVERT], lleva a posteriores unidades montadas y permite la construcción del [COLOR_BUILDING_TEXT]Establo[COLOR_REVERT] que proporciona entrenamiento adicional a las unidades montadas.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4977,7 +4977,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CIVIL_SERVICE_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Civil Service[COLOR_REVERT] enables the [COLOR_HIGHLIGHT_TEXT]Bureaucracy[COLOR_REVERT] and [COLOR_HIGHLIGHT_TEXT]Private Healthcare[COLOR_REVERT] civics and allows you to build [COLOR_UNIT_TEXT]Macemen[COLOR_REVERT] (with [COLOR_TECH_TEXT]Machinery[COLOR_REVERT]) and [COLOR_BUILDING_TEXT]Doctor's Office[COLOR_REVERT].</English>
-		<French>[COLOR_TECH_TEXT]Administration[COLOR_REVERT] rend actif les doctrines  [COLOR_HIGHLIGHT_TEXT]Bureaucratie[COLOR_REVERT] et [COLOR_HIGHLIGHT_TEXT]Santé privée[COLOR_REVERT] et vous permet de construire les [COLOR_UNIT_TEXT]Guerriers avec masse en métal[COLOR_REVERT] (avec [COLOR_TECH_TEXT]Mécanique[COLOR_REVERT]) et des [COLOR_BUILDING_TEXT]Cabinets de médecin[COLOR_REVERT].</French>
+		<French>[COLOR_TECH_TEXT]Administration[COLOR_REVERT] rend actif les doctrines [COLOR_HIGHLIGHT_TEXT]Bureaucratie[COLOR_REVERT] et [COLOR_HIGHLIGHT_TEXT]Santé privée[COLOR_REVERT] et vous permet de construire les [COLOR_UNIT_TEXT]Guerriers avec masse en métal[COLOR_REVERT] (avec [COLOR_TECH_TEXT]Mécanique[COLOR_REVERT]) et des [COLOR_BUILDING_TEXT]Cabinets de médecin[COLOR_REVERT].</French>
 		<Spanish>La [COLOR_TECH_TEXT]Administración pública[COLOR_REVERT] desbloquea los principios de la [COLOR_HIGHLIGHT_TEXT]Burocracia[COLOR_REVERT] y la [COLOR_HIGHLIGHT_TEXT]Sanidad privada[COLOR_REVERT], y te permite entrenar [COLOR_UNIT_TEXT]Soldados con maza[COLOR_REVERT] (con la [COLOR_TECH_TEXT]Maquinaria[COLOR_REVERT]) y construir la [COLOR_BUILDING_TEXT]Consulta del doctor[COLOR_REVERT].</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5597,7 +5597,7 @@ En temps de guerre, certaines organisations de la garde côtière peuvent avoir 
 	<TEXT>
 		<Tag>TXT_KEY_TECH_COMMUNICATION_NETWORKS_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Communication Networks[COLOR_REVERT] allows you to build [COLOR_BUILDING_TEXT]Convention Center[COLOR_REVERT] building and [COLOR_BUILDING_TEXT]SDI[COLOR_REVERT] project.</English>
-		<French>[COLOR_TECH_TEXT]Réseaux de Communication[COLOR_REVERT] vous permet de construire les [COLOR_BUILDING_TEXT]Centres de Convention[COLOR_REVERT] et le projet  [COLOR_BUILDING_TEXT]IDS[COLOR_REVERT].</French>
+		<French>[COLOR_TECH_TEXT]Réseaux de Communication[COLOR_REVERT] vous permet de construire les [COLOR_BUILDING_TEXT]Centres de Convention[COLOR_REVERT] et le projet [COLOR_BUILDING_TEXT]IDS[COLOR_REVERT].</French>
 		<Spanish>Las [COLOR_TECH_TEXT]Telecomunicaciones[COLOR_REVERT] te permiten construir el edificio del [COLOR_BUILDING_TEXT]Pabellón de congresos[COLOR_REVERT] y el proyecto del [COLOR_BUILDING_TEXT]SDI[COLOR_REVERT].</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5987,7 +5987,7 @@ En temps de guerre, certaines organisations de la garde côtière peuvent avoir 
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CONDUCT_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Conduct[COLOR_REVERT] is a prehistoric era technology that allows the construction of the [COLOR_BUILDING_TEXT]Sentry Post[COLOR_REVERT], an essential crime-fighting building that serves as the requirement to build [COLOR_UNIT_TEXT]Enforcer[COLOR_REVERT] units which reduce [COLOR_GREEN]Crime[COLOR_REVERT] generation.</English>
-		<French>[COLOR_TECH_TEXT]Code de Conduite[COLOR_REVERT] est une technologie de l'ère préhistorique qui permet la construction de [COLOR_BUILDING_TEXT]Poste de Sentinelle[COLOR_REVERT], un bâtiment essentiel pour la lutte contre la criminalité, qui permet d'entraîner des  [COLOR_UNIT_TEXT]Forces de l'ordre[COLOR_REVERT], unités spécialisées pour réduire la [COLOR_GREEN]Criminalité[COLOR_REVERT].</French>
+		<French>[COLOR_TECH_TEXT]Code de Conduite[COLOR_REVERT] est une technologie de l'ère préhistorique qui permet la construction de [COLOR_BUILDING_TEXT]Poste de Sentinelle[COLOR_REVERT], un bâtiment essentiel pour la lutte contre la criminalité, qui permet d'entraîner des [COLOR_UNIT_TEXT]Forces de l'ordre[COLOR_REVERT], unités spécialisées pour réduire la [COLOR_GREEN]Criminalité[COLOR_REVERT].</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CONGLOMERATES</Tag>
@@ -6016,7 +6016,7 @@ En temps de guerre, certaines organisations de la garde côtière peuvent avoir 
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CONGLOMERATES_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Conglomerates[COLOR_REVERT] enables [COLOR_HIGHLIGHT_TEXT]Corporatism[COLOR_REVERT] civic and allows you to build [COLOR_BUILDING_TEXT]Global Stock Exchange[COLOR_REVERT].</English>
-		<French>[COLOR_TECH_TEXT]Conglomérats[COLOR_REVERT] rend actif la doctrine  [COLOR_HIGHLIGHT_TEXT]Corporatisme[COLOR_REVERT] civic et vous permet de construire [COLOR_BUILDING_TEXT]La Plateforme de Stockage Globale[COLOR_REVERT].</French>
+		<French>[COLOR_TECH_TEXT]Conglomérats[COLOR_REVERT] rend actif la doctrine [COLOR_HIGHLIGHT_TEXT]Corporatisme[COLOR_REVERT] civic et vous permet de construire [COLOR_BUILDING_TEXT]La Plateforme de Stockage Globale[COLOR_REVERT].</French>
 		<Spanish>Los [COLOR_TECH_TEXT]Conglomerados[COLOR_REVERT] desbloquean el principio del [COLOR_HIGHLIGHT_TEXT]Corporativismo[COLOR_REVERT] y te permiten construir el [COLOR_BUILDING_TEXT]Mercado bursátil internacional[COLOR_REVERT].</Spanish>
 	</TEXT>
 	<TEXT>
@@ -6666,7 +6666,7 @@ En temps de guerre, certaines organisations de la garde côtière peuvent avoir 
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CROP_ROTATION_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Crop Rotation[COLOR_REVERT] increases food production from [COLOR_HIGHLIGHT_TEXT]Farms[COLOR_REVERT].</English>
-		<French>[COLOR_TECH_TEXT]Rotation des cultures[COLOR_REVERT] augmente la production de nourriture des  [COLOR_HIGHLIGHT_TEXT]Fermes[COLOR_REVERT].</French>
+		<French>[COLOR_TECH_TEXT]Rotation des cultures[COLOR_REVERT] augmente la production de nourriture des [COLOR_HIGHLIGHT_TEXT]Fermes[COLOR_REVERT].</French>
 		<Spanish>El [COLOR_TECH_TEXT]Barbecho[COLOR_REVERT] aumenta la producción de alimentos de las [COLOR_HIGHLIGHT_TEXT]Granjas[COLOR_REVERT].</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7364,7 +7364,7 @@ En temps de guerre, certaines organisations de la garde côtière peuvent avoir 
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DEMOCRACY_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Democracy[COLOR_REVERT] enables [COLOR_HIGHLIGHT_TEXT]Republic[COLOR_REVERT] civic and allows you to build [COLOR_BUILDING_TEXT]Agora[COLOR_REVERT] if you have active [COLOR_HIGHLIGHT_TEXT]Republic[COLOR_REVERT] civic.</English>
-		<French>[COLOR_TECH_TEXT]Démocratie[COLOR_REVERT] rend actif la doctrine  [COLOR_HIGHLIGHT_TEXT]République[COLOR_REVERT] et vous permet de construire les  [COLOR_BUILDING_TEXT]Agoras[COLOR_REVERT] lorsque la doctrine [COLOR_HIGHLIGHT_TEXT]République[COLOR_REVERT].</French>
+		<French>[COLOR_TECH_TEXT]Démocratie[COLOR_REVERT] rend actif la doctrine [COLOR_HIGHLIGHT_TEXT]République[COLOR_REVERT] et vous permet de construire les [COLOR_BUILDING_TEXT]Agoras[COLOR_REVERT] lorsque la doctrine [COLOR_HIGHLIGHT_TEXT]République[COLOR_REVERT].</French>
 		<Spanish>La [COLOR_TECH_TEXT]Democracia[COLOR_REVERT] desbloquea el principio de la [COLOR_HIGHLIGHT_TEXT]República[COLOR_REVERT] y te permite construir el [COLOR_BUILDING_TEXT]Ágora[COLOR_REVERT] si tienes activo el principio de la [COLOR_HIGHLIGHT_TEXT]República[COLOR_REVERT].</Spanish>
 		<Polish>Udostępnia doktryny [COLOR_HIGHLIGHT_TEXT]Suffrage universel[COLOR_REVERT] oraz [COLOR_HIGHLIGHT_TEXT]Emancypacje[COLOR_REVERT]. Technologia umożliwia budowę [COLOR_BUILDING_TEXT]Agencje Bezpieczeństwa[COLOR_REVERT] oraz [COLOR_BUILDING_TEXT]Statue Wolności[COLOR_REVERT].</Polish>
 	</TEXT>
@@ -7744,7 +7744,7 @@ En temps de guerre, certaines organisations de la garde côtière peuvent avoir 
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DRYING_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Drying[COLOR_REVERT] is a prehistoric era technology that allows the construction of the [COLOR_BUILDING_TEXT]Drying Frame[COLOR_REVERT] which is the requirement to build the powerful [COLOR_BUILDING_TEXT]Tannery[COLOR_REVERT], a building that increases a city's overall [ICON_PRODUCTION][COLOR_GREEN]Hammer[COLOR_REVERT] output. It also reveals [COLOR_CYAN]Salt[COLOR_REVERT] that provides [ICON_HEALTHY][COLOR_GREEN]Healthiness[COLOR_REVERT].</English>
-		<French>[COLOR_TECH_TEXT]Séchage[COLOR_REVERT] est une technologie de l'ère préhistorique qui permet la construction des [COLOR_BUILDING_TEXT]Etendeurs[COLOR_REVERT] qui est un pré-requis pour construie la  [COLOR_BUILDING_TEXT]Tannerie[COLOR_REVERT], un bâtiment qui augmente de manière globale la  [ICON_PRODUCTION][COLOR_GREEN]Production[COLOR_REVERT] de la ville. Révèle également [COLOR_CYAN]Sel[COLOR_REVERT] qui procure de la[ICON_HEALTHY][COLOR_GREEN]Santé[COLOR_REVERT].</French>
+		<French>[COLOR_TECH_TEXT]Séchage[COLOR_REVERT] est une technologie de l'ère préhistorique qui permet la construction des [COLOR_BUILDING_TEXT]Etendeurs[COLOR_REVERT] qui est un pré-requis pour construie la [COLOR_BUILDING_TEXT]Tannerie[COLOR_REVERT], un bâtiment qui augmente de manière globale la [ICON_PRODUCTION][COLOR_GREEN]Production[COLOR_REVERT] de la ville. Révèle également [COLOR_CYAN]Sel[COLOR_REVERT] qui procure de la[ICON_HEALTHY][COLOR_GREEN]Santé[COLOR_REVERT].</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DUALFLUX_QUANTUM_TEMPORAL_RIFT</Tag>
@@ -7811,7 +7811,7 @@ En temps de guerre, certaines organisations de la garde côtière peuvent avoir 
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DUALISM_STRATEGY</Tag>
 		<English>The first to research this tech founds [COLOR_HIGHLIGHT_TEXT]Zoroastrianism[COLOR_REVERT]. It also allows you to build the [COLOR_BUILDING_TEXT]The Hanging Gardens[COLOR_REVERT] wonder.</English>
-		<French>Le Premier à recherche cette tech. fonde le  [COLOR_HIGHLIGHT_TEXT]Zoroastrisme[COLOR_REVERT]. Il vous permet également de construire la merveille des[COLOR_BUILDING_TEXT]Jardins suspendus[COLOR_REVERT].</French>
+		<French>Le Premier à recherche cette tech. fonde le [COLOR_HIGHLIGHT_TEXT]Zoroastrisme[COLOR_REVERT]. Il vous permet également de construire la merveille des[COLOR_BUILDING_TEXT]Jardins suspendus[COLOR_REVERT].</French>
 		<Spanish>El primero en investigar esta tecnología fundará el [COLOR_HIGHLIGHT_TEXT]Zoroastrismo[COLOR_REVERT]. También te permite construir la maravilla de los [COLOR_BUILDING_TEXT]Jardines Colgantes[COLOR_REVERT].</Spanish>
 	</TEXT>
 	<TEXT>
@@ -8139,7 +8139,7 @@ Some call it Evolution,
 	<TEXT>
 		<Tag>TXT_KEY_TECH_EDUCATION_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Education[COLOR_REVERT] enables the construction of the [COLOR_BUILDING_TEXT]University[COLOR_REVERT] city improvement, the [COLOR_UNIT_TEXT]Heavy Swordsman[COLOR_REVERT] (with [COLOR_TECH_TEXT]Invention[COLOR_REVERT]) and the [COLOR_BUILDING_TEXT]Oxford University[COLOR_REVERT] nation Wonder and [COLOR_BUILDING_TEXT]Palace of Potala[COLOR_REVERT] and [COLOR_BUILDING_TEXT]The Brihadeeswarar Temple[COLOR_REVERT] wonders. It also enables [COLOR_HIGHLIGHT_TEXT]Private School[COLOR_REVERT] civic.</English>
-		<French>[COLOR_TECH_TEXT]Education[COLOR_REVERT] permet la construction des [COLOR_BUILDING_TEXT]Universités[COLOR_REVERT], et d'entraîner les [COLOR_UNIT_TEXT]Epéistes Lourds [COLOR_REVERT] (avec [COLOR_TECH_TEXT]Invention[COLOR_REVERT]) et la Merveille nationale [COLOR_BUILDING_TEXT]L'Université d'Oxford[COLOR_REVERT] et les Merveilles: [COLOR_BUILDING_TEXT]Le Palais de Potala[COLOR_REVERT] et le  [COLOR_BUILDING_TEXT]Temple de Brihadisvara[COLOR_REVERT]. Il rend actif la doctrine [COLOR_HIGHLIGHT_TEXT]Ecoles privées[COLOR_REVERT].</French>
+		<French>[COLOR_TECH_TEXT]Education[COLOR_REVERT] permet la construction des [COLOR_BUILDING_TEXT]Universités[COLOR_REVERT], et d'entraîner les [COLOR_UNIT_TEXT]Epéistes Lourds [COLOR_REVERT] (avec [COLOR_TECH_TEXT]Invention[COLOR_REVERT]) et la Merveille nationale [COLOR_BUILDING_TEXT]L'Université d'Oxford[COLOR_REVERT] et les Merveilles: [COLOR_BUILDING_TEXT]Le Palais de Potala[COLOR_REVERT] et le [COLOR_BUILDING_TEXT]Temple de Brihadisvara[COLOR_REVERT]. Il rend actif la doctrine [COLOR_HIGHLIGHT_TEXT]Ecoles privées[COLOR_REVERT].</French>
 		<Spanish>La [COLOR_TECH_TEXT]Educación[COLOR_REVERT] permite la construcción del edificio de la [COLOR_BUILDING_TEXT]Universidad[COLOR_REVERT], el entrenamiento del [COLOR_UNIT_TEXT]Soldado con espada pesada[COLOR_REVERT] (con la [COLOR_TECH_TEXT]Invención[COLOR_REVERT]) y la construcción de la [COLOR_BUILDING_TEXT]Universidad de Oxford[COLOR_REVERT] y de las maravillas mundiales del [COLOR_BUILDING_TEXT]Palacio de Potala[COLOR_REVERT] y del [COLOR_BUILDING_TEXT]Templo Brihadisvara[COLOR_REVERT]. También desbloquea el principio de la [COLOR_HIGHLIGHT_TEXT]Educación privada[COLOR_REVERT].</Spanish>
 	</TEXT>
 	<TEXT>
@@ -8630,7 +8630,7 @@ Some call it Evolution,
 	<TEXT>
 		<Tag>TXT_KEY_TECH_EQUINE_DOMESTICATION_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Equine Domestication[COLOR_REVERT] is a prehistoric era technology that allows the construction of the [COLOR_BUILDING_TEXT]Horse Trainer[COLOR_REVERT], a building that unlocks a great amount of [COLOR_UNIT_TEXT]Mounted[COLOR_REVERT] units, like the [COLOR_UNIT_TEXT]Horseman[COLOR_REVERT].</English>
-		<French>[COLOR_TECH_TEXT]Domestication des Chevaux[COLOR_REVERT] est une technologie de l'ère préhistorique qui permet la construction de [COLOR_BUILDING_TEXT]Dresseur de chevaux[COLOR_REVERT], un batiment permettant l'entraînement de nombreses  [COLOR_UNIT_TEXT]Unités Montées[COLOR_REVERT], telles que le [COLOR_UNIT_TEXT]Cavalier[COLOR_REVERT].</French>
+		<French>[COLOR_TECH_TEXT]Domestication des Chevaux[COLOR_REVERT] est une technologie de l'ère préhistorique qui permet la construction de [COLOR_BUILDING_TEXT]Dresseur de chevaux[COLOR_REVERT], un batiment permettant l'entraînement de nombreuses [COLOR_UNIT_TEXT]Unités Montées[COLOR_REVERT], telles que le [COLOR_UNIT_TEXT]Cavalier[COLOR_REVERT].</French>
 		<Polish>Pozwala wyszkolić [COLOR_UNIT_TEXT]Jeździec na Koniu[COLOR_REVERT], [COLOR_UNIT_TEXT]Jeździec Bandytów[COLOR_REVERT] i [COLOR_UNIT_TEXT]Nieśmiertelny[COLOR_REVERT].</Polish>
 	</TEXT>
 	<TEXT>
@@ -9144,7 +9144,7 @@ Some call it Evolution,
 	<TEXT>
 		<Tag>TXT_KEY_TECH_FERMENTATION_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Fermentation[COLOR_REVERT] allows you to construct [COLOR_BUILDING_TEXT]Apple Orchard[COLOR_REVERT], [COLOR_BUILDING_TEXT]Apple Orchard[COLOR_REVERT] and [COLOR_BUILDING_TEXT]Winery[COLOR_REVERT] improvements.</English>
-		<French>[COLOR_TECH_TEXT]Fermentation[COLOR_REVERT] vous permet de construire les aménagements  [COLOR_BUILDING_TEXT]Vergers de pommes[COLOR_REVERT], [COLOR_BUILDING_TEXT]Vergers[COLOR_REVERT] et  [COLOR_BUILDING_TEXT]Exploitation vinicole[COLOR_REVERT].</French>
+		<French>[COLOR_TECH_TEXT]Fermentation[COLOR_REVERT] vous permet de construire les aménagements [COLOR_BUILDING_TEXT]Vergers de pommes[COLOR_REVERT], [COLOR_BUILDING_TEXT]Vergers[COLOR_REVERT] et [COLOR_BUILDING_TEXT]Exploitation vinicole[COLOR_REVERT].</French>
 		<Spanish>La [COLOR_TECH_TEXT]Fermentación[COLOR_REVERT] te permite construir las mejoras del [COLOR_BUILDING_TEXT]Manzanar[COLOR_REVERT], el [COLOR_BUILDING_TEXT]Olivar[COLOR_REVERT] y el [COLOR_BUILDING_TEXT]Viñedo[COLOR_REVERT].</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9890,7 +9890,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_FREE_ARTISTRY_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Free Artistry[COLOR_REVERT] allows construction of [COLOR_BUILDING_TEXT]Artist Guild[COLOR_REVERT] buildings and the [COLOR_BUILDING_TEXT]Global Theatre[COLOR_REVERT] national wonder. Obsoletes [COLOR_BUILDING_TEXT]Theatre of Dionysus[COLOR_REVERT] wonder.</English>
-		<French>[COLOR_TECH_TEXT]Talent Artistique[COLOR_REVERT] permet la construction de des bâtiments de la [COLOR_BUILDING_TEXT]Guilde des Artistes[COLOR_REVERT]et la merveille nationale [COLOR_BUILDING_TEXT]Théâtre Global[COLOR_REVERT]. Rend obsolète le  [COLOR_BUILDING_TEXT]Théâtre de Dionysos[COLOR_REVERT].</French>
+		<French>[COLOR_TECH_TEXT]Talent Artistique[COLOR_REVERT] permet la construction de des bâtiments de la [COLOR_BUILDING_TEXT]Guilde des Artistes[COLOR_REVERT]et la merveille nationale [COLOR_BUILDING_TEXT]Théâtre Global[COLOR_REVERT]. Rend obsolète le [COLOR_BUILDING_TEXT]Théâtre de Dionysos[COLOR_REVERT].</French>
 		<Spanish>El [COLOR_TECH_TEXT]Arte libre[COLOR_REVERT] permite la construcción del edificio del [COLOR_BUILDING_TEXT]Gremio de artistas[COLOR_REVERT] y de la maravilla nacional del [COLOR_BUILDING_TEXT]Globe Theatre[COLOR_REVERT]. Deja obsoleta la maravilla del [COLOR_BUILDING_TEXT]Teatro de Dioniso[COLOR_REVERT].</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11011,7 +11011,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_GROUND_STONE_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Ground Stone[COLOR_REVERT] is a prehistoric era technology that unlocks a few [ICON_FOOD][COLOR_GREEN]Food[COLOR_REVERT] producing buildings, like the [COLOR_BUILDING_TEXT]Quern[COLOR_REVERT].</English>
-		<French>[COLOR_TECH_TEXT]Pierre à Mortier[COLOR_REVERT] est une technologie de l'ère préhistorique qui débloque des bâtiments générant un peu de  [ICON_FOOD][COLOR_GREEN]Nourriture[COLOR_REVERT], comme la [COLOR_BUILDING_TEXT]Meule à grains[COLOR_REVERT].</French>
+		<French>[COLOR_TECH_TEXT]Pierre à Mortier[COLOR_REVERT] est une technologie de l'ère préhistorique qui débloque des bâtiments générant un peu de [ICON_FOOD][COLOR_GREEN]Nourriture[COLOR_REVERT], comme la [COLOR_BUILDING_TEXT]Meule à grains[COLOR_REVERT].</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_GUERRILLA_WARFARE</Tag>
@@ -11277,7 +11277,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_HEAT_TREATMENT_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Heat Treatment[COLOR_REVERT] is a prehistoric era technology that unlocks the construction of the [COLOR_UNIT_TEXT]Branding Hut[COLOR_REVERT] building that gives [ICON_CULTURE][COLOR_GREEN]Culture[COLOR_REVERT] and provides [ICON_HEALTHY][COLOR_GREEN]Healthiness[COLOR_REVERT].</English>
-		<French>[COLOR_TECH_TEXT]Traitement par la Chaleur[COLOR_REVERT] est une technologie de l'ère préhistorique qui permet la construction de [COLOR_UNIT_TEXT]Hutte de Marquage[COLOR_REVERT], bâtiment qui génère de la [ICON_CULTURE][COLOR_GREEN]Culture[COLOR_REVERT] et procure de la  [ICON_HEALTHY][COLOR_GREEN]Santé[COLOR_REVERT].</French>
+		<French>[COLOR_TECH_TEXT]Traitement par la Chaleur[COLOR_REVERT] est une technologie de l'ère préhistorique qui permet la construction de [COLOR_UNIT_TEXT]Hutte de Marquage[COLOR_REVERT], bâtiment qui génère de la [ICON_CULTURE][COLOR_GREEN]Culture[COLOR_REVERT] et procure de la [ICON_HEALTHY][COLOR_GREEN]Santé[COLOR_REVERT].</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_HELIOCENTRISM</Tag>
@@ -11843,7 +11843,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_HYDROPONICS_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Hydroponics[COLOR_REVERT] increases food production of [COLOR_HIGHLIGHT_TEXT]Farms[COLOR_REVERT] by +1. It also allows construction of [COLOR_BUILDING_TEXT]Arcologies[COLOR_REVERT].</English>
-		<French>[COLOR_TECH_TEXT]Cultures hydroponiques[COLOR_REVERT] augmente de +1 la production de nourriture des  [COLOR_HIGHLIGHT_TEXT]Fermes[COLOR_REVERT]. Elle permet également la construction des [COLOR_BUILDING_TEXT]Arcologies[COLOR_REVERT].</French>
+		<French>[COLOR_TECH_TEXT]Cultures hydroponiques[COLOR_REVERT] augmente de +1 la production de nourriture des [COLOR_HIGHLIGHT_TEXT]Fermes[COLOR_REVERT]. Elle permet également la construction des [COLOR_BUILDING_TEXT]Arcologies[COLOR_REVERT].</French>
 		<Spanish>La [COLOR_TECH_TEXT]Hidroponia[COLOR_REVERT] aumenta la producción de alimentos de las [COLOR_HIGHLIGHT_TEXT]Granjas[COLOR_REVERT] en +1. También permite la construcción de [COLOR_BUILDING_TEXT]Arcologías[COLOR_REVERT].</Spanish>
 		<Polish>[COLOR_TECH_TEXT]Hydroponika[COLOR_REVERT] zwiększa produkcję żywności [COLOR_HIGHLIGHT_TEXT]Farmy[COLOR_REVERT] o +1. Pozwala także na budowę [COLOR_BUILDING_TEXT]Arkologii[COLOR_REVERT].</Polish>
 	</TEXT>
@@ -12941,7 +12941,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_LABOR_UNIONS_STRATEGY</Tag>
 		<English>Cities can construct Labor Unions and Local Courthouses.</English>
-		<French>Les Villes peuvent construire le  [COLOR_BUILDING_TEXT]Syndicalisme[COLOR_REVERT], et les [COLOR_BUILDING_TEXT]Tribunaux de quartier[COLOR_REVERT].</French>
+		<French>Les Villes peuvent construire le [COLOR_BUILDING_TEXT]Syndicalisme[COLOR_REVERT], et les [COLOR_BUILDING_TEXT]Tribunaux de quartier[COLOR_REVERT].</French>
 		<Spanish>Las ciudades pueden construir Sindicatos y Juzgados locales.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -14409,7 +14409,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MATCHLOCK_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Matchlock[COLOR_REVERT] allows [COLOR_UNIT_TEXT]Arquebusier[COLOR_REVERT] units and enables the [COLOR_HIGHLIGHT_TEXT]Pinch I[COLOR_REVERT] promotion. It also improves the output of [COLOR_HIGHLIGHT_TEXT]Camp[COLOR_REVERT] improvement.</English>
-		<French>[COLOR_TECH_TEXT]Mèche[COLOR_REVERT] permet de recruter des [COLOR_UNIT_TEXT]Arquebusiers[COLOR_REVERT] et rend actif la promotion [COLOR_HIGHLIGHT_TEXT]Tenaille I[COLOR_REVERT]. Elle augmente également les revenus des aménagements de type  [COLOR_HIGHLIGHT_TEXT]Camps[COLOR_REVERT].</French>
+		<French>[COLOR_TECH_TEXT]Mèche[COLOR_REVERT] permet de recruter des [COLOR_UNIT_TEXT]Arquebusiers[COLOR_REVERT] et rend actif la promotion [COLOR_HIGHLIGHT_TEXT]Tenaille I[COLOR_REVERT]. Elle augmente également les revenus des aménagements de type [COLOR_HIGHLIGHT_TEXT]Camps[COLOR_REVERT].</French>
 		<Spanish>El [COLOR_TECH_TEXT]Fusil de mecha[COLOR_REVERT] permite entrenar [COLOR_UNIT_TEXT]Arcabucheros[COLOR_REVERT] y activa el ascenso [COLOR_HIGHLIGHT_TEXT]Tenaza I[COLOR_REVERT]. También mejora el rendimiento de los [COLOR_HIGHLIGHT_TEXT]Campamentos[COLOR_REVERT].</Spanish>
 	</TEXT>
 	<TEXT>
@@ -16658,7 +16658,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NANOMINING_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Nanomining[COLOR_REVERT] increases the output of [COLOR_HIGHLIGHT_TEXT]Mine[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Shaft Mine[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Well[COLOR_REVERT] and [COLOR_HIGHLIGHT_TEXT]Offshore Platform[COLOR_REVERT]</English>
-		<French>[COLOR_TECH_TEXT]Nano-Extraction Minière[COLOR_REVERT] augmente le rendement des  [COLOR_HIGHLIGHT_TEXT]Mine[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Puits de mine[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Puits[COLOR_REVERT] et [COLOR_HIGHLIGHT_TEXT]Plateforme Offshore[COLOR_REVERT]</French>
+		<French>[COLOR_TECH_TEXT]Nano-Extraction Minière[COLOR_REVERT] augmente le rendement des [COLOR_HIGHLIGHT_TEXT]Mine[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Puits de mine[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Puits[COLOR_REVERT] et [COLOR_HIGHLIGHT_TEXT]Plateforme Offshore[COLOR_REVERT]</French>
 		<Spanish>La [COLOR_TECH_TEXT]Nanominería[COLOR_REVERT] aumenta el rendimiento de las [COLOR_HIGHLIGHT_TEXT]Minas[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Pozos mineros[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Pozos petrolíferos[COLOR_REVERT] y [COLOR_HIGHLIGHT_TEXT]Plataformas de extracción[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -16749,7 +16749,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NANOTECHNOLOGY_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Nanotechnology[COLOR_REVERT] allows you to build [COLOR_BUILDING_TEXT]The Space Elevator[COLOR_REVERT] wonder.</English>
-		<French>[COLOR_TECH_TEXT]Nano-technologies[COLOR_REVERT] vous permet de construire la Merveille  [COLOR_BUILDING_TEXT]Ascenseur spatial[COLOR_REVERT].</French>
+		<French>[COLOR_TECH_TEXT]Nano-technologies[COLOR_REVERT] vous permet de construire la Merveille [COLOR_BUILDING_TEXT]Ascenseur spatial[COLOR_REVERT].</French>
 		<Spanish>La [COLOR_TECH_TEXT]Nanotecnología[COLOR_REVERT] te permite construir la maravilla del [COLOR_BUILDING_TEXT]Ascensor Espacial[COLOR_REVERT].</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19727,7 +19727,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_PREHISTORIC_MUSIC_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Prehistoric Music[COLOR_REVERT] is a prehistoric era technology that allows the construction of the [COLOR_BUILDING_TEXT]Music Hut[COLOR_REVERT] that gives [ICON_CULTURE][COLOR_GREEN]Culture[COLOR_REVERT] and provides [ICON_HAPPY][COLOR_GREEN]Happiness[COLOR_REVERT].</English>
-		<French>[COLOR_TECH_TEXT]Musique Préhistorique[COLOR_REVERT] est une technologie de l'ère préhistorique qui permet la construction de [COLOR_BUILDING_TEXT]Lieu primitif pour la musique[COLOR_REVERT] qui donne un bonus de  [ICON_CULTURE][COLOR_GREEN]Culture[COLOR_REVERT] et procure du [ICON_HAPPY][COLOR_GREEN]Bonheur[COLOR_REVERT].</French>
+		<French>[COLOR_TECH_TEXT]Musique Préhistorique[COLOR_REVERT] est une technologie de l'ère préhistorique qui permet la construction de [COLOR_BUILDING_TEXT]Lieu primitif pour la musique[COLOR_REVERT] qui donne un bonus de [ICON_CULTURE][COLOR_GREEN]Culture[COLOR_REVERT] et procure du [ICON_HAPPY][COLOR_GREEN]Bonheur[COLOR_REVERT].</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_PRIESTHOOD</Tag>
@@ -20422,7 +20422,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_REALISM_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Realism[COLOR_REVERT] allows the [COLOR_BUILDING_TEXT]Opera House[COLOR_REVERT] city improvement and [COLOR_BUILDING_TEXT]Modern Art Theatre[COLOR_REVERT] national wonder. It also obsoletes the [COLOR_BUILDING_TEXT]Colosseum[COLOR_REVERT].</English>
-		<French>[COLOR_TECH_TEXT]Réalisme[COLOR_REVERT] permet la construction des [COLOR_BUILDING_TEXT]Opéras[COLOR_REVERT], de la merveille nationnale le [COLOR_BUILDING_TEXT]Théâtre d'Art Moderne[COLOR_REVERT]. Elle rend obsolète les  [COLOR_BUILDING_TEXT]Colisées[COLOR_REVERT].</French>
+		<French>[COLOR_TECH_TEXT]Réalisme[COLOR_REVERT] permet la construction des [COLOR_BUILDING_TEXT]Opéras[COLOR_REVERT], de la merveille nationnale le [COLOR_BUILDING_TEXT]Théâtre d'Art Moderne[COLOR_REVERT]. Elle rend obsolète les [COLOR_BUILDING_TEXT]Colisées[COLOR_REVERT].</French>
 		<Spanish>El [COLOR_TECH_TEXT]Realismo[COLOR_REVERT] permite construir el edificio del [COLOR_BUILDING_TEXT]Auditorio de ópera[COLOR_REVERT] y la maravilla nacional del [COLOR_BUILDING_TEXT]Teatro de arte moderno[COLOR_REVERT]. Deja obsoleto el [COLOR_BUILDING_TEXT]Coliseo[COLOR_REVERT].</Spanish>
 	</TEXT>
 	<TEXT>
@@ -20930,7 +20930,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ROBOTICS_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Robotics[COLOR_REVERT] enables the extremely powerful [COLOR_UNIT_TEXT]Mechanized Infantry[COLOR_REVERT] and [COLOR_UNIT_TEXT]Missile Cruiser[COLOR_REVERT] units and [COLOR_UNIT_TEXT]Modern Armor[COLOR_REVERT] unit (with [COLOR_TECH_TEXT]Composites[COLOR_REVERT]). This tech is also required for more advanced stealth, dreadnought and mech units.</English>
-		<French>[COLOR_TECH_TEXT]Robotique[COLOR_REVERT] rend actif l'unité particulièrement puissante, [COLOR_UNIT_TEXT]l'Infanterie mécanisée[COLOR_REVERT] ainsi que les  [COLOR_UNIT_TEXT]Croiseurs Missiles légers[COLOR_REVERT] et les [COLOR_UNIT_TEXT]Chars Blindés modernes[COLOR_REVERT] (avec [COLOR_TECH_TEXT]Matériaux composites[COLOR_REVERT]). Cette tech. est requise également pour d'autres unités plus avancées (unités furtives, dreadnought, mech...).</French>
+		<French>[COLOR_TECH_TEXT]Robotique[COLOR_REVERT] rend actif l'unité particulièrement puissante, [COLOR_UNIT_TEXT]l'Infanterie mécanisée[COLOR_REVERT] ainsi que les [COLOR_UNIT_TEXT]Croiseurs Missiles légers[COLOR_REVERT] et les [COLOR_UNIT_TEXT]Chars Blindés modernes[COLOR_REVERT] (avec [COLOR_TECH_TEXT]Matériaux composites[COLOR_REVERT]). Cette tech. est requise également pour d'autres unités plus avancées (unités furtives, dreadnought, mech...).</French>
 		<Spanish>La [COLOR_TECH_TEXT]Robótica[COLOR_REVERT] activa las potentísimas unidades de la [COLOR_UNIT_TEXT]Infantería mecanizada[COLOR_REVERT], el [COLOR_UNIT_TEXT]Crucero portamisiles[COLOR_REVERT], y el [COLOR_UNIT_TEXT]Blindado moderno[COLOR_REVERT] (con los [COLOR_TECH_TEXT]Compuestos[COLOR_REVERT]). Además, se requiere esta tecnología para entrenar unidades furtivas, dreadnoughts y mechas más avanzados.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -21999,7 +21999,7 @@ The stages of production are as follows:
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SKINNING_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Skinning[COLOR_REVERT] is a prehistoric era technology that reveals [COLOR_CYAN]Furs[COLOR_REVERT].</English>
-		<French>[COLOR_TECH_TEXT]Dépeçage[COLOR_REVERT] est une technologie de l'ère préhistorique qui révèle les  [COLOR_CYAN]Pelages[COLOR_REVERT].</French>
+		<French>[COLOR_TECH_TEXT]Dépeçage[COLOR_REVERT] est une technologie de l'ère préhistorique qui révèle les [COLOR_CYAN]Pelages[COLOR_REVERT].</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SKYROADS</Tag>
@@ -23760,7 +23760,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TANNING_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Tanning[COLOR_REVERT] is a prehistoric era technology that allows the construction of the powerful [COLOR_BUILDING_TEXT]Tannery[COLOR_REVERT], where having access to specific resources ([COLOR_CYAN]Salt[COLOR_REVERT], for example) can increase a city's total [ICON_PRODUCTION][COLOR_GREEN]Hammer[COLOR_REVERT] output. It also gives [COLOR_CYAN]Leather[COLOR_REVERT] which enable some buildings ([COLOR_BUILDING_TEXT]Cobbler[COLOR_REVERT], for example).</English>
-		<French>[COLOR_TECH_TEXT]Tannerie[COLOR_REVERT] est une technologie de l'ère préhistorique qui permet la construction du bâtiment [COLOR_BUILDING_TEXT]Tannerie[COLOR_REVERT], qui avec l'accès à des ressources spécifique ([COLOR_CYAN]Sel[COLOR_REVERT], par exemple) peut augmenter la  [ICON_PRODUCTION][COLOR_GREEN]Production[COLOR_REVERT] des villes. Il donne également du [COLOR_CYAN]Cuir[COLOR_REVERT] nécessaire pour d'autres bâtiments ([COLOR_BUILDING_TEXT]Cordonnier[COLOR_REVERT], par exemple).</French>
+		<French>[COLOR_TECH_TEXT]Tannerie[COLOR_REVERT] est une technologie de l'ère préhistorique qui permet la construction du bâtiment [COLOR_BUILDING_TEXT]Tannerie[COLOR_REVERT], qui avec l'accès à des ressources spécifique ([COLOR_CYAN]Sel[COLOR_REVERT], par exemple) peut augmenter la [ICON_PRODUCTION][COLOR_GREEN]Production[COLOR_REVERT] des villes. Il donne également du [COLOR_CYAN]Cuir[COLOR_REVERT] nécessaire pour d'autres bâtiments ([COLOR_BUILDING_TEXT]Cordonnier[COLOR_REVERT], par exemple).</French>
 		<Polish>Udostępnia: Buty i Skórę Garbowaną. Odblokowuje [COLOR_BUILDING_TEXT]Garbarnię[COLOR_REVERT], [COLOR_BUILDING_TEXT]Dom Szewca[COLOR_REVERT] i [COLOR_BUILDING_TEXT]Płatnerza Bambusowego[COLOR_REVERT].</Polish>
 	</TEXT>
 	<TEXT>
@@ -23789,7 +23789,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TATTOOS_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Tattoos[COLOR_REVERT] is a prehistoric era technology that allows the construction of the [COLOR_BUILDING_TEXT]Tattoo Hut[COLOR_REVERT] building that grants the [COLOR_HIGHLIGHT_TEXT]Tattoo[COLOR_REVERT] promotion to certain unit types, like [COLOR_UNIT_TEXT]Melee[COLOR_REVERT].</English>
-		<French>[COLOR_TECH_TEXT]Tatouages[COLOR_REVERT] est une technologie de l'ère préhistorique qui permet la constructio du [COLOR_BUILDING_TEXT]Tatoueur[COLOR_REVERT] qui permet de développer la promotion  [COLOR_HIGHLIGHT_TEXT]Tatouages[COLOR_REVERT] à certains types d'unités de [COLOR_UNIT_TEXT]Corps à Corps[COLOR_REVERT].</French>
+		<French>[COLOR_TECH_TEXT]Tatouages[COLOR_REVERT] est une technologie de l'ère préhistorique qui permet la constructio du [COLOR_BUILDING_TEXT]Tatoueur[COLOR_REVERT] qui permet de développer la promotion [COLOR_HIGHLIGHT_TEXT]Tatouages[COLOR_REVERT] à certains types d'unités de [COLOR_UNIT_TEXT]Corps à Corps[COLOR_REVERT].</French>
 		<Polish>Odblokowuje [COLOR_BUILDING_TEXT]Chatkę Tatuażysty[COLOR_REVERT] i [COLOR_BUILDING_TEXT]Ambasadę Maoryską[COLOR_REVERT].</Polish>
 	</TEXT>
 	<TEXT>
@@ -24084,7 +24084,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_THEFT_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Theft[COLOR_REVERT] is a prehistoric era technology that unlocks the civic [COLOR_HIGHLIGHT_TEXT]Banditry[COLOR_REVERT]. It also allows the construction of the [COLOR_BUILDING_TEXT]Bandit's Hideout[COLOR_REVERT] which gives [ICON_GOLD][COLOR_GREEN]Gold[COLOR_REVERT] but causes [COLOR_RED]Crime[COLOR_REVERT].</English>
-		<French>[COLOR_TECH_TEXT]Vol et dérobage[COLOR_REVERT] est une technologie de l'ère préhistorique qui débloque la doctrine [COLOR_HIGHLIGHT_TEXT]Banditisme[COLOR_REVERT]. Elle permet la construction de [COLOR_BUILDING_TEXT]Repaire de Bandits[COLOR_REVERT] qui est une source d' [ICON_GOLD][COLOR_GREEN]Or[COLOR_REVERT] mais augmente la  [COLOR_RED]Criminalité[COLOR_REVERT].</French>
+		<French>[COLOR_TECH_TEXT]Vol et dérobage[COLOR_REVERT] est une technologie de l'ère préhistorique qui débloque la doctrine [COLOR_HIGHLIGHT_TEXT]Banditisme[COLOR_REVERT]. Elle permet la construction de [COLOR_BUILDING_TEXT]Repaire de Bandits[COLOR_REVERT] qui est une source d' [ICON_GOLD][COLOR_GREEN]Or[COLOR_REVERT] mais augmente la [COLOR_RED]Criminalité[COLOR_REVERT].</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_THEOLOGY</Tag>
@@ -24365,7 +24365,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TOURISM_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Tourism[COLOR_REVERT] allows your workers to build [COLOR_HIGHLIGHT_TEXT]Safari[COLOR_REVERT] improvements and you can construct [COLOR_BUILDING_TEXT]Vacation Resort[COLOR_REVERT] buildings in coastal cities.</English>
-		<French>[COLOR_TECH_TEXT]Tourisme[COLOR_REVERT] permet à vos ouvriers de construire les aménagements  [COLOR_HIGHLIGHT_TEXT]Safari[COLOR_REVERT], et vous permet de construire des [COLOR_BUILDING_TEXT]Villages de Vacances[COLOR_REVERT] dans les villes côtières.</French>
+		<French>[COLOR_TECH_TEXT]Tourisme[COLOR_REVERT] permet à vos ouvriers de construire les aménagements [COLOR_HIGHLIGHT_TEXT]Safari[COLOR_REVERT], et vous permet de construire des [COLOR_BUILDING_TEXT]Villages de Vacances[COLOR_REVERT] dans les villes côtières.</French>
 		<Spanish>El [COLOR_TECH_TEXT]Turismo[COLOR_REVERT] permite a tus trabajadores construir la mejora de la [COLOR_HIGHLIGHT_TEXT]Zona de safari[COLOR_REVERT], y podrás construir [COLOR_BUILDING_TEXT]Complejos vacacionales[COLOR_REVERT] en las ciudades costeras.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -24404,7 +24404,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TRAILS</Tag>
 		<English>Trails</English>
-		<French>Traque</French>
+		<French>Pistes et Sentiers</French>
 		<German>Trampelpfade</German>
 		<Italian>Tracciatura di sentieri</Italian>
 		<Spanish>
@@ -24433,7 +24433,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TRAILS_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Tracking[COLOR_REVERT] is a prehistoric era technology that allows [COLOR_UNIT_TEXT]Worker[COLOR_REVERT] units to construct [COLOR_HIGHLIGHT_TEXT]Paths[COLOR_REVERT]. It also allows the construction of the [COLOR_UNIT_TEXT]Scout[COLOR_REVERT] and [COLOR_UNIT_TEXT]Tracker[COLOR_REVERT] units.</English>
-		<French>[COLOR_TECH_TEXT]Chasse[COLOR_REVERT] est une technologie de l'ère préhistorique qui permet aux [COLOR_UNIT_TEXT]Ouvriers[COLOR_REVERT] d'établir des [COLOR_HIGHLIGHT_TEXT]Passages[COLOR_REVERT]. Elle permet égalemet l'entraînement d'[COLOR_UNIT_TEXT]Eclaireurs[COLOR_REVERT] et de  [COLOR_UNIT_TEXT]Pisteurs[COLOR_REVERT].</French>
+		<French>[COLOR_TECH_TEXT]Chasse[COLOR_REVERT] est une technologie de l'ère préhistorique qui permet aux [COLOR_UNIT_TEXT]Ouvriers[COLOR_REVERT] d'établir des [COLOR_HIGHLIGHT_TEXT]Passages[COLOR_REVERT]. Elle permet égalemet l'entraînement d'[COLOR_UNIT_TEXT]Eclaireurs[COLOR_REVERT] et de [COLOR_UNIT_TEXT]Pisteurs[COLOR_REVERT].</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TRADE</Tag>
@@ -24712,7 +24712,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TRAPPING_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Trapping[COLOR_REVERT] is a prehistoric era technology that allows the construction of a wide variety of [COLOR_BUILDING_TEXT]Animal Traps[COLOR_REVERT] that give [ICON_FOOD][COLOR_GREEN]Food[COLOR_REVERT] and [ICON_GOLD][COLOR_GREEN]Gold[COLOR_REVERT]. It also reveals [COLOR_CYAN]Beavers[COLOR_REVERT].</English>
-		<French>[COLOR_TECH_TEXT]Fabrication de Pièges[COLOR_REVERT] est une technologie de l'ère préhistorique qui permet the construction d'une varité de  [COLOR_BUILDING_TEXT]Pièges à Animaux[COLOR_REVERT] qui donnent de la [ICON_FOOD][COLOR_GREEN]Nourriture[COLOR_REVERT] et de l'[ICON_GOLD][COLOR_GREEN]Or[COLOR_REVERT]. Révèle également les [COLOR_CYAN]Castors[COLOR_REVERT].</French>
+		<French>[COLOR_TECH_TEXT]Fabrication de Pièges[COLOR_REVERT] est une technologie de l'ère préhistorique qui permet the construction d'une variété de [COLOR_BUILDING_TEXT]Pièges à Animaux[COLOR_REVERT] qui donnent de la [ICON_FOOD][COLOR_GREEN]Nourriture[COLOR_REVERT] et de l'[ICON_GOLD][COLOR_GREEN]Or[COLOR_REVERT]. Révèle également les [COLOR_CYAN]Castors[COLOR_REVERT].</French>
 		<Polish>Odsłania na mapie Futro. Udostępnia: Futra i Surowe Skóry. Odblokowuje wiele budynków związanych z surowcami.</Polish>
 	</TEXT>
 	<TEXT>
@@ -24927,7 +24927,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_UNMANNED_AIR_VEHICLES</Tag>
 		<English>Unmanned Air Vehicles</English>
-		<French>Véhicules Aériens sans équipage</French>
+		<French>Avions sans équipage</French>
 		<German>Unbemannte Luftfahrzeuge</German>
 		<Italian>Velivoli senza pilota</Italian>
 		<Spanish>
@@ -24957,7 +24957,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_UNMANNED_NAVAL_VEHICLES</Tag>
 		<English>Unmanned Naval Vehicles</English>
-		<French>Véhicule Navals sans équipage</French>
+		<French>Navires sans équipage</French>
 		<German>Autonome U-Boote</German>
 		<Italian>Veicoli navali senza pilota</Italian>
 		<Spanish>
@@ -25229,7 +25229,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_VIRTUAL_REALITY_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Virtual Reality[COLOR_REVERT] enables [COLOR_HIGHLIGHT_TEXT]Virtual Schools[COLOR_REVERT] civic and allows you to build [COLOR_BUILDING_TEXT]E-Banks[COLOR_REVERT] which increases commerce in the city if the city has electricity.</English>
-		<French>[COLOR_TECH_TEXT]Réalité Virtuelle[COLOR_REVERT] rend actif la doctrine [COLOR_HIGHLIGHT_TEXT]Ecoles virtuelles[COLOR_REVERT]  et vous permet de construire des [COLOR_BUILDING_TEXT]E-Banques[COLOR_REVERT] qui augmentent le commerce dans les villes possédant de l'électricité.</French>
+		<French>[COLOR_TECH_TEXT]Réalité Virtuelle[COLOR_REVERT] rend actif la doctrine [COLOR_HIGHLIGHT_TEXT]Ecoles virtuelles[COLOR_REVERT] et vous permet de construire des [COLOR_BUILDING_TEXT]E-Banques[COLOR_REVERT] qui augmentent le commerce dans les villes possédant de l'électricité.</French>
 		<Spanish>La [COLOR_TECH_TEXT]Realidad virtual[COLOR_REVERT] desbloquea el principio de la [COLOR_HIGHLIGHT_TEXT]Educación virtual[COLOR_REVERT] y te permite construir [COLOR_BUILDING_TEXT]Bancos digitales[COLOR_REVERT], que aumentan el comercio en la ciudad si ésta posee energía.</Spanish>
 	</TEXT>
 	<TEXT>

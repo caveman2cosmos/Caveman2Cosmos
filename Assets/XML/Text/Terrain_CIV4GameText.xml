@@ -822,13 +822,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_BADLAND</Tag>
 		<English>Badland</English>
-		<French>Badland</French>
+		<French>Désert Calcaire</French>
 		<German>Steinwüste</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_JAGGED</Tag>
 		<English>Jagged</English>
-		<French>dentelé</French>
+		<French>Terrain escarpé</French>
 		<German>Gletscher</German>
 	</TEXT>
 	<TEXT>

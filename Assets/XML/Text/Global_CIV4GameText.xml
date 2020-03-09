@@ -92,11 +92,13 @@
 	<TEXT>
 		<Tag>INTERFACE_UNIT_TAB</Tag>
 		<English>Unit Tab</English>
+		<French>Unités</French>
 		<German>Einheiten bauen</German>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_WONDER_TAB</Tag>
 		<English>Wonder Tab</English>
+		<French>Merveilles</French>
 		<German>Wunder bauen</German>
 	</TEXT>
 	<TEXT>
@@ -993,7 +995,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_AIAUTOPLAY_CIV_DIED</Tag>
 		<English>Your civ has died.[NEWLINE]Would you like to lead another civ?[NEWLINE]</English>
-		<French>Votre civ est éteinte.[NEWLINE]Souhaitez-vous diriger une autre civ  [NEWLINE]</French>
+		<French>Votre civ s'est éteinte.[NEWLINE]Souhaitez-vous diriger une autre civ ?[NEWLINE]</French>
 		<German>Ihre Zivilisation ist untergegangen.[NEWLINE]Möchten Sie eine andere Zivilisation führen?[NEWLINE]</German>
 		<Italian>La tua civiltà è scomparsa.[NEWLINE]Vuoi guidarne un'altra?[NEWLINE]</Italian>
 		<Spanish>Tu civilización ha sido derrotada.[NEWLINE]¿Le gustaría dirigir otra civilización?[NEWLINE]</Spanish>
@@ -1554,7 +1556,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BARRACKS_CIVIC_EXTRA_UNHAPPINESS</Tag>
 		<English>[ICON_UNHAPPY] from [LINK=BUILDING_BARRACKS]Barracks[\LINK]</English>
-		<French>[ICON_UNHAPPY]  de [LINK=BUILDING_BARRACKS]Caserne[\LINK]</French>
+		<French>[ICON_UNHAPPY] de [LINK=BUILDING_BARRACKS]Caserne[\LINK]</French>
 		<German>[[ICON_UNHAPPY] von [LINK=BUILDING_BARRACKS]Kasernen[\LINK]</German>
 		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_BARRACKS]Caserma[\LINK]</Italian>
 		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_BARRACKS]Barracones[\LINK]</Spanish>
@@ -1996,7 +1998,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BURGERWORLD_STRATEGY</Tag>
 		<English>Build the [COLOR_BUILDING_TEXT]Burgerworld[COLOR_REVERT] Headquarters to create the [COLOR_HIGHLIGHT_TEXT]Burgerworld Corporation[COLOR_REVERT] which consumes [COLOR_HIGHLIGHT_TEXT]Cow[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Pig[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Potato[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Wheat[COLOR_REVERT] or [COLOR_HIGHLIGHT_TEXT]Coffee[COLOR_REVERT] and adds a culture bonus to every city where the [COLOR_HIGHLIGHT_TEXT]Burgerworld Corporation[COLOR_REVERT] is present. The Headquarters provide gold for each city in the world with a Burgerworld franchise.</English>
-		<French>Construire le Siège de [COLOR_BUILDING_TEXT]MondoBurger[COLOR_REVERT] pour fonder la corporation  [COLOR_HIGHLIGHT_TEXT]MondoBurger Corporation[COLOR_REVERT] qui consomme  [COLOR_HIGHLIGHT_TEXT]vache[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]cochon[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Pommes de terres[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Blé[COLOR_REVERT] ou [COLOR_HIGHLIGHT_TEXT]Café[COLOR_REVERT] et ajoute un bonus de culture à chaque ville où la [COLOR_HIGHLIGHT_TEXT]Corporation MondoBurger[COLOR_REVERT] est présente. Le siège social fournit de l'or pour chaque ville du monde avec une franchise MondoBurger.</French>
+		<French>Construire le Siège de [COLOR_BUILDING_TEXT]MondoBurger[COLOR_REVERT] pour fonder la corporation [COLOR_HIGHLIGHT_TEXT]MondoBurger Corporation[COLOR_REVERT] qui consomme [COLOR_HIGHLIGHT_TEXT]vache[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]cochon[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Pommes de terres[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Blé[COLOR_REVERT] ou [COLOR_HIGHLIGHT_TEXT]Café[COLOR_REVERT] et ajoute un bonus de culture à chaque ville où la [COLOR_HIGHLIGHT_TEXT]Corporation MondoBurger[COLOR_REVERT] est présente. Le siège social fournit de l'or pour chaque ville du monde avec une franchise MondoBurger.</French>
 		<Italian>Costruisci il [COLOR_BUILDING_TEXT]QG di Burgerworld[COLOR_REVERT] per creare la corporazione [COLOR_HIGHLIGHT_TEXT]Burgerworld[COLOR_REVERT] che consuma [COLOR_HIGHLIGHT_TEXT]Mucca[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Maiale[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Patata[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Grano[COLOR_REVERT] o [COLOR_HIGHLIGHT_TEXT]Caffè[COLOR_REVERT] e aggiunge un bonus alla cultura in ogni città dove [COLOR_HIGHLIGHT_TEXT]Burgerworld[COLOR_REVERT] è presente. Il QG fornisce oro per ogni città nel mondo dove Burgerworld è presente.</Italian>
 		<Spanish>Construye la maravilla [COLOR_BUILDING_TEXT]Burgerworld[COLOR_REVERT] para crear la corporación [COLOR_HIGHLIGHT_TEXT]Burgerworld[COLOR_REVERT], que consume [COLOR_HIGHLIGHT_TEXT]Reses[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cerdos[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Patatas[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Trigo[COLOR_REVERT] y [COLOR_HIGHLIGHT_TEXT]Café[COLOR_REVERT] y añade una bonificación a los alimentos en todas las ciudades donde [COLOR_HIGHLIGHT_TEXT]Burgerworld[COLOR_REVERT] esté presente. La sede proporciona oro por cada ciudad del mapa en la que haya una franquicia de Burgerworld.</Spanish>
 		<Polish>Zbuduj siedzibę [COLOR_BUILDING_TEXT]Świata Hamburgerów[COLOR_REVERT]by utworzyć [COLOR_HIGHLIGHT_TEXT]Korporacje Świata Hamburgerów[COLOR_REVERT] która zużywa [COLOR_HIGHLIGHT_TEXT]Krowy[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Świnie[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Ziemniaki[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Pszenicę[COLOR_REVERT] lub [COLOR_HIGHLIGHT_TEXT]Kawę[COLOR_REVERT] i daje bonus do kultury każdemu miastu w którym znajduje się [COLOR_HIGHLIGHT_TEXT]Korporacja Świata Hamburgerów[COLOR_REVERT]. Siedziba zapewnia złoto dla każdego mista w którym znajduje się ta korporacja.</Polish>
@@ -2724,6 +2726,11 @@
 		<Italian>[NEWLINE]Stagnante: %d1/%d2 [ICON_FOOD]</Italian>
 		<Spanish>[NEWLINE]Estancada: %d1/%d2 [ICON_FOOD]</Spanish>
 		<Polish>[NEWLINE]Stagnacja: %d1/%d2 [ICON_FOOD]</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_TAB_CLOSE_TAB</Tag>
+		<English>Close tab</English>
+		<French>Fermer l'onglet</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_FOOD_STARVE</Tag>
@@ -4314,7 +4321,7 @@ Time Frame: 1900 AD - 1990 AD</English>
 		<Tag>TXT_KEY_ERA_CLASSICAL</Tag>
 		<English>Classical</English>
 		<French>
-			<Text>Ere classique</Text>
+			<Text>Classique</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -4410,7 +4417,7 @@ Time Frame: 2300 AD - 3000 AD</English>
 		<Tag>TXT_KEY_ERA_INDUSTRIAL</Tag>
 		<English>Industrial</English>
 		<French>
-			<Text>Ere industrielle</Text>
+			<Text>Industrielle</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -5077,6 +5084,16 @@ Time Frame: 2150 AD - 2300 AD</English>
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Jednostka</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOBJECT_BUILDING</Tag>
+		<English>Building</English>
+		<French>Bâtiment</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOBJECT_WONDER</Tag>
+		<English>Wonders</English>
+		<French>Merveilles</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPEED_BLITZ</Tag>
@@ -8601,14 +8618,14 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_DEFENDER_KNOCKEDBACK</Tag>
 		<English>The %s1_Enemy %s2_EnUName forced our %s3_UnitName to pull back.</English>
-		<French>[NUM2:Un:Une:Des:Des] %s2_EnUName %s1_Enemy [NUM2:a:a:ont:ont] réussi à créer une brèche dans les positions défensives de [NUM1:notre:notre:nos:nos]  %s3_UnitName, [NUM1:l':l':les:les ]obligeant à battre en retraite à découvert.</French>
+		<French>[NUM2:Un:Une:Des:Des] %s2_EnUName %s1_Enemy [NUM2:a:a:ont:ont] réussi à créer une brèche dans les positions défensives de [NUM1:notre:notre:nos:nos] %s3_UnitName, [NUM1:l':l':les:les ]obligeant à battre en retraite à découvert.</French>
 		<Italian>Una terribile unità %s1_Enemy di %s2_EnUName ha lanciato un inferno di fuoco nelle posizioni difensive della nostra unità %s3_UnitName, costringendoci alla ritirata.</Italian>
 		<Polish>Przerażająca jednostka: %s2_EnUName %s1_Enemy zmusiła naszą jednostkę: %s3_UnitName do ucieczki i walki w otwartym polu.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_DEFENDER_KNOCKEDBACK_HIDDEN</Tag>
 		<English>The %s1_Enemy forced our %s2_UnitName to pull back.</English>
-		<French>[NUM2:Un:Une:Des:Des]%s1_Enemy [NUM2:a:a:ont:ont] réussi à créer une brèche dans les positions défensives de [NUM1:notre:notre:nos:nos]  %s3_UnitName, [NUM1:l':l':les:les ]obligeant à battre en retraite à découvert.</French>
+		<French>[NUM2:Un:Une:Des:Des]%s1_Enemy [NUM2:a:a:ont:ont] réussi à créer une brèche dans les positions défensives de [NUM1:notre:notre:nos:nos] %s3_UnitName, [NUM1:l':l':les:les ]obligeant à battre en retraite à découvert.</French>
 		<Italian>Una terribile unità %s1_Enemy di ha lanciato un inferno di fuoco nelle posizioni difensive della nostra unità %s3_UnitName, costringendoci alla ritirata.</Italian>
 		<Polish>Przerażająca jednostka: %s2_EnUName %s1_Enemy zmusiła naszą jednostkę: %s3_UnitName do ucieczki i walki w otwartym polu.</Polish>
 	</TEXT>
@@ -10246,7 +10263,7 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_POS_GOLD_PER_TURN_TD_WFL</Tag>
 		<English>[SPACE][COLOR_POSITIVE_TEXT](%D1/Turn %D2 TD/WFL)[COLOR_REVERT]</English>
-		<French>[SPACE][COLOR_POSITIVE_TEXT](%D1/tour %D2 TD/WFL)[COLOR_REVERT]</French>
+		<French>[SPACE][COLOR_POSITIVE_TEXT](%D1/tour %D2 Diff.Tech)[COLOR_REVERT]</French>
 		<German>[SPACE][COLOR_POSITIVE_TEXT](%D1/Runde %D2 TD/WFL)[COLOR_REVERT]</German>
 		<Italian>[SPACE][COLOR_POSITIVE_TEXT](%D1/Turno %D2 TD/WFL)[COLOR_REVERT]</Italian>
 		<Spanish>[SPACE][COLOR_POSITIVE_TEXT](%D1/turno %D2 TD/WFL)[COLOR_REVERT]</Spanish>
@@ -22890,7 +22907,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	<TEXT>
 		<Tag>TXT_KEY_XP_TOTAL</Tag>
 		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 Total XP.[COLOR_REVERT]</English>
-		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 EXP Total.[COLOR_REVERT]</French>
+		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]Total d'EXP : %D1[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 [NUM1:Erfahrungspunkt:Erfahrungspunkte][COLOR_REVERT]</German>
 		<Polish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 Całkowita ilość XP.[COLOR_REVERT]</Polish>
 	</TEXT>
