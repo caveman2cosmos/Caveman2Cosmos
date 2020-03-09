@@ -100,7 +100,7 @@
 		<German>Wunder bauen</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_ACO_AttackModifiers</Tag>
+		<Tag>TXT_ACO_ATTACKMODIFIERS</Tag>
 		<English>[NEWLINE][COLOR_POSITIVE_TEXT]Attack modifiers:[COLOR_REVERT]</English>
 		<French>[NEWLINE][COLOR_POSITIVE_TEXT]Modificateurs d'Attaque:[COLOR_REVERT]</French>
 		<German>[NEWLINE][COLOR_POSITIVE_TEXT]Angriffsmodifikatoren:[COLOR_REVERT]</German>
@@ -109,7 +109,7 @@
 		<Polish>[NEWLINE][COLOR_POSITIVE_TEXT]Modyfikator Ataku:[COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_ACO_AverageHP</Tag>
+		<Tag>TXT_ACO_AVERAGEHP</Tag>
 		<English>[NEWLINE]Average HP:[SPACE]</English>
 		<French>[NEWLINE]PV Moyen:[SPACE]</French>
 		<German>[NEWLINE]Mittlere TP:[SPACE]</German>
@@ -118,7 +118,7 @@
 		<Polish>[NEWLINE]Średnie HP:[SPACE]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_ACO_BarbFreeWinsLeft</Tag>
+		<Tag>TXT_ACO_BARBFREEWINSLEFT</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Barbarian free wins left:[SPACE][COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Nombre de Victoires automatiques contre les barbares restantes:[SPACE][COLOR_REVERT]</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Übrige sichere Siege gegen Barbaren:[SPACE][COLOR_REVERT]</German>
@@ -127,7 +127,7 @@
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Darmowe zwycięstwa przeciw barbarzyńcom:[SPACE][COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_ACO_Defeat</Tag>
+		<Tag>TXT_ACO_DEFEAT</Tag>
 		<English>[COLOR_NEGATIVE_TEXT]Defeat[COLOR_REVERT]</English>
 		<French>[COLOR_NEGATIVE_TEXT]Défaite[COLOR_REVERT]</French>
 		<German>[COLOR_NEGATIVE_TEXT]Niederlage[COLOR_REVERT]</German>
@@ -145,7 +145,7 @@
 		<Polish>[NEWLINE][COLOR_NEGATIVE_TEXT]Modyfikator Obrony:[COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_ACO_GuaranteedNoDefenderHit</Tag>
+		<Tag>TXT_ACO_GUARANTEEDNODEFENDERHIT</Tag>
 		<English>[NEWLINE][COLOR_HIGHLIGHT_TEXT]Guaranteed! Defender cannot score a hit.[COLOR_REVERT]</English>
 		<French>[NEWLINE][COLOR_HIGHLIGHT_TEXT]C'est garanti! L'unité défensive ne peut porter de coup.[COLOR_REVERT]</French>
 		<German>[NEWLINE][COLOR_HIGHLIGHT_TEXT]Sicher! Der Verteidiger kann keinen Treffer landen.[COLOR_REVERT]</German>
@@ -200,7 +200,7 @@
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Naciśnij SHIFT po więcej informacji[COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_ACO_Retreat</Tag>
+		<Tag>TXT_ACO_RETREAT</Tag>
 		<English>[COLOR_UNIT_TEXT]Retreat[COLOR_REVERT]</English>
 		<French>[COLOR_UNIT_TEXT]Retraite[COLOR_REVERT]</French>
 		<German>[COLOR_UNIT_TEXT]Rückzug[COLOR_REVERT]</German>
@@ -209,7 +209,7 @@
 		<Polish>[COLOR_UNIT_TEXT]Ucieczka[COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_ACO_SurvivalGuaranteed</Tag>
+		<Tag>TXT_ACO_SURVIVALGUARANTEED</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Survival Guaranteed![COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Survie Garantie![COLOR_REVERT]</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Einheit überlebt garantiert![COLOR_REVERT]</German>
@@ -218,7 +218,7 @@
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Gwarantowane przetrwanie![COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_ACO_SurvivalOdds</Tag>
+		<Tag>TXT_ACO_SURVIVALODDS</Tag>
 		<English>Survival odds:[SPACE]</English>
 		<French>Chances de survie:[SPACE]</French>
 		<German>Überlebenschance:[SPACE]</German>
@@ -227,7 +227,7 @@
 		<Polish>Szanse przetrwania:[SPACE]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_ACO_TotalDefenseModifier</Tag>
+		<Tag>TXT_ACO_TOTALDEFENSEMODIFIER</Tag>
 		<English>[NEWLINE]Total defense modifier:[SPACE]</English>
 		<French>[NEWLINE]Modificateur Total de défense:[SPACE]</French>
 		<German>[NEWLINE]Verteidigungsmodifikator (absolut):[SPACE]</German>
@@ -236,7 +236,7 @@
 		<Polish>[NEWLINE]Całkowity modyfikator obrony:[SPACE]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_ACO_Unharmed</Tag>
+		<Tag>TXT_ACO_UNHARMED</Tag>
 		<English>[NEWLINE]Unharmed:[SPACE]</English>
 		<French>[NEWLINE]Indemne:[SPACE]</French>
 		<German>[NEWLINE]Unversehrt:[SPACE]</German>
@@ -271,7 +271,7 @@
 		<Polish>[COLOR_POSITIVE_TEXT]Zwycięstwo[COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_ACO_Withdraw</Tag>
+		<Tag>TXT_ACO_WITHDRAW</Tag>
 		<English>[COLOR_POSITIVE_TEXT]Withdraw[COLOR_REVERT]</English>
 		<French>[COLOR_POSITIVE_TEXT]Se retirer[COLOR_REVERT]</French>
 		<German>[COLOR_POSITIVE_TEXT]Flucht[COLOR_REVERT]</German>
