@@ -1,6 +1,6 @@
 
 from CvPythonExtensions import *
-
+#import BugUtil
 # globals
 GC = CyGlobalContext()
 GAME = GC.getGame()
@@ -23,36 +23,27 @@ class WoodlandCycle:
 
 	def cache(self):
 		MAP = GC.getMap()
-		iNumPlots = MAP.numPlots()
-		iMaxIndex = -1
 		self.plots = plots = []
-		for i in xrange(iNumPlots):
+		for i in xrange(MAP.numPlots()):
 			CyPlot = MAP.plotByIndex(i)
 			if CyPlot.isWater() or CyPlot.isPeak(): continue
 			plots.append(CyPlot)
-			iMaxIndex += 1
-		self.iMaxIndex = iMaxIndex
+		self.iMaxIndex = len(plots)
 		self.iFactorGS = GC.getGameSpeedInfo(GAME.getGameSpeedType()).getGrowthPercent()
 
 	# Called at the beginning of the end of each turn
 	def onBeginGameTurn(self, argsList):
-		iMaxIndex = self.iMaxIndex
-		index = GAME.getSorenRandNum(iMaxIndex, "Random Plot")
-		aList = []
-		iMaxCount = iMaxIndex / 128
-		if iMaxCount < 1:
-			iMaxCount = 1
+		#timer = BugUtil.Timer('WoodlandCycle')
+		plotIndex = [0]*self.iMaxIndex
+		shuffleList(self.iMaxIndex, GAME.getMapRand(), plotIndex)
+		iMaxCount = self.iMaxIndex / 10
 		iCount = 0
 		while iCount < iMaxCount:
 
-			while index in aList:
-				index = GAME.getSorenRandNum(iMaxIndex, "Random Plot")
-
-			aList.append(index)
 			iCount += 1
-			if 32 <= GAME.getSorenRandNum(self.iFactorGS, "New"): continue
+			if 40 <= GAME.getSorenRandNum(self.iFactorGS, "New"): continue
 
-			CyPlot = self.plots[index]
+			CyPlot = self.plots[plotIndex.pop()]
 			iFeature = CyPlot.getFeatureType()
 			if iFeature == -1:
 				if not GAME.getSorenRandNum(10, "New"):
@@ -80,11 +71,13 @@ class WoodlandCycle:
 				CyPlot.setFeatureType(self.FEATURE_FOREST, 0)
 
 			elif iFeature == self.FEATURE_FOREST:
-				if not GAME.getSorenRandNum(5, "Burn"):
+				iRand = GAME.getSorenRandNum(5, "forestChange")
+				if not iRand: 
 					CyPlot.setFeatureType(self.FEATURE_FOREST_BURNT, 0)
-				else:
+				elif iRand < 3:
 					CyPlot.setFeatureType(self.FEATURE_FOREST_ANCIENT, 0)
 
-			elif iFeature == self.FEATURE_FOREST:
-				if not GAME.getSorenRandNum(9, "Burn"):
+			elif iFeature == self.FEATURE_FOREST_ANCIENT:
+				if not GAME.getSorenRandNum(10, "Burn"):
 					CyPlot.setFeatureType(self.FEATURE_FOREST_BURNT, 0)
+		#timer.log()
