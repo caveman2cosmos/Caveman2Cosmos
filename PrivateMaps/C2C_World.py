@@ -250,15 +250,23 @@ class MapConstants:
 		# Hills & Peaks
 		selectionID = MAP.getCustomMapOption(0)
 		if not selectionID:
-			self.HillPercent *= 0.5
-		elif selectionID == 2:
-			self.HillPercent *= 1.5
+			self.HillPercent *= 0.50
+		elif selectionID == 1:
+			self.HillPercent *= 0.75
+		elif selectionID == 3:
+			self.HillPercent *= 1.25
+		elif selectionID == 4:
+			self.HillPercent *= 1.50
 		# Peaks
 		selectionID = MAP.getCustomMapOption(1)
 		if not selectionID:
-			self.PeakPercent *= 0.5
-		elif selectionID == 2:
-			self.PeakPercent *= 1.5
+			self.HillPercent *= 0.50
+		elif selectionID == 1:
+			self.HillPercent *= 0.75
+		elif selectionID == 3:
+			self.HillPercent *= 1.25
+		elif selectionID == 4:
+			self.HillPercent *= 1.50
 		# Landmass Type
 		selectionID = MAP.getCustomMapOption(2)
 		self.bDryland = False
@@ -342,9 +350,15 @@ class MapConstants:
 		if not selectionID:
 			self.BonusBonus = 0.0
 		elif selectionID == 1:
-			self.BonusBonus *= 0.5
-		elif selectionID == 3:
-			self.BonusBonus *= 2.0
+			self.BonusBonus *= 0.50
+		elif selectionID == 2:
+			self.BonusBonus *= 0.75
+		elif selectionID == 4:
+			self.BonusBonus *= 1.25
+		elif selectionID == 5:
+			self.BonusBonus *= 1.50
+		elif selectionID == 6:
+			self.BonusBonus *= 1.75
 		# Pangea Breaker
 		selectionID = MAP.getCustomMapOption(7)
 		if selectionID or self.bDryland or self.bPangea:
@@ -2761,6 +2775,7 @@ class RiverMap:
 				iRestrict = 0
 			else:
 				iRestrict = 1
+			print "	Generating River Map Debug Point 1"
 			loop = -1
 			while True:
 				loop += 1
@@ -2872,6 +2887,7 @@ class RiverMap:
 			yy = y
 			fCarryOver = drainageMap[i]
 			idxPrev = i
+			print "	Generating River Map Debug Point 2"
 			while True:
 				if flow1 == N:
 					yy += 1
@@ -2930,6 +2946,7 @@ class RiverMap:
 		queueList = []
 		while aList:
 			x, y, i, drainage = aList.pop()
+			print "	Generating River Map Debug Point 3"
 			while True:
 				drainageMap[i] += drainage
 				flow1, flow2 = flowMap[i]
@@ -3928,13 +3945,13 @@ class MapOptions:
 	def __init__(self):
 		self.bfirstRun = True
 		self.optionList = [ # Title, Default, Random, Choices)
-							["Hills:",			1,	True, 3],
-							["Peaks:",			1,	True, 3],
+							["Hills:",			1,	True, 5],
+							["Peaks:",			1,	True, 5],
 							["Landform:",		2,	True, 5],
 							["World Wrap:",		0, False, 3],
 							["Start:",			1, False, 2],
 							["Rivers:",			4,	True, 9],
-							["Resources:",		2,	True, 4],
+							["Resources:",		2,	True, 7],
 							["Pangea Breaker:",	0, False, 2]
 						] # When dding/removing options: Update the return of getNumCustomMapOptions().
 
@@ -4041,16 +4058,24 @@ def getCustomMapOptionDescAt(argsList):
 		if selectionID == 0:
 			return "50%"
 		if selectionID == 1:
-			return "100%"
+			return "75%"
 		if selectionID == 2:
+			return "100%"
+		if selectionID == 3:
+			return "125%"
+		if selectionID == 4:
 			return "150%"
 	# Peaks
 	if optionID == 1:
 		if selectionID == 0:
 			return "50%"
 		if selectionID == 1:
-			return "100%"
+			return "75%"
 		if selectionID == 2:
+			return "100%"
+		if selectionID == 3:
+			return "125%"
+		if selectionID == 4:
 			return "150%"
 	# Landform
 	if optionID == 2:
@@ -4107,9 +4132,15 @@ def getCustomMapOptionDescAt(argsList):
 		if selectionID == 1:
 			return "50%"
 		if selectionID == 2:
-			return "100%"
+			return "75%"
 		if selectionID == 3:
-			return "200%"
+			return "100%"
+		if selectionID == 4:
+			return "125%"
+		if selectionID == 5:
+			return "150%"
+		if selectionID == 6:
+			return "175%"
 	# Pangea Breaker
 	if optionID == 7:
 		if selectionID == 0: # On
@@ -4134,15 +4165,23 @@ def beforeInit():
 	if optionList[0][1] == 0:
 		print "	%s			50 percent" % optionList[0][0]
 	elif optionList[0][1] == 1:
-		print "	%s			100 percent" % optionList[0][0]
+		print "	%s			75 percent" % optionList[0][0]
 	elif optionList[0][1] == 2:
+		print "	%s			100 percent" % optionList[0][0]
+	elif optionList[0][1] == 3:
+		print "	%s			125 percent" % optionList[0][0]
+	elif optionList[0][1] == 4:
 		print "	%s			150 percent" % optionList[0][0]
 	# Peaks
 	if optionList[1][1] == 0:
 		print "	%s			50 percent" % optionList[1][0]
 	elif optionList[1][1] == 1:
-		print "	%s			100 percent" % optionList[1][0]
+		print "	%s			75 percent" % optionList[1][0]
 	elif optionList[1][1] == 2:
+		print "	%s			100 percent" % optionList[1][0]
+	elif optionList[1][1] == 3:
+		print "	%s			100 percent" % optionList[1][0]
+	elif optionList[1][1] == 4:
 		print "	%s			150 percent" % optionList[1][0]
 	# Landform
 	if optionList[2][1] == 0:
@@ -4194,9 +4233,15 @@ def beforeInit():
 	elif optionList[6][1] == 1:
 		print "	%s		50 percent" % optionList[6][0]
 	elif optionList[6][1] == 2:
-		print "	%s		100 percent" % optionList[6][0]
+		print "	%s		75 percent" % optionList[6][0]
 	elif optionList[6][1] == 3:
-		print "	%s		200 percent" % optionList[6][0]
+		print "	%s		100 percent" % optionList[6][0]
+	elif optionList[6][1] == 4:
+		print "	%s		125 percent" % optionList[6][0]
+	elif optionList[6][1] == 5:
+		print "	%s		150 percent" % optionList[6][0]
+	elif optionList[6][1] == 6:
+		print "	%s		175 percent" % optionList[6][0]
 	# Pangea Breaker
 	if optionList[2][1] == 0 or optionList[2][1] == 1:
 		print "	%s	Off (Dryland|Pangea)" % optionList[7][0]
