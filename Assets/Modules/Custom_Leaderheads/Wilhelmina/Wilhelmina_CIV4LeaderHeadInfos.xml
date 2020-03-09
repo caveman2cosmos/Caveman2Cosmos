@@ -9,7 +9,7 @@
 	<LeaderHeadInfos>
 		<LeaderHeadInfo>
 			<Type>LEADER_WILHELMINA</Type>
-			<Description>Wilhelmina</Description>
+			<Description>TXT_KEY_LEADER_WILHELMINA</Description>
 			<Civilopedia>TXT_KEY_LEADER_WILHELMINA_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_WILHELMINA</ArtDefineTag>
 			<iWonderConstructRand>20</iWonderConstructRand>

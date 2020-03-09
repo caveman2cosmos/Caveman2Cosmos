@@ -8393,7 +8393,7 @@
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_COLONY_HABITAT_MEDIUM</Type>
 			<Description>TXT_KEY_IMPROVEMENT_COLONY_HABITAT_MEDIUM</Description>
-			<Civilopedia>Habitat (Medium)</Civilopedia>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_COTTAGE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_COLONY_HABITAT_MEDIUM</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
@@ -8516,7 +8516,7 @@
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_COLONY_HABITAT_LARGE</Type>
 			<Description>TXT_KEY_IMPROVEMENT_COLONY_HABITAT_LARGE</Description>
-			<Civilopedia>Habitat (Large)</Civilopedia>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_COTTAGE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_COLONY_HABITAT_LARGE</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
@@ -8602,7 +8602,7 @@
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_COLONY_HABITAT_HUGE</Type>
 			<Description>TXT_KEY_IMPROVEMENT_COLONY_HABITAT_HUGE</Description>
-			<Civilopedia>Habitat Compound</Civilopedia>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_COTTAGE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_COLONY_HABITAT_HUGE</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>

@@ -252,4 +252,8 @@
 		</Spanish>
 		<Polish>Religia (Asatru)</Polish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_MJOLNIR</Tag>
+		<English>Mojlnir</English>
+	</TEXT>
 </Civ4GameText>

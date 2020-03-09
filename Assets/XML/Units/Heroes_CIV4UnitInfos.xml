@@ -15415,7 +15415,7 @@
 			<Type>UNIT_SPARTACUS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<UniqueNames>
-				<UniqueName>Spartacus</UniqueName>
+				<UniqueName>TXT_KEY_UNIT_SPARTACUS</UniqueName>
 			</UniqueNames>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HERO</Combat>
