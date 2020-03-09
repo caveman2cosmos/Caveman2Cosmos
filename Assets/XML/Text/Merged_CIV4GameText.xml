@@ -1,108 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GREAT_BATH</Tag>
-		<English>Great Bath of Mohenjo-daro</English>
-		<French>Le Grand Bain de Mohenjo-daro</French>
-		<Polish>Wielka Łaźnia w Mohenjo-daro</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GREAT_BATH_PEDIA</Tag>
-		<English>The "great bath" is without doubt the earliest public water tank in the ancient world. The tank itself measures approximately 12 meters north-south and 7 meters wide, with a maximum depth of 2.4 meters. Two wide staircases lead down into the tank from the north and south and small sockets at the edges of the stairs are thought to have held wooden planks or treads. At the foot of the stairs is a small ledge with a brick edging that extends the entire width of the pool. People coming down the stairs could move along this ledge without actually stepping into the pool itself.[NEWLINE][NEWLINE][TAB] The floor of the tank is water tight due to finely fitted bricks laid on edge with gypsum plaster and the side walls were constructed in a similar manner. To make the tank even more water tight, a thick layer of bitumen (natural tar) was laid along the sides of the tank and presumably also beneath the floor. Brick colonnades were discovered on the eastern, northern and southern edges. The preserved columns have stepped edges that may have held wooden screens or window frames. Two large doors lead into the complex from the south and other access was from the north and east. A series of rooms are located along the eastern edge of the building and in one room is a well that may have supplied some of the water needed to fill the tank. Rainwater also may have been collected for this purposes, but no inlet drains have been found.[NEWLINE][NEWLINE][TAB] The floor of the tank is water tight due to finely fitted bricks laid on edge with gypsum plaster and the side walls were constructed in a similar manner. To make the tank even more water tight, a thick layer of bitumen (natural tar) was laid along the sides of the tank and presumably also beneath the floor. Brick colonnades were discovered on the eastern, northern and southern edges. The preserved columns have stepped edges that may have held wooden screens or window frames. Two large doors lead into the complex from the south and other access was from the north and east. A series of rooms are located along the eastern edge of the building and in one room is a well that may have supplied some of the water needed to fill the tank. Rainwater also may have been collected for this purposes, but no inlet drains have been found.[NEWLINE][NEWLINE][TAB] Most scholars agree that this tank would have been used for special religious functions where water was used to purify and renew the well being  of the bathers.</English>
-		<French>The "great bath" is without doubt the earliest public water tank in the ancient world. The tank itself measures approximately 12 meters north-south and 7 meters wide, with a maximum depth of 2.4 meters. Two wide staircases lead down into the tank from the north and south and small sockets at the edges du stairs are thought to have held wooden planks or treads. At the foot du stairs is a small ledge with a brick edging that extends the entire width du pool. People coming down the stairs could move along this ledge without actually stepping into the pool itself.[NEWLINE][NEWLINE][TAB] The floor du tank is water tight due to finely fitted bricks laid on edge with gypsum plaster and the side walls were constructed in a similar manner. To make the tank even more water tight, a thick layer of bitumen (natural tar) was laid along the sides du tank and presumably also beneath the floor. Brick colonnades were discovered on the eastern, northern and southern edges. The preserved columns have stepped edges that may have held wooden screens or window frames. Two large doors lead into the complex from the south and other access was from the north and east. A series of rooms are located along the eastern edge du building and in one room is a well that may have supplied some du water needed to fill the tank. Rainwater also may have been collected for this purposes, but no inlet drains have been found.[NEWLINE][NEWLINE][TAB] The floor du tank is water tight due to finely fitted bricks laid on edge with gypsum plaster and the side walls were constructed in a similar manner. To make the tank even more water tight, a thick layer of bitumen (natural tar) was laid along the sides du tank and presumably also beneath the floor. Brick colonnades were discovered on the eastern, northern and southern edges. The preserved columns have stepped edges that may have held wooden screens or window frames. Two large doors lead into the complex from the south and other access was from the north and east. A series of rooms are located along the eastern edge du building and in one room is a well that may have supplied some du water needed to fill the tank. Rainwater also may have been collected for this purposes, but no inlet drains have been found.[NEWLINE][NEWLINE][TAB] Most scholars agree that this tank would have been used for special religious functions where water was used to purify and renew the well being  du bathers.</French>
-		<Polish>Wielka Łaźnia, położona w obrębie cytadeli miejskiej. Był to kompleks wielu komnat i ośmiu łazienek usytuowanych wokół basenu o wymiarach 12 x 7 x 2,5 metra. Na krótszych bokach basenu znajdowały się schody ułatwiające wejście i wyjście z basenu. Woda napływała z wykładanej cegłami studni. Dno basenu było pochyłe i strome.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GREAT_BATH_STRATEGY</Tag>
-		<English>The [COLOR_BUILDING_TEXT]Great Bath[COLOR_REVERT] turns your city plot into a source of fresh water and grants +1 population to all newly built cities until the wonder obsoletes. The fresh water bonus does not obsolete.</English>
-		<French>Le [COLOR_BUILDING_TEXT]Grand Bain[COLOR_REVERT] transforme votre ville en source d'eau douce, et garanti à toutes les nouvelles Villes +1 de population jusqu'à ce qu'il soit obsolète. La source d'eau douce n'est jamais obsolète.</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GREAT_BATH_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Creates a Source of Fresh Water. New Cities Built with +1 Population. Fresh Water Bonus does not Obsolete[COLOR_REVERT]</English>
-		<French>[ICON_BULLET]Créé une source d'eau douce[NEWLINE][ICON_BULLET]Les Nouvelles Villes construites ont +1 Population[NEWLINE][COLOR_NEGATIVE_TEXT]Le Bonus d'eau douce n'est jamais obsolète[COLOR_REVERT]</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HIPOCRATIC_OATH</Tag>
-		<English>Hippocratic Oath</English>
-		<French>Serment d'Hippocrate</French>
-		<Polish>Przysięga Hipokratesa</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HIPOCRATIC_OATH_PEDIA</Tag>
-		<English>The Hippocratic Oath is an oath traditionally taken by physicians pertaining to the ethical practice of medicine. It is widely believed that the oath was written by Hippocrates, the father of western medicine, in the 4th century BC.[PARAGRAPH:2]Hippokrates was an ancient Greek physician of the Age of Pericles, and was considered one of the most outstanding figures in the history of medicine. He is referred to as the "father of medicine".</English>
-		<French>The Hippocratic Oath is an oath traditionally taken by physicians pertaining to the ethical practice of medicine. It is widely believed that the oath was written by Hippocrates, the father of western medicine, in the 4th century BC.[PARAGRAPH:2]Hippokrates was an ancient Greek physician du Age of Pericles, and was considered one du most outstanding figures in the history of medicine. He is referred to as the "father of medicine".</French>
-		<Polish>Przysięga Hipokratesa - składana przez lekarzy w starożytności, zawierała podstawy dzisiejszej etyki lekarskiej. Wbrew powszechnej opinii jej autorem nie był sam Hipokrates, lecz jego uczniowie, należący do kręgupitagorejczyków (stąd między innymi niechęć do leczenia operacyjnego). Zaś samo sformułowanie podstawowych zasad etycznych zawodu lekarza wielu przypisuje Imhotepowi.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HIPOCRATIC_OATH_STRATEGY</Tag>
-		<English>The [COLOR_BUILDING_TEXT]Hippocratic Oath[COLOR_REVERT] provides a free  [COLOR_BUILDING_TEXT]healer's hut[COLOR_REVERT] in all your cities.</English>
-		<French>Le [COLOR_BUILDING_TEXT]Serment d'Hippocrate[COLOR_REVERT] procure une [COLOR_BUILDING_TEXT]cabane de guérisseur [COLOR_REVERT] dans chacune de vos villes.</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GREAT_JAGUAR_TEMPLE</Tag>
-		<English>Temple of Ah Cacao</English>
-		<French>Temple de Ah Cacao</French>
-		<Italian>
-			<Text>Tempio di Ah Cacao</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Świątynia Ah Cacao</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GREAT_JAGUAR_TEMPLE_PEDIA</Tag>
-		<English>Tikal (or Tik'al, according to the more current orthography) is the largest of the ancient ruined cities of the Mayan civilization. It is located in the El Petén department of Guatemala. Now part of Guatemala's Tikal National Park, it is a UNESCO World Heritage Site and a popular tourist spot. The closest large towns are Flores and Santa Elena, approximately 64 kilometres (40 mi) by road to the southwest.[NEWLINE][NEWLINE][TAB]Tikal Temple I is the designation given to one of the major structures at Tikal, one of the largest cities and archaeological sites of the pre-Columbian Maya civilization in Mesoamerica, located in the Petén Basin region of northern Guatemala. Informally also known as the Temple of the Giant Jaguar or Temple of Ah Cacao, Temple I is a typically Petén-styled limestone stepped pyramid structure which is dated to approximately 730 CE.[NEWLINE][NEWLINE][TAB]The structure is associated with Jasaw Chan K'awiil I, a Classic-era ruler of the polity based at Tikal, who ruled from 682-784. The tomb of this ruler has been located by archaeologists within the structure, although it is presently unclear whether it was built for this specific purpose, or this use was a later adaptation.[NEWLINE][NEWLINE][TAB]Temple I reaches a height of approximately 44 m (144.4 ft) over a series of nine steep levels, from a base measuring only 30 by 34 m (98.4 by 111.5 ft). The nine levels may be a reference to the nine "Lords of the Night" in Maya mythology and Initial Series inscriptions. The main chamber of the temple depicts Kukulcan, a feathered serpent god.[NEWLINE][NEWLINE]Situated at the heart of a World Heritage Site, the temple is surmounted by a typical roofcomb, a distinctive Maya architectural feature.</English>
-		<French>Tikal (or Tik'al, according to the more current orthography) is the largest du ancient ruined cities du Mayan civilization. It is located in the El Petén department of Guatemala. Now part of Guatemala's Tikal National Park, it is a UNESCO World Heritage Site et un popular tourist spot. The closest large towns are Flores and Santa Elena, approximately 64 kilometres (40 mi) by road to the southwest.[NEWLINE][NEWLINE][TAB]Tikal Temple I is the designation given to one du major structures at Tikal, one du largest cities and archaeological sites du pre-Columbian Maya civilization in Mesoamerica, located in the Petén Basin region of northern Guatemala. Informally also known as the Temple du Giant Jaguar or Temple of Ah Cacao, Temple I is a typically Petén-styled limestone stepped pyramid structure which is dated to approximately 730 CE.[NEWLINE][NEWLINE][TAB]The structure is associated with Jasaw Chan K'awiil I, a Classic-era ruler du polity based at Tikal, who ruled from 682-784. The tomb of this ruler has been located by archaeologists within the structure, although it is presently unclear whether it was built for this specific purpose, or this use was a later adaptation.[NEWLINE][NEWLINE][TAB]Temple I reaches a height of approximately 44 m (144.4 ft) over a series of nine steep levels, from a base measuring only 30 by 34 m (98.4 by 111.5 ft). The nine levels may be a reference to the nine "Lords du Night" in Maya mythology and Initial Series inscriptions. The main chamber du temple depicts Kukulcan, a feathered serpent god.[NEWLINE][NEWLINE]Situated at the heart of a World Heritage Site, the temple is surmounted by a typical roofcomb, a distinctive Maya architectural feature.</French>
-		<Italian>Tikal (o Tik'al, a seconda dell'ortografia più comune) è la più grande rovina della civiltà Maya. Si trova nel dipartimento di El Petén, in Guatemala. Ora parte del Guatemala's Tikal National Park, è un sito dell'UNESCO dichiarato patrimonio dell'umanità e una grande attrazione turistica. e città più vicine sono Flores e Santa Elena, circa 64 km a sud-ovest.[NEWLINE][NEWLINE][TAB]Tikal Temple I è la designazione inglese di una delle strutture più grandi di Tikal, una delle città più grandi costruite dalla civiltà pre-colombiana dei maya nell'America Centrale, situata nella regione del Bacino di Petén nel nord del Guatemala. Conosciuto anche come tempio del Grande Giaguaro o Tempio di Ah Cacao, Temple I ha uno stile tipico della regione, con una struttura a piramide in pietra risalente circa al 730 d.C..[NEWLINE][NEWLINE][TAB]La struttura è associata a Jasaw Chan K'awiil I, un governatore dell'era classica che era stanziato a Tikal, che goernò dal 682 al 784. La tomba di questo governatore è stata localizzata dagli archeologi all'interno della struttura, anche se al momento non è chiaro de la piramide fu costruita per questo scopo preciso o se questo uso sia stato un adattamento successivo.[NEWLINE][NEWLINE][TAB]Temple I ha un'altezza di circa 44 m su una serie di nove livelli, da una base di misure 30x34 m. I nove livelli potrebbero essere un riferimento ai nove "Signori della notte" della mitologia Maya mythology e alle iscrizioni delle Serie iniziali. La camera principale del tempio rappresenta Kukulcan, il dio-serpente piumato.[NEWLINE][NEWLINE]Al centro del sito UNESCO, il tempio è sormontato da un elemento architettonico tipico della cultura maya.</Italian>
-		<Polish>Świątynia Ah Cacao to kompleks światynny Majów.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GREAT_JAGUAR_TEMPLE_STRATEGY</Tag>
-		<English>The [COLOR_BUILDING_TEXT]Temple of Ah Cacao[COLOR_REVERT] grants your units a 20% chance to fully heal after a combat victory.</English>
-		<French>Le [COLOR_BUILDING_TEXT]Temple de Ah Cacao[COLOR_REVERT] permet à vos unités de se soigner complètement après une victoire (20% de chances).</French>
-		<Italian>Il [COLOR_BUILDING_TEXT]Tempio di Ah Cacao[COLOR_REVERT] fornisce alle tue unità il 20% di chance di guarire dopo una vittoria in combattimento.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GREAT_JAGUAR_TEMPLE_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]20% Chance for Units to Heal after Combat Victory</English>
-		<French>[ICON_BULLET]20% de Chances de se soigner après une victoire</French>
-		<Italian>[ICON_BULLET]20% Chance di guarire per le unità dopo le vittorie in combattimento</Italian>
-	</TEXT>
-	<!-- Library of Nineveh-->
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NINEVEH</Tag>
-		<English>Library of Nineveh</English>
-		<French>La Bibliothèque de Ninive</French>
-		<Polish>Biblioteka Aszurbanipala</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NINEVEH_PEDIA</Tag>
-		<English>The Royal Library of Ashurbanipal was discovered in a palace in ancient Nineveh, capital of Assyria, in northern Mesopotamia (modern day Iraq).  The of King Ashurbanipal (668 - 627 BC) was the last great king of the Neo-Assyrian Empire and the palace is the second most important library discovery of the ancient world.  The library is a collection of thousands of clay tablets and fragments containing texts of all kinds from the 7th century BC. Among its holdings was the famous Epic of Gilgamesh. Due to the sloppy handling of the original material much of the library is irreparably jumbled, making it impossible for scholars to discern and reconstruct many of the original texts, although some have survived intact.</English>
-		<French>La Bibliothèque royale d'Assurbanipal a été découverte dans un palais de l'ancienne Ninive, capitale de l'Assyrie, dans le nord de la Mésopotamie (l'Irak de jour). Le roi Assurbanipal (668 à 627 avant JC) fut le dernier grand roi de l'empire néo-assyrien et le palais constitue la deuxième découverte libraire la plus importante du monde antique. La bibliothèque est une collection de milliers de tablettes d'argile et de fragments contenant des textes de toutes sortes à partir de la 7ème siècle avant JC. Parmi ses artefacts se trouvait la célèbre épopée de Gilgamesh. En raison de la manipulation bâclée du matériau d'origine une grande partie de la bibliothèque est irrémédiablement brouillée, ce qui les chercheurs incapables de discerner et de reconstruire la plupart des textes originaux, bien que certains aient survécu presque en intégralité.</French>
-		<Polish>Biblioteka Aszurbanipala w Niniwie - założona przez asyryjskiegokróla Aszurbanipala w połowie VII w. p.n.e. Została odkryta w dwóch fazach w czasie prac wykopaliskowych prowadzonych od 1849 roku przez Austena H. Layarda w Niniwie na wzgórzu Kujundżyk, które kryło w sobie pozostałości pałaców: Sennacheryba i Aszurbanipala. Kolekcja zawiera łącznie ok. 20 000 glinianych tabliczek z obydwu pałaców. W wyniku zaniedbania pracowników Muzeum Brytyjskiegotabliczki odkryte w pałacu Sanheriba uległy wymieszaniu ze zbiorem odkrytym w 1852 w pałacu Aszurbanipala przez Hormuzda Rassama, dlatego nie można przyporządkować poszczególnych tabliczek do określonej biblioteki pałacowej któregoś z obu władców.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NINEVEH_STRATEGY</Tag>
-		<English>The [COLOR_BUILDING_TEXT]The Library of Nineveh[COLOR_REVERT] is a World Wonder that provides both a FREE [LINK=BUILDING_TABLET_MAKER]Tablet Maker[\LINK] and +5 percent research in every city.  Additionally, the city, in which it is produced receives a 15% increase in research and is more likely to produce a Great Scientist.</English>
-		<French>[COLOR_BUILDING_TEXT]La Bibliothèque de Ninive[COLOR_REVERT]est une merveille du monde qui offre à la fois un [LINK = BUILDING_TABLET_MAKER] Fabricant de Tablettes [\ LINK] GRATUIT et +5 pourcent de recherche dans chaque ville. En outre, la ville dans laquelle elle est construite reçoit une augmentation de 15% dans la recherche et est plus susceptible de produire un Savant Illustre.</French>
-	</TEXT>
-	<!-- End Library of Nineveh -->
-	<TEXT>
-		<Tag>TXT_REAL_FAVORITE_RELIGION_HEADER</Tag>
-		<English>A new mysticism</English>
-		<French>Un nouveau Mystique</French>
-		<German>Ein neuer Kult</German>
-		<Italian>Un nuovo culto</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_REAL_FAVORITE_RELIGION_TEXT</Tag>
-		<English>A wandering man has arrived in your capital, and he's talking about a religion, founded in the recent years in a far away land. The new religion is called %s1, and the wise man is so amazed by this religion, that he has decided to found a new school in your city to teach it to your citizens.</English>
-		<French>Un vagabond est arrivé dans votre capitale, et il parle d'une religion, fondée récemment dans un pays lointain. La découverte de cette nouvelle religion appelée %s1 a convaincu cet homme de fonder une école dans votre ville, pour y enseigner les préceptes à vos cityoens.</French>
-		<German>Ein Reisender hat deinen Palast erreicht, und er erzählt von einer Religion, die in den letzten Jahren in einem fernen Land begründet wurde. Die neue Religion wird %s1 genannt, und der weise Mann ist so sehr von ihr begeistert, dass er beschlossen hat, eine neue Schule in euerer Stadt zu errichten, um eure Bürger diese Religion zu lehren.</German>
-		<Italian>Un uomo è arrivato nella tua capitale e sta parlando di una nuova religione, fondata di recente in una terra lontana. La nuova religione è chiamata %s1 e l'uomo è cos' ammirato da questa religione che ha deciso di fondare una scuola nella tua città per diffonderla tra i tuoi cittadini.</Italian>
-	</TEXT>
 	<!-- Strategic Grain Reserve Wonder -->
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STRATEGIC_GRAIN_RESERVE</Tag>
@@ -279,7 +177,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BRIGADE_PIRON_STRATEGY</Tag>
 		<English>The Brigade Piron is the unique Trench Infantry unit of the Belgian culture. It starts with the promotions Trench I and City Raider I and II.</English>
-		<French>The Brigade Piron is the unique Trench Infantry unit du Belgian culture. It starts with the promotions Trench I and City Raider I and II.</French>
 		<Italian>La Brigata Piron è la fanteria da trincea unica della cultura belga; comincia con le promozioni Trincea I, Razziatore I e Razziatore II.</Italian>
 	</TEXT>
 	<TEXT>
@@ -899,7 +796,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_UNMANNED_HELICOPTER_PEDIA</Tag>
 		<English>The Drone Helicopter is a more maneuvrable - and more intelligent - version of the fixed-wing drones that you may have heard about...</English>
-		<French>The Drone Helicopter is a more maneuvrable - and more intelligent - version du fixed-wing drones that you may have heard about...</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DROID_HELICOPTER</Tag>
@@ -909,50 +805,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DROID_HELICOPTER_STRATEGY</Tag>
 		<English>Another upgrade of the 'drone' aircraft - this rotary-winged machine has all the tactical nous of a true robot.</English>
-		<French>Another upgrade du 'drone' aircraft - this rotary-winged machine has all the tactical nous of a true robot.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DROID_HELICOPTER_PEDIA</Tag>
 		<English>Those jaded Drone Copters are really showing their age.  Well never mind, because here's a smarter, fully robotic helicopter to replace them with.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ARCHIVES</Tag>
-		<English>National Archives</English>
-		<French>Les Archives Nationales</French>
-		<German>Nationalarchiv</German>
-		<Polish>Archiwum Narodowe</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ARCHIVES_PEDIA</Tag>
-		<English>The National Archives is a repository that preserves important documents and historical records.</English>
-		<Polish>Archiwum - gromadzony zbiór, miejsce gromadzenia tego zbioru, w pewnych znaczeniach również instytucja zajmująca się gromadzeniem. Archiwizacja jest to proces tworzenia, zabezpieczania i klasyfikowania zbioru</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ARCHIVES_STRATEGY</Tag>
-		<English>The [COLOR_BUILDING_TEXT]The National Archives[COLOR_REVERT] is a National Wonder that increases research by +15 percent for the city in which it is produced. It also provides a free scientist and increases the amount of scientists the city may have by 1.  The city, in which it is produced, is also more likely to produce a Great Scientist.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ARK</Tag>
-		<English>Ark of the Covenant</English>
-		<French>L'Arche des Covenants</French>
-		<German>Bundeslade</German>
-		<Polish>Arka Przymierza</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ARK_PEDIA</Tag>
-		<English>The Ark of the Covenant was a vessel described in the Bible as containing the Tablets of Stone on which the Ten Commandments were inscribed, along with Aaron's rod and manna.  The Ark was built at the command of God, in accord with the prophetic vision of Moses on Mount Sinai. God communicated with Moses, from between the two cherubim, on the Ark's cover.  The Ark was carried by the priests some 2,000 cubits in advance of the Israelite people and their army, or host. When the Ark was borne by priests into the bed of the Jordan, water in the river separated, opening a pathway for the entire host to pass through. The city of Jericho was taken with no more than a shout after the Ark of Covenant was paraded for seven days around its wall by seven priests sounding seven trumpets of rams' horns. When carried, the Ark was always wrapped in a veil, in tachash skins and a blue cloth, and was carefully concealed, even from the eyes of the priests who carried it.</English>
-		<French>The Ark du Covenant was a vessel described in the Bible as containing the Tablets of Stone on which the Ten Commandments were inscribed, along with Aaron's rod and manna.  The Ark was built at the command of God, in accord with the prophetic vision of Moses on Mount Sinai. God communicated with Moses, from between the two cherubim, on the Ark's cover.  The Ark was carried by the priests some 2,000 cubits in advance du Israelite people and their army, or host. When the Ark was borne by priests into the bed du Jordan, water in the river separated, opening a pathway for the entire host to pass through. The city of Jericho was taken with no more than a shout after the Ark of Covenant was paraded for seven days around its wall by seven priests sounding seven trumpets of rams' horns. When carried, the Ark was always wrapped in a veil, in tachash skins et un blue cloth, and was carefully concealed, even from the eyes du priests who carried it.</French>
-		<Polish>Arka Przymierza - obiekt będący dla Żydów jednym z elementów ich przymierza z BogiemJahwe. Według hebrajskiej Biblii, do momentu wybudowania pierwszej świątyni przez króla Salomona arka była przewożona na specjalnym wozie z zasłonami podczas wszystkich kampanii wojskowych prowadzonych przez Izraelitów. Stanowiła ona centrum kultu w czasie wędrówki Izraelitów do ziemi Kanaan. Wierzono, że armia posiadająca arkę jest niezwyciężona. W czasie oblężenia Jerycha obnoszono ją wokół murów miasta. Później przechowywana była w Miejscu Świętym Przybytku Mojżeszowego w Szilo. Następnie zdobyć ją mieli Filistyni lecz, jak twierdzi Biblia, zwrócili, widząc w niej przyczynę swoich klęsk. Król Dawid miał przenieść ją na wzgórze Syjon w Jerozolimie, a Salomon po wybudowaniu świątyni do specjalnego pomieszczenia, do którego nie miał wstępu nikt prócz arcykapłana.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ARK_STRATEGY</Tag>
-		<English>The [COLOR_BUILDING_TEXT]Ark of the Covenant[COLOR_REVERT] has no unhappiness in the city in which it is built and provides +1 happines in all cities.  It also provides +1 gold from ALL state religious buildings and it increases it's city's odds of generating a Great Prophet.</English>
-		<French>The [COLOR_BUILDING_TEXT]Ark du Covenant[COLOR_REVERT] has no unhappiness in the city in which it is built and provides +1 happines in all cities.  It also provides +1 gold from ALL state religious buildings and it increases it's city's odds of generating a Great Prophet.</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_EARLY_QUARRY</Tag>
-		<English>Build [LINK=IMPROVEMENT_EARLY_QUARRY]Early Quarry[\LINK]</English>
-		<French>Construire une [COLOR_BUILDING_TEXT]carrière antique[COLOR_REVERT]</French>
-		<Polish>Zbuduj Wczesny Kamieniołom</Polish>
 	</TEXT>
 </Civ4GameText>

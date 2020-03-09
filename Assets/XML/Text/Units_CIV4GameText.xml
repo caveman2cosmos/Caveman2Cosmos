@@ -23083,6 +23083,10 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>A daoshi, translated as Taoist priest, Taoist monk, Taoist master or Professional Taoist, is a priest in Taoism. Along with Han Chinese priests, there are also many practicing ethnic minority priests in China. Some orders are monastic, while the majority are not.</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_TARGETS_UNIT_FIRST</Tag>
+		<English>[ICON_BULLET]Targets any %s1_unit_list first in combat. If Assassination is possible, these units are also the list of units that may be targeted for assassination.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_TARKAN</Tag>
 		<English>Tarkan</English>
 	</TEXT>
@@ -23676,6 +23680,14 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Karawana</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TRADE_MISSION</Tag>
+		<English>[ICON_BULLET]Can Conduct a Trade Mission (Base: %d1, Mult: x%d2)</English>
+		<French>[ICON_BULLET]Peut effectuer une mission commerciale (Base: %d1, Mult: x%d2)</French>
+		<German>[ICON_BULLET]Kann eine Handelsmission ausführen (Base: %d1, Mult: x%d2)</German>
+		<Italian>[ICON_BULLET]Può eseguire una missione commerciale (Base: %d1, Mult: x%d2)</Italian>
+		<Spanish>[ICON_BULLET]Puede realizar una misión comercial (Base: %d1, Mult: x%d2)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRADE_SUPPLY_TRAIN</Tag>
