@@ -6244,7 +6244,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 							int iWithdrawOdds = 100 - pDefender->pursuitVSOpponentProbTotal(pAttacker);
 							szTempBuffer.Format(L": " SETCOLR L"%.2f%% " L"%d" ENDCOLR,
 								TEXT_COLOR("COLOR_POSITIVE_TEXT"), 100.0f * AttackerKillOdds, iExperience);
-							szString.append(gDLL->getText("TXT_ACO_Victory"));
+							szString.append(gDLL->getText("TXT_ACO_VICTORY"));
 							szString.append(szTempBuffer.GetCString());
 							if (iAttackerExperienceModifier > 0)
 							{
@@ -6763,7 +6763,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 								TEXT_COLOR("COLOR_POSITIVE_TEXT"), iNeededRoundsAttacker, TEXT_COLOR("COLOR_NEGATIVE_TEXT"),
 								iNeededRoundsDefender);
 							szString.append(szTempBuffer.GetCString());
-							szString.append(gDLL->getText("TXT_ACO_HitsAt"));
+							szString.append(gDLL->getText("TXT_ACO_HITSAT"));
 							szTempBuffer.Format(SETCOLR L" %.1f%%" ENDCOLR,
 								TEXT_COLOR("COLOR_POSITIVE_TEXT"), float(iAttackerOdds) * 100.0f / float(GC.getDefineINT("COMBAT_DIE_SIDES")));
 							szString.append(szTempBuffer.GetCString());
@@ -6880,14 +6880,14 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 						{
 							szTempBuffer.Format(L"%.2f", AttXP);
 							szTempBuffer2.Format(L"%.2f", DefXP);
-							szString.append(gDLL->getText("TXT_ACO_UnroundedXP"));
+							szString.append(gDLL->getText("TXT_ACO_UNROUNDEDXP"));
 							szString.append(gDLL->getText("TXT_ACO_VS", szTempBuffer.GetCString(), szTempBuffer2.GetCString()));
 						}
 
 						szString.append(NEWLINE);
 						if (iView & getBugOptionINT("ACO__ShowShiftInstructions", 1, "ACO_SHOW_SHIFT_INSTRUCTIONS"))
 						{
-							szString.append(gDLL->getText("TXT_ACO_PressSHIFT"));
+							szString.append(gDLL->getText("TXT_ACO_PRESSSHIFT"));
 							szString.append(NEWLINE);
 						}
 						//TB Display Mod begin
@@ -7008,7 +7008,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 							//if attacker uninjured strength is not the same as base strength (i.e. modifiers are in effect) or first strikes exist, then
 							if (getBugOptionBOOL("ACO__ShowModifierLabels", false, "ACO_SHOW_MODIFIER_LABELS"))
 							{
-								szString.append(gDLL->getText("TXT_ACO_DefenseModifiers"));
+								szString.append(gDLL->getText("TXT_ACO_DEFENSEMODIFIERS"));
 							}
 						}
 

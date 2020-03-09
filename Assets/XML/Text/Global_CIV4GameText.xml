@@ -136,7 +136,7 @@
 		<Polish>[COLOR_NEGATIVE_TEXT]Przegrana[COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_ACO_DefenseModifiers</Tag>
+		<Tag>TXT_ACO_DEFENSEMODIFIERS</Tag>
 		<English>[NEWLINE][COLOR_NEGATIVE_TEXT]Defense modifiers:[COLOR_REVERT]</English>
 		<French>[NEWLINE][COLOR_NEGATIVE_TEXT]Modificateurs de Défense:[COLOR_REVERT]</French>
 		<German>[NEWLINE][COLOR_NEGATIVE_TEXT]Verteidigungsmodifikatoren:[COLOR_REVERT]</German>
@@ -170,7 +170,7 @@
 		<Spanish>[COLOR_UNIT_TEXT]PG[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_ACO_HitsAt</Tag>
+		<Tag>TXT_ACO_HITSAT</Tag>
 		<English>hits at</English>
 		<French>frappe à</French>
 		<German>trifft</German>
@@ -191,7 +191,7 @@
 		<English>×</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_ACO_PressSHIFT</Tag>
+		<Tag>TXT_ACO_PRESSSHIFT</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Press SHIFT for more detail[COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Appuyez sur MAJ pour plus de détails[COLOR_REVERT]</French>
 		<German>[COLOR_HIGHLIGHT_TEXT][UMSCHALTEN] drücken für mehr Einzelheiten[COLOR_REVERT]</German>
@@ -245,7 +245,7 @@
 		<Polish>[NEWLINE]Brak obrażeń:[SPACE]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_ACO_UnroundedXP</Tag>
+		<Tag>TXT_ACO_UNROUNDEDXP</Tag>
 		<English>[NEWLINE]Unrounded XP:[SPACE]</English>
 		<French>[NEWLINE]EXP Non-arrondi:[SPACE]</French>
 		<German>[NEWLINE]Ungerundete EP:[SPACE]</German>
@@ -262,7 +262,7 @@
 		<Polish>[COLOR_POSITIVE_TEXT]%s1[COLOR_REVERT] przeciw [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_ACO_Victory</Tag>
+		<Tag>TXT_ACO_VICTORY</Tag>
 		<English>[COLOR_POSITIVE_TEXT]Victory[COLOR_REVERT]</English>
 		<French>[COLOR_POSITIVE_TEXT]Victoire[COLOR_REVERT]</French>
 		<German>[COLOR_POSITIVE_TEXT]Sieg[COLOR_REVERT]</German>
