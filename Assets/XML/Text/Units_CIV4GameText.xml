@@ -459,6 +459,26 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_AGRIANIAN_AXEMAN</Tag>
+		<English>Agrianian Axeman</English>
+		<French>Guerrier avec hache Agrianien</French>
+		<Italian>
+			<Text>Guerriero con ascia Agriano</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_AGRIANIAN_AXEMAN_PEDIA</Tag>
+		<English>The Agrianes were a Thracian tribe.  They flourished between the late 6th and mid-2nd century BC.  They were loyal allies to many larger neighbours in their time, including Epirus.  They formed an elite axe unit in support of their allies, and were specialists in the difficult barren/rocky terrain of what is today northern Greece.</English>
+		<Italian>Gli Agriani erano una tribù della Tracia; fiorirono tra la fine del 6° secolo e la metà del 2° secolo a.C.; erano alleati fidati di molte tribù più importanti del loro tempo, incluso l'Epiro. Formavano un'unità di guerrieri con ascia d'elite che supportava i loro alleati ed era specializzata nei combattimenti sui terreni aspri e rocciosi della Grecia settentrionale.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_AGRIANIAN_AXEMAN_STRATEGY</Tag>
+		<English>The Agrianian Axeman is the unique Axeman alternative from the culture of Epirus. It starts with Rugged Combat and City Raider I.  It is thus the specialist axeman for barren-type terrains, and also superior to most when rushing cities.</English>
+		<Italian>Il guerriero con ascia agriano è l'unità unica della cultura dell'Epiro. Inizia con le promozioni Combattente del terreno aspro e Razziatore I; perciò è ottimo per i combattimenti in un terreno aspro, oltre ad essere superiore ad altre unità attaccando le città nemiche.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_AGUEYBANA</Tag>
 		<English>Agueybana</English>
 		<Spanish>
@@ -3753,6 +3773,26 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Spanish>Dirigible</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_BLOOD_WARRIOR</Tag>
+		<English>Blood Warrior</English>
+		<French>Guerrier de sang</French>
+		<Italian>
+			<Text>Guerriero sanguinario</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_BLOOD_WARRIOR_PEDIA</Tag>
+		<English>The Kainai Blackfoot were seen as particularly bloodthirsty by their neighbours the Plains Cree, who called them 'Miko-Ew', literally, 'stained with blood'.  Thus the Blood Warrior, this elite unit of their braves, is attributed with almost supernatural abilities in the minds of their enemies - the ability to appear as if from nowhere and fight like men possessed...</English>
+		<Italian>I Kainai dei Blackfoot erano ritenuti particolarmente assetati di sangue da parte dei loro vicini Cree, che li chiamavano 'Miko-Ew', ovvero 'pieni di sangue'. Perciò i guerrieri sanguinari, unità di elite di questa tribù, erano ritenuti avere abilità quasi soprannaturali nelle menti dei loro nemici: la capacità di apparire dal nulla e di combattere come posseduti...</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_BLOOD_WARRIOR_STRATEGY</Tag>
+		<English>The Blood Warrior is the unique Axeman alternative for the Blackfoot culture.  It starts with Shock I and Camouflage promotions.  Send regular melee units up against them, and you may be in for a surprise...</English>
+		<Italian>Il guerriero sanguinario è l'unità unica per la cultura Blackfoot, che sostituisce il guerriero con ascia; inizia con le promozioni Shock I e Mimetica. Se provi ad usare delle unità da combattimento ravvicinato contro di loro, potresti avere una spiacevole sorpresa...</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_BOER_CAVALRY</Tag>
 		<English>Boer Cavalry</English>
 		<French>Cavalerie Boer</French>
@@ -4048,6 +4088,26 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Bryg</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_BRIGADE_PIRON</Tag>
+		<English>Brigade Piron</English>
+		<French>Brigadier Piron</French>
+		<Italian>
+			<Text>Brigata Piron:Brigata Piron</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_BRIGADE_PIRON_PEDIA</Tag>
+		<English>The Brigade Piron is a Belgian unique unit, an alternative to Trench Infantry.  Its starting promotions are Trench I (giving a reduction in collateral damage) and City Raider I and II.  Thus it is an ideal unit for storming cities in the early Modern era.</English>
+		<Italian>La Brigata Piron è l'unità unica belga, sostituzione della fanteria da trincea. Le sue promozioni iniziali forniscono una riduzione dei danni collaterali e un bonus all'attacco contro le città, perciò è un'unità ideale per guidare una forza d'assalto contro le città all'inizio dell'era moderna.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_BRIGADE_PIRON_STRATEGY</Tag>
+		<English>The Brigade Piron is the unique Trench Infantry unit of the Belgian culture. It starts with the promotions Trench I and City Raider I and II.</English>
+		<Italian>La Brigata Piron è la fanteria da trincea unica della cultura belga; comincia con le promozioni Trincea I, Razziatore I e Razziatore II.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BRIGANTINE</Tag>
@@ -6411,6 +6471,26 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>CSS-3</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_CUACHIC</Tag>
+		<English>Cuachic</English>
+		<French>Guerrier Cuachic</French>
+		<Italian>
+			<Text>Cuachic</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CUACHIC_PEDIA</Tag>
+		<English>The Cuachic is a Mixtec warrior wielding a wooden club lined with Stone or Obsidian blades on either side.  It is a Mixtec unique unit, and starts with Shock I and Mobility, in addition to the standard swordsman's city attack bonus.</English>
+		<Italian>Il Cuachic è un guerriero Mixteco che utilizza un'asta di legno con lame di pietra o ossidiana. Si tratta dell'unità unica Mixteca ed ottiene bonus contro le unità da combattimento ravvicinato e attaccando le città, oltre a muoversi più velocemente sul terreno.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CUACHIC_STRATEGY</Tag>
+		<English>The Cuachic is the unique Stone or Obsidian Swordsman of the Mixtec culture. Like the Swordsman line in general, it has bonuses to City Attack. It starts with Mobility and Shock I.</English>
+		<Italian>Il Cuachic è il guerriero con spada in ossidiana unico della cultura Mixteca; ha un bonus all'attacco contro le città. Inoltre, inizia anche con le promozioni Mobilità e Shock I.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_CUIRASSIER</Tag>
 		<English>Cuirassier</English>
 		<French>
@@ -6567,6 +6647,26 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Le Héros national Minoen est [COLOR_UNIT_TEXT]Dédale[COLOR_REVERT], disponible à l'antiquité et l'ère classique. Il commence avec un [COLOR_HIGHLIGHT_TEXT]Constructeur[COLOR_REVERT] dans sa suite. Il peut être construit lorsque [COLOR_TECH_TEXT]Ecriture[COLOR_REVERT] et [COLOR_TECH_TEXT]Maçonnerie[COLOR_REVERT] sont recherchés.</French>
 		<Spanish>El héroe nacional minoico es [COLOR_UNIT_TEXT]Dédalo[COLOR_REVERT], disponible a partir de la Antigüedad/Época clásica. Comienza con el ascenso [COLOR_HIGHLIGHT_TEXT]Contratista[COLOR_REVERT] en su séquito. Puede ser entrenado una vez investigadas la [COLOR_TECH_TEXT]Escritura[COLOR_REVERT] y la [COLOR_TECH_TEXT]Mampostería[COLOR_REVERT].</Spanish>
 		<Polish>Bohater Narodowy Minojczyków to [COLOR_UNIT_TEXT]Dedal[COLOR_REVERT]. Rozpoczyna w towarzystwie [COLOR_HIGHLIGHT_TEXT]Budowniczego[COLOR_REVERT]. Może zostać wyszkolony wraz z odkryciem [COLOR_TECH_TEXT]Pisma[COLOR_REVERT] i [COLOR_TECH_TEXT]Murarstwa[COLOR_REVERT].</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_DAHOMEY_MINO</Tag>
+		<English>Mino</English>
+		<French>Fusillier Mino</French>
+		<Italian>
+			<Text>Mino</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_DAHOMEY_MINO_PEDIA</Tag>
+		<English>The Dahomey Amazons or Mino were a Fon all-female military regiment of the Kingdom of Dahomey (now Benin) which lasted until the end of the 19th century. They were so named by Western observers and historians due to their similarity to the semi-mythical Amazons of ancient Anatolia and the Black Sea. For many years, the Black Sea was called the Amazon.[PARAGRAPH:1]The Origins of the Dahomey Amazons were from a group of elephant hunters organized by king Houegbadja. They were soon professionaly trained and some even ended up as his bodyguards. During the rule of Houegbadja's son, Agadja, the bodyguard were further developed into a milita and used when deafeating the neighbouring Savi. For the next hundred years, they got a reputation as fearless warriors.[PARAGRAPH:1]The group of female warriors was referred to as Mino, meaning "Our Mothers" in the Fon language by the male army of Dahomey. From the time of King Ghezo (ruling from 1818 to 1858), Dahomey became increasingly militaristic. Ghezo placed great importance on the army and increased its budget and formalized its structures. The Mino were rigorously trained, given uniforms, and equipped with Danish guns (obtained via the slave trade). By this time the Mino consisted of between 4000 and 6000 women, about a third of the entire Dahomey army.[PARAGRAPH:1]The Mino were recruited from among the ahosi ("king's wives") of which there were often hundreds. Some women in Fon society became ahosi voluntarily, while others were involuntarily enrolled if their husbands or fathers complained to the King about their behaviour. Membership among the Mino was supposed to hone any aggressive character traits for the purpose of war. During their membership they were not allowed to have children or be part of married life. Many of them were virgins. The regiment had a semi-sacred status, which was intertwined with the Fon belief in Vodun.[PARAGRAPH:1]The Mino trained with intense physical exercise. Discipline was emphasised. In the latter period, they were armed with Winchester rifles, clubs and knives. Units were under female command. Captives who fell into the hands of the Amazons were often decapitated.[PARAGRAPH:1]During the Franco-Dahomey Wars in the late 19th Century, the French, who tried to invade the country, suffered heavy casulties and lost several battles to the amazons, described as "the equal of every contemporary body of male elite soldiers from among the colonial powers". Ultimately, bolstered by the Foreign Legion, and armed with superior weaponry, including machine guns, as well as cavalry and Marine infantry, the French inflicted casualties that were ten times worse on the Dahomey side. After several battles, the French prevailed. The Legionnaires later wrote about the "incredible courage and audacity" of the Amazons. The last surviving Amazon of Dahomey died in 1979.[PARAGRAPH:1]</English>
+		<Italian>Le Amazzoni del Dahomey, note anche come Mino, erano un reggimento militare di sole donne del Regno del Dahomey (oggi Benin), che durò fino alla fine del 19° secolo. Vennero chiamate cos' dagli osservatori e storici occidentali per la loro somiglianza con le semi-mitiche Amazzoni dell'antica Anatolia e del Mar Nero; per molti anni infatti il Mar Nero venne chiamato Amazzonia.[PARAGRAPH:1] Le origini delle Amazzoni del Dahomey erano da un gruppo di cacciatrici di elefanti organizzato dal re Houégbadja. Erano professionalmente addestrate fin da giovani, e alcune diventavano addirittura sue guardie del corpo. Durante il regno del figlio di Houégbadja, Agadja, le guardie del corpo vennero trasformate in una milizia che venne utilizzata nella guerra contro i Savi. Nei seguenti cento anni ottennero la fama di guerrieri impavidi.[PARAGRAPH:1] Il gruppo di donne guerriere veniva indicato come Mino, che significa "Le nostri Madri" nella lingua Fon da parte dell'esercito maschile del Dahomey. Dal tempo del re Ghezo (che regnò nel periodo 1818-1858), il Dahomey divenne sempre più militarista. Ghezo pose grande importanza nell'esercito, aumentando il suo budget e formalizzando le sue strutture. Le Mino erano rigorosamente addestrate, dotate di uniformi e equipaggiate con armi danesi (ottenute tramite il commercio degli schiavi). A questo punto le Mino erano tra 4000 e 6000 donne, circa un terzo di tutto l'esercito Dahomey.[PARAGRAPH:1]Le Mino venivano reclutate tra le ahosi ("mogli del re") che erano spesso centinaia. Alcune donne nella società Fon divennero ahosi volontariamente, mentre altre venivano involontariamente arruolate se i loro mariti o padri si lamentavono con il Re per il loro comportamento. Per essere una Mino era necessario un carattere aggressivo per andare in guerra. Durante la loro adesione non erano autorizzate ad avere figli o avere una vita coniugale. Molte di loro erano vergini. Il reggimento aveva uno status semi-sacro, intrecciato con la credenza Fon nel Vodun.[PARAGRAPH:1]Le Mino si allenavano con un intenso esercizio fisico. La disciplina veniva enfatizzata. Negli ultimi periodi, erano armati di fucili Winchester, bastoni e coltelli. Le unità erano sotto il comando di sesso femminile. I Prigionieri caduti nelle mani delle Amazzoni venivano spesso decapitati.[PARAGRAPH:1]Durante le guerre tra Francia e Dahomey nel tardo 19° secolo i francesi, che tentarono di invadere il paese, subirono pesanti perdite e persero diverse battaglie contro le amazzoni, descritte come "alla pari di ogni corpo contemporaneo di soldati d'elite di sesso maschile tra le potenze coloniali". Alla fine, sostenuta dalla Legione Straniera e armata con armi superiori, tra cui mitragliatrici, cavalleria e fanteria marina, i francesi inflissero perdite che erano dieci volte peggiori sul lato Dahomey. Dopo varie battaglie vinsero i francesi. I Legionari in seguito scrisse di un "incredibile coraggio e audacia" da parte delle Amazzoni. L'ultima Amazzone del Dahomey superstite mor' nel 1979.[PARAGRAPH:1]</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_DAHOMEY_MINO_STRATEGY</Tag>
+		<English>The [COLOR_UNIT_TEXT]Mino[COLOR_REVERT] is a [COLOR_UNIT_TEXT]Rifleman[COLOR_REVERT] who starts with Drill I and II and is immune to first strikes.</English>
+		<Italian>La [COLOR_UNIT_TEXT]Mino[COLOR_REVERT] è un [COLOR_UNIT_TEXT]Fuciliere[COLOR_REVERT] che inizia con le promozioni Addestramento I e Addestramento II, oltre ad essere immune agli attacchi improvvisi.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DAI_CHUI</Tag>
@@ -6805,6 +6905,19 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>[ICON_BULLET]Démoralisation: -%d1_Amount%% Force/défense</French>
 		<Italian>[ICON_BULLET]Demoralizzazione: -%d1_Amount%% forza/difesa</Italian>
 		<Polish>[ICON_BULLET]Demoralizacja: -%d1_Amount%% Siły/Rundę</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_DENE_SLED_DOGS</Tag>
+		<English>Dene Sled Dogs</English>
+		<French>Chien d'attelage</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_DENE_SLED_DOGS_PEDIA</Tag>
+		<English>The Dene are expert at breeding dogs for their bitterly cold environment.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_DENE_SLED_DOGS_STRATEGY</Tag>
+		<English>The Dene Sled Dogs unit is the unique Trained Dogs equivalent from the Dene culture.  It starts with three Arctic Combat promotions.  Thus it is the perfect Trained Dog for patrolling the icier regions of your territory... and beyond!</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DESERT_TORTOISE</Tag>
@@ -9637,6 +9750,26 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>[ICON_BULLET]Hart: %d1_Amount%%</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_FORTY_NINER</Tag>
+		<English>Forty-Niner</English>
+		<French>Ouvrier 'Forty-Niner'</French>
+		<Italian>
+			<Text>Forty-Niner</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_FORTY_NINER_PEDIA</Tag>
+		<English>The hardy fortune-seeking miners of the California goldrush became known as Forty-Niners.</English>
+		<Italian>I cercatori d'oro della corsa all'oro in California divenero noti come Forty-Niners.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_FORTY_NINER_STRATEGY</Tag>
+		<English>The Forty-Niner is the unique Industrial-era Worker of the Californian culture. It starts with three Hill Worker promotions, so if you've changed your mind about that mine, he's your man.</English>
+		<Italian>Il Forty-Niner è il lavoratore dell'era industriale tipico della cultura Californiana. Inizia con tutte e tre le promozioni Lavoratore delle colline, per cui se hai cambiato idea riguardo a quella miniera questo ragazzo fa proprio al caso tuo.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_FORT_COLLAT_DEF</Tag>
 		<English>[ICON_BULLET]Fortified Collateral Defense: Suffers -%d1_Amount%% damage from collateral each round Fortified.</English>
 		<French>[ICON_BULLET]Défense Fortifié contre Dom. Coll.: Subit -%d1_Amount%% de dommages collatéraux (par tour fortifié).</French>
@@ -10250,6 +10383,21 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Le Char Lourd Anti-grav est une unité offensive blindée à déplacement rapide car il a un mouvement de 3 et il ignore les coûts de mouvement du terrain. Il peut attaquer 3 fois par tour et il peut voir des unités Hi-Tech furtives</French>
 		<Spanish>El Blindado a levitación es una rápida unidad defensiva blindada, al disponer de 3 puntos de movimiento e ignorar los costes de movimiento del terreno. Puede atacar 3 veces por turno, y puede ver a las unidades de alta tecnología ocultas.</Spanish>
 		<Polish>Czołg Poduszkowy jest jedna z szybszych pojazdów gąsięnicowych, ponieważ może się poruszać az o trzy pola, nie uwzględniając kosztów terenu. Dodatkowo może atakować trzy razy na ture i co najważniejsze - może zobaczyć niewykrywalne jednostki Hi-Tech.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_FW190A</Tag>
+		<English>FockeWulf 190a</English>
+		<Spanish>
+			<Text>FockeWulf 190a</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Myśliwiec Focke-Wulf 190A</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_FW190A_PEDIA</Tag>
+		<English>The Focke-Wulf Fw 190 Würger, was a German single-seat, single-engine fighter aircraft designed by Kurt Tank in the late 1930s. It was used by the Luftwaffe during the Second World War. The design was the last mass produced piston-engine German fighter to see action in the war. It partially replaced the Messerschmitt Bf 109 in 1941. By 1945, the Fw 190 operated effectively on all fronts. Production ran from 1941 to the end of hostilities, during which time the aircraft was continually updated with over 20,000 built. Its later versions retained qualitative parity with Allied fighter aircraft. The Fw 190 was well-liked by its pilots, and was quickly proven to be superior in all but turn radius to the Royal Air Force's main front-line fighter, the Spitfire Mk. V variant, on its combat debut in 1941 until the introduction of the vastly improved Spitfire Mk. 9 in the autumn, 1942 restored qualitative parity.  The early Fw 190As performance decreased at high altitudes (usually 20,000ft and above) which complicated its use as a high altitude interceptor. These complications were mostly rectified in later models, notably the Focke-Wulf Fw 190D variant in the autumn, 1944. Like the Bf 109, the Fw 190 was employed as a "workhorse", and proved suitable for a wide variety of roles, including air superiority fighter, strike fighter, ground-attack aircraft, escort fighter, and operated with less success as a night fighter. Some of the Luftwaffe's most successful fighter aces flew the Fw 190. Erich Rudorffer claimed 222 kills, Otto Kittel 267 victories, and Walter Nowotny 258 victories. A great many of their kills were claimed while flying the Fw 190.</English>
+		<Polish>Focke-Wulf Fw 190 Wurger (pol dzierzba) to jednomiejscowy, jednosilnikowy niemiecki myśliwiec z czasów II wojny światowej. Wyprodukowany w ponad 20 tysiącach egzemplarzy, w tym około 6 tysięcy w wersji myśliwsko-bombowej. Pod koniec 1937 roku Ministerstwo Lotnictwa Rzeszy (Reichsluftfahrtministerium RLM) wysłało do kilku zakładów specyfikację na nowy myśliwiec, który miałby wejść, obok Bf 109, do służby i stanowić zabezpieczenie na wypadek, gdyby się okazało, że samoloty innych krajów są lepsze od Bf 109. W tym czasie konstruktorzy zakładów Focke-Wulf pod kierunkiem prof. Kurta Tanka i inżyniera Rudolfa Blasera pracowali nad kilkoma projektami myśliwców, w większości z silnikami rzędowymi. Wśród nich był też projekt dość małego myśliwca o zwartej konstrukcji z 18 cylindrowym, chłodzonym powietrzem, silnikiem gwiazdowym BMW 139. W tym czasie w Niemczech nie uważano silnika gwiazdowego za odpowiedni napęd samolotów, zwłaszcza myśliwców. Ale niepowodzenie z projektem myśliwca Heinkel He 100 i He 112 oraz przewidywania, że zakłady produkujące silniki rzędowe nie będą w niedalekiej przyszłości w stanie wyprodukować wystarczającej ilości tych silników, przyczyniły się do tego, że to ten projekt został zamówiony i rozpoczęto jego rozwój. Ponadto zauważono, że za granicą powstały dość udane konstrukcje myśliwców z silnikami gwiazdowymi. Bezpośrednio rozwojem Fw 190 zajmował się zespół pod kierownictwem inżyniera Rudolfa Blasera. Kiedy RLM w 1938 roku zamówiło 4 prototypy tej maszyny, prace nad projektem nabrały tempa. Najpierw w 1938 roku zbudowano drewnianą makietę projektu, a jesienią tego roku rozpoczęto budowę prototypu. Był to całkowicie metalowy dolnopłat o konstrukcji półskorupowej, z wciąganym podwoziem. Napęd miał stanowić silnik gwiazdowy BMW 139 o mocy startowej 1550 KM. Ponieważ silnik gwiazdowy stawia większy opór czołowy, zaprojektowano specjalny tunelowy kołpak na śmigło i osłonę na silnik z wlotem powietrza po środku, co miało zmniejszyć opór powietrza oraz problem z chłodzeniem silnika. Pierwszy prototyp Fw 190 V-1, jeszcze z rejestracją cywilną D-OPZE, był gotowy na wiosnę 1939 roku i po serii testów naziemnych został oblatany 1 czerwca 1939 roku na lotnisku w Bremie. Oblotu dokonał szef oblatywaczy wytwórni, Hans Sander. Od razu okazało się, że samolot spełnia pokładane w nim nadzieje: miał bardzo dobre właściwości lotne, dobrą widoczność oraz obiecujące osiągi. Kolejną zaletą było szerokie podwozie, które nawet przy bardzo wysokiej prędkości lądowania prototypu, 210 km/h, pozwalało na bezpieczne lądowanie. Samolot miał jednak kilka wad. Najpoważniejszymi były problemy z blokowaniem podwozia po wciągnięciu w skrzydła, skłonności do przegrzewania się silnika oraz wysoka temperatura panująca w kokpicie, dochodząca nawet do 55oC oraz przedostawanie się tam gazów spalinowych, co zmuszało do lotów w masce tlenowej. Samolot został następnie przekazany do ośrodka Luftwaffe w Rechlin, gdzie w czasie testów osiągnął prędkość aż 595 km/h na wysokości 4000 m. Następnie zwrócono go do wytwórni aby dokonać modyfikacji. Przede wszystkim poprawiono chłodzenie silnika, dodając przed samym silnikiem 10-łopatowy wentylator, co nadal było niewystarczające. Ponadto zrezygnowano z tunelowego kołpaka śmigła na rzecz tradycyjnego. Uczyniono tak, ponieważ próby w tunelu aerodynamicznym nie wykazały aby kołpak tunelowy poprawiał znacząco osiągi samolotu. Zmieniono też cywilne oznaczenie maszyny na wojskowe WL-FOLY a potem FO+LY. Drugi prototyp Fw 190 V-2 został ukończony jeszcze jesienią 1939 roku i oblatano go 31 października 1939 roku. Napędzany był też silnikiem BMW 139, ale już z wentylatorem, oraz miał uzbrojenie złożone z 2 kaemów MG17 kal. 7,9 mm nad silnikiem i dwóch kaemów MG131 kal 13 mm w skrzydłach. Drugi prototyp na początku 1940 roku zaprezentowano Hermanowi Goeringowi, któremu bardzo się on spodobał. Dość szybko zamówiono 40 egzemplarzy przedseryjnych Fw 190 A-0. Drugi prototyp został rozbity 4 marca 1940 roku. W tym czasie zakłady BMW zaprzestały rozwoju silnika BMW 139, uznając go za nieudaną konstrukcję, na rzecz nowego silnika BMW 801. Był to również silnik gwiazdowy, 14 cylindrowy, chłodzony powietrzem. Miał tę samą średnicę co BMW 139, ale był dłuższy i cięższy. Ponieważ zastosowanie go na Fw 190 wymagało dużych zmian w konstrukcji, zrezygnowano z budowy prototypów V-3 i V-4. Natomiast nowym silnikiem BMW 801 był już napędzany piąty prototyp FW-190 V-5. Przebudowano przód samolotu, zmieniono zarazem osłonę silnika i przede wszystkim wzmocniono konstrukcję. Kabinę pilota przesunięto do tyłu, co zmniejszyło problem wysokiej temperatury oraz dało więcej miejsca z przodu samolotu na uzbrojenie, pogorszyła się jednak widoczność do przodu podczas lądowania. Wzmocniono podwozie, z uwagi na wzrost masy samolotu. Hydrauliczny system jego chowania zamieniono na elektryczny. Napęd stanowił silnik BMW 801 C-0. Prototyp oblatano wczesną wiosną 1940 roku. Początkowo miał on takie same skrzydła jak V-1 i V-2, tzw. mniejsze, ale ponieważ jego masa była większa o 635 kg, spowodowało to spadek osiągów i pogorszenie właściwości lotnych. Postanowiono bez zmiany profilu, zwiększyć rozpiętość do 10,506 m i powierzchnię nośną 18,30 metra kwadratowego, przesuwając jednocześnie przednią krawędź skrzydła do przodu. Ponadto postanowiono zwiększyć rozpiętość usterzenia poziomego oraz powiększyć statecznik pionowy. Zmiany te planowano zastosować na nowym prototypie, ale kiedy w sierpniu 1940 roku na lotnisku V-5 zderzył się z pojazdem i został uszkodzony, przebudowano go już z tymi modyfikacjami. Poprawiło to znacznie właściwości lotne maszyny, a prędkość maksymalna spadła tylko o 10 km/h. Tak przebudowaną maszynę oznaczono jako Fw 190 V-5g (g = grosser = większy), a poprzednią jego postać oznaczano jako Fw 190 V-5k (k = kleiner = mniejszy). Co ciekawe, Alianci byli nieświadomi istnienia nowego modelu myśliwca, który w relacjach pilotów był traktowany jako "P-36 przejęty od Francuzów". Jednakże po pierwszych walkach 21 października 1941 zgłoszono, że Luftwaffe dysponuje nowym myśliwcem o wyjątkowo dużej prędkości i wznoszeniu deklasującym używane w tamtym czasie przez Brytyjczyków Spitfire Mk V. Dopiero omyłkowe lądowanie oberleutnanta Armina Fabera pilotującego Fw 190 A-3 w dniu 23 czerwca 1942 na brytyjskim lotnisku pozwoliło zapoznać się aliantom z jakim naprawdę mają do czynienia przeciwnikiem. Fw 190 od początku został skonstruowany z myślą o wykorzystaniu do produkcji firm, które dotychczas nie miały doświadczenia w wytwarzaniu samolotów. Szczególnie zaowocowało to po roku 1942, od kiedy Niemcy były paraliżowane coraz częstszymi nalotami bombowymi, a zakłady lotnicze były szczególnie atakowane. Ostrożne szacunki mówią o wyprodukowaniu około 18 tysięcy sztuk Fw 190. Wynika to stąd, że część płatowców została ponownie złożona ze zniszczonych egzemplarzy, otrzymując nowy numer fabryczny, dlatego też część danych określa produkcję na 20 - 22 tysiące sztuk. Główne zakłady produkujące ten samolot miały lokalizację w Bremen, Tutow in Mecklenburg, Marienburg (Malbork), Cottbus, Sorau (Żary), Neubrandenburg oraz Schwerin. Wytwarzaniem na licencji zajmowały się również firmy: AGO? Oschersieben; Arado? Babelsberg, Brandenburg, Warnemunde, Anklam, Rathenow, Neuendorf; Fieseler? Kassel Waldau; SNCAC (okupowana Francja)? Cavant. Nie były to oczywiście wszystkie wytwórnie, bo wiele pomniejszych zakładów i frontowych warsztatów naprawy sprzętu dokonywało swoistego recyklingu z rozbitych maszyn, a podczas walk o Berlin na lotnisku Tempelhof odkryto sprawną linię produkcyjną. Mimo, że samolot Focke Wulfa został uznany za lepszy od Bf 109 nie doszło do zaprzestania produkcji tego ostatniego tak, że starszych 109-tek wytworzono prawie dwa razy więcej do końca wojny. Od 1996 roku niemiecka firma Flug Werk GmbH w Gammelsdorf rozpoczęła produkcję wersji Fw 190 A-8, A-9 oraz D-9. Do końca 2007 roku wybudowano około 20 egzemplarzy oznaczanych odpowiednio A-8/N, A-9/N oraz D-9/N (Nachbau). Wszystkie repliki latają, napędzane są jedynie silnikami gwiazdowymi ASz? 82 produkowanymi na licencji rosyjskiej w Chinach lub amerykańskimi rzędowymi Allison V-1710. Reszta elementów płatowca według zapewnień producenta jest prawie w 98% zgodna z oryginalną dokumentacją.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FYRDMAN</Tag>
@@ -11969,6 +12117,23 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Les pirates sont une déviation dramatique de la forme standard de criminel. Ils ne sont pas aussi forts au combat, étant plus faibles et plus susceptibles d'être capturés. Cependant, ils sont également l'une des formes de lutte contre les criminels les plus puissantes, capables d'affronter des ennemis terriblement puissants, tant que ces ennemis sont hautement technologiques. Les hackers obtiennent des bonus extraordinaires dans les batailles contre les ennemis de l'IA, du Mech et de la High Tech, ce qui en fait d'excellents assassins de l'ère de la modernité tardive à la période transhumaine. Grâce à leurs capacités à manipuler le cœur de données de tout système, y compris ceux employés par les forces de l'ordre, ils sont capables d'échapper à la loi avec plus de compétence que n'importe lequel de leurs prédécesseurs. En pénétrant dans les sources de données et les allées des mainframes, ils peuvent recueillir plus d'espionnage que tout autre criminel avant eux. Grâce aux efforts des médias sociaux viraux, ils peuvent également inspirer des révoltes à un degré révolutionnaire.</French>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_HAIDA_WAR_CANOE</Tag>
+		<English>Haida War Canoe</English>
+		<French>
+			<Text>Canoé de Guerre Haida</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HAIDA_WAR_CANOE_PEDIA</Tag>
+		<English>The Haida specialize in pouncing on their neighbours in waterborne attacks.  In attacking small boats they were particularly proficient.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HAIDA_WAR_CANOE_STRATEGY</Tag>
+		<English>The Haida War Canoe is obviously the unique War Canoe of the Haida culture.  It starts with one Coastal Assault promotion.  Unless you are attacking a lot of rafts, or can afford to build large numbers of these, or to promote one highly, you are unlikely to derive any benefit from this unit.  Nevertheless, if you are building a War Canoe anyway, it is worth building this one for its free promo.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_HAITIAN_REBEL</Tag>
 		<English>Haitian Rebel</English>
 		<French>
@@ -12158,6 +12323,26 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_HAYREDDIN_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Hayreddin[COLOR_REVERT] is hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Hayreddin[COLOR_REVERT] est une unité héroïque.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HEADHUNTER</Tag>
+		<English>Headhunter</English>
+		<French>Chasseur de têtes</French>
+		<Italian>
+			<Text>Cacciatore di teste</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HEADHUNTER_PEDIA</Tag>
+		<English>The pursuit of head-hunting is central to Jivaro culture.  The Jivaro warrior's collection of heads is one of the most important indicators of his status and martial prowess.</English>
+		<Italian>La caccia delle teste è molto importante nella cultura Jivaro; la collezione di teste di un guerriero Jivaro è uno degli indicatori più importanti del suo status sociale.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HEADHUNTER_STRATEGY</Tag>
+		<English>The Headhunter is the Jivaro culture's version of the Hunter...but with a twist. As the name suggests, he hunts humans rather than animals.  His bonus is therefore not in animal combat, but against other hunters!</English>
+		<Italian>Il cacciatore di teste è le versione dei Jivaro del cacciatore, ma invece di animali lui caccia gli uomini. Perciò i suoi bonus si riferiscono non agli animali, ma ad altri cacciatori!</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEALER</Tag>
@@ -13400,30 +13585,38 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Le [COLOR_UNIT_TEXT]Char équestre Hyksosi[COLOR_REVERT] est une unité Hyksosi unique.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_HYPASPISTS</Tag>
-		<English>Hypaspists</English>
+		<Tag>TXT_KEY_UNIT_HYPASPISTAI</Tag>
+		<English>Hypaspistai</English>
 		<French>
-			<Text>Hypaspistes</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
+			<Text>Hypaspistai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
 		</French>
-		<German>Hypaspisten</German>
-		<Italian>Hypaspisti</Italian>
-		<Spanish>
-			<Text>Hipaspista</Text>
+		<German>
+			<Text>Hypaspistai</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Hypaspistai</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Hypaspistai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
 		</Spanish>
-		<Polish>Hypaspistai</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_HYPASPISTS_PEDIA</Tag>
-		<English>The "hypaspitai" (or "shield bearers") were elite foot guardsmen in Alexander's Macedonian army. They often fought on the right flank of the "Companion Cavalry," a place of honor in most Greek armies. They were highly mobile for their time, and Alexander used this to great advantage at battles such as Chaeronea in 338 BC. [PARAGRAPH:2:1]The first hypaspists were raised from the kingdom of Macedonia on a provincial basis by Philip II during his restructuring of the army. They were the "King's Army" rather than the army of the kingdom, owing allegiance only to the royal house. Each province was required to provide a single "taxis," or regiment, made up of highly-trained commoners. Command of these regiments was usually entrusted to nobles originating from the same area as the troops themselves. When he came to the throne, however, Alexander ended this noble-based leadership, and new commanders were drawn from the regiments themselves, promoted strictly on merit rather than on family connections. By the time of his invasion of Persia the hypaspists numbered approximately 3000 men organized into three units. [PARAGRAPH:2:1]In battle the hypaspists' primary weapon was the "sarissai," an extra-long spear or pike reserved for their use. Carrying a very small shield and wearing the traditional helmets and greaves, individually they were relatively lightly-armored for the age. However, when formed into a phalanx, these soldiers were particularly deadly to the sword-armed troops that Alexander usually faced. [PARAGRAPH:2:1]Alexander favored battle tactics that were aimed at forcing a quick decision on the field. The young general employed unexpected maneuvers and sudden charges to break the morale of the enemy and create panic among enemy units not yet engaged; drilled in rapid movement in formation and legendary for their ferocity, the hypaspists were the perfect infantry for Alexander's army.</English>
-		<French>Les "hypaspistes" (ou "porteurs de boucliers") constituent l'infanterie d'élite dans l'armée macédonienne d'Alexandre. Ils combattent souvent sur le flanc droit de la "cavalerie des compagnons", place d'honneur dans la plupart des armées grecques. Ils sont très mobiles pour l'époque et Alexandre tire parti de cet avantage dans des batailles comme Chéronée en 338 av. J.-C. [PARAGRAPH:2:1]Les premiers hypaspistes sont recrutés dans le royaume de Macédoine selon une certaine proportion par région sur l'ordre de Philippe II au moment où il restructure son armée. Ils constituent l'Armée du Roi plutôt que celle du royaume, ne devant allégeance qu'à la maison royale. Chaque province doit procurer un unique taxis, ou régiment, formé d'hommes du peuple très entraînés. Le commandement de ces troupes est généralement confié à des nobles venus des mêmes régions que les soldats. Quand il accède au trône, Alexandre change ce point précis. Ainsi, les nouveaux commandants sont issus des régiments eux-mêmes et ne doivent leur promotion qu'à leur valeur, et non à l'influence de leur famille. Au moment de l'invasion de la Perse, l'armée d'Alexandre compte environ 3000 hypaspistes, regroupés au sein de trois unités. [PARAGRAPH:2:1]Au combat, l'arme principale des hypaspistes est la "sarissai", une lance ou pique extrêmement longue dont ils sont les seuls à se servir. Equipés d'un bouclier très petit et portant les traditionnels casque et grèves, ils sont peu protégés par rapport à ce qui se fait à l'époque. Toutefois, lorsqu'ils se regroupent en phalange, ces soldats deviennent redoutables face aux troupes combattant à l'épée qu'Alexandre a l'habitude d'affronter. [PARAGRAPH:2:1]Alexandre affectionne tout particulière les tactiques de combat dont le but est d'obliger l'ennemi à réagir rapidement. Le jeune général emploie ainsi des manoeuvres inattendues et des charges soudaines pour briser le moral de ses ennemis et faire paniquer les adversaires qui n'ont pas encore pris part au combat. Entraînés à se déplacer rapidement en formation et d'une férocité légendaire, les hypaspistes constituent l'infanterie idéale pour l'armée d'Alexandre.</French>
-		<German>Die "Hypaspitai" (Schildträger) stellten die Elite-Fußwachsoldaten in Alexanders makedonischer Armee. Häufig kämpften sie an der rechten Flanke der "Begleitkavallerie", was in den meisten griechischen Armeen einem Ehrenplatz gleichkam. Sie waren im Vergleich zu anderen Fußsoldaten dieses Zeitalters äußerst wendig - ein Umstand, den Alexander im Gefecht, beispielsweise in der Schlacht von Chaironea im Jahr 338 vor Christus, zu seinem Vorteil nutzte. [PARAGRAPH:2:1]Die ersten Hypaspisten wurden im Rahmen der Neustrukturierung seines Heeres von Philipp II. aus den Provinzen des Königreichs Makedonien rekrutiert. Sie galten eher als die "Armee des Königs" als die Armee des Königreichs, denn sie waren ausschließlich dem Königshaus verantwortlich. Jede Provinz musste eine einzelne "Taxis" (Regiment) stellen, die sich aus gut ausgebildeten Bürgern zusammensetzte. Die Befehlsgewalt über diese Regimenter oblag in der Regel Edelleuten, die aus der gleichen Region stammten wie die Truppen selbst. Als Alexander den Thron bestieg, hatte diese Führungsstruktur der Adligen jedoch ein Ende: Er ging dazu über, die neuen Kommandanten direkt aus den Regimentern zu bestimmen, wobei die Beförderung strikt von den Verdiensten der betreffenden Person abhing und weniger von der familiären Abstammung. Zum Zeitpunkt der Invasion in das Perserreich zählten die Hypaspisten etwa 3000 Männer, die in drei Regimenter aufgeteilt waren. [PARAGRAPH:2:1]Die Primärwaffen der Hypaspisten waren die "Sarissai", besonders lange Speere oder Piken, deren Nutzung ausschließlich ihnen vorbehalten war. Mit einem sehr kleinen Schild sowie den traditionellen Helmen und Beinschienen ausgestattet, waren sie für dieses Zeitalter verhältnismäßig leicht gerüstet. Wenn sie sich allerdings zu einer Phalanx formierten, waren sie für feindliche Schwertkämpfer, die Alexander vornehmlich angriff, besonders gefährlich. [PARAGRAPH:2:1]Alexander bevorzugte Kampftaktiken, die schnelle Entscheidungen auf dem Schlachtfeld erforderten. Vielfach setzte der junge Heerführer unerwartete Manöver und plötzliche Offensiven ein, um die Moral der gegnerischen Truppen zu brechen und auch Panik bei den Einheiten auszulösen, die noch gar nicht am Kampfgeschehen beteiligt waren. Angesichts der Tatsache, dass sie für schnelle Formationsvorstöße ausgebildet waren und über legendäre Schlagkraft verfügten, bildeten die Hypaspisten die perfekte Infanterie für Alexanders Streitmacht.</German>
-		<Italian>Gli "hypaspisti" (o "portatori di scudi") erano guardie di fanteria dell'esercito macedone di Alessandro. Spesso combattevano sul fianco destro della "cavalleria di supporto", una posizione d'onore nella maggior parte degli eserciti greci. Si trattava di unità molto rapide per l'epoca e Alessandro le sfruttò al massimo nelle battaglie, in particolare in quella di Cheronea, nel 338 a.C. [PARAGRAPH:2:1]I primi hypaspisti vennero addestrati nel regno di Macedonia da Filippo II durante la ristrutturazione degli eserciti e fungevano da "esercito del re", più che del regno stesso, poiché giuravano fedeltà solamente alla casa reale. Ciascuna provincia doveva fornire una singola "taxis" o reggimento, formato da cittadini comuni altamente addestrati. Il comando di questi reggimenti era in genere assegnato a nobili originari delle stesse regioni dei soldati. Raggiunto il potere, Alessandro pose fine a questo controllo nobiliare e i comandanti furono scelti all'interno dell'esercito stesso e promossi in base ai meriti, piuttosto che per via di legami familiari. Durante la campagna di Persia, gli hypaspisti impiegati furono circa 3.000, divisi in tre unità. [PARAGRAPH:2:1]In battaglia, l'arma principale degli hypaspisti era la "sarissa", una lancia molto lunga; essi inoltre imbracciavano uno scudo molto piccolo, oltre a elmi tradizionali e schinieri: per l'epoca, si trattava di unità con armamenti molto leggeri. Tuttavia, quando formavano una falange, questi soldati erano particolarmente letali contro le truppe armate di sole spade che generalmente venivano affrontate da Alessandro. [PARAGRAPH:2:1]Alessandro prediligeva l'impiego di tattiche da combattimento che costringevano a rapide decisioni sul campo di battaglia: il giovane generale utilizzava delle strategie inaspettate e ricorreva a cariche improvvise per demoralizzare il nemico e seminare il panico tra tutte le altre unità non ingaggiate in combattimento. Addestrati per muoversi rapidamente in formazione e leggendari per la loro ferocia, gli hypaspisti erano la fanteria perfetta per l'esercito di Alessandro.[PARAGRAPH:2:1]I primi hypaspisti vennero addestrati nel regno di Macedonia da Filippo II durante la ristrutturazione degli eserciti e fungevano da "esercito del re", più che del regno stesso, poiché giuravano fedeltà solamente alla casa reale. Ciascuna provincia doveva fornire una singola "taxis" o reggimento, formato da cittadini comuni altamente addestrati. Il comando di questi reggimenti era in genere assegnato a nobili originari delle stesse regioni dei soldati. Raggiunto il potere, Alessandro pose fine a questo controllo nobiliare e i comandanti furono scelti all'interno dell'esercito stesso e promossi in base ai meriti, piuttosto che per via di legami familiari. Durante la campagna di Persia, gli hypaspisti impiegati furono circa 3.000, divisi in tre unità.[PARAGRAPH:2:1]In battaglia, l'arma principale degli hypaspisti era la "sarissa", una lancia molto lunga; essi inoltre imbracciavano uno scudo molto piccolo, oltre a elmi tradizionali e schinieri: per l'epoca, si trattava di unità con armamenti molto leggeri. Tuttavia, quando formavano una falange, questi soldati erano particolarmente letali contro le truppe armate di sole spade che generalmente venivano affrontate da Alessandro.[PARAGRAPH:2:1]Alessandro prediligeva l'impiego di tattiche da combattimento che costringevano a rapide decisioni sul campo di battaglia: il giovane generale utilizzava delle strategie inaspettate e ricorreva a cariche improvvise per demoralizzare il nemico e seminare il panico tra tutte le altre unità non ingaggiate in combattimento. Addestrati per muoversi rapidamente in formazione e leggendari per la loro ferocia, gli hypaspisti erano la fanteria perfetta per l'esercito di Alessandro.</Italian>
-		<Spanish>Los "hypaspitai" (o "portadores de escudo") eran infantes de élite en el ejército macedonio de Alejandro. A menudo luchaban en el flanco derecho de la "caballería de los Compañeros" un lugar de honor en la mayoría de los ejércitos griegos. Gozaban de una gran movilidad para su época y Alejandro los lideró con gran eficiencia en batallas como la de Queronea (338 a. C). [PARAGRAPH:2:1]Los primeros hipaspistas eran unidades de base provincial que empezaron a ser reclutadas por Filipo II tras su reestructuración del ejército. Más que un ejército del reino, eran el "ejército del Rey" pues solo le debían lealtad a la casa real. Cada provincia debía proporcionar un "taxis" o regimiento compuesto de plebeyos entrenados. El mando de estas unidades se encomendaba normalmente a nobles oriundos de la misma región que las tropas. Sin embargo, cuando llegó al trono, Alejandro terminó con este sistema de mando nobiliario y empezó a extraer a los comandantes de las unidades de las filas de los propios regimientos, con criterios puramente meritocráticos y no por conexiones familiares. Al inicio de la invasión de Persia, los hipaspistas eran aproximadamente tres mil hombres organizados en tres unidades. [PARAGRAPH:2:1]En la batalla, el arma principal de los hipaspistas era la "sarissai", una lanza extra larga o pica cuyo uso les estaba reservado. Con un pequeño escudo y el yelmo y las grebas tradicionales, puede decirse que estaban poco armados para lo que era habitual en su época. Sin embargo, organizados en una falange, estos soldados eran especialmente letales para las tropas armadas con espada a las que Alejandro solía enfrentarse. [PARAGRAPH:2:1]Alejandro solía emplear tácticas encaminadas a forzar una rápida decisión en el campo de batalla. El joven general empleaba maniobras inesperadas y cargas sorpresa para quebrantar la moral del enemigo y provocar el pánico de las unidades enemigas que todavía no habían entrado en combate. Entrenados para moverse con rapidez y legendarios por su ferocidad, los hipaspistas eran la infantería perfecta para el ejército de Alejandro.</Spanish>
-		<Polish>"Hypaspitai" byli elitarną jednostką piechoty w armii macedońskiej. Często walczyły na prawym skrzydle "Kawalerii Companion", na honorowym miejscu w większości greckiej armii. Były one bardzo mobilne za swoich czasów i Alexander używał ich dzięki czemu osiągał wielką przewagę w bitwach, takich jak Chaeronea w 338 pne.</Polish>
+		<Tag>TXT_KEY_UNIT_HYPASPISTAI_PEDIA</Tag>
+		<English>Hail, Basileu! Before you stand your Hypaspistai: the elite of the elite and your personal guard. They are armed and armored in the finest equipment of the traditional hoplite: aspis, greaves, cuirass, helmet, spear, and sword. They are the best and richest of your men; far too worthy to risk in unwise actions. And yet they are without a doubt capable of multiplying the power of your army. Forming the right wing of the battle line or leading the assault on fortifications their heavy armor and weapons allow them to stand against even the hardiest of opponents and triumph with ease. They should be deployed where the fighting will be at its absolute thickest or nearby to fight with and to protect you.[NEWLINE][TAB]Historically, the Hypaspistai (shield-bearers) first appear with Alexandros at the beginning of his reign as his elite troops and bodyguard. He used them extensively throughout his anabasis for special missions, assault of fortifications, and in support of light troops in rough terrain; however, details of the unit seem to disappear by the time Alexandros reaches India and remain as such until appearing in various sources for the three remaining Diadochoi kingdoms in different forms and perhaps briefly in Epeiros with Pyrrhos. Such examples of their deployment count them as possibly numbering a fifth of the 10,000 Argyraspides corps of the Seleukid kings or as the military police and closest guard of the Makedonian kings. Yet, despite their prowess, the Hypaspistai were either forced to evolve past the antiquated hoplite model as in the east or vanish with the fall of their kingdom as in the west.</English>
+		<Italian>Storicamente gli Hypaspistai (portatori di scudi) comparvero all'inizio del regno di Alessandro Magno come truppe d'elite e guardie del corpo. Venivano usati molto in missioni speciali, assalti, fortificazioni e come supporto alle truppe leggere nei terreni più accidentati; tuttavia, scomparvero quasi del tutto quando Alessandro raggiunse l'India. Soldati simili esistevano con nomi diversi all'interno dei successivi regni ellenistici, forse anche in Epiro durante il regno di Pirro. Probabilmente costituivano circa un quinto dei 10000 Argiraspidi dei re Seleucidi, oltre alle forze di polizia e alle guardie del corpo dei re di Macedonia. Nonostante la loro forza, gli Hypaspistai furono costretti ad evolversi dall'antiquato modello di oplita o a scomparire con la caduta dei regni ellenistici.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HYPASPISTAI_STRATEGY</Tag>
+		<English>This powerful melee unit (the Macedonian replacement for the [COLOR_UNIT_TEXT]Spearman[COLOR_REVERT]) comes with City Raider I and II.  This means you will need fewer - if any - Light Swordsmen in your rush stacks.</English>
+		<Italian>Questa potente unità da combattimento ravvicinato (il sostituto macedone del [COLOR_UNIT_TEXT]Lanciere[COLOR_REVERT]) inizia con Razziatore I e Razziatore II.  Questo significa che possono facilmente sostituire gli spadaccini leggeri.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_IAN_SMITH</Tag>
@@ -14242,6 +14435,23 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>[COLOR_UNIT_TEXT]Jacob Kettler[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_JADE_AXEMAN</Tag>
+		<English>Jade Axeman</English>
+		<French>
+			<Text>Guerrier avec hache de jade</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_JADE_AXEMAN_PEDIA</Tag>
+		<English>The so-called Liangzhu culture of ancient China used their skill at crafting the local jade, so as to make their axemen peerless among their rivals.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_JADE_AXEMAN_STRATEGY</Tag>
+		<English>The Jade Axeman is the Obsidian Axe replacement for the Liangzhu, a Neolithic culture from what subsequently became China. It starts with the Wetland I and II promotions.  Thus they have the early superiority of weapon due to the Liangzhu skill with jade, the standard axeman's advantage against melee opponents, and an extra headstart in lush and muddy terrain.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_JADID_GRENADIERS</Tag>
 		<English>Jadid Grenadiers</English>
 		<French>Grenadier Jadide</French>
@@ -14848,6 +15058,23 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_JURI_ULUOTS_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Juri Uluots[COLOR_REVERT] is hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Juri Uluots[COLOR_REVERT] est une unité héroïque.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_KA50</Tag>
+		<English>KA50 Gunship</English>
+		<French>Hélicoptère KA50</French>
+		<Italian>Elicottero KA50</Italian>
+		<Spanish>
+			<Text>Helicóptero KA50</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Śmigłowiec Ka-50</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_KA50_PEDIA</Tag>
+		<English>The Kamov Ka-50 Black Shark is a single-seat attack helicopter with the distinctive coaxial rotor system of the Kamov design bureau. The Ka-50 was designed to be small, fast, and agile to improve survivability and lethality. For minimal weight and size (thus maximal speed and agility) it was - uniquely among gunships - to be operated by a single pilot only. [PARAGRAPH:1]It features Kamov's characteristic contra-rotating co-axial rotor system, which removes the need for the entire tail-rotor assembly and improves the aircraft's aerobatic qualities - it can perform loops, rolls, and "the funnel" (circle-strafing) where the aircraft maintains a line-of-sight to target while flying circles of varying altitude, elevation, and airspeed around it. Using two rotors means that a smaller rotor with slower moving rotor tips can be used compared to a single rotor design. Since the speed of the advancing rotor tip is a primary limitation to the maximum speed of a helicopter, this allows a faster maximum speed than helicopters such as the AH-64. [PARAGRAPH:1]The main armament are the twelve laser-guided Vikhr anti-tank missiles with a maximum range of some 10 km. The laser guidance is reported to be virtually jam-proof and the system features automatic guidance to target enabling evasive movement immediately after missile launch. The fire control system automatically shares all target information among the four Black Sharks of a typical flight in real time, allowing one helicopter to engage a target spotted by another, and the system also can input target information from ground-based forward scouts with man-portable target designation gear. The integrated 30mm cannon is semi-rigidly fixed on the helicopter's side, movable only slightly in elevation and azimuth. The aircraft's agility allows the weapon control system to turn (the entire helicopter and) the cannon at the target acquired in the pilot's helmet sight about as fast as the cannon turret of the Apache or the Mi-28 turns. The semi-rigid mounting improves the cannon's accuracy, giving the 30mm a longer practical range and better hit ratio at medium ranges than with a free-turning turret mount.</English>
+		<Polish>Ka-50 to jednomiejscowy śmigłowiec wojskowy produkcji rosyjskiej, zaprojektowany jako helikopter szturmowy. Ka-50 został stworzony w biurze konstrukcyjnym Kamowa we wczesnych latach 80., a wprowadzony do służby w armii Federacji Rosyjskiej w roku 1995. Jego nazwa wywoławcza NATO to Hokum, a w Rosji "Cziornaja Akuła". Na razie wyprodukowano tylko kilka sztuk i nie rozpoczęto masowej produkcji. Stworzono dwie wersje śmigłowca, Ka-50 Hokum-A jest jednomiejscowym śmigłowcem bliskiego wsparcia, a Ka-52 Hokum-B jest dwumiejscowym helikopterem szkoleniowym oraz bojowym. Ka-50 ma być używany do likwidowania celów naziemnych, w tym celów opancerzonych, wolno poruszających się pojazdów oraz piechoty. Został wyprodukowany by wspólnie z Mi-28 "Havoc" zastąpić wysłużonego Mi-24 "Hind" w roli bojowego śmigłowca z możliwością walki nocnej. W jego projektowaniu uwzględniono ewentualne starcie z amerykańskim AH-64 "Apache". Ze względu na smukłe kształty kadłuba przypomina nieco samolot z podwójnym śmigłem ponad kadłubem. Helikopter posiada dwa współosiowe wirniki (z trzema łopatami każdy) wykonanymi z bardzo wytrzymałych i odpornych na przestrzelenie materiałów kompozytowych. Taka konfiguracja wirników, nazywana "układem Kamowa" jest powszechnie stosowana w rosyjskich śmigłowcach morskich konstrukcji biura konstrukcyjnego Kamowa, jak np. w popularnym Ka-27, jednak raczej rzadko występuje w konstrukcjach innych producentów. Z racji posiadania dwóch przeciwbieżnych wirników głównych, śmigłowiec ten nie potrzebuje śmigła ogonowego, które w tradycyjnych konstrukcjach równoważy moment obrotowy pojedynczego wirnika głównego. Powoduje to, że ogon jest niezwykle krótki, a po odstrzeleniu go, śmigłowiec, może nadal lecieć, choć z poważnymi problemami. Pancerz Ka-50 jest prawie idealnie aerodynamiczny. Posiada umieszczone pośrodku skrzydła do podwieszania rakiet różnego rodzaju. Za kabiną pilota po obu bokach maszyny znajdują się dwa silniki. W razie uszkodzenia układu smarowania, śmigłowiec jest w stanie kontynuować zadanie przez 30 minut, dzięki zastosowania w układach przeniesienia napędu elementów pokrytych tworzywem zbliżonym do teflonu - o niskim współczynniku tarcia. Kabina pilota jest całkowicie opancerzona, posiada także rewolucyjny system katapultowania (pierwszy raz na świecie,kiedy zastosowano tą możliwość w śmigłowcu) Zwiezda K-37-800. Katapultowanie może nastąpić na dowolnej wysokości i przy maksymalnej prędkości. W pierwszej fazie lotu fotela wyrzucanego z przypiętym do niego pilotem jego tor przebiega przez płaszczyzny obrotu wirników. Konstruktorzy rozwiązali ten problem przez zastosowanie systemu odstrzeliwującego łopaty wirników tuż przed wystrzeleniem fotela, oczywiście cała sekwencja katapultowania jest w pełni automatyczna. Mechanizm ten wymusił opracowanie specjalnej taktyki dla Ka-50 działających w parach lub większych zespołach: odstrzelone łopaty są bowiem rozrzucane siłą odśrodkową w przypadkowych kierunkach i trzeba było liczyć się z ryzykiem ich uderzenia w inną maszynę w szyku. Pilot znajduje się też w specjalnym łożu wykonanym z mat. kevlar. Zapewnia to pełne bezpieczeństwo dla załogi, nawet pod silnym ostrzałem. Śmigłowiec posiada wiele unikatowych cech służących zmniejszeniu kosztów jego użytkowania i wytrzymałości konstrukcji. Pojemniki do przechowywania amunicji i wszystkie systemy wewnątrz maszyny są chronione przez zrobioną w 35% z kompozytów "zbroją" z kevlaru i nomexu. Awionika jest podobna do stosowanej w jednoosobowych samolotach bojowych. Dzięki niej pilot może używać satelitarnego systemu nawigacji w każdą pogodę, 24 godziny na dobę. Kamery TV oraz laserowy system namierzania pozwala na likwidację celu zarówno w dzień jak i w nocy. Jednak najważniejszym elementem jest system nakierowywania, dzięki któremu brak strzelca nie jest problemem. Komputer pokładowy można ustawić tak by wciąż trzymał cel na muszce. Pilot może namierzyć, oznaczyć i zaatakować cel z odległości do 10 km. Uzbrojenie stanowi szybkostrzelne działko 30 mm, zamontowane z boku kadłuba, oraz sześć punktów powieszenia rakiet powietrze-ziemia, powietrze-powietrze, kierowane lub niekierowane, bomby różnych kalibrów oraz dodatkowe pojemniki na amunicję. Udźwig wynosi 2,300 kg. Typowym układem broni w formacji przeciwczołgowej jest 12 rakiet AT-16, 500 sztuk amunicji do działka kaliber 30mm oraz dwa pojemniki z rakietami niekierowanymi 80 mm po 20 sztuk każda. W razie potrzeby można go wyposażyć w rakiety powietrze-powietrze Igła-C. Ciekawostką jest, że helikopter używa zmodyfikowanej wersji działka 30 milimetrowego, używanego na Bojowym Wozie Piechoty BMP-2. W BMP2 używane było działko 2A42 na Hokum zastosowano 2A72.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KAHINA</Tag>
@@ -16052,6 +16279,26 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_LA_PLATA_MOSQUETERO_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]La Plata Mosquetero[COLOR_REVERT] is a La Plata unique unit.</English>
 		<French>Le [COLOR_UNIT_TEXT]Mousquetaire de La Plata[COLOR_REVERT] est une unité de La Plata unique.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LEIDANG</Tag>
+		<English>Leidang</English>
+		<French>Guerrier Leidang</French>
+		<Italian>
+			<Text>Leidang</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LEIDANG_PEDIA</Tag>
+		<English>The Leidang is an Icelandic unique unit, a replacement for the Heavy Axeman.  Because of the Norse specialization in seaborne raids, it starts with the Amphibious promotion. Its other starting promotion, City Raider I, is for much the same reason.  Thus it makes an ideal "Marine" for the Medieval and Renaissance eras.</English>
+		<Italian>Il Leidang è l'unità unica islandese che sostituisce il guerriero con ascia corazzato. Le sue promozioni, Anfibio e Razziatore I, derivano dal fatto che i popoli norreni di discendenza vichinga erano specializzati nei raid dal mare contro le città nemiche. Per questo motivo il Leidang è un perfetto "Marine" per le età medievali e rinascimentali.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LEIDANG_STRATEGY</Tag>
+		<English>The Leidang is the unique Heavy Axeman of the Icelandic culture. Like the Axeman line in general, it has a hefty 50% bonus against all melee units. It starts with the Amphibious and City Raider I promotions.</English>
+		<Italian>Il Leidang sostituisce il guerriero con ascia corazzato nella cultura islandese; come tutti i guerrieri con ascia, ha un bonus del 50% contro le unità da combattimento ravvicinato. Inizia con le promozioni Anfibio e Razziatore I.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LEONIDAS</Tag>
@@ -17532,6 +17779,26 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_MAROON</Tag>
+		<English>Maroon</English>
+		<French>Marron Jamaïcain</French>
+		<Italian>
+			<Text>Maroon</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MAROON_PEDIA</Tag>
+		<English>The escaped slaves of the Caribbean region became known as Maroons.  They formed their own communities in the inaccessible jungles, and in many cases proved impossible to recapture.</English>
+		<Italian>Gli schiavi che scappavano nelle regioni Caraibiche divennero noti come Maroon. Formarono le loro comunità nelle giungle più inaccessibili e in molti casi non vennero più ricatturati.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MAROON_STRATEGY</Tag>
+		<English>The Maroon is the unique Musketman of the Jamaican culture. It starts with Guerrilla I, Guerrilla II and Hillsman.  Once he gets up in the hills, he's hard to dislodge.</English>
+		<Italian>Il Maroon è il moschettiere unico della cultura Giamaicana; inizia con le promozioni Guerriglia I, Guerriglia II e Guerriero delle Colline. Una volta che si rintana su una collina, è difficile da stanare.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_MASAI_MORAN</Tag>
 		<English>Moran</English>
 		<French>Guerrier Morane</French>
@@ -17603,6 +17870,19 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_MATAPANG_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Mata'pang[COLOR_REVERT] is hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Mata'pang[COLOR_REVERT] est une unité héroïque.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MATNU</Tag>
+		<English>Matnu</English>
+		<French>Archer Matnu</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MATNU_PEDIA</Tag>
+		<English>If you want to take an Akkadian city, you will need overwhelming superiority of numbers, or else a miracle...  The Akkadian Matnu is the best city defence archer in the known world.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MATNU_STRATEGY</Tag>
+		<English>The Matnu is the unique Composite Bowman of the Akkadian culture. It has an extra 50% defence bonus in a city, extra 25% defence on a hill, and more uniquely, is immune to collateral damage from all siege units. Additionally, it starts with City Garrison I. Quite simply the best city defender until the longbow, and perhaps even beyond...</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MATOPE</Tag>
@@ -21992,6 +22272,26 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Le [COLOR_UNIT_TEXT]Guerrier PLO[COLOR_REVERT] est une unité Palestinienne unique.</French>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_PLUMED_ARCHER</Tag>
+		<English>Plumed Archer</English>
+		<French>Archer à Plumes</French>
+		<Italian>
+			<Text>Arciere piumato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_PLUMED_ARCHER_PEDIA</Tag>
+		<English>The natives of Central America had developed the bow and used it in combat. Their bow technology was not far advanced, however, in comparison to the Asian composite bow or English longbow. Archers could be ordered to wound when capture of enemies was more important than killing. Like all other Mayan warriors, archers wore distinctive costumes so commanders could distinguish their troops and place the right group where needed. The status of archers was low in comparison to other warrior ranks, so men of lower standing and skill entered their ranks. Men of status and ambition joined the ranks of the Eagle Warrior where they could have the opportunity to take captives. The better skilled and experienced bowmen became Elite Plumed Archers. They were especially important when absolute victory was required because they had the ability to kill enemies quickly and break enemy army morale under a barrage of well-aimed arrows.</English>
+		<Italian>L'arciere piumato è un'unità unica della cultura huasteca che sostituisce l'arciere standard; oltre alle normali ailità di un arciere, ottiene anche la promozione Mobilità.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_PLUMED_ARCHER_STRATEGY</Tag>
+		<English>The [COLOR_UNIT_TEXT]Plumed Archer[COLOR_REVERT] is the unique Archer of the Huastec culture. It has a 50% bonus in City and Hill Defence, and starts with the Mobility promotion.</English>
+		<Italian>[COLOR_UNIT_TEXT]L'arciere piumato[COLOR_REVERT] è l'unità unica della cultura huasteca. Ha un bonus del 50% alla difesa in città e sulle colline, oltre alla promozione Mobilità.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_PLUNDER_CITIES</Tag>
 		<English>[ICON_BULLET]Can Conduct a Plundering Mission</English>
 		<French>[ICON_BULLET]Peut réaliser des mission de Pillage</French>
@@ -22881,14 +23181,14 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_QIANG_PIKEMAN_STRATEGY</Tag>
-		<English>The Qiang Pikeman is the unique Heavy Pikeman of the Quang culture. It starts with promotions Formation I and II, which almost doubles its standard Pikeman bonus against mounted units.</English>
-		<Italian>Il picchiere Qiang è il picchiere pesante unico della cultura Quang. Inizia con le promozioni Formazione I e Formazione II, che raddoppiano le sue abilità contro le unià montate.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_QIANG_PIKEMAN_PEDIA</Tag>
 		<English>The Pikeman of the Qiang culture in China developed the art of the pike to a level comparable with the legendary pikemen of Switzerland.</English>
 		<Italian>I picchieri della cultura Qiang svilupparono la costruzione di picche ad un livello comparabile a quello dei leggendari picchieri svizzeri.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_QIANG_PIKEMAN_STRATEGY</Tag>
+		<English>The Qiang Pikeman is the unique Heavy Pikeman of the Quang culture. It starts with promotions Formation I and II, which almost doubles its standard Pikeman bonus against mounted units.</English>
+		<Italian>Il picchiere Qiang è il picchiere pesante unico della cultura Quang. Inizia con le promozioni Formazione I e Formazione II, che raddoppiano le sue abilità contro le unià montate.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_QSHIP</Tag>
@@ -24358,6 +24658,26 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_SAKAYENGA_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Sakayenga[COLOR_REVERT] is hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Sakayenga[COLOR_REVERT] est une unité héroïque.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SAKA_CATAPHRACT</Tag>
+		<English>Saka Cataphract</English>
+		<French>Cataphracte Saka</French>
+		<Italian>
+			<Text>Catafratta di Saka</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SAKA_CATAPHRACT_PEDIA</Tag>
+		<English>The Massagetae culture copied the Byzantine Cataphract, but their cavalry tended to specialize in surprising and routing enemy melee units (who in this theatre were mainly swordsmen and spearmen).</English>
+		<Italian>I Massageti copiarono la catafratta dai bizantini, ma la loro cavalleria era specializzata nel sorprendere ed aggirare le unità da nemiche, che erano spesso lancieri e spadaccini.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SAKA_CATAPHRACT_STRATEGY</Tag>
+		<English>The Saka Cataphract is the unique substitute for the Knight from the Massagetae culture.  They start with the first two Shock promotions, so naturally they are most lethal against melee units.</English>
+		<Italian>La catafratta di Saka sostituisce il cavaliere nella cultura dei Massageti. Inizia con le promozioni Shock I e Shock II, perciò è decisamente letale contro le unità da combattimento ravvicinato.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SALAWAT_YULAYEV</Tag>
@@ -26485,6 +26805,26 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Wojownik z Maczugą jest ulepszoną wersją zwykłego wojownika.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_SPIRIT_WALKER</Tag>
+		<English>Spirit Walker</English>
+		<French>Marcheur des Esprits</French>
+		<Italian>
+			<Text>Spirito camminatore:Spiriti camminatori</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SPIRIT_WALKER_PEDIA</Tag>
+		<English>Spirit Walkers were warriors imbued with native spirituality, and were feared and respected by the rival tribes in the region. All the Four Corners tribes greatly respected the Spirit Walkers as a threat, and even the Apache (famed desert warriors themselves) were careful not to underestimate them.</English>
+		<Italian>Gli spiriti camminatori erano guerrieri intrisi di spiritualità, che erano temuti e rispettati dalle tribù rivali nella regione. Tutte le tribù dei quattro angoli (un'area nel sudovest degli Stati Uniti, caratterizzata dal confine tra quattro diversi stati) rispettavano gli spiriti camminatori come una minaccia, e anche gli Apache (loro stessi guerrieri del deserto di fama) erano attenti a non sottovalutarli.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SPIRIT_WALKER_STRATEGY</Tag>
+		<English>The Spirit Walker replaces the Spearman for the Anasazi culture.  They start with a Desert Combat promotion, and double movement.  Thus they are great for defence or attack on desert maps/regions, especially against mounted units.</English>
+		<Italian>Lo spirito camminatore sostituisce il lanciere per la cultura Anasazi; inizia con la promozione Combattente del deserto I e con un movimento doppio rispetto ai normali lancieri. Perciò, sono ottimi per attaccare e difendere nelle regioni desertiche, specialmente contro le unità montate.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPY</Tag>
 		<English>Spy</English>
 		<French>Espion</French>
@@ -28606,6 +28946,26 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Le Héros national Americain est [COLOR_UNIT_TEXT]Thomas Jefferson[COLOR_REVERT], disponible à la Renaissance. Il commence avec un [COLOR_HIGHLIGHT_TEXT]Erudit[COLOR_REVERT] dans sa suite. Il peut être construit lorsque [COLOR_TECH_TEXT]Education[COLOR_REVERT] et [COLOR_TECH_TEXT]Constitution[COLOR_REVERT] sont recherchés.</French>
 		<Spanish>El héroe nacional americano es [COLOR_UNIT_TEXT]Thomas Jefferson[COLOR_REVERT], disponible a partir del Renacimiento. Comienza con el ascenso [COLOR_HIGHLIGHT_TEXT]Erudito[COLOR_REVERT] en su séquito. Puede ser entrenado una vez investigadas la [COLOR_TECH_TEXT]Educación[COLOR_REVERT] y la [COLOR_TECH_TEXT]Constitución[COLOR_REVERT].</Spanish>
 		<Polish>Bohater Narodowy Amerykanów to [COLOR_UNIT_TEXT]Thomas Jefferson[COLOR_REVERT]. Rozpoczyna w towarzystwie [COLOR_HIGHLIGHT_TEXT]Badacza[COLOR_REVERT]. Może zostać wyszkolony wraz z odkryciem [COLOR_TECH_TEXT]Edukacji[COLOR_REVERT] i [COLOR_TECH_TEXT]Konstytucji[COLOR_REVERT].</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_THORAX_HOPLITE</Tag>
+		<English>Thorax Hoplite</English>
+		<French>Hoplite Thorax</French>
+		<Italian>
+			<Text>Oplita:Opliti</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_THORAX_HOPLITE_PEDIA</Tag>
+		<English>The Hoplite was the heavy infantryman of Classical-era Greece.  Thorax refers to the breastplate that the Athenian hoplite achieved a superiority by wearing later in the period.</English>
+		<Italian>L'oplita costituiva il fante pesante nella Grecia dell'era classica; indossava una corazza toracica che permise agli ateniesi di ottenere una superiorità militare in quel periodo.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_THORAX_HOPLITE_STRATEGY</Tag>
+		<English>The Thorax Hoplite is the unique Spearman alternative for the Athenian culture. It starts with Mobility and Formation I.  This means a headstart over even the standard Spearman against mounted units.</English>
+		<Italian>L'oplita sostituisce il lanciere nella cultura ateniese; inizia con le promozioni Mobilità e Formazione I. Questo significa che è ancora più forte dei normali lancieri contro le unità montate.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_THRACIAN_PELTAST</Tag>
@@ -31913,6 +32273,19 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>[COLOR_UNIT_TEXT]Yupanqui[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_YURUPARI</Tag>
+		<English>Yurupari</English>
+		<French>Lancier Yurupari</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_YURUPARI_PEDIA</Tag>
+		<English>In many of the Indian cultures these rites take a central position among other important ceremonies such as funerals and fertility rites. In the Guianas and the northwest Amazon region, the initiation of the boys is very complex. The Yurupary celebration inducts the boys into the secret society of mature men. Special rites are revealed to them; they are shown the sacred trumpets or the masks representing ancestral spirits. They are subjected to violent whippings, which they must tolerate without the least expression of pain. </English>
+	</TEXT>
+<TEXT>
+		<Tag>TXT_KEY_UNIT_YURUPARI_STRATEGY</Tag>
+		<English>[COLOR_UNIT_TEXT]Yurupari[COLOR_REVERT] are Arawak culture unit. They are like [COLOR_UNIT_TEXT]Stone Spearmans[COLOR_REVERT] with bonuses to combat in forests and in looting.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_YUSUF</Tag>
 		<English>Yusuf ibn Tashfin</English>
 		<Spanish>
@@ -32163,21 +32536,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Dornier Do 335 Pfeil (pol. Strzała) to niemiecki samolot wielozadaniowy (ciężki myśliwiec, myśliwiec nocny, szybki bombowiec i samolot rozpoznawczy) z okresu II wojny światowej zbudowany w koncernie Dornier. Początkiem powstania wielozadaniowego samolotu Dornier Do 335 było opatentowanie przez prof. Claudiusa Dorniera w 1937 roku układu samolotu z jednym silnikiem ze śmigłem ciągnącym z przodu kadłuba i drugim silnikiem umieszczonym w środku kadłuba, który za pomocą przedłużonego wału napędzał śmigło pchające umieszczone za usterzeniem na końcu kadłuba. Układ ten wypróbowano w 1940 roku w samolocie doświadczalnym Schremp-Hirth Go 9, a następnie podjęto prace wstępne nad szybkim samolotem bombowym oznaczonym jak Dornier P.231. Wkrótce jednak je zarzucono, a projekt zmieniono na samolot wielozadaniowy, oznaczony jako Dornier Do 335 i nazwę Pfeil. Pierwszy prototyp powstał w 1943 roku i został oblatany 26 października 1943 roku. Nowy samolot Dornier Do 335 napędzany był dwoma silnikami Daimler-Benz DB 603E o mocy 1723 KM (1325 kW), umieszczonymi jeden z przodu, a drugi z tyłu kadłuba. Ponieważ spełniał on stawiane mu wymagania, zakłady Dorniera otrzymały zamówienie na produkcję 14 samolotów prototypowych i 21 serii A-0 i A-1. W trakcie budowy prototypów i samolotów pierwszych serii pracowano nad ulepszeniem konstrukcji i modyfikacjami, dotyczącymi uzbrojenia i zastosowania samolotu. Kabinę pilota wyposażono w fotel wyrzucany, a dla zabezpieczenia łopat tylnego śmigła zastosowano usterzenie w układzie krzyżowym. Większość z niewielu ukończonych egzemplarzy samolotu Do 335 służyła jedynie do testów. W lipcu skierowano rozpoznawczego Do 335 V3 do 1./Versuchverband OKL. Wydaje się, że nie wykonywał lotów rozpoznawczych nad terytorium nieprzyjaciela. We wrześniu 1944 utworzono Erprobungskommando 335, jednostkę do testowania samolotu w warunkach operacyjnych. Przekazano do niej kilka egzemplarzy przedseryjnej wersji Do 335A-0 i (być może) A-1. Piloci mieli wypracować taktykę dla podstawowych wersji samolotu. Prototyp nocnego myśliwca, Do 335 V10, miał zostać skierowany do testów operacyjnych w I./NJG 3. Piloci alianccy spotkali Do 335 w powietrzu kilka razy, ale nigdy nie doszło do walk powietrznych. Do dziś ocalał tylko jeden egzemplarz, Do 335A-02.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_FW190A</Tag>
-		<English>FockeWulf 190a</English>
-		<Spanish>
-			<Text>FockeWulf 190a</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Myśliwiec Focke-Wulf 190A</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_FW190A_PEDIA</Tag>
-		<English>The Focke-Wulf Fw 190 Würger, was a German single-seat, single-engine fighter aircraft designed by Kurt Tank in the late 1930s. It was used by the Luftwaffe during the Second World War. The design was the last mass produced piston-engine German fighter to see action in the war. It partially replaced the Messerschmitt Bf 109 in 1941. By 1945, the Fw 190 operated effectively on all fronts. Production ran from 1941 to the end of hostilities, during which time the aircraft was continually updated with over 20,000 built. Its later versions retained qualitative parity with Allied fighter aircraft. The Fw 190 was well-liked by its pilots, and was quickly proven to be superior in all but turn radius to the Royal Air Force's main front-line fighter, the Spitfire Mk. V variant, on its combat debut in 1941 until the introduction of the vastly improved Spitfire Mk. 9 in the autumn, 1942 restored qualitative parity.  The early Fw 190As performance decreased at high altitudes (usually 20,000ft and above) which complicated its use as a high altitude interceptor. These complications were mostly rectified in later models, notably the Focke-Wulf Fw 190D variant in the autumn, 1944. Like the Bf 109, the Fw 190 was employed as a "workhorse", and proved suitable for a wide variety of roles, including air superiority fighter, strike fighter, ground-attack aircraft, escort fighter, and operated with less success as a night fighter. Some of the Luftwaffe's most successful fighter aces flew the Fw 190. Erich Rudorffer claimed 222 kills, Otto Kittel 267 victories, and Walter Nowotny 258 victories. A great many of their kills were claimed while flying the Fw 190.</English>
-		<Polish>Focke-Wulf Fw 190 Wurger (pol dzierzba) to jednomiejscowy, jednosilnikowy niemiecki myśliwiec z czasów II wojny światowej. Wyprodukowany w ponad 20 tysiącach egzemplarzy, w tym około 6 tysięcy w wersji myśliwsko-bombowej. Pod koniec 1937 roku Ministerstwo Lotnictwa Rzeszy (Reichsluftfahrtministerium RLM) wysłało do kilku zakładów specyfikację na nowy myśliwiec, który miałby wejść, obok Bf 109, do służby i stanowić zabezpieczenie na wypadek, gdyby się okazało, że samoloty innych krajów są lepsze od Bf 109. W tym czasie konstruktorzy zakładów Focke-Wulf pod kierunkiem prof. Kurta Tanka i inżyniera Rudolfa Blasera pracowali nad kilkoma projektami myśliwców, w większości z silnikami rzędowymi. Wśród nich był też projekt dość małego myśliwca o zwartej konstrukcji z 18 cylindrowym, chłodzonym powietrzem, silnikiem gwiazdowym BMW 139. W tym czasie w Niemczech nie uważano silnika gwiazdowego za odpowiedni napęd samolotów, zwłaszcza myśliwców. Ale niepowodzenie z projektem myśliwca Heinkel He 100 i He 112 oraz przewidywania, że zakłady produkujące silniki rzędowe nie będą w niedalekiej przyszłości w stanie wyprodukować wystarczającej ilości tych silników, przyczyniły się do tego, że to ten projekt został zamówiony i rozpoczęto jego rozwój. Ponadto zauważono, że za granicą powstały dość udane konstrukcje myśliwców z silnikami gwiazdowymi. Bezpośrednio rozwojem Fw 190 zajmował się zespół pod kierownictwem inżyniera Rudolfa Blasera. Kiedy RLM w 1938 roku zamówiło 4 prototypy tej maszyny, prace nad projektem nabrały tempa. Najpierw w 1938 roku zbudowano drewnianą makietę projektu, a jesienią tego roku rozpoczęto budowę prototypu. Był to całkowicie metalowy dolnopłat o konstrukcji półskorupowej, z wciąganym podwoziem. Napęd miał stanowić silnik gwiazdowy BMW 139 o mocy startowej 1550 KM. Ponieważ silnik gwiazdowy stawia większy opór czołowy, zaprojektowano specjalny tunelowy kołpak na śmigło i osłonę na silnik z wlotem powietrza po środku, co miało zmniejszyć opór powietrza oraz problem z chłodzeniem silnika. Pierwszy prototyp Fw 190 V-1, jeszcze z rejestracją cywilną D-OPZE, był gotowy na wiosnę 1939 roku i po serii testów naziemnych został oblatany 1 czerwca 1939 roku na lotnisku w Bremie. Oblotu dokonał szef oblatywaczy wytwórni, Hans Sander. Od razu okazało się, że samolot spełnia pokładane w nim nadzieje: miał bardzo dobre właściwości lotne, dobrą widoczność oraz obiecujące osiągi. Kolejną zaletą było szerokie podwozie, które nawet przy bardzo wysokiej prędkości lądowania prototypu, 210 km/h, pozwalało na bezpieczne lądowanie. Samolot miał jednak kilka wad. Najpoważniejszymi były problemy z blokowaniem podwozia po wciągnięciu w skrzydła, skłonności do przegrzewania się silnika oraz wysoka temperatura panująca w kokpicie, dochodząca nawet do 55oC oraz przedostawanie się tam gazów spalinowych, co zmuszało do lotów w masce tlenowej. Samolot został następnie przekazany do ośrodka Luftwaffe w Rechlin, gdzie w czasie testów osiągnął prędkość aż 595 km/h na wysokości 4000 m. Następnie zwrócono go do wytwórni aby dokonać modyfikacji. Przede wszystkim poprawiono chłodzenie silnika, dodając przed samym silnikiem 10-łopatowy wentylator, co nadal było niewystarczające. Ponadto zrezygnowano z tunelowego kołpaka śmigła na rzecz tradycyjnego. Uczyniono tak, ponieważ próby w tunelu aerodynamicznym nie wykazały aby kołpak tunelowy poprawiał znacząco osiągi samolotu. Zmieniono też cywilne oznaczenie maszyny na wojskowe WL-FOLY a potem FO+LY. Drugi prototyp Fw 190 V-2 został ukończony jeszcze jesienią 1939 roku i oblatano go 31 października 1939 roku. Napędzany był też silnikiem BMW 139, ale już z wentylatorem, oraz miał uzbrojenie złożone z 2 kaemów MG17 kal. 7,9 mm nad silnikiem i dwóch kaemów MG131 kal 13 mm w skrzydłach. Drugi prototyp na początku 1940 roku zaprezentowano Hermanowi Goeringowi, któremu bardzo się on spodobał. Dość szybko zamówiono 40 egzemplarzy przedseryjnych Fw 190 A-0. Drugi prototyp został rozbity 4 marca 1940 roku. W tym czasie zakłady BMW zaprzestały rozwoju silnika BMW 139, uznając go za nieudaną konstrukcję, na rzecz nowego silnika BMW 801. Był to również silnik gwiazdowy, 14 cylindrowy, chłodzony powietrzem. Miał tę samą średnicę co BMW 139, ale był dłuższy i cięższy. Ponieważ zastosowanie go na Fw 190 wymagało dużych zmian w konstrukcji, zrezygnowano z budowy prototypów V-3 i V-4. Natomiast nowym silnikiem BMW 801 był już napędzany piąty prototyp FW-190 V-5. Przebudowano przód samolotu, zmieniono zarazem osłonę silnika i przede wszystkim wzmocniono konstrukcję. Kabinę pilota przesunięto do tyłu, co zmniejszyło problem wysokiej temperatury oraz dało więcej miejsca z przodu samolotu na uzbrojenie, pogorszyła się jednak widoczność do przodu podczas lądowania. Wzmocniono podwozie, z uwagi na wzrost masy samolotu. Hydrauliczny system jego chowania zamieniono na elektryczny. Napęd stanowił silnik BMW 801 C-0. Prototyp oblatano wczesną wiosną 1940 roku. Początkowo miał on takie same skrzydła jak V-1 i V-2, tzw. mniejsze, ale ponieważ jego masa była większa o 635 kg, spowodowało to spadek osiągów i pogorszenie właściwości lotnych. Postanowiono bez zmiany profilu, zwiększyć rozpiętość do 10,506 m i powierzchnię nośną 18,30 metra kwadratowego, przesuwając jednocześnie przednią krawędź skrzydła do przodu. Ponadto postanowiono zwiększyć rozpiętość usterzenia poziomego oraz powiększyć statecznik pionowy. Zmiany te planowano zastosować na nowym prototypie, ale kiedy w sierpniu 1940 roku na lotnisku V-5 zderzył się z pojazdem i został uszkodzony, przebudowano go już z tymi modyfikacjami. Poprawiło to znacznie właściwości lotne maszyny, a prędkość maksymalna spadła tylko o 10 km/h. Tak przebudowaną maszynę oznaczono jako Fw 190 V-5g (g = grosser = większy), a poprzednią jego postać oznaczano jako Fw 190 V-5k (k = kleiner = mniejszy). Co ciekawe, Alianci byli nieświadomi istnienia nowego modelu myśliwca, który w relacjach pilotów był traktowany jako "P-36 przejęty od Francuzów". Jednakże po pierwszych walkach 21 października 1941 zgłoszono, że Luftwaffe dysponuje nowym myśliwcem o wyjątkowo dużej prędkości i wznoszeniu deklasującym używane w tamtym czasie przez Brytyjczyków Spitfire Mk V. Dopiero omyłkowe lądowanie oberleutnanta Armina Fabera pilotującego Fw 190 A-3 w dniu 23 czerwca 1942 na brytyjskim lotnisku pozwoliło zapoznać się aliantom z jakim naprawdę mają do czynienia przeciwnikiem. Fw 190 od początku został skonstruowany z myślą o wykorzystaniu do produkcji firm, które dotychczas nie miały doświadczenia w wytwarzaniu samolotów. Szczególnie zaowocowało to po roku 1942, od kiedy Niemcy były paraliżowane coraz częstszymi nalotami bombowymi, a zakłady lotnicze były szczególnie atakowane. Ostrożne szacunki mówią o wyprodukowaniu około 18 tysięcy sztuk Fw 190. Wynika to stąd, że część płatowców została ponownie złożona ze zniszczonych egzemplarzy, otrzymując nowy numer fabryczny, dlatego też część danych określa produkcję na 20 - 22 tysiące sztuk. Główne zakłady produkujące ten samolot miały lokalizację w Bremen, Tutow in Mecklenburg, Marienburg (Malbork), Cottbus, Sorau (Żary), Neubrandenburg oraz Schwerin. Wytwarzaniem na licencji zajmowały się również firmy: AGO? Oschersieben; Arado? Babelsberg, Brandenburg, Warnemunde, Anklam, Rathenow, Neuendorf; Fieseler? Kassel Waldau; SNCAC (okupowana Francja)? Cavant. Nie były to oczywiście wszystkie wytwórnie, bo wiele pomniejszych zakładów i frontowych warsztatów naprawy sprzętu dokonywało swoistego recyklingu z rozbitych maszyn, a podczas walk o Berlin na lotnisku Tempelhof odkryto sprawną linię produkcyjną. Mimo, że samolot Focke Wulfa został uznany za lepszy od Bf 109 nie doszło do zaprzestania produkcji tego ostatniego tak, że starszych 109-tek wytworzono prawie dwa razy więcej do końca wojny. Od 1996 roku niemiecka firma Flug Werk GmbH w Gammelsdorf rozpoczęła produkcję wersji Fw 190 A-8, A-9 oraz D-9. Do końca 2007 roku wybudowano około 20 egzemplarzy oznaczanych odpowiednio A-8/N, A-9/N oraz D-9/N (Nachbau). Wszystkie repliki latają, napędzane są jedynie silnikami gwiazdowymi ASz? 82 produkowanymi na licencji rosyjskiej w Chinach lub amerykańskimi rzędowymi Allison V-1710. Reszta elementów płatowca według zapewnień producenta jest prawie w 98% zgodna z oryginalną dokumentacją.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_he111</Tag>
 		<English>Heinkel HE111 Bomber</English>
 		<French>Bombardier Heinkel HE111</French>
@@ -32188,23 +32546,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Bombowiec Heinkel He-111</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_KA50</Tag>
-		<English>KA50 Gunship</English>
-		<French>Hélicoptère KA50</French>
-		<Italian>Elicottero KA50</Italian>
-		<Spanish>
-			<Text>Helicóptero KA50</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Śmigłowiec Ka-50</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_KA50_PEDIA</Tag>
-		<English>The Kamov Ka-50 Black Shark is a single-seat attack helicopter with the distinctive coaxial rotor system of the Kamov design bureau. The Ka-50 was designed to be small, fast, and agile to improve survivability and lethality. For minimal weight and size (thus maximal speed and agility) it was - uniquely among gunships - to be operated by a single pilot only. [PARAGRAPH:1]It features Kamov's characteristic contra-rotating co-axial rotor system, which removes the need for the entire tail-rotor assembly and improves the aircraft's aerobatic qualities - it can perform loops, rolls, and "the funnel" (circle-strafing) where the aircraft maintains a line-of-sight to target while flying circles of varying altitude, elevation, and airspeed around it. Using two rotors means that a smaller rotor with slower moving rotor tips can be used compared to a single rotor design. Since the speed of the advancing rotor tip is a primary limitation to the maximum speed of a helicopter, this allows a faster maximum speed than helicopters such as the AH-64. [PARAGRAPH:1]The main armament are the twelve laser-guided Vikhr anti-tank missiles with a maximum range of some 10 km. The laser guidance is reported to be virtually jam-proof and the system features automatic guidance to target enabling evasive movement immediately after missile launch. The fire control system automatically shares all target information among the four Black Sharks of a typical flight in real time, allowing one helicopter to engage a target spotted by another, and the system also can input target information from ground-based forward scouts with man-portable target designation gear. The integrated 30mm cannon is semi-rigidly fixed on the helicopter's side, movable only slightly in elevation and azimuth. The aircraft's agility allows the weapon control system to turn (the entire helicopter and) the cannon at the target acquired in the pilot's helmet sight about as fast as the cannon turret of the Apache or the Mi-28 turns. The semi-rigid mounting improves the cannon's accuracy, giving the 30mm a longer practical range and better hit ratio at medium ranges than with a free-turning turret mount.</English>
-		<Polish>Ka-50 to jednomiejscowy śmigłowiec wojskowy produkcji rosyjskiej, zaprojektowany jako helikopter szturmowy. Ka-50 został stworzony w biurze konstrukcyjnym Kamowa we wczesnych latach 80., a wprowadzony do służby w armii Federacji Rosyjskiej w roku 1995. Jego nazwa wywoławcza NATO to Hokum, a w Rosji "Cziornaja Akuła". Na razie wyprodukowano tylko kilka sztuk i nie rozpoczęto masowej produkcji. Stworzono dwie wersje śmigłowca, Ka-50 Hokum-A jest jednomiejscowym śmigłowcem bliskiego wsparcia, a Ka-52 Hokum-B jest dwumiejscowym helikopterem szkoleniowym oraz bojowym. Ka-50 ma być używany do likwidowania celów naziemnych, w tym celów opancerzonych, wolno poruszających się pojazdów oraz piechoty. Został wyprodukowany by wspólnie z Mi-28 "Havoc" zastąpić wysłużonego Mi-24 "Hind" w roli bojowego śmigłowca z możliwością walki nocnej. W jego projektowaniu uwzględniono ewentualne starcie z amerykańskim AH-64 "Apache". Ze względu na smukłe kształty kadłuba przypomina nieco samolot z podwójnym śmigłem ponad kadłubem. Helikopter posiada dwa współosiowe wirniki (z trzema łopatami każdy) wykonanymi z bardzo wytrzymałych i odpornych na przestrzelenie materiałów kompozytowych. Taka konfiguracja wirników, nazywana "układem Kamowa" jest powszechnie stosowana w rosyjskich śmigłowcach morskich konstrukcji biura konstrukcyjnego Kamowa, jak np. w popularnym Ka-27, jednak raczej rzadko występuje w konstrukcjach innych producentów. Z racji posiadania dwóch przeciwbieżnych wirników głównych, śmigłowiec ten nie potrzebuje śmigła ogonowego, które w tradycyjnych konstrukcjach równoważy moment obrotowy pojedynczego wirnika głównego. Powoduje to, że ogon jest niezwykle krótki, a po odstrzeleniu go, śmigłowiec, może nadal lecieć, choć z poważnymi problemami. Pancerz Ka-50 jest prawie idealnie aerodynamiczny. Posiada umieszczone pośrodku skrzydła do podwieszania rakiet różnego rodzaju. Za kabiną pilota po obu bokach maszyny znajdują się dwa silniki. W razie uszkodzenia układu smarowania, śmigłowiec jest w stanie kontynuować zadanie przez 30 minut, dzięki zastosowania w układach przeniesienia napędu elementów pokrytych tworzywem zbliżonym do teflonu - o niskim współczynniku tarcia. Kabina pilota jest całkowicie opancerzona, posiada także rewolucyjny system katapultowania (pierwszy raz na świecie,kiedy zastosowano tą możliwość w śmigłowcu) Zwiezda K-37-800. Katapultowanie może nastąpić na dowolnej wysokości i przy maksymalnej prędkości. W pierwszej fazie lotu fotela wyrzucanego z przypiętym do niego pilotem jego tor przebiega przez płaszczyzny obrotu wirników. Konstruktorzy rozwiązali ten problem przez zastosowanie systemu odstrzeliwującego łopaty wirników tuż przed wystrzeleniem fotela, oczywiście cała sekwencja katapultowania jest w pełni automatyczna. Mechanizm ten wymusił opracowanie specjalnej taktyki dla Ka-50 działających w parach lub większych zespołach: odstrzelone łopaty są bowiem rozrzucane siłą odśrodkową w przypadkowych kierunkach i trzeba było liczyć się z ryzykiem ich uderzenia w inną maszynę w szyku. Pilot znajduje się też w specjalnym łożu wykonanym z mat. kevlar. Zapewnia to pełne bezpieczeństwo dla załogi, nawet pod silnym ostrzałem. Śmigłowiec posiada wiele unikatowych cech służących zmniejszeniu kosztów jego użytkowania i wytrzymałości konstrukcji. Pojemniki do przechowywania amunicji i wszystkie systemy wewnątrz maszyny są chronione przez zrobioną w 35% z kompozytów "zbroją" z kevlaru i nomexu. Awionika jest podobna do stosowanej w jednoosobowych samolotach bojowych. Dzięki niej pilot może używać satelitarnego systemu nawigacji w każdą pogodę, 24 godziny na dobę. Kamery TV oraz laserowy system namierzania pozwala na likwidację celu zarówno w dzień jak i w nocy. Jednak najważniejszym elementem jest system nakierowywania, dzięki któremu brak strzelca nie jest problemem. Komputer pokładowy można ustawić tak by wciąż trzymał cel na muszce. Pilot może namierzyć, oznaczyć i zaatakować cel z odległości do 10 km. Uzbrojenie stanowi szybkostrzelne działko 30 mm, zamontowane z boku kadłuba, oraz sześć punktów powieszenia rakiet powietrze-ziemia, powietrze-powietrze, kierowane lub niekierowane, bomby różnych kalibrów oraz dodatkowe pojemniki na amunicję. Udźwig wynosi 2,300 kg. Typowym układem broni w formacji przeciwczołgowej jest 12 rakiet AT-16, 500 sztuk amunicji do działka kaliber 30mm oraz dwa pojemniki z rakietami niekierowanymi 80 mm po 20 sztuk każda. W razie potrzeby można go wyposażyć w rakiety powietrze-powietrze Igła-C. Ciekawostką jest, że helikopter używa zmodyfikowanej wersji działka 30 milimetrowego, używanego na Bojowym Wozie Piechoty BMP-2. W BMP2 używane było działko 2A42 na Hokum zastosowano 2A72.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_mi24</Tag>
