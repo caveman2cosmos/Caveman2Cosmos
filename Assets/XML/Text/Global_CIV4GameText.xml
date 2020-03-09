@@ -3314,30 +3314,6 @@
 		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_COLOSSEUM]Koloseum[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_COMBAT_MESSAGE_DEFEATED</Tag>
-		<English>%[s1_CivName]'s %[s2_UnitName] has defeated %[s3_CivName]'s %[s4_UnitName]!</English>
-		<French>L'unité %[s2_UnitName] (%[s1_CivName]) a vaincu l'unité %[s4_UnitName] (%[s3_CivName])!</French>
-		<German>%s1_CivName: %s4:4_UnitName wurde von %s2_UnitName (%s3_CivName) besiegt</German>
-		<Italian>L'unità %[s2_UnitName] dell'%[s1_CivName] ha sconfitto l'unità %[s4_UnitName] dell'%[s3_CivName]!</Italian>
-		<Spanish>[NUM2:Un:Una:Unos:Unas] %[s2_UnitName] del %[s1_CivName] [NUM2:ha:ha:han:han] derrotado a [NUM3:un:una:unos:unas] %[s3_UnitName] del %[s4_CivName].</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_COMBAT_MESSAGE_HIT</Tag>
-		<English>%[s1_CivName]'s %[s2_UnitName] is hit for %[d3_damage] (%[d4]/%[d5]HP)</English>
-		<French>L'unité %[s2_UnitName] (%[s1_CivName]) est touchée et perd %[d3] points de vie (%[d4]/%[d5]PV))!</French>
-		<German>%s1_CivName: %s2_UnitName erleidet %d3_damage Schaden (%[d4]/%[d5]Punkten)</German>
-		<Italian>L'unità %[s2_UnitName] dell'%[s1_CivName] viene colpita subendo %[d3] punti di danno (%[d4]/%[d5]PV)</Italian>
-		<Spanish>[NUM2:Un:Una:Unos:Unas] %[s2_UnitName] del %[s1_CivName] (con %[d3]/%[d4] PG) [NUM2:ha alcanzado:ha alcanzado:han alcanzado:han alcanzado] a [NUM6:un:una:unos:unas] %[s6_UnitName] del %[s5_CivName] (con %[d7]/%[d8] PG) y [NUM6:le han infligido:le han infligido:les han infligido:les han infligido] %[d9] de daño.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_COMBAT_MESSAGE_VS</Tag>
-		<English>vs</English>
-		<French>contre</French>
-		<German>gegen</German>
-		<Italian>contro</Italian>
-		<Spanish>contra</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_COMMA</Tag>
 		<English>,</English>
 	</TEXT>
