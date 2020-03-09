@@ -10309,13 +10309,14 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 
 	for (iI = 0; iI < GC.getNumMapCategoryInfos(); iI++)
 	{
-		const MapCategoryTypes eMapCategory = static_cast<MapCategoryTypes>(iI);
+		MapCategoryTypes eMapCategory = ((MapCategoryTypes)iI);
 		if (pPlot->isMapCategoryType(eMapCategory))
 		{
 			szString.append(NEWLINE);
 			szString.append(gDLL->getText("TXT_KEY_MAP_CATEGORY_TERRAIN", GC.getMapCategoryInfo(eMapCategory).getTextKeyWide()));
 		}
 	}
+
 }
 
 void CvGameTextMgr::setCityPlotYieldValueString(CvWStringBuffer &szString, CvCity* pCity, int iIndex, bool bAvoidGrowth, bool bIgnoreGrowth, bool bIgnoreFood)
