@@ -1286,6 +1286,13 @@
 		<French>Poignard dans le dos V</French>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_BAMBOO_ARMOR</Tag>
+		<English>Bamboo Armor</English>
+		<French>Armure de Bambou</French>
+		<Italian>Armatura in bambù</Italian>
+		<Polish>Bambusowy Pancerz</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BARBARIAN_HUNTER</Tag>
 		<English>Barbarian Hunter</English>
 		<French>Chasseur de Barbares</French>
@@ -5839,6 +5846,13 @@
 		<Tag>TXT_KEY_PROMOTION_TARGET_UNITCOMBAT_TEXT</Tag>
 		<English>[ICON_BULLET]Makes unit attack %s1_promo units first in a stack. (Also enables assassinations against them if the unit has that ability.)</English>
 		<French>[ICON_BULLET]Rend l'attaque d'unité %s1_promo en premier dans une pile. (Permet également des assassinats contre eux si l'unité a cette capacité.)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_TATTOO</Tag>
+		<English>Tattoo</English>
+		<French>Tatouages</French>
+		<Italian>Tatuaggi</Italian>
+		<Polish>Tatuaże</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TRAP_DISABLE_TEXT</Tag>
@@ -11573,6 +11587,13 @@
 		<Italian>[ICON_BULLET]%d1_percent%% Bonus Abilità a Inquinare Risorse</Italian>
 		<Spanish>[ICON_BULLET]Bonificación del %d1_percent%% a la insalubridad provocada</Spanish>
 		<Polish>[ICON_BULLET]+%d1_percent%% do misji zatruwania źródeł wody</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_POISON_TIPS</Tag>
+		<English>Poison Tips</English>
+		<French>Pointes empoisonnées</French>
+		<Italian>Punte avvelenate</Italian>
+		<Polish>Zatrute Groty</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_POLAR_WORKER1</Tag>

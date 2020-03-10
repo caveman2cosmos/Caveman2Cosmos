@@ -1288,6 +1288,16 @@
 		<French>[COLOR_UNIT_TEXT]Antonio[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_APACHE_CAVALRY</Tag>
+		<English>Apache Cavalry</English>
+		<French>Cavalier Apache</French>
+		<Italian>
+			<Text>Cavalleria apache</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_APACHE_CAVALRY_PEDIA</Tag>
 		<English>[H1]Cochise[\H1][BOLD]
 Chief of the Chiricahua Apache
@@ -2562,6 +2572,19 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Wojownik Jaguar</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_B17</Tag>
+		<English>B17 Bomber</English>
+		<French>Bombardier B17</French>
+		<German>B17-Bomber</German>
+		<Italian>Bombardiere B17</Italian>
+		<Spanish>
+			<Text>Bombardero B17</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Bombowiec B-17</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_B1S_LANCASTER</Tag>
 		<English>B1S Lancaster</English>
 	</TEXT>
@@ -3550,6 +3573,24 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_BEOWULF_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Beowulf[COLOR_REVERT] is hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Beowulf[COLOR_REVERT] est une unité héroïque.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_BF109</Tag>
+		<English>BF109 German fighter</English>
+		<French>Chasseur Allemand BF109</French>
+		<German>BF109-Deutscher Jäger</German>
+		<Italian>Caccia tedesco BF109</Italian>
+		<Spanish>
+			<Text>Caza alemán BF109</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Myśliwiec Messerschmitt Bf 109</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_BF109_PEDIA</Tag>
+		<English>The Messerschmitt Bf 109 was a German World War II fighter aircraft designed by Willy Messerschmitt in the early 1930s. It was one of the first true modern fighters of the era, including such features as an all-metal monocoque construction, a closed canopy, and retractable landing gear. The Bf 109 was produced in greater quantities than any other fighter aircraft in history, with a total of 33,984 units produced up to April 1945.[PARAGRAPH:2]The Bf 109 was the backbone of the Luftwaffe fighter force in World War II, although it began to be partially replaced by the Focke-Wulf Fw 190 from 1941. Originally conceived as an interceptor, it was later developed to fulfill multiple tasks, serving as bomber escort, fighter bomber, day-, night- all-weather fighter, bomber destroyer, ground-attack aircraft, and as reconnaissance aircraft. The Bf 109 had its faults. Like the Spitfire, it had a short range.  Its cockpit was cramped and the track of its undercarriage very narrow indeed so that it had challenging takeoff and landing characteristics.  Nevertheless, it remained competitive with Allied fighter aircraft until the end of the war.[PARAGRAPH:2]The aircraft served with several countries during the war, and with some for many years after. The Bf 109 was flown by the three top-scoring fighter aces of World War II who claimed 928 victories between them while flying with Jagdgeschwader 52, chiefly on the Eastern Front, as well as by the highest scoring German ace in the North African Campaign.  "The 109 was a dream, the non plus ultra," recalled Gunther Rall the Luftwaffe ace with 275 kills. "Of course, everyone wanted to fly it as soon as possible."  It was also flown by high-scoring non-German aces, notably from Finland, Romania, Croatia and Hungary.</English>
+		<Polish>Messerschmitt Bf 109, Me 109 to niemiecki samolot myśliwski, podstawowy myśliwiec Luftwaffe podczas II wojny światowej. Pierwowzorem myśliwskiego Bf 109 był samolot opracowywany dla Rumunii pod nazwą M37. Podczas dalszych prac samolot nazwano Bf 108 i pod tą nazwą był produkowany. Bf 108 Taifun był dwumiejscowym samolotem komunikacyjnym. Ministerstwo Lotnictwa Rzeszy (Reichluftfahrtministerium) w 1933 złożyło zamówienie na nowy samolot myśliwski. Do prac projektowych, w których uczestniczyli Willy Messerschmitt, Robert Lusser oraz Hubert i Richard Bauerowie, przystąpiono wiosną 1934 roku. Budowę pierwszego prototypu nowego samolotu oznaczonego V1 (V jak Versuchsmuster: egzemplarz doświadczalny) zapoczątkowano jesienią 1934 roku. Próby w locie z zablokowanym podwoziem chowanym rozpoczęto w maju 1935 roku. W pierwszym prototypie zastosowano angielski silnik Rolls-RoyceKestrel V12 o mocy startowej 695 KM (511 kW), napędzający dwułopatowe, drewniane śmigło o stałym skoku. Do ogłoszonego w tym czasie konkursu na samolot myśliwski stanęły cztery największe niemieckie biura projektowe zakładów lotniczych: Arado, Focke-Wulf, Heinkel i Bayerische Flugzeugwerke. Do dalszego rozwoju zakwalifikowały się konstrukcje biur dwóch ostatnich zakładów: He 112 i Bf 109. W czasie prób porównawczych obu prototypów Bf 109 osiągnął większą o 22 kilometry prędkość maksymalną oraz większą prędkość wznoszenia. He 112 zyskał jednak bardzo pochlebne opinie pilotów, chwalących wygodną kabinę o bardzo dobrej widoczności, dobre prowadzenie tego samolotu podczas kołowania oraz lepszą zwrotność i właściwości pilotażowe. Pierwotnie przetarg rozstrzygnięto więc na korzyść zespołu Heinkla, lecz intrygi i przebiegłość prof. Willy'ego Messerschmitta przesądziły o kontynuowaniu prac nad prototypem Bf 109. W późniejszym czasie zakłady Messerschmitt AG połączyły się z Bayerische Flugzeugwerke. Ogółem wyprodukowano ok. 33 000 Bf 109 różnych wersji. Bf 109 był samolotem bardzo trudnym do pilotażu w fazie startu, i lądowania. Po oderwaniu kółka ogonowego od nawierzchni lotniska w czasie startu, lub po dotknięciu podwoziem głównym podłoża w czasie lądowania skrzydło samolotu wykazywało natychmiastową, stałą tendencję do opadania. Także kołowanie po płycie lotniska odbywało się na oślep, gdyż osłona silnika zasłaniała pilotowi widok na wprost. Najlepsze właściwości pilotażowe, i manewrowe Bf 109 osiągał w zakresie prędkości 350-420 km/g, przewyższając pod tym względem nawet swojego najgroźniejszego konkurenta Supermarine Spitfire. Powyżej prędkości 400 km/g w wersji B,C,D, oraz powyżej 485 km/g w wersji E wraz ze wzrostem prędkości opór sterów stopniowo zwiększał się, zmuszając pilota do użycia coraz większej siły przy zmianie kierunku, lub wysokości lotu. Tym samym reakcje samolotu następowały z wyraźnym opóźnieniem. Identyczna sytuacja następowała w czasie lotu nurkowego, gdzie w górnych zakresach prędkości użycie steru kierunku przez pilota było mocno problematyczne. Należy podkreślić bardzo mały zasięg samolotu Bf 109 (15 minut lotu na Anglią i pilot musiał zawracać).</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BIKER_GANG</Tag>
@@ -5448,6 +5489,21 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Gepard</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_CHEROKEE_RIFLEMAN</Tag>
+		<English>Cherokee Rifleman</English>
+		<French>Fusilier Cherokee</French>
+		<Italian>
+			<Text>Fuciliere cherokee</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CHEROKEE_RIFLEMAN_PEDIA</Tag>
+		<English>TBD</English>
+		<French>A compléter</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHEYENNE_RIDER</Tag>
 		<English>Cheyenne Rider</English>
 		<French>Cavalier Cheyenne</French>
@@ -5545,6 +5601,17 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHINA_JUNK_STRATEGY</Tag>
 		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CHINOOK</Tag>
+		<English>Chinook</English>
+		<Italian>Elicottero Chinook</Italian>
+		<Spanish>
+			<Text>Chinook</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Śmigłowiec Chinook</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHIVALRY</Tag>
@@ -6249,6 +6316,21 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Construire cette unité de combat au corps à corps pour lutter contre d'autres unités de mêlée car il reçoit un coup de pouce à leur encontre.</French>
 		<Spanish>Construye esta unidad de combate cuerpo a cuerpo para contrarrestar a otras unidades de este tipo, ya que obtiene una bonificación contra ellas.</Spanish>
 		<Polish>Toltecki [COLOR_UNIT_TEXT]Wojownik Burzy[COLOR_REVERT] zastępuje [COLOR_UNIT_TEXT]Lekkiego Zbrojnego[COLOR_REVERT]. Posiada bonus do walki z jednostkami walczącymi wręcz.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CR42</Tag>
+		<English>Fiat CR42</English>
+		<Spanish>
+			<Text>Fiat CR42</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Myśliwiec Fiat CR-42</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_CR42_PEDIA</Tag>
+		<English>TBD</English>
+		<Polish>Fiat CR-42 to włoski samolot myśliwski z czasów II wojny światowej, wyprodukowany przez koncern Fiata. Samolot, powstały w 1936 r. w układzie dwupłatu, z otwartą kabiną i stałym podwoziem, miał być następcą CR.32, który potwierdził swe walory bojowe podczas hiszpańskiej wojny domowej (1936-1939). Choć zachowano w nim układ dwupłatu, konstrukcja była jednak unowocześniona, ponieważ wykonano ją całkowicie z metalu. CR.42 wszedł do służby w Regio Aeronautica w listopadzie 1939 roku. Pewna ilość egzemplarzy została zakupiona przez Belgię, Finlandię, Szwecję i Węgry. Samolot wykazywał bardzo dobre właściwości lotne, był bardzo zwrotny, dość szybko jednak okazało się, że jak na standardy początków II wojny światowej był już przestarzały: zbyt wolny i słabo uzbrojony. Produkcja samolotu trwała do 1942 r. Początkowo CR.42 był wykorzystywany jako samolot myśliwski. W 1940 r. pewna ilość samolotów wzięła udział w bitwie o Anglię, jednak okazało się, że CR.42 nie dorównuje nowoczesnym myśliwcom angielskim. W związku z dużymi stratami samolot został wycofany z działań bojowych i przesunięty do zadań szkoleniowych. Samolot był szeroko wykorzystywany podczas walk w Afryce Północnej, głównie do atakowania celów naziemnych. W 1943 r., po kapitulacji Włoch w zdolność do lotu zachowało tylko ok. 60 samolotów, z wyprodukowanych 1781 egzemplarzy.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CRAB</Tag>
@@ -7167,6 +7249,24 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_DIVICO_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Divico[COLOR_REVERT] is hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Divico[COLOR_REVERT] est une unité héroïque.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_DO335</Tag>
+		<English>DO335 fighter</English>
+		<French>Chasseur DO335</French>
+		<German>DO335-Jäger</German>
+		<Italian>Caccia DO335</Italian>
+		<Spanish>
+			<Text>Caza DO335</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Myśliwiec Dornier Do 335</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_DO335_PEDIA</Tag>
+		<English>TBD</English>
+		<Polish>Dornier Do 335 Pfeil (pol. Strzała) to niemiecki samolot wielozadaniowy (ciężki myśliwiec, myśliwiec nocny, szybki bombowiec i samolot rozpoznawczy) z okresu II wojny światowej zbudowany w koncernie Dornier. Początkiem powstania wielozadaniowego samolotu Dornier Do 335 było opatentowanie przez prof. Claudiusa Dorniera w 1937 roku układu samolotu z jednym silnikiem ze śmigłem ciągnącym z przodu kadłuba i drugim silnikiem umieszczonym w środku kadłuba, który za pomocą przedłużonego wału napędzał śmigło pchające umieszczone za usterzeniem na końcu kadłuba. Układ ten wypróbowano w 1940 roku w samolocie doświadczalnym Schremp-Hirth Go 9, a następnie podjęto prace wstępne nad szybkim samolotem bombowym oznaczonym jak Dornier P.231. Wkrótce jednak je zarzucono, a projekt zmieniono na samolot wielozadaniowy, oznaczony jako Dornier Do 335 i nazwę Pfeil. Pierwszy prototyp powstał w 1943 roku i został oblatany 26 października 1943 roku. Nowy samolot Dornier Do 335 napędzany był dwoma silnikami Daimler-Benz DB 603E o mocy 1723 KM (1325 kW), umieszczonymi jeden z przodu, a drugi z tyłu kadłuba. Ponieważ spełniał on stawiane mu wymagania, zakłady Dorniera otrzymały zamówienie na produkcję 14 samolotów prototypowych i 21 serii A-0 i A-1. W trakcie budowy prototypów i samolotów pierwszych serii pracowano nad ulepszeniem konstrukcji i modyfikacjami, dotyczącymi uzbrojenia i zastosowania samolotu. Kabinę pilota wyposażono w fotel wyrzucany, a dla zabezpieczenia łopat tylnego śmigła zastosowano usterzenie w układzie krzyżowym. Większość z niewielu ukończonych egzemplarzy samolotu Do 335 służyła jedynie do testów. W lipcu skierowano rozpoznawczego Do 335 V3 do 1./Versuchverband OKL. Wydaje się, że nie wykonywał lotów rozpoznawczych nad terytorium nieprzyjaciela. We wrześniu 1944 utworzono Erprobungskommando 335, jednostkę do testowania samolotu w warunkach operacyjnych. Przekazano do niej kilka egzemplarzy przedseryjnej wersji Do 335A-0 i (być może) A-1. Piloci mieli wypracować taktykę dla podstawowych wersji samolotu. Prototyp nocnego myśliwca, Do 335 V10, miał zostać skierowany do testów operacyjnych w I./NJG 3. Piloci alianccy spotkali Do 335 w powietrzu kilka razy, ale nigdy nie doszło do walk powietrznych. Do dziś ocalał tylko jeden egzemplarz, Do 335A-02.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DOB_DOB_PEDIA</Tag>
@@ -12326,6 +12426,18 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_HAYREDDIN_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Hayreddin[COLOR_REVERT] is hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Hayreddin[COLOR_REVERT] est une unité héroïque.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HE111</Tag>
+		<English>Heinkel HE111 Bomber</English>
+		<French>Bombardier Heinkel HE111</French>
+		<Italian>Bombardiere Heinkel HE111</Italian>
+		<Spanish>
+			<Text>Bombardero Heinkel HE111</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Bombowiec Heinkel He-111</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEADHUNTER</Tag>
@@ -18377,6 +18489,23 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Rurales to najsilniejsza odmiana Kirasjerów. Wymagają kultury Meksyku.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_MI24</Tag>
+		<English>MI24 Gunship</English>
+		<French>Hélicoptère MI24</French>
+		<Italian>Elicottero MI24 'Hind'</Italian>
+		<Spanish>
+			<Text>Helicóptero MI24</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Śmigłowiec Mi-24</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MI24_PEDIA</Tag>
+		<English>The Mil Mi-24 is a large helicopter gunship and low-capacity troop transport.</English>
+		<Polish>Mi-24 to ciężki śmigłowiec bojowy zaprojektowany w biurze konstrukcyjnym OKB Mil i produkowany w Moskiewskiej Fabryce Śmigłowców im. Michaiła Mila. Zadaniem Mi-24 jest wsparcie z powietrza i transport do ośmiu żołnierzy w przestrzeni ładunkowej. Wprowadzony do służby w siłach powietrznych Związku Radzieckiego w 1976 roku jest obecnie używany przez ponad 30 różnych państw. W kodzie NATO oznaczony jako Hind (ang. - łania) z literą oznaczającą wersję. Wersje eksportowe Mi-25 i Mi-35 nazwano odpowiednio Hind D i Hind E. Mi-24 był nazywany przez pilotów radzieckich latającym czołgiem lub krokodylem, od charakterystycznego wydłużonego kształtu i kamuflażu. Konstrukcja Mi-24 jest oparta na wcześniejszym śmigłowcu konstrukcji Mila, transportowym Mi-8. Napęd maszyny stanowiły dwa silniki turbowałowe TW3-117MT o mocy 1434 kW zamontowane w górnej części kadłuba i napędzające pięciołopatowy wirnik główny o średnicy 17,3 m i trzyłopatowy wirnik ogonowy. Przednia część kadłuba została zbudowana w taki sposób, aby zmieścić dwuosobową kabinę załogi w układzie tandem przykrytą wspólną osłoną ze szkła pancernego. Tylne siedzenie pilota było umieszczone wyżej, zapewniając lepszą widoczność ponad głową drugiego pilota pełniącego funkcję operatora uzbrojenia. Z boku kadłuba zamontowano skrzydła o skosie 19o, opuszczone o 12o, służące jako punkt podwieszenia uzbrojenia, ale generujące również około 25% siły nośnej w locie poziomym. W przestrzeni ładunkowej możliwe było przewożenie do 8 żołnierzy. Cały śmigłowiec był opancerzony blachą stalową o grubości 5 mm. Podwozie trzypunktowe kołowe, chowane w locie. Od wersji Mi-24 D (Hind D) śmigłowiec został wyposażony w osobne kabiny pilotów w kształcie baniek z płaską szybą pancerną z przodu. Dodano też wzmocnione opancerzenie kabin i szybę przeciwodłamkową pomiędzy kabinami pilotów, oraz tytanowe łopaty wirników wytrzymujące trafienie pociskami kalibru 12,7 mm. Obie kabiny ciśnieniowe chroniące załogę przed wpływem broni biologicznej i chemicznej. Punkty mocowania uzbrojenia na skrzydłach umożliwiały przenoszenie broni do wykonywania zadań wsparcia z powietrza, niszczenia czołgów i walki powietrznej. Pod dziobem maszyny zamontowano wieżyczkę WSPU-24 z czterolufowym karabinem maszynowym JakB-12.7 kalibru 12,7 mm z zapasem 1470 sztuk amunicji zdolne do ostrzału pod kątem 60o w obie strony, oraz 20o w górę i 60o w dół. Na uchwytach na końcach skrzydeł możliwe było podwieszenie czterech pocisków przeciwpancernych 9M117P Skorpion (kod NATO: AT-2 Swatter), a na czterech uchwytach pod skrzydłami zasobników UB-32 z 32 sztukami niekierowanych pocisków rakietowych S-5 kalibru 57 mm, lub zasobników B-8W-20 z 20 sztukami niekierowanych pocisków rakietowych S-8 kalibru 80 mm, zasobników B-13L z 5 pociskami niekierowanymi S-13 kalibru 130 mm, albo S-24B kalibru 240 mm. Ponadto możliwe było zamontowanie zasobników strzeleckich UPK-23-250 z dwulufowym działkiem GSz-23L kalibru 23 mm, lub GUV z karabinem maszynowym JakB-12.7 kalibru 12,7 mm z zapasem 750 sztuk amunicji, albo dwa czterolufowe karabiny maszynowe 9-A-622 kalibru 7,62 mm z zapasem 1100 sztuk amunicji. Mi-24 mógł przenosić na uchwytach pod skrzydłami do 1500 kg bomb różnego typu, granatnik AGS-17 z zapasem 300 granatów, wyrzutniki min, flar oświetlających, a także pocisków klasy powietrze-powietrze typu R-60 (kod NATO: AA-80 Aphid) lub R-73 (kod NATO: AA-11 Archer). Przestrzeń ładunkowa mogła być wykorzystywana do przenoszenia dodatkowej amunicji lub do prowadzenia ognia przez żołnierzy strzelających przez otwierane okna. Ze względu na dużą masę i rozmiary zwrotność śmigłowca była dość mała, a ponadto wykazywał on skłonność do utraty stabilności podczas ostrych zakrętów, zwłaszcza przy utracie siły nośnej skrzydeł. W celu przeciwdziałania niedostatkom konstrukcyjnym, opracowano specjalną taktykę działania Mi-24 polegającą na współpracy minimum 2 maszyn lub ich większych grup i skoordynowanych atakach z kilku kierunków jednocześnie. Innym niedostatkiem maszyny było niebezpieczeństwo uderzenia łopat wirnika głównego w belkę ogonową podczas gwałtownych manewrów. Nowsze śmigłowce Mi-28 i Ka-50 zaprojektowano jako maszyny bojowe o niższej masie i bez możliwości transportowych, ale za to przewyższające Mi-24 pod względem własności lotnych i manewrowych.</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_MI26</Tag>
 		<English>Transport Helicopter</English>
 		<French>Hélicoptère de Transport</French>
@@ -18452,6 +18581,72 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_MIDEWIWIN_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Midewiwin[COLOR_REVERT] is a Chippewa unique unit.</English>
 		<French>Le [COLOR_UNIT_TEXT]Midewiwin[COLOR_REVERT] est une unité Chippewa unique.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MIG15</Tag>
+		<English>MIG 15</English>
+		<Spanish>
+			<Text>MIG 15</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Samolot odrzutowy MiG-29 zaprojektowano w 1972 r., w celu wymiany samolotów typu MiG-21 i MiG-23 na nowocześniejsze. Samolot miał być tzw. lekkim myśliwcem frontowym, uzupełniającym ciężki myśliwiec przewagi powietrznej Su-27. W konstrukcji skoncentrowano się na osiągnięciu dobrych parametrów lotnych i manewrowych uzyskanych drogą dopracowania koncepcji aerodynamicznej. Pierwszy prototyp wzniósł się w powietrze 6 października 1977 roku, a pierwsze seryjne samoloty MiG-29 9.12 ("Fulcrum-A") weszły do służby w 1984 r.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MIG15_PEDIA</Tag>
+		<English>The Mikoyan-Gurevich MiG-15 was a jet fighter developed for the USSR by Artem Mikoyan and Mikhail Gurevich. The MiG-15 was one of the first successful swept-wing jet fighters, and it achieved fame in the skies over Korea, where it outclassed all enemy fighters except the F-86 Sabre. The MiG-15 also served as the starting point for development of the more advanced MiG-17 which would oppose American fighters over Vietnam in the 1960s. The MiG-15 is believed to have been the most numerous jet aircraft ever made, with over 12,000 built. Licensed foreign production perhaps raised the total to over 18,000. [PARAGRAPH:1]The MiG-15 was originally intended to intercept American bombers like the B-29, and was even evaluated in mock air-to-air combat trials with interned ex-U.S. B-29, as well as the later Soviet B-29 copy, the Tu-4 "Bull". To ensure the destruction of such large bombers, the MiG-15 carried cannon armament: two 23 mm with 80 rounds per gun and a single 37 mm with 40. These weapons provided tremendous punch in the interceptor role, but their limited rate of fire and relatively low velocity made it more difficult to score hits against small and maneuverable enemy jet fighters in air-to-air combat. The 23 mm and 37 mm also had radically different ballistics, and some United Nations pilots in Korea had the unnerving experience of 23 mm shells passing over them while the 37 mm shells flew under. The cannon were fitted into a neat pack that could be winched down out of the bottom of the nose for servicing and reloading, in principle allowing a preprepared pack to be switched in for rapid turnaround.</English>
+		<Polish>MIG-29 to unikalny, sowiecki myśliwiec odrzutowy. Jest jeszcze lepszy w walce powietrznej niż jego zwykły odpowiednik.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MIG21</Tag>
+		<English>Jet Fighter MIG 21</English>
+		<French>Chasseur à réaction MIG 21</French>
+		<German>Düsenjäger MIG 21</German>
+		<Italian>Caccia a reazione MIG 21</Italian>
+		<Spanish>
+			<Text>Caza a reacción MIG 21</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Myśliwiec MiG-15</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MIG21_PEDIA</Tag>
+		<English>The Mikoyan-Gurevich MiG-21 (NATO reporting name "Fishbed") is a supersonic jet fighter aircraft, designed and built by the Mikoyan-Gurevich Design Bureau in the Soviet Union. It was popularly nicknamed "balalaika", from the aircraft's planform-view resemblance to the Russian stringed musical instrument or pencil by Polish pilots due to the shape of its fuselage.  Early versions are considered second-generation jet fighters, while later versions are considered to be third-generation jet fighters. Some 50 countries over four continents have flown the MiG-21, and it still serves many nations a half-century after its maiden flight. The fighter made aviation records. At least by name, it is the most produced supersonic jet aircraft in aviation history, the most produced combat aircraft since the Korean War, and it had the longest production run of a combat aircraft (1959 to 1985 over all variants).</English>
+		<Polish>MiG-15 to radziecki samolot myśliwski, skonstruowany w końcu lat czterdziestych. Ten typ maszyn brał udział w wojnie koreańskiej. W 1947 biuro Mikojana i Gurewicza zaprojektowało nowoczesny płatowiec myśliwca oznaczony jako I-310 ("I" od istriebitiel - myśliwiec), brakowało jednak w Związku Radzieckim silnika odpowiedniego dla tej nowoczesnej maszyny. Problem ten rozwiązał się, gdy rząd brytyjski udostępnił ZSRR swój nowy silnik turboodrzutowy Rolls-Royce Nene Mk. I, który w dość krótkim czasie został skopiowany i otrzymał oznaczenie Klimow RD-45. Rozwiązało to problem i trzeci prototyp z nowym silnikiem wzbił się w powietrze 30 grudnia 1948. Nowy typ maszyn pod oznaczeniem MiG-15 wszedł do służby na początku 1949 roku. W 1949 powstała również ulepszona wersja samolotu z silnikiem WK-1 o większym ciągu oznaczona jako MiG-15bis, a w 1950 treningowa wersja dwumiejscowa MiG-15 UTI. Produkcję podjęto również w Polsce, Czechosłowacji. Natomiast w Chinach i Finlandii zmieniano jedynie oznaczenia.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MIG25</Tag>
+		<English>Strike Fighter MIG 25</English>
+		<French>Chasseur d'assaut MIG 25</French>
+		<German>Kampfjäger MIG 25</German>
+		<Italian>Caccia d'attacco MIG 25</Italian>
+		<Spanish>
+			<Text>Caza de asalto MIG 25</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Myśliwiec MiG-21</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MIG25_PEDIA</Tag>
+		<English>The Mikoyan-Gurevich MiG-25 is a very high-speed interceptor and reconnaissance/bomber aircraft designed by the Soviet Union's Mikoyan-Gurevich bureau. First flown as a prototype in 1964, it entered service in 1970. With a top speed of Mach 3.2, a powerful radar and four air-to-air missiles, the MiG-25 worried Western observers and prompted development of the F-15 Eagle. The aircraft's true capabilities were not discovered until 1976 when Viktor Belenko, a Soviet MiG-25 pilot, defected to Japan. Subsequent analysis revealed a simple-yet-functional design with vacuum-tube electronics, two massive turbojet engines, and sparing use of advanced materials such as titanium. The MiG-25 flew with a number of Soviet allies and former Soviet republics and it remains in limited service in Russia and several other nations.</English>
+		<Polish>MiG-21 jest radzieckim samolotem myśliwskim skonstruowany w latach 50. XX wieku w biurze konstrukcyjnym MiG przez Artioma Mikojana i Michaiła Guriewicza. Ze względu na swoją sylwetkę dorobił się wśród pilotów nazwy ołówek. MiG-21 produkowany był na radzieckiej licencji w Czechosłowacji i Indiach. Jego chińska kopia nosi oznaczenie J-7 (F-7 w wersji eksportowej). Używały go aż 34 państwa. Przez ponad 3 dekady podstawowy samolot myśliwski w Polsce. Ostatni masowo zakupiony samolot bojowy dla Sił Powietrznych Rzeczypospolitej Polskiej (WOPK, WL, WLOP, SP RP). W latach 1961-1980 zakupiono 581 sztuk w 10 wersjach (MiG-21F-13, MiG-21PF, MiG-21PFM, MiG-21M, MiG-21R, MiG-21MF, MiG-21bis, MiG-21U, MiG-21US, MiG-21UM). Definitywnie wycofany z eksploatacji w polskich Siłach Powietrznych 1 stycznia 2004 roku. 3.elt 1.01.2004 r. o godz 8.00 zakończyła Dyżur Bojowy w systemie OP NATO na samolotach MiG-21 bis i to był już prawdziwy koniec długiej służby MiG-21 w Polskim Lotnictwie Wojskowym. MiGa-21 używano w Wietnamie i był tam jednym z najbardziej zaawansowanych samolotów myśliwskich, jednak z powodu niskiej nośności podskrzydłowych węzłów uzbrojenia wielu weteranów północnowietnamskich preferowało latanie samolotem MiG-19. Zastosowanie skrzydeł w układzie delta umożliwiło stworzenie w ZSRR pierwszej udanej konstrukcji łączącej cechy samolotu myśliwskiego i przechwytującego. MiG-21 był lekkim myśliwcem zdolnym osiągnąć prędkość 2 Machów używając równocześnie stosunkowo niewielkiej mocy silnika turboodrzutowego. To czyniło go porównywalnym do amerykańskiego F-104 lub francuskiego Dassault Mirage III. Samolot był również intensywnie wykorzystywany w latach 60. i 70. w konflikcie na Bliskim Wschodzie przez siły powietrzne Egiptu, Syrii i Iraku przeciwko Izraelowi. Maszynę zdeklasował tam nowocześniejszy F-15 (zaprojektowany początkowo do walki z radzieckim MiG-25), nabyty przez Izrael w latach 70. Jednym z największych użytkowników MiG 21, szczególnie po jego powodzeniu w wojnie Indyjsko-Pakistańskiej w 1971 roku, były Indyjskie Siły Powietrzne. Samolot był również użyty pod koniec 1999 roku podczas walk o Kargil ze średnim skutkiem. MiGa-21 wykorzystywano również we wczesnych etapach wojny w Afganistanie do działań wsparcia wojsk lądowych i rozpoznania (MiG-21R). Został wkrótce zastąpiony przez nowocześniejsze MiGa-23, MiGa-27 oraz Su-22M3.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MIG3</Tag>
+		<English>MIG3</English>
+		<Spanish>
+			<Text>MIG3</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Samolot Szturmowy MiG-25</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MIG3_PEDIA</Tag>
+		<English>The Mikoyan-Gurevich MiG-3 was a Soviet fighter aircraft of World War II. The first production MiG-3 rolled off the assembly line on December 20, 1940. By March 1941, 10 of these aircraft were coming off the production line every day. It was not long before the type would see combat, claiming a pair of German Junkers Ju 86 reconnaissance aircraft even before the start of hostilities between Germany and the Soviet Union. Due to the conditions of battle with the German forces, the MiG-3 was forced into a low altitude and even a ground-attack role, but it was quickly found to be inferior, and withdrawn from this role. The death knell for the MiG-3 was the discontinuation of its AM-35 engine so that Mikulin could concentrate on AM-38 production for the Ilyushin Il-2.</English>
+		<Polish>MiG-25 jest radzieckim samolotem naddźwiękowym osiągającym prędkość maksymalną odpowiadającą liczbie Macha równej 3. Zakładano dla niego różne funkcje, w tym przenoszenie pocisków manewrujących jak również mały 5 do 7 osobowy transport pasażerski, ale głównym celem było stworzenie nowego samolotu rozpoznawczego latającego na dużych wysokościach oraz ciężkiego myśliwca przechwytującego. Produkcje seryjną rozpoczęto na początku 1969 roku. Ogółem wyprodukowano 1190 MiG-25 - myśliwskie MiG-25 P oraz rozpoznawczo-bombowe MiG-25 R, w kilkunastu wersjach aż do zakończenia produkcji w 1984 roku.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MIG_29</Tag>
@@ -20913,6 +21108,16 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_OLMEC_EAGLE_WARRIOR</Tag>
+		<English>Olmec Eagle Warrior</English>
+		<French>Guerrier-Aigle Olmec</French>
+		<Italian>
+			<Text>Guerriero aquila olmec</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_OMUCHTAN</Tag>
 		<English>Omuchtan</English>
 	</TEXT>
@@ -21310,6 +21515,21 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>[COLOR_UNIT_TEXT]Ozolua[COLOR_REVERT] was a "Hero".</English>
 		<French>texte ici</French>
 		<Polish>[COLOR_UNIT_TEXT]Ozolua[COLOR_REVERT] był "Bohaterem".</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_P38</Tag>
+		<English>P38 Lightning</English>
+		<Spanish>
+			<Text>P38 Lightning</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Myśliwiec P-38 Lighning</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_P38_PEDIA</Tag>
+		<English>The Lockheed P-38 Lightning was a World War II American fighter aircraft. P-38 had distinctive twin booms and a single, central nacelle containing the cockpit and armament. The aircraft was used in a number of different roles, including dive bombing, level bombing, ground strafing, photo reconnaissance missions, and extensively as a long-range escort fighter when equipped with droppable fuel tanks under its wings. The P-38 was used most extensively and successfully in the Pacific Theater of Operations and the China-Burma-India Theater of Operations, where it was flown by the American pilots with the highest number of aerial victories to this date.</English>
+		<Polish>Lockheed P-38 Lightning jest to amerykański samolot myśliwski dalekiego zasięgu z okresu II wojny światowej. Był to szybki, silnie uzbrojony samolot używany do wielu zadań w różnorodnych warunkach walki, pomimo pewnych wad konstrukcyjnych był to raczej lubiany i udany samolot. Samolot był zbudowany w układzie dwukadłubowym (tzw. latająca rama). Silniki zostały umieszczone w dwóch początkowych sekcjach kadłubów, pomiędzy którymi znajdowała się kabina pilota wraz z systemem uzbrojenia. Lockheed P-38 Lightning (pol. błyskawica)? amerykański samolot myśliwski dalekiego zasięgu z okresu II wojny światowej. Był to szybki, silnie uzbrojony samolot używany do wielu zadań w różnorodnych warunkach walki, pomimo pewnych wad konstrukcyjnych był to raczej lubiany i udany samolot. Samolot był zbudowany w układzie dwukadłubowym (tzw. latająca rama). Silniki zostały umieszczone w dwóch początkowych sekcjach kadłubów, pomiędzy którymi znajdowała się kabina pilota wraz z systemem uzbrojenia.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_P51_MUSTANG</Tag>
@@ -23622,6 +23842,42 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Le [COLOR_UNIT_TEXT]Pirate Razzia[COLOR_REVERT] est une unité Algier unique.</French>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_RA_FIST</Tag>
+		<English>Ra Fist</English>
+		<French>
+			<Text>Main de Ra</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Guerriero di Ra</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_RA_FIST_PEDIA</Tag>
+		<English>Ra is the ancient Egyptian solar deity. By the Fifth Dynasty (2494 to 2345 BCE) he had become a major god in ancient Egyptian religion, identified primarily with the midday sun. In later Egyptian dynastic times, Ra was merged with the god Horus, as Ra-Horakhty ("Ra, who is Horus of the Two Horizons"). He was believed to rule in all parts of the created world: the sky, the earth, and the underworld. He was associated with the falcon or hawk. When in the New Kingdom the god Amun rose to prominence he was fused with Ra as Amun-Ra. During the Amarna Period, Akhenaten suppressed the cult of Ra in favour of another solar deity, the Aten, the deified solar disc, but after the death of Akhenaten the cult of Ra was restored.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_RA_FIST_STRATEGY</Tag>
+		<English>[COLOR_UNIT_TEXT]Ra Fists[COLOR_REVERT] are very powerful melee units, available to civilizations with Kemetism as their State Religion. You can only have one of these units in your nation!</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_RA_KNIGHT</Tag>
+		<English>Ra Knight</English>
+		<French>Chevalier de Ra</French>
+		<Italian>
+			<Text>Cavaliere di Ra</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_RA_KNIGHT_STRATEGY</Tag>
+		<English>[COLOR_UNIT_TEXT]Ra Knights[COLOR_REVERT] are very powerful Knight units, available to civilizations with Kemetism as their State Religion. You can only have one of these units in your nation!</English>
+	</TEXT>
+<TEXT>
 		<Tag>TXT_KEY_UNIT_RECON_PLANE</Tag>
 		<English>Recon Plane</English>
 		<French>Planeur de reconnaissance</French>
@@ -26358,6 +26614,17 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>The snow leopard (Panthera uncia or Uncia uncia) is a moderately large cat native to the mountain ranges of Central Asia. The classification of this species has been subject to change and is still classified as Uncia uncia by MSW3 as of 2000 and CITES Appendix I. However with more recent genetic studies, the snow leopard is now generally considered as Panthera uncia and classified as such by IUCN. Classically, two subspecies have been attributed but genetic differences between the two have not been settled. The snow leopard remains on the endangered species list classified as C1.[PARAGRAPH:2]Snow leopards occupy alpine and subalpine areas generally 3,350 and 6,700 metres (10,990 and 22,000 ft) above sea level in Central Asia. The Snow Leopard Survival Strategy (McCarthy et al. 2003, Table II) compiled national snow leopard population estimates, updating the work of Fox (1994). Many of the estimates are acknowledged to be rough and out of date, but the total estimated population is 4,080 - 6,590. However, the global snow leopard effective population size (those likely to reproduce) is suspected to be fewer than 2,500 (50% of the total population, or 2,040 - 3,295).[PARAGRAPH:2]Snow leopards are slightly smaller than the other big cats but, like them, exhibit a range of sizes, generally weighing between 27 and 55 kg (60 and 120 lb), with an occasional large male reaching 75 kg (170 lb) and small female of under 25 kg (55 lb). They have a relatively short body, measuring in length from the head to the base of the tail 75 to 130 centimetres (30 to 50 in). However, the tail is quite long, at 80 to 100 cm (31 to 39 in), with only the house cat-sized Marbled Cat being relatively longer tailed. They are stocky and short-legged big cats, standing about 60 cm (24 in) at the shoulder.[PARAGRAPH:2]Snow leopards have long thick fur, and their base colour varies from smoky gray to yellowish tan, with whitish underparts. They have dark grey to black open rosettes on their body with small spots of the same color on their heads and larger spots on their legs and tail. Unusually among cats, their eyes are pale green or grey in colour.[PARAGRAPH:2]Snow leopards show several adaptations for living in a cold mountainous environment. Their bodies are stocky, their fur is thick, and their ears are small and rounded, all of which help to minimize heat loss. Their paws are wide, which distributes their weight better for walking on snow, and have fur on their undersides to increase their grip on steep and unstable surfaces; it also helps to minimize heat loss. Snow leopards' tails are long and flexible, helping them to maintain their balance, which is very important in the rocky terrain they inhabit. Their tails are also very thick due to storage of fats and are very thickly covered with fur which allows them to be used like a blanket to protect their faces when asleep.[PARAGRAPH:2]The snow leopard has a short muzzle and domed forehead, containing unusually large nasal cavities that help the animal breathe the thin, cold air of their mountainous environment.[PARAGRAPH:2]The snow leopard cannot roar, despite possessing partial ossification of the hyoid bone. This partial ossification was previously thought to be essential for allowing the big cats to roar, but new studies show that the ability to roar is due to other morphological features, especially of the larynx, which are absent in the snow leopard. Snow leopard vocalizations include hisses, chuffing, mews, growls, and wailing.[PARAGRAPH:2]Source: Wikipedia.</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_SO79</Tag>
+		<English>Sovoia79</English>
+		<Italian>Savoia79</Italian>
+		<Spanish>
+			<Text>Savoia SM79</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Bombowiec Savoia-Marchetti SM.79</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_SOFTWARE_DEVELOPER</Tag>
 		<English>Software Developer</English>
 		<French>Développeur de Logiciels</French>
@@ -26830,6 +27097,16 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_SPIRIT_WALKER_STRATEGY</Tag>
 		<English>The Spirit Walker replaces the Spearman for the Anasazi culture.  They start with a Desert Combat promotion, and double movement.  Thus they are great for defence or attack on desert maps/regions, especially against mounted units.</English>
 		<Italian>Lo spirito camminatore sostituisce il lanciere per la cultura Anasazi; inizia con la promozione Combattente del deserto I e con un movimento doppio rispetto ai normali lancieri. Perciò, sono ottimi per attaccare e difendere nelle regioni desertiche, specialmente contro le unità montate.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SPITFIRE</Tag>
+		<English>Spitfire mk1</English>
+		<Spanish>
+			<Text>Spitfire Mk1</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Myśliwiec Spitfire MK1</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPY</Tag>
@@ -27451,6 +27728,36 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>Strike Fighters have greater range than Jet Fighters, and they are better at intercepting and destroying enemy aircraft.</English>
 		<French>Les Intercepteurs ont une plus grande portée que les Chasseurs à réaction, et ils sont meilleurs pour intercepter et détruire les avions ennemis.</French>
 		<Spanish>Los Cazas de ataque poseen un alcance mayor que los Cazas a reacción, y son más efectivos a la hora de interceptar y destruir aeronaves enemigas.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SU37</Tag>
+		<English>SU37</English>
+		<Spanish>
+			<Text>SU37</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Myśliwiec Suchoj Su-37</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SU37_PEDIA</Tag>
+		<English>The Sukhoi Su-37 is a Russian multi-role jet fighter aircraft. It is a single seat all-weather fighter derived from the Su-27 "Flanker".</English>
+		<Polish>Suchoj Su-37 to myśliwiec wielozadaniowy rosyjskiej firmy Suchoj. Rozwinięcie myśliwca Su-27. Najbardziej zaawansowany myśliwiec klasy 4+ produkcji rosyjskiej. Głównym konstruktorem jest Władymir Konochow. Na początku nosił oznaczenie T-10M-11. Pierwszy prototyp ma boczny numer 711. Pierwszy oblot tego samolotu miał miejsce w 2 kwietnia 1996, natomiast pierwsza publiczna prezentacja odbyła się na lotnisku Tuszyno w Moskwie podczas święta lotnictwa w sierpniu tego samego roku. W tym samym roku został zaprezentowany na targach Farnbourgh 1996 przez pilota Eugieniusza Frołowa (Rosja).</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SU47</Tag>
+		<English>SU47</English>
+		<Spanish>
+			<Text>SU47</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Myśliwiec Su-47 Bierkut</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SU47_PEDIA</Tag>
+		<English>The Sukhoi Su-47 Berkut also designated S-32 and S-37 during initial development, is an experimental supersonic jet fighter developed by Sukhoi Aviation Corporation. A distinguishing feature of the aircraft is its forward-swept wing. The Su-47 has extremely high agility at subsonic speeds, enabling the aircraft to alter its angle of attack and its flight path very quickly while retaining maneuverability in supersonic flight. The Su-47 has a maximum speed of Mach 2.34 at high altitudes and a greater than 9g capability.</English>
+		<Polish>Su-47 Bierkut to współczesny rosyjski eksperymentalny samolot myśliwski. Su-47 jest myśliwcem piątej generacji, mającym w założeniu konkurować z amerykańskim F-22 Raptor i F-35 Lightning II. Jego projekt powstał na bazie myśliwca Su-27. W samolocie zastosowano m.in. wewnętrzną komorę na uzbrojenie oraz specjalne pokrycie pochłaniające fale radarowe uzyskując elementy systemu stealth (utrudniona wykrywalność dla radarów). W samolocie wykorzystano skrzydła o ujemnym skosie oraz ciąg wektorowany w dwóch płaszczyznach, dzięki czemu samolot ma zdolność zachowania stateczności i sterowności na bardzo dużych kątach natarcia i przy bardzo dużych lub bardzo małych prędkościach. Samolot z założenia miał być bardzo zwrotny podczas bezpośredniej walki powietrznej oraz zwrotny podczas walki długodystansowej, unikając trafienia pociskami rakietowymi. Podczas lotu możliwe są manewry, na skutek których samolot leci zwrócony bokiem lub nawet ogonem w kierunku lotu, potrafi także wykonać dynamiczne hamowanie w powietrzu potocznie nazwanym Kobra. W samolocie zastosowano system sterowania aktywnego "Fly-by-wire". Do obsługi awioniki służą aktywne ekrany LCD i wyprofilowane przyciski. Su-47 służy obecnie jedynie demonstracji technologii, z niewielkimi szansami na seryjną produkcję z uwagi na wysokie koszty dopracowania konstrukcji do etapu produkcyjnego oraz zmniejszenie się potrzeb posiadania wysoko zaawansowanych myśliwców przewagi powietrzne.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_AFRICANGREY</Tag>
@@ -32468,241 +32775,5 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT__PEDIA</Tag>
 		<English>- Wikipedia</English>
 		<French>- Wikipédia</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_B17</Tag>
-		<English>B17 Bomber</English>
-		<French>Bombardier B17</French>
-		<German>B17-Bomber</German>
-		<Italian>Bombardiere B17</Italian>
-		<Spanish>
-			<Text>Bombardero B17</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Bombowiec B-17</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_BF109</Tag>
-		<English>BF109 German fighter</English>
-		<French>Chasseur Allemand BF109</French>
-		<German>BF109-Deutscher Jäger</German>
-		<Italian>Caccia tedesco BF109</Italian>
-		<Spanish>
-			<Text>Caza alemán BF109</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Myśliwiec Messerschmitt Bf 109</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_BF109_PEDIA</Tag>
-		<English>The Messerschmitt Bf 109 was a German World War II fighter aircraft designed by Willy Messerschmitt in the early 1930s. It was one of the first true modern fighters of the era, including such features as an all-metal monocoque construction, a closed canopy, and retractable landing gear. The Bf 109 was produced in greater quantities than any other fighter aircraft in history, with a total of 33,984 units produced up to April 1945.[PARAGRAPH:2]The Bf 109 was the backbone of the Luftwaffe fighter force in World War II, although it began to be partially replaced by the Focke-Wulf Fw 190 from 1941. Originally conceived as an interceptor, it was later developed to fulfill multiple tasks, serving as bomber escort, fighter bomber, day-, night- all-weather fighter, bomber destroyer, ground-attack aircraft, and as reconnaissance aircraft. The Bf 109 had its faults. Like the Spitfire, it had a short range.  Its cockpit was cramped and the track of its undercarriage very narrow indeed so that it had challenging takeoff and landing characteristics.  Nevertheless, it remained competitive with Allied fighter aircraft until the end of the war.[PARAGRAPH:2]The aircraft served with several countries during the war, and with some for many years after. The Bf 109 was flown by the three top-scoring fighter aces of World War II who claimed 928 victories between them while flying with Jagdgeschwader 52, chiefly on the Eastern Front, as well as by the highest scoring German ace in the North African Campaign.  "The 109 was a dream, the non plus ultra," recalled Gunther Rall the Luftwaffe ace with 275 kills. "Of course, everyone wanted to fly it as soon as possible."  It was also flown by high-scoring non-German aces, notably from Finland, Romania, Croatia and Hungary.</English>
-		<Polish>Messerschmitt Bf 109, Me 109 to niemiecki samolot myśliwski, podstawowy myśliwiec Luftwaffe podczas II wojny światowej. Pierwowzorem myśliwskiego Bf 109 był samolot opracowywany dla Rumunii pod nazwą M37. Podczas dalszych prac samolot nazwano Bf 108 i pod tą nazwą był produkowany. Bf 108 Taifun był dwumiejscowym samolotem komunikacyjnym. Ministerstwo Lotnictwa Rzeszy (Reichluftfahrtministerium) w 1933 złożyło zamówienie na nowy samolot myśliwski. Do prac projektowych, w których uczestniczyli Willy Messerschmitt, Robert Lusser oraz Hubert i Richard Bauerowie, przystąpiono wiosną 1934 roku. Budowę pierwszego prototypu nowego samolotu oznaczonego V1 (V jak Versuchsmuster: egzemplarz doświadczalny) zapoczątkowano jesienią 1934 roku. Próby w locie z zablokowanym podwoziem chowanym rozpoczęto w maju 1935 roku. W pierwszym prototypie zastosowano angielski silnik Rolls-RoyceKestrel V12 o mocy startowej 695 KM (511 kW), napędzający dwułopatowe, drewniane śmigło o stałym skoku. Do ogłoszonego w tym czasie konkursu na samolot myśliwski stanęły cztery największe niemieckie biura projektowe zakładów lotniczych: Arado, Focke-Wulf, Heinkel i Bayerische Flugzeugwerke. Do dalszego rozwoju zakwalifikowały się konstrukcje biur dwóch ostatnich zakładów: He 112 i Bf 109. W czasie prób porównawczych obu prototypów Bf 109 osiągnął większą o 22 kilometry prędkość maksymalną oraz większą prędkość wznoszenia. He 112 zyskał jednak bardzo pochlebne opinie pilotów, chwalących wygodną kabinę o bardzo dobrej widoczności, dobre prowadzenie tego samolotu podczas kołowania oraz lepszą zwrotność i właściwości pilotażowe. Pierwotnie przetarg rozstrzygnięto więc na korzyść zespołu Heinkla, lecz intrygi i przebiegłość prof. Willy'ego Messerschmitta przesądziły o kontynuowaniu prac nad prototypem Bf 109. W późniejszym czasie zakłady Messerschmitt AG połączyły się z Bayerische Flugzeugwerke. Ogółem wyprodukowano ok. 33 000 Bf 109 różnych wersji. Bf 109 był samolotem bardzo trudnym do pilotażu w fazie startu, i lądowania. Po oderwaniu kółka ogonowego od nawierzchni lotniska w czasie startu, lub po dotknięciu podwoziem głównym podłoża w czasie lądowania skrzydło samolotu wykazywało natychmiastową, stałą tendencję do opadania. Także kołowanie po płycie lotniska odbywało się na oślep, gdyż osłona silnika zasłaniała pilotowi widok na wprost. Najlepsze właściwości pilotażowe, i manewrowe Bf 109 osiągał w zakresie prędkości 350-420 km/g, przewyższając pod tym względem nawet swojego najgroźniejszego konkurenta Supermarine Spitfire. Powyżej prędkości 400 km/g w wersji B,C,D, oraz powyżej 485 km/g w wersji E wraz ze wzrostem prędkości opór sterów stopniowo zwiększał się, zmuszając pilota do użycia coraz większej siły przy zmianie kierunku, lub wysokości lotu. Tym samym reakcje samolotu następowały z wyraźnym opóźnieniem. Identyczna sytuacja następowała w czasie lotu nurkowego, gdzie w górnych zakresach prędkości użycie steru kierunku przez pilota było mocno problematyczne. Należy podkreślić bardzo mały zasięg samolotu Bf 109 (15 minut lotu na Anglią i pilot musiał zawracać).</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_CHINOOK</Tag>
-		<English>Chinook</English>
-		<Italian>Elicottero Chinook</Italian>
-		<Spanish>
-			<Text>Chinook</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Śmigłowiec Chinook</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_CR42</Tag>
-		<English>Fiat CR42</English>
-		<Spanish>
-			<Text>Fiat CR42</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Myśliwiec Fiat CR-42</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_CR42_PEDIA</Tag>
-		<English>TBD</English>
-		<Polish>Fiat CR-42 to włoski samolot myśliwski z czasów II wojny światowej, wyprodukowany przez koncern Fiata. Samolot, powstały w 1936 r. w układzie dwupłatu, z otwartą kabiną i stałym podwoziem, miał być następcą CR.32, który potwierdził swe walory bojowe podczas hiszpańskiej wojny domowej (1936-1939). Choć zachowano w nim układ dwupłatu, konstrukcja była jednak unowocześniona, ponieważ wykonano ją całkowicie z metalu. CR.42 wszedł do służby w Regio Aeronautica w listopadzie 1939 roku. Pewna ilość egzemplarzy została zakupiona przez Belgię, Finlandię, Szwecję i Węgry. Samolot wykazywał bardzo dobre właściwości lotne, był bardzo zwrotny, dość szybko jednak okazało się, że jak na standardy początków II wojny światowej był już przestarzały: zbyt wolny i słabo uzbrojony. Produkcja samolotu trwała do 1942 r. Początkowo CR.42 był wykorzystywany jako samolot myśliwski. W 1940 r. pewna ilość samolotów wzięła udział w bitwie o Anglię, jednak okazało się, że CR.42 nie dorównuje nowoczesnym myśliwcom angielskim. W związku z dużymi stratami samolot został wycofany z działań bojowych i przesunięty do zadań szkoleniowych. Samolot był szeroko wykorzystywany podczas walk w Afryce Północnej, głównie do atakowania celów naziemnych. W 1943 r., po kapitulacji Włoch w zdolność do lotu zachowało tylko ok. 60 samolotów, z wyprodukowanych 1781 egzemplarzy.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_DO335</Tag>
-		<English>DO335 fighter</English>
-		<French>Chasseur DO335</French>
-		<German>DO335-Jäger</German>
-		<Italian>Caccia DO335</Italian>
-		<Spanish>
-			<Text>Caza DO335</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Myśliwiec Dornier Do 335</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_DO335_PEDIA</Tag>
-		<English>TBD</English>
-		<Polish>Dornier Do 335 Pfeil (pol. Strzała) to niemiecki samolot wielozadaniowy (ciężki myśliwiec, myśliwiec nocny, szybki bombowiec i samolot rozpoznawczy) z okresu II wojny światowej zbudowany w koncernie Dornier. Początkiem powstania wielozadaniowego samolotu Dornier Do 335 było opatentowanie przez prof. Claudiusa Dorniera w 1937 roku układu samolotu z jednym silnikiem ze śmigłem ciągnącym z przodu kadłuba i drugim silnikiem umieszczonym w środku kadłuba, który za pomocą przedłużonego wału napędzał śmigło pchające umieszczone za usterzeniem na końcu kadłuba. Układ ten wypróbowano w 1940 roku w samolocie doświadczalnym Schremp-Hirth Go 9, a następnie podjęto prace wstępne nad szybkim samolotem bombowym oznaczonym jak Dornier P.231. Wkrótce jednak je zarzucono, a projekt zmieniono na samolot wielozadaniowy, oznaczony jako Dornier Do 335 i nazwę Pfeil. Pierwszy prototyp powstał w 1943 roku i został oblatany 26 października 1943 roku. Nowy samolot Dornier Do 335 napędzany był dwoma silnikami Daimler-Benz DB 603E o mocy 1723 KM (1325 kW), umieszczonymi jeden z przodu, a drugi z tyłu kadłuba. Ponieważ spełniał on stawiane mu wymagania, zakłady Dorniera otrzymały zamówienie na produkcję 14 samolotów prototypowych i 21 serii A-0 i A-1. W trakcie budowy prototypów i samolotów pierwszych serii pracowano nad ulepszeniem konstrukcji i modyfikacjami, dotyczącymi uzbrojenia i zastosowania samolotu. Kabinę pilota wyposażono w fotel wyrzucany, a dla zabezpieczenia łopat tylnego śmigła zastosowano usterzenie w układzie krzyżowym. Większość z niewielu ukończonych egzemplarzy samolotu Do 335 służyła jedynie do testów. W lipcu skierowano rozpoznawczego Do 335 V3 do 1./Versuchverband OKL. Wydaje się, że nie wykonywał lotów rozpoznawczych nad terytorium nieprzyjaciela. We wrześniu 1944 utworzono Erprobungskommando 335, jednostkę do testowania samolotu w warunkach operacyjnych. Przekazano do niej kilka egzemplarzy przedseryjnej wersji Do 335A-0 i (być może) A-1. Piloci mieli wypracować taktykę dla podstawowych wersji samolotu. Prototyp nocnego myśliwca, Do 335 V10, miał zostać skierowany do testów operacyjnych w I./NJG 3. Piloci alianccy spotkali Do 335 w powietrzu kilka razy, ale nigdy nie doszło do walk powietrznych. Do dziś ocalał tylko jeden egzemplarz, Do 335A-02.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_HE111</Tag>
-		<English>Heinkel HE111 Bomber</English>
-		<French>Bombardier Heinkel HE111</French>
-		<Italian>Bombardiere Heinkel HE111</Italian>
-		<Spanish>
-			<Text>Bombardero Heinkel HE111</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Bombowiec Heinkel He-111</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_MI24</Tag>
-		<English>MI24 Gunship</English>
-		<French>Hélicoptère MI24</French>
-		<Italian>Elicottero MI24 'Hind'</Italian>
-		<Spanish>
-			<Text>Helicóptero MI24</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Śmigłowiec Mi-24</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_MI24_PEDIA</Tag>
-		<English>The Mil Mi-24 is a large helicopter gunship and low-capacity troop transport.</English>
-		<Polish>Mi-24 to ciężki śmigłowiec bojowy zaprojektowany w biurze konstrukcyjnym OKB Mil i produkowany w Moskiewskiej Fabryce Śmigłowców im. Michaiła Mila. Zadaniem Mi-24 jest wsparcie z powietrza i transport do ośmiu żołnierzy w przestrzeni ładunkowej. Wprowadzony do służby w siłach powietrznych Związku Radzieckiego w 1976 roku jest obecnie używany przez ponad 30 różnych państw. W kodzie NATO oznaczony jako Hind (ang. - łania) z literą oznaczającą wersję. Wersje eksportowe Mi-25 i Mi-35 nazwano odpowiednio Hind D i Hind E. Mi-24 był nazywany przez pilotów radzieckich latającym czołgiem lub krokodylem, od charakterystycznego wydłużonego kształtu i kamuflażu. Konstrukcja Mi-24 jest oparta na wcześniejszym śmigłowcu konstrukcji Mila, transportowym Mi-8. Napęd maszyny stanowiły dwa silniki turbowałowe TW3-117MT o mocy 1434 kW zamontowane w górnej części kadłuba i napędzające pięciołopatowy wirnik główny o średnicy 17,3 m i trzyłopatowy wirnik ogonowy. Przednia część kadłuba została zbudowana w taki sposób, aby zmieścić dwuosobową kabinę załogi w układzie tandem przykrytą wspólną osłoną ze szkła pancernego. Tylne siedzenie pilota było umieszczone wyżej, zapewniając lepszą widoczność ponad głową drugiego pilota pełniącego funkcję operatora uzbrojenia. Z boku kadłuba zamontowano skrzydła o skosie 19o, opuszczone o 12o, służące jako punkt podwieszenia uzbrojenia, ale generujące również około 25% siły nośnej w locie poziomym. W przestrzeni ładunkowej możliwe było przewożenie do 8 żołnierzy. Cały śmigłowiec był opancerzony blachą stalową o grubości 5 mm. Podwozie trzypunktowe kołowe, chowane w locie. Od wersji Mi-24 D (Hind D) śmigłowiec został wyposażony w osobne kabiny pilotów w kształcie baniek z płaską szybą pancerną z przodu. Dodano też wzmocnione opancerzenie kabin i szybę przeciwodłamkową pomiędzy kabinami pilotów, oraz tytanowe łopaty wirników wytrzymujące trafienie pociskami kalibru 12,7 mm. Obie kabiny ciśnieniowe chroniące załogę przed wpływem broni biologicznej i chemicznej. Punkty mocowania uzbrojenia na skrzydłach umożliwiały przenoszenie broni do wykonywania zadań wsparcia z powietrza, niszczenia czołgów i walki powietrznej. Pod dziobem maszyny zamontowano wieżyczkę WSPU-24 z czterolufowym karabinem maszynowym JakB-12.7 kalibru 12,7 mm z zapasem 1470 sztuk amunicji zdolne do ostrzału pod kątem 60o w obie strony, oraz 20o w górę i 60o w dół. Na uchwytach na końcach skrzydeł możliwe było podwieszenie czterech pocisków przeciwpancernych 9M117P Skorpion (kod NATO: AT-2 Swatter), a na czterech uchwytach pod skrzydłami zasobników UB-32 z 32 sztukami niekierowanych pocisków rakietowych S-5 kalibru 57 mm, lub zasobników B-8W-20 z 20 sztukami niekierowanych pocisków rakietowych S-8 kalibru 80 mm, zasobników B-13L z 5 pociskami niekierowanymi S-13 kalibru 130 mm, albo S-24B kalibru 240 mm. Ponadto możliwe było zamontowanie zasobników strzeleckich UPK-23-250 z dwulufowym działkiem GSz-23L kalibru 23 mm, lub GUV z karabinem maszynowym JakB-12.7 kalibru 12,7 mm z zapasem 750 sztuk amunicji, albo dwa czterolufowe karabiny maszynowe 9-A-622 kalibru 7,62 mm z zapasem 1100 sztuk amunicji. Mi-24 mógł przenosić na uchwytach pod skrzydłami do 1500 kg bomb różnego typu, granatnik AGS-17 z zapasem 300 granatów, wyrzutniki min, flar oświetlających, a także pocisków klasy powietrze-powietrze typu R-60 (kod NATO: AA-80 Aphid) lub R-73 (kod NATO: AA-11 Archer). Przestrzeń ładunkowa mogła być wykorzystywana do przenoszenia dodatkowej amunicji lub do prowadzenia ognia przez żołnierzy strzelających przez otwierane okna. Ze względu na dużą masę i rozmiary zwrotność śmigłowca była dość mała, a ponadto wykazywał on skłonność do utraty stabilności podczas ostrych zakrętów, zwłaszcza przy utracie siły nośnej skrzydeł. W celu przeciwdziałania niedostatkom konstrukcyjnym, opracowano specjalną taktykę działania Mi-24 polegającą na współpracy minimum 2 maszyn lub ich większych grup i skoordynowanych atakach z kilku kierunków jednocześnie. Innym niedostatkiem maszyny było niebezpieczeństwo uderzenia łopat wirnika głównego w belkę ogonową podczas gwałtownych manewrów. Nowsze śmigłowce Mi-28 i Ka-50 zaprojektowano jako maszyny bojowe o niższej masie i bez możliwości transportowych, ale za to przewyższające Mi-24 pod względem własności lotnych i manewrowych.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_MIG15</Tag>
-		<English>MIG 15</English>
-		<Spanish>
-			<Text>MIG 15</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Samolot odrzutowy MiG-29 zaprojektowano w 1972 r., w celu wymiany samolotów typu MiG-21 i MiG-23 na nowocześniejsze. Samolot miał być tzw. lekkim myśliwcem frontowym, uzupełniającym ciężki myśliwiec przewagi powietrznej Su-27. W konstrukcji skoncentrowano się na osiągnięciu dobrych parametrów lotnych i manewrowych uzyskanych drogą dopracowania koncepcji aerodynamicznej. Pierwszy prototyp wzniósł się w powietrze 6 października 1977 roku, a pierwsze seryjne samoloty MiG-29 9.12 ("Fulcrum-A") weszły do służby w 1984 r.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_MIG15_PEDIA</Tag>
-		<English>The Mikoyan-Gurevich MiG-15 was a jet fighter developed for the USSR by Artem Mikoyan and Mikhail Gurevich. The MiG-15 was one of the first successful swept-wing jet fighters, and it achieved fame in the skies over Korea, where it outclassed all enemy fighters except the F-86 Sabre. The MiG-15 also served as the starting point for development of the more advanced MiG-17 which would oppose American fighters over Vietnam in the 1960s. The MiG-15 is believed to have been the most numerous jet aircraft ever made, with over 12,000 built. Licensed foreign production perhaps raised the total to over 18,000. [PARAGRAPH:1]The MiG-15 was originally intended to intercept American bombers like the B-29, and was even evaluated in mock air-to-air combat trials with interned ex-U.S. B-29, as well as the later Soviet B-29 copy, the Tu-4 "Bull". To ensure the destruction of such large bombers, the MiG-15 carried cannon armament: two 23 mm with 80 rounds per gun and a single 37 mm with 40. These weapons provided tremendous punch in the interceptor role, but their limited rate of fire and relatively low velocity made it more difficult to score hits against small and maneuverable enemy jet fighters in air-to-air combat. The 23 mm and 37 mm also had radically different ballistics, and some United Nations pilots in Korea had the unnerving experience of 23 mm shells passing over them while the 37 mm shells flew under. The cannon were fitted into a neat pack that could be winched down out of the bottom of the nose for servicing and reloading, in principle allowing a preprepared pack to be switched in for rapid turnaround.</English>
-		<Polish>MIG-29 to unikalny, sowiecki myśliwiec odrzutowy. Jest jeszcze lepszy w walce powietrznej niż jego zwykły odpowiednik.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_MIG21</Tag>
-		<English>Jet Fighter MIG 21</English>
-		<French>Chasseur à réaction MIG 21</French>
-		<German>Düsenjäger MIG 21</German>
-		<Italian>Caccia a reazione MIG 21</Italian>
-		<Spanish>
-			<Text>Caza a reacción MIG 21</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Myśliwiec MiG-15</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_MIG21_PEDIA</Tag>
-		<English>The Mikoyan-Gurevich MiG-21 (NATO reporting name "Fishbed") is a supersonic jet fighter aircraft, designed and built by the Mikoyan-Gurevich Design Bureau in the Soviet Union. It was popularly nicknamed "balalaika", from the aircraft's planform-view resemblance to the Russian stringed musical instrument or pencil by Polish pilots due to the shape of its fuselage.  Early versions are considered second-generation jet fighters, while later versions are considered to be third-generation jet fighters. Some 50 countries over four continents have flown the MiG-21, and it still serves many nations a half-century after its maiden flight. The fighter made aviation records. At least by name, it is the most produced supersonic jet aircraft in aviation history, the most produced combat aircraft since the Korean War, and it had the longest production run of a combat aircraft (1959 to 1985 over all variants).</English>
-		<Polish>MiG-15 to radziecki samolot myśliwski, skonstruowany w końcu lat czterdziestych. Ten typ maszyn brał udział w wojnie koreańskiej. W 1947 biuro Mikojana i Gurewicza zaprojektowało nowoczesny płatowiec myśliwca oznaczony jako I-310 ("I" od istriebitiel - myśliwiec), brakowało jednak w Związku Radzieckim silnika odpowiedniego dla tej nowoczesnej maszyny. Problem ten rozwiązał się, gdy rząd brytyjski udostępnił ZSRR swój nowy silnik turboodrzutowy Rolls-Royce Nene Mk. I, który w dość krótkim czasie został skopiowany i otrzymał oznaczenie Klimow RD-45. Rozwiązało to problem i trzeci prototyp z nowym silnikiem wzbił się w powietrze 30 grudnia 1948. Nowy typ maszyn pod oznaczeniem MiG-15 wszedł do służby na początku 1949 roku. W 1949 powstała również ulepszona wersja samolotu z silnikiem WK-1 o większym ciągu oznaczona jako MiG-15bis, a w 1950 treningowa wersja dwumiejscowa MiG-15 UTI. Produkcję podjęto również w Polsce, Czechosłowacji. Natomiast w Chinach i Finlandii zmieniano jedynie oznaczenia.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_MIG25</Tag>
-		<English>Strike Fighter MIG 25</English>
-		<French>Chasseur d'assaut MIG 25</French>
-		<German>Kampfjäger MIG 25</German>
-		<Italian>Caccia d'attacco MIG 25</Italian>
-		<Spanish>
-			<Text>Caza de asalto MIG 25</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Myśliwiec MiG-21</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_MIG25_PEDIA</Tag>
-		<English>The Mikoyan-Gurevich MiG-25 is a very high-speed interceptor and reconnaissance/bomber aircraft designed by the Soviet Union's Mikoyan-Gurevich bureau. First flown as a prototype in 1964, it entered service in 1970. With a top speed of Mach 3.2, a powerful radar and four air-to-air missiles, the MiG-25 worried Western observers and prompted development of the F-15 Eagle. The aircraft's true capabilities were not discovered until 1976 when Viktor Belenko, a Soviet MiG-25 pilot, defected to Japan. Subsequent analysis revealed a simple-yet-functional design with vacuum-tube electronics, two massive turbojet engines, and sparing use of advanced materials such as titanium. The MiG-25 flew with a number of Soviet allies and former Soviet republics and it remains in limited service in Russia and several other nations.</English>
-		<Polish>MiG-21 jest radzieckim samolotem myśliwskim skonstruowany w latach 50. XX wieku w biurze konstrukcyjnym MiG przez Artioma Mikojana i Michaiła Guriewicza. Ze względu na swoją sylwetkę dorobił się wśród pilotów nazwy ołówek. MiG-21 produkowany był na radzieckiej licencji w Czechosłowacji i Indiach. Jego chińska kopia nosi oznaczenie J-7 (F-7 w wersji eksportowej). Używały go aż 34 państwa. Przez ponad 3 dekady podstawowy samolot myśliwski w Polsce. Ostatni masowo zakupiony samolot bojowy dla Sił Powietrznych Rzeczypospolitej Polskiej (WOPK, WL, WLOP, SP RP). W latach 1961-1980 zakupiono 581 sztuk w 10 wersjach (MiG-21F-13, MiG-21PF, MiG-21PFM, MiG-21M, MiG-21R, MiG-21MF, MiG-21bis, MiG-21U, MiG-21US, MiG-21UM). Definitywnie wycofany z eksploatacji w polskich Siłach Powietrznych 1 stycznia 2004 roku. 3.elt 1.01.2004 r. o godz 8.00 zakończyła Dyżur Bojowy w systemie OP NATO na samolotach MiG-21 bis i to był już prawdziwy koniec długiej służby MiG-21 w Polskim Lotnictwie Wojskowym. MiGa-21 używano w Wietnamie i był tam jednym z najbardziej zaawansowanych samolotów myśliwskich, jednak z powodu niskiej nośności podskrzydłowych węzłów uzbrojenia wielu weteranów północnowietnamskich preferowało latanie samolotem MiG-19. Zastosowanie skrzydeł w układzie delta umożliwiło stworzenie w ZSRR pierwszej udanej konstrukcji łączącej cechy samolotu myśliwskiego i przechwytującego. MiG-21 był lekkim myśliwcem zdolnym osiągnąć prędkość 2 Machów używając równocześnie stosunkowo niewielkiej mocy silnika turboodrzutowego. To czyniło go porównywalnym do amerykańskiego F-104 lub francuskiego Dassault Mirage III. Samolot był również intensywnie wykorzystywany w latach 60. i 70. w konflikcie na Bliskim Wschodzie przez siły powietrzne Egiptu, Syrii i Iraku przeciwko Izraelowi. Maszynę zdeklasował tam nowocześniejszy F-15 (zaprojektowany początkowo do walki z radzieckim MiG-25), nabyty przez Izrael w latach 70. Jednym z największych użytkowników MiG 21, szczególnie po jego powodzeniu w wojnie Indyjsko-Pakistańskiej w 1971 roku, były Indyjskie Siły Powietrzne. Samolot był również użyty pod koniec 1999 roku podczas walk o Kargil ze średnim skutkiem. MiGa-21 wykorzystywano również we wczesnych etapach wojny w Afganistanie do działań wsparcia wojsk lądowych i rozpoznania (MiG-21R). Został wkrótce zastąpiony przez nowocześniejsze MiGa-23, MiGa-27 oraz Su-22M3.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_MIG3</Tag>
-		<English>MIG3</English>
-		<Spanish>
-			<Text>MIG3</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Samolot Szturmowy MiG-25</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_MIG3_PEDIA</Tag>
-		<English>The Mikoyan-Gurevich MiG-3 was a Soviet fighter aircraft of World War II. The first production MiG-3 rolled off the assembly line on December 20, 1940. By March 1941, 10 of these aircraft were coming off the production line every day. It was not long before the type would see combat, claiming a pair of German Junkers Ju 86 reconnaissance aircraft even before the start of hostilities between Germany and the Soviet Union. Due to the conditions of battle with the German forces, the MiG-3 was forced into a low altitude and even a ground-attack role, but it was quickly found to be inferior, and withdrawn from this role. The death knell for the MiG-3 was the discontinuation of its AM-35 engine so that Mikulin could concentrate on AM-38 production for the Ilyushin Il-2.</English>
-		<Polish>MiG-25 jest radzieckim samolotem naddźwiękowym osiągającym prędkość maksymalną odpowiadającą liczbie Macha równej 3. Zakładano dla niego różne funkcje, w tym przenoszenie pocisków manewrujących jak również mały 5 do 7 osobowy transport pasażerski, ale głównym celem było stworzenie nowego samolotu rozpoznawczego latającego na dużych wysokościach oraz ciężkiego myśliwca przechwytującego. Produkcje seryjną rozpoczęto na początku 1969 roku. Ogółem wyprodukowano 1190 MiG-25 - myśliwskie MiG-25 P oraz rozpoznawczo-bombowe MiG-25 R, w kilkunastu wersjach aż do zakończenia produkcji w 1984 roku.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_P38</Tag>
-		<English>P38 Lightning</English>
-		<Spanish>
-			<Text>P38 Lightning</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Myśliwiec P-38 Lighning</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_P38_PEDIA</Tag>
-		<English>The Lockheed P-38 Lightning was a World War II American fighter aircraft. P-38 had distinctive twin booms and a single, central nacelle containing the cockpit and armament. The aircraft was used in a number of different roles, including dive bombing, level bombing, ground strafing, photo reconnaissance missions, and extensively as a long-range escort fighter when equipped with droppable fuel tanks under its wings. The P-38 was used most extensively and successfully in the Pacific Theater of Operations and the China-Burma-India Theater of Operations, where it was flown by the American pilots with the highest number of aerial victories to this date.</English>
-		<Polish>Lockheed P-38 Lightning jest to amerykański samolot myśliwski dalekiego zasięgu z okresu II wojny światowej. Był to szybki, silnie uzbrojony samolot używany do wielu zadań w różnorodnych warunkach walki, pomimo pewnych wad konstrukcyjnych był to raczej lubiany i udany samolot. Samolot był zbudowany w układzie dwukadłubowym (tzw. latająca rama). Silniki zostały umieszczone w dwóch początkowych sekcjach kadłubów, pomiędzy którymi znajdowała się kabina pilota wraz z systemem uzbrojenia. Lockheed P-38 Lightning (pol. błyskawica)? amerykański samolot myśliwski dalekiego zasięgu z okresu II wojny światowej. Był to szybki, silnie uzbrojony samolot używany do wielu zadań w różnorodnych warunkach walki, pomimo pewnych wad konstrukcyjnych był to raczej lubiany i udany samolot. Samolot był zbudowany w układzie dwukadłubowym (tzw. latająca rama). Silniki zostały umieszczone w dwóch początkowych sekcjach kadłubów, pomiędzy którymi znajdowała się kabina pilota wraz z systemem uzbrojenia.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SO79</Tag>
-		<English>Sovoia79</English>
-		<Italian>Savoia79</Italian>
-		<Spanish>
-			<Text>Savoia SM79</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Bombowiec Savoia-Marchetti SM.79</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SPITFIRE</Tag>
-		<English>Spitfire mk1</English>
-		<Spanish>
-			<Text>Spitfire Mk1</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Myśliwiec Spitfire MK1</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SU37</Tag>
-		<English>SU37</English>
-		<Spanish>
-			<Text>SU37</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Myśliwiec Suchoj Su-37</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SU37_PEDIA</Tag>
-		<English>The Sukhoi Su-37 is a Russian multi-role jet fighter aircraft. It is a single seat all-weather fighter derived from the Su-27 "Flanker".</English>
-		<Polish>Suchoj Su-37 to myśliwiec wielozadaniowy rosyjskiej firmy Suchoj. Rozwinięcie myśliwca Su-27. Najbardziej zaawansowany myśliwiec klasy 4+ produkcji rosyjskiej. Głównym konstruktorem jest Władymir Konochow. Na początku nosił oznaczenie T-10M-11. Pierwszy prototyp ma boczny numer 711. Pierwszy oblot tego samolotu miał miejsce w 2 kwietnia 1996, natomiast pierwsza publiczna prezentacja odbyła się na lotnisku Tuszyno w Moskwie podczas święta lotnictwa w sierpniu tego samego roku. W tym samym roku został zaprezentowany na targach Farnbourgh 1996 przez pilota Eugieniusza Frołowa (Rosja).</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SU47</Tag>
-		<English>SU47</English>
-		<Spanish>
-			<Text>SU47</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Myśliwiec Su-47 Bierkut</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SU47_PEDIA</Tag>
-		<English>The Sukhoi Su-47 Berkut also designated S-32 and S-37 during initial development, is an experimental supersonic jet fighter developed by Sukhoi Aviation Corporation. A distinguishing feature of the aircraft is its forward-swept wing. The Su-47 has extremely high agility at subsonic speeds, enabling the aircraft to alter its angle of attack and its flight path very quickly while retaining maneuverability in supersonic flight. The Su-47 has a maximum speed of Mach 2.34 at high altitudes and a greater than 9g capability.</English>
-		<Polish>Su-47 Bierkut to współczesny rosyjski eksperymentalny samolot myśliwski. Su-47 jest myśliwcem piątej generacji, mającym w założeniu konkurować z amerykańskim F-22 Raptor i F-35 Lightning II. Jego projekt powstał na bazie myśliwca Su-27. W samolocie zastosowano m.in. wewnętrzną komorę na uzbrojenie oraz specjalne pokrycie pochłaniające fale radarowe uzyskując elementy systemu stealth (utrudniona wykrywalność dla radarów). W samolocie wykorzystano skrzydła o ujemnym skosie oraz ciąg wektorowany w dwóch płaszczyznach, dzięki czemu samolot ma zdolność zachowania stateczności i sterowności na bardzo dużych kątach natarcia i przy bardzo dużych lub bardzo małych prędkościach. Samolot z założenia miał być bardzo zwrotny podczas bezpośredniej walki powietrznej oraz zwrotny podczas walki długodystansowej, unikając trafienia pociskami rakietowymi. Podczas lotu możliwe są manewry, na skutek których samolot leci zwrócony bokiem lub nawet ogonem w kierunku lotu, potrafi także wykonać dynamiczne hamowanie w powietrzu potocznie nazwanym Kobra. W samolocie zastosowano system sterowania aktywnego "Fly-by-wire". Do obsługi awioniki służą aktywne ekrany LCD i wyprofilowane przyciski. Su-47 służy obecnie jedynie demonstracji technologii, z niewielkimi szansami na seryjną produkcję z uwagi na wysokie koszty dopracowania konstrukcji do etapu produkcyjnego oraz zmniejszenie się potrzeb posiadania wysoko zaawansowanych myśliwców przewagi powietrzne.</Polish>
 	</TEXT>
 </Civ4GameText>
