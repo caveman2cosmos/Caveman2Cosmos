@@ -257,4 +257,20 @@
 		<English>[COLOR_BUILDING_TEXT]Itsukushima Shrine[COLOR_REVERT] provides extra water commerce for this city. The island shrine famous for its Torii gate, built out on the water, it seems as if it floats when the tide is high. Travelers cross the gate by boat to access the island, once sacred and forbidden ground to commoners. Plant and animal life (namely indigenous deer and monkeys) flourish peacefully even to this day thanks to preservation of the surrounding environment and sparse population.</English>
 		<Italian>Il [COLOR_BUILDING_TEXT]Santuario di Itsukushima[COLOR_REVERT] fornisce commercio estra dalle caselle acquatiche di questa città. Il santuario è su un'isola famosa per la sua Torii, costruita sull'acqua, che sembra galleggiare quando la marea è alta. I viaggiatori attraversano il cancello in barca per accedere all'isola, un tempo sacra e proibita alla gente comune. Le piante e gli animali (cervi e scimmie) prosperano pacificamente anche ai giorni nostri grazie alla preservazione dell'ambiente circostante e alla popolazione sparsa.</Italian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_BUSHIDO1</Tag>
+		<English>Bushido I</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_BUSHIDO2</Tag>
+		<English>Bushido II</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_BUSHIDO3</Tag>
+		<English>Bushido III</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_BUSHIDO</Tag>
+		<English>Honour</English>
+	</TEXT>
 </Civ4GameText>

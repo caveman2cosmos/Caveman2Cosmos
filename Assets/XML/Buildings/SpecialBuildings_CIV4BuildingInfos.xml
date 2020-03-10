@@ -927,7 +927,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
+			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<FoundsCorporation>CORPORATION_4</FoundsCorporation>
@@ -997,7 +997,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
+			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<FoundsCorporation>CORPORATION_5</FoundsCorporation>

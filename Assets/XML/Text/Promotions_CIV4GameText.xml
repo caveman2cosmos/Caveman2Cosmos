@@ -185,6 +185,11 @@
 		<French>[ICON_BULLET]Ajoute %s1_Build aux possibilité de construction de l'unité.</French>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_ADDS_CANNOT_CAPTURE</Tag>
+		<English>[ICON_BULLET]Gives cause for unit to be unable to capture enemy Cities or Units</English>
+		<French>[ICON_BULLET]Rend l'unité incapable de capturer les villes ou unités ennemies</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ADDS_COLD_IMMUNITY_TEXT</Tag>
 		<English>[ICON_BULLET]Causes unit to be immune to Cold Damage penalties.</English>
 		<French>[ICON_BULLET]Rend l'unité immunisée contre les pénalités engendrées par les dégâts liés au froid.</French>
@@ -6154,6 +6159,10 @@
 		<English>[ICON_BULLET]+%d1 [ICON_STRENGTH]</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_FA_MEN_SI_INSPIRED</Tag>
+		<English>Famen Inspired</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FAKE_IDENTITY1</Tag>
 		<English>Fake Identity I</English>
 		<French>Identité d'Emprunt I</French>
@@ -7816,6 +7825,16 @@
 		<Polish>Ciężki</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_HERBAL_CURES</Tag>
+		<English>Herbal Cures</English>
+		<French>
+			<Text>Remèdes à base de plantes</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Polish>Leczenie Ziołami</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HERDING1</Tag>
 		<English>Herding I</English>
 		<French>
@@ -8664,6 +8683,22 @@
 		<Italian>Improvvisazione V</Italian>
 		<Spanish>Improvisación V</Spanish>
 		<Polish>Improwizacja V</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_INDUSTRYESPIONAGE</Tag>
+		<English>Industry Espionage</English>
+		<French>Espionnage Industriel</French>
+		<German>Industrie-Spion</German>
+		<Italian>Spionaggio industriale</Italian>
+		<Polish>Szpiegostwo Przemysłowe</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_INDUSTRYESPIONAGE_HELP</Tag>
+		<English>[ICON_BULLET]Plunders 4% of Enemy [ICON_RESEARCH] Reserves on Combat Victory</English>
+		<French>[ICON_BULLET]Pille 4% de la réserve de [ICON_RESEARCH] ennemie en cas de Victoire au Combat</French>
+		<German>[ICON_BULLET]Plündert 4% der feindlichen [ICON_RESEARCH] nach einem Sieg im Kampf</German>
+		<Italian>[ICON_BULLET]Ruba 4% delle risorse nemiche di [ICON_RESEARCH] quando vince una battaglia</Italian>
+		<Polish>[ICON_BULLET]Po zwycięstwie w walce grabi 4% rezerw wrogiego [ICON_RESEARCH]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INFILTRATION</Tag>
@@ -9693,6 +9728,20 @@
 		<Italian>Manovre III</Italian>
 		<Spanish>Maniobras III</Spanish>
 		<Polish>Manewrowanie III</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_MARAUDER</Tag>
+		<English>Marauder</English>
+		<French>Maraudeur</French>
+		<Italian>Predone</Italian>
+		<Polish>Maruder</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_MARAUDER_HELP</Tag>
+		<English>[ICON_BULLET]Plunders 4% of Enemy [ICON_GOLD] Reserves on Combat Victory</English>
+		<French>[ICON_BULLET]Pille 4% de la réserve d'[ICON_GOLD] en cas de Victoire au Combat</French>
+		<Italian>[ICON_BULLET]Ruba 4% delle riserve nemiche di [ICON_GOLD] quando vince una battaglia</Italian>
+		<Polish>[ICON_BULLET]Po zwycięstwie w walce grabi 4% rezerw wrogiego [ICON_GOLD]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MARAUDER_PILLAGE_TEXT</Tag>
@@ -12551,6 +12600,11 @@
 		<Polish>[ICON_BULLET]Eliminuje jedno źródło Popłochu.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_REMOVES_CANNOT_CAPTURE</Tag>
+		<English>[ICON_BULLET]Removes a cause for unit to be unable to capture enemy Cities or Units</English>
+		<French>[ICON_BULLET]Enlève l'incapacité de l'unité de capturer les villes ou unités ennemies</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REMOVES_COLD_IMMUNITY_TEXT</Tag>
 		<English>[ICON_BULLET]Removes a cause this unit would have to be immune to Cold Damage penalties.</English>
 		<French>[ICON_BULLET]Supprime la propriété de l'unité, à être immunisé contre les pénalités des dégâts liés au froid.</French>
@@ -14525,6 +14579,22 @@
 		<Italian>Bombe a diametro ridotto</Italian>
 		<Spanish>Bombas de diámetro reducido</Spanish>
 		<Polish>Bomby o Małej Średnicy</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_SNEAK</Tag>
+		<English>Sneak</English>
+		<French>Furtif</French>
+		<German>Schleichen</German>
+		<Italian>Furtivo</Italian>
+		<Polish>Skradanie się</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_SNEAK_HELP</Tag>
+		<English>[ICON_BULLET]Plunders 4% of Enemy [ICON_ESPIONAGE] Reserves on Combat Victory</English>
+		<French>[ICON_BULLET]Pille 4% de la réserve d'[ICON_ESPIONAGE] après une Victoire au Combat</French>
+		<German>[ICON_BULLET]Plündert 4% der gegnesichen [ICON_ESPIONAGE] anch einem Sieg im Kampf</German>
+		<Italian>[ICON_BULLET]Ruba 4% delle riserve nemiche di [ICON_ESPIONAGE] vincendo una battaglia</Italian>
+		<Polish>[ICON_BULLET]Po zwycięstwie grabi 4% wrogich zapasów [ICON_ESPIONAGE]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SNIPER</Tag>

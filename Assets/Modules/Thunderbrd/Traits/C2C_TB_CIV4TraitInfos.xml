@@ -24736,7 +24736,7 @@
 				</TechResearchModifier>
 			</TechResearchModifiers>
 			<iWorkerSpeedModifier>25</iWorkerSpeedModifier>
-			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
+			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<PropertyManipulators>
 				<PropertySource>
@@ -25317,7 +25317,7 @@
 				</TechResearchModifier>
 			</TechResearchModifiers>
 			<iWorkerSpeedModifier>25</iWorkerSpeedModifier>
-			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
+			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<PropertyManipulators>
 				<PropertySource>
@@ -25800,7 +25800,7 @@
 				</TechResearchModifier>
 			</TechResearchModifiers>
 			<iWorkerSpeedModifier>25</iWorkerSpeedModifier>
-			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
+			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>4</iGreatPeopleRateChange>
 			<PropertyManipulators>
 				<PropertySource>
@@ -26219,7 +26219,7 @@
 				</TechResearchModifier>
 			</TechResearchModifiers>
 			<iWorkerSpeedModifier>25</iWorkerSpeedModifier>
-			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
+			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>6</iGreatPeopleRateChange>
 			<PropertyManipulators>
 				<PropertySource>
@@ -27228,7 +27228,7 @@
 				</TechResearchModifier>
 			</TechResearchModifiers>
 			<iWorkerSpeedModifier>-25</iWorkerSpeedModifier>
-			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
+			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-2</iGreatPeopleRateChange>
 			<PropertyManipulators>
 				<PropertySource>
@@ -27805,7 +27805,7 @@
 				</TechResearchModifier>
 			</TechResearchModifiers>
 			<iWorkerSpeedModifier>-25</iWorkerSpeedModifier>
-			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
+			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-2</iGreatPeopleRateChange>
 			<PropertyManipulators>
 				<PropertySource>
@@ -28282,7 +28282,7 @@
 				</TechResearchModifier>
 			</TechResearchModifiers>
 			<iWorkerSpeedModifier>-25</iWorkerSpeedModifier>
-			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
+			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-4</iGreatPeopleRateChange>
 			<PropertyManipulators>
 				<PropertySource>
@@ -28701,7 +28701,7 @@
 				</TechResearchModifier>
 			</TechResearchModifiers>
 			<iWorkerSpeedModifier>-25</iWorkerSpeedModifier>
-			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
+			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>-6</iGreatPeopleRateChange>
 			<PropertyManipulators>
 				<PropertySource>

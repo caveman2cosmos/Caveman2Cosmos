@@ -6227,7 +6227,17 @@ bool CvUnit::canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveChe
 		return false;
 	}
 
-	if (!pPlot->isMapCategoryType(m_pUnitInfo->getMapCategories()))
+	int iCount = m_pUnitInfo->getNumMapCategoryTypes();
+	bool bFound = (iCount < 1);
+	for (int iI = 0; iI < iCount; iI++)
+	{
+		if (pPlot->isMapCategoryType((MapCategoryTypes)m_pUnitInfo->getMapCategoryType(iI)))
+		{
+			bFound = true;
+			break;
+		}
+	}
+	if (!bFound)
 	{
 		return false;
 	}
@@ -8022,7 +8032,17 @@ bool CvUnit::canUnload() const
 		}
 	}
 
-	if (!kPlot.isMapCategoryType(m_pUnitInfo->getMapCategories()))
+	int iCount = m_pUnitInfo->getNumMapCategoryTypes();
+	bool bFound = (iCount < 1);
+	for (int iI = 0; iI < iCount; iI++)
+	{
+		if (kPlot.isMapCategoryType((MapCategoryTypes)m_pUnitInfo->getMapCategoryType(iI)))
+		{
+			bFound = true;
+			break;
+		}
+	}
+	if (!bFound)
 	{
 		return false;
 	}
@@ -23209,12 +23229,34 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 		return false;
 	}
 
-	if (pPlot != NULL && !pPlot->isMapCategoryType(kPromotion.getMapCategories()))
+	int iCount = kPromotion.getNumMapCategoryTypes();
+	bool bFound = (iCount < 1);
+	if (pPlot != NULL)
 	{
-		return false;
+		for (int iI = 0; iI < iCount; iI++)
+		{
+			if (pPlot->isMapCategoryType((MapCategoryTypes)kPromotion.getMapCategoryType(iI)))
+			{
+				bFound = true;
+				break;
+			}
+		}
+		if (!bFound)
+		{
+			return false;
+		}
 	}
 
-	if (!m_pUnitInfo->isMapCategoryType(kPromotion.getMapCategories()))
+	bFound = (iCount < 1);
+	for (int iI = 0; iI < iCount; iI++)
+	{
+		if (m_pUnitInfo->isMapCategoryType((MapCategoryTypes)kPromotion.getMapCategoryType(iI)))
+		{
+			bFound = true;
+			break;
+		}
+	}
+	if (!bFound)
 	{
 		return false;
 	}

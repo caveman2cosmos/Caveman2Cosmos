@@ -2580,8 +2580,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_AXE_MAKING</PrereqTech>
 			</OrPreReqs>
 			<Quote>TXT_KEY_TECH_WOODWORKING_QUOTE</Quote>
-			<Sound>AS2D_TECH_Woodworking</Sound>
-			<SoundMP>AS2D_TECH_Woodworking</SoundMP>
+			<Sound>AS2D_TECH_WOODWORKING</Sound>
+			<SoundMP>AS2D_TECH_WOODWORKING</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Button_WoodWorking.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -5226,8 +5226,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_NEGOTIATION</PrereqTech>
 			</OrPreReqs>
 			<Quote>TXT_KEY_TECH_TRADE_QUOTE</Quote>
-			<Sound>AS2D_TECH_Trade</Sound>
-			<SoundMP>AS2D_TECH_Trade</SoundMP>
+			<Sound>AS2D_TECH_TRADE</Sound>
+			<SoundMP>AS2D_TECH_TRADE</SoundMP>
 			<Button>,Art/Interface/Buttons/TechTree/Currency.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,5,12</Button>
 		</TechInfo>
 		<TechInfo>
@@ -5540,8 +5540,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_PLOUGH</PrereqTech>
 			</OrPreReqs>
 			<Quote>TXT_KEY_TECH_IRRIGATION_QUOTE</Quote>
-			<Sound>AS2D_TECH_Irrigation</Sound>
-			<SoundMP>AS2D_TECH_Irrigation</SoundMP>
+			<Sound>AS2D_TECH_IRRIGATION</Sound>
+			<SoundMP>AS2D_TECH_IRRIGATION</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Irrigation.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -10223,8 +10223,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_CANDLE_MAKING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_ALCHEMY_QUOTE</Quote>
-			<Sound>AS2D_TECH_AlchemyAstrology</Sound>
-			<SoundMP>AS2D_TECH_AlchemyAstrology</SoundMP>
+			<Sound>AS2D_TECH_ALCHEMYASTROLOGY</Sound>
+			<SoundMP>AS2D_TECH_ALCHEMYASTROLOGY</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/alchemy.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -10269,8 +10269,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_SURVEYING</PrereqTech>
 			</OrPreReqs>
 			<Quote>TXT_KEY_TECH_ARCHITECTURE_QUOTE</Quote>
-			<Sound>AS2D_TECH_Architecture</Sound>
-			<SoundMP>AS2D_TECH_Architecture</SoundMP>
+			<Sound>AS2D_TECH_ARCHITECTURE</Sound>
+			<SoundMP>AS2D_TECH_ARCHITECTURE</SoundMP>
 			<Button>,Art/Interface/Buttons/TechTree/Architecture.dds,Art/Interface/Buttons/RoM_Techtree_Atlas.dds,2,2</Button>
 		</TechInfo>
 		<TechInfo>
@@ -10461,8 +10461,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_ARCHITECTURE</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_STAINED_GLASS_QUOTE</Quote>
-			<Sound>AS2D_TECH_StainedGlass</Sound>
-			<SoundMP>AS2D_TECH_StainedGlass</SoundMP>
+			<Sound>AS2D_TECH_STAINEDGLASS</Sound>
+			<SoundMP>AS2D_TECH_STAINEDGLASS</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/stainedglass.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -10922,8 +10922,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_SMITHING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_ARMOR_CRAFTING_QUOTE</Quote>
-			<Sound>AS2D_TECH_ArmorCrafting</Sound>
-			<SoundMP>AS2D_TECH_ArmorCrafting</SoundMP>
+			<Sound>AS2D_TECH_ARMORCRAFTING</Sound>
+			<SoundMP>AS2D_TECH_ARMORCRAFTING</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Armorcrafting.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -11241,8 +11241,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_ALCHEMY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_CRUCIBLE_STEEL_QUOTE</Quote>
-			<Sound>AS2D_TECH_CrucibleSteel</Sound>
-			<SoundMP>AS2D_TECH_CrucibleSteel</SoundMP>
+			<Sound>AS2D_TECH_CRUCIBLESTEEL</Sound>
+			<SoundMP>AS2D_TECH_CRUCIBLESTEEL</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/cruciblesteel.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -11915,8 +11915,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_OPTICS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_ASTROLABE_QUOTE</Quote>
-			<Sound>AS2D_TECH_Astrolabe</Sound>
-			<SoundMP>AS2D_TECH_Astrolabe</SoundMP>
+			<Sound>AS2D_TECH_ASTROLABE</Sound>
+			<SoundMP>AS2D_TECH_ASTROLABE</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/astrolabe.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -12754,8 +12754,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_CRYPTOGRAPHY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_CRITICAL_THOUGHT_QUOTE</Quote>
-			<Sound>AS2D_TECH_CriticalThought</Sound>
-			<SoundMP>AS2D_TECH_CriticalThought</SoundMP>
+			<Sound>AS2D_TECH_CRITICALTHOUGHT</Sound>
+			<SoundMP>AS2D_TECH_CRITICALTHOUGHT</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/criticalthought.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -12927,8 +12927,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_CAMELID_DOMESTICATION</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_CAVALRY_TACTICS_QUOTE</Quote>
-			<Sound>AS2D_TECH_CavalryTactics</Sound>
-			<SoundMP>AS2D_TECH_CavalryTactics</SoundMP>
+			<Sound>AS2D_TECH_CAVALRYTACTICS</Sound>
+			<SoundMP>AS2D_TECH_CAVALRYTACTICS</SoundMP>
 			<Button>,Art/Interface/Buttons/TechTree/MilitaryTactics.dds,Art/Interface/Buttons/RoM_Techtree_Atlas.dds,7,11</Button>
 		</TechInfo>
 		<TechInfo>
@@ -13085,8 +13085,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_CORPORATION</PrereqTech>
 			</OrPreReqs>
 			<Quote>TXT_KEY_TECH_PATENT_RIGHTS_QUOTE</Quote>
-			<Sound>AS2D_TECH_PatentRight</Sound>
-			<SoundMP>AS2D_TECH_PatentRight</SoundMP>
+			<Sound>AS2D_TECH_PATENTRIGHT</Sound>
+			<SoundMP>AS2D_TECH_PATENTRIGHT</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/patentrights.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -13846,8 +13846,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_WEATHER_FORECASTING</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_SEXTANT_QUOTE</Quote>
-			<Sound>AS2D_TECH_Sextant</Sound>
-			<SoundMP>AS2D_TECH_Sextant</SoundMP>
+			<Sound>AS2D_TECH_SEXTANT</Sound>
+			<SoundMP>AS2D_TECH_SEXTANT</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/sextant.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -15782,8 +15782,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_ORGANIC_CHEMISTRY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_ANTIBIOTICS_QUOTE</Quote>
-			<Sound>AS2D_TECH_Antibiotics</Sound>
-			<SoundMP>AS2D_TECH_Antibiotics</SoundMP>
+			<Sound>AS2D_TECH_ANTIBIOTICS</Sound>
+			<SoundMP>AS2D_TECH_ANTIBIOTICS</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/antibiotics.dds</Button>
 		</TechInfo>
         <TechInfo>
@@ -15947,8 +15947,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_MODERN_SANITATION</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_CIVIL_ENGINEERING_QUOTE</Quote>
-			<Sound>AS2D_TECH_CivilEngineering</Sound>
-			<SoundMP>AS2D_TECH_CivilEngineering</SoundMP>
+			<Sound>AS2D_TECH_CIVILENGINEERING</Sound>
+			<SoundMP>AS2D_TECH_CIVILENGINEERING</SoundMP>
 			<Button>,Art/Interface/Buttons/TechTree/concrete.dds,Art/Interface/Buttons/RoM_Techtree_Atlas.dds,7,4</Button>
 		</TechInfo>
 		<TechInfo>
@@ -15985,8 +15985,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_ELECTRICITY</PrereqTech>
 			</OrPreReqs>
 			<Quote>TXT_KEY_TECH_HYDROELECTRICITY_QUOTE</Quote>
-			<Sound>AS2D_TECH_Hydroelectricity</Sound>
-			<SoundMP>AS2D_TECH_Hydroelectricity</SoundMP>
+			<Sound>AS2D_TECH_HYDROELECTRICITY</Sound>
+			<SoundMP>AS2D_TECH_HYDROELECTRICITY</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/hydroelectricity.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -17775,8 +17775,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_CUBISM</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_MODERN_ART_QUOTE</Quote>
-			<Sound>AS2D_TECH_FineArts</Sound>
-			<SoundMP>AS2D_TECH_FineArts</SoundMP>
+			<Sound>AS2D_TECH_FINEARTS</Sound>
+			<SoundMP>AS2D_TECH_FINEARTS</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/modernart.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -17817,8 +17817,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_APPLIED_ECONOMICS_QUOTE</Quote>
-			<Sound>AS2D_TECH_MerchantAdventures</Sound>
-			<SoundMP>AS2D_TECH_MerchantAdventures</SoundMP>
+			<Sound>AS2D_TECH_MERCHANTADVENTURES</Sound>
+			<SoundMP>AS2D_TECH_MERCHANTADVENTURES</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Economics2.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -18521,8 +18521,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_FOREIGN_POLICY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_GLOBALIZATION_QUOTE</Quote>
-			<Sound>AS2D_TECH_Globalization</Sound>
-			<SoundMP>AS2D_TECH_Globalization</SoundMP>
+			<Sound>AS2D_TECH_GLOBALIZATION</Sound>
+			<SoundMP>AS2D_TECH_GLOBALIZATION</SoundMP>
 			<Button>,Art/Interface/Buttons/TechTree/Globalization.dds,Art/Interface/Buttons/RoM_Techtree_Atlas.dds,8,7</Button>
 		</TechInfo>
 		<TechInfo>
@@ -19245,8 +19245,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_MODERN_PHYSICS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_SEMICONDUCTORS_QUOTE</Quote>
-			<Sound>AS2D_TECH_Transistors</Sound>
-			<SoundMP>AS2D_TECH_Transistors</SoundMP>
+			<Sound>AS2D_TECH_TRANSISTORS</Sound>
+			<SoundMP>AS2D_TECH_TRANSISTORS</SoundMP>
 			<Button>,Art/Interface/Buttons/TechTree/transistors.dds,Art/Interface/Buttons/RoM_Techtree_Atlas2.dds,1,3</Button>
 		</TechInfo>
 		<TechInfo>
@@ -19640,8 +19640,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_BIOLOGICAL_WARFARE</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_MOLECULAR_BIOLOGY_QUOTE</Quote>
-			<Sound>AS2D_TECH_MolecularBiology</Sound>
-			<SoundMP>AS2D_TECH_MolecularBiology</SoundMP>
+			<Sound>AS2D_TECH_MOLECULARBIOLOGY</Sound>
+			<SoundMP>AS2D_TECH_MOLECULARBIOLOGY</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/molecularbiology.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -19971,8 +19971,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_VERTICAL_FLIGHT</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_ASTRONAUTICS_QUOTE</Quote>
-			<Sound>AS2D_TECH_SpaceFlight</Sound>
-			<SoundMP>AS2D_TECH_SpaceFlight</SoundMP>
+			<Sound>AS2D_TECH_SPACEFLIGHT</Sound>
+			<SoundMP>AS2D_TECH_SPACEFLIGHT</SoundMP>
 			<Button>,Art/Interface/Buttons/TechTree/Space_Flight.dds,Art/Interface/Buttons/RoM_Techtree_Atlas.dds,7,16</Button>
 		</TechInfo>
 		<TechInfo>
@@ -21494,7 +21494,7 @@ Current techs which are not in this file:-
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>21329</iCost>
 			<Era>C2C_ERA_INFORMATION</Era>
-			<FirstFreeUnit>UNIT_ENGINEER</FirstFreeUnit>
+			<FirstFreeUnit>UNIT_GREAT_ENGINEER</FirstFreeUnit>
 			<iHappiness>1</iHappiness>
 			<iAsset>48</iAsset>
 			<bTrade>1</bTrade>
@@ -24243,7 +24243,7 @@ Current techs which are not in this file:-
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>36429</iCost>
 			<Era>C2C_ERA_NANOTECH</Era>
-			<FirstFreeUnit>UNIT_ENGINEER</FirstFreeUnit>
+			<FirstFreeUnit>UNIT_GREAT_ENGINEER</FirstFreeUnit>
 			<iAsset>48</iAsset>
 			<bTrade>1</bTrade>
 			<iGridX>100</iGridX>
@@ -26579,8 +26579,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_ADVANCED_COMPUTERS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_ENVIRONMENTAL_ECONOMICS_QUOTE</Quote>
-			<Sound>AS2D_TECH_Environmentalism</Sound>
-			<SoundMP>AS2D_TECH_Environmentalism</SoundMP>
+			<Sound>AS2D_TECH_ENVIRONMENTALISM</Sound>
+			<SoundMP>AS2D_TECH_ENVIRONMENTALISM</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/enviromentaleconomics2.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -30665,8 +30665,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_ASTEROID_EXTRACTION</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_NUCLEAR_PULSE_PROPULSION_QUOTE</Quote>
-			<Sound>AS2D_TECH_NuclearPhysics</Sound>
-			<SoundMP>AS2D_TECH_NuclearPhysics</SoundMP>
+			<Sound>AS2D_TECH_NUCLEARPHYSICS</Sound>
+			<SoundMP>AS2D_TECH_NUCLEARPHYSICS</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/nuclearpulsepropulsion.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -31237,7 +31237,7 @@ Current techs which are not in this file:-
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>134744</iCost>
 			<Era>C2C_ERA_GALACTIC</Era>
-			<FirstFreeUnit>UNIT_ENGINEER</FirstFreeUnit>
+			<FirstFreeUnit>UNIT_GREAT_ENGINEER</FirstFreeUnit>
 			<iAsset>48</iAsset>
 			<iPower>4</iPower>
 			<bTrade>1</bTrade>
@@ -32209,7 +32209,7 @@ Current techs which are not in this file:-
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>166029</iCost>
 			<Era>C2C_ERA_GALACTIC</Era>
-			<FirstFreeUnit>UNIT_ENGINEER</FirstFreeUnit>
+			<FirstFreeUnit>UNIT_GREAT_ENGINEER</FirstFreeUnit>
 			<iAsset>48</iAsset>
 			<iPower>4</iPower>
 			<bTrade>1</bTrade>
@@ -32328,7 +32328,7 @@ Current techs which are not in this file:-
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>166029</iCost>
 			<Era>C2C_ERA_GALACTIC</Era>
-			<FirstFreeUnit>UNIT_ENGINEER</FirstFreeUnit>
+			<FirstFreeUnit>UNIT_GREAT_ENGINEER</FirstFreeUnit>
 			<iAsset>48</iAsset>
 			<iPower>4</iPower>
 			<bTrade>1</bTrade>
@@ -35943,7 +35943,7 @@ Current techs which are not in this file:-
 			<Strategy>TXT_KEY_TECH_BRANE_CONSTRUCTION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<Era>C2C_ERA_TRANSCENDENT</Era>
-			<FirstFreeUnit>UNIT_ENGINEER</FirstFreeUnit>
+			<FirstFreeUnit>UNIT_GREAT_ENGINEER</FirstFreeUnit>
 			<iAsset>48</iAsset>
 			<bTrade>1</bTrade>
 			<iCost>581814</iCost>

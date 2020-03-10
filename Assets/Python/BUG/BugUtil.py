@@ -124,15 +124,6 @@ import time
 import traceback
 import types
 
-## Display Year
-
-def getDisplayYear(vYear):
-	if vYear < 0:
-		return str(-vYear) + getPlainText("TXT_KEY_AUTOLOG_BC")
-	else:
-		return str(vYear) + getPlainText("TXT_KEY_AUTOLOG_AD")
-
-
 ## Text Formatting and Processing
 
 def getPlainText(key, default=None, replaceFontTags=True):

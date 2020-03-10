@@ -7654,7 +7654,17 @@ bool CvPlayer::canReceiveGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit) 
 		}
 	}
 
-	if (!pPlot->isMapCategoryType(GC.getGoodyInfo(eGoody).getMapCategories()))
+	int iCount = GC.getGoodyInfo(eGoody).getNumMapCategoryTypes();
+	bool bFound = (iCount < 1);
+	for (int iI = 0; iI < iCount; iI++)
+	{
+		if (pPlot->isMapCategoryType((MapCategoryTypes)GC.getGoodyInfo(eGoody).getMapCategoryType(iI)))
+		{
+			bFound = true;
+			break;
+		}
+	}
+	if (!bFound)
 	{
 		return false;
 	}

@@ -7148,7 +7148,16 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 			//Actually, here the unit is selected already based on the spawn info itself.  Derive that then derive the MapCategoryTypes
 			//of the unit and ensure that pPlot has the MapCategoryType of the unit.  Easy... no need to include MapCategoryTypes on the
 			//Spawn Info file.
-			if (!pPlot->isMapCategoryType(GC.getUnitInfo(spawnInfo.getUnitType()).getMapCategories()))
+			const int iCount = GC.getUnitInfo(spawnInfo.getUnitType()).getNumMapCategoryTypes();
+			bool bFound = (iCount < 1);
+			for (int iI = 0; iI < iCount; iI++)
+			{
+				if (pPlot->isMapCategoryType((MapCategoryTypes)GC.getUnitInfo(spawnInfo.getUnitType()).getMapCategoryType(iI)))
+				{
+					bFound = true;
+				}
+			}
+			if (!bFound)
 			{
 				continue;
 			}
@@ -7297,9 +7306,11 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 					// Spawn unit group
 					if (!isOption(GAMEOPTION_SIZE_MATTERS))
 					{
-						for (int k = 0; k < spawnInfo.getNumSpawnGroup(); k++)
+						for(int k = 0; k < spawnInfo.getNumSpawnGroup(); k++)
 						{
-							pUnit = GET_PLAYER(ePlayer).initUnit(spawnInfo.getSpawnGroup(k), pPlot->getX(), pPlot->getY(), (UnitAITypes)GC.getUnitInfo(spawnInfo.getSpawnGroup(k)).getDefaultUnitAIType(), NO_DIRECTION, getSorenRandNum(10000, "AI Unit Birthmark"));
+							kUnit = GC.getUnitInfo(spawnInfo.getSpawnGroup(k));
+
+							pUnit = GET_PLAYER(ePlayer).initUnit(spawnInfo.getSpawnGroup(k), pPlot->getX(), pPlot->getY(), (UnitAITypes)kUnit.getDefaultUnitAIType(), NO_DIRECTION, getSorenRandNum(10000, "AI Unit Birthmark"));
 							FAssertMsg(pUnit != NULL, "pUnit is expected to be assigned a valid unit object");
 							pUnit->finishMoves();
 							spawnCount++;
