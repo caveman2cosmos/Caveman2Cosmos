@@ -412,11 +412,6 @@
 		<French>Conseiller Technologique</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_INTERFACE_PROMO_HELP_STACK</Tag>
-		<English>In Stack:</English>
-		<French>En groupe:</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_INTERFACE_TECH_HELP_RESEARCH</Tag>
 		<English>Research:</English>
 		<French>Recherche :</French>
@@ -5896,6 +5891,11 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Italian>[SPACE]nelle vicinanze della città</Italian>
 		<Spanish>[SPACE]en el radio de la ciudad</Spanish>
 		<Polish>[SPACE]w zasięgu miasta</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IN_STACK</Tag>
+		<English>In Stack:</English>
+		<French>En groupe:</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IS_ACCURACY_BOMBARD</Tag>
