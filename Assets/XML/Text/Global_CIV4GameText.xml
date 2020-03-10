@@ -505,7 +505,7 @@
 		<Polish>+1 nieszczęśliwy</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ACHIEVEMENT_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Tag>
 		<English>'Achievements' are special wonders that can be built by National Heroes. There are twelve achievements available throughout the game, providing with different bonuses; However, sometimes, it is better to wait if you want to build an achievement from a later era. Though achievements don't provide huge bonuses at first, over time, they will give a civilization a significant boost in one area.</English>
 		<French>Les [COLOR_HIGHLIGHT_TEXT]Achï¿½vements[COLOR_REVERT] sont des merveilles spï¿½ciales qui peuvent ï¿½tre construites par les Hï¿½ros nationaux. Il y a 8 achï¿½vement possibles, procurant diffï¿½rents bonus, qu'il convient de bien examinï¿½, notamment par rapport ï¿½ l'Ere durant laquelle il est plus avisï¿½ de le dï¿½clencher. Sachant que comme les merveilles, ce n'est disponible que pous la premiï¿½re civilisation ï¿½ le dï¿½clencher.</French>
 		<Italian>Gli 'Obiettivi' sono speciali meraviglie che possono essere costruite dagli eroi nazionali. Ci sono 8 obiettivi disponibili, che danno bonus differenti; comunque, quando un obiettivo viene costruito da una civiltï¿½ non puï¿½ essere costruito da un'altra; in ogni caso, a volte ï¿½ meglio aspettare le ere piï¿½ moderne per costruire un obiettivo. Anche se li obiettivi non danno grandi bonus all'inizio, nel tempo danno ad una civiltï¿½ un grande vantaggio in un settore specifico.</Italian>
@@ -915,7 +915,7 @@
 		<Polish>[ICON_BULLET]%d1%% do Inflacji</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ADVENTURE_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_ADVENTURE_STRATEGY</Tag>
 		<English>Build this corporation in order to get adventure bonuses.</English>
 		<French>Construisez cette corporation pour obtenir des bonus d'aventure.</French>
 		<German>Gründe diese Gesellschaft, um Abenteuerboni zu erhalten.</German>
@@ -1803,7 +1803,7 @@
 		<English>[ICON_BULLET]</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BULLSEYE_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_BULLSEYE_STRATEGY</Tag>
 		<English>Build this corporation in order to get fruit and groceries bonuses.</English>
 		<French>Construire cette corporation pour obtenir la ressource 'fruits et épices'.</French>
 		<Italian>Costruisci questa corporazione per ottenere bonus da frutta e verdura</Italian>
@@ -1829,7 +1829,7 @@
 		<Polish>[COLOR_WARNING_TEXT]Ta cecha wymaga nowszej wersji BUG DLL (BULL).[COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BURGERWORLD_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_BURGERWORLD_STRATEGY</Tag>
 		<English>Build the [COLOR_BUILDING_TEXT]Burgerworld[COLOR_REVERT] Headquarters to create the [COLOR_HIGHLIGHT_TEXT]Burgerworld Corporation[COLOR_REVERT] which consumes [COLOR_HIGHLIGHT_TEXT]Cow[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Pig[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Potato[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Wheat[COLOR_REVERT] or [COLOR_HIGHLIGHT_TEXT]Coffee[COLOR_REVERT] and adds a culture bonus to every city where the [COLOR_HIGHLIGHT_TEXT]Burgerworld Corporation[COLOR_REVERT] is present. The Headquarters provide gold for each city in the world with a Burgerworld franchise.</English>
 		<French>Construire le Siège de [COLOR_BUILDING_TEXT]MondoBurger[COLOR_REVERT] pour fonder la corporation [COLOR_HIGHLIGHT_TEXT]MondoBurger Corporation[COLOR_REVERT] qui consomme [COLOR_HIGHLIGHT_TEXT]vache[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]cochon[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Pommes de terres[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Blé[COLOR_REVERT] ou [COLOR_HIGHLIGHT_TEXT]Café[COLOR_REVERT] et ajoute un bonus de culture à chaque ville où la [COLOR_HIGHLIGHT_TEXT]Corporation MondoBurger[COLOR_REVERT] est présente. Le siège social fournit de l'or pour chaque ville du monde avec une franchise MondoBurger.</French>
 		<Italian>Costruisci il [COLOR_BUILDING_TEXT]QG di Burgerworld[COLOR_REVERT] per creare la corporazione [COLOR_HIGHLIGHT_TEXT]Burgerworld[COLOR_REVERT] che consuma [COLOR_HIGHLIGHT_TEXT]Mucca[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Maiale[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Patata[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Grano[COLOR_REVERT] o [COLOR_HIGHLIGHT_TEXT]Caffè[COLOR_REVERT] e aggiunge un bonus alla cultura in ogni città dove [COLOR_HIGHLIGHT_TEXT]Burgerworld[COLOR_REVERT] è presente. Il QG fornisce oro per ogni città nel mondo dove Burgerworld è presente.</Italian>
@@ -3792,7 +3792,7 @@
 		<Polish>%D1: "Wyrzuciłeś naszych ambasadorów!"</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EMPCLOTH_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_EMPCLOTH_STRATEGY</Tag>
 		<English>Build the [COLOR_BUILDING_TEXT]Emperors Clothing[COLOR_REVERT] Headquarters to create the [COLOR_HIGHLIGHT_TEXT]Emperors Clothing Corporation[COLOR_REVERT] which consumes [COLOR_HIGHLIGHT_TEXT]Silk[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cotton[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Dye[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Sheep[COLOR_REVERT] or [COLOR_HIGHLIGHT_TEXT]Fur[COLOR_REVERT] and adds a culture bonus to every city where the [COLOR_HIGHLIGHT_TEXT]Emperors Clothing Corporation[COLOR_REVERT] is present. The Headquarters provide gold for each city in the world with a Emperors Clothing franchise.</English>
 		<French>Construire le siège de [COLOR_BUILDING_TEXT]Habits Impériaux[COLOR_REVERT] pour créer la corporation [COLOR_HIGHLIGHT_TEXT]Habits Impériaux[COLOR_REVERT] qui consomme [COLOR_HIGHLIGHT_TEXT]Soie[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Coton[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Teinture[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Mouton[COLOR_REVERT] ou [COLOR_HIGHLIGHT_TEXT]Fourrures[COLOR_REVERT] et ajoute un bonus culture dans chaque ville où la corporation [COLOR_HIGHLIGHT_TEXT]Habits Impériaux[COLOR_REVERT] est présente. Le Siège génère de l'or, pour chaque ville pour laquelle il y a une franchise  Habits Impériaux.</French>
 		<Italian>Costruisci il [COLOR_BUILDING_TEXT]QG di Emperors Clothing[COLOR_REVERT] per creare [COLOR_HIGHLIGHT_TEXT]Emperors Clothing[COLOR_REVERT] che consuma [COLOR_HIGHLIGHT_TEXT]Seta[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cotone[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Tintura[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Pecora[COLOR_REVERT] e [COLOR_HIGHLIGHT_TEXT]Pellicce[COLOR_REVERT] e aggiunge un bonus alla cultura dove è presente [COLOR_HIGHLIGHT_TEXT]Emperors Clothing[COLOR_REVERT]. Il QG fornisce oro per ogni città mondiale in cui la corporazione è diffusa.</Italian>
@@ -4226,7 +4226,7 @@ Time Frame: 2150 AD - 2300 AD</English>
 Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EWTRADE_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_EWTRADE_STRATEGY</Tag>
 		<English>Build this corporation in order to get bonuses.</English>
 		<French>Construisez cette corporation afin d'obtenir des bonus.</French>
 		<Spanish>Construye esta corporación para obtener bonificaciones.</Spanish>
@@ -4345,7 +4345,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>Fałsz</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FASHION_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_FASHION_STRATEGY</Tag>
 		<English>Build the [COLOR_BUILDING_TEXT]Fashion House[COLOR_REVERT] Headquarters to create the [COLOR_HIGHLIGHT_TEXT]Fashion House Corporation[COLOR_REVERT] which consumes [COLOR_HIGHLIGHT_TEXT]Silk[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cotton[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Dye[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cow[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Wool[COLOR_REVERT] or [COLOR_HIGHLIGHT_TEXT]Fur[COLOR_REVERT] and adds a culture bonus to every city where the [COLOR_HIGHLIGHT_TEXT]Fashion House Corporation[COLOR_REVERT] is present. The Headquarters provide gold for each city in the world with a Fashion House franchise.</English>
 		<French>Construire le siège de [COLOR_BUILDING_TEXT]Maison de la Mode[COLOR_REVERT] pour créer la corporation [COLOR_HIGHLIGHT_TEXT]Maison de la Mode[COLOR_REVERT] qui consomme [COLOR_HIGHLIGHT_TEXT]Soie[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Coton[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Teinture[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Vache[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Laine[COLOR_REVERT] ou [COLOR_HIGHLIGHT_TEXT]Fourrures[COLOR_REVERT] et ajoute un bonus culture dans chaque ville où la corporation [COLOR_HIGHLIGHT_TEXT]Maison de la Mode[COLOR_REVERT] est présente. Le Siège génère de l'or, pour chaque ville pour laquelle il y a une franchise  Maison de la Mode.</French>
 		<Italian>Costruisci il [COLOR_BUILDING_TEXT]QG di Fashion House[COLOR_REVERT] per creare la corporazione [COLOR_HIGHLIGHT_TEXT]Fashion House[COLOR_REVERT] che consuma [COLOR_HIGHLIGHT_TEXT]Seta[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cotone[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Tintura[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Bovini[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Lana[COLOR_REVERT] o COLOR_HIGHLIGHT_TEXT]Pellicce[COLOR_REVERT] e dà un bonus di cultura in tutte le città dove è presente [COLOR_HIGHLIGHT_TEXT]Fashion House[COLOR_REVERT]. Il QG fornisce oro per ogni città in cui è diffusa Fashion House.</Italian>
@@ -6698,7 +6698,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>Mapa</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MALLWART_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_MALLWART_STRATEGY</Tag>
 		<English>Build this corporation in order to get fruit and groceries bonuses.</English>
 		<French>Construisez cette corporation afin d'obtenir des bonus de fruits et d'épicerie.</French>
 		<Italian>Costruisci questa corporazione per ottenere bonus da frutta e verdura.</Italian>
@@ -6718,7 +6718,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>Projekt Manhattan</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MAPSTER_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_MAPSTER_STRATEGY</Tag>
 		<English>Mapster is a good way to inform the populace of your nation's enduring successes...</English>
 		<French>Mapster est un bon moyen d'informer la population des succès durables de votre nation...</French>
 		<Italian>Mapster è un ottimo modo per informare la popolazione della tua nazione del tuo successo...</Italian>
@@ -6785,7 +6785,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<French>[COLOR_SELECTED_TEXT]Vous avez pillé %d2 [ICON_GOLD] à %s1![COLOR_REVERT]</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MCDOWELLS_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_MCDOWELLS_STRATEGY</Tag>
 		<English>Build the [COLOR_BUILDING_TEXT]Big McDowells[COLOR_REVERT] Headquarters to create the [COLOR_HIGHLIGHT_TEXT]Big McDowells Corporation[COLOR_REVERT] which consumes [COLOR_HIGHLIGHT_TEXT]Cow[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Pig[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Potato[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Wheat[COLOR_REVERT] or [COLOR_HIGHLIGHT_TEXT]Salt[COLOR_REVERT] and adds a culture bonus to every city where the [COLOR_HIGHLIGHT_TEXT]Big McDowells Corporation[COLOR_REVERT] is present. The Headquarters provide gold for each city in the world with a Big McDowells franchise.</English>
 		<French>Construire le siège de [COLOR_BUILDING_TEXT]Big McDowells[COLOR_REVERT] pour créer la corporation [COLOR_HIGHLIGHT_TEXT]McDowells[COLOR_REVERT] qui consomme [COLOR_HIGHLIGHT_TEXT]Vache[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cochon[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]pommes de terre[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Blé[COLOR_REVERT] ou [COLOR_HIGHLIGHT_TEXT]Sel[COLOR_REVERT] et ajoute un bonus culture dans chaque ville où la corporation [COLOR_HIGHLIGHT_TEXT]McDowells[COLOR_REVERT] est présente. Le Siège génère de l'or, pour chaque ville pour laquelle il y a une franchise  McDowells.</French>
 		<Italian>Costruisci il [COLOR_BUILDING_TEXT]QG di Big McDowells[COLOR_REVERT] per creare la corporazione [COLOR_HIGHLIGHT_TEXT]Big McDowells[COLOR_REVERT], che consuma [COLOR_HIGHLIGHT_TEXT]Bovino[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Maiale[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Patate[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Granoturco[COLOR_REVERT] o [COLOR_HIGHLIGHT_TEXT]Sale[COLOR_REVERT] e da un bonus alla cultura in ogni città dove è presente [COLOR_HIGHLIGHT_TEXT]Big McDowells[COLOR_REVERT]. Il QG fornisce oro per ogni città nel mondo in cui Big McDowells ha una filiale.</Italian>
@@ -6883,7 +6883,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>Czas zasady litości zatrzymany! Normalna gra będzie kontynuowana...</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MILEHIGH_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_MILEHIGH_STRATEGY</Tag>
 		<English>The best way to see the world is from an airplane</English>
 		<French>La meilleure façon de voir le monde est depuis un avion</French>
 		<Italian>Il modo migliore per vedere il mondo è da un aeroplano</Italian>
@@ -10467,7 +10467,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>Miasta mają włączoną Strefę Kontroli. (Jednostki wroga nie będą się mogły przemieszczać miedzy polami przyległymi.)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MOBBY_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_MOBBY_STRATEGY</Tag>
 		<English>Build this corporation to get benefits from all meats bonuses.</English>
 		<French>Construisez cette corporation pour profiter de tous les bonus de viande.</French>
 		<Italian>Costruisci questa corporazione per ottenere bonus da tutti i tipi di carne.</Italian>
@@ -11479,7 +11479,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>Wrzesień</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MOONBEAN_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_MOONBEAN_STRATEGY</Tag>
 		<English>Build this corporation in order to get economic bonuses.</English>
 		<French>Construisez cette corporation afin d'obtenir des bonus économiques.</French>
 		<Italian>Costruisci questa corporazione per ottenere bonus economici.</Italian>
@@ -11932,7 +11932,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>[LINK=BUILDING_NEWTONS_UNIVERSITY]Uczelnia Newtona[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_NEW_GREEKWAR_BUILDING_HELLENIC_CATHEDRAL_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_HELLENIC_CATHEDRAL_PEDIA</Tag>
 		<English>In Civilization IV, a cathedral is defined as an especially large and ornate religious building where the faithful worship. Only the most prosperous cities can afford to create cathedrals, as they require huge amounts of raw material and years of dedicated labor by skilled craftsmen. For example, the Notre Dame Cathedral in Paris, France, took over two centuries to complete.</English>
 		<French>Dans Civilization IV, un grand lieu de culte est défini comme un édifice religieux particulièrement grand et richement orné dans lequel les fidèles pratiquent leur religion: "cathédrales" pour les chrétiens, "mosquées" pour les musulmans et "synagogues" pour les juifs. Seules les villes les plus prospères ont les moyens de construire de tels édifices. En effet, ils nécessitent d'énormes quantités de matériaux bruts et des artisans spécialisés doivent y consacrer des années de travail. Ainsi, il a fallu plus de deux siècles pour terminer la cathédrale Notre-Dame à Paris.</French>
 		<German>In Civilization IV sind Kathedralen große und prächtige Gotteshäuser, in denen Gläubige beten. Nur die reichsten aller Städte können sich den Bau einer Kathedrale leisten, da hierfür große Mengen an Baumaterial und die jahrelange Arbeit erfahrener Handwerker erforderlich sind. Die Kathedrale von Notre Dame in Paris wurde beispielsweise erst nach 200-jähriger Bauzeit fertig gestellt.</German>
@@ -11941,7 +11941,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>W Cywilizacji IV katedra stanowi szczególnie doniosły i bogato przyozdobiony gmach religijny, w którym wierni oddają cześć swojemu bóstwu. Jedynie najbardziej majętne miasta mogą sobie pozwolić na wybudowanie katedry, jako że ich postawienie wymaga olbrzymiej ilości surowców do budowy oraz lat wytężonej pracy licznych, wprawnych w swym fachu rzemieślników. Dla przykładu ukończenie katedry Notre Dame w Paryżu, we Francji, zajęło ponad dwa stulecia.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_NEW_GREEKWAR_BUILDING_HELLENIC_MONASTERY_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_HELLENIC_MONASTERY_PEDIA</Tag>
 		<English>A monastery is a building where monks can retreat from the world and concentrate upon the divine. Usually a monastery will have strict rules of conduct to protect its unworldly members from temptation. In some monasteries, the monks are totally silent; in others no visitors are allowed inside. Monasteries usually have many daily rituals and religious services. [PARAGRAPH:1] Throughout the ages monasteries have often been centers of learning. In remote areas the monks may be the only literate people for miles around. Monks have often been employed as scribes, copying out the words of their religion's sacred scripture. Monasteries frequently have extensive libraries, holding religious, scientific, medical and philosophical texts.</English>
 		<French>Un monastère est un édifice dans lequel les moines peuvent se retirer du monde et se concentrer sur le divin. Généralement, les règles de conduite y sont strictes afin de protéger ses membres, détachés du monde, de la tentation. Dans certains monastères, les moines sont totalement silencieux ; dans d'autres, les visiteurs ne sont pas autorisés à pénétrer dans leur enceinte. Les monastères ont généralement de nombreux rituels et services religieux quotidiens. [PARAGRAPH:1]A travers les siècles, les monastères ont souvent été des centres d'érudition. Dans les zones retirées, les moines étaient parfois les seules personnes sachant lire et écrire à des kilomètres à la ronde. Ils ont souvent servi de scribes, recopiant les textes sacrés de leur religion. Les monastères ont généralement de grandes bibliothèques possédant des textes religieux, scientifiques, médicaux et philosophiques.</French>
 		<German>Klöster sind Gebäude, in die sich Mönche zurückziehen, um sich auf Gott zu konzentrieren. In Klöstern gelten strenge Verhaltensregeln, die die Mönche vor Versuchungen bewahren sollen. In einigen Klöstern herrscht ein strenges Redeverbot, in anderen sind keine Besucher gestattet. Die Mönche selbst gehen täglich ihren religiösen Pflichten nach. [PARAGRAPH:1] In der Vergangenheit waren Klöster stets auch Zentren des Wissens. In abgelegenen Gegenden waren die Mönche oft die einzigen gebildeten Menschen, die als Schreiber ihre religiösen Schriften kopierten. Klöster haben nicht selten Bibliotheken, in denen unzählige religiöse, wissenschaftliche, medizinische und philosophische Texte aufbewahrt werden.</German>
@@ -11950,11 +11950,11 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>Klasztor jest budynkiem, w którym mnisi zamykają się przed światem zewnętrznym, dzięki czemu mogą w ciszy kontemplować bóstwo. Zazwyczaj klasztory posiadają surowe reguły postępowania, które mają na celu ochronę swoich umarłych dla świata mieszkańców przed przyziemnymi pokusami. W niektórych klasztorach mnisi zobowiązują się do zachowywania zupełnej ciszy; inne nie zezwalają na żadne odwiedziny z zewnątrz. W obrębie klasztorów zazwyczaj codziennie odbywa się wiele rytuałów i posług religijnych. [PARAGRAPH:1]Poprzez wieki klasztory niejednokrotnie stanowiły centra naukowe. Nic dziwnego, skoro w wielu odległych rejonach w promieniu wielu kilometrów mnisi jako jedyni umieli czytać i pisać. Mnisi niejednokrotnie byli zatrudniani jako skrybowie, przepisywali ręcznie święte księgi wyznawanej religii. Klasztory często posiadają rozległe biblioteki, w których znaleźć można teksty religijne, naukowe, medyczne oraz filozoficzne.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_NEW_GREEKWAR_BUILDING_HELLENIC_SHRINE_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_HELLENIC_SHRINE_PEDIA</Tag>
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_NEW_GREEKWAR_BUILDING_HELLENIC_TEMPLE_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_HELLENIC_TEMPLE_PEDIA</Tag>
 		<English>In Civilization IV, a temple is defined as a building where the faithful come to worship. Christians call their temples "churches," while Muslims call theirs "mosques," and Jews call theirs, simply, "temples." Temples are far more common than cathedrals, but much less large and ornate. Even the smallest village can possess a temple.</English>
 		<French>Dans Civilization IV, un petit lieu de culte est défini comme un édifice dans lequel les fidèles viennent pratiquer leur religion: "églises" pour les chrétiens, "petites mosquées" pour les musulmans et "petites synagogues" pour les juifs. Ces petits lieux de culte sont bien plus courants que les grands lieux de culte mais sont de taille plus réduite et sont bien moins richement ornés. Même le village le plus petit peut posséder un petit lieu de culte.</French>
 		<German>In Civilization IV sind Tempel Gebäude, in denen Gläubige beten. Christen nennen ihre Tempel "Kirchen", Moslems "Moscheen". Es gibt deutlich mehr Tempel als Kathedralen. Allerdings sind sie wesentlich kleiner und schlichter. Selbst das kleinste Dorf kann einen Tempel besitzen.</German>
@@ -13797,7 +13797,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>Twoja jednostka odrodziła się.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RED_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_RED_STRATEGY</Tag>
 		<English>Build this corporation in order to get entertainment bonuses.</English>
 		<French>Construisez cette corporation afin d'obtenir des bonus de divertissement.</French>
 		<Italian>Costruisci questa corporazione per ottenere bonus dall'intrattenimento.</Italian>
@@ -14362,7 +14362,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>Grabież Miasta!!!</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SAFARI_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_SAFARI_STRATEGY</Tag>
 		<English>Build this corporation in order to get hunting bonuses.</English>
 		<French>Construisez cette corporation afin d'obtenir des bonus de chasse.</French>
 		<Italian>Costruisci questa corporazione per ottenere bonus dalla caccia.</Italian>
@@ -18848,7 +18848,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>Wolno</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ULTSOLDIER_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_ULTSOLDIER_STRATEGY</Tag>
 		<English>Build this corporation in order to get military bonuses.</English>
 		<French>Construisez cette corporation afin d'obtenir des bonus militaires.</French>
 		<German>Baue diese Gesellschaft, um Militärboni zu erhalten.</German>
@@ -21329,7 +21329,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>Skończyłeś %s1</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_WONKA_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_WONKA_STRATEGY</Tag>
 		<English>Build this corporation in order to get Confectioneries bonuses.</English>
 		<French>Construire cette corporation pour obtenir la ressource Confiseries.</French>
 		<German>Baue diese Gesellschaft, um Zuckerwarenboni zu erhalten.</German>

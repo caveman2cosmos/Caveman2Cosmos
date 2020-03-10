@@ -8926,7 +8926,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_PLATOS_ACADEMY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PLATOS_ACADEMY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_NEW_GREEKWAR_BUILDING_PLATOS_ACADEMY_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_PLATOS_ACADEMY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PLATOS_ACADEMY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_PLATO</MovieDefineTag>
@@ -13452,7 +13452,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_THEATRE_OF_DIONYSUS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_THEATRE_OF_DIONYSUS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_NEW_GREEKWAR_BUILDING_THEATRE_OF_DIONYSUS_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_THEATRE_OF_DIONYSUS_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_DRAMA</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
@@ -17803,7 +17803,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_MING_VASE_WORKSHOP</Description>
-			<Civilopedia>TXT_KEY_BONUS_MING_VASE_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_MING_VASE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MING_VASE_WORKSHOP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MING_VASE_WORKSHOP</ArtDefineTag>
@@ -17867,7 +17867,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_TERRA_SIGILLIATA_WORKSHOP</Description>
-			<Civilopedia>TXT_KEY_BONUS_TERRA_SIGILLIATA_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_TERRA_SIGILLIATA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TERRA_SIGILLIATA_WORKSHOP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TERRA_SIGILLIATA_WORKSHOP</ArtDefineTag>
@@ -17931,7 +17931,7 @@
 			<Type>BUILDING_MURANO_GLASSMAKERS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_MURANO_GLASSMAKERS</Description>
-			<Civilopedia>TXT_KEY_BONUS_CRYSTAL_GLASSWARE_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_CRYSTAL_GLASSWARE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MURANO_GLASSMAKERS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MURANO_GLASSMAKERS</ArtDefineTag>
@@ -19175,7 +19175,7 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<Help>TXT_KEY_HELP_APPIAN_WAY</Help>
+			<Help>TXT_KEY_BUILDING_APPIAN_WAY_HELP</Help>
 		</BuildingInfo>
 		<!-- 221B Baker Street -->
 		<BuildingInfo>
@@ -19585,7 +19585,7 @@
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<Help>TXT_KEY_HELP_BLARNEY</Help>
+			<Help>TXT_KEY_BUILDING_BLARNEY_HELP</Help>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -20372,7 +20372,7 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<Help>TXT_KEY_HELP_FIELD_GOLD</Help>
+			<Help>TXT_KEY_BUILDING_FIELD_GOLD_HELP</Help>
 			<PrereqOrCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_VASSAL_LEVIES</CivicOption>
@@ -20496,7 +20496,7 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<Help>TXT_KEY_HELP_GOLDEN_SPIKE</Help>
+			<Help>TXT_KEY_BUILDING_GOLDEN_SPIKE_HELP</Help>
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
 					<UnitType>UNIT_PIONEER</UnitType>

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_ADVANCED_MINE_TECHNOLOGY_CENTER_HELP</Tag>
+		<Tag>TXT_KEY_BUILDING_ADVANCED_MINE_TECHNOLOGY_CENTER_HELP</Tag>
 		<English>[ICON_BULLET]-50% Cost for Mines and Mine Fields[NEWLINE][ICON_BULLET]Provides Anti-Tank capability</English>
 	</TEXT>
 	<TEXT>
