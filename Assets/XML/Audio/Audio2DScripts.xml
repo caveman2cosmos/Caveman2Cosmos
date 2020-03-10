@@ -25860,8 +25860,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_Storytelling</ScriptID>
-		<SoundID>SND_TECH_Storytelling</SoundID>
+		<ScriptID>AS2D_TECH_STORYTELLING</ScriptID>
+		<SoundID>SND_TECH_STORYTELLING</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -25883,8 +25883,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_MetalLore</ScriptID>
-		<SoundID>SND_TECH_MetalLore</SoundID>
+		<ScriptID>AS2D_TECH_METALLORE</ScriptID>
+		<SoundID>SND_TECH_METALLORE</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -25907,7 +25907,7 @@
 	</Script2DSound>
 	<Script2DSound>
 		<ScriptID>AS2D_TECH_WOODWORKING</ScriptID>
-		<SoundID>SND_TECH_Woodworking</SoundID>
+		<SoundID>SND_TECH_WOODWORKING</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -25929,8 +25929,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_Stonecutting</ScriptID>
-		<SoundID>SND_TECH_Stonecutting</SoundID>
+		<ScriptID>AS2D_TECH_STONECUTTING</ScriptID>
+		<SoundID>SND_TECH_STONECUTTING</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -25953,7 +25953,7 @@
 	</Script2DSound>
 	<Script2DSound>
 		<ScriptID>AS2D_TECH_ARCHITECTURE</ScriptID>
-		<SoundID>SND_TECH_Architecture</SoundID>
+		<SoundID>SND_TECH_ARCHITECTURE</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -26021,8 +26021,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_Ritual</ScriptID>
-		<SoundID>SND_TECH_Ritual</SoundID>
+		<ScriptID>AS2D_TECH_RITUAL</ScriptID>
+		<SoundID>SND_TECH_RITUAL</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -26044,8 +26044,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_CityPlanning</ScriptID>
-		<SoundID>SND_TECH_CityPlanning</SoundID>
+		<ScriptID>AS2D_TECH_CITYPLANNING</ScriptID>
+		<SoundID>SND_TECH_CITYPLANNING</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -26091,7 +26091,7 @@
 	</Script2DSound>
 	<Script2DSound>
 		<ScriptID>AS2D_TECH_CIVILENGINEERING</ScriptID>
-		<SoundID>SND_TECH_CivilEngineering</SoundID>
+		<SoundID>SND_TECH_CIVILENGINEERING</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -26114,7 +26114,7 @@
 	</Script2DSound>
 	<Script2DSound>
 		<ScriptID>AS2D_TECH_TRADE</ScriptID>
-		<SoundID>SND_TECH_Trade</SoundID>
+		<SoundID>SND_TECH_TRADE</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -26136,8 +26136,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_Politics</ScriptID>
-		<SoundID>SND_TECH_Politics</SoundID>
+		<ScriptID>AS2D_TECH_POLITICS</ScriptID>
+		<SoundID>SND_TECH_POLITICS</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -26159,8 +26159,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_WaterPump</ScriptID>
-		<SoundID>SND_TECH_WaterPump</SoundID>
+		<ScriptID>AS2D_TECH_WATERPUMP</ScriptID>
+		<SoundID>SND_TECH_WATERPUMP</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -26182,8 +26182,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_Fortification</ScriptID>
-		<SoundID>SND_TECH_Fortification</SoundID>
+		<ScriptID>AS2D_TECH_FORTIFICATION</ScriptID>
+		<SoundID>SND_TECH_FORTIFICATION</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -26206,7 +26206,7 @@
 	</Script2DSound>
 	<Script2DSound>
 		<ScriptID>AS2D_TECH_ARMORCRAFTING</ScriptID>
-		<SoundID>SND_TECH_ArmorCrafting</SoundID>
+		<SoundID>SND_TECH_ARMORCRAFTING</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -26229,7 +26229,7 @@
 	</Script2DSound>
 	<Script2DSound>
 		<ScriptID>AS2D_TECH_IRRIGATION</ScriptID>
-		<SoundID>SND_TECH_Irrigation</SoundID>
+		<SoundID>SND_TECH_IRRIGATION</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -26274,8 +26274,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_Siegedraft</ScriptID>
-		<SoundID>SND_TECH_Siegedraft</SoundID>
+		<ScriptID>AS2D_TECH_SIEGEDRAFT</ScriptID>
+		<SoundID>SND_TECH_SIEGEDRAFT</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -26297,8 +26297,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_Theocracy</ScriptID>
-		<SoundID>SND_TECH_Theocracy</SoundID>
+		<ScriptID>AS2D_TECH_THEOCRACY</ScriptID>
+		<SoundID>SND_TECH_THEOCRACY</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -26320,8 +26320,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_MilitaryEngineering</ScriptID>
-		<SoundID>SND_TECH_MilitaryEngineering</SoundID>
+		<ScriptID>AS2D_TECH_MILITARYENGINEERING</ScriptID>
+		<SoundID>SND_TECH_MILITARYENGINEERING</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -26343,8 +26343,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_PeasantServitude</ScriptID>
-		<SoundID>SND_TECH_PeasantServitude</SoundID>
+		<ScriptID>AS2D_TECH_PEASANTSERVITUDE</ScriptID>
+		<SoundID>SND_TECH_PEASANTSERVITUDE</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -26367,7 +26367,7 @@
 	</Script2DSound>
 	<Script2DSound>
 		<ScriptID>AS2D_TECH_ALCHEMYASTROLOGY</ScriptID>
-		<SoundID>SND_TECH_AlchemyAstrology</SoundID>
+		<SoundID>SND_TECH_ALCHEMYASTROLOGY</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -26458,8 +26458,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_CityRights</ScriptID>
-		<SoundID>SND_TECH_CityRights</SoundID>
+		<ScriptID>AS2D_TECH_CITYRIGHTS</ScriptID>
+		<SoundID>SND_TECH_CITYRIGHTS</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -26481,8 +26481,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_ChurchArchitecture</ScriptID>
-		<SoundID>SND_TECH_ChurchArchitecture</SoundID>
+		<ScriptID>AS2D_TECH_CHURCHARCHITECTURE</ScriptID>
+		<SoundID>SND_TECH_CHURCHARCHITECTURE</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -26505,7 +26505,7 @@
 	</Script2DSound>
 	<Script2DSound>
 		<ScriptID>AS2D_TECH_CRUCIBLESTEEL</ScriptID>
-		<SoundID>SND_TECH_CrucibleSteel</SoundID>
+		<SoundID>SND_TECH_CRUCIBLESTEEL</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -26527,8 +26527,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_MechanicalWeapons</ScriptID>
-		<SoundID>SND_TECH_MechanicalWeapons</SoundID>
+		<ScriptID>AS2D_TECH_MECHANICALWEAPONS</ScriptID>
+		<SoundID>SND_TECH_MECHANICALWEAPONS</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -26574,7 +26574,7 @@
 	</Script2DSound>
 	<Script2DSound>
 		<ScriptID>AS2D_TECH_STAINEDGLASS</ScriptID>
-		<SoundID>SND_TECH_StainedGlass</SoundID>
+		<SoundID>SND_TECH_STAINEDGLASS</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -26619,8 +26619,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_ArcheryTraining</ScriptID>
-		<SoundID>SND_TECH_ArcheryTraining</SoundID>
+		<ScriptID>AS2D_TECH_ARCHERYTRAINING</ScriptID>
+		<SoundID>SND_TECH_ARCHERYTRAINING</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -26642,8 +26642,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_PlateArmor</ScriptID>
-		<SoundID>SND_TECH_PlateArmor</SoundID>
+		<ScriptID>AS2D_TECH_PLATEARMOR</ScriptID>
+		<SoundID>SND_TECH_PLATEARMOR</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -26665,8 +26665,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_University</ScriptID>
-		<SoundID>SND_TECH_University</SoundID>
+		<ScriptID>AS2D_TECH_UNIVERSITY</ScriptID>
+		<SoundID>SND_TECH_UNIVERSITY</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -26688,8 +26688,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_BlackPowder</ScriptID>
-		<SoundID>SND_TECH_BlackPowder</SoundID>
+		<ScriptID>AS2D_TECH_BLACKPOWDER</ScriptID>
+		<SoundID>SND_TECH_BLACKPOWDER</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -26735,7 +26735,7 @@
 	</Script2DSound>
 	<Script2DSound>
 		<ScriptID>AS2D_TECH_FINEARTS</ScriptID>
-		<SoundID>SND_TECH_FineArts</SoundID>
+		<SoundID>SND_TECH_FINEARTS</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -26758,7 +26758,7 @@
 	</Script2DSound>
 	<Script2DSound>
 		<ScriptID>AS2D_TECH_CRITICALTHOUGHT</ScriptID>
-		<SoundID>SND_TECH_CriticalThought</SoundID>
+		<SoundID>SND_TECH_CRITICALTHOUGHT</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -26781,7 +26781,7 @@
 	</Script2DSound>
 	<Script2DSound>
 		<ScriptID>AS2D_TECH_ASTROLABE</ScriptID>
-		<SoundID>SND_TECH_Astrolabe</SoundID>
+		<SoundID>SND_TECH_ASTROLABE</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -26803,8 +26803,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_Shipyards</ScriptID>
-		<SoundID>SND_TECH_Shipyards</SoundID>
+		<ScriptID>AS2D_TECH_SHIPYARDS</ScriptID>
+		<SoundID>SND_TECH_SHIPYARDS</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -26826,8 +26826,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_DivineRight</ScriptID>
-		<SoundID>SND_TECH_DivineRight</SoundID>
+		<ScriptID>AS2D_TECH_DIVINERIGHT</ScriptID>
+		<SoundID>SND_TECH_DIVINERIGHT</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -26850,7 +26850,7 @@
 	</Script2DSound>
 	<Script2DSound>
 		<ScriptID>AS2D_TECH_CAVALRYTACTICS</ScriptID>
-		<SoundID>SND_TECH_CavalryTactics</SoundID>
+		<SoundID>SND_TECH_CAVALRYTACTICS</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -26873,7 +26873,7 @@
 	</Script2DSound>
 	<Script2DSound>
 		<ScriptID>AS2D_TECH_MERCHANTADVENTURES</ScriptID>
-		<SoundID>SND_TECH_MerchantAdventures</SoundID>
+		<SoundID>SND_TECH_MERCHANTADVENTURES</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -26895,8 +26895,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_Drydock</ScriptID>
-		<SoundID>SND_TECH_Drydock</SoundID>
+		<ScriptID>AS2D_TECH_DRYDOCK</ScriptID>
+		<SoundID>SND_TECH_DRYDOCK</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -26918,8 +26918,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_Microscope</ScriptID>
-		<SoundID>SND_TECH_Microscope</SoundID>
+		<ScriptID>AS2D_TECH_MICROSCOPE</ScriptID>
+		<SoundID>SND_TECH_MICROSCOPE</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -26965,7 +26965,7 @@
 	</Script2DSound>
 	<Script2DSound>
 		<ScriptID>AS2D_TECH_SEXTANT</ScriptID>
-		<SoundID>SND_TECH_Sextant</SoundID>
+		<SoundID>SND_TECH_SEXTANT</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -26987,8 +26987,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_Metallurgy</ScriptID>
-		<SoundID>SND_TECH_Metallurgy</SoundID>
+		<ScriptID>AS2D_TECH_METALLURGY</ScriptID>
+		<SoundID>SND_TECH_METALLURGY</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -27010,8 +27010,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_LaborSpecialization</ScriptID>
-		<SoundID>SND_TECH_LaborSpecialization</SoundID>
+		<ScriptID>AS2D_TECH_LABORSPECIALIZATION</ScriptID>
+		<SoundID>SND_TECH_LABORSPECIALIZATION</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -27033,8 +27033,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_MixedSailArmament</ScriptID>
-		<SoundID>SND_TECH_MixedSailArmament</SoundID>
+		<ScriptID>AS2D_TECH_MIXEDSAILARMAMENT</ScriptID>
+		<SoundID>SND_TECH_MIXEDSAILARMAMENT</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -27056,8 +27056,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_FlintlockMusket</ScriptID>
-		<SoundID>SND_TECH_FlintlockMusket</SoundID>
+		<ScriptID>AS2D_TECH_FLINTLOCKMUSKET</ScriptID>
+		<SoundID>SND_TECH_FLINTLOCKMUSKET</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -27079,8 +27079,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_Enlightment</ScriptID>
-		<SoundID>SND_TECH_Enlightment</SoundID>
+		<ScriptID>AS2D_TECH_ENLIGHTMENT</ScriptID>
+		<SoundID>SND_TECH_ENLIGHTMENT</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -27125,8 +27125,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_TextileMill</ScriptID>
-		<SoundID>SND_TECH_TextileMill</SoundID>
+		<ScriptID>AS2D_TECH_TEXTILEMILL</ScriptID>
+		<SoundID>SND_TECH_TEXTILEMILL</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -27171,8 +27171,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_HighSeasWarfare</ScriptID>
-		<SoundID>SND_TECH_HighSeasWarfare</SoundID>
+		<ScriptID>AS2D_TECH_HIGHSEASWARFARE</ScriptID>
+		<SoundID>SND_TECH_HIGHSEASWARFARE</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -27194,8 +27194,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_MilitaryThought</ScriptID>
-		<SoundID>SND_TECH_MilitaryThought</SoundID>
+		<ScriptID>AS2D_TECH_MILITARYTHOUGHT</ScriptID>
+		<SoundID>SND_TECH_MILITARYTHOUGHT</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -27217,8 +27217,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_FoodPreservation</ScriptID>
-		<SoundID>SND_TECH_FoodPreservation</SoundID>
+		<ScriptID>AS2D_TECH_FOODPRESERVATION</ScriptID>
+		<SoundID>SND_TECH_FOODPRESERVATION</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -27240,8 +27240,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_Imperialism</ScriptID>
-		<SoundID>SND_TECH_Imperialism</SoundID>
+		<ScriptID>AS2D_TECH_IMPERIALISM</ScriptID>
+		<SoundID>SND_TECH_IMPERIALISM</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -27263,8 +27263,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_FarmingMechanization</ScriptID>
-		<SoundID>SND_TECH_FarmingMechanization</SoundID>
+		<ScriptID>AS2D_TECH_FARMINGMECHANIZATION</ScriptID>
+		<SoundID>SND_TECH_FARMINGMECHANIZATION</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -27286,8 +27286,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_MarketRegulations</ScriptID>
-		<SoundID>SND_TECH_MarketRegulations</SoundID>
+		<ScriptID>AS2D_TECH_MARKETREGULATIONS</ScriptID>
+		<SoundID>SND_TECH_MARKETREGULATIONS</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -27309,8 +27309,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_MilitaryIndustry</ScriptID>
-		<SoundID>SND_TECH_MilitaryIndustry</SoundID>
+		<ScriptID>AS2D_TECH_MILITARYINDUSTRY</ScriptID>
+		<SoundID>SND_TECH_MILITARYINDUSTRY</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -27333,7 +27333,7 @@
 	</Script2DSound>
 	<Script2DSound>
 		<ScriptID>AS2D_TECH_PATENTRIGHT</ScriptID>
-		<SoundID>SND_TECH_PatentRight</SoundID>
+		<SoundID>SND_TECH_PATENTRIGHT</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -27378,8 +27378,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_BessemerConverter</ScriptID>
-		<SoundID>SND_TECH_BessemerConverter</SoundID>
+		<ScriptID>AS2D_TECH_BESSEMERCONVERTER</ScriptID>
+		<SoundID>SND_TECH_BESSEMERCONVERTER</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -27401,8 +27401,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_Fertilizers</ScriptID>
-		<SoundID>SND_TECH_Fertilizers</SoundID>
+		<ScriptID>AS2D_TECH_FERTILIZERS</ScriptID>
+		<SoundID>SND_TECH_FERTILIZERS</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -27424,8 +27424,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_ArmorPlating</ScriptID>
-		<SoundID>SND_TECH_ArmorPlating</SoundID>
+		<ScriptID>AS2D_TECH_ARMORPLATING</ScriptID>
+		<SoundID>SND_TECH_ARMORPLATING</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -27447,8 +27447,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_MachineTools</ScriptID>
-		<SoundID>SND_TECH_MachineTools</SoundID>
+		<ScriptID>AS2D_TECH_MACHINETOOLS</ScriptID>
+		<SoundID>SND_TECH_MACHINETOOLS</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -27470,8 +27470,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_OilExtraction</ScriptID>
-		<SoundID>SND_TECH_OilExtraction</SoundID>
+		<ScriptID>AS2D_TECH_OILEXTRACTION</ScriptID>
+		<SoundID>SND_TECH_OILEXTRACTION</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -27516,8 +27516,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_MachineGuns</ScriptID>
-		<SoundID>SND_TECH_MachineGuns</SoundID>
+		<ScriptID>AS2D_TECH_MACHINEGUNS</ScriptID>
+		<SoundID>SND_TECH_MACHINEGUNS</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -27539,8 +27539,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_BarbedWire</ScriptID>
-		<SoundID>SND_TECH_BarbedWire</SoundID>
+		<ScriptID>AS2D_TECH_BARBEDWIRE</ScriptID>
+		<SoundID>SND_TECH_BARBEDWIRE</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -27562,8 +27562,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_EntertainmentIndustry</ScriptID>
-		<SoundID>SND_TECH_EntertainmentIndustry</SoundID>
+		<ScriptID>AS2D_TECH_ENTERTAINMENTINDUSTRY</ScriptID>
+		<SoundID>SND_TECH_ENTERTAINMENTINDUSTRY</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -27585,8 +27585,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_AllSteelHull</ScriptID>
-		<SoundID>SND_TECH_AllSteelHull</SoundID>
+		<ScriptID>AS2D_TECH_ALLSTEELHULL</ScriptID>
+		<SoundID>SND_TECH_ALLSTEELHULL</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -27609,7 +27609,7 @@
 	</Script2DSound>
 	<Script2DSound>
 		<ScriptID>AS2D_TECH_HYDROELECTRICITY</ScriptID>
-		<SoundID>SND_TECH_Hydroelectricity</SoundID>
+		<SoundID>SND_TECH_HYDROELECTRICITY</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -27654,8 +27654,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_NavalBallistics</ScriptID>
-		<SoundID>SND_TECH_NavalBallistics</SoundID>
+		<ScriptID>AS2D_TECH_NAVALBALLISTICS</ScriptID>
+		<SoundID>SND_TECH_NAVALBALLISTICS</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -27677,8 +27677,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_RepeatingRifle</ScriptID>
-		<SoundID>SND_TECH_RepeatingRifle</SoundID>
+		<ScriptID>AS2D_TECH_REPEATINGRIFLE</ScriptID>
+		<SoundID>SND_TECH_REPEATINGRIFLE</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -27723,8 +27723,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_ModernPhysics</ScriptID>
-		<SoundID>SND_TECH_ModernPhysics</SoundID>
+		<ScriptID>AS2D_TECH_MODERNPHYSICS</ScriptID>
+		<SoundID>SND_TECH_MODERNPHYSICS</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -27747,7 +27747,7 @@
 	</Script2DSound>
 	<Script2DSound>
 		<ScriptID>AS2D_TECH_ANTIBIOTICS</ScriptID>
-		<SoundID>SND_TECH_Antibiotics</SoundID>
+		<SoundID>SND_TECH_ANTIBIOTICS</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -27792,8 +27792,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_TargetingSystem</ScriptID>
-		<SoundID>SND_TECH_TargetingSystem</SoundID>
+		<ScriptID>AS2D_TECH_TARGETINGSYSTEM</ScriptID>
+		<SoundID>SND_TECH_TARGETINGSYSTEM</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -27815,8 +27815,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_AirSuperiority</ScriptID>
-		<SoundID>SND_TECH_AirSuperiority</SoundID>
+		<ScriptID>AS2D_TECH_AIRSUPERIORITY</ScriptID>
+		<SoundID>SND_TECH_AIRSUPERIORITY</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -27838,8 +27838,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_ArmoredWarfare</ScriptID>
-		<SoundID>SND_TECH_ArmoredWarfare</SoundID>
+		<ScriptID>AS2D_TECH_ARMOREDWARFARE</ScriptID>
+		<SoundID>SND_TECH_ARMOREDWARFARE</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -27862,7 +27862,7 @@
 	</Script2DSound>
 	<Script2DSound>
 		<ScriptID>AS2D_TECH_NUCLEARPHYSICS</ScriptID>
-		<SoundID>SND_TECH_NuclearPhysics</SoundID>
+		<SoundID>SND_TECH_NUCLEARPHYSICS</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -27907,8 +27907,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_PowerProjection</ScriptID>
-		<SoundID>SND_TECH_PowerProjection</SoundID>
+		<ScriptID>AS2D_TECH_POWERPROJECTION</ScriptID>
+		<SoundID>SND_TECH_POWERPROJECTION</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -27930,8 +27930,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_RocketProjectile</ScriptID>
-		<SoundID>SND_TECH_RocketProjectile</SoundID>
+		<ScriptID>AS2D_TECH_ROCKETPROJECTILE</ScriptID>
+		<SoundID>SND_TECH_ROCKETPROJECTILE</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -27953,8 +27953,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_InfantryMobility</ScriptID>
-		<SoundID>SND_TECH_InfantryMobility</SoundID>
+		<ScriptID>AS2D_TECH_INFANTRYMOBILITY</ScriptID>
+		<SoundID>SND_TECH_INFANTRYMOBILITY</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -27976,8 +27976,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_RocketScience</ScriptID>
-		<SoundID>SND_TECH_RocketScience</SoundID>
+		<ScriptID>AS2D_TECH_ROCKETSCIENCE</ScriptID>
+		<SoundID>SND_TECH_ROCKETSCIENCE</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -27999,8 +27999,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_Television</ScriptID>
-		<SoundID>SND_TECH_Television</SoundID>
+		<ScriptID>AS2D_TECH_TELEVISION</ScriptID>
+		<SoundID>SND_TECH_TELEVISION</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -28022,8 +28022,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_JetEngine</ScriptID>
-		<SoundID>SND_TECH_JetEngine</SoundID>
+		<ScriptID>AS2D_TECH_JETENGINE</ScriptID>
+		<SoundID>SND_TECH_JETENGINE</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -28046,7 +28046,7 @@
 	</Script2DSound>
 	<Script2DSound>
 		<ScriptID>AS2D_TECH_TRANSISTORS</ScriptID>
-		<SoundID>SND_TECH_Transistors</SoundID>
+		<SoundID>SND_TECH_TRANSISTORS</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -28068,8 +28068,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_Helicopters</ScriptID>
-		<SoundID>SND_TECH_Helicopters</SoundID>
+		<ScriptID>AS2D_TECH_HELICOPTERS</ScriptID>
+		<SoundID>SND_TECH_HELICOPTERS</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -28091,8 +28091,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_Consumerism</ScriptID>
-		<SoundID>SND_TECH_Consumerism</SoundID>
+		<ScriptID>AS2D_TECH_CONSUMERISM</ScriptID>
+		<SoundID>SND_TECH_CONSUMERISM</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -28138,7 +28138,7 @@
 	</Script2DSound>
 	<Script2DSound>
 		<ScriptID>AS2D_TECH_MOLECULARBIOLOGY</ScriptID>
-		<SoundID>SND_TECH_MolecularBiology</SoundID>
+		<SoundID>SND_TECH_MOLECULARBIOLOGY</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -28160,8 +28160,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_SpecialOperations</ScriptID>
-		<SoundID>SND_TECH_SpecialOperations</SoundID>
+		<ScriptID>AS2D_TECH_SPECIALOPERATIONS</ScriptID>
+		<SoundID>SND_TECH_SPECIALOPERATIONS</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -28183,8 +28183,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_GuidedProjectile</ScriptID>
-		<SoundID>SND_TECH_GuidedProjectile</SoundID>
+		<ScriptID>AS2D_TECH_GUIDEDPROJECTILE</ScriptID>
+		<SoundID>SND_TECH_GUIDEDPROJECTILE</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -28206,8 +28206,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_WarheadDelivery</ScriptID>
-		<SoundID>SND_TECH_WarheadDelivery</SoundID>
+		<ScriptID>AS2D_TECH_WARHEADDELIVERY</ScriptID>
+		<SoundID>SND_TECH_WARHEADDELIVERY</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -28229,8 +28229,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_AlternativePowerSource</ScriptID>
-		<SoundID>SND_TECH_AlternativePowerSource</SoundID>
+		<ScriptID>AS2D_TECH_ALTERNATIVEPOWERSOURCE</ScriptID>
+		<SoundID>SND_TECH_ALTERNATIVEPOWERSOURCE</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -28253,7 +28253,7 @@
 	</Script2DSound>
 	<Script2DSound>
 		<ScriptID>AS2D_TECH_GLOBALIZATION</ScriptID>
-		<SoundID>SND_TECH_Globalization</SoundID>
+		<SoundID>SND_TECH_GLOBALIZATION</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -28276,7 +28276,7 @@
 	</Script2DSound>
 	<Script2DSound>
 		<ScriptID>AS2D_TECH_SPACEFLIGHT</ScriptID>
-		<SoundID>SND_TECH_SpaceFlight</SoundID>
+		<SoundID>SND_TECH_SPACEFLIGHT</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -28299,7 +28299,7 @@
 	</Script2DSound>
 	<Script2DSound>
 		<ScriptID>AS2D_TECH_ENVIRONMENTALISM</ScriptID>
-		<SoundID>SND_TECH_Environmentalism</SoundID>
+		<SoundID>SND_TECH_ENVIRONMENTALISM</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -28321,8 +28321,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_SmartProjectile</ScriptID>
-		<SoundID>SND_TECH_SmartProjectile</SoundID>
+		<ScriptID>AS2D_TECH_SMARTPROJECTILE</ScriptID>
+		<SoundID>SND_TECH_SMARTPROJECTILE</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>
@@ -28344,8 +28344,8 @@
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script2DSound>
 	<Script2DSound>
-		<ScriptID>AS2D_TECH_InformationNetworking</ScriptID>
-		<SoundID>SND_TECH_InformationNetworking</SoundID>
+		<ScriptID>AS2D_TECH_INFORMATIONNETWORKING</ScriptID>
+		<SoundID>SND_TECH_INFORMATIONNETWORKING</SoundID>
 		<SoundType>GAME_SPEECH</SoundType>
 		<iMinVolume>100</iMinVolume>
 		<iMaxVolume>100</iMaxVolume>

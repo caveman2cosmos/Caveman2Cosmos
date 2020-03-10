@@ -8610,4 +8610,40 @@
 		<Spanish>Expulsar a todas las corporaciones de la ciudad</Spanish>
 		<Polish>Usuwa wszystkie korporacje z miasta.</Polish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_PIRATE_INVASION_1</Tag>
+		<English>Ignore them.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_PIRATE_INVASION_2</Tag>
+		<English>Destroy them and take their gold!</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_PIRATE_INVASION_3</Tag>
+		<English>Bribe them to join your navy.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_PIRATE_MAP_1</Tag>
+		<English>Bah! That map is a fraud. Ignore the old man.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_PIRATE_MAP_2</Tag>
+		<English>Make a big to-do over it, then burn the map and claim it was the Pirates' revenge!</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_PIRATE_MAP_3</Tag>
+		<English>Search the world over for the treasure.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_PIRATE_NAVY_1</Tag>
+		<English>What's he waiting for?</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_PIRATE_NAVY_2</Tag>
+		<English>Let him start an academy.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_PIRATE_NAVY_3</Tag>
+		<English>Does he have any gold?</English>
+	</TEXT>
 </Civ4GameText>

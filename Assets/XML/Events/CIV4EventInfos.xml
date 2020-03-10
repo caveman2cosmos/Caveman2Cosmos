@@ -7327,14 +7327,14 @@
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_PIRATE_INVASION_1</Type>
-			<Description>Ignore them.</Description>
+			<Description>TXT_KEY_EVENT_PIRATE_INVASION_1</Description>
 			<bDisbandUnit>1</bDisbandUnit>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_PIRATE_INVASION_2</Type>
-			<Description>Destroy them and take their gold!</Description>
+			<Description>TXT_KEY_EVENT_PIRATE_INVASION_2</Description>
 			<iGold>50</iGold>
 			<iUnitImmobileTurns>3</iUnitImmobileTurns>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -7342,7 +7342,7 @@
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_PIRATE_INVASION_3</Type>
-			<Description>Bribe them to join your navy.</Description>
+			<Description>TXT_KEY_EVENT_PIRATE_INVASION_3</Description>
 			<iGold>-350</iGold>
 			<FreeUnit>UNIT_PRIVATEER</FreeUnit>
 			<iNumFreeUnits>2</iNumFreeUnits>
@@ -7351,7 +7351,7 @@
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_PIRATE_MAP_1</Type>
-			<Description>Bah! That map is a fraud. Ignore the old man.</Description>
+			<Description>TXT_KEY_EVENT_PIRATE_MAP_1</Description>
 			<bPickCity>1</bPickCity>
 			<iHurryAnger>1</iHurryAnger>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -7359,7 +7359,7 @@
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_PIRATE_MAP_2</Type>
-			<Description>Make a big to-do over it, then burn the map and claim it was the Pirates' revenge!</Description>
+			<Description>TXT_KEY_EVENT_PIRATE_MAP_2</Description>
 			<bPickCity>1</bPickCity>
 			<iGold>-100</iGold>
 			<iHappyTurns>3</iHappyTurns>
@@ -7368,7 +7368,7 @@
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_PIRATE_MAP_3</Type>
-			<Description>Search the world over for the treasure.</Description>
+			<Description>TXT_KEY_EVENT_PIRATE_MAP_3</Description>
 			<bPickCity>1</bPickCity>
 			<iGold>-150</iGold>
 			<iRandomGold>500</iRandomGold>
@@ -7377,7 +7377,7 @@
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_PIRATE_NAVY_1</Type>
-			<Description>What's he waiting for?</Description>
+			<Description>TXT_KEY_EVENT_PIRATE_NAVY_1</Description>
 			<bPickCity>1</bPickCity>
 			<FreeUnit>UNIT_PRIVATEER</FreeUnit>
 			<iNumFreeUnits>1</iNumFreeUnits>
@@ -7387,7 +7387,7 @@
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_PIRATE_NAVY_2</Type>
-			<Description>Let him start an academy.</Description>
+			<Description>TXT_KEY_EVENT_PIRATE_NAVY_2</Description>
 			<bPickCity>1</bPickCity>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
@@ -7400,7 +7400,7 @@
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_PIRATE_NAVY_3</Type>
-			<Description>Does he have any gold?</Description>
+			<Description>TXT_KEY_EVENT_PIRATE_NAVY_3</Description>
 			<bPickCity>1</bPickCity>
 			<iGold>100</iGold>
 			<iRandomGold>400</iRandomGold>

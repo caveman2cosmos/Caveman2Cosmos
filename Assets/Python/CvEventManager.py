@@ -450,6 +450,10 @@ class CvEventManager:
 							ChangePlayer.updateGraphics()
 							return 1
 
+						elif key == InputTypes.KB_E:
+							import EventTriggerScreen, CvScreenEnums
+							CvScreensInterface.screenMap[CvScreenEnums.EVENTTRIGGER_SCREEN] = EventTriggerScreen.EventTriggerScreen(CvScreenEnums.EVENTTRIGGER_SCREEN)
+
 			elif iModifiers == 3:
 
 				if key == 16: # D
