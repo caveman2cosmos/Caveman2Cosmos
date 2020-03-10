@@ -12386,21 +12386,13 @@ CvWString CvGame::getRandomName(int iMaxLength)
 int CvGame::countDesert(CvPlot* pPlot)
 {
 	int iDesert = 0;
-	for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+	foreach_(CvPlot* pAdjacentPlot, pPlot->adjacent() | filtered(!CvPlot::fn::isCountedPlot()
+		&& CvPlot::fn::getFeatureType() == static_cast<FeatureTypes>(GC.getInfoTypeForString("TERRAIN_DESERT")
+		&& !CvPlot::fn::isHills() && !CvPlot::fn::isPeak())))
 	{
-		CvPlot* pAdjacentPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
-		if (pAdjacentPlot != NULL)
-		{
-			if (!pAdjacentPlot->isCountedPlot())
-			{
-				if (pAdjacentPlot->getTerrainType() == (TerrainTypes)GC.getInfoTypeForString("TERRAIN_DESERT") && !pAdjacentPlot->isHills() && !pAdjacentPlot->isPeak())
-				{
-					pAdjacentPlot->setCountedPlot(true);
-					iDesert++;
-					iDesert += countDesert(pAdjacentPlot);
-				}
-			}
-		}
+		pAdjacentPlot->setCountedPlot(true);
+		iDesert++;
+		iDesert += countDesert(pAdjacentPlot);
 	}
 	return iDesert;
 }
@@ -12410,21 +12402,13 @@ int CvGame::countJungle(CvPlot* pPlot, int iJungle)
 	//This is a big jungle
 	if (iJungle > GC.getDefineINT("MINIMUM_JUNGLE_SIZE") * 2)
 		return iJungle;
-	for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+
+	foreach_(CvPlot* pAdjacentPlot, pPlot->adjacent() | filtered(!CvPlot::fn::isCountedPlot()
+		&& CvPlot::fn::getFeatureType() == static_cast<FeatureTypes>(GC.getInfoTypeForString("FEATURE_JUNGLE"))))
 	{
-		CvPlot* pAdjacentPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
-		if (pAdjacentPlot != NULL)
-		{
-			if (!pAdjacentPlot->isCountedPlot())
-			{
-				if (pAdjacentPlot->getFeatureType() == (FeatureTypes)GC.getInfoTypeForString("FEATURE_JUNGLE"))
-				{
-					iJungle++;
-					pAdjacentPlot->setCountedPlot(true);
-					iJungle += countJungle(pAdjacentPlot, iJungle);
-				}
-			}
-		}
+		iJungle++;
+		pAdjacentPlot->setCountedPlot(true);
+		iJungle += countJungle(pAdjacentPlot, iJungle);
 	}
 	return iJungle;
 }
@@ -12434,21 +12418,13 @@ int CvGame::countForest(CvPlot* pPlot, int iForest)
 	//This is a big forest
 	if (iForest > GC.getDefineINT("MINIMUM_FOREST_SIZE") * 2)
 		return iForest;
-	for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+
+	foreach_(CvPlot* pAdjacentPlot, pPlot->adjacent() | filtered(!CvPlot::fn::isCountedPlot()
+		&& CvPlot::fn::getFeatureType() == static_cast<FeatureTypes>(GC.getInfoTypeForString("FEATURE_FOREST"))))
 	{
-		CvPlot* pAdjacentPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
-		if (pAdjacentPlot != NULL)
-		{
-			if (!pAdjacentPlot->isCountedPlot())
-			{
-				if (pAdjacentPlot->getFeatureType() == (FeatureTypes)GC.getInfoTypeForString("FEATURE_FOREST"))
-				{
-					iForest++;
-					pAdjacentPlot->setCountedPlot(true);
-					iForest += countForest(pAdjacentPlot, iForest);
-				}
-			}
-		}
+		iForest++;
+		pAdjacentPlot->setCountedPlot(true);
+		iForest += countForest(pAdjacentPlot, iForest);
 	}
 	return iForest;
 }
@@ -12521,20 +12497,13 @@ void CvGame::addLandmarkSigns()
 void CvGame::markBayPlots(CvPlot* pPlot)
 {
 	//Marks all plots around the given plot, and all plots around the adjacent plots as counted
-	for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+	foreach_(CvPlot* pAdjacentPlot, pPlot->adjacent() | filtered(!CvPlot::fn::isCountedPlot() && CvPlot::fn::isWater()))
 	{
-		CvPlot* pAdjacentPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
-		if (pAdjacentPlot != NULL && !pAdjacentPlot->isCountedPlot() && pAdjacentPlot->isWater())
+		pAdjacentPlot->setCountedPlot(true);
+
+		foreach_(CvPlot* pAdjacentPlot2, pAdjacentPlot->adjacent() | filtered(!CvPlot::fn::isCountedPlot() && CvPlot::fn::isWater()))
 		{
-			pAdjacentPlot->setCountedPlot(true);
-			for (int iJ = 0; iJ < NUM_DIRECTION_TYPES; ++iJ)
-			{
-				CvPlot* pAdjacentPlot2 = plotDirection(pAdjacentPlot->getX(), pAdjacentPlot->getY(), ((DirectionTypes)iJ));
-				if (pAdjacentPlot2 != NULL && !pAdjacentPlot2->isCountedPlot() && pAdjacentPlot2->isWater())
-				{
-					pAdjacentPlot2->setCountedPlot(true);
-				}
-			}
+			pAdjacentPlot2->setCountedPlot(true);
 		}
 	}
 }
@@ -12542,23 +12511,19 @@ void CvGame::markBayPlots(CvPlot* pPlot)
 int CvGame::countPeaks(CvPlot* pPlot, bool bCountHill)
 {
 	int iPeak = 0;
-	for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+	foreach_(CvPlot* pAdjacentPlot, pPlot->adjacent() | filtered(!CvPlot::fn::isCountedPlot()))
 	{
-		CvPlot* pAdjacentPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
-		if (pAdjacentPlot != NULL && !pAdjacentPlot->isCountedPlot())
+		if (pAdjacentPlot->isPeak())
 		{
-			if (pAdjacentPlot->isPeak())
-			{
-				iPeak++;
-				pAdjacentPlot->setCountedPlot(true);
-				iPeak += countPeaks(pAdjacentPlot, true);
-			}
-			//Use hills to find sparser mountain ranges
-			else if (pAdjacentPlot->isHills() && bCountHill)
-			{
-				pAdjacentPlot->setCountedPlot(true);
-				iPeak += countPeaks(pAdjacentPlot, false);
-			}
+			iPeak++;
+			pAdjacentPlot->setCountedPlot(true);
+			iPeak += countPeaks(pAdjacentPlot, true);
+		}
+		//Use hills to find sparser mountain ranges
+		else if (pAdjacentPlot->isHills() && bCountHill)
+		{
+			pAdjacentPlot->setCountedPlot(true);
+			iPeak += countPeaks(pAdjacentPlot, false);
 		}
 	}
 	return iPeak;

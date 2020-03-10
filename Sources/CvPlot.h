@@ -3,10 +3,8 @@
 #ifndef CvPlot_h__
 #define CvPlot_h__
 
-
 // CvPlot.h
 
-//#include "CvStructs.h"
 #include "LinkedList.h"
 #include <bitset>
 #include <vector>
@@ -1290,6 +1288,14 @@ public:
 	//
 	struct fn {
 		DECLARE_MAP_FUNCTOR(CvPlot, bool, isWater);
+		DECLARE_MAP_FUNCTOR(CvPlot, bool, isOwned);
+		DECLARE_MAP_FUNCTOR(CvPlot, PlayerTypes, getOwner);
+		DECLARE_MAP_FUNCTOR(CvPlot, FeatureTypes, getFeatureType);
+
+		DECLARE_MAP_FUNCTOR_1(CvPlot, int, getBlockadedCount, TeamTypes);
+
+		DECLARE_MAP_FUNCTOR_2(CvPlot, bool, isVisible, TeamTypes, bool);
+		DECLARE_MAP_FUNCTOR_2(CvPlot, bool, isRevealed, TeamTypes, bool);
 	}; 
 };
 
