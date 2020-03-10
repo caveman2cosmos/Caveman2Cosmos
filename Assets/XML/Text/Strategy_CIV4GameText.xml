@@ -1,10 +1,4 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!-- edited with XMLSpy v2008 rel. 2 (http://www.altova.com) by Hazem Shams al'Din (Baraka Designs) -->
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by XMLSPY 2004 Professional Ed. Release 2, Installed Multi + SMP for 3 users (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyleft (c) 2008 BUG Mod -->
-<!-- -->
-<!-- Game Text - Strategy Guides-->
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_STRATEGY</Tag>

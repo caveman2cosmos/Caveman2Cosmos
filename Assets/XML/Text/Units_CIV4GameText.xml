@@ -9276,11 +9276,9 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<German>[ICON_BULLET]Benötigt eine Staatsreligion
 [ICON_BULLET]+2 XP von jeder Nicht-Staatsreligion in der Staat
 [ICON_BULLET]Vernichtet alle Nicht-Staatsreligionen wenn er eine Stadt einnimmt (aber keine heiligen Städte)</German>
-
 		<Italian>[ICON_BULLET]Richiede una religione di stato
 [ICON_BULLET]+2 XP da ogni religion non di stato in una città
 [ICON_BULLET]Purga le religioni non di stato quando cattura una città (ma non nelle Città Sante)</Italian>
-
 		<Polish>[ICON_BULLET]Wymaga religii państwowej
 [ICON_BULLET]+2 XP za każdą religię nie-państwową w mieście
 [ICON_BULLET]Usuwa nie-państwową religię kiedy miasto zostaje podbite (oprócz Świetych Miast)</Polish>
@@ -14093,16 +14091,12 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Requires active State Religion, Intolerant civic must be active</English>
 		<French>[ICON_BULLET]Requiert une Religion d'Etat
 [ICON_BULLET]La doctrine 'Intolérance' doit être active</French>
-
 		<German>[ICON_BULLET]Benötigt eine aktive Staatsreligion
 [ICON_BULLET]Die Gesellschaftsform "Intolerant" muss aktiv sein</German>
-
 		<Italian>[ICON_BULLET]Richiede una Religione di stato
 [ICON_BULLET]La forma di governo Intollerante dev'essere attiva</Italian>
-
 		<Spanish>[ICON_BULLET]Requiere una religión oficial
 [ICON_BULLET]Requiere el principio Intolerancia activo</Spanish>
-
 		<Polish>[ICON_BULLET]Wymaga aktywnej Religii Narodowej
 [ICON_BULLET]Doktryna nietolerancja musi być aktywna</Polish>
 	</TEXT>
@@ -14177,14 +14171,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>[ICON_BULLET]%D1_Change %F2_Type Veil on %s3_Plot</English>
 		<French>[ICON_BULLET]%D1_Change Invisibilité étendue (%F2_Type) de  lorsque sur une case %s3_Plot</French>
 		<German>[ICON_BULLET]%s3_Plot: %D1_Change %F2_Type-Unsichtbarkeit</German>
-	</TEXT>
-	<TEXT>
-		<!-- TXT_KEY_UNIT_INVISIBILITY_VEIL_PLOT_VALUE_ADJ -->
-		<!-- Not in Use, subject to deletion -->
-		<Tag>TXT_KEY_UNIT_INVISIBILITY_PLOT_INTENSITY_ADJ</Tag>
-		<English>[ICON_BULLET]%D1_Change %F2_Type Veil on %s3_Plot (already tallied into total.)</English>
-		<French>[ICON_BULLET]%D1_Change Invisibilité étendue (%F2_Type) de  lorsque sur une case %s3_Plot(inclus dans le total.)</French>
-		<German>[ICON_BULLET]%s3_Plot: %D1_Change %F2_Type-Unsichtbarkeit (in Gesamtwert bereits eingerechnet)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_IPARHAN</Tag>
@@ -19504,13 +19490,11 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 [ICON_BULLET]+4 EXP pour chaque sanctuaire religieux
 [ICON_BULLET]+4 EXP si le joueur membre du Palais Apostolique
 [ICON_BULLET]Lors de la défense d'une ville, propage automatiquement sa religion</French>
-
 		<German>[ICON_BULLET]Benötigt eine Staatsreligion
 [ICON_BULLET]+2 XP von jedem Gebäude der Staatsreligion
 [ICON_BULLET]+4 XP vom Schrein der Staatsreligion
 [ICON_BULLET]+4 XP falls der Spieler Vollmitglied des Apostolischen Palastes ist
 [ICON_BULLET]Falls er in einer Stadt erfolgreich verteidigt, wird die Staatsreligion verbreitet, falls diese nicht bereits anwesend ist</German>
-
 		<Italian>[ICON_BULLET]Richiede una Religione di stato
 [ICON_BULLET]+2 XP da ogni edificio della religione di stato
 [ICON_BULLET]+4 XP dal santuario della religione di stato
@@ -31054,14 +31038,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>[ICON_BULLET]%D1_Change %F2_Type Spot on %s3_Plot</English>
 		<French>[ICON_BULLET]%D1_Change Perception améliorée (%F2_Type) de  lorsque sur une case %s3_Plot</French>
 		<German>[ICON_BULLET]%s3_Plot: %D1_Change %F2_Type-Sicht</German>
-	</TEXT>
-	<TEXT>
-		<!-- TXT_KEY_UNIT_INVISIBILITY_SPOT_PLOT_VALUE_ADJ -->
-		<!-- Not in Use, subject to deletion -->
-		<Tag>TXT_KEY_UNIT_VISIBILITY_PLOT_INTENSITY_ADJ</Tag>
-		<English>[ICON_BULLET]%D1_Change %F2_Type Spot on %s3_Plot (already tallied into total.)</English>
-		<French>[ICON_BULLET]%D1_Change Perception améliorée (%F2_Type) de  lorsque sur une case %s3_Plot (inclus dans le total)</French>
-		<German>[ICON_BULLET]%s3_Plot: %D1_Change %F2_Type-Sicht (in Gesamtwert bereits eingerechnet)</German>
 	</TEXT>
 	<TEXT>
 		<!-- TXT_KEY_UNIT_INVISIBILITY_SPOT_PLOT_RANGE_VALUE -->

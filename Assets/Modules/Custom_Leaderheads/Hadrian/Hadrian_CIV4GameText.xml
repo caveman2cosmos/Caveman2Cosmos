@@ -1,7 +1,4 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!-- Sid Meier's Civilization 4 Beyond the Sword -->
-<!-- Modified by the Civ Gold Team -->
-<!-- -->
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_HADRIAN_1</Tag>

@@ -1,10 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- Joan of Arc v1.0 by bmarnz -->
-<!-- Game Text Infos -->
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
-	<!-- ##### Joan of Arc Game Info - Begin ##### -->
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_IVAN_1</Tag>
 		<English>It would be diplomatically expedient to give us what we want, [CT_NAME]?</English>

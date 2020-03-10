@@ -1,9 +1,4 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jesse Smith (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Game Text Infos -->
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_KNOWLEDGE_INHERITANCE_1</Tag>
@@ -30,7 +25,6 @@
 		<Polish>Tego potrzebowalismy. Przekazmy calemu plemienu jego idee i upewnijmy sie, ze beda przekazywane z pokolenia na pokolenie.</Polish>
 	</TEXT>
 	<TEXT>
-		<!-- GOOD -->
 		<Tag>TXT_KEY_EVENT_KNOWLEDGE_INHERITANCE_OBSOLETE_HELP_1</Tag>
 		<English>[ICON_BULLET]Every [COLOR_BUILDING_TEXT]Knowledge Inheritance[COLOR_REVERT] in our empire will become obsolete.</English>
 		<Italian>[ICON_BULLET]Ogni [COLOR_BUILDING_TEXT]Trasmissione della conoscenza[COLOR_REVERT] in tutto il nostro impero diventa obsoleta.</Italian>
@@ -38,7 +32,6 @@
 		<Polish>[ICON_BULLET]Kazde [COLOR_BUILDING_TEXT]Dziedzictwo Wiedzy[COLOR_REVERT] w naszym imperium niedlugo przestaje istniec.</Polish>
 	</TEXT>
 	<TEXT>
-		<!-- GOOD -->
 		<Tag>TXT_KEY_EVENT_OBSOLETE_KNOWLEDGE_INHERITANCE_1</Tag>
 		<English>I see.</English>
 		<Italian>Capisco.</Italian>

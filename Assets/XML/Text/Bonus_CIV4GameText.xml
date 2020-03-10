@@ -1,31 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
-	<!-- A -->
-	<!-- B -->
-	<!-- C -->
-	<!-- D -->
-	<!-- E -->
-	<!-- F -->
-	<!-- G -->
-	<!-- H -->
-	<!-- I -->
-	<!-- J -->
-	<!-- K -->
-	<!-- L -->
-	<!-- M -->
-	<!-- N -->
-	<!-- O -->
-	<!-- P -->
-	<!-- Q -->
-	<!-- R -->
-	<!-- S -->
-	<!-- T -->
-	<!-- U -->
-	<!-- V -->
-	<!-- W -->
-	<!-- X -->
-	<!-- Y -->
-	<!-- Z -->
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ABBASID</Tag>
 		<English>Abbasid</English>

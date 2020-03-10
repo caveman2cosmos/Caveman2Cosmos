@@ -1,9 +1,4 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by XMLSPY 2004 Professional Ed. Release 2, Installed Multi + SMP for 3 users (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Game Text Infos -->
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_BECOMES_IMP</Tag>
@@ -113,7 +108,6 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REQUIRES_STRING</Tag>
-		<!-- %s1_Name = Can be Buildings, Units, Bonuses, etc -->
 		<English>[COLOR_WARNING_TEXT]Requires [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Requiert : [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]erforderlich: [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</German>
@@ -297,14 +291,6 @@
 		<French>Chances de Révolte: %s1_Chance%% (%s2_CityStrength%% de Sentiment de Récolte Culturelle. %s3_Garrison%% de total de Protection contre la révolte, des Unités)</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_CORPORATION_HEADQUARTER_COMMERCE</Tag> <!-- There are no references to this tag in the Source files, probably dead code. - KaTiON -->
-		<English>[ICON_BULLET]%D1%F2 from each city with [COLOR_HIGHLIGHT_TEXT][LINK=%s3_corporation]%s4_corporation[\LINK][COLOR_REVERT]</English>
-		<French>[ICON_BULLET]%D1%F2 pour chaque ville avec [COLOR_HIGHLIGHT_TEXT][LINK=%s3_corporation]%s4_corporation[\LINK][COLOR_REVERT]</French>
-		<German>[ICON_BULLET]%D1%F2 von jeder Stadt mit der Kapitalgesellschaft [COLOR_HIGHLIGHT_TEXT][LINK=%s3_corporation]%s4_corporation[\LINK][COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]%D1%F2 da ogni città in cui si trova la [COLOR_HIGHLIGHT_TEXT][LINK=%s3_corporation]%s4_corporation[\LINK][COLOR_REVERT]</Italian>
-		<Spanish>[ICON_BULLET]%D1 %F2 por cada ciudad con [COLOR_HIGHLIGHT_TEXT][LINK=%s3_corporation]%s4_corporation[\LINK][COLOR_REVERT]</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_CRIMINAL_CAUGHT</Tag>
 		<English>The %s1_CivAdj %s2_UnitName responsible was foiled in his efforts and spotted in the process!</English>
 		<French>Le responsable %s2_UnitName %s1_CivAdj a été repéré et son action déjouée!</French>
@@ -366,7 +352,6 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_TECH_YIELD</Tag>
-		<!-- %s1 = Yield Type  %s5 = Technology -->
 		<English>%s1: %D2%F3 (with [LINK=%s4_BonusType]%s5_Bonus[\LINK])</English>
 		<French>%s1:  %D2%F3 (avec [LINK=%s4_BonusType]%s5_Bonus[\LINK])</French>
 		<German>%s1: %D2%F3 (mit [LINK=%s4_BonusType]%s5_Bonus[\LINK])</German>
@@ -396,7 +381,6 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_REQUIRES</Tag>
-		<!-- %s2_Name = Can be Buildings, Units, Projects, etc -->
 		<English>[COLOR_WARNING_TEXT]Requires [LINK=%s1_NameType]%s2_Name[\LINK] (%d3/%d4)[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Requiert : [LINK=%s1_NameType]%s2_Name[\LINK] (%d3/%d4)[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]erforderlich: [LINK=%s1_NameType]%s2_Name[\LINK] (%d3/%d4)[COLOR_REVERT]</German>
@@ -413,7 +397,6 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_REQUIRES_NO_CITY</Tag>
-		<!-- %s1_Name = Can be Buildings, Units, Projects, etc -->
 		<English>[COLOR_WARNING_TEXT]Requires [LINK=%s1_NameType]%s2_Name[\LINK] (%d3)[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Requiert : [LINK=%s1_NameType]%s2_Name[\LINK] (%d3)[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]erforderlich: [LINK=%s1_NameType]%s2_Name[\LINK] (%d3)[COLOR_REVERT]</German>

@@ -1,8 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!-- -->
-<!-- Game Text - New -->
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
-	<!-- BUILDS -->
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_ARCHEOLOGICAL_SITE_SLAVE</Tag>
 		<English>Create [LINK=IMPROVEMENT_ARCHEOLOGICAL_SITE]Archeological Site[\LINK] (Forced)</English>

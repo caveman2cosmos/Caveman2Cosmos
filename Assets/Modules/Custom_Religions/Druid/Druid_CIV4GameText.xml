@@ -1,9 +1,4 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by XMLSPY 2004 Professional Ed. Release 2, Installed Multi + SMP for 3 users (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- GameText Civilopedia Techs -->
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DRUID_CATHEDRAL</Tag>
