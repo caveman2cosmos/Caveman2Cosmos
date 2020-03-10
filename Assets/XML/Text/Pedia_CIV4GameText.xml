@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
@@ -34,20 +34,20 @@
 		<German>automatisch</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PEDIA_BONUS_APPEARANCE_AND_TRADE</Tag>
-		<English>Reveal/Enable</English>
-		<French>Révèle/Active</French>
-		<German>enthüllt/verfügbar</German>
-		<Spanish>Revelado y activado</Spanish>
-		<Polish>Odkryte i Włączone</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PEDIA_BONUS_APPEARANCE</Tag>
 		<English>Reveal</English>
 		<French>Révèle</French>
 		<German>enthüllt</German>
 		<Italian>Rivela</Italian>
 		<Spanish>Revela</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_BONUS_APPEARANCE_AND_TRADE</Tag>
+		<English>Reveal/Enable</English>
+		<French>Révèle/Active</French>
+		<German>enthüllt/verfügbar</German>
+		<Spanish>Revelado y activado</Spanish>
+		<Polish>Odkryte i Włączone</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_BONUS_LOCALLY</Tag>
@@ -60,14 +60,6 @@
 		<English>Nationwide</English>
 		<French>Au Niveau Nation</French>
 		<German>landesweit</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PEDIA_BONUS_TRADE</Tag>
-		<English>Enable</English>
-		<French>Actif</French>
-		<German>verfügbar</German>
-		<Italian>Abilita</Italian>
-		<Spanish>Permite</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_BONUS_OBSOLETE</Tag>
@@ -91,6 +83,14 @@
 		<German>mögliche Einheiten</German>
 		<Spanish>Permite entrenar</Spanish>
 		<Polish>Pozwala</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_BONUS_TRADE</Tag>
+		<English>Enable</English>
+		<French>Actif</French>
+		<German>verfügbar</German>
+		<Italian>Abilita</Italian>
+		<Spanish>Permite</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_BONUS_VICINITY_BUILDING</Tag>
@@ -464,6 +464,12 @@
 		<Polish>Ulepszenia</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_LANDSCAPE</Tag>
+		<English>Landscape</English>
+		<French>Paysage</French>
+		<German>Landschaft</German>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_LEADER</Tag>
 		<English>Leaders</English>
 		<French>
@@ -489,12 +495,6 @@
 		<English>Leadership</English>
 		<French>Gouvernement</French>
 		<German>Regierung</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PEDIA_CATEGORY_LANDSCAPE</Tag>
-		<English>Landscape</English>
-		<French>Paysage</French>
-		<German>Landschaft</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_MISC_UNITS</Tag>
@@ -584,16 +584,16 @@
 		<Polish>Religie</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PEDIA_CATEGORY_RESOURCES</Tag>
-		<English>Resources</English>
-		<French>Ressources</French>
-		<German>Ressourcen</German>
-	</TEXT>	
-	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_RELIGIOUS_BUILDINGS</Tag>
 		<English>Religious</English>
 		<French>Religieux</French>
 		<German>Religion</German>
+	</TEXT>	
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_RESOURCES</Tag>
+		<English>Resources</English>
+		<French>Ressources</French>
+		<German>Ressourcen</German>
 	</TEXT>	
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_ROUTES</Tag>
@@ -619,18 +619,6 @@
 		<German>Weiteres</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PEDIA_CATEGORY_SPECIAL_BUILDINGS</Tag>
-		<English>Special Buildings</English>
-		<French>Bâtiments Spéciaux</French>
-		<German>Spezialgebäude</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PEDIA_CATEGORY_SPECIAL_UNITS</Tag>
-		<English>Special Units</English>
-		<French>Unités Spéciales</French>
-		<German>Spezialeinheiten</German>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_SPECIALIST</Tag>
 		<English>Specialists</English>
 		<French>
@@ -650,6 +638,18 @@
 			<Plural>1</Plural>
 		</Spanish>
 		<Polish>Specjaliści</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_SPECIAL_BUILDINGS</Tag>
+		<English>Special Buildings</English>
+		<French>Bâtiments Spéciaux</French>
+		<German>Spezialgebäude</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_SPECIAL_UNITS</Tag>
+		<English>Special Units</English>
+		<French>Unités Spéciales</French>
+		<German>Spezialeinheiten</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_SUBCOMBAT_TYPE</Tag>
@@ -1041,18 +1041,18 @@
 		<Polish>[SPACE]Jednostka</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PEDIA_WELCOME_MESSAGE</Tag>
+		<English>Who are we, who is each one of us, if not a combination of experiences, information, books we have read, things imagined? Each life is an encyclopedia, a library, an inventory of objects, a series of styles, and everything can be constantly shuffled and reordered in every way conceivable.</English>
+		<French>"Qui sommes-nous, qui est chacun de nous, sinon une combinaison d'expériences, d'informations, de livres que nous avons lus, de choses imaginées ? Chaque vie est une encyclopédie, une bibliothèque, un inventaire d'objets, une série de styles, et tout peut être constamment mélangé et réorganisé de toutes les manières imaginables" - Italo Calvino (1923-1985).</French>
+		<German>"Wer sind wir denn, wer ist denn jeder von uns, wenn nicht eine Kombination von Erfahrungen, Informationen, Lektüren und Phantasien? Jedes Leben ist eine Enzyklopädie, eine Bibliothek, ein Inventar von Objekten, eine Musterkollektion von Stilen, worin alles jederzeit auf jede mögliche Weise neu gemischt und neu geordnet werden kann." - Italo Calvino (1923-1985)</German>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PEDIA_WITH_IMPROVEMENT_AND_ROUTE</Tag>
 		<English>with route and improvement</English>
 		<French>avec route et amélioration</French>
 		<German>wenn angeschlossen und abgebaut</German>
 		<Spanish>con camino y mejora</Spanish>
 		<Polish>z drogą i ulepszeniem</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PEDIA_WELCOME_MESSAGE</Tag>
-		<English>Who are we, who is each one of us, if not a combination of experiences, information, books we have read, things imagined? Each life is an encyclopedia, a library, an inventory of objects, a series of styles, and everything can be constantly shuffled and reordered in every way conceivable.</English>
-		<French>"Qui sommes-nous, qui est chacun de nous, sinon une combinaison d'expériences, d'informations, de livres que nous avons lus, de choses imaginées ? Chaque vie est une encyclopédie, une bibliothèque, un inventaire d'objets, une série de styles, et tout peut être constamment mélangé et réorganisé de toutes les manières imaginables" - Italo Calvino (1923-1985).</French>
-		<German>"Wer sind wir denn, wer ist denn jeder von uns, wenn nicht eine Kombination von Erfahrungen, Informationen, Lektüren und Phantasien? Jedes Leben ist eine Enzyklopädie, eine Bibliothek, ein Inventar von Objekten, eine Musterkollektion von Stilen, worin alles jederzeit auf jede mögliche Weise neu gemischt und neu geordnet werden kann." - Italo Calvino (1923-1985)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_WONDER</Tag>

@@ -1,80 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by XMLSPY 2004 Professional Ed. Release 2, Installed Multi + SMP for 3 users (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
 <!-- -->
 <!-- GameText Civilopedia Techs -->
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
-	<TEXT>
-		<Tag>TXT_KEY_TECH_TENGRIISM</Tag>
-		<English>Tengriism</English>
-		<French>Tengriisme</French>
-		<Italian>Tengriismo</Italian>
-		<Polish>Tengryzm</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_TENGRIISM_ADJECTIVE</Tag>
-		<English>Tengriist</English>
-		<French>
-			<Text>Tengriiste</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Tengriist</Text>
-			<Gender>Neuter:Neuter:Neuter</Gender>
-			<Plural>0:0:0</Plural>
-		</German>
-		<Italian>
-			<Text>tengriista:tengriista:tengriisti:tengriiste</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Tengriist</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-		<Polish>Tengrystyczny</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_TENGRIISM_STRATEGY</Tag>
-		<English>[COLOR_TECH_TEXT]Tengriism[COLOR_REVERT] is a prehistoric era technology that founds said religion in the first civilization that researches it. Mechanically Tengriism works differently, first, and most important, it only spreads through the use of shamans, meaning that Tengriism isn't able to spread by itself. To construct shamans it is necessary to build a [COLOR_BUILDING_TEXT]Shaman's Yurta[COLOR_REVERT] first (the religion's only building) in the founding city.</English>
-		<French>Le Tengriisme permet d'entraîner des meilleures unités montées et cela dans toutes vos villes, à partir d'une seule ressource de chevaux.</French>
-		<Italian>Il tengriismo permette di addestrare unità di cavalleria migliori; inoltre permette di addestrare unità di cavalleria anche nelle città che non hanno accesso diretto ai cavalli, sempre che sia disponibile almeno una fonte di cavalli nella tua nazione.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_TENGRIISM_PEDIA</Tag>
-		<English>[TAB]Tengriism is a fairly new term. It is conventionally used to describe a form of Tengri-centered shamanism that prevailed on the Eurasian steppes mostly among early Turkic and Mongol Khanates.[PARAGRAPH:2]Tengrism differs from Siberian shamanism in that the polities practicing it were not small bands of hunter gatherers like the Paleosiberians but a continuous succession of pastoral, semi-sedentarized Khanates and empires from the Xiongnu Empire (founded 209 BC) till the Mongol Empire (13th century).[PARAGRAPH:2]Tengrists view their existence as sustained by the eternal blue sky (Tengri), the fertile mother-earth spirit (Eje) and a ruler regarded as the holy spirit of the sky. Heaven, earth, spirits of nature and ancestors provide for every need and protect all humans. By living an upright, respectful life, a human will keep his world in balance and perfect his personal Wind Horse, or spirit. The Huns of the northern Caucasus reportedly believed in two gods: Tangri Han (or Tengri Khan), considered identical to the Persian Aspandiat and for whom horses were sacrificed, and Kuar (whose victims are struck by lightning).[PARAGRAPH:2]- Wikipedia (Wikidata item Q837605)</English>
-		<Italian>ATTENZIONE: il tengriismo non funziona come le altre religioni, ha qualche particolarità. La prima, e più importante, è che l'unico modo per diffonderla è usando gli sciamani (il tengriismo non si diffonde da solo) e l'unico modo per costruire gli sciamani è costruire prima una yurta degli sciamani, che può essere costruita solo se il tengriismo è presente in città, dandoti nessun'altra scelta che iniziare a diffondere il tengriismo dalla sua città santa. A parte la yurta degli sciamani il tengriismo non ha edifici, dato che nel mondo reale questa religione non ne aveva, perciò sono sostituiti dalla forma di trasmissione originale di questa religione... i canti.Il teengriism era la fede più diffusa tra i Mongoli e i popoli turchi prima che la stragrande maggioranza di essi aderisse alle religioni del mondo civilizzato. Si concentra intorno alla divinità celeste Tengri e incorpora elementi dello sciamanesimo, dell'animismo, del totemismo e del culto degli antenati."Khukh" e "Tengri" letteralmente significano "blu" e "cielo" in lingua mongola, e i mongoli moderni ancora pregano "Munkh khukh Tengri" ("eterno cielo blu"). Pertanto la Mongolia è chiamaao come "terra dell'Eterno Cielo Blu" (" Munkh khukh tengriin oron " in mongolo). Oggi, ci sono ancora un gran numero di fedeli tengriisti che vivono in Asia centrale, come i Khakas e i Tuvani.Nel tengriismo, il senso della vita è visto come vivere in armonia con il mondo circostante. I credenti tengriisti vedono la loro esistenza come sostenuta dal Cielo eterno azzurro, Tengri, la Madre-Terra fertile, lo spirito Eje, e un dominatore che è considerato come lo spirito santo del Cielo. Cielo, Terra, gli spiriti della natura e degli antenati pensano a ogni tipo di esigenza e a proteggere tutti gli esseri umani. Vivendo una vita onesta e rispettosa, un essere umano non mancherà di tenere il suo mondo in equilibrio e massimizzare il suo potere personale a cavallo del vento. Gli sciamani hanno un ruolo importante nel ristabilire l'equilibrio quando viene turbato da disastri o da interferenze degli spiriti.E' probabile che il tengriismo fosse la religione degli Unni; viene ancora praticato attivamente in Sakha, Buriazia, Tuva e  Mongolia, assieme al buddismo tibetano e al Burkhanismo.</Italian>
-		<Polish>Tengryzm to pradawna religia mająca związek przede wszystkim z ludami Azji Srodkowej, takimi jak Hunowie czy Mongołowie. Oparta głównie na wierze w Tengri, boga nieba, oraz Eje, Matkę Ziemię, wiara ta miała dość luźne ramy, nie posiadała duchownych ani kapłanów, a jej wyznawcy nie starali się nawracać innych. Tengryzm skupiał się na utrzymaniu harmonii z otaczającym środowiskiem. Wierni uznawali, że zasoby ziemi są święte, zwłaszcza woda, której ilość była skąpa na stepach Srodkowej Azji, na których żyła większość wyznawców. Choć twierdzi się, że w Azji nadal żyją przedstawiciele tej religii, nie próbowano określić ich liczby.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_TENGRIISM_QUOTE</Tag>
-		<English>No one would hide oneself from him... Let everybody who wants to be saved express frankly one's devotion to Tangra.[PARAGRAPH:2]- Sandugach "Nightingale",[PARAGRAPH:1][SPACE][SPACE]"Chulman Tolgau, 53: 114-125" - Tengriism prayer</English>
-		<French>"Personne ne peut se cacher de Lui... Laissez tout ceux qui souhaitent être sauvés, exprimer franchement leur dévotion à Tangra." - Prière Tengriiste</French>
-		<Polish>"Nikt nie ukryje się przed nim.... Niech każdy, kto chce być zbawiony odprawi szybko nabożeństwo dla Tengry." - Tengryjska modlitwa</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TENGRI_MISSIONARY</Tag>
-		<English>Tengri Shaman</English>
-		<French>Shaman Tengri</French>
-		<Italian>
-			<Text>Sciamano tengriista</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Szaman Tengryzmu</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TENGRI_MISSIONARY_PEDIA</Tag>
-		<English>In Turkic mythology, Tengri is a pure, white goose that flies constantly over an endless expanse of water, which represents time. Beneath this water, Ak Ana ("White Mother") calls out to him saying "Create". To overcome his loneliness, Tengri creates Er Kishi, who is not as pure or as white as Tengri and together they set up the world. Er Kishi becomes a demonic character and strives to mislead people and draw them into its darkness. Tengri assumes the name Tengri Ülgen and withdraws into Heaven from which he tries to provide people with guidance through sacred animals that he sends among them. The Ak Tengris occupy the fifth level of Heaven. Shaman priests who want to reach Tengri Ülgen never get further than this level, where they convey their wishes to the divine guides. Returns to earth or to the human level take place in a goose-shaped vessel.</English>
-		<Polish>Szaman - osoba pełniąca funkcję religijną, polegającą na sformalizowanej i instytucjonalnej więzi ekstatycznej z istotami nadludzkimi, duchami przodków lub demonami.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TENGRI_MISSIONARY_STRATEGY</Tag>
-		<English>Use this missionary to actively spread [COLOR_HIGHLIGHT_TEXT]Tengriism[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]). This increases your income if you have the [COLOR_BUILDING_TEXT]Khan Tengri[COLOR_REVERT].</English>
-	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EJE_SONG</Tag>
 		<English>Eje Song</English>
@@ -97,6 +27,28 @@
 		<English>Build Eje Song to get a free promotion for your mounted units and to increase your cities culture.</English>
 		<French>Construisez le Chant d'Eje pour obtenir une promotion gratuite pour vos unités montées. Ce bâtiment augmente la culture de votre ville.</French>
 		<Italian>Costruisci il Canto di Eje per fornire una promozione gratuita alle tue unià montate e per incrementare la cultura della tua città.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KING_GESAR_SONG</Tag>
+		<English>King Gesar Song</English>
+		<French>Le Chant du Roi Gesar</French>
+		<Italian>
+			<Text>Canto di Re Gesar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Epopeja o Królu Gesarze</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KING_GESAR_SONG_PEDIA</Tag>
+		<English>The Epic of King Gesar is the central epic poem of Tibet and much of Central Asia. With about 140 Gesar ballad singers surviving today (including singers of Tibetan, Mongolian, Buryat and Tu ethnicities), it is prized as one of the few living epics. The epic, believed to be approximately 1000 years old, concerns the fearless king Gesar (Geser), who ruled the legendary Kingdom of Ling.The epic is considered the longest literary work in the world. Although there is no one definitive compilation, if completed it would fill some 120 volumes, containing over 20 million words in more than one million verses.</English>
+		<Italian>Il poema di Re Gesar è il poema epico più diffuso in Tibet e nell'Asia centrale. Al giorno d'oggi esistono ancora 140 ballate di Gesar (diffuse anche nelle etnie Tibetane, Mongole, Buryat e Tu), e questo poema epico è ritenuto uno dei pochi ancora in vita. Il poema, che si ritiene esista da circa 1000 anni, riguarda il re senza paura Gesar (Geser), che guidò il leggendario Regno di Ling.Il poema è considerato il più lungo lavoro letterario del mondo. Anche se non esiste alcun testo ufficiale, se venisse scritto riempirebbe la bellezza di 120 volumi, usando 20 milioni di parole distribuite in più di un milione di versi.</Italian>
+		<Polish>Epopeja o Królu Gesarze - poemat epicki Tybetańczyków, Mongołów i mniejszości Tu zamieszkujących zachodnie i północne Chiny. Uważany za ostatnią "żywą epopeję", jako że wśród Tybetańczyków i Mongołów znaleźć można ok. 140 pieśniarzy, którzy zajmują się tą balladą[potrzebne źródło]. Uważa się, że pieśń o nieustraszonym królu Gesarze, który rządził legendarnym Królestwem Ling, ma ponad 1000 lat. Opowiada ona dzieje życia legendarnych i historycznych bohaterów środkowej Azji. Korzenie tej legendy sięgają początków buddyzmu tybetańskiego, zawiera ona również wiele alegorii do nauk buddyzmu Wadżrajany.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KING_GESAR_SONG_STRATEGY</Tag>
+		<English>Build the King Gesar Song to increase your cities culture.</English>
+		<Italian>Costruisci il Canto di Re Gesar per incrementare la cultura nella tua città.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHAMANS_YURTA</Tag>
@@ -126,26 +78,26 @@
 		<Italian>Costruisci la yurta dello sciamano per addestrare i missionari tengriisti e per incrementare la produzione militare della tua città.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KING_GESAR_SONG</Tag>
-		<English>King Gesar Song</English>
-		<French>Le Chant du Roi Gesar</French>
+		<Tag>TXT_KEY_BUILDING_TENGRII_HORSE_BREEDER</Tag>
+		<English>Tengrii Horse Trainer</English>
+		<French>Elevage de Chevaux Tengrii</French>
 		<Italian>
-			<Text>Canto di Re Gesar</Text>
+			<Text>Allevatore di cavalli tengriista</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
-		<Polish>Epopeja o Królu Gesarze</Polish>
+		<Polish>Tengryjski Hodowca Koni</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KING_GESAR_SONG_PEDIA</Tag>
-		<English>The Epic of King Gesar is the central epic poem of Tibet and much of Central Asia. With about 140 Gesar ballad singers surviving today (including singers of Tibetan, Mongolian, Buryat and Tu ethnicities), it is prized as one of the few living epics. The epic, believed to be approximately 1000 years old, concerns the fearless king Gesar (Geser), who ruled the legendary Kingdom of Ling.The epic is considered the longest literary work in the world. Although there is no one definitive compilation, if completed it would fill some 120 volumes, containing over 20 million words in more than one million verses.</English>
-		<Italian>Il poema di Re Gesar è il poema epico più diffuso in Tibet e nell'Asia centrale. Al giorno d'oggi esistono ancora 140 ballate di Gesar (diffuse anche nelle etnie Tibetane, Mongole, Buryat e Tu), e questo poema epico è ritenuto uno dei pochi ancora in vita. Il poema, che si ritiene esista da circa 1000 anni, riguarda il re senza paura Gesar (Geser), che guidò il leggendario Regno di Ling.Il poema è considerato il più lungo lavoro letterario del mondo. Anche se non esiste alcun testo ufficiale, se venisse scritto riempirebbe la bellezza di 120 volumi, usando 20 milioni di parole distribuite in più di un milione di versi.</Italian>
-		<Polish>Epopeja o Królu Gesarze - poemat epicki Tybetańczyków, Mongołów i mniejszości Tu zamieszkujących zachodnie i północne Chiny. Uważany za ostatnią "żywą epopeję", jako że wśród Tybetańczyków i Mongołów znaleźć można ok. 140 pieśniarzy, którzy zajmują się tą balladą[potrzebne źródło]. Uważa się, że pieśń o nieustraszonym królu Gesarze, który rządził legendarnym Królestwem Ling, ma ponad 1000 lat. Opowiada ona dzieje życia legendarnych i historycznych bohaterów środkowej Azji. Korzenie tej legendy sięgają początków buddyzmu tybetańskiego, zawiera ona również wiele alegorii do nauk buddyzmu Wadżrajany.</Polish>
+		<Tag>TXT_KEY_BUILDING_TENGRII_HORSE_BREEDER_PEDIA</Tag>
+		<English>The Horse Trainer is required to build Horse units.</English>
+		<Italian>Quest'allevatore di cavalli permette di addestrare le unità di cavalleria, anche se non hai una fonte di cavalli nelle vicinanze della città.</Italian>
+		<Polish>Stadnina koni prowadzona przez wyznawców Tengryzmu.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KING_GESAR_SONG_STRATEGY</Tag>
-		<English>Build the King Gesar Song to increase your cities culture.</English>
-		<Italian>Costruisci il Canto di Re Gesar per incrementare la cultura nella tua città.</Italian>
+		<Tag>TXT_KEY_BUILDING_TENGRII_HORSE_BREEDER_STRATEGY</Tag>
+		<English>The Horse Trainer is required to build Horse units.</English>
+		<Italian>Quest'allevatore di cavalli permette di addestrare le unità di cavalleria, anche se non hai una fonte di cavalli nelle vicinanze della città.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TENGRI_SHRINE</Tag>
@@ -191,28 +143,6 @@
 		<Italian>Costruisci il Canto di Tengri per fornire una promozione gratuita alle tue unià montate e per incrementare la cultura della tua città.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TENGRII_HORSE_BREEDER</Tag>
-		<English>Tengrii Horse Trainer</English>
-		<French>Elevage de Chevaux Tengrii</French>
-		<Italian>
-			<Text>Allevatore di cavalli tengriista</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Tengryjski Hodowca Koni</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TENGRII_HORSE_BREEDER_STRATEGY</Tag>
-		<English>The Horse Trainer is required to build Horse units.</English>
-		<Italian>Quest'allevatore di cavalli permette di addestrare le unità di cavalleria, anche se non hai una fonte di cavalli nelle vicinanze della città.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TENGRII_HORSE_BREEDER_PEDIA</Tag>
-		<English>The Horse Trainer is required to build Horse units.</English>
-		<Italian>Quest'allevatore di cavalli permette di addestrare le unità di cavalleria, anche se non hai una fonte di cavalli nelle vicinanze della città.</Italian>
-		<Polish>Stadnina koni prowadzona przez wyznawców Tengryzmu.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WIND_HORSE</Tag>
 		<English>Wind Horse I</English>
 		<French>Cheval de vent I</French>
@@ -226,4 +156,74 @@
 		<Italian>Cavallo del vento II</Italian>
 		<Polish>Wicher II</Polish>
 	</TEXT>
-</Civ4GameText>
+<TEXT>
+		<Tag>TXT_KEY_TECH_TENGRIISM</Tag>
+		<English>Tengriism</English>
+		<French>Tengriisme</French>
+		<Italian>Tengriismo</Italian>
+		<Polish>Tengryzm</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_TENGRIISM_ADJECTIVE</Tag>
+		<English>Tengriist</English>
+		<French>
+			<Text>Tengriiste</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>
+			<Text>Tengriist</Text>
+			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Plural>0:0:0</Plural>
+		</German>
+		<Italian>
+			<Text>tengriista:tengriista:tengriisti:tengriiste</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tengriist</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Spanish>
+		<Polish>Tengrystyczny</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_TENGRIISM_PEDIA</Tag>
+		<English>[TAB]Tengriism is a fairly new term. It is conventionally used to describe a form of Tengri-centered shamanism that prevailed on the Eurasian steppes mostly among early Turkic and Mongol Khanates.[PARAGRAPH:2]Tengrism differs from Siberian shamanism in that the polities practicing it were not small bands of hunter gatherers like the Paleosiberians but a continuous succession of pastoral, semi-sedentarized Khanates and empires from the Xiongnu Empire (founded 209 BC) till the Mongol Empire (13th century).[PARAGRAPH:2]Tengrists view their existence as sustained by the eternal blue sky (Tengri), the fertile mother-earth spirit (Eje) and a ruler regarded as the holy spirit of the sky. Heaven, earth, spirits of nature and ancestors provide for every need and protect all humans. By living an upright, respectful life, a human will keep his world in balance and perfect his personal Wind Horse, or spirit. The Huns of the northern Caucasus reportedly believed in two gods: Tangri Han (or Tengri Khan), considered identical to the Persian Aspandiat and for whom horses were sacrificed, and Kuar (whose victims are struck by lightning).[PARAGRAPH:2]- Wikipedia (Wikidata item Q837605)</English>
+		<Italian>ATTENZIONE: il tengriismo non funziona come le altre religioni, ha qualche particolarità. La prima, e più importante, è che l'unico modo per diffonderla è usando gli sciamani (il tengriismo non si diffonde da solo) e l'unico modo per costruire gli sciamani è costruire prima una yurta degli sciamani, che può essere costruita solo se il tengriismo è presente in città, dandoti nessun'altra scelta che iniziare a diffondere il tengriismo dalla sua città santa. A parte la yurta degli sciamani il tengriismo non ha edifici, dato che nel mondo reale questa religione non ne aveva, perciò sono sostituiti dalla forma di trasmissione originale di questa religione... i canti.Il teengriism era la fede più diffusa tra i Mongoli e i popoli turchi prima che la stragrande maggioranza di essi aderisse alle religioni del mondo civilizzato. Si concentra intorno alla divinità celeste Tengri e incorpora elementi dello sciamanesimo, dell'animismo, del totemismo e del culto degli antenati."Khukh" e "Tengri" letteralmente significano "blu" e "cielo" in lingua mongola, e i mongoli moderni ancora pregano "Munkh khukh Tengri" ("eterno cielo blu"). Pertanto la Mongolia è chiamaao come "terra dell'Eterno Cielo Blu" (" Munkh khukh tengriin oron " in mongolo). Oggi, ci sono ancora un gran numero di fedeli tengriisti che vivono in Asia centrale, come i Khakas e i Tuvani.Nel tengriismo, il senso della vita è visto come vivere in armonia con il mondo circostante. I credenti tengriisti vedono la loro esistenza come sostenuta dal Cielo eterno azzurro, Tengri, la Madre-Terra fertile, lo spirito Eje, e un dominatore che è considerato come lo spirito santo del Cielo. Cielo, Terra, gli spiriti della natura e degli antenati pensano a ogni tipo di esigenza e a proteggere tutti gli esseri umani. Vivendo una vita onesta e rispettosa, un essere umano non mancherà di tenere il suo mondo in equilibrio e massimizzare il suo potere personale a cavallo del vento. Gli sciamani hanno un ruolo importante nel ristabilire l'equilibrio quando viene turbato da disastri o da interferenze degli spiriti.E' probabile che il tengriismo fosse la religione degli Unni; viene ancora praticato attivamente in Sakha, Buriazia, Tuva e  Mongolia, assieme al buddismo tibetano e al Burkhanismo.</Italian>
+		<Polish>Tengryzm to pradawna religia mająca związek przede wszystkim z ludami Azji Srodkowej, takimi jak Hunowie czy Mongołowie. Oparta głównie na wierze w Tengri, boga nieba, oraz Eje, Matkę Ziemię, wiara ta miała dość luźne ramy, nie posiadała duchownych ani kapłanów, a jej wyznawcy nie starali się nawracać innych. Tengryzm skupiał się na utrzymaniu harmonii z otaczającym środowiskiem. Wierni uznawali, że zasoby ziemi są święte, zwłaszcza woda, której ilość była skąpa na stepach Srodkowej Azji, na których żyła większość wyznawców. Choć twierdzi się, że w Azji nadal żyją przedstawiciele tej religii, nie próbowano określić ich liczby.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_TENGRIISM_QUOTE</Tag>
+		<English>No one would hide oneself from him... Let everybody who wants to be saved express frankly one's devotion to Tangra.[PARAGRAPH:2]- Sandugach "Nightingale",[PARAGRAPH:1][SPACE][SPACE]"Chulman Tolgau, 53: 114-125" - Tengriism prayer</English>
+		<French>"Personne ne peut se cacher de Lui... Laissez tout ceux qui souhaitent être sauvés, exprimer franchement leur dévotion à Tangra." - Prière Tengriiste</French>
+		<Polish>"Nikt nie ukryje się przed nim.... Niech każdy, kto chce być zbawiony odprawi szybko nabożeństwo dla Tengry." - Tengryjska modlitwa</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_TENGRIISM_STRATEGY</Tag>
+		<English>[COLOR_TECH_TEXT]Tengriism[COLOR_REVERT] is a prehistoric era technology that founds said religion in the first civilization that researches it. Mechanically Tengriism works differently, first, and most important, it only spreads through the use of shamans, meaning that Tengriism isn't able to spread by itself. To construct shamans it is necessary to build a [COLOR_BUILDING_TEXT]Shaman's Yurta[COLOR_REVERT] first (the religion's only building) in the founding city.</English>
+		<French>Le Tengriisme permet d'entraîner des meilleures unités montées et cela dans toutes vos villes, à partir d'une seule ressource de chevaux.</French>
+		<Italian>Il tengriismo permette di addestrare unità di cavalleria migliori; inoltre permette di addestrare unità di cavalleria anche nelle città che non hanno accesso diretto ai cavalli, sempre che sia disponibile almeno una fonte di cavalli nella tua nazione.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TENGRI_MISSIONARY</Tag>
+		<English>Tengri Shaman</English>
+		<French>Shaman Tengri</French>
+		<Italian>
+			<Text>Sciamano tengriista</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Szaman Tengryzmu</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TENGRI_MISSIONARY_PEDIA</Tag>
+		<English>In Turkic mythology, Tengri is a pure, white goose that flies constantly over an endless expanse of water, which represents time. Beneath this water, Ak Ana ("White Mother") calls out to him saying "Create". To overcome his loneliness, Tengri creates Er Kishi, who is not as pure or as white as Tengri and together they set up the world. Er Kishi becomes a demonic character and strives to mislead people and draw them into its darkness. Tengri assumes the name Tengri Ülgen and withdraws into Heaven from which he tries to provide people with guidance through sacred animals that he sends among them. The Ak Tengris occupy the fifth level of Heaven. Shaman priests who want to reach Tengri Ülgen never get further than this level, where they convey their wishes to the divine guides. Returns to earth or to the human level take place in a goose-shaped vessel.</English>
+		<Polish>Szaman - osoba pełniąca funkcję religijną, polegającą na sformalizowanej i instytucjonalnej więzi ekstatycznej z istotami nadludzkimi, duchami przodków lub demonami.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TENGRI_MISSIONARY_STRATEGY</Tag>
+		<English>Use this missionary to actively spread [COLOR_HIGHLIGHT_TEXT]Tengriism[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]). This increases your income if you have the [COLOR_BUILDING_TEXT]Khan Tengri[COLOR_REVERT].</English>
+	</TEXT>
+	</Civ4GameText>

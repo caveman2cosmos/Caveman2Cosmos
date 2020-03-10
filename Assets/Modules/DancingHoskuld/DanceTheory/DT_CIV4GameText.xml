@@ -1,11 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <!-- ###################################################################################### -->
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ..\..\..\Xml/Schema/Civ4Gametext.xsd">
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DANCE_STRATEGY</Tag>
-		<English>Dancing improves the chance of inspiring Great Artists.</English>
-		<French>La danse améliore les chances d'inspirer de grands artistes.</French>
-	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BIRD_DANCE</Tag>
 		<English>Dance - Bird</English>
@@ -19,6 +14,11 @@ Recent studies indicate that humans, parrots and elephants are the only creature
 		<French>Certains oiseaux danseraient et ces danses ont inspiré les premières danses humaines.
 
 Des études récentes indiquent que les humains, les perroquets et les éléphants sont les seules créatures qui dansent vraiment!</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DANCE_STRATEGY</Tag>
+		<English>Dancing improves the chance of inspiring Great Artists.</English>
+		<French>La danse améliore les chances d'inspirer de grands artistes.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOX_DANCE</Tag>
@@ -35,21 +35,6 @@ Recent studies indicate that humans, parrots and elephants are the only creature
 Des études récentes indiquent que les humains, les perroquets et les éléphants sont les seules créatures qui dansent vraiment!</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_WAR_CRY</Tag>
-		<English>Shock and Awe - War Cry</English>
-		<French>Choc et stupeur - Cri de guerre</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_CACOPHONY</Tag>
-		<English>Shock and Awe - Cacophony</English>
-		<French>Choc et stupeur - Cacophonie</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_HAKA</Tag>
-		<English>Shock and Awe - Haka</English>
-		<French>Choc et stupeur - Haka</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HAKA</Tag>
 		<English>Dance - Haka</English>
 		<French>Danse - Haka</French>
@@ -64,4 +49,19 @@ Des études récentes indiquent que les humains, les perroquets et les éléphan
 		<English>Strike fear in the hearts of your enemy.</English>
 		<French>Inspirez la peur dans le coeur de votre ennemi.</French>
 	</TEXT>
-</Civ4GameText>
+<TEXT>
+		<Tag>TXT_KEY_PROMOTION_CACOPHONY</Tag>
+		<English>Shock and Awe - Cacophony</English>
+		<French>Choc et stupeur - Cacophonie</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_HAKA</Tag>
+		<English>Shock and Awe - Haka</English>
+		<French>Choc et stupeur - Haka</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_WAR_CRY</Tag>
+		<English>Shock and Awe - War Cry</English>
+		<French>Choc et stupeur - Cri de guerre</French>
+	</TEXT>
+	</Civ4GameText>

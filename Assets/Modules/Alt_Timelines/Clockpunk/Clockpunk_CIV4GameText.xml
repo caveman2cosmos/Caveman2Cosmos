@@ -1,10 +1,150 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by XMLSPY 2004 Professional Ed. Release 2, Installed Multi + SMP for 3 users (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
 <!-- -->
 <!-- Game Text - New -->
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_CLOCKPUNK</Tag>
+		<English>Clockpunk</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_CLOCKPUNK_PEDIA</Tag>
+		<English>Clockpunk is a subgenre of speculative fiction which is similar to steampunk, in that it portrays advanced technology based on pre-modern designs, but the technology used is based on springs and clockwork, and is usually set during the Renaissance.</English>
+		<Polish>Clockpunk - odmiana science-fiction, która wyewoluowała z steampunku. Akcja utworów przeważnie w erze preindustrialnej, chociaż rozmach z jakim jest stosowana technologia sugeruje co innego. Technika opiera się przede wszystkim na sprężynach, podstawowej mechanice (clockwork - stąd nazwa gatunku) i wynalazkach podobnych do urządzeń Leonarda da Vinci.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_AUTOMATION_CLOCK</Tag>
+		<English>Automation Clock</English>
+		<French>
+			<Text>Horloges Automatiques</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Italian>Orologio automatico</Italian>
+		<Polish>Automat Zegarowy</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_AUTOMATION_CLOCK_PEDIA</Tag>
+		<English>An automaton clock or automata clock is a type of striking clock featuring automatons. Clocks like these were built from the Middle Ages through to Victorian times in Europe. Our tradition of inventive genius makes them far more common in our country than in others. The automatons usually perform on the hour, half-hour or quarter-hour, usually to strike bells.</English>
+		<Italian>Un orologio automatizzato è un tipo di orologio che presenta alcuni automi. Orologi come questi venivano costruiti in Europa dal Medioevo, fino all'era Vittoriana. La nostra tradizione di inventori geniali li ha resi molto più comuni nel nostro paese rispetton agli altri. Gli automi si attivano all'ora piena, mezz'ora o quarto d'ora, solitamente per suonare le campane.</Italian>
+		<Polish>Automat zegarowy to specjalny mechanizm zegarowy napędzający konstrukty i maszyny z epoki Clocpunkowej.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_AUTOMATION_CLOCK_STRATEGY</Tag>
+		<English>Build an Automation Clock to increase your city's production.</English>
+		<French>La construction d'Horloges Automatiques augmente la production de votre ville.</French>
+		<Italian>Costruisci un orologio automatico per incrementare la produzione della tua città.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CLOCKPUNK_AIRPORT</Tag>
+		<English>Ornithopter Aerie</English>
+		<French>Aire d'Ornithoptères</French>
+		<Italian>Area per ornitotteri</Italian>
+		<Polish>Baza Ornitopterów</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CLOCKPUNK_AIRPORT_PEDIA</Tag>
+		<English>An Ornithopter Aerie is an early airport for flying Ornithopters.</English>
+		<French>Une Aire d'Ornithoptères est un petit aérodrome d'où peuvent décoller les Ornithoptères.</French>
+		<Italian>Un'area per ornitotteri è un primitivo aeroporto, ideato per gli ornitotteri.</Italian>
+		<Polish>Baza Ornitopterów to wczesna wersja lotniska.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CLOCKPUNK_AIRPORT_STRATEGY</Tag>
+		<English>Build an Ornithopter Aerie to increase your city's wealth.</English>
+		<French>Construisez une [COLOR_BUILDING_TEXT]Aire d'Ornithoptères[COLOR_REVERT] pour augmenter la richesse la ville</French>
+		<Italian>Costruisci un'area per ornitotteri per incrementare la ricchezza della tua città.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CLOCKPUNK_EMBASSY</Tag>
+		<English>Culture (Clockpunk)</English>
+		<Italian>Cultura (Clockpunk)</Italian>
+		<Polish>Kultura (Clockpunk)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CLOCKPUNK_EMBASSY_PEDIA</Tag>
+		<English>Clockpunk is a subgenre of speculative fiction which is similar to steampunk, in that it portrays advanced technology based on pre-modern designs, but the technology used is based on springs and clockwork, and is usually set during the Renaissance.</English>
+		<French>Le Clockpunk est un sous-genre de la fiction spéculative, similaire au Steampunk, cyberpunk. Il est basé des technologies des mécanismes et engrenages, et est en général situé à l'ère de la Renaissance.</French>
+		<Italian>Clockpunk è un sottogenere di finzione speculativa simile allo steampunk, nel fatto che descrive tecnologia avanzata basandosi su un design pre-moderno, ma la tecnologia utilizzata si basa su molle e orologi, e viene solitamente ambientata durante il Rinascimento.</Italian>
+		<Polish>Clockpunk - odmiana science-fiction, która wyewoluowała z steampunku. Akcja utworów przeważnie w erze preindustrialnej, chociaż rozmach z jakim jest stosowana technologia sugeruje co innego. Technika opiera się przede wszystkim na sprężynach, podstawowej mechanice (clockwork - stąd nazwa gatunku) i wynalazkach podobnych do urządzeń Leonarda da Vinci.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CLOCKPUNK_EMBASSY_STRATEGY</Tag>
+		<English>Build Culture (Clockpunk) to gain access to unique buildings and units.</English>
+		<French>Construire la culture (Clockpunk) permet d'accéder à des bâtiments et unités uniques.</French>
+		<Italian>Costruisci Cultura (Clockpunk) per ottenere l'accesso a edifici e unità uniche.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CLOCKWORK_WORKSHOP</Tag>
+		<English>Clockwork Workshop</English>
+		<French>
+			<Text>Atelier d'horlogerie</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>Atelier di orologeria</Italian>
+		<Polish>Warsztat Zegarmistrzowski</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CLOCKWORK_WORKSHOP_PEDIA</Tag>
+		<English>A clockwork is the inner workings of either a mechanical clock or a device that operates in a similar fashion. Specifically, the term refers to a mechanical device utilizing a complex series of gears.</English>
+		<Italian>Un ingranaggio è la parte più interna di un orologio meccanico, o di un meccanismo che opera in modo simile. Nello specifico, il termine si riferisce a un meccanismo che utilizza una complessa serie di ruote dentate.</Italian>
+		<Polish>Zegarmistrzostwo - wytwarzanie czasomierzy, prace związane z utrzymaniem lub przywróceniem ich sprawności technicznej, dziedzina sztuki użytkowej i rzemiosła, także artystycznego. Związane z doskonaleniem pomiarów i praktycznym wskazywaniem czasu oraz rozwojem wzornictwa, również przemysłowego.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CLOCKWORK_WORKSHOP_STRATEGY</Tag>
+		<English>Build a Clockwork Workshop to increase your city's production.</English>
+		<French>Construire un [COLOR_BUILDING_TEXT]Atelier d'horlogerie[COLOR_REVERT] vous permettra d'améliorer la production de votre ville.</French>
+		<Italian>Costruisci un atelier di orologeria per incrementare la produzione della tua città.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ORCHESTRION_THEATER</Tag>
+		<English>Orchestrion Theater</English>
+		<French>
+			<Text>Théatre d'Orchestrion</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>Teatro Orchestrion</Italian>
+		<Polish>Orchestrion</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ORCHESTRION_THEATER_PEDIA</Tag>
+		<English>An orchestrion is a generic name for a machine that plays music and is designed to sound like an orchestra or band. Orchestrions may be operated by means of a large pinned cylinder or by a music roll and less commonly book music. The sound is usually produced by pipes, though they will be voiced differently to those found in a pipe organ, as well as percussion instruments. Many orchestrions contain a piano as well. In our age of clockwork, orchestrion theaters comprise enormous wall sized machines, usually complete with mechanical dolls moving in time to the music, and seats from which citizens can appreciate the works of our music roll composers.</English>
+		<Italian>Orchestrione è un nome genrico per una macchina che suona musica, ed è progettata per funzionare come un'orchestra o una banda. Gli Orchestrion  possono essere azionati da un grande cilindro con dei rilievi, oppure da un rotolo musicale. Solitamente il suono è prodotto da canne, anche se è diverso da quallo prodtto dalle canne di un organo, così come da uno strumento a percussione. Molti orchestrion contengono anche un piano. Nella nostra era piena di ingranaggi. gli orchestrion comprendono enormi macchine, di solito complete di bambole meccaniche che si muovono a tempo con la musica, e posti dai quali i cittadini possono apprezzare i lavoratori dei nostri compositori.</Italian>
+		<Polish>Orchestrion (orkiestron) - rodzaj szafy grającej zaliczanej do instrumentów mechanicznych, popularny szczególnie w XIX wieku. Zbudowany z oszklonej szafki, wewnątrz której umieszczony był mechanizm wagowy, który po wrzuceniu monety włączał urządzenie poruszające kolczasty walec. Za pomocą kolców umieszczonych na walcu uruchamiane były specjalne młoteczki uderzające następnie o struny, dzwonki czy też bębenki. Całość uzyskanej melodyjki odbywała się według specjalnie zaprojektowanego wzorca melodycznego. Z biegiem lat urządzenie to zostało zastąpione przez automaty płytowe.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ORCHESTRION_THEATER_STRATEGY</Tag>
+		<English>Build an Orchestrion Theater to increase your city's culture.</English>
+		<French>Construire un [COLOR_BUILDING_TEXT]Théatre d'Orchestrion[COLOR_REVERT] vous permettra d'améliorer la culture de votre ville.</French>
+		<Italian>Costruisci un Teatro Orchestrion per incrementare la cultura della tua città.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_STEPRECKONER_MANUFACTORY</Tag>
+		<English>Step Reckoner Manufactory</English>
+		<French>
+			<Text>Usine de Calculateurs mécaniques</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>Costruttore di calcolatori meccanici</Italian>
+		<Polish>Fabryka Maszyn Liczących</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_STEPRECKONER_MANUFACTORY_PEDIA</Tag>
+		<English>Step Reckoners are portable cranked mechanical calculators that can add, subtract, multiply and divide. They're a real step up from the abacus when it comes to calculating arithmetic. Other less inventive countries claim that the fiddly bits are impossible to make reliably but we managed just fine.</English>
+		<Italian>I calcolatori meccanici sono strumenti portatili in grado di aggiungere, sottrarre, moltiplicare e dividere. Sono un grande passo avanti rispetto all'abaco, per quanto riguarda i calcoli aritmetici. Altri paesi meno ingegnosi sostengono che sia difficile rendere affidabili questi macchinari, ma noi ci siamo riusciti benissimo.</Italian>
+		<Polish>Maszyna licząca - urządzenie mechaniczne, elektryczne lub elektroniczne wspomagające proces obliczeń. Pojęcie "elektroniczna maszyna licząca" było używane w języku polskim, w drugiej połowie XX wieku, na określenie komputera.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_STEPRECKONER_MANUFACTORY_STRATEGY</Tag>
+		<English>Build a Step Reckoner Manufactory to increase your city's production.</English>
+		<French>Construire une [COLOR_BUILDING_TEXT]Usine de Calculateurs mécaniques[COLOR_REVERT] vous permettra d'améliorer la production de votre ville.</French>
+		<Italian>Costruisci un Costruttore di calcolatori meccanico per incrementare la produzione della tua città.</Italian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CLOCKPUNK</Tag>
 		<English>Clockpunk</English>
@@ -28,146 +168,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CLOCKPUNK_STRATEGY</Tag>
 		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CLOCKPUNK_EMBASSY</Tag>
-		<English>Culture (Clockpunk)</English>
-		<Italian>Cultura (Clockpunk)</Italian>
-		<Polish>Kultura (Clockpunk)</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CLOCKPUNK_EMBASSY_STRATEGY</Tag>
-		<English>Build Culture (Clockpunk) to gain access to unique buildings and units.</English>
-		<French>Construire la culture (Clockpunk) permet d'accéder à des bâtiments et unités uniques.</French>
-		<Italian>Costruisci Cultura (Clockpunk) per ottenere l'accesso a edifici e unità uniche.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CLOCKPUNK_EMBASSY_PEDIA</Tag>
-		<English>Clockpunk is a subgenre of speculative fiction which is similar to steampunk, in that it portrays advanced technology based on pre-modern designs, but the technology used is based on springs and clockwork, and is usually set during the Renaissance.</English>
-		<French>Le Clockpunk est un sous-genre de la fiction spéculative, similaire au Steampunk, cyberpunk. Il est basé des technologies des mécanismes et engrenages, et est en général situé à l'ère de la Renaissance.</French>
-		<Italian>Clockpunk è un sottogenere di finzione speculativa simile allo steampunk, nel fatto che descrive tecnologia avanzata basandosi su un design pre-moderno, ma la tecnologia utilizzata si basa su molle e orologi, e viene solitamente ambientata durante il Rinascimento.</Italian>
-		<Polish>Clockpunk - odmiana science-fiction, która wyewoluowała z steampunku. Akcja utworów przeważnie w erze preindustrialnej, chociaż rozmach z jakim jest stosowana technologia sugeruje co innego. Technika opiera się przede wszystkim na sprężynach, podstawowej mechanice (clockwork - stąd nazwa gatunku) i wynalazkach podobnych do urządzeń Leonarda da Vinci.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_AUTOMATION_CLOCK</Tag>
-		<English>Automation Clock</English>
-		<French>
-			<Text>Horloges Automatiques</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<Italian>Orologio automatico</Italian>
-		<Polish>Automat Zegarowy</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_AUTOMATION_CLOCK_STRATEGY</Tag>
-		<English>Build an Automation Clock to increase your city's production.</English>
-		<French>La construction d'Horloges Automatiques augmente la production de votre ville.</French>
-		<Italian>Costruisci un orologio automatico per incrementare la produzione della tua città.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_AUTOMATION_CLOCK_PEDIA</Tag>
-		<English>An automaton clock or automata clock is a type of striking clock featuring automatons. Clocks like these were built from the Middle Ages through to Victorian times in Europe. Our tradition of inventive genius makes them far more common in our country than in others. The automatons usually perform on the hour, half-hour or quarter-hour, usually to strike bells.</English>
-		<Italian>Un orologio automatizzato è un tipo di orologio che presenta alcuni automi. Orologi come questi venivano costruiti in Europa dal Medioevo, fino all'era Vittoriana. La nostra tradizione di inventori geniali li ha resi molto più comuni nel nostro paese rispetton agli altri. Gli automi si attivano all'ora piena, mezz'ora o quarto d'ora, solitamente per suonare le campane.</Italian>
-		<Polish>Automat zegarowy to specjalny mechanizm zegarowy napędzający konstrukty i maszyny z epoki Clocpunkowej.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ORCHESTRION_THEATER</Tag>
-		<English>Orchestrion Theater</English>
-		<French>
-			<Text>Théatre d'Orchestrion</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>Teatro Orchestrion</Italian>
-		<Polish>Orchestrion</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ORCHESTRION_THEATER_STRATEGY</Tag>
-		<English>Build an Orchestrion Theater to increase your city's culture.</English>
-		<French>Construire un [COLOR_BUILDING_TEXT]Théatre d'Orchestrion[COLOR_REVERT] vous permettra d'améliorer la culture de votre ville.</French>
-		<Italian>Costruisci un Teatro Orchestrion per incrementare la cultura della tua città.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ORCHESTRION_THEATER_PEDIA</Tag>
-		<English>An orchestrion is a generic name for a machine that plays music and is designed to sound like an orchestra or band. Orchestrions may be operated by means of a large pinned cylinder or by a music roll and less commonly book music. The sound is usually produced by pipes, though they will be voiced differently to those found in a pipe organ, as well as percussion instruments. Many orchestrions contain a piano as well. In our age of clockwork, orchestrion theaters comprise enormous wall sized machines, usually complete with mechanical dolls moving in time to the music, and seats from which citizens can appreciate the works of our music roll composers.</English>
-		<Italian>Orchestrione è un nome genrico per una macchina che suona musica, ed è progettata per funzionare come un'orchestra o una banda. Gli Orchestrion  possono essere azionati da un grande cilindro con dei rilievi, oppure da un rotolo musicale. Solitamente il suono è prodotto da canne, anche se è diverso da quallo prodtto dalle canne di un organo, così come da uno strumento a percussione. Molti orchestrion contengono anche un piano. Nella nostra era piena di ingranaggi. gli orchestrion comprendono enormi macchine, di solito complete di bambole meccaniche che si muovono a tempo con la musica, e posti dai quali i cittadini possono apprezzare i lavoratori dei nostri compositori.</Italian>
-		<Polish>Orchestrion (orkiestron) - rodzaj szafy grającej zaliczanej do instrumentów mechanicznych, popularny szczególnie w XIX wieku. Zbudowany z oszklonej szafki, wewnątrz której umieszczony był mechanizm wagowy, który po wrzuceniu monety włączał urządzenie poruszające kolczasty walec. Za pomocą kolców umieszczonych na walcu uruchamiane były specjalne młoteczki uderzające następnie o struny, dzwonki czy też bębenki. Całość uzyskanej melodyjki odbywała się według specjalnie zaprojektowanego wzorca melodycznego. Z biegiem lat urządzenie to zostało zastąpione przez automaty płytowe.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_STEPRECKONER_MANUFACTORY</Tag>
-		<English>Step Reckoner Manufactory</English>
-		<French>
-			<Text>Usine de Calculateurs mécaniques</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>Costruttore di calcolatori meccanici</Italian>
-		<Polish>Fabryka Maszyn Liczących</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_STEPRECKONER_MANUFACTORY_STRATEGY</Tag>
-		<English>Build a Step Reckoner Manufactory to increase your city's production.</English>
-		<French>Construire une [COLOR_BUILDING_TEXT]Usine de Calculateurs mécaniques[COLOR_REVERT] vous permettra d'améliorer la production de votre ville.</French>
-		<Italian>Costruisci un Costruttore di calcolatori meccanico per incrementare la produzione della tua città.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_STEPRECKONER_MANUFACTORY_PEDIA</Tag>
-		<English>Step Reckoners are portable cranked mechanical calculators that can add, subtract, multiply and divide. They're a real step up from the abacus when it comes to calculating arithmetic. Other less inventive countries claim that the fiddly bits are impossible to make reliably but we managed just fine.</English>
-		<Italian>I calcolatori meccanici sono strumenti portatili in grado di aggiungere, sottrarre, moltiplicare e dividere. Sono un grande passo avanti rispetto all'abaco, per quanto riguarda i calcoli aritmetici. Altri paesi meno ingegnosi sostengono che sia difficile rendere affidabili questi macchinari, ma noi ci siamo riusciti benissimo.</Italian>
-		<Polish>Maszyna licząca - urządzenie mechaniczne, elektryczne lub elektroniczne wspomagające proces obliczeń. Pojęcie "elektroniczna maszyna licząca" było używane w języku polskim, w drugiej połowie XX wieku, na określenie komputera.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CLOCKWORK_WORKSHOP</Tag>
-		<English>Clockwork Workshop</English>
-		<French>
-			<Text>Atelier d'horlogerie</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>Atelier di orologeria</Italian>
-		<Polish>Warsztat Zegarmistrzowski</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CLOCKWORK_WORKSHOP_STRATEGY</Tag>
-		<English>Build a Clockwork Workshop to increase your city's production.</English>
-		<French>Construire un [COLOR_BUILDING_TEXT]Atelier d'horlogerie[COLOR_REVERT] vous permettra d'améliorer la production de votre ville.</French>
-		<Italian>Costruisci un atelier di orologeria per incrementare la produzione della tua città.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CLOCKWORK_WORKSHOP_PEDIA</Tag>
-		<English>A clockwork is the inner workings of either a mechanical clock or a device that operates in a similar fashion. Specifically, the term refers to a mechanical device utilizing a complex series of gears.</English>
-		<Italian>Un ingranaggio è la parte più interna di un orologio meccanico, o di un meccanismo che opera in modo simile. Nello specifico, il termine si riferisce a un meccanismo che utilizza una complessa serie di ruote dentate.</Italian>
-		<Polish>Zegarmistrzostwo - wytwarzanie czasomierzy, prace związane z utrzymaniem lub przywróceniem ich sprawności technicznej, dziedzina sztuki użytkowej i rzemiosła, także artystycznego. Związane z doskonaleniem pomiarów i praktycznym wskazywaniem czasu oraz rozwojem wzornictwa, również przemysłowego.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CLOCKPUNK_AIRPORT</Tag>
-		<English>Ornithopter Aerie</English>
-		<French>Aire d'Ornithoptères</French>
-		<Italian>Area per ornitotteri</Italian>
-		<Polish>Baza Ornitopterów</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CLOCKPUNK_AIRPORT_STRATEGY</Tag>
-		<English>Build an Ornithopter Aerie to increase your city's wealth.</English>
-		<French>Construisez une [COLOR_BUILDING_TEXT]Aire d'Ornithoptères[COLOR_REVERT] pour augmenter la richesse la ville</French>
-		<Italian>Costruisci un'area per ornitotteri per incrementare la ricchezza della tua città.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CLOCKPUNK_AIRPORT_PEDIA</Tag>
-		<English>An Ornithopter Aerie is an early airport for flying Ornithopters.</English>
-		<French>Une Aire d'Ornithoptères est un petit aérodrome d'où peuvent décoller les Ornithoptères.</French>
-		<Italian>Un'area per ornitotteri è un primitivo aeroporto, ideato per gli ornitotteri.</Italian>
-		<Polish>Baza Ornitopterów to wczesna wersja lotniska.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_CLOCKPUNK</Tag>
-		<English>Clockpunk</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_CLOCKPUNK_PEDIA</Tag>
-		<English>Clockpunk is a subgenre of speculative fiction which is similar to steampunk, in that it portrays advanced technology based on pre-modern designs, but the technology used is based on springs and clockwork, and is usually set during the Renaissance.</English>
-		<Polish>Clockpunk - odmiana science-fiction, która wyewoluowała z steampunku. Akcja utworów przeważnie w erze preindustrialnej, chociaż rozmach z jakim jest stosowana technologia sugeruje co innego. Technika opiera się przede wszystkim na sprężynach, podstawowej mechanice (clockwork - stąd nazwa gatunku) i wynalazkach podobnych do urządzeń Leonarda da Vinci.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CLOCKWORK_GOLEM</Tag>

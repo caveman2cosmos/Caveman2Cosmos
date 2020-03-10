@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
@@ -7497,6 +7497,15 @@
 		<Polish>No to zaczynajmy tą wojnę! (Wypowiedzenie Wojny)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>USER_DIPLO_LETS_TALK</Tag>
+		<English>Let's talk again!</English>
+		<French>Qu'il en soit ainsi.</French>
+		<German>So sei es!</German>
+		<Italian>Così sia.</Italian>
+		<Spanish>Así sea.</Spanish>
+		<Polish>Więc niech tak się stanie.</Polish>
+	</TEXT>
+<TEXT>
 		<Tag>USER_DIPLO_MAKE_PEACE_WITH_1</Tag>
 		<English>Yes!  Let's make peace.</English>
 		<French>Oui!  Faisons la Paix.</French>
@@ -7794,13 +7803,4 @@
 		<Spanish>Así sea.</Spanish>
 		<Polish>Więc niech tak się stanie.</Polish>
 	</TEXT>
-	<TEXT>
-		<Tag>USER_DIPLO_LETS_TALK</Tag>
-		<English>Let's talk again!</English>
-		<French>Qu'il en soit ainsi.</French>
-		<German>So sei es!</German>
-		<Italian>Così sia.</Italian>
-		<Spanish>Así sea.</Spanish>
-		<Polish>Więc niech tak się stanie.</Polish>
-	</TEXT>
-</Civ4GameText>
+	</Civ4GameText>

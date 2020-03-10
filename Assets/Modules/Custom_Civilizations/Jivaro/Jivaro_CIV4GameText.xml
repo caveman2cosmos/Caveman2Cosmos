@@ -1,21 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <!-- Sid Meier's Civilization 4 Beyond the Sword -->
 <!-- Modified by strategyonly -->
 <!-- -->
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
+		<Tag>TXT_KEY_CIV_JIVARO_ADJECTIVE</Tag>
+		<English>Jivaro</English>
+		<Polish>Jiwaro</Polish>
+	</TEXT>
+<TEXT>
 		<Tag>TXT_KEY_CIV_JIVARO_DESC</Tag>
 		<English>Jivaro Empire</English>
 		<French>Empire jivaro</French>
 		<Italian>Impero Jivaro</Italian>
 		<Polish>Imperium Jiwaro</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_JIVARO_SHORT_DESC</Tag>
-		<English>Head Hunters</English>
-		<French>Jivaros</French>
-		<Italian>Cacciatori di teste</Italian>
-		<Polish>Jiwaro</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_JIVARO_PEDIA</Tag>
@@ -27,8 +25,10 @@
 		<Polish>Jiwaro - grupa plemion indiańskich żyjących w Ekwadorze (wschodnie skłony Andów - tzw. region Montańa) oraz północno-wschodnim Peru (na północ od rzeki Marańón). Zajmują się uprawą batatów i ryżu, zbieractwem, rybołówstwem i myślistwem. Bitni wojownicy - słynni łowcy głów, znani z techniki preparowania ich do rozmiarów owocu pomarańczy (tzw. tsantsa, których posiadanie daje zgodnie z wierzeniami Jiwaro nadnaturalną siłę). Preparowanie polega na wygotowaniu zdjętej uprzednio skóry, którą następnie wypełnia się gorącymi kamykami i piaskiem - po wychłodzeniu ulega ona silnemu skurczeniu. Populację Jiwaro szacuje się obecnie na około 20 tys.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_JIVARO_ADJECTIVE</Tag>
-		<English>Jivaro</English>
+		<Tag>TXT_KEY_CIV_JIVARO_SHORT_DESC</Tag>
+		<English>Head Hunters</English>
+		<French>Jivaros</French>
+		<Italian>Cacciatori di teste</Italian>
 		<Polish>Jiwaro</Polish>
 	</TEXT>
-</Civ4GameText>
+	</Civ4GameText>

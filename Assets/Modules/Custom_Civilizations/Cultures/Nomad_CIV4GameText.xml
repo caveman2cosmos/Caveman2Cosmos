@@ -1,22 +1,98 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <!-- Sid Meier's Civilization 4 Beyond the Sword -->
 <!-- ReModified by the StrategyOnly -->
 <!-- -->
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
+		<Tag>TXT_KEY_CIV_AFRICA</Tag>
+		<English>Africa</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_AFRICA_ADJECTIVE</Tag>
+		<English>Africa</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_AFRICA_DESC</Tag>
+		<English>Africa</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_AFRICA_PEDIA</Tag>
+		<English>The Africa region. [PARAGRAPH:2]The.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_AFRICA_SHORT_DESC</Tag>
+		<English>Africa</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ASIA</Tag>
+		<English>Asia</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ASIA_ADJECTIVE</Tag>
+		<English>Asia</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ASIA_DESC</Tag>
+		<English>Asia</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ASIA_PEDIA</Tag>
+		<English>The Asia region. [PARAGRAPH:2]The.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ASIA_SHORT_DESC</Tag>
+		<English>Asia</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_EUROPE</Tag>
+		<English>Europe</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_EUROPE_ADJECTIVE</Tag>
+		<English>Europe</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_EUROPE_DESC</Tag>
+		<English>Europe</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_EUROPE_PEDIA</Tag>
+		<English>The Europe region. [PARAGRAPH:2]The.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_EUROPE_SHORT_DESC</Tag>
+		<English>Europe</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MIDDLEEAST</Tag>
+		<English>Middle East</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MIDDLEEAST_ADJECTIVE</Tag>
+		<English>Middle East</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MIDDLEEAST_DESC</Tag>
+		<English>Middle East</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MIDDLEEAST_PEDIA</Tag>
+		<English>The Middle East region. [PARAGRAPH:2]The.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MIDDLEEAST_SHORT_DESC</Tag>
+		<English>Middle East</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_NORTH_AMERICA</Tag>
 		<English>North America</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_NORTH_AMERICA_DESC</Tag>
-		<English>North America</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_NORTH_AMERICA_SHORT_DESC</Tag>
-		<English>North America</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIV_NORTH_AMERICA_ADJECTIVE</Tag>
+		<English>North America</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NORTH_AMERICA_DESC</Tag>
 		<English>North America</English>
 	</TEXT>
 	<TEXT>
@@ -27,115 +103,11 @@
 [PARAGRAPH:4]Plains Indians are usually divided into two broad classifications, with some degree of overlap. The first group were fully nomadic, following the vast herds of buffalo. Some tribes occasionally engaged in agriculture; growing tobacco and corn primarily. These included the Blackfoot, Arapaho, Assiniboine, Cheyenne, Comanche, Crow, Gros Ventre, Kiowa, Lakota, Lipan, Plains Apache (or Kiowa Apache), Plains Cree, Plains Ojibwe, Sarsi, Shoshone, Stoney, and Tonkawa. The second group of Plains Indians (sometimes referred to as Prairie Indians) were the semi-sedentary tribes who, in addition to hunting buffalo, lived in villages and raised crops. These included the Arikara, Hidatsa, Iowa, Kaw (or Kansa), Kitsai, Mandan, Missouria, Nez Perce, Omaha, Osage, Otoe, Pawnee, Ponca, Quapaw, Santee, Wichita, and Yankton. The nomadic tribes of the North America survived on hunting, some of their major hunts centered around deer and buffalo. Some tribes are described as part of the 'Buffalo Culture' (sometimes called, for the American Bison). Though the Plains Indians hunted other animals, such as elk or antelope, bison was their primary game food source. Bison flesh, hide and bones provided the chief source of raw materials for items that Plains Indians made, including food, cups, decorations, crafting tools, knives, and clothing.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_SOUTH_AMERICA</Tag>
-		<English>South America</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_SOUTH_AMERICA_DESC</Tag>
-		<English>South America</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_SOUTH_AMERICA_SHORT_DESC</Tag>
-		<English>South America</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_SOUTH_AMERICA_ADJECTIVE</Tag>
-		<English>South America</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_SOUTH_AMERICA_PEDIA</Tag>
-		<English>The South America region. [PARAGRAPH:2]The.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_EUROPE</Tag>
-		<English>Europe</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_EUROPE_DESC</Tag>
-		<English>Europe</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_EUROPE_SHORT_DESC</Tag>
-		<English>Europe</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_EUROPE_ADJECTIVE</Tag>
-		<English>Europe</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_EUROPE_PEDIA</Tag>
-		<English>The Europe region. [PARAGRAPH:2]The.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_AFRICA</Tag>
-		<English>Africa</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_AFRICA_DESC</Tag>
-		<English>Africa</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_AFRICA_SHORT_DESC</Tag>
-		<English>Africa</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_AFRICA_ADJECTIVE</Tag>
-		<English>Africa</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_AFRICA_PEDIA</Tag>
-		<English>The Africa region. [PARAGRAPH:2]The.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_ASIA</Tag>
-		<English>Asia</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_ASIA_DESC</Tag>
-		<English>Asia</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_ASIA_SHORT_DESC</Tag>
-		<English>Asia</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_ASIA_ADJECTIVE</Tag>
-		<English>Asia</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_ASIA_PEDIA</Tag>
-		<English>The Asia region. [PARAGRAPH:2]The.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_MIDDLEEAST</Tag>
-		<English>Middle East</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_MIDDLEEAST_DESC</Tag>
-		<English>Middle East</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_MIDDLEEAST_SHORT_DESC</Tag>
-		<English>Middle East</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_MIDDLEEAST_ADJECTIVE</Tag>
-		<English>Middle East</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_MIDDLEEAST_PEDIA</Tag>
-		<English>The Middle East region. [PARAGRAPH:2]The.</English>
+		<Tag>TXT_KEY_CIV_NORTH_AMERICA_SHORT_DESC</Tag>
+		<English>North America</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_OCEANIA</Tag>
-		<English>Oceania</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_OCEANIA_DESC</Tag>
-		<English>Oceania</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_OCEANIA_SHORT_DESC</Tag>
 		<English>Oceania</English>
 	</TEXT>
 	<TEXT>
@@ -143,7 +115,35 @@
 		<English>Oceania</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_OCEANIA_DESC</Tag>
+		<English>Oceania</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_OCEANIA_PEDIA</Tag>
 		<English>The Oceania region. [PARAGRAPH:2]The.</English>
 	</TEXT>
-</Civ4GameText>
+<TEXT>
+		<Tag>TXT_KEY_CIV_OCEANIA_SHORT_DESC</Tag>
+		<English>Oceania</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SOUTH_AMERICA</Tag>
+		<English>South America</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SOUTH_AMERICA_ADJECTIVE</Tag>
+		<English>South America</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SOUTH_AMERICA_DESC</Tag>
+		<English>South America</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SOUTH_AMERICA_PEDIA</Tag>
+		<English>The South America region. [PARAGRAPH:2]The.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SOUTH_AMERICA_SHORT_DESC</Tag>
+		<English>South America</English>
+	</TEXT>
+	</Civ4GameText>

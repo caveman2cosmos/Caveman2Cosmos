@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by XMLSPY 2004 Professional Ed. Release 2, Installed Multi + SMP for 3 users (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
@@ -6,6 +6,10 @@
 <!-- Game Text - New -->
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
+		<Tag>TXT_KEY_BONUSCLASS_EXTINCTION</Tag>
+		<English>Extinction</English>
+	</TEXT>
+<TEXT>
 		<Tag>TXT_KEY_BONUS_MAMMOTH_GRAVEYARD</Tag>
 		<English>Mammoth Graveyard</English>
 	</TEXT>
@@ -13,8 +17,4 @@
 		<Tag>TXT_KEY_BONUS_MAMMOTH_GRAVEYARD_PEDIA</Tag>
 		<English>When mammoths go extinct in the wild their map bonus is replaced by a graveyard. This may be their bones, or fossils or frozen mammoths.</English>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUSCLASS_EXTINCTION</Tag>
-		<English>Extinction</English>
-	</TEXT>
-</Civ4GameText>
+	</Civ4GameText>

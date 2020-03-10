@@ -1,86 +1,31 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_EXPORTS_PLAYER</Tag>
-		<English>[SPACE](%s2_player is exporting %d1_num_bonus)[SPACE]</English>
-		<French>[SPACE](%s2_player exporte %d1_num_bonus)[SPACE]</French>
-		<German>[SPACE](%s2_player exportiert %d1_num_bonus)[SPACE]</German>
-		<Italian>[SPACE](%s2_player esporta %d1_num_bonus)[SPACE]</Italian>
-		<Spanish>[SPACE](%s2_player está exportando %d1_num_bonus)[SPACE]</Spanish>
-		<Polish>[SPACE](%s2_player eksportuje %d1_num_bonus)[SPACE]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_IMPORTS_PLAYER</Tag>
-		<English>[SPACE](%s2_player is importing %d1_num_bonus)[SPACE]</English>
-		<French>[SPACE](%s2_player importe %d1_num_bonus)[SPACE]</French>
-		<German>[SPACE](%s2_player importiert %d1_num_bonus)[SPACE]</German>
-		<Italian>[SPACE](%s2_player importa %d1_num_bonus)[SPACE]</Italian>
-		<Spanish>[SPACE](%s2_player está importando %d1_num_bonus)[SPACE]</Spanish>
-		<Polish>[SPACE](%s2_player importuje %d1_num_bonus)[SPACE]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_EFFECTS_BUILDING</Tag>
-		<English>Buildings affected</English>
-		<French>Bâtiments affectés</French>
-		<German>Auswirkungen auf</German>
-		<Italian>Edifici influenzati</Italian>
-		<Spanish>Edificios relacionados</Spanish>
-		<Polish>Wpływa na budynki</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_EFFECTS_UNIT</Tag>
-		<English>Units built faster</English>
-		<French>Unités construites plus rapidement</French>
-		<German>Schnellere Produktion</German>
-		<Italian>Produzione unità accelerata</Italian>
-		<Spanish>Unidades aceleradas</Spanish>
-		<Polish>Jednostki zbudowane szybciej</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HAPPY</Tag>
-		<English>Happy: +%d1_Change[ICON_HAPPY]</English>
-		<French>Moral: +%d1_Change[ICON_HAPPY]</French>
-		<German>[ICON_BULLET]Zufriedenheit: +%d1_Change[ICON_HAPPY]</German>
-		<Italian>Felici: +%d1_Change[ICON_HAPPY]</Italian>
-		<Spanish>Feliz: +%d1_Change[ICON_HAPPY]</Spanish>
-		<Polish>Szczęśliwy: +%d1_Change[ICON_HAPPY]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_UNHAPPY</Tag>
-		<English>Unhappy: +%d1_Change[ICON_UNHAPPY]</English>
-		<French>Moral: +%d1_Change[ICON_UNHAPPY]</French>
-		<German>[ICON_BULLET]Unzufriedenheit: +%d1_Change[ICON_UNHAPPY]</German>
-		<Italian>Infelici: +%d1_Change[ICON_UNHAPPY]</Italian>
-		<Spanish>Infeliz: +%d1_Change[ICON_UNHAPPY]</Spanish>
-		<Polish>Niezadowoleni: +%d1_Change[ICON_UNHAPPY]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_CULTURE_PEDIA</Tag>
-		<English>Culture resources are needed to make culture units and buildings.</English>
-		<French>Les ressources Culture sont requises pour accéder aux unités et bâtiments culturels.</French>
-		<German>Kulturressourcen werden benötigt, um die jeweiligen Spezialeinheiten und -gebäude der Kultur bauen zu können.</German>
-		<Italian>Le risorse di tipo culturale servono per addestrare unità ed eroi unici.</Italian>
-		<Polish>Kulturowe zasoby są potrzebne do budowy jednostek kulturowych i budynków.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_OBSOLETED_VALIDATES_IMPROVEMENT</Tag>
-		<English>Qualifies %s1_ImpName to exist on plot</English>
-		<French>Permet %s1_ImpName d'exister sur la case</French>
-		<Italian>Permette %s1_ImpName di esistere sul terreno</Italian>
-		<Polish>Kwalifikuje %s1_ImpName do isntniena na danym polu</Polish>
-	</TEXT>
-<!-- A -->
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_AB_MATTER</Tag>
-		<English>AB Matter</English>
-		<French>Matière AB</French>
-		<Italian>Materia AB</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_AB_MATTER_PEDIA</Tag>
-		<English>AB Matter is a form of matter that can be produced using femtotechnology, and held together using the strong nuclear force, rather than the electromagnetic forces of typical matter. This matter is then arranged in a mesh configuration, with the permeability of the AB Matter to various external objects depending on the mesh size. A sufficiently small mesh can block gamma radiation; a sufficiently large one can pass through matter, since the thickness of a string of AB Matter is on the order of a nucleon, much smaller than the spacing between molecules.</English>
-		<Italian>La materia AB è una forma di materia che può essere prodotta usando la femtotecnologia e tenuta insieme utilizzando la forza nucleare forte, piuttosto che le forze elettromagnetiche della materia normale. Questa materia può essere quindi riorganizzata in una configurazione a maglia, la cui permeabilità agli oggetti esterni dipende dalla grandezza della configurazione stessa. Una maglia sufficientemente ristretta può bloccare le radiazioni gamma; una più larga può passare attraverso la materia, poiché lo spessore della materia AB è dell'ordine di un nucleone, ossia più piccola dello spazio esistente fra le molecole.</Italian>
-	</TEXT>
+	<!-- A -->
+	<!-- B -->
+	<!-- C -->
+	<!-- D -->
+	<!-- E -->
+	<!-- F -->
+	<!-- G -->
+	<!-- H -->
+	<!-- I -->
+	<!-- J -->
+	<!-- K -->
+	<!-- L -->
+	<!-- M -->
+	<!-- N -->
+	<!-- O -->
+	<!-- P -->
+	<!-- Q -->
+	<!-- R -->
+	<!-- S -->
+	<!-- T -->
+	<!-- U -->
+	<!-- V -->
+	<!-- W -->
+	<!-- X -->
+	<!-- Y -->
+	<!-- Z -->
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ABBASID</Tag>
 		<English>Abbasid</English>
@@ -93,6 +38,17 @@
 		<French>Aborigène</French>
 		<Italian>Aborigeno</Italian>
 		<Polish>Aborygen</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_AB_MATTER</Tag>
+		<English>AB Matter</English>
+		<French>Matière AB</French>
+		<Italian>Materia AB</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_AB_MATTER_PEDIA</Tag>
+		<English>AB Matter is a form of matter that can be produced using femtotechnology, and held together using the strong nuclear force, rather than the electromagnetic forces of typical matter. This matter is then arranged in a mesh configuration, with the permeability of the AB Matter to various external objects depending on the mesh size. A sufficiently small mesh can block gamma radiation; a sufficiently large one can pass through matter, since the thickness of a string of AB Matter is on the order of a nucleon, much smaller than the spacing between molecules.</English>
+		<Italian>La materia AB è una forma di materia che può essere prodotta usando la femtotecnologia e tenuta insieme utilizzando la forza nucleare forte, piuttosto che le forze elettromagnetiche della materia normale. Questa materia può essere quindi riorganizzata in una configurazione a maglia, la cui permeabilità agli oggetti esterni dipende dalla grandezza della configurazione stessa. Una maglia sufficientemente ristretta può bloccare le radiazioni gamma; una più larga può passare attraverso la materia, poiché lo spessore della materia AB è dell'ordine di un nucleone, ossia più piccola dello spazio esistente fra le molecole.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ADENAN</Tag>
@@ -240,6 +196,20 @@
 		<Italian>La mandorla è il seme commestibile dell'albero di mandorlo, uno dei primissimi alberi da frutto che l'essere umano abbia mai coltivato. Il seme è contenuto in una drupa, composto da una parte esterna di colore verde (che solitamente si separa dal resto della drupa quando matura) e un guscio duro, all'interno del quale si trova il seme. Le mandorle vengono vendute sia con il guscio, sia senza e sono ampiamente utilizzate come cibo e come ingrediente per i dolci.</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_ALUMINUM_INGOTS</Tag>
+		<English>Aluminum Ingots</English>
+		<French>Lingots d'aluminium</French>
+		<Italian>Lingotti di alluminio</Italian>
+		<Polish>Sztabki Aluminiowe</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_ALUMINUM_WARES</Tag>
+		<English>Aluminum Wares</English>
+		<French>Objets en aluminum</French>
+		<Italian>Utensili di alluminio</Italian>
+		<Polish>Wyroby z aluminium</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_AMBER</Tag>
 		<English>Amber</English>
 		<French>Ambre</French>
@@ -324,18 +294,6 @@
 		<Italian>Angolano</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_ANTI_GRAVITY_FIELD_GENERATORS</Tag>
-		<English>Anti-Gravity Field Generators</English>
-		<French>Générateurs de champ anti-gravité</French>
-		<Italian>Generatori di campo anti-gravità</Italian>
-		<Polish>Generatory Pola Anty Grawitacji</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_ANTI_GRAVITY_FIELD_GENERATORS_PEDIA</Tag>
-		<English>An anti-gravity field generator is a machinery that creates a field that is free from the force of gravity. The field produced can also provide protection to objects in it, by providing a force that allows to repel objects from outside the field.</English>
-		<Italian>Un generatore di campo anti-gravità è una macchina che crea un campo privo dalla forza di gravità. Questo campo può anche fornire un certo grado di protezione agli oggetti al suo interno, attraverso una forza repulsiva di qualsiasi oggetto che si trovi al di fuori del campo.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_ANTIMATTER</Tag>
 		<English>Antimatter</English>
 		<French>Antimatière</French>
@@ -346,6 +304,18 @@
 		<Tag>TXT_KEY_BONUS_ANTIMATTER_PEDIA</Tag>
 		<English>Antimatter is defined by physics as matter composed of antiparticles of the corresponding particles of ordinary matter (in other words, a particle and its anti-particle have the same mass, but opposite electric charge and other differences in quantum numbers). Antimatter particles bind with each other to form antimatter, just as ordinary particles bind to form normal matter, and can be used as fuel, as trigger mechanism for weapons or in medical field for cancer therapy or radiation research.</English>
 		<Italian>L'antimateria è definita, in fisica, come materia composta da particelle contrarie alle particelle della materia ordinaria (in altre parole, una particella e la sua corrispondente anti-particella hanno la stessa massa, ma carica elettrica opposta e altre differenze nei numeri quantici). Le antiparticelle si combinano fra loro per generare l'antimateria, in modo molto simile al modo in cui le particelle interagiscono fra loro per produrre materia, e possono essere utilizzate come carburante, come meccanismo di azionamento di armi oppure in campo medico, per terapie anti-cancro o nell'ambito di ricerca sulle radiazioni.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_ANTI_GRAVITY_FIELD_GENERATORS</Tag>
+		<English>Anti-Gravity Field Generators</English>
+		<French>Générateurs de champ anti-gravité</French>
+		<Italian>Generatori di campo anti-gravità</Italian>
+		<Polish>Generatory Pola Anty Grawitacji</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_ANTI_GRAVITY_FIELD_GENERATORS_PEDIA</Tag>
+		<English>An anti-gravity field generator is a machinery that creates a field that is free from the force of gravity. The field produced can also provide protection to objects in it, by providing a force that allows to repel objects from outside the field.</English>
+		<Italian>Un generatore di campo anti-gravità è una macchina che crea un campo privo dalla forza di gravità. Questo campo può anche fornire un certo grado di protezione agli oggetti al suo interno, attraverso una forza repulsiva di qualsiasi oggetto che si trovi al di fuori del campo.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_APACHE</Tag>
@@ -400,12 +370,6 @@
 		<Polish>Ormiańska</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_ARVERNIAN</Tag>
-		<English>Arvernian</English>
-		<French>Arvernien</French>
-		<Italian>Arverno</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_ARTISAN_PLANETS</Tag>
 		<English>Artisan Planets</English>
 		<French>Planètes artisan</French>
@@ -415,6 +379,12 @@
 		<Tag>TXT_KEY_BONUS_ARTISAN_PLANETS_PEDIA</Tag>
 		<English>An artisan planet is a hand-crafted, high-quality planet.</English>
 		<Italian>Un pianeta artigianale è un pianeta realizzato a mano di alta qualità.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_ARVERNIAN</Tag>
+		<English>Arvernian</English>
+		<French>Arvernien</French>
+		<Italian>Arverno</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ASHANTI</Tag>
@@ -495,8 +465,7 @@
 		<Italian>Azteco</Italian>
 		<Polish>Aztecka</Polish>
 	</TEXT>
-<!-- B -->
-	<TEXT>
+<TEXT>
 		<Tag>TXT_KEY_BONUS_BABYLONIAN</Tag>
 		<English>Babylonian</English>
 		<French>Babylonien</French>
@@ -852,6 +821,13 @@
 		<Italian>Il borace è un importante composto di boro, un minerale e un sale di acido borico. Il borace in polvere è bianco, costituito da morbidi cristalli incolori che si dissolvono in acqua. Il borace è un componente di molti detergenti, cosmetici e smalti e viene utilizzato anche in biochimica, metallurgia, estrazione dell'oro e molti altri campi. Il borace fu scoperto per la prima volta negli aridi bacini lacustri del Tibet e fu importato, lungo la Via della seta, nella penisola arabica nell'VIII secolo, ma fu reso popolare solo alla fine del XIX secolo.</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_BRASS_INGOTS</Tag>
+		<English>Brass Ingots</English>
+		<French>Lingots de laiton</French>
+		<Italian>Lingotti di ottone</Italian>
+		<Polish>Sztabki Mosiądzu</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_BRASS_INSTRUMENTS</Tag>
 		<English>Brass Instruments</English>
 		<French>Instruments de musique en laiton</French>
@@ -862,6 +838,13 @@
 		<Tag>TXT_KEY_BONUS_BRASS_INSTRUMENTS_PEDIA</Tag>
 		<English>A brass instrument is a musical instrument whose sound is produced by sympathetic vibration of air in a tubular resonator in sympathy with the vibration of the player's lips. Brass instruments are also called labrosones, literally meaning lip-vibrated instruments.</English>
 		<Italian>Gli strumenti musicali in ottone (più correttamente chiamati "aerofoni a bocchino") sono una sottoclasse degli aerofoni, ossia degli strumenti musicali nei quali il suono è prodotto dalla vibrazione dell'aria immessa dal musicista, appoggiando le labbra ad un bocchino collegato ad un tubo cavo e soffiando; l'aria genera poi delle vibrazioni che producono il suono.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_BRASS_WARES</Tag>
+		<English>Brass Wares</English>
+		<French>Objets en laiton</French>
+		<Italian>Utensili di ottone</Italian>
+		<Polish>Wyroby z mosiądzu</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BRAZILIAN</Tag>
@@ -907,6 +890,13 @@
 		<Italian>Britanno</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_BRONZE_WARES</Tag>
+		<English>Bronze Wares</English>
+		<French>Objets en bronze</French>
+		<Italian>Utensili di bronzo</Italian>
+		<Polish>Wyroby z brązu</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_BUGS</Tag>
 		<English>Bugs</English>
 		<French>Insectes</French>
@@ -945,8 +935,7 @@
 		<Italian>Bizantino</Italian>
 		<Polish>Bizantyjska</Polish>
 	</TEXT>
-<!-- C -->
-	<TEXT>
+<TEXT>
 		<Tag>TXT_KEY_BONUS_CAESIUM_ORE</Tag>
 		<English>Caesium Ore</English>
 		<French>Minerai de césium</French>
@@ -1162,15 +1151,15 @@
 		<Polish>Koty</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_CAT_PEDIA</Tag>
-		<English>A cat is a small carnivorous mammal. It is the only domesticated species in the family Felidae and often referred to as "domestic cat" to distinguish it from wild members of the family. The cat is similar in anatomy to the other feline species, has a strong flexible body, quick reflexes, sharp teeth and retractable claws adapted to killing small prey. Its night vision and sense of smell are well developed. Domestic cats are valued by humans for companionship and for their ability to hunt rodents.</English>
-		<Italian>Un gatto è un piccolo mammifero carnivoro. È l'unica specie della famiglia dei felidi a essere stata addomesticata ed è spesso indicata come "gatto domestico" per distinguerlo dai membri selvatici della famiglia. Il gatto è simile in anatomia agli altri felidi, ha un corpo forte e flessibile, riflessi rapidi, denti aguzzi e artigli retrattili adattati all'uccisione di piccole prede. La sua visione notturna e l'olfatto sono ben sviluppati. I gatti domestici sono apprezzati dagli umani per la compagnia e per la loro capacità di cacciare i roditori.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_CATALONIAN</Tag>
 		<English>Catalonian</English>
 		<French>Catalane</French>
 		<Italian>Catalano</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_CAT_PEDIA</Tag>
+		<English>A cat is a small carnivorous mammal. It is the only domesticated species in the family Felidae and often referred to as "domestic cat" to distinguish it from wild members of the family. The cat is similar in anatomy to the other feline species, has a strong flexible body, quick reflexes, sharp teeth and retractable claws adapted to killing small prey. Its night vision and sense of smell are well developed. Domestic cats are valued by humans for companionship and for their ability to hunt rodents.</English>
+		<Italian>Un gatto è un piccolo mammifero carnivoro. È l'unica specie della famiglia dei felidi a essere stata addomesticata ed è spesso indicata come "gatto domestico" per distinguerlo dai membri selvatici della famiglia. Il gatto è simile in anatomia agli altri felidi, ha un corpo forte e flessibile, riflessi rapidi, denti aguzzi e artigli retrattili adattati all'uccisione di piccole prede. La sua visione notturna e l'olfatto sono ben sviluppati. I gatti domestici sono apprezzati dagli umani per la compagnia e per la loro capacità di cacciare i roditori.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CELLPHONES</Tag>
@@ -1446,11 +1435,6 @@
 		<Polish>Glina</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_CLAY_PEDIA</Tag>
-		<English>Clay is an aluminum silicate composed mainly of fine-grained materials. Clay minerals have peculiar physical-chemical characteristics that give them a sensitive plasticity (if mixed with water) or refractory (if dehydrated) - properties that have allowed the development of the brick and ceramic industries.</English>
-		<Italian>L'argilla è un silicato d'alluminio composto principalmente di materiali a grana fine. I minerali argillosi hanno caratteristiche fisico-chimiche peculiari che conferiscono loro una sensibile plasticità (se miscelato con acqua) o refrattarietà (se disidratato) - proprietà che hanno permesso lo sviluppo dell'industria laterizia e ceramica.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_CLAYTRONIC_ATOMS</Tag>
 		<English>Claytronic Atoms</English>
 		<French>Atomes claytroniques</French>
@@ -1462,6 +1446,11 @@
 		<Italian>Gli atomi claytronici (o "catomi") sono singoli computer di scala nanometrica che interagiscono fra loro per produrre oggetti tangibili, che un essere umano può a sua volta utilizzare. Questi atomi hanno il potenziale di influenzare notevolmente molte aree della vita quotidiana, come le telecomunicazioni, le interfacce uomo-computer e l'industria dell'intrattenimento.</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_CLAY_PEDIA</Tag>
+		<English>Clay is an aluminum silicate composed mainly of fine-grained materials. Clay minerals have peculiar physical-chemical characteristics that give them a sensitive plasticity (if mixed with water) or refractory (if dehydrated) - properties that have allowed the development of the brick and ceramic industries.</English>
+		<Italian>L'argilla è un silicato d'alluminio composto principalmente di materiali a grana fine. I minerali argillosi hanno caratteristiche fisico-chimiche peculiari che conferiscono loro una sensibile plasticità (se miscelato con acqua) o refrattarietà (se disidratato) - proprietà che hanno permesso lo sviluppo dell'industria laterizia e ceramica.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_CLOTH</Tag>
 		<English>Cloth</English>
 		<French>Tissu</French>
@@ -1469,11 +1458,6 @@
 		<Italian>Tessuti</Italian>
 		<Spanish>Paño</Spanish>
 		<Polish>Tkanina</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_CLOTH_PEDIA</Tag>
-		<English>A fabric is a product with a flat, thin and flexible surface, made by intertwining threads perpendicular to each other; the operation necessary to make it is called weaving. It consists of two elements: the warp or chain (the set of threads stretched on the loom) and the weft (a single thread that runs the warp from one side to the other). Fabrics made their appearance in the Neolithic period and, depending on materials, weaves, colors and machinery involved, marked the cultural and technical evolution of human civilization.</English>
-		<Italian>Un tessuto è un manufatto a superficie piana, sottile e flessibile, realizzato tramite un intreccio di fili perpendicolari tra di loro; l'operazione necessaria per realizzarlo si chiama tessitura. È costituito da due elementi: l'ordito o catena (l'insieme di fili tesi sul telaio) e la trama (un unico filo che percorre da una parte all'altra l'ordito). I tessuti fecero la loro comparsa nel neolitico e segnarono nei materiali usati, negli intrecci, nei colori e nelle attrezzature utilizzate per costruirli l'evoluzione culturale e tecnica della civiltà umana.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CLOTHING</Tag>
@@ -1486,6 +1470,11 @@
 		<Tag>TXT_KEY_BONUS_CLOTHING_PEDIA</Tag>
 		<English>A dress is a specifically weaved fabric to be worn by a human being, covering it wholly or partially, and defining its external appearance. Depending on the culture, some clothes can have a very particular cultural and social significance, such as marking the belonging to a given community or of a particular (civil, social, religious) status within the community.</English>
 		<Italian>Un vestito è un tessuto realizzato appositamente per essere indossato da un essere umano, coprendolo in tutto o in parte e definendone l'aspetto esteriore. Alcuni vestiti, in base alla cultura, possono rivestire un significato culturale e sociale molto particolare, come l'appartenenza a una data comunità o la segnalazione di un particolare status (civile, sociale, religioso...) all'interno della comunità.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_CLOTH_PEDIA</Tag>
+		<English>A fabric is a product with a flat, thin and flexible surface, made by intertwining threads perpendicular to each other; the operation necessary to make it is called weaving. It consists of two elements: the warp or chain (the set of threads stretched on the loom) and the weft (a single thread that runs the warp from one side to the other). Fabrics made their appearance in the Neolithic period and, depending on materials, weaves, colors and machinery involved, marked the cultural and technical evolution of human civilization.</English>
+		<Italian>Un tessuto è un manufatto a superficie piana, sottile e flessibile, realizzato tramite un intreccio di fili perpendicolari tra di loro; l'operazione necessaria per realizzarlo si chiama tessitura. È costituito da due elementi: l'ordito o catena (l'insieme di fili tesi sul telaio) e la trama (un unico filo che percorre da una parte all'altra l'ordito). I tessuti fecero la loro comparsa nel neolitico e segnarono nei materiali usati, negli intrecci, nei colori e nelle attrezzature utilizzate per costruirli l'evoluzione culturale e tecnica della civiltà umana.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_COAL</Tag>
@@ -1621,6 +1610,13 @@
 		<Italian>Un materiale cosciente è una sostanza cosciente a livello atomico e subatomico e che può comportarsi in modi molto interessanti e imprevedibili.</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_COPPER_INGOTS</Tag>
+		<English>Copper Ingots</English>
+		<French>Lingots de cuivre</French>
+		<Italian>Lingotti di rame</Italian>
+		<Polish>Sztabki Miedzi</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_COPPER_ORE</Tag>
 		<English>Copper Ore</English>
 		<French>Minerai de cuivre</French>
@@ -1631,6 +1627,13 @@
 		<Tag>TXT_KEY_BONUS_COPPER_ORE_PEDIA</Tag>
 		<English>Copper is a pinkish-reddish metal, with extremely high electrical and thermal conductivity and very resistant to corrosion. It is easily workable, extremely ductile and malleable, but it is not suitable for machining with chip removal, because it has a rather pasty consistency. It can be easily recycled and its scraps have a high recovery value; it combines with other metals to form numerous metal alloys, such as bronze (with tin) and brass (with zinc). It has been used by humanity for over five millennia.</English>
 		<Italian>Il rame è un metallo rosato o rossastro, di conducibilità elettrica e termica elevatissima e molto resistente alla corrosione. È facilmente lavorabile, estremamente duttile e malleabile, ma non è idoneo a lavorazioni con asportazione di truciolo, perché ha una consistenza piuttosto pastosa. Può essere facilmente riciclato e i suoi rottami hanno un alto valore di recupero; si combina con altri metalli a formare numerose leghe metalliche, come il bronzo (con lo stagno) e l'ottone (con lo zinco). È stato utilizzato dall'umanità per oltre cinque millenni.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_COPPER_WARES</Tag>
+		<English>Copper Wares</English>
+		<French>Objets en cuivre</French>
+		<Italian>Utensili di rame</Italian>
+		<Polish>Wyroby z miedzi</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_COPPER_WIRES</Tag>
@@ -1668,11 +1671,6 @@
 		<Polish>Bawełna</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_COTTON_PEDIA</Tag>
-		<English>Cotton is a soft, fluffy staple fiber that grows in a boll, or protective case, around the seeds of the cotton plants. Under natural conditions, the cotton bolls will increase the dispersal of the seeds. The plant is a shrub native to tropical and subtropical regions around the world, and was independently domesticated in the various continents. The use of cotton for fabric is known to date to prehistoric times, with some fragments of cotton fabric found that were dated around 6-5th millennium BC.</English>
-		<Italian>Il cotone è una fibra di base morbida e soffice che cresce in una capsula, o custodia protettiva, attorno ai semi delle piante. In condizioni naturali, le capsule di cotone aumentano la dispersione dei semi. La pianta è un arbusto originario delle regioni tropicali e subtropicali di tutto il mondo ed è stata resa coltivabile in modo indipendente nei vari continenti. L'uso del cotone per realizzare tessuti è noto fino alla preistoria: alcuni frammenti di tessuto di cotone risalgono al VI-V millennio a.C.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_COTTON_FIBERS</Tag>
 		<English>Cotton Fibers</English>
 		<French>Fibres de coton</French>
@@ -1683,6 +1681,11 @@
 		<Tag>TXT_KEY_BONUS_COTTON_FIBERS_PEDIA</Tag>
 		<English>Cotton fiber is a fiber made of almost pure cellulose. It is most often spun into yarn or thread and used to make a soft, breathable textile. Cotton fibers occur naturally in colors of white, brown, pink and green, even though fears of contaminating the genetics of white cotton have led many cotton-growing locations to ban the growing of colored cotton varieties.</English>
 		<Italian>La fibra di cotone è una fibra di cellulosa quasi pura. Viene spesso filata e utilizzata per creare un tessuto morbido e traspirante. Le fibre di cotone si presentano naturalmente nei colori bianco, marrone, rosa e verde, anche se i timori di contaminare i campi di cotone bianco hanno portato molte zone di coltivazione del cotone a vietare la coltivazione di varietà colorate.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_COTTON_PEDIA</Tag>
+		<English>Cotton is a soft, fluffy staple fiber that grows in a boll, or protective case, around the seeds of the cotton plants. Under natural conditions, the cotton bolls will increase the dispersal of the seeds. The plant is a shrub native to tropical and subtropical regions around the world, and was independently domesticated in the various continents. The use of cotton for fabric is known to date to prehistoric times, with some fragments of cotton fabric found that were dated around 6-5th millennium BC.</English>
+		<Italian>Il cotone è una fibra di base morbida e soffice che cresce in una capsula, o custodia protettiva, attorno ai semi delle piante. In condizioni naturali, le capsule di cotone aumentano la dispersione dei semi. La pianta è un arbusto originario delle regioni tropicali e subtropicali di tutto il mondo ed è stata resa coltivabile in modo indipendente nei vari continenti. L'uso del cotone per realizzare tessuti è noto fino alla preistoria: alcuni frammenti di tessuto di cotone risalgono al VI-V millennio a.C.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_COW</Tag>
@@ -1732,6 +1735,14 @@
 		<Polish>Kubańska</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_CULTURE_PEDIA</Tag>
+		<English>Culture resources are needed to make culture units and buildings.</English>
+		<French>Les ressources Culture sont requises pour accéder aux unités et bâtiments culturels.</French>
+		<German>Kulturressourcen werden benötigt, um die jeweiligen Spezialeinheiten und -gebäude der Kultur bauen zu können.</German>
+		<Italian>Le risorse di tipo culturale servono per addestrare unità ed eroi unici.</Italian>
+		<Polish>Kulturowe zasoby są potrzebne do budowy jednostek kulturowych i budynków.</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_CYBERNETIC_CHLOROPLASTS</Tag>
 		<English>Cybernetic Chloroplasts</English>
 		<French>Chloroplastes cybernétiques</French>
@@ -1749,8 +1760,7 @@
 		<French>Tchèque</French>
 		<Italian>Ceco</Italian>
 	</TEXT>
-<!-- D -->
-	<TEXT>
+<TEXT>
 		<Tag>TXT_KEY_BONUS_DACIAN</Tag>
 		<English>Dacian</English>
 		<French>Dacienne</French>
@@ -1851,11 +1861,6 @@
 		<Polish>Diamenty</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_DIAMOND_PEDIA</Tag>
-		<English>Diamond is a solid form of carbon with its atoms arranged in a crystal structure. Because the arrangement of atoms is extremely rigid, few types of impurity can contaminate it: small numbers of defects or impurities may color diamond blue (boron), yellow (nitrogen), brown (defects), green (radiation exposure), purple, pink, orange or red. Diamonds have the highest hardness and thermal conductivity of any natural material, properties that are utilized in major industrial applications such as cutting and polishing tools. Most natural diamonds have ages between 1 and 3.5 billion years.</English>
-		<Italian>Il diamante è una forma solida di carbonio, i cui atomi sono disposti in una struttura cristallina. Poiché la disposizione degli atomi è estremamente rigida, pochi tipi di impurità possono contaminarla: piccoli difetti o impurità possono dare al diamante un colore blu (boro), giallo (azoto), marrone (difetti), verde (esposizione alle radiazioni), viola, rosa, arancione o rosso. I diamanti hanno il più alto grado di durezza e conducibilità termica di qualsiasi altro materiale naturale e per questo sono usati come utensili da taglio e lucidatura. La maggior parte dei diamanti naturali ha un'età compresa tra 1 e 3,5 miliardi di anni.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_DIAMOND_NANOTHREADS</Tag>
 		<English>Diamond Nanothreads</English>
 		<French>Diamant nanothreads</French>
@@ -1865,6 +1870,11 @@
 		<Tag>TXT_KEY_BONUS_DIAMOND_NANOTHREADS_PEDIA</Tag>
 		<English>A diamond nanothread, also called carbon nanothread, is a one-dimensional carbon crystalline nanomaterial. Nanothreads consist of a stiff, strong carbon core surrounded by hydrogen atoms, and are more than 20,000 times thinner than a human hair. They are synthesized by compressing liquid benzene to extreme pressure of 20 GPa (around 200,000 times the air pressure at the surface of the Earth), and then slowly relieving that pressure. Their extremely high specific strength is used for space elevators and in other applications related to transportation, aerospace, and sports equipment.</English>
 		<Italian>Un nanofilamento in diamante, chiamato anche nanofilamento di carbonio, è un nanomateriale di carbonio cristallino unidimensionale. I nanofilamenti sono costituiti da un nucleo di carbonio rigido circondato da atomi di idrogeno e sono oltre 20.000 volte più sottili di un capello umano. Sono sintetizzati comprimendo il benzene liquido a una pressione estrema di 20 GPa (circa 200.000 volte la pressione dell'aria sulla Terra) e quindi alleviando lentamente quella pressione. La loro resistenza estremamente elevata viene utilizzata per gli elevatori spaziali e in altre applicazioni relative al trasporto, al settore aerospaziale e alle attrezzature sportive.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_DIAMOND_PEDIA</Tag>
+		<English>Diamond is a solid form of carbon with its atoms arranged in a crystal structure. Because the arrangement of atoms is extremely rigid, few types of impurity can contaminate it: small numbers of defects or impurities may color diamond blue (boron), yellow (nitrogen), brown (defects), green (radiation exposure), purple, pink, orange or red. Diamonds have the highest hardness and thermal conductivity of any natural material, properties that are utilized in major industrial applications such as cutting and polishing tools. Most natural diamonds have ages between 1 and 3.5 billion years.</English>
+		<Italian>Il diamante è una forma solida di carbonio, i cui atomi sono disposti in una struttura cristallina. Poiché la disposizione degli atomi è estremamente rigida, pochi tipi di impurità possono contaminarla: piccoli difetti o impurità possono dare al diamante un colore blu (boro), giallo (azoto), marrone (difetti), verde (esposizione alle radiazioni), viola, rosa, arancione o rosso. I diamanti hanno il più alto grado di durezza e conducibilità termica di qualsiasi altro materiale naturale e per questo sono usati come utensili da taglio e lucidatura. La maggior parte dei diamanti naturali ha un'età compresa tra 1 e 3,5 miliardi di anni.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_DIGITIZED_MEMBRANES</Tag>
@@ -2013,8 +2023,7 @@
 		<Italian>Zungaro</Italian>
 		<Polish>Dzungarska</Polish>
 	</TEXT>
-<!-- E -->
-	<TEXT>
+<TEXT>
 		<Tag>TXT_KEY_BONUS_ECSTASY</Tag>
 		<English>Ecstasy</English>
 		<Italian>Ecstasy</Italian>
@@ -2029,6 +2038,24 @@
 		<English>Ecuadorian</English>
 		<French>Equatorienne</French>
 		<Italian>Ecuadoriano</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_EFFECTS_BUILDING</Tag>
+		<English>Buildings affected</English>
+		<French>Bâtiments affectés</French>
+		<German>Auswirkungen auf</German>
+		<Italian>Edifici influenzati</Italian>
+		<Spanish>Edificios relacionados</Spanish>
+		<Polish>Wpływa na budynki</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_EFFECTS_UNIT</Tag>
+		<English>Units built faster</English>
+		<French>Unités construites plus rapidement</French>
+		<German>Schnellere Produktion</German>
+		<Italian>Produzione unità accelerata</Italian>
+		<Spanish>Unidades aceleradas</Spanish>
+		<Polish>Jednostki zbudowane szybciej</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_EGGS</Tag>
@@ -2072,6 +2099,20 @@
 		<Tag>TXT_KEY_BONUS_ELECTROLYTIC_CELLS_PEDIA</Tag>
 		<English>An electrolytic cell is an electrochemical cell that drives a non-spontaneous redox reaction through the application of electrical energy. They are often used to decompose chemical compounds, in a process called electrolysis ("breaking up through electricity"). An electrolytic cell has three component parts: an electrolyte and two electrodes (a cathode and an anode).Commercially, electrolytic cells are used in electrorefining and electrowinning of several non-ferrous metals. Almost all high-purity aluminum, copper, zinc and lead is produced industrially in electrolytic cells.</English>
 		<Italian>Una cellula elettrolitica è una cellula elettrochimica che determina una reazione di ossidoriduzione non spontanea attraverso l'applicazione di energia elettrica. Sono spesso usate per decomporre i composti chimici, in un processo chiamato elettrolisi ("rottura tramite elettricità"). Una cellula elettrolitica ha tre parti componenti: un elettrolita e due elettrodi (un catodo e un anodo). Commercialmente, le celle elettrolitiche sono utilizzate nella raffinazione elettrolitica di numerosi metalli non ferrosi. Quasi tutto l'alluminio, il rame, lo zinco e il piombo di elevata purezza sono prodotti industrialmente in celle elettrolitiche.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_ELECTRUM_INGOTS</Tag>
+		<English>Electrum Ingots</English>
+		<French>Lingots d'électrum</French>
+		<Italian>Lingotti di elettro</Italian>
+		<Polish>Sztabki Elektrum</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_ELECTRUM_WARES</Tag>
+		<English>Electrum Wares</English>
+		<French>Objets en electrum</French>
+		<Italian>Utensili di elettro</Italian>
+		<Polish>Wyroby z elektrum</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ELEPHANTS</Tag>
@@ -2153,7 +2194,15 @@
 		<English>An exoskeleton is a wearable mobile machine that is powered by a system of electric motors, pneumatics, levers, hydraulics, or a combination of technologies that allow for limb movement with increased strength and endurance. Its design aims to provide back support, sense the user's motion, and send a signal to motors which manage the gears. The exoskeleton supports the shoulder, waist and thigh, and assists movement for lifting and holding heavy items, while lowering back stress.</English>
 		<Italian>Un esoscheletro è una macchina mobile indossabile che è alimentata da un sistema di motori elettrici, pneumatici, leve, elementi idraulici o una combinazione di tecnologie che consentono il movimento degli arti con maggiore forza e resistenza. Il suo design mira a fornire supporto alla schiena, rilevare il movimento dell'utente e inviare un segnale ai motori che gestiscono gli ingranaggi. L'esoscheletro sostiene la spalla, la vita e la coscia e aiuta i movimenti per sollevare e trattenere oggetti pesanti, riducendo allo stesso tempo lo stress della schiena.</Italian>
 	</TEXT>
-<!-- F -->
+<TEXT>
+		<Tag>TXT_KEY_BONUS_EXPORTS_PLAYER</Tag>
+		<English>[SPACE](%s2_player is exporting %d1_num_bonus)[SPACE]</English>
+		<French>[SPACE](%s2_player exporte %d1_num_bonus)[SPACE]</French>
+		<German>[SPACE](%s2_player exportiert %d1_num_bonus)[SPACE]</German>
+		<Italian>[SPACE](%s2_player esporta %d1_num_bonus)[SPACE]</Italian>
+		<Spanish>[SPACE](%s2_player está exportando %d1_num_bonus)[SPACE]</Spanish>
+		<Polish>[SPACE](%s2_player eksportuje %d1_num_bonus)[SPACE]</Polish>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_FATIMID</Tag>
 		<English>Fatimid</English>
@@ -2315,11 +2364,6 @@
 		<Polish>Ryby</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_FISH_PEDIA</Tag>
-		<English>Fish are gill-bearing aquatic craniate animals that lack limbs with digits. Most fish are ectothermic ("cold-blooded"), allowing their body temperatures to vary as ambient temperatures change, though some of the large active swimmers like white shark and tuna can hold a higher core temperature. Fish are abundant in most bodies of water. They can be found in nearly all aquatic environments, from high mountain streams to the abyssal, and even hadal, depths of the deepest oceans. They are also an important resource for humans worldwide, especially as food, and have had a role in culture through the ages, serving as deities, religious symbols, and as the subjects of art, books and movies.</English>
-		<Italian>I pesci sono animali acquatici, forniti di branchie e privi di arti. La maggior parte dei pesci sono ectotermici ("a sangue freddo"), consentendo alle loro temperature corporee di variare al variare della temperatura ambientale (anche se alcune specie, come lo squalo bianco e il tonno) possono mantenere una temperatura interna più elevata. I pesci sono abbondanti nella maggior parte dei corpi idrici. Possono essere trovati in quasi tutti gli ambienti acquatici, dai torrenti di alta montagna alle acque più profonde, e talvolta agli abissi, degli oceani. I pesci sono anche una risorsa importante per gli esseri umani in tutto il mondo, soprattutto alimentare, e hanno avuto un ruolo nella cultura attraverso i secoli, fungendo da divinità, simboli religiosi e come soggetti di arte, libri e film.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_FISH_OIL</Tag>
 		<English>Fish Oil</English>
 		<French>Huile de poisson</French>
@@ -2330,6 +2374,11 @@
 		<Tag>TXT_KEY_BONUS_FISH_OIL_PEDIA</Tag>
 		<English>Fish oil is an oil derived from the tissues of oily fish. Fish oils contain omega-3 fatty acids eicosapentaenoic acid (EPA) and docosahexaenoic acid (DHA), precursors of certain eicosanoids that are known to reduce inflammation in human body and improve hypertriglyceridemia. Use of fish oil and omega-3 fatty acids have also been studied in a wide variety of other conditions, such as cardiovascular diseases, clinical depression, anxiety, cancer, and macular degeneration, yet their benefit in these conditions has also not been verified. Fish oil is also used as a component in aquaculture feed.</English>
 		<Italian>L'olio di pesce è un olio derivato dai tessuti dei pesci grassi. Gli oli di pesce contengono acidi grassi omega-3 come l'acido eicosapentaenoico (EPA) e l'acido docosaesaenoico (DHA), precursori di alcuni eicosanoidi che sono noti per ridurre le infiammazioni nel corpo umano e migliorare l'ipertrigliceridemia. L'uso di olio di pesce e acidi grassi omega-3 è stato studiato anche per un'ampia varietà di altre malattie, come malattie cardiovascolari, depressione clinica, ansia, cancro e degenerazione maculare, ma i loro benefici in queste condizioni non sono stati verificati. L'olio di pesce è anche usato come componente nei mangimi per l'acquacoltura.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_FISH_PEDIA</Tag>
+		<English>Fish are gill-bearing aquatic craniate animals that lack limbs with digits. Most fish are ectothermic ("cold-blooded"), allowing their body temperatures to vary as ambient temperatures change, though some of the large active swimmers like white shark and tuna can hold a higher core temperature. Fish are abundant in most bodies of water. They can be found in nearly all aquatic environments, from high mountain streams to the abyssal, and even hadal, depths of the deepest oceans. They are also an important resource for humans worldwide, especially as food, and have had a role in culture through the ages, serving as deities, religious symbols, and as the subjects of art, books and movies.</English>
+		<Italian>I pesci sono animali acquatici, forniti di branchie e privi di arti. La maggior parte dei pesci sono ectotermici ("a sangue freddo"), consentendo alle loro temperature corporee di variare al variare della temperatura ambientale (anche se alcune specie, come lo squalo bianco e il tonno) possono mantenere una temperatura interna più elevata. I pesci sono abbondanti nella maggior parte dei corpi idrici. Possono essere trovati in quasi tutti gli ambienti acquatici, dai torrenti di alta montagna alle acque più profonde, e talvolta agli abissi, degli oceani. I pesci sono anche una risorsa importante per gli esseri umani in tutto il mondo, soprattutto alimentare, e hanno avuto un ruolo nella cultura attraverso i secoli, fungendo da divinità, simboli religiosi e come soggetti di arte, libri e film.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_FLASH_MEMORY_DEVICES</Tag>
@@ -2353,11 +2402,6 @@
 		<Polish>Len</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_FLAX_PEDIA</Tag>
-		<English>Flax is a food and fiber crop, cultivated in cooler regions of the world. Textiles made from flax are known in the Western countries as linen, and traditionally used for bed sheets, underclothes, and table linen. Flax is also grown for its seeds, which can be ground into a meal or turned into linseed oil, a product used as a nutritional supplement and as an ingredient in many wood-finishing products. Flax is also grown as an ornamental plant in gardens.</English>
-		<Italian>Il lino è una pianta coltivata nelle regioni più fredde del mondo. I tessuti in lino tradizionalmente utilizzati nei paesi occidentali per lenzuola, biancheria intima e biancheria da tavola. Il lino viene anche coltivato per i suoi semi, che possono essere macinati per essere mangiati o trasformati in olio di semi di lino, un prodotto usato come integratore alimentare e come ingrediente in molti prodotti per la finitura del legno. Il lino viene anche coltivato come pianta ornamentale nei giardini.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_FLAX_FIBERS</Tag>
 		<English>Flax Fibers</English>
 		<French>Fibres de lin</French>
@@ -2368,6 +2412,11 @@
 		<Tag>TXT_KEY_BONUS_FLAX_FIBERS_PEDIA</Tag>
 		<English>Flax fiber is a soft, lustrous, and flexible fiber extracted from the bast beneath the surface of the stem of the flax plant. It is stronger than cotton fiber, but less elastic. The best grades are used for fabrics such as damasks, lace, and sheeting. Coarser grades are used for the manufacturing of twine and rope, and historically, for canvas and webbing equipment. Flax fiber is a raw material used in the high-quality paper industry for the use of printed banknotes, laboratory paper (blotting and filter), rolling paper for cigarettes, and tea bags.</English>
 		<Italian>La fibra di lino è una fibra morbida, lucente e flessibile estratta dalla rafia sotto la superficie dello stelo della pianta di lino. È più forte della fibra di cotone, ma meno elastica. La qualità migliori sono usate per tessuti come damaschi, pizzi e teli. Le qualità più grossolane sono invece utilizzate per la produzione di spago e corda e, storicamente, per le tele e le attrezzature tessili. La fibra di lino è una materia prima utilizzata nell'industria della carta di alta qualità per l'uso di banconote stampate, carta da laboratorio (carta assorbente e filtro), carta in rotoli per sigarette e bustine di tè.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_FLAX_PEDIA</Tag>
+		<English>Flax is a food and fiber crop, cultivated in cooler regions of the world. Textiles made from flax are known in the Western countries as linen, and traditionally used for bed sheets, underclothes, and table linen. Flax is also grown for its seeds, which can be ground into a meal or turned into linseed oil, a product used as a nutritional supplement and as an ingredient in many wood-finishing products. Flax is also grown as an ornamental plant in gardens.</English>
+		<Italian>Il lino è una pianta coltivata nelle regioni più fredde del mondo. I tessuti in lino tradizionalmente utilizzati nei paesi occidentali per lenzuola, biancheria intima e biancheria da tavola. Il lino viene anche coltivato per i suoi semi, che possono essere macinati per essere mangiati o trasformati in olio di semi di lino, un prodotto usato come integratore alimentare e come ingrediente in molti prodotti per la finitura del legno. Il lino viene anche coltivato come pianta ornamentale nei giardini.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_FLEMISH</Tag>
@@ -2413,18 +2462,6 @@
 		<Italian>Un fiore è la struttura riproduttiva che si trova nelle piante da fiore. La funzione biologica di un fiore è di influenzare la riproduzione, di solito fornendo un meccanismo per l'unione dello sperma con le uova. Molti fiori si sono evoluti per essere più attraenti per gli animali, in modo da renderli vettori per il trasferimento di polline. Dopo la fecondazione, l'ovaio del fiore si sviluppa in frutti contenenti semi. Oltre a facilitare la riproduzione delle piante, i fiori sono stati a lungo utilizzati dagli esseri umani per abbellire ambienti, come oggetti di gesti romantici, rituali o religiosi, come mezzo per produrre medicinali e come fonte di cibo.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_FOSSIL_BEDS</Tag>
-		<English>Fossil Beds</English>
-		<French>Lagerstätte</French>
-		<German>Fossillagerstätte</German>
-		<Italian>Lagerstätte</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_FOSSIL_BEDS_PEDIA</Tag>
-		<English>A fossil bed ("Lagerstätte") is a sedimentary body that offers an exceptional amount of information on prehistoric life, due to the abundance of the specimens contained (Konzentrat-Lagerstätten, or "accumulation deposits") or to their extraordinary state of conservation (Konservat-Lagerstätten, or "storage fields").</English>
-		<Italian>Una Lagerstätte è un corpo sedimentario che offre un'eccezionale quantità di informazioni sulla vita preistorica, a causa dell'abbondanza degli esemplari contenuti (Konzentrat-Lagerstätten o "giacimenti per accumulo") oppure del loro straordinario stato di conservazione (Konservat-Lagerstätten o "giacimenti per conservazione").</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_FOSSILS</Tag>
 		<English>Fossils</English>
 		<French>Fossiles</French>
@@ -2435,6 +2472,18 @@
 		<Tag>TXT_KEY_BONUS_FOSSILS_PEDIA</Tag>
 		<English>A fossil is any preserved remains, impression, or trace of any once-living thing from a past geological age. Examples include bones, shells, exoskeletons, stone imprints of animals or microbes, objects preserved in amber, hair, petrified wood, oil, coal, and DNA remnants. The totality of fossils is known as the fossil record.</English>
 		<Italian>Il termine "fossile" indica i resti integri o parziali di organismi un tempo viventi. Più in generale, viene usato per una qualsiasi testimonianza di vita geologicamente passata, come resti animali (ossa, denti, uova, conchiglie), resti vegetali (foglie, tronchi, pollini), evidenze di attività vitale (tane, orme) o tracce legate all'alimentazione (coproliti).</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_FOSSIL_BEDS</Tag>
+		<English>Fossil Beds</English>
+		<French>Lagerstätte</French>
+		<German>Fossillagerstätte</German>
+		<Italian>Lagerstätte</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_FOSSIL_BEDS_PEDIA</Tag>
+		<English>A fossil bed ("Lagerstätte") is a sedimentary body that offers an exceptional amount of information on prehistoric life, due to the abundance of the specimens contained (Konzentrat-Lagerstätten, or "accumulation deposits") or to their extraordinary state of conservation (Konservat-Lagerstätten, or "storage fields").</English>
+		<Italian>Una Lagerstätte è un corpo sedimentario che offre un'eccezionale quantità di informazioni sulla vita preistorica, a causa dell'abbondanza degli esemplari contenuti (Konzentrat-Lagerstätten o "giacimenti per accumulo") oppure del loro straordinario stato di conservazione (Konservat-Lagerstätten o "giacimenti per conservazione").</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_FRANKISH</Tag>
@@ -2486,6 +2535,15 @@
 		<Italian>Un fullerene è un allotropo di carbonio la cui molecola è costituita da atomi di carbonio collegati da legami singoli e doppi, in modo da formare una maglia chiusa o parzialmente chiusa, con anelli fusi da cinque a sette atomi. I fullereni sono stati ipotizzati lungo il XX secolo, ma solo dopo la loro sintesi accidentale nel 1985 furono rilevati nella natura e nello spazio. Sono stati oggetto di intense ricerche, sia per la loro chimica che per le loro applicazioni tecnologiche, in particolare nella scienza dei materiali, nell'elettronica e nelle nanotecnologie.</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_FUR</Tag>
+		<English>Fur</English>
+		<French>Fourrure</French>
+		<German>Felle</German>
+		<Italian>Pellicce</Italian>
+		<Spanish>Pieles</Spanish>
+		<Polish>Futro</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_FURAWI</Tag>
 		<English>Furawi</English>
 		<Italian>Furawi</Italian>
@@ -2503,21 +2561,11 @@
 		<Italian>I mobili sono oggetti destinati a supportare varie attività umane, come sedersi (sedie, sgabelli, divani), mangiare (tavoli) o dormire (letti). I mobili vengono anche utilizzati per tenere oggetti ad un'altezza conveniente per il lavoro (tavoli, scrivanie) o per riporre oggetti (armadi, scaffali). L'arredamento può essere un prodotto di design ed è considerato una forma di arte decorativa. Oltre al suo ruolo funzionale, l'arredamento può servire per uno scopo simbolico o religioso. Può essere realizzato con molti materiali, tra cui metallo, plastica e legno. I mobili possono essere realizzati utilizzando una varietà di giunti in legno che, spesso, riflettono la cultura locale.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_FUR</Tag>
-		<English>Fur</English>
-		<French>Fourrure</French>
-		<German>Felle</German>
-		<Italian>Pellicce</Italian>
-		<Spanish>Pieles</Spanish>
-		<Polish>Futro</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_FUR_PEDIA</Tag>
 		<English>Fur is a thick growth of hair that covers the skin of many animals, and it is a defining characteristic of mammals. The fur of mammals has many uses: protection, sensory purposes, waterproofing, and camouflage, with the primary usage being thermoregulation. Fur has also long served as a source of clothing for humans, including Neanderthals. Historically, it was worn for its insulating quality, with aesthetics becoming a factor over time. Common fur-bearers used include fox, rabbit, mink, beaver, ermine, otter, sable, seal, coyote, chinchilla, raccoon, and possum. The use of fur in clothing has become controversial during XX century, but fur clothing is still a large market.</English>
 		<Italian>La pelliccia è una folta coltre di peli che copre la pelle di molti animali ed è una caratteristica distintiva dei mammiferi. La pelliccia dei mammiferi ha molti usi, come protezione, impermeabilizzazione e mimetizzazione, ma principalmente viene usata per la termoregolazione. Le pellicce degli animali sono state a lungo anche oggetto di abbigliamento per l'uomo, compresi i Neanderthal. Storicamente, sono state usate per le loro qualità isolanti, mentre le qualità estetiche sono diventate un fattore decisivo con l'evolvere della società. Gli animali più comunemente usati per la loro pelliccia sono la volpe, il coniglio, il visone, il castoro, l'ermellino, la lontra, lo zibellino, la foca, il coyote, il cincillà, il procione e l'opossum. L'uso delle pellicce animali nell'industria dell'abbigliamento è diventato controverso nel corso del XX secolo, ma continua ad avere ancora un grande mercato.</Italian>
 	</TEXT>
-<!-- G -->
-	<TEXT>
+<TEXT>
 		<Tag>TXT_KEY_BONUS_GALATIAN</Tag>
 		<English>Galatian</English>
 		<French>Galatienne</French>
@@ -2638,6 +2686,13 @@
 		<Italian>Göktürk</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_GOLD_INGOTS</Tag>
+		<English>Gold Ingots</English>
+		<French>Lingots d'or</French>
+		<Italian>Lingotti d'oro</Italian>
+		<Polish>Sztabki Złota</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_GOLD_ORE</Tag>
 		<English>Gold Ore</English>
 		<French>Minerai d'or</French>
@@ -2648,6 +2703,13 @@
 		<Tag>TXT_KEY_BONUS_GOLD_ORE_PEDIA</Tag>
 		<English>Gold is a bright, slightly reddish yellow, dense, soft, malleable, and ductile metal in its purest form. It often occurs in free elemental form, as nuggets or grains, in rocks, in veins, and in alluvial deposits. A relatively rare element, gold's high malleability, ductility, resistance to corrosion and most other chemical reactions, and conductivity of electricity have led to its use for coinage, jewelry, and other arts throughout recorded history, as well as in computer electrical connectors, infrared shielding, colored-glass production, gold leafing, and tooth restoration.</English>
 		<Italian>L'oro è un metallo brillante, leggermente rossastro, denso, morbido, malleabile e duttile nella sua forma più pura. Si presenta spesso in forma elementare libera, sotto forma di pepite o granaglie, nelle rocce, nelle vene e nei depositi alluvionali. Elemento relativamente raro, l'alta malleabilità, la duttilità, la resistenza alla corrosione e la maggior parte delle altre reazioni chimiche e la conduttività dell'elettricità dell'oro hanno portato al suo uso per monete, gioielli e altre opere d'arte nel corso della storia, così come nei connettori elettrici dei computer, nelle schermature a infrarossi, nella produzione di vetri colorati e foglie d'oro e nel restauro dei denti.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_GOLD_WARES</Tag>
+		<English>Gold Wares</English>
+		<French>Objets en or</French>
+		<Italian>Utensili d'oro</Italian>
+		<Polish>Wyroby ze złota</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_GOTH</Tag>
@@ -2786,8 +2848,7 @@
 		<French>Guyanaise</French>
 		<Italian>Guyanense</Italian>
 	</TEXT>
-<!-- H -->
-	<TEXT>
+<TEXT>
 		<Tag>TXT_KEY_BONUS_HAEMATITE_ORE</Tag>
 		<English>Haematite Ore</English>
 		<French>Minerai d'hematite</French>
@@ -2811,6 +2872,15 @@
 		<French>Haïtien</French>
 		<Italian>Haitiano</Italian>
 		<Polish>Haiti</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_HAPPY</Tag>
+		<English>Happy: +%d1_Change[ICON_HAPPY]</English>
+		<French>Moral: +%d1_Change[ICON_HAPPY]</French>
+		<German>[ICON_BULLET]Zufriedenheit: +%d1_Change[ICON_HAPPY]</German>
+		<Italian>Felici: +%d1_Change[ICON_HAPPY]</Italian>
+		<Spanish>Feliz: +%d1_Change[ICON_HAPPY]</Spanish>
+		<Polish>Szczęśliwy: +%d1_Change[ICON_HAPPY]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HATS</Tag>
@@ -2902,11 +2972,6 @@
 		<Polish>Konopie</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HEMP_PEDIA</Tag>
-		<English>Hemp is a phenotype of the Cannabis sativa plant species. It is grown for industrial uses of its derived products, as well as for various phytochemicals other than THC. It is one of the fastest growing plants and was one of the first plants to be spun into usable fiber 10,000 years ago. It can be refined into a variety of commercial items, including paper, textiles, clothing, biodegradable plastics, paint, insulation, biofuel, food, and animal feed.</English>
-		<Italian>La canapa è un fenotipo delle specie di piante di Cannabis sativa. Viene coltivata per gli usi industriali dei suoi prodotti derivati, nonché per vari prodotti fitochimici diversi dal THC. È una delle piante a più rapida crescita ed è stata una delle prime piante a essere trasformata in fibre utilizzabili 10.000 anni fa. Può essere raffinata in una serie di articoli commerciali, tra cui carta, tessuti, abbigliamento, plastica biodegradabile, vernici, isolanti, biocarburanti, alimenti per umani e per animali.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_HEMP_FIBERS</Tag>
 		<English>Hemp Fibers</English>
 		<French>Fibres de chanvre</French>
@@ -2917,6 +2982,11 @@
 		<Tag>TXT_KEY_BONUS_HEMP_FIBERS_PEDIA</Tag>
 		<English>Hemp fiber has been extensively used throughout history for items ranging from rope to fabrics. Pure hemp has a texture similar to linen and, because of its versatility, today it is used in a number of consumer goods, including clothing, shoes, accessories, dog collars, and home wares.</English>
 		<Italian>La fibra di canapa è stata ampiamente utilizzata nel corso della storia per oggetti che vanno dalla corda ai tessuti. La canapa pura ha una consistenza simile al lino e, per la sua versatilità d'uso, viene utilizzata in numerosi beni di consumo, tra cui abbigliamento, scarpe, accessori, collari per cani e articoli per la casa.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_HEMP_PEDIA</Tag>
+		<English>Hemp is a phenotype of the Cannabis sativa plant species. It is grown for industrial uses of its derived products, as well as for various phytochemicals other than THC. It is one of the fastest growing plants and was one of the first plants to be spun into usable fiber 10,000 years ago. It can be refined into a variety of commercial items, including paper, textiles, clothing, biodegradable plastics, paint, insulation, biofuel, food, and animal feed.</English>
+		<Italian>La canapa è un fenotipo delle specie di piante di Cannabis sativa. Viene coltivata per gli usi industriali dei suoi prodotti derivati, nonché per vari prodotti fitochimici diversi dal THC. È una delle piante a più rapida crescita ed è stata una delle prime piante a essere trasformata in fibre utilizzabili 10.000 anni fa. Può essere raffinata in una serie di articoli commerciali, tra cui carta, tessuti, abbigliamento, plastica biodegradabile, vernici, isolanti, biocarburanti, alimenti per umani e per animali.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HEMUDU</Tag>
@@ -2960,6 +3030,12 @@
 		<Italian>Himyarita</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_HITTITE</Tag>
+		<English>Hittite</English>
+		<Italian>Ittita</Italian>
+		<Polish>Hetycka</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_HIT_MOVIES</Tag>
 		<English>Hit Movies</English>
 		<French>Film réussi</French>
@@ -3000,12 +3076,6 @@
 		<Tag>TXT_KEY_BONUS_HIT_SINGLES_PEDIA</Tag>
 		<English>A hit single, also known as hit song, hit record, or simply hit, is a recorded song or instrumental that becomes broadly popular or well-known. Although hit song means any widely played or big-selling song, the specific term usually refers to a single that has appeared in an official music chart, through repeated radio airplay or significant commercial sales.</English>
 		<Italian>Una canzone di successo è un brano registrato o strumentale che diventa ampiamente popolare o noto. Sebbene il termine "canzone di successo" sia comunemente usato per indicare qualsiasi canzone ampiamente suonata o conosciuta, il termine specifico di solito si riferisce a un singolo che è apparso in una classifica musicale ufficiale, attraverso ripetute trasmissioni radiofoniche o vendite commerciali significative.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HITTITE</Tag>
-		<English>Hittite</English>
-		<Italian>Ittita</Italian>
-		<Polish>Hetycka</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HOLOGRAPHIC_PROJECTORS</Tag>
@@ -3474,7 +3544,13 @@
 		<English>A hypospray is a jet injector that delivers medications intramuscularly, if applied at the top of the arm, or intravenously or intra-arterially, if applied on the neck. It can also be applied through clothing. The hypospray is extremely versatile as the medicine vials can be quickly swapped out from the bottom of the hypospray. As the hypospray is bloodless, it is not contaminated by use. This allows it to be used on many people until the supply of medicine runs out.</English>
 		<Italian>Un ipospray è un iniettore a getto che eroga farmaci per via intramuscolare, se applicato nella parte superiore del braccio, oppure per via endovenosa o intra-arteriosa, se applicato sul collo. Può anche essere applicato attraverso l'abbigliamento. L'ipospray è estremamente versatile, poiché le fiale del medicinale possono essere rapidamente sostituite dal fondo. Poiché privo di un ago, non viene contaminato dall'uso. Ciò consente di utilizzarlo su molte persone fino all'esaurimento della fornitura di medicinali.</Italian>
 	</TEXT>
-<!-- I -->
+<TEXT>
+		<Tag>TXT_KEY_BONUS_ICELANDIC</Tag>
+		<English>Icelandic</English>
+		<French>Icelandais</French>
+		<Italian>Islandese</Italian>
+		<Polish>Islandzka</Polish>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ICE_CREAM</Tag>
 		<English>Ice Cream</English>
@@ -3486,13 +3562,6 @@
 		<Tag>TXT_KEY_BONUS_ICE_CREAM_PEDIA</Tag>
 		<English>Ice cream is a frozen dessert usually made from dairy products, such as milk and cream, and often combined with fruits or other ingredients and flavours. Most varieties contain sugar, although some are made with other sweeteners. In some cases, artificial flavourings and colourings are used in addition to, or instead of, the natural ingredients.</English>
 		<Italian>Il gelato è un dessert ghiacciato a base di prodotti caseari come latte e crema, spesso combinati con frutta e altri ingredienti; alcune varietà contengono anche zuccheri. In alcuni casi, coloranti ed additivi artificiali vengono usati in sostituzione degli ingredienti naturali.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_ICELANDIC</Tag>
-		<English>Icelandic</English>
-		<French>Icelandais</French>
-		<Italian>Islandese</Italian>
-		<Polish>Islandzka</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ILLYRIAN</Tag>
@@ -3516,6 +3585,15 @@
 		<Tag>TXT_KEY_BONUS_IMMUNITY_DRUGS_PEDIA</Tag>
 		<English>The immune system is a system of many biological structures and processes within an organism that protects against disease. To function properly, an immune system must detect a wide variety of agents, known as pathogens, from viruses to parasitic worms, and distinguish them from the organism's own healthy tissue. In many species, the immune system can be classified into subsystems, such as the innate immune system versus the adaptive immune system, or humoral immunity versus cell-mediated immunity.</English>
 		<Polish>Theremin, pierwotnie znany jako aetherphone / etherphone, thereminophone lub termenvox / thereminvox jest wczesne elektroniczny instrument muzyczny w kontrolowany, bez fizycznego kontaktu od player.Its nazwane po imieniu swojego westernizacji rosyjskiego wynalazcy, Leon Theremina, który opatentował urządzenie w 1928 roku. sekcja controlling składa się zazwyczaj z dwóch anten, które wyczuwają metalowe pozycję rąk gracza i oscylatorów do częstotliwości kontroli jedną ręką i amplitudy (głośności) z drugiej, dzięki czemu może być odtwarzany bez dotykania. Sygnały elektryczne z Theremina są wzmacniane i przesyłane do głośnika.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_IMPORTS_PLAYER</Tag>
+		<English>[SPACE](%s2_player is importing %d1_num_bonus)[SPACE]</English>
+		<French>[SPACE](%s2_player importe %d1_num_bonus)[SPACE]</French>
+		<German>[SPACE](%s2_player importiert %d1_num_bonus)[SPACE]</German>
+		<Italian>[SPACE](%s2_player importa %d1_num_bonus)[SPACE]</Italian>
+		<Spanish>[SPACE](%s2_player está importando %d1_num_bonus)[SPACE]</Spanish>
+		<Polish>[SPACE](%s2_player importuje %d1_num_bonus)[SPACE]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_INCAN</Tag>
@@ -3574,90 +3652,6 @@
 		<Italian>Un lingotto è una barra di metallo fusa in una forma utile per essere ulteriormente lavorata. Si può parlare di lingotti anche per i materiali non-metallici e semiconduttori, specie quando vengono prodotti per fusione.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_ALUMINUM_INGOTS</Tag>
-		<English>Aluminum Ingots</English>
-		<French>Lingots d'aluminium</French>
-		<Italian>Lingotti di alluminio</Italian>
-		<Polish>Sztabki Aluminiowe</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_BRASS_INGOTS</Tag>
-		<English>Brass Ingots</English>
-		<French>Lingots de laiton</French>
-		<Italian>Lingotti di ottone</Italian>
-		<Polish>Sztabki Mosiądzu</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_COPPER_INGOTS</Tag>
-		<English>Copper Ingots</English>
-		<French>Lingots de cuivre</French>
-		<Italian>Lingotti di rame</Italian>
-		<Polish>Sztabki Miedzi</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_ELECTRUM_INGOTS</Tag>
-		<English>Electrum Ingots</English>
-		<French>Lingots d'électrum</French>
-		<Italian>Lingotti di elettro</Italian>
-		<Polish>Sztabki Elektrum</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_GOLD_INGOTS</Tag>
-		<English>Gold Ingots</English>
-		<French>Lingots d'or</French>
-		<Italian>Lingotti d'oro</Italian>
-		<Polish>Sztabki Złota</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_IRON_INGOTS</Tag>
-		<English>Iron Ingots</English>
-		<French>Lingots de fer</French>
-		<Italian>Lingotti di ferro</Italian>
-		<Polish>Sztabki Żelaza</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_LEAD_INGOTS</Tag>
-		<English>Lead Ingots</English>
-		<French>Lingots de plomb</French>
-		<Italian>Lingotti di piombo</Italian>
-		<Polish>Sztabki Ołowiu</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_PLATINUM_INGOTS</Tag>
-		<English>Platinum Ingots</English>
-		<French>Lingots de platine</French>
-		<Italian>Lingotti di platino</Italian>
-		<Polish>Sztabki Platyny</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_SILVER_INGOTS</Tag>
-		<English>Silver Ingots</English>
-		<French>Lingots d'argent</French>
-		<Italian>Lingotti d'argento</Italian>
-		<Polish>Sztabki Srebra</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_STEEL_INGOTS</Tag>
-		<English>Steel Ingots</English>
-		<French>Lingots d'acier</French>
-		<Italian>Lingotti d'acciaio</Italian>
-		<Polish>Sztabki Stali</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_TIN_INGOTS</Tag>
-		<English>Tin Ingots</English>
-		<French>Lingots d'étain</French>
-		<Italian>Lingotti di stagno</Italian>
-		<Polish>Sztabki Cyny</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_TITANIUM_INGOTS</Tag>
-		<English>Titanium Ingots</English>
-		<French>Lingots de titane</French>
-		<Italian>Lingotti di titanio</Italian>
-		<Polish>Sztabka Tytatnu</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_INUIT</Tag>
 		<English>Inuit</English>
 		<Italian>Inuit</Italian>
@@ -3681,6 +3675,13 @@
 		<Polish>Irlandzka</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_IRON_INGOTS</Tag>
+		<English>Iron Ingots</English>
+		<French>Lingots de fer</French>
+		<Italian>Lingotti di ferro</Italian>
+		<Polish>Sztabki Żelaza</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_IRON_ORE</Tag>
 		<English>Iron Ore</English>
 		<French>Minerai de fer</French>
@@ -3694,6 +3695,13 @@
 		<German>Als die Zivilisationen der Frühzeit begannen, metallene Werkzeuge und Waffen anzufertigen, war Bronze das am meisten verwendete Material. Es hatte den Vorteil, dass es leicht erhältlich war und gut bearbeitet werden konnte. Leider war es zu weich, als dass man scharfe Klingen daraus hätte formen können. Mitte des 14. Jahrhunderts vor Christus, zu Beginn der so genannten Eisenzeit, löste Eisen die Bronze als bevorzugtes Metall in Europa ab. Seit dieser Zeit ist Eisen ein wertvoller Gebrauchsartikel. Eisen- und Eisenerzablagerungen, die in Bergen zu finden sind, werden abgebaut und in Rohform oder bei der Produktion von Stahl verwendet.</German>
 		<Italian>Quando le prime civiltà cominciarono a usare il metallo per costruire oggetti e armi, il più utilizzato era il bronzo; i vantaggi di questo metallo erano la sua facile reperibilità e la semplice lavorazione. Sfortunatamente, si rivelò troppo morbido per creare lame efficaci. A partire da metà del 14° secolo a. C., in Europa il bronzo venne sostituito dal ferro, dando così il via all'Età del Ferro. Da allora, il ferro è diventato una risorsa importante: i depositi di questo metallo e i minerali che lo contengono si trovano nelle montagne, dalle quali vengono estratti e processati per essere usati in forma grezza o nella produzione di acciaio.</Italian>
 		<Spanish>Cuando las primeras civilizaciones comenzaron a usar metales para fabricar herramientas y armas, el más utilizado era el bronce. Este metal contaba con la ventaja de su gran disponibilidad y de su facilidad a la hora de trabajar con él. Por desgracia, era demasiado blando para poder tener un filo eficaz. A mediados del siglo XIV a. C., el hierro sustituyó al bronce en Europa central como metal preferido, y comenzó la Edad del Hierro. Desde entonces, el hierro ha sido una mercancía valiosa. Los depósitos de mineral de hierro se encuentran en las montañas, y se extraen y procesan para utilizar el hierro en estado puro y en la producción de acero.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_IRON_WARES</Tag>
+		<English>Iron Wares</English>
+		<French>Objets en fer</French>
+		<Italian>Utensili di ferro</Italian>
+		<Polish>Wyroby z żelaza</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_IROQUOIS</Tag>
@@ -3732,8 +3740,7 @@
 		<Italian>L'avorio è il materiale che costituisce i denti e le zanne degli animali, utilizzato come materiale per l'arte o per l'industria. L'avorio è sempre stato, fin dai tempi antichi, utilizzato per produrre una grande quantità di oggetti, come sculture d'avorio, denti falsi, ventole, tessere del domino, tubi di collegamento, tasti di pianoforte e palle da biliardo. La fonte più importante sono sempre stati gli elefanti, ma l'avorio viene prodotto anche dagli ippopotami, dai trichechi, dai mammut, dalle balene e dai narvali.</Italian>
 		<Polish>Kość słoniowa - pierwotnie kością słoniową nazywano wyłącznie ciosy, czyli siekacze słoni (w tym mamutów), obecnie termin ten odnosi się również do kłów morsa i hipopotama, zębów kaszalota,siekaczy narwala i dzikiej świni.</Polish>
 	</TEXT>
-<!-- J -->
-	<TEXT>
+<TEXT>
 		<Tag>TXT_KEY_BONUS_JADE</Tag>
 		<English>Jade</English>
 		<French>Jade</French>
@@ -3741,11 +3748,6 @@
 		<Italian>Giada</Italian>
 		<Spanish>Jade</Spanish>
 		<Polish>Jadeity</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_JADE_PEDIA</Tag>
-		<English>Jade is an ornamental mineral, mostly known for its green varieties. It can refer to either of two different minerals: nephrite, a silicate of calcium and magnesium, or jadeite, a silicate of sodium and aluminium. The former can be found in a creamy white form, as well as in a variety of light green colours; the latter is rarer and shows more colour variations, including blue, brown, red, black, dark green, lavender and white. Both materials were used from prehistoric periods for ornaments and decorative objects: among the earliest known jade artifacts excavated from prehistoric sites are simple ornaments with bead, button, and tubular shapes. Additionally, jade was used for adze heads, knives, and other weapons, which can be delicately shaped.</English>
-		<Italian>La giada è un minerale ornamentale, noto soprattutto per le sue varietà verdi. Il termine può riferirsi a due diversi minerali: la nefrite, un silicato di calcio e magnesio, e la giadeite, un silicato di sodio e alluminio. La prima va dal bianco crema a una varietà di sfumature verdi chiare; l'altra è più rara e mostra più variazioni di colore, tra cui blu, marrone, rosso, nero, verde scuro, lavanda e bianco. Entrambi i materiali sono stati utilizzati dalla preistoria per ornamenti e oggetti decorativi: tra i primi manufatti di giada noti, vi sono semplici ornamenti con perline, bottoni e forme tubolari. Inoltre, la giada veniva utilizzata per asce, coltelli e altre armi che possono essere modellate delicatamente.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_JADE_DEATH_MASKS</Tag>
@@ -3758,6 +3760,11 @@
 		<Tag>TXT_KEY_BONUS_JADE_DEATH_MASKS_PEDIA</Tag>
 		<English>A jade death mask is an impression of a person's face after their death, usually made by putting together several pieces of jade. Death masks may be mementos of the dead, or be used for creation of portraits. It is sometimes possible to identify portraits that have been painted from death masks, because of the characteristic slight distortions of the face features.</English>
 		<Italian>Una maschera mortuaria di giada è un'impressione del volto di una persona dopo la sua morte, di solito realizzata mettendo insieme diversi pezzi di giada. Le maschere mortuarie possono essere ricordi dei morti o essere utilizzate per la creazione di ritratti. A volte è possibile identificare i ritratti che sono stati dipinti dalle maschere, a causa delle lievi distorsioni caratteristiche dei lineamenti del viso.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_JADE_PEDIA</Tag>
+		<English>Jade is an ornamental mineral, mostly known for its green varieties. It can refer to either of two different minerals: nephrite, a silicate of calcium and magnesium, or jadeite, a silicate of sodium and aluminium. The former can be found in a creamy white form, as well as in a variety of light green colours; the latter is rarer and shows more colour variations, including blue, brown, red, black, dark green, lavender and white. Both materials were used from prehistoric periods for ornaments and decorative objects: among the earliest known jade artifacts excavated from prehistoric sites are simple ornaments with bead, button, and tubular shapes. Additionally, jade was used for adze heads, knives, and other weapons, which can be delicately shaped.</English>
+		<Italian>La giada è un minerale ornamentale, noto soprattutto per le sue varietà verdi. Il termine può riferirsi a due diversi minerali: la nefrite, un silicato di calcio e magnesio, e la giadeite, un silicato di sodio e alluminio. La prima va dal bianco crema a una varietà di sfumature verdi chiare; l'altra è più rara e mostra più variazioni di colore, tra cui blu, marrone, rosso, nero, verde scuro, lavanda e bianco. Entrambi i materiali sono stati utilizzati dalla preistoria per ornamenti e oggetti decorativi: tra i primi manufatti di giada noti, vi sono semplici ornamenti con perline, bottoni e forme tubolari. Inoltre, la giada veniva utilizzata per asce, coltelli e altre armi che possono essere modellate delicatamente.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_JAMAICAN</Tag>
@@ -3831,8 +3838,7 @@
 		<English>Jute</English>
 		<Italian>Iuto</Italian>
 	</TEXT>
-<!-- K -->
-	<TEXT>
+<TEXT>
 		<Tag>TXT_KEY_BONUS_KANEM_BORNU</Tag>
 		<English>Kanem-Bornu</English>
 		<Italian>Kanem-Bornu</Italian>
@@ -3862,6 +3868,11 @@
 		<English>Kava or kava-kava is a crop of the western Pacific. The name kava(-kava) is from Tongan and Marquesan; other names for kava include 'awa' (Hawai'i), 'ava' (Samoa), 'yaqona' (Fiji), and 'sakau' (Pohnpei). The roots of the plant are used to produce a drink with sedative and anesthetic properties. Kava is consumed throughout the Pacific Ocean cultures of Polynesia, including Hawaii, Vanuatu, Melanesia and some parts of Micronesia. Kava is used for medicinal, religious, political, cultural and social purposes throughout the Pacific. These cultures have a great respect for the plant and place a high importance on it.</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_KAZAKH</Tag>
+		<English>Kazakh</English>
+		<Italian>Kazako</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_KENYAN</Tag>
 		<English>Kenyan</English>
 		<French>Kenyane</French>
@@ -3888,11 +3899,6 @@
 		<Tag>TXT_KEY_BONUS_KEVLAR_PEDIA</Tag>
 		<English>Kevlar is the registered trademark for a para-aramid synthetic fiber, related to other aramids such as Nomex and Technora. Developed at DuPont in 1965, this high strength material was first commercially used in the early 1970s as a replacement for steel in racing tires. Typically it is spun into ropes or fabric sheets that can be used as such or as an ingredient in composite material components.Currently, Kevlar has many applications, ranging from bicycle tires and racing sails to body armor because of its high tensile strength-to-weight ratio; by this measure it is 5 times stronger than steel on an equal weight basis. It is also used to make modern drumheads that withstand high impact. When used as a woven material, it is suitable for mooring lines and other underwater applications.</English>
 		<Polish>Kevlar - polimer z grupy poliamidów, a dokładniej aramidów, z którego przędzie się włókna sztuczne o wysokiej wytrzymałości na rozciąganie.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_KAZAKH</Tag>
-		<English>Kazakh</English>
-		<Italian>Kazako</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KHAZAR</Tag>
@@ -3976,27 +3982,21 @@
 		<Italian>Curdo</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_KUSHITE</Tag>
-		<English>Kushite</English>
-		<Italian>Kush</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_KUSHAN</Tag>
 		<English>Kushan</English>
 		<Italian>Cusana</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_KUSHITE</Tag>
+		<English>Kushite</English>
+		<Italian>Kush</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KUWAITI</Tag>
 		<English>Kuwaiti</English>
 		<Italian>Kuwaitiano</Italian>
 	</TEXT>
-<!-- L -->
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_LA_PLATAN</Tag>
-		<English>La Platan</English>
-		<Italian>Laplatense</Italian>
-	</TEXT>
-	<TEXT>
+<TEXT>
 		<Tag>TXT_KEY_BONUS_LACQUERWARE</Tag>
 		<English>Lacquerware</English>
 		<French>Objets décoratifs</French>
@@ -4040,6 +4040,18 @@
 		<Polish>Lazulit - rzadki minerał z gromady fosforanów. Nazwa pochodzi od arab. azul = niebo; pers. lazhward = niebieski oraz łac. lazulum = błękit, połączonego z gr. lithos = kamień (skała), nawiązując do charakterystycznej barwy tego minerału.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_LA_PLATAN</Tag>
+		<English>La Platan</English>
+		<Italian>Laplatense</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_LEAD_INGOTS</Tag>
+		<English>Lead Ingots</English>
+		<French>Lingots de plomb</French>
+		<Italian>Lingotti di piombo</Italian>
+		<Polish>Sztabki Ołowiu</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_LEAD_ORE</Tag>
 		<English>Lead Ore</English>
 		<French>Minerai de plomb</French>
@@ -4051,6 +4063,13 @@
 		<English>Lead, symbol Pb (Latin plumbum, a lead weight), dense, bluish-grey metallic element that was one of the first known metals. The atomic number of lead is 82; the element is in group 14 (or IVa) of the periodic table. Lead is used in enormous quantities in storage batteries and in sheathing electric cables. Large quantities are used in industry for lining pipes, tanks, and X-ray apparatus. Because of its high density and nuclear properties, lead is used extensively as protective shielding for radioactive material. Among numerous alloys containing a high percentage of lead are solder, type metal, and various bearing metals. A considerable amount of lead is consumed in the form of its compounds, particularly in paints and pigments. Lead has been used by humans for at least 7000 years, because it is widespread, easy to extract and easy to work with. It is highly malleable and ductile as well as easy to melt. In the early bronze age lead was used with antimony and arsenic. Lead was mentioned in the Book of Exodus. Alchemists thought that lead was the oldest metal and associated it with the planet Saturn. Lead pipes that bear the insignia of Roman emperors are still in service and many Roman "pigs" (ingots) of lead figure in Derbyshire lead mining history and in the history of the industry in other English centres. Lead's symbol Pb is an abbreviation of its Latin name plumbum. The English word "plumbing" also derives from this Latin root. However, it is also toxic, and lead poisoning was recognized even by the ancients. Similarly, in the Twentieth Century, the use of lead in paint pigments was ended because of the danger of lead poisoning, especially to children. By the mid-1980s, a significant shift in lead end-use patterns had taken place. Much of this shift was a result of the U.S. lead consumers' compliance with environmental regulations that significantly reduced or eliminated the use of lead in nonbattery products, including gasoline, paints, solders, and water systems. Recently, lead use is being further curtailed by the RoHS directive.</English>
 		<French>Plomb, Pb de symbole (plumbum latin, un poids de plomb), l'élément métallique dense et gris-bleuâtre qui était l'un des premiers métaux connus. Le nombre atomique de plomb est 82 ; l'élément est dans le groupe 14 (ou IVa) de la table périodique. Le plomb est employé en énorme quantité dans des batteries de stockage et en engainant les câbles électriques. De grandes quantités sont employées dans l'industrie pour des pipes de doublure, des réservoirs, et l'appareillage de rayon X. En raison de ses propriétés à haute densité et nucléaires, le plomb est employé intensivement comme l'armature protectrice pour le matériel radioactif. Parmi de nombreux alliages contenant un pourcentage élevé de plomb soyez soudure, type métal, et divers métaux de roulement. Une quantité considérable de plomb est consommée sous forme de ses composés, en particulier en peintures et colorants. Le plomb a été employé par des humains pendant au moins 7000 années, parce qu'il est répandu, facile d'extraire et facile à travailler avec. Il est fortement malléable et malléable comme facile à fondre. Dans l'âge en bronze jeune le plomb a été employé avec de l'antimoine et l'arsenic. Le plomb a été mentionné dans le livre de l'exode. Les alchimistes ont pensé que menez était le métal le plus ancien et associé lui à la planète Saturne. Menez les pipes qui soutiennent les insignes des empereurs romains sont toujours en service et beaucoup de "porcs" romains (des lingots) de chiffre de plomb en plomb de Derbyshire extrayant l'histoire et dans l'histoire de l'industrie à d'autres centres anglais. Le Pb du symbole du plomb est une abréviation de son plumbum nommé latin. Le mot anglais "tuyauterie" dérive également de cette racine latine. Cependant, il est également toxique, et l'empoisonnement de plomb a été identifié même par les ancients. De même, au vingtième siècle, l'utilisation du plomb en colorants de peinture a été finie en raison du danger du plomb empoisonnant, particulièrement aux enfants. Par le milieu des années 80, une variation significative dans l'usage final de plomb a modelé avait eu lieu. Beaucoup de ce décalage était un résultat de la conformité des consommateurs de plomb des ETATS-UNIS aux règlements environnementaux qui ont réduit ou ont éliminé de manière significative l'utilisation du plomb dans des produits de nonbattery, y compris l'essence, des peintures, des soudures, et des systèmes de l'eau. Récemment, l'utilisation de plomb est encore raccourcie par la directive de RoHS.</French>
 		<Italian>Cavo, Pb di simbolo (latino plumbum, un'unità di peso), elemento metallico denso e grigio bluastro che era uno dei primi metalli conosciuti. Il numero atomico del piombo è 82; l'elemento è nel gruppo 14 (o IVa) della tavola periodica. Il piombo è usato in quantità enorme in pile di accumulo e nell'inguainamento dei cavi elettrici. Le grandi quantità sono usate nell'industria per i tubi del rivestimento, i carri armati e le apparecchiature a raggi X. A causa delle relative proprietà ad alta densità e nucleari, il piombo è usato estesamente come protezione protettiva per materiale radioattivo. Fra le leghe numerose che contengono un'alta percentuale di piombo sia saldatura, lega per caratteri e vari metalli del cuscinetto. Una quantità considerevole di cavo è consumata sotto forma d'i relativi residui, specialmente in vernici e pigmenti. Il cavo è stato usato dagli esseri umani per almeno 7000 anni, perché è diffuso, facile da estrarre e facile funzionare con. È altamente malleabile e duttile come pure facile fondersi. Nell'età bronze giovane il cavo è stato usato con antimonio ed arsenico. Il cavo è stato accennato nel libro del exodus. Gli alchimisti hanno ritenuto che conduca fosse il più vecchio metallo ed associato esso con il pianeta Saturno. Conduca i tubi che sopportano i insignia degli imperatori romani sono ancora in servizio e molti "maiali" romani (lingotti) della figura del cavo in cavo del Derbyshire che estrae la storia e nella storia dell'industria in altri centri inglesi. Il Pb di simbolo del cavo è un'abbreviazione del relativo plumbum nome latino. La parola inglese "impianto idraulico" inoltre deriva da questa radice latina. Tuttavia, è inoltre tossica e l'avvelenamento da piombo era riconosciuto anche dagli antichi. Similmente, nel ventesimo secolo, l'uso di cavo in pigmenti della vernice è stato concluso a causa del pericolo di cavo che avvelena, particolarmente ai bambini. Entro i mid-1980s, una variazione significativa nell'uso finale del cavo ha modellato aveva avvenuto. Molto di questo spostamento era un risultato della conformità degli STATI UNITI dei consumatori del cavo alle regolazioni ambientali che significativamente hanno ridotto o eliminato l'uso di cavo nei prodotti di nonbattery, compreso benzina, in vernici, in saldature e nei sistemi dell'acqua. Recentemente, l'uso del cavo più ulteriormente sta accorciando dall'indirizzamento di RoHS.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_LEAD_WARES</Tag>
+		<English>Lead Wares</English>
+		<French>Objets en plomb</French>
+		<Italian>Utensili di piombo</Italian>
+		<Polish>Wyroby z ołowiu</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LEATHER</Tag>
@@ -4124,6 +4143,18 @@
 		<English>Libyan</English>
 		<French>Libyenne</French>
 		<Italian>Libico</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_LIQUID_METAL_WARES</Tag>
+		<English>Liquid Metal Wares</English>
+		<French>Outils en métal liquide</French>
+		<Italian>Utensili di metallo liquido</Italian>
+		<Polish>Wyroby z ciekłego metalu</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_LIQUID_METAL_WARES_PEDIA</Tag>
+		<English>Liquid metal consists of gallium-containing alloys with very low melting points which are liquid at room temperature. The standard metal formerly was mercury, but gallium-based alloys are being used as a replacement in various applications. Mercury is toxic, and has a high vapor pressure at room temperature. Gallium alloys have reduced toxicity and a lower vapor pressure than mercury.</English>
+		<Polish>Dobro materialne ogólnie jest tym wszystkim, co dana jednostka ludzka może gromadzić wokół siebie tworząc własne środowisko materialne.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LITHIUM</Tag>
@@ -4233,8 +4264,7 @@
 		<Tag>TXT_KEY_BONUS_LYE_PEDIA</Tag>
 		<English>Lye is a term that can refer to the liquid obtained by leaching ashes (containing largely potassium carbonate or "potash"), or to a strong alkali which is highly soluble in water producing caustic basic solutions. It is commonly the alternative name of sodium hydroxide or historically potassium hydroxide.</English>
 	</TEXT>
-<!-- M -->
-	<TEXT>
+<TEXT>
 		<Tag>TXT_KEY_BONUS_MACEDONIAN</Tag>
 		<English>Macedonian</English>
 		<French>Macédonien</French>
@@ -4372,6 +4402,18 @@
 		<Italian>Marri</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_MARS_ROCKS</Tag>
+		<English>Mars Rocks</English>
+		<French>Roches martiennes</French>
+		<Italian>Rocce marziane</Italian>
+		<Spanish>Rocas marcianas</Spanish>
+		<Polish>Marsjańskie Skały</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_MARS_ROCKS_PEDIA</Tag>
+		<English>Names for Mars rocks are largely unofficial designations used for ease of discussion purposes, as the International Astronomical Union's official Martian naming system declares that objects smaller than 100 m (330 ft) are not to be given official names. Because of this some less significant rocks seen in photos returned by Mars rovers have been named more than once, and others have even had their names changed later due to conflicts or even matters of opinion. Often rocks are named after the children or family members of astronauts or NASA employees. The name "Jazzy", for example, was taken from a girl named "Jazzy" who grew up in Grand Junction, CO, USA. Her father worked for NASA and contributed to the findings and naming of the rocks.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARTIAN_ALGAE</Tag>
 		<English>Martian Algae</English>
 		<French>Algues martiennes</French>
@@ -4420,18 +4462,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARTIAN_MANUFACTURED_GOODS_PEDIA</Tag>
 		<English>These manufactured goods from Mars are needed to support a growing economy.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_MARS_ROCKS</Tag>
-		<English>Mars Rocks</English>
-		<French>Roches martiennes</French>
-		<Italian>Rocce marziane</Italian>
-		<Spanish>Rocas marcianas</Spanish>
-		<Polish>Marsjańskie Skały</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_MARS_ROCKS_PEDIA</Tag>
-		<English>Names for Mars rocks are largely unofficial designations used for ease of discussion purposes, as the International Astronomical Union's official Martian naming system declares that objects smaller than 100 m (330 ft) are not to be given official names. Because of this some less significant rocks seen in photos returned by Mars rovers have been named more than once, and others have even had their names changed later due to conflicts or even matters of opinion. Often rocks are named after the children or family members of astronauts or NASA employees. The name "Jazzy", for example, was taken from a girl named "Jazzy" who grew up in Grand Junction, CO, USA. Her father worked for NASA and contributed to the findings and naming of the rocks.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARTIAN_VEGETABLES</Tag>
@@ -4528,6 +4558,18 @@
 		<Italian>Un tricorder medico è un dispositivo medico portatile che può essere utilizzato per auto-diagnosticare condizioni mediche in pochi secondi e per eseguire misurazioni vitali di base, come la pressione, la temperatura e il flusso sanguigno in modo non invasivo. Può diagnosticare lo stato di salute di una persona come dispositivo autonomo oppure connettendosi tramite Internet a dei database medici. L'idea di un tricorder medico proviene da un dispositivo immaginario dello show televisivo di fantascienza Star Trek.</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_MEGASTRONG_ALLOY_WARES</Tag>
+		<English>Megastrong Alloy Wares</English>
+		<French>Outils en alliages méga-résistants</French>
+		<Italian>Utensili in leghe megaresistenti</Italian>
+		<Polish>Wyroby z MegaStopu</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_MEGASTRONG_ALLOY_WARES_PEDIA</Tag>
+		<English>Megastrong Alloy is a material composed of two or more metals or a metal and a nonmetal. An alloy may be a solid solution of the elements (a single phase), a mixture of metallic phases (two or more solutions) or an intermetallic compound with no distinct boundary between the phases. Solid solution alloys give a single solid phase microstructure, while partial solutions exhibit two or more phases that may or may not be homogeneous in distribution, depending on the thermal (heat treatment) history of the material. An inter-metallic compound has one other alloy or pure metal embedded within another pure metal.</English>
+		<Polish>Dobro materialne ogólnie jest tym wszystkim, co dana jednostka ludzka może gromadzić wokół siebie tworząc własne środowisko materialne.</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_MELANESIAN</Tag>
 		<English>Melanesian</English>
 		<French>Mélanésienne</French>
@@ -4570,6 +4612,18 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_METAL_FOAM_PEDIA</Tag>
 		<English>A metal foam is a cellular structure consisting of a solid metal, frequently aluminium, as well as a large volume fraction of gas-filled pores. The pores can be sealed (closed-cell foam), or they can form an interconnected network (open-cell foam). The defining characteristic of metal foams is a very high porosity: typically 75-95% of the volume consists of void spaces making these ultralight materials. The strength of foamed metal possesses a power law relationship to its density; i.e., a 20% dense material is more than twice as strong as a 10% dense material.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_METAMATERIAL_WARES</Tag>
+		<English>Metamaterial Wares</English>
+		<French>Outils en métamatériaux</French>
+		<Italian>Utensili in meta-materiali</Italian>
+		<Polish>Wyroby z MetaMateriału</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_METAMATERIAL_WARES_PEDIA</Tag>
+		<English>Metamaterials are materials engineered to have properties that have not yet been found in nature. They are made from assemblies of multiple elements fashioned from conventional materials such as metals or plastics. The materials are usually arranged in repeating patterns, often at microscopic or smaller scales that are smaller than the wavelengths of the phenomena they influence. Metamaterials derive their properties not from the properties of the base materials, but from their designed structure. Their precise shape, geometry, size, orientation and arrangement gives them their properties.</English>
+		<Polish>Dobro materialne ogólnie jest tym wszystkim, co dana jednostka ludzka może gromadzić wokół siebie tworząc własne środowisko materialne.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_METHAMPHETAMINE</Tag>
@@ -4677,6 +4731,11 @@
 		<Polish>Mississipi</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_MITANNI</Tag>
+		<English>Mitanni</English>
+		<Italian>Mitanno</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_MITHRIL</Tag>
 		<English>Mithril</English>
 		<Italian>Mithril</Italian>
@@ -4684,11 +4743,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MITHRIL_PEDIA</Tag>
 		<English>Mithril is an artisan material that is manufactured out of lunar regolith, designed specifically to have the properties described about in fantasy. In actuality, it is a composite that is treated with high tech methods that are trade secrets.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_MITANNI</Tag>
-		<English>Mitanni</English>
-		<Italian>Mitanno</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MIXTEC</Tag>
@@ -4786,8 +4840,7 @@
 		<English>Mutapa</English>
 		<Italian>Mutapa</Italian>
 	</TEXT>
-<!-- N -->
-	<TEXT>
+<TEXT>
 		<Tag>TXT_KEY_BONUS_NABATEANS</Tag>
 		<English>Nabateans</English>
 		<French>Nabatéennes</French>
@@ -5079,8 +5132,7 @@
 		<English>Nylon is a generic designation for a family of synthetic polymers known generically as polyamides, first produced on February 28, 1935, by Wallace Carothers at DuPont's research facility at the DuPont Experimental Station. Nylon is one of the most commonly used polymers.</English>
 		<Italian>Nylon è il nome generico di una famiglia di polimeri sintetici conosciuti come poliamidi, prodotti per la prima volta il 28 febbraio 1935 da Wallace Carothers ad una stazione di ricerca della DuPont Experimental Station. Il nylon è uno dei polimeri usati più comunemente.</Italian>
 	</TEXT>
-<!-- O -->
-	<TEXT>
+<TEXT>
 		<Tag>TXT_KEY_BONUS_OBSIDIAN</Tag>
 		<English>Obsidian</English>
 		<French>Obsidienne</French>
@@ -5094,6 +5146,13 @@
 		<English>Obsidian is a naturally occurring glass formed as an extrusive igneous rock. It is produced when felsic lava extruded from a volcano cools without crystal growth. Obsidian is commonly found within the margins of rhyolitic lava flows known as obsidian flows. Because of the lack of crystal structure, obsidian blade edges can reach almost molecular thinness, leading to its ancient use as projectile points, and its modern use as surgical scalpel blades.</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_OBSOLETED_VALIDATES_IMPROVEMENT</Tag>
+		<English>Qualifies %s1_ImpName to exist on plot</English>
+		<French>Permet %s1_ImpName d'exister sur la case</French>
+		<Italian>Permette %s1_ImpName di esistere sul terreno</Italian>
+		<Polish>Kwalifikuje %s1_ImpName do isntniena na danym polu</Polish>
+	</TEXT>
+<TEXT>
 		<Tag>TXT_KEY_BONUS_ODAWA</Tag>
 		<English>Odawa</English>
 		<Italian>Odawa</Italian>
@@ -5116,18 +5175,6 @@
 		<Spanish>Los humanos conocen el petróleo desde la antigüedad. Los yacimientos de petróleo encontrados en la superficie se usaron durante siglos como impermeabilizador y combustible. Pero no fue hasta la llegada de la Revolución Industrial cuando las civilizaciones comenzaron a tener dependencia de los productos derivados del petróleo. El amplio uso del petróleo como combustible, lubricante, etc. ha llevado a una búsqueda constante de yacimientos todavía más grandes. A mediados del siglo XIX, se perforaron los primeros pozos petrolíferos en Pensilvania, lo que marcó el inicio de una industria tremendamente importante y beneficiosa. Hoy en día, con la reducción de las reservas mundiales y el crecimiento constante de la demanda, el petróleo es un recurso más valioso que nunca.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_OLIVE_OIL</Tag>
-		<English>Olive Oil</English>
-		<French>Huile d'olive</French>
-		<Italian>Olio d'oliva</Italian>
-		<Polish>Oliwa z oliwek</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_OLIVE_OIL_PEDIA</Tag>
-		<English>Olive oil is an oil obtained from the olive, a traditional tree crop of the Mediterranean Basin. It is commonly used in cooking, cosmetics, pharmaceuticals, and soaps and as a fuel for traditional oil lamps. Olive oil is used throughout the world, but especially in the Mediterranean countries.</English>
-		<Italian>L'olio di oliva viene ottenuto dalle olive, un albero originario del Bacino Mediterraneo. Viene comunemente usato in cucina, in cosmetica, nei farmaci, nei saponi e come carburante per le lampade ad olio tradizionali. L'olio d'oliva viene usato in tutto il mondo, ma specialmente nei paesi mediterranei.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_OLIVES</Tag>
 		<English>Olives</English>
 		<French>Olives</French>
@@ -5138,6 +5185,18 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_OLIVES_PEDIA</Tag>
 		<English>The olive is a species of small tree native to the eastern Mediterranean which bears a fruit bearing the same name. The olive is a bitter fruit but can be eaten (usually after some kind of fermentation or curing) or used to make olive oil. It is not known exactly when olive trees first began being cultivated by humans, but they have been in use since at least 3000 BC. The olive is native to Greece and Palestine, but was later spread to the western Mediterranean and (eventually) all over the world, as it is grown today in California and Australia. Olives and olive oil both possessed special religious significance for the ancient Greeks. According to legend, the olive tree was created by the goddess Athena and used to win a contest with the god Poseidon over who would name a newly founded city; as a result of her gift of the olive, the city of Athens bears her name to this day. The ancient Greeks considered the olive to be sacred; it was a symbol of peace, wisdom, and triumph. Olive wreaths were used to crown Olympic champions. Olive oil was used in Hellenic religious ceremonies, and to this day it continues to possess a special importance in the Greek Orthodox Church. The olive continues to be of economic importance to Greece, which exports more than 400,000 tons of olive oil worldwide each year.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_OLIVE_OIL</Tag>
+		<English>Olive Oil</English>
+		<French>Huile d'olive</French>
+		<Italian>Olio d'oliva</Italian>
+		<Polish>Oliwa z oliwek</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_OLIVE_OIL_PEDIA</Tag>
+		<English>Olive oil is an oil obtained from the olive, a traditional tree crop of the Mediterranean Basin. It is commonly used in cooking, cosmetics, pharmaceuticals, and soaps and as a fuel for traditional oil lamps. Olive oil is used throughout the world, but especially in the Mediterranean countries.</English>
+		<Italian>L'olio di oliva viene ottenuto dalle olive, un albero originario del Bacino Mediterraneo. Viene comunemente usato in cucina, in cosmetica, nei farmaci, nei saponi e come carburante per le lampade ad olio tradizionali. L'olio d'oliva viene usato in tutto il mondo, ma specialmente nei paesi mediterranei.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_OLMEC</Tag>
@@ -5263,8 +5322,7 @@
 		<Italian>Ottomano</Italian>
 		<Polish>Turecka</Polish>
 	</TEXT>
-<!-- P -->
-	<TEXT>
+<TEXT>
 		<Tag>TXT_KEY_BONUS_PAIUTE</Tag>
 		<English>Paiute</English>
 		<French>Païute</French>
@@ -5658,6 +5716,13 @@
 		<Italian>Un materiale plastico è un qualsiasi materiale sintetico o semi-sintetico che ha la capacità di piegarsi allo stato solido. La plastica è solitamente un polimero organico con elevata massa molecolare, ma spesso contiene altre sostanze; è solitamente sintetica, derivata dai prodotti petrolchimici, ma alcune varietà hanno anche componenti naturali.</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_PLATINUM_INGOTS</Tag>
+		<English>Platinum Ingots</English>
+		<French>Lingots de platine</French>
+		<Italian>Lingotti di platino</Italian>
+		<Polish>Sztabki Platyny</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_PLATINUM_ORE</Tag>
 		<English>Platinum Ore</English>
 		<French>Minerai de platine</French>
@@ -5667,6 +5732,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PLATINUM_ORE_PEDIA</Tag>
 		<English>Platinum is a precious metal. Platinum was well-known to many ancient cultures, but most textbooks date the discovery of the metal to the eighteenth century when it was finally isolated in pure form. Archaeologists have discovered platinum artefacts originating from Egypt and Pre-Columbian America. The word platinum was derived from the Spanish platina or "little silver". Europeans became aware of platinum after Spanish Conquistadors brought it back with plundered gold and silver from the New World. Platinum became a very fashionable jewellery material during the nineteenth century. Many famous royal jewels including the Hope Diamond and the Star of Africa are mounted in platinum settings. During World War II, platinum use was banned in the US for any non-military purpose. This event suppressed consumer demand for platinum for decades, but it has made a strong resurgence in recent years as a premium jewellery material.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_PLATINUM_WARES</Tag>
+		<English>Platinum Wares</English>
+		<French>Objets en platine</French>
+		<Italian>Utensili di platino</Italian>
+		<Polish>Wyroby z platyny</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_POCKET_UNIVERSE</Tag>
@@ -5715,6 +5787,18 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_POMEGRANATE_PEDIA</Tag>
 		<English>A pomegranate is a fruit-bearing deciduous shrub or small tree growing between 5 and 8 m tall. The pomegranate is native to the Caucasus, the Himalayas in north Pakistan and Northern India. It has been cultivated in the Caucasus since ancient times, and today, is widely cultivated throughout Iran, Azerbaijan, Armenia, Afghanistan, India, Pakistan, Bangladesh, Iraq, Egypt, China, Burma, Saudi Arabia, Israel, Jordan, the drier parts of southeast Asia, the Mediterranean region of Southern Europe, and tropical Africa. Introduced into Latin America and California by Spanish settlers in 1769, pomegranate is now cultivated in parts of California and Arizona for juice production</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_PORCELAIN_WARES</Tag>
+		<English>Porcelain Wares</English>
+		<French>Objets en porcelaine</French>
+		<Italian>Utensili di porcellana</Italian>
+		<Polish>Wyroby z porcelany</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_PORCELAIN_WARES_PEDIA</Tag>
+		<English>Porcelain is a ceramic material made by heating materials, generally including clay in the form of kaolin, in a kiln to temperatures between 1,200 °C (2,192 °F) and 1,400 °C (2,552 °F). The toughness, strength, and translucence of porcelain arise mainly from the formation of glass and the mineral mullite within the fired body at these high temperatures.</English>
+		<Polish>Porcelana - rodzaj białej, przeświecającej ceramiki wysokiej jakości, wynaleziony w Chinach w VII w. Porcelana jest wytwarzana z mieszanki glinki kaolinowej ze skaleniem i kwarcem poprzez wypalanie uformowanych wyrobów w temperaturze od 920-980 C (wyroby nieszkliwione, tzw. biskwit) aż do 1280-1460 C (wyroby szkliwione). Charakteryzuje się niską nasiąkliwością, bardzo dobrymi właściwościami dielektrycznymi, dużą wytrzymałością mechaniczną, wysoką odpornością na działanie czynników chemicznych i nieprzepuszczalnością dla cieczy i gazów.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PORTUGUESE</Tag>
@@ -5905,8 +5989,7 @@
 		<English>The mineral pyrite, or iron pyrite, also known as fool's gold, is an iron sulfide with the formula FeS2. This mineral's metallic luster and pale brass-yellow hue give it a superficial resemblance to gold, hence the well-known nickname of fool's gold. The color has also led to the nicknames brass, brazzle, and Brazil, primarily used to refer to pyrite found in coal.</English>
 		<Polish>Piryt - minerał żelaza z gromady siarczków, nadsiarczek żelaza(II), FeS2. Nazwa pochodzi od gr. pyr = ogień oraz pyrites = iskrzący, gdyż minerał ten iskrzy się pod wpływem uderzeń krzesiwa (krzemienia, twardego metalu).</Polish>
 	</TEXT>
-<!-- Q -->
-	<TEXT>
+<TEXT>
 		<Tag>TXT_KEY_BONUS_QIANG</Tag>
 		<English>Qiang</English>
 		<French>Qiang</French>
@@ -5968,8 +6051,7 @@
 		<English>Qulla</English>
 		<Italian>Qulla</Italian>
 	</TEXT>
-<!-- R -->
-	<TEXT>
+<TEXT>
 		<Tag>TXT_KEY_BONUS_RABBIT</Tag>
 		<English>Rabbit</English>
 		<French>Lapin</French>
@@ -6231,8 +6313,7 @@
 		<Italian>Russo</Italian>
 		<Polish>Rosyjski</Polish>
 	</TEXT>
-<!-- S -->
-	<TEXT>
+<TEXT>
 		<Tag>TXT_KEY_BONUS_SABBATEAN</Tag>
 		<English>Sabbatean</English>
 		<French>Sabbatéenne</French>
@@ -6404,19 +6485,6 @@
 		<Polish>Scytyjska</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_SEA_LION_AND_SEAL</Tag>
-		<English>Sea Lion and Seal</English>
-		<French>Lion de mer et phoque</French>
-		<German>Seelöwe und Siegel</German>
-		<Italian>Leoni marini e foche</Italian>
-		<Spanish>Focas y leones marinos</Spanish>
-		<Polish>Lwy Morskie i Foki</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_SEA_LION_AND_SEAL_PEDIA</Tag>
-		<English>Sea lions are pinnipeds characterized by external ear flaps, long foreflippers, the ability to walk on all fours, short, thick hair, and a big chest and belly. Together with the fur seals, they comprise the family Otariidae, eared seals, which contains six extant and one extinct species (the Japanese sea lion) in five genera. Their range extends from the subarctic to tropical waters of the global ocean in both the Northern and Southern Hemispheres, with the notable exception of the northern Atlantic Ocean.</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_SEASONING</Tag>
 		<English>Seasoning</English>
 		<French>Condiments</French>
@@ -6428,6 +6496,19 @@
 		<English>A spice is a dried seed, fruit, root, bark, or vegetative substance used in nutritionally insignificant quantities as a food additive for flavour, colour, or as a preservative that kills harmful bacteria or prevents their growth.</English>
 		<Italian>Un condimento è un seme, frutto, tubero, corteccia o sostanza vegetale secca usata in quantità insignificanti come additivo per il cibo, per aggiungere gusto, colore o come conservante che uccide i batteri o ferma la loro crescita.</Italian>
 		<Polish>Przyprawa - składnik potraw, zwykle stosowany w niewielkich ilościach dla poprawienia ich walorów smakowych, zapachowych i w rzadkich przypadkach (takich jak kurkuma czy szafran) - wizualnych. W odróżnieniu od głównych składników potraw, przyprawy zwykle nie mają istotnego znaczenia odżywczego. Nierzadko jednak pobudzają trawienie, konserwują potrawy lub działają leczniczo, a dawniej wielu przypisywano też działanie magiczne (stanowiły istotny składnik napojów czarodziejskich i miłosnych). Przyprawy pozwalają w końcu zróżnicować pożywienie bazujące na niewielkiej liczbie produktów podstawowych. Niegdyś odgrywały istotną rolę i należały wielokroć do najcenniejszych surowców, obok kamieni i metali szlachetnych. Z czasem rosnące zróżnicowanie dostępnych produktów podstawowych, łatwość utrzymania walorów smakowych potraw poprzez zamrażanie lub stosowanie środków konserwujących spowodowało spadek znaczenia przypraw. Szczególną rolę odgrywają w kuchni obszarów tropikalnych i subtropikalnych, gdzie warunki klimatyczne sprzyjają osłabianiu apetytu i zaburzeniom trawiennym.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_SEA_LION_AND_SEAL</Tag>
+		<English>Sea Lion and Seal</English>
+		<French>Lion de mer et phoque</French>
+		<German>Seelöwe und Siegel</German>
+		<Italian>Leoni marini e foche</Italian>
+		<Spanish>Focas y leones marinos</Spanish>
+		<Polish>Lwy Morskie i Foki</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_SEA_LION_AND_SEAL_PEDIA</Tag>
+		<English>Sea lions are pinnipeds characterized by external ear flaps, long foreflippers, the ability to walk on all fours, short, thick hair, and a big chest and belly. Together with the fur seals, they comprise the family Otariidae, eared seals, which contains six extant and one extinct species (the Japanese sea lion) in five genera. Their range extends from the subarctic to tropical waters of the global ocean in both the Northern and Southern Hemispheres, with the notable exception of the northern Atlantic Ocean.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SELJUK</Tag>
@@ -6593,11 +6674,6 @@
 		<Polish>Jedwab</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_SILK_PEDIA</Tag>
-		<English>Silk is a natural protein fiber, consisting of two main proteins, sericin and fibroin. It is one of the strongest natural fibers, while being also smooth, soft, and durable. It is mainly produced by the larvae of insects undergoing complete metamorphosis, but many insects and arachnids produce silk throughout their lives. Generally only the silk of moth caterpillars has been used for textile manufacturing. Silk's absorbency makes it comfortable to wear in warm weather and protects from insect bites. It is often used for clothing or for industrial uses, such as parachutes, bicycle tires, comforter filling and artillery gunpowder bags.</English>
-		<Italian>La seta è una fibra proteica naturale, composta da due proteine principali, sericina e fibroina. È una delle fibre naturali più resistenti, pur essendo liscia, morbida e resistente. È prodotta principalmente dalle larve di insetti che compiono una completa metamorfosi, ma molti insetti e aracnidi producono seta durante la loro esistenza. Generalmente solo la seta dei bruchi falena viene utilizzata per la produzione tessile. La capacità di assorbenza della seta la rende comoda da indossare quando fa caldo e protegge dalle punture di insetti. È spesso usata per l'abbigliamento o per usi industriali, come paracadute, pneumatici per biciclette, imbottitura di piumini e sacchi di polvere da sparo per artiglieria.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_SILK_FIBERS</Tag>
 		<English>Silk Fibers</English>
 		<French>Fibres de soie</French>
@@ -6609,6 +6685,18 @@
 		<Polish>Jedwab - włókno pochodzenia zwierzęcego (białkowe) uzyskiwane z kokonu jedwabnika morwowego lub jedwabnika dębowego. Swiatowa produkcja jedwabiu na poziomie ok. 50 000 ton rocznie stanowi 0,2% całej produkcjiwłókien.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_SILK_PEDIA</Tag>
+		<English>Silk is a natural protein fiber, consisting of two main proteins, sericin and fibroin. It is one of the strongest natural fibers, while being also smooth, soft, and durable. It is mainly produced by the larvae of insects undergoing complete metamorphosis, but many insects and arachnids produce silk throughout their lives. Generally only the silk of moth caterpillars has been used for textile manufacturing. Silk's absorbency makes it comfortable to wear in warm weather and protects from insect bites. It is often used for clothing or for industrial uses, such as parachutes, bicycle tires, comforter filling and artillery gunpowder bags.</English>
+		<Italian>La seta è una fibra proteica naturale, composta da due proteine principali, sericina e fibroina. È una delle fibre naturali più resistenti, pur essendo liscia, morbida e resistente. È prodotta principalmente dalle larve di insetti che compiono una completa metamorfosi, ma molti insetti e aracnidi producono seta durante la loro esistenza. Generalmente solo la seta dei bruchi falena viene utilizzata per la produzione tessile. La capacità di assorbenza della seta la rende comoda da indossare quando fa caldo e protegge dalle punture di insetti. È spesso usata per l'abbigliamento o per usi industriali, come paracadute, pneumatici per biciclette, imbottitura di piumini e sacchi di polvere da sparo per artiglieria.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_SILVER_INGOTS</Tag>
+		<English>Silver Ingots</English>
+		<French>Lingots d'argent</French>
+		<Italian>Lingotti d'argento</Italian>
+		<Polish>Sztabki Srebra</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_SILVER_ORE</Tag>
 		<English>Silver Ore</English>
 		<French>Minerai d'argent</French>
@@ -6618,6 +6706,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SILVER_ORE_PEDIA</Tag>
 		<English>Silver is a soft, white, lustrous transition metal, silver has the highest electrical and thermal conductivity of any metal and is found in mineral deposits and in free form. Slag heaps found in Asia Minor indicate that silver has been known about for a long time, and that it was being separated from lead as early as the fourth millennium BC. </English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_SILVER_WARES</Tag>
+		<English>Silver Wares</English>
+		<French>Objets en argent</French>
+		<Italian>Utensili d'argento</Italian>
+		<Polish>Wyroby ze srebra</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SINTASHTA</Tag>
@@ -6791,6 +6886,20 @@
 		<Polish>Dynie na ogół odnoszą się do czterech gatunków z rodzaju Cucurbita native do Meksyku i Ameryki Srodkowej, zwany także dynie w zależności od odmiany i obywatelstwa głośnika. Gatunki te obejmują C. maxima (Hubbard squash, squash, kilka jaskier odmian dyni nagród, takich jak Big Max), C (cushaw squash mixta), C. moschata (piżmowa) i C. pepo (większość dyni, Żołądź squash, squash lato, cukinia). W Ameryce Północnej, squash jest luźno zgrupowane w dyni lub dyni olbrzymiej, w zależności od tego, czy są one zbierane jako niedojrzałe owoce (latem) lub squasha owoców dojrzałych (squash jesieni lub zimą squash). Tykwy pochodzą z tej samej rodziny co kabaczki. Dobrze znane typy squash to dyni i cukinii. Giant squash pochodzą z dynia olbrzymia i są rutynowo wzrosła do ciężarów zbliża tych olbrzymich dyni.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_STEEL_INGOTS</Tag>
+		<English>Steel Ingots</English>
+		<French>Lingots d'acier</French>
+		<Italian>Lingotti d'acciaio</Italian>
+		<Polish>Sztabki Stali</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_STEEL_WARES</Tag>
+		<English>Steel Wares</English>
+		<French>Objets en acier</French>
+		<Italian>Utensili d'acciaio</Italian>
+		<Polish>Wyroby ze stali</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_STIM_PACKS</Tag>
 		<English>Stim Packs</English>
 		<French>Pack de Stimulants</French>
@@ -6932,6 +7041,18 @@
 		<Italian>Un materiale supersolido (anche conosciuto come condensato di Bose-Einstein o come "il quinto stato della materia") è uno stato della materia che si forma tipicamente quando un gas di bosoni a bassa densità viene raffreddato a temperature molto vicine allo zero assoluto (-273,15 °C). In tali condizioni una grande frazione di bosoni occupa lo stato quantico più basso e quindi i fenomeni quantistici microscopici, in particolare l'interferenza della funzione d'onda, diventano apparenti macroscopicamente. Un materiale supersolido si forma raffreddando un gas di densità estremamente bassa (circa 1/100.000 della densità dell'aria normale) a temperature ultra-basse.</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_SUPERSTRONG_ALLOY_WARES</Tag>
+		<English>Superstrong Alloy Wares</English>
+		<French>Outils en alliages super-résistants</French>
+		<Italian>Utensili in leghe super-resistenti</Italian>
+		<Polish>Wyroby ze SuperStopu</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_SUPERSTRONG_ALLOY_WARES_PEDIA</Tag>
+		<English>A superalloy, or high-performance alloy, is an alloy that exhibits several key characteristics: excellent mechanical strength, resistance to thermal creep deformation, good surface stability and resistance to corrosion or oxidation. The crystal structure is typically face-centered cubic austenitic. Examples of such alloys are Hastelloy, Inconel, Waspaloy, Rene alloys, Haynes alloys, Incoloy, MP98T, TMS alloys, and CMSX single crystal alloys.</English>
+		<Polish>Dobro materialne ogólnie jest tym wszystkim, co dana jednostka ludzka może gromadzić wokół siebie tworząc własne środowisko materialne.</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_SURINAMESE</Tag>
 		<English>Surinamese</English>
 		<Italian>Surinamese</Italian>
@@ -6991,8 +7112,7 @@
 		<Italian>Siriano</Italian>
 		<Polish>Syryjska</Polish>
 	</TEXT>
-<!-- T -->
-	<TEXT>
+<TEXT>
 		<Tag>TXT_KEY_BONUS_TABLETS</Tag>
 		<English>Tablets</English>
 		<French>Tablettes</French>
@@ -7095,16 +7215,16 @@
 		<Polish>Smoła</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_TAR_PEDIA</Tag>
-		<English>Tar was used as seal for roofing shingles and to seal the hulls of ships and boats. For millennia wood tar was used to waterproof sails and boats, but today sails made from inherently waterproof synthetic substances have negated the need for tar. Wood tar is still used to seal traditional wooden boats and the roofs of historical shingle-roofed churches, as well as painting exterior walls of log buildings. Tar is also a general disinfectant.</English>
-		<Italian>Il catrame veniva usato come sigillante per i tetti e per le chiglie delle navi. Per millenni il catame è stato usato per rendere impermeabili vari tipi di imbarcazione; al giorno d'oggi, sostanze impermeabilizzanti sintetiche hanno reso il catrame obsoleto. Il catrame veine ancora usato per sigillare barche tradizionali e chiese con i tetti in legno, oltre che impermeabilizzare le pareti esterne delle case in legno; il catrame è anche un generico disinfettante.</Italian>
-		<Polish>Smoła, smoła surowa - produkty odgazowania węgla, łupków bitumicznych lub drewna, rzadko torfu. Składa się głównie z mieszaniny wielu rodzajów węglowodorów oraz innych związków organicznych, zawierających tlen, azot i siarkę, ponadto niektóre rodzaje smoły mogą zawierać pewną ilość grafitu i fulerenów.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_TARASCAN</Tag>
 		<English>Tarascan</English>
 		<Italian>Tarasco</Italian>
 		<Polish>Taraskańska</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_TAR_PEDIA</Tag>
+		<English>Tar was used as seal for roofing shingles and to seal the hulls of ships and boats. For millennia wood tar was used to waterproof sails and boats, but today sails made from inherently waterproof synthetic substances have negated the need for tar. Wood tar is still used to seal traditional wooden boats and the roofs of historical shingle-roofed churches, as well as painting exterior walls of log buildings. Tar is also a general disinfectant.</English>
+		<Italian>Il catrame veniva usato come sigillante per i tetti e per le chiglie delle navi. Per millenni il catame è stato usato per rendere impermeabili vari tipi di imbarcazione; al giorno d'oggi, sostanze impermeabilizzanti sintetiche hanno reso il catrame obsoleto. Il catrame veine ancora usato per sigillare barche tradizionali e chiese con i tetti in legno, oltre che impermeabilizzare le pareti esterne delle case in legno; il catrame è anche un generico disinfettante.</Italian>
+		<Polish>Smoła, smoła surowa - produkty odgazowania węgla, łupków bitumicznych lub drewna, rzadko torfu. Składa się głównie z mieszaniny wielu rodzajów węglowodorów oraz innych związków organicznych, zawierających tlen, azot i siarkę, ponadto niektóre rodzaje smoły mogą zawierać pewną ilość grafitu i fulerenów.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TASMANIAN</Tag>
@@ -7149,6 +7269,18 @@
 		<English>A television set (also called a television, TV set, TV, or "Telly" (UK) ) is a device that combines a tuner, display, and speakers for the purpose of viewing television. Television sets became a popular consumer product after the Second World War, using vacuum tubes and cathode ray tube displays. The addition of color to broadcast television after 1953 further increased the popularity of television sets, and an outdoor antenna became a common feature of suburban homes. The ubiquitous television set became the display device for the first generation of home computers.</English>
 		<German>Ein Fernsehgerät oder Fernsehapparat, in den 1930er Jahren auch Ferntonkino oder das Telehor (von altgriechisch horaosehen), ist ein Gerät zum Empfang und zur Wiedergabe von Fernsehsignalen. Die Idee für einen ersten mechanischen Fernsehapparat wurde bereits 1886 von Paul Nipkow in einem Patent dargelegt. Er gilt damit als der eigentliche Erfinder des Fernsehens. Gebräuchlich für Fernsehgeräte ist auch die Bezeichnung Fernsehempfänger.</German>
 		<Polish>Telewizor (zwany także telewizor, TV, TV, lub "Telly" (UK)) jest urządzeniem, które łączy w tuner, wyświetlacz i głośniki w celu oglądania telewizji. Telewizory stał się popularnym produktem konsumpcyjnym po II wojnie światowej, za pomocą lamp próżniowych i rur wyświetlacze katodowych. Dodanie koloru do transmisji telewizji po 1953 dalszy wzrost popularności telewizorów i antena zewnętrzna stała się wspólną cechą podmiejskich domów. Wszechobecne telewizor stał wyświetlacz do pierwszej generacji komputerów domowych.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_TERRACOTTA_WARES</Tag>
+		<English>Terracotta Wares</English>
+		<French>Outils en terre cuite</French>
+		<Italian>Utensili di terracotta</Italian>
+		<Polish>Wyroby z terrakoty</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_TERRACOTTA_WARES_PEDIA</Tag>
+		<English>Terracotta, Terra cotta or Terra-cotta (Italian: "baked earth", from the Latin terra cotta), a type of earthenware, is a clay-based unglazed or glazed ceramic, where the fired body is porous. Its uses include vessels (notably flower pots), water and waste water pipes, bricks, and surface embellishment in building construction, along with sculpture such as the Terracotta Army and Greek terracotta figurines. The term is also used to refer to items made out of this material and to its natural, brownish orange color, which varies considerably. In archaeology and art history, "terracotta" is often used of objects not made on a potter's wheel, such as figurines, where objects made on the wheel from the same material, possibly even by the same person, are called pottery; the choice of term depending on the type of object rather than the material.</English>
+		<Polish>Terakota (wł. terra cotta - ziemia wypalona) - wyroby z dobrze oczyszczonej i wypalonej gliny w formie figurek lub płytek, stosowane do zdobień. Znane w starożytnej Grecji, Etrurii, Rzymie. Przedmioty były modelowane ręcznie lub odciskane w formach, a następnie wypalane. Wyrobów nie powlekano firnisem i początkowo nie malowano. Najciekawsze figurki pochodzą z IV w. p.n.e. z Tanagry - miasto w Grecji, z okresu hellenistycznego - z Myriny. Największe, naturalnej wielkości figury (w tym tzw. Apollo) pochodzą z Wejów (500 r. p.n.e.). Oprócz figurek wykonywano płytki do zdobień (antefiks, akroterion), dachówki i simy, płytki do licowania ścian (np. dach świątyni Hery na Olimpii - VII wiek p.n.e.), wnętrz teatrów, term, domów mieszkalnych.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TESSERACT</Tag>
@@ -7210,6 +7342,13 @@
 		<Polish>Timuridzka</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_TIN_INGOTS</Tag>
+		<English>Tin Ingots</English>
+		<French>Lingots d'étain</French>
+		<Italian>Lingotti di stagno</Italian>
+		<Polish>Sztabki Cyny</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_TIN_ORE</Tag>
 		<English>Tin Ore</English>
 		<French>Minerai d'etain</French>
@@ -7220,6 +7359,13 @@
 		<Tag>TXT_KEY_BONUS_TIN_ORE_PEDIA</Tag>
 		<English>Tin, symbol Sn, metallic element that has been used by people since ancient times. Tin is in group 14 (or IVa) of the periodic table. The atomic number of tin is 50. Tin has been found in the tombs of ancient Egyptians and was exported to Europe in large quantities from Cornwall, England, during the Roman period. The ancient Egyptians considered tin and lead different forms of the same metal. Tin was the Anglo-Saxon name for the metal. Tin is a widely sought metal and is used in hundreds of industrial processes throughout the world. In the form of tinplate, it is used as a protective coating for copper vessels, various metals used in the manufacture of tin cans, and similar articles. Tin is important in the production of the common alloys bronze (tin and copper), solder (tin and lead), and type metal (tin, lead, and antimony). It is also used as an alloy with titanium in the aerospace industry and as an ingredient in some insecticides. Stannic sulfide, known also as mosaic gold, is used in powdered form for bronzing articles made of plaster of paris or wood. The United States imports more than one-fifth of the average annual world production of tin. Most of the world's tin is produced by Malaysia, Brazil, Indonesia, Thailand, Bolivia, and Australia. Tin (Anglo-Saxon, tin, Latin stannum) is one of the earliest metals known and was used as a component of bronze from antiquity. Because of its hardening effect on copper, tin was used in bronze implements as early as 3,500 BC. Tin mining is believed to have started in Cornwall and Devon (especially Dartmoor) in Classical times, and a thriving tin trade developed with the civilizations of the Mediterranean. However the pure metal was not used until about 600 BC. The last Cornish Tin Mine, at South Crofty near Camborne closed in 1998 bringing 4000 years of mining in Cornwall to an end. The word "tin" has cognates in many Germanic and Celtic languages. The American Heritage Dictionary speculates that the word was borrowed from a pre-Indo-European language. In modern times, the word "tin" is often (improperly) used as a generic phrase for any silvery metal that comes in thin sheets. Most everyday objects that are commonly called tin, such as aluminum foil, beverage cans, and tin cans, are actually made of steel or aluminum, although tin cans do contain a thin coating of tin to inhibit rust. Likewise, so-called "tin toys" are usually made of steel, and may or may not have a thin coating of tin to inhibit rust.</English>
 		<French>Étain, Sn de symbole, élément métallique qui a été employé par des personnes depuis des périodes antiques. L'étain est dans le groupe 14 (ou IVa) de la table périodique. Le nombre atomique d'étain est 50. L'étain a été trouvé dans les tombeaux des Egyptiens antiques et a été exporté en Europe en grande quantité de Cornwall, Angleterre, pendant la période romaine. Les Egyptiens antiques ont considéré l'étain et le fil différentes formes du même métal. L'étain était le nom d'Anglo-Saxon pour le métal. L'étain est un métal largement cherché et est employé dans les centaines de processus industriels dans le monde entier. Sous forme de fer blanc, il est employé comme enduit protecteur pour les navires de cuivre, les divers métaux utilisés dans la fabrication des boîtes en fer blanc, et les articles semblables. L'étain est important dans la production du bronze commun d'alliages (étain et cuivre), de la soudure (étain et fil), et du type métal (étain, plomb, et antimoine). Il est également employé comme alliage avec du titane dans l'industrie aérospatiale et comme ingrédient en quelques insecticides. Le sulfure stannique, connu également comme or mussif, est employé sous la forme en poudre pour bronzer des articles faits de plâtre de Paris ou de bois. Les Etats-Unis importent plus d'un cinquième de la production annuelle moyenne du monde de l'étain. La majeure partie de l'étain du monde est produite par la Malaisie, le Brésil, l'Indonésie, la Thaïlande, la Bolivie, et l'Australie. L'étain (Anglo-Saxon, étain, stannum latin) est l'un des métaux les plus tôt connus et a été employé comme composant de bronze de l'antiquité. En raison de son effet durcissant sur le cuivre, l'étain a été employé dans des instruments en bronze dès 3.500 AVANT JÉSUS CHRIST. L'exploitation de bidon est censée pour avoir commencé Cornwall et au Devon (particulièrement Dartmoor) dans des périodes classiques, et un commerce prospère de bidon développé avec les civilisations du méditerranéen. Cependant le métal pur n'a pas été employé jusqu'environ à 600 AVANT JÉSUS CHRIST. La dernière mine cornouaillaise de bidon, chez Crofty Du sud près de Camborne clôturé en 1998 apportant 4000 ans à moi dans Cornwall à une extrémité. Le mot "étain" a des cognates dans beaucoup de langues germaniques et celtiques. Le dictionnaire américain d'Patrimoine specule que le mot a été emprunté à une langue pré-Indo-Européenne. Dans des temps modernes, le mot "étain" souvent (incorrectement) est employé comme expression générique pour n'importe quel métal argenté qui vient en feuilles minces. La plupart des objets journaliers qui s'appellent généralement l'étain, tel que les boîtes de papier d'aluminium, de bidon de boisson, et en fer blanc, sont faits réellement d'acier ou aluminium, bien que les boîtes en fer blanc contiennent un enduit mince d'étain pour empêcher la rouille. De même, de prétendus "jouets de bidon" sont habituellement faits d'acier, et peuvent ou peuvent ne pas avoir un enduit mince d'étain pour empêcher la rouille.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_TIN_WARES</Tag>
+		<English>Tin Wares</English>
+		<French>Outils en étain</French>
+		<Italian>Utensili di stagno</Italian>
+		<Polish>Wyroby z cyny</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TIRES</Tag>
@@ -7235,6 +7381,13 @@
 		<Polish>Opona pneumatyczna - zewnętrzna część koła o przekroju otwartym, nakładana na felgę lub obręcz i wypełniana powietrzem (lub innym gazem) pod ciśnieniem. Jest elementem pojazdu kontaktującym się z podłożem, zapewnia przenoszenie ciężaru pojazdu, sił napędu, hamowania i skrętu, a także podstawową amortyzację w czasie jazdy.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_TITANIUM_INGOTS</Tag>
+		<English>Titanium Ingots</English>
+		<French>Lingots de titane</French>
+		<Italian>Lingotti di titanio</Italian>
+		<Polish>Sztabka Tytatnu</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_TITANIUM_ORE</Tag>
 		<English>Titanium Ore</English>
 		<French>Minerai de titane</French>
@@ -7245,6 +7398,13 @@
 		<Tag>TXT_KEY_BONUS_TITANIUM_ORE_PEDIA</Tag>
 		<English>Titanium is a precious metal. Titanium is Sometimes called the "space age" metal, as it is corrosion-resistant and has the highest strength-to-weight ratio of any metal. Titanium can be alloyed with iron, aluminium, vanadium, molybdenum, among other elements, to produce strong lightweight alloys for aerospace (jet engines, missiles, and spacecraft), military, industrial process (chemicals and petro-chemicals, desalination plants, pulp, and paper), automotive, agri-food, medical prostheses, orthopaedic implants, dental and endodontic instruments and files, dental implants, sporting goods, jewellery, mobile phones, and other applications. Titanium was discovered in England by William Gregor in 1791 and named by Martin Heinrich Klaproth for the Titans of Greek mythology.</English>
 		<Polish>Tytan jest metalem szlachetnym. Tytan jest czasami nazywany "ery kosmicznej" metalu, ponieważ jest odporny na korozję i ma najwyższy stosunek wytrzymałości do masy dowolnego metalu. Tytan może być stopiony z żelaza, aluminium, wanad, molibden, między innymi elementami, do produkcji stopów lekkich do mocnych lotniczym (silniki odrzutowe, rakiet kosmicznych), oraz, wojsko, procesów przemysłowych (chemikalia i Petro-chemicznych, zakładów odsalania wody, masy celulozowej, i papier), motoryzacyjny, rolno-spożywczy, protezy medyczne, implantów ortopedycznych, instrumenty i pliki stomatologiczne i endodontyczne, implanty stomatologiczne, artykuły sportowe, biżuteria, telefony komórkowe i inne aplikacje. Tytan został odkryty w Anglii przez Williama Gregora w 1791 roku i nazwany przez Martina Heinricha Klaproth dla tytanów z mitologii greckiej.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_TITANIUM_WARES</Tag>
+		<English>Titanium Wares</English>
+		<French>Objets en titane</French>
+		<Italian>Utensili in titanio</Italian>
+		<Polish>Wyroby z tytanu</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TIWI</Tag>
@@ -7438,8 +7598,7 @@
 		<English>A typewriter is a mechanical or electromechanical machine for writing in characters similar to those produced by printer's type by means of keyboard-operated types striking a ribbon to transfer ink or carbon impressions onto the paper. Typically one character is printed per keypress. The machine prints characters by making ink impressions of type elements similar to the sorts used in movable type letterpress printing. After their invention in the 1860s, typewriters quickly became indispensable tools for practically all writing other than personal correspondence. They were widely used by professional writers, in offices, and for business correspondence in private homes. By the end of the 1980s, word processors and personal computers had largely displaced typewriters in most of these uses in the Western world, but as of the 2010s the typewriter is still prominent in many parts of the world including India.</English>
 		<Polish>Maszyna do pisania - urządzenie mechaniczne o napędzie ręcznym lub elektrycznym, posiadające klawisze, które naciskane powodują wydrukowanie metodą typograficzną określonych znaków na umieszczonym w maszynie podłożu drukowym (najczęściej papierze). Urządzenie może być również wspomagane modułem elektronicznym umożliwiającym zapamiętywanie wpisywanego tekstu.</Polish>
 	</TEXT>
-<!-- U -->
-	<TEXT>
+<TEXT>
 		<Tag>TXT_KEY_BONUS_UIGHUR</Tag>
 		<English>Uighur</English>
 		<Italian>Uiguro</Italian>
@@ -7462,6 +7621,15 @@
 		<Tag>TXT_KEY_BONUS_ULTRAFUEL_PEDIA</Tag>
 		<English>The pinnacle of genetically enhanced crops and biofuel chemistry, Ultrafuel is a highly adaptive fuel product that can be specifically designed for any range of fuel needs from solid fuel to liquid to gas. Absolutely precise and ultimately beyond potent with any designated degree of flamability, flash point, and durability. In the Shockwave Engine, its most common use after adapting to the needs of the market, it forms a catalyst fuel to the rest of the engine which otherwise runs on liquid metal in a highly stable fusile nuclear reaction environment. Ultrafuel also becomes the primary power source for all flight needs and completely obsoletes the need for petroleum based fuels.</English>
 		<Polish>Szczyt genetycznie ulepszonych roślin i chemii biopaliw Ultrapaliwo jest wysoce adaptacyjne produkt paliwa, które mogą być przeznaczone dla jakiegokolwiek zakresu potrzeb paliwa z paliwa stałego do ciekłego gazu. Absolutnie precyzyjne i ostatecznie poza silnym z jakiegokolwiek wyznaczonego stopnia PALNOSĆ, temperatura zapłonu, i trwałości. W Shockwave silnika, jego najbardziej powszechnym zastosowaniem po dostosowaniu się do potrzeb rynku, stanowi paliwo katalizatora do pozostałej części silnika, które w przeciwnym razie uruchamiana na płynnym metalu w bardzo stabilny fusile środowisku reakcji jądrowej. Ultrafuel również staje się podstawowym źródłem energii dla wszystkich potrzeb lotów i całkowicie obsoletes potrzebę paliw ropopochodnych.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_UNHAPPY</Tag>
+		<English>Unhappy: +%d1_Change[ICON_UNHAPPY]</English>
+		<French>Moral: +%d1_Change[ICON_UNHAPPY]</French>
+		<German>[ICON_BULLET]Unzufriedenheit: +%d1_Change[ICON_UNHAPPY]</German>
+		<Italian>Infelici: +%d1_Change[ICON_UNHAPPY]</Italian>
+		<Spanish>Infeliz: +%d1_Change[ICON_UNHAPPY]</Spanish>
+		<Polish>Niezadowoleni: +%d1_Change[ICON_UNHAPPY]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_UNMANNED_AIRCRAFTS</Tag>
@@ -7515,8 +7683,7 @@
 		<French>Ouzbèque</French>
 		<Italian>Uzbeco</Italian>
 	</TEXT>
-<!-- V -->
-	<TEXT>
+<TEXT>
 		<Tag>TXT_KEY_BONUS_VACUUM</Tag>
 		<English>Vacuum</English>
 		<French>Aspirateurs</French>
@@ -7532,11 +7699,6 @@
 		<Tag>TXT_KEY_BONUS_VALDIVIAN</Tag>
 		<English>Valdivian</English>
 		<Italian>Valdiviano</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_VANUATUAN</Tag>
-		<English>Vanuatuan</English>
-		<Italian>Vanuatuano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_VANDAL</Tag>
@@ -7560,6 +7722,11 @@
 		<Polish>Wanilia (Vanilla Mill.) - rodzaj roślin jednoliściennych z rodziny storczykowatych (Orchidaceae), liczący 109 gatunków rosnących dziko w strefach tropikalnych. Owoce wanilii płaskolistnej są źródłem przyprawy zwanej laskami wanilii.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_VANUATUAN</Tag>
+		<English>Vanuatuan</English>
+		<Italian>Vanuatuano</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_VEGETABLES</Tag>
 		<English>Vegetables</English>
 		<French>Légumes</French>
@@ -7573,18 +7740,18 @@
 		<Polish>Warzywa, rośliny warzywne - rośliny jednoroczne, dwuletnie lub wieloletnie, które w całości lub w części stanowią pokarm człowieka. Mogą być spożywane w stanie surowym lub po obróbce cieplnej. Częściami użytkowymi warzyw mogą być całe rośliny lub tylko: liście, owoce, bulwy, łodygi i korzenie.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_VENEZUELAN</Tag>
-		<English>Venezuelan</English>
-		<French>Venezuelien</French>
-		<Italian>Venezuelano</Italian>
-		<Polish>Wenezuelska</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_VENETIAN</Tag>
 		<English>Venetian</English>
 		<French>Vénicien</French>
 		<Italian>Veneziano</Italian>
 		<Polish>Wenecka</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_VENEZUELAN</Tag>
+		<English>Venezuelan</English>
+		<French>Venezuelien</French>
+		<Italian>Venezuelano</Italian>
+		<Polish>Wenezuelska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_VIBRANIUM</Tag>
@@ -7637,27 +7804,6 @@
 		<Italian>Un vino d'annata è prodotto con uva prodotta tutta nello stesso anno.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_WINE_CHAMPAGNE</Tag>
-		<English>Wine - Champagne</English>
-		<French>Vin - Champagne</French>
-		<Italian>Vino - Champagne</Italian>
-		<Polish>Wino - Szampan</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_WINE_VINTAGE_RED</Tag>
-		<English>Wine - Vintage Red</English>
-		<French>Vin - Millésime rouge</French>
-		<Italian>Vino - Rosso d'annata</Italian>
-		<Polish>Wino - Vintage Czerwone</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_WINE_VINTAGE_WHITE</Tag>
-		<English>Wine - Vintage White</English>
-		<French>Vin - Millésime blanc</French>
-		<Italian>Vino - Bianco d'annata</Italian>
-		<Polish>Wino - Vintage Białe</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_VULCANIZED_RUBBER</Tag>
 		<English>Vulcanized Rubber</English>
 		<French>Caoutchouc vulcanisé</French>
@@ -7671,8 +7817,7 @@
 		<English>Vulcanized rubber is a chemically processed rubber. The term "vulcanization" traditionally referred to the treatment of natural rubber with sulfur in order to harden it, then with time grew to include also hardening of other (synthetic) rubbers via various means. Vulcanization works by forming cross-links between sections of polymer chain which results in increased rigidity and durability, as well as other changes in the mechanical and electrical properties of the material.</English>
 		<Italian>La gomma vulcanizzata è una gomma trattata chimicamente. Il termine "vulcanizzazione" si riferiva tradizionalmente al trattamento della gomma naturale con lo zolfo per indurirla, poi con il tempo è stato esteso per includere anche il processo di indurimento di altre gomme (sintetiche) attraverso vari mezzi. La vulcanizzazione agisce formando collegamenti incrociati tra le sezioni della catena polimerica, che si traducono in una maggiore rigidità e durata, nonché in altri cambiamenti nelle proprietà meccaniche ed elettriche del materiale.</Italian>
 	</TEXT>
-<!-- W -->
-	<TEXT>
+<TEXT>
 		<Tag>TXT_KEY_BONUS_WALLACHIAN</Tag>
 		<English>Wallachian</English>
 		<French>Wallachienne</French>
@@ -7702,169 +7847,6 @@
 		<English>Metal wares are made from different types of metals and make different types of metal objects, such as tools, utensils, cookware, weapons, parts, pipes, etc.</English>
 		<Italian>Gli utensili in metallo utilizzano diversi materiali a seconda degli oggetti da costruire, come pentole da cucina, armi, tubi...</Italian>
 		<Polish>Dobro materialne ogólnie jest tym wszystkim, co dana jednostka ludzka może gromadzić wokół siebie tworząc własne środowisko materialne.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_ALUMINUM_WARES</Tag>
-		<English>Aluminum Wares</English>
-		<French>Objets en aluminum</French>
-		<Italian>Utensili di alluminio</Italian>
-		<Polish>Wyroby z aluminium</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_BRASS_WARES</Tag>
-		<English>Brass Wares</English>
-		<French>Objets en laiton</French>
-		<Italian>Utensili di ottone</Italian>
-		<Polish>Wyroby z mosiądzu</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_BRONZE_WARES</Tag>
-		<English>Bronze Wares</English>
-		<French>Objets en bronze</French>
-		<Italian>Utensili di bronzo</Italian>
-		<Polish>Wyroby z brązu</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_COPPER_WARES</Tag>
-		<English>Copper Wares</English>
-		<French>Objets en cuivre</French>
-		<Italian>Utensili di rame</Italian>
-		<Polish>Wyroby z miedzi</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_ELECTRUM_WARES</Tag>
-		<English>Electrum Wares</English>
-		<French>Objets en electrum</French>
-		<Italian>Utensili di elettro</Italian>
-		<Polish>Wyroby z elektrum</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_GOLD_WARES</Tag>
-		<English>Gold Wares</English>
-		<French>Objets en or</French>
-		<Italian>Utensili d'oro</Italian>
-		<Polish>Wyroby ze złota</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_IRON_WARES</Tag>
-		<English>Iron Wares</English>
-		<French>Objets en fer</French>
-		<Italian>Utensili di ferro</Italian>
-		<Polish>Wyroby z żelaza</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_LEAD_WARES</Tag>
-		<English>Lead Wares</English>
-		<French>Objets en plomb</French>
-		<Italian>Utensili di piombo</Italian>
-		<Polish>Wyroby z ołowiu</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_LIQUID_METAL_WARES</Tag>
-		<English>Liquid Metal Wares</English>
-		<French>Outils en métal liquide</French>
-		<Italian>Utensili di metallo liquido</Italian>
-		<Polish>Wyroby z ciekłego metalu</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_LIQUID_METAL_WARES_PEDIA</Tag>
-		<English>Liquid metal consists of gallium-containing alloys with very low melting points which are liquid at room temperature. The standard metal formerly was mercury, but gallium-based alloys are being used as a replacement in various applications. Mercury is toxic, and has a high vapor pressure at room temperature. Gallium alloys have reduced toxicity and a lower vapor pressure than mercury.</English>
-		<Polish>Dobro materialne ogólnie jest tym wszystkim, co dana jednostka ludzka może gromadzić wokół siebie tworząc własne środowisko materialne.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_MEGASTRONG_ALLOY_WARES</Tag>
-		<English>Megastrong Alloy Wares</English>
-		<French>Outils en alliages méga-résistants</French>
-		<Italian>Utensili in leghe megaresistenti</Italian>
-		<Polish>Wyroby z MegaStopu</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_MEGASTRONG_ALLOY_WARES_PEDIA</Tag>
-		<English>Megastrong Alloy is a material composed of two or more metals or a metal and a nonmetal. An alloy may be a solid solution of the elements (a single phase), a mixture of metallic phases (two or more solutions) or an intermetallic compound with no distinct boundary between the phases. Solid solution alloys give a single solid phase microstructure, while partial solutions exhibit two or more phases that may or may not be homogeneous in distribution, depending on the thermal (heat treatment) history of the material. An inter-metallic compound has one other alloy or pure metal embedded within another pure metal.</English>
-		<Polish>Dobro materialne ogólnie jest tym wszystkim, co dana jednostka ludzka może gromadzić wokół siebie tworząc własne środowisko materialne.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_METAMATERIAL_WARES</Tag>
-		<English>Metamaterial Wares</English>
-		<French>Outils en métamatériaux</French>
-		<Italian>Utensili in meta-materiali</Italian>
-		<Polish>Wyroby z MetaMateriału</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_METAMATERIAL_WARES_PEDIA</Tag>
-		<English>Metamaterials are materials engineered to have properties that have not yet been found in nature. They are made from assemblies of multiple elements fashioned from conventional materials such as metals or plastics. The materials are usually arranged in repeating patterns, often at microscopic or smaller scales that are smaller than the wavelengths of the phenomena they influence. Metamaterials derive their properties not from the properties of the base materials, but from their designed structure. Their precise shape, geometry, size, orientation and arrangement gives them their properties.</English>
-		<Polish>Dobro materialne ogólnie jest tym wszystkim, co dana jednostka ludzka może gromadzić wokół siebie tworząc własne środowisko materialne.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_PLATINUM_WARES</Tag>
-		<English>Platinum Wares</English>
-		<French>Objets en platine</French>
-		<Italian>Utensili di platino</Italian>
-		<Polish>Wyroby z platyny</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_PORCELAIN_WARES</Tag>
-		<English>Porcelain Wares</English>
-		<French>Objets en porcelaine</French>
-		<Italian>Utensili di porcellana</Italian>
-		<Polish>Wyroby z porcelany</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_PORCELAIN_WARES_PEDIA</Tag>
-		<English>Porcelain is a ceramic material made by heating materials, generally including clay in the form of kaolin, in a kiln to temperatures between 1,200 °C (2,192 °F) and 1,400 °C (2,552 °F). The toughness, strength, and translucence of porcelain arise mainly from the formation of glass and the mineral mullite within the fired body at these high temperatures.</English>
-		<Polish>Porcelana - rodzaj białej, przeświecającej ceramiki wysokiej jakości, wynaleziony w Chinach w VII w. Porcelana jest wytwarzana z mieszanki glinki kaolinowej ze skaleniem i kwarcem poprzez wypalanie uformowanych wyrobów w temperaturze od 920-980 C (wyroby nieszkliwione, tzw. biskwit) aż do 1280-1460 C (wyroby szkliwione). Charakteryzuje się niską nasiąkliwością, bardzo dobrymi właściwościami dielektrycznymi, dużą wytrzymałością mechaniczną, wysoką odpornością na działanie czynników chemicznych i nieprzepuszczalnością dla cieczy i gazów.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_SILVER_WARES</Tag>
-		<English>Silver Wares</English>
-		<French>Objets en argent</French>
-		<Italian>Utensili d'argento</Italian>
-		<Polish>Wyroby ze srebra</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_STEEL_WARES</Tag>
-		<English>Steel Wares</English>
-		<French>Objets en acier</French>
-		<Italian>Utensili d'acciaio</Italian>
-		<Polish>Wyroby ze stali</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_SUPERSTRONG_ALLOY_WARES</Tag>
-		<English>Superstrong Alloy Wares</English>
-		<French>Outils en alliages super-résistants</French>
-		<Italian>Utensili in leghe super-resistenti</Italian>
-		<Polish>Wyroby ze SuperStopu</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_SUPERSTRONG_ALLOY_WARES_PEDIA</Tag>
-		<English>A superalloy, or high-performance alloy, is an alloy that exhibits several key characteristics: excellent mechanical strength, resistance to thermal creep deformation, good surface stability and resistance to corrosion or oxidation. The crystal structure is typically face-centered cubic austenitic. Examples of such alloys are Hastelloy, Inconel, Waspaloy, Rene alloys, Haynes alloys, Incoloy, MP98T, TMS alloys, and CMSX single crystal alloys.</English>
-		<Polish>Dobro materialne ogólnie jest tym wszystkim, co dana jednostka ludzka może gromadzić wokół siebie tworząc własne środowisko materialne.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_TERRACOTTA_WARES</Tag>
-		<English>Terracotta Wares</English>
-		<French>Outils en terre cuite</French>
-		<Italian>Utensili di terracotta</Italian>
-		<Polish>Wyroby z terrakoty</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_TERRACOTTA_WARES_PEDIA</Tag>
-		<English>Terracotta, Terra cotta or Terra-cotta (Italian: "baked earth", from the Latin terra cotta), a type of earthenware, is a clay-based unglazed or glazed ceramic, where the fired body is porous. Its uses include vessels (notably flower pots), water and waste water pipes, bricks, and surface embellishment in building construction, along with sculpture such as the Terracotta Army and Greek terracotta figurines. The term is also used to refer to items made out of this material and to its natural, brownish orange color, which varies considerably. In archaeology and art history, "terracotta" is often used of objects not made on a potter's wheel, such as figurines, where objects made on the wheel from the same material, possibly even by the same person, are called pottery; the choice of term depending on the type of object rather than the material.</English>
-		<Polish>Terakota (wł. terra cotta - ziemia wypalona) - wyroby z dobrze oczyszczonej i wypalonej gliny w formie figurek lub płytek, stosowane do zdobień. Znane w starożytnej Grecji, Etrurii, Rzymie. Przedmioty były modelowane ręcznie lub odciskane w formach, a następnie wypalane. Wyrobów nie powlekano firnisem i początkowo nie malowano. Najciekawsze figurki pochodzą z IV w. p.n.e. z Tanagry - miasto w Grecji, z okresu hellenistycznego - z Myriny. Największe, naturalnej wielkości figury (w tym tzw. Apollo) pochodzą z Wejów (500 r. p.n.e.). Oprócz figurek wykonywano płytki do zdobień (antefiks, akroterion), dachówki i simy, płytki do licowania ścian (np. dach świątyni Hery na Olimpii - VII wiek p.n.e.), wnętrz teatrów, term, domów mieszkalnych.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_TIN_WARES</Tag>
-		<English>Tin Wares</English>
-		<French>Outils en étain</French>
-		<Italian>Utensili di stagno</Italian>
-		<Polish>Wyroby z cyny</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_TITANIUM_WARES</Tag>
-		<English>Titanium Wares</English>
-		<French>Objets en titane</French>
-		<Italian>Utensili in titanio</Italian>
-		<Polish>Wyroby z tytanu</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WARI</Tag>
@@ -7944,10 +7926,6 @@
 		<Polish>Wieloryby</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_WHALE_PEDIA</Tag>
-		<English>Whales are a widely distributed and diverse group of fully aquatic placental marine mammals. Whales are creatures of the open ocean; they feed, mate, give birth, suckle and raise their young at sea. So extreme is their adaptation to life underwater that they are unable to survive on land. Whales range in size from the 2.6 m (8.5 ft) and 135 kg (298 lb) dwarf sperm whale to the 29.9 m (98 ft) and 190 metric tons (210 short tons) blue whale, which is the largest known creature that has ever lived. The sperm whale is the largest toothed predator on earth. Once relentlessly hunted for their products, whales are now protected by international law. Whales occasionally feature in literature and film, as in the great white whale of Herman Melville's Moby Dick. Small whales, such as belugas, are sometimes kept in captivity and trained to perform tricks, but breeding success has been poor and the animals often die within a few months of capture. Whale watching has become a form of tourism around the world.</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_WHALE_OIL</Tag>
 		<English>Whale Oil</English>
 		<French>Huile de baleine</French>
@@ -7958,6 +7936,10 @@
 		<Tag>TXT_KEY_BONUS_WHALE_OIL_PEDIA</Tag>
 		<English>In much later times whale oil was favoured for its cleaner burning flame.</English>
 		<Italian>In tempi recenti l'olio di balena era molto usato per la sua fiamma più pulita.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_WHALE_PEDIA</Tag>
+		<English>Whales are a widely distributed and diverse group of fully aquatic placental marine mammals. Whales are creatures of the open ocean; they feed, mate, give birth, suckle and raise their young at sea. So extreme is their adaptation to life underwater that they are unable to survive on land. Whales range in size from the 2.6 m (8.5 ft) and 135 kg (298 lb) dwarf sperm whale to the 29.9 m (98 ft) and 190 metric tons (210 short tons) blue whale, which is the largest known creature that has ever lived. The sperm whale is the largest toothed predator on earth. Once relentlessly hunted for their products, whales are now protected by international law. Whales occasionally feature in literature and film, as in the great white whale of Herman Melville's Moby Dick. Small whales, such as belugas, are sometimes kept in captivity and trained to perform tricks, but breeding success has been poor and the animals often die within a few months of capture. Whale watching has become a form of tourism around the world.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WHEAT</Tag>
@@ -7977,16 +7959,33 @@
 		<Spanish>El trigo ha sido un cultivo básico para las civilizaciones que ocupaban zonas templadas del planeta desde la Prehistoria. Existen pruebas arqueológicas de que el trigo para hacer pan se cultivaba en el sur del Turkestán allá por el año 6000 a.C., aunque el trigo natural seguramente se usaba como alimento mucho antes. Se ha convertido en el principal cultivo en todas las regiones templadas. Está especialmente adaptado para su cultivo en grandes llanuras abiertas como las del centro de los Estados Unidos.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_WINE_CHAMPAGNE</Tag>
+		<English>Wine - Champagne</English>
+		<French>Vin - Champagne</French>
+		<Italian>Vino - Champagne</Italian>
+		<Polish>Wino - Szampan</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_WINE_VINTAGE_RED</Tag>
+		<English>Wine - Vintage Red</English>
+		<French>Vin - Millésime rouge</French>
+		<Italian>Vino - Rosso d'annata</Italian>
+		<Polish>Wino - Vintage Czerwone</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_WINE_VINTAGE_WHITE</Tag>
+		<English>Wine - Vintage White</English>
+		<French>Vin - Millésime blanc</French>
+		<Italian>Vino - Bianco d'annata</Italian>
+		<Polish>Wino - Vintage Białe</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_WOOD</Tag>
 		<English>Wood</English>
 		<French>Bois</French>
 		<German>Holz</German>
 		<Italian>Legno</Italian>
 		<Polish>Drewno</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_WOOD_PEDIA</Tag>
-		<English>Wood is a hard, fibrous tissue found in many plants. It has been used for centuries for both fuel and as a construction material for several types of living areas such as houses.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WOODWIND_INSTRUMENTS</Tag>
@@ -8002,6 +8001,10 @@
 		<Polish>Instrument dęty drewniany - instrument dęty, w którym wibratorem jest drewniany stroik, bądź krawędź, o którą rozpraszany jest strumień powietrza. Sam instrument może być wykonany z dowolnego materiału, np. drewna, metalu, lub tworzywa sztucznego. Zródłem dźwięku w instrumentach dętych drewnianych są wibracje powietrza, których częstotliwość (wysokość dźwięku) jest regulowana przez zakrywanie otworów w korpusie instrumentu. Ponieważ przykrywanie wielu otworów naraz byłoby trudne lub nawet niewykonalne, w wielu instrumentach dętych drewnianych stosuje się mechanizm klapkowy.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_WOOD_PEDIA</Tag>
+		<English>Wood is a hard, fibrous tissue found in many plants. It has been used for centuries for both fuel and as a construction material for several types of living areas such as houses.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_WOOL</Tag>
 		<English>Wool</English>
 		<French>Laine</French>
@@ -8015,8 +8018,7 @@
 		<English>Wool is the textile fiber obtained from sheep and certain other animals, including cashmere from goats, mohair from goats, qiviut from muskoxen, angora from rabbits, and other types of wool from camelids. Wool has several qualities that distinguish it from hair or fur: it is crimped, it is elastic, and it grows in staples (clusters).</English>
 		<Polish>Wełna - włókno naturalne uzyskiwane z okrywy włosowej (sierści) owiec, lam, wielbłądów, kóz, królików i innych. Włókno wełniane posiada charakterystyczne cechy (karbikowatość, łuskowatość, zawiera lanolinę), dzięki którym nadaje się doskonale do wytwarzania wysokiej jakości, wyrobów włókienniczych.</Polish>
 	</TEXT>
-<!-- X -->
-	<TEXT>
+<TEXT>
 		<Tag>TXT_KEY_BONUS_XIA</Tag>
 		<English>Xia</English>
 		<Italian>Xia</Italian>
@@ -8031,8 +8033,7 @@
 		<English>Xiongnu</English>
 		<Italian>Xiongnu</Italian>
 	</TEXT>
-<!-- Y -->
-	<TEXT>
+<TEXT>
 		<Tag>TXT_KEY_BONUS_YAGHAN</Tag>
 		<English>Yaghan</English>
 		<Italian>Yaghan</Italian>
@@ -8075,8 +8076,7 @@
 		<English>Yolngu</English>
 		<Italian>Yolngu</Italian>
 	</TEXT>
-<!-- Z -->
-	<TEXT>
+<TEXT>
 		<Tag>TXT_KEY_BONUS_ZANZIBARI</Tag>
 		<English>Zanzibari</English>
 		<Italian>Zanzibarese</Italian>

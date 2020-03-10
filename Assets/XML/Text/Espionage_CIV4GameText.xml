@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
@@ -215,19 +215,19 @@
 		<Spanish>¡Todas nuestras investigaciones en %s1 han sido destruidas por un espía %s2!</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_ESPIONAGE_SPYVSPY_TAB</Tag>
+		<English>Spy vs Spy</English>
+		<French>Contre-espionnage</French>
+		<German>Gegenspionage</German>
+		<Spanish>Contraespionaje</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_SPY_SUCCESS</Tag>
 		<English>Upon completing the mission the %s1_unit has returned safely to %s2_city.</English>
 		<French>Après avoir complété la mission, [NUM1:votre:votre:vos:vos] %s1_unit [NUM1:est revenu sain et sauf:est revenue saine et sauve:sont revenus sains et saufs:sont revenues saines et sauves] à %s2_city.</French>
 		<German>Nach Beendigung der Mission [NUM1:ist:sind] [NUM1:der:die:das:die:die:die] %s1:1_unit sicher nach %s2_city zurückgekehrt.</German>
 		<Italian>Dopo aver completato la missione, l'unità %s1_unit è tornata sana e salva a %s2_city.</Italian>
 		<Spanish>Tras completar la misión, [NUM1:el:la:los:las] %s1_unit [NUM1:ha:ha:han:han] vuelto a salvo a %s2_city.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ESPIONAGE_SPYVSPY_TAB</Tag>
-		<English>Spy vs Spy</English>
-		<French>Contre-espionnage</French>
-		<German>Gegenspionage</German>
-		<Spanish>Contraespionaje</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_TARGET_PLAYER_ANARCHY_CAUGHT</Tag>

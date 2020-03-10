@@ -1,113 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by XMLSPY 2004 Professional Ed. Release 2, Installed Multi + SMP for 3 users (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
 <!-- -->
 <!-- GameText Civilopedia Techs -->
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
-	<TEXT>
-		<Tag>TXT_KEY_TECH_VOODOO</Tag>
-		<English>Voodoo</English>
-		<French>Vaudou</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_VOODOO_ADJECTIVE</Tag>
-		<English>Voodoo</English>
-		<French>
-			<Text>Vaudou</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Voodoo</Text>
-			<Gender>Neuter:Neuter:Neuter</Gender>
-			<Plural>0:0:0</Plural>
-		</German>
-		<Italian>
-			<Text>Voodoo:Voodoo:Voodoo:Voodoo</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Voodoo</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_VOODOO_PEDIA</Tag>
-		<English>RELIGION HELP: Voodoo doesn't work as usual religions does, it has a  particularity. The only way to spread it is using shamans, as Voodoo doesn't spread by itself Vodun is a traditional Polytheistic organised religion of coastal West Africa, from Nigeria to Ghana. It is distinct from the unorganised traditional animistic religions in the interiors of these same countries, as well as from various religions with often similar names of the African Diaspora in the New World, such as Haitian Vodou, the similar Vudu of the Dominican Republic, Candomblé Jejé in Brazil (which uses the term Vodum), Louisiana Voodoo, and Santería in Cuba, which are syncretized with Christianity and the traditional religions of the Kongo people of Congo and Angola.The word vodún is the Gbe (Fon-Ewe) word for spirit. When the word is capitalized, Vodun, it denotes the religion. When it is not, vodun, it denotes the spirits that are central to the religion. "Voodoo" is the most common pronunciation amongst English speakers. Vodun is practised by the Ewe, Kabye, Mina, Fon, and (under a different name) the Yoruba peoples of southeastern Ghana, southern and central Togo, southern and central Benin, and southwestern Nigeria</English>
-		<Italian>ATTENZIONE: Il voodoo non funziona come le altre religioni, ha una particolarità. L'unico modo per diffonderla è usando gli sciamani, dato che il Voodoo non si diffonde da solo.Vodun è una religione tradizionale e organizzata Politeista della costa occidentale dell'Africa, dalla Nigeria al Ghana. Si distingue dalle altre religioni tradizionali animiste presenti in questi stessi paesi, così come da altre religioni con nomi simili derivate dalla diaspora africana nel Nuovo Mondo, come il vudù haitiano, l'analogo Vudu della Repubblica Dominicana, Candomblé jeje in Brasile (che utilizza il termine Vodum), Voodoo in Louisiana e Santeria a Cuba, che sono sincretizzate con il cristianesimo e le religioni tradizionali del popolo congolese in Congo e Angola.La parola Vodun è la parola Gbe (Fon-Ewe) che indica lo spirito. Quando la parola è maiuscola, Vodun, denota la religione. Quando non lo è, Vodun, denota gli spiriti che sono al centro della religione. "Voodoo" è la pronuncia più comune tra gli anglofoni. Vodun è praticato dai Ewe, Kabyé, Mina, Fon e (con un nome diverso) dal popolo Yoruba del sud-est del Ghana, del Togo meridionale e centrale, del Benin meridionale e centrale, del sud-ovest della Nigeria.</Italian>
-		<Polish>Voodoo a. wudu (inne formy Vodun (Benin); również Vodoun (kreolski), Sevi Lwa) jest synkretyczną religią afroamerykańską wyznawaną głównie w Haiti i na południu USA. Podstawę voodoo stanowią rdzenne wierzenia ludów zachodnioafrykańskich (szczególnie Joruba, Kongo, Fulanie) wraz z elementami religii katolickiej i spirytyzmu. Wykrystalizowała się ona na Haiti wraz ze sprowadzeniem w XVII/XVIII w. niewolników z Afryki, którym próbowano narzucać katolicyzm. Niewolnicy nie odrzucili swoich rdzennych wierzeń łącząc je z nową religią. W voodoo istnieje wprawdzie wiara w Bon Dieu (jednego Boga), nie oddaje mu się jednak czci (koncepcja deus otiosus). Istotny jest za to kult wielu miejscowych i afrykańskich loa (duchów/bogów), uważanych za tożsame z katolickimi świętymi. Te, które pochodzą z Afryki, nazywane są Rada Loa (z Dahomeju) lub Wangol Loa (z Angoli); te zaś, które objawiły się na Haiti, nazywane są Petro Loa. Słowo "voodoo" wywodzi się z języka plemienia Fulanów i oznacza duch. Wyznawcy voodoo uprawiają także kult przodków oraz czynnie włączają do swego panteonu ludzi zasłużonych dla narodu lub lokalnej społeczności.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_VOODOO_QUOTE</Tag>
-		<English>"Asaka, build me a garden[NEWLINE]Please Agwe, don't flood my garden.[NEWLINE]Erzulie, who will my love be.[NEWLINE]Papa Ge, don't come around me."[NEWLINE] - from the musical, "Once on This Island", lyrics by Lynn Ahrens</English>
-		<Spanish>"Asaka, constrúyeme un jardín[NEWLINE]Por favor Agwe, no inundes mi jardín.[NEWLINE]Erzulie, quién será mi amor.[NEWLINE]Papa Ge, no vengas a mi alrededor."[NEWLINE] - del musical "Once on This Island", letra por Lynn Ahrens</Spanish>
-		<Polish>"Asaka, zbuduj mi ogród, Agwe proszę, nie sprowadzaj powodzi na mój ogród, Erzulie, kto będzie moją miłością, Papa Ge, nie zbliżaj się do mnie." - Lynn Ahrens, z musicalu "Once on This Island"</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_VOODOO_STRATEGY</Tag>
-		<English>Research Voodoo to found a Religion</English>
-		<French>Recherchez Voodoo pour fonder une religion</French>
-		<Spanish>Investiga el Vudú para fundar una religión.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_HELLSMOUTH_DOG</Tag>
-		<English>Hell's Mouth Dog</English>
-		<French>Chien Gueule de l'enfer</French>
-		<Italian>
-			<Text>Cane dell'Inferno</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Pies z Bram Piekieł</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_HELLSMOUTH_DOG_PEDIA</Tag>
-		<English>Mad dogs coming directly from the hell's mouth.  At least, according to skeptics, that is what their owners would have you believe.</English>
-		<Italian>Un cane impazzito che proviene direttamente dalla bocca dell'inferno; o secondo gli scettici, questo è ciò che i loro possessori vogliono far credere.</Italian>
-		<Polish>Wściekłe psy hodowane przez świątynie Voodoo.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_HELLSMOUTH_DOG_STRATEGY</Tag>
-		<English>This dog is much more effective in combat than other canine units.</English>
-		<Italian>Questo cane è molto più efficace in combattimento rispetto alle altre unità canine.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_UNDEAD_WORKER</Tag>
-		<English>Entranced Worker</English>
-		<French>Ouvrier en trance</French>
-		<Italian>
-			<Text>Lavoratore in trance</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Robotnik-Zombie</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_UNDEAD_WORKER_STRATEGY</Tag>
-		<English>Use [COLOR_UNIT_TEXT]Workers[COLOR_REVERT] to improve the land around your cities and build roads that help establish trade routes. This particular worker is cheap version of normal worker and can be build only by civilizations with Voodoo state religion.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_VOODOO_MISSIONARY</Tag>
-		<English>Houngan</English>
-		<Italian>
-			<Text>Houngan</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_VOODOO_MISSIONARY_PEDIA</Tag>
-		<English>Houngan is the term for a male priest in Haitian Vodou (a female priest is known as a mambo). The term is derived from the Fon word "hùn gan". There are two ranks of houngan: houngan asogwe (high priest) and houngan sur pwen (junior priest). A houngan asogwe is the highest member of clergy in voodoo and the only one with authority to ordain other priests. It is the houngan's role to preserve the rituals and songs and maintain the relationship between the spirits and the community as a whole (though some of this is the responsibility of the whole community as well). They are entrusted with leading the service of all of the spirits of their lineage. Sometimes they may also be bokor (sorcerers).</English>
-		<Polish>Houngan to wielki kapłan w religii voodoo na Haiti (jego żeńskim odpowiednikiem jest mambo). Hounganie są kapłanami najwyższej rangi, prowadzą rytuały wywoływania duchów (loa) lub duchów własnych zmarłych przodków. Ich obowiązkiem jest podtrzymywanie stałej więzi między zmarłymi i żyjącymi wyznawcami voodoo. Czuwają nad zachowaniem tradycji i czystości kultu.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_VOODOO_MISSIONARY_STRATEGY</Tag>
-		<English>Use this missionary to actively spread [COLOR_HIGHLIGHT_TEXT]Voodoo[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]). This increases your income if you have the [COLOR_BUILDING_TEXT]Tomb of Ansyen Bon[COLOR_REVERT].</English>
-		<Italian>Usa questo missionario per diffondere velocemente il [COLOR_HIGHLIGHT_TEXT]Voodoo[COLOR_REVERT] nelle tue città, o nelle città straniere nelle quali hai [COLOR_HIGHLIGHT_TEXT]Diritto di passaggio[COLOR_REVERT]).</Italian>
-	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HELLSMOUTH_SANCTUARY</Tag>
 		<English>Hellsmouth Sanctuary</English>
@@ -219,4 +116,107 @@
 		<Italian>I [COLOR_BUILDING_TEXT]templi[COLOR_REVERT] aumentano la felicità e la cultura della città. Sono particolarmente indicati per espandere i confini della tua civiltà durante le fasi iniziali della partita.</Italian>
 		<Spanish>Los [COLOR_BUILDING_TEXT]Templos[COLOR_REVERT] aumentan la felicidad y cultura de la ciudad. Son especialmente útiles para expandir las fronteras de la civilización al principio de la partida.</Spanish>
 	</TEXT>
-</Civ4GameText>
+<TEXT>
+		<Tag>TXT_KEY_TECH_VOODOO</Tag>
+		<English>Voodoo</English>
+		<French>Vaudou</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_VOODOO_ADJECTIVE</Tag>
+		<English>Voodoo</English>
+		<French>
+			<Text>Vaudou</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>
+			<Text>Voodoo</Text>
+			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Plural>0:0:0</Plural>
+		</German>
+		<Italian>
+			<Text>Voodoo:Voodoo:Voodoo:Voodoo</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Voodoo</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_VOODOO_PEDIA</Tag>
+		<English>RELIGION HELP: Voodoo doesn't work as usual religions does, it has a  particularity. The only way to spread it is using shamans, as Voodoo doesn't spread by itself Vodun is a traditional Polytheistic organised religion of coastal West Africa, from Nigeria to Ghana. It is distinct from the unorganised traditional animistic religions in the interiors of these same countries, as well as from various religions with often similar names of the African Diaspora in the New World, such as Haitian Vodou, the similar Vudu of the Dominican Republic, Candomblé Jejé in Brazil (which uses the term Vodum), Louisiana Voodoo, and Santería in Cuba, which are syncretized with Christianity and the traditional religions of the Kongo people of Congo and Angola.The word vodún is the Gbe (Fon-Ewe) word for spirit. When the word is capitalized, Vodun, it denotes the religion. When it is not, vodun, it denotes the spirits that are central to the religion. "Voodoo" is the most common pronunciation amongst English speakers. Vodun is practised by the Ewe, Kabye, Mina, Fon, and (under a different name) the Yoruba peoples of southeastern Ghana, southern and central Togo, southern and central Benin, and southwestern Nigeria</English>
+		<Italian>ATTENZIONE: Il voodoo non funziona come le altre religioni, ha una particolarità. L'unico modo per diffonderla è usando gli sciamani, dato che il Voodoo non si diffonde da solo.Vodun è una religione tradizionale e organizzata Politeista della costa occidentale dell'Africa, dalla Nigeria al Ghana. Si distingue dalle altre religioni tradizionali animiste presenti in questi stessi paesi, così come da altre religioni con nomi simili derivate dalla diaspora africana nel Nuovo Mondo, come il vudù haitiano, l'analogo Vudu della Repubblica Dominicana, Candomblé jeje in Brasile (che utilizza il termine Vodum), Voodoo in Louisiana e Santeria a Cuba, che sono sincretizzate con il cristianesimo e le religioni tradizionali del popolo congolese in Congo e Angola.La parola Vodun è la parola Gbe (Fon-Ewe) che indica lo spirito. Quando la parola è maiuscola, Vodun, denota la religione. Quando non lo è, Vodun, denota gli spiriti che sono al centro della religione. "Voodoo" è la pronuncia più comune tra gli anglofoni. Vodun è praticato dai Ewe, Kabyé, Mina, Fon e (con un nome diverso) dal popolo Yoruba del sud-est del Ghana, del Togo meridionale e centrale, del Benin meridionale e centrale, del sud-ovest della Nigeria.</Italian>
+		<Polish>Voodoo a. wudu (inne formy Vodun (Benin); również Vodoun (kreolski), Sevi Lwa) jest synkretyczną religią afroamerykańską wyznawaną głównie w Haiti i na południu USA. Podstawę voodoo stanowią rdzenne wierzenia ludów zachodnioafrykańskich (szczególnie Joruba, Kongo, Fulanie) wraz z elementami religii katolickiej i spirytyzmu. Wykrystalizowała się ona na Haiti wraz ze sprowadzeniem w XVII/XVIII w. niewolników z Afryki, którym próbowano narzucać katolicyzm. Niewolnicy nie odrzucili swoich rdzennych wierzeń łącząc je z nową religią. W voodoo istnieje wprawdzie wiara w Bon Dieu (jednego Boga), nie oddaje mu się jednak czci (koncepcja deus otiosus). Istotny jest za to kult wielu miejscowych i afrykańskich loa (duchów/bogów), uważanych za tożsame z katolickimi świętymi. Te, które pochodzą z Afryki, nazywane są Rada Loa (z Dahomeju) lub Wangol Loa (z Angoli); te zaś, które objawiły się na Haiti, nazywane są Petro Loa. Słowo "voodoo" wywodzi się z języka plemienia Fulanów i oznacza duch. Wyznawcy voodoo uprawiają także kult przodków oraz czynnie włączają do swego panteonu ludzi zasłużonych dla narodu lub lokalnej społeczności.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_VOODOO_QUOTE</Tag>
+		<English>"Asaka, build me a garden[NEWLINE]Please Agwe, don't flood my garden.[NEWLINE]Erzulie, who will my love be.[NEWLINE]Papa Ge, don't come around me."[NEWLINE] - from the musical, "Once on This Island", lyrics by Lynn Ahrens</English>
+		<Spanish>"Asaka, constrúyeme un jardín[NEWLINE]Por favor Agwe, no inundes mi jardín.[NEWLINE]Erzulie, quién será mi amor.[NEWLINE]Papa Ge, no vengas a mi alrededor."[NEWLINE] - del musical "Once on This Island", letra por Lynn Ahrens</Spanish>
+		<Polish>"Asaka, zbuduj mi ogród, Agwe proszę, nie sprowadzaj powodzi na mój ogród, Erzulie, kto będzie moją miłością, Papa Ge, nie zbliżaj się do mnie." - Lynn Ahrens, z musicalu "Once on This Island"</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_VOODOO_STRATEGY</Tag>
+		<English>Research Voodoo to found a Religion</English>
+		<French>Recherchez Voodoo pour fonder une religion</French>
+		<Spanish>Investiga el Vudú para fundar una religión.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HELLSMOUTH_DOG</Tag>
+		<English>Hell's Mouth Dog</English>
+		<French>Chien Gueule de l'enfer</French>
+		<Italian>
+			<Text>Cane dell'Inferno</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Pies z Bram Piekieł</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HELLSMOUTH_DOG_PEDIA</Tag>
+		<English>Mad dogs coming directly from the hell's mouth.  At least, according to skeptics, that is what their owners would have you believe.</English>
+		<Italian>Un cane impazzito che proviene direttamente dalla bocca dell'inferno; o secondo gli scettici, questo è ciò che i loro possessori vogliono far credere.</Italian>
+		<Polish>Wściekłe psy hodowane przez świątynie Voodoo.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HELLSMOUTH_DOG_STRATEGY</Tag>
+		<English>This dog is much more effective in combat than other canine units.</English>
+		<Italian>Questo cane è molto più efficace in combattimento rispetto alle altre unità canine.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_UNDEAD_WORKER</Tag>
+		<English>Entranced Worker</English>
+		<French>Ouvrier en trance</French>
+		<Italian>
+			<Text>Lavoratore in trance</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Robotnik-Zombie</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_UNDEAD_WORKER_STRATEGY</Tag>
+		<English>Use [COLOR_UNIT_TEXT]Workers[COLOR_REVERT] to improve the land around your cities and build roads that help establish trade routes. This particular worker is cheap version of normal worker and can be build only by civilizations with Voodoo state religion.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_VOODOO_MISSIONARY</Tag>
+		<English>Houngan</English>
+		<Italian>
+			<Text>Houngan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_VOODOO_MISSIONARY_PEDIA</Tag>
+		<English>Houngan is the term for a male priest in Haitian Vodou (a female priest is known as a mambo). The term is derived from the Fon word "hùn gan". There are two ranks of houngan: houngan asogwe (high priest) and houngan sur pwen (junior priest). A houngan asogwe is the highest member of clergy in voodoo and the only one with authority to ordain other priests. It is the houngan's role to preserve the rituals and songs and maintain the relationship between the spirits and the community as a whole (though some of this is the responsibility of the whole community as well). They are entrusted with leading the service of all of the spirits of their lineage. Sometimes they may also be bokor (sorcerers).</English>
+		<Polish>Houngan to wielki kapłan w religii voodoo na Haiti (jego żeńskim odpowiednikiem jest mambo). Hounganie są kapłanami najwyższej rangi, prowadzą rytuały wywoływania duchów (loa) lub duchów własnych zmarłych przodków. Ich obowiązkiem jest podtrzymywanie stałej więzi między zmarłymi i żyjącymi wyznawcami voodoo. Czuwają nad zachowaniem tradycji i czystości kultu.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_VOODOO_MISSIONARY_STRATEGY</Tag>
+		<English>Use this missionary to actively spread [COLOR_HIGHLIGHT_TEXT]Voodoo[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]). This increases your income if you have the [COLOR_BUILDING_TEXT]Tomb of Ansyen Bon[COLOR_REVERT].</English>
+		<Italian>Usa questo missionario per diffondere velocemente il [COLOR_HIGHLIGHT_TEXT]Voodoo[COLOR_REVERT] nelle tue città, o nelle città straniere nelle quali hai [COLOR_HIGHLIGHT_TEXT]Diritto di passaggio[COLOR_REVERT]).</Italian>
+	</TEXT>
+	</Civ4GameText>

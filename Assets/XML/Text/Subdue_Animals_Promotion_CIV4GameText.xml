@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
 <!-- Modified by Strategyonly -->
@@ -6,23 +6,6 @@
 <!-- Game Text - New -->
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<!-- PROMOTION KEY SECTION -->
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SUBDUE_ANIMAL</Tag>
-		<English>Subdue Animal</English>
-		<French>
-			<Text>Dompteur</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Tierbändigung</Text>
-			<Gender>Neuter</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Domatore</Italian>
-		<Spanish>Domar animales</Spanish>
-		<Polish>Poskrom Zwierzę</Polish>
-	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HUNTING_SIGHT</Tag>
 		<English>Hunting Sight</English>
@@ -39,4 +22,21 @@
 		<Italian>Occhio del cacciatore II</Italian>
 		<Polish>Wzrok Łowcy II</Polish>
 	</TEXT>
-</Civ4GameText>
+<TEXT>
+		<Tag>TXT_KEY_PROMOTION_SUBDUE_ANIMAL</Tag>
+		<English>Subdue Animal</English>
+		<French>
+			<Text>Dompteur</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tierbändigung</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Domatore</Italian>
+		<Spanish>Domar animales</Spanish>
+		<Polish>Poskrom Zwierzę</Polish>
+	</TEXT>
+	</Civ4GameText>

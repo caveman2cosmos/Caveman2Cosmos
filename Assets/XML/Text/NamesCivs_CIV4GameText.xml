@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
@@ -375,6 +375,31 @@
 		<Polish>Aztekowie</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_BABYLONIA_ADJECTIVE</Tag>
+		<English>
+			<Text>Babylonian:Babylonians</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</English>
+		<French>
+			<Text>babylonien:babylonienne:babyloniens:babyloniennes</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>babylonisch</German>
+		<Italian>
+			<Text>babilonese:babilonese:babilonesi:babilonesi</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>babilonio:babilonia:babilonios:babilonias</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Spanish>
+		<Polish>Babilończyków</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_BABYLON_ADJECTIVE</Tag>
 		<English>
 			<Text>Babylonian:Babylonians</Text>
@@ -442,31 +467,6 @@
 		<Polish>Babilonia</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_BABYLONIA_ADJECTIVE</Tag>
-		<English>
-			<Text>Babylonian:Babylonians</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</English>
-		<French>
-			<Text>babylonien:babylonienne:babyloniens:babyloniennes</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</French>
-		<German>babylonisch</German>
-		<Italian>
-			<Text>babilonese:babilonese:babilonesi:babilonesi</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>babilonio:babilonia:babilonios:babilonias</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Spanish>
-		<Polish>Babilończyków</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIV_BARBARIAN_ADJECTIVE</Tag>
 		<English>Barbarian</English>
 		<French>
@@ -509,6 +509,14 @@
 		<Polish>Terytorium barbarzyńskie</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_BARBARIAN_PEDIA</Tag>
+		<English>The term "barbarian" was created by the Greeks; it was originally used to denote any foreigner. Since then it has gained a more negative connotation, and it is commonly applied to civilizations deemed "inferior" to one's own. The Chinese, for instance, thought of all foreign cultures - everybody from the Manchus to the Turks to the Europeans - as barbarians. Rome applied it to the Huns and the Germanic tribes, as well as to the more advanced Gauls.[PARAGRAPH:2]In Civilization IV, the term denotes people that are not part of any organized civilization appearing in the game, but are instead old-style hunter-gatherers who prey on the "weak" civilized world. Though some barbarians may have acquired fairly advanced weaponry - swords and axes, for example - and though they may occasionally capture or even build their own cities, they remain at heart brigandic nomads, destroying everything that comes in their path. Barbarians cannot be bargained with or appeased: they must be destroyed - before they destroy you!</English>
+		<French>Le terme "Barbare" est à l'origine un critère linguistique utilisé par les Grecs pour désigner toute personne étrangère à la civilisation grecque. Depuis, ce terme a pris une connotation péjorative et s'applique aux civilisations jugées "inférieures". Les Chinois, par exemple, considéraient toutes les cultures étrangères, des Mandchous aux Turcs en passant par les Européens, comme des barbares. Rome utilisait ce terme pour désigner les Huns, les Gaulois et les tribus germaniques.[PARAGRAPH:2]Dans Civilization IV, le terme "Barbares" désigne des gens qui ne font partie d'aucune civilisation organisée du jeu. Il s'agit de chasseurs-cueilleurs qui n'ont pas peur de s'attaquer au monde civilisé. Bien que certains barbares aient pu acquérir un armement assez avancé, avec notamment des épées et des haches, et bien qu'ils puissent à l'occasion capturer ou même fonder leurs propres villes, ils restent avant tout des "bandits-nomades", détruisant tout sur leur passage. Il est impossible de négocier avec des barbares ni même de les apaiser: il faut les éliminer avant qu'ils ne vous éliminent!</French>
+		<German>Die Bezeichnung "barbarisch" stammt aus dem alten Griechischen und bedeutete "roh, unkultiviert, fremdsprachlich und ungebildet". Der Ausdruck wurde ursprünglich für Ausländer verwendet und hat seitdem an negativer Bedeutung gewonnen. Er wird auf Zivilisationen angewendet, die der eigenen Kultur als "unterlegen" betrachtet werden. Die Chinesen erachteten beispielsweise alle ausländischen Kulturen als barbarisch - von den tungisischen Bewohnern der Mandschurei über die Turkvölker bis hin zu den Europäern. Das Römische Reich wandte den Ausdruck sowohl auf die Hunnen und die germanischen Stämme als auch auf die fortschrittlicheren Gallier an.[PARAGRAPH:2]In Civilization IV erscheinen diejenigen als Barbaren, die nicht einer der organisierten Zivilisationen des Spiels angehören, sondern als Jäger und Sammler einer älteren Lebensweise folgen und die "schwache" zivilisierte Welt als Beute betrachten. Obwohl einige Barbaren recht fortschrittliche Waffen erwerben können, wie Schwerter und Äxte, und obwohl sie gelegentlich in eroberten Städten leben oder gar eigene erbauen, bleiben sie im Herzen unstete Nomaden, die alles plündern, was ihnen in den Weg kommt. In Civilization IV lassen Barbaren nicht mit sich verhandeln - sie bilden eine ständige Gefahr, die für die eigene Sicherheit neutralisiert werden muss.</German>
+		<Italian>Il termine "barbaro" venne coniato dai Greci e inizialmente veniva utilizzato per indicare qualsiasi straniero. Da allora, la parola ha assunto una connotazione negativa e viene associato a quelle civiltà definite "inferiori". I Cinesi, per esempio, identificavano tutte le culture straniere come "barbare" dai Manciù ai Turchi agli Europei. Roma bollò con questo termine gli Unni e le popolazioni germaniche, così come i Galli che erano culturalmente evoluti.[PARAGRAPH:2]In Civilization IV, questo termine indica le popolazioni che non fanno parte di una civiltà organizzata, vecchi cacciatori che predano i "deboli" nel mondo. Malgrado alcuni barbari abbiano conquistato armamenti più evoluti come spade e asce, e talvolta possano conquistare o fondare delle città, i Barbari rimangono prevalentemente nomadi che distruggono e saccheggiano tutto ciò che capita a tiro. Non si può trattare con i Barbari: devono essere distrutti prima che loro distruggano te!</Italian>
+		<Spanish>El término "bárbaro" fue acuñado por los griegos, y originalmente se utilizaba para referirse a cualquier extranjero. Pero desde entonces ha adquirido unas connotaciones negativas, pues suele emplearse al hablar de las civilizaciones a las que se considera "inferiores" a la propia. Los chinos, por ejemplo, pensaban que todas las culturas extranjeras (desde los manchúes a los turcos, pasando por los europeos) eran bárbaras. En Roma se empleaba el término para referirse a los hunos y las tribus germanas, así como a los galos, que eran más avanzados.[PARAGRAPH:2]En Civilization IV, este término engloba a todos los pueblos que no forman parte de ninguna civilización organizada del juego, y en lugar de eso se componen de cazadores-recolectores que atacan al "débil" mundo civilizado. Aunque algunos bárbaros pueden llegar a adquirir armas bastante avanzadas (espadas y hachas, por ejemplo), y aunque de vez en cuando pueden capturar ciudades o construir las suyas propias, en el fondo siguen siendo unos nómadas bandidos que lo destruyen todo a su paso. No se puede negociar con ellos, ni es posible aplacarlos: ¡hay que destruirlos antes de que ellos te destruyan a ti!</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_BARBARIAN_SHORT_DESC</Tag>
 		<English>Barbarians</English>
 		<French>
@@ -528,57 +536,6 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Barbarzyńcy</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_BARBARIAN_PEDIA</Tag>
-		<English>The term "barbarian" was created by the Greeks; it was originally used to denote any foreigner. Since then it has gained a more negative connotation, and it is commonly applied to civilizations deemed "inferior" to one's own. The Chinese, for instance, thought of all foreign cultures - everybody from the Manchus to the Turks to the Europeans - as barbarians. Rome applied it to the Huns and the Germanic tribes, as well as to the more advanced Gauls.[PARAGRAPH:2]In Civilization IV, the term denotes people that are not part of any organized civilization appearing in the game, but are instead old-style hunter-gatherers who prey on the "weak" civilized world. Though some barbarians may have acquired fairly advanced weaponry - swords and axes, for example - and though they may occasionally capture or even build their own cities, they remain at heart brigandic nomads, destroying everything that comes in their path. Barbarians cannot be bargained with or appeased: they must be destroyed - before they destroy you!</English>
-		<French>Le terme "Barbare" est à l'origine un critère linguistique utilisé par les Grecs pour désigner toute personne étrangère à la civilisation grecque. Depuis, ce terme a pris une connotation péjorative et s'applique aux civilisations jugées "inférieures". Les Chinois, par exemple, considéraient toutes les cultures étrangères, des Mandchous aux Turcs en passant par les Européens, comme des barbares. Rome utilisait ce terme pour désigner les Huns, les Gaulois et les tribus germaniques.[PARAGRAPH:2]Dans Civilization IV, le terme "Barbares" désigne des gens qui ne font partie d'aucune civilisation organisée du jeu. Il s'agit de chasseurs-cueilleurs qui n'ont pas peur de s'attaquer au monde civilisé. Bien que certains barbares aient pu acquérir un armement assez avancé, avec notamment des épées et des haches, et bien qu'ils puissent à l'occasion capturer ou même fonder leurs propres villes, ils restent avant tout des "bandits-nomades", détruisant tout sur leur passage. Il est impossible de négocier avec des barbares ni même de les apaiser: il faut les éliminer avant qu'ils ne vous éliminent!</French>
-		<German>Die Bezeichnung "barbarisch" stammt aus dem alten Griechischen und bedeutete "roh, unkultiviert, fremdsprachlich und ungebildet". Der Ausdruck wurde ursprünglich für Ausländer verwendet und hat seitdem an negativer Bedeutung gewonnen. Er wird auf Zivilisationen angewendet, die der eigenen Kultur als "unterlegen" betrachtet werden. Die Chinesen erachteten beispielsweise alle ausländischen Kulturen als barbarisch - von den tungisischen Bewohnern der Mandschurei über die Turkvölker bis hin zu den Europäern. Das Römische Reich wandte den Ausdruck sowohl auf die Hunnen und die germanischen Stämme als auch auf die fortschrittlicheren Gallier an.[PARAGRAPH:2]In Civilization IV erscheinen diejenigen als Barbaren, die nicht einer der organisierten Zivilisationen des Spiels angehören, sondern als Jäger und Sammler einer älteren Lebensweise folgen und die "schwache" zivilisierte Welt als Beute betrachten. Obwohl einige Barbaren recht fortschrittliche Waffen erwerben können, wie Schwerter und Äxte, und obwohl sie gelegentlich in eroberten Städten leben oder gar eigene erbauen, bleiben sie im Herzen unstete Nomaden, die alles plündern, was ihnen in den Weg kommt. In Civilization IV lassen Barbaren nicht mit sich verhandeln - sie bilden eine ständige Gefahr, die für die eigene Sicherheit neutralisiert werden muss.</German>
-		<Italian>Il termine "barbaro" venne coniato dai Greci e inizialmente veniva utilizzato per indicare qualsiasi straniero. Da allora, la parola ha assunto una connotazione negativa e viene associato a quelle civiltà definite "inferiori". I Cinesi, per esempio, identificavano tutte le culture straniere come "barbare" dai Manciù ai Turchi agli Europei. Roma bollò con questo termine gli Unni e le popolazioni germaniche, così come i Galli che erano culturalmente evoluti.[PARAGRAPH:2]In Civilization IV, questo termine indica le popolazioni che non fanno parte di una civiltà organizzata, vecchi cacciatori che predano i "deboli" nel mondo. Malgrado alcuni barbari abbiano conquistato armamenti più evoluti come spade e asce, e talvolta possano conquistare o fondare delle città, i Barbari rimangono prevalentemente nomadi che distruggono e saccheggiano tutto ciò che capita a tiro. Non si può trattare con i Barbari: devono essere distrutti prima che loro distruggano te!</Italian>
-		<Spanish>El término "bárbaro" fue acuñado por los griegos, y originalmente se utilizaba para referirse a cualquier extranjero. Pero desde entonces ha adquirido unas connotaciones negativas, pues suele emplearse al hablar de las civilizaciones a las que se considera "inferiores" a la propia. Los chinos, por ejemplo, pensaban que todas las culturas extranjeras (desde los manchúes a los turcos, pasando por los europeos) eran bárbaras. En Roma se empleaba el término para referirse a los hunos y las tribus germanas, así como a los galos, que eran más avanzados.[PARAGRAPH:2]En Civilization IV, este término engloba a todos los pueblos que no forman parte de ninguna civilización organizada del juego, y en lugar de eso se componen de cazadores-recolectores que atacan al "débil" mundo civilizado. Aunque algunos bárbaros pueden llegar a adquirir armas bastante avanzadas (espadas y hachas, por ejemplo), y aunque de vez en cuando pueden capturar ciudades o construir las suyas propias, en el fondo siguen siendo unos nómadas bandidos que lo destruyen todo a su paso. No se puede negociar con ellos, ni es posible aplacarlos: ¡hay que destruirlos antes de que ellos te destruyan a ti!</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_NPC_NEANDERTHAL_ADJECTIVE</Tag>
-		<English>Neanderthals</English>
-		<French>Néanderthaliens</French>
-		<German>neandertalisch</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_NPC_NEANDERTHAL_DESC</Tag>
-		<English>Neanderthals</English>
-		<French>Néanderthaliens</French>
-		<German>Reich der Neandertaler</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_NPC_NEANDERTHAL_SHORT_DESC</Tag>
-		<English>Neanderthals</English>
-		<French>Néanderthaliens</French>
-		<German>Neandertal</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_NPC_NEANDERTHAL_PEDIA</Tag>
-		<English>Neanderthal Barbarians</English>
-		<French>Barbares Neanderthal</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_INSECTOID_ADJECTIVE</Tag>
-		<English>Insectoids</English>
-		<French>Insectoïdes</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_INSECTOID_DESC</Tag>
-		<English>Insectoids</English>
-		<French>Insectoïdes</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_INSECTOID_SHORT_DESC</Tag>
-		<English>Insectoids</English>
-		<French>Insectoïdes</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_INSECTOID_PEDIA</Tag>
-		<English>Insects, both Terran and Extra-Terrestrial.  In space, they are a terrifyingly evolved horrific foe.</English>
-		<French>Insectes terriens et extraterrestres. Dans l'espace, ils sont un ennemi horrible terriblement évolué.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_BYZANTINE_ADJECTIVE</Tag>
@@ -1284,6 +1241,27 @@
 		<Polish>Hetyci</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_HOLYROMAN_DESC</Tag>
+		<English>Holy Roman Empire</English>
+		<French>
+			<Text>Saint Empire Romain</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Reich der Heiligen Römischen Nation</German>
+		<Italian>
+			<Text>Sacro Romano Impero</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sacro Imperio Romano</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Święte Imperium Rzymskie</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_HOLY_ROMAN_ADJECTIVE</Tag>
 		<English>
 			<Text>Holy Roman:Holy Romans</Text>
@@ -1349,27 +1327,6 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Święte Cesarstwo Rzymskie</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_HOLYROMAN_DESC</Tag>
-		<English>Holy Roman Empire</English>
-		<French>
-			<Text>Saint Empire Romain</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Reich der Heiligen Römischen Nation</German>
-		<Italian>
-			<Text>Sacro Romano Impero</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Sacro Imperio Romano</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Święte Imperium Rzymskie</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_INCA_ADJECTIVE</Tag>
@@ -1517,6 +1474,26 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Indie</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_INSECTOID_ADJECTIVE</Tag>
+		<English>Insectoids</English>
+		<French>Insectoïdes</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_INSECTOID_DESC</Tag>
+		<English>Insectoids</English>
+		<French>Insectoïdes</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_INSECTOID_PEDIA</Tag>
+		<English>Insects, both Terran and Extra-Terrestrial.  In space, they are a terrifyingly evolved horrific foe.</English>
+		<French>Insectes terriens et extraterrestres. Dans l'espace, ils sont un ennemi horrible terriblement évolué.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_INSECTOID_SHORT_DESC</Tag>
+		<English>Insectoids</English>
+		<French>Insectoïdes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_IROQUOIS_ADJECTIVE</Tag>
@@ -2131,6 +2108,29 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Holandia</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NPC_NEANDERTHAL_ADJECTIVE</Tag>
+		<English>Neanderthals</English>
+		<French>Néanderthaliens</French>
+		<German>neandertalisch</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NPC_NEANDERTHAL_DESC</Tag>
+		<English>Neanderthals</English>
+		<French>Néanderthaliens</French>
+		<German>Reich der Neandertaler</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NPC_NEANDERTHAL_PEDIA</Tag>
+		<English>Neanderthal Barbarians</English>
+		<French>Barbares Neanderthal</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NPC_NEANDERTHAL_SHORT_DESC</Tag>
+		<English>Neanderthals</English>
+		<French>Néanderthaliens</French>
+		<German>Neandertal</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_OTTOMAN_ADJECTIVE</Tag>
