@@ -208,7 +208,7 @@
 			<Strategy>TXT_KEY_SPECIALIST_ENGINEER_STRATEGY</Strategy>
 			<Texture>Art/Interface/MainScreen/CityScreen/engineer.dds</Texture>
 			<bVisible>1</bVisible>
-			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
+			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<Yields>
 				<iYield>0</iYield>
@@ -680,7 +680,6 @@
 			<Type>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</Type>
 			<Description>TXT_KEY_SPECIALIST_GREAT_MILITARY_INSTRUCTOR</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_SPECIALIST_GREAT_MILITARY_INSTRUCTOR_STRATEGY</Strategy>
 			<Texture>,Art/Interface/MainScreen/CityScreen/Great_Engineer.dds,Art/Interface/Buttons/Warlords_Atlas_2.dds,2,6</Texture>
 			<bVisible>0</bVisible>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
@@ -713,7 +712,6 @@
 			<Type>SPECIALIST_GREAT_ADMIRAL</Type>
 			<Description>TXT_KEY_SPECIALIST_GREAT_ADMIRAL</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_SPECIALIST_GREAT_MILITARY_INSTRUCTOR_STRATEGY</Strategy>
 			<Texture>Art/Interface/MainScreen/CityScreen/specialist_great_admiral.dds</Texture>
 			<bVisible>0</bVisible>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
@@ -861,7 +859,6 @@
 			<Type>SPECIALIST_MILITARY_INSTRUCTOR</Type>
 			<Description>TXT_KEY_SPECIALIST_MILITARY_INSTRUCTOR</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_SPECIALIST_GREAT_MILITARY_INSTRUCTOR_STRATEGY</Strategy>
 			<Texture>Art/Interface/Buttons/Specialists/Warlord_Instructor.dds</Texture>
 			<bVisible>0</bVisible>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>

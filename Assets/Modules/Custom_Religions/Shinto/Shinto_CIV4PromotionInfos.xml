@@ -8,7 +8,7 @@
 	<PromotionInfos>
 		<PromotionInfo>
 			<Type>PROMOTION_BUSHIDO</Type>
-			<Description>Honour</Description>
+			<Description>TXT_KEY_PROMOTION_BUSHIDO</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<LayerAnimationPath>NONE</LayerAnimationPath>
 			<PromotionPrereq>NONE</PromotionPrereq>
@@ -89,7 +89,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_BUSHIDO1</Type>
-			<Description>Bushido I</Description>
+			<Description>TXT_KEY_PROMOTION_BUSHIDO1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<LayerAnimationPath>NONE</LayerAnimationPath>
 			<PromotionPrereq>NONE</PromotionPrereq>
@@ -176,7 +176,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_BUSHIDO2</Type>
-			<Description>Bushido II</Description>
+			<Description>TXT_KEY_PROMOTION_BUSHIDO2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<LayerAnimationPath>NONE</LayerAnimationPath>
 			<PromotionPrereq>PROMOTION_BUSHIDO1</PromotionPrereq>
@@ -263,7 +263,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_BUSHIDO3</Type>
-			<Description>Bushido III</Description>
+			<Description>TXT_KEY_PROMOTION_BUSHIDO3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<LayerAnimationPath>NONE</LayerAnimationPath>
 			<PromotionPrereq>PROMOTION_BUSHIDO2</PromotionPrereq>

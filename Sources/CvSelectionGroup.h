@@ -131,7 +131,6 @@ public:
 	int getMinimumRBombardDamageLimit() const;
 	int getMinimumRBombardRange() const;
 	int getRBombardDamageMaxUnits() const;
-	bool visibilityRange() const;
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                      08/19/09                                jdog5000      */
 /*                                                                                              */

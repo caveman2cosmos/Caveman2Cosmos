@@ -1267,6 +1267,12 @@
 		<French>Une Mine primitive située dans les montagnes</French>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_EARLY_QUARRY</Tag>
+		<English>Early Quarry</English>
+		<French>Carrière antique</French>
+		<Polish>Wczesny Kamieniołom</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_MOUNTAIN_MINE</Tag>
 		<English>Mountain Mine</English>
 		<French>Mine de montagne</French>
@@ -2439,13 +2445,5 @@
 		<German>[ICON_BULLET]%d1_Time Bauzeit</German>
 		<Spanish>[ICON_BULLET]Turnos de construcción: %d1_Time</Spanish>
 		<Polish>[ICON_BULLET]Czas Budowy: %d1_Time</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FACTORY_PEDIA</Tag>
-		<English>Early examples of factory-like production, where a number of individuals work cooperatively to produce goods for sale or trade, can be found as far back as ancient Greece and Rome. Modern factories, however, evolved from the concept of specialized labor, where each worker performed a single step in the overall production of an item. This specialization allows factories to increase the speed and efficiency of the manufacturing process, far surpassing earlier means of production. The development of the factory system as a means of production played a key role in the Industrial Revolution.</English>
-		<French>Les premiers exemples s'assimilant à de la production industrielle, au cours de laquelle plusieurs ouvriers coopéraient afin de produire des biens à vendre ou à échanger, remontent à la Grèce et à la Rome antiques. Les usines modernes se sont toutefois développées à partir du concept de travail spécialisé, où chaque ouvrier accomplit une seule tâche dans la production d'ensemble d'un objet. Cette spécialisation permet aux entreprises d'augmenter la rapidité et l'efficacité du processus de fabrication, dépassant largement les premiers moyens de production. Le développement de la production industrielle comme moyen de production joua un grand rôle lors de la révolution industrielle.</French>
-		<German>Frühe Beispiele für fabrikähnliche Fertigungsverfahren, wobei mehrere Arbeiter gemeinschaftlich an der Herstellung von Verkaufs- oder Handelsgütern beteiligt waren, fanden sich schon im antiken Griechenland und im Römischen Reich. In modernen Fabriken kommt statt dieser Art des Teamworks jedoch eher das Prinzip der Spezialisierung zum Tragen: Jeder Mitarbeiter leistet einen eigenen kleinen Beitrag zum Herstellungsprozess eines Produkts, was sich nicht nur positiv auf die Produktionsgeschwindigkeit, sondern auch auf die Qualität der gefertigten Waren auswirkt. Die Einführung der fabrikgesteuerten Herstellung spielte eine Schlüsselrolle bei der Industriellen Revolution.</German>
-		<Italian>I primi esempi di produzione da fabbrica, rappresentati da gruppi di individui che lavoravano insieme per produrre dei beni, risalgono all'antica Roma e in Grecia. I moderni complessi industriali, però, si basano sulla specializzazione del lavoro, in cui ogni operaio è responsabile di una fase della produzione del bene; ciò consente di aumentarne l'efficienza surclassando i vecchi sistemi di produzione. Lo sviluppo di un sistema di fabbriche quale mezzo di produzione ha occupato un ruolo fondamentale nella Rivoluzione Industriale.</Italian>
-		<Spanish>Los primeros ejemplos de producción cuasi-fabril, en los que cierto número de individuos trabajan de manera coordinada para producir mercancías para la venta o el intercambio, se pueden encontrar en la Grecia o la Roma antiguas. Sin embargo, las fábricas modernas evolucionaron a partir del concepto de la especialización del trabajo, en el que cada trabajador solo llevaba a cabo un paso en la producción global de un objeto. Esta especialización permite a las fábricas aumentar la velocidad y eficacia del proceso de fabricación, superando con diferencia a los medios de producción anteriores. El desarrollo del sistema de la fábrica como medio de producción desempeñó un papel clave en la revolución industrial.</Spanish>
 	</TEXT>
 </Civ4GameText>

@@ -3662,7 +3662,17 @@ bool CvCity::canCreate(ProjectTypes eProject, bool bContinue, bool bTestVisible)
 	/*                                                                                              */
 	/*                                                                                              */
 	/************************************************************************************************/
-	if (!plot()->isMapCategoryType(GC.getProjectInfo(eProject).getMapCategories()))
+	int iCount = GC.getProjectInfo(eProject).getNumMapCategoryTypes();
+	bool bFound = (iCount < 1);
+	for (int iI = 0; iI < iCount; iI++)
+	{
+		if (plot()->isMapCategoryType((MapCategoryTypes)GC.getProjectInfo(eProject).getMapCategoryType(iI)))
+		{
+			bFound = true;
+			break;
+		}
+	}
+	if (!bFound)
 	{
 		return false;
 	}
@@ -3683,6 +3693,7 @@ bool CvCity::canCreate(ProjectTypes eProject, bool bContinue, bool bTestVisible)
 	/************************************************************************************************/
 	/* Afforess	                     END                                                            */
 	/************************************************************************************************/
+
 
 	return true;
 }
@@ -20434,7 +20445,7 @@ bool CvCity::isValidBuildingLocation(BuildingTypes eBuilding) const
 {
 	PROFILE_FUNC();
 
-	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+	CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 	// if both the river and water flags are set, we require one of the two conditions, not both
 	if (kBuilding.isWater())
 	{
@@ -20481,10 +20492,21 @@ bool CvCity::isValidBuildingLocation(BuildingTypes eBuilding) const
 		}
 	}
 
-	if (!plot()->isMapCategoryType(kBuilding.getMapCategories()))
+	int iCount = kBuilding.getNumMapCategoryTypes();
+	bool bFound = (iCount < 1);
+	for (int iI = 0; iI < iCount; iI++)
+	{
+		if (plot()->isMapCategoryType((MapCategoryTypes)kBuilding.getMapCategoryType(iI)))
+		{
+			bFound = true;
+			break;
+		}
+	}
+	if (!bFound)
 	{
 		return false;
 	}
+
 
 	return true;
 }

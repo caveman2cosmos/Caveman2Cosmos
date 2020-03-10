@@ -196,4 +196,12 @@
 		<Tag>TXT_KEY_BUILDING_NGAI_SHRINE_STRATEGY</Tag>
 		<English>TBD</English>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_GUARDIAN</Tag>
+		<English>Guardian spirit</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_VENGEANCE</Tag>
+		<English>Vengeance</English>
+	</TEXT>
 </Civ4GameText>

@@ -578,18 +578,7 @@ void CvSelectionGroup::autoMission()
 
 	if (getNumUnits() > 0 && headMissionQueueNode() != NULL && !isBusy())
 	{
-		bool bVisibleHuman = false;
-		if (isHuman())
-		{
-			for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
-			{
-				if (!(*unitItr)->alwaysInvisible())
-				{
-					bVisibleHuman = true;
-					break;
-				}
-			}
-		}
+		const bool bVisibleHuman = isHuman() && algo::any_of(units(), !CvUnit::fn::alwaysInvisible());
 
 		if (bVisibleHuman && GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plot(), 1))
 		{
@@ -2847,28 +2836,11 @@ bool CvSelectionGroup::canEverDoCommand(CommandTypes eCommand, int iData1, int i
 {
 	if(eCommand == COMMAND_LOAD)
 	{
-		const CvPlot* pPlot = plot();
-		for (CvPlot::unit_iterator unitItr = pPlot->beginUnits(); unitItr != pPlot->endUnits(); ++unitItr)
-		{
-			if (!(*unitItr)->isFull())
-			{
-				return true;
-			}
-		}
-		//no cargo space on this plot
-		return false;
+		return algo::any_of(plot()->units(), !CvUnit::fn::isFull());
 	}
 	else if(eCommand == COMMAND_UNLOAD)
 	{
-		for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
-		{
-			if ((*unitItr)->isCargo())
-			{
-				return true;
-			}
-		}
-		//no loaded unit
-		return false;
+		return algo::any_of(units(), CvUnit::fn::isCargo());
 	}
 	else if(eCommand == COMMAND_UPGRADE && bUseCache)
 	{
@@ -3331,21 +3303,15 @@ bool CvSelectionGroup::isBusy() const
 
 bool CvSelectionGroup::isCargoBusy() const
 {
-	FAssert(getNumUnits() > 0);
-
 	const CvPlot* pPlot = plot();
 	for (unit_iterator unitItr1 = beginUnits(); unitItr1 != endUnits(); ++unitItr1)
 	{
 		const CvUnit* pLoopUnit1 = *unitItr1;
-		FAssert(pLoopUnit1 != NULL);
-
 		if (pLoopUnit1->hasCargo())
 		{
 			for (CvPlot::unit_iterator unitItr2 = pPlot->beginUnits(); unitItr2 != pPlot->endUnits(); ++unitItr2)
 			{
 				const CvUnit* pLoopUnit2 = *unitItr2;
-				FAssert(pLoopUnit2 != NULL);
-
 				if (pLoopUnit2->getTransportUnit() == pLoopUnit1 && pLoopUnit2->getGroup()->isBusy())
 				{
 					return true;
@@ -3396,8 +3362,6 @@ bool CvSelectionGroup::isWaiting() const
 
 bool CvSelectionGroup::isFull() const
 {
-	FAssert(getNumUnits() > 0);
-
 	// do two passes, the first pass, we ignore units with speical cargo
 	int iSpecialCargoCount = 0;
 	int iCargoCount = 0;
@@ -3613,28 +3577,12 @@ bool CvSelectionGroup::canDefend() const
 
 bool CvSelectionGroup::hasBombardCapability() const
 {
-	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
-	{
-		if ((*unitItr)->getBombardRate() > 0)
-		{
-			return true;
-		}
-	}
-
-	return false;
+	return algo::any_of(units(), CvUnit::fn::getBombardRate() > 0);
 }
 
 bool CvSelectionGroup::hasCollateralDamage() const
 {
-	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
-	{
-		if ((*unitItr)->collateralDamage() > 0)
-		{
-			return true;
-		}
-	}
-
-	return false;
+	return algo::any_of(units(), CvUnit::fn::collateralDamage() > 0);
 }
 
 bool CvSelectionGroup::canBombard(const CvPlot* pPlot, bool bCheckCanReduceOnly) const
@@ -3672,28 +3620,12 @@ bool CvSelectionGroup::canBombard(const CvPlot* pPlot, bool bCheckCanReduceOnly)
 
 bool CvSelectionGroup::canPillage(const CvPlot* pPlot) const
 {
-	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
-	{
-		if ((*unitItr)->canPillage(pPlot))
-		{
-			return true;
-		}
-	}
-
-	return false;
+	return algo::any_of(units(), CvUnit::fn::canPillage(pPlot));
 }
 
 bool CvSelectionGroup::canBombardAtRanged(const CvPlot* pPlot, int iX, int iY) const
 {
-	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
-	{
-		if ((*unitItr)->canBombardAtRanged(pPlot, iX, iY))
-		{
-			return true;
-		}
-	}
-
-	return false;
+	return algo::any_of(units(), CvUnit::fn::canBombardAtRanged(pPlot, iX, iY));
 }
 
 int CvSelectionGroup::getMinimumRBombardDamageLimit() const
@@ -3740,22 +3672,6 @@ int CvSelectionGroup::getRBombardDamageMaxUnits() const
 	}
 
 	return iHighest;
-}
-
-bool CvSelectionGroup::visibilityRange() const
-{
-	int iMaxRange = 0;
-
-	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
-	{
-		const int iRange = (*unitItr)->visibilityRange();
-		if (iRange > iMaxRange)
-		{
-			iMaxRange = iRange;
-		}
-	}
-
-	return iMaxRange;
 }
 
 //
@@ -4014,43 +3930,19 @@ void CvSelectionGroup::unloadAll()
 
 bool CvSelectionGroup::alwaysInvisible() const
 {
-	FAssert(getNumUnits() > 0);
-
 	return algo::all_of(units(), CvUnit::fn::alwaysInvisible());
 }
 
 
 bool CvSelectionGroup::isInvisible(TeamTypes eTeam) const
 {
-	FAssert(getNumUnits() > 0);
-
-	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
-	{
-		if (!(*unitItr)->isInvisible(eTeam, false))
-		{
-			return false;
-		}
-	}
-
-	return true;
+	return algo::all_of(units(), CvUnit::fn::isInvisible(eTeam, false));
 }
 
 
 int CvSelectionGroup::countNumUnitAIType(UnitAITypes eUnitAI) const
 {
-	FAssertMsg(headUnitNode() != NULL, "headUnitNode() is not expected to be equal with NULL");
-
-	int iCount = 0;
-
-	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
-	{		
-		if (NO_UNITAI == eUnitAI || (*unitItr)->AI_getUnitAIType() == eUnitAI)
-		{
-			iCount++;
-		}
-	}
-
-	return iCount;
+	return NO_UNITAI == eUnitAI ? getNumUnits() : algo::count_if(units(), CvUnit::fn::AI_getUnitAIType() == eUnitAI);
 }
 
 
@@ -5127,8 +5019,6 @@ void CvSelectionGroup::setRemoteTransportUnit(CvUnit* pTransportUnit)
 		// loop over all the units, unloading them
 		for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
 		{			
-			FAssert((*unitItr) != NULL);
-
 			(*unitItr)->setTransportUnit(NULL);
 		}
 	}
@@ -6042,15 +5932,7 @@ void CvSelectionGroup::clearUnits()
 
 bool CvSelectionGroup::hasUnitOfAI(UnitAITypes eUnitAI) const
 {
-	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
-	{
-		if ((*unitItr)->AI_getUnitAIType() == eUnitAI)
-		{
-			return true;
-		}
-	}
-
-	return false;
+	return algo::any_of(units(), CvUnit::fn::AI_getUnitAIType() == eUnitAI);
 }
 
 int	CvSelectionGroup::getWorstDamagePercent(UnitCombatTypes eIgnoreUnitCombat) const
@@ -6245,13 +6127,7 @@ int CvSelectionGroup::getNumUnits() const
 
 int CvSelectionGroup::getNumUnitCargoVolumeTotal() const
 {
-	int iTotal = 0;
-	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
-	{
-		iTotal += (*unitItr)->SMCargoVolume();
-	}
-
-	return iTotal;
+	return algo::accumulate(units() | transformed(CvUnit::fn::SMCargoVolume()), 0);
 }
 
 int CvSelectionGroup::getLeastCargoVolume() const
@@ -6271,15 +6147,7 @@ int CvSelectionGroup::getLeastCargoVolume() const
 
 bool CvSelectionGroup::meetsUnitSelectionCriteria(const CvUnitSelectionCriteria* criteria) const
 {
-	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
-	{
-		if ((*unitItr)->meetsUnitSelectionCriteria(criteria))
-		{
-			return true;
-		}
-	}
-
-	return false;
+	return algo::any_of(units(), CvUnit::fn::meetsUnitSelectionCriteria(criteria));
 }
 
 void CvSelectionGroup::mergeIntoGroup(CvSelectionGroup* pSelectionGroup)

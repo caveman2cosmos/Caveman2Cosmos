@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
 <!-- Sid Meier's Civilization 4 -->
 <!-- Copyright Firaxis Games 2005 -->
@@ -129,32 +129,6 @@
 		<Polish>Uwaga: Pancerz nie wpływa na szanse uderzenia.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_COMBAT_ATTACK_FROM_SIZE_MODIFIER</Tag>
-		<English>[ICON_BULLET]%D1_Bonus%% from Size Differential</English>
-		<French>[ICON_BULLET]%D1_Bonus%% de la différence de taille</French>
-		<Polish>[ICON_BULLET]%D1_Bonus%% za różnicę w wielkości</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_COMBAT_ATTACK_FROM_VOLUME_MODIFIER</Tag>
-		<English>[ICON_BULLET]%D1_Bonus%% from Group Volume Differential</English>
-		<French>[ICON_BULLET]%D1_Bonus%% de la Différence de taille de groupe</French>
-		<Polish>[ICON_BULLET]%D1_Bonus%% za zagęszczenie grupy</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_COMBAT_ATTACK_MODIFIER</Tag>
-		<English>[ICON_BULLET]%D1_Bonus%% from Attack Modifier</English>
-		<French>[ICON_BULLET]%D1_Bonus%% des modifs. d'attaque</French>
-		<Italian>[ICON_BULLET]%D1_Bonus%% dai modificatori della Attack</Italian>
-		<Polish>[ICON_BULLET]%D1_Bonus%% z modyfikatora obrony</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_COMBAT_ATTACK_UNTIL_DAMAGED</Tag>
-		<English>Repeatedly Attacks until Damaged</English>
-		<French>Attaque indéfiniment tant que indemne</French>
-		<Italian>Attacco continuo, finchè riceve danni</Italian>
-		<Polish>Powtarzaj Ataki póki nie otrzymasz Obrażeń</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ATTACKER_ARMOR_VS_PUNCTURE</Tag>
 		<English>Attacker Armor: %d1 - Defender Puncture: %d2 = Adjusted Total: %d3</English>
 		<French>Armure de l'Attaquant: %d1 - Perforation du Défenseur: %d2 = Total ajusté: %d3</French>
@@ -181,6 +155,11 @@
 		<French>Modif. Coup critique de l'Attaquant:</French>
 		<Italian>Modificatori ai colpi critici degli attaccanti:</Italian>
 		<Polish>Szansa Atakującego na Atak Krytyczny:</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_ATTACKER_DAMAGE_MODIFIER</Tag>
+		<English>[ICON_BULLET]Attacker Damage Modifier: %D1_Bonus%%</English>
+		<French>[ICON_BULLET]Modif de dégats (Attaquant): %D1_Bonus%%</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ATTACKER_MAY_AFFLICT</Tag>
@@ -233,6 +212,32 @@
 		<Polish>Atakujący zada:</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_COMBAT_ATTACK_FROM_SIZE_MODIFIER</Tag>
+		<English>[ICON_BULLET]%D1_Bonus%% from Size Differential</English>
+		<French>[ICON_BULLET]%D1_Bonus%% de la différence de taille</French>
+		<Polish>[ICON_BULLET]%D1_Bonus%% za różnicę w wielkości</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_ATTACK_FROM_VOLUME_MODIFIER</Tag>
+		<English>[ICON_BULLET]%D1_Bonus%% from Group Volume Differential</English>
+		<French>[ICON_BULLET]%D1_Bonus%% de la Différence de taille de groupe</French>
+		<Polish>[ICON_BULLET]%D1_Bonus%% za zagęszczenie grupy</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_ATTACK_MODIFIER</Tag>
+		<English>[ICON_BULLET]%D1_Bonus%% from Attack Modifier</English>
+		<French>[ICON_BULLET]%D1_Bonus%% des modifs. d'attaque</French>
+		<Italian>[ICON_BULLET]%D1_Bonus%% dai modificatori della Attack</Italian>
+		<Polish>[ICON_BULLET]%D1_Bonus%% z modyfikatora obrony</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_ATTACK_UNTIL_DAMAGED</Tag>
+		<English>Repeatedly Attacks until Damaged</English>
+		<French>Attaque indéfiniment tant que indemne</French>
+		<Italian>Attacco continuo, finchè riceve danni</Italian>
+		<Polish>Powtarzaj Ataki póki nie otrzymasz Obrażeń</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_COMBAT_BASE_CHANCE</Tag>
 		<English>Base Chance:</English>
 		<French>Chances de base:</French>
@@ -259,16 +264,6 @@
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]nicht verfügbar ohne aktivierte %s1_Option.[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Non è disponibile per le unità se l'opzione %s1_Option è inattiva.[COLOR_REVERT]</Italian>
 		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]Nie dostępne dla jednostek bez %s1_Change%% Opcja Gry jest aktywna..[COLOR_REVERT]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_COMBAT_ATTACKER_DAMAGE_MODIFIER</Tag>
-		<English>[ICON_BULLET]Attacker Damage Modifier: %D1_Bonus%%</English>
-		<French>[ICON_BULLET]Modif de dégats (Attaquant): %D1_Bonus%%</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_COMBAT_DEFENDER_DAMAGE_MODIFIER</Tag>
-		<English>[ICON_BULLET]Defender Damage Modifier: %D1_Bonus%%</English>
-		<French>[ICON_BULLET]Modif de dégats (Défenseur) : %D1_Bonus%%</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_DAMAGE_MODIFIER</Tag>
@@ -304,6 +299,11 @@
 		<French>Modif. Coup critique du Défenseur:</French>
 		<Italian>Modificatore ai colpi critici dei difensori:</Italian>
 		<Polish>Szansa Obrońcy na Atak Krytyczny:</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_DEFENDER_DAMAGE_MODIFIER</Tag>
+		<English>[ICON_BULLET]Defender Damage Modifier: %D1_Bonus%%</English>
+		<French>[ICON_BULLET]Modif de dégats (Défenseur) : %D1_Bonus%%</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_DEFENDER_MAY_AFFLICT</Tag>
@@ -467,6 +467,18 @@
 		<Polish>Całkowity Odrzut:</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_COMBAT_MAY_AFFLICT2</Tag>
+		<English>Chance</English>
+		<Polish>Szansa</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_MAY_AFFLICT3</Tag>
+		<English>Opponent Fortitude = Total Chance:</English>
+		<French>Fortitude de l'oposant = Total Chance:</French>
+		<Italian>Forza d'animo dell'avversario = Chance totali:</Italian>
+		<Polish>Wytrzymałość Wroga = Całkowita Szansa:</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_COMBAT_MAY_AFFLICT_DELAYED</Tag>
 		<English>Will check affliction after battle if the enemy is damaged.</English>
 		<French>Vérifie l'affliction après le combat si l'ennemi est blessé.</French>
@@ -481,16 +493,12 @@
 		<Polish>Sprawdzi osłabienia przy pierwszej rundzie z obrażeniami.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_COMBAT_MAY_AFFLICT2</Tag>
-		<English>Chance</English>
-		<Polish>Szansa</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_COMBAT_MAY_AFFLICT3</Tag>
-		<English>Opponent Fortitude = Total Chance:</English>
-		<French>Fortitude de l'oposant = Total Chance:</French>
-		<Italian>Forza d'animo dell'avversario = Chance totali:</Italian>
-		<Polish>Wytrzymałość Wroga = Całkowita Szansa:</Polish>
+		<Tag>TXT_KEY_COMBAT_MESSAGE_DEFEATED</Tag>
+		<English>%[s1_CivName]'s %[s2_UnitName] has defeated %[s3_CivName]'s %[s4_UnitName]!</English>
+		<French>L'unité %[s2_UnitName] (%[s1_CivName]) a vaincu l'unité %[s4_UnitName] (%[s3_CivName])!</French>
+		<German>%s1_CivName: %s4:4_UnitName wurde von %s2_UnitName (%s3_CivName) besiegt</German>
+		<Italian>L'unità %[s2_UnitName] dell'%[s1_CivName] ha sconfitto l'unità %[s4_UnitName] dell'%[s3_CivName]!</Italian>
+		<Spanish>[NUM2:Un:Una:Unos:Unas] %[s2_UnitName] del %[s1_CivName] [NUM2:ha:ha:han:han] derrotado a [NUM3:un:una:unos:unas] %[s3_UnitName] del %[s4_CivName].</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_MESSAGE_FEATURE</Tag>
@@ -511,6 +519,14 @@
 		<Polish>(Obrona na wzgórzach: %D1%%)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_COMBAT_MESSAGE_HIT</Tag>
+		<English>%[s1_CivName]'s %[s2_UnitName] is hit for %[d3_damage] (%[d4]/%[d5]HP)</English>
+		<French>L'unité %[s2_UnitName] (%[s1_CivName]) est touchée et perd %[d3] points de vie (%[d4]/%[d5]PV))!</French>
+		<German>%s1_CivName: %s2_UnitName erleidet %d3_damage Schaden (%[d4]/%[d5]Punkten)</German>
+		<Italian>L'unità %[s2_UnitName] dell'%[s1_CivName] viene colpita subendo %[d3] punti di danno (%[d4]/%[d5]PV)</Italian>
+		<Spanish>[NUM2:Un:Una:Unos:Unas] %[s2_UnitName] del %[s1_CivName] (con %[d3]/%[d4] PG) [NUM2:ha alcanzado:ha alcanzado:han alcanzado:han alcanzado] a [NUM6:un:una:unos:unas] %[s6_UnitName] del %[s5_CivName] (con %[d7]/%[d8] PG) y [NUM6:le han infligido:le han infligido:les han infligido:les han infligido] %[d9] de daño.</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_COMBAT_MESSAGE_TERRAIN</Tag>
 		<English>(Terrain Defense: %d1%%)</English>
 		<French>(Défense terrain: %d1%%)</French>
@@ -520,6 +536,14 @@
 		<Polish>(Obrona w terenie: %d1%%)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_COMBAT_MESSAGE_VS</Tag>
+		<English>vs</English>
+		<French>contre</French>
+		<German>gegen</German>
+		<Italian>contro</Italian>
+		<Spanish>contra</Spanish>
+	</TEXT>
+<TEXT>
 		<Tag>TXT_KEY_COMBAT_MISC_MODS</Tag>
 		<English>Misc Mods:</English>
 		<French>Autres Modifs:</French>
@@ -843,6 +867,11 @@
 		<French>Tentative de retraite/round (Def.):</French>
 		<Italian>Probabilità di ritirata per turno effettiva:</Italian>
 		<Polish>Szansa na próbę ucieczki / runda:</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DOMAIN_FREE_EXPERIENCE</Tag>
+		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 for being a %s2_DOMAIN type unit[COLOR_REVERT]</English>
+		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 en étant une unité de type %s2_DOMAIN[COLOR_REVERT]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RANGED_BOMBARD_DAMAGE</Tag>
@@ -4117,18 +4146,6 @@
 		<Polish>Jednostki sklonowane</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_COMBAT_WORKER</Tag>
-		<English>Combat Workers</English>
-		<French>Ouvriers Combattant</French>
-		<Italian>Lavoratori da combattimento</Italian>
-		<Spanish>
-			<Text>Trabajador de combate:Trabajadores de combate</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Robotnicy Wojenni</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_COMBATANT</Tag>
 		<English>Combatants</English>
 		<French>
@@ -4148,6 +4165,18 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Jednostki Bojowe</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_COMBAT_WORKER</Tag>
+		<English>Combat Workers</English>
+		<French>Ouvriers Combattant</French>
+		<Italian>Lavoratori da combattimento</Italian>
+		<Spanish>
+			<Text>Trabajador de combate:Trabajadores de combate</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Robotnicy Wojenni</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_COMMANDER</Tag>
@@ -4244,6 +4273,15 @@
 		<Polish>Kultura (Aborygenów)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ADENA</Tag>
+		<English>Culture(Adena)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_AFGHANISTAN</Tag>
+		<English>Culture(Afghanistan)</English>
+		<French>Culture(Afghane)</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_AINU</Tag>
 		<English>Culture(Ainu)</English>
 		<French>
@@ -4274,6 +4312,28 @@
 		<Polish>Kultura (Aka)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_AKSUMITE</Tag>
+		<English>Culture(Aksumite)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ALACALUFE</Tag>
+		<English>Culture(Alacalufe)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ALBANIAN</Tag>
+		<English>Culture(Albanian)</English>
+		<French>Culture(Albanie)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ALEMANNI</Tag>
+		<English>Culture(Alemanni)</English>
+		<French>Culture(Alémanique)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ALGIER</Tag>
+		<English>Culture(Algier)</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_AMERICAN</Tag>
 		<English>Culture(American)</English>
 		<French>
@@ -4287,6 +4347,20 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Amerykańska)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_AMIS</Tag>
+		<English>Culture(Amis)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ANDAMANESE</Tag>
+		<English>Culture(Andamanese)</English>
+		<French>Culture(Andamanaise)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ANGOLAN</Tag>
+		<English>Culture(Angolan)</English>
+		<French>Culture(Angola)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_APACHE</Tag>
@@ -4317,6 +4391,11 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Arabska)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ARAGON</Tag>
+		<English>Culture(Aragon)</English>
+		<French>Culture(Aragone)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ARAWAK</Tag>
@@ -4409,6 +4488,18 @@
 		<Polish>Kultura (Austriacka)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_AVARS</Tag>
+		<English>Culture(Avars)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_AVERNI</Tag>
+		<English>Culture(Averni)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_AZANDE</Tag>
+		<English>Culture(Azande)</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_AZTEC</Tag>
 		<English>Culture(Aztec)</English>
 		<French>
@@ -4439,6 +4530,15 @@
 		<Polish>Kultura (Babilońska)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BACTRIC</Tag>
+		<English>Culture(Bactric)</English>
+		<French>Culture(Bactrique)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BAHRAIN</Tag>
+		<English>Culture(Bahrain)</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BANDANESE</Tag>
 		<English>Culture(Bandanese)</English>
 		<French>
@@ -4452,6 +4552,15 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Bandanese)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BANGLADESH</Tag>
+		<English>Culture(Bangladesh)</English>
+		<French>Culture(Bangladeshe)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BASHKIR</Tag>
+		<English>Culture(Bashkir)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BASQUE</Tag>
@@ -4469,6 +4578,24 @@
 		<Polish>Kultura (Basków)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BATAVI</Tag>
+		<English>Culture(Batavi)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BATEK</Tag>
+		<English>Culture(Batek)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BAVARIAN</Tag>
+		<English>Culture(Bavarian)</English>
+		<French>Culture(Bavaroise)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BEDOUIN</Tag>
+		<English>Culture(Bedouin)</English>
+		<French>Culture(Bédouine)</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BELGIAN</Tag>
 		<English>Culture(Belgian)</English>
 		<French>
@@ -4482,6 +4609,10 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Belgijska)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BELIZE</Tag>
+		<English>Culture(Belize)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BENGALI</Tag>
@@ -4544,6 +4675,11 @@
 		<Polish>Kultura (Biopunk)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BOLIVIAN</Tag>
+		<English>Culture(Bolivian)</English>
+		<French>Culture(Bolivienne)</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BRAZILIAN</Tag>
 		<English>Culture(Brazilian)</English>
 		<French>
@@ -4557,6 +4693,21 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Brazilijska)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BRETON</Tag>
+		<English>Culture(Breton)</English>
+		<French>Culture(Bretonne)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BRITON</Tag>
+		<English>Culture(Briton)</English>
+		<French>Culture(Britanique)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BURGUNDI</Tag>
+		<English>Culture(Burgundi)</English>
+		<French>Culture(Burgonde)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BURMESE</Tag>
@@ -4589,6 +4740,10 @@
 		<Polish>Kultura (Bizantyjska)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CAMBEBA</Tag>
+		<English>Culture(Cambeba)</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CANADIAN</Tag>
 		<English>Culture(Canadian)</English>
 		<French>
@@ -4604,6 +4759,10 @@
 		<Polish>Kultura (Kanadyjska)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CANARI</Tag>
+		<English>Culture(Canari)</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CANTONESE</Tag>
 		<English>Culture(Cantonese)</English>
 		<French>
@@ -4617,6 +4776,15 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Kantońska)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CAPAYAN</Tag>
+		<English>Culture(Capayan)</English>
+		<French>Culture(Capayenne)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CARAL_SUPE</Tag>
+		<English>Culture(Caral Supe)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CARIB</Tag>
@@ -4647,6 +4815,16 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Kartagińska)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CATALONIAN</Tag>
+		<English>Culture(Catalonian)</English>
+		<French>Culture(catalane)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CELTIBERIAN</Tag>
+		<English>Culture(Celtiberian)</English>
+		<French>Culture(Celtibérienne)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CELTIC</Tag>
@@ -4694,6 +4872,10 @@
 		<Polish>Kultura (Cejlońska)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CHACHAPOYA</Tag>
+		<English>Culture(Chachapoya)</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CHAM</Tag>
 		<English>Culture(Cham)</English>
 		<French>
@@ -4707,6 +4889,15 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Cham)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CHAVIN</Tag>
+		<English>Culture(Chavin)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CHECHENIAN</Tag>
+		<English>Culture(Chechenian)</English>
+		<French>Culture(Tchétchénienne)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CHEROKEE</Tag>
@@ -4739,6 +4930,15 @@
 		<Polish>Kultura (Czejenów)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CHILEAN</Tag>
+		<English>Culture(Chilean)</English>
+		<French>Culture(Chilienne)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CHIMU</Tag>
+		<English>Culture(Chimu)</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CHINESE</Tag>
 		<English>Culture(Chinese)</English>
 		<French>
@@ -4767,6 +4967,11 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Chola)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CHORESM</Tag>
+		<English>Culture(Choresm)</English>
+		<French>Culture(Choresme)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CHUMASH</Tag>
@@ -4874,6 +5079,16 @@
 		<Polish>Kultura (Cyberpunk)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CZECH</Tag>
+		<English>Culture(Czech)</English>
+		<French>Culture(Tchèque)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_DACIAN</Tag>
+		<English>Culture(Dacian)</English>
+		<French>Culture(Dacienne)</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_DAHOMEY</Tag>
 		<English>Culture(Dahomey)</English>
 		<French>
@@ -4887,6 +5102,10 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Dahomejska)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_DAYAK</Tag>
+		<English>Culture(Dayak)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_DENE</Tag>
@@ -4919,6 +5138,11 @@
 		<Polish>Kultura (Dieselpunk)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_DRAVIDIAN</Tag>
+		<English>Culture(Dravidian)</English>
+		<French>Culture(Dravidienne)</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_DUTCH</Tag>
 		<English>Culture(Dutch)</English>
 		<French>
@@ -4932,6 +5156,11 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Holenderska)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ECUADORIAN</Tag>
+		<English>Culture(Ecuadorian)</English>
+		<French>Culture(Equatorienne)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_EGYPTIAN</Tag>
@@ -4964,6 +5193,11 @@
 		<Polish>Kultura (Angielska)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ESTONIAN</Tag>
+		<English>Culture(Estonian)</English>
+		<French>Culture(Estonienne)</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ETHIOPIAN</Tag>
 		<English>Culture(Ethiopian)</English>
 		<French>
@@ -4977,6 +5211,16 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Etiopska)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ETRUSCAN</Tag>
+		<English>Culture(Etruscan)</English>
+		<French>Culture(Etrusque)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_FATIMID</Tag>
+		<English>Culture(Fatimid)</English>
+		<French>Culture(Fatimide)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_FRANKS</Tag>
@@ -5009,6 +5253,11 @@
 		<Polish>Kultura (Francuska)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_FUEGIAN</Tag>
+		<English>Culture(Fuegian)</English>
+		<French>Culture(Fuegienne)</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_FULANI</Tag>
 		<English>Culture(Fulani)</English>
 		<French>
@@ -5024,6 +5273,24 @@
 		<Polish>Kultura (Fulani)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_FURAWI</Tag>
+		<English>Culture(Furawi)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GALATIAN</Tag>
+		<English>Culture(Galatian)</English>
+		<French>Culture(Galatienne)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GAUCHO</Tag>
+		<English>Culture(Gaucho)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GEORGIAN</Tag>
+		<English>Culture(Georgian)</English>
+		<French>Culture(Géorgienne)</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GERMAN</Tag>
 		<English>Culture(German)</English>
 		<French>
@@ -5037,6 +5304,20 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Niemiecka)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GHURID</Tag>
+		<English>Culture(Ghurid)</English>
+		<French>Culture(Ghuride)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GOKTURK</Tag>
+		<English>Culture(Gokturk)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GOLDEN_HORDE</Tag>
+		<English>Culture(Golden Horde)</English>
+		<French>Culture(Horde dorée)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GOTH</Tag>
@@ -5067,6 +5348,28 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Grecka)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GUAM</Tag>
+		<English>Culture(Guam)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GUANCHES</Tag>
+		<English>Culture(Guanches)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GUARANI</Tag>
+		<English>Culture(Guarani)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GUATEMALA</Tag>
+		<English>Culture(Guatemala)</English>
+		<French>Culture(Guatemalienne)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GUYANA</Tag>
+		<English>Culture(Guyana)</English>
+		<French>Culture(Guyanaise)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_HAIDA</Tag>
@@ -5114,6 +5417,15 @@
 		<Polish>Kultura (Hausa)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_HELVETII</Tag>
+		<English>Culture(Helvetii)</English>
+		<French>Culture(Helvète)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_HEMUDU</Tag>
+		<English>Culture(Hemudu)</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_HERERO</Tag>
 		<English>Culture(Herero)</English>
 		<French>
@@ -5127,6 +5439,10 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Herero)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_HIMYARITE</Tag>
+		<English>Culture(Himyarite)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_HITTITE</Tag>
@@ -5157,6 +5473,14 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Sw. Cesarstwa Rzymskiego)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_HONGKONG</Tag>
+		<English>Culture(HongKong)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_HOPEWELL</Tag>
+		<English>Culture(Hopewell)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_HOPI</Tag>
@@ -5219,6 +5543,24 @@
 		<Polish>Kultura (Huronów)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_HURRIANS</Tag>
+		<English>Culture(Hurrians)</English>
+		<French>Culture(Hurrons)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_HYKSOSI</Tag>
+		<English>Culture(Hyksosi)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ILLYRIAN</Tag>
+		<English>Culture(Illyrian)</English>
+		<French>Culture(Illyrienne)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ILOCANO</Tag>
+		<English>Culture(Ilocano)</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_INCAN</Tag>
 		<English>Culture(Incan)</English>
 		<French>
@@ -5264,6 +5606,10 @@
 		<Polish>Kultura (Indonezyjska)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_INDUS</Tag>
+		<English>Culture(Indus)</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_INUIT</Tag>
 		<English>Culture(Inuit)</English>
 		<French>
@@ -5277,6 +5623,16 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Inuitów)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_IRANIAN</Tag>
+		<English>Culture(Iranian)</English>
+		<French>Culture(Iranienne)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_IRAQUI</Tag>
+		<English>Culture(Iraqui)</English>
+		<French>Culture(Iraquienne)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_IRISH</Tag>
@@ -5354,6 +5710,11 @@
 		<Polish>Kultura (Japońska)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_JAVANESE</Tag>
+		<English>Culture(Javanese)</English>
+		<French>Culture(Javanaise)</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_JIVARO</Tag>
 		<English>Culture(Jivaro)</English>
 		<French>
@@ -5399,6 +5760,10 @@
 		<Polish>Kultura (Joseon)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_JUTES</Tag>
+		<English>Culture(Jutes)</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_KANEM_BORNU</Tag>
 		<English>Culture(Kanem-Bornu)</English>
 		<French>
@@ -5412,6 +5777,23 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Kanem-Bornu)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_KENYAN</Tag>
+		<English>Culture(Kenyan)</English>
+		<French>Culture(Kenyenne)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_KHAZAK</Tag>
+		<English>Culture(Kazakh)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_KHAZARS</Tag>
+		<English>Culture(Khazars)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_KHITAN</Tag>
+		<English>Culture(Khitan)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_KHMER</Tag>
@@ -5429,6 +5811,14 @@
 		<Polish>Kultura (Khmerów)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_KILLKE</Tag>
+		<English>Culture(Killke)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_KITARA</Tag>
+		<English>Culture(Kitara)</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_KLAMATH</Tag>
 		<English>Culture(Klamath)</English>
 		<French>
@@ -5442,6 +5832,10 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Klamath)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_KOGI</Tag>
+		<English>Culture(Kogi)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_KONGOLESE</Tag>
@@ -5474,6 +5868,52 @@
 		<Polish>Kultura (Koreańska)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_KURDISH</Tag>
+		<English>Culture(Kurdish)</English>
+		<French>Culture(Kurde)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_KUSH</Tag>
+		<English>Culture(Kush)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_KUSHAN</Tag>
+		<English>Culture(Kushan)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_KUWAIT</Tag>
+		<English>Culture(Kuwait)</English>
+		<French>Culture(Koweitienne)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_LATVIAN</Tag>
+		<English>Culture(Latvian)</English>
+		<French>Culture(Létonne)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_LA_PLATA</Tag>
+		<English>Culture(La Plata)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_LEBANON</Tag>
+		<English>Culture(Lebanon)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_LIBYAN</Tag>
+		<English>Culture(Libyan)</English>
+		<French>Culture(Libyenne)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_LITHUANIAN</Tag>
+		<English>Culture(Lithuanian)</English>
+		<French>Culture(Lituanienne)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_LONGOBARDI</Tag>
+		<English>Culture(Longobardi)</English>
+		<French>Culture(Longobarde)</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_LUBA</Tag>
 		<English>Culture(Luba)</English>
 		<French>
@@ -5487,6 +5927,29 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Luba)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_LULE</Tag>
+		<English>Culture(Lule)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_LUNDA</Tag>
+		<English>Culture(Lunda)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_LUSITANI</Tag>
+		<English>Culture(Lusitani)</English>
+		<French>Culture(Lusitanie)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_LYDIANS</Tag>
+		<English>Culture(Lydians)</English>
+		<French>Culture(Lydiens)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MALAGASY</Tag>
+		<English>Culture(Malagasy)</English>
+		<French>Culture(Malagache)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MALINESE</Tag>
@@ -5504,6 +5967,10 @@
 		<Polish>Kultura (Maliznezyjska)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MAMELUKS</Tag>
+		<English>Culture(Mameluks)</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MANCHURIAN</Tag>
 		<English>Culture(Manchurian)</English>
 		<French>
@@ -5517,6 +5984,10 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Mandżurska)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MANI</Tag>
+		<English>Culture(Mani)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MAORI</Tag>
@@ -5579,6 +6050,15 @@
 		<Polish>Kultura (Majów)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MEDES</Tag>
+		<English>Culture(Medes)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MELANESIAN</Tag>
+		<English>Culture(Melanesian)</English>
+		<French>Culture(Mélanésien)</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MERINA</Tag>
 		<English>Culture(Merina)</English>
 		<French>
@@ -5609,6 +6089,15 @@
 		<Polish>Kultura (Meksykańska)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MICRONESIAN</Tag>
+		<English>Culture(Micronesian)</English>
+		<French>Culture(Micronésienne)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MING</Tag>
+		<English>Culture(Ming)</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MINOAN</Tag>
 		<English>Culture(Minoan)</English>
 		<French>
@@ -5624,6 +6113,10 @@
 		<Polish>Kultura (Minojska)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MITTANNI</Tag>
+		<English>Culture(Mittanni)</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MOCHE</Tag>
 		<English>Culture(Moche)</English>
 		<French>
@@ -5637,6 +6130,18 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Moche)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MOCOVI</Tag>
+		<English>Culture(Mocovi)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MOHAWK</Tag>
+		<English>Culture(Mohawk)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MOLLO</Tag>
+		<English>Culture(Mollo)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MONGOLIAN</Tag>
@@ -5684,6 +6189,14 @@
 		<Polish>Kultura (Mogołska)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MUISCA</Tag>
+		<English>Culture(Muisca)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MURRI</Tag>
+		<English>Culture(Murri)</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MUTAPA</Tag>
 		<English>Culture(Mutapa)</English>
 		<French>
@@ -5697,6 +6210,15 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Mutapa)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_NABATEANS</Tag>
+		<English>Culture(Nabateans)</English>
+		<French>Culture(Nabatéens)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_NAHUA</Tag>
+		<English>Culture(Nahua)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_NAVAJO</Tag>
@@ -5774,6 +6296,15 @@
 		<Polish>Kultura (Nowozelandzka)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_NIGERIAN</Tag>
+		<English>Culture(Nigerian)</English>
+		<French>Culture(Nigéria)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_NOONGAR</Tag>
+		<English>Culture(Noongar)</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_NOOTKA</Tag>
 		<English>Culture(Nootka)</English>
 		<French>
@@ -5787,6 +6318,11 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Nootka)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_NORMAN</Tag>
+		<English>Culture(Norman)</English>
+		<French>Culture(Normande)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_NUBIAN</Tag>
@@ -5804,6 +6340,15 @@
 		<Polish>Kultura (Nubijska)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_NUMIDIAN</Tag>
+		<English>Culture(Numidian)</English>
+		<French>Culture(Numidien)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ODAWA</Tag>
+		<English>Culture(Odawa)</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_OLMEC</Tag>
 		<English>Culture(Olmec)</English>
 		<French>
@@ -5817,6 +6362,18 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Olmeków)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_OMAN</Tag>
+		<English>Culture(Oman)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_OPHIR</Tag>
+		<English>Culture(Ophir)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ORANG_ASLI</Tag>
+		<English>Culture(Orang Asli)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_OTTOMAN</Tag>
@@ -5834,6 +6391,16 @@
 		<Polish>Kultura (Turecka)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PAIUTE</Tag>
+		<English>Culture(Paiute)</English>
+		<French>Culture(Païute)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PAKISTAN</Tag>
+		<English>Culture(Pakistan)</English>
+		<French>Culture(Pakistanaise)</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PAKISTANI</Tag>
 		<English>Culture(Pakistani)</English>
 		<French>
@@ -5847,6 +6414,16 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Pakistańska)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PALESTINIAN</Tag>
+		<English>Culture(Palestinian)</English>
+		<French>Culture(Paléstinien)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PANAMAN</Tag>
+		<English>Culture(Panaman)</English>
+		<French>Culture(Panaméenne)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PAPUAN</Tag>
@@ -5864,6 +6441,11 @@
 		<Polish>Kultura (Papuaska)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PARAGUAYAN</Tag>
+		<English>Culture(Paraguayan)</English>
+		<French>Culture(Paraguayenne)</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PARTHIAN</Tag>
 		<English>Culture(Parthian)</English>
 		<French>
@@ -5877,6 +6459,10 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Partyjska)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PASHTUN</Tag>
+		<English>Culture(Pashtun)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PERSIAN</Tag>
@@ -5894,6 +6480,20 @@
 		<Polish>Kultura (Perska)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PERUVIAN</Tag>
+		<English>Culture(Peruvian)</English>
+		<French>Culture(Péruvienne)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PHILIPINO</Tag>
+		<English>Culture(Filipino)</English>
+		<French>Culture(Philipines)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PHILISTINES</Tag>
+		<English>Culture(Philistines)</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PHOENICIAN</Tag>
 		<English>Culture(Phoenician)</English>
 		<French>
@@ -5907,6 +6507,10 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Fenicka)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PILAGA</Tag>
+		<English>Culture(Pilaga)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_POLISH</Tag>
@@ -5954,6 +6558,15 @@
 		<Polish>Kultura (Portugalska)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_POVERTY_POINT</Tag>
+		<English>Culture(Poverty Point)</English>
+		<French>Culture(Pointe de Pauvreté)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_POYA</Tag>
+		<English>Culture(Poya)</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PRUSSIAN</Tag>
 		<English>Culture(Prussian)</English>
 		<French>
@@ -5967,6 +6580,27 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Pruska)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PUELCHE</Tag>
+		<English>Culture(Puelche)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PUNTIC</Tag>
+		<English>Culture(Puntic)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_QIN</Tag>
+		<English>Culture(Qin)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_QING</Tag>
+		<English>Culture(Qing)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_QUEBEC</Tag>
+		<English>Culture(Quebec)</English>
+		<French>Culture(Québec)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_QUECHUA</Tag>
@@ -5984,6 +6618,15 @@
 		<Polish>Kultura (Keczua)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_QUERANDI</Tag>
+		<English>Culture(Querandi)</English>
+		<French>Culture(Quérande)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_QULLA</Tag>
+		<English>Culture(Qulla)</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_RAPA_NUI</Tag>
 		<English>Culture(Rapa Nui)</English>
 		<French>
@@ -5997,6 +6640,10 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Rapa Nui)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_RED_OCHER</Tag>
+		<English>Culture(Red Ocher)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ROMAN</Tag>
@@ -6029,6 +6676,29 @@
 		<Polish>Kultura (Rosyjska)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SABBATEAN</Tag>
+		<English>Culture(Sabbatean)</English>
+		<French>Culture(Sabbatéen)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SAFAVIDS</Tag>
+		<English>Culture(Safavids)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SAFFARID</Tag>
+		<English>Culture(Saffarid)</English>
+		<French>Culture(Saffaride)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SAKA</Tag>
+		<English>Culture(Saka)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SARMATIANS</Tag>
+		<English>Culture(Sarmatians)</English>
+		<French>Culture(Sarmatiens)</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SASSANIAN</Tag>
 		<English>Culture(Sassanian)</English>
 		<French>
@@ -6042,6 +6712,11 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Sassanidzka)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SAUDI</Tag>
+		<English>Culture(Saudi)</English>
+		<French>Culture(Saoudite)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SAXON</Tag>
@@ -6089,6 +6764,14 @@
 		<Polish>Kultura (Scytyjska)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SELJUKS</Tag>
+		<English>Culture(Seljuks)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SEMANG</Tag>
+		<English>Culture(Semang)</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SEMINOLE</Tag>
 		<English>Culture(Seminole)</English>
 		<French>
@@ -6102,6 +6785,20 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Seminolska)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SENEGALI</Tag>
+		<English>Culture(Senegali)</English>
+		<French>Culture(Sénégalais)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SENNAR</Tag>
+		<English>Culture(Sennar)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SERBIAN</Tag>
+		<English>Culture(Serbian)</English>
+		<French>Culture(Serbe)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SHANG</Tag>
@@ -6149,6 +6846,19 @@
 		<Polish>Kultura (Syberyjska)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SICAN</Tag>
+		<English>Culture(Sican)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SICILIAN</Tag>
+		<English>Culture(Sicilian)</English>
+		<French>Culture(Sicilienne)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SINTASHTA</Tag>
+		<English>Culture(Sintashta)</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SIOUX</Tag>
 		<English>Culture(Sioux)</English>
 		<French>
@@ -6162,6 +6872,16 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Siuksów)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SLOVAKIAN</Tag>
+		<English>Culture(Slovakian)</English>
+		<French>Culture(Slovaque)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SLOVENIAN</Tag>
+		<English>Culture(Slovenian)</English>
+		<French>Culture(Slovénienne)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SOMALI</Tag>
@@ -6239,6 +6959,11 @@
 		<Polish>Kultura (Steampunk)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SUDANESE</Tag>
+		<English>Culture(Sudanese)</English>
+		<French>Culture(Soudanaise)</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SUMERIAN</Tag>
 		<English>Culture(Sumerian)</English>
 		<French>
@@ -6261,6 +6986,10 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SURINAM</Tag>
+		<English>Culture(Surinam)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SWAHILI</Tag>
@@ -6293,6 +7022,11 @@
 		<Polish>Kultura (Swazi)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SWEDISH</Tag>
+		<English>Culture(Swedish)</English>
+		<French>Culture(Suedoise)</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SWISS</Tag>
 		<English>Culture(Swiss)</English>
 		<French>
@@ -6323,6 +7057,18 @@
 		<Polish>Kultura (Syryjska)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TAGALOG</Tag>
+		<English>Culture(Tagalog)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TAIRONA</Tag>
+		<English>Culture(Tairona)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TAJIKS</Tag>
+		<English>Culture(Tajiks)</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TAMIL</Tag>
 		<English>Culture(Tamil)</English>
 		<French>
@@ -6336,6 +7082,24 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Tamilska)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TANG</Tag>
+		<English>Culture(Tang)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TANZANIAN</Tag>
+		<English>Culture(Tanzanian)</English>
+		<French>Culture(Tanzanienne)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TASMANIAN</Tag>
+		<English>Culture(Tasmanian)</English>
+		<French>Culture(Tasmanienne)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TATARS</Tag>
+		<English>Culture(Tatars)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_THAI</Tag>
@@ -6353,6 +7117,16 @@
 		<Polish>Kultura (Tajlandzka)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_THRACIAN</Tag>
+		<English>Culture(Thracian)</English>
+		<French>Culture(Thrace)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_THREE_KINGDOMS</Tag>
+		<English>Culture(Three Kingdoms)</English>
+		<French>Culture(Trois Royaumes)</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TIBETAN</Tag>
 		<English>Culture(Tibetan)</English>
 		<French>
@@ -6368,6 +7142,14 @@
 		<Polish>Kultura (Tybetańska)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TIWI</Tag>
+		<English>Culture(Tiwi)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TOBA</Tag>
+		<English>Culture(Toba)</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TOLTEC</Tag>
 		<English>Culture(Toltec)</English>
 		<French>
@@ -6381,6 +7163,15 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Toltecka)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TOTONAC</Tag>
+		<English>Culture(Totonac)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TRANSOXANIAN</Tag>
+		<English>Culture(Transoxanian)</English>
+		<French>Culture(Transoxanien)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TROJAN</Tag>
@@ -6413,6 +7204,19 @@
 		<Polish>Kultura (Tuaregów)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TUCANO</Tag>
+		<English>Culture(Tucano)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TUNGUS</Tag>
+		<English>Culture(Tungus)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TUNISIAN</Tag>
+		<English>Culture(Tunisian)</English>
+		<French>Culture(Tunisien)</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TUPI</Tag>
 		<English>Culture(Tupi)</English>
 		<French>
@@ -6426,6 +7230,11 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Tupi)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TURKISH</Tag>
+		<English>Culture(Turkish)</English>
+		<French>Culture(Turc)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TURKMEN</Tag>
@@ -6456,6 +7265,34 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Ujgurska)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_UKRAINIAN</Tag>
+		<English>Culture(Ukrainian)</English>
+		<French>Culture(Ukrainien)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_URUGUAYAN</Tag>
+		<English>Culture(Uruguayan)</English>
+		<French>Culture(Uruguayen)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_UZBEKS</Tag>
+		<English>Culture(Uzbeks)</English>
+		<French>Culture(Ouzbeks)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_VALDIVIA</Tag>
+		<English>Culture(Valdivia)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_VANATU</Tag>
+		<English>Culture(Vanatu)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_VANDAL</Tag>
+		<English>Culture(Vandal)</English>
+		<French>Culture(Vandale)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_VENEZUELAN</Tag>
@@ -6503,6 +7340,23 @@
 		<Polish>Kultura (Wikingów)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_WALLACHIAN</Tag>
+		<English>Culture(Wallachian)</English>
+		<French>Culture(Wallachien)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_WARAY</Tag>
+		<English>Culture(Waray)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_WARI</Tag>
+		<English>Culture(Wari)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_WAYUU</Tag>
+		<English>Culture(Wayuu)</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_WELSH</Tag>
 		<English>Culture(Welsh)</English>
 		<French>
@@ -6516,6 +7370,14 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Walijska)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_XIA</Tag>
+		<English>Culture(Xia)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_XIANBEI</Tag>
+		<English>Culture(Xianbei)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_XIONGU</Tag>
@@ -6533,6 +7395,10 @@
 		<Polish>Kultura (Xiongnu)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_YAGUA</Tag>
+		<English>Culture(Yagua)</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_YAMATO</Tag>
 		<English>Culture(Yamato)</English>
 		<French>
@@ -6548,6 +7414,14 @@
 		<Polish>Kultura (Yamato)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_YOLNGU</Tag>
+		<English>Culture(Yolngu)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ZANZIBAR</Tag>
+		<English>Culture(Zanzibar)</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ZAPOTEC</Tag>
 		<English>Culture(Zapotec)</English>
 		<French>
@@ -6561,6 +7435,14 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Kultura (Zapotecka)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ZENU</Tag>
+		<English>Culture(Zenu)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ZIMBABWE</Tag>
+		<English>Culture(Zimbabwe)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ZULU</Tag>
@@ -6750,22 +7632,6 @@
 		<Polish>Artysta</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_ERA_PREHISTORIC</Tag>
-		<English>Era(Prehistoric)</English>
-		<French>
-			<Text>Ere(Pré-histoire)</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>(Epoche) Vorgeschichte</German>
-		<Spanish>
-			<Text>Prehistoria:Unidades de la Prehistoria</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Era (Prehistoryczna)</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_ERA_ANCIENT</Tag>
 		<English>Era(Ancient)</English>
 		<French>
@@ -6780,70 +7646,6 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Era (Starożytność)</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_ERA_CLASSICAL</Tag>
-		<English>Era(Classical)</English>
-		<French>
-			<Text>Ere(Classique)</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>(Epoche) Klassik</German>
-		<Spanish>
-			<Text>Época clásica:Unidades de la Época clásica</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Era (Klasyczna)</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_ERA_MEDIEVAL</Tag>
-		<English>Era(Medieval)</English>
-		<French>
-			<Text>Ere(Moyen-Age)</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>(Epoche) Mittelalter</German>
-		<Spanish>
-			<Text>Edad Media:Unidades de la Edad Media</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Era (Sredniowiecze)</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_ERA_RENAISSANCE</Tag>
-		<English>Era(Renaissance)</English>
-		<French>
-			<Text>Ere(Renaissance)</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>(Epoche) Renaissance</German>
-		<Spanish>
-			<Text>Renacimiento:Unidades del Renacimiento</Text>
-			<Gender>Male:Female</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Era (Renesans)</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_ERA_INDUSTRIAL</Tag>
-		<English>Era(Industrial)</English>
-		<French>
-			<Text>Ere(Industrielle)</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>(Epoche) Industriezeitalter</German>
-		<Spanish>
-			<Text>Época industrial:Unidades de la Época industrial</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Era (Przemysłowa)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_ERA_ATOMIC</Tag>
@@ -6862,32 +7664,42 @@
 		<Polish>Era (Współczesna)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_ERA_INFORMATION</Tag>
-		<English>Era(Information)</English>
-		<French>Ere(Information)</French>
-		<German>(Epoche) Informationszeitalter</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_ERA_NANOTECH</Tag>
-		<English>Era(Nanotech)</English>
-		<French>Ere(Nanotech)</French>
-		<German>(Epoche) Nanozeitalter</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_ERA_TRANSHUMAN</Tag>
-		<English>Era(Transhuman)</English>
+		<Tag>TXT_KEY_UNITCOMBAT_ERA_CLASSICAL</Tag>
+		<English>Era(Classical)</English>
 		<French>
-			<Text>Ere(Transhumaine)</Text>
+			<Text>Ere(Classique)</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>(Epoche) Transhumanismus</German>
+		<German>(Epoche) Klassik</German>
 		<Spanish>
-			<Text>Época transhumana:Unidades de la Época transhumana</Text>
+			<Text>Época clásica:Unidades de la Época clásica</Text>
 			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Era (Transhumanistyczna)</Polish>
+		<Polish>Era (Klasyczna)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_ERA_COSMIC</Tag>
+		<English>Era(Cosmic)</English>
+		<French>Ere(Cosmique)</French>
+		<German>(Epoche) Kosmisches Zeitalter</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_ERA_FUTURE</Tag>
+		<English>Era(Future)</English>
+		<French>
+			<Text>Ere(Future)</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Epoche) Zukunft</German>
+		<Spanish>
+			<Text>Futuro:Unidades del Futuro</Text>
+			<Gender>Male:Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Era (Przyszłość)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_ERA_GALACTIC</Tag>
@@ -6906,10 +7718,80 @@
 		<Polish>Era (Galaktyczna)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_ERA_COSMIC</Tag>
-		<English>Era(Cosmic)</English>
-		<French>Ere(Cosmique)</French>
-		<German>(Epoche) Kosmisches Zeitalter</German>
+		<Tag>TXT_KEY_UNITCOMBAT_ERA_INDUSTRIAL</Tag>
+		<English>Era(Industrial)</English>
+		<French>
+			<Text>Ere(Industrielle)</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Epoche) Industriezeitalter</German>
+		<Spanish>
+			<Text>Época industrial:Unidades de la Época industrial</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Era (Przemysłowa)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_ERA_INFORMATION</Tag>
+		<English>Era(Information)</English>
+		<French>Ere(Information)</French>
+		<German>(Epoche) Informationszeitalter</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_ERA_MEDIEVAL</Tag>
+		<English>Era(Medieval)</English>
+		<French>
+			<Text>Ere(Moyen-Age)</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Epoche) Mittelalter</German>
+		<Spanish>
+			<Text>Edad Media:Unidades de la Edad Media</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Era (Sredniowiecze)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_ERA_NANOTECH</Tag>
+		<English>Era(Nanotech)</English>
+		<French>Ere(Nanotech)</French>
+		<German>(Epoche) Nanozeitalter</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_ERA_PREHISTORIC</Tag>
+		<English>Era(Prehistoric)</English>
+		<French>
+			<Text>Ere(Pré-histoire)</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Epoche) Vorgeschichte</German>
+		<Spanish>
+			<Text>Prehistoria:Unidades de la Prehistoria</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Era (Prehistoryczna)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_ERA_RENAISSANCE</Tag>
+		<English>Era(Renaissance)</English>
+		<French>
+			<Text>Ere(Renaissance)</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Epoche) Renaissance</German>
+		<Spanish>
+			<Text>Renacimiento:Unidades del Renacimiento</Text>
+			<Gender>Male:Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Era (Renesans)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_ERA_TRANSCENDENT</Tag>
@@ -6918,20 +7800,20 @@
 		<German>(Epoche) Transzendenz</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_ERA_FUTURE</Tag>
-		<English>Era(Future)</English>
+		<Tag>TXT_KEY_UNITCOMBAT_ERA_TRANSHUMAN</Tag>
+		<English>Era(Transhuman)</English>
 		<French>
-			<Text>Ere(Future)</Text>
+			<Text>Ere(Transhumaine)</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>(Epoche) Zukunft</German>
+		<German>(Epoche) Transhumanismus</German>
 		<Spanish>
-			<Text>Futuro:Unidades del Futuro</Text>
-			<Gender>Male:Female</Gender>
+			<Text>Época transhumana:Unidades de la Época transhumana</Text>
+			<Gender>Female</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Era (Przyszłość)</Polish>
+		<Polish>Era (Transhumanistyczna)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_EXECUTIVE</Tag>
@@ -7035,11 +7917,6 @@
 		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 for being a %s2_UNITCOMBAT type unit[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 car unité de type  %s2_UNITCOMBAT [COLOR_REVERT]</French>
 		<Polish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 za bycie %s2_UNITCOMBAT rodzajem jednostki[COLOR_REVERT]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DOMAIN_FREE_EXPERIENCE</Tag>
-		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 for being a %s2_DOMAIN type unit[COLOR_REVERT]</English>
-		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 en étant une unité de type %s2_DOMAIN[COLOR_REVERT]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_GRAVITY_DRIVE_SHIPS</Tag>
@@ -7398,6 +8275,11 @@
 		<French>Répare (Tech)</French>
 		<German>(Versorgung) repariert Technologie</German>
 		<Polish>Leczy (Jedn. Technologiczne)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_HEALTH_CARE</Tag>
+		<English>Health Care Units</English>
+		<French>Unités de soins</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_HELICOPTER</Tag>
@@ -8186,6 +9068,31 @@
 		<Polish>Mobilność (Bezzałogowiec)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_MOUNTED</Tag>
+		<English>Mounted</English>
+		<French>
+			<Text>Unités montées</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>
+			<Text>Berittene Einheiten:Berittene Einheiten:Berittene Einheiten:Berittene Einheiten</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</German>
+		<Italian>
+			<Text>Unità montata:Unità montate</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Unidad montada:Unidades montadas</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Jednostki konne</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_MOUNT_BEAR</Tag>
 		<English>Mount(Bear)</English>
 		<French>
@@ -8366,31 +9273,6 @@
 		<Polish>Wierzchowiec (Zebra)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_MOUNTED</Tag>
-		<English>Mounted</English>
-		<French>
-			<Text>Unités montées</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Berittene Einheiten:Berittene Einheiten:Berittene Einheiten:Berittene Einheiten</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</German>
-		<Italian>
-			<Text>Unità montata:Unità montate</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Unidad montada:Unidades montadas</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Jednostki konne</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_NANITE</Tag>
 		<English>Nanites</English>
 		<French>
@@ -8525,6 +9407,21 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_PROMOTED_ARMED_GUARD</Tag>
+		<English>Promoted(Armed Guard)</English>
+		<French>
+			<Text>Prom.(Garde armée)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Spanish>
+			<Text>Ascendida para evasión:Unidades ascendidas para ARMED_GUARD</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Awansowany (ARMED_GUARD)</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_PROMOTED_CAUTIOUS</Tag>
 		<English>Promoted(Cautious)</English>
 		<French>
@@ -8556,19 +9453,13 @@
 		<Polish>Awansowany (Kabina)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_PROMOTED_ARMED_GUARD</Tag>
-		<English>Promoted(Armed Guard)</English>
+		<Tag>TXT_KEY_UNITCOMBAT_PROMOTED_TRANSPORT_CAPTIVES</Tag>
+		<English>Promoted(Transport Captives)</English>
 		<French>
-			<Text>Prom.(Garde armée)</Text>
+			<Text>Prom.(Transport de Prisonniers)</Text>
 			<Gender>Female</Gender>
-			<Plural>0</Plural>
+			<Plural>1</Plural>
 		</French>
-		<Spanish>
-			<Text>Ascendida para evasión:Unidades ascendidas para ARMED_GUARD</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Awansowany (ARMED_GUARD)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_PROMOTED_TRANSPORT_FIGHTERS</Tag>
@@ -8644,15 +9535,6 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Awansowany (Transport Wojsk)</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_PROMOTED_TRANSPORT_CAPTIVES</Tag>
-		<English>Promoted(Transport Captives)</English>
-		<French>
-			<Text>Prom.(Transport de Prisonniers)</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_QUALITY_DIVINE</Tag>
@@ -9945,11 +10827,6 @@
 		<German>(Größe) mikroskopisch klein</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_SPACE_WORKER</Tag>
-		<English>Space Workers</English>
-		<French>Ouvriers Spatiaux</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_SIZE_SMALL</Tag>
 		<English>Size(Small)</English>
 		<French>
@@ -9995,6 +10872,11 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Stakek Kosmiczny z Źaglem Słonecznym</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_SPACE_WORKER</Tag>
+		<English>Space Workers</English>
+		<French>Ouvriers Spatiaux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_SPECIES_AI</Tag>
@@ -10954,21 +11836,6 @@
 		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Lekka Kusza )</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_LONG_RANGE_MISSILE</Tag>
-		<English>Wields(Dist Backup Long Range Missiles)</English>
-		<French>
-			<Text>Equipem.: Missile à longue porté - Soutien à dist.)</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<Spanish>
-			<Text>Misiles de largo alcance (de reserva):Unidades con misiles de largo alcance (de reserva)</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Pociski Dalekiego Zasięgu)</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_LONGBOW</Tag>
 		<English>Wields(Dist Backup Longbow)</English>
 		<French>
@@ -10982,6 +11849,21 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Długi łuk)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_LONG_RANGE_MISSILE</Tag>
+		<English>Wields(Dist Backup Long Range Missiles)</English>
+		<French>
+			<Text>Equipem.: Missile à longue porté - Soutien à dist.)</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Misiles de largo alcance (de reserva):Unidades con misiles de largo alcance (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Pociski Dalekiego Zasięgu)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_MAGNETIC</Tag>
@@ -11127,21 +12009,6 @@
 		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Ostrzał Artyleryjski)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_SHORT_RANGE_MISSILE</Tag>
-		<English>Wields(Dist Backup Short Range Missiles)</English>
-		<French>
-			<Text>Equipem.: Missiles à courte portée - Soutien à dist.</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<Spanish>
-			<Text>Misiles de corto alcance (de reserva):Unidades con misiles de corto alcance (de reserva)</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Pociski Krótkiego Zasięgu)</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_SHORTBOW</Tag>
 		<English>Wields(Dist Backup Shortbow)</English>
 		<French>
@@ -11155,6 +12022,21 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Krótki Łuk)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_SHORT_RANGE_MISSILE</Tag>
+		<English>Wields(Dist Backup Short Range Missiles)</English>
+		<French>
+			<Text>Equipem.: Missiles à courte portée - Soutien à dist.</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Misiles de corto alcance (de reserva):Unidades con misiles de corto alcance (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Broń Zapasowa Dyst. Pociski Krótkiego Zasięgu)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_SLING</Tag>
@@ -11790,21 +12672,6 @@
 		<Polish>Uzbrojenie (Dystansowa Lekka Kusza)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_LONG_RANGE_MISSILE</Tag>
-		<English>Wields(Distance Long Range Missiles)</English>
-		<French>
-			<Text>Equipem.: Missiles Longue portée - à Distance</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<Spanish>
-			<Text>Misiles de largo alcance (a distancia):Unidades con misiles de largo alcance (a distancia)</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Uzbrojenie (Dystansowa Pociski Dalekiego Zasięgu)</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_LONGBOW</Tag>
 		<English>Wields(Distance Longbow)</English>
 		<French>
@@ -11818,6 +12685,21 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Uzbrojenie (Dystansowa Długi Łuk)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_LONG_RANGE_MISSILE</Tag>
+		<English>Wields(Distance Long Range Missiles)</English>
+		<French>
+			<Text>Equipem.: Missiles Longue portée - à Distance</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Misiles de largo alcance (a distancia):Unidades con misiles de largo alcance (a distancia)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Dystansowa Pociski Dalekiego Zasięgu)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_MAGNETIC</Tag>
@@ -11968,21 +12850,6 @@
 		<Polish>Uzbrojenie (Dystansowa Ostrzał Artyleryjski)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_SHORT_RANGE_MISSILE</Tag>
-		<English>Wields(Distance Short Range Missiles)</English>
-		<French>
-			<Text>Equipem.: Missiles à Courte Portée - à Distance</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<Spanish>
-			<Text>Misiles de corto alcance (a distancia):Unidades con misiles de corto alcance (a distancia)</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Uzbrojenie (Dystansowa Pociski Krótkiego Zasięgu)</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_SHORTBOW</Tag>
 		<English>Wields(Distance Shortbow)</English>
 		<French>
@@ -11996,6 +12863,21 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Uzbrojenie (Dystansowa Krótki Łuk)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_SHORT_RANGE_MISSILE</Tag>
+		<English>Wields(Distance Short Range Missiles)</English>
+		<French>
+			<Text>Equipem.: Missiles à Courte Portée - à Distance</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Misiles de corto alcance (a distancia):Unidades con misiles de corto alcance (a distancia)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Dystansowa Pociski Krótkiego Zasięgu)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_SLING</Tag>
@@ -13346,857 +14228,4 @@
 		</Spanish>
 		<Polish>Statek Wormhole</Polish>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ADENA</Tag>
-		<English>Culture(Adena)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_AFGHANISTAN</Tag>
-		<English>Culture(Afghanistan)</English>
-		<French>Culture(Afghane)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_AKSUMITE</Tag>
-		<English>Culture(Aksumite)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ALACALUFE</Tag>
-		<English>Culture(Alacalufe)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ALBANIAN</Tag>
-		<English>Culture(Albanian)</English>
-		<French>Culture(Albanie)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ALEMANNI</Tag>
-		<English>Culture(Alemanni)</English>
-		<French>Culture(Alémanique)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ALGIER</Tag>
-		<English>Culture(Algier)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_AMIS</Tag>
-		<English>Culture(Amis)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ANDAMANESE</Tag>
-		<English>Culture(Andamanese)</English>
-		<French>Culture(Andamanaise)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ANGOLAN</Tag>
-		<English>Culture(Angolan)</English>
-		<French>Culture(Angola)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ARAGON</Tag>
-		<English>Culture(Aragon)</English>
-		<French>Culture(Aragone)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_AVARS</Tag>
-		<English>Culture(Avars)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_AVERNI</Tag>
-		<English>Culture(Averni)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_AZANDE</Tag>
-		<English>Culture(Azande)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BAHRAIN</Tag>
-		<English>Culture(Bahrain)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BACTRIC</Tag>
-		<English>Culture(Bactric)</English>
-		<French>Culture(Bactrique)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BANGLADESH</Tag>
-		<English>Culture(Bangladesh)</English>
-		<French>Culture(Bangladeshe)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BASHKIR</Tag>
-		<English>Culture(Bashkir)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BATAVI</Tag>
-		<English>Culture(Batavi)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BATEK</Tag>
-		<English>Culture(Batek)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BAVARIAN</Tag>
-		<English>Culture(Bavarian)</English>
-		<French>Culture(Bavaroise)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BEDOUIN</Tag>
-		<English>Culture(Bedouin)</English>
-		<French>Culture(Bédouine)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BELIZE</Tag>
-		<English>Culture(Belize)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BOLIVIAN</Tag>
-		<English>Culture(Bolivian)</English>
-		<French>Culture(Bolivienne)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BRETON</Tag>
-		<English>Culture(Breton)</English>
-		<French>Culture(Bretonne)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BRITON</Tag>
-		<English>Culture(Briton)</English>
-		<French>Culture(Britanique)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BURGUNDI</Tag>
-		<English>Culture(Burgundi)</English>
-		<French>Culture(Burgonde)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CAMBEBA</Tag>
-		<English>Culture(Cambeba)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CANARI</Tag>
-		<English>Culture(Canari)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CAPAYAN</Tag>
-		<English>Culture(Capayan)</English>
-		<French>Culture(Capayenne)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CARAL_SUPE</Tag>
-		<English>Culture(Caral Supe)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CATALONIAN</Tag>
-		<English>Culture(Catalonian)</English>
-		<French>Culture(catalane)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CELTIBERIAN</Tag>
-		<English>Culture(Celtiberian)</English>
-		<French>Culture(Celtibérienne)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CHACHAPOYA</Tag>
-		<English>Culture(Chachapoya)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CHAVIN</Tag>
-		<English>Culture(Chavin)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CHECHENIAN</Tag>
-		<English>Culture(Chechenian)</English>
-		<French>Culture(Tchétchénienne)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CHILEAN</Tag>
-		<English>Culture(Chilean)</English>
-		<French>Culture(Chilienne)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CHIMU</Tag>
-		<English>Culture(Chimu)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CHORESM</Tag>
-		<English>Culture(Choresm)</English>
-		<French>Culture(Choresme)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CZECH</Tag>
-		<English>Culture(Czech)</English>
-		<French>Culture(Tchèque)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_DACIAN</Tag>
-		<English>Culture(Dacian)</English>
-		<French>Culture(Dacienne)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_DAYAK</Tag>
-		<English>Culture(Dayak)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_DRAVIDIAN</Tag>
-		<English>Culture(Dravidian)</English>
-		<French>Culture(Dravidienne)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ECUADORIAN</Tag>
-		<English>Culture(Ecuadorian)</English>
-		<French>Culture(Equatorienne)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ESTONIAN</Tag>
-		<English>Culture(Estonian)</English>
-		<French>Culture(Estonienne)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ETRUSCAN</Tag>
-		<English>Culture(Etruscan)</English>
-		<French>Culture(Etrusque)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_FATIMID</Tag>
-		<English>Culture(Fatimid)</English>
-		<French>Culture(Fatimide)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_FUEGIAN</Tag>
-		<English>Culture(Fuegian)</English>
-		<French>Culture(Fuegienne)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_FURAWI</Tag>
-		<English>Culture(Furawi)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GALATIAN</Tag>
-		<English>Culture(Galatian)</English>
-		<French>Culture(Galatienne)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GAUCHO</Tag>
-		<English>Culture(Gaucho)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GEORGIAN</Tag>
-		<English>Culture(Georgian)</English>
-		<French>Culture(Géorgienne)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GHURID</Tag>
-		<English>Culture(Ghurid)</English>
-		<French>Culture(Ghuride)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GOKTURK</Tag>
-		<English>Culture(Gokturk)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GOLDEN_HORDE</Tag>
-		<English>Culture(Golden Horde)</English>
-		<French>Culture(Horde dorée)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GUAM</Tag>
-		<English>Culture(Guam)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GUANCHES</Tag>
-		<English>Culture(Guanches)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GUARANI</Tag>
-		<English>Culture(Guarani)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GUATEMALA</Tag>
-		<English>Culture(Guatemala)</English>
-		<French>Culture(Guatemalienne)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GUYANA</Tag>
-		<English>Culture(Guyana)</English>
-		<French>Culture(Guyanaise)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_HELVETII</Tag>
-		<English>Culture(Helvetii)</English>
-		<French>Culture(Helvète)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_HEMUDU</Tag>
-		<English>Culture(Hemudu)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_HIMYARITE</Tag>
-		<English>Culture(Himyarite)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_HONGKONG</Tag>
-		<English>Culture(HongKong)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_HOPEWELL</Tag>
-		<English>Culture(Hopewell)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_HURRIANS</Tag>
-		<English>Culture(Hurrians)</English>
-		<French>Culture(Hurrons)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_HYKSOSI</Tag>
-		<English>Culture(Hyksosi)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ILLYRIAN</Tag>
-		<English>Culture(Illyrian)</English>
-		<French>Culture(Illyrienne)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ILOCANO</Tag>
-		<English>Culture(Ilocano)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_INDUS</Tag>
-		<English>Culture(Indus)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_IRANIAN</Tag>
-		<English>Culture(Iranian)</English>
-		<French>Culture(Iranienne)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_IRAQUI</Tag>
-		<English>Culture(Iraqui)</English>
-		<French>Culture(Iraquienne)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_JAVANESE</Tag>
-		<English>Culture(Javanese)</English>
-		<French>Culture(Javanaise)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_JUTES</Tag>
-		<English>Culture(Jutes)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_KENYAN</Tag>
-		<English>Culture(Kenyan)</English>
-		<French>Culture(Kenyenne)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_KHAZAK</Tag>
-		<English>Culture(Kazakh)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_KHAZARS</Tag>
-		<English>Culture(Khazars)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_KHITAN</Tag>
-		<English>Culture(Khitan)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_KILLKE</Tag>
-		<English>Culture(Killke)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_KITARA</Tag>
-		<English>Culture(Kitara)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_KOGI</Tag>
-		<English>Culture(Kogi)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_KURDISH</Tag>
-		<English>Culture(Kurdish)</English>
-		<French>Culture(Kurde)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_KUSH</Tag>
-		<English>Culture(Kush)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_KUSHAN</Tag>
-		<English>Culture(Kushan)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_KUWAIT</Tag>
-		<English>Culture(Kuwait)</English>
-		<French>Culture(Koweitienne)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_LATVIAN</Tag>
-		<English>Culture(Latvian)</English>
-		<French>Culture(Létonne)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_LA_PLATA</Tag>
-		<English>Culture(La Plata)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_LEBANON</Tag>
-		<English>Culture(Lebanon)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_LIBYAN</Tag>
-		<English>Culture(Libyan)</English>
-		<French>Culture(Libyenne)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_LITHUANIAN</Tag>
-		<English>Culture(Lithuanian)</English>
-		<French>Culture(Lituanienne)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_LONGOBARDI</Tag>
-		<English>Culture(Longobardi)</English>
-		<French>Culture(Longobarde)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_LULE</Tag>
-		<English>Culture(Lule)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_LUNDA</Tag>
-		<English>Culture(Lunda)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MING</Tag>
-		<English>Culture(Ming)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MITTANNI</Tag>
-		<English>Culture(Mittanni)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MOCOVI</Tag>
-		<English>Culture(Mocovi)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MOHAWK</Tag>
-		<English>Culture(Mohawk)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MOLLO</Tag>
-		<English>Culture(Mollo)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MUISCA</Tag>
-		<English>Culture(Muisca)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MURRI</Tag>
-		<English>Culture(Murri)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_NABATEANS</Tag>
-		<English>Culture(Nabateans)</English>
-		<French>Culture(Nabatéens)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_NAHUA</Tag>
-		<English>Culture(Nahua)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_NIGERIAN</Tag>
-		<English>Culture(Nigerian)</English>
-		<French>Culture(Nigéria)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_LUSITANI</Tag>
-		<English>Culture(Lusitani)</English>
-		<French>Culture(Lusitanie)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_NOONGAR</Tag>
-		<English>Culture(Noongar)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_NORMAN</Tag>
-		<English>Culture(Norman)</English>
-		<French>Culture(Normande)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_NUMIDIAN</Tag>
-		<English>Culture(Numidian)</English>
-		<French>Culture(Numidien)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ODAWA</Tag>
-		<English>Culture(Odawa)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_OMAN</Tag>
-		<English>Culture(Oman)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_OPHIR</Tag>
-		<English>Culture(Ophir)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ORANG_ASLI</Tag>
-		<English>Culture(Orang Asli)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PAIUTE</Tag>
-		<English>Culture(Paiute)</English>
-		<French>Culture(Païute)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PAKISTAN</Tag>
-		<English>Culture(Pakistan)</English>
-		<French>Culture(Pakistanaise)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PALESTINIAN</Tag>
-		<English>Culture(Palestinian)</English>
-		<French>Culture(Paléstinien)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_LYDIANS</Tag>
-		<English>Culture(Lydians)</English>
-		<French>Culture(Lydiens)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PANAMAN</Tag>
-		<English>Culture(Panaman)</English>
-		<French>Culture(Panaméenne)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PARAGUAYAN</Tag>
-		<English>Culture(Paraguayan)</English>
-		<French>Culture(Paraguayenne)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PASHTUN</Tag>
-		<English>Culture(Pashtun)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PERUVIAN</Tag>
-		<English>Culture(Peruvian)</English>
-		<French>Culture(Péruvienne)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PHILIPINO</Tag>
-		<English>Culture(Filipino)</English>
-		<French>Culture(Philipines)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PHILISTINES</Tag>
-		<English>Culture(Philistines)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PILAGA</Tag>
-		<English>Culture(Pilaga)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_POVERTY_POINT</Tag>
-		<English>Culture(Poverty Point)</English>
-		<French>Culture(Pointe de Pauvreté)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_POYA</Tag>
-		<English>Culture(Poya)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PUELCHE</Tag>
-		<English>Culture(Puelche)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MALAGASY</Tag>
-		<English>Culture(Malagasy)</English>
-		<French>Culture(Malagache)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_PUNTIC</Tag>
-		<English>Culture(Puntic)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_QIN</Tag>
-		<English>Culture(Qin)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_QING</Tag>
-		<English>Culture(Qing)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_QUEBEC</Tag>
-		<English>Culture(Quebec)</English>
-		<French>Culture(Québec)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_QUERANDI</Tag>
-		<English>Culture(Querandi)</English>
-		<French>Culture(Quérande)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_QULLA</Tag>
-		<English>Culture(Qulla)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_RED_OCHER</Tag>
-		<English>Culture(Red Ocher)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SABBATEAN</Tag>
-		<English>Culture(Sabbatean)</English>
-		<French>Culture(Sabbatéen)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SAFAVIDS</Tag>
-		<English>Culture(Safavids)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SAFFARID</Tag>
-		<English>Culture(Saffarid)</English>
-		<French>Culture(Saffaride)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MAMELUKS</Tag>
-		<English>Culture(Mameluks)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SAKA</Tag>
-		<English>Culture(Saka)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SARMATIANS</Tag>
-		<English>Culture(Sarmatians)</English>
-		<French>Culture(Sarmatiens)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SELJUKS</Tag>
-		<English>Culture(Seljuks)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SEMANG</Tag>
-		<English>Culture(Semang)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SENEGALI</Tag>
-		<English>Culture(Senegali)</English>
-		<French>Culture(Sénégalais)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SENNAR</Tag>
-		<English>Culture(Sennar)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SERBIAN</Tag>
-		<English>Culture(Serbian)</English>
-		<French>Culture(Serbe)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SICAN</Tag>
-		<English>Culture(Sican)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SICILIAN</Tag>
-		<English>Culture(Sicilian)</English>
-		<French>Culture(Sicilienne)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SINTASHTA</Tag>
-		<English>Culture(Sintashta)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MANI</Tag>
-		<English>Culture(Mani)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SLOVAKIAN</Tag>
-		<English>Culture(Slovakian)</English>
-		<French>Culture(Slovaque)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SLOVENIAN</Tag>
-		<English>Culture(Slovenian)</English>
-		<French>Culture(Slovénienne)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SUDANESE</Tag>
-		<English>Culture(Sudanese)</English>
-		<French>Culture(Soudanaise)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SURINAM</Tag>
-		<English>Culture(Surinam)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SWEDISH</Tag>
-		<English>Culture(Swedish)</English>
-		<French>Culture(Suedoise)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TAGALOG</Tag>
-		<English>Culture(Tagalog)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TAIRONA</Tag>
-		<English>Culture(Tairona)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TAJIKS</Tag>
-		<English>Culture(Tajiks)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TANG</Tag>
-		<English>Culture(Tang)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TANZANIAN</Tag>
-		<English>Culture(Tanzanian)</English>
-		<French>Culture(Tanzanienne)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TASMANIAN</Tag>
-		<English>Culture(Tasmanian)</English>
-		<French>Culture(Tasmanienne)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TATARS</Tag>
-		<English>Culture(Tatars)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_THRACIAN</Tag>
-		<English>Culture(Thracian)</English>
-		<French>Culture(Thrace)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_THREE_KINGDOMS</Tag>
-		<English>Culture(Three Kingdoms)</English>
-		<French>Culture(Trois Royaumes)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TIWI</Tag>
-		<English>Culture(Tiwi)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MEDES</Tag>
-		<English>Culture(Medes)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TOBA</Tag>
-		<English>Culture(Toba)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TOTONAC</Tag>
-		<English>Culture(Totonac)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TRANSOXANIAN</Tag>
-		<English>Culture(Transoxanian)</English>
-		<French>Culture(Transoxanien)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TUCANO</Tag>
-		<English>Culture(Tucano)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TUNGUS</Tag>
-		<English>Culture(Tungus)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TUNISIAN</Tag>
-		<English>Culture(Tunisian)</English>
-		<French>Culture(Tunisien)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_TURKISH</Tag>
-		<English>Culture(Turkish)</English>
-		<French>Culture(Turc)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_UKRAINIAN</Tag>
-		<English>Culture(Ukrainian)</English>
-		<French>Culture(Ukrainien)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_URUGUAYAN</Tag>
-		<English>Culture(Uruguayan)</English>
-		<French>Culture(Uruguayen)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_UZBEKS</Tag>
-		<English>Culture(Uzbeks)</English>
-		<French>Culture(Ouzbeks)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MELANESIAN</Tag>
-		<English>Culture(Melanesian)</English>
-		<French>Culture(Mélanésien)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_VALDIVIA</Tag>
-		<English>Culture(Valdivia)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_VANATU</Tag>
-		<English>Culture(Vanatu)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_VANDAL</Tag>
-		<English>Culture(Vandal)</English>
-		<French>Culture(Vandale)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SAUDI</Tag>
-		<English>Culture(Saudi)</English>
-		<French>Culture(Saoudite)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_WALLACHIAN</Tag>
-		<English>Culture(Wallachian)</English>
-		<French>Culture(Wallachien)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_WARAY</Tag>
-		<English>Culture(Waray)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_WARI</Tag>
-		<English>Culture(Wari)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_WAYUU</Tag>
-		<English>Culture(Wayuu)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_XIA</Tag>
-		<English>Culture(Xia)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_XIANBEI</Tag>
-		<English>Culture(Xianbei)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MICRONESIAN</Tag>
-		<English>Culture(Micronesian)</English>
-		<French>Culture(Micronésienne)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_YAGUA</Tag>
-		<English>Culture(Yagua)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_YOLNGU</Tag>
-		<English>Culture(Yolngu)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ZANZIBAR</Tag>
-		<English>Culture(Zanzibar)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ZENU</Tag>
-		<English>Culture(Zenu)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ZIMBABWE</Tag>
-		<English>Culture(Zimbabwe)</English>
-	</TEXT>
-</Civ4GameText>
+	</Civ4GameText>

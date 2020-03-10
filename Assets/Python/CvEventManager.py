@@ -450,6 +450,10 @@ class CvEventManager:
 							ChangePlayer.updateGraphics()
 							return 1
 
+						elif key == InputTypes.KB_E:
+							import EventTriggerScreen, CvScreenEnums
+							CvScreensInterface.screenMap[CvScreenEnums.EVENTTRIGGER_SCREEN] = EventTriggerScreen.EventTriggerScreen(CvScreenEnums.EVENTTRIGGER_SCREEN)
+
 			elif iModifiers == 3:
 
 				if key == 16: # D
@@ -986,12 +990,12 @@ class CvEventManager:
 					iY = CyUnitW.getY()
 					if iPlayerW == iPlayerAct:
 						if CyUnitL.isHiddenNationality():
-							szTxt = TRNSLTR.getText("TXT_KEY_SNEAK_HIDDEN",())
+							szTxt = TRNSLTR.getText("TXT_KEY_UNKNOWN_NATION",())
 						else:
 							szTxt = CyPlayerL.getName()
 					elif iPlayerL == iPlayerAct:
 						if CyUnitW.isHiddenNationality():
-							szTxt = TRNSLTR.getText("TXT_KEY_SNEAK_HIDDEN",())
+							szTxt = TRNSLTR.getText("TXT_KEY_UNKNOWN_NATION",())
 						else:
 							szTxt = CyPlayerW.getName()
 				# Sneak promo
@@ -1005,13 +1009,13 @@ class CvEventManager:
 						# Message
 						if iPlayerW == iPlayerAct:
 							CvUtil.sendMessage(
-								TRNSLTR.getText("TXT_KEY_SNEAK_YOU", (szTxt, iStolen)), iPlayerW, 16,
+								TRNSLTR.getText("TXT_KEY_MESSAGE_SNEAK_YOU", (szTxt, iStolen)), iPlayerW, 16,
 								'Art/Interface/Buttons/Process/spyprocessmeager.dds',
 								ColorTypes(44), iX, iY, True, True, bForce=False
 							)
 						elif iPlayerL == iPlayerAct:
 							CvUtil.sendMessage(
-								TRNSLTR.getText("TXT_KEY_SNEAK_FROM",(szTxt, iStolen)), iPlayerL, 16,
+								TRNSLTR.getText("TXT_KEY_MESSAGE_SNEAK",(szTxt, iStolen)), iPlayerL, 16,
 								'Art/Interface/Buttons/Process/spyprocessmeager.dds',
 								ColorTypes(44), iX, iY, True, True, bForce=False
 							)
@@ -1048,13 +1052,13 @@ class CvEventManager:
 							# Message
 							if iPlayerW == iPlayerAct:
 								CvUtil.sendMessage(
-									TRNSLTR.getText("TXT_KEY_INDUSTRYESPIONAGE_YOU", (szTxt, iStolen)), iPlayerW, 16,
+									TRNSLTR.getText("TXT_KEY_MESSAGE_INDUSTRYESPIONAGE_YOU", (szTxt, iStolen)), iPlayerW, 16,
 									'Art/Interface/Buttons/Process/processresearchmeagre.dds',
 									ColorTypes(44), iX, iY, True, True, bForce=False
 								)
 							elif iPlayerL == iPlayerAct:
 								CvUtil.sendMessage(
-									TRNSLTR.getText("TXT_KEY_INDUSTRYESPIONAGE_FROM",(szTxt, iStolen)), iPlayerL, 16,
+									TRNSLTR.getText("TXT_KEY_MESSAGE_INDUSTRYESPIONAGE",(szTxt, iStolen)), iPlayerL, 16,
 									'Art/Interface/Buttons/Process/processresearchmeagre.dds',
 									ColorTypes(44), iX, iY, True, True, bForce=False
 								)
@@ -2469,8 +2473,8 @@ class CvEventManager:
 				if CyPlayerX.isHuman():
 					strReligionName = GC.getReligionInfo(iReligion).getText()
 					popup = PyPopup.PyPopup(-1)
-					popup.setHeaderString(TRNSLTR.getText("TXT_REAL_FAVORITE_RELIGION_HEADER",()))
-					popup.setBodyString(TRNSLTR.getText("TXT_REAL_FAVORITE_RELIGION_TEXT", (strReligionName, strReligionName)))
+					popup.setHeaderString(TRNSLTR.getText("TXT_KEY_POPUP_FAVORITE_RELIGION_HEADER",()))
+					popup.setBodyString(TRNSLTR.getText("TXT_KEY_POPUP_FAVORITE_RELIGION_TEXT", (strReligionName, strReligionName)))
 					popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
 
 
@@ -2636,9 +2640,9 @@ class CvEventManager:
 						if CvBuildingInfo.getMaxGlobalInstances() == 1:
 
 							if bActive:
-								szTxt = TRNSLTR.getText("TXT_KEY_YOU_DESTROYED_WONDER", (0, CvBuildingInfo.getDescription()))
+								szTxt = TRNSLTR.getText("TXT_KEY_MESSAGE_WONDER_DESTROYED_YOU", (0, CvBuildingInfo.getDescription()))
 							else:
-								szTxt = TRNSLTR.getText("TXT_KEY_DESTROYED_WONDER", (szPlayerName, CvBuildingInfo.getDescription()))
+								szTxt = TRNSLTR.getText("TXT_KEY_MESSAGE_WONDER_DESTROYED", (szPlayerName, CvBuildingInfo.getDescription()))
 
 							CvUtil.sendMessage(szTxt, iActivePlayer, 16, artPath, eColor, iX, iY, True, True, bForce = bActive)
 		# Partisans!
@@ -2753,9 +2757,9 @@ class CvEventManager:
 							if CvBuildingInfo.getMaxGlobalInstances() == 1:
 
 								if bActive:
-									szTxt = TRNSLTR.getText("TXT_KEY_YOU_CAPTURED_WONDER", (0, CvBuildingInfo.getDescription()))
+									szTxt = TRNSLTR.getText("TXT_KEY_MESSAGE_WONDER_CAPTURED_YOU", (0, CvBuildingInfo.getDescription()))
 								else:
-									szTxt = TRNSLTR.getText("TXT_KEY_CAPTURED_WONDER", (szPlayerName, CvBuildingInfo.getDescription()))
+									szTxt = TRNSLTR.getText("TXT_KEY_MESSAGE_WONDER_CAPTURED", (szPlayerName, CvBuildingInfo.getDescription()))
 
 								CvUtil.sendMessage(szTxt, iActivePlayer, 16, artPath, eColor, iX, iY, True, True, bForce = bActive)
 

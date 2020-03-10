@@ -5848,7 +5848,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 									iAttackerOdds = std::max((90 * GC.getDefineINT("COMBAT_DIE_SIDES")) / 100, iAttackerOdds);
 									szTempBuffer.Format(SETCOLR L"%d\n" ENDCOLR,
 										TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), GC.getHandicapInfo(GET_PLAYER(pAttacker->getOwner()).getHandicapType()).getFreeWinsVsBarbs() - GET_PLAYER(pAttacker->getOwner()).getWinsVsBarbs());
-									szString.append(gDLL->getText("TXT_ACO_BarbFreeWinsLeft"));
+									szString.append(gDLL->getText("TXT_ACO_BARBFREEWINSLEFT"));
 									szString.append(szTempBuffer.GetCString());
 								}
 							}
@@ -5865,7 +5865,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 										iDefenderOdds = std::max((90 * GC.getDefineINT("COMBAT_DIE_SIDES")) / 100, iDefenderOdds);
 										szTempBuffer.Format(SETCOLR L"%d\n" ENDCOLR,
 											TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), GC.getHandicapInfo(GET_PLAYER(pDefender->getOwner()).getHandicapType()).getFreeWinsVsBarbs() - GET_PLAYER(pDefender->getOwner()).getWinsVsBarbs());
-										szString.append(gDLL->getText("TXT_ACO_BarbFreeWinsLeft"));
+										szString.append(gDLL->getText("TXT_ACO_BARBFREEWINSLEFT"));
 										szString.append(szTempBuffer.GetCString());
 									}
 								}
@@ -6165,7 +6165,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 						{
 							szTempBuffer.Format(L"%.2f%%", 100.0f * (AttackerKillOdds + RetreatOdds + PullOutOdds));
 							szTempBuffer2.Format(L"%.2f%%", 100.0f * (RetreatOdds + PullOutOdds + DefenderKillOdds));
-							szString.append(gDLL->getText("TXT_ACO_SurvivalOdds"));
+							szString.append(gDLL->getText("TXT_ACO_SURVIVALODDS"));
 							szString.append(gDLL->getText("TXT_ACO_VS", szTempBuffer.GetCString(), szTempBuffer2.GetCString()));
 							szString.append(NEWLINE);
 						}
@@ -6175,7 +6175,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 							// a rare situation indeed (TB - not so unlikely now that withdrawal has become unlimited, held in check by pursuit
 
 							szString.append(NEWLINE);
-							szString.append(gDLL->getText("TXT_ACO_SurvivalGuaranteed"));
+							szString.append(gDLL->getText("TXT_ACO_SURVIVALGUARANTEED"));
 						}
 
 						//CvWString szTempBuffer2; // moved to elsewhere in the code (earlier)
@@ -6244,7 +6244,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 							int iWithdrawOdds = 100 - pDefender->pursuitVSOpponentProbTotal(pAttacker);
 							szTempBuffer.Format(L": " SETCOLR L"%.2f%% " L"%d" ENDCOLR,
 								TEXT_COLOR("COLOR_POSITIVE_TEXT"), 100.0f * AttackerKillOdds, iExperience);
-							szString.append(gDLL->getText("TXT_ACO_Victory"));
+							szString.append(gDLL->getText("TXT_ACO_VICTORY"));
 							szString.append(szTempBuffer.GetCString());
 							if (iAttackerExperienceModifier > 0)
 							{
@@ -6269,7 +6269,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 							szTempBuffer.Format(L": " SETCOLR L"%.2f%% " L"%d" ENDCOLR,
 								TEXT_COLOR("COLOR_POSITIVE_TEXT"), 100.0f * PullOutOdds, pAttacker->getExperiencefromWithdrawal(iWithdr));
 							//iExperience,TEXT_COLOR("COLOR_POSITIVE_TEXT"), E_HP_Att_Victory/AttackerKillOdds);
-							szString.append(gDLL->getText("TXT_ACO_Withdraw"));
+							szString.append(gDLL->getText("TXT_ACO_WITHDRAW"));
 							szString.append(szTempBuffer.GetCString());
 							if (iAttackerExperienceModifier > 0)
 							{
@@ -6297,7 +6297,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 
 						if (iDefenderOdds == 0)
 						{
-							szString.append(gDLL->getText("TXT_ACO_GuaranteedNoDefenderHit"));
+							szString.append(gDLL->getText("TXT_ACO_GUARANTEEDNODEFENDERHIT"));
 							DefenderKillOdds = 0.0f;
 						}
 						//TB Combat Mods - next line adjusted for pursuit
@@ -6307,7 +6307,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 							szString.append(NEWLINE);
 							szTempBuffer.Format(L": " SETCOLR L"%.2f%% " ENDCOLR SETCOLR L"%d" ENDCOLR,
 								TEXT_COLOR("COLOR_UNIT_TEXT"), 100.0f * RetreatOdds, TEXT_COLOR("COLOR_POSITIVE_TEXT"), pAttacker->getExperiencefromWithdrawal(iWithdr));
-							szString.append(gDLL->getText("TXT_ACO_Retreat"));
+							szString.append(gDLL->getText("TXT_ACO_RETREAT"));
 							szString.append(szTempBuffer.GetCString());
 							if (iAttackerExperienceModifier > 0)
 							{
@@ -6329,7 +6329,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 						szString.append(NEWLINE);
 						szTempBuffer.Format(L": " SETCOLR L"%.2f%% " L"%d" ENDCOLR,
 							TEXT_COLOR("COLOR_NEGATIVE_TEXT"), 100.0f * DefenderKillOdds, iDefExperienceKill);
-						szString.append(gDLL->getText("TXT_ACO_Defeat"));
+						szString.append(gDLL->getText("TXT_ACO_DEFEAT"));
 						szString.append(szTempBuffer.GetCString());
 						if (iDefenderExperienceModifier > 0)
 						{
@@ -6763,7 +6763,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 								TEXT_COLOR("COLOR_POSITIVE_TEXT"), iNeededRoundsAttacker, TEXT_COLOR("COLOR_NEGATIVE_TEXT"),
 								iNeededRoundsDefender);
 							szString.append(szTempBuffer.GetCString());
-							szString.append(gDLL->getText("TXT_ACO_HitsAt"));
+							szString.append(gDLL->getText("TXT_ACO_HITSAT"));
 							szTempBuffer.Format(SETCOLR L" %.1f%%" ENDCOLR,
 								TEXT_COLOR("COLOR_POSITIVE_TEXT"), float(iAttackerOdds) * 100.0f / float(GC.getDefineINT("COMBAT_DIE_SIDES")));
 							szString.append(szTempBuffer.GetCString());
@@ -6864,7 +6864,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 						{
 							szTempBuffer.Format(L"%.1f", E_HP_Att);
 							szTempBuffer2.Format(L"%.1f", E_HP_Def);
-							szString.append(gDLL->getText("TXT_ACO_AverageHP"));
+							szString.append(gDLL->getText("TXT_ACO_AVERAGEHP"));
 							szString.append(gDLL->getText("TXT_ACO_VS", szTempBuffer.GetCString(), szTempBuffer2.GetCString()));
 						}
 
@@ -6872,7 +6872,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 						{
 							szTempBuffer.Format(L"%.2f%%", 100.0f * AttackerUnharmed);
 							szTempBuffer2.Format(L"%.2f%%", 100.0f * DefenderUnharmed);
-							szString.append(gDLL->getText("TXT_ACO_Unharmed"));
+							szString.append(gDLL->getText("TXT_ACO_UNHARMED"));
 							szString.append(gDLL->getText("TXT_ACO_VS", szTempBuffer.GetCString(), szTempBuffer2.GetCString()));
 						}
 
@@ -6880,14 +6880,14 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 						{
 							szTempBuffer.Format(L"%.2f", AttXP);
 							szTempBuffer2.Format(L"%.2f", DefXP);
-							szString.append(gDLL->getText("TXT_ACO_UnroundedXP"));
+							szString.append(gDLL->getText("TXT_ACO_UNROUNDEDXP"));
 							szString.append(gDLL->getText("TXT_ACO_VS", szTempBuffer.GetCString(), szTempBuffer2.GetCString()));
 						}
 
 						szString.append(NEWLINE);
 						if (iView & getBugOptionINT("ACO__ShowShiftInstructions", 1, "ACO_SHOW_SHIFT_INSTRUCTIONS"))
 						{
-							szString.append(gDLL->getText("TXT_ACO_PressSHIFT"));
+							szString.append(gDLL->getText("TXT_ACO_PRESSSHIFT"));
 							szString.append(NEWLINE);
 						}
 						//TB Display Mod begin
@@ -6935,7 +6935,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 							//if attacker uninjured strength is not the same as base strength (i.e. modifiers are in effect) or first strikes exist, then
 							if (getBugOptionBOOL("ACO__ShowModifierLabels", false, "ACO_SHOW_MODIFIER_LABELS"))
 							{
-								szString.append(gDLL->getText("TXT_ACO_AttackModifiers"));
+								szString.append(gDLL->getText("TXT_ACO_ATTACKMODIFIERS"));
 							}
 						}//if
 
@@ -7008,7 +7008,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 							//if attacker uninjured strength is not the same as base strength (i.e. modifiers are in effect) or first strikes exist, then
 							if (getBugOptionBOOL("ACO__ShowModifierLabels", false, "ACO_SHOW_MODIFIER_LABELS"))
 							{
-								szString.append(gDLL->getText("TXT_ACO_DefenseModifiers"));
+								szString.append(gDLL->getText("TXT_ACO_DEFENSEMODIFIERS"));
 							}
 						}
 
@@ -7757,7 +7757,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 									TEXT_COLOR("COLOR_POSITIVE_TEXT"), (100 - ((pDefender->baseCombatStr() * 100) / (pDefender->maxCombatStr(pPlot, pAttacker)))));
 							}
 
-							szString.append(gDLL->getText("TXT_ACO_TotalDefenseModifier"));
+							szString.append(gDLL->getText("TXT_ACO_TOTALDEFENSEMODIFIER"));
 							szString.append(szTempBuffer.GetCString());
 						}
 					}
@@ -10309,13 +10309,14 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 
 	for (iI = 0; iI < GC.getNumMapCategoryInfos(); iI++)
 	{
-		const MapCategoryTypes eMapCategory = static_cast<MapCategoryTypes>(iI);
+		MapCategoryTypes eMapCategory = ((MapCategoryTypes)iI);
 		if (pPlot->isMapCategoryType(eMapCategory))
 		{
 			szString.append(NEWLINE);
 			szString.append(gDLL->getText("TXT_KEY_MAP_CATEGORY_TERRAIN", GC.getMapCategoryInfo(eMapCategory).getTextKeyWide()));
 		}
 	}
+
 }
 
 void CvGameTextMgr::setCityPlotYieldValueString(CvWStringBuffer &szString, CvCity* pCity, int iIndex, bool bAvoidGrowth, bool bIgnoreGrowth, bool bIgnoreFood)
