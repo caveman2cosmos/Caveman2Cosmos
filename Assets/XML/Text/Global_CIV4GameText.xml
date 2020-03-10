@@ -3,6 +3,7 @@
 	<TEXT>
 		<Tag>INTERFACE_BUILDING_TAB</Tag>
 		<English>Building Tab</English>
+		<French>Bâtiments</French>
 		<German>Gebäude bauen</German>
 	</TEXT>
 	<TEXT>
@@ -62,6 +63,7 @@
 	<TEXT>
 		<Tag>INTERFACE_CLOSE_TAB</Tag>
 		<English>Close Tab</English>
+		<French>Fermer l'Onglet</French>
 		<German>Menü verlassen</German>
 	</TEXT>
 	<TEXT>
@@ -2898,11 +2900,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_SCREEN_CONCEPTUAL</Tag>
 		<English>Conceptual</English>
+		<French>Effets</French>
 		<German>Effekte</German>
 	</TEXT>
 <TEXT>
 		<Tag>TXT_KEY_CITY_SCREEN_DEMOLISH</Tag>
 		<English>Demolish</English>
+		<French>Démolir</French>
 		<German>Abreißen</German>
 	</TEXT>
 	<TEXT>
@@ -4300,6 +4304,9 @@
 		<English>The term Ancient in regards to Caveman to Cosmos describes the beginning of cities and the arrival of what is referred to as the bronze age. It is a period where tribal societies begin to form larger towns and eventually cities, and more elaborate artwork and architecture. Kings emerge in this period, one of the first kinds of powerful rulers, evolving out of powerful tribal leaders. Warfare becomes formalized, with the development of professional armies, the training of animals for war etc.
 
 Time Frame: 12 000 BC - 1200 BC</English>
+		<French>Le terme Antiquité en ce qui concerne Caveman to Cosmos décrit le début des villes et l'arrivée de ce que l'on appelle l'âge du bronze. C'est une période où les sociétés tribales commencent à former de plus grandes villes et éventuellement des villes, et des œuvres d'art et une architecture plus élaborées. Les rois émergent à cette époque, l'un des premiers types de dirigeants puissants, issus de puissants chefs tribaux. La guerre se formalise, avec le développement d'armées professionnelles, l'entraînement des animaux à la guerre etc.
+
+Calendrier: 12 000 avant JC - 1200 avant JC</French>
 	</TEXT>	
 	<TEXT>
 		<Tag>TXT_KEY_ERA_ATOMIC</Tag>
@@ -4316,6 +4323,9 @@ Time Frame: 12 000 BC - 1200 BC</English>
 		<English>The Atomic era describes the time of the second world war till roughly the end of the cold war. During this period air power becomes the strongest force on the battlefield and the doctrine of MAD, or mutually assured destruction, appears as nuclear weapons enter the picture. Also, the beginnings of space flight and computers occur in this period.
 		
 Time Frame: 1900 AD - 1990 AD</English>
+		<French>L'ère atomique décrit l'époque de la seconde guerre mondiale jusqu'à la fin de la guerre froide. Pendant cette période, la puissance aérienne devient la force la plus puissante sur le champ de bataille et la doctrine du MAD, ou destruction mutuellement assurée, apparaît alors que les armes nucléaires entrent en scène. En outre, les débuts du vol spatial et des ordinateurs se produisent au cours de cette période.
+
+Calendrier: 1900 AD - 1990 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_CLASSICAL</Tag>
@@ -4347,6 +4357,9 @@ Time Frame: 1900 AD - 1990 AD</English>
 		<English>The Classical era picks up where the ancient era left off. During this period new ideas of religion, government, and political organization enter the picture. Technology has improved to the point in this era that larger empires become possible, and many would be conquerors try their hands at conquest. Further advances in architecture lead to better living conditions in some cases.
 
 Time Frame: 1200 BC - 450 AD</English>
+		<French>L'ère Classique reprend là où l'ère antique s'était arrêtée. Au cours de cette période, de nouvelles idées de religion, de gouvernement et d'organisation politique font leur apparition. La technologie s'est améliorée au point à cette époque que de plus grands empires deviennent possibles, et beaucoup seraient des conquérants s'essayer à la conquête. De nouveaux progrès dans l'architecture conduisent à de meilleures conditions de vie dans certains cas.
+
+Calendrier: 1200 avant JC - 450 après JC</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_COSMIC</Tag>
@@ -4363,6 +4376,9 @@ Time Frame: 1200 BC - 450 AD</English>
 		<English>The Cosmic era describes a period where a civilization has surpassed the limitations of galactic travel and is able to explore nearby galaxies, spreading further across the universe. Further advances in space flight make this possible.
 
 Time Frame: 3000 AD - 4000 AD</English>
+		<French>L'ère Cosmique décrit une période où une civilisation a dépassé les limites du voyage galactique et est capable d'explorer des galaxies proches, se propageant plus à travers l'univers. De nouveaux progrès dans le vol spatial rendent cela possible.
+
+Calendrier: 3000 AD - 4000 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_FUTURE</Tag>
@@ -4392,7 +4408,7 @@ Time Frame: 3000 AD - 4000 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_FUTURE_STRATEGY</Tag>
 		<English>This era can never be actually reached.</English>
-		<French>Future[NEWLINE]Cette Ere ne peut jamais être réellement atteinte.</French>
+		<French>Temps futurs[NEWLINE]Cette Ere ne peut jamais être réellement atteinte.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_GALACTIC</Tag>
@@ -4412,6 +4428,9 @@ Time Frame: 3000 AD - 4000 AD</English>
 		<English>The Galactic Era represents a time when a civilization develops faster than light travel, allowing the exploration and colonization of nearby solar systems and increasingly, the galaxy. Further improvements in terraforming technology allow hostile planets to be transformed into earth-like worlds, greatly increasing the places humanity can call home. Interplanetary warfare is refined as well, and not all human space nations are friendly democracies. Some develop into deadly space empires.
 		
 Time Frame: 2300 AD - 3000 AD</English>
+		<French>L'ère galactique représente un moment où une civilisation se développe plus rapidement que le voyage de la lumière, permettant l'exploration et la colonisation des systèmes solaires proches et de plus en plus, la galaxie. De nouvelles améliorations dans la terraformation d'une technologie permettent aux planètes hostiles d'être transformées en mondes semblables à la terre, augmentant considérablement les endroits où l'humanité peut s'installer. La guerre interplanétaire est également affinée et toutes les nations de l'espace humain ne sont pas des démocraties amies. Certains se transforment en empires spatiaux mortels.
+
+Calendrier: 2300 AD - 3000 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_INDUSTRIAL</Tag>
@@ -4443,6 +4462,9 @@ Time Frame: 2300 AD - 3000 AD</English>
 		<English>The Industrial Era begins with the invention of steam power and continues with the development of factories. Increasingly, warfare becomes mechanized, with the advent of automatic weapons. New ideas on the economy and society begin to shake the old order, with capitalism and communist ideas among others begin to establish themselves, clashing with traditional ideas of religion and government. Flight becomes possible for the first time, and warfare in general undergoes enormous changes, formational warfare and colorful uniforms giving way to drab uniforms and eventually camoflage.
 		
 Time Frame: 1750 AD - 1900 AD</English>
+		<French>L'ère Industrielle commence avec l'invention de la vapeur et se poursuit avec le développement des usines. De plus en plus, la guerre se mécanise, avec l'avènement des armes automatiques. De nouvelles idées sur l'économie et la société commencent à ébranler l'ancien ordre, avec le capitalisme et les idées communistes, entre autres, commencent à s'établir, en contradiction avec les idées traditionnelles de la religion et du gouvernement. Le vol devient possible pour la première fois, et la guerre en général subit d'énormes changements, une guerre de formation et des uniformes colorés cédant la place à des uniformes ternes et finalement au camouflage.
+
+Calendrier: 1750 AD - 1900 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_INFORMATION</Tag>
@@ -4458,6 +4480,9 @@ Time Frame: 1750 AD - 1900 AD</English>
 		<English>The Information era represents roughly the time after the cold war in our world technologically. Computers become personal, the internet appears, and new forms of entertainment such as computer and console games mark the early part of this period. Later, with the advent of high-speed internet, cloud computing and mobile devices such as smart phones, society undergoes a great change as physical businesses begin to be replaced by digital businesses, and increasingly private ownership of things such as movies, music moves into the hands of corporate distribution with streaming technology. Eventually artificial intelligence evolves to the point of allowing first automated drones and driverless cars, to many jobs disappearing due to more advanced machines. Physical cash disappears, with all transactions being done digitally.
 		
 Time Frame: 1990 AD - 2050 AD</English>
+		<French>L'ère de l'information représente à peu près le temps après la guerre froide dans notre monde sur le plan technologique. Les ordinateurs deviennent personnels, Internet apparaît et de nouvelles formes de divertissement telles que les jeux informatiques et les consoles marquent le début de cette période. Plus tard, avec l'avènement de l'Internet haut débit, du cloud computing et des appareils mobiles tels que les téléphones intelligents, la société subit un grand changement à mesure que les entreprises physiques commencent à être remplacées par des entreprises numériques, et que la propriété privée de choses telles que les films, la musique s'installe de plus en plus aux mains de la distribution d'entreprise avec le streaming une technologie. Finalement, l'intelligence artificielle évolue au point de permettre les premiers drones automatisés et les voitures sans conducteur, de nombreux emplois disparaissant en raison de machines plus avancées. L'argent physique disparaît, toutes les transactions se faisant numériquement.
+
+Calendrier: 1990 AD - 2050 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_MEDIEVAL</Tag>
@@ -4489,6 +4514,9 @@ Time Frame: 1990 AD - 2050 AD</English>
 		<English>A Medieval society is one which has reached further levels of refinement in culture and technology compared to Classical times. Stronger blacksmithing techniques allow heavier armor, making heavy cavalry and other forces the weapon of choice on the battlefield along with increasingly powerful siege weaponry. Fortifications improve, creating fortresses capable of sustaining a siege for months if need be due not only to sturdy construction but also food and supply storage. New structures like wind and watermills appear with the advent of the first gears. Gunpowder weapons begin to be refined toward the end of this period, foreshadowing the second great change in warfare since ancient times.
 		
 Time Frame: 450 AD - 1400 AD</English>
+		<French>Une société du Moyen-Âge est une société qui a atteint des niveaux de raffinement supplémentaires dans la culture et une technologie par rapport à l'époque Classique. Des techniques de forge plus fortes permettent des armures plus lourdes, faisant de la cavalerie lourde et d'autres forces l'arme de choix sur le champ de bataille ainsi que des armes de siège de plus en plus puissantes. Les fortifications s'améliorent, créant des forteresses capables de soutenir un siège pendant des mois si nécessaire en raison non seulement d'une construction robuste, mais aussi du stockage de la nourriture et des fournitures. De nouvelles structures comme le vent et les moulins à eau apparaissent avec l'avènement des premiers engrenages. Les armes à poudre commencent à être raffinées vers la fin de cette période, préfigurant le deuxième grand changement dans la guerre depuis les temps anciens.
+
+Calendrier: 450 AD - 1400 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_NANOTECH</Tag>
@@ -4504,6 +4532,9 @@ Time Frame: 450 AD - 1400 AD</English>
 		<English>The Nanotech era is a logical evolution of the previous information age. Computers become sentient, and sentient robots begin to appear. Nanites are able to provide a nearly limitless capacity for construction, and small nano-factories find a place first in the homes of developed nations, then in developing nations. Poverty as we know it begins to disappear, and existing systems of government and society are shaken. Capitalism begins to give way to a post-scarcity economy. However not everything is all bring. Nanotech and robotics also become used as deadly weapons. Fierce wars are fought as traditional totalitarian governments fight to maintain control over populations suddenly able to produce nearly anything. MAD or mutually assured destruction is rendered obsolete due to nanotech. With the removal of nuclear deterrence, many powerful countries turn again towards conquest, but the dark spectre of nanotech hangs over the world as the potential for doomsday is much greater than the era of nuclear exchange. Machine governments become possible, and many sophisticated AI attempt at domination in order to protect humanity from itself.
 		
 Time Frame: 2050 AD - 2150 AD</English>
+		<French>L'ère Nanotech est une évolution logique de l'ère de l'information précédente. Les ordinateurs deviennent sensibles et les robots sensibles commencent à apparaître. Les nanites sont capables de fournir une capacité de construction presque illimitée, et les petites nano-usines trouvent leur place d'abord dans les foyers des pays développés, puis dans les pays en développement. La pauvreté telle que nous la connaissons commence à disparaître et les systèmes de gouvernement et de société existants sont ébranlés. Le capitalisme commence à céder la place à une économie post-pénurie. Cependant tout n'est pas tout apporter. La nanotechnologie et la robotique sont également utilisées comme armes mortelles. Des guerres féroces sont menées alors que les gouvernements totalitaires traditionnels se battent pour maintenir le contrôle sur des populations soudainement capables de produire presque tout. La destruction MAD ou mutuellement assurée est rendue obsolète en raison des nanotechnologies. Avec la suppression de la dissuasion nucléaire, de nombreux pays puissants se tournent à nouveau vers la conquête, mais le spectre sombre des nanotechnologies plane sur le monde, car le potentiel de la fin du monde est bien plus grand que l'ère des échanges nucléaires. Les gouvernements de machines deviennent possibles, et de nombreuses IA sophistiquées tentent de dominer afin de protéger l'humanité d'elle-même.
+
+Calendrier: 2050 AD - 2150 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_PREHISTORIC</Tag>
@@ -4523,6 +4554,9 @@ Time Frame: 2050 AD - 2150 AD</English>
 		<English>Prehistory (Latin, pra = before; Greek, iotopia = history) is a term used to describe the period before recorded history. Paul Tournal originally coined the term Pré-historique in describing the finds he had made in the caves of southern France. The term "prehistory" can be used to refer to all time since the beginning of the universe, although it is more often used in referring to the period of time since life appeared on Earth, or even more specifically to the time since human-like beings appeared.
 		
 Time Frame: 200 000 BC - 12 000 BC</English>
+		<French>La préhistoire (latin, pra = avant; grec, iotopie = histoire) est un terme utilisé pour décrire la période avant l'histoire enregistrée. Paul Tournal a initialement inventé le terme Pré-historique en décrivant les découvertes qu'il avait faites dans les grottes du sud de la France. Le terme "préhistoire" peut être utilisé pour se référer à tous les temps depuis le début de l'univers, bien qu'il soit plus souvent utilisé pour se référer à la période de temps depuis que la vie est apparue sur Terre, ou même plus spécifiquement au temps depuis que les êtres humains sont apparus.
+
+Calendrier: 200 000 avant JC - 12 000 avant JC</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_RENAISSANCE</Tag>
@@ -4554,6 +4588,9 @@ Time Frame: 200 000 BC - 12 000 BC</English>
 		<English>The Renaissance begins with the advent of the printing press, further refinements in gunpowder weaponry, and the advent of ships capable of traversing the world. New thoughts on government and religion, much like the Classical era, shape this period as well. Many religions schism as the traditional teachings are again brought to light. Science as a serious discipline emerges for the first time, and advances in medicine and astronomy improve the knowledge of the physical world. Religious explanations for existence and the origin of the universe are questioned, and serious schisms between science and religion occur in some cases, but not all. Towards the end of this period massive oceanic empires appear, colonizing far off lands and trading and dominating far off people. Many native peoples are displaced or enslaved.
 		
 Time Frame: 1400 AD - 1750 AD</English>
+		<French>La Renaissance commence avec l'avènement de l'imprimerie, de nouveaux perfectionnements dans l'armement à la poudre à canon et l'avènement de navires capables de traverser le monde. De nouvelles réflexions sur le gouvernement et la religion, tout comme l'ère Classique, façonnent également cette période. De nombreuses religions sont schistes alors que les enseignements traditionnels sont à nouveau mis en lumière. La science en tant que discipline sérieuse émerge pour la première fois, et les progrès de la médecine et de l'astronomie améliorent la connaissance du monde physique. Les explications religieuses de l'existence et de l'origine de l'univers sont remises en cause, et de graves schismes entre science et religion se produisent dans certains cas, mais pas tous. Vers la fin de cette période, des empires océaniques massifs apparaissent, colonisant des terres lointaines et commercialisant et dominant des peuples lointains. De nombreux peuples autochtones sont déplacés ou réduits en esclavage.
+
+Calendrier: 1400 AD - 1750 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_TRANSCENDENT</Tag>
@@ -4570,6 +4607,9 @@ Time Frame: 1400 AD - 1750 AD</English>
 		<English>The Transcendent era is a period in the far future. Mankind has the ability to time travel, transverse diamensions, settle the known and increasingly unknown parts of the universe.
 		
 Time Frame: 4000 AD - 6000 AD</English>
+		<French>L'ère transcendantale est une période lointaine. L'humanité a la capacité de voyager dans le temps, des dimensions parallèles, de s'installer dans les parties connues et de plus en plus inconnues de l'univers.
+
+Calendrier: 4000 AD - 6000 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_TRANSHUMAN</Tag>
@@ -4589,6 +4629,9 @@ Time Frame: 4000 AD - 6000 AD</English>
 		<English>The transhuman era represents a period following the nanotech era. In the transhuman era in order to combat the increased hostility between machine and human life, as well as improve themselves, and for some, reach some kind of immortality, some of mankind merges with technology. The transhuman movement actually began in the Information age, but only became possible with the advanced technologies of the late nanotech period. While some humans choose to embrace transhumanism, a counter movement, or new humanist movement also appears, which is diverse, including religious people of all stripes, some scientists warning of the possible negative ramifications of transhumanism, and others simply horrified or opposed to the idea. Some of the Transhumans attempt to force humans to convert. The line between machine and man begins to blur, as machine life becomes more human with emotions, many developing competing ideas, leading to further conflict. Transhumans, Machine factions, and normal humans continue to struggle, some against each other and some allied. Humanity also begins colonizing the solar system in this period, many escaping the warfare on earth to seek a better life. Primitive terraforming allows Mars to become habitable, and eventually the technology improves to allow the construction of massive artificial space colonies. Space warfare appears, first with space fightercraft, developed from shuttles, then with larger ships as well as space faring robots of massive size, some piloted by humans. Eventually interplanetary warfare becomes possible when ships no longer take enormous amounts of time to transverse space. Some of these wars are traditional wars of conquest over resources, others over ideology as the humanist/transhumanist and various machine factions battle it out in space.
 		
 Time Frame: 2150 AD - 2300 AD</English>
+		<French>L'ère transhumaine représente une période qui suit l'ère nanotechnologique. À l'ère transhumaine, afin de lutter contre l'hostilité accrue entre la machine et la vie humaine, ainsi que de s'améliorer, et pour certains, d'atteindre une sorte d'immortalité, une partie de l'humanité fusionne avec une technologie. Le mouvement transhumain a réellement commencé à l'ère de l'information, mais n'est devenu possible qu'avec les technologies avancées de la fin de la période nanotechnologique. Alors que certains humains choisissent d'embrasser le transhumanisme, un contre-mouvement ou un nouveau mouvement humaniste apparaît également, qui est diversifié, y compris des religieux de toutes les allégeances, certains scientifiques avertissant des ramifications négatives possibles du transhumanisme, et d'autres simplement horrifiés ou opposés à l'idée . Certains des Transhumains tentent de forcer les humains à se convertir. La frontière entre la machine et l'homme commence à s'estomper, alors que la vie de la machine devient plus humaine avec des émotions, beaucoup développant des idées concurrentes, conduisant à de nouveaux conflits. Les transhumains, les factions Machine et les humains normaux continuent de lutter, certains les uns contre les autres et certains alliés. L'humanité commence également à coloniser le système solaire à cette période, beaucoup échappant à la guerre sur terre pour chercher une vie meilleure. La terraformation primitive permet à Mars de devenir habitable, et finalement une technologie s'améliore pour permettre la construction de colonies spatiales artificielles massives. La guerre spatiale apparaît, d'abord avec des chasseurs spatiaux, développés à partir de navettes, puis avec des navires plus grands ainsi que des robots spatiaux de taille massive, certains pilotés par des humains. Finalement, la guerre interplanétaire devient possible lorsque les navires ne mettent plus énormément de temps à traverser l'espace. Certaines de ces guerres sont des guerres de conquête traditionnelles sur les ressources, d'autres sur l'idéologie, car les factions humanistes / transhumanistes et diverses machines se battent dans l'espace.
+
+Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EWTRADE_STRATEGY</Tag>
@@ -4730,6 +4773,8 @@ Time Frame: 2150 AD - 2300 AD</English>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_CITY_MAINT_COST_DISTANCE</Tag>
 		<English>------------------------
 		[NEWLINE]%s1[ICON_GOLD]: Distance to Capital</English>
+		<French>------------------------
+		[NEWLINE]%s1[ICON_GOLD]: Distance de la Capitale</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_CITY_MAINT_COST_TOTAL</Tag>
@@ -5290,18 +5335,22 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_ALL</Tag>
 		<English>All Resources</English>
+		<French>Toutes Ressources</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_GROWTH</Tag>
 		<English>Growth</English>
+		<French>Croissance</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_LUXURY</Tag>
 		<English>Luxury</English>
+		<French>Luxe</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_MISC</Tag>
 		<English>Misc</English>
+		<French>Autres</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_PRODUCTION</Tag>
@@ -5310,6 +5359,7 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_STRATEGIC</Tag>
 		<English>Strategic</English>
+		<French>Stratégique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GODS_INQUISTOR_CLEANSE_MOUSE_OVER</Tag>
@@ -5448,6 +5498,7 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_DOCTOR_STRATEGY</Tag>
 		<English>Use the Great Doctor to build the [LINK=BUILDING_UNIVERSAL_HEALTH_CARE]Universal Health Care[\LINK] National Wonder, discover a new technology or add to a city as a super specialist.</English>
+		<French>Utilisez le Docteur illustre pour construire la merveille nationale [LINK=BUILDING_UNIVERSAL_HEALTH_CARE]Couverture Santé Universelle[\ LINK], ou découvrir une nouvelle technologie ou encore ajoutez-le à une ville en tant que super spécialiste.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PALACE_CIVIC_EXTRA_HAPPINESS</Tag>
@@ -15260,7 +15311,7 @@ Time Frame: 2150 AD - 2300 AD</English>
 	<TEXT>
 		<Tag>TXT_KEY_ROUTE_GRAVITY_TRAIN</Tag>
 		<English>Gravity Train</English>
-		<French>Train à Gravité</French>
+		<French>Ligne de Train à Gravité</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROUTE_HIGHWAY</Tag>
@@ -17073,7 +17124,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Tag>TXT_KEY_SPECIALIST_DOCTOR</Tag>
 		<English>Doctor</English>
 		<French>
-			<Text>Docteur en médecine</Text>
+			<Text>Médecin</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -17086,6 +17137,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_DOCTOR_STRATEGY</Tag>
 		<English>Build the [LINK=BUILDING_HEALERHUT]Healer's Hut[\LINK], [LINK=BUILDING_APOTHECARY_SHOP]Apothecary Shop[\LINK], or a [LINK=BUILDING_HOSPITAL]Hospital[\LINK] to add specialist doctors and increase the odds of getting a Great Doctor.</English>
+		<French>Construisez la [LINK=BUILDING_HEALERHUT]Cabane du Guerrisseur[\LINK], l'[LINK=BUILDING_APOTHECARY_SHOP]Herboristerie[\LINK], ou un [LINK=BUILDING_HOSPITAL]Hôpital[\LINK] pour ajouter des spécialistes médecins et augmenter les chances d'obtenir un Médecin Illustre.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_ENGINEER</Tag>
@@ -18326,13 +18378,13 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BUDDHISM_STRATEGY</Tag>
 		<English>Research Buddhism to found a Religion</English>
-		<French>Recherchez Buddhism pour fonder une religion</French>
+		<French>Recherchez Bouddhisme pour fonder une religion</French>
 		<Spanish>Investiga el Budismo para fundar una religión.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BUILDING_SPECIALIST_TECH_HAPPINESS</Tag>
 		<English>[ICON_BULLET]All Specialists gain %D1_Change%F2_HappOrUnhapp from %s3_Building where built.</English>
-		<French>[ICON_BULLET]All Specialists gagne %D1_Change%F2_HappOrUnhapp lorsque %s3_Building est construit.</French>
+		<French>[ICON_BULLET]Tous les Spécialistes gagnent %D1_Change%F2_HappOrUnhapp lorsque %s3_Building est construit.</French>
 		<Italian>[ICON_BULLET]Tutti gli specialisti ottengono %D1_Change%F2_HappOrUnhapp da %s3_Building dove viene costruito.</Italian>
 		<Polish>[ICON_BULLET]Wszyscy specjaliści dają: %D1_Change%F2_HappOrUnhapp z wybudowanym: %s3_Building.</Polish>
 	</TEXT>
@@ -18346,7 +18398,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BUILDING_SPECIALIST_TECH_HEALTH</Tag>
 		<English>[ICON_BULLET]All Specialists gain %D1_Change%F2_HealthOrUnhealth from %s3_Building where built.</English>
-		<French>[ICON_BULLET]All Specialists gagne %D1_Change%F2_HealthOrUnhealth lorsque %s3_Building est construit.</French>
+		<French>[ICON_BULLET]Tous les Spécialistes gagnent %D1_Change%F2_HealthOrUnhealth lorsque %s3_Building est construit.</French>
 		<Italian>[ICON_BULLET]Tutti gli specialisti ottengono %D1_Change%F2_HealthOrUnhealth da %s3_Building dove viene costruito.</Italian>
 		<Polish>[ICON_BULLET]Wszyscy specjaliści dają: %D1_Change%F2_HealthOrUnhealth z wybudowanym: %s3_Building.</Polish>
 	</TEXT>
@@ -18601,7 +18653,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_HELLENISM_STRATEGY</Tag>
 		<English>Research Hellenism to found a Religion</English>
-		<French>Recherchez Hellenisme pour fonder une religion</French>
+		<French>Recherchez Hellénisme pour fonder une religion</French>
 		<Spanish>Investiga el Helenismo para fundar una religión.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -18812,7 +18864,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_JUDAISM_STRATEGY</Tag>
 		<English>Research Judaism to found a Religion</English>
-		<French>Recherchez Judaisme pour fonder une religion</French>
+		<French>Recherchez Judaïsme pour fonder une religion</French>
 		<Spanish>Investiga el Judaismo para fundar una religión.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -18996,7 +19048,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TAOISM_STRATEGY</Tag>
 		<English>Research Taoism to found a Religion</English>
-		<French>Recherchez Taoism pour fonder une religion</French>
+		<French>Recherchez Taoïsme pour fonder une religion</French>
 		<Spanish>Investiga el Taoísmo para fundar una religión.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -21712,22 +21764,22 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NUM_STEALTH_STRIKES_ATTACK</Tag>
 		<English>[ICON_BULLET]STEALTH ATTACK!: %d1_Num Stealth Strikes</English>
-		<French>[ICON_BULLET]ATTAQUE FURTIVE!: %d1_Num assauts furtifs</French>
+		<French>[ICON_BULLET]Attaque furtive !: %d1_Num assauts furtifs</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NUM_STEALTH_STRIKES_DEFENSE</Tag>
 		<English>[ICON_BULLET]STEALTH DEFENSE!: %d1_Num Stealth Strikes</English>
-		<French>[ICON_BULLET]DEFENSE FURTIVE!: %d1_Num assauts furtifs</French>
+		<French>[ICON_BULLET]Défense furtive !: %d1_Num assauts furtifs</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STEALTH_COMBAT_ATTACK</Tag>
 		<English>[ICON_BULLET]STEALTH ATTACK!: %D1_Num%% Stealth Combat Modifier Factored in.</English>
-		<French>[ICON_BULLET]ATTAQUE FURTIVE!: %D1_Num%% Modificateur de combat furtif pris en compte.</French>
+		<French>[ICON_BULLET]Attaque furtive !: %D1_Num%% Modificateur de combat furtif pris en compte.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STEALTH_COMBAT_DEFENSE</Tag>
 		<English>[ICON_BULLET]STEALTH DEFENSE!: %D1_Num%% Stealth Combat Modifier Factored in.</English>
-		<French>[ICON_BULLET]DEFENSE FURTIVE!: %D1_Num%% Modificateur de combat furtif pris en compte.</French>
+		<French>[ICON_BULLET]Défense furtive !: %D1_Num%% Modificateur de combat furtif pris en compte.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUPPLY_TRAIN</Tag>

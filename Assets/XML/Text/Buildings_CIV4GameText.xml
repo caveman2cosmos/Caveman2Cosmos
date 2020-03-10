@@ -16,6 +16,7 @@
 	<TEXT>
 		<Tag>TXT_EMPIRE_BONUS</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Empire State Building [COLOR_SELECTED_TEXT]provides our empire with [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_SELECTED_TEXT]![COLOR_REVERT]</English>
+		<French>L'[COLOR_HIGHLIGHT_TEXT]Empire State Building [COLOR_SELECTED_TEXT] donne à notre Empire :  [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Empire State Building [COLOR_SELECTED_TEXT]dostarcza naszemu imperium [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
@@ -33,6 +34,7 @@
 	<TEXT>
 		<Tag>TXT_GOLDEN_SPIKE_BUILT</Tag>
 		<English>The [COLOR_UNIT_TEXT]Golden Spike[COLOR_REVERT] lays rails across your continent.</English>
+		<French>La Merveille [COLOR_UNIT_TEXT]Le Piquet d'Or[COLOR_REVERT] a déposé des rails à travers votre continent.</French>
 		<Italian>La [COLOR_UNIT_TEXT]Golden Spike[COLOR_REVERT] costruisce ferrovie attraverso il tuo continente.</Italian>
 	</TEXT>
 	<TEXT>
@@ -164,6 +166,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ACCADEMIA_AERONAUTICA</Tag>
 		<English>MA Accademia Aeronautica</English>
+		<French>L'Académie d'Aéronautique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ACCADEMIA_AERONAUTICA_PEDIA</Tag>
@@ -172,6 +175,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ACCADEMIA_AERONAUTICA_STRATEGY</Tag>
 		<English>All military units built in a city with a [COLOR_BUILDING_TEXT]Accademia Aeronautica[COLOR_REVERT] building begin with six additional experience points. Further, its city is more likely to generate a [COLOR_UNIT_TEXT]Great General[COLOR_REVERT].</English>
+		<French>Toutes les unités militaires construites dans une ville avec l'[COLOR_BUILDING_TEXT]Académie Aéronautique MA[COLOR_REVERT] commencent avec 6 points d'EXP supplémentaires. De plus, sa ville est plus susceptible de générer un [COLOR_UNIT_TEXT]Général illustre[COLOR_REVERT].</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ACCELERATOR</Tag>
@@ -538,6 +542,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AID_RATE</Tag>
 		<English>[ICON_BULLET]%D1_Amount Aid in Overcoming %s2_Type Afflictions within the City</English>
+		<French>[ICON_BULLET]%D1_Amount d'aide pour surmonter les afflications de type %s2_Type au sein de la ville</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AIRPORT</Tag>
@@ -622,6 +627,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AI_SURVEILLANCE_PEDIA</Tag>
 		<English>Once electronics became cheap, the world saw the rise of surveillance societies with cameras popping up in both public and private establishments; once AI became cheap, it was applied to those cameras. This meant the end of privacy outside one's head, since these cameras could identify dissidents, radicals, and other people who cause problems with the government, which allowed regimes to quash these figures before they could damage the government. This end of privacy also resulted in a tenfold reduction in crime, because AI surveillance was applied to the darkest back alleys and the seediest businesses.</English>
+		<French>Une fois l'électronique devenue bon marché, le monde a vu l'essor des sociétés de surveillance avec des caméras surgissant dans les établissements publics et privés; une fois que l'IA est devenue bon marché, elle a été appliquée à ces caméras. Cela signifiait la fin de la vie privée en dehors de la tête, car ces caméras pouvaient identifier les dissidents, les radicaux et d'autres personnes qui causaient des problèmes avec le gouvernement, ce qui a permis aux régimes d'annuler ces chiffres avant de pouvoir endommager le gouvernement. Cette fin de la vie privée a également permis de décupler la criminalité, car la surveillance de l'IA a été appliquée dans les ruelles les plus sombres et les entreprises les plus délicates.</French>
 		<Polish>Komputer jest sztuczną inteligencją, której pierwotnym zadaniem było zarządzanie kompleksem tak, by mieszkańcy byli szczęśliwi. Maszyna wybrała proste rozwiązanie postawionego jej zadania: szczęście stało się obowiązkowe, bycie nieszczęśliwym równało się sabotażowi. Komputer był maszyną wojskową, więc na podstawie posiadanych wiadomości wydedukował sobie, że jest stan wojny, Alpha Complex jest enklawą otoczoną przez komunistycznych mutantów, a on ma obowiązek monitorować bezpieczeństwo habitatu. Do tego celu - oprócz rozbudowanego systemu kamer, podsłuchów, oraz robotów - powołał Rozprawiaczy, w których wcielają się gracze.</Polish>
 	</TEXT>
 	<TEXT>
@@ -965,10 +971,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANCIENT_WAYS_STRATEGY</Tag>
 		<English>You may only build one Ancient Way (AW).  Any Ancient Way may only be built once Globally.  Thus, they are both World Wonders and limited to one from the set to each civilization.  If you conquer one, you will keep it but if you haven't built one before you do, you will be unable to build one of your own.  Choose your Ancient Way wisely.  Each Ancient Way focuses on a different unit type. You choose your nations strengths.</English>
+		<French>Vous ne pouvez construire qu'une seule voie ancienne (VA). N'importe quelle voie ancienne ne peut être construite qu'une seule fois dans le monde. Ainsi, ils sont tous deux Merveilles du Monde et limités à un de l'ensemble à chaque civilisation. Si vous en conquérez un, vous le conserverez mais si vous n'en avez pas construit avant, vous ne pourrez pas en construire un. Choisissez judicieusement votre ancienne voie. Chaque voie ancienne se concentre sur un type d'unité différent. Vous choisissez les forces de votre nation.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANCIENT_WAY_OF_THE_CENTAUR</Tag>
 		<English>AW Ancient Way of the Centaur</English>
+		<French>VA - Voie Ancienne du Centaure</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANCIENT_WAY_OF_THE_CENTAUR_PEDIA</Tag>
@@ -977,10 +985,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANCIENT_WAY_OF_THE_CENTAUR_STRATEGY</Tag>
 		<English>All Mounted Units will gain bonuses for the Ancient era.</English>
+		<French>Toutes les unités montées vont gagner des bonus durant l'antiquité</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANCIENT_WAY_OF_THE_FEATHER</Tag>
 		<English>AW Ancient Way of the Feather</English>
+		<French>VA - Voie Ancienne de la Plume</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANCIENT_WAY_OF_THE_FEATHER_PEDIA</Tag>
@@ -989,10 +999,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANCIENT_WAY_OF_THE_FEATHER_STRATEGY</Tag>
 		<English>All Archery Units will gain bonuses for the Ancient era.</English>
+		<French>Les unités de Tir à distance vont gagner des bonus durant l'antiquité</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANCIENT_WAY_OF_THE_FIST</Tag>
 		<English>AW Ancient Way of the Fist</English>
+		<French>VA - Voie Ancienne du Poing</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANCIENT_WAY_OF_THE_FIST_PEDIA</Tag>
@@ -1001,10 +1013,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANCIENT_WAY_OF_THE_FIST_STRATEGY</Tag>
 		<English>All Law Enforcement Units will gain bonuses for the Ancient era.</English>
+		<French>Toutes les unités de maintien de l'ordre vont gagner des bonus durant l'antiquité</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANCIENT_WAY_OF_THE_LEECH</Tag>
 		<English>AW Ancient Way of the Leech</English>
+		<French>VA - Voie Ancienne de la Goule</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANCIENT_WAY_OF_THE_LEECH_PEDIA</Tag>
@@ -1013,10 +1027,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANCIENT_WAY_OF_THE_LEECH_STRATEGY</Tag>
 		<English>All Healer Units will gain bonuses for the Ancient era.</English>
+		<French>Tous les Guérisseurs vont gagner des bonus durant l'antiquité</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANCIENT_WAY_OF_THE_SHADOWS</Tag>
 		<English>AW Ancient Way of the Shadows</English>
+		<French>VA - Voie Ancienne des ombres</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANCIENT_WAY_OF_THE_SHADOWS_PEDIA</Tag>
@@ -1025,10 +1041,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANCIENT_WAY_OF_THE_SHADOWS_STRATEGY</Tag>
 		<English>All Criminal, Ruffian and Strike Team Units will gain bonuses for the Ancient era.</English>
+		<French>Tous les Criminels, résistants et équipes d'assaut vont gagner des bonus durant l'antiquité</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANCIENT_WAY_OF_THE_WARRIOR</Tag>
 		<English>AW Ancient Way of the Warrior</English>
+		<French>VA - Voie Ancienne du Guerrier</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANCIENT_WAY_OF_THE_WARRIOR_PEDIA</Tag>
@@ -1037,10 +1055,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANCIENT_WAY_OF_THE_WARRIOR_STRATEGY</Tag>
 		<English>All Melee Units will gain bonuses for the Ancient era.</English>
+		<French>Toutes les unités de Mélée vont gagner des bonus durant l'antiquité</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANCIENT_WAY_OF_THE_WAVES</Tag>
 		<English>AW Ancient Way of the Waves</English>
+		<French>VA - Voie Ancienne des Vagues</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANCIENT_WAY_OF_THE_WAVES_PEDIA</Tag>
@@ -1049,10 +1069,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANCIENT_WAY_OF_THE_WAVES_STRATEGY</Tag>
 		<English>All Water Units will gain bonuses for the Ancient era.</English>
+		<French>Toutes les unités maritimesvont gagner des bonus durant l'antiquité</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANCIENT_WAY_OF_THE_WILD</Tag>
 		<English>AW Ancient Way of the Wild</English>
+		<French>VA - Voie Ancienne de la Nature Sauvage</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANCIENT_WAY_OF_THE_WILD_PEDIA</Tag>
@@ -1061,10 +1083,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANCIENT_WAY_OF_THE_WILD_STRATEGY</Tag>
 		<English>All Explorer Units will gain bonuses for the Ancient era.</English>
+		<French>Toutes les unités d'Exploration vont gagner des bonus durant l'antiquité</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANCIENT_WAY_OF_THE_WIND</Tag>
 		<English>AW Ancient Way of the Wind</English>
+		<French>VA - Voie Ancienne du Vent</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANCIENT_WAY_OF_THE_WIND_PEDIA</Tag>
@@ -1073,10 +1097,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANCIENT_WAY_OF_THE_WIND_STRATEGY</Tag>
 		<English>All Throwing Units will gain bonuses for the Ancient era.</English>
+		<French>Toutes les unités de jet vont gagner des bonus durant l'antiquité</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANCIENT_WAY_OF_THE_WOLF</Tag>
 		<English>AW Ancient Way of the Wolf</English>
+		<French>VA - Voie Ancienne du Loup</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANCIENT_WAY_OF_THE_WOLF_PEDIA</Tag>
@@ -1085,6 +1111,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANCIENT_WAY_OF_THE_WOLF_STRATEGY</Tag>
 		<English>All Canine Units will gain bonuses for the Ancient era.</English>
+		<French>Toutes les unités Canines vont gagner des bonus durant l'antiquité</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANDROID_BROTHEL</Tag>
@@ -1458,6 +1485,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANTI_MISSILE_BATTERIES_STRATEGY</Tag>
 		<English>Increases city's defense against airplanes, nukes and bombardment. When city builds Arcology, Anti-missile Batteries will be removed from the city.</English>
+		<French>Augmente la défense de la ville contre les avions, les armes nucléaires et les bombardements. Lorsque la ville construit l'Arcologie, les batteries anti-missiles seront retirées de la ville.</French>
 		<Spanish>Aumenta la defensa frente a aviones, armas nucleares y bombardeos de la ciudad. Cuando la ciudad construya una Arcología, este edificio será eliminado de la ciudad.</Spanish>
 		<Polish>Zwiększa obronę miasta przed atakami lotniczymi, balistycznymi oraz bombardowaniami. Broni miasta do czasów powstania Arkologii.</Polish>
 	</TEXT>
@@ -1861,6 +1889,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARC_PEDIA</Tag>
 		<English>The triumphal arch honors those who fought for their country. On the inside and top of the arch there are the names of generals, and wars fought. Underneath is the tomb of the unknown soldier.</English>
+		<French>L'arc de triomphe rend hommage à ceux qui ont combattu pour leur pays. À l'intérieur et au sommet de l'arc, il y a les noms des généraux et les guerres se sont déroulées. En dessous se trouve le tombeau du soldat inconnu.</French>
 		<German>Triumphbögen sind gewaltige, torförmige Prachtbauten zu Ehren siegreicher Herrscher oder Feldherren. Solche Bauten wurden schon von alten Zivilisationen wie den Hethitern, Assyrern und Babyloniern errichtet. Populär wurden sie aber im alten Rom. Wenn ein Feldherr einen großen Sieg errungen hatte, wurde ihm vom Senat ein Triumphzug (also ein feierlicher Einzug in die Stadt) gewährt. Später wurde großen Triumphatoren zusätzlich ein Triumphbogen als bleibendes Denkmal errichtet.[PARAGRAPH:2]Der wohl bekannteste erhaltene Triumphbogen der Neuzeit ist der Pariser Arc de Triomphe, der neben dem Eiffelturm zu den Wahrzeichen der Metropole zählt. Er wurde von Napoleon 1806 nach der Schlacht von Austerlitz zur Glorifizierung seiner Siege in Auftrag gegeben, aber erst 1836 (22 Jahre nach der Abdankung Napoleons) unter dem Bürgerkönig Louis-Philippe fertiggestellt und feierlich eingeweiht. Unterhalb des Arc de Triomphe befindet sich heute das Grabmal des unbekannten Soldaten aus dem Ersten Weltkrieg, in dem die Ewige Flamme der Erinnerung zum Gedenken an die Toten brennt.</German>
 		<Polish>W architekturze łuk triumfalny - budowla w kształcie monumentalnej, wolno stojącej bramy stawiana dla upamiętnienia ważnej osoby lub uczczenia ważnego wydarzenia, zwykle zwycięstwa militarnego. Przejście pod łukiem triumfalnym autora lub autorów zwycięstwa było punktem kulminacyjnym pochodu triumfalnego. Pierwsze łuki triumfalne powstawały w starożytnym Rzymie(prekursorem były ozdobne bramy budowane przezEtrusków), później ten typ budowli był wznoszony w innych krajach i epokach historycznych.</Polish>
 	</TEXT>
@@ -2459,6 +2488,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AUTOMATED_FIRING_RANGE</Tag>
 		<English>Automated Firing Range</English>
+		<French>Champ de tir automatisé</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AUTOMATED_FIRING_RANGE_PEDIA</Tag>
@@ -2467,6 +2497,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AUTOMATED_FIRING_RANGE_STRATEGY</Tag>
 		<English>Increases experience to Gun and Throwing units further still.  Replaces the Firing Range.  Opens up access to the Modern Sniper.</English>
+		<French>Augmente encore l'expérience des unités avec armes à feu. Remplace le champ de tir. Ouvre l'accès au sniper moderne.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AUTOMATED_VEHICLE_DEALERSHIP</Tag>
@@ -3480,7 +3511,7 @@
 		<Tag>TXT_KEY_BUILDING_BIODOME</Tag>
 		<English>Montreal Biodome</English>
 		<French>
-			<Text>Le Biodome de Montreal</Text>
+			<Text>Le Biodome de Montréal</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -3499,6 +3530,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BIODOME_STRATEGY</Tag>
 		<English>Animals are born every few turns to help defend their beloved homeland. Animals get tougher with advances in era.</English>
+		<French>Les animaux naissent à chaque tour pour aider à défendre leur patrie bien-aimée. Les animaux deviennent plus durs avec les progrès de l'époque.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BIOENHANCEMENT_CENTER</Tag>
@@ -3748,14 +3780,17 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BIVOUAC_GROUNDS</Tag>
 		<English>Bivouac Grounds</English>
+		<French>Terrains de bivouac</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BIVOUAC_GROUNDS_PEDIA</Tag>
 		<English>Modern militaries often utilize large tracts of land for their most intensive training.  From Wikipedia: A military camp or bivouac is a semi-permanent facility for the lodging of an army. Camps are erected when a military force travels away from a major installation or fort during training or operations, and often have the form of large campsites.</English>
+		<French>Les militaires modernes utilisent souvent de grandes étendues de terrain pour leur entraînement le plus intensif. De Wikipédia: Un camp militaire ou bivouac est une installation semi-permanente pour l'hébergement d'une armée. Les camps sont érigés lorsqu'une force militaire s'éloigne d'une installation ou d'un fort important pendant la formation ou les opérations, et ont souvent la forme de grands campings.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BIVOUAC_GROUNDS_STRATEGY</Tag>
 		<English>Increases experience to all Combatants.  Opens up access to Special Forces units.</English>
+		<French>Augmente l'expérience de tous les combattants. Ouvre l'accès aux unités des forces spéciales.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BLACKWATER_DRAW</Tag>
@@ -3769,6 +3804,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BLACKWATER_DRAW_STRATEGY</Tag>
 		<English>LEGENDARY LANDSCAPES, Group Wonder.  Only one from the group can be built by a nation.</English>
+		<French>Groupe de Merveilles PAYSAGES LEGENDAIRES. Une seule Merveille de ce groupe peut être construit par nation.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BLACK_BEAR_MYTH</Tag>
@@ -3812,6 +3848,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BLACK_HAT_HIDEOUT_STRATEGY</Tag>
 		<English>Increases experience to Criminals.  As it is secretly state funded, it actually helps quite a bit with both gold and espionage.  Opens up access to Cyber Criminal units.  Unleashes a large amount of crime.  Hackers are very good at overcoming all manner of computer glitches, so they can, at times, be called upon to repair damaged tech.</English>
+		<French>Augmente l'expérience des criminels. Comme il est secrètement financé par l'État, il aide en fait à la fois à l'or et à l'espionnage. Ouvre l'accès aux unités Cyber Criminal. Déchaîne une grande quantité de criminalité. Les pirates sont très bons pour surmonter toutes sortes de problèmes informatiques, de sorte qu'ils peuvent parfois être appelés à réparer une Unité Hi-Tech endommagée.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BLACK_NET</Tag>
@@ -3964,6 +4001,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BLOOD_DANCE_PEDIA</Tag>
 		<English>A dance where blood is spread on the body in order to increase masculinity and the strength of warriors.</English>
+		<French>Une danse où le sang se répand sur le corps afin d'augmenter la masculinité et la force des guerriers.</French>
 		<Polish>Taniec rytualny - w obrzędach religijnych jest to jedna z form kultu, wyrażana rytmicznymi ruchami ciała, zazwyczaj w towarzystwie muzyki i śpiewu. Znana już od okresu paleolitu, przetrwała do czasów dzisiejszych. Występuje w wielu kulturach, ale szczególnie ważną rolę zajmuje w religiach kultur pierwotnych.</Polish>
 	</TEXT>
 	<TEXT>
@@ -4327,14 +4365,17 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BRAZEN_BULL</Tag>
 		<English>Brazen Bull</English>
+		<French>Torture : taureau d'airain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BRAZEN_BULL_PEDIA</Tag>
 		<English>The brazen bull, bronze bull, or Sicilian bull, was a torture and execution device designed in ancient Greece. According to Diodorus Siculus, recounting the story in Bibliotheca historica, Perillos of Athens invented and proposed it to Phalaris, the tyrant of Akragas, Sicily, as a new means of executing criminals. The bull was made entirely of bronze, hollow, with a door in one side. The bull was in the form and size of an actual bull and had an acoustic apparatus that converted screams into the sound of a bull. The condemned were locked inside the device, and a fire was set under it, heating the metal until the person inside was roasted to death.</English>
+		<French>Le taureau d'airain, le taureau de bronze ou le taureau sicilien était un instrument de torture et d'exécution conçu dans la Grèce antique. Selon Diodorus Siculus, racontant l'histoire de la Bibliotheca historica, Perillos d'Athènes l'a inventé et proposé à Phalaris, le tyran d'Akragas, en Sicile, comme nouveau moyen d'exécuter des criminels. Le taureau était entièrement en bronze, creux, avec une porte d'un côté. Le taureau avait la forme et la taille d'un vrai taureau et avait un appareil acoustique qui convertissait les cris en son de taureau. Les condamnés ont été enfermés à l'intérieur de l'appareil et un feu était allumé en dessous, chauffant le métal jusqu'à ce que la personne à l'intérieur soit rotie à mort.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BRAZEN_BULL_STRATEGY</Tag>
 		<English>The Brazen Bull is a Wondrous early torture device that can be built to combat crime and gain an edge in espionage, but at a cost that should be strongly considered.</English>
+		<French>Le taureau d'airain est l'un des premiers accessoires de la Salle de torture qui peut être construit pour lutter contre le crime et gagner un avantage dans l'espionnage, mais à un coût qui devrait être fortement pris en considération .</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BREEDING_ANTELOPE</Tag>
@@ -5214,66 +5255,82 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BURIAL_PLATFORMS</Tag>
 		<English>Burial Platforms</English>
+		<French>Plateformes funéraires</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BURIAL_PLATFORMS_PEDIA</Tag>
 		<English>While I could find many pictorial examples of this from the Americas, Tibet and Australia I could not find text describing them in general.</English>
+		<French>Bien que je puisse trouver de nombreux exemples illustrés de cela dans les Amériques, au Tibet et en Australie, je n'ai pas pu trouver de texte les décrivant en général.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BURIAL_PLATFORMS_STRATEGY</Tag>
 		<English>Improve the health of your city by limiting where sky burials happen.</English>
+		<French>Améliorez la santé de votre ville en limitant les lieux d'inhumation à l'air libre.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BURIAL_TRADITION_BONE</Tag>
 		<English>Burial Tradition (Bone)</English>
+		<French>Traditions funéraires (Os)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BURIAL_TRADITION_BONE_PEDIA</Tag>
 		<English>After the flesh has been removed from the bones, they are sorted and placed in special areas. Occasionally they will be temporarially removed later, for use in ceremonies.</English>
+		<French>Une fois la chair retirée des os, ils sont triés et placés dans des zones spéciales. Parfois, ils seront temporairement otés plus tard, pour une utilisation dans les cérémonies.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BURIAL_TRADITION_CAVE</Tag>
 		<English>Burial Tradition (Cave)</English>
+		<French>Traditions funéraires (Caverne)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BURIAL_TRADITION_CAVE_PEDIA</Tag>
 		<English>Bury your dead in caves.</English>
+		<French>Enterrez vos morts dans des cavernes.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BURIAL_TRADITION_EARTH</Tag>
 		<English>Burial Tradition (Earth)</English>
+		<French>Traditions funéraires (Terre)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BURIAL_TRADITION_EARTH_PEDIA</Tag>
 		<English>Bury your dead in the ground.</English>
+		<French>Enterrez vos morts dans le sol.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BURIAL_TRADITION_FIRE</Tag>
 		<English>Burial Tradition (Fire)</English>
+		<French>Traditions funéraires (Feu)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BURIAL_TRADITION_FIRE_PEDIA</Tag>
-		<English>Bun your dead.</English>
+		<English>Burn your dead.</English>
+		<French>Brûlez vos morts.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BURIAL_TRADITION_MUMMY</Tag>
 		<English>Burial Tradition (Mummy)</English>
+		<French>Traditions funéraires (Momie)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BURIAL_TRADITION_MUMMY_PEDIA</Tag>
 		<English>The dead are preserved either naturally or with human intervention for eternity.</English>
+		<French>Les morts sont préservés pour l'éternité, soit naturellement, soit grâce à l'intervention humaine.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BURIAL_TRADITION_SKY</Tag>
 		<English>Burial Tradition (Sky)</English>
+		<French>Traditions funéraires (Ciel)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BURIAL_TRADITION_SKY_PEDIA</Tag>
 		<English>Bury your dead in the sky.</English>
+		<French>Laissez vos morts se décomposer à l'air libre.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BURIAL_TRADITION_STRATEGY</Tag>
 		<English>Have different Burial Traditions in different cities to maximise your use of the dead.</English>
+		<French>Avec différentes traditions funéraires dans différentes villes, pour maximiser votre utilisation des morts.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BURJ_DUBAI</Tag>
@@ -6074,12 +6131,12 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAVE_EFFECT</Tag>
 		<English>Cave exists near a city</English>
-		<French>Cave exists near a city</French>
+		<French>Une grotte existe près d'une ville</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAVE_EFFECT_PEDIA</Tag>
 		<English>This building is a game system building. It identifies when your nation has teh correct terrain feature near to one of your cities needed for a line of normal buildings.</English>
-		<French>This building is a game system building. It identifies when your nation has teh correct terrain feature near to one of your cities needed for a line of normal buildings.</French>
+		<French>Ce bâtiment est un système de jeu. Il identifie quand votre nation a la bonne caractéristique de terrain près de l'une de vos villes nécessaire pour une ligne de bâtiments normaux.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAVE_PAINTING</Tag>
@@ -6350,7 +6407,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 		<English>The Large Hadron Collider (LHC) is the world's largest and highest-energy particle accelerator, and considered "one of the great engineering milestones of mankind". It was built by the European Organization for Nuclear Research (CERN) from 1998 to 2008, with the aim of allowing physicists to test the predictions of different theories of particle physics and high-energyphysics, and particularly prove or disprove the existence of the theorized Higgs boson and of the large family of new particles predicted by supersymmetric theories. The LHC is expected to address some of the still unsolved questions of physics, advancing human understanding of physical laws. It contains six detectors each designed for specific kinds of exploration.</English>
 		<Polish>LEP (z ang. Large Electron Positron Collider, Wielki Zderzacz Elektronowo-Pozytonowy) - akcelerator pracujący wCERN pod Genewą w latach 1989-2000. Znajdował się on w tunelu o obwodzie 27 km. Akcelerator po wybudowaniu w 1989 roku potrafił rozpędzić elektrony do energii 45 GeV, a pod koniec swojego działania do 104,6 GeV.</Polish>
 	</TEXT>
-		<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CERN_STRATEGY</Tag>
 		<English>TBD</English>
 	</TEXT>
@@ -8539,6 +8596,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CRICKET_PEDIA</Tag>
 		<English>Crickets are eaten fried, sauteed, boiled, and roasted, these are amongst the most common insects eaten. Eaten in Mexico, Thailand, Cambodia.</English>
+		<French>Les grillons sont mangés frits, sautés, bouillis et rôtis, ce sont les insectes les plus consommés. Mangé au Mexique, en Thaïlande, au Cambodge.</French>
 		<Polish>Świerszczowate, świerszcze (Gryllidae) - rodzina owadów prostoskrzydłych (Orthoptera), długoczułkowych (Ensifera), obejmująca około 900 gatunków występujących na wszystkich kontynentach, poza Antarktydą. Większość gatunków występuje w strefie tropikalnej. W Europie stwierdzono występowanie 63 gatunków, a w Polsce 6. Typem nomenklatorycznym rodziny jest Gryllus.</Polish>
 	</TEXT>
 	<TEXT>
@@ -8801,7 +8859,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_LIANGZHU_STRATEGY</Tag>
 		<English>Flavour culture for the Chinese culture. Allows special Jade buildings and trade goods.</English>
-		<French>Flavour culture for the Chinese culture. Allows special Jade buildings and trade goods.</French>
+		<French>Culture favorite pour la culture chinoise. Permet des bâtiments spéciaux en jade et des biens commerciaux.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL</Tag>
@@ -9095,6 +9153,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CYBER_CHLOROPLASTIDA_BLOOM_PEDIA</Tag>
 		<English>Cybernetic green algae, green seaweeds, and planktonic protists that are colonized near a water source by heavy industrial areas to remove air and water pollution.</English>
+		<French>Algues vertes cybernétiques, algues vertes et protistes planctoniques qui sont colonisés près d'une source d'eau par des zones industrielles lourdes pour éliminer la pollution de l'air et de l'eau.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CYBER_CHLOROPLASTIDA_BLOOM_STRATEGY</Tag>
@@ -9121,6 +9180,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CYRUS_CYLINDER_STRATEGY</Tag>
 		<English>The [COLOR_BUILDING_TEXT]Cyrus Cylinder[COLOR_REVERT] generates great generals based on your empire's power.</English>
+		<French>Le [COLOR_BUILDING_TEXT]Le Cylindre de Cyrus[COLOR_REVERT] génère des généraux illustres, basés sur la puissance de votre empire.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CYRUS_TOMB</Tag>
@@ -9142,6 +9202,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CYRUS_TOMB_STRATEGY</Tag>
 		<English>[COLOR_BUILDING_TEXT]Tomb of Cyrus[COLOR_REVERT] prevents the death of [COLOR_UNIT_TEXT]Great Generals[COLOR_REVERT]. However, they need 8 turns to recover from their injuries.</English>
+		<French>[COLOR_BUILDING_TEXT]La Tombe de Cyrus[COLOR_REVERT] prévient la mort des [COLOR_UNIT_TEXT]Généraux illustres[COLOR_REVERT]. Cependant, ils ont besoin de 8 tours pour se remettre de leurs blessures.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DAMAGES_ENEMY_UNITS</Tag>
@@ -9653,6 +9714,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DISNEYLAND_EFFECT_STRATEGY</Tag>
 		<English>Disneyland causes nationwide increase of happiness</English>
+		<French>Disneyland provoque une augmentation du bonheur à l'échelle nationale</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DISNEYLAND_PEDIA</Tag>
@@ -10895,6 +10957,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ESCORIAL_STRATEGY</Tag>
 		<English>Build El Escorial as an additional Palace and produce large quantities of Missionaries.</English>
+		<French>Construisez El Escorial en tant que Palais supplémentaire, et produisez de grandes quantités de missionnaires.</French>
 		<Italian>Costruisci l'Escorial come un nuovo Palazzo, e per produrre molti missionari.</Italian>
 	</TEXT>
 	<TEXT>
@@ -10948,14 +11011,17 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EVELPIDON_MILITARY_ACADEMY</Tag>
 		<English>MA Evelpidon Military Academy</English>
+		<French>L'Académie militaire d'Evelpidon</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EVELPIDON_MILITARY_ACADEMY_PEDIA</Tag>
 		<English>The Evelpidon Military Academy "Military School for Aspirant [Officers]" is the Officer cadet school of the Greek Army and the oldest tertiary level educational institution in Greece. It was founded in 1828 in Nafplion by Ioannis Kapodistrias, the first Governor of the modern Greek State.</English>
+		<French>L'Académie militaire Evelpidon «École militaire des aspirants [officiers]» est l'école des élèves officiers de l'armée grecque et le plus ancien établissement d'enseignement supérieur de Grèce. Il a été fondé en 1828 à Nauplie par Ioannis Kapodistrias, le premier gouverneur de l'État grec moderne.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EVELPIDON_MILITARY_ACADEMY_STRATEGY</Tag>
 		<English>All military units built in a city with a [COLOR_BUILDING_TEXT]Evelpidon Military Academy[COLOR_REVERT] building begin with four additional experience points. Further, its city is more likely to generate a [COLOR_UNIT_TEXT]Great General[COLOR_REVERT].</English>
+		<French>Toutes les unités militaires construites dans une ville avec l'[COLOR_BUILDING_TEXT]Académie militaire d'Evelpidon[COLOR_REVERT] commencent avec 4 points d'EXP supplémentaires. De plus, sa ville est plus susceptible de générer un [COLOR_UNIT_TEXT]Général illustre[COLOR_REVERT].</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EVOLUTIONARY_ALGORITHMS</Tag>
@@ -10970,6 +11036,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EVOLUTIONARY_ALGORITHMS_PEDIA</Tag>
 		<English>Evolutionary Algorithms evolve and enhances itself by doing so.</English>
+		<French>Les Algorithmes évolutionnaires ont la capacité d'évoluer, et s'améliorent en le faisant.</French>
 		<Polish>Ewolucja to najogólniej proces zmian zachodzących w czasie. Pojęcie ewolucji najpierw sformułowano na gruncie filozofii i nauk społecznych, później zastosowane zostało w biologii i innych naukach przyrodniczych. Obecnie najczęściej utożsamiane jest z ewolucją biologiczną czyli procesem biologicznym (najczęściej za główny, ale nie jedyny czynnik odpowiedzialny za ewolucję uważany jest dobór naturalny). Ewolucja ta polega na zmianachorganizmu w czasie prowadząc do powstawania nowych gatunków. Ewolucja wyjaśnia różnorodność form biologicznych oraz ich przystosowanie do środowiska (zobacz też adaptacjonizm).</Polish>
 	</TEXT>
 	<TEXT>
@@ -11113,11 +11180,13 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_E_BANK_PEDIA</Tag>
 		<English>An E-Bank is a bank entirely run by Ai and automatic teller machines.</English>
+		<French>Une E-Banque est une banque entièrement gérée par des A.I. et des guichets automatiques.</French>
 		<Polish>Pieniądz elektroniczny - elektroniczny zasób wartości pieniężnych w urządzeniu technicznym, w tym z góry opłaconych kartach, który może być wykorzystywany do dokonywania płatności na rzecz podmiotów innych niż emitent bez konieczności angażowania w transakcję rachunków bankowych, lecz funkcjonujący jednocześnie jako z góry opłacony instrument na okaziciela.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_E_BANK_STRATEGY</Tag>
 		<English>E-Bank increases city's wealth with Power.</English>
+		<French>l'E-Banque augmente la richesse de la ville de manière significative.</French>
 		<Spanish>El Banco digital aumenta el comercio de la ciudad con acceso a la energía.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11287,10 +11356,12 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FARMSCRAPER_PEDIA</Tag>
 		<English>Farmscrapers are vertical farms, designed to use available vertical space to gain the maximum amount of surface area while maintaining a smaller footprint.</English>
+		<French>Les "Farmscrapers" sont des fermes verticales, conçues pour utiliser l'espace vertical disponible pour gagner le maximum de surface tout en maintenant une empreinte plus petite.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FARMSCRAPER_STRATEGY</Tag>
 		<English>[SPACE]Farmscraper increases city's base food production by 6.</English>
+		<French>[SPACE]La Ferme verticale augmente la production alimentaire de base de la ville de 6.</French>
 		<Spanish>[SPACE]La Granja vertical aumenta la producción base de alimentos de la ciudad en 6.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11404,6 +11475,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FA_MEN_SI_STRATEGY</Tag>
 		<English>The [COLOR_BUILDING_TEXT]Famen Temple[COLOR_REVERT] allows missionaries to travel faster and spread religion without failure.</English>
+		<French>Le [COLOR_BUILDING_TEXT]Temple de Famen[COLOR_REVERT] permet aux missionnaires de voyager plus rapidement et de propager la religion sans échec.</French>
 		<Polish>The [COLOR_BUILDING_TEXT]Swiatynia Famen[COLOR_REVERT] pozwala przemieszczac sie Twoim misjonarzom szybciej i sprawniej rozprzestrzeniac wierzenia.</Polish>
 	</TEXT>
 	<TEXT>
@@ -11424,6 +11496,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FERTILITYFESTIVAL_EFFECT</Tag>
 		<English>Fertility Festival Effect</English>
+		<French>Effet - Festival de Fertilité</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FERTILITYFESTIVAL_PEDIA</Tag>
@@ -11539,6 +11612,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FIELD_GOLD_STRATEGY</Tag>
 		<English>Build the Field of the Cloth of Gold for a one-time +3 relations bonus with all leaders you have met.</English>
+		<French>Construisez le Camp du Drap d'or pour un bonus unique de +3 relations avec tous les chefs que vous avez rencontrés.</French>
 		<Italian>Questa meraviglia fornisce un bonus una tantum di +3 alle relazioni con tutti i leader che hai già incontrato.</Italian>
 	</TEXT>
 	<TEXT>
@@ -11641,6 +11715,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FIRING_RANGE</Tag>
 		<English>Firing Range</English>
+		<French>Champ de tir</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FIRING_RANGE_PEDIA</Tag>
@@ -11649,6 +11724,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FIRING_RANGE_STRATEGY</Tag>
 		<English>Increases experience to Gun and Throwing units but drops support for Archery entirely.  Replaces the Shooting Club.  Opens up access to the Sniper.</English>
+		<French>Augmente l'expérience des unités d'armesà feu, mais supprime entièrement le support du Tir à l'arc. Remplace le Club de tir. Donne accès à l'unité  Sniper.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FISHERMAN_HUT</Tag>
@@ -12122,7 +12198,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FREE_PROMO_CONDITION</Tag>
 		<English>[ICON_BULLET]Gives %s1_Promotion if Unit meets requirements.</English>
-		<French>[ICON_BULLET]Donne %s1_Promotion si l'unité possède tous les pré-requis.</French>
+		<French>[ICON_BULLET]Donne [COLOR_CYAN]%s1_Promotion[COLOR_REVERT] si l'unité possède tous les pré-requis.</French>
 		<Italian>[ICON_BULLET]Fornisce la promozione %s1_Promotion se l'unità ha i requisiti necessari.</Italian>
 		<Polish>[ICON_BULLET]Daje: %s1_Promotion jeśli jednostka spełni wymagania.</Polish>
 	</TEXT>
@@ -12138,6 +12214,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FREE_TRAIT</Tag>
 		<English>[ICON_BULLET]As long as this building is active, it's owning player gains the %s1_Trait Trait.</English>
+		<French>[ICON_BULLET]Tant que ce bâtiment est actif, le joueur le possédant gagne le trait %s1_Trait.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FREE_XP</Tag>
@@ -12220,14 +12297,17 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FUNERARY_SERVICES</Tag>
 		<English>Funerary Services</English>
+		<French>Services Funéraires</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FUNERARY_SERVICES_PEDIA</Tag>
 		<English>Funerary Services are a game device to consolidate the buildings available in game and control access to future buildings.[PARAGRAPH:2]It represents all the buildings required for the different ways of handling the dead. It is not as good as any of the previous traditions and their buildings but is necessary to build later buildings.</English>
+		<French>Les services funéraires sont un dispositif de jeu pour consolider les bâtiments disponibles dans le jeu et contrôler l'accès aux futurs bâtiments. [PARAGRAPHE: 2] Il représente tous les bâtiments nécessaires aux différentes manières de gérer les morts. Ce n'est pas aussi bon que les traditions précédentes et leurs bâtiments, mais il est requis pour construire des bâtiments ultérieurs.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FUNERARY_SERVICES_STRATEGY</Tag>
 		<English>Allow the building of modern buildings associated with death eg City Morgue. Consolidate you buildings dealing with burial traditions into one building.</English>
+		<French>Autoriser la construction de bâtiments modernes associés à la mort, par exemple la morgue de la ville. Consolidez vos bâtiments traitant des traditions funéraires en un seul bâtiment.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FURRIER</Tag>
@@ -12314,6 +12394,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FUSION_PLANT_STRATEGY</Tag>
 		<English>Provides clean power for one continent. You are allowed to build 3 of these power plants.</English>
+		<French>Fournit une énergie propre à un continent. Vous êtes autorisé à construire 3 de ces centrales électriques.</French>
 		<Spanish>Proporciona energía limpia a un continente. Puedes construir hasta 3 de estas centrales eléctricas.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -12878,11 +12959,13 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GOLDEN_SPIKE_PEDIA</Tag>
 		<English>The Golden Spike was the name given to the ceremonial last spike driven to finish the first railroad line to cross the United States. The ceremony was held on May 10, 1869, at Promontory Point in Utah. Other great railroads include the Canadian Pacific Railway and the Trans-Siberian Railway.</English>
+		<French>Le Piquet d'Or était le nom donné au dernier crampon cérémoniel conduit pour terminer la première ligne de chemin de fer à traverser les États-Unis. La cérémonie a eu lieu le 10 mai 1869, à Promontory Point dans l'Utah. Parmi les autres grands chemins de fer, mentionnons le chemin de fer Canadien Pacifique et le chemin de fer transsibérien.</French>
 		<Italian>Golden Spike era il nome dato all'ultimo chiodo utilizzato per terminare la prima linea ferroviaria trascontinentale che attraversò gli Stati Uniti. La cerimonia fu tenuta il 10 maggio 1869 a Promontory Point, nello Otah. Altre grandi ferrovie includono la Canadian Pacific Railway e la Ferrocia Transiberiana.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GOLDEN_SPIKE_STRATEGY</Tag>
 		<English>Build The Golden Spike to create a Transcontinental Railroad on completion and to speed up your production of Settlers and Workers thereafter.</English>
+		<French>Construisez le Piquet d'Or pour créer une  Voie ferrée Transcontinentale à la fin et pour accélérer votre production de colons et de travailleurs par la suite.</French>
 		<Italian>Costruisci la Golden Spike per creare una ferrovia transcontinentale, oltre che per velocizzare la produzione di unità di coloni e di lavoratori.</Italian>
 	</TEXT>
 	<TEXT>
@@ -12968,6 +13051,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GOOD_ALCATRAZ_PEDIA</Tag>
 		<English>Following the building of Alcatraz Prison, the worst criminals from all across the nation were shipped there.</English>
+		<French>Après la construction de la prison d'Alcatraz, les pires criminels de toute la nation y ont été expédiés.</French>
 		<Italian>Dopo la costruzione della Prigione di Alcatraz, i peggiori criminali della nazione venivano spediti qui.</Italian>
 	</TEXT>
 	<TEXT>
@@ -13575,14 +13659,17 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GUARD_STATION</Tag>
 		<English>Guard Station</English>
+		<French>Caserne de Garde</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GUARD_STATION_PEDIA</Tag>
 		<English>Guard Stations are where your City Guards are trained and organize their efforts.</English>
+		<French>Les Casernes de garde sont l'endroit où vos gardes de la ville sont formés et organisent leurs efforts.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GUARD_STATION_STRATEGY</Tag>
 		<English>Guard Stations are more powerful than Guardhouses in every way and allow you to train and upgrade your Guards into gunpowder wielding City Guards.</English>
+		<French>Les Casernes de garde sont plus puissants que les postes de garde à tous égards et vous permettent de former et d'améliorer vos gardes en les équipant d'armes à feu.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GUILDHALL</Tag>
@@ -13647,6 +13734,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HAAST_EAGLE_REMAINS</Tag>
 		<English>Remains - Haast's Eagle</English>
+		<French>Restes d'Aigle de Haast</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HAAST_EAGLE_STORIES</Tag>
@@ -13920,7 +14008,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HEALERHUT_STRATEGY</Tag>
 		<English>The [COLOR_BUILDING_TEXT]Healer's Hut[COLOR_REVERT] is a prehistoric era building that lowers a city's [COLOR_GREEN]Disease[COLOR_REVERT] generation while also providing additional [COLOR_GREEN]Healthiness[COLOR_REVERT]. Once built a city can then train [COLOR_UNIT_TEXT]Healer[COLOR_REVERT] units that can help combat [COLOR_GREEN]Disease[COLOR_REVERT] generation. It also passively heals [COLOR_UNIT_TEXT]People[COLOR_REVERT] and [COLOR_UNIT_TEXT]Animal[COLOR_REVERT] units that are inside the city by [COLOR_GREEN]+4%[COLOR_REVERT] and [COLOR_GREEN]+2%[COLOR_REVERT] every turn, respectively.</English>
-		<French>Les Guérisseurs améliore la santé de la population, et soigne également les unités.</French>
+		<French>La [COLOR_BUILDING_TEXT]Hutte du Guérisseur[COLOR_REVERT] est un bâtiment de l'ère préhistorique qui réduit la génération de [COLOR_GREEN]Maladie[COLOR_REVERT] d'une ville tout en fournissant de la  [COLOR_GREEN]Santé[COLOR_REVERT] supplémentaire. Une fois construite, une ville peut alors former des unités de [COLOR_UNIT_TEXT]Guérisseurs[COLOR_REVERT] qui peuvent aider à combattre la prolifération des [COLOR_GREEN]Maladies[COLOR_REVERT]. Il guérit également passivement les [COLOR_UNIT_TEXT]Unités humaines[COLOR_REVERT] et les [COLOR_UNIT_TEXT]Unités animales[COLOR_REVERT] qui sont à l'intérieur de la ville de [COLOR_GREEN]+ 4%[COLOR_REVERT] et [COLOR_GREEN]+ 2%[COLOR_REVERT] à chaque tour, respectivement.</French>
 		<Spanish>La Cabaña del curandero proporciona salud a tu ciudad, y ayuda ligeramente a curar a las unidades.</Spanish>
 		<Polish>Chata w której zamieszkał wioskowy uzdrowiciel.</Polish>
 	</TEXT>
@@ -13942,6 +14030,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HEALTH_SPA_STRATEGY</Tag>
 		<English>An Health Spa provides a health boost to the city it is built in plus provides some protection against disease.</English>
+		<French>Une Station Thermale améliore la santé de la ville dans laquelle il est construit et offre une certaine protection contre les maladies.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HEAL_UNITCOMBAT_MOD</Tag>
@@ -14002,6 +14091,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HEIDELBERG_UNIVERSITY</Tag>
 		<English>EU Heidelberg University</English>
+		<French>L'Université d'Heidelberg</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HEIDELBERG_UNIVERSITY_PEDIA</Tag>
@@ -14471,6 +14561,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HILLTARA_STRATEGY</Tag>
 		<English>The Hill of Tara grants you a free Chief's Hut in every city and +1 happiness from your state religion.</English>
+		<French>La Colline de Tara vous offre une cabane de chef gratuite dans chaque ville et +1 de bonheur de votre religion d'État.</French>
 		<Italian>La collina di Tara fornisce una Capanna del capo gratuita in ogni città e +1 felicità dalla tua religione di stato.</Italian>
 	</TEXT>
 	<TEXT>
@@ -14489,7 +14580,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HIMEJI_CASTLE_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]+100%[ICON_GOLD] from Pillaging. Enemies Can't Capture or Pillage [ICON_GOLD] Inside Cultural Borders</English>
-	
+
 		<French>[ICON_BULLET]+100%[ICON_GOLD] lors des pillages[NEWLINE][ICON_BULLET]Ennemis ne récupère par [ICON_GOLD] de leurs pillages</French>
 		<German>[ICON_BULLET]+100%[ICON_GOLD] durch Plünderungen[NEWLINE][ICON_BULLET]Feinde können innerhalb der Grenzen kein [ICON_GOLD] erobern oder plündern.</German>
 		<Italian>[ICON_BULLET]+100%[ICON_GOLD] dal saccheggio[NEWLINE][ICON_BULLET]I nemici non possono catturare o saccheggiare [ICON_GOLD] all'interno dei confini culturali</Italian>
@@ -14716,6 +14807,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HNIC_STRATEGY</Tag>
 		<English>[COLOR_BUILDING_TEXT]Hockey Night in Canada[COLOR_REVERT] provides [COLOR_BUILDING_TEXT]1 happiness[COLOR_REVERT] to all Broadcast Towers and Hockey Rinks of the building civilization and +25% gold to the city in which it resides. It contributes an improved chance of generating a [COLOR_UNIT_TEXT]Great Artist[COLOR_REVERT].</English>
+		<French>[COLOR_BUILDING_TEXT]La Nuit du Hockey au Canada[COLOR_REVERT] procure [COLOR_BUILDING_TEXT]1 bonheur[COLOR_REVERT] à toutes les Tours de radiodiffusions et patinoires de hockey de la civilisation, et + 25% d'or à la ville dans laquelle il réside. Il contribue à améliorer les chances de générer un [COLOR_UNIT_TEXT]Artiste Illustre[COLOR_REVERT].</French>
 		<Italian>[COLOR_BUILDING_TEXT]Notte dell'hockey in Canada[COLOR_REVERT] fornisce [COLOR_BUILDING_TEXT]1 felicità[COLOR_REVERT] a tutti i Ripetitori e ai Campi da Hockey della città che costruisce la meraviglia; inoltre fornisce +25% all'oro nella città dov'è costruita. Aumenta le chance di generare un [COLOR_UNIT_TEXT]Grande Artista[COLOR_REVERT].</Italian>
 	</TEXT>
 	<TEXT>
@@ -15584,6 +15676,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IMPERIAL_JAPANESE_NAVAL_ACADEMY</Tag>
 		<English>MA Imperial Naval Academy</English>
+		<French>MA Académie navale Impériale</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IMPERIAL_JAPANESE_NAVAL_ACADEMY_PEDIA</Tag>
@@ -15592,6 +15685,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IMPERIAL_JAPANESE_NAVAL_ACADEMY_STRATEGY</Tag>
 		<English>All military units built in a city with a [COLOR_BUILDING_TEXT]Imperial Naval Academy[COLOR_REVERT] building begin with four additional experience points. Further, its city is more likely to generate a [COLOR_UNIT_TEXT]Great Admiral[COLOR_REVERT].</English>
+		<French>Toutes les unités militaires entraînées dans une ville avec la [COLOR_BUILDING_TEXT]Imperial Académie navale[COLOR_REVERT] commence avec 4 points d'EXP supplémentaires. De plus, la Ville est susceptible de faire apparaître un [COLOR_UNIT_TEXT]Amiral Illustre[COLOR_REVERT].</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IMPERIAL_MINT</Tag>
@@ -15924,26 +16018,32 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERROGATION_CHAIR</Tag>
 		<English>Interrogation Chair</English>
+		<French>Chaise d'interrogatoire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERROGATION_CHAIR_PEDIA</Tag>
 		<English>The Iron Chair (or Interrogation Chair) is a torture device that has several different variations depending on its origin and use throughout history. It also has many names - the Chinese torture chair, the torture chair, and the Iron Chair. In all cases, the victim was seated on several strips or plates of brass and placed over an open flame and slowly roasted alive. In other variations, the "culprits" were tied to an iron armchair and then slowly pushed nearer and nearer to a blazing fire. Another version of this chair was even more diabolical due to the addition of hundreds of sharp spikes which lined the back, seat, armrests and leg rests. The number of spikes ranged from 500 to 1,500.</English>
+		<French>La chaise en fer (ou chaise d'interrogation) est un appareil de torture qui a plusieurs variantes différentes selon son origine et son utilisation à travers l'histoire. Il a également de nombreux noms - le fauteuil de torture chinois, le fauteuil de torture et la chaise de fer. Dans tous les cas, la victime était assise sur plusieurs bandes ou plaques de laiton, placée sur une flamme nue et rôtie lentement vivante. Dans d'autres variantes, les "coupables" ont été attachés à un fauteuil en fer puis poussés lentement de plus en plus près d'un feu ardent. Une autre version de cette chaise était encore plus diabolique en raison de l'ajout de centaines de pointes acérées qui tapissaient le dossier, le siège, les accoudoirs et les repose-jambes. Le nombre de pointes variait de 500 à 1 500.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERROGATION_CHAIR_STRATEGY</Tag>
 		<English>Interrogation Chairs are one of many torture chamber accessories that can be built to combat crime and gain an edge in espionage, but at a cost that should be strongly considered.</English>
+		<French>La Chaise d'interrogatoire est l'un des nombreux accessoires de la Salle de torture qui peut être construit pour lutter contre le crime et gagner un avantage dans l'espionnage, mais à un coût qui devrait être fortement pris en considération.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTESTINAL_RATS</Tag>
 		<English>Intestinal Rats</English>
+		<French>Torture des Rats intestinaux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTESTINAL_RATS_PEDIA</Tag>
 		<English>During the Dutch Revolt, Diederik Sonoy, an ally of William the Silent, is documented to have used a method where a pottery bowl filled with rats was placed open side down on the naked body of a prisoner. When hot charcoal was piled on the bowl, the rats would "gnaw into the very bowels of the victim" in an attempt to escape the heat.</English>
+		<French>Pendant la révolte hollandaise, Diederik Sonoy, un allié de Guillaume le Silencieux, aurait utilisé une méthode où un bol de poterie rempli de rats était placé face ouverte sur le corps nu d'un prisonnier. Lorsque du charbon de bois chaud était empilé sur le bol, les rats "rongeaient les entrailles mêmes de la victime" pour tenter d'échapper à la chaleur.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTESTINAL_RATS_STRATEGY</Tag>
 		<English>Intestinal Rats are one of many torture chamber accessories that can be built to combat crime and gain an edge in espionage, but at a cost that should be strongly considered.</English>
+		<French>Les rats intestinaux sont l'un des nombreux accessoires de chambre de torture qui peuvent être construits pour lutter contre le crime et gagner un avantage dans l'espionnage, mais à un coût qui devrait être fortement pris en considération.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTUITIVE_ALGORITHMS</Tag>
@@ -16013,14 +16113,17 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IRON_MAIDEN</Tag>
 		<English>Iron Maiden</English>
+		<French>Vierge de fer</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IRON_MAIDEN_PEDIA</Tag>
 		<English>The iron maiden was a torture and execution device, consisting of an iron cabinet with a hinged front and spike-covered interior, sufficiently tall to enclose a human being. The first stories citing the iron maiden were composed in the 19th century.</English>
+		<French>La vierge de fer était un appareil de torture et d'exécution, consistant en une armoire en fer avec un front articulé et un intérieur recouvert de pointes, suffisamment haut pour enfermer un être humain. Les premières histoires citant la vierge de fer ont été composées au XIXe siècle.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IRON_MAIDEN_STRATEGY</Tag>
 		<English>Iron Maidens are one of many torture chamber accessories that can be built to combat crime and gain an edge in espionage, but at a cost that should be strongly considered.</English>
+		<French>la Vierge de fer est l'un des nombreux accessoires de la Salle de torture qui peut être construit pour lutter contre le crime et gagner un avantage dans l'espionnage, mais à un coût qui devrait être fortement pris en considération.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IRON_RECLAMATION_PLANT</Tag>
@@ -16358,6 +16461,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JAGIELLONIAN_UNIVERSITY</Tag>
 		<English>EU Jagiellonian University</English>
+		<French>L'Université Jagiellonienne</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JAGIELLONIAN_UNIVERSITY_PEDIA</Tag>
@@ -16657,14 +16761,17 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JUDAS_CRADLE</Tag>
 		<English>Judas Cradle</English>
+		<French>Berceau de Judas</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JUDAS_CRADLE_PEDIA</Tag>
 		<English>The Judas Cradle, also known as the Judas chair and The Guided Cradle, was an alleged torture device. In Italian it is the culla di Giuda; in German the Judaswiege; and in French the la veille-"the wake" or "nightwatch" (because when certain muscles are contracted, the victim could not fall asleep).</English>
+		<French>Le Berceau de Judas, également connu sous le nom de Chaise de Judas et le Berceau Guidé, est un appareil de torture présumé. En italien, c'est la culla di Giuda; en allemand le Judaswiege; et en français la veille - «le sillage» ou «veille nocturne» (car lorsque certains muscles se contractent, la victime ne peut pas s'endormir).</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JUDAS_CRADLE_STRATEGY</Tag>
 		<English>The Judas Cradle is one of many torture chamber accessories that can be built to combat crime and gain an edge in espionage, but at a cost that should be strongly considered.</English>
+		<French>Le Berceau de Judas est l'un des nombreux accessoires de la Salle de torture qui peut être construit pour lutter contre le crime et gagner un avantage dans l'espionnage, mais à un coût qui devrait être fortement pris en considération .</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JUMILES</Tag>
@@ -16954,6 +17061,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KINGS_TOURNAMENT_STRATEGY</Tag>
 		<English>King's Tournament grants additional experience to your Melee, Mounted, and Hero units.</English>
+		<French>Le Tournoi des Rois confère une expérience supplémentaire à vos unités de mêlée, à cheval et aux héros.</French>
 		<Italian>Il Torneo del Re fornisce XP extra alle tue unità montate, da combattimento ravvicinato e agli eroi.</Italian>
 	</TEXT>
 	<TEXT>
@@ -17231,6 +17339,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LAB_STRATEGY</Tag>
 		<English>An early research facility, grants a science bonus to your city and increase specialist birth rate.</English>
+		<French>Un centre de recherche précoce, accorde un bonus scientifique à votre ville et augmente le taux d'apparition des spécialistes illustres.</French>
 		<Spanish>Uno de los primeros complejos de investigación; proporciona una bonificación a la investigación en tu ciudad, y aumenta la tasa de nacimiento de Grandes personajes.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -17288,7 +17397,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LASCAUX_EFFECT</Tag>
 		<English>Lascaux Caves Effect</English>
-		<French>Lascaux Caves Effect</French>
+		<French>Effet (Grotte de Lascaux)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LASCAUX_PAINTS</Tag>
@@ -17357,7 +17466,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LASVEGASSTRIP_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Build Circus Circus Casino and Luxor Casino, and avoid building Monte Carlo Casino in the same city, if you want to build Las Vegas Strip wonder.</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Construisez le Circus Circus Casino et le Luxor Casino, et évitez de construire le Monte Carlo Casino dans la même ville, si vous voulez construire le Las Vegas Strip wonder.</French>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Construisez le Casino 'Circus Circus' et Le Casino Luxor, et évitez de construire le Monte Carlo Casino dans la même ville, si vous voulez construire la Merveille Las Vegas.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LAS_VEGAS_STRIP</Tag>
@@ -17375,6 +17484,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LAS_VEGAS_STRIP_STRATEGY</Tag>
 		<English>Build the Las Vegas Strip to radically increase your gold production in the building city and get extra gold from all your Casinos.</English>
+		<French>Construisez la Merveille Las Vegas pour augmenter radicalement votre production d'or dans la ville en construction et obtenir de l'or supplémentaire de tous vos casinos.</French>
 		<Italian>Costruisci la Strip di Las Vegas per incrementare radicalmente la tua produzione di oro, e ottenere altro oro da tutti i tuoi Casinò.</Italian>
 	</TEXT>
 	<TEXT>
@@ -17869,6 +17979,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LONDONEYE_STRATEGY</Tag>
 		<English>The London Eye grants a gold bonus to the city it is built on and +2 commerce from all Engineer specialists.</English>
+		<French>Le London Eye accorde un bonus d'or à la ville sur laquelle il est construit et +2 au commerce de tous les spécialistes ingénieurs.</French>
 		<Italian>London Eye ofrnisce un bonus all'oro nella città in cui è costruita; fornisce anche +2 commercio dagli ingegneri.</Italian>
 	</TEXT>
 	<TEXT>
@@ -18195,6 +18306,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAGINOTLINE_STRATEGY</Tag>
 		<English>Build the Maginot Line for a free Barricade in every city.</English>
+		<French>Construisez La Ligne Maginot pour une barricade gratuite dans chaque ville.</French>
 		<Italian>Costruisci la Linea Maginot per ottenere Barricate gratuite in tutte le città.</Italian>
 	</TEXT>
 	<TEXT>
@@ -20084,6 +20196,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOA_REMAINS</Tag>
 		<English>Remains - Moa</English>
+		<French>Restes de Moa</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOA_STORIES</Tag>
@@ -20262,6 +20375,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MONTE_CARLO_STRATEGY</Tag>
 		<English>Build Monte Carlo to increase your gold production.</English>
+		<French>Construisez Monte Carlo pour augmenter votre production d'or.</French>
 		<Italian>Costruisci Monte Carlo per incrementare la tua produzione di oro.</Italian>
 	</TEXT>
 	<TEXT>
@@ -20289,6 +20403,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MONTPELLIER_UNIVERSITY</Tag>
 		<English>EU Montpellier University</English>
+		<French>L'Université de Montpellier</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MONTPELLIER_UNIVERSITY_PEDIA</Tag>
@@ -20374,6 +20489,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOTORCYCLE_CLUB_STRATEGY</Tag>
 		<English>Opens access to the Biker Gang unit.  Adds a significant amount of experience for Criminals.  Is a very effective hideout for criminals.  Motorcycle Clubs often engage in very profitable crime so increase the gold for the nation.  These clubs are often skilled at mechanical repair and offer their services to the community to present a profitable front of innocence.  Also, is a strong source of additional crime.</English>
+		<French>Ouvre l'accès à l'unité Gang de Bikers. Ajoute une quantité significative d'expérience pour les criminels. Est une cachette très efficace pour les criminels. Le Club de Bikers se livre souvent à des délits très rentables, alors augmentez l'or pour la nation. Ces clubs sont souvent qualifiés en réparation mécanique et offrent leurs services à la communauté pour présenter un front d'innocence rentable. En outre, est une forte source de criminalité supplémentaire.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOVIETHEATRE</Tag>
@@ -21432,6 +21548,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NAZCA_LINES_STRATEGY</Tag>
 		<English>[COLOR_BUILDING_TEXT]Nazca Lines[COLOR_REVERT] provide totally unpredictable benefits out of the following each era advance., +2[ICON_HAPPY], +2[ICON_HEALTHY], +4[ICON_FOOD], +4[ICON_PRODUCTION], +4[ICON_GOLD], +4[ICON_RESEARCH], +4[ICON_CULTURE], +4[ICON_ESPIONAGE]</English>
+		<French>[COLOR_BUILDING_TEXT]Les Lignes de Nazca[COLOR_REVERT] procurent des avantages totalement imprévisibles sur les progrès de chaque ère nouvelle, +2[ICON_HAPPY], +2[ICON_HEALTHY], +4[ICON_FOOD], +4[ICON_PRODUCTION], +4[ICON_GOLD], +4[ICON_RESEARCH], +4[ICON_CULTURE], +4[ICON_ESPIONAGE]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEON_BOTIQUE</Tag>
@@ -21477,6 +21594,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NETHERLANDS_DIKE</Tag>
 		<English>Dutch Dike</English>
+		<French>Digue Hollandaise</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NETHERLANDS_DIKE_PEDIA</Tag>
@@ -21487,6 +21605,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NETHERLANDS_DIKE_STRATEGY</Tag>
 		<English>Best built in a city surrounded by many rivers.</English>
+		<French>A construire dans une ville entourée de nombreuses rivières.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NETWORK_NODE</Tag>
@@ -21681,6 +21800,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NHL_STRATEGY</Tag>
 		<English>National Sports League increases culture in all cities by 10% and grants +2 free celebrities in the city it's built.</English>
+		<French>La Ligue Nationale de Sport augmente la culture de 10% dans toutes les villes et accorde +2 célébrités gratuites dans la ville où elle est construite.</French>
 		<Spanish>La Liga deportiva nacional aumenta la cultura en un 10% en todas las ciudades, y otorga +2 Famosos gratis en la ciudad donde se construya.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -22245,6 +22365,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ONE_TIME_POPULATION_LOSS</Tag>
 		<English>[ICON_BULLET]When the city gets this building, for the first time ONLY, it loses %d1_amount population.</English>
+		<French>[ICON_BULLET]Lorsque la ville obtient ce bâtiment, pour la première fois SEULEMENT, elle perd %d1_amount population.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ONLINESHIPPING</Tag>
@@ -22267,7 +22388,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ONLINESHIPPING_STRATEGY</Tag>
 		<English>The [COLOR_BUILDING_TEXT]Online Shipping Warehouse[COLOR_REVERT] allows you to earn commerce, and adds a trade route to this city.</English>
-		<French>The [COLOR_BUILDING_TEXT]un Entrepôt Online[COLOR_REVERT] allows you to earn commerce, and adds a trade route to this city.</French>
+		<French>L'[COLOR_BUILDING_TEXT]Entrepôt Online[COLOR_REVERT] vous permet de gagner du commerce et ajoute une route commerciale à cette ville.</French>
 		<Italian>Il [COLOR_BUILDING_TEXT] Magazzino di spedizioni online [COLOR_REVERT] ti permette di guadagnare commercio, e aggiunge una rotta commerciale in questa città.</Italian>
 		<Spanish>El [COLOR_BUILDING_TEXT]Almacén de tienda virtual[COLOR_REVERT] te permite aumentar el comercio, y añade una ruta comercial a esta ciudad.</Spanish>
 	</TEXT>
@@ -22507,6 +22628,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORGANIC_COMPUTER_LAB_PEDIA</Tag>
 		<English>Organic computing is a form of biologically-inspired computing with organic properties. It has emerged recently as a challenging vision for future information processing systems. Organic Computing is based on the insight that we will soon be surrounded by large collections of autonomous systems, which are equipped with sensors and actuators, aware of their environment, communicate freely, and organise themselves in order to perform the actions and services that seem to be required.</English>
+		<French>L'informatique organique est une forme d'informatique d'inspiration biologique aux propriétés organiques. Il est apparu récemment comme une vision difficile pour les futurs systèmes de traitement de l'information. Le calcul organique est basé sur l'idée que nous serons bientôt entourés de grandes collections de systèmes autonomes, qui sont équipés de capteurs et d'actionneurs, conscients de leur environnement, communiquent librement et s'organisent afin d'exécuter les actions et les services qui semblent être requis.</French>
 		<Polish>Biokomputer to komputer, w którym obliczenia zachodzą dzięki reakcjom chemicznym między cząsteczkami DNA.</Polish>
 	</TEXT>
 <TEXT>
@@ -22548,6 +22670,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORIENT_EXPRESS_STRATEGY</Tag>
 		<English>Build the Orient Express to boost your trade income, as well as get additional happiness and espionage from your Railroad Stations.</English>
+		<French>Construisez l'Orient Express pour augmenter vos revenus commerciaux, ainsi que pour obtenir plus de bonheur et d'espionnage dans vos stations Voies ferrées.</French>
 		<Italian>Costruisci l'Orient Express per aumentare il ricavato delle rotte commerciali, oltre a felicità e spionaggio bonus dalle tue Stazioni ferroviarie.</Italian>
 	</TEXT>
 	<TEXT>
@@ -22798,6 +22921,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALACE_SOV_STRATEGY</Tag>
 		<English>Build the Palace of the Soviets to slash your cities' maintenance costs and increase the happiness from some buildings.</English>
+		<French>Construisez le Palais des Soviets pour réduire les coûts d'entretien de vos villes et augmenter le bonheur de certains bâtiments.</French>
 		<Italian>Costruisci il Palazzo dei Soviet per annientare i costi di mantenimento delle tue città e aumentare la felicità da akcuni edifici.</Italian>
 	</TEXT>
 	<TEXT>
@@ -23186,6 +23310,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PAWN_SHOP</Tag>
 		<English>Pawn Shop</English>
+		<French>Prêteur sur gage</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PAWN_SHOP_PEDIA</Tag>
@@ -23194,6 +23319,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PAWN_SHOP_STRATEGY</Tag>
 		<English>Increases experience for Criminal units and gives a substantial bonus to Gold income.  Spreads crime in the city extensively as it is a harbor for stolen goods to be sold.  Loss of a little culture as it disenfranchises the goods of the nation.  Gives access to the Thug unit.</English>
+		<French>Augmente l'expérience des unités criminelles et donne un bonus substantiel au revenu d'Or. Propage largement le crime dans la ville car c'est un point de chute pour les biens volés à revendre. Perte d'un peu de culture car elle prive de leurs droits les biens de la nation. Donne accès à l'unité Voyou.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PEACOCK2</Tag>
@@ -23224,6 +23350,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PEARL_HARBOR_STRATEGY</Tag>
 		<English>Build Pearl Harbor as a forward military base to increase your line of sight and drastically increase the speed of your military unit repairs.</English>
+		<French>Construisez Pearl Harbor en tant que base militaire avancée pour augmenter votre ligne de vue et augmenter considérablement la vitesse des réparations de votre unité militaire.</French>
 		<Italian>Costruisci Pearl Harbor come una base militare, per incrementare la tua linea di avvistamento e la velocità di riparazione dei danni per le tue unità.</Italian>
 	</TEXT>
 	<TEXT>
@@ -23414,6 +23541,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PERGAMON_STRATEGY</Tag>
 		<English>[COLOR_BUILDING_TEXT]Pergamon Altar[COLOR_REVERT] increases the rate of generating [COLOR_UNIT_TEXT]Great Generals[COLOR_REVERT] while decreasing the rate for rivals.</English>
+		<French>[COLOR_BUILDING_TEXT]L'Autel de Pergamon[COLOR_REVERT] augmente le taux de génération des [COLOR_UNIT_TEXT]Généraux illustres[COLOR_REVERT] tout en diminuant le taux pour les rivaux.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PERSIAN_APOTHECARY</Tag>
@@ -24137,6 +24265,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POPULATION_CHANGE</Tag>
 		<English>[ICON_BULLET]When the city gets this building, its population adjusts by %d1_amount.</English>
+		<French>[ICON_BULLET]Lorsque la ville obtient ce bâtiment, sa population s’ajuste de %d1_amount.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POPULATION_EMPLOYED</Tag>
@@ -24317,6 +24446,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PORT_STRATEGY</Tag>
 		<English>The [COLOR_BUILDING_TEXT]Port[COLOR_REVERT] increases that city's income from trade routes. It increases a city's health from access to [COLOR_HIGHLIGHT_TEXT]Clam[COLOR_REVERT], and [COLOR_HIGHLIGHT_TEXT]Crab[COLOR_REVERT] resources.</English>
+		<French>Le [COLOR_BUILDING_TEXT]Port[COLOR_REVERT] augmente les revenus de cette ville grâce aux routes commerciales. Il augmente la santé d'une ville de l'accès aux ressources [COLOR_HIGHLIGHT_TEXT]Coquillage[COLOR_REVERT], et [COLOR_HIGHLIGHT_TEXT]Crabe[COLOR_REVERT].</French>
 		<Spanish>El [COLOR_BUILDING_TEXT]Puerto[COLOR_REVERT] aumenta el rendimiento de las rutas comerciales de la ciudad. También aumenta la salud de la ciudad con acceso a los recursos de las [COLOR_HIGHLIGHT_TEXT]Almejas[COLOR_REVERT] y [COLOR_HIGHLIGHT_TEXT]Cangrejos[COLOR_REVERT].</Spanish>
 	</TEXT>
 	<TEXT>
@@ -25512,6 +25642,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REICHSTAG_STRATEGY</Tag>
 		<English>[COLOR_BUILDING_TEXT]Reichstag[COLOR_REVERT] grants a [COLOR_HIGHLIGHT_TEXT]Golden Age[COLOR_REVERT] to the player when he obtains a new vassal.</English>
+		<French>Le [COLOR_BUILDING_TEXT]Reichstag[COLOR_REVERT] déclenche un [COLOR_HIGHLIGHT_TEXT]Age d'Or[COLOR_REVERT] au joueur quand il obtient un nouveau vassal.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REJUVENATION_TANK</Tag>
@@ -25574,6 +25705,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REPUBLIC_OF_CHINA_NAVAL_ACADEMY</Tag>
 		<English>MA Republic Naval Academy</English>
+		<French>Académie navale de la République</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REPUBLIC_OF_CHINA_NAVAL_ACADEMY_PEDIA</Tag>
@@ -25582,6 +25714,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REPUBLIC_OF_CHINA_NAVAL_ACADEMY_STRATEGY</Tag>
 		<English>All military units built in a city with a [COLOR_BUILDING_TEXT]Republic Naval Academy[COLOR_REVERT] building begin with six additional experience points. Further, its city is more likely to generate a [COLOR_UNIT_TEXT]Great Admiral[COLOR_REVERT].</English>
+		<French>Toutes les unités militaires entraînées dans une ville avec la [COLOR_BUILDING_TEXT]Académie navale de la République[COLOR_REVERT] commencent avec 6 points d'EXP supplémentaires. De plus, la Ville est susceptible de faire apparaître un [COLOR_UNIT_TEXT]Amiral Illustre[COLOR_REVERT].</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REQUIRES_ACTIVE_CIVICS</Tag>
@@ -26011,6 +26144,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROSETTA_STONE_STRATEGY</Tag>
 		<English>The Rosetta Stone increases the culture and science output of your Museums, and increases the science output of your Anthropology and Archeology Labs.</English>
+		<French>La Pierre de Rosette augmente la production culturelle et scientifique de vos Musées et augmente la production scientifique de vos laboratoires d'anthropologie et d'archéologie.</French>
 		<Italian>La Stele di Rosetta aumenta la cultura e la ricerca dei tuoi musei, oltre ad incrementare la ricerca dei tuoi laboratori di archeologia e di antropologia.</Italian>
 	</TEXT>
 	<TEXT>
@@ -26032,6 +26166,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROUTE_66_STRATEGY</Tag>
 		<English>Route 66 builds Highways between the building city and the largest remaining city on the same continent. Both cities also get +3 trade routes and +50% trade route income.</English>
+		<French>La Route 66 construit des autoroutes entre la ville qui la construit et la plus grande ville du même continent. Les deux villes obtiennent également +3 routes commerciales et + 50% de revenus sur les routes commerciales.</French>
 		<Italian>Route 66 costruisce delle Autostrade tra la città che la costruisce e la città più grande sullo stesso continente. Entrambe le città ricevono 3 rotte commerciali e un bonus del 50% agli introiti dalle rotte commerciali.</Italian>
 	</TEXT>
 	<TEXT>
@@ -26043,11 +26178,13 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROUTE_66_TERMINUS_STRATEGY</Tag>
 		<English>Route 66 Terminus cannot be built; when you complete Route 66, it is automatically placed in the largest remaining city on the same continent.</English>
+		<French>L'Extremité de la Route 66 ne peut pas être construit; lorsque vous terminez la Route 66, elle est automatiquement placée dans la plus grande ville restante du même continent.</French>
 		<Italian>Il Termine della Route 66 non può essere costruito; viene costruito automaticamente nella città più grande sullo stesso continente.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROYAL_AIR_FORCE_ACADEMY</Tag>
 		<English>MA Royal Air Force Academy</English>
+		<French>La Royal Air Force Academy</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROYAL_AIR_FORCE_ACADEMY_PEDIA</Tag>
@@ -26056,6 +26193,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROYAL_AIR_FORCE_ACADEMY_STRATEGY</Tag>
 		<English>All military units built in a city with a [COLOR_BUILDING_TEXT]Royal Air Force Academy[COLOR_REVERT] building begin with four additional experience points. Further, its city is more likely to generate a [COLOR_UNIT_TEXT]Great General[COLOR_REVERT].</English>
+		<French>Toutes les unités militaires entraînées dans une ville avec la [COLOR_BUILDING_TEXT]Royal Air Force Academy[COLOR_REVERT] commencent avec 4 points d'EXP supplémentaires. De plus, la Ville est susceptible de faire apparaître un [COLOR_UNIT_TEXT]Général Illustre[COLOR_REVERT].</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROYAL_MONUMENT</Tag>
@@ -26435,6 +26573,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SCAPA_FLOW_STRATEGY</Tag>
 		<English>Build Scapa Flow to increase your cities' defense and to speed up repairing your naval units.</English>
+		<French>Construisez Le Scapa Flow pour augmenter la défense de vos villes et accélérer la réparation de vos unités navales.</French>
 		<Italian>Costruisci la Scapa Flow per incrementare le difese delle tue città e riparare le tue unità navali.</Italian>
 	</TEXT>
 	<TEXT>
@@ -26483,11 +26622,13 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SCARBOROUGH_FAIR_STRATEGY</Tag>
 		<English>Build Scarborough Fair to increase the Culture output of your Bazaars, Grocers, and Markets.</English>
+		<French>Construisez La Foire de Scarborough pour augmenter la production culturelle de vos bazars, épiceries et marchés.</French>
 		<Italian>Costruisci la Fiera di Scarborough per incrementare la cultura dei tuoi Bazaar, Droghieri e Mercati.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SCAVENGERS_DAUGHTER</Tag>
 		<English>Scavenger's Daughter</English>
+		<French>Torture : Fille du charognard</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SCAVENGERS_DAUGHTER_PEDIA</Tag>
@@ -26496,10 +26637,16 @@ It was an A-frame shaped metal rack to which the head was strapped to the top po
 
 	The Scavenger's Daughter was conceived as the perfect complement to the Duke of Exeter's Daughter (the rack) because it worked the opposite principle to the rack by compressing the body rather than stretching it.
 		</English>
+		<French>La fille du charognard (ou la fille de Skevington) a été inventée comme instrument de torture sous le règne d'Henri VIII par Sir Leonard Skevington, lieutenant de la Tour de Londres, un fils de Sir William Skeffington, Lord Deputy of Ireland, et de sa première épouse, Margaret Digby.
+C'était une crémaillère en métal en forme de A à laquelle la tête était attachée au point supérieur du A, les mains au milieu et les jambes aux extrémités écartées inférieures; balancer la tête vers le bas et forcer les genoux en position assise en comprimant le corps de manière à forcer le sang du nez et des oreilles.
+
+La fille du charognard a été conçue comme le complément parfait de la fille du duc d'Exeter (le rack) car elle fonctionne selon le principe opposé au rack, en comprimant le corps plutôt qu'en l'étirant.
+		</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SCAVENGERS_DAUGHTER_STRATEGY</Tag>
 		<English>Scavenger's Daughters are one of many torture chamber accessories that can be built to combat crime and gain an edge in espionage, but at a cost that should be strongly considered.</English>
+		<French>La fille du charognard est l'un des nombreux accessoires de la Salle de torture qui peut être construit pour lutter contre le crime et gagner un avantage dans l'espionnage, mais à un coût qui devrait être fortement pris en considération.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SCHOOL_OF_RHETORIC</Tag>
@@ -26900,6 +27047,7 @@ It was an A-frame shaped metal rack to which the head was strapped to the top po
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SERPENT_MOUND_STRATEGY</Tag>
 		<English>Build Serpent Mound to gain science from building Tumuluses.</English>
+		<French>Construisez le Mont Serpent pour gagner de la science en construisant des tumulus.</French>
 		<Italian>Costruisci il Tumulo del serpente per ottenere ricerca dai tumuli.</Italian>
 	</TEXT>
 	<TEXT>
@@ -27032,6 +27180,7 @@ It was an A-frame shaped metal rack to which the head was strapped to the top po
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHAOLIN_STRATEGY</Tag>
 		<English>Build the Shaolin Temple to grant the Martial Arts promotions to your units for free and to train Shaolin Monks.</English>
+		<French>Construisez le Temple Shaolin pour accorder gratuitement les promotions Arts Martiaux à vos unités et pour former des Moines Shaolins.</French>
 		<Italian>Costruisci il Tempio Shaolin per fornire la promozione Arti Marziali I gratuita alle tue unità e per addestrare i monaci shaolin.</Italian>
 	</TEXT>
 	<TEXT>
@@ -27105,6 +27254,7 @@ It was an A-frame shaped metal rack to which the head was strapped to the top po
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHOOTING_CLUB</Tag>
 		<English>Shooting Club</English>
+		<French>Club de tir</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHOOTING_CLUB_PEDIA</Tag>
@@ -27113,6 +27263,7 @@ It was an A-frame shaped metal rack to which the head was strapped to the top po
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHOOTING_CLUB_STRATEGY</Tag>
 		<English>Adds valuable experience to new Gun equipped units.  Continues to support Archery units to a lesser extent.  Replaces the Archery Range.  Opens up access to the first gun-based Strike Team unit, the Sharpshooter.</English>
+		<French>Ajoute une expérience précieuse aux nouvelles unités équipées d'armes à feu. Continue de soutenir les unités Tir à l'arc dans une moindre mesure. Remplace la gamme Tir à l'arc. Ouvre l'accès à la première unité d'assaut basée sur les armes à feu, le Tireur d'élite.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHOPPING_DISTRICT</Tag>
@@ -27594,6 +27745,7 @@ It was an A-frame shaped metal rack to which the head was strapped to the top po
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SKIS_FACTORY</Tag>
 		<English>Factory (Skis)</English>
+		<French>Usine (Skis)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SKIS_FACTORY_PEDIA</Tag>
@@ -27602,6 +27754,7 @@ It was an A-frame shaped metal rack to which the head was strapped to the top po
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SKIS_FACTORY_STRATEGY</Tag>
 		<English>Build a Skis Factory to increase your cities gold.</English>
+		<French>Construisez une Usine de Skis pour augmenter l'or de vos villes.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SKYSCRAPER</Tag>
@@ -27642,7 +27795,7 @@ It was an A-frame shaped metal rack to which the head was strapped to the top po
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SKY_FESTIVAL_STRATEGY</Tag>
 		<English>This World Wonder gives a +30% Espionage Defense bonus. [COLOR_RED]You can only have one Grand Festival type in a city. Choose wisely.[COLOR_REVERT]</English>
-		<French>Cette Merveille vous donne +30% de bonus de contre-Espionage. [COLOR_RED] Vous ne pouvez construire qu'un seul Grand Festival dans une ville. Choisissez donc bien lequel.[COLOR_REVERT]</French>
+		<French>Cette Merveille vous donne +30% de bonus de contre-Espionnage. [COLOR_RED] Vous ne pouvez construire qu'un seul Grand Festival dans une ville. Choisissez donc bien lequel.[COLOR_REVERT]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SLAMBALL_COURT</Tag>
@@ -27771,6 +27924,7 @@ It was an A-frame shaped metal rack to which the head was strapped to the top po
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SNAKE_OIL</Tag>
 		<English>Snake Oil Sales</English>
+		<French>Ventes d'huile de serpent</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SNAKE_OIL_PEDIA</Tag>
@@ -27779,6 +27933,7 @@ It was an A-frame shaped metal rack to which the head was strapped to the top po
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SNAKE_OIL_STRATEGY</Tag>
 		<English>If you're willing to put up with a small amount of crime and added disease as well as reduced education from this source of public misinformation, you can benefit from the taxes from its sales and can assist your criminals and healers to gain valuable experience.  Particularly good for cities specialized in training these units or in desperate need of a financial boost.</English>
+		<French>Si vous êtes prêt à supporter une petite quantité de criminalité et de maladies supplémentaires ainsi qu'une éducation réduite de cette source de désinformation publique, vous pouvez bénéficier des taxes de ses ventes et aider vos criminels et guérisseurs à acquérir une expérience précieuse. Particulièrement bon pour les villes spécialisées dans la formation de ces unités ou qui ont désespérément besoin d'un coup de pouce financier.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SOCIAL_JUSTICE_ORGANIZATION</Tag>
@@ -28606,6 +28761,7 @@ It was an A-frame shaped metal rack to which the head was strapped to the top po
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STEEL_MILL_STRATEGY</Tag>
 		<English>Steel Mill increases city's production and converts Iron and Coal to Steel resource. It replaces also Forge.</English>
+		<French>L'Aciérie augmente la production de la ville et convertit les ressources en fer et en charbon en acier. Elle remplace également Forge.</French>
 		<Spanish>La Acería aumenta la producción de la ciudad, y transforman el Hierro y el Carbón en Acero. Reemplaza a la Fragua.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -29156,6 +29312,7 @@ It was an A-frame shaped metal rack to which the head was strapped to the top po
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SVALBARD_STRATEGY</Tag>
 		<English>Build the Svalbard Global Seed Vault to provide your civilization with every food crop possible, as well as reducing the impact of disasters on your cities.</English>
+		<French>Construisez la Réserve mondiale de Semences de Svalbard pour fournir à votre civilisation toutes les cultures vivrières possibles, tout en réduisant l'impact des catastrophes sur vos villes.</French>
 		<Italian>Il deposito delle Isole Svalbard fornisce alla tua civiltà ogni semenza possibile, oltre a ridurre l'impatto dei disastri nelle città.</Italian>
 	</TEXT>
 	<TEXT>
@@ -29229,6 +29386,7 @@ It was an A-frame shaped metal rack to which the head was strapped to the top po
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TAIPEI_101_STRATEGY</Tag>
 		<English>[COLOR_BUILDING_TEXT]Taipei 101[COLOR_REVERT] increases relationship with other leaders. Merchants are attracted to it.</English>
+		<French>[COLOR_BUILDING_TEXT]Taipei 101[COLOR_REVERT] augmente les relations avec les autres dirigeants. Les commerçants y sont attirés.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TAJ_MAHAL</Tag>
@@ -29620,7 +29778,7 @@ It was an A-frame shaped metal rack to which the head was strapped to the top po
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TECHNOLOGICAL_CAPITAL_STRATEGY</Tag>
 		<English>Technological Capital starts Golden Age and free experience and free specialists in all cities.</English>
-		<French>une Capitale Technologique starts un Oren Age and free experience and free specialists dans toutes les villes.</French>
+		<French>une Capitale Technologique starts un Age d'Or and free experience and free specialists dans toutes les villes.</French>
 		<Spanish>La Capital tecnológica inicia una Edad de Oro, y dará especialistas y puntos de experiencia gratis a todas las ciudades.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -30004,10 +30162,12 @@ It was an A-frame shaped metal rack to which the head was strapped to the top po
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THE_MOTHERLAND_CALLS_STRATEGY</Tag>
 		<English>[COLOR_BUILDING_TEXT]The Motherland Calls[COLOR_REVERT] is a defensive wonder that summons units to defend the nation immediately when war is declared upon. The nation will also be happy for 10 turns.</English>
+		<French>[COLOR_BUILDING_TEXT]L'Appel de la Patrie[COLOR_REVERT] est une merveille défensive qui appelle des unités pour défendre la nation immédiatement lorsque la guerre est déclarée. La nation sera également heureuse pour 10 tours.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THE_RACK</Tag>
 		<English>The Rack</English>
+		<French>Torture : La Crémaillère</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THE_RACK_PEDIA</Tag>
@@ -30016,10 +30176,15 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 
 	One gruesome aspect of being stretched too far on the rack is the loud popping noises made by snapping cartilage, ligaments or bones. One powerful method for putting pressure upon prisoners was to force them to watch someone else being subjected to the rack. Confining the prisoner on the rack enabled further tortures to be simultaneously applied, typically including burning the flanks with hot torches or candles or using pincers made with specially roughened grips to tear out the nails of the fingers and toes. Usually, the victim's shoulders and hips would be separated and their elbows, knees, wrists, and ankles would be dislocated.
 		</English>
+		<French>La crémaillère est un appareil de torture composé d'un cadre rectangulaire, généralement en bois, légèrement soulevé du sol, avec un rouleau à une ou aux deux extrémités. Les chevilles de la victime sont attachées à un rouleau et les poignets sont enchaînés à l'autre.
+Au fur et à mesure que l'interrogatoire progresse, une poignée et un mécanisme à cliquet fixés au rouleau supérieur sont utilisés pour augmenter très progressivement la tension sur les chaînes, provoquant une douleur atroce. Au moyen de poulies et de leviers, ce rouleau pouvait être tourné sur son propre axe, ce qui tendait les cordes jusqu'à ce que les articulations de la victime soient disloquées et finalement séparées. De plus, si les fibres musculaires sont trop étirées, elles perdent leur capacité à se contracter, les rendant inefficaces.
+
+Un aspect horrible d'être trop étiré sur le support est les bruits forts de claquement faits en cassant le cartilage, les ligaments ou les os. Une méthode puissante pour faire pression sur les prisonniers était de les forcer à regarder quelqu'un d'autre être soumis à la crémaillère. Le fait de confiner le prisonnier sur le support a permis d'appliquer simultanément d'autres tortures, notamment en brûlant les flancs avec des torches ou des bougies chaudes ou en utilisant des pinces faites avec des poignées spécialement rugueuses pour déchirer les ongles des doigts et des orteils. Habituellement, les épaules et les hanches de la victime seraient séparées et leurs coudes, genoux, poignets et chevilles seraient disloqués.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THE_RACK_STRATEGY</Tag>
 		<English>The Rack is one of many torture chamber accessories that can be built to combat crime and gain an edge in espionage, but at a cost that should be strongly considered.</English>
+		<French>La Crémaillère est l'un des nombreux accessoires de la Salle de torture qui peut être construit pour lutter contre le crime et gagner un avantage dans l'espionnage, mais à un coût qui devrait être fortement pris en considération .</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THINK_TANK</Tag>
@@ -30051,14 +30216,17 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THUMB_SCREWS</Tag>
 		<English>Thumbscrew</English>
+		<French>Torture de la Vis à oreilles</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THUMB_SCREWS_PEDIA</Tag>
 		<English>The thumbscrew is a torture instrument which was first used in medieval Europe. It is a simple vice, sometimes with protruding studs on the interior surfaces. The victim's thumbs or fingers were placed in the vice and slowly crushed. The thumbscrew was also applied to crush prisoners' big toes. The crushing bars were sometimes lined with sharp metal points to puncture the thumbs and inflict greater pain in the nail beds. Larger, heavier devices based on the same design principle were applied to crush feet and ears.</English>
+		<French>La vis à oreilles est un instrument de torture qui a été utilisé pour la première fois dans l'Europe médiévale. Il s'agit d'un simple étau, parfois avec des plots saillants sur les surfaces intérieures. Les pouces ou les doigts de la victime ont été placés dans l'étau et écrasés lentement. La vis à oreilles a également été appliquée pour écraser les gros orteils des prisonniers. Les barres de broyage étaient parfois tapissées de pointes métalliques tranchantes pour percer les pouces et infliger une plus grande douleur dans les lits des ongles. Des appareils plus grands et plus lourds basés sur le même principe de conception ont été appliqués pour écraser les pieds et les oreilles.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THUMB_SCREWS_STRATEGY</Tag>
 		<English>Thumbscrews are one of many torture chamber accessories that can be built to combat crime and gain an edge in espionage, but at a cost that should be strongly considered.</English>
+		<French>la Torture de la Vis à oreilles est l'un des nombreux accessoires de la Salle de torture qui peut être construit pour lutter contre le crime et gagner un avantage dans l'espionnage, mais à un coût qui devrait être fortement pris en considération.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIN_RECLAMATION_PLANT</Tag>
@@ -30134,6 +30302,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOKYO_SKY_TREE_STRATEGY</Tag>
 		<English>Build Tokyo Sky Tree to increase the happiness of your cities with a Broadcast Tower or Communications Tower.</English>
+		<French>Construisez L'Arbre-Ciel de Tokyo pour augmenter le bonheur de vos villes possédant une Tour de radiodiffusion ou une tour de communication.</French>
 		<Italian>Costruisci lo Sky Tree per incrementare la felicità delle tue città con Ripetitori o Torri di comunicazione.</Italian>
 	</TEXT>
 	<TEXT>
@@ -30149,6 +30318,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOKYO_TOWER_STRATEGY</Tag>
 		<English>Build Tokyo Tower to increase the happiness of your cities with a Broadcast Tower.</English>
+		<French>Construisez La Tour de Tokyo pour augmenter le bonheur de vos villes possédant une Tour de radiodiffusion.</French>
 		<Italian>Costruisci la Tokyo Tower per incrementare la felicità delle tue città con un ripetitore.</Italian>
 	</TEXT>
 	<TEXT>
@@ -30233,14 +30403,17 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TORTURE_CHAMBER</Tag>
 		<English>Torture Chamber</English>
+		<French>Salle de Torture</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TORTURE_CHAMBER_PEDIA</Tag>
 		<English>Torture Chambers were where information would be extracted from the enemies of state.</English>
+		<French>Les salles de torture étaient les endroits où les informations étaient extorquées dans des conditions terribles aux ennemis de l'État.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TORTURE_CHAMBER_STRATEGY</Tag>
 		<English>Torture Chambers allow players to take the "interrogation" of prisoners to new levels.</English>
+		<French>Les chambres de torture permettent aux joueurs de porter "l'interrogatoire" des prisonniers à de nouveaux niveaux.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOUCAN</Tag>
@@ -30686,6 +30859,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TROYES_FAIR_STRATEGY</Tag>
 		<English>Build Troyes Trade Fair to increase the gold production of your Bazaars, Grocers, and Markets.</English>
+		<French>Construisez la Foire d'échange de Troyes pour augmenter la production d'or de vos Bazars, Epiceries et Marchés.</French>
 		<Italian>Costruisci la Fiera di Troyes per incrementare la produzione d'oro dei tuoi bazaar, droghieri e mercati.</Italian>
 	</TEXT>
 	<TEXT>
@@ -30727,7 +30901,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TSUKIJI_PEDIA</Tag>
 		<English>The Tokyo Metropolitan Central Wholesale Market commonly known as the Tsukiji Market, is the biggest wholesale fish and seafood market in the world and also one of the largest wholesale food markets of any kind. The market is located in Tsukiji in central Tokyo, and is a major attraction for foreign visitors.[NEWLINE][NEWLINE][TAB]The market handles more than 400 different types of seafood from cheap seaweed to the most expensive caviar, and from tiny sardines to 300 kg tuna and controversial whale species. Overall, more than 700,000 metric tons of seafood are handled every year at the three seafood markets in Tokyo, with a total value in excess of 600 billion yen (approximately 5.5 billion US dollars). The number of registered employees as of 25 January 2010 varies from 60,000 to 65,000, including wholesalers, accountants, auctioneers, company officials, and distributors.</English>
-		<French>Montreal Biodome</French>
+		<French>Le marché de gros central métropolitain de Tokyo, communément appelé marché de Tsukiji, est le plus grand marché de gros de poissons et de fruits de mer au monde et également l'un des plus grands marchés de gros de produits alimentaires en tout genre. Le marché est situé à Tsukiji, dans le centre de Tokyo, et est une attraction majeure pour les visiteurs étrangers. [NEWLINE] [NEWLINE] [TAB] Le marché gère plus de 400 types de fruits de mer différents, des algues bon marché au caviar le plus cher, et des petits des sardines à 300 kg de thon et des espèces de baleines controversées. Au total, plus de 700 000 tonnes de fruits de mer sont traitées chaque année sur les trois marchés de fruits de mer de Tokyo, pour une valeur totale supérieure à 600 milliards de yens (environ 5,5 milliards de dollars américains). Le nombre d'employés inscrits au 25 janvier 2010 varie de 60 000 à 65 000, y compris les grossistes, les comptables, les commissaires-priseurs, les représentants de l'entreprise et les distributeurs.</French>
 		<German>Montreal Biodome</German>
 		<Italian>Montreal Biodome</Italian>
 		<Spanish>Montreal Biodome</Spanish>
@@ -30736,6 +30910,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TSUKIJI_STRATEGY</Tag>
 		<English>[COLOR_BUILDING_TEXT]Tsukiji Fish Market[COLOR_REVERT] increases the yield provided by fishing boats and grants a slight chance of finding new sources of [COLOR_HIGHLIGHT_TEXT]fish, clam[COLOR_REVERT] and [COLOR_HIGHLIGHT_TEXT]crab[COLOR_REVERT] resources when built.</English>
+		<French>Le [COLOR_BUILDING_TEXT]Marché aux poissons de Tsukiji[COLOR_REVERT] augmente le rendement fourni par les bateaux de pêche et donne une légère chance de trouver de nouvelles sources de [COLOR_HIGHLIGHT_TEXT]poissons, crustacés[COLOR_REVERT] et de [COLOR_HIGHLIGHT_TEXT]crabes[COLOR_REVERT].</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TUMEN</Tag>
@@ -31082,6 +31257,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSITY_OF_BARCELONA</Tag>
 		<English>EU University of Barcelona</English>
+		<French>L'Université de Barcelone</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSITY_OF_BARCELONA_PEDIA</Tag>
@@ -31092,6 +31268,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSITY_OF_BASEL</Tag>
 		<English>EU University of Basel</English>
+		<French>L'Université de Bâle</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSITY_OF_BASEL_PEDIA</Tag>
@@ -31105,6 +31282,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSITY_OF_BOLOGNA</Tag>
 		<English>EU University of Bologna</English>
+		<French>L'Université de Bologne</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSITY_OF_BOLOGNA_PEDIA</Tag>
@@ -31113,6 +31291,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSITY_OF_CAMBRIDGE</Tag>
 		<English>EU University of Cambridge</English>
+		<French>L'Université de Cambridge</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSITY_OF_CAMBRIDGE_PEDIA</Tag>
@@ -31124,6 +31303,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSITY_OF_COIMBRA</Tag>
 		<English>EU University of Coimbra</English>
+		<French>L'Université de Coimbra</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSITY_OF_COIMBRA_PEDIA</Tag>
@@ -31137,6 +31317,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSITY_OF_EDINBURGH</Tag>
 		<English>EU University of Edinburgh</English>
+		<French>L'Université d'Edinbourg</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSITY_OF_EDINBURGH_PEDIA</Tag>
@@ -31149,6 +31330,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSITY_OF_MURCIA</Tag>
 		<English>EU University of Murcia</English>
+		<French>L'Université de Murcia</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSITY_OF_MURCIA_PEDIA</Tag>
@@ -31161,6 +31343,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSITY_OF_PADUA</Tag>
 		<English>EU University of Padua</English>
+		<French>L'Université de Padoue</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSITY_OF_PADUA_PEDIA</Tag>
@@ -31173,6 +31356,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSITY_OF_SALAMANCA</Tag>
 		<English>EU University of Salamanca</English>
+		<French>L'Université de Salamanque</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSITY_OF_SALAMANCA_PEDIA</Tag>
@@ -31217,7 +31401,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNSANCTIONED_ASSASSINS_DEN</Tag>
 		<English>Assassin's Den (Unsanctioned)</English>
-		<French>Assassin's Den (Impuni)</French>
+		<French>Repaire d'Assassins (Impuni)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNSANCTIONED_BANDITS_HIDEOUT1</Tag>
@@ -31545,6 +31729,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WALK_OF_FAME_STRATEGY</Tag>
 		<English>Build Walk of Fame to increase the commerce and Happiness from your Artists, Great Artists, and Celebrities.</English>
+		<French>Construisez la Promenade de la célébrité pour augmenter le commerce et le bonheur de vos artistes, grands artistes et célébrités.</French>
 		<Italian>Costruisci la Walk of Fame per incrementare il commercio e la felicità dai tuoi Artisti, Grandi artisti e celebrità.</Italian>
 	</TEXT>
 	<TEXT>
@@ -31641,6 +31826,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WARHOL_FACTORY_STRATEGY</Tag>
 		<English>Build Warhol's Factory to increase the commerce and production speed of your Art Galleries.</English>
+		<French>Créez le Studio-Usine de Warhol pour augmenter la vitesse de commerce et de production de vos galeries d'art.</French>
 		<Italian>Costruisci lo studio di Andy Warhol per incrementare il commercio e la velocità di costruzione delle tue Gallerie d'arte.</Italian>
 	</TEXT>
 	<TEXT>
@@ -31980,6 +32166,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WEMBLEY_STRATEGY</Tag>
 		<English>[COLOR_BUILDING_TEXT]Wembley Stadium[COLOR_REVERT] increases income with excess happiness in your empire.</English>
+		<French>[COLOR_BUILDING_TEXT]Le Stade de Wembley[COLOR_REVERT] augmente les revenus avec un excès de bonheur dans votre empire.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WESTMINSTER</Tag>
@@ -31995,6 +32182,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WESTMINSTER_STRATEGY</Tag>
 		<English>Build Westminster Abbey to increase the benefits from your Great People.</English>
+		<French>Construisez l'Abbaye de Westminster pour augmenter les avantages de vos Personnages illustres.</French>
 		<Italian>Costruisci l'Abbazia di Westminster per incrementare i benefici derivanti dai Grandi Artisti.</Italian>
 	</TEXT>
 	<TEXT>
@@ -32159,6 +32347,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WILLOWRUN_STRATEGY</Tag>
 		<English>Build Willow Run for a bonus to production and a very large bonus to producing air units.</English>
+		<French>Construisez Willow Run pour un bonus à la production et un très gros bonus à la production d'unités aériennes.</French>
 		<Italian>Costruisci Willow Run per un bonus alla produzione, ed un bonus ancora maggiore alla produzione di aerei.</Italian>
 	</TEXT>
 	<TEXT>
@@ -32189,6 +32378,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WOODSTOCK_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Summer of Love Event Provides All Cities with +1000 [ICON_CULTURE] and 3 Temporary [ICON_UNHAPPY]</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]L'événement Summer of Love offre à toutes les villes +1000 [ICON_CULTURE] et 3 temporaires [ICON_UNHAPPY]</French>
 		<Italian>[ICON_BULLET]L'evento Summer of love fornisce +1000 [ICON_CULTURE] e 3 temporanee [ICON_UNHAPPY] a tutte le città.</Italian>
 	</TEXT>
 	<TEXT>
@@ -32199,6 +32389,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WOODSTOCK_STRATEGY</Tag>
 		<English>Build Woodstock for a huge culture bonus in your cities at the cost of some temporary unhappiness.</English>
+		<French>Construisez Woodstock pour un énorme bonus culturel dans vos villes au prix d'un mécontentement temporaire.</French>
 		<Italian>Costruisci Woodstock per un grande bonus alla cultura nelle tue città, al costo di infelicità temporanea.</Italian>
 	</TEXT>
 	<TEXT>
@@ -32571,6 +32762,7 @@ e.g. The chance per rival is 1 in 75 turns with "smallest/fastest", and 1 in 790
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZURICH_ORBITAL_STRATEGY</Tag>
 		<English>Build Zurich-Orbital to increase your gold and espionage production, as well as allowing you to build Zurich-Orbital Uplink.</English>
+		<French>Construisez Zurich-Orbital pour augmenter votre production d'or et d'espionnage, tout en vous permettant de construire ensuite la Liaison vers Zurich-Orbital.</French>
 		<Italian>Costruisci l'Orbitale di Zurigo per incrementare la tua produzione di oro e spionaggio, oltre a poter costruire l'Uplink dell'Orbitale di Zurigo.</Italian>
 	</TEXT>
 	<TEXT>
@@ -32582,11 +32774,13 @@ e.g. The chance per rival is 1 in 75 turns with "smallest/fastest", and 1 in 790
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZURICH_ORBITAL_UPLINK_PEDIA</Tag>
 		<English>Zurich-Orbital Uplinks offer secure communications with the facility of Zurich-Orbital. These uplinks are the only assured way to transmit information safely to the station.</English>
+		<French>Liaison vers Zurich-Orbitals offre des communications sécurisées avec l'installation de Zurich-Orbital. Ces liaisons montantes sont le seul moyen sûr de transmettre des informations à la station en toute sécurité.</French>
 		<Italian>Gli Uplink dell'orbitale di Zurigo offrono comunicazioni sicure con l'Orbitale di Zurigo. Questi uplink sono l'unico mezzo sicuro per trasmettere informazioni alla stazione orbitale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZURICH_ORBITAL_UPLINK_STRATEGY</Tag>
 		<English>Zurich-Orbital Uplink increases your gold and espionage production, and protects your cities against enemy spies.</English>
+		<French>Liaison vers Zurich-Orbital augmente votre production d'or et d'espionnage et protège vos villes contre les espions ennemis.</French>
 		<Italian>Gli uplink dell'Orbitale di Zurigo proteggono la tua produzione di oro e spionaggio, proteggendo le tue città dalle spie nemiche.</Italian>
 	</TEXT>
 	<TEXT>
@@ -32597,6 +32791,7 @@ e.g. The chance per rival is 1 in 75 turns with "smallest/fastest", and 1 in 790
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_BREAK_THE_BANK</Tag>
 		<English>A lucky gambler from %s2_city has broken the bank at Monte Carlo.</English>
+		<French>Un joueur chanceux de %s2_city a cassé la banque à Monte Carlo.</French>
 		<Italian>Un fortunato giocatore di %s2_city ha sbancato la roulette a Monte Carlo</Italian>
 	</TEXT>
 	<TEXT>
@@ -32614,11 +32809,13 @@ e.g. The chance per rival is 1 in 75 turns with "smallest/fastest", and 1 in 790
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_MEGA_ATTACK</Tag>
 		<English>An accident has led to an escape of animals at Pleistocene Park!</English>
+		<French>Un accident a conduit à une fuite d'animaux au Parc Pléistocène!</French>
 		<Italian>Un incidente ha causato una fuga di animali nel Parco del Pleistocene!</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_NSLCHAMP</Tag>
 		<English>The hometown hero of %s2_city is going to Disneyland after winning the %s1_civ_adjective National Sports League championship.</English>
+		<French>Le Héros local de %s2_city se déplace à Disneyland, après avoir gagné le Championnat de la Ligue Nationale de Sport %s1_civ_adjective.</French>
 		<Italian>Il campiona nazionale di %s2_city sta andando a Disneyland dopo aver vinto il Campionato nazionale %s1_civ_adjective.</Italian>
 	</TEXT>
 	<TEXT>
@@ -32630,6 +32827,7 @@ e.g. The chance per rival is 1 in 75 turns with "smallest/fastest", and 1 in 790
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_VEGAS_JACKPOT</Tag>
 		<English>A lucky gambler from %s2_city has hit the jackpot on the Las Vegas Strip.</English>
+		<French>Un joueur chanceux de %s2_city a décroché le jackpot à Las Vegas.</French>
 		<Italian>Un fortunato giocatore d'azzardo di %s2_city ha vinto il jackpot sulla strip di Las Vegas.</Italian>
 	</TEXT>
 	<TEXT>
@@ -32647,6 +32845,7 @@ e.g. The chance per rival is 1 in 75 turns with "smallest/fastest", and 1 in 790
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BLARNEYVISIT_2</Tag>
 		<English>This visit made us closer.</English>
+		<French>Cette visite nous a rapprochés.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BLARNEYVISIT_OTHER_1</Tag>
@@ -32657,25 +32856,30 @@ e.g. The chance per rival is 1 in 75 turns with "smallest/fastest", and 1 in 790
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BLARNEYVISIT_OTHER_2</Tag>
 		<English>We are now a bit closer after this visit.</English>
+		<French>Nous sommes maintenant un peu plus proches après cette visite.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BREAK_THE_BANK</Tag>
 		<English>A gambler from %s2_city has broken the bank at Monte Carlo! Of course, our tax collectors stand ready for just such an event.</English>
+		<French>Un joueur de %s2_city a cassé la banque à Monte Carlo! Bien sûr, nos collecteurs d'impôts sont prêts pour un tel événement.</French>
 		<Italian>Un fortunato giocatore di %s2_city ha sbancato la roulette a Monte Carlo! Ovviamente, i nostri esattori delle tasse stavano aspettando un simile evento.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BREAK_THE_BANK_1</Tag>
 		<English>Send our tax collectors to pay the lucky gambler a visit.</English>
+		<French>Envoyez nos collecteurs d'impôts pour rendre visite au joueur chanceux.</French>
 		<Italian>Mandate i nostri esattori a far visita al "fortunato" giocatore.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BREAK_THE_BANK_2</Tag>
 		<English>Good fortune should be enjoyed.</English>
+		<French>La bonne fortune doit être appréciée.</French>
 		<Italian>Dovrebbe godersi la sua buona stella.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BREAK_THE_BANK_OTHER_1</Tag>
 		<English>A lucky gambler from %s2_city has broken the bank at Monte Carlo.</English>
+		<French>Un joueur chanceux de %s2_city a cassé la banque à Monte Carlo.</French>
 		<Italian>Un fortunato giocatore di %s2_city ha sbancato la roulette a Monte Carlo.</Italian>
 	</TEXT>
 	<TEXT>
@@ -32699,55 +32903,66 @@ e.g. The chance per rival is 1 in 75 turns with "smallest/fastest", and 1 in 790
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FIELD_GOLD</Tag>
 		<English>You have completed the Field of the Cloth of Gold. Leaders from around the world are gathering for this grand event.</English>
+		<French>Vous avez terminé le Camp du Drap d'or. Des dirigeants du monde entier se réunissent pour ce grand événement.</French>
 		<Italian>Hai completato il Campo del Drappo d'oro. I leader di tutto il mondo si stanno rdunando per questo grande evento.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FIELD_GOLD_1</Tag>
 		<English>This will build bonds of friendship between us.</English>
+		<French>Cela créera des liens d'amitié entre nous.</French>
 		<Italian>Questo creerà nuovi legami d'amicizia fra di noi.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FIELD_GOLD_OTHER_1</Tag>
 		<English>Leaders from around the world are gathering for the Field of the Cloth of Gold.</English>
+		<French>Des dirigeants du monde entier se rassemblent pour le Camp du drap d'or.</French>
 		<Italian>Leader da tutto il mondo si stanno radunando per il Campo del Drappo d'oro</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_MEGA_ATTACK</Tag>
 		<English>An accident has led to an escape of animals at Pleistocene Park! Several people are dead and dozens are injured.</English>
+		<French>Un accident a conduit à une fuite d'animaux au Parc Pléistocène! Plusieurs personnes sont mortes et des dizaines ont été blessées.</French>
 		<Italian>Un incidente ha causato una fuga di animali nel Parco del Pleistocene! Molte persone sono morte e ci sono dozzine di feriti.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_MEGA_ATTACK_1</Tag>
 		<English>Offer compensation to the affected families.</English>
+		<French>Offrir une compensation aux familles affectées.</French>
 		<Italian>Offri un risarcimento alle famiglie delle vittime.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_MEGA_ATTACK_2</Tag>
 		<English>We don't have the money to spare.</English>
+		<French>Nous n'avons pas d'argent à perdre.</French>
 		<Italian>Non abbiamo soldi da perdere.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_NSLCHAMP</Tag>
 		<English>The hometown hero of %s2_city has just won the National Sports League championship! What is he going to do next?</English>
+		<French>Le Héros local de %s2_city vient de gagner le Championnait de la Ligue Nationale de Sport ! Que va-t-il faire ensuite ?</French>
 		<Italian>Il campionato nazionale di %s2_city ha appena vinto il Campionato nazionale! Cosa farà ora?</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_NSLCHAMP_1</Tag>
 		<English>He's going to Disneyland!</English>
+		<French>Qu'Il aille à Disneyland!</French>
 		<Italian>Sta andando a Disneyland!</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_NSLCHAMP_2</Tag>
 		<English>Disneyland now has higher income.</English>
+		<French>Disneyland a maintenant un revenu plus élevé.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_NSL_CHAMP_OTHER_1</Tag>
 		<English>Disneyland is experiencing a rise in admissions after a visit from the winner of the %s1_civ_adjective National Sports League championship.</English>
+		<French>Disneyland connaît une augmentation des entrées après une visite du gagnant du Championnat de La Ligue Nationale de Sport %s1_civ_adjective.</French>
 		<Italian>Disneyland sta avendo un aumneto delle entrate dopo una visita dal vincitore del Campionato nazionale %s1_civ_adjective.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_NSL_CHAMP_OTHER_2</Tag>
 		<English>Disneyland experienced a rise in admissions after a visit from the winner of the %s1_civ_adjective National Sports League championship.</English>
+		<French>Disneyland connaît une augmentation des entrées après une visite du gagnant du Championnat de La Ligue Nationale de Sport %s1_civ_adjective.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SUMMER_OF_LOVE</Tag>
@@ -32770,21 +32985,25 @@ e.g. The chance per rival is 1 in 75 turns with "smallest/fastest", and 1 in 790
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_VEGAS_JACKPOT</Tag>
 		<English>A gambler from %s2_city has hit the jackpot on the Las Vegas Strip! Of course, our tax collectors stand ready for just such an event.</English>
+		<French>Un joueur de %s2_city a décroché le jackpot à Las Vegas! Bien sûr, nos collecteurs d'impôts sont prêts pour un tel événement.</French>
 		<Italian>Un giocatore di %s2_city ha vinto il jackpot nella Strip di Las Vegas! Ovviamente, i nostri esattori delle tasse satvano aspettando un evento come questo.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_VEGAS_JACKPOT_1</Tag>
 		<English>Send our tax collectors to pay the lucky gambler a visit.</English>
+		<French>Envoyez nos collecteurs d'impôts rendre une visite au gagnant.</French>
 		<Italian>Manda i nostri esattori delle tasse a far visita a questo "fortunato" giocatore.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_VEGAS_JACKPOT_2</Tag>
 		<English>Good fortune should be enjoyed.</English>
+		<French>La bonne fortune doit être appréciée.</French>
 		<Italian>Augurategli buona fortuna.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_VEGAS_JACKPOT_OTHER_1</Tag>
 		<English>A lucky gambler from %s2_city has hit the jackpot on the Las Vegas Strip.</English>
+		<French>Un joueur chanceux de %s2_city a décroché le jackpot à Las Vegas.</French>
 		<Italian>Un fortunato giocatore d'azzardo di %s2_city ha vinto il jackpot sulla strip di Las Vegas.</Italian>
 	</TEXT>
 	<TEXT>
@@ -32808,6 +33027,7 @@ e.g. The chance per rival is 1 in 75 turns with "smallest/fastest", and 1 in 790
 	<TEXT>
 		<Tag>TXT_KEY_HELP_GOLDEN_SPIKE</Tag>
 		<English>[ICON_BULLET]Builds a Transcontinental Railroad on Completion</English>
+		<French>[ICON_BULLET]Construit une Voie ferrée Transcontinentale à sa construction</French>
 		<Italian>[ICON_BULLET]Costruisce una ferrovia transcontinentale al completamento</Italian>
 	</TEXT>
 	<TEXT>
@@ -32972,6 +33192,7 @@ e.g. The chance per rival is 1 in 75 turns with "smallest/fastest", and 1 in 790
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALBUILDING_GROUP_ANCIENT_WAYS</Tag>
 		<English>Ancient Ways</English>
+		<French>Voies Anciennes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALBUILDING_GROUP_DELUXE_WINERIES</Tag>
@@ -32981,6 +33202,7 @@ e.g. The chance per rival is 1 in 75 turns with "smallest/fastest", and 1 in 790
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALBUILDING_GROUP_ELITE_MILITARY_ACADEMIES</Tag>
 		<English>Elite Military Academies</English>
+		<French>Académie militaire d'Elite</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALBUILDING_GROUP_ELITE_UNIVERSITIES</Tag>
@@ -33137,11 +33359,13 @@ e.g. The chance per rival is 1 in 75 turns with "smallest/fastest", and 1 in 790
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHAOLINMK_PEDIA</Tag>
 		<English>The Shaolin Monks were the product of the Shaolin Temple. Their martial arts feats have become the stuff of legends across the globe.</English>
+		<French>Les Moine Shaolins étaient le produit du Temple Shaolin. Leurs exploits d'arts martiaux sont devenus l'étoffe de légendes à travers le monde.</French>
 		<Italian>I monaci shaolin erano addestrati nel Tempio Shaolin. Le loro arti marziali sono diventate leggendarie in tutto il mondo.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHAOLINMK_STRATEGY</Tag>
 		<English>Shaolin Monks make excellent city defenders and healers.</English>
+		<French>Les Moines Shaolins sont d'excellents défenseurs et guérisseurs de la ville.</French>
 		<Italian>I monaci Shaolin sono ottimi difensori delle città e guaritori.</Italian>
 	</TEXT>
 	<TEXT>
