@@ -726,8 +726,8 @@
 		<Tag>TXT_KEY_IMPROVEMENT_SEED_CAMP</Tag>
 		<English>Seed Camp</English>
 		<French>
-			<Text>Dépot de Semences</Text>
-			<Gender>Male</Gender>
+			<Text>Réserve de Graines</Text>
+			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
 		<German>

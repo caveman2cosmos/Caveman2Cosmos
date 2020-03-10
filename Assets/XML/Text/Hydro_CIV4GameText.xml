@@ -19447,7 +19447,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEED_CAMP</Tag>
 		<English>Seed Gatherer</English>
-		<French>Dépot de Semences</French>
+		<French>
+			<Text>Réserve de Graines</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>
 			<Text>Wildgetreidefeld:Wildgetreidefeldes:Wildgetreidefeld:Wildgetreidefeld</Text>
 			<Gender>Neuter</Gender>
@@ -19459,7 +19463,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEED_CAMP_STRATEGY</Tag>
 		<English>Build a Seed Camp in your city to increase your food.</English>
-		<French>Construisez un [COLOR_BUILDING_TEXT]Dépot de Semences[COLOR_REVERT] pour accroître la nourriture de votre ville.</French>
+		<French>Construisez une [COLOR_BUILDING_TEXT]Réserve de Graines[COLOR_REVERT] pour accroître la nourriture de votre ville.</French>
 		<German>[COLOR_BUILDING_TEXT]Wildgetreidefelder[COLOR_REVERT] versorgen frühe Städte mit zusätzlicher Nahrung.</German>
 		<Italian>Costruisci un campo di semina per incrementare la produzione di cibo della tua città.</Italian>
 		<Polish>Ziarniak (caryopsis) - suchy, niepękający owoc traw będący jednonasienną niełupką. Ziarniak okryty jest okrywą owocowo-nasienną, która powstaje ze zrośnięcia się kilkuwarstwowej owocni, łupiny nasiennej i resztek obielma. Główną masę ziarniaka stanowi nasiono zawierające niewielki zarodek oraz bielmo stanowiące jego znaczną część. W rolnictwie i potocznie ziarniaki określa się zbiorczą nazwą "ziarno". Ziarna zbóżstanowią podstawowe źródło pokarmu roślinnego dla ludzi.</Polish>
@@ -19467,7 +19471,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEED_CAMP_PEDIA</Tag>
 		<English>A Seed Camp is a place to gather seeds.</English>
-		<French>.</French>
+		<French>Un endroit où les graines sont rassemblées.</French>
 		<German>Wildgetreidefelder im Einzugsgebiet von Siedlungen waren eine gute Nahrungsquelle für die frühen Menschen. Sie wurden noch nicht selbstständig angelegt, sondern entstanden meist zufällig durch eingeschleppte Samen.</German>
 		<Italian>Un campo di semina è un posto per raccogliere i semi.</Italian>
 		<Polish>Zbuduj Seed Camp by zwiększyć produkcję żywności w Twoim mieście.</Polish>
