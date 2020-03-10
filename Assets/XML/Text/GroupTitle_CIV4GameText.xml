@@ -13,7 +13,7 @@
 		<Tag>TXT_KEY_GROUPTITLE_AMBUSH</Tag>
 		<English>Ambush of </English>
 		<French>
-			<Text>Embuscade de </Text>
+			<Text>(en embuscade) </Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -62,12 +62,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_BASK</Tag>
 		<English>Bask of </English>
-		<French>Panier de </French>
+		<French>(lézardant) </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_BLOAT</Tag>
 		<English>Bloat of </English>
-		<French>gonflement de </French>
+		<French>(bouffi) </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_BUNCH</Tag>
@@ -77,7 +77,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_CACKLE</Tag>
 		<English>Cackle of </English>
-		<French>Gloussement de </French>
+		<French>(gloussant) </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_CARAVAN</Tag>
@@ -107,7 +107,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_COFFLE</Tag>
 		<English>Coffle of </English>
-		<French>colonne de </French>
+		<French>Colonne de </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_COLLECTION</Tag>
@@ -167,12 +167,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_CRASH</Tag>
 		<English>Crash of </English>
-		<French>Crash de </French>
+		<French>(fracassant) </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_DRIFT</Tag>
 		<English>Drift of </English>
-		<French>Dérapage de </French>
+		<French>(errant) </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_DROVE</Tag>
@@ -313,7 +313,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_KETTLE</Tag>
 		<English>Kettle of </English>
-		<French>Bouillon de </French>
+		<French>Groupe de </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_KIT</Tag>
@@ -323,17 +323,17 @@
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_LEAP</Tag>
 		<English>Leap of </English>
-		<French>Saut de </French>
+		<French>(sautillant) </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_LEASH</Tag>
 		<English>Leash of </English>
-		<French>laisse de </French>
+		<French>(en laisse) </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_LONE</Tag>
 		<English>Lone </English>
-		<French>isolé </French>
+		<French>(isolé) </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_MEMORY</Tag>
@@ -411,17 +411,17 @@
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_POD</Tag>
 		<English>Pod of </English>
-		<French>nacelle de </French>
+		<French>Banc de </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_POD_LARGE</Tag>
 		<English>Large Pod of </English>
-		<French>Grande nacelle de </French>
+		<French>Grand banc de </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_POD_SMALL</Tag>
 		<English>Small Pod of </English>
-		<French>petite nacelle de </French>
+		<French>Petit banc de </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_PRIDE</Tag>
@@ -466,7 +466,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_RANDOM</Tag>
 		<English>Some Random </English>
-		<French>Quelques isolés </French>
+		<French>(Quelques-uns) </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_ROGUE</Tag>
@@ -491,7 +491,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_SCATTERED</Tag>
 		<English>Scattered </English>
-		<French>Apeuré </French>
+		<French>(apeuré) </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_SCHOOL</Tag>
@@ -526,36 +526,37 @@
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_SHREWDNESS</Tag>
 		<English>Shrewdness of </English>
-		<French>Shrewdness de </French>
+		<French>(astucieux) </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_SINGULAR</Tag>
 		<English>Singular </English>
-		<French>Singulier </French>
+		<French>(singulier) </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_SKULK</Tag>
 		<English>Skulk of </English>
-		<French>Rodeur de </French>
+		<French>(rôdeur) </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_SLEUTH</Tag>
 		<English>Sleuth of </English>
-		<French>limier </French>
+		<French>(limier) </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_SLOTH</Tag>
 		<English>Sloth of </English>
-		<French>Indolent </French>
+		<French>(indolent) </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_SOLITARY</Tag>
 		<English>Solitary </English>
-		<French>Solitaire </French>
+		<French>(solitaire) </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_SOLO</Tag>
 		<English>Solo </English>
+		<French>(solo) </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_SOME</Tag>
@@ -565,12 +566,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_SOUNDER</Tag>
 		<English>Sounder of </English>
-		<French>Eclaireur </French>
+		<French>(éclaireur) </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_STAND</Tag>
 		<English>Stand of </English>
-		<French>Stand de </French>
+		<French>Envol de </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_STREAK</Tag>
@@ -584,7 +585,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_SURFEIT</Tag>
 		<English>Surfeit of </English>
-		<French>Surfait de </French>
+		<French>(surfait) </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_TEAM</Tag>
@@ -631,7 +632,7 @@
 		<Tag>TXT_KEY_GROUPTITLE_UNKINDNESS</Tag>
 		<English>Unkindness of </English>
 		<French>
-			<Text>Méchanceté de </Text>
+			<Text>(méchant) </Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -649,6 +650,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_WADDLE</Tag>
 		<English>Waddle of </English>
-		<French>Dandinement de </French>
+		<French>(dandinant) </French>
 	</TEXT>
 </Civ4GameText>

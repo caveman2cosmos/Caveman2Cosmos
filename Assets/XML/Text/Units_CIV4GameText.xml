@@ -30788,7 +30788,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VSBARBS_MODIFIER</Tag>
 		<English>[ICON_BULLET]%d1_Amount%% VS Non-Animal Barbarians</English>
-		<French>[ICON_BULLET]contre les unités barbares non-animales: %d1_Amount%%</French>
+		<French>[ICON_BULLET]%d1_Amount%% contre les unités barbares non-animales</French>
 		<German>[ICON_BULLET]%d1_Amount%% gegen Barbaren</German>
 		<Italian>[ICON_BULLET]contro i barbari non-animali: %d1_Amount%%</Italian>
 		<Polish>[ICON_BULLET]przeciwko nie-zwierzęcym Barbarzyńcom: %d1_Amount%%</Polish>
