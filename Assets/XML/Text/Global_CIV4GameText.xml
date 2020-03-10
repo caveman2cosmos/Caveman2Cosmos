@@ -1050,24 +1050,6 @@
 		<Polish>Zenit Ery Paleolitycznej</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_AGORA_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_AGORA]Agora[\LINK]</English>
-		<French>[ICON_HAPPY] de [LINK=BUILDING_AGORA]Agora[\LINK]</French>
-		<German>[ICON_HAPPY] von der [LINK=BUILDING_AGORA]Agora[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_AGORA]Agorà[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_AGORA]Ágora[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_AGORA]Agora[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_AGORA_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_AGORA]Agora[\LINK]</English>
-		<French>[ICON_UNHAPPY] de [LINK=BUILDING_AGORA]Agora[\LINK]</French>
-		<German>[ICON_UNHAPPY] von der [LINK=BUILDING_AGORA]Agora[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_AGORA]Agorà[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_AGORA]Ágora[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_AGORA]Agora[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_AIAUTOPLAY_ABDICATE</Tag>
 		<English>Old age has finally caught up with you and you decide to abdicate rule.</English>
 		<French>La vieillesse vous a finalement rattrapé vous décidez à de renoncer au pouvoir.</French>
@@ -1416,60 +1398,6 @@
 		<Polish>Przerwać?</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_APOSTOLIC_PALACE_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_APOSTOLIC_PALACE]The Apostolic Palace[\LINK]</English>
-		<French>[ICON_HAPPY] du [LINK=BUILDING_APOSTOLIC_PALACE]Palais Apostolique[\LINK]</French>
-		<German>[ICON_HAPPY] vom [LINK=BUILDING_APOSTOLIC_PALACE]Apostolischen Palast[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_APOSTOLIC_PALACE]Palazzo Apostolico[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_APOSTOLIC_PALACE]Palacio apostólico[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_APOSTOLIC_PALACE]Pałac Apostolski[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_APOSTOLIC_PALACE_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_APOSTOLIC_PALACE]The Apostolic Palace[\LINK]</English>
-		<French>[ICON_UNHAPPY] du [LINK=BUILDING_APOSTOLIC_PALACE]Palais Apostolique[\LINK]</French>
-		<German>[ICON_UNHAPPY] vom [LINK=BUILDING_APOSTOLIC_PALACE]Apostolischen Palast[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_APOSTOLIC_PALACE]Palazzo Apostolico[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_APOSTOLIC_PALACE]Palacio apostólico[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_APOSTOLIC_PALACE]Pałac Apostolski[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_AQUEDUCT_CIVIC_EXTRA_HEALTHINESS</Tag>
-		<English>[ICON_HEALTHY] from [LINK=BUILDING_AQUEDUCT]Aqueduct[\LINK]</English>
-		<French>[ICON_HEALTHY] de l'[LINK=BUILDING_AQUEDUCT]Aqueduc[\LINK]</French>
-		<German>[ICON_HEALTHY] vom [LINK=BUILDING_AQUEDUCT]Aquädukt[\LINK]</German>
-		<Italian>[ICON_HEALTHY] da [LINK=BUILDING_AQUEDUCT]Acquedotto[\LINK]</Italian>
-		<Spanish>[ICON_HEALTHY] por [LINK=BUILDING_AQUEDUCT]Acueducto[\LINK]</Spanish>
-		<Polish>[ICON_HEALTHY] od [LINK=BUILDING_AQUEDUCT]Akwedukt[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_AQUEDUCT_CIVIC_EXTRA_UNHEALTHINESS</Tag>
-		<English>[ICON_UNHEALTHY] from [LINK=BUILDING_AQUEDUCT]Aqueduct[\LINK]</English>
-		<French>[ICON_UNHEALTHY] de l'[LINK=BUILDING_AQUEDUCT]Aqueduc[\LINK]</French>
-		<German>[ICON_UNHEALTHY] vom [LINK=BUILDING_AQUEDUCT]Aquädukt[\LINK]</German>
-		<Italian>[ICON_UNHEALTHY] da [LINK=BUILDING_AQUEDUCT]Acquedotto[\LINK]</Italian>
-		<Spanish>[ICON_UNHEALTHY] por [LINK=BUILDING_AQUEDUCT]Acueducto[\LINK]</Spanish>
-		<Polish>[ICON_UNHEALTHY] od [LINK=BUILDING_AQUEDUCT]Akwedukt[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ARENA_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_ARENA]Arena[\LINK]</English>
-		<French>[ICON_HAPPY] de l'[LINK=BUILDING_ARENA]Arène[\LINK]</French>
-		<German>[ICON_HAPPY] von der [LINK=BUILDING_ARENA]Arena[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_ARENA]Arena[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_ARENA]Arena[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_ARENA]Arena[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ARENA_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_ARENA]Arena[\LINK]</English>
-		<French>[ICON_UNHAPPY] de l'[LINK=BUILDING_ARENA]Arène[\LINK]</French>
-		<German>[ICON_UNHAPPY] von der [LINK=BUILDING_ARENA]Arena[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_ARENA]Arena[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_ARENA]Arena[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_ARENA]Arena[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_ASSASSIN_TEXT</Tag>
 		<English>[ICON_BULLET]This unit can initiate Assassinations against units on the same tile.</English>
 		<French>[ICON_BULLET]Cette unité peut réaliser des assassinats d'unités présentes sur la même case.</French>
@@ -1647,84 +1575,12 @@
 		<French>[ICON_BULLET]En paix avec les PNJ humanoides.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BARRACKS_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_BARRACKS]Barracks[\LINK]</English>
-		<French>[ICON_HAPPY] de [LINK=BUILDING_BARRACKS]Caserne[\LINK]</French>
-		<German>[ICON_HAPPY] von [LINK=BUILDING_BARRACKS]Kasernen[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_BARRACKS]Caserma[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_BARRACKS]Barracones[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_BARRACKS]Koszary[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BARRACKS_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_BARRACKS]Barracks[\LINK]</English>
-		<French>[ICON_UNHAPPY] de [LINK=BUILDING_BARRACKS]Caserne[\LINK]</French>
-		<German>[[ICON_UNHAPPY] von [LINK=BUILDING_BARRACKS]Kasernen[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_BARRACKS]Caserma[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_BARRACKS]Barracones[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_BARRACKS]Koszary[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BASE_SPECIALIST_OUTPUT</Tag>
 		<English>[ICON_BULLET]%D1_Change%F2_YieldIcon Base Output</English>
 		<French>[ICON_BULLET]%D1_Change%F2_YieldIcon</French>
 		<German>[ICON_BULLET]%D1_Change%F2_YieldIcon Grundertrag</German>
 		<Spanish>[ICON_BULLET]Rendimiento base: %D1_Change%F2_YieldIcon</Spanish>
 		<Polish>[ICON_BULLET]%D1_Change%F2_YieldIcon Podstawowa Wartość</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BATH_HOUSE_CIVIC_EXTRA_HEALTHINESS</Tag>
-		<English>[ICON_HEALTHY] from [LINK=BUILDING_BATH_HOUSE]Bath House[\LINK]</English>
-		<French>[ICON_HEALTHY] de la[LINK=BUILDING_BATH_HOUSE]Maison des Bains[\LINK]</French>
-		<German>[ICON_HEALTHY] von der [LINK=BUILDING_BATH_HOUSE]Badeanstalt[\LINK]</German>
-		<Italian>[ICON_HEALTHY] da [LINK=BUILDING_BATH_HOUSE]Terme[\LINK]</Italian>
-		<Spanish>[ICON_HEALTHY] por [LINK=BUILDING_BATH_HOUSE]Baños públicos[\LINK]</Spanish>
-		<Polish>[ICON_HEALTHY] od [LINK=BUILDING_BATH_HOUSE]Łaźnia[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BATH_HOUSE_CIVIC_EXTRA_UNHEALTHINESS</Tag>
-		<English>[ICON_UNHEALTHY] from [LINK=BUILDING_BATH_HOUSE]Bath House[\LINK]</English>
-		<French>[ICON_UNHEALTHY] de la [LINK=BUILDING_BATH_HOUSE]Maison des Bains[\LINK]</French>
-		<German>[ICON_UNHEALTHY] von der [LINK=BUILDING_BATH_HOUSE]Badeanstalt[\LINK]</German>
-		<Italian>[ICON_UNHEALTHY] da [LINK=BUILDING_BATH_HOUSE]Terme[\LINK]</Italian>
-		<Spanish>[ICON_UNHEALTHY] por [LINK=BUILDING_BATH_HOUSE]Baños públicos[\LINK]</Spanish>
-		<Polish>[ICON_UNHEALTHY] od [LINK=BUILDING_BATH_HOUSE]Łaźnia[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BAZAAR_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_BAZAAR]Bazaar[\LINK]</English>
-		<French>[ICON_HAPPY] de [LINK=BUILDING_BAZAAR]Bazar[\LINK]</French>
-		<German>[ICON_HAPPY] vom [LINK=BUILDING_BAZAAR]Bazar[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_BAZAAR]Bazaar[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_BAZAAR]Bazar[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_BAZAAR]Targ[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BAZAAR_CIVIC_EXTRA_HEALTHINESS</Tag>
-		<English>[ICON_HEALTHY] from [LINK=BUILDING_BAZAAR]Bazaar[\LINK]</English>
-		<French>[ICON_HEALTHY] du [LINK=BUILDING_BAZAAR]Bazar[\LINK]</French>
-		<German>[ICON_HEALTHY] vom [LINK=BUILDING_BAZAAR]Bazar[\LINK]</German>
-		<Italian>[ICON_HEALTHY] da [LINK=BUILDING_BAZAAR]Bazaar[\LINK]</Italian>
-		<Spanish>[ICON_HEALTHY] por [LINK=BUILDING_BAZAAR]Bazar[\LINK]</Spanish>
-		<Polish>[ICON_HEALTHY] od [LINK=BUILDING_BAZAAR]Targ[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BAZAAR_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_BAZAAR]Bazaar[\LINK]</English>
-		<French>[ICON_UNHAPPY] de [LINK=BUILDING_BAZAAR]Bazar[\LINK]</French>
-		<German>[ICON_UNHAPPY] vom [LINK=BUILDING_BAZAAR]Bazar[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_BAZAAR]Bazaar[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_BAZAAR]Bazar[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_BAZAAR]Targ[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BAZAAR_CIVIC_EXTRA_UNHEALTHINESS</Tag>
-		<English>[ICON_UNHEALTHY] from [LINK=BUILDING_BAZAAR]Bazaar[\LINK]</English>
-		<French>[ICON_UNHEALTHY] du [LINK=BUILDING_BAZAAR]Bazar[\LINK]</French>
-		<German>[ICON_UNHEALTHY] vom [LINK=BUILDING_BAZAAR]Bazar[\LINK]</German>
-		<Italian>[ICON_UNHEALTHY] da [LINK=BUILDING_BAZAAR]Bazaar[\LINK]</Italian>
-		<Spanish>[ICON_UNHEALTHY] por [LINK=BUILDING_BAZAAR]Bazar[\LINK]</Spanish>
-		<Polish>[ICON_UNHEALTHY] od [LINK=BUILDING_BAZAAR]Targ[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BLEND_INTO_CITY_TEXT</Tag>
@@ -1743,78 +1599,6 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Binarna Neurochemia</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BOMB_SHELTER_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_BOMB_SHELTER]Bomb Shelters[\LINK]</English>
-		<French>[ICON_HAPPY] de [LINK=BUILDING_BOMB_SHELTER]Abris antiaériens[\LINK]</French>
-		<German>[ICON_HAPPY] vom [LINK=BUILDING_BOMB_SHELTER]Luftschutzkeller[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_BOMB_SHELTER]Rifugio anti-aereo[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_BOMB_SHELTER]Refugio antiaéreo[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_BOMB_SHELTER]Schron Przeciwatomowy[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BOMB_SHELTER_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_BOMB_SHELTER]Bomb Shelters[\LINK]</English>
-		<French>[ICON_UNHAPPY] de [LINK=BUILDING_BOMB_SHELTER]Abris antiaériens[\LINK]</French>
-		<German>[ICON_UNHAPPY] vom [LINK=BUILDING_BOMB_SHELTER]Luftschutzkeller[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_BOMB_SHELTER]Rifugio anti-aereo[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_BOMB_SHELTER]Refugio antiaéreo[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_BOMB_SHELTER]Schron Przeciwatomowy[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BROADCAST_TOWER_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_BROADCAST_TOWER]Broadcast Tower[\LINK]</English>
-		<French>[ICON_HAPPY] de [LINK=BUILDING_BROADCAST_TOWER]Tour de radiodiffusion[\LINK]</French>
-		<German>[ICON_HAPPY] vom [LINK=BUILDING_BROADCAST_TOWER]Funkturm[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_BROADCAST_TOWER]Ripetitore[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_BROADCAST_TOWER]Torre de radiodifusión[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_BROADCAST_TOWER]Wieża Nadawcza[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BROADCAST_TOWER_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_BROADCAST_TOWER]Broadcast Tower[\LINK]</English>
-		<French>[ICON_UNHAPPY] de [LINK=BUILDING_BROADCAST_TOWER]Tour de radiodiffusion[\LINK]</French>
-		<German>[ICON_UNHAPPY] vom [LINK=BUILDING_BROADCAST_TOWER]Funkturm[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_BROADCAST_TOWER]Ripetitore[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_BROADCAST_TOWER]Torre de radiodifusión[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_BROADCAST_TOWER]Wieża Nadawcza[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BROADWAY_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_BROADWAY]Broadway[\LINK]</English>
-		<French>[ICON_HAPPY] de [LINK=BUILDING_BROADWAY]Broadway[\LINK]</French>
-		<German>[ICON_HAPPY] vom [LINK=BUILDING_BROADWAY]Broadway[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_BROADWAY]Broadway[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_BROADWAY]Broadway[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_BROADWAY]Broadway[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BROADWAY_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_BROADWAY]Broadway[\LINK]</English>
-		<French>[ICON_UNHAPPY] de [LINK=BUILDING_BROADWAY]Broadway[\LINK]</French>
-		<German>[ICON_UNHAPPY] vom [LINK=BUILDING_BROADWAY]Broadway[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_BROADWAY]Broadway[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_BROADWAY]Broadway[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_BROADWAY]Broadway[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BROTHEL_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_BROTHEL]Brothel[\LINK]</English>
-		<French>[ICON_HAPPY] de [LINK=BUILDING_BROTHEL]Bordel[\LINK]</French>
-		<German>[ICON_HAPPY] vom [LINK=BUILDING_BROTHEL]Bordell[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_BROTHEL]Bordello[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_BROTHEL]Burdel[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_BROTHEL]Dom Publiczny[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BROTHEL_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_BROTHEL]Brothel[\LINK]</English>
-		<French>[ICON_UNHAPPY] de [LINK=BUILDING_BROTHEL]Bordel[\LINK]</French>
-		<German>[ICON_UNHAPPY] vom [LINK=BUILDING_BROTHEL]Bordell[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_BROTHEL]Bordello[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_BROTHEL]Burdel[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_BROTHEL]Dom Publiczny[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BTS_FOREST_PRESERVE</Tag>
@@ -1836,24 +1620,6 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Rezerwat przyrody</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUDDHIST_MONASTERY_CIVIC_EXTRA_HEALTHINESS</Tag>
-		<English>[ICON_HEALTHY] from [LINK=BUILDING_BUDDHIST_MONASTERY]Buddhist Monastery[\LINK]</English>
-		<French>[ICON_HEALTHY] du [LINK=BUILDING_BUDDHIST_MONASTERY]Monastère Bouddhiste[\LINK]</French>
-		<German>[ICON_HEALTHY] vom [LINK=BUILDING_BUDDHIST_MONASTERY]Buddhistischen Kloster[\LINK]</German>
-		<Italian>[ICON_HEALTHY] da [LINK=BUILDING_BUDDHIST_MONASTERY]Monastero buddhista[\LINK]</Italian>
-		<Spanish>[ICON_HEALTHY] por [LINK=BUILDING_BUDDHIST_MONASTERY]Monasterio budista[\LINK]</Spanish>
-		<Polish>[ICON_HEALTHY] od [LINK=BUILDING_BUDDHIST_MONASTERY]Świątynia Buddyjska[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUDDHIST_MONASTERY_CIVIC_EXTRA_UNHEALTHINESS</Tag>
-		<English>[ICON_UNHEALTHY] from [LINK=BUILDING_BUDDHIST_MONASTERY]Buddhist Monastery[\LINK]</English>
-		<French>[ICON_UNHEALTHY] du [LINK=BUILDING_BUDDHIST_MONASTERY]Monastère Bouddhiste[\LINK]</French>
-		<German>[ICON_UNHEALTHY] vom [LINK=BUILDING_BUDDHIST_MONASTERY]Buddhistischen Kloster[\LINK]</German>
-		<Italian>[ICON_UNHEALTHY] da [LINK=BUILDING_BUDDHIST_MONASTERY]Monastero buddhista[\LINK]</Italian>
-		<Spanish>[ICON_UNHEALTHY] por [LINK=BUILDING_BUDDHIST_MONASTERY]Monasterio budista[\LINK]</Spanish>
-		<Polish>[ICON_UNHEALTHY] od [LINK=BUILDING_BUDDHIST_MONASTERY]Świątynia Buddyjska[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUFFYWARNING</Tag>
@@ -2080,24 +1846,6 @@
 		<Polish>[COLOR_WARNING_TEXT]Ta cecha wymaga nowszej wersji BUG DLL (BULL).[COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUNKER_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_BUNKER]Bunker[\LINK]</English>
-		<French>[ICON_HAPPY] de [LINK=BUILDING_BUNKER]Bunker[\LINK]</French>
-		<German>[ICON_HAPPY] vom [LINK=BUILDING_BUNKER]Bunker[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_BUNKER]Bunker[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_BUNKER]Búnker[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_BUNKER]Bunkier[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUNKER_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_BUNKER]Bunker[\LINK]</English>
-		<French>[ICON_UNHAPPY] de [LINK=BUILDING_BUNKER]Bunker[\LINK]</French>
-		<German>[ICON_UNHAPPY] vom [LINK=BUILDING_BUNKER]Bunker[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_BUNKER]Bunker[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_BUNKER]Búnker[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_BUNKER]Bunkier[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BURGERWORLD_STRATEGY</Tag>
 		<English>Build the [COLOR_BUILDING_TEXT]Burgerworld[COLOR_REVERT] Headquarters to create the [COLOR_HIGHLIGHT_TEXT]Burgerworld Corporation[COLOR_REVERT] which consumes [COLOR_HIGHLIGHT_TEXT]Cow[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Pig[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Potato[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Wheat[COLOR_REVERT] or [COLOR_HIGHLIGHT_TEXT]Coffee[COLOR_REVERT] and adds a culture bonus to every city where the [COLOR_HIGHLIGHT_TEXT]Burgerworld Corporation[COLOR_REVERT] is present. The Headquarters provide gold for each city in the world with a Burgerworld franchise.</English>
 		<French>Construire le Siège de [COLOR_BUILDING_TEXT]MondoBurger[COLOR_REVERT] pour fonder la corporation [COLOR_HIGHLIGHT_TEXT]MondoBurger Corporation[COLOR_REVERT] qui consomme [COLOR_HIGHLIGHT_TEXT]vache[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]cochon[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Pommes de terres[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Blé[COLOR_REVERT] ou [COLOR_HIGHLIGHT_TEXT]Café[COLOR_REVERT] et ajoute un bonus de culture à chaque ville où la [COLOR_HIGHLIGHT_TEXT]Corporation MondoBurger[COLOR_REVERT] est présente. Le siège social fournit de l'or pour chaque ville du monde avec une franchise MondoBurger.</French>
@@ -2223,42 +1971,6 @@
 		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% for being trained in a Capital or Government Center[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% pour avoir été entraîné dans la capitale, ou un Centre du gouvernement[COLOR_REVERT]</French>
 		<Polish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% za bycie zwerbowanym w Stolicy[COLOR_REVERT]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CASINO_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_CASINO]Casino[\LINK]</English>
-		<French>[ICON_HAPPY] de [LINK=BUILDING_CASINO]Casino[\LINK]</French>
-		<German>[ICON_HAPPY] vom [LINK=BUILDING_CASINO]Kasino[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_CASINO]Casinò[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_CASINO]Casino[\LINK]</Spanish>
-		<Polish>%s1 zdobył Cud Świata %s2!</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CASINO_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_CASINO]Casino[\LINK]</English>
-		<French>[ICON_UNHAPPY] de [LINK=BUILDING_CASINO]Casino[\LINK]</French>
-		<German>[ICON_UNHAPPY] vom [LINK=BUILDING_CASINO]Kasino[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_CASINO]Casinò[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_CASINO]Casino[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_CASINO]Kasyno[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CASTLE_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_CASTLE]Castle[\LINK]</English>
-		<French>[ICON_HAPPY] de [LINK=BUILDING_CASTLE]Château[\LINK]</French>
-		<German>[ICON_HAPPY] von der [LINK=BUILDING_CASTLE]Burg[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_CASTLE]Castello[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_CASTLE]Castillo[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_CASINO]Kasyno[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CASTLE_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_CASTLE]Castle[\LINK]</English>
-		<French>[ICON_UNHAPPY] de [LINK=BUILDING_CASTLE]Château[\LINK]</French>
-		<German>[ICON_UNHAPPY] von der [LINK=BUILDING_CASTLE]Burg[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_CASTLE]Castello[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_CASTLE]Castillo[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_CASTLE]Zamek[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CCV_MAININTERFACE__POSITIONOFSCORES_TEXT</Tag>
@@ -2447,24 +2159,6 @@
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Attiva Specialista[COLOR_REVERT][NEWLINE]Stabilisce se gli specialisti cittadini selezionati sono a no visisbili, con pulsanti per aggiungerli/rimuoverli</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Cambiar especialistas[COLOR_REVERT][NEWLINE]Activa o desactiva la muestra de los especialistas de la ciudad junto a botones de añadir/quitar</Spanish>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Przełącz specjalistę[COLOR_REVERT][NEWLINE]Przełącz czy specjaliści wybranego miasta są pokazani wraz z guzikami, by dodać ich lub usunąć</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CENTRAL_BANK_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_CENTRAL_BANK]Central Bank[\LINK]</English>
-		<French>[ICON_HAPPY] de [LINK=BUILDING_CENTRAL_BANK]Banque Centrale[\LINK]</French>
-		<German>[ICON_HAPPY] von der [LINK=BUILDING_CENTRAL_BANK]Zentralbank[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_CENTRAL_BANK]Banca centrale[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_CENTRAL_BANK]Banco central[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_CENTRAL_BANK]Bank Centralny[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CENTRAL_BANK_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_CENTRAL_BANK]Central Bank[\LINK]</English>
-		<French>[ICON_UNHAPPY] de [LINK=BUILDING_CENTRAL_BANK]Banque Centrale[\LINK]</French>
-		<German>[ICON_UNHAPPY] von der [LINK=BUILDING_CENTRAL_BANK]Zentralbank[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_CENTRAL_BANK]Banca centrale[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_CENTRAL_BANK]Banco central[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_CENTRAL_BANK]Bank Centralny[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CHANGECIV_CANCEL</Tag>
@@ -2725,42 +2419,6 @@
 		<Italian>Seleziona un'unità da proteggere:</Italian>
 		<Spanish>Selecciona la unidad a proteger:</Spanish>
 		<Polish>Wybierz Jednostkę do Ochrony:</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CHRISTIAN_MONASTERY_CIVIC_EXTRA_HEALTHINESS</Tag>
-		<English>[ICON_HEALTHY] from [LINK=BUILDING_CHRISTIAN_MONASTERY]Christian Monastery[\LINK]</English>
-		<French>[ICON_HEALTHY] du [LINK=BUILDING_CHRISTIAN_MONASTERY]Monastère Chrétien[\LINK]</French>
-		<German>[ICON_HEALTHY] vom [LINK=BUILDING_CHRISTIAN_MONASTERY]Christlichen Kloster[\LINK]</German>
-		<Italian>[ICON_HEALTHY] da [LINK=BUILDING_CHRISTIAN_MONASTERY]Monastero cristiano[\LINK]</Italian>
-		<Spanish>[ICON_HEALTHY] por [LINK=BUILDING_CHRISTIAN_MONASTERY]Monasterio cristiano[\LINK]</Spanish>
-		<Polish>[ICON_HEALTHY] od [LINK=BUILDING_CHRISTIAN_MONASTERY]Klasztor Chrześcijański[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CHRISTIAN_MONASTERY_CIVIC_EXTRA_UNHEALTHINESS</Tag>
-		<English>[ICON_UNHEALTHY] from [LINK=BUILDING_CHRISTIAN_MONASTERY]Christian Monastery[\LINK]</English>
-		<French>[ICON_UNHEALTHY] du [LINK=BUILDING_CHRISTIAN_MONASTERY]Monastère Chrétien[\LINK]</French>
-		<German>[ICON_UNHEALTHY] vom [LINK=BUILDING_CHRISTIAN_MONASTERY]Christlichen Kloster[\LINK]</German>
-		<Italian>[ICON_UNHEALTHY] da [LINK=BUILDING_CHRISTIAN_MONASTERY]Monastero cristiano[\LINK]</Italian>
-		<Spanish>[ICON_UNHEALTHY] por [LINK=BUILDING_CHRISTIAN_MONASTERY]Monasterio cristiano[\LINK]</Spanish>
-		<Polish>[ICON_UNHEALTHY] od [LINK=BUILDING_CHRISTIAN_MONASTERY]Klasztor Chrześcijański[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIRCUS_MAXIMUS_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_CIRCUS_MAXIMUS]Circus Maximus[\LINK]</English>
-		<French>[ICON_HAPPY] du [LINK=BUILDING_CIRCUS_MAXIMUS]Cirque Maxime[\LINK]</French>
-		<German>[ICON_HAPPY] vom [LINK=BUILDING_CIRCUS_MAXIMUS]Circus Maximus[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_CIRCUS_MAXIMUS]Circo Massimo[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_CIRCUS_MAXIMUS]Circo Máximo[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_CIRCUS_MAXIMUS]Circus Maximus[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIRCUS_MAXIMUS_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_CIRCUS_MAXIMUS]Circus Maximus[\LINK]</English>
-		<French>[ICON_UNHAPPY] du [LINK=BUILDING_CIRCUS_MAXIMUS]Cirque Maxime[\LINK]</French>
-		<German>[ICON_UNHAPPY] vom [LINK=BUILDING_CIRCUS_MAXIMUS]Circus Maximus[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_CIRCUS_MAXIMUS]Circo Massimo[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_CIRCUS_MAXIMUS]Circo Máximo[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_CIRCUS_MAXIMUS]Circus Maximus[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_BASE_PRODUCTION</Tag>
@@ -3402,24 +3060,6 @@
 		<Polish>Żółty</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_COLOSSEUM_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_COLOSSEUM]Colosseum[\LINK]</English>
-		<French>[ICON_HAPPY] de [LINK=BUILDING_COLOSSEUM]Colisée[\LINK]</French>
-		<German>[ICON_HAPPY] vom [LINK=BUILDING_COLOSSEUM]Kolosseum[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_COLOSSEUM]Colosseo[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_COLOSSEUM]Coliseo[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_COLOSSEUM]Koloseum[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_COLOSSEUM_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_COLOSSEUM]Colosseum[\LINK]</English>
-		<French>[ICON_UNHAPPY] de [LINK=BUILDING_COLOSSEUM]Colisée[\LINK]</French>
-		<German>[ICON_UNHAPPY] vom [LINK=BUILDING_COLOSSEUM]Kolosseum[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_COLOSSEUM]Colosseo[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_COLOSSEUM]Coliseo[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_COLOSSEUM]Koloseum[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_COMMA</Tag>
 		<English>,</English>
 	</TEXT>
@@ -3544,24 +3184,6 @@
 		<Polish>Badania naukowe</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_COMMUNICATION_TOWER_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_COMMUNICATION_TOWER]Communication Tower[\LINK]</English>
-		<French>[ICON_HAPPY] de la [LINK=BUILDING_COMMUNICATION_TOWER]Tour de Communication[\LINK]</French>
-		<German>[ICON_HAPPY] vom [LINK=BUILDING_COMMUNICATION_TOWER]Sendeturm[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_COMMUNICATION_TOWER]Torre comunicazioni[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_COMMUNICATION_TOWER]Torre de comunicaciones[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_COMMUNICATION_TOWER]Wieży komunikacyjnej[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_COMMUNICATION_TOWER_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_COMMUNICATION_TOWER]Communication Tower[\LINK]</English>
-		<French>[ICON_UNHAPPY] de la [LINK=BUILDING_COMMUNICATION_TOWER]Tour de Communication[\LINK]</French>
-		<German>[ICON_UNHAPPY] vom [LINK=BUILDING_COMMUNICATION_TOWER]Sendeturm[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_COMMUNICATION_TOWER]Torre comunicazioni[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_COMMUNICATION_TOWER]Torre de comunicaciones[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_COMMUNICATION_TOWER]Wieży komunikacyjnej[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_COMPLETED_AUTO_BUILD</Tag>
 		<English>%s1_BldgName has been built by the citizens of %s2_CityName</English>
 		<French>[NUM1:Un:Une:Des:Des] %s1_BldgName [NUM1:a:a:ont:ont] été construi[NUM1:t:te:ts:tes] par les citoyens de %s2_CityName</French>
@@ -3595,24 +3217,6 @@
 		<French>Etes-vous sûr de vouloir diviser cette unité?</French>
 		<German>Soll diese Einheit wirklich aufgeteilt werden?</German>
 		<Polish>Jesteś pewny, że chcesz podzielić tą jednostkę?</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CONFUCIAN_MONASTERY_CIVIC_EXTRA_HEALTHINESS</Tag>
-		<English>[ICON_HEALTHY] from [LINK=BUILDING_CONFUCIAN_MONASTERY]Confucian Monastery[\LINK]</English>
-		<French>[ICON_HEALTHY] du [LINK=BUILDING_CONFUCIAN_MONASTERY]Monastère confucianiste[\LINK]</French>
-		<German>[ICON_HEALTHY] vom [LINK=BUILDING_CONFUCIAN_MONASTERY]Konfuzianistischen Kloster[\LINK]</German>
-		<Italian>[ICON_HEALTHY] da [LINK=BUILDING_CONFUCIAN_MONASTERY]Monastero confuciano[\LINK]</Italian>
-		<Spanish>[ICON_HEALTHY] por [LINK=BUILDING_CONFUCIAN_MONASTERY]Monasterio confuciano[\LINK]</Spanish>
-		<Polish>[ICON_HEALTHY] od [LINK=BUILDING_CONFUCIAN_MONASTERY]Świątynia Konfucjańska[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CONFUCIAN_MONASTERY_CIVIC_EXTRA_UNHEALTHINESS</Tag>
-		<English>[ICON_UNHEALTHY] from [LINK=BUILDING_CONFUCIAN_MONASTERY]Confucian Monastery[\LINK]</English>
-		<French>[ICON_UNHEALTHY] du [LINK=BUILDING_CONFUCIAN_MONASTERY]Monastère confucianiste[\LINK]</French>
-		<German>[ICON_UNHEALTHY] vom [LINK=BUILDING_CONFUCIAN_MONASTERY]Konfuzianistischen Kloster[\LINK]</German>
-		<Italian>[ICON_UNHEALTHY] da [LINK=BUILDING_CONFUCIAN_MONASTERY]Monastero confuciano[\LINK]</Italian>
-		<Spanish>[ICON_UNHEALTHY] por [LINK=BUILDING_CONFUCIAN_MONASTERY]Monasterio confuciano[\LINK]</Spanish>
-		<Polish>[ICON_UNHEALTHY] od [LINK=BUILDING_CONFUCIAN_MONASTERY]Świątynia Konfucjańska[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONNECTED_CITY_MAINT</Tag>
@@ -3662,42 +3266,6 @@
 		<Italian>[LINK=BUILDING_COPERNICUS_OBSERVATORY]Osservatorio di Copernico[\LINK]</Italian>
 		<Spanish>[LINK=BUILDING_COPERNICUS_OBSERVATORY]Observatorio de Copérnico[\LINK]</Spanish>
 		<Polish>[LINK=BUILDING_COPERNICUS_OBSERVATORY]Obserwatorium Kopernika[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_COURIER_SYSTEM_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_COURIER_SYSTEM]National Courier System[\LINK]</English>
-		<French>[ICON_HAPPY] de [LINK=BUILDING_COURIER_SYSTEM]la Poste nationale[\LINK]</French>
-		<German>[ICON_HAPPY] vom [LINK=BUILDING_COURIER_SYSTEM]Nationales Kuriersystem[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_COURIER_SYSTEM]Servizio postale nazionale[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_COURIER_SYSTEM]Red postal nacional[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_COURIER_SYSTEM]Narodowy Serwis Kurierski[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_COURIER_SYSTEM_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_COURIER_SYSTEM]National Courier System[\LINK]</English>
-		<French>[ICON_UNHAPPY] de [LINK=BUILDING_COURIER_SYSTEM]la Poste nationale[\LINK]</French>
-		<German>[ICON_UNHAPPY] vom [LINK=BUILDING_COURIER_SYSTEM]Nationales Kuriersystem[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_COURIER_SYSTEM]Servizio postale nazionale[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_COURIER_SYSTEM]Red postal nacional[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_COURIER_SYSTEM]Narodowy Serwis Kurierski[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CRUSADE_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_CRUSADE]King Richard's Crusade[\LINK]</English>
-		<French>[ICON_HAPPY] de la [LINK=BUILDING_CRUSADE]Croisade du Roi Richard[\LINK]</French>
-		<German>[ICON_HAPPY] von [LINK=BUILDING_CRUSADE]König Richards Kreuzzug[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_CRUSADE]Crociata di Re Riccardo[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_CRUSADE]Cruzada del Rey Ricardo[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_CRUSADE]Krucjata Króla Ryszarda[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CRUSADE_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_CRUSADE]King Richard's Crusade[\LINK]</English>
-		<French>[ICON_UNHAPPY] de la [LINK=BUILDING_CRUSADE]Croisade du Roi Richard[\LINK]</French>
-		<German>[ICON_UNHAPPY] von [LINK=BUILDING_CRUSADE]König Richards Kreuzzug[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_CRUSADE]Crociata di Re Riccardo[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_CRUSADE]Cruzada del Rey Ricardo[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_CRUSADE]Krucjata Króla Ryszarda[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CULTURAL_AGE_METAL</Tag>
@@ -4055,24 +3623,6 @@
 		<Polish>[COLOR_BUILDING_TEXT]Wielki Meczet w Dżenne [COLOR_SELECTED_TEXT]zwiększa handel na polach pustyni[COLOR_REVERT]!</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DOCTOR_CIVIC_EXTRA_HEALTHINESS</Tag>
-		<English>[ICON_HEALTHY] from [LINK=BUILDING_DOCTOR]Doctor's Office[\LINK]</English>
-		<French>[ICON_HEALTHY] du [LINK=BUILDING_DOCTOR]Cabinet de médecin[\LINK]</French>
-		<German>[ICON_HEALTHY] vom [LINK=BUILDING_DOCTOR]Gesundheitsamt[\LINK]</German>
-		<Italian>[ICON_HEALTHY] da [LINK=BUILDING_DOCTOR]Ufficio del dottore[\LINK]</Italian>
-		<Spanish>[ICON_HEALTHY] por [LINK=BUILDING_DOCTOR]Consulta del doctor[\LINK]</Spanish>
-		<Polish>[ICON_HEALTHY] od [LINK=BUILDING_DOCTOR]Gabinet Lekarski[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DOCTOR_CIVIC_EXTRA_UNHEALTHINESS</Tag>
-		<English>[ICON_UNHEALTHY] from [LINK=BUILDING_DOCTOR]Doctor's Office[\LINK]</English>
-		<French>[ICON_UNHEALTHY] du [LINK=BUILDING_DOCTOR]Cabinet de médecin[\LINK]</French>
-		<German>[ICON_UNHEALTHY] vom [LINK=BUILDING_DOCTOR]Gesundheitsamt[\LINK]</German>
-		<Italian>[ICON_UNHEALTHY] da [LINK=BUILDING_DOCTOR]Ufficio del dottore[\LINK]</Italian>
-		<Spanish>[ICON_UNHEALTHY] por [LINK=BUILDING_DOCTOR]Consulta del doctor[\LINK]</Spanish>
-		<Polish>[ICON_UNHEALTHY] od [LINK=BUILDING_DOCTOR]Gabinet Lekarski[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_DOMAIN_AIR</Tag>
 		<English>Air Units</English>
 		<French>
@@ -4222,43 +3772,7 @@
 		<Spanish>[LINK=BUILDING_EDISON]Taller de Edison[\LINK]</Spanish>
 		<Polish>[LINK=BUILDING_EDISON]Warsztat Edisona[\LINK]</Polish>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EGYPT_MYTH_MONASTERY_CIVIC_EXTRA_HEALTHINESS</Tag>
-		<English>[ICON_HEALTHY] from [LINK=BUILDING_EGYPT_MYTH_MONASTERY]Temple of Chons[\LINK]</English>
-		<French>[ICON_HEALTHY] du [LINK=BUILDING_EGYPT_MYTH_MONASTERY]Temple de Chons[\LINK]</French>
-		<German>[ICON_HEALTHY] vom [LINK=BUILDING_EGYPT_MYTH_MONASTERY]Chons-Tempel[\LINK]</German>
-		<Italian>[ICON_HEALTHY] da [LINK=BUILDING_EGYPT_MYTH_MONASTERY]Tempio di Chons[\LINK]</Italian>
-		<Spanish>[ICON_HEALTHY] por [LINK=BUILDING_EGYPT_MYTH_MONASTERY]Templo de Jonsu[\LINK]</Spanish>
-		<Polish>[ICON_HEALTHY] od [LINK=BUILDING_EGYPT_MYTH_MONASTERY]Świątynia Horusa[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EGYPT_MYTH_MONASTERY_CIVIC_EXTRA_UNHEALTHINESS</Tag>
-		<English>[ICON_UNHEALTHY] from [LINK=BUILDING_EGYPT_MYTH_MONASTERY]Temple of Chons[\LINK]</English>
-		<French>[ICON_UNHEALTHY] du [LINK=BUILDING_EGYPT_MYTH_MONASTERY]Temple de Chons[\LINK]</French>
-		<German>[ICON_UNHEALTHY] vom [LINK=BUILDING_EGYPT_MYTH_MONASTERY]Chons-Tempel[\LINK]</German>
-		<Italian>[ICON_UNHEALTHY] da [LINK=BUILDING_EGYPT_MYTH_MONASTERY]Tempio di Chons[\LINK]</Italian>
-		<Spanish>[ICON_UNHEALTHY] por [LINK=BUILDING_EGYPT_MYTH_MONASTERY]Templo de Jonsu[\LINK]</Spanish>
-		<Polish>[ICON_UNHEALTHY] od [LINK=BUILDING_EGYPT_MYTH_MONASTERY]Świątynia Horusa[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EINSTEIN_LAB_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_EINSTEIN_LAB]Einstein's Laboratory[\LINK]</English>
-		<French>[ICON_HAPPY] du [LINK=BUILDING_EINSTEIN_LAB]Laboratoire d'Einstein[\LINK]</French>
-		<German>[ICON_HAPPY] von [LINK=BUILDING_EINSTEIN_LAB]Einsteins Labor[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_EINSTEIN_LAB]Laboratorio di Einstein[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_EINSTEIN_LAB]Laboratorio de Einstein[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_EINSTEIN_LAB]Laboratorium Einsteina[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EINSTEIN_LAB_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_EINSTEIN_LAB]Einstein's Laboratory[\LINK]</English>
-		<French>[ICON_UNHAPPY] du [LINK=BUILDING_EINSTEIN_LAB]Laboratoire d'Einstein[\LINK]</French>
-		<German>[ICON_UNHAPPY] von [LINK=BUILDING_EINSTEIN_LAB]Einsteins Labor[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_EINSTEIN_LAB]Laboratorio di Einstein[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_EINSTEIN_LAB]Laboratorio de Einstein[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_EINSTEIN_LAB]Laboratorium Einsteina[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
+		<TEXT>
 		<Tag>TXT_KEY_EINSTEIN_LAB_LINK</Tag>
 		<English>[LINK=BUILDING_EINSTEIN_LAB]Einstein's Laboratory[\LINK]</English>
 		<French>[LINK=BUILDING_EINSTEIN_LAB]Laboratoire d'Einstein[\LINK]</French>
@@ -5402,24 +4916,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<German>Diese absolut höchste Spielgeschwindigkeit ist nur für Testzwecke gedacht.</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GARRISON_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_GARRISON]Garrison[\LINK]</English>
-		<French>[ICON_HAPPY] de [LINK=BUILDING_GARRISON]Garnison[\LINK]</French>
-		<German>[ICON_HAPPY] von [LINK=BUILDING_GARRISON]Garnisonen[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_GARRISON]Guarnigione[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_GARRISON]Cuartel[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_GARRISON]Garnizon Wojskowy[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GARRISON_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_GARRISON]Garrison[\LINK]</English>
-		<French>[ICON_UNHAPPY] de [LINK=BUILDING_GARRISON]Garnison[\LINK]</French>
-		<German>[ICON_UNHAPPY] von [LINK=BUILDING_GARRISON]Garnisonen[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_GARRISON]Guarnigione[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_GARRISON]Cuartel[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_GARRISON]Garnizon Wojskowy[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GLOBAL_SPECIALBUILDING_COMMERCE</Tag>
 		<English>In this City for every [COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT] on Earth</English>
 		<French>Dans cette Ville pour chaque [COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT] sur tout le Globe</French>
@@ -5546,24 +5042,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>GPS Następnej Generacji</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GRANARY_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_GRANARY]Granary[\LINK]</English>
-		<French>[ICON_HAPPY] du [LINK=BUILDING_GRANARY]Grenier[\LINK]</French>
-		<German>[ICON_HAPPY] vom [LINK=BUILDING_GRANARY]Kornspeicher[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_GRANARY]Granaio[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_GRANARY]Granero[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_GRANARY]Spichlerz[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GRANARY_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_GRANARY]Granary[\LINK]</English>
-		<French>[ICON_UNHAPPY] du [LINK=BUILDING_GRANARY]Grenier[\LINK]</French>
-		<German>[ICON_UNHAPPY] vom [LINK=BUILDING_GRANARY]Kornspeicher[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_GRANARY]Granaio[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_GRANARY]Granero[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_GRANARY]Spichlerz[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GRAPH_SMOOTHING</Tag>
 		<English>Smooth Factor %d1_Num</English>
 		<French>Facteur de lissage %d1_Num</French>
@@ -5573,63 +5051,9 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>Współczynnik Wygładzania %d1_Num</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_DAM_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_GREAT_DAM]The Three Gorges Dam[\LINK]</English>
-		<French>[ICON_HAPPY] du [LINK=BUILDING_GREAT_DAM]Barrage des Trois Gorges[\LINK]</French>
-		<German>[ICON_HAPPY] vom [LINK=BUILDING_GREAT_DAM]Drei-Schluchten-Damm[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_GREAT_DAM]Diga delle tre gole[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_GREAT_DAM]Presa de las Tres Gargantas[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_GREAT_DAM]Zapora Trzech Przełomów[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_DAM_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_GREAT_DAM]The Three Gorges Dam[\LINK]</English>
-		<French>[ICON_UNHAPPY] du [LINK=BUILDING_GREAT_DAM]Barrage des Trois Gorges[\LINK]</French>
-		<German>[ICON_UNHAPPY] vom [LINK=BUILDING_GREAT_DAM]Drei-Schluchten-Damm[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_GREAT_DAM]Diga delle tre gole[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_GREAT_DAM]Presa de las Tres Gargantas[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_GREAT_DAM]Zapora Trzech Przełomów[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GREAT_DOCTOR_STRATEGY</Tag>
 		<English>Use the Great Doctor to build the [LINK=BUILDING_UNIVERSAL_HEALTH_CARE]Universal Health Care[\LINK] National Wonder, discover a new technology or add to a city as a super specialist.</English>
 		<French>Utilisez le Docteur illustre pour construire la merveille nationale [LINK=BUILDING_UNIVERSAL_HEALTH_CARE]Couverture Santé Universelle[\ LINK], ou découvrir une nouvelle technologie ou encore ajoutez-le à une ville en tant que super spécialiste.</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PALACE_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_GREAT_PALACE]Forbidden Palace[\LINK]</English>
-		<French>[ICON_HAPPY] de [LINK=BUILDING_GREAT_PALACE]la Cité Interdite[\LINK]</French>
-		<German>[ICON_HAPPY] von der [LINK=BUILDING_GREAT_PALACE]Verbotenen Stadt[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_GREAT_PALACE]Palazzo Proibito[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_GREAT_PALACE]Palacio Prohibido[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_GREAT_PALACE]Zakazane Miasto[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PALACE_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_GREAT_PALACE]Forbidden Palace[\LINK]</English>
-		<French>[ICON_UNHAPPY] de [LINK=BUILDING_GREAT_PALACE]la Cité Interdite[\LINK]</French>
-		<German>[ICON_UNHAPPY] von der [LINK=BUILDING_GREAT_PALACE]Verbotenen Stadt[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_GREAT_PALACE]Palazzo Proibito[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_GREAT_PALACE]Palacio Prohibido[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_GREAT_PALACE]Zakazane Miasto[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_WALL_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_GREAT_WALL]The Great Wall[\LINK]</English>
-		<French>[ICON_HAPPY] de [LINK=BUILDING_GREAT_WALL]la Grande Muraille[\LINK]</French>
-		<German>[ICON_HAPPY] von der [LINK=BUILDING_GREAT_WALL]Großen Mauer[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_GREAT_WALL]La Grande Muraglia[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_GREAT_WALL]Gran Muralla[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_GREAT_WALL]Wielki Mur[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_WALL_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_GREAT_WALL]The Great Wall[\LINK]</English>
-		<French>[ICON_UNHAPPY] de [LINK=BUILDING_GREAT_WALL]la Grande Muraille[\LINK]</French>
-		<German>[ICON_UNHAPPY] von der [LINK=BUILDING_GREAT_WALL]Großen Mauer[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_GREAT_WALL]La Grande Muraglia[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_GREAT_WALL]Gran Muralla[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_GREAT_WALL]Wielki Mur[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREEKWAR_IMPROVEMENT_OLIVE_PRESS_STRATEGY</Tag>
@@ -5652,42 +5076,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Graficzne Interfejsy</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GUILDHALL_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_GUILDHALL]Guild Hall[\LINK]</English>
-		<French>[ICON_HAPPY] de [LINK=BUILDING_GUILDHALL]Hotel de Ville[\LINK]</French>
-		<German>[ICON_HAPPY] von der [LINK=BUILDING_GUILDHALL]Gildehalle[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_GUILDHALL]Sede delle gilde[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_GUILDHALL]Salón de gremio[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_GUILDHALL]Siedziba Gildii[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GUILDHALL_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_GUILDHALL]Guild Hall[\LINK]</English>
-		<French>[ICON_UNHAPPY] de [LINK=BUILDING_GUILDHALL]Hotel de Ville[\LINK]</French>
-		<German>[ICON_UNHAPPY] von der [LINK=BUILDING_GUILDHALL]Gildehalle[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_GUILDHALL]Sede delle gilde[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_GUILDHALL]Salón de gremio[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_GUILDHALL]Siedziba Gildii[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_HAGIA_SOPHIA_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_HAGIA_SOPHIA]The Hagia Sophia[\LINK]</English>
-		<French>[ICON_HAPPY] de [LINK=BUILDING_HAGIA_SOPHIA]Sainte-Sophie[\LINK]</French>
-		<German>[ICON_HAPPY] von der [LINK=BUILDING_HAGIA_SOPHIA]Hagia Sophia[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_HAGIA_SOPHIA]Santa Sofia[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_HAGIA_SOPHIA]Santa Sofía[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_HAGIA_SOPHIA]Hagia Sophia[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_HAGIA_SOPHIA_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_HAGIA_SOPHIA]The Hagia Sophia[\LINK]</English>
-		<French>[ICON_UNHAPPY] de [LINK=BUILDING_HAGIA_SOPHIA]Sainte-Sophie[\LINK]</French>
-		<German>[ICON_UNHAPPY] von der [LINK=BUILDING_HAGIA_SOPHIA]Hagia Sophia[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_HAGIA_SOPHIA]Santa Sofia[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_HAGIA_SOPHIA]Santa Sofía[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_HAGIA_SOPHIA]Hagia Sophia[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_CHIEFTAIN</Tag>
@@ -6011,84 +5399,12 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Italian>La tua unità %s1_UnitName ha effettuato un bombardamento ad area!</Italian>
 		<Spanish>¡[NUM1:Tu:Tu:Tus:Tus] %s1_UnitName [NUM1:ha:ha:han:han] cañoneado con éxito!</Spanish>
 		<Polish>Twoja jednostka (%s1_UnitName) ucierpiała z powodu ataku dystansowego!</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_HEALERHUT_CIVIC_EXTRA_HEALTHINESS</Tag>
-		<English>[ICON_HEALTHY] from [LINK=BUILDING_HEALERHUT]Healer's Hut[\LINK]</English>
-		<French>[ICON_HEALTHY] de la [LINK=BUILDING_HEALERHUT]Hutte du Guérisseur[\LINK]</French>
-		<German>[ICON_HEALTHY] vom [LINK=BUILDING_HEALERHUT]Medizinmann[\LINK]</German>
-		<Italian>[ICON_HEALTHY] da [LINK=BUILDING_HEALERHUT]Capanna del guaritore[\LINK]</Italian>
-		<Spanish>[ICON_HEALTHY] por [LINK=BUILDING_HEALERHUT]Cabaña del curandero[\LINK]</Spanish>
-		<Polish>[ICON_HEALTHY] od [LINK=BUILDING_HEALERHUT]Chatka Uzdrowiciela[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_HEALERHUT_CIVIC_EXTRA_UNHEALTHINESS</Tag>
-		<English>[ICON_UNHEALTHY] from [LINK=BUILDING_HEALERHUT]Healer's Hut[\LINK]</English>
-		<French>[ICON_UNHEALTHY] de la [LINK=BUILDING_HEALERHUT]Hutte du Guérisseur[\LINK]</French>
-		<German>[ICON_UNHEALTHY] vom [LINK=BUILDING_HEALERHUT]Medizinmann[\LINK]</German>
-		<Italian>[ICON_UNHEALTHY] da [LINK=BUILDING_HEALERHUT]Capanna del guaritore[\LINK]</Italian>
-		<Spanish>[ICON_UNHEALTHY] por [LINK=BUILDING_HEALERHUT]Cabaña del curandero[\LINK]</Spanish>
-		<Polish>[ICON_UNHEALTHY] od [LINK=BUILDING_HEALERHUT]Chatka Uzdrowiciela[\LINK]</Polish>
-	</TEXT>
+	</TEXT>	
 	<TEXT>
 		<Tag>TXT_KEY_HEALTHY_TECH_SPECIALIST</Tag>
 		<English>+%d1[ICON_HEALTHY] "Our advanced society has made the efforts of some professions a cleaner affair!"</English>
 		<French>+%d1[ICON_HEALTHY] "Notre société avancée a fait les efforts afin que certaines professions soient plus propres!"</French>
 		<Italian>+%d1[ICON_HEALTHY] "La nostra società avanzata ha reso molte professioni decisamente più pulite!"</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_HELLENIC_MONASTERY_CIVIC_EXTRA_HEALTHINESS</Tag>
-		<English>[ICON_HEALTHY] from [LINK=BUILDING_HELLENIC_MONASTERY]Hellenic Gymnasia[\LINK]</English>
-		<French>[ICON_HEALTHY] du [LINK=BUILDING_HELLENIC_MONASTERY]Monastère hellénique[\LINK]</French>
-		<German>[ICON_HEALTHY] vom [LINK=BUILDING_HELLENIC_MONASTERY]Hellenistischen Gymnasium[\LINK]</German>
-		<Italian>[ICON_HEALTHY] da [LINK=BUILDING_HELLENIC_MONASTERY]Monastero ellenico[\LINK]</Italian>
-		<Spanish>[ICON_HEALTHY] por [LINK=BUILDING_HELLENIC_MONASTERY]Gimnasio helénico[\LINK]</Spanish>
-		<Polish>[ICON_HEALTHY] od [LINK=BUILDING_HELLENIC_MONASTERY]Gymnasion Helleński[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_HELLENIC_MONASTERY_CIVIC_EXTRA_UNHEALTHINESS</Tag>
-		<English>[ICON_UNHEALTHY] from [LINK=BUILDING_HELLENIC_MONASTERY]Hellenic Gymnasia[\LINK]</English>
-		<French>[ICON_UNHEALTHY] du [LINK=BUILDING_HELLENIC_MONASTERY]Monastère hellénique[\LINK]</French>
-		<German>[ICON_UNHEALTHY] vom [LINK=BUILDING_HELLENIC_MONASTERY]Hellenistischen Gymnasium\LINK]</German>
-		<Italian>[ICON_UNHEALTHY] da [LINK=BUILDING_HELLENIC_MONASTERY]Monastero ellenico[\LINK]</Italian>
-		<Spanish>[ICON_UNHEALTHY] por [LINK=BUILDING_HELLENIC_MONASTERY]Gimnasio helénico[\LINK]</Spanish>
-		<Polish>[ICON_UNHEALTHY] od [LINK=BUILDING_HELLENIC_MONASTERY]Gymnasion Helleński[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_HIGH_WALLS_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_HIGH_WALLS]High Walls[\LINK]</English>
-		<French>[ICON_HAPPY] de [LINK=BUILDING_HIGH_WALLS]Hauts Remparts[\LINK]</French>
-		<German>[ICON_HAPPY] von [LINK=BUILDING_HIGH_WALLS]Langen Mauern[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_HIGH_WALLS]Lunghe mura[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_HIGH_WALLS]Murallas altas[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_HIGH_WALLS]Wysokie Mury[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_HIGH_WALLS_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_HIGH_WALLS]High Walls[\LINK]</English>
-		<French>[ICON_UNHAPPY] de [LINK=BUILDING_HIGH_WALLS]Hauts Remparts[\LINK]</French>
-		<German>[ICON_UNHAPPY] von [LINK=BUILDING_HIGH_WALLS]Langen Mauern[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_HIGH_WALLS]Lunghe mura[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_HIGH_WALLS]Murallas altas[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_HIGH_WALLS]Wysokie Mury[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_HINDU_MONASTERY_CIVIC_EXTRA_HEALTHINESS</Tag>
-		<English>[ICON_HEALTHY] from [LINK=BUILDING_HINDU_MONASTERY]Hindu Monastery[\LINK]</English>
-		<French>[ICON_HEALTHY] du [LINK=BUILDING_HINDU_MONASTERY]Monastère Hindou[\LINK]</French>
-		<German>[ICON_HEALTHY] vom [LINK=BUILDING_HINDU_MONASTERY]Hinduistischen Kloster[\LINK]</German>
-		<Italian>[ICON_HEALTHY] da [LINK=BUILDING_HINDU_MONASTERY]Monastero Indù[\LINK]</Italian>
-		<Spanish>[ICON_HEALTHY] por [LINK=BUILDING_HINDU_MONASTERY]Monasterio hinduísta[\LINK]</Spanish>
-		<Polish>[ICON_HEALTHY] od [LINK=BUILDING_HINDU_MONASTERY]Świątynia Hinduska[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_HINDU_MONASTERY_CIVIC_EXTRA_UNHEALTHINESS</Tag>
-		<English>[ICON_UNHEALTHY] from [LINK=BUILDING_HINDU_MONASTERY]Hindu Monastery[\LINK]</English>
-		<French>[ICON_UNHEALTHY] du [LINK=BUILDING_HINDU_MONASTERY]Monastère Hindou[\LINK]</French>
-		<German>[ICON_UNHEALTHY] vom [LINK=BUILDING_HINDU_MONASTERY]Hinduistischen Kloster[\LINK]</German>
-		<Italian>[ICON_UNHEALTHY] da [LINK=BUILDING_HINDU_MONASTERY]Monastero Indù[\LINK]</Italian>
-		<Spanish>[ICON_UNHEALTHY] por [LINK=BUILDING_HINDU_MONASTERY]Monasterio hinduísta[\LINK]</Spanish>
-		<Polish>[ICON_UNHEALTHY] od [LINK=BUILDING_HINDU_MONASTERY]Świątynia Hinduska[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_11</Tag>
@@ -6149,60 +5465,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<French>G-</French>
 		<German>S-</German>
 		<Spanish>V-</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_HOLLYWOOD_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_HOLLYWOOD]Hollywood[\LINK]</English>
-		<French>[ICON_HAPPY] de [LINK=BUILDING_HOLLYWOOD]Hollywood[\LINK]</French>
-		<German>[ICON_HAPPY] von [LINK=BUILDING_HOLLYWOOD]Hollywood[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_HOLLYWOOD]Hollywood[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_HOLLYWOOD]Hollywood[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_HOLLYWOOD]Hollywood[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_HOLLYWOOD_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_HOLLYWOOD]Hollywood[\LINK]</English>
-		<French>[ICON_UNHAPPY] de [LINK=BUILDING_HOLLYWOOD]Hollywood[\LINK]</French>
-		<German>[ICON_UNHAPPY] von [LINK=BUILDING_HOLLYWOOD]Hollywood[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_HOLLYWOOD]Hollywood[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_HOLLYWOOD]Hollywood[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_HOLLYWOOD]Hollywood[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_HOSPITAL_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_HOSPITAL]Hospital[\LINK]</English>
-		<French>[ICON_HAPPY] de l'[LINK=BUILDING_HOSPITAL]Hôpital[\LINK]</French>
-		<German>[ICON_HAPPY] vom [LINK=BUILDING_HOSPITAL]Krankenhaus[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_HOSPITAL]Ospedale[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_HOSPITAL]Hospital[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_HOSPITAL]Szpital[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_HOSPITAL_CIVIC_EXTRA_HEALTHINESS</Tag>
-		<English>[ICON_HEALTHY] from [LINK=BUILDING_HOSPITAL]Hospital[\LINK]</English>
-		<French>[ICON_HEALTHY] de l'[LINK=BUILDING_HOSPITAL]Hôpital[\LINK]</French>
-		<German>[ICON_HEALTHY] vom [LINK=BUILDING_HOSPITAL]Krankenhaus[\LINK]</German>
-		<Italian>[ICON_HEALTHY] da [LINK=BUILDING_HOSPITAL]Ospedale[\LINK]</Italian>
-		<Spanish>[ICON_HEALTHY] por [LINK=BUILDING_HOSPITAL]Hospital[\LINK]</Spanish>
-		<Polish>[ICON_HEALTHY] od [LINK=BUILDING_HOSPITAL]Szpital[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_HOSPITAL_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_HOSPITAL]Hospital[\LINK]</English>
-		<French>[ICON_UNHAPPY] de l'[LINK=BUILDING_HOSPITAL]Hôpital[\LINK]</French>
-		<German>[ICON_UNHAPPY] vom [LINK=BUILDING_HOSPITAL]Krankenhaus[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_HOSPITAL]Ospedale[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_HOSPITAL]Hospital[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_HOSPITAL]Szpital[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_HOSPITAL_CIVIC_EXTRA_UNHEALTHINESS</Tag>
-		<English>[ICON_UNHEALTHY] from [LINK=BUILDING_HOSPITAL]Hospital[\LINK]</English>
-		<French>[ICON_UNHEALTHY] de l'[LINK=BUILDING_HOSPITAL]Hôpital[\LINK]</French>
-		<German>[ICON_UNHEALTHY] vom [LINK=BUILDING_HOSPITAL]Krankenhaus[\LINK]</German>
-		<Italian>[ICON_UNHEALTHY] da [LINK=BUILDING_HOSPITAL]Ospedale[\LINK]</Italian>
-		<Spanish>[ICON_UNHEALTHY] por [LINK=BUILDING_HOSPITAL]Hospital[\LINK]</Spanish>
-		<Polish>[ICON_UNHEALTHY] od [LINK=BUILDING_HOSPITAL]Szpital[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HURRY_INFLATION_MOD_LESS</Tag>
@@ -6296,46 +5558,11 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<French>se détériore</French>
 		<Spanish>empeorando</Spanish>
 		<Polish>spada</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_INFO_NET_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_INFO_NET]Info Net[\LINK]</English>
-		<French>[ICON_HAPPY] de [LINK=BUILDING_INFO_NET]Info Net[\LINK]</French>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_INFO_NET]Info Net[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_INFO_NET]Red de información[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_INFO_NET]Info Netu[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_INFO_NET_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_INFO_NET]Info Net[\LINK]</English>
-		<French>[ICON_UNHAPPY] de [LINK=BUILDING_INFO_NET]Info Net[\LINK]</French>
-		<German>[ICON_UNHAPPY] vom [LINK=BUILDING_INFO_NET]Info Net[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_INFO_NET]Info Net[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_INFO_NET]Red de información[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_INFO_NET]Info Netu[\LINK]</Polish>
-	</TEXT>
+	</TEXT>	
 	<TEXT>
 		<Tag>TXT_KEY_INSIDIOUSNESS_TEXT</Tag>
 		<English>[ICON_BULLET]Insidiousness (Ability to Evade Investigation): %s1_Amount%%</English>
 		<French>[ICON_BULLET]Insidiosité (Habileté à échapper à l'investigation):  %s1_Amount%%</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_INTELLIGENCE_AGENCY_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_INTELLIGENCE_AGENCY]Intelligence Agency[\LINK]</English>
-		<French>[ICON_HAPPY] de [LINK=BUILDING_INTELLIGENCE_AGENCY]Agence de renseignements[\LINK]</French>
-		<German>[ICON_HAPPY] vom [LINK=BUILDING_INTELLIGENCE_AGENCY]Geheimdienst[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_INTELLIGENCE_AGENCY]Servizi segreti[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_INTELLIGENCE_AGENCY]Agencia de inteligencia[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_INTELLIGENCE_AGENCY]Agencja Wywiadu[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_INTELLIGENCE_AGENCY_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_INTELLIGENCE_AGENCY]Intelligence Agency[\LINK]</English>
-		<French>[ICON_UNHAPPY] de [LINK=BUILDING_INTELLIGENCE_AGENCY]Agence de renseignements[\LINK]</French>
-		<German>[ICON_UNHAPPY] vom [LINK=BUILDING_INTELLIGENCE_AGENCY]Geheimdienst[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_INTELLIGENCE_AGENCY]Servizi segreti[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_INTELLIGENCE_AGENCY]Agencia de inteligencia[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_INTELLIGENCE_AGENCY]Agencja Wywiadu[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_ABOMBARD_HELP</Tag>
@@ -6683,24 +5910,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>[SPACE]w zasięgu miasta</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ISLAMIC_MONASTERY_CIVIC_EXTRA_HEALTHINESS</Tag>
-		<English>[ICON_HEALTHY] from [LINK=BUILDING_ISLAMIC_MONASTERY]Islamic Monastery[\LINK]</English>
-		<French>[ICON_HEALTHY] du [LINK=BUILDING_ISLAMIC_MONASTERY]Monastère Islamique[\LINK]</French>
-		<German>[ICON_HEALTHY] vom [LINK=BUILDING_ISLAMIC_MONASTERY]Islamischen Kloster[\LINK]</German>
-		<Italian>[ICON_HEALTHY] da [LINK=BUILDING_ISLAMIC_MONASTERY]Monastero islamico[\LINK]</Italian>
-		<Spanish>[ICON_HEALTHY] por [LINK=BUILDING_ISLAMIC_MONASTERY]Monasterio islámico[\LINK]</Spanish>
-		<Polish>[ICON_HEALTHY] od [LINK=BUILDING_ISLAMIC_MONASTERY]Klasztor Islamski[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ISLAMIC_MONASTERY_CIVIC_EXTRA_UNHEALTHINESS</Tag>
-		<English>[ICON_UNHEALTHY] from [LINK=BUILDING_ISLAMIC_MONASTERY]Islamic Monastery[\LINK]</English>
-		<French>[ICON_UNHEALTHY] du [LINK=BUILDING_ISLAMIC_MONASTERY]Monastère Islamique[\LINK]</French>
-		<German>[ICON_UNHEALTHY] vom [LINK=BUILDING_ISLAMIC_MONASTERY]Islamischen Kloster[\LINK]</German>
-		<Italian>[ICON_UNHEALTHY] da [LINK=BUILDING_ISLAMIC_MONASTERY]Monastero islamico[\LINK]</Italian>
-		<Spanish>[ICON_UNHEALTHY] por [LINK=BUILDING_ISLAMIC_MONASTERY]Monasterio islámico[\LINK]</Spanish>
-		<Polish>[ICON_UNHEALTHY] od [LINK=BUILDING_ISLAMIC_MONASTERY]Klasztor Islamski[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_IS_ACCURACY_BOMBARD</Tag>
 		<English>[ICON_BULLET]Accuracy: %d1_BombAccuracy</English>
 		<French>[ICON_BULLET]Précision: %d1_BombAccuracy</French>
@@ -6750,45 +5959,9 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>Jetpack</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_JEWISH_MONASTERY_CIVIC_EXTRA_HEALTHINESS</Tag>
-		<English>[ICON_HEALTHY] from [LINK=BUILDING_JEWISH_MONASTERY]Jewish Monastery[\LINK]</English>
-		<French>[ICON_HEALTHY] du [LINK=BUILDING_JEWISH_MONASTERY]Monastère juif[\LINK]</French>
-		<German>[ICON_HEALTHY] vom [LINK=BUILDING_JEWISH_MONASTERY]Jüdischen Kloster[\LINK]</German>
-		<Italian>[ICON_HEALTHY] da [LINK=BUILDING_JEWISH_MONASTERY]Monastero giudaico[\LINK]</Italian>
-		<Spanish>[ICON_HEALTHY] por [LINK=BUILDING_JEWISH_MONASTERY]Monasterio judío[\LINK]</Spanish>
-		<Polish>[ICON_HEALTHY] od [LINK=BUILDING_JEWISH_MONASTERY]Klasztor Żydowski[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_JEWISH_MONASTERY_CIVIC_EXTRA_UNHEALTHINESS</Tag>
-		<English>[ICON_UNHEALTHY] from [LINK=BUILDING_JEWISH_MONASTERY]Jewish Monastery[\LINK]</English>
-		<French>[ICON_UNHEALTHY] du [LINK=BUILDING_JEWISH_MONASTERY]Monastère juif[\LINK]</French>
-		<German>[ICON_UNHEALTHY] vom [LINK=BUILDING_JEWISH_MONASTERY]Jüdischen Kloster[\LINK]</German>
-		<Italian>[ICON_UNHEALTHY] da [LINK=BUILDING_JEWISH_MONASTERY]Monastero giudaico[\LINK]</Italian>
-		<Spanish>[ICON_UNHEALTHY] por [LINK=BUILDING_JEWISH_MONASTERY]Monasterio judío[\LINK]</Spanish>
-		<Polish>[ICON_UNHEALTHY] od [LINK=BUILDING_JEWISH_MONASTERY]Klasztor Żydowski[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_JOIN_CITY_MOUSE_OVER</Tag>
 		<English>Join City</English>
 		<French>Rejoindre la Ville</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LABOR_UNION_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_LABOR_UNION]Labor Union[\LINK]</English>
-		<French>[ICON_HAPPY] de [LINK=BUILDING_LABOR_UNION]Syndicat[\LINK]</French>
-		<German>[ICON_HAPPY] von der [LINK=BUILDING_LABOR_UNION]Gewerkschaft[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_LABOR_UNION]Sindacato[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_LABOR_UNION]Sindicato[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_LABOR_UNION]Związki Zawodowe[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LABOR_UNION_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_LABOR_UNION]Labor Union[\LINK]</English>
-		<French>[ICON_UNHAPPY] de [LINK=BUILDING_LABOR_UNION]Syndicat[\LINK]</French>
-		<German>[ICON_UNHAPPY] von der [LINK=BUILDING_LABOR_UNION]Labor Union[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_LABOR_UNION]Sindacato[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_LABOR_UNION]Sindicato[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_LABOR_UNION]Związki Zawodowe[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LANDMARK_BAY_0</Tag>
@@ -7557,24 +6730,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>Projekt Manhattan</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MANOR_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_MANOR]Manor[\LINK]</English>
-		<French>[ICON_HAPPY] de [LINK=BUILDING_MANOR]Manoir[\LINK]</French>
-		<German>[ICON_HAPPY] vom [LINK=BUILDING_MANOR]Landgut[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_MANOR]Maniero[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_MANOR]Finca[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_MANOR]Dwór Szlachecki[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MANOR_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_MANOR]Manor[\LINK]</English>
-		<French>[ICON_UNHAPPY] de [LINK=BUILDING_MANOR]Manoir[\LINK]</French>
-		<German>[ICON_UNHAPPY] vom [LINK=BUILDING_MANOR]Landgut[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_MANOR]Maniero[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_MANOR]Finca[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_MANOR]Dwór Szlachecki[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MAPSTER_STRATEGY</Tag>
 		<English>Mapster is a good way to inform the populace of your nation's enduring successes...</English>
 		<French>Mapster est un bon moyen d'informer la population des succès durables de votre nation...</French>
@@ -7640,42 +6795,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_MARAUDER_YOU</Tag>
 		<English>[COLOR_SELECTED_TEXT]You have plundered %d2 [ICON_GOLD] from %s1![COLOR_REVERT]</English>
 		<French>[COLOR_SELECTED_TEXT]Vous avez pillé %d2 [ICON_GOLD] à %s1![COLOR_REVERT]</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MARKET_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_MARKET]Market[\LINK]</English>
-		<French>[ICON_HAPPY] de [LINK=BUILDING_MARKET]Marché[\LINK]</French>
-		<German>[ICON_HAPPY] vom [LINK=BUILDING_MARKET]Markt[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_MARKET]Mercato[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_MARKET]Mercado[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_MARKET]Rynek[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MARKET_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_MARKET]Market[\LINK]</English>
-		<French>[ICON_UNHAPPY] de [LINK=BUILDING_MARKET]Marché[\LINK]</French>
-		<German>[ICON_UNHAPPY] vom [LINK=BUILDING_MARKET]Markt[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_MARKET]Mercato[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_MARKET]Mercado[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_MARKET]Rynek[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MAUSOLEUM_OF_MAUSSOLLOS_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_MAUSOLEUM_OF_MAUSSOLLOS]Mausoleum of Maussollos[\LINK]</English>
-		<French>[ICON_HAPPY] du [LINK=BUILDING_MAUSOLEUM_OF_MAUSSOLLOS]Mausolée de Maussollos[\LINK]</French>
-		<German>[ICON_HAPPY] vom [LINK=BUILDING_MAUSOLEUM_OF_MAUSSOLLOS]Mausoleum des Maussollos[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_MAUSOLEUM_OF_MAUSSOLLOS]Mausoleo di Mausolo[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_MAUSOLEUM_OF_MAUSSOLLOS]Mausoleo de Mausolo[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_MAUSOLEUM_OF_MAUSSOLLOS]Mauzoleum Mauzolosa[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MAUSOLEUM_OF_MAUSSOLLOS_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_MAUSOLEUM_OF_MAUSSOLLOS]Mausoleum of Maussollos[\LINK]</English>
-		<French>[ICON_UNHAPPY] du [LINK=BUILDING_MAUSOLEUM_OF_MAUSSOLLOS]Mausolée de Maussollos[\LINK]</French>
-		<German>[ICON_UNHAPPY] vom [LINK=BUILDING_MAUSOLEUM_OF_MAUSSOLLOS]Mausoleum des Maussollos[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_MAUSOLEUM_OF_MAUSSOLLOS]Mausoleo di Mausolo[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_MAUSOLEUM_OF_MAUSSOLLOS]Mausoleo de Mausolo[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_MAUSOLEUM_OF_MAUSSOLLOS]Mauzoleum Mauzolosa[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MCDOWELLS_STRATEGY</Tag>
@@ -7776,66 +6895,12 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>Czas zasady litości zatrzymany! Normalna gra będzie kontynuowana...</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MESOAMERICAN_MAGICIAN_PYRAMID_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_MESOAMERICAN_MAGICIAN_PYRAMID]Pyramid of the Magician[\LINK]</English>
-		<French>[ICON_HAPPY] de [LINK=BUILDING_MESOAMERICAN_MAGICIAN_PYRAMID]la Pyramide du Mage[\LINK]</French>
-		<German>[ICON_HAPPY] von der [LINK=BUILDING_MESOAMERICAN_MAGICIAN_PYRAMID]Pyramide des Magiers[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_MESOAMERICAN_MAGICIAN_PYRAMID]Piramide del Mago[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_MESOAMERICAN_MAGICIAN_PYRAMID]Pirámide del Adivino[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_MESOAMERICAN_MAGICIAN_PYRAMID]Świątynia Wróżbity[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MESOAMERICAN_MAGICIAN_PYRAMID_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_MESOAMERICAN_MAGICIAN_PYRAMID]Pyramid of the Magician[\LINK]</English>
-		<French>[ICON_UNHAPPY] de [LINK=BUILDING_MESOAMERICAN_MAGICIAN_PYRAMID]la Pyramide du Mage[\LINK]</French>
-		<German>[ICON_UNHAPPY] von der [LINK=BUILDING_MESOAMERICAN_MAGICIAN_PYRAMID]Pyramide des Magiers[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_MESOAMERICAN_MAGICIAN_PYRAMID]Piramide del Mago[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_MESOAMERICAN_MAGICIAN_PYRAMID]Pirámide del Adivino[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_MESOAMERICAN_MAGICIAN_PYRAMID]Świątynia Wróżbity[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MESOAMERICAN_MONASTERY_CIVIC_EXTRA_HEALTHINESS</Tag>
-		<English>[ICON_HEALTHY] from [LINK=BUILDING_MESOAMERICAN_MONASTERY]Calmacec[\LINK]</English>
-		<French>[ICON_HEALTHY] du [LINK=BUILDING_MESOAMERICAN_MONASTERY]Calmacec[\LINK]</French>
-		<German>[ICON_HEALTHY] vom [LINK=BUILDING_MESOAMERICAN_MONASTERY]Calmacec[\LINK]</German>
-		<Italian>[ICON_HEALTHY] da [LINK=BUILDING_MESOAMERICAN_MONASTERY]Calmacec[\LINK]</Italian>
-		<Spanish>[ICON_HEALTHY] por [LINK=BUILDING_MESOAMERICAN_MONASTERY]Calmacec[\LINK]</Spanish>
-		<Polish>[ICON_HEALTHY] od [LINK=BUILDING_MESOAMERICAN_MONASTERY]Calmacec[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MESOAMERICAN_MONASTERY_CIVIC_EXTRA_UNHEALTHINESS</Tag>
-		<English>[ICON_UNHEALTHY] from [LINK=BUILDING_MESOAMERICAN_MONASTERY]Calmacec[\LINK]</English>
-		<French>[ICON_UNHEALTHY] du [LINK=BUILDING_MESOAMERICAN_MONASTERY]Calmacec[\LINK]</French>
-		<German>[ICON_UNHEALTHY] vom [LINK=BUILDING_MESOAMERICAN_MONASTERY]Calmacec[\LINK]</German>
-		<Italian>[ICON_UNHEALTHY] da [LINK=BUILDING_MESOAMERICAN_MONASTERY]Calmacec[\LINK]</Italian>
-		<Spanish>[ICON_UNHEALTHY] por [LINK=BUILDING_MESOAMERICAN_MONASTERY]Calmacec[\LINK]</Spanish>
-		<Polish>[ICON_UNHEALTHY] od [LINK=BUILDING_MESOAMERICAN_MONASTERY]Calmacec[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MILEHIGH_STRATEGY</Tag>
 		<English>The best way to see the world is from an airplane</English>
 		<French>La meilleure façon de voir le monde est depuis un avion</French>
 		<Italian>Il modo migliore per vedere il mondo è da un aeroplano</Italian>
 		<Spanish>La mejor forma de ver el mundo desde un aeroplano.</Spanish>
 		<Polish>Najlepszy sposób na zwiedzenie świata to samolot</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MILITARY_AIRBASE_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_MILITARY_AIRBASE]Military Airbase[\LINK]</English>
-		<French>[ICON_HAPPY] de [LINK=BUILDING_MILITARY_AIRBASE]Base Militaire Aérienne[\LINK]</French>
-		<German>[ICON_HAPPY] vom [LINK=BUILDING_MILITARY_AIRBASE]Luftwaffenstützpunkt[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_MILITARY_AIRBASE]Base aerea militare[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_MILITARY_AIRBASE]Base militar aérea[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_MILITARY_AIRBASE]Wojskowa Baza Lotnicza[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MILITARY_AIRBASE_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_MILITARY_AIRBASE]Military Airbase[\LINK]</English>
-		<French>[ICON_UNHAPPY] de [LINK=BUILDING_MILITARY_AIRBASE]Base Militaire Aérienne[\LINK]</French>
-		<German>[ICON_UNHAPPY] vom [LINK=BUILDING_MILITARY_AIRBASE]Luftwaffenstützpunkt[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_MILITARY_AIRBASE]Base aerea militare[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_MILITARY_AIRBASE]Base militar aérea[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_MILITARY_AIRBASE]Wojskowa Baza Lotnicza[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MILITARY_SITREP_DEFPACTS</Tag>
@@ -11422,24 +10487,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>Zbuduj siedzibę by zdobyć wszystkie bonusy do mięs.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MODERN_GRANARY_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_MODERN_GRANARY]Modern Granary[\LINK]</English>
-		<French>[ICON_HAPPY] du [LINK=BUILDING_MODERN_GRANARY]Silo à Grains[\LINK]</French>
-		<German>[ICON_HAPPY] vom [LINK=BUILDING_MODERN_GRANARY]Modernen Kornspeicher[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_MODERN_GRANARY]Granaio moderno[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_MODERN_GRANARY]Granero moderno[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_MODERN_GRANARY]Nowoczesny Spichlerz[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MODERN_GRANARY_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_MODERN_GRANARY]Modern Granary[\LINK]</English>
-		<French>[ICON_UNHAPPY] du [LINK=BUILDING_MODERN_GRANARY]Silo à Grains[\LINK]</French>
-		<German>[ICON_UNHAPPY] vom [LINK=BUILDING_MODERN_GRANARY]Modernen Kornspeicher[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_MODERN_GRANARY]Granaio moderno[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_MODERN_GRANARY]Granero moderno[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_MODERN_GRANARY]Nowoczesny Spichlerz[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MOD_AIAUTOPLAY</Tag>
 		<English>AI AutoPlay</English>
 		<French>IA Automatique</French>
@@ -12655,24 +11702,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>[ICON_BULLET]Jednostki nie otrzymują kary za przechodzenie przez góry</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MOVIETHEATRE_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_MOVIETHEATRE]Movie Theatre[\LINK]</English>
-		<French>[ICON_HAPPY] du [LINK=BUILDING_MOVIETHEATRE]Cinéma[\LINK]</French>
-		<German>[ICON_HAPPY] vom [LINK=BUILDING_MOVIETHEATRE]Kino[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_MOVIETHEATRE]Cinema[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_MOVIETHEATRE]Sala de cine[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_MOVIETHEATRE]Kino[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MOVIETHEATRE_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_MOVIETHEATRE]Movie Theatre[\LINK]</English>
-		<French>[ICON_UNHAPPY] du [LINK=BUILDING_MOVIETHEATRE]Cinéma[\LINK]</French>
-		<German>[ICON_UNHAPPY] vom [LINK=BUILDING_MOVIETHEATRE]Kino[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_MOVIETHEATRE]Cinema[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_MOVIETHEATRE]Sala de cine[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_MOVIETHEATRE]Kino[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MULTIPLAYER_GAME_DETECTED</Tag>
 		<English>MULTIPLAYER GAME DETECTED</English>
 		<French>JEU MULTIJOUEUR DETECTE</French>
@@ -12806,78 +11835,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<German>[ICON_BULLET]Einheiten können der Gefangennahme mit %D1%% Wahrscheinlichkeit entgehen.</German>
 		<Italian>[ICON_BULLET]Le unità hanno il %D1%% di chance di sfuggire alla cattura.</Italian>
 		<Polish>[ICON_BULLET]Jednostki mają %D1%% szansy na uniknięcie Przejęcia.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NATIONAL_EPIC_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_NATIONAL_EPIC]National Epic[\LINK]</English>
-		<French>[ICON_HAPPY] de [LINK=BUILDING_NATIONAL_EPIC]Epopée nationale[\LINK]</French>
-		<German>[ICON_HAPPY] vom [LINK=BUILDING_NATIONAL_EPIC]Nationalepos[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_NATIONAL_EPIC]Poema Nazionale[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_NATIONAL_EPIC]Epopeya nacional[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_NATIONAL_EPIC]Epopeja Narodowa[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NATIONAL_EPIC_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_NATIONAL_EPIC]National Epic[\LINK]</English>
-		<French>[ICON_UNHAPPY] de [LINK=BUILDING_NATIONAL_EPIC]Epopée nationale[\LINK]</French>
-		<German>[ICON_UNHAPPY] vom [LINK=BUILDING_NATIONAL_EPIC]Nationalepos[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_NATIONAL_EPIC]Poema Nazionale[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_NATIONAL_EPIC]Epopeya nacional[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_NATIONAL_EPIC]Epopeja Narodowa[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NATIONAL_SECURITY_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_NATIONAL_SECURITY]Security Bureau[\LINK]</English>
-		<French>[ICON_HAPPY] de [LINK=BUILDING_NATIONAL_SECURITY]Agence de sécurité[\LINK]</French>
-		<German>[ICON_HAPPY] vom [LINK=BUILDING_NATIONAL_SECURITY]Sicherheitsdienst[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_NATIONAL_SECURITY]Agenzia di sicurezza[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_NATIONAL_SECURITY]Servicio de contraespionaje[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_NATIONAL_SECURITY]Biuro Bezpieczeństwa[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NATIONAL_SECURITY_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_NATIONAL_SECURITY]Security Bureau[\LINK]</English>
-		<French>[ICON_UNHAPPY] de [LINK=BUILDING_INTELLIGENCE_AGENCY]Agence de sécurité[\LINK]</French>
-		<German>[ICON_UNHAPPY] vom [LINK=BUILDING_INTELLIGENCE_AGENCY]Sicherheitsdienst[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_NATIONAL_SECURITY]Agenzia di sicurezza[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_INTELLIGENCE_AGENCY]Servicio de contraespionaje[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_INTELLIGENCE_AGENCY]Biuro Bezpieczeństwa[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NATIONAL_TV_STATION_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_NATIONAL_TV_STATION]National TV-Station[\LINK]</English>
-		<French>[ICON_HAPPY] de la [LINK=BUILDING_NATIONAL_TV_STATION]Station de Télévision Nationale[\LINK]</French>
-		<German>[ICON_HAPPY] von der [LINK=BUILDING_NATIONAL_TV_STATION]Nationalen TV-Station[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_NATIONAL_TV_STATION]Stazione televisiva nazionale[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_NATIONAL_TV_STATION]Emisora de televisión nacional[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_NATIONAL_TV_STATION]Telewizji Narodowej[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NATIONAL_TV_STATION_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_NATIONAL_TV_STATION]National TV-Station[\LINK]</English>
-		<French>[ICON_UNHAPPY] de la [LINK=BUILDING_NATIONAL_TV_STATION]Station de Télévision Nationale[\LINK]</French>
-		<German>[ICON_UNHAPPY] von der [LINK=BUILDING_NATIONAL_TV_STATION]Nationalen TV-Station[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_NATIONAL_TV_STATION]Stazione televisiva nazionale[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_NATIONAL_TV_STATION]Emisora de televisión nacional[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_NATIONAL_TV_STATION]Telewizji Narodowej[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NETWORK_NODE_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_NETWORK_NODE]Network Node[\LINK]</English>
-		<French>[ICON_HAPPY] du [LINK=BUILDING_NETWORK_NODE]Relais de Réseau[\LINK]</French>
-		<German>[ICON_HAPPY] vom [LINK=BUILDING_NETWORK_NODE]Netzwerkknoten[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_NETWORK_NODE]Nodo della rete[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_NETWORK_NODE]Nodo de red[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_NETWORK_NODE]Węzła Sieci Komunikacyjnej[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NETWORK_NODE_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_NETWORK_NODE]Network Node[\LINK]</English>
-		<French>[ICON_UNHAPPY] du [LINK=BUILDING_NETWORK_NODE]Relais de Réseau[\LINK]</French>
-		<German>[ICON_UNHAPPY] vom [LINK=BUILDING_NETWORK_NODE]Netzwerkknoten[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_NETWORK_NODE]Nodo della rete[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_NETWORK_NODE]Nodo de red[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_NETWORK_NODE]Węzła Sieci Komunikacyjnej[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NEWS_EVENT_BARBARIAN_ATTITUDE_3</Tag>
@@ -13142,42 +12099,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Italian>[ICON_BULLET]%D1_Change%% Number of Cities Maintance in All Cities</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change%% al mantenimiento por número de ciudades en todas las ciudades</Spanish>
 		<Polish>[ICON_BULLET]%D1_Change%% do kosztów utrzymania za liczbę miast we wszystkich miastach</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OBELISK_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_OBELISK]Monument[\LINK]</English>
-		<French>[ICON_HAPPY] de [LINK=BUILDING_OBELISK]Obélisque[\LINK]</French>
-		<German>[ICON_HAPPY] vom [LINK=BUILDING_OBELISK]Monument[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_OBELISK]Monumento[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_OBELISK]Obelisco[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_OBELISK]Pomnik[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OBELISK_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_OBELISK]Monument[\LINK]</English>
-		<French>[ICON_UNHAPPY] de [LINK=BUILDING_OBELISK]Obélisque[\LINK]</French>
-		<German>[ICON_UNHAPPY] vom [LINK=BUILDING_OBELISK]Monument[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_OBELISK]Monumento[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_OBELISK]Obelisco[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_OBELISK]Pomnik[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ORACLE_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_ORACLE]The Oracle[\LINK]</English>
-		<French>[ICON_HAPPY] de [LINK=BUILDING_ORACLE]L'Oracle[\LINK]</French>
-		<German>[ICON_HAPPY] vom [LINK=BUILDING_ORACLE]Orakel[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_ORACLE]L'Oracolo[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_ORACLE]Oráculo[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_ORACLE]Wyrocznia[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ORACLE_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_ORACLE]The Oracle[\LINK]</English>
-		<French>[ICON_UNHAPPY] de [LINK=BUILDING_ORACLE]L'Oracle[\LINK]</French>
-		<German>[ICON_UNHAPPY] vom [LINK=BUILDING_ORACLE]Orakel[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_ORACLE]L'Oracolo[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_ORACLE]Oráculo[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_ORACLE]Wyrocznia[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ORBITAL</Tag>
@@ -13455,24 +12376,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>[ICON_BULLET]%D1_Mod%% do kosztów utrzymania miast zaoceanicznych</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PALACE_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_PALACE]Palace[\LINK]</English>
-		<French>[ICON_HAPPY] du [LINK=BUILDING_PALACE]Palais[\LINK]</French>
-		<German>[ICON_HAPPY] vom [LINK=BUILDING_PALACE]Palast[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_PALACE]Palazzo[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_PALACE]Palacio[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_PALACE]Pałac[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PALACE_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_PALACE]Palace[\LINK]</English>
-		<French>[ICON_UNHAPPY] du [LINK=BUILDING_PALACE]Palais[\LINK]</French>
-		<German>[ICON_UNHAPPY] vom [LINK=BUILDING_PALACE]Palast[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_PALACE]Palazzo[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_PALACE]Palacio[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_PALACE]Pałac[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PARTISAN_CAPTURE_UNIT1</Tag>
 		<English>Your %s1 has been captured by a partisan.</English>
 		<French>Votre %s1 a été capturé par un partisan.</French>
@@ -13548,24 +12451,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Italian>[ICON_BULLET][COLOR_CYAN]Si dispone di un trattato di pace[COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET][COLOR_CYAN]Tenéis un tratado de paz[COLOR_REVERT]</Spanish>
 		<Polish>[ICON_BULLET][COLOR_CYAN]Masz traktat pokojowy[COLOR_REVERT]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PENTAGON_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_PENTAGON]The Pentagon[\LINK]</English>
-		<French>[ICON_HAPPY] du [LINK=BUILDING_PENTAGON]Pentagone[\LINK]</French>
-		<German>[ICON_HAPPY] vom [LINK=BUILDING_PENTAGON]Pentagon[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_PENTAGON]Il Pentagono[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_PENTAGON]Pentágono[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_PENTAGON]Pentagon[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PENTAGON_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_PENTAGON]The Pentagon[\LINK]</English>
-		<French>[ICON_UNHAPPY] du [LINK=BUILDING_PENTAGON]Pentagone[\LINK]</French>
-		<German>[ICON_UNHAPPY] vom [LINK=BUILDING_PENTAGON]Pentagon[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_PENTAGON]Il Pentagono[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_PENTAGON]Pentágono[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_PENTAGON]Pentagon[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PER_CITY</Tag>
@@ -14473,24 +13358,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>[SPACE](MIasto musi pracować na danym polu, aby ulepszyć do %s1_ImpName)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PONT_DU_GARD_AQUEDUCT_CIVIC_EXTRA_HEALTHINESS</Tag>
-		<English>[ICON_HEALTHY] from [LINK=BUILDING_PONT_DU_GARD_AQUEDUCT]Pont du Gard[\LINK]</English>
-		<French>[ICON_HEALTHY] du [LINK=BUILDING_PONT_DU_GARD_AQUEDUCT]Pont du Gard[\LINK]</French>
-		<German>[ICON_HEALTHY] vom [LINK=BUILDING_PONT_DU_GARD_AQUEDUCT]Pont du Gard[\LINK]</German>
-		<Italian>[ICON_HEALTHY] da [LINK=BUILDING_PONT_DU_GARD_AQUEDUCT]Pont du Gard[\LINK]</Italian>
-		<Spanish>[ICON_HEALTHY] por [LINK=BUILDING_PONT_DU_GARD_AQUEDUCT]Puente del Gard[\LINK]</Spanish>
-		<Polish>[ICON_HEALTHY] od [LINK=BUILDING_PONT_DU_GARD_AQUEDUCT]Akwedukt Pont-du-Gard[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PONT_DU_GARD_AQUEDUCT_CIVIC_EXTRA_UNHEALTHINESS</Tag>
-		<English>[ICON_UNHEALTHY] from [LINK=BUILDING_PONT_DU_GARD_AQUEDUCT]Pont du Gard[\LINK]</English>
-		<French>[ICON_UNHEALTHY] du [LINK=BUILDING_PONT_DU_GARD_AQUEDUCT]Pont du Gard[\LINK]</French>
-		<German>[ICON_UNHEALTHY] vom [LINK=BUILDING_PONT_DU_GARD_AQUEDUCT]Pont du Gard[\LINK]</German>
-		<Italian>[ICON_UNHEALTHY] da [LINK=BUILDING_PONT_DU_GARD_AQUEDUCT]Pont du Gard[\LINK]</Italian>
-		<Spanish>[ICON_UNHEALTHY] por [LINK=BUILDING_PONT_DU_GARD_AQUEDUCT]Puente del Gard[\LINK]</Spanish>
-		<Polish>[ICON_UNHEALTHY] od [LINK=BUILDING_PONT_DU_GARD_AQUEDUCT]Akwedukt Pont-du-Gard[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_POSITIVE_COLOR</Tag>
 		<English>[COLOR_POSITIVE_TEXT]</English>
 	</TEXT>
@@ -14801,60 +13668,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>[COLOR_WARNING_TEXT]Straci %d1[ICON_PRODUCTION] jeśli nie wyprodukuje w ciągu %d2 [NUM2:tury:tur][COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PUBLIC_SCHOOL_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_PUBLIC_SCHOOL]School[\LINK]</English>
-		<French>[ICON_HAPPY] de [LINK=BUILDING_PUBLIC_SCHOOL]Ecole[\LINK]</French>
-		<German>[ICON_HAPPY] von der [LINK=BUILDING_PUBLIC_SCHOOL]Schule[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_PUBLIC_SCHOOL]Scuola[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_PUBLIC_SCHOOL]Colegio[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_PUBLIC_SCHOOL]Szkoła[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PUBLIC_SCHOOL_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_PUBLIC_SCHOOL]School[\LINK]</English>
-		<French>[ICON_UNHAPPY] de [LINK=BUILDING_PUBLIC_SCHOOL]Ecole[\LINK]</French>
-		<German>[ICON_UNHAPPY] von der [LINK=BUILDING_PUBLIC_SCHOOL]Schule[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_PUBLIC_SCHOOL]Scuola[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_PUBLIC_SCHOOL]Colegio[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_PUBLIC_SCHOOL]Szkoła[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PUBLIC_TRANSPORTATION_CIVIC_EXTRA_HEALTHINESS</Tag>
-		<English>[ICON_HEALTHY] from [LINK=BUILDING_PUBLIC_TRANSPORTATION]Public Transportation[\LINK]</English>
-		<French>[ICON_HEALTHY] des [LINK=BUILDING_PUBLIC_TRANSPORTATION]Transports de Commun[\LINK]</French>
-		<German>[ICON_HEALTHY] vom [LINK=BUILDING_PUBLIC_TRANSPORTATION]Öffentichen Nahverkehr[\LINK]</German>
-		<Italian>[ICON_HEALTHY] da [LINK=BUILDING_PUBLIC_TRANSPORTATION]Trasporto pubblico[\LINK]</Italian>
-		<Spanish>[ICON_HEALTHY] por [LINK=BUILDING_PUBLIC_TRANSPORTATION]Transporte público[\LINK]</Spanish>
-		<Polish>[ICON_HEALTHY] od [LINK=BUILDING_PUBLIC_TRANSPORTATION]Transport Publiczny[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PUBLIC_TRANSPORTATION_CIVIC_EXTRA_UNHEALTHINESS</Tag>
-		<English>[ICON_UNHEALTHY] from [LINK=BUILDING_PUBLIC_TRANSPORTATION]Public Transportation[\LINK]</English>
-		<French>[ICON_UNHEALTHY] des [LINK=BUILDING_PUBLIC_TRANSPORTATION]Transports de Commun[\LINK]</French>
-		<German>[ICON_UNHEALTHY] vom [LINK=BUILDING_PUBLIC_TRANSPORTATION]Öffentichen Nahverkehr[\LINK]</German>
-		<Italian>[ICON_UNHEALTHY] da [LINK=BUILDING_PUBLIC_TRANSPORTATION]Trasporto pubblico[\LINK]</Italian>
-		<Spanish>[ICON_UNHEALTHY] por [LINK=BUILDING_PUBLIC_TRANSPORTATION]Transporte público[\LINK]</Spanish>
-		<Polish>[ICON_UNHEALTHY] od [LINK=BUILDING_PUBLIC_TRANSPORTATION]Transport Publiczny[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PYRAMID_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_PYRAMID]The Pyramids[\LINK]</English>
-		<French>[ICON_HAPPY] des [LINK=BUILDING_PYRAMID]Pyramides[\LINK]</French>
-		<German>[ICON_HAPPY] von den [LINK=BUILDING_PYRAMID]Pyramiden[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_PYRAMID]Le Piramidi[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_PYRAMID]Pirámides[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_PYRAMID]Piramidy[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PYRAMID_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_PYRAMID]The Pyramids[\LINK]</English>
-		<French>[ICON_UNHAPPY] des [LINK=BUILDING_PYRAMID]Pyramides[\LINK]</French>
-		<German>[ICON_UNHAPPY] von den [LINK=BUILDING_PYRAMID]Pyramiden[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_PYRAMID]Le Piramidi[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_PYRAMID]Pirámides[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_PYRAMID]Piramidy[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_RANKING_CULTURE</Tag>
 		<English>Culture</English>
 		<German>Kultur</German>
@@ -14994,42 +13807,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Italian>La tua unità è risorta.</Italian>
 		<Spanish>Tu unidad ha resurgido.</Spanish>
 		<Polish>Twoja jednostka odrodziła się.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_RED_CROSS_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_RED_CROSS]Red Cross[\LINK]</English>
-		<French>[ICON_HAPPY] de la [LINK=BUILDING_RED_CROSS]Croix Rouge[\LINK]</French>
-		<German>[ICON_HAPPY] vom [LINK=BUILDING_RED_CROSS]Roten Kreuz[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_RED_CROSS]Croce rossa[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_RED_CROSS]Cruz Roja[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_RED_CROSS]Czerwony Krzyż[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_RED_CROSS_CIVIC_EXTRA_HEALTHINESS</Tag>
-		<English>[ICON_HEALTHY] from [LINK=BUILDING_RED_CROSS]Red Cross[\LINK]</English>
-		<French>[ICON_HEALTHY] de la[LINK=BUILDING_RED_CROSS]Croix Rouge[\LINK]</French>
-		<German>[ICON_HEALTHY] vom [LINK=BUILDING_RED_CROSS]Roten Kreuz[\LINK]</German>
-		<Italian>[ICON_HEALTHY] da [LINK=BUILDING_RED_CROSS]Croce rossa[\LINK]</Italian>
-		<Spanish>[ICON_HEALTHY] por [LINK=BUILDING_RED_CROSS]Cruz Roja[\LINK]</Spanish>
-		<Polish>[ICON_HEALTHY] od [LINK=BUILDING_RED_CROSS]Czerwony Krzyż[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_RED_CROSS_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_RED_CROSS]Red Cross[\LINK]</English>
-		<French>[ICON_UNHAPPY] de la [LINK=BUILDING_RED_CROSS]Croix Rouge[\LINK]</French>
-		<German>[ICON_UNHAPPY] vom [LINK=BUILDING_RED_CROSS]Roten Kreuz[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_RED_CROSS]Croce rossa[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_RED_CROSS]Cruz Roja[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_RED_CROSS]Czerwony Krzyż[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_RED_CROSS_CIVIC_EXTRA_UNHEALTHINESS</Tag>
-		<English>[ICON_UNHEALTHY] from [LINK=BUILDING_RED_CROSS]Red Cross[\LINK]</English>
-		<French>[ICON_UNHEALTHY] de la [LINK=BUILDING_RED_CROSS]Croix Rouge[\LINK]</French>
-		<German>[ICON_UNHEALTHY] vom [LINK=BUILDING_RED_CROSS]Roten Kreuz[\LINK]</German>
-		<Italian>[ICON_UNHEALTHY] da [LINK=BUILDING_RED_CROSS]Croce rossa[\LINK]</Italian>
-		<Spanish>[ICON_UNHEALTHY] por [LINK=BUILDING_RED_CROSS]Cruz Roja[\LINK]</Spanish>
-		<Polish>[ICON_UNHEALTHY] od [LINK=BUILDING_RED_CROSS]Czerwony Krzyż[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RED_STRATEGY</Tag>
@@ -15597,24 +14374,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>Grabież Miasta!!!</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SACRIFICIAL_ALTAR_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_SACRIFICIAL_ALTAR]Ceremonial Altar[\LINK]</English>
-		<French>[ICON_HAPPY] de [LINK=BUILDING_SACRIFICIAL_ALTAR]Autel Cérémoniel[\LINK]</French>
-		<German>[ICON_HAPPY] vom [LINK=BUILDING_SACRIFICIAL_ALTAR]Zeremonienaltar[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_SACRIFICIAL_ALTAR]Altare cerimoniale[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_SACRIFICIAL_ALTAR]Altar de ceremonias[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_SACRIFICIAL_ALTAR]Ceremonialny Ołtarz[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SACRIFICIAL_ALTAR_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_SACRIFICIAL_ALTAR]Ceremonial Altar[\LINK]</English>
-		<French>[ICON_UNHAPPY] de [LINK=BUILDING_SACRIFICIAL_ALTAR]Autel Cérémoniel[\LINK]</French>
-		<German>[ICON_UNHAPPY] vom [LINK=BUILDING_SACRIFICIAL_ALTAR]Zeremonienaltar[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_SACRIFICIAL_ALTAR]Altare cerimoniale[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_SACRIFICIAL_ALTAR]Altar de ceremonias[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_SACRIFICIAL_ALTAR]Ceremonialny Ołtarz[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_SAFARI_STRATEGY</Tag>
 		<English>Build this corporation in order to get hunting bonuses.</English>
 		<French>Construisez cette corporation afin d'obtenir des bonus de chasse.</French>
@@ -15630,24 +14389,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Italian>[SPACE](&lt;ALT&gt; per tutte le Unità del tipo dell'Unità attiva)</Italian>
 		<Spanish>[SPACE](&lt;ALT&gt; para todas las unidades del mismo tipo que la unidad activa)</Spanish>
 		<Polish>[SPACE](ALT) dla wszystkich jednostek tego samego typu co jednostka aktywna)</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SANKORE_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_SANKORE]University of Sankore[\LINK]</English>
-		<French>[ICON_HAPPY] de l'[LINK=BUILDING_SANKORE]Université de Sankore[\LINK]</French>
-		<German>[ICON_HAPPY] von der [LINK=BUILDING_SANKORE]Universität von Sankore[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_SANKORE]Università di Sankore[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_SANKORE]Universidad de Sankore[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_SANKORE]Uniwersytet Sarkoński[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SANKORE_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_SANKORE]University of Sankore[\LINK]</English>
-		<French>[ICON_UNHAPPY] de l'[LINK=BUILDING_SANKORE]Université de Sankore[\LINK]</French>
-		<German>[ICON_UNHAPPY] von der [LINK=BUILDING_SANKORE]Universität von Sankore[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_SANKORE]Università di Sankore[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_SANKORE]Universidad de Sankore[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_SANKORE]Uniwersytet Sarkoński[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SCORE_DIFFICULTY_LEVEL</Tag>
@@ -17059,42 +15800,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Italian>%D1 Prod.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SISTINE_CHAPEL_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_SISTINE_CHAPEL]The Sistine Chapel[\LINK]</English>
-		<French>[ICON_HAPPY] de [LINK=BUILDING_SISTINE_CHAPEL]la Chapelle Sixtine[\LINK]</French>
-		<German>[ICON_HAPPY] von der [LINK=BUILDING_SISTINE_CHAPEL]Sixtinischen Kapelle[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_SISTINE_CHAPEL]La Cappella Sistina[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_SISTINE_CHAPEL]Capilla Sixtina[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_SISTINE_CHAPEL]Kaplica Sykstyńska[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SISTINE_CHAPEL_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_SISTINE_CHAPEL]The Sistine Chapel[\LINK]</English>
-		<French>[ICON_UNHAPPY] de [LINK=BUILDING_SISTINE_CHAPEL]la Chapelle Sixtine[\LINK]</French>
-		<German>[ICON_UNHAPPY] von der [LINK=BUILDING_SISTINE_CHAPEL]Sixtinischen Kapelle[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_SISTINE_CHAPEL]La Cappella Sistina[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_SISTINE_CHAPEL]Capilla Sixtina[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_SISTINE_CHAPEL]Kaplica Sykstyńska[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SLAVE_MARKET_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_SLAVE_MARKET]Slave Market[\LINK]</English>
-		<French>[ICON_HAPPY] de [LINK=BUILDING_SLAVE_MARKET]Marché aux Esclaves[\LINK]</French>
-		<German>[ICON_HAPPY] vom [LINK=BUILDING_SLAVE_MARKET]Sklavenmarkt[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_SLAVE_MARKET]Mercato degli schiavi[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_SLAVE_MARKET]Mercado de esclavos[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_SLAVE_MARKET]Targ Niewolników[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SLAVE_MARKET_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_SLAVE_MARKET]Slave Market[\LINK]</English>
-		<French>[ICON_UNHAPPY] de [LINK=BUILDING_SLAVE_MARKET]Marché aux Esclaves[\LINK]</French>
-		<German>[ICON_UNHAPPY] vom [LINK=BUILDING_SLAVE_MARKET]Sklavenmarkt[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_SLAVE_MARKET]Mercato degli schiavi[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_SLAVE_MARKET]Mercado de esclavos[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_SLAVE_MARKET]Targ Niewolników[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_SPARTACUS_CAPTURE_SUCCESS</Tag>
 		<English>The victory of [COLOR_UNIT_TEXT]Spartacus[COLOR_REVERT] has encouraged a [COLOR_UNIT_TEXT]Gladiator[COLOR_REVERT] to join.</English>
 		<French>La Victoire de [COLOR_UNIT_TEXT]Spartacus[COLOR_REVERT] a encouragé un [COLOR_UNIT_TEXT]Gladiateur[COLOR_REVERT] à se joindre à vous.</French>
@@ -17962,24 +16667,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>VTOL(Pionowe lądowanie i start)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SPIRAL_MINARET_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_SPIRAL_MINARET]The Spiral Minaret[\LINK]</English>
-		<French>[ICON_HAPPY] du [LINK=BUILDING_SPIRAL_MINARET]Minaret en spirale[\LINK]</French>
-		<German>[ICON_HAPPY] vom [LINK=BUILDING_SPIRAL_MINARET]Spiralminarett[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_SPIRAL_MINARET]Minareto a spirale[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_SPIRAL_MINARET]Minarete Helicoidal[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_SPIRAL_MINARET]Spiralny Minaret[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SPIRAL_MINARET_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_SPIRAL_MINARET]The Spiral Minaret[\LINK]</English>
-		<French>[ICON_UNHAPPY] du [LINK=BUILDING_SPIRAL_MINARET]Minaret en spirale[\LINK]</French>
-		<German>[ICON_UNHAPPY] vom [LINK=BUILDING_SPIRAL_MINARET]Spiralminarett[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_SPIRAL_MINARET]Minareto a spirale[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_SPIRAL_MINARET]Minarete Helicoidal[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_SPIRAL_MINARET]Spiralny Minaret[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_SPLASH_BUTTON_NOTHANKS</Tag>
 		<English>No Thanks</English>
 		<French>Non Merci</French>
@@ -18177,24 +16864,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<German>[ICON_BULLET]Diese Einheit kann sich gegen Tarnangriffe verteidigen.</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_STONEHENGE_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_STONEHENGE]Stonehenge[\LINK]</English>
-		<French>[ICON_HAPPY] de [LINK=BUILDING_STONEHENGE]Stonehenge[\LINK]</French>
-		<German>[ICON_HAPPY] von [LINK=BUILDING_STONEHENGE]Stonehenge[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_STONEHENGE]Stonehenge[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_STONEHENGE]Stonehenge[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_STONEHENGE]Stonehenge[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_STONEHENGE_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_STONEHENGE]Stonehenge[\LINK]</English>
-		<French>[ICON_UNHAPPY] de [LINK=BUILDING_STONEHENGE]Stonehenge[\LINK]</French>
-		<German>[ICON_UNHAPPY] von [LINK=BUILDING_STONEHENGE]Stonehenge[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_STONEHENGE]Stonehenge[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_STONEHENGE]Stonehenge[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_STONEHENGE]Stonehenge[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_STRATOVERLAY_ADDSIGN</Tag>
 		<English>Add Sign</English>
 		<French>Ajouter un panneau</French>
@@ -18359,42 +17028,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Ty</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TAJ_MAHAL_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_TAJ_MAHAL]The Taj Mahal[\LINK]</English>
-		<French>[ICON_HAPPY] du [LINK=BUILDING_TAJ_MAHAL]Taj Mahal[\LINK]</French>
-		<German>[ICON_HAPPY] vom [LINK=BUILDING_TAJ_MAHAL]Taj Mahal[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_TAJ_MAHAL]Il Taj Mahal[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_TAJ_MAHAL]Taj Mahal[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_TAJ_MAHAL]Tadż Mahal[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TAJ_MAHAL_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_TAJ_MAHAL]The Taj Mahal[\LINK]</English>
-		<French>[ICON_UNHAPPY] du [LINK=BUILDING_TAJ_MAHAL]Taj Mahal[\LINK]</French>
-		<German>[ICON_UNHAPPY] vom [LINK=BUILDING_TAJ_MAHAL]Taj Mahal[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_TAJ_MAHAL]Il Taj Mahal[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_TAJ_MAHAL]Taj Mahal[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_TAJ_MAHAL]Tadż Mahal[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TAOIST_MONASTERY_CIVIC_EXTRA_HEALTHINESS</Tag>
-		<English>[ICON_HEALTHY] from [LINK=BUILDING_TAOIST_MONASTERY]Taoist Monastery[\LINK]</English>
-		<French>[ICON_HEALTHY] du [LINK=BUILDING_TAOIST_MONASTERY]Monastère Taoiste[\LINK]</French>
-		<German>[ICON_HEALTHY] vom [LINK=BUILDING_TAOIST_MONASTERY]Taoistischen Kloster[\LINK]</German>
-		<Italian>[ICON_HEALTHY] da [LINK=BUILDING_TAOIST_MONASTERY]Monastero taoista[\LINK]</Italian>
-		<Spanish>[ICON_HEALTHY] por [LINK=BUILDING_TAOIST_MONASTERY]Monasterio taoísta[\LINK]</Spanish>
-		<Polish>[ICON_HEALTHY] od [LINK=BUILDING_TAOIST_MONASTERY]Świątynia Taoistyczna[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TAOIST_MONASTERY_CIVIC_EXTRA_UNHEALTHINESS</Tag>
-		<English>[ICON_UNHEALTHY] from [LINK=BUILDING_TAOIST_MONASTERY]Taoist Monastery[\LINK]</English>
-		<French>[ICON_UNHEALTHY] du [LINK=BUILDING_TAOIST_MONASTERY]Monastère Taoiste[\LINK]</French>
-		<German>[ICON_UNHEALTHY] vom [LINK=BUILDING_TAOIST_MONASTERY]Taoistischen Kloster[\LINK]</German>
-		<Italian>[ICON_UNHEALTHY] da [LINK=BUILDING_TAOIST_MONASTERY]Monastero taoista[\LINK]</Italian>
-		<Spanish>[ICON_UNHEALTHY] por [LINK=BUILDING_TAOIST_MONASTERY]Monasterio taoísta[\LINK]</Spanish>
-		<Polish>[ICON_UNHEALTHY] od [LINK=BUILDING_TAOIST_MONASTERY]Świątynia Taoistyczna[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ALLOWS_IMPROVEMENT_UPGRADE</Tag>
@@ -19259,24 +17892,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<French>[ICON_BULLET]%d1_Change Taux de travail</French>
 		<German>[ICON_BULLET]%d1_Change Arbeitstempo</German>
 		<Polish>[ICON_BULLET]%d1_Change wydajność pracy</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_THEORY_OF_EVOLUTION_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_THEORY_OF_EVOLUTION]Theory of Evolution[\LINK]</English>
-		<French>[ICON_HAPPY] de la [LINK=BUILDING_THEORY_OF_EVOLUTION]Théorie de l'Evolution[\LINK]</French>
-		<German>[ICON_HAPPY] von der [LINK=BUILDING_THEORY_OF_EVOLUTION]Evolutionstheorie[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_THEORY_OF_EVOLUTION]Teoria dell'evoluzione[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_THEORY_OF_EVOLUTION]Teoría de la evolución[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_THEORY_OF_EVOLUTION]Teoria Ewolucji[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_THEORY_OF_EVOLUTION_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_THEORY_OF_EVOLUTION]Theory of Evolution[\LINK]</English>
-		<French>[ICON_UNHAPPY] de la [LINK=BUILDING_THEORY_OF_EVOLUTION]Théorie de l'Evolution[\LINK]</French>
-		<German>[ICON_UNHAPPY] von der [LINK=BUILDING_THEORY_OF_EVOLUTION]Evolutionstheorie[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_THEORY_OF_EVOLUTION]Teoria dell'evoluzione[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_THEORY_OF_EVOLUTION]Teoría de la evolución[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_THEORY_OF_EVOLUTION]Teoria Ewolucji[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_THIRD_ROUND_CHARL_UNIT_HEAVY_CAVALRY_PEDIA</Tag>
@@ -20171,24 +18786,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Mapy Świata</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TREASURY_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_TREASURY]Treasury[\LINK]</English>
-		<French>[ICON_HAPPY] de [LINK=BUILDING_TREASURY]Trésorerie[\LINK]</French>
-		<German>[ICON_HAPPY] vom [LINK=BUILDING_TREASURY]Schatzamt[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_TREASURY]Tesoreria[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_TREASURY]Tesorería[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_TREASURY]Skarbiec[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TREASURY_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_TREASURY]Treasury[\LINK]</English>
-		<French>[ICON_UNHAPPY] de [LINK=BUILDING_TREASURY]Trésorerie[\LINK]</French>
-		<German>[ICON_UNHAPPY] vom [LINK=BUILDING_TREASURY]Schatzamt[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_TREASURY]Tesoreria[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_TREASURY]Tesorería[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_TREASURY]Skarbiec[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRUE</Tag>
@@ -21788,24 +20385,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>Dywizja V, Nunavut 2</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITED_NATIONS_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_UNITED_NATIONS]The United Nations[\LINK]</English>
-		<French>[ICON_HAPPY] des [LINK=BUILDING_UNITED_NATIONS]Nations Unies[\LINK]</French>
-		<German>[ICON_HAPPY] von den [LINK=BUILDING_UNITED_NATIONS]Vereinten Nationen[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_UNITED_NATIONS]Le Nazioni Unite[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_UNITED_NATIONS]Naciones Unidas[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_UNITED_NATIONS]ONZ[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITED_NATIONS_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_UNITED_NATIONS]The United Nations[\LINK]</English>
-		<French>[ICON_UNHAPPY] des [LINK=BUILDING_UNITED_NATIONS]Nations Unies[\LINK]</French>
-		<German>[ICON_UNHAPPY] von den [LINK=BUILDING_UNITED_NATIONS]Vereinten Nationen[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_UNITED_NATIONS]Le Nazioni Unite[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_UNITED_NATIONS]Naciones Unidas[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_UNITED_NATIONS]ONZ[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_INQUISITOR</Tag>
 		<English>Inquisitor</English>
 		<French>Inquisiteur</French>
@@ -21917,24 +20496,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>[BOLD]Strategia:[\\BOLD][PARAGRAPH:1]W tym scenariuszu, jednostki na wrogim terenie można leczyć tylko za pomocą Wozów Zaopatrzeniowych. Upewnij się, że masz ze sobą jeden lub kilka wozów kiedy dokonujesz inwazji na wrogi teren. Pamiętaj, że te jednostki są całkowicie bezbronne i należy zapewnić im eskortę wojskową.[NEWLINE][NEWLINE][BOLD]Historia:[\\BOLD][PARAGRAPH:1]Jak zauważył już Napoleon wojsko maszeruje żołądkiem. Od samego początku wojen, armiom towarzyszyły wozy zaopatrzeniowe, przewożąc pożywienie, lekarstwa, zapasy broni i wszystko inne co potrzebne do przeżycia w terenie.[PARAGRAPH:1]Rozmiar i jakość zaopatrzenia miały podobny wpływ na losy kampanii jak rozmiar i jakość sił wojskowych. Duża ilość zaopatrzenia mogła podtrzymać wartość bojową dużej armii przez długi czas, ale jednocześnie mogła mocno spowolnić jej marsz. Wozy z zaopatrzeniem potrzebowały stałej eskorty i im dalej posuwało się wojsko w głąb nieprzyjacielskiego terytorium tym bardziej stawały się wrażliwe i narażone na atak.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIVERSITY_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_UNIVERSITY]University[\LINK]</English>
-		<French>[ICON_HAPPY] de l'[LINK=BUILDING_UNIVERSITY]Université[\LINK]</French>
-		<German>[ICON_HAPPY] von der [LINK=BUILDING_UNIVERSITY]Universität[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_UNIVERSITY]Università[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_UNIVERSITY]Universidad[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_UNIVERSITY]Uniwersytet[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIVERSITY_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_UNIVERSITY]University[\LINK]</English>
-		<French>[ICON_UNHAPPY] de l'[LINK=BUILDING_UNIVERSITY]Université[\LINK]</French>
-		<German>[ICON_UNHAPPY] von der [LINK=BUILDING_UNIVERSITY]Universität[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_UNIVERSITY]Università[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_UNIVERSITY]Universidad[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_UNIVERSITY]Uniwersytet[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNKNOWN_NATION</Tag>
@@ -22665,24 +21226,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>Rezolucja ONZ #3312 (Światowa Doktryna - Rząd: Demokracja)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_WALLS_CIVIC_EXTRA_HAPPINESS</Tag>
-		<English>[ICON_HAPPY] from [LINK=BUILDING_WALLS]Walls[\LINK]</English>
-		<French>[ICON_HAPPY] de [LINK=BUILDING_WALLS]Remparts[\LINK]</French>
-		<German>[ICON_HAPPY] von [LINK=BUILDING_WALLS]Stadtmauern[\LINK]</German>
-		<Italian>[ICON_HAPPY] da [LINK=BUILDING_WALLS]Mura[\LINK]</Italian>
-		<Spanish>[ICON_HAPPY] por [LINK=BUILDING_WALLS]Murallas[\LINK]</Spanish>
-		<Polish>[ICON_HAPPY] od [LINK=BUILDING_WALLS]Mury[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_WALLS_CIVIC_EXTRA_UNHAPPINESS</Tag>
-		<English>[ICON_UNHAPPY] from [LINK=BUILDING_WALLS]Walls[\LINK]</English>
-		<French>[ICON_UNHAPPY] de [LINK=BUILDING_WALLS]Remparts[\LINK]</French>
-		<German>[ICON_UNHAPPY] von [LINK=BUILDING_WALLS]Stadtmauern[\LINK]</German>
-		<Italian>[ICON_UNHAPPY] da [LINK=BUILDING_WALLS]Mura[\LINK]</Italian>
-		<Spanish>[ICON_UNHAPPY] por [LINK=BUILDING_WALLS]Murallas[\LINK]</Spanish>
-		<Polish>[ICON_UNHAPPY] od [LINK=BUILDING_WALLS]Mury[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_WARPLAN_LIMITED_TARGET_IS</Tag>
 		<English>[ICON_BULLET][COLOR_CYAN]Limited War Plan against %s1_player[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_CYAN]Plan de Guerre Limité contre %s1_player[COLOR_REVERT]</French>
@@ -22721,24 +21264,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<German>[ICON_BULLET][COLOR_CYAN]Ihr bereitet Krieg vor[COLOR_REVERT]</German>
 		<Spanish>[ICON_BULLET][COLOR_CYAN]Estás movilizándote para la guerra[COLOR_REVERT]</Spanish>
 		<Polish>[ICON_BULLET][COLOR_CYAN]Przygotowujesz się do wojny[COLOR_REVERT]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_WATER_TREATMENT_PLANT_CIVIC_EXTRA_HEALTHINESS</Tag>
-		<English>[ICON_HEALTHY] from [LINK=BUILDING_WATER_TREATMENT_PLANT]Water Treatment Plant[\LINK]</English>
-		<French>[ICON_HEALTHY] de l'[LINK=BUILDING_WATER_TREATMENT_PLANT]Usine de Traitement de l'eau[\LINK]</French>
-		<German>[ICON_HEALTHY] von der [LINK=BUILDING_WATER_TREATMENT_PLANT]Kläranlage[\LINK]</German>
-		<Italian>[ICON_HEALTHY] da [LINK=BUILDING_WATER_TREATMENT_PLANT]Impianto di trattamento acque[\LINK]</Italian>
-		<Spanish>[ICON_HEALTHY] por [LINK=BUILDING_WATER_TREATMENT_PLANT]Planta depuradora de agua[\LINK]</Spanish>
-		<Polish>[ICON_HEALTHY] od [LINK=BUILDING_WATER_TREATMENT_PLANT]Oczyszczalnia Ścieków[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_WATER_TREATMENT_PLANT_CIVIC_EXTRA_UNHEALTHINESS</Tag>
-		<English>[ICON_UNHEALTHY] from [LINK=BUILDING_WATER_TREATMENT_PLANT]Water Treatment Plant[\LINK]</English>
-		<French>[ICON_UNHEALTHY] de l'[LINK=BUILDING_WATER_TREATMENT_PLANT]Usine de Traitement de l'eau[\LINK]</French>
-		<German>[ICON_UNHEALTHY] von der [LINK=BUILDING_WATER_TREATMENT_PLANT]Kläranlage[\LINK]</German>
-		<Italian>[ICON_UNHEALTHY] da [LINK=BUILDING_WATER_TREATMENT_PLANT]Impianto di trattamento acque[\LINK]</Italian>
-		<Spanish>[ICON_UNHEALTHY] por [LINK=BUILDING_WATER_TREATMENT_PLANT]Planta depuradora de agua[\LINK]</Spanish>
-		<Polish>[ICON_UNHEALTHY] od [LINK=BUILDING_WATER_TREATMENT_PLANT]Oczyszczalnia Ścieków[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WHALING_BOATS_PEDIA</Tag>
@@ -23174,24 +21699,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Produkcja</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ZOROASTRIAN_MONASTERY_CIVIC_EXTRA_HEALTHINESS</Tag>
-		<English>[ICON_HEALTHY] from [LINK=BUILDING_ZOROASTRIAN_MONASTERY]Zoroastrian Shrine[\LINK]</English>
-		<French>[ICON_HEALTHY] du [LINK=BUILDING_ZOROASTRIAN_MONASTERY]Mausolée Zoroastrien[\LINK]</French>
-		<German>[ICON_HEALTHY] vom [LINK=BUILDING_ZOROASTRIAN_MONASTERY]Zoroastrischen Schrein[\LINK]</German>
-		<Italian>[ICON_HEALTHY] da [LINK=BUILDING_ZOROASTRIAN_MONASTERY]Monastero zoroastriano[\LINK</Italian>
-		<Spanish>[ICON_HEALTHY] por [LINK=BUILDING_ZOROASTRIAN_MONASTERY]Santuario zoroastrista[\LINK]</Spanish>
-		<Polish>[ICON_HEALTHY] od [LINK=BUILDING_ZOROASTRIAN_MONASTERY]Zaratustriańska Kaplica[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ZOROASTRIAN_MONASTERY_CIVIC_EXTRA_UNHEALTHINESS</Tag>
-		<English>[ICON_UNHEALTHY] from [LINK=BUILDING_ZOROASTRIAN_MONASTERY]Zoroastrian Shrine[\LINK]</English>
-		<French>[ICON_UNHEALTHY] du [LINK=BUILDING_ZOROASTRIAN_MONASTERY]Mausolée Zoroastrien[\LINK]</French>
-		<German>[ICON_UNHEALTHY] vom [LINK=BUILDING_ZOROASTRIAN_MONASTERY]Zoroastrischen Schrein[\LINK]</German>
-		<Italian>[ICON_UNHEALTHY] da [LINK=BUILDING_ZOROASTRIAN_MONASTERY]Monastero zoroastriano[\LINK</Italian>
-		<Spanish>[ICON_UNHEALTHY] por [LINK=BUILDING_ZOROASTRIAN_MONASTERY]Santuario zoroastrista[\LINK]</Spanish>
-		<Polish>[ICON_UNHEALTHY] od [LINK=BUILDING_ZOROASTRIAN_MONASTERY]Zaratustriańska Kaplica[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_MULTIPLY</Tag>
