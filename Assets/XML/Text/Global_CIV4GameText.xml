@@ -5894,8 +5894,8 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IN_STACK</Tag>
-		<English>In Stack:</English>
-		<French>En groupe:</French>
+		<English>In Stack: %d1</English>
+		<French>En groupe: %d1</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IS_ACCURACY_BOMBARD</Tag>
