@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Sid Meier's Civilization 4 Beyond the Sword -->
-<!-- Modified by the World of Civilization Team -->
-<!-- Game Text Infos -->
-<!-- -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CRYSTAL_GLASSWARE</Tag>
@@ -45,26 +41,6 @@
 		<French>La Céramique sigillée, ou Terra sigillata est un terme ayant au moins trois significations distinctes: comme description de la terre médicinale médiévale; en archéologie, comme un terme général pour certains de la fine poterie romaine rouge antique avec des glissements de surface brillants réalisés dans des zones spécifiques de l'Empire romain; et plus récemment, comme description d'une technique de poterie d'atelier contemporaine supposément inspirée de la poterie ancienne. Généralement grossièrement traduit par «terre scellée», le sens de «terra sigillata» est «argile portant de petites images» (sigilla latin), et non «argile avec une surface scellée (imperméable)». Le terme archéologique s'applique cependant aux pots à surface lisse ainsi qu'à ceux décorés de figures en relief.[PARAGRAPH:2]Source: Wikipedia</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TERRA_SIGILLIATA_WORKSHOP</Tag>
-		<English>Terra Sigilliata Workshop</English>
-		<French>Atelier de Céramique sigillée</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TERRA_SIGILLIATA_WORKSHOP_STRATEGY</Tag>
-		<English>Build this to provide you with some trade goods.</English>
-		<French>Construisez-le pour vous fournir des biens commerciaux.</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MING_VASE_WORKSHOP</Tag>
-		<English>Ming Vase Workshop</English>
-		<French>Atelier de Vase Ming</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MING_VASE_WORKSHOP_STRATEGY</Tag>
-		<English>Build this to provide you with some trade goods.</English>
-		<French>Construisez-le pour vous fournir des biens commerciaux.</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GLAZE_MAKER</Tag>
 		<English>Glaze Maker</English>
 		<French>Confectionneur d'émail</French>
@@ -95,6 +71,16 @@
 		<French>Produit des fausses Gemmes</French>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MING_VASE_WORKSHOP</Tag>
+		<English>Ming Vase Workshop</English>
+		<French>Atelier de Vase Ming</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MING_VASE_WORKSHOP_STRATEGY</Tag>
+		<English>Build this to provide you with some trade goods.</English>
+		<French>Construisez-le pour vous fournir des biens commerciaux.</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MURANO_GLASSMAKERS</Tag>
 		<English>Murano Glassmakers</English>
 		<French>Verrier de Murano</French>
@@ -103,5 +89,15 @@
 		<Tag>TXT_KEY_BUILDING_MURANO_GLASSMAKERS_STRATEGY</Tag>
 		<English>Provides Crystal Glass</English>
 		<French>Produit des verreries de Crystal</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TERRA_SIGILLIATA_WORKSHOP</Tag>
+		<English>Terra Sigilliata Workshop</English>
+		<French>Atelier de Céramique sigillée</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TERRA_SIGILLIATA_WORKSHOP_STRATEGY</Tag>
+		<English>Build this to provide you with some trade goods.</English>
+		<French>Construisez-le pour vous fournir des biens commerciaux.</French>
 	</TEXT>
 </Civ4GameText>
