@@ -14168,7 +14168,7 @@ int CvPlayerAI::AI_adjacentPotentialAttackers(const CvPlot* pPlot, bool bTestCan
 {
 	int iCount = 0;
 
-	foreach_(const CvPlot* adjacentPlot, adjacent() | filtered(CvPlot::fn::area() == pPlot->area()))
+	foreach_(const CvPlot* adjacentPlot, pPlot->adjacent() | filtered(CvPlot::fn::area() == pPlot->area()))
 	{
 		foreach_(const CvUnit* pLoopUnit, adjacentPlot->units())
 		{

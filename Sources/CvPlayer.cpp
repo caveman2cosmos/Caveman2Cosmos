@@ -3183,7 +3183,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 
 	pCityPlot->updateCulture(true, false);
 
-	foreach_(CvPlot* adjacentPlot, adjacent())
+	foreach_(CvPlot* adjacentPlot, pCityPlot->adjacent())
 	{
 		adjacentPlot->updateCulture(true, false);
 	}
