@@ -4961,13 +4961,13 @@ bool CvPlot::isAdjacentOwned() const
 
 bool CvPlot::isAdjacentPlayer(PlayerTypes ePlayer, bool bLandOnly) const
 {
-	return algo::any_of(adjacent(), CvPlot::fn::getOwner() == ePlayer && (!bLandOnly || !CvPlot::fn::isWater()));
+	return algo::any_of(adjacent(), (CvPlot::fn::getOwner() == ePlayer && (!CvPlot::fn::isWater() || !bLandOnly)));
 }
 
 
 bool CvPlot::isAdjacentTeam(TeamTypes eTeam, bool bLandOnly) const
 {
-	return algo::any_of(adjacent(), CvPlot::fn::getTeam() == eTeam && (!bLandOnly || !CvPlot::fn::isWater()));
+	return algo::any_of(adjacent(), CvPlot::fn::getTeam() == eTeam && (!CvPlot::fn::isWater() || !bLandOnly));
 }
 
 
@@ -6971,9 +6971,6 @@ bool CvPlot::isNOfRiver() const
 
 void CvPlot::setNOfRiver(bool bNewValue, CardinalDirectionTypes eRiverDir)
 {
-	CvPlot* pAdjacentPlot;
-	int iI;
-
 	if ((isNOfRiver() != bNewValue) || (eRiverDir != m_eRiverWEDirection))
 	{
 		if (isNOfRiver() != bNewValue)
@@ -7847,7 +7844,7 @@ void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGr
 				{
 					foreach_(const CvPlot* adjacentPlot, adjacent())
 					{
-						if (!adjacentPlot->area()->isWater()))
+						if (!adjacentPlot->area()->isWater())
 						{
 							if (pNewArea == NULL)
 							{
@@ -10087,7 +10084,7 @@ static void CalculateClosePlotGroupConnectSet(PlayerTypes ePlayer, CvPlot* pSeed
 
 		if ( iRange > 0 )
 		{
-			foreach_(CvPlot* pAdjacentPlot, adjacent())
+			foreach_(CvPlot* pAdjacentPlot, pSeedPlot->adjacent())
 			{
 				if (pAdjacentPlot->getPlotGroup(ePlayer) == seedPlotGroup)
 				{

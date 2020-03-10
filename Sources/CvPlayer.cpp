@@ -3183,14 +3183,9 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 
 	pCityPlot->updateCulture(true, false);
 
-	for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+	foreach_(CvPlot* adjacentPlot, adjacent())
 	{
-		CvPlot* pAdjacentPlot = plotDirection(pCityPlot->getX(), pCityPlot->getY(), ((DirectionTypes)iI));
-
-		if (pAdjacentPlot != NULL)
-		{
-			pAdjacentPlot->updateCulture(true, false);
-		}
+		adjacentPlot->updateCulture(true, false);
 	}
 
 	//Team Project (6)
@@ -7830,11 +7825,9 @@ void CvPlayer::receiveGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit)
 		{
 			if (iBarbCount < GC.getGoodyInfo(eGoody).getMinBarbarians())
 			{
-				for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+				foreach_(const CvPlot* pLoopPlot, pPlot->adjacent())
 				{
-					pLoopPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
-
-					if (pLoopPlot != NULL && pLoopPlot->getArea() == pPlot->getArea()
+					if (pLoopPlot->getArea() == pPlot->getArea()
 					&& !pLoopPlot->isImpassable(getTeam()) && pLoopPlot->getNumUnits() == 0
 					&& (iPass > 0 || GC.getGame().getSorenRandNum(100, "Goody Barbs") < GC.getGoodyInfo(eGoody).getBarbarianUnitProb()))
 					{

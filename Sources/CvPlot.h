@@ -1286,10 +1286,17 @@ public:
 	// Algorithm/range helpers
 	//
 	struct fn {
+		DECLARE_MAP_FUNCTOR(CvPlot, bool, isCountedPlot);
+		DECLARE_MAP_FUNCTOR(CvPlot, bool, isPeak);
+		DECLARE_MAP_FUNCTOR(CvPlot, bool, isHills);
 		DECLARE_MAP_FUNCTOR(CvPlot, bool, isWater);
 		DECLARE_MAP_FUNCTOR(CvPlot, bool, isOwned);
 		DECLARE_MAP_FUNCTOR(CvPlot, PlayerTypes, getOwner);
+		DECLARE_MAP_FUNCTOR(CvPlot, TeamTypes, getTeam);
+		DECLARE_MAP_FUNCTOR(CvPlot, BonusTypes, getBonusType);
+		DECLARE_MAP_FUNCTOR(CvPlot, TerrainTypes, getTerrainType);
 		DECLARE_MAP_FUNCTOR(CvPlot, FeatureTypes, getFeatureType);
+		DECLARE_MAP_FUNCTOR(CvPlot, const CvArea*, area);
 
 		DECLARE_MAP_FUNCTOR_1(CvPlot, int, getBlockadedCount, TeamTypes);
 

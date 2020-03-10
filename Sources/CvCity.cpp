@@ -268,7 +268,7 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 	if (!GC.getGame().isOption(GAMEOPTION_1_CITY_TILE_FOUNDING))
 	{
 		const int iAdjCulture = GC.getDefineINT("FREE_CITY_ADJACENT_CULTURE");
-		foreach_(CvPlot* pAdjacentPlot, adjacent())
+		foreach_(CvPlot* pAdjacentPlot, plot()->adjacent())
 		{
 			if (pAdjacentPlot->getCulture(getOwner()) < iAdjCulture)
 			{

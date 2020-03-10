@@ -22076,16 +22076,12 @@ bool CvUnitAI::AI_blockade()
 
 	CvCity* pCity;
 	CvCity* pBestCity;
-	CvPlot* pLoopPlot;
-	CvPlot* pBestPlot;
-	CvPlot* pBestBlockadePlot;
 	int iValue;
-	int iBestValue;
 	int iBestRange;
 
-	iBestValue = 0;
-	pBestPlot = NULL;
-	pBestBlockadePlot = NULL;
+	int iBestValue = 0;
+	CvPlot* pBestPlot = NULL;
+	CvPlot* pBestBlockadePlot = NULL;
 
 	CvReachablePlotSet plotSet(getGroup(), 0, MAX_INT);
 
@@ -29337,7 +29333,7 @@ bool CvUnitAI::AI_exploreAir2()
 					{
 						int iValue = AI_exploreAirPlotValue( pLoopPlot );
 
-						foreach_(const CvPlot* pAdjacentPlot, plot()->adjacent())
+						foreach_(CvPlot* pAdjacentPlot, plot()->adjacent())
 						{
 							if (!pAdjacentPlot->isVisible(getTeam(), false))
 							{
@@ -30445,17 +30441,11 @@ bool CvUnitAI::AI_airAttackDamagedSkip()
 // Returns true if a mission was pushed or we should wait for another unit to bombard...
 bool CvUnitAI::AI_followBombard()
 {
-	CLLNode<IDInfo>* pUnitNode;
-	CvUnit* pLoopUnit;
-	CvPlot* pAdjacentPlot1;
-	CvPlot* pAdjacentPlot2;
-	int iI, iJ;
 /************************************************************************************************/
 /* REVOLUTIONDCM                            05/24/08                                Glider1     */
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-
 	if(getGroup()->canBombard(plot()))
 	{
 		// RevolutionDCM - ranged bombard AI wraps standard bombard
@@ -30577,11 +30567,8 @@ bool CvUnitAI::AI_defendPlot(const CvPlot* pPlot) const
 int CvUnitAI::AI_pillageValue(const CvPlot* pPlot, int iBonusValueThreshold) const
 {
 	ImprovementTypes eImprovement;
-	BonusTypes eNonObsoleteBonus;
 	int iValue;
 	int iTempValue;
-	int iBonusValue;
-	int iI;
 
 	FAssert(getGroup()->canPillage(pPlot) || canAirBombAt(plot(), pPlot->getX(), pPlot->getY()) || (getGroup()->getCargo() > 0));
 	//A count is all that's necessary here
@@ -30590,8 +30577,8 @@ int CvUnitAI::AI_pillageValue(const CvPlot* pPlot, int iBonusValueThreshold) con
 		return 0;
 	}
 
-	iBonusValue = 0;
-	eNonObsoleteBonus = pPlot->getNonObsoleteBonusType(pPlot->getTeam());
+	int iBonusValue = 0;
+	BonusTypes eNonObsoleteBonus = pPlot->getNonObsoleteBonusType(pPlot->getTeam());
 	if (eNonObsoleteBonus != NO_BONUS)
 	{
 		iBonusValue = (GET_PLAYER(pPlot->getOwner()).AI_bonusVal(eNonObsoleteBonus));
@@ -32331,17 +32318,12 @@ bool CvUnitAI::AI_claimForts(CvReachablePlotSet* pReachablePlots, int iMinValue,
 	PROFILE_FUNC();
 
 	CvPlot* pLoopPlot;
-	CvPlot* pBestPlot;
-	CvPlot* pFortPlot;
 	CvPlot* endTurnPlot = NULL;
 	int iPathTurns;
 	int iValue;
-	int iBestValue;
-	int iJ;
-
-	iBestValue = iMinValue;
-	pBestPlot = NULL;
-	pFortPlot = NULL;
+	int iBestValue = iMinValue;
+	CvPlot* pBestPlot = NULL;
+	CvPlot* pFortPlot = NULL;
 
 
 	for(CvReachablePlotSet::const_iterator itr = pReachablePlots->begin(); itr != pReachablePlots->end(); ++itr)
@@ -33321,7 +33303,6 @@ bool CvUnitAI::AI_returnToBorders()
 	CvPlot* endTurnPlot = NULL;
 	int iPathTurns;
 	int iValue;
-	int iI;
 
 	int iBestValue = 0;
 	CvPlot* pBestPlot = NULL;

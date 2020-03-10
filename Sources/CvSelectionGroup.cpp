@@ -2344,7 +2344,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 					}
 					else
 					{
-						foreach_(const CvPlot* pAdjacentPlot, pTargetUnit->plot()->adjacent())
+						foreach_(CvPlot* pAdjacentPlot, pTargetUnit->plot()->adjacent())
 						{
 							if( atPlot(pAdjacentPlot) )
 							{
@@ -5875,7 +5875,7 @@ bool CvSelectionGroup::canPathDirectlyToInternal(CvPlot* pFromPlot, CvPlot* pToP
 	}
 
 	//	Avoid path searching - just test paths that monotonically move towards the destination
-	foreach_(const CvPlot* pAdjacentPlot, pFromPlot->adjacent())
+	foreach_(CvPlot* pAdjacentPlot, pFromPlot->adjacent())
 	{
 		if (stepDistance(pAdjacentPlot->getX(), pAdjacentPlot->getY(), pToPlot->getX(), pToPlot->getY()) <
 			stepDistance(pFromPlot->getX(), pFromPlot->getY(), pToPlot->getX(), pToPlot->getY()))

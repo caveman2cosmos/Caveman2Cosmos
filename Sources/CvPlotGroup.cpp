@@ -842,7 +842,7 @@ CvPlotGroup* CvPlotGroup::colorRegionInternal(CvPlot* pPlot, PlayerTypes eOwner,
 					pPlotGroup->addPlot(pLoopPlot, bRecalculateBonuses);
 				}
 
-				foreach_(const CvPlot* pAdjacentPlot, pLoopPlot->adjacent())
+				foreach_(CvPlot* pAdjacentPlot, pLoopPlot->adjacent())
 				{
 					if (pLoopPlot->isTradeNetworkConnected(pAdjacentPlot, GET_PLAYER(eOwner).getTeam()))
 					{

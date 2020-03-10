@@ -391,7 +391,7 @@ void CvReachablePlotSet::enumerateReachablePlotsInternal(int iRange, int iDepth,
 
 		for( std::vector<std::pair<CvPlot*,int> >::const_iterator itr = prevRing.begin(), itrend = prevRing.end(); itr != itrend; ++itr)
 		{
-			foreach_(const CvPlot* pAdjacentPlot, (*itr).first->adjacent())
+			foreach_(CvPlot* pAdjacentPlot, (*itr).first->adjacent())
 			{
 				if (reachablePlots->find(pAdjacentPlot) == reachablePlots->end())
 				{

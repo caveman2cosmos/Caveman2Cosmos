@@ -3311,6 +3311,7 @@ public:
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, canMoveAllTerrain);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, hasMoved);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, canIgnoreZoneofControl);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, isZoneOfControl);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isAutoUpgrading);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isReadyForUpgrade);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isPromotionReady);

@@ -12397,9 +12397,10 @@ CvWString CvGame::getRandomName(int iMaxLength)
 int CvGame::countDesert(CvPlot* pPlot)
 {
 	int iDesert = 0;
-	foreach_(CvPlot* pAdjacentPlot, pPlot->adjacent() | filtered(!CvPlot::fn::isCountedPlot()
-		&& CvPlot::fn::getFeatureType() == static_cast<FeatureTypes>(GC.getInfoTypeForString("TERRAIN_DESERT")
-		&& !CvPlot::fn::isHills() && !CvPlot::fn::isPeak())))
+	foreach_(CvPlot* pAdjacentPlot, pPlot->adjacent()
+		| filtered(!CvPlot::fn::isCountedPlot()
+			&& CvPlot::fn::getFeatureType() == static_cast<FeatureTypes>(GC.getInfoTypeForString("TERRAIN_DESERT"))
+			&& !CvPlot::fn::isHills() && !CvPlot::fn::isPeak()))
 	{
 		pAdjacentPlot->setCountedPlot(true);
 		iDesert++;
