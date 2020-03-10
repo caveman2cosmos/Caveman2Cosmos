@@ -15746,7 +15746,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>The [COLOR_UNIT_TEXT]Khitan Infantry[COLOR_REVERT] is a Khitan unique unit.</English>
 		<French>L'[COLOR_UNIT_TEXT]Infanterie Khitan[COLOR_REVERT] est une unité unique Khitan.</French>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_KHMER_BALLISTA_ELEPHANT</Tag>
 		<English>Khmer Ballista Elephant</English>
 		<French>
@@ -23892,7 +23892,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_RA_KNIGHT_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Ra Knights[COLOR_REVERT] are very powerful Knight units, available to civilizations with Kemetism as their State Religion. You can only have one of these units in your nation!</English>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_RECON_PLANE</Tag>
 		<English>Recon Plane</English>
 		<French>Planeur de reconnaissance</French>
@@ -25778,7 +25778,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Les Moines Shaolins sont d'excellents défenseurs et guérisseurs de la ville.</French>
 		<Italian>I monaci Shaolin sono ottimi difensori delle città e guaritori.</Italian>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHAPUR</Tag>
 		<English>Shapur I</English>
 		<Spanish>
@@ -32630,7 +32630,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_YURUPARI_PEDIA</Tag>
 		<English>In many of the Indian cultures these rites take a central position among other important ceremonies such as funerals and fertility rites. In the Guianas and the northwest Amazon region, the initiation of the boys is very complex. The Yurupary celebration inducts the boys into the secret society of mature men. Special rites are revealed to them; they are shown the sacred trumpets or the masks representing ancestral spirits. They are subjected to violent whippings, which they must tolerate without the least expression of pain. </English>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_YURUPARI_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Yurupari[COLOR_REVERT] are Arawak culture unit. They are like [COLOR_UNIT_TEXT]Stone Spearmans[COLOR_REVERT] with bonuses to combat in forests and in looting.</English>
 	</TEXT>
