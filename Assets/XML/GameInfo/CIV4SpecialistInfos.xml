@@ -467,7 +467,7 @@
 		</SpecialistInfo>
 		<SpecialistInfo>
 			<Type>SPECIALIST_GREAT_STATESMAN</Type>
-			<Description>TXT_UNIT_GREAT_STATESMAN</Description>
+			<Description>TXT_KEY_UNIT_GREAT_STATESMAN</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_STATESMAN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_STATESMAN_STRATEGY</Strategy>
 			<Texture>Art/Interface/mainscreen/cityscreen/great_statesman.dds</Texture>

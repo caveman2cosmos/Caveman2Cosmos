@@ -1811,7 +1811,7 @@
 		<Polish>Wybuduj [COLOR_UNIT_TEXT]Sąd[COLOR_REVERT], [COLOR_UNIT_TEXT]Więzienie[COLOR_REVERT], lub [COLOR_UNIT_TEXT]Komorę Celną[COLOR_REVERT] by dodać specjalistów-prawników. Dodatkowo cuda, [COLOR_UNIT_TEXT]Wersal[COLOR_REVERT], [COLOR_UNIT_TEXT]Narody Zjednoczone[COLOR_REVERT], i [COLOR_UNIT_TEXT]Zakazany Pałac[COLOR_REVERT] dodają punkty Wielkiego Ustawodawcy.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_UNIT_GREAT_STATESMAN</Tag>
+		<Tag>TXT_KEY_UNIT_GREAT_STATESMAN</Tag>
 		<English>Great Statesman</English>
 		<French>Homme d'Etat Illustre</French>
 		<Italian>

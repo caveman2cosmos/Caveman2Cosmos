@@ -3236,7 +3236,7 @@ class CvWorldBuilderScreen:
 		for i in xrange(iExtraSpace):
 			self.m_tabCtrlEdit.addSectionLabel(" ",  0)
 ## Current Research ##
-		self.m_tabCtrlEdit.addSectionLabel(TRNSLTR.getText("TXT_WB_CURRENT_RESEARCH",()),  0)
+		self.m_tabCtrlEdit.addSectionLabel(TRNSLTR.getText("TXT_KEY_WB_CURRENT_RESEARCH",()),  0)
 		strTest = (TRNSLTR.getText("TXT_KEY_WB_NONE",()),)
 		iCurrentTech = 0
 		iCount = 0

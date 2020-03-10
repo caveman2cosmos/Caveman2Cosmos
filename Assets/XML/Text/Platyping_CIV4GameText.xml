@@ -32,16 +32,4 @@
 		<Tag>TXT_KEY_DYNAMIC_CIVIC_TRIBAL_2</Tag>
 		<English>Tribes of</English>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_WORLD_TECH1</Tag>
-		<English>[COLOR_BUILDING_TEXT]%s1 has researched %s2![COLOR_REVERT]</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_WORLD_TECH2</Tag>
-		<English>[COLOR_BUILDING_TEXT]%s1 has been researched in a far away land![COLOR_REVERT]</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_WORLD_TECH_PEDIA</Tag>
-		<English>WORLD TECH</English>
-	</TEXT>
 </Civ4GameText>

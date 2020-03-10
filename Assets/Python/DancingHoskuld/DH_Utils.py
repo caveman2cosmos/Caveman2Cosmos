@@ -41,7 +41,7 @@ def getNearestCity(iPlayer, pPlot, gi_HalfMaxX):
 	#~ eWidgetType, iData1, iData2, bOption = argsList
 
 	#~ if iData1 == 690:
-		#~ return CyTranslator().getText("TXT_BUTCHER_ANIMAL_HELP", ())
+		#~ return CyTranslator().getText("TXT_KEY_BUTCHER_ANIMAL_HELP", ())
 
 	#~ return u""
 

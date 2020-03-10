@@ -362,10 +362,6 @@
 		<Polish>Spadek</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_BULLET</Tag>
-		<English>[ICON_BULLET]</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_BUTTONTIP_ADVISOR_CIVICS</Tag>
 		<English>Civics Advisor</English>
 		<French>Conseiller des Doctrines</French>
@@ -414,14 +410,6 @@
 		<Tag>TXT_BUTTONTIP_ADVISOR_TECHNOLOGY</Tag>
 		<English>Technology Advisor</English>
 		<French>Conseiller Technologique</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_CASTE_SYSTEM_HELP</Tag>
-		<English>[ICON_BULLET]When building a farm, a militia unit of the current era appears</English>
-		<French>[ICON_BULLET]En construisant une ferme, une milice de l'èsre correspondante apparait</French>
-		<German>[ICON_BULLET]Wenn eine Farm gebaut wird, erscheint eine Miliz-Einheit der aktuellen Ära</German>
-		<Italian>[ICON_BULLET]Quando costruisci una fattoria, appare una milizia dell'era corrente</Italian>
-		<Polish>[ICON_BULLET]Kiedy farma zostaje wybudowana, jednostka milicji odpowiednia dla danej epoki zostaje zwerbowana.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_INTERFACE_PROMO_HELP_STACK</Tag>
@@ -21701,11 +21689,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>Produkcja</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_MULTIPLY</Tag>
-		<English>×</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_RECRUITED</Tag>
+		<Tag>TXT_KEY_RECRUITED</Tag>
 		<English>You've recruited a new militia unit.</English>
 		<French>Vous avec recruté une nouvelle unité de milice.</French>
 		<German>Ihr habt eine neue Miliz-Einheit rekrutiert.</German>
@@ -21748,7 +21732,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>Naciśnij SHIFT aby zobaczyć Klasy Bojowe</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_WB_CURRENT_RESEARCH</Tag>
+		<Tag>TXT_KEY_WB_CURRENT_RESEARCH</Tag>
 		<English>Current Research:</English>
 		<French>Recherche actuelle:</French>
 		<Italian>Ricerca corrente:</Italian>

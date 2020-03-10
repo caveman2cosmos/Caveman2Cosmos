@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_BUTCHER_ANIMAL_HELP</Tag>
+		<Tag>TXT_KEY_BUTCHER_ANIMAL_HELP</Tag>
 		<English>Butcher the animal.</English>
 		<French>Abattre l'animal.</French>
 		<Italian>Macella l'animale.</Italian>

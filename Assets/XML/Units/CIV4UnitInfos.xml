@@ -64519,7 +64519,7 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SPY</DefaultUnitAI>
-			<Description>TXT_UNIT_GREAT_STATESMAN</Description>
+			<Description>TXT_KEY_UNIT_GREAT_STATESMAN</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_STATESMAN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_GREAT_STATESMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
