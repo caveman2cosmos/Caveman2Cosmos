@@ -2128,15 +2128,6 @@
 		<Polish>[NEWLINE]Opcje Super Szpiegów:</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_REV_MOD_INITIALIZING_STACK_ATTACK</Tag>
-		<English>[NEWLINE][TAB]Stack Attack</English>
-		<French>[NEWLINE][TAB]Attaque en Groupes</French>
-		<German>[NEWLINE][TAB]Stapelangriff</German>
-		<Italian>[NEWLINE][TAB]"Attacco di gruppo"</Italian>
-		<Spanish>[NEWLINE][TAB]Ataque combinado</Spanish>
-		<Polish>[NEWLINE][TAB]Atak Stosu</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_START_AS_MINORS</Tag>
 		<English>[NEWLINE][TAB]Start As Minors</English>
 		<French>[NEWLINE][TAB]Démarrage Barbare</French>

@@ -5786,20 +5786,6 @@
 		<Spanish>Bombardeo a distancia</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_REVDCM__DCM_STACK_ATTACK_HOVER</Tag>
-		<English>Enables unit stacks to attack in animated succession, automating the process of attacking by stack; This option has been known to cause stability issues and is not recommended</English>
-		<French>Permet aux groupes d'unités d'attaquer de manière automatique les unes après les autres.  Attention, cette option peut pour l'instant engendrer des problèmes de stabilité du Jeu et n'est pas recommandée.</French>
-		<German>Ermöglicht Einheitenstapel in einer animierten, automatisierten Folge anzugreifen; Diese Option erzeugt bekanntermaßen Stabilitätsprobleme und wird nicht empfohlen</German>
-		<Spanish>Permite que las unidades apiladas ataquen sucesivamente, automatizando el proceso de ataque para unidades apiladas. Esta opción puede causar problemas de estabilidad y no se recomienda activarla.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_REVDCM__DCM_STACK_ATTACK_TEXT</Tag>
-		<English>Stack Attack</English>
-		<French>Attaques Groupées</French>
-		<German>Stapelangriff</German>
-		<Spanish>Ataque en grupo</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__IDW_EMERGENCY_DRAFT_ENABLED_HOVER</Tag>
 		<English>Causes weakened units to spawn in defense of cities that are under attack with no defender if the defenseless city still has significant cultural influence of the owning civilization</English>
 		<French>Lorsque activé, les Villes sans défense, mais possédant une influence culturelle suffisante vont spontanément générer des unités défensives de base.</French>

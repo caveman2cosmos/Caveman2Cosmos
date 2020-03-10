@@ -3023,22 +3023,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 	PROFILE_FUNC();
 
 	/*GC.getGame().logOOSSpecial(6, getID(), getDamage());*/
-	bool bDCMStackAttack = false;
-	if (pSelectedDefender == NULL)
-	{
-	/************************************************************************************************/
-	/* DCM                                     04/19/09                                Johny Smith  */
-	/************************************************************************************************/
-		// Dale - SA: Stack Attack START
-		if (GC.isDCM_STACK_ATTACK())
-		{
-			bDCMStackAttack = true;
-		}
-		// Dale - SA: Stack Attack END
-	/************************************************************************************************/
-	/* DCM                                     END                                                  */
-	/************************************************************************************************/
-	}
 
 	CvWString szBuffer;
 
@@ -3094,16 +3078,13 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 	{
 		pDefender = getCombatUnit();
 	}
+	else if (pSelectedDefender == NULL)
+	{
+		pDefender = pPlot->getBestDefender(NO_PLAYER, getOwner(), this, true, false, false, false, bNoCache);
+	}
 	else
 	{
-		if (pSelectedDefender == NULL)
-		{
-			pDefender = pPlot->getBestDefender(NO_PLAYER, getOwner(), this, true, false, false, false, bNoCache);
-		}
-		else
-		{
-			pDefender = pSelectedDefender;
-		}
+		pDefender = pSelectedDefender;
 	}
 
 	if (pDefender == NULL)
@@ -3143,13 +3124,10 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 		{
 			PROFILE("CvUnit::updateCombat.StartFight");
 
-			if (!bDCMStackAttack && !bStealth)
+			if (!bStealth && (plot()->isFighting() || pPlot->isFighting()))
 			{
-				if (plot()->isFighting() || pPlot->isFighting())
-				{
-					/*GC.getGame().logOOSSpecial(11, getID(), getDamage());*/
-					return;
-				}
+				/*GC.getGame().logOOSSpecial(11, getID(), getDamage());*/
+				return;
 			}
 			//TB Combat Mods (Att&DefCounters)
 			if (getRoundCount()>0)
