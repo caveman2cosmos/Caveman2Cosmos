@@ -314,17 +314,17 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_TRACKER</Tag>
 		<English>Upgrade a Captive to a Neanderthal Tracker.</English>
-		<French>Améliorez un prisonnier en un traqueur néandertalien.</French>
+		<French>Améliorez un prisonnier en un Pisteur néandertalien.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_NEANDERTHAL_TRACKER</Tag>
 		<English>Upgrade to Neanderthal Tracker.</English>
-		<French>Améliorer en Traqueur néandertalien.</French>
+		<French>Améliorer en Pisteur néandertalien.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_NEANDERTHAL_TRACKER_MESSAGE</Tag>
 		<English>Your Captive has been upgraded to a Neanderthal Tracker.</English>
-		<French>Votre prisonnier a été converti en un traqueur néandertalien.</French>
+		<French>Votre prisonnier a été converti en un Pisteur néandertalien.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_GATHERER</Tag>

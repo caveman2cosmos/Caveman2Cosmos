@@ -3431,7 +3431,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>The [COLOR_UNIT_TEXT]Beggar[COLOR_REVERT] is a Romani unique unit.</English>
 		<French>Le [COLOR_UNIT_TEXT]Mendiant[COLOR_REVERT] est une unité Romani unique.</French>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_BELLYBOWMAN</Tag>
 		<English>Bellybowman</English>
 		<French>Archer avec Gastrophète</French>
@@ -4437,11 +4437,12 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAMEL_CAVALRY_PEDIA</Tag>
 		<English>Even in the age of the rifle, desert civilizations, especially those of the Sahara, found that the camel's endurance - and its sand-adapted hooves - gave it a slight edge over the horse as a mount for desert campaigns.  Of course it has its disadvantages, but if camels are all that is readily available to you, you find them a very competitive substitute.</English>
-		<French>Even in the age du rifle, desert civilizations, especially those du Sahara, found that the camel's endurance - and its sand-adapted hooves - gave it a slight edge over the horse as a mount for desert campaigns.  Of course it has its disadvantages, but if camels are all that is readily available to you, you find them a very competitive substitute.</French>
+		<French>Même à l'âge du fusil, les civilisations du désert, en particulier celles du Sahara, ont constaté que l'endurance du chameau - et ses sabots adaptés au sable - lui donnait un léger avantage sur le cheval comme monture pour les campagnes dans le désert. Bien sûr, il a ses inconvénients, mais si les chameaux sont tout ce qui est à votre disposition, vous les trouvez comme un substitut très compétitif.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAMEL_CAVALRY_STRATEGY</Tag>
 		<English>The mounted rifle-equipped unit for when you've got camels but no horses. Generally slightly weaker than horse cavalry, except in desert of course.</English>
+		<French>L'unité montée équipée d'un fusil si vous avez des chameaux, mais pas de chevaux. Il est Généralement légèrement plus faible que la cavalerie équestre, sauf dans le désert bien sûr.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAMEL_CUIRASSIER</Tag>
@@ -4551,10 +4552,12 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAMEL_TRENCH_CAVALRY_PEDIA</Tag>
 		<English>Even in the late Industrial era, to the extent that mounted warfare was persisted with, it was believed that the camel's endurance - and its sand-adapted hooves - gave it a slight edge over the horse as a mount for desert campaigns.</English>
+		<French>Même à la fin de l'ère industrielle, dans la mesure où la guerre à cheval persistait, on a gardé l'idée que l'endurance du chameau - et ses sabots adaptés au sable - lui donnait un léger avantage sur le cheval comme monture pour les campagnes dans le désert.</French>	
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAMEL_TRENCH_CAVALRY_STRATEGY</Tag>
 		<English>If you've camels but no horses, in the twilight era of mounted warfare, this is the unit you need. Generally slightly weaker than the standard trench cavalry, except in desert of course.</English>
+		<French>Si vous avez des chameaux mais pas de chevaux, à l'ère crépusculaire de la guerre à cheval, c'est l'unité dont vous avez besoin. Généralement légèrement plus faible que la cavalerie de tranchée standard, sauf dans le désert bien sûr.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CANACUMACO</Tag>
@@ -6267,7 +6270,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CREE_TRACKER</Tag>
 		<English>Cree Tracker</English>
-		<French>Traqueur</French>
+		<French>Pisteur Cree</French>
 		<Italian>Cercatore di tracce Cree</Italian>
 		<Spanish>
 			<Text>Rastreador cree</Text>
@@ -6909,7 +6912,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DENE_SLED_DOGS</Tag>
 		<English>Dene Sled Dogs</English>
-		<French>Chien d'attelage</French>
+		<French>Chien d'attelage Dene</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DENE_SLED_DOGS_PEDIA</Tag>
@@ -7194,7 +7197,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DOCTOR_STRATEGY</Tag>
 		<English>Build [COLOR_UNIT_TEXT]Doctors[COLOR_REVERT] to heal stack units faster.</English>
-		<French>Construisez des  [COLOR_UNIT_TEXT]Médecins[COLOR_REVERT] pour guérir des groupes d'unités plus rapidement.</French>
+		<French>Construisez des [COLOR_UNIT_TEXT]Médecins[COLOR_REVERT] pour guérir des groupes d'unités plus rapidement.</French>
 		<Spanish>Entrena [COLOR_UNIT_TEXT]Médicos[COLOR_REVERT] para curar grupos de unidades más rápido.</Spanish>
 		<Polish>[COLOR_UNIT_TEXT]Doktor[COLOR_REVERT] pomaga szybciej wyleczyć grupę jednostek.</Polish>
 	</TEXT>
@@ -9504,7 +9507,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FLAMINGO</Tag>
 		<English>Flamingo</English>
-		<French>Flamant</French>
+		<French>Flamant rose</French>
 		<German>
 			<Text>Flamingo:Flamingos:Flamingo:Flamingo:Flamingos:Flamingos:Flamingos:Flamingos</Text>
 			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
@@ -11044,7 +11047,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GREAT_ENGINEER_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Great Engineers[COLOR_REVERT] can instantly complete a city's active production.</English>
-		<French>Les [COLOR_UNIT_TEXT]ingénieurs illustres[COLOR_REVERT] peuvent achever instantanément la production en cours d'une ville.</French>
+		<French>Les [COLOR_UNIT_TEXT]Ingénieurs illustres[COLOR_REVERT] peuvent achever instantanément la production en cours d'une ville.</French>
 		<German>[COLOR_UNIT_TEXT]Große Ingenieure[COLOR_REVERT] stellen die aktuelle Produktion einer Stadt umgehend fertig.</German>
 		<Italian>I [COLOR_UNIT_TEXT]Grandi Ingegneri[COLOR_REVERT] possono completare istantaneamente la produzione attuale di una città.</Italian>
 		<Spanish>Los [COLOR_UNIT_TEXT]Grandes ingenieros[COLOR_REVERT] pueden completar al instante la producción en activo de una ciudad.</Spanish>
@@ -12356,11 +12359,12 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEALER_PEDIA</Tag>
 		<English>The Healer provides his patients with medicinal herbs, which were very effective in healing the allergies, and raising and renewing the body vitality.</English>
+		<French>Le guérisseur fournit à ses patients des herbes médicinales, très efficaces pour guérir les allergies, augmenter et renouveler la vitalité du corps.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEALER_STRATEGY</Tag>
 		<English>Use the [COLOR_UNIT_TEXT]Healer[COLOR_REVERT] to heal troops. They are fast moving, but expensive to produce and maintain.  Additionally, Healers require the Healer's Hut in the city in which they are built. The Healer can be upgraded to an [COLOR_UNIT_TEXT]Apothecary[COLOR_REVERT], after discovering Education.</English>
-		<French>Le [COLOR_UNIT_TEXT]Guérisseur[COLOR_REVERT] permet de guérir les troupes. Ils se déplacent rapidement, mais sont coûteux à produire et à entretenir. En outre, les guérisseurs ont besoin d'une cabane de Guérisseur dans la ville dans laquelle ils sont construits. Le guérisseur peut être amélioré en [COLOR_UNIT_TEXT] Apothicaire [COLOR_REVERT], après avoir découvert l'éducation.</French>
+		<French>Le [COLOR_UNIT_TEXT]Guérisseur[COLOR_REVERT] permet de guérir les troupes. Ils se déplacent rapidement, mais sont coûteux à produire et à entretenir. En outre, les guérisseurs ont besoin d'une cabane de Guérisseur dans la ville dans laquelle ils sont construits. Le guérisseur peut être amélioré en [COLOR_UNIT_TEXT]Apothicaire[COLOR_REVERT], après avoir découvert l'éducation.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEAVY_ARMOR</Tag>
@@ -13239,10 +13243,12 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HOSPITAL_SHIP_PEDIA</Tag>
 		<English>A hospital ship is a ship designated for primary function as a floating medical treatment facility or hospital. Most are operated by the military forces (mostly navies) of various countries, as they are intended to be used in or near war zones. Although attacking a hospital ship is a war crime, belligerent navies have the right to board such ships for inspections.</English>
+		<French>Un navire-hôpital est un navire désigné pour sa fonction principale en tant qu'installation flottante de traitement médical ou hôpital. La plupart sont exploités par les forces militaires (principalement des marines) de divers pays, car ils sont destinés à être utilisés dans ou à proximité des zones de guerre. Bien que l'attaque d'un navire-hôpital soit un crime de guerre, les marines belligérantes ont le droit de monter à bord de ces navires pour des inspections.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HOSPITAL_SHIP_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Hospital Ship[COLOR_REVERT] is medical navy unit which heal every unit in the same tile.</English>
+		<French>Le [COLOR_UNIT_TEXT]Navire Hôpital[COLOR_REVERT] est une unité médicale navale qui soigne et répare toutes les unités sur la même case.</French>
 		<German>Hospital Ships are used to heal units.  Graphics by Aungi and Nsftpoeopas.</German>
 		<Italian>Hospital Ships are used to heal units.  Graphics by Aungi and Nsftpoeopas.</Italian>
 		<Spanish>Hospital Ships are used to heal units.  Graphics by Aungi and Nsftpoeopas.</Spanish>
@@ -13469,7 +13475,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HURRY_FOOD</Tag>
 		<English>[ICON_BULLET]Can Hurry Food (Adds Base: %d1)</English>
-		<French>[ICON_BULLET]Peut Créer un Surplus de Nourriture (Adds Base: %d1)</French>
+		<French>[ICON_BULLET]Peut Créer un Surplus de Nourriture (Ajoute de Base: %d1)</French>
 		<German>[ICON_BULLET]Kann Nahrungsproduktion beschleunigen (Adds Base: %d1)</German>
 		<Italian>[ICON_BULLET]Può dare un surplus di cibo (Adds Base: %d1)</Italian>
 		<Spanish>[ICON_BULLET]Puede Enviar alimentos (Adds Base: %d1)</Spanish>
@@ -13588,8 +13594,8 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_HYPASPISTAI</Tag>
 		<English>Hypaspistai</English>
 		<French>
-			<Text>Hypaspistai</Text>
-			<Gender>Female</Gender>
+			<Text>Hypaspiste</Text>
+			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
 		<German>
@@ -13792,7 +13798,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_IMMIGRANT_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Adds 1 population point when joined to a city.[NEWLINE]Decreases the population in the city where it is built by 2</English>
-		<French>[ICON_BULLET]Ajoute 1 de population lorsqu'il rejoint une ville.</French>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Ajoute 1 de population lorsqu'il rejoint une ville. [NEWLINE] Diminue la population de la ville où elle est construite par 2</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_IMMIGRANT_PEDIA</Tag>
@@ -13802,6 +13808,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_IMMIGRANT_STRATEGY</Tag>
 		<English>Build immigrants in cities that are suffering from unrest due to over population.  Use the Immigrant to increase the population and the productive capacity of a new city.</English>
+		<French>Recrutez des immigrants dans les villes qui souffrent de troubles dus à la surpopulation. Utilisez l'immigrant pour augmenter la population et la capacité de production d'une nouvelle ville.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_IMMUNITY_TO_COLD_DAMAGE</Tag>
@@ -18430,7 +18437,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MIDDLE_WORKBOAT_STRATEGY</Tag>
 		<English>Medieval [COLOR_UNIT_TEXT]Workboat[COLOR_REVERT] unit with moderate work rate and movement. Unarmed vessels that can create fishing boats, whaling boats, and (in late game) oil rigs. [COLOR_UNIT_TEXT]Work Boats[COLOR_REVERT] cannot enter Ocean spaces. </English>
-		<French>[COLOR_UNIT_TEXT]Bateau-Atelier médiéval[COLOR_REVERT] avec un rythme de travail et un mouvement modérés. Navires non armés qui peuvent créer des bateaux de pêche, des baleiniers et (en fin de partie) des plates-formes pétrolières. [COLOR_UNIT_TEXT] Les bateaux de travail [COLOR_REVERT] ne peuvent pas entrer dans les espaces océaniques.</French>
+		<French>[COLOR_UNIT_TEXT]Bateau-Atelier médiéval[COLOR_REVERT], avec un rythme de travail et un mouvement modérés. Navires non armés qui peuvent créer des bateaux de pêche, des baleiniers et (en fin de partie) des plates-formes pétrolières. Les [COLOR_UNIT_TEXT]Bateaux-ateliers[COLOR_REVERT] ne peuvent pas entrer dans les espaces océaniques.</French>
 		<Polish>Myśliwiec MiG-29</Polish>
 	</TEXT>
 	<TEXT>
@@ -19730,7 +19737,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAGUALISM_MISSIONARY_STRATEGY</Tag>
 		<English>Use this missionary to actively spread [COLOR_HIGHLIGHT_TEXT]Naghualism[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]). This increases your income if you have the [COLOR_BUILDING_TEXT]Teotihuacan[COLOR_REVERT].</English>
-		<French>Utiliser ce missionnaire pour propager activement la religion [COLOR_HIGHLIGHT_TEXT]Nagualisme[COLOR_REVERT] dans les villes amies (ou les villes rivales avec lesquelles vous avez [COLOR_HIGHLIGHT_TEXT]Ouverture des Frontières[COLOR_REVERT]). Cela augmente vos revenus si vous avez  [COLOR_BUILDING_TEXT]Teotihuacan[COLOR_REVERT].</French>
+		<French>Utiliser ce missionnaire pour propager activement la religion [COLOR_HIGHLIGHT_TEXT]Nagualisme[COLOR_REVERT] dans les villes amies (ou les villes rivales avec lesquelles vous avez [COLOR_HIGHLIGHT_TEXT]Ouverture des Frontières[COLOR_REVERT]). Cela augmente vos revenus si vous avez [COLOR_BUILDING_TEXT]Teotihuacan[COLOR_REVERT].</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAHUAL</Tag>
@@ -20235,7 +20242,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_WISE_WOMAN</Tag>
 		<English>Neanderthal Wise Woman</English>
 		<French>
-			<Text>Vieille femme de Néanderthal</Text>
+			<Text>Soigneuse de Néanderthal</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -26611,7 +26618,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPARTACUS_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Spartacus[COLOR_REVERT] has a 25% chance "recruits" a new [COLOR_UNIT_TEXT]Gladiator[COLOR_REVERT] after every combat victory.</English>
-		<French>[COLOR_UNIT_TEXT]Spartacus[COLOR_REVERT]  a 25% des chances de "recruter" un nouveau [COLOR_UNIT_TEXT]Gladiateur[COLOR_REVERT] après chaque victoire.</French>
+		<French>[COLOR_UNIT_TEXT]Spartacus[COLOR_REVERT] a 25% de chances de "recruter" un nouveau [COLOR_UNIT_TEXT]Gladiateur[COLOR_REVERT] après chaque victoire.</French>
 		<Italian>[COLOR_UNIT_TEXT]Spartaco[COLOR_REVERT] ha il 25% di chance di recrutare un nuovo [COLOR_UNIT_TEXT]Gladiatore[COLOR_REVERT] dopo ogni vittoria in combattimento.</Italian>
 		<Spanish>[COLOR_UNIT_TEXT]Espartaco[COLOR_REVERT] tiene una probabilidad del 25% de reclutar un nuevo [COLOR_UNIT_TEXT]Gladiador[COLOR_REVERT] después de cada combate victorioso.</Spanish>
 		<Polish>[COLOR_UNIT_TEXT]Spartakus[COLOR_REVERT] ma 25% szans "zwerbować" nowego [COLOR_UNIT_TEXT]Gladiatora[COLOR_REVERT] po każdym zwycięstwie w walce.</Polish>
@@ -28062,6 +28069,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SURGEON_PEDIA</Tag>
 		<English>In medicine, a surgeon is a specialist in surgery. Surgery is a broad category of invasive medical treatment that involves the cutting of a body, whether that of a human or a other animal, for a specific reason such as the removal of diseased tissue or to repair a tear or breakage. Surgeons may be physicians, podiatrists, dentists, or veterinarians. Surgeons usually train for longer than other medical specialists.</English>
+		<French>En médecine, un chirurgien est un spécialiste de la chirurgie. La chirurgie est une large catégorie de traitements médicaux invasifs qui impliquent la découpe d'un corps, que ce soit un humain ou un autre animal, pour une raison spécifique telle que l'ablation de tissus malades ou pour réparer une déchirure ou une rupture. Les chirurgiens peuvent être des médecins, des pédiatres, des dentistes ou des vétérinaires. Les chirurgiens s'entraînent généralement plus longtemps que les autres médecins spécialistes.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SURGEON_STRATEGY</Tag>
@@ -28482,6 +28490,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TARGETS_UNIT_FIRST</Tag>
 		<English>[ICON_BULLET]Targets any %s1_unit_list first in combat. If Assassination is possible, these units are also the list of units that may be targeted for assassination.</English>
+		<French>[ICON_BULLET]Cible toutes les unités  %s1_unit_list en premier au combat. Si l'assassinat est possible, ces unités sont également la liste des unités qui peuvent être ciblées pour l'assassinat.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TARIACURI</Tag>
@@ -29487,7 +29496,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRAP_DISABLE_TYPE</Tag>
 		<English>[ICON_BULLET]%d1_Change%% Disable Traps vs [LINK=%s2_Type]%s3_TypeName[\LINK]</English>
-		<French>[ICON_BULLET]%d1_Change%% Désactive les pièges  [LINK=%s2_Type]%s3_TypeName[\LINK]</French>
+		<French>[ICON_BULLET]%d1_Change%% Désactive les pièges [LINK=%s2_Type]%s3_TypeName[\LINK]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRAP_IMMUNE_TYPE</Tag>
@@ -29497,7 +29506,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRAP_NUM_ACTIVE_TRIGGERS</Tag>
 		<English>[ICON_BULLET]May be triggered %d1_value times before final destruction.(%d2_rem remaining)</English>
-		<French>[ICON_BULLET]Peut être déclenché %d1_value fois avant sa destruction finale.(%d2_rem remaining)</French>
+		<French>[ICON_BULLET]Peut être déclenché %d1_value fois avant sa destruction finale.(%d2_rem restant)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRAP_NUM_TRIGGERS</Tag>
@@ -31643,7 +31652,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_WISE_WOMAN</Tag>
 		<English>Wise Woman</English>
 		<French>
-			<Text>Vieille Femme</Text>
+			<Text>Soigneuse</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -31655,7 +31664,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WISE_WOMAN_STRATEGY</Tag>
 		<English>Use the [COLOR_UNIT_TEXT]Wise Woman[COLOR_REVERT] to heal units, develop early healing experience awards, and aid in keeping disease under control in your earliest cities. They are extremely useful, but expensive to produce and maintain.  Additionally, Wise Women require Wild Herbs in the city in which they are built. The Wise Woman can be upgraded to an [COLOR_UNIT_TEXT]Healer[COLOR_REVERT], after discovering Naturopathy.</English>
-		<French>Utilisez les [COLOR_UNIT_TEXT]Vieilles femmes[COLOR_REVERT] pour soigner vos unités, développer de l'expérience en soin, et garder sous contrôle la prolifération de maladies dans vos villes primitives. Elles sont extrêmement utiles, mais cher à produire et entretenir. De plus, il est nécessaire d'avoir une parcelle d'herbes sauvages pour pouvoir recruter une vieille femme. Après la découverte de la Naturopathie, elles peuvent être améliorées en [COLOR_UNIT_TEXT]Guérisseurs[COLOR_REVERT].</French>
+		<French>Utilisez les [COLOR_UNIT_TEXT]Soigneuses[COLOR_REVERT] pour soigner vos unités, développer de l'expérience en soin, et garder sous contrôle la prolifération de maladies dans vos villes primitives. Elles sont extrêmement utiles, mais cher à produire et entretenir. De plus, il est nécessaire d'avoir une parcelle d'herbes sauvages pour pouvoir recruter une soigneuse. Après la découverte de la Naturopathie, elles peuvent être améliorées en [COLOR_UNIT_TEXT]Guérisseurs[COLOR_REVERT].</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WITCH_DOCTOR</Tag>
@@ -31812,7 +31821,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WORKBOAT_ANCIENT_STRATEGY</Tag>
 		<English>Earliest [COLOR_UNIT_TEXT]Workboat[COLOR_REVERT] unit with slowest work rate. Unarmed vessels that can create fishing boats, whaling boats, and (in late game) oil rigs. [COLOR_UNIT_TEXT]Work Boats[COLOR_REVERT] cannot enter Ocean spaces. </English>
-		<French>Unité la plus ancienne de [COLOR_UNIT_TEXT]bateau-atelier[COLOR_REVERT]avec un rythme de travail le plus lent. Ce sont des bateaux non armés, qui peuvent installer des bateaux de pêche, des baleiniers et (en fin de partie) des plates-formes pétrolières. [COLOR_UNIT_TEXT] Les bateaux-atelier [COLOR_REVERT] ne peuvent pas entrer dans les cases d'océan.</French>
+		<French>Unité la plus ancienne de [COLOR_UNIT_TEXT]bateaux-ateliers[COLOR_REVERT], avec un rythme de travail le plus lent. Ce sont des bateaux non armés, qui peuvent installer des bateaux de pêche, des baleiniers et (en fin de partie) des plates-formes pétrolières. Les [COLOR_UNIT_TEXT]bateaux-ateliers[COLOR_REVERT] ne peuvent pas entrer dans les cases d'océan.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WORKBUFFALO</Tag>
@@ -31906,7 +31915,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WORKER_ANDROID_STRATEGY</Tag>
 		<English>Like [COLOR_UNIT_TEXT]Workers[COLOR_REVERT], [COLOR_UNIT_TEXT]Androids[COLOR_REVERT] improve the land around your cities and build roads that help establish trade routes. (They are twice as fast as [COLOR_UNIT_TEXT]Workers[COLOR_REVERT] and their movement isn't slowed down by terrain)</English>
-		<French>Comme les  [COLOR_UNIT_TEXT]Ouvriers[COLOR_REVERT], les [COLOR_UNIT_TEXT]Androides[COLOR_REVERT] améliorent les terres autour de vos villes et construisent des routes qui aident à établir des routes commerciales. (Ils sont deux fois plus rapides que les [COLOR_UNIT_TEXT]Ouvriers[COLOR_REVERT] et leur déplacement n'est pas ralenti par le terrain)</French>
+		<French>Comme les [COLOR_UNIT_TEXT]Ouvriers[COLOR_REVERT], les [COLOR_UNIT_TEXT]Androides[COLOR_REVERT] améliorent les terres autour de vos villes et construisent des routes qui aident à établir des routes commerciales. (Ils sont deux fois plus rapides que les [COLOR_UNIT_TEXT]Ouvriers[COLOR_REVERT] et leur déplacement n'est pas ralenti par le terrain)</French>
 		<Spanish>Al igual que los [COLOR_UNIT_TEXT]Trabajadores[COLOR_REVERT], los [COLOR_UNIT_TEXT]Androides[COLOR_REVERT] mejoran el terreno que rodea a tus ciudades y construyen caminos que te ayuden a establecer rutas comerciales. (Son el doble de rápidos que los [COLOR_UNIT_TEXT]Trabajadores[COLOR_REVERT] y no sufren costes adicionales de movimiento por terreno)</Spanish>
 		<Polish>Tak jak [COLOR_UNIT_TEXT]Robotnicy[COLOR_REVERT], [COLOR_UNIT_TEXT]Androidy[COLOR_REVERT] poprawiają teren wokół miast oraz budują drogi które pomagają w założeniu szlaków handlowych. (Sa szybsze niż [COLOR_UNIT_TEXT]Robotników[COLOR_REVERT].</Polish>
 	</TEXT>

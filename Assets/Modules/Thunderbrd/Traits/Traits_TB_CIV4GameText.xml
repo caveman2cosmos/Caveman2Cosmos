@@ -189,7 +189,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PACIFIST1</Tag>
 		<English>Pacifist I</English>
-		<French>Pacifistee I</French>
+		<French>Pacifiste I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PACIFIST1_PEDIA</Tag>
@@ -218,7 +218,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PACIFIST2</Tag>
 		<English>Pacifist II</English>
-		<French>Pacifistee II</French>
+		<French>Pacifiste II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PACIFIST2_PEDIA</Tag>
@@ -252,7 +252,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PACIFIST3</Tag>
 		<English>Pacifist III</English>
-		<French>Pacifistee III</French>
+		<French>Pacifiste III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PACIFIST3_PEDIA</Tag>
@@ -591,7 +591,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE</Tag>
 		<English>Aggressive</English>
-		<French>Agr....essif:Agressive:Agressifs:Agressives</French>
+		<French>Agressif:Agressive:Agressifs:Agressives</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE_STRATEGY</Tag>
@@ -4312,7 +4312,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL</Tag>
 		<English>Agricultural</English>
-		<French>Agricol</French>
+		<French>Agricole</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL_STRATEGY</Tag>
@@ -4356,7 +4356,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL1</Tag>
 		<English>Agricultural I</English>
-		<French>Agricol I</French>
+		<French>Agricole I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL1_PEDIA</Tag>
@@ -4394,7 +4394,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL2</Tag>
 		<English>Agricultural II</English>
-		<French>Agricol II</French>
+		<French>Agricole II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL2_PEDIA</Tag>
@@ -4430,7 +4430,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL3</Tag>
 		<English>Agricultural III</English>
-		<French>Agricol III</French>
+		<French>Agricole III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL3_PEDIA</Tag>
@@ -6235,7 +6235,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ISOLATIONIST1</Tag>
 		<English>Isolationist I</English>
-		<French>Isolationistee I</French>
+		<French>Isolationiste I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ISOLATIONIST1_PEDIA</Tag>
@@ -6274,7 +6274,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ISOLATIONIST2</Tag>
 		<English>Isolationist II</English>
-		<French>Isolationistee II</French>
+		<French>Isolationiste II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ISOLATIONIST2_PEDIA</Tag>
@@ -6314,7 +6314,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ISOLATIONIST3</Tag>
 		<English>Isolationist III</English>
-		<French>Isolationistee III</French>
+		<French>Isolationiste III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ISOLATIONIST3_PEDIA</Tag>
@@ -7740,7 +7740,7 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POPULIST</Tag>
 		<English>Populist</English>
-		<French>Poppuliste</French>
+		<French>Populiste</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POPULIST_STRATEGY</Tag>
@@ -7786,7 +7786,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POPULIST1</Tag>
 		<English>Populist I</English>
-		<French>Poppuliste I</French>
+		<French>Populiste I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POPULIST1_PEDIA</Tag>
@@ -7822,7 +7822,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POPULIST2</Tag>
 		<English>Populist II</English>
-		<French>Poppuliste II</French>
+		<French>Populiste II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POPULIST2_PEDIA</Tag>
@@ -7858,7 +7858,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POPULIST3</Tag>
 		<English>Populist III</English>
-		<French>Poppuliste III</French>
+		<French>Populiste III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POPULIST3_PEDIA</Tag>
@@ -8047,12 +8047,12 @@ Penalties:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FOREIGN</Tag>
 		<English>Foreigner</English>
-		<French>Lointainer</French>
+		<French>Etranger</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FOREIGN_STRATEGY</Tag>
 		<English>Has difficulty with resistance to his authority and government doesn't function very well as a result.  Others resist any changes he wishes to implement.  National Pride is lacking (-Culture) and foreign sympathies leaves him blinded (-Espionage)</English>
-		<French>A du mal à résister à son autorité et le gouvernement ne fonctionne pas très bien en conséquence. D'autres résistent à tout changement qu'il souhaite mettre en œuvre. La fierté nationale fait défaut (-Culture) et les sympathies étrangères le rendent aveugle (-Espionnage)</French>
+		<French>A du mal avec l'opposition à son autorité et le gouvernement ne fonctionne pas très bien en conséquence. D'autres résistent à tout changement qu'il souhaite mettre en oeuvre. La fierté nationale fait défaut (-Culture) et les sympathies étrangères le rendent aveugle (-Espionnage)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FOREIGN_PEDIA</Tag>
@@ -8089,7 +8089,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FOREIGN1</Tag>
 		<English>Foreigner I</English>
-		<French>Lointainer I</French>
+		<French>Etranger I</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FOREIGN1_PEDIA</Tag>
@@ -8124,7 +8124,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FOREIGN2</Tag>
 		<English>Foreigner II</English>
-		<French>Lointainer II</French>
+		<French>Etranger II</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FOREIGN2_PEDIA</Tag>
@@ -8160,7 +8160,7 @@ Benefits:
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FOREIGN3</Tag>
 		<English>Foreigner III</English>
-		<French>Lointainer III</French>
+		<French>Etranger III</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FOREIGN3_PEDIA</Tag>

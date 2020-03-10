@@ -3,18 +3,22 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HIERACOSPHINX_BREEDER</Tag>
 		<English>Hieracosphinx Breeder</English>
+		<French>Eleveur de Hiéracosphinx</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MYTHICAL_BREEDER_STRATEGY</Tag>
 		<English>Breed mythical creatures for trade.</English>
+		<French>Élevez des créatures mythiques pour en faire le commerce.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MYTHICAL_BREEDER_PEDIA</Tag>
 		<English>Provides bonuses in the Nobleguarden</English>
+		<French>Fournit des bonus dans le Jardin des nobles</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HIERACOSPHINX</Tag>
 		<English>Hieracosphinx</English>
+		<French>Hiéracosphinx</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HIERACOSPHINX_PEDIA</Tag>
@@ -23,22 +27,27 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_QILIN_BREEDER</Tag>
 		<English>Qilin Breeder</English>
+		<French>Eleveur de Qilin</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_QILIN</Tag>
 		<English>Qilin</English>
+		<French>Qilin</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_QILIN_PEDIA</Tag>
 		<English>The qilin is a mythical hooved chimerical creature known in Chinese and other East Asian cultures, said to appear with the imminent arrival or passing of a sage or illustrious ruler. It is a good omen thought to occasion prosperity or serenity. It is often depicted with what looks like fire all over its body.[PARAGRAPH:2]Source:Wikipedia</English>
+		<French>Le qilin est une créature chimérique mythique à sabots connue dans les cultures chinoise et asiatique, censée apparaître avec l'arrivée ou le passage imminent d'un sage ou d'un souverain illustre. C'est un bon présage pensé pour engendrer la prospérité ou la sérénité. Il est souvent représenté avec ce qui ressemble à du feu sur tout son corps. [PARAGRAPHE: 2] Source: Wikipedia</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PEGASUS_BREEDER</Tag>
 		<English>Pegasus Breeder</English>
+		<French>Eleveur de Pégase</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PEGASUS</Tag>
 		<English>Pegasus</English>
+		<French>Pégase</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PEGASUS_PEDIA</Tag>
@@ -47,46 +56,57 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PHOENIX_BREEDER</Tag>
 		<English>Phoenix Breeder</English>
+		<French>Eleveur de Phénix</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PHOENIX</Tag>
 		<English>Phoenix</English>
+		<French>Phénix</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PHOENIX_PEDIA</Tag>
 		<English>In Greek mythology, a phoenix or phenix is a long-lived bird that is cyclically regenerated or reborn. Associated with the sun, a phoenix obtains new life by arising from the ashes of its predecessor. According to some sources, the phoenix dies in a show of flames and combustion, although there are other sources that claim that the legendary bird dies and simply decomposes before being born again. According to some texts, the phoenix could live over 1,400 years before rebirth. Herodotus, Lucan, Pliny the Elder, Pope Clement I, Lactantius, Ovid, and Isidore of Seville are among those who have contributed to the retelling and transmission of the phoenix motif.[PARAGRAPH:2]Source:Wikipedia</English>
+		<French>Dans la mythologie grecque, un phénix ou phénix est un oiseau à vie longue qui se régénère ou renaît cycliquement. Associé au soleil, un phénix retrouve une nouvelle vie en surgissant des cendres de son prédécesseur. Selon certaines sources, le phénix meurt dans une série de flammes et de combustion, bien qu'il existe d'autres sources qui affirment que l'oiseau légendaire meurt et se décompose simplement avant de naître de nouveau. Selon certains textes, le phénix pourrait vivre plus de 1 400 ans avant sa renaissance. Hérodote, Lucan, Pline l'Ancien, le pape Clément I, Lactantius, Ovid et Isidore de Séville font partie de ceux qui ont contribué à raconter et à transmettre le motif du phénix. [PARAGRAPH: 2] Source: Wikipedia</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JACKALOPE_BREEDER</Tag>
 		<English>Jackalope Breeder</English>
+		<French>Eleveur de Jackalope</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_JACKALOPE</Tag>
 		<English>Jackalope</English>
+		<French>Jackalope</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_JACKALOPE_PEDIA</Tag>
 		<English>The jackalope is a mythical animal of North American folklore (a so-called fearsome critter) described as a jackrabbit with antelope horns. The word "jackalope" is a portmanteau of "jackrabbit" and "antelope", although the jackrabbit is not a rabbit, and the American antelope is not an antelope. Also, many jackalope taxidermy mounts, including the original, are actually made with deer antlers.[PARAGRAPH:2]In the 1930s, Douglas Herrick and his brother, hunters with taxidermy skills, popularized the American jackalope by grafting deer antlers onto a jackrabbit carcass and selling the combination to a local hotel in Douglas, Wyoming. Thereafter, they made and sold many similar jackalopes to a retail outlet in South Dakota, and another taxidermist continues to manufacture the horned rabbits in the 21st century. Stuffed and mounted, jackalopes are found in many bars and other places in the United States; stores catering to tourists sell jackalope postcards and other paraphernalia, and commercial entities in America and elsewhere have used the word "jackalope" or a jackalope logo as part of their marketing strategies. The jackalope has appeared in published stories, poems, television shows, video games, and a low-budget mockumentary film. The Wyoming Legislature has considered bills to make the jackalope the state's official mythological creature.[PARAGRAPH:2]The underlying legend of the jackalope, upon which the Wyoming taxidermists were building, may be related to similar stories in other cultures and other historical times. Researchers suggest that at least some of the tales of horned hares were inspired by sightings of rabbits infected with the Shope papilloma virus. It causes horn- and antler-like tumors to grow in various places on a rabbit's head and body.[PARAGRAPH:2]Source:Wikipedia</English>
+		<French>Le jackalope est un animal mythique du folklore nord-américain (une créature dite redoutable) décrit comme un jackrabbit avec des cornes d'antilope. Le mot "jackalope" est un portemanteau de "jackrabbit" et "antelope", bien que le jackrabbit ne soit pas un lapin, et l'antilope américaine n'est pas une antilope. De plus, de nombreuses montures de taxidermie de jackalope, y compris l'original, sont en fait faites de bois de cerf. [PARAGRAPHE: 2] Dans les années 1930, Douglas Herrick et son frère, chasseurs ayant des compétences en taxidermie, ont popularisé le jackalope américain en greffant des bois de cerf sur une carcasse de jackrabbit. et la vente de la combinaison à un hôtel local à Douglas, Wyoming. Par la suite, ils ont fabriqué et vendu de nombreux jackalopes similaires à un point de vente au Dakota du Sud, et un autre taxidermiste continue de fabriquer des lapins à cornes au 21e siècle. Farcis et montés, les chacalopes se trouvent dans de nombreux bars et autres endroits aux États-Unis; les magasins destinés aux touristes vendent des cartes postales de jackalope et d'autres accessoires, et des entités commerciales en Amérique et ailleurs ont utilisé le mot "jackalope" ou un logo de jackalope dans le cadre de leurs stratégies de marketing. Le jackalope est apparu dans des histoires publiées, des poèmes, des émissions de télévision, des jeux vidéo et un film factice à petit budget. La législature du Wyoming a examiné des projets de loi visant à faire du jackalope la créature mythologique officielle de l'État. [PARAGRAPHE: 2] La légende sous-jacente du jackalope, sur laquelle les taxidermistes du Wyoming construisaient, peut être liée à des histoires similaires dans d'autres cultures et à d'autres époques historiques. Les chercheurs suggèrent qu'au moins certains des contes de lièvres cornus ont été inspirés par des observations de lapins infectés par le virus du papillome Shope. Il provoque la croissance de tumeurs semblables à des cornes et des bois à divers endroits de la tête et du corps d'un lapin. [PARAGRAPH: 2] Source: Wikipedia</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_QUETZALCOATL_BREEDER</Tag>
 		<English>Quetzalcoatl Breeder</English>
+		<French>Eleveur de Quetzalcoatl</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_QUETZALCOATL</Tag>
 		<English>Quetzalcoatl</English>
+		<French>Quetzalcoatl</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_QUETZALCOATL_PEDIA</Tag>
 		<English>Quetzalcoatl  is a Mesoamerican deity whose name comes from the Nahuatl language and means "feathered serpent". The worship of a feathered serpent is first known documented in Teotihuacan in the first century BC or first century AD. That period lies within the Late Preclassic to Early Classic period (400 BC - 600 AD) of Mesoamerican chronology, and veneration of the figure appears to have spread throughout Mesoamerica by the Late Classic (600900 AD).[PARAGRAPH:2]In the Postclassic period (900-1519 AD), the worship of the feathered serpent deity was based in the primary Mexican religious center of Cholula. It is in this period that the deity is known to have been named "Quetzalcoatl" by his Nahua followers. In the Maya area he was approximately equivalent to Kukulcan and Gukumatz, names that also roughly translate as "feathered serpent" in different Mayan languages.[PARAGRAPH:2]A prominent symbol of the priests of Quetzalcoatl was a symbol known in Nahuatl as a "ehecacozcatl" which translates in to English as a "wind gem." This talisman was a conch shell cut at the cross-section and was likely worn as a necklace by religious rulers as they have been discovered in burials in archaeological sites throughout Mesoamerica and potentially symbolized patterns witnessed in hurricanes, dust devils, seashells, and whirlpools which were elemental forces that had meaning in the Aztec religious mythology. In codex drawings showing Quetzalcoatl and Xolotl. They are both pictured wearing an ehecaicozcatl around each of their necks. There has also been at least one major cache of offerings with knives and idols adorned with the symbols of more than one god, some of which were adorned with wind jewels.[PARAGRAPH:2]Source:Wikipedia</English>
+		<French>Quetzalcoatl est une divinité méso-américaine dont le nom vient de la langue nahuatl et signifie «serpent à plumes». Le culte d'un serpent à plumes est connu pour la première fois à Teotihuacan au premier siècle avant JC ou au premier siècle après JC. Cette période se situe dans la période préclassique tardive au début du classique (400 avant JC - 600 après JC) de la chronologie mésoaméricaine, et la vénération de la figure semble s'être répandue dans toute la Mésoamérique par le classique tardif (600 900 AD). [PARAGRAPHE: 2] Dans la postclassique période (900-1519 AD), le culte de la divinité serpent à plumes était basé dans le principal centre religieux mexicain de Cholula. C'est à cette période que la divinité est connue pour avoir été nommée "Quetzalcoatl" par ses disciples Nahua. Dans la région maya, il était à peu près équivalent à Kukulcan et Gukumatz, des noms qui se traduisent aussi grossièrement par "serpent à plumes" dans différentes langues mayas. [PARAGRAPHE: 2] Un symbole important des prêtres de Quetzalcoatl était un symbole connu à Nahuatl comme " ehecacozcatl "qui se traduit en anglais par un" joyau du vent ". Ce talisman était une coquille de conque coupée à la section transversale et était probablement porté comme un collier par des dirigeants religieux car ils ont été découverts dans des enterrements dans des sites archéologiques à travers la Méso-Amérique et des motifs potentiellement symbolisés observés dans des ouragans, des diables de poussière, des coquillages et des tourbillons qui étaient des forces élémentaires qui avaient un sens dans la mythologie religieuse aztèque. Dans les dessins du codex montrant Quetzalcoatl et Xolotl. Ils sont tous les deux représentés portant un ehecaicozcatl autour de chacun de leurs cous. Il y a également eu au moins une importante cache d'offrandes avec des couteaux et des idoles ornés des symboles de plus d'un dieu, dont certains étaient ornés de bijoux de vent. [PARAGRAPH: 2] Source: Wikipedia</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RAINBOW_SERPENT_BREEDER</Tag>
 		<English>Rainbow Serpent Breeder</English>
+		<French>Eleveur de Serpent Arc-en-ciel</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RAINBOW_SERPENT</Tag>
 		<English>Rainbow Serpent</English>
+		<French>Serpent Arc-en-ciel</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RAINBOW_SERPENT_PEDIA</Tag>
@@ -95,193 +115,241 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NOBLEGARDEN</Tag>
 		<English>Noblegarden</English>
+		<French>Jardin des Nobles</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NOBLEGARDEN_STRATEGY</Tag>
 		<English>Get the most out of your Mythical Beasts</English>
+		<French>Tirez le meilleur parti de vos bêtes mythiques</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NOBLEGARDEN_PEDIA</Tag>
 		<English>Noblegarden</English>
+		<French>Jardin des Nobles</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHILEHAUS</Tag>
 		<English>Chilehaus</English>
+		<French>Maison de Chile</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHILEHAUS_STRATEGY</Tag>
 		<English>Reduce the cost of building modern offices and increase the chance of a Great Statesman.</English>
+		<French>Réduisez le coût de construction de bureaux modernes et augmentez les chances d'un grand homme d'État.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHILEHAUS_PEDIA</Tag>
 		<English>The Chilehaus (Chile House) is a ten-story office building in Hamburg, Germany. It is located in the Kontorhausviertel. It is an exceptional example of the 1920s Brick Expressionism style of architecture. This large angular building is located on a site of approximately 6,000m², spanning the Fischertwiete Street in Hamburg. It was designed by the German architect Fritz Höger and finished in 1924.[PARAGRAPH:2]The Chilehaus building is famed for its top, which is reminiscent of a ship's prow, and the facades, which meet at a very sharp angle at the corner of the Pumpen- and Niedernstrasse. The best view of the building is from the east. Because of the accentuated vertical elements and the recessed upper stories, as well as the curved facade on the Pumpen street, the building has, despite its enormous size, a touch of lightness.[PARAGRAPH:2]The building has a reinforced concrete structure and has been built with the use of 4.8 million dark Oldenburg bricks. The building is constructed on very difficult terrain, so to gain stability it was necessary to build on 16-meter-deep reinforced-concrete pilings.[PARAGRAPH:2]The location's close vicinity to the Elbe River necessitated a specially sealed cellar, and heating equipment was constructed in a caisson that can float within the building, so the equipment can't be damaged in the event of flooding.[PARAGRAPH:2]The sculptural elements in the staircases and on the facade were provided by the sculptor Richard Kuöhl.[PARAGRAPH:2]The building hosts one of the few remaining working paternosters in the world.[PARAGRAPH:2]Source:Wikipedia</English>
+		<French>The Maison de Chile (Chile House) is a ten-story office building in Hamburg, Germany. It is located in the Kontorhausviertel. It is an exceptional example of the 1920s Brick Expressionism style of architecture. This large angular building is located on a site of approximately 6,000m², spanning the Fischertwiete Street in Hamburg. It was designed by the German architect Fritz Höger and finished in 1924.[PARAGRAPH:2]The Maison de Chile building is famed for its top, which is reminiscent of a ship's prow, and the facades, which meet at a very sharp angle at the corner of the Pumpen- and Niedernstrasse. The best view of the building is from the east. Because of the accentuated vertical elements and the recessed upper stories, as well as the curved facade on the Pumpen street, the building has, despite its enormous size, a touch of lightness.[PARAGRAPH:2]The building has a reinforced concrete structure and has been built with the use of 4.8 million dark Oldenburg bricks. The building is constructed on very difficult terrain, so to gain stability it was necessary to build on 16-meter-deep reinforced-concrete pilings.[PARAGRAPH:2]The location's close vicinity to the Elbe River necessitated a specially sealed cellar, and heating equipment was constructed in a caisson that can float within the building, so the equipment can't be damaged in the event of flooding.[PARAGRAPH:2]The sculptural elements in the staircases and on the facade were provided by the sculptor Richard Kuöhl.[PARAGRAPH:2]The building hosts one of the few remaining working paternosters in the world.[PARAGRAPH:2]Source:Wikipedia</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COSMONAUT_TRAINING_CENTRE</Tag>
 		<English>Cosmonaut Training Centre</English>
+		<French>Centre de formation des cosmonautes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COSMONAUT_TRAINING_CENTRE_STRATEGY</Tag>
 		<English>Reduce the cost of building space ship parts and military units.</English>
+		<French>Réduisez le coût de construction de pièces de vaisseaux spatiaux et d'unités militaires.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COSMONAUT_TRAINING_CENTRE_PEDIA</Tag>
 		<English>Cosmonauts of the Russian Federal Space Agency, and the Soviet space program before it, have lived and trained in Star City since the 1960s. In the Soviet era the location was a highly secret and guarded military installation, access to which was severely restricted. Many Russian cosmonauts, past and present, and Training Centre's personnel, live in Star City with their families. The facility has its own post office, high school, shops, child day care/kindergarten, movie theater, sports and recreation facilities, railway station, and a museum of space travel and human exploration. Air transportation is available through nearby Chkalovsky Airport - from where also Weightlessness trainings in the Il-76MDK and Zero Gravity flights for the public take place through MiGFlug.[PARAGRAPH:2]In the summer 1992, American "Youth Science Ambassadors" sponsored by People to People International were hosted at Star City where they were treated to a presentation by cosmonaut Anatoly Artsebarsky. In the mid- to late 1990s, groups of select students from high school in Star City participated in the Russian American Cultural Exchange Program (RACE). Students first hosted, then visited, American counterparts attending five high schools in the United States of America.[PARAGRAPH:2]There is a statue of the "space dog" Laika, the first animal to orbit the earth, in Star City. [PARAGRAPH:2]Source: Wikipedia</English>
+		<French>Les cosmonautes de l'Agence spatiale fédérale russe et du programme spatial soviétique qui l'a précédée vivent et s'entraînent à Star City depuis les années 1960. À l'époque soviétique, l'emplacement était une installation militaire hautement secrète et gardée, dont l'accès était sévèrement restreint. De nombreux cosmonautes russes, passés et présents, et le personnel du centre de formation, vivent à Star City avec leurs familles. L'établissement possède son propre bureau de poste, une école secondaire, des magasins, une garderie / jardin d'enfants, une salle de cinéma, des installations sportives et récréatives, une gare et un musée des voyages dans l'espace et de l'exploration humaine. Le transport aérien est disponible via l'aéroport Chkalovsky à proximité - d'où également des formations en apesanteur sur les vols Il-76MDK et Zero Gravity pour le public via MiGFlug. [PARAGRAPHE: 2] À l'été 1992, des «Youth Science Ambassadors» américains parrainés par People à People International ont été accueillis à Star City où ils ont eu droit à une présentation du cosmonaute Anatoly Artsebarsky. Du milieu à la fin des années 90, des groupes d'élèves sélectionnés du secondaire de Star City ont participé au programme d'échange culturel russo-américain (RACE). Les étudiants ont d'abord accueilli, puis visité, leurs homologues américains fréquentant cinq lycées aux États-Unis d'Amérique. [PARAGRAPHE: 2] Il y a une statue du "chien spatial" Laika, le premier animal en orbite autour de la terre, à Star City. [PARAGRAPHE: 2] Source: Wikipedia</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DALI_THEATRE</Tag>
 		<English>Dali Theatre and Museum</English>
+		<French>Le Théatre et Musée Dali</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DALI_THEATRE_STRATEGY</Tag>
 		<English>Increase the chance of a Great Artist.</English>
+		<French>Augmentez les chances de génération d'un Artiste illustre.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DALI_THEATRE_PEDIA</Tag>
 		<English>The Dalí Theatre and Museum, is a museum of the artist Salvador Dalí in his home town of Figueres, in Catalonia, Spain. Dali is buried there in a crypt below the stage.[PARAGRAPH:2]Source:Wikipedia</English>
+		<French>Le Théâtre et Musée Dalí, est un musée de l'artiste Salvador Dalí dans sa ville natale de Figueres, en Catalogne, en Espagne. Dali est enterré là dans une crypte sous la scène. [PARAGRAPHE: 2] Source: Wikipedia</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LAS_MEDULAS</Tag>
 		<English>Las Medulas</English>
+		<French>Las Medulas</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LAS_MEDULAS_STRATEGY</Tag>
 		<English>Increase the chance of a Great Engineer.</English>
+		<French>Augmentez les chances de génération d'un XXX Illustre. Engineer.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LAS_MEDULAS_PEDIA</Tag>
 		<English>Las Médulas (Galician: As Médulas) is a historic mining site near the town of Ponferrada in the region of El Bierzo (province of León, Castile and León, Spain), which used to be the most important gold mine in the Roman Empire. Las Médulas Cultural Landscape is listed by the UNESCO as one of the World Heritage Sites. Advanced aerial surveys conducted in 2014 using LIDAR have confirmed the wide extent of the Roman-era works.[PARAGRAPH:2]The spectacular landscape of Las Médulas resulted from the ruina montium, a Roman mining technique described by Pliny the Elder in 77 AD. The technique employed was a type of hydraulic mining which involved undermining a mountain with large quantities of water. The water was supplied by interbasin transfer. At least seven long aqueducts tapped the streams of the La Cabrera district (where the rainfall in the mountains is relatively high) at a range of altitudes. The same aqueducts were used to wash the extensive gold deposits.[PARAGRAPH:2]The area Hispania Tarraconensis had been invaded in 25 BC by the emperor Augustus. Prior to the Roman conquest the indigenous inhabitants obtained gold from alluvial deposits. Large-scale production did not begin until the second half of the 1st century AD.[PARAGRAPH:2]Source:Wikipedia</English>
+		<French>Las Médulas (Galicien: As Médulas) est un site minier historique près de la ville de Ponferrada dans la région d'El Bierzo (province de León, Castille et León, Espagne), qui était la mine d'or la plus importante de l'Empire romain. Le paysage culturel de Las Médulas est classé par l'UNESCO comme l'un des sites du patrimoine mondial. Des prospections aériennes avancées menées en 2014 à l'aide du LIDAR ont confirmé l'étendue des travaux de l'époque romaine. [PARAGRAPHE: 2] Le paysage spectaculaire de Las Médulas résulte de la ruine montium, une technique minière romaine décrite par Pline l'Ancien en 77 après JC. La technique employée était un type d'exploitation hydraulique qui consistait à saper une montagne avec de grandes quantités d'eau. L'eau était fournie par transfert entre bassins. Au moins sept longs aqueducs ont exploité les ruisseaux du quartier de La Cabrera (où les précipitations dans les montagnes sont relativement élevées) à différentes altitudes. Les mêmes aqueducs ont été utilisés pour laver les vastes gisements d'or. [PARAGRAPHE: 2] La zone Hispania Tarraconensis avait été envahie en 25 avant JC par l'empereur Auguste. Avant la conquête romaine, les habitants indigènes obtenaient de l'or des gisements alluviaux. La production à grande échelle n'a commencé que dans la seconde moitié du 1er siècle après JC [PARAGRAPHE: 2] Source: Wikipedia</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LYCEUM</Tag>
 		<English>Lyceum</English>
+		<French>Lyceum</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LYCEUM_STRATEGY</Tag>
 		<English>Increase your science and education.</English>
+		<French>Augmentez votre science et votre éducation.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LYCEUM_PEDIA</Tag>
 		<English>Lyceum is a Latin rendering of the Ancient Greek (Lykeion), the name of a gymnasium in Classical Athens dedicated to Apollo Lyceus. This original lyceum is remembered as the location of the peripatetic school of Aristotle. Some countries derive the name for their modern schools from the Latin but use the Greek name for the ancient school: for example, Dutch has Lykeion (ancient) and Lyceum (modern), both rendered "lyceum" in English (note that in classical Latin the "C" in lyceum was always pronounced as a K, not a soft C, as in modern English).[PARAGRAPH:2]Source: Wikipedia</English>
+		<French>Lyceum est un rendu latin du grec ancien (Lykeion), le nom d'un gymnase d'Athènes classique dédié à Apollon Lycée. Ce lycée original est connu comme l'emplacement de l'école péripatéticienne d'Aristote. Certains pays tirent le nom de leurs écoles modernes du latin mais utilisent le nom grec pour l'ancienne école: par exemple, le néerlandais a Lykeion (ancien) et Lyceum (moderne), tous deux rendus "lyceum" en anglais (notez qu'en latin classique le "C" dans le lycée a toujours été prononcé comme un K, pas un C doux, comme dans l'anglais moderne). [PARAGRAPH: 2] Source: Wikipedia</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUXURY_FURNITURE_WORKSHOP</Tag>
 		<English>Luxury Furniture Workshop</English>
+		<French>Atelier de meubles de luxe</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUXURY_FURNITURE_WORKSHOP_STRATEGY</Tag>
 		<English>Increase the income from your Elite Housing.</English>
+		<French>Augmentez les revenus de vos logements des élites.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUXURY_FURNITURE_WORKSHOP_PEDIA</Tag>
 		<English>This building represents the need for extremely high status goods needed by the highest class of housing</English>
+		<French>Ce bâtiment représente le besoin de biens de très haute qualité nécessaires à la plus haute classe de logements</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORGAN_HALL</Tag>
 		<English>Organ Hall</English>
+		<French>Salle d'orgue</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORGAN_HALL_STRATEGY</Tag>
 		<English>Increase the number of artists available.</English>
+		<French>Augmentez le nombre d'artistes disponibles.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORGAN_HALL_PEDIA</Tag>
 		<English>The pipe organ is a musical instrument that produces sound by driving pressurized air (called wind) through pipes selected via a keyboard. Because each organ pipe produces a single pitch, the pipes are provided in sets called ranks, each of which has a common timbre and volume throughout the keyboard compass. Most organs have multiple ranks of pipes of differing timbre, pitch and volume that the player can employ singly or in combination through the use of controls called stops.[PARAGRAPH:2]A pipe organ has one or more keyboards played by the hands (called manuals), and a pedalboard played by the feet; each keyboard has its own group of stops. The keyboard(s), pedalboard, and stops are housed in the organ's console. The organ's continuous supply of wind allows it to sustain notes for as long as the corresponding keys are depressed, unlike the piano and harpsichord whose sound begins to decay immediately after attack. The smallest portable pipe organs may have only one or two dozen pipes and one manual; the largest may have over 20,000 pipes and seven manuals. A list of some of the most notable and largest pipe organs in the world can be viewed at List of pipe organs.[PARAGRAPH:2]The origins of the pipe organ can be traced back to the water organ in Ancient Greece in the 3rd century BC, in which the wind supply was created with water pressure. By the 6th or 7th century AD, bellows were used to supply organs with wind. Beginning in the 12th century, the organ began to evolve into a complex instrument capable of producing different timbres. A pipe organ with "great leaden pipes" was sent to the West by the Byzantine emperor Constantine V as a gift to Pepin the Short, King of the Franks, in 757. Pepin's son Charlemagne requested a similar organ for his chapel in Aachen in 812, beginning its establishment in Western church music. By the 17th century, most of the sounds available on the modern classical organ had been developed. From that time, the pipe organ was the most complex man-made device, a distinction it retained until it was displaced by the telephone exchange in the late 19th century.[PARAGRAPH:2]Pipe organs are installed in churches, synagogues, concert halls, schools, and other public buildings and are used for the performance of classical music, sacred music, secular music and popular music. In the early 20th century, pipe organs were installed in theaters to accompany films during the silent movie era, in municipal auditoria, where orchestral transcriptions were popular, and in the homes of the wealthy, equipped with player mechanisms. The beginning of the 21st century has seen a resurgence in installations in concert halls. The organ boasts a substantial repertoire, which spans over 500 years.[PARAGRAPH:2]Source:Wikipedia</English>
+		<French>L'orgue à tuyaux est un instrument de musique qui produit du son en entraînant de l'air sous pression (appelé vent) à travers des tuyaux sélectionnés via un clavier. Parce que chaque tuyau d'orgue produit une hauteur unique, les tuyaux sont fournis dans des ensembles appelés rangs, chacun ayant un timbre et un volume communs dans la boussole du clavier. La plupart des orgues ont plusieurs rangées de tuyaux de timbre, hauteur et volume différents que le joueur peut utiliser individuellement ou en combinaison grâce à des commandes appelées arrêts. [PARAGRAPHE: 2] Un orgue à tuyaux a un ou plusieurs claviers joués par les mains (appelés manuels) et un pédalier joué par les pieds; chaque clavier a son propre groupe d'arrêts. Le ou les claviers, le pédalier et les jeux sont logés dans la console de l'orgue. L'apport continu de vent de l'orgue lui permet de maintenir les notes aussi longtemps que les touches correspondantes sont enfoncées, contrairement au piano et au clavecin dont le son commence à décliner immédiatement après l'attaque. Les plus petits orgues à tuyaux portatifs peuvent avoir seulement une ou deux douzaines de tuyaux et un manuel; le plus grand peut avoir plus de 20 000 tuyaux et sept manuels. Une liste de certains des orgues à tuyaux les plus remarquables et les plus grands au monde peut être consultée sur la liste des orgues à tuyaux. [PARAGRAPHE: 2] Les origines de l'orgue à tuyaux remontent à l'orgue à eau de la Grèce antique au IIIe siècle. BC, dans lequel l'approvisionnement en vent a été créé avec la pression de l'eau. Au 6ème ou 7ème siècle après JC, le soufflet était utilisé pour alimenter les organes en vent. À partir du XIIe siècle, l'orgue a commencé à évoluer vers un instrument complexe capable de produire différents timbres. Un orgue à tuyaux avec de "grands tuyaux en plomb" a été envoyé en Occident par l'empereur byzantin Constantin V en cadeau à Pépin le Bref, roi des Francs, en 757. Le fils de Pépin Charlemagne a demandé un orgue similaire pour sa chapelle à Aix-la-Chapelle en 812 , commençant son implantation dans la musique ecclésiastique occidentale. Au 17ème siècle, la plupart des sons disponibles sur l'orgue classique moderne avaient été développés. À partir de cette époque, l'orgue à tuyaux était l'instrument artificiel le plus complexe, distinction qu'il a conservée jusqu'à ce qu'il soit déplacé par le central téléphonique à la fin du XIXe siècle. [PARAGRAPHE: 2] Les orgues à tuyaux sont installés dans les églises, les synagogues, les salles de concert , les écoles et autres bâtiments publics et sont utilisés pour la performance de la musique classique, la musique sacrée, la musique profane et la musique populaire. Au début du XXe siècle, des orgues à tuyaux ont été installés dans les théâtres pour accompagner les films pendant l'ère du cinéma muet, dans les auditoriums municipaux, où les transcriptions orchestrales étaient populaires, et dans les maisons des riches, équipées de mécanismes de jeu. Le début du 21e siècle a vu une résurgence des installations dans les salles de concert. L'orgue possède un répertoire substantiel, qui s'étend sur plus de 500 ans. [PARAGRAPHE: 2] Source: Wikipedia</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TELESCREEN</Tag>
 		<English>Telescreen</English>
+		<French>Télécran</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TELESCREEN_STRATEGY</Tag>
 		<English>Watch over your people.</English>
+		<French>Veillez sur votre peuple.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TELESCREEN_PEDIA</Tag>
 		<English>Telescreens are fictional devices which operate as both televisions and security cameras. They feature in George Orwell's novel Nineteen Eighty-Four as well as all film adaptations of the novel. In the novel and its adaptations, telescreens are used by the ruling Party in Oceania to keep its subjects under constant surveillance, thus eliminating the chance of secret conspiracies against Oceania.[PARAGRAPH:2]All members of the Inner Party (upper-class) and Outer Party (middle-class) have telescreens in their homes, but the proles (lower-class) are not typically monitored as they are unimportant to the Party. As later explained in Emmanuel Goldstein's book of which Smith reads some excerpts, the Party does not feel threatened by the Proles, assuming that they would never rebel on their own, and therefore does not find a need to monitor their daily lives.[PARAGRAPH:2]The character O'Brien claims that he, as a member of the Inner Party, can turn off his telescreen (although etiquette dictates only for half an hour at a time). While the programmes could no longer be seen or heard, the screen still functioned as a surveillance device, as after Winston is taken into the Ministry of Love, the audio of his meeting with O'Brien with the telescreen "off" is played back to Winston. The screens are monitored by the Thought Police. However, it is not clear how many screens are monitored at once, or what the precise criteria (if any) for monitoring a given screen are (although it is seen that during an exercise programme that Winston takes part in every morning, the instructor can see him, meaning telescreens are possibly an early variant of videophones). Telescreen cameras do not have night vision technology, thus, they cannot monitor in the dark. This is compensated by the fact that their microphones are incredibly sensitive, and they are said to pick up a heartbeat. As Winston describes, "...even a back can be revealing..."[PARAGRAPH:2]In addition to being surveillance devices, telescreens are also televisions (hence the name). It broadcasts propaganda about Oceania's military victories, economic production figures, spirited renditions of the national anthem to heighten patriotism, and Two Minutes Hate, which is a two-minute film of Emmanuel Goldstein's wishes for freedom of speech and press, which the citizens have been trained to disagree with through doublethink. Many of the telescreen programmes are transmitted in Newspeak.[PARAGRAPH:2]Source:Wikipedia</English>
+		<French>Télécrans are fictional devices which operate as both televisions and security cameras. They feature in George Orwell's novel Nineteen Eighty-Four as well as all film adaptations of the novel. In the novel and its adaptations, telescreens are used by the ruling Party in Oceania to keep its subjects under constant surveillance, thus eliminating the chance of secret conspiracies against Oceania.[PARAGRAPH:2]All members of the Inner Party (upper-class) and Outer Party (middle-class) have telescreens in their homes, but the proles (lower-class) are not typically monitored as they are unimportant to the Party. As later explained in Emmanuel Goldstein's book of which Smith reads some excerpts, the Party does not feel threatened by the Proles, assuming that they would never rebel on their own, and therefore does not find a need to monitor their daily lives.[PARAGRAPH:2]The character O'Brien claims that he, as a member of the Inner Party, can turn off his telescreen (although etiquette dictates only for half an hour at a time). While the programmes could no longer be seen or heard, the screen still functioned as a surveillance device, as after Winston is taken into the Ministry of Love, the audio of his meeting with O'Brien with the telescreen "off" is played back to Winston. The screens are monitored by the Thought Police. However, it is not clear how many screens are monitored at once, or what the precise criteria (if any) for monitoring a given screen are (although it is seen that during an exercise programme that Winston takes part in every morning, the instructor can see him, meaning telescreens are possibly an early variant of videophones). Télécran cameras do not have night vision technology, thus, they cannot monitor in the dark. This is compensated by the fact that their microphones are incredibly sensitive, and they are said to pick up a heartbeat. As Winston describes, "...even a back can be revealing..."[PARAGRAPH:2]In addition to being surveillance devices, telescreens are also televisions (hence the name). It broadcasts propaganda about Oceania's military victories, economic production figures, spirited renditions of the national anthem to heighten patriotism, and Two Minutes Hate, which is a two-minute film of Emmanuel Goldstein's wishes for freedom of speech and press, which the citizens have been trained to disagree with through doublethink. Many of the telescreen programmes are transmitted in Newspeak.[PARAGRAPH:2]Source:Wikipedia</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THE_ATOMIUM</Tag>
 		<English>Atomium</English>
+		<French>Atomium</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THE_ATOMIUM_STRATEGY</Tag>
 		<English>Improve your Scientist and Engineer specialists.</English>
+		<French>Améliorez vos spécialistes scientifiques et ingénieurs.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THE_ATOMIUM_PEDIA</Tag>
 		<English>The Atomium is a building in Brussels originally constructed for Expo 58, the 1958 Brussels World's Fair. Designed by the engineer André Waterkeyn and architects André and Jean Polak, it stands 102 m (335 ft) tall. Its nine 18 m (59 ft) diameter stainless steel clad spheres are connected so that the whole forms the shape of a unit cell of an iron crystal magnified 165 billion times. It is a museum. [PARAGRAPH:2]Tubes of 3 m (9.8 ft) diameter connect the spheres along the 12 edges of the cube and all eight vertices to the centre. They enclose stairs, escalators and a lift (in the central, vertical tube) to allow access to the five habitable spheres which contain exhibit halls and other public spaces. The top sphere includes a restaurant which has a panoramic view of Brussels. CNN named it Europe's most bizarre building.[PARAGRAPH:2]Source:Wikipedia</English>
+		<French>L'Atomium est un bâtiment à Bruxelles construit à l'origine pour l'Expo 58, l'Exposition universelle de Bruxelles de 1958. Conçu par l'ingénieur André Waterkeyn et les architectes André et Jean Polak, il mesure 102 m (335 pi) de hauteur. Ses neuf sphères plaquées en acier inoxydable de 18 m (59 pi) de diamètre sont connectées de sorte que le tout forme la forme d'une cellule unitaire d'un cristal de fer grossi 165 milliards de fois. C'est un musée. [PARAGRAPHE: 2] Des tubes de 3 m (9,8 pi) de diamètre relient les sphères le long des 12 bords du cube et les huit sommets au centre. Ils renferment des escaliers, des escaliers mécaniques et un ascenseur (dans le tube central vertical) pour permettre l'accès aux cinq sphères habitables qui contiennent des halls d'exposition et d'autres espaces publics. La sphère supérieure comprend un restaurant qui offre une vue panoramique sur Bruxelles. CNN l'a nommé le bâtiment le plus bizarre d'Europe. [PARAGRAPHE: 2] Source: Wikipedia</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THE_ALMAGEST</Tag>
 		<English>Almagest</English>
+		<French>Almagest</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THE_ALMAGEST_STRATEGY</Tag>
 		<English>Increase science output.</English>
+		<French>Augmentez la production scientifique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THE_ALMAGEST_PEDIA</Tag>
 		<English>The Almagest is a 2nd-century mathematical and astronomical treatise on the apparent motions of the stars and planetary paths. Written in Greek by Claudius Ptolemy, a Roman era scholar of Egypt, it is one of the most influential scientific texts of all time, with its geocentric model accepted for more than twelve hundred years from its origin in Hellenistic Alexandria, in the medieval Byzantine and Islamic worlds, and in Western Europe through the Middle Ages and early Renaissance until Copernicus.[PARAGRAPH:2]Source:Wikipedia</English>
+		<French>L'Almageste est un traité mathématique et astronomique du IIe siècle sur les mouvements apparents des étoiles et des trajectoires planétaires. Écrit en grec par Claudius Ptolémée, érudit de l'époque romaine en Égypte, il est l'un des textes scientifiques les plus influents de tous les temps, avec son modèle géocentrique accepté depuis plus de douze cents ans à partir de son origine dans l'Alexandrie hellénistique, dans le Moyen-Âge byzantin et Mondes islamiques, et en Europe occidentale à travers le Moyen Âge et le début de la Renaissance jusqu'à Copernic. [PARAGRAPHE: 2] Source: Wikipedia</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RUDOLPHINE_TABLES</Tag>
 		<English>Rudolphine</English>
+		<French>Rudolphine</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RUDOLPHINE_TABLES_STRATEGY</Tag>
 		<English>Increase science output.</English>
+		<French>Augmentez la production scientifique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RUDOLPHINE_TABLES_PEDIA</Tag>
 		<English>The Rudolphine Tables (Latin: Tabulae Rudolphinae) consist of a star catalogue and planetary tables published by Johannes Kepler in 1627, using some observational data collected by Tycho Brahe (1546-1601). The tables are named as "Rudolphine" in memory of Rudolf II, Holy Roman Emperor.[PARAGRAPH:2]Source:Wikipedia</English>
+		<French>Les tables de Rudolphine (latin: Tabulae Rudolphinae) se composent d'un catalogue d'étoiles et de tables planétaires publiées par Johannes Kepler en 1627, en utilisant des données d'observation recueillies par Tycho Brahe (1546-1601). Les tableaux sont nommés "Rudolphine" en mémoire de Rudolf II, empereur romain germanique. [PARAGRAPHE: 2] Source: Wikipedia</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEGOTIATOR_HUT</Tag>
 		<English>Negotiator's Hut</English>
+		<French>Négociateur</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEGOTIATOR_HUT_STRATEGY</Tag>
 		<English>Improve espionage and reduce war werriness.</English>
+		<French>Améliorez l'espionnage et réduisez la fatigue de la guerre.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEGOTIATOR_HUT_PEDIA</Tag>
 		<English>Tis building is a work in progress. It is intended to suport the Extended Diplomacy ideas we want to include in Cavemen2Cosmos including diplomatic interaction with barbarian units and cities.</English>
+		<French>Ce bâtiment est un chantier en cours. Il est destiné à soutenir les idées de diplomatie étendue que nous voulons inclure dans Caveman2Cosmos, y compris l'interaction diplomatique avec les unités et les villes barbares.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AMBASSADOR_HOUSE</Tag>
 		<English>Ambassador's House</English>
+		<French>Maison de l'ambassadeur</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AMBASSADOR_HOUSE_STRATEGY</Tag>
 		<English>Improve espionage and reduce war werriness.</English>
+		<French>Améliorez l'espionnage et réduisez la fatigue de la guerre.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AMBASSADOR_HOUSE_PEDIA</Tag>
 		<English>Tis building is a work in progress. It is intended to suport the Extended Diplomacy ideas we want to include in Cavemen2Cosmos including diplomatic interaction with barbarian units and cities.</English>
+		<French>Ce bâtiment est un chantier en cours. Il est destiné à soutenir les idées de diplomatie étendue que nous voulons inclure dans Caveman2Cosmos, y compris l'interaction diplomatique avec les unités et les villes barbares.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EMPORIUM</Tag>
 		<English>Emporium</English>
+		<French>Emporium</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EMPORIUM_STRATEGY</Tag>
 		<English>Improve trade.</English>
+		<French>Améliore le Commerce.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EMPORIUM_PEDIA</Tag>
 		<English>A place for foreign merchants</English>
+		<French>Un lieu pour les marchands étrangers</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GARDEN_CITY</Tag>
 		<English>Garden City</English>
+		<French>Ville jardin</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GARDEN_CITY_STRATEGY</Tag>
 		<English>Increase city health.</English>
+		<French>Augmente la santé de la ville.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GARDEN_CITY_PEDIA</Tag>
 		<English>The garden city movement is a method of urban planning that was initiated in 1898 by Sir Ebenezer Howard in the United Kingdom. Garden cities were intended to be planned, self-contained communities surrounded by "greenbelts", containing proportionate areas of residences, industry, and agriculture.[PARAGRAPH:2]Inspired by the utopian novel Looking Backward and Henry George's work Progress and Poverty, Howard published his book To-morrow: a Peaceful Path to Real Reform in 1898 (which was reissued in 1902 as Garden Cities of To-morrow). His idealised garden city would house 32,000 people on a site of 6,000 acres (2,400 ha), planned on a concentric pattern with open spaces, public parks and six radial boulevards, 120 ft (37 m) wide, extending from the centre. The garden city would be self-sufficient and when it reached full population, another garden city would be developed nearby. Howard envisaged a cluster of several garden cities as satellites of a central city of 250,000 people, linked by road and rail.[PARAGRAPH:2]Source:Wikipedia</English>
+		<French>Le mouvement des cités-jardins est une méthode d'urbanisme initiée en 1898 par Sir Ebenezer Howard au Royaume-Uni. Les cités-jardins étaient conçues pour être des communautés autonomes planifiées, entourées de "ceintures vertes", contenant des zones proportionnées de résidences, d'industrie et d'agriculture. a publié son livre Demain: un chemin pacifique vers une véritable réforme en 1898 (qui a été réédité en 1902 sous le nom de Villes-jardins de demain). Sa cité-jardin idéalisée abriterait 32000 personnes sur un site de 6000 acres (2400 ha), planifié sur un modèle concentrique avec des espaces ouverts, des parcs publics et six boulevards radiaux, de 120 pieds (37 m) de large, s'étendant du centre. La cité-jardin serait autosuffisante et lorsqu'elle atteindrait sa pleine population, une autre cité-jardin serait développée à proximité. Howard envisageait un groupe de plusieurs cités-jardins comme satellites d'une ville centrale de 250 000 habitants, reliés par la route et le rail. [PARAGRAPH: 2] Source: Wikipedia</French>
 	</TEXT>
 </Civ4GameText>

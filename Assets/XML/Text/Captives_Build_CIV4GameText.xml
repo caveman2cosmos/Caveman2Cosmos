@@ -213,7 +213,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_FARM_SLAVE</Tag>
 		<English>Build [LINK=IMPROVEMENT_FARM]Farm[\LINK] (Forced)</English>
-		<French>Construire une [LINK=IMPROVEMENT_FARM]ferme[\LINK] (Forcé)</French>
+		<French>Construire une [LINK=IMPROVEMENT_FARM]Ferme[\LINK] (Forcé)</French>
 		<German>Zwangsarbeit - [LINK=IMPROVEMENT_FARM]Bauernhof[\LINK] bauen</German>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_FARM]fattoria[\LINK] (Schiavo)</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_FARM]granja[\LINK] (Forzado)</Spanish>
@@ -371,7 +371,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_MINE_SLAVE</Tag>
 		<English>Build [LINK=IMPROVEMENT_MINE]Mine[\LINK] (Forced)</English>
-		<French>Construire une [LINK=IMPROVEMENT_MINE]mine[\LINK] (Forcé)</French>
+		<French>Construire une [LINK=IMPROVEMENT_MINE]Mine[\LINK] (Forcé)</French>
 		<German>Zwangsarbeit - [LINK=IMPROVEMENT_MINE]Mine[\LINK] bauen</German>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_MINE]miniera[\LINK] (Schiavo)</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_MINE]mina[\LINK] (Forzado)</Spanish>
@@ -380,7 +380,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WORKSHOP_SLAVE</Tag>
 		<English>Build [LINK=IMPROVEMENT_WORKSHOP]Workshop[\LINK] (Forced)</English>
-		<French>Construire un [LINK=IMPROVEMENT_WORKSHOP]atelier[\LINK] (Forcé)</French>
+		<French>Construire un [LINK=IMPROVEMENT_WORKSHOP]Atelier[\LINK] (Forcé)</French>
 		<German>Zwangsarbeit - [LINK=IMPROVEMENT_WORKSHOP]Werkstatt[\LINK] bauen</German>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_WORKSHOP]bottega[\LINK] (Schiavo)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_WORKSHOP]taller[\LINK] (Forzado)</Spanish>
@@ -398,7 +398,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WINDMILL_SLAVE</Tag>
 		<English>Build [LINK=IMPROVEMENT_WINDMILL]Windmill[\LINK] (Forced)</English>
-		<French>Construire un [LINK=IMPROVEMENT_WINDMILL]moulin à vent[\LINK] (Forcé)</French>
+		<French>Construire un [LINK=IMPROVEMENT_WINDMILL]Moulin à vent[\LINK] (Forcé)</French>
 		<German>Zwangsarbeit - [LINK=IMPROVEMENT_WINDMILL]Windmühle[\LINK] bauen</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_WINDMILL]mulino a vento[\LINK] (Schiavo)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_WINDMILL]molino de viento[\LINK] (Forzado)</Spanish>
@@ -407,7 +407,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WATERMILL_SLAVE</Tag>
 		<English>Build [LINK=IMPROVEMENT_WATERMILL]Watermill[\LINK] (Forced)</English>
-		<French>Construire un [LINK=IMPROVEMENT_WATERMILL]moulin à eau[\LINK] (Forcé)</French>
+		<French>Construire un [LINK=IMPROVEMENT_WATERMILL]Moulin à eau[\LINK] (Forcé)</French>
 		<German>Zwangsarbeit - [LINK=IMPROVEMENT_WATERMILL]Wassermühle[\LINK] bauen</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_WATERMILL]mulino ad acqua[\LINK] (Schiavo)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_WATERMILL]molino de agua[\LINK] (Forzado)</Spanish>
@@ -416,7 +416,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PLANTATION_SLAVE</Tag>
 		<English>Build [LINK=IMPROVEMENT_PLANTATION]Plantation[\LINK] (Forced)</English>
-		<French>Construire une [LINK=IMPROVEMENT_PLANTATION]plantation[\LINK] (Forcé)</French>
+		<French>Construire une [LINK=IMPROVEMENT_PLANTATION]Plantation[\LINK] (Forcé)</French>
 		<German>Zwangsarbeit - [LINK=IMPROVEMENT_PLANTATION]Plantage[\LINK] bauen</German>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_PLANTATION]piantagione[\LINK] (Schiavo)</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_PLANTATION]plantación[\LINK] (Forzado)</Spanish>
@@ -425,7 +425,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_QUARRY_SLAVE</Tag>
 		<English>Build [LINK=IMPROVEMENT_QUARRY]Quarry[\LINK] (Forced)</English>
-		<French>Construire une [LINK=IMPROVEMENT_QUARRY]carrière[\LINK] (Forcé)</French>
+		<French>Construire une [LINK=IMPROVEMENT_QUARRY]Carrière[\LINK] (Forcé)</French>
 		<German>Zwangsarbeit - [LINK=IMPROVEMENT_QUARRY]Steinbruch[\LINK] errichten</German>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_QUARRY]cava[\LINK] (Schiavo)</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_QUARRY]cantera[\LINK] (Forzado)</Spanish>
@@ -434,7 +434,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PASTURE_SLAVE</Tag>
 		<English>Build [LINK=IMPROVEMENT_PASTURE]Pasture[\LINK] (Forced)</English>
-		<French>créer un [LINK=IMPROVEMENT_PASTURE]pâturage[\LINK] (Forcé)</French>
+		<French>créer un [LINK=IMPROVEMENT_PASTURE]Pâturage[\LINK] (Forcé)</French>
 		<German>Zwangsarbeit - [LINK=IMPROVEMENT_PASTURE]Weideland[\LINK] errichten</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_PASTURE]pascolo[\LINK] (Schiavo)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_PASTURE]pastizal[\LINK] (Forzado)</Spanish>
@@ -470,7 +470,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WINERY_SLAVE</Tag>
 		<English>Build [LINK=IMPROVEMENT_WINERY]Winery[\LINK] (Forced)</English>
-		<French>Construire une [LINK=IMPROVEMENT_WINERY]exploitation vinicole[\LINK] (Forcé)</French>
+		<French>Construire une [LINK=IMPROVEMENT_WINERY]Exploitation vinicole[\LINK] (Forcé)</French>
 		<German>Zwangsarbeit - [LINK=IMPROVEMENT_WINERY]Weingut[\LINK] errichten</German>
 		<Italian>Costruisci un'[LINK=IMPROVEMENT_WINERY]azienda vinicola[\LINK] (Schiavo)</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_WINERY]bodega[\LINK] (Forzado)</Spanish>
@@ -479,7 +479,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_COTTAGE_SLAVE</Tag>
 		<English>Build [LINK=IMPROVEMENT_COTTAGE]Cottage[\LINK] (Forced)</English>
-		<French>Construire un [LINK=IMPROVEMENT_COTTAGE]cottage[\LINK] (Forcé)</French>
+		<French>Construire une [LINK=IMPROVEMENT_COTTAGE]Chaumière[\LINK] (Forcé)</French>
 		<German>Zwangsarbeit - [LINK=IMPROVEMENT_COTTAGE]Hütte[\LINK] errichten</German>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_COTTAGE]villetta[\LINK] (Schiavo)</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_COTTAGE]villa[\LINK] (Forzado)</Spanish>
@@ -524,7 +524,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_FORT_SLAVE</Tag>
 		<English>Build [LINK=IMPROVEMENT_FORT]Fort[\LINK] (Forced)</English>
-		<French>Construire un [LINK=IMPROVEMENT_FORT]fort[\LINK] (Forcé)</French>
+		<French>Construire un [LINK=IMPROVEMENT_FORT]Fort[\LINK] (Forcé)</French>
 		<German>Zwangsarbeit - [LINK=IMPROVEMENT_FORT]Festung[\LINK] errichten</German>
 		<Italian>Costruisci una [LINK=IMPROVEMENT_FORT]fortezza[\LINK] (Schiavo)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_FORT]fuerte[\LINK] (Forzado)</Spanish>

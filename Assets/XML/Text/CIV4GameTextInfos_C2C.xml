@@ -251,6 +251,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CHANCE_OF_REVOLT_C2C</Tag>
 		<English>Chance of Revolt: %s1_Chance%% (%s2_CityStrength%% Cultural Revolt Sentiment. %s3_Garrison%% total Revolt Protection from Units)</English>
+		<French>Chances de Révolte: %s1_Chance%% (%s2_CityStrength%% de Sentiment de Récolte Culturelle. %s3_Garrison%% de total de Protection contre la révolte, des Unités)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PER_POP</Tag>
@@ -270,6 +271,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_CIVILOPEDIA</Tag>
 		<English>Pedia</English>
+		<French>Pédia</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_CATEGORY_PREREQUISITE</Tag>
@@ -291,30 +293,38 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_YOUR_CRIMINAL_CAUGHT</Tag>
 		<English>Your %s1_UnitName was thwarted and is now on the run from the law!</English>
+		<French>Votre %s1_UnitName a été contrecarré et est maintenant en fuite pour échapper aux autorités!</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NUKE_EXPLOSION_CHANCE</Tag>
 		<English>[ICON_BULLET]Chance of Nuclear Meltdown: .%d1_chance%% each round</English>
+		<French>[ICON_BULLET]Risque de fusion nucléaire : .%d1_chance%% à chaque tour</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RELIGION_DECLARED</Tag>
 		<English>[ICON_BULLET]Some features only function if %F1_RelIcon is your State [ICON_RELIGION].</English>
+		<French>[ICON_BULLET]Certaines fonctionnalités ne sont disponibles que si %F1_RelIcon est votre [ICON_RELIGION] d'Etat.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STATE_RELIGION_PREREQ</Tag>
 		<English>[ICON_BULLET]This building requires %F1_RelIcon to be your State [ICON_RELIGION].</English>
+		<French>[ICON_BULLET]Ce bâtiment nécessite %F1_RelIcon comme [ICON_RELIGION] d'Etat.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REQUIRES_STATE_RELIGION</Tag>
 		<English>[COLOR_WARNING_TEXT]You must have a State [ICON_RELIGION] and it must be in the city[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Vous devez avoir une [ICON_RELIGION] d'Etat, et celle-ci doit être présente dans la Ville[COLOR_REVERT]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REQUIRES_PREREQUISITE_RELIGION</Tag>
 		<English>[ICON_BULLET]This building requires %F1_RelIcon in the city.</English>
+		<French>[ICON_BULLET]Ce Bâtiment requiert %F1_RelIcon dans la Ville.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REQUIRES_TECH</Tag>
 		<English>[COLOR_WARNING_TEXT]Requires [COLOR_TECH_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT][COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert [COLOR_TECH_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT][COLOR_REVERT]
+</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_FREE_CITY_COMMERCE</Tag>
@@ -327,10 +337,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PLACED_BONUS</Tag>
 		<English>The fruits of the land are revealed!  You have successfully placed or discovered a new source of %s1_BonusName.</English>
+		<French>Les fruits de la terre se dévoilent! Vous avez réussi à placer ou à découvrir une nouvelle source de %s1_BonusName.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PLACED_BONUS_FAIL</Tag>
 		<English>The land refuses to give up its secrets!  You have failed to place or discover a resource.</English>
+		<French>La terre refuse de livrer ses secrets! Vous n'avez pas réussi à placer ou à découvrir une ressource.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PLAYER_ADOPTED_CIVIC</Tag>

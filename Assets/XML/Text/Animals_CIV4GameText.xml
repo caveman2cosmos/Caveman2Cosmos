@@ -101,7 +101,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_DOG_REMAINS</Tag>
 		<English>Remains - Dire Wolf</English>
-		<French>Restes - Loup sinistre</French>
+		<French>Restes de Loup sinistre</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SALTWATER_CROC_MYTH</Tag>
@@ -544,7 +544,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THYLACINE_REMAINS</Tag>
 		<English>Remains - Thylacine</English>
-		<French>Restes - Thylacine</French>
+		<French>Restes de Thylacine</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THYLACINE_STORY</Tag>
@@ -1498,7 +1498,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GLYPTO_REMAINS</Tag>
 		<English>Remains - Glyptodon</English>
-		<French>Restes - Glyptodon</French>
+		<French>Restes de Glyptodon</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GLYPTO_STORY</Tag>
@@ -1547,7 +1547,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_GROUNDSLOTH_REMAINS</Tag>
 		<English>Remains - Ground Sloth</English>
-		<French>Restes - Xénarthre</French>
+		<French>Restes de Xénarthre</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_GROUNDSLOTH_STORY</Tag>
@@ -2324,7 +2324,7 @@ The animal kingdom is home to fascinating and mysterious creatures that can amaz
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELASMOTHERIUM_REMAINS</Tag>
 		<English>Remains - Elasmotherium</English>
-		<French>Restes - Elasmotherium</French>
+		<French>Restes d'Elasmotherium</French>
 		<Polish>Resztki - Elasmoterium</Polish>
 	</TEXT>
 	<TEXT>
@@ -4892,12 +4892,12 @@ There are 5 types of Reef Sharks:
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLAMINGO_MYTH</Tag>
 		<English>Myth - Flamingo</English>
-		<French>Mythe du Flamant</French>
+		<French>Mythe du Flamant rose</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLAMINGO_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Flamingo</English>
-		<French>Effet (Mythe du Flamant)</French>
+		<French>Effet (Mythe du Flamant rose)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLAMINGO_STORY</Tag>
@@ -4912,7 +4912,7 @@ There are 5 types of Reef Sharks:
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLAMINGO_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Flamingo</English>
-		<French>Effet (Histoires de Flamants)</French>
+		<French>Effet (Histoires de Flamants roses)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZEBRA</Tag>
