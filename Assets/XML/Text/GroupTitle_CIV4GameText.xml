@@ -1,0 +1,654 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_AGGREGATION</Tag>
+		<English>Aggregation of </English>
+		<French>
+			<Text>Agrégation de </Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_AMBUSH</Tag>
+		<English>Ambush of </English>
+		<French>
+			<Text>Embuscade de </Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_ARMY</Tag>
+		<English>Army of </English>
+		<French>
+			<Text>Armée de </Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_BALE</Tag>
+		<English>Bale of </English>
+		<French>
+			<Text>Balle de </Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_BALE_LARGE</Tag>
+		<English>Large Bale of </English>
+		<French>
+			<Text>Grande balle de </Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_BALE_SMALL</Tag>
+		<English>Small Bale of </English>
+		<French>
+			<Text>Petite balle de </Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_BAND</Tag>
+		<English>Band of </English>
+		<French>Bande de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_BASK</Tag>
+		<English>Bask of </English>
+		<French>Panier de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_BLOAT</Tag>
+		<English>Bloat of </English>
+		<French>gonflement de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_BUNCH</Tag>
+		<English>Bunch of </English>
+		<French>Bouquet de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_CACKLE</Tag>
+		<English>Cackle of </English>
+		<French>Gloussement de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_CARAVAN</Tag>
+		<English>Caravan of </English>
+		<French>Caravane de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_CETE</Tag>
+		<English>Cete of </English>
+		<French>Cete de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_CLUSTER</Tag>
+		<English>Cluster of </English>
+		<French>Cluster de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_CLUTCH</Tag>
+		<English>Clutch of </English>
+		<French>Portée de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_COALITION</Tag>
+		<English>Coalition of </English>
+		<French>Coalition de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_COFFLE</Tag>
+		<English>Coffle of </English>
+		<French>colonne de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_COLLECTION</Tag>
+		<English>Collection of </English>
+		<French>Collection de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_COLONY</Tag>
+		<English>Colony of </English>
+		<French>Colonie de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_COMMITTEE</Tag>
+		<English>Committee of </English>
+		<French>Comité de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_COMMUNITY</Tag>
+		<English>Community of </English>
+		<French>Communauté de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_COMMUNITY_LARGE</Tag>
+		<English>Large Community of </English>
+		<French>Grande communauté de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_COMMUNITY_SMALL</Tag>
+		<English>Small Community of </English>
+		<French>Petite communauté de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_COMPANY</Tag>
+		<English>Company of </English>
+		<French>Compagnie de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_CONGREGATION</Tag>
+		<English>Congregation of </English>
+		<French>Congrégation de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_CONSPIRACY</Tag>
+		<English>Conspiracy of </English>
+		<French>Conspiration de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_COUPLE</Tag>
+		<English>Couple of </English>
+		<French>Couple de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_COURT</Tag>
+		<English>Court of </English>
+		<French>Court de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_CRASH</Tag>
+		<English>Crash of </English>
+		<French>Crash de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_DRIFT</Tag>
+		<English>Drift of </English>
+		<French>Dérapage de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_DROVE</Tag>
+		<English>Drove of </English>
+		<French>Troupeau de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_FAMILY</Tag>
+		<English>Family of </English>
+		<French>Famille de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_FLAMBOYANCE</Tag>
+		<English>Flamboyance of </English>
+		<French>Eclatement de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_FLAMBOYANCE_LARGE</Tag>
+		<English>Large Flamboyance of </English>
+		<French>Grand Eclatement de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_FLAMBOYANCE_SMALL</Tag>
+		<English>Small Flamboyance of </English>
+		<French>Petit éclatement de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_FLIGHT</Tag>
+		<English>Flight of </English>
+		<French>Vol de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_FLOAT</Tag>
+		<English>Float of </English>
+		<French>Flotte de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_FLOCK</Tag>
+		<English>Flock of </English>
+		<French>
+			<Text>Foule de </Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_FLOCK_LARGE</Tag>
+		<English>Large Flock of </English>
+		<French>Large foule de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_FLOCK_SMALL</Tag>
+		<English>Small Flock of </English>
+		<French>Petit groupement de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_FOLD</Tag>
+		<English>Fold of </English>
+		<French>Troupeau de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_GANG</Tag>
+		<English>Gang of </English>
+		<French>Gang de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_GATHERING</Tag>
+		<English>Gathering of </English>
+		<French>Récolte de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_GROUP</Tag>
+		<English>Group of </English>
+		<French>Groupe de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_GROUP_SMALL</Tag>
+		<English>Small Group of </English>
+		<French>Petit groupe de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_HERD</Tag>
+		<English>Herd of </English>
+		<French>Troupeau de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_HERD_LARGE</Tag>
+		<English>Large Herd of </English>
+		<French>Large troupeau de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_HERD_SMALL</Tag>
+		<English>Small Herd of </English>
+		<French>Petit troupeau de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_HORDE</Tag>
+		<English>Horde of </English>
+		<French>
+			<Text>Horde de </Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_HORDE_HUGE</Tag>
+		<English>Huge Horde of </English>
+		<French>
+			<Text>Horde importante de </Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_HORDE_LARGE</Tag>
+		<English>Large Horde of </English>
+		<French>
+			<Text>Grande horde de </Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_HUDDLE</Tag>
+		<English>Huddle of </English>
+		<French>Rassemblement de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_HUDDLE_LARGE</Tag>
+		<English>Large Huddle of </English>
+		<French>Grand rassemblement de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_I_AM_THE</Tag>
+		<English>I am the </English>
+		<French>Je suis le </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_KETTLE</Tag>
+		<English>Kettle of </English>
+		<French>Bouillon de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_KIT</Tag>
+		<English>Kit of </English>
+		<French>Kit de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_LEAP</Tag>
+		<English>Leap of </English>
+		<French>Saut de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_LEASH</Tag>
+		<English>Leash of </English>
+		<French>laisse de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_LONE</Tag>
+		<English>Lone </English>
+		<French>isolé </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_MEMORY</Tag>
+		<English>Memory of </English>
+		<French>
+			<Text>mémoire de </Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_MOB</Tag>
+		<English>Mob of </English>
+		<French>Bande de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_MOB_LARGE</Tag>
+		<English>Large Mob of </English>
+		<French>
+			<Text>Bande importante de </Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_MURDER</Tag>
+		<English>Murder of </English>
+		<French>Massacre de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_MURDER_LARGE</Tag>
+		<English>Large Murder of </English>
+		<French>Grand massacre de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_MURDER_SMALL</Tag>
+		<English>Small Murder of </English>
+		<French>petit comité de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_NEST</Tag>
+		<English>Nest of </English>
+		<French>Nid de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_OBSTINANCY</Tag>
+		<English>Obstinancy of </English>
+		<French>Obstinance de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_PACK</Tag>
+		<English>Pack of </English>
+		<French>Groupe de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_PACK_LARGE</Tag>
+		<English>Large Pack of </English>
+		<French>Grand groupe de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_PACK_SMALL</Tag>
+		<English>Small Pack of </English>
+		<French>Petit groupe de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_PAIR</Tag>
+		<English>Pair of </English>
+		<French>Paire de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_PANDEMONIUM</Tag>
+		<English>Pandemonium of </English>
+		<French>Pandémonium de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_POD</Tag>
+		<English>Pod of </English>
+		<French>nacelle de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_POD_LARGE</Tag>
+		<English>Large Pod of </English>
+		<French>Grande nacelle de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_POD_SMALL</Tag>
+		<English>Small Pod of </English>
+		<French>petite nacelle de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_PRIDE</Tag>
+		<English>Pride of </English>
+		<French>Groupe de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_PROWL</Tag>
+		<English>Prowl of </English>
+		<French>rodage de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_RAFT</Tag>
+		<English>Raft of </English>
+		<French>radeau de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_RAFTER</Tag>
+		<English>Rafter of </English>
+		<French>Chevron de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_RAFTER_SMALL</Tag>
+		<English>Small Rafter of </English>
+		<French>petit chevron de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_RAFT_HUGE</Tag>
+		<English>Huge Raft of </English>
+		<French>Immense radeau de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_RAFT_LARGE</Tag>
+		<English>Large Raft of </English>
+		<French>Grand radeau de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_RAFT_SMALL</Tag>
+		<English>Small Raft of </English>
+		<French>Petit radeau de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_RANDOM</Tag>
+		<English>Some Random </English>
+		<French>Quelques isolés </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_ROGUE</Tag>
+		<English>Rogue Bull </English>
+		<French>Horde de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_ROOKERY</Tag>
+		<English>Rookery of </English>
+		<French>Colonie de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_ROOKERY_LARGE</Tag>
+		<English>Large Rookery of </English>
+		<French>Grande Colonie de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_SAWT</Tag>
+		<English>Sawt of </English>
+		<French>Sawt de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_SCATTERED</Tag>
+		<English>Scattered </English>
+		<French>Apeuré </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_SCHOOL</Tag>
+		<English>School of </English>
+		<French>Ecole de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_SCHOOL_HUGE</Tag>
+		<English>Huge School of </English>
+		<French>Ecole Immense de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_SCHOOL_LARGE</Tag>
+		<English>Large School of </English>
+		<French>Grande Ecole de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_SCHOOL_SMALL</Tag>
+		<English>Small School of </English>
+		<French>Petite école de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_SCHOOL_TINY</Tag>
+		<English>Tiny School of </English>
+		<French>Minuscule école de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_SHOAL</Tag>
+		<English>Shoal of </English>
+		<French>Banc de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_SHREWDNESS</Tag>
+		<English>Shrewdness of </English>
+		<French>Shrewdness de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_SINGULAR</Tag>
+		<English>Singular </English>
+		<French>Singulier </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_SKULK</Tag>
+		<English>Skulk of </English>
+		<French>Rodeur de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_SLEUTH</Tag>
+		<English>Sleuth of </English>
+		<French>limier </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_SLOTH</Tag>
+		<English>Sloth of </English>
+		<French>Indolent </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_SOLITARY</Tag>
+		<English>Solitary </English>
+		<French>Solitaire </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_SOLO</Tag>
+		<English>Solo </English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_SOME</Tag>
+		<English>Some </English>
+		<French>Quelques </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_SOUNDER</Tag>
+		<English>Sounder of </English>
+		<French>Eclaireur </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_STAND</Tag>
+		<English>Stand of </English>
+		<French>Stand de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_STREAK</Tag>
+		<English>Streak of </English>
+		<French>
+			<Text>Bande de </Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_SURFEIT</Tag>
+		<English>Surfeit of </English>
+		<French>Surfait de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_TEAM</Tag>
+		<English>Team of </English>
+		<French>
+			<Text>Equipe de </Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_THUNDER</Tag>
+		<English>Thunder of </English>
+		<French>Eclair de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_TOM</Tag>
+		<English>Tom </English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_TRAIN</Tag>
+		<English>Train of </English>
+		<French>Train de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_TRIBE</Tag>
+		<English>Tribe of </English>
+		<French>
+			<Text>Tribu de </Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_TROOP</Tag>
+		<English>Troop of </English>
+		<French>
+			<Text>Troupe de </Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_UNKINDNESS</Tag>
+		<English>Unkindness of </English>
+		<French>
+			<Text>Méchanceté de </Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_VENUE</Tag>
+		<English>Venue of </English>
+		<French>Lieu de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_VENUE_LARGE</Tag>
+		<English>Large Venue of </English>
+		<French>Large lieu de </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GROUPTITLE_WADDLE</Tag>
+		<English>Waddle of </English>
+		<French>Dandinement de </French>
+	</TEXT>
+</Civ4GameText>

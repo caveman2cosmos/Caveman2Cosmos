@@ -10,7 +10,7 @@
 			<!-- Agricultural Achievement -->
 			<Type>BUILDING_AGRICULTURAL_ACHIEVEMENT</Type>
 			<Description>TXT_KEY_BUILDING_AGRICULTURAL_ACHIEVEMENT</Description>
-			<Civilopedia>TXT_KEY_ACHIEVEMENT_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_AGRICULTURAL_ACHIEVEMENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<!-- Graphical and interface -->
@@ -42,7 +42,7 @@
 			<!-- Commercial Achievement -->
 			<Type>BUILDING_COMMERCIAL_ACHIEVEMENT</Type>
 			<Description>TXT_KEY_BUILDING_COMMERCIAL_ACHIEVEMENT</Description>
-			<Civilopedia>TXT_KEY_ACHIEVEMENT_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_COMMERCIAL_ACHIEVEMENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -249,7 +249,7 @@
 			<!-- Industrial Achievement -->
 			<Type>BUILDING_INDUSTRIAL_ACHIEVEMENT</Type>
 			<Description>TXT_KEY_BUILDING_INDUSTRIAL_ACHIEVEMENT</Description>
-			<Civilopedia>TXT_KEY_ACHIEVEMENT_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_INDUSTRIAL_ACHIEVEMENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -318,7 +318,7 @@
 			<!-- Military Achievement -->
 			<Type>BUILDING_MILITARY_ACHIEVEMENT</Type>
 			<Description>TXT_KEY_BUILDING_MILITARY_ACHIEVEMENT</Description>
-			<Civilopedia>TXT_KEY_ACHIEVEMENT_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MILITARY_ACHIEVEMENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<!-- Graphical and interface -->
@@ -349,7 +349,7 @@
 			<!-- Political Achievement -->
 			<Type>BUILDING_POLITICAL_ACHIEVEMENT</Type>
 			<Description>TXT_KEY_BUILDING_POLITICAL_ACHIEVEMENT</Description>
-			<Civilopedia>TXT_KEY_ACHIEVEMENT_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_POLITICAL_ACHIEVEMENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<!-- Graphical and interface -->
@@ -418,7 +418,7 @@
 			<!-- Scientific Achievement -->
 			<Type>BUILDING_SCIENTIFIC_ACHIEVEMENT</Type>
 			<Description>TXT_KEY_BUILDING_SCIENTIFIC_ACHIEVEMENT</Description>
-			<Civilopedia>TXT_KEY_ACHIEVEMENT_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SCIENTIFIC_ACHIEVEMENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<!-- Graphical and interface -->
@@ -451,7 +451,7 @@
 			<!-- Seafaring Achievement -->
 			<Type>BUILDING_SEAFARING_ACHIEVEMENT</Type>
 			<Description>TXT_KEY_BUILDING_SEAFARING_ACHIEVEMENT</Description>
-			<Civilopedia>TXT_KEY_ACHIEVEMENT_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SEAFARING_ACHIEVEMENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -927,7 +927,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
+			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<FoundsCorporation>CORPORATION_4</FoundsCorporation>
@@ -997,7 +997,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
+			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<FoundsCorporation>CORPORATION_5</FoundsCorporation>
@@ -1159,7 +1159,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_ADVENTURE_HQ</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_ADVENTURE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_ADVENTURE_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_ADVENTURE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_ADVENTURE_HQ</ArtDefineTag>
@@ -1233,7 +1233,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_BULLSEYE_HQ</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_BULLSEYE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BULLSEYE_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_BULLSEYE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_BULLSEYE_HQ</ArtDefineTag>
@@ -1307,7 +1307,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_BURGERWORLD_HQ</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_BURGERWORLD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BURGERWORLD_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_BURGERWORLD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_BURGERWORLD_HQ</ArtDefineTag>
@@ -1381,7 +1381,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH_HQ</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH_HQ_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_EMPCLOTH_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_EMPCLOTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_EMPCLOTH_HQ</ArtDefineTag>
@@ -1451,7 +1451,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_EWTRADE_HQ</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_EWTRADE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_EWTRADE_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_EWTRADE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_EWTRADE_HQ</ArtDefineTag>
@@ -1525,7 +1525,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_FASHION_HQ</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_FASHION_HQ_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_FASHION_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_FASHION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_FASHION_HQ</ArtDefineTag>
@@ -1595,7 +1595,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_MALLWART_HQ</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MALLWART_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_MALLWART_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_MALLWART_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_MALLWART_HQ</ArtDefineTag>
@@ -1669,7 +1669,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_MAPSTER_HQ</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MAPSTER_HQ_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_MAPSTER_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_MAPSTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_MAPSTER_HQ</ArtDefineTag>
@@ -1740,7 +1740,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_MCDOWELLS_HQ</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MCDOWELLS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_MCDOWELLS_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_MCDOWELLS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_MCDOWELLS_HQ</ArtDefineTag>
@@ -1814,7 +1814,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_MILEHIGH_HQ</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MILEHIGH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_MILEHIGH_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_MILEHIGH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_MILEHIGH_HQ</ArtDefineTag>
@@ -1884,7 +1884,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_MOBBY_HQ</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MOBBY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_MOBBY_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_MOBBY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_MOBBY_HQ</ArtDefineTag>
@@ -1958,7 +1958,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_MOONBEAN_HQ</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MOONBEAN_HQ_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_MOONBEAN_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_MOONBEAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_MOONBEAN_HQ</ArtDefineTag>
@@ -2028,7 +2028,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_RED_HQ</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_RED_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_RED_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_RED_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_RED_HQ</ArtDefineTag>
@@ -2104,7 +2104,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_SAFARI_HQ</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_SAFARI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_SAFARI_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_SAFARI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_SAFARI_HQ</ArtDefineTag>
@@ -2176,7 +2176,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_ULTSOLDIER_HQ</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_ULTSOLDIER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_ULTSOLDIER_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_ULTSOLDIER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_ULTSOLDIER_HQ</ArtDefineTag>
@@ -2249,7 +2249,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_WONKA_HQ</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_WONKA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_WONKA_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_WONKA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_WONKA_HQ</ArtDefineTag>
@@ -8681,7 +8681,7 @@
 			<!-- Cultural Achievement -->
 			<Type>BUILDING_CULTURAL_ACHIEVEMENT</Type>
 			<Description>TXT_KEY_BUILDING_CULTURAL_ACHIEVEMENT</Description>
-			<Civilopedia>TXT_KEY_ACHIEVEMENT_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CULTURAL_ACHIEVEMENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<!-- Graphical and interface -->
@@ -16831,7 +16831,7 @@
 			<Type>BUILDING_MILITARY_ACADEMY</Type>
 			<Description>TXT_KEY_BUILDING_MILITARY_ACADEMY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MILITARY_ACADEMY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_THIRD_ROUND_BUILDING_MILITARY_ACADEMY_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_MILITARY_ACADEMY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_MILITARY_ACADEMY</ArtDefineTag>

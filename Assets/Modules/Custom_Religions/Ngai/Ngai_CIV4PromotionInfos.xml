@@ -8,7 +8,7 @@
 	<PromotionInfos>
 		<PromotionInfo>
 			<Type>PROMOTION_GUARDIAN</Type>
-			<Description>Guardian spirit</Description>
+			<Description>TXT_KEY_PROMOTION_GUARDIAN</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<LayerAnimationPath>NONE</LayerAnimationPath>
 			<PromotionPrereq>NONE</PromotionPrereq>
@@ -95,7 +95,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_VENGEANCE</Type>
-			<Description>Vengeance</Description>
+			<Description>TXT_KEY_PROMOTION_VENGEANCE</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<LayerAnimationPath>NONE</LayerAnimationPath>
 			<PromotionPrereq>NONE</PromotionPrereq>

@@ -185,7 +185,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<!-- Units -->
-			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
+			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
@@ -1510,7 +1510,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<!-- Units -->
-			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
+			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>4</iAsset>
@@ -1889,7 +1889,7 @@
 			</PropertyManipulators>
 			<FreeAreaBuilding>BUILDING_RAILROAD_STATION</FreeAreaBuilding>
 			<!-- Units -->
-			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
+			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
@@ -2247,7 +2247,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<!-- Units -->
-			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
+			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
@@ -2389,7 +2389,7 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<!-- Units -->
-			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
+			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
@@ -2998,7 +2998,7 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<!-- Units -->
-			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
+			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
@@ -3070,7 +3070,7 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<!-- Units -->
-			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
+			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
@@ -3751,7 +3751,7 @@
 				</BonusYieldModifier>
 			</BonusYieldModifiers>
 			<!-- Units -->
-			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
+			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<iAsset>8</iAsset>
@@ -3938,7 +3938,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_MICROLITH_WORKSHOP</Description>
-			<Civilopedia>TXT_KEY_TECH_MICROLITH_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_MICROLITH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MICROLITH_WORKSHOP_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MICROLITH</PrereqTech>
@@ -6245,7 +6245,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<!-- Units -->
-			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
+			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
@@ -6725,7 +6725,7 @@
 				</BonusHealthChange>
 			</BonusHealthChanges>
 			<!-- Units -->
-			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
+			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Global -->
 			<bTeamShare>1</bTeamShare>

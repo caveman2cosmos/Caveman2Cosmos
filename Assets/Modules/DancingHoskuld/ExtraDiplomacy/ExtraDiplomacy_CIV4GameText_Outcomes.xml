@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Game Text - New -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_DIPLOMAT_ASSIMULATE_IND_PEOPLE</Tag>
@@ -12,25 +8,11 @@
 		<Polish>Asimiluj Tubylców</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_IND_PEOPLES_JOIN</Tag>
-		<English>A group of Indigenous Peoples have been assimulated into your nation.</English>
-		<French>Un groupe d'indigènes a été assimilé à notre Nation.</French>
-		<Italian>Un gruppo di indigeni è stato assimilato nella tua nazione.</Italian>
-		<Polish>Grupa tubylców została asymilowana i włączona do Twojego narodu.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISSION_DIPLOMAT_PRAISE_IND_PEOPLE</Tag>
 		<English>Assimulate Indigenous Peoples</English>
 		<French>Assimiler ces Peuples Indigènes</French>
 		<Italian>Celebra la comunità indigena</Italian>
 		<Polish>Asimiluj Tubylców</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_PRAISE_IND_PEOPLES</Tag>
-		<English>You have celibrated the uniqueness of an Indigenous People.</English>
-		<French>Vous avez célébré l'unité d'une population indigène.</French>
-		<Italian>Hai celebrato l'unicità della comunità indigena.</Italian>
-		<Polish>Zwiętujesz unikatowośc tubylczej ludności.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_DIPLOMAT_SPEAK_TO_BARBARIAN_LEADERS</Tag>
@@ -47,11 +29,11 @@
 		<Polish>Konwertuj barbarzyńskie miasto do Twojej religii państwowej.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_DIPLOMAT_SPREAD_RELIGION</Tag>
-		<English>The barbarian city has accepted your religion.</English>
-		<French>La cité barbare a accepté votre Religion.</French>
-		<Italian>La città barbarica ha accettato la tua religione.</Italian>
-		<Polish>Barbarzyńskie miasto zaakceptowała Twoja religię.</Polish>
+		<Tag>TXT_KEY_OUTCOME_DIPLOMAT_BARBARIANS_KILL</Tag>
+		<English>The barbarians kill your envoy.</English>
+		<French>Les Barbares ont tué votre émissaire.</French>
+		<Italian>I barbari hanno ucciso i tuoi emissari.</Italian>
+		<Polish>Barbarzyńcy zabili Twojego posła.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_DIPLOMAT_BARBARIANS_SUSPICIOUS</Tag>
@@ -75,10 +57,24 @@
 		<Polish>Przywódcy barbarzyńców zapłacili trybut.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_DIPLOMAT_BARBARIANS_KILL</Tag>
-		<English>The barbarians kill your envoy.</English>
-		<French>Les Barbares ont tué votre émissaire.</French>
-		<Italian>I barbari hanno ucciso i tuoi emissari.</Italian>
-		<Polish>Barbarzyńcy zabili Twojego posła.</Polish>
+		<Tag>TXT_KEY_OUTCOME_DIPLOMAT_SPREAD_RELIGION</Tag>
+		<English>The barbarian city has accepted your religion.</English>
+		<French>La cité barbare a accepté votre Religion.</French>
+		<Italian>La città barbarica ha accettato la tua religione.</Italian>
+		<Polish>Barbarzyńskie miasto zaakceptowała Twoja religię.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_IND_PEOPLES_JOIN</Tag>
+		<English>A group of Indigenous Peoples have been assimulated into your nation.</English>
+		<French>Un groupe d'indigènes a été assimilé à notre Nation.</French>
+		<Italian>Un gruppo di indigeni è stato assimilato nella tua nazione.</Italian>
+		<Polish>Grupa tubylców została asymilowana i włączona do Twojego narodu.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_PRAISE_IND_PEOPLES</Tag>
+		<English>You have celibrated the uniqueness of an Indigenous People.</English>
+		<French>Vous avez célébré l'unité d'une population indigène.</French>
+		<Italian>Hai celebrato l'unicità della comunità indigena.</Italian>
+		<Polish>Zwiętujesz unikatowośc tubylczej ludności.</Polish>
 	</TEXT>
 </Civ4GameText>
