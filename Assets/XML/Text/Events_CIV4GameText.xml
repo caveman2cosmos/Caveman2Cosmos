@@ -5568,7 +5568,7 @@
 		<English>Does he have any gold?</English>
 		<French>A-t-il de l'or ?</French>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_EVENT_POISON_ARROWS_1</Tag>
 		<English>Equip all archers with poisoned arrows.</English>
 		<French>Equiper tous nos archers de flèches empoisonnées.</French>
@@ -8655,4 +8655,4 @@
 		<English>TBD</English>
 		<French>TBD</French>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

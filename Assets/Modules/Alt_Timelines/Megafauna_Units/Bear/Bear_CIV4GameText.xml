@@ -28,7 +28,7 @@
 		<French>Effet - Patrimoine (Ours)</French>
 		<Polish>Efekt - Dziedzictwo - Niedźwiedź</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BEAR_TRAINER_HERITAGE</Tag>
 		<English>Heritage - Bears</English>
 		<French>Patrimoine (Ours)</French>
@@ -94,4 +94,4 @@
 		<English>[COLOR_UNIT_TEXT]Bear Riders[COLOR_REVERT] are early-game mounted units. This particular rider is using [COLOR_HIGHLIGHT_TEXT]Bears[COLOR_REVERT] instead [COLOR_HIGHLIGHT_TEXT]Horses[COLOR_REVERT] and is slower than the rest of the Riders.</English>
 		<Italian>I [COLOR_UNIT_TEXT]Cavalcatori di orsi[COLOR_REVERT] sono</Italian>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

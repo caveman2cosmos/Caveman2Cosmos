@@ -189,7 +189,7 @@
 		<Tag>TXT_KEY_PROMOTION_PRIESTHOOD_DESC</Tag>
 		<English>Priesthood</English>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TECH_MORMON</Tag>
 		<English>Mormon</English>
 		<Italian>Mormonismo</Italian>
@@ -244,4 +244,4 @@
 		<Tag>TXT_KEY_UNIT_RETURNED_MISSIONARY_PEDIA</Tag>
 		<English>After serving an unpaid full-time mission for the Church of Jesus Christ of Latter-day Saints (Mormons), missionaries are "released" from their mission call and return to regular lives. Having gained valuable life experience while missionaries, most of these "returned missionaries" (RMs) are eager to put their experience to work. Marriage and building a family is usually a high priority for these young men and women, but there is also an unually high percentage that pursue careers in government, the military, and law enforcement. In the USA, the FBI is remarkable for accepting a high proportion of candidates from the ranks of RMs. Their squeaky clean backgrounds, foreign language training, leadership experience, and commitment to law and order make them prime candidates for training to serve among law enforcement's elite.</English>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

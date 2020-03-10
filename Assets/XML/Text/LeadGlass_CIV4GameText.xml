@@ -94,7 +94,7 @@
 		<English>Provides Crystal Glass</English>
 		<French>Produit des verreries de Crystal</French>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRA_SIGILLIATA_WORKSHOP</Tag>
 		<English>Terra Sigilliata Workshop</English>
 		<French>Atelier de Céramique sigillée</French>
@@ -104,4 +104,4 @@
 		<English>Build this to provide you with some trade goods.</English>
 		<French>Construisez-le pour vous fournir des biens commerciaux.</French>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

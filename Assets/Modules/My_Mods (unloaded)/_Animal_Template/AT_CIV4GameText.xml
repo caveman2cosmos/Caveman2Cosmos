@@ -17,7 +17,7 @@
 		<Tag>TXT_KEY_BUILDING_CROW_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Crow</English>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CROW_STORY</Tag>
 		<English>Story - Crow</English>
 	</TEXT>
@@ -43,4 +43,4 @@ Graphics Source:
 		<Tag>TXT_KEY_UNIT_TAMED_CROW</Tag>
 		<English>Tamed Crow</English>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

@@ -62,7 +62,7 @@
 		<English>With the discovery of clean and save nuclear power and the developement of large reactor complexes, Energy becomes available in such a big amount, that energy-intensive  facilities are not an issue</English>
 		<Polish>Energetyka jądrowa - zespół zagadnień związanych z uzyskiwaniem na skalę przemysłową energii z rozszczepienia ciężkich jąder pierwiastków (głównie uranu 235).</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GOOD_ATOM_STRATEGY</Tag>
 		<English>A Building Produced Good.</English>
 	</TEXT>
@@ -192,4 +192,4 @@
 		<English>Build a Videophone Network to increase your cities Trade.</English>
 		<French>Construisez un [COLOR_BUILDING_TEXT]Réseau de Vidéophones[COLOR_REVERT] pour améliorer le commerce de votre ville.</French>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

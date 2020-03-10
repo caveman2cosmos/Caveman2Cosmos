@@ -63,7 +63,7 @@
 		<English>While dreaming in a Dream Simulation Center, the people are influenced with propaganda and commercials.</English>
 		<Polish>Ludzie w czasie snu są atakowani propagandowymi przekazami i sloganami.</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DREAM_PROPAGANDA_STRATEGY</Tag>
 		<English>Build an Dream Propaganda to increase your cities Espionage.</English>
 		<French>Construire une [COLOR_BUILDING_TEXT]Propagande des Rêves[COLOR_REVERT] vous permettra d'améliorer l'espionnage au sein de vos villes.</French>
@@ -100,4 +100,4 @@
 		<English>Build an Insect Manipulation Lab to get access to controlled insect units.</English>
 		<French>Construire un [COLOR_BUILDING_TEXT]Laboratoire de Manipulation d'Insectes[COLOR_REVERT] pour avoir accès à des unités d'insectes contrôlés.</French>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

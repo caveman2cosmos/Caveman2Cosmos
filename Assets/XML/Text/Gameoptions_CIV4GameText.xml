@@ -17,7 +17,7 @@
 		<German>Der Einflussbereich jeder neu gegründeten Stadt wird mit dieser Einstellung zunächst immer auf das Stadtfeld begrenzt. Um den Stadtradius auf die umgebenden Felder auszudehnen, muss zunächst die Kulturstufe "schwach" erreicht werden.</German>
 		<French>Toutes les fondations de villes commencent par la tuile ville principale uniquement. Niveau de culture De mauvaises valeurs doivent être atteintes pour étendre la culture de la ville et s'étendre aux carreaux environnants. Adapté aux vitesses de jeu. [NEWLINE] Cette option désactive l'option "Limite minimale de la ville".</French>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_DIPLOMACY</Tag>
 		<English>Advanced Diplomacy</English>
 		<French>Diplomatie avancée</French>
@@ -1502,4 +1502,4 @@ Non recommandé pour le moment car il existe un bug connu qu'il crée pour calcu
 
 L'auteur de cette option estime également que cela ne représente pas un scénario de combat équitable dans de nombreux cas où vous préféreriez prendre le coup qu'ils menacent et souhaitez éventuellement créer une forme de ZoC qui génère à la place un assaut à distance gratuit contre le délinquant. l'unité plutôt que de l'empêcher de bouger (comme c'est le concept derrière l'effet de toute façon.)</French>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

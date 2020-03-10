@@ -138,7 +138,7 @@
 		<Tag>TXT_KEY_PROMOTION_VENGEANCE</Tag>
 		<English>Vengeance</English>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TECH_NGAIISM</Tag>
 		<English>Ngaiism</English>
 		<French>Ngaiisme</French>
@@ -204,4 +204,4 @@
 		<Italian>Usa questo missionario per diffondere velocemente l'[COLOR_HIGHLIGHT_TEXT]Ngaiismo[COLOR_REVERT] nelle tue città, o nelle città straniere nelle quali hai [COLOR_HIGHLIGHT_TEXT]Diritto di passaggio[COLOR_REVERT]).</Italian>
 		<Spanish>Use this missionary to actively spread [COLOR_HIGHLIGHT_TEXT]Ngaiism[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT])</Spanish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

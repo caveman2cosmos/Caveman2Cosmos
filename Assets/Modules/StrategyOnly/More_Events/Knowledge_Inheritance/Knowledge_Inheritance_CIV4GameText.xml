@@ -37,7 +37,7 @@
 		<Spanish>[ICON_BULLET]Toda [COLOR_BUILDING_TEXT]Herencia del saber[COLOR_REVERT] en nuestro imperio quedará obsoleta.</Spanish>
 		<Polish>[ICON_BULLET]Kazde [COLOR_BUILDING_TEXT]Dziedzictwo Wiedzy[COLOR_REVERT] w naszym imperium niedlugo przestaje istniec.</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<!-- GOOD -->
 		<Tag>TXT_KEY_EVENT_OBSOLETE_KNOWLEDGE_INHERITANCE_1</Tag>
 		<English>I see.</English>
@@ -60,4 +60,4 @@
 		<Spanish>Nuestro actual estilo de vida sedentario ha dejado obsoletos nuestras costumbres de Herencia del saber por todo el imperio. Tendremos que encontrar otros modos de incrementar nuestra razón de investigación a partir de ahora.</Spanish>
 		<Polish>Nasz osiadly sposób zycia spowodowal, ze Dziedzictwo Wiedzy przestalo byc potrzebne w naszym imperium. Musimy znalezc lepszy sposób na przyspieszenie naszego rozwoju.</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

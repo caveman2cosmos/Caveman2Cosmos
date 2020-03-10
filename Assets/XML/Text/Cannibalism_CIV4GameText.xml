@@ -170,7 +170,7 @@
 		<Italian>La tua gente ha ucciso e macellato un prigioniero.</Italian>
 		<Polish>Twoi ludzie zabili i zjedli jeńców.</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_REMOVE_WV_CANNIBALISM</Tag>
 		<English>Your world view abandons eating people.</English>
 		<French>Vous abandonner le cannibalisme de votre vision du monde</French>
@@ -184,4 +184,4 @@
 		<Italian>Nella tua nazione la gente ha smesso di mangiare altre persone.</Italian>
 		<Polish>Twój naród przestał zjadać innych ludzi.</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

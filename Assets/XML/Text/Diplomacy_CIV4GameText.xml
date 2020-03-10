@@ -7505,7 +7505,7 @@
 		<Spanish>Así sea.</Spanish>
 		<Polish>Więc niech tak się stanie.</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>USER_DIPLO_MAKE_PEACE_WITH_1</Tag>
 		<English>Yes!  Let's make peace.</English>
 		<French>Oui!  Faisons la Paix.</French>
@@ -7803,4 +7803,4 @@
 		<Spanish>Así sea.</Spanish>
 		<Polish>Więc niech tak się stanie.</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

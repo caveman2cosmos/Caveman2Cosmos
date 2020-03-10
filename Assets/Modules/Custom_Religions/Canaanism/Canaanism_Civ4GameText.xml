@@ -80,7 +80,7 @@ czczony był w Palestynie.</Polish>
 		<English>[COLOR_BUILDING_TEXT]The Temple of Ba'el[COLOR_REVERT] ([COLOR_BUILDING_TEXT]Canaanite Shrine[COLOR_REVERT]) produces one gold each turn for every city in the world that practises [COLOR_HIGHLIGHT_TEXT]Canaanism[COLOR_REVERT]. It also spreads [COLOR_HIGHLIGHT_TEXT]Canaanism[COLOR_REVERT] throughout the world and increases its city's chances of generating a [COLOR_UNIT_TEXT]Great Prophet[COLOR_REVERT].</English>
 		<Italian>Il [COLOR_BUILDING_TEXT]Tempio di Ba'el[COLOR_REVERT] ([COLOR_BUILDING_TEXT]Santuario cananeo[COLOR_REVERT]) produce oro per ogni città mondiale in cui è diffuso il [COLOR_HIGHLIGHT_TEXT]Canaanismo[COLOR_REVERT]. Diffonde nelle altre città il [COLOR_HIGHLIGHT_TEXT]Canaanismo[COLOR_REVERT] e incrementa le chance della città di generare un [COLOR_UNIT_TEXT]Grande profeta[COLOR_REVERT].</Italian>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CANAANISM_TEMPLE</Tag>
 		<English>Canaanite Temple</English>
 		<French>Temple Canaanéen</French>
@@ -163,4 +163,4 @@ i Eszmuna, Filistyni zaś czcili Dagana, Asztarte i Baala.</Polish>
 		<Tag>TXT_KEY_UNIT_CANAANITE_MISSIONARY_STRATEGY</Tag>
 		<English>TBD</English>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

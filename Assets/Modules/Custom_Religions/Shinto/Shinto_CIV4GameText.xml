@@ -195,7 +195,7 @@
 		<Tag>TXT_KEY_PROMOTION_BUSHIDO</Tag>
 		<English>Honour</English>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUSHIDO1</Tag>
 		<English>Bushido I</English>
 	</TEXT>
@@ -273,4 +273,4 @@
 		<German>Verbreitet den Shintoismus. Haben Sie den Ise-jingu, erhöhen sich dadurch Ihre Einnahmen.</German>
 		<Italian>[TAB]Usa questo missionario per diffondere velocemente lo [COLOR_HIGHLIGHT_TEXT]Shintoismo[COLOR_REVERT] nelle tue città, o nelle città straniere nelle quali hai [COLOR_HIGHLIGHT_TEXT]Diritto di passaggio[COLOR_REVERT]). Questo incrementa i tuoi introiti se hai costruito il [COLOR_BUILDING_TEXT]Jingu di Ise[COLOR_REVERT].</Italian>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

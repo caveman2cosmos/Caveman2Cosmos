@@ -5048,7 +5048,7 @@
 		<English>By the Horns</English>
 		<French>Par les cornes</French>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CAMOUFLAGE</Tag>
 		<English>Camouflage</English>
 		<French>
@@ -19779,4 +19779,4 @@
 		<French>[ICON_BULLET]%d1_Change Assauts furtifs</French>
 		<German>[ICON_BULLET]%D1_Change [NUM1:Tarnangriff:Tarnangriffe]</German>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

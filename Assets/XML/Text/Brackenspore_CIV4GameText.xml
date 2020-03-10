@@ -152,7 +152,7 @@
 		<English>The garden city movement is a method of urban planning that was initiated in 1898 by Sir Ebenezer Howard in the United Kingdom. Garden cities were intended to be planned, self-contained communities surrounded by "greenbelts", containing proportionate areas of residences, industry, and agriculture.[PARAGRAPH:2]Inspired by the utopian novel Looking Backward and Henry George's work Progress and Poverty, Howard published his book To-morrow: a Peaceful Path to Real Reform in 1898 (which was reissued in 1902 as Garden Cities of To-morrow). His idealised garden city would house 32,000 people on a site of 6,000 acres (2,400 ha), planned on a concentric pattern with open spaces, public parks and six radial boulevards, 120 ft (37 m) wide, extending from the centre. The garden city would be self-sufficient and when it reached full population, another garden city would be developed nearby. Howard envisaged a cluster of several garden cities as satellites of a central city of 250,000 people, linked by road and rail.[PARAGRAPH:2]Source:Wikipedia</English>
 		<French>Le mouvement des cités-jardins est une méthode d'urbanisme initiée en 1898 par Sir Ebenezer Howard au Royaume-Uni. Les cités-jardins étaient conçues pour être des communautés autonomes planifiées, entourées de "ceintures vertes", contenant des zones proportionnées de résidences, d'industrie et d'agriculture. a publié son livre Demain: un chemin pacifique vers une véritable réforme en 1898 (qui a été réédité en 1902 sous le nom de Villes-jardins de demain). Sa cité-jardin idéalisée abriterait 32000 personnes sur un site de 6000 acres (2400 ha), planifié sur un modèle concentrique avec des espaces ouverts, des parcs publics et six boulevards radiaux, de 120 pieds (37 m) de large, s'étendant du centre. La cité-jardin serait autosuffisante et lorsqu'elle atteindrait sa pleine population, une autre cité-jardin serait développée à proximité. Howard envisageait un groupe de plusieurs cités-jardins comme satellites d'une ville centrale de 250 000 habitants, reliés par la route et le rail. [PARAGRAPH: 2] Source: Wikipedia</French>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GARDEN_CITY_STRATEGY</Tag>
 		<English>Increase city health.</English>
 		<French>Augmente la santé de la ville.</French>
@@ -352,4 +352,4 @@
 		<English>Improve your Scientist and Engineer specialists.</English>
 		<French>Améliorez vos spécialistes scientifiques et ingénieurs.</French>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

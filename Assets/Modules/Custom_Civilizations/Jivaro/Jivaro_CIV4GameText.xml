@@ -8,7 +8,7 @@
 		<English>Jivaro</English>
 		<Polish>Jiwaro</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_JIVARO_DESC</Tag>
 		<English>Jivaro Empire</English>
 		<French>Empire jivaro</French>
@@ -31,4 +31,4 @@
 		<Italian>Cacciatori di teste</Italian>
 		<Polish>Jiwaro</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

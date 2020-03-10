@@ -32,7 +32,7 @@
 		<Tag>TXT_KEY_BUILDING_MAPINGUARI_GUARD_STRATEGY</Tag>
 		<English>Increase tourism and reduce war weariness.</English>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAPINGUARI</Tag>
 		<English>Mapinguari (Spearmen)</English>
 		<French>
@@ -90,4 +90,4 @@
 		</French>
 		<Polish>Mapinguari (Włócznik - Drewno)</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

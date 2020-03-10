@@ -13,7 +13,7 @@
 		<French>Mythe du Récif de corail</French>
 		<Polish>Mit Rafy Koralowej</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FALL_MYTH</Tag>
 		<English>Myth - Stone from the Sky</English>
 		<French>Mythe de la Pierre venue du ciel</French>
@@ -890,4 +890,4 @@
 		<German>[COLOR_LIGHT_GREY]In einem fernen Land wurde das Naturwunder %s1 entdeckt!</German>
 		<Polish>[COLOR_LIGHT_GREY]%s1 został odkryty w odległej krainie![COLOR_REVERT]</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

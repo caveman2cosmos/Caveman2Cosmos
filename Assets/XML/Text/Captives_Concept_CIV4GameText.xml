@@ -29,7 +29,7 @@
 		<German>Weltanschauung sind wie Gesellschaftsformen, außer das es nur zwei Zustände gibt, aktiv und inaktiv. Diese sind ein Experiment und eher als Gebäude umgesetzt statt als Gesellschaftsformen aufgrund der Anzahl welche wir erwarten. Aktuelle Weltanschauungen sind: [NEWLINE][NEWLINE][TAB][ICON_BULLET][BOLD]Kannibalismus[\BOLD] - Erlaubt das Schlachten von Gefangenen wie Tiere.[NEWLINE][NEWLINE][TAB][ICON_BULLET][BOLD]Menschenopfer[\BOLD] - Erlaubt das Opfern von Gefangenen.[NEWLINE][NEWLINE][TAB][ICON_BULLET][BOLD]Sklaverei[\BOLD] - Erlaubt das Verkaufen oder Ansiedeln von Gefangenen als Sklaven.</German>
 		<Polish>Swiatopogląd jest podobny do ustroju. Obecnie istnieją 3 światopoglądy w grze: Kanibalizm, Ofiary z ludzi oraz Niewolnictwo.</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_WORLD_VIEW_TEXT</Tag>
 		<English>World View</English>
 		<French>Vision du Monde</French>
@@ -37,4 +37,4 @@
 		<German>Weltanschauung</German>
 		<Polish>Swiatopogląd</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

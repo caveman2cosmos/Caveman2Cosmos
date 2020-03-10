@@ -21,7 +21,7 @@
 		<Italian>Ho nelle mani il destino di [CT_EMPIRE]. Dammi ciò che chiedo.</Italian>
 		<Spanish>Tengo el destino del [CT_EMPIRE] en mis manos. Dadme lo que os exijo.</Spanish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_DANCING_HOSKULD_1</Tag>
 		<English>My town folks are in need, can the [CT_EMPIRE] help?</English>
 		<French>Ma personnes est dans le besoin, l'[CT_EMPIRE] peut-il nous aider?</French>
@@ -80,4 +80,4 @@ SoulUrge Number: 9
 People with this name have a deep inner desire to serve humanity and to give to others by sharing money, knowledge and experience, or creative and artistic ability. [PARAGRAPH:1]Expression Number: 9
 People with this name tend to be passionate, compassionate, intuitive, romantic, and to have magnetic personalities. They are usually humanitarian, broadminded and generous, and tend to follow professions where they can serve humanity. Because they are so affectionate and giving, they may be imposed on. They are romantic and easily fall in love, but may be easily hurt and are sometimes quick-tempered.</English>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

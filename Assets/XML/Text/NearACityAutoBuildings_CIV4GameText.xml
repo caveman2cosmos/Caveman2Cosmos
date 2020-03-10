@@ -40,7 +40,7 @@
 		<English>Vicinity Autobuild - Horse</English>
 		<French>Approv. auto à proximité - Chevaux</French>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AUTOBUILD_IRON_NEAR</Tag>
 		<English>Vicinity Autobuild - Iron</English>
 		<French>Approv. auto à proximité - Fer</French>
@@ -80,4 +80,4 @@
 		<English>Vicinity Autobuild - Titanum</English>
 		<French>Approv. auto à proximité - Titane</French>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

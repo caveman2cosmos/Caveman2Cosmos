@@ -2869,7 +2869,7 @@
 		<English>Stories Effect - Zebra</English>
 		<French>Effet (Histoires du Zèbre)</French>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZEBRA_STORY</Tag>
 		<English>Story - Zebra</English>
 		<French>Histoire du Zèbre</French>
@@ -4966,4 +4966,4 @@ There are 5 types of Reef Sharks:
 		</French>
 		<Spanish>Cebra</Spanish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

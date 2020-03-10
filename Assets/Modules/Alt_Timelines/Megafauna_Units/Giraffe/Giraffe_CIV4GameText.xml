@@ -57,7 +57,7 @@
 		<English>Allows Giraffe units to be built in all your cities.</English>
 		<French>Permet d'entraîner des unités avec Girafes dans toutes vos Villes.</French>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GIRAFFE_TRAINER_PEDIA</Tag>
 		<English>There is no evidence giraffe were ever trained for warfare.  The [COLOR_BUILDING_TEXT]Giraffe Trainer[COLOR_REVERT] building is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT].  Technologies that might have been.</English>
 		<Italian>Non ci sono prove che le giraffe siano mai state usate in guerra. L'[COLOR_BUILDING_TEXT]Allevatore di giraffe[COLOR_REVERT] fa parte delle [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
@@ -116,4 +116,4 @@
 		<Tag>TXT_KEY_UNIT_URBAN_GIRAFFEMAN</Tag>
 		<English>Giraffe Urban Rider</English>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

@@ -74,7 +74,7 @@
 		<Italian>Magnifico! Sapevo che stavano nascondendo qualcosa!</Italian>
 		<Polish>Niesmowiet! Zawsze podejrzewałem, że czegoś nam nie mówili!</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_EVENT_NATIVEGOOD4_HELP</Tag>
 		<English>[ICON_BULLET]Gain gold from your indigenous community.</English>
 		<French>[ICON_BULLET]Obtient de l'or de la communauté indigène.</French>
@@ -137,4 +137,4 @@
 		<Italian>Gli anziani della comunità indigena ci hanno contattati offrendo antiche tecnologie! Dicono di aver sorvegliato questi segreti per secoli, e ora vorrebbero condividerli con noi!</Italian>
 		<Polish>Starszyzna naszych tubylców przybyła do naszej stolicy z starożytną technologią. Twierdzą, że strzegli jej przez wieki i chcą się nią z nami podzielić.</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

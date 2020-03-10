@@ -411,7 +411,7 @@
 		<Italian>[COLOR_WARNING_TEXT]Richiede qualcuno per creare [LINK=%s1_Type]%s2_Name[\LINK][COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Se requiere que alguien cree: [LINK=%s1_Type]%s2_Name[\LINK][COLOR_REVERT]</Spanish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROJECT_REQUIRES_NO_CITY</Tag>
 		<!-- %s1_Name = Can be Buildings, Units, Projects, etc -->
 		<English>[COLOR_WARNING_TEXT]Requires [LINK=%s1_NameType]%s2_Name[\LINK] (%d3)[COLOR_REVERT]</English>
@@ -744,4 +744,4 @@
 		<Italian>[ICON_BULLET]Probabilità di ritirata: %d1_Amount%%</Italian>
 		<Spanish>[ICON_BULLET]Probabilidad de retirarse: %d1_Amount%%</Spanish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

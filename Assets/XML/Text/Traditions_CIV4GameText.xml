@@ -74,7 +74,7 @@
 		<French>Traditions du Travail</French>
 		<German>Arbeitstradition</German>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ARCHER_TRADITION</Tag>
 		<English>Archer Tradition</English>
 		<French>Tradition des Archers</French>
@@ -92,4 +92,4 @@
 		<French>Ethique du Travail</French>
 		<German>Arbeitsmoral</German>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

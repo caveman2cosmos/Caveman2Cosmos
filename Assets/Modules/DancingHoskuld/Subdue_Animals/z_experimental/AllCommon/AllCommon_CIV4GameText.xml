@@ -377,7 +377,7 @@
 		<Tag>TXT_KEY_BUILDING_SPOTTED_CAT_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Spotted Cat</English>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WOLF_MYTH</Tag>
 		<English>Myth - Wolf</English>
 		<French>
@@ -427,4 +427,4 @@
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Use the [COLOR_HIGHLIGHT_TEXT]Amphibian Colony[COLOR_REVERT] to spread [COLOR_HIGHLIGHT_TEXT]Amphibian Ponds[COLOR_REVERT] to other cities.</English>
 		<Polish>Użyj [COLOR_HIGHLIGHT_TEXT]Kolonii Płazów[COLOR_REVERT] by rozprzestrzenić [COLOR_HIGHLIGHT_TEXT]Stawyz z płazami[COLOR_REVERT] do innych miast.</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

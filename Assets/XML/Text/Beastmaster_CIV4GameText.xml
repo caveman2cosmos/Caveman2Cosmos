@@ -42,7 +42,7 @@
 		<English>Animal taiming is not domestication. Taimed animals can be further trained.</English>
 		<Polish>Oswajanie zwierząt to nie udamawianie. Oswojone zwierzęta mogą być później tresowane.</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEASTMASTER</Tag>
 		<English>Beastmaster</English>
 		<French>
@@ -324,4 +324,4 @@
 		</Spanish>
 		<Polish>Oswojony Wilk</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

@@ -637,7 +637,7 @@
 		<English>Bonus - Vanilla</English>
 		<Polish>Bonus - Wanilia</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_WALRUS</Tag>
 		<English>Bonus - Walrus</English>
 		<Polish>Bonus - Morsy</Polish>
@@ -664,4 +664,4 @@
 		</Spanish>
 		<Polish>Wielki Farmer</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

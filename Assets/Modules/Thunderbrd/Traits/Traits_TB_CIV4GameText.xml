@@ -3050,7 +3050,7 @@ Benefits:
 	[ICON_BULLET]Your cities benefit from reductions in both Air and Water Pollution.
 		</English>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_HUNTER_GATHERER_PEDIA</Tag>
 		<English>
 Negative Trait
@@ -12135,4 +12135,4 @@ Benefits:
 		<English>Gains some benefits for the state religion but severe penalties for non-state religions.</English>
 		<French>Bénéficie de certains avantages pour la religion d'État mais de lourdes sanctions pour les religions non étatiques.</French>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

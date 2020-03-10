@@ -167,7 +167,7 @@
 		<Tag>TXT_KEY_PROMOTION_MJOLNIR</Tag>
 		<English>Mojlnir</English>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TECH_ASATRU</Tag>
 		<English>Asatru</English>
 	</TEXT>
@@ -256,4 +256,4 @@
 		<French>Poing de Loki</French>
 		<Polish>Pięść Lokiego</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

@@ -104,7 +104,7 @@
 		<Tag>TXT_KEY_UNIT_POST_APOCALYPTIC_GRENADIER_STRATEGY</Tag>
 		<English>The Molotov Cocktail Thrower can easily take the wreckage of buildings and cities from enemy forces by burning them out. Be careful though with the flammables, you only have so many resources.</English>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_WRENCH_WARRIOR</Tag>
 		<English>Wrench Warrior</English>
 		<French>
@@ -126,4 +126,4 @@
 		<English>The Wrench Warrior is an alt-timeline Post-Apocalypse Unit. It should not be build unless you have been nuked and you can build nothing else.</English>
 		<Italian>Il guerriero con chiave inglese è un'unità post-apocalisse. Non dovrebbe essere costruito, a meno che tu non sia stato bombardato con l'atomica e non possa costruire nient'altro.</Italian>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

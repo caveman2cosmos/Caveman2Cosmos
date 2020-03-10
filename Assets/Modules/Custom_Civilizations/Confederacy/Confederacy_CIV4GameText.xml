@@ -49,7 +49,7 @@
 		<French>Confédérés</French>
 		<Polish>Konfederacki</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_AMERICAN_CONFEDERACY_DESC</Tag>
 		<English>Confederate States of America</English>
 		<French>Etats Confédérés d'Amérique</French>
@@ -119,4 +119,4 @@
 		<English>[H1]James Longstreet[\H1][NEWLINE][BOLD]General Confederate States[NEWLINE]Lived:[\BOLD] January 8, 1821 – January 2, 1904[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]He was one of the foremost Confederate generals of the American Civil War and the principal subordinate to General Robert E. Lee, who called him his "Old War Horse." He served under Lee as a corps commander for many of the famous battles fought by the Army of Northern Virginia in the Eastern Theater, but also with Gen. Braxton Bragg in the Army of Tennessee in the Western Theater. Biographer and historian Jeffry D. Wert wrote that "Longstreet... was the finest corps commander in the Army of Northern Virginia; in fact, he was arguably the best corps commander in the conflict on either side."</English>
 		<Polish>[H1]James Longstreet[\H1][NEWLINE][BOLD]Generał Skonfederowanych Stanów[NEWLINE]Żył:[\BOLD]1821 - 1904[NEWLINE][PARAGRAPH:2][BOLD]Tło:[\BOLD][PARAGRAPH:1]Po wybuchu wojny domowej opowiedział się po stronie Konfederacji. Wystąpił w czerwcu 1861 z Armii Federalnej i walczył w Armii Północnej Wirginii pod generałem Robertem Lee i Armii Tennessee pod generałem Braxtonem Braggiem. Uważany za jednego z najlepszych dowódców korpusów w czasie wojny. Jego umiejętności dowódcze przyczyniły się do zwycięstw Konfederacji w bitwach pod Bull Run, Fredericksburgiem i Chickamauga. Wiele kontrowersji wzbudzają natomiast jego działania w bitwie pod Gettysburgiem, gdzie m.in. otwarcie kwestionował decyzje taktyczne generała Lee.</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

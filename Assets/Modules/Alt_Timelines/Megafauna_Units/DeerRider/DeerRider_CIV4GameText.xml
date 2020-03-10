@@ -47,7 +47,7 @@
 		<Tag>TXT_KEY_BUILDING_DEER_TRAINER_HERITAGE_STRATEGY</Tag>
 		<English>The Deer Heritage buildings allows the building ofdeer units in all your cities.</English>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEER_TRAINER_PEDIA</Tag>
 		<English>There is no evidence deer were ever trained for warfare.  The [COLOR_BUILDING_TEXT]Deer Trainer[COLOR_REVERT] building is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT].  Technologies that might have been.[PARAGRAPH:2]Strongest base early withdrawal - even battle hardened deer can be skittish creatures that can be tough to KEEP in the battle for long but makes them GREAT at wearing down opponents. They'd be perhaps the best at this get in/get out type of strategy so long as they can do some damage during their short fights.</English>
 		<Italian>Non ci sono prove che i cervi siano mai stati usati in battaglia. L'[COLOR_BUILDING_TEXT]Allevatore di cervi[COLOR_REVERT] fa parte delle [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
@@ -112,4 +112,4 @@
 		<Tag>TXT_KEY_UNIT_DEER_LIGHT_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Light Deer[COLOR_REVERT] are excellent tundra units.  They are also good at Forest Combat and Fast</English>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

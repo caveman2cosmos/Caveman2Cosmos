@@ -257,7 +257,7 @@
 		<Italian>L'umanità è affascinata da tempo immemore dagli oggetti che luccicano. Oro, argento e gioielli hanno decorato le teste di monarchi e gli interni dei palazzi per millenni, ma fu nel diciannovesimo secolo che iniziò a fiorire il commercio di tesori. Le corse all'oro in tutto il mondo (Stati Uniti, Canada e Australia) non solo crearono nuove fonti di ricchezza, ma lasciarono un'impronta duratura sulla distribuzione della popolazione mondiale, con avidi prospettori che si recarono nelle più remote regioni della Terra.[PARAGRAPH:1]Il commercio delle gemme, tra cui spiccano i diamanti, si sviluppò in circostanze simili. Dopo la scoperta del "Cullinan", un gigantesco diamante da 3.106,75 carati, orde di minatori si recarono in Sud Africa a metà del diciannovesimo secolo. All'inizio del ventesimo secolo, l'era del prospettore itinerante si fece da parte davanti alla crescita di enormi compagnie che trattavano metalli preziosi e gemme. Il Sud Africa rimane una delle fonti più importanti al mondo d'oro e di diamanti, così come il luogo in cui nacquero alcune delle più importanti corporazioni del settore.</Italian>
 		<Spanish>La fascinación del hombre por los objetos brillantes existe desde tiempo inmemorial. El oro, la plata y las joyas han engalanado las cabezas de los monarcas y el interior de los templos desde hace milenios, pero fue en el siglo XIX cuando floreció de verdad el comercio de estos tesoros. La fiebre del oro por todo el mundo (en los Estados Unidos, Canadá y Australia), además de crear nuevas fuentes de riqueza, dejó una huella imperecedera en la conformación demográfica del mundo, provocando el traslado de avariciosos prospectores a algunos de los lugares más remotos del planeta.[PARAGRAPH:1]El comercio de piedras preciosas (cuyo monarca era el diamante) creció en circunstancias parecidas. En el siglo XIX, con el descubrimiento del "Cullinan", un enorme diamante de 3106.75 quilates, miles de mineros acudieron en tropel a las tierras de Sudáfrica. Con el cambio de siglo, la era del prospector solitario dejó paso a inmensas compañías extractoras de metales preciosos y producción de joyería. Sudáfrica sigue siendo uno de los principales productores de oro y diamantes del mundo, y sudafricanas son algunas de las empresas más importantes de la industria.</Spanish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_ADVENTURE</Tag>
 		<English>Adventure Tours</English>
 	</TEXT>
@@ -1104,4 +1104,4 @@
 		<Italian>[ICON_BULLET]Le città ricevono +%d1 [ICON_UNHEALTHY]</Italian>
 		<Spanish>[ICON_BULLET]Las ciudades reciben +%d1[ICON_UNHEALTHY]</Spanish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

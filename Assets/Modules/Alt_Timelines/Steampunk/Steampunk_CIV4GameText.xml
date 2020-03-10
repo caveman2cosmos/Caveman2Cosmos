@@ -294,7 +294,7 @@
 		<Italian>Il carro armato a vapore è simile a un Carro blindato.</Italian>
 		<Polish>Czołgi Parowe to potworne, dymiące machiny wojenne, które suną w kierunku wroga strzelając w niego śmiertelnie niebezpiecznymi kulami z karabinów parowych, by zmiszczyć wszystkich ośmielających przeciwstawić się Imperium Człowieka. Zostały zaprojektowane przez sławnego wynalazcę Leonardo z Miragliano, który dostosował parę wykorzystywaną przez krasnoludy do poruszania tłoków i kół zębatych, które napędzają koła Czołgu Parowego. W czasie wojny Szkoła Inżynierów</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_STEAM_TANK_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Steam Tank[COLOR_REVERT] is a tank powered by steam and steampunk technology. It destroys cavalry in combat and can attack from water effectively.</English>
 		<Italian>Il [COLOR_UNIT_TEXT]carro armato a vapore[COLOR_REVERT] è un carro con propulsione a vapore. In combattimento è devastante contro la cavalleria, ed è efficace anche negli attacchi anfibi.</Italian>
@@ -319,4 +319,4 @@
 		<English>The [COLOR_UNIT_TEXT]War Wheel[COLOR_REVERT] is a Steampunk contraption. It can not attack, but is cheaper to build than a Steam Tank and starts with the Sentry, Guerrila, and Woodsman promotions.</English>
 		<Italian>La [COLOR_UNIT_TEXT]ruota da guerra[COLOR_REVERT] è un'unità in stile Steampunk. Non può attaccare, ma è più economica di un carro a vapore e riceve gratis le promozioni Sentinella I, Guerriglia I e Taglialegna I.</Italian>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

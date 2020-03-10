@@ -28,7 +28,7 @@
 		<English>Dilly Bag</English>
 		<French>Cabat</French>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_NOMAD_FIRE_STICK</Tag>
 		<English>Fire Stick</English>
 		<French>Pieu brûlé</French>
@@ -81,4 +81,4 @@
 		<Tag>TXT_KEY_UNIT_NOMAD_CAMP_STRATEGY</Tag>
 		<English>Nomad Camp is not yet available for use.</English>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

@@ -186,7 +186,7 @@
 		<English>A supermassive black hole, such as at the core of the Milky Way.</English>
 		<French>Un trou noir supermassif, comme au cœur de la Voie Lactée.</French>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_FEATURE_SUPER_EARTH</Tag>
 		<English>Super Earth</English>
 		<French>Super Terre</French>
@@ -661,4 +661,4 @@
 		<English>The Virgo Supercluster.  Now it's getting ridiculous.</English>
 		<French>Les Superamas de la Vierge. Maintenant ça devient ridicule.</French>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

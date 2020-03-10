@@ -562,7 +562,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_EAGLE_BALD</Tag>
 		<English>Subdued Bald Eagle</English>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ELEPHANT</Tag>
 		<English>Subdued Asian Elephant</English>
 		<French>
@@ -2380,4 +2380,4 @@
 		</Italian>
 		<Polish>Tropiciel</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

@@ -651,7 +651,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LONDRINA</Tag>
 		<English>Londrina</English>
 		<French>
@@ -1281,4 +1281,4 @@
 		<Italian>Brasile</Italian>
 		<Polish>Brazylia</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

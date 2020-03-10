@@ -174,7 +174,7 @@
 		</Italian>
 		<Polish>Chata Inwokacji (Mors)</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHAMAN_SHRINE</Tag>
 		<English>Spirits Answer</English>
 		<French>Réponse des Esprits</French>
@@ -408,4 +408,4 @@
 		<English>Build [COLOR_UNIT_TEXT]Shamans[COLOR_REVERT] to heal stack units faster.</English>
 		<Spanish>Entrena [COLOR_UNIT_TEXT]Chamanes[COLOR_REVERT] para curar grupos de unidades más rápido.</Spanish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

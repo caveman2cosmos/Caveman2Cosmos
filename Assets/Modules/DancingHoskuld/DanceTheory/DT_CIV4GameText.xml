@@ -49,7 +49,7 @@ Des études récentes indiquent que les humains, les perroquets et les éléphan
 		<English>Strike fear in the hearts of your enemy.</English>
 		<French>Inspirez la peur dans le coeur de votre ennemi.</French>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CACOPHONY</Tag>
 		<English>Shock and Awe - Cacophony</English>
 		<French>Choc et stupeur - Cacophonie</French>
@@ -64,4 +64,4 @@ Des études récentes indiquent que les humains, les perroquets et les éléphan
 		<English>Shock and Awe - War Cry</English>
 		<French>Choc et stupeur - Cri de guerre</French>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

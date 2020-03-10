@@ -38,7 +38,7 @@
 		<Tag>TXT_KEY_OUTCOME_NOMAD_BREAKTHROUGH_MESSAGE</Tag>
 		<English>Our %s1 has brought forth great new knowledge</English>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_NOMAD_DEFENDER</Tag>
 		<English>Build defender</English>
 	</TEXT>
@@ -186,4 +186,4 @@
 		<Tag>TXT_KEY_PROPERTY_MATERIAL_STRATEGY</Tag>
 		<English>[H1]Crime Rate[\H1][PARAGRAPH:2]Crime events require a minimum Crime Rate in a city before they trigger. Certain buildings raise the crime rate, certain buildings lower the crime rate. So you are less likely to get a theft in a city with a lot of law buildings than you are in a city with a gambling house, etc.</English>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

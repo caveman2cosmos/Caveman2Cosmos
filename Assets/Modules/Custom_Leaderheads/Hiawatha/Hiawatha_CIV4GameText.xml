@@ -13,7 +13,7 @@
 		<French>Devons-nous jeter votre corps au fond de la rivière fourchue pour cela?</French>
 		<Polish>Czy mamy zatopić Twoje truchło w rozwidleniu rzeki?</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_HIAWATHA_1</Tag>
 		<English>We have been good to you so far. It is time now for you to be good to us.</English>
 		<French>Nous avons été bon pour vous jusqu'à présent. Il est maintenant temps pour vous d'être bon pour nous.</French>
@@ -62,4 +62,4 @@
 		<Spanish>Hiawatha</Spanish>
 		<Polish>[H1]Hiawatha[\H1][NEWLINE][BOLD]Wizjoner Pięciu Narodów[\BOLD][NEWLINE][BOLD]Żył: [\BOLD]w XII, XV lub XVI wieku[NEWLINE][PARAGRAPH:2]Żyjący (według różnych przekazów) w XII, XV lub XVI wieku wódz irokeski, według ustnych przekazów irokeskich uczeń Wielkiego Rozjemcy Deganewidy, założyciela Konfederacji Pięciu Narodów. Wraz z Deganewidą miał rozpalić Wieczny Płomień, wokół którego zbierała się Wielka Rada Konfederacji Pięciu Narodów.</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

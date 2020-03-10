@@ -22,7 +22,7 @@
 		<Italian>Occhio del cacciatore II</Italian>
 		<Polish>Wzrok Łowcy II</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SUBDUE_ANIMAL</Tag>
 		<English>Subdue Animal</English>
 		<French>
@@ -39,4 +39,4 @@
 		<Spanish>Domar animales</Spanish>
 		<Polish>Poskrom Zwierzę</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

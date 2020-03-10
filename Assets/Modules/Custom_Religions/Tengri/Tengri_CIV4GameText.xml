@@ -156,7 +156,7 @@
 		<Italian>Cavallo del vento II</Italian>
 		<Polish>Wicher II</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TECH_TENGRIISM</Tag>
 		<English>Tengriism</English>
 		<French>Tengriisme</French>
@@ -226,4 +226,4 @@
 		<Tag>TXT_KEY_UNIT_TENGRI_MISSIONARY_STRATEGY</Tag>
 		<English>Use this missionary to actively spread [COLOR_HIGHLIGHT_TEXT]Tengriism[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]). This increases your income if you have the [COLOR_BUILDING_TEXT]Khan Tengri[COLOR_REVERT].</English>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

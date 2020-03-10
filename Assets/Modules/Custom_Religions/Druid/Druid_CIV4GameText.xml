@@ -101,7 +101,7 @@
 		<Tag>TXT_KEY_BUILDING_DRUID_MONASTERY_KAVA</Tag>
 		<English>Nature Circle (Kava)</English>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DRUID_MONASTERY_LEMON</Tag>
 		<English>Nature Circle (Lemon)</English>
 	</TEXT>
@@ -408,4 +408,4 @@
 		<German>Verbreitet das Druidentum. Haben Sie das Becken des Gleichgewichts, erhöhen sich dadurch Ihre Einnahmen.</German>
 		<Italian>[Usa questo missionario per diffondere attivamente le [COLOR_HIGHLIGHT_TEXT]Traduzioni druidiche[COLOR_REVERT] nelle città alleate, o nelle città straniere nelle quali hai un [COLOR_HIGHLIGHT_TEXT]Diritto di passaggio[COLOR_REVERT]).</Italian>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

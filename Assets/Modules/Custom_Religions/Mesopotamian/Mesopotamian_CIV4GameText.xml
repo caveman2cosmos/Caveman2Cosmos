@@ -175,7 +175,7 @@
 		<English>TBD</English>
 		<Italian>Il santuario della religione mesopotamica.</Italian>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TMESO_SHRINE_PEDIA</Tag>
 		<English>The Tower of Babel according to chapter 11 of the Book of Genesis, was an enormous tower built at the city of Babel, the Hebrew name for Babylon. According to the biblical account, a united humanity, speaking a single language and migrating from the east, took part in the building after the Great Flood; The people decided their city should have a tower so immense that it would have "its top in the heavens." God, seeing what the people were doing, confounded their languages and scattered the people throughout the earth. It had been God's original purpose for mankind to grow and fill the earth.</English>
 		<Italian>La Torre di Babele, secondo il capitolo 11 del libro della Genesi, era una torre enorme costruita nella città di Babele, il nome ebraico di Babilonia. Secondo la Bibbia un'umanità unita, che parlava un'unica lingua e migrò dall'Oriente, partecipò alla costruzione di quest'edificio dopo la grande inondazione; le persone decisero che la loro città doveva avere una torre così grande da avere "la cima in Paradiso". Dio, vedendo ciò che le persone stavano facendo, confuse le loro lingue e sparpagliò la gente su tutta la Terra. Lo scopo finale di Dio era che l'umanità crescesse e si diffondesse su tutta la Terra.</Italian>
@@ -253,4 +253,4 @@
 		<English>Use this missionary to actively spread [COLOR_HIGHLIGHT_TEXT]Mesopotamism[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]). This increases your income if you have the [COLOR_BUILDING_TEXT]Babel Tower[COLOR_REVERT]..</English>
 		<Italian>Usa questo missionario per diffondere velocemente l'[COLOR_HIGHLIGHT_TEXT]Mesopotamismo[COLOR_REVERT] nelle tue città, o nelle città straniere nelle quali hai [COLOR_HIGHLIGHT_TEXT]Diritto di passaggio[COLOR_REVERT]).</Italian>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

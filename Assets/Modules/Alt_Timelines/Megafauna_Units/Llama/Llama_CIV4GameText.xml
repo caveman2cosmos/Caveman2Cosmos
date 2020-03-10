@@ -21,7 +21,7 @@
 		<English>The Llama Archer is a mounted archery unit. It does better in hilly areas than normal horse archers, but has a national limit.</English>
 		<Italian>L'arciere su lama è una speciale unità montata. Si comporta meglio nelle aree collinari rispetto ad altre unità montate, ma ha un limite nazionale.</Italian>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_LLAMA_RIDER</Tag>
 		<English>Llama Rider</English>
 		<French>
@@ -42,4 +42,4 @@
 		<English>[COLOR_UNIT_TEXT]Llama Riders[COLOR_REVERT] are early-game mounted units. This particular rider is using [COLOR_HIGHLIGHT_TEXT]Llamas[COLOR_REVERT] instead [COLOR_HIGHLIGHT_TEXT]Horses[COLOR_REVERT] and its weaker then rest of the Riders but they are great when fighting in Scrub and Rocky terrain. This unit can pass the Mountains freely.</English>
 		<Italian>Il cavalcatore di lama è una speciale unità montata. Si comporta meglio delle altre unità montate nelle aree collinari, ma ha un limite nazionale.</Italian>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

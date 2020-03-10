@@ -444,7 +444,7 @@
 		<French>Entretien des villes :</French>
 	</TEXT>
 
-<TEXT>
+	<TEXT>
 		<Tag>TXT_INTERFACE_TREASURYHELP_CIVIC_UPKEEP</Tag>
 		<English>Civic Upkeep:</English>
 		<French>Entretien des Doctrines :</French>
@@ -2999,7 +2999,7 @@
 		<French>Effets</French>
 		<German>Effekte</German>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CITY_SCREEN_DEMOLISH</Tag>
 		<English>Demolish</English>
 		<French>Démolir</French>
@@ -22579,7 +22579,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<French>Ouverture des Frontières</French>
 		<Italian>Apertura delle frontiere</Italian>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VOTE_EMANCIPATION</Tag>
 		<English>U.N. Resolution #743 (Global Civic - Liberal)</English>
 		<French>

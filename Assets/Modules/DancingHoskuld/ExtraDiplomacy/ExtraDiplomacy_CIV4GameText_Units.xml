@@ -88,7 +88,7 @@
 			<Plural>0</Plural>
 		</Portuguese>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ALCIBIADES</Tag>
 		<English>Alcibiades</English>
 		<French>
@@ -1825,4 +1825,4 @@
 		</Italian>
 		<Polish>Wielki Ustawodawca</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

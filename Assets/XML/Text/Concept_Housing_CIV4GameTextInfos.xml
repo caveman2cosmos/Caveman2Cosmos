@@ -26,9 +26,9 @@ Plus some indication that improving your housing is a good way to improve your e
     </English>
 		<German>[H1]Wohnraum in C2C[\H1][NEWLINE][NEWLINE]Wenn die entsprechenden Bedingungen erfüllt und die benötigten Rohstoffe und Technologien vorhanden sind, werden die Bürger der Städte [LINK=CONCEPT_AUTO_BUILDINGS]automatisch[\LINK] adäquate Wohnungen errichten. Die Qualität des städtischen Wohnraums ist nicht zu vernachlässigen. Sie hat entscheidende Auswirkungen auf die Produktivität und die Finanzen der Stadt.</German>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_HOUSING_TEXT</Tag>
 		<English>Housing</English>
 		<German>Wohnraum</German>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

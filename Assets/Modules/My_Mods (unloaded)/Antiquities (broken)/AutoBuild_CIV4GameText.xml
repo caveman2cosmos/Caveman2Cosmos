@@ -16,7 +16,7 @@
 		<Tag>TXT_KEY_BUILDING_ELITE_HOUSING_PEDIA</Tag>
 		<English>Game auto builds used to identify when a city has elite housing that can support more secialised buildings.</English>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELITE_HOUSING_STRATEGY</Tag>
 		<English>Auto building. Elite Housing supports more commerce.</English>
 	</TEXT>
@@ -28,4 +28,4 @@
 		<Tag>TXT_KEY_BUILDING_NEAR_CITY_STUFF_STRATEGY</Tag>
 		<English>Auto building.</English>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

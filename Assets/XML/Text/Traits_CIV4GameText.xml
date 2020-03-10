@@ -168,7 +168,7 @@
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WOLF_PEDIA</Tag>
 		<English>Way of the Wolf Trait is only available with the Ancient Ways Group Wonders.  All Canine Units gain the Way of the Wolf promotion, giving them +1 Movement, -1 Mobility Cost and +1 Visibility Range.  This promotion is only available during the Ancient era, it will be obsolete with Classical Lifestyle Technology.</English>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANTI_CLERICAL</Tag>
 		<English>Anti Clerical</English>
 		<French>
@@ -2318,4 +2318,4 @@
 		<Spanish>[ICON_BULLET]%D1 %F2_yeild/ciudad</Spanish>
 		<Polish>[ICON_BULLET]%D1%F2_yeild/Miasto</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

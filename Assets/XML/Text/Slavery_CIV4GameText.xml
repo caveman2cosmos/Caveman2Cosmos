@@ -376,7 +376,7 @@
 		<Italian>%d1 schaivi sono stati liberati a %s1.</Italian>
 		<Polish>%d1 niewolników zostało sprzedanych w %s1.</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MSG_NO_SLAVERY</Tag>
 		<English>Your nation has banned slavery.</English>
 		<French>Votre nation a banni l'esclavage.</French>
@@ -678,4 +678,4 @@
 		<Spanish>Settled Citizen</Spanish>
 		<Polish>Osiadły Niewolnik (Nauczyciel)</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

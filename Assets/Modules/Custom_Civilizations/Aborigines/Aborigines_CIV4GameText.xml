@@ -346,7 +346,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KOKATHA</Tag>
 		<English>Kokatha</English>
 		<French>
@@ -974,4 +974,4 @@
 		<Italian>Aborigeni</Italian>
 		<Polish>Aborygeni</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

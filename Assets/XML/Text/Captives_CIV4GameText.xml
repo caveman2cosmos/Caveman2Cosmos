@@ -215,7 +215,7 @@
 		<French>L'Esclave libéré a rejoint votre ville. Représenté par un bonus de nourriture.</French>
 		<Polish>Uwolnienie niewolnicy dołączają się do populacji miasta dostarczając my odrobinę żywności.</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_JOIN_CITY_POPULATION</Tag>
 		<English>Join City</English>
 		<French>Rejoindre la Ville</French>
@@ -546,4 +546,4 @@
 		<Italian>Alcuni dei tuoi schiavi a %s2 sono diventati popolazione(%d3).</Italian>
 		<Polish>Niektórzy (%d1) sprośród Twoich niewolników w %s2 dołączyli do populacji miasta (%d3).</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

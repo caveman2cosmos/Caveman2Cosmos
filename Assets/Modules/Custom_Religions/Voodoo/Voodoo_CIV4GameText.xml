@@ -116,7 +116,7 @@
 		<Italian>I [COLOR_BUILDING_TEXT]templi[COLOR_REVERT] aumentano la felicità e la cultura della città. Sono particolarmente indicati per espandere i confini della tua civiltà durante le fasi iniziali della partita.</Italian>
 		<Spanish>Los [COLOR_BUILDING_TEXT]Templos[COLOR_REVERT] aumentan la felicidad y cultura de la ciudad. Son especialmente útiles para expandir las fronteras de la civilización al principio de la partida.</Spanish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TECH_VOODOO</Tag>
 		<English>Voodoo</English>
 		<French>Vaudou</French>
@@ -219,4 +219,4 @@
 		<English>Use this missionary to actively spread [COLOR_HIGHLIGHT_TEXT]Voodoo[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]). This increases your income if you have the [COLOR_BUILDING_TEXT]Tomb of Ansyen Bon[COLOR_REVERT].</English>
 		<Italian>Usa questo missionario per diffondere velocemente il [COLOR_HIGHLIGHT_TEXT]Voodoo[COLOR_REVERT] nelle tue città, o nelle città straniere nelle quali hai [COLOR_HIGHLIGHT_TEXT]Diritto di passaggio[COLOR_REVERT]).</Italian>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

@@ -122,7 +122,7 @@
 		<English>Shaman</English>
 		<Polish>Szaman</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_WATERWAYS_II_DESC</Tag>
 		<English>Waterways II</English>
 		<French>Voies navigables II</French>
@@ -134,4 +134,4 @@
 		<French>Voies navigables I</French>
 		<Polish>Drogi Wodne I</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

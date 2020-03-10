@@ -70,7 +70,7 @@
 		<English>Shallow Draft</English>
 		<French>Remorqueur</French>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_CARAVAN_GUARD</Tag>
 		<English>Caravan Guards (Land) Promotion Line</English>
 		<French>Spécialisation Garde de caravane (Terrestre)</French>
@@ -90,4 +90,4 @@
 		<English>Caravan Movement (Sea) Promotion Line</English>
 		<French>Spécialisation Dépl. de caravane (Mer)</French>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

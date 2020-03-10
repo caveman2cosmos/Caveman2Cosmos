@@ -75,11 +75,11 @@
 		<Spanish>El [COLOR_UNIT_TEXT]Espía[COLOR_REVERT] intentará robar los planos, que revelarán todas las unidades de la civilización objetivo.</Spanish>
 		<Polish>[COLOR_UNIT_TEXT]Poseł[COLOR_REVERT] spróbuje przekupić urzednika rządowego i odkryć rozmieszczenie wrogich jednostek.</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_SOCIAL_REFORM</Tag>
 		<English>The %s1_civ has passed new legislation, increasing the quality of life of its citizens.</English>
 		<French>L'%s1_civ a voté une nouvelle loi, améliorant la qualité de vie de ses citoyens.</French>
 		<Italian>Gli %s1:3_civ hanno adottato nuove leggi, incrementando la qualità della vita dei propri cittadini.</Italian>
 		<Polish>Imperium %s1_civ wprowadziło nowe prawo, zwiększając jakość życia obywateli.</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

@@ -45,7 +45,7 @@
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Allows the training of Zebra units.</English>
 		<French>Permet l'entraînement d'unités avec des zèbres.</French>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ZEBRA_TRAINER_HERITAGE</Tag>
 		<English>Heritage - Zebra</English>
 		<French>Patrimoine (Zèbres)</French>
@@ -146,4 +146,4 @@
 		<Tag>TXT_KEY_UNIT_ZEBRA_KNIGHT_STRATEGY</Tag>
 		<English>This is the strongest pre-gunpowder unit in the game and are quite effective until [COLOR_UNIT_TEXT]Grenadiers[COLOR_REVERT] and [COLOR_UNIT_TEXT]Cannon[COLOR_REVERT] begin appearing. This mounted unit is using [COLOR_HIGHLIGHT_TEXT]Zebras[COLOR_REVERT] instead [COLOR_HIGHLIGHT_TEXT]Horses.[COLOR_REVERT].</English>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

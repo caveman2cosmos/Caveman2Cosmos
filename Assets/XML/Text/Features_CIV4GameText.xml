@@ -636,7 +636,7 @@
 		<French>Un bassin d'eau de pluie est une région de lacs peu profonds, de marais et d'autres zones humides. Au printemps et à l'automne, des millions d'oiseaux migrateurs traversent ces régions pour se nourrir et se reposer.</French>
 		<Polish>Basen - rodzaj zbiornika antropogenicznego, który jest najczęściej niewielkim akwenem o misie betonowej bądź ukształtowanej z innych materiałów sztucznych. Zwykle posiada płaskie lub prawie płaskie dno oraz strome lub pionowe ściany, co przekłada się na wartości wskaźnika głębokościowego zbliżone do jedności. Jest wykorzystywany do celów przemysłowych (np. osadniki wód chłodniczych), sportowo-rekreacyjnych (np. baseny pływackie), komunalnych (np. zbiorniki wody przeznaczonej do spożycia przez ludzi), retencyjnych (np. zbiorniki wód opadowych) i innych.</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_FEATURE_REEF</Tag>
 		<English>Reef</English>
 		<French>
@@ -874,4 +874,4 @@
 		<Italian>Un vulcano è un'apertura o rottura sulla superficie o crosta di un pianeta, che permette alla roccia calda e fusa, alla cenere e ai gas di raggiungere la superficie. L'attivtà vulcanica che prevede l'estrusione di roccia tende a formare montagne o caratteristiche simili alle montagne in un certo lasso di tempo.</Italian>
 		<Polish>Wulkan (z łac. Vulcanus - imię rzymskiego boga ognia) - miejsce na powierzchni Ziemi, z którego wydobywa się lawa, gazy wulkaniczne (solfatary, mofety, fumarole) i materiał piroklastyczny. Terminu tego również używa się jako określenie form terenu powstałych wskutek działalności wulkanu, choć bardziej poprawne są takie terminy jak: góra wulkaniczna, stożek wulkaniczny, kopuła wulkaniczna czy wulkan tarczowy.</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

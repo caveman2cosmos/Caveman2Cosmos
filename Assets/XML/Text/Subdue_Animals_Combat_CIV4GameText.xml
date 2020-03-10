@@ -177,7 +177,7 @@
 		<German>Hai</German>
 		<Polish>Rekin</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WHALE</Tag>
 		<English>Whale</English>
 		<French>Baleine</French>
@@ -185,4 +185,4 @@
 		<German>Wal</German>
 		<Polish>Wieloryb</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

@@ -45,8 +45,8 @@
 		<Tag>TXT_WORLD_TECH2</Tag>
 		<English>[COLOR_BUILDING_TEXT]%s1 has been researched in a far away land![COLOR_REVERT]</English>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_WORLD_TECH_PEDIA</Tag>
 		<English>WORLD TECH</English>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

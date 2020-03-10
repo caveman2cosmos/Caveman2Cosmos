@@ -39,7 +39,7 @@
 		<English>Hyperspace Plot</English>
 		<French>Case d'Hyperspace</French>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MAPCATEGORY_INTERSTELLAR</Tag>
 		<English>Interstellar Plot</English>
 		<French>Case Interstellaire</French>
@@ -101,4 +101,4 @@
 		<German>Venusfeld</German>
 		<French>Case vénusienne</French>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

@@ -185,7 +185,7 @@
 		<English>Domesticated animals are now bred on this plot.</English>
 		<Polish>Od tego momentu stada zwierząt zasiedlają ten teren.</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_SUBDUED_ALL</Tag>
 		<English>%s1, %s2 and %s3</English>
 		<French>%s1, %s2 et %s3</French>
@@ -262,4 +262,4 @@
 		<Italian>%s1 è diventato una risorsa (%s2).</Italian>
 		<Polish>Poskromiony %s1 zamiast tego został surowcem (%s2).</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

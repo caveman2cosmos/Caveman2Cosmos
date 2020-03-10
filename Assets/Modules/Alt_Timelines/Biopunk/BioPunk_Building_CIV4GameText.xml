@@ -65,7 +65,7 @@
 		<English>People come here to get some bodyparts of animals.</English>
 		<Polish>Ludzie w tej klinice przeszczepiają sobie części ciał zwierząt.</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHIMERA_SURGERY_CLINIC_STRATEGY</Tag>
 		<English>Build a Chimera Surgery Clinic to increase your cities Gold.</English>
 		<French>Construire une [COLOR_BUILDING_TEXT]Clinique de Chirurgie Chimérique[COLOR_REVERT] améliorera les revenus de votre ville.</French>
@@ -209,4 +209,4 @@
 		<English>Build a Weaponized Flora to increase your cities Defense.</English>
 		<French>Construire une [COLOR_BUILDING_TEXT]Végétation Défensive[COLOR_REVERT] augmentera la défense de votre ville.</French>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

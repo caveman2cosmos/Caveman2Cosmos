@@ -291,7 +291,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SIRI_JIBE</Tag>
 		<English>Siri Jibe</English>
 		<French>
@@ -502,4 +502,4 @@
 		<Tag>TXT_KEY_CIV_TUPI_SHORT_DESC</Tag>
 		<English>Tupi</English>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

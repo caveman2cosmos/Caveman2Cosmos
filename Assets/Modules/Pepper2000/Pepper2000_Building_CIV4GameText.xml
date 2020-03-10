@@ -9808,7 +9808,7 @@
 		<Tag>TXT_KEY_BUILDING_LUNAR_BIOMASS_POWERPLANT_PEDIA</Tag>
 		<English>TBD</English>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LUNAR_BIOMASS_POWERPLANT_STRATEGY</Tag>
 		<English>TBD</English>
 	</TEXT>
@@ -19636,4 +19636,4 @@
 		<Tag>TXT_KEY_BUILDING_ZEUS_CANNON_STRATEGY</Tag>
 		<English>TBD</English>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

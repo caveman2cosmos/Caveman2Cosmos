@@ -10,9 +10,9 @@
 		<English>Idea Class (Culture)</English>
 		<French>Classe d'Idée (Culture)</French>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_IDEACLASS_HERITAGE</Tag>
 		<English>Idea Class (Heritage)</English>
 		<French>Classe d'Idée (Héritage)</French>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

@@ -5,7 +5,7 @@
 		<English>The Animal Breeder allows the building of some herds of animals for settling in other cities. Some can upgrade to combat units.</English>
 		<French>Le centre de gestion des troupeux permet la migration de troupeau pour s'établir dans d'autres villes. Certaines unités peuvent être améliorés en unités combattantes.</French>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_BREEDER_STRATEGY</Tag>
 		<English>Train herd animals here and spread them to other cities.</English>
 		<French>Permet d'entraîner des animaux, afin de les envoyer dans vos autres villes pour créer des troupeaux.</French>
@@ -32,4 +32,4 @@
 		<Tag>TXT_KEY_UNIT_TAMED_WOLF_PAIR</Tag>
 		<English>Breeding Pair - Wolf</English>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

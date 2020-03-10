@@ -326,7 +326,7 @@
 		<English>TBD</English>
 		<French>TBD</French>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_STRATEGY</Tag>
 		<English>Wild and exotic animals are a big draw card at carnivals and circus events, providing happiness and culture.</English>
 		<French>Les animaux sauvages et exotiques sont une grande carte à tirer lors des carnavals et des événements de cirque, procurant bonheur et culture.</French>
@@ -375,4 +375,4 @@
 		<French>Ces Histoires peuvent être utilisées pour la construction des bâtiments de Mythes.</French>
 		<Italian>Queste storie possono essere usate per costruire i miti.</Italian>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

@@ -36,7 +36,7 @@
 		<Tag>TXT_KEY_BUILDING_BURIAL_GOODS_PEDIA</Tag>
 		<English>Game auto builds used to provide antiquities at Archaeology.</English>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BURIAL_GOODS_SKY</Tag>
 		<English>Grave Goods (Sky)</English>
 	</TEXT>
@@ -48,4 +48,4 @@
 		<Tag>TXT_KEY_BUILDING_GRAVE_GOODS</Tag>
 		<English>Grave Goods</English>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

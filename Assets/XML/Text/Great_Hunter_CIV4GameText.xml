@@ -19,7 +19,7 @@
 		<German>Versieht alle Städte mit der [LINK=BUILDING_TRADITION_HUNTER]Tradition: Jagt[\LINK] welche von einem [LINK=UNIT_GREAT_HUNTER]Großer Jäger[\LINK]errichtet wird. Kombiniert die Gebäude[LINK=BUILDING_MASTER_HUNTER]Meisterjäger[\LINK] und [LINK=BUILDING_HUNTING_INSTRUCTION]Jagdanleitung[\LINK].</German>
 		<Polish>Zapewniany do wszystkich miast przez [LINK=BUILDING_TRADITION_HUNTER]Tradycje: Łowiectwo[\LINK] która jest tworzona przez [LINK=UNIT_GREAT_HUNTER]Wielkiego Łowce[\LINK]. Łączy  [LINK=BUILDING_MASTER_HUNTER]Wybitnego Łowce[\LINK] i [LINK=BUILDING_HUNTING_INSTRUCTION]Instrukcje Łowieckie[\LINK] (budynki).</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MASTER_HUNTER_TRADITION_STRATEGY</Tag>
 		<English>Provides health and happiness bonuses with game animals. Units built here get free hunting promotion.</English>
 		<French>Procure des bonus en santé et bonheur grâce aux animaux. Les unités construites ici recoivent la promotion 'chasseur'.</French>
@@ -135,4 +135,4 @@
 		<German>Meisteraufseher</German>
 		<Polish>Wybitny Opiekun</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

@@ -294,7 +294,7 @@
 		<Tag>TXT_KEY_BUILDING_TRAINED_SEAL_PEDIA</Tag>
 		<English>TBD</English>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_PEDIA</Tag>
 		<English>A cage used for wild subdued animals.</English>
 		<Italian>Una gabbia in cui vengono rinchiusi gli animali selvaggi addomesticati.</Italian>
@@ -409,4 +409,4 @@
 		<Italian>Un'unità che non corrisponde a nulla esistente nella vita reale, serve solo a permettere alcune meccaniche di gioco.</Italian>
 		<Polish>Jednostka jest niezbędna dla mechaniki gry.</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

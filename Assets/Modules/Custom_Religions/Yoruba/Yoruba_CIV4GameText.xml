@@ -138,7 +138,7 @@
 		<English>Build this pattaky to get gold from every city in the world where Yoruba is present.</English>
 		<Italian>Costruisci questo pattaky per ottenere oro da ogni città del mondo in cui è presente Yoruba.</Italian>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TECH_YORUBA</Tag>
 		<English>Yoruba</English>
 		<Polish>Joruba</Polish>
@@ -202,4 +202,4 @@
 		<English>Use this missionary to actively spread [COLOR_HIGHLIGHT_TEXT]Yoruba religion[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]). This increases your income if you have the [COLOR_BUILDING_TEXT]Pattaky of Olodumare[COLOR_REVERT].</English>
 		<Italian>Usa questo missionario per diffondere velocemente [COLOR_HIGHLIGHT_TEXT]Yoruba[COLOR_REVERT] nelle tue città, o nelle città straniere nelle quali hai [COLOR_HIGHLIGHT_TEXT]Diritto di passaggio[COLOR_REVERT]).</Italian>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

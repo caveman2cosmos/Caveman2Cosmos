@@ -9,7 +9,7 @@
 		<French>Bienvenue à ma fête, [CT_NAME].</French>
 		<Polish>Zapraszamy do zabawy, [CT_NAME].</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_LEADER_ATOTOZTLI</Tag>
 		<English>Atotoztli</English>
 	</TEXT>
@@ -18,4 +18,4 @@
 		<English>[H1]Atotoztli[\H1][NEWLINE][BOLD]Aztec Empress[\BOLD][NEWLINE][BOLD]Dates: [\BOLD] [NEWLINE][PARAGRAPH:1][BOLD]Background:[\BOLD][TAB][PARAGRAPH:1]Atotoztli (Classical Nahuatl: Atotoztli) or Huitzilxochtzin (Huitzilxochtzin) was a daughter of the Aztec emperor Moctezuma I and Chichimecacihuatzin, the daughter of Cuauhtototzin, the ruler of Cuauhnahuac. She married Tezozomoc, son of the previous emperor Itzcoatl, and gave birth to three sons who would later become emperors themselves: Axayacatl, Tizoc, and Ahuitzotl.</English>
 		<Polish>[H1]Atotoztli[\H1][NEWLINE][BOLD]Cesarzowa Azteków[\BOLD] [NEWLINE][PARAGRAPH:1][BOLD]Tło:[\BOLD][TAB][PARAGRAPH:1]Atotoztli (Nahuatl: Atotoztli) lub Huitzilxochtzin (Huitzilxochtzin) była córką Imperatora Moctezuma I i Chichimecacihuatzin, córki of Cuauhtototzin, władcy Cuauhnahuac. Poślubiła Tezozomoc, syna poprzedniego imperatora Itzcoatla.</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

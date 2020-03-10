@@ -29,7 +29,7 @@
 		<French>Effet - Patrimoine (Bisons)</French>
 		<Polish>Efekt - Dziedzictwo - Bizon</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BISON_TRAINER_HERITAGE</Tag>
 		<English>Heritage - Bison</English>
 		<French>Patrimoine (Bisons)</French>
@@ -76,4 +76,4 @@
 		<English>[COLOR_UNIT_TEXT]Bison Riders[COLOR_REVERT] are early-game mounted units. This particular rider is using [COLOR_HIGHLIGHT_TEXT]Bisons[COLOR_REVERT] instead [COLOR_HIGHLIGHT_TEXT]Horses[COLOR_REVERT] and is costlier than the rest of the Riders but they are great when fighting against Elephants and Mammoths.</English>
 		<Italian>I [COLOR_UNIT_TEXT]cavalcatori di bisonti[COLOR_REVERT] sono</Italian>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

@@ -167,7 +167,7 @@
 		</Spanish>
 		<Polish>Religia (Baha'i)</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_BAHAI_MISSIONARY</Tag>
 		<English>Baha'i Missionary</English>
 		<French>Missionnaire de Bahaïsme</French>
@@ -184,4 +184,4 @@
 		<Tag>TXT_KEY_UNIT_BAHAI_MISSIONARY_STRATEGY</Tag>
 		<English>Use this missionary to actively spread [COLOR_HIGHLIGHT_TEXT]Baahaism[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]). This increases your income if you have the [COLOR_BUILDING_TEXT]Shrine of Bab[COLOR_REVERT].</English>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

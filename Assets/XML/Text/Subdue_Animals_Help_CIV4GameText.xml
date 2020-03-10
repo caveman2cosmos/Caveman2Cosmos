@@ -541,7 +541,7 @@
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Toucan</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythe, Histoire(s) - Toucan</French>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_TUNA_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Sea, Fish and Tuna Myth, Fish Pens, Coastal Fish Pens, Marine Institute</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Sea, Fish and Tuna Myth, Fish Pens, Coastal Fish Pens, Marine Institute</French>
@@ -583,4 +583,4 @@
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Costruisci[COLOR_REVERT] i miti degli animali marini [NEWLINE][ICON_BULLET]Converti in ricerca o cultura</Italian>
 		<Polish>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Zbuduj[COLOR_REVERT] Mit Zwierząt Morskich [NEWLINE][ICON_BULLET]Zamień na naukę i kulturę w mieście</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

@@ -239,7 +239,7 @@
 		<English>The Chromium Gunman is an internal-combustion-powered denizen of the Dieselpunk culture. He is an automaton born of Henry Ford's grand vision of assembly line mass production, and his polished but unpainted metal exterior is "so in right now" (in the 1920s and 30s that is).</English>
 		<Polish>Strzelec Chromium to prymitywny android napędzany przez silnik spalinowy Henriego Forda.</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHROMIUM_GUNMAN_STRATEGY</Tag>
 		<English>The Chromium Gunman is the unique Infantry replacement for the Dieselpunk alt-timeline culture. It starts with bonuses against gunpowder units and in city defence.  Thus the go-to city defender for his era - for those lucky enough to have the use of his services.  But use him with caution - he looks a bit shifty to me...</English>
 	</TEXT>
@@ -351,4 +351,4 @@
 		<English>The Very Heavy Tank is an alt-timeline dieselpunk unit. It is very powerful but has a national unit limit.</English>
 		<Italian>Il Carro blindato pesante è un'unità in stile Dieselpunk. E' molto potente, ma ha un limite nazionale di unità permesse</Italian>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

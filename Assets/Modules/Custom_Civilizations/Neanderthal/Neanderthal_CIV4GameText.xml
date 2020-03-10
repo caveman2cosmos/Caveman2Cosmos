@@ -17,7 +17,7 @@
 		<Spanish>Buenos dias y placenteras noches, a los neans nos disgusta tomar ventaja de los debiles, pero quizas tu quieras estar en gracia con los fuertes...</Spanish>
 		<Polish>Dobrych dni i przyjemnych nocy, Neandertalczycy nie lubią gnębić słabszych, ale może jednak chcesz być w sojuszu z silniejszymi... </Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_LEADER_WRUB_1</Tag>
 		<English>Good days and pleasant nights, may your mighty people help the neans when they are in need.</English>
 		<French>Bons jours et nuits plaisantes, que votre brillant peuple puisse venir en aide à ceux dans le besoin.</French>
@@ -96,4 +96,4 @@
 		<Spanish>No suena mal Wrub como lider Neandertal, menos aún cuando no se puede decir nada en contra.</Spanish>
 		<Polish>Wrub to przypuszczalny wódz neandertalczyków.</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

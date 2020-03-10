@@ -221,7 +221,7 @@ meaning 'Golden Courtyard'), originally named Inti Kancha (' Temple of the Sun')
 		</Spanish>
 		<Polish>Religia (Andeanizm)</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_ANDEAN_MISSIONARY</Tag>
 		<English>Andean Missionary</English>
 		<French>Missionnaire Andéen</French>
@@ -242,4 +242,4 @@ meaning 'Golden Courtyard'), originally named Inti Kancha (' Temple of the Sun')
 		<English>Use this missionary to actively spread [COLOR_HIGHLIGHT_TEXT]Andeanism[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]).</English>
 		<Italian>Usa questo missionario per diffondere velocemente l'[COLOR_HIGHLIGHT_TEXT]Andinismo[COLOR_REVERT] nelle tue città, o nelle città straniere nelle quali hai [COLOR_HIGHLIGHT_TEXT]Diritto di passaggio[COLOR_REVERT]).</Italian>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

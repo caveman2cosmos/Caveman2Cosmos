@@ -52,7 +52,7 @@
 		<English>Allows Rhino units to be built in all your cities.</English>
 		<French>Permet aux unités avec des Rhinocéros d'être entraînées dans toutes vos villes.</French>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RHINO_TRAINER_PEDIA</Tag>
 		<English>There is no evidence rhinoceros were ever trained for mounted warfare.  The [COLOR_BUILDING_TEXT]Rhinoceros Trainer[COLOR_REVERT] building is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT].  Technologies that might have been.</English>
 		<Italian>Non ci sono prove che i rinoceronti siano mai stati addestrati per la guerra. L'[COLOR_BUILDING_TEXT]Allevatore di rinoceronti[COLOR_REVERT] fa parte delle [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
@@ -107,4 +107,4 @@
 		<French>Le [COLOR_UNIT_TEXT]Rhinocéros de Guerre[COLOR_REVERT] peut lancer une seule attaque dévastatrice faisant des dégâts collatéraux à tout le tas d'unités.</French>
 		<Italian>Il [COLOR_UNIT_TEXT]Rinoceronte asiatico da guerra[COLOR_REVERT] è un arma ad uso singolo, che causa danni collaterali alle pile di unità.</Italian>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

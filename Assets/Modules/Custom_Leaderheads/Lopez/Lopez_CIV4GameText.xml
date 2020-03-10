@@ -23,7 +23,7 @@
 		<Spanish>Tengo el destino del [CT_EMPIRE] en mis manos. Dadme lo que os exijo.</Spanish>
 		<Polish>W moich rękach leży los [CT_EMPIRE]. Daj mi czego się domagam.</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_LOPEZ_1</Tag>
 		<English>My town folks are in need, can the [CT_EMPIRE] help?</English>
 		<French>Ma personnes est dans le besoin, l'[CT_EMPIRE] peut-il nous aider?</French>
@@ -106,4 +106,4 @@
 		<English>[H1]Pedro Alonso Lopez[\H1][NEWLINE][BOLD]“Monster of the Andes”[NEWLINE]Lived: [\BOLD]c.October 8th, 1948 – still living, 1882[PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]By far one of the most prolific serial killers of all time, the “Monster of the Andes” butchered enough people to fill a small town. After killing around 100 tribal women in Peru in the 1970s, he was apprehended by tribal forces that were just about ready to execute him when they were convinced by an American missionary that was staying with them at the time to take him to the police force instead. Unfortunately, the police then just let him go, after which Lopez travelled to Ecuador, where he proceeded to kill about 3-4 girls a week, claiming that girls in Ecuador were “more gentle and trusting, more innocent”. This carried on until he was caught in 1980, but police were still unsure as to his guilt, but a flash flood uncovered a mass grave that had hidden many of his victims, which then led to his arrest. [PARAGRAPH:1]However, the Ecuador government then released him in 1998, deporting him to Columbia. Lopez allegedly said that he was being released for “good behavior”.</English>
 		<Polish>[H1]Pedro Alonso Lopez[\H1][NEWLINE][BOLD]“Potwór z Andów”[NEWLINE]Żył: [\BOLD]ok.8 Października 1848 –- 1882[PARAGRAPH:2][BOLD]Tło:[\BOLD][NEWLINE][TAB]By far one of the most prolific serial killers of all time, the “Monster of the Andes” butchered enough people to fill a small town. After killing around 100 tribal women in Peru in the 1970s, he was apprehended by tribal forces that were just about ready to execute him when they were convinced by an American missionary that was staying with them at the time to take him to the police force instead. Unfortunately, the police then just let him go, after which Lopez travelled to Ecuador, where he proceeded to kill about 3-4 girls a week, claiming that girls in Ecuador were “more gentle and trusting, more innocent”. This carried on until he was caught in 1980, but police were still unsure as to his guilt, but a flash flood uncovered a mass grave that had hidden many of his victims, which then led to his arrest. [PARAGRAPH:1]However, the Ecuador government then released him in 1998, deporting him to Columbia. Lopez allegedly said that he was being released for “good behavior”.</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

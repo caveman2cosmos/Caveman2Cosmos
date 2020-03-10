@@ -18,7 +18,7 @@
 		<Italian>Questo edificio ti permette di addestrare le unità feline più velocemente.</Italian>
 		<Polish>Buduj budynki i jednostki Wielkich Kotów szybciej w Twoim mieście.</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BIG_CAT_TRAINER</Tag>
 		<English>Animal Trainer (Big Cat)</English>
 		<French>Entraineur de Félins</French>
@@ -106,4 +106,4 @@
 		<Tag>TXT_KEY_UNIT_WARCAT_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]War Cat[COLOR_REVERT] its similar unit as [COLOR_UNIT_TEXT]Wardog[COLOR_REVERT], but instead dogs its using trained panthers. Its ideal against criminal units and as skirmisher.</English>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

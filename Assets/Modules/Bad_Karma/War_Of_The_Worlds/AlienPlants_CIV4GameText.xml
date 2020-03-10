@@ -23,7 +23,7 @@
 		<Italian>Piante aliene rappresentano l'Erba Rossa di "War of the Worlds" di H.G.Wells o i funghi alieni di Alpha Centauri.  Grafica da the Alpa Centuri mod.(GarretSidzaka)</Italian>
 		<Spanish>Alien Plant eg Red Weed from "War of the Worlds" by H.G.Wells or Planet Fungus from Alpha Centuri.  graphics from the Alpa Centuri mod.(GarretSidzaka)</Spanish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_FEATURE_SEA_FUNGUS</Tag>
 		<English>Sea Fungus</English>
 		<French>
@@ -43,4 +43,4 @@
 		</French>
 		<Italian>Funghi alieni</Italian>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

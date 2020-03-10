@@ -122,7 +122,7 @@
 		<Tag>TXT_KEY_CIV_OCEANIA_PEDIA</Tag>
 		<English>The Oceania region. [PARAGRAPH:2]The.</English>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_OCEANIA_SHORT_DESC</Tag>
 		<English>Oceania</English>
 	</TEXT>
@@ -146,4 +146,4 @@
 		<Tag>TXT_KEY_CIV_SOUTH_AMERICA_SHORT_DESC</Tag>
 		<English>South America</English>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

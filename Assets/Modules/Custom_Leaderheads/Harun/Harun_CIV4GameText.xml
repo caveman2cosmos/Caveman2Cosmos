@@ -13,7 +13,7 @@
 		<French>Si vous donnez cela, je n'aurai pas à couper votre corps en deux. Qu'en dites-vous?</French>
 		<Polish>Jeśli oddasz mi to czego chcę to nie rozrąbię Cie na pół. Co o tym sądzisz?</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_HARUN_1</Tag>
 		<English>After all the lavish gifts I've given you, it wouldn't be much to return the favor with this tiny, insignificant gift, now would it?</English>
 		<French>Après tous les cadeaux somptueux que je vous ai donnés, ce ne serait pas grand'chose pour vous de rendre la pareille avec ce petit cadeau insignifiant, n'est-ce pas?</French>
@@ -62,4 +62,4 @@
 		<Spanish>Harun al-Rashid</Spanish>
 		<Polish>[H1]Harun al-Rashid[\H1][NEWLINE][BOLD]5-ty Kalif Abbasydów[\BOLD][NEWLINE][BOLD]Żył: [\BOLD]763 - 809[NEWLINE][PARAGRAPH:2]Piąty i najbardziej znany kalif (od 786) z dynastii Abbasydów, ojciec kalifów Al Mamuna, Al-Amina i Al-Mutasima. Jeden z najwybitniejszych władców muzułmańskich, mecenas nauki i sztuki. W Europie zyskał popularność jako bohater Księgi tysiąca i jednej nocy. Był ostatnim kalifem, który brał osobisty udział w hadżdżu, pielgrzymce do Mekki i Medyny. Idealizowany (np. przez historyka Ibn Kasira) jako najzdolniejszy z władców abbasydzkich, u szczytu świetności kulturalnej i politycznej kalifatu. Na Zachodzie najlepiej znany jako bohater cyklu "Tysiąca i jednej nocy", baśni, wytworu naiwnej fantazji ludowej, który możny porównać z naszymi legendami o królu Kazimierzu Wielkim, jako "królu chłopskim".</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

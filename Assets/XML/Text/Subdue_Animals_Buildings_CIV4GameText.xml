@@ -1448,7 +1448,7 @@
 		<French>Histoire des Mammouths </French>
 		<Polish>Opowieść o Kopalnych Mamutach</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_MARSUPIAL_MYTH</Tag>
 		<English>Myth - Paleolithic Marsupial</English>
 		<French>Mythe du Marsupial Paléolithique</French>
@@ -2158,4 +2158,4 @@
 		<English>See [LINK=UNIT_MACKERAL]Mackerel[/LINK] since tuna are mackerel.[PARAGRAPH:2]Source: Wikipedia</English>
 		<French>Voir [LINK=UNIT_MACKERAL]Maquereau[/LINK] car les thons sont une espèce de Maquereaux.[PARAGRAPH:2]Source: Wikipedia</French>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

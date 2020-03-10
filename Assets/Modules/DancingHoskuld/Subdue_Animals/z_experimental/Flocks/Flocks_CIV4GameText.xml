@@ -41,7 +41,7 @@
 		<Tag>TXT_KEY_BUILDING_TURKEY_FLOCKS_EFFECT</Tag>
 		<English>Flocks of Turkey Effect</English>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TURKEY_FLOCKS_PEDIA</Tag>
 		<English>Your nation has flocks of Turkey.</English>
 	</TEXT>
@@ -49,4 +49,4 @@
 		<Tag>TXT_KEY_BUILDING_TURKEY_FLOCKS_STRATEGY</Tag>
 		<English>This is necessary to place Turkey Herds on the map. (NOT YET IMPLEMENTED)</English>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

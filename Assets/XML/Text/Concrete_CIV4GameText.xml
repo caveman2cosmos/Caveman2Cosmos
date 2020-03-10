@@ -20,9 +20,9 @@
 		<English>This is one of the technologies common in the Classic Era that was lost to Western Europe until the Industrial Era.</English>
 		<French>Une des technologies de l'ère classique, qui s'est perdue dans l'europe occidentale jusqu'à l'ère industrielle.</French>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WATERPROOF_CEMENT_MAKER_STRATEGY</Tag>
 		<English>Specialits building providing Waterproof Cement.</English>
 		<French>Bâtiment spécifique permettant de délivrer du ciment imperméable.</French>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

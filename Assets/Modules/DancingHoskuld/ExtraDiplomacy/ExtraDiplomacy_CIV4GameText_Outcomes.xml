@@ -39,7 +39,7 @@
 		<Italian>I barbari hanno ucciso i tuoi emissari.</Italian>
 		<Polish>Barbarzyńcy zabili Twojego posła.</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_DIPLOMAT_BARBARIANS_SUSPICIOUS</Tag>
 		<English>The barbarian leaders are suspicious of your motives. Try again.</English>
 		<French>Les chefs barbares trouvent votre comportement suspect. Essayez une autre fois.</French>
@@ -81,4 +81,4 @@
 		<Italian>Hai celebrato l'unicità della comunità indigena.</Italian>
 		<Polish>Zwiętujesz unikatowośc tubylczej ludności.</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

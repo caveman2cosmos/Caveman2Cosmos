@@ -122,7 +122,7 @@
 		<Italian>Il tuo altare dei sacrifici di %s1 è stato venduto.</Italian>
 		<Polish>Twój Ołtarz Ofiar z ludzi w %s1 został sprzedany.</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MSG_NO_HUMAN_SACRIFICE</Tag>
 		<English>Your nation has banned human sacrifice.</English>
 		<French>Votre nation a banni le sacrifice humain.</French>
@@ -168,4 +168,4 @@
 		<Spanish>The best results come with the best alters. (Altar for Human Sacrifice or the better Sacrificial Alter)</Spanish>
 		<Polish>Najlepsze rezultaty osiąga się z najlepszych Ołarzy (Ołtarzy Ofiar z ludzi lub z Ofiarnych Ołtarzy). Niektóre Cudy Swiata mają także wpływ na zyski z Ofiar.</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

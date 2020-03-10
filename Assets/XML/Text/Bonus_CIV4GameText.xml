@@ -465,7 +465,7 @@
 		<Italian>Azteco</Italian>
 		<Polish>Aztecka</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_BABYLONIAN</Tag>
 		<English>Babylonian</English>
 		<French>Babylonien</French>
@@ -935,7 +935,7 @@
 		<Italian>Bizantino</Italian>
 		<Polish>Bizantyjska</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_CAESIUM_ORE</Tag>
 		<English>Caesium Ore</English>
 		<French>Minerai de césium</French>
@@ -1760,7 +1760,7 @@
 		<French>Tchèque</French>
 		<Italian>Ceco</Italian>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_DACIAN</Tag>
 		<English>Dacian</English>
 		<French>Dacienne</French>
@@ -2023,7 +2023,7 @@
 		<Italian>Zungaro</Italian>
 		<Polish>Dzungarska</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_ECSTASY</Tag>
 		<English>Ecstasy</English>
 		<Italian>Ecstasy</Italian>
@@ -2194,7 +2194,7 @@
 		<English>An exoskeleton is a wearable mobile machine that is powered by a system of electric motors, pneumatics, levers, hydraulics, or a combination of technologies that allow for limb movement with increased strength and endurance. Its design aims to provide back support, sense the user's motion, and send a signal to motors which manage the gears. The exoskeleton supports the shoulder, waist and thigh, and assists movement for lifting and holding heavy items, while lowering back stress.</English>
 		<Italian>Un esoscheletro è una macchina mobile indossabile che è alimentata da un sistema di motori elettrici, pneumatici, leve, elementi idraulici o una combinazione di tecnologie che consentono il movimento degli arti con maggiore forza e resistenza. Il suo design mira a fornire supporto alla schiena, rilevare il movimento dell'utente e inviare un segnale ai motori che gestiscono gli ingranaggi. L'esoscheletro sostiene la spalla, la vita e la coscia e aiuta i movimenti per sollevare e trattenere oggetti pesanti, riducendo allo stesso tempo lo stress della schiena.</Italian>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_EXPORTS_PLAYER</Tag>
 		<English>[SPACE](%s2_player is exporting %d1_num_bonus)[SPACE]</English>
 		<French>[SPACE](%s2_player exporte %d1_num_bonus)[SPACE]</French>
@@ -2565,7 +2565,7 @@
 		<English>Fur is a thick growth of hair that covers the skin of many animals, and it is a defining characteristic of mammals. The fur of mammals has many uses: protection, sensory purposes, waterproofing, and camouflage, with the primary usage being thermoregulation. Fur has also long served as a source of clothing for humans, including Neanderthals. Historically, it was worn for its insulating quality, with aesthetics becoming a factor over time. Common fur-bearers used include fox, rabbit, mink, beaver, ermine, otter, sable, seal, coyote, chinchilla, raccoon, and possum. The use of fur in clothing has become controversial during XX century, but fur clothing is still a large market.</English>
 		<Italian>La pelliccia è una folta coltre di peli che copre la pelle di molti animali ed è una caratteristica distintiva dei mammiferi. La pelliccia dei mammiferi ha molti usi, come protezione, impermeabilizzazione e mimetizzazione, ma principalmente viene usata per la termoregolazione. Le pellicce degli animali sono state a lungo anche oggetto di abbigliamento per l'uomo, compresi i Neanderthal. Storicamente, sono state usate per le loro qualità isolanti, mentre le qualità estetiche sono diventate un fattore decisivo con l'evolvere della società. Gli animali più comunemente usati per la loro pelliccia sono la volpe, il coniglio, il visone, il castoro, l'ermellino, la lontra, lo zibellino, la foca, il coyote, il cincillà, il procione e l'opossum. L'uso delle pellicce animali nell'industria dell'abbigliamento è diventato controverso nel corso del XX secolo, ma continua ad avere ancora un grande mercato.</Italian>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_GALATIAN</Tag>
 		<English>Galatian</English>
 		<French>Galatienne</French>
@@ -2848,7 +2848,7 @@
 		<French>Guyanaise</French>
 		<Italian>Guyanense</Italian>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_HAEMATITE_ORE</Tag>
 		<English>Haematite Ore</English>
 		<French>Minerai d'hematite</French>
@@ -3544,7 +3544,7 @@
 		<English>A hypospray is a jet injector that delivers medications intramuscularly, if applied at the top of the arm, or intravenously or intra-arterially, if applied on the neck. It can also be applied through clothing. The hypospray is extremely versatile as the medicine vials can be quickly swapped out from the bottom of the hypospray. As the hypospray is bloodless, it is not contaminated by use. This allows it to be used on many people until the supply of medicine runs out.</English>
 		<Italian>Un ipospray è un iniettore a getto che eroga farmaci per via intramuscolare, se applicato nella parte superiore del braccio, oppure per via endovenosa o intra-arteriosa, se applicato sul collo. Può anche essere applicato attraverso l'abbigliamento. L'ipospray è estremamente versatile, poiché le fiale del medicinale possono essere rapidamente sostituite dal fondo. Poiché privo di un ago, non viene contaminato dall'uso. Ciò consente di utilizzarlo su molte persone fino all'esaurimento della fornitura di medicinali.</Italian>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_ICELANDIC</Tag>
 		<English>Icelandic</English>
 		<French>Icelandais</French>
@@ -3740,7 +3740,7 @@
 		<Italian>L'avorio è il materiale che costituisce i denti e le zanne degli animali, utilizzato come materiale per l'arte o per l'industria. L'avorio è sempre stato, fin dai tempi antichi, utilizzato per produrre una grande quantità di oggetti, come sculture d'avorio, denti falsi, ventole, tessere del domino, tubi di collegamento, tasti di pianoforte e palle da biliardo. La fonte più importante sono sempre stati gli elefanti, ma l'avorio viene prodotto anche dagli ippopotami, dai trichechi, dai mammut, dalle balene e dai narvali.</Italian>
 		<Polish>Kość słoniowa - pierwotnie kością słoniową nazywano wyłącznie ciosy, czyli siekacze słoni (w tym mamutów), obecnie termin ten odnosi się również do kłów morsa i hipopotama, zębów kaszalota,siekaczy narwala i dzikiej świni.</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_JADE</Tag>
 		<English>Jade</English>
 		<French>Jade</French>
@@ -3838,7 +3838,7 @@
 		<English>Jute</English>
 		<Italian>Iuto</Italian>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_KANEM_BORNU</Tag>
 		<English>Kanem-Bornu</English>
 		<Italian>Kanem-Bornu</Italian>
@@ -3996,7 +3996,7 @@
 		<English>Kuwaiti</English>
 		<Italian>Kuwaitiano</Italian>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_LACQUERWARE</Tag>
 		<English>Lacquerware</English>
 		<French>Objets décoratifs</French>
@@ -4264,7 +4264,7 @@
 		<Tag>TXT_KEY_BONUS_LYE_PEDIA</Tag>
 		<English>Lye is a term that can refer to the liquid obtained by leaching ashes (containing largely potassium carbonate or "potash"), or to a strong alkali which is highly soluble in water producing caustic basic solutions. It is commonly the alternative name of sodium hydroxide or historically potassium hydroxide.</English>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_MACEDONIAN</Tag>
 		<English>Macedonian</English>
 		<French>Macédonien</French>
@@ -4840,7 +4840,7 @@
 		<English>Mutapa</English>
 		<Italian>Mutapa</Italian>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_NABATEANS</Tag>
 		<English>Nabateans</English>
 		<French>Nabatéennes</French>
@@ -5132,7 +5132,7 @@
 		<English>Nylon is a generic designation for a family of synthetic polymers known generically as polyamides, first produced on February 28, 1935, by Wallace Carothers at DuPont's research facility at the DuPont Experimental Station. Nylon is one of the most commonly used polymers.</English>
 		<Italian>Nylon è il nome generico di una famiglia di polimeri sintetici conosciuti come poliamidi, prodotti per la prima volta il 28 febbraio 1935 da Wallace Carothers ad una stazione di ricerca della DuPont Experimental Station. Il nylon è uno dei polimeri usati più comunemente.</Italian>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_OBSIDIAN</Tag>
 		<English>Obsidian</English>
 		<French>Obsidienne</French>
@@ -5152,7 +5152,7 @@
 		<Italian>Permette %s1_ImpName di esistere sul terreno</Italian>
 		<Polish>Kwalifikuje %s1_ImpName do isntniena na danym polu</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_ODAWA</Tag>
 		<English>Odawa</English>
 		<Italian>Odawa</Italian>
@@ -5322,7 +5322,7 @@
 		<Italian>Ottomano</Italian>
 		<Polish>Turecka</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_PAIUTE</Tag>
 		<English>Paiute</English>
 		<French>Païute</French>
@@ -5989,7 +5989,7 @@
 		<English>The mineral pyrite, or iron pyrite, also known as fool's gold, is an iron sulfide with the formula FeS2. This mineral's metallic luster and pale brass-yellow hue give it a superficial resemblance to gold, hence the well-known nickname of fool's gold. The color has also led to the nicknames brass, brazzle, and Brazil, primarily used to refer to pyrite found in coal.</English>
 		<Polish>Piryt - minerał żelaza z gromady siarczków, nadsiarczek żelaza(II), FeS2. Nazwa pochodzi od gr. pyr = ogień oraz pyrites = iskrzący, gdyż minerał ten iskrzy się pod wpływem uderzeń krzesiwa (krzemienia, twardego metalu).</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_QIANG</Tag>
 		<English>Qiang</English>
 		<French>Qiang</French>
@@ -6051,7 +6051,7 @@
 		<English>Qulla</English>
 		<Italian>Qulla</Italian>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_RABBIT</Tag>
 		<English>Rabbit</English>
 		<French>Lapin</French>
@@ -6313,7 +6313,7 @@
 		<Italian>Russo</Italian>
 		<Polish>Rosyjski</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_SABBATEAN</Tag>
 		<English>Sabbatean</English>
 		<French>Sabbatéenne</French>
@@ -7112,7 +7112,7 @@
 		<Italian>Siriano</Italian>
 		<Polish>Syryjska</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_TABLETS</Tag>
 		<English>Tablets</English>
 		<French>Tablettes</French>
@@ -7598,7 +7598,7 @@
 		<English>A typewriter is a mechanical or electromechanical machine for writing in characters similar to those produced by printer's type by means of keyboard-operated types striking a ribbon to transfer ink or carbon impressions onto the paper. Typically one character is printed per keypress. The machine prints characters by making ink impressions of type elements similar to the sorts used in movable type letterpress printing. After their invention in the 1860s, typewriters quickly became indispensable tools for practically all writing other than personal correspondence. They were widely used by professional writers, in offices, and for business correspondence in private homes. By the end of the 1980s, word processors and personal computers had largely displaced typewriters in most of these uses in the Western world, but as of the 2010s the typewriter is still prominent in many parts of the world including India.</English>
 		<Polish>Maszyna do pisania - urządzenie mechaniczne o napędzie ręcznym lub elektrycznym, posiadające klawisze, które naciskane powodują wydrukowanie metodą typograficzną określonych znaków na umieszczonym w maszynie podłożu drukowym (najczęściej papierze). Urządzenie może być również wspomagane modułem elektronicznym umożliwiającym zapamiętywanie wpisywanego tekstu.</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_UIGHUR</Tag>
 		<English>Uighur</English>
 		<Italian>Uiguro</Italian>
@@ -7683,7 +7683,7 @@
 		<French>Ouzbèque</French>
 		<Italian>Uzbeco</Italian>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_VACUUM</Tag>
 		<English>Vacuum</English>
 		<French>Aspirateurs</French>
@@ -7817,7 +7817,7 @@
 		<English>Vulcanized rubber is a chemically processed rubber. The term "vulcanization" traditionally referred to the treatment of natural rubber with sulfur in order to harden it, then with time grew to include also hardening of other (synthetic) rubbers via various means. Vulcanization works by forming cross-links between sections of polymer chain which results in increased rigidity and durability, as well as other changes in the mechanical and electrical properties of the material.</English>
 		<Italian>La gomma vulcanizzata è una gomma trattata chimicamente. Il termine "vulcanizzazione" si riferiva tradizionalmente al trattamento della gomma naturale con lo zolfo per indurirla, poi con il tempo è stato esteso per includere anche il processo di indurimento di altre gomme (sintetiche) attraverso vari mezzi. La vulcanizzazione agisce formando collegamenti incrociati tra le sezioni della catena polimerica, che si traducono in una maggiore rigidità e durata, nonché in altri cambiamenti nelle proprietà meccaniche ed elettriche del materiale.</Italian>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_WALLACHIAN</Tag>
 		<English>Wallachian</English>
 		<French>Wallachienne</French>
@@ -8018,7 +8018,7 @@
 		<English>Wool is the textile fiber obtained from sheep and certain other animals, including cashmere from goats, mohair from goats, qiviut from muskoxen, angora from rabbits, and other types of wool from camelids. Wool has several qualities that distinguish it from hair or fur: it is crimped, it is elastic, and it grows in staples (clusters).</English>
 		<Polish>Wełna - włókno naturalne uzyskiwane z okrywy włosowej (sierści) owiec, lam, wielbłądów, kóz, królików i innych. Włókno wełniane posiada charakterystyczne cechy (karbikowatość, łuskowatość, zawiera lanolinę), dzięki którym nadaje się doskonale do wytwarzania wysokiej jakości, wyrobów włókienniczych.</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_XIA</Tag>
 		<English>Xia</English>
 		<Italian>Xia</Italian>
@@ -8033,7 +8033,7 @@
 		<English>Xiongnu</English>
 		<Italian>Xiongnu</Italian>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_YAGHAN</Tag>
 		<English>Yaghan</English>
 		<Italian>Yaghan</Italian>
@@ -8076,7 +8076,7 @@
 		<English>Yolngu</English>
 		<Italian>Yolngu</Italian>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_ZANZIBARI</Tag>
 		<English>Zanzibari</English>
 		<Italian>Zanzibarese</Italian>

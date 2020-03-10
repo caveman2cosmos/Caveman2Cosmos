@@ -16693,7 +16693,7 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 		<German>Benennungsregel: Kampf[CULTURE_ZIMBABWE]</German>
 		<Spanish>Nomenclatura: Combat[CULTURE_ZIMBABWE]</Spanish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__COMBAT_CULTURE_ZULU_HOVER</Tag>
 		<English>Enter the user defined naming convention for combat units 'CULTURE_ZULU'.</English>
 		<French>Entrez la convention des noms pour les unités 'CULTURE_ZULU'.</French>
@@ -24566,4 +24566,4 @@ uno de s, A, a, p, g, n, o, r (véase archivo de ayuda)</Spanish>
 		<German>[NEWLINE]Existiert seit %s1_year</German>
 		<Spanish>Construido en %s1_year</Spanish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

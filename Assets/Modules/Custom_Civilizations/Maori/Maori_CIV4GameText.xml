@@ -459,7 +459,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_RANGITANE</Tag>
 		<English>Rangitane</English>
 		<French>
@@ -793,4 +793,4 @@
 		<English>Maori</English>
 		<Polish>Maorysi</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

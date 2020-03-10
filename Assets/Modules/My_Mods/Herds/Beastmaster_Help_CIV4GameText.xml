@@ -9,8 +9,8 @@
 		<Tag>TXT_KEY_UNIT_TAMED_DONKEY_PAIR_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Donkey Herd and Breeder, Carnival, Herbivore Enclosure, Zoo and Taxidermist</English>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_HORSE_PAIR_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Horse Herd and Breeder, Carnival, Herbivore Enclosure, Zoo and Taxidermist</English>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

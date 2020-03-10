@@ -359,7 +359,7 @@
 		<English>Stories Effect - Galapagos Tortoise</English>
 		<French>Effet (Histoires de Tortues des Galapagos)</French>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALAPOGOS_TORTOISE_STORY</Tag>
 		<English>Story - Galapagos Tortoise</English>
 		<French>Histoire de la Tortue des Galapagos</French>
@@ -1332,4 +1332,4 @@
 		<English>Tamed Snake</English>
 		<French>Serpent (dompté)</French>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

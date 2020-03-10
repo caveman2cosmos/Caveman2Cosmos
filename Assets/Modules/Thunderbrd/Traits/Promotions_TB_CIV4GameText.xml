@@ -815,7 +815,7 @@
 		<English>Slob III</English>
 		<French>Plouc III</French>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TIMID</Tag>
 		<English>Timid</English>
 		<French>Timide</French>
@@ -855,4 +855,4 @@
 		<English>Unsanitary III</English>
 		<French>Malsain III</French>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

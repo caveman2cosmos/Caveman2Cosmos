@@ -11,7 +11,7 @@
 		<Italian>Intrattieni la città.</Italian>
 		<Polish>Rozbaw miasto.</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MISSION_ENTERTAIN_CITY_HELP</Tag>
 		<English>Spread your culture to the city and reduce anarchy length.</English>
 		<French>Répand votre culture dans la ville, et réduit la durée de l'anarchie.</French>
@@ -102,4 +102,4 @@
 		<French>Le Conteur d'histoire peut [NEWLINE][ICON_BULLET] augmenter la culture d'une ville [NEWLINE][ICON_BULLET] réduire l'anarchie lié à la conquête [NEWLINE][ICON_BULLET] mettre fin à une révolte d'esclaves[NEWLINE][ICON_BULLET]diffuser des danses et raconter des histoires.</French>
 		<Italian>Il cantastorie può [NEWLINE][ICON_BULLET]Aumentare la cultura in una città [NEWLINE][ICON_BULLET]Rimuovere l'anarchia dovuta alla conquista [NEWLINE][ICON_BULLET]Sedare una rivolta di schiavi[NEWLINE][ICON_BULLET]spread dances and tell stories</Italian>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

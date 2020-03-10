@@ -184,7 +184,7 @@
 		<Spanish>Vista del Consejero de Revolución</Spanish>
 		<Polish>Ekran szczegółów rewolucji</Polish>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_REV_ADVISOR_ACCEPT</Tag>
 		<English>(Your advisors recommend accepting the terms)</English>
 		<French>(Vos conseillers recommandent d'accepter les conditions)</French>
@@ -3137,4 +3137,4 @@
 		<Spanish>tu civilización</Spanish>
 		<Polish>twoja cywilizacja</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

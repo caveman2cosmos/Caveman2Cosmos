@@ -1860,7 +1860,7 @@
 		<English>Your Supply Ship was transformed into a Bulldozer.</English>
 		<French>Votre Vaisseau Spatial a été transformé en Bulldozer.</French>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_PLANET_SETTLER</Tag>
 		<English>Found a City</English>
 		<French>Fonder une Ville</French>
@@ -3198,4 +3198,4 @@
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Can build cities in the Oort Cloud and Transtellar space</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Peut construire les Villes dans le nuage d'Oort, et l'espace transtellaire</French>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

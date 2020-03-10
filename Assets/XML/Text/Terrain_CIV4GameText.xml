@@ -983,7 +983,7 @@
 		[NEWLINE]This terrain represent the typical soil types found in the taiga biome, those that are fertile and not too wet.</English>
 		<German>Boreale (nördliche Nadelwälder) werden auch verallgemeinernd als [COLOR_HIGHLIGHT_TEXT]Taiga[COLOR_REVERT] bezeichnet. Die Taiga ist charakterisiert durch relativ gleichförmige Nadelwaldgebiete, die nur von baumlosen Moorgebieten und Flussauen unterbrochen werden. Sie existiert nur auf der Nordhalbkugel, da auf der Südhalbkugel die entsprechenden zusammenhängenden großen Landmassen fehlen.</German>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_TRENCH</Tag>
 		<English>Oceanic Trench</English>
 		<French>Faille océanique</French>
@@ -1023,4 +1023,4 @@
 		<French>[NEWLINE][ICON_BULLET]Dégâts par Tour: %d1_Amt%%</French>
 		<German>[NEWLINE][ICON_BULLET]Schaden pro Runde: %d1_Amt%%</German>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

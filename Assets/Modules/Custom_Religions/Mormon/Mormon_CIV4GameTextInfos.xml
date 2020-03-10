@@ -53,7 +53,7 @@
 		<English>TBD</English>
 		<Italian>Usa un grande profeta per ottenere oro da ogni città del mondo in cui è diffuso il mormonismo.</Italian>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MORMON_TEMPLE</Tag>
 		<English>LDS Meetinghouse</English>
 		<French>Maison de Rencontre LDS</French>
@@ -102,4 +102,4 @@
 		<Tag>TXT_KEY_UNIT_MORMON_MISSIONARY_STRATEGY</Tag>
 		<English>Use this missionary to actively spread [COLOR_HIGHLIGHT_TEXT]Mormon religion[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]). This increases your culture if you have the [COLOR_BUILDING_TEXT]Mormon Shrine[COLOR_REVERT].</English>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>
