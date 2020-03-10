@@ -19,7 +19,7 @@ def doImmigrantPlacementAI(CyUnit, CyCity, CyPlayer=None, iPlayer=None, bJoin=Fa
 	elif bJoin:
 		CyCity.setPopulation(CyCity.getPopulation() + 1)
 		if CyPlayer.isHuman():
-			szTxt = CyTranslator().getText("TXT_KEY_MESSAGE_IMMIGRATION",(CyCity.getName(),))
+			szTxt = CyTranslator().getText("TXT_KEY_MSG_IMMIGRATION",(CyCity.getName(),))
 			CvUtil.sendMessage(szTxt, iPlayer, 25, CyUnit.getButton(), ColorTypes(8), iX, iY, True, True, szSound="AS2D_WELOVEKING")
 
 		CyUnit.kill(0, -1)

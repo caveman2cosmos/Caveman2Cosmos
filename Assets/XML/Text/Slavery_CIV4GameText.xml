@@ -651,28 +651,28 @@
 		<Polish>Twój Niewolnik stał się Specjalistą (Wojsko).</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MESSAGE_SLAVERY_OK</Tag>
+		<Tag>TXT_KEY_MSG_SLAVERY_OK</Tag>
 		<English>Slavery is now considered OK in your nation.</English>
 		<French>L'Esclavage est considéré comme acceptable par votre nation.</French>
 		<Italian>La schiavitù è ora legale nella tua nazione.</Italian>
 		<Polish>Niewolnictwo jest od teraz akceptowane w Twoim imperium.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MESSAGE_NO_SLAVERY</Tag>
+		<Tag>TXT_KEY_MSG_NO_SLAVERY</Tag>
 		<English>Your nation has banned slavery.</English>
 		<French>Votre nation a banni l'esclavage.</French>
 		<Italian>La tua nazione ha vietato la schiavitù.</Italian>
 		<Polish>Twój naród przestał zakazał niewolnictwa.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MESSAGE_SLAVE_MARKET_SOLD</Tag>
+		<Tag>TXT_KEY_MSG_SLAVE_MARKET_SOLD</Tag>
 		<English>Your Slave Market in %s1 has been sold.</English>
 		<French>Votre Marché aux esclaves de %s1 a été vendu.</French>
 		<Italian>Il tuo mercato degli schiavi di %s1 è stato venduto.</Italian>
 		<Polish>Twój Targ Niewolników w %s1 został sprzedany.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MESSAGE_FREED_SLAVES_AS_GATHERERS</Tag>
+		<Tag>TXT_KEY_MSG_FREED_SLAVES_AS_GATHERERS</Tag>
 		<English>%d1 Slaves have been freed in %s1.</English>
 		<French>%d1 esclaves ont été libérés à %s1.</French>
 		<Italian>%d1 schaivi sono stati liberati a %s1.</Italian>

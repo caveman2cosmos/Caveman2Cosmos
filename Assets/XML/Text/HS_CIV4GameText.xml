@@ -155,14 +155,14 @@
 		<Polish>Twoi ludzie przestali składać ofiary z ludzi.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MESSAGE_NO_HUMAN_SACRIFICE</Tag>
+		<Tag>TXT_KEY_MSG_NO_HUMAN_SACRIFICE</Tag>
 		<English>Your nation has banned human sacrifice.</English>
 		<French>Votre nation a banni le sacrifice humain.</French>
 		<Italian>La tua nazione ha vietato i sacrifici umani.</Italian>
 		<Polish>Twój naród przestał zakazał ofiar z ludzi.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MESSAGE_ALTAR_SOLD</Tag>
+		<Tag>TXT_KEY_MSG_ALTAR_SOLD</Tag>
 		<English>Your Altar for Human Sacrifice in %s1 has been sold.</English>
 		<French>Votre Autel pour les sacrifices humains de %s1 a été fermé.</French>
 		<Italian>Il tuo altare dei sacrifici di %s1 è stato venduto.</Italian>

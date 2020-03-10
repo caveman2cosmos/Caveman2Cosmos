@@ -33307,7 +33307,7 @@ bool CvUnit::performInquisition()
 									{
 										MEMORY_TRACK_EXEMPT();
 
-										szBuffer = gDLL->getText("TXT_KEY_MESSAGE_HOLY_CITY_RESPAWNED");
+										szBuffer = gDLL->getText("TXT_KEY_MSG_HOLY_CITY_RESPAWNED");
 										AddDLLMessage(GC.getGame().getActivePlayer(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_DISCOVERBONUS", MESSAGE_TYPE_MAJOR_EVENT, "Art/Interface/Buttons/TerrainFeatures/Forest.dds", ColorTypes(8), getX(), getY(), false, false);
 									}
 								}
@@ -33332,7 +33332,7 @@ bool CvUnit::performInquisition()
 					{
 						MEMORY_TRACK_EXEMPT();
 
-						szBuffer = gDLL->getText("TXT_KEY_MESSAGE_INQUISITION", pCity->getNameKey());
+						szBuffer = gDLL->getText("TXT_KEY_MSG_INQUISITION", pCity->getNameKey());
 						AddDLLMessage(((PlayerTypes)iI), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PLAGUE", MESSAGE_TYPE_MAJOR_EVENT, getButton() , ColorTypes(8), getX(), getY(), true, true);
 					}
 				}
@@ -33363,7 +33363,7 @@ bool CvUnit::performInquisition()
 					{
 						MEMORY_TRACK_EXEMPT();
 
-						szBuffer = gDLL->getText("TXT_KEY_MESSAGE_INQUISITION_FAIL", pCity->getNameKey());
+						szBuffer = gDLL->getText("TXT_KEY_MSG_INQUISITION_FAIL", pCity->getNameKey());
 						AddDLLMessage(((PlayerTypes)iI), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_SABOTAGE", MESSAGE_TYPE_MAJOR_EVENT, getButton() , ColorTypes(8), getX(), getY(), true, true);
 					}
 				}

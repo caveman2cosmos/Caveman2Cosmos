@@ -342,76 +342,76 @@
 		<French>Votre Prisonnière a été convertie en Cueilleuse Néanderthal.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MESSAGE_MILITARY_CAPTIVE</Tag>
+		<Tag>TXT_KEY_MSG_MILITARY_CAPTIVE</Tag>
 		<English>You have captured a military unit (Captive - Military).</English>
 		<French>Vous avez capturé une unité militaire (Prisonnier de Guerre).</French>
 		<Italian>Hai catturato un'unità militare (Prigioniero - Militare).</Italian>
 		<Polish>Pojmałeś jednostkę wojskową (Jeniec Wojenny).</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MESSAGE_NEANDERTHAL_CAPTIVE</Tag>
+		<Tag>TXT_KEY_MSG_NEANDERTHAL_CAPTIVE</Tag>
 		<English>You have captured a Neanderthal unit (Captive - Neanderthal).</English>
 		<French>Vous avez capturé une unité de Néanderthal (Prisonnier - Neanderthal).</French>
 		<Italian>Hai catturato un'unità di Neanderthal (Prigioniero - Neanderthal).</Italian>
 		<Polish>Pojmałeś Neandertalczyków (Jeniec - Neandertalczyk).</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MESSAGE_CIVILIAN_CAPTIVE</Tag>
+		<Tag>TXT_KEY_MSG_CIVILIAN_CAPTIVE</Tag>
 		<English>You have captured %d1 civilian unit(s) (Captive - Civilian).</English>
 		<French>Vous avez capturé %d1 unité civile (Prisonnier - Civil).</French>
 		<Italian>Hai catturato %d1 unità civili (Prigioniero - Civile).</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MESSAGE_CITY_HAD_PRIESTS</Tag>
+		<Tag>TXT_KEY_MSG_CITY_HAD_PRIESTS</Tag>
 		<English>The city had %d1 Priests. You killed %d1 and %d1 were captured. (Captive - Priest).</English>
 		<French>La Ville a %d1 Prêtres. Vous en tuez %d1 et %d1 sont faits prisonniers. (Prisonnier - Prêtre).</French>
 		<Italian>La città aveva %d1 sacerdoti; ne hai uccisi %d1 e catturati %d1. (Prigioniero - Sacerdote).</Italian>
 		<Polish>Miasto miało %d1 Kapłanów. Zabiłeś %d1 a %d1 zostało pojmanych. (Jeniec - Kapłan).</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MESSAGE_CITY_HAD_ARTISTS</Tag>
+		<Tag>TXT_KEY_MSG_CITY_HAD_ARTISTS</Tag>
 		<English>The city had %d1 Artists. You killed %d1 and %d1 were captured. (Captive - Artist).</English>
 		<French>La Ville a %d1 Artistes. Vous en tuez %d1 et %d1 sont faits prisonniers. (Prisonnier - Artiste).</French>
 		<Italian>La città aveva %d1 artisti; ne hai uccisi %d1 e catturati %d1. (Prigioniero - Artista).</Italian>
 		<Polish>Miasto miało %d1 Artystów. Zabiłeś %d1 a %d1 zostało pojmanych. (Jeniec - Artysta).</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MESSAGE_CITY_HAD_SCIENTISTS</Tag>
+		<Tag>TXT_KEY_MSG_CITY_HAD_SCIENTISTS</Tag>
 		<English>The city had %d1 Scientists. You killed %d1 and %d1 were captured. (Captive - Scientist).</English>
 		<French>La Ville a %d1 Scientifiques. Vous en tuez %d1 et %d1 sont faits prisonniers. (Prisonnier - Scientifique).</French>
 		<Italian>La città aveva %d1 scienziati; ne hai uccisi %d1 e catturati %d1. (Prigioniero - Scienziato).</Italian>
 		<Polish>Miasto miało %d1 Naukowców. Zabiłeś %d1 a %d1 zostało pojmanych. (Jeniec - Naukowiec).</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MESSAGE_CITY_HAD_ENGINEERS</Tag>
+		<Tag>TXT_KEY_MSG_CITY_HAD_ENGINEERS</Tag>
 		<English>The city had %d1 Engineers. You killed %d1 and %d1 were captured. (Captive - Engineer).</English>
 		<French>La Ville a %d1 Ingénieurs. Vous en tuez %d1 et %d1 sont faits prisonniers. (Prisonnier - Ingénieur).</French>
 		<Italian>La città aveva %d1 ingegneri; ne hai uccisi %d1 e catturati %d1. (Prigioniero - Ingegnere).</Italian>
 		<Polish>Miasto miało %d1 Inżynierów. Zabiłeś %d1 a %d1 zostało pojmanych. (Jeniec - Inżynier).</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MESSAGE_CITY_HAD_DOCTORS</Tag>
+		<Tag>TXT_KEY_MSG_CITY_HAD_DOCTORS</Tag>
 		<English>The city had %d1 Doctors. You killed %d1 and %d1 were captured. (Captive - Doctor).</English>
 		<French>La Ville a %d1 Médecins. Vous en tuez %d1 et %d1 sont faits prisonniers. (Prisonnier - Médecin).</French>
 		<Italian>La città aveva %d1 dottori; ne hai uccisi %d1 e catturati %d1. (Prigioniero - Dottore).</Italian>
 		<Polish>Miasto miało %d1 Lekarzy. Zabiłeś %d1 a %d1 zostało pojmanych. (Jeniec - Lekarz).</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MESSAGE_CITY_HAD_SPIES</Tag>
+		<Tag>TXT_KEY_MSG_CITY_HAD_SPIES</Tag>
 		<English>It is rumoured the city had %d1 Great Spies. You captured %d1 (Captive - Spy). The rest are assumed dead or escaped.</English>
 		<French>Il semble que la ville possède %d1 Espions illustres. Vous en capturez %d1 (Prisonnier - Espion). Les autres sont considérés morts ou en fuite.</French>
 		<Italian>Secondo alcune voci la città aveva %d1 Grandi Spie: ne hai catturate %d1 (Prigioniero - Spia). Pensiamo che il resto siano morte o fuggite.</Italian>
 		<Polish>Chodziły pogłoski, że w mieście rezydowało %d1 Wielkich Szpiegów. Pojmałeś %d1 (Jeniec - Szpieg). Reszta poległa lub uciekła.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MESSAGE_CITY_HAD_GENERALS</Tag>
+		<Tag>TXT_KEY_MSG_CITY_HAD_GENERALS</Tag>
 		<English>The city had %d1 Generals. You killed %d1. %d1 now lead rebels or partisans and %d1 were captured. (Captive - General).</English>
 		<French>La Ville a %d1 Généraux. Vous en tuez %d1. %d1 conduisent les rebelles et %d1 sont faits prisonniers. (Prisonnier - Général).</French>
 		<Italian>La città aveva %d1 generali: ne hai uccisi %d1. %d1 ora guidano ribelli e partigiani, mentre %d1 sono stati catturati. (Prigioniero - Generale).</Italian>
 		<Polish>Obroną miasta dowodziło %d1 Generałów. Zabiłeś %d1. %d1 przeszło do podziemia i dowodzi teraz partyzantami a %d1 zostało pojmanych. (Jeniec - Generał).</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MESSAGE_CAPTURED_SLAVES_AS_GATHERERS</Tag>
+		<Tag>TXT_KEY_MSG_CAPTURED_SLAVES_AS_GATHERERS</Tag>
 		<English>You have "freed" %d1 settled slaves. (Captive - Freed Slave).</English>
 		<French>Vous avez "libéré" %d1 Esclave sédentaires. (Prisonnier - Esclave libéré).</French>
 		<Italian>Hai "liberato" %d1 schiavi sedentari. (Prigioniero - Schiavo liberato).</Italian>

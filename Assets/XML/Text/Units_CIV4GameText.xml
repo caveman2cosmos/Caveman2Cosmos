@@ -12379,6 +12379,21 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Harpia wielka (Harpia harpyja) - gatunek dużego ptaka drapieżnego z rodziny jastrzębiowatych (Accipitridae); jedyny przedstawiciel rodzaju Harpia. Zamieszkuje lasy tropikalne w Ameryce Południowej i Środkowej, od południowego Meksyku do północnej Argentyny. Najpotężniejszy ptak drapieżny Nowego Świata. Większym od harpii ptakiem drapieżnym był wymarły orzeł Haasta. Pióra stanowiły częstą ozdobę strojów Indian.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_HASHISHIN</Tag>
+		<English>Hashishin</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HASHISHIN_PEDIA</Tag>
+		<English>The Hashishin were the legendary assassins of the 12th-century Middle East. Supposedly conditioned through religion and drugs into fanatics, these assassins would follow any order, no matter how extreme.</English>
+		<Italian>Gli Hashishin erano leggendari assassini presenti nel Medioriente durante il 12° secolo. Condizionati per mezzo di droghe e fanatismo religioso, questi assassini seguivano ogni ordine, anche quelli più folli.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HASHISHIN_STRATEGY</Tag>
+		<English>Hashishin are powerful medieval assassins.</English>
+		<French>les Hashishin sont de puissants assassins du Moyen-Age.</French>
+		<Italian>Gli Hashishin sono potenti assassini medievali</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_HAWK</Tag>
 		<English>Hawk</English>
 		<French>Faucon</French>
@@ -25746,6 +25761,24 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Wojownik Shan to muszkieter kultury Tajskiej. Porusza się dwa razy szybciej oraz lepiej walczy w Dżungli i w Lasach.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_SHAOLINMK</Tag>
+		<English>Shaolin Monk</English>
+		<French>Moine Shaolin</French>
+		<Italian>Monaco Shaolin</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SHAOLINMK_PEDIA</Tag>
+		<English>The Shaolin Monks were the product of the Shaolin Temple. Their martial arts feats have become the stuff of legends across the globe.</English>
+		<French>Les Moine Shaolins étaient le produit du Temple Shaolin. Leurs exploits d'arts martiaux sont devenus l'étoffe de légendes à travers le monde.</French>
+		<Italian>I monaci shaolin erano addestrati nel Tempio Shaolin. Le loro arti marziali sono diventate leggendarie in tutto il mondo.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SHAOLINMK_STRATEGY</Tag>
+		<English>Shaolin Monks make excellent city defenders and healers.</English>
+		<French>Les Moines Shaolins sont d'excellents défenseurs et guérisseurs de la ville.</French>
+		<Italian>I monaci Shaolin sono ottimi difensori delle città e guaritori.</Italian>
+	</TEXT>
+<TEXT>
 		<Tag>TXT_KEY_UNIT_SHAPUR</Tag>
 		<English>Shapur I</English>
 		<Spanish>

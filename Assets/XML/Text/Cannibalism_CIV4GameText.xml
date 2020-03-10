@@ -122,7 +122,7 @@
 		<Italian>Non abbiamo ancora l'abilità di generare infelicità da un edificio con gli avanzi tecnologici. Questo effetto viene quindi simulato da un edificio fittizio.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MESSAGE_NO_CANNIBALISM</Tag>
+		<Tag>TXT_KEY_MSG_NO_CANNIBALISM</Tag>
 		<English>Your nation has banned cannibalism.</English>
 		<French>Votre nation a banni le cannibalisme.</French>
 		<Italian>La tua nazione ha vietato il cannibalismo.</Italian>

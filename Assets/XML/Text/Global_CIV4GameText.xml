@@ -158,6 +158,15 @@
 		<Polish>[NEWLINE][COLOR_HIGHLIGHT_TEXT]Gwarantowane! Obrońca nie może wykonać uderzenia.[COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_ACO_HITSAT</Tag>
+		<English>hits at</English>
+		<French>frappe à</French>
+		<German>trifft</German>
+		<Italian>colpisce a</Italian>
+		<Spanish>golpea a</Spanish>
+		<Polish>uderzenie w</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_ACO_HP</Tag>
 		<English>HP</English>
 		<French>PV</French>
@@ -172,15 +181,6 @@
 		<German>[COLOR_UNIT_TEXT]TP[COLOR_REVERT]</German>
 		<Italian>[COLOR_UNIT_TEXT]PV[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_UNIT_TEXT]PG[COLOR_REVERT]</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_ACO_HITSAT</Tag>
-		<English>hits at</English>
-		<French>frappe à</French>
-		<German>trifft</German>
-		<Italian>colpisce a</Italian>
-		<Spanish>golpea a</Spanish>
-		<Polish>uderzenie w</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_ACO_INJURED_HP</Tag>
@@ -258,14 +258,6 @@
 		<Polish>[NEWLINE]Nie zaokrąglone XP:[SPACE]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_ACO_VS</Tag>
-		<English>[COLOR_POSITIVE_TEXT]%s1[COLOR_REVERT] vs. [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</English>
-		<French>[COLOR_POSITIVE_TEXT]%s1[COLOR_REVERT] contre [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</French>
-		<German>[COLOR_POSITIVE_TEXT]%s1[COLOR_REVERT] gegen [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</German>
-		<Spanish>[COLOR_POSITIVE_TEXT]%s1[COLOR_REVERT] contra [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</Spanish>
-		<Polish>[COLOR_POSITIVE_TEXT]%s1[COLOR_REVERT] przeciw [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_ACO_VICTORY</Tag>
 		<English>[COLOR_POSITIVE_TEXT]Victory[COLOR_REVERT]</English>
 		<French>[COLOR_POSITIVE_TEXT]Victoire[COLOR_REVERT]</French>
@@ -273,6 +265,14 @@
 		<Italian>[COLOR_POSITIVE_TEXT]Vittoria[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_POSITIVE_TEXT]Victoria[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_POSITIVE_TEXT]Zwycięstwo[COLOR_REVERT]</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_ACO_VS</Tag>
+		<English>[COLOR_POSITIVE_TEXT]%s1[COLOR_REVERT] vs. [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</English>
+		<French>[COLOR_POSITIVE_TEXT]%s1[COLOR_REVERT] contre [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</French>
+		<German>[COLOR_POSITIVE_TEXT]%s1[COLOR_REVERT] gegen [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</German>
+		<Spanish>[COLOR_POSITIVE_TEXT]%s1[COLOR_REVERT] contra [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</Spanish>
+		<Polish>[COLOR_POSITIVE_TEXT]%s1[COLOR_REVERT] przeciw [COLOR_NEGATIVE_TEXT]%s2[COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_ACO_WITHDRAW</Tag>
@@ -22538,6 +22538,48 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>Nie jest Członkiem</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VOTE_CONGVIENNA_ASSIGN_CITY</Tag>
+		<English>Return a city to their rightful owner.</English>
+		<French>Rendre une Ville à son propriétaire légitime</French>
+		<Italian>Restituisci una città al legittimo proprietario</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VOTE_CONGVIENNA_CHAIR</Tag>
+		<English>Congress of Vienna Chair Election (Winner Proposes Congress Acts)</English>
+		<French>Election du Porte parole du Congrès de Vienne (le Vainqueur propose un Acte du Congrès)</French>
+		<Italian>Elezione del Rappresentante del Congresso (il vincitore propone gli Atti al Congresso)</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VOTE_CONGVIENNA_DEFENSIVE_PACT</Tag>
+		<English>Sign a Defensive Pact</English>
+		<French>Signer un Pacte de Défense</French>
+		<Italian>Sigla un Patto difensivo</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VOTE_CONGVIENNA_FORCE_NO_TRADE</Tag>
+		<English>Stop trading with the outlaws.</English>
+		<French>Fin des échanges avec les hors-la-loi</French>
+		<Italian>Embargo commerciale contro i fuorilegge</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VOTE_CONGVIENNA_FORCE_PEACE</Tag>
+		<English>Stop the fighting among our friends at the Congress.</English>
+		<French>Fin des Combats entre les membres du Congrès.</French>
+		<Italian>Ferma la guerra tra i membri del Congresso</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VOTE_CONGVIENNA_FORCE_WAR</Tag>
+		<English>Declare war on the outlaws.</English>
+		<French>Déclaration de Guerre aux hors-la-loi</French>
+		<Italian>Dichiara guerra ai fuorilegge</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VOTE_CONGVIENNA_OPEN_BORDERS</Tag>
+		<English>Open Borders</English>
+		<French>Ouverture des Frontières</French>
+		<Italian>Apertura delle frontiere</Italian>
+	</TEXT>
+<TEXT>
 		<Tag>TXT_KEY_VOTE_EMANCIPATION</Tag>
 		<English>U.N. Resolution #743 (Global Civic - Liberal)</English>
 		<French>
@@ -23207,4 +23249,4 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Spanish>Investigación actual:</Spanish>
 		<Polish>Aktualne Badania:</Polish>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>
