@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
+<!-- Not in Use, dll references are commented out; unknown reason. Subject to deletion or reinstatement.
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_INVISIBILITY_SPOT_PLOT_VALUE_ADJ</Tag>
+		<English>[ICON_BULLET]%D1_Change %F2_Type Spot on %s3_Plot (already tallied into total.)</English>
+		<French>[ICON_BULLET]%D1_Change Perception améliorée (%F2_Type) de  lorsque sur une case %s3_Plot (inclus dans le total)</French>
+		<German>[ICON_BULLET]%s3_Plot: %D1_Change %F2_Type-Sicht (in Gesamtwert bereits eingerechnet)</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_INVISIBILITY_VEIL_PLOT_VALUE_ADJ</Tag>
+		<English>[ICON_BULLET]%D1_Change %F2_Type Veil on %s3_Plot (already tallied into total.)</English>
+		<French>[ICON_BULLET]%D1_Change Invisibilité étendue (%F2_Type) de  lorsque sur une case %s3_Plot(inclus dans le total.)</French>
+		<German>[ICON_BULLET]%s3_Plot: %D1_Change %F2_Type-Unsichtbarkeit (in Gesamtwert bereits eingerechnet)</German>
+	</TEXT>
+-->
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_FIRST_STRIKES</Tag>
+		<English>[ICON_BULLET]%d1_Num First Strikes</English>
+		<French>[ICON_BULLET]%d1_Num premières attaques</French>
+		<German>[ICON_BULLET]%d1_Num Erstangriffe</German>
+		<Italian>[ICON_BULLET]%d1_Num 'Attacchi improvvisi'</Italian>
+		<Spanish>[ICON_BULLET]%d1_Num ataques de iniciativa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_FIRST_STRIKES_IMMUNE</Tag>
+		<English>[ICON_BULLET]Immune to First Strikes</English>
+		<French>[ICON_BULLET]Immunité contre les premières attaques</French>
+		<German>[ICON_BULLET]Immun gegen Erstangriffe</German>
+		<Italian>[ICON_BULLET]Immune agli 'Attacchi improvvisi'</Italian>
+		<Spanish>[ICON_BULLET]Inmune a los ataques de iniciativa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_FIRST_STRIKE_CHANCES</Tag>
+		<English>[ICON_BULLET]%d1_Num1-%d2_Num2 First Strikes</English>
+		<French>[ICON_BULLET]%d1_Num1-%d2_Num2 premières attaques</French>
+		<German>[ICON_BULLET]%d1_Num1-%d2_Num2 Erstangriffe</German>
+		<Italian>[ICON_BULLET]%d1_Num1-%d2_Num2 'Attacchi improvvisi'</Italian>
+		<Spanish>[ICON_BULLET]%d1_Num1 - %d2_Num2 ataques de iniciativa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_INVISIBILITY_SPOT_PLOT_RANGE_VALUE</Tag>
+		<English>[ICON_BULLET]%D1_Change %F2_Type Spot Range on %s3_Plot</English>
+		<French>[ICON_BULLET]%D2_Change Portée étendue de Perception (%F2_Type)  lorsque sur une case %s3_Plot</French>
+		<German>[ICON_BULLET]%s3_Plot: %D1_Change %F2_Type-Sichtweite</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_INVISIBILITY_SPOT_PLOT_RANGE_VALUE_ADJ</Tag>
+		<English>[ICON_BULLET]%D1_Change %F2_Type Spot Range on %s3_Plot (already tallied into total.)</English>
+		<French>[ICON_BULLET%D2_Change Portée étendue de Perception (%F2_Type)  lorsque sur une case %s3_Plot (inclus dans le total.)</French>
+		<German>[ICON_BULLET]%s3_Plot: %D1_Change %F2_Type-Sichtweite (in Gesamtwert bereits eingerechnet)</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_INVISIBILITY_SPOT_PLOT_VALUE</Tag>
+		<English>[ICON_BULLET]%D1_Change %F2_Type Spot on %s3_Plot</English>
+		<French>[ICON_BULLET]%D1_Change Perception améliorée (%F2_Type) de  lorsque sur une case %s3_Plot</French>
+		<German>[ICON_BULLET]%s3_Plot: %D1_Change %F2_Type-Sicht</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_INVISIBILITY_SPOT_RANGE_VALUE</Tag>
+		<English>[ICON_BULLET]%D1_Change %F2_Type Spot Range</English>
+		<French>[ICON_BULLET]%D1_Change Portée étendue de détection %F2_Type</French>
+		<German>[ICON_BULLET]%D1_Change %F2_Type-Sichtweite</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_INVISIBILITY_SPOT_SAME_TILE_VALUE</Tag>
+		<English>[ICON_BULLET]%D1_Change %F2_Type Spot on Same Tile</English>
+		<French>[ICON_BULLET]Perception %D1_Change %F2_Type sur la même case</French>
+		<German>[ICON_BULLET]%D1_Change %F2_Type-Sicht in gleichem Gelände</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_INVISIBILITY_SPOT_VALUE</Tag>
+		<English>[ICON_BULLET]%d1_Change %F2_Type Spot</English>
+		<French>[ICON_BULLET]%d1_Change %F2_Type Perception</French>
+		<German>[ICON_BULLET]%d1_Change %F2_Type-Sicht</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_INVISIBILITY_VEIL_NEGATED</Tag>
+		<English>[ICON_BULLET]All [LINK=%s1_Type]%F2_TypeName[\LINK] Veil is Negated</English>
+		<French>[ICON_BULLET]Tout le potentiel d'invisibilité de type [LINK=%s1_Type]%F2_TypeName[\LINK] est pour l'instant annulé</French>
+		<German>[ICON_BULLET]Jede [LINK=%s1_Type]%F2_TypeName[\LINK]-Unsichtbarkeit ist aufgehoben.</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_INVISIBILITY_VEIL_PLOT_VALUE</Tag>
+		<English>[ICON_BULLET]%D1_Change %F2_Type Veil on %s3_Plot</English>
+		<French>[ICON_BULLET]%D1_Change Invisibilité étendue (%F2_Type) de  lorsque sur une case %s3_Plot</French>
+		<German>[ICON_BULLET]%s3_Plot: %D1_Change %F2_Type-Unsichtbarkeit</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_INVISIBILITY_VEIL_VALUE</Tag>
+		<English>[ICON_BULLET]%d1_Change %F2_Type Veil</English>
+		<French>[ICON_BULLET]%d1_Change Invisibilité %F2_Type</French>
+		<German>[ICON_BULLET]%d1_Change %F2_Type-Unsichtbarkeit</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_STEALTH_STRIKES</Tag>
+		<English>[ICON_BULLET]%d1_Change Stealth Strikes</English>
+		<French>[ICON_BULLET]%d1_Change Assauts furtifs</French>
+		<German>[ICON_BULLET]%D1_Change [NUM1:Tarnangriff:Tarnangriffe]</German>
+	</TEXT>
+</Civ4GameText>

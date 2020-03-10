@@ -14152,27 +14152,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>The Inuit peoples major use of the Inuit harpoon was to hunt sea mammals located at breathing holes in the sea ice as well as in the open water. There were also times when the Inuit harpoon was used in certain arctic areas to hunt for fish as well.</English>
 	</TEXT>
 	<TEXT>
-		<!-- TXT_KEY_UNIT_INVISIBILITY_VEIL_VALUE -->
-		<Tag>TXT_KEY_UNIT_INVISIBILITY_INTENSITY</Tag>
-		<English>[ICON_BULLET]%d1_Change %F2_Type Veil</English>
-		<French>[ICON_BULLET]%d1_Change Invisibilité %F2_Type</French>
-		<German>[ICON_BULLET]%d1_Change %F2_Type-Unsichtbarkeit</German>
-	</TEXT>
-	<TEXT>
-		<!-- TXT_KEY_UNIT_INVISIBILITY_VEIL_NEGATED -->
-		<Tag>TXT_KEY_UNIT_INVISIBILITY_NEGATED</Tag>
-		<English>[ICON_BULLET]All [LINK=%s1_Type]%F2_TypeName[\LINK] Veil is Negated</English>
-		<French>[ICON_BULLET]Tout le potentiel d'invisibilité de type [LINK=%s1_Type]%F2_TypeName[\LINK] est pour l'instant annulé</French>
-		<German>[ICON_BULLET]Jede [LINK=%s1_Type]%F2_TypeName[\LINK]-Unsichtbarkeit ist aufgehoben.</German>
-	</TEXT>
-	<TEXT>
-		<!-- TXT_KEY_UNIT_INVISIBILITY_VEIL_PLOT_VALUE -->
-		<Tag>TXT_KEY_UNIT_INVISIBILITY_PLOT_INTENSITY</Tag>
-		<English>[ICON_BULLET]%D1_Change %F2_Type Veil on %s3_Plot</English>
-		<French>[ICON_BULLET]%D1_Change Invisibilité étendue (%F2_Type) de  lorsque sur une case %s3_Plot</French>
-		<German>[ICON_BULLET]%s3_Plot: %D1_Change %F2_Type-Unsichtbarkeit</German>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_IPARHAN</Tag>
 		<English>Iparhan</English>
 		<Spanish>
@@ -31024,48 +31003,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_VIRIATHUS_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Viriathus[COLOR_REVERT] is hero unit.</English>
 		<French>[COLOR_UNIT_TEXT]Viriathus[COLOR_REVERT] est une unité héroïque.</French>
-	</TEXT>
-	<TEXT>
-		<!-- TXT_KEY_UNIT_INVISIBILITY_SPOT_VALUE -->
-		<Tag>TXT_KEY_UNIT_VISIBILITY_INTENSITY</Tag>
-		<English>[ICON_BULLET]%d1_Change %F2_Type Spot</English>
-		<French>[ICON_BULLET]%d1_Change %F2_Type Perception</French>
-		<German>[ICON_BULLET]%d1_Change %F2_Type-Sicht</German>
-	</TEXT>
-	<TEXT>
-		<!-- TXT_KEY_UNIT_INVISIBILITY_SPOT_PLOT_VALUE -->
-		<Tag>TXT_KEY_UNIT_VISIBILITY_PLOT_INTENSITY</Tag>
-		<English>[ICON_BULLET]%D1_Change %F2_Type Spot on %s3_Plot</English>
-		<French>[ICON_BULLET]%D1_Change Perception améliorée (%F2_Type) de  lorsque sur une case %s3_Plot</French>
-		<German>[ICON_BULLET]%s3_Plot: %D1_Change %F2_Type-Sicht</German>
-	</TEXT>
-	<TEXT>
-		<!-- TXT_KEY_UNIT_INVISIBILITY_SPOT_PLOT_RANGE_VALUE -->
-		<Tag>TXT_KEY_UNIT_VISIBILITY_PLOT_RANGE_INTENSITY</Tag>
-		<English>[ICON_BULLET]%D1_Change %F2_Type Spot Range on %s3_Plot</English>
-		<French>[ICON_BULLET]%D2_Change Portée étendue de Perception (%F2_Type)  lorsque sur une case %s3_Plot</French>
-		<German>[ICON_BULLET]%s3_Plot: %D1_Change %F2_Type-Sichtweite</German>
-	</TEXT>
-	<TEXT>
-		<!-- TXT_KEY_UNIT_INVISIBILITY_SPOT_PLOT_RANGE_VALUE_ADJ -->
-		<Tag>TXT_KEY_UNIT_VISIBILITY_PLOT_RANGE_INTENSITY_ADJ</Tag>
-		<English>[ICON_BULLET]%D1_Change %F2_Type Spot Range on %s3_Plot (already tallied into total.)</English>
-		<French>[ICON_BULLET%D2_Change Portée étendue de Perception (%F2_Type)  lorsque sur une case %s3_Plot (inclus dans le total.)</French>
-		<German>[ICON_BULLET]%s3_Plot: %D1_Change %F2_Type-Sichtweite (in Gesamtwert bereits eingerechnet)</German>
-	</TEXT>
-	<TEXT>
-		<!-- TXT_KEY_UNIT_INVISIBILITY_SPOT_RANGE_VALUE -->
-		<Tag>TXT_KEY_UNIT_VISIBILITY_RANGE_INTENSITY</Tag>
-		<English>[ICON_BULLET]%D1_Change %F2_Type Spot Range</English>
-		<French>[ICON_BULLET]%D1_Change Portée étendue de détection %F2_Type</French>
-		<German>[ICON_BULLET]%D1_Change %F2_Type-Sichtweite</German>
-	</TEXT>
-	<TEXT>
-		<!-- TXT_KEY_UNIT_INVISIBILITY_SPOT_SAME_TILE_VALUE -->
-		<Tag>TXT_KEY_UNIT_VISIBILITY_SAME_TILE_INTENSITY</Tag>
-		<English>[ICON_BULLET]%D1_Change %F2_Type Spot on Same Tile</English>
-		<French>[ICON_BULLET]Perception %D1_Change %F2_Type sur la même case</French>
-		<German>[ICON_BULLET]%D1_Change %F2_Type-Sicht in gleichem Gelände</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VLAD_III_DRACULA</Tag>
