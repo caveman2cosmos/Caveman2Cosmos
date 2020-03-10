@@ -14833,8 +14833,8 @@ Current techs which are not in this file:-
 				<PrereqTech>TECH_STEAM_POWER</PrereqTech>
 			</OrPreReqs>
 			<Quote>TXT_KEY_TECH_MACHINE_TOOLS_QUOTE</Quote>
-			<Sound>AS2D_TECH_MachineTools</Sound>
-			<SoundMP>AS2D_TECH_MachineTools</SoundMP>
+			<Sound>AS2D_TECH_MACHINETOOLS</Sound>
+			<SoundMP>AS2D_TECH_MACHINETOOLS</SoundMP>
 			<Button>,Art/Interface/Buttons/TechTree/MachineTools.dds,Art/Interface/Buttons/RoM_Techtree_Atlas.dds,4,10</Button>
 		</TechInfo>
 		<TechInfo>
