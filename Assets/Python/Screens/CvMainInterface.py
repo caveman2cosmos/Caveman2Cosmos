@@ -284,27 +284,16 @@ class CvMainInterface:
 			self.szDeadCiv					= obj.getText("TXT_KEY_BUG_DEAD_CIV", ())
 			self.szMinorCiv					= obj.getText("TXT_KEY_MINOR_CIV_DISPLAY", ())
 			self.AdvisorButtonTip = [
-				("Ministre" ,	"F1"),
-				("Financier",		"F2"),
-				("Doctrines",		"F3"),
-				("Diplomatie",		"F4"),
-				("Militaire",	"F5"),
-				("Technologie",	"F6"),
-				("Religion",	"F7"),
-				("Corporations",	"Shift+F7"),
-				("Espionnage","Ctrl+E"),
-				("Partisan",	"Ctrl+Shift+G")]
-			#self.AdvisorButtonTip = [
-			#	("Domestic" ,	"F1"),
-			#	("Finance",		"F2"),
-			#	("Civics",		"F3"),
-			#	("Foreign",		"F4"),
-			#	("Military",	"F5"),
-			#	("Technology",	"F6"),
-			#	("Religious",	"F7"),
-			#	("Corporate",	"Shift+F7"),
-			#	("Intelligence","Ctrl+E"),
-			#	("Partisan",	"Ctrl+Shift+G")]
+				(obj.getText("TXT_BUTTONTIP_ADVISOR_DOMESTIC", ()) ,	"F1"),
+				(obj.getText("TXT_BUTTONTIP_ADVISOR_FINANCE", ()),		"F2"),
+				(obj.getText("TXT_BUTTONTIP_ADVISOR_CIVICS", ()),		"F3"),
+				(obj.getText("TXT_BUTTONTIP_ADVISOR_FOREIGN", ()),		"F4"),
+				(obj.getText("TXT_BUTTONTIP_ADVISOR_MILITARY", ()),	"F5"),
+				(obj.getText("TXT_BUTTONTIP_ADVISOR_TECHNOLOGY", ()),	"F6"),
+				(obj.getText("TXT_BUTTONTIP_ADVISOR_RELIGIOUS", ()),	"F7"),
+				(obj.getText("TXT_BUTTONTIP_ADVISOR_CORPORATE", ()),	"Shift+F7"),
+				(obj.getText("TXT_BUTTONTIP_ADVISOR_INTELLIGENCE", ()),"Ctrl+E"),
+				(obj.getText("TXT_BUTTONTIP_ADVISOR_PARTISAN", ()),	"Ctrl+Shift+G")]			
 			# Building infos:
 			aBuildingList0 = []
 			aBuildingList1 = []
@@ -4877,8 +4866,7 @@ class CvMainInterface:
 			self.iField_View_Prev = iFoV
 
 	def setFieldofView_Text(self, screen, iFoV):
-		szFOV = self.aFontList[6] + "Zoom: %i" %(iFoV)
-		#FRENCH szFOV = self.aFontList[6] + "FoV: %i" %(iFoV)
+		szFOV = self.aFontList[6] + "FoV: %i" %(iFoV)
 		screen.setLabel("FoVSliderText", "", szFOV, 1<<1, self.iX_FoVSlider - 4, self.iY_FoVSlider + 6, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, 0, 0)
 
 	#####################
@@ -5047,38 +5035,30 @@ class CvMainInterface:
 			iCivic = CyPlayer.getCivics(i)
 			iUpkeep = CyPlayer.getSingleCivicUpkeep(iCivic, True)
 			if iUpkeep:
-				szTemp += "\n	" + str(iUpkeep) + iconCommerceGold + " de " + GC.getCivicInfo(iCivic).getDescription()
-				#FRENCH szTemp += "\n	" + str(iUpkeep) + iconCommerceGold + " from " + GC.getCivicInfo(iCivic).getDescription()
+				szTemp += "\n	" + str(iUpkeep) + iconCommerceGold + " "+ TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_FROM", ())+ " " + GC.getCivicInfo(iCivic).getDescription()
 				iSum += iUpkeep
 		if iSum:
-			szTxt += "\nEntretien des Doctrines : " + str(iSum) + iconCommerceGold + szTemp
-			#FRENCH szTxt += "\nCivic Upkeep: " + str(iSum) + iconCommerceGold + szTemp
+			szTxt += "\n" + TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_CIVIC_UPKEEP", ()) +" " + str(iSum) + iconCommerceGold + szTemp
 		# Maintenance
 		iMaintenance = CyPlayer.getTotalMaintenance()
 		if iMaintenance:
-			szTxt += "\nEntretien des villes : " + str(iMaintenance) + iconCommerceGold
-			#FRENCH szTxt += "\nCity maintenance: " + str(iMaintenance) + iconCommerceGold
+			szTxt += "\n" + TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_CIVIC_UPKEEP", ()) + " " + str(iMaintenance) + iconCommerceGold
 		# Unit upkeep
 		iUnitUpkeep = CyPlayer.calculateUnitCost()
 		iUnitSupply = CyPlayer.calculateUnitSupply()
 		if iUnitUpkeep or iUnitSupply:
 			szTxt += "\n"
-			#FRENCH szTxt += "\nUnit "
 			if iUnitUpkeep:
 				if iUnitSupply:
-					szTxt += "Entretien des "+ TRNSLTR.getText("TXT_KEY_GAMEOBJECT_UNIT", ()) +"s : " + str(iUnitUpkeep) + iconCommerceGold + "\n	" + str(iUnitSupply) + iconCommerceGold + " pour les ravitaillements exp."
-					#FRENCH szTxt += "Upkeep: " + str(iUnitUpkeep) + iconCommerceGold + "\n	" + str(iUnitSupply) + iconCommerceGold + " for expeditionary supplies."
+					szTxt += TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_UNIT_UPKEEP", ()) +" " + str(iUnitUpkeep) + iconCommerceGold + "\n	" + str(iUnitSupply) + iconCommerceGold + " " + TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_EXPEDITIONARY", ())
 				else:
-					szTxt += "Entretien des "+ TRNSLTR.getText("TXT_KEY_GAMEOBJECT_UNIT", ()) + "s : " + str(iUnitUpkeep) + iconCommerceGold
-					#FRENCH szTxt += "Upkeep: " + str(iUnitUpkeep) + iconCommerceGold
+					szTxt += TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_UNIT_UPKEEP", ()) + " " + str(iUnitUpkeep) + iconCommerceGold
 			elif iUnitSupply:
-				szTxt += "Ravitaillement : " + str(iUnitSupply) + iconCommerceGold
-				#FRENCH szTxt += "Supply: " + str(iUnitSupply) + iconCommerceGold
+				szTxt += TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_UNIT_SUPPLY", ()) + " " + str(iUnitSupply) + iconCommerceGold				
 		# Trade
 		iTradeGoPerT = CyPlayer.getGoldPerTurn()
 		if iTradeGoPerT:
-			szTxt += "\nCommerce: <color="
-			#FRENCH szTxt += "\nTrade: <color="
+			szTxt += "\n" + TRNSLTR.getText("TXT_INTERFACE_TREASURYHELP_TRADE", ()) +" <color="
 			if iTradeGoPerT < 0:
 				szTxt += "255,0,0>"
 			else:
@@ -5243,23 +5223,19 @@ class CvMainInterface:
 					if CASE[0] == "PromoPanel":
 						iCount = self.aUnitPromoCountMap[iType]
 						if iCount > 1:
-							szTxt = "<color=144,255,72>En groupe: " + str(iCount) + "</color>\n"
-							#FRENCH szTxt = "<color=144,255,72>In Stack: " + str(iCount) + "</color>\n"
+							szTxt = "<color=144,255,72>" + TRNSLTR.getText("TXT_INTERFACE_PROMOHELP_STACK", ())+ " " + str(iCount) + "</color>\n"
 					szTxt += CyGameTextMgr().getPromotionHelp(iType, False)
 					self.updateTooltip(screen, szTxt)
 
 				elif TYPE == "TECH":
 					szTxt = ""
 					if CASE[0] == "Selection":
-						szTxt += "Recherche : "
-						#FRENCH szTxt += "Research: "
+						szTxt += TRNSLTR.getText("TXT_INTERFACE_TECH_HELP_RESEARCH", ()) + " "						
 					elif CASE[0] == "ProgBar":
-						szTxt += "Recherche en cours : "
-						#FRENCH szTxt += "Researching: "
+						szTxt += TRNSLTR.getText("TXT_INTERFACE_TECH_HELP_RESEARCHING", ()) + " "
 						iType = GC.getPlayer(self.iPlayer).getCurrentResearch()
 					elif CASE[0] == "Score":
-						szTxt += "Recherche en cours : "
-						#FRENCH szTxt += "Researching: "
+						szTxt += TRNSLTR.getText("TXT_INTERFACE_TECH_HELP_RESEARCHING", ()) + " "
 					szTxt += CyGameTextMgr().getTechHelp(iType, False, True, True, True, -1)
 					self.updateTooltip(screen, szTxt)
 
@@ -5310,7 +5286,6 @@ class CvMainInterface:
 				else:
 					x = self.xPopProgBar
 					y = self.yBotBar + 12
-					szTxt = "Onglet "  #FRENCH TODO Flex
 					if not ID:
 						szTxt = TRNSLTR.getText("INTERFACE_UNIT_TAB", ())
 						szKey = "A"
@@ -5396,8 +5371,7 @@ class CvMainInterface:
 
 			elif NAME == "AdvisorButton":
 				advisorTip = self.AdvisorButtonTip[ID]
-				szTxt = "<color=101,229,255>Conseiller " + advisorTip[0] + "  <color=144,255,72>&#60" + advisorTip[1] + "&#62"
-				#FRENCH szTxt = "<color=101,229,255>" + advisorTip[0] + " Advisor  <color=144,255,72>&#60" + advisorTip[1] + "&#62"
+				szTxt = "<color=101,229,255>" + advisorTip[0] + "  <color=144,255,72>&#60" + advisorTip[1] + "&#62"
 				if ID == 1:
 					self.treasuryHelp(screen, szTxt)
 				else:

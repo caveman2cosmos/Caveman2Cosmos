@@ -366,12 +366,113 @@
 		<English>[ICON_BULLET]</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_BUTTONTIP_ADVISOR_CIVICS</Tag>
+		<English>Civics Advisor</English>
+		<French>Conseiller des Doctrines</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_BUTTONTIP_ADVISOR_CORPORATE</Tag>
+		<English>Corporate Advisor</English>
+		<French>Conseiller des Corporations</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_BUTTONTIP_ADVISOR_DOMESTIC</Tag>
+		<English>Domestic Advisor</English>
+		<French>Conseiller Interne</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_BUTTONTIP_ADVISOR_FINANCE</Tag>
+		<English>Finance Advisor</English>
+		<French>Conseiller Financier</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_BUTTONTIP_ADVISOR_FOREIGN</Tag>
+		<English>Foreign Advisor</English>
+		<French>Conseiller des Affaires Etrangères</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_BUTTONTIP_ADVISOR_INTELLIGENCE</Tag>
+		<English>Intelligence Advisor</English>
+		<French>Conseiller d'Espionnage</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_BUTTONTIP_ADVISOR_MILITARY</Tag>
+		<English>Military Advisor</English>
+		<French>Conseiller Militaire</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_BUTTONTIP_ADVISOR_PARTISAN</Tag>
+		<English>Partisan Advisor</English>
+		<French>Conseiller des Partis</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_BUTTONTIP_ADVISOR_RELIGIOUS</Tag>
+		<English>Religious Advisor</English>
+		<French>Conseiller Religieux</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_BUTTONTIP_ADVISOR_TECHNOLOGY</Tag>
+		<English>Technology Advisor</English>
+		<French>Conseiller Technologique</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_CASTE_SYSTEM_HELP</Tag>
 		<English>[ICON_BULLET]When building a farm, a militia unit of the current era appears</English>
 		<French>[ICON_BULLET]En construisant une ferme, une milice de l'èsre correspondante apparait</French>
 		<German>[ICON_BULLET]Wenn eine Farm gebaut wird, erscheint eine Miliz-Einheit der aktuellen Ära</German>
 		<Italian>[ICON_BULLET]Quando costruisci una fattoria, appare una milizia dell'era corrente</Italian>
 		<Polish>[ICON_BULLET]Kiedy farma zostaje wybudowana, jednostka milicji odpowiednia dla danej epoki zostaje zwerbowana.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_INTERFACE_PROMO_HELP_STACK</Tag>
+		<English>In Stack:</English>
+		<French>En groupe:</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_INTERFACE_TECH_HELP_RESEARCH</Tag>
+		<English>Research:</English>
+		<French>Recherche :</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_INTERFACE_TECH_HELP_RESEARCHING</Tag>
+		<English>Researching:</English>
+		<French>Recherche en cours :</French>
+	</TEXT>	
+	<TEXT>
+		<Tag>TXT_INTERFACE_TREASURYHELP_CITY_MAINTENANCE</Tag>
+		<English>City maintenance:</English>
+		<French>Entretien des villes :</French>
+	</TEXT>
+
+<TEXT>
+		<Tag>TXT_INTERFACE_TREASURYHELP_CIVIC_UPKEEP</Tag>
+		<English>Civic Upkeep:</English>
+		<French>Entretien des Doctrines :</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_INTERFACE_TREASURYHELP_EXPEDITIONARY</Tag>
+		<English>for expeditionary supplies.</English>
+		<French>pour les ravitaillements exp.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_INTERFACE_TREASURYHELP_FROM</Tag>
+		<English>from</English>
+		<French>de</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_INTERFACE_TREASURYHELP_TRADE</Tag>
+		<English>Trade:</English>
+		<French>Commerce :</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_INTERFACE_TREASURYHELP_UNIT_SUPPLY</Tag>
+		<English>Supply:</English>
+		<French>Ravitaillement :</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_INTERFACE_TREASURYHELP_UNIT_UPKEEP</Tag>
+		<English>Unit Upkeep:</English>
+		<French>Entretien des Unités :</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ABANDON_CITY</Tag>
@@ -2730,11 +2831,6 @@
 		<Polish>[NEWLINE]Stagnacja: %d1/%d2 [ICON_FOOD]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CITY_TAB_CLOSE_TAB</Tag>
-		<English>Close tab</English>
-		<French>Fermer l'onglet</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_FOOD_STARVE</Tag>
 		<English>[NEWLINE]%d1 [ICON_BAD_FOOD]/Turn[NEWLINE][COLOR_WARNING_TEXT]STARVATION: %d2/%d3 [ICON_FOOD][COLOR_REVERT]</English>
 		<French>[NEWLINE]%d1 [ICON_BAD_FOOD]/tour[NEWLINE][COLOR_WARNING_TEXT]FAMINE: %d2/%d3 [ICON_FOOD][COLOR_REVERT]</French>
@@ -5054,6 +5150,11 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>Z</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_GAMEOBJECT_BUILDING</Tag>
+		<English>Building</English>
+		<French>Bâtiment</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_GAMEOBJECT_CITY</Tag>
 		<English>City</English>
 		<French>Ville</French>
@@ -5129,11 +5230,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Jednostka</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOBJECT_BUILDING</Tag>
-		<English>Building</English>
-		<French>Bâtiment</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOBJECT_WONDER</Tag>
@@ -23111,4 +23207,4 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Spanish>Investigación actual:</Spanish>
 		<Polish>Aktualne Badania:</Polish>
 	</TEXT>
-</Civ4GameText>
+	</Civ4GameText>

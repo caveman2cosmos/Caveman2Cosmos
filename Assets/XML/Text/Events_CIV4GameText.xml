@@ -8613,37 +8613,46 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_PIRATE_INVASION_1</Tag>
 		<English>Ignore them.</English>
+		<French>Ignorez-les.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_PIRATE_INVASION_2</Tag>
 		<English>Destroy them and take their gold!</English>
+		<French>Détruisez-les et prenez leur or !</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_PIRATE_INVASION_3</Tag>
 		<English>Bribe them to join your navy.</English>
+		<French>Soudoyez-les, pour qu'ils rejoignent notre marine.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_PIRATE_MAP_1</Tag>
 		<English>Bah! That map is a fraud. Ignore the old man.</English>
+		<French>Bah! Cette carte n'est pas authentique. Ignorez le vieil homme.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_PIRATE_MAP_2</Tag>
 		<English>Make a big to-do over it, then burn the map and claim it was the Pirates' revenge!</English>
+		<French>Faites-en une copie, puis brûlez la carte et prétendez que c'était la vengeance des Pirates!</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_PIRATE_MAP_3</Tag>
 		<English>Search the world over for the treasure.</English>
+		<French>Cherchez le trésor dans le monde entier.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_PIRATE_NAVY_1</Tag>
 		<English>What's he waiting for?</English>
+		<French>Qu'attend-il ?</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_PIRATE_NAVY_2</Tag>
 		<English>Let him start an academy.</English>
+		<French>Qu'il ouvre une académie.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_PIRATE_NAVY_3</Tag>
 		<English>Does he have any gold?</English>
+		<French>A-t-il de l'or ?</French>
 	</TEXT>
 </Civ4GameText>
