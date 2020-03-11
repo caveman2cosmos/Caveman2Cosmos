@@ -8288,11 +8288,11 @@ def doEventLawyer(argsList):
 			pCity.setHasCorporation(iCorpLoop, 0, 0, 0)
 
 		# Litigation succeeds
-		CyInterface().addMessage(iPlayer,False,25,CyTranslator().getText("TXT_KEY_MESSAGE_LITIGATION",(pCity.getName(),)),"AS2D_BUILD_BANK",InterfaceMessageTypes.MESSAGE_TYPE_INFO,pUnit.getButton(),ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
+		CyInterface().addMessage(iPlayer,False,25,CyTranslator().getText("TXT_KEY_MSG_LITIGATION",(pCity.getName(),)),"AS2D_BUILD_BANK",InterfaceMessageTypes.MESSAGE_TYPE_INFO,pUnit.getButton(),ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
 
 	# Litigation fails
 	else:
-		CyInterface().addMessage(iPlayer,False,25,CyTranslator().getText("TXT_KEY_MESSAGE_LITIGATION_FAIL",(pCity.getName(),)),"AS2D_SABOTAGE",InterfaceMessageTypes.MESSAGE_TYPE_INFO,pUnit.getButton(),ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
+		CyInterface().addMessage(iPlayer,False,25,CyTranslator().getText("TXT_KEY_MSG_LITIGATION_FAIL",(pCity.getName(),)),"AS2D_SABOTAGE",InterfaceMessageTypes.MESSAGE_TYPE_INFO,pUnit.getButton(),ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
 
 ## Captives and Slavery mod python ##
 
@@ -8364,7 +8364,7 @@ def doRemoveWVSlavery(argsList):
 				iSum += iCost
 
 				if bMessage:
-					msg = TRNSLTR.getText("TXT_KEY_MESSAGE_SLAVE_MARKET_SOLD", (sCityName,))
+					msg = TRNSLTR.getText("TXT_KEY_MSG_SLAVE_MARKET_SOLD", (sCityName,))
 					CvUtil.sendMessage(msg, iPlayer, 16, GC.getBuildingInfo(iSlaveMarket).getButton(), ColorTypes(8), iCityX, iCityY, True, True, 0, "AS2D_BUILD_BANK")
 
 			# Remove all other Slavery Buildings if they exist
@@ -8497,7 +8497,7 @@ def doRemoveWVCannibalism(argsList):
 				CyCity, i = CyPlayer.nextCity(i, False)
 
 			if iPlayer == GC.getGame().getActivePlayer():
-				CvUtil.sendImmediateMessage(TRNSLTR.getText("TXT_KEY_MESSAGE_NO_CANNIBALISM", ()))
+				CvUtil.sendImmediateMessage(TRNSLTR.getText("TXT_KEY_MSG_NO_CANNIBALISM", ()))
 				CyAudioGame().Play2DSound("AS2D_DISCOVERBONUS")
 
 def doRemoveWVHumanSacrifice(argsList):
@@ -8524,7 +8524,7 @@ def doRemoveWVHumanSacrifice(argsList):
 				loopCity.setNumRealBuilding(iWVSacrifice, 0)
 				CyAudioGame().Play2DSound("AS2D_DISCOVERBONUS")
 
-				CyInterface().addMessage(iPlayer,False,25,TRNSLTR.getText("TXT_KEY_MESSAGE_NO_HUMAN_SACRIFICE",(loopCity.getName(),)),"AS2D_BUILD_BANK",InterfaceMessageTypes.MESSAGE_TYPE_INFO,pUnit.getButton(),ColorTypes(8),loopCity.getX(),loopCity.getY(),True,True)
+				CyInterface().addMessage(iPlayer,False,25,TRNSLTR.getText("TXT_KEY_MSG_NO_HUMAN_SACRIFICE",(loopCity.getName(),)),"AS2D_BUILD_BANK",InterfaceMessageTypes.MESSAGE_TYPE_INFO,pUnit.getButton(),ColorTypes(8),loopCity.getX(),loopCity.getY(),True,True)
 				#~ break
 			# Sell the Alter if one exists
 			if loopCity.getNumActiveBuilding(iAltar) > 0:
@@ -8532,7 +8532,7 @@ def doRemoveWVHumanSacrifice(argsList):
 				loopCity.setNumRealBuilding(iAltar, 0)
 				CyAudioGame().Play2DSound("AS2D_DISCOVERBONUS")
 
-				CyInterface().addMessage(iPlayer,False,25,TRNSLTR.getText("TXT_KEY_MESSAGE_ALTAR_SOLD",(loopCity.getName(),)),"AS2D_BUILD_BANK",InterfaceMessageTypes.MESSAGE_TYPE_INFO,pUnit.getButton(),ColorTypes(8),loopCity.getX(),loopCity.getY(),True,True)
+				CyInterface().addMessage(iPlayer,False,25,TRNSLTR.getText("TXT_KEY_MSG_ALTAR_SOLD",(loopCity.getName(),)),"AS2D_BUILD_BANK",InterfaceMessageTypes.MESSAGE_TYPE_INFO,pUnit.getButton(),ColorTypes(8),loopCity.getX(),loopCity.getY(),True,True)
 
 			(loopCity, iter) = pPlayer.nextCity(iter, False)
 

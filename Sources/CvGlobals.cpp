@@ -154,7 +154,6 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_iDCM_RB_CITY_INACCURACY(0)
 	, m_iDCM_RB_CITYBOMBARD_CHANCE(0)
 	, m_bDCM_ATTACK_SUPPORT(false)
-	, m_bDCM_STACK_ATTACK(false)
 	, m_bDCM_OPP_FIRE(false)
 	, m_bDCM_ACTIVE_DEFENSE(false)
 	, m_bDCM_ARCHER_BOMBARD(false)
@@ -3779,7 +3778,6 @@ void cvInternalGlobals::cacheGlobals()
 	m_iDCM_RB_CITY_INACCURACY = getDefineINT("DCM_RB_CITY_INACCURACY");
 	m_iDCM_RB_CITYBOMBARD_CHANCE = getDefineINT("DCM_RB_CITYBOMBARD_CHANCE");
 	m_bDCM_ATTACK_SUPPORT = (getDefineINT("DCM_ATTACK_SUPPORT") > 0) ? true : false;
-	m_bDCM_STACK_ATTACK = (getDefineINT("DCM_STACK_ATTACK") > 0) ? true : false;
 	m_bDCM_OPP_FIRE = (getDefineINT("DCM_OPP_FIRE") > 0) ? true : false;
 	m_bDCM_ACTIVE_DEFENSE = (getDefineINT("DCM_ACTIVE_DEFENSE") > 0) ? true : false;
 	m_bDCM_ARCHER_BOMBARD = (getDefineINT("DCM_ARCHER_BOMBARD") > 0) ? true : false;
@@ -6044,11 +6042,6 @@ int cvInternalGlobals::getDCM_RB_CITYBOMBARD_CHANCE() const
 bool cvInternalGlobals::isDCM_ATTACK_SUPPORT() const
 {
 	return m_bDCM_ATTACK_SUPPORT;
-}
-
-bool cvInternalGlobals::isDCM_STACK_ATTACK() const
-{
-	return m_bDCM_STACK_ATTACK;
 }
 
 bool cvInternalGlobals::isDCM_OPP_FIRE() const

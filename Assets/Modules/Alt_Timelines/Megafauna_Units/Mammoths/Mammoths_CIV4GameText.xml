@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- ###################################################################################### -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAMMOTH_HERD</Tag>
@@ -69,10 +68,6 @@
 		<Italian>Costruisci un allevaore di mammut per incrementare la produzione e la felicità delle tue città.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_NEANDERTHAL_MAMMOTH_RIDER</Tag>
-		<English>Neanderthal Mammoth Rider</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_BALLISTA_MAMMOTH</Tag>
 		<English>Ballista Mammoth</English>
 		<French>
@@ -101,6 +96,10 @@
 		</French>
 		<Italian>Mammut con bombarda</Italian>
 		<Polish>Mamut-Bombard</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_NEANDERTHAL_MAMMOTH_RIDER</Tag>
+		<English>Neanderthal Mammoth Rider</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MAMMOTH</Tag>

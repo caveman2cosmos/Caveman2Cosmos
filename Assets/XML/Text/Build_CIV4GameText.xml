@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_ABATIS_THORN_HEDGE</Tag>
@@ -844,7 +844,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SEED_CAMP</Tag>
 		<English>[LINK=IMPROVEMENT_SEED_CAMP]Gather Seeds[\LINK]</English>
-		<French>[LINK=IMPROVEMENT_SEED_CAMP]Récolter les céréales[\LINK]</French>
+		<French>[LINK=IMPROVEMENT_SEED_CAMP]Récolter les Graines[\LINK]</French>
 		<German>[LINK=IMPROVEMENT_SEED_CAMP]Körner sammeln[\LINK]</German>
 		<Spanish>[LINK=IMPROVEMENT_SEED_CAMP]Recolectar cereales[\LINK]</Spanish>
 		<Polish>[LINK=IMPROVEMENT_SEED_CAMP]Zbieraj Plony[\LINK]</Polish>
@@ -852,7 +852,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SEED_CAMP_KILL</Tag>
 		<English>[LINK=IMPROVEMENT_SEED_CAMP]Gather Seeds[\LINK] (Consumed)</English>
-		<French>[LINK=IMPROVEMENT_SEED_CAMP]Récolter les céréales[\LINK] (Détruit)</French>
+		<French>[LINK=IMPROVEMENT_SEED_CAMP]Récolter les Graines[\LINK] (Détruit)</French>
 		<German>[LINK=IMPROVEMENT_SEED_CAMP]Körner sammeln[\LINK] (Consumed)</German>
 		<Spanish>[LINK=IMPROVEMENT_SEED_CAMP]Recolectar cereales[\LINK] (Consumed)</Spanish>
 		<Polish>[LINK=IMPROVEMENT_SEED_CAMP]Zbieraj Plony[\LINK] (Consumed)</Polish>
@@ -1223,59 +1223,4 @@
 		<Spanish>Plantar un Bosque</Spanish>
 		<Polish>Posadź las</Polish>
 	</TEXT>
-<!-- Unloaded Module
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_ASIAN_TEMPLE</Tag>
-		<English>Build [LINK=IMPROVEMENT_ASIAN_TEMPLE]Asian Temple[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_ASIAN_TEMPLE]Temple Asiatique[\LINK]</French>
-		<German>Bauen [LINK=IMPROVEMENT_ASIAN_TEMPLE]Asiatischen Tempel[\LINK]</German>
-		<Italian>Costruisci [LINK=IMPROVEMENT_ASIAN_TEMPLE]Tempio Asiatico[\LINK]</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_ASIAN_TEMPLE]Templo asiático[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_ASIAN_TEMPLE]Azjatycką Świątynię[\LINK]</Polish>
-	</TEXT>
--->
-<!-- Unloaded Module
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_MESOAMERICAN_TEMPLE</Tag>
-		<English>Build [LINK=IMPROVEMENT_MESOAMERICAN_TEMPLE]Mesoamerican Temple[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_MESOAMERICAN_TEMPLE]Temple Mésoaméricain[\LINK]</French>
-		<German>Bauen [LINK=IMPROVEMENT_MESOAMERICAN_TEMPLE]Mesoamerikanischen Tempel[\LINK]</German>
-		<Italian>Costruisci [LINK=IMPROVEMENT_MESOAMERICAN_TEMPLE]Temple Mesoamericana[\LINK]</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_MESOAMERICAN_TEMPLE]Templo mesoamericano[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_MESOAMERICAN_TEMPLE]Świątynię Mezoamerykańską[\LINK]</Polish>
-	</TEXT>
--->
-<!-- Unloaded Module
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_PYRAMIDS</Tag>
-		<English>Build [LINK=IMPROVEMENT_PYRAMIDS]Pyramids[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_PYRAMIDS]Pyramides[\LINK]</French>
-		<German>Bauen [LINK=IMPROVEMENT_PYRAMIDS]Pyramiden[\LINK]</German>
-		<Italian>Costruisci [LINK=IMPROVEMENT_PYRAMIDS]Piramidi[\LINK]</Italian>
-		<Spanish>Construir unas [LINK=IMPROVEMENT_PYRAMIDS]Pirámides[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_PYRAMIDS]Piramidy[\LINK]</Polish>
-	</TEXT>
--->
-<!-- Unloaded Module
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_STONE_CIRCLE</Tag>
-		<English>Build [LINK=IMPROVEMENT_STONE_CIRCLE]Stone Circle[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_STONE_CIRCLE]Cercle de pierres[\LINK]</French>
-		<German>Bauen [LINK=IMPROVEMENT_STONE_CIRCLE]Steinkreis[\LINK]</German>
-		<Italian>Costruisci [LINK=IMPROVEMENT_STONE_CIRCLE]Cerchio di pietre[\LINK]</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_STONE_CIRCLE]Círculo de piedras[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_STEEL_WATCHTOWER]Kamienny Krąg[\LINK]</Polish>
-	</TEXT>
--->
-<!-- Unloaded Module
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_ZIGGURAT</Tag>
-		<English>Build [LINK=IMPROVEMENT_ZIGGURAT]Ziggurat[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_ZIGGURAT]Ziggourat[\LINK]</French>
-		<German>Bauen [LINK=IMPROVEMENT_ZIGGURAT]Zikkurat[\LINK]</German>
-		<Italian>Costruisci [LINK=IMPROVEMENT_ZIGGURAT]Ziggurat[\LINK]</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_ZIGGURAT]Zigurat[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_ZIGGURAT]Ziggurat[\LINK]</Polish>
-	</TEXT>
--->
 </Civ4GameText>

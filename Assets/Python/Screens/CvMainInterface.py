@@ -5223,7 +5223,7 @@ class CvMainInterface:
 					if CASE[0] == "PromoPanel":
 						iCount = self.aUnitPromoCountMap[iType]
 						if iCount > 1:
-							szTxt = "<color=144,255,72>" + TRNSLTR.getText("TXT_INTERFACE_PROMOHELP_STACK", ())+ " " + str(iCount) + "</color>\n"
+							szTxt = "<color=144,255,72>" + TRNSLTR.getText("TXT_KEY_IN_STACK", (iCount,)) + "</color>\n"
 					szTxt += CyGameTextMgr().getPromotionHelp(iType, False)
 					self.updateTooltip(screen, szTxt)
 
