@@ -2060,7 +2060,7 @@
 		<BonusInfo>
 			<Type>BONUS_RAW_FISH</Type>
 			<Description>TXT_KEY_BONUS_RAW_FISH</Description>
-			<Civilopedia>TXT_KEY_BONUS_RAW_FISH_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BONUS_FISH_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_RAW_FISH</ArtDefineTag>
 			<TechReveal>TECH_TRAP_FISHING</TechReveal>
