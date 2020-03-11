@@ -9343,7 +9343,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_RED_AND_BLACK_WARE</FreeBonus>
+			<FreeBonus>BONUS_RED_AND_BLACK_WARES</FreeBonus>
 			<iNumFreeBonuses>6</iNumFreeBonuses>
 			<!-- Specialist effects -->
 			<SpecialistCounts>

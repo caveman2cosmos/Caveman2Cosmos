@@ -125,7 +125,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_RED_AND_BLACK_WARE</BonusType>
+					<BonusType>BONUS_RED_AND_BLACK_WARES</BonusType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>

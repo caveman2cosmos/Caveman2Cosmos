@@ -4123,11 +4123,6 @@
 		<Polish>Przedmioty z ciekłego metalu</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_LIQUID_METAL_WARES_PEDIA</Tag>
-		<English>Liquid metal consists of gallium-containing alloys with very low melting points which are liquid at room temperature. The standard metal formerly was mercury, but gallium-based alloys are being used as a replacement in various applications. Mercury is toxic, and has a high vapor pressure at room temperature. Gallium alloys have reduced toxicity and a lower vapor pressure than mercury.</English>
-		<Polish>Dobro materialne ogólnie jest tym wszystkim, co dana jednostka ludzka może gromadzić wokół siebie tworząc własne środowisko materialne.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_LITHIUM</Tag>
 		<English>Lithium</English>
 		<Italian>Litio</Italian>
@@ -4543,11 +4538,6 @@
 		<Polish>Przedmioty z megastopu</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_MEGASTRONG_ALLOY_WARES_PEDIA</Tag>
-		<English>Megastrong Alloy is a material composed of two or more metals or a metal and a nonmetal. An alloy may be a solid solution of the elements (a single phase), a mixture of metallic phases (two or more solutions) or an intermetallic compound with no distinct boundary between the phases. Solid solution alloys give a single solid phase microstructure, while partial solutions exhibit two or more phases that may or may not be homogeneous in distribution, depending on the thermal (heat treatment) history of the material. An inter-metallic compound has one other alloy or pure metal embedded within another pure metal.</English>
-		<Polish>Dobro materialne ogólnie jest tym wszystkim, co dana jednostka ludzka może gromadzić wokół siebie tworząc własne środowisko materialne.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_MELANESIAN</Tag>
 		<English>Melanesian</English>
 		<French>Mélanésienne</French>
@@ -4597,11 +4587,6 @@
 		<French>Outils en métamatériaux</French>
 		<Italian>Utensili in meta-materiali</Italian>
 		<Polish>Przedmioty z metamateriału</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_METAMATERIAL_WARES_PEDIA</Tag>
-		<English>Metamaterials are materials engineered to have properties that have not yet been found in nature. They are made from assemblies of multiple elements fashioned from conventional materials such as metals or plastics. The materials are usually arranged in repeating patterns, often at microscopic or smaller scales that are smaller than the wavelengths of the phenomena they influence. Metamaterials derive their properties not from the properties of the base materials, but from their designed structure. Their precise shape, geometry, size, orientation and arrangement gives them their properties.</English>
-		<Polish>Dobro materialne ogólnie jest tym wszystkim, co dana jednostka ludzka może gromadzić wokół siebie tworząc własne środowisko materialne.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_METHAMPHETAMINE</Tag>
@@ -5772,11 +5757,6 @@
 		<Polish>Przedmioty z porcelany</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_PORCELAIN_WARES_PEDIA</Tag>
-		<English>Porcelain is a ceramic material made by heating materials, generally including clay in the form of kaolin, in a kiln to temperatures between 1,200 °C (2,192 °F) and 1,400 °C (2,552 °F). The toughness, strength, and translucence of porcelain arise mainly from the formation of glass and the mineral mullite within the fired body at these high temperatures.</English>
-		<Polish>Porcelana - rodzaj białej, przeświecającej ceramiki wysokiej jakości, wynaleziony w Chinach w VII w. Porcelana jest wytwarzana z mieszanki glinki kaolinowej ze skaleniem i kwarcem poprzez wypalanie uformowanych wyrobów w temperaturze od 920-980 C (wyroby nieszkliwione, tzw. biskwit) aż do 1280-1460 C (wyroby szkliwione). Charakteryzuje się niską nasiąkliwością, bardzo dobrymi właściwościami dielektrycznymi, dużą wytrzymałością mechaniczną, wysoką odpornością na działanie czynników chemicznych i nieprzepuszczalnością dla cieczy i gazów.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_PORTUGUESE</Tag>
 		<English>Portuguese</English>
 		<French>Portuguais</French>
@@ -6091,16 +6071,11 @@
 		<French>La viande est la chair des animaux qui est utilisée comme aliment.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_RED_AND_BLACK_WARE</Tag>
-		<English>Red and Black Ware</English>
+		<Tag>TXT_KEY_BONUS_RED_AND_BLACK_WARES</Tag>
+		<English>Red and Black Wares</English>
 		<French>Objets à figures rouges et noires</French>
 		<Italian>Ceramiche rosse e nere</Italian>
 		<Polish>Ceramika czerwona i czarna</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_RED_AND_BLACK_WARE_PEDIA</Tag>
-		<English>Because of its relative durability, pottery comprises a large part of the archaeological record of Ancient Greece, and since there is so much of it (some 100,000 vases are recorded in the Corpus vasorum antiquorum), it has exerted a disproportionately large influence on our understanding of Greek society. Little survives, for example, of ancient Greek painting except for what is found on the earthenware in everyday use, so we must trace the development of Greek art through its vestiges on a derivative art form. Nevertheless the shards of pots discarded or buried in the 1st millennium BC are still the best guide we have to the customary life and mind of the ancient Greeks.</English>
-		<Polish>Ze względu na jego względnej trwałości, ceramika obejmuje dużą część danych archeologicznych starożytnej Grecji, a ponieważ nie jest tak dużo (około 100.000 wazony są rejestrowane w vasorum Antiquorum Corpus), to wywiera nieproporcjonalnie duży wpływ na nasze rozumienie społeczeństwa greckiego. Małe przeżyje, na przykład, od starożytnego greckiego malarstwa, z wyjątkiem tego, co znajduje się na glinianych w codziennym użytkowaniu, więc musimy prześledzić rozwój sztuki greckiej poprzez swoje ślady na pochodnego formy sztuki. Niemniej skorupy garnków wyrzuconych lub zatopionych w 1 tysiąclecia pne są nadal najlepszym przewodnikiem mamy do zwyczajowego życia i umysłu starożytnych Greków.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RED_OCHER</Tag>
@@ -7024,11 +6999,6 @@
 		<Polish>Przedmioty ze superstopu</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_SUPERSTRONG_ALLOY_WARES_PEDIA</Tag>
-		<English>A superalloy, or high-performance alloy, is an alloy that exhibits several key characteristics: excellent mechanical strength, resistance to thermal creep deformation, good surface stability and resistance to corrosion or oxidation. The crystal structure is typically face-centered cubic austenitic. Examples of such alloys are Hastelloy, Inconel, Waspaloy, Rene alloys, Haynes alloys, Incoloy, MP98T, TMS alloys, and CMSX single crystal alloys.</English>
-		<Polish>Dobro materialne ogólnie jest tym wszystkim, co dana jednostka ludzka może gromadzić wokół siebie tworząc własne środowisko materialne.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_SURINAMESE</Tag>
 		<English>Surinamese</English>
 		<Italian>Surinamese</Italian>
@@ -7252,11 +7222,6 @@
 		<French>Outils en terre cuite</French>
 		<Italian>Utensili di terracotta</Italian>
 		<Polish>Przedmioty z terrakoty</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_TERRACOTTA_WARES_PEDIA</Tag>
-		<English>Terracotta, Terra cotta or Terra-cotta (Italian: "baked earth", from the Latin terra cotta), a type of earthenware, is a clay-based unglazed or glazed ceramic, where the fired body is porous. Its uses include vessels (notably flower pots), water and waste water pipes, bricks, and surface embellishment in building construction, along with sculpture such as the Terracotta Army and Greek terracotta figurines. The term is also used to refer to items made out of this material and to its natural, brownish orange color, which varies considerably. In archaeology and art history, "terracotta" is often used of objects not made on a potter's wheel, such as figurines, where objects made on the wheel from the same material, possibly even by the same person, are called pottery; the choice of term depending on the type of object rather than the material.</English>
-		<Polish>Terakota (wł. terra cotta - ziemia wypalona) - wyroby z dobrze oczyszczonej i wypalonej gliny w formie figurek lub płytek, stosowane do zdobień. Znane w starożytnej Grecji, Etrurii, Rzymie. Przedmioty były modelowane ręcznie lub odciskane w formach, a następnie wypalane. Wyrobów nie powlekano firnisem i początkowo nie malowano. Najciekawsze figurki pochodzą z IV w. p.n.e. z Tanagry - miasto w Grecji, z okresu hellenistycznego - z Myriny. Największe, naturalnej wielkości figury (w tym tzw. Apollo) pochodzą z Wejów (500 r. p.n.e.). Oprócz figurek wykonywano płytki do zdobień (antefiks, akroterion), dachówki i simy, płytki do licowania ścian (np. dach świątyni Hery na Olimpii - VII wiek p.n.e.), wnętrz teatrów, term, domów mieszkalnych.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TESSERACT</Tag>

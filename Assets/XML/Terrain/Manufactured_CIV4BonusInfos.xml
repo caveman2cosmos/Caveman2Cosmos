@@ -2801,7 +2801,7 @@
 		<BonusInfo>
 			<Type>BONUS_LIQUID_METAL_WARES</Type>
 			<Description>TXT_KEY_BONUS_LIQUID_METAL_WARES</Description>
-			<Civilopedia>TXT_KEY_BONUS_LIQUID_METAL_WARES_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BONUS_WARES_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_LIQUID_METAL_WARES</ArtDefineTag>
 			<TechReveal>TECH_LIQUID_METALS</TechReveal>
@@ -2812,7 +2812,7 @@
 		<BonusInfo>
 			<Type>BONUS_MEGASTRONG_ALLOY_WARES</Type>
 			<Description>TXT_KEY_BONUS_MEGASTRONG_ALLOY_WARES</Description>
-			<Civilopedia>TXT_KEY_BONUS_MEGASTRONG_ALLOY_WARES_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BONUS_WARES_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MEGASTRONG_ALLOY_WARES</ArtDefineTag>
 			<TechReveal>TECH_MEGASTRONG_ALLOYS</TechReveal>
@@ -2823,7 +2823,7 @@
 		<BonusInfo>
 			<Type>BONUS_METAMATERIAL_WARES</Type>
 			<Description>TXT_KEY_BONUS_METAMATERIAL_WARES</Description>
-			<Civilopedia>TXT_KEY_BONUS_METAMATERIAL_WARES_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BONUS_WARES_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_METAMATERIAL_WARES</ArtDefineTag>
 			<TechReveal>TECH_METAMATERIALS</TechReveal>
@@ -2834,7 +2834,7 @@
 		<BonusInfo>
 			<Type>BONUS_PORCELAIN_WARES</Type>
 			<Description>TXT_KEY_BONUS_PORCELAIN_WARES</Description>
-			<Civilopedia>TXT_KEY_BONUS_PORCELAIN_WARES_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BONUS_WARES_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_PORCELAIN_WARES</ArtDefineTag>
 			<TechReveal>TECH_AESTHETICS</TechReveal>
@@ -2845,7 +2845,7 @@
 		<BonusInfo>
 			<Type>BONUS_SUPERSTRONG_ALLOY_WARES</Type>
 			<Description>TXT_KEY_BONUS_SUPERSTRONG_ALLOY_WARES</Description>
-			<Civilopedia>TXT_KEY_BONUS_SUPERSTRONG_ALLOY_WARES_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BONUS_WARES_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SUPERSTRONG_ALLOY_WARES</ArtDefineTag>
 			<TechReveal>TECH_SUPERSTRONG_ALLOYS</TechReveal>
@@ -2856,7 +2856,7 @@
 		<BonusInfo>
 			<Type>BONUS_TERRACOTTA_WARES</Type>
 			<Description>TXT_KEY_BONUS_TERRACOTTA_WARES</Description>
-			<Civilopedia>TXT_KEY_BONUS_TERRACOTTA_WARES_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BONUS_WARES_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_TERRACOTTA_WARES</ArtDefineTag>
 			<TechReveal>TECH_ORNAMENTATION</TechReveal>
