@@ -1005,7 +1005,6 @@ public:
 	int getDCM_RB_CITY_INACCURACY() const;
 	int getDCM_RB_CITYBOMBARD_CHANCE() const;
 	bool isDCM_ATTACK_SUPPORT() const;
-	bool isDCM_STACK_ATTACK() const;
 	bool isDCM_OPP_FIRE() const;
 	bool isDCM_ACTIVE_DEFENSE() const;
 	bool isDCM_ARCHER_BOMBARD() const;
@@ -1663,7 +1662,6 @@ protected:
 	int m_iDCM_RB_CITY_INACCURACY;
 	int m_iDCM_RB_CITYBOMBARD_CHANCE;
 	bool m_bDCM_ATTACK_SUPPORT;
-	bool m_bDCM_STACK_ATTACK;
 	bool m_bDCM_OPP_FIRE;
 	bool m_bDCM_ACTIVE_DEFENSE;
 	bool m_bDCM_ARCHER_BOMBARD;

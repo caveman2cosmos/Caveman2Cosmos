@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ANTIQUITIES_GRAVE_GOODS_CAVE</Tag>
@@ -21,10 +21,6 @@
 		<English>Grave Goods made in ancient times and traded as antiquities to the rich and Museums.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GRAVE_GOODS</Tag>
-		<English>Grave Goods</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BURIAL_GOODS_CAVE</Tag>
 		<English>Grave Goods (Cave)</English>
 	</TEXT>
@@ -37,6 +33,10 @@
 		<English>Grave Goods (Fire)</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BURIAL_GOODS_PEDIA</Tag>
+		<English>Game auto builds used to provide antiquities at Archaeology.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BURIAL_GOODS_SKY</Tag>
 		<English>Grave Goods (Sky)</English>
 	</TEXT>
@@ -45,7 +45,7 @@
 		<English>Auto building. Burial Goods provide benefits at  Archaeology.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BURIAL_GOODS_PEDIA</Tag>
-		<English>Game auto builds used to provide antiquities at Archaeology.</English>
+		<Tag>TXT_KEY_BUILDING_GRAVE_GOODS</Tag>
+		<English>Grave Goods</English>
 	</TEXT>
 </Civ4GameText>

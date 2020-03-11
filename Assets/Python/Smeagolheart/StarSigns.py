@@ -40,9 +40,9 @@ def give(GC, TRNSLTR, GAME, CyUnit, iPlayer, bLand):
 	if iPlayer == GAME.getActivePlayer():
 		CyCity = CyUnit.plot().getPlotCity()
 		if CyCity and not CyCity.isNone():
-			szTxt = TRNSLTR.getText("TXT_KEY_MESSAGE_STARSIGN_BUILD", (CyCity.getName(),))
+			szTxt = TRNSLTR.getText("TXT_KEY_MSG_STARSIGN_BUILD", (CyCity.getName(),))
 		else:
-			szTxt = TRNSLTR.getText("TXT_KEY_MESSAGE_STARSIGN_CREATE", ())
+			szTxt = TRNSLTR.getText("TXT_KEY_MSG_STARSIGN_CREATE", ())
 
 		szIcon = GC.getPromotionInfo(iPromotion).getButton()
 		CvUtil.sendMessage(szTxt, iPlayer, 16, szIcon, ColorTypes(44), CyUnit.getX(), CyUnit.getY(), True, True)

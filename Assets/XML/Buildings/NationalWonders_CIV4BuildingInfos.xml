@@ -3938,7 +3938,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_MICROLITH_WORKSHOP</Description>
-			<Civilopedia>TXT_KEY_TECH_MICROLITH_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_MICROLITH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MICROLITH_WORKSHOP_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MICROLITH</PrereqTech>
