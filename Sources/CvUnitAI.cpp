@@ -2824,23 +2824,12 @@ void CvUnitAI::AI_attackMove()
 {
 	PROFILE_FUNC();
 
-	if (AI_selectStatus(true))
-	{
-		return;
-	}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  05/14/10								jdog5000	  */
-/*																							  */
-/* Unit AI, Settler AI, Efficiency															  */
-/************************************************************************************************/
-	bool bDanger = (GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plot(), 3));
-
-	if ( checkSwitchToConstruct() )
+	if (AI_selectStatus(true) || checkSwitchToConstruct())
 	{
 		return;
 	}
 
-	if ( MISSIONAI_REGROUP == getGroup()->AI_getMissionAIType() )
+	if (MISSIONAI_REGROUP == getGroup()->AI_getMissionAIType())
 	{
 		if (AI_group(GroupingParams().withUnitAI(UNITAI_SETTLE).maxGroupSize(2).maxPathTurns(1).allowRegrouping()))
 		{
@@ -2851,73 +2840,50 @@ void CvUnitAI::AI_attackMove()
 			return;
 		}
 	}
+	bool bDanger = (GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plot(), 3));
 
-	if( getGroup()->getNumUnits() > 2 )
+	if (bDanger)
 	{
-		UnitAITypes eGroupAI = getGroup()->getHeadUnitAI();
-		if( eGroupAI == AI_getUnitAIType() )
+		if (plot()->isCity() && plot()->getOwner() == getOwner())
 		{
-			if( plot()->getOwner() == getOwner() && !bDanger )
+			// Attack choking units
+			const int iOurDefense = GET_TEAM(getTeam()).AI_getOurPlotStrength(plot(),0,true,false,true);
+			const int iEnemyOffense = GET_PLAYER(getOwner()).AI_getEnemyPlotStrength(plot(),2,false,false);
+
+			if (iOurDefense < 3*iEnemyOffense && AI_guardCity(true))
 			{
-				// Shouldn't have groups of > 2 attack units
-				if( getGroup()->countNumUnitAIType(UNITAI_ATTACK) > 2 )
-				{
-					getGroup()->AI_separate(); // will change group
-
-					FAssert( eGroupAI == getGroup()->getHeadUnitAI() );
-				}
-
-				// Should never have attack city group lead by attack unit
-				if( getGroup()->countNumUnitAIType(UNITAI_ATTACK_CITY) > 0 )
-				{
-					getGroup()->AI_separateAI(UNITAI_ATTACK_CITY); // will change group
-
-					// Since ATTACK can try to joing ATTACK_CITY again, need these units to
-					// take a break to let ATTACK_CITY group move and avoid hang
-					getGroup()->pushMission(MISSION_SKIP);
-					return;
-				}
+				return;
+			}
+			if (iEnemyOffense > 0 && iOurDefense > 2*iEnemyOffense && AI_anyAttack(2, 55))
+			{
+				return;
+			}
+			if (AI_groupMergeRange(UNITAI_ATTACK, 1, true, true, false))
+			{
+				return;
+			}
+			if (iEnemyOffense > 0 && iOurDefense > 2*iEnemyOffense && AI_anyAttack(2, 30))
+			{
+				return;
 			}
 		}
 	}
-
-
-	// Attack choking units
-	if( plot()->isCity() && plot()->getOwner() == getOwner() && bDanger )
-	{
-		int iOurDefense = GET_TEAM(getTeam()).AI_getOurPlotStrength(plot(),0,true,false,true);
-		int iEnemyOffense = GET_PLAYER(getOwner()).AI_getEnemyPlotStrength(plot(),2,false,false);
-
-		if( iOurDefense < 3*iEnemyOffense )
+	else if (getGroup()->getNumUnits() > 2 && plot()->getOwner() == getOwner() && getGroup()->getHeadUnitAI() == AI_getUnitAIType())
+	{ // No danger
+		// Shouldn't have groups of > 2 attack units
+		if (getGroup()->countNumUnitAIType(UNITAI_ATTACK) > 2)
 		{
-			if (AI_guardCity(true))
-			{
-				return;
-			}
+			getGroup()->AI_separate(); // will change group
+
+			FAssert(getGroup()->getHeadUnitAI() == getGroup()->getHeadUnitAI());
 		}
-
-		if (iEnemyOffense > 0)
+		// Should never have attack city group lead by attack unit
+		if (getGroup()->countNumUnitAIType(UNITAI_ATTACK_CITY) > 0)
 		{
-			if( iOurDefense > 2*iEnemyOffense )
-			{
-				if (AI_anyAttack(2, 55))
-				{
-					return;
-				}
-			}
-		}
-
-		if (AI_groupMergeRange(UNITAI_ATTACK, 1, true, true, false))
-		{
+			getGroup()->AI_separateAI(UNITAI_ATTACK_CITY); // will change group
+			// Skip to let ATTACK_CITY units move to avoid hang since ATTACK can try to join ATTACK_CITY again.
+			getGroup()->pushMission(MISSION_SKIP);
 			return;
-		}
-
-		if (iEnemyOffense > 0 && ( iOurDefense > 2*iEnemyOffense ))
-		{
-			if (AI_anyAttack(2, 30))
-			{
-				return;
-			}
 		}
 	}
 
@@ -2930,32 +2896,22 @@ void CvUnitAI::AI_attackMove()
 			return;
 		}
 
-		//	No high priority actions to take so see if anyone requesting help
-		if ( processContracts() )
+		//	No high priority actions to take so see if anyone need help
+		if (processContracts())
 		{
 			return;
 		}
 
-		if( !(plot()->isOwned()) )
+		if (!plot()->isOwned() && AI_groupMergeRange(UNITAI_SETTLE, 2, true, false, false))
 		{
-			// Group with settler after naval drop
-			//Fuyu: could result in endless loop (at least it does in AND)
-			if( AI_groupMergeRange(UNITAI_SETTLE, 2, true, false, false) )
-			{
-				return;
-			}
+			return;
 		}
 
-		if( !(plot()->isOwned()) || (plot()->getOwner() == getOwner()) )
+		if ((!plot()->isOwned() || plot()->getOwner() == getOwner())
+		&& area()->getCitiesPerPlayer(getOwner()) > GET_PLAYER(getOwner()).AI_totalAreaUnitAIs(area(), UNITAI_CITY_DEFENSE)
+		&& AI_guardCity(true, true, 3)) // Defend colonies in new world
 		{
-			if( area()->getCitiesPerPlayer(getOwner()) > GET_PLAYER(getOwner()).AI_totalAreaUnitAIs(area(), UNITAI_CITY_DEFENSE) )
-			{
-				// Defend colonies in new world
-				if (AI_guardCity(true, true, 3))
-				{
-					return;
-				}
-			}
+			return;
 		}
 
 		if (AI_heal(30, 1))
@@ -2996,39 +2952,22 @@ void CvUnitAI::AI_attackMove()
 		}
 
 		AreaAITypes eAreaAIType = area()->getAreaAIType(getTeam());
-		if (plot()->isCity())
+		if (plot()->isCity() && plot()->getOwner() == getOwner()
+		&& (eAreaAIType == AREAAI_ASSAULT || eAreaAIType == AREAAI_ASSAULT_ASSIST)
+		&& AI_offensiveAirlift())
 		{
-			if (plot()->getOwner() == getOwner())
-			{
-				if ((eAreaAIType == AREAAI_ASSAULT) || (eAreaAIType == AREAAI_ASSAULT_ASSIST))
-				{
-					if (AI_offensiveAirlift())
-					{
-						return;
-					}
-				}
-			}
+			return;
 		}
 
 		if (bDanger)
 		{
-			if (AI_cityAttack(1, 55))
-			{
-				return;
-			}
-
-			if (AI_anyAttack(1, 65))
+			if (AI_cityAttack(1, 55) || AI_anyAttack(1, 65))
 			{
 				return;
 			}
 
 			if (getGroup()->hasCollateralDamage())
 			{
-/************************************************************************************************/
-/* REVOLUTIONDCM							 05/24/08							   Glider1	*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 				// RevolutionDCM - ranged bombardment AI
 				// In theory trebs can be set to UNITAI_ATTACK
 				// Dale - RB: Field Bombard START
@@ -3037,9 +2976,6 @@ void CvUnitAI::AI_attackMove()
 					return;
 				}
 				// RevolutionDCM - end
-/************************************************************************************************/
-/* REVOLUTIONDCM							 END									Glider1	*/
-/************************************************************************************************/
 
 				if (AI_anyAttack(1, 45, 3))
 				{
@@ -3048,81 +2984,65 @@ void CvUnitAI::AI_attackMove()
 			}
 		}
 
-		if (!noDefensiveBonus())
-		{
-			if (AI_guardCity(false, false))
-			{
-				return;
-			}
-		}
-
-		if (!bDanger)
-		{
-			if (plot()->getOwner() == getOwner())
-			{
-				bool bAssault = ((eAreaAIType == AREAAI_ASSAULT) || (eAreaAIType == AREAAI_ASSAULT_MASSING) || (eAreaAIType == AREAAI_ASSAULT_ASSIST));
-				if ( bAssault )
-				{
-					if (AI_load(UNITAI_ASSAULT_SEA, MISSIONAI_LOAD_ASSAULT, UNITAI_ATTACK_CITY, -1, -1, -1, -1, MOVE_SAFE_TERRITORY, 4))
-					{
-						return;
-					}
-				}
-
-				if (AI_load(UNITAI_SETTLER_SEA, MISSIONAI_LOAD_SETTLER, UNITAI_SETTLE, -1, -1, -1, 1, MOVE_SAFE_TERRITORY, 3))
-				{
-					return;
-				}
-
-				bool bLandWar = ((eAreaAIType == AREAAI_OFFENSIVE) || (eAreaAIType == AREAAI_DEFENSIVE) || (eAreaAIType == AREAAI_MASSING));
-				if (!bLandWar)
-				{
-					// Fill transports before starting new one, but not just full of our unit ai
-					if (AI_load(UNITAI_ASSAULT_SEA, MISSIONAI_LOAD_ASSAULT, NO_UNITAI, 1, -1, -1, 1, MOVE_SAFE_TERRITORY, 4))
-					{
-						return;
-					}
-
-					// Pick new transport which has space for other unit ai types to join
-					if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
-					{
-						if (AI_load(UNITAI_ASSAULT_SEA, MISSIONAI_LOAD_ASSAULT, NO_UNITAI, -1, (2 * GET_PLAYER(getOwner()).getBestUnitTypeCargoVolume(UNITAI_ASSAULT_SEA)), -1, -1, MOVE_SAFE_TERRITORY, 4))
-						{
-							return;
-						}
-					}
-					else if (AI_load(UNITAI_ASSAULT_SEA, MISSIONAI_LOAD_ASSAULT, NO_UNITAI, -1, 2, -1, -1, MOVE_SAFE_TERRITORY, 4))
-					{
-						return;
-					}
-				}
-
-				if (GET_PLAYER(getOwner()).AI_unitTargetMissionAIs(this, MISSIONAI_GROUP) > 0)
-				{
-					getGroup()->pushMission(MISSION_SKIP);
-					return;
-				}
-			}
-		}
-
-		// Allow larger groups if outside territory
-		if( getGroup()->getNumUnits() < 3 )
-		{
-			if( plot()->isOwned() && GET_TEAM(getTeam()).isAtWar(plot()->getTeam()) )
-			{
-				if (AI_groupMergeRange(UNITAI_ATTACK, 1, true, true, true))
-				{
-					return;
-				}
-			}
-		}
-
-		if (AI_goody(3))
+		if (!noDefensiveBonus() && AI_guardCity(false, false))
 		{
 			return;
 		}
 
-		if (AI_anyAttack(1, 70))
+		if (!bDanger && plot()->getOwner() == getOwner())
+		{
+			// Assault AI
+			if ((eAreaAIType == AREAAI_ASSAULT || eAreaAIType == AREAAI_ASSAULT_MASSING || eAreaAIType == AREAAI_ASSAULT_ASSIST)
+
+			&& AI_load(UNITAI_ASSAULT_SEA, MISSIONAI_LOAD_ASSAULT, UNITAI_ATTACK_CITY, -1, -1, -1, -1, MOVE_SAFE_TERRITORY, 4))
+			{
+				return;
+			}
+
+			if (AI_load(UNITAI_SETTLER_SEA, MISSIONAI_LOAD_SETTLER, UNITAI_SETTLE, -1, -1, -1, 1, MOVE_SAFE_TERRITORY, 3))
+			{
+				return;
+			}
+
+			// Not land war AI
+			if (!(eAreaAIType == AREAAI_OFFENSIVE || eAreaAIType == AREAAI_DEFENSIVE || eAreaAIType == AREAAI_MASSING))
+			{
+				// Fill transports before starting new one, but not just full of our unit ai
+				if (AI_load(UNITAI_ASSAULT_SEA, MISSIONAI_LOAD_ASSAULT, NO_UNITAI, 1, -1, -1, 1, MOVE_SAFE_TERRITORY, 4))
+				{
+					return;
+				}
+
+				// Pick new transport which has space for other unit ai types to join
+				if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+				{
+					if (AI_load(UNITAI_ASSAULT_SEA, MISSIONAI_LOAD_ASSAULT, NO_UNITAI, -1, (2 * GET_PLAYER(getOwner()).getBestUnitTypeCargoVolume(UNITAI_ASSAULT_SEA)), -1, -1, MOVE_SAFE_TERRITORY, 4))
+					{
+						return;
+					}
+				}
+				else if (AI_load(UNITAI_ASSAULT_SEA, MISSIONAI_LOAD_ASSAULT, NO_UNITAI, -1, 2, -1, -1, MOVE_SAFE_TERRITORY, 4))
+				{
+					return;
+				}
+			}
+
+			if (GET_PLAYER(getOwner()).AI_unitTargetMissionAIs(this, MISSIONAI_GROUP) > 0)
+			{
+				getGroup()->pushMission(MISSION_SKIP);
+				return;
+			}
+		}
+
+		// Allow larger groups if inside enemy territory
+		if (getGroup()->getNumUnits() < 3 && plot()->isOwned() && GET_TEAM(getTeam()).isAtWar(plot()->getTeam())
+		&& AI_groupMergeRange(UNITAI_ATTACK, 1, true, true, true))
+		{
+			return;
+		}
+
+		// Go for goody or an easy battle
+		if (AI_goody(3) || AI_anyAttack(1, 70))
 		{
 			return;
 		}
@@ -3133,120 +3053,52 @@ void CvUnitAI::AI_attackMove()
 
 		if (bDanger)
 		{
-			if (AI_pillageRange(1, 20))
+			if (AI_pillageRange(1, 20) 
+			|| AI_cityAttack(1, 35)
+			|| AI_anyAttack(1, 45)
+			|| AI_pillageRange(3, 20)
+			|| getGroup()->getNumUnits() < 4 && AI_choke(1))
 			{
 				return;
 			}
-
-			if (AI_cityAttack(1, 35))
-			{
-				return;
-			}
-
-			if (AI_anyAttack(1, 45))
-			{
-				return;
-			}
-
-			if (AI_pillageRange(3, 20))
-			{
-				return;
-			}
-
-/*************************************************************************************************/
-/** BETTER_BTS_AI_MOD					  02/11/09								jdog5000	  */
-/**																							  */
-/** Unit AI																					  */
-/*************************************************************************************************/
-			if( getGroup()->getNumUnits() < 4 )
-			{
-				if (AI_choke(1))
-				{
-					return;
-				}
-			}
-/*************************************************************************************************/
-/** BETTER_BTS_AI_MOD					   END												  */
-/*************************************************************************************************/
-
 		}
 	}
 
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre																		  **/
-/**  Date: 16.09.2009																			   **/
-/**  ModComp: TLOTags																			   **/
-/**  Reason Added: Implement AI_paradrop for other UNITAI's now that it is potentially available	**/
-/**  Notes: 14.10.2009-- Moved higher and added bCity check										 **/
-/*****************************************************************************************************/
-	bool bCity = plot()->isCity();
-	if (bCity)
+	if (plot()->isCity() && AI_paradrop(getDropRange()))
 	{
-		if (AI_paradrop(getDropRange()))
-		{
-			return;
-		}
+		return;
 	}
 
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 16.09.2009; TLOTags															 **/
-/*****************************************************************************************************/
 	{
 		PROFILE("CvUnitAI::AI_attackMove() 2");
 
-		if (bDanger)
+		if (bDanger && (AI_cityAttack(4, 30) || AI_anyAttack(2, 40)))
 		{
-			if (AI_cityAttack(4, 30))
-			{
-				return;
-			}
-
-			if (AI_anyAttack(2, 40))
-			{
-				return;
-			}
+			return;
 		}
 
-		if (!isEnemy(plot()->getTeam()))
+		if (!isEnemy(plot()->getTeam()) && AI_heal())
 		{
-			if (AI_heal())
-			{
-				return;
-			}
+			return;
 		}
 
-/************************************************************************************************/
-/* REVOLUTION_MOD						 02/11/09								jdog5000	  */
-/*																							  */
-/* Revolution AI																				*/
-/************************************************************************************************/
 		// Change grouping rules shortly after civ creation
-		if( GET_PLAYER(getOwner()).getFreeUnitCountdown() > 0 )
+		if (GET_PLAYER(getOwner()).getFreeUnitCountdown() > 0 && AI_groupMergeRange(UNITAI_ATTACK_CITY, 2, false, true, true))
 		{
-			if (AI_groupMergeRange(UNITAI_ATTACK_CITY, 2, false, true, true))
-			{
-				return;
-			}
+			return;
 		}
-/************************************************************************************************/
-/* REVOLUTION_MOD						  END												  */
-/************************************************************************************************/
 
 		if ((GET_PLAYER(getOwner()).AI_getNumAIUnits(UNITAI_CITY_DEFENSE) > 0) || (GET_TEAM(getTeam()).getAtWarCount(true) > 0))
 		{
 			// BBAI TODO: If we're fast, maybe shadow an attack city stack and pillage off of it
 
 			bool bIgnoreFaster = false;
-			if (GET_PLAYER(getOwner()).AI_isDoStrategy(AI_STRATEGY_LAND_BLITZ))
+			if (GET_PLAYER(getOwner()).AI_isDoStrategy(AI_STRATEGY_LAND_BLITZ) && area()->getAreaAIType(getTeam()) != AREAAI_ASSAULT)
 			{
-				if (area()->getAreaAIType(getTeam()) != AREAAI_ASSAULT)
-				{
-					bIgnoreFaster = true;
-				}
+				bIgnoreFaster = true;
 			}
 
-			if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK_CITY).maxGroupSize(1).maxOwnUnitAI(1).ignoreFaster(bIgnoreFaster).ignoreOwnUnitType().stackOfDoom().maxPathTurns(5))
-				)
+			if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK_CITY).maxGroupSize(1).maxOwnUnitAI(1).ignoreFaster(bIgnoreFaster).ignoreOwnUnitType().stackOfDoom().maxPathTurns(5)))
 			{
 				return;
 			}
@@ -3256,15 +3108,14 @@ void CvUnitAI::AI_attackMove()
 				return;
 			}
 
-			// BBAI TODO: Need group to be fast, need to ignore slower groups
-			//if (GET_PLAYER(getOwner()).AI_isDoStrategy(AI_STRATEGY_FASTMOVERS))
-			//{
-			//	if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK).maxGroupSize(4).maxOwnUnitAI(1).ignoreFaster().maxPathTurns(3)))
-			//	{
-			//		return;
-			//	}
-			//}
+/* BBAI TODO: Need group to be fast, need to ignore slower groups
 
+			if (GET_PLAYER(getOwner()).AI_isDoStrategy(AI_STRATEGY_FASTMOVERS)
+			&& AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK).maxGroupSize(4).maxOwnUnitAI(1).ignoreFaster().maxPathTurns(3)))
+			{
+				return;
+			}
+*/
 			if (AI_group(GroupingParams().withUnitAI(UNITAI_ATTACK).maxGroupSize(1).maxOwnUnitAI(1).ignoreFaster().maxPathTurns(1)))
 			{
 				return;
@@ -3273,27 +3124,16 @@ void CvUnitAI::AI_attackMove()
 
 		if (area()->getAreaAIType(getTeam()) == AREAAI_OFFENSIVE)
 		{
-			if (getGroup()->getNumUnits() > 1)
+			if (getGroup()->getNumUnits() > 1 && AI_goToTargetCity(MOVE_AVOID_ENEMY_WEIGHT_2, MAX_BARB_TARGET_CITY_RANGE))
 			{
-				//if (AI_targetCity())
-				if (AI_goToTargetCity(MOVE_AVOID_ENEMY_WEIGHT_2, MAX_BARB_TARGET_CITY_RANGE))
-				{
-					return;
-				}
+				return;
 			}
 		}
-		else if( area()->getAreaAIType(getTeam()) != AREAAI_DEFENSIVE )
+		else if (area()->getAreaAIType(getTeam()) != AREAAI_DEFENSIVE && area()->getCitiesPerPlayer(BARBARIAN_PLAYER) > 0
+		&& getGroup()->getNumUnits() >= GC.getHandicapInfo(GC.getGame().getHandicapType()).getBarbarianInitialDefenders()
+		&& AI_goToTargetBarbCity(10)) // Deal with Barbarian pest
 		{
-			if (area()->getCitiesPerPlayer(BARBARIAN_PLAYER) > 0)
-			{
-				if (getGroup()->getNumUnits() >= GC.getHandicapInfo(GC.getGame().getHandicapType()).getBarbarianInitialDefenders())
-				{
-					if (AI_goToTargetBarbCity(10))
-					{
-						return;
-					}
-				}
-			}
+			return;
 		}
 
 		if (AI_guardCity(false, true, 3))
@@ -3301,26 +3141,12 @@ void CvUnitAI::AI_attackMove()
 			return;
 		}
 
-		if ((GET_PLAYER(getOwner()).getNumCities() > 1) && (getGroup()->getNumUnits() == 1))
+		if (GET_PLAYER(getOwner()).getNumCities() > 1 && getGroup()->getNumUnits() == 1 && area()->getAreaAIType(getTeam()) != AREAAI_DEFENSIVE
+		&& area()->getNumUnrevealedTiles(getTeam()) > 0
+		&& GET_PLAYER(getOwner()).AI_areaMissionAIs(area(), MISSIONAI_EXPLORE, getGroup()) < GET_PLAYER(getOwner()).AI_neededExplorers(area()) + 1
+		&& (AI_exploreRange(3) || AI_explore()))
 		{
-			if (area()->getAreaAIType(getTeam()) != AREAAI_DEFENSIVE)
-			{
-				if (area()->getNumUnrevealedTiles(getTeam()) > 0)
-				{
-					if (GET_PLAYER(getOwner()).AI_areaMissionAIs(area(), MISSIONAI_EXPLORE, getGroup()) < (GET_PLAYER(getOwner()).AI_neededExplorers(area()) + 1))
-					{
-						if (AI_exploreRange(3))
-						{
-							return;
-						}
-
-						if (AI_explore())
-						{
-							return;
-						}
-					}
-				}
-			}
+			return;
 		}
 
 		if (AI_protect(35, 5))
@@ -3328,98 +3154,54 @@ void CvUnitAI::AI_attackMove()
 			return;
 		}
 
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre																		  **/
-/**  Date: 16.09.2009																			   **/
-/**  ModComp: TLOTags																			   **/
-/**  Reason Added: Implement AI_paradrop for other UNITAI's now that it is potentially available	**/
-/**  Notes: 14.10.2009-- Added bCity check														  **/
-/*****************************************************************************************************/
-		if (bCity)
-		{
-			if (AI_paradrop(getDropRange()))
-			{
-				return;
-			}
-		}
-
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 16.09.2009; TLOTags															 **/
-/*****************************************************************************************************/
-
 		if (AI_offensiveAirlift())
 		{
 			return;
 		}
 
-		if (!bDanger && (area()->getAreaAIType(getTeam()) != AREAAI_DEFENSIVE))
+		if (!bDanger && (area()->getAreaAIType(getTeam()) != AREAAI_DEFENSIVE) && plot()->getOwner() == getOwner())
 		{
-			if (plot()->getOwner() == getOwner())
+			if (AI_load(UNITAI_ASSAULT_SEA, MISSIONAI_LOAD_ASSAULT, NO_UNITAI, 1, -1, -1, 1, MOVE_SAFE_TERRITORY, 4))
 			{
-				if (AI_load(UNITAI_ASSAULT_SEA, MISSIONAI_LOAD_ASSAULT, NO_UNITAI, 1, -1, -1, 1, MOVE_SAFE_TERRITORY, 4))
-				{
-					return;
-				}
-
-				if( (GET_TEAM(getTeam()).getAtWarCount(true) > 0) && !(getGroup()->isHasPathToAreaEnemyCity(false)) )
-				{
-					if (AI_load(UNITAI_ASSAULT_SEA, MISSIONAI_LOAD_ASSAULT, NO_UNITAI, -1, -1, -1, -1, MOVE_SAFE_TERRITORY, 4))
-					{
-						return;
-					}
-				}
+				return;
 			}
-		}
-
-		if (AI_defend())
-		{
-			return;
-		}
-
-		if (AI_travelToUpgradeCity())
-		{
-			return;
-		}
-
-		if( getGroup()->isStranded() )
-		{
-			if (AI_load(UNITAI_ASSAULT_SEA, MISSIONAI_LOAD_ASSAULT, NO_UNITAI, -1, -1, -1, -1, MOVE_NO_ENEMY_TERRITORY, 1))
+			if (GET_TEAM(getTeam()).getAtWarCount(true) > 0 && !getGroup()->isHasPathToAreaEnemyCity()
+			&& AI_load(UNITAI_ASSAULT_SEA, MISSIONAI_LOAD_ASSAULT, NO_UNITAI, -1, -1, -1, -1, MOVE_SAFE_TERRITORY, 4))
 			{
 				return;
 			}
 		}
 
-		if( !bDanger && !isHuman() && plot()->isCoastalLand() && GET_PLAYER(getOwner()).AI_unitTargetMissionAIs(this, MISSIONAI_PICKUP) > 0 )
+		if (AI_defend() || AI_travelToUpgradeCity())
 		{
-			// If no other desireable actions, wait for pickup
+			return;
+		}
+
+		if (getGroup()->isStranded()
+		&& AI_load(UNITAI_ASSAULT_SEA, MISSIONAI_LOAD_ASSAULT, NO_UNITAI, -1, -1, -1, -1, MOVE_NO_ENEMY_TERRITORY, 1))
+		{
+			return;
+		}
+
+		// If no other desireable actions, wait for pickup
+		if (!bDanger && !isHuman() && plot()->isCoastalLand() && GET_PLAYER(getOwner()).AI_unitTargetMissionAIs(this, MISSIONAI_PICKUP) > 0)
+		{
 			getGroup()->pushMission(MISSION_SKIP);
 			return;
 		}
 
-		if( getGroup()->getNumUnits() < 4 )
-		{
-			if (AI_patrol())
-			{
-				return;
-			}
-		}
-
-		if (AI_retreatToCity())
+		if (getGroup()->getNumUnits() < 4 && AI_patrol())
 		{
 			return;
 		}
 
-		if (AI_safety(3))
+		if (AI_retreatToCity() || AI_safety(3))
 		{
 			return;
 		}
 	}
-
 	getGroup()->pushMission(MISSION_SKIP);
 	return;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
 }
 
 
@@ -5177,33 +4959,17 @@ void CvUnitAI::AI_counterMove()
 		}
 	}
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  03/03/10								jdog5000	  */
-/*																							  */
-/* Unit AI, Settler AI																		  */
-/************************************************************************************************/
 	// Should never have group lead by counter unit
-	if( getGroup()->getNumUnits() > 1 )
+	if (getGroup()->getNumUnits() > 1 && getGroup()->getHeadUnitAI() == AI_getUnitAIType() && plot()->isCity() && plot()->getOwner() == getOwner())
 	{
-		UnitAITypes eGroupAI = getGroup()->getHeadUnitAI();
-		if( eGroupAI == AI_getUnitAIType() )
-		{
-			if( plot()->isCity() && plot()->getOwner() == getOwner() )
-			{
-				//FAssert(false); // just interested in when this happens, not a problem
-				getGroup()->AI_separate(); // will change group
-				return;
-			}
-		}
+		//FAssert(false); // just interested in when this happens, not a problem
+		getGroup()->AI_separate(); // will change group
+		return;
 	}
 
-	if( !(plot()->isOwned()) )
+	if (!plot()->isOwned() && AI_groupMergeRange(UNITAI_SETTLE, 2, true, false, false))
 	{
-		 //Fuyu: could result in endless loop (at least it does in AND)
-		if( AI_groupMergeRange(UNITAI_SETTLE, 2, true, false, false) )
-		{
-			return;
-		}
+		return;
 	}
 
 	if (AI_guardCity(false, true, 1))
@@ -5368,9 +5134,6 @@ void CvUnitAI::AI_counterMove()
 
 	getGroup()->pushMission(MISSION_SKIP);
 	return;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
 }
 
 
@@ -11785,13 +11548,10 @@ void CvUnitAI::AI_BarbCriminalMove()
 	{
 		return;
 	}
-
-	if (!plot()->isCity(false))
+	// Find enemy city if not already in a city
+	if (!plot()->isCity(false) && getGroup()->isHasPathToAreaEnemyCity(MOVE_IGNORE_DANGER | MOVE_THROUGH_ENEMY, true))
 	{
-		if ( getGroup()->isHasPathToAreaEnemyCity(false, MOVE_IGNORE_DANGER | MOVE_THROUGH_ENEMY, true) )
-		{
-			return;
-		}
+		return;
 	}
 	//consider if they are wanted to move out of sight of player who spotted them
 	//consider to return to nearest non-barb city if not already in one

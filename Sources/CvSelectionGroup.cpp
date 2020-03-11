@@ -3712,61 +3712,44 @@ bool CvSelectionGroup::isHasPathToAreaPlayerCity(PlayerTypes ePlayer, int iFlags
 	for (CvPlayer::city_iterator cityItr = GET_PLAYER(ePlayer).beginCities(); cityItr != GET_PLAYER(ePlayer).endCities(); ++cityItr)
 	{
 		const CvCity* pLoopCity = *cityItr;
-		if( pLoopCity->area() == area() && plotSet.find(pLoopCity->plot()) != plotSet.end() )
+		if (pLoopCity && pLoopCity->area() == area() && plotSet.find(pLoopCity->plot()) != plotSet.end())
 		{
-			if ( (iFlags & MOVE_IGNORE_DANGER) != 0 || getHeadUnit()->canAttack() || getHeadUnit()->isBlendIntoCity())
+			if ((iFlags & MOVE_IGNORE_DANGER) != 0 || getHeadUnit()->canAttack() || getHeadUnit()->isBlendIntoCity())
 			{
-				if (generatePath(plot(), pLoopCity->plot(), iFlags, true) )
+				if (generatePath(plot(), pLoopCity->plot(), iFlags, true))
 				{
 					if (!bGo)
 					{
 						return true;
 					}
-					else
-					{
-						int iX = pLoopCity->plot()->getX();
-						int iY = pLoopCity->plot()->getY();
-						return pushMissionInternal(MISSION_MOVE_TO, iX, iY, iFlags);
-					}
+					return pushMissionInternal(MISSION_MOVE_TO, pLoopCity->plot()->getX(), pLoopCity->plot()->getY(), iFlags);
 				}
 			}
-			else if ( generatePath(plot(), pLoopCity->plot(), iFlags, true) )
+			else if (generatePath(plot(), pLoopCity->plot(), iFlags, true))
 			{
 				return true;
 			}
-			else
-			{
-				FErrorMsg(CvString::format("Pathing of units from plot <%d, %d> failed to supposedly reachable city %S at <%d, %d>",
-					plot()->getX(), plot()->getY(),
-					pLoopCity->getName().c_str(),
-					pLoopCity->getX(), pLoopCity->getY()).c_str()
-					);
-			}
+			FErrorMsg(CvString::format("Pathing of units from plot <%d, %d> failed to supposedly reachable city %S at <%d, %d>",
+				plot()->getX(), plot()->getY(), pLoopCity->getName().c_str(), pLoopCity->getX(), pLoopCity->getY()).c_str()
+			);
 		}
 	}
-
 	return false;
 }
 
-bool CvSelectionGroup::isHasPathToAreaEnemyCity( bool bIgnoreMinors, int iFlags, bool bGo )
+bool CvSelectionGroup::isHasPathToAreaEnemyCity(int iFlags, bool bGo)
 {
 	PROFILE_FUNC();
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
-		if (kLoopPlayer.isAlive() && isPotentialEnemy(getTeam(), kLoopPlayer.getTeam()))
+		if (kLoopPlayer.isAlive() && isPotentialEnemy(getTeam(), kLoopPlayer.getTeam())
+		&& isHasPathToAreaPlayerCity((PlayerTypes)iI, iFlags, bGo))
 		{
-			if( !bIgnoreMinors || (!kLoopPlayer.isNPC() && !kLoopPlayer.isMinorCiv()) )
-			{
-				if( isHasPathToAreaPlayerCity((PlayerTypes)iI, iFlags, bGo) )
-				{
-					return true;
-				}
-			}
+			return true;
 		}
 	}
-
 	return false;
 }
 
@@ -3883,7 +3866,7 @@ bool CvSelectionGroup::calculateIsStranded()
 			return false;
 		}
 
-		if( isHasPathToAreaEnemyCity(false, MOVE_IGNORE_DANGER | MOVE_THROUGH_ENEMY) )
+		if( isHasPathToAreaEnemyCity(MOVE_IGNORE_DANGER | MOVE_THROUGH_ENEMY) )
 		{
 			return false;
 		}
