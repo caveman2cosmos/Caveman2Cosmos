@@ -278,15 +278,6 @@
 			<Button>Art/Interface/Buttons/Buildings/Bunker.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_SUBURBS</Type>
-			<bExtraAnimations>0</bExtraAnimations>
-			<fScale>1.0</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Structures/Improvements/Town/Town.nif</NIF>
-			<KFM>Art/Structures/Improvements/Town/Town.kfm</KFM>
-			<Button>Art/Interface/Buttons/Buildings/suburb.dds</Button>
-		</ImprovementArtInfo>
-		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_MODERN_WINDMILL</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.3</fScale>
@@ -294,33 +285,6 @@
 			<NIF>Art/Structures/Improvements/WindMill/windmill_mod.nif</NIF>
 			<KFM>Art/Structures/Improvements/WindMill/windmill_mod.kfm</KFM>
 			<Button>Art/Interface/Buttons/Builds/BuildWindgenerator.dds</Button>
-		</ImprovementArtInfo>
-		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_WASTEREFINEMENT</Type>
-			<bExtraAnimations>0</bExtraAnimations>
-			<fScale>0.9</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/IronWorks/IronWorks.nif</NIF>
-			<KFM/>
-			<Button>,Art/Interface/Buttons/Buildings/IronWorks.dds,Art/Interface/Buttons/Buildings_Atlas.dds,2,4</Button>
-		</ImprovementArtInfo>
-		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_GREENFACILITY</Type>
-			<bExtraAnimations>0</bExtraAnimations>
-			<fScale>0.7</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Arcology/Arcology.nif</NIF>
-			<KFM/>
-			<Button>,Art/Interface/Buttons/Buildings/HagiaSophia.dds,Art/Interface/Buttons/Buildings_Atlas.dds,4,3</Button>
-		</ImprovementArtInfo>
-		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_SILK_FARM</Type>
-			<bExtraAnimations>0</bExtraAnimations>
-			<fScale>1.0</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Structures/Improvements/Plantation/Plantation.nif</NIF>
-			<KFM>Art/Structures/Improvements/Plantation/Plantation.kfm</KFM>
-			<Button>Art/Interface/Buttons/Builds/Buildsilkfarm.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_SUBMERGED_TOWN</Type>
@@ -339,24 +303,6 @@
 			<NIF>Art/Structures/Buildings/Arcology/Arcology_Destroyed.nif</NIF>
 			<KFM/>
 			<Button>,Art/Interface/Buttons/Builds/BuildCityRuins.dds,Art/Interface/Buttons/NextWar_Atlas.dds,4,4</Button>
-		</ImprovementArtInfo>
-		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_BUOY</Type>
-			<bExtraAnimations>0</bExtraAnimations>
-			<fScale>2.0</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Structures/Improvements/WaterWorked/WaterWorked.nif</NIF>
-			<KFM>Art/Structures/Improvements/WaterWorked/WaterWorked.kfm</KFM>
-			<Button>,Art/Interface/Buttons/Brown_empty.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,-1,-1</Button>
-		</ImprovementArtInfo>
-		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_BUOY_PILLAGED</Type>
-			<bExtraAnimations>0</bExtraAnimations>
-			<fScale>1.0</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Structures/Improvements/WaterWorked/WaterWorked.nif</NIF>
-			<KFM>Art/Structures/Improvements/WaterWorked/WaterWorked.kfm</KFM>
-			<Button>,Art/Interface/Buttons/Brown_empty.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,-1,-1</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_EXTRACTION_FACILITY</Type>
@@ -441,15 +387,6 @@
 			<Button>Art/Interface/Buttons/Builds/Windtrap_button.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_SHAFT_MINE</Type>
-			<bExtraAnimations>0</bExtraAnimations>
-			<fScale>1.0</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Structures/Improvements/Mine/Mine.nif</NIF>
-			<KFM>Art/Structures/Improvements/Mine/Mine.kfm</KFM>
-			<Button>Art/Interface/Buttons/Builds/Shaft_Mine.dds</Button>
-		</ImprovementArtInfo>
-		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_GROUNDWATER_WELL</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.0</fScale>
@@ -458,15 +395,6 @@
 			<KFM>Art/Structures/Improvements/OilWell/OilWell.kfm</KFM>
 			<Button>Art/Interface/Buttons/Builds/Groundwater_well.dds</Button>
 		</ImprovementArtInfo>
-		<!--ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_DEPLETED_MINE</Type>
-			<bExtraAnimations>0</bExtraAnimations>
-			<fScale>1.0</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>art/structures/improvements/depletedmines/mine.nif</NIF>
-			<KFM>art/structures/improvements/depletedmines/mine.kfm</KFM>
-			<Button>,Art/Interface/Buttons/Builds/BuildMine.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,6,7</Button>
-		</ImprovementArtInfo-->
 		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_JUNGLE_CAMP</Type>
 			<bExtraAnimations>0</bExtraAnimations>
@@ -602,24 +530,6 @@
 			<NIF>Art/Structures/Improvements/RockGatherer/camp_fx.nif</NIF>
 			<KFM>Art/Structures/Improvements/RockGatherer/Camp.kfm</KFM>
 			<Button>Art/Interface/Buttons/Builds/Button_StoneToolsWorkshop.dds</Button>
-		</ImprovementArtInfo>
-		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_STONE_CAMP</Type>
-			<bExtraAnimations>0</bExtraAnimations>
-			<fScale>0.6</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Structures/Improvements/RockGatherer/camp_fx.nif</NIF>
-			<KFM>Art/Structures/Improvements/RockGatherer/Camp.kfm</KFM>
-			<Button>Art/Interface/Buttons/Builds/button_camp_stone.dds</Button>
-		</ImprovementArtInfo>
-		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_ROCK_CAMP</Type>
-			<bExtraAnimations>0</bExtraAnimations>
-			<fScale>0.6</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Structures/Improvements/RockGatherer/camp_fx.nif</NIF>
-			<KFM>Art/Structures/Improvements/RockGatherer/Camp.kfm</KFM>
-			<Button>Art/Interface/Buttons/Builds/button_camp_marmor.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_BEACON</Type>

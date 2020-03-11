@@ -199,9 +199,6 @@ class RevolutionInit:
 		if RevDCMOpt.isDCM_ARCHER_BOMBARD():
 			revComponentsText += self.optionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_ARCHER_BOMBARD",())
 			anyOption = True
-		if RevDCMOpt.isDCM_STACK_ATTACK():
-			revComponentsText += self.optionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_STACK_ATTACK",())
-			anyOption = True
 		if RevDCMOpt.isDCM_ATTACK_SUPPORT():
 			revComponentsText += self.optionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_ATTACK_SUPPORT",())
 			anyOption = True

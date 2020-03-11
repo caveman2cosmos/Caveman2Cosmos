@@ -615,28 +615,7 @@
 				<bGenerateRotations>0</bGenerateRotations>
 				<VarietyButton>Art/Interface/Buttons/terrainfeatures/coral.dds</VarietyButton>
 			</FeatureVariety>
-		</FeatureArtInfo>
-		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_FOSSIL</Type>
-			<bAnimated>0</bAnimated>
-			<bRiverArt>0</bRiverArt>
-			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
-			<LightType>LIGHT_TYPE_SUN</LightType>
-			<fScale>0.5</fScale>
-			<fInterfaceScale>0.5</fInterfaceScale>
-			<Button>Art/Interface/Buttons/TerrainFeatures/Bones.dds</Button>
-			<FeatureVariety>
-				<FeatureArtPieces>
-					<FeatureArtPiece>
-						<ModelFile>Art/Terrain/Features/Bones/animal_skeleton.nif</ModelFile>
-						<Connections/>
-					</FeatureArtPiece>
-				</FeatureArtPieces>
-				<FeatureDummyNodes/>
-				<bGenerateRotations>0</bGenerateRotations>
-				<VarietyButton>Art/Interface/Buttons/TerrainFeatures/Bones.dds</VarietyButton>
-			</FeatureVariety>
-		</FeatureArtInfo>
+		</FeatureArtInfo>		
 		<FeatureArtInfo>
 			<Type>ART_DEF_FEATURE_CRATER</Type>
 			<bAnimated>0</bAnimated>

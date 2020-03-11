@@ -43,7 +43,6 @@ class RevDCMOptionsTab(BugOptionsTab.BugOptionsTab):
 			col1, col2, col3, col4 = self.addMultiColumnLayout(screen, right, 4, "DCM_Events")
 			self.addCheckbox(screen, col1, "RevDCM__DCM_BATTLE_EFFECTS")
 			self.addCheckbox(screen, col2, "RevDCM__DCM_ARCHER_BOMBARD")
-			self.addCheckbox(screen, col3, "RevDCM__DCM_STACK_ATTACK")
 			if bDebug:
 				self.addCheckbox(screen, col4, "RevDCM__DCM_ATTACK_SUPPORT")
 			self.addLabel(screen, left, "RevDCM__RevDCM_air", TRNSLTR.getText("TXT_KEY_REVDCMTAB_AIRFORCE_OPTIONS", ()))

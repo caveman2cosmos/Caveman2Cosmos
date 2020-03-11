@@ -41,9 +41,6 @@
 			<option id="DCM_BATTLE_EFFECTS" key="DCM_BATTLE_EFFECTS" type="boolean" default="False" get="isDCM_BATTLE_EFFECTS" set="setDCM_BATTLE_EFFECTS">
 				<change module="RevDCM" function="changedDCM_BATTLE_EFFECTS"/>
 			</option>
-			<option id="DCM_STACK_ATTACK"  key="DCM_STACK_ATTACK" type="boolean" default="False" get="isDCM_STACK_ATTACK" set="setDCM_STACK_ATTACK">
-				<change module="RevDCM" function="changedDCM_STACK_ATTACK"/>
-			</option>
 			<option id="DCM_ATTACK_SUPPORT"  key="DCM_ATTACK_SUPPORT" type="boolean" default="False" get="isDCM_ATTACK_SUPPORT" set="setDCM_ATTACK_SUPPORT">
 				<change module="RevDCM" function="changedDCM_ATTACK_SUPPORT"/>
 			</option>
