@@ -842,9 +842,11 @@ CvPlotGroup* CvPlotGroup::colorRegionInternal(CvPlot* pPlot, PlayerTypes eOwner,
 					pPlotGroup->addPlot(pLoopPlot, bRecalculateBonuses);
 				}
 
-				foreach_(CvPlot* pAdjacentPlot, pLoopPlot->adjacent())
+				for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
 				{
-					if (pLoopPlot->isTradeNetworkConnected(pAdjacentPlot, GET_PLAYER(eOwner).getTeam()))
+					CvPlot* pAdjacentPlot = plotDirection(pLoopPlot->getX(), pLoopPlot->getY(), (DirectionTypes)iI);
+
+					if (pAdjacentPlot != NULL && pLoopPlot->isTradeNetworkConnected(pAdjacentPlot, GET_PLAYER(eOwner).getTeam()))
 					{
 						CvPlotGroup* pAdjacentPlotGroup = pAdjacentPlot->getPlotGroup(eOwner);
 

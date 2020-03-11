@@ -2316,22 +2316,27 @@ bool CvSelectionGroup::continueMission(int iSteps)
 					}
 					else
 					{
-						foreach_(CvPlot* pAdjacentPlot, pTargetUnit->plot()->adjacent())
+						for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
 						{
-							if( atPlot(pAdjacentPlot) )
-							{
-								pPickupPlot = pAdjacentPlot;
-								break;
-							}
+							CvPlot* pAdjacentPlot = plotDirection(pTargetUnit->plot()->getX(), pTargetUnit->plot()->getY(), ((DirectionTypes)iI));
 
-							if( pAdjacentPlot->isWater() || pAdjacentPlot->isFriendlyCity(*getHeadUnit(), true) )
+							if (pAdjacentPlot != NULL)
 							{
-								if( generatePath(plot(), pAdjacentPlot, 0, true, &iPathTurns) )
+								if( atPlot(pAdjacentPlot) )
 								{
-									if( iPathTurns < iBestPathTurns )
+									pPickupPlot = pAdjacentPlot;
+									break;
+								}
+
+								if( pAdjacentPlot->isWater() || pAdjacentPlot->isFriendlyCity(*getHeadUnit(), true) )
+								{
+									if( generatePath(plot(), pAdjacentPlot, 0, true, &iPathTurns) )
 									{
-										pPickupPlot = pAdjacentPlot;
-										iBestPathTurns = iPathTurns;
+										if( iPathTurns < iBestPathTurns )
+										{
+											pPickupPlot = pAdjacentPlot;
+											iBestPathTurns = iPathTurns;
+										}
 									}
 								}
 							}
@@ -5825,14 +5830,18 @@ bool CvSelectionGroup::canPathDirectlyToInternal(CvPlot* pFromPlot, CvPlot* pToP
 	}
 
 	//	Avoid path searching - just test paths that monotonically move towards the destination
-	foreach_(CvPlot* pAdjacentPlot, pFromPlot->adjacent())
+	for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
 	{
-		if (stepDistance(pAdjacentPlot->getX(), pAdjacentPlot->getY(), pToPlot->getX(), pToPlot->getY()) <
-			stepDistance(pFromPlot->getX(), pFromPlot->getY(), pToPlot->getX(), pToPlot->getY()))
+		CvPlot* pAdjacentPlot = plotDirection(pFromPlot->getX(), pFromPlot->getY(), (DirectionTypes)iI);
+		if( pAdjacentPlot != NULL )
 		{
-			if (canMoveInto(pAdjacentPlot, (pAdjacentPlot == pToPlot)))
+			if ( stepDistance(pAdjacentPlot->getX(), pAdjacentPlot->getY(), pToPlot->getX(), pToPlot->getY()) <
+				 stepDistance(pFromPlot->getX(), pFromPlot->getY(), pToPlot->getX(), pToPlot->getY()) )
 			{
-				return pAdjacentPlot == pToPlot || canPathDirectlyToInternal(pAdjacentPlot, pToPlot, movesRemainingAfterMovingTo(movesRemaining, pFromPlot, pAdjacentPlot));
+				if (canMoveInto(pAdjacentPlot, (pAdjacentPlot == pToPlot)))
+				{
+					return pAdjacentPlot == pToPlot || canPathDirectlyToInternal(pAdjacentPlot, pToPlot, movesRemainingAfterMovingTo(movesRemaining, pFromPlot, pAdjacentPlot));
+				}
 			}
 		}
 	}

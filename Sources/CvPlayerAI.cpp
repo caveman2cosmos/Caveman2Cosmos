@@ -14168,15 +14168,25 @@ int CvPlayerAI::AI_adjacentPotentialAttackers(const CvPlot* pPlot, bool bTestCan
 {
 	int iCount = 0;
 
-	foreach_(const CvPlot* adjacentPlot, pPlot->adjacent() | filtered(CvPlot::fn::area() == pPlot->area()))
+	for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
 	{
-		foreach_(const CvUnit* pLoopUnit, adjacentPlot->units())
+		const CvPlot* pLoopPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
+
+		if (pLoopPlot != NULL && pLoopPlot->area() == pPlot->area())
 		{
-			if (pLoopUnit->getOwner() == getID() && pLoopUnit->getDomainType() == (pPlot->isWater() ? DOMAIN_SEA : DOMAIN_LAND))
+			CLLNode<IDInfo>* pUnitNode = pLoopPlot->headUnitNode();
+
+			while (pUnitNode != NULL)
 			{
-				if (pLoopUnit->canAttack() && (!bTestCanMove || pLoopUnit->canMove()) && !pLoopUnit->AI_isCityAIType())
+				const CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
+				pUnitNode = pLoopPlot->nextUnitNode(pUnitNode);
+
+				if (pLoopUnit->getOwner() == getID() && pLoopUnit->getDomainType() == (pPlot->isWater() ? DOMAIN_SEA : DOMAIN_LAND))
 				{
-					iCount++;
+					if (pLoopUnit->canAttack() && (!bTestCanMove || pLoopUnit->canMove()) && !pLoopUnit->AI_isCityAIType())
+					{
+						iCount++;
+					}
 				}
 			}
 		}
@@ -29391,12 +29401,16 @@ int CvPlayerAI::AI_getPlotCanalValue(const CvPlot* pPlot) const
 			}
 		}
 
-		foreach_(const CvPlot* adjacentPlot, pPlot->adjacent())
+		for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
 		{
-			if (adjacentPlot->isCity(true) && (adjacentPlot->getCanalValue() > 0))
+			CvPlot* pLoopPlot = plotDirection(pPlot->getX(), pPlot->getY(), (DirectionTypes)iI);
+			if (pLoopPlot != NULL)
 			{
-				// Decrease value when adjacent to a city or fort with a canal value
-				iCanalValue -= 10;
+				if (pLoopPlot->isCity(true) && (pLoopPlot->getCanalValue() > 0))
+				{
+					// Decrease value when adjacent to a city or fort with a canal value
+					iCanalValue -= 10;
+				}
 			}
 		}
 
@@ -29451,12 +29465,16 @@ int CvPlayerAI::AI_getPlotChokeValue(const CvPlot* pPlot) const
 			}
 		}
 
-		foreach_(const CvPlot* adjacentPlot, pPlot->adjacent())
+		for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
 		{
-			if (adjacentPlot->isCity(true) && (adjacentPlot->getChokeValue() > 0))
+			const CvPlot* pLoopPlot = plotDirection(pPlot->getX(), pPlot->getY(), (DirectionTypes)iI);
+			if (pLoopPlot != NULL)
 			{
-				// Decrease value when adjacent to a city or fort with a choke value
-				iChokeValue -= 10;
+				if (pLoopPlot->isCity(true) && (pLoopPlot->getChokeValue() > 0))
+				{
+					// Decrease value when adjacent to a city or fort with a choke value
+					iChokeValue -= 10;
+				}
 			}
 		}
 

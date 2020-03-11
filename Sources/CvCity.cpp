@@ -268,13 +268,18 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 	if (!GC.getGame().isOption(GAMEOPTION_1_CITY_TILE_FOUNDING))
 	{
 		const int iAdjCulture = GC.getDefineINT("FREE_CITY_ADJACENT_CULTURE");
-		foreach_(CvPlot* pAdjacentPlot, plot()->adjacent())
+		for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
 		{
-			if (pAdjacentPlot->getCulture(getOwner()) < iAdjCulture)
+			CvPlot* pAdjacentPlot = plotDirection(getX(), getY(), ((DirectionTypes)iI));
+
+			if (pAdjacentPlot != NULL)
 			{
-				pAdjacentPlot->setCulture(getOwner(), iAdjCulture, bBumpUnits, false);
+				if (pAdjacentPlot->getCulture(getOwner()) < iAdjCulture)
+				{
+					pAdjacentPlot->setCulture(getOwner(), iAdjCulture, bBumpUnits, false);
+				}
+				pAdjacentPlot->updateCulture(bBumpUnits, false);
 			}
-			pAdjacentPlot->updateCulture(bBumpUnits, false);
 		}
 	}
 
@@ -1439,9 +1444,14 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 	{
 		pPlot->updateCulture(true, false);
 
-		foreach_(CvPlot* adjacentPlot, pPlot->adjacent())
+		for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
 		{
-			adjacentPlot->updateCulture(true, false);
+			CvPlot* pAdjacentPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
+
+			if (pAdjacentPlot != NULL)
+			{
+				pAdjacentPlot->updateCulture(true, false);
+			}
 		}
 	}
 
@@ -2152,6 +2162,27 @@ bool CvCity::canWork(CvPlot* pPlot) const
 		{
 			return false;
 		}
+
+		/* Replaced by blockade mission, above
+		if (!(pPlot->plotCheck(PUF_canDefend, -1, -1, NO_PLAYER, getTeam())))
+		{
+			for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+			{
+				CvPlot* pLoopPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
+
+				if (pLoopPlot != NULL)
+				{
+					if (pLoopPlot->isWater())
+					{
+						if (pLoopPlot->plotCheck(PUF_canSiege, getOwner()) != NULL)
+						{
+							return false;
+						}
+					}
+				}
+			}
+		}
+		*/
 	}
 
 	if (!(pPlot->hasYield()))
@@ -7741,7 +7772,18 @@ int CvCity::cultureStrength(PlayerTypes ePlayer, int& iOriginal) const
 
 	iStrength += (getHighestPopulation() * 2);
 
-	iStrength += (algo::count_if(plot()->adjacent(), CvPlot::fn::getOwner() == ePlayer) * (GC.getGame().getCurrentEra() + 1));
+	for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+	{
+		CvPlot* pLoopPlot = plotDirection(getX(), getY(), ((DirectionTypes)iI));
+
+		if (pLoopPlot != NULL)
+		{
+			if (pLoopPlot->getOwner() == ePlayer)
+			{
+				iStrength += (GC.getGame().getCurrentEra() + 1);
+			}
+		}
+	}
 
 	//	Handle culture getting very large
 	int	iPlayerCulture = plot()->getCulture(ePlayer);
@@ -8135,7 +8177,20 @@ CvArea* CvCity::sharedWaterArea(const CvCity* pOtherCity) const
 
 bool CvCity::isBlockaded() const
 {
-	return algo::any_of(plot()->adjacent(), CvPlot::fn::getBlockadedCount(getTeam()) > 0);
+	for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+	{
+		const CvPlot* pAdjacentPlot = plotDirection(getX(), getY(), ((DirectionTypes)iI));
+
+		if (pAdjacentPlot != NULL)
+		{
+			if (pAdjacentPlot->getBlockadedCount(getTeam()) > 0)
+			{
+				return true;
+			}
+		}
+	}
+
+	return false;
 }
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
@@ -24014,29 +24069,35 @@ void CvCity::doAttack()
 			{
 				abInformPlayer[iI] = false;
 			}
-			foreach_(CvPlot* adjacentPlot, plot()->adjacent())
+			for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
 			{
-				foreach_(CvUnit* pLoopUnit, adjacentPlot->units())
+				CvPlot* pAdjacentPlot = plotDirection(getX(), getY(), ((DirectionTypes)iI));
+				if (pAdjacentPlot != NULL)
 				{
-					if (pLoopUnit->getTeam() != getTeam())
+					for (CvPlot::unit_iterator unitItr = pAdjacentPlot->beginUnits(); unitItr != pAdjacentPlot->endUnits(); ++unitItr)
 					{
-						if (GET_TEAM(getTeam()).isAtWar(pLoopUnit->getTeam()))
+						CvUnit* pLoopUnit = *unitItr;
+
+						if (pLoopUnit->getTeam() != getTeam())
 						{
-							//	Koshling - changed city defenses to have a 1-in-4 chance of damaging each unit each turn
-							if (pLoopUnit->baseCombatStr() && GC.getGame().getSorenRandNum(4, "City adjacent damage") == 0)
+							if (GET_TEAM(getTeam()).isAtWar(pLoopUnit->getTeam()))
 							{
-								int iDamage = pLoopUnit->currHitPoints();
-								iDamage *= getAdjacentDamagePercent();
-								iDamage /= 100;
-
-								pLoopUnit->changeDamage(iDamage, getOwner());
-								if (!abInformPlayer[pLoopUnit->getOwner()])
+								//	Koshling - changed city defenses to have a 1-in-4 chance of damaging each unit each turn
+								if (pLoopUnit->baseCombatStr() && GC.getGame().getSorenRandNum(4, "City adjacent damage") == 0)
 								{
-									MEMORY_TRACK_EXEMPT();
+									int iDamage = pLoopUnit->currHitPoints();
+									iDamage *= getAdjacentDamagePercent();
+									iDamage /= 100;
 
-									abInformPlayer[pLoopUnit->getOwner()] = true;
-									CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_UNITS_DAMAGED", getNameKey());
-									AddDLLMessage(pLoopUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_INFO, pLoopUnit->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pLoopUnit->getX(), pLoopUnit->getY(), true, true);
+									pLoopUnit->changeDamage(iDamage, getOwner());
+									if (!abInformPlayer[pLoopUnit->getOwner()])
+									{
+										MEMORY_TRACK_EXEMPT();
+
+										abInformPlayer[pLoopUnit->getOwner()] = true;
+										CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_UNITS_DAMAGED", getNameKey());
+										AddDLLMessage(pLoopUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_INFO, pLoopUnit->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pLoopUnit->getX(), pLoopUnit->getY(), true, true);
+									}
 								}
 							}
 						}
