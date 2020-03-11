@@ -8184,14 +8184,14 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ATTACKER_PURSUED_SUSTAIN_HUMAN</Tag>
 		<English>Your %s1_UnitName attempted to hit and run but has been entrapped into combat with a %s2_Enemy %s3_EnUName and forced to fight for its life</English>
-		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:a:a:ont:ont] tenté une attaque éclair, mais [NUM1:a:a:ont:ont] été rattrap[NUM1:é:ée:és:ées] par [NUM3:un:une:des:des] %s3_EnUName (%s2_Enemy) et [NUM1:a:a:ont:ont] été forcé à combattre</French>
+		<French>[COLOR_YELLOW][NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:a:a:ont:ont] tenté une attaque éclair, mais [NUM1:a:a:ont:ont] été rattrap[NUM1:é:ée:és:ées] par [NUM3:un:une:des:des] %s3_EnUName (%s2_Enemy) et [NUM1:a:a:ont:ont] été forcé à combattre[COLOR_REVERT]</French>
 		<Italian>[NUM1:Il tuo:La tua:I tuoi:Le tue] %s1_UnitName [NUM1:è riuscito:è riuscita:sono riusciti:sono riuscite] a causare dei danni, prima di essere circondata da un'unità %s3_EnUName %s2_Enemy e costretta a combattere per la propria vita.</Italian>
 		<Polish>Twoja jednostka: %s1_UnitName próbowała uciec przed %s3_EnUName (%s2_Enemy) ale została dopadnięta i musi teraz walczyć o życie</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ATTACKER_PURSUED_SUSTAIN_HUMAN_HIDDEN</Tag>
 		<English>Your %s1_UnitName attempted to hit and run but has been entrapped into combat with a %s2_Enemy and forced to fight for its life</English>
-		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:a:a:ont:ont] tenté une attaque éclair, mais [NUM1:a:a:ont:ont] été rattrap[NUM1:é:ée:és:ées] par [NUM2:un:une:des:des] %s2_Enemy et [NUM1:a:a:ont:ont] été forcé à combattre</French>
+		<French>[COLOR_YELLOW][NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:a:a:ont:ont] tenté une attaque éclair, mais [NUM1:a:a:ont:ont] été rattrap[NUM1:é:ée:és:ées] par [NUM2:un:une:des:des] %s2_Enemy et [NUM1:a:a:ont:ont] été forcé à combattre[COLOR_REVERT]</French>
 		<Italian>[NUM1:Il tuo:La tua:I tuoi:Le tue] %s1_UnitName [NUM1:è riuscito:è riuscita:sono riusciti:sono riuscite] a causare dei danni, prima di essere circondata da un'unità %s3_EnUName %s2_Enemy e costretta a combattere per la propria vita.</Italian>
 		<Polish>Twoja jednostka: %s1_UnitName próbowała uciec przed %s3_EnUName (%s2_Enemy) ale została dopadnięta i musi teraz walczyć o życie</Polish>
 	</TEXT>
@@ -8863,14 +8863,14 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_DEFENDER_PURSUED_SUSTAIN_HUMAN</Tag>
 		<English>Our %s1_UnitName entrapped an escaping %s2_EnCivName %s3_EnUName and forced it to fight for its life.</English>
-		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:a:a:ont:ont] rattrapé [NUM3:un:une:des:des] %s3_EnUName %s2_EnCivName et [NUM3:l':l':les:les ][NUM1:a:a:ont:ont] forcé à combattre.</French>
+		<French>[COLOR_YELLOW][NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:a:a:ont:ont] rattrapé [NUM3:un:une:des:des] %s3_EnUName %s2_EnCivName et [NUM3:l':l':les:les ][NUM1:a:a:ont:ont] forcé à combattre.[COLOR_REVERT]</French>
 		<Italian>[NUM1:Il nostro:La nostra:I nostri:Le nostre] %s1_UnitName ha intrappolato l'unità %s3_EnUName %s2_EnCivName in fuga, costringendola a combattere per la propria vita.</Italian>
 		<Polish>Nasza jednostka: %s1_UnitName dogoniła uciekającą jednostkę %s3_EnUName %s2_EnCivName i teraz musi walczyć o swoje życie.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_DEFENDER_PURSUED_SUSTAIN_HUMAN_HIDDEN</Tag>
 		<English>Our %s1_UnitName entrapped an escaping %s2_EnUName and forced it to fight for its life.</English>
-		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:a:a:ont:ont] rattrapé [NUM2:un:une:des:des] %s2_EnUName et [NUM2:l':l':les:les ][NUM1:a:a:ont:ont] forcé à combattre.</French>
+		<French>[COLOR_YELLOW][NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:a:a:ont:ont] rattrapé [NUM2:un:une:des:des] %s2_EnUName et [NUM2:l':l':les:les ][NUM1:a:a:ont:ont] forcé à combattre.[COLOR_REVERT]</French>
 		<Italian>[NUM1:Il nostro:La nostra:I nostri:Le nostre] %s1_UnitName ha intrappolato l'unità %s2_EnUName in fuga, costringendola a combattere per la propria vita.</Italian>
 		<Polish>Nasza jednostka: %s1_UnitName dogoniła uciekającą jednostkę %s3_EnUName %s2_EnCivName i teraz musi walczyć o swoje życie.</Polish>
 	</TEXT>
@@ -10458,7 +10458,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PURSUIT_ONATTACK_SUCCESS</Tag>
 		<English>An enemy %s1_EnUName attempted to flee our onslaught but was chased down and dispatched by our %s2_UnitName!</English>
-		<French>[NUM1:Un:Une:Des:Des] %s1_EnUName [NUM1:a:a:ont:ont] tenté de fuir votre assaut, mais [NUM1:a:a:ont:ont] été poursuivi et dispersé par [NUM2:votre:votre:vos:vos] %s2_UnitName!</French>
+		<French>[COLOR_YELLOW][NUM1:Un:Une:Des:Des] %s1_EnUName [NUM1:a:a:ont:ont] tenté de fuir votre assaut, mais [NUM1:a:a:ont:ont] été poursuivi et dispersé par [NUM2:votre:votre:vos:vos] %s2_UnitName ![COLOR_REVERT]</French>
 		<Italian>[NUM1:Un:Una:Alcuni:Alcune] %s1_EnUName [NUM1:ha:ha:hanno:hanno] cercato di sfuggire al nostro accerchiamento, ma è stata inseguita e sconfitta dalla nostra unità %s2_UnitName!</Italian>
 		<Polish>Wroga jednostka: %s1_EnUName probowała uciec z pola walki lecz została złapana przez: %s2_UnitName!</Polish>
 	</TEXT>
@@ -10677,7 +10677,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_STEALTH_DEFENSE_OWNER</Tag>
 		<English>Your sneaky %s1_UnitName has ambushed a foolish %s2_PlyrName %s3_UnitName!</English>
-		<French>[NUM1:Votre:Votre:Vos:Vos] [COLOR_GREEN]%s1_UnitName[COLOR_REVERT], dissimulé[NUM1:,:e,:s,:es,], a tendu une embuscade à [NUM3:un:une:des:des] %s3_UnitName (%s2_PlyrName) !</French>
+		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_UnitName, dissimulé[NUM1:,:e,:s,:es,], a tendu une embuscade à [NUM3:un:une:des:des] %s3_UnitName (%s2_PlyrName) !</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_STEALTH_LIE_IN_WAIT</Tag>
@@ -11034,7 +11034,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_WORK_HAS_BEGUN_LIMITED</Tag>
 		<English>[SPACE]Work has now begun on %s1_ProdName.</English>
-		<French>[SPACE]La production de %s1_ProdName a commencé.</French>
+		<French>[SPACE]L'entraînement [NUM1:d'un:d'une:de:de] [COLOR_UNIT_TEXT]%s1_ProdName[COLOR_REVERT] a commencé.</French>
 		<German>[SPACE]Neues Produktionsziel: %s1_ProdName</German>
 		<Italian>[SPACE]Sono iniziati i lavori su %s1_ProdName.</Italian>
 		<Spanish>[SPACE]Se ha empezado a trabajar en: %s1_ProdName.</Spanish>
@@ -11060,7 +11060,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_YOUR_UNIT_PROMOTED_IN_BATTLE</Tag>
 		<English>Your %s1_unit has been promoted to %s2_promotion in battle.</English>
-		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_unit a été promu en %s2_promotion durant le combat.</French>
+		<French>[COLOR_GREEN][NUM1:Votre:Votre:Vos:Vos] %s1_unit [NUM1:a:a:ont:ont] combattu avec mérite, et gagne[NUM1:::nt:nt] la promotion [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]%s2_promotion[COLOR_REVERT][COLOR_GREEN] à l'issue du combat.[COLOR_REVERT]</French>
 		<German>Eure Einheit %s1_unit wurde im Kampf befördert (%s2_promotion).</German>
 		<Italian>La tua %s1_unit ha ricevuto in battaglia la promozione %s2_promotion.</Italian>
 		<Spanish>[NUM1:Tu:Tu:Tus:Tus] %s1_unit [NUM1:ha:ha:han:han] ascendido a %s2_promotion tras la batalla.</Spanish>
@@ -11211,7 +11211,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_YOU_KILLED_ENEMY_UNIT</Tag>
 		<English>While defending, your %s1_UnitName has killed a %s3_owner_adjective %s2_EnUName!</English>
-		<French>En se défendant, [NUM1:votre:votre:vos:vos] [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] [NUM1:a:a:ont:ont] éliminé [NUM2:un:une:des:des] %s2_EnUName (%s3_owner_adjective)!</French>
+		<French>[COLOR_GREEN]En se défendant, [NUM1:votre:votre:vos:vos][COLOR_REVERT] [COLOR_HIGHLIGHT_TEXT]%s1_UnitName[COLOR_REVERT] [COLOR_GREEN][NUM1:a:a:ont:ont] éliminé [NUM2:un:une:des:des] %s2_EnUName (%s3_owner_adjective) ![COLOR_REVERT]</French>
 		<German>[NUM1:Euer:Eure:Euer:Eure:Eure:Eure] %s1:1_UnitName [NUM1:hat:haben] sich erfolgreich verteidigt und [NUM1:einen:eine:ein:einige:einige:einige] %[s3_owner_adjective][NUM2:en:e:es:e:e:e] %s2:4_EnUName vernichtet!</German>
 		<Italian>Difendendo, la tua unità %s1_UnitName ha ucciso l'unità nemica %s2_EnUName (%s3_owner_adjective)!</Italian>
 		<Spanish>Mientras se [NUM1:defendía:defendía:defendían:defendían], [NUM1:vuestro:vuestra:vuestros:vuestras] %s1_UnitName [NUM1:ha:ha:han:han] acabado con [NUM2:un:una:unos:unas] %s2_EnUName (%s3_owner_adjective).</Spanish>
@@ -11220,7 +11220,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_YOU_KILLED_ENEMY_UNIT_HIDDEN</Tag>
 		<English>While defending, your %s1_UnitName has killed a %s2_EnUName!</English>
-		<French>En se défendant, [NUM1:votre:votre:vos:vos] [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] [NUM1:a:a:ont:ont] éliminé [NUM2:un:une:des:des] %s2_EnUName!</French>
+		<French>[COLOR_GREEN]En se défendant, [NUM1:votre:votre:vos:vos][COLOR_REVERT] [COLOR_HIGHLIGHT_TEXT]%s1_UnitName[COLOR_REVERT] [COLOR_GREEN][NUM1:a:a:ont:ont] éliminé [NUM2:un:une:des:des] %s2_EnUName ![COLOR_REVERT]</French>
 		<German>[NUM1:Euer:Eure:Euer:Eure:Eure:Eure] %s1:1_UnitName [NUM1:hat:haben] sich erfolgreich verteidigt und [NUM1:einen:eine:ein:einige:einige:einige] [NUM2:feindlichen:feindliche:feindliches:feindliche:feindliche:feindliche] %s2:4_EnUName vernichtet!</German>
 		<Italian>Difendendo, la tua unità %s1_UnitName ha ucciso l'unità nemica %s2_EnUName!</Italian>
 		<Spanish>Mientras se [NUM1:defendía:defendía:defendían:defendían], [NUM1:vuestro:vuestra:vuestros:vuestras] %s1_UnitName [NUM1:ha:ha:han:han] acabado con [NUM2:un:una:unos:unas] %s2_EnUName.</Spanish>
@@ -11318,7 +11318,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_YOU_UNIT_DIED_ATTACKING</Tag>
 		<English>Your %s1_UnitName has died trying to attack a %s2_EnUName!</English>
-		<French>[COLOR_RED][NUM1:Votre:Votre:Vos:Vos] [COLOR_REVERT][COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT][COLOR_RED] [NUM1:a:a:ont:ont] péri en attaquant [NUM2:un:une:des:des] %s2_EnUName ![COLOR_REVERT]</French>
+		<French>[COLOR_RED][NUM1:Votre:Votre:Vos:Vos] [COLOR_REVERT][COLOR_YIELD_FOOD]%s1_UnitName[COLOR_REVERT][COLOR_RED] [NUM1:a:a:ont:ont] péri en attaquant [NUM2:un:une:des:des] %s2_EnUName ![COLOR_REVERT]</French>
 		<German>[NUM1:Euer:Eure:Euer:Eure:Eure:Eure] %s1_UnitName [NUM1:wurde:wurden] beim Angriff auf [NUM2:einen:eine:einen:einige:einige:einige] [NUM2:feindlichen:feindliche:feindlichen:feindliche:feindliche:feindliche] %s2:3_EnUName besiegt!</German>
 		<Italian>La tua unità di %s1_UnitName è [NUM1:morto:morta] attaccando %s2_EnUName!</Italian>
 		<Spanish>[NUM1:Vuestro:Vuestra:Vuestros:Vuestras] %s1_UnitName [NUM1:ha:ha:han:han] muerto intentando atacar a [NUM2:un:una:unos:unas] %s2_EnUName.</Spanish>
@@ -11343,7 +11343,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_YOU_UNIT_WAS_DESTROYED</Tag>
 		<English>While defending, your %s1_UnitName was destroyed by a %s3_owner_adjective %s2_EnUName!</English>
-		<French>[COLOR_RED]En se défendant, [NUM1:votre:votre:vos:vos][COLOR_REVERT] [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] [COLOR_RED][NUM1:a:a:ont:ont] été [NUM1:détruit:détruite:détruits:détruites] par [NUM2:un:une:des:des] %s2_EnUName (%s3_owner_adjective) ![COLOR_REVERT]</French>
+		<French>[COLOR_RED]En se défendant, [NUM1:votre:votre:vos:vos][COLOR_REVERT] [COLOR_YIELD_FOOD]%s1_UnitName[COLOR_REVERT] [COLOR_RED][NUM1:a:a:ont:ont] été [NUM1:détruit:détruite:détruits:détruites] par [NUM2:un:une:des:des] %s2_EnUName (%s3_owner_adjective) ![COLOR_REVERT]</French>
 		<German>[NUM1:Euer:Eure:Euer:Eure:Eure:Eure] [NUM1:verteidigender:verteidigende:verteidigendes:verteidigende:verteidigende:verteidigende] %s1_UnitName [NUM1:wurde:wurden] von [NUM2:einem:einer:einem:einigen:einigen:einigen] %[s3_owner_adjective][NUM2:em:er:em:en:en:en] %s2:3_EnUName besiegt!</German>
 		<Italian>Difendendo, la tua unità %s1_UnitName è stata distrutta dall'unità nemica %s2_EnUName (%s3_owner_adjective)!</Italian>
 		<Spanish>Mientras se [NUM1:defendía:defendía:defendían:defendían], [NUM1:vuestro:vuestra:vuestros:vuestras] %s1_UnitName [NUM1:ha sido destruido:ha sido destruida:han sido destruidos:han sido destruidas] por [NUM2:un:una:unos:unas] %s2_EnUName (%s3_owner_adjective).</Spanish>
@@ -12473,7 +12473,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_MORECIV4LERTS_CITY_FOUNDED_UNSEEN</Tag>
 		<English>%s1_Player has founded %s2_City in a distant land.</English>
-		<French>%s1_Player a fondé la ville de %s2_City dans un pays lointain.</French>
+		<French>%s1_Player a fondé la ville de %s2_City sur un territoire lointain.</French>
 		<German>%s1_Player hat in einem fernen Land die Stadt %s2_City gegründet.</German>
 		<Italian>%s1_Player ha fondato %s2_City in una terra lontana.</Italian>
 		<Spanish>%s1_Player ha fundado %s2_City en una tierra lejana.</Spanish>

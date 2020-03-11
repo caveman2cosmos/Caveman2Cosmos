@@ -20,6 +20,11 @@
 		<Spanish>Estrategia:[NEWLINE]</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PEDIA_AND_BUILD_TIME</Tag>
+		<English>and build time is</English>
+		<French>et le temps de construction est :\n</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PEDIA_ATTITUDE</Tag>
 		<English>Attitude: [BOLD]%d1%[\BOLD] (Base) + [BOLD]%d2%[\BOLD] (Warmonger Respect)[NEWLINE]</English>
 		<French>Attitude: [BOLD]%d1%[\BOLD] (Base) + [BOLD]%d2%[\BOLD] (Respect du Seigneur de Guerre)[NEWLINE]</French>
@@ -34,20 +39,20 @@
 		<German>automatisch</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PEDIA_BONUS_APPEARANCE_AND_TRADE</Tag>
-		<English>Reveal/Enable</English>
-		<French>Révèle/Active</French>
-		<German>enthüllt/verfügbar</German>
-		<Spanish>Revelado y activado</Spanish>
-		<Polish>Odkryte i Włączone</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PEDIA_BONUS_APPEARANCE</Tag>
 		<English>Reveal</English>
-		<French>Révèle</French>
+		<French>Révélé par :</French>
 		<German>enthüllt</German>
 		<Italian>Rivela</Italian>
 		<Spanish>Revela</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_BONUS_APPEARANCE_AND_TRADE</Tag>
+		<English>Reveal/Enable</English>
+		<French>Révélé et utilisable dès :</French>
+		<German>enthüllt/verfügbar</German>
+		<Spanish>Revelado y activado</Spanish>
+		<Polish>Odkryte i Włączone</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_BONUS_LOCALLY</Tag>
@@ -60,14 +65,6 @@
 		<English>Nationwide</English>
 		<French>Au Niveau Nation</French>
 		<German>landesweit</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PEDIA_BONUS_TRADE</Tag>
-		<English>Enable</English>
-		<French>Actif</French>
-		<German>verfügbar</German>
-		<Italian>Abilita</Italian>
-		<Spanish>Permite</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_BONUS_OBSOLETE</Tag>
@@ -93,6 +90,14 @@
 		<Polish>Pozwala</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PEDIA_BONUS_TRADE</Tag>
+		<English>Enable</English>
+		<French>Utilisable dès</French>
+		<German>verfügbar</German>
+		<Italian>Abilita</Italian>
+		<Spanish>Permite</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PEDIA_BONUS_VICINITY_BUILDING</Tag>
 		<English>Vicinity buildings</English>
 		<French>Bâtiments du voisinage</French>
@@ -103,13 +108,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_BUILD</Tag>
 		<English>Build:</English>
-		<French>Construit :</French>
+		<French>Est construit par :</French>
 		<German>gebaut durch</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_BUILDING_BONUS_PROD1</Tag>
 		<English>Build</English>
-		<French>Construit</French>
+		<French>Construit :</French>
 		<Spanish>Se construye un</Spanish>
 		<Polish>Budowa</Polish>
 	</TEXT>
@@ -126,6 +131,16 @@
 		<French>Requis dans le voisinage</French>
 		<Spanish>Requerido en el radio de la ciudad</Spanish>
 		<Polish>Wymagane w pobliżu</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_BUILD_TIME</Tag>
+		<English>Build time is</English>
+		<French>Le temps de construction est :\n</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CAPABLE_UNITS</Tag>
+		<English>Capable Units:</English>
+		<French>Unités compétentes:</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_AFFLICTION_PROMOTION</Tag>
@@ -464,6 +479,12 @@
 		<Polish>Ulepszenia</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_LANDSCAPE</Tag>
+		<English>Landscape</English>
+		<French>Paysage</French>
+		<German>Landschaft</German>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_LEADER</Tag>
 		<English>Leaders</English>
 		<French>
@@ -489,12 +510,6 @@
 		<English>Leadership</English>
 		<French>Gouvernement</French>
 		<German>Regierung</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PEDIA_CATEGORY_LANDSCAPE</Tag>
-		<English>Landscape</English>
-		<French>Paysage</French>
-		<German>Landschaft</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_MISC_UNITS</Tag>
@@ -584,16 +599,16 @@
 		<Polish>Religie</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PEDIA_CATEGORY_RESOURCES</Tag>
-		<English>Resources</English>
-		<French>Ressources</French>
-		<German>Ressourcen</German>
-	</TEXT>	
-	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_RELIGIOUS_BUILDINGS</Tag>
 		<English>Religious</English>
 		<French>Religieux</French>
 		<German>Religion</German>
+	</TEXT>	
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_RESOURCES</Tag>
+		<English>Resources</English>
+		<French>Ressources</French>
+		<German>Ressourcen</German>
 	</TEXT>	
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_ROUTES</Tag>
@@ -619,18 +634,6 @@
 		<German>Weiteres</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PEDIA_CATEGORY_SPECIAL_BUILDINGS</Tag>
-		<English>Special Buildings</English>
-		<French>Bâtiments Spéciaux</French>
-		<German>Spezialgebäude</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PEDIA_CATEGORY_SPECIAL_UNITS</Tag>
-		<English>Special Units</English>
-		<French>Unités Spéciales</French>
-		<German>Spezialeinheiten</German>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_SPECIALIST</Tag>
 		<English>Specialists</English>
 		<French>
@@ -650,6 +653,18 @@
 			<Plural>1</Plural>
 		</Spanish>
 		<Polish>Specjaliści</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_SPECIAL_BUILDINGS</Tag>
+		<English>Special Buildings</English>
+		<French>Bâtiments Spéciaux</French>
+		<German>Spezialgebäude</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_SPECIAL_UNITS</Tag>
+		<English>Special Units</English>
+		<French>Unités Spéciales</French>
+		<German>Spezialeinheiten</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_SUBCOMBAT_TYPE</Tag>
@@ -765,6 +780,21 @@
 		<German>Arbeitsaufträge</German>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CONSTRUCT</Tag>
+		<English>Construct:</English>
+		<French>Construit :</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CONSUMES_WORKER</Tag>
+		<English>Consumes the worker.</English>
+		<French>Détruit l'Ouvrier.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_COSTS</Tag>
+		<English>Costs</English>
+		<French>Coûte</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PEDIA_DOGPILE</Tag>
 		<English>Dogpile War: [BOLD]%d1[\BOLD]</English>
 		<French>Gestion de Guerre: [BOLD]%d1[\BOLD]</French>
@@ -780,6 +810,16 @@
 		<Italian>Forme di governo e Religioni preferite</Italian>
 		<Spanish>Principio y religión favoritos</Spanish>
 		<Polish>Ulubione doktryny i religie</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_FROM_GAME_SPEED</Tag>
+		<English> from game speed)</English>
+		<French> de la vitesse du jeu)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_FROM_STARING_ERA</Tag>
+		<English> from staring era)</English>
+		<French> de l'ère)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_FULL_WAR</Tag>
@@ -883,6 +923,11 @@
 		<German>ersetzt durch</German>
 		<Spanish>Reemplazado por</Spanish>
 		<Polish>Zastąpione przez</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_REQUIRES</Tag>
+		<English>Requires:</English>
+		<French>Requiert :</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_RESOURCE_SOURCE</Tag>
@@ -996,6 +1041,21 @@
 		<Polish>Zmiana technologii</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PEDIA_TECH_REQUIRED</Tag>
+		<English>Tech Required:</English>
+		<French>Tech Requise :</French>
+	</TEXT>	
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_TECH_WORKER_SPEED</Tag>
+		<English>% Worker Speed</English>
+		<French>% Vitesse des Ouvriers</French>
+	</TEXT>
+<TEXT>
+		<Tag>TXT_KEY_PEDIA_TURNS_FEATURE_BUILD_TIME</Tag>
+		<English> turns + feature build time)</English>
+		<French> tours + temps de constr. de l'aménagement)</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PEDIA_UNIT_CAN_BE_CAPTURED</Tag>
 		<English>[NEWLINE][ICON_BULLET]Can be captured</English>
 		<French>[NEWLINE][ICON_BULLET]Peut être capturé</French>
@@ -1041,18 +1101,18 @@
 		<Polish>[SPACE]Jednostka</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PEDIA_WELCOME_MESSAGE</Tag>
+		<English>Who are we, who is each one of us, if not a combination of experiences, information, books we have read, things imagined? Each life is an encyclopedia, a library, an inventory of objects, a series of styles, and everything can be constantly shuffled and reordered in every way conceivable.</English>
+		<French>"Qui sommes-nous, qui est chacun de nous, sinon une combinaison d'expériences, d'informations, de livres que nous avons lus, de choses imaginées ? Chaque vie est une encyclopédie, une bibliothèque, un inventaire d'objets, une série de styles, et tout peut être constamment mélangé et réorganisé de toutes les manières imaginables" - Italo Calvino (1923-1985).</French>
+		<German>"Wer sind wir denn, wer ist denn jeder von uns, wenn nicht eine Kombination von Erfahrungen, Informationen, Lektüren und Phantasien? Jedes Leben ist eine Enzyklopädie, eine Bibliothek, ein Inventar von Objekten, eine Musterkollektion von Stilen, worin alles jederzeit auf jede mögliche Weise neu gemischt und neu geordnet werden kann." - Italo Calvino (1923-1985)</German>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PEDIA_WITH_IMPROVEMENT_AND_ROUTE</Tag>
 		<English>with route and improvement</English>
 		<French>avec route et amélioration</French>
 		<German>wenn angeschlossen und abgebaut</German>
 		<Spanish>con camino y mejora</Spanish>
 		<Polish>z drogą i ulepszeniem</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PEDIA_WELCOME_MESSAGE</Tag>
-		<English>Who are we, who is each one of us, if not a combination of experiences, information, books we have read, things imagined? Each life is an encyclopedia, a library, an inventory of objects, a series of styles, and everything can be constantly shuffled and reordered in every way conceivable.</English>
-		<French>"Qui sommes-nous, qui est chacun de nous, sinon une combinaison d'expériences, d'informations, de livres que nous avons lus, de choses imaginées ? Chaque vie est une encyclopédie, une bibliothèque, un inventaire d'objets, une série de styles, et tout peut être constamment mélangé et réorganisé de toutes les manières imaginables" - Italo Calvino (1923-1985).</French>
-		<German>"Wer sind wir denn, wer ist denn jeder von uns, wenn nicht eine Kombination von Erfahrungen, Informationen, Lektüren und Phantasien? Jedes Leben ist eine Enzyklopädie, eine Bibliothek, ein Inventar von Objekten, eine Musterkollektion von Stilen, worin alles jederzeit auf jede mögliche Weise neu gemischt und neu geordnet werden kann." - Italo Calvino (1923-1985)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_WONDER</Tag>

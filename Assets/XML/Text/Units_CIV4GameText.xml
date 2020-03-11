@@ -1105,7 +1105,7 @@
 		<Tag>TXT_KEY_UNIT_ANDROID_INFANTRY</Tag>
 		<English>Android Infantry</English>
 		<French>
-			<Text>Infanterie Androide</Text>
+			<Text>Infanterie Androïde</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1217,7 +1217,7 @@
 		<Tag>TXT_KEY_UNIT_ANTHROID_INFANTRY</Tag>
 		<English>Anthroid Infantry</English>
 		<French>
-			<Text>Infanterie Anthroide</Text>
+			<Text>Infanterie Anthroïde</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -1236,7 +1236,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ANTHROID_INFANTRY_STRATEGY</Tag>
 		<English>Anthroid Infantry are little more than the next generation of garrison units. Their slight bonuses are in city defence and against firearm units.</English>
-		<French>L'Infanterie Anthroide constituent la nouvelle génération d'unités de garnison. Leurs légers bonus sont dans la défense de la ville et contre les unités d'armes à feu.</French>
+		<French>L'Infanterie Anthroïde constituent la nouvelle génération d'unités de garnison. Leurs légers bonus sont dans la défense de la ville et contre les unités d'armes à feu.</French>
 		<Polish>Piechota Antroidów to ulepszona wersja piechoty Sztucznej Inteligencji.</Polish>
 	</TEXT>
 	<TEXT>
@@ -1918,7 +1918,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ASSAULT_DROID</Tag>
 		<English>Assault Droid</English>
-		<French>Droide d'Assaut</French>
+		<French>Droïde d'Assaut</French>
 		<German>Angriffsdroide</German>
 		<Italian>Droide da assalto</Italian>
 		<Spanish>
@@ -1935,7 +1935,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ASSAULT_DROID_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Assault Droid[COLOR_REVERT] - A droid unit which is specialized in siege. Can bombard cities and cause collateral damage.</English>
-		<French>[COLOR_UNIT_TEXT]Droide d'Assaut[COLOR_REVERT] - Une unité droïde spécialisée dans le siège. Peut bombarder des villes et causer des dommages collatéraux.</French>
+		<French>[COLOR_UNIT_TEXT]Droïde d'Assaut[COLOR_REVERT] - Une unité droïde spécialisée dans le siège. Peut bombarder des villes et causer des dommages collatéraux.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ASSAULT_MECH</Tag>
@@ -7375,7 +7375,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DREADNOUGHT_PEDIA</Tag>
 		<English>The development of lightweight and efficient cold fusion generators has allowed the creation of ever-larger and more deadly land-based vehicles. The so-called "dreadnoughts" are the largest land vehicles ever built, towering over ordinary tanks like a skyscraper over a humble peasant cottage. [PARAGRAPH:1]Dreadnoughts are huge, powerful vehicles, typically equipped with one or more massive main guns and a number of smaller weapons to deal with any close-in opponents. They are heavily-armored, carrying anti-air weapons and the latest in physical and electromagnetic shielding capable of defending against the deadliest attack. It is theorized that a dreadnought could withstand a nuclear explosion, though this has not yet been put to the test. [PARAGRAPH:1]In the field dreadnoughts are usually deployed to attack enemy cities, especially well-defended arcologies cities equipped with electromagnetic shielding. These behemoths are virtually unstoppable, unless the enemy has its own dreadnoughts or is willing to sacrifice huge numbers of lesser troops in suicidal wave assaults.</English>
-		<French>Le développement de générateurs de fusion froide plus légers et plus efficaces permit la création de nouveaux véhicules de combat, plus grands et plus puissants. Ces "dreadnoughts" sont les plus grands véhicules jamais construits. A côté d'eux, les tanks ordinaires semblent minuscules. [PARAGRAPH:1]Les dreadnoughts sont des véhicules gigantesques et ultra puissants, généralement dotés d'un ou plusieurs canons principaux et de tourelles dédiées au combat rapproché. Lourdement blindés, ils sont montés de canons anti-aériens et équipés des tout derniers boucliers électromagnétiques, ce qui leur permet de résister aux attaques les plus destructrices. En théorie, un dreadnought ne peut pas survivre à une explosion nucléaire, mais aucun test n'a encore confirmé cette hypothèse. [PARAGRAPH:1]Au combat, les dreadnoughts sont généralement déployés pour attaquer les villes ennemies et tout particulièrement les arcologies dotées de boucliers électromagnétiques. Ces géants sont virtuellement impossibles à arrêter, à moins que l'ennemi ne dispose d'autres dreadnoughts ou soit prêt à envoyer de nombreuses unités au suicide.</French>
+		<French>Le développement de générateurs de fusion froïde plus légers et plus efficaces permit la création de nouveaux véhicules de combat, plus grands et plus puissants. Ces "dreadnoughts" sont les plus grands véhicules jamais construits. A côté d'eux, les tanks ordinaires semblent minuscules. [PARAGRAPH:1]Les dreadnoughts sont des véhicules gigantesques et ultra puissants, généralement dotés d'un ou plusieurs canons principaux et de tourelles dédiées au combat rapproché. Lourdement blindés, ils sont montés de canons anti-aériens et équipés des tout derniers boucliers électromagnétiques, ce qui leur permet de résister aux attaques les plus destructrices. En théorie, un dreadnought ne peut pas survivre à une explosion nucléaire, mais aucun test n'a encore confirmé cette hypothèse. [PARAGRAPH:1]Au combat, les dreadnoughts sont généralement déployés pour attaquer les villes ennemies et tout particulièrement les arcologies dotées de boucliers électromagnétiques. Ces géants sont virtuellement impossibles à arrêter, à moins que l'ennemi ne dispose d'autres dreadnoughts ou soit prêt à envoyer de nombreuses unités au suicide.</French>
 		<German>Die Entwicklung kompakter, leistungsfähiger Kaltfusionsgeneratoren ermöglichte unter anderem auch die Herstellung noch stärkerer und vernichtenderer Landfahrzeuge. Der so genannte "Dreadnought" ist das größte Landfahrzeug, das je gebaut wurde: Er überragt einen herkömmlichen Panzer wie ein Wolkenkratzer eine bescheidene Bauernhütte. [PARAGRAPH:1]Dreadnoughts sind riesige, äußerst effiziente Fahrzeuge, die normalerweise mit einer oder mehreren gewaltigen Primärwaffen und einer Batterie von kleineren Nahkampfwaffen ausgerüstet sind. Sie sind massiv gepanzert, haben Luftabwehrwaffen an Bord und verfügen über modernste physische und elektromagnetische Schildtechnologie, die selbst tödlichste Attacken abwehren kann. Theoretisch könnte ein Dreadnought sogar einer atomaren Explosion standhalten, dies wurde jedoch bislang in der Praxis noch nicht erwiesen.[PARAGRAPH:1]Auf dem Schlachtfeld werden die Dreadnoughts normalerweise für Angriffe auf feindliche Städte eingesetzt, insbesondere gegen gut befestigte Arkologien, die sich mit elektromagnetischen Schilden schützen. Diese Giganten sind praktisch nicht aufzuhalten, es sei denn, der Feind verfügt über eigene Dreadnoughts oder ist bereit, in selbstzerstörerischen Angriffswellen eine enorme Anzahl unterlegener Truppen zu opfern.</German>
 		<Italian>Lo sviluppo di generatori per la fusione a freddo leggeri ed efficienti ha portato alla creazione di veicoli terresti ancora più grandi e letali. I cosiddetti "Dreadnought" sono i più grandi veicoli terrestri mai costruiti e torreggiano sui normali carri armati come grattacieli su villette di campagna. [PARAGRAPH:1]I Dreadnought sono veicoli enormi e potenti, solitamente equipaggiati con uno o più enormi cannoni e un numero di armi più piccole per eliminare gli avversari a corto raggio. Sono pesantemente corazzati, hanno armi antiaeree e i più recenti scudi in campo fisico ed elettromagnetico, in grado di difenderli dagli attacchi più letali. Si dice che in teoria un Dreadnought potrebbe resistere a un'esplosione nucleare, anche se tale teoria non è ancora stata messa alla prova. [PARAGRAPH:1]Sul campo i Dreadnought vengono solitamente utilizzati per attaccare le città nemiche, specialmente le arcologie ben difese e dotate di scudi elettromagnetici. Questi giganti sono virtualmente inarrestabili, a meno che il nemico non ne abbia a sua volta uno o sia disposto a sacrificare in attacchi suicidi un enorme numero di truppe meno potent</Italian>
 		<Spanish>El desarrollo de generadores de fusión fría ligeros y eficaces ha llevado a la creación de vehículos terrestres cada vez más grandes y mortales. Los llamados "dreadnoughts" son los mayores vehículos jamás construidos, pues se alzan sobre los tanques normales como un rascacielos sobre la choza de un campesino. [PARAGRAPH:1]Los dreadnoughts son vehículos enormes y potentes que suelen ir equipados con uno o más cañones principales enormes y cierto número de armas menores para hacer frente a cualquier enemigo que se acerque. Cuentan con blindaje pesado, llevan armas antiaéreas y el último grito en escudo electromagnéticos, capaces de protegerlos de los ataques más mortíferos. En teoría, un dreadnought podría resistir una explosión atómica, aunque este extremo no ha llegado a probarse. [PARAGRAPH:1]En el campo de batalla, los dreadnoughts se suelen desplegar para atacar ciudades enemigas, especialmente las arcologías, que están muy bien defendidas con escudos electromagnéticos. Estos titanes son prácticamente imparables, a menos que el enemigo cuente con sus propios dreadnoughts o esté dispuesto a sacrificar cantidades ingentes de tropas menores en sucesivas oleadas de ataques suicida</Spanish>
@@ -25016,7 +25016,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SCOUT_MECH</Tag>
 		<English>Scout Droid</English>
-		<French>Droide d'exploration</French>
+		<French>Droïde d'exploration</French>
 		<Spanish>
 			<Text>Explorador droide</Text>
 			<Gender>Male</Gender>
@@ -25345,7 +25345,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SERVICE_DROID</Tag>
 		<English>Service Droid</English>
-		<French>Mécanodroide</French>
+		<French>Mécanodroïde</French>
 		<Polish>Droid-Mechanik</Polish>
 	</TEXT>
 	<TEXT>
@@ -25356,7 +25356,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SERVICE_DROID_STRATEGY</Tag>
 		<English>Service Droids replace not only Replication Mechanics, but also Astronautic Technicians have been replaced by these incredibly valuable multi-purpose repair machines.  They fly around to get to wherever needed with ultrafuel jet engines and can hover in place for very extended periods of time, both in space and atmosphere.  This is the most diversely capable healer that has been enabled to date, healing Mechanical, Aircraft, Spacecraft and Tech, effectiveness at the task listed in that order.  Should not be used to replace Tech healers except in desperate need.</English>
-		<French>Les Mécanodroides remplacent non seulement les Mécaniciens de Réplication, mais aussi les Astronautes Techniciens, qui sont substitués par ces machines de réparation polyvalentes incroyablement précieuses. Ils volent sur le terrain, pour se rendre là où c'est nécessaire avec des moteurs à réaction à ultra-carburant et peuvent planer sur place pendant de très longues périodes, à la fois dans l'espace et dans l'atmosphère. C'est le réparateur le plus diversifié qui a été conçu à ce jour, guérissant les unités Mécaniques, les Aéronefs, les Vaisseaux Spatiaux et les unités Technologiques, leur efficacité étant répertoriée dans cet ordre. Ne doit pas être utilisé pour remplacer des réparateurs Tech, sauf en cas de besoin désespéré.</French>
+		<French>Les Mécanodroïdes remplacent non seulement les Mécaniciens de Réplication, mais aussi les Astronautes Techniciens, qui sont substitués par ces machines de réparation polyvalentes incroyablement précieuses. Ils volent sur le terrain, pour se rendre là où c'est nécessaire avec des moteurs à réaction à ultra-carburant et peuvent planer sur place pendant de très longues périodes, à la fois dans l'espace et dans l'atmosphère. C'est le réparateur le plus diversifié qui a été conçu à ce jour, guérissant les unités Mécaniques, les Aéronefs, les Vaisseaux Spatiaux et les unités Technologiques, leur efficacité étant répertoriée dans cet ordre. Ne doit pas être utilisé pour remplacer des réparateurs Tech, sauf en cas de besoin désespéré.</French>
 		<Polish>Droid-Mechanik to nowoczesna jednostka naprawcza.</Polish>
 	</TEXT>
 	<TEXT>
@@ -25838,7 +25838,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SIEGE_DROID</Tag>
 		<English>Siege Droid</English>
-		<French>Droide de Siège</French>
+		<French>Droïde de Siège</French>
 		<German>Belagerungsdroide</German>
 		<Italian>Droide da assedio</Italian>
 		<Spanish>
@@ -30820,7 +30820,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WALKER</Tag>
 		<English>Walker Robot</English>
-		<French>Droide Marcheur</French>
+		<French>Droïde Marcheur</French>
 		<German>Laufdroide</German>
 		<Italian>Droide semovente</Italian>
 		<Spanish>
@@ -31902,7 +31902,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WORKER_ANDROID</Tag>
 		<English>Android</English>
-		<French>Androide</French>
+		<French>Androïde</French>
 		<German>Androide</German>
 		<Italian>Androide</Italian>
 		<Spanish>
@@ -31915,7 +31915,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WORKER_ANDROID_STRATEGY</Tag>
 		<English>Like [COLOR_UNIT_TEXT]Workers[COLOR_REVERT], [COLOR_UNIT_TEXT]Androids[COLOR_REVERT] improve the land around your cities and build roads that help establish trade routes. (They are twice as fast as [COLOR_UNIT_TEXT]Workers[COLOR_REVERT] and their movement isn't slowed down by terrain)</English>
-		<French>Comme les [COLOR_UNIT_TEXT]Ouvriers[COLOR_REVERT], les [COLOR_UNIT_TEXT]Androides[COLOR_REVERT] améliorent les terres autour de vos villes et construisent des routes qui aident à établir des routes commerciales. (Ils sont deux fois plus rapides que les [COLOR_UNIT_TEXT]Ouvriers[COLOR_REVERT] et leur déplacement n'est pas ralenti par le terrain)</French>
+		<French>Comme les [COLOR_UNIT_TEXT]Ouvriers[COLOR_REVERT], les [COLOR_UNIT_TEXT]Androïdes[COLOR_REVERT] améliorent les terres autour de vos villes et construisent des routes qui aident à établir des routes commerciales. (Ils sont deux fois plus rapides que les [COLOR_UNIT_TEXT]Ouvriers[COLOR_REVERT] et leur déplacement n'est pas ralenti par le terrain)</French>
 		<Spanish>Al igual que los [COLOR_UNIT_TEXT]Trabajadores[COLOR_REVERT], los [COLOR_UNIT_TEXT]Androides[COLOR_REVERT] mejoran el terreno que rodea a tus ciudades y construyen caminos que te ayuden a establecer rutas comerciales. (Son el doble de rápidos que los [COLOR_UNIT_TEXT]Trabajadores[COLOR_REVERT] y no sufren costes adicionales de movimiento por terreno)</Spanish>
 		<Polish>Tak jak [COLOR_UNIT_TEXT]Robotnicy[COLOR_REVERT], [COLOR_UNIT_TEXT]Androidy[COLOR_REVERT] poprawiają teren wokół miast oraz budują drogi które pomagają w założeniu szlaków handlowych. (Sa szybsze niż [COLOR_UNIT_TEXT]Robotników[COLOR_REVERT].</Polish>
 	</TEXT>

@@ -451,7 +451,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TELEGRAPH_OFFICE</Tag>
 		<English>Telegraph Station</English>
-		<French>Telegraph Station</French>
+		<French>Bureau de Télégraphe</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TELEGRAPH_OFFICE_STRATEGY</Tag>
@@ -465,7 +465,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSIC_FACTORY</Tag>
 		<English>Music Factory</English>
-		<French>Music Factory</French>
+		<French>Usine d'Instruments de musique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSIC_FACTORY_STRATEGY</Tag>
@@ -605,7 +605,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT</Tag>
 		<English>Electronics Manufacturing District</English>
-		<French>Electronics Manufacturing District</French>
+		<French>Electronics Quartier de Fabrication de Biens</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT_STRATEGY</Tag>
@@ -619,7 +619,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MANUFACTURING_DISTRICT</Tag>
 		<English>Manufacturing District</English>
-		<French>Manufacturing District</French>
+		<French>Quartier de Fabrication de Biens</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MANUFACTURING_DISTRICT_STRATEGY</Tag>
@@ -633,7 +633,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TEXTILE_DISTRICT</Tag>
 		<English>Textile Manufacturing District</English>
-		<French>Textile Manufacturing District</French>
+		<French>Textile Quartier de Fabrication de Biens</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TEXTILE_DISTRICT_STRATEGY</Tag>
@@ -885,7 +885,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOOD_MANUFACTURING_DISTRICT</Tag>
 		<English>Food Manufacturing District</English>
-		<French>Food Manufacturing District</French>
+		<French>Food Quartier de Fabrication de Biens</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOOD_MANUFACTURING_DISTRICT_STRATEGY</Tag>

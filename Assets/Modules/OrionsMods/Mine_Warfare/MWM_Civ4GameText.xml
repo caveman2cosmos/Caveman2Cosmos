@@ -10,38 +10,46 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_MINE_WARFARE</Tag>
 		<English>Mine Warfare Units</English>
+		<French>Mines Défensives</French>
 	</TEXT>
 	<!-- End Mine Warfare General -->
 	<!-- Mine Warfare Action Buttons -->
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SWEEP_FOR_MINE_SEA</Tag>
 		<English>Remove Naval Mine</English>
+		<French>Enlever les Mines Navales</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SWEEP_FOR_MINE_LAND</Tag>
 		<English>Remove Land Mine</English>
+		<French>Enlever les Mines terrestres</French>
 	</TEXT>
 	<!-- Mine Warfare Action Buttons -->
 	<!-- Naval Mines -->
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAVAL_MINE</Tag>
 		<English>Naval Mine</English>
+		<French>Mine Navale</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NAVAL_MINE_HELP</Tag>
 		<English>[ICON_BULLET]Harmless Until Armed.</English>
+		<French>[ICON_BULLET]Harmless Until Armed.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAVAL_MINE_FIELD</Tag>
 		<English>Naval Mine Field</English>
+		<French>Champ de Mines Navales</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NAVAL_MINE_FIELD_HELP</Tag>
 		<English>[ICON_BULLET]Harmless Until Armed.[NEWLINE][COLOR_WARNING_TEXT]Requires Harbor[COLOR_REVERT]</English>
+		<French>[ICON_BULLET]Harmless Until Armed.[NEWLINE][COLOR_WARNING_TEXT]Requires Harbor[COLOR_REVERT]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NUCLEAR_NAVAL_MINE</Tag>
 		<English>Nuclear Naval Mine</English>
+		<French>Mine Navale Nucléaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NUCLEAR_NAVAL_MINE_HELP</Tag>
@@ -78,7 +86,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAVAL_MINE_PEDIA</Tag>
 		<English>Naval mines are self-contained explosive devices placed in water to destroy ships or submarines.  Mines must be armed to explode after reaching their destination, where they are left to wait until they are triggered by contact with an enemy ship.  The exception is the nuclear naval mine, which remains dormant until detonated by the owner.  Naval mines can be used offensively, to hamper enemy ships or lock them into a harbor; or defensively, to protect friendly ships and create "safe" zones.</English>
-		<French>Naval mines are self-contained explosive devices placed in water to destroy ships or submarines. Mines must be armed to explode after reaching their destination, where they are left to wait until they are triggered by contact with an enemy ship.  The exception is the nuclear mine, which remains dormant until detonated by the owner.  Naval mines can be used offensively, to hamper enemy ships or lock them into a harbor; or defensively, to protect friendly ships and create "safe" zones.</French>
+		<French>Navale mines are self-contained explosive devices placed in water to destroy ships or submarines. Mines must be armed to explode after reaching their destination, where they are left to wait until they are triggered by contact with an enemy ship.  The exception is the nucléaire mine, which remains dormant until detonated by the owner.  Navale mines can be used offensively, to hamper enemy ships or lock them into a harbor; or defensively, to protect friendly ships and create "safe" zones.</French>
 		<German>Naval mines are self-contained explosive devices placed in water to destroy ships or submarines. Mines must be armed to explode after reaching their destination, where they are left to wait until they are triggered by contact with an enemy ship.  The exception is the nuclear mine, which remains dormant until detonated by the owner.  Naval mines can be used offensively, to hamper enemy ships or lock them into a harbor; or defensively, to protect friendly ships and create "safe" zones.</German>
 		<Italian>Naval mines are self-contained explosive devices placed in water to destroy ships or submarines. Mines must be armed to explode after reaching their destination, where they are left to wait until they are triggered by contact with an enemy ship.  The exception is the nuclear mine, which remains dormant until detonated by the owner.  Naval mines can be used offensively, to hamper enemy ships or lock them into a harbor; or defensively, to protect friendly ships and create "safe" zones.</Italian>
 		<Spanish>Naval mines are self-contained explosive devices placed in water to destroy ships or submarines. Mines must be armed to explode after reaching their destination, where they are left to wait until they are triggered by contact with an enemy ship.  The exception is the nuclear mine, which remains dormant until detonated by the owner.  Naval mines can be used offensively, to hamper enemy ships or lock them into a harbor; or defensively, to protect friendly ships and create "safe" zones.</Spanish>
@@ -89,20 +97,24 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAVAL_MINE_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Naval Mine[COLOR_REVERT] is invisible to all units and has a hidden nationality. The mine is lethal and will attack and totally destroy only one ship on a plot, when it explodes.  Once armed, the naval mine cannot be disarmed, unless it is disbanded or removed by a Mine Sweeper.</English>
+		<French>The [COLOR_UNIT_TEXT]Navale Mine[COLOR_REVERT] is invisible to all units and has a hidden nationality. The mine is lethal and will attack and totally destroy only one ship on a plot, when it explodes.  Once armed, the naval mine cannot be disarmed, unless it is disbanded or removed by a Mine Sweeper.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAVAL_MINE_FIELD_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Naval Mine Field[COLOR_REVERT] is invisible to all units and has a hidden nationality.  The Mine Field is lethal and will attack all ships on a plot..  It has a high percentage randum chance of destroying any and all ships that move into the plot and will remain persistant, requiring a Mine Sweeper to remove it.  Once armed, the naval mine field cannot be disarmed, unless it is disbanded or removed by a Mine Sweeper.</English>
+		<French>The [COLOR_UNIT_TEXT]Navale Mine Field[COLOR_REVERT] is invisible to all units and has a hidden nationality.  The Mine Field is lethal and will attack all ships on a plot..  It has a high percentage randum chance of destroying any and all ships that move into the plot and will remain persistant, requiring a Mine Sweeper to remove it.  Once armed, the naval mine field cannot be disarmed, unless it is disbanded or removed by a Mine Sweeper.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NUCLEAR_NAVAL_MINE_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Nuclear Naval Mine[COLOR_REVERT] is invisible to all units and has a hidden nationality.  The nuclear naval mine can set off a nuclear explosion that is triggered by the owner. The detonation will destroy every ship on the plot.  Once armed, the nuclear naval mine cannot be disarmed, unless it is disbanded or removed by a Mine Sweeper. </English>
+		<French>The [COLOR_UNIT_TEXT]Nucléaire Navale Mine[COLOR_REVERT] is invisible to all units and has a hidden nationality.  The nucléaire naval mine can set off a nucléaire explosion that is triggered by the owner. The detonation will destroy every ship on the plot.  Once armed, the nucléaire naval mine cannot be disarmed, unless it is disbanded or removed by a Mine Sweeper. </French>
 	</TEXT>
 	<!-- End Naval Mines -->
 	<!-- Naval Mine Sweeper -->
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAVAL_MINE_SWEEPER</Tag>
 		<English>Naval Mine Sweeper</English>
+		<French>Navale Mine Sweeper</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAVAL_MINE_SWEEPER_PEDIA</Tag>
@@ -111,10 +123,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAVAL_MINE_SWEEPER_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Naval Mine Sweeper[COLOR_REVERT] can be used to detect and remove enemy naval mines.  Use them to protect your Navy ships from destruction and to open up maritime trade routes.</English>
+		<French>The [COLOR_UNIT_TEXT]Navale Mine Sweeper[COLOR_REVERT] can be used to detect and remove enemy naval mines.  Use them to protect your Navy ships from destruction and to open up maritime trade routes.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MINE_SWEEPER_HELP</Tag>
 		<English>[ICON_BULLET]Can Remove Mines.</English>
+		<French>[ICON_BULLET]Can Remove Mines.</French>
 	</TEXT>
 	<!-- End Naval Mine Sweeper -->
 	<!-- Advanced Mine Technology Center National Wonder -->
@@ -129,7 +143,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ADVANCED_MINE_TECHNOLOGY_CENTER_PEDIA</Tag>
 		<English>The Advanced Mine Technology Center is a National Wonder designed to boost the output production and effective power of Mines.  The advanced technology learned in this facility is required to construct Nuclear Mines.</English>
-		<French>The Advanced Mine Technology Center is a National Wonder designed to boost the output production and effective power of Mines. The advanced technology learned in this facility is required to construct Nuclear Mines.</French>
+		<French>The Advanced Mine Technology Center is a National Wonder designed to boost the output production and effective power of Mines. The advanced technology learned in this facility is required to construct Nucléaire Mines.</French>
 		<German>The Advanced Mine Technology Center is a National Wonder designed to boost the output production and effective power of Mines. The advanced technology learned in this facility is required to construct Nuclear Mines.</German>
 		<Italian>The Advanced Mine Technology Center is a National Wonder designed to boost the output production and effective power of Mines. The advanced technology learned in this facility is required to construct Nuclear Mines.</Italian>
 		<Spanish>The Advanced Mine Technology Center is a National Wonder designed to boost the output production and effective power of Mines. The advanced technology learned in this facility is required to construct Nuclear Mines.</Spanish>
@@ -137,36 +151,44 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ADVANCED_MINE_TECHNOLOGY_CENTER_STRATEGY</Tag>
 		<English>[COLOR_BUILDING_TEXT]Advanced Mine Technology Center[COLOR_REVERT] doubles the production speed of Mines and Mine Fields by reducing the cost by 50%.  The effective power of Mines and Mine Fields against armored units is increased to allow Anti-Tank capability.</English>
+		<French>[COLOR_BUILDING_TEXT]Advanced Mine Technology Center[COLOR_REVERT] doubles the production speed of Mines and Mine Fields by reducing the cost by 50%.  The effective power of Mines and Mine Fields against armored units is increased to allow Anti-Tank capability.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADVANCED_MINE_TECHNOLOGY_CENTER_HELP</Tag>
 		<English>[ICON_BULLET]-50% Cost for Mines and Mine Fields[NEWLINE][ICON_BULLET]Provides Anti-Tank capability</English>
+		<French>[ICON_BULLET]-50% Cost for Mines and Mine Fields[NEWLINE][ICON_BULLET]Provides Anti-Tank capability</French>
 	</TEXT>
 	<!-- End Advanced Mine Technology Center National Wonder -->
 	<!-- Land Mines -->
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LAND_MINE</Tag>
 		<English>Land Mine</English>
+		<French>Mine Terrestre</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LAND_MINE_HELP</Tag>
 		<English>[ICON_BULLET]Harmless Until Armed.</English>
+		<French>[ICON_BULLET]Harmless Until Armed.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LAND_MINE_FIELD</Tag>
 		<English>Land Mine Field</English>
+		<French>Champ de Mines Terrestres</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LAND_MINE_FIELD_HELP</Tag>
 		<English>[ICON_BULLET]Harmless Until Armed.</English>
+		<French>[ICON_BULLET]Harmless Until Armed.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NUCLEAR_LAND_MINE</Tag>
 		<English>Nuclear Land Mine</English>
+		<French>Mine Nucléaire Terrestre</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NUCLEAR_LAND_MINE_HELP</Tag>
 		<English>[ICON_BULLET]Harmless Until Armed.[NEWLINE][COLOR_WARNING_TEXT]Requires Advanced Mine Technology Center Wonder[COLOR_REVERT]</English>
+		<French>[ICON_BULLET]Harmless Until Armed.[NEWLINE][COLOR_WARNING_TEXT]Requires Advanced Mine Technology Center Wonder[COLOR_REVERT]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INVISIBLE_LAND_MINE</Tag>
@@ -199,25 +221,29 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LAND_MINE_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Land Mine[COLOR_REVERT] is invisible to all units and has a hidden nationality. The land mine is lethal and will attack and totally destroy only one unit on a plot, when it explodes.  Once armed, the land mine cannot be disarmed, unless it is disbanded or removed by a Mine Sweeper.</English>
+		<French>The [COLOR_UNIT_TEXT]Terrestre Mine[COLOR_REVERT] is invisible to all units and has a hidden nationality. The land mine is lethal and will attack and totally destroy only one unit on a plot, when it explodes.  Once armed, the land mine cannot be disarmed, unless it is disbanded or removed by a Mine Sweeper.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LAND_MINE_FIELD_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Land Mine Field[COLOR_REVERT] is invisible to all units and has a hidden nationality.  The land mine field  is lethal and will attack all ships on a plot.  It has a high percentage randum chance of destroying any and all units that move into the plot and will remain persistant, requiring a Mine Sweeper to remove it.  Once armed, the land mine field cannot be disarmed, unless it is disbanded or removed by a Mine Sweeper.</English>
+		<French>The [COLOR_UNIT_TEXT]Terrestre Mine Field[COLOR_REVERT] is invisible to all units and has a hidden nationality.  The land mine field  is lethal and will attack all ships on a plot.  It has a high percentage randum chance of destroying any and all units that move into the plot and will remain persistant, requiring a Mine Sweeper to remove it.  Once armed, the land mine field cannot be disarmed, unless it is disbanded or removed by a Mine Sweeper.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NUCLEAR_LAND_MINE_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Nuclear Land Mine[COLOR_REVERT] is invisible to all units and has a hidden nationality.  The nuclear land mine can set off a nuclear explosion that is triggered by the owner.   The detonation will destroy every unit on the plot.  Once armed, the nuclear land mine cannot be disarmed, unless it is disbanded or removed by a Mine Sweeper.</English>
+		<French>The [COLOR_UNIT_TEXT]Nucléaire Terrestre Mine[COLOR_REVERT] is invisible to all units and has a hidden nationality.  The nucléaire land mine can set off a nucléaire explosion that is triggered by the owner.   The detonation will destroy every unit on the plot.  Once armed, the nucléaire land mine cannot be disarmed, unless it is disbanded or removed by a Mine Sweeper.</French>
 	</TEXT>
 	<!-- End Land Mines -->
 	<!-- Land Mine Sweeper -->
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LAND_MINE_SWEEPER</Tag>
 		<English>Land Mine Sweeper</English>
+		<French>Détecteur de Mines Terrestres</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LAND_MINE_SWEEPER_PEDIA</Tag>
 		<English>The Land Mine Sweeper is a special unit designed to counter the threat posed by land mines. Minesweepers generally detect then neutralize mines in advance of other army operations.</English>
-		<French>The Land Mine Sweeper is a special unit designed to counter the threat posed by land mines.  Minesweepers generally detect then neutralize mines in advance of other army operations.</French>
+		<French>The Terrestre Mine Sweeper is a special unit designed to counter the threat posed by land mines.  Minesweepers generally detect then neutralize mines in advance of other army operations.</French>
 		<Italian>The Land Mine Sweeper is a special unit designed to counter the threat posed by land mines.  Minesweepers generally detect then neutralize mines in advance of other army operations.</Italian>
 		<Spanish>The Land Mine Sweeper is a special unit designed to counter the threat posed by land mines.  Minesweepers generally detect then neutralize mines in advance of other army operations.</Spanish>
 		<Russian>The Land Mine Sweeper is a special unit designed to counter the threat posed by land mines.  Minesweepers generally detect then neutralize mines in advance of other army operations.</Russian>
@@ -227,59 +253,73 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LAND_MINE_SWEEPER_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Land Mine Sweeper[COLOR_REVERT] can be used to detect and remove enemy land mines.  Use them to protect your Army units from destruction and to open up trade routes.</English>
+		<French>The [COLOR_UNIT_TEXT]Terrestre Mine Sweeper[COLOR_REVERT] can be used to detect and remove enemy land mines.  Use them to protect your Army units from destruction and to open up trade routes.</French>
 	</TEXT>
 	<!-- End Land Mine Sweeper -->
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MINE_ARMED</Tag>
 		<English>Status (Mine Armed)</English>
+		<French>Statut (Mine Armée)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_ARM_MINE</Tag>
 		<English>Arm Mine</English>
+		<French>Armer la Mine</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_ARM_MINE_HELP</Tag>
 		<English>Place the Armed Mine on the plot fto blow up enemy units.</English>
+		<French>Place the Armed Mine on the plot fto blow up enemy units.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_DETONATE_NUCLEAR_MINE</Tag>
 		<English>Detonate Nuclear mine</English>
+		<French>Déclencher Mine Nucléaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_DETONATE_NUCLEAR_MINE_HELP</Tag>
 		<English>Explode a nuclear mine to destroy all units on the plot.</English>
+		<French>Faites exploser une mine nucléaire pour détruire toutes les unités de la case.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SWEEP_FOR_LAND_MINE</Tag>
 		<English>Sweep the plot looking for mines.</English>
+		<French>Sweep the plot looking for mines.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SWEEP_FOR_LAND_MINE_HELP</Tag>
 		<English>Remove any enemy mines you find..</English>
+		<French>Remove any enemy mines you find..</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SWEEP_FOR_SEA_MINE</Tag>
 		<English>Sweep the plot looking for mines.</English>
+		<French>Sweep the plot looking for mines.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SWEEP_FOR_SEA_MINE_HELP</Tag>
 		<English>Remove any enemy mines you find..</English>
+		<French>Remove any enemy mines you find..</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ARM_MINE</Tag>
 		<English>Arm Mine</English>
+		<French>Mine Arm</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ARM_MINE_MESSAGE</Tag>
 		<English>Your mine is armed and immoble.</English>
+		<French>Your mine is armed and immoble.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_DETONATE_NUCLEAR_MINE</Tag>
 		<English>Detonate Nuclear mine</English>
+		<French>Déclencher la Mine Nucléaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_DETONATE_NUCLEAR_MINE_MESSAGE</Tag>
 		<English>Your nuclear mine has exploded..</English>
+		<French>Your nucléaire mine has exploded..</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SWEEP_FOR_LAND_MINE_MESSAGE</Tag>

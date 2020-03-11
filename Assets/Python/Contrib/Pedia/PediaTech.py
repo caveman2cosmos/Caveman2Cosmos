@@ -141,7 +141,7 @@ class PediaTech:
 				szText = "<color=255,0,0,255>"
 			else:
 				szText = "<color=0,230,0,255>"
-			szText += str(iWorkerSpeedModifier) + "% Worker Speed"
+			szText += str(iWorkerSpeedModifier) + TRNSLTR.getText("TXT_KEY_PEDIA_TECH_WORKER_SPEED", ())
 			screen.appendListBoxStringNoUpdate(Pnl, szfont3b + szText, eWidGen, 0, 0, 1<<2)
 
 		screen.updateListBox(Pnl)

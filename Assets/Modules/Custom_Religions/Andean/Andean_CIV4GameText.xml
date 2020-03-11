@@ -231,7 +231,7 @@ meaning 'Golden Courtyard'), originally named Inti Kancha (' Temple of the Sun')
 		<Tag>TXT_KEY_UNITCOMBAT_RELIGION_ANDEANISM</Tag>
 		<English>Religion(Andeanism)</English>
 		<French>
-			<Text>Religion(Andeanisme)</Text>
+			<Text>(Religion) Andéanisme</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>

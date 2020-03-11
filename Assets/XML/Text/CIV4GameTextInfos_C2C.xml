@@ -755,7 +755,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_WONDER_COMPLETED_UNKNOWN</Tag>
 		<English>%s1_WndrName has been built in a far away land!</English>
-		<French>Cette merveille ([COLOR_HIGHLIGHT_TEXT]%s1_WndrName[COLOR_REVERT]) a &#233;t&#233; construite dans un pays lointain !</French>
+		<French>[COLOR_GREY]Cette merveille ([COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]%s1_WndrName[COLOR_REVERT])[COLOR_GREY] a &#233;t&#233; construite dans un pays lointain ![COLOR_REVERT]</French>
 		<German>Das Wunder %s1_WndrName wurde in einem fernen Land errichtet!</German>
 		<Italian>[NUM1:Il:La] %s1_WndrName &#232; [NUM1:stato costruito:stata costruita] in una terra lontana!</Italian>
 		<Spanish>Han construido %s1_WndrName en una tierra muy lejana.</Spanish>

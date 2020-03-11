@@ -1669,7 +1669,7 @@
 		<Tag>TXT_KEY_UNIT_TALESOF_SALTWATER_CROCL</Tag>
 		<English>Tales of Salt water crocodile (large)</English>
 		<French>
-			<Text>Contes de Grands Crocodiles des mers</Text>
+			<Text>Histoires de Grands Crocodiles des mers</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -1684,7 +1684,7 @@
 		<Tag>TXT_KEY_UNIT_TALESOF_SALTWATER_CROCS</Tag>
 		<English>Tales of Salt water crocodile (small)</English>
 		<French>
-			<Text>Contes de Crocodiles des mers</Text>
+			<Text>Histoires de Crocodiles des mers</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -1759,7 +1759,7 @@
 		<Tag>TXT_KEY_UNIT_TALESOF_GIANT_SQUID</Tag>
 		<English>Tales of Giant Squid</English>
 		<French>
-			<Text>Contes de Calamars géants</Text>
+			<Text>Histoires de Calamars géants</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -2364,7 +2364,7 @@
 		<Tag>TXT_KEY_SPECIALUNIT_BIRD</Tag>
 		<English>Hawk</English>
 		<French>
-			<Text>Faucon (App.)</Text>
+			<Text>Faucon (Dressé)</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -2379,5 +2379,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_EAGLE_BALD</Tag>
 		<English>Subdued Bald Eagle</English>
+		<French>Pygargue à tête blanche (App.)</French>		
 	</TEXT>
 </Civ4GameText>
