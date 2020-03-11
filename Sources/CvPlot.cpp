@@ -1626,22 +1626,7 @@ bool CvPlot::isPlotGroupConnectedBonus(PlayerTypes ePlayer, BonusTypes eBonus) c
 
 bool CvPlot::isAdjacentPlotGroupConnectedBonus(PlayerTypes ePlayer, BonusTypes eBonus) const
 {
-	int iI;
-
-	for (iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
-	{
-		const CvPlot* pAdjacentPlot = plotDirection(getX(), getY(), ((DirectionTypes)iI));
-
-		if (pAdjacentPlot != NULL)
-		{
-			if (pAdjacentPlot->isPlotGroupConnectedBonus(ePlayer, eBonus))
-			{
-				return true;
-			}
-		}
-	}
-
-	return false;
+	return algo::any_of(adjacent(), CvPlot::fn::isPlotGroupConnectedBonus(ePlayer, eBonus));
 }
 
 
@@ -1649,27 +1634,22 @@ void CvPlot::updatePlotGroupBonus(bool bAdd)
 {
 	PROFILE_FUNC();
 
-	CvCity* pPlotCity;
-	CvPlotGroup* pPlotGroup;
-	BonusTypes eNonObsoleteBonus;
-	int iI;
-
 	if (!isOwned())
 	{
 		return;
 	}
 
-	pPlotGroup = getPlotGroup(getOwner());
+	CvPlotGroup* pPlotGroup = getPlotGroup(getOwner());
 
 	if (pPlotGroup != NULL)
 	{
-		pPlotCity = getPlotCity();
+		const CvCity* pPlotCity = getPlotCity();
 
 		if (pPlotCity != NULL)
 		{
 			PROFILE("CvPlot::updatePlotGroupBonus.PlotCity");
 
-			for (iI = 0; iI < GC.getNumBonusInfos(); ++iI)
+			for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
 			{
 				if (!GET_TEAM(getTeam()).isBonusObsolete((BonusTypes)iI))
 				{
@@ -1681,7 +1661,7 @@ void CvPlot::updatePlotGroupBonus(bool bAdd)
 			{
 				PROFILE("CvPlot::updatePlotGroupBonus.Capital");
 
-				for (iI = 0; iI < GC.getNumBonusInfos(); ++iI)
+				for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
 				{
 					pPlotGroup->changeNumBonuses(((BonusTypes)iI), (GET_PLAYER(getOwner()).getBonusExport((BonusTypes)iI) * ((bAdd) ? -1 : 1)));
 					pPlotGroup->changeNumBonuses(((BonusTypes)iI), (GET_PLAYER(getOwner()).getBonusImport((BonusTypes)iI) * ((bAdd) ? 1 : -1)));
@@ -1689,7 +1669,7 @@ void CvPlot::updatePlotGroupBonus(bool bAdd)
 			}
 		}
 
-		eNonObsoleteBonus = getNonObsoleteBonusType(getTeam());
+		const BonusTypes eNonObsoleteBonus = getNonObsoleteBonusType(getTeam());
 
 		if (eNonObsoleteBonus != NO_BONUS)
 		{
@@ -1717,25 +1697,7 @@ void CvPlot::updatePlotGroupBonus(bool bAdd)
 
 bool CvPlot::isAdjacentToArea(int iAreaID) const
 {
-	PROFILE_FUNC();
-
-	CvPlot* pAdjacentPlot;
-	int iI;
-
-	for (iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
-	{
-		pAdjacentPlot = plotDirection(getX(), getY(), ((DirectionTypes)iI));
-
-		if (pAdjacentPlot != NULL)
-		{
-			if (pAdjacentPlot->getArea() == iAreaID)
-			{
-				return true;
-			}
-		}
-	}
-
-	return false;
+	return algo::any_of(adjacent(), CvPlot::fn::getArea() == iAreaID);
 }
 
 bool CvPlot::isAdjacentToArea(const CvArea* pArea) const
@@ -1748,30 +1710,20 @@ bool CvPlot::shareAdjacentArea(const CvPlot* pPlot) const
 {
 	PROFILE_FUNC();
 
-	int iCurrArea;
-	int iLastArea;
-	CvPlot* pAdjacentPlot;
-	int iI;
+	int iLastArea = FFreeList::INVALID_INDEX;
 
-	iLastArea = FFreeList::INVALID_INDEX;
-
-	for (iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+	foreach_(const CvPlot* adjacentPlot, adjacent())
 	{
-		pAdjacentPlot = plotDirection(getX(), getY(), ((DirectionTypes)iI));
+		const int iCurrArea = adjacentPlot->getArea();
 
-		if (pAdjacentPlot != NULL)
+		if (iCurrArea != iLastArea)
 		{
-			iCurrArea = pAdjacentPlot->getArea();
-
-			if (iCurrArea != iLastArea)
+			if (pPlot->isAdjacentToArea(iCurrArea))
 			{
-				if (pPlot->isAdjacentToArea(iCurrArea))
-				{
-					return true;
-				}
-
-				iLastArea = iCurrArea;
+				return true;
 			}
+
+			iLastArea = iCurrArea;
 		}
 	}
 
@@ -1781,19 +1733,7 @@ bool CvPlot::shareAdjacentArea(const CvPlot* pPlot) const
 
 bool CvPlot::isAdjacentToLand() const
 {
-	PROFILE_FUNC();
-
-	for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
-	{
-		CvPlot* pAdjacentPlot = plotDirection(getX(), getY(), ((DirectionTypes)iI));
-
-		if (pAdjacentPlot != NULL && !pAdjacentPlot->isWater())
-		{
-			return true;
-		}
-	}
-
-	return false;
+	return algo::any_of(adjacent(), !CvPlot::fn::isWater());
 }
 
 
@@ -1866,20 +1806,9 @@ bool CvPlot::isLake() const
 
 // XXX if this changes need to call updateIrrigated() and pCity->updateFreshWaterHealth()
 // XXX precalculate this???
-/************************************************************************************************/
-/* Afforess	                  Start		 07/22/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/*
-bool CvPlot::isFreshWater() const
-*/
 bool CvPlot::isFreshWater(bool bIgnoreJungle) const
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 {
-	CvCity* pCity = getPlotCity();
+	const CvCity* pCity = getPlotCity();
 	if (pCity != NULL && pCity->hasFreshWater())
 	{
 		return true;
@@ -1890,7 +1819,7 @@ bool CvPlot::isFreshWater(bool bIgnoreJungle) const
 		return true;
 	}
 
-	TeamTypes eTeam = getTeam();
+	const TeamTypes eTeam = getTeam();
 
 	if (isWater() || isImpassable(eTeam))
 	{
@@ -1948,8 +1877,6 @@ bool CvPlot::isPotentialIrrigation() const
 
 bool CvPlot::canHavePotentialIrrigation() const
 {
-	int iI;
-
 //===NM=====Mountain Mod===0X=====
 	//TB Debug: Why should it be necessary for cities to require Not being on either hills or alternative peak types (like volcanoes) for them to be potentially irrigated?  Seems to be a strange requirement for wells to function.
 	if (isCity() /*&& !(isHills() || isPeak2(true))*/)
@@ -1957,7 +1884,7 @@ bool CvPlot::canHavePotentialIrrigation() const
 		return true;
 	}
 
-	for (iI = 0; iI < GC.getNumImprovementInfos(); ++iI)
+	for (int iI = 0; iI < GC.getNumImprovementInfos(); ++iI)
 	{
 		if (GC.getImprovementInfo((ImprovementTypes)iI).isCarriesIrrigation())
 		{
@@ -1974,51 +1901,18 @@ bool CvPlot::canHavePotentialIrrigation() const
 
 bool CvPlot::isIrrigationAvailable(bool bIgnoreSelf) const
 {
-	CvPlot* pAdjacentPlot;
-	int iI;
-
-	if (!bIgnoreSelf && isIrrigated())
-	{
-		return true;
-	}
-
-	if (isFreshWater())
-	{
-		return true;
-	}
-
-	for (iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
-	{
-		pAdjacentPlot = plotDirection(getX(), getY(), ((DirectionTypes)iI));
-
-		if (pAdjacentPlot != NULL)
-		{
-			if (pAdjacentPlot->isIrrigated())
-			{
-				return true;
-			}
-		}
-	}
-
-	return false;
+	return (!bIgnoreSelf && isIrrigated()) || isFreshWater() || algo::any_of(adjacent(), CvPlot::fn::isIrrigated());
 }
 
 
 bool CvPlot::isRiverMask() const
 {
-	CvPlot* pPlot;
-
-	if (isNOfRiver())
+	if (isNOfRiver() || isWOfRiver())
 	{
 		return true;
 	}
 
-	if (isWOfRiver())
-	{
-		return true;
-	}
-
-	pPlot = plotDirection(getX(), getY(), DIRECTION_EAST);
+	CvPlot* pPlot = plotDirection(getX(), getY(), DIRECTION_EAST);
 	if ((pPlot != NULL) && pPlot->isNOfRiver())
 	{
 		return true;
@@ -2611,7 +2505,7 @@ void CvPlot::updateSight(bool bIncrement, bool bUpdatePlotGroups)
 		//fixed 12/5/12 by damgo and reinstated by ls612
 		if (pCity->isCapital())
 		{
-			TeamTypes pTeam = pCity->getTeam();
+			const TeamTypes pTeam = pCity->getTeam();
 			for (iI = 0; iI < MAX_PC_TEAMS; ++iI)
 			{
 				if (GET_TEAM(pTeam).isHasEmbassy((TeamTypes)iI))
@@ -2625,7 +2519,6 @@ void CvPlot::updateSight(bool bIncrement, bool bUpdatePlotGroups)
 		/************************************************************************************************/
 	}
 
-	// Owned
 	if (isOwned())
 	{
 		changeAdjacentSight(getTeam(), GC.getDefineINT("PLOT_VISIBILITY_RANGE"), bIncrement, NULL, bUpdatePlotGroups);
@@ -10346,7 +10239,6 @@ void CvPlot::clearVisibilityCounts()
 void CvPlot::changeVisibilityCount(TeamTypes eTeam, int iChange, InvisibleTypes eSeeInvisible, bool bUpdatePlotGroups, int iIntensity, int iUnitID)
 {
 	CvCity* pCity;
-	CvPlot* pAdjacentPlot;
 	bool bOldVisible;
 	int iI;
 

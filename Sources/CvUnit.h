@@ -3304,6 +3304,7 @@ public:
 	//
 	struct fn {
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isDead);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, isHurt);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, hasCargo);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isCargo);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isFull);
@@ -3323,6 +3324,7 @@ public:
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, IsSelected);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isCommander);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isGoldenAge);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, hasHealSupportRemaining);
 
 		DECLARE_MAP_FUNCTOR_1(CvUnit, bool, meetsUnitSelectionCriteria, const CvUnitSelectionCriteria*);
 		DECLARE_MAP_FUNCTOR_1(CvUnit, bool, canPillage, const CvPlot*);

@@ -1257,76 +1257,54 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 		{
 			pLoopUnit = ::getUnit(oldUnits[i]);
 
-			if (pLoopUnit != NULL)
+			if (pLoopUnit != NULL && pLoopUnit->getTransportUnit() == this)
 			{
-				if (pLoopUnit->getTransportUnit() == this)
+				//save old units because kill will clear the static list
+				std::vector<IDInfo> tempUnits = oldUnits;
+
+				if (pPlot->isValidDomainForLocation(*pLoopUnit))
 				{
-					//save old units because kill will clear the static list
-					std::vector<IDInfo> tempUnits = oldUnits;
+					pLoopUnit->setCapturingPlayer(NO_PLAYER);
+					pLoopUnit->setCapturingUnit(this);
+				}
+				bool bSurvived = false;
+				CvPlot* pRescuePlot = NULL;
+				if (GC.getDefineINT("WAR_PRIZES") && pPlot->isWater())
+				{
+					bool bAdjacentLand = false;
 
-					if (pPlot->isValidDomainForLocation(*pLoopUnit))
+					foreach_(CvPlot* pAdjacentPlot, pPlot->adjacent() | filtered(!CvPlot::fn::isWater() && CvPlot::fn::isVisibleEnemyUnit(ePlayer)))
 					{
-						pLoopUnit->setCapturingPlayer(NO_PLAYER);
-						pLoopUnit->setCapturingUnit(this);
+						pRescuePlot = pAdjacentPlot;
+						bAdjacentLand = true;
+						break;
 					}
-					bool bSurvived = false;
-					CvPlot* pRescuePlot = NULL;
-					if (GC.getDefineINT("WAR_PRIZES"))
+					if (bAdjacentLand && GC.getGame().getSorenRandNum(10, "Unit Survives Drowning") <= 2 )
 					{
-						if (pPlot->isWater())
-						{
-							bool bAdjacentLand = false;
-							CvPlot* pAdjacentPlot;
-							int iI;
-
-							for (iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
-							{
-								pAdjacentPlot = plotDirection(getX(), getY(), ((DirectionTypes)iI));
-
-								if (pAdjacentPlot != NULL)
-								{
-									if (!(pAdjacentPlot->isWater()))
-									{
-										if (!pAdjacentPlot->isVisibleEnemyUnit(pLoopUnit))
-										{
-											pRescuePlot = pAdjacentPlot;
-											bAdjacentLand = true;
-											break;
-										}
-									}
-								}
-							}
-							if (bAdjacentLand)
-							{
-								if (GC.getGame().getSorenRandNum(10, "Unit Survives Drowning") <= 2 )
-								{
-									bSurvived = true;
-								}
-							}
-						}
+						bSurvived = true;
 					}
-					if (bSurvived)
-					{
-						FAssertMsg(pRescuePlot != NULL, "pRescuePlot is expected to be a valid plot!");
-						pLoopUnit->setDamage(GC.getGame().getSorenRandNum(pLoopUnit->currHitPoints(), "Survival Damage"), NO_PLAYER);
-						pLoopUnit->move(pRescuePlot, false);
+				}
+				if (bSurvived)
+				{
+					FAssertMsg(pRescuePlot != NULL, "pRescuePlot is expected to be a valid plot!");
+					pLoopUnit->setDamage(GC.getGame().getSorenRandNum(pLoopUnit->currHitPoints(), "Survival Damage"), NO_PLAYER);
+					pLoopUnit->move(pRescuePlot, false);
 
-						MEMORY_TRACK_EXEMPT();
+					MEMORY_TRACK_EXEMPT();
 
-						szBuffer = gDLL->getText("TXT_KEY_MISC_UNIT_SURVIVED_TRANSPORT_SINKING", pLoopUnit->getNameKey(), getNameKey());
-						AddDLLMessage(pLoopUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT);
-					}
-					else
-					{
-						MEMORY_TRACK_EXEMPT();
+					szBuffer = gDLL->getText("TXT_KEY_MISC_UNIT_SURVIVED_TRANSPORT_SINKING", pLoopUnit->getNameKey(), getNameKey());
+					AddDLLMessage(pLoopUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT);
+				}
+				else
+				{
+					MEMORY_TRACK_EXEMPT();
 
-						szBuffer = gDLL->getText("TXT_KEY_MISC_UNIT_DROWNED", pLoopUnit->getNameKey());
-						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGame().getCurrentEra()).getAudioUnitDefeatScript(), MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
-						bMessaged = true;
-						pLoopUnit->kill(false, ePlayer, bMessaged);
+					szBuffer = gDLL->getText("TXT_KEY_MISC_UNIT_DROWNED", pLoopUnit->getNameKey());
+					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGame().getCurrentEra()).getAudioUnitDefeatScript(), MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
+					bMessaged = true;
+					pLoopUnit->kill(false, ePlayer, bMessaged);
 
-						oldUnits = tempUnits;
-					}
+					oldUnits = tempUnits;
 				}
 			}
 		}
@@ -1461,14 +1439,9 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 /*
 		if (isZoneOfControl())
 		{
-			for (int iJ = 0; iJ < NUM_DIRECTION_TYPES; iJ++)
+			foreach_(CvPlot* pAdjacentPlot, plot()->adjacent())
 			{
-				CvPlot* pAdjacentPlot = plotDirection(getX(), getY(), ((DirectionTypes)iJ));
-
-				if (pAdjacentPlot != NULL)
-				{
-					pAdjacentPlot->clearZoneOfControlCache();
-				}
+				pAdjacentPlot->clearZoneOfControlCache();
 			}
 		}
 */
@@ -3744,9 +3717,9 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				if (fInfluenceRatio > 0.0f)
 				/*** Dexy - Fixed Borders  END  ****/
 				{
-				CvWString szTempBuffer;
-				szTempBuffer.Format(L" Influence: -%.1f%%", fInfluenceRatio);
-				szBuffer += szTempBuffer;
+					CvWString szTempBuffer;
+					szTempBuffer.Format(L" Influence: -%.1f%%", fInfluenceRatio);
+					szBuffer += szTempBuffer;
 				}
 			}
 			// ------ END InfluenceDrivenWar ---------------------------------
@@ -3838,31 +3811,12 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 			{
 				if (GC.getGame().getSorenRandNum(100, "Field Hospital Die Roll") <= pDefender->getVictoryAdjacentHeal())
 				{
-					int iI;
-					for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+					foreach_(const CvPlot* pLoopPlot, pPlot->adjacent() | filtered(CvPlot::fn::area() == pPlot->area()))
 					{
-						CvPlot* pLoopPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
-						if (pLoopPlot != NULL)
+						foreach_(CvUnit* pLoopUnit, pLoopPlot->units() | filtered(CvUnit::fn::getTeam() == pDefender->getTeam() && CvUnit::fn::isHurt()))
 						{
-							if (pLoopPlot->area() == pPlot->area())
-							{
-								CLLNode<IDInfo>* pUnitNode = pLoopPlot->headUnitNode();
-
-								while (pUnitNode != NULL)
-								{
-									CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-									pUnitNode = pLoopPlot->nextUnitNode(pUnitNode);
-
-									if (pLoopUnit->getTeam() == pDefender->getTeam())
-									{
-										if (pLoopUnit->isHurt())
-										{
-											iUnitsHealed++;
-											pLoopUnit->doHeal();
-										}
-									}
-								}
-							}
+							iUnitsHealed++;
+							pLoopUnit->doHeal();
 						}
 					}
 				}
@@ -3874,21 +3828,11 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				if (GC.getGame().getSorenRandNum(100, "Field Surgeon Die Roll") <= pDefender->getVictoryStackHeal())
 				{
 					bDefenderHealed = true;
-					CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
 
-					while (pUnitNode != NULL)
+					foreach_(CvUnit* pLoopUnit, pPlot->units() | filtered(CvUnit::fn::getTeam() == pDefender->getTeam() && CvUnit::fn::isHurt()))
 					{
-						CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-						pUnitNode = pPlot->nextUnitNode(pUnitNode);
-
-						if (pLoopUnit->getTeam() == pDefender->getTeam())
-						{
-							if (pLoopUnit->isHurt())
-							{
-								iUnitsHealed++;
-								pLoopUnit->doHeal();
-							}
-						}
+						iUnitsHealed++;
+						pLoopUnit->doHeal();
 					}
 				}
 			}
@@ -4259,31 +4203,12 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 			{
 				if (GC.getGame().getSorenRandNum(100, "Field Hospital Die Roll") <= getVictoryAdjacentHeal())
 				{
-					int iI;
-					for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+					foreach_(const CvPlot* pLoopPlot, pPlot->adjacent() | filtered(CvPlot::fn::area() == pPlot->area()))
 					{
-						CvPlot* pLoopPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
-						if (pLoopPlot != NULL)
+						foreach_(CvUnit* pLoopUnit, pLoopPlot->units() | filtered(CvUnit::fn::getTeam() == getTeam() && CvUnit::fn::isHurt()))
 						{
-							if (pLoopPlot->area() == pPlot->area())
-							{
-								CLLNode<IDInfo>* pUnitNode = pLoopPlot->headUnitNode();
-
-								while (pUnitNode != NULL)
-								{
-									CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-									pUnitNode = pLoopPlot->nextUnitNode(pUnitNode);
-
-									if (pLoopUnit->getTeam() == getTeam())
-									{
-										if (pLoopUnit->isHurt())
-										{
-											iUnitsHealed++;
-											pLoopUnit->doHeal();
-										}
-									}
-								}
-							}
+							iUnitsHealed++;
+							pLoopUnit->doHeal();
 						}
 					}
 				}
@@ -4295,21 +4220,11 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				if (GC.getGame().getSorenRandNum(100, "Field Surgeon Die Roll") <= getVictoryStackHeal())
 				{
 					bIsHealed = true;
-					CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
 
-					while (pUnitNode != NULL)
+					foreach_(CvUnit* pLoopUnit, pPlot->units() | filtered(CvUnit::fn::getTeam() == getTeam() && CvUnit::fn::isHurt()))
 					{
-						CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-						pUnitNode = pPlot->nextUnitNode(pUnitNode);
-
-						if (pLoopUnit->getTeam() == getTeam())
-						{
-							if (pLoopUnit->isHurt())
-							{
-								iUnitsHealed++;
-								pLoopUnit->doHeal();
-							}
-						}
+						iUnitsHealed++;
+						pLoopUnit->doHeal();
 					}
 				}
 			}
@@ -8364,7 +8279,6 @@ int CvUnit::healRate(const CvPlot* pPlot, bool bHealCheck) const
 	CvCity* pCity;
 	CvUnit* pLoopUnit;
 	CvUnit* pHealUnit = NULL;
-	CvPlot* pLoopPlot;
 	int iTotalHeal;
 	int iHeal;
 	int iBestHeal;
@@ -8492,36 +8406,21 @@ int CvUnit::healRate(const CvPlot* pPlot, bool bHealCheck) const
 		}
 	}
 
-	for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+	foreach_(const CvPlot* pLoopPlot, pPlot->adjacent() | filtered(CvPlot::fn::area() == pPlot->area()))
 	{
-		pLoopPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
-
-		if (pLoopPlot != NULL)
+		foreach_(CvUnit* pLoopUnit, pLoopPlot->units()
+			| filtered(CvUnit::fn::getTeam() == getTeam() && CvUnit::fn::hasHealSupportRemaining())) // XXX what about alliances?
 		{
-			if (pLoopPlot->area() == pPlot->area())
+			iHeal = pLoopUnit->getAdjacentTileHeal();
+			//if (pLoopUnit->getAdjacentTileHeal() > 0)
+			//{
+			//	iHeal += pLoopUnit->establishModifier();
+			//}
+
+			if (iHeal > iBestHeal)
 			{
-				pUnitNode = pLoopPlot->headUnitNode();
-
-				while (pUnitNode != NULL)
-				{
-					pLoopUnit = ::getUnit(pUnitNode->m_data);
-					pUnitNode = pLoopPlot->nextUnitNode(pUnitNode);
-
-					if (pLoopUnit->getTeam() == getTeam() && pLoopUnit->hasHealSupportRemaining()) // XXX what about alliances?
-					{
-						iHeal = pLoopUnit->getAdjacentTileHeal();
-						//if (pLoopUnit->getAdjacentTileHeal() > 0)
-						//{
-						//	iHeal += pLoopUnit->establishModifier();
-						//}
-
-						if (iHeal > iBestHeal)
-						{
-							iBestHeal = iHeal;
-							pHealUnit = pLoopUnit;
-						}
-					}
-				}
+				iBestHeal = iHeal;
+				pHealUnit = pLoopUnit;
 			}
 		}
 	}
@@ -8554,7 +8453,6 @@ int CvUnit::getHealRateAsType(const CvPlot* pPlot, bool bHealCheck, UnitCombatTy
 	CvCity* pCity;
 	CvUnit* pLoopUnit;
 	CvUnit* pHealUnit = NULL;
-	CvPlot* pLoopPlot;
 	int iTotalHeal;
 	int iHeal;
 	int iBestHeal;
@@ -8644,37 +8542,22 @@ int CvUnit::getHealRateAsType(const CvPlot* pPlot, bool bHealCheck, UnitCombatTy
 		}
 	}
 
-	for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+	foreach_(const CvPlot* pLoopPlot, pPlot->adjacent() | filtered(CvPlot::fn::area() == pPlot->area()))
 	{
-		pLoopPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
-
-		if (pLoopPlot != NULL)
+		foreach_(CvUnit* pLoopUnit, pLoopPlot->units()
+			| filtered(CvUnit::fn::getTeam() == getTeam() && CvUnit::fn::hasHealSupportRemaining())) // XXX what about alliances?
 		{
-			if (pLoopPlot->area() == pPlot->area())
+			iHeal = pLoopUnit->getAdjacentTileHeal();
+			iHeal += pLoopUnit->getHealUnitCombatTypeAdjacentTotal(eHealAsType);
+			//if (pLoopUnit->getAdjacentTileHeal() > 0 || pLoopUnit->getHealUnitCombatTypeAdjacentTotal(eHealAsType) > 0)
+			//{
+			//	iHeal += pLoopUnit->establishModifier();
+			//}
+
+			if (iHeal > iBestHeal)
 			{
-				pUnitNode = pLoopPlot->headUnitNode();
-
-				while (pUnitNode != NULL)
-				{
-					pLoopUnit = ::getUnit(pUnitNode->m_data);
-					pUnitNode = pLoopPlot->nextUnitNode(pUnitNode);
-
-					if (pLoopUnit->getTeam() == getTeam() && pLoopUnit->hasHealSupportRemaining()) // XXX what about alliances?
-					{
-						iHeal = pLoopUnit->getAdjacentTileHeal();
-						iHeal += pLoopUnit->getHealUnitCombatTypeAdjacentTotal(eHealAsType);
-						//if (pLoopUnit->getAdjacentTileHeal() > 0 || pLoopUnit->getHealUnitCombatTypeAdjacentTotal(eHealAsType) > 0)
-						//{
-						//	iHeal += pLoopUnit->establishModifier();
-						//}
-
-						if (iHeal > iBestHeal)
-						{
-							iBestHeal = iHeal;
-							pHealUnit = pLoopUnit;
-						}
-					}
-				}
+				iBestHeal = iHeal;
+				pHealUnit = pLoopUnit;
 			}
 		}
 	}
@@ -10147,32 +10030,24 @@ CvCity* CvUnit::bombardTarget(const CvPlot* pPlot) const
 	int iBestValue = MAX_INT;
 	CvCity* pBestCity = NULL;
 
-	for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+	foreach_(const CvPlot* pLoopPlot, pPlot->adjacent())
 	{
-		CvPlot* pLoopPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
+		CvCity* pLoopCity = pLoopPlot->getPlotCity();
 
-		if (pLoopPlot != NULL)
+		if (pLoopCity != NULL && pLoopCity->isBombardable(this))
 		{
-			CvCity* pLoopCity = pLoopPlot->getPlotCity();
+			int iValue = pLoopCity->getDefenseDamage();
 
-			if (pLoopCity != NULL)
+			// always prefer cities we are at war with
+			if (isEnemy(pLoopCity->getTeam(), pPlot))
 			{
-				if (pLoopCity->isBombardable(this))
-				{
-					int iValue = pLoopCity->getDefenseDamage();
+				iValue *= 128;
+			}
 
-					// always prefer cities we are at war with
-					if (isEnemy(pLoopCity->getTeam(), pPlot))
-					{
-						iValue *= 128;
-					}
-
-					if (iValue < iBestValue)
-					{
-						iBestValue = iValue;
-						pBestCity = pLoopCity;
-					}
-				}
+			if (iValue < iBestValue)
+			{
+				iBestValue = iValue;
+				pBestCity = pLoopCity;
 			}
 		}
 	}
@@ -10187,28 +10062,20 @@ CvPlot* CvUnit::bombardImprovementTarget(const CvPlot* pPlot) const
 	int iBestValue = MAX_INT;
 	CvPlot* pBestPlot = NULL;
 
-	for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+	foreach_(CvPlot* pLoopPlot, pPlot->adjacent() | filtered(CvPlot::fn::isBombardable(this)))
 	{
-		CvPlot* pLoopPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
+		int iValue = pLoopPlot->getDefenseDamage();
 
-		if (pLoopPlot != NULL)
+		// always prefer cities we are at war with
+		if (isEnemy(pLoopPlot->getTeam(), pPlot))
 		{
-			if (pLoopPlot->isBombardable(this))
-			{
-				int iValue = pLoopPlot->getDefenseDamage();
+			iValue *= 128;
+		}
 
-				// always prefer cities we are at war with
-				if (isEnemy(pLoopPlot->getTeam(), pPlot))
-				{
-					iValue *= 128;
-				}
-
-				if (iValue < iBestValue)
-				{
-					iBestValue = iValue;
-					pBestPlot = pLoopPlot;
-				}
-			}
+		if (iValue < iBestValue)
+		{
+			iBestValue = iValue;
+			pBestPlot = pLoopPlot;
 		}
 	}
 
@@ -10886,38 +10753,22 @@ int CvUnit::sabotageCost(const CvPlot* pPlot) const
 // XXX compare with destroy prob...
 int CvUnit::sabotageProb(const CvPlot* pPlot, ProbabilityTypes eProbStyle) const
 {
-	CvPlot* pLoopPlot;
-	int iDefenseCount;
-	int iCounterSpyCount;
-	int iProb;
-	int iI;
-
-	iProb = 0; // XXX
+	int iDefenseCount = 0;
+	int iCounterSpyCount = 0;
+	int iProb = 0; // XXX
 
 	if (pPlot->isOwned())
 	{
 		iDefenseCount = pPlot->plotCount(PUF_canDefend, -1, -1, NULL, NO_PLAYER, pPlot->getTeam());
 		iCounterSpyCount = pPlot->plotCount(PUF_isCounterSpy, -1, -1, NULL, NO_PLAYER, pPlot->getTeam());
 
-		for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+		if (eProbStyle != PROBABILITY_HIGH)
 		{
-			pLoopPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
-
-			if (pLoopPlot != NULL)
+			foreach_(const CvPlot* adjacentPlot, pPlot->adjacent())
 			{
-				iCounterSpyCount += pLoopPlot->plotCount(PUF_isCounterSpy, -1, -1, NULL, NO_PLAYER, pPlot->getTeam());
+				iCounterSpyCount += adjacentPlot->plotCount(PUF_isCounterSpy, -1, -1, NULL, NO_PLAYER, pPlot->getTeam());
 			}
 		}
-	}
-	else
-	{
-		iDefenseCount = 0;
-		iCounterSpyCount = 0;
-	}
-
-	if (eProbStyle == PROBABILITY_HIGH)
-	{
-		iCounterSpyCount = 0;
 	}
 
 	iProb += (40 / (iDefenseCount + 1)); // XXX
@@ -11080,14 +10931,11 @@ int CvUnit::destroyCost(const CvPlot* pPlot) const
 
 int CvUnit::destroyProb(const CvPlot* pPlot, ProbabilityTypes eProbStyle) const
 {
-	CvCity* pCity;
-	CvPlot* pLoopPlot;
 	int iDefenseCount;
 	int iCounterSpyCount;
 	int iProb;
-	int iI;
 
-	pCity = pPlot->getPlotCity();
+	CvCity* pCity = pPlot->getPlotCity();
 
 	if (pCity == NULL)
 	{
@@ -11100,14 +10948,9 @@ int CvUnit::destroyProb(const CvPlot* pPlot, ProbabilityTypes eProbStyle) const
 
 	iCounterSpyCount = pPlot->plotCount(PUF_isCounterSpy, -1, -1, NULL, NO_PLAYER, pPlot->getTeam());
 
-	for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+	foreach_(const CvPlot* adjacentPlot, pPlot->adjacent())
 	{
-		pLoopPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
-
-		if (pLoopPlot != NULL)
-		{
-			iCounterSpyCount += pLoopPlot->plotCount(PUF_isCounterSpy, -1, -1, NULL, NO_PLAYER, pPlot->getTeam());
-		}
+		iCounterSpyCount += adjacentPlot->plotCount(PUF_isCounterSpy, -1, -1, NULL, NO_PLAYER, pPlot->getTeam());
 	}
 
 	if (eProbStyle == PROBABILITY_HIGH)
@@ -11270,14 +11113,11 @@ int CvUnit::stealPlansCost(const CvPlot* pPlot) const
 // XXX compare with destroy prob...
 int CvUnit::stealPlansProb(const CvPlot* pPlot, ProbabilityTypes eProbStyle) const
 {
-	CvCity* pCity;
-	CvPlot* pLoopPlot;
 	int iDefenseCount;
 	int iCounterSpyCount;
 	int iProb;
-	int iI;
 
-	pCity = pPlot->getPlotCity();
+	CvCity* pCity = pPlot->getPlotCity();
 
 	if (pCity == NULL)
 	{
@@ -11290,14 +11130,9 @@ int CvUnit::stealPlansProb(const CvPlot* pPlot, ProbabilityTypes eProbStyle) con
 
 	iCounterSpyCount = pPlot->plotCount(PUF_isCounterSpy, -1, -1, NULL, NO_PLAYER, pPlot->getTeam());
 
-	for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+	foreach_(const CvPlot* adjacentPlot, pPlot->adjacent())
 	{
-		pLoopPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
-
-		if (pLoopPlot != NULL)
-		{
-			iCounterSpyCount += pLoopPlot->plotCount(PUF_isCounterSpy, -1, -1, NULL, NO_PLAYER, pPlot->getTeam());
-		}
+		iCounterSpyCount += adjacentPlot->plotCount(PUF_isCounterSpy, -1, -1, NULL, NO_PLAYER, pPlot->getTeam());
 	}
 
 	if (eProbStyle == PROBABILITY_HIGH)
@@ -18135,7 +17970,6 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 	CvUnit* pLoopUnit;
 	CvPlot* pOldPlot;
 	CvPlot* pNewPlot;
-	CvPlot* pLoopPlot;
 	CLinkList<IDInfo> oldUnits;
 	ActivityTypes eOldActivityType;
 	int iI;
@@ -18435,24 +18269,13 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 
 		if (pOldPlot->isWater())
 		{
-			for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+			foreach_(const CvPlot* pLoopPlot, pNewPlot->adjacent() | filtered(CvPlot::fn::isWater()))
 			{
-				pLoopPlot = plotDirection(pOldPlot->getX(), pOldPlot->getY(), ((DirectionTypes)iI));
+				pWorkingCity = pLoopPlot->getWorkingCity();
 
-				if (pLoopPlot != NULL)
+				if (pWorkingCity != NULL && canSiege(pWorkingCity->getTeam()))
 				{
-					if (pLoopPlot->isWater())
-					{
-						pWorkingCity = pLoopPlot->getWorkingCity();
-
-						if (pWorkingCity != NULL)
-						{
-							if (canSiege(pWorkingCity->getTeam()))
-							{
-								pWorkingCity->AI_setAssignWorkDirty(true);
-							}
-						}
-					}
+					pWorkingCity->AI_setAssignWorkDirty(true);
 				}
 			}
 		}
@@ -18654,24 +18477,13 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 		{
 			PROFILE("CvUnit::setXY.NewPlot2.Water");
 
-			for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+			foreach_(const CvPlot* pLoopPlot, pNewPlot->adjacent() | filtered(CvPlot::fn::isWater()))
 			{
-				pLoopPlot = plotDirection(pNewPlot->getX(), pNewPlot->getY(), ((DirectionTypes)iI));
+				pWorkingCity = pLoopPlot->getWorkingCity();
 
-				if (pLoopPlot != NULL)
+				if (pWorkingCity != NULL && canSiege(pWorkingCity->getTeam()))
 				{
-					if (pLoopPlot->isWater())
-					{
-						pWorkingCity = pLoopPlot->getWorkingCity();
-
-						if (pWorkingCity != NULL)
-						{
-							if (canSiege(pWorkingCity->getTeam()))
-							{
-								pWorkingCity->verifyWorkingPlot(pWorkingCity->getCityPlotIndex(pLoopPlot));
-							}
-						}
-					}
+					pWorkingCity->verifyWorkingPlot(pWorkingCity->getCityPlotIndex(pLoopPlot));
 				}
 			}
 		}
@@ -32121,56 +31933,42 @@ void CvUnit::doOpportunityFire()
 	//There is absolutely zero resistability to this damage and no potential for failure to strike, making it far more powerful than any player determined
 	//action.  Once I get to focusing in on the Bombard function and adding some more dynamics there to address the above noted issues,
 	//I'll have to enforce those mechanisms onto this Opportunity Fire process as well.
-	int iI;
 	int iUnitDamage = 0;
-	int iVolumeDefenders = 0;
-	int iBestUnitStr = 0;
 	int ipDefenderStr = 0;
-	CvPlot* pLoopPlot;
 	CvPlot* pAttackPlot = NULL;
 	CvUnit* pDefender = NULL;
 	CvWString szBuffer;
-	CvUnit* pBestUnit;
 
-	if (!GC.isDCM_OPP_FIRE())
-	{
-		return;
-	}
-	if (getBombardRate() <= 0 || getDCMBombRange() <= 0)
+	if (!GC.isDCM_OPP_FIRE() || getBombardRate() <= 0 || getDCMBombRange() <= 0)
 	{
 		return;
 	}
 
 	if (getFortifyTurns() > 0)
 	{
-		for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+		foreach_(CvPlot* pLoopPlot, plot()->adjacent())
 		{
-			pLoopPlot = plotDirection(plot()->getX(), plot()->getY(), ((DirectionTypes)iI));
-			if (pLoopPlot != NULL)
+			const int iVolumeDefenders = pLoopPlot->getNumUnits();
+			if (iVolumeDefenders > 0)
 			{
-				iVolumeDefenders = pLoopPlot->getNumUnits();
-				if (iVolumeDefenders > 0)
+				CvUnit* pBestUnit = pLoopPlot->getBestDefender(NO_PLAYER, getOwner(), this, true);
+				if (pBestUnit != NULL)
 				{
-					pBestUnit = NULL;
-					pBestUnit = pLoopPlot->getBestDefender(NO_PLAYER, getOwner(), this, true);
-					if (pBestUnit != NULL)
+					const int iBestUnitStr = pBestUnit->currCombatStr(pLoopPlot, this, NULL, true);
+					if (pDefender != NULL)
 					{
-						iBestUnitStr = pBestUnit->currCombatStr(pLoopPlot, this, NULL, true);
-						if (pDefender != NULL)
-						{
-							if (iBestUnitStr > ipDefenderStr)
-							{
-								pDefender = pBestUnit;
-								pAttackPlot = pLoopPlot;
-								ipDefenderStr = pDefender->currCombatStr(pLoopPlot, this, NULL, true);
-							}
-						}
-						else
+						if (iBestUnitStr > ipDefenderStr)
 						{
 							pDefender = pBestUnit;
 							pAttackPlot = pLoopPlot;
 							ipDefenderStr = pDefender->currCombatStr(pLoopPlot, this, NULL, true);
 						}
+					}
+					else
+					{
+						pDefender = pBestUnit;
+						pAttackPlot = pLoopPlot;
+						ipDefenderStr = pDefender->currCombatStr(pLoopPlot, this, NULL, true);
 					}
 				}
 			}

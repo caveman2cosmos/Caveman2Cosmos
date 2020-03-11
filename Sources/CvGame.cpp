@@ -11965,10 +11965,9 @@ void CvGame::removeAdjacentLandmarks(CvPlot* pCenterPlot, CvPlot* pExceptionPlot
 	{
 		return;
 	}
-	for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+	foreach_(CvPlot* pAdjacentPlot, pCenterPlot->adjacent())
 	{
-		CvPlot* pAdjacentPlot = plotDirection(pCenterPlot->getX(), pCenterPlot->getY(), ((DirectionTypes)iI));
-		if (pAdjacentPlot != NULL && (pExceptionPlot == NULL || pExceptionPlot != pAdjacentPlot))
+		if (pExceptionPlot == NULL || pExceptionPlot != pAdjacentPlot)
 		{
 			if (pAdjacentPlot->getLandmarkType() != NO_LANDMARK)
 			{
@@ -12020,24 +12019,20 @@ void CvGame::findLonePeaks()
 		{
 			bool bFoundPeak = false;
 			int iHillCount = 0;
-			for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+			foreach_(const CvPlot* pAdjacentPlot, pLoopPlot->adjacent())
 			{
-				const CvPlot* pAdjacentPlot = plotDirection(pLoopPlot->getX(), pLoopPlot->getY(), ((DirectionTypes)iI));
-				if (pAdjacentPlot != NULL)
-				{//Check to see if it is alone
-					if (pAdjacentPlot->isPeak())
-					{
-						bFoundPeak = true;
-						break;
-					}
-					if (pAdjacentPlot->isHills())
-						iHillCount++;
-					//if a peak is surrounded by hills, don't count it as alone
-					if (iHillCount > 2)
-					{
-						bFoundPeak = true;
-						break;
-					}
+				if (pAdjacentPlot->isPeak())	//Check to see if it is alone
+				{
+					bFoundPeak = true;
+					break;
+				}
+				if (pAdjacentPlot->isHills())
+					iHillCount++;
+				//if a peak is surrounded by hills, don't count it as alone
+				if (iHillCount > 2)
+				{
+					bFoundPeak = true;
+					break;
 				}
 			}//Lone Peak Found
 			if (!bFoundPeak)
@@ -12056,20 +12051,16 @@ void CvGame::findBays()
 {
 	for (int iPlot = 0; iPlot < GC.getMap().numPlots(); iPlot++)
 	{
-		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlot);
+		const CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlot);
 		if (!pLoopPlot->isCountedPlot() && pLoopPlot->isCoastalLand())
 		{
 			//Find the Water
 			int iCoastCount = 0;
 			CvPlot* pCoast = NULL;
-			for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+			foreach_(CvPlot* pAdjacentPlot, pLoopPlot->adjacent() | filtered(CvPlot::fn::isWater() && !CvPlot::fn::isLake()))
 			{
-				CvPlot* pAdjacentPlot = plotDirection(pLoopPlot->getX(), pLoopPlot->getY(), ((DirectionTypes)iI));
-				if (pAdjacentPlot != NULL && pAdjacentPlot->isWater() && !pAdjacentPlot->isLake())
-				{
-					iCoastCount++;
-					pCoast = pAdjacentPlot;
-				}
+				iCoastCount++;
+				pCoast = pAdjacentPlot;
 			}
 			//Bay!
 			if (iCoastCount == 1 && !pCoast->isCountedPlot())
@@ -12196,14 +12187,10 @@ void CvGame::findLakes()
 //Used to ensure no more than 1 sign gets placed on each lake.
 void CvGame::markLakePlots(CvPlot* pPlot)
 {
-	for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+	foreach_(CvPlot* pAdjacentPlot, pPlot->adjacent() | filtered(!CvPlot::fn::isCountedPlot() && CvPlot::fn::isLake()))
 	{
-		CvPlot* pAdjacentPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
-		if (pAdjacentPlot != NULL && !pAdjacentPlot->isCountedPlot() && pAdjacentPlot->isLake())
-		{
-			pAdjacentPlot->setCountedPlot(true);
-			markLakePlots(pAdjacentPlot);
-		}
+		pAdjacentPlot->setCountedPlot(true);
+		markLakePlots(pAdjacentPlot);
 	}
 }
 

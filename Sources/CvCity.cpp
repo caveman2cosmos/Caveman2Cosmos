@@ -8135,7 +8135,7 @@ CvArea* CvCity::sharedWaterArea(const CvCity* pOtherCity) const
 
 bool CvCity::isBlockaded() const
 {
-	return algo::count_if(plot()->adjacent(), CvPlot::fn::getBlockadedCount(getTeam()) > 0);
+	return algo::any_of(plot()->adjacent(), CvPlot::fn::getBlockadedCount(getTeam()) > 0);
 }
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
