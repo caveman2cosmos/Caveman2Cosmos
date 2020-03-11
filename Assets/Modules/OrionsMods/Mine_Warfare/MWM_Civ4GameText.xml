@@ -73,15 +73,15 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_LAND_MINE_FIELD_HELP</Tag>
+		<Tag>TXT_KEY_UNIT_LAND_MINE_FIELD_HELP</Tag>
 		<English>[ICON_BULLET]Harmless Until Armed.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_LAND_MINE_HELP</Tag>
+		<Tag>TXT_KEY_UNIT_LAND_MINE_HELP</Tag>
 		<English>[ICON_BULLET]Harmless Until Armed.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MINE_SWEEPER_HELP</Tag>
+		<Tag>TXT_KEY_UNIT_MINE_SWEEPER_HELP</Tag>
 		<English>[ICON_BULLET]Can Remove Mines.</English>
 	</TEXT>
 	<TEXT>
@@ -133,11 +133,11 @@
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_NAVAL_MINE_FIELD_HELP</Tag>
+		<Tag>TXT_KEY_UNIT_NAVAL_MINE_FIELD_HELP</Tag>
 		<English>[ICON_BULLET]Harmless Until Armed.[NEWLINE][COLOR_WARNING_TEXT]Requires Harbor[COLOR_REVERT]</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_NAVAL_MINE_HELP</Tag>
+		<Tag>TXT_KEY_UNIT_NAVAL_MINE_HELP</Tag>
 		<English>[ICON_BULLET]Harmless Until Armed.</English>
 	</TEXT>
 	<TEXT>

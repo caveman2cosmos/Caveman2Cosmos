@@ -988,7 +988,7 @@
 			<Type>SPECIALIST_GREAT_DOCTOR</Type>
 			<Description>TXT_KEY_SPECIALIST_GREAT_DOCTOR</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_DOCTOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_GREAT_DOCTOR_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_UNIT_GREAT_DOCTOR_STRATEGY</Strategy>
 			<Texture>Art/Interface/buttons/specialists/great_doctor.dds</Texture>
 			<bVisible>0</bVisible>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>

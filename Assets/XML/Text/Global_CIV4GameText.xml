@@ -2189,7 +2189,7 @@
 		<Polish>Przekroczono ilość zmian</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CHARL_UNIT_HEAVY_CAVALRY_PEDIA</Tag>
+		<Tag>TXT_KEY_UNIT_HEAVY_CAVALRY_PEDIA</Tag>
 		<English>[BOLD]Strategy:[\BOLD][PARAGRAPH:1]Heavy Cavalry are more powerful versions of Light Cavalry. They are especially effective against Melee Units in open terrain, and they can generally crush any Light Cavalry or Horse Archers they come across. [NEWLINE][NEWLINE][BOLD]Background:[\BOLD][PARAGRAPH:1]To put it simply, a Heavy Cavalry unit is better-armed and armored than its Light Cavalry cousin. The creation of Heavy Cavalry required a number of technological advances: first, larger horses had to be bred; then metal armor had to be made lighter and more flexible. All of these required a fairly wealthy and advanced civilization, but the price was well worth it: few unarmored cavalry units could hope to stand against the determined charge of Heavy Cavalry.</English>
 		<French>
 			<Text>[BOLD]Stratégie:[\BOLD][PARAGRAPH:1]La cavalerie lourde est une version plus puissante de la cavalerie légère. Elle est particulièrement efficace en terrain dégagé contre les unités de combat rapproché et elle peut généralement écraser les cavaliers légers ou les archers montés qu'elle rencontre.[NEWLINE][NEWLINE][BOLD]Histoire:[\BOLD][PARAGRAPH:1]Pour faire bref, une unité de cavalerie lourde est mieux armée et mieux protégée qu'une unité de cavalerie légère. La création de la cavalerie lourde nécessita quelques avancées technologiques. Il fallut créer des chevaux plus grands et aussi rendre les armures métalliques plus légères et plus flexibles. Ce ne put être accompli que par une civilisation riche et avancée, mais l'investissement en valait la peine, car peu d'unités de cavalerie sans armure avaient une chance de résister à la charge de la cavalerie lourde.</Text>
@@ -2206,7 +2206,7 @@
 		<Polish>Upadek wartości jazdy rycerskiej spowodował powstanie nowych formacji kawaleryjskich w skład których wchodzili żołnierze zaciężni (najemnicy). W XV wieku, obok tradycyjnych kopijników, pojawili się na polach bitew rajtarzy i arkebuzerzy uzbrojeni w broń palną. W XVI wieku powstała dragonia będąca początkowo konną piechotą. W Europie zachodniej jazda organizowała się na regimenty i kompanie. W Polsce w XV-tym wieku kawaleria dzieliła się na oddziały kopijnicze i strzelcze. W XVI wieku pojawiła się husaria, początkowo jazda lekka, z biegiem czasu stając się najcięższą kawalerią polską. Jazdę lżejszą w Polsce stanowili pancerni, zwani na Litwie petyhorcami, którzy z czasem stali się formacją średniozbrojną. Jazdę lekką stanowiły tzw. chorągwie wołoskie i tatarskie. W XVII wieku na zachodzie pojawili się kirasjerzy. W XVIII wieku w Polsce dawne pułki husarskie i pancerne przekształcono kawalerię narodową, a jazdę lekką na nowoczesnych ułanów. W czasach wojen napoleońskich pojawiły się oddziały lansjerów, szwoleżerów i strzelców konnych. W XIX wieku w związku z dalszym rozwojem broni palnej, znaczenie kawalerii upadło. Jednak jeszcze w czasie I wojny światowej wojska obu walczących stron zmobilizowały łącznie 63 dywizje jazdy, znaczną ich część rozwiązano zresztą w czasie trwania tej wojny.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CHARL_UNIT_HEAVY_CAVALRY_STRATEGY</Tag>
+		<Tag>TXT_KEY_UNIT_HEAVY_CAVALRY_STRATEGY</Tag>
 		<English>Good against melee units in the open and against Light Cavalry, Horse Archers, and Mounted Infantry.</English>
 		<French>
 			<Text>Unités efficaces en terrain dégagé contre les unités de combat rapproché, ainsi que contre la cavalerie légère, les archers montés et l'infanterie montée.</Text>
@@ -2223,7 +2223,7 @@
 		<Polish>Jest to silna jednostka i doskonale nadaje się do walki z takimi jednostkami jak: Lekka Kawaleria, Łucznik Konny czy Konny Knecht.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CHARL_UNIT_HEAVY_SWORDSMAN_PEDIA</Tag>
+		<Tag>TXT_KEY_UNIT_HEAVY_SWORDSMAN_PEDIA</Tag>
 		<English>[BOLD]Strategy:[\BOLD][PARAGRAPH:1]These more powerful sword units can take on moderately-defended cities when backed up by siege units.[NEWLINE][NEWLINE][BOLD]Background:[\BOLD][PARAGRAPH:1]Heavy swords tend to be longer and heavier (of course) than light swords. They often require two hands to wield, and are typically employed as slashing weapons. A Heavy Swordsman will generally be better-armored than a Light Swordsman, and thus able to both dish out and take more damage.</English>
 		<French>
 			<Text>[BOLD]Stratégie:[\BOLD][PARAGRAPH:1]Ces unités de spadassins plus puissantes peuvent attaquer des villes moyennement défendues avec l'appui d'unités de siège.[NEWLINE][NEWLINE][BOLD]Histoire:[\BOLD][PARAGRAPH:1]Les épées lourdes sont généralement plus longues et évidemment plus lourdes que les épées légères. Elles se manient souvent à deux mains et servent généralement à porter des coups de taille. Un spadassin lourd a généralement une meilleure armure qu'un spadassin léger, ce qui lui permet d'infliger et de recevoir plus de dégâts.</Text>
@@ -2240,7 +2240,7 @@
 		<Polish>W społeczeństwach plemiennych, w toczenie wojen bywała zaangażowana cała męska część populacji, np. u Gurkhów, Maorysów oraz w dawnych plemionach celtyckich, germańskich i słowiańskich. W bardziej rozwiniętych społeczeństwach wojownicy często tworzyli własną kastę lub stan.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CHARL_UNIT_HEAVY_SWORDSMAN_STRATEGY</Tag>
+		<Tag>TXT_KEY_UNIT_HEAVY_SWORDSMAN_STRATEGY</Tag>
 		<English>These more powerful sword units can take on moderately-defended cities when backed up by siege units.</English>
 		<French>
 			<Text>Ces unités de spadassins plus puissantes peuvent attaquer des villes moyennement défendues avec l'appui d'unités de siège.</Text>
@@ -2257,7 +2257,7 @@
 		<Polish>Jest to silna jednostka obdarzona niezwykłą umiejętnością władania mieczem. Przydatna do wsparcia dla jednostek oblężniczych podczas ataku na miasto.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CHARL_UNIT_LIGHT_CAVALRY_PEDIA</Tag>
+		<Tag>TXT_KEY_UNIT_LIGHT_CAVALRY_PEDIA</Tag>
 		<English>[BOLD]Strategy:[\BOLD][PARAGRAPH:1]While not particularly effective against defenders in cities, these mid-level horse units get a +25% bonus when fighting melee or archery units. Thus they can be especially effective against non-horse units in open terrain. [NEWLINE][NEWLINE][BOLD]Background:[\BOLD][PARAGRAPH:1] Before the invention of the stirrup, riders stayed atop their horses by knee pressure alone. Close combat was virtually impossible, as the shock from a blow - taken OR given - would very likely pitch the rider onto the ground. While the earliest stirrups appeared around 500 BC, they didn't reach Europe until the sixth or seventh century AD. At this point the European Light Cavalry was born. While lightly armored when compared with Heavy Cavalry or Knights, a Light Cavalry unit can still deliver a shocking blow to infantry or siege units.</English>
 		<French>
 			<Text>[BOLD]Stratégie:[\BOLD][PARAGRAPH:1]Bien qu'elles ne soient pas particulièrement efficaces contre les défenseurs des villes, ces unités montées de niveau moyen obtiennent un bonus de 25 % contre les unités de combat rapproché et les archers. Elles peuvent donc être très efficaces contre les unités à pied en terrain dégagé. [NEWLINE][NEWLINE][BOLD]Histoire:[\BOLD][PARAGRAPH:1]Avant l'invention des étriers, les cavaliers se maintenaient sur leur monture simplement à l'aide de leurs genoux. Le combat rapproché était quasiment impossible, car le choc d'un coup donné ou reçu avait toutes les chances de désarçonner le cavalier. Les premiers étriers apparurent vers le IVe siècle av J.-C., mais n'arrivèrent pas en Europe avant le VIe ou le VIIe siècle. C'est alors que la cavalerie légère européenne fit son apparition. Même s'ils ont une armure bien plus légère que les cavaliers lourds ou les chevaliers, les cavaliers légers peuvent être très dangereux pour les unités de siège ou d'infanterie.</Text>
@@ -2274,7 +2274,7 @@
 		<Polish>W Europie we wczesnym średniowieczu w okresie wczesnofeudalnym jazda zorganizowana była jako przyboczny oddział władcy (księcia, kniazia). Była częścią drużyny książęcej, która istniała zarówno wśród prymitywnych plemion germańskich, jak i słowiańskich (w tych ostatnich pojawiła się nieco później). W Polsce, w okresie rządów pierwszych Piastów w skład drużyny książęcej wchodziła jazda ciężka (tzw. Pancerni) oraz jazda lekka.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CHARL_UNIT_LIGHT_CAVALRY_STRATEGY</Tag>
+		<Tag>TXT_KEY_UNIT_LIGHT_CAVALRY_STRATEGY</Tag>
 		<English>These units can be especially effective against archery or melee units in open terrain.</English>
 		<French>
 			<Text>Ces unités peuvent être particulièrement efficaces contre les unités de combat rapproché et les archers en terrain dégagé.</Text>
@@ -2291,7 +2291,7 @@
 		<Polish>Ta jednostka przydaje się do walki przeciwko jednostkom łuczniczym oraz walczącym wręcz na otwartych terenach.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CHARL_UNIT_LIGHT_SWORDSMAN_PEDIA</Tag>
+		<Tag>TXT_KEY_UNIT_LIGHT_SWORDSMAN_PEDIA</Tag>
 		<English>[BOLD]Strategy:[\BOLD][PARAGRAPH:1]These early sword units can attack enemy cities that are not too heavily defended. Of course it's very useful to bring siege equipment when trying to take cities.[NEWLINE][NEWLINE][BOLD]Background:[\BOLD][PARAGRAPH:1]During the eighth century AD, European swords tended to be long and straight, with no crossguard to protect the wielder's hand (crossguards didn't appear in Europe until the Late Middle Ages). Light Swordsmen are unarmored, or wear leather armor at best.</English>
 		<French>
 			<Text>[BOLD]Stratégie:[\BOLD][PARAGRAPH:1]Ces premières unités de spadassins peuvent attaquer les villes ennemies qui ne sont pas trop défendues. L'équipement de siège est bien sûr très utile pour prendre une ville.[NEWLINE][NEWLINE][BOLD]Histoire:[\BOLD][PARAGRAPH:1]Au cours du VIIIe siècle, les épées européennes étaient généralement longues, droites et dépourvues de garde pour protéger la main du combattant. La garde n'apparut pas en Europe avant le haut Moyen Age. Les spadassins légers ne portent pas d'armure ou au mieux une armure de cuir.</Text>
@@ -2308,7 +2308,7 @@
 		<Polish>W społeczeństwach plemiennych, w toczenie wojen bywała zaangażowana cała męska część populacji, np. u Gurkhów, Maorysów oraz w dawnych plemionach celtyckich, germańskich i słowiańskich. W bardziej rozwiniętych społeczeństwach wojownicy często tworzyli własną kastę lub stan.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CHARL_UNIT_LIGHT_SWORDSMAN_STRATEGY</Tag>
+		<Tag>TXT_KEY_UNIT_LIGHT_SWORDSMAN_STRATEGY</Tag>
 		<English>These early sword units can attack enemy cities that are not too heavily defended. Of course it's very useful to bring siege equipment when trying to take cities.</English>
 		<French>
 			<Text>Ces premières unités de spadassins peuvent attaquer les villes ennemies qui ne sont pas trop défendues. L'équipement de siège est bien sûr très utile pour prendre une ville.</Text>
@@ -2325,7 +2325,7 @@
 		<Polish>W społeczeństwach plemiennych, w toczenie wojen bywała zaangażowana cała męska część populacji, np. u Gurkhów, Maorysów oraz w dawnych plemionach celtyckich, germańskich i słowiańskich. W bardziej rozwiniętych społeczeństwach wojownicy często tworzyli własną kastę lub stan.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CHARL_UNIT_MOUNTED_INFANTRY_PEDIA</Tag>
+		<Tag>TXT_KEY_UNIT_MOUNTED_INFANTRY_PEDIA</Tag>
 		<English>[BOLD]Strategy:[\BOLD][PARAGRAPH:1]Mounted Infantry are less powerful than Horse Archers; however, these units do receive terrain defensive bonuses, making them far more powerful when defending in hills, woods, or city. [NEWLINE][NEWLINE][BOLD]Background:[\BOLD][PARAGRAPH:1]Mounted Infantry soldiers use horses to get to the battlefield, but once there they dismount and fight on foot. They rarely take part in charges or other horseback maneuvers, and they tend to suffer badly when engaged in such against trained cavalry units. On the other hand, when fortified on a hill, Mounted Infantry can do serious damage to an attacking Horse Archer or Light Cavalry unit.</English>
 		<French>
 			<Text>[BOLD]Stratégie:[\BOLD][PARAGRAPH:1]L'infanterie montée est moins puissante que les archers montés, mais bénéficie de bonus défensifs de terrain, ce qui lui permet de se défendre bien plus efficacement sur des collines, dans les bois ou dans les villes.[NEWLINE][NEWLINE][BOLD]Histoire:[\BOLD][PARAGRAPH:1]Les soldats de l'infanterie montée se rendent à cheval sur le champ de bataille, mais mettent pied à terre pour combattre une fois arrivés à destination. Ils participent rarement aux charges ou aux autres manoeuvres à cheval, et se font généralement malmener quand ils le font face à des cavaliers entraînés. En revanche, l'infanterie montée peut infliger de sérieux dégâts à une unité de cavalerie légère ou d'archers montés qui l'attaquerait sur une colline où elle aurait pris position.</Text>
@@ -2342,7 +2342,7 @@
 		<Polish>Upadek wartości jazdy rycerskiej spowodował powstanie nowych formacji kawaleryjskich w skład których wchodzili żołnierze zaciężni (najemnicy). W XV wieku, obok tradycyjnych kopijników, pojawili się na polach bitew rajtarzy i arkebuzerzy uzbrojeni w broń palną. W XVI wieku powstała dragonia będąca początkowo konną piechotą. W Europie zachodniej jazda organizowała się na regimenty i kompanie. W Polsce w XV-tym wieku kawaleria dzieliła się na oddziały kopijnicze i strzelcze. W XVI wieku pojawiła się husaria, początkowo jazda lekka, z biegiem czasu stając się najcięższą kawalerią polską. Jazdę lżejszą w Polsce stanowili pancerni, zwani na Litwie petyhorcami, którzy z czasem stali się formacją średniozbrojną. Jazdę lekką stanowiły tzw. chorągwie wołoskie i tatarskie. W XVII wieku na zachodzie pojawili się kirasjerzy. W XVIII wieku w Polsce dawne pułki husarskie i pancerne przekształcono kawalerię narodową, a jazdę lekką na nowoczesnych ułanów. W czasach wojen napoleońskich pojawiły się oddziały lansjerów, szwoleżerów i strzelców konnych. W XIX wieku w związku z dalszym rozwojem broni palnej, znaczenie kawalerii upadło. Jednak jeszcze w czasie I wojny światowej wojska obu walczących stron zmobilizowały łącznie 63 dywizje jazdy, znaczną ich część rozwiązano zresztą w czasie trwania tej wojny.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CHARL_UNIT_MOUNTED_INFANTRY_STRATEGY</Tag>
+		<Tag>TXT_KEY_UNIT_MOUNTED_INFANTRY_STRATEGY</Tag>
 		<English>Use these speedy infantrymen as rapid-reaction forces and to defend hills and forests.</English>
 		<French>
 			<Text>Utilisez ces Spadassins pour intervenir rapidement ou pour défendre les collines et les forêts.</Text>
@@ -5005,7 +5005,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>%D1_Change[ICON_HEALTHY] od Specjalistów</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GORILLA_PEDIA</Tag>
+		<Tag>TXT_KEY_UNIT_GORILLA_PEDIA</Tag>
 		<English>Gorillas, the largest of the living primates, are ground-dwelling omnivores that inhabit the forests of Africa. Gorillas are divided into two species and (still under debate as of 2007) either four or five subspecies. Its DNA is 97%-98% identical to that of a human, and are the next closest living relatives to humans after the two chimpanzee species.</English>
 		<French>Les gorilles, le plus grand des primats vivants, sont des omnivores de terre-logement qui habitent les forêts de l'Afrique. Des gorilles sont encore divisés en deux espèces et (sous la discussion en date de 2007) quatre ou cinq sous-espèces. Son ADN est 97%-98% identique à celui d'un humain, et est les prochains parents vivants les plus étroits aux humains après les deux espèces de chimpanzé.</French>
 		<German>Gorillas, das größte der lebenden Primas, sind Boden-Wohnung Allesfresser, die die Wälder von Afrika bewohnen. Gorillas werden in zwei Sorten und (noch unter Debatte ab 2007) geteilt, entweder vier oder fünf Unterarten. Seine DNA ist 97%-98% identisch zu dem eines Menschen und ist die folgenden nähsten lebenden Verwandten zu den Menschen nach den zwei Schimpansesorten.</German>
@@ -5034,7 +5034,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>Współczynnik Wygładzania %d1_Num</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_DOCTOR_STRATEGY</Tag>
+		<Tag>TXT_KEY_UNIT_GREAT_DOCTOR_STRATEGY</Tag>
 		<English>Use the Great Doctor to build the [LINK=BUILDING_UNIVERSAL_HEALTH_CARE]Universal Health Care[\LINK] National Wonder, discover a new technology or add to a city as a super specialist.</English>
 		<French>Utilisez le Docteur illustre pour construire la merveille nationale [LINK=BUILDING_UNIVERSAL_HEALTH_CARE]Couverture Santé Universelle[\ LINK], ou découvrir une nouvelle technologie ou encore ajoutez-le à une ville en tant que super spécialiste.</French>
 	</TEXT>
@@ -17882,7 +17882,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>[ICON_BULLET]%d1_Change wydajność pracy</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_THIRD_ROUND_CHARL_UNIT_HEAVY_CAVALRY_PEDIA</Tag>
+		<Tag>TXT_KEY_UNIT_HEAVY_CAVALRY_PEDIA</Tag>
 		<English>To put it simply, a Heavy Cavalry unit is better-armed and armored than its Light Cavalry cousin. The creation of Heavy Cavalry required a number of technological advances: first, larger horses had to be bred; then metal armor had to be made lighter and more flexible. All of these required a fairly wealthy and advanced civilization, but the price was well worth it: few unarmored cavalry units could hope to stand against the determined charge of Heavy Cavalry.</English>
 		<French>Une unité de cavalerie lourde est mieux armée et mieux protégée qu'une unité de cavalerie légère. La création d'unités de cavalerie lourde nécessite de nombreuses avancées technologiques. Il faut des chevaux plus robustes. Les armures de métal doivent être plus légères et plus flexibles. Pour cela, il faut posséder une civilisation assez riche et avancée, mais cela en vaut la peine: une charge de cavalerie lourde peut venir à bout de la plupart des unités montées sans armure.</French>
 		<German>Um es einfach auszudrücken: Einheiten der Schweren Kavallerie sind besser bewaffnet und gepanzert als Einheiten der Leichten Kavallerie. Für die Erschaffung der Schweren Kavallerie waren einige technologische Errungenschaften notwendig. Zunächst mussten größere Pferde gezüchtet werden. Dann musste die metallene Rüstung leichter und flexibler gemacht werden. Zu all dessen bedurfte es einer recht wohlhabenden und fortschrittlichen Zivilisation, doch der hohe Preis war es wert: Nur wenige ungepanzerte Kavallerieeinheiten konnten darauf hoffen, einem energischen Angriff der Schweren Kavallerie standhalten zu können.</German>
@@ -17891,7 +17891,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>W późniejszym okresie Średniowiecza, w Europie Zachodniej oraz Środkowej trzonem sił zbrojnych stało się pospolite ruszenie rycerzy. Rycerze walczyli na ogół jako ciężka kawaleria, byli formowani w jednostki organizacyjne, zwane kopiami łączonymi w chorągwie. Uzbrojeni byli w kopie, miecze, topory i tarcze. W Europie Wschodniej oraz na stepach azjatyckich większą rolę odgrywała jazda lekka. Wchodziła ona w skład między innymi armii litewskiej. Także koczownicy stepowi Pieczyngowie, Połowcy, a później Tatarzy używali niemal wyłącznie lekkiej konnicy w swoich najazdach i podbojach. Lekką jazdę posiadali także Arabowie z Bliskiego Wschodu. Ci ostatni, często używali wielbłądów jako wierzchowców. Rozwój broni palnej oraz odrodzenie piechoty spowodowało pod koniec średniowiecza powolny upadek jazdy rycerskiej.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_THIRD_ROUND_CHARL_UNIT_HEAVY_SWORDSMAN_PEDIA</Tag>
+		<Tag>TXT_KEY_UNIT_HEAVY_SWORDSMAN_PEDIA</Tag>
 		<English>Heavy swords tend to be longer and heavier (of course) than light swords. They often require two hands to wield, and are typically employed as slashing weapons. A Heavy Swordsman will generally be better-armored than a Light Swordsman, and thus able to both dish out and take more damage.</English>
 		<French>Bien évidemment, les épées lourdes sont plus longues et lourdes que les épées légères. Elles doivent souvent être maniées à deux mains et utilisées comme armes tranchantes. Un spadassin lourd sera en général mieux protégé qu'un spadassin léger et pourra donc provoquer et recevoir plus de dommages.</French>
 		<German>Schwere Schwerter sind länger und (natürlich) schwerer als leichte Schwerter. Man braucht oft beide Hände, um sie zu schwingen, und sie werden als Hiebwaffe eingesetzt. Ein Schwerer Schwertkämpfer wird generell besser gepanzert sein als ein leichter und kann dadurch mehr Schaden einstecken und anrichten.</German>
@@ -17900,7 +17900,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>W starożytności piechota stanowiła główny typ wojsk u ludów osiadłych, u ludów koczowniczych była to jazda. Z reguły jazda była formacją elitarną, gdyż wyposażenie i utrzymanie konia było bardzo kosztowne. Taktyka przyjmowana przez starożytne cywilizacje takie jak Egipcjanie czy Asyryjczycy, zakładała wykorzystanie słabo zorganizowanych mas biedniejszej i gorzej uzbrojonej (najczęściej we włócznie) piechoty ciężkozbrojnej jako punkt wyjścia dla uderzenia arystokratycznej jazdy i wozów bojowych (rydwanów). Formacjami pomocniczymi były oddziały lekkozbrojne uzbrojone w broń miotającą, działające przed zasadniczym starciem.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_THIRD_ROUND_CHARL_UNIT_LIGHT_CAVALRY_PEDIA</Tag>
+		<Tag>TXT_KEY_UNIT_LIGHT_CAVALRY_PEDIA</Tag>
 		<English>Before the invention of the stirrup, riders stayed atop their horses by knee pressure alone. Close combat was virtually impossible, as the shock from a blow - taken OR given - would very likely pitch the rider onto the ground. While the earliest stirrups appeared around 500 BC, they didn't reach Europe until the sixth or seventh century AD. At this point the European Light Cavalry was born. While lightly armored when compared with Heavy Cavalry or Knights, a Light Cavalry unit can still deliver a shocking blow to infantry or siege units.</English>
 		<French>Avant l'invention des étriers, les cavaliers se tenaient sur leur monture par la seule pression de leurs genoux. Le combat rapproché était quasiment impossible: un coup, reçu ou porté, avait de grandes chances de faire tomber le cavalier. Les premiers étriers apparurent aux alentours de 500 av. J.-C., mais ils ne furent utilisés en Europe qu'à partir du sixième ou septième siècle ap. J.-C. La cavalerie légère européenne fit alors son apparition. La cavalerie légère, bien que moins protégée que la cavalerie lourde ou que les chevaliers, peut délivrer des charges efficace contre des troupes d'infanterie ou des unités de siège.</French>
 		<German>Vor der Erfindung der Steigbügel hielten sich Reiter allein durch Druck ihrer Knie im Sattel. Ein Nahkampf war so nahezu unmöglich, da die Erschütterung eines Schlages - ausgeteilt wie eingesteckt - den Reiter wahrscheinlich auf den Boden geschleudert hätte. Auch wenn die ersten Steigbügel bereits aus dem Jahre 500 v. Chr. datieren, waren sie in Europa nicht vor dem 6. oder 7. Jahrhundert n. Chr. zu finden. Zu dieser Zeit wurde die europäische Leichte Kavallerie geboren. Auch wenn sie im Vergleich zur schweren Kavallerie oder den Rittern nur sehr leicht gepanzert waren, kann die Leichte Kavallerie der Infanterie oder Belagerungseinheiten einen schweren Schlag versetzen.</German>
@@ -17909,7 +17909,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>W późniejszym okresie Średniowiecza, w Europie Zachodniej oraz Środkowej trzonem sił zbrojnych stało się pospolite ruszenie rycerzy. Rycerze walczyli na ogół jako ciężka kawaleria, byli formowani w jednostki organizacyjne, zwane kopiami łączonymi w chorągwie. Uzbrojeni byli w kopie, miecze, topory i tarcze. W Europie Wschodniej oraz na stepach azjatyckich większą rolę odgrywała jazda lekka. Wchodziła ona w skład między innymi armii litewskiej. Także koczownicy stepowi Pieczyngowie, Połowcy, a później Tatarzy używali niemal wyłącznie lekkiej konnicy w swoich najazdach i podbojach. Lekką jazdę posiadali także Arabowie z Bliskiego Wschodu. Ci ostatni, często używali wielbłądów jako wierzchowców. Rozwój broni palnej oraz odrodzenie piechoty spowodowało pod koniec średniowiecza powolny upadek jazdy rycerskiej.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_THIRD_ROUND_CHARL_UNIT_LIGHT_SWORDSMAN_PEDIA</Tag>
+		<Tag>TXT_KEY_UNIT_LIGHT_SWORDSMAN_PEDIA</Tag>
 		<English>During the eighth century AD, European swords tended to be long and straight, with no crossguard to protect the wielder's hand (crossguards didn't appear in Europe until the Late Middle Ages). Light Swordsmen are unarmored, or wear leather armor at best.</English>
 		<French>Durant le dix-huitième siècle ap. J.-C., les épées européennes étaient généralement longues et droites, sans garde pour protéger la main de l'utilisateur. La garde n'apparaît d'ailleurs en Europe que vers la fin du Moyen-Age. Les spadassins légers ne portent pas d'armure, ou alors seulement une armure de cuir.</French>
 		<German>Während des 8. Jahrhunderts waren die Schwerter in Europa lang und gerade und hatten keine Parierstange, um die Hand des Kämpfers zu schützen. (Parierstangen waren in Europa nicht vor dem späten Mittelalter zu finden.) Leichte Schwertkämpfer sind ungepanzert oder tragen höchsten eine leichte Lederrüstung.</German>
@@ -17918,7 +17918,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>Dopiero w XIII, XIV i XV wieku, wyszkolona i odpowiednio uzbrojona piechota zadała jeździe klęskę pod Stirling Bridge, Courtrai, Bannockburn, Crecy, Poitiers i Azincourt. Pierwszymi oznakami zbliżającego się renesansu piechoty było wprowadzenie w Europie kuszy (pierwsze potwierdzone użycie w bitwie pod Hastings w roku 1066) oraz wynalazek halabardy.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_THIRD_ROUND_CHARL_UNIT_MOUNTED_INFANTRY_PEDIA</Tag>
+		<Tag>TXT_KEY_UNIT_MOUNTED_INFANTRY_PEDIA</Tag>
 		<English>Mounted Infantry soldiers use horses to get to the battlefield, but once there they dismount and fight on foot. They rarely take part in charges or other horseback maneuvers, and they tend to suffer badly when engaged in such against trained cavalry units. On the other hand, when fortified on a hill, Mounted Infantry can do serious damage to an attacking Horse Archer or Light Cavalry unit.</English>
 		<French>Les soldats d'infanterie montée se servent de chevaux pour atteindre le champ de bataille mais une fois sur place, ils se battent à pied. Ils ne prennent que rarement part aux charges ou aux manoeuvres à cheval et ont tendance à subir des pertes importantes face à des unités de cavalerie entraînées. Cependant, si elle est placée dans des fortifications sur une colline, l'infanterie montée peut infliger de sérieux dommages à une unité d'archers montés ou de cavalerie légère.</French>
 		<German>Soldaten der Berittenen Infanterie nutzen Pferde, um aufs Schlachtfeld zu gelangen. Sobald sie es erreicht haben, satteln sie jedoch ab und kämpfen zu Fuß. Sie nehmen nur selten an Vorstößen oder anderen Manövern zu Pferd teil, und wenn sie gegen ausgebildete Einheiten der Kavallerie eingesetzt werden, stecken sie meist viel Schaden ein. Wenn sie gefestigt auf einem Hügel stationiert ist, kann die Berittene Infanterie anrückenden Berittenen Bogenschützen oder Einheiten der Leichten Kavallerie jedoch schweren Schaden zufügen.</German>
@@ -17927,7 +17927,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>Piechota konna to jednostka używająca konni do przemieszczania się, ale walcząca pieszo.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_THIRD_ROUND_CHARL_UNIT_PAPAL_PIKEMAN_PEDIA</Tag>
+		<Tag>TXT_KEY_UNIT_PAPAL_PIKEMAN_PEDIA</Tag>
 		<English>With the failure of the Western Roman Empire, the city of Rome was nominally under the protection of Byzantium. However, the Byzantines did little to support Rome, and the Pope had to field his own army to defend the Holy City.[PARAGRAPH:1]Papal Pikemen are heavy spearmen. They are loosely based upon the Swiss Guard mercenary units that have defended the Vatican for the past five centuries.</English>
 		<French>Avec la Chute de l'Empire romain d'Occident, la ville de Rome était sous la protection de Byzance. Cependant, les Byzantins n'aidèrent pas beaucoup Rome. Le Pape fut donc obligé de réunir sa propre armée pour défendre la ville sainte.[PARAGRAPH:1]Les piquiers pontificaux sont des lanciers lourds. lls sont plus ou moins basés sur les Gardes Suisses, des mercenaires qui ont défendu le Vatican durant les cinq derniers siècles.</French>
 		<German>Mit dem Scheitern des Römischen Reiches stand die Stadt Rom theoretisch unter dem Schutze Konstantinopels. Die Byzantiner taten jedoch recht wenig, um Rom zu unterstützen, und der Papst sah sich gezwungen, eine eigene Armee aufzubauen, um die Heilige Stadt zu verteidigen.[PARAGRAPH:1]Päpstliche Pikeniere sind schwere Speerkämpfer. Sie basieren lose auf der Schweizer Garde, die den Vatikan in den letzten fünf Jahrhunderten verteidigt hat.</German>
