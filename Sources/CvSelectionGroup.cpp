@@ -694,33 +694,19 @@ CvPlot* CvSelectionGroup::lastMissionPlot() const
 		case MISSION_LEAD:
 		case MISSION_ESPIONAGE:
 		case MISSION_DIE_ANIMATION:
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-		// Dale - AB: Bombing START
+		// Dale - AB: Bombing
 		case MISSION_AIRBOMB1:
 		case MISSION_AIRBOMB2:
 		case MISSION_AIRBOMB3:
 		case MISSION_AIRBOMB4:
 		case MISSION_AIRBOMB5:
-		// Dale - AB: Bombing END
-		// Dale - RB: Field Bombard START
+		// Dale - RB: Field Bombard
 		case MISSION_RBOMBARD:
-		// Dale - RB: Field Bombard END
-		// Dale - ARB: Archer Bombard START
+		// Dale - ARB: Archer Bombard
 		case MISSION_ABOMBARD:
-		// Dale - ARB: Archer Bombard END
-		// Dale - FE: Fighters START
+		// Dale - FE: Fighters
 		case MISSION_FENGAGE:
-		// Dale - FE: Fighters END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* Afforess	                  Start		 06/11/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+		// ! Dale
 		case MISSION_CLAIM_TERRITORY:
 		case MISSION_HURRY_FOOD:
 		case MISSION_INQUISITION:
@@ -728,9 +714,6 @@ CvPlot* CvSelectionGroup::lastMissionPlot() const
 		case MISSION_SHADOW:
 		case MISSION_GREAT_COMMANDER:
 		case MISSION_WAIT_FOR_TECH:
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 		//TB Combat Mods (Cure) begin
 		case MISSION_CURE:
 		case MISSION_AMBUSH:
