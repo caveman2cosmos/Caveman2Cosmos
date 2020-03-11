@@ -2598,13 +2598,13 @@
 			<iAIObjective>5</iAIObjective>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Vacuum -->
+	<!-- Vacuum cleaners -->
 		<BonusInfo>
-			<Type>BONUS_VACUUM</Type>
-			<Description>TXT_KEY_BONUS_VACUUM</Description>
-			<Civilopedia>TXT_KEY_BONUS_VACUUM_PEDIA</Civilopedia>
+			<Type>BONUS_VACUUM_CLEANERS</Type>
+			<Description>TXT_KEY_BONUS_VACUUM_CLEANERS</Description>
+			<Civilopedia>TXT_KEY_BONUS_VACUUM_CLEANERS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_VACUUM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_VACUUM_CLEANERS</ArtDefineTag>
 			<TechReveal>TECH_ELECTRONICS</TechReveal>
 			<TechCityTrade>TECH_ELECTRONICS</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>

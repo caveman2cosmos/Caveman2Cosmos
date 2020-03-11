@@ -4137,11 +4137,11 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqBonuses>
-				<Bonus>BONUS_REFRIGERATORS</Bonus>
-				<Bonus>BONUS_MICROWAVE_OVENS</Bonus>
 				<Bonus>BONUS_BLENDER</Bonus>
-				<Bonus>BONUS_VACUUM</Bonus>
 				<Bonus>BONUS_DISHWASHERS</Bonus>
+				<Bonus>BONUS_MICROWAVE_OVENS</Bonus>
+				<Bonus>BONUS_REFRIGERATORS</Bonus>
+				<Bonus>BONUS_VACUUM_CLEANERS</Bonus>
 				<Bonus>BONUS_WASHER_DRYER</Bonus>
 			</PrereqBonuses>
 			<PrereqInCityBuildings>
@@ -4186,7 +4186,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_VACUUM</BonusType>
+					<BonusType>BONUS_VACUUM_CLEANERS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -58078,7 +58078,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_VACUUM</BonusType>
+					<BonusType>BONUS_VACUUM_CLEANERS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -75290,22 +75290,22 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqBonuses>
-				<Bonus>BONUS_WATER_BOTTLES</Bonus>
-				<Bonus>BONUS_SODA_POP</Bonus>
-				<Bonus>BONUS_ENERGY_DRINK</Bonus>
-				<Bonus>BONUS_POWER_TOOLS</Bonus>
 				<Bonus>BONUS_BLENDER</Bonus>
-				<Bonus>BONUS_VACUUM</Bonus>
-				<Bonus>BONUS_WASHER_DRYER</Bonus>
-				<Bonus>BONUS_SERVICE_BOTS</Bonus>
 				<Bonus>BONUS_CELLPHONES</Bonus>
-				<Bonus>BONUS_SHOES</Bonus>
-				<Bonus>BONUS_RADIOS</Bonus>
-				<Bonus>BONUS_TELEVISIONS</Bonus>
 				<Bonus>BONUS_COMPUTERS</Bonus>
+				<Bonus>BONUS_ENERGY_DRINK</Bonus>
 				<Bonus>BONUS_MICROWAVE_OVENS</Bonus>
-				<Bonus>BONUS_TYPEWRITERS</Bonus>
 				<Bonus>BONUS_PHONOGRAPHS</Bonus>
+				<Bonus>BONUS_POWER_TOOLS</Bonus>
+				<Bonus>BONUS_RADIOS</Bonus>
+				<Bonus>BONUS_SERVICE_BOTS</Bonus>
+				<Bonus>BONUS_SHOES</Bonus>
+				<Bonus>BONUS_SODA_POP</Bonus>
+				<Bonus>BONUS_TELEVISIONS</Bonus>
+				<Bonus>BONUS_TYPEWRITERS</Bonus>
+				<Bonus>BONUS_VACUUM_CLEANERS</Bonus>
+				<Bonus>BONUS_WASHER_DRYER</Bonus>
+				<Bonus>BONUS_WATER_BOTTLES</Bonus>
 			</PrereqBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_RECYCLING_CENTER</BuildingType>
@@ -100387,7 +100387,7 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_VACUUM</FreeBonus>
+			<FreeBonus>BONUS_VACUUM_CLEANERS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>

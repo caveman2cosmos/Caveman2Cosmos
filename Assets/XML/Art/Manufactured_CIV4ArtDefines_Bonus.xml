@@ -2308,9 +2308,9 @@
 			<Button>art/Goods/goodunmannedaircrafts.dds</Button>
 			<FontButtonIndex>200</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Vacuum -->
+	<!-- Vacuum cleaners -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_VACUUM</Type>
+			<Type>ART_DEF_BONUS_VACUUM_CLEANERS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
