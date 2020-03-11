@@ -11965,10 +11965,9 @@ void CvGame::removeAdjacentLandmarks(CvPlot* pCenterPlot, CvPlot* pExceptionPlot
 	{
 		return;
 	}
-	for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+	foreach_(CvPlot* pAdjacentPlot, pCenterPlot->adjacent())
 	{
-		CvPlot* pAdjacentPlot = plotDirection(pCenterPlot->getX(), pCenterPlot->getY(), ((DirectionTypes)iI));
-		if (pAdjacentPlot != NULL && (pExceptionPlot == NULL || pExceptionPlot != pAdjacentPlot))
+		if (pExceptionPlot == NULL || pExceptionPlot != pAdjacentPlot)
 		{
 			if (pAdjacentPlot->getLandmarkType() != NO_LANDMARK)
 			{
@@ -12020,24 +12019,20 @@ void CvGame::findLonePeaks()
 		{
 			bool bFoundPeak = false;
 			int iHillCount = 0;
-			for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+			foreach_(const CvPlot* pAdjacentPlot, pLoopPlot->adjacent())
 			{
-				const CvPlot* pAdjacentPlot = plotDirection(pLoopPlot->getX(), pLoopPlot->getY(), ((DirectionTypes)iI));
-				if (pAdjacentPlot != NULL)
-				{//Check to see if it is alone
-					if (pAdjacentPlot->isPeak())
-					{
-						bFoundPeak = true;
-						break;
-					}
-					if (pAdjacentPlot->isHills())
-						iHillCount++;
-					//if a peak is surrounded by hills, don't count it as alone
-					if (iHillCount > 2)
-					{
-						bFoundPeak = true;
-						break;
-					}
+				if (pAdjacentPlot->isPeak())	//Check to see if it is alone
+				{
+					bFoundPeak = true;
+					break;
+				}
+				if (pAdjacentPlot->isHills())
+					iHillCount++;
+				//if a peak is surrounded by hills, don't count it as alone
+				if (iHillCount > 2)
+				{
+					bFoundPeak = true;
+					break;
 				}
 			}//Lone Peak Found
 			if (!bFoundPeak)
@@ -12056,20 +12051,16 @@ void CvGame::findBays()
 {
 	for (int iPlot = 0; iPlot < GC.getMap().numPlots(); iPlot++)
 	{
-		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlot);
+		const CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlot);
 		if (!pLoopPlot->isCountedPlot() && pLoopPlot->isCoastalLand())
 		{
 			//Find the Water
 			int iCoastCount = 0;
 			CvPlot* pCoast = NULL;
-			for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+			foreach_(CvPlot* pAdjacentPlot, pLoopPlot->adjacent() | filtered(CvPlot::fn::isWater() && !CvPlot::fn::isLake()))
 			{
-				CvPlot* pAdjacentPlot = plotDirection(pLoopPlot->getX(), pLoopPlot->getY(), ((DirectionTypes)iI));
-				if (pAdjacentPlot != NULL && pAdjacentPlot->isWater() && !pAdjacentPlot->isLake())
-				{
-					iCoastCount++;
-					pCoast = pAdjacentPlot;
-				}
+				iCoastCount++;
+				pCoast = pAdjacentPlot;
 			}
 			//Bay!
 			if (iCoastCount == 1 && !pCoast->isCountedPlot())
@@ -12196,14 +12187,10 @@ void CvGame::findLakes()
 //Used to ensure no more than 1 sign gets placed on each lake.
 void CvGame::markLakePlots(CvPlot* pPlot)
 {
-	for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+	foreach_(CvPlot* pAdjacentPlot, pPlot->adjacent() | filtered(!CvPlot::fn::isCountedPlot() && CvPlot::fn::isLake()))
 	{
-		CvPlot* pAdjacentPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
-		if (pAdjacentPlot != NULL && !pAdjacentPlot->isCountedPlot() && pAdjacentPlot->isLake())
-		{
-			pAdjacentPlot->setCountedPlot(true);
-			markLakePlots(pAdjacentPlot);
-		}
+		pAdjacentPlot->setCountedPlot(true);
+		markLakePlots(pAdjacentPlot);
 	}
 }
 
@@ -12397,21 +12384,14 @@ CvWString CvGame::getRandomName(int iMaxLength)
 int CvGame::countDesert(CvPlot* pPlot)
 {
 	int iDesert = 0;
-	for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+	foreach_(CvPlot* pAdjacentPlot, pPlot->adjacent()
+		| filtered(!CvPlot::fn::isCountedPlot()
+			&& CvPlot::fn::getFeatureType() == static_cast<FeatureTypes>(GC.getInfoTypeForString("TERRAIN_DESERT"))
+			&& !CvPlot::fn::isHills() && !CvPlot::fn::isPeak()))
 	{
-		CvPlot* pAdjacentPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
-		if (pAdjacentPlot != NULL)
-		{
-			if (!pAdjacentPlot->isCountedPlot())
-			{
-				if (pAdjacentPlot->getTerrainType() == (TerrainTypes)GC.getInfoTypeForString("TERRAIN_DESERT") && !pAdjacentPlot->isHills() && !pAdjacentPlot->isPeak())
-				{
-					pAdjacentPlot->setCountedPlot(true);
-					iDesert++;
-					iDesert += countDesert(pAdjacentPlot);
-				}
-			}
-		}
+		pAdjacentPlot->setCountedPlot(true);
+		iDesert++;
+		iDesert += countDesert(pAdjacentPlot);
 	}
 	return iDesert;
 }
@@ -12421,21 +12401,13 @@ int CvGame::countJungle(CvPlot* pPlot, int iJungle)
 	//This is a big jungle
 	if (iJungle > GC.getDefineINT("MINIMUM_JUNGLE_SIZE") * 2)
 		return iJungle;
-	for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+
+	foreach_(CvPlot* pAdjacentPlot, pPlot->adjacent() | filtered(!CvPlot::fn::isCountedPlot()
+		&& CvPlot::fn::getFeatureType() == static_cast<FeatureTypes>(GC.getInfoTypeForString("FEATURE_JUNGLE"))))
 	{
-		CvPlot* pAdjacentPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
-		if (pAdjacentPlot != NULL)
-		{
-			if (!pAdjacentPlot->isCountedPlot())
-			{
-				if (pAdjacentPlot->getFeatureType() == (FeatureTypes)GC.getInfoTypeForString("FEATURE_JUNGLE"))
-				{
-					iJungle++;
-					pAdjacentPlot->setCountedPlot(true);
-					iJungle += countJungle(pAdjacentPlot, iJungle);
-				}
-			}
-		}
+		iJungle++;
+		pAdjacentPlot->setCountedPlot(true);
+		iJungle += countJungle(pAdjacentPlot, iJungle);
 	}
 	return iJungle;
 }
@@ -12445,21 +12417,13 @@ int CvGame::countForest(CvPlot* pPlot, int iForest)
 	//This is a big forest
 	if (iForest > GC.getDefineINT("MINIMUM_FOREST_SIZE") * 2)
 		return iForest;
-	for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+
+	foreach_(CvPlot* pAdjacentPlot, pPlot->adjacent() | filtered(!CvPlot::fn::isCountedPlot()
+		&& CvPlot::fn::getFeatureType() == static_cast<FeatureTypes>(GC.getInfoTypeForString("FEATURE_FOREST"))))
 	{
-		CvPlot* pAdjacentPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
-		if (pAdjacentPlot != NULL)
-		{
-			if (!pAdjacentPlot->isCountedPlot())
-			{
-				if (pAdjacentPlot->getFeatureType() == (FeatureTypes)GC.getInfoTypeForString("FEATURE_FOREST"))
-				{
-					iForest++;
-					pAdjacentPlot->setCountedPlot(true);
-					iForest += countForest(pAdjacentPlot, iForest);
-				}
-			}
-		}
+		iForest++;
+		pAdjacentPlot->setCountedPlot(true);
+		iForest += countForest(pAdjacentPlot, iForest);
 	}
 	return iForest;
 }
@@ -12532,20 +12496,13 @@ void CvGame::addLandmarkSigns()
 void CvGame::markBayPlots(CvPlot* pPlot)
 {
 	//Marks all plots around the given plot, and all plots around the adjacent plots as counted
-	for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+	foreach_(CvPlot* pAdjacentPlot, pPlot->adjacent() | filtered(!CvPlot::fn::isCountedPlot() && CvPlot::fn::isWater()))
 	{
-		CvPlot* pAdjacentPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
-		if (pAdjacentPlot != NULL && !pAdjacentPlot->isCountedPlot() && pAdjacentPlot->isWater())
+		pAdjacentPlot->setCountedPlot(true);
+
+		foreach_(CvPlot* pAdjacentPlot2, pAdjacentPlot->adjacent() | filtered(!CvPlot::fn::isCountedPlot() && CvPlot::fn::isWater()))
 		{
-			pAdjacentPlot->setCountedPlot(true);
-			for (int iJ = 0; iJ < NUM_DIRECTION_TYPES; ++iJ)
-			{
-				CvPlot* pAdjacentPlot2 = plotDirection(pAdjacentPlot->getX(), pAdjacentPlot->getY(), ((DirectionTypes)iJ));
-				if (pAdjacentPlot2 != NULL && !pAdjacentPlot2->isCountedPlot() && pAdjacentPlot2->isWater())
-				{
-					pAdjacentPlot2->setCountedPlot(true);
-				}
-			}
+			pAdjacentPlot2->setCountedPlot(true);
 		}
 	}
 }
@@ -12553,23 +12510,19 @@ void CvGame::markBayPlots(CvPlot* pPlot)
 int CvGame::countPeaks(CvPlot* pPlot, bool bCountHill)
 {
 	int iPeak = 0;
-	for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+	foreach_(CvPlot* pAdjacentPlot, pPlot->adjacent() | filtered(!CvPlot::fn::isCountedPlot()))
 	{
-		CvPlot* pAdjacentPlot = plotDirection(pPlot->getX(), pPlot->getY(), ((DirectionTypes)iI));
-		if (pAdjacentPlot != NULL && !pAdjacentPlot->isCountedPlot())
+		if (pAdjacentPlot->isPeak())
 		{
-			if (pAdjacentPlot->isPeak())
-			{
-				iPeak++;
-				pAdjacentPlot->setCountedPlot(true);
-				iPeak += countPeaks(pAdjacentPlot, true);
-			}
-			//Use hills to find sparser mountain ranges
-			else if (pAdjacentPlot->isHills() && bCountHill)
-			{
-				pAdjacentPlot->setCountedPlot(true);
-				iPeak += countPeaks(pAdjacentPlot, false);
-			}
+			iPeak++;
+			pAdjacentPlot->setCountedPlot(true);
+			iPeak += countPeaks(pAdjacentPlot, true);
+		}
+		//Use hills to find sparser mountain ranges
+		else if (pAdjacentPlot->isHills() && bCountHill)
+		{
+			pAdjacentPlot->setCountedPlot(true);
+			iPeak += countPeaks(pAdjacentPlot, false);
 		}
 	}
 	return iPeak;

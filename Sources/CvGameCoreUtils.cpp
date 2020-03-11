@@ -2767,18 +2767,11 @@ int pathCost(FAStarNode* parent, FAStarNode* node, int data, const void* pointer
 				}
 				else
 				{
-					CvPlot* pAdjacentPlot;
-					int iI;
-					for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+					foreach_(const CvPlot* pAdjacentPlot, pToPlot->adjacent())
 					{
-						pAdjacentPlot = plotDirection(pToPlot->getX(), pToPlot->getY(), ((DirectionTypes)iI));
-
-						if( pAdjacentPlot != NULL )
+						if (pAdjacentPlot->isOwned() && (atWar(pAdjacentPlot->getTeam(), eTeam) || (pAdjacentPlot->getTeam() != eTeam && bHasAlwaysHostileUnit)))
 						{
-							if (pAdjacentPlot->isOwned() && (atWar(pAdjacentPlot->getTeam(), eTeam) || (pAdjacentPlot->getTeam() != eTeam && bHasAlwaysHostileUnit)))
-							{
-								iNodeCost += (iCost*3)/2;
-							}
+							iNodeCost += (iCost*3)/2;
 						}
 					}
 				}
@@ -2791,18 +2784,11 @@ int pathCost(FAStarNode* parent, FAStarNode* node, int data, const void* pointer
 				}
 				else
 				{
-					CvPlot* pAdjacentPlot;
-					int iI;
-					for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+					foreach_(const CvPlot* pAdjacentPlot, pToPlot->adjacent())
 					{
-						pAdjacentPlot = plotDirection(pToPlot->getX(), pToPlot->getY(), ((DirectionTypes)iI));
-
-						if( pAdjacentPlot != NULL )
+						if (pAdjacentPlot->isOwned() && (atWar(pAdjacentPlot->getTeam(), eTeam) || (pAdjacentPlot->getTeam() != eTeam && bHasAlwaysHostileUnit)))
 						{
-							if (pAdjacentPlot->isOwned() && (atWar(pAdjacentPlot->getTeam(), eTeam) || (pAdjacentPlot->getTeam() != eTeam && bHasAlwaysHostileUnit)))
-							{
-								iNodeCost += (iCost*4)/3;
-							}
+							iNodeCost += (iCost*4)/3;
 						}
 					}
 				}
@@ -2832,13 +2818,11 @@ int pathCost(FAStarNode* parent, FAStarNode* node, int data, const void* pointer
 				//	a ganeral avoidance cost
 				int iCityAdjacencyCost = 0;
 
-				for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+				foreach_(const CvPlot* pAdjacentPlot, pToPlot->adjacent())
 				{
-					CvPlot* pAdjacentPlot = plotDirection(pToPlot->getX(), pToPlot->getY(), ((DirectionTypes)iI));
 					CvCity* pAdjacentCity;
 
-					if( pAdjacentPlot != NULL &&
-						((pAdjacentCity = pAdjacentPlot->getPlotCity()) != NULL || pAdjacentPlot->isActsAsCity()))
+					if ((pAdjacentCity = pAdjacentPlot->getPlotCity()) != NULL || pAdjacentPlot->isActsAsCity())
 					{
 						if ( atWar(pAdjacentPlot->getTeam(), eTeam) )
 						{
@@ -2873,19 +2857,14 @@ int pathCost(FAStarNode* parent, FAStarNode* node, int data, const void* pointer
 						OutputDebugString(CvString::format("Evaluating end-turn unit danger\n").c_str());
 					}
 
-					CvPlot* pAdjacentPlot;
-					int iI;
 					int iUnitAdjacencyCost = 0;
 
-					for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+					foreach_(const CvPlot* pAdjacentPlot, pToPlot->adjacent())
 					{
-						pAdjacentPlot = plotDirection(pToPlot->getX(), pToPlot->getY(), ((DirectionTypes)iI));
-
-						if( pAdjacentPlot != NULL &&
-							pSelectionGroup->getArea() == pAdjacentPlot->getArea() &&
+						if (pSelectionGroup->getArea() == pAdjacentPlot->getArea() &&
 							pAdjacentPlot->getVisibleEnemyDefender(pSelectionGroup->getHeadOwner()))
 						{
-							int iRatioToUnitStack = pSelectionGroup->AI_compareStacks(pAdjacentPlot, false);
+							const int iRatioToUnitStack = pSelectionGroup->AI_compareStacks(pAdjacentPlot, false);
 
 							if ( iRatioToUnitStack < 120 )
 							{
@@ -3500,18 +3479,11 @@ int	NewPathCostFunc(const CvPathGeneratorBase* generator, const CvSelectionGroup
 				}
 				else
 				{
-					CvPlot* pAdjacentPlot;
-					int iI;
-					for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+					foreach_(const CvPlot* pAdjacentPlot, pToPlot->adjacent())
 					{
-						pAdjacentPlot = plotDirection(pToPlot->getX(), pToPlot->getY(), ((DirectionTypes)iI));
-
-						if( pAdjacentPlot != NULL )
+						if (pAdjacentPlot->isOwned() && (atWar(pAdjacentPlot->getTeam(), eTeam) || (pAdjacentPlot->getTeam() != eTeam && bHasAlwaysHostileUnit)))
 						{
-							if (pAdjacentPlot->isOwned() && (atWar(pAdjacentPlot->getTeam(), eTeam) || (pAdjacentPlot->getTeam() != eTeam && bHasAlwaysHostileUnit)))
-							{
-								iNodeCost += (iCost*3)/2;
-							}
+							iNodeCost += (iCost*3)/2;
 						}
 					}
 				}
@@ -3524,18 +3496,11 @@ int	NewPathCostFunc(const CvPathGeneratorBase* generator, const CvSelectionGroup
 				}
 				else
 				{
-					CvPlot* pAdjacentPlot;
-					int iI;
-					for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+					foreach_(const CvPlot* pAdjacentPlot, pToPlot->adjacent())
 					{
-						pAdjacentPlot = plotDirection(pToPlot->getX(), pToPlot->getY(), ((DirectionTypes)iI));
-
-						if( pAdjacentPlot != NULL )
+						if (pAdjacentPlot->isOwned() && (atWar(pAdjacentPlot->getTeam(), eTeam) || (pAdjacentPlot->getTeam() != eTeam && bHasAlwaysHostileUnit)))
 						{
-							if (pAdjacentPlot->isOwned() && (atWar(pAdjacentPlot->getTeam(), eTeam) || (pAdjacentPlot->getTeam() != eTeam && bHasAlwaysHostileUnit)))
-							{
-								iNodeCost += (iCost*4)/3;
-							}
+							iNodeCost += (iCost*4)/3;
 						}
 					}
 				}
@@ -3565,13 +3530,11 @@ int	NewPathCostFunc(const CvPathGeneratorBase* generator, const CvSelectionGroup
 				//	a general avoidance cost
 				int iCityAdjacencyCost = 0;
 
-				for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+				foreach_(const CvPlot* pAdjacentPlot, pToPlot->adjacent())
 				{
-					CvPlot* pAdjacentPlot = plotDirection(pToPlot->getX(), pToPlot->getY(), ((DirectionTypes)iI));
 					CvCity* pAdjacentCity;
 
-					if( pAdjacentPlot != NULL &&
-						((pAdjacentCity = pAdjacentPlot->getPlotCity()) != NULL || pAdjacentPlot->isActsAsCity()))
+					if ((pAdjacentCity = pAdjacentPlot->getPlotCity()) != NULL || pAdjacentPlot->isActsAsCity())
 					{
 						if ( atWar(pAdjacentPlot->getTeam(), eTeam) )
 						{
@@ -3604,21 +3567,16 @@ int	NewPathCostFunc(const CvPathGeneratorBase* generator, const CvSelectionGroup
 						OutputDebugString(CvString::format("Evaluating end-turn unit danger\n").c_str());
 					}
 
-					CvPlot* pAdjacentPlot;
-					int iI;
 					int iUnitAdjacencyCost = 0;
 
-					for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+					foreach_(const CvPlot* pAdjacentPlot, pToPlot->adjacent())
 					{
-						pAdjacentPlot = plotDirection(pToPlot->getX(), pToPlot->getY(), ((DirectionTypes)iI));
-
-						if( pAdjacentPlot != NULL &&
-							(bIsAIControlled || pAdjacentPlot != generator->getTerminalPlot()) &&	//	For the human player don't count ending turn next to what we intend to attack as bad
+						if( (bIsAIControlled || pAdjacentPlot != generator->getTerminalPlot()) &&	//	For the human player don't count ending turn next to what we intend to attack as bad
 							pSelectionGroup->getArea() == pAdjacentPlot->getArea() &&
 							pAdjacentPlot->isVisible(eTeam, false) &&
 							pAdjacentPlot->getVisibleEnemyDefender(pSelectionGroup->getHeadOwner()))
 						{
-							int iRatioToUnitStack = pSelectionGroup->AI_compareStacks(pAdjacentPlot,
+							const int iRatioToUnitStack = pSelectionGroup->AI_compareStacks(pAdjacentPlot,
 								//CvPathGenerator::IsMaxPerformance()?
 								//StackCompare::Fast
 								//:

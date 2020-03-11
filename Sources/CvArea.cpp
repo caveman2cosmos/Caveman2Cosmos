@@ -279,10 +279,9 @@ int CvArea::countHasReligion(ReligionTypes eReligion, PlayerTypes eOwner) const
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive() && (eOwner == NO_PLAYER || iI == eOwner))
 		{
-			for (CvPlayer::city_iterator cityItr = GET_PLAYER((PlayerTypes)iI).beginCities(); cityItr != GET_PLAYER((PlayerTypes)iI).endCities(); ++cityItr)
+			foreach_(const CvCity* city, GET_PLAYER((PlayerTypes)iI).cities())
 			{
-				const CvCity* pLoopCity = *cityItr;
-				if (pLoopCity->area()->getID() == getID() && pLoopCity->isHasReligion(eReligion))
+				if (city->area()->getID() == getID() && city->isHasReligion(eReligion))
 				{
 					iCount++;
 				}
@@ -301,10 +300,9 @@ int CvArea::countHasCorporation(CorporationTypes eCorporation, PlayerTypes eOwne
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive() && (eOwner == NO_PLAYER || iI == eOwner))
 		{
-			for (CvPlayer::city_iterator cityItr = GET_PLAYER((PlayerTypes)iI).beginCities(); cityItr != GET_PLAYER((PlayerTypes)iI).endCities(); ++cityItr)
+			foreach_(const CvCity* city, GET_PLAYER((PlayerTypes)iI).cities())
 			{
-				const CvCity* pLoopCity = *cityItr;
-				if (pLoopCity->area()->getID() == getID() && pLoopCity->isHasCorporation(eCorporation))
+				if (city->area()->getID() == getID() && city->isHasCorporation(eCorporation))
 				{
 					++iCount;
 				}

@@ -34,14 +34,11 @@ bool CvMapGenerator::canPlaceBonusAt(BonusTypes eBonus, int iX, int iY, bool bIg
 {
 	PROFILE_FUNC();
 
-	CvArea* pArea;
-	CvPlot* pPlot;
 	CvPlot* pLoopPlot;
 	int iDX, iDY;
-	int iI;
 
-	pPlot = GC.getMap().plot(iX, iY);
-	pArea = pPlot->area();
+	CvPlot* pPlot = GC.getMap().plot(iX, iY);
+	CvArea* pArea = pPlot->area();
 
 	if (!(pPlot->canHaveBonus(eBonus, bIgnoreLatitude)))
 	{
@@ -58,23 +55,15 @@ bool CvMapGenerator::canPlaceBonusAt(BonusTypes eBonus, int iX, int iY, bool bIg
 
 	if (!GC.getGame().isOption(GAMEOPTION_MORE_RESOURCES))
 	{
-		for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+		if (algo::any_of(pPlot->adjacent(), CvPlot::fn::getBonusType() != NO_BONUS && CvPlot::fn::getBonusType() != eBonus))
 		{
-			pLoopPlot = plotDirection(iX, iY, ((DirectionTypes)iI));
-
-			if (pLoopPlot != NULL)
-			{
-				if ((pLoopPlot->getBonusType() != NO_BONUS) && (pLoopPlot->getBonusType() != eBonus))
-				{
-					return false;
-				}
-			}
+			return false;
 		}
 	}
 
-	CvBonusInfo& pInfo = GC.getBonusInfo(eBonus);
-	int iBonusClassType = pInfo.getBonusClassType();
-	CvBonusClassInfo& pClassInfo = GC.getBonusClassInfo((BonusClassTypes) iBonusClassType);
+	const CvBonusInfo& pInfo = GC.getBonusInfo(eBonus);
+	const int iBonusClassType = pInfo.getBonusClassType();
+	const CvBonusClassInfo& pClassInfo = GC.getBonusClassInfo((BonusClassTypes) iBonusClassType);
 
 	if (pPlot->isWater()
 	&& GC.getMap().getNumBonusesOnLand(eBonus) * 100 / (GC.getMap().getNumBonuses(eBonus) + 1) < pInfo.getMinLandPercent())

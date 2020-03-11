@@ -499,19 +499,7 @@ bool CvOutcome::isPossible(const CvUnit& kUnit) const
 			}
 		}
 
-		int iCount = 0;
-		for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
-		{
-			CvPlot* pAdjacentPlot = plotDirection(kUnit.plot()->getX(), kUnit.plot()->getY(), ((DirectionTypes)iI));
-
-			if (pAdjacentPlot != NULL)
-			{
-				if (pAdjacentPlot->getBonusType() == m_eBonusType)
-				{
-					iCount++;
-				}
-			}
-		}
+		const int iCount = algo::count_if(kUnit.plot()->adjacent(), CvPlot::fn::getBonusType() == m_eBonusType);
 		if (!(iCount == 0 || (iCount == 1 && kUnit.plot()->isWater())))
 		{
 			return false;
@@ -520,7 +508,7 @@ bool CvOutcome::isPossible(const CvUnit& kUnit) const
 
 	if (m_eEventTrigger != NO_EVENTTRIGGER)
 	{
-		CvPlayer& kOwner = GET_PLAYER(kUnit.getOwner());
+		const CvPlayer& kOwner = GET_PLAYER(kUnit.getOwner());
 		CvEventTriggerInfo& kTriggerInfo = GC.getEventTriggerInfo(m_eEventTrigger);
 		if (!kOwner.isEventTriggerPossible(m_eEventTrigger, true))
 		{
@@ -529,13 +517,10 @@ bool CvOutcome::isPossible(const CvUnit& kUnit) const
 
 		if (kTriggerInfo.isPickCity())
 		{
-			CvCity* pCity = kUnit.plot()->getPlotCity();
-			if (pCity)
+			const CvCity* pCity = kUnit.plot()->getPlotCity();
+			if (pCity && !pCity->isEventTriggerPossible(m_eEventTrigger))
 			{
-				if (!pCity->isEventTriggerPossible(m_eEventTrigger))
-				{
-					return false;
-				}
+				return false;
 			}
 		}
 
@@ -590,8 +575,8 @@ bool CvOutcome::isPossible(const CvUnit& kUnit) const
 // Can return a false positive if an outcome requires a building combination
 bool CvOutcome::isPossibleSomewhere(const CvUnit& kUnit) const
 {
-	CvTeam& kTeam = GET_TEAM(kUnit.getTeam());
-	CvOutcomeInfo& kInfo = GC.getOutcomeInfo(m_eType);
+	const CvTeam& kTeam = GET_TEAM(kUnit.getTeam());
+	const CvOutcomeInfo& kInfo = GC.getOutcomeInfo(m_eType);
 
 	if (!kTeam.isHasTech(kInfo.getPrereqTech()))
 	{
@@ -808,7 +793,7 @@ bool CvOutcome::isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool 
 
 	if (m_eBonusType != NO_BONUS)
 	{
-		CvBonusInfo& kBonus = GC.getBonusInfo(m_eBonusType);
+		const CvBonusInfo& kBonus = GC.getBonusInfo(m_eBonusType);
 		if (!kTeam.isHasTech((TechTypes)kBonus.getTechReveal()))
 		{
 			return false;
@@ -843,19 +828,7 @@ bool CvOutcome::isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool 
 			}
 		}
 
-		int iCount = 0;
-		for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
-		{
-			CvPlot* pAdjacentPlot = plotDirection(kPlot.getX(), kPlot.getY(), ((DirectionTypes)iI));
-
-			if (pAdjacentPlot != NULL)
-			{
-				if (pAdjacentPlot->getBonusType() == m_eBonusType)
-				{
-					iCount++;
-				}
-			}
-		}
+		const int iCount = algo::count_if(kPlot.adjacent(), CvPlot::fn::getBonusType() == m_eBonusType);
 		if (!(iCount == 0 || (iCount == 1 && kPlot.isWater())))
 		{
 			return false;
@@ -864,22 +837,18 @@ bool CvOutcome::isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool 
 
 	if (m_eEventTrigger != NO_EVENTTRIGGER)
 	{
-		CvPlayer& kOwner = GET_PLAYER(kUnit.getOwner());
-		CvEventTriggerInfo& kTriggerInfo = GC.getEventTriggerInfo(m_eEventTrigger);
+		const CvPlayer& kOwner = GET_PLAYER(kUnit.getOwner());
 		if (!kOwner.isEventTriggerPossible(m_eEventTrigger, true))
 		{
 			return false;
 		}
 
-		if (kTriggerInfo.isPickCity())
+		if (GC.getEventTriggerInfo(m_eEventTrigger).isPickCity())
 		{
-			CvCity* pCity = kPlot.getPlotCity();
-			if (pCity)
+			const CvCity* pCity = kPlot.getPlotCity();
+			if (pCity && !pCity->isEventTriggerPossible(m_eEventTrigger))
 			{
-				if (!pCity->isEventTriggerPossible(m_eEventTrigger))
-				{
-					return false;
-				}
+				return false;
 			}
 		}
 
@@ -933,8 +902,8 @@ bool CvOutcome::isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool 
 
 bool CvOutcome::isPossible(const CvPlayerAI& kPlayer) const
 {
-	CvTeam& kTeam = GET_TEAM(kPlayer.getTeam());
-	CvOutcomeInfo& kInfo = GC.getOutcomeInfo(m_eType);
+	const CvTeam& kTeam = GET_TEAM(kPlayer.getTeam());
+	const CvOutcomeInfo& kInfo = GC.getOutcomeInfo(m_eType);
 
 	if (!kTeam.isHasTech(kInfo.getPrereqTech()))
 	{
@@ -976,7 +945,7 @@ bool CvOutcome::isPossible(const CvPlayerAI& kPlayer) const
 
 	if (m_eBonusType != NO_BONUS)
 	{
-		CvBonusInfo& kBonus = GC.getBonusInfo(m_eBonusType);
+		const CvBonusInfo& kBonus = GC.getBonusInfo(m_eBonusType);
 		if (!kTeam.isHasTech((TechTypes)kBonus.getTechReveal()))
 		{
 			return false;
