@@ -76,30 +76,6 @@
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_BEARRIDER_NATIVE_AMERICAN</Type>
-			<Button>Art/Interface/Buttons/Units/sparth/bear_rider.dds</Button>
-			<fScale>0.42</fScale>
-			<fInterfaceScale>0.9</fInterfaceScale>
-			<bActAsLand>0</bActAsLand>
-			<bActAsAir>0</bActAsAir>
-			<NIF>art/units/megafauna/native_blackbearrider/bbearrider.nif</NIF>
-			<KFM />
-			<SHADERNIF />
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/HorseShadow.nif</ShadowNIF>
-				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
-				<fShadowScale>1.0</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.35</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<bActAsRanged>0</bActAsRanged>
-			<TrainSound>AS2D_UNIT_BUILD_UNIQUE_UNIT</TrainSound>
-			<AudioRunSounds>
-				<AudioRunTypeLoop />
-				<AudioRunTypeEnd />
-			</AudioRunSounds>
-		</UnitArtInfo>
-		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_BEARKNIGHT_SOUTH_AMERICA</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/bear_knight.dds</Button>
 			<fScale>0.42</fScale>

@@ -274,23 +274,6 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_BROWN_PANTHER</Type>
-        		<Button>Art/Interface/Buttons/Units/brown_panther.dds</Button>
-			<fScale>0.5</fScale>
-			<fInterfaceScale>1.3</fInterfaceScale>
-			<NIF>Art/Units/Animals/BrownPanther/Panther.nif</NIF>
-			<KFM>Art/Units/Panther/Panther.kfm</KFM>
-			<SHADERNIF>Art/Units/Animals/BrownPanther/Panther_FX.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/PantherShadow.nif</ShadowNIF>
-				<ShadowAttachNode>LionBip Spine</ShadowAttachNode>
-				<fShadowScale>1.0</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.35</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-		</UnitArtInfo>
-		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_BUFFALO</Type>
 			<Button>Art/Interface/Buttons/Units/Buffalo.dds</Button>
 			<fScale>25.0</fScale>
@@ -301,23 +284,6 @@
 			<fBattleDistance>1.1</fBattleDistance>
 			<fRangedDeathTime>0.35</fRangedDeathTime>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-		</UnitArtInfo>
-		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_CAMEL</Type>
-			<Button>,Art/Interface/Buttons/Units/Wolf.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,5,5</Button>
-			<fScale>0.42</fScale>
-			<fInterfaceScale>0.9</fInterfaceScale>
-			<NIF>Art/Units/Animals/Camel/Camel.nif</NIF>
-			<KFM>Art/Units/Unique/Arabia/CamelArcher/ArabiaCamelArcher.kfm</KFM>
-			<SHADERNIF>Art/Units/Animals/Camel/Camel.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/HorseShadow.nif</ShadowNIF>
-				<ShadowAttachNode>HorseBip Spine1</ShadowAttachNode>
-				<fShadowScale>1.0</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.28</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<TrainSound>AS2D_UNIT_BUILD_UNIQUE_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_CAPUCHIN</Type>
@@ -567,38 +533,6 @@
 			<NIF>Art/Units/Animals/Dog/Wolf.nif</NIF>
 			<KFM>Art/Units/Wolf/Wolf.kfm</KFM>
 			<SHADERNIF>Art/Units/Animals/Dog/Wolf_FX.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/WolfShadow.nif</ShadowNIF>
-				<ShadowAttachNode>LionBip Spine</ShadowAttachNode>
-				<fShadowScale>1.0</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.28</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-		</UnitArtInfo>
-		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_DOG_BROWN</Type>
-			<Button>Art/Interface/Buttons/Units/dog_brown.dds</Button>
-			<fScale>0.38</fScale>
-			<fInterfaceScale>1.3</fInterfaceScale>
-			<NIF>Art/Units/Animals/Dog_1/doggy.nif</NIF>
-			<KFM>Art/Units/Wolf/Wolf.kfm</KFM>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/WolfShadow.nif</ShadowNIF>
-				<ShadowAttachNode>LionBip Spine</ShadowAttachNode>
-				<fShadowScale>1.0</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.28</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-		</UnitArtInfo>
-		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_DOG_BLACK</Type>
-			<Button>Art/Interface/Buttons/Units/dog_black.dds</Button>
-			<fScale>0.38</fScale>
-			<fInterfaceScale>1.3</fInterfaceScale>
-			<NIF>Art/Units/Animals/Dog_1/doggy_2.nif</NIF>
-			<KFM>Art/Units/Wolf/Wolf.kfm</KFM>
 			<ShadowDef>
 				<ShadowNIF>Art/Units/01_UnitShadows/WolfShadow.nif</ShadowNIF>
 				<ShadowAttachNode>LionBip Spine</ShadowAttachNode>
@@ -1242,23 +1176,6 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_LIONESS</Type>
-			<Button>,Art/Interface/Buttons/Units/Lion.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,6,5</Button>
-			<fScale>0.55</fScale>
-			<fInterfaceScale>1.3</fInterfaceScale>
-			<NIF>Art/Units/Animals/CaveLioness/Panther.nif</NIF>
-			<KFM>Art/Units/Panther/Panther.kfm</KFM>
-			<SHADERNIF>Art/Units/Animals/CaveLioness/Panther.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/LionShadow.nif</ShadowNIF>
-				<ShadowAttachNode>LionBip Spine1</ShadowAttachNode>
-				<fShadowScale>1.0</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.35</fBattleDistance>
-			<fRangedDeathTime>0.28</fRangedDeathTime>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-		</UnitArtInfo>
-		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_LOCUST_SMALL_SWARM</Type>
 			<Button>Art/Interface/Buttons/Units/locust_swarm.dds</Button>
 			<fScale>0.2</fScale>
@@ -1831,23 +1748,6 @@
 			<SHADERNIF>Art/Units/Animals/Rhea/Rhea.nif</SHADERNIF>
 			<fBattleDistance>1.1</fBattleDistance>
 			<fRangedDeathTime>0.35</fRangedDeathTime>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-		</UnitArtInfo>
-		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_RHINO</Type>
-			<Button>Art/Interface/Buttons/Units/button_rhino.dds</Button>
-			<fScale>0.46</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Units/Animals/Rhino/mounted_swordsman_mongol.nif</NIF>
-			<KFM>Art/Units/knight/knight.kfm</KFM>
-			<SHADERNIF>Art/Units/Animals/Rhino/mounted_swordsman_mongol.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/WarElephantShadow.nif</ShadowNIF>
-				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
-				<fShadowScale>1.0</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.45</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>

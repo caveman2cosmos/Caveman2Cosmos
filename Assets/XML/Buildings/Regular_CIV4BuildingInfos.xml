@@ -81045,7 +81045,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_REVIVALIST_CHURCH2_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_REVIVALIST_CHURCH2_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_REVIVALIST_CHURCH2</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_REVIVALIST_CHURCH</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
