@@ -885,7 +885,7 @@
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_VIKING_BESERKER</Description>
-			<Civilopedia>TXT_KEY_CHANGED_UNIT_VIKING_BESERKER_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_UNIT_VIKING_BESERKER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_VIKING_BESERKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>

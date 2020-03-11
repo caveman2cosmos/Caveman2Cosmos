@@ -1108,7 +1108,7 @@
 			<Description>TXT_KEY_BONUS_HEAVY_WATER</Description>
 			<Civilopedia>TXT_KEY_BONUS_HEAVY_WATER_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_ZINC_ORE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_HEAVY_WATER</ArtDefineTag>
 			<TechReveal>TECH_QUANTUM_PHYSICS</TechReveal>
 			<TechCityTrade>TECH_QUANTUM_PHYSICS</TechCityTrade>
 			<iAITradeModifier>10</iAITradeModifier>
@@ -1620,7 +1620,7 @@
 			<Description>TXT_KEY_BONUS_MOON_ROCKS</Description>
 			<Civilopedia>TXT_KEY_BONUS_MOON_ROCKS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_MARS_ROCKS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_MOON_ROCKS</ArtDefineTag>
 			<TechReveal>TECH_LUNAR_EXPLORATION</TechReveal>
 			<TechCityTrade>TECH_LUNAR_EXPLORATION</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
@@ -2435,7 +2435,7 @@
 			<Description>TXT_KEY_BONUS_SYNTHETIC_RUBBER</Description>
 			<Civilopedia>TXT_KEY_BONUS_SYNTHETIC_RUBBER_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_VULCANIZED_RUBBER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_SYNTHETIC_RUBBER</ArtDefineTag>
 			<TechReveal>TECH_POLYMERIZATION</TechReveal>
 			<TechCityTrade>TECH_POLYMERIZATION</TechCityTrade>
 			<iAITradeModifier>10</iAITradeModifier>

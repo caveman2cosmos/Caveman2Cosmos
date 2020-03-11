@@ -665,36 +665,12 @@
 		<Spanish>Pulsar [CTRL + B] para activar la vista del mapa limpio...</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_HINT_INTERFACE_24</Tag>
-		<English>Press [CTRL + B] to toggle Bare Map view...</English>
-		<French>Appuyez sur [CTRL + B] pour afficher ou masquer la carte vierge.</French>
-		<German>Tipp... Mit der Tastenkombination [STRG + B] lässt sich die Kartenübersicht ein-/ausschalten.</German>
-		<Italian>Premi [CTRL + B] per attivare/disattivare la visuale mappa semplificata...</Italian>
-		<Spanish>Pulsar [CTRL + B] para activar la vista del mapa limpio...</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_25</Tag>
 		<English>Press [CTRL + R] to toggle Flag Resources view...</English>
 		<French>Appuyez sur [CTRL + R] pour afficher ou masquer les ressources.</French>
 		<German>Tipp... Mit der Tastenkombination [STRG + R] lassen sich zusätzliche Ressourcen-Hinweise ein-/ausblenden.</German>
 		<Italian>Premi [CTRL + R] per visualizzare/nascondere la segnalazione risorse...</Italian>
 		<Spanish>Pulsar [CTRL + R] para activar las marcas de recursos...</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_HINT_INTERFACE_25</Tag>
-		<English>Press [CTRL + R] to toggle Flag Resources view...</English>
-		<French>Appuyez sur [CTRL + R] pour afficher ou masquer les ressources.</French>
-		<German>Tipp... Mit der Tastenkombination [STRG + R] lassen sich zusätzliche Ressourcenhinweise ein-/ausblenden.</German>
-		<Italian>Premi [CTRL + R] per visualizzare/nascondere la segnalazione risorse...</Italian>
-		<Spanish>Pulsar [CTRL + R] para activar las marcas de recursos...</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_HINT_INTERFACE_26</Tag>
-		<English>Press [CTRL + Y] to toggle Show Yields view...</English>
-		<French>Appuyez sur [CTRL + Y] pour afficher ou masquer les icones de production.</French>
-		<German>Tipp... Mit der Tastenkombination [STRG + Y] lässt sich eine zusätzliche Geländefeld-Ertragsanzeige ein-/ausblenden.</German>
-		<Italian>Premi [CTRL + Y] per visualizzare/nascondere la produzione...</Italian>
-		<Spanish>Pulsar [CTRL + Y] para activar la vista Mostrar rendimientos...</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HINT_INTERFACE_26</Tag>
@@ -709,14 +685,6 @@
 		<English>Press [CTRL + T] to toggle the Tile Grid</English>
 		<French>Appuyez sur [CTRL + T] pour afficher ou masquer la grille.</French>
 		<German>Tipp... Mit der Tastenkombination [STRG + T] lässt sich das Spielfeld-Raster (Gitter) ein-/ausblenden.</German>
-		<Italian>Premi [CTRL + T] per attivare la griglia delle caselle...</Italian>
-		<Spanish>Pulsar [CTRL + T] para activar la cuadrícula.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_HINT_INTERFACE_28</Tag>
-		<English>Press [CTRL + T] to toggle the Tile Grid</English>
-		<French>Appuyez sur [CTRL + T] pour afficher ou masquer la grille.</French>
-		<German>Tipp... Mit der Tastenkombination [STRG + T] lässt sich das Spielfeldraster (Gitter) ein-/ausblenden.</German>
 		<Italian>Premi [CTRL + T] per attivare la griglia delle caselle...</Italian>
 		<Spanish>Pulsar [CTRL + T] para activar la cuadrícula.</Spanish>
 	</TEXT>
