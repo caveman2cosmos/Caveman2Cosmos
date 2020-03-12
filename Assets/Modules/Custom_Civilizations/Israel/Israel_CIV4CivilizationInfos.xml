@@ -71,16 +71,16 @@
 				<City>Alfe Menashe</City>
 				<City>Zoran</City>
 			</Cities>
-			<FreeBuildingClasses>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-				<FreeBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingClassType>
-					<bFreeBuildingClass>1</bFreeBuildingClass>
-				</FreeBuildingClass>
-			</FreeBuildingClasses>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>

@@ -721,17 +721,10 @@ void CvGameObjectPlot::foreachManipulator(ManipCallbackFn func) const
 	func(GC.getTerrainInfo(m_pPlot->getTerrainType()).getPropertyManipulators());
 
 	// Feature Type
-//#ifdef MULTI_FEATURE_MOD
-//	for (int i=0; i<m_pPlot->getNumFeatures(); i++)
-//	{
-//		func(GC.getFeatureInfo(m_pPlot->getFeatureByIndex(i)).getPropertyManipulators());
-//	}
-//#else
 	if (m_pPlot->getFeatureType() != NO_FEATURE)
 	{
 		func(GC.getFeatureInfo(m_pPlot->getFeatureType()).getPropertyManipulators());
 	}
-//#endif
 
 	// Improvement Type
 	if (m_pPlot->getImprovementType() != NO_IMPROVEMENT)
@@ -759,7 +752,7 @@ void CvGameObject::eventPropertyChanged(PropertyTypes eProperty, int iNewValue)
 void CvGameObjectCity::eventPropertyChanged(PropertyTypes eProperty, int iNewValue)
 {
 	//CvString szBuffer;
-	CvPropertyInfo& kInfo = GC.getPropertyInfo(eProperty);
+	const CvPropertyInfo& kInfo = GC.getPropertyInfo(eProperty);
 	const int iNum = kInfo.getNumPropertyBuildings();
 	//TB Combat Mods (disease special manifestation and removal system)
 	//PropertyTypes eDiseaseType = (PropertyTypes)GC.getInfoTypeForString("PROPERTY_DISEASE");
@@ -816,7 +809,7 @@ void CvGameObjectUnit::eventPropertyChanged(PropertyTypes eProperty, int iNewVal
 {
 	PROFILE_FUNC();
 
-	CvPropertyInfo& kInfo = GC.getPropertyInfo(eProperty);
+	const CvPropertyInfo& kInfo = GC.getPropertyInfo(eProperty);
 	const int iNum = kInfo.getNumPropertyPromotions();
 
 	for (int i=0; i<iNum; i++)
@@ -1063,9 +1056,7 @@ bool CvGameObjectGame::hasGOM(GOMTypes eType, int iID)
 		case GOM_BUILDING:
 		{
 			// If there is any building of that type created, return true
-			const BuildingTypes eBuilding = (BuildingTypes) iID;
-			return GC.getGame().getBuildingClassCreatedCount((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType()) > 0;
-			//break;
+			return GC.getGame().getBuildingCreatedCount((BuildingTypes)iID) > 0;
 		}
 
 		case GOM_PROMOTION:
@@ -1119,8 +1110,7 @@ bool CvGameObjectGame::hasGOM(GOMTypes eType, int iID)
 		case GOM_UNITTYPE:
 		{
 			// If there is any unit of that type created, return true
-			const UnitTypes eUnit = (UnitTypes) iID;
-			return GC.getGame().getUnitClassCreatedCount((UnitClassTypes)GC.getUnitInfo(eUnit).getUnitClassType()) > 0;
+			return GC.getGame().getUnitCreatedCount((UnitTypes) iID) > 0;
 			//break;
 		}
 
@@ -1182,9 +1172,7 @@ bool CvGameObjectTeam::hasGOM(GOMTypes eType, int iID)
 		case GOM_BUILDING:
 		{
 			// If there is any building of that type in the team, return true
-			const BuildingTypes eBuilding = (BuildingTypes) iID;
-			return m_pTeam->getBuildingClassCount((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType()) > 0;
-			//break;
+			return m_pTeam->getBuildingCount(static_cast<BuildingTypes>(iID)) > 0;
 		}
 
 		case GOM_PROMOTION:
@@ -1242,8 +1230,7 @@ bool CvGameObjectTeam::hasGOM(GOMTypes eType, int iID)
 		case GOM_UNITTYPE:
 		{
 			// If there is any unit of that type in the team, return true
-			const UnitTypes eUnit = (UnitTypes) iID;
-			return m_pTeam->getUnitClassCount((UnitClassTypes)GC.getUnitInfo(eUnit).getUnitClassType()) > 0;
+			return m_pTeam->getUnitCount((UnitTypes) iID) > 0;
 			//break;
 		}
 
@@ -1309,9 +1296,7 @@ bool CvGameObjectPlayer::hasGOM(GOMTypes eType, int iID)
 		case GOM_BUILDING:
 		{
 			// If there is any building of that type of the player, return true
-			const BuildingTypes eBuilding = (BuildingTypes) iID;
-			return m_pPlayer->getBuildingClassCount((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType()) > 0;
-			//break;
+			return m_pPlayer->getBuildingCount(static_cast<BuildingTypes>(iID)) > 0;
 		}
 
 		case GOM_PROMOTION:
@@ -1367,8 +1352,7 @@ bool CvGameObjectPlayer::hasGOM(GOMTypes eType, int iID)
 		case GOM_UNITTYPE:
 		{
 			// If there is any unit of that type of the player, return true
-			const UnitTypes eUnit = (UnitTypes) iID;
-			return m_pPlayer->getUnitClassCount((UnitClassTypes)GC.getUnitInfo(eUnit).getUnitClassType()) > 0;
+			return m_pPlayer->getUnitCount((UnitTypes) iID) > 0;
 			//break;
 		}
 
@@ -1602,11 +1586,7 @@ bool CvGameObjectUnit::hasGOM(GOMTypes eType, int iID)
 		{
 			// Check plot on which the unit is
 			const FeatureTypes eFeature = (FeatureTypes) iID;
-//#ifdef MULTI_FEATURE_MOD
-//			return m_pUnit->plot()->getHasFeature(eFeature);
-//#else
 			return m_pUnit->plot()->getFeatureType() == eFeature;
-//#endif
 			//break;
 		}
 
@@ -1761,11 +1741,7 @@ bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID)
 		{
 			// Check feature type
 			const FeatureTypes eFeature = (FeatureTypes) iID;
-//#ifdef MULTI_FEATURE_MOD
-//			return m_pPlot->getHasFeature(eFeature);
-//#else
 			return m_pPlot->getFeatureType() == eFeature;
-//#endif
 			//break;
 		}
 

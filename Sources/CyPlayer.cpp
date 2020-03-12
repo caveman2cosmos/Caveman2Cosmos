@@ -570,14 +570,14 @@ bool CyPlayer::canMaintain(int /*ProcessTypes*/ eProcess, bool bContinue)
 	return m_pPlayer ? m_pPlayer->canMaintain((ProcessTypes)eProcess, bContinue) : false;
 }
 
-bool CyPlayer::isProductionMaxedUnitClass(int /*UnitClassTypes*/ eUnitClass)
+bool CyPlayer::isProductionMaxedUnit(int /*UnitTypes*/ eUnit)
 {
-	return m_pPlayer ? m_pPlayer->isProductionMaxedUnitClass((UnitClassTypes) eUnitClass) : false;
+	return m_pPlayer ? m_pPlayer->isProductionMaxedUnit((UnitTypes) eUnit) : false;
 }
 
-bool CyPlayer::isProductionMaxedBuildingClass(int /*BuildingClassTypes*/ eBuildingClass, bool bAcquireCity)
+bool CyPlayer::isProductionMaxedBuilding(int /*BuildingTypes*/ eBuilding, bool bAcquireCity)
 {
-	return m_pPlayer ? m_pPlayer->isProductionMaxedBuildingClass((BuildingClassTypes) eBuildingClass, bAcquireCity) : false;
+	return m_pPlayer ? m_pPlayer->isProductionMaxedBuilding((BuildingTypes) eBuilding, bAcquireCity) : false;
 }
 
 bool CyPlayer::isProductionMaxedProject(int /*ProjectTypes*/ eProject)
@@ -600,15 +600,15 @@ int CyPlayer::getProjectProductionNeeded(int /*ProjectTypes*/ iIndex)
 	return m_pPlayer ? m_pPlayer->getProductionNeeded((ProjectTypes)iIndex) : -1;
 }
 
-int CyPlayer::getBuildingClassPrereqBuilding(int /*BuildingTypes*/ eBuilding, int /*BuildingClassTypes*/ ePrereqBuildingClass, int iExtra)
+int CyPlayer::getBuildingPrereqBuilding(int /*BuildingTypes*/ eBuilding, int /*BuildingTypes*/ ePrereqBuilding, int iExtra)
 {
-	return m_pPlayer ? m_pPlayer->getBuildingClassPrereqBuilding((BuildingTypes) eBuilding, (BuildingClassTypes) ePrereqBuildingClass, iExtra) : -1;
+	return m_pPlayer ? m_pPlayer->getBuildingPrereqBuilding((BuildingTypes)eBuilding, (BuildingTypes)ePrereqBuilding, iExtra) : -1;
 }
 
-void CyPlayer::removeBuildingClass(int /*BuildingClassTypes*/ eBuildingClass)
+void CyPlayer::removeBuilding(int /*BuildingTypes*/ eBuilding)
 {
 	if (m_pPlayer)
-		m_pPlayer->removeBuildingClass((BuildingClassTypes)eBuildingClass);
+		m_pPlayer->removeBuilding((BuildingTypes)eBuilding);
 }
 
 bool CyPlayer::canBuild(CyPlot* pPlot, int /*BuildTypes*/ eBuild, bool bTestEra, bool bTestVisible)
@@ -1284,18 +1284,10 @@ int CyPlayer::getCityDefenseModifier()
 	return m_pPlayer ? m_pPlayer->getCityDefenseModifier() : -1;
 }
 
-/************************************************************************************************/
-/* LoR                                        11/03/10                          phungus420      */
-/*                                                                                              */
-/* Colonists                                                                                    */
-/************************************************************************************************/
 int CyPlayer::getBestUnitType(int /*UnitAITypes*/ eUnitAI) const
 {
 	return m_pPlayer ? (int) m_pPlayer->getBestUnitType(UnitAITypes(eUnitAI)) : -1;
 }
-/************************************************************************************************/
-/* LoR                            END                                                           */
-/************************************************************************************************/
 
 /************************************************************************************************/
 /* REVDCM                                 09/02/10                                phungus420    */
@@ -1365,11 +1357,6 @@ int CyPlayer::getUnitUpgradePriceModifier()
 bool CyPlayer::canFoundReligion()
 {
 	return m_pPlayer ? m_pPlayer->canFoundReligion() : false;
-}
-
-bool CyPlayer::isBuildingClassRequiredToTrain(int /*BuildingClassTypes*/ iBuildingClass, int /*UnitTypes*/ iUnit)
-{
-	return m_pPlayer ? m_pPlayer->isBuildingClassRequiredToTrain((BuildingClassTypes)iBuildingClass, (UnitTypes)iUnit) : false;
 }
 /************************************************************************************************/
 /* REVDCM                                  END                                                  */
@@ -2113,44 +2100,44 @@ int CyPlayer::getFeatureHappiness(int /*FeatureTypes*/ iIndex)
 	return m_pPlayer ? m_pPlayer->getFeatureHappiness((FeatureTypes)iIndex) : -1;
 }
 
-int CyPlayer::getUnitClassCount(int /*UnitClassTypes*/ eIndex)
+int CyPlayer::getUnitCount(int /*UnitTypes*/ eIndex)
 {
-	return (m_pPlayer && eIndex >= 0) ? m_pPlayer->getUnitClassCount((UnitClassTypes) eIndex) : 0;
+	return (m_pPlayer && eIndex >= 0) ? m_pPlayer->getUnitCount((UnitTypes) eIndex) : 0;
 }
 
-bool CyPlayer::isUnitClassMaxedOut(int /*UnitClassTypes*/ eIndex, int iExtra)
+bool CyPlayer::isUnitMaxedOut(int /*UnitTypes*/ eIndex, int iExtra)
 {
-	return (m_pPlayer && eIndex >= 0) ? m_pPlayer->isUnitClassMaxedOut((UnitClassTypes) eIndex, iExtra) : false;
+	return (m_pPlayer && eIndex >= 0) ? m_pPlayer->isUnitMaxedOut((UnitTypes) eIndex, iExtra) : false;
 }
 
-int CyPlayer::getUnitClassMaking(int /*UnitClassTypes*/ eIndex)
+int CyPlayer::getUnitMaking(int /*UnitTypes*/ eIndex)
 {
-	return (m_pPlayer && eIndex >= 0) ? m_pPlayer->getUnitClassMaking((UnitClassTypes) eIndex) : 0;
+	return (m_pPlayer && eIndex >= 0) ? m_pPlayer->getUnitMaking((UnitTypes) eIndex) : 0;
 }
 
-int CyPlayer::getUnitClassCountPlusMaking(int /*UnitClassTypes*/ eIndex)
+int CyPlayer::getUnitCountPlusMaking(int /*UnitTypes*/ eIndex)
 {
-	return (m_pPlayer && eIndex >= 0) ? m_pPlayer->getUnitClassCountPlusMaking((UnitClassTypes) eIndex) : 0;
+	return (m_pPlayer && eIndex >= 0) ? m_pPlayer->getUnitCountPlusMaking((UnitTypes) eIndex) : 0;
 }
 
-int CyPlayer::getBuildingClassCount(int /*BuildingClassTypes*/ iIndex)
+int CyPlayer::getBuildingCount(int /*BuildingTypes*/ iIndex)
 {
-	return (m_pPlayer && iIndex >= 0) ? m_pPlayer->getBuildingClassCount((BuildingClassTypes)iIndex) : 0;
+	return (m_pPlayer && iIndex >= 0) ? m_pPlayer->getBuildingCount((BuildingTypes)iIndex) : 0;
 }
 
-bool CyPlayer::isBuildingClassMaxedOut(int /*BuildingClassTypes*/ iIndex, int iExtra)
+bool CyPlayer::isBuildingMaxedOut(int /*BuildingTypes*/ iIndex, int iExtra)
 {
-	return (m_pPlayer && iIndex >= 0) ? m_pPlayer->isBuildingClassMaxedOut((BuildingClassTypes)iIndex, iExtra) : false;
+	return (m_pPlayer && iIndex >= 0) ? m_pPlayer->isBuildingMaxedOut((BuildingTypes)iIndex, iExtra) : false;
 }
 
-int CyPlayer::getBuildingClassMaking(int /*BuildingClassTypes*/ iIndex)
+int CyPlayer::getBuildingMaking(int /*BuildingTypes*/ iIndex)
 {
-	return (m_pPlayer && iIndex >= 0) ? m_pPlayer->getBuildingClassMaking((BuildingClassTypes)iIndex) : 0;
+	return (m_pPlayer && iIndex >= 0) ? m_pPlayer->getBuildingMaking((BuildingTypes)iIndex) : 0;
 }
 
-int CyPlayer::getBuildingClassCountPlusMaking(int /*BuildingClassTypes*/ iIndex)
+int CyPlayer::getBuildingCountPlusMaking(int /*BuildingTypes*/ iIndex)
 {
-	return (m_pPlayer && iIndex >= 0) ? m_pPlayer->getBuildingClassCountPlusMaking((BuildingClassTypes)iIndex) : 0;
+	return (m_pPlayer && iIndex >= 0) ? m_pPlayer->getBuildingCountPlusMaking((BuildingTypes)iIndex) : 0;
 }
 
 int CyPlayer::getHurryCount(int /*HurryTypes*/ eIndex)
@@ -2776,10 +2763,11 @@ bool CyPlayer::isShowLandmarks() const
 	return m_pPlayer ? m_pPlayer->isShowLandmarks() : false;
 }
 
-int CyPlayer::getBuildingClassCountWithUpgrades(int iBuilding) const
+int CyPlayer::getBuildingCountWithUpgrades(int iBuilding) const
 {
-	return m_pPlayer ? m_pPlayer->getBuildingClassCountWithUpgrades((BuildingClassTypes)iBuilding) : 0;
+	return m_pPlayer ? m_pPlayer->getBuildingCountWithUpgrades((BuildingTypes)iBuilding) : 0;
 }
+
 void CyPlayer::setHandicap(int iNewVal)
 {
 	if (m_pPlayer)

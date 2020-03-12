@@ -7,7 +7,6 @@
 <Civ4BuildingInfos xmlns="x-schema:../../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_MAMMOTH_HERD</BuildingClass>
 			<Type>BUILDING_MAMMOTH_HERD</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -51,13 +50,8 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_MAMMOTH_TRAINER</BuildingClass>
 			<Type>BUILDING_MAMMOTH_TRAINER</Type>
-			<EnabledCivilizationTypes>
-				<EnabledCivilizationType>
-					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
-				</EnabledCivilizationType>
-			</EnabledCivilizationTypes>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_MAMMOTH_TRAINER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MAMMOTH_TRAINER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MAMMOTH_TRAINER_STRATEGY</Strategy>
@@ -123,23 +117,22 @@
 					<iFlavor>5</iFlavor>
 				</Flavor>
 			</Flavors>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_MAMMOTH_CAMP</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_MAMMOTH_HERD</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PALEOLITHIC_MAMMOTH_MYTH_EFFECT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_MAMMOTH_CAMP</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_MAMMOTH_HERD</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_MYTH_EFFECT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_MAMMOTH_TRAINER_HERITAGE</BuildingClass>
 			<Type>BUILDING_MAMMOTH_TRAINER_HERITAGE</Type>
 			<Description>TXT_KEY_BUILDING_MAMMOTH_TRAINER_HERITAGE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MAMMOTH_TRAINER_HERITAGE_PEDIA</Civilopedia>
@@ -154,7 +147,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<FreeBuilding>BUILDINGCLASS_MAMMOTH_TRAINER_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_MAMMOTH_TRAINER_EFFECT</FreeBuilding>
 			<iMinLatitude>40</iMinLatitude>
 			<iCost>139</iCost>
 			<iAsset>4</iAsset>
@@ -170,12 +163,9 @@
 					<iFlavor>5</iFlavor>
 				</Flavor>
 			</Flavors>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_MAMMOTH_TRAINER</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_MAMMOTH_TRAINER</BuildingType>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -185,7 +175,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_MAMMOTH_TRAINER_EFFECT</BuildingClass>
 			<Type>BUILDING_MAMMOTH_TRAINER_EFFECT</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -232,40 +221,39 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SHEARING_BARN</Type>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_MAMMOTH_TRAINER</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_MAMMOTH_TRAINER</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STABLE</Type>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_MAMMOTH_TRAINER</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_MAMMOTH_TRAINER</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLO_FIELD</Type>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_MAMMOTH_TRAINER</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_MAMMOTH_TRAINER</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CARAVAN_POST</BuildingClass>
 			<Type>BUILDING_CARAVAN_POST</Type>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_MAMMOTH_TRAINER</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_MAMMOTH_TRAINER</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

@@ -258,10 +258,8 @@ protected:
 	bool AI_heal(int iDamagePercent = 0, int iMaxPath = MAX_INT);
 	bool AI_afterAttack();
 	/*TB Prophet Mod begin*/
-#ifdef C2C_BUILD
 	bool AI_foundReligion();
 	bool AI_cureAffliction(PromotionLineTypes eAfflictionLine);
-#endif
 	/*TB Prophet Mod end*/
 	bool AI_goldenAge();
 	bool AI_spreadReligion();

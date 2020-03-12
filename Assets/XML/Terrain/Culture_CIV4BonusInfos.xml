@@ -215,11 +215,11 @@
 		</BonusInfo>
 	<!-- Benin -->
 		<BonusInfo>
-			<Type>BONUS_BENIN</Type>
-			<Description>TXT_KEY_BONUS_BENIN</Description>
+			<Type>BONUS_BENINESE</Type>
+			<Description>TXT_KEY_BONUS_BENINESE</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_BENIN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_BENINESE</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Berber -->
@@ -496,11 +496,11 @@
 		</BonusInfo>
 	<!-- Cetacea Sapien -->
 		<BonusInfo>
-			<Type>BONUS_CETACEA_SAPIEN</Type>
-			<Description>TXT_KEY_BONUS_CETACEA_SAPIEN</Description>
+			<Type>BONUS_CETACEA_SAPIENS</Type>
+			<Description>TXT_KEY_BONUS_CETACEA_SAPIENS</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_CETACEA_SAPIEN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_CETACEA_SAPIENS</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Dutch -->
@@ -541,11 +541,11 @@
 		</BonusInfo>
 	<!-- Epirus -->
 		<BonusInfo>
-			<Type>BONUS_EPIRUS</Type>
-			<Description>TXT_KEY_BONUS_EPIRUS</Description>
+			<Type>BONUS_EPIROTE</Type>
+			<Description>TXT_KEY_BONUS_EPIROTE</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_EPIRUS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_EPIROTE</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Ethiopian -->
@@ -577,11 +577,11 @@
 		</BonusInfo>
 	<!-- Franks -->
 		<BonusInfo>
-			<Type>BONUS_FRANKS</Type>
-			<Description>TXT_KEY_BONUS_FRANKS</Description>
+			<Type>BONUS_FRANKISH</Type>
+			<Description>TXT_KEY_BONUS_FRANKISH</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_FRANKS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_FRANKISH</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- French -->
@@ -928,11 +928,11 @@
 		</BonusInfo>
 	<!-- Konjo -->
 		<BonusInfo>
-			<Type>BONUS_KONJO</Type>
-			<Description>TXT_KEY_BONUS_KONJO</Description>
+			<Type>BONUS_KONJAN</Type>
+			<Description>TXT_KEY_BONUS_KONJAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_KONJO</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_KONJAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Korean -->
@@ -985,11 +985,11 @@
 		</BonusInfo>
 	<!-- Macedonia -->
 		<BonusInfo>
-			<Type>BONUS_MACEDONIA</Type>
-			<Description>TXT_KEY_BONUS_MACEDONIA</Description>
+			<Type>BONUS_MACEDONIAN</Type>
+			<Description>TXT_KEY_BONUS_MACEDONIAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_MACEDONIA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_MACEDONIAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Madan -->
@@ -1201,11 +1201,11 @@
 		</BonusInfo>
 	<!-- New Zealand -->
 		<BonusInfo>
-			<Type>BONUS_NEW_ZEALAND</Type>
-			<Description>TXT_KEY_BONUS_NEW_ZEALAND</Description>
+			<Type>BONUS_NEW_ZEALANDER</Type>
+			<Description>TXT_KEY_BONUS_NEW_ZEALANDER</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_NEW_ZEALAND</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_NEW_ZEALANDER</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Nok -->
@@ -1435,11 +1435,11 @@
 		</BonusInfo>
 	<!-- Samoa -->
 		<BonusInfo>
-			<Type>BONUS_SAMOA</Type>
-			<Description>TXT_KEY_BONUS_SAMOA</Description>
+			<Type>BONUS_SAMOAN</Type>
+			<Description>TXT_KEY_BONUS_SAMOAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_SAMOA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_SAMOAN</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Sassanian -->
@@ -1876,11 +1876,11 @@
 		</BonusInfo>
 	<!-- Yemenese -->
 		<BonusInfo>
-			<Type>BONUS_YEMENESE</Type>
-			<Description>TXT_KEY_BONUS_YEMENESE</Description>
+			<Type>BONUS_YEMENI</Type>
+			<Description>TXT_KEY_BONUS_YEMENI</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_YEMENESE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_YEMENI</ArtDefineTag>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Zapotec -->
@@ -2218,11 +2218,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_ADENA</Type>
-			<Description>TXT_KEY_BONUS_ADENA</Description>
+			<Type>BONUS_ADENAN</Type>
+			<Description>TXT_KEY_BONUS_ADENAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_ADENA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_ADENAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -2234,11 +2234,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_AFGHANISTAN</Type>
-			<Description>TXT_KEY_BONUS_AFGHANISTAN</Description>
+			<Type>BONUS_AFGHAN</Type>
+			<Description>TXT_KEY_BONUS_AFGHAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_AFGHANISTAN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_AFGHAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -2298,11 +2298,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_ALEMANNI</Type>
-			<Description>TXT_KEY_BONUS_ALEMANNI</Description>
+			<Type>BONUS_ALEMANNIC</Type>
+			<Description>TXT_KEY_BONUS_ALEMANNIC</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_ALEMANNI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_ALEMANNIC</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -2314,11 +2314,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_ALGIER</Type>
-			<Description>TXT_KEY_BONUS_ALGIER</Description>
+			<Type>BONUS_ALGERIAN</Type>
+			<Description>TXT_KEY_BONUS_ALGERIAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_ALGIER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_ALGERIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -2378,11 +2378,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_ARAGON</Type>
-			<Description>TXT_KEY_BONUS_ARAGON</Description>
+			<Type>BONUS_ARAGONESE</Type>
+			<Description>TXT_KEY_BONUS_ARAGONESE</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_ARAGON</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_ARAGONESE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -2394,11 +2394,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_AVARS</Type>
-			<Description>TXT_KEY_BONUS_AVARS</Description>
+			<Type>BONUS_AVARIC</Type>
+			<Description>TXT_KEY_BONUS_AVARIC</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_AVARS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_AVARIC</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -2410,11 +2410,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_AVERNI</Type>
-			<Description>TXT_KEY_BONUS_AVERNI</Description>
+			<Type>BONUS_ARVERNIAN</Type>
+			<Description>TXT_KEY_BONUS_ARVERNIAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_AVERNI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_ARVERNIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -2442,11 +2442,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_BAHRAIN</Type>
-			<Description>TXT_KEY_BONUS_BAHRAIN</Description>
+			<Type>BONUS_BAHRAINI</Type>
+			<Description>TXT_KEY_BONUS_BAHRAINI</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_BAHRAIN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_BAHRAINI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -2474,11 +2474,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_BANGLADESH</Type>
-			<Description>TXT_KEY_BONUS_BANGLADESH</Description>
+			<Type>BONUS_BANGLADESHI</Type>
+			<Description>TXT_KEY_BONUS_BANGLADESHI</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_BANGLADESH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_BANGLADESHI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -2506,11 +2506,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_BATAVI</Type>
-			<Description>TXT_KEY_BONUS_BATAVI</Description>
+			<Type>BONUS_BATAVIAN</Type>
+			<Description>TXT_KEY_BONUS_BATAVIAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_BATAVI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_BATAVIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -2570,11 +2570,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_BELIZE</Type>
-			<Description>TXT_KEY_BONUS_BELIZE</Description>
+			<Type>BONUS_BELIZEAN</Type>
+			<Description>TXT_KEY_BONUS_BELIZEAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_BELIZE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_BELIZEAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -2634,11 +2634,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_BURGUNDI</Type>
-			<Description>TXT_KEY_BONUS_BURGUNDI</Description>
+			<Type>BONUS_BURGUNDIAN</Type>
+			<Description>TXT_KEY_BONUS_BURGUNDIAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_BURGUNDI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_BURGUNDIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -2778,11 +2778,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_CHECHENIAN</Type>
-			<Description>TXT_KEY_BONUS_CHECHENIAN</Description>
+			<Type>BONUS_CHECHEN</Type>
+			<Description>TXT_KEY_BONUS_CHECHEN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_CHECHENIAN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_CHECHEN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -2826,11 +2826,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_CHORESM</Type>
-			<Description>TXT_KEY_BONUS_CHORESM</Description>
+			<Type>BONUS_KHWARAZMIAN</Type>
+			<Description>TXT_KEY_BONUS_KHWARAZMIAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_CHORESM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_KHWARAZMIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -3098,11 +3098,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_GOLDEN_HORDE</Type>
-			<Description>TXT_KEY_BONUS_GOLDEN_HORDE</Description>
+			<Type>BONUS_KIPCHAK</Type>
+			<Description>TXT_KEY_BONUS_KIPCHAK</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_GOLDEN_HORDE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_KIPCHAK</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -3114,11 +3114,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_GUAM</Type>
-			<Description>TXT_KEY_BONUS_GUAM</Description>
+			<Type>BONUS_CHAMORRAN</Type>
+			<Description>TXT_KEY_BONUS_CHAMORRAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_GUAM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_CHAMORRAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -3162,11 +3162,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_GUATEMALA</Type>
-			<Description>TXT_KEY_BONUS_GUATEMALA</Description>
+			<Type>BONUS_GUATEMALAN</Type>
+			<Description>TXT_KEY_BONUS_GUATEMALAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_GUATEMALA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_GUATEMALAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -3178,11 +3178,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_GUYANA</Type>
-			<Description>TXT_KEY_BONUS_GUYANA</Description>
+			<Type>BONUS_GUYANESE</Type>
+			<Description>TXT_KEY_BONUS_GUYANESE</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_GUYANA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_GUYANESE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -3194,11 +3194,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_HELVETII</Type>
-			<Description>TXT_KEY_BONUS_HELVETII</Description>
+			<Type>BONUS_HELVETIAN</Type>
+			<Description>TXT_KEY_BONUS_HELVETIAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_HELVETII</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_HELVETIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -3242,11 +3242,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_HONG_KONG</Type>
-			<Description>TXT_KEY_BONUS_HONG_KONG</Description>
+			<Type>BONUS_HONGKONGER</Type>
+			<Description>TXT_KEY_BONUS_HONGKONGER</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_HONG_KONG</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_HONGKONGER</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -3370,11 +3370,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_IRAQUI</Type>
-			<Description>TXT_KEY_BONUS_IRAQUI</Description>
+			<Type>BONUS_IRAQI</Type>
+			<Description>TXT_KEY_BONUS_IRAQI</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_IRAQUI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_IRAQI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -3402,11 +3402,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_JUTES</Type>
-			<Description>TXT_KEY_BONUS_JUTES</Description>
+			<Type>BONUS_JUTE</Type>
+			<Description>TXT_KEY_BONUS_JUTE</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_JUTES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_JUTE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -3450,11 +3450,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_KHAZARS</Type>
-			<Description>TXT_KEY_BONUS_KHAZARS</Description>
+			<Type>BONUS_KHAZAR</Type>
+			<Description>TXT_KEY_BONUS_KHAZAR</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_KHAZARS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_KHAZAR</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -3498,11 +3498,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_KITARA</Type>
-			<Description>TXT_KEY_BONUS_KITARA</Description>
+			<Type>BONUS_KITARAN</Type>
+			<Description>TXT_KEY_BONUS_KITARAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_KITARA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_KITARAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -3546,11 +3546,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_KUSH</Type>
-			<Description>TXT_KEY_BONUS_KUSH</Description>
+			<Type>BONUS_KUSHITE</Type>
+			<Description>TXT_KEY_BONUS_KUSHITE</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_KUSH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_KUSHITE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -3578,11 +3578,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_KUWAIT</Type>
-			<Description>TXT_KEY_BONUS_KUWAIT</Description>
+			<Type>BONUS_KUWAITI</Type>
+			<Description>TXT_KEY_BONUS_KUWAITI</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_KUWAIT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_KUWAITI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -3610,11 +3610,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_LA_PLATA</Type>
-			<Description>TXT_KEY_BONUS_LA_PLATA</Description>
+			<Type>BONUS_LA_PLATAN</Type>
+			<Description>TXT_KEY_BONUS_LA_PLATAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_LA_PLATA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_LA_PLATAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -3626,11 +3626,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_LEBANON</Type>
-			<Description>TXT_KEY_BONUS_LEBANON</Description>
+			<Type>BONUS_LEBANESE</Type>
+			<Description>TXT_KEY_BONUS_LEBANESE</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_LEBANON</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_LEBANESE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -3674,11 +3674,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_LONGOBARDI</Type>
-			<Description>TXT_KEY_BONUS_LONGOBARDI</Description>
+			<Type>BONUS_LONGOBARDIAN</Type>
+			<Description>TXT_KEY_BONUS_LONGOBARDIAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_LONGOBARDI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_LONGOBARDIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -3722,11 +3722,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_LUSITANI</Type>
-			<Description>TXT_KEY_BONUS_LUSITANI</Description>
+			<Type>BONUS_LUSITANIAN</Type>
+			<Description>TXT_KEY_BONUS_LUSITANIAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_LUSITANI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_LUSITANIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -3754,11 +3754,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_MAMELUKS</Type>
-			<Description>TXT_KEY_BONUS_MAMELUKS</Description>
+			<Type>BONUS_MAMELUK</Type>
+			<Description>TXT_KEY_BONUS_MAMELUK</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_MAMELUKS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_MAMELUK</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -3786,11 +3786,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_MEDES</Type>
-			<Description>TXT_KEY_BONUS_MEDES</Description>
+			<Type>BONUS_MEDIAN</Type>
+			<Description>TXT_KEY_BONUS_MEDIAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_MEDES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_MEDIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -3850,11 +3850,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_MITTANNI</Type>
-			<Description>TXT_KEY_BONUS_MITTANNI</Description>
+			<Type>BONUS_MITANNI</Type>
+			<Description>TXT_KEY_BONUS_MITANNI</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_MITTANNI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_MITANNI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -3930,11 +3930,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_MURRI</Type>
-			<Description>TXT_KEY_BONUS_MURRI</Description>
+			<Type>BONUS_MARRI</Type>
+			<Description>TXT_KEY_BONUS_MARRI</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_MURRI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_MARRI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -4058,11 +4058,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_OMAN</Type>
-			<Description>TXT_KEY_BONUS_OMAN</Description>
+			<Type>BONUS_OMANI</Type>
+			<Description>TXT_KEY_BONUS_OMANI</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_OMAN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_OMANI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -4346,11 +4346,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_QUEBEC</Type>
-			<Description>TXT_KEY_BONUS_QUEBEC</Description>
+			<Type>BONUS_QUEBECKER</Type>
+			<Description>TXT_KEY_BONUS_QUEBECKER</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_QUEBEC</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_QUEBECKER</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -4428,11 +4428,11 @@
 		</BonusInfo>
 -->
 		<BonusInfo>
-			<Type>BONUS_SAFAVIDS</Type>
-			<Description>TXT_KEY_BONUS_SAFAVIDS</Description>
+			<Type>BONUS_SAFAVID</Type>
+			<Description>TXT_KEY_BONUS_SAFAVID</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_SAFAVIDS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_SAFAVID</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -4476,11 +4476,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_SARMATIANS</Type>
-			<Description>TXT_KEY_BONUS_SARMATIANS</Description>
+			<Type>BONUS_SARMATIAN</Type>
+			<Description>TXT_KEY_BONUS_SARMATIAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_SARMATIANS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_SARMATIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -4492,11 +4492,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_SELJUKS</Type>
-			<Description>TXT_KEY_BONUS_SELJUKS</Description>
+			<Type>BONUS_SELJUK</Type>
+			<Description>TXT_KEY_BONUS_SELJUK</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_SELJUKS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_SELJUK</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -4668,11 +4668,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_SURINAM</Type>
-			<Description>TXT_KEY_BONUS_SURINAM</Description>
+			<Type>BONUS_SURINAMESE</Type>
+			<Description>TXT_KEY_BONUS_SURINAMESE</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_SURINAM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_SURINAMESE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -4732,11 +4732,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_TAJIKS</Type>
-			<Description>TXT_KEY_BONUS_TAJIKS</Description>
+			<Type>BONUS_TAJIK</Type>
+			<Description>TXT_KEY_BONUS_TAJIK</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_TAJIKS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_TAJIK</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -4796,11 +4796,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_TATARS</Type>
-			<Description>TXT_KEY_BONUS_TATARS</Description>
+			<Type>BONUS_TATAR</Type>
+			<Description>TXT_KEY_BONUS_TATAR</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_TATARS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_TATAR</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -5004,11 +5004,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_UZBEKS</Type>
-			<Description>TXT_KEY_BONUS_UZBEKS</Description>
+			<Type>BONUS_UZBEK</Type>
+			<Description>TXT_KEY_BONUS_UZBEK</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_UZBEKS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_UZBEK</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -5020,11 +5020,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_VALDIVIA</Type>
-			<Description>TXT_KEY_BONUS_VALDIVIA</Description>
+			<Type>BONUS_VALDIVIAN</Type>
+			<Description>TXT_KEY_BONUS_VALDIVIAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_VALDIVIA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_VALDIVIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -5036,11 +5036,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_VANATU</Type>
-			<Description>TXT_KEY_BONUS_VANATU</Description>
+			<Type>BONUS_VANUATUAN</Type>
+			<Description>TXT_KEY_BONUS_VANUATUAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_VANATU</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_VANUATUAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -5212,11 +5212,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_ZANZIBAR</Type>
-			<Description>TXT_KEY_BONUS_ZANZIBAR</Description>
+			<Type>BONUS_ZANZIBARI</Type>
+			<Description>TXT_KEY_BONUS_ZANZIBARI</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_ZANZIBAR</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_ZANZIBARI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
@@ -5244,11 +5244,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_ZIMBABWE</Type>
-			<Description>TXT_KEY_BONUS_ZIMBABWE</Description>
+			<Type>BONUS_ZIMBABWEAN</Type>
+			<Description>TXT_KEY_BONUS_ZIMBABWEAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_ZIMBABWE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_ZIMBABWEAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>

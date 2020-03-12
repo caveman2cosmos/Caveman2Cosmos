@@ -2,7 +2,6 @@
 <Civ4UnitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_RA_FIST</Class>
 			<Type>UNIT_RA_FIST</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bUnlimitedException>1</bUnlimitedException>
@@ -70,7 +69,9 @@
 			<ReligionType>RELIGION_KEMETISM</ReligionType>
 			<StateReligion>RELIGION_KEMETISM</StateReligion>
 			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
-			<PrereqBuilding>BUILDING_EGYPT_MYTH_MONASTERY</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_EGYPT_MYTH_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
 			<BonusType>BONUS_IRON_WARES</BonusType>
 			<iCost>330</iCost>
@@ -114,7 +115,6 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_RA_KNIGHT</Class>
 			<Type>UNIT_RA_KNIGHT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bUnlimitedException>1</bUnlimitedException>
@@ -158,11 +158,11 @@
 			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CATAPULT</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TREBUCHET</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -179,7 +179,9 @@
 			<ReligionType>RELIGION_KEMETISM</ReligionType>
 			<StateReligion>RELIGION_KEMETISM</StateReligion>
 			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
-			<PrereqBuilding>BUILDING_EGYPT_MYTH_MONASTERY</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_EGYPT_MYTH_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
 			<BonusType>BONUS_HORSE</BonusType>
 			<PrereqBonuses>

@@ -1,36 +1,6 @@
 Version=11
 BeginGame
 	Speed=GAMESPEED_EPIC
-	Option=GAMEOPTION_NO_TECH_TRADING
-	Option=GAMEOPTION_NO_TECH_BROKERING
-	Option=GAMEOPTION_NO_VASSAL_STATES
-	Option=GAMEOPTION_NO_REVOLUTION
-	Option=GAMEOPTION_NO_INQUISITIONS
-	Option=GAMEOPTION_NO_TECH_DIFFUSION
-	Option=GAMEOPTION_SAD
-	Option=GAMEOPTION_UNLIMITED_WONDERS
-	Option=GAMEOPTION_NO_ZOC
-	Option=GAMEOPTION_GREAT_COMMANDERS
-	Option=GAMEOPTION_ADVANCED_ECONOMY
-	Option=GAMEOPTION_UNITED_NATIONS
-	Option=GAMEOPTION_ADVANCED_ESPIONAGE
-	Option=GAMEOPTION_ADVANCED_NUKES
-	Option=GAMEOPTION_NO_CITY_LIMITS
-	Option=GAMEOPTION_NO_FIXED_BORDERS
-	Option=GAMEOPTION_INFINITE_XP
-	Option=GAMEOPTION_LEADERHEAD_LEVELUPS
-	Option=GAMEOPTION_COMPLEX_TRAITS
-	Option=GAMEOPTION_FIGHT_OR_FLIGHT
-	Option=GAMEOPTION_SIZE_MATTERS
-	Option=GAMEOPTION_MIN_CITY_BORDER
-	Option=GAMEOPTION_XP_FROM_ASSIGNED_SPECIALISTS
-	Option=GAMEOPTION_TELEPORT_HUNTING_AWARDS
-	Option=GAMEOPTION_PEACE_AMONG_NPCS
-	Option=GAMEOPTION_ANIMALS_STAY_OUT
-	Option=GAMEOPTION_REALISTIC_SIEGE
-	Option=GAMEOPTION_BEELINE_STINGS
-	Option=GAMEOPTION_UPSCALED_RESEARCH_COSTS
-	Victory=VICTORY_TIME
 	StartYear=-200000
 	Description=Never use more than 7 civs or some civs will start in weird places!! This is a combination of KaTiON_PT's Tiny Space map with a random map (Duel size (60x40); Waterworld; +4 rivers; low sealevel; 7 random nations). Have fun!
 	ModPath=
@@ -194,46 +164,6 @@ EndTeam
 BeginTeam
 	TeamID=39
 	ContactWithTeam=39
-EndTeam
-BeginTeam
-	TeamID=40
-	ContactWithTeam=40
-EndTeam
-BeginTeam
-	TeamID=41
-	ContactWithTeam=41
-EndTeam
-BeginTeam
-	TeamID=42
-	ContactWithTeam=42
-EndTeam
-BeginTeam
-	TeamID=43
-	ContactWithTeam=43
-EndTeam
-BeginTeam
-	TeamID=44
-	ContactWithTeam=44
-EndTeam
-BeginTeam
-	TeamID=45
-	ContactWithTeam=45
-EndTeam
-BeginTeam
-	TeamID=46
-	ContactWithTeam=46
-EndTeam
-BeginTeam
-	TeamID=47
-	ContactWithTeam=47
-EndTeam
-BeginTeam
-	TeamID=48
-	ContactWithTeam=48
-EndTeam
-BeginTeam
-	TeamID=49
-	ContactWithTeam=49
 EndTeam
 BeginPlayer
     Team=0
@@ -449,56 +379,6 @@ BeginPlayer
 	LeaderType=NONE
 	CivType=NONE
 EndPlayer
-BeginPlayer
-	Team=40
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=41
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=42
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=43
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=44
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=45
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=46
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=47
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=48
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
-BeginPlayer
-	Team=49
-	LeaderType=NONE
-	CivType=NONE
-EndPlayer
 BeginMap
 	grid width=60
 	grid height=147
@@ -642,7 +522,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=0,y=25
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	ImprovementType=IMPROVEMENT_GOODY_ISLAND
 	TerrainType=TERRAIN_SEA
 	PlotType=3
@@ -2258,7 +2138,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=2,y=30
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_SEA
 	PlotType=3
 EndPlot
@@ -2304,7 +2184,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=2,y=39
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_SEA_DEEP_TROPICAL
 	PlotType=3
 EndPlot
@@ -4601,7 +4481,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=5,y=27
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_SEA
 	PlotType=3
 EndPlot
@@ -5448,7 +5327,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=6,y=39
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_SEA_TROPICAL
 	PlotType=3
 EndPlot
@@ -6256,7 +6134,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=7,y=44
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_SEA_DEEP
 	PlotType=3
 EndPlot
@@ -10044,7 +9921,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=12,y=37
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -10788,7 +10665,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=13,y=34
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_SEA_DEEP
 	PlotType=3
 EndPlot
@@ -12011,7 +11888,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=14,y=122
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -17542,7 +17419,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=21,y=122
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -17892,7 +17769,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=22,y=43
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_SEA
 	PlotType=3
 EndPlot
@@ -18641,7 +18518,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23,y=40
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -19765,7 +19642,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=24,y=109
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -20231,7 +20108,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=53
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -20591,7 +20467,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=121
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -21317,7 +21193,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=115
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -27792,7 +27668,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=35,y=38
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_SEA_DEEP_TROPICAL
 	PlotType=3
 EndPlot
@@ -28655,7 +28531,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=36,y=56
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_SEA_DEEP_POLAR
 	PlotType=3
 EndPlot
@@ -29318,7 +29193,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=37,y=37
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_SEA_DEEP_TROPICAL
 	PlotType=3
 EndPlot
@@ -30230,7 +30105,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=58
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	FeatureType=FEATURE_ICE, FeatureVariety=0
 	TerrainType=TERRAIN_SEA_DEEP_POLAR
 	PlotType=3
@@ -34973,7 +34848,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=44,y=49
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	ImprovementType=IMPROVEMENT_GOODY_ISLAND
 	TerrainType=TERRAIN_SEA
 	PlotType=3
@@ -39537,7 +39412,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=50,y=24
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_SEA
 	PlotType=3
 EndPlot
@@ -41941,7 +41815,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=23
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_SEA
 	PlotType=3
 EndPlot
@@ -44410,7 +44283,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=56,y=41
-	BonusType=BONUS_MANGANESE
 	TerrainType=TERRAIN_SEA_DEEP_TROPICAL
 	PlotType=3
 EndPlot
@@ -44508,7 +44380,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=56,y=57
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	FeatureType=FEATURE_ICE, FeatureVariety=0
 	TerrainType=TERRAIN_SEA_DEEP_POLAR
 	PlotType=3
@@ -45613,7 +45485,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=118
-	BonusType=BONUS_GEOTHERMAL_SEA_VENT
+	BonusType=BONUS_HYDROTHERMAL_VENT
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot

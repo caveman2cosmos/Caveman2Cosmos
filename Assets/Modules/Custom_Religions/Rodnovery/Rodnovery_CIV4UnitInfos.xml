@@ -7,7 +7,6 @@
 <Civ4UnitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_RODNOVERY_MISSIONARY</Class>
 			<Type>UNIT_RODNOVERY_MISSIONARY</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_RODNOVERY_MISSIONARY</Capture>
@@ -34,7 +33,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_RODNOVERA</PrereqReligion>
-			<PrereqBuilding>BUILDING_RODNOVERY_MONASTERY</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_RODNOVERY_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>

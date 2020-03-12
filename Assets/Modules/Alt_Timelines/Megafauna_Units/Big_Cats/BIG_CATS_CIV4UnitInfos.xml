@@ -6,7 +6,6 @@
 	<UnitInfos>
 <!--Trained Cats (Feline Domestication) -> Warcats (Military Training) -> Guard Cats (Leadership) -> Police Cats (Criminology) -> Feline Superior (Homo Superior) -->
 		<UnitInfo>
-			<Class>UNITCLASS_TRAINEDCAT</Class>
 			<Type>UNIT_TRAINEDCAT</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -64,7 +63,9 @@
 			<TechTypes>
 				<PrereqTech>TECH_FELINE_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<PrereqBuilding>BUILDING_BIG_CAT_TRAINER_EFFECT</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_BIG_CAT_TRAINER_EFFECT</BuildingType>
+			</PrereqAndBuildings>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_CAT</BonusType>
@@ -145,7 +146,6 @@
 		</UnitInfo>
 		<!-- War Cat -->
 		<UnitInfo>
-			<Class>UNITCLASS_WARCAT</Class>
 			<Type>UNIT_WARCAT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -220,13 +220,10 @@
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<PrereqBuilding>BUILDING_BIG_CAT_TRAINER_EFFECT</PrereqBuilding>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BARRACKS</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_BIG_CAT_TRAINER_EFFECT</BuildingType>
+				<BuildingType>BUILDING_BARRACKS</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqBonuses>
 				<BonusType>BONUS_COPPER_WARES</BonusType>
 				<BonusType>BONUS_IRON_WARES</BonusType>
@@ -300,7 +297,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_GUARDCAT</Class>
 			<Type>UNIT_GUARDCAT</Type>
 			<Combat>UNITCOMBAT_FELINE</Combat>
 			<SubCombatTypes>
@@ -353,13 +349,10 @@
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<PrereqBuilding>BUILDING_BIG_CAT_TRAINER_EFFECT</PrereqBuilding>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_GARRISON</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_BIG_CAT_TRAINER_EFFECT</BuildingType>
+				<BuildingType>BUILDING_GARRISON</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqBonuses>
 				<BonusType>BONUS_COPPER_WARES</BonusType>
 				<BonusType>BONUS_IRON_WARES</BonusType>
@@ -448,7 +441,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_POLICE_CAT</Class>
 			<Type>UNIT_POLICE_CAT</Type>
 			<Combat>UNITCOMBAT_FELINE</Combat>
 			<SubCombatTypes>
@@ -509,13 +501,10 @@
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<PrereqBuilding>BUILDING_BIG_CAT_TRAINER_EFFECT</PrereqBuilding>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_POLICE_CAT</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_BIG_CAT_TRAINER_EFFECT</BuildingType>
+				<BuildingType>BUILDING_POLICE_CAT</BuildingType>
+			</PrereqAndBuildings>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_CAT</BonusType>
@@ -627,7 +616,6 @@
 			</PropertyManipulators>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_FELINE_SUPERIOR</Class>
 			<Type>UNIT_FELINE_SUPERIOR</Type>
 			<Combat>UNITCOMBAT_FELINE</Combat>
 			<SubCombatTypes>
@@ -693,13 +681,10 @@
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
-			<PrereqBuilding>BUILDING_BIG_CAT_TRAINER_EFFECT</PrereqBuilding>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_RE_PET_SHOP</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_BIG_CAT_TRAINER_EFFECT</BuildingType>
+				<BuildingType>BUILDING_RE_PET_SHOP</BuildingType>
+			</PrereqAndBuildings>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_CAT</BonusType>
@@ -812,63 +797,54 @@
 			</PropertyManipulators>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_BENGALTIGER</Class>
 			<Type>UNIT_SUBDUED_BENGALTIGER</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_CATS</BuildingType>
 			</Buildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_CAVE_LION</Class>
 			<Type>UNIT_SUBDUED_CAVE_LION</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_CATS</BuildingType>
 			</Buildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_CHEETAH</Class>
 			<Type>UNIT_SUBDUED_CHEETAH</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_CATS</BuildingType>
 			</Buildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_JAGUAR</Class>
 			<Type>UNIT_SUBDUED_JAGUAR</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_CATS</BuildingType>
 			</Buildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_LION</Class>
 			<Type>UNIT_SUBDUED_LION</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_CATS</BuildingType>
 			</Buildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_LYNX</Class>
 			<Type>UNIT_SUBDUED_LYNX</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_CATS</BuildingType>
 			</Buildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_PANTHER</Class>
 			<Type>UNIT_SUBDUED_PANTHER</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_CATS</BuildingType>
 			</Buildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_SIBERIANTIGER</Class>
 			<Type>UNIT_SUBDUED_SIBERIANTIGER</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_CATS</BuildingType>
 			</Buildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_SNOWLEOPARD</Class>
 			<Type>UNIT_SUBDUED_SNOWLEOPARD</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_CATS</BuildingType>

@@ -2,7 +2,6 @@
 <Civ4UnitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_ORGANIC_INFANTRY</Class>
 			<Type>UNIT_ORGANIC_INFANTRY</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
@@ -65,7 +64,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_BIOPUNK_LAB</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_BIOPUNK_LAB</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_BIOPUNK</PrereqTech>
 			<BonusType>BONUS_ORGANIC_COMPUTERS</BonusType>
 			<iCost>3665</iCost>

@@ -1121,7 +1121,7 @@ void CvInitCore::setVictory(VictoryTypes eVictoryID, bool bVictory)
 
 bool CvInitCore::getOption(GameOptionTypes eIndex) const
 {
-	int numGameOptionTypes = NUM_GAMEOPTION_TYPES;
+	const int numGameOptionTypes = NUM_GAMEOPTION_TYPES;
 	FASSERT_BOUNDS(0, numGameOptionTypes, eIndex, "CvInitCore::getOption");
 	FAssertMsg(m_abOptions != NULL, "Access to unconstructed game option array");
 	if ( m_abOptions != NULL && checkBounds(eIndex, 0, numGameOptionTypes) )

@@ -39,8 +39,7 @@ CvGame::CvGame()
 
 	m_paiImprovementCount = NULL;
 	m_paiUnitCreatedCount = NULL;
-	m_paiUnitClassCreatedCount = NULL;
-	m_paiBuildingClassCreatedCount = NULL;
+	m_paiBuildingCreatedCount = NULL;
 	m_paiProjectCreatedCount = NULL;
 	m_paiForceCivicCount = NULL;
 	m_paiVoteOutcome = NULL;
@@ -673,8 +672,7 @@ void CvGame::uninit()
 	SAFE_DELETE_ARRAY(m_aiShrineReligion);
 	SAFE_DELETE_ARRAY(m_paiImprovementCount);
 	SAFE_DELETE_ARRAY(m_paiUnitCreatedCount);
-	SAFE_DELETE_ARRAY(m_paiUnitClassCreatedCount);
-	SAFE_DELETE_ARRAY(m_paiBuildingClassCreatedCount);
+	SAFE_DELETE_ARRAY(m_paiBuildingCreatedCount);
 	SAFE_DELETE_ARRAY(m_paiProjectCreatedCount);
 	SAFE_DELETE_ARRAY(m_paiForceCivicCount);
 	SAFE_DELETE_ARRAY(m_paiVoteOutcome);
@@ -901,17 +899,11 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 		{
 			m_paiUnitCreatedCount[iI] = 0;
 		}
-		FAssertMsg(m_paiUnitClassCreatedCount==NULL, "about to leak memory, CvGame::m_paiUnitClassCreatedCount");
-		m_paiUnitClassCreatedCount = new int[GC.getNumUnitClassInfos()];
-		for (iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
+		FAssertMsg(m_paiBuildingCreatedCount==NULL, "about to leak memory, CvGame::m_paiBuildingCreatedCount");
+		m_paiBuildingCreatedCount = new int[GC.getNumBuildingInfos()];
+		for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 		{
-			m_paiUnitClassCreatedCount[iI] = 0;
-		}
-		FAssertMsg(m_paiBuildingClassCreatedCount==NULL, "about to leak memory, CvGame::m_paiBuildingClassCreatedCount");
-		m_paiBuildingClassCreatedCount = new int[GC.getNumBuildingClassInfos()];
-		for (iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
-		{
-			m_paiBuildingClassCreatedCount[iI] = 0;
+			m_paiBuildingCreatedCount[iI] = 0;
 		}
 
 		FAssertMsg(m_paiProjectCreatedCount==NULL, "about to leak memory, CvGame::m_paiProjectCreatedCount");
@@ -3311,7 +3303,7 @@ TeamTypes CvGame::getSecretaryGeneral(VoteSourceTypes eVoteSource) const
 					const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
 					if (kLoopPlayer.isAlive())
 					{
-						if (kLoopPlayer.getBuildingClassCount((BuildingClassTypes)GC.getBuildingInfo((BuildingTypes)iBuilding).getBuildingClassType()) > 0)
+						if (kLoopPlayer.getBuildingCount((BuildingTypes)iBuilding) > 0)
 						{
 							const ReligionTypes eReligion = getVoteSourceReligion(eVoteSource);
 							if (NO_RELIGION == eReligion || kLoopPlayer.getStateReligion() == eReligion)
@@ -4429,9 +4421,9 @@ void CvGame::initScoreCalculation()
 		m_iMaxTech += getTechScore((TechTypes)i);
 	}
 	m_iMaxWonders = 0;
-	for (int i = 0; i < GC.getNumBuildingClassInfos(); i++)
+	for (int i = 0; i < GC.getNumBuildingInfos(); i++)
 	{
-		m_iMaxWonders += getWonderScore((BuildingClassTypes)i);
+		m_iMaxWonders += getWonderScore((BuildingTypes)i);
 	}
 
 	if (NO_ERA != getStartEra())
@@ -5661,18 +5653,7 @@ bool CvGame::isOption(GameOptionTypes eIndex) const
 	{
 		return false;
 	}
-/*************************************************************************************************/
-/**	Xienwolf Tweak							02/06/09											**/
-/**																								**/
-/**						Rigid assurance that we never have bad options							**/
-/*************************************************************************************************/
-	if (eIndex >= NUM_GAMEOPTION_TYPES || eIndex < 0)
-	{
-		return false;
-	}
-/*************************************************************************************************/
-/**	Tweak									END													**/
-/*************************************************************************************************/
+
 	return GC.getInitCore().getOption(eIndex);
 }
 
@@ -5723,64 +5704,48 @@ void CvGame::incrementUnitCreatedCount(UnitTypes eIndex)
 }
 
 
-int CvGame::getUnitClassCreatedCount(UnitClassTypes eIndex) const
+bool CvGame::isUnitMaxedOut(UnitTypes eIndex, int iExtra) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitClassInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
-	return m_paiUnitClassCreatedCount[eIndex];
-}
+	FAssertMsg(eIndex < GC.getNumUnitInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
-
-bool CvGame::isUnitClassMaxedOut(UnitClassTypes eIndex, int iExtra) const
-{
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitClassInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
-
-	if (!isWorldUnit((UnitTypes)GC.getUnitClassInfo(eIndex).getDefaultUnitIndex()))
+	if (!isWorldUnit(eIndex))
 	{
 		return false;
 	}
-	FAssertMsg(getUnitClassCreatedCount(eIndex) <= GC.getUnitInfo((UnitTypes)GC.getUnitClassInfo(eIndex).getDefaultUnitIndex()).getMaxGlobalInstances(), "Index is expected to be within maximum bounds (invalid Index)");
+	FAssertMsg(getUnitCreatedCount(eIndex) <= GC.getUnitInfo(eIndex).getMaxGlobalInstances(), "Index is expected to be within maximum bounds (invalid Index)");
 
-	return ((getUnitClassCreatedCount(eIndex) + iExtra) >= GC.getUnitInfo((UnitTypes)GC.getUnitClassInfo(eIndex).getDefaultUnitIndex()).getMaxGlobalInstances());
+	return getUnitCreatedCount(eIndex) + iExtra >= GC.getUnitInfo(eIndex).getMaxGlobalInstances();
 }
 
 
-void CvGame::incrementUnitClassCreatedCount(UnitClassTypes eIndex)
+int CvGame::getBuildingCreatedCount(BuildingTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumUnitClassInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
-	m_paiUnitClassCreatedCount[eIndex]++;
+	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	return m_paiBuildingCreatedCount[eIndex];
 }
 
 
-int CvGame::getBuildingClassCreatedCount(BuildingClassTypes eIndex) const
+bool CvGame::isBuildingMaxedOut(BuildingTypes eIndex, int iExtra) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumBuildingClassInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
-	return m_paiBuildingClassCreatedCount[eIndex];
-}
+	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
-
-bool CvGame::isBuildingClassMaxedOut(BuildingClassTypes eIndex, int iExtra) const
-{
-	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumBuildingClassInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
-
-	if (!isWorldWonderClass(eIndex))
+	if (!isWorldWonder(eIndex))
 	{
 		return false;
 	}
 
-	return ((getBuildingClassCreatedCount(eIndex) + iExtra) >= GC.getBuildingClassInfo(eIndex).getMaxGlobalInstances());
+	return ((getBuildingCreatedCount(eIndex) + iExtra) >= GC.getBuildingInfo(eIndex).getMaxGlobalInstances());
 }
 
 
-void CvGame::incrementBuildingClassCreatedCount(BuildingClassTypes eIndex)
+void CvGame::incrementBuildingCreatedCount(BuildingTypes eIndex)
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumBuildingClassInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
-	m_paiBuildingClassCreatedCount[eIndex]++;
+	FAssertMsg(eIndex < GC.getNumBuildingInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	m_paiBuildingCreatedCount[eIndex]++;
 }
 
 
@@ -7826,7 +7791,6 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 		iRand /= 2;
 	}
 
-	if (!isOption(GAMEOPTION_NO_BARBARIAN_CIV))
 	// Odds based on handicap
 	if (iRand >= 10 * GC.getHandicapInfo(getHandicapType()).getBarbarianCityCreationProb())
 	{
@@ -7859,7 +7823,7 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 	int iOccupiedAreaMultiplier = 50;
 	int iOwnedPlots = 0;
 
-	if(!isOption(GAMEOPTION_NO_BARBARIAN_CIV))
+	if (isOption(GAMEOPTION_BARBARIAN_CIV))
 	{
 		for (int iI = 0; iI < GC.getMAX_PLAYERS(); iI++)
 		{
@@ -7880,18 +7844,13 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 /* REVOLUTION_MOD                          END                                                  */
 /************************************************************************************************/
 
-#ifdef BARBARIAN_CITY_SPAWN_MAPCATEGORY_CHECK
-	const MapCategoryTypes eEarth = (MapCategoryTypes)GC.getInfoTypeForString("MAPCATEGORY_EARTH");
-#endif
+	static const MapCategoryTypes earth = static_cast<MapCategoryTypes>(GC.getInfoTypeForString("MAPCATEGORY_EARTH"));
+
 	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
 		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
-#ifdef BARBARIAN_CITY_SPAWN_MAPCATEGORY_CHECK
-		if (!pLoopPlot->isMapCategoryType(eEarth))
-			continue;
-#endif
-		if (!pLoopPlot->isWater() && !pLoopPlot->isVisibleToCivTeam())
+		if (pLoopPlot->isMapCategoryType(earth) && !pLoopPlot->isWater() && !pLoopPlot->isVisibleToCivTeam())
 		{
 			int iTargetCities = pLoopPlot->area()->getNumUnownedTiles();
 
@@ -7916,7 +7875,7 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 				iValue *= 100 + getSorenRandNum(50, "Variance");
 				iValue /= 100;
 
-				if (!isOption(GAMEOPTION_NO_BARBARIAN_CIV))
+				if (isOption(GAMEOPTION_BARBARIAN_CIV))
 				{
 					if (pLoopPlot->area()->getNumCities() == pLoopPlot->area()->getCitiesPerPlayer(ePlayer))
 					{
@@ -7951,14 +7910,14 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 }
 
 namespace {
-	bool isHeroUnit(const CvUnitInfo& unitInfo, const UnitClassTypes& unitClassType)
+	bool isHeroUnit(const CvUnitInfo& unitInfo)
 	{
-		return unitInfo.hasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_HERO")) 
+		return unitInfo.hasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_HERO"))
 			|| unitInfo.getMaxGlobalInstances() > 0
 			|| unitInfo.getMaxPlayerInstances() > 0;
 	}
 
-	bool isValidBarbarianSpawnUnit(const CvArea* area, const CvUnitInfo& unitInfo, const UnitTypes unitType, const UnitClassTypes unitClass)
+	bool isValidBarbarianSpawnUnit(const CvArea* area, const CvUnitInfo& unitInfo, const UnitTypes unitType)
 	{
 		return unitInfo.getCombat() > 0
 			&& !unitInfo.isOnlyDefensive()
@@ -7967,10 +7926,8 @@ namespace {
 			&& GET_PLAYER(BARBARIAN_PLAYER).canTrain(unitType)
 			// Either has no pre-requisites, or they are met
 			&& (unitInfo.getPrereqAndBonus() == NO_BONUS || GET_TEAM(BARBARIAN_TEAM).isHasTech((TechTypes)GC.getBonusInfo((BonusTypes)unitInfo.getPrereqAndBonus()).getTechCityTrade()))
-			// Need to ignore pre-requisite buildings or no ships can be built
-			// && unitInfo.getPrereqBuilding() == NO_BUILDING
 			// Another attempt to deny the spawning of barb heroes.
-			&& !isHeroUnit(unitInfo, unitClass)
+			&& !isHeroUnit(unitInfo)
 			&& GET_TEAM(BARBARIAN_TEAM).isUnitPrereqOrBonusesMet(unitInfo)
 			;
 	}
@@ -8077,7 +8034,7 @@ void CvGame::createBarbarianUnits()
 			{
 				const CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes) iJ);
 
-				if (isValidBarbarianSpawnUnit(pLoopArea, kUnit, (UnitTypes) iJ, static_cast<UnitClassTypes>(kUnit.getUnitClassType())))
+				if (isValidBarbarianSpawnUnit(pLoopArea, kUnit, (UnitTypes) iJ))
 				{
 					int iValue = 500 + getSorenRandNum(500, "Barb Unit Selection");
 
@@ -8106,7 +8063,7 @@ void CvGame::createBarbarianUnits()
 		}
 
 		// Give barb cities in occupied areas free workers so that if the city settles it has some infrastructure
-		if (!isOption(GAMEOPTION_NO_BARBARIAN_CIV))
+		if (isOption(GAMEOPTION_BARBARIAN_CIV))
 		{
 			const int iBarbCities = pLoopArea->getCitiesPerPlayer(BARBARIAN_PLAYER);
 
@@ -8638,9 +8595,9 @@ bool CvGame::testVictory(VictoryTypes eVictory, TeamTypes eTeam, bool* pbEndScor
 
 	if (bValid)
 	{
-		for (int iK = 0; iK < GC.getNumBuildingClassInfos(); iK++)
+		for (int iK = 0; iK < GC.getNumBuildingInfos(); iK++)
 		{
-			if (GC.getBuildingClassInfo((BuildingClassTypes) iK).getVictoryThreshold(eVictory) > GET_TEAM(eTeam).getBuildingClassCount((BuildingClassTypes)iK))
+			if (GC.getBuildingInfo((BuildingTypes)iK).getVictoryThreshold(eVictory) > GET_TEAM(eTeam).getBuildingCount((BuildingTypes)iK))
 			{
 				bValid = false;
 				break;
@@ -9314,14 +9271,14 @@ int CvGame::calculateSyncChecksum()
 					iMultiplier += (GET_PLAYER((PlayerTypes)iI).getImprovementCount((ImprovementTypes)iJ) * 883);
 				}
 
-				for (iJ = 0; iJ < GC.getNumBuildingClassInfos(); iJ++)
+				for (iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
 				{
-					iMultiplier += (GET_PLAYER((PlayerTypes)iI).getBuildingClassCountPlusMaking((BuildingClassTypes)iJ) * 95);
+					iMultiplier += (GET_PLAYER((PlayerTypes)iI).getBuildingCountPlusMaking((BuildingTypes)iJ) * 95);
 				}
 
-				for (iJ = 0; iJ < GC.getNumUnitClassInfos(); iJ++)
+				for (iJ = 0; iJ < GC.getNumUnitInfos(); iJ++)
 				{
-					iMultiplier += (GET_PLAYER((PlayerTypes)iI).getUnitClassCountPlusMaking((UnitClassTypes)iJ) * 75);
+					iMultiplier += (GET_PLAYER((PlayerTypes)iI).getUnitCountPlusMaking((UnitTypes)iJ) * 75);
 				}
 
 				for (iJ = 0; iJ < NUM_UNITAI_TYPES; iJ++)
@@ -9667,8 +9624,7 @@ void CvGame::read(FDataStreamBase* pStream)
 /************************************************************************************************/
 
 	WRAPPER_READ_CLASS_ARRAY(wrapper,"CvGame", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiUnitCreatedCount);
-	WRAPPER_READ_CLASS_ARRAY(wrapper,"CvGame", REMAPPED_CLASS_TYPE_UNIT_CLASSES, GC.getNumUnitClassInfos(), m_paiUnitClassCreatedCount);
-	WRAPPER_READ_CLASS_ARRAY(wrapper,"CvGame", REMAPPED_CLASS_TYPE_BUILDING_CLASSES, GC.getNumBuildingClassInfos(), m_paiBuildingClassCreatedCount);
+	WRAPPER_READ_CLASS_ARRAY(wrapper,"CvGame", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingCreatedCount);
 	WRAPPER_READ_CLASS_ARRAY(wrapper,"CvGame", REMAPPED_CLASS_TYPE_PROJECTS, GC.getNumProjectInfos(), m_paiProjectCreatedCount);
 	WRAPPER_READ_CLASS_ARRAY(wrapper,"CvGame", REMAPPED_CLASS_TYPE_CIVICS, GC.getNumCivicInfos(), m_paiForceCivicCount);
 	WRAPPER_READ_CLASS_ARRAY(wrapper,"CvGame", REMAPPED_CLASS_TYPE_VOTES, GC.getNumVoteInfos(), (int*)m_paiVoteOutcome);
@@ -10037,8 +9993,7 @@ void CvGame::write(FDataStreamBase* pStream)
 /************************************************************************************************/
 
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvGame", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiUnitCreatedCount);
-	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvGame", REMAPPED_CLASS_TYPE_UNIT_CLASSES, GC.getNumUnitClassInfos(), m_paiUnitClassCreatedCount);
-	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvGame", REMAPPED_CLASS_TYPE_BUILDING_CLASSES, GC.getNumBuildingClassInfos(), m_paiBuildingClassCreatedCount);
+	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvGame", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingCreatedCount);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvGame", REMAPPED_CLASS_TYPE_PROJECTS, GC.getNumProjectInfos(), m_paiProjectCreatedCount);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvGame", REMAPPED_CLASS_TYPE_CIVICS, GC.getNumCivicInfos(), m_paiForceCivicCount);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvGame", REMAPPED_CLASS_TYPE_VOTES, GC.getNumVoteInfos(), (int*)m_paiVoteOutcome);
@@ -11473,16 +11428,12 @@ bool CvGame::foundBarbarianCity()
 
 			if( bOccupiedArea )
 			{
-				iValue += (!isOption(GAMEOPTION_NO_BARBARIAN_CIV) ? 1000 : 250);
+				iValue += (isOption(GAMEOPTION_BARBARIAN_CIV) ? 1000 : 250);
 			}
-			else
+			else if (isOption(GAMEOPTION_BARBARIAN_CIV))
 			{
-				if( !isOption(GAMEOPTION_NO_BARBARIAN_CIV) )
-				{
-					bValid = false;
-				}
+				bValid = false;
 			}
-
 		}
 
 		if (bValid)
@@ -13104,9 +13055,9 @@ bool CvGame::canExitToMainMenu() const
 void CvGame::calculateNumWonders()
 {
 	m_iNumWonders = 0;
-	for (int iJ = 0; iJ < GC.getNumBuildingClassInfos(); iJ++)
+	for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
 	{
-		if (isLimitedWonderClass((BuildingClassTypes)iJ))
+		if (isLimitedWonder((BuildingTypes)iJ))
 		{
 			m_iNumWonders++;
 		}
@@ -13198,9 +13149,12 @@ bool CvGame::canEverTrain(UnitTypes eUnit) const
 		return false;
 	}
 
-	if (kUnit.getPrereqBuilding() != NO_BUILDING && !canEverConstruct((BuildingTypes)kUnit.getPrereqBuilding()))
+	for (int iI = 0; iI < kUnit.getNumPrereqAndBuildings(); ++iI)
 	{
-		return false;
+		if (!canEverConstruct((BuildingTypes)kUnit.getPrereqAndBuilding(iI)))
+		{
+			return false;
+		}
 	}
 	return true;
 }

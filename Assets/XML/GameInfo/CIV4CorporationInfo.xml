@@ -7,10 +7,9 @@
 	<CorporationInfos>
 		<CorporationInfo>
 			<Type>CORPORATION_1</Type>
-			<Description>TXT_KEY_CORPORATION_1</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_1_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_1</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_1_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -41,10 +40,9 @@
 		</CorporationInfo>
 		<CorporationInfo>
 			<Type>CORPORATION_2</Type>
-			<Description>TXT_KEY_CORPORATION_2</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_2_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_2</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_2_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -80,10 +78,9 @@
 		</CorporationInfo>
 		<CorporationInfo>
 			<Type>CORPORATION_3</Type>
-			<Description>TXT_KEY_CORPORATION_3</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_3_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_3</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_3_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -99,7 +96,7 @@
 				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 				<iHeadquarterCommerce>0</iHeadquarterCommerce>
 			</HeadquarterCommerces>
-			<BonusProduced>BONUS_OIL_PRODUCTS</BonusProduced>
+			<BonusProduced>BONUS_PETROLEUM_PRODUCTS</BonusProduced>
 			<CommercesProduced>
 				<iCommerceProduced>0</iCommerceProduced>
 				<iCommerceProduced>200</iCommerceProduced>
@@ -115,10 +112,9 @@
 		</CorporationInfo>
 		<CorporationInfo>
 			<Type>CORPORATION_4</Type>
-			<Description>TXT_KEY_CORPORATION_4</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_4_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_4</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_4_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -154,10 +150,9 @@
 		</CorporationInfo>
 		<CorporationInfo>
 			<Type>CORPORATION_5</Type>
-			<Description>TXT_KEY_CORPORATION_5</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_5_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_5</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_5_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -194,10 +189,9 @@
 		</CorporationInfo>
 		<CorporationInfo>
 			<Type>CORPORATION_6</Type>
-			<Description>TXT_KEY_CORPORATION_6</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_6_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_6</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_6_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -229,10 +223,9 @@
 		</CorporationInfo>
 		<CorporationInfo>
 			<Type>CORPORATION_7</Type>
-			<Description>TXT_KEY_CORPORATION_7</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_7_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_7</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_7_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -240,7 +233,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_GOLD_ORE</BonusType>
 				<BonusType>BONUS_SILVER_ORE</BonusType>
-				<BonusType>BONUS_GEMS</BonusType>
+				<BonusType>BONUS_GEMSTONE</BonusType>
 				<BonusType>BONUS_PEARLS</BonusType>
 			</PrereqBonuses>
 			<HeadquarterCommerces>
@@ -265,10 +258,9 @@
 		</CorporationInfo>
 		<CorporationInfo>
 			<Type>CORPORATION_EMPCLOTH</Type>
-			<Description>TXT_KEY_CORPORATION_EMPCLOTH</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_EMPCLOTH_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -314,8 +306,8 @@
 				<iYieldProduced>0</iYieldProduced>
 				<iYieldProduced>0</iYieldProduced>
 			</YieldChanges>
-			<PrereqBuildingClasses>
-			</PrereqBuildingClasses>
+			<PrereqBuildings>
+			</PrereqBuildings>
 			<Button>Art/Interface/Buttons/corporations/emperors_clothing.dds</Button>
 			<MovieFile>NONE</MovieFile>
 			<MovieSound>NONE</MovieSound>
@@ -324,10 +316,9 @@
 		</CorporationInfo>
 		<CorporationInfo>
 			<Type>CORPORATION_MOONBEAN</Type>
-			<Description>TXT_KEY_CORPORATION_MOONBEAN</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_MOONBEAN_HQ_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_MOONBEAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MOONBEAN_HQ_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -375,8 +366,8 @@
 				<iYieldProduced>0</iYieldProduced>
 				<iYieldProduced>0</iYieldProduced>
 			</YieldChanges>
-			<PrereqBuildingClasses>
-			</PrereqBuildingClasses>
+			<PrereqBuildings>
+			</PrereqBuildings>
 			<Button>Art/Interface/Buttons/corporations/moon_bean.dds</Button>
 			<MovieFile>NONE</MovieFile>
 			<MovieSound>NONE</MovieSound>
@@ -385,10 +376,9 @@
 		</CorporationInfo>
 		<CorporationInfo>
 			<Type>CORPORATION_MCDOWELLS</Type>
-			<Description>TXT_KEY_CORPORATION_MCDOWELLS</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_BURGERWORLD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_MCDOWELLS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MCDOWELLS_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -433,8 +423,8 @@
 				<iYieldProduced>0</iYieldProduced>
 				<iYieldProduced>0</iYieldProduced>
 			</YieldChanges>
-			<PrereqBuildingClasses>
-			</PrereqBuildingClasses>
+			<PrereqBuildings>
+			</PrereqBuildings>
 			<Button>Art/Interface/Buttons/corporations/mcdowells.dds</Button>
 			<MovieFile>NONE</MovieFile>
 			<MovieSound>NONE</MovieSound>
@@ -443,10 +433,9 @@
 		</CorporationInfo>
 		<CorporationInfo>
 			<Type>CORPORATION_MILEHIGH</Type>
-			<Description>TXT_KEY_CORPORATION_MILEHIGH</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_MILEHIGH_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_MILEHIGH</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MILEHIGH_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -483,10 +472,9 @@
 		</CorporationInfo>
 		<CorporationInfo>
 			<Type>CORPORATION_EWTRADE</Type>
-			<Description>TXT_KEY_CORPORATION_EWTRADE</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_EWTRADE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_EWTRADE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_EWTRADE_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -522,10 +510,9 @@
 		</CorporationInfo>
 		<CorporationInfo>
 			<Type>CORPORATION_BULLSEYE</Type>
-			<Description>TXT_KEY_CORPORATION_BULLSEYE</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_BULLSEYE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_BULLSEYE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_BULLSEYE_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -560,10 +547,9 @@
 		</CorporationInfo>
 		<CorporationInfo>
 			<Type>CORPORATION_FASHION</Type>
-			<Description>TXT_KEY_CORPORATION_FASHION</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_FASHION_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_FASHION</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_FASHION_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -596,10 +582,9 @@
 		</CorporationInfo>
 		<CorporationInfo>
 			<Type>CORPORATION_MAPSTER</Type>
-			<Description>TXT_KEY_CORPORATION_MAPSTER</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_MAPSTER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_MAPSTER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MAPSTER_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>50</iMaintenance>
@@ -645,8 +630,8 @@
 				<iYieldProduced>0</iYieldProduced>
 				<iYieldProduced>0</iYieldProduced>
 			</YieldChanges>
-			<PrereqBuildingClasses>
-			</PrereqBuildingClasses>
+			<PrereqBuildings>
+			</PrereqBuildings>
 			<Button>Art/Interface/Buttons/corporations/sparth/mapster.dds</Button>
 			<MovieFile>NONE</MovieFile>
 			<MovieSound>NONE</MovieSound>
@@ -654,10 +639,9 @@
 		</CorporationInfo>
 		<CorporationInfo>
 			<Type>CORPORATION_BURGERWORLD</Type>
-			<Description>TXT_KEY_CORPORATION_BURGERWORLD</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_BURGERWORLD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_BURGERWORLD</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_BURGERWORLD_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -702,8 +686,8 @@
 				<iYieldProduced>0</iYieldProduced>
 				<iYieldProduced>0</iYieldProduced>
 			</YieldChanges>
-			<PrereqBuildingClasses>
-			</PrereqBuildingClasses>
+			<PrereqBuildings>
+			</PrereqBuildings>
 			<Button>Art/Interface/Buttons/corporations/BurgerWorld.dds</Button>
 			<MovieFile>NONE</MovieFile>
 			<MovieSound>NONE</MovieSound>
@@ -712,10 +696,9 @@
 		</CorporationInfo>
 		<CorporationInfo>
 			<Type>CORPORATION_WONKA</Type>
-			<Description>TXT_KEY_CORPORATION_WONKA</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_WONKA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_WONKA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_WONKA_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -762,8 +745,8 @@
 				<iYieldProduced>0</iYieldProduced>
 				<iYieldProduced>0</iYieldProduced>
 			</YieldChanges>
-			<PrereqBuildingClasses>
-			</PrereqBuildingClasses>
+			<PrereqBuildings>
+			</PrereqBuildings>
 			<Button>Art/Interface/Buttons/corporations/sparth/wonka.dds</Button>
 			<MovieFile>NONE</MovieFile>
 			<MovieSound>NONE</MovieSound>
@@ -772,10 +755,9 @@
 		</CorporationInfo>
 		<CorporationInfo>
 			<Type>CORPORATION_MOBBY</Type>
-			<Description>TXT_KEY_CORPORATION_MOBBY</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_MOBBY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_MOBBY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MOBBY_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -810,10 +792,9 @@
 		</CorporationInfo>
 		<CorporationInfo>
 			<Type>CORPORATION_MALLWART</Type>
-			<Description>TXT_KEY_CORPORATION_MALLWART</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_MALLWART_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_MALLWART</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MALLWART_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -847,10 +828,9 @@
 		</CorporationInfo>
 		<CorporationInfo>
 			<Type>CORPORATION_ADVENTURE</Type>
-			<Description>TXT_KEY_CORPORATION_ADVENTURE</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_ADVENTURE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_ADVENTURE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_ADVENTURE_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -899,8 +879,8 @@
 				<iYieldProduced>0</iYieldProduced>
 				<iYieldProduced>0</iYieldProduced>
 			</YieldChanges>
-			<PrereqBuildingClasses>
-			</PrereqBuildingClasses>
+			<PrereqBuildings>
+			</PrereqBuildings>
 			<Button>Art/Interface/Buttons/corporations/Adventure.dds</Button>
 			<MovieFile>NONE</MovieFile>
 			<MovieSound>NONE</MovieSound>
@@ -909,10 +889,9 @@
 		</CorporationInfo>
 		<CorporationInfo>
 			<Type>CORPORATION_SAFARI</Type>
-			<Description>TXT_KEY_CORPORATION_SAFARI</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_SAFARI_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_SAFARI</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_SAFARI_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -960,8 +939,8 @@
 				<iYieldProduced>0</iYieldProduced>
 				<iYieldProduced>0</iYieldProduced>
 			</YieldChanges>
-			<PrereqBuildingClasses>
-			</PrereqBuildingClasses>
+			<PrereqBuildings>
+			</PrereqBuildings>
 			<Button>Art/Interface/Buttons/corporations/Safari.dds</Button>
 			<MovieFile>NONE</MovieFile>
 			<MovieSound>NONE</MovieSound>
@@ -970,10 +949,9 @@
 		</CorporationInfo>
 		<CorporationInfo>
 			<Type>CORPORATION_RED</Type>
-			<Description>TXT_KEY_CORPORATION_RED</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_RED_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_RED</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_RED_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -1020,8 +998,8 @@
 				<iYieldProduced>0</iYieldProduced>
 				<iYieldProduced>0</iYieldProduced>
 			</YieldChanges>
-			<PrereqBuildingClasses>
-			</PrereqBuildingClasses>
+			<PrereqBuildings>
+			</PrereqBuildings>
 			<Button>Art/Interface/Buttons/corporations/Red.dds</Button>
 			<MovieFile>NONE</MovieFile>
 			<MovieSound>NONE</MovieSound>
@@ -1030,10 +1008,9 @@
 		</CorporationInfo>
 		<CorporationInfo>
 			<Type>CORPORATION_ULTSOLDIER</Type>
-			<Description>TXT_KEY_CORPORATION_ULTSOLDIER</Description>
-			<Civilopedia>TXT_KEY_CORPORATION_ULTSOLDIER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CORPORATION_ULTSOLDIER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_ULTSOLDIER_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
 			<iMaintenance>100</iMaintenance>
@@ -1081,8 +1058,8 @@
 				<iYieldProduced>0</iYieldProduced>
 				<iYieldProduced>0</iYieldProduced>
 			</YieldChanges>
-			<PrereqBuildingClasses>
-			</PrereqBuildingClasses>
+			<PrereqBuildings>
+			</PrereqBuildings>
 			<Button>Art/Interface/Buttons/corporations/Soldier.dds</Button>
 			<MovieFile>NONE</MovieFile>
 			<MovieSound>NONE</MovieSound>

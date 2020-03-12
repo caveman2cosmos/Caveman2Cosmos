@@ -44,9 +44,14 @@ CyMap* CyGlobalContext::getCyMap() const
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
-void CyGlobalContext::enableMultiMaps(const bool enable)
+void CyGlobalContext::enableMultiMaps(bool enable)
 {
 	GC.enableMultiMaps(enable);
+}
+
+bool CyGlobalContext::multiMapsEnabled() const
+{
+	return GC.multiMapsEnabled();
 }
 
 bool CyGlobalContext::multiMapsEnabled() const
@@ -76,7 +81,7 @@ CyMap* CyGlobalContext::getMapByIndex(int iIndex)
 	return &cyMap;
 }
 
-const int CyGlobalContext::getNumMaps() const
+int CyGlobalContext::getNumMaps() const
 {
 	return GC.getNumMaps();
 }
@@ -256,20 +261,9 @@ CvHandicapInfo* CyGlobalContext::getHandicapInfo(int i) const
 }
 
 
-CvBuildingClassInfo* CyGlobalContext::getBuildingClassInfo(int i) const
-{
-	return (i>=0 && i<GC.getNumBuildingClassInfos()) ? &GC.getBuildingClassInfo((BuildingClassTypes) i) : NULL;
-}
-
-
 CvBuildingInfo* CyGlobalContext::getBuildingInfo(int i) const
 {
 	return (i>=0 && i<GC.getNumBuildingInfos()) ? &GC.getBuildingInfo((BuildingTypes) i) : NULL;
-}
-
-CvUnitClassInfo* CyGlobalContext::getUnitClassInfo(int i) const
-{
-	return (i>=0 && i<GC.getNumUnitClassInfos()) ? &GC.getUnitClassInfo((UnitClassTypes) i) : NULL;
 }
 
 

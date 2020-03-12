@@ -7,7 +7,6 @@
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NAITERUKOB</BuildingClass>
 			<Type>BUILDING_NAITERUKOB</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_NAITERUKOB</Description>
@@ -55,12 +54,9 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<ConstructSound>AS2D_BUILD_CONFUCIAN</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_NGAI</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_NGAI</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -76,7 +72,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NGAI</BuildingClass>
 			<Type>BUILDING_NGAI</Type>
 			<SpecialBuildingType>SPECIALBUILDING_MONASTERY_II</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_NGAI</Description>
@@ -136,7 +131,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NGAINANYOKE</BuildingClass>
 			<Type>BUILDING_NGAINANYOKE</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_NGAINANYOKE</Description>
@@ -184,12 +178,9 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<ConstructSound>AS2D_BUILD_CONFUCIAN</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_NGAI</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_NGAI</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -205,7 +196,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NGAINAROK</BuildingClass>
 			<Type>BUILDING_NGAINAROK</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_NGAINAROK</Description>
@@ -258,12 +248,9 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<ConstructSound>AS2D_BUILD_CONFUCIAN</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_NGAI</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_NGAI</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -279,7 +266,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NGAINAROK_COW</BuildingClass>
 			<Type>BUILDING_NGAINAROK_COW</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_NGAINAROK_COW</Description>
@@ -297,12 +283,9 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_COW</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_NGAINAROK</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_NGAINAROK</BuildingType>
+			</PrereqInCityBuildings>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_COW</BonusType>
@@ -321,7 +304,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NGAINAROK_PIG</BuildingClass>
 			<Type>BUILDING_NGAINAROK_PIG</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_NGAINAROK_PIG</Description>
@@ -339,12 +321,9 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_PIG</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_NGAINAROK</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_NGAINAROK</BuildingType>
+			</PrereqInCityBuildings>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_PIG</BonusType>
@@ -363,7 +342,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NGAINAROK_SHEEP</BuildingClass>
 			<Type>BUILDING_NGAINAROK_SHEEP</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_NGAINAROK_SHEEP</Description>
@@ -381,12 +359,9 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_SHEEP</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_NGAINAROK</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_NGAINAROK</BuildingType>
+			</PrereqInCityBuildings>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_SHEEP</BonusType>
@@ -405,7 +380,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NGAI_SHRINE</BuildingClass>
 			<Type>BUILDING_NGAI_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_NGAI_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NGAI_SHRINE_PEDIA</Civilopedia>
@@ -416,7 +390,7 @@
 			<HolyCity>RELIGION_NGAIISM</HolyCity>
 			<ReligionType>RELIGION_NGAIISM</ReligionType>
 			<GlobalReligionCommerce>RELIGION_NGAIISM</GlobalReligionCommerce>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>-1</iCost>

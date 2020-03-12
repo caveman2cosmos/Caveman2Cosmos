@@ -95,10 +95,8 @@ class CvTurnTimerInfo;
 class CvProcessInfo;
 class CvVoteInfo;
 class CvProjectInfo;
-class CvBuildingClassInfo;
 class CvBuildingInfo;
 class CvSpecialBuildingInfo;
-class CvUnitClassInfo;
 class CvActionInfo;
 class CvMissionInfo;
 class CvControlInfo;
@@ -790,11 +788,6 @@ public:
 	CvProjectInfo& getProjectInfo(ProjectTypes e) const;
 	CvInfoReplacements<CvProjectInfo>* getProjectInfoReplacements();
 
-	int getNumBuildingClassInfos() const;
-	std::vector<CvBuildingClassInfo*>& getBuildingClassInfos();
-	CvBuildingClassInfo& getBuildingClassInfo(BuildingClassTypes eBuildingClassNum) const;
-	CvInfoReplacements<CvBuildingClassInfo>* getBuildingClassInfoReplacements();
-
 	int getNumBuildingInfos() const;
 	std::vector<CvBuildingInfo*>& getBuildingInfos();
 	CvBuildingInfo& getBuildingInfo(BuildingTypes eBuildingNum) const;
@@ -804,13 +797,6 @@ public:
 	std::vector<CvSpecialBuildingInfo*>& getSpecialBuildingInfos();
 	CvSpecialBuildingInfo& getSpecialBuildingInfo(SpecialBuildingTypes eSpecialBuildingNum) const;
 	CvInfoReplacements<CvSpecialBuildingInfo>* getSpecialBuildingInfoReplacements();
-
-	int getNumUnitClassInfos() const;
-	std::vector<CvUnitClassInfo*>& getUnitClassInfos();
-	CvUnitClassInfo& getUnitClassInfo(UnitClassTypes eUnitClassNum);
-	const CvUnitClassInfo& getUnitClassInfo(UnitClassTypes eUnitClassNum) const;
-
-	CvInfoReplacements<CvUnitClassInfo>* getUnitClassInfoReplacements();
 
 	int getNumActionInfos() const;
 	std::vector<CvActionInfo*>& getActionInfos();
@@ -1021,7 +1007,6 @@ public:
 	int getDCM_RB_CITY_INACCURACY() const;
 	int getDCM_RB_CITYBOMBARD_CHANCE() const;
 	bool isDCM_ATTACK_SUPPORT() const;
-	bool isDCM_STACK_ATTACK() const;
 	bool isDCM_OPP_FIRE() const;
 	bool isDCM_ACTIVE_DEFENSE() const;
 	bool isDCM_ARCHER_BOMBARD() const;
@@ -1515,14 +1500,10 @@ protected:
 	std::vector<CvVoteInfo*> m_paVoteInfo;
 	std::vector<CvProjectInfo*> m_paProjectInfo;
 	CvInfoReplacements<CvProjectInfo> m_ProjectInfoReplacements;
-	std::vector<CvBuildingClassInfo*> m_paBuildingClassInfo;
-	CvInfoReplacements<CvBuildingClassInfo> m_BuildingClassInfoReplacements;
 	std::vector<CvBuildingInfo*> m_paBuildingInfo;
 	CvInfoReplacements<CvBuildingInfo> m_BuildingInfoReplacements;
 	std::vector<CvSpecialBuildingInfo*> m_paSpecialBuildingInfo;
 	CvInfoReplacements<CvSpecialBuildingInfo> m_SpecialBuildingInfoReplacements;
-	std::vector<CvUnitClassInfo*> m_paUnitClassInfo;
-	CvInfoReplacements<CvUnitClassInfo> m_UnitClassInfoReplacements;
 	std::vector<CvUnitInfo*> m_paUnitInfo;
 	CvInfoReplacements<CvUnitInfo> m_UnitInfoReplacements;
 	std::vector<CvSpawnInfo*> m_paSpawnInfo;
@@ -1683,7 +1664,6 @@ protected:
 	int m_iDCM_RB_CITY_INACCURACY;
 	int m_iDCM_RB_CITYBOMBARD_CHANCE;
 	bool m_bDCM_ATTACK_SUPPORT;
-	bool m_bDCM_STACK_ATTACK;
 	bool m_bDCM_OPP_FIRE;
 	bool m_bDCM_ACTIVE_DEFENSE;
 	bool m_bDCM_ARCHER_BOMBARD;

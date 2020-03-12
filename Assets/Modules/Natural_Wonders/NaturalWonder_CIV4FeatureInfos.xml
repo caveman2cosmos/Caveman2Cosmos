@@ -25,7 +25,6 @@
 			<Type>FEATURE_PLATY_GREAT_BARRIER</Type>
 			<Description>TXT_KEY_FEATURE_GREAT_BARRIER</Description>
 			<Civilopedia>TXT_KEY_FEATURE_GREAT_BARRIER_PEDIA</Civilopedia>
-			<!--ArtDefineTag>ART_DEF_FEATURE_GREAT_BARRIER</ArtDefineTag-->
 			<ArtDefineTag>ART_DEF_FEATURE_CORAL_REEF</ArtDefineTag>
 			<iMovement>5</iMovement>
 			<iSeeThrough>1</iSeeThrough>
@@ -54,7 +53,6 @@
 			<Type>FEATURE_GREAT_BARRIER_REEF_BEACON</Type>
 			<Description>TXT_KEY_FEATURE_GREAT_BARRIER_REEF_BEACON</Description>
 			<Civilopedia>TXT_KEY_FEATURE_GREAT_BARRIER_PEDIA</Civilopedia>
-			<!--ArtDefineTag>ART_DEF_FEATURE_GREAT_BARRIER</ArtDefineTag-->
 			<ArtDefineTag>ART_DEF_FEATURE_CORAL_REEF</ArtDefineTag>
 			<iMovement>2</iMovement>
 			<iSeeThrough>1</iSeeThrough>

@@ -8,7 +8,6 @@
 	<UnitInfos>
 		<!-- Modular Hip-Hip-Hurra!!! Wer hat die Scheisse bloss gemacht !!! -->
 		<UnitInfo>
-			<Class>UNITCLASS_SHAMAN_MISSIONARY</Class>
 			<Type>UNIT_SHAMAN_MISSIONARY</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_SHAMAN_MISSIONARY</Capture>
@@ -35,7 +34,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
-			<PrereqBuilding>BUILDING_SHAMAN_MONASTERY</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
@@ -54,7 +55,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_PROPHET</Class>
 			<Type>UNIT_PROPHET</Type>
 			<Buildings>
 				<BuildingType>BUILDING_SHAMAN_SHRINE</BuildingType>

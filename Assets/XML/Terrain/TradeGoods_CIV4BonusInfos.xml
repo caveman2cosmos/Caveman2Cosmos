@@ -65,7 +65,7 @@
 			<Type>BONUS_OSTRICH_LEATHER</Type>
 			<Description>TXT_KEY_BONUS_OSTRICH_LEATHER</Description>
 			<Civilopedia>TXT_KEY_BONUS_OSTRICH_LEATHER_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_LUXURY</BonusClassType>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_OSTRICH_LEATHER</ArtDefineTag>
 			<TechReveal>TECH_POULTRY_DOMESTICATION</TechReveal>
 			<TechCityTrade>TECH_POULTRY_DOMESTICATION</TechCityTrade>
@@ -171,7 +171,7 @@
 			<Type>BONUS_OSTRICH_FEATHERS</Type>
 			<Description>TXT_KEY_BONUS_OSTRICH_FEATHERS</Description>
 			<Civilopedia>TXT_KEY_BONUS_OSTRICH_FEATHERS_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_LUXURY</BonusClassType>
+			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_OSTRICH_FEATHERS</ArtDefineTag>
 			<TechReveal>TECH_POULTRY_DOMESTICATION</TechReveal>
 			<TechCityTrade>TECH_POULTRY_DOMESTICATION</TechCityTrade>

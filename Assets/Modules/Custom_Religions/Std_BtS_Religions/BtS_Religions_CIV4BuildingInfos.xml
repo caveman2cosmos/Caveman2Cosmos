@@ -8,8 +8,8 @@
 	<BuildingInfos>
 <!-- Buddhist -->
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CAVES</BuildingClass>
 			<Type>BUILDING_CAVES</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_CAVES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CAVES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CAVES_STRATEGY</Strategy>
@@ -21,7 +21,7 @@
 			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_BUDDHISM</PrereqReligion>
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>1566</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
@@ -86,8 +86,8 @@
 			</PropertyManipulators>
 		</BuildingInfo>
        <BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NARA</BuildingClass>
 			<Type>BUILDING_NARA</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_NARA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NARA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NARA_STRATEGY</Strategy>
@@ -100,7 +100,7 @@
 			<PrereqReligion>RELIGION_BUDDHISM</PrereqReligion>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<Bonus>BONUS_SCULPTURES</Bonus>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>1104</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
@@ -156,8 +156,8 @@
 		</BuildingInfo>
 <!-- Christian -->
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SAN_MARCOS_CATHEDRAL</BuildingClass>
 			<Type>BUILDING_SAN_MARCOS_CATHEDRAL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_SAN_MARCOS_CATHEDRAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SAN_MARCOS_CATHEDRAL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SAN_MARCOS_CATHEDRAL_STRATEGY</Strategy>
@@ -169,7 +169,7 @@
 			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_CHRISTIANITY</PrereqReligion>
 			<PrereqTech>TECH_ARCHITECTURE</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bWater>1</bWater>
 			<bNukeImmune>1</bNukeImmune>
@@ -223,12 +223,9 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_CHRISTIAN_CATHEDRAL</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_CHRISTIAN_CATHEDRAL</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -253,8 +250,8 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_VATICAN_LIBRARY</BuildingClass>
 			<Type>BUILDING_VATICAN_LIBRARY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_VATICAN_LIBRARY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VATICAN_LIBRARY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_VATICAN_LIBRARY_STRATEGY</Strategy>
@@ -267,7 +264,7 @@
 			<PrereqReligion>RELIGION_CHRISTIANITY</PrereqReligion>
 			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>1800</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
@@ -306,12 +303,9 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_LIBRARY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_LIBRARY</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -337,8 +331,8 @@
 		</BuildingInfo>
 <!-- Confusian -->
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CONFUCIAN_SCHOOL</BuildingClass>
 			<Type>BUILDING_CONFUCIAN_SCHOOL</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_CONFUCIAN_SCHOOL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CONFUCIAN_SCHOOL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CONFUCIAN_SCHOOL_STRATEGY</Strategy>
@@ -355,7 +349,7 @@
 				<Bonus>BONUS_SCROLLS</Bonus>
 				<Bonus>BONUS_TABLETS</Bonus>
 			</PrereqBonuses>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>1512</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
@@ -436,8 +430,8 @@
 		</BuildingInfo>
 <!-- Judaism -->
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SOLOMON</BuildingClass>
 			<Type>BUILDING_SOLOMON</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_SOLOMON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SOLOMON_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SOLOMON_STRATEGY</Strategy>
@@ -450,7 +444,7 @@
 			<PrereqReligion>RELIGION_JUDAISM</PrereqReligion>
 			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
 			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>1404</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
@@ -515,8 +509,8 @@
 		</BuildingInfo>
 <!-- Hindu -->
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_AKSHARDHAM</BuildingClass>
 			<Type>BUILDING_AKSHARDHAM</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_AKSHARDHAM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AKSHARDHAM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_AKSHARDHAM_STRATEGY</Strategy>
@@ -532,7 +526,7 @@
 				<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
 			</TechTypes>
 			<Bonus>BONUS_BRICKS</Bonus>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>-50</iHurryAngerModifier>
 			<iCost>1566</iCost>
@@ -598,8 +592,8 @@
 			</PropertyManipulators>
 		</BuildingInfo>
  		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_MEENAKSHI</BuildingClass>
 			<Type>BUILDING_MEENAKSHI</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_MEENAKSHI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MEENAKSHI_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MEENAKSHI_STRATEGY</Strategy>
@@ -615,7 +609,7 @@
 				<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
 			</TechTypes>
 			<Bonus>BONUS_BRICKS</Bonus>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>-50</iHurryAngerModifier>
 			<iCost>1566</iCost>
@@ -687,8 +681,8 @@
 		</BuildingInfo>
 <!-- Islam -->
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_BLUE_MOSQUE</BuildingClass>
 			<Type>BUILDING_BLUE_MOSQUE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_BLUE_MOSQUE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BLUE_MOSQUE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BLUE_MOSQUE_STRATEGY</Strategy>
@@ -700,7 +694,7 @@
 			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>2208</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
@@ -739,12 +733,9 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<ConstructSound>AS2D_BUILD_ISLAMIC</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_ISLAMIC_CATHEDRAL</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ISLAMIC_CATHEDRAL</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -764,8 +755,8 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DESERT</BuildingClass>
 			<Type>BUILDING_DESERT</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_DESERT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DESERT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DESERT_STRATEGY</Strategy>
@@ -777,7 +768,7 @@
 			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
 			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>2640</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
@@ -823,12 +814,9 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_ISLAMIC_CATHEDRAL</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ISLAMIC_CATHEDRAL</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -848,8 +836,8 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SULTAN</BuildingClass>
 			<Type>BUILDING_SULTAN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_SULTAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SULTAN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SULTAN_STRATEGY</Strategy>
@@ -861,7 +849,7 @@
 			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>2208</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
@@ -903,12 +891,9 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<ConstructSound>AS2D_BUILD_ISLAMIC</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_ISLAMIC_CATHEDRAL</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ISLAMIC_CATHEDRAL</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -929,8 +914,8 @@
 		</BuildingInfo>
 <!-- Toaist -->
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_QUANZHEN</BuildingClass>
 			<Type>BUILDING_QUANZHEN</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_QUANZHEN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_QUANZHEN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_QUANZHEN_STRATEGY</Strategy>
@@ -1023,8 +1008,8 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_WUDANG</BuildingClass>
 			<Type>BUILDING_WUDANG</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_WUDANG</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WUDANG_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_WUDANG_STRATEGY</Strategy>
@@ -1085,12 +1070,9 @@
 					<iExperience>3</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_TAOIST_MONASTERY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_TAOIST_MONASTERY</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>

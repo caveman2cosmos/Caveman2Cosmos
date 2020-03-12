@@ -1848,11 +1848,6 @@ DenialTypes CvTeamAI::AI_techTrade(TechTypes eTech, TeamTypes eTeam) const
 	FAssertMsg(eTeam != getID(), "shouldn't call this function on ourselves");
 
 
-/************************************************************************************************/
-/* Afforess                      Start         01/14/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	TechTypes eCurrentResearch = GET_PLAYER(getLeaderID()).getCurrentResearch();
 	TeamTypes eStrongestTeam = (TeamTypes)getID();
 	for (iI = 0; iI < MAX_PLAYERS; iI++)
@@ -1876,7 +1871,7 @@ DenialTypes CvTeamAI::AI_techTrade(TechTypes eTech, TeamTypes eTeam) const
 		{
 			if (!kTeam.isHuman())
 			{
-				if ((eTech == eCurrentResearch) || (GC.getGame().isOption(GAMEOPTION_NO_TECH_DIFFUSION)))
+				if ((eTech == eCurrentResearch) || (!GC.getGame().isOption(GAMEOPTION_TECH_DIFFUSION)))
 				{
 					if (2 * kTeam.getResearchProgress(eTech) > kTeam.getResearchCost(eTech))
 					{
@@ -1887,9 +1882,6 @@ DenialTypes CvTeamAI::AI_techTrade(TechTypes eTech, TeamTypes eTeam) const
 		}
 	}
 
-/************************************************************************************************/
-/* Afforess                         END                                                            */
-/************************************************************************************************/
 
 	if (isHuman())
 	{
@@ -2017,25 +2009,20 @@ DenialTypes CvTeamAI::AI_techTrade(TechTypes eTech, TeamTypes eTeam) const
 
 	for (iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
-		if (isTechRequiredForUnit(eTech, ((UnitTypes)iI)))
+		if (isWorldUnit((UnitTypes)iI) && getUnitMaking((UnitTypes)iI) > 0
+		&& isTechRequiredForUnit(eTech, (UnitTypes)iI))
 		{
-			if (isWorldUnit((UnitTypes)iI))
-			{
-				if (getUnitClassMaking((UnitClassTypes)(GC.getUnitInfo((UnitTypes)iI).getUnitClassType())) > 0)
-				{
-					return DENIAL_MYSTERY;
-				}
-			}
+			return DENIAL_MYSTERY;
 		}
 	}
 
 	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		if (isTechRequiredForBuilding(eTech, ((BuildingTypes)iI)))
+		if (isTechRequiredForBuilding(eTech, (BuildingTypes)iI))
 		{
-			if (isWorldWonderClass((BuildingClassTypes)(GC.getBuildingInfo((BuildingTypes)iI).getBuildingClassType())))
+			if (isWorldWonder((BuildingTypes)iI))
 			{
-				if (getBuildingClassMaking((BuildingClassTypes)(GC.getBuildingInfo((BuildingTypes)iI).getBuildingClassType())) > 0)
+				if (getBuildingMaking((BuildingTypes)iI) > 0)
 				{
 					return DENIAL_MYSTERY;
 				}
@@ -2815,43 +2802,36 @@ int CvTeamAI::AI_getRivalAirPower( ) const
 	// Count enemy air units, not just those visible to us
 	int iRivalAirPower = 0;
 	int iEnemyAirPower = 0;
+	const int iTeam = getID();
 
 	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
-		CvUnitInfo& kUnitInfo = GC.getUnitInfo((UnitTypes)iI);
+		const CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes)iI);
 
-		if( kUnitInfo.getDomainType() == DOMAIN_AIR )
+		if (kUnit.getDomainType() == DOMAIN_AIR && kUnit.getAirCombat() > 0)
 		{
-			if( kUnitInfo.getAirCombat() > 0 )
+			for(int iTeamX = 0; iTeamX < MAX_PC_TEAMS; iTeamX++)
 			{
-				for( int iTeam = 0; iTeam < MAX_PC_TEAMS; iTeam++ )
+				if (iTeamX != iTeam && GET_TEAM((TeamTypes)iTeamX).isAlive() && isHasMet((TeamTypes)iTeamX))
 				{
-					if( iTeam != getID() )
+					int iUnitPower = GET_TEAM((TeamTypes)iTeamX).getUnitCount((UnitTypes)iI);
+					if (iUnitPower > 0)
 					{
-						if( GET_TEAM((TeamTypes)iTeam).isAlive() && isHasMet((TeamTypes)iTeam) )
+						iUnitPower *= kUnit.getPowerValue();
+
+						if (AI_getWarPlan((TeamTypes)iTeamX) == NO_WARPLAN)
 						{
-							int iUnitPower = GET_TEAM((TeamTypes)iTeam).getUnitClassCount((UnitClassTypes)kUnitInfo.getUnitClassType());
-
-							if( iUnitPower > 0 )
-							{
-								iUnitPower *= kUnitInfo.getPowerValue();
-
-								if( AI_getWarPlan((TeamTypes)iTeam) == NO_WARPLAN )
-								{
-									iRivalAirPower += iUnitPower;
-								}
-								else
-								{
-									iEnemyAirPower += iUnitPower;
-								}
-							}
+							iRivalAirPower += iUnitPower;
+						}
+						else
+						{
+							iEnemyAirPower += iUnitPower;
 						}
 					}
 				}
 			}
 		}
 	}
-
 	return (iEnemyAirPower + (iRivalAirPower / std::max(1,getHasMetCivCount(true))));
 }
 
@@ -5153,10 +5133,9 @@ void CvTeamAI::AI_doWar()
 
 	int iEnemyPowerPercent = AI_getEnemyPowerPercent();
 
-	// Afforess
 	int iExtraWarExpenses = GC.getDefineINT("ESTIMATED_EXTRA_WAR_COSTS_PER_ERA", 15) * (1 + GET_PLAYER(getLeaderID()).getCurrentEra());
-	//No revolutions means wars are a (bit) less risky, in terms of finances
-	if (GC.getGame().isOption(GAMEOPTION_NO_REVOLUTION))
+	// No revolutions means wars are (a bit) less risky, in terms of finances
+	if (!GC.getGame().isOption(GAMEOPTION_REVOLUTION))
 	{
 		iExtraWarExpenses *= 75;
 		iExtraWarExpenses /= 100;
@@ -6145,19 +6124,15 @@ int CvTeamAI::AI_getTechMonopolyValue(TechTypes eTech, TeamTypes eTeam) const
 	}
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		if (isTechRequiredForBuilding(eTech, ((BuildingTypes)iI)))
+		if (isTechRequiredForBuilding(eTech, (BuildingTypes)iI))
 		{
-			CvBuildingInfo& kLoopBuilding = GC.getBuildingInfo((BuildingTypes)iI);
-			if (kLoopBuilding.getReligionType() == NO_RELIGION)
+			if (GC.getBuildingInfo((BuildingTypes)iI).getReligionType() == NO_RELIGION)
 			{
 				iValue += 30;
 			}
-			if (isWorldWonderClass((BuildingClassTypes)kLoopBuilding.getBuildingClassType()))
+			if (isWorldWonder((BuildingTypes)iI) && !GC.getGame().isBuildingMaxedOut((BuildingTypes)iI))
 			{
-				if (!(GC.getGame().isBuildingClassMaxedOut((BuildingClassTypes)kLoopBuilding.getBuildingClassType())))
-				{
-					iValue += 50;
-				}
+				iValue += 50;
 			}
 		}
 	}

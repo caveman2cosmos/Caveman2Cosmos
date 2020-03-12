@@ -96,16 +96,6 @@
 			<Button>art/Goods/goodantimatter.dds</Button>
 			<FontButtonIndex>170</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Ash -->
-		<!--BonusArtInfo>
-			<Type>ART_DEF_BONUS_ASH</Type>
-			<fScale>1.0</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Empty.nif</NIF>
-			<KFM></KFM>
-			<Button>art/Goods/goodash.dds</Button>
-			<FontButtonIndex>130</FontButtonIndex>
-		</BonusArtInfo-->
 	<!-- Automobiles -->
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_AUTOMOBILES</Type>
@@ -488,7 +478,7 @@
 		</BonusArtInfo>
 	<!-- Common Clay -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_COMMON_CLAY</Type>
+			<Type>ART_DEF_BONUS_CLAY</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -569,7 +559,7 @@
 		</BonusArtInfo>
 	<!-- Oil Products -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_OIL_PRODUCTS</Type>
+			<Type>ART_DEF_BONUS_PETROLEUM_PRODUCTS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Oil/Oil.nif</NIF>
@@ -699,7 +689,7 @@
 		</BonusArtInfo>
 	<!-- Electrolyte Cells -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_ELECTROLYTE_CELLS</Type>
+			<Type>ART_DEF_BONUS_ELECTROLYTIC_CELLS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -889,7 +879,7 @@
 		</BonusArtInfo>
 	<!-- Furs -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_FURS</Type>
+			<Type>ART_DEF_BONUS_FUR</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -899,7 +889,7 @@
 		</BonusArtInfo>
 	<!-- Gems -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_GEMS</Type>
+			<Type>ART_DEF_BONUS_GEMSTONE</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Gems/Gems.nif</NIF>
@@ -929,7 +919,7 @@
 		</BonusArtInfo>
 	<!-- Grain -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_GRAIN</Type>
+			<Type>ART_DEF_BONUS_GRAINS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1399,7 +1389,7 @@
 		</BonusArtInfo>
 	<!-- Medical Tricoders -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_MEDICAL_TRICODERS</Type>
+			<Type>ART_DEF_BONUS_MEDICAL_TRICORDERS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1409,7 +1399,7 @@
 		</BonusArtInfo>
 	<!-- Meth -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_METH</Type>
+			<Type>ART_DEF_BONUS_METHAMPHETAMINE</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -1589,7 +1579,7 @@
 		</BonusArtInfo>
 	<!-- Omega Acids -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_OMEGA_ACIDS</Type>
+			<Type>ART_DEF_BONUS_OMEGA_FATTY_ACID</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -3046,7 +3036,7 @@
 			<FontButtonIndex>125</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_BULK_DIAMOND</Type>
+			<Type>ART_DEF_BONUS_SYNTHETIC_DIAMOND</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -3055,7 +3045,7 @@
 			<FontButtonIndex>56</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_FULLERENES</Type>
+			<Type>ART_DEF_BONUS_FULLERENE</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>

@@ -25,7 +25,6 @@
 			</Buildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_CELEBRITY</Class>
 			<Type>UNIT_CELEBRITY</Type>
 			<AndDependencyTypes>
                     	<DependencyType>UNIT_CELEBRITY</DependencyType>

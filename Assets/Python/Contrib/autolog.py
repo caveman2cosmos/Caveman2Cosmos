@@ -63,20 +63,19 @@ class autologInstance:
 		self.writeMsg("")
 		self.writeMsg("Logging by autolog.py")
 		self.writeMsg("------------------------------------------------")
-		zcurrturn = GAME.getElapsedGameTurns() + AutologOpt.get4000BCTurn()
-		zmaxturn = GAME.getMaxTurns()
-		zyear = GAME.getGameTurnYear()
-		if zyear < 0:
-			zyear = str(-zyear) + TRNSLTR.getText("TXT_KEY_AUTOLOG_BC", ())
+		iMaxTurns = GAME.getMaxTurns()
+		year = GAME.getGameTurnYear()
+		if year < 0:
+			year = TRNSLTR.getText("TXT_KEY_TIME_BC", (-year,))
 		else:
-			zyear = str(zyear) + TRNSLTR.getText("TXT_KEY_AUTOLOG_AD", ())
-		zCurrDateTime = time.strftime("%d-%b-%Y %H:%M:%S")
-		if zmaxturn:
-			zsTurn = "%i/%i" % (zcurrturn, zmaxturn)
+			year = TRNSLTR.getText("TXT_KEY_TIME_AD", (year,))
+
+		if iMaxTurns:
+			zTurn = "%i/%i" % (GAME.getElapsedGameTurns() + AutologOpt.get4000BCTurn(), iMaxTurns)
 		else:
-			zsTurn = "%i" % zcurrturn
-		message = TRNSLTR.getText("TXT_KEY_AUTOLOG_TURN", (zsTurn, zyear, zCurrDateTime))
-		self.writeMsg(message, vBold=True, vUnderline=True)
+			zTurn = "%i" %(GAME.getElapsedGameTurns() + AutologOpt.get4000BCTurn())
+
+		self.writeMsg(TRNSLTR.getText("TXT_KEY_AUTOLOG_TURN", (zTurn, year, time.strftime("%d-%b-%Y %H:%M:%S"))), vBold=True, vUnderline=True)
 		self.bStarted = True
 
 	def writeLog(self, vMsg, vColor = "Black", vBold = False, vUnderline = False, vPrefix = ""):

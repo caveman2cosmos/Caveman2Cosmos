@@ -7,7 +7,6 @@
 <Civ4UnitInfos xmlns="x-schema:../../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_LLAMA_RIDER</Class>
 			<Type>UNIT_LLAMA_RIDER</Type>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
@@ -53,11 +52,11 @@
 			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CATAPULT</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TREBUCHET</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -71,7 +70,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_LLAMA_TRAINER</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_LLAMA_TRAINER</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_CAMELID_DOMESTICATION</PrereqTech>
@@ -155,7 +156,6 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_LLAMA_ARCHER</Class>
 			<Type>UNIT_LLAMA_ARCHER</Type>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
@@ -204,11 +204,11 @@
 			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CATAPULT</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TREBUCHET</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -222,7 +222,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_LLAMA_TRAINER</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_LLAMA_TRAINER</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>

@@ -2,7 +2,6 @@
 <Civ4UnitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_ASATRU_MISSIONARY</Class>
 			<Type>UNIT_ASATRU_MISSIONARY</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_ASATRU_MISSIONARY</Capture>
@@ -29,7 +28,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_ASATRU</PrereqReligion>
-			<PrereqBuilding>BUILDING_ASATRU_MONASTERY</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ASATRU_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
@@ -48,7 +49,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_LOKI</Class>
 			<Type>UNIT_LOKI</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
@@ -94,7 +94,9 @@
 			<ReligionType>RELIGION_ASATRU</ReligionType>
 			<StateReligion>RELIGION_ASATRU</StateReligion>
 			<PrereqReligion>RELIGION_ASATRU</PrereqReligion>
-			<PrereqBuilding>BUILDING_LOKI_SANCTUARY</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_LOKI_SANCTUARY</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<PrereqBonuses>
 				<BonusType>BONUS_BRONZE_WARES</BonusType>

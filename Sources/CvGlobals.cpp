@@ -154,7 +154,6 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_iDCM_RB_CITY_INACCURACY(0)
 	, m_iDCM_RB_CITYBOMBARD_CHANCE(0)
 	, m_bDCM_ATTACK_SUPPORT(false)
-	, m_bDCM_STACK_ATTACK(false)
 	, m_bDCM_OPP_FIRE(false)
 	, m_bDCM_ACTIVE_DEFENSE(false)
 	, m_bDCM_ARCHER_BOMBARD(false)
@@ -1335,13 +1334,9 @@ void cvInternalGlobals::updateReplacements()
 	m_BonusClassInfoReplacements.updateReplacements(getBonusClassInfos());
 	m_BonusInfoReplacements.updateReplacements(getBonusInfos());
 	m_ImprovementInfoReplacements.updateReplacements(getImprovementInfos());
-	m_BuildingClassInfoReplacements.updateReplacements(getBuildingClassInfos());
-
 	m_BuildingInfoReplacements.updateReplacements(getBuildingInfos());
 	m_CivicInfoReplacements.updateReplacements(getCivicInfos());
 	m_LeaderHeadInfoReplacements.updateReplacements(getLeaderHeadInfos());
-
-	m_UnitClassInfoReplacements.updateReplacements(getUnitClassInfos());
 
 	m_CivilizationInfoReplacements.updateReplacements(getCivilizationInfos());
 
@@ -2997,28 +2992,6 @@ CvInfoReplacements<CvProjectInfo>* cvInternalGlobals::getProjectInfoReplacements
 	return &m_ProjectInfoReplacements;
 }
 
-int cvInternalGlobals::getNumBuildingClassInfos() const
-{
-	return m_paBuildingClassInfo.size();
-}
-
-std::vector<CvBuildingClassInfo*>& cvInternalGlobals::getBuildingClassInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paBuildingClassInfo;
-}
-
-CvBuildingClassInfo& cvInternalGlobals::getBuildingClassInfo(BuildingClassTypes eBuildingClassNum) const
-{
-	FAssert(eBuildingClassNum > -1);
-	FAssert(eBuildingClassNum < GC.getNumBuildingClassInfos());
-	return *(m_paBuildingClassInfo[eBuildingClassNum]);
-}
-
-CvInfoReplacements<CvBuildingClassInfo>* cvInternalGlobals::getBuildingClassInfoReplacements()
-{
-	return &m_BuildingClassInfoReplacements;
-}
-
 int cvInternalGlobals::getNumBuildingInfos() const
 {
 	return (int)m_paBuildingInfo.size();
@@ -3061,35 +3034,6 @@ CvSpecialBuildingInfo& cvInternalGlobals::getSpecialBuildingInfo(SpecialBuilding
 CvInfoReplacements<CvSpecialBuildingInfo>* cvInternalGlobals::getSpecialBuildingInfoReplacements()
 {
 	return &m_SpecialBuildingInfoReplacements;
-}
-
-int cvInternalGlobals::getNumUnitClassInfos() const
-{
-	return (int)m_paUnitClassInfo.size();
-}
-
-std::vector<CvUnitClassInfo*>& cvInternalGlobals::getUnitClassInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paUnitClassInfo;
-}
-
-CvUnitClassInfo& cvInternalGlobals::getUnitClassInfo(UnitClassTypes eUnitClassNum)
-{
-	FAssert(eUnitClassNum > -1);
-	FAssert(eUnitClassNum < GC.getNumUnitClassInfos());
-	return *(m_paUnitClassInfo[eUnitClassNum]);
-}
-
-const CvUnitClassInfo& cvInternalGlobals::getUnitClassInfo(UnitClassTypes eUnitClassNum) const
-{
-	FAssert(eUnitClassNum > -1);
-	FAssert(eUnitClassNum < GC.getNumUnitClassInfos());
-	return *(m_paUnitClassInfo[eUnitClassNum]);
-}
-
-CvInfoReplacements<CvUnitClassInfo>* cvInternalGlobals::getUnitClassInfoReplacements()
-{
-	return &m_UnitClassInfoReplacements;
 }
 
 int cvInternalGlobals::getNumActionInfos() const
@@ -3838,7 +3782,6 @@ void cvInternalGlobals::cacheGlobals()
 	m_iDCM_RB_CITY_INACCURACY = getDefineINT("DCM_RB_CITY_INACCURACY");
 	m_iDCM_RB_CITYBOMBARD_CHANCE = getDefineINT("DCM_RB_CITYBOMBARD_CHANCE");
 	m_bDCM_ATTACK_SUPPORT = (getDefineINT("DCM_ATTACK_SUPPORT") > 0) ? true : false;
-	m_bDCM_STACK_ATTACK = (getDefineINT("DCM_STACK_ATTACK") > 0) ? true : false;
 	m_bDCM_OPP_FIRE = (getDefineINT("DCM_OPP_FIRE") > 0) ? true : false;
 	m_bDCM_ACTIVE_DEFENSE = (getDefineINT("DCM_ACTIVE_DEFENSE") > 0) ? true : false;
 	m_bDCM_ARCHER_BOMBARD = (getDefineINT("DCM_ARCHER_BOMBARD") > 0) ? true : false;
@@ -5078,7 +5021,6 @@ int cvInternalGlobals::getNUM_LEADERANIM_TYPES() const
 
 void cvInternalGlobals::deleteInfoArrays()
 {
-	deleteInfoArray(m_paBuildingClassInfo);
 	deleteInfoArray(m_paBuildingInfo);
 	deleteInfoArray(m_paSpecialBuildingInfo);
 
@@ -5153,7 +5095,6 @@ void cvInternalGlobals::deleteInfoArrays()
 	deleteInfoArray(m_paDiplomacyInfo);
 
 	deleteInfoArray(m_paBuildInfo);
-	deleteInfoArray(m_paUnitClassInfo);
 	deleteInfoArray(m_paUnitInfo);
 	deleteInfoArray(m_paSpawnInfo);
 	deleteInfoArray(m_paSpecialUnitInfo);
@@ -6110,11 +6051,6 @@ int cvInternalGlobals::getDCM_RB_CITYBOMBARD_CHANCE() const
 bool cvInternalGlobals::isDCM_ATTACK_SUPPORT() const
 {
 	return m_bDCM_ATTACK_SUPPORT;
-}
-
-bool cvInternalGlobals::isDCM_STACK_ATTACK() const
-{
-	return m_bDCM_STACK_ATTACK;
 }
 
 bool cvInternalGlobals::isDCM_OPP_FIRE() const

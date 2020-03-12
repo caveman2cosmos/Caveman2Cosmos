@@ -7,7 +7,6 @@
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_MORMON_CATHEDRAL</BuildingClass>
 			<Type>BUILDING_MORMON_CATHEDRAL</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CATHEDRAL</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MORMON_CATHEDRAL</Description>
@@ -72,8 +71,8 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_MORMON_MONASTERY</BuildingClass>
 			<Type>BUILDING_MORMON_MONASTERY</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_MORMON_MONASTERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MORMON_MONASTERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MORMON_MONASTERY_STRATEGY</Strategy>
@@ -108,12 +107,9 @@
 				</ReligionChange>
 			</ReligionChanges>
 			<ConstructSound>AS2D_BUILD_MORMON</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_MORMON_TEMPLE</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_MORMON_TEMPLE</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -129,7 +125,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_MORMON_SHRINE</BuildingClass>
 			<Type>BUILDING_MORMON_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_MORMON_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MORMON_SHRINE_PEDIA</Civilopedia>
@@ -140,7 +135,7 @@
 			<HolyCity>RELIGION_MORMON</HolyCity>
 			<ReligionType>RELIGION_MORMON</ReligionType>
 			<GlobalReligionCommerce>RELIGION_MORMON</GlobalReligionCommerce>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>-1</iCost>
@@ -184,7 +179,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_MORMON_TEMPLE</BuildingClass>
 			<Type>BUILDING_MORMON_TEMPLE</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_MORMON_TEMPLE</Description>

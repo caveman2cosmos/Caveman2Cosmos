@@ -8,7 +8,6 @@
 	<UnitInfos>
 		<!--  Subdued Units -->
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_AARDVARK</Class>
 			<Type>UNIT_SUBDUED_AARDVARK</Type>
 			<Capture>UNIT_SUBDUED_AARDVARK</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -66,7 +65,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_ANTEATER</Class>
 			<Type>UNIT_SUBDUED_ANTEATER</Type>
 			<Capture>UNIT_SUBDUED_ANTEATER</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -125,7 +123,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_AFRICANGREY</Class>
 			<Type>UNIT_SUBDUED_AFRICANGREY</Type>
 			<Capture>UNIT_SUBDUED_AFRICANGREY</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -187,7 +184,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_AFRICAN_PENGUIN</Class>
 			<Type>UNIT_SUBDUED_AFRICAN_PENGUIN</Type>
 			<Capture>UNIT_SUBDUED_AFRICAN_PENGUIN</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -264,7 +260,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_ARCTICFOX</Class>
 			<Type>UNIT_SUBDUED_ARCTICFOX</Type>
 			<Capture>UNIT_SUBDUED_ARCTICFOX</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -333,7 +328,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_ARMADILLO</Class>
 			<Type>UNIT_SUBDUED_ARMADILLO</Type>
 			<Capture>UNIT_SUBDUED_ARMADILLO</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -390,7 +384,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_ASIANBEAR</Class>
 			<Type>UNIT_SUBDUED_ASIANBEAR</Type>
 			<Capture>UNIT_SUBDUED_ASIANBEAR</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -457,7 +450,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_BABIRUSA</Class>
 			<Type>UNIT_SUBDUED_BABIRUSA</Type>
 			<Capture>UNIT_SUBDUED_BABIRUSA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -559,7 +551,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_BADGER</Class>
 			<Type>UNIT_SUBDUED_BADGER</Type>
 			<Capture>UNIT_SUBDUED_BADGER</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -637,7 +628,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_BALLPYTHON</Class>
 			<Type>UNIT_SUBDUED_BALLPYTHON</Type>
 			<Capture>UNIT_SUBDUED_BALLPYTHON</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -701,7 +691,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_BARBARYAPE</Class>
 			<Type>UNIT_SUBDUED_BARBARYAPE</Type>
 			<Capture>UNIT_SUBDUED_BARBARYAPE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -762,7 +751,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_BARNOWL</Class>
 			<Type>UNIT_SUBDUED_BARNOWL</Type>
 			<Capture>UNIT_SUBDUED_BARNOWL</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -827,7 +815,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_BARREDOWL</Class>
 			<Type>UNIT_SUBDUED_BARREDOWL</Type>
 			<Capture>UNIT_SUBDUED_BARREDOWL</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -892,7 +879,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_BEAR</Class>
 			<Type>UNIT_SUBDUED_BEAR</Type>
 			<Capture>UNIT_SUBDUED_BEAR</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -958,7 +944,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_BEAVER</Class>
 			<Type>UNIT_SUBDUED_BEAVER</Type>
 			<Capture>UNIT_SUBDUED_BEAVER</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -1020,7 +1005,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_BELUGA</Class>
 			<Type>UNIT_SUBDUED_BELUGA</Type>
 			<Capture>UNIT_SUBDUED_BELUGA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -1086,7 +1070,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_BENGALTIGER</Class>
 			<Type>UNIT_SUBDUED_BENGALTIGER</Type>
 			<Capture>UNIT_SUBDUED_BENGALTIGER</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -1188,7 +1171,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_BISON</Class>
 			<Type>UNIT_SUBDUED_BISON</Type>
 			<Capture>UNIT_SUBDUED_BISON</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -1293,7 +1275,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_BLACKBEAR</Class>
 			<Type>UNIT_SUBDUED_BLACKBEAR</Type>
 			<Capture>UNIT_SUBDUED_BLACKBEAR</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -1359,7 +1340,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_BOAR</Class>
 			<Type>UNIT_SUBDUED_BOAR</Type>
 			<Capture>UNIT_SUBDUED_BOAR</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -1461,7 +1441,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_BONGO</Class>
 			<Type>UNIT_SUBDUED_BONGO</Type>
 			<Capture>UNIT_SUBDUED_BONGO</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -1563,7 +1542,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_BOOBY</Class>
 			<Type>UNIT_SUBDUED_BOOBY</Type>
 			<Capture>UNIT_SUBDUED_BOOBY</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -1627,7 +1605,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_BRAZILIAN_TAPIR</Class>
 			<Type>UNIT_SUBDUED_BRAZILIAN_TAPIR</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_SUBDUED_BRAZILIAN_TAPIR</Capture>
@@ -1691,7 +1668,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_BUFFALO</Class>
 			<Type>UNIT_SUBDUED_BUFFALO</Type>
 			<Capture>UNIT_SUBDUED_BUFFALO</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -1715,7 +1691,7 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_BUFFALO</Description>
-			<Civilopedia>TXT_KEY_UNIT_BUFFALO_CAPE_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_UNIT_BUFFALO_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_SUBDUED_ANIMAL_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_SUBDUED_BUFFALO_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -1794,7 +1770,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_CAIMAN</Class>
 			<Type>UNIT_SUBDUED_CAIMAN</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_SUBDUED_CAIMAN</Capture>
@@ -1816,7 +1791,7 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_CAIMAN</Description>
-			<Civilopedia>TXT_KEY_UNIT_CAIMAN_BLACK_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_UNIT_CAIMAN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_SUBDUED_CAIMAN_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -1895,7 +1870,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_CAMEL</Class>
 			<Type>UNIT_SUBDUED_CAMEL</Type>
 			<Capture>UNIT_SUBDUED_CAMEL</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -1993,7 +1967,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_CAPUCHIN</Class>
 			<Type>UNIT_SUBDUED_CAPUCHIN</Type>
 			<Capture>UNIT_SUBDUED_CAPUCHIN</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -2059,7 +2032,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_CAPYBARA</Class>
 			<Type>UNIT_SUBDUED_CAPYBARA</Type>
 			<Capture>UNIT_SUBDUED_CAPYBARA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -2119,7 +2091,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_CARIBOU</Class>
 			<Type>UNIT_SUBDUED_CARIBOU</Type>
 			<Capture>UNIT_SUBDUED_CARIBOU</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -2226,7 +2197,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_CASSOWARY</Class>
 			<Type>UNIT_SUBDUED_CASSOWARY</Type>
 			<Capture>UNIT_SUBDUED_CASSOWARY</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -2331,7 +2301,6 @@
 			<bForceOverwrite>1</bForceOverwrite>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_CAVE_LION</Class>
 			<Type>UNIT_SUBDUED_CAVE_LION</Type>
 			<Capture>UNIT_SUBDUED_CAVE_LION</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -2435,7 +2404,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_CAVEBEAR</Class>
 			<Type>UNIT_SUBDUED_CAVEBEAR</Type>
 			<Capture>UNIT_SUBDUED_CAVEBEAR</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -2502,7 +2470,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_CHEETAH</Class>
 			<Type>UNIT_SUBDUED_CHEETAH</Type>
 			<Capture>UNIT_SUBDUED_CHEETAH</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -2603,7 +2570,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_CHIMPANZEE</Class>
 			<Type>UNIT_SUBDUED_CHIMPANZEE</Type>
 			<Capture>UNIT_SUBDUED_CHIMPANZEE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -2702,7 +2668,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_COBRA</Class>
 			<Type>UNIT_SUBDUED_COBRA</Type>
 			<Capture>UNIT_SUBDUED_COBRA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -2769,7 +2734,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_COD</Class>
 			<Type>UNIT_SUBDUED_COD</Type>
 			<Capture>UNIT_SUBDUED_COD</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -2830,7 +2794,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_COW</Class>
 			<Type>UNIT_SUBDUED_COW</Type>
 			<Capture>UNIT_SUBDUED_COW</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -2958,7 +2921,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_CRAB</Class>
 			<Type>UNIT_SUBDUED_CRAB</Type>
 			<Capture>UNIT_SUBDUED_CRAB</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -3017,7 +2979,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_CROW</Class>
 			<Type>UNIT_SUBDUED_CROW</Type>
 			<Capture>UNIT_SUBDUED_CROW</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -3079,7 +3040,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_CUSCUS</Class>
 			<Type>UNIT_SUBDUED_CUSCUS</Type>
 			<Capture>UNIT_SUBDUED_CUSCUS</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -3137,7 +3097,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_DARTFROG</Class>
 			<Type>UNIT_SUBDUED_DARTFROG</Type>
 			<Capture>UNIT_SUBDUED_DARTFROG</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -3202,7 +3161,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_DESERT_TORTOISE</Class>
 			<Type>UNIT_SUBDUED_DESERT_TORTOISE</Type>
 			<Capture>UNIT_SUBDUED_DESERT_TORTOISE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -3220,8 +3178,8 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_SUBDUED_TORTOISE</Description>
-			<Civilopedia>TXT_KEY_UNIT_TORTOISE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_UNIT_SUBDUED_DESERT_TORTOISE</Description>
+			<Civilopedia>TXT_KEY_UNIT_DESERT_TORTOISE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_SUBDUED_ANIMAL_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_SUBDUED_DESERT_TORTOISE_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -3261,7 +3219,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_DHOLE</Class>
 			<Type>UNIT_SUBDUED_DHOLE</Type>
 			<Capture>UNIT_SUBDUED_DHOLE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -3337,7 +3294,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_DINGO</Class>
 			<Type>UNIT_SUBDUED_DINGO</Type>
 			<Capture>UNIT_SUBDUED_DINGO</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -3405,7 +3361,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_DIREWOLF</Class>
 			<Type>UNIT_SUBDUED_DIREWOLF</Type>
 			<Capture>UNIT_SUBDUED_DIREWOLF</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -3518,7 +3473,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_DOLPHIN</Class>
 			<Type>UNIT_SUBDUED_DOLPHIN</Type>
 			<Capture>UNIT_SUBDUED_DOLPHIN</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -3587,7 +3541,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_DONKEY</Class>
 			<Type>UNIT_SUBDUED_DONKEY</Type>
 			<Capture>UNIT_SUBDUED_DONKEY</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -3683,7 +3636,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_DUCK</Class>
 			<Type>UNIT_SUBDUED_DUCK</Type>
 			<Capture>UNIT_SUBDUED_DUCK</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -3747,7 +3699,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_DUGONG</Class>
 			<Type>UNIT_SUBDUED_DUGONG</Type>
 			<Capture>UNIT_SUBDUED_DUGONG</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -3807,7 +3758,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_EAGLE</Class>
 			<Type>UNIT_SUBDUED_EAGLE</Type>
 			<Capture>UNIT_SUBDUED_EAGLE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -3876,7 +3826,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_EAGLE_BALD</Class>
 			<Type>UNIT_SUBDUED_EAGLE_BALD</Type>
 			<Capture>UNIT_SUBDUED_EAGLE_BALD</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -3948,7 +3897,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_AFRICANELEPHANT</Class>
 			<Type>UNIT_SUBDUED_AFRICANELEPHANT</Type>
 			<Capture>UNIT_SUBDUED_AFRICANELEPHANT</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -3971,7 +3919,7 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_AFRICANELEPHANT</Description>
-			<Civilopedia>TXT_KEY_ELEPHANT_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_UNIT_ELEPHANT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_SUBDUED_ANIMAL_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_SUBDUED_AFRICANELEPHANT_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -4004,7 +3952,7 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_AFRICANELEPHANT</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_ELEPHANT_AFRICAN</EarlyArtDefineTag>
 				</UnitMeshGroup>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
@@ -4051,7 +3999,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_ELEPHANT</Class>
 			<Type>UNIT_SUBDUED_ELEPHANT</Type>
 			<Capture>UNIT_SUBDUED_ELEPHANT</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -4107,7 +4054,7 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_ELEPHANT</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_ELEPHANT_ASIAN</EarlyArtDefineTag>
 				</UnitMeshGroup>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
@@ -4154,7 +4101,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_EMU</Class>
 			<Type>UNIT_SUBDUED_EMU</Type>
 			<Capture>UNIT_SUBDUED_EMU</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -4259,7 +4205,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_EWOLF</Class>
 			<Type>UNIT_SUBDUED_EWOLF</Type>
 			<Capture>UNIT_SUBDUED_EWOLF</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -4370,7 +4315,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_FENNECFOX</Class>
 			<Type>UNIT_SUBDUED_FENNECFOX</Type>
 			<Capture>UNIT_SUBDUED_FENNECFOX</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -4439,7 +4383,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_FLAMINGO</Class>
 			<Type>UNIT_SUBDUED_FLAMINGO</Type>
 			<Capture>UNIT_SUBDUED_FLAMINGO</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -4538,7 +4481,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_GALAPAGOS_PENGUIN</Class>
 			<Type>UNIT_SUBDUED_GALAPAGOS_PENGUIN</Type>
 			<Capture>UNIT_SUBDUED_GALAPAGOS_PENGUIN</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -4615,7 +4557,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_GALAPOGOS_TORTOISE</Class>
 			<Type>UNIT_SUBDUED_GALAPOGOS_TORTOISE</Type>
 			<Capture>UNIT_SUBDUED_GALAPOGOS_TORTOISE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -4633,8 +4574,8 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_SUBDUED_TORTOISE2</Description>
-			<Civilopedia>TXT_KEY_UNIT_TORTOISE2_PEDIA</Civilopedia>
+			<Description>TXT_KEY_UNIT_SUBDUED_GALAPOGOS_TORTOISE</Description>
+			<Civilopedia>TXT_KEY_UNIT_GALAPOGOS_TORTOISE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_SUBDUED_ANIMAL_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_SUBDUED_GALAPOGOS_TORTOISE_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -4674,7 +4615,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_GATOR</Class>
 			<Type>UNIT_SUBDUED_GATOR</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_SUBDUED_GATOR</Capture>
@@ -4776,7 +4716,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_GATOR_ASIAN</Class>
 			<Type>UNIT_SUBDUED_GATOR_ASIAN</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_SUBDUED_GATOR_ASIAN</Capture>
@@ -4878,7 +4817,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_GAZELLE</Class>
 			<Type>UNIT_SUBDUED_GAZELLE</Type>
 			<Capture>UNIT_SUBDUED_GAZELLE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -4941,7 +4879,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_GEMSBOK</Class>
 			<Type>UNIT_SUBDUED_GEMSBOK</Type>
 			<Capture>UNIT_SUBDUED_GEMSBOK</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -5042,7 +4979,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_GERENUK</Class>
 			<Type>UNIT_SUBDUED_GERENUK</Type>
 			<Capture>UNIT_SUBDUED_GERENUK</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -5142,7 +5078,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_GELADA</Class>
 			<Type>UNIT_SUBDUED_GELADA</Type>
 			<Capture>UNIT_SUBDUED_GELADA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -5207,7 +5142,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_GHARIAL</Class>
 			<Type>UNIT_SUBDUED_GHARIAL</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_SUBDUED_GHARIAL</Capture>
@@ -5308,7 +5242,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_GIANT_SQUID</Class>
 			<Type>UNIT_SUBDUED_GIANT_SQUID</Type>
 			<Capture>UNIT_SUBDUED_GIANT_SQUID</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -5372,7 +5305,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_GIRAFFE</Class>
 			<Type>UNIT_SUBDUED_GIRAFFE</Type>
 			<Capture>UNIT_SUBDUED_GIRAFFE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -5459,7 +5391,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_GLYPTO</Class>
 			<Type>UNIT_SUBDUED_GLYPTO</Type>
 			<Capture>UNIT_SUBDUED_GLYPTO</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -5520,7 +5451,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_GORILLA</Class>
 			<Type>UNIT_SUBDUED_GORILLA</Type>
 			<Capture>UNIT_SUBDUED_GORILLA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -5624,7 +5554,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_GREATWHITE</Class>
 			<Type>UNIT_SUBDUED_GREATWHITE</Type>
 			<Capture>UNIT_SUBDUED_GREATWHITE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -5693,7 +5622,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_GRIZZLY</Class>
 			<Type>UNIT_SUBDUED_GRIZZLY</Type>
 			<Capture>UNIT_SUBDUED_GRIZZLY</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -5760,7 +5688,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_GROUNDSLOTH</Class>
 			<Type>UNIT_SUBDUED_GROUNDSLOTH</Type>
 			<Capture>UNIT_SUBDUED_GROUNDSLOTH</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -5823,7 +5750,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_GULL</Class>
 			<Type>UNIT_SUBDUED_GULL</Type>
 			<Capture>UNIT_SUBDUED_GULL</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -5885,7 +5811,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_HAAST_EAGLE</Class>
 			<Type>UNIT_SUBDUED_HAAST_EAGLE</Type>
 			<Capture>UNIT_SUBDUED_HAAST_EAGLE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -5956,7 +5881,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_HAMMERHEAD</Class>
 			<Type>UNIT_SUBDUED_HAMMERHEAD</Type>
 			<Capture>UNIT_SUBDUED_HAMMERHEAD</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -6025,7 +5949,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_HARPYEAGLE</Class>
 			<Type>UNIT_SUBDUED_HARPYEAGLE</Type>
 			<Capture>UNIT_SUBDUED_HARPYEAGLE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -6092,7 +6015,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_HAWK</Class>
 			<Type>UNIT_SUBDUED_HAWK</Type>
 			<Capture>UNIT_SUBDUED_HAWK</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -6159,7 +6081,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_HIPPO</Class>
 			<Type>UNIT_SUBDUED_HIPPO</Type>
 			<Capture>UNIT_SUBDUED_HIPPO</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -6264,7 +6185,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_PANDA_BEAR</Class>
 			<Type>UNIT_SUBDUED_PANDA_BEAR</Type>
 			<Capture>UNIT_SUBDUED_PANDA_BEAR</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -6326,7 +6246,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_PIG_NEW</Class>
 			<Type>UNIT_SUBDUED_PIG_NEW</Type>
 			<Capture>UNIT_SUBDUED_PIG_NEW</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -6387,7 +6306,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_POLARBEAR</Class>
 			<Type>UNIT_SUBDUED_POLARBEAR</Type>
 			<Capture>UNIT_SUBDUED_POLARBEAR</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -6455,7 +6373,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_PYGMYHIPPO</Class>
 			<Type>UNIT_SUBDUED_PYGMYHIPPO</Type>
 			<Capture>UNIT_SUBDUED_PYGMYHIPPO</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -6560,7 +6477,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_HORNEDOWL</Class>
 			<Type>UNIT_SUBDUED_HORNEDOWL</Type>
 			<Capture>UNIT_SUBDUED_HORNEDOWL</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -6625,7 +6541,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_HORSE</Class>
 			<Type>UNIT_SUBDUED_HORSE</Type>
 			<Capture>UNIT_SUBDUED_HORSE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -6750,7 +6665,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_HUMPBACK_WHALE</Class>
 			<Type>UNIT_SUBDUED_HUMPBACK_WHALE</Type>
 			<Capture>UNIT_SUBDUED_HUMPBACK_WHALE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -6817,7 +6731,6 @@
 			<bRenderBelowWater>1</bRenderBelowWater>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_HYENA</Class>
 			<Type>UNIT_SUBDUED_HYENA</Type>
 			<Capture>UNIT_SUBDUED_HYENA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -6918,7 +6831,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_IBEX</Class>
 			<Type>UNIT_SUBDUED_IBEX</Type>
 			<Capture>UNIT_SUBDUED_IBEX</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -7044,7 +6956,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_IGUANA</Class>
 			<Type>UNIT_SUBDUED_IGUANA</Type>
 			<Capture>UNIT_SUBDUED_IGUANA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -7103,7 +7014,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_IMPALA</Class>
 			<Type>UNIT_SUBDUED_IMPALA</Type>
 			<Capture>UNIT_SUBDUED_IMPALA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -7205,7 +7115,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_JAGUAR</Class>
 			<Type>UNIT_SUBDUED_JAGUAR</Type>
 			<Capture>UNIT_SUBDUED_JAGUAR</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -7306,7 +7215,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_KANGAROO_GREY</Class>
 			<Type>UNIT_SUBDUED_KANGAROO_GREY</Type>
 			<Capture>UNIT_SUBDUED_KANGAROO_GREY</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -7405,7 +7313,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_KANGAROO_RED</Class>
 			<Type>UNIT_SUBDUED_KANGAROO_RED</Type>
 			<Capture>UNIT_SUBDUED_KANGAROO_RED</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -7508,7 +7415,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_KOALA</Class>
 			<Type>UNIT_SUBDUED_KOALA</Type>
 			<Capture>UNIT_SUBDUED_KOALA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -7568,7 +7474,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_KOMODO_DRAGON</Class>
 			<Type>UNIT_SUBDUED_KOMODO_DRAGON</Type>
 			<Capture>UNIT_SUBDUED_KOMODO_DRAGON</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -7628,7 +7533,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_KOOKABURRA</Class>
 			<Type>UNIT_SUBDUED_KOOKABURRA</Type>
 			<Capture>UNIT_SUBDUED_KOOKABURRA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -7691,7 +7595,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_LEMUR</Class>
 			<Type>UNIT_SUBDUED_LEMUR</Type>
 			<Capture>UNIT_SUBDUED_LEMUR</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -7747,7 +7650,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_LIZARD</Class>
 			<Type>UNIT_SUBDUED_LIZARD</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_SUBDUED_LIZARD</Capture>
@@ -7808,7 +7710,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_LLAMA</Class>
 			<Type>UNIT_SUBDUED_LLAMA</Type>
 			<Capture>UNIT_SUBDUED_LLAMA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -7870,7 +7771,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_LION</Class>
 			<Type>UNIT_SUBDUED_LION</Type>
 			<Capture>UNIT_SUBDUED_LION</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -7971,7 +7871,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_LOON</Class>
 			<Type>UNIT_SUBDUED_LOON</Type>
 			<Capture>UNIT_SUBDUED_LOON</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -8032,7 +7931,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_LYNX</Class>
 			<Type>UNIT_SUBDUED_LYNX</Type>
 			<Capture>UNIT_SUBDUED_LYNX</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -8132,7 +8030,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_MACAW</Class>
 			<Type>UNIT_SUBDUED_MACAW</Type>
 			<Capture>UNIT_SUBDUED_MACAW</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -8194,7 +8091,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_MACKEREL</Class>
 			<Type>UNIT_SUBDUED_MACKEREL</Type>
 			<Capture>UNIT_SUBDUED_MACKEREL</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -8255,7 +8151,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_MALAYAN_TAPIR</Class>
 			<Type>UNIT_SUBDUED_MALAYAN_TAPIR</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_SUBDUED_MALAYAN_TAPIR</Capture>
@@ -8320,7 +8215,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_MAMMOTH</Class>
 			<Type>UNIT_SUBDUED_MAMMOTH</Type>
 			<Capture>UNIT_SUBDUED_MAMMOTH</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -8426,7 +8320,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_MANEDWOLF</Class>
 			<Type>UNIT_SUBDUED_MANEDWOLF</Type>
 			<Capture>UNIT_SUBDUED_MANEDWOLF</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -8537,7 +8430,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_MANDRILL</Class>
 			<Type>UNIT_SUBDUED_MANDRILL</Type>
 			<Capture>UNIT_SUBDUED_MANDRILL</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -8640,7 +8532,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_RAY_MANTA</Class>
 			<Type>UNIT_SUBDUED_RAY_MANTA</Type>
 			<Capture>UNIT_SUBDUED_RAY_MANTA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -8702,7 +8593,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_MARLIN</Class>
 			<Type>UNIT_SUBDUED_MARLIN</Type>
 			<Capture>UNIT_SUBDUED_MARLIN</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -8762,7 +8652,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_MINKIE_WHALE</Class>
 			<Type>UNIT_SUBDUED_MINKIE_WHALE</Type>
 			<Capture>UNIT_SUBDUED_MINKIE_WHALE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -8828,7 +8717,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_MOA</Class>
 			<Type>UNIT_SUBDUED_MOA</Type>
 			<Capture>UNIT_SUBDUED_MOA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -8939,7 +8827,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_MOOSE</Class>
 			<Type>UNIT_SUBDUED_MOOSE</Type>
 			<Capture>UNIT_SUBDUED_MOOSE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -9044,7 +8931,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_MONITOR</Class>
 			<Type>UNIT_SUBDUED_MONITOR</Type>
 			<Capture>UNIT_SUBDUED_MONITOR</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -9105,7 +8991,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_MOUFLON</Class>
 			<Type>UNIT_SUBDUED_MOUFLON</Type>
 			<Capture>UNIT_SUBDUED_MOUFLON</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -9195,7 +9080,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_MOUNTAIN_TAPIR</Class>
 			<Type>UNIT_SUBDUED_MOUNTAIN_TAPIR</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_SUBDUED_MOUNTAIN_TAPIR</Capture>
@@ -9259,7 +9143,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_MUSKOX</Class>
 			<Type>UNIT_SUBDUED_MUSKOX</Type>
 			<Capture>UNIT_SUBDUED_MUSKOX</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -9362,7 +9245,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_NARWHAL</Class>
 			<Type>UNIT_SUBDUED_NARWHAL</Type>
 			<Capture>UNIT_SUBDUED_NARWHAL</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -9428,7 +9310,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_NILECROC</Class>
 			<Type>UNIT_SUBDUED_NILECROC</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_SUBDUED_NILECROC</Capture>
@@ -9530,7 +9411,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_NUMBAT</Class>
 			<Type>UNIT_SUBDUED_NUMBAT</Type>
 			<Capture>UNIT_SUBDUED_NUMBAT</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -9590,7 +9470,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_OKAPI</Class>
 			<Type>UNIT_SUBDUED_OKAPI</Type>
 			<Capture>UNIT_SUBDUED_OKAPI</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -9690,7 +9569,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_OPOSSUM</Class>
 			<Type>UNIT_SUBDUED_OPOSSUM</Type>
 			<Capture>UNIT_SUBDUED_OPOSSUM</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -9750,7 +9628,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_ORCA</Class>
 			<Type>UNIT_SUBDUED_ORCA</Type>
 			<Capture>UNIT_SUBDUED_ORCA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -9819,7 +9696,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_ORANGUTAN</Class>
 			<Type>UNIT_SUBDUED_ORANGUTAN</Type>
 			<Capture>UNIT_SUBDUED_ORANGUTAN</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -9916,7 +9792,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_OSTRICH</Class>
 			<Type>UNIT_SUBDUED_OSTRICH</Type>
 			<Capture>UNIT_SUBDUED_OSTRICH</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -10023,7 +9898,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_OXPECKER</Class>
 			<Type>UNIT_SUBDUED_OXPECKER</Type>
 			<Capture>UNIT_SUBDUED_OXPECKER</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -10085,7 +9959,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_PANTHER</Class>
 			<Type>UNIT_SUBDUED_PANTHER</Type>
 			<Capture>UNIT_SUBDUED_PANTHER</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -10187,7 +10060,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_PARROT</Class>
 			<Type>UNIT_SUBDUED_PARROT</Type>
 			<Capture>UNIT_SUBDUED_PARROT</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -10249,7 +10121,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_PEACOCK</Class>
 			<Type>UNIT_SUBDUED_PEACOCK</Type>
 			<Capture>UNIT_SUBDUED_PEACOCK</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -10312,7 +10183,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_PENGUIN</Class>
 			<Type>UNIT_SUBDUED_PENGUIN</Type>
 			<Capture>UNIT_SUBDUED_PENGUIN</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -10384,7 +10254,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_PHEASANT</Class>
 			<Type>UNIT_SUBDUED_PHEASANT</Type>
 			<Capture>UNIT_SUBDUED_PHEASANT</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -10464,7 +10333,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_PLATYPUS</Class>
 			<Type>UNIT_SUBDUED_PLATYPUS</Type>
 			<Capture>UNIT_SUBDUED_PLATYPUS</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -10533,7 +10401,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_PIGEON</Class>
 			<Type>UNIT_SUBDUED_PIGEON</Type>
 			<Capture>UNIT_SUBDUED_PIGEON</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -10596,7 +10463,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_POSSUM</Class>
 			<Type>UNIT_SUBDUED_POSSUM</Type>
 			<Capture>UNIT_SUBDUED_POSSUM</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -10654,7 +10520,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_PROCOPTODON</Class>
 			<Type>UNIT_SUBDUED_PROCOPTODON</Type>
 			<Capture>UNIT_SUBDUED_PROCOPTODON</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -10756,7 +10621,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_PUFFADDER</Class>
 			<Type>UNIT_SUBDUED_PUFFADDER</Type>
 			<Capture>UNIT_SUBDUED_PUFFADDER</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -10825,7 +10689,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_QUOLL</Class>
 			<Type>UNIT_SUBDUED_QUOLL</Type>
 			<Capture>UNIT_SUBDUED_QUOLL</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -10888,7 +10751,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_RACCOON</Class>
 			<Type>UNIT_SUBDUED_RACCOON</Type>
 			<Capture>UNIT_SUBDUED_RACCOON</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -10952,7 +10814,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_RATEL</Class>
 			<Type>UNIT_SUBDUED_RATEL</Type>
 			<Capture>UNIT_SUBDUED_RATEL</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -11042,7 +10903,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_RAVEN</Class>
 			<Type>UNIT_SUBDUED_RAVEN</Type>
 			<Capture>UNIT_SUBDUED_RAVEN</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -11105,7 +10965,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_RAY_EAGLE</Class>
 			<Type>UNIT_SUBDUED_RAY_EAGLE</Type>
 			<Capture>UNIT_SUBDUED_RAY_EAGLE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -11167,7 +11026,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_RAZORBILL</Class>
 			<Type>UNIT_SUBDUED_RAZORBILL</Type>
 			<Capture>UNIT_SUBDUED_RAZORBILL</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -11232,7 +11090,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_REDFOX</Class>
 			<Type>UNIT_SUBDUED_REDFOX</Type>
 			<Capture>UNIT_SUBDUED_REDFOX</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -11300,7 +11157,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_REDPANDA</Class>
 			<Capture>UNIT_SUBDUED_REDPANDA</Capture>
 			<Type>UNIT_SUBDUED_REDPANDA</Type>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -11363,7 +11219,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_WARTHOG</Class>
 			<Type>UNIT_SUBDUED_WARTHOG</Type>
 			<Capture>UNIT_SUBDUED_WARTHOG</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -11466,7 +11321,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_WOLF</Class>
 			<Type>UNIT_SUBDUED_WOLF</Type>
 			<Capture>UNIT_SUBDUED_WOLF</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -11577,7 +11431,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_REEF_SHARK</Class>
 			<Type>UNIT_SUBDUED_REEF_SHARK</Type>
 			<Capture>UNIT_SUBDUED_REEF_SHARK</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -11645,7 +11498,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_RHEA</Class>
 			<Type>UNIT_SUBDUED_RHEA</Type>
 			<Capture>UNIT_SUBDUED_RHEA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -11731,7 +11583,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_ELASMOTHERIUM</Class>
 			<Type>UNIT_SUBDUED_ELASMOTHERIUM</Type>
 			<Capture>UNIT_SUBDUED_ELASMOTHERIUM</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -11796,7 +11647,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_BLACK_RHINO</Class>
 			<Type>UNIT_SUBDUED_BLACK_RHINO</Type>
 			<Capture>UNIT_SUBDUED_BLACK_RHINO</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -11860,7 +11710,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_INDIAN_RHINO</Class>
 			<Type>UNIT_SUBDUED_INDIAN_RHINO</Type>
 			<Capture>UNIT_SUBDUED_INDIAN_RHINO</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -11924,7 +11773,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_JAVA_RHINO</Class>
 			<Type>UNIT_SUBDUED_JAVA_RHINO</Type>
 			<Capture>UNIT_SUBDUED_JAVA_RHINO</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -11988,7 +11836,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_WHITE_RHINO</Class>
 			<Type>UNIT_SUBDUED_WHITE_RHINO</Type>
 			<Capture>UNIT_SUBDUED_WHITE_RHINO</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -12052,7 +11899,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_RIVER_CROC_LARGE</Class>
 			<Type>UNIT_SUBDUED_RIVER_CROC_LARGE</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_SUBDUED_RIVER_CROC_LARGE</Capture>
@@ -12154,7 +12000,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_RIVER_CROC_SMALL</Class>
 			<Type>UNIT_SUBDUED_RIVER_CROC_SMALL</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_SUBDUED_RIVER_CROC_SMALL</Capture>
@@ -12255,7 +12100,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_ROCKHOPPER</Class>
 			<Type>UNIT_SUBDUED_ROCKHOPPER</Type>
 			<Capture>UNIT_SUBDUED_ROCKHOPPER</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -12329,7 +12173,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_SABRETOOTH</Class>
 			<Type>UNIT_SUBDUED_SABRETOOTH</Type>
 			<Capture>UNIT_SUBDUED_SABRETOOTH</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -12432,7 +12275,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_SAIGA</Class>
 			<Type>UNIT_SUBDUED_SAIGA</Type>
 			<Capture>UNIT_SUBDUED_SAIGA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -12533,7 +12375,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_SALTWATER_CROCL</Class>
 			<Type>UNIT_SUBDUED_SALTWATER_CROCL</Type>
 			<Capture>UNIT_SUBDUED_SALTWATER_CROCL</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -12637,7 +12478,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_SALTWATER_CROCS</Class>
 			<Type>UNIT_SUBDUED_SALTWATER_CROCS</Type>
 			<Capture>UNIT_SUBDUED_SALTWATER_CROCS</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -12740,7 +12580,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_SEAEAGLE</Class>
 			<Type>UNIT_SUBDUED_SEAEAGLE</Type>
 			<Capture>UNIT_SUBDUED_SEAEAGLE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -12810,7 +12649,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_SEALION_LAND</Class>
 			<Type>UNIT_SUBDUED_SEALION_LAND</Type>
 			<Capture>UNIT_SUBDUED_SEALION_LAND</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -12830,7 +12668,7 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_SUBDUED_SEALION</Description>
+			<Description>TXT_KEY_UNIT_SUBDUED_SEALION_LAND</Description>
 			<Civilopedia>TXT_KEY_UNIT_SEALION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_SUBDUED_ANIMAL_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_SUBDUED_SEALION_LAND_HELP</Help>
@@ -12872,7 +12710,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_SEALION_SEA</Class>
 			<Type>UNIT_SUBDUED_SEALION_SEA</Type>
 			<Capture>UNIT_SUBDUED_SEALION_SEA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -12893,7 +12730,7 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_SUBDUED_SEALION</Description>
+			<Description>TXT_KEY_UNIT_SUBDUED_SEALION_SEA</Description>
 			<Civilopedia>TXT_KEY_UNIT_SEALION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_SUBDUED_SEALION_SEA_HELP</Help>
@@ -12936,7 +12773,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_SEAOTTER</Class>
 			<Type>UNIT_SUBDUED_SEAOTTER</Type>
 			<Capture>UNIT_SUBDUED_SEAOTTER</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -13004,7 +12840,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_SEATURTLE</Class>
 			<Type>UNIT_SUBDUED_SEATURTLE</Type>
 			<Capture>UNIT_SUBDUED_SEATURTLE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -13067,7 +12902,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_SECRETARYBIRD</Class>
 			<Type>UNIT_SUBDUED_SECRETARYBIRD</Type>
 			<Capture>UNIT_SUBDUED_SECRETARYBIRD</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -13129,7 +12963,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_SIBERIANTIGER</Class>
 			<Type>UNIT_SUBDUED_SIBERIANTIGER</Type>
 			<Capture>UNIT_SUBDUED_SIBERIANTIGER</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -13231,7 +13064,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_SKUNK</Class>
 			<Type>UNIT_SUBDUED_SKUNK</Type>
 			<Capture>UNIT_SUBDUED_SKUNK</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -13291,7 +13123,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_SLOTHBEAR</Class>
 			<Type>UNIT_SUBDUED_SLOTHBEAR</Type>
 			<Capture>UNIT_SUBDUED_SLOTHBEAR</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -13358,7 +13189,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_SNOWLEOPARD</Class>
 			<Type>UNIT_SUBDUED_SNOWLEOPARD</Type>
 			<Capture>UNIT_SUBDUED_SNOWLEOPARD</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -13458,7 +13288,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_SPECTACLEDBEAR</Class>
 			<Type>UNIT_SUBDUED_SPECTACLEDBEAR</Type>
 			<Capture>UNIT_SUBDUED_SPECTACLEDBEAR</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -13524,7 +13353,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_STAG_DEER</Class>
 			<Type>UNIT_SUBDUED_STAG_DEER</Type>
 			<Capture>UNIT_SUBDUED_STAG_DEER</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -13626,7 +13454,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_SUNBEAR</Class>
 			<Type>UNIT_SUBDUED_SUNBEAR</Type>
 			<Capture>UNIT_SUBDUED_SUNBEAR</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -13692,7 +13519,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_TAPIR</Class>
 			<Type>UNIT_SUBDUED_TAPIR</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_SUBDUED_TAPIR</Capture>
@@ -13756,7 +13582,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_JUNGLE_TARANTULA</Class>
 			<Type>UNIT_SUBDUED_JUNGLE_TARANTULA</Type>
 			<Capture>UNIT_SUBDUED_JUNGLE_TARANTULA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -13818,7 +13643,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_DESERT_TARANTULA</Class>
 			<Type>UNIT_SUBDUED_DESERT_TARANTULA</Type>
 			<Capture>UNIT_SUBDUED_DESERT_TARANTULA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -13878,7 +13702,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_TASMANIANDEVIL</Class>
 			<Type>UNIT_SUBDUED_TASMANIANDEVIL</Type>
 			<Capture>UNIT_SUBDUED_TASMANIANDEVIL</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -13956,7 +13779,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_TERN</Class>
 			<Type>UNIT_SUBDUED_TERN</Type>
 			<Capture>UNIT_SUBDUED_TERN</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -14021,7 +13843,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_THYLACINE</Class>
 			<Type>UNIT_SUBDUED_THYLACINE</Type>
 			<Capture>UNIT_SUBDUED_THYLACINE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -14087,7 +13908,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_TOUCAN</Class>
 			<Type>UNIT_SUBDUED_TOUCAN</Type>
 			<Capture>UNIT_SUBDUED_TOUCAN</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -14149,7 +13969,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_TREESLOTH</Class>
 			<Type>UNIT_SUBDUED_TREESLOTH</Type>
 			<Capture>UNIT_SUBDUED_TREESLOTH</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -14206,7 +14025,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_TUNA</Class>
 			<Type>UNIT_SUBDUED_TUNA</Type>
 			<Capture>UNIT_SUBDUED_TUNA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -14269,7 +14087,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_TURKEY</Class>
 			<Type>UNIT_SUBDUED_TURKEY</Type>
 			<Capture>UNIT_SUBDUED_TURKEY</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -14350,7 +14167,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_VIPER</Class>
 			<Type>UNIT_SUBDUED_VIPER</Type>
 			<Capture>UNIT_SUBDUED_VIPER</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -14419,7 +14235,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_VULTURE</Class>
 			<Type>UNIT_SUBDUED_VULTURE</Type>
 			<Capture>UNIT_SUBDUED_VULTURE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -14481,7 +14296,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_WALLABY</Class>
 			<Type>UNIT_SUBDUED_WALLABY</Type>
 			<Capture>UNIT_SUBDUED_WALLABY</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -14540,7 +14354,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_WALLAROO</Class>
 			<Type>UNIT_SUBDUED_WALLAROO</Type>
 			<Capture>UNIT_SUBDUED_WALLAROO</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -14602,7 +14415,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_WALRUS</Class>
 			<Type>UNIT_SUBDUED_WALRUS</Type>
 			<Capture>UNIT_SUBDUED_WALRUS</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -14666,7 +14478,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_WHALESHARK</Class>
 			<Type>UNIT_SUBDUED_WHALESHARK</Type>
 			<Capture>UNIT_SUBDUED_WHALESHARK</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -14734,7 +14545,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_WILDEBEEST</Class>
 			<Type>UNIT_SUBDUED_WILDEBEEST</Type>
 			<Capture>UNIT_SUBDUED_WILDEBEEST</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -14838,7 +14648,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_WOLVERINE</Class>
 			<Type>UNIT_SUBDUED_WOLVERINE</Type>
 			<Capture>UNIT_SUBDUED_WOLVERINE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -14938,7 +14747,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_WOMBAT</Class>
 			<Type>UNIT_SUBDUED_WOMBAT</Type>
 			<Capture>UNIT_SUBDUED_WOMBAT</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
@@ -14997,7 +14805,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TALESOF_BELUGA</Class>
 			<Type>UNIT_TALESOF_BELUGA</Type>
 			<Capture>UNIT_TALESOF_BELUGA</Capture>
 			<Combat>UNITCOMBAT_SEA_ANIMAL_TALE</Combat>
@@ -15036,7 +14843,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TALESOF_COD</Class>
 			<Type>UNIT_TALESOF_COD</Type>
 			<Capture>UNIT_TALESOF_COD</Capture>
 			<Combat>UNITCOMBAT_SEA_ANIMAL_TALE</Combat>
@@ -15076,7 +14882,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TALESOF_CRAB</Class>
 			<Type>UNIT_TALESOF_CRAB</Type>
 			<Capture>UNIT_TALESOF_CRAB</Capture>
 			<Combat>UNITCOMBAT_SEA_ANIMAL_TALE</Combat>
@@ -15116,7 +14921,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TALESOF_DOLPHIN</Class>
 			<Type>UNIT_TALESOF_DOLPHIN</Type>
 			<Capture>UNIT_TALESOF_DOLPHIN</Capture>
 			<Combat>UNITCOMBAT_SEA_ANIMAL_TALE</Combat>
@@ -15156,7 +14960,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TALESOF_DUGONG</Class>
 			<Type>UNIT_TALESOF_DUGONG</Type>
 			<Capture>UNIT_TALESOF_DUGONG</Capture>
 			<Combat>UNITCOMBAT_SEA_ANIMAL_TALE</Combat>
@@ -15194,7 +14997,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TALESOF_GIANT_SQUID</Class>
 			<Type>UNIT_TALESOF_GIANT_SQUID</Type>
 			<Capture>UNIT_TALESOF_GIANT_SQUID</Capture>
 			<Combat>UNITCOMBAT_SEA_ANIMAL_TALE</Combat>
@@ -15234,7 +15036,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TALESOF_GREATWHITE</Class>
 			<Type>UNIT_TALESOF_GREATWHITE</Type>
 			<Capture>UNIT_TALESOF_GREATWHITE</Capture>
 			<Combat>UNITCOMBAT_SEA_ANIMAL_TALE</Combat>
@@ -15277,7 +15078,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TALESOF_HAMMERHEAD</Class>
 			<Type>UNIT_TALESOF_HAMMERHEAD</Type>
 			<Capture>UNIT_TALESOF_HAMMERHEAD</Capture>
 			<Combat>UNITCOMBAT_SEA_ANIMAL_TALE</Combat>
@@ -15320,7 +15120,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TALESOF_HUMPBACK_WHALE</Class>
 			<Type>UNIT_TALESOF_HUMPBACK_WHALE</Type>
 			<Capture>UNIT_TALESOF_HUMPBACK_WHALE</Capture>
 			<Combat>UNITCOMBAT_SEA_ANIMAL_TALE</Combat>
@@ -15360,7 +15159,6 @@
 			<bRenderBelowWater>1</bRenderBelowWater>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TALESOF_MACKEREL</Class>
 			<Type>UNIT_TALESOF_MACKEREL</Type>
 			<Capture>UNIT_TALESOF_MACKEREL</Capture>
 			<Combat>UNITCOMBAT_SEA_ANIMAL_TALE</Combat>
@@ -15399,7 +15197,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TALESOF_RAY_MANTA</Class>
 			<Type>UNIT_TALESOF_RAY_MANTA</Type>
 			<Capture>UNIT_TALESOF_RAY_MANTA</Capture>
 			<Combat>UNITCOMBAT_SEA_ANIMAL_TALE</Combat>
@@ -15441,7 +15238,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TALESOF_MARLIN</Class>
 			<Type>UNIT_TALESOF_MARLIN</Type>
 			<Capture>UNIT_TALESOF_MARLIN</Capture>
 			<Combat>UNITCOMBAT_SEA_ANIMAL_TALE</Combat>
@@ -15481,7 +15277,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TALESOF_MINKIE_WHALE</Class>
 			<Type>UNIT_TALESOF_MINKIE_WHALE</Type>
 			<Capture>UNIT_TALESOF_MINKIE_WHALE</Capture>
 			<Combat>UNITCOMBAT_SEA_ANIMAL_TALE</Combat>
@@ -15521,7 +15316,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TALESOF_NARWHAL</Class>
 			<Type>UNIT_TALESOF_NARWHAL</Type>
 			<Capture>UNIT_TALESOF_NARWHAL</Capture>
 			<Combat>UNITCOMBAT_SEA_ANIMAL_TALE</Combat>
@@ -15561,7 +15355,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TALESOF_ORCA</Class>
 			<Type>UNIT_TALESOF_ORCA</Type>
 			<Capture>UNIT_TALESOF_ORCA</Capture>
 			<Combat>UNITCOMBAT_SEA_ANIMAL_TALE</Combat>
@@ -15602,7 +15395,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TALESOF_RAY_EAGLE</Class>
 			<Type>UNIT_TALESOF_RAY_EAGLE</Type>
 			<Capture>UNIT_TALESOF_RAY_EAGLE</Capture>
 			<Combat>UNITCOMBAT_SEA_ANIMAL_TALE</Combat>
@@ -15645,7 +15437,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TALESOF_REEF_SHARK</Class>
 			<Type>UNIT_TALESOF_REEF_SHARK</Type>
 			<Capture>UNIT_TALESOF_REEF_SHARK</Capture>
 			<Combat>UNITCOMBAT_SEA_ANIMAL_TALE</Combat>
@@ -15688,7 +15479,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TALESOF_SALTWATER_CROCL</Class>
 			<Type>UNIT_TALESOF_SALTWATER_CROCL</Type>
 			<Capture>UNIT_TALESOF_SALTWATER_CROCL</Capture>
 			<Combat>UNITCOMBAT_SEA_ANIMAL_TALE</Combat>
@@ -15727,7 +15517,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TALESOF_SALTWATER_CROCS</Class>
 			<Type>UNIT_TALESOF_SALTWATER_CROCS</Type>
 			<Capture>UNIT_TALESOF_SALTWATER_CROCS</Capture>
 			<Combat>UNITCOMBAT_SEA_ANIMAL_TALE</Combat>
@@ -15766,7 +15555,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TALESOF_SEATURTLE</Class>
 			<Type>UNIT_TALESOF_SEATURTLE</Type>
 			<Capture>UNIT_TALESOF_SEATURTLE</Capture>
 			<Combat>UNITCOMBAT_SEA_ANIMAL_TALE</Combat>
@@ -15806,7 +15594,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TALESOF_SEALION_SEA</Class>
 			<Type>UNIT_TALESOF_SEALION_SEA</Type>
 			<Capture>UNIT_TALESOF_SEALION_SEA</Capture>
 			<Combat>UNITCOMBAT_SEA_ANIMAL_TALE</Combat>
@@ -15815,7 +15602,7 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_TALESOF_SEALION</Description>
+			<Description>TXT_KEY_UNIT_TALESOF_SEALION_SEA</Description>
 			<Civilopedia>TXT_KEY_UNIT_SEALION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_TALESOF_HELP</Help>
@@ -15844,7 +15631,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TALESOF_TUNA</Class>
 			<Type>UNIT_TALESOF_TUNA</Type>
 			<Capture>UNIT_TALESOF_TUNA</Capture>
 			<Combat>UNITCOMBAT_SEA_ANIMAL_TALE</Combat>
@@ -15884,7 +15670,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TALESOF_WHALESHARK</Class>
 			<Type>UNIT_TALESOF_WHALESHARK</Type>
 			<Capture>UNIT_TALESOF_WHALESHARK</Capture>
 			<Combat>UNITCOMBAT_SEA_ANIMAL_TALE</Combat>
@@ -15929,7 +15714,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_ZEBRA</Class>
 			<Type>UNIT_SUBDUED_ZEBRA</Type>
 			<Capture>UNIT_SUBDUED_ZEBRA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>

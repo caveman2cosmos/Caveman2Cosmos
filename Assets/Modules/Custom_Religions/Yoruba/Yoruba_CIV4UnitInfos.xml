@@ -7,7 +7,6 @@
 <Civ4UnitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_YORUBA_MISSIONARY</Class>
 			<Type>UNIT_YORUBA_MISSIONARY</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_YORUBA_MISSIONARY</Capture>
@@ -34,7 +33,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_YORUBA</PrereqReligion>
-			<PrereqBuilding>BUILDING_OLOFIN</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_OLOFIN</BuildingType>
+			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>

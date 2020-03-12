@@ -2,7 +2,6 @@
 <Civ4UnitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_CLOUD_DESTROYER</Class>
 			<Type>UNIT_CLOUD_DESTROYER</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_BALLOON</Combat>
@@ -69,42 +68,42 @@
 			<iXPValueAttack>6</iXPValueAttack>
 			<iXPValueDefense>6</iXPValueDefense>
 			<iWithdrawalProb>25</iWithdrawalProb>
-			<UnitClassDefenseMods>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_BALLOON</UnitClassType>
-					<iUnitClassMod>100</iUnitClassMod>
-				</UnitClassDefenseMod>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_BLIMP</UnitClassType>
-					<iUnitClassMod>75</iUnitClassMod>
-				</UnitClassDefenseMod>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_BARRAGE_BALLOON</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_AIRSHIP</UnitClassType>
-					<iUnitClassMod>25</iUnitClassMod>
-				</UnitClassDefenseMod>
-			</UnitClassDefenseMods>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_BALLOON</UnitClassType>
-					<iUnitClassMod>100</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_BLIMP</UnitClassType>
-					<iUnitClassMod>75</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_BARRAGE_BALLOON</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_AIRSHIP</UnitClassType>
-					<iUnitClassMod>25</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
+			<UnitDefenseMods>
+				<UnitDefenseMod>
+					<UnitType>UNIT_BALLOON</UnitType>
+					<iModifier>100</iModifier>
+				</UnitDefenseMod>
+				<UnitDefenseMod>
+					<UnitType>UNIT_BLIMP</UnitType>
+					<iModifier>75</iModifier>
+				</UnitDefenseMod>
+				<UnitDefenseMod>
+					<UnitType>UNIT_BARRAGE_BALLOON</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+				<UnitDefenseMod>
+					<UnitType>UNIT_AIRSHIP</UnitType>
+					<iModifier>25</iModifier>
+				</UnitDefenseMod>
+			</UnitDefenseMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_BALLOON</UnitType>
+					<iModifier>100</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_BLIMP</UnitType>
+					<iModifier>75</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_BARRAGE_BALLOON</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_AIRSHIP</UnitType>
+					<iModifier>25</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
 			<iBombRate>12</iBombRate>
 			<iAsset>3</iAsset>
 			<iPower>75</iPower>
@@ -128,7 +127,6 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_NAUTILUS</Class>
 			<Type>UNIT_NAUTILUS</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_SUBMARINE</Combat>
@@ -173,39 +171,27 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_ATTACK_SUBMARINE</UnitType>
 			</UnitUpgrades>
-			<UnitClassTargets>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_FLUYT</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_GALLEON</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_TRANSPORT</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_LANDING_SHIP</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-			</UnitClassTargets>
+			<UnitTargets>
+				<UnitType>UNIT_FLUYT</UnitType>
+				<UnitType>UNIT_GALLEON</UnitType>
+				<UnitType>UNIT_TRANSPORT</UnitType>
+				<UnitType>UNIT_LANDING_SHIP</UnitType>
+			</UnitTargets>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_FLUYT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_FLUYT</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_GALLEON</FlankingStrikeUnitClass>
+					<UnitType>UNIT_GALLEON</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TRANSPORT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TRANSPORT</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_LANDING_SHIP</FlankingStrikeUnitClass>
+					<UnitType>UNIT_LANDING_SHIP</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -231,7 +217,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_NEMO_ACADEMY</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_NEMO_ACADEMY</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			<BonusType>BONUS_COAL</BonusType>
 			<PrereqBonuses>
@@ -283,7 +271,6 @@
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_WAR_WHEEL</Class>
 			<Type>UNIT_WAR_WHEEL</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_RECON</Combat>
@@ -330,7 +317,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_TR_WORKSHOP</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_TR_WORKSHOP</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			<BonusType>BONUS_COAL</BonusType>
 			<PrereqBonuses>
@@ -375,7 +364,6 @@
 			<bRBombardForceAbility>1</bRBombardForceAbility>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_STEAM_TANK</Class>
 			<Type>UNIT_STEAM_TANK</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WHEELED</Combat>
@@ -431,7 +419,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_TR_WORKSHOP</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_TR_WORKSHOP</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			<BonusType>BONUS_COAL</BonusType>
 			<PrereqBonuses>
@@ -472,7 +462,6 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_STEAMPUNK_WORKER</Class>
 			<Type>UNIT_STEAMPUNK_WORKER</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Capture>UNIT_STEAMPUNK_WORKER</Capture>
@@ -557,6 +546,10 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -574,6 +567,10 @@
 				</Build>
 				<Build>
 					<BuildType>BUILD_FACTORY</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_FACTORY_COLD_CLIMATE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>

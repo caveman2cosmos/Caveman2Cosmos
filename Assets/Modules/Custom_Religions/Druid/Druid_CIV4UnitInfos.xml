@@ -7,7 +7,6 @@
 <Civ4UnitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_DRUID_MISSIONARY</Class>
 			<Type>UNIT_DRUID_MISSIONARY</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_DRUID_MISSIONARY</Capture>
@@ -34,7 +33,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
-			<PrereqBuilding>BUILDING_DRUID_MONASTERY</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
@@ -53,7 +54,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_PROPHET</Class>
 			<Type>UNIT_PROPHET</Type>
 			<Buildings>
 				<BuildingType>BUILDING_DRUID_SHRINE</BuildingType>

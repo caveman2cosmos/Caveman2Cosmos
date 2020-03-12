@@ -7,8 +7,8 @@
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_HELLSMOUTH_SANCTUARY</BuildingClass>
 			<Type>BUILDING_HELLSMOUTH_SANCTUARY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_HELLSMOUTH_SANCTUARY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HELLSMOUTH_SANCTUARY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HELLSMOUTH_SANCTUARY_STRATEGY</Strategy>
@@ -20,7 +20,7 @@
 			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_VOODOO</PrereqReligion>
 			<PrereqTech>TECH_FUNDAMENTALISM</PrereqTech>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>-50</iHurryAngerModifier>
 			<iCost>1860</iCost>
@@ -65,7 +65,6 @@
 			</PrereqOrTerrain>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_VOODOO_CATHEDRAL</BuildingClass>
 			<Type>BUILDING_VOODOO_CATHEDRAL</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CATHEDRAL</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_VOODOO_CATHEDRAL</Description>
@@ -115,26 +114,23 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CITY_COUNCIL</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_METROPOLITAN_ADMINISTRATION</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CAPITAL_ADMINISTRATION</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_VOODOO_TEMPLE</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_CITY_COUNCIL</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_METROPOLITAN_ADMINISTRATION</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_CAPITAL_ADMINISTRATION</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_VOODOO_TEMPLE</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -150,7 +146,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_VOODOO_MONASTERY</BuildingClass>
 			<Type>BUILDING_VOODOO_MONASTERY</Type>
 			<SpecialBuildingType>SPECIALBUILDING_MONASTERY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_VOODOO_MONASTERY</Description>
@@ -206,7 +201,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_VOODOO_SHRINE</BuildingClass>
 			<Type>BUILDING_VOODOO_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_VOODOO_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VOODOO_SHRINE_PEDIA</Civilopedia>
@@ -217,7 +211,7 @@
 			<HolyCity>RELIGION_VOODOO</HolyCity>
 			<ReligionType>RELIGION_VOODOO</ReligionType>
 			<GlobalReligionCommerce>RELIGION_VOODOO</GlobalReligionCommerce>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>-1</iCost>
@@ -255,7 +249,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_VOODOO_TEMPLE</BuildingClass>
 			<Type>BUILDING_VOODOO_TEMPLE</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_VOODOO_TEMPLE</Description>
@@ -309,14 +302,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DJENNE</BuildingClass>
 			<Type>BUILDING_DJENNE</Type>
-			<GlobalBuildingClassProductionModifiers>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_VOODOO_CATHEDRAL</BuildingClassType>
+			<GlobalBuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_VOODOO_CATHEDRAL</BuildingType>
 					<iProductionModifier>100</iProductionModifier>
-				</BuildingClassProductionModifier>
-			</GlobalBuildingClassProductionModifiers>
+				</BuildingProductionModifier>
+			</GlobalBuildingProductionModifiers>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

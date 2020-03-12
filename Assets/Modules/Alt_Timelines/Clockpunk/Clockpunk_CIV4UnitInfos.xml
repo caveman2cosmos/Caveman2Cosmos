@@ -2,7 +2,6 @@
 <Civ4UnitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_CLOCKWORK_GOLEM</Class>
 			<Type>UNIT_CLOCKWORK_GOLEM</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MELEE</Combat>
@@ -55,7 +54,9 @@
 				</UnitAI>
 			</UnitAIs>
 			<ForceObsoleteTech>TECH_MODERN_WARFARE</ForceObsoleteTech>
-			<PrereqBuilding>BUILDING_CLOCKWORK_WORKSHOP</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_CLOCKWORK_WORKSHOP</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_CLOCKPUNK</PrereqTech>
 			<BonusType>BONUS_CLOCKPUNK</BonusType>
 			<PrereqBonuses>
@@ -109,7 +110,6 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_DAVINCI_TANK</Class>
 			<Type>UNIT_DAVINCI_TANK</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WHEELED</Combat>
@@ -205,7 +205,6 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_ORNITHOPTER</Class>
 			<Type>UNIT_ORNITHOPTER</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_EARLY_FIGHTERS</Combat>
@@ -247,7 +246,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_SIEGE_WORKSHOP</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_CLOCKPUNK</PrereqTech>
 			<BonusType>BONUS_CLOCKPUNK</BonusType>
 			<PrereqBonuses>
@@ -285,7 +286,6 @@
 			<bDCMFighterEngage>1</bDCMFighterEngage>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_REPEATING_CROSSBOWMAN</Class>
 			<Type>UNIT_REPEATING_CROSSBOWMAN</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ARCHER</Combat>
@@ -384,7 +384,6 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_ZEPHYR</Class>
 			<Type>UNIT_ZEPHYR</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_BALLOON</Combat>
@@ -434,7 +433,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_SIEGE_WORKSHOP</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_HOT_AIR_BALLOON</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_CLOCKPUNK</PrereqTech>

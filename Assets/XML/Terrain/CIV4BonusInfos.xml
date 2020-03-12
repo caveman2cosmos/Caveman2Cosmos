@@ -5,7 +5,7 @@
 			<Type>BONUS_BARLEY</Type>
 			<Description>TXT_KEY_BONUS_BARLEY</Description>
 			<Civilopedia>TXT_KEY_BONUS_BARLEY_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GRAIN</BonusClassType>
+			<BonusClassType>BONUSCLASS_CROP</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_BARLEY</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
@@ -59,7 +59,7 @@
 			<Type>BONUS_CORN</Type>
 			<Description>TXT_KEY_BONUS_CORN</Description>
 			<Civilopedia>TXT_KEY_BONUS_CORN_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GRAIN</BonusClassType>
+			<BonusClassType>BONUSCLASS_CROP</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_CORN</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
@@ -118,7 +118,7 @@
 			<Type>BONUS_MELONS</Type>
 			<Description>TXT_KEY_BONUS_MELONS</Description>
 			<Civilopedia>TXT_KEY_BONUS_MELONS_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GRAIN</BonusClassType>
+			<BonusClassType>BONUSCLASS_CROP</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MELONS</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
@@ -184,7 +184,7 @@
 			<Type>BONUS_POTATOES</Type>
 			<Description>TXT_KEY_BONUS_POTATOES</Description>
 			<Civilopedia>TXT_KEY_BONUS_POTATOES_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GRAIN</BonusClassType>
+			<BonusClassType>BONUSCLASS_CROP</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_POTATOES</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
@@ -241,7 +241,7 @@
 			<Type>BONUS_PUMPKIN</Type>
 			<Description>TXT_KEY_BONUS_PUMPKIN</Description>
 			<Civilopedia>TXT_KEY_BONUS_PUMPKIN_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GRAIN</BonusClassType>
+			<BonusClassType>BONUSCLASS_CROP</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_PUMPKIN</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
@@ -264,7 +264,7 @@
 			</Rands>
 			<iTilesPer>128</iTilesPer>
 			<iGroupRange>1</iGroupRange>
-			<iGroupRand>25</iGroupRand>
+			<iGroupRand>16</iGroupRand>
 			<bArea>1</bArea>
 			<bHills>1</bHills>
 			<bNormalize>1</bNormalize>
@@ -287,7 +287,7 @@
 			<Type>BONUS_RICE</Type>
 			<Description>TXT_KEY_BONUS_RICE</Description>
 			<Civilopedia>TXT_KEY_BONUS_RICE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GRAIN</BonusClassType>
+			<BonusClassType>BONUSCLASS_CROP</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_RICE</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
@@ -365,7 +365,7 @@
 			<Type>BONUS_SQUASH</Type>
 			<Description>TXT_KEY_BONUS_SQUASH</Description>
 			<Civilopedia>TXT_KEY_BONUS_SQUASH_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GRAIN</BonusClassType>
+			<BonusClassType>BONUSCLASS_CROP</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SQUASH</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
@@ -388,7 +388,7 @@
 			</Rands>
 			<iTilesPer>92</iTilesPer>
 			<iGroupRange>1</iGroupRange>
-			<iGroupRand>25</iGroupRand>
+			<iGroupRand>16</iGroupRand>
 			<bArea>1</bArea>
 			<bHills>1</bHills>
 			<bNormalize>1</bNormalize>
@@ -407,7 +407,7 @@
 			<Type>BONUS_WHEAT</Type>
 			<Description>TXT_KEY_BONUS_WHEAT</Description>
 			<Civilopedia>TXT_KEY_BONUS_WHEAT_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GRAIN</BonusClassType>
+			<BonusClassType>BONUSCLASS_CROP</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_WHEAT</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
@@ -458,7 +458,7 @@
 			<Type>BONUS_ALMONDS</Type>
 			<Description>TXT_KEY_BONUS_ALMONDS</Description>
 			<Civilopedia>TXT_KEY_BONUS_ALMONDS_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_CROP</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ALMONDS</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_NATUROPATHY</TechCityTrade>
@@ -530,7 +530,7 @@
 			<Type>BONUS_APPLE</Type>
 			<Description>TXT_KEY_BONUS_APPLE</Description>
 			<Civilopedia>TXT_KEY_BONUS_APPLE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_CROP</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_APPLE</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
@@ -553,7 +553,8 @@
 			</Rands>
 			<iTilesPer>200</iTilesPer>
 			<iUnique>2</iUnique>
-			<iGroupRand>25</iGroupRand>
+			<iGroupRange>1</iGroupRange>
+			<iGroupRand>16</iGroupRand>
 			<bArea>1</bArea>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
@@ -586,7 +587,7 @@
 			<Type>BONUS_BANANA</Type>
 			<Description>TXT_KEY_BONUS_BANANA</Description>
 			<Civilopedia>TXT_KEY_BONUS_BANANA_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_CROP</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_BANANA</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
@@ -609,7 +610,8 @@
 			</Rands>
 			<iTilesPer>92</iTilesPer>
 			<iUnique>2</iUnique>
-			<iGroupRand>25</iGroupRand>
+			<iGroupRange>1</iGroupRange>
+			<iGroupRand>16</iGroupRand>
 			<bArea>1</bArea>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
@@ -638,7 +640,7 @@
 			<Type>BONUS_COCONUT</Type>
 			<Description>TXT_KEY_BONUS_COCONUT</Description>
 			<Civilopedia>TXT_KEY_BONUS_COCONUT_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_CROP</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_COCONUT</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
@@ -699,7 +701,7 @@
 			<Type>BONUS_DATES</Type>
 			<Description>TXT_KEY_BONUS_DATES</Description>
 			<Civilopedia>TXT_KEY_BONUS_DATES_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_CROP</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_DATES</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
@@ -775,7 +777,7 @@
 			<Type>BONUS_FIG</Type>
 			<Description>TXT_KEY_BONUS_FIG</Description>
 			<Civilopedia>TXT_KEY_BONUS_FIG_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_CROP</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_FIG</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
@@ -857,7 +859,7 @@
 			<Type>BONUS_GUAVAS</Type>
 			<Description>TXT_KEY_BONUS_GUAVAS</Description>
 			<Civilopedia>TXT_KEY_BONUS_GUAVAS_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_CROP</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_GUAVAS</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
@@ -907,7 +909,7 @@
 			<Type>BONUS_LEMONS</Type>
 			<Description>TXT_KEY_BONUS_LEMONS</Description>
 			<Civilopedia>TXT_KEY_BONUS_LEMONS_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_CROP</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_LEMONS</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
@@ -930,7 +932,8 @@
 			</Rands>
 			<iTilesPer>128</iTilesPer>
 			<iUnique>2</iUnique>
-			<iGroupRand>25</iGroupRand>
+			<iGroupRange>1</iGroupRange>
+			<iGroupRand>16</iGroupRand>
 			<bArea>1</bArea>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
@@ -967,7 +970,7 @@
 			<Type>BONUS_MANGO</Type>
 			<Description>TXT_KEY_BONUS_MANGO</Description>
 			<Civilopedia>TXT_KEY_BONUS_MANGO_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_CROP</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MANGO</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
@@ -1023,7 +1026,7 @@
 			<Type>BONUS_PAPAYA</Type>
 			<Description>TXT_KEY_BONUS_PAPAYA</Description>
 			<Civilopedia>TXT_KEY_BONUS_PAPAYA_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_CROP</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_PAPAYA</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
@@ -1083,7 +1086,7 @@
 			<Type>BONUS_PISTACHIO</Type>
 			<Description>TXT_KEY_BONUS_PISTACHIO</Description>
 			<Civilopedia>TXT_KEY_BONUS_PISTACHIO_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_CROP</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_PISTACHIO</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
@@ -1155,7 +1158,7 @@
 			<Type>BONUS_POMEGRANATE</Type>
 			<Description>TXT_KEY_BONUS_POMEGRANATE</Description>
 			<Civilopedia>TXT_KEY_BONUS_POMEGRANATE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_CROP</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_POMEGRANATE</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
@@ -1227,14 +1230,14 @@
 			<Type>BONUS_OLIVES</Type>
 			<Description>TXT_KEY_BONUS_OLIVES</Description>
 			<Civilopedia>TXT_KEY_BONUS_OLIVES_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_LUXURY</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_OLIVES</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
 			<YieldChanges>
-				<iYieldChange>2</iYieldChange>
-				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>3</iAITradeModifier>
 			<iHappiness>1</iHappiness>
@@ -1251,7 +1254,7 @@
 			</Rands>
 			<iTilesPer>128</iTilesPer>
 			<iGroupRange>1</iGroupRange>
-			<iGroupRand>25</iGroupRand>
+			<iGroupRand>16</iGroupRand>
 			<bArea>1</bArea>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
@@ -1292,7 +1295,7 @@
 			<Type>BONUS_RESIN</Type>
 			<Description>TXT_KEY_BONUS_RESIN</Description>
 			<Civilopedia>TXT_KEY_BONUS_RESIN_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_PRODUCTION</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_RESIN</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_ADHESIVES</TechCityTrade>
@@ -1302,7 +1305,6 @@
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>20</iAITradeModifier>
-			<iHappiness>1</iHappiness>
 			<iPlacementOrder>5</iPlacementOrder>
 			<iConstAppearance>100</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
@@ -1378,7 +1380,7 @@
 			<Type>BONUS_RUBBER</Type>
 			<Description>TXT_KEY_BONUS_RUBBER</Description>
 			<Civilopedia>TXT_KEY_BONUS_RUBBER_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MODERN</BonusClassType>
+			<BonusClassType>BONUSCLASS_STRATEGIC</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_RUBBER</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_CHEMISTRY</TechCityTrade>
@@ -1388,7 +1390,6 @@
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>15</iAITradeModifier>
-			<iHappiness>1</iHappiness>
 			<iPlacementOrder>1</iPlacementOrder>
 			<iConstAppearance>400</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
@@ -1433,7 +1434,7 @@
 			<Type>BONUS_SPICES</Type>
 			<Description>TXT_KEY_BONUS_SPICES</Description>
 			<Civilopedia>TXT_KEY_BONUS_SPICES_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_LUXURY</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SPICES</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_SPICE_TRADE</TechCityTrade>
@@ -1456,7 +1457,7 @@
 			<iTilesPer>144</iTilesPer>
 			<iUnique>4</iUnique>
 			<iGroupRange>1</iGroupRange>
-			<iGroupRand>50</iGroupRand>
+			<iGroupRand>20</iGroupRand>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
 			<TerrainBooleans>
@@ -1559,7 +1560,7 @@
 			<Type>BONUS_HEMP</Type>
 			<Description>TXT_KEY_BONUS_HEMP</Description>
 			<Civilopedia>TXT_KEY_BONUS_HEMP_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_PRODUCTION</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HEMP</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_WEAVING</TechCityTrade>
@@ -1569,8 +1570,6 @@
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>3</iAITradeModifier>
-			<iHealth>-1</iHealth>
-			<iHappiness>1</iHappiness>
 			<iPlacementOrder>5</iPlacementOrder>
 			<iConstAppearance>100</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
@@ -1583,7 +1582,7 @@
 			<iTilesPer>128</iTilesPer>
 			<iUnique>3</iUnique>
 			<iGroupRange>1</iGroupRange>
-			<iGroupRand>50</iGroupRand>
+			<iGroupRand>20</iGroupRand>
 			<bArea>1</bArea>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
@@ -1655,7 +1654,7 @@
 			<iTilesPer>200</iTilesPer>
 			<iUnique>3</iUnique>
 			<iGroupRange>1</iGroupRange>
-			<iGroupRand>50</iGroupRand>
+			<iGroupRand>20</iGroupRand>
 			<bArea>1</bArea>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
@@ -1703,9 +1702,9 @@
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_NATUROPATHY</TechCityTrade>
 			<YieldChanges>
-				<iYieldChange>2</iYieldChange>
-				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>6</iPlacementOrder>
@@ -1787,7 +1786,7 @@
 			<iTilesPer>160</iTilesPer>
 			<iUnique>6</iUnique>
 			<iGroupRange>1</iGroupRange>
-			<iGroupRand>50</iGroupRand>
+			<iGroupRand>20</iGroupRand>
 			<bArea>1</bArea>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
@@ -1843,7 +1842,7 @@
 			<Type>BONUS_COTTON</Type>
 			<Description>TXT_KEY_BONUS_COTTON</Description>
 			<Civilopedia>TXT_KEY_BONUS_COTTON_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_LUXURY</BonusClassType>
+			<BonusClassType>BONUSCLASS_PRODUCTION</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_COTTON</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_WEAVING</TechCityTrade>
@@ -1853,7 +1852,6 @@
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>4</iAITradeModifier>
-			<iHappiness>1</iHappiness>
 			<iPlacementOrder>5</iPlacementOrder>
 			<iConstAppearance>100</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
@@ -1866,7 +1864,7 @@
 			</Rands>
 			<iTilesPer>64</iTilesPer>
 			<iGroupRange>1</iGroupRange>
-			<iGroupRand>50</iGroupRand>
+			<iGroupRand>20</iGroupRand>
 			<bArea>1</bArea>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
@@ -1909,7 +1907,7 @@
 			<Type>BONUS_FLAX</Type>
 			<Description>TXT_KEY_BONUS_FLAX</Description>
 			<Civilopedia>TXT_KEY_BONUS_FLAX_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_LUXURY</BonusClassType>
+			<BonusClassType>BONUSCLASS_PRODUCTION</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_FLAX</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_WEAVING</TechCityTrade>
@@ -1918,7 +1916,6 @@
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<iHappiness>1</iHappiness>
 			<iPlacementOrder>5</iPlacementOrder>
 			<iConstAppearance>100</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
@@ -1990,7 +1987,7 @@
 			<Type>BONUS_HENNA</Type>
 			<Description>TXT_KEY_BONUS_HENNA</Description>
 			<Civilopedia>TXT_KEY_BONUS_HENNA_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_LUXURY</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HENNA</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_NATURAL_PIGMENTS</TechCityTrade>
@@ -2013,7 +2010,7 @@
 			</Rands>
 			<iTilesPer>92</iTilesPer>
 			<iGroupRange>1</iGroupRange>
-			<iGroupRand>50</iGroupRand>
+			<iGroupRand>20</iGroupRand>
 			<bArea>1</bArea>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
@@ -2080,7 +2077,7 @@
 			<Type>BONUS_INCENSE</Type>
 			<Description>TXT_KEY_BONUS_INCENSE</Description>
 			<Civilopedia>TXT_KEY_BONUS_INCENSE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_LUXURY</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_INCENSE</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_CALENDAR</TechCityTrade>
@@ -2090,6 +2087,7 @@
 				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>3</iAITradeModifier>
+			<iHappiness>1</iHappiness>
 			<iPlacementOrder>5</iPlacementOrder>
 			<iConstAppearance>100</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
@@ -2102,7 +2100,7 @@
 			<iTilesPer>128</iTilesPer>
 			<iUnique>4</iUnique>
 			<iGroupRange>1</iGroupRange>
-			<iGroupRand>50</iGroupRand>
+			<iGroupRand>20</iGroupRand>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
 			<TerrainBooleans>
@@ -2153,7 +2151,7 @@
 			<Type>BONUS_INDIGO</Type>
 			<Description>TXT_KEY_BONUS_INDIGO</Description>
 			<Civilopedia>TXT_KEY_BONUS_INDIGO_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_LUXURY</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_INDIGO</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_NATURAL_PIGMENTS</TechCityTrade>
@@ -2176,7 +2174,7 @@
 			</Rands>
 			<iTilesPer>144</iTilesPer>
 			<iGroupRange>1</iGroupRange>
-			<iGroupRand>50</iGroupRand>
+			<iGroupRand>20</iGroupRand>
 			<bArea>1</bArea>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
@@ -2279,7 +2277,7 @@
 			<Type>BONUS_KAVA</Type>
 			<Description>TXT_KEY_BONUS_KAVA</Description>
 			<Civilopedia>TXT_KEY_BONUS_KAVA_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_LUXURY</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_KAVA</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_NATUROPATHY</TechCityTrade>
@@ -2332,7 +2330,7 @@
 			<Type>BONUS_PAPYRUS</Type>
 			<Description>TXT_KEY_BONUS_PAPYRUS</Description>
 			<Civilopedia>TXT_KEY_BONUS_PAPYRUS_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_PRODUCTION</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_PAPYRUS</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_WEAVING</TechCityTrade>
@@ -2352,8 +2350,8 @@
 				<iRandApp4>25</iRandApp4>
 			</Rands>
 			<iTilesPer>100</iTilesPer>
-			<iGroupRange>1</iGroupRange>
-			<iGroupRand>50</iGroupRand>
+			<iGroupRange>2</iGroupRange>
+			<iGroupRand>10</iGroupRand>
 			<bArea>1</bArea>
 			<bFlatlands>1</bFlatlands>
 			<bNormalize>1</bNormalize>
@@ -2406,7 +2404,7 @@
 			<Type>BONUS_PEYOTE</Type>
 			<Description>TXT_KEY_BONUS_PEYOTE</Description>
 			<Civilopedia>TXT_KEY_BONUS_PEYOTE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_LUXURY</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_PEYOTE</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_NATUROPATHY</TechCityTrade>
@@ -2454,7 +2452,7 @@
 			<Type>BONUS_PRICKLY_PEAR</Type>
 			<Description>TXT_KEY_BONUS_PRICKLY_PEAR</Description>
 			<Civilopedia>TXT_KEY_BONUS_PRICKLY_PEAR_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_CROP</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_PRICKLY_PEAR</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
@@ -2499,7 +2497,7 @@
 			<Type>BONUS_OPIUM</Type>
 			<Description>TXT_KEY_BONUS_OPIUM</Description>
 			<Civilopedia>TXT_KEY_BONUS_OPIUM_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_LUXURY</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_OPIUM</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_NATUROPATHY</TechCityTrade>
@@ -2522,8 +2520,8 @@
 				<iRandApp4>50</iRandApp4>
 			</Rands>
 			<iTilesPer>200</iTilesPer>
-			<iGroupRange>1</iGroupRange>
-			<iGroupRand>50</iGroupRand>
+			<iGroupRange>2</iGroupRange>
+			<iGroupRand>10</iGroupRand>
 			<bArea>1</bArea>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
@@ -2547,7 +2545,7 @@
 			<Type>BONUS_SUGAR</Type>
 			<Description>TXT_KEY_BONUS_SUGAR</Description>
 			<Civilopedia>TXT_KEY_BONUS_SUGAR_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_LUXURY</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SUGAR</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_SPICE_TRADE</TechCityTrade>
@@ -2557,7 +2555,6 @@
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>2</iAITradeModifier>
-			<iHappiness>1</iHappiness>
 			<iPlacementOrder>5</iPlacementOrder>
 			<iConstAppearance>100</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
@@ -2570,8 +2567,8 @@
 			</Rands>
 			<iTilesPer>64</iTilesPer>
 			<iUnique>3</iUnique>
-			<iGroupRange>1</iGroupRange>
-			<iGroupRand>50</iGroupRand>
+			<iGroupRange>2</iGroupRange>
+			<iGroupRand>10</iGroupRand>
 			<bArea>1</bArea>
 			<bFlatlands>1</bFlatlands>
 			<TerrainBooleans>
@@ -2626,7 +2623,7 @@
 			<Type>BONUS_TEA</Type>
 			<Description>TXT_KEY_BONUS_TEA</Description>
 			<Civilopedia>TXT_KEY_BONUS_TEA_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_LUXURY</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_TEA</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_SPICE_TRADE</TechCityTrade>
@@ -2650,8 +2647,8 @@
 			</Rands>
 			<iTilesPer>128</iTilesPer>
 			<iUnique>6</iUnique>
-			<iGroupRange>1</iGroupRange>
-			<iGroupRand>50</iGroupRand>
+			<iGroupRange>2</iGroupRange>
+			<iGroupRand>10</iGroupRand>
 			<bArea>1</bArea>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
@@ -2688,7 +2685,7 @@
 			<Type>BONUS_TOBACCO</Type>
 			<Description>TXT_KEY_BONUS_TOBACCO</Description>
 			<Civilopedia>TXT_KEY_BONUS_TOBACCO_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_LUXURY</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_TOBACCO</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_NATUROPATHY</TechCityTrade>
@@ -2712,8 +2709,8 @@
 				<iRandApp4>25</iRandApp4>
 			</Rands>
 			<iTilesPer>64</iTilesPer>
-			<iGroupRange>1</iGroupRange>
-			<iGroupRand>50</iGroupRand>
+			<iGroupRange>2</iGroupRange>
+			<iGroupRand>10</iGroupRand>
 			<bArea>1</bArea>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
@@ -2752,7 +2749,7 @@
 			<Type>BONUS_VANILLA</Type>
 			<Description>TXT_KEY_BONUS_VANILLA</Description>
 			<Civilopedia>TXT_KEY_BONUS_VANILLA_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_LUXURY</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_VANILLA</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_NATUROPATHY</TechCityTrade>
@@ -2773,8 +2770,8 @@
 				<iRandApp4>25</iRandApp4>
 			</Rands>
 			<iTilesPer>64</iTilesPer>
-			<iGroupRange>1</iGroupRange>
-			<iGroupRand>50</iGroupRand>
+			<iGroupRange>2</iGroupRange>
+			<iGroupRand>10</iGroupRand>
 			<bArea>1</bArea>
 			<bFlatlands>1</bFlatlands>
 			<bNormalize>1</bNormalize>
@@ -2815,7 +2812,7 @@
 			<Type>BONUS_GRAPES</Type>
 			<Description>TXT_KEY_BONUS_GRAPES</Description>
 			<Civilopedia>TXT_KEY_BONUS_GRAPES_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_CROP</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_GRAPES</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
@@ -2825,7 +2822,7 @@
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>2</iAITradeModifier>
-			<iHappiness>1</iHappiness>
+			<iHealth>1</iHealth>
 			<iPlacementOrder>3</iPlacementOrder>
 			<iConstAppearance>100</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
@@ -2839,7 +2836,7 @@
 			</Rands>
 			<iTilesPer>80</iTilesPer>
 			<iGroupRange>1</iGroupRange>
-			<iGroupRand>25</iGroupRand>
+			<iGroupRand>16</iGroupRand>
 			<bArea>1</bArea>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
@@ -2867,7 +2864,7 @@
 			<Type>BONUS_MUSHROOMS</Type>
 			<Description>TXT_KEY_BONUS_MUSHROOMS</Description>
 			<Civilopedia>TXT_KEY_BONUS_MUSHROOMS_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_CROP</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MUSHROOMS</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_HERBALISM</TechCityTrade>
@@ -2876,7 +2873,7 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<iHappiness>1</iHappiness>
+			<iHealth>1</iHealth>
 			<iPlacementOrder>5</iPlacementOrder>
 			<iConstAppearance>100</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
@@ -2888,7 +2885,7 @@
 			</Rands>
 			<iTilesPer>128</iTilesPer>
 			<iGroupRange>1</iGroupRange>
-			<iGroupRand>50</iGroupRand>
+			<iGroupRand>16</iGroupRand>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
 			<bNormalize>1</bNormalize>
@@ -2942,7 +2939,7 @@
 			<Type>BONUS_PRIME_TIMBER</Type>
 			<Description>TXT_KEY_BONUS_PRIME_TIMBER</Description>
 			<Civilopedia>TXT_KEY_BONUS_PRIME_TIMBER_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_STRATEGIC</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_PRIME_TIMBER</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_WOODWORKING</TechCityTrade>
@@ -3012,7 +3009,7 @@
 			<Type>BONUS_CAMEL</Type>
 			<Description>TXT_KEY_BONUS_CAMEL</Description>
 			<Civilopedia>TXT_KEY_BONUS_CAMEL_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_LIVESTOCK</BonusClassType>
+			<BonusClassType>BONUSCLASS_STRATEGIC</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_CAMEL</ArtDefineTag>
 			<TechReveal>TECH_SCAVENGING</TechReveal>
 			<TechCityTrade>TECH_CAMELID_DOMESTICATION</TechCityTrade>
@@ -3020,7 +3017,6 @@
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
-			<iHealth>1</iHealth>
 			<iPlacementOrder>4</iPlacementOrder>
 			<iConstAppearance>200</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
@@ -3092,7 +3088,8 @@
 				<iRandApp4>25</iRandApp4>
 			</Rands>
 			<iTilesPer>92</iTilesPer>
-			<iGroupRand>25</iGroupRand>
+			<iGroupRange>1</iGroupRange>
+			<iGroupRand>10</iGroupRand>
 			<bArea>1</bArea>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
@@ -3139,7 +3136,7 @@
 			<Type>BONUS_DONKEY</Type>
 			<Description>TXT_KEY_BONUS_DONKEY</Description>
 			<Civilopedia>TXT_KEY_BONUS_DONKEY_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_RUSH</BonusClassType>
+			<BonusClassType>BONUSCLASS_STRATEGIC</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_DONKEY</ArtDefineTag>
 			<TechReveal>TECH_SCAVENGING</TechReveal>
 			<TechCityTrade>TECH_EQUINE_DOMESTICATION</TechCityTrade>
@@ -3211,7 +3208,7 @@
 			<Type>BONUS_HORSE</Type>
 			<Description>TXT_KEY_BONUS_HORSE</Description>
 			<Civilopedia>TXT_KEY_BONUS_HORSE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_RUSH</BonusClassType>
+			<BonusClassType>BONUSCLASS_STRATEGIC</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HORSE</ArtDefineTag>
 			<TechReveal>TECH_SCAVENGING</TechReveal>
 			<TechCityTrade>TECH_EQUINE_DOMESTICATION</TechCityTrade>
@@ -3299,7 +3296,7 @@
 			<Type>BONUS_LLAMA</Type>
 			<Description>TXT_KEY_BONUS_LLAMA</Description>
 			<Civilopedia>TXT_KEY_BONUS_LLAMA_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_LIVESTOCK</BonusClassType>
+			<BonusClassType>BONUSCLASS_STRATEGIC</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_LLAMA</ArtDefineTag>
 			<TechReveal>TECH_SCAVENGING</TechReveal>
 			<TechCityTrade>TECH_CAMELID_DOMESTICATION</TechCityTrade>
@@ -3367,7 +3364,8 @@
 				<iRandApp4>25</iRandApp4>
 			</Rands>
 			<iTilesPer>128</iTilesPer>
-			<iGroupRand>25</iGroupRand>
+			<iGroupRange>1</iGroupRange>
+			<iGroupRand>10</iGroupRand>
 			<bArea>1</bArea>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
@@ -3441,7 +3439,8 @@
 				<iRandApp4>25</iRandApp4>
 			</Rands>
 			<iTilesPer>128</iTilesPer>
-			<iGroupRand>25</iGroupRand>
+			<iGroupRange>1</iGroupRange>
+			<iGroupRand>10</iGroupRand>
 			<bArea>1</bArea>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
@@ -3528,7 +3527,7 @@
 			<Type>BONUS_BEAVERS</Type>
 			<Description>TXT_KEY_BONUS_BEAVERS</Description>
 			<Civilopedia>TXT_KEY_BONUS_BEAVERS_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_LUXURY</BonusClassType>
+			<BonusClassType>BONUSCLASS_PRODUCTION</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_BEAVERS</ArtDefineTag>
 			<TechReveal>TECH_SCAVENGING</TechReveal>
 			<TechCityTrade>TECH_TRAPPING</TechCityTrade>
@@ -3538,7 +3537,6 @@
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>7</iAITradeModifier>
-			<iHappiness>1</iHappiness>
 			<iPlacementOrder>3</iPlacementOrder>
 			<iConstAppearance>100</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
@@ -3552,7 +3550,7 @@
 			<iTilesPer>128</iTilesPer>
 			<iUnique>4</iUnique>
 			<iGroupRange>1</iGroupRange>
-			<iGroupRand>25</iGroupRand>
+			<iGroupRand>10</iGroupRand>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
 			<TerrainBooleans>
@@ -3699,7 +3697,7 @@
 			<iTilesPer>92</iTilesPer>
 			<iUnique>4</iUnique>
 			<iGroupRange>1</iGroupRange>
-			<iGroupRand>25</iGroupRand>
+			<iGroupRand>10</iGroupRand>
 			<bArea>1</bArea>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
@@ -3760,7 +3758,7 @@
 			<Type>BONUS_ELEPHANTS</Type>
 			<Description>TXT_KEY_BONUS_ELEPHANTS</Description>
 			<Civilopedia>TXT_KEY_BONUS_ELEPHANTS_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_RUSH</BonusClassType>
+			<BonusClassType>BONUSCLASS_STRATEGIC</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ELEPHANTS</ArtDefineTag>
 			<TechReveal>TECH_SCAVENGING</TechReveal>
 			<TechCityTrade>TECH_SCAVENGING</TechCityTrade>
@@ -3945,7 +3943,7 @@
 			<iTilesPer>32</iTilesPer>
 			<iUnique>5</iUnique>
 			<iGroupRange>1</iGroupRange>
-			<iGroupRand>25</iGroupRand>
+			<iGroupRand>10</iGroupRand>
 			<bArea>1</bArea>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
@@ -3976,7 +3974,7 @@
 			<Type>BONUS_MAMMOTH</Type>
 			<Description>TXT_KEY_BONUS_MAMMOTH</Description>
 			<Civilopedia>TXT_KEY_BONUS_MAMMOTH_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_LIVESTOCK</BonusClassType>
+			<BonusClassType>BONUSCLASS_STRATEGIC</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MAMMOTH</ArtDefineTag>
 			<TechReveal>TECH_SCAVENGING</TechReveal>
 			<TechCityTrade>TECH_SCAVENGING</TechCityTrade>
@@ -3997,8 +3995,8 @@
 			</Rands>
 			<iTilesPer>128</iTilesPer>
 			<iUnique>6</iUnique>
-			<iGroupRange>1</iGroupRange>
-			<iGroupRand>25</iGroupRand>
+			<iGroupRange>2</iGroupRange>
+			<iGroupRand>8</iGroupRand>
 			<bArea>1</bArea>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
@@ -4026,7 +4024,7 @@
 			<Type>BONUS_PARROTS</Type>
 			<Description>TXT_KEY_BONUS_PARROTS</Description>
 			<Civilopedia>TXT_KEY_BONUS_PARROTS_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_LUXURY</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_PARROTS</ArtDefineTag>
 			<TechReveal>TECH_SCAVENGING</TechReveal>
 			<TechCityTrade>TECH_POULTRY_DOMESTICATION</TechCityTrade>
@@ -4132,7 +4130,7 @@
 			<iTilesPer>200</iTilesPer>
 			<iUnique>4</iUnique>
 			<iGroupRange>1</iGroupRange>
-			<iGroupRand>25</iGroupRand>
+			<iGroupRand>10</iGroupRand>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
 			<bNormalize>1</bNormalize>
@@ -4767,7 +4765,7 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
-			<iHappiness>1</iHappiness>
+			<iHealth>1</iHealth>
 			<iPlacementOrder>7</iPlacementOrder>
 			<iConstAppearance>500</iConstAppearance>
 			<iMinAreaSize>16</iMinAreaSize>
@@ -4835,15 +4833,16 @@
 			<Type>BONUS_MUREX</Type>
 			<Description>TXT_KEY_BONUS_MUREX</Description>
 			<Civilopedia>TXT_KEY_BONUS_MUREX_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_SEAFOOD</BonusClassType>
+			<BonusClassType>BONUSCLASS_LUXURY</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MUREX</ArtDefineTag>
 			<TechReveal>TECH_TRAP_FISHING</TechReveal>
 			<TechCityTrade>TECH_FISHING</TechCityTrade>
 			<YieldChanges>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
+			<iHappiness>1</iHappiness>
 			<iPlacementOrder>6</iPlacementOrder>
 			<iConstAppearance>500</iConstAppearance>
 			<iMinAreaSize>10</iMinAreaSize>
@@ -4901,8 +4900,8 @@
 			</Rands>
 			<iTilesPer>128</iTilesPer>
 			<iUnique>6</iUnique>
-			<iGroupRange>1</iGroupRange>
-			<iGroupRand>25</iGroupRand>
+			<iGroupRange>2</iGroupRange>
+			<iGroupRand>10</iGroupRand>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_COAST</TerrainType>
@@ -5009,7 +5008,7 @@
 			<Type>BONUS_WHALE</Type>
 			<Description>TXT_KEY_BONUS_WHALE</Description>
 			<Civilopedia>TXT_KEY_BONUS_WHALE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_SEAFOOD</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_WHALE</ArtDefineTag>
 			<TechReveal>TECH_TRAP_FISHING</TechReveal>
 			<TechCityTrade>TECH_HARPOON_MAKING</TechCityTrade>
@@ -5030,8 +5029,8 @@
 			</Rands>
 			<iTilesPer>128</iTilesPer>
 			<iUnique>8</iUnique>
-			<iGroupRange>1</iGroupRange>
-			<iGroupRand>25</iGroupRand>
+			<iGroupRange>2</iGroupRange>
+			<iGroupRand>5</iGroupRand>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
@@ -5075,14 +5074,14 @@
 			<Type>BONUS_SILK</Type>
 			<Description>TXT_KEY_BONUS_SILK</Description>
 			<Civilopedia>TXT_KEY_BONUS_SILK_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_LUXURY</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SILK</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_SERICULTURE</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>1</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>6</iAITradeModifier>
 			<iHappiness>1</iHappiness>
@@ -5097,8 +5096,8 @@
 			</Rands>
 			<iTilesPer>92</iTilesPer>
 			<iUnique>6</iUnique>
-			<iGroupRange>1</iGroupRange>
-			<iGroupRand>25</iGroupRand>
+			<iGroupRange>2</iGroupRange>
+			<iGroupRand>10</iGroupRand>
 			<bArea>1</bArea>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
@@ -5156,7 +5155,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>5</iPlacementOrder>
@@ -5399,7 +5398,7 @@
 			<Type>BONUS_BAUXITE_ORE</Type>
 			<Description>TXT_KEY_BONUS_BAUXITE_ORE</Description>
 			<Civilopedia>TXT_KEY_BONUS_BAUXITE_ORE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MODERN</BonusClassType>
+			<BonusClassType>BONUSCLASS_STRATEGIC</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_BAUXITE_ORE</ArtDefineTag>
 			<TechReveal>TECH_INDUSTRIALISM</TechReveal>
 			<TechCityTrade>TECH_INDUSTRIALISM</TechCityTrade>
@@ -5666,7 +5665,7 @@
 			<Type>BONUS_COAL</Type>
 			<Description>TXT_KEY_BONUS_COAL</Description>
 			<Civilopedia>TXT_KEY_BONUS_COAL_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_FUEL</BonusClassType>
+			<BonusClassType>BONUSCLASS_STRATEGIC</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_COAL</ArtDefineTag>
 			<TechReveal>TECH_COAL_MINING</TechReveal>
 			<TechCityTrade>TECH_COAL_MINING</TechCityTrade>
@@ -5674,7 +5673,7 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
-			<iHealth>-1</iHealth>
+			<iPlacementOrder>1</iPlacementOrder>
 			<iConstAppearance>400</iConstAppearance>
 			<iMinAreaSize>4</iMinAreaSize>
 			<Rands>
@@ -5915,7 +5914,7 @@
 			<Type>BONUS_COPPER_ORE</Type>
 			<Description>TXT_KEY_BONUS_COPPER_ORE</Description>
 			<Civilopedia>TXT_KEY_BONUS_COPPER_ORE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_RUSH</BonusClassType>
+			<BonusClassType>BONUSCLASS_STRATEGIC</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_COPPER_ORE</ArtDefineTag>
 			<TechReveal>TECH_SOFT_HAMMER_PERCUSSION</TechReveal>
 			<TechCityTrade>TECH_COPPER_WORKING</TechCityTrade>
@@ -5991,14 +5990,6 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ICE</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -6428,13 +6419,13 @@
 			<Type>BONUS_GEODE</Type>
 			<Description>TXT_KEY_BONUS_GEODE</Description>
 			<Civilopedia>TXT_KEY_BONUS_GEODE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_LUXURY</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_GEODE</ArtDefineTag>
 			<TechReveal>TECH_GEOLOGY</TechReveal>
 			<TechCityTrade>TECH_GEOLOGY</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>0</iYieldChange>
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
 			<iHappiness>1</iHappiness>
@@ -6559,7 +6550,7 @@
 			<Type>BONUS_GOLD_ORE</Type>
 			<Description>TXT_KEY_BONUS_GOLD_ORE</Description>
 			<Civilopedia>TXT_KEY_BONUS_GOLD_ORE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_PRODUCTION</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_GOLD_ORE</ArtDefineTag>
 			<TechReveal>TECH_SOFT_HAMMER_PERCUSSION</TechReveal>
 			<TechCityTrade>TECH_MINING</TechCityTrade>
@@ -6637,14 +6628,6 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ICE</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -6819,7 +6802,7 @@
 			<Type>BONUS_IRON_ORE</Type>
 			<Description>TXT_KEY_BONUS_IRON_ORE</Description>
 			<Civilopedia>TXT_KEY_BONUS_IRON_ORE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_RUSH</BonusClassType>
+			<BonusClassType>BONUSCLASS_STRATEGIC</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_IRON_ORE</ArtDefineTag>
 			<TechReveal>TECH_MINING</TechReveal>
 			<TechCityTrade>TECH_IRON_WORKING</TechCityTrade>
@@ -6828,6 +6811,7 @@
 				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>10</iAITradeModifier>
+			<iPlacementOrder>1</iPlacementOrder>
 			<iConstAppearance>400</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<Rands>
@@ -7077,7 +7061,7 @@
 			<Type>BONUS_LEAD_ORE</Type>
 			<Description>TXT_KEY_BONUS_LEAD_ORE</Description>
 			<Civilopedia>TXT_KEY_BONUS_LEAD_ORE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_PRODUCTION</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_LEAD_ORE</ArtDefineTag>
 			<TechReveal>TECH_MINING</TechReveal>
 			<TechCityTrade>TECH_LEAD_WORKING</TechCityTrade>
@@ -7155,14 +7139,6 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ICE</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -7337,14 +7313,14 @@
 			<Type>BONUS_MANGANESE</Type>
 			<Description>TXT_KEY_BONUS_MANGANESE</Description>
 			<Civilopedia>TXT_KEY_BONUS_MANGANESE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_PRODUCTION</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MANGANESE</ArtDefineTag>
 			<TechReveal>TECH_GEOLOGY</TechReveal>
 			<TechCityTrade>TECH_GEOLOGY</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>0</iYieldChange>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
 			<iPlacementOrder>3</iPlacementOrder>
 			<iConstAppearance>100</iConstAppearance>
@@ -7355,84 +7331,9 @@
 				<iRandApp3>25</iRandApp3>
 				<iRandApp4>25</iRandApp4>
 			</Rands>
-			<iTilesPer>92</iTilesPer>
-			<TerrainBooleans>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_SEA</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_OCEAN</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_TRENCH</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-			</TerrainBooleans>
-		</BonusInfo>
-		<BonusInfo>
-			<Type>BONUS_PLATINUM_ORE</Type>
-			<Description>TXT_KEY_BONUS_PLATINUM_ORE</Description>
-			<Civilopedia>TXT_KEY_BONUS_PLATINUM_ORE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_LUXURY</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_PLATINUM_ORE</ArtDefineTag>
-			<TechReveal>TECH_METAL_CASTING</TechReveal>
-			<TechCityTrade>TECH_IRON_WORKING</TechCityTrade>
-			<YieldChanges>
-				<iYieldChange>0</iYieldChange>
-				<iYieldChange>0</iYieldChange>
-				<iYieldChange>3</iYieldChange>
-			</YieldChanges>
-			<iAITradeModifier>10</iAITradeModifier>
-			<iHappiness>1</iHappiness>
-			<iPlacementOrder>3</iPlacementOrder>
-			<iConstAppearance>300</iConstAppearance>
-			<iMinAreaSize>3</iMinAreaSize>
-			<Rands>
-				<iRandApp1>50</iRandApp1>
-				<iRandApp2>50</iRandApp2>
-				<iRandApp3>50</iRandApp3>
-				<iRandApp4>50</iRandApp4>
-			</Rands>
-			<iTilesPer>500</iTilesPer>
+			<iTilesPer>200</iTilesPer>
 			<iUnique>6</iUnique>
+			<bPeaks>1</bPeaks>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
 			<bNormalize>1</bNormalize>
@@ -7491,14 +7392,6 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ICE</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -7666,7 +7559,258 @@
 					<bFeatureTerrain>1</bFeatureTerrain>
 				</FeatureTerrainBoolean>
 			</FeatureTerrainBooleans>
+		</BonusInfo>
+		<BonusInfo>
+			<Type>BONUS_PLATINUM_ORE</Type>
+			<Description>TXT_KEY_BONUS_PLATINUM_ORE</Description>
+			<Civilopedia>TXT_KEY_BONUS_PLATINUM_ORE_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_PRODUCTION</BonusClassType>
+			<ArtDefineTag>ART_DEF_BONUS_PLATINUM_ORE</ArtDefineTag>
+			<TechReveal>TECH_METAL_CASTING</TechReveal>
+			<TechCityTrade>TECH_IRON_WORKING</TechCityTrade>
+			<YieldChanges>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>3</iYieldChange>
+			</YieldChanges>
+			<iAITradeModifier>10</iAITradeModifier>
+			<iPlacementOrder>3</iPlacementOrder>
+			<iConstAppearance>300</iConstAppearance>
+			<iMinAreaSize>3</iMinAreaSize>
+			<Rands>
+				<iRandApp1>50</iRandApp1>
+				<iRandApp2>50</iRandApp2>
+				<iRandApp3>50</iRandApp3>
+				<iRandApp4>50</iRandApp4>
+			</Rands>
+			<iTilesPer>500</iTilesPer>
+			<iUnique>6</iUnique>
 			<bPeaks>1</bPeaks>
+			<bHills>1</bHills>
+			<bFlatlands>1</bFlatlands>
+			<bNormalize>1</bNormalize>
+			<TerrainBooleans>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_ROCKY</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_BARREN</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_DESERT</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_SCRUB</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_DUNES</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_PLAINS</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LUSH</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_TAIGA</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_TUNDRA</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_PERMAFROST</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_ICE</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+			</TerrainBooleans>
+			<FeatureBooleans>
+				<FeatureBoolean>
+					<FeatureType>FEATURE_FOREST</FeatureType>
+					<bFeature>1</bFeature>
+				</FeatureBoolean>
+				<FeatureBoolean>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<bFeature>1</bFeature>
+				</FeatureBoolean>
+				<FeatureBoolean>
+					<FeatureType>FEATURE_JUNGLE</FeatureType>
+					<bFeature>1</bFeature>
+				</FeatureBoolean>
+				<FeatureBoolean>
+					<FeatureType>FEATURE_SAVANNA</FeatureType>
+					<bFeature>1</bFeature>
+				</FeatureBoolean>
+				<FeatureBoolean>
+					<FeatureType>FEATURE_BAMBOO</FeatureType>
+					<bFeature>1</bFeature>
+				</FeatureBoolean>
+				<FeatureBoolean>
+					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
+					<bFeature>1</bFeature>
+				</FeatureBoolean>
+				<FeatureBoolean>
+					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
+					<bFeature>1</bFeature>
+				</FeatureBoolean>
+				<FeatureBoolean>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
+					<bFeature>1</bFeature>
+				</FeatureBoolean>
+				<FeatureBoolean>
+					<FeatureType>FEATURE_DARK_ROCK_ARCH</FeatureType>
+					<bFeature>1</bFeature>
+				</FeatureBoolean>
+				<FeatureBoolean>
+					<FeatureType>FEATURE_DARK_ROCK_ARCH2</FeatureType>
+					<bFeature>1</bFeature>
+				</FeatureBoolean>
+				<FeatureBoolean>
+					<FeatureType>FEATURE_DARK_ROCK_FORM1</FeatureType>
+					<bFeature>1</bFeature>
+				</FeatureBoolean>
+				<FeatureBoolean>
+					<FeatureType>FEATURE_DARK_ROCK_FORM2</FeatureType>
+					<bFeature>1</bFeature>
+				</FeatureBoolean>
+				<FeatureBoolean>
+					<FeatureType>FEATURE_DARK_ROCK_FORM3</FeatureType>
+					<bFeature>1</bFeature>
+				</FeatureBoolean>
+				<FeatureBoolean>
+					<FeatureType>FEATURE_DARK_ROCK_FORM4</FeatureType>
+					<bFeature>1</bFeature>
+				</FeatureBoolean>
+				<FeatureBoolean>
+					<FeatureType>FEATURE_ROCK_ARCH</FeatureType>
+					<bFeature>1</bFeature>
+				</FeatureBoolean>
+				<FeatureBoolean>
+					<FeatureType>FEATURE_ROCK_ARCH2</FeatureType>
+					<bFeature>1</bFeature>
+				</FeatureBoolean>
+				<FeatureBoolean>
+					<FeatureType>FEATURE_ROCK_FORM1</FeatureType>
+					<bFeature>1</bFeature>
+				</FeatureBoolean>
+				<FeatureBoolean>
+					<FeatureType>FEATURE_ROCK_FORM2</FeatureType>
+					<bFeature>1</bFeature>
+				</FeatureBoolean>
+				<FeatureBoolean>
+					<FeatureType>FEATURE_ROCK_FORM3</FeatureType>
+					<bFeature>1</bFeature>
+				</FeatureBoolean>
+				<FeatureBoolean>
+					<FeatureType>FEATURE_ROCK_FORM4</FeatureType>
+					<bFeature>1</bFeature>
+				</FeatureBoolean>
+				<FeatureBoolean>
+					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
+					<bFeature>1</bFeature>
+				</FeatureBoolean>
+				<FeatureBoolean>
+					<FeatureType>FEATURE_POLAR_ROCK_ARCH2</FeatureType>
+					<bFeature>1</bFeature>
+				</FeatureBoolean>
+				<FeatureBoolean>
+					<FeatureType>FEATURE_POLAR_ROCK_FORM1</FeatureType>
+					<bFeature>1</bFeature>
+				</FeatureBoolean>
+				<FeatureBoolean>
+					<FeatureType>FEATURE_POLAR_ROCK_FORM2</FeatureType>
+					<bFeature>1</bFeature>
+				</FeatureBoolean>
+				<FeatureBoolean>
+					<FeatureType>FEATURE_POLAR_ROCK_FORM3</FeatureType>
+					<bFeature>1</bFeature>
+				</FeatureBoolean>
+				<FeatureBoolean>
+					<FeatureType>FEATURE_POLAR_ROCK_FORM4</FeatureType>
+					<bFeature>1</bFeature>
+				</FeatureBoolean>
+			</FeatureBooleans>
+			<FeatureTerrainBooleans>
+				<FeatureTerrainBoolean>
+					<TerrainType>TERRAIN_ROCKY</TerrainType>
+					<bFeatureTerrain>1</bFeatureTerrain>
+				</FeatureTerrainBoolean>
+				<FeatureTerrainBoolean>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
+					<bFeatureTerrain>1</bFeatureTerrain>
+				</FeatureTerrainBoolean>
+				<FeatureTerrainBoolean>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
+					<bFeatureTerrain>1</bFeatureTerrain>
+				</FeatureTerrainBoolean>
+				<FeatureTerrainBoolean>
+					<TerrainType>TERRAIN_BARREN</TerrainType>
+					<bFeatureTerrain>1</bFeatureTerrain>
+				</FeatureTerrainBoolean>
+				<FeatureTerrainBoolean>
+					<TerrainType>TERRAIN_DESERT</TerrainType>
+					<bFeatureTerrain>1</bFeatureTerrain>
+				</FeatureTerrainBoolean>
+				<FeatureTerrainBoolean>
+					<TerrainType>TERRAIN_SCRUB</TerrainType>
+					<bFeatureTerrain>1</bFeatureTerrain>
+				</FeatureTerrainBoolean>
+				<FeatureTerrainBoolean>
+					<TerrainType>TERRAIN_DUNES</TerrainType>
+					<bFeatureTerrain>1</bFeatureTerrain>
+				</FeatureTerrainBoolean>
+				<FeatureTerrainBoolean>
+					<TerrainType>TERRAIN_PLAINS</TerrainType>
+					<bFeatureTerrain>1</bFeatureTerrain>
+				</FeatureTerrainBoolean>
+				<FeatureTerrainBoolean>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
+					<bFeatureTerrain>1</bFeatureTerrain>
+				</FeatureTerrainBoolean>
+				<FeatureTerrainBoolean>
+					<TerrainType>TERRAIN_LUSH</TerrainType>
+					<bFeatureTerrain>1</bFeatureTerrain>
+				</FeatureTerrainBoolean>
+				<FeatureTerrainBoolean>
+					<TerrainType>TERRAIN_TAIGA</TerrainType>
+					<bFeatureTerrain>1</bFeatureTerrain>
+				</FeatureTerrainBoolean>
+				<FeatureTerrainBoolean>
+					<TerrainType>TERRAIN_TUNDRA</TerrainType>
+					<bFeatureTerrain>1</bFeatureTerrain>
+				</FeatureTerrainBoolean>
+				<FeatureTerrainBoolean>
+					<TerrainType>TERRAIN_PERMAFROST</TerrainType>
+					<bFeatureTerrain>1</bFeatureTerrain>
+				</FeatureTerrainBoolean>
+				<FeatureTerrainBoolean>
+					<TerrainType>TERRAIN_ICE</TerrainType>
+					<bFeatureTerrain>1</bFeatureTerrain>
+				</FeatureTerrainBoolean>
+			</FeatureTerrainBooleans>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_RUBIES</Type>
@@ -7750,14 +7894,6 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ICE</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -8011,14 +8147,6 @@
 					<TerrainType>TERRAIN_ICE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
 			</TerrainBooleans>
 			<FeatureBooleans>
 				<FeatureBoolean>
@@ -8190,7 +8318,7 @@
 			<Type>BONUS_SILVER_ORE</Type>
 			<Description>TXT_KEY_BONUS_SILVER_ORE</Description>
 			<Civilopedia>TXT_KEY_BONUS_SILVER_ORE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_PRODUCTION</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SILVER_ORE</ArtDefineTag>
 			<TechReveal>TECH_SOFT_HAMMER_PERCUSSION</TechReveal>
 			<TechCityTrade>TECH_MINING</TechCityTrade>
@@ -8267,14 +8395,6 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ICE</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -8449,7 +8569,7 @@
 			<Type>BONUS_SULPHUR</Type>
 			<Description>TXT_KEY_BONUS_SULPHUR</Description>
 			<Civilopedia>TXT_KEY_BONUS_SULPHUR_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_RUSH</BonusClassType>
+			<BonusClassType>BONUSCLASS_STRATEGIC</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SULPHUR</ArtDefineTag>
 			<TechReveal>TECH_MINING</TechReveal>
 			<TechCityTrade>TECH_ANCIENT_BALLISTICS</TechCityTrade>
@@ -8458,6 +8578,7 @@
 				<iYieldChange>2</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
+			<iPlacementOrder>1</iPlacementOrder>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iConstAppearance>300</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
@@ -8468,7 +8589,8 @@
 				<iRandApp4>25</iRandApp4>
 			</Rands>
 			<iTilesPer>72</iTilesPer>
-			<iGroupRand>25</iGroupRand>
+			<iGroupRange>1</iGroupRange>
+			<iGroupRand>16</iGroupRand>
 			<bHills>1</bHills>
 			<TerrainBooleans>
 				<TerrainBoolean>
@@ -8489,10 +8611,6 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_DUNES</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -8610,7 +8728,7 @@
 			<Type>BONUS_TIN_ORE</Type>
 			<Description>TXT_KEY_BONUS_TIN_ORE</Description>
 			<Civilopedia>TXT_KEY_BONUS_TIN_ORE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_PRODUCTION</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_TIN_ORE</ArtDefineTag>
 			<TechReveal>TECH_SOFT_HAMMER_PERCUSSION</TechReveal>
 			<TechCityTrade>TECH_BRONZE_WORKING</TechCityTrade>
@@ -8687,14 +8805,6 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ICE</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -8868,7 +8978,7 @@
 			<Type>BONUS_TITANIUM_ORE</Type>
 			<Description>TXT_KEY_BONUS_TITANIUM_ORE</Description>
 			<Civilopedia>TXT_KEY_BONUS_TITANIUM_ORE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MODERN</BonusClassType>
+			<BonusClassType>BONUSCLASS_STRATEGIC</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_TITANIUM_ORE</ArtDefineTag>
 			<TechReveal>TECH_ADVANCED_METALLURGY</TechReveal>
 			<TechCityTrade>TECH_ADVANCED_METALLURGY</TechCityTrade>
@@ -8878,7 +8988,6 @@
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>10</iAITradeModifier>
-			<iHappiness>1</iHappiness>
 			<iPlacementOrder>2</iPlacementOrder>
 			<iConstAppearance>100</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
@@ -9129,7 +9238,7 @@
 			<Type>BONUS_URANIUM</Type>
 			<Description>TXT_KEY_BONUS_URANIUM</Description>
 			<Civilopedia>TXT_KEY_BONUS_URANIUM_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_FUEL</BonusClassType>
+			<BonusClassType>BONUSCLASS_STRATEGIC</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_URANIUM</ArtDefineTag>
 			<TechReveal>TECH_QUANTUM_PHYSICS</TechReveal>
 			<TechCityTrade>TECH_QUANTUM_PHYSICS</TechCityTrade>
@@ -9138,6 +9247,7 @@
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
+			<iPlacementOrder>1</iPlacementOrder>
 			<iAITradeModifier>30</iAITradeModifier>
 			<iConstAppearance>200</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
@@ -9210,14 +9320,6 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ICE</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -9391,7 +9493,7 @@
 			<Type>BONUS_FINE_CLAY</Type>
 			<Description>TXT_KEY_BONUS_FINE_CLAY</Description>
 			<Civilopedia>TXT_KEY_BONUS_FINE_CLAY_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_PRODUCTION</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_FINE_CLAY</ArtDefineTag>
 			<TechReveal>TECH_NATURAL_PIGMENTS</TechReveal>
 			<TechCityTrade>TECH_NATURAL_PIGMENTS</TechCityTrade>
@@ -9512,7 +9614,7 @@
 			<Type>BONUS_JADE</Type>
 			<Description>TXT_KEY_BONUS_JADE</Description>
 			<Civilopedia>TXT_KEY_BONUS_JADE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_LUXURY</BonusClassType>
+			<BonusClassType>BONUSCLASS_PRODUCTION</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_JADE</ArtDefineTag>
 			<TechReveal>TECH_SOFT_HAMMER_PERCUSSION</TechReveal>
 			<TechCityTrade>TECH_CARVING</TechCityTrade>
@@ -9521,7 +9623,6 @@
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
-			<iHappiness>1</iHappiness>
 			<iPlacementOrder>5</iPlacementOrder>
 			<iConstAppearance>100</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
@@ -9533,7 +9634,7 @@
 			</Rands>
 			<iTilesPer>128</iTilesPer>
 			<iGroupRange>1</iGroupRange>
-			<iGroupRand>25</iGroupRand>
+			<iGroupRand>20</iGroupRand>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
 			<bNormalize>1</bNormalize>
@@ -9773,7 +9874,7 @@
 			<Type>BONUS_MARBLE</Type>
 			<Description>TXT_KEY_BONUS_MARBLE</Description>
 			<Civilopedia>TXT_KEY_BONUS_MARBLE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
+			<BonusClassType>BONUSCLASS_STRATEGIC</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MARBLE</ArtDefineTag>
 			<TechReveal>TECH_HARD_HAMMER_PERCUSSION</TechReveal>
 			<TechCityTrade>TECH_MASONRY</TechCityTrade>
@@ -9849,14 +9950,6 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ICE</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -10030,7 +10123,7 @@
 			<Type>BONUS_NATRON</Type>
 			<Description>TXT_KEY_BONUS_NATRON</Description>
 			<Civilopedia>TXT_KEY_BONUS_NATRON_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_PRODUCTION</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SALT</ArtDefineTag>
 			<TechReveal>TECH_MASONRY</TechReveal>
 			<TechCityTrade>TECH_MASONRY</TechCityTrade>
@@ -10066,7 +10159,7 @@
 			<Type>BONUS_OBSIDIAN</Type>
 			<Description>TXT_KEY_BONUS_OBSIDIAN</Description>
 			<Civilopedia>TXT_KEY_BONUS_OBSIDIAN_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_RUSH</BonusClassType>
+			<BonusClassType>BONUSCLASS_STRATEGIC</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_OBSIDIAN</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_OBSIDIAN_WEAPONS</TechCityTrade>
@@ -10107,10 +10200,6 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -10261,7 +10350,7 @@
 			<Type>BONUS_SALT</Type>
 			<Description>TXT_KEY_BONUS_SALT</Description>
 			<Civilopedia>TXT_KEY_BONUS_SALT_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_PRODUCTION</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SALT</ArtDefineTag>
 			<TechReveal>TECH_SOFT_HAMMER_PERCUSSION</TechReveal>
 			<TechCityTrade>TECH_SALT_PROCESSING</TechCityTrade>
@@ -10272,6 +10361,7 @@
 			</YieldChanges>
 			<iAITradeModifier>5</iAITradeModifier>
 			<iHealth>1</iHealth>
+			<iHappiness>1</iHappiness>
 			<iPlacementOrder>2</iPlacementOrder>
 			<iConstAppearance>100</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
@@ -10409,7 +10499,7 @@
 			<Type>BONUS_STONE</Type>
 			<Description>TXT_KEY_BONUS_STONE</Description>
 			<Civilopedia>TXT_KEY_BONUS_STONE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
+			<BonusClassType>BONUSCLASS_STRATEGIC</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_STONE</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_TOOL_MAKING</TechCityTrade>
@@ -10484,14 +10574,6 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ICE</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -10894,7 +10976,7 @@
 			<Type>BONUS_FOSSIL_BEDS</Type>
 			<Description>TXT_KEY_BONUS_FOSSIL_BEDS</Description>
 			<Civilopedia>TXT_KEY_BONUS_FOSSIL_BEDS_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_MISC</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_FOSSIL_BEDS</ArtDefineTag>
 			<TechReveal>TECH_GEOLOGY</TechReveal>
 			<TechCityTrade>TECH_PALEONTOLOGY</TechCityTrade>
@@ -11176,11 +11258,11 @@
 			</FeatureTerrainBooleans>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_GEOTHERMAL_SEA_VENT</Type>
-			<Description>TXT_KEY_BONUS_GEOTHERMAL_SEA_VENT</Description>
-			<Civilopedia>TXT_KEY_BONUS_GEOTHERMAL_SEA_VENT_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_GEOTHERMAL_SEA_VENT</ArtDefineTag>
+			<Type>BONUS_HYDROTHERMAL_VENT</Type>
+			<Description>TXT_KEY_BONUS_HYDROTHERMAL_VENT</Description>
+			<Civilopedia>TXT_KEY_BONUS_HYDROTHERMAL_VENT_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_PRODUCTION</BonusClassType>
+			<ArtDefineTag>ART_DEF_BONUS_HYDROTHERMAL_VENT</ArtDefineTag>
 			<TechReveal>TECH_VOLCANOLOGY</TechReveal>
 			<TechCityTrade>TECH_VOLCANOLOGY</TechCityTrade>
 			<YieldChanges>
@@ -11188,7 +11270,6 @@
 				<iYieldChange>2</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<iHappiness>1</iHappiness>
 			<iPlacementOrder>6</iPlacementOrder>
 			<iConstAppearance>500</iConstAppearance>
 			<iMinAreaSize>10</iMinAreaSize>
@@ -11199,8 +11280,8 @@
 				<iRandApp4>50</iRandApp4>
 			</Rands>
 			<iTilesPer>100</iTilesPer>
-			<iGroupRange>1</iGroupRange>
-			<iGroupRand>50</iGroupRand>
+			<iGroupRange>2</iGroupRange>
+			<iGroupRand>8</iGroupRand>
 			<bArea>1</bArea>
 			<bNormalize>1</bNormalize>
 			<TerrainBooleans>
@@ -11314,7 +11395,7 @@
 			<Type>BONUS_METHANE_ICE</Type>
 			<Description>TXT_KEY_BONUS_METHANE_ICE</Description>
 			<Civilopedia>TXT_KEY_BONUS_METHANE_ICE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_FUEL</BonusClassType>
+			<BonusClassType>BONUSCLASS_STRATEGIC</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_METHANE_ICE</ArtDefineTag>
 			<TechReveal>TECH_MODERN_SEISMOLOGY</TechReveal>
 			<TechCityTrade>TECH_SUPERSTRONG_ALLOYS</TechCityTrade>
@@ -11447,7 +11528,7 @@
 			<Type>BONUS_NATURAL_GAS</Type>
 			<Description>TXT_KEY_BONUS_NATURAL_GAS</Description>
 			<Civilopedia>TXT_KEY_BONUS_NATURAL_GAS_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_STRATEGIC</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_NATURAL_GAS</ArtDefineTag>
 			<TechReveal>TECH_SCIENTIFIC_METHOD</TechReveal>
 			<TechCityTrade>TECH_REFINING</TechCityTrade>
@@ -11456,7 +11537,6 @@
 				<iYieldChange>2</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<iHealth>1</iHealth>
 			<iPlacementOrder>6</iPlacementOrder>
 			<iConstAppearance>100</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
@@ -11815,7 +11895,7 @@
 			<Type>BONUS_OIL</Type>
 			<Description>TXT_KEY_BONUS_OIL</Description>
 			<Civilopedia>TXT_KEY_BONUS_OIL_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_FUEL</BonusClassType>
+			<BonusClassType>BONUSCLASS_STRATEGIC</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_OIL</ArtDefineTag>
 			<TechReveal>TECH_SCIENTIFIC_METHOD</TechReveal>
 			<TechCityTrade>TECH_REFINING</TechCityTrade>
@@ -11824,7 +11904,7 @@
 				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>20</iAITradeModifier>
-			<iHealth>-1</iHealth>
+			<iPlacementOrder>1</iPlacementOrder>
 			<iConstAppearance>400</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<Rands>
@@ -12180,7 +12260,7 @@
 			<Type>BONUS_GEOTHERMAL_ENERGY</Type>
 			<Description>TXT_KEY_BONUS_GEOTHERMAL_ENERGY</Description>
 			<Civilopedia>TXT_KEY_BONUS_GEOTHERMAL_ENERGY_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MODERN</BonusClassType>
+			<BonusClassType>BONUSCLASS_PRODUCTION</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_GEOTHERMAL_ENERGY</ArtDefineTag>
 			<TechReveal>TECH_MODERN_SEISMOLOGY</TechReveal>
 			<TechCityTrade>TECH_ECOLOGICAL_ENGINEERING</TechCityTrade>
@@ -12461,7 +12541,7 @@
 			<Type>BONUS_CARBON_DIOXIDE_ICE</Type>
 			<Description>TXT_KEY_BONUS_CARBON_DIOXIDE_ICE</Description>
 			<Civilopedia>TXT_KEY_BONUS_CARBON_DIOXIDE_ICE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_MISC</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_CARBON_DIOXIDE_ICE</ArtDefineTag>
 			<TechReveal>TECH_ASTROGEOLOGY</TechReveal>
 			<TechCityTrade>TECH_ASTROGEOLOGY</TechCityTrade>
@@ -12491,7 +12571,7 @@
 			<Type>BONUS_HELIUM3</Type>
 			<Description>TXT_KEY_BONUS_HELIUM3</Description>
 			<Civilopedia>TXT_KEY_BONUS_HELIUM3_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_MISC</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HELIUM3</ArtDefineTag>
 			<TechReveal>TECH_ASTROGEOLOGY</TechReveal>
 			<TechCityTrade>TECH_ASTROGEOLOGY</TechCityTrade>
@@ -12531,7 +12611,7 @@
 			<Type>BONUS_QUANTONIUM_CRYSTAL</Type>
 			<Description>TXT_KEY_BONUS_QUANTONIUM_CRYSTAL</Description>
 			<Civilopedia>TXT_KEY_BONUS_QUANTONIUM_CRYSTAL_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_MISC</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_QUANTONIUM_CRYSTAL</ArtDefineTag>
 			<TechReveal>TECH_3D_PROJECTIONS</TechReveal>
 			<TechCityTrade>TECH_3D_PROJECTIONS</TechCityTrade>
@@ -12554,18 +12634,12 @@
 			<bFlatlands>1</bFlatlands>
 			<bNoRiverSide>1</bNoRiverSide>
 			<bNormalize>1</bNormalize>
-			<FeatureBooleans>
-				<FeatureBoolean>
-					<FeatureType>FEATURE_ASTEROIDS</FeatureType>
-					<bFeature>1</bFeature>
-				</FeatureBoolean>
-			</FeatureBooleans>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ANCIENT_RELICS</Type>
 			<Description>TXT_KEY_BONUS_ANCIENT_RELICS</Description>
 			<Civilopedia>TXT_KEY_BONUS_ANCIENT_RELICS_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_MISC</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ANCIENT_RELICS</ArtDefineTag>
 			<TechReveal>TECH_ARCHEOLOGY</TechReveal>
 			<TechCityTrade>TECH_ARCHEOLOGY</TechCityTrade>

@@ -7,7 +7,6 @@
 <Civ4UnitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_HELLSMOUTH_DOG</Class>
 			<Type>UNIT_HELLSMOUTH_DOG</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -66,7 +65,9 @@
 			</UnitAIs>
 			<PrereqTech>TECH_FUNDAMENTALISM</PrereqTech>
 			<BonusType>BONUS_DOG</BonusType>
-			<PrereqBuilding>BUILDING_HELLSMOUTH_SANCTUARY</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_HELLSMOUTH_SANCTUARY</BuildingType>
+			</PrereqAndBuildings>
 			<ReligionType>RELIGION_VOODOO</ReligionType>
 			<StateReligion>RELIGION_VOODOO</StateReligion>
 			<PrereqReligion>RELIGION_VOODOO</PrereqReligion>
@@ -125,7 +126,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_UNDEAD_WORKER</Class>
 			<Type>UNIT_UNDEAD_WORKER</Type>
 			<Capture>UNIT_WORKER</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
@@ -206,6 +206,10 @@
 				</Build>
 				<Build>
 					<BuildType>BUILD_SHAFT_MINE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -364,7 +368,9 @@
 			<ReligionType>RELIGION_VOODOO</ReligionType>
 			<StateReligion>RELIGION_VOODOO</StateReligion>
 			<PrereqReligion>RELIGION_VOODOO</PrereqReligion>
-			<PrereqBuilding>BUILDING_VOODOO_MONASTERY</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_VOODOO_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
 			<iCost>250</iCost>
 			<iMoves>2</iMoves>
 			<iWorkRate>150</iWorkRate>
@@ -384,7 +390,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_VOODOO_MISSIONARY</Class>
 			<Type>UNIT_VOODOO_MISSIONARY</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_VOODOO_MISSIONARY</Capture>
@@ -411,7 +416,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_VOODOO</PrereqReligion>
-			<PrereqBuilding>BUILDING_VOODOO_MONASTERY</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_VOODOO_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>

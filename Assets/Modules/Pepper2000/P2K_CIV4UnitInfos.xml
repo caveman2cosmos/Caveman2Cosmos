@@ -8,168 +8,144 @@
 	<UnitInfos>
 		<!-- Map Category fix -->
  <!--	   <UnitInfo>
-			<Class>UNITCLASS_TAMED_PANTHER</Class>
 			<Type>UNIT_TAMED_PANTHER</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_LION</Class>
 			<Type>UNIT_TAMED_LION</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_CAMEL</Class>
 			<Type>UNIT_TAMED_CAMEL</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_LLAMA</Class>
 			<Type>UNIT_TAMED_LLAMA</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_DONKEY</Class>
 			<Type>UNIT_TAMED_DONKEY</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_HORSE</Class>
 			<Type>UNIT_TAMED_HORSE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_BISON</Class>
 			<Type>UNIT_TAMED_BISON</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_BUFFALO</Class>
 			<Type>UNIT_TAMED_BUFFALO</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_CATTLE</Class>
 			<Type>UNIT_TAMED_CATTLE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_MUSKOX</Class>
 			<Type>UNIT_TAMED_MUSKOX</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_AARDVARK</Class>
 			<Type>UNIT_TAMED_AARDVARK</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_BOAR</Class>
 			<Type>UNIT_TAMED_BOAR</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_MAMMOTH</Class>
 			<Type>UNIT_TAMED_MAMMOTH</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_ORGANIC_INFANTRY</Class>
 			<Type>UNIT_ORGANIC_INFANTRY</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_DONKEY_PAIR</Class>
 			<Type>UNIT_TAMED_DONKEY_PAIR</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_HORSE_PAIR</Class>
 			<Type>UNIT_TAMED_HORSE_PAIR</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_WOLF_PAIR</Class>
 			<Type>UNIT_TAMED_WOLF_PAIR</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_HASHISHIN</Class>
 			<Type>UNIT_HASHISHIN</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SHAOLINMK</Class>
 			<Type>UNIT_SHAOLINMK</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_GREAT_FARMER</Class>
 			<Type>UNIT_GREAT_FARMER</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_LIZARD</Class>
 			<Type>UNIT_TAMED_LIZARD</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_SNAKE</Class>
 			<Type>UNIT_TAMED_SNAKE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_ALBANIAN_JANISSARY</Class>
 			<Type>UNIT_ALBANIAN_JANISSARY</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 		</UnitInfo>-->
 		<UnitInfo>
-			<Class>UNITCLASS_CONSTRUCTION_SHIP</Class>
 			<Type>UNIT_CONSTRUCTION_SHIP</Type>
 			<Capture>UNIT_GATHERER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -273,7 +249,9 @@
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
-			<PrereqBuilding>BUILDING_COMMERCIAL_SPACEPORT</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_LUNAR_BASES</PrereqTech>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
 			<iCost>2700</iCost>
@@ -296,7 +274,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUPPLY_SHIP</Class>
 			<Type>UNIT_SUPPLY_SHIP</Type>
 			<Capture>UNIT_GATHERER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -335,7 +312,9 @@
 				<BuildingType>BUILDING_LUNAR_FERTILIZER_STORAGE</BuildingType>
 				<BuildingType>BUILDING_LUNAR_SOLAR_PANELS</BuildingType>
 			</Buildings>
-			<PrereqBuilding>BUILDING_COMMERCIAL_SPACEPORT</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
 			<iCost>4850</iCost>
@@ -400,7 +379,6 @@
 		</UnitInfo>
 		<!-- Lunar launch mission for Lunar Rover-->
 		<UnitInfo>
-			<Class>UNITCLASS_LUNAR_ROVER</Class>
 			<Type>UNIT_LUNAR_ROVER</Type>
 			<Help>TXT_KEY_UNIT_SPACEUNIT_HOVER</Help>
 			<MapCategoryTypes>
@@ -491,7 +469,6 @@
 		</UnitInfo>
 		<!-- New settler units-->
 		<UnitInfo>
-			<Class>UNITCLASS_CISLUNARSETTLER</Class>
 			<Type>UNIT_CISLUNARSETTLER</Type>
 			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
@@ -525,7 +502,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_ORBITAL_FACTORY</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<iCost>1000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -583,7 +562,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_LUNARSETTLER</Class>
 			<Type>UNIT_LUNARSETTLER</Type>
 			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
@@ -618,7 +596,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_ORBITAL_FACTORY</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
 			<iCost>1000</iCost>
@@ -681,7 +661,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_PLANETARYSETTLER</Class>
 			<Type>UNIT_PLANETARYSETTLER</Type>
 			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
@@ -722,7 +701,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_ORBITAL_FACTORY</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_PLANETARY_COLONIZATION</PrereqTech>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
 			<iCost>1000</iCost>
@@ -781,7 +762,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_ONEILLSETTLER</Class>
 			<Type>UNIT_ONEILLSETTLER</Type>
 			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
@@ -902,7 +882,6 @@
 			</Actions>
 		</UnitInfo>
 			<UnitInfo>
-			<Class>UNITCLASS_WORLDSHIP</Class>
 			<Type>UNIT_WORLDSHIP</Type>
 			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
@@ -939,7 +918,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_ORBITAL_SPACECRAFT_FACTORY</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ORBITAL_SPACECRAFT_FACTORY</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_INTERSTELLAR_TRAVEL</PrereqTech>
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -997,7 +978,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_WORLDSHIP2</Class>
 			<Type>UNIT_WORLDSHIP2</Type>
 			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
@@ -1045,7 +1025,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_INTERSTELLAR_STARPORT</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_INTERSTELLAR_STARPORT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ADVANCED_SEEDSHIPS</PrereqTech>
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -1103,7 +1085,6 @@
 			</Actions>
 		</UnitInfo>
 			<UnitInfo>
-			<Class>UNITCLASS_WORLDSHIP3</Class>
 			<Type>UNIT_WORLDSHIP3</Type>
 			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
@@ -1227,7 +1208,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_WORLDSHIP4</Class>
 			<Type>UNIT_WORLDSHIP4</Type>
 			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
@@ -1332,7 +1312,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_HYPERSHIP</Class>
 			<Type>UNIT_HYPERSHIP</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
@@ -1452,7 +1431,6 @@
 			</Actions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_ATTACKSHIP</Class>
 			<Type>UNIT_ATTACKSHIP</Type>
 			<Combat>UNITCOMBAT_NUCLEAR_SPACESHIP</Combat>
 			<Domain>DOMAIN_LAND</Domain>
@@ -1472,7 +1450,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_ORBITAL_SPACECRAFT_FACTORY</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ORBITAL_SPACECRAFT_FACTORY</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_FUSION_SPACECRAFT</PrereqTech>
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -1507,7 +1487,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_CISLUNAR_INVADER</Class>
 			<Type>UNIT_CISLUNAR_INVADER</Type>
 			<Combat>UNITCOMBAT_EARLY_SPACESHIP</Combat>
 			<Domain>DOMAIN_LAND</Domain>
@@ -1527,7 +1506,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_ORBITAL_DRYDOCK</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ORBITAL_DRYDOCK</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_WARMACHINES</PrereqTech>
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -1562,7 +1543,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_INT_INVADER</Class>
 			<Type>UNIT_INT_INVADER</Type>
 			<Combat>UNITCOMBAT_ANTIMATTER_SPACESHIP</Combat>
 			<Domain>DOMAIN_LAND</Domain>
@@ -1582,7 +1562,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_INTERSTELLAR_COLONY</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_INTERSTELLAR_COLONY</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_WEAPONIZED_ANTIMATTER</PrereqTech>
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -1617,7 +1599,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_INT_BATTLECRUISER</Class>
 			<Type>UNIT_INT_BATTLECRUISER</Type>
 			<Combat>UNITCOMBAT_ANTIMATTER_SPACESHIP</Combat>
 			<Domain>DOMAIN_LAND</Domain>
@@ -1637,7 +1618,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_INTERSTELLAR_DEFENSIVE_PERIMETER</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_INTERSTELLAR_DEFENSIVE_PERIMETER</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_TRANSTANGIBLE_NEUTRINO_ACCELERATORS</PrereqTech>
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -1672,7 +1655,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_HYPER_BATTLECRUISER</Class>
 			<Type>UNIT_HYPER_BATTLECRUISER</Type>
 			<Combat>UNITCOMBAT_WORMHOLE_SPACESHIP</Combat>
 			<Domain>DOMAIN_LAND</Domain>
@@ -1689,7 +1671,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_ELECTROWEAK_STAR_BASE</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ELECTROWEAK_STAR_BASE</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_NEUTRONIUM</PrereqTech>
 			<BonusType>BONUS_NEUTRONIUM</BonusType>
 			<iCost>4850</iCost>
@@ -1725,7 +1709,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_CISLUNAR_INFANTRY</Class>
 			<Type>UNIT_CISLUNAR_INFANTRY</Type>
 			<Combat>UNITCOMBAT_ROBOT</Combat>
 			<SubCombatTypes>
@@ -1771,7 +1754,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_ORBITAL_FACTORY</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ELECTRIC_ARC_WEAPONRY</PrereqTech>
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -1807,7 +1792,6 @@
 			<FormationType>FORMATION_TYPE_RANGED</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_DEEPSPACE_INFANTRY</Class>
 			<Type>UNIT_DEEPSPACE_INFANTRY</Type>
 			<Combat>UNITCOMBAT_ROBOT</Combat>
 			<SubCombatTypes>
@@ -1853,7 +1837,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_DEEP_SPACE_MAGLEV</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_DEEP_SPACE_MAGLEV</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_BINARY_PSYCHOKINESIS</PrereqTech>
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -1895,7 +1881,6 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_WORLDSHIP_DEFENDER</Class>
 			<Type>UNIT_WORLDSHIP_DEFENDER</Type>
 			<Combat>UNITCOMBAT_ROBOT</Combat>
 			<SubCombatTypes>
@@ -1941,7 +1926,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_INTERSTELLAR_COLONY</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_INTERSTELLAR_COLONY</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_COLONY_GOVERNANCE</PrereqTech>
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -1983,7 +1970,6 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_LUNAR_INFANTRY</Class>
 			<Type>UNIT_LUNAR_INFANTRY</Type>
 			<Combat>UNITCOMBAT_ROBOT</Combat>
 			<SubCombatTypes>
@@ -2028,7 +2014,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_LUNAR_MANUFACTURING_PLANT</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_LUNAR_MANUFACTURING_PLANT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -2070,7 +2058,6 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_MARTIAN_INFANTRY</Class>
 			<Type>UNIT_MARTIAN_INFANTRY</Type>
 			<Combat>UNITCOMBAT_ROBOT</Combat>
 			<SubCombatTypes>
@@ -2115,7 +2102,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_MARS_HITECH</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_MARS_HITECH</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ION_BEAMS</PrereqTech>
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -2157,7 +2146,6 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_VENUS_INFANTRY</Class>
 			<Type>UNIT_VENUS_INFANTRY</Type>
 			<Combat>UNITCOMBAT_ROBOT</Combat>
 			<SubCombatTypes>
@@ -2202,7 +2190,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_VENUS_COLONY</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ION_BEAMS</PrereqTech>
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -2244,7 +2234,6 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_PLANETARY_INFANTRY</Class>
 			<Type>UNIT_PLANETARY_INFANTRY</Type>
 			<Combat>UNITCOMBAT_ROBOT</Combat>
 			<SubCombatTypes>
@@ -2330,7 +2319,6 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_HYPERSPACE_DEFENDER</Class>
 			<Type>UNIT_HYPERSPACE_DEFENDER</Type>
 			<Combat>UNITCOMBAT_ROBOT</Combat>
 			<SubCombatTypes>
@@ -2417,7 +2405,6 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_MARTIAN_WORKER</Class>
 			<Type>UNIT_MARTIAN_WORKER</Type>
 			<Capture>UNIT_MARTIAN_WORKER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -2493,7 +2480,9 @@
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
-			<PrereqBuilding>BUILDING_MARS_FACTORY</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_MARS_FACTORY</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SUPERSONIC_RAILS</PrereqTech>
 			<iCost>1500</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -2517,7 +2506,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_VENUS_WORKER</Class>
 			<Type>UNIT_VENUS_WORKER</Type>
 			<Capture>UNIT_VENUS_WORKER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -2565,7 +2553,9 @@
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
-			<PrereqBuilding>BUILDING_VENUS_CARBONWORKS</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_VENUS_CARBONWORKS</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SUPERSONIC_RAILS</PrereqTech>
 			<iCost>1500</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -2589,7 +2579,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_CISLUNAR_WORKER</Class>
 			<Type>UNIT_CISLUNAR_WORKER</Type>
 			<Capture>UNIT_CISLUNAR_WORKER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -2626,7 +2615,9 @@
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
-			<PrereqBuilding>BUILDING_DOCKING_BAY</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_DOCKING_BAY</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_COILGUN</PrereqTech>
 			<iCost>1000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -2650,7 +2641,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SOLAR_WORKER</Class>
 			<Type>UNIT_SOLAR_WORKER</Type>
 			<Capture>UNIT_SOLAR_WORKER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -2667,6 +2657,7 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_TITANIC</MapCategoryType>
 			</MapCategoryTypes>
@@ -2676,6 +2667,7 @@
 			<Strategy>TXT_KEY_UNIT_WORKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
+			<bCanMoveImpassable>1</bCanMoveImpassable>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_WORKER</UnitAIType>
@@ -2688,7 +2680,9 @@
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
-			<PrereqBuilding>BUILDING_HOUSING_WORKING_CLASS</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_HOUSING_WORKING_CLASS</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ASTROGATION_CONSTELLATION</PrereqTech>
 			<iCost>2000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -2712,7 +2706,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_MARSSETTLER</Class>
 			<Type>UNIT_MARSSETTLER</Type>
 			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
@@ -2743,7 +2736,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_MARS_FACTORY</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_MARS_FACTORY</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -2766,7 +2761,6 @@
 			</UnitMeshGroups>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_VENUS_SETTLER</Class>
 			<Type>UNIT_VENUS_SETTLER</Type>
 			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
@@ -2797,7 +2791,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_VENUS_CARBONWORKS</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_VENUS_CARBONWORKS</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
 			<iCost>3000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -2822,7 +2818,6 @@
 		</UnitInfo>
 		<!-- Solar Sail Workcraft -->
 		<UnitInfo>
-			<Class>UNITCLASS_SOLARSAIL_WORKER</Class>
 			<Type>UNIT_SOLARSAIL_WORKER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Capture>UNIT_SOLARSAIL_WORKER</Capture>
@@ -2922,7 +2917,9 @@
 					</ActionOutcomes>
 				</Action>
 			</Actions>
-			<PrereqBuilding>BUILDING_LAUNCH_SITE_EFFECT</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SOLAR_PROPULSION</PrereqTech>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -2946,7 +2943,6 @@
 		</UnitInfo>
 		<!-- Magsail Workcraft -->
 		<UnitInfo>
-			<Class>UNITCLASS_MAGSAIL_WORKER</Class>
 			<Type>UNIT_MAGSAIL_WORKER</Type>
 			<Capture>UNIT_MAGSAIL_WORKER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -3122,7 +3118,6 @@
 		</UnitInfo>
 		<!-- Nanoworker -->
 		<UnitInfo>
-			<Class>UNITCLASS_NANOWORKER</Class>
 			<Type>UNIT_NANOWORKER</Type>
 			<Capture>UNIT_NANOWORKER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -3272,7 +3267,9 @@
 					</ActionOutcomes>
 				</Action>
 			</Actions>
-			<PrereqBuilding>BUILDING_DEEP_SPACE_DOCKING_BAY</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_DEEP_SPACE_DOCKING_BAY</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_NANOTROIDS</PrereqTech>
 			<iCost>5000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -3297,7 +3294,6 @@
 		</UnitInfo>
 		<!-- Cosmic Worker -->
 		<UnitInfo>
-			<Class>UNITCLASS_COSMIC_WORKER</Class>
 			<Type>UNIT_COSMIC_WORKER</Type>
 			<Capture>UNIT_COSMIC_WORKER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -3592,7 +3588,6 @@
 		</UnitInfo>
 		<!-- Chronoform Ship -->
 		<UnitInfo>
-			<Class>UNITCLASS_CHRONOFORM_SHIP</Class>
 			<Type>UNIT_CHRONOFORM_SHIP</Type>
 			<Capture>UNIT_CHRONOFORM_SHIP</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -3709,7 +3704,9 @@
 					<PassableTech>TECH_HORIZON_BREAKING</PassableTech>
 				</TerrainPassableTech>
 			</TerrainPassableTechs>
-			<PrereqBuilding>BUILDING_CHRONOTON</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_CHRONOTON</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_STABLE_TIME_LOOPS</PrereqTech>
 			<iCost>5000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -3734,7 +3731,6 @@
 		</UnitInfo>
 		<!-- Space Work Crew -->
 		<UnitInfo>
-			<Class>UNITCLASS_SPACE_WORK_CREW</Class>
 			<Type>UNIT_SPACE_WORK_CREW</Type>
 			<Capture>UNIT_SPACE_WORK_CREW</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -3768,7 +3764,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_COMMERCIAL_SPACEPORT</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_MASS_DRIVER</PrereqTech>
 			<iCost>5000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -3794,7 +3792,6 @@
 		</UnitInfo>
 		<!-- Cybernetic Work Crew -->
 		<UnitInfo>
-			<Class>UNITCLASS_CYBERNETIC_WORK_CREW</Class>
 			<Type>UNIT_CYBERNETIC_WORK_CREW</Type>
 			<Capture>UNIT_CYBERNETIC_WORK_CREW</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -3832,7 +3829,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_MAGLEV_LAUNCH</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_MAGLEV_LAUNCH</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_NEURON_ENGINEERING</PrereqTech>
 			<iCost>5500</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -3858,7 +3857,6 @@
 		</UnitInfo>
 		<!-- Transhuman Work Crew -->
 		<UnitInfo>
-			<Class>UNITCLASS_TRANSHUMAN_WORK_CREW</Class>
 			<Type>UNIT_TRANSHUMAN_WORK_CREW</Type>
 			<Capture>UNIT_TRANSHUMAN_WORK_CREW</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -3898,7 +3896,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_STARPORT</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_STARPORT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_TRANSHUMANISM</PrereqTech>
 			<iCost>6000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -3924,7 +3924,6 @@
 		</UnitInfo>
 		<!-- Posthuman Work Crew -->
 		<UnitInfo>
-			<Class>UNITCLASS_POSTHUMAN_WORK_CREW</Class>
 			<Type>UNIT_POSTHUMAN_WORK_CREW</Type>
 			<Capture>UNIT_POSTHUMAN_WORK_CREW</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -3966,7 +3965,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_STARPORT</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_STARPORT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ASTROIMPERIALISM</PrereqTech>
 			<iCost>6500</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -3992,7 +3993,6 @@
 		</UnitInfo>
 		<!-- Cosmic Work Crew -->
 		<UnitInfo>
-			<Class>UNITCLASS_COSMIC_WORK_CREW</Class>
 			<Type>UNIT_COSMIC_WORK_CREW</Type>
 			<Capture>UNIT_COSMIC_WORK_CREW</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -4035,7 +4035,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_INTERGALACTIC_PORT</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_PORT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_GALACTIFORMING</PrereqTech>
 			<iCost>7000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -4061,7 +4063,6 @@
 		</UnitInfo>
 		<!-- Shapeshifting Work Crew -->
 		<UnitInfo>
-			<Class>UNITCLASS_SHAPESHIFTING_WORK_CREW</Class>
 			<Type>UNIT_SHAPESHIFTING_WORK_CREW</Type>
 			<Capture>UNIT_SHAPESHIFTING_WORK_CREW</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -4105,7 +4106,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_INTERGALACTIC_PORT</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_PORT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SHAPESHIFTING</PrereqTech>
 			<iCost>7500</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -4131,7 +4134,6 @@
 		</UnitInfo>
 		<!-- Hyperintelligent Work Crew -->
 		<UnitInfo>
-			<Class>UNITCLASS_HYPERINTELLIGENT_WORK_CREW</Class>
 			<Type>UNIT_HYPERINTELLIGENT_WORK_CREW</Type>
 			<Capture>UNIT_HYPERINTELLIGENT_WORK_CREW</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -4161,7 +4163,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_MICROWORMHOLE_BUILDING</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_MICROWORMHOLE_BUILDING</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_HYPERINTELLIGENCE</PrereqTech>
 			<iCost>8000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -4187,7 +4191,6 @@
 		</UnitInfo>
 		<!-- Bacteria Swarm -->
 		<UnitInfo>
-			<Class>UNITCLASS_BACTERIA_SWARM</Class>
 			<Type>UNIT_BACTERIA_SWARM</Type>
 			<Capture>UNIT_BACTERIA_SWARM</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -4245,7 +4248,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_WORLDHOUSE</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_WORLDHOUSE</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_DIRECTED_PANSPERMIA</PrereqTech>
 			<iCost>7500</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -4271,7 +4276,6 @@
 		</UnitInfo>
 		<!-- Life Swarm -->
 		<UnitInfo>
-			<Class>UNITCLASS_LIFE_SWARM</Class>
 			<Type>UNIT_LIFE_SWARM</Type>
 			<Capture>UNIT_LIFE_SWARM</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -4336,7 +4340,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_CHIRAL_FLEXIBLE_LIFEFORMS</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_CHIRAL_FLEXIBLE_LIFEFORMS</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_GRAND_UNIFICATION_BIOLOGY</PrereqTech>
 			<iCost>7500</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -4362,7 +4368,6 @@
 		</UnitInfo>
 		<!-- Energy Entity -->
 		<UnitInfo>
-			<Class>UNITCLASS_ENERGY_ENTITY</Class>
 			<Type>UNIT_ENERGY_ENTITY</Type>
 			<Capture>UNIT_ENERGY_ENTITY</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -4392,7 +4397,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_HYPERFACTORY</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_HYPERFACTORY</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SENTIENT_ENERGY_FIELDS</PrereqTech>
 			<iCost>7500</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -4418,7 +4425,6 @@
 		</UnitInfo>
 		<!-- Satellite -->
 		<UnitInfo>
-			<Class>UNITCLASS_SATELLITE</Class>
 			<Type>UNIT_SATELLITE</Type>
 			<Capture>UNIT_SATELLITE</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -4531,7 +4537,9 @@
 					</ActionOutcomes>
 				</Action>
 			</Actions>
-			<PrereqBuilding>BUILDING_LAUNCH_SITE_EFFECT</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SATELLITES</PrereqTech>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -4554,7 +4562,6 @@
 		</UnitInfo>
 		<!-- Space Shuttle -->
 		<UnitInfo>
-			<Class>UNITCLASS_SPACE_SHUTTLE</Class>
 			<Type>UNIT_SPACE_SHUTTLE</Type>
 			<iMaxPlayerInstances>2</iMaxPlayerInstances>
 			<Capture>UNIT_SPACE_SHUTTLE</Capture>
@@ -4597,7 +4604,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_LAUNCH_SITE_EFFECT</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPACE_STATIONS</PrereqTech>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -4789,7 +4798,6 @@
 		</UnitInfo>
 		<!-- Planetary Probe -->
 		<UnitInfo>
-			<Class>UNITCLASS_PLANET_PROBE</Class>
 			<Type>UNIT_PLANET_PROBE</Type>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Capture>UNIT_PLANET_PROBE</Capture>
@@ -5393,7 +5401,9 @@
 					</ActionOutcomes>
 				</Action>
 			</Actions>
-			<PrereqBuilding>BUILDING_LAUNCH_SITE_EFFECT</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_PLANETARY_EXPLORATION</PrereqTech>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -5416,7 +5426,6 @@
 		</UnitInfo>
 		<!-- Interstellar Probe -->
 		<UnitInfo>
-			<Class>UNITCLASS_INTERSTELLAR_PROBE</Class>
 			<Type>UNIT_INTERSTELLAR_PROBE</Type>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Capture>UNIT_INTERSTELLAR_PROBE</Capture>
@@ -5596,7 +5605,9 @@
 					</ActionOutcomes>
 				</Action>
 			</Actions>
-			<PrereqBuilding>BUILDING_DEEP_SPACE_TELESCOPE</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_DEEP_SPACE_TELESCOPE</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ASTROGATION_CONSTELLATION</PrereqTech>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -5619,7 +5630,6 @@
 		</UnitInfo>
 		<!-- Bracewell Probe -->
 		<UnitInfo>
-			<Class>UNITCLASS_BRACEWELL_PROBE</Class>
 			<Type>UNIT_BRACEWELL_PROBE</Type>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Capture>UNIT_BRACEWELL_PROBE</Capture>
@@ -5754,7 +5764,9 @@
 					</ActionOutcomes>
 				</Action>
 			</Actions>
-			<PrereqBuilding>BUILDING_SELF_REPLICATING_FACTORY</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_SELF_REPLICATING_FACTORY</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ACNP_PROPULSION</PrereqTech>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -5777,7 +5789,6 @@
 		</UnitInfo>
 		<!-- Von Neumann Probe -->
 		<UnitInfo>
-			<Class>UNITCLASS_VON_NEUMANN_PROBE</Class>
 			<Type>UNIT_VON_NEUMANN_PROBE</Type>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Capture>UNIT_VON_NEUMANN_PROBE</Capture>
@@ -5880,7 +5891,9 @@
 					</ActionOutcomes>
 				</Action>
 			</Actions>
-			<PrereqBuilding>BUILDING_INTERSTELLAR_STARPORT</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_INTERSTELLAR_STARPORT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_FOLDING_SPACE</PrereqTech>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -5903,7 +5916,6 @@
 		</UnitInfo>
 		<!-- Quantum Probe -->
 		<UnitInfo>
-			<Class>UNITCLASS_QUANTUM_PROBE</Class>
 			<Type>UNIT_QUANTUM_PROBE</Type>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Capture>UNIT_QUANTUM_PROBE</Capture>
@@ -5973,7 +5985,9 @@
 					</ActionOutcomes>
 				</Action>
 			</Actions>
-			<PrereqBuilding>BUILDING_INTERGALACTIC_STARPORT</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_STARPORT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_QUANTUM_RAMJET</PrereqTech>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -5996,7 +6010,6 @@
 		</UnitInfo>
 		<!-- Interdimensional Probe -->
 		<UnitInfo>
-			<Class>UNITCLASS_INTERDIMENSIONAL_PROBE</Class>
 			<Type>UNIT_INTERDIMENSIONAL_PROBE</Type>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Capture>UNIT_INTERDIMENSIONAL_PROBE</Capture>
@@ -6099,7 +6112,9 @@
 					</ActionOutcomes>
 				</Action>
 			</Actions>
-			<PrereqBuilding>BUILDING_HORIZON_PORT</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_HORIZON_PORT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ENDLESS_EXPLORATION</PrereqTech>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -6122,7 +6137,6 @@
 		</UnitInfo>
 		<!-- Heavy Rocket -->
 		<UnitInfo>
-			<Class>UNITCLASS_HEAVY_ROCKET</Class>
 			<Type>UNIT_HEAVY_ROCKET</Type>
 			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Capture>UNIT_HEAVY_ROCKET</Capture>
@@ -6159,7 +6173,9 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_COMMERCIAL_SPACEPORT</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_COMMERCIAL_SPACEFLIGHT</PrereqTech>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -6447,7 +6463,6 @@
 		</UnitInfo>
 		<!-- Captured Asteroid -->
 		<UnitInfo>
-			<Class>UNITCLASS_CAPTURED_ASTEROID</Class>
 			<Type>UNIT_CAPTURED_ASTEROID</Type>
 			<Capture>UNIT_CAPTURED_ASTEROID</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -6503,7 +6518,9 @@
 			<PrereqTech>TECH_ASTEROID_BELT_PROBES</PrereqTech>
 			<iCost>2000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<PrereqBuilding>BUILDING_CERES_TRADING_POST</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_CERES_TRADING_POST</BuildingType>
+			</PrereqAndBuildings>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
@@ -6524,7 +6541,6 @@
 		</UnitInfo>
 		<!-- Captured Comet -->
 		<UnitInfo>
-			<Class>UNITCLASS_CAPTURED_COMET</Class>
 			<Type>UNIT_CAPTURED_COMET</Type>
 			<Capture>UNIT_CAPTURED_COMET</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -6580,7 +6596,9 @@
 			<PrereqTech>TECH_ASTEROID_EXTRACTION</PrereqTech>
 			<iCost>2000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
-			<PrereqBuilding>BUILDING_KBO_OUTPOST</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_KBO_OUTPOST</BuildingType>
+			</PrereqAndBuildings>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMoves>24</iMoves>
 			<iNukeRange>-1</iNukeRange>
@@ -6601,7 +6619,6 @@
 		</UnitInfo>
 		<!-- Interstellar Workcraft -->
 		<UnitInfo>
-			<Class>UNITCLASS_INTERSTELLAR_WORKER</Class>
 			<Type>UNIT_INTERSTELLAR_WORKER</Type>
 			<Capture>UNIT_INTERSTELLAR_WORKER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -6713,7 +6730,9 @@
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
-			<PrereqBuilding>BUILDING_PLANETARY_LANDING</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_INTERSTELLAR_TRADE</PrereqTech>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -6737,7 +6756,6 @@
 		</UnitInfo>
 		<!-- Reward units for planetary exploration -->
 		<UnitInfo>
-			<Class>UNITCLASS_LOE_REWARD</Class>
 			<Type>UNIT_LOE_REWARD</Type>
 			<Capture>UNIT_LOE_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -6815,7 +6833,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SS1_REWARD</Class>
 			<Type>UNIT_SS1_REWARD</Type>
 			<Capture>UNIT_SS1_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -6890,7 +6907,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SS2_REWARD</Class>
 			<Type>UNIT_SS2_REWARD</Type>
 			<Capture>UNIT_SS2_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -6967,7 +6983,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SS3_REWARD</Class>
 			<Type>UNIT_SS3_REWARD</Type>
 			<Capture>UNIT_SS3_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -7046,7 +7061,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_CISLUNAR_REWARD</Class>
 			<Type>UNIT_CISLUNAR_REWARD</Type>
 			<Capture>UNIT_CISLUNAR_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -7125,7 +7139,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_LUNAR_REWARD</Class>
 			<Type>UNIT_LUNAR_REWARD</Type>
 			<Capture>UNIT_LUNAR_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -7203,7 +7216,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_INNER_SOLAR_SYSTEM_REWARD</Class>
 			<Type>UNIT_INNER_SOLAR_SYSTEM_REWARD</Type>
 			<Capture>UNIT_INNER_SOLAR_SYSTEM_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -7283,7 +7295,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_OUTER_SOLAR_SYSTEM_REWARD</Class>
 			<Type>UNIT_OUTER_SOLAR_SYSTEM_REWARD</Type>
 			<Capture>UNIT_OUTER_SOLAR_SYSTEM_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -7358,7 +7369,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TRANSNEPTUNIAN_REWARD</Class>
 			<Type>UNIT_TRANSNEPTUNIAN_REWARD</Type>
 			<Capture>UNIT_TRANSNEPTUNIAN_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -7430,7 +7440,6 @@
 		</UnitInfo>
 		<!-- Interstellar Reward -->
 		<UnitInfo>
-			<Class>UNITCLASS_INTERSTELLAR_REWARD</Class>
 			<Type>UNIT_INTERSTELLAR_REWARD</Type>
 			<Capture>UNIT_INTERSTELLAR_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -7511,7 +7520,6 @@
 		</UnitInfo>
 		<!-- Galactic Reward -->
 		<UnitInfo>
-			<Class>UNITCLASS_GALACTIC_REWARD</Class>
 			<Type>UNIT_GALACTIC_REWARD</Type>
 			<Capture>UNIT_GALACTIC_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -7593,7 +7601,6 @@
 		</UnitInfo>
 		<!-- Intergalactic Reward -->
 		<UnitInfo>
-			<Class>UNITCLASS_INTERGALACTIC_REWARD</Class>
 			<Type>UNIT_INTERGALACTIC_REWARD</Type>
 			<Capture>UNIT_INTERGALACTIC_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -7675,7 +7682,6 @@
 		</UnitInfo>
 		<!-- Mercury Reward -->
 		<UnitInfo>
-			<Class>UNITCLASS_MERCURY_REWARD</Class>
 			<Type>UNIT_MERCURY_REWARD</Type>
 			<Capture>UNIT_MERCURY_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -7749,7 +7755,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_VENUS_REWARD</Class>
 			<Type>UNIT_VENUS_REWARD</Type>
 			<Capture>UNIT_VENUS_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -7823,7 +7828,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_MARS_REWARD</Class>
 			<Type>UNIT_MARS_REWARD</Type>
 			<Capture>UNIT_MARS_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -7898,7 +7902,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_ASTEROID_REWARD</Class>
 			<Type>UNIT_ASTEROID_REWARD</Type>
 			<Capture>UNIT_ASTEROID_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -7972,7 +7975,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_JUPITER_REWARD</Class>
 			<Type>UNIT_JUPITER_REWARD</Type>
 			<Capture>UNIT_JUPITER_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -8046,7 +8048,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_EUROPA_REWARD</Class>
 			<Type>UNIT_EUROPA_REWARD</Type>
 			<Capture>UNIT_EUROPA_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -8121,7 +8122,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SATURN_REWARD</Class>
 			<Type>UNIT_SATURN_REWARD</Type>
 			<Capture>UNIT_SATURN_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -8195,7 +8195,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TITAN_REWARD</Class>
 			<Type>UNIT_TITAN_REWARD</Type>
 			<Capture>UNIT_TITAN_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -8269,7 +8268,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_URANUS_REWARD</Class>
 			<Type>UNIT_URANUS_REWARD</Type>
 			<Capture>UNIT_URANUS_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -8344,7 +8342,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_NEPTUNE_REWARD</Class>
 			<Type>UNIT_NEPTUNE_REWARD</Type>
 			<Capture>UNIT_NEPTUNE_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -8419,7 +8416,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_KBO_REWARD</Class>
 			<Type>UNIT_KBO_REWARD</Type>
 			<Capture>UNIT_KBO_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -8495,7 +8491,6 @@
 		</UnitInfo>
 		<!-- Sednoid Mission Reward-->
 		<UnitInfo>
-			<Class>UNITCLASS_SEDNOID_REWARD</Class>
 			<Type>UNIT_SEDNOID_REWARD</Type>
 			<Capture>UNIT_SEDNOID_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -8571,7 +8566,6 @@
 		</UnitInfo>
 		<!-- Exoplanet Mission Reward-->
 		<UnitInfo>
-			<Class>UNITCLASS_EXOPLANET_REWARD</Class>
 			<Type>UNIT_EXOPLANET_REWARD</Type>
 			<Capture>UNIT_EXOPLANET_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -8643,7 +8637,6 @@
 		</UnitInfo>
 		<!-- Oort Cloud Mission Reward-->
 		<UnitInfo>
-			<Class>UNITCLASS_OORT_CLOUD_REWARD</Class>
 			<Type>UNIT_OORT_CLOUD_REWARD</Type>
 			<Capture>UNIT_OORT_CLOUD_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -8715,7 +8708,6 @@
 		</UnitInfo>
 		<!-- Distant Cosmos Mission Reward-->
 		<UnitInfo>
-			<Class>UNITCLASS_DISTANT_COSMOS_REWARD</Class>
 			<Type>UNIT_DISTANT_COSMOS_REWARD</Type>
 			<Capture>UNIT_DISTANT_COSMOS_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -8787,7 +8779,6 @@
 		</UnitInfo>
 		<!-- Hyperspace Mission Reward-->
 		<UnitInfo>
-			<Class>UNITCLASS_HYPERSPACE_REWARD</Class>
 			<Type>UNIT_HYPERSPACE_REWARD</Type>
 			<Capture>UNIT_HYPERSPACE_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -8859,7 +8850,6 @@
 		</UnitInfo>
 		<!-- Multiverse Mission Reward-->
 		<UnitInfo>
-			<Class>UNITCLASS_MULTIVERSE_REWARD</Class>
 			<Type>UNIT_MULTIVERSE_REWARD</Type>
 			<Capture>UNIT_MULTIVERSE_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -8931,7 +8921,6 @@
 		</UnitInfo>
 		<!-- Ancient Civilization Mission Reward-->
 		<UnitInfo>
-			<Class>UNITCLASS_ANCIENT_CIVILIZATION_REWARD</Class>
 			<Type>UNIT_ANCIENT_CIVILIZATION_REWARD</Type>
 			<Capture>UNIT_ANCIENT_CIVILIZATION_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -9003,7 +8992,6 @@
 		</UnitInfo>
 		<!-- Solar System Life Mission Reward-->
 		<UnitInfo>
-			<Class>UNITCLASS_SOLAR_SYSTEM_LIFE_REWARD</Class>
 			<Type>UNIT_SOLAR_SYSTEM_LIFE_REWARD</Type>
 			<Capture>UNIT_SOLAR_SYSTEM_LIFE_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -9075,7 +9063,6 @@
 		</UnitInfo>
 		<!-- Interstellar Life Mission Reward-->
 		<UnitInfo>
-			<Class>UNITCLASS_INTERSTELLAR_LIFE_REWARD</Class>
 			<Type>UNIT_INTERSTELLAR_LIFE_REWARD</Type>
 			<Capture>UNIT_INTERSTELLAR_LIFE_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -9147,7 +9134,6 @@
 		</UnitInfo>
 		<!-- Galactic Core Mission Reward-->
 		<UnitInfo>
-			<Class>UNITCLASS_GALACTIC_CORE_REWARD</Class>
 			<Type>UNIT_GALACTIC_CORE_REWARD</Type>
 			<Capture>UNIT_GALACTIC_CORE_REWARD</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -9228,21 +9214,18 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_WARLORDVS</Class>
 			<Type>UNIT_WARLORDVS</Type>
 			<UnitUpgrades>
 				<UnitType>UNIT_WARLORDVIS</UnitType>
 			</UnitUpgrades>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_WARLORDV</Class>
 			<Type>UNIT_WARLORDV</Type>
 			<UnitUpgrades>
 				<UnitType>UNIT_WARLORDVI</UnitType>
 			</UnitUpgrades>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_WARLORDVIS</Class>
 			<Type>UNIT_WARLORDVIS</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_WARLORDVIS</Capture>
@@ -9305,7 +9288,6 @@
 			<iLeaderExperience>25</iLeaderExperience>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_WARLORDVIIS</Class>
 			<Type>UNIT_WARLORDVIIS</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_WARLORDVIIS</Capture>
@@ -9368,7 +9350,6 @@
 			<iLeaderExperience>25</iLeaderExperience>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_WARLORDVIIIS</Class>
 			<Type>UNIT_WARLORDVIIIS</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_WARLORDVIIIS</Capture>
@@ -9427,7 +9408,6 @@
 			<iLeaderExperience>25</iLeaderExperience>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_WARLORDVI</Class>
 			<Type>UNIT_WARLORDVI</Type>
 			<iMaxPlayerInstances>6</iMaxPlayerInstances>
 			<bUnlimitedException>1</bUnlimitedException>
@@ -9500,7 +9480,7 @@
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_GEMS</BonusType>
+					<BonusType>BONUS_GEMSTONE</BonusType>
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
@@ -9548,7 +9528,6 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_WARLORDVII</Class>
 			<Type>UNIT_WARLORDVII</Type>
 			<iMaxPlayerInstances>7</iMaxPlayerInstances>
 			<bUnlimitedException>1</bUnlimitedException>
@@ -9621,7 +9600,7 @@
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_GEMS</BonusType>
+					<BonusType>BONUS_GEMSTONE</BonusType>
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
@@ -9669,7 +9648,6 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_WARLORDVIII</Class>
 			<Type>UNIT_WARLORDVIII</Type>
 			<iMaxPlayerInstances>8</iMaxPlayerInstances>
 			<bUnlimitedException>1</bUnlimitedException>
@@ -9738,7 +9716,7 @@
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_GEMS</BonusType>
+					<BonusType>BONUS_GEMSTONE</BonusType>
 					<iProductonModifier>10</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
@@ -9786,7 +9764,6 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_ACVSAM</Class>
 			<Type>UNIT_ACVSAM</Type>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
@@ -9794,7 +9771,6 @@
 			</PrereqOrBuildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_HALFTRACK</Class>
 			<Type>UNIT_HALFTRACK</Type>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
@@ -9802,7 +9778,6 @@
 			</PrereqOrBuildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_LIGHT_AA</Class>
 			<Type>UNIT_LIGHT_AA</Type>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
@@ -9810,7 +9785,6 @@
 			</PrereqOrBuildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_NLOS_CANNON</Class>
 			<Type>UNIT_NLOS_CANNON</Type>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
@@ -9818,7 +9792,6 @@
 			</PrereqOrBuildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_ROCKET_ARTILLERY</Class>
 			<Type>UNIT_ROCKET_ARTILLERY</Type>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
@@ -9826,7 +9799,6 @@
 			</PrereqOrBuildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_MOBILE_ARTILLERY</Class>
 			<Type>UNIT_MOBILE_ARTILLERY</Type>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
@@ -9834,7 +9806,6 @@
 			</PrereqOrBuildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_ARTILLERY</Class>
 			<Type>UNIT_ARTILLERY</Type>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
@@ -9842,7 +9813,6 @@
 			</PrereqOrBuildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_LIGHT_ARTILLERY</Class>
 			<Type>UNIT_LIGHT_ARTILLERY</Type>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
@@ -9850,7 +9820,6 @@
 			</PrereqOrBuildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SAM_INFANTRY</Class>
 			<Type>UNIT_SAM_INFANTRY</Type>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
@@ -9858,7 +9827,6 @@
 			</PrereqOrBuildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_LUNAR_BULLDOZER</Class>
 			<Type>UNIT_LUNAR_BULLDOZER</Type>
 			<Capture>UNIT_LUNAR_BULLDOZER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -9915,7 +9883,9 @@
 				</Build>
 			</Builds>
 			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
-			<PrereqBuilding>BUILDING_LUNAR_ASSEMBLY_PLANT</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_LUNAR_ASSEMBLY_PLANT</BuildingType>
+			</PrereqAndBuildings>
 			<iCost>1700</iCost>
 			<iMoves>1</iMoves>
 			<iWorkRate>400</iWorkRate>
@@ -9936,7 +9906,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_LUNAR_WORKER</Class>
 			<Type>UNIT_LUNAR_WORKER</Type>
 			<Capture>UNIT_LUNAR_WORKER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
@@ -10020,7 +9989,9 @@
 					<bBuild>1</bBuild>
 				</Build>
 			</Builds>
-			<PrereqBuilding>BUILDING_LUNAR_DROID_FACTORY</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_LUNAR_DROID_FACTORY</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_ANDROIDS</PrereqTech>
 			<iCost>2000</iCost>
 			<iMoves>3</iMoves>
@@ -10041,7 +10012,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_REPLICATION_MECHANIC</Class>
 			<Type>UNIT_REPLICATION_MECHANIC</Type>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_3DPRINTING_MILL</BuildingType>
@@ -10053,7 +10023,6 @@
 			</PrereqOrBuildings>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_ASTRONAUTIC_TECHNICIAN</Class>
 			<Type>UNIT_ASTRONAUTIC_TECHNICIAN</Type>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_JET_AIRCRAFT_FACTORY</BuildingType>

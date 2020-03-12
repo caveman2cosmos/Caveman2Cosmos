@@ -8,7 +8,6 @@
 <Civ4BuildingInfos xmlns="x-schema:../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_AUYANTEPUI</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_AUYANTEPUI</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -27,7 +26,7 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -100,7 +99,6 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_GREAT_BARRIER_REEF</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_GREAT_BARRIER_REEF</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -135,7 +133,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -206,7 +204,6 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_MT_SINAI</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_MT_SINAI</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -225,7 +222,7 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -275,7 +272,6 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_MT_EVEREST</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_MT_EVEREST</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -294,7 +290,7 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -372,7 +368,6 @@
 			</TechSpecialistChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_MT_FUJI</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_MT_FUJI</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -393,7 +388,7 @@
 			</PrereqOrFeature>
 			<FreeBonus>BONUS_OBSIDIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -447,7 +442,6 @@
 			</TechSpecialistChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_BAIKAL</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_BAIKAL</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -467,7 +461,7 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<bProvidesFreshWater>1</bProvidesFreshWater>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -529,7 +523,6 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_BARRINGER_CRATER</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_BARRINGER_CRATER</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -548,7 +541,7 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -589,7 +582,6 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_BASALT_ORGAN</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_BASALT_ORGAN</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -610,7 +602,7 @@
 			</PrereqOrFeature>
 			<FreeBonus>BONUS_GRASS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -653,7 +645,6 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_DEVILS_TABLE</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_DEVILS_TABLE</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -672,7 +663,7 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -709,7 +700,6 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_SOPKA</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_SOPKA</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -728,7 +718,7 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -766,15 +756,14 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<GlobalBuildingClassProductionModifiers>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_CREATION_MYTH</BuildingClassType>
+			<GlobalBuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_CREATION_MYTH</BuildingType>
 					<iProductionModifier>100</iProductionModifier>
-				</BuildingClassProductionModifier>
-			</GlobalBuildingClassProductionModifiers>
+				</BuildingProductionModifier>
+			</GlobalBuildingProductionModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_KRAKATOA</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_KRAKATOA</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -801,7 +790,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -849,7 +838,6 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_NGORONGORO_CRATER</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_NGORONGORO_CRATER</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -869,7 +857,7 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<bProvidesFreshWater>1</bProvidesFreshWater>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -938,7 +926,6 @@
 			</TechHappinessChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_NUKUORO</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_NUKUORO</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -959,7 +946,7 @@
 			</PrereqOrFeature>
 			<FreeBonus>BONUS_CLAM</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -999,7 +986,6 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_PAMUKKALE</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_PAMUKKALE</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -1020,7 +1006,7 @@
 			</PrereqOrFeature>
 			<FreeBonus>BONUS_FLINT</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -1072,7 +1058,6 @@
 			</TechHealthChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_PRAVCICKA_BRANA</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_PRAVCICKA_BRANA</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -1091,7 +1076,7 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -1143,7 +1128,6 @@
 			</TechSpecialistChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_SHARK_BAY</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_SHARK_BAY</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -1162,7 +1146,7 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -1236,7 +1220,6 @@
 			</TechHappinessChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_SUGARLOAF</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_SUGARLOAF</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -1255,7 +1238,7 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -1282,7 +1265,6 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_ULURU</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_ULURU</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -1301,7 +1283,7 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>4</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -1350,15 +1332,14 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<bProvidesFreshWater>1</bProvidesFreshWater>
-			<GlobalBuildingClassProductionModifiers>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_CAVE_PAINTING</BuildingClassType>
+			<GlobalBuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_CAVE_PAINTING</BuildingType>
 					<iProductionModifier>100</iProductionModifier>
-				</BuildingClassProductionModifier>
-			</GlobalBuildingClassProductionModifiers>
+				</BuildingProductionModifier>
+			</GlobalBuildingProductionModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_VICTORIA_FALLS</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_VICTORIA_FALLS</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -1377,7 +1358,7 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -1446,7 +1427,6 @@
 			<bProvidesFreshWater>1</bProvidesFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_KILIMANJARO</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_KILIMANJARO</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -1465,7 +1445,7 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -1520,7 +1500,6 @@
 			<bProvidesFreshWater>1</bProvidesFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_DEAD_SEA</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_DEAD_SEA</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -1541,7 +1520,7 @@
 			</PrereqOrFeature>
 			<FreeBonus>BONUS_SALT</FreeBonus>
 			<iNumFreeBonuses>2</iNumFreeBonuses>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -1617,7 +1596,6 @@
 			</TechHealthChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_OASIS_MYTH</BuildingClass>
 			<Type>BUILDING_OASIS_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_OASIS_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
@@ -1633,16 +1611,10 @@
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_EARTH_MYTH_EFFECT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SEA_MYTH_EFFECT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_EARTH_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_OASIS</FeatureType>
@@ -1690,7 +1662,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FALL_MYTH</BuildingClass>
 			<Type>BUILDING_FALL_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_FALL_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
@@ -1706,16 +1677,10 @@
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_EARTH_MYTH_EFFECT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SKY_MYTH_EFFECT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_EARTH_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_SKY_MYTH_EFFECT</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_CRATER</FeatureType>
@@ -1777,7 +1742,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_OUTCROP_MYTH</BuildingClass>
 			<Type>BUILDING_OUTCROP_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_OUTCROP_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
@@ -1793,16 +1757,10 @@
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_EARTH_MYTH_EFFECT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SKY_MYTH_EFFECT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_EARTH_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_SKY_MYTH_EFFECT</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
@@ -1932,7 +1890,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_VOLCANO_MYTH</BuildingClass>
 			<Type>BUILDING_VOLCANO_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_VOLCANO_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
@@ -1948,16 +1905,10 @@
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_STONE_MYTH_EFFECT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_FIRE_MYTH_EFFECT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_STONE_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FIRE_MYTH_EFFECT</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_VOLCANO_ACTIVE</FeatureType>
@@ -2019,7 +1970,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CORAL_MYTH</BuildingClass>
 			<Type>BUILDING_CORAL_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_CORAL_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
@@ -2035,16 +1985,10 @@
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_STONE_MYTH_EFFECT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SEA_MYTH_EFFECT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_STONE_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_CORAL_REEF</FeatureType>
@@ -2114,7 +2058,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_REEF_MYTH</BuildingClass>
 			<Type>BUILDING_REEF_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_REEF_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
@@ -2130,16 +2073,10 @@
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_STONE_MYTH_EFFECT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SEA_MYTH_EFFECT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_STONE_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_REEF</FeatureType>

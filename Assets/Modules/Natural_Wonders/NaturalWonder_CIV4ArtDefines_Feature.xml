@@ -23,27 +23,6 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_GREAT_BARRIER</Type>
-			<bAnimated>1</bAnimated>
-			<bRiverArt>0</bRiverArt>
-			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
-			<LightType>LIGHT_TYPE_SUN</LightType>
-			<fScale>1.2</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<Button>Art/Terrain/Natural_Wonders/Great_Barrier/Coral.dds</Button>
-			<FeatureVariety>
-				<FeatureArtPieces>
-					<FeatureArtPiece>
-						<ModelFile>Art/Terrain/Natural_Wonders/Great_Barrier/wheat.nif</ModelFile>
-						<Connections />
-					</FeatureArtPiece>
-				</FeatureArtPieces>
-				<FeatureDummyNodes />
-				<bGenerateRotations>0</bGenerateRotations>
-				<VarietyButton>Art/Terrain/Natural_Wonders/Great_Barrier/Coral.dds</VarietyButton>
-			</FeatureVariety>
-		</FeatureArtInfo>
-		<FeatureArtInfo>
 			<Type>ART_DEF_FEATURE_EVEREST</Type>
 			<bAnimated>0</bAnimated>
 			<bRiverArt>0</bRiverArt>
