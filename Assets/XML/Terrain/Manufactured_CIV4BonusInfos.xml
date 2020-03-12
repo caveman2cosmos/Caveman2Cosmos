@@ -2823,7 +2823,7 @@
 		<BonusInfo>
 			<Type>BONUS_METAMATERIALS</Type>
 			<Description>TXT_KEY_BONUS_METAMATERIALS</Description>
-			<Civilopedia>TXT_KEY_BONUS_WARES_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BONUS_METAMATERIALS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_METAMATERIALS</ArtDefineTag>
 			<TechReveal>TECH_METAMATERIALS</TechReveal>
