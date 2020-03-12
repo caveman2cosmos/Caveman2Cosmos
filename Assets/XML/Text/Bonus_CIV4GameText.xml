@@ -5172,8 +5172,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_OLIVES_PEDIA</Tag>
-		<English>The olive is a species of small tree found in the Mediterranean Basin from Portugal to the Levant, the Arabian Peninsula, and southern Asia as far east as China, as well as the Canary Islands and Réunion. It is short and squat, and rarely exceeds 8-15 m (26-49 ft) in height. The olive's fruit, also called the olive, is a small drupe 1–2.5 cm (0.39–0.98 in) long, thinner-fleshed and smaller in wild plants than in orchard cultivars. Olives are harvested in the green to purple stage, and are of major agricultural importance in the Mediterranean region as the source of olive oil, being one of the core ingredients in Mediterranean cuisine.</English>
-		<Italian>L'olivo è una specie di piccolo albero che si trova nel bacino del Mediterraneo dal Portogallo al Levante, alla penisola arabica e all'Asia meridionale fino all'estremo oriente della Cina, nonché alle Isole Canarie e alla Riunione. È corto e tozzo  e raramente supera gli 8-15 m di altezza. Il frutto dell'olivo, chiamato oliva, è una piccola drupa lunga 1-2,5 cm, a polpa più sottile e più piccola nelle piante selvatiche rispetto alle cultivar di frutteto. Le olive vengono raccolte quando hanno il tipico colorito da verde a viola e sono di grande importanza agricola nella regione mediterranea come fonte di olio d'oliva, essendo uno degli ingredienti fondamentali della cucina mediterranea.</Italian>
+		<English>Olives are the fruits of the olive tree, a short and squat tree found in the Mediterranean Basin, the Arabian Peninsula, and southern Asia, that rarely exceeds 8-15 m (26-49 ft) in height. Olives are small drupes, 1–2.5 cm (0.39–0.98 in) long, thinner-fleshed and smaller in wild plants than in orchard cultivars. Olives are harvested in the green to purple stage, and are of major agricultural importance in the Mediterranean region as the source of olive oil, being one of the core ingredients in Mediterranean cuisine.</English>
+		<Italian>Le olive sono i frutti dell'albero di olivo, un albero corto e tozzo che si trova nel bacino del Mediterraneo, nella penisola arabica e in Asia meridionale, che raramente supera gli 8-15 m di altezza. Le olive sono piccole drupe, lunghe 1-2,5 cm, a polpa più sottile e più piccole nelle piante selvatiche rispetto alle cultivar di frutteto. Le olive vengono raccolte quando hanno il tipico colorito da verde a viola e sono di grande importanza agricola nella regione mediterranea come fonte di olio d'oliva, essendo uno degli ingredienti fondamentali della cucina mediterranea.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_OLMEC</Tag>
@@ -5209,8 +5209,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_OMEGA_FATTY_ACID_PEDIA</Tag>
-		<English>In chemistry, and especially in biochemistry, a fatty acid is a carboxylic acid with a long aliphatic tail (chain), which is either saturated or unsaturated. Most naturally occurring fatty acids have a chain of an even number of carbon atoms, from 4 to 28. Fatty acids are usually derived from triglycerides or phospholipids. When they are not attached to other molecules, they are known as "free" fatty acids. Fatty acids are important sources of fuel because, when metabolized, they yield large quantities of ATP. Many cell types can use either glucose or fatty acids for this purpose. In particular, heart and skeletal muscle prefer fatty acids. Despite long-standing assertions to the contrary, the brain can use fatty acids as a source of fuel in addition to glucose and ketone bodies.</English>
-		<Polish>Nienasycone kwasy tłuszczowe, których ostatnie wiązanie podwójne w łańcuchu węglowym znajduje się przy trzecim od końca atomie węgla. Do tej grupy należą m.in. wielonienasycone kwasy pełniące ważną rolę w odżywianiu człowieka:</Polish>
+		<English>Omega fatty acids are polyunsaturated fatty acids that contain more than one double bond in their backbone. They are widely distributed in nature, being important constituents of animal lipid metabolism, and they play an important role in the human diet and physiology, despite their bodies are not able to independently synthesize them.</English>
+		<Italian>Gli acidi grassi omega sono acidi grassi polinsaturi che contengono più di un doppio legame nella loro dorsale. Sono ampiamente distribuiti in natura, essendo importanti componenti del metabolismo lipidico animale e svolgono un ruolo importante nella dieta e nella fisiologia umana, nonostante i loro corpi non siano in grado di sintetizzarli in modo indipendente.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_OPHIR</Tag>
@@ -5227,7 +5227,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_OPIUM_PEDIA</Tag>
-		<English>The opium poppy (Papaver somniferum) is the type of poppy from which opium and all other refined opiates such as morphine can be extracted. The opium poppy probably originated in the eastern Mediterranean area and was subsequently spread to its modern range which covers much of southern Asia and beyond. Opium was used in the ancient Mediterranean for its medicinal qualities and as recreational narcotic. The use of the opium poppy most likely predates written history, but the first known historical occurrences of opium poppies are images found in ancient Sumerian artefacts dating to approximately 4000 B.C. Use of the opium poppy spread and by the 5th century B.C. was also known to the Greeks, who gave opium its current name.</English>
+		<English>Opium, or poppy tears, is dried latex obtained from the seed capsules of the opium poppy. Approximately 12% of opium is made up of morphine, which is processed chemically to produce heroin and other synthetic opioids for medicinal use and for illegal drug trade. The latex also contains the closely related opiates codeine and thebaine, and non-analgesic alkaloids such as papaverine and noscapine. In its legal uses, it is used (in controlled doses) for treatment of neuropathic pain and other forms of chronic pain, and on a smaller scale, to treat diarrhea.</English>
+		<Italian>L'oppio, o lacrime di papavero, è il lattice essiccato ottenuto dalle capsule di semi del papavero da oppio. Circa il 12% dell'oppio è costituito da morfina, che viene poi elaborata chimicamente per produrre eroina e altri oppioidi sintetici per uso medicinale e per il commercio illegale di droghe. Il lattice contiene anche codeina e tebaina, oppiacei strettamente correlati, e alcaloidi non analgesici come papaverina e noscapina. Nei suoi usi legali, è usato (in dosi controllate) per il trattamento di dolori neuropatici, di altre forme di dolore cronico e, su scala ridotta, per il trattamento della diarrea.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ORANG_ASLI</Tag>
@@ -5243,8 +5244,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ORGANIC_COMPUTERS_PEDIA</Tag>
-		<English>Organic computing is a form of biologically-inspired computing with organic properties. It has emerged recently as a challenging vision for future information processing systems. Organic Computing is based on the insight that we will soon be surrounded by large collections of autonomous systems, which are equipped with sensors and actuators, aware of their environment, communicate freely, and organise themselves in order to perform the actions and services that seem to be required.</English>
-		<Polish>Nanotechnologia, genetyka i robotyka uchodzą za trzy kluczowe dziedziny przyszłości. Być może przy wielkoszlemowym stoliku rozwojowej rozgrywki nowego stulecia znajdzie się też miejsce dla czwartej damy: informatyki biochemicznej. Również w elektronice niedościgłym wzorem dla działań człowieka pozostaje natura. W końcu każdy mikroprocesor usiłuje naśladować mózg ludzki, a przecież przepływ informacji w naszym organizmie nie korzysta z krzemowych półprzewodników, ale ze związków białkowych. Czy nie warto byłoby się zastanowić nad możliwościami budowy biokomputera ze związków organicznych, podobnych do tych, z jakich składa się człowiek?</Polish>
+		<English>An organic computer is a computer composed of organic material such as living neurons. First theorized at the end of 20th century, organic computers are capable, in a way, of "thinking for themselves" because of the dynamic nature of neurons: unlike conventional materials which operate in binary (on/off), a neuron can shift between thousands of states, constantly altering its chemical conformation, and in the end having significant advantages for generating patterns and computing higher order functions like memory, arithmetic logic, and input/output operations.</English>
+		<Italian>Un computer organico è un computer composto da materiale organico come neuroni viventi. Teorizzato per la prima volta alla fine del XX secolo, i computer organici sono in grado, in un certo senso, di "pensare da soli" a causa della natura dinamica dei neuroni: a differenza dei materiali convenzionali che operano in forma binaria (I/O), un neurone può variare tra migliaia di stati, alterando costantemente la sua conformazione chimica e presentando vantaggi significativi per la generazione di schemi e il calcolo di funzioni di ordine superiore come memoria, logica aritmetica e operazioni di input/output.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ORGANIC_PHOTONIC_CELLS</Tag>
@@ -5255,8 +5256,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ORGANIC_PHOTONIC_CELLS_PEDIA</Tag>
-		<English>An organic solar cell or plastic solar cell is a type of polymer solar cell that uses organic electronics, a branch of electronics that deals with conductive organic polymers or small organic molecules, for light absorption and charge transport to produce electricity from sunlight by the photovoltaic effect. The plastic used in organic solar cells has low production costs in high volumes. Combined with the flexibility of organic molecules, organic solar cells are potentially cost-effective for photovoltaic applications. Molecular engineering (e.g. changing the length and functional group of polymers) can change the energy gap, which allows chemical change in these materials. The optical absorption coefficient of organic molecules is high, so a large amount of light can be absorbed with a small amount of materials. The main disadvantages associated with organic photovoltaic cells are low efficiency, low stability and low strength compared to inorganic photovoltaic cells.</English>
-		<Polish>Ogniwo galwaniczne - układ złożony z dwóch elektrod zanurzonych w elektrolicie (dwa półogniwa). Zródłem różnicy potencjałów elektrod są reakcje chemiczne, zachodzące między elektrodami a elektrolitem. Gdy przez ogniwo nie płynie prąd (ogniwo otwarte), różnica potencjałów jest równa sile elektromotorycznej (SEM). Zamknięcie obwodu elektrycznego umożliwia przepływ ładunków i pojawienie się nadnapięcia, wskutek polaryzacji elektrod.</Polish>
+		<English>An organic photonic cell, or organic photonic crystal, is an organic-based periodic optical nanostructure that affects the motion of photons in much the same way that ionic lattices affect electrons in solids. These cells can be fabricated for one, two, or three dimensions, and are basically used wherever light must be manipulated. Existing applications include thin-film optics with coatings for lenses, optical computers, nonlinear devices, and photovoltaic cells.</English>
+		<Italian>Una cellula fotonica organica, o cristallo fotonico organico, è una nanostruttura ottica periodica a base organica che influenza il movimento dei fotoni nello stesso modo in cui i reticoli ionici influenzano gli elettroni nei solidi. Queste celle possono essere fabbricate in una, due o tre dimensioni e sono fondamentalmente utilizzate ovunque sia necessario manipolare la luce. Le applicazioni esistenti includono ottiche a film sottile con rivestimenti per obiettivi, computer ottici, dispositivi non lineari e celle fotovoltaiche.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ORICHALCUM</Tag>
@@ -7818,9 +7819,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WARES_PEDIA</Tag>
-		<English>Metal wares are made from different types of metals and make different types of metal objects, such as tools, utensils, cookware, weapons, parts, pipes, etc.</English>
-		<Italian>Gli utensili in metallo utilizzano diversi materiali a seconda degli oggetti da costruire, come pentole da cucina, armi, tubi...</Italian>
-		<Polish>Dobro materialne ogólnie jest tym wszystkim, co dana jednostka ludzka może gromadzić wokół siebie tworząc własne środowisko materialne.</Polish>
+		<English>Wares are manufactured objects and items, made from different types of metals or materials. They serve a number of uses, depending on their material and their scope, such as tools, utensils, cookware, weapons, parts, pipes, etc.</English>
+		<Italian>Questo tipo di oggetti vengono fabbricati e realizzati con diversi tipi di metalli o materiali. Possono servire per una serie di usi, a seconda del loro materiale e del loro scopo, come utensili, pentole, armi, parti, tubi, ecc.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WARI</Tag>
