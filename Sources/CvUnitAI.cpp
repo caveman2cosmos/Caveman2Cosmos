@@ -1142,12 +1142,6 @@ int CvUnitAI::AI_attackOddsAtPlotInternal(const CvPlot* pPlot, CvUnit* pDefender
 	int iNeededRoundsThem;
 	int iHitLimitThem;
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  02/21/10								jdog5000	  */
-/*																							  */
-/* Efficiency, Lead From Behind																 */
-/************************************************************************************************/
-
 	iOurStrength = ((getDomainType() == DOMAIN_AIR) ? airCurrCombatStr(NULL) : currCombatStr(NULL,NULL));
 	iOurFirepower = ((getDomainType() == DOMAIN_AIR) ? iOurStrength : currFirepower(NULL,NULL));
 
@@ -1158,8 +1152,9 @@ int CvUnitAI::AI_attackOddsAtPlotInternal(const CvPlot* pPlot, CvUnit* pDefender
 
 	int iTheirOdds;
 
+	const bool bSamePlot = pDefender->plot() == plot();
 
-	getDefenderCombatValues(*pDefender, pPlot, iOurStrength, iOurFirepower, iTheirOdds, iTheirStrength, iDamageToUs, iDamageToThem, NULL, pDefender);
+	getDefenderCombatValues(*pDefender, pPlot, iOurStrength, iOurFirepower, iTheirOdds, iTheirStrength, iDamageToUs, iDamageToThem, NULL, pDefender, bSamePlot);
 	iBaseOdds = 100 - iTheirOdds/10;	//	getDefenderCombatValues returns odds based on the combat die (which is 1000 sided)
 #if 0
 	iTheirStrength = pDefender->currCombatStr(pPlot, this);
@@ -1213,7 +1208,7 @@ int CvUnitAI::AI_attackOddsAtPlotInternal(const CvPlot* pPlot, CvUnit* pDefender
 		{
 			pDefender->AI_setPredictedHitPoints(std::max(0,pDefender->currHitPoints() - ((iOurFirstStrikesTimes2-iTheirFirstStrikesTimes2)*iDamageToThem*iBaseOdds)/200));
 
-			getDefenderCombatValues(*pDefender, pPlot, iOurStrength, iOurFirepower, iTheirOdds, iTheirStrength, iDamageToUs, iDamageToThem, NULL, pDefender);
+			getDefenderCombatValues(*pDefender, pPlot, iOurStrength, iOurFirepower, iTheirOdds, iTheirStrength, iDamageToUs, iDamageToThem, NULL, pDefender, bSamePlot);
 			iBaseOdds = 100 - iTheirOdds/10;
 
 			if (iTheirStrength == 0)
@@ -1241,7 +1236,7 @@ int CvUnitAI::AI_attackOddsAtPlotInternal(const CvPlot* pPlot, CvUnit* pDefender
 				return 1;
 			}
 
-			getDefenderCombatValues(*pDefender, pPlot, iOurStrength, iOurFirepower, iTheirOdds, iTheirStrength, iDamageToUs, iDamageToThem, NULL, pDefender);
+			getDefenderCombatValues(*pDefender, pPlot, iOurStrength, iOurFirepower, iTheirOdds, iTheirStrength, iDamageToUs, iDamageToThem, NULL, pDefender, bSamePlot);
 			iBaseOdds = 100 - iTheirOdds/10;
 		}
 	}
@@ -1259,11 +1254,6 @@ int CvUnitAI::AI_attackOddsAtPlotInternal(const CvPlot* pPlot, CvUnit* pDefender
 #if 0
 	if (getDomainType() != DOMAIN_AIR)
 	{
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  10/30/09					  Mongoose & jdog5000	 */
-/*																							  */
-/* Unit AI																					  */
-/************************************************************************************************/
 		// From Mongoose SDK
 		if (!pDefender->immuneToFirstStrikes()) {
 			iNeededRoundsUs   -= ((iBaseOdds * firstStrikes()) + ((iBaseOdds * chanceFirstStrikes()) / 2)) / 100;
@@ -1273,9 +1263,6 @@ int CvUnitAI::AI_attackOddsAtPlotInternal(const CvPlot* pPlot, CvUnit* pDefender
 		}
 		iNeededRoundsUs   = std::max(1, iNeededRoundsUs);
 		iNeededRoundsThem = std::max(1, iNeededRoundsThem);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
 	}
 #endif
 
@@ -1415,16 +1402,9 @@ int CvUnitAI::AI_attackOddsAtPlotInternal(const CvPlot* pPlot, CvUnit* pDefender
 		AI_setPredictedHitPoints(-1);
 		pDefender->AI_setPredictedHitPoints(-1);
 	}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  10/30/09					  Mongoose & jdog5000	 */
-/*																							  */
-/* Unit AI																					  */
-/************************************************************************************************/
+
 	// From Mongoose SDK
 	return range(iOdds, 1, 99);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
 }
 
 
