@@ -166,7 +166,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ALMONDS_PEDIA</Tag>
-		<English>The almond is a species of tree native to the Middle East and South Asia, and one of the oldest domesticated fruit trees. Almond is also the name of the edible, and widely cultivated, seed of this tree. The fruit of the almond is a drupe, consisting of a green outer hull (that usually separates from the shell when the drupe matures) and a hard shell, with the seed ("nut") inside. Almond seeds are commonly sold with or without their shell, and are widely used as a food and as an ingredient (mostly in pastry).</English>
+		<English>An almond is the edible, and widely cultivated, seed of the almond tree, a species of tree native to the Middle East and South Asia, and one of the oldest domesticated fruit trees. An almond consists of a green outer hull (that usually separates from the shell when the drupe matures) and a hard shell, with the seed ("nut") inside. Almond seeds are commonly sold with or without their shell, and are widely used as a food and as an ingredient (mostly in pastry).</English>
 		<Italian>La mandorla è il seme commestibile dell'albero di mandorlo, uno dei primissimi alberi da frutto che l'essere umano abbia mai coltivato. Il seme è contenuto in una drupa, composto da una parte esterna di colore verde (che solitamente si separa dal resto della drupa quando matura) e un guscio duro, all'interno del quale si trova il seme. Le mandorle vengono vendute sia con il guscio, sia senza e sono ampiamente utilizzate come cibo e come ingrediente per i dolci.</Italian>
 	</TEXT>
 	<TEXT>
@@ -1056,8 +1056,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CARBYNE_PEDIA</Tag>
-		<English>A carbyne is a general term for any compound whose molecular structure includes an electrically neutral carbon atom with three non-bonded electrons, connected to another atom by a single bond.</English>
-		<Italian>Un carbyne è un termine generico per qualsiasi composto la cui struttura molecolare comprende un atomo di carbonio elettricamente neutro con tre elettroni non legati, collegati a un altro atomo da un singolo legame.</Italian>
+		<English>Carbyne is a general term for any compound whose molecular structure includes an electrically neutral carbon atom with three non-bonded electrons, connected to another atom by a single bond.</English>
+		<Italian>Carbyne è un termine generico per qualsiasi composto la cui struttura molecolare comprende un atomo di carbonio elettricamente neutro con tre elettroni non legati, collegati a un altro atomo da un singolo legame.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CARCASS</Tag>
@@ -1182,8 +1182,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CEMENT_PEDIA</Tag>
-		<English>A cement is a binder, a substance used for construction that sets, hardens, and adheres to other materials to bind them together. Cement is seldom used on its own, but rather to bind sand and gravel (aggregate) together. Cement mixed with fine aggregate produces mortar for masonry, or with sand and gravel, produces concrete. Cement is the most widely used material in existence and is only behind water as the planet's most-consumed resource.</English>
-		<Italian>Un cemento è una sostanza legante usata per la costruzione che fissa, indurisce e aderisce ad altri materiali per legarli insieme. Il cemento viene usato raramente da solo, ma piuttosto per legare insieme sabbia e ghiaia. Il cemento miscelato con un aggregato fine (come la sabbia) produce malta per muratura, oppure con sabbia e ghiaia produce calcestruzzo. Il cemento è il materiale più ampiamente usato esistente ed è secondo solo all'acqua come risorsa più consumata del pianeta.</Italian>
+		<English>Cement is a binder, a substance used for construction that sets, hardens, and adheres to other materials to bind them together. Cement is seldom used on its own, but rather to bind sand and gravel (aggregate) together. Cement mixed with fine aggregate produces mortar for masonry, or with sand and gravel, produces concrete. Cement is the most widely used material in existence and is only behind water as the planet's most-consumed resource.</English>
+		<Italian>Il cemento è una sostanza legante usata per la costruzione che fissa, indurisce e aderisce ad altri materiali per legarli insieme. Il cemento viene usato raramente da solo, ma piuttosto per legare insieme sabbia e ghiaia. Il cemento miscelato con un aggregato fine (come la sabbia) produce malta per muratura, oppure con sabbia e ghiaia produce calcestruzzo. Il cemento è il materiale più ampiamente usato esistente ed è secondo solo all'acqua come risorsa più consumata del pianeta.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CERMET</Tag>
@@ -1192,8 +1192,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CERMET_PEDIA</Tag>
-		<English>A cermet is a composite material composed of ceramic (cer) and metallic (met) materials. It is ideally designed to have the optimal properties of both a ceramic, such as high temperature resistance and hardness, and those of a metal, such as the ability to undergo plastic deformation. Cermets are used in the manufacture of resistors (especially potentiometers), capacitors, and other electronic components which may experience high temperature. Some types of cermets are also being considered for use as spacecraft shielding, as they resist the high velocity impacts of micrometeoroids and orbital debris much more effectively than more traditional spacecraft materials.</English>
-		<Italian>Un cermet è un materiale composito composto da materiali ceramici (cer) e metallici (met). È progettato idealmente per avere le proprietà ottimali sia di una ceramica (come resistenza alle alte temperature e durezza), sia quelle di un metallo (come la capacità di subire una deformazione plastica). I cermet vengono utilizzati nella fabbricazione di resistori (in particolare potenziometri), condensatori e altri componenti elettronici che potrebbero raggiungere temperature elevate. Alcuni tipi di cermet vengono anche considerati per la schermatura di veicoli spaziali, poiché resistono agli impatti ad alta velocità dei micro-meteoroidi e dei detriti orbitali in modo molto più efficace rispetto ai più tradizionali materiali spaziali.</Italian>
+		<English>Cermet is a composite material composed of ceramic (cer) and metallic (met) materials. It is ideally designed to have the optimal properties of both a ceramic, such as high temperature resistance and hardness, and those of a metal, such as the ability to undergo plastic deformation. Cermets are used in the manufacture of resistors (especially potentiometers), capacitors, and other electronic components which may experience high temperature. Some types of cermets are also being considered for use as spacecraft shielding, as they resist the high velocity impacts of micrometeoroids and orbital debris much more effectively than more traditional spacecraft materials.</English>
+		<Italian>Il cermet è un materiale composito composto da materiali ceramici (cer) e metallici (met). È progettato idealmente per avere le proprietà ottimali sia di una ceramica (come resistenza alle alte temperature e durezza), sia quelle di un metallo (come la capacità di subire una deformazione plastica). I cermet vengono utilizzati nella fabbricazione di resistori (in particolare potenziometri), condensatori e altri componenti elettronici che potrebbero raggiungere temperature elevate. Alcuni tipi di cermet vengono anche considerati per la schermatura di veicoli spaziali, poiché resistono agli impatti ad alta velocità dei micro-meteoroidi e dei detriti orbitali in modo molto più efficace rispetto ai più tradizionali materiali spaziali.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CETACEA_SAPIENS</Tag>
@@ -1909,7 +1909,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_DONKEY_PEDIA</Tag>
-		<English>The donkey, or ass, is a domesticated member of the horse family, and adapted to marginal desert lands. The donkey has been used as a working animal for at least 5,000 years, principally as drought or pack animals. Working donkeys are often associated with those living at or below subsistence levels, but continue to fill important roles in many places today. Small numbers of donkeys are kept for breeding or as pets in developed countries.</English>
+		<English>A donkey, or ass, is a domesticated member of the horse family, and adapted to marginal desert lands. The donkey has been used as a working animal for at least 5,000 years, principally as drought or pack animals. Working donkeys are often associated with those living at or below subsistence levels, but continue to fill important roles in many places today. Small numbers of donkeys are kept for breeding or as pets in developed countries.</English>
 		<Italian>L'asino è un membro addomesticato della famiglia dei cavalli, adattatosi a vivere in terre semi-desertiche. L'asino è stato usato come animale da lavoro per almeno 5.000 anni, principalmente come animale da tiro o da soma. L'utilizzo degli asini in ambito lavorativo è spesso associato a coloro che vivono a livelli di sussistenza o inferiori, anche se gli asini continuano a ricoprire ruoli importanti ancora oggi. Una piccola frazione viene usata per la riproduzione o come animali domestici nei paesi sviluppati.</Italian>
 	</TEXT>
 	<TEXT>
@@ -4118,9 +4118,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LIQUID_METAL</Tag>
 		<English>Liquid Metal</English>
-		<French>Outils en métal liquide</French>
-		<Italian>Utensili di metallo liquido</Italian>
-		<Polish>Przedmioty z ciekłego metalu</Polish>
+		<French>Métal liquide</French>
+		<Italian>Metallo liquido</Italian>
+		<Polish>Płynny metal</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LIQUID_METAL_PEDIA</Tag>
@@ -4538,9 +4538,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MEGASTRONG_ALLOYS</Tag>
 		<English>Megastrong Alloys</English>
-		<French>Outils en alliages méga-résistants</French>
-		<Italian>Utensili in leghe megaresistenti</Italian>
-		<Polish>Przedmioty z megastopu</Polish>
+		<French>Alliages méga-résistants</French>
+		<Italian>Leghe megaresistenti</Italian>
+		<Polish>Megamocne stopy</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MEGASTRONG_ALLOYS_PEDIA</Tag>
@@ -4594,9 +4594,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_METAMATERIALS</Tag>
 		<English>Metamaterials</English>
-		<French>Outils en métamatériaux</French>
-		<Italian>Utensili in meta-materiali</Italian>
-		<Polish>Przedmioty z metamateriału</Polish>
+		<French>Métamatériaux</French>
+		<Italian>Meta-materiali</Italian>
+		<Polish>Metamateriały</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_METAMATERIALS_PEDIA</Tag>
@@ -5121,7 +5121,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_OBSIDIAN_PEDIA</Tag>
-		<English>Obsidian is a naturally occurring glass formed as an extrusive igneous rock. It is produced when felsic lava extruded from a volcano cools without crystal growth. Obsidian is commonly found within the margins of rhyolitic lava flows known as obsidian flows. Because of the lack of crystal structure, obsidian blade edges can reach almost molecular thinness, leading to its ancient use as projectile points, and its modern use as surgical scalpel blades.</English>
+		<English>Obsidian is a rapidly cooled felsic lava extruded from a volcano, with minimal crystal growth, resulting in a natural glass. Obsidian is hard, brittle, and amorphous; it therefore fractures with sharp edges. It can be used to make extremely sharp knives, blades, and even scalpel blades, with a cutting edge many times sharper than high-quality steel surgical scalpels. Obsidian is also used for ornamental purposes and as a gemstone. Pure obsidian is usually dark in appearance, though the color varies depending on the impurities present.</English>
+		<Italian>L'ossidiana è una lava felsica rapidamente raffreddata estrusa da un vulcano, con una crescita minima di cristalli, che si traduce in un vetro naturale. L'ossidiana è dura, fragile e amorfa; si frattura quindi con spigoli molto affilati. Può essere utilizzato per realizzare coltelli, lame e persino lame per bisturi estremamente affilati, con un tagliente molte volte più affilato di quello dei bisturi chirurgici in acciaio di alta qualità. L'ossidiana è anche usata per scopi ornamentali e come pietra preziosa. L'ossidiana pura ha generalmente un aspetto scuro, sebbene il colore vari a seconda delle impurità presenti.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_OBSOLETED_VALIDATES_IMPROVEMENT</Tag>
@@ -5190,8 +5191,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_OLMEC_JADE_FIGURINES_PEDIA</Tag>
-		<English>The Olmecs produced jade figurines, and created heavy-featured, colossal heads, up to 2 meters (8 ft) high, that still stand mysteriously in the landscape. The Mesoamerican tradition of building large ceremonial centres appears to have begun under the Olmecs.</English>
-		<Polish>Jadeit to minerał o znacznej twardości był ceniony przez wiele kultur np. w starożytnych Chinach, w państwach Mezoameryki i przez ludy maoryskie (pounamu). Z jadeitu wyrabiano ozdoby oraz ze względu na twardość - narzędzia i kosztowną broń.</Polish>
+		<English>Olmec jade figurines are archetypical figurines made of jade, bearing the hallmarks and motifs of Olmec culture. These figurines are usually found in household refuse, ancient construction fill, and, outside the Olmec heartland, graves. The vast majority of figurines are simple in design, often nude or with a minimum of clothing, and made of local terracotta.</English>
+		<Italian>Le figurine di giada olmeche sono figurine archetipiche, con i segni distintivi e i motivi della cultura olmeca, realizzate in giada. Queste figurine si trovano di solito nei rifiuti domestici, nell'antico riempimento di costruzioni e, fuori dal territorio olmeco, nelle tombe. La stragrande maggioranza delle figurine hanno un disegno semplice, sono spesso nude o con un abbigliamento minimo, e realizzate in terracotta locale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_OMANI</Tag>
@@ -5767,9 +5768,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PORCELAIN</Tag>
 		<English>Porcelain</English>
-		<French>Objets en porcelaine</French>
-		<Italian>Utensili di porcellana</Italian>
-		<Polish>Przedmioty z porcelany</Polish>
+		<French>Porcelaine</French>
+		<Italian>Porcellana</Italian>
+		<Polish>Porcelana</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PORCELAIN_PEDIA</Tag>
@@ -7019,9 +7020,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SUPERSTRONG_ALLOYS</Tag>
 		<English>Superstrong Alloys</English>
-		<French>Outils en alliages super-résistants</French>
-		<Italian>Utensili in leghe super-resistenti</Italian>
-		<Polish>Przedmioty ze superstopu</Polish>
+		<French>Alliages super-résistants</French>
+		<Italian>Leghe super-resistenti</Italian>
+		<Polish>Superstopy</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SUPERSTRONG_ALLOYS_PEDIA</Tag>
@@ -7249,9 +7250,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TERRACOTTA</Tag>
 		<English>Terracotta</English>
-		<French>Outils en terre cuite</French>
-		<Italian>Utensili di terracotta</Italian>
-		<Polish>Przedmioty z terrakoty</Polish>
+		<French>Terre cuite</French>
+		<Italian>Terracotta</Italian>
+		<Polish>Terakota</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TERRACOTTA_PEDIA</Tag>
