@@ -15,12 +15,90 @@
 	</TEXT>
 -->
 	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_AIR_RANGE</Tag>
+		<English>, %d1 Range</English>
+		<French>, portée %d1</French>
+		<German>, %d1 Reichweite</German>
+		<Italian>, Raggio d'azione %d1</Italian>
+		<Spanish>, %d1 de alcance</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_BREAKDOWN_CHANCE</Tag>
+		<English>[ICON_BULLET]Breakdown Chance: %D1%%</English>
+		<French>[ICON_BULLET]%D1%% chance de démolir les défenses de la ville à chaque round d'attaque.</French>
+		<Italian>[ICON_BULLET]%D1%% chance di Abbattimento delle difese cittadine per ogni round di combattimento.</Italian>
+		<Polish>[ICON_BULLET]%D1%% szansy do złamania obrony miasta w każdej rundzie.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_BREAKDOWN_DAMAGE</Tag>
+		<English>[ICON_BULLET]Breakdown Amount: %D1%%</English>
+		<French>[ICON_BULLET]%D1%% dégâts aux défenses de la ville en cas de tentative de démolition réussi.</French>
+		<Italian>[ICON_BULLET]%D1%% di danno alle difese cittadine quando Abbattimento ha successo.</Italian>
+		<Polish>[ICON_BULLET]%D1%% obrażeń do obrony miasta przy udanym złamaniu obrony.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_CARGO_SIZE_MATTERS</Tag>
+		<English>[ICON_BULLET]Cargo Size: %d1</English>
+		<French>[ICON_BULLET]Volume en unité cargo: %d1</French>
+		<German>[ICON_BULLET]Frachteinheiten: %d1</German>
+		<Polish>[ICON_BULLET]Objętość Jedn. Transportu: %d1</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_CARGO_SPACE_BASE_SM</Tag>
+		<English>[ICON_BULLET]Base Cargo Space (estimated # of units): %d1</English>
+		<French>[ICON_BULLET]Taille de soute (# estimé d'unités): %d1</French>
+		<Polish>[ICON_BULLET]Podstawowa Przestrzeń Transportowa (szacowana # jednostek): %d1</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_CARGO_SPACE</Tag>
+		<English>Cargo Space: %d1/%d2</English>
+		<French>Capacité d'emport: %d1/%d2</French>
+		<German>Frachtraum: %d1/%d2</German>
+		<Italian>Spazio di carico: %d1/%d2</Italian>
+		<Spanish>Bodega: %d1/%d2</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_CARGO_SPACE_FOREIGN</Tag>
+		<English>[ICON_BULLET]Cargo Space: %d1</English>
+		<French>[ICON_BULLET]Capacité d'emport: %d1</French>
+		<German>[ICON_BULLET]Frachtraum: %d1</German>
+		<Italian>[ICON_BULLET]Spazio di carico: %d1</Italian>
+		<Spanish>[ICON_BULLET]Bodega: %d1</Spanish>
+		<Polish>[ICON_BULLET]Przestrzeń transportowa: %d1</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_CARRIES</Tag>
+		<English>[SPACE](Carries %s1)</English>
+		<French>[SPACE](transporte : %s1)</French>
+		<German>[SPACE](Befördert %s1)</German>
+		<Italian>[SPACE](trasporta %s1)</Italian>
+		<Spanish>[SPACE](%s1)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_COMMAND_RANGE</Tag>
+		<English>, CR: %d1</English>
+		<French>, Port. Com.: %d1</French>
+		<German>, Kommandobereich: %d1</German>
+		<Italian>, Raggio di comando: %d1</Italian>
+		<Spanish>, Alcance: %d1</Spanish>
+		<Polish>, Ranga Dowódcy: %d1</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_COMMAND_POINTS</Tag>
+		<English>, CP: %d1/%d2</English>
+		<French>, Pts Contr: %d1/%d2</French>
+		<German>, Kontrollpunkte: %d1/%d2</German>
+		<Italian>, Punti di controllo: %d1/%d2</Italian>
+		<Spanish>, PC: %d1/%d2</Spanish>
+		<Polish>, Punkty Kontroli: %d1/%d2</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_FIRST_STRIKES</Tag>
-		<English>[ICON_BULLET]%d1_Num First Strikes</English>
-		<French>[ICON_BULLET]%d1_Num premières attaques</French>
-		<German>[ICON_BULLET]%d1_Num Erstangriffe</German>
-		<Italian>[ICON_BULLET]%d1_Num 'Attacchi improvvisi'</Italian>
-		<Spanish>[ICON_BULLET]%d1_Num ataques de iniciativa</Spanish>
+		<English>[ICON_BULLET]First Strikes: %d1</English>
+		<French>[ICON_BULLET]Premières attaques: %d1</French>
+		<German>[ICON_BULLET]Erstangriffe: %d1</German>
+		<Italian>[ICON_BULLET]Attacchi improvvisi: %d1</Italian>
+		<Spanish>[ICON_BULLET]Ataques de iniciativa: %d1</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_FIRST_STRIKES_IMMUNE</Tag>
@@ -32,11 +110,27 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_FIRST_STRIKE_CHANCES</Tag>
-		<English>[ICON_BULLET]%d1_Num1-%d2_Num2 First Strikes</English>
-		<French>[ICON_BULLET]%d1_Num1-%d2_Num2 premières attaques</French>
-		<German>[ICON_BULLET]%d1_Num1-%d2_Num2 Erstangriffe</German>
-		<Italian>[ICON_BULLET]%d1_Num1-%d2_Num2 'Attacchi improvvisi'</Italian>
-		<Spanish>[ICON_BULLET]%d1_Num1 - %d2_Num2 ataques de iniciativa</Spanish>
+		<English>[ICON_BULLET]First Strikes: %d1-%d2</English>
+		<French>[ICON_BULLET]Premières attaques: %d1-%d2</French>
+		<German>[ICON_BULLET]Erstangriffe: %d1-%d2</German>
+		<Italian>[ICON_BULLET]Attacchi improvvisi: %d1-%d2</Italian>
+		<Spanish>[ICON_BULLET]Ataques de iniciativa: %d1-%d2</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_FORTIFIED</Tag>
+		<English>Fortified: %d1_Mod%%</English>
+		<French>Bonus de retranchement : %d1_Mod%%</French>
+		<German>Verschanzungsbonus: %d1_Mod%%</German>
+		<Italian>Bonus per la fortificazione: %d1_Mod%%</Italian>
+		<Spanish>Bonif. a fortif.: %d1_Mod%%</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_IMMOBILE</Tag>
+		<English>Cannot move (%d1)</English>
+		<French>Déplacement impossible (%d1)</French>
+		<German>Unbeweglich (%d1)</German>
+		<Italian>Impossibile muovere (%d1)</Italian>
+		<Spanish>No se puede mover (%d1)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_INVISIBILITY_SPOT_PLOT_RANGE_VALUE</Tag>
@@ -97,5 +191,11 @@
 		<English>[ICON_BULLET]%d1_Change Stealth Strikes</English>
 		<French>[ICON_BULLET]%d1_Change Assauts furtifs</French>
 		<German>[ICON_BULLET]%D1_Change [NUM1:Tarnangriff:Tarnangriffe]</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_XP</Tag>
+		<English>, XP: (%s1/%d2)</English>
+		<German>, Erfahrungspunkte: (%s1/%d2)</German>
+		<Spanish>, PX: (%s1/%d2)</Spanish>
 	</TEXT>
 </Civ4GameText>
