@@ -8310,7 +8310,7 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_GOLD_WARES</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_TERRACOTTA_WARES</Bonus>
+				<Bonus>BONUS_TERRACOTTA</Bonus>
 			</PrereqBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MANOR</BuildingType>
@@ -9343,7 +9343,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_RED_AND_BLACK_WARES</FreeBonus>
+			<FreeBonus>BONUS_RED_AND_BLACK_CERAMICS</FreeBonus>
 			<iNumFreeBonuses>6</iNumFreeBonuses>
 			<!-- Specialist effects -->
 			<SpecialistCounts>
