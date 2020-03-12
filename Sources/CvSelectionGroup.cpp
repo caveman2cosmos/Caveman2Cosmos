@@ -702,8 +702,6 @@ CvPlot* CvSelectionGroup::lastMissionPlot() const
 		case MISSION_AIRBOMB5:
 		// Dale - RB: Field Bombard
 		case MISSION_RBOMBARD:
-		// Dale - ARB: Archer Bombard
-		case MISSION_ABOMBARD:
 		// Dale - FE: Fighters
 		case MISSION_FENGAGE:
 		// ! Dale
@@ -952,29 +950,14 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 				return true;
 			}
 			break;
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-		// Dale - RB: Field Bombard START
-		case MISSION_RBOMBARD:
-			if(GC.isDCM_RANGE_BOMBARD() && pLoopUnit->canBombardAtRanged(pPlot, iData1, iData2))
-			{
-				return true;
-			}
-			break;
-		// Dale - RB: Field Bombard END
 
-		// Dale - ARB: Archer Bombard START
-		case MISSION_ABOMBARD:
-			if(GC.isDCM_ARCHER_BOMBARD() && pLoopUnit->canArcherBombardAt(pPlot, iData1, iData2))
+		case MISSION_RBOMBARD:
+			// Dale - RB: Field Bombard
+			if (GC.isDCM_RANGE_BOMBARD() && pLoopUnit->canBombardAtRanged(pPlot, iData1, iData2))
 			{
 				return true;
 			}
 			break;
-		// Dale - ARB: Archer Bombard END
-/************************************************************************************************/
-/* DCM                                     END                                    Johny Smith  */
-/************************************************************************************************/
 
 		case MISSION_RANGE_ATTACK:
 			if (pLoopUnit->canRangeStrikeAt(pPlot, iData1, iData2))
@@ -1970,18 +1953,6 @@ bool CvSelectionGroup::startMission()
 						break;
 						// Dale - AB: Bombing END
 
-					case MISSION_ABOMBARD:
-					// Dale - ARB: Archer Bombard START
-						if(GC.isDCM_ARCHER_BOMBARD())
-						{
-							if (pLoopUnit->archerBombard(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
-							{
-								bAction = true;
-							}
-						}
-					// Dale - ARB: Archer Bombard END
-						break;
-
 					// Dale - FE: Fighters START
 					case MISSION_FENGAGE:
 						if(GC.isDCM_FIGHTER_ENGAGE())
@@ -2595,25 +2566,18 @@ bool CvSelectionGroup::continueMission(int iSteps)
 			case MISSION_LEAD:
 			case MISSION_ESPIONAGE:
 			case MISSION_DIE_ANIMATION:
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-			// Dale - AB: Bombing START
+
+			// Dale - AB: Bombing
 			case MISSION_AIRBOMB1:
 			case MISSION_AIRBOMB2:
 			case MISSION_AIRBOMB3:
 			case MISSION_AIRBOMB4:
 			case MISSION_AIRBOMB5:
-			// Dale - AB: Bombing END
-			// Dale - RB: Field Bombard START
+			// Dale - RB: Field Bombard
 			case MISSION_RBOMBARD:
-			// Dale - RB: Field Bombard END
-			// Dale - ARB: Archer Bombard START
-			case MISSION_ABOMBARD:
-			// Dale - ARB: Archer Bombard END
-			// Dale - FE: Fighters START
+			// Dale - FE: Fighters
 			case MISSION_FENGAGE:
-			// Dale - FE: Fighters END
+			// ! Dale
 				bDone = true;
 				break;
 
@@ -2624,14 +2588,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 					bDone = true;
 				}*/
 				break;
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* Afforess	                  Start		 06/05/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 			case MISSION_HURRY_FOOD:
 			case MISSION_INQUISITION:
 			case MISSION_CLAIM_TERRITORY:
@@ -2646,9 +2603,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 			case MISSION_ASSASSINATE:
 				bDone = true;
 				break;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 			default:
 				// AIAndy: Assumed to be an outcome mission
 				// FAssert(false);
@@ -2998,10 +2953,8 @@ bool CvSelectionGroup::canDoInterfaceMode(InterfaceModeTypes eInterfaceMode)
 				return true;
 			}
 			break;
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-		// Dale - AB: Bombing START
+
+		// Dale - AB: Bombing
 		case INTERFACEMODE_AIRBOMB1:
 			if (pLoopUnit->canAirBomb1(pLoopUnit->plot()))
 			{
@@ -3036,54 +2989,32 @@ bool CvSelectionGroup::canDoInterfaceMode(InterfaceModeTypes eInterfaceMode)
 				return true;
 			}
 			break;
-		// Dale - AB: Bombing END
 
-		// Dale - RB: Field Bombard START
+		// Dale - RB: Field Bombard
 		case INTERFACEMODE_BOMBARD:
 			if (pLoopUnit->canRBombard())
 			{
 				return true;
 			}
 			break;
-		// Dale - RB: Field Bombard END
 
-		// Dale - ARB: Archer Bombard START
-		case INTERFACEMODE_ABOMBARD:
-			if (pLoopUnit->canArcherBombard() && GC.isDCM_ARCHER_BOMBARD())
-			{
-				return true;
-			}
-			break;
-		// Dale - ARB: Archer Bombard END
-
-		// Dale - FE: Fighters START
+		// Dale - FE: Fighters
 		case INTERFACEMODE_FENGAGE:
 			if (pLoopUnit->canFEngage() && GC.isDCM_FIGHTER_ENGAGE())
 			{
 				return true;
 			}
 			break;
-		// Dale - FE: Fighters END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* Afforess	                  Start		 09/16/10                                               */
-/*                                                                                              */
-/* Advanced Automations                                                                         */
-/************************************************************************************************/
+		// ! Dale
+
 		case INTERFACEMODE_SHADOW_UNIT:
 			if (pLoopUnit->canShadow())
 			{
 				return true;
 			}
 			break;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 		}
 	}
-
 	return false;
 }
 
@@ -3161,10 +3092,8 @@ bool CvSelectionGroup::canDoInterfaceModeAt(InterfaceModeTypes eInterfaceMode, C
 				return true;
 			}
 			break;
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-		// Dale - AB: Bombing START
+
+		// Dale - AB: Bombing
 		case INTERFACEMODE_AIRBOMB1:
 			if (pLoopUnit != NULL && GC.isDCM_AIR_BOMBING() && pLoopUnit->canAirBomb1At(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
 			{
@@ -3199,42 +3128,24 @@ bool CvSelectionGroup::canDoInterfaceModeAt(InterfaceModeTypes eInterfaceMode, C
 				return true;
 			}
 			break;
-		// Dale - AB: Bombing END
 
-		// Dale - RB: Field Bombard START
+		// Dale - RB: Field Bombard
 		case INTERFACEMODE_BOMBARD:
 			if (pLoopUnit != NULL && GC.isDCM_RANGE_BOMBARD() && pLoopUnit->canBombardAtRanged(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
 			{
 				return true;
 			}
 			break;
-		// Dale - RB: Field Bombard END
 
-		// Dale - ARB: Archer Bombard START
-		case INTERFACEMODE_ABOMBARD:
-			if (pLoopUnit != NULL && GC.isDCM_ARCHER_BOMBARD() && pLoopUnit->canArcherBombardAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
-			{
-				return true;
-			}
-			break;
-		// Dale - ARB: Archer Bombard END
-
-		// Dale - FE: Fighters START
+		// Dale - FE: Fighters
 		case INTERFACEMODE_FENGAGE:
 			if (pLoopUnit != NULL && GC.isDCM_FIGHTER_ENGAGE() && pLoopUnit->canFEngageAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
 			{
 				return true;
 			}
 			break;
-		// Dale - FE: Fighters END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* Afforess	                  Start		 09/18/10                                               */
-/*                                                                                              */
-/* Advanced Automations                                                                         */
-/************************************************************************************************/
+		// ! Dale
+
 		case INTERFACEMODE_SHADOW_UNIT:
 			if (pLoopUnit != NULL)
 			{
@@ -3248,16 +3159,12 @@ bool CvSelectionGroup::canDoInterfaceModeAt(InterfaceModeTypes eInterfaceMode, C
 				}
 			}
 			break;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 		default:
 			return true;
 			break;
 		}
 	}
-
 	return false;
 }
 
@@ -3572,24 +3479,11 @@ bool CvSelectionGroup::canBombard(const CvPlot* pPlot, bool bCheckCanReduceOnly)
 		{
 			return true;
 		}
-/************************************************************************************************/
-/* DCM                               04/19/09                           Johny Smith      */
-/************************************************************************************************/
-		// Dale - RB: Field Bombard START
+		// Dale - RB: Field Bombard
 		if (!bCheckCanReduceOnly && pLoopUnit->canRBombard())
 		{
 			return true;
 		}
-		// Dale - RB: Field Bombard END
-		// Dale - ARB: Archer Bombard START
-		if (!bCheckCanReduceOnly && pLoopUnit->canArcherBombard())
-		{
-			return true;
-		}
-		// Dale - ARB: Archer Bombard END
-/************************************************************************************************/
-/* DCM                               End                               Johny Smith        */
-/************************************************************************************************/
 	}
 
 	return false;
@@ -4087,14 +3981,7 @@ namespace {
 			if ((toTeam == NO_TEAM || GET_TEAM(pLoopUnit->getTeam()).isAtWar(toTeam)) &&
 				(fromPlayer == NO_PLAYER || pLoopUnit->getOwner() == fromPlayer))
 			{
-				if (pLoopUnit->canArcherBombardAt(from, to->getX(), to->getY()))
-				{
-					if (pLoopUnit->archerBombard(to->getX(), to->getY(), true))
-					{
-						performedAttack = true;
-					}
-				}
-				else if (pLoopUnit->canBombardAtRanged(from, to->getX(), to->getY()))
+				if (pLoopUnit->canBombardAtRanged(from, to->getX(), to->getY()))
 				{
 					if (pLoopUnit->bombardRanged(to->getX(), to->getY(), true))
 					{
@@ -4269,25 +4156,16 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 						bool bFoundBombard = false;
 
 						OutputDebugString("Attempting to bombard tough plot\n");
-						for (unit_iterator unitItr = beginUnits();
-							unitItr != endUnits();
-							++unitItr)
+						for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
 						{
 							CvUnit* pLoopUnit = *unitItr;
-							/*if (pLoopUnit->canArcherBombardAt(plot(), pDestPlot->getX(), pDestPlot->getY()))
-							{
-								bFoundBombard = true;
-								pLoopUnit->archerBombard(pDestPlot->getX(), pDestPlot->getY(), false);
-							}
-							else */if (pLoopUnit->canBombardAtRanged(plot(), pDestPlot->getX(), pDestPlot->getY()))
+							if (pLoopUnit->canBombardAtRanged(plot(), pDestPlot->getX(), pDestPlot->getY()))
 							{
 								bFoundBombard = true;
 								pLoopUnit->bombardRanged(pDestPlot->getX(), pDestPlot->getY(), false);
 							}
 						}
-
 						bBombardExhausted = !bFoundBombard;
-
 						continue;
 					}
 				}
@@ -6638,7 +6516,6 @@ void CvSelectionGroup::read(FDataStreamBase* pStream)
 			case MISSION_AIRBOMB4:
 			case MISSION_AIRBOMB5:
 			case MISSION_RBOMBARD:
-			case MISSION_ABOMBARD:
 			case MISSION_FENGAGE:
 			case MISSION_CLAIM_TERRITORY:
 			case MISSION_PRETARGET_NUKE:
@@ -6851,12 +6728,7 @@ bool CvSelectionGroup::groupStackAttack(int iX, int iY, int iFlags, bool& bFaile
 									{
 										CvUnit* pLoopUnit = *unitItr;
 
-										if (pLoopUnit->canArcherBombardAt(plot(), pDestPlot->getX(), pDestPlot->getY()))
-										{
-											bFoundBombard = true;
-											pLoopUnit->archerBombard(pDestPlot->getX(), pDestPlot->getY(), false);
-										}
-										else if (pLoopUnit->canBombardAtRanged(plot(), pDestPlot->getX(), pDestPlot->getY()))
+										if (pLoopUnit->canBombardAtRanged(plot(), pDestPlot->getX(), pDestPlot->getY()))
 										{
 											bFoundBombard = true;
 											pLoopUnit->bombardRanged(pDestPlot->getX(), pDestPlot->getY(), false);

@@ -1803,15 +1803,6 @@ public:
 	bool isRbombardable(int iMinStack);
 	int getRbombardSeigeCount(CvPlot* pPlot);
 	// RevolutionDCM - end
-// Dale - ARB: Archer Bombard START
-	bool canArcherBombard() const;
-	// fromPlot - units own plot() isn't valid in some cases (when its out of viewport or using dummy entities)
-	bool canArcherBombardAt(const CvPlot* fromPlot, int iX, int iY) const;
-	bool archerBombard(int iX, int iY, bool supportAttack = false);
-// Dale - ARB: Archer Bombard END
-// Dale - SA: Stack Attack START
-//	void updateStackCombat(bool bQuick = false);
-// Dale - SA: Stack Attack END
 // Dale - SA: Opp Fire START
 	void doOpportunityFire();
 // Dale - SA: Opp Fire END

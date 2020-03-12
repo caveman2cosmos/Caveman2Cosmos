@@ -5524,24 +5524,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<French>[ICON_BULLET]Insidiosité (Habileté à échapper à l'investigation):  %s1_Amount%%</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_INTERFACEMODE_ABOMBARD_HELP</Tag>
-		<English>"Archer Bombard" allows you to bombard an adjacent plot with your archers to damage enemy units.</English>
-		<French>"Bombardement d'Archer" vous permet de 'bombarder' une case adjacente de flèches, pour endommager les unités ennemies.</French>
-		<German>"Bogenschützenbombardierung" ermöglicht es mit Bogenschützen benachbarte Geländefelder zu bombardieren um feindliche Einheiten zu beschädigen.</German>
-		<Italian>"Lancio di frecce a raffica" consente di attaccare con unità di arcieri una casella adiacente, per danneggiare unità nemiche.</Italian>
-		<Spanish>"Ráfaga de flechas" te permite atacar una casilla adyacente con tus arqueros para dañar a las unidades enemigas.</Spanish>
-		<Polish>Atak łuczniczy pozwala ostrzeliwać pobliskie pole za pomocą łuczników, aby zranić znajdujące się tam jednostki.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_INTERFACEMODE_ABOMBARD_TEXT</Tag>
-		<English>Archer Bombard</English>
-		<French>Bombardement d'Archer</French>
-		<German>Bogenschützenbombardierung</German>
-		<Italian>Lancio di frecce a raffica</Italian>
-		<Spanish>Ráfaga de flechas</Spanish>
-		<Polish>Ostrzał Łuczniczy</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_AIRBOMB1</Tag>
 		<English>Airbomb Defenses</English>
 		<French>Bombardement des défenses</French>

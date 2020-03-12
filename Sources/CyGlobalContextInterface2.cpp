@@ -37,7 +37,6 @@ void CyGlobalContextPythonInterface2(python::class_<CyGlobalContext>& x)
 		.def("isDCM_ATTACK_SUPPORT", &CyGlobalContext::isDCM_ATTACK_SUPPORT, "bool ()")
 		.def("isDCM_OPP_FIRE", &CyGlobalContext::isDCM_OPP_FIRE, "bool ()")
 		.def("isDCM_ACTIVE_DEFENSE", &CyGlobalContext::isDCM_ACTIVE_DEFENSE, "bool ()")
-		.def("isDCM_ARCHER_BOMBARD", &CyGlobalContext::isDCM_ARCHER_BOMBARD, "bool ()")
 		.def("isDCM_FIGHTER_ENGAGE", &CyGlobalContext::isDCM_FIGHTER_ENGAGE, "bool ()")
 
 		.def("isDYNAMIC_CIV_NAMES", &CyGlobalContext::isDYNAMIC_CIV_NAMES, "bool ()")
