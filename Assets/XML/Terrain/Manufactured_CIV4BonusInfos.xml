@@ -1620,7 +1620,7 @@
 			<Description>TXT_KEY_BONUS_MOON_ROCKS</Description>
 			<Civilopedia>TXT_KEY_BONUS_MOON_ROCKS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_MARTIAN_ROCKS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_MOON_ROCKS</ArtDefineTag>
 			<TechReveal>TECH_LUNAR_EXPLORATION</TechReveal>
 			<TechCityTrade>TECH_LUNAR_EXPLORATION</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>

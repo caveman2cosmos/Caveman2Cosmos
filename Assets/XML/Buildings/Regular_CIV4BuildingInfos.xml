@@ -49565,7 +49565,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_VACUUM</BonusType>
+					<BonusType>BONUS_VACUUM_CLEANERS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
