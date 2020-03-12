@@ -35,9 +35,6 @@
 			</option>
 		</section>
 		<section id="RevDCM_battle">
-			<option id="DCM_ARCHER_BOMBARD" key="DCM_ARCHER_BOMBARD" type="boolean" default="False" get="isDCM_ARCHER_BOMBARD" set="setDCM_ARCHER_BOMBARD">
-				<change module="RevDCM" function="changedDCM_ARCHER_BOMBARD"/>
-			</option>
 			<option id="DCM_BATTLE_EFFECTS" key="DCM_BATTLE_EFFECTS" type="boolean" default="False" get="isDCM_BATTLE_EFFECTS" set="setDCM_BATTLE_EFFECTS">
 				<change module="RevDCM" function="changedDCM_BATTLE_EFFECTS"/>
 			</option>

@@ -504,7 +504,7 @@ public:
 
 	void doTurn();
 
-	void updateCombat(bool bQuick = false, CvUnit* pSelectedDefender = NULL, bool bSamePlot = false, bool bArrest = false, bool bStealth = false, bool bNoCache = false);
+	void updateCombat(bool bQuick = false, CvUnit* pSelectedDefender = NULL, bool bSamePlot = false, bool bStealth = false, bool bNoCache = false);
 	void updateAirCombat(bool bQuick = false);
 	void updateAirStrike(CvPlot* pPlot, bool bQuick, bool bFinish);
 
@@ -1803,15 +1803,6 @@ public:
 	bool isRbombardable(int iMinStack);
 	int getRbombardSeigeCount(CvPlot* pPlot);
 	// RevolutionDCM - end
-// Dale - ARB: Archer Bombard START
-	bool canArcherBombard() const;
-	// fromPlot - units own plot() isn't valid in some cases (when its out of viewport or using dummy entities)
-	bool canArcherBombardAt(const CvPlot* fromPlot, int iX, int iY) const;
-	bool archerBombard(int iX, int iY, bool supportAttack = false);
-// Dale - ARB: Archer Bombard END
-// Dale - SA: Stack Attack START
-//	void updateStackCombat(bool bQuick = false);
-// Dale - SA: Stack Attack END
 // Dale - SA: Opp Fire START
 	void doOpportunityFire();
 // Dale - SA: Opp Fire END
@@ -2265,22 +2256,17 @@ protected:
 	bool canAdvance(const CvPlot* pPlot, int iThreshold) const;
 	void collateralCombat(const CvPlot* pPlot, CvUnit* pSkipUnit = NULL);
 	void rBombardCombat(const CvPlot* pPlot, CvUnit* pFirstUnit = NULL);
-	void flankingStrikeCombat(const CvPlot* pPlot, int iAttackerStrength, int iAttackerFirepower, int iDefenderOdds, int iDefenderDamage, CvUnit* pSkipUnit = NULL);
+	void flankingStrikeCombat(const CvPlot* pPlot, int iAttackerStrength, int iAttackerFirepower, int iDefenderOdds, int iDefenderDamage, CvUnit* pSkipUnit = NULL, bool bSamePlot = false);
 
 	bool interceptTest(const CvPlot* pPlot);
 	CvUnit* airStrikeTarget(const CvPlot* pPlot) const;
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-	// Dale - SA: Stack Attack START
+
+	// Dale - SA: Stack Attack
 public:
 	bool canAirStrike(const CvPlot* pPlot) const;
 	bool airStrike(CvPlot* pPlot);
 protected:
-	// Dale - SA: Stack Attack END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
+	// ! Dale
 
 	int planBattle( CvBattleDefinition & kBattleDefinition ) const;
 	int computeUnitsToDie( const CvBattleDefinition & kDefinition, bool bRanged, BattleUnitTypes iUnit ) const;
@@ -2288,29 +2274,21 @@ protected:
 	void increaseBattleRounds( CvBattleDefinition & battleDefinition ) const;
 	int computeWaveSize( bool bRangedRound, int iAttackerMax, int iDefenderMax ) const;
 
-	void getDefenderCombatValues(CvUnit& kDefender, const CvPlot* pPlot, int iOurStrength, int iOurFirepower, int& iTheirOdds, int& iTheirStrength, int& iOurDamage, int& iTheirDamage, CombatDetails* pTheirDetails = NULL, CvUnit* pDefender = NULL) const;
+	void getDefenderCombatValues(CvUnit& kDefender, const CvPlot* pPlot, int iOurStrength, int iOurFirepower,
+		int& iTheirOdds, int& iTheirStrength, int& iOurDamage, int& iTheirDamage,
+		CombatDetails* pTheirDetails = NULL, CvUnit* pDefender = NULL, bool bSamePlot = false) const;
 
 	bool isCombatVisible(const CvUnit* pDefender) const;
 	void resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition& kBattle, bool bSamePlot = false);
 	void resolveAirCombat(CvUnit* pInterceptor, CvPlot* pPlot, CvAirMissionDefinition& kBattle);
 	void checkRemoveSelectionAfterAttack();
 
-/************************************************************************************************/
-/* INFLUENCE_DRIVEN_WAR                   04/16/09                                johnysmith    */
-/*                                                                                              */
-/* Original Author Moctezuma              Start                                                 */
-/************************************************************************************************/
-
 	// ------ BEGIN InfluenceDrivenWar -------------------------------
 	float doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWithdrawal);
 	void influencePlots(CvPlot* pCentralPlot, PlayerTypes eTargetPlayer, float fLocationMultiplier);
 	float doPillageInfluence();
 	// ------ END InfluenceDrivenWar ---------------------------------
-/************************************************************************************************/
-/* INFLUENCE_DRIVEN_WAR                   04/16/09                                johnysmith    */
-/*                                                                                              */
-/* Original Author Moctezuma              End                                                   */
-/************************************************************************************************/
+
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
 /*                                                                                              */
@@ -3090,7 +3068,7 @@ public:
 	bool isWantedbyPlayer(PlayerTypes ePlayer) const;
 	bool isWanted() const;
 
-	void attackSamePlotSpecifiedUnit(CvUnit* pSelectedDefender, bool bArrest = false);
+	void attackSamePlotSpecifiedUnit(CvUnit* pSelectedDefender);
 	bool canArrest() const;
 	void doArrest();
 

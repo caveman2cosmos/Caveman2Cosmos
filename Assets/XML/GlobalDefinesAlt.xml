@@ -61,10 +61,6 @@
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>DCM_ARCHER_BOMBARD</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>DCM_FIGHTER_ENGAGE</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>

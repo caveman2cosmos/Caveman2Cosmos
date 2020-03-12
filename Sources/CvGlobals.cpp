@@ -156,7 +156,6 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_bDCM_ATTACK_SUPPORT(false)
 	, m_bDCM_OPP_FIRE(false)
 	, m_bDCM_ACTIVE_DEFENSE(false)
-	, m_bDCM_ARCHER_BOMBARD(false)
 	, m_bDCM_FIGHTER_ENGAGE(false)
 
 	, m_bDYNAMIC_CIV_NAMES(false)
@@ -2596,7 +2595,6 @@ void cvInternalGlobals::registerMissions()
 	REGISTER_MISSION(MISSION_AIRBOMB4);
 	REGISTER_MISSION(MISSION_AIRBOMB5);
 	REGISTER_MISSION(MISSION_RBOMBARD);
-	REGISTER_MISSION(MISSION_ABOMBARD);
 	REGISTER_MISSION(MISSION_FENGAGE);
 	// BUG - Sentry Actions - start
 #ifdef _MOD_SENTRY
@@ -3780,7 +3778,6 @@ void cvInternalGlobals::cacheGlobals()
 	m_bDCM_ATTACK_SUPPORT = (getDefineINT("DCM_ATTACK_SUPPORT") > 0) ? true : false;
 	m_bDCM_OPP_FIRE = (getDefineINT("DCM_OPP_FIRE") > 0) ? true : false;
 	m_bDCM_ACTIVE_DEFENSE = (getDefineINT("DCM_ACTIVE_DEFENSE") > 0) ? true : false;
-	m_bDCM_ARCHER_BOMBARD = (getDefineINT("DCM_ARCHER_BOMBARD") > 0) ? true : false;
 	m_bDCM_FIGHTER_ENGAGE = (getDefineINT("DCM_FIGHTER_ENGAGE") > 0) ? true : false;
 
 	m_bDYNAMIC_CIV_NAMES = (getDefineINT("DYNAMIC_CIV_NAMES") > 0) ? true : false;
@@ -6052,11 +6049,6 @@ bool cvInternalGlobals::isDCM_OPP_FIRE() const
 bool cvInternalGlobals::isDCM_ACTIVE_DEFENSE() const
 {
 	return m_bDCM_ACTIVE_DEFENSE;
-}
-
-bool cvInternalGlobals::isDCM_ARCHER_BOMBARD() const
-{
-	return m_bDCM_ARCHER_BOMBARD;
 }
 
 bool cvInternalGlobals::isDCM_FIGHTER_ENGAGE() const

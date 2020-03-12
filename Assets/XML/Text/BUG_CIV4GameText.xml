@@ -5702,20 +5702,6 @@
 		<Spanish>Bombardeo aéreo avanzado</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_REVDCM__DCM_ARCHER_BOMBARD_HOVER</Tag>
-		<English>Enables a ranged attack for Archery Units</English>
-		<French>Permet aux unités de type Archers de mener des attaques à distance (similaires aux bombardements)</French>
-		<German>Ermöglicht Fernangriffe für Bogenschützeneinheiten</German>
-		<Spanish>Permite el ataque a distancia para las unidades de tipo Arquero.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_REVDCM__DCM_ARCHER_BOMBARD_TEXT</Tag>
-		<English>Archer Bombard</English>
-		<French>Attaque à distance des Archers</French>
-		<German>Bogenschützenbombardierung</German>
-		<Spanish>Bombardeo de arqueros</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__DCM_ATTACK_SUPPORT_HOVER</Tag>
 		<English>Enables both offensive and defensive bombard units to bombard assist the attacking/defending unit while retaining their turn; is dependent on whether archer and ranged bombardment are enabled</English>
 		<French>Permet aux unités de bombardement (offensif et défensif) d'assister les attaquants ou défenseurs, tout les privant alors de la possibilité d'effectuer d'autres actions. Cette Option dépend des choix concernant les options de bombardement et d'attaque à distance des Archers.</French>
