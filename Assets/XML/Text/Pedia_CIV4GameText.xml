@@ -920,6 +920,11 @@
 		<Polish>Zastąpione przez</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PEDIA_REPLACEMENT_FOR</Tag>
+		<English>Replacement for:</English>
+		<French>Remplacement de :</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PEDIA_REQUIRES</Tag>
 		<English>Requires:</English>
 		<French>Requiert :</French>

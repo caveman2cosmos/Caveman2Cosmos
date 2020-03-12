@@ -1337,11 +1337,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_APOTHECARY</Tag>
 		<English>Apothecary</English>
-		<French>
-			<Text>Apothicaire</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Apothicaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_APOTHECARY_PEDIA</Tag>
@@ -7283,11 +7279,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DOCTOR</Tag>
 		<English>Great Doctor</English>
-		<French>
-			<Text>Médecin Illustre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Médecin Illustre</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DOCTOR_PEDIA</Tag>
@@ -9453,11 +9445,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FIGHTER_BOMBER</Tag>
 		<English>Propeller Tactical Bomber</English>
-		<French>
-			<Text>Bombardier Tactique à Hélices</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Bombardier Tactique à Hélices</French>
 		<Italian>Bombardiere tattico ad elica</Italian>
 		<Spanish>
 			<Text>Bombardero táctico a hélice</Text>
@@ -12220,11 +12208,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HAIDA_WAR_CANOE</Tag>
 		<English>Haida War Canoe</English>
-		<French>
-			<Text>Canoé de Guerre Haida</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Canoé de Guerre Haida</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HAIDA_WAR_CANOE_PEDIA</Tag>
@@ -12475,11 +12459,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEALER</Tag>
 		<English>Healer</English>
-		<French>
-			<Text>Guérisseur</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Guérisseur</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEALER_PEDIA</Tag>
@@ -13718,11 +13698,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HYPASPISTAI</Tag>
 		<English>Hypaspistai</English>
-		<French>
-			<Text>Hypaspiste</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Hypaspiste</French>
 		<German>
 			<Text>Hypaspistai</Text>
 			<Gender>Male</Gender>
@@ -14536,11 +14512,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JADE_AXEMAN</Tag>
 		<English>Jade Axeman</English>
-		<French>
-			<Text>Guerrier avec hache de jade</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Guerrier avec hache de jade</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JADE_AXEMAN_PEDIA</Tag>
@@ -19053,11 +19025,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MODERN_FIGHTER</Tag>
 		<English>Stealth Fighter</English>
-		<French>
-			<Text>Chasseur à réaction F35</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Chasseur à réaction F35</French>
 		<German>Moderner Jäger F35</German>
 		<Italian>Caccia moderno F35</Italian>
 		<Spanish>
@@ -31702,11 +31670,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WAR_WAGON</Tag>
 		<English>War Wagon</English>
-		<French>
-			<Text>Chariot de Guerre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Chariot de Guerre</French>
 		<Italian>Vagone da guerra</Italian>
 		<Spanish>
 			<Text>Vagón de guerra</Text>

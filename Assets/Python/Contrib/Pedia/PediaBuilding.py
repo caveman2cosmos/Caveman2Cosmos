@@ -268,11 +268,11 @@ class PediaBuilding:
 							X_REP_2 = X_COL_1 + W_REP_1 + 4
 					replaceFor = aName()
 					replacedBy = aName()
-					screen.addPanel(replaceFor, "Replacement for:", "", False, True, X_COL_1, Y_BOT_ROW_1, W_REP_1, H_BOT_ROW, ePanelBlue50)
+					screen.addPanel(replaceFor, TRNSLTR.getText("TXT_KEY_PEDIA_REPLACEMENT_FOR", ()), "", False, True, X_COL_1, Y_BOT_ROW_1, W_REP_1, H_BOT_ROW, ePanelBlue50)
 					screen.addPanel(replacedBy, TRNSLTR.getText("TXT_KEY_PEDIA_REPLACED_BY", ()), "", False, True, X_REP_2, Y_BOT_ROW_1, W_REP_2, H_BOT_ROW, ePanelBlue50)
 				elif aList1:
 					replaceFor = aName()
-					screen.addPanel(replaceFor, "Replacement for:", "", False, True, X_COL_1, Y_BOT_ROW_1, W_PEDIA_PAGE, H_BOT_ROW, ePanelBlue50)
+					screen.addPanel(replaceFor, TRNSLTR.getText("TXT_KEY_PEDIA_REPLACEMENT_FOR", ()), "", False, True, X_COL_1, Y_BOT_ROW_1, W_PEDIA_PAGE, H_BOT_ROW, ePanelBlue50)
 				elif aList2:
 					replacedBy = aName()
 					screen.addPanel(replacedBy, TRNSLTR.getText("TXT_KEY_PEDIA_REPLACED_BY", ()), "", False, True, X_COL_1, Y_BOT_ROW_1, W_PEDIA_PAGE, H_BOT_ROW, ePanelBlue50)
