@@ -1,20 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_ABOMBARD_PEDIA</Tag>
-		<English>[H1]Archer Bombard[\H1][PARAGRAPH:2]Archer Bombard allows archer units to bombard enemy units in adjacent plots. Similar to Ranged Bombardment, Archer Bombard also damages the enemy unit.[PARAGRAPH:2]Archer Bombard is disabled by default in Rise of Mankind mod but if you want to use this feature, you can enable it from RevDCM page in BUG options (CTRL-ALT-O).</English>
-		<German>[H1]Bogenschützenbombardierung[\H1][PARAGRAPH:2]Bogenschützenbombardierung ermöglicht es Bogenschützen feindliche Einheiten auf benachbarten Feldern zu bombardieren. Dabei werden die feindlichen Einheiten wie bei der Fernbombardierung beschädigt.[PARAGRAPH:2]Bogenschützenbombardierung ist in Rise of Mankind standardmäßig ausgeschaltet, es kann aber über die RevDCM-Seite in den BUG-Optionen (Strg-Alt-O) eingeschaltet werden.</German>
-		<Italian>[H1]Lancio di frecce a raffica[\H1][PARAGRAPH:2]"Lancio di frecce a raffica" consente di attaccare con unità di arcieri una casella adiacente. Come il "Bombardamento ad Area", danneggerà le unità attaccate.[PARAGRAPH:2]</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_ABOMBARD_TEXT</Tag>
-		<English>Archer Bombard</English>
-		<French>Bombardement d'Archer</French>
-		<German>Bogenschützenbombardierung</German>
-		<Italian>Lancio di frecce a raffica</Italian>
-		<Spanish>Ráfaga de flechas</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ACTIVE_DEFENSE_PEDIA</Tag>
 		<English>[H1]Active Defense[\H1][PARAGRAPH:2]Active Defense allows patrolling fighters to engage enemy troops closing on them. This includes fighters on patrol in any location (city, carrier, etc). They will automatically engage the enemy in an airstrike when the enemy comes within 2 plots of the aircraft.[PARAGRAPH:2]</English>
 		<German>[H1]Aktive Verteidigung[\H1][PARAGRAPH:2]Aktive Verteidigung erlaubt es patroullierenden Jägern feindliche Truppen anzugreifen, die sich ihnen nähern. Dies betrifft Jäger auf Patrouille in beliebigen Geländefeldern (Stadt, Flugzeugträger, etc.). Sie werden autmatisch den Luftkampf starten, wenn sich der Feind auf 2 Felder Entfernung nähert.[PARAGRAPH:2]</German>
