@@ -34560,6 +34560,7 @@ void CvGameTextMgr::setProductionHelp(CvWStringBuffer &szBuffer, CvCity& city)
 				}
 			}
 		}
+		// City and National
 		iMod = city.getUnitProductionModifier(eUnit) + GET_PLAYER(city.getOwner()).getUnitProductionModifier(eUnit);
 		if (0 != iMod)
 		{
@@ -34598,7 +34599,7 @@ void CvGameTextMgr::setProductionHelp(CvWStringBuffer &szBuffer, CvCity& city)
 					}
 				}
 			}
-			// Military II
+			// Military
 			if (unit.isMilitaryProduction())
 			{
 				iMod += GET_PLAYER(city.getOwner()).getMilitaryProductionModifier() + city.getMilitaryProductionModifier();
