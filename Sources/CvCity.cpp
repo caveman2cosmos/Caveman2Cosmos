@@ -17840,9 +17840,7 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 
 			if (gCityLogLevel >= 2)
 			{
-				logBBAI("      City %S builds unit %S",
-					getName().GetCString(),
-					GC.getUnitInfo(eTrainUnit).getDescription());
+				logBBAI("      City %S builds unit %S", getName().GetCString(), GC.getUnitInfo(eTrainUnit).getDescription());
 			}
 
 			const int iProductionNeeded = getProductionNeeded(eTrainUnit);
@@ -17891,10 +17889,8 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 				{
 					logBBAI("    New unit %S at (%d,%d) headed to contractual delivery plot (%d,%d)",
 						pUnit->getUnitInfo().getDescription(),
-						plot()->getX(),
-						plot()->getY(),
-						pRallyPlot->getX(),
-						pRallyPlot->getY());
+						plot()->getX(), plot()->getY(),
+						pRallyPlot->getX(), pRallyPlot->getY());
 				}
 			}
 			else
