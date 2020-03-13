@@ -12736,18 +12736,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>, %s1_CombatClass</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_HELP_ESCAPE_BONUS</Tag>
-		<English>[ICON_BULLET]Escape route planning is contributing %D1_bonus%% to Withdrawal Probability</English>
-		<French>[ICON_BULLET]La planification des itinéraires d'évacuation donne un bonus de %D1_bonus%% des chances de Retrait</French>
-		<Polish>[ICON_BULLET]Koncentracja: Plany Ucieczki pomagają %D1_bonus%% do szansy na ucieczkę.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_HELP_ESTABLISH_BONUS</Tag>
-		<English>[ICON_BULLET]%D1_bonus%% to healing support for any unit types it can normally heal from Established Base of Operations.</English>
-		<French>[ICON_BULLET]%D1_bonus%% au soutien de guérison pour tous les types d'unités qu'il peut normalement soigner à partir d'une base d'opérations établie.</French>
-		<Polish>[ICON_BULLET]%D1_bonus%% do leczenei jednostek, które już rozpoczeły Koncentrację: Baza Operacyjna.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEMUDU_HUNTERS</Tag>
 		<English>Hemudu Hunters</English>
 		<French>Chasseur Hemudu</French>

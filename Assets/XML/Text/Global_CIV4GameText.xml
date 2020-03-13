@@ -1803,6 +1803,14 @@
 		<English>[ICON_BULLET]</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BULLET_STARTS_WITH</Tag>
+		<English>[ICON_BULLET]Starts with[SPACE]</English>
+		<French>[ICON_BULLET]Commence avec[SPACE]</French>
+		<German>[ICON_BULLET]Beginnt mit[SPACE]</German>
+		<Italian>[ICON_BULLET]Inizia con[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]Empieza con[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BULLSEYE_STRATEGY</Tag>
 		<English>Build this corporation in order to get fruit and groceries bonuses.</English>
 		<French>Construire cette corporation pour obtenir la ressource 'fruits et épices'.</French>
@@ -1948,12 +1956,6 @@
 		<Italian>[ICON_BULLET]E' possibile aggiornare le unità al di fuori dei confini nazionali.</Italian>
 		<Spanish>[ICON_BULLET]Se pueden mejorar unidades fuera de las fronteras nacionales</Spanish>
 		<Polish>[ICON_BULLET]Możesz ulepszyć jednostki poza granicami kulturowymi.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CAPITAL_XP_MODIFIER</Tag>
-		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% for being trained in a Capital or Government Center[COLOR_REVERT]</English>
-		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% pour avoir été entraîné dans la capitale, ou un Centre du gouvernement[COLOR_REVERT]</French>
-		<Polish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% za bycie zwerbowanym w Stolicy[COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CCV_MAININTERFACE__POSITIONOFSCORES_TEXT</Tag>
@@ -11921,12 +11923,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>W Cywilizacji IV świątynia stanowi budynek, w którym wierni gromadzą się w celu oddawania czci swojemu bóstwu. Chrześcijanie nazywają swoje świątynie "kościołami", muzułmanie "meczetami", zaś Żydzi po prostu "świątyniami". Świątynie są znacznie powszechniejsze od katedr, jednakże również znacznie mniejsze i mnie przyozdobione. Świątynia może się znajdować nawet w najmniejszej wiosce.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_NONSTATE_RELIGION_NON_HOLY_CITY_XP_MODIFIER</Tag>
-		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% for being trained in a Holy City to a Non-State Religion[COLOR_REVERT]</English>
-		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% pour avoir été entraîné dans une Ville Sainte d'une Religion non officielle[COLOR_REVERT]</French>
-		<Polish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% za bycie zwerbowanym w Świętym Mieście religii nie będącej religią państwową[COLOR_REVERT]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_NOT_INQUISITION_CONDITIONS</Tag>
 		<English>[COLOR_WARNING_TEXT]Inquisitional conditions required to train, check civics[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Conditions requises pour entraîner les Inquisiteurs, Vérifier les doctrines[COLOR_REVERT]</French>
@@ -11974,12 +11970,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_NO_NON_TYPE_PROD_MODS_TEXT</Tag>
 		<English>[ICON_BULLET]Does not get unit production modifers while training, except for those specifically for this unit type.</English>
 		<French>[ICON_BULLET]N'obtient pas de modificateurs de production d'unité pendant la formation, à l'exception de ceux spécifiquement pour ce type d'unité.</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NO_SELF_HEAL_TEXT</Tag>
-		<English>[ICON_BULLET]This Unit Cannot Heal Without Assistance</English>
-		<French>[ICON_BULLET]Cette unité ne peut se soigner sans Assistance</French>
-		<Polish>[ICON_BULLET]Ta jednostka może być tylko wyleczona/naprawiona przez lekarza/mechanika.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NO_STATE_RELIGION_FREE_EXPERIENCE</Tag>
@@ -14481,13 +14471,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>[ICON_BULLET]Lewi Strzelcy (Blisko): %s1_Unit% dodaje +%d2_Amount Siły</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SELF_HEAL_TEXT</Tag>
-		<English>[ICON_BULLET]This Unit Heals Itself: %D1_Amount%%</English>
-		<French>[ICON_BULLET]Cette Unité peut se soigner de: %D1_Amount%%</French>
-		<German>[ICON_BULLET]Selbstheilung: %D1_Amount%%</German>
-		<Polish>[ICON_BULLET]Jednostka leczy się sama: %D1_Amount%%</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_SETTLE_NEW_CITY_NAME</Tag>
 		<English>City Name:</English>
 		<French>Nom de la ville:</French>
@@ -16760,12 +16743,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<German>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 durch Staatsreligion[COLOR_REVERT]</German>
 		<Spanish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 por Religión oficial[COLOR_REVERT]</Spanish>
 		<Polish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 z Religi Państwowej[COLOR_REVERT]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_STATE_RELIGION_HOLY_CITY_XP_MODIFIER</Tag>
-		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% for being trained in your State Religion's Holy City[COLOR_REVERT]</English>
-		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% pour avoir été entraîné dans la Ville Sainte de la Religion d'Etat[COLOR_REVERT]</French>
-		<Polish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% za bycie zwerbowanym w Św. Mieście religii państwowej[COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STATE_RELIGION_WITHOUT_HOLY_CITY</Tag>
@@ -21512,19 +21489,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Italian>[ICON_BULLET][COLOR_YELLOW]Peggiore ostile di %s1_player[COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET][COLOR_YELLOW]Peor enemigo de %s1_player[COLOR_REVERT]</Spanish>
 		<Polish>[ICON_BULLET][COLOR_YELLOW]Najgorszy wróg: %s1_player[COLOR_REVERT]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_XP_MODIFIER_TOTAL</Tag>
-		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% Total XP Modifier[COLOR_REVERT]</English>
-		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% EXP Modif. Total[COLOR_REVERT]</French>
-		<Polish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% Modyfikator całkowitej ilości XP[COLOR_REVERT]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_XP_TOTAL</Tag>
-		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 Total XP.[COLOR_REVERT]</English>
-		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]Total d'EXP : %D1[COLOR_REVERT]</French>
-		<German>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 [NUM1:Erfahrungspunkt:Erfahrungspunkte][COLOR_REVERT]</German>
-		<Polish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 Całkowita ilość XP.[COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_YIELD_COMMERCE</Tag>
