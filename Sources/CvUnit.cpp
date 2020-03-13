@@ -32387,7 +32387,11 @@ float CvUnit::doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWith
 						MEMORY_TRACK_EXEMPT();
 
 						CvWString szBuffer;
-						szBuffer.Format(L"City militia has emerged! Resistance: %.1f%%", fResistence);
+						CvWString szResistence;
+						szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_MILITIA_EMERGED");
+						szResistence.Format(L" %.1f%%", fResistence);				
+						szBuffer += szResistence;
+						//szBuffer.Format(L"City militia has emerged! Resistance: %.1f%%", fResistence);
 						AddDLLMessage(pLoserUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNIT_BUILD_UNIT", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pLoserPlot->getX(), pLoserPlot->getY(), true, true);
 						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNIT_BUILD_UNIT", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pLoserPlot->getX(), pLoserPlot->getY());
 					}

@@ -844,7 +844,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SEED_CAMP</Tag>
 		<English>[LINK=IMPROVEMENT_SEED_CAMP]Gather Seeds[\LINK]</English>
-		<French>[LINK=IMPROVEMENT_SEED_CAMP]Récolter les céréales[\LINK]</French>
+		<French>[LINK=IMPROVEMENT_SEED_CAMP]Récolter les Graines[\LINK]</French>
 		<German>[LINK=IMPROVEMENT_SEED_CAMP]Körner sammeln[\LINK]</German>
 		<Spanish>[LINK=IMPROVEMENT_SEED_CAMP]Recolectar cereales[\LINK]</Spanish>
 		<Polish>[LINK=IMPROVEMENT_SEED_CAMP]Zbieraj Plony[\LINK]</Polish>
@@ -852,7 +852,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SEED_CAMP_KILL</Tag>
 		<English>[LINK=IMPROVEMENT_SEED_CAMP]Gather Seeds[\LINK] (Consumed)</English>
-		<French>[LINK=IMPROVEMENT_SEED_CAMP]Récolter les céréales[\LINK] (Détruit)</French>
+		<French>[LINK=IMPROVEMENT_SEED_CAMP]Récolter les Graines[\LINK] (Détruit)</French>
 		<German>[LINK=IMPROVEMENT_SEED_CAMP]Körner sammeln[\LINK] (Consumed)</German>
 		<Spanish>[LINK=IMPROVEMENT_SEED_CAMP]Recolectar cereales[\LINK] (Consumed)</Spanish>
 		<Polish>[LINK=IMPROVEMENT_SEED_CAMP]Zbieraj Plony[\LINK] (Consumed)</Polish>
