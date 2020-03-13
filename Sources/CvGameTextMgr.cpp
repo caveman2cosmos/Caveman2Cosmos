@@ -34489,199 +34489,149 @@ void CvGameTextMgr::setProductionHelp(CvWStringBuffer &szBuffer, CvCity& city)
 {
 	FAssertMsg(NO_PLAYER != city.getOwner(), "City must have an owner");
 
-	bool bIsProcess = city.isProductionProcess();
-	int iPastOverflow = (bIsProcess ? 0 : city.getOverflowProduction());
+	const bool bIsProcess = city.isProductionProcess();
+	const int iPastOverflow = (bIsProcess ? 0 : city.getOverflowProduction());
 	if (iPastOverflow != 0)
 	{
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_OVERFLOW", iPastOverflow));
 		szBuffer.append(NEWLINE);
 	}
 
-	int iFromChops = (city.isProductionProcess() ? 0 : city.getFeatureProduction());
+	const int iFromChops = (city.isProductionProcess() ? 0 : city.getFeatureProduction());
 	if (iFromChops != 0)
 	{
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_CHOPS", iFromChops));
 		szBuffer.append(NEWLINE);
 	}
 
-// BUG - Building Additional Production - start
-	bool bBuildingAdditionalYield = getBugOptionBOOL("MiscHover__BuildingAdditionalProduction", true, "BUG_BUILDING_ADDITIONAL_PRODUCTION_HOVER");
+	const bool bBuildingAdditionalYield = getBugOptionBOOL("MiscHover__BuildingAdditionalProduction", true, "BUG_BUILDING_ADDITIONAL_PRODUCTION_HOVER");
 	if (city.getCurrentProductionDifference(ProductionCalc::FoodProduction | ProductionCalc::Overflow) == 0 && !bBuildingAdditionalYield)
-// BUG - Building Additional Production - end
 	{
 		return;
 	}
 
 	setYieldHelp(szBuffer, city, YIELD_PRODUCTION);
 
-	int iBaseProduction = city.getModifiedBaseYieldRate(YIELD_PRODUCTION) + iPastOverflow + iFromChops;
+	const int iBaseProduction = city.getModifiedBaseYieldRate(YIELD_PRODUCTION) + iPastOverflow + iFromChops;
 	int iBaseModifier = city.getBaseYieldRateModifier(YIELD_PRODUCTION);
+	int iMod;
 
 	UnitTypes eUnit = city.getProductionUnit();
 	if (NO_UNIT != eUnit)
 	{
-		CvUnitInfo& unit = GC.getUnitInfo(eUnit);
-
-		// Domain
-		const int iDomainMod = city.getDomainProductionModifier((DomainTypes)unit.getDomainType());
-		if (0 != iDomainMod)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_DOMAIN", iDomainMod, GC.getDomainInfo((DomainTypes)unit.getDomainType()).getTextKeyWide()));
-			szBuffer.append(NEWLINE);
-			iBaseModifier += iDomainMod;
-		}
-
-		const int iUnitMod = city.getUnitProductionModifier(eUnit) + GET_PLAYER(city.getOwner()).getUnitProductionModifier(eUnit);
-		if (0 != iUnitMod)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_UNIT", iUnitMod, unit.getTextKeyWide()));
-			szBuffer.append(NEWLINE);
-			iBaseModifier += iUnitMod;
-		}
-
-
-		if (unit.getUnitCombatType() != NO_UNITCOMBAT)
-		{
-			int iUnitCombatMod = GET_PLAYER(city.getOwner()).getUnitCombatProductionModifier((UnitCombatTypes)unit.getUnitCombatType());
-			if (0 != iUnitCombatMod)
-			{
-				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_UNIT", iUnitCombatMod, GC.getUnitCombatInfo((UnitCombatTypes)unit.getUnitCombatType()).getDescription()));
-				szBuffer.append(NEWLINE);
-				iBaseModifier += iUnitCombatMod;
-			}
-		}
-
-		//TB Combat Mod TB SubCombat Mod Begin
-		int iUnitCombatMod = city.getUnitCombatProductionModifier((UnitCombatTypes)unit.getUnitCombatType()) + GET_PLAYER(city.getOwner()).getUnitCombatProductionModifier((UnitCombatTypes)unit.getUnitCombatType());
-		if (0 != iUnitCombatMod)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_UNIT", iUnitCombatMod, unit.getTextKeyWide()));
-			szBuffer.append(NEWLINE);
-			iBaseModifier += iUnitCombatMod;
-		}
-
-		UnitCombatTypes eSubCombatType;
-		int iI;
-
-		if (unit.getNumSubCombatTypes() > 0)
-		{
-			int iUnitSubCombatMod = 0;
-
-			for (iI = 0; iI < unit.getNumSubCombatTypes(); iI++)
-			{
-				eSubCombatType = ((UnitCombatTypes)unit.getSubCombatType(iI));
-				iUnitSubCombatMod = GET_PLAYER(city.getOwner()).getUnitCombatProductionModifier(eSubCombatType);
-				iUnitSubCombatMod += city.getUnitCombatProductionModifier(eSubCombatType);
-
-				if (0 != iUnitSubCombatMod)
-				{
-					szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_UNIT", iUnitSubCombatMod, GC.getUnitCombatInfo(eSubCombatType).getDescription()));
-					szBuffer.append(NEWLINE);
-					iBaseModifier += iUnitSubCombatMod;
-				}
-			}
-		}
-		//TB SubCombat Mod End
-
-		// Military
-		if (unit.isMilitaryProduction())
-		{
-			const int iMilitaryMod = city.getMilitaryProductionModifier() + GET_PLAYER(city.getOwner()).getMilitaryProductionModifier();
-			if (0 != iMilitaryMod)
-			{
-				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_MILITARY", iMilitaryMod));
-				szBuffer.append(NEWLINE);
-				iBaseModifier += iMilitaryMod;
-			}
-		}
-
-		// Bonus
-		for (int i = 0; i < GC.getNumBonusInfos(); i++)
-		{
-			if (city.hasBonus((BonusTypes)i))
-			{
-				const int iBonusMod = unit.getBonusProductionModifier(i);
-				if (0 != iBonusMod)
-				{
-					szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_MOD_BONUS", iBonusMod, unit.getTextKeyWide(), GC.getBonusInfo((BonusTypes)i).getTextKeyWide()));
-					szBuffer.append(NEWLINE);
-					iBaseModifier += iBonusMod;
-				}
-			}
-		}
-
+		const CvUnitInfo& unit = GC.getUnitInfo(eUnit);
 		// Trait
-		for (int i = 0; i < GC.getNumTraitInfos(); ++i)
+		for (int iI = 0; iI < GC.getNumTraitInfos(); ++iI)
 		{
-			TraitTypes eTrait = ((TraitTypes)i);
+			const TraitTypes eTrait = (TraitTypes)iI;
 			if (city.hasTrait(eTrait))
 			{
-				for (int j = 0; j < GC.getTraitInfo(eTrait).getNumUnitProductionModifiers(); j++)
+				iMod = 0;
+				for (int iJ = 0; iJ < GC.getTraitInfo(eTrait).getNumUnitProductionModifiers(); iJ++)
 				{
-					if ((UnitTypes)GC.getTraitInfo(eTrait).getUnitProductionModifier(j).eUnit == eUnit)
+					if ((UnitTypes)GC.getTraitInfo(eTrait).getUnitProductionModifier(iJ).eUnit == eUnit)
 					{
-						if (GC.getTraitInfo(eTrait).getUnitProductionModifier(j).iModifier != 0)
-						{
-							if (GC.getTraitInfo(eTrait).getUnitProductionModifier(j).iModifier == 100)
-							{
-								szBuffer.append(NEWLINE);
-								szBuffer.append(gDLL->getText("TXT_KEY_DOUBLE_SPEED_TRAIT", GC.getTraitInfo(eTrait).getTextKeyWide()));
-							}
-							else
-							{
-								szBuffer.append(NEWLINE);
-								szBuffer.append(gDLL->getText("TXT_KEY_PRODUCTION_MODIFIER_TRAIT", GC.getTraitInfo(eTrait).getUnitProductionModifier(j).iModifier, GC.getTraitInfo(eTrait).getTextKeyWide()));
-							}
-						}
+						iMod += GC.getTraitInfo(eTrait).getUnitProductionModifier(iJ).iModifier;
+						break;
 					}
 				}
-			}
-		}
-		int iTraitMod = 0;
-		for (int i = 0; i < GC.getNumTraitInfos(); i++)
-		{
-			iTraitMod = 0;
-			TraitTypes eTrait = ((TraitTypes)i);
-			if (city.hasTrait(eTrait))
-			{
-				for (int j = 0; j < GC.getTraitInfo(eTrait).getNumUnitProductionModifiers(); j++)
-				{
-					if ((UnitTypes)GC.getTraitInfo(eTrait).getUnitProductionModifier(j).eUnit == eUnit)
-					{
-						iTraitMod += GC.getTraitInfo(eTrait).getUnitProductionModifier(j).iModifier;
-					}
-				}
-
 				if (unit.getSpecialUnitType() != NO_SPECIALUNIT)
 				{
-					for (int j = 0; j < GC.getTraitInfo(eTrait).getNumSpecialUnitProductionModifiers(); j++)
+					for (int iJ = 0; iJ < GC.getTraitInfo(eTrait).getNumSpecialUnitProductionModifiers(); iJ++)
 					{
-						if ((SpecialUnitTypes)GC.getTraitInfo(eTrait).getSpecialUnitProductionModifier(j).eSpecialUnit == unit.getSpecialUnitType())
+						if ((SpecialUnitTypes)GC.getTraitInfo(eTrait).getSpecialUnitProductionModifier(iJ).eSpecialUnit == unit.getSpecialUnitType())
 						{
-							iTraitMod += GC.getTraitInfo(eTrait).getSpecialUnitProductionModifier(j).iModifier;
+							iMod += GC.getTraitInfo(eTrait).getSpecialUnitProductionModifier(iJ).iModifier;
+							break;
 						}
 					}
 				}
-				if (0 != iTraitMod)
+				if (iMod == 100)
 				{
-					szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_TRAIT", iTraitMod, unit.getTextKeyWide(), GC.getTraitInfo(eTrait).getTextKeyWide()));
 					szBuffer.append(NEWLINE);
-					iBaseModifier += iTraitMod;
+					szBuffer.append(gDLL->getText("TXT_KEY_DOUBLE_SPEED_TRAIT", GC.getTraitInfo(eTrait).getTextKeyWide()));
+					iBaseModifier += 100;
+				}
+				else if (iMod != 0)
+				{
+					szBuffer.append(NEWLINE);
+					szBuffer.append(gDLL->getText("TXT_KEY_PRODUCTION_MODIFIER_TRAIT", iMod, GC.getTraitInfo(eTrait).getTextKeyWide()));
+					iBaseModifier += iMod;
 				}
 			}
 		}
-
-		// Religion
-		if (NO_PLAYER != city.getOwner() && NO_RELIGION != GET_PLAYER(city.getOwner()).getStateReligion())
+		iMod = city.getUnitProductionModifier(eUnit) + GET_PLAYER(city.getOwner()).getUnitProductionModifier(eUnit);
+		if (0 != iMod)
 		{
-			if (city.isHasReligion(GET_PLAYER(city.getOwner()).getStateReligion()))
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_UNIT", iMod, unit.getTextKeyWide()));
+			szBuffer.append(NEWLINE);
+			iBaseModifier += iMod;
+		}
+		if (!unit.isNoNonTypeProdMods())
+		{
+			// Domain
+			iMod = city.getDomainProductionModifier((DomainTypes)unit.getDomainType());
+			if (0 != iMod)
 			{
-				int iReligionMod = GET_PLAYER(city.getOwner()).getStateReligionUnitProductionModifier();
-				if (0 != iReligionMod)
+				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_DOMAIN", iMod, GC.getDomainInfo((DomainTypes)unit.getDomainType()).getTextKeyWide()));
+				szBuffer.append(NEWLINE);
+				iBaseModifier += iMod;
+			}
+			// Unit Combat
+			if (unit.getUnitCombatType() != NO_UNITCOMBAT)
+			{
+				iMod = GET_PLAYER(city.getOwner()).getUnitCombatProductionModifier((UnitCombatTypes)unit.getUnitCombatType()) + city.getUnitCombatProductionModifier((UnitCombatTypes)unit.getUnitCombatType());
+				if (0 != iMod)
 				{
-					szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_RELIGION", iReligionMod, GC.getReligionInfo(GET_PLAYER(city.getOwner()).getStateReligion()).getTextKeyWide()));
+					szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_UNIT", iMod, GC.getUnitCombatInfo((UnitCombatTypes)unit.getUnitCombatType()).getDescription()));
 					szBuffer.append(NEWLINE);
-					iBaseModifier += iReligionMod;
+					iBaseModifier += iMod;
+				}
+				for (int iI = 0; iI < unit.getNumSubCombatTypes(); iI++)
+				{
+					iMod = GET_PLAYER(city.getOwner()).getUnitCombatProductionModifier((UnitCombatTypes)unit.getSubCombatType(iI)) + city.getUnitCombatProductionModifier((UnitCombatTypes)unit.getSubCombatType(iI));
+					if (0 != iMod)
+					{
+						szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_UNIT", iMod, GC.getUnitCombatInfo((UnitCombatTypes)unit.getSubCombatType(iI)).getDescription()));
+						szBuffer.append(NEWLINE);
+						iBaseModifier += iMod;
+					}
+				}
+			}
+			// Military II
+			if (unit.isMilitaryProduction())
+			{
+				iMod += GET_PLAYER(city.getOwner()).getMilitaryProductionModifier() + city.getMilitaryProductionModifier();
+				if (0 != iMod)
+				{
+					szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_MILITARY", iMod));
+					szBuffer.append(NEWLINE);
+					iBaseModifier += iMod;
+				}
+			}
+			// Religion
+			if (NO_RELIGION != GET_PLAYER(city.getOwner()).getStateReligion() && city.isHasReligion(GET_PLAYER(city.getOwner()).getStateReligion()))
+			{
+				iMod = GET_PLAYER(city.getOwner()).getStateReligionUnitProductionModifier();
+				if (0 != iMod)
+				{
+					szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_RELIGION", iMod, GC.getReligionInfo(GET_PLAYER(city.getOwner()).getStateReligion()).getTextKeyWide()));
+					szBuffer.append(NEWLINE);
+					iBaseModifier += iMod;
+				}
+			}
+		}
+		// Bonus
+		for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
+		{
+			if (city.hasBonus((BonusTypes)iI))
+			{
+				iMod = unit.getBonusProductionModifier(iI);
+				if (0 != iMod)
+				{
+					szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_MOD_BONUS", iMod, unit.getTextKeyWide(), GC.getBonusInfo((BonusTypes)iI).getTextKeyWide()));
+					szBuffer.append(NEWLINE);
+					iBaseModifier += iMod;
 				}
 			}
 		}
@@ -34839,25 +34789,23 @@ void CvGameTextMgr::setProductionHelp(CvWStringBuffer &szBuffer, CvCity& city)
 		}
 	}
 
-	int iFoodProduction = (city.isFoodProduction() ? std::max(0, (city.getYieldRate(YIELD_FOOD) - city.foodConsumption(true))) : 0);
+	const int iFoodProduction = (city.isFoodProduction() ? std::max(0, (city.getYieldRate(YIELD_FOOD) - city.foodConsumption(true))) : 0);
 	if (iFoodProduction > 0)
 	{
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_FOOD", iFoodProduction, iFoodProduction));
 		szBuffer.append(NEWLINE);
 	}
 
-	int iModProduction = iFoodProduction + (iBaseModifier * iBaseProduction) / 100;
+	const int iModProduction = iFoodProduction + (iBaseModifier * iBaseProduction) / 100;
 
 	FAssertMsg(iModProduction == city.getCurrentProductionDifference(ProductionCalc::FoodProduction | (!bIsProcess? ProductionCalc::Overflow : ProductionCalc::None)), "Modified Production does not match actual value");
 
 	szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_FINAL_YIELD", iModProduction));
 
-// BUG - Building Additional Production - start
 	if (bBuildingAdditionalYield && city.getOwner() == GC.getGame().getActivePlayer())
 	{
 		setBuildingAdditionalYieldHelp(szBuffer, city, YIELD_PRODUCTION, DOUBLE_SEPARATOR);
 	}
-// BUG - Building Additional Production - end
 }
 
 

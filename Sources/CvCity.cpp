@@ -4654,50 +4654,44 @@ int CvCity::getProductionModifier() const
 
 int CvCity::getProductionModifier(UnitTypes eUnit) const
 {
+	const CvUnitInfo& unit = GC.getUnitInfo(eUnit);
 	int iMultiplier = GET_PLAYER(getOwner()).getProductionModifier(eUnit);
 
 	iMultiplier += getUnitProductionModifier(eUnit);
 	iMultiplier += GET_PLAYER(getOwner()).getUnitProductionModifier(eUnit);
-	if (!GC.getUnitInfo(eUnit).isNoNonTypeProdMods())
+	if (!unit.isNoNonTypeProdMods())
 	{
-		iMultiplier += getDomainProductionModifier((DomainTypes)(GC.getUnitInfo(eUnit).getDomainType()));
-		if (GC.getUnitInfo(eUnit).getUnitCombatType() != NO_UNITCOMBAT)
+		iMultiplier += getDomainProductionModifier((DomainTypes)(unit.getDomainType()));
+		if (unit.getUnitCombatType() != NO_UNITCOMBAT)
 		{
-			iMultiplier += GET_PLAYER(getOwner()).getUnitCombatProductionModifier((UnitCombatTypes)(GC.getUnitInfo(eUnit).getUnitCombatType()));
+			iMultiplier += GET_PLAYER(getOwner()).getUnitCombatProductionModifier((UnitCombatTypes)(unit.getUnitCombatType()));
 
-			//TB Combat Mod begin TB SubCombat Mod Begin
-			iMultiplier += getUnitCombatProductionModifier((UnitCombatTypes)(GC.getUnitInfo(eUnit).getUnitCombatType()));
-			for (int iI = 0; iI < GC.getUnitInfo(eUnit).getNumSubCombatTypes(); iI++)
+			iMultiplier += getUnitCombatProductionModifier((UnitCombatTypes)(unit.getUnitCombatType()));
+			for (int iI = 0; iI < unit.getNumSubCombatTypes(); iI++)
 			{
-				UnitCombatTypes eSubCombatType = ((UnitCombatTypes)GC.getUnitInfo(eUnit).getSubCombatType(iI));
+				UnitCombatTypes eSubCombatType = ((UnitCombatTypes)unit.getSubCombatType(iI));
 				iMultiplier += GET_PLAYER(getOwner()).getUnitCombatProductionModifier(eSubCombatType);
 				iMultiplier += getUnitCombatProductionModifier(eSubCombatType);
 			}
-			//TB SubCombat Mod endTB SubCombat Mod End
 		}
 
-		if (GC.getUnitInfo(eUnit).isMilitaryProduction())
+		if (unit.isMilitaryProduction())
 		{
 			iMultiplier += getMilitaryProductionModifier();
 		}
 
-		if (GET_PLAYER(getOwner()).getStateReligion() != NO_RELIGION)
+		if (GET_PLAYER(getOwner()).getStateReligion() != NO_RELIGION && isHasReligion(GET_PLAYER(getOwner()).getStateReligion()))
 		{
-			if (isHasReligion(GET_PLAYER(getOwner()).getStateReligion()))
-			{
-				iMultiplier += GET_PLAYER(getOwner()).getStateReligionUnitProductionModifier();
-			}
+			iMultiplier += GET_PLAYER(getOwner()).getStateReligionUnitProductionModifier();
 		}
 	}
-
 	for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
 	{
 		if (hasBonus((BonusTypes)iI))
 		{
-			iMultiplier += GC.getUnitInfo(eUnit).getBonusProductionModifier(iI);
+			iMultiplier += unit.getBonusProductionModifier(iI);
 		}
 	}
-
 	return std::max(0, iMultiplier);
 }
 
