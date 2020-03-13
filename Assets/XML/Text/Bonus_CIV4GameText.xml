@@ -4124,8 +4124,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LIQUID_METAL_PEDIA</Tag>
-		<English>Liquid metal consists of gallium-containing alloys with very low melting points which are liquid at room temperature. The standard metal formerly was mercury, but gallium-based alloys are being used as a replacement in various applications. Mercury is toxic, and has a high vapor pressure at room temperature. Gallium alloys have reduced toxicity and a lower vapor pressure than mercury.</English>
-		<Polish>Dobro materialne ogólnie jest tym wszystkim, co dana jednostka ludzka może gromadzić wokół siebie tworząc własne środowisko materialne.</Polish>
+		<English>A liquid metal consists of alloys with very low melting points. The standard metal used to be mercury, but gallium-based alloys, which are lower both in their vapor pressure at room temperature and toxicity, are being used as a replacement in various applications. Alloy systems that are liquid at room temperature have thermal conductivity far superior to ordinary non-metallic liquids, and a higher electrical conductivity that allows the liquid to be pumped by more efficient electromagnetic pumps. Typical uses of liquid metals include thermostats, switches, barometers, heat transfer systems, and thermal cooling and heating designs. Starting from 21st century, also wearable devices and IoT applications made use of liquid metals.</English>
+		<Italian>Un metallo liquido è costituito da leghe con punti di fusione molto bassi. Il metallo più usato inizialmente era il mercurio, ma le leghe a base di gallio, che hanno una pressione dei vapori a temperatura ambiente e una tossicità inferiore, lo hanno gradualmente sostituito. Questo tipo di leghe liquide a temperatura ambiente hanno una conduttività termica di gran lunga superiore ai normali liquidi non metallici e una maggiore conduttività elettrica, che consente al liquido di essere pompato più efficientemente da pompe elettromagnetiche. Gli usi tipici dei metalli liquidi includono termostati, interruttori, barometri, sistemi di trasferimento di calore e impianti di raffreddamento e riscaldamento termici. A partire dal XXI secolo, anche i dispositivi indossabili e le applicazioni IoT hanno iniziato a utilizzarli.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LITHIUM</Tag>
@@ -4544,8 +4544,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MEGASTRONG_ALLOYS_PEDIA</Tag>
-		<English>Megastrong Alloy is a material composed of two or more metals or a metal and a nonmetal. An alloy may be a solid solution of the elements (a single phase), a mixture of metallic phases (two or more solutions) or an intermetallic compound with no distinct boundary between the phases. Solid solution alloys give a single solid phase microstructure, while partial solutions exhibit two or more phases that may or may not be homogeneous in distribution, depending on the thermal (heat treatment) history of the material. An inter-metallic compound has one other alloy or pure metal embedded within another pure metal.</English>
-		<Polish>Dobro materialne ogólnie jest tym wszystkim, co dana jednostka ludzka może gromadzić wokół siebie tworząc własne środowisko materialne.</Polish>
+		<English>A megastrong alloy is a material composed of two or more metals or a metal and a nonmetal. An alloy may be a solid solution of the elements (a single phase), a mixture of metallic phases (two or more solutions) or an intermetallic compound with no distinct boundary between the phases. Solid solution alloys give a single solid phase microstructure, while partial solutions exhibit two or more phases that may or may not be homogeneous in distribution, depending on the thermal (heat treatment) history of the material. An inter-metallic compound has one other alloy or pure metal embedded within another pure metal.</English>
+		<Italian>Una lega megaresistente è un materiale composto da due o più metalli o un metallo e una sostanza non metallica. Una lega può essere una soluzione solida degli elementi (una singola fase), una miscela di fasi metalliche (due o più soluzioni) o un composto intermetallico senza confini distinti tra le fasi. Le leghe di soluzioni solide forniscono una microstruttura a singola fase solida, mentre le soluzioni parziali presentano due o più fasi che possono o meno essere omogenee nella distribuzione, a seconda della storia termica (trattamento termico) del materiale. Un composto inter-metallico ha un'altra lega o metallo puro incorporato in un altro metallo puro.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MELANESIAN</Tag>
@@ -4600,8 +4600,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_METAMATERIALS_PEDIA</Tag>
-		<English>Metamaterials are materials engineered to have properties that have not yet been found in nature. They are made from assemblies of multiple elements fashioned from conventional materials such as metals or plastics. The materials are usually arranged in repeating patterns, often at microscopic or smaller scales that are smaller than the wavelengths of the phenomena they influence. Metamaterials derive their properties not from the properties of the base materials, but from their designed structure. Their precise shape, geometry, size, orientation and arrangement gives them their properties.</English>
-		<Polish>Dobro materialne ogólnie jest tym wszystkim, co dana jednostka ludzka może gromadzić wokół siebie tworząc własne środowisko materialne.</Polish>
+		<English>A metamaterial is any material engineered to have properties that are not found in naturally occurring materials. They are made from assemblies of multiple elements, fashioned from composite materials such as metals and plastics, and then arranged in repeating patterns, at scales that are smaller than the wavelengths of the phenomena they influence, that give them their smart properties. Applications of metamaterials include optical filters and lenses, medical devices, and a wide range of remote-based interactions and monitoring infrastructures.</English>
+		<Italian>Un metamateriale è un qualsiasi materiale progettato per avere proprietà che non si trovano nei materiali naturali. Sono costituiti da assiemi di più elementi, realizzati con materiali compositi come metalli e materie plastiche, e quindi disposti secondo schemi ripetitivi, su scale più piccole delle lunghezze d'onda dei fenomeni che influenzano, che conferiscono loro le loro proprietà peculiari. Le applicazioni dei metamateriali includono filtri e lenti ottici, dispositivi medici e una vasta gamma di infrastrutture di monitoraggio e di interazioni da remoto.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_METHAMPHETAMINE</Tag>
@@ -5187,8 +5187,8 @@
 		<English>Olmec Jade Figurines</English>
 		<French>Figurines en jade olmèque</French>
 		<Italian>Figurine di giada olmeche</Italian>
-		<Polish>Olmeckie figurki jadeitu</Polish>
-	</TEXT>
+		<Polish>Olmeckie figurki z jadeitu</Polish>
+		</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_OLMEC_JADE_FIGURINES_PEDIA</Tag>
 		<English>Olmec jade figurines are archetypical figurines made of jade, bearing the hallmarks and motifs of Olmec culture. These figurines are usually found in household refuse, ancient construction fill, and, outside the Olmec heartland, graves. The vast majority of figurines are simple in design, often nude or with a minimum of clothing, and made of local terracotta.</English>
@@ -5775,8 +5775,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PORCELAIN_PEDIA</Tag>
-		<English>Porcelain is a ceramic material made by heating materials, generally including clay in the form of kaolin, in a kiln to temperatures between 1,200 °C (2,192 °F) and 1,400 °C (2,552 °F). The toughness, strength, and translucence of porcelain arise mainly from the formation of glass and the mineral mullite within the fired body at these high temperatures.</English>
-		<Polish>Porcelana - rodzaj białej, przeświecającej ceramiki wysokiej jakości, wynaleziony w Chinach w VII w. Porcelana jest wytwarzana z mieszanki glinki kaolinowej ze skaleniem i kwarcem poprzez wypalanie uformowanych wyrobów w temperaturze od 920-980 C (wyroby nieszkliwione, tzw. biskwit) aż do 1280-1460 C (wyroby szkliwione). Charakteryzuje się niską nasiąkliwością, bardzo dobrymi właściwościami dielektrycznymi, dużą wytrzymałością mechaniczną, wysoką odpornością na działanie czynników chemicznych i nieprzepuszczalnością dla cieczy i gazów.</Polish>
+		<English>Porcelain is a ceramic material made by heating materials in a kiln to temperatures between 1,200 and 1,400 °C (2,200 and 2,600 °F). Properties associated with porcelain include low permeability and elasticity, considerable strength, hardness, toughness, whiteness, translucency and resonance, and a high resistance to chemical attack and thermal shock. Its manufacturing process is more demanding than that for earthenware and stoneware, and this is the reason it has usually been regarded as the most prestigious type of pottery. It combines well with both glazes and paint, and can be modelled very well, allowing a huge range of decorative treatments in tablewares, vessels and figurines. It also has many uses in technology and industry.</English>
+		<Italian>La porcellana è un materiale ceramico costituito da materiali riscaldanti in un forno a temperature comprese tra 1.200 e 1.400 °C (2.200 e 2.600 °F). Le proprietà associate alla porcellana comprendono bassa permeabilità ed elasticità, notevole resistenza, durezza, tenacità, bianchezza, traslucenza e risonanza e un'alta resistenza agli attacchi chimici e agli shock termici. Il suo processo di produzione è più impegnativo di quello per terracotta e gres, ed è per questo che la porcellana viene generalmente considerata il tipo più prestigioso di ceramica. Si combina bene con smalti e vernici e può essere modellata molto bene, consentendo una vasta gamma di trattamenti decorativi in stoviglie, vasi e figurine. Ha anche molti usi nella tecnologia e nell'industria.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PORTUGUESE</Tag>
@@ -6077,8 +6077,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RAW_FISH_PEDIA</Tag>
-		<English>Throughout history, humans have utilized fish as a food source. Historically and today, most fish protein has come by means of catching wild fish. However, aquaculture, or fish farming, which has been practiced since about 3,500 BCE. in China, is becoming increasingly important in many nations. Overall, about one-sixth of the world's protein is estimated to be provided by fish. That proportion is considerably elevated in some developing nations and regions heavily dependent on the sea. In a similar manner, fish have been tied to trade.
-		Catching fish for the purpose of food or sport is known as fishing, while the organized effort by humans to catch fish is called a fishery. Fisheries are a huge global business and provide income for millions of people. The annual yield from all fisheries worldwide is about 154 million tons, with popular species including herring, cod, anchovy, tuna, flounder, and salmon. However, the term fishery is broadly applied, and includes more organisms than just fish, such as mollusks and crustaceans, which are often called "fish" when used as food. </English>
+		<English>Raw fish generally refers to any type of uncooked muscle tissue of aquatic creatures used for food. Raw fish present a higher risk of disease from ingesting pathogens than cooked fish.</English>
+		<Italian>Il pesce crudo è qualsiasi tipo di tessuto muscolare crudo di una creatura acquatica. Il pesce crudo presenta un rischio più elevato di malattie dovute ad agenti patogeni rispetto al pesce cotto.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RAW_MEAT</Tag>
@@ -6089,8 +6089,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RAW_MEAT_PEDIA</Tag>
-		<English>Meat is animal flesh that is used as food.</English>
-		<French>La viande est la chair des animaux qui est utilisée comme aliment.</French>
+		<English>Raw meat generally refers to any type of uncooked muscle tissue of an animal used for food. This term refers specifically to mammalian flesh, or to any animal which is not a bird (in this case, the preferred term is "poultry") or an aquatic creature (in this case, the preferred term is "seafood"). Raw meat present a higher risk of disease from ingesting pathogens than cooked meat.</English>
+		<Italian>La carne cruda è qualsiasi tipo di tessuto muscolare crudo di un animale usato per il cibo. Questo termine si riferisce specificamente alla carne di mammiferi o di qualsiasi animale che non sia un uccello (in questo caso, il termine preferito è "pollame") o una creatura acquatica (in questo caso, il termine preferito è "pescato"). La carne cruda presenta un rischio più elevato di malattie dovute ad agenti patogeni rispetto alla carne cotta.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RED_AND_BLACK_CERAMICS</Tag>
@@ -6101,8 +6101,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RED_AND_BLACK_CERAMICS_PEDIA</Tag>
-		<English>Because of its relative durability, pottery comprises a large part of the archaeological record of Ancient Greece, and since there is so much of it (some 100,000 vases are recorded in the Corpus vasorum antiquorum), it has exerted a disproportionately large influence on our understanding of Greek society. Little survives, for example, of ancient Greek painting except for what is found on the earthenware in everyday use, so we must trace the development of Greek art through its vestiges on a derivative art form. Nevertheless the shards of pots discarded or buried in the 1st millennium BC are still the best guide we have to the customary life and mind of the ancient Greeks.</English>
-		<Polish>Ze względu na jego względnej trwałości, ceramika obejmuje dużą część danych archeologicznych starożytnej Grecji, a ponieważ nie jest tak dużo (około 100.000 wazony są rejestrowane w vasorum Antiquorum Corpus), to wywiera nieproporcjonalnie duży wpływ na nasze rozumienie społeczeństwa greckiego. Małe przeżyje, na przykład, od starożytnego greckiego malarstwa, z wyjątkiem tego, co znajduje się na glinianych w codziennym użytkowaniu, więc musimy prześledzić rozwój sztuki greckiej poprzez swoje ślady na pochodnego formy sztuki. Niemniej skorupy garnków wyrzuconych lub zatopionych w 1 tysiąclecia pne są nadal najlepszym przewodnikiem mamy do zwyczajowego życia i umysłu starożytnych Greków.</Polish>
+		<English>Red and black ceramics were one of the most important styles of figural Greek vase painting. This process was developed in Athens around 520 BC, remained in use until the late 3rd century BC, and replaced the previously dominant style of black-figure vase painting within a few decades. For a long time, they dominated the market for fine ceramics in much of the Mediterranean basin, with Etruria being the only non-Greek area to develop an autonomous "school". Their images provide evidence for the exploration of Greek and Etruscan cultural history, everyday life, iconography, and mythology.</English>
+		<Italian>Le ceramiche rosse e nere hanno rappresentato uno degli stili più importanti della pittura figurale greca su vaso. Questo processo si sviluppò ad Atene intorno al 520 a.C., rimase in uso fino alla fine del III secolo a.C. e rimpiazzò lo stile precedentemente dominante della pittura a figure nere nel giro di pochi decenni. Per molto tempo, hanno dominato il mercato delle ceramiche di pregio in gran parte del bacino del Mediterraneo; l'Etruria fu l'unica area non greca a sviluppare una "scuola" autonoma. Le loro immagini forniscono prove dell'esplorazione della storia culturale, della vita quotidiana, dell'iconografia e della mitologia greca ed etrusca.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RED_OCHER</Tag>
@@ -7027,8 +7027,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SUPERSTRONG_ALLOYS_PEDIA</Tag>
-		<English>A superalloy, or high-performance alloy, is an alloy that exhibits several key characteristics: excellent mechanical strength, resistance to thermal creep deformation, good surface stability and resistance to corrosion or oxidation. The crystal structure is typically face-centered cubic austenitic. Examples of such alloys are Hastelloy, Inconel, Waspaloy, Rene alloys, Haynes alloys, Incoloy, MP98T, TMS alloys, and CMSX single crystal alloys.</English>
-		<Polish>Dobro materialne ogólnie jest tym wszystkim, co dana jednostka ludzka może gromadzić wokół siebie tworząc własne środowisko materialne.</Polish>
+		<English>A superstrong alloy, or high-performance alloy, is an alloy with the ability to operate at a high fraction of its melting point. Several key characteristics of a superalloy are excellent mechanical strength, resistance to thermal creep deformation, good surface stability, and resistance to corrosion or oxidation. The primary application for such alloys is in aerospace and marine turbine engines.</English>
+		<Italian>Una lega super-resistente, o lega ad alte prestazioni, è una lega con la capacità di operare ad una frazione elevata del suo punto di fusione. Diverse caratteristiche chiave di una superlega sono l'eccellente resistenza meccanica, la resistenza alla deformazione termica, la buona stabilità superficiale e la resistenza alla corrosione o all'ossidazione. L'applicazione principale per tali leghe è nei motori aerospaziali e delle turbine marine.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SURINAMESE</Tag>
@@ -7257,8 +7257,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TERRACOTTA_PEDIA</Tag>
-		<English>Terracotta, Terra cotta or Terra-cotta (Italian: "baked earth", from the Latin terra cotta), a type of earthenware, is a clay-based unglazed or glazed ceramic, where the fired body is porous. Its uses include vessels (notably flower pots), water and waste water pipes, bricks, and surface embellishment in building construction, along with sculpture such as the Terracotta Army and Greek terracotta figurines. The term is also used to refer to items made out of this material and to its natural, brownish orange color, which varies considerably. In archaeology and art history, "terracotta" is often used of objects not made on a potter's wheel, such as figurines, where objects made on the wheel from the same material, possibly even by the same person, are called pottery; the choice of term depending on the type of object rather than the material.</English>
-		<Polish>Terakota (wł. terra cotta - ziemia wypalona) - wyroby z dobrze oczyszczonej i wypalonej gliny w formie figurek lub płytek, stosowane do zdobień. Znane w starożytnej Grecji, Etrurii, Rzymie. Przedmioty były modelowane ręcznie lub odciskane w formach, a następnie wypalane. Wyrobów nie powlekano firnisem i początkowo nie malowano. Najciekawsze figurki pochodzą z IV w. p.n.e. z Tanagry - miasto w Grecji, z okresu hellenistycznego - z Myriny. Największe, naturalnej wielkości figury (w tym tzw. Apollo) pochodzą z Wejów (500 r. p.n.e.). Oprócz figurek wykonywano płytki do zdobień (antefiks, akroterion), dachówki i simy, płytki do licowania ścian (np. dach świątyni Hery na Olimpii - VII wiek p.n.e.), wnętrz teatrów, term, domów mieszkalnych.</Polish>
+		<English>Terracotta, terra cotta or terra-cotta is a clay-based ceramic where the fired body is porous. Fired terracotta is not watertight, but surface-burnishing the body before firing can decrease its porousness and a layer of glaze can make it watertight. It is suitable for use below ground to carry pressurized water (an archaic use), for garden pots or building decoration, and for oil containers, oil lamps, or ovens. Most other uses, such as for tableware, sanitary piping, or building decoration in freezing environments, require the material to be glazed.</English>
+		<Italian>La terracotta è una ceramica a base di argilla dal corpo poroso. La terracotta infornata non è a tenuta stagna, ma la brunitura superficiale del corpo prima della cottura può ridurne la porosità e uno strato di smalto può renderlo a tenuta stagna. È adatta per trasportare acqua in pressione sottoterra, per i vasi da giardino o per le decorazione di ambienti e per i contenitori di olio, le lampade a olio o i forni. La maggior parte degli altri usi, come stoviglie, tubazioni sanitarie o decorazione di edifici in ambienti freddi, richiede che la terracotta venga prima smaltata.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TESSERACT</Tag>
@@ -7668,8 +7668,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_VACUUM_CLEANERS_PEDIA</Tag>
-		<English>A vacuum cleaner is a device that uses an air pump to create a partial vacuum to suck up dust and dirt, usually from floors, and optionally from other surfaces as well. The dirt is collected by either a dustbag or a cyclone for later disposal. Vacuum cleaners, which are used in homes as well as in industry, exist in a variety of sizes and models? small battery-operated hand-held devices, domestic central vacuum cleaners, huge stationary industrial appliances that can handle several hundred litres of dust before being emptied, and self-propelled vacuum trucks for recovery of large spills or removal of contaminated soil.</English>
-		<Polish>Odkurzacz jest urządzeniem, które wykorzystuje się pompę powietrza, w celu utworzenia podciśnienia do zasysania kurzu i brudu, zwykle od podłogi, oraz ewentualnie innych powierzchni, jak również.Zanieczyszczenia są zbierane przez czy dustbag lub cyklonu w celu późniejszego usunięcia. Odkurzaczy, które są stosowane w domach, jak również w przemyśle występować w różnych wymiarach i modelach małe urządzenia na baterie ręcznych domowe centralne odkurzacze, urządzenia przemysłowe ogromne stacjonarne, które mogą obsługiwać kilkaset litrów kurzu przed opróżniony i samobieżne wodociągowe do odzyskania dużych wycieków lub usuwania zanieczyszczonej gleby.</Polish>
+		<English>A vacuum cleaner, also known simply as a vacuum, is a device that causes suction in order to remove debris from floors, upholstery, draperies and other surfaces. It is generally electrically driven. The dirt is collected by either a dustbag or a cyclone for later disposal. Vacuum cleaners, which are used in homes as well as in industry, exist in a variety of sizes and models. Specialized shop vacuums can be used to suck up both dust and liquids.</English>
+		<Italian>Un aspirapolvere è un dispositivo che, tramite un processo di aspirazione, rimuove detriti da pavimenti, tappezzerie, tendaggi e altre superfici. È generalmente guidato elettricamente. Lo sporco viene raccolto in un sacchetto per la polvere o in un serbatoio per un successivo smaltimento. Gli aspirapolvere vengono utilizzati nelle case e nell'industria ed esistono in una varietà di dimensioni e modelli. Gli aspirapolvere specializzati possono essere utilizzati per aspirare sia polvere, sia liquidi.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_VALDIVIAN</Tag>
@@ -7901,7 +7901,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WHALE_PEDIA</Tag>
-		<English>Whales are a widely distributed and diverse group of fully aquatic placental marine mammals. Whales are creatures of the open ocean; they feed, mate, give birth, suckle and raise their young at sea. So extreme is their adaptation to life underwater that they are unable to survive on land. Whales range in size from the 2.6 m (8.5 ft) and 135 kg (298 lb) dwarf sperm whale to the 29.9 m (98 ft) and 190 metric tons (210 short tons) blue whale, which is the largest known creature that has ever lived. The sperm whale is the largest toothed predator on earth. Once relentlessly hunted for their products, whales are now protected by international law. Whales occasionally feature in literature and film, as in the great white whale of Herman Melville's Moby Dick. Small whales, such as belugas, are sometimes kept in captivity and trained to perform tricks, but breeding success has been poor and the animals often die within a few months of capture. Whale watching has become a form of tourism around the world.</English>
+		<English>Whales are a widely distributed and diverse group of fully aquatic placental marine mammals. Whales are creatures of the open ocean: they feed, mate, give birth, suckle and raise their young at sea. Whales range in size from the 2.6 metres (8.5 ft) and 135 kilograms (298 lb) dwarf sperm whale to the 29.9 metres (98 ft) and 190 metric tons (210 short tons) blue whale, which is the largest known creature that has ever lived. Once relentlessly hunted for their products, whales are now protected by international law. Whales are typically hunted for their meat, blubber, bones (for tools), oil (for lamp fuel and lubricants), baleen (for corsets and skirt hoops), and ambergris (for fixative for perfumes).</English>
+		<Italian>Le balene sono un gruppo ampiamente distribuito e diversificato di mammiferi marini placentare completamente acquatici. Le balene sono creature dell'oceano: si nutrono, si accoppiano, danno alla luce, allattano e allevano i loro piccoli in mare. Le balene variano in dimensione dai 2,6 metri e 135 chilogrammi del capodoglio nano ai 29,9 metri e 190 tonnellate delle balene blu, che sono le più grandi creature conosciute mai vissute. Una volta cacciate incessantemente per i loro prodotti, le balene sono ora protette dal diritto internazionale. Le balene sono in genere cacciate per la carne, il grasso, le ossa (per utensili), l'olio (per lampade e lubrificanti), il fanone (per corsetti e cerchietti per gonna) e l'ambra grigia (fissativo per profumi).</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WHALE_OIL</Tag>
