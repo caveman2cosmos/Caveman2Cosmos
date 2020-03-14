@@ -242,7 +242,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_BREAKDOWN_EFFECTS</Tag>
 		<English>Breakdown: %d1_chance%% chance per round of reducing city defenses by %d2_damage%%. Opponent Repel values modify this Chance. Damage modified by City Bombard Defense.</English>
-		<French>Démolition: %d1_chance%% Prob. par round de réduire les défense de la ville de  %d2_damage%%. Les valeurs d'Expulsion de l'adversaire modifient cette probabilité.</French>
+		<French>Démolition: %d1_chance%% Prob. par round de réduire les défense de la ville de %d2_damage%%. Les valeurs d'Expulsion de l'adversaire modifient cette probabilité.</French>
 		<Polish>Załamanie się: %d1_chance%% szansa za każdą turę redukowania obrony miasta. przez %d2_damage%%. Wrogie Odstraszanie modyfikuje tą szansę. Obrażenia zmodyfikowane przez Obroną Miasta przed Bombardowaniem.</Polish>
 	</TEXT>
 	<TEXT>
@@ -7910,7 +7910,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_FREE_EXPERIENCE</Tag>
 		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 for being a %s2_UNITCOMBAT type unit[COLOR_REVERT]</English>
-		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 car unité de type  %s2_UNITCOMBAT [COLOR_REVERT]</French>
+		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 car unité de type %s2_UNITCOMBAT [COLOR_REVERT]</French>
 		<Polish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 za bycie %s2_UNITCOMBAT rodzajem jednostki[COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
@@ -11528,7 +11528,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_EXPLOSIVE_FLASK</Tag>
 		<English>Wields(Dist Backup Explosive Flask)</English>
 		<French>
-			<Text>(Equipement secondaire) Bouteille Explosive  - A Distance</Text>
+			<Text>(Equipement secondaire) Bouteille Explosive - A Distance</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12066,7 +12066,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_TECHNO_TELEPATHIC</Tag>
 		<English>Wields(Backup Technological Telepathy)</English>
-		<French>(Equipement) Télépathie -  Soutien</French>
+		<French>(Equipement) Télépathie - Soutien</French>
 		<Polish>Uzbrojenie (Broń Zapasowa Telepatia Technologiczna)</Polish>
 	</TEXT>
 	<TEXT>
@@ -12094,7 +12094,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DETONATE_BIOLOGICAL</Tag>
 		<English>Wields(Detonate Biological)</English>
 		<French>
-			<Text>(Equipement) Arme biologique -  A retardement</Text>
+			<Text>(Equipement) Arme biologique - A retardement</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -12699,7 +12699,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_MAGNETIC</Tag>
 		<English>Wields(Distance Magnetic)</English>
-		<French>(Equipement)  Arme Magnétique - A Distance</French>
+		<French>(Equipement) Arme Magnétique - A Distance</French>
 		<Polish>Uzbrojenie (Dystansowa Magnetyczny)</Polish>
 	</TEXT>
 	<TEXT>
@@ -12741,13 +12741,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_NANOSPRAY</Tag>
 		<English>Wields(Distance Nanospray)</English>
-		<French>(Equipement)  Nanospray - A Distance</French>
+		<French>(Equipement) Nanospray - A Distance</French>
 		<Polish>Uzbrojenie (Dystansowa Nanospraj)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DIST_PATHOGEN_DELIVERY</Tag>
 		<English>Wields(Distance Pathogen Delivery)</English>
-		<French>(Equipement)  Arme à Pathogène - A Distance</French>
+		<French>(Equipement) Arme à Pathogène - A Distance</French>
 		<Polish>Uzbrojenie (Dystansowa Broń Biologiczna)</Polish>
 	</TEXT>
 	<TEXT>
@@ -13162,7 +13162,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_H2H_LONG_POLEARM</Tag>
 		<English>Wields(H2H Long Polearm)</English>
 		<French>
-			<Text>(Equipement) Arme à long Manche  - Corps à Corps</Text>
+			<Text>(Equipement) Arme à long Manche - Corps à Corps</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>

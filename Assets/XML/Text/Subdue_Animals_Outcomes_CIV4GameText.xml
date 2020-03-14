@@ -91,7 +91,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE</Tag>
-		<English>This will consume the unit providing a culture and science boost based on which building is available in the city (Cave Paintings,  Story Tellers Hut, School of Scribes, Library or University).</English>
+		<English>This will consume the unit providing a culture and science boost based on which building is available in the city (Cave Paintings, Story Tellers Hut, School of Scribes, Library or University).</English>
 		<French>L'unité est utilisée pour procurer un bonus de culture et de science, dépendant des bâtiments présents dans la ville (Peintures des cavernes, Hutte du Conteur d'histoire, Ecole des scribes, Bibliothèque ou Université).</French>
 		<Italian>Consumerà l'unità fornendo un bonus a cultura e ricerca basato sugli edifici presenti in città (Pitture rupestri, Capanna del cantastorie, Scuola di scribi, Biblioteca o Università).</Italian>
 		<Polish>Ta akcja usunie jednostkę dostarczając małej ilości kultury i nauki bazując na tym jakie budynki są dostępne w mieście (Malunki Naskalne, Chata Opowiadacza, Szkoła Skrybów, Uniwersytet).</Polish>
@@ -166,7 +166,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_BUILD_DOMESTICATED_HERD_MESSAGE</Tag>
-		<English>A  herd now roams this plot.</English>
+		<English>A herd now roams this plot.</English>
 		<Polish>Od tego momentu stada zwierząt przemierzają ten teren.</Polish>
 	</TEXT>
 	<TEXT>
@@ -202,10 +202,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SUBDUED_BAD_UNIT</Tag>
-		<English>Capture %s1 (%d2) as %s3 (%d4).  Contains an invalid unit!</English>
-		<French>Capturé %s1 (%d2) en %s3 (%d4).  Contient une unité non valable!</French>
+		<English>Capture %s1 (%d2) as %s3 (%d4). Contains an invalid unit!</English>
+		<French>Capturé %s1 (%d2) en %s3 (%d4). Contient une unité non valable!</French>
 		<Italian>Cattura %s1 (%d2) come %s3 (%d4). Contiene un'unità non valida!</Italian>
-		<Polish>Pochwyć %s1 (%d2) jako %s3 (%d4).  Zawiera niewłaściwą jednostkę!</Polish>
+		<Polish>Pochwyć %s1 (%d2) jako %s3 (%d4). Zawiera niewłaściwą jednostkę!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SUBDUED_GOLD</Tag>

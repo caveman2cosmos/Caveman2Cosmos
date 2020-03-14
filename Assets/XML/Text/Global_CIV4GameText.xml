@@ -37,15 +37,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_PRODUCTION_BUY</Tag>
-		<English>%s1 (%d2)   -%d3[ICON_GOLD]</English>
+		<English>%s1 (%d2) -%d3[ICON_GOLD]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_PRODUCTION_WHIP</Tag>
-		<English>%s1 (%d2)   %d3[ICON_ANGRYPOP] %d4[ICON_PRODUCTION]</English>
+		<English>%s1 (%d2) %d3[ICON_ANGRYPOP] %d4[ICON_PRODUCTION]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_PRODUCTION_WHIP_PLUS_GOLD</Tag>
-		<English>%s1 (%d2)   %d3[ICON_ANGRYPOP] %d4[ICON_PRODUCTION] %d5[ICON_GOLD]</English>
+		<English>%s1 (%d2) %d3[ICON_ANGRYPOP] %d4[ICON_PRODUCTION] %d5[ICON_GOLD]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_SHRINKING</Tag>
@@ -1795,7 +1795,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GROUP_WONDER_LEFT</Tag>
 		<English>[SPACE](Group Wonder of %s1_Special: %d2_Num Left)</English>
-		<French>[SPACE](Groupe de Merveilles de  %s1_Special: %d2_Num restant(s))</French>
+		<French>[SPACE](Groupe de Merveilles de %s1_Special: %d2_Num restant(s))</French>
 		<German>[SPACE](Gruppenwunder "%s1_Special": %d2_Num übrig)</German>
 	</TEXT>
 	<TEXT>
@@ -2518,7 +2518,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_PROPERTY_SPAWN_BARB</Tag>
 		<English>A troublemaking %s1 has emerged to wreak havoc in the City of %s2!</English>
-		<French>Un trouble %s1 a émergé et créé  des ravages dans la ville de %s2!</French>
+		<French>Un trouble %s1 a émergé et créé des ravages dans la ville de %s2!</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_PROPERTY_SPAWN_FRIENDLY</Tag>
@@ -2661,7 +2661,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIV4LERTS_ON_CITY_CAN_HURRY_POP</Tag>
 		<English>[COLOR_YIELD_FOOD]%s1 can hurry %s2 for %d3[ICON_ANGRYPOP] with %d4[ICON_PRODUCTION] overflow and +1[ICON_UNHAPPY] for %d5 turns.[COLOR_REVERT]</English>
-		<French>[COLOR_YIELD_FOOD]%s1 peut accélérer la construction de  %s2 avec pour conséquences %d3[ICON_ANGRYPOP], %d4[ICON_PRODUCTION] en surplus et +1[ICON_UNHAPPY] pendant %d5 tours.[COLOR_REVERT]</French>
+		<French>[COLOR_YIELD_FOOD]%s1 peut accélérer la construction de %s2 avec pour conséquences %d3[ICON_ANGRYPOP], %d4[ICON_PRODUCTION] en surplus et +1[ICON_UNHAPPY] pendant %d5 tours.[COLOR_REVERT]</French>
 		<German>[COLOR_YIELD_FOOD]%s1 kann das Bauprojekt "%s2" unter Einsatz von %d3[ICON_ANGRYPOP] beschleunigen (Überschuss: %d4[ICON_PRODUCTION]), wobei für %d5 Runden +1[ICON_UNHAPPY] in der Stadt verursacht wird.[COLOR_REVERT]</German>
 		<Italian>[COLOR_YIELD_FOOD]%s1 può accelerare %s2 per %d3[ICON_ANGRYPOP] con un surplus di %d4[ICON_PRODUCTION] e +1[ICON_UNHAPPY] per %d5 [NUM5:turno:turni].[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_YIELD_FOOD]%s1 puede acelerar %s2 por %d3[ICON_ANGRYPOP], con un excedente de %d4[ICON_PRODUCTION] y +1[ICON_UNHAPPY] durante %d5 turnos.[COLOR_REVERT]</Spanish>
@@ -3400,9 +3400,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DAMAGE_BY_UNITCOMBAT</Tag>
-		<English>[ICON_BULLET]Damage that %s1_UNITCOMBAT: %d2_Mod%%.  Heals in %d3 Turns.</English>
-		<French>[ICON_BULLET]Dégâts de %s1_UNITCOMBAT: %d2_Mod%%.  se soigne en %d3 Tours.</French>
-		<Polish>[ICON_BULLET]Obrażenia otrzymane %s1_UNITCOMBAT: %d2_Mod%%.  Uleczone w  %d3 tur.</Polish>
+		<English>[ICON_BULLET]Damage that %s1_UNITCOMBAT: %d2_Mod%%. Heals in %d3 Turns.</English>
+		<French>[ICON_BULLET]Dégâts de %s1_UNITCOMBAT: %d2_Mod%%. se soigne en %d3 Tours.</French>
+		<Polish>[ICON_BULLET]Obrażenia otrzymane %s1_UNITCOMBAT: %d2_Mod%%. Uleczone w %d3 tur.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DARKAGE_ACTIVE</Tag>
@@ -3772,7 +3772,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EMPCLOTH_STRATEGY</Tag>
 		<English>Build the [COLOR_BUILDING_TEXT]Emperors Clothing[COLOR_REVERT] Headquarters to create the [COLOR_HIGHLIGHT_TEXT]Emperors Clothing Corporation[COLOR_REVERT] which consumes [COLOR_HIGHLIGHT_TEXT]Silk[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cotton[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Dye[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Sheep[COLOR_REVERT] or [COLOR_HIGHLIGHT_TEXT]Fur[COLOR_REVERT] and adds a culture bonus to every city where the [COLOR_HIGHLIGHT_TEXT]Emperors Clothing Corporation[COLOR_REVERT] is present. The Headquarters provide gold for each city in the world with a Emperors Clothing franchise.</English>
-		<French>Construire le siège de [COLOR_BUILDING_TEXT]Habits Impériaux[COLOR_REVERT] pour créer la corporation [COLOR_HIGHLIGHT_TEXT]Habits Impériaux[COLOR_REVERT] qui consomme [COLOR_HIGHLIGHT_TEXT]Soie[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Coton[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Teinture[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Mouton[COLOR_REVERT] ou [COLOR_HIGHLIGHT_TEXT]Fourrures[COLOR_REVERT] et ajoute un bonus culture dans chaque ville où la corporation [COLOR_HIGHLIGHT_TEXT]Habits Impériaux[COLOR_REVERT] est présente. Le Siège génère de l'or, pour chaque ville pour laquelle il y a une franchise  Habits Impériaux.</French>
+		<French>Construire le siège de [COLOR_BUILDING_TEXT]Habits Impériaux[COLOR_REVERT] pour créer la corporation [COLOR_HIGHLIGHT_TEXT]Habits Impériaux[COLOR_REVERT] qui consomme [COLOR_HIGHLIGHT_TEXT]Soie[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Coton[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Teinture[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Mouton[COLOR_REVERT] ou [COLOR_HIGHLIGHT_TEXT]Fourrures[COLOR_REVERT] et ajoute un bonus culture dans chaque ville où la corporation [COLOR_HIGHLIGHT_TEXT]Habits Impériaux[COLOR_REVERT] est présente. Le Siège génère de l'or, pour chaque ville pour laquelle il y a une franchise Habits Impériaux.</French>
 		<Italian>Costruisci il [COLOR_BUILDING_TEXT]QG di Emperors Clothing[COLOR_REVERT] per creare [COLOR_HIGHLIGHT_TEXT]Emperors Clothing[COLOR_REVERT] che consuma [COLOR_HIGHLIGHT_TEXT]Seta[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cotone[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Tintura[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Pecora[COLOR_REVERT] e [COLOR_HIGHLIGHT_TEXT]Pellicce[COLOR_REVERT] e aggiunge un bonus alla cultura dove è presente [COLOR_HIGHLIGHT_TEXT]Emperors Clothing[COLOR_REVERT]. Il QG fornisce oro per ogni città mondiale in cui la corporazione è diffusa.</Italian>
 		<Spanish>Construye la maravilla [COLOR_BUILDING_TEXT]Emperors Clothing[COLOR_REVERT] para crear la corporación [COLOR_HIGHLIGHT_TEXT]Emperors Clothing[COLOR_REVERT], que consume [COLOR_HIGHLIGHT_TEXT]Seda[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Algodón[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Tintura[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Ovejas[COLOR_REVERT] y [COLOR_HIGHLIGHT_TEXT]Pieles[COLOR_REVERT], y añade una bonificación a la cultura en todas las ciudades donde [COLOR_HIGHLIGHT_TEXT]Emperors Clothing[COLOR_REVERT] esté presente. La sede proporciona oro por cada ciudad del mapa en la que haya una franquicia de Emperors Clothing.</Spanish>
 		<Polish>Zbuduj siedzibę [COLOR_BUILDING_TEXT]Imperialnych ubrań[COLOR_REVERT]by utworzyć [COLOR_HIGHLIGHT_TEXT]Korporacje Imperialnych Ubrań[COLOR_REVERT] która zużywa [COLOR_HIGHLIGHT_TEXT]Jedwab[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Bawełne[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Barwniki[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Owce[COLOR_REVERT] lub [COLOR_HIGHLIGHT_TEXT]Futro[COLOR_REVERT] i daje bonus do kultury każdemu miastu w którym znajduje się [COLOR_HIGHLIGHT_TEXT]Korporacja Imperialne Ubrania[COLOR_REVERT]. Siedziba zapewnia złoto dla każdego mista w którym znajduje się ta korporacja.</Polish>
@@ -4325,16 +4325,16 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FASHION_STRATEGY</Tag>
 		<English>Build the [COLOR_BUILDING_TEXT]Fashion House[COLOR_REVERT] Headquarters to create the [COLOR_HIGHLIGHT_TEXT]Fashion House Corporation[COLOR_REVERT] which consumes [COLOR_HIGHLIGHT_TEXT]Silk[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cotton[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Dye[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cow[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Wool[COLOR_REVERT] or [COLOR_HIGHLIGHT_TEXT]Fur[COLOR_REVERT] and adds a culture bonus to every city where the [COLOR_HIGHLIGHT_TEXT]Fashion House Corporation[COLOR_REVERT] is present. The Headquarters provide gold for each city in the world with a Fashion House franchise.</English>
-		<French>Construire le siège de [COLOR_BUILDING_TEXT]Maison de la Mode[COLOR_REVERT] pour créer la corporation [COLOR_HIGHLIGHT_TEXT]Maison de la Mode[COLOR_REVERT] qui consomme [COLOR_HIGHLIGHT_TEXT]Soie[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Coton[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Teinture[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Vache[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Laine[COLOR_REVERT] ou [COLOR_HIGHLIGHT_TEXT]Fourrures[COLOR_REVERT] et ajoute un bonus culture dans chaque ville où la corporation [COLOR_HIGHLIGHT_TEXT]Maison de la Mode[COLOR_REVERT] est présente. Le Siège génère de l'or, pour chaque ville pour laquelle il y a une franchise  Maison de la Mode.</French>
+		<French>Construire le siège de [COLOR_BUILDING_TEXT]Maison de la Mode[COLOR_REVERT] pour créer la corporation [COLOR_HIGHLIGHT_TEXT]Maison de la Mode[COLOR_REVERT] qui consomme [COLOR_HIGHLIGHT_TEXT]Soie[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Coton[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Teinture[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Vache[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Laine[COLOR_REVERT] ou [COLOR_HIGHLIGHT_TEXT]Fourrures[COLOR_REVERT] et ajoute un bonus culture dans chaque ville où la corporation [COLOR_HIGHLIGHT_TEXT]Maison de la Mode[COLOR_REVERT] est présente. Le Siège génère de l'or, pour chaque ville pour laquelle il y a une franchise Maison de la Mode.</French>
 		<Italian>Costruisci il [COLOR_BUILDING_TEXT]QG di Fashion House[COLOR_REVERT] per creare la corporazione [COLOR_HIGHLIGHT_TEXT]Fashion House[COLOR_REVERT] che consuma [COLOR_HIGHLIGHT_TEXT]Seta[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cotone[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Tintura[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Bovini[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Lana[COLOR_REVERT] o COLOR_HIGHLIGHT_TEXT]Pellicce[COLOR_REVERT] e dà un bonus di cultura in tutte le città dove è presente [COLOR_HIGHLIGHT_TEXT]Fashion House[COLOR_REVERT]. Il QG fornisce oro per ogni città in cui è diffusa Fashion House.</Italian>
-		<Spanish>Construye la maravilla [COLOR_BUILDING_TEXT]Fashion House[COLOR_REVERT] para crear la corporación [COLOR_HIGHLIGHT_TEXT]Fashion House[COLOR_REVERT], que consume [COLOR_HIGHLIGHT_TEXT]Seda[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Algodón[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Tintura[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Reses[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Lana[COLOR_REVERT] y [COLOR_HIGHLIGHT_TEXT]Pieles[COLOR_REVERT],  y añade una bonificación a la cultura en todas las ciudades donde [COLOR_HIGHLIGHT_TEXT]Fashion House[COLOR_REVERT] esté presente. La sede proporciona oro por cada ciudad del mapa en la que haya una franquicia de Fashion House.</Spanish>
+		<Spanish>Construye la maravilla [COLOR_BUILDING_TEXT]Fashion House[COLOR_REVERT] para crear la corporación [COLOR_HIGHLIGHT_TEXT]Fashion House[COLOR_REVERT], que consume [COLOR_HIGHLIGHT_TEXT]Seda[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Algodón[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Tintura[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Reses[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Lana[COLOR_REVERT] y [COLOR_HIGHLIGHT_TEXT]Pieles[COLOR_REVERT], y añade una bonificación a la cultura en todas las ciudades donde [COLOR_HIGHLIGHT_TEXT]Fashion House[COLOR_REVERT] esté presente. La sede proporciona oro por cada ciudad del mapa en la que haya una franquicia de Fashion House.</Spanish>
 		<Polish>Zbuduj siedzibę [COLOR_BUILDING_TEXT]Domu Mody[COLOR_REVERT]by utworzyć [COLOR_HIGHLIGHT_TEXT]Korporacje Domów Mody[COLOR_REVERT] która zużywa [COLOR_HIGHLIGHT_TEXT]Jedwab[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Bawełne[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Barwniki[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Owce[COLOR_REVERT] lub [COLOR_HIGHLIGHT_TEXT]Futro[COLOR_REVERT] i daje bonus do kultury każdemu miastu w którym znajduje się [COLOR_HIGHLIGHT_TEXT]Korporacja Domów Mody[COLOR_REVERT]. Siedziba zapewnia złoto dla każdego mista w którym znajduje się ta korporacja.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEAT_UNITCOMBAT_TRACKED</Tag>
 		<English>Congratulations, you have trained your first Tracked Unit ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name! They are the strongest offensive units available - use them to crush your enemies!</English>
 		<French>Félicitations, vous venez d'entraîner votre première unité blindée ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) à %s2City_Name! Ce sont les plus puissantes unités offensives du jeu... elles vous permettront d'écraser vos ennemis!</French>
-		<German>Herzlichen Glückwunsch! Ihr habt Euer erstes Kettenfahrzeug  ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name errichtet! Setzt diese stärksten verfügbaren Offensiveinheiten ein, um Eure Feinde vernichtend zu schlagen!</German>
+		<German>Herzlichen Glückwunsch! Ihr habt Euer erstes Kettenfahrzeug ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name errichtet! Setzt diese stärksten verfügbaren Offensiveinheiten ein, um Eure Feinde vernichtend zu schlagen!</German>
 		<Italian>Congratulazioni, hai realizzato la tua prima unità corazzata ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) a %s2City_Name! Queste unità sono gli attaccanti più forti a disposizione: usale per annientare i tuoi nemici!</Italian>
 		<Spanish>Felicidades, habéis entrenado en %s2City_Name a vuestra primera unidad a tracción oruga, [NUM1:un:una:unos:unas] [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]. Son las unidades de ataque más poderosas que existen, usadlas para aplastar al enemigo.</Spanish>
 		<Polish>Gratulacje! Wyprodukowałeś swój pierwszy pojazd gąsienicowy ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) w mieście %s2City_Name! Pojazdy gąsienicowe są najpotężniejszymi jednostkami szturmowymi - wykorzystuj je w celu zniszczenia swoich wrogów!</Polish>
@@ -5523,7 +5523,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_INSIDIOUSNESS_TEXT</Tag>
 		<English>[ICON_BULLET]Insidiousness (Ability to Evade Investigation): %s1_Amount%%</English>
-		<French>[ICON_BULLET]Insidiosité (Habileté à échapper à l'investigation):  %s1_Amount%%</French>
+		<French>[ICON_BULLET]Insidiosité (Habileté à échapper à l'investigation): %s1_Amount%%</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_AIRBOMB1</Tag>
@@ -6566,7 +6566,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LOCAL_SYNTHETIC_FUELS_4</Tag>
-		<English>Synthetic fuels are now being produced!  %s2_city now generates +1 oil resource.</English>
+		<English>Synthetic fuels are now being produced! %s2_city now generates +1 oil resource.</English>
 		<French>Des carburants synthétiques sont désormais produits! %s2_city produit maintenant de la ressource +1 pétrolière.</French>
 		<German>Synthetische Kraftstoffe werden jetzt produziert! %s2_city erzeugt jetzt +1 Ölvorkommen.</German>
 		<Italian>I combustibili sintetici ora vengono commercializzati! %s2_city ora produce +1 Prodotti petroliferi.</Italian>
@@ -6747,7 +6747,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MCDOWELLS_STRATEGY</Tag>
 		<English>Build the [COLOR_BUILDING_TEXT]Big McDowells[COLOR_REVERT] Headquarters to create the [COLOR_HIGHLIGHT_TEXT]Big McDowells Corporation[COLOR_REVERT] which consumes [COLOR_HIGHLIGHT_TEXT]Cow[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Pig[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Potato[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Wheat[COLOR_REVERT] or [COLOR_HIGHLIGHT_TEXT]Salt[COLOR_REVERT] and adds a culture bonus to every city where the [COLOR_HIGHLIGHT_TEXT]Big McDowells Corporation[COLOR_REVERT] is present. The Headquarters provide gold for each city in the world with a Big McDowells franchise.</English>
-		<French>Construire le siège de [COLOR_BUILDING_TEXT]Big McDowells[COLOR_REVERT] pour créer la corporation [COLOR_HIGHLIGHT_TEXT]McDowells[COLOR_REVERT] qui consomme [COLOR_HIGHLIGHT_TEXT]Vache[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cochon[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]pommes de terre[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Blé[COLOR_REVERT] ou [COLOR_HIGHLIGHT_TEXT]Sel[COLOR_REVERT] et ajoute un bonus culture dans chaque ville où la corporation [COLOR_HIGHLIGHT_TEXT]McDowells[COLOR_REVERT] est présente. Le Siège génère de l'or, pour chaque ville pour laquelle il y a une franchise  McDowells.</French>
+		<French>Construire le siège de [COLOR_BUILDING_TEXT]Big McDowells[COLOR_REVERT] pour créer la corporation [COLOR_HIGHLIGHT_TEXT]McDowells[COLOR_REVERT] qui consomme [COLOR_HIGHLIGHT_TEXT]Vache[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cochon[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]pommes de terre[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Blé[COLOR_REVERT] ou [COLOR_HIGHLIGHT_TEXT]Sel[COLOR_REVERT] et ajoute un bonus culture dans chaque ville où la corporation [COLOR_HIGHLIGHT_TEXT]McDowells[COLOR_REVERT] est présente. Le Siège génère de l'or, pour chaque ville pour laquelle il y a une franchise McDowells.</French>
 		<Italian>Costruisci il [COLOR_BUILDING_TEXT]QG di Big McDowells[COLOR_REVERT] per creare la corporazione [COLOR_HIGHLIGHT_TEXT]Big McDowells[COLOR_REVERT], che consuma [COLOR_HIGHLIGHT_TEXT]Bovino[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Maiale[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Patate[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Granoturco[COLOR_REVERT] o [COLOR_HIGHLIGHT_TEXT]Sale[COLOR_REVERT] e da un bonus alla cultura in ogni città dove è presente [COLOR_HIGHLIGHT_TEXT]Big McDowells[COLOR_REVERT]. Il QG fornisce oro per ogni città nel mondo in cui Big McDowells ha una filiale.</Italian>
 		<Spanish>Construye la maravilla [COLOR_BUILDING_TEXT]McDowells[COLOR_REVERT] para crear la corporación [COLOR_HIGHLIGHT_TEXT]McDowells [COLOR_REVERT], que consume [COLOR_HIGHLIGHT_TEXT]Reses[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cerdos[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Patatas[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Trigo[COLOR_REVERT] y [COLOR_HIGHLIGHT_TEXT]Sal[COLOR_REVERT] y añade una bonificación a los alimentos en todas las ciudades donde [COLOR_HIGHLIGHT_TEXT]McDowells[COLOR_REVERT] esté presente. La sede proporciona oro por cada ciudad del mapa en la que haya una franquicia de McDowells.</Spanish>
 		<Polish>Zbuduj siedzibę [COLOR_BUILDING_TEXT]McDonalda[COLOR_REVERT]by utworzyć [COLOR_HIGHLIGHT_TEXT]Korporacje McDonald[COLOR_REVERT] która zużywa [COLOR_HIGHLIGHT_TEXT]Krowy[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Świnie[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Ziemniaki[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Pszenice[COLOR_REVERT] lub [COLOR_HIGHLIGHT_TEXT]Sól[COLOR_REVERT] i daje bonus do kultury każdemu miastu w którym znajduje się [COLOR_HIGHLIGHT_TEXT]Korporacja McDonald[COLOR_REVERT]. Siedziba zapewnia złoto dla każdego mista w którym znajduje się ta korporacja.</Polish>
@@ -7133,7 +7133,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_AFFLICT_SUFFERED_DISEASE_BATTLE_ADDITIONAL</Tag>
 		<English>Your %s1_UnitName 's condition has worsened to %s2_PromotionName in battle with a %s3_UnitName!</English>
-		<French>La condition de votre %s1_UnitName s'est dégradée en  %s2_PromotionName, lors du combat contre l'unité %s3_UnitName!</French>
+		<French>La condition de votre %s1_UnitName s'est dégradée en %s2_PromotionName, lors du combat contre l'unité %s3_UnitName!</French>
 		<Italian>Le condizioni della tua unità %s1_UnitName sono peggiorate verso %s2_PromotionName in una battaglia contro l'unità %s3_UnitName!</Italian>
 		<Polish>Twoja jednostka: %s1_UnitName pogorszyła: %s2_PromotionName przy walce z jednostką: %s3_UnitName!</Polish>
 	</TEXT>
@@ -7167,14 +7167,14 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ATTACKED_BY_MARAUDERS</Tag>
-		<English>General, our %s1 has been murdered on the battlefield.  Whats more, the vile %s2 are reported to be desecrating their corpses!  Is nothing sacred?</English>
+		<English>General, our %s1 has been murdered on the battlefield. Whats more, the vile %s2 are reported to be desecrating their corpses! Is nothing sacred?</English>
 		<French>Général, notre %s1 a été assassiné sur le champ de bataille. Pire encore, les viles %s2 auraient profané leurs cadavres! Il n'y a donc rien de sacré pour eux ?</French>
 		<Spanish>General, [NUM1:nuestro:nuestra:nuestros:nuestras] %s1 [NUM1:ha:ha:han:han] sido [NUM1:asesinado:asesinada:asesinados:asesinadas] en el campo de batalla. Es más, ¡nos informan de que los viles %s2:3 están profanando sus cuerpos! ¿Acaso no hay nada sagrado?</Spanish>
 		<Polish>Generale, nasz jednostka: %s1 została zamordowana na polu walki. Co więcej %s2 raportuje, że zbezczeszczano ich zwłoki!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ATTACKED_BY_MARAUDERS_HIDDEN</Tag>
-		<English>General, our %s1 has been murdered on the battlefield.  Whats more, the vile enemies are reported to be desecrating their corpses!  Is nothing sacred?</English>
+		<English>General, our %s1 has been murdered on the battlefield. Whats more, the vile enemies are reported to be desecrating their corpses! Is nothing sacred?</English>
 		<French>Général, notre %s1 a été assassiné sur le champ de bataille. Pire encore, ces viles ennemis auraient profané leurs cadavres ! Il n'y a donc rien de sacré ?</French>
 		<Spanish>General, [NUM1:nuestro:nuestra:nuestros:nuestras] %s1 [NUM1:ha:ha:han:han] sido [NUM1:asesinado:asesinada:asesinados:asesinadas] en el campo de batalla. Es más, ¡nos informan de que los viles enemigos están profanando sus cuerpos! ¿Es que ya no se respeta nada?</Spanish>
 		<Polish>Generale, nasz jednostka: %s1 została zamordowana na polu walki. Co więcej %s2 raportuje, że zbezczeszczano ich zwłoki!</Polish>
@@ -7259,7 +7259,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ATTACKER_REPELLED_ONSLAUGHT</Tag>
 		<English>Although a brutal %s1_Enemy %s2_EnUName has been deterred by your %s3_UnitName, it continues engaging your forces!</English>
-		<French>Bien que l'unité brutale  %s2_EnUName %s1_Enemy a été repoussée par votre %s3_UnitName, elle continue d'engager vos forces !</French>
+		<French>Bien que l'unité brutale %s2_EnUName %s1_Enemy a été repoussée par votre %s3_UnitName, elle continue d'engager vos forces !</French>
 		<Italian>Anche se la brutale unità %s1_Enemy %s2_EnUName è stata fermata dalla tua unità %s3_UnitName, essa continua ad attaccare le tue forze!</Italian>
 		<Polish>Mimo brutalności jednostki wroga: %s1_Enemy %s2_EnUName została zatrzymana przez jednostkę %s3_UnitName, nadal atakuje!</Polish>
 	</TEXT>
@@ -7273,7 +7273,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ATTACKER_REPELLED_STAMPEDE</Tag>
 		<English>Although a stampeding %s1_Enemy %s2_EnUName has been deterred by your %s3_UnitName, it continues storming through your forces!</English>
-		<French>Bien que l'unité  %s1_Enemy %s2_EnUName a été repoussée par votre %s3_UnitName, elle continue de fondre sur vos forces !</French>
+		<French>Bien que l'unité %s1_Enemy %s2_EnUName a été repoussée par votre %s3_UnitName, elle continue de fondre sur vos forces !</French>
 		<Italian>Anche se un'unità %s1_Enemy %s2_EnUName è stata respinta dalla tua unità %s3_UnitName, continua a combattere contro i nostri soldati!</Italian>
 		<Polish>Choć jednostka: %s1_Enemy %s2_EnUName została odstraszona przez jednostkę: %s3_UnitName, kontynuuje ataki na Twoje siły!</Polish>
 	</TEXT>
@@ -7723,7 +7723,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CRITICAL_INFLICTED</Tag>
-		<English>A %s1_EnemyUnit has been injured by a valiant strike from your %s2_YourUnit.  Let's see how well they fight now with (a) %s3_CriticalPromotion!</English>
+		<English>A %s1_EnemyUnit has been injured by a valiant strike from your %s2_YourUnit. Let's see how well they fight now with (a) %s3_CriticalPromotion!</English>
 		<French>Une unité ennemie: %s1_EnemyUnit a été blessée par un assaut de notre %s2_YourUnit, lui infligeant: %s3_CriticalPromotion!</French>
 		<Italian>L'unità %s1_EnemyUnit è stata ferita da un coraggioso attacco della tua unità %s2_YourUnit. Vediamo come combattono bene contro %s3_CriticalPromotion!</Italian>
 		<Polish>Jednostka wroga: %s1_EnemyUnit została zraniona przez potężny atak jednostki: %s2_YourUnit, powodując: %s3_CriticalPromotion!</Polish>
@@ -7762,14 +7762,14 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_DEFENDED_BY_MARAUDERS</Tag>
-		<English>General, our %s1 has been murdered on the battlefield.  Whats more, the vile %s2 are reported to be desecrating their corpses!  Is nothing sacred?</English>
+		<English>General, our %s1 has been murdered on the battlefield. Whats more, the vile %s2 are reported to be desecrating their corpses! Is nothing sacred?</English>
 		<French>Général, notre %s1 a été assassiné sur le champ de bataille. Pire encore, les viles %s2 auraient profané leurs cadavres! Il n'y a donc rien de sacré ?</French>
 		<Spanish>General, [NUM1:nuestro:nuestra:nuestros:nuestras] %s1 [NUM1:ha:ha:han:han] sido [NUM1:asesinado:asesinada:asesinados:asesinadas] en el campo de batalla. Es más, ¡nos informan de que los viles %s2:3 están profanando sus cuerpos! ¿Es que ya no se respeta nada?</Spanish>
 		<Polish>Generale, nasza jednostka: %s1 została zamordowana na polu walki. Co więcej %s2 raportują, że zbezczeszczono ich zwłoki!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_DEFENDED_BY_MARAUDERS_HIDDEN</Tag>
-		<English>General, our %s1 has been murdered on the battlefield.  Whats more, the enemy are reported to be desecrating their corpses!  Is nothing sacred?</English>
+		<English>General, our %s1 has been murdered on the battlefield. Whats more, the enemy are reported to be desecrating their corpses! Is nothing sacred?</English>
 		<French>Général, notre %s1 a été assassiné sur le champ de bataille. Pire encore, les ennemis auraient profané leurs cadavres! Il n'y a rien de sacré ?</French>
 		<Spanish>General, [NUM1:nuestro:nuestra:nuestros:nuestras] %s1 [NUM1:ha:ha:han:han] sido [NUM1:asesinado:asesinada:asesinados:asesinadas] en el campo de batalla. Es más, ¡nos informan de que los enemigos están profanando sus cuerpos! ¿Es que ya no se respeta nada?</Spanish>
 		<Polish>Generale, nasza jednostka: %s1 została zamordowana na polu walki. Co więcej %s2 raportują, że zbezczeszczono ich zwłoki!</Polish>
@@ -8089,35 +8089,35 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ENEMY_FIELD_MEDIC_ATTACKERS</Tag>
-		<English>General, %s1_CivAdj Field Medics have seen to their wounded!  We are preparing for the next wave of attacks!</English>
+		<English>General, %s1_CivAdj Field Medics have seen to their wounded! We are preparing for the next wave of attacks!</English>
 		<French>Général, Les médecins de terrain %s1_CivAdj ont soigné leurs blessés! Nous nous préparons pour la prochaine vague d'attaques!</French>
-		<German>General, %s1_CivAdj Feldsanitäter haben sich um unsere Verwundeten gekümmert!  Wir bereiten die nächste Angriffswelle vor!</German>
+		<German>General, %s1_CivAdj Feldsanitäter haben sich um unsere Verwundeten gekümmert! Wir bereiten die nächste Angriffswelle vor!</German>
 		<Spanish>General, los médicos de batalla %s1:3_CivAdj han revisado a sus heridos. ¡Nos estamos preparando para la próxima oleada de ataques!</Spanish>
 		<Polish>Generale, Medyk Polowy %s1_CivAdj opatrzył rany! Jesteśmy przygotowani na następne ataki wroga!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ENEMY_FIELD_MEDIC_ATTACKERS_HIDDEN</Tag>
-		<English>General, enemy Field Medics have seen to their wounded!  We are preparing for the next wave of attacks!</English>
+		<English>General, enemy Field Medics have seen to their wounded! We are preparing for the next wave of attacks!</English>
 		<French>Général, Les médecins de terrain ennemis ont soigné leurs blessés ! Nous préparons la prochaine vague d'attaques !</French>
-		<German>General, enemy Feldsanitäter haben sich um unsere Verwundeten gekümmert!  Wir bereiten die nächste Angriffswelle vor!</German>
+		<German>General, enemy Feldsanitäter haben sich um unsere Verwundeten gekümmert! Wir bereiten die nächste Angriffswelle vor!</German>
 		<Spanish>General, los médicos de batalla enemigos han revisado a sus heridos. ¡Nos estamos preparando para la próxima oleada de ataques!</Spanish>
-		<Polish>Generale, ich Medycy Polowi udali się opatrywać rannych!  Musimy się przygotować na kontruderzenie!</Polish>
+		<Polish>Generale, ich Medycy Polowi udali się opatrywać rannych! Musimy się przygotować na kontruderzenie!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ENEMY_FIELD_MEDIC_DEFENDERS</Tag>
-		<English>General, %s1_CivAdj Field Medics have seen to their wounded!  We hope to have taken their position by nightfall.</English>
+		<English>General, %s1_CivAdj Field Medics have seen to their wounded! We hope to have taken their position by nightfall.</English>
 		<French>Général, Les médecins de terrain %s1_CivAdj ont soigné leurs blessés ! Nous espérons avoir pris position à la tombée de la nuit.</French>
-		<German>General, %s1_CivAdj Feldsanitäter haben sich um unsere Verwundeten gekümmert!  Wir hoffen ihre Stellung bei Anbruch der Nacht einzunehmen.</German>
+		<German>General, %s1_CivAdj Feldsanitäter haben sich um unsere Verwundeten gekümmert! Wir hoffen ihre Stellung bei Anbruch der Nacht einzunehmen.</German>
 		<Spanish>General, los médicos de batalla %s1:3_CivAdj han revisado a sus heridos. Esperamos tomar su posición al anochecer.</Spanish>
 		<Polish>Generale, Medyk Polowy %s1_CivAdj opatrzył rannych! Mamy nadzieję zając ich pozycję do zmroku!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ENEMY_FIELD_MEDIC_DEFENDERS_HIDDEN</Tag>
-		<English>General, enemy Field Medics have seen to their wounded!  We hope to have taken their position by nightfall.</English>
+		<English>General, enemy Field Medics have seen to their wounded! We hope to have taken their position by nightfall.</English>
 		<French>Général, Les médecins de terrain ennemi ont soigné leurs blessés ! Nous espérons avoir pris position à la tombée de la nuit.</French>
-		<German>General, enemy Feldsanitäter haben sich um unsere Verwundeten gekümmert!  Wir hoffen ihre Stellung bei Anbruch der Nacht einzunehmen.</German>
+		<German>General, enemy Feldsanitäter haben sich um unsere Verwundeten gekümmert! Wir hoffen ihre Stellung bei Anbruch der Nacht einzunehmen.</German>
 		<Spanish>General, los médicos de batalla enemigos han revisado a sus heridos. Esperamos tomar su posición al anochecer.</Spanish>
-		<Polish>Generale, ich Medycy Polowi udali się opatrywać rannych!  Mamy nadzieję zając ich pozycję do zmroku!</Polish>
+		<Polish>Generale, ich Medycy Polowi udali się opatrywać rannych! Mamy nadzieję zając ich pozycję do zmroku!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ENEMY_OPP_FIRE</Tag>
@@ -8177,7 +8177,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_EVERYBODY_DECLARE_WAR_ON_OTHER</Tag>
 		<English>The %s1_civ_adjective tribe has been accused of barbarian activity! Everybody has declared war on them!</English>
-		<French>La tribu %s1_civ_adjective a été  accusé de mener des actes barbares! La Guerre leur est déclarée!</French>
+		<French>La tribu %s1_civ_adjective a été accusé de mener des actes barbares! La Guerre leur est déclarée!</French>
 		<German>Der %s1_civ_adjective Stamm wurde beschuldigt, für die Umtriebe der Barbaren verantwortlich zu sein! Alle Zivilisationen haben ihm daraufhin den Krieg erklärt!</German>
 		<Italian>La tribù %s1_civ_adjective è stata accusata di crimini barbarici! Tutti le hanno dichiarato guerra!</Italian>
 		<Spanish>¡La tribu %s1_civ_adjective ha sido acusada de realizar actos barbáricos! ¡Todos le han declarado la guerra!</Spanish>
@@ -8915,14 +8915,14 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_MARAUDERS_PLUNDERED_IMP</Tag>
-		<English>General, our %s1 has returned with tribute they came across while destroying an ememy %s2.  They may be a rowdy, smelly, violent lot, but they sure know how to get the job done!</English>
+		<English>General, our %s1 has returned with tribute they came across while destroying an ememy %s2. They may be a rowdy, smelly, violent lot, but they sure know how to get the job done!</English>
 		<French>Général, Notre %s1 est revenu avec un tribut qu'ils ont récupéré en détruisant l'unité %s2 ennemie. ces troupes ont beau être turbulents, malodorants, violents, mais ils savent comment faire le travail!</French>
 		<Spanish>General, [NUM1:nuestro:nuestra:nuestros:nuestras] %s2 [NUM1:ha:ha:han:han] retornado con algunos objetos que [NUM1:ha:ha:han:han] encontrado mientras [NUM1:destrozaba:destrozaba:destrozaban:destrozaban] [NUM2:un:una:unos:unas] %s2 [NUM2:enemigo:enemiga:enemigos:enemigas]. Posiblemente haya sido una tarea violenta, maloliente y ruidosa, pero ten por seguro que han sabido hacerla.</Spanish>
 		<Polish>Generale, nasza jednostka: %s1 zwraca skarby które znalazła po zniszczeniu %s2.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_MARAUDERS_PLUNDERED_VICTIMS</Tag>
-		<English>General, our %s2 has returned with tribute from the vanquished dead of our enemy.  They may be a rowdy, smelly, violent lot, but nothing of potential value escapes their attention (+%d1 [ICON_GOLD])</English>
+		<English>General, our %s2 has returned with tribute from the vanquished dead of our enemy. They may be a rowdy, smelly, violent lot, but nothing of potential value escapes their attention (+%d1 [ICON_GOLD])</English>
 		<French>Général, notre %s2 est revenu avec un tribut qu'ils ont récupéré en anéantissant ses ennemis. ces troupes ont beau être turbulents, malodorants, violents, mais ils savent comment faire le travail! (+%d1 [ICON_GOLD])</French>
 		<Spanish>General, [NUM1:nuestro:nuestra:nuestros:nuestras] %s2 [NUM1:ha:ha:han:han] retornado con algunos objetos que portaban los cuerpos de los enemigos vencidos. Posiblemente haya sido una tarea violenta, maloliente y ruidosa, pero nada de valor potencial ha escapado a su atención. (+%d1[ICON_GOLD])</Spanish>
 		<Polish>Generale, nasza jednostka: %s2 zwróciła zdobycze z poległych wrogów. Może być trochę śmierdzące ale nic nie umknęło wartego ich uwagi (+%d1 [ICON_GOLD])</Polish>
@@ -9257,7 +9257,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_OVERCOME_CITY</Tag>
 		<English>%s1_City has Overcome %s2_Disease. It's people are feeling much better now.</English>
-		<French>%s1_City a éradiqué: %s2_Disease.  Le peuple se sent beaucoup mieux à présent.</French>
+		<French>%s1_City a éradiqué: %s2_Disease. Le peuple se sent beaucoup mieux à présent.</French>
 		<Italian>%s1_City ha superato %s2_Disease. Ora i suoi cittadini si sentono molto meglio.</Italian>
 		<Polish>W mieście: %s1_City wyleczono: %s2_Disease. Ludzie czują się teraz o wiele lepiej.</Polish>
 	</TEXT>
@@ -9377,15 +9377,15 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PLUNDERED_RESEARCH_FROM_VICTIMS</Tag>
-		<English>General, our %s2 has discovered secrets of a technical nature among the %s3 dead.  (+%d1 [ICON_RESEARCH] towards [COLOR_TECH_TEXT]%s4[COLOR_REVERT])</English>
-		<French>Général, notre %s2 a découvert des secrets techniques parmi les cadavres %s3.  (+%d1 [ICON_RESEARCH] pour la tech [COLOR_TECH_TEXT]%s4[COLOR_REVERT])</French>
+		<English>General, our %s2 has discovered secrets of a technical nature among the %s3 dead. (+%d1 [ICON_RESEARCH] towards [COLOR_TECH_TEXT]%s4[COLOR_REVERT])</English>
+		<French>Général, notre %s2 a découvert des secrets techniques parmi les cadavres %s3. (+%d1 [ICON_RESEARCH] pour la tech [COLOR_TECH_TEXT]%s4[COLOR_REVERT])</French>
 		<Spanish>General, [NUM1:nuestro:nuestra:nuestros:nuestras] %s2 [NUM1:ha:ha:han:han] descubierto secretos de naturaleza técnica en medio de la derrota %s3. (+%d1[ICON_RESEARCH] hacia [COLOR_TECH_TEXT]%s4[COLOR_REVERT])</Spanish>
 		<Polish>Generale, nasza jednostka: %s2 odkryła sekrety technicznej natury martwego %s3. (+%d1 [ICON_RESEARCH] do [COLOR_TECH_TEXT]%s4[COLOR_REVERT])</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PLUNDERED_RESEARCH_FROM_VICTIMS_HIDDEN</Tag>
-		<English>General, our %s2 has discovered secrets of a technical nature among the enemy's dead.  (+%d1 [ICON_RESEARCH] towards [COLOR_TECH_TEXT]%s4[COLOR_REVERT])</English>
-		<French>Général, notre %s2 a découvert des secrets techniques parmi les cadavres ennemis.  (+%d1 [ICON_RESEARCH] pour la tech [COLOR_TECH_TEXT]%s4[COLOR_REVERT])</French>
+		<English>General, our %s2 has discovered secrets of a technical nature among the enemy's dead. (+%d1 [ICON_RESEARCH] towards [COLOR_TECH_TEXT]%s4[COLOR_REVERT])</English>
+		<French>Général, notre %s2 a découvert des secrets techniques parmi les cadavres ennemis. (+%d1 [ICON_RESEARCH] pour la tech [COLOR_TECH_TEXT]%s4[COLOR_REVERT])</French>
 		<Spanish>General, [NUM1:nuestro:nuestra:nuestros:nuestras] %s2 [NUM1:ha:ha:han:han] descubierto secretos de naturaleza técnica en medio de la derrota enemiga. (+%d1[ICON_RESEARCH] hacia [COLOR_TECH_TEXT]%s4[COLOR_REVERT])</Spanish>
 		<Polish>Generale, nasza jednostka: %s2 odkryła sekrety technicznej natury martwego %s3. (+%d1 [ICON_RESEARCH] do [COLOR_TECH_TEXT]%s4[COLOR_REVERT])</Polish>
 	</TEXT>
@@ -9499,7 +9499,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_MISC_RELIGION_DECAY</Tag>
 		<English>The Citizens of %s1_CityName have given up their faith in [COLOR_HIGHLIGHT_TEXT]%s2_ReligionName[COLOR_REVERT].</English>
 		<French>Le Peuple de %s1_CityName a abandonné la religion: [COLOR_HIGHLIGHT_TEXT]%s2_ReligionName[COLOR_REVERT].</French>
-		<German>Die Bürger von %s1_CityName haben ihren Glauben an die Religion  [COLOR_HIGHLIGHT_TEXT]%s2_ReligionName[COLOR_REVERT] aufgegeben.</German>
+		<German>Die Bürger von %s1_CityName haben ihren Glauben an die Religion [COLOR_HIGHLIGHT_TEXT]%s2_ReligionName[COLOR_REVERT] aufgegeben.</German>
 		<Italian>I cittadini di %s1_CityName hanno abbandonato la loro fede in [COLOR_HIGHLIGHT_TEXT]%s2_ReligionName[COLOR_REVERT].</Italian>
 		<Spanish>Los ciudadanos de %s1_CityName han renunciado a la fé en [NUM2:el:la:los:las] [COLOR_HIGHLIGHT_TEXT]%s2_ReligionName[COLOR_REVERT].</Spanish>
 		<Polish>Mieszkańcy miasta %s1_CityName zrezygnowali z religii: [COLOR_HIGHLIGHT_TEXT]%s2_ReligionName[COLOR_REVERT].</Polish>
@@ -9642,7 +9642,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<German>Euer Sicherheitspersonal hat [NUM2:einen:eine:ein:einige:einige:einige] %[s1_CivAdj][NUM2:en:e:es:e:e:e] %s2:4_UnitName unschädlich gemacht!</German>
 		<Italian>L'unità %s2_UnitName %s1_CivAdj responsabile è stata catturata e "liquidata"!!!</Italian>
 		<Spanish>Han atrapado y liquidado [NUM2:al:a la:a los:a las] %s2_UnitName [NUM2:responsable:responsable:responsables:responsables] de la civilización %s1:2_CivAdj.</Spanish>
-		<Polish>%s1_CivAdj %s2_UnitName został schwytany i  zlikwidowany!!!</Polish>
+		<Polish>%s1_CivAdj %s2_UnitName został schwytany i zlikwidowany!!!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_SPY_DESTROYED_PRODUCTION</Tag>
@@ -9706,7 +9706,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<English>Harsh storms have been spotted near %s1_CityName!</English>
 		<French>Des Tempêtes Violentes ont été repérées près de %s1_CityName!</French>
 		<German>Raue Stürme wurden nahe %s1_CityName gemeldet!</German>
-		<Italian>Forti temporali sono stati avvistati vicino a  %s1_CityName!</Italian>
+		<Italian>Forti temporali sono stati avvistati vicino a %s1_CityName!</Italian>
 		<Spanish>¡Se ha formado una dura tormenta cerca de %s1_CityName!</Spanish>
 		<Polish>Ogromny front burzowy utworzył się blisko %s1_CityName!</Polish>
 	</TEXT>
@@ -11784,7 +11784,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_NATIONAL_CAPTURE_RESISTANCE_MODIFIER</Tag>
 		<English>[ICON_BULLET]Units have a %D1%% chance to avoid Capture.</English>
-		<French>[ICON_BULLET]Les Unités ont %D1%% de chances  d'éviter d'être capturées.</French>
+		<French>[ICON_BULLET]Les Unités ont %D1%% de chances d'éviter d'être capturées.</French>
 		<German>[ICON_BULLET]Einheiten können der Gefangennahme mit %D1%% Wahrscheinlichkeit entgehen.</German>
 		<Italian>[ICON_BULLET]Le unità hanno il %D1%% di chance di sfuggire alla cattura.</Italian>
 		<Polish>[ICON_BULLET]Jednostki mają %D1%% szansy na uniknięcie Przejęcia.</Polish>
@@ -12084,7 +12084,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ANIMAL_BUTCHERED_FRIENDLY_MESSAGE</Tag>
 		<English>Our %s1 has been butchered in our cultural land</English>
-		<French>Notre  %s1 a été abattu à l'intérieur de nos frontières</French>
+		<French>Notre %s1 a été abattu à l'intérieur de nos frontières</French>
 		<Italian>La nostra unità %s1 è stata macellata sul nostro territorio</Italian>
 		<Spanish>Nuestr[NUM1:o:a:os:as] %s1 [NUM1:ha:ha:han:han] sido descuartizad[NUM1:o:a:os:as] dentro de nuestras fronteras</Spanish>
 		<Polish>Nasza jednostka %s1 została zabita w naszych granicach kulturowych</Polish>
@@ -12759,7 +12759,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_PLE_FILTER_BUG_FOREIGN</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Toggle Nationality Filter[COLOR_REVERT][NEWLINE]Show only foreign units</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Filtre  'Nationalité'[COLOR_REVERT][NEWLINE]Affiche uniquement les unités qui ne vous appartiennent pas</French>
+		<French>[COLOR_HIGHLIGHT_TEXT]Filtre 'Nationalité'[COLOR_REVERT][NEWLINE]Affiche uniquement les unités qui ne vous appartiennent pas</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Filter "Nationalität" aktivieren[COLOR_REVERT][NEWLINE]Nur gegnerische Einheiten anzeigen</German>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Cambia il filtro sulla nazionalità[COLOR_REVERT][NEWLINE]Mostra solo le Unità altrui</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Activar filtrado por nacionalidad[COLOR_REVERT][NEWLINE]Solo muestra las unidades extranjeras</Spanish>
@@ -12768,7 +12768,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_PLE_FILTER_BUG_FOREIGN_ON</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Toggle Nationality Filter[COLOR_REVERT][NEWLINE]Show foreign and domestic units</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Filtre  'Nationalité'[COLOR_REVERT][NEWLINE]Affiche les unités que vous possédez et celles de vos rivaux</French>
+		<French>[COLOR_HIGHLIGHT_TEXT]Filtre 'Nationalité'[COLOR_REVERT][NEWLINE]Affiche les unités que vous possédez et celles de vos rivaux</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Filter "Nationalität" deaktivieren[COLOR_REVERT][NEWLINE]Eigene und gegnerische Einheiten anzeigen</German>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Cambia il filtro sulla nazionalità[COLOR_REVERT][NEWLINE]Mostra le proprie Unità e quelle altrui</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Desactivar filtrado por nacionalidad[COLOR_REVERT][NEWLINE]Muestra las unidades propias y extranjeras</Spanish>
@@ -12831,7 +12831,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_PLE_FILTER_BUG_OWN</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Toggle Nationality Filter[COLOR_REVERT][NEWLINE]Show only domestic units</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Filtre  'Nationalité'[COLOR_REVERT][NEWLINE]Affiche uniquement les unités que vous possédez</French>
+		<French>[COLOR_HIGHLIGHT_TEXT]Filtre 'Nationalité'[COLOR_REVERT][NEWLINE]Affiche uniquement les unités que vous possédez</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Filter "Nationalität" aktivieren[COLOR_REVERT][NEWLINE]Nur eigene Einheiten anzeigen</German>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Cambia il filtro sulla nazionalità[COLOR_REVERT][NEWLINE]Mostra solo le proprie Unità</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Activar filtrado por nacionalidad[COLOR_REVERT][NEWLINE]Solo muestra las unidades propias</Spanish>
@@ -12840,7 +12840,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_PLE_FILTER_BUG_OWN_ON</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Toggle Nationality Filter[COLOR_REVERT][NEWLINE]Show foreign and domestic units</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Filtre  'Nationalité'[COLOR_REVERT][NEWLINE]Affiche les unités que vous possédez et celles de vos rivaux</French>
+		<French>[COLOR_HIGHLIGHT_TEXT]Filtre 'Nationalité'[COLOR_REVERT][NEWLINE]Affiche les unités que vous possédez et celles de vos rivaux</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Filter "Nationalität" deaktivieren[COLOR_REVERT][NEWLINE]Eigene und gegnerische Einheiten anzeigen</German>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Cambia il filtro sulla nazionalità[COLOR_REVERT][NEWLINE]Mostra le proprie Unità e quelle altrui</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Desactivar filtrado por nacionalidad[COLOR_REVERT][NEWLINE]Muestra las unidades propias y extranjeras</Spanish>
@@ -12939,7 +12939,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_PLE_FILTER_FOREIGN</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Toggle Nationality Filter[COLOR_REVERT][NEWLINE]Hide foreign units</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Filtre  'Nationalité'[COLOR_REVERT][NEWLINE]Masque les unités qui ne vous appartiennent pas</French>
+		<French>[COLOR_HIGHLIGHT_TEXT]Filtre 'Nationalité'[COLOR_REVERT][NEWLINE]Masque les unités qui ne vous appartiennent pas</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Filter "Nationalität" aktivieren[COLOR_REVERT][NEWLINE]Gegnerische Einheiten ausblenden</German>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Cambia il filtro sulla nazionalità[COLOR_REVERT][NEWLINE]Non mostrare le Unità altrui</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Activar filtrado por nacionalidad[COLOR_REVERT][NEWLINE]Oculta las unidades extranjeras</Spanish>
@@ -12948,7 +12948,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_PLE_FILTER_FOREIGN_ON</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Toggle Nationality Filter[COLOR_REVERT][NEWLINE]Show foreign units</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Filtre  'Nationalité'[COLOR_REVERT][NEWLINE]Affiche les unités qui ne vous appartiennent pas</French>
+		<French>[COLOR_HIGHLIGHT_TEXT]Filtre 'Nationalité'[COLOR_REVERT][NEWLINE]Affiche les unités qui ne vous appartiennent pas</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Filter "Nationalität" deaktivieren[COLOR_REVERT][NEWLINE]Gegnerische Einheiten einblenden</German>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Cambia il filtro sulla nazionalità[COLOR_REVERT][NEWLINE]Mostra le Unità altrui</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Desactivar filtrado por nacionalidad[COLOR_REVERT][NEWLINE]Muestra las unidades extranjeras</Spanish>
@@ -13011,7 +13011,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_PLE_FILTER_OWN</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Toggle Nationality Filter[COLOR_REVERT][NEWLINE]Hide domestic units</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Filtre  'Nationalité'[COLOR_REVERT][NEWLINE]Masque les unités que vous possédez</French>
+		<French>[COLOR_HIGHLIGHT_TEXT]Filtre 'Nationalité'[COLOR_REVERT][NEWLINE]Masque les unités que vous possédez</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Filter "Nationalität" aktivieren[COLOR_REVERT][NEWLINE]Eigene Einheiten ausblenden</German>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Cambia il filtro sulla nazionalità[COLOR_REVERT][NEWLINE]Non mostrare le proprie Unità</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Activar filtrado por nacionalidad[COLOR_REVERT][NEWLINE]Oculta las unidades propias</Spanish>
@@ -13020,7 +13020,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_PLE_FILTER_OWN_ON</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Toggle Nationality Filter[COLOR_REVERT][NEWLINE]Show domestic units</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Filtre  'Nationalité'[COLOR_REVERT][NEWLINE]Affiche les unités que vous possédez</French>
+		<French>[COLOR_HIGHLIGHT_TEXT]Filtre 'Nationalité'[COLOR_REVERT][NEWLINE]Affiche les unités que vous possédez</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Filter "Nationalität" deaktivieren[COLOR_REVERT][NEWLINE]Eigene Einheiten einblenden</German>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Cambia il filtro sulla nazionalità[COLOR_REVERT][NEWLINE]Mostra le proprie Unità</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Desactivar filtrado por nacionalidad[COLOR_REVERT][NEWLINE]Muestra las unidades propias</Spanish>
@@ -13226,7 +13226,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_PLOT_HOVER_CITY_ZOC</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Your units can not enter this tile because it is inside of a nearby city's Zone of Control. Capture the city to restore normal movement.[COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Vos unités ne peuvent entrer dans cette case car celle-ci fait partie de la zone protégée par la ville. Capturez la ville pour pouvoir y pénétrer.[COLOR_REVERT]</French>
-		<German>[COLOR_HIGHLIGHT_TEXT]Eure Einheiten können dieses Feld nicht betreten, weil es sich in der Kontrollzone einer nahegelegenen Stadt befindet.  Erobert die Stadt, um normale Bewegung zu ermöglichen.[COLOR_REVERT]</German>
+		<German>[COLOR_HIGHLIGHT_TEXT]Eure Einheiten können dieses Feld nicht betreten, weil es sich in der Kontrollzone einer nahegelegenen Stadt befindet. Erobert die Stadt, um normale Bewegung zu ermöglichen.[COLOR_REVERT]</German>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Le tue unità non possono attraversare questa casella perchè è all'interno della zona di controllo di una città. Cattura la città per ripristinare il movimento normale.[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Tus unidades no pueden entrar a esta casilla porque se encuentra dentro de una Zona de control de una ciudad cercana. Captura la ciudad para poder moverte normalmente.[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Twoje jednostki nie mogą wejść na to pole ponieważ jest w zasięgu Strefy Kontroli miasta. Przejmij miasto by móc normalnie się poruszać.[COLOR_REVERT]</Polish>
@@ -13604,7 +13604,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<English>[COLOR_WARNING_TEXT]Will lose %d1[ICON_PRODUCTION] if not produced for %d2 [NUM2:turn:turns][COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Va perdre %d1[ICON_PRODUCTION] si non utilisé en %d2 [NUM2:tour:tours][COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]%d1[ICON_PRODUCTION] gehen verloren, falls für %d2 [NUM2:Runde:Runden] nicht produziert wird[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]Perderà  %d1[ICON_PRODUCTION] se non viene prodotto per %d2 [NUM2:Turno:turni][COLOR_REVERT]</Italian>
+		<Italian>[COLOR_WARNING_TEXT]Perderà %d1[ICON_PRODUCTION] se non viene prodotto per %d2 [NUM2:Turno:turni][COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Perderá %d1[ICON_PRODUCTION] si no se sigue produciendo en %d2 [NUM2:turno:turnos][COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_WARNING_TEXT]Straci %d1[ICON_PRODUCTION] jeśli nie wyprodukuje w ciągu %d2 [NUM2:tury:tur][COLOR_REVERT]</Polish>
 	</TEXT>
@@ -13817,7 +13817,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REL_DISABLED</Tag>
-		<English>[ICON_BULLET][COLOR_WARNING_TEXT]This building is partialy disabled due to your State Religion and may be missing details here that would be available if your State Religion re-enables it.  The Pedia will show those details.[COLOR_REVERT]</English>
+		<English>[ICON_BULLET][COLOR_WARNING_TEXT]This building is partialy disabled due to your State Religion and may be missing details here that would be available if your State Religion re-enables it. The Pedia will show those details.[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Ce bâtiment est partiellement désactivé en raison de votre Religion d'Etat. Certains pré-requis ne sont disponibles qu'en activant votre Religion d'Etat.[COLOR_REVERT]</French>
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Quest'edificio è parzialmente inattivo a causa della tua religione di stato; per questo, alcuni dei suoi effetti non vengono elencati e possono essere visti solo nella Civilopedia.[COLOR_REVERT]</Italian>
 		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]Ten budynek jest wyłączony przez Religię Narodową i może utracić część cech jeśli zostanie aktywowany przez Religie Narodową. W pedii znajdziesz detale.[COLOR_REVERT]</Polish>
@@ -14512,112 +14512,112 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_SHORTCUTS_ADVISORS_PEDIA</Tag>
 		<English>[H1]Advisors[\H1]
-[BOLD][COLOR_HIGHLIGHT_TEXT]	Ctrl    +	E  [COLOR_REVERT]	&gt; Espionage Advisor		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F1 [COLOR_REVERT]	&gt; Domestic Advisor		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]	Alt     +	F1 [COLOR_REVERT]	&gt; Split Colonies		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F2 [COLOR_REVERT]	&gt; Financial Advisor		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F3 [COLOR_REVERT]	&gt; Civics Advisor		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F4 [COLOR_REVERT]	&gt; Foreign Advisor		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F5 [COLOR_REVERT]	&gt; Military Advisor		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F6 [COLOR_REVERT]	&gt; Technology Advisor	[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F7 [COLOR_REVERT]	&gt; Religion Advisor		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]	Shift   +	F7 [COLOR_REVERT]	&gt; Corporation Advisor	[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F8 [COLOR_REVERT]	&gt; Victory Status		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F9 [COLOR_REVERT]	&gt; Demographics			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F10[COLOR_REVERT]	&gt; Capital City			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F11[COLOR_REVERT]	&gt; Globe View			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F12[COLOR_REVERT]	&gt; Civilopedia			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl + Shift +	H  [COLOR_REVERT]	&gt; Hall of Fame			[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]	Ctrl +	E [COLOR_REVERT]	&gt; Espionage Advisor		[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F1 [COLOR_REVERT]	&gt; Domestic Advisor		[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]	Alt +	F1 [COLOR_REVERT]	&gt; Split Colonies		[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F2 [COLOR_REVERT]	&gt; Financial Advisor		[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F3 [COLOR_REVERT]	&gt; Civics Advisor		[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F4 [COLOR_REVERT]	&gt; Foreign Advisor		[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F5 [COLOR_REVERT]	&gt; Military Advisor		[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F6 [COLOR_REVERT]	&gt; Technology Advisor	[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F7 [COLOR_REVERT]	&gt; Religion Advisor		[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]	Shift +	F7 [COLOR_REVERT]	&gt; Corporation Advisor	[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F8 [COLOR_REVERT]	&gt; Victory Status		[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F9 [COLOR_REVERT]	&gt; Demographics			[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F10[COLOR_REVERT]	&gt; Capital City			[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F11[COLOR_REVERT]	&gt; Globe View			[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F12[COLOR_REVERT]	&gt; Civilopedia			[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl + Shift +	H [COLOR_REVERT]	&gt; Hall of Fame			[\BOLD]
 		</English>
 		<French>[H1]Conseillers[\H1]
-[BOLD][COLOR_HIGHLIGHT_TEXT]	Ctrl    +	E [COLOR_REVERT]	&gt; Conseiller d'Espionnage		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F1[COLOR_REVERT]	&gt; Conseiller Domestique			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]	Alt     +	F1[COLOR_REVERT]	&gt; Créer des Colonies			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F2[COLOR_REVERT]	&gt; Conseiller Financier			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F3[COLOR_REVERT]	&gt; Conseiller Civique			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F4[COLOR_REVERT]	&gt; Conseiller International		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F5[COLOR_REVERT]	&gt; Conseiller Militaire			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F6[COLOR_REVERT]	&gt; Conseiller Technologique		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F7[COLOR_REVERT]	&gt; Conseiller Religieux			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]	Shift   +	F7[COLOR_REVERT]	&gt; Conseiller des Corporations	[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F8[COLOR_REVERT]	&gt; Etat des Victoires			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F9[COLOR_REVERT]	&gt; Démographies					[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F10[COLOR_REVERT]	&gt; Capitale						[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F11[COLOR_REVERT]	&gt; Vue Globale					[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F12[COLOR_REVERT]	&gt; Civilopedia					[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl + Shift +	H  [COLOR_REVERT]	&gt; Hall of Fame					[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]	Ctrl +	E [COLOR_REVERT]	&gt; Conseiller d'Espionnage		[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F1[COLOR_REVERT]	&gt; Conseiller Domestique			[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]	Alt +	F1[COLOR_REVERT]	&gt; Créer des Colonies			[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F2[COLOR_REVERT]	&gt; Conseiller Financier			[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F3[COLOR_REVERT]	&gt; Conseiller Civique			[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F4[COLOR_REVERT]	&gt; Conseiller International		[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F5[COLOR_REVERT]	&gt; Conseiller Militaire			[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F6[COLOR_REVERT]	&gt; Conseiller Technologique		[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F7[COLOR_REVERT]	&gt; Conseiller Religieux			[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]	Shift +	F7[COLOR_REVERT]	&gt; Conseiller des Corporations	[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F8[COLOR_REVERT]	&gt; Etat des Victoires			[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F9[COLOR_REVERT]	&gt; Démographies					[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F10[COLOR_REVERT]	&gt; Capitale						[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F11[COLOR_REVERT]	&gt; Vue Globale					[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F12[COLOR_REVERT]	&gt; Civilopedia					[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl + Shift +	H [COLOR_REVERT]	&gt; Hall of Fame					[\BOLD]
 		</French>
 		<German>[H1]Berater[\H1]
-[BOLD][COLOR_HIGHLIGHT_TEXT]	Strg    +	E [COLOR_REVERT]	&gt; Spionagebildschirm	[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F1[COLOR_REVERT]	&gt; Inlandsberater		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]	Alt     +	F1[COLOR_REVERT]	&gt; Kolonie freigeben		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F2[COLOR_REVERT]	&gt; Finanzberater			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F3[COLOR_REVERT]	&gt; Gesellschaftsformenberater	[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F4[COLOR_REVERT]	&gt; Auslandsberater		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F5[COLOR_REVERT]	&gt; Militärberater		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F6[COLOR_REVERT]	&gt; Technologieberater	[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F7[COLOR_REVERT]	&gt; Religionsberater		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]Umschalt    +	F7[COLOR_REVERT]	&gt; Kapitalgesellschaften	[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F8[COLOR_REVERT]	&gt; Sieg					[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F9[COLOR_REVERT]	&gt; Info-Bildschirm		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F10[COLOR_REVERT]	&gt; Hauptstadt			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F11[COLOR_REVERT]	&gt; Globale Ansicht		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F12[COLOR_REVERT]	&gt; Civilopedia			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]Strg + Shift +	H  [COLOR_REVERT]	&gt; Hall of Fame			[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]	Strg +	E [COLOR_REVERT]	&gt; Spionagebildschirm	[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F1[COLOR_REVERT]	&gt; Inlandsberater		[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]	Alt +	F1[COLOR_REVERT]	&gt; Kolonie freigeben		[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F2[COLOR_REVERT]	&gt; Finanzberater			[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F3[COLOR_REVERT]	&gt; Gesellschaftsformenberater	[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F4[COLOR_REVERT]	&gt; Auslandsberater		[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F5[COLOR_REVERT]	&gt; Militärberater		[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F6[COLOR_REVERT]	&gt; Technologieberater	[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F7[COLOR_REVERT]	&gt; Religionsberater		[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]Umschalt +	F7[COLOR_REVERT]	&gt; Kapitalgesellschaften	[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F8[COLOR_REVERT]	&gt; Sieg					[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F9[COLOR_REVERT]	&gt; Info-Bildschirm		[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F10[COLOR_REVERT]	&gt; Hauptstadt			[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F11[COLOR_REVERT]	&gt; Globale Ansicht		[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F12[COLOR_REVERT]	&gt; Civilopedia			[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]Strg + Shift +	H [COLOR_REVERT]	&gt; Hall of Fame			[\BOLD]
 		</German>
 		<Italian>[H1]Consiglieri[\H1]
-[BOLD][COLOR_HIGHLIGHT_TEXT]	Ctrl    +	E [COLOR_REVERT]	&gt; Consigliere spionistico	[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F1[COLOR_REVERT]	&gt; Consigliere interno		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]	Alt     +	F1[COLOR_REVERT]	&gt; Libera Colonia			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F2[COLOR_REVERT]	&gt; Consigliere economico		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F3[COLOR_REVERT]	&gt; Consigliere politico		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F4[COLOR_REVERT]	&gt; Consigliere estero		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F5[COLOR_REVERT]	&gt; Consigliere militare		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F6[COLOR_REVERT]	&gt; Consigliere tecnologico	[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F7[COLOR_REVERT]	&gt; Consigliere religioso		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]	Shift   +	F7[COLOR_REVERT]	&gt; Consigliere corporativo	[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F8[COLOR_REVERT]	&gt; Condizioni di vittoria	[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F9[COLOR_REVERT]	&gt; Demografica				[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F10[COLOR_REVERT]	&gt; Capitale					[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F11[COLOR_REVERT]	&gt; Vista globale				[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F12[COLOR_REVERT]	&gt; Civilopedia				[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]	Ctrl +	E [COLOR_REVERT]	&gt; Consigliere spionistico	[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F1[COLOR_REVERT]	&gt; Consigliere interno		[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]	Alt +	F1[COLOR_REVERT]	&gt; Libera Colonia			[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F2[COLOR_REVERT]	&gt; Consigliere economico		[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F3[COLOR_REVERT]	&gt; Consigliere politico		[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F4[COLOR_REVERT]	&gt; Consigliere estero		[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F5[COLOR_REVERT]	&gt; Consigliere militare		[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F6[COLOR_REVERT]	&gt; Consigliere tecnologico	[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F7[COLOR_REVERT]	&gt; Consigliere religioso		[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]	Shift +	F7[COLOR_REVERT]	&gt; Consigliere corporativo	[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F8[COLOR_REVERT]	&gt; Condizioni di vittoria	[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F9[COLOR_REVERT]	&gt; Demografica				[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F10[COLOR_REVERT]	&gt; Capitale					[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F11[COLOR_REVERT]	&gt; Vista globale				[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F12[COLOR_REVERT]	&gt; Civilopedia				[\BOLD]
 [BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl + Shift +	H [COLOR_REVERT]	&gt; Hall of Fame				[\BOLD]
 		</Italian>
 		<Spanish>[H1]Consejeros[\H1]
-[BOLD][COLOR_HIGHLIGHT_TEXT]	Ctrl    +	E [COLOR_REVERT]	&gt; Consejero de espionaje			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F1[COLOR_REVERT]	&gt; Consejero de Interior				[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]	Alt     +	F1[COLOR_REVERT]	&gt; Conceder la independencia			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F2[COLOR_REVERT]	&gt; Consejero financiero				[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F3[COLOR_REVERT]	&gt; Cambiar de principios				[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F4[COLOR_REVERT]	&gt; Consejero de Asuntos Exteriores	[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F5[COLOR_REVERT]	&gt; Consejero militar					[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F6[COLOR_REVERT]	&gt; Consejero de tecnología			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F7[COLOR_REVERT]	&gt; Consejero religioso				[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]	Shift   +	F7[COLOR_REVERT]	&gt; Consejero de corporaciones		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F8[COLOR_REVERT]	&gt; Condiciones para la victoria		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F9[COLOR_REVERT]	&gt; Estadísticas						[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F10[COLOR_REVERT]	&gt; Capital							[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F11[COLOR_REVERT]	&gt; Vista global						[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F12[COLOR_REVERT]	&gt; Civilopedia						[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl + Shift +	H  [COLOR_REVERT]	&gt; Hall of Fame			[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]	Ctrl +	E [COLOR_REVERT]	&gt; Consejero de espionaje			[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F1[COLOR_REVERT]	&gt; Consejero de Interior				[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]	Alt +	F1[COLOR_REVERT]	&gt; Conceder la independencia			[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F2[COLOR_REVERT]	&gt; Consejero financiero				[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F3[COLOR_REVERT]	&gt; Cambiar de principios				[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F4[COLOR_REVERT]	&gt; Consejero de Asuntos Exteriores	[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F5[COLOR_REVERT]	&gt; Consejero militar					[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F6[COLOR_REVERT]	&gt; Consejero de tecnología			[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F7[COLOR_REVERT]	&gt; Consejero religioso				[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]	Shift +	F7[COLOR_REVERT]	&gt; Consejero de corporaciones		[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F8[COLOR_REVERT]	&gt; Condiciones para la victoria		[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F9[COLOR_REVERT]	&gt; Estadísticas						[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F10[COLOR_REVERT]	&gt; Capital							[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F11[COLOR_REVERT]	&gt; Vista global						[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F12[COLOR_REVERT]	&gt; Civilopedia						[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl + Shift +	H [COLOR_REVERT]	&gt; Hall of Fame			[\BOLD]
 		</Spanish>
 		<Polish>[H1]Doradcy[\H1]
-[BOLD][COLOR_HIGHLIGHT_TEXT]	Ctrl    +	E [COLOR_REVERT]	&gt; Ekran szpiegostwa				[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F1[COLOR_REVERT]	&gt; Doradca ds. wewnętrznych	[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]	Alt     +	F1[COLOR_REVERT]	&gt; Podział kolonii			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F2[COLOR_REVERT]	&gt; Doradca finansowy				[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F3[COLOR_REVERT]	&gt; Zmień doktrynę		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F4[COLOR_REVERT]	&gt; Doradca ds. zagranicznych		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F5[COLOR_REVERT]	&gt; Doradca wojskowy				[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F6[COLOR_REVERT]	&gt; Doradca naukowy				[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F7[COLOR_REVERT]	&gt; Zmień religię		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]	Shift   +	F7[COLOR_REVERT]	&gt; Doradca ds. korporacji		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F8[COLOR_REVERT]	&gt; Warunki zwycięstwa		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F9[COLOR_REVERT]	&gt; Statystyki					[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F10[COLOR_REVERT]	&gt; Stolica						[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F11[COLOR_REVERT]	&gt; Widok globalny				[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		F12[COLOR_REVERT]	&gt; Cywilopedia					[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl + Shift +	H  [COLOR_REVERT]	&gt; Hall of Fame					[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]	Ctrl +	E [COLOR_REVERT]	&gt; Ekran szpiegostwa				[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F1[COLOR_REVERT]	&gt; Doradca ds. wewnętrznych	[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]	Alt +	F1[COLOR_REVERT]	&gt; Podział kolonii			[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F2[COLOR_REVERT]	&gt; Doradca finansowy				[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F3[COLOR_REVERT]	&gt; Zmień doktrynę		[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F4[COLOR_REVERT]	&gt; Doradca ds. zagranicznych		[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F5[COLOR_REVERT]	&gt; Doradca wojskowy				[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F6[COLOR_REVERT]	&gt; Doradca naukowy				[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F7[COLOR_REVERT]	&gt; Zmień religię		[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]	Shift +	F7[COLOR_REVERT]	&gt; Doradca ds. korporacji		[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F8[COLOR_REVERT]	&gt; Warunki zwycięstwa		[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F9[COLOR_REVERT]	&gt; Statystyki					[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F10[COLOR_REVERT]	&gt; Stolica						[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F11[COLOR_REVERT]	&gt; Widok globalny				[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F12[COLOR_REVERT]	&gt; Cywilopedia					[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl + Shift +	H [COLOR_REVERT]	&gt; Hall of Fame					[\BOLD]
 		</Polish>
 	</TEXT>
 	<TEXT>
@@ -15086,28 +15086,28 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_SHORTCUTS_MOUSE_PEDIA</Tag>
 		<English>[H1]Mouse Shortcuts[\H1]
-[BOLD][COLOR_HIGHLIGHT_TEXT] Click any tile     	 [COLOR_REVERT][\BOLD]	&gt; Center camera on that tile
-[BOLD][COLOR_HIGHLIGHT_TEXT] Roll wheel         	 [COLOR_REVERT][\BOLD]	&gt; Zoom in and out
+[BOLD][COLOR_HIGHLIGHT_TEXT] Click any tile 	 [COLOR_REVERT][\BOLD]	&gt; Center camera on that tile
+[BOLD][COLOR_HIGHLIGHT_TEXT] Roll wheel 	 [COLOR_REVERT][\BOLD]	&gt; Zoom in and out
 [BOLD][COLOR_HIGHLIGHT_TEXT] Hold left+right buttons [COLOR_REVERT][\BOLD]	&gt; Drag map by moving the mouse
-[BOLD][COLOR_HIGHLIGHT_TEXT] Hold Right button       [COLOR_REVERT][\BOLD]	&gt; Go-To order (See combat odds over enemy)
-[BOLD][COLOR_HIGHLIGHT_TEXT] Click thumb buttons     [COLOR_REVERT][\BOLD]	&gt; Cycle through units on the same tile
-[BOLD][COLOR_HIGHLIGHT_TEXT] Right Click city bar    [COLOR_REVERT][\BOLD]	&gt; Set rally point for that city
+[BOLD][COLOR_HIGHLIGHT_TEXT] Hold Right button [COLOR_REVERT][\BOLD]	&gt; Go-To order (See combat odds over enemy)
+[BOLD][COLOR_HIGHLIGHT_TEXT] Click thumb buttons [COLOR_REVERT][\BOLD]	&gt; Cycle through units on the same tile
+[BOLD][COLOR_HIGHLIGHT_TEXT] Right Click city bar [COLOR_REVERT][\BOLD]	&gt; Set rally point for that city
 
 [BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl +[COLOR_REVERT]
-[BOLD][COLOR_HIGHLIGHT_TEXT]    Roll wheel      	 [COLOR_REVERT][\BOLD]	&gt; Cycle units on tile
-[BOLD][COLOR_HIGHLIGHT_TEXT]    Click city bar  	 [COLOR_REVERT][\BOLD]	&gt; Select all cities on same continent
-[BOLD][COLOR_HIGHLIGHT_TEXT]    Click scoreboard Civ [COLOR_REVERT][\BOLD]	&gt; Open trade window with that Civ
+[BOLD][COLOR_HIGHLIGHT_TEXT] Roll wheel 	 [COLOR_REVERT][\BOLD]	&gt; Cycle units on tile
+[BOLD][COLOR_HIGHLIGHT_TEXT] Click city bar 	 [COLOR_REVERT][\BOLD]	&gt; Select all cities on same continent
+[BOLD][COLOR_HIGHLIGHT_TEXT] Click scoreboard Civ [COLOR_REVERT][\BOLD]	&gt; Open trade window with that Civ
 
 [BOLD][COLOR_HIGHLIGHT_TEXT]Alt +[COLOR_REVERT]
-[BOLD][COLOR_HIGHLIGHT_TEXT]    Click city bar  	 [COLOR_REVERT][\BOLD]	&gt; Select all player's cities
-[BOLD][COLOR_HIGHLIGHT_TEXT]    Click scoreboard Civ [COLOR_REVERT][\BOLD]	&gt; Declare war on that Civ
-[BOLD][COLOR_HIGHLIGHT_TEXT]    Hold Right button    [COLOR_REVERT][\BOLD]	&gt; Go-To order for all in the same tile
+[BOLD][COLOR_HIGHLIGHT_TEXT] Click city bar 	 [COLOR_REVERT][\BOLD]	&gt; Select all player's cities
+[BOLD][COLOR_HIGHLIGHT_TEXT] Click scoreboard Civ [COLOR_REVERT][\BOLD]	&gt; Declare war on that Civ
+[BOLD][COLOR_HIGHLIGHT_TEXT] Hold Right button [COLOR_REVERT][\BOLD]	&gt; Go-To order for all in the same tile
 
 [BOLD][COLOR_HIGHLIGHT_TEXT]Shift +[COLOR_REVERT]
-[BOLD][COLOR_HIGHLIGHT_TEXT]    Click city bar  	 [COLOR_REVERT][\BOLD]	&gt; Select multiple cities
-[BOLD][COLOR_HIGHLIGHT_TEXT]    Right click city bar [COLOR_REVERT][\BOLD]	&gt; Set rally point for multiple cities
-[BOLD][COLOR_HIGHLIGHT_TEXT]    Click city bars      [COLOR_REVERT][\BOLD]	&gt; Select those cities to change queue
-[BOLD][COLOR_HIGHLIGHT_TEXT]    Click any tile  	 [COLOR_REVERT][\BOLD]	&gt; Open context menu for that tile
+[BOLD][COLOR_HIGHLIGHT_TEXT] Click city bar 	 [COLOR_REVERT][\BOLD]	&gt; Select multiple cities
+[BOLD][COLOR_HIGHLIGHT_TEXT] Right click city bar [COLOR_REVERT][\BOLD]	&gt; Set rally point for multiple cities
+[BOLD][COLOR_HIGHLIGHT_TEXT] Click city bars [COLOR_REVERT][\BOLD]	&gt; Select those cities to change queue
+[BOLD][COLOR_HIGHLIGHT_TEXT] Click any tile 	 [COLOR_REVERT][\BOLD]	&gt; Open context menu for that tile
 		</English>
 		<German>[H1]Maussteuerung[\H1]
 [BOLD][COLOR_HIGHLIGHT_TEXT]Alt+Klick auf Stadtleiste[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Alle eigenen Städte auswählen
@@ -15215,55 +15215,55 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	<TEXT>
 		<Tag>TXT_KEY_SHORTCUTS_UNITS_PEDIA</Tag>
 		<English>[H1]Units[\H1]
-[BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl    +	0-9    [COLOR_REVERT]	&gt; Bind selected unit(s) to number	[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]    		B	   [COLOR_REVERT]	&gt; Bombard target or Build City		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]    		C	   [COLOR_REVERT]	&gt; Center camera on unit				[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]    		E	   [COLOR_REVERT]	&gt; Explore							[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]    		F	   [COLOR_REVERT]	&gt; Fortify							[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]    		G	   [COLOR_REVERT]	&gt; Go-to mode						[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]    		I	   [COLOR_REVERT]	&gt; Intercept							[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]    		L	   [COLOR_REVERT]	&gt; Load onto ship					[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]Shift   +	P	   [COLOR_REVERT]	&gt; Pillage							[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]    		S	   [COLOR_REVERT]	&gt; Sentry							[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]    		U	   [COLOR_REVERT]	&gt; Unload from ship					[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]    		W	   [COLOR_REVERT]	&gt; Wait (move later in turn)			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]    		Space  [COLOR_REVERT]	&gt; Skip turn							[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]    		Delete [COLOR_REVERT]	&gt; Delete selected unit(s)			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT](Numpad)	1-9    [COLOR_REVERT]	&gt; Move selected unit(s)				[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT](Numpad)	5	   [COLOR_REVERT]	&gt; Center camera on unit				[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl    +	Click  [COLOR_REVERT]	&gt; Group same type together			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]Alt     +	Click  [COLOR_REVERT]	&gt; Group all units together			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]Shift   +	Click  [COLOR_REVERT]	&gt; Tile context menu					[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl +	0-9 [COLOR_REVERT]	&gt; Bind selected unit(s) to number	[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		B	 [COLOR_REVERT]	&gt; Bombard target or Build City		[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		C	 [COLOR_REVERT]	&gt; Center camera on unit				[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		E	 [COLOR_REVERT]	&gt; Explore							[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F	 [COLOR_REVERT]	&gt; Fortify							[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		G	 [COLOR_REVERT]	&gt; Go-to mode						[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		I	 [COLOR_REVERT]	&gt; Intercept							[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		L	 [COLOR_REVERT]	&gt; Load onto ship					[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]Shift +	P	 [COLOR_REVERT]	&gt; Pillage							[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		S	 [COLOR_REVERT]	&gt; Sentry							[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		U	 [COLOR_REVERT]	&gt; Unload from ship					[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		W	 [COLOR_REVERT]	&gt; Wait (move later in turn)			[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		Space [COLOR_REVERT]	&gt; Skip turn							[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		Delete [COLOR_REVERT]	&gt; Delete selected unit(s)			[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT](Numpad)	1-9 [COLOR_REVERT]	&gt; Move selected unit(s)				[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT](Numpad)	5	 [COLOR_REVERT]	&gt; Center camera on unit				[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]Ctrl +	Click [COLOR_REVERT]	&gt; Group same type together			[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]Alt +	Click [COLOR_REVERT]	&gt; Group all units together			[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]Shift +	Click [COLOR_REVERT]	&gt; Tile context menu					[\BOLD]
 
 [H1]Air Units[\H1]
-[BOLD][COLOR_HIGHLIGHT_TEXT]    		B [COLOR_REVERT]	&gt; Air bomb			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]    		R [COLOR_REVERT]	&gt; Recon mode		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]Alt     +	R [COLOR_REVERT]	&gt; Rebase			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]    		S [COLOR_REVERT]	&gt; Air strike mode	[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		B [COLOR_REVERT]	&gt; Air bomb			[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		R [COLOR_REVERT]	&gt; Recon mode		[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]Alt +	R [COLOR_REVERT]	&gt; Rebase			[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		S [COLOR_REVERT]	&gt; Air strike mode	[\BOLD]
 
 [H1]Work Boats[\H1]
-[BOLD][COLOR_HIGHLIGHT_TEXT]    		F [COLOR_REVERT]	&gt; Build fishing nets		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]    		O [COLOR_REVERT]	&gt; Build offshore platform	[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]Shift   +	W [COLOR_REVERT]	&gt; Build whaling boats		[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		F [COLOR_REVERT]	&gt; Build fishing nets		[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		O [COLOR_REVERT]	&gt; Build offshore platform	[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]Shift +	W [COLOR_REVERT]	&gt; Build whaling boats		[\BOLD]
 
 [H1]Workers[\H1]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		A [COLOR_REVERT]Automate				[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]	Alt     +	C [COLOR_REVERT]Remove forest/jungle	[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		A [COLOR_REVERT]Automate				[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]	Alt +	C [COLOR_REVERT]Remove forest/jungle	[\BOLD]
 [BOLD][COLOR_HIGHLIGHT_TEXT]Shift + Ctrl +	C [COLOR_REVERT]Improve nearest city	[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]	Ctrl    +	F [COLOR_REVERT]Build fort				[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		H [COLOR_REVERT]Build camp				[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		I [COLOR_REVERT]Build farm (irrigate)	[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		K [COLOR_REVERT]Build workshop			[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		L [COLOR_REVERT]Build lumbermill		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		M [COLOR_REVERT]Build mine					[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		N [COLOR_REVERT]Build trade network				[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]	Shift   +	P [COLOR_REVERT]Build pasture/plantation		[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		Q [COLOR_REVERT]Build quarry						[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		R [COLOR_REVERT]Build route							[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]	Alt     +	R [COLOR_REVERT]Road-to mode							[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]        		T [COLOR_REVERT]Build cottage								[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]	Shift   +	W [COLOR_REVERT]Build Watermill on river or Windmill on hill[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]	Shift   +	W [COLOR_REVERT]Build Winery on Wine or Well on Oil			[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]	Ctrl +	F [COLOR_REVERT]Build fort				[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		H [COLOR_REVERT]Build camp				[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		I [COLOR_REVERT]Build farm (irrigate)	[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		K [COLOR_REVERT]Build workshop			[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		L [COLOR_REVERT]Build lumbermill		[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		M [COLOR_REVERT]Build mine					[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		N [COLOR_REVERT]Build trade network				[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]	Shift +	P [COLOR_REVERT]Build pasture/plantation		[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		Q [COLOR_REVERT]Build quarry						[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		R [COLOR_REVERT]Build route							[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]	Alt +	R [COLOR_REVERT]Road-to mode							[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT] 		T [COLOR_REVERT]Build cottage								[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]	Shift +	W [COLOR_REVERT]Build Watermill on river or Windmill on hill[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]	Shift +	W [COLOR_REVERT]Build Winery on Wine or Well on Oil			[\BOLD]
 		</English>
 		<German>[H1]Einheiten[\H1]
 		[NEWLINE][BOLD][COLOR_HIGHLIGHT_TEXT]Zifferntasten[COLOR_REVERT][\BOLD][TAB][TAB]Einheit fortbewegen
@@ -16722,7 +16722,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<English>A %s1_civ_adjective %s2_unit operating near %s4_city has been thwarted by %s3_civ_adjective counterintelligence agents!</English>
 		<French>[NUM2:Un:Une:Des:Des] %s2_unit %s1_civ_adjective se trouvant près de la ville de %s4_city [NUM2:a été neutralisé:a été neutralisée:ont été neutralisés:a été neutralisées] par les agents du contre-espionnage %s3_civ_adjective!</French>
 		<German>[NUM2:Ein:Eine:Ein:Einige:Einige:Einige] %s2:1_unit des %[s1_civ_adjective]en Reiches [NUM2:wurde:wurden] bei Aktivitäten nahe der Stadt %s4_city durch die %[s3_civ_adjective]e Spionageabwehr festgenommen!</German>
-		<Italian>Un'unità %s2_unit  %s1_civ_adjective operante nei pressi di %s4_city è stata fermata dagli agenti del controspionaggio %s3_civ_adjective!</Italian>
+		<Italian>Un'unità %s2_unit %s1_civ_adjective operante nei pressi di %s4_city è stata fermata dagli agenti del controspionaggio %s3_civ_adjective!</Italian>
 		<Spanish>¡Los agentes de contraespionaje %s3:3_civ_adjective han desenmascarado a [NUM2:un:una:unos:unas] %s2_unit de la civilización %s1:2_civ_adjective que [NUM2:operaba:operaba:operaban:operaban] cerca de %s4_city!</Spanish>
 		<Polish>%s1_civ_adjective %s2_unit operujący nieopodal %s4_city został złapany przez kontrwywiad %s3_civ_adjective!</Polish>
 	</TEXT>
@@ -17295,7 +17295,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<English>The Hellenic religion, also referred to as Greek mythology, comprises an enormous body of stories about gods, goddesses, and heroes. These stories date back many centuries, preserved in pre-literate Greece through oral tradition. The Hellenic religion was polytheistic in nature, with innumerable local nature deities in addition to the major Olympian gods and goddesses. The Greek gods were human in form but possessed supernatural powers; they were born from other gods but never aged, they were immortal, could travel enormous distances instantly, speak through humans with or without their knowledge, etc. Some gods were the personified aspects of natural forces (for example, Helios was literally the god of the sun) while others had complex personalities and multiple functions associated with them (Apollo is probably the best example). [PARAGRAPH:1]The gods and goddesses were all related to one another as part of one large family, but there were clear generations of gods, and their interactions with each other were sometimes violent. For example, the Olympian gods had reached their place of dominance by casting out an earlier generation of gods and goddesses known as the Titans. This may be a mythical reflection of the struggle between the Greeks and the earlier culture that they displaced when arriving in the Peloponnesus around roughly 1000 BC. [PARAGRAPH:1]In addition to stories about gods, the Hellenic religion was also full of great sagas about the deeds of heroes, many of whom possessed a divine parent. Stories abound about figures such as Heracles, Perseus, Jason, and the characters of the Iliad. These humans frequently interacted with gods and even bested them at times. Many of the heroes were held in great esteem by the Greeks, especially "noble" characters such as Achilles. [PARAGRAPH:1]Although some of the well-educated Greeks had their doubts about the existence of the gods, the vast majority of Greeks did not question the validity of the stories. The Greeks used their religion to explain the doings of the natural world and their own origins; it was a source of pride to trace one's lineage or the founding of one's city to the actions of a god. [PARAGRAPH:1]Archaeology and linguistic analysis suggests that the Hellenic religion was heavily influenced by other religions. For example, the Greek Zeus, Roman Jupiter, Germanic Tyr, and Sanskrit Dyaus are all sky gods that share a common Indo-European origin sometime in the distant past. Other gods were borrowed or influenced from Near Eastern religions; Aphrodite possessed a very similar function to the Semitic goddesses Ishtar and Astarte. During the Hellenic period and afterwards, the Greek religion spread across much of the Mediterranean and Near East, influencing many of the previously existing religions and giving rise to new syncretistic mystery cults. Although the Hellenic religion is no longer followed, it continues to provide inspiration for artists throughout the world.</English>
 		<French>La religion hellénique, à laquelle on fait le plus souvent référence sous l'appellation de mythologie grecque, comprend un grand nombre de légendes sur les dieux, déesses et héros. Certaines de ces légendes remontent à plusieurs siècles, ayant été transmises par la tradition orale. La religion hellénique est polythéiste, avec d'innombrables divinités locales de la nature en plus des principaux dieux du panthéon olympien. Les dieux grecs ont forme humaine mais possèdent des pouvoirs surnaturels, ont été engendrés par d'autres dieux mais ne vieillissent pas, ils sont immortels, peuvent voyager sur de très grandes distances instantanément, parler à travers les humains (parfois sans même que ceux-ci s'en aperçoivent), etc. Certains dieux sont les personnifications des forces de la nature (Hélios étant littéralement le dieu du soleil) alors que d'autres ont des personnalités complexes et sont associés à de multiples fonctions (Apollon en étant le meilleur exemple). [PARAGRAPH:1]Dieux et déesses sont tous parents d'une même grande famille, mais il existe des générations distinctes de dieux, et leurs interactions sont parfois très violentes. Le fait est que les dieux olympiens n'occupent leur position dominante qu'après avoir chassé une première génération de dieux appelés les Titans. Cela reflète sans doute le chevauchement culturel mythologique existant entre les Grecs et la civilisation précédente, chassée à leur arrivée dans le Péloponnèse aux alentours de 1000 av. J.-C.. [PARAGRAPH:1]Outre de nombreuses légendes sur les dieux, la tradition orale hellénique est riche de grandes sagas relatant les hauts faits de héros humains, dont un certain nombre ont une ascendance divine. On pense notamment aux légendes d'Héraclès, de Persée, de Jason et des personnages de l'Iliade. Ces mortels entrent souvent en conflit avec des dieux et en triomphent parfois. Nombre d'entre eux, surtout s'ils sont nobles et puissants comme Achille, sont tenus en haute estime par les Grecs. [PARAGRAPH:1] Même si certains des Grecs éduqués entretiennent quelques doutes à propos de la réalité dessinée par la religion hellénique, la grande majorité de la population accepte sans réserve la mythologie comme seule vérité. Les Grecs s'appuient sur leur religion pour expliquer les phénomènes naturels et leurs propres origines, et c'est une source de grande fierté que de pouvoir associer une lignée ou la fondation d'une cité aux actions d'un dieu.[PARAGRAPH:1] Les résultats des recherches archéologiques et linguistiques laissent penser que la religion hellénique a été très influencée par d'autres religions. C'est ainsi que le dieu grec Zeus, le dieu romain Jupiter, le dieu germain Tyr et le dieu sanskrit Dyaus sont tous des dieux du ciel, et il est probable qu'ils partagent tous une même lointaine origine indo-européenne. Les Grecs empruntent librement des dieux à d'autres cultes du Proche-Orient, c'est ainsi qu'Aphrodite a des fonctions très proches de celles des déesses sémites Ishtar et Astarté. Au cours de l'époque hellénique et par la suite, la religion grecque se répand à travers la plus grande partie de la Méditerranée et du Proche-Orient, influençant nombre des cultes déjà existants et donnant naissance à de nouveaux cultes syncrétistes. Bien que la religion grecque ne soit plus pratiquée de nos jours, ses mythologies continuent d'enflammer les imaginations et d'illuminer les esprits.</French>
 		<German>Die hellenistische Religion der Antike, auch als griechische Mythologie bezeichnet, umfasste einen enormen Fundus an Götter- und Heldensagen. Diese Geschichten datieren viele Jahrhunderte zurück und blieben in der präliterarischen Zeit durch mündliche Überlieferung erhalten. Der hellenistische Glaube war angesichts der vielen Götter und Göttinnen des Olymps sowie zahlloser regionaler Naturgottheiten extrem polytheistisch geprägt. Die griechischen Götter wurden in der Regel in menschlicher Form dargestellt, besaßen allerdings übernatürliche Kräfte. Sie wurden von anderen Gottheiten geboren, alterten nicht, waren unsterblich, konnten im Nu enorme Entfernungen überwinden, sprachen durch die Menschen (mit oder ohne deren Wissen) etc. Einige Götter verkörperten Naturgewalten (zum Beispiel war Helios im wörtlichen Sinne der Gott der Sonne), während andere komplexe Persönlichkeitsstrukturen aufwiesen und zahlreiche Funktionen wahrnahmen (zum Beispiel Apollon). [PARAGRAPH:1]Als Teil einer großen Familie waren die Götter und Göttinnen alle irgendwie miteinander verwandt, aber es gab eine klare Generationeneinteilung und manchmal bekämpften sie sich auch gegenseitig. Zum Beispiel sollen die Götter des Olymps ihre Vorherrschaft durch den Sturz der vorangehenden Göttergeneration, der so genannten Titanen, gesichert haben. Hierbei könnte es sich um eine mythische Darstellung der kulturellen Überschneidung zwischen den Griechen und der früheren Population in dieser Region handeln, die sie bei der Ankunft auf dem Peleponnes um 1000 vor Christus vertrieben hatten. [PARAGRAPH:1]Neben den vielen Göttergeschichten wurde die griechische Religion auch von zahlreichen grandiosen Sagen über die Abenteuer verschiedener Helden beeinflusst, von denen viele zumindest ein göttliches Elternteil besaßen. Die Erzählungen handelten von heldenhaften Persönlichkeiten wie Herakles, Perseus, Jason sowie den Charakteren der Ilias und inspirierten viele griechische Künstler späterer Generationen. Diese Helden in Menschengestalt kamen häufig mit den Göttern in Kontakt, übertrumpften sie bisweilen sogar und wurden von den Griechen meist hoch geschätzt, insbesondere so ehrenhafte Persönlichkeiten wie zum Beispiel Achilles. [PARAGRAPH:1]Einige der griechischen Gelehrten hatten durchaus Zweifel an dem Wahrheitsgehalt der griechischen Mythologie, dennoch stellte der überwiegende Teil der Bevölkerung die Stichhaltigkeit der überlieferten Legenden nicht in Frage. Die Griechen nutzten ihre Religion, um natürliche Vorgänge und auch ihren eigenen Ursprung zu erklären. Man war stolz darauf, wenn man seine eigene Herkunft oder die Gründung seiner Heimatstadt auf das Einwirken eines Gottes zurückführen konnte. [PARAGRAPH:1]Archäologische und sprachliche Untersuchungen haben ergeben, dass die griechische Religion stark von anderen Religionen beeinflusst war. Zum Beispiel stellen der griechische Gott Zeus, der römische Gott Jupiter, der germanische Gott Tyr und der Sanskrit-Gott Dyaus allesamt Himmelsgötter dar, die irgendwann in der fernen Vergangenheit einen gemeinsamen indo-europäischen Ursprung hatten. Andere Götter wurden von den Religionen im Nahen Osten "ausgeborgt" oder zumindest beeinflusst: Aphrodite besaß frappierend ähnliche Eigenschaften und Funktionen wie die semitischen Göttinnen Ishtar und Astarte. Während der hellenischen Periode und auch danach kam es zu einer starken Verbreitung der griechischen Mythologie über große Teile des Mittelmeerraums und des Nahen Ostens. Sie beeinflusste viele der bereits existierenden Religionen und ebnete den Weg für die Entstehung neuer synkretistischer Mysterienkulte. Obwohl die griechische Religion des hellenistischen Zeitalters heute nicht mehr in dieser Form praktiziert wird, lassen sich auch heute noch Künstler in aller Welt von ihr inspirieren.</German>
-		<Italian>La religione ellenica, nota anche come "mitologia greca", è composta da un'enorme serie di storie di dei, dee ed eroi, tramandate a lungo tempo oralmente nell'era pre-letteraria. La religione ellenica era politeistica e oltre agli dei e alle dee dell'Olimpo comprendeva innumerevoli divinità naturali locali. Le divinità greche avevano aspetto umano ma erano dotate di poteri soprannaturali; pur nascendo (da altre divinità) non invecchiavano ed erano immortali, potevano coprire enormi distanze istantaneamente, parlare attraverso gli uomini con o senza la loro consapevolezza, ecc. Alcune divinità erano la personificazione di forze naturali (per esempio, Elio era letteralmente il dio del sole), mentre altre avevano personalità complesse e numerose funzioni (Apollo ne è forse il miglior esempio).  [PARAGRAPH:1]Le divinità avevano fra loro vincoli di parentela e formavano una grande famiglia, ma potevano distinguersi diverse generazioni, le cui interazioni con le altre avevano spesso esiti violenti. Per fare un esempio, gli dei olimpici avevano raggiunto la loro posizione di dominio estromettendo la precedente generazione dei Titani. Questo fenomeno potrebbe essere un riflesso culturale di ciò che avvenne quando i Greci si sostituirono alla popolazione locale quando giunsero nel Peloponneso intorno al 1000 a.C. [PARAGRAPH:1]Oltre alle storie sugli dei, la mitologia greca è piena di grandi saghe che narrano le gesta di eroi, molti dei quali avevano genitori divini. I miti di Ercole, Perseo, Giasone e le storie dei protagonisti dell'Iliade furono spesso oggetto di rielaborazione da parte degli artisti greci successivi. Si trattava di uomini che interagivano spesso con gli dei, a volte superandoli. Molti di loro erano enormemente stimati dai Greci, soprattutto se "nobili" come Achille.  [PARAGRAPH:1]Anche se i Greci meglio istruiti avevano i loro dubbi sul fondamento della religione ellenica, il popolo non metteva in dubbio la veridicità delle storie. I Greci usarono la loro religione per spiegare i fenomeni naturali e le proprie origini; era fonte di orgoglio il fatto che la propria ascendenza o la fondazione della propria città potessero essere fatte risalire a un atto divino. [PARAGRAPH:1]Le analisi archeologiche e linguistiche suggeriscono che la religione ellenica abbia subito una pesante influenza da parte di altre religioni. Per esempio, il dio greco Zeus, il dio romano Giove, il dio germanico Tyr e il dio sanscrito Dyaus sono tutte divinità del cielo che condividono un'origine indo-europea risalente a chissà quando nel passato. Altre divinità furono prese in prestito o influenzate dalle religioni del Vicinio Oriente: Afrodite aveva una funzione simile a quella delle semitiche Ishtar e Astarte. Nel corso del periodo ellenico e anche dopo, la religione greca si diffuse nel Mediterraneo e nel Vicino Oriente, influenzando a sua volta molte religioni pre-esistenti e facendo nascere nuovi culti mistici sincretici. Anche se oggi si tratta di una religione morta, la mitologia greca ha ispirato gli artisti per migliaia di anni.</Italian>
+		<Italian>La religione ellenica, nota anche come "mitologia greca", è composta da un'enorme serie di storie di dei, dee ed eroi, tramandate a lungo tempo oralmente nell'era pre-letteraria. La religione ellenica era politeistica e oltre agli dei e alle dee dell'Olimpo comprendeva innumerevoli divinità naturali locali. Le divinità greche avevano aspetto umano ma erano dotate di poteri soprannaturali; pur nascendo (da altre divinità) non invecchiavano ed erano immortali, potevano coprire enormi distanze istantaneamente, parlare attraverso gli uomini con o senza la loro consapevolezza, ecc. Alcune divinità erano la personificazione di forze naturali (per esempio, Elio era letteralmente il dio del sole), mentre altre avevano personalità complesse e numerose funzioni (Apollo ne è forse il miglior esempio). [PARAGRAPH:1]Le divinità avevano fra loro vincoli di parentela e formavano una grande famiglia, ma potevano distinguersi diverse generazioni, le cui interazioni con le altre avevano spesso esiti violenti. Per fare un esempio, gli dei olimpici avevano raggiunto la loro posizione di dominio estromettendo la precedente generazione dei Titani. Questo fenomeno potrebbe essere un riflesso culturale di ciò che avvenne quando i Greci si sostituirono alla popolazione locale quando giunsero nel Peloponneso intorno al 1000 a.C. [PARAGRAPH:1]Oltre alle storie sugli dei, la mitologia greca è piena di grandi saghe che narrano le gesta di eroi, molti dei quali avevano genitori divini. I miti di Ercole, Perseo, Giasone e le storie dei protagonisti dell'Iliade furono spesso oggetto di rielaborazione da parte degli artisti greci successivi. Si trattava di uomini che interagivano spesso con gli dei, a volte superandoli. Molti di loro erano enormemente stimati dai Greci, soprattutto se "nobili" come Achille. [PARAGRAPH:1]Anche se i Greci meglio istruiti avevano i loro dubbi sul fondamento della religione ellenica, il popolo non metteva in dubbio la veridicità delle storie. I Greci usarono la loro religione per spiegare i fenomeni naturali e le proprie origini; era fonte di orgoglio il fatto che la propria ascendenza o la fondazione della propria città potessero essere fatte risalire a un atto divino. [PARAGRAPH:1]Le analisi archeologiche e linguistiche suggeriscono che la religione ellenica abbia subito una pesante influenza da parte di altre religioni. Per esempio, il dio greco Zeus, il dio romano Giove, il dio germanico Tyr e il dio sanscrito Dyaus sono tutte divinità del cielo che condividono un'origine indo-europea risalente a chissà quando nel passato. Altre divinità furono prese in prestito o influenzate dalle religioni del Vicinio Oriente: Afrodite aveva una funzione simile a quella delle semitiche Ishtar e Astarte. Nel corso del periodo ellenico e anche dopo, la religione greca si diffuse nel Mediterraneo e nel Vicino Oriente, influenzando a sua volta molte religioni pre-esistenti e facendo nascere nuovi culti mistici sincretici. Anche se oggi si tratta di una religione morta, la mitologia greca ha ispirato gli artisti per migliaia di anni.</Italian>
 		<Spanish>La religión helénica, también conocida como mitología griega, comprende un cuerpo enorme de narraciones sobre los dioses y héroes. Estas historias tenían muchos siglos de antigüedad y, hasta la aparición de la escritura en Grecia, se conservaron mediante la tradición oral. De naturaleza politeísta, contaba con un sinfín de deidades naturales locales, además de los principales dioses y diosas del Olimpo. Los dioses griegos tenían forma humana, pero poseían poderes sobrenaturales; eran engendrados por otros dioses, pero nunca envejecían, no podían morir, podían cruzar enormes distancias al instante, hablaban a través de los humanos con o sin su consentimiento, etc. Algunos de ellos eran los aspectos personificados de las fuerzas de la naturaleza (Helios, por ejemplo, era literalmente el dios del sol) mientras que otros poseían personalidades complejas y funciones múltiples (seguramente Apolo sea el mejor ejemplo). [PARAGRAPH:1]Todos los dioses pertenecían a una gran familia, pero había varias generaciones diferenciadas y su interacción era en muchas ocasiones violenta. Los dioses del Olimpo, por ejemplo, habían alcanzado su posición de predominio tras expulsar a una generación anterior de dioses y diosas (los titanes). Esto bien pudiera ser una transposición mitológica de la lucha entre los griegos y la cultura anterior, a la que desplazaron cuando llegaron al Peloponeso, alrededor del 1000 a. C. [PARAGRAPH:1]Además de las historias de los dioses, la religión helénica estaba repleta de grandes historias sobre las hazañas de los héroes, muchos de los cuales estaban emparentados con los dioses. Abundan las narraciones acerca de figuras como Hércules, Perseo, Jasón y los personajes de la Ilíada. Estos humanos solían relacionarse con los dioses y, a veces, hasta los superaban. Los griegos sentían gran estima por estos héroes, especialmente por los personajes "nobles", como por ejemplo Aquiles. [PARAGRAPH:1]Aunque algunos griegos cultivados tenían sus dudas sobre la existencia de los dioses, la mayoría no cuestionaba la validez de las historias. Los griegos utilizaban su religión para explicar el mundo natural y sus propios orígenes. Desde trazar los orígenes del propio linaje o la fundación de una ciudad hasta los actos de un dios era motivo de gran orgullo. [PARAGRAPH:1]La arqueología y el análisis lingüístico sugieren que la religión helénica estuvo muy influida por otras religiones. Por poner un ejemplo, el Zeus griego, el Júpiter romano, el Tyr germano y el Dyaus sánscrito son todos dioses del cielo que comparten un origen indoeuropeo común en un pasado lejano. Otros dioses procedían de religiones de Oriente Próximo (o habían recibido importantes influencias de ellas): Afrodita poseía una función muy similar a la de las diosas semíticas Ishtar y Astarté. Durante el período helenístico y después de él, la religión griega se extendió por gran parte del Mediterráneo y Oriente Próximo, lo que influyó en muchas de las religiones existentes y originó nuevos cultos mistéricos y sincréticos. Aunque la religión helénica ya no cuenta con seguidores, sigue siendo una gran fuente de inspiración para artistas del mundo entero.</Spanish>
 		<Polish>Religia helleńska, zwana również mitologią grecką, składa się z bardzo licznych opowieści na tematy bogów, bogiń oraz bohaterów. Opowieści te datowane są zwykle na wiele stuleci wstecz, a zachowane zostały dzięki przekazowi ustnemu powszechnemu w Grecji przed epoką literacką. Wierzenia te były politeistyczne w swej naturze, zawierały niezliczoną ilość bóstw lokalnych jak również bogów i boginie powszechnie czczone, a które miały mieć swoją siedzibę na górze Olimp. Bogowie greccy przypominali ludzi w swym wyglądzie, jednakże dysponowali nadnaturalnymi mocami; sami byli potomkami innych bogów, jednakże nigdy się nie starzeli, byli nieśmiertelni, ponadto mogli przemieszczać natychmiast na bardzo duże odległości, przemawiać prze ludzi za ich wiedzą, lub bez niej itp. Niektórzy bogowie stanowili spersonifikowane siły natury (np. Helios był uważany za boga Słońca), podczas gdy inni dysponowali niekiedy bardzo złożoną osobowością i spełniali szereg różnych funkcji (najlepszym przykładem jest chyba tutaj Apollo). [PARAGRAPH:1]Wszyscy bogowie i boginie byli ze sobą spokrewnieni, przy czym można było wyróżnić poszczególne generacje bogów, zaś współżycie pomiędzy nimi w obrębie tej wielkiej, boskiej rodziny nie zawsze wolne było od waśni. Dla przykładu bogowie Olimpu osiągnęli swój dominujący status dzięki wyparciu poprzedniej generacji bogów, znanych jako Tytani. Możliwe że była to nawet swoista refleksja mitologiczna nad faktem walki, jaka toczyła się między Grekami oraz ludami zamieszkującymi półwysep Peloponeski w chwili ich przybycia ok. roku 1000 p.n.e. [PARAGRAPH:1]Obok opowieści traktujących o perypetiach bogów, mitologia grecka pełna jest wielki sag wychwalających wyczyny bohaterów, spośród których liczni legitymowali się boskim pochodzeniem. Opowiadania obfitują w relacje na temat wyczynów Heraklesa, Perseusza, Jazona oraz bohaterów spod Troi. Ci bohaterowie często obcowali z bogami, a nawet przewyższali ich w niektórych sytuacjach. Wielu spośród herosów cieszyło się wielkim poważaniem wśród Greków, szczególnie ci najbardziej "szlachetni", jak Achilles. [PARAGRAPH:1]Pomimo faktu, że przynajmniej część spośród dobrze wykształconych Greków poddawała w wątpliwość istnienie bogów, to jednak zdecydowana większość nie kwestionowała prawdziwości mitów. Grecy wykorzystywali mity w celu wyjaśnienia zjawisk naturalnych oraz własnego pochodzenia; źródłem wielkiej dumy była możliwość wywodzenia własnego rodu, czy też początków jakiegoś miasta z działania boskiego. [PARAGRAPH:1]Odkrycia archeologiczne oraz badania lingwistyczne sugerują, że mitologia grecka znajdowała się pod przemożnym wpływem innych wierzeń. Dla przykładu bogowie tacy jak grecki Zeus, rzymski Jowisz, nordycki Tyr oraz sanskrycki Djaus, wszyscy są bogami związanymi z niebem i dzielą wspólne, indoeuropejskie pochodzenie w odległej przeszłości. Inni bogowie byli często zapożyczani z religii bliskowschodnich, bądź też posiadają w nich swoich odpowiedników; Afrodyta legitymuje się cechami bardzo przypominającymi semickie boginie Isztar oraz Asztarte. W okresie helleńskim i krótko po nim, religia helleńska rozprzestrzeniła się na znacznych obszarach w basenie Morza Śródziemnego oraz na Bliskim Wschodzie, wywierając duży wpływ na wcześniej istniejące na tych terenach wierzenia a przez to przyczyniając się do powstawania nowych religii synkretycznych. Pomimo faktu że nikt już nie wierzy w prawdziwość mitologii greckiej, to wciąż stanowi ona inspirację dla artystów z całego świata.</Polish>
 	</TEXT>
@@ -17438,7 +17438,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<French>"Islam" signifie "la soumission à Dieu". Il s'agit de la seconde religion la plus pratiquée dans le monde. Ses disciples se trouvent majoritairement au Moyen-Orient, en Asie et en Afrique, mais l'Islam est également solidement implanté en Europe. Les adeptes de l'Islam, appelés musulmans, croient qu'il n'existe qu'un seul Dieu ("Allah" en arabe) et qu'au fil des années, il a fait part de sa volonté à plusieurs grands prophètes: Adam, Abraham, Moïse, Jésus et Mahomet. Celui-ci, le dernier et le plus grand des prophètes, a transcrit les paroles de Dieu directement dans le Coran, qui constitue le seul véritable guide vers une vie sainte. [PARAGRAPH:2]Mahomet est né dans la ville de La Mecque (qui se situe aujourd'hui en Arabie Saoudite) et a vécu de 570 à 632. Marchand au début de sa vie, Dieu lui est apparu à plusieurs reprises au cours de sa 40ème année et l'a sommé de mémoriser les versets qui constitueraient ultérieurement le Coran. Faisant part de ses visions à d'autres, Mahomet a acquis des disciples. Vilipendés et attaqués par les non-croyants, ils ont néanmoins poursuivi la voie tracée par Dieu et fini par triompher, unifiant alors toute l'Arabie sous une même autorité. Après la mort de Mahomet, ses paroles se sont répandues dans tout le Moyen-Orient et même au-delà. [PARAGRAPH:2]L'Islam s'est alors divisé en plusieurs branches qui se distinguent notamment par leur désaccord sur le nom de l'héritier du prophète Mahomet, sujet de grande importance religieuse et politique dans l'Islam. Les trois principales branches sont l'Islam sunnite, l'Islam chiite et l'Islam kharidjite. [PARAGRAPH:2]Tous les musulmans croient aux "Cinq piliers de l'Islam" qui doivent être respectés pour obtenir le salut. Ces obligations consistent à ne pas reconnaître d'autre divinité que Dieu, dont Mahomet est le Prophète ; à prier Dieu cinq fois par jour à heures fixes ; à partager ses richesses avec les pauvres ; à jeûner du lever au coucher de soleil durant le mois du Ramadan ; et à faire un pèlerinage à La Mecque durant le mois saint de Dhu l-hidjdja.</French>
 		<German>"Islam" bedeutet "Hingabe an Gott". Der Islam ist als zweitgrößte Weltreligion vor allem im Mittleren Osten, in Asien und in Afrika verbreitet, hat aber auch in Europa zahlreiche Anhänger. Ein Moslem glaubt, dass es nur einen Gott ("Allah") gibt, der seine Wünsche mehreren Propheten offenbart hat: Adam, Abraham, Moses, Jesus und Mohammed. Der letzte und größte aller Propheten, Mohammed, hat Gottes Worte im Koran festgehalten. Dieser ist bis heute die heilige Schrift des Islam und eine Hauptquelle der Schari'a. [PARAGRAPH:2]Mohammed erblickte 570 nach Christus in Mekka (im heutigen Saudi Arabien) das Licht der Welt. Er führte ein Leben als Händler, bis ihm Gott befahl, seine Lehren im Koran niederzuschreiben. Schon bald scharte Mohammed, der von nun an Allahs Worte verkündete, eine wachsende Schar von Anhängern um sich. Obwohl sie von Andersdenkenden verschmäht und angefeindet wurden, folgten Mohammed und seine Getreuen dem Weg, den Gott für sie auserwählt hatte. Auf diese Weise gelang es Mohammed schließlich, die arabische Welt unter einem Herrscher zu einen. Nach Mohammeds Tod im Jahr 632 nach Christus trugen seine Anhänger seine Lehre in alle Welt. [PARAGRAPH:2]Nach Mohammeds Tod entbrannte zwischen den drei bedeutenden Schulen des Islam (Sunniten, Schiiten und Charidschiten) ein heftiger Streit um dessen Nachfolge. Dieser Streit ist für den Islam bis heute von enormer religiöser und politischer Bedeutung. [PARAGRAPH:2]Ein Moslem glaubt an die "Fünf Säulen des Islam", die befolgt werden müssen, um Erlösung zu finden: 1. Es gibt keinen Gott außer dem einen Allah und Mohammed ist sein Gesandter und Prophet. 2. Muslime verrichten täglich fünf Gebete (in der Morgendämmerung, am Mittag, am Nachmittag, bei Sonnenuntergang und in der Nacht). 3. Im Monat Ramadan fasten Muslime von Morgendämmerung bis Sonnenuntergang. 4. Muslime sind verpflichtet, einen prozentualen Anteil von Besitztümern an bedürftige Menschen zu spenden (Zakat). 5. Jeder Moslem muss einmal in seinem Leben nach Mekka pilgern.</German>
 		<Italian>"Islam" significa "la sottomissione a Dio" ed è la seconda religione più diffusa del mondo. La maggior parte dei seguaci si trovano in Medio Oriente, Asia e Africa, ma si possono trovare molti fedeli all'Islam anche in Europa. I musulmani (seguaci dell'Islam) credono che esista un solo Dio ("Allah" in arabo) e che nel corso dei secoli egli abbia espresso il suo volere attraverso le parole di Adamo, Abramo, Mosè, Gesù e Maometto. L'ultimo e il più grande dei profeti, Maometto, ha scritto la parola di Dio nel Corano, che rappresenta una vera guida per una vita santa. [PARAGRAPH:2]Maometto nacque nella città della Mecca (ora parte dell'Arabia Saudita) ed è vissuto dal 570 al 632. Nella prima fase della sua vita era un mercante, ma al quarantesimo anno d'età ebbe una serie di visioni di Dio che gli diceva di memorizzare i versi che successivamente avrebbe trascritto nel Corano. Maometto rivelò le sue visioni e conquistò dei seguaci: tuttavia, venivano insultati e assaliti da chi non credeva, ma seguirono il cammino tracciato da Dio e trionfarono, riuscendo a unificare l'Arabia sotto un unico comando. Dopo la morte di Maometto, le sue parole si diffusero verso il Medio Oriente e oltre. [PARAGRAPH:2]Dall'avvento di Maometto, l'Islam si è diviso in diversi gruppi, i principali dei quali sono i Sunniti, gli Sciti e e Kharigiti, il tutto a causa delle dispute di successione dopo la morte di Maometto, una questione di grandissima importanza religiosa e politica nell'Islam. [PARAGRAPH:2]Tutti i Musulmani credono nei "Cinque Pilastri dell'Islam", che indicano gli obblighi fondamentali che bisogna osservare per raggiungere la salvezza: ammettere che non esiste altro Dio e che Maometto è il suo profeta; pregare quotidianamente cinque volte Dio; dare una parte dei propri beni ai poveri; digiunare dall'alba al tramonto durante il mese del Ramadan; fare un pellegrinaggio alla Mecca durante il mese santo del Dhul Hijjah.</Italian>
-		<Spanish>"Islam" significa, "sumisión a Dios". Es la segunda religión más extendida del mundo. La mayoría de sus seguidores se encuentra en Oriente Medio, Asia y África, pero el Islam cuenta también con una importante presencia en Europa. Los musulmanes (seguidores del Islam) creen que solo existe un Dios ("Allah" en árabe), que a lo largo de la historia ha revelado sus deseos a través de una serie de profetas: Adán, Abraham, Moisés, Jesús y Mahoma. El último y el más importante de sus profetas, Mahoma, dejó su palabra escrita en el Corán, que es la única pauta válida para llevar una vida de santidad. [PARAGRAPH:2]Mahoma nació en la ciudad de La Meca (perteneciente a Arabia Saudita en nuestros días). Vivió del año 570 al 632. Empezó su vida como mercader, pero al cumplir los cuarenta, experimentó una serie de visiones de Dios, que le ordenó memorizar los versos que posteriormente conformarían el Corán. Mahoma reveló sus visiones a otros, y fue reuniendo un grupo de seguidores. Fueron escarnecidos y atacados por infieles, pero como seguían el camino que Dios les había preparado, acabaron triunfando y unificando toda Arabia bajo un gobierno único. Tras la muerte de Mahoma, su palabra se extendió por todo Oriente Medio y mucho más allá. [PARAGRAPH:2]Desde entonces, el Islam se ha dividido en una serie de facciones, las más importantes de las cuales son la suní, la chií y la jarichi. Estas escuelas discrepan en la forma de transmisión de la autoridad tras la muerte de Mahoma, un punto de enorme importancia religiosa y política en el Islam.  [PARAGRAPH:2]Todos los musulmanes creen en los "cinco pilares de la fe", que establecen lo que debe hacerse para alcanzar la salvación: reconocer que no hay otro dios que Dios, cuyo profeta es Mahoma; rezar diariamente a Dios las cinco veces establecidas; repartir una parte de la propia fortuna entre los pobres; ayunar del amanecer al anochecer durante el Ramadán; y realizar una peregrinación a La Meca durante el mes sagrado de Dhul Hijjah.</Spanish>
+		<Spanish>"Islam" significa, "sumisión a Dios". Es la segunda religión más extendida del mundo. La mayoría de sus seguidores se encuentra en Oriente Medio, Asia y África, pero el Islam cuenta también con una importante presencia en Europa. Los musulmanes (seguidores del Islam) creen que solo existe un Dios ("Allah" en árabe), que a lo largo de la historia ha revelado sus deseos a través de una serie de profetas: Adán, Abraham, Moisés, Jesús y Mahoma. El último y el más importante de sus profetas, Mahoma, dejó su palabra escrita en el Corán, que es la única pauta válida para llevar una vida de santidad. [PARAGRAPH:2]Mahoma nació en la ciudad de La Meca (perteneciente a Arabia Saudita en nuestros días). Vivió del año 570 al 632. Empezó su vida como mercader, pero al cumplir los cuarenta, experimentó una serie de visiones de Dios, que le ordenó memorizar los versos que posteriormente conformarían el Corán. Mahoma reveló sus visiones a otros, y fue reuniendo un grupo de seguidores. Fueron escarnecidos y atacados por infieles, pero como seguían el camino que Dios les había preparado, acabaron triunfando y unificando toda Arabia bajo un gobierno único. Tras la muerte de Mahoma, su palabra se extendió por todo Oriente Medio y mucho más allá. [PARAGRAPH:2]Desde entonces, el Islam se ha dividido en una serie de facciones, las más importantes de las cuales son la suní, la chií y la jarichi. Estas escuelas discrepan en la forma de transmisión de la autoridad tras la muerte de Mahoma, un punto de enorme importancia religiosa y política en el Islam. [PARAGRAPH:2]Todos los musulmanes creen en los "cinco pilares de la fe", que establecen lo que debe hacerse para alcanzar la salvación: reconocer que no hay otro dios que Dios, cuyo profeta es Mahoma; rezar diariamente a Dios las cinco veces establecidas; repartir una parte de la propia fortuna entre los pobres; ayunar del amanecer al anochecer durante el Ramadán; y realizar una peregrinación a La Meca durante el mes sagrado de Dhul Hijjah.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ISLAM_QUOTE</Tag>
@@ -17509,7 +17509,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<French>Apparu probablement il y a 4000 ans, le judaïsme constitue l'une des plus anciennes religions pratiquées aujourd'hui, l'une des plus influentes de l'histoire, ainsi que la première religion connue à avoir adopté le monothéisme. Née dans le "berceau des religions", au Moyen-Orient, le judaïsme sert de base au christianisme et à l'Islam, les deux autres religions abrahamiques. [PARAGRAPH:2]Le judaïsme est la religion des Juifs, qui étaient à l'origine une tribu sémite vivant au Moyen-Orient, dans une région dont le centre se situait à proximité de l'ancienne ville de Jérusalem. Au fil du temps, leurs croyances les plus importantes ont été consignées dans la Bible (l'Ancien Testament), qui contient l'histoire des Juifs ainsi que les paroles des prophètes et des rois. Plus essentiel encore, la Bible enseigne aux enfants d'Israël à vivre conformément aux voeux de Dieu. [PARAGRAPH:2]Ces préceptes constituent les doctrines principales du judaïsme. Il n'existe qu'un seul Dieu et vous ne devez pas vénérer d'autres dieux que Lui. Dieu est tout-puissant, omniscient et éternel. Tout homme prie Dieu directement, sans avoir besoin de recourir à un intermédiaire. Les hommes peuvent expier leurs péchés par des paroles et de bonnes actions. Dieu a élu les Juifs comme peuple de l'Alliance, et un jour, il enverra un Messie pour ramener le peuple élu en Israël et le conduire dans une zone de paix et de prospérité sur Terre. [PARAGRAPH:2] Le judaïsme constitue une foi remarquablement forte et déterminée. Tout au long de l'histoire, les Juifs ont été opprimés et réduits en esclavage par divers conquérants. Ils ont été éloignés de leur patrie et disséminés en Europe, en Afrique et en Asie. Ils ont fait l'objet d'un génocide systématique et organisé, d'une cruauté incroyable. Malgré toutes ces épreuves, les Juifs sont restés fidèles à leur religion et à leur Dieu.</French>
 		<German>Das Judentum entstand vor etwa 4000 Jahren und ist damit eine der ältesten Religionen der Welt. Als erste monotheistische Religion der Menschheitsgeschichte hat das Judentum die Geschichte wie keine andere Religion geprägt. Das in der "Wiege der Religionen" im Mittleren Osten entstandene Judentum war die Mutterreligion des Christentums und des Islam, zweier weiterer "Religionen Abrahams". [PARAGRAPH:2]Die Juden waren ein semitischer Stamm, der sich in der Gegend um Jerusalem niedergelassen hatte. Im Laufe der Zeit wurden ihre wichtigsten Glaubenssätze im Alten Testament niedergeschrieben. Dieses enthält die Geschichte der Juden sowie die Worte der Propheten und Könige. Überdies lehrt die Bibel die Kinder Israels, Gottes Wünschen gemäß zu leben. [PARAGRAPH:2]Dies sind die zentralen Glaubenssätze des Judentums: Es gibt nur einen Gott. Gott ist allmächtig, allwissend und ewig. Jeder Mensch betet direkt zu Gott. Der Mensch kann für seine Sünden durch Worte und Taten büßen. Gott hat das jüdische Volk auserwählt. Letzteres hat einen Bund mit ihm geschlossen. Eines Tages wird Gott einen Messias schicken, der die Auserwählten nach Israel bringt. Dann wird eine Zeit des Friedens und Wohlstands anbrechen. [PARAGRAPH:2]Das Judentum ist ein starker und unbeugsamer Glaube. Im Laufe der Geschichte wurden die Juden immer wieder unterdrückt, verfolgt und versklavt. Auch als sie aus ihrer Heimat vertrieben und von den Nationalsozialisten beinahe ausgelöscht wurden, blieben sie ihrer Religion und ihrem Gott stets treu.</German>
 		<Italian>Nato circa 4.000 anni fa, il Giudaismo è una delle tradizioni religiose più antiche del mondo praticata tutt'oggi, la prima religione conosciuta ad abbracciare il monoteismo e una delle più influenti della storia. Nata nella "culla delle religioni", il Medio Oriente, il Giudaismo ha posto le fondamenta per il sorgere del Cristianesimo e dell'Islam, altre due "religioni di Abramo". [PARAGRAPH:2]Il Giudaismo è la religione degli Ebrei, in origine una tribù Semitica che viveva in una zona del Medio Oriente situata attorno all'antica città di Gerusalemme. Con il tempo, i principi religiosi vennero scritti nella Bibbia (il Vecchio Testamento), che contiene la storia degli Ebrei, oltre alle parole di re e profeti. Ma, cosa più importante, la Bibbia insegna ai figli di Israele come vivere seguendo gli insegnamenti di Dio. [PARAGRAPH:2]Questi sono i punti saldi della fede Giudaica: esiste solo un Dio e non è possibile adorarne altri. Dio è onnipotente, onnisciente ed eterno. Ciascun uomo può pregare Dio direttamente, senza il bisogno di intermediari, e si possono espiare i propri peccati con preghiere e gesti benevoli. Dio ha scelto il popolo Ebreo per comunicare e un giorno manderà il Messia, che riporterà gli abitanti di Israele nella loro terra, dando il via a una nuova epoca di pace e prosperità sulla Terra. [PARAGRAPH:2]Il Giudaismo è una fede molto forte ed elastica: durante la storia, gli Ebrei sono stati perseguitati e schiavizzati da diversi conquistatori; sono stati portati lontani dalla terra natia e disseminati in Europa, Africa e Asia. Sono stati oggetto di un programma di genocidio di incredibile brutalità. Malgrado tutto ciò, gli Ebrei sono rimasti fedeli alla loro religione e al loro Dio.</Italian>
-		<Spanish>Nacido hace unos 4.000 años, el judaísmo es una de las religiones más antiguas que se practican en la actualidad, la primera religión monoteísta conocida y una de las más influyentes de la historia. Nacido en la "cuna de las religiones" (Oriente Medio), el judaísmo puso las bases para el cristianismo y el Islam, las otras dos religiones "del libro". [PARAGRAPH:2]El judaísmo es la religión de los judíos, originalmente una tribu semítica que vivió en una zona de Oriente Medio centrada en la antigua ciudad de Jerusalén. Con el paso del tiempo, sus creencias fueron codificándose en la Biblia (Antiguo Testamento), que contiene la historia de los judíos y las palabras de sus profetas y reyes. Además, la Biblia enseña a los hijos de Israel a vivir según los deseos de Dios. [PARAGRAPH:2]Éstos son los principios centrales del judaísmo: Solo existe un Dios, y está prohibido venerar a otro que no sea Él. Dios es todopoderoso, omnisciente y eterno. Los hombres le rezan a Dios directamente, sin necesidad de intermediarios. Se pueden enmendar los pecados mediante las palabras y las obras. Dios ha escogido al pueblo judío para unirse a Él, y algún día enviará un Mesías para devolver al pueblo elegido a Israel y señalar el inicio de una era de paz y prosperidad en la Tierra.  [PARAGRAPH:2]El judaísmo es una fe que ha demostrado una fuerza y una resistencia notables. A lo largo de su historia, los judíos han sido oprimidos y esclavizados por diferentes conquistadores. Fueron expulsados de su tierra natal y dispersados por Europa, África y Asia. Han sido las víctimas de un programa de genocidio de increíble brutalidad, pero a pesar de todo se han mantenido fieles a su religión y a su Dios. </Spanish>
+		<Spanish>Nacido hace unos 4.000 años, el judaísmo es una de las religiones más antiguas que se practican en la actualidad, la primera religión monoteísta conocida y una de las más influyentes de la historia. Nacido en la "cuna de las religiones" (Oriente Medio), el judaísmo puso las bases para el cristianismo y el Islam, las otras dos religiones "del libro". [PARAGRAPH:2]El judaísmo es la religión de los judíos, originalmente una tribu semítica que vivió en una zona de Oriente Medio centrada en la antigua ciudad de Jerusalén. Con el paso del tiempo, sus creencias fueron codificándose en la Biblia (Antiguo Testamento), que contiene la historia de los judíos y las palabras de sus profetas y reyes. Además, la Biblia enseña a los hijos de Israel a vivir según los deseos de Dios. [PARAGRAPH:2]Éstos son los principios centrales del judaísmo: Solo existe un Dios, y está prohibido venerar a otro que no sea Él. Dios es todopoderoso, omnisciente y eterno. Los hombres le rezan a Dios directamente, sin necesidad de intermediarios. Se pueden enmendar los pecados mediante las palabras y las obras. Dios ha escogido al pueblo judío para unirse a Él, y algún día enviará un Mesías para devolver al pueblo elegido a Israel y señalar el inicio de una era de paz y prosperidad en la Tierra. [PARAGRAPH:2]El judaísmo es una fe que ha demostrado una fuerza y una resistencia notables. A lo largo de su historia, los judíos han sido oprimidos y esclavizados por diferentes conquistadores. Fueron expulsados de su tierra natal y dispersados por Europa, África y Asia. Han sido las víctimas de un programa de genocidio de increíble brutalidad, pero a pesar de todo se han mantenido fieles a su religión y a su Dios. </Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_JUDAISM_QUOTE</Tag>
@@ -17542,7 +17542,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<French>L'ancien culte égyptien n'est pas exactement une religion à proprement parler. C'est plutôt un enchevêtrement de croyances et rituels partageant une même conception du monde, mais il n'existe pas de théologie unificatrice ou d'écritures canoniques: la religion s'appuie sur une série d'interactions rituelles entre les dieux et leurs disciples, les prêtres égyptiens, interactions développées sur une très longue période. Cette religion est très ancienne, certains de ses principes remontent à au moins 3000 av. J.-C., alors que d'autres sont apparus par la suite. Le culte associe les influences de la science, de la loi et de la philosophie dans un même cadre. Il est impossible pour un Egyptien de se soustraire à l'influence de la religion. [PARAGRAPH:2:1]Selon la mythologie égyptienne, avant la création il n'y avait que la mer. Le dieu soleil Re (or Ra) est sorti d'un oeuf et a engendré les autres dieux. Ces dieux sont devenus le ciel, la terre, le monde des morts et ainsi de suite. La plus importante légende de la mythologie égyptienne raconte l'histoire du meurtre et de la renaissance d'Osiris, dieu du monde des morts, et la vengeance contre son assassin accomplie par son fils Horus. L'histoire ne permet pas seulement d'expliquer le cycle de la nature, elle sert aussi à mettre en lumière l'importance d'une royauté sacrée en Egypte. Les Egyptiens ne vénèrent pas moins de 80 principaux dieux ou déesses. La plupart des dieux égyptiens ont forme humaine, mais certains ont l'apparence d'un animal et d'autres combinent les deux formes, tels qu'un humain avec une tête de faucon. L'un des aspects particuliers de cette religion est la croyance en des dieux animés de besoins vitaux et ayant besoin de se nourrir et s'abreuver comme les humains. Boisson et nourriture leur sont servies par les prêtres à l'occasion de rituels quotidiens dans les temples des dieux. La statue du dieu, appelée "image", est baignée et nourrie plusieurs fois par jour par les prêtres avec des rituels sacrés. En récompense de cette attention, les dieux protégent les Egyptiens. [PARAGRAPH:2:1]L'état et la religion sont étroitement liés dans l'ancienne Egypte. Le pharaon n'est pas seulement considéré comme le premier des prêtres, mais aussi comme un dieu vivant. Même si la plupart des cérémonies religieuses se déroulent sous la responsabilité des prêtres et non du pharaon, l'autorité de celui-ci n'est pas remise en question et de gigantesques tombeaux requérant une force de travail fabuleuse sont édifiés comme dernières demeures pour ces rois. La religion égyptienne est un culte auquel le commun des mortels n'a pas le droit de participer, en dehors des célébrations publiques. Certes, l'Egypte compte de nombreux petits sanctuaires qui peuvent être fréquentés par le peuple, mais le culte central est strictement interdit et l'accès aux temples très restreint. [PARAGRAPH:2:1]Durant les derniers siècles avant la conquête romaine de l'Egypte, la religion commence à subir l'influence de divinités étrangères. Un certain nombre de variantes se développent à partir de pratiques helléniques, compliquant encore un culte déjà très hétérogène. Et, comme ce sera le cas pour de nombreux autres cultes anciens, l'émergence du Christianisme et de l'Islam scelle le sort final de la religion égyptienne.</French>
 		<German>Der altägyptische Glaube war nach heutigem Verständnis nicht wirklich eine Religion, sondern eine Mischung aus Kulten und Ritualen, kombiniert mit einer gemeinschaftlichen Weltanschauung. Es gab weder eine einheitliche theologische Lehre noch kanonische Schriften zur ägyptischen Religion. Vielmehr basierte sie auf einem vielfältigen rituellen Zusammenspiel zwischen den Göttern und ihren Anhängern, den ägyptischen Priestern, das sich über einen sehr langen Zeitraum hinweg entwickelt hatte. Diese ägyptische Glaubensform datiert mindestens auf das Jahr 3000 vor Christus zurück, wenn nicht sogar noch früher. Sie repräsentierte eine Mischung aus Wissenschaft, Gesetzgebung und Philosophie, die gemeinschaftlich im gleichen Rahmensystem angewandt wurden. Für einen Ägypter wäre es somit unmöglich gewesen, die Religion außen vor zu lassen. [PARAGRAPH:2:1]Gemäß der ägyptischen Mythologie existierte vor der eigentlichen Schöpfung ausschließlich das Meer. Der Sonnengott Ra (auch Re genannt) soll einem Ei entschlüpft sein und die anderen Götter geboren haben, die dann zu Himmel, Erde, dem Reich der Toten etc. geworden sein sollen. Der wichtigste Mythos der ägyptischen Religion beschreibt den Mord an Osiris, seine Wiedererweckung sowie die Rache, die sein Sohn Horus an seinem Mörder nahm. Diese Geschichte erklärte nicht nur den Lauf der Natur, sondern diente auch der Hervorhebung der Bedeutung der königlichen Herrschaft für Ägypten. Laut der Überlieferungen war die ägyptische Religion polytheistisch und an sage und schreibe 80 bedeutenden Göttern und Göttinnen orientiert. Diese waren zumeist menschlicher Gestalt, manche nahmen jedoch auch Tiergestalt an und andere erschienen in einer Kombination aus beidem, zum Beispiel mit einem menschlichen Körper und dem Kopf eines Schakals. Ein ungewöhnliches Merkmal der ägyptischen Religion war die Annahme, dass die Götter wie die Menschen Nahrung und Getränke brauchten, welche die Priester ihnen tagtäglich in den Tempeln darboten: Die Statue der Gottheit, das so genannte Abbild, wurde im Rahmen der von den Priestern abgehaltenen geheiligten Rituale gebadet, gesalbt und mehrfach am Tag verköstigt, damit die Götter über die Ägypter wachen und Schaden von ihnen fernhalten mochten. [PARAGRAPH:2:1]Staat und Religion waren in der Antike in Ägypten untrennbar miteinander verbunden. Der Pharao wurde nicht nur als Hohepriester der ägyptischen Religion betrachtet, sondern auch als die Personifizierung eines Gottes. Obwohl es die Priester waren, die den größten Teil der religiösen Zeremonien abhielten, und nicht der Pharao, war dessen Macht unumstritten. Aus diesem Grund wurde ihm auch in einem ungeheuren Arbeitsaufwand ein massiver Tempel als letzte Ruhestätte errichtet. Wie bereits erwähnt, war die ägyptische Religion eher eine Art Kult, an dem die "normale" Bevölkerung, abgesehen von den öffentlichen Veranstaltungen, normalerweise nicht teilhaben durfte. Trotzdem gab es in ganz Ägypten viele kleine Schreine, die möglicherweise auch vom gemeinen Volk besucht wurden, doch der Hauptkult war tabu und der Zutritt zu den bedeutenden Tempeln stark eingeschränkt. [PARAGRAPH:2:1]In den letzten Jahrhunderten vor der Eroberung Ägyptens durch die Römer wurde die ägyptische Religion zunehmend von fremdländischen Gottheiten beeinflusst. Es entwickelten sich verschiedene Varianten, die vor allem auf den Praktiken der alten Griechen gründeten, wodurch sich die Struktur dieser ohnehin schon heterogenen Glaubensrichtung noch weiter verkomplizierte. Mit dem Aufkommen des Christentums und des Islams verschwand die traditionelle ägyptische Religion später immer mehr aus dem Blickfeld und ist heute gänzlich erloschen.</German>
 		<Italian>L'antica religione egizia in effetti non è una religione come siamo abituati a pensarla, ma piuttosto una sovrapposizione di culti e riti che avevano in comune una certa visione del mondo. Non esistevano scritti canonici o una teologia unificante, ma solo una serie di interazioni ritualistiche tra le divinità e i loro seguaci, ossia i sacerdoti egizi, sviluppatasi nel corso di un lunghissimo periodo. La religione egizia infatti è molto antica e risale ad almeno al 3000 a.C. e forse anche prima. Essa era un misto di scienza, legge e filosofia operanti all'interno di una stessa cornice: sarebbe stato impossibile per un egizio vivere al di fuori della religione. [PARAGRAPH:2:1]Secondo la mitologia egizia, prima della creazione esisteva solo il mare. Il dio-sole, Ra (o Re) nacque da un uovo. Da lui nacquero altre divinità, che poi diventarono il cielo, la terra, la terra dei morti, ecc. Il mito più importante della religione egizia narra la storia della morte e della rinascita di Osiride e la vendetta di suo figlio Horus nei confronti dell'assassino. La storia non solo spiegava il ciclo della natura, ma sottolineava anche l'importanza della dinastia sovrana per l'Egitto. Come può capirsi dalla leggenda, la religione egizia era politeistica e comprendeva circa 80 fra dei e dee. Essi avevano per lo più un aspetto umano, ma alcuni assumevano la forma di animali o un aspetto misto (es. corpo da uomo con testa di sciacallo). Una caratteristica inusuale della religione egizia era che le divinità avevano bisogno di cibo e bevande per sopravvivere, cose che erano loro fornite dai sacerdoti in riti che avevano luogo nei templi dedicati alle divinità. La statua della divinità, nota come la sua immagine, veniva lavata e unta e "nutrita" più volte al giorno. In cambio, la divinità proteggeva l'Egitto da mali e calamità. [PARAGRAPH:2:1]Stato e religione erano connessi inestricabilmente nell'antico Egitto. Il faraone era non solo il più alto sacerdote egizio, ma anche una divinità vivente in terra. Anche se la maggior parte delle cerimonie era compiuta dai sacerdoti e non dal faraone, il suo potere non era messo in dubbio e per custodire il sonno eterno del sovrano venivano eretti templi che richiedevano enormi quantità di forza lavoro. Si è già detto che la religione egizia era un culto al quale la popolazione ordinaria non aveva il permesso di partecipare, feste pubbliche a parte. Sparsi per l'Egitto vi erano numerosi piccoli santuari frequentati dalla gente, ma l'accesso di questa ai templi e al culto principale era notevolmente ridotto. [PARAGRAPH:2:1]Nei secoli precedenti la conquista romana dell'Egitto, la religione egizia cominciò a essere influenzata da culti stranieri. Nacquero diverse varianti per via dell'influenza della religione ellenica, col risultato di complicare una religione già abbastanza eterogenea. La religione egizia tradizionale sparì più tardi con l'avvento del cristianesimo e dell'islam e oggi è una religione morta.</Italian>
-		<Spanish>La religión del antiguo Egipto no era realmente una religión en el sentido en que nosotros lo entendemos hoy día, sino una combinación de cultos y rituales que compartían una visión del mundo. No existía un cuerpo teológico unificador ni unas escrituras canónicas. Se basaba en una serie de interacciones entre los dioses y sus adoradores, los sacerdotes egipcios, desarrolladas a lo largo de mucho tiempo. La religión era muy antigua. Se remonta como mínimo hasta el 3000 a. C., y es posible que aún más. Estaba formada por una mezcla de ciencia, derecho y filosofía que actuaban bajo una misma estructura; un egipcio nunca habría podido escapar a su religión. [PARAGRAPH:2:1]Según la mitología egipcia, antes de la creación solo existía el mar. El dios del sol (Ra) nació de un huevo y los demás dioses, engendrados por él, se convirtieron en el cielo, la tierra, el país de los muertos, etc. El mito más importante de la religión egipcia cuenta la historia del asesinato y renacimiento de Osiris y de la venganza cobrada por Horus, su hijo. Además de explicar el ciclo de la naturaleza, esta historia servía para recalcar el carácter divino de la realeza en Egipto.  Según indican las leyendas, la religión egipcia era de naturaleza politeísta y contaba con un total de ochenta dioses y diosas principales. En su mayor parte, los dioses tenían forma humana, pero algunos de ellos adoptaban forma de animales y otros una combinación de ambas, como por ejemplo un cuerpo humano con cabeza de chacal. Una característica poco habitual de la religión egipcia era que sus practicantes pensaban que los dioses necesitaban comida y bebida, igual que si fueran seres humanos, y los sacerdotes se encargaban de cubrir estas necesidades en rituales diarios realizados en los templos. La estatua de la deidad, conocida como imagen, era bañada y alimentada muchas veces a lo largo del día. A cambio de este cuidado, los dioses vigilaban y protegían a los egipcios. [PARAGRAPH:2:1]Estado y religión estaban unidos indisolublemente en el antiguo Egipto. Se consideraba que el faraón no era tan solo el sumo sacerdote de la religión egipcia, sino además un dios que caminaba entre los mortales. Aunque eran los sacerdotes, y no el faraón, los que realizaban la mayor parte de las ceremonias religiosas, el poder de éste era incuestionable y se levantaban enormes templos (que requerían el trabajo de gran cantidad de hombres) como última morada para él. Como ya hemos dicho, la religión egipcia era un tipo de culto del que el pueblo no participaba más allá de ciertos rituales públicos. Existían muchos pequeños santuarios por todo Egipto y es muy posible que el pueblo acudiera a ellos, pero la parte principal del culto estaba estrictamente prohibida y el acceso a los templos principales, severamente restringido. [PARAGRAPH:2:1]En los siglos que precedieron a la conquista de Egipto por parte de los romanos, la religión empezó a recibir influencias extranjeras. Se desarrollaron diferentes variedades basadas en las prácticas helenísticas, lo que contribuyó a complicar aún más una religión ya de por sí heterogénea. Más adelante, con el ascenso de cristianismo e islamismo, la religión desaparecería y en nuestros días ya no existe.</Spanish>
+		<Spanish>La religión del antiguo Egipto no era realmente una religión en el sentido en que nosotros lo entendemos hoy día, sino una combinación de cultos y rituales que compartían una visión del mundo. No existía un cuerpo teológico unificador ni unas escrituras canónicas. Se basaba en una serie de interacciones entre los dioses y sus adoradores, los sacerdotes egipcios, desarrolladas a lo largo de mucho tiempo. La religión era muy antigua. Se remonta como mínimo hasta el 3000 a. C., y es posible que aún más. Estaba formada por una mezcla de ciencia, derecho y filosofía que actuaban bajo una misma estructura; un egipcio nunca habría podido escapar a su religión. [PARAGRAPH:2:1]Según la mitología egipcia, antes de la creación solo existía el mar. El dios del sol (Ra) nació de un huevo y los demás dioses, engendrados por él, se convirtieron en el cielo, la tierra, el país de los muertos, etc. El mito más importante de la religión egipcia cuenta la historia del asesinato y renacimiento de Osiris y de la venganza cobrada por Horus, su hijo. Además de explicar el ciclo de la naturaleza, esta historia servía para recalcar el carácter divino de la realeza en Egipto. Según indican las leyendas, la religión egipcia era de naturaleza politeísta y contaba con un total de ochenta dioses y diosas principales. En su mayor parte, los dioses tenían forma humana, pero algunos de ellos adoptaban forma de animales y otros una combinación de ambas, como por ejemplo un cuerpo humano con cabeza de chacal. Una característica poco habitual de la religión egipcia era que sus practicantes pensaban que los dioses necesitaban comida y bebida, igual que si fueran seres humanos, y los sacerdotes se encargaban de cubrir estas necesidades en rituales diarios realizados en los templos. La estatua de la deidad, conocida como imagen, era bañada y alimentada muchas veces a lo largo del día. A cambio de este cuidado, los dioses vigilaban y protegían a los egipcios. [PARAGRAPH:2:1]Estado y religión estaban unidos indisolublemente en el antiguo Egipto. Se consideraba que el faraón no era tan solo el sumo sacerdote de la religión egipcia, sino además un dios que caminaba entre los mortales. Aunque eran los sacerdotes, y no el faraón, los que realizaban la mayor parte de las ceremonias religiosas, el poder de éste era incuestionable y se levantaban enormes templos (que requerían el trabajo de gran cantidad de hombres) como última morada para él. Como ya hemos dicho, la religión egipcia era un tipo de culto del que el pueblo no participaba más allá de ciertos rituales públicos. Existían muchos pequeños santuarios por todo Egipto y es muy posible que el pueblo acudiera a ellos, pero la parte principal del culto estaba estrictamente prohibida y el acceso a los templos principales, severamente restringido. [PARAGRAPH:2:1]En los siglos que precedieron a la conquista de Egipto por parte de los romanos, la religión empezó a recibir influencias extranjeras. Se desarrollaron diferentes variedades basadas en las prácticas helenísticas, lo que contribuyó a complicar aún más una religión ya de por sí heterogénea. Más adelante, con el ascenso de cristianismo e islamismo, la religión desaparecería y en nuestros días ya no existe.</Spanish>
 		<Polish>Dużą rolę w życiu Egipcjan odgrywały wierzenia religijne. Egipcjanie wierzyli w wielu bogów (politeizm). Czczono głównie siły przyrody. Szczególnym kultem otaczano Nil i Słońce. Licznym bóstwom przydawano postacie ludzkie z głowami zwierzęcymi (Horus z głową sokoła, Chnum z głową barana). Wierzono, że bóstwa przebywać mogą w ciele świętych zwierząt, za jakie uważano czarnego byka, zwanego Apisem, a także m.in. krokodyle, ibisy, jastrzębie i koty. Ku czci bogów wznoszono gigantyczne kamienne świątynie, którymi opiekowali się kapłani, gromadzący w nich wielkie bogactwa. Kapłani, obok faraonów, stanowili również istotny czynnik w sprawowaniu władzy, a nierzadko to właśnie oni tak naprawdę rządzili w kraju. Posiadłszy wiedzę o zjawiskach przyrody, wprowadzili podział roku na 12 miesięcy i 365 dni (zobacz: kalendarz egipski), potrafili przewidzieć zaćmienie Słońca i wylewy Nilu, kierowali pracami nawadniającymi i budowlanymi.</Polish>
 	</TEXT>
 	<TEXT>
@@ -17587,7 +17587,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NAGHUALISM_QUOTE</Tag>
 		<English>"Then Tepeu and Gucumatz came together; then they conferred about life and light, what they would do so that there would be light and dawn? Thus let it be done! Let the emptiness be filled! Let the water recede and make a void, let the earth appear and become solid; let it be done. Thus they spoke." - from the Popol Vuh</English>
-		<French>"Puis Tepeu et Gucumatz se sont réunis;Ils ont discuté à propos de la vie et de la lumière, de ce qu'ils feraient pour qu'il y ait la lumière et l'aube. Qu'il en soit ainsi! Que le vide soit rempli! Que l'eau recule et laisse apparaître la terre, que la terre devienne solide. Ainsi ils parlaient." - du  Popol Vuh</French>
+		<French>"Puis Tepeu et Gucumatz se sont réunis;Ils ont discuté à propos de la vie et de la lumière, de ce qu'ils feraient pour qu'il y ait la lumière et l'aube. Qu'il en soit ainsi! Que le vide soit rempli! Que l'eau recule et laisse apparaître la terre, que la terre devienne solide. Ainsi ils parlaient." - du Popol Vuh</French>
 		<Spanish>"Luego Tepeu y Gucumatz vinieron juntos; después conversaron sobre la vida y la luz, sobre si podían hacer para que hubiera luz y alba... ¡Que así sea! ¡Rellénese el vacío! Aléjese el agua y hágase un vacío, aparézcase la tierra y hágase sólida, así sea. Y así hablaban." - del Popol Vuh</Spanish>
 		<Polish>"I wtedy Tepeu i Gucumatz nadeszli razem. Rozmawiali o życiu i światłości, co powinni zrobić by nastało światło i ciemność. To uczynili." - Popol Vuh</Polish>
 	</TEXT>
@@ -17748,7 +17748,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<French>Bien que le zoroastrisme soit peu connu de nos jours, c'est l'une des religions qui a le plus influencé l'histoire du monde. Zarathushtra, ou Zoroastre en Occident, est le prophète de cette ancienne religion de l'empire perse. Le zoroastrisme présente certains éléments du monothéisme, mais est également une religion dualiste. L'univers aurait été cré par un être de lumière suprême du nom d'Ahura Mazda, opposé à une créature des ténèbres du nom d'Angra Mainyu. Le symbole le plus important de la foi zoroastrienne est le feu, car il représente la lumière et la chaleur d'Ahura Mazda, mais également la pureté. [PARAGRAPH:2:1]Les érudits ne s'accordent pas précisément sur l'époque à laquelle vécut Zoroastre, mais la situent entre l'an 1000 av. J.-C. et l'an 600 av. J.-C.. Les dates exactes de sa naissance et de sa mort restent un mystère, mais le zoroastrisme existe déjà lorsque Cyrus II érige l'empire perse au cours du VIe siècle av. J.-C.. Selon la légende zoroastrienne, Zoroastre se démarque comme un être particulier dès sa naissance, et des esprits maléfiques tentent à plusieurs reprises de le tuer au cours de son enfance. A l'âge de 20 ans, Zoroastre se retire dans une grotte et y passe les sept années qui suivent à méditer. Une fois qu'il ressent que sa dévotion envers Ahura Mazda a atteint son apogée, Zoroastre décide de partir répandre la bonne parole, sans grand succès au départ. Son tout premier fidèle est converti lorsqu'il parvient par miracle à guérir le cheval du roi Vishtaspa, qui apporte alors le soutien dont Zoroastre a tant besoin pour prêcher sa religion qui s'étend ensuite rapidement. Avant que les Grecs ne rencontrent les Perses et commencent à écrire sur ce peuple, le zoroastrisme s'est répandu dans tout l'empire perse et dans une grande partie du Proche-Orient. [PARAGRAPH:2:1]Les zoroastriens pensent que le monde est fondamentalement un endroit bienfaisant cré par Ahura Mazda pour les hommes, mais qu'il s'agit également d'un champ de bataille qui voit s'affronter les forces du bien et du mal. Les zoroastriens ne croient pas en la prédestination et accordent beaucoup d'importance aux choix que chaque individu doit faire afin de repousser les tentations et les corruptions d'Angra Mainyu. Les bonnes actions comme les mauvaises seront récompensées après la mort, et les êtres malfaisants seront jugés et envoyés en enfer, même si à la fin des temps, ils seront purifiés pour rejoindre Ahura Mazda. Les zoroastriens ne reconnaissent aucun autre dieu qu'Ahura Mazda, mais ce dernier est représenté de différentes façons, souvent dépeint sous une forme angélique, et porte des noms tels que Vohu Manah (la Bonne pensée) et Asha (la Vérité). Le livre saint du zoroastrisme est l'Avesta. Il réunit toutes les traditions orales transcrites pour la première fois sous la dynastie perse des Sassanides. On pense qu'une petite partie de l'Avesta, un ensemble de poèmes connus comme les Gathas, a été rédigée par Zoroastre en personne. Les temples zoroastriens sont conçus de manière à préserver le feu sacré, symbole de la lumière et de l'éclat d'Ahura Mazda. Les zoroastriens accordent également une grande importance à la propreté. C'est pourquoi ils doivent suivre plusieurs rites de purification à chaque péché commis. [PARAGRAPH:2:1]Le zoroastrisme est historiquement la religion de l'empire perse, bien qu'elle ne soit pas officiellement encouragée par les empereurs perses avant la dynastie des Sassanides au IIIe siècle de notre ère. Cette religion croise le judaïsme au cours de la captivité[NEWLINE]babylonienne au VIe siècle av. J.-C.. Plusieurs éléments laissent à penser que les deux religions se sont influencées mutuellement (concepts du monothéisme, du paradis et de l'enfer, de l'eschatologie...). On pense également, mais sans certitude, que les trois hommes sages de la naissance du Christ étaient des mages zoroastriens (prêtres). Au VIIe siècle, lorsque les Arabes envahissent et détruisent l'empire perse, le zoroastrisme devient une religion persécutée et disparaît progressivement. Un petit nombre de zoroastriens fuient en Inde, où ils créent une nouvelle communauté connue sous le nom de Parsis. La population des zoroastriens est aujourd'hui estimée entre 2 et 3 millions de personnes, principalement en Inde, au Pakistan et en Iran, mais est également présente dans les principaux centres urbains anglophones de la planète.</French>
 		<German>Auch wenn bis heute nur wenig über den Zarathustrismus bekannt ist, zählt er doch zuden einflussreichsten Religionen der Weltgeschichte. Von dem Propheten Zarathustra (im griechischen Sprachraum Zoroaster genannt) begründet, wurde diese Glaubensrichtung in der Antike im Persischen Reich praktiziert. Der Zarathustrismus beinhaltet zwar einige monotheistische Elemente, ist aber im Wesentlichen eine dualistische Religion, denn sie besagt, dass das Universum von Ahura Masda, dem Gott des Lichts, erschaffen wurde, dem ein Gott der Finsternis namens Angra Mainyu gegenübersteht. Das wichtigste Symbol des zarathustrischen Glaubens ist das Feuer, welches das Licht und den glänzenden Schein des Ahura Masda repräsentiert und für Reinheit steht. [PARAGRAPH:2:1]Wann genau Zarathustra gelebt hat, ist unter Historikern umstritten, man schränkt den Zeitraum allerdings von etwa 1000 bis 600 vor Christus ein. Unabhängig von seinen exakten Geburts- und Todesdaten ist jedoch belegt, dass der Zarathustrismus bereits bei der Gründung des Persischen Reiches durch Kyros II. im 6. Jahrhundert vor Christus existierte. Überlieferungen zufolge soll Zarathustra schon von Geburt an ein besonderer Mensch gewesen sein, der in seiner Kindheit zahlreiche Anschläge auf sein Leben überstanden haben soll, die böse Geister auf in verübten. Im Alter von etwa 20 Jahren zog sich Zarathustra in die Einsamkeit zurück und verbrachte die darauf folgenden sieben Jahre in Meditation. Als er schließlich vollkommene Hingebung zu Ahura Masda verspürte, machte er sich auf den Weg, um seine Überzeugungen unter das Volk zu bringen, zunächst jedoch erfolglos. Erst nachdem er auf wundersame Weise das Pferd des Königs Vistaspa geheilt hatte, der sich daraufhin höchstpersönlich zu Zarathustras Lehren bekannte, wuchs seine Anhängerschaft und seine Religion wurde zunehmend populärer. Zu der Zeit, als die Griechen erstmals auf die Perser stießen und schriftliche Aufzeichnungen über sie verfassten, war der Zarathustrismus bereits im ganzen Persischen Reich und auch in großen Teilen des Nahen Ostens etabliert. [PARAGRAPH:2:1]Die Anhänger des Zarathustrismus vertreten die Auffassung, dass die Welt im Grunde ein guter Ort ist, den Ahura Masda für die Menschen erschaffen hat, aber auch eine Art Schlachtfeld für die Kräfte des Guten und des Bösen. Sie glauben nicht an die Vorbestimmung, sondern sind überzeugt, dass jeder Einzelne eine Wahl treffen muss, um der Versuchung und Manipulation durch Angra Mainyu zu entgehen. Gute und böse Taten werden nach dem Tod gleichermaßen bewertet, wobei alles Übel verurteilt und zur Hölle geschickt wird, doch am Ende der Zeit wird auch das Böse geläutert werden und sich wieder Ahura Masda zuwenden. Der Zarathustrismus erkennt keinen anderen Gott an als Ahura Masda, der verschiedene Erscheinungsformen annehmen kann, häufig die von engelsähnlichen Wesen mit Namen wie Vohu Manah (guter Gedanke) und Asha (Wahrheit). Das Awesta, das Heilige Buch des zarathustrischen Glaubens, enthält die ursprünglich mündlichen Überlieferungen, die während der Sassaniden-Periode in Persien schriftlich niedergelegt wurden. Ein kleiner Teil des Awestas, eine Reihe von Hymnen bzw. Liedern, die so genannten Gathas, sollen von Zarathustra selbst verfasst worden sein. Der Hauptzweck der zarathustrischen Tempel ist die Bewahrung des heiligen Feuers, welches das Licht und den Glanz des Ahura Masda symbolisiert. Auch die Reinheit spielt im zarathustrischen Glauben eine sehr wichtige Rolle. So müssen die Gläubigen verschiedene Reinigungsrituale durchlaufen, wenn sie gesündigt haben. [PARAGRAPH:2:1]Aus historischer Sicht war der Zarathustrismus die Hauptreligion im Persischen Reich, offiziell wurde sie jedoch erst während der Sassaniden-Periode im 3. Jahrhundert nach Christus von den persischen Kaisern gefördert. Ein erstes Aufeinandertreffen des Zarathustrismus und des jüdischen Glaubens fand während der babylonischen Besatzungszeit im 6. Jahrhundert vor Christus statt und vieles weist darauf hin, dass sich die beiden Religionen in der Folge gegenseitig beeinflussten (ähnliche monotheistische Prägung, Himmel und Hölle, Eschatologie etc.). Es gibt kaum einen Zweifel daran, dass auch die drei Weisen, die bei der Geburt Jesu Christi anwesend waren, zarathustrische Magi (Priester) gewesen sind. Nach der Verwüstung und Zerstörung des Persischen Reiches durch die Araber im 7. Jahrhundert nach Christus wurden die Glaubensanhänger des Zarathustrismus verfolgt und so nahm die Popularität dieser Religion immer mehr ab. Einige Gläubige flüchteten nach Indien, wo sie eine neue Gemeinde gründeten und sich fortan Parsen nannten. Auch heute gibt es noch etwa 2-3 Millionen Menschen, die den Zarathustrismus praktizieren, vorwiegend in Indien, Pakistan, im Iran sowie vereinzelt auch in den Großstädten der englischsprachigen Welt.</German>
 		<Italian>Anche se oggi è poco noto, lo zoroastrismo è stato una delle religioni più influenti della storia. Esso fu la religione dell'antico Impero persiano e fu predicato dal profeta Zaratustra, noto in occidente come Zoroastro. Lo zoroastrismo contiene elementi di monoteismo ma è in realtà un culto dualistico: l'universo fu creato da un supremo essere di luce, Ahura Mazda, a cui si oppone l'essere supremo dell'oscurità, Angra Mainyu. Il simbolo più importante della fede zoroastriana è il fuoco, che simboleggia la luce e il calore di Ahura Mazda nonché la purezza. [PARAGRAPH:2:1]Gli studiosi non sono d'accordo sull'esatta collocazione temporale di Zoroastro. Le date variano dal 1000 a.C. al 600 a.C. Anche se il periodo di vita del suo profeta è incerto, lo zoroastrismo certamente esisteva già quando Ciro fondò l'Impero persiano nel VI secolo a.C. Secondo la tradizione zoroastriana, Zoroastro sarebbe stato riconosciuto come persona speciale sin dalla nascita e gli spiriti maligni avrebbero tentato più volte di ucciderlo. All'età di venti anni, Zoroastro si ritirò in una caverna e trascorse i sette anni successivi in meditazione. Dopo aver raggiunto la devozione più completa per Ahura Mazda, Zoroastro vagò per diffondere la fede, ma con scarsi successi iniziali: ottenne le prime conversioni alla sua fede solo quando riuscì a guarire il cavallo del re Vishtaspa: da allora, il re supportò la religione e questa si diffuse rapidamente. Quando gli intellettuali Greci conobbero i Persiani e cominciarono a scrivere opere su di loro, lo zoroastrismo era ormai diffuso in tutta la Persia e il Vicino Oriente. [PARAGRAPH:2:1]Lo zoroastrismo ritiene che il mondo sia sostanzialmente un bel posto creato per gli uomini da Ahura Mazda, ma anche che sia diventato il campo di battaglia tra le forze del bene e quelle del male. Gli zoroastriani non credono nella predestinazione e molta enfasi è posta sulle scelte di ciascuno, che dovrebbero tendere a evitare la corruzione da parte di Angra Mainyu. Alle azioni in terra corrisponderà un premio o una punizione nell'aldilà: i malvagi saranno spediti all'inferno, anche se poi, alla fine dei tempi, tutti verranno purificati e si riuniranno ad Ahura Mazda. Gli zoroastriani non riconoscono altro dio al di fuori di Ahura Mazda, che però si manifesta in forme diverse, spesso angeliche, che assumono nomi quali Vohu Manah (Buon pensiero) e Asha (Verità). Il libro sacro del zoroastrismo è l'Avesta, una raccolta delle tradizioni orali poi scritte al tempo della dinastia dei Sassanidi. Una piccola parte dell'Avesta, una serie di inni noti come Gatha, pare sia stata composta da Zoroastro in persona. I templi zoroastriani hanno la funzione di preservare il fuoco sacro, simbolo della luce e dello splendore di Ahura Mazda. Anche la pulizia è importante e vi erano infatti diversi riti di purificazione da compiere dopo che si aveva peccato. [PARAGRAPH:2:1]Lo zoroastrismo è storicamente la religione della Persia, anche se gli imperatori persiani non lo promossero ufficialmente fino al III secolo d.C., durante la dinastia dei Sassanidi. Esso venne a contatto con il giudaismo durante la cattività babilonese del VI secolo a.C. e sembrano esserci le prove che le due religioni si siano influenzate reciprocamente (condivisione dei concetti di monoteismo, di paradiso e inferno, dell'escatologia, ecc.). Pare quasi certo anzi che i tre saggi presenti alla nascita di Cristo, fossero magi (sacerdoti) zoroastriani. Con la conquista da parte degli Arabi dell'Impero persiano nel VII secolo d.C., gli zoroastriani vennero perseguitati e la religione scomparve. Alcuni fedeli fuggirono in India, dove fondarono una nuova comunità nota come Parsis. Oggi vi sono al mondo circa 2-3 milioni di praticanti del zoroastrismo, concentrati per lo più in India, Pakistan e Iran, ma sparsi anche nelle principali città del mondo di lingua inglese.</Italian>
-		<Spanish>Aunque no es muy conocido en nuestros días, el zoroastrismo ha sido una de las religiones más influyentes de la historia del mundo. Era la religión del imperio persa, formulada por Zaratustra, conocido en el oeste como Zoroastro. El zoroastrismo tiene elementos monoteístas, pero también es una fe dualista: el universo es obra de un ser supremo de luz llamado Ahura Mazda, que está enfrentado a una criatura de oscuridad primigenia conocida como Angra Mainyu. El símbolo más importante de la fe zoroastrista es el fuego, que simboliza la luz y el calor de Ahura Mazda y sirve como símbolo de pureza. [PARAGRAPH:2:1]Los estudiosos debaten cuándo vivió Zoroastro, con fechas que oscilan entre el año 1000 a. C. y el 600 a. C. Las fechas exactas de su nacimiento y su muerte se desconocen, pero en cualquier caso, el zoroastrismo existía ya cuando Ciro II fundó el imperio persa, en el siglo VI a. C. Según la tradición zoroastrista, Zoroastro fue reconocido desde su nacimiento como un individuo especial, por lo que los espíritus malignos intentaron asesinarlo varias veces siendo aún un niño. Al cumplir los veinte años, Zoroastro se retiró a una cueva, donde pasó los siete años siguientes meditando. Cuando sintió que había alcanzado una devoción completa hacia Ahura Mazda, Zoroastro partió a difundir su palabra por el mundo, tarea en la que inicialmente no le acompañó el éxito. No consiguió sus primeros conversos hasta después de curar de manera milagrosa al caballo del rey Vishtaspa, pero después de este suceso su religión conoció una rápida difusión.  Cuando los griegos se encontraron con los persas por vez primera y empezaron a escribir sobre ellos, el zoroastrismo se había difundido por el imperio persa y ocupaba la mayor parte de Oriente Próximo. [PARAGRAPH:2:1]Los zoroastristas creen que el mundo es fundamentalmente un lugar bueno creado para los humanos por Ahura Mazda, pero que al mismo tiempo es el campo de batalla de una lucha entre el bien y el mal. No creen en la predestinación y ponen mucho énfasis en la elección que deben hacer los individuos para no verse tentados y corrompidos por Angra Mainyu. Las acciones, buenas y malas, recibirán su recompensa tras la muerte y los malvados serán juzgados y enviados al Infierno, aunque al final de los tiempos hasta los perversos serán purificados y se reunirán con Ahura Mazda. Los zoroastristas no reconocen a ningún otro dios que Ahura Mazda, pero éste se manifiesta a través de diferentes emanaciones, que a menudo adoptan forma de ángel y tienen nombres diferentes, como Vohu Manah (Buen Pensamiento) y Asha (Verdad). El libro sagrado de los zoroastristas, llamado Avesta, es una compilación de tradiciones orales que se puso por escrito en tiempos de la Persia sasánida. Se cree que una pequeña sección del Avesta, una serie de himnos conocida como "gathas", es obra del propio Zoroastro. La función fundamental de los templos zoroastristas es la preservación del fuego sagrado, símbolo de la luz y la radiación de Ahura Mazda. La limpieza es también muy importante, y existen varios rituales de purificación que se deben seguir cuando se ha pecado. [PARAGRAPH:2:1]Históricamente, el zoroastrismo fue la religión del imperio persa, aunque no fue reconocido como tal por los emperadores hasta el período sasánida (siglo III d. C.). Entró en contacto con el judaísmo durante el cautiverio en Babilonia (siglo VI a. C.) y existen numerosas evidencias que sugieren que ambas religiones se influenciaron mutuamente (conceptos similares del monoteísmo, el Cielo y el Infierno, la escatología, etc.). Además, hoy en día se acepta que los tres reyes magos de la historia de Cristo eran magos (sacerdotes) zoroastristas. Cuando, en el siglo VII d. C., los árabes conquistaron y destruyeron el imperio persa, el zoroastrismo se convirtió en una religión perseguida y experimentó un lento declive. Un pequeño número de sus seguidores huyó a la India y formó una comunidad nueva, cuyos miembros serían conocidos como "parsis". En la actualidad existen entre dos y tres millones de practicantes del zoroastrismo, concentrados principalmente en la India, Paquistán e Irán, pero también con cierta presencia en los principales centros urbanos del mundo anglosajón.</Spanish>
+		<Spanish>Aunque no es muy conocido en nuestros días, el zoroastrismo ha sido una de las religiones más influyentes de la historia del mundo. Era la religión del imperio persa, formulada por Zaratustra, conocido en el oeste como Zoroastro. El zoroastrismo tiene elementos monoteístas, pero también es una fe dualista: el universo es obra de un ser supremo de luz llamado Ahura Mazda, que está enfrentado a una criatura de oscuridad primigenia conocida como Angra Mainyu. El símbolo más importante de la fe zoroastrista es el fuego, que simboliza la luz y el calor de Ahura Mazda y sirve como símbolo de pureza. [PARAGRAPH:2:1]Los estudiosos debaten cuándo vivió Zoroastro, con fechas que oscilan entre el año 1000 a. C. y el 600 a. C. Las fechas exactas de su nacimiento y su muerte se desconocen, pero en cualquier caso, el zoroastrismo existía ya cuando Ciro II fundó el imperio persa, en el siglo VI a. C. Según la tradición zoroastrista, Zoroastro fue reconocido desde su nacimiento como un individuo especial, por lo que los espíritus malignos intentaron asesinarlo varias veces siendo aún un niño. Al cumplir los veinte años, Zoroastro se retiró a una cueva, donde pasó los siete años siguientes meditando. Cuando sintió que había alcanzado una devoción completa hacia Ahura Mazda, Zoroastro partió a difundir su palabra por el mundo, tarea en la que inicialmente no le acompañó el éxito. No consiguió sus primeros conversos hasta después de curar de manera milagrosa al caballo del rey Vishtaspa, pero después de este suceso su religión conoció una rápida difusión. Cuando los griegos se encontraron con los persas por vez primera y empezaron a escribir sobre ellos, el zoroastrismo se había difundido por el imperio persa y ocupaba la mayor parte de Oriente Próximo. [PARAGRAPH:2:1]Los zoroastristas creen que el mundo es fundamentalmente un lugar bueno creado para los humanos por Ahura Mazda, pero que al mismo tiempo es el campo de batalla de una lucha entre el bien y el mal. No creen en la predestinación y ponen mucho énfasis en la elección que deben hacer los individuos para no verse tentados y corrompidos por Angra Mainyu. Las acciones, buenas y malas, recibirán su recompensa tras la muerte y los malvados serán juzgados y enviados al Infierno, aunque al final de los tiempos hasta los perversos serán purificados y se reunirán con Ahura Mazda. Los zoroastristas no reconocen a ningún otro dios que Ahura Mazda, pero éste se manifiesta a través de diferentes emanaciones, que a menudo adoptan forma de ángel y tienen nombres diferentes, como Vohu Manah (Buen Pensamiento) y Asha (Verdad). El libro sagrado de los zoroastristas, llamado Avesta, es una compilación de tradiciones orales que se puso por escrito en tiempos de la Persia sasánida. Se cree que una pequeña sección del Avesta, una serie de himnos conocida como "gathas", es obra del propio Zoroastro. La función fundamental de los templos zoroastristas es la preservación del fuego sagrado, símbolo de la luz y la radiación de Ahura Mazda. La limpieza es también muy importante, y existen varios rituales de purificación que se deben seguir cuando se ha pecado. [PARAGRAPH:2:1]Históricamente, el zoroastrismo fue la religión del imperio persa, aunque no fue reconocido como tal por los emperadores hasta el período sasánida (siglo III d. C.). Entró en contacto con el judaísmo durante el cautiverio en Babilonia (siglo VI a. C.) y existen numerosas evidencias que sugieren que ambas religiones se influenciaron mutuamente (conceptos similares del monoteísmo, el Cielo y el Infierno, la escatología, etc.). Además, hoy en día se acepta que los tres reyes magos de la historia de Cristo eran magos (sacerdotes) zoroastristas. Cuando, en el siglo VII d. C., los árabes conquistaron y destruyeron el imperio persa, el zoroastrismo se convirtió en una religión perseguida y experimentó un lento declive. Un pequeño número de sus seguidores huyó a la India y formó una comunidad nueva, cuyos miembros serían conocidos como "parsis". En la actualidad existen entre dos y tres millones de practicantes del zoroastrismo, concentrados principalmente en la India, Paquistán e Irán, pero también con cierta presencia en los principales centros urbanos del mundo anglosajón.</Spanish>
 		<Polish>Zaratusztrianizm został założony przez Zaratusztrę (Zoroastra) w starożytnej Persji, który czerpał z rdzennych wierzeń politeistycznych ówczesnych czasów. Propagował wierzenia, które mogły być pierwszymi monoteistycznymi w swej naturze, z jednym najwyższym bogiem - Ahura Mazdą. Zaratusztrianie wierzą w dualizm dobra i zła w postaci kosmicznej, w osobach Ahura Mazdy oraz złego ducha przemocy i śmierci, Angra Mainju, jak również w postaci etycznej jako dualizm świadomości ludzkiej. Święta księga Zaratusztrianizmu nazywana jest Awesta i zawiera nauki Zaratusztry spisane w postaci pięciu hymnów nazywanych Gatami. Są to abstrakcyjne, natchnione przekazy w formie lirycznej, ukierunkowane na wyznawanie Jedynego Boga, zrozumienie cnotliwości oraz porządku kosmicznego, promowanie sprawiedliwości społecznej jak również indywidualnego wyboru między dobrem a złem. Pozostała część Awesty została napisana w późniejszym okresie i dotyczy rytuałów, praktyki religijnej oraz kultu, jak również innych przekazów związanych z tym wyznaniem.</Polish>
 	</TEXT>
 	<TEXT>
@@ -20290,7 +20290,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INQUISITOR_PEDIA</Tag>
-		<English>While Missionaries often focus on extolling the glories of their respective gods to spread their religion, the Inquisitor focuses instead on pointing out the fallacies of all religions but his own. Ardent in the belief that all other religions are wrong, the Inquisitor lives to destroy the beliefs of others. If the inquisition convicted a person of heresy, the persoanl property of a condemned person was confiscated and places of worship were destroyed; based on medieval and feudal laws. Usually the confiscated property was divided three ways: by the Inquisition members, the church officials, and the state treasury. The Church and state kept strict accounts of the prisoner's incarceration, trial and execution costs. If the value of his confiscated property was not enough to cover these costs, then his heirs had to pay the difference. Records show many women and children were left penniless from such confiscation.  You may expend an Inquisitor inside a city to remove all religions from that city except your own.</English>
+		<English>While Missionaries often focus on extolling the glories of their respective gods to spread their religion, the Inquisitor focuses instead on pointing out the fallacies of all religions but his own. Ardent in the belief that all other religions are wrong, the Inquisitor lives to destroy the beliefs of others. If the inquisition convicted a person of heresy, the persoanl property of a condemned person was confiscated and places of worship were destroyed; based on medieval and feudal laws. Usually the confiscated property was divided three ways: by the Inquisition members, the church officials, and the state treasury. The Church and state kept strict accounts of the prisoner's incarceration, trial and execution costs. If the value of his confiscated property was not enough to cover these costs, then his heirs had to pay the difference. Records show many women and children were left penniless from such confiscation. You may expend an Inquisitor inside a city to remove all religions from that city except your own.</English>
 		<French>Les missionnaires se contentent souvent de glorifier leurs dieux respectifs pour propager leur religion, alors que l'inquisiteur s'efforce de démontrer les aberrations de toutes les autres religions. Convaincu que toutes les autres religions sont dans l'erreur, l'inquisiteur vit pour détruire les croyances des autres. Vous pouvez envoyer un inquisiteur dans une ville pour l'expurger de toutes les religions sauf la vôtre.</French>
 		<German>Während Missionare sich oft darauf konzentrieren, die Tugenden ihrer jeweiligen Götter zu übertreiben, um ihre Religion zu verbreiten, konzentriert sich der Inquisitor stattdessen darauf, die Fehler aller anderen Religionen außer seiner eigenen aufzuzeigen. Der Inquisitor brennt vor Überzeugung, dass alle anderen Religionen falsch sind, und lebt dafür, den Glauben aller anderen zu zerstören. Sie können einen Inquisitor in eine Stadt entsenden, um aus dieser Stadt alle Religionen außer Ihrer zu entfernen.</German>
 		<Italian>Mentre i missionari si concentrano sulle lodi delle rispettive divinità per diffondere la propria religione, gli inquisitori mettono in risalto gli errori delle altre religioni. Credono ardentemente che le altre religioni si sbaglino e vivono per distruggere la fede degli altri. Puoi usare un Inquisitore in una città per rimuoverne tutte le religioni tranne la tua.</Italian>
@@ -21099,7 +21099,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Tag>TXT_KEY_VOTE_UNIVERSAL_SUFFRAGE</Tag>
 		<English>U.N. Resolution #3312 (Global Civic - Democracy)</English>
 		<French>
-			<Text>Résolution de l'O.N.U  #3312 (Doctrine Globale - Démocratie)</Text>
+			<Text>Résolution de l'O.N.U #3312 (Doctrine Globale - Démocratie)</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -21234,7 +21234,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WORLDSIZE_GIANT_HELP</Tag>
-		<English>If you are looking for a truly epic experience, this map size is for you.  It has room for you and 23 opponents.</English>
+		<English>If you are looking for a truly epic experience, this map size is for you. It has room for you and 23 opponents.</English>
 		<French>Si vous voulez vivre une véritable épopée, cette carte est faite pour vous. Elle est immense et oppose 23 adversaires.</French>
 		<German>Wenn Sie eine unvergessliche Erfahrung suchen, ist diese Karte Ihre erste Wahl. Immerhin treffen Sie hier auf bis zu 23 Gegner!</German>
 		<Italian>Se sei alla ricerca di un'esperienza davvero epica, la dimensione di questa mappa è quello che fa per te, poiché oltre a te c'è posto per altri dieci rivali.</Italian>
@@ -21243,7 +21243,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WORLDSIZE_GIGANTIC_HELP</Tag>
-		<English>If you are looking for a truly epic experience, this map size is for you.  It has room for you and 23 opponents.</English>
+		<English>If you are looking for a truly epic experience, this map size is for you. It has room for you and 23 opponents.</English>
 		<French>Si vous voulez vivre une véritable épopée, cette carte est faite pour vous. Elle est immense et oppose 23 adversaires.</French>
 		<German>Wenn Sie eine unvergessliche Erfahrung suchen, ist diese Karte Ihre erste Wahl. Immerhin treffen Sie hier auf bis zu 23 Gegner!</German>
 		<Italian>Se sei alla ricerca di un'esperienza davvero epica, la dimensione di questa mappa è quello che fa per te, poiché oltre a te c'è posto per altri dieci rivali.</Italian>
