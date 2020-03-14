@@ -3540,7 +3540,7 @@ int CvGame::getNumFreeBonuses(BuildingTypes eBuilding) const
 {
 	if (GC.getBuildingInfo(eBuilding).getNumFreeBonuses() == -1)
 	{
-		return GC.getWorldInfo(GC.getMap().getWorldSize()).getNumFreeBuildingBonuses();
+		return GC.get<CvWorldInfo>(GC.getMap().getWorldSize()).getNumFreeBuildingBonuses();
 	}
 	else
 	{
@@ -7764,7 +7764,7 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 	const int iBarbCities = GET_PLAYER(ePlayer).getNumCities();
 
 	// Hard limit on barb/civ city ratio.
-	const int iMax = iCivCities + (countCivPlayersAlive() + GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers()) / 2;
+	const int iMax = iCivCities + (countCivPlayersAlive() + GC.get<CvWorldInfo>(GC.getMap().getWorldSize()).getDefaultPlayers()) / 2;
 	if (isOption(GAMEOPTION_BARBARIAN_WORLD) ? iMax <= iBarbCities * 3 : iMax <= iBarbCities * 8)
 	{
 		return;

@@ -427,9 +427,9 @@ CvEraInfo* CyGlobalContext::getEraInfo(int i) const
 }
 
 
-CvWorldInfo* CyGlobalContext::getWorldInfo(int i) const
+const CvWorldInfo* CyGlobalContext::getWorldInfo(int i) const
 {
-	return (i>=0 && i<GC.getNumWorldInfos()) ? &GC.getWorldInfo((WorldSizeTypes) i) : NULL;
+	return i >= 0 && i < GC.numTypes<CvWorldInfo>() ? &GC.get<CvWorldInfo>(i) : NULL;
 }
 
 
@@ -439,9 +439,9 @@ const CvClimateInfo* CyGlobalContext::getClimateInfo(int i) const
 }
 
 
-CvSeaLevelInfo* CyGlobalContext::getSeaLevelInfo(int i) const
+const CvSeaLevelInfo* CyGlobalContext::getSeaLevelInfo(int i) const
 {
-	return (i>=0 && i<GC.getNumSeaLevelInfos()) ? &GC.getSeaLevelInfo((SeaLevelTypes) i) : NULL;
+	return i >= 0 && i < GC.numTypes<CvSeaLevelInfos>() ? &GC.get<CvSeaLevelInfo>(i) : NULL;
 }
 
 

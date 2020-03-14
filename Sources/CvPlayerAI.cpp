@@ -16918,7 +16918,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	iTempValue = kCivic.getLargestCityHappiness();
 	if (iTempValue != 0)
 	{
-		iValue += (12 * std::min(getNumCities(), GC.getWorldInfo(GC.getMap().getWorldSize()).getTargetNumCities()) * ((isCivic(eCivic)) ? -AI_getHappinessWeight(-iTempValue, 1) : AI_getHappinessWeight(iTempValue, 1) )) / 100;
+		iValue += (12 * std::min(getNumCities(), GC.get<CvWorldInfo>(GC.getMap().getWorldSize()).getTargetNumCities()) * ((isCivic(eCivic)) ? -AI_getHappinessWeight(-iTempValue, 1) : AI_getHappinessWeight(iTempValue, 1) )) / 100;
 	}
 
 	if (kCivic.getWarWearinessModifier() != 0)
@@ -20566,7 +20566,7 @@ void CvPlayerAI::AI_doCivics()
 											iTechPathLen *= GC.getHandicapInfo(getHandicapType()).getResearchPercent();
 											iTechPathLen /= 100;
 
-											iTechPathLen *= GC.getWorldInfo(GC.getMap().getWorldSize()).getResearchPercent();
+											iTechPathLen *= GC.get<CvWorldInfo>(GC.getMap().getWorldSize()).getResearchPercent();
 											iTechPathLen /= 100;
 
 											iTechPathLen *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getResearchPercent();
@@ -26399,7 +26399,7 @@ int CvPlayerAI::AI_getStrategyHash() const
 	iParanoia /= 3 * (std::max(1, GC.getNumEraInfos()));
 	// That starts as a factor of 1, and drop to 1/3.  And now for game size...
 	iParanoia *= 14;
-	iParanoia /= (7 + std::max(GET_TEAM(getTeam()).getHasMetCivCount(true), GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers()));
+	iParanoia /= (7 + std::max(GET_TEAM(getTeam()).getHasMetCivCount(true), GC.get<CvWorldInfo>(GC.getMap().getWorldSize()).getDefaultPlayers()));
 
 	// Alert strategy
 	if( iParanoia >= 200 )

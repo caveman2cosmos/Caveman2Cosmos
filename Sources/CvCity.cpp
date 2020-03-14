@@ -6712,7 +6712,7 @@ int CvCity::getRevSuccessHappiness() const
 
 int CvCity::getLargestCityHappiness() const
 {
-	if (findPopulationRank() <= GC.getWorldInfo(GC.getMap().getWorldSize()).getTargetNumCities())
+	if (findPopulationRank() <= GC.get<CvWorldInfo>(GC.getMap().getWorldSize()).getTargetNumCities())
 	{
 		return GET_PLAYER(getOwner()).getLargestCityHappiness();
 	}
@@ -9091,7 +9091,7 @@ int CvCity::calculateDistanceMaintenanceTimes100(int iExtraDistanceModifier, int
 			// Toffer: Is this scaling rational?
 			// It may be more probable that players would settle cities further away from capital on bigger maps than they normally would on a smaller one even if closer alternatives are possible.
 			// So maybe a small discount on bigger maps makes sense, if just to give the players a lttle more freedom in where to settle as there's more possible locations to consider.
-			iValue *= GC.getWorldInfo(GC.getMap().getWorldSize()).getDistanceMaintenancePercent();
+			iValue *= GC.get<CvWorldInfo>(GC.getMap().getWorldSize()).getDistanceMaintenancePercent();
 			iValue /= 100;
 			// !Toffer
 
@@ -9129,7 +9129,7 @@ int CvCity::calculateNumCitiesMaintenanceTimes100(int iExtraModifier) const
 
 	/* Toffer - Skews early game balance too much between map sizes.
 Large maps have a discount on distance maintenance, that is adequate, this doesn't skew early game very much as you settle close to capital anyway.
-	iNumCitiesPercent *= GC.getWorldInfo(GC.getMap().getWorldSize()).getNumCitiesMaintenancePercent();
+	iNumCitiesPercent *= GC.get<CvWorldInfo>(GC.getMap().getWorldSize()).getNumCitiesMaintenancePercent();
 	iNumCitiesPercent /= 100;
 	*/
 
@@ -9189,7 +9189,7 @@ int CvCity::calculateColonyMaintenanceTimes100() const
 	iNumCitiesPercent *= (getPopulation() + 17);
 	iNumCitiesPercent /= 18;
 
-	iNumCitiesPercent *= GC.getWorldInfo(GC.getMap().getWorldSize()).getColonyMaintenancePercent();
+	iNumCitiesPercent *= GC.get<CvWorldInfo>(GC.getMap().getWorldSize()).getColonyMaintenancePercent();
 	iNumCitiesPercent /= 100;
 
 	iNumCitiesPercent *= GC.getHandicapInfo(getHandicapType()).getColonyMaintenancePercent();
@@ -9247,7 +9247,7 @@ int CvCity::calculateCorporationMaintenanceTimes100(CorporationTypes eCorporatio
 	}
 
 	int iBonusMaintenance = GC.getCorporationInfo(eCorporation).getMaintenance() * iNumBonuses;
-	iBonusMaintenance *= GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent();
+	iBonusMaintenance *= GC.get<CvWorldInfo>(GC.getMap().getWorldSize()).getCorporationMaintenancePercent();
 	iBonusMaintenance /= 100;
 	iMaintenance += iBonusMaintenance;
 
@@ -10227,7 +10227,7 @@ int CvCity::getAdditionalHappinessByCivic(CivicTypes eCivic, bool bDifferenceToC
 	if (kCivic.getLargestCityHappiness() != 0)
 	{
 		//int CvCity::getLargestCityHappiness() const
-		if (findPopulationRank() <= GC.getWorldInfo(GC.getMap().getWorldSize()).getTargetNumCities())
+		if (findPopulationRank() <= GC.get<CvWorldInfo>(GC.getMap().getWorldSize()).getTargetNumCities())
 		{
 			iHappy += kCivic.getLargestCityHappiness();
 		}
@@ -13265,7 +13265,7 @@ int CvCity::getPeaceTradeModifier(TeamTypes eTeam) const
 
 int CvCity::getBaseTradeProfit(CvCity* pCity) const
 {
-	int iProfit = std::min(pCity->getPopulation() * GC.getDefineINT("THEIR_POPULATION_TRADE_PERCENT"), plotDistance(getX(), getY(), pCity->getX(), pCity->getY()) * GC.getWorldInfo(GC.getMap().getWorldSize()).getTradeProfitPercent());
+	int iProfit = std::min(pCity->getPopulation() * GC.getDefineINT("THEIR_POPULATION_TRADE_PERCENT"), plotDistance(getX(), getY(), pCity->getX(), pCity->getY()) * GC.get<CvWorldInfo>(GC.getMap().getWorldSize()).getTradeProfitPercent());
 
 	iProfit *= GC.getDefineINT("TRADE_PROFIT_PERCENT");
 	iProfit /= 100;
@@ -14521,7 +14521,7 @@ int CvCity::getCorporationYieldByCorporation(YieldTypes eIndex, CorporationTypes
 			BonusTypes eBonus = (BonusTypes)GC.getCorporationInfo(eCorporation).getPrereqBonus(i);
 			if (NO_BONUS != eBonus && getNumBonuses(eBonus) > 0)
 			{
-				iYield += (GC.getCorporationInfo(eCorporation).getYieldProduced(eIndex) * getNumBonuses(eBonus) * GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent()) / 100;
+				iYield += (GC.getCorporationInfo(eCorporation).getYieldProduced(eIndex) * getNumBonuses(eBonus) * GC.get<CvWorldInfo>(GC.getMap().getWorldSize()).getCorporationMaintenancePercent()) / 100;
 			}
 		}
 		/************************************************************************************************/
@@ -14554,7 +14554,7 @@ int CvCity::getCorporationCommerceByCorporation(CommerceTypes eIndex, Corporatio
 			BonusTypes eBonus = (BonusTypes)GC.getCorporationInfo(eCorporation).getPrereqBonus(i);
 			if (NO_BONUS != eBonus && getNumBonuses(eBonus) > 0)
 			{
-				iCommerce += (GC.getCorporationInfo(eCorporation).getCommerceProduced(eIndex) * getNumBonuses(eBonus) * GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent()) / 100;
+				iCommerce += (GC.getCorporationInfo(eCorporation).getCommerceProduced(eIndex) * getNumBonuses(eBonus) * GC.get<CvWorldInfo>(GC.getMap().getWorldSize()).getCorporationMaintenancePercent()) / 100;
 			}
 		}
 		/************************************************************************************************/
@@ -24386,7 +24386,7 @@ int CvCity::calculateCorporateTaxes() const
 			}
 
 			int iBonusTaxes = GC.getCorporationInfo(eCorporation).getMaintenance() * iNumBonuses;
-			iBonusTaxes *= GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent();
+			iBonusTaxes *= GC.get<CvWorldInfo>(GC.getMap().getWorldSize()).getCorporationMaintenancePercent();
 			iBonusTaxes /= 200;
 			iTaxes += iBonusTaxes;
 

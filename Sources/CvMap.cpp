@@ -87,9 +87,9 @@ void CvMap::init(CvMapInitData* pInitInfo/*=NULL*/)
 	OutputDebugString("Initializing Map: Start");
 	PROFILE("CvMap::init");
 	gDLL->logMemState( CvString::format("CvMap::init begin - world size=%s, climate=%s, sealevel=%s, num custom options=%6", 
-		GC.getWorldInfo(GC.getInitCore().getWorldSize()).getDescription(), 
+		GC.get<CvWorldInfo>(GC.getInitCore().getWorldSize()).getDescription(), 
 		GC.get<CvClimateInfo>(GC.getInitCore().getClimate()).getDescription(), 
-		GC.getSeaLevelInfo(GC.getInitCore().getSeaLevel()).getDescription(),
+		GC.get<CvSeaLevelInfo>(GC.getInitCore().getSeaLevel()).getDescription(),
 		GC.getInitCore().getNumCustomMapOptions()).c_str() );
 
 	Cy::call_optional(gDLL->getPythonIFace()->getMapScriptModule(), "beforeInit");
@@ -155,8 +155,8 @@ void CvMap::reset(CvMapInitData* pInitInfo)
 	// set grid size
 	// initially set in terrain cell units
 	//
-	m_iGridWidth = (GC.getInitCore().getWorldSize() != NO_WORLDSIZE) ? GC.getWorldInfo(GC.getInitCore().getWorldSize()).getGridWidth (): 0;	//todotw:tcells wide
-	m_iGridHeight = (GC.getInitCore().getWorldSize() != NO_WORLDSIZE) ? GC.getWorldInfo(GC.getInitCore().getWorldSize()).getGridHeight (): 0;
+	m_iGridWidth = (GC.getInitCore().getWorldSize() != NO_WORLDSIZE) ? GC.get<CvWorldInfo>(GC.getInitCore().getWorldSize()).getGridWidth (): 0;	//todotw:tcells wide
+	m_iGridHeight = (GC.getInitCore().getWorldSize() != NO_WORLDSIZE) ? GC.get<CvWorldInfo>(GC.getInitCore().getWorldSize()).getGridHeight (): 0;
 
 	// allow grid size override
 	if (pInitInfo)

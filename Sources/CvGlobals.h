@@ -393,22 +393,25 @@ public:
 		std::vector<CvInfo*> m_vector;
 	};
 
-#define ERROR_MSG "This function should not be called without a template<> parameter."
+#define NEEDS_PARAM "This function should not be called without a templated <> parameter."
 
 	template <class CvInfo>
-	int numTypes() const;
+	int numTypes() const { FAssertMsg(false, NEEDS_PARAM); }
 
 	template <class CvInfo>
-	std::vector<CvInfo*>& get(); //{ FAssertMsg(false, ERROR_MSG); }
+	std::vector<CvInfo*>& get() { FAssertMsg(false, NEEDS_PARAM); }
 
 	template <class CvInfo>
-	const std::vector<CvInfo*>& get() const;
+	const std::vector<CvInfo*>& get() const { FAssertMsg(false, NEEDS_PARAM); }
 
 	template <class CvInfo, typename Type>
-	CvInfo& get(Type index);
+	CvInfo& get(Type index) { FAssertMsg(false, NEEDS_PARAM); }
 
 	template <class CvInfo, typename Type>
-	const CvInfo& get(Type index) const;
+	const CvInfo& get(Type index) const { FAssertMsg(false, NEEDS_PARAM); }
+
+	template <class CvInfo>
+	CvInfoReplacements<CvInfo>* getReplacements() { FAssertMsg(false, NEEDS_PARAM); }
 
 #define DECLARE_INFOS_CONTAINER(CvInfo, enum, infoVector) \
 public: \
@@ -433,21 +436,17 @@ public: \
 	template<> \
 	const CvInfo& get<CvInfo>(int index) const { return infoVector.get(index); } \
 \
+	template<> \
+	CvInfoReplacements<CvInfo>* getReplacements<CvInfo>() { return infoVector.getReplacements(); } \
+\
 protected: \
 	InfosVector<CvInfo> infoVector;
 
 	DECLARE_INFOS_CONTAINER(CvClimateInfo, ClimateTypes, m_ClimateInfo);
+	DECLARE_INFOS_CONTAINER(CvWorldInfo, WorldSizeTypes, m_WorldInfo);
+	DECLARE_INFOS_CONTAINER(CvSeaLevelInfo, SeaLevelTypes, m_SeaLevelInfo);
 
 public:
-	int getNumWorldInfos() const;
-	std::vector<CvWorldInfo*>& getWorldInfos();
-	CvWorldInfo& getWorldInfo(WorldSizeTypes e) const;
-	CvInfoReplacements<CvWorldInfo>* getWorldInfoReplacements();
-
-	int getNumSeaLevelInfos() const;
-	std::vector<CvSeaLevelInfo*>& getSeaLevelInfos();
-	CvSeaLevelInfo& getSeaLevelInfo(SeaLevelTypes e) const;
-
 	int getNumColorInfos() const;
 	std::vector<CvColorInfo*>& getColorInfos();
 	CvColorInfo& getColorInfo(ColorTypes e) const;
@@ -1545,10 +1544,6 @@ protected:
 	CvInfoReplacements<CvTerrainInfo> m_TerrainInfoReplacements;
 	std::vector<CvLandscapeInfo*> m_paLandscapeInfo;
 	int m_iActiveLandscapeID;
-	std::vector<CvWorldInfo*> m_paWorldInfo;
-	CvInfoReplacements<CvWorldInfo> m_WorldInfoReplacements;
-	std::vector<CvClimateInfo*> m_paClimateInfo;
-	std::vector<CvSeaLevelInfo*> m_paSeaLevelInfo;
 	std::vector<CvYieldInfo*> m_paYieldInfo;
 	std::vector<CvCommerceInfo*> m_paCommerceInfo;
 	std::vector<CvRouteInfo*> m_paRouteInfo;
@@ -2396,12 +2391,12 @@ public:
 	DllExport int getNumWorldInfos()
 	{
 		PROXY_TRACK("getNumWorldInfos");
-		return gGlobals->getNumWorldInfos();
+		return gGlobals->numTypes<CvWorldInfo>();
 	}
 	DllExport CvWorldInfo& getWorldInfo(WorldSizeTypes e)
 	{
 		PROXY_TRACK("getWorldInfo");
-		return gGlobals->getWorldInfo(e);
+		return gGlobals->get<CvWorldInfo>(e);
 	}
 
 	DllExport int getNumClimateInfos()
@@ -2418,12 +2413,12 @@ public:
 	DllExport int getNumSeaLevelInfos()
 	{
 		PROXY_TRACK("getNumSeaLevelInfos");
-		return gGlobals->getNumSeaLevelInfos();
+		return gGlobals->numTypes<CvSeaLevelInfo>();
 	}
 	DllExport CvSeaLevelInfo& getSeaLevelInfo(SeaLevelTypes e)
 	{
 		PROXY_TRACK("getSeaLevelInfo");
-		return gGlobals->getSeaLevelInfo(e);
+		return gGlobals->get<CvSeaLevelInfo>(e);
 	}
 
 	int getNumColorInfos()

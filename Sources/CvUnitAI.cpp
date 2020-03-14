@@ -32043,7 +32043,7 @@ bool CvUnitAI::AI_hurryFood()
 			&& (
 				pLoopCity->foodDifference() < 0
 				|| (GC.getGame().getSorenRandNum(100, "AI hurry with food") > 75
-					&& pLoopCity->findPopulationRank() > GC.getWorldInfo(GC.getMap().getWorldSize()).getTargetNumCities())
+					&& pLoopCity->findPopulationRank() > GC.get<CvWorldInfo>(GC.getMap().getWorldSize()).getTargetNumCities())
 				)
 			)
 		{

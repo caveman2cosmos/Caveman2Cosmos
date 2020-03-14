@@ -11325,7 +11325,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 		{
 			szHelpString.append(NEWLINE);
 			// Use absolute value with unhappy face
-			szHelpString.append(gDLL->getText("TXT_KEY_CIVIC_LARGEST_CITIES_HAPPINESS", abs(GC.getTraitInfo(eTrait).getLargestCityHappiness()), ((GC.getTraitInfo(eTrait).getLargestCityHappiness() > 0) ? gDLL->getSymbolID(HAPPY_CHAR) : gDLL->getSymbolID(UNHAPPY_CHAR)), GC.getWorldInfo(GC.getMap().getWorldSize()).getTargetNumCities()));
+			szHelpString.append(gDLL->getText("TXT_KEY_CIVIC_LARGEST_CITIES_HAPPINESS", abs(GC.getTraitInfo(eTrait).getLargestCityHappiness()), ((GC.getTraitInfo(eTrait).getLargestCityHappiness() > 0) ? gDLL->getSymbolID(HAPPY_CHAR) : gDLL->getSymbolID(UNHAPPY_CHAR)), GC.get<CvWorldInfo>(GC.getMap().getWorldSize()).getTargetNumCities()));
 		}
 
 		// State Religion Happiness
@@ -17447,10 +17447,10 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 /* Bugfix                                                                                       */
 /************************************************************************************************/
 /* original bts code
-		szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_LARGEST_CITIES_HAPPINESS", GC.getCivicInfo(eCivic).getLargestCityHappiness(), ((GC.getCivicInfo(eCivic).getLargestCityHappiness() > 0) ? gDLL->getSymbolID(HAPPY_CHAR) : gDLL->getSymbolID(UNHAPPY_CHAR)), GC.getWorldInfo(GC.getMap().getWorldSize()).getTargetNumCities()));
+		szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_LARGEST_CITIES_HAPPINESS", GC.getCivicInfo(eCivic).getLargestCityHappiness(), ((GC.getCivicInfo(eCivic).getLargestCityHappiness() > 0) ? gDLL->getSymbolID(HAPPY_CHAR) : gDLL->getSymbolID(UNHAPPY_CHAR)), GC.get<CvWorldInfo>(GC.getMap().getWorldSize()).getTargetNumCities()));
 */
 		// Use absolute value with unhappy face
-		szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_LARGEST_CITIES_HAPPINESS", abs(GC.getCivicInfo(eCivic).getLargestCityHappiness()), ((GC.getCivicInfo(eCivic).getLargestCityHappiness() > 0) ? gDLL->getSymbolID(HAPPY_CHAR) : gDLL->getSymbolID(UNHAPPY_CHAR)), GC.getWorldInfo(GC.getMap().getWorldSize()).getTargetNumCities()));
+		szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_LARGEST_CITIES_HAPPINESS", abs(GC.getCivicInfo(eCivic).getLargestCityHappiness()), ((GC.getCivicInfo(eCivic).getLargestCityHappiness() > 0) ? gDLL->getSymbolID(HAPPY_CHAR) : gDLL->getSymbolID(UNHAPPY_CHAR)), GC.get<CvWorldInfo>(GC.getMap().getWorldSize()).getTargetNumCities()));
 /************************************************************************************************/
 /* UNOFFICIAL_PATCH                        END                                                  */
 /************************************************************************************************/
@@ -28047,7 +28047,7 @@ void CvGameTextMgr::setCorporationHelp(CvWStringBuffer &szBuffer, CorporationTyp
 		int iYieldProduced = kCorporation.getYieldProduced((YieldTypes)iI);
 		if (NO_PLAYER != GC.getGame().getActivePlayer())
 		{
-			iYieldProduced *= GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent();
+			iYieldProduced *= GC.get<CvWorldInfo>(GC.getMap().getWorldSize()).getCorporationMaintenancePercent();
 			iYieldProduced /= 100;
 		}
 
@@ -28087,7 +28087,7 @@ void CvGameTextMgr::setCorporationHelp(CvWStringBuffer &szBuffer, CorporationTyp
 		int iCommerceProduced = kCorporation.getCommerceProduced((CommerceTypes)iI);
 		if (NO_PLAYER != GC.getGame().getActivePlayer())
 		{
-			iCommerceProduced *= GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent();
+			iCommerceProduced *= GC.get<CvWorldInfo>(GC.getMap().getWorldSize()).getCorporationMaintenancePercent();
 			iCommerceProduced /= 100;
 		}
 		if (iCommerceProduced != 0)
@@ -28363,7 +28363,7 @@ void CvGameTextMgr::setCorporationHelpCity(CvWStringBuffer &szBuffer, Corporatio
 
 		if (bActive)
 		{
-			iYield += (kCorporation.getYieldProduced(i) * iNumResources * GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent()) / 100;
+			iYield += (kCorporation.getYieldProduced(i) * iNumResources * GC.get<CvWorldInfo>(GC.getMap().getWorldSize()).getCorporationMaintenancePercent()) / 100;
 /************************************************************************************************/
 /* Afforess	                  Start		 02/27/10                                               */
 /*                                                                                              */
@@ -28396,7 +28396,7 @@ void CvGameTextMgr::setCorporationHelpCity(CvWStringBuffer &szBuffer, Corporatio
 
 		if (bActive)
 		{
-			iCommerce += (kCorporation.getCommerceProduced(i) * iNumResources * GC.getWorldInfo(GC.getMap().getWorldSize()).getCorporationMaintenancePercent()) / 100;
+			iCommerce += (kCorporation.getCommerceProduced(i) * iNumResources * GC.get<CvWorldInfo>(GC.getMap().getWorldSize()).getCorporationMaintenancePercent()) / 100;
 /************************************************************************************************/
 /* Afforess	                  Start		 02/27/10                                               */
 /*                                                                                              */

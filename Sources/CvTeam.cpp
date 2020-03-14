@@ -3446,7 +3446,7 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 	iCost *= iModifier;
 	iCost /= 100;
 
-	iModifier = GC.getWorldInfo(GC.getMap().getWorldSize()).getResearchPercent();
+	iModifier = GC.get<CvWorldInfo>(GC.getMap().getWorldSize()).getResearchPercent();
 	iCost *= iModifier;
 	iCost /= 100;
 

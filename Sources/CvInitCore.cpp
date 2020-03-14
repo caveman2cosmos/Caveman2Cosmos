@@ -809,20 +809,20 @@ bool CvInitCore::getWBMapScript() const
 
 void CvInitCore::setWorldSize(const CvWString & szWorldSize)
 {
-	for (int i = 0; i < GC.getNumWorldInfos(); i++)
+	for (int i = 0; i < GC.numTypes<CvWorldInfo>(); i++)
 	{
-		if ( wcsicmp(szWorldSize.GetCString(), CvWString(GC.getWorldInfo((WorldSizeTypes)i).getType()).GetCString()) == 0 )
+		if ( wcsicmp(szWorldSize.GetCString(), CvWString(GC.get<CvWorldInfo>(i).getType()).GetCString()) == 0 )
 		{
 			setWorldSize((WorldSizeTypes)i);
 		}
 	}
 }
 
-const CvWString & CvInitCore::getWorldSizeKey(CvWString & szBuffer) const
+const CvWString& CvInitCore::getWorldSizeKey(CvWString& szBuffer) const
 {
-	if ( checkBounds(getWorldSize(), 0, GC.getNumWorldInfos()) )
+	if (checkBounds(getWorldSize(), 0, GC.numTypes<CvWorldInfo>()))
 	{
-		szBuffer = GC.getWorldInfo(getWorldSize()).getType();
+		szBuffer = GC.get<CvWorldInfo>(getWorldSize()).getType();
 		return szBuffer;
 	}
 	else
@@ -857,22 +857,22 @@ const CvWString& CvInitCore::getClimateKey(CvWString & szBuffer) const
 	}
 }
 
-void CvInitCore::setSeaLevel(const CvWString & szSeaLevel)
+void CvInitCore::setSeaLevel(const CvWString& szSeaLevel)
 {
-	for (int i = 0; i < GC.getNumSeaLevelInfos(); i++)
+	for (int i = 0; i < GC.numTypes<CvSeaLevelInfo>(); i++)
 	{
-		if ( wcsicmp(szSeaLevel.GetCString(), CvWString(GC.getSeaLevelInfo((SeaLevelTypes)i).getType()).GetCString()) == 0 )
+		if (wcsicmp(szSeaLevel.GetCString(), CvWString(GC.get<CvSeaLevelInfo>(i).getType()).GetCString()) == 0)
 		{
 			setSeaLevel((SeaLevelTypes)i);
 		}
 	}
 }
 
-const CvWString & CvInitCore::getSeaLevelKey(CvWString & szBuffer) const
+const CvWString& CvInitCore::getSeaLevelKey(CvWString& szBuffer) const
 {
-	if ( checkBounds(getSeaLevel(), 0, GC.getNumSeaLevelInfos()) )
+	if (checkBounds(getSeaLevel(), 0, GC.numTypes<CvSeaLevelInfo>()))
 	{
-		szBuffer = GC.getSeaLevelInfo(getSeaLevel()).getType();
+		szBuffer = GC.get<CvSeaLevelInfo>(getSeaLevel()).getType();
 		return szBuffer;
 	}
 	else
@@ -1633,7 +1633,7 @@ void CvInitCore::resetAdvancedStartPoints()
 	
 	if (NO_WORLDSIZE != getWorldSize())
 	{
-		iPoints *= GC.getWorldInfo(getWorldSize()).getAdvancedStartPointsMod();
+		iPoints *= GC.get<CvWorldInfo>(getWorldSize()).getAdvancedStartPointsMod();
 		iPoints /= 100;
 	}
 	

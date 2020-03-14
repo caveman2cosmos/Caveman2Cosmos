@@ -950,7 +950,7 @@ void CvMapGenerator::generateRandomMap()
 		return; // Python override
 	}
 
-	gDLL->NiTextOut(CvString::format("Generating Random Map %S, %S...", gDLL->getMapScriptName().GetCString(), GC.getWorldInfo(GC.getMap().getWorldSize()).getDescription()).c_str());
+	gDLL->NiTextOut(CvString::format("Generating Random Map %S, %S...", gDLL->getMapScriptName().GetCString(), GC.get<CvWorldInfo>(GC.getMap().getWorldSize()).getDescription()).c_str());
 
 	generatePlotTypes();
 	generateTerrain();

@@ -2363,7 +2363,7 @@ int CvPlayer::startingPlotRange() const
 	iRange *= GC.getDefineINT("STARTING_DISTANCE_PERCENT");
 	iRange /= 100;
 
-	iRange *= (GC.getMap().getLandPlots() / (GC.getWorldInfo(GC.getMap().getWorldSize()).getTargetNumCities() * GC.getGame().countCivPlayersAlive()));
+	iRange *= (GC.getMap().getLandPlots() / (GC.get<CvWorldInfo>(GC.getMap().getWorldSize()).getTargetNumCities() * GC.getGame().countCivPlayersAlive()));
 	iRange /= NUM_CITY_PLOTS;
 
 	iRange += std::min(((GC.getMap().getNumAreas() + 1) / 2), GC.getGame().countCivPlayersAlive());
@@ -9110,7 +9110,7 @@ int CvPlayer::getBuildingPrereqBuilding(BuildingTypes eBuilding, BuildingTypes e
 	if (kBuilding.isForceNoPrereqScaling() || isLimitedWonder(ePrereqBuilding))
 		return iPrereqs;
 
-	iPrereqs *= std::max(0, (GC.getWorldInfo(GC.getMap().getWorldSize()).getBuildingPrereqModifier() + 100));
+	iPrereqs *= std::max(0, (GC.get<CvWorldInfo>(GC.getMap().getWorldSize()).getBuildingPrereqModifier() + 100));
 	iPrereqs /= 100;
 
 	if (!isLimitedWonder(eBuilding))
@@ -11198,7 +11198,7 @@ int CvPlayer::getCivicAnarchyLength(CivicTypes* paeNewCivics) const
 		iTotalAnarchyLength *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getAnarchyPercent();
 		iTotalAnarchyLength /= 100;
 
-		iTotalAnarchyLength += getNumCities() * GC.getWorldInfo(GC.getMap().getWorldSize()).getNumCitiesAnarchyPercent();
+		iTotalAnarchyLength += getNumCities() * GC.get<CvWorldInfo>(GC.getMap().getWorldSize()).getNumCitiesAnarchyPercent();
 	}
 	else
 	{
@@ -11258,7 +11258,7 @@ int CvPlayer::getReligionAnarchyLength() const
 	iAnarchyLength *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getAnarchyPercent();
 	iAnarchyLength /= 100;
 
-	iAnarchyLength += (getNumCities() * GC.getWorldInfo(GC.getMap().getWorldSize()).getNumCitiesAnarchyPercent() / 100);
+	iAnarchyLength += (getNumCities() * GC.get<CvWorldInfo>(GC.getMap().getWorldSize()).getNumCitiesAnarchyPercent() / 100);
 
 	iAnarchyLength = ((iAnarchyLength * std::max(0, (getAnarchyModifier() + 100))) / 100);
 
@@ -13361,7 +13361,7 @@ int CvPlayer::getModifiedWarWearinessPercentAnger(int iWarWearinessPercentAnger)
 		iWarWearinessPercentAnger /= 100;
 	}
 
-	iWarWearinessPercentAnger *= std::max(0, (GC.getWorldInfo(GC.getMap().getWorldSize()).getWarWearinessModifier() + 100));
+	iWarWearinessPercentAnger *= std::max(0, (GC.get<CvWorldInfo>(GC.getMap().getWorldSize()).getWarWearinessModifier() + 100));
 	iWarWearinessPercentAnger /= 100;
 
 	if (!isHuman() && !isNPC() && !isMinorCiv())
@@ -30079,7 +30079,7 @@ void CvPlayer::doCheckForTaxationAnger()
 
 	iModifier = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getAnarchyPercent();
 	iModifier += GC.getEraInfo(GC.getGame().getStartEra()).getAnarchyPercent();
-	iModifier += getNumCities() * GC.getWorldInfo(GC.getMap().getWorldSize()).getNumCitiesAnarchyPercent();
+	iModifier += getNumCities() * GC.get<CvWorldInfo>(GC.getMap().getWorldSize()).getNumCitiesAnarchyPercent();
 	iModifier /= 300;
 	iModifier = std::max(1, iModifier);
 

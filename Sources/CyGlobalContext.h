@@ -109,9 +109,9 @@ public:
 	CvCultureLevelInfo * getCultureLevelInfo(int i) const;
 	CvEraInfo * getEraInfo(int i) const;
 	CvVictoryInfo * getVictoryInfo(int i) const;
-	CvWorldInfo * getWorldInfo(int i) const;
+	const CvWorldInfo* getWorldInfo(int i) const;
 	const CvClimateInfo* getClimateInfo(int i) const;
-	CvSeaLevelInfo * getSeaLevelInfo(int i) const;
+	const CvSeaLevelInfo* getSeaLevelInfo(int i) const;
 	CvInfoBase * getUnitAIInfo(int i) const;
 	CvColorInfo* getColorInfo(int i) const;
 	CvUnitArtStyleTypeInfo* getUnitArtStyleTypeInfo(int i) const;
@@ -236,8 +236,8 @@ public:
 	int getNumCultureLevelInfos() const { return GC.getNumCultureLevelInfos(); }
 	int getNumEraInfos() const { return GC.getNumEraInfos(); }
 	int getNumVictoryInfos() const { return GC.getNumVictoryInfos(); }
-	int getNumWorldInfos() const { return GC.getNumWorldInfos(); }
-	int getNumSeaLevelInfos() const { return GC.getNumSeaLevelInfos(); }
+	int getNumWorldInfos() const { return GC.numTypes<CvWorldInfo>(); }
+	int getNumSeaLevelInfos() const { return GC.numTypes<CvSeaLevelInfo>(); }
 	int getNumClimateInfos() const { return GC.numTypes<CvClimateInfo>(); }
 	int getNumConceptInfos() const { return GC.getNumConceptInfos(); }
 	int getNumNewConceptInfos() const { return GC.getNumNewConceptInfos(); }

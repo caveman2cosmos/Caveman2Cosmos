@@ -1172,43 +1172,6 @@ bool cvInternalGlobals::getResourceLayer() const
 /***** Parallel Maps - End *****/
 /*******************************/
 
-int cvInternalGlobals::getNumWorldInfos() const
-{
-	return (int)m_paWorldInfo.size();
-}
-
-std::vector<CvWorldInfo*>& cvInternalGlobals::getWorldInfos()
-{
-	return m_paWorldInfo;
-}
-
-CvWorldInfo& cvInternalGlobals::getWorldInfo(WorldSizeTypes e) const
-{
-	FAssertMsg(e >= 0 && e < GC.getNumWorldInfos(), "WorldInfo index out of bounds");
-	return *(m_paWorldInfo[e]);
-}
-
-CvInfoReplacements<CvWorldInfo>* cvInternalGlobals::getWorldInfoReplacements()
-{
-	return &m_WorldInfoReplacements;
-}
-
-int cvInternalGlobals::getNumSeaLevelInfos() const
-{
-	return (int)m_paSeaLevelInfo.size();
-}
-
-std::vector<CvSeaLevelInfo*>& cvInternalGlobals::getSeaLevelInfos()
-{
-	return m_paSeaLevelInfo;
-}
-
-CvSeaLevelInfo& cvInternalGlobals::getSeaLevelInfo(SeaLevelTypes e) const
-{
-	FAssertMsg(e >= 0 && e < GC.getNumSeaLevelInfos(), "SeaLevelInfo index out of bounds");
-	return *(m_paSeaLevelInfo[e]);
-}
-
 int cvInternalGlobals::getNumHints() const
 {
 	return (int)m_paHints.size();
@@ -1298,7 +1261,7 @@ CvModLoadControlInfo& cvInternalGlobals::getModLoadControlInfos(int iIndex) cons
 void cvInternalGlobals::updateReplacements()
 {
 //ReplacementStep
-	m_WorldInfoReplacements.updateReplacements(getWorldInfos());
+	m_WorldInfoReplacements.updateReplacements(get<CvWorldInfo>());
 	m_UnitInfoReplacements.updateReplacements(getUnitInfos());
 	m_TechInfoReplacements.updateReplacements(getTechInfos());
 	m_TraitInfoReplacements.updateReplacements(getTraitInfos());
@@ -5021,9 +4984,9 @@ void cvInternalGlobals::deleteInfoArrays()
 	deleteInfoArray(m_paTurnTimerInfo);
 	deleteInfoArray(m_paVictoryInfo);
 	deleteInfoArray(m_paHurryInfo);
-	deleteInfoArray(m_paWorldInfo);
+	m_WorldInfo.clear();
 	deleteInfoArray(m_paSeaLevelInfo);
-	deleteInfoArray(m_paClimateInfo);
+	m_ClimateInfo.clear();
 	deleteInfoArray(m_paProcessInfo);
 	deleteInfoArray(m_paVoteInfo);
 	deleteInfoArray(m_paProjectInfo);

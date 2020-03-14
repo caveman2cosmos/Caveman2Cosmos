@@ -16426,7 +16426,7 @@ int CvUnit::experienceNeeded() const
 	//adjust level thresholds to a world size.
 	if (isCommander())
 	{
-//		iExperienceNeeded *= GC.getWorldInfo(GC.getMap().getWorldSize()).getCommandersLevelThresholdsPercent() / 100;
+//		iExperienceNeeded *= GC.get<CvWorldInfo>(GC.getMap().getWorldSize()).getCommandersLevelThresholdsPercent() / 100;
 		iExperienceNeeded *= 3;
 		iExperienceNeeded /= 2;
 	}
