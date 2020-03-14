@@ -7,7 +7,7 @@
 				<DependencyType>RELIGION_JUDAISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNIT_JEWISH_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_JEWISH_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -57,7 +57,7 @@
 				<DependencyType>RELIGION_CHRISTIANITY</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNIT_CHRISTIAN_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_CHRISTIAN_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -107,7 +107,7 @@
 				<DependencyType>RELIGION_ISLAM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNIT_ISLAMIC_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_ISLAMIC_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -157,7 +157,7 @@
 				<DependencyType>RELIGION_HINDUISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNIT_HINDU_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_HINDU_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -207,7 +207,7 @@
 				<DependencyType>RELIGION_BUDDHISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNIT_BUDDHIST_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_BUDDHIST_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -257,7 +257,7 @@
 				<DependencyType>RELIGION_CONFUCIANISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNIT_CONFUCIAN_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_CONFUCIAN_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -307,7 +307,7 @@
 				<DependencyType>RELIGION_TAOISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNIT_TAOIST_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_TAOIST_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -357,7 +357,7 @@
 				<DependencyType>RELIGION_ANDEANISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNIT_ANDEAN_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_ANDEAN_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -407,7 +407,7 @@
 				<DependencyType>RELIGION_ASATRU</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNIT_ASATRU_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_ASATRU_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -457,7 +457,7 @@
 				<DependencyType>RELIGION_DRUIDIC_TRADITIONS</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNIT_DRUID_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_DRUID_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -507,7 +507,7 @@
 				<DependencyType>RELIGION_HELLENISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNIT_HELLENIC_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_HELLENIC_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -557,7 +557,7 @@
 				<DependencyType>RELIGION_KEMETISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNIT_EGYPT_MYTH_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_EGYPT_MYTH_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -607,7 +607,7 @@
 				<DependencyType>RELIGION_MESOPOTAMISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNIT_MESO_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_MESO_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -657,7 +657,7 @@
 				<DependencyType>RELIGION_SHAMANISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNIT_SHAMAN_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_SHAMAN_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -707,7 +707,7 @@
 				<DependencyType>RELIGION_SHINTO</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNIT_SHINTO_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_SHINTO_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -757,7 +757,7 @@
 				<DependencyType>RELIGION_TENGRIISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNIT_TENGRI_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_TENGRI_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -807,7 +807,7 @@
 				<DependencyType>RELIGION_BAHAI</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNIT_BAHAI_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_BAHAI_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -857,7 +857,7 @@
 				<DependencyType>RELIGION_MORMON</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNIT_MORMON_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_MORMON_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -907,7 +907,7 @@
 				<DependencyType>RELIGION_SCIENTOLOGY</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNIT_SCIENTOLOGY_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_SCIENTOLOGY_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -957,7 +957,7 @@
 				<DependencyType>RELIGION_SIKHISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNIT_SIKH_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_SIKH_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -1007,7 +1007,7 @@
 				<DependencyType>RELIGION_VOODOO</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNIT_VOODOO_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_VOODOO_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -1057,7 +1057,7 @@
 				<DependencyType>RELIGION_YORUBA</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNIT_YORUBA_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_YORUBA_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -1107,7 +1107,7 @@
 				<DependencyType>RELIGION_CANAANISM</DependencyType>
  			</AndDependencyTypes>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNIT_CANAANITE_MISSIONARY</Capture>
+			<Capture>UNIT_FEMALE_CANAANITE_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>

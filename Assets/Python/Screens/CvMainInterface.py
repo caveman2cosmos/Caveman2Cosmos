@@ -2374,6 +2374,8 @@ class CvMainInterface:
 		screen = CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE)
 		#Clean up?
 		if self.bCityExit or self.bCityChange and not self.bCityEnter:
+			screen.hide("WonderLimit0")
+			screen.hide("WonderLimit1")
 			screen.hide("Liberate")
 			iReligionInfos = self.iNumReligionInfos
 			for i in xrange(iReligionInfos):
@@ -2396,8 +2398,6 @@ class CvMainInterface:
 				screen.hide("MaintenanceText")
 				screen.hide("MaintenanceAmountText")
 				screen.hide("NationalityText")
-				screen.hide("WonderLimit0")
-				screen.hide("WonderLimit1")
 				screen.hide("DefenseText")
 				screen.hide("EmploymentText")
 				screen.hide("CityNameText")
