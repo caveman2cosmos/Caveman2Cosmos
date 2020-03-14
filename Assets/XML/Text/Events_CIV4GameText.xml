@@ -1416,13 +1416,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_VOLCANO_ACTIVE</Tag>
 		<English>Reports from the %s1_civ_adjective empire speak of increased volcanic activity.</English>
-		<French>Des rumeurs provenant de l'empire %s1_civ_adjective font état d'une augmentation de l'activité volcanique.</French>
+		<French>Des rumeurs courent concernant une augmentation de l'activité volcanique.</French>
 		<Polish>Raporty z Imperium %s1_civ_adjective mówią o zwiększonej aktywności wulkanicznej.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_VOLCANO_SLEEP</Tag>
 		<English>Reports from the %s1_civ_adjective empire speak of lower volcanic activity.</English>
-		<French>Des rumeurs provenant de l'empire %s1_civ_adjective font état d'une diminution de l'activité volcanique.</French>
+		<French>Nos sages et shamans trouvent que activité volcanique se calme peu à peu.</French>
 		<Polish>Raporty z Imperium %s1_civ_adjective mówią o zmniejszonej aktywności wulkanicznej.</Polish>
 	</TEXT>
 	<TEXT>

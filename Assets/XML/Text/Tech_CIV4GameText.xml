@@ -4563,7 +4563,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CELEBRATION</Tag>
 		<English>Celebration</English>
-		<French>Fête</French>
+		<French>Célébration</French>
 		<Spanish>
 			<Text>Fiestas</Text>
 			<Gender>Female</Gender>
@@ -4579,13 +4579,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CELEBRATION_QUOTE</Tag>
 		<English>The celebration... you cannot practice it or anything. It's a moment when the excitement of your goal make you react to the moment.[PARAGRAPH:2]- Peter Bondra, [PARAGRAPH:1][SPACE][SPACE]"In an interview after a hockey match"</English>
-		<French>"La fête... Vous ne pouvez pas vous entraîner ou quoi que ce soit. Il y a un moment où l'excitation de votre objectif vous faire réagir à l'instant." - Peter Bondra</French>
+		<French>"La célébration... Vous ne pouvez pas vous y entraîner ou quoi que ce soit. C'est l'instant où l'excitation d'avoir atteint votre objectif vous fait enfin réagir." - Peter Bondra</French>
 		<Polish>"Świętowanie... nie możesz tego ćwiczyć. To jest moment kiedy twoja ekscytacja z powodu osiągnięcia celu bierze górę." - Peter Bondra</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CELEBRATION_STRATEGY</Tag>
 		<English>[COLOR_TECH_TEXT]Celebration[COLOR_REVERT] is a prehistoric era technology that allows the construction of four different [COLOR_BUILDING_TEXT]Grand Festival[COLOR_REVERT] world wonders, each giving unique and powerful bonuses such as [COLOR_HIGHLIGHT_TEXT]free promotions[COLOR_REVERT]. It also allows the [COLOR_BUILDING_TEXT]Fertility Festival[COLOR_REVERT] national wonder that produces an effect that gives [ICON_FOOD][COLOR_GREEN]Food[COLOR_REVERT] in all cities as well as [COLOR_HIGHLIGHT_TEXT]storing food[COLOR_REVERT], albeit only a bit of it.</English>
-		<French>[COLOR_TECH_TEXT]Fête[COLOR_REVERT] est une technologie de l'ère préhistorique qui permet la construction de quatre Merveilles mondiales de [COLOR_BUILDING_TEXT]Grands Festivals[COLOR_REVERT] différents, chacun donnant un bonus différent, comme les [COLOR_HIGHLIGHT_TEXT]promotions gratuites[COLOR_REVERT]. Elle permet également la Merveille nationale [COLOR_BUILDING_TEXT]Festival de Fertilité[COLOR_REVERT] qui a comme effet d'améliorer la production de [ICON_FOOD][COLOR_GREEN]Nourriture[COLOR_REVERT] dans toutes les villes ainsi que le [COLOR_HIGHLIGHT_TEXT]stockage de la nourriture[COLOR_REVERT], mais seulement un peu.</French>
+		<French>[COLOR_TECH_TEXT]Célébration[COLOR_REVERT] est une technologie de l'ère préhistorique qui permet la construction de quatre Merveilles mondiales de [COLOR_BUILDING_TEXT]Grands Festivals[COLOR_REVERT] différents, chacun donnant un bonus différent, comme les [COLOR_HIGHLIGHT_TEXT]promotions gratuites[COLOR_REVERT]. Elle permet également la Merveille nationale [COLOR_BUILDING_TEXT]Festival de Fertilité[COLOR_REVERT] qui a comme effet d'améliorer la production de [ICON_FOOD][COLOR_GREEN]Nourriture[COLOR_REVERT] dans toutes les villes ainsi que le [COLOR_HIGHLIGHT_TEXT]stockage de la nourriture[COLOR_REVERT], mais seulement un peu.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CENTRAL_HEATING</Tag>
