@@ -24713,11 +24713,6 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 					szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_NATIONAL_WONDERS_PER_CITY", iMaxNumWonders));
 				}
 			}
-			else if (pCity->isBuildingsMaxed())
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_NUM_PER_CITY", GC.getDefineINT("MAX_BUILDINGS_PER_CITY")));
-			}
 		}
 	}
 
@@ -35521,78 +35516,46 @@ void CvGameTextMgr::setYieldHelp(CvWStringBuffer &szBuffer, CvCity& city, YieldT
 	{
 		return;
 	}
-	CvYieldInfo& info = GC.getYieldInfo(eYieldType);
 
 	if (NO_PLAYER == city.getOwner())
 	{
 		return;
 	}
+	CvYieldInfo& info = GC.getYieldInfo(eYieldType);
 	CvPlayer& owner = GET_PLAYER(city.getOwner());
 
 	int iBaseProduction = city.getModifiedBaseYieldRate(eYieldType);
 
-	//isolate out what's counted in getModifiedBaseYieldRate
-	//for (int i = 0; i < GC.getNumBuildingInfos(); i++)
-	//{
-	//	CvBuildingInfo& infoBuilding = GC.getBuildingInfo((BuildingTypes)i);
-	//	if (city.getNumBuilding((BuildingTypes)i) > 0 && !GET_TEAM(city.getTeam()).isObsoleteBuilding((BuildingTypes)i))
-	//	{
-	//		for (int iLoop = 0; iLoop < city.getNumBuilding((BuildingTypes)i); iLoop++)
-	//		{
-	//			iBaseProduction -= GET_TEAM(city.getTeam()).getBuildingYieldChange((BuildingTypes)i, eYieldType);
-	//		}
-	//	}
-	//}
-	//for (int i = 0; i < GC.getNumSpecialistInfos(); i++)
-	//{
-	//	SpecialistTypes eSpecialist = ((SpecialistTypes)i);
-	//	if (city.specialistCount((SpecialistTypes)i) > 0)
-	//	{
-	//		iBaseProduction -= city.specialistYieldTotal(eSpecialist, eYieldType);
-	//	}
-	//}
 	szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_BASE_YIELD", info.getTextKeyWide(), iBaseProduction, info.getChar()));
 	szBuffer.append(NEWLINE);
 
 	int iBaseModifier = 100;
+	int iMod = 0;
 
 	// Buildings
-	int iBuildingMod = 0;
-	for (int i = 0; i < GC.getNumBuildingInfos(); i++)
+	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		CvBuildingInfo& infoBuilding = GC.getBuildingInfo((BuildingTypes)i);
-		if (city.getNumBuilding((BuildingTypes)i) > 0 && !GET_TEAM(city.getTeam()).isObsoleteBuilding((BuildingTypes)i))
+		CvBuildingInfo& infoBuilding = GC.getBuildingInfo((BuildingTypes)iI);
+		if (city.getNumBuilding((BuildingTypes)iI) > 0 && !GET_TEAM(city.getTeam()).isObsoleteBuilding((BuildingTypes)iI))
 		{
-			for (int iLoop = 0; iLoop < city.getNumBuilding((BuildingTypes)i); iLoop++)
+			for (int iJ = 0; iJ < city.getNumBuilding((BuildingTypes)iI); iJ++)
 			{
-				iBuildingMod += infoBuilding.getYieldModifier(eYieldType);
-/************************************************************************************************/
-/* Afforess                         12/7/09                                                     */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-				iBuildingMod += GET_TEAM(city.getTeam()).getBuildingYieldModifier((BuildingTypes)i, eYieldType);
-				/*iBaseProduction += GET_TEAM(city.getTeam()).getBuildingYieldChange((BuildingTypes)i, eYieldType);*/
-/************************************************************************************************/
-/* Afforess	                         END                                                        */
-/************************************************************************************************/
+				iMod += infoBuilding.getYieldModifier(eYieldType);
+				iMod += GET_TEAM(city.getTeam()).getBuildingYieldModifier((BuildingTypes)iI, eYieldType);
 			}
 		}
-		for (int j = 0; j < MAX_PLAYERS; j++)
+		for (int iJ = 0; iJ < MAX_PLAYERS; iJ++)
 		{
-			if (GET_PLAYER((PlayerTypes)j).isAlive())
+			if (GET_PLAYER((PlayerTypes)iJ).isAlive() && GET_PLAYER((PlayerTypes)iJ).getTeam() == owner.getTeam())
 			{
-				if (GET_PLAYER((PlayerTypes)j).getTeam() == owner.getTeam())
+				int iLoop;
+				for (CvCity* pLoopCity = GET_PLAYER((PlayerTypes)iJ).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iJ).nextCity(&iLoop))
 				{
-					int iLoop;
-					for (CvCity* pLoopCity = GET_PLAYER((PlayerTypes)j).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)j).nextCity(&iLoop))
+					if (pLoopCity->getNumBuilding((BuildingTypes)iI) > 0 && !GET_TEAM(pLoopCity->getTeam()).isObsoleteBuilding((BuildingTypes)iI))
 					{
-						if (pLoopCity->getNumBuilding((BuildingTypes)i) > 0 && !GET_TEAM(pLoopCity->getTeam()).isObsoleteBuilding((BuildingTypes)i))
+						for (int iK = 0; iK < pLoopCity->getNumBuilding((BuildingTypes)iI); iK++)
 						{
-							for (int iLoop = 0; iLoop < pLoopCity->getNumBuilding((BuildingTypes)i); iLoop++)
-							{
-								iBuildingMod += infoBuilding.getGlobalYieldModifier(eYieldType);
-							}
+							iMod += infoBuilding.getGlobalYieldModifier(eYieldType);
 						}
 					}
 				}
@@ -35602,101 +35565,99 @@ void CvGameTextMgr::setYieldHelp(CvWStringBuffer &szBuffer, CvCity& city, YieldT
 
 	if (NULL != city.area())
 	{
-		iBuildingMod += city.area()->getYieldRateModifier(city.getOwner(), eYieldType);
+		iMod += city.area()->getYieldRateModifier(city.getOwner(), eYieldType);
 	}
-	if (0 != iBuildingMod)
+	if (0 != iMod)
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_BUILDINGS", iBuildingMod, info.getChar()));
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_BUILDINGS", iMod, info.getChar()));
 		szBuffer.append(NEWLINE);
-		iBaseModifier += iBuildingMod;
+		iBaseModifier += iMod;
 	}
 
 	// Power
 	if (city.isPower())
 	{
-		int iPowerMod = city.getPowerYieldRateModifier(eYieldType);
-		if (0 != iPowerMod)
+		iMod = city.getPowerYieldRateModifier(eYieldType);
+		if (0 != iMod)
 		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_POWER", iPowerMod, info.getChar()));
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_POWER", iMod, info.getChar()));
 			szBuffer.append(NEWLINE);
-			iBaseModifier += iPowerMod;
+			iBaseModifier += iMod;
 		}
 	}
 
 	// Resources
-	int iBonusMod = city.getBonusYieldRateModifier(eYieldType);
-	if (0 != iBonusMod)
+	iMod = city.getBonusYieldRateModifier(eYieldType);
+	if (0 != iMod)
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_BONUS", iBonusMod, info.getChar()));
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_BONUS", iMod, info.getChar()));
 		szBuffer.append(NEWLINE);
-		iBaseModifier += iBonusMod;
+		iBaseModifier += iMod;
 	}
 
 	// Capital
 	if (city.isCapital())
 	{
-		int iCapitalMod = owner.getCapitalYieldRateModifier(eYieldType);
-		if (0 != iCapitalMod)
+		iMod = owner.getCapitalYieldRateModifier(eYieldType);
+		if (0 != iMod)
 		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_CAPITAL", iCapitalMod, info.getChar()));
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_CAPITAL", iMod, info.getChar()));
 			szBuffer.append(NEWLINE);
-			iBaseModifier += iCapitalMod;
+			iBaseModifier += iMod;
 		}
 	}
 
 	// Civics
-	int iCivicMod = 0;
-	for (int i = 0; i < GC.getNumCivicOptionInfos(); i++)
+	iMod = 0;
+	for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
 	{
-		if (NO_CIVIC != owner.getCivics((CivicOptionTypes)i))
+		if (NO_CIVIC != owner.getCivics((CivicOptionTypes)iI))
 		{
-			iCivicMod += GC.getCivicInfo(owner.getCivics((CivicOptionTypes)i)).getYieldModifier(eYieldType);
+			iMod += GC.getCivicInfo(owner.getCivics((CivicOptionTypes)iI)).getYieldModifier(eYieldType);
 		}
 	}
-	if (0 != iCivicMod)
+	if (0 != iMod)
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_CIVICS", iCivicMod, info.getChar()));
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_CIVICS", iMod, info.getChar()));
 		szBuffer.append(NEWLINE);
-		iBaseModifier += iCivicMod;
+		iBaseModifier += iMod;
 	}
 
 	// Traits
-	int iTraitMod = 0;
-	for (int i = 0; i < GC.getNumTraitInfos(); i++)
+	iMod = 0;
+	for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
 	{
-		if (owner.hasTrait((TraitTypes)i))
+		if (owner.hasTrait((TraitTypes)iI))
 		{
-			iTraitMod += GC.getTraitInfo((TraitTypes)i).getYieldModifier(eYieldType);
+			iMod += GC.getTraitInfo((TraitTypes)iI).getYieldModifier(eYieldType);
 		}
 	}
-	if (0 != iTraitMod)
+	if (0 != iMod)
 	{
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_TRAITS", iTraitMod, info.getChar()));
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_TRAITS", iMod, info.getChar()));
 		szBuffer.append(NEWLINE);
-		iBaseModifier += iTraitMod;
+		iBaseModifier += iMod;
 	}
 
-	//Team Project (1)
+/* Team Project (1)
 	//Specialists
-	//int iSpecialistMod = 0;
-	//for (int i = 0; i < GC.getNumSpecialistInfos(); i++)
-	//{
-	//	SpecialistTypes eSpecialist = ((SpecialistTypes)i);
-	//	if (city.specialistCount((SpecialistTypes)i) > 0)
-	//	{
-	//		iSpecialistMod += city.specialistYieldTotal(eSpecialist, eYieldType);
-	//	}
-	//}
-	//if (0 != iSpecialistMod)
-	//{
-	//	szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_SPECIALISTS", iSpecialistMod, info.getChar()));
-	//	szBuffer.append(NEWLINE);
-	//	iBaseProduction += iSpecialistMod;
-	//}
-
-	int iTotal = (iBaseModifier * iBaseProduction) /100;
-	int iCheck = city.getYieldRate(eYieldType);
-	FAssertMsg((iBaseModifier * iBaseProduction) / 100 == iCheck, "Yield Modifier in setProductionHelp does not agree with actual value");
+	iMod = 0;
+	for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
+	{
+		SpecialistTypes eSpecialist = ((SpecialistTypes)iI);
+		if (city.specialistCount((SpecialistTypes)iI) > 0)
+		{
+			iMod += city.specialistYieldTotal(eSpecialist, eYieldType);
+		}
+	}
+	if (0 != iMod)
+	{
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_SPECIALISTS", iMod, info.getChar()));
+		szBuffer.append(NEWLINE);
+		iBaseProduction += iMod;
+	}
+*/
+	FAssertMsg(iBaseProduction * iBaseModifier / 100 == city.getYieldRate(eYieldType), "Yield Modifier in setProductionHelp does not agree with actual value");
 }
 
 void CvGameTextMgr::setConvertHelp(CvWStringBuffer& szBuffer, PlayerTypes ePlayer, ReligionTypes eReligion)

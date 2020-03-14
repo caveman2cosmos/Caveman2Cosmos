@@ -444,10 +444,6 @@
 		<iDefineIntVal>10</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>MAX_BUILDINGS_PER_CITY</DefineName>
-		<iDefineIntVal>-1</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>INITIAL_CITY_POPULATION</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>

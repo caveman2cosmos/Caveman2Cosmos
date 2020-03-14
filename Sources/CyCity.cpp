@@ -234,11 +234,6 @@ bool CyCity::isNationalWondersMaxed()
 	return m_pCity ? m_pCity->isNationalWondersMaxed() : false;
 }
 
-bool CyCity::isBuildingsMaxed()
-{
-	return m_pCity ? m_pCity->isBuildingsMaxed() : false;
-}
-
 bool CyCity::canTrain( int /*UnitTypes*/ eUnit, bool bContinue, bool bTestVisible, bool bIgnoreCost, bool bIgnoreUpgrades )
 {
 	return m_pCity ? m_pCity->canTrain((UnitTypes)eUnit, bContinue, bTestVisible, bIgnoreCost, bIgnoreUpgrades) : false;

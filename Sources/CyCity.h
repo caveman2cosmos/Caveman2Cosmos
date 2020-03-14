@@ -82,7 +82,6 @@ public:
 	bool isWorldWondersMaxed();
 	bool isTeamWondersMaxed();
 	bool isNationalWondersMaxed();
-	bool isBuildingsMaxed();
 	int getMaxNumWorldWonders();
 	int getMaxNumTeamWonders();
 	int getMaxNumNationalWonders();
