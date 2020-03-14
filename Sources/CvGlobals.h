@@ -168,11 +168,8 @@ extern CvDLLUtilityIFaceBase* g_DLL;
 
 class cvInternalGlobals
 {
-//	friend class CvDLLUtilityIFace;
 	friend class CvXMLLoadUtility;
 public:
-
-	// singleton accessor
 	inline static cvInternalGlobals& getInstance();
 
 	cvInternalGlobals();
@@ -343,6 +340,110 @@ public:
 	}
 	void resolveDelayedResolution();
 
+	template<class CvInfo>
+	struct InfosVector
+	{
+	public:
+		InfosVector() {}
+
+		void add(CvInfo& info) {
+			m_vector.push_back(info);
+		}
+
+		void clear() {
+			for (std::vector<CvInfo*>::iterator it = m_vector.begin(); it != m_vector.end(); ++it)
+				SAFE_DELETE(*it);
+			m_vector.clear();
+		}
+
+		inline int numTypes() const {
+			return m_vector.size();
+		}
+
+		template <typename Type>
+		inline CvInfo& get(Type index) {
+			FAssert(index > -1 && index < numTypes());
+			return *m_vector[index];
+		}
+
+		template <typename Type>
+		inline const CvInfo& get(Type index) const {
+			FAssert(index > -1 && index < numTypes());
+			return *m_vector[index];
+		}
+
+		void updateReplacements() {
+			m_InfoReplacements.updateReplacements(&m_vector);
+		}
+
+		CvInfoReplacements<CvInfo>* getReplacements() {
+			return &m_InfoReplacements;
+		}
+
+	protected:
+		CvInfoReplacements<CvInfo> m_InfoReplacements;
+		std::vector<CvInfo*> m_vector;
+	};
+
+#define ERROR_MSG "This function should not be called without a template<> parameter."
+
+	template <class CvInfo>
+	int numTypes() const;
+
+	template <class CvInfo>
+	InfosVector<CvInfo*>& get(); //{ FAssertMsg(false, ERROR_MSG); }
+
+	template <class CvInfo>
+	const InfosVector<CvInfo*>& get() const;
+
+	template <class CvInfo, typename Type>
+	CvInfo& get(Type index);
+
+	template <class CvInfo, typename Type>
+	const CvInfo& get(Type index) const;
+
+public:
+	template<>
+	int numTypes<CvWorldInfo>() const { return m_WorldInfo.numTypes(); }
+
+	template<>
+	InfosVector<CvWorldInfo*>& get<CvWorldInfo>() { return m_WorldInfo; }
+
+	template<>
+	const InfosVector<CvWorldInfo*>& get<CvWorldInfo>() const { return m_WorldInfo; }
+
+	template<>
+	CvWorldInfo& get<CvWorldInfo>(WorldSizeTypes index) { return *m_WorldInfo.get(index); }
+
+	template<>
+	const CvWorldInfo& get<CvWorldInfo>(WorldSizeTypes index) const { return *m_WorldInfo.get(index); }
+
+protected:
+	InfosVector<CvWorldInfo*> m_WorldInfo;
+
+#define DECLARE_INFO_CONTAINER(CvInfo, enum, vector) \
+public: \
+	template<> \
+	int numTypes<CvInfo>() const { return vector.numTypes(); } \
+\
+	template<> \
+	InfosVector<CvInfo*>& get<CvInfo>() { return vector; } \
+\
+	template<> \
+	const InfosVector<CvInfo*>& get<CvInfo>() const { return vector; } \
+\
+	template<> \
+	CvInfo& get<CvInfo>(enum index) { return *vector.get(index); } \
+\
+	template<> \
+	const CvInfo& get<CvInfo>(enum index) const { return *vector.get(index); } \
+\
+protected: \
+	InfosVector<CvInfo*> vector;
+
+	DECLARE_INFO_CONTAINER(CvClimateInfo, ClimateTypes, m_ClimateInfo);
+
+public:
 	int getNumWorldInfos() const;
 	std::vector<CvWorldInfo*>& getWorldInfos();
 	CvWorldInfo& getWorldInfo(WorldSizeTypes e) const;
