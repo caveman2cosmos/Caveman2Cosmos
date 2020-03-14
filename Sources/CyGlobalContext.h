@@ -110,7 +110,7 @@ public:
 	CvEraInfo * getEraInfo(int i) const;
 	CvVictoryInfo * getVictoryInfo(int i) const;
 	CvWorldInfo * getWorldInfo(int i) const;
-	CvClimateInfo * getClimateInfo(int i) const;
+	const CvClimateInfo* getClimateInfo(int i) const;
 	CvSeaLevelInfo * getSeaLevelInfo(int i) const;
 	CvInfoBase * getUnitAIInfo(int i) const;
 	CvColorInfo* getColorInfo(int i) const;
@@ -238,7 +238,7 @@ public:
 	int getNumVictoryInfos() const { return GC.getNumVictoryInfos(); }
 	int getNumWorldInfos() const { return GC.getNumWorldInfos(); }
 	int getNumSeaLevelInfos() const { return GC.getNumSeaLevelInfos(); }
-	int getNumClimateInfos() const { return GC.getNumClimateInfos(); }
+	int getNumClimateInfos() const { return GC.numTypes<CvClimateInfo>(); }
 	int getNumConceptInfos() const { return GC.getNumConceptInfos(); }
 	int getNumNewConceptInfos() const { return GC.getNumNewConceptInfos(); }
 	int getNumCityTabInfos() const { return GC.getNumCityTabInfos(); }

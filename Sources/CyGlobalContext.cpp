@@ -433,9 +433,9 @@ CvWorldInfo* CyGlobalContext::getWorldInfo(int i) const
 }
 
 
-CvClimateInfo* CyGlobalContext::getClimateInfo(int i) const
+const CvClimateInfo* CyGlobalContext::getClimateInfo(int i) const
 {
-	return (i>=0 && i<GC.getNumClimateInfos()) ? &GC.getClimateInfo((ClimateTypes) i) : NULL;
+	return i >= 0 && i < GC.numTypes<CvClimateInfo>() ? &GC.get<CvClimateInfo>(i) : NULL;
 }
 
 

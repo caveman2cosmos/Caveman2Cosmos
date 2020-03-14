@@ -360,6 +360,14 @@ public:
 			return m_vector.size();
 		}
 
+		inline std::vector<CvInfo*>& get() {
+			return m_vector;
+		}
+
+		inline const std::vector<CvInfo*>& get() const {
+			return m_vector;
+		}
+
 		template <typename Type>
 		inline CvInfo& get(Type index) {
 			FAssert(index > -1 && index < numTypes());
@@ -391,10 +399,10 @@ public:
 	int numTypes() const;
 
 	template <class CvInfo>
-	InfosVector<CvInfo*>& get(); //{ FAssertMsg(false, ERROR_MSG); }
+	std::vector<CvInfo*>& get(); //{ FAssertMsg(false, ERROR_MSG); }
 
 	template <class CvInfo>
-	const InfosVector<CvInfo*>& get() const;
+	const std::vector<CvInfo*>& get() const;
 
 	template <class CvInfo, typename Type>
 	CvInfo& get(Type index);
@@ -402,56 +410,39 @@ public:
 	template <class CvInfo, typename Type>
 	const CvInfo& get(Type index) const;
 
-public:
-	template<>
-	int numTypes<CvWorldInfo>() const { return m_WorldInfo.numTypes(); }
-
-	template<>
-	InfosVector<CvWorldInfo*>& get<CvWorldInfo>() { return m_WorldInfo; }
-
-	template<>
-	const InfosVector<CvWorldInfo*>& get<CvWorldInfo>() const { return m_WorldInfo; }
-
-	template<>
-	CvWorldInfo& get<CvWorldInfo>(WorldSizeTypes index) { return *m_WorldInfo.get(index); }
-
-	template<>
-	const CvWorldInfo& get<CvWorldInfo>(WorldSizeTypes index) const { return *m_WorldInfo.get(index); }
-
-protected:
-	InfosVector<CvWorldInfo*> m_WorldInfo;
-
-#define DECLARE_INFO_CONTAINER(CvInfo, enum, vector) \
+#define DECLARE_INFOS_CONTAINER(CvInfo, enum, infoVector) \
 public: \
 	template<> \
-	int numTypes<CvInfo>() const { return vector.numTypes(); } \
+	int numTypes<CvInfo>() const { return infoVector.numTypes(); } \
 \
 	template<> \
-	InfosVector<CvInfo*>& get<CvInfo>() { return vector; } \
+	std::vector<CvInfo*>& get<CvInfo>() { return infoVector.get(); } \
 \
 	template<> \
-	const InfosVector<CvInfo*>& get<CvInfo>() const { return vector; } \
+	const std::vector<CvInfo*>& get<CvInfo>() const { return infoVector.get(); } \
 \
 	template<> \
-	CvInfo& get<CvInfo>(enum index) { return *vector.get(index); } \
+	CvInfo& get<CvInfo>(enum index) { return infoVector.get(index); } \
 \
 	template<> \
-	const CvInfo& get<CvInfo>(enum index) const { return *vector.get(index); } \
+	const CvInfo& get<CvInfo>(enum index) const { return infoVector.get(index); } \
+\
+	template<> \
+	CvInfo& get<CvInfo>(int index) { return infoVector.get(index); } \
+\
+	template<> \
+	const CvInfo& get<CvInfo>(int index) const { return infoVector.get(index); } \
 \
 protected: \
-	InfosVector<CvInfo*> vector;
+	InfosVector<CvInfo> infoVector;
 
-	DECLARE_INFO_CONTAINER(CvClimateInfo, ClimateTypes, m_ClimateInfo);
+	DECLARE_INFOS_CONTAINER(CvClimateInfo, ClimateTypes, m_ClimateInfo);
 
 public:
 	int getNumWorldInfos() const;
 	std::vector<CvWorldInfo*>& getWorldInfos();
 	CvWorldInfo& getWorldInfo(WorldSizeTypes e) const;
 	CvInfoReplacements<CvWorldInfo>* getWorldInfoReplacements();
-
-	int getNumClimateInfos() const;
-	std::vector<CvClimateInfo*>& getClimateInfos();
-	CvClimateInfo& getClimateInfo(ClimateTypes e) const;
 
 	int getNumSeaLevelInfos() const;
 	std::vector<CvSeaLevelInfo*>& getSeaLevelInfos();
@@ -2416,12 +2407,12 @@ public:
 	DllExport int getNumClimateInfos()
 	{
 		PROXY_TRACK("getNumClimateInfos");
-		return gGlobals->getNumClimateInfos();
+		return gGlobals->numTypes<CvClimateInfo>();
 	}
 	DllExport CvClimateInfo& getClimateInfo(ClimateTypes e)
 	{
 		PROXY_TRACK("getClimateInfo");
-		return gGlobals->getClimateInfo(e);
+		return gGlobals->get<CvClimateInfo>(e);
 	}
 
 	DllExport int getNumSeaLevelInfos()

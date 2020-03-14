@@ -834,20 +834,20 @@ const CvWString & CvInitCore::getWorldSizeKey(CvWString & szBuffer) const
 
 void CvInitCore::setClimate(const CvWString & szClimate)
 {
-	for (int i = 0; i < GC.getNumClimateInfos(); i++)
+	for (int i = 0; i < GC.numTypes<CvClimateInfo>(); i++)
 	{
-		if ( wcsicmp(szClimate.GetCString(), CvWString(GC.getClimateInfo((ClimateTypes)i).getType()).GetCString()) == 0 )
+		if (wcsicmp(szClimate.GetCString(), CvWString(GC.get<CvClimateInfo>(i).getType()).GetCString()) == 0)
 		{
 			setClimate((ClimateTypes)i);
 		}
 	}
 }
 
-const CvWString & CvInitCore::getClimateKey(CvWString & szBuffer) const
+const CvWString& CvInitCore::getClimateKey(CvWString & szBuffer) const
 {
-	if ( checkBounds(getClimate(), 0, GC.getNumClimateInfos()) )
+	if (checkBounds(getClimate(), 0, GC.numTypes<CvClimateInfo>()))
 	{
-		szBuffer = GC.getClimateInfo(getClimate()).getType();
+		szBuffer = GC.get<CvClimateInfo>(getClimate()).getType();
 		return szBuffer;
 	}
 	else

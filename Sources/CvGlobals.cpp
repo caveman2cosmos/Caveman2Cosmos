@@ -1193,30 +1193,6 @@ CvInfoReplacements<CvWorldInfo>* cvInternalGlobals::getWorldInfoReplacements()
 	return &m_WorldInfoReplacements;
 }
 
-/////////////////////////////////////////////
-// CLIMATE
-/////////////////////////////////////////////
-
-int cvInternalGlobals::getNumClimateInfos() const
-{
-	return (int)m_paClimateInfo.size();
-}
-
-std::vector<CvClimateInfo*>& cvInternalGlobals::getClimateInfos()
-{
-	return m_paClimateInfo;
-}
-
-CvClimateInfo& cvInternalGlobals::getClimateInfo(ClimateTypes e) const
-{
-	FAssertMsg(e >= 0 && e < GC.getNumClimateInfos(), "ClimateInfo index out of bounds");
-	return *(m_paClimateInfo[e]);
-}
-
-/////////////////////////////////////////////
-// SEALEVEL
-/////////////////////////////////////////////
-
 int cvInternalGlobals::getNumSeaLevelInfos() const
 {
 	return (int)m_paSeaLevelInfo.size();
