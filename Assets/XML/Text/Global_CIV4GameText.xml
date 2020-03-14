@@ -8623,13 +8623,17 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>Żywność netto: +0[ICON_FOOD]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_PROD_UNIT</Tag>
-		<English>[ICON_BULLET]%D1%%[ICON_PRODUCTION] from %s2</English>
+		<Tag>TXT_KEY_MISC_HELP_PROD_MOD_FROM</Tag>
+		<English>[ICON_BULLET]%d1%%[ICON_PRODUCTION] from %s2</English>
 		<French>[ICON_BULLET]%D1%%[ICON_PRODUCTION] pour %s2</French>
 		<German>[ICON_BULLET]%D1%%[ICON_PRODUCTION] für %s2</German>
 		<Italian>[ICON_BULLET]%D1%%[ICON_PRODUCTION] per %s2</Italian>
 		<Spanish>[ICON_BULLET]%D1%%[ICON_PRODUCTION] por %s2</Spanish>
 		<Polish>[ICON_BULLET]%D1%%[ICON_PRODUCTION] dla %s2</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_PROD_TOTAL</Tag>
+		<English>Total: %d1%%[ICON_PRODUCTION]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_SLIDER_PERCENT_FLOAT</Tag>
@@ -8749,6 +8753,10 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Italian>[ICON_BULLET]%D1%%%F2 dalle forme di governo</Italian>
 		<Spanish>[ICON_BULLET]%D1%% %F2 por principios</Spanish>
 		<Polish>[ICON_BULLET]%D1%%%F2 z Doktryn</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_YIELD_EVENTS</Tag>
+		<English>[ICON_BULLET]%d1%% %F2 from Events</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_YIELD_PROJECTS</Tag>
