@@ -145,7 +145,7 @@
 // BUG - start
 #define DOUBLE_SEPARATOR								L"\n======================="
 // BUG - end
-#define TEXT_COLOR(szColor)								((int)(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString(szColor)).getColor().r * 255)), ((int)(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString(szColor)).getColor().g * 255)), ((int)(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString(szColor)).getColor().b * 255)), ((int)(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString(szColor)).getColor().a * 255))
+#define TEXT_COLOR(szColor)								((int)(GC.get<CvColorInfo>(GC.getInfoTypeForString(szColor)).getColor().r * 255)), ((int)(GC.get<CvColorInfo>(GC.getInfoTypeForString(szColor)).getColor().g * 255)), ((int)(GC.get<CvColorInfo>(GC.getInfoTypeForString(szColor)).getColor().b * 255)), ((int)(GC.get<CvColorInfo>(GC.getInfoTypeForString(szColor)).getColor().a * 255))
 
 // Version Verification files and folders
 //#ifdef _DEBUG

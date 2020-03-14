@@ -5915,11 +5915,11 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 		}
 	}
 
-	for (iJ = 0; iJ < GC.getNumTerrainInfos(); iJ++)
+	for (iJ = 0; iJ < GC.numTypes<CvTerrainInfo>(); iJ++)
 	{
 		if (GC.getTechInfo(eTech).isTerrainTrade(iJ))
 		{
-			if (GC.getTerrainInfo((TerrainTypes)iJ).isWater())
+			if (GC.get<CvTerrainInfo>(iJ).isWater())
 			{
 				if (pCapitalCity != NULL)
 				{
@@ -6023,7 +6023,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 				iImprovementValue += ((kImprovement.isRiverSideMakesValid()) ? 100 : 0);
 				iImprovementValue += ((kImprovement.isCarriesIrrigation()) ? 300 : 0);
 
-				for (int iK = 0; iK < GC.getNumTerrainInfos(); iK++)
+				for (int iK = 0; iK < GC.numTypes<CvTerrainInfo>(); iK++)
 				{
 					iImprovementValue += (kImprovement.getTerrainMakesValid(iK) ? 50 : 0);
 /************************************************************************************************/
@@ -6032,7 +6032,7 @@ int CvPlayerAI::AI_techValue( TechTypes eTech, int iPathLength, bool bIgnoreCost
 /*																							  */
 /************************************************************************************************/
 					//Desert has negative defense
-					if (GC.getTerrainInfo((TerrainTypes)iK).getDefenseModifier() < 0)
+					if (GC.get<CvTerrainInfo>(iK).getDefenseModifier() < 0)
 					{
 						if (GET_TEAM(getTeam()).isCanFarmDesert())
 						{
@@ -13801,9 +13801,9 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			//for every 10 pts of combat value, make each move pt count for 1 more than a base 1 each.
 			iValue += (kUnitInfo.getMoves() * iAdjustor);
 			//Combat weaknesses are very bad
-			for (iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+			for (iI = 0; iI < GC.numTypes<CvTerrainInfo>(); iI++)
 			{
-				int iTerrainModifier = kUnitInfo.getTerrainDefenseModifier(iI);
+				const int iTerrainModifier = kUnitInfo.getTerrainDefenseModifier(iI);
 				if (iTerrainModifier < 0)
 				{
 					iValue *= iTerrainModifier + 100;
@@ -13817,7 +13817,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			}
 			for (iI = 0; iI < GC.getNumFeatureInfos(); iI++)
 			{
-				int iFeatureModifier = kUnitInfo.getFeatureDefenseModifier(iI);
+				const int iFeatureModifier = kUnitInfo.getFeatureDefenseModifier(iI);
 				if (iFeatureModifier < 0)
 				{
 					iValue *= iFeatureModifier + 100;
@@ -16533,7 +16533,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	iTempValue = 0;
 	for (iI = 0; iI < NUM_YIELD_TYPES; iI++)
 	{
-		for (iJ = 0; iJ < GC.getNumTerrainInfos(); iJ++)
+		for (iJ = 0; iJ < GC.numTypes<CvTerrainInfo>(); iJ++)
 		{
 			iTempValue += (AI_averageYieldMultiplier((YieldTypes)iI) * (kCivic.getTerrainYieldChanges(iJ, iI) * (NUM_CITY_PLOTS + getNumCities()/2))) / 100;
 		}
@@ -28374,7 +28374,7 @@ void CvPlayerAI::AI_doAdvancedStart(bool bNoExit)
 						if ((pLoopPlot2 != NULL) && (getAdvancedStartVisibilityCost(true, pLoopPlot2) > 0))
 						{
 							// Mildly maphackery but any smart human can see the terrain type of a tile.
-							int iFoodYield = GC.getTerrainInfo(pLoopPlot2->getTerrainType()).getYield(YIELD_FOOD);
+							int iFoodYield = GC.get<CvTerrainInfo>(pLoopPlot2->getTerrainType()).getYield(YIELD_FOOD);
 							if (pLoopPlot2->getFeatureType() != NO_FEATURE)
 							{
 								iFoodYield += GC.getFeatureInfo(pLoopPlot2->getFeatureType()).getYieldChange(YIELD_FOOD);
@@ -35553,7 +35553,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 
 	iPass = 0;
 	iTempValue = 0;
-	for (iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+	for (iI = 0; iI < GC.numTypes<CvTerrainInfo>(); iI++)
 	{
 		if ( kPromotion.getTerrainAttackPercent(iI) != 0 ||
 			 kPromotion.getTerrainDefensePercent(iI) != 0 ||
@@ -35684,11 +35684,11 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 					eUnitAI == UNITAI_GREAT_HUNTER ||
 					eUnitAI == UNITAI_ESCORT)
 				{
-					iTempValue += (iTerrainWeight * -2*GC.getTerrainInfo((TerrainTypes)kPromotion.getIgnoreTerrainDamage()).getHealthPercent())/100;
+					iTempValue += (iTerrainWeight * -2*GC.get<CvTerrainInfo>(kPromotion.getIgnoreTerrainDamage()).getHealthPercent())/100;
 				}
 				else if ((eUnitAI == UNITAI_ATTACK) || (eUnitAI == UNITAI_PILLAGE) || (eUnitAI == UNITAI_COUNTER))
 				{
-					iTempValue += (iTerrainWeight * -GC.getTerrainInfo((TerrainTypes)kPromotion.getIgnoreTerrainDamage()).getHealthPercent())/100;
+					iTempValue += (iTerrainWeight * -GC.get<CvTerrainInfo>(kPromotion.getIgnoreTerrainDamage()).getHealthPercent())/100;
 				}
 				else
 				{
@@ -40339,9 +40339,9 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 		}
 	}
 
-	for (iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+	for (iI = 0; iI < GC.numTypes<CvTerrainInfo>(); iI++)
 	{
-		if ( kUnitCombat.getWithdrawOnTerrainTypeChange(iI) != 0)
+		if (kUnitCombat.getWithdrawOnTerrainTypeChange(iI) != 0)
 		{
 			iTemp = kUnitCombat.getWithdrawOnTerrainTypeChange(iI);
 			int iTerrainWeight;
@@ -40350,8 +40350,8 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 			//The 250 normalizes the calculation to give the old values for a terrain that covers 25% of the area
 			if (pUnit != NULL)
 			{
-				int iNumRevealedAreaTiles = pUnit->area()->getNumRevealedTiles(getTeam());
-				int	iNumRevealedAreaThisTerrain = pUnit->area()->getNumRevealedTerrainTiles(getTeam(), (TerrainTypes)iI);
+				const int iNumRevealedAreaTiles = pUnit->area()->getNumRevealedTiles(getTeam());
+				const int iNumRevealedAreaThisTerrain = pUnit->area()->getNumRevealedTerrainTiles(getTeam(), (TerrainTypes)iI);
 				iTerrainWeight = (1000 * iNumRevealedAreaThisTerrain) / iNumRevealedAreaTiles;
 			}
 			else

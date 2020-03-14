@@ -1766,8 +1766,8 @@ void CvGame::normalizeRemoveBadTerrain()
 							{
 								if (!(pLoopPlot->isWater()) && ((iDistance <= iCityRange) || (pLoopPlot->isCoastalLand()) || (0 == getSorenRandNum(1 + iDistance - iCityRange, "Map Upgrade Terrain Food"))))
 								{
-									iPlotFood = GC.getTerrainInfo(pLoopPlot->getTerrainType()).getYield(YIELD_FOOD);
-									iPlotProduction = GC.getTerrainInfo(pLoopPlot->getTerrainType()).getYield(YIELD_PRODUCTION);
+									iPlotFood = GC.get<CvTerrainInfo>(pLoopPlot->getTerrainType()).getYield(YIELD_FOOD);
+									iPlotProduction = GC.get<CvTerrainInfo>(pLoopPlot->getTerrainType()).getYield(YIELD_PRODUCTION);
 									if ((iPlotFood + iPlotProduction) <= 1)
 									{
 										iTargetFood = 1;
@@ -1788,12 +1788,13 @@ void CvGame::normalizeRemoveBadTerrain()
 											iTargetTotal = 2;
 										}
 
-										for (iK = 0; iK < GC.getNumTerrainInfos(); iK++)
+										for (iK = 0; iK < GC.numTypes<CvTerrainInfo>(); iK++)
 										{
-											if (!(GC.getTerrainInfo((TerrainTypes)iK).isWater()))
+											const CvTerrainInfo& terrainInfo = GC.get<CvTerrainInfo>(iK);
+											if (!terrainInfo.isWater())
 											{
-												if ((GC.getTerrainInfo((TerrainTypes)iK).getYield(YIELD_FOOD) >= iTargetFood) &&
-													(GC.getTerrainInfo((TerrainTypes)iK).getYield(YIELD_FOOD) + GC.getTerrainInfo((TerrainTypes)iK).getYield(YIELD_PRODUCTION)) == iTargetTotal)
+												if (terrainInfo.getYield(YIELD_FOOD) >= iTargetFood &&
+													(terrainInfo.getYield(YIELD_FOOD) + terrainInfo.getYield(YIELD_PRODUCTION)) == iTargetTotal)
 												{
 													if ((pLoopPlot->getFeatureType() == NO_FEATURE) || GC.getFeatureInfo(pLoopPlot->getFeatureType()).isTerrain(iK))
 													{
@@ -1983,9 +1984,9 @@ void CvGame::normalizeAddGoodTerrain()
 										{
 											for (iK = 0; iK < GC.getNumTerrainInfos(); iK++)
 											{
-												if (!(GC.getTerrainInfo((TerrainTypes)iK).isWater()))
+												if (!GC.get<CvTerrainInfo>(iK).isWater())
 												{
-													if (GC.getTerrainInfo((TerrainTypes)iK).getYield(YIELD_FOOD) >= GC.getFOOD_CONSUMPTION_PER_POPULATION())
+													if (GC.get<CvTerrainInfo>(iK).getYield(YIELD_FOOD) >= GC.getFOOD_CONSUMPTION_PER_POPULATION())
 													{
 														pLoopPlot->setTerrainType((TerrainTypes)iK);
 														bChanged = true;
@@ -10330,7 +10331,7 @@ void CvGame::addPlayer(PlayerTypes eNewPlayer, LeaderHeadTypes eLeader, Civiliza
 	/* UNOFFICIAL_PATCH                        END                                                  */
 	/************************************************************************************************/
 			{
-				for (int iK = 0; iK < GC.getNumPlayerColorInfos(); iK++)
+				for (int iK = 0; iK < GC.numTypes<CvPlayerColorInfo>(); iK++)
 				{
 					if (iK != GC.getCivilizationInfo((CivilizationTypes)GC.getDefineINT("BARBARIAN_CIVILIZATION")).getDefaultPlayerColor())
 					{

@@ -2189,11 +2189,9 @@ CvPlot* CvPlot::getNearestLandPlot() const
 
 int CvPlot::seeFromLevel(TeamTypes eTeam) const
 {
-	int iLevel;
-
 	FAssertMsg(getTerrainType() != NO_TERRAIN, "TerrainType is not assigned a valid value");
 
-	iLevel = GC.getTerrainInfo(getTerrainType()).getSeeFromLevel();
+	int iLevel = GC.get<CvTerrainInfo>(getTerrainType()).getSeeFromLevel();
 
 	// Super Forts begin *vision*
 	if (getImprovementType() != NO_IMPROVEMENT)
@@ -2228,11 +2226,9 @@ int CvPlot::seeFromLevel(TeamTypes eTeam) const
 
 int CvPlot::seeThroughLevel() const
 {
-	int iLevel;
-
 	FAssertMsg(getTerrainType() != NO_TERRAIN, "TerrainType is not assigned a valid value");
 
-	iLevel = GC.getTerrainInfo(getTerrainType()).getSeeThroughLevel();
+	int iLevel = GC.get<CvTerrainInfo>(getTerrainType()).getSeeThroughLevel();
 
 	if (getFeatureType() != NO_FEATURE)
 	{
@@ -3024,7 +3020,7 @@ bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, 
 
 
 	//Desert has negative defense
-	if (GC.getTerrainInfo(getTerrainType()).getDefenseModifier() < 0 && GC.getImprovementInfo(eImprovement).isRequiresIrrigation())
+	if (GC.get<CvTerrainInfo>(getTerrainType()).getDefenseModifier() < 0 && GC.getImprovementInfo(eImprovement).isRequiresIrrigation())
 	{
 		if ((eTeam != NO_TEAM && GET_TEAM(eTeam).isCanFarmDesert()) || (getTeam() != NO_TEAM && GET_TEAM(getTeam()).isCanFarmDesert()))
 		{
@@ -3686,7 +3682,7 @@ int CvPlot::getBuildTime(BuildTypes eBuild) const
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
-	iTime *= std::max(0, (GC.getTerrainInfo(getTerrainType()).getBuildModifier() + 100));
+	iTime *= std::max(0, (GC.get<CvTerrainInfo>(getTerrainType()).getBuildModifier() + 100));
 	iTime /= 100;
 
 	iTime *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getBuildPercent();
@@ -4687,7 +4683,7 @@ int CvPlot::defenseModifier(TeamTypes eDefender, bool bIgnoreBuilding, bool bHel
 {
 	FAssertMsg(getTerrainType() != NO_TERRAIN, "TerrainType is not assigned a valid value");
 
-	int iModifier = GC.getTerrainInfo(getTerrainType()).getDefenseModifier();
+	int iModifier = GC.get<CvTerrainInfo>(getTerrainType()).getDefenseModifier();
 	if (getFeatureType() != NO_FEATURE)
 	{
 		iModifier += GC.getFeatureInfo(getFeatureType()).getDefenseModifier();
@@ -4842,7 +4838,7 @@ int CvPlot::movementCost(const CvUnit* pUnit, const CvPlot* pFromPlot) const
 			}
 			else
 			{
-				iRegularCost = GC.getTerrainInfo(getTerrainType()).getMovementCost();
+				iRegularCost = GC.get<CvTerrainInfo>(getTerrainType()).getMovementCost();
 
 				if (getFeatureType() != NO_FEATURE)
 				{
@@ -6657,7 +6653,7 @@ bool CvPlot::isImpassable(TeamTypes eTeam) const
 		return false;
 	}
 
-	return ((getFeatureType() == NO_FEATURE) ? GC.getTerrainInfo(getTerrainType()).isImpassable() : GC.getFeatureInfo(getFeatureType()).isImpassable());
+	return ((getFeatureType() == NO_FEATURE) ? GC.get<CvTerrainInfo>(getTerrainType()).isImpassable() : GC.getFeatureInfo(getFeatureType()).isImpassable());
 }
 
 int CvPlot::getViewportX() const
@@ -7903,7 +7899,7 @@ void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGr
 
 		updateSeeFromSight(true, true);
 
-		if ((getTerrainType() == NO_TERRAIN) || (GC.getTerrainInfo(getTerrainType()).isWater() != isWater()))
+		if (getTerrainType() == NO_TERRAIN || GC.get<CvTerrainInfo>(getTerrainType()).isWater() != isWater())
 		{
 			if (isWater())
 			{
@@ -8176,8 +8172,8 @@ void CvPlot::setTerrainType(TerrainTypes eNewValue, bool bRecalculate, bool bReb
 	{
 		if ((getTerrainType() != NO_TERRAIN) &&
 			  (eNewValue != NO_TERRAIN) &&
-			  ((GC.getTerrainInfo(getTerrainType()).getSeeFromLevel() != GC.getTerrainInfo(eNewValue).getSeeFromLevel()) ||
-				 (GC.getTerrainInfo(getTerrainType()).getSeeThroughLevel() != GC.getTerrainInfo(eNewValue).getSeeThroughLevel())))
+			  ((GC.get<CvTerrainInfo>(getTerrainType()).getSeeFromLevel() != GC.get<CvTerrainInfo>(eNewValue).getSeeFromLevel()) ||
+				 (GC.get<CvTerrainInfo>(getTerrainType()).getSeeThroughLevel() != GC.get<CvTerrainInfo>(eNewValue).getSeeThroughLevel())))
 		{
 			bUpdateSight = true;
 		}
@@ -8193,11 +8189,11 @@ void CvPlot::setTerrainType(TerrainTypes eNewValue, bool bRecalculate, bool bReb
 
 		if ( eOldTerrain != NO_TERRAIN )
 		{
-			m_movementCharacteristicsHash ^= GC.getTerrainInfo(eOldTerrain).getZobristValue();
+			m_movementCharacteristicsHash ^= GC.get<CvTerrainInfo>(eOldTerrain).getZobristValue();
 		}
 		if ( eNewValue != NO_TERRAIN )
 		{
-			m_movementCharacteristicsHash ^= GC.getTerrainInfo(eNewValue).getZobristValue();
+			m_movementCharacteristicsHash ^= GC.get<CvTerrainInfo>(eNewValue).getZobristValue();
 		}
 
 		m_eTerrainType = eNewValue;
@@ -8221,9 +8217,9 @@ void CvPlot::setTerrainType(TerrainTypes eNewValue, bool bRecalculate, bool bReb
 			}
 		}
 
-		if (GC.getTerrainInfo(getTerrainType()).isWater() != isWater())
+		if (GC.get<CvTerrainInfo>(getTerrainType()).isWater() != isWater())
 		{
-			setPlotType(((GC.getTerrainInfo(getTerrainType()).isWater()) ? PLOT_OCEAN : PLOT_LAND), bRecalculate, bRebuildGraphics);
+			setPlotType((GC.get<CvTerrainInfo>(getTerrainType()).isWater() ? PLOT_OCEAN : PLOT_LAND), bRecalculate, bRebuildGraphics);
 		}
 	}
 }
@@ -9324,7 +9320,7 @@ int CvPlot::calculateNatureYield(YieldTypes eYield, TeamTypes eTeam, bool bIgnor
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
-	iYield = GC.getTerrainInfo(getTerrainType()).getYield(eYield);
+	iYield = GC.get<CvTerrainInfo>(getTerrainType()).getYield(eYield);
 
 	if (isHills())
 	{
@@ -9353,12 +9349,12 @@ int CvPlot::calculateNatureYield(YieldTypes eYield, TeamTypes eTeam, bool bIgnor
 
 	if (isRiver())
 	{
-		iYield += ((bIgnoreFeature || (getFeatureType() == NO_FEATURE)) ? GC.getTerrainInfo(getTerrainType()).getRiverYieldChange(eYield) : GC.getFeatureInfo(getFeatureType()).getRiverYieldChange(eYield));
+		iYield += ((bIgnoreFeature || (getFeatureType() == NO_FEATURE)) ? GC.get<CvTerrainInfo>(getTerrainType()).getRiverYieldChange(eYield) : GC.getFeatureInfo(getFeatureType()).getRiverYieldChange(eYield));
 	}
 
 	if (isHills())
 	{
-		iYield += ((bIgnoreFeature || (getFeatureType() == NO_FEATURE)) ? GC.getTerrainInfo(getTerrainType()).getHillsYieldChange(eYield) : GC.getFeatureInfo(getFeatureType()).getHillsYieldChange(eYield));
+		iYield += ((bIgnoreFeature || (getFeatureType() == NO_FEATURE)) ? GC.get<CvTerrainInfo>(getTerrainType()).getHillsYieldChange(eYield) : GC.getFeatureInfo(getFeatureType()).getHillsYieldChange(eYield));
 	}
 
 	if (!bIgnoreFeature)
@@ -11274,9 +11270,9 @@ void CvPlot::setRevealed(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly, Tea
 								if (getLandmarkType() == LANDMARK_FOREST || getLandmarkType() == LANDMARK_JUNGLE)
 									szIcon = GC.getFeatureInfo(getFeatureType()).getButton();
 								else if (getLandmarkType() == LANDMARK_MOUNTAIN_RANGE || getLandmarkType() == LANDMARK_PEAK)
-									szIcon = GC.getTerrainInfo((TerrainTypes)GC.getInfoTypeForString("TERRAIN_PEAK")).getButton();
+									szIcon = GC.get<CvTerrainInfo>(GC.getInfoTypeForString("TERRAIN_PEAK")).getButton();
 								else
-									szIcon = GC.getTerrainInfo(getTerrainType()).getButton();
+									szIcon = GC.get<CvTerrainInfo>(getTerrainType()).getButton();
 								AddDLLMessage((PlayerTypes)iJ, false, GC.getEVENT_MESSAGE_TIME(), gDLL->getText("TXT_KEY_MISC_DISCOVERED_LANDMARK"), "AS2D_TECH_GENERIC", MESSAGE_TYPE_MINOR_EVENT, szIcon, (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), getX(), getY(), true, true);
 							}
 						}
@@ -13085,9 +13081,7 @@ ColorTypes CvPlot::plotMinimapColor()
 
 	if (GC.getGame().getActivePlayer() != NO_PLAYER)
 	{
-		CvCity* pCity;
-
-		pCity = getPlotCity();
+		CvCity* pCity = getPlotCity();
 
 		if ((pCity != NULL) && pCity->isRevealed(GC.getGame().getActiveTeam(), true))
 		{
@@ -13100,13 +13094,13 @@ ColorTypes CvPlot::plotMinimapColor()
 
 			if (pCenterUnit != NULL)
 			{
-				return ((ColorTypes)(GC.getPlayerColorInfo(GET_PLAYER(pCenterUnit->getVisualOwner()).getPlayerColor()).getColorTypePrimary()));
+				return (ColorTypes)GC.get<CvPlayerColorInfo>(GET_PLAYER(pCenterUnit->getVisualOwner()).getPlayerColor()).getColorTypePrimary();
 			}
 		}
 
 		if ((getRevealedOwner(GC.getGame().getActiveTeam(), true) != NO_PLAYER) && !isRevealedBarbarian())
 		{
-			return ((ColorTypes)(GC.getPlayerColorInfo(GET_PLAYER(getRevealedOwner(GC.getGame().getActiveTeam(), true)).getPlayerColor()).getColorTypePrimary()));
+			return (ColorTypes)GC.get<CvPlayerColorInfo>(GET_PLAYER(getRevealedOwner(GC.getGame().getActiveTeam(), true)).getPlayerColor()).getColorTypePrimary();
 		}
 	}
 
@@ -13661,7 +13655,7 @@ void CvPlot::read(FDataStreamBase* pStream)
 	}
 	if ( getTerrainType() != NO_TERRAIN )
 	{
-		m_movementCharacteristicsHash ^= GC.getTerrainInfo(getTerrainType()).getZobristValue();
+		m_movementCharacteristicsHash ^= GC.get<CvTerrainInfo>(getTerrainType()).getZobristValue();
 	}
 	if ( getRouteType() != NO_ROUTE )
 	{
@@ -15051,7 +15045,7 @@ int CvPlot::getSoundScriptId() const
 		}
 		else if (getTerrainType() != NO_TERRAIN)
 		{
-			iScriptId = GC.getTerrainInfo(getTerrainType()).getWorldSoundscapeScriptId();
+			iScriptId = GC.get<CvTerrainInfo>(getTerrainType()).getWorldSoundscapeScriptId();
 		}
 	}
 	return iScriptId;
@@ -15066,7 +15060,7 @@ int CvPlot::get3DAudioScriptFootstepIndex(int iFootstepTag) const
 
 	if (getTerrainType() != NO_TERRAIN)
 	{
-		return GC.getTerrainInfo(getTerrainType()).get3DAudioScriptFootstepIndex(iFootstepTag);
+		return GC.get<CvTerrainInfo>(getTerrainType()).get3DAudioScriptFootstepIndex(iFootstepTag);
 	}
 
 	return -1;
@@ -15784,7 +15778,7 @@ int CvPlot::getTerrainTurnDamage(const CvUnit* pUnit) const
 {
 	//PROFILE_FUNC();
 
-	int iDamagePercent = -GC.getTerrainInfo(getTerrainType()).getHealthPercent();
+	int iDamagePercent = -GC.get<CvTerrainInfo>(getTerrainType()).getHealthPercent();
 	if (iDamagePercent == 0 || !GC.getGame().isModderGameOption(MODDERGAMEOPTION_TERRAIN_DAMAGE))
 	{
 		return 0;
@@ -16476,8 +16470,8 @@ void CvPlot::unitGameStateCorrections()
 
 bool CvPlot::isMapCategoryType(MapCategoryTypes eIndex) const
 {
-	CvTerrainInfo& kTerrain = GC.getTerrainInfo(getTerrainType());
-	int iNumTypes = kTerrain.getNumMapCategoryTypes();
+	const CvTerrainInfo& kTerrain = GC.get<CvTerrainInfo>(getTerrainType());
+	const int iNumTypes = kTerrain.getNumMapCategoryTypes();
 	if (iNumTypes > 0)
 	{
 		if (!kTerrain.isMapCategoryType((int)eIndex))
@@ -16532,17 +16526,17 @@ int CvPlot::countSeeInvisibleActive(PlayerTypes ePlayer, InvisibleTypes eVisible
 int CvPlot::getCommunicability(PromotionLineTypes ePromotionLine, bool bWorkedTile, bool bVicinity, bool bAccessVolume) const
 {
 	int iCommunicability = 0;
-	TerrainTypes eTerrain = getTerrainType();
+	const TerrainTypes eTerrain = getTerrainType();
 	if (eTerrain != NO_TERRAIN)
 	{
-		iCommunicability += GC.getTerrainInfo(eTerrain).getAfflictionCommunicabilityType(ePromotionLine, bWorkedTile, bVicinity, false).iModifier;
+		iCommunicability += GC.get<CvTerrainInfo>(eTerrain).getAfflictionCommunicabilityType(ePromotionLine, bWorkedTile, bVicinity, false).iModifier;
 	}
-	FeatureTypes eFeature = getFeatureType();
+	const FeatureTypes eFeature = getFeatureType();
 	if (eFeature != NO_FEATURE)
 	{
 		iCommunicability += GC.getFeatureInfo(eFeature).getAfflictionCommunicabilityType(ePromotionLine, bWorkedTile, bVicinity, false).iModifier;
 	}
-	BonusTypes eBonus = getBonusType();
+	const BonusTypes eBonus = getBonusType();
 	if (eBonus != NO_BONUS)
 	{
 		iCommunicability += GC.getBonusInfo(eBonus).getAfflictionCommunicabilityType(ePromotionLine, bWorkedTile, bVicinity, bAccessVolume).iModifier;

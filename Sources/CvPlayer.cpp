@@ -825,7 +825,7 @@ void CvPlayer::uninit()
 	SAFE_DELETE_ARRAY(m_paiNationalTechResearchModifier);
 	SAFE_DELETE_ARRAY(m_paiUnitCombatFreeExperience);
 	SAFE_DELETE_ARRAY2(m_ppaaiSpecialistExtraCommerce, GC.getNumSpecialistInfos());
-	SAFE_DELETE_ARRAY2(m_ppaaiTerrainYieldChange, GC.getNumTerrainInfos());
+	SAFE_DELETE_ARRAY2(m_ppaaiTerrainYieldChange, GC.numTypes<CvTerrainInfo>());
 	SAFE_DELETE_ARRAY2(m_ppiBuildingCommerceModifier, GC.getNumBuildingInfos());
 	SAFE_DELETE_ARRAY2(m_ppiBuildingCommerceChange, GC.getNumBuildingInfos());
 	SAFE_DELETE_ARRAY2(m_ppiBonusCommerceModifier, GC.getNumBonusInfos());
@@ -1604,8 +1604,8 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 		}
 
 		FAssertMsg(m_ppaaiTerrainYieldChange==NULL, "about to leak memory, CvPlayer::m_ppaaiTerrainYieldChange");
-		m_ppaaiTerrainYieldChange = new int*[GC.getNumTerrainInfos()];
-		for (iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+		m_ppaaiTerrainYieldChange = new int*[GC.numTypes<CvTerrainInfo>()];
+		for (iI = 0; iI < GC.numTypes<CvTerrainInfo>(); iI++)
 		{
 			m_ppaaiTerrainYieldChange[iI] = new int[NUM_YIELD_TYPES];
 			for (iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
@@ -1901,7 +1901,7 @@ void CvPlayer::changeCiv( CivilizationTypes eNewCiv )
 	{
 		if (eColor == NO_PLAYERCOLOR || (GET_PLAYER((PlayerTypes)iI).getPlayerColor() == eColor && iI != getID()) )
 		{
-			for (int iK = 0; iK < GC.getNumPlayerColorInfos(); iK++)
+			for (int iK = 0; iK < GC.numTypes<CvPlayerColorInfo>(); iK++)
 			{
 				if (iK != GC.getCivilizationInfo((CivilizationTypes)GC.getDefineINT("BARBARIAN_CIVILIZATION")).getDefaultPlayerColor())
 				{
@@ -7960,17 +7960,17 @@ bool CvPlayer::canFound(int iX, int iY, bool bTestVisible) const
 
 	bool bValid = false;
 
-	if (!bValid && GC.getTerrainInfo(pPlot->getTerrainType()).isFound())
+	if (!bValid && GC.get<CvTerrainInfo>(pPlot->getTerrainType()).isFound())
 	{
 		bValid = true;
 	}
 
-	if (!bValid && GC.getTerrainInfo(pPlot->getTerrainType()).isFoundCoast() && pPlot->isCoastalLand())
+	if (!bValid && GC.get<CvTerrainInfo>(pPlot->getTerrainType()).isFoundCoast() && pPlot->isCoastalLand())
 	{
 		bValid = true;
 	}
 
-	if (!bValid && GC.getTerrainInfo(pPlot->getTerrainType()).isFoundFreshWater() && pPlot->isFreshWater())
+	if (!bValid && GC.get<CvTerrainInfo>(pPlot->getTerrainType()).isFoundFreshWater() && pPlot->isFreshWater())
 	{
 		bValid = true;
 	}
@@ -15553,28 +15553,28 @@ PlayerColorTypes CvPlayer::getPlayerColor() const
 int CvPlayer::getPlayerTextColorR() const
 {
 	FAssertMsg(getPlayerColor() != NO_PLAYERCOLOR, "getPlayerColor() is not expected to be equal with NO_PLAYERCOLOR");
-	return ((int)(GC.getColorInfo((ColorTypes) GC.getPlayerColorInfo(getPlayerColor()).getTextColorType()).getColor().r * 255));
+	return ((int)(GC.get<CvColorInfo>(GC.get<CvPlayerColorInfo>(getPlayerColor()).getTextColorType()).getColor().r * 255));
 }
 
 
 int CvPlayer::getPlayerTextColorG() const
 {
 	FAssertMsg(getPlayerColor() != NO_PLAYERCOLOR, "getPlayerColor() is not expected to be equal with NO_PLAYERCOLOR");
-	return ((int)(GC.getColorInfo((ColorTypes) GC.getPlayerColorInfo(getPlayerColor()).getTextColorType()).getColor().g * 255));
+	return ((int)(GC.get<CvColorInfo>(GC.get<CvPlayerColorInfo>(getPlayerColor()).getTextColorType()).getColor().g * 255));
 }
 
 
 int CvPlayer::getPlayerTextColorB() const
 {
 	FAssertMsg(getPlayerColor() != NO_PLAYERCOLOR, "getPlayerColor() is not expected to be equal with NO_PLAYERCOLOR");
-	return ((int)(GC.getColorInfo((ColorTypes) GC.getPlayerColorInfo(getPlayerColor()).getTextColorType()).getColor().b * 255));
+	return ((int)(GC.get<CvColorInfo>(GC.get<CvPlayerColorInfo>(getPlayerColor()).getTextColorType()).getColor().b * 255));
 }
 
 
 int CvPlayer::getPlayerTextColorA() const
 {
 	FAssertMsg(getPlayerColor() != NO_PLAYERCOLOR, "getPlayerColor() is not expected to be equal with NO_PLAYERCOLOR");
-	return ((int)(GC.getColorInfo((ColorTypes) GC.getPlayerColorInfo(getPlayerColor()).getTextColorType()).getColor().a * 255));
+	return ((int)(GC.get<CvColorInfo>(GC.get<CvPlayerColorInfo>(getPlayerColor()).getTextColorType()).getColor().a * 255));
 }
 
 
@@ -20423,17 +20423,11 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 		}
 	}
 
-	if (bShowExplosion)
+	if (bShowExplosion && pPlot && pPlot->isVisible(GC.getGame().getActiveTeam(), false))
 	{
-		if (pPlot)
-		{
-			if (pPlot->isVisible(GC.getGame().getActiveTeam(), false))
-			{
-				EffectTypes eEffect = GC.getEntityEventInfo(GC.getMissionInfo(MISSION_BOMBARD).getEntityEvent()).getEffectType();
-				gDLL->getEngineIFace()->TriggerEffect(eEffect, pPlot->getPoint(), (float)(GC.getASyncRand().get(360)));
-				gDLL->getInterfaceIFace()->playGeneralSound("AS3D_UN_CITY_EXPLOSION", pPlot->getPoint());
-			}
-		}
+		const EffectTypes eEffect = GC.get<CvEntityEventInfo>(GC.getMissionInfo(MISSION_BOMBARD).getEntityEvent()).getEffectType();
+		gDLL->getEngineIFace()->TriggerEffect(eEffect, pPlot->getPoint(), (float)GC.getASyncRand().get(360));
+		gDLL->getInterfaceIFace()->playGeneralSound("AS3D_UN_CITY_EXPLOSION", pPlot->getPoint());
 	}
 
 	if (bSomethingHappened)
@@ -22447,7 +22441,7 @@ void CvPlayer::processCivics(CivicTypes eCivic, int iChange, bool bLimited)
 			changeUnitCombatProductionModifier(((UnitCombatTypes)iI), (kCivic.getUnitCombatProductionModifier(iI) * iChange));
 		}
 
-		for (int iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+		for (int iI = 0; iI < GC.numTypes<CvTerrainInfo>(); iI++)
 		{
 			for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 			{
@@ -23983,7 +23977,7 @@ void CvPlayer::write(FDataStreamBase* pStream)
 
 		m_Properties.writeWrapper(pStream);
 
-		for (iI=0;iI<GC.getNumTerrainInfos();iI++)
+		for (int iI = 0; iI < GC.numTypes<CvTerrainInfo>(); iI++)
 		{
 			WRAPPER_WRITE_ARRAY(wrapper, "CvPlayer", NUM_YIELD_TYPES, m_ppaaiTerrainYieldChange[iI]);
 		}
@@ -25192,7 +25186,7 @@ EventTriggeredData* CvPlayer::initTriggeredData(EventTriggerTypes eEventTrigger,
 			NO_RELIGION != eReligion ? GC.getReligionInfo(eReligion).getAdjectiveKey() : L"",
 			NO_BUILDING != eBuilding ? GC.getBuildingInfo(eBuilding).getTextKeyWide() : L"",
 			NULL != pOtherPlayerCity ? pOtherPlayerCity->getNameKey() : L"",
-			NULL != pPlot && NO_TERRAIN != pPlot->getTerrainType() ? GC.getTerrainInfo(pPlot->getTerrainType()).getTextKeyWide() : L"",
+			NULL != pPlot && NO_TERRAIN != pPlot->getTerrainType() ? GC.get<CvTerrainInfo>(pPlot->getTerrainType()).getTextKeyWide() : L"",
 			NULL != pPlot && NO_IMPROVEMENT != pPlot->getImprovementType() ? GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide() : L"",
 			NULL != pPlot && NO_BONUS != pPlot->getBonusType() ? GC.getBonusInfo(pPlot->getBonusType()).getTextKeyWide() : L"",
 			NULL != pPlot && NO_ROUTE != pPlot->getRouteType() ? GC.getRouteInfo(pPlot->getRouteType()).getTextKeyWide() : L"",
@@ -29678,7 +29672,7 @@ void CvPlayer::getUnitLayerColors(GlobeLayerUnitOptionTypes eOption, std::vector
 						if (pUnit != NULL)
 						{
 							PlayerColorTypes eUnitColor = GET_PLAYER(pUnit->getVisualOwner()).getPlayerColor();
-							const NiColorA& kColor = GC.getColorInfo((ColorTypes) GC.getPlayerColorInfo(eUnitColor).getColorTypePrimary()).getColor();
+							const NiColorA& kColor = GC.get<CvColorInfo>(GC.get<CvPlayerColorInfo>(eUnitColor).getColorTypePrimary()).getColor();
 
 							szBuffer.clear();
 							GAMETEXT.setPlotListHelp(szBuffer, pLoopPlot, true, true);
@@ -29731,7 +29725,7 @@ void CvPlayer::getUnitLayerColors(GlobeLayerUnitOptionTypes eOption, std::vector
 			if (GET_PLAYER((PlayerTypes)iPlayer).isAlive())
 			{
 				PlayerColorTypes eCurPlayerColor = GET_PLAYER((PlayerTypes) iPlayer).getPlayerColor();
-				const NiColorA& kColor = GC.getColorInfo((ColorTypes) GC.getPlayerColorInfo(eCurPlayerColor).getColorTypePrimary()).getColor();
+				const NiColorA& kColor = GC.get<CvColorInfo>(GC.get<CvPlayerColorInfo>(eCurPlayerColor).getColorTypePrimary()).getColor();
 
 				for (int iI = 0; iI < GC.getCurrentViewport()->numPlots(); iI++)
 				{
@@ -29897,7 +29891,7 @@ void CvPlayer::getResourceLayerColors(GlobeLayerResourceOptionTypes eOption, std
 					else
 					{
 						PlayerColorTypes eCurPlayerColor = GET_PLAYER(eOwner).getPlayerColor();
-						const NiColorA& kColor = GC.getColorInfo((ColorTypes) GC.getPlayerColorInfo(eCurPlayerColor).getColorTypePrimary()).getColor();
+						const NiColorA& kColor = GC.get<CvColorInfo>(GC.get<CvPlayerColorInfo>(eCurPlayerColor).getColorTypePrimary()).getColor();
 						kData.m_kColor.r = kColor.r;
 						kData.m_kColor.g = kColor.g;
 						kData.m_kColor.b = kColor.b;
@@ -30019,7 +30013,7 @@ void CvPlayer::getCultureLayerColors(std::vector<NiColorA>& aColors, std::vector
 				int iCurOwnerIdx = i % plot_owners.size();
 				PlayerTypes eCurOwnerID = (PlayerTypes) plot_owners[iCurOwnerIdx].second;
 				int iCurCulture = plot_owners[iCurOwnerIdx].first;
-				const NiColorA& kCurColor = GC.getColorInfo((ColorTypes) GC.getPlayerColorInfo(GET_PLAYER(eCurOwnerID).getPlayerColor()).getColorTypePrimary()).getColor();
+				const NiColorA& kCurColor = GC.get<CvColorInfo>(GC.get<CvPlayerColorInfo>(GET_PLAYER(eCurOwnerID).getPlayerColor()).getColorTypePrimary()).getColor();
 
 				// damp the color by the value...
 				aColors[iI * iColorsPerPlot + i] = kCurColor;
@@ -31148,7 +31142,7 @@ void CvPlayer::changeFreeSpecialistCount(SpecialistTypes eIndex, int iChange)
 int CvPlayer::getTerrainYieldChange(TerrainTypes eIndex1, YieldTypes eIndex2) const
 {
 	FAssertMsg(eIndex1 >= 0, "eIndex1 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex1 < GC.getNumTerrainInfos(), "eIndex1 is expected to be within maximum bounds (invalid Index)");
+	FAssertMsg(eIndex1 < GC.numTypes<CvTerrainInfo>(), "eIndex1 is expected to be within maximum bounds (invalid Index)");
 	FAssertMsg(eIndex2 >= 0, "eIndex2 is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex2 < NUM_YIELD_TYPES, "eIndex2 is expected to be within maximum bounds (invalid Index)");
 	return m_ppaaiTerrainYieldChange[eIndex1][eIndex2];
@@ -31157,7 +31151,7 @@ int CvPlayer::getTerrainYieldChange(TerrainTypes eIndex1, YieldTypes eIndex2) co
 void CvPlayer::changeTerrainYieldChange(TerrainTypes eIndex1, YieldTypes eIndex2, int iChange)
 {
 	FAssertMsg(eIndex1 >= 0, "eIndex1 is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex1 < GC.getNumTerrainInfos(), "eIndex1 is expected to be within maximum bounds (invalid Index)");
+	FAssertMsg(eIndex1 < GC.numTypes<CvTerrainInfo>(), "eIndex1 is expected to be within maximum bounds (invalid Index)");
 	FAssertMsg(eIndex2 >= 0, "eIndex2 is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex2 < NUM_YIELD_TYPES, "eIndex2 is expected to be within maximum bounds (invalid Index)");
 

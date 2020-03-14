@@ -57,8 +57,8 @@ public:
 	CyTeam* getCyTeam(int i);
 	CyArtFileMgr* getCyArtFileMgr() const;
 
-	CvEffectInfo* getEffectInfo(int i) const;
-	CvTerrainInfo* getTerrainInfo(int i) const;
+	const CvEffectInfo* getEffectInfo(int i) const;
+	const CvTerrainInfo* getTerrainInfo(int i) const;
 	CvBonusClassInfo* getBonusClassInfo(int i) const;
 	CvBonusInfo* getBonusInfo(int i) const;
 	CvFeatureInfo* getFeatureInfo(int i) const;
@@ -103,17 +103,17 @@ public:
 	CvTechInfo* getTechInfo(int i) const;
 	CvSpecialBuildingInfo* getSpecialBuildingInfo(int i) const;
 	CvPromotionInfo* getPromotionInfo(int i) const;
-	CvAnimationPathInfo * getAnimationPathInfo(int i) const;
+	const CvAnimationPathInfo* getAnimationPathInfo(int i) const;
 	CvEmphasizeInfo * getEmphasizeInfo(int i) const;
 	CvUpkeepInfo * getUpkeepInfo(int i) const;
-	CvCultureLevelInfo * getCultureLevelInfo(int i) const;
-	CvEraInfo * getEraInfo(int i) const;
-	CvVictoryInfo * getVictoryInfo(int i) const;
+	CvCultureLevelInfo* getCultureLevelInfo(int i) const;
+	CvEraInfo* getEraInfo(int i) const;
+	CvVictoryInfo* getVictoryInfo(int i) const;
 	const CvWorldInfo* getWorldInfo(int i) const;
 	const CvClimateInfo* getClimateInfo(int i) const;
 	const CvSeaLevelInfo* getSeaLevelInfo(int i) const;
-	CvInfoBase * getUnitAIInfo(int i) const;
-	CvColorInfo* getColorInfo(int i) const;
+	CvInfoBase* getUnitAIInfo(int i) const;
+	const CvColorInfo* getColorInfo(int i) const;
 	CvUnitArtStyleTypeInfo* getUnitArtStyleTypeInfo(int i) const;
 	CvPropertyInfo* getPropertyInfo(int i) const;
 
@@ -129,8 +129,8 @@ public:
 /************************************************************************************************/
 	int getTypesEnum(const char* szType) const;
 
-	int getNumPlayerColorInfos() const { return GC.getNumPlayerColorInfos(); }
-	CvPlayerColorInfo* getPlayerColorInfo(int i) const;
+	int getNumPlayerColorInfos() const { return GC.numTypes<CvPlayerColorInfo>(); }
+	const CvPlayerColorInfo* getPlayerColorInfo(int i) const;
 
 	CvInfoBase* getHints(int i) const;
 	CvMainMenuInfo* getMainMenus(int i) const;
@@ -187,8 +187,8 @@ public:
 	const char *getFootstepAudioTypes(int i) { return GC.getFootstepAudioTypes(i); }
 	const char *getFootstepAudioTags(int i) { return GC.getFootstepAudioTags(i); }
 
-	int getNumEffectInfos() const { return GC.getNumEffectInfos(); }
-	int getNumTerrainInfos() const { return GC.getNumTerrainInfos(); }
+	int getNumEffectInfos() const { return GC.numTypes<CvEffectInfo>(); }
+	int getNumTerrainInfos() const { return GC.numTypes<CvTerrainInfo>(); }
 	int getNumSpecialBuildingInfos() const { return GC.getNumSpecialBuildingInfos(); }
 	int getNumBonusInfos() const { return GC.getNumBonusInfos(); };
 	int getNumPlayableCivilizationInfos() const { return GC.getNumPlayableCivilizationInfos(); }
@@ -272,8 +272,8 @@ public:
 	int getNumBonusArtInfos() const { return ARTFILEMGR.getNumBonusArtInfos(); }
 	int getNumTerrainArtInfos() const { return ARTFILEMGR.getNumTerrainArtInfos(); }
 	int getNumFeatureArtInfos() const { return ARTFILEMGR.getNumFeatureArtInfos(); }
-	int getNumAnimationPathInfos() const { return GC.getNumAnimationPathInfos(); }
-	int getNumAnimationCategoryInfos() const { return GC.getNumAnimationCategoryInfos(); }
+	int getNumAnimationPathInfos() const { return GC.numTypes<CvAnimationPathInfo>(); }
+	int getNumAnimationCategoryInfos() const { return GC.numTypes<CvAnimationCategoryInfo>(); }
 	int getNumUnitArtStyleTypeInfos() const { return GC.getNumUnitArtStyleTypeInfos(); }
 
 

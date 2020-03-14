@@ -718,7 +718,7 @@ void CvGameObjectUnit::foreachManipulator(ManipCallbackFn func) const
 void CvGameObjectPlot::foreachManipulator(ManipCallbackFn func) const
 {
 	// Terrain Type
-	func(GC.getTerrainInfo(m_pPlot->getTerrainType()).getPropertyManipulators());
+	func(GC.get<CvTerrainInfo>(m_pPlot->getTerrainType()).getPropertyManipulators());
 
 	// Feature Type
 	if (m_pPlot->getFeatureType() != NO_FEATURE)

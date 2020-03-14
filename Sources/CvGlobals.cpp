@@ -1261,7 +1261,7 @@ CvModLoadControlInfo& cvInternalGlobals::getModLoadControlInfos(int iIndex) cons
 void cvInternalGlobals::updateReplacements()
 {
 //ReplacementStep
-	m_WorldInfoReplacements.updateReplacements(get<CvWorldInfo>());
+	m_WorldInfo.updateReplacements();
 	m_UnitInfoReplacements.updateReplacements(getUnitInfos());
 	m_TechInfoReplacements.updateReplacements(getTechInfos());
 	m_TraitInfoReplacements.updateReplacements(getTraitInfos());
@@ -1280,7 +1280,7 @@ void cvInternalGlobals::updateReplacements()
 	m_EventInfoReplacements.updateReplacements(getEventInfos());
 	m_EventTriggerInfoReplacements.updateReplacements(getEventTriggerInfos());
 	m_ProcessInfoReplacements.updateReplacements(getProcessInfos());
-	m_TerrainInfoReplacements.updateReplacements(getTerrainInfos());
+	m_TerrainInfo.updateReplacements();
 
 	m_SpecialistInfoReplacements.updateReplacements(getSpecialistInfos());
 
@@ -1326,263 +1326,6 @@ std::string cvInternalGlobals::getModDir() const
 /* XML_MODULAR_ART_LOADING                 END                                                  */
 /************************************************************************************************/
 
-int cvInternalGlobals::getNumColorInfos() const
-{
-	return (int)m_paColorInfo.size();
-}
-
-std::vector<CvColorInfo*>& cvInternalGlobals::getColorInfos()
-{
-	return m_paColorInfo;
-}
-
-CvColorInfo& cvInternalGlobals::getColorInfo(ColorTypes e) const
-{
-	FAssertMsg(e >= 0 && e < GC.getNumColorInfos(), "ColorInfo index out of bounds");
-	return *(m_paColorInfo[e]);
-}
-
-
-int cvInternalGlobals::getNumPlayerColorInfos() const
-{
-	return (int)m_paPlayerColorInfo.size();
-}
-
-std::vector<CvPlayerColorInfo*>& cvInternalGlobals::getPlayerColorInfos()
-{
-	return m_paPlayerColorInfo;
-}
-
-CvPlayerColorInfo& cvInternalGlobals::getPlayerColorInfo(PlayerColorTypes e) const
-{
-	FAssertMsg(e >= 0 && e < GC.getNumPlayerColorInfos(), "PlayerColorInfo index out of bounds");
-	return *(m_paPlayerColorInfo[e]);
-}
-
-int cvInternalGlobals::getNumAdvisorInfos() const
-{
-	return (int)m_paAdvisorInfo.size();
-}
-
-std::vector<CvAdvisorInfo*>& cvInternalGlobals::getAdvisorInfos()
-{
-	return m_paAdvisorInfo;
-}
-
-CvAdvisorInfo& cvInternalGlobals::getAdvisorInfo(AdvisorTypes e) const
-{
-	FAssertMsg(e >= 0 && e < GC.getNumAdvisorInfos(), "AdvisorInfo index out of bounds");
-	return *(m_paAdvisorInfo[e]);
-}
-
-int cvInternalGlobals::getNumRouteModelInfos() const
-{
-	return (int)m_paRouteModelInfo.size();
-}
-
-std::vector<CvRouteModelInfo*>& cvInternalGlobals::getRouteModelInfos()
-{
-	return m_paRouteModelInfo;
-}
-
-CvRouteModelInfo& cvInternalGlobals::getRouteModelInfo(int i) const
-{
-	FAssertMsg(i >= 0 && i < GC.getNumRouteModelInfos(), "RouteModelInfo index out of bounds");
-	return *(m_paRouteModelInfo[i]);
-}
-
-int cvInternalGlobals::getNumRiverInfos() const
-{
-	return (int)m_paRiverInfo.size();
-}
-
-std::vector<CvRiverInfo*>& cvInternalGlobals::getRiverInfos()
-{
-	return m_paRiverInfo;
-}
-
-CvRiverInfo& cvInternalGlobals::getRiverInfo(RiverTypes e) const
-{
-	FAssertMsg(e >= 0 && e < GC.getNumRiverInfos(), "RiverInfo index out of bounds");
-	return *(m_paRiverInfo[e]);
-}
-
-int cvInternalGlobals::getNumRiverModelInfos() const
-{
-	return (int)m_paRiverModelInfo.size();
-}
-
-std::vector<CvRiverModelInfo*>& cvInternalGlobals::getRiverModelInfos()
-{
-	return m_paRiverModelInfo;
-}
-
-CvRiverModelInfo& cvInternalGlobals::getRiverModelInfo(int i) const
-{
-	FAssertMsg(i >= 0 && i < GC.getNumRiverModelInfos(), "RiverModelInfo index out of bounds");
-	return *(m_paRiverModelInfo[i]);
-}
-
-int cvInternalGlobals::getNumWaterPlaneInfos() const
-{
-	return (int)m_paWaterPlaneInfo.size();
-}
-
-std::vector<CvWaterPlaneInfo*>& cvInternalGlobals::getWaterPlaneInfos()		// For Moose - CvDecal and CvWater
-{
-	return m_paWaterPlaneInfo;
-}
-
-CvWaterPlaneInfo& cvInternalGlobals::getWaterPlaneInfo(int i) const
-{
-	FAssertMsg(i >= 0 && i < GC.getNumWaterPlaneInfos(), "WaterPlaneInfo index out of bounds");
-	return *(m_paWaterPlaneInfo[i]);
-}
-
-int cvInternalGlobals::getNumTerrainPlaneInfos() const
-{
-	return (int)m_paTerrainPlaneInfo.size();
-}
-
-std::vector<CvTerrainPlaneInfo*>& cvInternalGlobals::getTerrainPlaneInfos()
-{
-	return m_paTerrainPlaneInfo;
-}
-
-CvTerrainPlaneInfo& cvInternalGlobals::getTerrainPlaneInfo(int i) const
-{
-	FAssertMsg(i >= 0 && i < GC.getNumTerrainPlaneInfos(), "TerrainPlaneInfo index out of bounds");
-	return *(m_paTerrainPlaneInfo[i]);
-}
-
-int cvInternalGlobals::getNumCameraOverlayInfos() const
-{
-	return (int)m_paCameraOverlayInfo.size();
-}
-
-std::vector<CvCameraOverlayInfo*>& cvInternalGlobals::getCameraOverlayInfos()
-{
-	return m_paCameraOverlayInfo;
-}
-
-CvCameraOverlayInfo& cvInternalGlobals::getCameraOverlayInfo(int i) const
-{
-	FAssertMsg(i >= 0 && i < GC.getNumCameraOverlayInfos(), "CameraOverlayInfo index out of bounds");
-	return *(m_paCameraOverlayInfo[i]);
-}
-
-int cvInternalGlobals::getNumAnimationPathInfos() const
-{
-	return (int)m_paAnimationPathInfo.size();
-}
-
-std::vector<CvAnimationPathInfo*>& cvInternalGlobals::getAnimationPathInfos()
-{
-	return m_paAnimationPathInfo;
-}
-
-CvAnimationPathInfo& cvInternalGlobals::getAnimationPathInfo(AnimationPathTypes e) const
-{
-	FAssertMsg(e >= 0 && e < GC.getNumAnimationPathInfos(), "AnimationPathInfo index out of bounds");
-	return *(m_paAnimationPathInfo[e]);
-}
-
-int cvInternalGlobals::getNumAnimationCategoryInfos() const
-{
-	return (int)m_paAnimationCategoryInfo.size();
-}
-
-std::vector<CvAnimationCategoryInfo*>& cvInternalGlobals::getAnimationCategoryInfos()
-{
-	return m_paAnimationCategoryInfo;
-}
-
-CvAnimationCategoryInfo& cvInternalGlobals::getAnimationCategoryInfo(AnimationCategoryTypes e) const
-{
-	FAssertMsg(e >= 0 && e < GC.getNumAnimationCategoryInfos(), "AnimationCategoryInfo index out of bounds");
-	return *(m_paAnimationCategoryInfo[e]);
-}
-
-int cvInternalGlobals::getNumEntityEventInfos() const
-{
-	return (int)m_paEntityEventInfo.size();
-}
-
-std::vector<CvEntityEventInfo*>& cvInternalGlobals::getEntityEventInfos()
-{
-	return m_paEntityEventInfo;
-}
-
-CvEntityEventInfo& cvInternalGlobals::getEntityEventInfo(EntityEventTypes e) const
-{
-	FAssertMsg(e >= 0 && e < GC.getNumEntityEventInfos(), "EntityEventInfo index out of bounds");
-	return *(m_paEntityEventInfo[e]);
-}
-
-int cvInternalGlobals::getNumEffectInfos() const
-{
-	return (int)m_paEffectInfo.size();
-}
-
-std::vector<CvEffectInfo*>& cvInternalGlobals::getEffectInfos()
-{
-	return m_paEffectInfo;
-}
-
-CvEffectInfo& cvInternalGlobals::getEffectInfo(int i) const
-{
-	FAssertMsg(i >= 0 && i < GC.getNumEffectInfos(), "EffectInfo index out of bounds");
-	return *(m_paEffectInfo[i]);
-}
-
-
-int cvInternalGlobals::getNumAttachableInfos() const
-{
-	return (int)m_paAttachableInfo.size();
-}
-
-std::vector<CvAttachableInfo*>& cvInternalGlobals::getAttachableInfos()
-{
-	return m_paAttachableInfo;
-}
-
-CvAttachableInfo& cvInternalGlobals::getAttachableInfo(int i) const
-{
-	FAssertMsg(i >= 0 && i < GC.getNumAttachableInfos(), "AttachableInfo index out of bounds");
-	return *(m_paAttachableInfo[i]);
-}
-
-int cvInternalGlobals::getNumCameraInfos() const
-{
-	return (int)m_paCameraInfo.size();
-}
-
-std::vector<CvCameraInfo*>& cvInternalGlobals::getCameraInfos()
-{
-	return m_paCameraInfo;
-}
-
-CvCameraInfo& cvInternalGlobals::getCameraInfo(CameraAnimationTypes eCameraAnimationNum) const
-{
-	return *(m_paCameraInfo[eCameraAnimationNum]);
-}
-
-int cvInternalGlobals::getNumUnitFormationInfos() const
-{
-	return (int)m_paUnitFormationInfo.size();
-}
-
-std::vector<CvUnitFormationInfo*>& cvInternalGlobals::getUnitFormationInfos()		// For Moose - CvUnitEntity
-{
-	return m_paUnitFormationInfo;
-}
-
-CvUnitFormationInfo& cvInternalGlobals::getUnitFormationInfo(int i) const
-{
-	FAssertMsg(i >= 0 && i < GC.getNumUnitFormationInfos(), "UnitFormationInfo index out of bounds");
-	return *(m_paUnitFormationInfo[i]);
-}
-
 // TEXT
 int cvInternalGlobals::getNumGameTextXML() const
 {
@@ -1619,28 +1362,6 @@ int cvInternalGlobals::getActiveLandscapeID() const
 void cvInternalGlobals::setActiveLandscapeID(int iLandscapeID)
 {
 	m_iActiveLandscapeID = iLandscapeID;
-}
-
-
-int cvInternalGlobals::getNumTerrainInfos() const
-{
-	return (int)m_paTerrainInfo.size();
-}
-
-std::vector<CvTerrainInfo*>& cvInternalGlobals::getTerrainInfos()		// For Moose - XML Load Util, CvInfos, CvTerrainTypeWBPalette
-{
-	return m_paTerrainInfo;
-}
-
-CvTerrainInfo& cvInternalGlobals::getTerrainInfo(TerrainTypes eTerrainNum) const
-{
-	FAssertMsg(eTerrainNum >= 0 && eTerrainNum < GC.getNumTerrainInfos(), "TerrainInfo index out of bounds");
-	return *(m_paTerrainInfo[eTerrainNum]);
-}
-
-CvInfoReplacements<CvTerrainInfo>* cvInternalGlobals::getTerrainInfoReplacements()
-{
-	return &m_TerrainInfoReplacements;
 }
 
 int cvInternalGlobals::getNumBonusClassInfos() const
@@ -4985,7 +4706,7 @@ void cvInternalGlobals::deleteInfoArrays()
 	deleteInfoArray(m_paVictoryInfo);
 	deleteInfoArray(m_paHurryInfo);
 	m_WorldInfo.clear();
-	deleteInfoArray(m_paSeaLevelInfo);
+	m_SeaLevelInfo.clear();
 	m_ClimateInfo.clear();
 	deleteInfoArray(m_paProcessInfo);
 	deleteInfoArray(m_paVoteInfo);
@@ -4997,11 +4718,11 @@ void cvInternalGlobals::deleteInfoArrays()
 	deleteInfoArray(m_paUpkeepInfo);
 	deleteInfoArray(m_paCultureLevelInfo);
 
-	deleteInfoArray(m_paColorInfo);
-	deleteInfoArray(m_paPlayerColorInfo);
+	m_ColorInfo.clear();
+	m_PlayerColorInfo.clear();
 	deleteInfoArray(m_paInterfaceModeInfo);
-	deleteInfoArray(m_paCameraInfo);
-	deleteInfoArray(m_paAdvisorInfo);
+	//m_CameraInfo.clear();
+	m_AdvisorInfo.clear();
 	deleteInfoArray(m_paThroneRoomCamera);
 	deleteInfoArray(m_paThroneRoomInfo);
 	deleteInfoArray(m_paThroneRoomStyleInfo);
@@ -5014,17 +4735,17 @@ void cvInternalGlobals::deleteInfoArrays()
 	deleteInfoArray(m_paImprovementInfo);
 
 	deleteInfoArray(m_paRouteInfo);
-	deleteInfoArray(m_paRouteModelInfo);
-	deleteInfoArray(m_paRiverInfo);
-	deleteInfoArray(m_paRiverModelInfo);
+	m_RouteModelInfo.clear();
+	//m_RiverInfo.clear();
+	m_RiverModelInfo.clear();
 
-	deleteInfoArray(m_paWaterPlaneInfo);
+	m_WaterPlaneInfo.clear();
 	deleteInfoArray(m_paTerrainPlaneInfo);
-	deleteInfoArray(m_paCameraOverlayInfo);
+	m_CameraOverlayInfo.clear();
 
 	deleteInfoArray(m_aEraInfo);
-	deleteInfoArray(m_paEffectInfo);
-	deleteInfoArray(m_paAttachableInfo);
+	m_EffectInfo.clear();
+	m_AttachableInfo.clear();
 
 	deleteInfoArray(m_paTechInfo);
 	deleteInfoArray(m_paDiplomacyInfo);
@@ -5068,13 +4789,13 @@ void cvInternalGlobals::deleteInfoArrays()
 	deleteInfoArray(m_paGraphicOptionInfos);
 
 	deleteInfoArray(m_paYieldInfo);
-	deleteInfoArray(m_paTerrainInfo);
+	m_TerrainInfo.clear();
 	deleteInfoArray(m_paFeatureInfo);
 	deleteInfoArray(m_paBonusClassInfo);
 	deleteInfoArray(m_paBonusInfo);
 	deleteInfoArray(m_paLandscapeInfo);
 
-	deleteInfoArray(m_paUnitFormationInfo);
+	m_paUnitFormationInfo.clear();
 	deleteInfoArray(m_paCivicOptionInfo);
 	deleteInfoArray(m_paCursorInfo);
 
@@ -5097,9 +4818,9 @@ void cvInternalGlobals::deleteInfoArrays()
 	deleteInfoArray(m_paEventTriggerInfo);
 	deleteInfoArray(m_paEspionageMissionInfo);
 
-	deleteInfoArray(m_paEntityEventInfo);
+	m_EntityEventInfo.clear();
 	deleteInfoArray(m_paAnimationCategoryInfo);
-	deleteInfoArray(m_paAnimationPathInfo);
+	m_AnimationPathInfo.clear();
 	deleteInfoArray(m_paPropertyInfo);
 
 	clearTypesMap();

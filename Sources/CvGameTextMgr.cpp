@@ -1086,7 +1086,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				}
 			}
 			bFirst = true;
-			for (iI = 0; iI < GC.getNumTerrainInfos(); ++iI)
+			for (iI = 0; iI < GC.numTypes<CvTerrainInfo>(); ++iI)
 			{
 				if (pUnit->terrainAttackModifier((TerrainTypes)iI) == pUnit->terrainDefenseModifier((TerrainTypes)iI))
 				{
@@ -1101,7 +1101,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 							szString.append(NEWLINE);
 							bFirst = false;
 						}
-						szString.append(gDLL->getText("TXT_KEY_UNIT_STRENGTH", pUnit->terrainAttackModifier((TerrainTypes)iI), GC.getTerrainInfo((TerrainTypes) iI).getTextKeyWide()));
+						szString.append(gDLL->getText("TXT_KEY_UNIT_STRENGTH", pUnit->terrainAttackModifier((TerrainTypes)iI), GC.get<CvTerrainInfo>(iI).getTextKeyWide()));
 					}
 				}
 				else
@@ -1117,7 +1117,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 							szString.append(NEWLINE);
 							bFirst = false;
 						}
-						szString.append(gDLL->getText("TXT_KEY_UNIT_ATTACK", pUnit->terrainAttackModifier((TerrainTypes)iI), GC.getTerrainInfo((TerrainTypes) iI).getTextKeyWide()));
+						szString.append(gDLL->getText("TXT_KEY_UNIT_ATTACK", pUnit->terrainAttackModifier((TerrainTypes)iI), GC.get<CvTerrainInfo>(iI).getTextKeyWide()));
 					}
 
 					if (pUnit->terrainDefenseModifier((TerrainTypes)iI) != 0)
@@ -1131,7 +1131,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 							szString.append(NEWLINE);
 							bFirst = false;
 						}
-						szString.append(gDLL->getText("TXT_KEY_UNIT_DEFENSE", pUnit->terrainDefenseModifier((TerrainTypes)iI), GC.getTerrainInfo((TerrainTypes) iI).getTextKeyWide()));
+						szString.append(gDLL->getText("TXT_KEY_UNIT_DEFENSE", pUnit->terrainDefenseModifier((TerrainTypes)iI), GC.get<CvTerrainInfo>(iI).getTextKeyWide()));
 					}
 				}
 			}
@@ -1508,7 +1508,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 			}
 
 			bFirst = true;
-			for (iI = 0; iI < GC.getNumTerrainInfos(); ++iI)
+			for (iI = 0; iI < GC.numTypes<CvTerrainInfo>(); ++iI)
 			{
 				if (pUnit->withdrawOnTerrainTotal((TerrainTypes)iI) != 0)
 				{
@@ -1521,7 +1521,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 						szString.append(NEWLINE);
 						bFirst = false;
 					}
-					szString.append(gDLL->getText("TXT_KEY_PROMOTION_WITHDRAW_ON_TEXT", pUnit->withdrawOnTerrainTotal((TerrainTypes)iI), CvWString(GC.getTerrainInfo((TerrainTypes) iI).getType()).GetCString(), GC.getTerrainInfo((TerrainTypes) iI).getTextKeyWide()));
+					szString.append(gDLL->getText("TXT_KEY_PROMOTION_WITHDRAW_ON_TEXT", pUnit->withdrawOnTerrainTotal((TerrainTypes)iI), CvWString(GC.get<CvTerrainInfo>(iI).getType()).GetCString(), GC.get<CvTerrainInfo>(iI).getTextKeyWide()));
 				}
 			}
 
@@ -2996,12 +2996,12 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 			}
 
 			//Worker details
-			for (iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+			for (iI = 0; iI < GC.numTypes<CvTerrainInfo>(); iI++)
 			{
 				if (pUnit->terrainWorkPercent((TerrainTypes)iI) > 0)
 				{
 					szString.append(NEWLINE);
-					szString.append(gDLL->getText("TXT_KEY_PROMOTION_WORK_TEXT", pUnit->terrainWorkPercent((TerrainTypes)iI), GC.getTerrainInfo((TerrainTypes)iI).getTextKeyWide()));
+					szString.append(gDLL->getText("TXT_KEY_PROMOTION_WORK_TEXT", pUnit->terrainWorkPercent((TerrainTypes)iI), GC.get<CvTerrainInfo>(iI).getTextKeyWide()));
 				}
 			}
 			for (iI = 0; iI < GC.getNumFeatureInfos(); iI++)
@@ -3305,7 +3305,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 					{
 						if (!pUnit->isNegatesInvisible((InvisibleTypes)iI))
 						{
-							for (int iJ = 0; iJ < GC.getNumTerrainInfos(); iJ++)
+							for (int iJ = 0; iJ < GC.numTypes<CvTerrainInfo>(); iJ++)
 							{
 								if (pUnit->extraInvisibleTerrain((InvisibleTypes)iI, (TerrainTypes)iJ) != 0)
 								{
@@ -3318,7 +3318,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 										szString.append(NEWLINE);
 										bFirst = false;
 									}
-									szString.append(gDLL->getText("TXT_KEY_UNITHELP_INVISIBILITY_VEIL_PLOT_VALUE_ADJ", GC.getInvisibleInfo((InvisibleTypes)iI).getTextKeyWide(), pUnit->extraInvisibleTerrain((InvisibleTypes)iI, (TerrainTypes)iJ), GC.getTerrainInfo((TerrainTypes)iJ).getTextKeyWide()));
+									szString.append(gDLL->getText("TXT_KEY_UNITHELP_INVISIBILITY_VEIL_PLOT_VALUE_ADJ", GC.getInvisibleInfo((InvisibleTypes)iI).getTextKeyWide(), pUnit->extraInvisibleTerrain((InvisibleTypes)iI, (TerrainTypes)iJ), GC.get<CvTerrainInfo>(iJ).getTextKeyWide()));
 								}
 							}
 						}
@@ -3372,7 +3372,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 					bFirst = true;
 					for (iI = 0; iI < GC.getNumInvisibleInfos(); iI++)
 					{
-						for (int iJ = 0; iJ < GC.getNumTerrainInfos(); iJ++)
+						for (int iJ = 0; iJ < GC.numTypes<CvTerrainInfo>(); iJ++)
 						{
 							if (pUnit->extraVisibleTerrain((InvisibleTypes)iI, (TerrainTypes)iJ) != 0)
 							{
@@ -3385,7 +3385,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 									szString.append(NEWLINE);
 									bFirst = false;
 								}
-								szString.append(gDLL->getText("TXT_KEY_UNITHELP_INVISIBILITY_SPOT_PLOT_VALUE_ADJ", GC.getInvisibleInfo((InvisibleTypes)iI).getTextKeyWide(), pUnit->extraVisibleTerrain((InvisibleTypes)iI, (TerrainTypes)iJ), GC.getTerrainInfo((TerrainTypes)iJ).getTextKeyWide()));
+								szString.append(gDLL->getText("TXT_KEY_UNITHELP_INVISIBILITY_SPOT_PLOT_VALUE_ADJ", GC.getInvisibleInfo((InvisibleTypes)iI).getTextKeyWide(), pUnit->extraVisibleTerrain((InvisibleTypes)iI, (TerrainTypes)iJ), GC.get<CvTerrainInfo>(iJ).getTextKeyWide()));
 							}
 						}
 					}
@@ -3432,7 +3432,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 					bFirst = true;
 					for (iI = 0; iI < GC.getNumInvisibleInfos(); iI++)
 					{
-						for (int iJ = 0; iJ < GC.getNumTerrainInfos(); iJ++)
+						for (int iJ = 0; iJ < GC.numTypes<CvTerrainInfo>(); iJ++)
 						{
 							if (pUnit->extraVisibleTerrainRange((InvisibleTypes)iI, (TerrainTypes)iJ) != 0)
 							{
@@ -3445,7 +3445,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 									szString.append(NEWLINE);
 									bFirst = false;
 								}
-								szString.append(gDLL->getText("TXT_KEY_UNITHELP_INVISIBILITY_SPOT_PLOT_RANGE_VALUE_ADJ", GC.getInvisibleInfo((InvisibleTypes)iI).getTextKeyWide(), pUnit->extraVisibleTerrainRange((InvisibleTypes)iI, (TerrainTypes)iJ), GC.getTerrainInfo((TerrainTypes)iJ).getTextKeyWide()));
+								szString.append(gDLL->getText("TXT_KEY_UNITHELP_INVISIBILITY_SPOT_PLOT_RANGE_VALUE_ADJ", GC.getInvisibleInfo((InvisibleTypes)iI).getTextKeyWide(), pUnit->extraVisibleTerrainRange((InvisibleTypes)iI, (TerrainTypes)iJ), GC.get<CvTerrainInfo>(iJ).getTextKeyWide()));
 							}
 						}
 					}
@@ -3545,12 +3545,12 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 					szString.append(gDLL->getText("TXT_KEY_PROMOTION_CAN_LEAD_THROUGH_PEAKS_TEXT"));
 				}
 
-				for (iI = 0; iI < GC.getNumTerrainInfos(); ++iI)
+				for (iI = 0; iI < GC.numTypes<CvTerrainInfo>(); ++iI)
 				{
 					if (pUnit->isTerrainDoubleMove((TerrainTypes)iI))
 					{
 						szString.append(NEWLINE);
-						szString.append(gDLL->getText("TXT_KEY_PROMOTION_DOUBLE_MOVE_TEXT", GC.getTerrainInfo((TerrainTypes) iI).getTextKeyWide()));
+						szString.append(gDLL->getText("TXT_KEY_PROMOTION_DOUBLE_MOVE_TEXT", GC.get<CvTerrainInfo>(iI).getTextKeyWide()));
 					}
 				}
 
@@ -7377,7 +7377,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 							if (iModifier != 0)
 							{
 								szString.append(NEWLINE);
-								szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_UNIT_MOD", iModifier, GC.getTerrainInfo(pPlot->getTerrainType()).getTextKeyWide()));
+								szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_UNIT_MOD", iModifier, GC.get<CvTerrainInfo>(pPlot->getTerrainType()).getTextKeyWide()));
 							}
 
 							szString.append(gDLL->getText("TXT_KEY_COLOR_REVERT"));
@@ -7680,7 +7680,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 								if (iModifier != 0)
 								{
 									szString.append(NEWLINE);
-									szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_UNIT_MOD", -iModifier, GC.getTerrainInfo(pPlot->getTerrainType()).getTextKeyWide()));
+									szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_UNIT_MOD", -iModifier, GC.get<CvTerrainInfo>(pPlot->getTerrainType()).getTextKeyWide()));
 								}
 							}
 
@@ -7818,7 +7818,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 						}
 						else
 						{
-							addModifierWithInfoIfValid(szString, pAttacker->terrainAttackModifier(pPlot->getTerrainType()), "TXT_KEY_COMBAT_PLOT_UNIT_MOD", GC.getTerrainInfo(pPlot->getTerrainType()));
+							addModifierWithInfoIfValid(szString, pAttacker->terrainAttackModifier(pPlot->getTerrainType()), "TXT_KEY_COMBAT_PLOT_UNIT_MOD", GC.get<CvTerrainInfo>(pPlot->getTerrainType()));
 						}
 
 						addModifierIfValid(szString, pAttacker->getKamikazePercent(), "TXT_KEY_COMBAT_KAMIKAZE_MOD");
@@ -8222,7 +8222,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 							if (iModifier != 0)
 							{
 								szString.append(NEWLINE);
-								szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_UNIT_MOD", iModifier, GC.getTerrainInfo(pPlot->getTerrainType()).getTextKeyWide()));
+								szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_UNIT_MOD", iModifier, GC.get<CvTerrainInfo>(pPlot->getTerrainType()).getTextKeyWide()));
 							}
 						}
 
@@ -8980,7 +8980,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 	}
 	else if (bShift && !bAlt && (gDLL->getChtLvl() > 0))
 	{
-		szString.append(GC.getTerrainInfo(pPlot->getTerrainType()).getDescription());
+		szString.append(GC.get<CvTerrainInfo>(pPlot->getTerrainType()).getDescription());
 
 		FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvInterface::updateHelpStrings");
 		for (iI = 0; iI < GC.getNumBonusInfos(); ++iI)
@@ -9787,7 +9787,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 					szString.append(szTempBuffer);
 				}
 
-				szString.append(GC.getTerrainInfo(pPlot->getTerrainType()).getDescription());
+				szString.append(GC.get<CvTerrainInfo>(pPlot->getTerrainType()).getDescription());
 
 				if (pPlot->isWater())
 				{
@@ -9829,7 +9829,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 		}
 		else
 		{
-			int iMovementCost = GC.getTerrainInfo(pPlot->getTerrainType()).getMovementCost();
+			int iMovementCost = GC.get<CvTerrainInfo>(pPlot->getTerrainType()).getMovementCost();
 
 			if (pPlot->getFeatureType() != NO_FEATURE)
 			{
@@ -10281,7 +10281,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 		szString.append(NEWLINE);
 		szString.append(gDLL->getText("TXT_KEY_PLOT_DAMAGE", iDamage));
 		//TB Combat Mod begin
-		if (GC.getTerrainInfo(pPlot->getTerrainType()).isColdDamage())
+		if (GC.get<CvTerrainInfo>(pPlot->getTerrainType()).isColdDamage())
 		{
 		szString.append(gDLL->getText("TXT_KEY_PLOT_DAMAGE_IS_COLD"));
 		}
@@ -15204,21 +15204,21 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	{
 		std::vector<bool>	abIsIgnoreTerrainDamage;
 
-		abIsIgnoreTerrainDamage.resize(GC.getNumTerrainInfos(), false);
+		abIsIgnoreTerrainDamage.resize(GC.numTypes<CvTerrainInfo>(), false);
 
-		for( iI = 0; iI < (int)linePromotionsOwned.size(); iI++ )
+		for (int iI = 0; iI < (int)linePromotionsOwned.size(); iI++)
 		{
-			if ( GC.getPromotionInfo(linePromotionsOwned[iI]).getIgnoreTerrainDamage() != NO_TERRAIN )
+			if (GC.getPromotionInfo(linePromotionsOwned[iI]).getIgnoreTerrainDamage() != NO_TERRAIN)
 			{
 				abIsIgnoreTerrainDamage[GC.getPromotionInfo(linePromotionsOwned[iI]).getIgnoreTerrainDamage()] = true;
 			}
 		}
-		for( iI = 0; iI < GC.getNumTerrainInfos(); iI++ )
+		for (int iI = 0; iI < GC.numTypes<CvTerrainInfo>(); iI++)
 		{
 			if (abIsIgnoreTerrainDamage[iI])
 			{
 				szBuffer.append(pcNewline);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_IGNORE_TERRAIN_DAMAGE", GC.getTerrainInfo((TerrainTypes)iI).getDescription()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_IGNORE_TERRAIN_DAMAGE", GC.get<CvTerrainInfo>(iI).getDescription()));
 			}
 		}
 	}
@@ -15499,7 +15499,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	for( iI = 0; iI < (int)aPrereqTerrainType.size(); iI++ )
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_TERRAIN_PREREQ_TEXT", GC.getTerrainInfo(aPrereqTerrainType[iI]).getTextKeyWide()));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_TERRAIN_PREREQ_TEXT", GC.get<CvTerrainInfo>(aPrereqTerrainType[iI]).getTextKeyWide()));
 	}
 
 	std::vector<FeatureTypes> aPrereqFeatureType;
@@ -15565,7 +15565,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	int	iTerrainDefensePercent = 0;
 	int iTerrainWorkPercent = 0;
 	int iWithdrawOnTerrain = 0;
-	for (iI = 0; iI < GC.getNumTerrainInfos(); ++iI)
+	for (iI = 0; iI < GC.numTypes<CvTerrainInfo>(); ++iI)
 	{
 		for( iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
 		{
@@ -15582,27 +15582,27 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		if (bIsTerrainDoubleMove)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DOUBLE_MOVE_TEXT", GC.getTerrainInfo((TerrainTypes) iI).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DOUBLE_MOVE_TEXT", GC.get<CvTerrainInfo>(iI).getTextKeyWide()));
 		}
 		if (iTerrainAttackPercent != 0)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ATTACK_TEXT", iTerrainAttackPercent, GC.getTerrainInfo((TerrainTypes) iI).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_ATTACK_TEXT", iTerrainAttackPercent, GC.get<CvTerrainInfo>(iI).getTextKeyWide()));
 		}
 		if (iTerrainDefensePercent != 0)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DEFENSE_TEXT", iTerrainDefensePercent, GC.getTerrainInfo((TerrainTypes) iI).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DEFENSE_TEXT", iTerrainDefensePercent, GC.get<CvTerrainInfo>(iI).getTextKeyWide()));
 		}
 		if (iTerrainWorkPercent != 0)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_WORK_TEXT", iTerrainWorkPercent, GC.getTerrainInfo((TerrainTypes)iI).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_WORK_TEXT", iTerrainWorkPercent, GC.get<CvTerrainInfo>(iI).getTextKeyWide()));
 		}
 		if (iWithdrawOnTerrain != 0)
 		{
 			szBuffer.append(pcNewline);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_WITHDRAW_ON_TEXT", iWithdrawOnTerrain, CvWString(GC.getTerrainInfo((TerrainTypes)iI).getType()).GetCString(), GC.getTerrainInfo((TerrainTypes)iI).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_WITHDRAW_ON_TEXT", iWithdrawOnTerrain, CvWString(GC.get<CvTerrainInfo>(iI).getType()).GetCString(), GC.get<CvTerrainInfo>(iI).getTextKeyWide()));
 		}
 		bIsTerrainDoubleMove = false;
 		iTerrainAttackPercent = 0;
@@ -15951,7 +15951,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 			iVisibilityIntensityChange = 0;
 			iVisibilityIntensityRangeChange = 0;
 			iInvisibilityIntensityChange = 0;
-			for (iK = 0; iK < GC.getNumTerrainInfos(); iK++)
+			for (iK = 0; iK < GC.numTypes<CvTerrainInfo>(); iK++)
 			{
 				for(iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++)
 				{
@@ -15983,17 +15983,17 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 				if (iInvisibleTerrainChange != 0)
 				{
 					szBuffer.append(pcNewline);
-					szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_INVISIBILITY_VEIL_PLOT_CHANGE", iInvisibleTerrainChange, GC.getInvisibleInfo((InvisibleTypes)iI).getChar(), GC.getTerrainInfo((TerrainTypes)iK).getTextKeyWide()));
+					szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_INVISIBILITY_VEIL_PLOT_CHANGE", iInvisibleTerrainChange, GC.getInvisibleInfo((InvisibleTypes)iI).getChar(), GC.get<CvTerrainInfo>(iK).getTextKeyWide()));
 				}
 				if (iVisibleTerrainChange != 0)
 				{
 					szBuffer.append(pcNewline);
-					szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_PLOT_CHANGE", iVisibleTerrainChange, GC.getInvisibleInfo((InvisibleTypes)iI).getChar(), GC.getTerrainInfo((TerrainTypes)iK).getTextKeyWide()));
+					szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_PLOT_CHANGE", iVisibleTerrainChange, GC.getInvisibleInfo((InvisibleTypes)iI).getChar(), GC.get<CvTerrainInfo>(iK).getTextKeyWide()));
 				}
 				if (iVisibleTerrainRangeChange != 0)
 				{
 					szBuffer.append(pcNewline);
-					szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_PLOT_RANGE_CHANGE", iVisibleTerrainRangeChange, GC.getInvisibleInfo((InvisibleTypes)iI).getChar(), GC.getTerrainInfo((TerrainTypes)iK).getTextKeyWide()));
+					szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_PLOT_RANGE_CHANGE", iVisibleTerrainRangeChange, GC.getInvisibleInfo((InvisibleTypes)iI).getChar(), GC.get<CvTerrainInfo>(iK).getTextKeyWide()));
 				}
 				iInvisibleTerrainChange = 0;
 				iVisibleTerrainChange = 0;
@@ -17485,13 +17485,13 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 	{
 		iLast = 0;
 
-		for (iJ = 0; iJ < GC.getNumTerrainInfos(); iJ++)
+		for (iJ = 0; iJ < GC.numTypes<CvTerrainInfo>(); iJ++)
 		{
 			if (kCivic.getTerrainYieldChanges(iJ, iI) != 0)
 			{
 				szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_CIVIC_TERRAIN_YIELD_CHANGE", kCivic.getTerrainYieldChanges(iJ, iI), GC.getYieldInfo((YieldTypes)iI).getChar()).c_str());
 				CvWString szTerrain;
-				szTerrain.Format(L"<link=%s>%s</link>", CvWString(GC.getTerrainInfo((TerrainTypes)iJ).getType()).GetCString(), GC.getTerrainInfo((TerrainTypes)iJ).getDescription());
+				szTerrain.Format(L"<link=%s>%s</link>", CvWString(GC.get<CvTerrainInfo>(iJ).getType()).GetCString(), GC.get<CvTerrainInfo>(iJ).getDescription());
 				setListHelp(szHelpText, szFirstBuffer, szTerrain, L", ", (kCivic.getTerrainYieldChanges(iJ, iI) != iLast));
 				iLast = kCivic.getTerrainYieldChanges(iJ, iI);
 			}
@@ -18194,7 +18194,7 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 	}
 
 	//	Enabling trade routes on water...?
-	for (iI = 0; iI < GC.getNumTerrainInfos(); ++iI)
+	for (iI = 0; iI < GC.numTypes<CvTerrainInfo>(); ++iI)
 	{
 		buildTerrainTradeString(szBuffer, eTech, iI, true, bPlayerContext);
 	}
@@ -18766,7 +18766,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		}
 
 		bFirst = true;
-		for (iI = 0; iI < GC.getNumTerrainInfos(); ++iI)
+		for (iI = 0; iI < GC.numTypes<CvTerrainInfo>(); ++iI)
 		{
 			if (kUnit.getTerrainDefenseModifier(iI) != 0)
 			{
@@ -18779,12 +18779,12 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 					szBuffer.append(NEWLINE);
 					bFirst = false;
 				}
-				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_DEFENSE", kUnit.getTerrainDefenseModifier(iI), GC.getTerrainInfo((TerrainTypes) iI).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_DEFENSE", kUnit.getTerrainDefenseModifier(iI), GC.get<CvTerrainInfo>(iI).getTextKeyWide()));
 			}
 		}
 
 		bFirst = true;
-		for (iI = 0; iI < GC.getNumTerrainInfos(); ++iI)
+		for (iI = 0; iI < GC.numTypes<CvTerrainInfo>(); ++iI)
 		{
 			if (kUnit.getTerrainAttackModifier(iI) != 0)
 			{
@@ -18797,7 +18797,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 					szBuffer.append(NEWLINE);
 					bFirst = false;
 				}
-				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_ATTACK", kUnit.getTerrainAttackModifier(iI), GC.getTerrainInfo((TerrainTypes) iI).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_ATTACK", kUnit.getTerrainAttackModifier(iI), GC.get<CvTerrainInfo>(iI).getTextKeyWide()));
 			}
 		}
 
@@ -20027,12 +20027,12 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			}
 		}
 
-		for (iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+		for (iI = 0; iI < GC.numTypes<CvTerrainInfo>(); iI++)
 		{
 			if (kUnit.getTerrainWorkRateModifierType(iI) != 0)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_WORK_TEXT", kUnit.getTerrainWorkRateModifierType(iI), GC.getTerrainInfo((TerrainTypes)iI).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_WORK_TEXT", kUnit.getTerrainWorkRateModifierType(iI), GC.get<CvTerrainInfo>(iI).getTextKeyWide()));
 			}
 		}
 		for (iI = 0; iI < GC.getNumFeatureInfos(); iI++)
@@ -20430,7 +20430,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 						szBuffer.append(NEWLINE);
 						bFirst = false;
 					}
-					szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_INVISIBILITY_VEIL_PLOT_VALUE", kUnit.getInvisibleTerrainChange(iI).iIntensity, GC.getInvisibleInfo((InvisibleTypes)kUnit.getInvisibleTerrainChange(iI).eInvisible).getChar(), GC.getTerrainInfo((TerrainTypes)kUnit.getInvisibleTerrainChange(iI).eTerrain).getTextKeyWide()));
+					szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_INVISIBILITY_VEIL_PLOT_VALUE", kUnit.getInvisibleTerrainChange(iI).iIntensity, GC.getInvisibleInfo((InvisibleTypes)kUnit.getInvisibleTerrainChange(iI).eInvisible).getChar(), GC.get<CvTerrainInfo>(kUnit.getInvisibleTerrainChange(iI).eTerrain).getTextKeyWide()));
 				}
 			}
 			bFirst = true;
@@ -20481,7 +20481,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 						szBuffer.append(NEWLINE);
 						bFirst = false;
 					}
-					szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_INVISIBILITY_SPOT_PLOT_VALUE", GC.getInvisibleInfo((InvisibleTypes)kUnit.getVisibleTerrainChange(iI).eInvisible).getTextKeyWide(), kUnit.getVisibleTerrainChange(iI).iIntensity, GC.getTerrainInfo((TerrainTypes)kUnit.getVisibleTerrainChange(iI).eTerrain).getTextKeyWide()));
+					szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_INVISIBILITY_SPOT_PLOT_VALUE", GC.getInvisibleInfo((InvisibleTypes)kUnit.getVisibleTerrainChange(iI).eInvisible).getTextKeyWide(), kUnit.getVisibleTerrainChange(iI).iIntensity, GC.get<CvTerrainInfo>(kUnit.getVisibleTerrainChange(iI).eTerrain).getTextKeyWide()));
 				}
 			}
 			bFirst = true;
@@ -20532,7 +20532,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 						szBuffer.append(NEWLINE);
 						bFirst = false;
 					}
-					szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_INVISIBILITY_SPOT_PLOT_RANGE_VALUE", GC.getInvisibleInfo((InvisibleTypes)kUnit.getVisibleTerrainRangeChange(iI).eInvisible).getTextKeyWide(), kUnit.getVisibleTerrainRangeChange(iI).iIntensity, GC.getTerrainInfo((TerrainTypes)kUnit.getVisibleTerrainRangeChange(iI).eTerrain).getTextKeyWide()));
+					szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_INVISIBILITY_SPOT_PLOT_RANGE_VALUE", GC.getInvisibleInfo((InvisibleTypes)kUnit.getVisibleTerrainRangeChange(iI).eInvisible).getTextKeyWide(), kUnit.getVisibleTerrainRangeChange(iI).iIntensity, GC.get<CvTerrainInfo>(kUnit.getVisibleTerrainRangeChange(iI).eTerrain).getTextKeyWide()));
 				}
 			}
 			bFirst = true;
@@ -20606,7 +20606,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		szTempBuffer.Format(L"%s%s ", NEWLINE, gDLL->getText("TXT_KEY_UNIT_CANNOT_ENTER").GetCString());
 
 		bFirst = true;
-		//for (iI = 0; iI < GC.getNumTerrainInfos(); ++iI)
+		//for (iI = 0; iI < GC.numTypes<CvTerrainInfo>(); ++iI)
 		//{
 		//	if (GC.getUnitInfo(eUnit).getTerrainImpassable(iI))
 		//	{
@@ -20614,11 +20614,11 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		//		TechTypes eTech = (TechTypes)GC.getUnitInfo(eUnit).getTerrainPassableTech(iI);
 		//		if (NO_TECH == eTech)
 		//		{
-		//			szTerrain.Format(L"<link=%s>%s</link>", CvWString(GC.getTerrainInfo((TerrainTypes)iI).getType()).GetCString(), GC.getTerrainInfo((TerrainTypes)iI).getDescription());
+		//			szTerrain.Format(L"<link=%s>%s</link>", CvWString(GC.get<CvTerrainInfo>(iI).getType()).GetCString(), GC.get<CvTerrainInfo>(iI).getDescription());
 		//		}
 		//		else
 		//		{
-		//			szTerrain = gDLL->getText("TXT_KEY_TERRAIN_UNTIL_TECH", CvWString(GC.getTerrainInfo((TerrainTypes)iI).getType()).GetCString(), GC.getTerrainInfo((TerrainTypes)iI).getTextKeyWide(), GC.getTechInfo(eTech).getTextKeyWide());
+		//			szTerrain = gDLL->getText("TXT_KEY_TERRAIN_UNTIL_TECH", CvWString(GC.get<CvTerrainInfo>(iI).getType()).GetCString(), GC.get<CvTerrainInfo>(iI).getTextKeyWide(), GC.getTechInfo(eTech).getTextKeyWide());
 		//		}
 		//		setListHelp(szBuffer, szTempBuffer, szTerrain, L", ", bFirst);
 		//		bFirst = false;
@@ -20631,11 +20631,11 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			TechTypes eTech = (TechTypes)kUnit.getTerrainPassableTech(kUnit.getTerrainImpassableType(iI));
 			if (NO_TECH == eTech)
 			{
-				szTerrain.Format(L"<link=%s>%s</link>", CvWString(GC.getTerrainInfo(eTerrain).getType()).GetCString(), GC.getTerrainInfo(eTerrain).getDescription());
+				szTerrain.Format(L"<link=%s>%s</link>", CvWString(GC.get<CvTerrainInfo>(eTerrain).getType()).GetCString(), GC.get<CvTerrainInfo>(eTerrain).getDescription());
 			}
 			else
 			{
-				szTerrain = gDLL->getText("TXT_KEY_TERRAIN_UNTIL_TECH", CvWString(GC.getTerrainInfo(eTerrain).getType()).GetCString(), GC.getTerrainInfo(eTerrain).getTextKeyWide(), GC.getTechInfo(eTech).getTextKeyWide());
+				szTerrain = gDLL->getText("TXT_KEY_TERRAIN_UNTIL_TECH", CvWString(GC.get<CvTerrainInfo>(eTerrain).getType()).GetCString(), GC.get<CvTerrainInfo>(eTerrain).getTextKeyWide(), GC.getTechInfo(eTech).getTextKeyWide());
 			}
 			setListHelp(szBuffer, szTempBuffer, szTerrain, L", ", bFirst);
 			bFirst = false;
@@ -25483,12 +25483,12 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 			}
 		}
 		bFirst = true;
-		for (iTerrainCount = 0; iTerrainCount < GC.getNumTerrainInfos(); ++iTerrainCount)
+		for (iTerrainCount = 0; iTerrainCount < GC.numTypes<CvTerrainInfo>(); ++iTerrainCount)
 		{
 			if (kBuilding.isPrereqOrTerrain(iTerrainCount))
 			{
 				szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES").c_str());
-				setListHelp(szBuffer, szTempBuffer, GC.getTerrainInfo((TerrainTypes(iTerrainCount))).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
+				setListHelp(szBuffer, szTempBuffer, GC.get<CvTerrainInfo>(iTerrainCount).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
 				bFirst = false;
 			}
 		}
@@ -25498,12 +25498,12 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 		}
 
 		bFirst = true;
-		for (iTerrainCount = 0; iTerrainCount < GC.getNumTerrainInfos(); ++iTerrainCount)
+		for (iTerrainCount = 0; iTerrainCount < GC.numTypes<CvTerrainInfo>(); ++iTerrainCount)
 		{
 			if (kBuilding.isPrereqAndTerrain(iTerrainCount))
 			{
 				szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_REQUIRES").c_str());
-				setListHelp(szBuffer, szTempBuffer, GC.getTerrainInfo((TerrainTypes(iTerrainCount))).getDescription(), gDLL->getText("TXT_KEY_AND").c_str(), bFirst);
+				setListHelp(szBuffer, szTempBuffer, GC.get<CvTerrainInfo>(iTerrainCount).getDescription(), gDLL->getText("TXT_KEY_AND").c_str(), bFirst);
 				bFirst = false;
 			}
 		}
@@ -29047,7 +29047,7 @@ void CvGameTextMgr::buildTerrainTradeString(CvWStringBuffer &szBuffer, TechTypes
 		{
 			szBuffer.append(NEWLINE);
 		}
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_ENABLES_ON_TERRAIN", gDLL->getSymbolID(TRADE_CHAR), GC.getTerrainInfo((TerrainTypes) iTerrainType).getTextKeyWide()));
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_ENABLES_ON_TERRAIN", gDLL->getSymbolID(TRADE_CHAR), GC.get<CvTerrainInfo>(iTerrainType).getTextKeyWide()));
 	}
 }
 
@@ -29826,7 +29826,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 					bFirstDisplay = false;
 				}
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_INVISIBILITY_VEIL_PLOT_CHANGE", iIntensity, GC.getInvisibleInfo(eInvisible).getChar(), GC.getTerrainInfo(eTerrain).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_INVISIBILITY_VEIL_PLOT_CHANGE", iIntensity, GC.getInvisibleInfo(eInvisible).getChar(), GC.get<CvTerrainInfo>(eTerrain).getTextKeyWide()));
 			}
 		}
 		iIntensity = 0;
@@ -29883,7 +29883,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 					bFirstDisplay = false;
 				}
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_PLOT_CHANGE", iIntensity, GC.getInvisibleInfo(eInvisible).getChar(), GC.getTerrainInfo(eTerrain).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_PLOT_CHANGE", iIntensity, GC.getInvisibleInfo(eInvisible).getChar(), GC.get<CvTerrainInfo>(eTerrain).getTextKeyWide()));
 			}
 		}
 		iIntensity = 0;
@@ -29940,7 +29940,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 					bFirstDisplay = false;
 				}
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_PLOT_RANGE_CHANGE", iIntensity, GC.getInvisibleInfo(eInvisible).getChar(), GC.getTerrainInfo(eTerrain).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_PLOT_RANGE_CHANGE", iIntensity, GC.getInvisibleInfo(eInvisible).getChar(), GC.get<CvTerrainInfo>(eTerrain).getTextKeyWide()));
 			}
 		}
 		iIntensity = 0;
@@ -31545,7 +31545,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_REMOVES_CANNOT_CAPTURE"));
 	}
 
-	for (iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+	for (iI = 0; iI < GC.numTypes<CvTerrainInfo>(); iI++)
 	{
 		if (info.getWithdrawOnTerrainTypeChange((TerrainTypes)iI) != 0)
 		{
@@ -31557,7 +31557,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				bFirstDisplay = false;
 			}
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_WITHDRAW_ON_TEXT", info.getWithdrawOnTerrainTypeChange((TerrainTypes)iI), CvWString(GC.getTerrainInfo((TerrainTypes)iI).getType()).GetCString(), GC.getTerrainInfo((TerrainTypes)iI).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_WITHDRAW_ON_TEXT", info.getWithdrawOnTerrainTypeChange((TerrainTypes)iI), CvWString(GC.get<CvTerrainInfo>(iI).getType()).GetCString(), GC.get<CvTerrainInfo>(iI).getTextKeyWide()));
 		}
 	}
 
@@ -32154,7 +32154,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				bFirstDisplay = false;
 			}
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_IGNORE_TERRAIN_DAMAGE", GC.getTerrainInfo((TerrainTypes)info.getTerrainIgnoreDamageChangeType(iI)).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_IGNORE_TERRAIN_DAMAGE", GC.get<CvTerrainInfo>(info.getTerrainIgnoreDamageChangeType(iI)).getTextKeyWide()));
 		}
 	}
 
@@ -32170,7 +32170,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 				bFirstDisplay = false;
 			}
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DOUBLE_MOVE_TEXT", GC.getTerrainInfo((TerrainTypes)info.getTerrainDoubleMoveChangeType(iI)).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_DOUBLE_MOVE_TEXT", GC.get<CvTerrainInfo>(info.getTerrainDoubleMoveChangeType(iI)).getTextKeyWide()));
 		}
 	}
 
@@ -32292,7 +32292,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (info.getTerrainAttackChangeModifier(iI).eTerrain != NO_TERRAIN)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_ATTACK", info.getTerrainAttackChangeModifier(iI).iModifier, GC.getTerrainInfo((TerrainTypes)info.getTerrainAttackChangeModifier(iI).eTerrain).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_ATTACK", info.getTerrainAttackChangeModifier(iI).iModifier, GC.get<CvTerrainInfo>(info.getTerrainAttackChangeModifier(iI).eTerrain).getTextKeyWide()));
 			}
 		}
 	}
@@ -32311,7 +32311,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (info.getTerrainDefenseChangeModifier(iI).eTerrain != NO_TERRAIN)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_DEFENSE", info.getTerrainDefenseChangeModifier(iI).iModifier, GC.getTerrainInfo((TerrainTypes)info.getTerrainDefenseChangeModifier(iI).eTerrain).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_DEFENSE", info.getTerrainDefenseChangeModifier(iI).iModifier, GC.get<CvTerrainInfo>(info.getTerrainDefenseChangeModifier(iI).eTerrain).getTextKeyWide()));
 			}
 		}
 	}
@@ -32330,7 +32330,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes
 			if (info.getTerrainWorkChangeModifier(iI).eTerrain != NO_TERRAIN)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_WORK_TEXT", info.getTerrainWorkChangeModifier(iI).iModifier, GC.getTerrainInfo((TerrainTypes)info.getTerrainWorkChangeModifier(iI).eTerrain).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_PROMOTION_WORK_TEXT", info.getTerrainWorkChangeModifier(iI).iModifier, GC.get<CvTerrainInfo>(info.getTerrainWorkChangeModifier(iI).eTerrain).getTextKeyWide()));
 			}
 		}
 	}
@@ -33900,7 +33900,7 @@ void CvGameTextMgr::setTerrainHelp(CvWStringBuffer &szBuffer, TerrainTypes eTerr
 	{
 		return;
 	}
-	CvTerrainInfo& terrain = GC.getTerrainInfo(eTerrain);
+	CvTerrainInfo& terrain = GC.get<CvTerrainInfo>(eTerrain);
 
 	int aiYields[NUM_YIELD_TYPES];
 	if (!bCivilopediaText)
@@ -36570,22 +36570,22 @@ void CvGameTextMgr::buildCityBillboardCitySizeString( CvWStringBuffer& szBuffer,
 void CvGameTextMgr::getCityBillboardFoodbarColors(CvCity* pCity, std::vector<NiColorA>& aColors)
 {
 	aColors.resize(NUM_INFOBAR_TYPES);
-	aColors[INFOBAR_STORED] = GC.getColorInfo((ColorTypes)(GC.getYieldInfo(YIELD_FOOD).getColorType())).getColor();
+	aColors[INFOBAR_STORED] = GC.get<CvColorInfo>(GC.getYieldInfo(YIELD_FOOD).getColorType()).getColor();
 	aColors[INFOBAR_RATE] = aColors[INFOBAR_STORED];
 	aColors[INFOBAR_RATE].a = 0.5f;
-	aColors[INFOBAR_RATE_EXTRA] = GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_NEGATIVE_RATE")).getColor();
-	aColors[INFOBAR_EMPTY] = GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_EMPTY")).getColor();
+	aColors[INFOBAR_RATE_EXTRA] = GC.get<CvColorInfo>(GC.getInfoTypeForString("COLOR_NEGATIVE_RATE")).getColor();
+	aColors[INFOBAR_EMPTY] = GC.get<CvColorInfo>(GC.getInfoTypeForString("COLOR_EMPTY")).getColor();
 }
 
 void CvGameTextMgr::getCityBillboardProductionbarColors(CvCity* pCity, std::vector<NiColorA>& aColors)
 {
 	aColors.resize(NUM_INFOBAR_TYPES);
-	aColors[INFOBAR_STORED] = GC.getColorInfo((ColorTypes)(GC.getYieldInfo(YIELD_PRODUCTION).getColorType())).getColor();
+	aColors[INFOBAR_STORED] = GC.get<CvColorInfo>(GC.getYieldInfo(YIELD_PRODUCTION).getColorType()).getColor();
 	aColors[INFOBAR_RATE] = aColors[INFOBAR_STORED];
 	aColors[INFOBAR_RATE].a = 0.5f;
-	aColors[INFOBAR_RATE_EXTRA] = GC.getColorInfo((ColorTypes)(GC.getYieldInfo(YIELD_FOOD).getColorType())).getColor();
+	aColors[INFOBAR_RATE_EXTRA] = GC.get<CvColorInfo>(GC.getYieldInfo(YIELD_FOOD).getColorType()).getColor();
 	aColors[INFOBAR_RATE_EXTRA].a = 0.5f;
-	aColors[INFOBAR_EMPTY] = GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_EMPTY")).getColor();
+	aColors[INFOBAR_EMPTY] = GC.get<CvColorInfo>(GC.getInfoTypeForString("COLOR_EMPTY")).getColor();
 }
 
 
@@ -39225,13 +39225,13 @@ void CvGameTextMgr::getTerrainDataForWB(std::vector<CvWBData>& mapTerrainData, s
 {
 	CvWStringBuffer szBuffer;
 
-	for (int i = 0; i < GC.getNumTerrainInfos(); i++)
+	for (int i = 0; i < GC.numTypes<CvTerrainInfo>(); i++)
 	{
-		if (!GC.getTerrainInfo((TerrainTypes)i).isGraphicalOnly())
+		if (!GC.get<CvTerrainInfo>(i).isGraphicalOnly())
 		{
 			szBuffer.clear();
 			setTerrainHelp(szBuffer, (TerrainTypes)i);
-			mapTerrainData.push_back(CvWBData(i, szBuffer.getCString(), GC.getTerrainInfo((TerrainTypes)i).getButton()));
+			mapTerrainData.push_back(CvWBData(i, szBuffer.getCString(), GC.get<CvTerrainInfo>(i).getButton()));
 		}
 	}
 

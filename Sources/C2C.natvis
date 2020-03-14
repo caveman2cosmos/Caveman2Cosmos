@@ -48,7 +48,7 @@
       <Item Name="[x]" ExcludeView="simple">m_iX</Item>
       <Item Name="[y]" ExcludeView="simple">m_iY</Item>
       <Item Name="[owner]" ExcludeView="simple">CvPlayerAI::m_aPlayers[m_eOwner]</Item>
-      <Item Name="[terrain]" ExcludeView="simple">gGlobals->m_paTerrainInfo[m_eTerrainType]</Item>
+      <Item Name="[terrain]" ExcludeView="simple">gGlobals->m_TerrainInfo.getVector[m_eTerrainType]</Item>
       <Item Name="[feature]" ExcludeView="simple">m_eFeatureType == -1? nullptr : gGlobals->m_paFeatureInfo[m_eFeatureType]</Item>
       <Item Name="[bonus]" ExcludeView="simple">m_eBonusType == -1? nullptr : gGlobals->m_paBonusInfo[m_eBonusType]</Item>
       <Item Name="[route]" ExcludeView="simple">m_eRouteType == -1? nullptr : gGlobals->m_paRouteInfo[m_eRouteType]</Item>

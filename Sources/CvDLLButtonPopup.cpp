@@ -1335,8 +1335,8 @@ bool CvDLLButtonPopup::launchProductionPopup(CvPopup* pPopup, CvPopupInfo &info)
 		AdvisorTypes eUnitAdvisor = (AdvisorTypes)(GC.getUnitInfo(eProductionUnit).getAdvisorType());
 		if (eUnitAdvisor != NO_ADVISOR)
 		{
-			int iTurns = pCity->getProductionTurnsLeft(eProductionUnit, 0);
-			CvWString szUnitText = gDLL->getText("TXT_KEY_POPUP_RECOMMENDED", GC.getUnitInfo(eProductionUnit).getTextKeyWide(), iTurns, GC.getAdvisorInfo(eUnitAdvisor).getTextKeyWide());
+			const int iTurns = pCity->getProductionTurnsLeft(eProductionUnit, 0);
+			CvWString szUnitText = gDLL->getText("TXT_KEY_POPUP_RECOMMENDED", GC.getUnitInfo(eProductionUnit).getTextKeyWide(), iTurns, GC.get<CvAdvisorInfo>(eUnitAdvisor).getTextKeyWide());
 			gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, szUnitText, GET_PLAYER(pCity->getOwner()).getUnitButton(eProductionUnit), eProductionUnit, WIDGET_TRAIN, eProductionUnit, pCity->getID(), true, POPUP_LAYOUT_STRETCH, DLL_FONT_LEFT_JUSTIFY);
 			iNumBuilds++;
 		}
@@ -1375,7 +1375,7 @@ bool CvDLLButtonPopup::launchProductionPopup(CvPopup* pPopup, CvPopupInfo &info)
 				if (bestBuildings[idx].score > cutOff && advisor != NO_ADVISOR)
 				{
 					const int iTurns = pCity->getProductionTurnsLeft(building, 0);
-					CvWString szBuildingText = gDLL->getText("TXT_KEY_POPUP_RECOMMENDED", GC.getBuildingInfo(building).getTextKeyWide(), iTurns, GC.getAdvisorInfo(advisor).getTextKeyWide());
+					CvWString szBuildingText = gDLL->getText("TXT_KEY_POPUP_RECOMMENDED", GC.getBuildingInfo(building).getTextKeyWide(), iTurns, GC.get<CvAdvisorInfo>(advisor).getTextKeyWide());
 					gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, szBuildingText, GC.getBuildingInfo(building).getButton(), building, WIDGET_CONSTRUCT, building, pCity->getID(), true, POPUP_LAYOUT_STRETCH, DLL_FONT_LEFT_JUSTIFY);
 				}
 				else
@@ -1869,7 +1869,7 @@ bool CvDLLButtonPopup::launchChooseTechPopup(CvPopup* pPopup, CvPopupInfo &info)
 
 					if ((iI == eBestTech) || (iI == eNextBestTech))
 					{
-						szBuffer += gDLL->getText("TXT_KEY_POPUP_RECOMMENDED_ONLY_ADV", GC.getAdvisorInfo((AdvisorTypes)(GC.getTechInfo((TechTypes)iI).getAdvisorType())).getTextKeyWide());
+						szBuffer += gDLL->getText("TXT_KEY_POPUP_RECOMMENDED_ONLY_ADV", GC.get<CvAdvisorInfo>(GC.getTechInfo((TechTypes)iI).getAdvisorType()).getTextKeyWide());
 					}
 
 					CvString szButton = GC.getTechInfo((TechTypes) iI).getButton();
@@ -2807,7 +2807,7 @@ bool CvDLLButtonPopup::launchEventPopup(CvPopup* pPopup, CvPopupInfo &info)
 		CvPlot* pPlot = GC.getMap().plot(pTriggeredData->m_iPlotX, pTriggeredData->m_iPlotY);
 		if (NULL != pPlot && pPlot->isInViewport())
 		{
-			gDLL->getEngineIFace()->addColoredPlot(pPlot->getViewportX(), pPlot->getViewportY(), GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_WARNING_TEXT")).getColor(), PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS);
+			gDLL->getEngineIFace()->addColoredPlot(pPlot->getViewportX(), pPlot->getViewportY(), GC.get<CvColorInfo>(GC.getInfoTypeForString("COLOR_WARNING_TEXT")).getColor(), PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS);
 			gDLL->getInterfaceIFace()->lookAt(pPlot->getPoint(), CAMERALOOKAT_NORMAL);
 		}
 	}

@@ -2099,14 +2099,14 @@ int CvBuildingInfo::isPrereqAndCivicsValuesVectorElement(const int i) const		{re
 
 bool CvBuildingInfo::isPrereqOrTerrain(int i) const
 {
-	FAssertMsg(i < GC.getNumTerrainInfos(), "Index out of bounds");
+	FAssertMsg(i < GC.numTypes<CvTerrainInfo>(), "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
 	return m_pbPrereqOrTerrain ? m_pbPrereqOrTerrain[i] : false;
 }
 
 bool CvBuildingInfo::isPrereqAndTerrain(int i) const
 {
-	FAssertMsg(i < GC.getNumTerrainInfos(), "Index out of bounds");
+	FAssertMsg(i < GC.numTypes<CvTerrainInfo>(), "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
 	return m_pbPrereqAndTerrain ? m_pbPrereqAndTerrain[i] : false;
 }
@@ -3429,8 +3429,8 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum)
 	CheckSumI(iSum, GC.getNumCivicInfos(), m_pbPrereqOrCivics);
 	CheckSumI(iSum, GC.getNumCivicInfos(), m_pbPrereqAndCivics);
 	CheckSumI(iSum, GC.getNumBuildingInfos(), m_pbPrereqNotBuilding);
-	CheckSumI(iSum, GC.getNumTerrainInfos(), m_pbPrereqOrTerrain);
-	CheckSumI(iSum, GC.getNumTerrainInfos(), m_pbPrereqAndTerrain);
+	CheckSumI(iSum, GC.numTypes<CvTerrainInfo>(), m_pbPrereqOrTerrain);
+	CheckSumI(iSum, GC.numTypes<CvTerrainInfo>(), m_pbPrereqAndTerrain);
 	CheckSumI(iSum, GC.getNumImprovementInfos(), m_pbPrereqOrImprovement);
 	CheckSumI(iSum, GC.getNumFeatureInfos(), m_pbPrereqOrFeature);
 	CheckSumI(iSum, GC.getNumBuildingInfos(), m_pbReplaceBuilding);
@@ -4436,8 +4436,8 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->SetVariableListTagPair(&m_piTechHappinessChanges, L"TechHappinessChanges", GC.getNumTechInfos());
 	pXML->SetVariableListTagPair(&m_piTechHealthChanges, L"TechHealthChanges", GC.getNumTechInfos());
-	pXML->SetVariableListTagPair(&m_pbPrereqOrTerrain, L"PrereqOrTerrain", GC.getNumTerrainInfos());
-	pXML->SetVariableListTagPair(&m_pbPrereqAndTerrain, L"PrereqAndTerrain", GC.getNumTerrainInfos());
+	pXML->SetVariableListTagPair(&m_pbPrereqOrTerrain, L"PrereqOrTerrain", GC.numTypes<CvTerrainInfo>());
+	pXML->SetVariableListTagPair(&m_pbPrereqAndTerrain, L"PrereqAndTerrain", GC.numTypes<CvTerrainInfo>());
 	pXML->SetVariableListTagPair(&m_pbPrereqOrImprovement, L"PrereqOrImprovement", GC.getNumImprovementInfos());
 	pXML->SetVariableListTagPair(&m_pbPrereqOrFeature, L"PrereqOrFeature", GC.getNumFeatureInfos());
 	pXML->SetVariableListTagPair(&m_piBonusDefenseChanges, L"BonusDefenseChanges", GC.getNumBonusInfos());
@@ -6113,24 +6113,24 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 		}
 	}
 
-	for ( int j = 0; j < GC.getNumTerrainInfos(); j++)
+	for ( int j = 0; j < GC.numTypes<CvTerrainInfo>(); j++)
 	{
 		if ( isPrereqOrTerrain(j) == bDefault && pClassInfo->isPrereqOrTerrain(j) != bDefault)
 		{
 			if ( NULL == m_pbPrereqOrTerrain )
 			{
-				CvXMLLoadUtility::InitList(&m_pbPrereqOrTerrain,GC.getNumTerrainInfos(),bDefault);
+				CvXMLLoadUtility::InitList(&m_pbPrereqOrTerrain,GC.numTypes<CvTerrainInfo>(),bDefault);
 			}
 			m_pbPrereqOrTerrain[j] = pClassInfo->isPrereqOrTerrain(j);
 		}
 	}
-	for ( int j = 0; j < GC.getNumTerrainInfos(); j++)
+	for ( int j = 0; j < GC.numTypes<CvTerrainInfo>(); j++)
 	{
 		if ( isPrereqAndTerrain(j) == bDefault && pClassInfo->isPrereqAndTerrain(j) != bDefault)
 		{
 			if ( NULL == m_pbPrereqAndTerrain)
 			{
-				CvXMLLoadUtility::InitList(&m_pbPrereqAndTerrain,GC.getNumTerrainInfos(),bDefault);
+				CvXMLLoadUtility::InitList(&m_pbPrereqAndTerrain, GC.numTypes<CvTerrainInfo>(), bDefault);
 			}
 			m_pbPrereqAndTerrain[j] = pClassInfo->isPrereqAndTerrain(j);
 		}

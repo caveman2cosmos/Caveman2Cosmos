@@ -7695,7 +7695,7 @@ int CvCity::calculateCultureDistance(int iDX, int iDY, int iMaxDistance) const
 
 	if (!bBonus)
 	{
-		terrainDistance += GC.getTerrainInfo(eTerrain).getCultureDistance();
+		terrainDistance += GC.get<CvTerrainInfo>(eTerrain).getCultureDistance();
 	}
 
 	if (pPlot->getFeatureType() != NO_FEATURE)
@@ -20342,7 +20342,7 @@ void CvCity::getVisibleEffects(ZoomLevelTypes eCurZoom, std::vector<const TCHAR*
 
 void CvCity::getCityBillboardSizeIconColors(NiColorA& kDotColor, NiColorA& kTextColor) const
 {
-	const NiColorA kPlayerColor = GC.getColorInfo((ColorTypes)GC.getPlayerColorInfo(GET_PLAYER(getOwner()).getPlayerColor()).getColorTypePrimary()).getColor();
+	const NiColorA kPlayerColor = GC.get<CvColorInfo>(GC.get<CvPlayerColorInfo>(GET_PLAYER(getOwner()).getPlayerColor()).getColorTypePrimary()).getColor();
 	static const NiColorA kGrowing(0.73f, 1, 0.73f, 1);
 	static const NiColorA kShrinking(1, 0.73f, 0.73f, 1);
 	static const NiColorA kStagnant(0.83f, 0.83f, 0.83f, 1);
@@ -20379,7 +20379,7 @@ void CvCity::getCityBillboardSizeIconColors(NiColorA& kDotColor, NiColorA& kText
 	else
 	{
 		kDotColor = kPlayerColor;
-		const NiColorA kPlayerSecondaryColor = GC.getColorInfo((ColorTypes)GC.getPlayerColorInfo(GET_PLAYER(getOwner()).getPlayerColor()).getColorTypeSecondary()).getColor();
+		const NiColorA kPlayerSecondaryColor = GC.get<CvColorInfo>(GC.get<CvPlayerColorInfo>(GET_PLAYER(getOwner()).getPlayerColor()).getColorTypeSecondary()).getColor();
 		kTextColor = kPlayerSecondaryColor;
 	}
 }
@@ -22742,7 +22742,7 @@ bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 
 	CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 
-	for (int iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+	for (int iI = 0; iI < GC.numTypes<CvTerrainInfo>(); iI++)
 	{
 		if (kBuilding.isPrereqOrTerrain(iI))
 		{

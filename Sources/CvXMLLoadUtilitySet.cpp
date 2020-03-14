@@ -929,21 +929,21 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 
 	LoadGlobalClassInfo(GC.getGameOptionInfos(), "CIV4GameOptionInfos", "GameInfo", L"/Civ4GameOptionInfos/GameOptionInfos/GameOptionInfo", false);
 
-	LoadGlobalClassInfo(GC.getColorInfos(), "CIV4ColorVals", "Interface", L"/Civ4ColorVals/ColorVals/ColorVal", false);
+	LoadGlobalClassInfo(GC.get<CvColorInfo>(), "CIV4ColorVals", "Interface", L"/Civ4ColorVals/ColorVals/ColorVal", false);
 	LoadGlobalClassInfo(GC.getTurnTimerInfos(), "CIV4TurnTimerInfo", "GameInfo", L"/Civ4TurnTimerInfo/TurnTimerInfos/TurnTimerInfo", false);
 	LoadGlobalClassInfo(GC.get<CvWorldInfo>(), "CIV4WorldInfo", "GameInfo", L"/Civ4WorldInfo/WorldInfos/WorldInfo", false, GC.getReplacements<CvWorldInfo>());
 	LoadGlobalClassInfo(GC.get<CvClimateInfo>(), "CIV4ClimateInfo", "GameInfo", L"/Civ4ClimateInfo/ClimateInfos/ClimateInfo", false);
 	LoadGlobalClassInfo(GC.get<CvSeaLevelInfo>(), "CIV4SeaLevelInfo", "GameInfo", L"/Civ4SeaLevelInfo/SeaLevelInfos/SeaLevelInfo", false);
-	LoadGlobalClassInfo(GC.getAdvisorInfos(), "CIV4AdvisorInfos", "Interface", L"/Civ4AdvisorInfos/AdvisorInfos/AdvisorInfo", false);
+	LoadGlobalClassInfo(GC.get<CvAdvisorInfo>(), "CIV4AdvisorInfos", "Interface", L"/Civ4AdvisorInfos/AdvisorInfos/AdvisorInfo", false);
 	LoadGlobalClassInfo(GC.getIdeaClassInfos(), "CIV4IdeaClassInfos", "GameInfo", L"/Civ4IdeaClassInfos/IdeaClassInfos/IdeaClassInfo", false);
 	LoadGlobalClassInfo(GC.getIdeaInfos(), "CIV4IdeaInfos", "GameInfo", L"/Civ4IdeaInfos/IdeaInfos/IdeaInfo", false);
-	LoadGlobalClassInfo(GC.getTerrainInfos(), "CIV4TerrainInfos", "Terrain", L"/Civ4TerrainInfos/TerrainInfos/TerrainInfo", false, GC.getTerrainInfoReplacements());
+	LoadGlobalClassInfo(GC.m_TerrainInfo, "CIV4TerrainInfos", "Terrain", L"/Civ4TerrainInfos/TerrainInfos/TerrainInfo", false, GC.m_TerrainInfo.getReplacements());
 	LoadGlobalClassInfo(GC.getYieldInfos(), "CIV4YieldInfos", "Terrain", L"/Civ4YieldInfos/YieldInfos/YieldInfo", false);
 	LoadGlobalClassInfo(GC.getCommerceInfos(), "CIV4CommerceInfo", "GameInfo", L"/Civ4CommerceInfo/CommerceInfos/CommerceInfo", false);
 	LoadGlobalClassInfo(GC.getEraInfos(), "CIV4EraInfos", "GameInfo", L"/Civ4EraInfos/EraInfos/EraInfo", false, GC.getEraInfoReplacements());
 
-	LoadGlobalClassInfo(GC.getAnimationCategoryInfos(), "CIV4AnimationInfos", "Units", L"/Civ4AnimationInfos/AnimationCategories/AnimationCategory", false);
-	LoadGlobalClassInfo(GC.getAnimationPathInfos(), "CIV4AnimationPathInfos", "Units", L"/Civ4AnimationPathInfos/AnimationPaths/AnimationPath", false);
+	LoadGlobalClassInfo(GC.get<CvAnimationCategoryInfo>(), "CIV4AnimationInfos", "Units", L"/Civ4AnimationInfos/AnimationCategories/AnimationCategory", false);
+	LoadGlobalClassInfo(GC.get<CvAnimationPathInfo>(), "CIV4AnimationPathInfos", "Units", L"/Civ4AnimationPathInfos/AnimationPaths/AnimationPath", false);
 	LoadGlobalClassInfo(GC.getCursorInfos(), "CIV4CursorInfo", "GameInfo", L"/Civ4CursorInfo/CursorInfos/CursorInfo", false);
 	LoadGlobalClassInfo(GC.getCivicOptionInfos(), "CIV4CivicOptionInfos", "GameInfo", L"/Civ4CivicOptionInfos/CivicOptionInfos/CivicOptionInfo", false);
 	LoadGlobalClassInfo(GC.getUpkeepInfos(), "CIV4UpkeepInfo", "GameInfo", L"/Civ4UpkeepInfo/UpkeepInfos/UpkeepInfo", false);
@@ -952,7 +952,7 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	LoadGlobalClassInfo(GC.getVictoryInfos(), "CIV4VictoryInfo", "GameInfo", L"/Civ4VictoryInfo/VictoryInfos/VictoryInfo", false);
 
 	LoadGlobalClassInfo(GC.getEffectInfos(), "CIV4EffectInfos", "Misc", L"/Civ4EffectInfos/EffectInfos/EffectInfo", false);
-	LoadGlobalClassInfo(GC.getEntityEventInfos(), "CIV4EntityEventInfos", "Units", L"/Civ4EntityEventInfos/EntityEventInfos/EntityEventInfo", false);
+	LoadGlobalClassInfo(GC.get<CvEntityEventInfo>(), "CIV4EntityEventInfos", "Units", L"/Civ4EntityEventInfos/EntityEventInfos/EntityEventInfo", false);
 	LoadGlobalClassInfo(GC.getPropertyInfos(), "CIV4PropertyInfos", "GameInfo", L"/Civ4PropertyInfos/PropertyInfos/PropertyInfo", false);
 	LoadGlobalClassInfo(GC.getSpecialistInfos(), "CIV4SpecialistInfos", "GameInfo", L"/Civ4SpecialistInfos/SpecialistInfos/SpecialistInfo", false, GC.getSpecialistInfoReplacements());
 	LoadGlobalClassInfo(GC.getVoteSourceInfos(), "CIV4VoteSourceInfos", "GameInfo", L"/Civ4VoteSourceInfos/VoteSourceInfos/VoteSourceInfo", false);
@@ -995,7 +995,7 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	{
 		GC.getVoteSourceInfo((VoteSourceTypes)i).readPass3();
 	}
-	LoadGlobalClassInfo(GC.getPlayerColorInfos(), "CIV4PlayerColorInfos", "Interface", L"/Civ4PlayerColorInfos/PlayerColorInfos/PlayerColorInfo", false);
+	LoadGlobalClassInfo(GC.get<CvPlayerColorInfo>(), "CIV4PlayerColorInfos", "Interface", L"/Civ4PlayerColorInfos/PlayerColorInfos/PlayerColorInfo", false);
 	LoadGlobalClassInfo(GC.getBuildInfos(), "CIV4BuildInfos", "Units", L"/Civ4BuildInfos/BuildInfos/BuildInfo", false, GC.getBuildInfoReplacements());
 
 	LoadGlobalClassInfo(GC.getOutcomeInfos(), "CIV4OutcomeInfos", "GameInfo", L"/Civ4OutcomeInfos/OutcomeInfos/OutcomeInfo", true);
@@ -1216,19 +1216,18 @@ bool CvXMLLoadUtility::LoadPostMenuGlobals()
 	UpdateProgressCB("Global Events");
 	UpdateProgressCB("Global Routes");
 
-	LoadGlobalClassInfo(GC.getRouteModelInfos(), "CIV4RouteModelInfos", "Art", L"/Civ4RouteModelInfos/RouteModelInfos/RouteModelInfo", false);
+	LoadGlobalClassInfo(GC.get<CvRouteModelInfo>(), "CIV4RouteModelInfos", "Art", L"/Civ4RouteModelInfos/RouteModelInfos/RouteModelInfo", false);
 
 	UpdateProgressCB("Global Rivers");
 
-	LoadGlobalClassInfo(GC.getRiverInfos(), "CIV4RiverInfos", "Misc", L"/Civ4RiverInfos/RiverInfos/RiverInfo", false);
-	LoadGlobalClassInfo(GC.getRiverModelInfos(), "CIV4RiverModelInfos", "Art", L"/Civ4RiverModelInfos/RiverModelInfos/RiverModelInfo", false);
+	//LoadGlobalClassInfo(GC.get<CvRiverInfo>(), "CIV4RiverInfos", "Misc", L"/Civ4RiverInfos/RiverInfos/RiverInfo", false);
+	LoadGlobalClassInfo(GC.get<CvRiverModelInfo>(), "CIV4RiverModelInfos", "Art", L"/Civ4RiverModelInfos/RiverModelInfos/RiverModelInfo", false);
 
 	UpdateProgressCB("Global Other");
 
-	LoadGlobalClassInfo(GC.getWaterPlaneInfos(), "CIV4WaterPlaneInfos", "Misc", L"/Civ4WaterPlaneInfos/WaterPlaneInfos/WaterPlaneInfo", false);
-	LoadGlobalClassInfo(GC.getTerrainPlaneInfos(), "CIV4TerrainPlaneInfos", "Misc", L"/Civ4TerrainPlaneInfos/TerrainPlaneInfos/TerrainPlaneInfo", false);
-	LoadGlobalClassInfo(GC.getCameraOverlayInfos(), "CIV4CameraOverlayInfos", "Misc", L"/Civ4CameraOverlayInfos/CameraOverlayInfos/CameraOverlayInfo", false);
-
+	LoadGlobalClassInfo(GC.get<CvWaterPlaneInfo>(), "CIV4WaterPlaneInfos", "Misc", L"/Civ4WaterPlaneInfos/WaterPlaneInfos/WaterPlaneInfo", false);
+	LoadGlobalClassInfo(GC.get<CvTerrainPlaneInfo>(), "CIV4TerrainPlaneInfos", "Misc", L"/Civ4TerrainPlaneInfos/TerrainPlaneInfos/TerrainPlaneInfo", false);
+	LoadGlobalClassInfo(GC.get<CvCameraOverlayInfo>(), "CIV4CameraOverlayInfos", "Misc", L"/Civ4CameraOverlayInfos/CameraOverlayInfos/CameraOverlayInfo", false);
 
 	UpdateProgressCB("Global Process");
 
@@ -1250,17 +1249,17 @@ bool CvXMLLoadUtility::LoadPostMenuGlobals()
 
 	UpdateProgressCB("Global Interface");
 
-	LoadGlobalClassInfo(GC.getCameraInfos(), "CIV4CameraInfos", "Interface", L"/Civ4CameraInfos/CameraInfos/CameraInfo", false);
+	//LoadGlobalClassInfo(GC.get<CvCameraInfo>(), "CIV4CameraInfos", "Interface", L"/Civ4CameraInfos/CameraInfos/CameraInfo", false);
 	LoadGlobalClassInfo(GC.getInterfaceModeInfos(), "CIV4InterfaceModeInfos", "Interface", L"/Civ4InterfaceModeInfos/InterfaceModeInfos/InterfaceModeInfo", false);
 
 	SetGlobalActionInfo();
 
 
 	// Load the formation info
-	LoadGlobalClassInfo(GC.getUnitFormationInfos(), "CIV4FormationInfos", "Units", L"/UnitFormations/UnitFormation", false);
+	LoadGlobalClassInfo(GC.get<CvUnitFormationInfo>(), "CIV4FormationInfos", "Units", L"/UnitFormations/UnitFormation", false);
 
 	// Load the attachable infos
-	LoadGlobalClassInfo(GC.getAttachableInfos(), "CIV4AttachableInfos", "Misc", L"/Civ4AttachableInfos/AttachableInfos/AttachableInfo", false);
+	LoadGlobalClassInfo(GC.get<CvAttachableInfo>(), "CIV4AttachableInfos", "Misc", L"/Civ4AttachableInfos/AttachableInfos/AttachableInfo", false);
 
 	// Specail Case Diplomacy Info due to double vectored nature and appending of Responses
 	LoadDiplomacyInfo(GC.getDiplomacyInfos(), "CIV4DiplomacyInfos", "GameInfo", L"/Civ4DiplomacyInfos/DiplomacyInfos/DiplomacyInfo", true);

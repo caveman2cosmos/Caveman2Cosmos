@@ -1372,14 +1372,14 @@ int CvUnitInfo::getFlavorValue(int i) const
 
 int CvUnitInfo::getTerrainAttackModifier(int i) const
 {
-	FAssertMsg(i < GC.getNumTerrainInfos(), "Index out of bounds");
+	FAssertMsg(i < GC.numTypes<CvTerrainInfo>(), "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
 	return m_piTerrainAttackModifier ? m_piTerrainAttackModifier[i] : 0;
 }
 
 int CvUnitInfo::getTerrainDefenseModifier(int i) const
 {
-	FAssertMsg(i < GC.getNumTerrainInfos(), "Index out of bounds");
+	FAssertMsg(i < GC.numTypes<CvTerrainInfo>(), "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
 	return m_piTerrainDefenseModifier ? m_piTerrainDefenseModifier[i] : 0;
 }
@@ -1505,7 +1505,7 @@ int CvUnitInfo::getCorporationSpreads(int i) const
 
 int CvUnitInfo::getTerrainPassableTech(int i) const
 {
-	FAssertMsg(i < GC.getNumTerrainInfos(), "Index out of bounds");
+	FAssertMsg(i < GC.numTypes<CvTerrainInfo>(), "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
 	return m_piTerrainPassableTech ? m_piTerrainPassableTech[i] : -1;
 }
@@ -1546,7 +1546,7 @@ int CvUnitInfo::getNumBuildings() const
 //
 //bool CvUnitInfo::getTerrainImpassable(int i) const
 //{
-//	FAssertMsg(i < GC.getNumTerrainInfos(), "Index out of bounds");
+//	FAssertMsg(i < GC.numTypes<CvTerrainInfo>(), "Index out of bounds");
 //	FAssertMsg(i > -1, "Index out of bounds");
 //	return m_pbTerrainImpassable ? m_pbTerrainImpassable[i] : false;
 //}
@@ -1560,7 +1560,7 @@ int CvUnitInfo::getNumBuildings() const
 
 bool CvUnitInfo::getTerrainNative(int i) const
 {
-	FAssertMsg(i < GC.getNumTerrainInfos(), "Index out of bounds");
+	FAssertMsg(i < GC.numTypes<CvTerrainInfo>(), "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
 	return m_pbTerrainNative ? m_pbTerrainNative[i] : false;
 }
@@ -2803,7 +2803,7 @@ int CvUnitInfo::getNumTerrainImpassableTypes() const
 
 bool CvUnitInfo::isTerrainImpassableType(int i) const
 {
-	FAssert (i > -1 && i < GC.getNumTerrainInfos());
+	FAssert (i > -1 && i < GC.numTypes<CvTerrainInfo>());
 	if (find(m_aiTerrainImpassableTypes.begin(), m_aiTerrainImpassableTypes.end(), i) == m_aiTerrainImpassableTypes.end())
 	{
 		return false;
@@ -3955,8 +3955,8 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum)
 	CheckSumI(iSum, GC.getNUM_UNIT_AND_TECH_PREREQS(), m_piPrereqAndTechs);
 	CheckSumI(iSum, GC.getNUM_UNIT_PREREQ_OR_BONUSES(), m_piPrereqOrBonuses);
 	CheckSumI(iSum, GC.getNumFlavorTypes(), m_piFlavorValue);
-	CheckSumI(iSum, GC.getNumTerrainInfos(), m_piTerrainAttackModifier);
-	CheckSumI(iSum, GC.getNumTerrainInfos(), m_piTerrainDefenseModifier);
+	CheckSumI(iSum, GC.numTypes<CvTerrainInfo>(), m_piTerrainAttackModifier);
+	CheckSumI(iSum, GC.numTypes<CvTerrainInfo>(), m_piTerrainDefenseModifier);
 	CheckSumI(iSum, GC.getNumFeatureInfos(), m_piFeatureAttackModifier);
 	CheckSumI(iSum, GC.getNumFeatureInfos(), m_piFeatureDefenseModifier);
 	CheckSumI(iSum, GC.getNumUnitInfos(), m_piUnitAttackModifier);
@@ -3985,13 +3985,13 @@ void CvUnitInfo::getCheckSum(unsigned int &iSum)
 	CheckSumI(iSum, GC.getNumBuildInfos(), m_pbBuilds);
 	CheckSumI(iSum, GC.getNumReligionInfos(), m_piReligionSpreads);
 	CheckSumI(iSum, GC.getNumCorporationInfos(), m_piCorporationSpreads);
-	CheckSumI(iSum, GC.getNumTerrainInfos(), m_piTerrainPassableTech);
+	CheckSumI(iSum, GC.numTypes<CvTerrainInfo>(), m_piTerrainPassableTech);
 	CheckSumI(iSum, GC.getNumFeatureInfos(), m_piFeaturePassableTech);
 	CheckSumI(iSum, GC.getNumSpecialistInfos(), m_pbGreatPeoples);
 	CheckSumC(iSum, m_pbBuildings);
-	CheckSumI(iSum, GC.getNumTerrainInfos(), m_pbTerrainNative);
+	CheckSumI(iSum, GC.numTypes<CvTerrainInfo>(), m_pbTerrainNative);
 	CheckSumI(iSum, GC.getNumFeatureInfos(), m_pbFeatureNative);
-	//CheckSumI(iSum, GC.getNumTerrainInfos(), m_pbTerrainImpassable);
+	//CheckSumI(iSum, GC.numTypes<CvTerrainInfo>(), m_pbTerrainImpassable);
 	//CheckSumI(iSum, GC.getNumFeatureInfos(), m_pbFeatureImpassable);
 	CheckSumI(iSum, GC.getNumPromotionInfos(), m_pbFreePromotions);
 
@@ -4404,11 +4404,11 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetVariableListTagPair(&m_piCorporationSpreads, L"CorporationSpreads", GC.getNumCorporationInfos(), -1);
 
 	CvString* pszTemp = NULL;
-	pXML->SetVariableListTagPair(&pszTemp, L"TerrainPassableTechs", GC.getNumTerrainInfos());
+	pXML->SetVariableListTagPair(&pszTemp, L"TerrainPassableTechs", GC.numTypes<CvTerrainInfo>());
 	if ( pszTemp != NULL )
 	{
-		m_piTerrainPassableTech = new int[GC.getNumTerrainInfos()];
-		for (int i = 0; i < GC.getNumTerrainInfos(); ++i)
+		m_piTerrainPassableTech = new int[GC.numTypes<CvTerrainInfo>()];
+		for (int i = 0; i < GC.numTypes<CvTerrainInfo>(); ++i)
 		{
 			m_piTerrainPassableTech[i] = pszTemp[i].IsEmpty() ? NO_TECH : pXML->GetInfoClass(pszTemp[i]);
 		}
@@ -4576,7 +4576,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iGreatWorkCulture, L"iGreatWorkCulture");
 	pXML->GetOptionalChildXmlValByName(&m_iEspionagePoints, L"iEspionagePoints");
 
-	//pXML->SetVariableListTagPair(&m_pbTerrainImpassable, L"TerrainImpassables", GC.getNumTerrainInfos(), false);
+	//pXML->SetVariableListTagPair(&m_pbTerrainImpassable, L"TerrainImpassables", GC.numTypes<CvTerrainInfo>(), false);
 	//pXML->SetVariableListTagPair(&m_pbFeatureImpassable, L"FeatureImpassables", GC.getNumFeatureInfos(), false);
 
 	pXML->GetOptionalChildXmlValByName(&m_iCombat, L"iCombat");
@@ -4602,11 +4602,11 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iHillsAttackModifier, L"iHillsAttack");
 	pXML->GetOptionalChildXmlValByName(&m_iHillsDefenseModifier, L"iHillsDefense");
 
-	pXML->SetVariableListTagPair(&m_pbTerrainNative, L"TerrainNatives", GC.getNumTerrainInfos());
+	pXML->SetVariableListTagPair(&m_pbTerrainNative, L"TerrainNatives", GC.numTypes<CvTerrainInfo>());
 	pXML->SetVariableListTagPair(&m_pbFeatureNative, L"FeatureNatives", GC.getNumFeatureInfos());
 
-	pXML->SetVariableListTagPair(&m_piTerrainAttackModifier, L"TerrainAttacks", GC.getNumTerrainInfos());
-	pXML->SetVariableListTagPair(&m_piTerrainDefenseModifier, L"TerrainDefenses", GC.getNumTerrainInfos());
+	pXML->SetVariableListTagPair(&m_piTerrainAttackModifier, L"TerrainAttacks", GC.numTypes<CvTerrainInfo>());
+	pXML->SetVariableListTagPair(&m_piTerrainDefenseModifier, L"TerrainDefenses", GC.numTypes<CvTerrainInfo>());
 	pXML->SetVariableListTagPair(&m_piFeatureAttackModifier, L"FeatureAttacks", GC.getNumFeatureInfos());
 	pXML->SetVariableListTagPair(&m_piFeatureDefenseModifier, L"FeatureDefenses", GC.getNumFeatureInfos());
 
@@ -5569,21 +5569,21 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 		}
 	}
 
-	for ( int i = 0; i < GC.getNumTerrainInfos(); i++)
+	for ( int i = 0; i < GC.numTypes<CvTerrainInfo>(); i++)
 	{
 /*		if ( getTerrainImpassable(i) == bDefault && pClassInfo->getTerrainImpassable(i) != bDefault)
 		{
 			if ( NULL == m_pbTerrainImpassable )
 			{
-				CvXMLLoadUtility::InitList(&m_pbTerrainImpassable,GC.getNumTerrainInfos(),bDefault);
+				CvXMLLoadUtility::InitList(&m_pbTerrainImpassable, GC.numTypes<CvTerrainInfo>(), bDefault);
 			}
 			m_pbTerrainImpassable[i] = pClassInfo->getTerrainImpassable(i);
 		}*/
-		if ( getTerrainNative(i) == bDefault && pClassInfo->getTerrainNative(i) != bDefault)
+		if (getTerrainNative(i) == bDefault && pClassInfo->getTerrainNative(i) != bDefault)
 		{
-			if ( NULL == m_pbTerrainNative )
+			if (NULL == m_pbTerrainNative)
 			{
-				CvXMLLoadUtility::InitList(&m_pbTerrainNative,GC.getNumTerrainInfos(),bDefault);
+				CvXMLLoadUtility::InitList(&m_pbTerrainNative, GC.numTypes<CvTerrainInfo>(), bDefault);
 			}
 			m_pbTerrainNative[i] = pClassInfo->getTerrainNative(i);
 		}
@@ -5591,7 +5591,7 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 		{
 			if ( NULL == m_piTerrainAttackModifier )
 			{
-				CvXMLLoadUtility::InitList(&m_piTerrainAttackModifier,GC.getNumTerrainInfos(),iDefault);
+				CvXMLLoadUtility::InitList(&m_piTerrainAttackModifier, GC.numTypes<CvTerrainInfo>(), iDefault);
 			}
 			m_piTerrainAttackModifier[i] = pClassInfo->getTerrainAttackModifier(i);
 		}
@@ -5599,7 +5599,7 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 		{
 			if ( NULL == m_piTerrainDefenseModifier )
 			{
-				CvXMLLoadUtility::InitList(&m_piTerrainDefenseModifier,GC.getNumTerrainInfos(),iDefault);
+				CvXMLLoadUtility::InitList(&m_piTerrainDefenseModifier, GC.numTypes<CvTerrainInfo>(), iDefault);
 			}
 			m_piTerrainDefenseModifier[i] = pClassInfo->getTerrainDefenseModifier(i);
 		}
@@ -5607,7 +5607,7 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 		{
 			if ( NULL == m_piTerrainPassableTech )
 			{
-				CvXMLLoadUtility::InitList(&m_piTerrainPassableTech,GC.getNumTerrainInfos(),(int)NO_TECH);
+				CvXMLLoadUtility::InitList(&m_piTerrainPassableTech, GC.numTypes<CvTerrainInfo>(), NO_TECH);
 			}
 			m_piTerrainPassableTech[i] = pClassInfo->getTerrainPassableTech(i);
 		}

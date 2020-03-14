@@ -853,11 +853,11 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 		}
 		break;
 	case REMAPPED_CLASS_TYPE_TERRAINS:
-		entry.numClasses = GC.getNumTerrainInfos();
+		entry.numClasses = GC.numTypes<CvTerrainInfo>();
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
-			CvTerrainInfo& info = GC.getTerrainInfo((TerrainTypes)i);
+			CvTerrainInfo& info = GC.get<CvTerrainInfo>(i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -1207,7 +1207,7 @@ CvTaggedSaveFormatWrapper::getNumClassEnumValues(RemappedClassType classType)
 			result = GC.getNumBuildInfos();
 			break;
 		case REMAPPED_CLASS_TYPE_TERRAINS:
-			result = GC.getNumTerrainInfos();
+			result = GC.numTypes<CvTerrainInfo>();
 			break;
 		case REMAPPED_CLASS_TYPE_ROUTES:
 			result = GC.getNumRouteInfos();

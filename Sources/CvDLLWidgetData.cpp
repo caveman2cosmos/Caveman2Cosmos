@@ -6154,7 +6154,7 @@ void CvDLLWidgetData::parseAdjustHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 
 void CvDLLWidgetData::parseTerrainTradeHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
-	if (widgetDataStruct.m_iData2 < GC.getNumTerrainInfos())
+	if (widgetDataStruct.m_iData2 < GC.numTypes<CvTerrainInfo>())
 	{
 		GAMETEXT.buildTerrainTradeString(szBuffer, ((TechTypes)(widgetDataStruct.m_iData1)), widgetDataStruct.m_iData2);
 	}

@@ -326,14 +326,9 @@ void CvXMLLoadUtility::ResetLandscapeInfo()
 //------------------------------------------------------------------------------------------------------
 void CvXMLLoadUtility::ResetGlobalEffectInfo()
 {
-	for (int i = 0; i < GC.getNumEffectInfos(); ++i)
-	{
-		SAFE_DELETE(GC.getEffectInfos()[i]);
-	}
+	GC.m_EffectInfo.clear();
 
-	GC.getEffectInfos().clear();
-
-	LoadGlobalClassInfo(GC.getEffectInfos(), "CIV4EffectInfos", "Misc", L"/Civ4EffectInfos/EffectInfos/EffectInfo", false);
+	LoadGlobalClassInfo(GC.m_EffectInfo.getVector(), "CIV4EffectInfos", "Misc", L"/Civ4EffectInfos/EffectInfos/EffectInfo", false);
 }
 
 

@@ -150,14 +150,14 @@ CyTeam* CyGlobalContext::getCyTeam(int i)
 }
 
 
-CvEffectInfo* CyGlobalContext::getEffectInfo(int /*EffectTypes*/ i) const
+const CvEffectInfo* CyGlobalContext::getEffectInfo(int /*EffectTypes*/ i) const
 {
-	return (i>=0 && i<GC.getNumEffectInfos()) ? &GC.getEffectInfo((EffectTypes) i) : NULL;
+	return i >= 0 && i < GC.numTypes<CvEffectInfo>() ? &GC.get<CvEffectInfo>(i) : NULL;
 }
 
-CvTerrainInfo* CyGlobalContext::getTerrainInfo(int /*TerrainTypes*/ i) const
+const CvTerrainInfo* CyGlobalContext::getTerrainInfo(int /*TerrainTypes*/ i) const
 {
-	return (i>=0 && i<GC.getNumTerrainInfos()) ? &GC.getTerrainInfo((TerrainTypes) i) : NULL;
+	return i >= 0 && i < GC.numTypes<CvTerrainInfo>() ? &GC.get<CvTerrainInfo>(i) : NULL;
 }
 
 CvBonusClassInfo* CyGlobalContext::getBonusClassInfo(int /*BonusClassTypes*/ i) const
@@ -391,9 +391,9 @@ CvProcessInfo* CyGlobalContext::getProcessInfo(int i) const
 	return (i>=0 && i<GC.getNumProcessInfos()) ? &GC.getProcessInfo((ProcessTypes) i) : NULL;
 }
 
-CvAnimationPathInfo* CyGlobalContext::getAnimationPathInfo(int i) const
+const CvAnimationPathInfo* CyGlobalContext::getAnimationPathInfo(int i) const
 {
-	return (i>=0 && i<GC.getNumAnimationPathInfos()) ? &GC.getAnimationPathInfo((AnimationPathTypes)i) : NULL;
+	return i >= 0 && i < GC.numTypes<CvAnimationPathInfo>() ? &GC.get<CvAnimationPathInfo>(i) : NULL;
 }
 
 
@@ -441,7 +441,7 @@ const CvClimateInfo* CyGlobalContext::getClimateInfo(int i) const
 
 const CvSeaLevelInfo* CyGlobalContext::getSeaLevelInfo(int i) const
 {
-	return i >= 0 && i < GC.numTypes<CvSeaLevelInfos>() ? &GC.get<CvSeaLevelInfo>(i) : NULL;
+	return i >= 0 && i < GC.numTypes<CvSeaLevelInfo>() ? &GC.get<CvSeaLevelInfo>(i) : NULL;
 }
 
 
@@ -451,9 +451,9 @@ CvInfoBase* CyGlobalContext::getUnitAIInfo(int i) const
 }
 
 
-CvColorInfo* CyGlobalContext::getColorInfo(int i) const
+const CvColorInfo* CyGlobalContext::getColorInfo(int i) const
 {
-	return (i>=0 && i<GC.getNumColorInfos()) ? &GC.getColorInfo((ColorTypes)i) : NULL;
+	return i >= 0 && i < GC.numTypes<CvColorInfo>() ? &GC.get<CvColorInfo>(i) : NULL;
 }
 
 CvPropertyInfo* CyGlobalContext::getPropertyInfo(int i) const
@@ -484,9 +484,9 @@ int CyGlobalContext::getTypesEnum(const char* szType) const
 }
 
 
-CvPlayerColorInfo* CyGlobalContext::getPlayerColorInfo(int i) const
+const CvPlayerColorInfo* CyGlobalContext::getPlayerColorInfo(int i) const
 {
-	return (i>=0 && i<GC.getNumPlayerColorInfos()) ? &GC.getPlayerColorInfo((PlayerColorTypes)i) : NULL;
+	return i >= 0 && i < GC.numTypes<CvPlayerColorInfo>() ? &GC.get<CvPlayerColorInfo>(i) : NULL;
 }
 
 

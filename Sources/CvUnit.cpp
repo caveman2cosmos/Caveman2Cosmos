@@ -181,30 +181,30 @@ m_Properties(this)
 		g_paiTempAfflictOnAttackTypeAttemptedCount = new int[GC.getNumPromotionLineInfos()];
 		g_paiTempDistanceAttackCommunicability = new int[GC.getNumPromotionLineInfos()];
 		g_pabTempValidBuildUp = new bool[GC.getNumPromotionLineInfos()];
-		g_paiTempTerrainDoubleMoveCount = new int[GC.getNumTerrainInfos()];
+		g_paiTempTerrainDoubleMoveCount = new int[GC.numTypes<CvTerrainInfo>()];
 		g_paiTempFeatureDoubleMoveCount = new int[GC.getNumFeatureInfos()];
-		g_paiTempExtraTerrainAttackPercent = new int[GC.getNumTerrainInfos()];
-		g_paiTempExtraTerrainDefensePercent = new int[GC.getNumTerrainInfos()];
+		g_paiTempExtraTerrainAttackPercent = new int[GC.numTypes<CvTerrainInfo>()];
+		g_paiTempExtraTerrainDefensePercent = new int[GC.numTypes<CvTerrainInfo>()];
 		g_paiTempExtraFeatureAttackPercent = new int[GC.getNumFeatureInfos()];
 		g_paiTempExtraFeatureDefensePercent = new int[GC.getNumFeatureInfos()];
 	//Team Project (4)
 	//WorkRateMod
 		//ls612: Terrain Work Modifiers
 		g_paiTempExtraBuildWorkPercent = new int [GC.getNumBuildInfos()];
-		g_paiTempTerrainWorkPercent = new int [GC.getNumTerrainInfos()];
+		g_paiTempTerrainWorkPercent = new int [GC.numTypes<CvTerrainInfo>()];
 		g_paiTempFeatureWorkPercent = new int [GC.getNumFeatureInfos()];
-		g_paiTempExtraTerrainWorkPercent = new int[GC.getNumTerrainInfos()];
+		g_paiTempExtraTerrainWorkPercent = new int[GC.numTypes<CvTerrainInfo>()];
 		g_paiTempExtraFeatureWorkPercent = new int[GC.getNumFeatureInfos()];
 		g_paiTempExtraUnitCombatModifier = new int[GC.getNumUnitCombatInfos()];
 		g_pabTempHasPromotion = new bool[GC.getNumPromotionInfos()];
 		g_pabTempHasUnitCombat = new bool[GC.getNumUnitCombatInfos()];
-		g_paiTempTerrainProtected = new int[GC.getNumTerrainInfos()];
+		g_paiTempTerrainProtected = new int[GC.numTypes<CvTerrainInfo>()];
 		g_paiTempSubCombatTypeCount = new int[GC.getNumUnitCombatInfos()];
 		g_paiTempOngoingTrainingCount = new int[GC.getNumUnitCombatInfos()];
 		g_paiTempRemovesUnitCombatTypeCount = new int[GC.getNumUnitCombatInfos()];
 		g_paiTempExtraFlankingStrengthbyUnitCombatType = new int[GC.getNumUnitCombatInfos()];
 		g_paiTempExtraWithdrawVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraWithdrawOnTerrainType = new int[GC.getNumTerrainInfos()];
+		g_paiTempExtraWithdrawOnTerrainType = new int[GC.numTypes<CvTerrainInfo>()];
 		g_paiTempExtraWithdrawOnFeatureType = new int[GC.getNumFeatureInfos()];
 		g_paiTempExtraPursuitVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
 		g_paiTempExtraRepelVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
@@ -1650,24 +1650,17 @@ void CvUnit::doTurn()
 		{
 			changeDamagePercent(plot()->getFeatureTurnDamage(), NO_PLAYER);
 		}
-/************************************************************************************************/
-/* Afforess	                  Start		 05/17/10                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 		if (plot()->getTerrainTurnDamage(this) != 0)
 		{
 			changeDamagePercent(plot()->getTerrainTurnDamage(this), NO_PLAYER);
 			//TB Combat Mod
-			if (GC.getTerrainInfo(plot()->getTerrainType()).isColdDamage())
+			if (GC.get<CvTerrainInfo>(plot()->getTerrainType()).isColdDamage())
 			{
 				changeColdDamage(plot()->getTerrainTurnDamage(this));
 			}
 			//TB Combat Mod
 		}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	}
 
 	bool bHasMoved = hasMoved();
@@ -17335,7 +17328,7 @@ int CvUnit::hillsDefenseModifier() const
 int CvUnit::terrainAttackModifier(TerrainTypes eTerrain) const
 {
 	FAssertMsg(eTerrain >= 0, "eTerrain is expected to be non-negative (invalid Index)");
-	FAssertMsg(eTerrain < GC.getNumTerrainInfos(), "eTerrain is expected to be within maximum bounds (invalid Index)");
+	FAssertMsg(eTerrain < GC.numTypes<CvTerrainInfo>(), "eTerrain is expected to be within maximum bounds (invalid Index)");
 	return (m_pUnitInfo->getTerrainAttackModifier(eTerrain) + getExtraTerrainAttackPercent(eTerrain));
 }
 
@@ -17343,7 +17336,7 @@ int CvUnit::terrainAttackModifier(TerrainTypes eTerrain) const
 int CvUnit::terrainDefenseModifier(TerrainTypes eTerrain) const
 {
 	FAssertMsg(eTerrain >= 0, "eTerrain is expected to be non-negative (invalid Index)");
-	FAssertMsg(eTerrain < GC.getNumTerrainInfos(), "eTerrain is expected to be within maximum bounds (invalid Index)");
+	FAssertMsg(eTerrain < GC.numTypes<CvTerrainInfo>(), "eTerrain is expected to be within maximum bounds (invalid Index)");
 	return (m_pUnitInfo->getTerrainDefenseModifier(eTerrain) + getExtraTerrainDefensePercent(eTerrain));
 }
 
@@ -22519,7 +22512,7 @@ void CvUnit::setScriptData(std::string szNewValue)
 int CvUnit::getTerrainDoubleMoveCount(TerrainTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumTerrainInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FAssertMsg(eIndex < GC.numTypes<CvTerrainInfo>(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
 	const TerrainKeyedInfo* info = findTerrainKeyedInfo(eIndex);
 
@@ -22530,7 +22523,7 @@ int CvUnit::getTerrainDoubleMoveCount(TerrainTypes eIndex) const
 bool CvUnit::isTerrainDoubleMove(TerrainTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumTerrainInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FAssertMsg(eIndex < GC.numTypes<CvTerrainInfo>(), "eIndex is expected to be within maximum bounds (invalid Index)");
 	return (getTerrainDoubleMoveCount(eIndex) > 0);
 }
 
@@ -22538,7 +22531,7 @@ bool CvUnit::isTerrainDoubleMove(TerrainTypes eIndex) const
 void CvUnit::changeTerrainDoubleMoveCount(TerrainTypes eIndex, int iChange)
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumTerrainInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FAssertMsg(eIndex < GC.numTypes<CvTerrainInfo>(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
 	if (iChange != 0)
 	{
@@ -22589,7 +22582,7 @@ void CvUnit::changeFeatureDoubleMoveCount(FeatureTypes eIndex, int iChange)
 int CvUnit::getExtraTerrainWorkPercent(TerrainTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumTerrainInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FAssertMsg(eIndex < GC.numTypes<CvTerrainInfo>(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
 	const TerrainKeyedInfo* info = findTerrainKeyedInfo(eIndex);
 
@@ -22603,7 +22596,7 @@ int CvUnit::getExtraTerrainWorkPercent(TerrainTypes eIndex) const
 int CvUnit::getTerrainWorkPercent(TerrainTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumTerrainInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FAssertMsg(eIndex < GC.numTypes<CvTerrainInfo>(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
 	const TerrainKeyedInfo* info = findTerrainKeyedInfo(eIndex);
 
@@ -22615,7 +22608,7 @@ int CvUnit::getTerrainWorkPercent(TerrainTypes eIndex) const
 void CvUnit::changeExtraTerrainWorkPercent(TerrainTypes eIndex, int iChange)
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumTerrainInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FAssertMsg(eIndex < GC.numTypes<CvTerrainInfo>(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
 	if (iChange != 0)
 	{
@@ -22705,7 +22698,7 @@ void CvUnit::changeExtraBuildWorkPercent(BuildTypes eIndex, int iChange)
 int CvUnit::terrainWorkPercent(TerrainTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumTerrainInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FAssertMsg(eIndex < GC.numTypes<CvTerrainInfo>(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
 	int iBaseAmount = m_pUnitInfo->getTerrainWorkRateModifierType(eIndex);
 	iBaseAmount += getExtraTerrainWorkPercent(eIndex);
@@ -22741,7 +22734,7 @@ int CvUnit::buildWorkPercent(BuildTypes eIndex) const
 int CvUnit::getExtraTerrainAttackPercent(TerrainTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumTerrainInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FAssertMsg(eIndex < GC.numTypes<CvTerrainInfo>(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
 	const TerrainKeyedInfo* info = findTerrainKeyedInfo(eIndex);
 
@@ -22767,7 +22760,7 @@ int CvUnit::getExtraTerrainAttackPercent(TerrainTypes eIndex) const
 void CvUnit::changeExtraTerrainAttackPercent(TerrainTypes eIndex, int iChange)
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumTerrainInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FAssertMsg(eIndex < GC.numTypes<CvTerrainInfo>(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
 	if (iChange != 0)
 	{
@@ -22782,7 +22775,7 @@ void CvUnit::changeExtraTerrainAttackPercent(TerrainTypes eIndex, int iChange)
 int CvUnit::getExtraTerrainDefensePercent(TerrainTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumTerrainInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FAssertMsg(eIndex < GC.numTypes<CvTerrainInfo>(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
 	const TerrainKeyedInfo* info = findTerrainKeyedInfo(eIndex);
 
@@ -22808,7 +22801,7 @@ int CvUnit::getExtraTerrainDefensePercent(TerrainTypes eIndex) const
 void CvUnit::changeExtraTerrainDefensePercent(TerrainTypes eIndex, int iChange)
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumTerrainInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FAssertMsg(eIndex < GC.numTypes<CvTerrainInfo>(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
 	if (iChange != 0)
 	{
@@ -24466,7 +24459,7 @@ void CvUnit::processUnitCombat(UnitCombatTypes eIndex, bool bAdding, bool bByPro
 	}
 
 	// int vector utilizing pairing without delayed resolution
-	for (iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+	for (iI = 0; iI < GC.numTypes<CvTerrainInfo>(); iI++)
 	{
 		changeExtraWithdrawOnTerrainType(((TerrainTypes)iI), (kUnitCombat.getWithdrawOnTerrainTypeChange(iI) * iChange));
 	}
@@ -25137,7 +25130,7 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 /* Afforess	                         END                                                        */
 /************************************************************************************************/
 
-	for (iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+	for (iI = 0; iI < GC.numTypes<CvTerrainInfo>(); iI++)
 	{
 		changeExtraTerrainAttackPercent(((TerrainTypes)iI), (kPromotion.getTerrainAttackPercent(iI) * iChange));
 		changeExtraTerrainDefensePercent(((TerrainTypes)iI), (kPromotion.getTerrainDefensePercent(iI) * iChange));
@@ -25751,11 +25744,11 @@ void CvUnit::read(FDataStreamBase* pStream)
 	}
 
 	//	Backward compatibility - read array format if present
-	for(iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+	for(iI = 0; iI < GC.numTypes<CvTerrainInfo>(); iI++)
 	{
 		g_paiTempTerrainProtected[iI] = 0;
 	}
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_TERRAINS, GC.getNumTerrainInfos(), g_paiTempTerrainProtected, "m_paiTerrainProtected");
+	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_TERRAINS, GC.numTypes<CvTerrainInfo>(), g_paiTempTerrainProtected, "m_paiTerrainProtected");
 
 	//	Read new format compressed data if present
 	do
@@ -25773,7 +25766,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 		}
 	} while(iI != -1);
 
-	for(iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+	for(iI = 0; iI < GC.numTypes<CvTerrainInfo>(); iI++)
 	{
 		if ( g_paiTempTerrainProtected[iI] != 0 )
 		{
@@ -25933,7 +25926,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	// This set of 3 types takes place in a group to help maintain older save game compatabilities
 	// Step 1: Clear
 	//	Backward compatibility - read array format if present
-	for(iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+	for(iI = 0; iI < GC.numTypes<CvTerrainInfo>(); iI++)
 	{
 		g_paiTempTerrainDoubleMoveCount[iI] = 0;
 		g_paiTempExtraTerrainAttackPercent[iI] = 0;
@@ -25958,10 +25951,10 @@ void CvUnit::read(FDataStreamBase* pStream)
 	}
 
 	//Step 2: Maintain Older Compat formats (Note: No need to extend these for new tags!)
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_TERRAINS, GC.getNumTerrainInfos(), g_paiTempTerrainDoubleMoveCount, "m_paiTerrainDoubleMoveCount");
+	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_TERRAINS, GC.numTypes<CvTerrainInfo>(), g_paiTempTerrainDoubleMoveCount, "m_paiTerrainDoubleMoveCount");
 	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_FEATURES, GC.getNumFeatureInfos(), g_paiTempFeatureDoubleMoveCount, "m_paiFeatureDoubleMoveCount");
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_TERRAINS, GC.getNumTerrainInfos(), g_paiTempExtraTerrainAttackPercent, "m_paiExtraTerrainAttackPercent");
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_TERRAINS, GC.getNumTerrainInfos(), g_paiTempExtraTerrainDefensePercent, "m_paiExtraTerrainDefensePercent");
+	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_TERRAINS, GC.numTypes<CvTerrainInfo>(), g_paiTempExtraTerrainAttackPercent, "m_paiExtraTerrainAttackPercent");
+	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_TERRAINS, GC.numTypes<CvTerrainInfo>(), g_paiTempExtraTerrainDefensePercent, "m_paiExtraTerrainDefensePercent");
 	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_FEATURES, GC.getNumFeatureInfos(), g_paiTempExtraFeatureAttackPercent, "m_paiExtraFeatureAttackPercent");
 	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_FEATURES, GC.getNumFeatureInfos(), g_paiTempExtraFeatureDefensePercent, "m_paiExtraFeatureDefensePercent");
 	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), g_paiTempExtraUnitCombatModifier, "m_paiExtraUnitCombatModifier");
@@ -25988,9 +25981,9 @@ void CvUnit::read(FDataStreamBase* pStream)
 		}
 	} while(iI != -1);
 
-	for(iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+	for (iI = 0; iI < GC.numTypes<CvTerrainInfo>(); iI++)
 	{
-		bool	bNonDefaultValue =
+		bool bNonDefaultValue =
 					(g_paiTempTerrainDoubleMoveCount[iI] != 0 ||
 					 g_paiTempExtraTerrainAttackPercent[iI] != 0 ||
 					 g_paiTempExtraTerrainDefensePercent[iI] != 0 ||
@@ -27117,11 +27110,11 @@ void CvUnit::read(FDataStreamBase* pStream)
 	}
 
 	//	Backward compatibility - read array format if present
-	for(iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+	for(iI = 0; iI < GC.numTypes<CvTerrainInfo>(); iI++)
 	{
 		g_paiTempExtraWithdrawOnTerrainType[iI] = 0;
 	}
-	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_TERRAINS, GC.getNumTerrainInfos(), g_paiTempExtraWithdrawOnTerrainType, "m_paiTempExtraWithdrawOnTerrainType");
+	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_TERRAINS, GC.numTypes<CvTerrainInfo>(), g_paiTempExtraWithdrawOnTerrainType, "m_paiTempExtraWithdrawOnTerrainType");
 
 	//	Read new format compressed data if present
 	do
@@ -27139,9 +27132,9 @@ void CvUnit::read(FDataStreamBase* pStream)
 		}
 	} while(iI != -1);
 
-	for(iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+	for (iI = 0; iI < GC.numTypes<CvTerrainInfo>(); iI++)
 	{
-		if ( g_paiTempExtraWithdrawOnTerrainType[iI] != 0 )
+		if (g_paiTempExtraWithdrawOnTerrainType[iI] != 0)
 		{
 			TerrainKeyedInfo* info = findOrCreateTerrainKeyedInfo((TerrainTypes)iI);
 
@@ -27669,9 +27662,9 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_bAutoUpgrading);
 
 	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+	for (iI = 0; iI < GC.numTypes<CvTerrainInfo>(); iI++)
 	{
-		if ( getTerrainProtectedCount((TerrainTypes)iI) != 0 )
+		if (getTerrainProtectedCount((TerrainTypes)iI) != 0)
 		{
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasTerrainProtection");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getTerrainProtectedCount((TerrainTypes)iI), "value");
@@ -27753,7 +27746,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 	}
 
 	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+	for(iI = 0; iI < GC.numTypes<CvTerrainInfo>(); iI++)
 	{
 		if ( getTerrainDoubleMoveCount((TerrainTypes)iI) != 0 ||
 			 getExtraTerrainAttackPercent((TerrainTypes)iI) != 0 ||
@@ -28174,9 +28167,9 @@ void CvUnit::write(FDataStreamBase* pStream)
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraPursuitVSUnitCombatType((UnitCombatTypes)iI), "extraPursuitVSUnitCombatType");
 		}
 	}
-	for(iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+	for (iI = 0; iI < GC.numTypes<CvTerrainInfo>(); iI++)
 	{
-		if ( getExtraWithdrawOnTerrainType((TerrainTypes)iI) != 0 )
+		if (getExtraWithdrawOnTerrainType((TerrainTypes)iI) != 0)
 		{
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasTerrainInfo");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraWithdrawOnTerrainType((TerrainTypes)iI), "extraWithdrawOnTerrainType");
@@ -34567,14 +34560,14 @@ int CvUnit::getRandomMinExperienceTimes100() const
 bool CvUnit::isTerrainProtected(TerrainTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumTerrainInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FAssertMsg(eIndex < GC.numTypes<CvTerrainInfo>(), "eIndex is expected to be within maximum bounds (invalid Index)");
 	return getTerrainProtectedCount(eIndex) > 0;
 }
 
 int CvUnit::getTerrainProtectedCount(TerrainTypes eIndex, bool bIgnoreCommanders) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumTerrainInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FAssertMsg(eIndex < GC.numTypes<CvTerrainInfo>(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
 	const TerrainKeyedInfo* info = findTerrainKeyedInfo(eIndex);
 
@@ -34600,7 +34593,7 @@ int CvUnit::getTerrainProtectedCount(TerrainTypes eIndex, bool bIgnoreCommanders
 void CvUnit::changeTerrainProtected(TerrainTypes eIndex, int iChange)
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumTerrainInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FAssertMsg(eIndex < GC.numTypes<CvTerrainInfo>(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
 	if (iChange != 0)
 	{
@@ -38931,7 +38924,7 @@ int CvUnit::withdrawOnTerrainTotal(TerrainTypes eTerrainType) const
 int CvUnit::getExtraWithdrawOnTerrainType(TerrainTypes eIndex) const
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumTerrainInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FAssertMsg(eIndex < GC.numTypes<CvTerrainInfo>(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
 	const TerrainKeyedInfo* info = findTerrainKeyedInfo(eIndex);
 
@@ -38957,7 +38950,7 @@ int CvUnit::getExtraWithdrawOnTerrainType(TerrainTypes eIndex) const
 void CvUnit::changeExtraWithdrawOnTerrainType(TerrainTypes eIndex, int iChange)
 {
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eIndex < GC.getNumTerrainInfos(), "eIndex is expected to be within maximum bounds (invalid Index)");
+	FAssertMsg(eIndex < GC.numTypes<CvTerrainInfo>(), "eIndex is expected to be within maximum bounds (invalid Index)");
 
 	if (iChange != 0)
 	{
@@ -39687,7 +39680,7 @@ int CvUnit::withdrawVSOpponentProbTotal(const CvUnit* pOpponent, const CvPlot* p
 		}
 	}
 
-	for (int iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+	for (int iI = 0; iI < GC.numTypes<CvTerrainInfo>(); iI++)
 	{
 		if (eTerrain == (TerrainTypes)iI ||
 			(bPeak && (TerrainTypes)iI == CvTerrainInfo::getTerrainPeak()) ||

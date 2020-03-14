@@ -1840,15 +1840,15 @@ void CvInitCore::read(FDataStreamBase* pStream)
 	//	Similarly if no Civ yet the slot status implies there should be assign a new one
 	if (wrapper.isUsingTaggedFormat())
 	{
-		bool	bWarned = false;
+		bool bWarned = false;
 
 		for(int i = 0; i < MAX_PLAYERS; i++)
 		{
-			if ( m_aeColor[i] >= GC.getNumPlayerColorInfos() )
+			if (m_aeColor[i] >= GC.numTypes<CvPlayerColorInfo>())
 			{
-				for(int j = 0; j < GC.getNumPlayerColorInfos(); j++)
+				for(int j = 0; j < GC.numTypes<CvPlayerColorInfo>(); j++)
 				{
-					bool	colorUsed = false;
+					bool colorUsed = false;
 
 					for(int k = 0; k < MAX_PLAYERS; k++)
 					{

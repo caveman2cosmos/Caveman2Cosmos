@@ -13333,7 +13333,7 @@ int CvUnitAI::AI_promotionValue(PromotionTypes ePromotion)
 //		iValue += (iTemp / 64);
 //	}
 //
-//	for (iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+//	for (iI = 0; iI < GC.numTypes<CvTerrainInfo>(); iI++)
 //	{
 //		iTemp = GC.getPromotionInfo(ePromotion).getTerrainAttackPercent(iI);
 //		if (iTemp != 0)
@@ -24876,7 +24876,7 @@ bool CvUnitAI::AI_improveCity(CvCity* pCity)
 			}
 			else if (plot()->getRouteType() == NO_ROUTE)
 			{
-				int iPlotMoveCost = GC.getTerrainInfo(plot()->getTerrainType()).getMovementCost();
+				int iPlotMoveCost = GC.get<CvTerrainInfo>(plot()->getTerrainType()).getMovementCost();
 
 				if (plot()->getFeatureType() != NO_FEATURE)
 				{
@@ -25000,7 +25000,7 @@ bool CvUnitAI::AI_improveLocalPlot(int iRange, CvCity* pIgnoreCity)
 		}
 		else if (plot()->getRouteType() == NO_ROUTE)
 		{
-			int iPlotMoveCost = GC.getTerrainInfo(plot()->getTerrainType()).getMovementCost();
+			int iPlotMoveCost = GC.get<CvTerrainInfo>(plot()->getTerrainType()).getMovementCost();
 
 			if (plot()->getFeatureType() != NO_FEATURE)
 			{
@@ -33671,10 +33671,10 @@ int	CvUnitAI::AI_genericUnitValueTimes100(UnitValueFlags eFlags) const
 				if ( (eFlags & UNITVALUE_FLAGS_DEFENSIVE) != 0 )
 				{
 					//	Terrain defense
-					for(int iJ = 0; iJ < GC.getNumTerrainInfos(); iJ++)
+					for (int iJ = 0; iJ < GC.numTypes<CvTerrainInfo>(); iJ++)
 					{
-						if ( kPromotion.getTerrainDefensePercent((TerrainTypes)iJ) != 0 ||
-							 kPromotion.getIgnoreTerrainDamage() == iJ )
+						if (kPromotion.getTerrainDefensePercent((TerrainTypes)iJ) != 0 ||
+							kPromotion.getIgnoreTerrainDamage() == iJ)
 						{
 							int iNumRevealedAreaTiles = std::max(1, area()->getNumRevealedTiles(getTeam()));
 							int	iNumRevealedAreaThisTerrain = area()->getNumRevealedTerrainTiles(getTeam(), (TerrainTypes)iJ);
@@ -33819,10 +33819,10 @@ int	CvUnitAI::AI_genericUnitValueTimes100(UnitValueFlags eFlags) const
 					}
 
 					//	Terrain attack
-					for(int iJ = 0; iJ < GC.getNumTerrainInfos(); iJ++)
+					for (int iJ = 0; iJ < GC.numTypes<CvTerrainInfo>(); iJ++)
 					{
-						if ( kPromotion.getTerrainAttackPercent((TerrainTypes)iJ) != 0 ||
-							 kPromotion.getIgnoreTerrainDamage() == iJ )
+						if (kPromotion.getTerrainAttackPercent((TerrainTypes)iJ) != 0 ||
+							kPromotion.getIgnoreTerrainDamage() == iJ)
 						{
 							int iNumRevealedAreaTiles = std::max(1, area()->getNumRevealedTiles(getTeam()));
 							int	iNumRevealedAreaThisTerrain = area()->getNumRevealedTerrainTiles(getTeam(), (TerrainTypes)iJ);

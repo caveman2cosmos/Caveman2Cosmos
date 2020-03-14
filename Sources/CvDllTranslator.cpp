@@ -64,13 +64,12 @@ void CvDllTranslator::initializeTags(CvWString& szTagStartIcon, CvWString& szTag
 		aIconMap[szType] = std::wstring(1, (wchar)GC.getPropertyInfo((PropertyTypes)i).getChar());
 	}
 
-
 	//create color map
 	aColorMap[L"[COLOR_REVERT]"] = CvWString(L"</color>");
-	for(int i=0; i < GC.getNumColorInfos(); i++)
+	for(int i = 0; i < GC.numTypes<CvColorInfo>(); i++)
 	{
-		const NiColorA& color = GC.getColorInfo((ColorTypes) i).getColor();
-		CvWString colorType(GC.getColorInfo((ColorTypes) i).getType());
+		const NiColorA& color = GC.get<CvColorInfo>(i).getColor();
+		CvWString colorType(GC.get<CvColorInfo>(i).getType());
 		CvWString wideColorType;
 		wideColorType.Format(L"[%s]", colorType.GetCString());
 		CvWString colorOut;

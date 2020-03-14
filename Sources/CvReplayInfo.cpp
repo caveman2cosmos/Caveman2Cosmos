@@ -130,7 +130,7 @@ void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 
 			PlayerInfo playerInfo;
 			playerInfo.m_eLeader = player.getLeaderType();
-			playerInfo.m_eColor = (ColorTypes)GC.getPlayerColorInfo(player.getPlayerColor()).getColorTypePrimary();
+			playerInfo.m_eColor = (ColorTypes)GC.get<CvPlayerColorInfo>(player.getPlayerColor()).getColorTypePrimary();
 			for (int iTurn = m_iInitialTurn; iTurn <= m_iFinalTurn; iTurn++)
 			{
 				TurnData score;

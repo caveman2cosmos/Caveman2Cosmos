@@ -455,7 +455,7 @@ void BoolExprHas::buildDisplayString(CvWStringBuffer &szBuffer) const
 			szBuffer.append(CvWString::format(L"<link=%s>%s</link>", CvWString(GC.getGameOptionInfo((GameOptionTypes)m_iID).getType()).GetCString(), GC.getGameOptionInfo((GameOptionTypes)m_iID).getDescription()));
 			break;
 		case GOM_TERRAIN:
-			szBuffer.append(CvWString::format(L"<link=%s>%s</link>", CvWString(GC.getTerrainInfo((TerrainTypes)m_iID).getType()).GetCString(), GC.getTerrainInfo((TerrainTypes)m_iID).getDescription()));
+			szBuffer.append(CvWString::format(L"<link=%s>%s</link>", CvWString(GC.get<CvTerrainInfo>(m_iID).getType()).GetCString(), GC.get<CvTerrainInfo>(m_iID).getDescription()));
 			break;
 		case GOM_GAMESPEED:
 			szBuffer.append(CvWString::format(L"<link=%s>%s</link>", CvWString(GC.getGameSpeedInfo((GameSpeedTypes)m_iID).getType()).GetCString(), GC.getGameSpeedInfo((GameSpeedTypes)m_iID).getDescription()));

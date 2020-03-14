@@ -2179,7 +2179,7 @@ bool CvTechInfo::read(CvXMLLoadUtility* pXML)
 	}
 
 	pXML->SetVariableListTagPair(&m_piDomainExtraMoves, L"DomainExtraMoves", NUM_DOMAIN_TYPES);
-	pXML->SetVariableListTagPair(&m_pbTerrainTrade, L"TerrainTrades", GC.getNumTerrainInfos(), false);
+	pXML->SetVariableListTagPair(&m_pbTerrainTrade, L"TerrainTrades", GC.numTypes<CvTerrainInfo>(), false);
 	//ls612: Tech Commerce Modifiers
 	if (pXML->TryMoveToXmlFirstChild(L"CommerceModifiers"))
 	{
@@ -2471,14 +2471,14 @@ void CvTechInfo::copyNonDefaults(CvTechInfo* pClassInfo, CvXMLLoadUtility* pXML)
 			m_piDomainExtraMoves[j] = pClassInfo->getDomainExtraMoves(j);
 		}
 	}
-	for ( int j = 0; j < GC.getNumTerrainInfos(); j++)
+	for ( int j = 0; j < GC.numTypes<CvTerrainInfo>(); j++)
 	{
 		if ((m_pbTerrainTrade == NULL || m_pbTerrainTrade[j] == bDefault) &&
 			pClassInfo->isTerrainTrade(j) != bDefault)
 		{
-			if ( m_pbTerrainTrade == NULL )
+			if (m_pbTerrainTrade == NULL)
 			{
-				CvXMLLoadUtility::InitList(&m_pbTerrainTrade,GC.getNumTerrainInfos(),bDefault);
+				CvXMLLoadUtility::InitList(&m_pbTerrainTrade, GC.numTypes<CvTerrainInfo>(), bDefault);
 			}
 			m_pbTerrainTrade[j] = pClassInfo->isTerrainTrade(j);
 		}
@@ -2720,7 +2720,7 @@ void CvTechInfo::getCheckSum(unsigned int& iSum)
 	CheckSum(iSum, m_piPrereqOrTechs, GC.getNUM_OR_TECH_PREREQS());
 	CheckSum(iSum, m_piPrereqAndTechs, GC.getNUM_AND_TECH_PREREQS());
 	CheckSum(iSum, m_pbCommerceFlexible, NUM_COMMERCE_TYPES);
-	CheckSum(iSum, m_pbTerrainTrade, GC.getNumTerrainInfos());
+	CheckSum(iSum, m_pbTerrainTrade, GC.numTypes<CvTerrainInfo>());
 	//ls612: Tech Commerce Modifiers
 	CheckSum(iSum, m_piCommerceModifier, NUM_COMMERCE_TYPES);
 
@@ -3506,7 +3506,7 @@ bool CvPromotionInfo::changesMoveThroughPlots() const
 
 int CvPromotionInfo::getTerrainAttackPercent(int i) const
 {
-	FAssertMsg(i < GC.getNumTerrainInfos(), "Index out of bounds");
+	FAssertMsg(i < GC.numTypes<CvTerrainInfo>(), "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
 	return m_piTerrainAttackPercent ? m_piTerrainAttackPercent[i] : 0;
 }
@@ -3518,7 +3518,7 @@ bool CvPromotionInfo::isAnyTerrainAttackPercent() const
 
 int CvPromotionInfo::getTerrainDefensePercent(int i) const
 {
-	FAssertMsg(i < GC.getNumTerrainInfos(), "Index out of bounds");
+	FAssertMsg(i < GC.numTypes<CvTerrainInfo>(), "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
 	return m_piTerrainDefensePercent ? m_piTerrainDefensePercent[i] : 0;
 }
@@ -3578,7 +3578,7 @@ bool CvPromotionInfo::isAnyDomainModifierPercent() const
 
 bool CvPromotionInfo::getTerrainDoubleMove(int i) const
 {
-	FAssertMsg(i < GC.getNumTerrainInfos(), "Index out of bounds");
+	FAssertMsg(i < GC.numTypes<CvTerrainInfo>(), "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
 	return m_pbTerrainDoubleMove ? m_pbTerrainDoubleMove[i] : false;
 }
@@ -3599,7 +3599,7 @@ bool CvPromotionInfo::getUnitCombat(int i) const
 //ls612: Terrain Work Modifiers
 int CvPromotionInfo::getTerrainWorkPercent(int i) const
 {
-	FAssertMsg(i < GC.getNumTerrainInfos(), "Index out of bounds");
+	FAssertMsg(i < GC.numTypes<CvTerrainInfo>(), "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
 	return m_piTerrainWorkPercent ? m_piTerrainWorkPercent[i] : 0;
 }
@@ -5932,18 +5932,18 @@ bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 /**  TheLadiesOgre; 16.09.2009; TLOTags															 **/
 /*****************************************************************************************************/
 
-	pXML->SetVariableListTagPair(&m_piTerrainAttackPercent, L"TerrainAttacks", GC.getNumTerrainInfos());
-	pXML->SetVariableListTagPair(&m_piTerrainDefensePercent, L"TerrainDefenses", GC.getNumTerrainInfos());
+	pXML->SetVariableListTagPair(&m_piTerrainAttackPercent, L"TerrainAttacks", GC.numTypes<CvTerrainInfo>());
+	pXML->SetVariableListTagPair(&m_piTerrainDefensePercent, L"TerrainDefenses", GC.numTypes<CvTerrainInfo>());
 	pXML->SetVariableListTagPair(&m_piFeatureAttackPercent, L"FeatureAttacks", GC.getNumFeatureInfos());
 	pXML->SetVariableListTagPair(&m_piFeatureDefensePercent, L"FeatureDefenses", GC.getNumFeatureInfos());
 	pXML->SetVariableListTagPair(&m_piUnitCombatModifierPercent, L"UnitCombatMods", GC.getNumUnitCombatInfos());
 	pXML->SetVariableListTagPair(&m_piDomainModifierPercent, L"DomainMods", NUM_DOMAIN_TYPES);
 
-	pXML->SetVariableListTagPair(&m_pbTerrainDoubleMove, L"TerrainDoubleMoves", GC.getNumTerrainInfos());
+	pXML->SetVariableListTagPair(&m_pbTerrainDoubleMove, L"TerrainDoubleMoves", GC.numTypes<CvTerrainInfo>());
 	pXML->SetVariableListTagPair(&m_pbFeatureDoubleMove, L"FeatureDoubleMoves", GC.getNumFeatureInfos());
 	pXML->SetVariableListTagPair(&m_pbUnitCombat, L"UnitCombats", GC.getNumUnitCombatInfos());
 	//ls612: Terrain Work Modifiers
-	pXML->SetVariableListTagPair(&m_piTerrainWorkPercent, L"TerrainWorks", GC.getNumTerrainInfos());
+	pXML->SetVariableListTagPair(&m_piTerrainWorkPercent, L"TerrainWorks", GC.numTypes<CvTerrainInfo>());
 	pXML->SetVariableListTagPair(&m_piFeatureWorkPercent, L"FeatureWorks", GC.getNumFeatureInfos());
 
 /************************************************************************************************/
@@ -6652,34 +6652,34 @@ void CvPromotionInfo::copyNonDefaults(CvPromotionInfo* pClassInfo, CvXMLLoadUtil
 	if (getExperiencePercent() == iDefault) m_iExperiencePercent = pClassInfo->getExperiencePercent();
 	if (getKamikazePercent() == iDefault) m_iKamikazePercent = pClassInfo->getKamikazePercent();
 
-	for (int j = 0; j < GC.getNumTerrainInfos(); j++)
+	for (int j = 0; j < GC.numTypes<CvTerrainInfo>(); j++)
 	{
 		if ((m_piTerrainAttackPercent == NULL || m_piTerrainAttackPercent[j] == iDefault) &&
 			pClassInfo->getTerrainAttackPercent(j) != iDefault)
 		{
 			if ( m_piTerrainAttackPercent == NULL )
 			{
-				CvXMLLoadUtility::InitList(&m_piTerrainAttackPercent,GC.getNumTerrainInfos(),iDefault);
+				CvXMLLoadUtility::InitList(&m_piTerrainAttackPercent, GC.numTypes<CvTerrainInfo>(), iDefault);
 			}
 			m_piTerrainAttackPercent[j] = pClassInfo->getTerrainAttackPercent(j);
 		}
 
-		if ((m_piTerrainDefensePercent == NULL ||m_piTerrainDefensePercent[j] == iDefault) &&
+		if ((m_piTerrainDefensePercent == NULL || m_piTerrainDefensePercent[j] == iDefault) &&
 			pClassInfo->getTerrainDefensePercent(j) != iDefault)
 		{
 			if ( m_piTerrainDefensePercent == NULL )
 			{
-				CvXMLLoadUtility::InitList(&m_piTerrainDefensePercent,GC.getNumTerrainInfos(),iDefault);
+				CvXMLLoadUtility::InitList(&m_piTerrainDefensePercent, GC.numTypes<CvTerrainInfo>(), iDefault);
 			}
 			m_piTerrainDefensePercent[j] = pClassInfo->getTerrainDefensePercent(j);
 		}
 
-		if ((m_pbTerrainDoubleMove == NULL ||m_pbTerrainDoubleMove[j] == bDefault) &&
+		if ((m_pbTerrainDoubleMove == NULL || m_pbTerrainDoubleMove[j] == bDefault) &&
 			pClassInfo->getTerrainDoubleMove(j) != bDefault)
 		{
-			if ( m_pbTerrainDoubleMove == NULL )
+			if (m_pbTerrainDoubleMove == NULL)
 			{
-				CvXMLLoadUtility::InitList(&m_pbTerrainDoubleMove,GC.getNumTerrainInfos(),bDefault);
+				CvXMLLoadUtility::InitList(&m_pbTerrainDoubleMove, GC.numTypes<CvTerrainInfo>(), bDefault);
 			}
 			m_pbTerrainDoubleMove[j] = pClassInfo->getTerrainDoubleMove(j);
 		}
@@ -6688,9 +6688,9 @@ void CvPromotionInfo::copyNonDefaults(CvPromotionInfo* pClassInfo, CvXMLLoadUtil
 		if ((m_piTerrainWorkPercent == NULL || m_piTerrainWorkPercent[j] == iDefault) &&
 			pClassInfo->getTerrainWorkPercent(j) != iDefault)
 		{
-			if ( m_piTerrainWorkPercent == NULL )
+			if (m_piTerrainWorkPercent == NULL)
 			{
-				CvXMLLoadUtility::InitList(&m_piTerrainWorkPercent,GC.getNumTerrainInfos(),iDefault);
+				CvXMLLoadUtility::InitList(&m_piTerrainWorkPercent, GC.numTypes<CvTerrainInfo>(), iDefault);
 			}
 			m_piTerrainWorkPercent[j] = pClassInfo->getTerrainWorkPercent(j);
 		}
@@ -7615,17 +7615,17 @@ void CvPromotionInfo::getCheckSum(unsigned int &iSum)
 
 	// Arrays
 
-	CheckSum(iSum, m_piTerrainAttackPercent, GC.getNumTerrainInfos());
-	CheckSum(iSum, m_piTerrainDefensePercent, GC.getNumTerrainInfos());
+	CheckSum(iSum, m_piTerrainAttackPercent, GC.numTypes<CvTerrainInfo>());
+	CheckSum(iSum, m_piTerrainDefensePercent, GC.numTypes<CvTerrainInfo>());
 	CheckSum(iSum, m_piFeatureAttackPercent, GC.getNumFeatureInfos());
 	CheckSum(iSum, m_piFeatureDefensePercent, GC.getNumFeatureInfos());
 	CheckSum(iSum, m_piUnitCombatModifierPercent, GC.getNumUnitCombatInfos());
 	CheckSum(iSum, m_piDomainModifierPercent, NUM_DOMAIN_TYPES);
-	CheckSum(iSum, m_pbTerrainDoubleMove, GC.getNumTerrainInfos());
+	CheckSum(iSum, m_pbTerrainDoubleMove, GC.numTypes<CvTerrainInfo>());
 	CheckSum(iSum, m_pbFeatureDoubleMove, GC.getNumFeatureInfos());
 	CheckSum(iSum, m_pbUnitCombat, GC.getNumUnitCombatInfos());
 	//ls612: Terrain Work Modifiers
-	CheckSum(iSum, m_piTerrainWorkPercent, GC.getNumTerrainInfos());
+	CheckSum(iSum, m_piTerrainWorkPercent, GC.numTypes<CvTerrainInfo>());
 	CheckSum(iSum, m_piFeatureWorkPercent, GC.getNumFeatureInfos());
 
 	CheckSum(iSum, m_bCanMovePeaks);
@@ -9911,7 +9911,7 @@ CvCivicInfo::~CvCivicInfo()
 	SAFE_DELETE_ARRAY2(m_ppiBuildingCommerceModifier, GC.getNumBuildingInfos());
 	SAFE_DELETE_ARRAY2(m_ppiBuildingCommerceChange, GC.getNumBuildingInfos());
 	SAFE_DELETE_ARRAY2(m_ppiBonusCommerceModifier, GC.getNumBonusInfos());
-	SAFE_DELETE_ARRAY2(m_ppiTerrainYieldChanges, GC.getNumTerrainInfos());
+	SAFE_DELETE_ARRAY2(m_ppiTerrainYieldChanges, GC.numTypes<CvTerrainInfo>());
 	SAFE_DELETE_ARRAY2(m_ppiSpecialistYieldPercentChanges, GC.getNumSpecialistInfos());
 	SAFE_DELETE_ARRAY2(m_ppiSpecialistCommercePercentChanges, GC.getNumSpecialistInfos());
 }
@@ -10640,7 +10640,7 @@ int CvCivicInfo::getImprovementYieldChanges(int i, int j) const
 
 int CvCivicInfo::getTerrainYieldChanges(int i, int j) const
 {
-	FAssertMsg(i < GC.getNumTerrainInfos(), "Index out of bounds");
+	FAssertMsg(i < GC.numTypes<CvTerrainInfo>(), "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
 	FAssertMsg(j < NUM_YIELD_TYPES, "Index out of bounds");
 	FAssertMsg(j > -1, "Index out of bounds");
@@ -10907,7 +10907,7 @@ void CvCivicInfo::getCheckSum(unsigned int& iSum)
 
 	if (m_ppiTerrainYieldChanges)
 	{
-		for(i=0;i<GC.getNumTerrainInfos();i++)
+		for (int i = 0; i < GC.numTypes<CvTerrainInfo>(); i++)
 		{
 			CheckSumI(iSum, NUM_YIELD_TYPES, m_ppiTerrainYieldChanges[i]);
 		}
@@ -11330,7 +11330,7 @@ bool CvCivicInfo::read(CvXMLLoadUtility* pXML)
 		pXML->MoveToXmlParent();
 	}
 
-	FAssertMsg((GC.getNumTerrainInfos() > 0) && (NUM_YIELD_TYPES) > 0,"either the number of terrain infos is zero or less or the number of yield types is zero or less");
+	FAssertMsg((GC.numTypes<CvTerrainInfo>() > 0) && (NUM_YIELD_TYPES) > 0,"either the number of terrain infos is zero or less or the number of yield types is zero or less");
 	if (pXML->TryMoveToXmlFirstChild(L"TerrainYieldChanges"))
 	{
 		iNumSibs = pXML->GetXmlChildrenNumber();
@@ -11338,7 +11338,7 @@ bool CvCivicInfo::read(CvXMLLoadUtility* pXML)
 		{
 			if (0 < iNumSibs)
 			{
-				pXML->Init2DIntList(&m_ppiTerrainYieldChanges, GC.getNumTerrainInfos(), NUM_YIELD_TYPES);
+				pXML->Init2DIntList(&m_ppiTerrainYieldChanges, GC.numTypes<CvTerrainInfo>(), NUM_YIELD_TYPES);
 				for (j=0;j<iNumSibs;j++)
 				{
 					pXML->GetChildXmlValByName(szTextVal, L"TerrainType");
@@ -11966,21 +11966,21 @@ void CvCivicInfo::copyNonDefaults(CvCivicInfo* pClassInfo, CvXMLLoadUtility* pXM
 		}
 	}
 
-	for ( int i = 0; i < GC.getNumTerrainInfos(); i++ )
+	for (int i = 0; i < GC.numTypes<CvTerrainInfo>(); i++)
 	{
-		for ( int j = 0; j < NUM_YIELD_TYPES; j++ )
+		for (int j = 0; j < NUM_YIELD_TYPES; j++)
 		{
-			if ( getTerrainYieldChanges(i,j) == iDefault && pClassInfo->getTerrainYieldChanges(i,j) != iDefault)
+			if (getTerrainYieldChanges(i, j) == iDefault && pClassInfo->getTerrainYieldChanges(i, j) != iDefault)
 			{
-				if ( NULL == m_ppiTerrainYieldChanges)
+				if (NULL == m_ppiTerrainYieldChanges)
 				{
-					pXML->Init2DIntList(&m_ppiTerrainYieldChanges, GC.getNumTerrainInfos(), NUM_YIELD_TYPES);
+					pXML->Init2DIntList(&m_ppiTerrainYieldChanges, GC.numTypes<CvTerrainInfo>(), NUM_YIELD_TYPES);
 				}
-				else if ( NULL == m_ppiTerrainYieldChanges[i] )
+				else if (NULL == m_ppiTerrainYieldChanges[i])
 				{
-					CvXMLLoadUtility::InitList(&m_ppiTerrainYieldChanges[i],NUM_YIELD_TYPES,iDefault);
+					CvXMLLoadUtility::InitList(&m_ppiTerrainYieldChanges[i], NUM_YIELD_TYPES,iDefault);
 				}
-				m_ppiTerrainYieldChanges[i][j] = pClassInfo->getTerrainYieldChanges(i,j);
+				m_ppiTerrainYieldChanges[i][j] = pClassInfo->getTerrainYieldChanges(i, j);
 			}
 		}
 	}
@@ -16775,7 +16775,7 @@ int* CvImprovementInfo::getIrrigatedYieldChangeArray() const
 
 bool CvImprovementInfo::getTerrainMakesValid(int i) const
 {
-	FAssertMsg(i < GC.getNumTerrainInfos(), "Index out of bounds");
+	FAssertMsg(i < GC.numTypes<CvTerrainInfo>(), "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
 	return m_pbTerrainMakesValid ? m_pbTerrainMakesValid[i] : false;
 }
@@ -17109,7 +17109,7 @@ void CvImprovementInfo::getCheckSum(unsigned int &iSum)
 	CheckSumI(iSum, NUM_YIELD_TYPES, m_piRiverSideYieldChange);
 	CheckSumI(iSum, NUM_YIELD_TYPES, m_piHillsYieldChange);
 	CheckSumI(iSum, NUM_YIELD_TYPES, m_piIrrigatedChange);
-	CheckSumI(iSum, GC.getNumTerrainInfos(), m_pbTerrainMakesValid);
+	CheckSumI(iSum, GC.numTypes<CvTerrainInfo>(), m_pbTerrainMakesValid);
 	CheckSumI(iSum, GC.getNumFeatureInfos(), m_pbFeatureMakesValid);
 
 	int i;
@@ -17265,7 +17265,7 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bIsZOCSource, L"bIsZOCSource");
 	// Super forts C2C adaptation end
 
-	pXML->SetVariableListTagPair(&m_pbTerrainMakesValid, L"TerrainMakesValids", GC.getNumTerrainInfos());
+	pXML->SetVariableListTagPair(&m_pbTerrainMakesValid, L"TerrainMakesValids", GC.numTypes<CvTerrainInfo>());
 	pXML->SetVariableListTagPair(&m_pbFeatureMakesValid, L"FeatureMakesValids", GC.getNumFeatureInfos());
 
 	pXML->SetOptionalIntVector(&m_aiMapCategoryTypes, L"MapCategoryTypes");
@@ -17570,13 +17570,13 @@ void CvImprovementInfo::copyNonDefaults(CvImprovementInfo* pClassInfo, CvXMLLoad
 	if (isPermanent() == bDefault) m_bPermanent = pClassInfo->isPermanent();
 	if (isOutsideBorders() == bDefault) m_bOutsideBorders = pClassInfo->isOutsideBorders();
 
-	for ( int i = 0; i < GC.getNumTerrainInfos(); i++)
+	for (int i = 0; i < GC.numTypes<CvTerrainInfo>(); i++)
 	{
 		if (getTerrainMakesValid(i) == bDefault && pClassInfo->getTerrainMakesValid(i) != bDefault)
 		{
-			if ( NULL == m_pbTerrainMakesValid )
+			if (NULL == m_pbTerrainMakesValid)
 			{
-				CvXMLLoadUtility::InitList(&m_pbTerrainMakesValid,GC.getNumTerrainInfos(),bDefault);
+				CvXMLLoadUtility::InitList(&m_pbTerrainMakesValid, GC.numTypes<CvTerrainInfo>(), bDefault);
 			}
 			m_pbTerrainMakesValid[i] = pClassInfo->getTerrainMakesValid(i);
 		}
@@ -18083,7 +18083,7 @@ int CvBonusInfo::getImprovementChange(int i) const
 
 bool CvBonusInfo::isTerrain(int i) const
 {
-	FAssertMsg(i < GC.getNumTerrainInfos(), "Index out of bounds");
+	FAssertMsg(i < GC.numTypes<CvTerrainInfo>(), "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
 	return m_pbTerrain ?	m_pbTerrain[i] : false;
 }
@@ -18097,7 +18097,7 @@ bool CvBonusInfo::isFeature(int i) const
 
 bool CvBonusInfo::isFeatureTerrain(int i) const
 {
-	FAssertMsg(i < GC.getNumTerrainInfos(), "Index out of bounds");
+	FAssertMsg(i < GC.numTypes<CvTerrainInfo>(), "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
 	return m_pbFeatureTerrain ?	m_pbFeatureTerrain[i] : false;
 }
@@ -18219,9 +18219,9 @@ void CvBonusInfo::getCheckSum(unsigned int &iSum)
 
 	CheckSumI(iSum, NUM_YIELD_TYPES, m_piYieldChange);
 	CheckSumI(iSum, GC.getNumImprovementInfos(), m_piImprovementChange);
-	CheckSumI(iSum, GC.getNumTerrainInfos(), m_pbTerrain);
+	CheckSumI(iSum, GC.numTypes<CvTerrainInfo>(), m_pbTerrain);
 	CheckSumI(iSum, GC.getNumFeatureInfos(), m_pbFeature);
-	CheckSumI(iSum, GC.getNumTerrainInfos(), m_pbFeatureTerrain);
+	CheckSumI(iSum, GC.numTypes<CvTerrainInfo>(), m_pbFeatureTerrain);
 
 	CheckSumC(iSum, m_aiMapCategoryTypes);
 
@@ -18307,9 +18307,9 @@ bool CvBonusInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bNoRiverSide, L"bNoRiverSide");
 	pXML->GetOptionalChildXmlValByName(&m_bNormalize, L"bNormalize");
 
-	pXML->SetVariableListTagPair(&m_pbTerrain, L"TerrainBooleans", GC.getNumTerrainInfos());
+	pXML->SetVariableListTagPair(&m_pbTerrain, L"TerrainBooleans", GC.numTypes<CvTerrainInfo>());
 	pXML->SetVariableListTagPair(&m_pbFeature, L"FeatureBooleans", GC.getNumFeatureInfos());
-	pXML->SetVariableListTagPair(&m_pbFeatureTerrain, L"FeatureTerrainBooleans", GC.getNumTerrainInfos());
+	pXML->SetVariableListTagPair(&m_pbFeatureTerrain, L"FeatureTerrainBooleans", GC.numTypes<CvTerrainInfo>());
 
 	//Vectors
 	pXML->SetOptionalIntVector(&m_aiMapCategoryTypes, L"MapCategoryTypes");
@@ -18412,21 +18412,21 @@ void CvBonusInfo::copyNonDefaults(CvBonusInfo* pClassInfo, CvXMLLoadUtility* pXM
 	if (isNoRiverSide() == bDefault) m_bNoRiverSide = pClassInfo->isNoRiverSide();
 	if (isNormalize() == bDefault) m_bNormalize = pClassInfo->isNormalize();
 
-	for ( int i = 0; i < GC.getNumTerrainInfos(); i++)
+	for (int i = 0; i < GC.numTypes<CvTerrainInfo>(); i++)
 	{
-		if ( isTerrain(i) == bDefault && pClassInfo->isTerrain(i) != bDefault)
+		if (isTerrain(i) == bDefault && pClassInfo->isTerrain(i) != bDefault)
 		{
-			if ( NULL == m_pbTerrain )
+			if (NULL == m_pbTerrain)
 			{
-				CvXMLLoadUtility::InitList(&m_pbTerrain,GC.getNumTerrainInfos(),bDefault);
+				CvXMLLoadUtility::InitList(&m_pbTerrain, GC.numTypes<CvTerrainInfo>(), bDefault);
 			}
 			m_pbTerrain[i] = pClassInfo->isTerrain(i);
 		}
-		if ( isFeatureTerrain(i) == bDefault && pClassInfo->isFeatureTerrain(i) != bDefault)
+		if (isFeatureTerrain(i) == bDefault && pClassInfo->isFeatureTerrain(i) != bDefault)
 		{
-			if ( NULL == m_pbFeatureTerrain )
+			if (NULL == m_pbFeatureTerrain)
 			{
-				CvXMLLoadUtility::InitList(&m_pbFeatureTerrain,GC.getNumTerrainInfos(),bDefault);
+				CvXMLLoadUtility::InitList(&m_pbFeatureTerrain, GC.numTypes<CvTerrainInfo>(), bDefault);
 			}
 			m_pbFeatureTerrain[i] = pClassInfo->isFeatureTerrain(i);
 		}
@@ -18794,7 +18794,7 @@ bool CvFeatureInfo::isMapCategoryType(int i)
 
 bool CvFeatureInfo::isTerrain(int i) const
 {
-	FAssertMsg(i < GC.getNumTerrainInfos(), "Index out of bounds");
+	FAssertMsg(i < GC.numTypes<CvTerrainInfo>(), "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
 	return m_pbTerrain ? m_pbTerrain[i] : false;
 }
@@ -18970,7 +18970,7 @@ bool CvFeatureInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(m_szEffectType, L"EffectType");
 	pXML->GetOptionalChildXmlValByName(&m_iEffectProbability, L"iEffectProbability");
 
-	pXML->SetVariableListTagPair(&m_pbTerrain, L"TerrainBooleans", GC.getNumTerrainInfos());
+	pXML->SetVariableListTagPair(&m_pbTerrain, L"TerrainBooleans", GC.numTypes<CvTerrainInfo>());
 /************************************************************************************************/
 /* Afforess					  Start		 12/9/09												*/
 /*																							  */
@@ -19097,13 +19097,13 @@ void CvFeatureInfo::copyNonDefaults(CvFeatureInfo* pClassInfo, CvXMLLoadUtility*
 	if (getEffectType() == cDefault) m_szEffectType = pClassInfo->getEffectType();
 	if (getEffectProbability() == iDefault) m_iEffectProbability = pClassInfo->getEffectProbability();
 
-	for ( int i = 0; i < GC.getNumTerrainInfos(); i++ )
+	for (int i = 0; i < GC.numTypes<CvTerrainInfo>(); i++)
 	{
-		if ( isTerrain(i) == bDefault && pClassInfo->isTerrain(i) != bDefault )
+		if (isTerrain(i) == bDefault && pClassInfo->isTerrain(i) != bDefault)
 		{
-			if ( m_pbTerrain == NULL )
+			if (m_pbTerrain == NULL)
 			{
-				pXML->InitList(&m_pbTerrain, GC.getNumTerrainInfos());
+				pXML->InitList(&m_pbTerrain, GC.numTypes<CvTerrainInfo>());
 			}
 
 			m_pbTerrain[i] = pClassInfo->isTerrain(i);
@@ -19185,11 +19185,9 @@ void CvFeatureInfo::getCheckSum(unsigned int &iSum)
 	CheckSum(iSum, m_piRiverYieldChange, NUM_YIELD_TYPES);
 	CheckSum(iSum, m_piHillsYieldChange, NUM_YIELD_TYPES);
 
-	CheckSum(iSum, m_pbTerrain, GC.getNumTerrainInfos());
+	CheckSum(iSum, m_pbTerrain, GC.numTypes<CvTerrainInfo>());
 
-
-	int iNumElements = m_aAfflictionCommunicabilityTypes.size();
-	for (int i = 0; i < iNumElements; ++i)
+	for (unsigned int i = 0; i < m_aAfflictionCommunicabilityTypes.size(); ++i)
 	{
 		CheckSum(iSum, m_aAfflictionCommunicabilityTypes[i].ePromotionLine);
 		CheckSum(iSum, m_aAfflictionCommunicabilityTypes[i].iModifier);
