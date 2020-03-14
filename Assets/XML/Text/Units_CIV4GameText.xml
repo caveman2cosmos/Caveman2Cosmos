@@ -7836,7 +7836,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_EARLY_IMP_GUARD_STRATEGY</Tag>
 		<English>The Early Imperial Guard can only be built in your capitol. It is immensely strong, but you only get one, so use it well.</English>
 		<French>La Garde Impériale ne peut être construit que dans votre capitale. Il est extrêmement solide, mais vous n'en obtenez qu'un, alors utilisez-le bien.</French>
-		<Italian>La guardia imperiale può essere costuita solo nella tua capitale. E' molto forte, ma puoi addestrarne solo una.</Italian>
+		<Italian>La guardia imperiale può essere costuita solo nella tua capitale. È molto forte, ma puoi addestrarne solo una.</Italian>
 		<Spanish>La Guardia imperial primitiva solo puede ser entrenada en tu capital. Es muy fuerte, pero solo puedes crear una, así que úsala bien.</Spanish>
 		<Polish>Wczesny Strażnik Imperium to gwardzista epoki średniowiecza. Doborowa jednostka imperium.</Polish>
 	</TEXT>
@@ -18355,7 +18355,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_MEXICO_RURALES_STRATEGY</Tag>
 		<English>This unit marks the transition from melee to gunpowder-based cavalry. The [COLOR_UNIT_TEXT]Rurales[COLOR_REVERT] (the Mexican replacement for the [COLOR_UNIT_TEXT]Cuirassier[COLOR_REVERT]) is the strongest land unit until the entrance of the [COLOR_UNIT_TEXT]Cavalry[COLOR_REVERT]. It is slightly less expensive and receives the [COLOR_HIGHLIGHT_TEXT]Combat I[COLOR_REVERT] promotion.</English>
 		<French>Cette unité marque la transition de la mêlée à la cavalerie avec armes à feu. Le [COLOR_UNIT_TEXT]Rurales[COLOR_REVERT] (le remplaçant mexicain du [COLOR_UNIT_TEXT]Cuirassier[COLOR_REVERT]) est l'unité terrestre la plus solide jusqu'à l'entrée du [COLOR_UNIT_TEXT]Cavalerie[COLOR_REVERT]. Il est légèrement moins cher et reçoit la promotion [COLOR_HIGHLIGHT_TEXT]Combat I[COLOR_REVERT] .</French>
-		<Italian>Questa unità segna la transizione tra cavalleria da combattimento ravvicinato e cavalleria con armi da fuoco. I [COLOR_UNIT_TEXT]Rurales[COLOR_REVERT] (l'unità messicana che sostituisce il [COLOR_UNIT_TEXT]Corazziere[COLOR_REVERT]) sono la più forte unità terrestre fino alla comparsa della [COLOR_UNIT_TEXT]Cavalleria[COLOR_REVERT]. E' più economica e riceve la promozione [COLOR_HIGHLIGHT_TEXT]Combattimento I[COLOR_REVERT].</Italian>
+		<Italian>Questa unità segna la transizione tra cavalleria da combattimento ravvicinato e cavalleria con armi da fuoco. I [COLOR_UNIT_TEXT]Rurales[COLOR_REVERT] (l'unità messicana che sostituisce il [COLOR_UNIT_TEXT]Corazziere[COLOR_REVERT]) sono la più forte unità terrestre fino alla comparsa della [COLOR_UNIT_TEXT]Cavalleria[COLOR_REVERT]. È più economica e riceve la promozione [COLOR_HIGHLIGHT_TEXT]Combattimento I[COLOR_REVERT].</Italian>
 		<Spanish>Esta unidad representa la transición de la caballería, del uso de armas de ataque directo a las armas de pólvora. Los [COLOR_UNIT_TEXT]Rurales[COLOR_REVERT] (sustitutos mexicanos del [COLOR_UNIT_TEXT]Coracero[COLOR_REVERT]) son la unidad terrestre más poderosa hasta el desarrollo de la [COLOR_UNIT_TEXT]Caballería[COLOR_REVERT]. Son ligeramente más baratos, y reciben el ascenso [COLOR_HIGHLIGHT_TEXT]Combate I[COLOR_REVERT].</Spanish>
 		<Polish>Rurales to najsilniejsza odmiana Kirasjerów. Wymagają kultury Meksyku.</Polish>
 	</TEXT>
@@ -19072,7 +19072,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_MODERN_IMP_GUARD_STRATEGY</Tag>
 		<English>The Modern Imperial Guard can only be built in your capitol. It is immensely strong, but you only get one, so use it well.</English>
 		<French>Le Garde Impérial Moderne ne peut être construit que dans votre capitale. Il est extrêmement solide, mais vous n'en obtenez qu'un, alors utilisez-le bien.</French>
-		<Italian>La Guardia imperiale moderna può essere costuita solo nella tua capitale. E' molto forte, ma puoi addestrarne solo una.</Italian>
+		<Italian>La Guardia imperiale moderna può essere costuita solo nella tua capitale. È molto forte, ma puoi addestrarne solo una.</Italian>
 		<Spanish>La Guardia imperial moderna solo puede ser entrenada en tu capital. Es muy fuerte, pero solo puedes crear una, así que úsala bien.</Spanish>
 		<Polish>Gwardia (wł. guardia - straż) - początkowo straż przyboczna monarchy lub wodza, później doborowe oddziały liniowe. Stacjonowały głównie w stolicy państwa.</Polish>
 	</TEXT>
@@ -24332,7 +24332,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_ROBOT_IMP_GUARD_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Robotic Imperial Guard[COLOR_REVERT] can only be built in your capitol. It is immensely strong, but you only get one, so use it well.</English>
 		<French>Le [COLOR_UNIT_TEXT]Robot Garde Impérial[COLOR_REVERT] ne peut être construit que dans votre capitale. Il est extrêmement solide, mais vous n'en obtenez qu'un, alors utilisez-le bien.</French>
-		<Italian>La Guardia imperiale robotizzata può essere costuita solo nella tua capitale. E' molto forte, ma puoi addestrarne solo una.</Italian>
+		<Italian>La Guardia imperiale robotizzata può essere costuita solo nella tua capitale. È molto forte, ma puoi addestrarne solo una.</Italian>
 		<Spanish>La Guardia imperial robótica solo puede ser entrenada en tu capital. Es muy fuerte, pero solo puedes crear una, así que úsala bien.</Spanish>
 		<Polish>Strażnik Imperium - Robot to elitarnia jednostka, która idealnie nadaje się do obrony Twojej stolicy w ostatnim etapie rozgrywki.</Polish>
 	</TEXT>
@@ -25972,7 +25972,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SIBERIAN_TRACKER_STRATEGY</Tag>
 		<English>The Siberian Tracker is the Siberian culture's version of the Warden. Completely at home no matter how low the temperature, it starts with the promotions Arctic Combat I, II and III, as well as Hunting Sight I and II. The ideal hunter for extreme latitudes. Useful also in battle, but not against cities, where it gets a large penalty.</English>
-		<Italian>Il cercatore di tracce Siberiano è la versione Siberiana del guardiacaccia. Si trova a su agio con temperature estremamente basse, perciò inizia con le promozioni Combattente artico I, Combattente artico II e Combattente artico III, oltre a Occhio del cacciatore I e Occhio del cacciatore II. E' il cacciatore ideale delle alte latitudini; è utile anche in battaglia ma non per assaltare le città, dove riceve delle gravi penalità.</Italian>
+		<Italian>Il cercatore di tracce Siberiano è la versione Siberiana del guardiacaccia. Si trova a su agio con temperature estremamente basse, perciò inizia con le promozioni Combattente artico I, Combattente artico II e Combattente artico III, oltre a Occhio del cacciatore I e Occhio del cacciatore II. È il cacciatore ideale delle alte latitudini; è utile anche in battaglia ma non per assaltare le città, dove riceve delle gravi penalità.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SIEGE_DROID</Tag>

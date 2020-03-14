@@ -236,7 +236,7 @@
 		<Tag>TXT_KEY_POPUP_EVENT_FOREIGN_WOMAN_2</Tag>
 		<English>The %s1_civ tribe has brought one of our women back. She has arrived in our lands without being injured.</English>
 		<French>La Tribu %s1_civ tribu a ramené une de nos femmes. Elle est arrivée sur nos terres sans être blessée.</French>
-		<Italian>La tribù %s1_civ ci ha riportato una delle nostre donne. E' arrivata nel nostro territorio senza essere stata ferita.</Italian>
+		<Italian>La tribù %s1_civ ci ha riportato una delle nostre donne. È arrivata nel nostro territorio senza essere stata ferita.</Italian>
 		<Spanish>La tribu %s1:2_civ nos ha devuelto a una de nuestras mujeres. Ha llegado a nuestras tierras sin haber sido herida.</Spanish>
 		<Polish>Plemię %s1_civ oddało kobietę. Dotarła bezpiecznie do swojego plemienia.</Polish>
 	</TEXT>
@@ -412,7 +412,7 @@
 		<English>That's Terrible!</English>
 		<French>C'est Terrible!</French>
 		<German>Das ist ja schrecklich!</German>
-		<Italian>E' terribile!</Italian>
+		<Italian>È terribile!</Italian>
 		<Spanish>¡Es horrible!</Spanish>
 		<Polish>To straszne!</Polish>
 	</TEXT>

@@ -726,7 +726,7 @@
 		<Tag>TXT_KEY_EVENTTRIGGER_HERO_SPAWN</Tag>
 		<English>A great hero has been born.</English>
 		<French>Un Héros est né.</French>
-		<Italian>E' nato un grande eroe!</Italian>
+		<Italian>È nato un grande eroe!</Italian>
 		<Spanish>Ha nacido un gran héroe.</Spanish>
 		<Polish>Narodził się wielki bohater.</Polish>
 	</TEXT>
@@ -1889,7 +1889,7 @@
 		<Tag>TXT_KEY_EVENT_BARBARIAN_CIVIC_REQUEST_2</Tag>
 		<English>Is it possible to stop their aggression by giving them something?</English>
 		<French>Est-il possible d'arrêter leur agression en leur donnant quelque chose?</French>
-		<Italian>E' possibile fermare l'attacco dando loro qualcosa?</Italian>
+		<Italian>È possibile fermare l'attacco dando loro qualcosa?</Italian>
 		<Spanish>¿Es posible detener su agresión si les damos algo?</Spanish>
 		<Polish>Jest możliwość zatrzymania ich agresji dając im coś?</Polish>
 	</TEXT>
@@ -2149,7 +2149,7 @@
 		<Tag>TXT_KEY_EVENT_BARBARIAN_WOMAN_4</Tag>
 		<English>She is so beautiful. I'll take her for myself.</English>
 		<French>Elle est tellement belle. Je vais la prendre pour moi.</French>
-		<Italian>E' così bella. La terrò per me.</Italian>
+		<Italian>È così bella. La terrò per me.</Italian>
 		<Spanish>Es muy hermosa. La tomaré para mí.</Spanish>
 		<Polish>Jest taka piękna. Zabiorę ją dla siebie.</Polish>
 	</TEXT>
@@ -2934,7 +2934,7 @@
 		<Tag>TXT_KEY_EVENT_CIVIC_ATTITUDE_3</Tag>
 		<English>Is he crazy? Nobody give us orders. Let's show him the strength of Barbarism!</English>
 		<French>Is he crazy? Nobody give us orders. Let's show him the strength of Barbarism!</French>
-		<Italian>E' pazzo? Nessuno ci da degli ordini. Mostriamogli la forza del barbarismo!</Italian>
+		<Italian>È pazzo? Nessuno ci da degli ordini. Mostriamogli la forza del barbarismo!</Italian>
 		<Spanish>¿Está loco? Nadie nos da órdenes. ¡Mostrémosle la verdadera fuerza de la Barbarie!</Spanish>
 		<Polish>Czy on jest szalony? Nikt nam nie będzie rozkazywał. Pokażmy mu potęgę barbaryzmu!</Polish>
 	</TEXT>
@@ -3600,7 +3600,7 @@
 		<English>[PARAGRAPH:1]To complete this quest, you must train %d1 [COLOR_UNIT_TEXT]Light, normal or heavy Swordsman[COLOR_REVERT] [NUM1:unit:units]. A source of Iron will be required.[PARAGRAPH:1]An additional reward option will be available if your civilization is operating the [COLOR_HIGHLIGHT_TEXT]Monarchy[COLOR_REVERT] civic.[PARAGRAPH:1]You will fail this quest if a rival civilization completes it first, or if you arrive at the Middle Ages without having met the conditions.</English>
 		<French>[PARAGRAPH:1]Pour Terminer cette Quête, vous devez entraîner %d1 [COLOR_UNIT_TEXT][NUM1:Spadassin:Spadassins] Léger[COLOR_REVERT]. du Fer sera nécessaire.[PARAGRAPH:1]Une récompense supplémentaire sera disponible si votre Civilisation a adopté la [COLOR_HIGHLIGHT_TEXT]Monarchie[COLOR_REVERT].[PARAGRAPH:1]La quête sera un échec si une Civilisation rivale la rempli avant vous, ou si vous parvenez au Moyen Age avant d'avoir rempli toutes les conditions.</French>
 		<German>[PARAGRAPH:1]Um diese Mission erfolgreich zu absolvieren, müsst Ihr [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [COLOR_UNIT_TEXT]Schwertkämpfer[COLOR_REVERT] aufgestellt haben. Hierzu ist Eisen erforderlich. Eine zusätzliche Belohnung winkt durch die Verwendung der Gesellschaftsform [COLOR_HIGHLIGHT_TEXT]Erbfolge[COLOR_REVERT]. Die Mission endet erfolglos, sollte eine andere Nation die Bedingungen zuerst erfüllen oder solltet Ihr das Zeitalter des Mittelalters erreichen, ohne die Bedingungen erfüllt zu haben.</German>
-		<Italian>[PARAGRAPH:1]Per completare quest'impresa, devi addestrare %d1 [COLOR_UNIT_TEXT][NUM1:spadaccino leggero:spadaccini leggeru][COLOR_REVERT]. E' richiesta una fonte di ferro.[PARAGRAPH:1]Otterrai un'ulteriore ricompensa se la tua civiltà utilizza la forma di governo [COLOR_HIGHLIGHT_TEXT]Monarcia[COLOR_REVERT].[PARAGRAPH:1]Fallirai nell'impresa se una civiltà rivale la completa per prima o se raggiungerai il Medioevo senza aver soddisfatto le condizioni.</Italian>
+		<Italian>[PARAGRAPH:1]Per completare quest'impresa, devi addestrare %d1 [COLOR_UNIT_TEXT][NUM1:spadaccino leggero:spadaccini leggeru][COLOR_REVERT]. È richiesta una fonte di ferro.[PARAGRAPH:1]Otterrai un'ulteriore ricompensa se la tua civiltà utilizza la forma di governo [COLOR_HIGHLIGHT_TEXT]Monarcia[COLOR_REVERT].[PARAGRAPH:1]Fallirai nell'impresa se una civiltà rivale la completa per prima o se raggiungerai il Medioevo senza aver soddisfatto le condizioni.</Italian>
 		<Spanish>[PARAGRAPH:1]Para completar esta misión, deberás entrenar %d1 [COLOR_UNIT_TEXT][NUM1:Soldado:Soldados] con espada ligera, normal o pesada[COLOR_REVERT]. Se requiere una fuente de Hierro.[PARAGRAPH:1]Podrás disponer de una opción de recompensa adicional si tu civilización tiene el principio [COLOR_HIGHLIGHT_TEXT]Monarquía[COLOR_REVERT] activo en el momento de completar la misión.[PARAGRAPH:1]Fallarás esta misión si una civilización rival la completa primero, o si alcanzas la Edad Media sin haber cumplido los objetivos.</Spanish>
 		<Polish>[PARAGRAPH:1]Aby wypełnić warunki zadania należy wytrenować %d1 [NUM1:jednostkę:jednostek] [COLOR_UNIT_TEXT]Lekki Zbrojny[COLOR_REVERT]. Potrzebne jest Żelazo.[PARAGRAPH:1]Dostaniesz dodatkową premię jeśli twoja cywilizacja posiada doktrynę [COLOR_HIGHLIGHT_TEXT]Monarchia[COLOR_REVERT].[PARAGRAPH:1]Przegrasz to zadanie jeśli którakolwiek z innych cywilizacji ukończy je wcześniej, lub nie zdążysz wypełnić warunków przed nadejściem epoki średniowiecznej.</Polish>
 	</TEXT>
@@ -4104,7 +4104,7 @@
 		<English>Merchants from far and wide declare the harbor of %s2_city to be the best on the continent. Trade is booming.</English>
 		<French>Des Marchands d'un peu partout sont unanimes pour déclarer que le Port de %s2_city est le meilleur du continent. Le commerce explose.</French>
 		<German>Händler von nah und fern erklären den Hafen von %s2_city zum besten auf dem ganzen Kontinent. Der Handel boomt.</German>
-		<Italian>I mercanti di tutto il mondo dichiarano che il porto di %s2_city è il migliore del continente. E' un boom economico!.</Italian>
+		<Italian>I mercanti di tutto il mondo dichiarano che il porto di %s2_city è il migliore del continente. È un boom economico!.</Italian>
 		<Spanish>Mercaderes de todos los rincones afirman que el Puerto de %s2_city es el mejor del continente. El comercio prospera.</Spanish>
 		<Polish>Kupcy z odległych krain wybrali naszą przystań w %s2_city jako najlepszą do rozpoczęcia działalności handlowej na tym kontynencie. Handel kwitnie!</Polish>
 	</TEXT>
@@ -5592,7 +5592,7 @@
 		<Tag>TXT_KEY_EVENT_POTATO_REVEALED_2</Tag>
 		<English>Does it taste good? If it does, let's search for more within our borders.</English>
 		<French>Does it taste good? If it does, let's search for more within our borders.</French>
-		<Italian>E' buona? Se lo è, dovremmo cercarne di più all'interno dei nostri territori.</Italian>
+		<Italian>È buona? Se lo è, dovremmo cercarne di più all'interno dei nostri territori.</Italian>
 		<Spanish>¿Está buena? Si es así, busquemos más de esa planta en nuestro territorio.</Spanish>
 		<Polish>Dobrze to smakuje? Jeśli tak zacznijcie szukać tego więcej.</Polish>
 	</TEXT>
@@ -6772,7 +6772,7 @@
 		<English>The scientists in %s2_city have discovered first artificial element with the accelerator! More elements might be found in near future now that the methods to create them have been proven.</English>
 		<French>Nos scientifiques de %s2_city ont découvert le premier élément artificiel avec un accélérateur à particules! d'autres éléments pourraient être découvert dans un futur proche, maintenant que la méthodologie pour leur création a été prouvée.</French>
 		<German>Die Wissenschaftler in %s2_city haben mit ihrem Teilchenbeschleuniger das erste künstliche Element erschaffen! Jetzt, wo die Methode etabliert ist, könnten weitere künstliche Elemente gefunden werden.</German>
-		<Italian>Gli scienziati di %s2_city hanno scoperto il primo elemento artificiale all'interno del loro acceleratore! E' possibile che in futuro vengano scoperti altri elementi, ora che il metodo per crearli è stato provato.</Italian>
+		<Italian>Gli scienziati di %s2_city hanno scoperto il primo elemento artificiale all'interno del loro acceleratore! È possibile che in futuro vengano scoperti altri elementi, ora che il metodo per crearli è stato provato.</Italian>
 		<Spanish>Los científicos de %s2_city han descubierto el primer elemento artificial dentro de su acelerador de partículas. Es posible que se encuentren más elementos en el futuro ahora que se han probado con éxito los métodos para crearlos.</Spanish>
 		<Polish>Naukowcy w mieście %s2_city odkryli pierwszy sztuczny pierwiastek w ich akceleratorze! Więcej pierwiastków może być odkrytych w niedalekiej przyszłości, gdyż znają już metody ich tworzenia.</Polish>
 	</TEXT>
@@ -7657,7 +7657,7 @@
 		<Tag>TXT_KEY_EVENT_TRIGGER_POULTRY_FARM_DISASTER_1</Tag>
 		<English>Something strange has happened. Our poultry farmers have found their animals dead in the morning. It seems a wild animal entered the Poultry Farms and ate our fowls.</English>
 		<French>Something strange has happened. Our poultry farmers have found their animals dead in the morning. It seems a wild animal entered the Poultry Farms and ate our fowls.</French>
-		<Italian>E' appena successo qualcosa di strano. I nostri allevatori di polli hanno trovato gli animali morti all'alba. Sembra che un animale selvatico sia entrato nel pollaio e abbia mangiato i nostri polli.</Italian>
+		<Italian>È appena successo qualcosa di strano. I nostri allevatori di polli hanno trovato gli animali morti all'alba. Sembra che un animale selvatico sia entrato nel pollaio e abbia mangiato i nostri polli.</Italian>
 		<Spanish>Ha pasado algo extraño. Nuestros avicultores han encontrado a sus animales muertos esta mañana. Parece ser que un animal salvaje entró a las Granjas avícolas y se comió a nuestras aves.</Spanish>
 		<Polish>Wydarzyło się coś dziwnego. Nasi farmerzy znaleźli martwe zwierzęta nad ranem. Wygląda to na sprawkę dzikich zwierząt.</Polish>
 	</TEXT>

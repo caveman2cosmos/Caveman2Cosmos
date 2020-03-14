@@ -536,7 +536,7 @@
 		<English>A %s1 was built</English>
 		<French>[NUM1:Un:Une:Des:Des] %s1 [NUM1:a été construit:a été construite:ont été construits:ont été construites]</French>
 		<German>[NUM1:Ein:Eine:Ein:Einige:Einige:Einige] %s1:1 wurde errichtet</German>
-		<Italian>E' stato costruito un miglioramento %s1</Italian>
+		<Italian>È stato costruito un miglioramento %s1</Italian>
 		<Spanish>Se ha construido [NUM1:un:una:unos:unas] %s1</Spanish>
 		<Polish>Zbudowano: %s1</Polish>
 	</TEXT>
@@ -545,7 +545,7 @@
 		<English>A %s1 was destroyed</English>
 		<French>%s1 a été détruit</French>
 		<German>[NUM1:Ein:Eine:Ein:Einige:Einige:Einige] %s1:1 wurde zerstört</German>
-		<Italian>E' stato distrutto un miglioramento %s1</Italian>
+		<Italian>È stato distrutto un miglioramento %s1</Italian>
 		<Spanish>Se ha destruido [NUM1:un:una:unos:unas] %s1</Spanish>
 		<Polish>Zniszczono: %s1</Polish>
 	</TEXT>
@@ -797,7 +797,7 @@
 		<English>Tech acquired (trade, lightbulb, hut, espionage): %s1</English>
 		<French>Tech. obtenu (commerce, village, espionnage,...): %s1</French>
 		<German>Technologie erhalten (durch Handel, Große Persönlichkeit, Stammesdorf, Spionage): %s1</German>
-		<Italian>E' stata acquisita la tecnologia %s1</Italian>
+		<Italian>È stata acquisita la tecnologia %s1</Italian>
 		<Spanish>Tecnología obtenida (por comercio, Gran personaje, Aldea tribal o espionaje): %s1</Spanish>
 		<Polish>Uzyskano technologię (handel, chatka, szpiegostwo, inne): %s1</Polish>
 	</TEXT>

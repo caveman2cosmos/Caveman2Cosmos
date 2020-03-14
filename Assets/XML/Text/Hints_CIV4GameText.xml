@@ -172,7 +172,7 @@
 		<English>*BUG Hint*: Always consider escorting your Settlers. It's mighty dangerous out in the wilderness.</English>
 		<French>*Conseils du BUG*: Escortez toujours vos Colons. La nature peut être très dangereuse.</French>
 		<German>[BUG] Tipp... Wertvolle Einheiten ohne nennenswerte Verteidigungsfähigkeiten, wie Siedler und Galeonen, können leicht Opfer von Angriffen werden und verdienen deshalb auf fremdem Terrain einen Begleitschutz.</German>
-		<Italian>*Suggerimento del BUG Team*: Scorta sempre i tuoi Coloni. E' molto pericoloso vagare per le Terre Selvagge (specialmente quelle inesplorate).</Italian>
+		<Italian>*Suggerimento del BUG Team*: Scorta sempre i tuoi Coloni. È molto pericoloso vagare per le Terre Selvagge (specialmente quelle inesplorate).</Italian>
 		<Spanish>*Consejo de BUG*: Considera siempre escoltar a tus Colonos. Es tremendamente peligroso mandarlos solos ahí fuera.</Spanish>
 		<Polish>*Podpowiedź do BUG'a*: Zawsze eskortuj swoich Osadników. Nie jest bezpiecznie dla nich w dziczy.</Polish>
 	</TEXT>
@@ -181,7 +181,7 @@
 		<English>*BUG Hint*: Play to your Civilization's traits, and specialize your Empire. No use being Charismatic and Aggressive and never starting a war.</English>
 		<French>*Conseils du BUG*: Utilisez les Traits de votre Civilisation et spécialisez votre Empire. Quels intérêts à être Charismatique et Aggressif si vous ne partez pas en guerre?</French>
 		<German>[BUG] Tipp... Der eigene Spielstil sollte sich an den Eigenschaften des gewählten Staatsoberhaupts orientieren und die eigene Zivilisation entsprechend spezialisiert werden. Die Eigenschaften "Charismatisch" und "Aggressiv" nützen wenig, wenn keine Kriege beabsichtigt sind.</German>
-		<Italian>*Suggerimento del BUG Team*: Sfrutta le caratteristiche della tua Civiltà, e specializza il tuo Impero. E' inutile essere Carismatico ed Aggressivo e non iniziare neppure una guerra.</Italian>
+		<Italian>*Suggerimento del BUG Team*: Sfrutta le caratteristiche della tua Civiltà, e specializza il tuo Impero. È inutile essere Carismatico ed Aggressivo e non iniziare neppure una guerra.</Italian>
 		<Spanish>*Consejo de BUG*: Juega bien los rasgos de tu civilización, y especializa tu imperio. No tiene ninguna utilidad ser un líder Carismático y Agresivo y no comenzar ninguna guerra.</Spanish>
 		<Polish>*Podpowiedź do BUG'a*: Wykorzystuj dobrze cechy twojej cywilizacji i specjalizuj swoje imperium. Bezużyteczne jest bycie Charyzmatycznym lub Agresywnym bez wszczynania wojen.</Polish>
 	</TEXT>
@@ -901,7 +901,7 @@
 		<Tag>TXT_KEY_REVDCM_HINT_31</Tag>
 		<English>*Revolutions Mod Hint*: It is a common misconception that you cannot expand into a mighty global empire under Revolutions. You can! You just have to do it right!</English>
 		<French>*Conseil Mod Revolution*: C'est une erreur fréquente de croire qu'il n'est pas possible de gérer un vaste Empire avec 'Revolution'. C'est possible! il faut juste le faire bien!</French>
-		<Italian>*Suggerimento del MOD 'Revolutions'*: E' un equivoco diffuso che non sia possibile espandere un potente impero mondiale in 'Revolutions'. Si può! Devi solo farlo bene!</Italian>
+		<Italian>*Suggerimento del MOD 'Revolutions'*: È un equivoco diffuso che non sia possibile espandere un potente impero mondiale in 'Revolutions'. Si può! Devi solo farlo bene!</Italian>
 		<Spanish>*Consejo de Revolution*: Es un error muy común pensar que no puedes expandirte y formar un vasto imperio global con Revolution. ¡Sí que puedes! Solo que tienes que hacerlo muy bien.</Spanish>
 		<Polish>*Podpowiedź do moda Rewolucje*: Powszechnie błędnym przekonaniem jest, że nie możesz rozwinąć się do potężnego globalnego imperium w Rewolucjach. Możesz! Tylko musisz zrobić to dobrze!</Polish>
 	</TEXT>
@@ -1377,7 +1377,7 @@
 		<English>*DCM Hint*: Range bombard now only issues standard BtS collateral damage upon stacks. It is completely useless against single units and siege as well as the head defender of the enemy stack.</English>
 		<French>*Conseils DCM*: Le Bombardement à distance génère des dommages collatéraux uniquement sur des groupes d'unités. C'est complètement inefficace contre les unités seules ainsi que le meilleur défenseur du groupe.</French>
 		<German>*DCM Hint*: Range bombard now only issues standard collateral damage upon stacks. It is completely useless against single units and siege as well as the head defender of the enemy stack.</German>
-		<Italian>*Suggerimento da MOD 'RevDCM'*: Il 'Bombardamento ad Area' provoca solo danni collaterali normali contro un gruppo. E' completamente inutile contro unità singole e d'assedio così come contro l'unità in prima linea del gruppo.</Italian>
+		<Italian>*Suggerimento da MOD 'RevDCM'*: Il 'Bombardamento ad Area' provoca solo danni collaterali normali contro un gruppo. È completamente inutile contro unità singole e d'assedio così come contro l'unità in prima linea del gruppo.</Italian>
 		<Spanish>*Consejo de DCM*: El cañoneo de alcance solo infringe el daño colateral sobre los grupos de unidades. Es completamente ineficaz contra unidades en solitario y contra armas de asedio, así como contra el principal defensor del grupo.</Spanish>
 		<Polish>*Podpowiedź do moda DCM*: Bombardowanie z dystansu jest tylko dodatkiem do obrażeń grupowych. Jest to zupełnie bezużyteczne przeciw pojedynczym jednostkom i machinom oblężniczym jak również głównym obrońcom oddziału wroga.</Polish>
 	</TEXT>
@@ -1457,7 +1457,7 @@
 		<Tag>TXT_KEY_REVDCM_HINT_94</Tag>
 		<English>*Influence Driven War*: Keep an eye out for the culture mix of the tile you are contesting. It is possible that a 5% influence swing to you may be enough to win the territory!</English>
 		<French>*Influence Driven War*: Gardez un oeil aux informations de culture des cases que vous revendiquez. Il est possible que seulement 5% de modifications de l'influence soient suffisants pour gagner le territoire!</French>
-		<Italian>*Suggerimento da MOD 'IDW'*: Attento alle influenze culturali di una casella da conquistare. E' possibile che una variazione del 5% dell'influenza culturale possa farti conquistare il territorio!</Italian>
+		<Italian>*Suggerimento da MOD 'IDW'*: Attento alle influenze culturali di una casella da conquistare. È possibile che una variazione del 5% dell'influenza culturale possa farti conquistare il territorio!</Italian>
 		<Spanish>*Consejo de IDW*: Presta atención a la mezcla cultural de la casilla que estás disputando. ¡Es posible que un pequeño cambio del 5% te otorgue el territorio!</Spanish>
 		<Polish>*Podpowiedź do moda IDW*: Nie spuszczaj oka z pola o które zabiegasz. Czasem wystarczy 5% wpływu, by wygrać dany teren!</Polish>
 	</TEXT>
