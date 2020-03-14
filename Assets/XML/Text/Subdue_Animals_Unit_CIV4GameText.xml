@@ -3,11 +3,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALUNIT_BIRD</Tag>
 		<English>Hawk</English>
-		<French>
-			<Text>Faucon (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Faucon (App.)</French>
 		<German>Falke</German>
 		<Italian>
 			<Text>Falco addestrato</Text>
@@ -19,11 +15,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BIG_GAME_HUNTER</Tag>
 		<English>Big Game Hunter</English>
-		<French>
-			<Text>Grand Chasseur</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Grand Chasseur</French>
 		<Italian>
 			<Text>Esperto di caccia grossa</Text>
 			<Gender>Male</Gender>
@@ -34,11 +26,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GAME_HUNTER</Tag>
 		<English>Game Hunter</English>
-		<French>
-			<Text>Maìtre Chasseur</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Maìtre Chasseur</French>
 		<Italian>
 			<Text>Esperto cacciatore</Text>
 			<Gender>Male</Gender>
@@ -49,11 +37,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HUNTER</Tag>
 		<English>Hunter</English>
-		<French>
-			<Text>Chasseur</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Chasseur</French>
 		<German>Jäger</German>
 		<Italian>
 			<Text>Cacciatore</Text>
@@ -66,11 +50,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RANGER</Tag>
 		<English>Ranger</English>
-		<French>
-			<Text>Rôdeur</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Rôdeur</French>
 		<Italian>
 			<Text>Ranger</Text>
 			<Gender>Male</Gender>
@@ -81,11 +61,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_AARDVARK</Tag>
 		<English>Subdued Aardvark</English>
-		<French>
-			<Text>Oryctérope (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Oryctérope (App.)</French>
 		<Italian>
 			<Text>Oritteropo addomesticato</Text>
 			<Gender>Male</Gender>
@@ -96,11 +72,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ANTEATER</Tag>
 		<English>Subdued Anteater</English>
-		<French>
-			<Text>Fourmilier (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Fourmilier (App.)</French>
 		<Italian>
 			<Text>Formichiere addomesticato</Text>
 			<Gender>Male</Gender>
@@ -111,11 +83,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BADGER</Tag>
 		<English>Subdued Badger</English>
-		<French>
-			<Text>Blaireau (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Blaireau (App.)</French>
 		<Italian>
 			<Text>Tasso addomesticato</Text>
 			<Gender>Male</Gender>
@@ -126,11 +94,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BALLPYTHON</Tag>
 		<English>Subdued Ball Python</English>
-		<French>
-			<Text>Python royal (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Python royal (App.)</French>
 		<Italian>
 			<Text>Pitone reale addomesticato</Text>
 			<Gender>Male</Gender>
@@ -152,11 +116,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BEAVER</Tag>
 		<English>Subdued Beaver</English>
-		<French>
-			<Text>Castor (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Castor (App.)</French>
 		<Italian>
 			<Text>Castoro addomesticato</Text>
 			<Gender>Male</Gender>
@@ -167,11 +127,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BELUGA</Tag>
 		<English>Subdued Beluga</English>
-		<French>
-			<Text>Beluga (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Beluga (App.)</French>
 		<Italian>
 			<Text>Beluga addomesticato</Text>
 			<Gender>Male</Gender>
@@ -182,11 +138,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BENGALTIGER</Tag>
 		<English>Subdued Bengal Tiger</English>
-		<French>
-			<Text>Tigre du Bengale (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Tigre du Bengale (App.)</French>
 		<Italian>
 			<Text>Tigre del Bengala addomesticata</Text>
 			<Gender>Female</Gender>
@@ -197,11 +149,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BISON</Tag>
 		<English>Subdued Bison</English>
-		<French>
-			<Text>Bison (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Bison (App.)</French>
 		<Italian>
 			<Text>Bisonte addomesticato</Text>
 			<Gender>Male</Gender>
@@ -212,11 +160,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BOAR</Tag>
 		<English>Subdued Wild Boar</English>
-		<French>
-			<Text>Sanglier (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Sanglier (App.)</French>
 		<Italian>
 			<Text>Cinghiale addomesticato</Text>
 			<Gender>Male</Gender>
@@ -227,11 +171,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BOAR_NEW</Tag>
 		<English>Subdued Boar</English>
-		<French>
-			<Text>Sanglier (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Sanglier (App.)</French>
 		<Italian>
 			<Text>Verro addomesticato</Text>
 			<Gender>Male</Gender>
@@ -242,11 +182,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BONGO</Tag>
 		<English>Subdued Bongo</English>
-		<French>
-			<Text>Bongo (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Bongo (App.)</French>
 		<Italian>
 			<Text>Bongo addomesticato</Text>
 			<Gender>Male</Gender>
@@ -257,11 +193,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BUFFALO</Tag>
 		<English>Subdued Water Buffalo</English>
-		<French>
-			<Text>Buffle d'eau (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Buffle d'eau (App.)</French>
 		<Italian>
 			<Text>Bufalo d'acqua addomesticato</Text>
 			<Gender>Male</Gender>
@@ -272,11 +204,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CAMEL</Tag>
 		<English>Subdued Camel</English>
-		<French>
-			<Text>Chameau (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Chameau (App.)</French>
 		<German>Subdued Kamel</German>
 		<Italian>
 			<Text>Cammello addomesticato</Text>
@@ -300,11 +228,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CAPYBARA</Tag>
 		<English>Subdued Capybara</English>
-		<French>
-			<Text>Capybara (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Capybara (App.)</French>
 		<Italian>
 			<Text>Capibara addomesticato</Text>
 			<Gender>Male</Gender>
@@ -315,11 +239,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CARIBOU</Tag>
 		<English>Subdued Caribou</English>
-		<French>
-			<Text>Caribou (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Caribou (App.)</French>
 		<Italian>
 			<Text>Caribù addomesticato</Text>
 			<Gender>Male</Gender>
@@ -330,11 +250,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CASSOWARY</Tag>
 		<English>Subdued Cassowary</English>
-		<French>
-			<Text>Casoar (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Casoar (App.)</French>
 		<Italian>
 			<Text>Casuario addomesticato</Text>
 			<Gender>Male</Gender>
@@ -345,11 +261,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CAVE_LION</Tag>
 		<English>Subdued Cave Lion</English>
-		<French>
-			<Text>Lion des cavernes (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Lion des cavernes (App.)</French>
 		<Italian>
 			<Text>Leone delle caverne addomesticato</Text>
 			<Gender>Male</Gender>
@@ -360,11 +272,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CHEETAH</Tag>
 		<English>Subdued Cheetah</English>
-		<French>
-			<Text>Guépard (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Guépard (App.)</French>
 		<Italian>
 			<Text>Ghepardo addomesticato</Text>
 			<Gender>Male</Gender>
@@ -375,11 +283,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CHIMPANZEE</Tag>
 		<English>Subdued Chimpanzee</English>
-		<French>
-			<Text>Chimpanzé (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Chimpanzé (App.)</French>
 		<Italian>
 			<Text>Scimpanzè addomesticato</Text>
 			<Gender>Male</Gender>
@@ -390,11 +294,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_COBRA</Tag>
 		<English>Subdued Cobra</English>
-		<French>
-			<Text>Cobra (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Cobra (App.)</French>
 		<Italian>
 			<Text>Cobra addomesticato</Text>
 			<Gender>Male</Gender>
@@ -420,11 +320,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_COW</Tag>
 		<English>Subdued Aurochs</English>
-		<French>
-			<Text>Auroch (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Taureau (App.)</French>
 		<Italian>
 			<Text>Uro addomesticato</Text>
 			<Gender>Male</Gender>
@@ -435,11 +331,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CRAB</Tag>
 		<English>Subdued Crab</English>
-		<French>
-			<Text>Crabe (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Crabe (App.)</French>
 		<Italian>
 			<Text>Granchio addomesticato</Text>
 			<Gender>Male</Gender>
@@ -480,11 +372,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DIREWOLF</Tag>
 		<English>Subdued Direwolf</English>
-		<French>
-			<Text>Loup primitif (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Loup primitif (App.)</French>
 		<Italian>
 			<Text>Lupo nero addomesticato</Text>
 			<Gender>Male</Gender>
@@ -495,11 +383,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DOLPHIN</Tag>
 		<English>Subdued Dolphin</English>
-		<French>
-			<Text>Dauphin (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Dauphin (App.)</French>
 		<Italian>
 			<Text>Delfino addomesticato</Text>
 			<Gender>Male</Gender>
@@ -510,11 +394,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DUCK</Tag>
 		<English>Subdued Duck</English>
-		<French>
-			<Text>Canard (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Canard (App.)</French>
 		<Italian>
 			<Text>Oca addomesticata</Text>
 			<Gender>Female</Gender>
@@ -525,11 +405,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DUGONG</Tag>
 		<English>Subdued Dugong</English>
-		<French>
-			<Text>Dugong (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Dugong (App.)</French>
 		<Italian>
 			<Text>Dugongo addomesticato</Text>
 			<Gender>Male</Gender>
@@ -540,11 +416,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_EAGLE</Tag>
 		<English>Subdued Eagle</English>
-		<French>
-			<Text>Aigle (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Aigle (App.)</French>
 		<Italian>
 			<Text>Aquila addomesticata</Text>
 			<Gender>Female</Gender>
@@ -555,25 +427,18 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_EAGLE_BALD</Tag>
 		<English>Subdued Bald Eagle</English>
+		<French>Pygargue à tête blanche (App.)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ELEPHANT</Tag>
 		<English>Subdued Asian Elephant</English>
-		<French>
-			<Text>Eléphant d'Asie (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Eléphant d'Asie (App.)</French>
 		<Polish>Poskromiony Słoń Indyjski</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_EMU</Tag>
 		<English>Subdued Emu</English>
-		<French>
-			<Text>Emeu (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Emeu (App.)</French>
 		<Italian>
 			<Text>Emù addomesticato</Text>
 			<Gender>Male</Gender>
@@ -666,11 +531,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GHARIAL</Tag>
 		<English>Subdued Gharial</English>
-		<French>
-			<Text>Gavial (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Gavial (App.)</French>
 		<Italian>
 			<Text>Gaviale addomesticato</Text>
 			<Gender>Male</Gender>
@@ -681,11 +542,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GIANT_SQUID</Tag>
 		<English>Subdued Giant Squid</English>
-		<French>
-			<Text>Calamar Géant (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Calamar Géant (App.)</French>
 		<Italian>
 			<Text>Calamaro gigante addomesticato</Text>
 			<Gender>Male</Gender>
@@ -711,11 +568,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GORILLA</Tag>
 		<English>Subdued Gorilla</English>
-		<French>
-			<Text>Gorille (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Gorille (App.)</French>
 		<Italian>
 			<Text>Gorilla addomesticato</Text>
 			<Gender>Male</Gender>
@@ -726,11 +579,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GREATWHITE</Tag>
 		<English>Subdued Great White Shark</English>
-		<French>
-			<Text>Grand requin blanc (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Grand requin blanc (App.)</French>
 		<Italian>
 			<Text>Grande squalo bianco addomesticato</Text>
 			<Gender>Male</Gender>
@@ -756,11 +605,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_HAAST_EAGLE</Tag>
 		<English>Subdued Haast's Eagle</English>
-		<French>
-			<Text>Aigle de Haast (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Aigle de Haast (App.)</French>
 		<Italian>
 			<Text>Aquila di Haast addomesticata</Text>
 			<Gender>Female</Gender>
@@ -771,11 +616,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_HAMMERHEAD</Tag>
 		<English>Subdued Hammerhead Shark</English>
-		<French>
-			<Text>Requin marteau (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Requin marteau (App.)</French>
 		<Italian>
 			<Text>Squalo martello addomesticato</Text>
 			<Gender>Male</Gender>
@@ -786,11 +627,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_HAWK</Tag>
 		<English>Subdued Hawk</English>
-		<French>
-			<Text>Faucon (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Faucon (App.)</French>
 		<Italian>
 			<Text>Falco addomesticato</Text>
 			<Gender>Male</Gender>
@@ -801,11 +638,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_HIPPO</Tag>
 		<English>Subdued Hippopotamus</English>
-		<French>
-			<Text>Hippopotame (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Hippopotame (App.)</French>
 		<Italian>
 			<Text>Ippopotamo addomesticato</Text>
 			<Gender>Male</Gender>
@@ -816,11 +649,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_HORNEDOWL</Tag>
 		<English>Subdued Great Horned Owl</English>
-		<French>
-			<Text>Grand hibou à cornes (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Grand hibou à cornes (App.)</French>
 		<Italian>
 			<Text>Gufo della Virginia addomesticato</Text>
 			<Gender>Male</Gender>
@@ -831,11 +660,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_HORSE</Tag>
 		<English>Subdued Horse</English>
-		<French>
-			<Text>Cheval (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Cheval (App.)</French>
 		<Italian>
 			<Text>Cavallo addomesticato</Text>
 			<Gender>Male</Gender>
@@ -846,11 +671,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_HUMPBACK_WHALE</Tag>
 		<English>Subdued Humpback Whale</English>
-		<French>
-			<Text>Baleine à bosses (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Baleine à bosses (App.)</French>
 		<German>
 			<Text>Subdued Humpback Whale</Text>
 			<Gender>Male</Gender>
@@ -886,11 +707,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_IBEX</Tag>
 		<English>Subdued Ibex</English>
-		<French>
-			<Text>Bouquetin (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Bouquetin (App.)</French>
 		<Italian>
 			<Text>Stambecco addomesticato</Text>
 			<Gender>Male</Gender>
@@ -901,11 +718,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_IGUANA</Tag>
 		<English>Subdued Iguana</English>
-		<French>
-			<Text>Iguane (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Iguane (App.)</French>
 		<Italian>
 			<Text>Iguana addomesticata</Text>
 			<Gender>Female</Gender>
@@ -916,11 +729,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_IMPALA</Tag>
 		<English>Subdued Impala</English>
-		<French>
-			<Text>Impala (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Impala (App.)</French>
 		<Italian>
 			<Text>Impala addomesticato</Text>
 			<Gender>Male</Gender>
@@ -931,11 +740,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_JAGUAR</Tag>
 		<English>Subdued Jaguar</English>
-		<French>
-			<Text>Jaguar (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Jaguar (App.)</French>
 		<Italian>
 			<Text>Giaguaro addomesticato</Text>
 			<Gender>Male</Gender>
@@ -946,11 +751,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_KANGAROO_GREY</Tag>
 		<English>Subdued Grey Kangaroo</English>
-		<French>
-			<Text>Kangourou gris (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Kangourou gris (App.)</French>
 		<Italian>
 			<Text>Canguro grigio addomesticato</Text>
 			<Gender>Male</Gender>
@@ -961,11 +762,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_KANGAROO_RED</Tag>
 		<English>Subdued Red Kangaroo</English>
-		<French>
-			<Text>Kangourou rouge (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Kangourou rouge (App.)</French>
 		<Italian>
 			<Text>Canguro rosso addomesticato</Text>
 			<Gender>Male</Gender>
@@ -976,11 +773,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_KOALA</Tag>
 		<English>Subdued Koala</English>
-		<French>
-			<Text>Koala (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Koala (App.)</French>
 		<Italian>
 			<Text>Koala addomesticato</Text>
 			<Gender>Male</Gender>
@@ -991,11 +784,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_KOMODO_DRAGON</Tag>
 		<English>Subdued Komodo Dragon</English>
-		<French>
-			<Text>Dragon de Komodo (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Dragon de Komodo (App.)</French>
 		<Italian>
 			<Text>Drago di Komodo addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1006,11 +795,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_KOOKABURRA</Tag>
 		<English>Subdued Kookaburra</English>
-		<French>
-			<Text>Kookaboura (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Kookaboura (App.)</French>
 		<Italian>
 			<Text>Kookaburra addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1021,11 +806,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_LEMUR</Tag>
 		<English>Subdued Lemur</English>
-		<French>
-			<Text>Lémurien (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Lémurien (App.)</French>
 		<Italian>
 			<Text>Lemure addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1036,11 +817,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_LION</Tag>
 		<English>Subdued Lion</English>
-		<French>
-			<Text>Lion (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Lion (App.)</French>
 		<Italian>
 			<Text>Leone addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1051,11 +828,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_LLAMA</Tag>
 		<English>Subdued Llama</English>
-		<French>
-			<Text>Lama (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Lama (App.)</French>
 		<Italian>
 			<Text>Lama addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1066,11 +839,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_LOON</Tag>
 		<English>Subdued Loon</English>
-		<French>
-			<Text>Plongeon (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Plongeon (App.)</French>
 		<Italian>
 			<Text>Gavia addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1092,11 +861,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MACAW</Tag>
 		<English>Subdued Macaw</English>
-		<French>
-			<Text>Ara (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Ara (App.)</French>
 		<Italian>
 			<Text>Ara addomesticata</Text>
 			<Gender>Female</Gender>
@@ -1107,11 +872,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MACKEREL</Tag>
 		<English>Subdued Mackerel</English>
-		<French>
-			<Text>Maquereau (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Maquereau (App.)</French>
 		<Italian>
 			<Text>Sgombro addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1122,11 +883,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MANDRILL</Tag>
 		<English>Subdued Mandrill</English>
-		<French>
-			<Text>Mandrill (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Mandrill (App.)</French>
 		<Italian>
 			<Text>Mandrillo addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1137,11 +894,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MARLIN</Tag>
 		<English>Subdued Marlin</English>
-		<French>
-			<Text>Marlin (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Marlin (App.)</French>
 		<Italian>
 			<Text>Pesce vela addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1152,11 +905,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MINKIE_WHALE</Tag>
 		<English>Subdued Minkie Whale</English>
-		<French>
-			<Text>Rorqual (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Rorqual (App.)</French>
 		<Italian>
 			<Text>Balenottera addomesticata</Text>
 			<Gender>Female</Gender>
@@ -1167,11 +916,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MOA</Tag>
 		<English>Subdued Moa</English>
-		<French>
-			<Text>Moa (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Moa (App.)</French>
 		<Italian>
 			<Text>Moa addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1182,11 +927,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MONITOR</Tag>
 		<English>Subdued Nile Monitor</English>
-		<French>
-			<Text>Varan du Nil (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Varan du Nil (App.)</French>
 		<Italian>
 			<Text>Varano del Nilo addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1197,11 +938,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MOOSE</Tag>
 		<English>Subdued Moose</English>
-		<French>
-			<Text>Elan (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Elan (App.)</French>
 		<Italian>
 			<Text>Alce addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1212,11 +949,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MOUFLON</Tag>
 		<English>Subdued Mouflon</English>
-		<French>
-			<Text>Mouflon (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Mouflon (App.)</French>
 		<Italian>
 			<Text>Muflone addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1227,11 +960,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MUSKOX</Tag>
 		<English>Subdued Musk Ox</English>
-		<French>
-			<Text>Boeuf musqué (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Boeuf musqué (App.)</French>
 		<Italian>
 			<Text>Bue muschiato addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1242,11 +971,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_NARWHAL</Tag>
 		<English>Subdued Narwhal</English>
-		<French>
-			<Text>Narval (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Narval (App.)</French>
 		<Italian>
 			<Text>Narvalo addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1257,11 +982,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_NILECROC</Tag>
 		<English>Subdued Nile Crocodile</English>
-		<French>
-			<Text>Crocodile du Nil (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Crocodile du Nil (App.)</French>
 		<Italian>
 			<Text>Coccodrillo del Nilo addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1272,11 +993,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_OKAPI</Tag>
 		<English>Subdued Okapi</English>
-		<French>
-			<Text>Okapi (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Okapi (App.)</French>
 		<Italian>
 			<Text>Okapi addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1287,11 +1004,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ORANGUTAN</Tag>
 		<English>Subdued Orangutan</English>
-		<French>
-			<Text>Orang-outan (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Orang-outan (App.)</French>
 		<Italian>
 			<Text>Orangotango addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1302,11 +1015,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ORCA</Tag>
 		<English>Subdued Orca</English>
-		<French>
-			<Text>Orque (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Orque (App.)</French>
 		<Italian>
 			<Text>Orca addomesticata</Text>
 			<Gender>Female</Gender>
@@ -1332,11 +1041,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_OXPECKER</Tag>
 		<English>Subdued Oxpecker</English>
-		<French>
-			<Text>Piqueboeuf (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Piqueboeuf (App.)</French>
 		<Italian>
 			<Text>Bufaga addomesticata</Text>
 			<Gender>Female</Gender>
@@ -1362,11 +1067,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PEACOCK</Tag>
 		<English>Subdued Peacock</English>
-		<French>
-			<Text>Paon (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Paon (App.)</French>
 		<Italian>
 			<Text>Pavone addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1382,21 +1083,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<!--Italian>
-			<Text>Pinguino addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Poskromiony Pingwin</Polish-->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PHEASANT</Tag>
 		<English>Subdued Pheasant</English>
-		<French>
-			<Text>Faisan (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Faisan (App.)</French>
 		<Italian>
 			<Text>Fagiano addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1407,11 +1098,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PIGEON</Tag>
 		<English>Subdued Pigeon</English>
-		<French>
-			<Text>Pigeon (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Pigeon (App.)</French>
 		<Italian>
 			<Text>Piccione addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1422,11 +1109,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PIG_NEW</Tag>
 		<English>Subdued Pig</English>
-		<French>
-			<Text>Cochon (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Cochon (App.)</French>
 		<Italian>
 			<Text>Maiale addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1476,11 +1159,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_RACCOON</Tag>
 		<English>Subdued Raccoon</English>
-		<French>
-			<Text>Raton laveur (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Raton laveur (App.)</French>
 		<Italian>
 			<Text>Procione addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1491,11 +1170,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_RATEL</Tag>
 		<English>Subdued Ratel</English>
-		<French>
-			<Text>Ratel (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Ratel (App.)</French>
 		<Italian>
 			<Text>Ratele addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1506,11 +1181,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_RAY_EAGLE</Tag>
 		<English>Subdued Eagle Ray</English>
-		<French>
-			<Text>Aigle de mer (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Aigle de mer (App.)</French>
 		<Italian>
 			<Text>Aquila di mare addomesticata</Text>
 			<Gender>Female</Gender>
@@ -1547,11 +1218,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_REEF_SHARK</Tag>
 		<English>Subdued Reef Shark</English>
-		<French>
-			<Text>Requin des récifs (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Requin des récifs (App.)</French>
 		<Italian>
 			<Text>Squalo di barriera addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1562,11 +1229,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_RHEA</Tag>
 		<English>Subdued Rhea</English>
-		<French>
-			<Text>Nandou (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Nandou (App.)</French>
 		<Italian>
 			<Text>Nandù addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1577,11 +1240,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_RIVER_CROC_LARGE</Tag>
 		<English>Subdued Crocodile (Large)</English>
-		<French>
-			<Text>Grand Crocodile (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Grand Crocodile (App.)</French>
 		<Italian>
 			<Text>Coccodrillo (grande) addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1592,11 +1251,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_RIVER_CROC_SMALL</Tag>
 		<English>Subdued Crocodile (Small)</English>
-		<French>
-			<Text>Petit Crocodile (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Petit Crocodile (App.)</French>
 		<Italian>
 			<Text>Coccodrillo (piccolo) addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1607,11 +1262,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ROCKHOPPER</Tag>
 		<English>Subdued Rockhopper Penguin</English>
-		<French>
-			<Text>Gorfou sauteur (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Gorfou sauteur (App.)</French>
 		<Italian>
 			<Text>Pinguino Rockhopper addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1622,11 +1273,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SAIGA</Tag>
 		<English>Subdued Saiga</English>
-		<French>
-			<Text>Saiga (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Saiga (App.)</French>
 		<Italian>
 			<Text>Saiga addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1637,11 +1284,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SALTWATER_CROCL</Tag>
 		<English>Subdued Salt water crocodile (large)</English>
-		<French>
-			<Text>Grand Crocodile de mer (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Grand Crocodile de mer (App.)</French>
 		<Italian>
 			<Text>Coccodrillo marino (grande) addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1652,11 +1295,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SALTWATER_CROCS</Tag>
 		<English>Subdued Salt water crocodile (small)</English>
-		<French>
-			<Text>Petit Crocodile de mer (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Petit Crocodile de mer (App.)</French>
 		<Italian>
 			<Text>Coccodrillo marino (piccolo) addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1719,11 +1358,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SIBERIANTIGER</Tag>
 		<English>Subdued Siberian Tiger</English>
-		<French>
-			<Text>Tigre de sibérie (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Tigre de sibérie (App.)</French>
 		<Italian>
 			<Text>Tigre siberiana addomesticata</Text>
 			<Gender>Female</Gender>
@@ -1760,11 +1395,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_STAG_DEER</Tag>
 		<English>Subdued Deer</English>
-		<French>
-			<Text>Cerf (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Cerf (App.)</French>
 		<Italian>
 			<Text>Cervo addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1775,11 +1406,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_TAPIR</Tag>
 		<English>Subdued Baird's Tapir</English>
-		<French>
-			<Text>Tapir de Baird (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Tapir de Baird (App.)</French>
 		<Italian>
 			<Text>Tapiro addomesticato (Baird's)</Text>
 			<Gender>Male</Gender>
@@ -1790,11 +1417,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_TASMANIANDEVIL</Tag>
 		<English>Subdued Tasmanian Devil</English>
-		<French>
-			<Text>Diable de Tasmanie (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Diable de Tasmanie (App.)</French>
 		<Italian>
 			<Text>Diavolo della Tasmania addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1831,11 +1454,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_TUNA</Tag>
 		<English>Subdued Tuna</English>
-		<French>
-			<Text>Thon (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Thon (App.)</French>
 		<Italian>
 			<Text>Tonno addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1876,11 +1495,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_VULTURE</Tag>
 		<English>Subdued Vulture</English>
-		<French>
-			<Text>Vautour (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Vautour (App.)</French>
 		<Italian>
 			<Text>Avvoltoio addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1891,11 +1506,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_WALLABY</Tag>
 		<English>Subdued Wallaby</English>
-		<French>
-			<Text>Wallaby (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Wallaby (App.)</French>
 		<Italian>
 			<Text>Wallaby addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1906,11 +1517,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_WALLAROO</Tag>
 		<English>Subdued Wallaroo</English>
-		<French>
-			<Text>Wallaroo (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Wallaroo (App.)</French>
 		<Italian>
 			<Text>Wallaroo addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1921,11 +1528,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_WALRUS</Tag>
 		<English>Subdued Walrus</English>
-		<French>
-			<Text>Morse (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Morse (App.)</French>
 		<Italian>
 			<Text>Tricheco addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1936,11 +1539,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_WARTHOG</Tag>
 		<English>Subdued Warthog</English>
-		<French>
-			<Text>Phacochère (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Phacochère (App.)</French>
 		<Italian>
 			<Text>Facocero addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1951,11 +1550,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_WHALESHARK</Tag>
 		<English>Subdued Whale Shark</English>
-		<French>
-			<Text>Requin-baleine (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Requin-baleine (App.)</French>
 		<Italian>
 			<Text>Squalo balena addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1966,11 +1561,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_WILDEBEEST</Tag>
 		<English>Subdued Wildebeest</English>
-		<French>
-			<Text>Gnou (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Gnou (App.)</French>
 		<Italian>
 			<Text>Gnu addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1981,11 +1572,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_WOLF</Tag>
 		<English>Subdued Wolf</English>
-		<French>
-			<Text>Loup  (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Loup  (App.)</French>
 		<Italian>
 			<Text>Lupo addomesticato</Text>
 			<Gender>Male</Gender>
@@ -1996,11 +1583,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_WOLVERINE</Tag>
 		<English>Subdued Wolverine</English>
-		<French>
-			<Text>Carcajou (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Carcajou (App.)</French>
 		<Italian>
 			<Text>Ghiottone addomesticato</Text>
 			<Gender>Male</Gender>
@@ -2087,7 +1670,7 @@
 		<Tag>TXT_KEY_UNIT_TALESOF_GIANT_SQUID</Tag>
 		<English>Tales of Giant Squid</English>
 		<French>
-			<Text>Contes de Calamars géants</Text>
+			<Text>Histoires de Calamars géants</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -2133,8 +1716,8 @@
 		<English>Tales of Humpback Whale</English>
 		<French>
 			<Text>Histoires de Baleines à bosses</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
 		</French>
 		<German>
 			<Text>Tales of Humpback Whale</Text>
@@ -2277,7 +1860,7 @@
 		<Tag>TXT_KEY_UNIT_TALESOF_SALTWATER_CROCL</Tag>
 		<English>Tales of Salt water crocodile (large)</English>
 		<French>
-			<Text>Contes de Grands Crocodiles des mers</Text>
+			<Text>Histoires de Grands Crocodiles des mers</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -2292,7 +1875,7 @@
 		<Tag>TXT_KEY_UNIT_TALESOF_SALTWATER_CROCS</Tag>
 		<English>Tales of Salt water crocodile (small)</English>
 		<French>
-			<Text>Contes de Crocodiles des mers</Text>
+			<Text>Histoires de petits Crocodiles des mers</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -2362,11 +1945,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRACKER</Tag>
 		<English>Tracker</English>
-		<French>
-			<Text>Pisteur</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Pisteur</French>
 		<Italian>
 			<Text>Cercatore di tracce</Text>
 			<Gender>Male</Gender>

@@ -19,7 +19,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DISABLES</Tag>
 		<English>[ICON_BULLET]Removes access to [LINK=%s1_BonusNameType]%s2_BonusName[\LINK][COLOR_REVERT] (%F3_BonusIcon) from the city.</English>
-		<French>[ICON_BULLET]Interdir l'accès au bonus [LINK=%s1_BonusNameType]%s2_BonusName[\LINK][COLOR_REVERT] (%F3_BonusIcon) de la ville.</French>
+		<French>[ICON_BULLET]Interdit l'accès au bonus [LINK=%s1_BonusNameType]%s2_BonusName[\LINK][COLOR_REVERT] (%F3_BonusIcon) de la ville.</French>
 		<German>[ICON_BULLET]Entfernt den Bonus [LINK=%s1_BonusNameType]%s2_BonusName[\LINK][COLOR_REVERT] (%F3_BonusIcon) aus der Stadt.</German>
 		<Italian>[ICON_BULLET]Elimina l'accesso a [LINK=%s1_BonusNameType]%s2_BonusName[\LINK][COLOR_REVERT] (%F3_BonusIcon) dalla città.</Italian>
 		<Spanish>[ICON_BULLET]Elimina el acceso [NUM1:al:a la:a los:a las] [LINK=%s1_BonusNameType]%s2_BonusName[\LINK][COLOR_REVERT] (%F3_BonusIcon) de la ciudad.</Spanish>
@@ -316,7 +316,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PLACED_BONUS</Tag>
 		<English>The fruits of the land are revealed!  You have successfully placed or discovered a new source of %s1_BonusName.</English>
-		<French>Les fruits de la terre se dévoilent! Vous avez réussi à placer ou à découvrir une nouvelle source de %s1_BonusName.</French>
+		<French>Les fruits de la terre se dévoilent! Vous avez réussi à placer ou à découvrir une nouvelle source de [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT].</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PLACED_BONUS_FAIL</Tag>
@@ -326,7 +326,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PLAYER_ADOPTED_CIVIC</Tag>
 		<English>%s1_PlyrName has adopted the %s2_CvcOptionName civic [COLOR_HIGHLIGHT_TEXT]%s3_CvcName[COLOR_REVERT]!</English>
-		<French>%s1_PlyrName a adopté: %s2_CvcOptionName - [COLOR_HIGHLIGHT_TEXT]%s3_CvcName[COLOR_REVERT]!</French>
+		<French>%s1_PlyrName a adopté la doctrine (%s2_CvcOptionName) : [COLOR_HIGHLIGHT_TEXT]%s3_CvcName[COLOR_REVERT] !</French>
 		<German>%s1_PlyrName hat angenommen: %s2_CvcOptionName - [COLOR_HIGHLIGHT_TEXT]%s3_CvcName[COLOR_REVERT]!</German>
 		<Italian>%s1_PlyrName ha adottato: %s2_CvcOptionName - [COLOR_HIGHLIGHT_TEXT]%s3_CvcName[COLOR_REVERT]!</Italian>
 		<Spanish>%s1_PlyrName ha adoptado: %s2_CvcOptionName - [COLOR_HIGHLIGHT_TEXT]%s3_CvcName[COLOR_REVERT]!</Spanish>
@@ -334,7 +334,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PLAYER_CONVERT_RELIGION</Tag>
 		<English>%s1_PlyrName has converted to [COLOR_HIGHLIGHT_TEXT]%s2_RelName[COLOR_REVERT]!</English>
-		<French>%s1_PlyrName se convertit à la religion: [COLOR_HIGHLIGHT_TEXT]%s2_RelName[COLOR_REVERT]!</French>
+		<French>%s1_PlyrName se convertit à la religion : [COLOR_HIGHLIGHT_TEXT]%s2_RelName[COLOR_REVERT] !</French>
 		<German>%s1_PlyrName konvertiert zur Religion [COLOR_HIGHLIGHT_TEXT]%s2_RelName[COLOR_REVERT]!</German>
 		<Italian>%s1_PlyrName si converte alla religione [COLOR_HIGHLIGHT_TEXT]%s2:2_RelName[COLOR_REVERT]!</Italian>
 		<Spanish>%s1_PlyrName se ha convertido al [COLOR_HIGHLIGHT_TEXT]%s2_RelName[COLOR_REVERT]!</Spanish>
@@ -345,6 +345,22 @@
 		<French>[SPACE]Vous avez reçu %d1_Num de science pour %s2_TECH!</French>
 		<German>[SPACE]Ihr habt %d1_Num [ICON_RESEARCH] für die Erforschung [NUM2:des:der:des:der:der:der] %s2:2_TECH hinzugewonnen.</German>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_WONDER_COMPLETED</Tag>
+		<English>%s1_PlyrName has completed %s2_WndrName!</English>
+		<French>%s1_PlyrName a construit la merveille : [COLOR_HIGHLIGHT_TEXT]%s2_WndrName[COLOR_REVERT] !</French>
+		<German>%s1_PlyrName hat das Wunder %s2_WndrName fertig gestellt!</German>
+		<Italian>%s1_PlyrName ha completato [NUM2:il:la] %s2_WndrName!</Italian>
+		<Spanish>%s1_PlyrName ha terminado %s2_WndrName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_WONDER_COMPLETED_UNKNOWN</Tag>
+		<English>%s1_WndrName has been built in a far away land!</English>
+		<French>[COLOR_GREY]Cette merveille ([COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]%s1_WndrName[COLOR_REVERT])[COLOR_GREY] a &#233;t&#233; construite dans un pays lointain ![COLOR_REVERT]</French>
+		<German>Das Wunder %s1_WndrName wurde in einem fernen Land errichtet!</German>
+		<Italian>[NUM1:Il:La] %s1_WndrName &#232; [NUM1:stato costruito:stata costruita] in una terra lontana!</Italian>
+		<Spanish>Han construido %s1_WndrName en una tierra muy lejana.</Spanish>
+	</TEXT>		
 	<TEXT>
 		<Tag>TXT_KEY_MISC_YOUR_CRIMINAL_CAUGHT</Tag>
 		<English>Your %s1_UnitName was thwarted and is now on the run from the law!</English>
@@ -602,7 +618,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRADE_ADOPT_CIVIC</Tag>
 		<English>Would adopt the %s1_CvcOptionName civic [COLOR_HIGHLIGHT_TEXT]%s2_CvcName[COLOR_REVERT].</English>
-		<French>Adoptera %s1_CvcOptionName - [COLOR_HIGHLIGHT_TEXT]%s2_CvcName[COLOR_REVERT].</French>
+		<French>Adoptera la doctrine (%s1_CvcOptionName) : [COLOR_HIGHLIGHT_TEXT]%s2_CvcName[COLOR_REVERT].</French>
 		<German>Würde annehmen %s1_CvcOptionName - [COLOR_HIGHLIGHT_TEXT]%s2_CvcName[COLOR_REVERT].</German>
 		<Italian>Adotterà %s1_CvcOptionName - [COLOR_HIGHLIGHT_TEXT]%s2_CvcName[COLOR_REVERT].</Italian>
 		<Spanish>Adoptará %s1_CvcOptionName - [COLOR_HIGHLIGHT_TEXT]%s2_CvcName[COLOR_REVERT].</Spanish>
@@ -610,7 +626,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRADE_CONVERT_RELIGION</Tag>
 		<English>Would convert to [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT].</English>
-		<French>Se convertira à la religion: [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT].</French>
+		<French>Se convertira à la religion : [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT].</French>
 		<German>Wird zur Religion [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT] konvertieren.</German>
 		<Italian>Si convertirà alla religione [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT].</Italian>
 		<Spanish>Se convertirá al [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT].</Spanish>

@@ -205,7 +205,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_EAGLE_BALD_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Bald Eagle, Eagle, Raptors and Birds, Myths of Sky, Bird Cage and Enclosure, Feather Worker</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythe, Histoire(s) -  Bald Eagle, Eagle, Raptors and Birds, Myths of Sky, Bird Cage and Enclosure, Feather Worker</French>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythe, Histoire(s) -  Pygargue à tête blanche, Aigle, Rapaces et Oiseaux, Mythe du Ciel, Cages et Enclos, Atelier de Plumes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_EAGLE_HELP</Tag>
@@ -574,7 +574,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TALESOF_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth of sea animals , Convert into science and culture in a city</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT][ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Myth of sea animals , Convert into science and culture in a city</French>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT][ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes des animaux marins, qui sont convertis en science et culture dans la ville</French>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Costruisci[COLOR_REVERT] i miti degli animali marini [NEWLINE][ICON_BULLET]Converti in ricerca o cultura</Italian>
 		<Polish>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Zbuduj[COLOR_REVERT] Mit Zwierząt Morskich [NEWLINE][ICON_BULLET]Zamień na naukę i kulturę w mieście</Polish>
 	</TEXT>
