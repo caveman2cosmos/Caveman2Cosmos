@@ -9940,7 +9940,7 @@
 			<Button>Art/Interface/Buttons/Buildings/weavingspider.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_LICHEN_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_LICHEN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -12920,7 +12920,7 @@
 			<Button>art/Craft/Art/reedgatherer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GRASS_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_GRASS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -12940,7 +12940,7 @@
 			<Button>art/Craft/Art/strawgatherer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DRIFTWOOD_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_DRIFTWOOD</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -16240,7 +16240,7 @@
 			<Button>art/Crops/Art/ricegatherer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CORN_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_CORN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -16250,7 +16250,7 @@
 			<Button>art/Crops/Art/corngatherer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_INDIGO_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_INDIGO</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -16260,7 +16260,7 @@
 			<Button>art/Crops/Art/indigogatherer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HENNA_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_HENNA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -22354,7 +22354,7 @@
 			<Button>art/Minerals/Art/platinummine.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_JADE_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_JADE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>

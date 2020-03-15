@@ -13928,7 +13928,7 @@
 			<ObsoleteTech>TECH_ACCELERATED_GERMINATION</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DRIFTWOOD_GATHERER</Type>
+			<Type>BUILDING_GATHERER_DRIFTWOOD</Type>
 			<ObsoleteTech>TECH_TRADE</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -13986,7 +13986,7 @@
 			<ObsoleteTech>TECH_ASTROENGINEERING</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GRASS_GATHERER</Type>
+			<Type>BUILDING_GATHERER_GRASS</Type>
 			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>

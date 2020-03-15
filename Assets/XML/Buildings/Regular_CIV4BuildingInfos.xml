@@ -12535,7 +12535,7 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_DRIFTWOOD_GATHERER</BuildingType>
+					<BuildingType>BUILDING_GATHERER_DRIFTWOOD</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
@@ -26618,12 +26618,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Wild Corn Gatherer -->
-			<Type>BUILDING_CORN_GATHERER</Type>
-			<Description>TXT_KEY_BUILDING_CORN_GATHERER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CORN_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CORN_GATHERER_STRATEGY</Strategy>
+			<Type>BUILDING_GATHERER_CORN</Type>
+			<Description>TXT_KEY_BUILDING_GATHERER_CORN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_CORN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_CORN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CORN_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_CORN</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -31830,17 +31830,17 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Driftwood Gatherer -->
-			<Type>BUILDING_DRIFTWOOD_GATHERER</Type>
+			<Type>BUILDING_GATHERER_DRIFTWOOD</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_DRIFTWOOD_GATHERER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DRIFTWOOD_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRIFTWOOD_GATHERER_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_GATHERER_DRIFTWOOD</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_DRIFTWOOD_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_DRIFTWOOD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRIFTWOOD_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_DRIFTWOOD</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -32561,11 +32561,11 @@
 			<PrereqTech>TECH_NATURAL_PIGMENTS</PrereqTech>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_INDIGO_GATHERER</BuildingType>
+					<BuildingType>BUILDING_GATHERER_INDIGO</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_HENNA_GATHERER</BuildingType>
+					<BuildingType>BUILDING_GATHERER_HENNA</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
@@ -37768,7 +37768,7 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_DRIFTWOOD_GATHERER</BuildingType>
+					<BuildingType>BUILDING_GATHERER_DRIFTWOOD</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
@@ -43825,17 +43825,17 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Grass Gatherer -->
-			<Type>BUILDING_GRASS_GATHERER</Type>
+			<Type>BUILDING_GATHERER_GRASS</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_GRASS_GATHERER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GRASS_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_GRASS_GATHERER_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_GATHERER_GRASS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_GRASS_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_GRASS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GRASS_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_GRASS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -46445,12 +46445,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Henna Gatherer -->
-			<Type>BUILDING_HENNA_GATHERER</Type>
-			<Description>TXT_KEY_BUILDING_HENNA_GATHERER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HENNA_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HENNA_GATHERER_STRATEGY</Strategy>
+			<Type>BUILDING_GATHERER_HENNA</Type>
+			<Description>TXT_KEY_BUILDING_GATHERER_HENNA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_HENNA_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_HENNA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_HENNA_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_HENNA</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -50106,12 +50106,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Indigo Gatherer -->
-			<Type>BUILDING_INDIGO_GATHERER</Type>
-			<Description>TXT_KEY_BUILDING_INDIGO_GATHERER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_INDIGO_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_INDIGO_GATHERER_STRATEGY</Strategy>
+			<Type>BUILDING_GATHERER_INDIGO</Type>
+			<Description>TXT_KEY_BUILDING_GATHERER_INDIGO</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_INDIGO_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_INDIGO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_INDIGO_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_INDIGO</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -51708,12 +51708,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Jade Gatherer -->
-			<Type>BUILDING_JADE_GATHERER</Type>
-			<Description>TXT_KEY_BUILDING_JADE_GATHERER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_JADE_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_JADE_GATHERER_STRATEGY</Strategy>
+			<Type>BUILDING_GATHERER_JADE</Type>
+			<Description>TXT_KEY_BUILDING_GATHERER_JADE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_JADE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_JADE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_JADE_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_JADE</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -55881,7 +55881,7 @@
 				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_LICHEN_GATHERER</BuildingType>
+				<BuildingType>BUILDING_GATHERER_LICHEN</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_ANCIENT_MEDICINE</ObsoleteTech>
@@ -55912,17 +55912,17 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Lichen Gatherer -->
-			<Type>BUILDING_LICHEN_GATHERER</Type>
+			<Type>BUILDING_GATHERER_LICHEN</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_LICHEN_GATHERER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LICHEN_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_LICHEN_GATHERER_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_GATHERER_LICHEN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_LICHEN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_LICHEN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_LICHEN_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_LICHEN</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

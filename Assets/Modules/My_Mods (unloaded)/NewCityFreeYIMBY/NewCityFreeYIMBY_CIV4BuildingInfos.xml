@@ -72,7 +72,7 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_FASCISM</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_INDIGO_GATHERER</Type>
+			<Type>BUILDING_GATHERER_INDIGO</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_FLORISTRY</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -192,23 +192,23 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_TRIBALISM</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CORN_GATHERER</Type>
+			<Type>BUILDING_GATHERER_CORN</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_TRIBALISM</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DRIFTWOOD_GATHERER</Type>
+			<Type>BUILDING_GATHERER_DRIFTWOOD</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_TRIBALISM</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GRASS_GATHERER</Type>
+			<Type>BUILDING_GATHERER_GRASS</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_TRIBALISM</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HENNA_GATHERER</Type>
+			<Type>BUILDING_GATHERER_HENNA</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_TRIBALISM</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_JADE_GATHERER</Type>
+			<Type>BUILDING_GATHERER_JADE</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_TRIBALISM</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
