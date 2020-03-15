@@ -4701,7 +4701,7 @@ void cvInternalGlobals::deleteInfoArrays()
 	m_RiverModelInfo.clear();
 
 	m_WaterPlaneInfo.clear();
-	deleteInfoArray(m_paTerrainPlaneInfo);
+	m_TerrainPlaneInfo.clear();
 	m_CameraOverlayInfo.clear();
 
 	deleteInfoArray(m_aEraInfo);
@@ -4756,7 +4756,7 @@ void cvInternalGlobals::deleteInfoArrays()
 	deleteInfoArray(m_paBonusInfo);
 	m_LandscapeInfo.clear();
 
-	m_paUnitFormationInfo.clear();
+	m_UnitFormationInfo.clear();
 	deleteInfoArray(m_paCivicOptionInfo);
 	deleteInfoArray(m_paCursorInfo);
 
@@ -4780,7 +4780,7 @@ void cvInternalGlobals::deleteInfoArrays()
 	deleteInfoArray(m_paEspionageMissionInfo);
 
 	m_EntityEventInfo.clear();
-	deleteInfoArray(m_paAnimationCategoryInfo);
+	m_AnimationCategoryInfo.clear();
 	m_AnimationPathInfo.clear();
 	deleteInfoArray(m_paPropertyInfo);
 

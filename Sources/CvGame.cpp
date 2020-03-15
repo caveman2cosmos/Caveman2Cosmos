@@ -1982,7 +1982,7 @@ void CvGame::normalizeAddGoodTerrain()
 
 										if (pLoopPlot->calculateNatureYield(YIELD_FOOD, GET_PLAYER((PlayerTypes)iI).getTeam()) < GC.getFOOD_CONSUMPTION_PER_POPULATION())
 										{
-											for (iK = 0; iK < GC.getNumTerrainInfos(); iK++)
+											for (iK = 0; iK < GC.numTypes<CvTerrainInfo>(); iK++)
 											{
 												if (!GC.get<CvTerrainInfo>(iK).isWater())
 												{
