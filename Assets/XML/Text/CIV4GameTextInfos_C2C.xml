@@ -315,12 +315,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PLACED_BONUS</Tag>
-		<English>The fruits of the land are revealed!  You have successfully placed or discovered a new source of %s1_BonusName.</English>
+		<English>The fruits of the land are revealed! You have successfully placed or discovered a new source of %s1_BonusName.</English>
 		<French>Les fruits de la terre se dévoilent! Vous avez réussi à placer ou à découvrir une nouvelle source de [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT].</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PLACED_BONUS_FAIL</Tag>
-		<English>The land refuses to give up its secrets!  You have failed to place or discover a resource.</English>
+		<English>The land refuses to give up its secrets! You have failed to place or discover a resource.</English>
 		<French>La terre refuse de livrer ses secrets! Vous n'avez pas réussi à placer ou à découvrir une ressource.</French>
 	</TEXT>
 	<TEXT>
@@ -369,7 +369,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_TECH_YIELD</Tag>
 		<English>%s1: %D2%F3 (with [LINK=%s4_BonusType]%s5_Bonus[\LINK])</English>
-		<French>%s1:  %D2%F3 (avec [LINK=%s4_BonusType]%s5_Bonus[\LINK])</French>
+		<French>%s1: %D2%F3 (avec [LINK=%s4_BonusType]%s5_Bonus[\LINK])</French>
 		<German>%s1: %D2%F3 (mit [LINK=%s4_BonusType]%s5_Bonus[\LINK])</German>
 		<Italian>%s1: %D2%F3 (con [LINK=%s4_BonusType]%s5_Bonus[\LINK])</Italian>
 		<Spanish>%s1: %D2 %F3 (con [LINK=%s4_BonusType]%s5_Bonus[\LINK])</Spanish>

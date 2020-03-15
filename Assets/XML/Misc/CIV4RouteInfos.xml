@@ -176,7 +176,7 @@
 			<iAdvancedStartCostIncrease>0</iAdvancedStartCostIncrease>
 			<iMovement>16</iMovement>
 			<iFlatMovement>6</iFlatMovement>
-			<BonusType>BONUS_LIQUID_METAL_WARES</BonusType>
+			<BonusType>BONUS_LIQUID_METAL</BonusType>
 			<Yields>
 				<iYield>0</iYield>
 				<iYield>1</iYield>

@@ -9326,7 +9326,7 @@
 				</GreatPeople>
 			</GreatPeoples>
 			<PrereqTech>TECH_ADVANCED_WARMACHINES</PrereqTech>
-			<BonusType>BONUS_SUPERSTRONG_ALLOY_WARES</BonusType>
+			<BonusType>BONUS_SUPERSTRONG_ALLOYS</BonusType>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>3</iMoves>
@@ -9576,7 +9576,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_ADVANCED_WARMACHINES</PrereqTech>
-			<BonusType>BONUS_SUPERSTRONG_ALLOY_WARES</BonusType>
+			<BonusType>BONUS_SUPERSTRONG_ALLOYS</BonusType>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMoves>3</iMoves>

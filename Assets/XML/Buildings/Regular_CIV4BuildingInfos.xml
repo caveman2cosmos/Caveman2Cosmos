@@ -1748,7 +1748,7 @@
 				<Bonus>BONUS_BICYCLES</Bonus>
 				<Bonus>BONUS_AUTOMOBILES</Bonus>
 				<Bonus>BONUS_COMPUTERS</Bonus>
-				<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+				<Bonus>BONUS_METAMATERIALS</Bonus>
 				<Bonus>BONUS_AIRCRAFT</Bonus>
 				<Bonus>BONUS_SERVICE_BOTS</Bonus>
 				<Bonus>BONUS_UNMANNED_AIRCRAFTS</Bonus>
@@ -3513,7 +3513,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_SUPERSTRONG_ALLOY_WARES</ID>
+						<ID>BONUS_SUPERSTRONG_ALLOYS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -4137,11 +4137,11 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqBonuses>
-				<Bonus>BONUS_REFRIGERATORS</Bonus>
-				<Bonus>BONUS_MICROWAVE_OVENS</Bonus>
 				<Bonus>BONUS_BLENDER</Bonus>
-				<Bonus>BONUS_VACUUM</Bonus>
 				<Bonus>BONUS_DISHWASHERS</Bonus>
+				<Bonus>BONUS_MICROWAVE_OVENS</Bonus>
+				<Bonus>BONUS_REFRIGERATORS</Bonus>
+				<Bonus>BONUS_VACUUM_CLEANERS</Bonus>
 				<Bonus>BONUS_WASHER_DRYER</Bonus>
 			</PrereqBonuses>
 			<PrereqInCityBuildings>
@@ -4186,7 +4186,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_VACUUM</BonusType>
+					<BonusType>BONUS_VACUUM_CLEANERS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -6247,7 +6247,7 @@
 			<!-- Special Yield and Commerce modifiers -->
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_MARS_ROCKS</BonusType>
+					<BonusType>BONUS_MARTIAN_ROCKS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>1</iCommerce>
@@ -6532,7 +6532,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_METAMATERIAL_WARES</BonusType>
+					<BonusType>BONUS_METAMATERIALS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -26225,7 +26225,7 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_COPPER_WIRES</Bonus>
 				<Bonus>BONUS_MICROCHIPS</Bonus>
-				<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+				<Bonus>BONUS_METAMATERIALS</Bonus>
 				<Bonus>BONUS_COMPUTERS</Bonus>
 				<Bonus>BONUS_JEWELRY</Bonus>
 				<Bonus>BONUS_TRANSISTORS</Bonus>
@@ -28352,7 +28352,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_METAMATERIAL_WARES</ID>
+						<ID>BONUS_METAMATERIALS</ID>
 					</Has>
 				</And>
 			</ConstructCondition>
@@ -28407,7 +28407,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_SUPERSTRONG_ALLOY_WARES</ID>
+						<ID>BONUS_SUPERSTRONG_ALLOYS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -29350,7 +29350,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_LIQUID_METAL_WARES</ID>
+						<ID>BONUS_LIQUID_METAL</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -32961,7 +32961,7 @@
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iPrereqPopulation>50</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 				<BuildingType>BUILDING_ECOSCRAPER</BuildingType>
@@ -40639,7 +40639,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_SUPERSTRONG_ALLOY_WARES</ID>
+						<ID>BONUS_SUPERSTRONG_ALLOYS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -49565,7 +49565,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_VACUUM</BonusType>
+					<BonusType>BONUS_VACUUM_CLEANERS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -52282,7 +52282,7 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_NANOTUBES</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_SUPERSTRONG_ALLOY_WARES</Bonus>
+				<Bonus>BONUS_SUPERSTRONG_ALLOYS</Bonus>
 			</PrereqBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
@@ -55643,7 +55643,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_SUPERSTRONG_ALLOY_WARES</ID>
+						<ID>BONUS_SUPERSTRONG_ALLOYS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -56119,7 +56119,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_METAMATERIAL_WARES</ID>
+						<ID>BONUS_METAMATERIALS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -56142,7 +56142,7 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_LIQUID_METAL_WARES</FreeBonus>
+			<FreeBonus>BONUS_LIQUID_METAL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special Yield and Commerce modifiers -->
 			<TechCommerceChanges>
@@ -58078,7 +58078,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_VACUUM</BonusType>
+					<BonusType>BONUS_VACUUM_CLEANERS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -60439,7 +60439,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MEGASTRONG_ALLOYS</PrereqTech>
-			<Bonus>BONUS_MEGASTRONG_ALLOY_WARES</Bonus>
+			<Bonus>BONUS_MEGASTRONG_ALLOYS</Bonus>
 			<!-- Construction cost -->
 			<iCost>12155</iCost>
 			<!-- Main effects -->
@@ -60527,7 +60527,7 @@
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iPrereqPopulation>50</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
@@ -60569,7 +60569,7 @@
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iPrereqPopulation>50</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 				<BuildingType>BUILDING_ARTIFICAL_TREEFARM</BuildingType>
@@ -60606,7 +60606,7 @@
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iPrereqPopulation>50</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 				<BuildingType>BUILDING_ECOSCRAPER</BuildingType>
@@ -60657,7 +60657,7 @@
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iPrereqPopulation>50</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -60702,7 +60702,7 @@
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iPrereqPopulation>50</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 				<BuildingType>BUILDING_FIRE_STATION</BuildingType>
@@ -60744,7 +60744,7 @@
 			</TechTypes>
 			<iPrereqPopulation>50</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_HOLOGRAPHIC_PROJECTORS</Bonus>
 			</PrereqBonuses>
@@ -60778,7 +60778,7 @@
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iPrereqPopulation>50</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 				<BuildingType>BUILDING_HOTEL</BuildingType>
@@ -60814,7 +60814,7 @@
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iPrereqPopulation>50</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 			</PrereqInCityBuildings>
@@ -60862,7 +60862,7 @@
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iPrereqPopulation>50</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -60931,7 +60931,7 @@
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iPrereqPopulation>50</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
@@ -60969,7 +60969,7 @@
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iPrereqPopulation>50</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 				<BuildingType>BUILDING_CITY_PARK</BuildingType>
@@ -61018,7 +61018,7 @@
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iPrereqPopulation>50</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 			</PrereqInCityBuildings>
@@ -61077,7 +61077,7 @@
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iPrereqPopulation>50</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 				<BuildingType>BUILDING_LABORATORY</BuildingType>
@@ -61140,7 +61140,7 @@
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iPrereqPopulation>50</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 			</PrereqInCityBuildings>
@@ -61178,7 +61178,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iPrereqPopulation>50</iPrereqPopulation>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 				<BuildingType>BUILDING_SOLARVOLT_ROOF</BuildingType>
@@ -61213,7 +61213,7 @@
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iPrereqPopulation>50</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 				<BuildingType>BUILDING_AMUSEMENT_PARK</BuildingType>
@@ -61252,7 +61252,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iPrereqPopulation>50</iPrereqPopulation>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 				<BuildingType>BUILDING_WIND_FARM</BuildingType>
@@ -61422,7 +61422,7 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_METAMATERIAL_WARES</FreeBonus>
+			<FreeBonus>BONUS_METAMATERIALS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special Yield and Commerce modifiers -->
 			<BonusCommerceModifiers>
@@ -61509,7 +61509,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_METAMATERIALS</PrereqTech>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_MEGASTRONG_ALLOYS</ObsoleteTech>
 			<ReplaceBuildings>
@@ -66938,7 +66938,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_LIQUID_METAL_WARES</ID>
+						<ID>BONUS_LIQUID_METAL</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -68131,7 +68131,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_LIQUID_METAL_WARES</ID>
+						<ID>BONUS_LIQUID_METAL</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -75290,22 +75290,22 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqBonuses>
-				<Bonus>BONUS_WATER_BOTTLES</Bonus>
-				<Bonus>BONUS_SODA_POP</Bonus>
-				<Bonus>BONUS_ENERGY_DRINK</Bonus>
-				<Bonus>BONUS_POWER_TOOLS</Bonus>
 				<Bonus>BONUS_BLENDER</Bonus>
-				<Bonus>BONUS_VACUUM</Bonus>
-				<Bonus>BONUS_WASHER_DRYER</Bonus>
-				<Bonus>BONUS_SERVICE_BOTS</Bonus>
 				<Bonus>BONUS_CELLPHONES</Bonus>
-				<Bonus>BONUS_SHOES</Bonus>
-				<Bonus>BONUS_RADIOS</Bonus>
-				<Bonus>BONUS_TELEVISIONS</Bonus>
 				<Bonus>BONUS_COMPUTERS</Bonus>
+				<Bonus>BONUS_ENERGY_DRINK</Bonus>
 				<Bonus>BONUS_MICROWAVE_OVENS</Bonus>
-				<Bonus>BONUS_TYPEWRITERS</Bonus>
 				<Bonus>BONUS_PHONOGRAPHS</Bonus>
+				<Bonus>BONUS_POWER_TOOLS</Bonus>
+				<Bonus>BONUS_RADIOS</Bonus>
+				<Bonus>BONUS_SERVICE_BOTS</Bonus>
+				<Bonus>BONUS_SHOES</Bonus>
+				<Bonus>BONUS_SODA_POP</Bonus>
+				<Bonus>BONUS_TELEVISIONS</Bonus>
+				<Bonus>BONUS_TYPEWRITERS</Bonus>
+				<Bonus>BONUS_VACUUM_CLEANERS</Bonus>
+				<Bonus>BONUS_WASHER_DRYER</Bonus>
+				<Bonus>BONUS_WATER_BOTTLES</Bonus>
 			</PrereqBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_RECYCLING_CENTER</BuildingType>
@@ -76433,7 +76433,7 @@
 			<CommerceChanges>
 				<iCommerce>8</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_PORCELAIN_WARES</FreeBonus>
+			<FreeBonus>BONUS_PORCELAIN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special Yield and Commerce modifiers -->
 			<BonusCommerceModifiers>
@@ -76507,7 +76507,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_PORCELAIN_WARES</FreeBonus>
+			<FreeBonus>BONUS_PORCELAIN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special Yield and Commerce modifiers -->
 			<BonusCommerceModifiers>
@@ -77638,7 +77638,7 @@
 			<PrereqTech>TECH_ARTIFICIAL_PHOTOSYNTHESIS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_SUPERSTRONG_ALLOY_WARES</Bonus>
+			<Bonus>BONUS_SUPERSTRONG_ALLOYS</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_CYBERNETIC_CHLOROPLASTS</Bonus>
 			</PrereqBonuses>
@@ -86651,11 +86651,11 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_METAMATERIAL_WARES</ID>
+						<ID>BONUS_METAMATERIALS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_LIQUID_METAL_WARES</ID>
+						<ID>BONUS_LIQUID_METAL</ID>
 					</Has>
 				</And>
 			</ConstructCondition>
@@ -91049,7 +91049,7 @@
 				<Bonus>BONUS_REFRIGERATORS</Bonus>
 				<Bonus>BONUS_BICYCLES</Bonus>
 				<Bonus>BONUS_AUTOMOBILES</Bonus>
-				<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+				<Bonus>BONUS_METAMATERIALS</Bonus>
 			</PrereqBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_RECYCLING_CENTER</BuildingType>
@@ -92966,7 +92966,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_METAMATERIAL_WARES</ID>
+						<ID>BONUS_METAMATERIALS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -92993,7 +92993,7 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_SUPERSTRONG_ALLOY_WARES</FreeBonus>
+			<FreeBonus>BONUS_SUPERSTRONG_ALLOYS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special Yield and Commerce modifiers -->
 			<TechCommerceChanges>
@@ -93044,7 +93044,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SUPERSTRONG_ALLOYS</PrereqTech>
-			<Bonus>BONUS_SUPERSTRONG_ALLOY_WARES</Bonus>
+			<Bonus>BONUS_SUPERSTRONG_ALLOYS</Bonus>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -96041,7 +96041,7 @@
 			<CommerceChanges>
 				<iCommerce>6</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_TERRACOTTA_WARES</FreeBonus>
+			<FreeBonus>BONUS_TERRACOTTA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -96103,7 +96103,7 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_TERRACOTTA_WARES</FreeBonus>
+			<FreeBonus>BONUS_TERRACOTTA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -97118,7 +97118,7 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_PARTS</Bonus>
 				<Bonus>BONUS_BICYCLES</Bonus>
-				<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+				<Bonus>BONUS_METAMATERIALS</Bonus>
 				<Bonus>BONUS_AIRCRAFT</Bonus>
 				<Bonus>BONUS_UNMANNED_AIRCRAFTS</Bonus>
 			</PrereqBonuses>
@@ -100387,7 +100387,7 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_VACUUM</FreeBonus>
+			<FreeBonus>BONUS_VACUUM_CLEANERS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>

@@ -107,7 +107,7 @@
 		<German>[COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] in %s2_CityName fertiggestellt. Was wollt Ihr als Nächstes produzieren?</German>
 		<Italian>Hai costruito l'edificio [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] a %s2_CityName. Cosa vuoi realizzare adesso?</Italian>
 		<Spanish>Habéis construido [NUM1:un:una:unos:unas] [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] en %s2_CityName. ¿Qué queréis hacer a continuación?</Spanish>
-		<Polish>Zbudowałeś  [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] w %s2_CityName. Nad czym mamy się teraz skupić?</Polish>
+		<Polish>Zbudowałeś [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] w %s2_CityName. Nad czym mamy się teraz skupić?</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_CONSTRUCTED_WORK_ON_NEXT_LIMITED</Tag>
@@ -116,7 +116,7 @@
 		<German>[COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] in %s2_CityName fertiggestellt. Was wollt Ihr als Nächstes produzieren?</German>
 		<Italian>Hai costruito l'edificio [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] a %s2_CityName. Cosa vuoi realizzare adesso?</Italian>
 		<Spanish>Habéis construido [NUM1:un:una:unos:unas] [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] en %s2_CityName. ¿Qué queréis hacer a continuación?</Spanish>
-		<Polish>Zbudowałeś  [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] w %s2_CityName. Nad czym mamy się teraz skupić?</Polish>
+		<Polish>Zbudowałeś [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] w %s2_CityName. Nad czym mamy się teraz skupić?</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_CREATED_WORK_ON_NEXT</Tag>
@@ -193,7 +193,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_ELECTION_VICTORY_FAKE</Tag>
 		<English>During last evening nation election, you recieved %d1 percent the of the vote. Fortuantly, your "poll anaylists" were able to interpret an additional %d2 percent of the vote in your favor.</English>
-		<French>Durant les élections nationales d'hier soir, vous avez obtenu %d1 pourcent de voix. Heureusement, vos "Analystes" des sondages ont été capable d'interpréter un ajout de  %d2 pourcent de votes en votre faveur.</French>
+		<French>Durant les élections nationales d'hier soir, vous avez obtenu %d1 pourcent de voix. Heureusement, vos "Analystes" des sondages ont été capable d'interpréter un ajout de %d2 pourcent de votes en votre faveur.</French>
 		<German>Bei den Wahlen letzte Nacht hast Du %d1 Prozent der Stimmen erzielt. Zum Glück ist es Deinen "Wahlanalysten" gelungen, %d2 Prozent der Stimmen zu Deinen Gunsten zu interpretieren.</German>
 		<Italian>Durante le ultime elezioni hai ricevuto il %d1 dei voti. Fortunatamente, i tuoi "analisti" sono riusciti a interpretare unn ulteriore %d2 dei voti in tuo favore.</Italian>
 		<Spanish>En las elecciones nacionales de ayer recibiste el %d1 por ciento de los votos. Afortunadamente, tus "analistas" han sido capaces de sumar un %d2 por ciento adicional de votos como favorables a tu candidatura.</Spanish>
@@ -236,7 +236,7 @@
 		<Tag>TXT_KEY_POPUP_EVENT_FOREIGN_WOMAN_2</Tag>
 		<English>The %s1_civ tribe has brought one of our women back. She has arrived in our lands without being injured.</English>
 		<French>La Tribu %s1_civ tribu a ramené une de nos femmes. Elle est arrivée sur nos terres sans être blessée.</French>
-		<Italian>La tribù %s1_civ ci ha riportato una delle nostre donne. E' arrivata nel nostro territorio senza essere stata ferita.</Italian>
+		<Italian>La tribù %s1_civ ci ha riportato una delle nostre donne. È arrivata nel nostro territorio senza essere stata ferita.</Italian>
 		<Spanish>La tribu %s1:2_civ nos ha devuelto a una de nuestras mujeres. Ha llegado a nuestras tierras sin haber sido herida.</Spanish>
 		<Polish>Plemię %s1_civ oddało kobietę. Dotarła bezpiecznie do swojego plemienia.</Polish>
 	</TEXT>
@@ -356,7 +356,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_NEW_GAME_SAVE_FORMAT_BODY</Tag>
-		<English>"Maximum Compatibility" will allow save games to be loaded into later versions of the mod (in most cases) but is larger and a little slower to load &amp; save.  It is also currently beta functionality.[NEWLINE]"Original BTS" is the save format Civ4 used previously.  It is more compact and a little faster to load &amp; save, but normally will not support game loading between releases of a mod.</English>
+		<English>"Maximum Compatibility" will allow save games to be loaded into later versions of the mod (in most cases) but is larger and a little slower to load &amp; save. It is also currently beta functionality.[NEWLINE]"Original BTS" is the save format Civ4 used previously. It is more compact and a little faster to load &amp; save, but normally will not support game loading between releases of a mod.</English>
 		<French>"Maximum Compatibility" permettra de sauvegarder les parties à charger dans les versions ultérieures du mod (dans la plupart des cas) mais est plus grand et un peu plus lent à charger et à sauvegarder. C'est aussi actuellement une fonctionnalité bêta.[NEWLINE]"Original BTS" Il est plus compact et un peu plus rapide pour charger la sauvegarde, mais ne prend généralement pas en charge le chargement du jeu entre les versions d'un mod..</French>
 		<Spanish>"Máxima compatibilidad" permite que las partidas guardadas puedan ser cargadas en versiones posteriores del mod (en la mayoría de los casos), pero su tamaño será mayor y la carga/guardado será un poco más lenta. Actualmente se encuentra en fase beta. [NEWLINE]"Original de BTS" es el formato de guardado que utiliza Civilization 4. Su tamaño es menor y es algo más rápido al cargar/guardar, pero su uso en versiones distintas de un mod no está soportado (normalmente).</Spanish>
 		<Polish>Maksymalna Kompatybilność pozwala wczytywać savy z wcześniejszych wersji modu ale jest większy i wolniejszy w zapisze i odczycie. [NEWLINE]"Oryginalny BTS" jest formatem Civ4. Jest mniejszy i szybszy ale nie pozwala na odczytywanie wcześniejszych wersji zapisów modu.</Polish>
@@ -412,7 +412,7 @@
 		<English>That's Terrible!</English>
 		<French>C'est Terrible!</French>
 		<German>Das ist ja schrecklich!</German>
-		<Italian>E' terribile!</Italian>
+		<Italian>È terribile!</Italian>
 		<Spanish>¡Es horrible!</Spanish>
 		<Polish>To straszne!</Polish>
 	</TEXT>

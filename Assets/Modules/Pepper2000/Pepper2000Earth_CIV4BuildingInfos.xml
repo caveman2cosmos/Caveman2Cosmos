@@ -879,7 +879,7 @@
 				<BuildingType>BUILDING_OMEGA_ASSEMBLER</BuildingType>
 				<BuildingType>BUILDING_QUANTUM_GRAVITY_SUPERCOMPUTER</BuildingType>
 			</PrereqInCityBuildings>
-			<Bonus>BONUS_MEGASTRONG_ALLOY_WARES</Bonus>
+			<Bonus>BONUS_MEGASTRONG_ALLOYS</Bonus>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1487,7 +1487,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_METAMATERIAL_WARES</FreeBonus>
+			<FreeBonus>BONUS_METAMATERIALS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
@@ -1495,7 +1495,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_LIQUID_METAL_WARES</FreeBonus>
+					<FreeBonus>BONUS_LIQUID_METAL</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -1507,7 +1507,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SUPERSTRONG_ALLOY_WARES</FreeBonus>
+					<FreeBonus>BONUS_SUPERSTRONG_ALLOYS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -2006,7 +2006,7 @@
 			</YieldChanges>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_LIQUID_METAL_WARES</BonusType>
+					<BonusType>BONUS_LIQUID_METAL</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -2430,7 +2430,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_VACUUM</FreeBonus>
+					<FreeBonus>BONUS_VACUUM_CLEANERS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -2510,7 +2510,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PORCELAIN_WARES</FreeBonus>
+					<FreeBonus>BONUS_PORCELAIN</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -2526,7 +2526,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TERRACOTTA_WARES</FreeBonus>
+					<FreeBonus>BONUS_TERRACOTTA</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -4138,7 +4138,7 @@
 			</YieldChanges>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_LIQUID_METAL_WARES</BonusType>
+					<BonusType>BONUS_LIQUID_METAL</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -4183,7 +4183,7 @@
 			</YieldChanges>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_LIQUID_METAL_WARES</BonusType>
+					<BonusType>BONUS_LIQUID_METAL</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -4279,7 +4279,7 @@
 				<BuildingType>BUILDING_POWER_LINES</BuildingType>
 				<BuildingType>BUILDING_HELIUM_3_IMPORTER</BuildingType>
 			</PrereqInCityBuildings>
-			<Bonus>BONUS_SUPERSTRONG_ALLOY_WARES</Bonus>
+			<Bonus>BONUS_SUPERSTRONG_ALLOYS</Bonus>
 			<bPower>1</bPower>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -4306,7 +4306,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ALPHA_ASSEMBLER</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_MEGASTRONG_ALLOY_WARES</FreeBonus>
+			<FreeBonus>BONUS_MEGASTRONG_ALLOYS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
 				<PropertySource>
@@ -4391,7 +4391,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_SUPERSTRONG_ALLOY_WARES</ID>
+						<ID>BONUS_SUPERSTRONG_ALLOYS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -4635,7 +4635,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_EPSILON_ASSEMBLER</BuildingType>
 			</PrereqInCityBuildings>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<FreeBonus>BONUS_NANOTRUSSES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
@@ -20276,7 +20276,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
-			<Bonus>BONUS_SUPERSTRONG_ALLOY_WARES</Bonus>
+			<Bonus>BONUS_SUPERSTRONG_ALLOYS</Bonus>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -20509,7 +20509,7 @@
 				<iYield>5</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<Bonus>BONUS_SUPERSTRONG_ALLOY_WARES</Bonus>
+			<Bonus>BONUS_SUPERSTRONG_ALLOYS</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SUBTERRANEAN_CITY</Type>

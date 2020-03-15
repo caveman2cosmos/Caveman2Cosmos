@@ -1582,9 +1582,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOUNTAIN_TAPIR_STORIES</Tag>
-		<English>Stories  - Tapir, Mountain</English>
+		<English>Stories - Tapir, Mountain</English>
 		<French>Histoires des Tapirs des Montagnes</French>
-		<Polish>Historie  - Tapir Górski</Polish>
+		<Polish>Historie - Tapir Górski</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOUNTAIN_TAPIR_STORIES_EFFECT</Tag>
@@ -1594,9 +1594,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOUNTAIN_TAPIR_STORY</Tag>
-		<English>Story  - Tapir, Mountain</English>
+		<English>Story - Tapir, Mountain</English>
 		<French>Histoire du Tapir des Montagnes</French>
-		<Polish>Opowieść  - Tapir Górski</Polish>
+		<Polish>Opowieść - Tapir Górski</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSKOX_MYTH</Tag>
@@ -3067,7 +3067,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BUFFALO_PEDIA</Tag>
-		<English>The Cape buffalo or African buffalo (Syncerus caffer), is a large African bovine. It is not closely related to the slightly larger wild Asian water buffalo, and its ancestry remains unclear.  The adult buffalo's horns are its characteristic feature; they have fused bases, forming a continuous bone shield referred to as a "boss". It is widely regarded as a very dangerous animal, as it gores and kills over 200 people every year. The African buffalo is not an ancestor of domestic cattle, and is only distantly related to other larger bovines. Owing to its unpredictable nature, which makes it highly dangerous to humans, the African buffalo has never been domesticated unlike its Asian counterpart, the water buffalo. Other than humans, African Cape buffaloes have few predators aside from lions and are capable of defending themselves.</English>
+		<English>The Cape buffalo or African buffalo (Syncerus caffer), is a large African bovine. It is not closely related to the slightly larger wild Asian water buffalo, and its ancestry remains unclear. The adult buffalo's horns are its characteristic feature; they have fused bases, forming a continuous bone shield referred to as a "boss". It is widely regarded as a very dangerous animal, as it gores and kills over 200 people every year. The African buffalo is not an ancestor of domestic cattle, and is only distantly related to other larger bovines. Owing to its unpredictable nature, which makes it highly dangerous to humans, the African buffalo has never been domesticated unlike its Asian counterpart, the water buffalo. Other than humans, African Cape buffaloes have few predators aside from lions and are capable of defending themselves.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAIMAN</Tag>
@@ -3078,7 +3078,7 @@
 		<Tag>TXT_KEY_UNIT_CAIMAN_PEDIA</Tag>
 		<English>TBD</English>
 		<French>TBD</French>
-		<Polish>Kajmany (Caimaninae)  podrodzina gadów z rodziny aligatorów, obejmująca gatunki z rodzajów Caiman, Melanosuchus i Paleosuchus. Kajmany mają duże płytki kostne wzmacniające rogowe tarczki brzuszne. Długość dorosłych kajmanów od 1,5  kajman Schneidera (Paleosuchus trigonatus)  do 4,5 m  kajman czarny (Melanosuchus niger) (choć prehistoryczne kajmany, takie jak Purussaurus, osiągały nawet 11 m długości). Występują w Ameryce Zrodkowej i Południowej.</Polish>
+		<Polish>Kajmany (Caimaninae) podrodzina gadów z rodziny aligatorów, obejmująca gatunki z rodzajów Caiman, Melanosuchus i Paleosuchus. Kajmany mają duże płytki kostne wzmacniające rogowe tarczki brzuszne. Długość dorosłych kajmanów od 1,5 kajman Schneidera (Paleosuchus trigonatus) do 4,5 m kajman czarny (Melanosuchus niger) (choć prehistoryczne kajmany, takie jak Purussaurus, osiągały nawet 11 m długości). Występują w Ameryce Zrodkowej i Południowej.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COW</Tag>
@@ -3282,7 +3282,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GATOR_ASIAN_PEDIA</Tag>
 		<English>The Chinese alligator (Alligator sinensis) is one of two known living species of Alligator, a genus in the family Alligatoridae. Alligator sinensis is endemic to eastern China.[PARAGRAPH:2]While its appearance is very similar to the only other living member of the genus, the American alligator (Alligator mississippiensis), there are a few differences. Usually, this species only attains an adult length of 5 feet (1.5 m) and a mass of 80 pounds (36 kg). Exceptionally large males have reached 7 feet (2.1 m) in length and 100 pounds (45 kg) in weight. Reports are known of alligators in China reaching 10 feet (3.0 m) in centuries past, but these are now generally considered apocryphal. Unlike the American alligator, the Chinese alligator is fully armored; even its bellya feature of only a few crocodilians.[PARAGRAPH:2]Source: Wikipedia</English>
-		<Polish>Aligator chiński (Alligator sinensis)  gatunek gada z rodziny aligatorowatych. Grzbiet oliwkowo-brązowy, plamisty. Boki tułowia jasnobrązowe z deseniem ciemnych plam. Młode są czarne z jasnożółtymi paskami, podobnie jak młode aligatora amerykańskiego, które jednak mają więcej pasków. W przeciwieństwie też do niego mają kostne płyty powyżej każdej powieki. Koniec pyska ma też nieznacznie zadarty i bardziej zwężony. Zęby są lepiej przystosowane do miażdżenia mięczaków. Brzuszne płytki są skostniałe przez co ich skóra nie miała znaczenia gospodarczego.</Polish>
+		<Polish>Aligator chiński (Alligator sinensis) gatunek gada z rodziny aligatorowatych. Grzbiet oliwkowo-brązowy, plamisty. Boki tułowia jasnobrązowe z deseniem ciemnych plam. Młode są czarne z jasnożółtymi paskami, podobnie jak młode aligatora amerykańskiego, które jednak mają więcej pasków. W przeciwieństwie też do niego mają kostne płyty powyżej każdej powieki. Koniec pyska ma też nieznacznie zadarty i bardziej zwężony. Zęby są lepiej przystosowane do miażdżenia mięczaków. Brzuszne płytki są skostniałe przez co ich skóra nie miała znaczenia gospodarczego.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GATOR_PEDIA</Tag>
@@ -3426,8 +3426,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GIRAFFE_PEDIA</Tag>
-		<English>The giraffe (Giraffa camelopardalis) is an African even-toed ungulate mammal, the tallest of all extant land-living animal species, and the largest ruminant. Its scientific name, which is similar to its archaic English name of camelopard, refers to its irregular patches of color on a light background, which bear a token resemblance to a leopard's spots, and its face, which is similar to that of a camel. The average mass for an adult male giraffe is 1,200 kilograms (2,600 lb) while the average mass for an adult female is 830 kilograms (1,800 lb). It is approximately 4.3 metres (14 ft) to 5.2 metres (17 ft) tall, although the tallest male recorded stood almost 6 metres (20 ft).[PARAGRAPH:2]The giraffe is related to other even-toed ungulates, such as deer and cattle, but is placed in a separate family, the Giraffidae, consisting of only the giraffe and its closest relative, the okapi, and their extinct relatives. Its range extends from Chad in Central Africa to South Africa. Giraffes usually inhabit savannas, grasslands, or open woodlands. However, when food is scarce they will venture into areas with denser vegetation. They prefer areas with plenty of acacia growth. They will drink large quantities of water when available, which enables them to live for extended periods in arid areas. (Source: Wikipidia)</English>
-		<Italian>La giraffa (Giraffa camelopardalis) è un mammifero Africano ungulato a uno zoccolo, il più alto di tutti gli animali viventi sulla terra, e il ruminante più grande. Il suo nome scientifio, simile al suo nome inglese arcaico camelopard, si riferisce alle sue macchie irregolari di colore su un fondo chiaro, che hanno una somiglianza con i pallini del leopaardo, e la sua faccia, che è simile a quella del cammello. La massa media di una giraffa adulta maschio è 1,200 kg, mentre per una femmina è di 830 Kg. E'alta da 4,3 a 5,2 metri, anche se il maschio più alto registrato è stato di 6 metri.[PARAGRAPH:2]La giraffa è imparentata con altri ungulati, come il cervo, ma appartiene a una famiglia separata, le Giraffidae, comprendente solo le giraffe e l'okapi, il suo parente più vicino, oltre ai loro antenati estinti. La sua zona di vita va dal Ciad, in Africa centrale, al Sud Africa. Le giraffe abitano solitamente nella savana, nelle pianure o in piccoli boschi; in ogni caso, in scarsità di cibo esse si avventurano in aree con vegetazione più densa. Preferiscono le aree con molte acacie. Bevono grandi quantità d'acqua ogni volta che possono, il che permette loro di vivere a lungo in zone aride. (Source: Wikipidia)</Italian>
+		<English>The giraffe (Giraffa camelopardalis) is an African even-toed ungulate mammal, the tallest of all extant land-living animal species, and the largest ruminant. Its scientific name, which is similar to its archaic English name of camelopard, refers to its irregular patches of color on a light background, which bear a token resemblance to a leopard's spots, and its face, which is similar to that of a camel. The average mass for an adult male giraffe is 1,200 kilograms (2,600 lb) while the average mass for an adult female is 830 kilograms (1,800 lb). It is approximately 4.3 metres (14 ft) to 5.2 metres (17 ft) tall, although the tallest male recorded stood almost 6 metres (20 ft).[PARAGRAPH:2]The giraffe is related to other even-toed ungulates, such as deer and cattle, but is placed in a separate family, the Giraffidae, consisting of only the giraffe and its closest relative, the okapi, and their extinct relatives. Its range extends from Chad in Central Africa to South Africa. Giraffes usually inhabit savannas, grasslands, or open woodlands. However, when food is scarce they will venture into areas with denser vegetation. They prefer areas with plenty of acacia growth. They will drink large quantities of water when available, which enables them to live for extended periods in arid areas.</English>
+		<Italian>La giraffa (Giraffa camelopardalis) è un mammifero africano ungulato a uno zoccolo, il più alto di tutti gli animali viventi sulla terra, e il ruminante più grande. Il suo nome scientifio, simile al suo nome inglese arcaico camelopard, si riferisce alle sue macchie irregolari di colore su un fondo chiaro, che hanno una somiglianza con i pallini del leopaardo, e la sua faccia, che è simile a quella del cammello. La massa media di una giraffa adulta maschio è 1,200 kg, mentre per una femmina è di 830 kg. È alta da 4,3 a 5,2 metri, anche se il maschio più alto registrato è stato di 6 metri.[PARAGRAPH:2]La giraffa è imparentata con altri ungulati, come il cervo, ma appartiene a una famiglia separata, le Giraffidae, comprendente solo le giraffe e l'okapi, il suo parente più vicino, oltre ai loro antenati estinti. La sua zona di vita va dal Ciad, in Africa centrale, al Sud Africa. Le giraffe abitano solitamente nella savana, nelle pianure o in piccoli boschi; in ogni caso, in scarsità di cibo esse si avventurano in aree con vegetazione più densa. Preferiscono le aree con molte acacie. Bevono grandi quantità d'acqua ogni volta che possono, il che permette loro di vivere a lungo in zone aride.</Italian>
 		<Polish>Żyrafa (Giraffa camelopardalis) - afrykański ssak parzystokopytny z rodziny żyrafowatych, najwyższe zwierzę lądowe i największy z przeżuwaczy żyjących w czasach nowożytnych. Jego epitet gatunkowy odnosi się do przypominającego wielbłąda wyglądu i łat na futrze, właściwych lampartowi (leopardowi, Panthera pardus). Gatunek ten wyróżnia się bardzo długą szyją, osiąga 5-6 m wysokości i masę (średnio) 1600 kg w przypadku samców i 830 kg w przypadku samic. Jego najbliższym żyjącym krewnym jest okapi (rodzina Giraffidae liczy na początku XXI w. tylko te dwa gatunki). Bazując na wzorze ubarwienia wyróżnia się 9 podgatunków.</Polish>
 	</TEXT>
 	<TEXT>
@@ -3568,9 +3568,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JAVA_RHINO_PEDIA</Tag>
-		<English>The Javan rhinoceros (Sunda rhinoceros to be more precise) or lesser one-horned rhinoceros (Rhinoceros sondaicus) is a member of the family Rhinocerotidae and one of five extant rhinoceroses. It belongs to the same genus as the Indian rhinoceros, and has similar mosaicked skin which resembles armor, but at 3.1–3.2 m (10–10.5 feet) in length and 1.4–1.7 m (4.6–5.8 ft) in height, it is smaller. (In fact, it is closer in size to the black rhinoceros of the genus Diceros.) Its horn is usually less than 25 cm (10 inches), smaller than those of the other rhino species.[PARAGRAPH:2]Once the most widespread of Asian rhinoceroses, the Javan rhinoceros ranged from the islands of Java and Sumatra, throughout Southeast Asia, and into India and China. The species is critically endangered, with only one known population in the wild, and no individuals in captivity. It is possibly the rarest large mammal on earth, with a population of as few as 40 in Ujung Kulon National Park on Java in Indonesia. A second population in Cat Tien National Park in Vietnam was confirmed as extinct in 2011. The decline of the Javan rhinoceros is attributed to poaching, primarily for their horns, which are highly valued in traditional Chinese medicine, fetching as much as $30,000 per kilogram on the black market. Loss of habitat, especially as the result of wars, such as the Vietnam War, in Southeast Asia, has also contributed to the species's decline and hindered recovery. The remaining range is within one nationally protected area, but the rhinos are still at risk from poachers, disease and loss of genetic diversity leading to inbreeding depression.[PARAGRAPH:2]The Javan rhino can live approximately 30–45 years in the wild. It historically inhabited lowland rain forest, wet grasslands and large floodplains. The Javan rhino is mostly solitary, except for courtship and child-rearing, though groups may occasionally congregate near wallows and salt licks. Aside from humans, adults have no predators in their range. The Javan rhino usually avoids humans, but will attack when it feels threatened. Scientists and conservationists rarely study the animals directly due to their extreme rarity and the danger of interfering with such an endangered species. Researchers rely on camera traps and fecal samples to gauge health and behavior. Consequently, the Javan rhino is the least studied of all rhino species. Two adult rhinos with their calves were filmed in a motion-triggered video released on February 28, 2011 by WWF and Indonesia's National Park Authority, which proved that it is still breeding in the wild.[PARAGRAPH:2]Source:  Wikipedia</English>
+		<English>The Javan rhinoceros (Sunda rhinoceros to be more precise) or lesser one-horned rhinoceros (Rhinoceros sondaicus) is a member of the family Rhinocerotidae and one of five extant rhinoceroses. It belongs to the same genus as the Indian rhinoceros, and has similar mosaicked skin which resembles armor, but at 3.1–3.2 m (10–10.5 feet) in length and 1.4–1.7 m (4.6–5.8 ft) in height, it is smaller. (In fact, it is closer in size to the black rhinoceros of the genus Diceros.) Its horn is usually less than 25 cm (10 inches), smaller than those of the other rhino species.[PARAGRAPH:2]Once the most widespread of Asian rhinoceroses, the Javan rhinoceros ranged from the islands of Java and Sumatra, throughout Southeast Asia, and into India and China. The species is critically endangered, with only one known population in the wild, and no individuals in captivity. It is possibly the rarest large mammal on earth, with a population of as few as 40 in Ujung Kulon National Park on Java in Indonesia. A second population in Cat Tien National Park in Vietnam was confirmed as extinct in 2011. The decline of the Javan rhinoceros is attributed to poaching, primarily for their horns, which are highly valued in traditional Chinese medicine, fetching as much as $30,000 per kilogram on the black market. Loss of habitat, especially as the result of wars, such as the Vietnam War, in Southeast Asia, has also contributed to the species's decline and hindered recovery. The remaining range is within one nationally protected area, but the rhinos are still at risk from poachers, disease and loss of genetic diversity leading to inbreeding depression.[PARAGRAPH:2]The Javan rhino can live approximately 30–45 years in the wild. It historically inhabited lowland rain forest, wet grasslands and large floodplains. The Javan rhino is mostly solitary, except for courtship and child-rearing, though groups may occasionally congregate near wallows and salt licks. Aside from humans, adults have no predators in their range. The Javan rhino usually avoids humans, but will attack when it feels threatened. Scientists and conservationists rarely study the animals directly due to their extreme rarity and the danger of interfering with such an endangered species. Researchers rely on camera traps and fecal samples to gauge health and behavior. Consequently, the Javan rhino is the least studied of all rhino species. Two adult rhinos with their calves were filmed in a motion-triggered video released on February 28, 2011 by WWF and Indonesia's National Park Authority, which proved that it is still breeding in the wild.</English>
 		<French>Le rhinocéros de Java (Rhinoceros sondaicus), encore appelé rhinocéros de la Sonde, est un rhinocéros unicorne vivant en Asie et faisant partie de la famille des Rhinocérotidés qui compte cinq espèces différentes. Il est apparenté au rhinocéros indien, leur peau à tous deux étant composée de larges plis et faisant penser à une armure, mais mesurant entre 3,1 m et 3,2 m de longueur et de 1,4 m à 1,7 m de hauteur, il est plus petit que ce dernier.</French>
-		<Italian>Il rinoceronte di Giava (Sunda rhinoceros) o piccolo rinoceronte unicorno (Rhinoceros sondaicus) è un membro della famiglia Rhinocerotidae, ed è una delle 5 specie estinte di rinoceronti. Appartiene allo stesso genere del rinoceronte indiano, ed ha una pelle simile che assomiglia ad un'armatura; tuttavia è più piccolo, essendo lungo 3.1–3 m e alto 1.4–1 m (infatti, è più simile al rinoceronte nero per quanto rigurda la sua dimensione). Il suo corno è solitamente meno di 25 cm, più piccolo rispetto agli altri rinoceronti.[PARAGRAPH:2]Una volta la specie di rinoceronte più diffusa, il rinoceronte di Giava viveva sulle isole di Giava e Sumatra, nel Sud-est asiatico, e anche in Cina e India. La specie è a grave rischio di estinzione, con un solo branco allo stato brado, e nessun esemplare in cattività. E' probabilmente il mammiferp più raro sulla faccia della Terra, con una popolazione inferiore ai 40 esemplari nello Ujung Kulon National Park di Giava, in Indonesia. Un secondo branco nel Cat Tien National Park in Vietnam fu dichiarata estinta nel 2011. Il declino del rinoceronte di Giava è dovuto al bracconaggio, principalmente per i loro corni, altamente valutati nella medicina tradizionale cinese, con un valore di 30000 $ al chilo sul mercato nero. La perdita del loro habitat a causa delle guerre, come la guerra del Vietnam, ha contribuito al declino di questa specie. La popolazione rimanente è confinata in un'area nazionale protetta, ma i rinoceronti sono ancora in pericolo a causa dei bracconieri, delle malattie e della perdita di diversità genetica, che portano a una limitazione della crescita.[PARAGRAPH:2]Il rinoceronte di Giava può vivere fino a 3045 anni allo stato brado; storicamente, abitava in foreste pluviali, pianure umide e grandi zone alluvionali. Il rinoceronte di Giava è principalmente solitario, eccetto per il corteggiamento e l'allevamento dei cuccioli, anche se si possono formare alcuni gruppi vicino alle fonti di cibo e di sale. A parte gli umani, il rinoceronte di Giava non ha predatori naturali; questo rinoceronte evita gli umani, ma se viene minacciato attacca. Gli scienziati studiano raramente quest'animale direttamente, a causa della sua rarità e del pericolo di interferire con questa specie in pericolo: i ricercatori si affidano a telecamere nascoste e a campioni di escrementi per studiare la salute e il comportamento; di conseguenza, il rinoceronte di Giava è la specie meno studiata. Due rinoceronti adulti furono filmati in un video pubblicato il 28 febbraio 2011 da WWF e Indonesia's National Park Authority, che conferma che il rinoceronte vive ancora allo stato brado.[PARAGRAPH:2]Fonte:  Wikipedia</Italian>
+		<Italian>Il rinoceronte di Giava (Sunda rhinoceros) o piccolo rinoceronte unicorno (Rhinoceros sondaicus) è un membro della famiglia Rhinocerotidae, ed è una delle 5 specie estinte di rinoceronti. Appartiene allo stesso genere del rinoceronte indiano, ed ha una pelle simile che assomiglia ad un'armatura; tuttavia è più piccolo, essendo lungo 3.1–3 m e alto 1.4–1 m (infatti, è più simile al rinoceronte nero per quanto rigurda la sua dimensione). Il suo corno è solitamente meno di 25 cm, più piccolo rispetto agli altri rinoceronti.[PARAGRAPH:2]Una volta la specie di rinoceronte più diffusa, il rinoceronte di Giava viveva sulle isole di Giava e Sumatra, nel Sud-est asiatico, e anche in Cina e India. La specie è a grave rischio di estinzione, con un solo branco allo stato brado, e nessun esemplare in cattività. È probabilmente il mammifero più raro sulla faccia della Terra, con una popolazione inferiore ai 40 esemplari nello Ujung Kulon National Park di Giava, in Indonesia. Un secondo branco nel Cat Tien National Park in Vietnam fu dichiarata estinta nel 2011. Il declino del rinoceronte di Giava è dovuto al bracconaggio, principalmente per i loro corni, altamente valutati nella medicina tradizionale cinese, con un valore di 30000 $ al chilo sul mercato nero. La perdita del loro habitat a causa delle guerre, come la guerra del Vietnam, ha contribuito al declino di questa specie. La popolazione rimanente è confinata in un'area nazionale protetta, ma i rinoceronti sono ancora in pericolo a causa dei bracconieri, delle malattie e della perdita di diversità genetica, che portano a una limitazione della crescita.[PARAGRAPH:2]Il rinoceronte di Giava può vivere fino a 3045 anni allo stato brado; storicamente, abitava in foreste pluviali, pianure umide e grandi zone alluvionali. Il rinoceronte di Giava è principalmente solitario, eccetto per il corteggiamento e l'allevamento dei cuccioli, anche se si possono formare alcuni gruppi vicino alle fonti di cibo e di sale. A parte gli umani, il rinoceronte di Giava non ha predatori naturali; questo rinoceronte evita gli umani, ma se viene minacciato attacca. Gli scienziati studiano raramente quest'animale direttamente, a causa della sua rarità e del pericolo di interferire con questa specie in pericolo: i ricercatori si affidano a telecamere nascoste e a campioni di escrementi per studiare la salute e il comportamento; di conseguenza, il rinoceronte di Giava è la specie meno studiata. Due rinoceronti adulti furono filmati in un video pubblicato il 28 febbraio 2011 da WWF e Indonesia's National Park Authority, che conferma che il rinoceronte vive ancora allo stato brado.</Italian>
 		<Polish>Nosorożec jawajski (Rhinoceros sondaicus) - gatunek ssaka z rodziny nosorożcowatych, jeden z pięciu żyjących do dziś gatunków nosorożców. Należy do tego samego rodzaju, co nosorożec indyjski. Łączy je podobna, przypominająca mozaikę skóra stwarzająca wrażenie opancerzenia. Nosorożec jawajski, mierząc 3,1-3,2 m długości i 1,4-1,7 m wysokości, jest mniejszy od swego krewniaka, wielkością bardziej zbliża się do nosorożca czarnego. Jego rogi, mniejsze niż u innych nosorożców, osiągają zwykle poniżej 25 cm.</Polish>
 	</TEXT>
 	<TEXT>
@@ -3627,7 +3627,7 @@
 		<Tag>TXT_KEY_UNIT_LIZARD_PEDIA</Tag>
 		<English>Generic small to mediun lizard</English>
 		<French>Lézard commun, petit à moyen</French>
-		<Polish>Jaszczurki (Lacertilia, dawniej Sauria)  grupa gadów łuskonośnych obejmująca czworonożne lub beznogie zwierzęta lądowe o wydłużonym ciele, oczach posiadających powieki, mocnych szczękach i diapsydalnej czaszce. Występują na wszystkich kontynentach poza Antarktydą oraz na wielu wyspach oceanicznych. Są najliczniejszą grupą gadów obejmującą ponad 4000 gatunków.</Polish>
+		<Polish>Jaszczurki (Lacertilia, dawniej Sauria) grupa gadów łuskonośnych obejmująca czworonożne lub beznogie zwierzęta lądowe o wydłużonym ciele, oczach posiadających powieki, mocnych szczękach i diapsydalnej czaszce. Występują na wszystkich kontynentach poza Antarktydą oraz na wielu wyspach oceanicznych. Są najliczniejszą grupą gadów obejmującą ponad 4000 gatunków.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MALAYAN_TAPIR</Tag>
@@ -3758,7 +3758,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PIG_PEDIA</Tag>
-		<English>The domestic pig (Sus scrofa domesticus or Sus domesticus), often called swine, hog, or pig when there is no need to distinguish it from other pigs, is a large, even-toed ungulate. It is variously considered a subspecies of the wild boar or a distinct species. Its head-plus-body-length ranges from 0.9 to 1.8 m, and the adult can weigh between 50 to 350 kg. Compared to other artiodactyls, its head is relatively long, pointed, and free of warts. Even-toed ungulates are generally herbivorous, but the domestic pig is an omnivore, like its wild relative.  Source Wikipedia</English>
+		<English>The domestic pig (Sus scrofa domesticus or Sus domesticus), often called swine, hog, or pig when there is no need to distinguish it from other pigs, is a large, even-toed ungulate. It is variously considered a subspecies of the wild boar or a distinct species. Its head-plus-body-length ranges from 0.9 to 1.8 m, and the adult can weigh between 50 to 350 kg. Compared to other artiodactyls, its head is relatively long, pointed, and free of warts. Even-toed ungulates are generally herbivorous, but the domestic pig is an omnivore, like its wild relative. Source Wikipedia</English>
 		<Polish>Świnia domowa (Sus scrofa f. domestica) zwierzę hodowlane udomowione między VII a VI tys. lat p.n.e. Dostarcza hodowcom mięsa, tłuszczu, skóry, podrobów, szczeciny. W stosunkowo długim procesie udomowienia, a później uszlachetniania zasadniczo zmienił się pokrój świń. Współczesna świnia zdecydowanie różni się proporcjami ciała w stosunku do dzikich przodków czy nawet do ras prymitywnych. Po pewnym czasie zwierzęta te przystosowały się do warunków bytowania stworzonych im przez człowieka. Nocny tryb życia zamienił się na dzienny, zdecydowanie zmienił się także rozród? w stosunku do dzikiego przodka, u którego występował tylko jeden okres rozrodu przypadający na grudzień, u świni współczesnej występują w miarę regularne cykle płciowe (rujowe) trwające zwykle 21 dni charakteryzujące się u loch gotowością do rozrodu w jednym dniu cyklu i popędem w tym dniu oraz ciągłym popędem płciowym u knurów. (źródło: Wikipedia)</Polish>
 	</TEXT>
 	<TEXT>
@@ -3773,7 +3773,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PLATYPUS_PEDIA</Tag>
-		<English>The platypus (Ornithorhynchus anatinus) is a semi-aquatic mammal endemic to eastern Australia, including Tasmania. Together with the four species of echidna, it is one of the five extant species of monotremes, the only mammals that lay eggs instead of giving birth to live young. It is the sole living representative of its family (Ornithorhynchidae) and genus (Ornithorhynchus), though a number of related species have been found in the fossil record.[PARAGRAPH:2]The unusual appearance of this egg-laying, venomous, duck-billed, beaver-tailed, otter-footed mammal baffled European naturalists when they first encountered it, with some considering it an elaborate fraud. It is one of the few venomous mammals, the male platypus having a spur on the hind foot that delivers a venom capable of causing severe pain to humans. The unique features of the platypus make it an important subject in the study of evolutionary biology and a recognisable and iconic symbol of Australia; it has appeared as a mascot at national events and is featured on the reverse of the Australian 20 cent coin. The platypus is the animal emblem of  the state of New South Wales.[PARAGRAPH:2]Until the early 20th century, it was hunted for its fur, but it is now protected throughout its range. Although captive breeding programmes have had only limited success and the platypus is vulnerable to the effects of pollution, it is not under any immediate threat.[PARAGRAPH:2]Source: Wikipedia</English>
+		<English>The platypus (Ornithorhynchus anatinus) is a semi-aquatic mammal endemic to eastern Australia, including Tasmania. Together with the four species of echidna, it is one of the five extant species of monotremes, the only mammals that lay eggs instead of giving birth to live young. It is the sole living representative of its family (Ornithorhynchidae) and genus (Ornithorhynchus), though a number of related species have been found in the fossil record.[PARAGRAPH:2]The unusual appearance of this egg-laying, venomous, duck-billed, beaver-tailed, otter-footed mammal baffled European naturalists when they first encountered it, with some considering it an elaborate fraud. It is one of the few venomous mammals, the male platypus having a spur on the hind foot that delivers a venom capable of causing severe pain to humans. The unique features of the platypus make it an important subject in the study of evolutionary biology and a recognisable and iconic symbol of Australia; it has appeared as a mascot at national events and is featured on the reverse of the Australian 20 cent coin. The platypus is the animal emblem of the state of New South Wales.[PARAGRAPH:2]Until the early 20th century, it was hunted for its fur, but it is now protected throughout its range. Although captive breeding programmes have had only limited success and the platypus is vulnerable to the effects of pollution, it is not under any immediate threat.[PARAGRAPH:2]Source: Wikipedia</English>
 		<French>L'ornithorynque (Ornithorhynchus anatinus) est une espèce de petits mammifères semi-aquatiques endémique de l'est de l'Australie, y compris la Tasmanie. C'est l'une des cinq espèces de l'ordre des monotrèmes, seul ordre de mammifères qui ponde des oeufs au lieu de donner naissance à des petits complètement formés (les quatre autres espèces sont des échidnés). C'est la seule espèce survivante de la famille des Ornithorhynchidae et du genre Ornithorhynchus bien qu'un grand nombre de fragments d'espèces fossiles de cette famille et de ce genre aient été découverts.[PARAGRAPH:2]L'apparence bizarre de ce mammifère pondant des oeufs, muni d'aiguillons venimeux, à la mâchoire cornée ressemblant au bec d'un canard, à queue évoquant un castor, qui lui sert à la fois de gouvernail dans l'eau et de réserve de graisse, et à pattes de loutre a fortement surpris les premiers explorateurs qui l'ont découvert ; bon nombre de naturalistes européens ont cru à une plaisanterie. C'est l'un des rares mammifères venimeux: le mâle porte sur les pattes postérieures un aiguillon qui peut libérer du venin capable d'infliger de vives douleurs à un être humain. Les traits originaux de l'ornithorynque en font un sujet d'études important pour mieux comprendre l'évolution des espèces animales et en ont fait un des symboles de l'Australie: il a été utilisé comme mascotte pour de nombreux évènements nationaux et il figure au verso de la pièce de 20 cents australiens.[PARAGRAPH:2]Source: Wikipedia</French>
 	</TEXT>
 	<TEXT>
@@ -4010,7 +4010,7 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SALTWATER_CROC_STRATEGY</Tag>
-		<English>Capture salt water crocodiles if you can.  They can be used to build special buildings in a costal city.</English>
+		<English>Capture salt water crocodiles if you can. They can be used to build special buildings in a costal city.</English>
 		<French>Capturez des crocodiles d'eau de mer si vous le pouvez. Ils peuvent être utilisés pour construire des bâtiments spéciaux dans une ville côtière.</French>
 		<Italian>Cattura i coccodrilli marini se riesci. Possono essere usati per costruire edifici speciali in una città costiera.</Italian>
 		<Spanish>Captura los cocodrilos marinos si puedes. Pueden ser utilizados para construir edificios especiales en una ciudad costera.</Spanish>
@@ -4158,8 +4158,8 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ARMADILLO_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Armadillo, Myths of Earth, Worker Totem</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires des  tatous[NEWLINE][ICON_BULLET]Mythe de la Terre[NEWLINE][ICON_BULLET]Totem du travail</French>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Armadillo, Myths of Earth, Worker Totem</English>
+		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires des tatous[NEWLINE][ICON_BULLET]Mythe de la Terre[NEWLINE][ICON_BULLET]Totem du travail</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BABIRUSA</Tag>
@@ -4168,14 +4168,14 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BABIRUSA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Babirusa, Myth of Boar, Pig Herd, Exotic Herbivore Cage and Enclosure, Master Hunter and Boar Camp</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Babirusa, Myth of Boar, Pig Herd, Exotic Herbivore Cage and Enclosure, Master Hunter and Boar Camp</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires de Babiroussa, Mythe des Ours, Enclos à cochons, camp d'ours, Maitre chasseur</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BAIRDS_TAPIR_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Tapir and Tapir, Bairds, Exotic Herbivores Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Tapir and Tapir, Bairds, Exotic Herbivores Cage and Enclosure</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Tapir et Tapir, Bairds, Cage et Enclos pour Herbivores exotiques</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Tapira</Polish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Tapira</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BLACK_RHINO</Tag>
@@ -4187,7 +4187,7 @@ There are 5 types of Reef Sharks:
 		<Tag>TXT_KEY_UNIT_SUBDUED_BLACK_RHINO_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Rhinocerous, Black; Rhino and Unicorn Myth, Master Hunter and Exotic Herbivores Cage</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] Mythe, une ou des Histoires du Rhinocéros noir [NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Nosorożce</Polish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Nosorożce</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BRAZILIAN_TAPIR</Tag>
@@ -4201,9 +4201,9 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BRAZILIAN_TAPIR_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Tapir and Tapir, Brazilian, Exotic Herbivores Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Tapir and Tapir, Brazilian, Exotic Herbivores Cage and Enclosure</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Tapir et Tapir, Brazilian, Cage et Enclos pour Herbivores exotiques</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Tapira</Polish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Tapira</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CAIMAN</Tag>
@@ -4217,15 +4217,15 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CAIMAN_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Caiman, Myth - Crocodiles, Bird Cage and Enclosure, Feather Worker and Parrots</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Caiman, Myth - Crocodiles, Bird Cage and Enclosure, Feather Worker and Parrots</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Caiman, Mythe du Crocodiles, Cages à oiseaux, Atelier de Plumes et Perroquets</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Kajman</Polish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Kajman</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CROCODILE_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Crocodile, Master Hunter, Myth - Reptile, Crocodile and Dragon, Reptile and Bad Boy Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Crocodile, Master Hunter, Myth - Reptile, Crocodile and Dragon, Reptile and Bad Boy Cage and Enclosure</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Crocodile, Maître Chasseur, Mythe du Reptile, Crocodile et Dragon, Cage et Enclos pour reptiles</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Krokodyl</Polish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Krokodyl</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CUSCUS</Tag>
@@ -4234,8 +4234,8 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CUSCUS_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Cuscus, Myth - Marsupial, Marsupial Cage and Enclosure</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires des  couscous[NEWLINE][ICON_BULLET]Mythe - Marsupiaux[NEWLINE][ICON_BULLET]Cage et Enclos à Marsupiaux</French>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Cuscus, Myth - Marsupial, Marsupial Cage and Enclosure</English>
+		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires des couscous[NEWLINE][ICON_BULLET]Mythe - Marsupiaux[NEWLINE][ICON_BULLET]Cage et Enclos à Marsupiaux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DARTFROG</Tag>
@@ -4253,8 +4253,8 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DART_FROG_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Dart Frog, Myth - Amphibians, Amphibian Pond and Enclosure</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] Mythe, une ou plusieurs Histoires des  Grenouilles venimeuses[NEWLINE][ICON_BULLET]Mythe - Amphibiens[NEWLINE][ICON_BULLET]Mare à amphibiens et enclos</French>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Dart Frog, Myth - Amphibians, Amphibian Pond and Enclosure</English>
+		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] Mythe, une ou plusieurs Histoires des Grenouilles venimeuses[NEWLINE][ICON_BULLET]Mythe - Amphibiens[NEWLINE][ICON_BULLET]Mare à amphibiens et enclos</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DESERT_TARANTULA</Tag>
@@ -4293,9 +4293,9 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ELASMOTHERIUM_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story, Stories and Remains -  Elasmotherium, Myths - Rhino and Unicorn, Exotic Herbivore Cage and Enclosure, Master Hunter, Rhino Camp</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story, Stories and Remains - Elasmotherium, Myths - Rhino and Unicorn, Exotic Herbivore Cage and Enclosure, Master Hunter, Rhino Camp</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] Mythe, une ou des Histoires du Rhinocéros indien [NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Nosorożce</Polish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Nosorożce</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_EMPEROR_PENGUIN_HELP</Tag>
@@ -4315,7 +4315,7 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_EWOLF_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Ethiopian Wolf and  Wolves, Wolf Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Ethiopian Wolf and Wolves, Wolf Cage and Enclosure</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Loup Ethiopien, Mythe des Loups, Cage et Enclos à loup</French>
 	</TEXT>
 	<TEXT>
@@ -4325,8 +4325,8 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_FENNECFOX_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Fennec Fox and Wolves, Wolf Cage,  Enclosure, Fox Traps and Fur Farm</English>
-		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires de  Fennec, pièges à renard, et fermes de fourrures, Cage et Enclos à loup</French>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Fennec Fox and Wolves, Wolf Cage, Enclosure, Fox Traps and Fur Farm</English>
+		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires de Fennec, pièges à renard, et fermes de fourrures, Cage et Enclos à loup</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GATOR</Tag>
@@ -4350,15 +4350,15 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GATOR_ASIAN_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Chinese Alligator, Master Hunter, Myth - Reptile, Crocodile and Dragon, Reptile and Bad Boy Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Chinese Alligator, Master Hunter, Myth - Reptile, Crocodile and Dragon, Reptile and Bad Boy Cage and Enclosure</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) de l'Alligator de Chine, Maître chasseur, Mythe du Reptile, Crocodile et Dragon, Cage et Enclos pour reptiles</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Aligator Chiński</Polish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Aligator Chiński</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GATOR_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Americian Alligator, Master Hunter, Myth - Reptile, Crocodile and Dragon, Reptile and Bad Boy Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Americian Alligator, Master Hunter, Myth - Reptile, Crocodile and Dragon, Reptile and Bad Boy Cage and Enclosure</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) de l'Alligator d'Amérique, Maître Chasseur, Mythe du Reptile, Crocodile et Dragon, Cage et Enclos pour reptiles</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Aligator Amerykański</Polish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Aligator Amerykański</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GLYPTO</Tag>
@@ -4393,9 +4393,9 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_INDIAN_RHINO_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Rhinoceros, Indian, Myth - Rhinoceros and Unicorn, Exotic Herbivore Cage and Enclosure, Rhino camp and master Hunter</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Rhinoceros, Indian, Myth - Rhinoceros and Unicorn, Exotic Herbivore Cage and Enclosure, Rhino camp and master Hunter</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] Mythe, une ou des Histoires du Rhinocéros indien [NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Nosorożce</Polish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Nosorożce</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_JAVA_RHINO</Tag>
@@ -4410,9 +4410,9 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_JAVA_RHINO_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Rhinoceros, Java, Myth - Rhinoceros and Unicorn, Exotic Herbivore Cage and Enclosure, Rhino camp and master Hunter</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Rhinoceros, Java, Myth - Rhinoceros and Unicorn, Exotic Herbivore Cage and Enclosure, Rhino camp and master Hunter</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] Mythe, une ou des Histoires du Rhinocéros de Java[NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Nosorożce</Polish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Nosorożce</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_JUNGLE_TARANTULA</Tag>
@@ -4431,9 +4431,9 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_LIZARD_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Lizard, Myths of Earth and Reptiles, Reptile Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Lizard, Myths of Earth and Reptiles, Reptile Cage and Enclosure</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Lézard, Mythes de la Terre et de Reptiles, Cage et Enclos à Reptiles </French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Jaszczurki</Polish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Jaszczurki</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MALAYAN_TAPIR</Tag>
@@ -4443,9 +4443,9 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MALAYAN_TAPIR_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Tapir and Tapir, Malayan, Exotic Herbivores Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Tapir and Tapir, Malayan, Exotic Herbivores Cage and Enclosure</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Tapir et Tapir, Malayan, Cage et Enclos pour Herbivores exotiques</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Tapira</Polish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Tapira</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MANEDWOLF</Tag>
@@ -4454,7 +4454,7 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MANEDWOLF_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Maned Wolf and Wolves, Kennels, Wolf Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Maned Wolf and Wolves, Kennels, Wolf Cage and Enclosure</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires du Loup à crinière, Chenils, Cage et enclos à loup</French>
 	</TEXT>
 	<TEXT>
@@ -4469,15 +4469,15 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MOUNTAIN_TAPIR_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Tapir and Tapir, Mountain, Exotic Herbivores Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Tapir and Tapir, Mountain, Exotic Herbivores Cage and Enclosure</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Tapir et Tapir, Mountain, Cage et Enclos pour Herbivores exotiques</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Tapira</Polish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Tapira</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_NILECROC_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Nile Crocodile, Master Hunter, Myth - Reptile, Crocodile and Dragon, Reptile and Bad Boy Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Nile Crocodile, Master Hunter, Myth - Reptile, Crocodile and Dragon, Reptile and Bad Boy Cage and Enclosure</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Nile Crocodile, Maître Chasseur, Mythe du Reptile, Crocodile et Dragon, Cage et Enclos pour reptiles</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Krokodyl Nilowy</Polish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Krokodyl Nilowy</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_NUMBAT</Tag>
@@ -4486,8 +4486,8 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_NUMBAT_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Numbat, Myth - Marsupial, Marsupial Cage and Enclosure</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires des  numbats[NEWLINE][ICON_BULLET]Mythe - Marsupiaux[NEWLINE][ICON_BULLET]Cage et Enclos à Marsupiaux</French>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Numbat, Myth - Marsupial, Marsupial Cage and Enclosure</English>
+		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires des numbats[NEWLINE][ICON_BULLET]Mythe - Marsupiaux[NEWLINE][ICON_BULLET]Cage et Enclos à Marsupiaux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_OPOSSUM</Tag>
@@ -4496,8 +4496,8 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_OPOSSUM_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Opossum, Myth - Marsupial, Marsupial Cage and Enclosure</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires des  opossums[NEWLINE][ICON_BULLET]Mythe - Marsupiaux[NEWLINE][ICON_BULLET]Cage et Enclos à Marsupiaux</French>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Opossum, Myth - Marsupial, Marsupial Cage and Enclosure</English>
+		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires des opossums[NEWLINE][ICON_BULLET]Mythe - Marsupiaux[NEWLINE][ICON_BULLET]Cage et Enclos à Marsupiaux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PIGEON_HELP</Tag>
@@ -4516,7 +4516,7 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PLATYPUS_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Platypus, Myths of Monotremes, Sea and Birds</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Platypus, Myths of Monotremes, Sea and Birds</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires de l'Ornithorynque, les Mythes de la Mer et des Oiseaux</French>
 	</TEXT>
 	<TEXT>
@@ -4526,8 +4526,8 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_POSSUM_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Possum, Myth of Marsupial, Marsupial Cage and Enclosure, Feather Worker and Parrots</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires des  Phalangers communs[NEWLINE][ICON_BULLET]Mythe - Marsupiaux[NEWLINE][ICON_BULLET]Cage et Enclos à Marsupiaux</French>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Possum, Myth of Marsupial, Marsupial Cage and Enclosure, Feather Worker and Parrots</English>
+		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires des Phalangers communs[NEWLINE][ICON_BULLET]Mythe - Marsupiaux[NEWLINE][ICON_BULLET]Cage et Enclos à Marsupiaux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PYGMYHIPPO</Tag>
@@ -4536,24 +4536,24 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PYGMYHIPPO_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Pygmy Hippopotamus, Exotic Herbivore Cage and Enclosure</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires des  Hippopotames nains[NEWLINE][ICON_BULLET]Cage et Enclos pour herbivores exotiques</French>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Pygmy Hippopotamus, Exotic Herbivore Cage and Enclosure</English>
+		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires des Hippopotames nains[NEWLINE][ICON_BULLET]Cage et Enclos pour herbivores exotiques</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_REDFOX_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Redfox, Wolf Cage and Enclosure, Canine Totem</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Redfox, Wolf Cage and Enclosure, Canine Totem</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires du renard roux, Cage et Enclos à loup, Totem Canin</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_REEF_SHARK_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Reef shark, Myths of Sea and Sharks, Master Sea Hunter and Wonders of the Deep, Marine and Shark Institute</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Reef shark, Myths of Sea and Sharks, Master Sea Hunter and Wonders of the Deep, Marine and Shark Institute</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Requin des récifs, Mythe de la Mer et des Requins, Maître Chasseur des Mers et Merveilles des profondeurs, Institut de Marine et des requins</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_RIVER_CROC_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  River Crocodile, Master Hunter, Myth - Reptile, Crocodile and Dragon, Reptile and Bad Boy Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - River Crocodile, Master Hunter, Myth - Reptile, Crocodile and Dragon, Reptile and Bad Boy Cage and Enclosure</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Crocodile de rivières, Maître chasseur, Mythe du Reptile, Crocodile et Dragon, Cage et Enclos pour reptiles</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Krokodyl Błotny</Polish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Krokodyl Błotny</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ROCKHOPPER_HELP</Tag>
@@ -4568,19 +4568,19 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SABRETOOTH_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Lion, Tiger and  Paleolithic Cat Myth, Master Hunter and Exotic Big Cat Cage</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Lion, Tiger and Paleolithic Cat Myth, Master Hunter and Exotic Big Cat Cage</English>
 		<French>permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe du Lion, Tigre et Chat Paléolithique, Maître Chasseur et la Cage pour les grands félins</French>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Costruisci[COLOR_REVERT] Mito del leone, Mito della tigre, Mito del gatto paleolitico, Mastro cacciatore, Gabbia-Felino esotico.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SALTWATER_CROC_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Saltwater Crocodile, Master Hunter, Myth - Reptile, Crocodile and Dragon, Reptile and Bad Boy Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Saltwater Crocodile, Master Hunter, Myth - Reptile, Crocodile and Dragon, Reptile and Bad Boy Cage and Enclosure</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Crocodile de mer, Maître Chasseur, Mythe du Reptile, Crocodile et Dragon, Cage et Enclos pour reptiles</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Krokodyl Różańcowy</Polish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Krokodyl Różańcowy</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SEALION_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Sea Lion and Pinnipeds, Pinniped Cage and Enclosure, Trained Seal</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Sea Lion and Pinnipeds, Pinniped Cage and Enclosure, Trained Seal</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Lion des mers et autres Pinnipèdes, Cage et Enclos pour pinnipèdes, Phoque dressé</French>
 	</TEXT>
 	<TEXT>
@@ -4604,7 +4604,7 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_TARANTULA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Tarantula, Myth of Bugs, Bug Cage and Enclosure, Bug Catcher</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Tarantula, Myth of Bugs, Bug Cage and Enclosure, Bug Catcher</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires de Tarentules , Mythe des insectes, Récolteur d'insectes</French>
 	</TEXT>
 	<TEXT>
@@ -4615,7 +4615,7 @@ There are 5 types of Reef Sharks:
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_THYLACINE_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Thylacine, Remains - Thylacine, Myth - Marsupial and Paleolithic Marsupial</English>
-		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires du  Thylacine, Restes de Thylacine, Mythe du Marsupial</French>
+		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires du Thylacine, Restes de Thylacine, Mythe du Marsupial</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_TREESLOTH</Tag>
@@ -4624,17 +4624,17 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_TREESLOTH_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Tree Sloth, Exotic Herbivore Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Tree Sloth, Exotic Herbivore Cage and Enclosure</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Paresseux, Cage et Enclos pour Herbivores exotiques</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_WALRUS_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Walrus and Pinnipeds, Pinniped Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Walrus and Pinnipeds, Pinniped Cage and Enclosure</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Morse et Pinnipèdes, Cage et Enclos de Pinnipèdes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_WHALESHARK_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Whaleshark, Myths of Sea and Sharks, Master Sea Hunter and Wonders of the Deep, Marine and Shark Institute</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Whaleshark, Myths of Sea and Sharks, Master Sea Hunter and Wonders of the Deep, Marine and Shark Institute</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Requin baleine, Mythes de la mer, Chasseur des mers et Merveilles des profondeurs, Institut de Marine</French>
 	</TEXT>
 	<TEXT>
@@ -4650,9 +4650,9 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_WHITE_RHINO_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Rhinoceros, White, Myth - Rhinoceros and Unicorn, Exotic Herbivore Cage and Enclosure, Rhino camp and master Hunter</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Rhinoceros, White, Myth - Rhinoceros and Unicorn, Exotic Herbivore Cage and Enclosure, Rhino camp and master Hunter</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] Mythe, une ou des Histoires du Rhinocéros blanc[NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię -  Nosorożce</Polish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Nosorożce</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_WOMBAT</Tag>
@@ -4661,8 +4661,8 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_WOMBAT_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Wombat, Myths of Earth and Marsupials, Marsupial Cage and Enclosure</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires des  Wombats[NEWLINE][ICON_BULLET]Mythe - Marsupiaux[NEWLINE][ICON_BULLET]Cage et Enclos à Marsupiaux</French>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Wombat, Myths of Earth and Marsupials, Marsupial Cage and Enclosure</English>
+		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires des Wombats[NEWLINE][ICON_BULLET]Mythe - Marsupiaux[NEWLINE][ICON_BULLET]Cage et Enclos à Marsupiaux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ZEBRA</Tag>
@@ -4678,7 +4678,7 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ZEBRA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Zebra and Horse, Zebra Herd and Hunter's Camp, Carnival and Exotic Herbivore Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Zebra and Horse, Zebra Herd and Hunter's Camp, Carnival and Exotic Herbivore Cage and Enclosure</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythe, Histoire(s)du Zèbre et des chameaux, Troupeaux de zèbres et Camp de Chasseur, Carnaval et Cage et Enclos à Herbivores exotiques</French>
 	</TEXT>
 	<TEXT>

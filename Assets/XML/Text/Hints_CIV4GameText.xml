@@ -11,10 +11,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_HINT_10</Tag>
-		<English>*BUG Hint*: Don't neglect your Diplomacy!  Pay attention to the information you gather, telling you what is available out there.</English>
+		<English>*BUG Hint*: Don't neglect your Diplomacy! Pay attention to the information you gather, telling you what is available out there.</English>
 		<French>*Conseils du BUG*: Ne négligez pas votre Diplomatie! Faites attention aux Alertes qui arrivent et qui vous informent de ce qui est disponible.</French>
 		<German>[BUG] Tipp... Die Diplomatie sollte nicht vernachlässigt werden. Während einer Partie erscheinen ständig Meldungen, die die verfügbaren Handelswaren anderer Zivilisationen anzeigen.</German>
-		<Italian>*Suggerimento del BUG Team*: Non trascurare la Diplomazia!  Fai attenzione agli avvisi che compaiono per dirti cosa c'è di disponibile in giro.</Italian>
+		<Italian>*Suggerimento del BUG Team*: Non trascurare la Diplomazia! Fai attenzione agli avvisi che compaiono per dirti cosa c'è di disponibile in giro.</Italian>
 		<Spanish>*Consejo de BUG*: ¡No descuides la diplomacia! Pon atención a la información que obtengas, te proporciona lo que está disponible ahí fuera.</Spanish>
 		<Polish>*Podpowiedź do BUG'a*: Nie zaniedbuj dyplomacji! Obserwuj informacje, które się pojawiają i mówią co jest aktualnie dostępne.</Polish>
 	</TEXT>
@@ -29,8 +29,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_HINT_12</Tag>
-		<English>*BUG Hint*: Animals can enter your lands now unless you have the 'Animals Stay Out!' game option ON.  However, they can never capture a city, so it can be worth the risk to leave your city undefended and use your warrior for early exploration.</English>
-		<French>*Conseils du BUG*: Les animaux peuvent entrer dans vos terres maintenant, à moins que vous ne disposiez de l'option "Les animaux restent dehors!"  activée. Cependant, ils ne peuvent jamais capturer une ville, il peut donc être intéressant de laisser votre ville sans défense et d'utiliser votre guerrier pour une exploration précoce.</French>
+		<English>*BUG Hint*: Animals can enter your lands now unless you have the 'Animals Stay Out!' game option ON. However, they can never capture a city, so it can be worth the risk to leave your city undefended and use your warrior for early exploration.</English>
+		<French>*Conseils du BUG*: Les animaux peuvent entrer dans vos terres maintenant, à moins que vous ne disposiez de l'option "Les animaux restent dehors!" activée. Cependant, ils ne peuvent jamais capturer une ville, il peut donc être intéressant de laisser votre ville sans défense et d'utiliser votre guerrier pour une exploration précoce.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_HINT_13</Tag>
@@ -70,8 +70,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_HINT_17</Tag>
-		<English>*BUG Hint*: Watch your neighbors' civics changes.  A change from Free Religion to Theocracy could mean an arms build-up.</English>
-		<French>*Conseils du BUG*: Gardez un oeil sur les changements de Doctrines de vos voisins. Un changement de 'Liberté de Culte' vers 'Théocratie' peut indiquer la constitution  d'une armée.</French>
+		<English>*BUG Hint*: Watch your neighbors' civics changes. A change from Free Religion to Theocracy could mean an arms build-up.</English>
+		<French>*Conseils du BUG*: Gardez un oeil sur les changements de Doctrines de vos voisins. Un changement de 'Liberté de Culte' vers 'Théocratie' peut indiquer la constitution d'une armée.</French>
 		<German>[BUG] Tipp... Ein Wechsel der Gesellschaftsform in einer benachbarten Zivilisation sollte aufmerksam verfolgt werden. Es könnte die Vorbereitung auf einen Krieg sein.</German>
 		<Italian>*Suggerimento del BUG Team*: Tieni d'occhio i cambiamenti di forma di governo dei tuoi vicini. Un cambiamento da Libertà Religiosa a Teocrazia può significare un aumento di aggressività.</Italian>
 		<Spanish>*Consejo de BUG*: Vigila los cambios de principios de tus vecinos. Un cambio de Libertad religiosa a Teocracia puede significar un primer paso para la construcción de un ejército.</Spanish>
@@ -97,7 +97,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_HINT_2</Tag>
-		<English>*BUG Hint*: When you're weak there is no shame in giving into rivals demands.  This will give you time to build your defenses as you enjoy the short improvement in relations between your nations.</English>
+		<English>*BUG Hint*: When you're weak, there is no shame in giving into rivals demands. This will give you time to build your defenses as you enjoy the short improvement in relations between your nations.</English>
 		<French>*Conseils du BUG*: Il n'y a pas de déshonneur à accéder aux demandes de vos rivaux quand vous êtes faible. Cela vous permettra de renforcer vos défenses en profitant pour un temps des relations améliorées avec ces nations.</French>
 		<German>[BUG] Tipp... Es ist keine Schande, in einer unterlegenen Position den Forderungen von stärkeren Gegnern nachzukommen. Die durch die kurze Verbesserung der diplomatischen Beziehungen gewonnene Zeit kann genutzt werden, um die eigenen Verteidigungslinien zu verstärken.</German>
 		<Italian>*Suggerimento del BUG Team*: Quando sei debole, non c'è vergogna nell'accettare le pretese dei rivali. Ti concederà il tempo necessario per costruire le tue difese nel conseguente breve periodo di miglioramento dei rapporti fra le vostre nazioni.</Italian>
@@ -107,7 +107,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_HINT_20</Tag>
 		<English>*BUG Hint*: Never go up against a Sicilian when death is on the line.</English>
-		<French>*Conseils du BUG*:  Ne jamais s'opposer à un sicilien lorsque la mort vous attend au bout du tunnel.</French>
+		<French>*Conseils du BUG*: Ne jamais s'opposer à un sicilien lorsque la mort vous attend au bout du tunnel.</French>
 		<German>[BUG] Tipp... Das Team der BUG Mod dankt Ihnen für Ihr Vertrauen und hofft, dass die Mod Ihnen genauso viel Spaß macht, wie wir bei ihrer Entwicklung hatten!</German>
 		<Italian>*Suggerimento del BUG Team*: "Mai mettersi contro un Siciliano quando si tratta di uccidere"</Italian>
 		<Spanish>*Consejo de BUG*: Nunca te opongas a un siciliano cuando se trate de matar.</Spanish>
@@ -133,8 +133,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_HINT_3</Tag>
-		<English>*BUG Hint*: When at War, use fast moving units to pillage strategic resources such as Iron, or Aluminum first, and leave a sentry to prevent the enemy from reconnecting that resource.</English>
-		<French>*Conseils du BUG*: Pendant une Guerre, utilisez des unités rapides pour piller les ressources stratégiques comme le Fer ou l'Aluminium de votre adversaire,  et laissez-y une sentinelle pour éviter que votre ennemi ne reconnecte la ressource.</French>
+		<English>*BUG Hint*: When at war, use fast moving units to pillage strategic resources such as Iron or Aluminum first, and leave a sentry to prevent the enemy from reconnecting that resource.</English>
+		<French>*Conseils du BUG*: Pendant une Guerre, utilisez des unités rapides pour piller les ressources stratégiques comme le Fer ou l'Aluminium de votre adversaire, et laissez-y une sentinelle pour éviter que votre ennemi ne reconnecte la ressource.</French>
 		<German>[BUG] Tipp... Während eines Krieges sollten schnelle Einheiten genutzt werden, um zuerst strategische Ressourcen, wie Eisen oder Aluminium, zu plündern. Nachrückende Einheiten können dann deren Bewachung übernehmen, um dem Gegner den Zugang zu diesen Ressourcen dauerhaft zu verwehren.</German>
 		<Italian>*Suggerimento del BUG Team*: Quando sei in guerra, utilizza le unità che si muovono velocemente per depredare le risorse strategiche, e lascia sul posto una sentinella per evitare che il nemico le recuperi.</Italian>
 		<Spanish>*Consejo de BUG*: En guerra, utiliza tus unidades rápidas para saquear recursos estratégicos como el Hierro o el Aluminio, y deja un vigía para prevenir que el enemigo reconstruya la casilla.</Spanish>
@@ -151,7 +151,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_HINT_5</Tag>
-		<English>*BUG Hint*: Always consider having siege equipment before attacking a city.  A Swordsman can do more damage entering through a hole in the wall, then trying to climb over it with arrows raining down from above.</English>
+		<English>*BUG Hint*: Always consider having siege equipment before attacking a city. A Swordsman can do more damage entering through a hole in the wall, then trying to climb over it with arrows raining down from above.</English>
 		<French>*Conseils du BUG*: N'attaquez pas une ville sans machines de siège. Un Spadassin peut faire plus de dégats en rentrant par une brèche dans la muraille, qu'en essayant de l'escalader sous une pluie de flèches.</French>
 		<German>[BUG] Tipp... Für die Einnahme einer größeren Stadt sollten genügend Belagerungswaffen zur Verfügung stehen, um die Verteidigungsanlagen niederzureißen und die Verteidiger zu schwächen.</German>
 		<Italian>*Suggerimento del BUG Team*: Procurati sempre l'equipaggiamento d'assedio prima di assediare una città. Uno Spadaccino può fare più danni entrando da un buco nelle mura, che cercando di scavalcarle sotto una pioggia di frecce.</Italian>
@@ -169,19 +169,19 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_HINT_7</Tag>
-		<English>*BUG Hint*: Always consider escorting your Settlers.  It's mighty dangerous out in the Wilderness.</English>
+		<English>*BUG Hint*: Always consider escorting your Settlers. It's mighty dangerous out in the wilderness.</English>
 		<French>*Conseils du BUG*: Escortez toujours vos Colons. La nature peut être très dangereuse.</French>
 		<German>[BUG] Tipp... Wertvolle Einheiten ohne nennenswerte Verteidigungsfähigkeiten, wie Siedler und Galeonen, können leicht Opfer von Angriffen werden und verdienen deshalb auf fremdem Terrain einen Begleitschutz.</German>
-		<Italian>*Suggerimento del BUG Team*: Scorta sempre i tuoi Coloni. E' molto pericoloso vagare per le Terre Selvagge (specialmente quelle inesplorate).</Italian>
+		<Italian>*Suggerimento del BUG Team*: Scorta sempre i tuoi Coloni. È molto pericoloso vagare per le Terre Selvagge (specialmente quelle inesplorate).</Italian>
 		<Spanish>*Consejo de BUG*: Considera siempre escoltar a tus Colonos. Es tremendamente peligroso mandarlos solos ahí fuera.</Spanish>
 		<Polish>*Podpowiedź do BUG'a*: Zawsze eskortuj swoich Osadników. Nie jest bezpiecznie dla nich w dziczy.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_HINT_8</Tag>
-		<English>*BUG Hint*: Play to your Civilization's traits, and specialize your Empire.  No use being Charismatic and Aggressive and never starting a war.</English>
+		<English>*BUG Hint*: Play to your Civilization's traits, and specialize your Empire. No use being Charismatic and Aggressive and never starting a war.</English>
 		<French>*Conseils du BUG*: Utilisez les Traits de votre Civilisation et spécialisez votre Empire. Quels intérêts à être Charismatique et Aggressif si vous ne partez pas en guerre?</French>
 		<German>[BUG] Tipp... Der eigene Spielstil sollte sich an den Eigenschaften des gewählten Staatsoberhaupts orientieren und die eigene Zivilisation entsprechend spezialisiert werden. Die Eigenschaften "Charismatisch" und "Aggressiv" nützen wenig, wenn keine Kriege beabsichtigt sind.</German>
-		<Italian>*Suggerimento del BUG Team*: Sfrutta le caratteristiche della tua Civiltà, e specializza il tuo Impero.  E' inutile essere Carismatico ed Aggressivo e non iniziare neppure una guerra.</Italian>
+		<Italian>*Suggerimento del BUG Team*: Sfrutta le caratteristiche della tua Civiltà, e specializza il tuo Impero. È inutile essere Carismatico ed Aggressivo e non iniziare neppure una guerra.</Italian>
 		<Spanish>*Consejo de BUG*: Juega bien los rasgos de tu civilización, y especializa tu imperio. No tiene ninguna utilidad ser un líder Carismático y Agresivo y no comenzar ninguna guerra.</Spanish>
 		<Polish>*Podpowiedź do BUG'a*: Wykorzystuj dobrze cechy twojej cywilizacji i specjalizuj swoje imperium. Bezużyteczne jest bycie Charyzmatycznym lub Agresywnym bez wszczynania wojen.</Polish>
 	</TEXT>
@@ -205,17 +205,17 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_HINT_INTERFACE_2</Tag>
-		<English>*BUG Hint*: Ever forget to build that Barracks?  [ALT +M] -OR- [ALT + CTRL + R] will allow you to set up reminders so you don't forget again!</English>
-		<French>*Conseils du BUG*: Vous avez oublié de construire cette Caserne?  [ALT +M] -OU- [ALT + CTRL + R] vous permet de créer une alerte pour que vous ne l'oublierez plus jamais!</French>
+		<English>*BUG Hint*: Ever forget to build that Barracks? [ALT + M] -OR- [ALT + CTRL + R] will allow you to set up reminders so you don't forget again!</English>
+		<French>*Conseils du BUG*: Vous avez oublié de construire cette Caserne? [ALT + M] -OU- [ALT + CTRL + R] vous permet de créer une alerte pour que vous ne l'oublierez plus jamais!</French>
 		<German>[BUG] Tipp... Mit den Tastenkombinationen [ALT + M] oder [STRG + ALT + R] lassen sich Erinnerungen verfassen, die nach einer festgelegten Anzahl Runden wieder erscheinen.</German>
-		<Italian>*Suggerimento del BUG Team*: Ti dimentichi sempre di costruire le caserme? [ALT +M] -O- [ALT + CTRL + R] ti permette di inserire un promemoria in modo da non dimenticartene più!</Italian>
-		<Spanish>*Consejo de BUG*: ¿Alguna vez olvidaste construir aquel cuartel?  [ALT +M] o [ALT + CTRL + R] te permite establecer recordatorios, ¡así no se te volverá a olvidar!</Spanish>
+		<Italian>*Suggerimento del BUG Team*: Ti dimentichi sempre di costruire le caserme? [ALT + M] oppure [ALT + CTRL + R] ti permette di inserire un promemoria in modo da non dimenticartene più!</Italian>
+		<Spanish>*Consejo de BUG*: ¿Alguna vez olvidaste construir aquel cuartel? [ALT + M] o [ALT + CTRL + R] te permite establecer recordatorios, ¡así no se te volverá a olvidar!</Spanish>
 		<Polish>*Podpowiedź do BUG'a*: Zawsze zapominasz o zbudowaniu tych Koszar? [ALT + M] -LUB- [ALT + CTRL + R] i od tej pory będziesz powiadamiany, żebyś już więcej o tym nie zapomniał!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_HINT_INTERFACE_3</Tag>
-		<English>*BUG Hint*: [ALT + S] allows you to make Sticky Notes on tiles.  Just click and type.  Pressing [ALT + S] again, and then clicking on an existing note will remove it.</English>
-		<French>*Conseils du BUG*: [ALT + S] vous permet de mettre un Panneau sur une case.  Il suffit de ensuite de cliquer sur la case désirée et d'inscrire le texte souhaité. Presser [ALT + S] à nouveau et puis cliquer sur un signe existant le supprimera.</French>
+		<English>*BUG Hint*: [ALT + S] allows you to make Sticky Notes on tiles. Just click and type. Pressing [ALT + S] again, and then clicking on an existing note will remove it.</English>
+		<French>*Conseils du BUG*: [ALT + S] vous permet de mettre un Panneau sur une case. Il suffit de ensuite de cliquer sur la case désirée et d'inscrire le texte souhaité. Presser [ALT + S] à nouveau et puis cliquer sur un signe existant le supprimera.</French>
 		<German>[BUG] Tipp... Mit der Tastenkombination [ALT + S] lassen sich Haftnotizen an Geländefeldern anbringen. Eine Haftnotiz lässt sich mit derselben Tastenkombination auch wieder entfernen.</German>
 		<Italian>*Suggerimento del BUG Team*: [ALT + S] ti consente di inserire note nelle caselle. Devi solo cliccarci e scrivere. Premendo nuovamente [ALT + S] e cliccando su una nota esistente, la si rimuove.</Italian>
 		<Spanish>*Consejo de BUG*: [ALT + S] te permite insertar una nota en una casilla. Solo haz click y escribe. Presionando [ALT + S] de nuevo, y pulsando en una nota existente, la eliminara.</Spanish>
@@ -223,7 +223,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_HINT_INTERFACE_4</Tag>
-		<English>*BUG Hint*: To cancel all Worker Orders quickly, select 1 worker with orders, and while holding the [ALT] key, click the cancel orders button.</English>
+		<English>*BUG Hint*: To cancel all Worker Orders quickly, select a worker with orders, and while holding the [ALT] key, click the cancel orders button.</English>
 		<French>*Conseils du BUG*: Pour annuler tous les ordres des Ouvriers, sélectionnez un ouvrier avec des ordres, et en gardant [ALT] enfoncé, cliquez le bouton pour annuler les ordres.</French>
 		<German>[BUG] Tipp... Bei gedrückter [ALT]-Taste lassen sich die Missionen aller aktiven Bautrupps per Mausklick auf das Abbrechensymbol eines aktiven Bautrupps abbrechen.</German>
 		<Italian>*Suggerimento del BUG Team*: Per cancellare velocemente tutti gli ordini dei lavoratori, selezionane uno che abbia ordini attivi, tieni premuto il tasto [ALT] e clicca il pulsante di cancellazione degli ordini.</Italian>
@@ -250,7 +250,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_HINT_INTERFACE_7</Tag>
-		<English>*BUG Hint*: To create rally points, select the city, or cities, you are building units it, hold down the [SHIFT] key and Right Click on the tile you want your rally point to be at.  You will see a yellow circle showing the rally point.[NEWLINE]To cancel orders select the same city or cities, [SHIFT] and Right click on any city square, and it will cancel the rally orders.</English>
+		<English>*BUG Hint*: To create rally points, select the city, or cities, you are building units it, hold down the [SHIFT] key and Right Click on the tile you want your rally point to be at. You will see a yellow circle showing the rally point.[NEWLINE]To cancel orders select the same city or cities, [SHIFT] and Right click on any city square, and it will cancel the rally orders.</English>
 		<French>*Conseils du BUG*: Pour créer des points de rassemblement, sélectionnez la ville ou les villes où vous construisez vos unités, gardez [SHIFT] enfoncé et cliquez avec le bouton de droite sur la case où vous voulez que vos unités aillent. Un cercle jaune indiquera le point de rassemblement.[NEWLINE]Pour annuler cet ordre, sélectionnez la même ville, gardez [SHIFT] enfoncé et cliquez avec le bouton de droite et cliquez sur une case de ville.</French>
 		<German>[BUG] Tipp... Bei gedrückter [UMSCHALT]-Taste in Verbindung mit einem Rechtsklick lässt sich für eine oder mehrere Städte ein Sammelpunkt für Einheiten setzen. Der Sammelpunkt wird durch einen gelben Kreis markiert. Wird bei gedrückter [UMSCHALT]-Taste in Verbindung mit einem Rechtsklick ein Stadtgeländefeld ausgewählt, lässt sich der Sammelpunkt wieder aufheben.</German>
 		<Italian>*Suggerimento del BUG Team*: Per creare punti di raduno, seleziona la città (o le città) in cui stai costruendo le unità, tieni premuto il tasto Maiusc e clicca col destro sulla casella dove vuoi collocare il punto di raduno. Vedrai un cerchio giallo indicare il punto di raduno.[NEWLINE]Per cancellare il punto di raduno, seleziona la stessa (o le stesse) città, tieni premuto il tasto Maiusc e clicca col destro su una qualunque casella cittadina.</Italian>
@@ -324,7 +324,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_17</Tag>
 		<English>C2C: There are many new Fire related buildings and techs in C2C. They include buildings such as the Fire Brigades, Fire Station and Fire Dock.</English>
-		<French>C2C: Il ya beaucoup de bâtiments et technologies liés à l'incendie  dans C2C. cela comprend des bâtiments tels que les sapeurs-pompiers, caserne de pompiers et Dock feu.</French>
+		<French>C2C: Il ya beaucoup de bâtiments et technologies liés à l'incendie dans C2C. cela comprend des bâtiments tels que les sapeurs-pompiers, caserne de pompiers et Dock feu.</French>
 		<Italian>C2C: Ci sono molti edifici e tecnologie legati al fuoco in C2C. Essi includono edifici come Vigli del fuoco, Caserma dei pompieri e Molo dei pompieri.</Italian>
 		<Spanish>C2C: En C2C hay nuevos edificios y tecnologías relacionadas con el fuego. Entre ellos están el Cuerpo de bomberos, el Cuartel de bomberos y el Muelle de bomberos.</Spanish>
 		<Polish>C2C: W C2C znajdziemy wiele budynków odpowiedzialnych za ochronę przeciwpożarową.</Polish>
@@ -339,17 +339,17 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_19</Tag>
-		<English>C2C: There are many types of Animal related buildings in C2C. They include such buildings as a Zoo, Aquarium, Pet Shop, Dog Breeder, Chicken Coop,  Elephant Trainer and even a Parrot Aviary!</English>
+		<English>C2C: There are many types of Animal related buildings in C2C. They include such buildings as a Zoo, Aquarium, Pet Shop, Dog Breeder, Chicken Coop, Elephant Trainer and even a Parrot Aviary!</English>
 		<French>C2C: Il existe de nombreux types de bâtiments liés aux animaux dans C2C. cela comprend des bâtiments tels que zoo, aquarium, éleveurs de chiens, poulaillers, dresseurs d'éléphants et même volières de perroquets!</French>
-		<Italian>C2C: Ci sono molti edifici legati agli animali in C2C. Includono edifici come Zoo, Acquario, Negozio di animali, Allevatore di cani, Allevatore di polli,  Addestratore di elefanti e perfino una voliera per pappagalli!</Italian>
+		<Italian>C2C: Ci sono molti edifici legati agli animali in C2C. Includono edifici come Zoo, Acquario, Negozio di animali, Allevatore di cani, Allevatore di polli, Addestratore di elefanti e perfino una voliera per pappagalli!</Italian>
 		<Spanish>C2C: Existen diversos tipos de edificios relacionados con los animales en C2C, como el Parque zoológico, el Aquarium, la Tienda de mascotas, el Criador de perros, el Gallinero, el Domador de elefantes, ¡e incluso una Avícola de loros!</Spanish>
 		<Polish>C2C: Oferuje wiele budynków umożliwiających hodowlę zwierząt.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_2</Tag>
-		<English>C2C: If you have 2 different kinds of resources in your city vicinity, you may be able to build a Bonus Resource building.</English>
+		<English>C2C: If you have two different kinds of resources in your city vicinity, you may be able to build a Bonus Resource building.</English>
 		<French>C2C: Si vous avez 2 types de ressources différents dans le territoire de votre ville, vous pourrez peut-être construire un bâtiment de ressource Bonus.</French>
-		<Italian>C2C: se hai 2 diversi tipi di risorse vicino alla tua città, potresti essere in gado di costruire un edificio bonus.</Italian>
+		<Italian>C2C: Se hai due diversi tipi di risorse vicino alla tua città, potresti essere in gado di costruire un edificio bonus.</Italian>
 		<Spanish>C2C: Si posees 2 recursos distintos en el radio de tu ciudad, tendrás a tu disposición un edificio de bonificación.</Spanish>
 		<Polish>C2C: Jeśli masz w zasięgu miasta 2 różne typy surowców, będziesz mógł zbudować Budynek dający bonus do zasobów.</Polish>
 	</TEXT>
@@ -531,7 +531,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_40</Tag>
-		<English>C2C: Crime is a new concept in C2C. You can fight crime by producing anti-crime buildings and units such as Poltice Stations and Police Cars.</English>
+		<English>C2C: Crime is a new concept in C2C. You can fight crime by producing anti-crime buildings and units such as Police Stations and Police Cars.</English>
 		<French>C2C: La Criminalité est un nouveau concept dans C2C. Vous pouvez affronter et réduire cette criminalité par l'intermédiaire de bâtiments spécifiques, mais aussi avec des unités (Véhicule de police par exemple).</French>
 		<Italian>C2C: Crimine è un nuovo concetto di C2C. Puoi combattere il crimine producendo edifici ed unità anti-crimine, come Stazioni di Polizia e Macchine della Polizia.</Italian>
 		<Spanish>C2C: La criminalidad es un nuevo concepto de C2C. Puedes combatir el crimen produciendo edificios y unidades anticrimen, como las Comisarías de policía o los Coches de policía.</Spanish>
@@ -556,7 +556,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_43</Tag>
-		<English>C2C: Check out the vaious alt-timeline techs such as Clockpunk, Steampunk, Dieselpunk and Atompunk. Each have their own special buildings and units.</English>
+		<English>C2C: Check out the various alt-timeline techs such as Clockpunk, Steampunk, Dieselpunk and Atompunk. Each have their own special buildings and units.</English>
 		<French>C2C: Vous pouvez trouver dans C2C des découvertes alternatives, comme le Clockpunk, Steampunk, Dieselpunk, Atmpunk. Chacune de ces découvertes dispose de bâtiments et unités spécifiques qui peuvent diversifier votre Gameplay.</French>
 		<Italian>C2C: Controlla le tecnologie delle alt-timeline come Clockpunk, Steampunk, Dieselpunk and Atompunk. Ognuna ha i propri edifici e unità speciali.</Italian>
 		<Spanish>C2C: Prueba las diversas tecnologías de historia alternativa, como Clockpunk, Steampunk, Dieselpunk y Atompunk. Cada una de ellas tiene sus propios edificios y unidades especiales.</Spanish>
@@ -564,16 +564,16 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_44</Tag>
-		<English>C2C: the Main Menu theme song is "Civilization WITH LYRICS" by brentalfloss. Check out more of his hillarious music at brentalfloss.com.</English>
+		<English>C2C: The Main Menu theme song is "Civilization WITH LYRICS" by brentalfloss. Check out more of his hilarious music at brentalfloss.com.</English>
 		<French>C2C: La chanson du menu principal est "Civilization WITH LYRICS" de brentalfloss. Visitez les site brentalfloss.com pour d'autres musiques aussi hilarantes.</French>
 		<German>C2C: Beim neuen Titelsong handelt es sich um "Civilization WITH LYRICS" von Brentalfloss. Auf seiner Webseite brentalfloss.com findet ihr die gesamte WITH-LYRICS-Reihe mit noch vielen weiteren aus Computerspielen bekannten Musikstücken.</German>
-		<Italian>C2C: la canzone del Menù principale è "Civilization WITH LYRICS" di brentalfloss. Trova ltra musica divertente a brentalfloss.com.</Italian>
+		<Italian>C2C: La canzone del Menù principale è "Civilization WITH LYRICS" di brentalfloss. Trova ltra musica divertente a brentalfloss.com.</Italian>
 		<Spanish>C2C: El tema musical del Menú principal es "Civilization WITH LYRICS" de brentalfloss. Puedes escuchar más temas de su hilarante música en brentalfloss.com.</Spanish>
 		<Polish>C2C: utwór w Menu Głównym to "Civilization WITH LYRICS" autor: brentalfloss. Jego twórczość możesz zobaczyć na: brentalfloss.com</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_45</Tag>
-		<English>C2C: Air and Water Pollution are new concepts in C2C. Some terrain can help fight pollution such as Forest, Jungle, Coral and Kelp. Peaks can even stop  the spread of air pollution. Make sure to keep some forest around to reduce pollution or build parks in your cities.</English>
+		<English>C2C: Air and Water Pollution are new concepts in C2C. Some terrain can help fight pollution such as Forest, Jungle, Coral and Kelp. Peaks can even stop the spread of air pollution. Make sure to keep some forest around to reduce pollution or build parks in your cities.</English>
 		<French>C2C: Les pollutions de l'Air et de l'Eau sont des nouveaux concepts dans C2C. Certains types de terrain peuvent vous aider à vaincre ces pollutions (Forêt, Jungle, Corail, Les pics peuvent également éviter la propagation de la pollution. Economiser et n'exploitez donc pas tous ces terrains, et pensez à construire des parcs dans vos Villes.</French>
 		<Spanish>C2C: La polución del aire, y del agua, son nuevos conceptos de C2C. Algunos terrenos como el Bosque, la Selva, el Arrecife de coral y las Algas ayudan a luchar contra la polución. Los Picos pueden parar la propagación de la polución del aire. Asegúrate de mantener algunos bosques alrededor de tus ciudades para reducir la polución, o construye parques en ellas.</Spanish>
 		<Polish>C2C: Zanieczyszczenie Wody i Powietrza to nowe koncepcje w C2C. Niektóre typy terenu pomagają walczyć z zanieczyszczeniem (np. Lasy, Dżungle). Góry też mają możliwość zatrzymania zanieczyszczenia powietrza. Staraj się utrzymać kilka lasów w około miasta by zredukować zanieczyszczenie lub zbuduj parki w miastach.</Polish>
@@ -586,7 +586,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_47</Tag>
-		<English>C2C: Pests are a new concept in C2C. These appear based on your city size and what resouces you have access to. Unlike disease or crime, there is no pest property to lower. Thus they truly are PESTS!</English>
+		<English>C2C: Pests are a new concept in C2C. These appear based on your city size and what resources you have access to. Unlike disease or crime, there is no pest property to lower. Thus they truly are PESTS!</English>
 		<French>C2C: Les 'Parasites' constituent un nouveau concept dans C2C. Ceux-ci apparaissent en fonction de la taille de votre ville et des ressources auxquelles vous avez accès. Contrairement à la maladie ou au crime, il n'y a pas de propriété concernant les parasites, que l'on peut faire baisser . Ils sont donc vraiment des PESTES!</French>
 		<Polish>C2C: Szkodniki to nowy system w C2C. Szkodniki bazują na wielkości twojego miasta oraz na dostępie do surowców. W przeciwieństwie do przestępczości i chorób nie da się zmniejszyć lub usunąć szkodników z miasta.</Polish>
 	</TEXT>
@@ -698,7 +698,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_1</Tag>
-		<English>*Revolutions Mod Hint*: The Revolution Watch Advisor screen is totally customisable in the same way as the Domestic Advisor Screen.</English>
+		<English>*Revolutions Mod Hint*: The Revolution Watch Advisor screen is totally customizable in the same way as the Domestic Advisor Screen.</English>
 		<French>*Conseil Mod Revolution*: l'Ecran de Conseiller de Révolution est entièrement configurable de la même manière que l'écran du Conseiller Domestique (CDA).</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: La schermata del Consigliere Rivoluzionario è completamente personalizzabile come lo schermata del Consigliere Interno.</Italian>
 		<Spanish>*Consejo de Revolution*: La vista del Consejero de Revolución es totalmente personalizable, de la misma forma que la vista del Consejero de Interior.</Spanish>
@@ -835,10 +835,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_24</Tag>
-		<English>*Revolutions Mod Hint*: Beware of the Domino Effect...If one city rebels, this can cascade into a regional or empire wide rebellion!</English>
-		<French>*Conseil Mod Revolution*: Attention à l'Effet Domino...Si une Ville se rebelle, cela peut se propager en une rebellion régionale, voire une révolution dans tout l'Empire!</French>
-		<Italian>*Suggerimento del MOD 'Revolutions'*: Attenzione all'Effetto Domino... Se in una città scoppia la rivolta, questa si potrà diffondere su scala regionale o anche nazionale!</Italian>
-		<Spanish>*Consejo de Revolution*: Ten cuidado con el efecto dominó... Si una ciudad se rebela, puede generar una cascada de rebeliones regionales, ¡o incluso a nivel de imperio!</Spanish>
+		<English>*Revolutions Mod Hint*: Beware of the Domino Effect! If one city rebels, this can cascade into a regional or empire wide rebellion!</English>
+		<French>*Conseil Mod Revolution*: Attention à l'Effet Domino! Si une Ville se rebelle, cela peut se propager en une rebellion régionale, voire une révolution dans tout l'Empire!</French>
+		<Italian>*Suggerimento del MOD 'Revolutions'*: Attenzione all'effetto domino! Se in una città scoppia la rivolta, questa si potrà diffondere su scala regionale o anche nazionale!</Italian>
+		<Spanish>*Consejo de Revolution*: Ten cuidado con el efecto dominó! Si una ciudad se rebela, puede generar una cascada de rebeliones regionales, ¡o incluso a nivel de imperio!</Spanish>
 		<Polish>*Podpowiedź do moda Rewolucje*: Uważaj na efekt domina - jeśli jedno miasto się zbuntuje, bunt może rozprzestrzenić się na poszczególne regiony a nawet opanować całe imperium!</Polish>
 	</TEXT>
 	<TEXT>
@@ -901,13 +901,13 @@
 		<Tag>TXT_KEY_REVDCM_HINT_31</Tag>
 		<English>*Revolutions Mod Hint*: It is a common misconception that you cannot expand into a mighty global empire under Revolutions. You can! You just have to do it right!</English>
 		<French>*Conseil Mod Revolution*: C'est une erreur fréquente de croire qu'il n'est pas possible de gérer un vaste Empire avec 'Revolution'. C'est possible! il faut juste le faire bien!</French>
-		<Italian>*Suggerimento del MOD 'Revolutions'*: E' un equivoco diffuso che non sia possibile espandere un potente impero mondiale in 'Revolutions'. Si può! Devi solo farlo bene!</Italian>
+		<Italian>*Suggerimento del MOD 'Revolutions'*: È un equivoco diffuso che non sia possibile espandere un potente impero mondiale in 'Revolutions'. Si può! Devi solo farlo bene!</Italian>
 		<Spanish>*Consejo de Revolution*: Es un error muy común pensar que no puedes expandirte y formar un vasto imperio global con Revolution. ¡Sí que puedes! Solo que tienes que hacerlo muy bien.</Spanish>
 		<Polish>*Podpowiedź do moda Rewolucje*: Powszechnie błędnym przekonaniem jest, że nie możesz rozwinąć się do potężnego globalnego imperium w Rewolucjach. Możesz! Tylko musisz zrobić to dobrze!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_32</Tag>
-		<English>*Revolutions Mod Hint*: War gathers it's own momentum, not just in conquest, but in the approval of your citizens. Keep it rolling with rewards for them, and they will support you!</English>
+		<English>*Revolutions Mod Hint*: War gathers its own momentum, not just in conquest, but in the approval of your citizens. Keep it rolling with rewards for them, and they will support you!</English>
 		<French>*Conseil Mod Revolution*: La Guerre peut générer son propre élan, pas uniquement par la conquête, mais aussi dans l'approbation de vos citoyens. Continuez à leur Offrir des récompenses, et ils vous soutiendront!</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: La guerra guadagna impulso, non solo con la conquista ma anche con l'approvazione dei cittadini. Distribuisci il bottino e loro ti daranno il loro supporto!</Italian>
 		<Spanish>*Consejo de Revolution*: La guerra lleva su propio ritmo, no solo en la conquista, sino también en la aprobación de la población. Ofréceles las mieles del triunfo, ¡y seguirán apoyándote!</Spanish>
@@ -933,7 +933,7 @@
 		<Tag>TXT_KEY_REVDCM_HINT_35</Tag>
 		<English>*Revolutions Mod Hint*: If you want religious purity in your empire, do it wisely but be extra vigilant to non-state religions taking hold!</English>
 		<French>*Conseil Mod Revolution*: Si vous voulez une pureté religieuse au sein de votre Empire, soyez très vigilant aux religions non officielles qui voudraient s'y implanter!</French>
-		<Italian>*Suggerimento del MOD 'Revolutions'*: Se desideri la purezza religiosa nel tuo impero, fallo con saggezza, ma sii molto vigili per non far sviluppare religioni non di Stato!</Italian>
+		<Italian>*Suggerimento del MOD 'Revolutions'*: Se desideri la purezza religiosa nel tuo impero, fallo con saggezza, ma sii molto vigile per non far sviluppare religioni non di Stato!</Italian>
 		<Spanish>*Consejo de Revolution*: Si pretendes tener pureza religiosa en tu imperio, hazlo sabiamente, pero mantente siempre alerta y vigila que las religiones no oficiales no se implanten en tu imperio.</Spanish>
 		<Polish>*Podpowiedź do moda Rewolucje*: Jeżeli chcesz utrzymać religijną czystość w swoim imperium, rób to mądrze - bez wzmożonej czujności inne religie mogą podjąć próby przejmowania kontroli!</Polish>
 	</TEXT>
@@ -965,7 +965,7 @@
 		<Tag>TXT_KEY_REVDCM_HINT_39</Tag>
 		<English>*Revolutions Mod Hint*: It is a common misconception that Revolutions fundamentally changes the basic game play. It does not. It merely adds another strategic layer upon the game, the management of your people...</English>
 		<French>*Conseil Mod Revolution*: C'est une erreur de penser que Revolutions change complètement le mécanisme du jeu. Ce n'est pas le cas. Il ajoute simplement un élément stratégique supplémentaire, la gestion de votre peuple...</French>
-		<Italian>*Suggerimento del MOD 'Revolutions'*: E' un equivoco diffuso che 'Revolutions' modifichi sostanzialmente i meccanismi di gioco. No. Aggiunge al gioco solo un altro livello strategico, la gestione del tuo popolo...</Italian>
+		<Italian>*Suggerimento del MOD 'Revolutions'*: È un equivoco diffuso che 'Revolutions' modifichi sostanzialmente i meccanismi di gioco. No. Aggiunge al gioco solo un altro livello strategico, la gestione del tuo popolo...</Italian>
 		<Spanish>*Consejo de Revolution*: Es un error frecuente pensar que Revolution cambia fundamentalmente la mecánica de juego. No lo hace. Tan solo añade una capa más a la estrategia del juego, la gestión de tu pueblo...</Spanish>
 		<Polish>*Podpowiedź do moda Rewolucje*: Błędnym mniemaniem jest to, iż Rewolucje zmieniają podstawowe zasady gry. Otóż nie zmieniają. Rewolucje zaledwie dodają kolejną strategiczną warstwę w grze - w zarządzaniu twoimi ludźmi...</Polish>
 	</TEXT>
@@ -1047,7 +1047,7 @@
 		<English>*Revolutions Mod Hint*: If word spreads that an empire has collapsed into anarchy and rebellion, try to exploit it. These foreign citizens can be won over to your cause more easily than if you were to conquer that empire.</English>
 		<French>*Conseil Mod Revolution*: Si vous entendez des rumeurs d'un Empire en train de s'effondrer dans l'anarchie et la rebellion, essayez d'en profiter: Vous pourrez gagner à votre cause plus facilement ces étrangers en quête d'identité que ceux appartenant à un Empire uni.</French>
 		<German>*Revolutions Mod Hint*: If word spreads that an empire has collapsed into anarchy and rebellion, try to exploit it. These foreign can be won over to your cause more easily than if you were to conquer that empire.</German>
-		<Italian>*Suggerimento del MOD 'Revolutions'*: Se ti giunge voce che un impero è sprofondato in anarchia e rivolta, cerca di attaccarlo. E' più facile guadagnare il supporto di questi popoli in rivolta che conquistare l'impero organizzato.</Italian>
+		<Italian>*Suggerimento del MOD 'Revolutions'*: Se ti giunge voce che un impero è sprofondato in anarchia e rivolta, cerca di attaccarlo. È più facile guadagnare il supporto di questi popoli in rivolta che conquistare l'impero organizzato.</Italian>
 		<Spanish>*Consejo de Revolution*: Si se extiende el rumor de que un imperio ha caído en la anarquía y la revolución, intenta sacar tajada de ello. Estos ciudadanos podrían ser camelados para tu causa más fácilmente que si tuvieras que conquistar ese imperio en perfecto estado.</Spanish>
 		<Polish>*Podpowiedź do moda Rewolucje*: Jeżeli rozprzestrzenia się plotka, że imperium zapadło się do anarchii i buntu, spróbować to wykorzystać. Do tego mogą się przyczynić obcy o wiele łatwiej niż, byś miał podbić to imperium.</Polish>
 	</TEXT>
@@ -1097,7 +1097,7 @@
 		<French>*Conseil Civ. Barbare*: Démarrez une partie tout seul! Les adversaires viendront progressivement. Il faut juste désactiver alors les victoires par conquête ou domination!</French>
 		<Italian>*Suggerimento da 'Barbarian Civ'*: Puoi iniziare una partita con solo te, come giocatore! I tuoi rivali compariranno. Solo fa' in modo togliere 'Conquista' e 'Dominazione' dalle condizioni di vittoria!</Italian>
 		<Spanish>*Consejo de BarbarianCiv*: ¡Comienza una partida tu solo como jugador! Los rivales irán apareciendo. Asegúrate que desactivas las victorias por Conquista y Dominación previamente.</Spanish>
-		<Polish>*Podpowiedź do moda Cywilizacja Barbarzyńców*: Zacznij grę z samym sobą! Konkurenci z czasem się pojawią. Tylko upewnij się, że wyłączyłeś podbój  i dominację!</Polish>
+		<Polish>*Podpowiedź do moda Cywilizacja Barbarzyńców*: Zacznij grę z samym sobą! Konkurenci z czasem się pojawią. Tylko upewnij się, że wyłączyłeś podbój i dominację!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_54</Tag>
@@ -1158,7 +1158,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_60</Tag>
-		<English>*Barbarian Civ Hint*: Yes it is irritating if a minor civ settles vast fields of wild dye, leaving you without!</English>
+		<English>*Barbarian Civ Hint*: Yes, it is irritating if a minor civ settles vast fields of wild dye, leaving you without!</English>
 		<French>*Conseil Civ. Barbare*: Oui, c'est irritant, lorsqu'une civilisation mineure s'établit, de vastes étendues de nature sauvage disparaîssent sous vos yeux!</French>
 		<Italian>*Suggerimento da 'Barbarian Civ'*: Sì, è irritante se un una Civiltà Minore riesce a prendere il controllo di una risorsa, lasciando te senza!</Italian>
 		<Spanish>*Consejo de BarbarianCiv*: Sí, es irritante si una civilización menor se asienta sobre vastos campos de tintura, ¡dejándote a ti sin ellos!</Spanish>
@@ -1191,7 +1191,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_64</Tag>
 		<English>*Revolutions Mod Hint*: Lacking a little spice in your life? Try "Start as Minors" with "Aggressive AI". That should do it!</English>
-		<French>*Conseil Mod Revolution*: Un peu de piment dans votre vie? Essayez "Démarrage Barbare" avec  "IA Aggressive". Ca pourrait le faire!</French>
+		<French>*Conseil Mod Revolution*: Un peu de piment dans votre vie? Essayez "Démarrage Barbare" avec "IA Aggressive". Ca pourrait le faire!</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: Vuoi un po' di pepe nella tua vita? Prova le opzioni "Start as Minors" assieme a "Aggressive AI". Vedrai!</Italian>
 		<Spanish>*Consejo de Revolution*: ¿Te falta un poco de picante en tu vida? Prueba "Empezar como menor" junto con "IA agresiva". Ya verás la que te espera.</Spanish>
 		<Polish>*Podpowiedź do moda Rewolucje*: Mało pikanterii w twoim życiu? Spróbuj opcje "Zacznij jako cywilizacja podrzędna" razem z opcją "Agresywnym AI"...</Polish>
@@ -1248,7 +1248,7 @@
 		<Tag>TXT_KEY_REVDCM_HINT_70</Tag>
 		<English>*Revolutions Mod Hint*: Don't be scared to run slavery! The citizens will endure the whipping.....for a time!</English>
 		<French>*Conseil Mod Revolution*: Ne soyez pas effrayés par l'esclavage! Les citoyens vont endurer le fouet.....pour un temps!</French>
-		<Italian>*Suggerimento del MOD 'Revolutions'*: Non abbiate paura di imporre lo Schiavismo! I cittadini sapranno sopportare le frustate.....  per un po'!</Italian>
+		<Italian>*Suggerimento del MOD 'Revolutions'*: Non abbiate paura di imporre lo Schiavismo! I cittadini sapranno sopportare le frustate..... per un po'!</Italian>
 		<Spanish>*Consejo de Revolution*: ¡No tengas miedo de adoptar la Esclavitud! Los ciudadanos podrán soporta los latigazos... ¡al menos durante un tiempo!</Spanish>
 		<Polish>*Podpowiedź do moda Rewolucje*: Nie bój się przejść na niewolnictwo! Obywatele zniosą chłostę... przez jakiś czas!</Polish>
 	</TEXT>
@@ -1274,7 +1274,7 @@
 		<French>*Conseil Mod Revolution*: Instaurer un état policier peut être judicieux lorsque votre empire est trop instable. Comment sinon conserver l'Empire sous votre talon?</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: Il passaggio ad uno Stato di Polizia può essere positivo in tempi di instabilità! In quale altro modo puoi tenere in pugno l'impero?</Italian>
 		<Spanish>*Consejo de Revolution*: Cambiar a un Estado policial puede estar bien en tiempos de inestabilidad. Si no, ¿cómo vas a mantener a tu imperio sometido?</Spanish>
-		<Polish>Podpowiedź do moda Rewolucje*: Zmiana doktryny na państwo policyjne  może być dobra w czasach niestabilności! W jaki jeszcze inny sposób możesz trzymać imperium pod swoim panowaniem?</Polish>
+		<Polish>Podpowiedź do moda Rewolucje*: Zmiana doktryny na państwo policyjne może być dobra w czasach niestabilności! W jaki jeszcze inny sposób możesz trzymać imperium pod swoim panowaniem?</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_74</Tag>
@@ -1310,11 +1310,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_78</Tag>
-		<English>*Revolutions Mod Hint*: If you have stabilised your domestic society and you are the leader the people want, any standard BTS strategy is available for you to implement.</English>
-		<French>*Conseil Mod Revolution*: Si vous avez stabilisé votre société et que vous êtes le leader que le peuple souhaite, n'importe laquelle des stratégies de BTS s'offre à vous.</French>
+		<English>*Revolutions Mod Hint*: If you have stabilised your domestic society and you are the leader the people want, any standard BtS strategy is available for you to implement.</English>
+		<French>*Conseil Mod Revolution*: Si vous avez stabilisé votre société et que vous êtes le leader que le peuple souhaite, n'importe laquelle des stratégies de BtS s'offre à vous.</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: Se hai stabilizzato la tua civiltà e sei il leader che il popolo desidera, puoi attuare tutte le strategie definite per BtS.</Italian>
 		<Spanish>*Consejo de Revolution*: Si has conseguido estabilizar tus asuntos internos y eres el líder que la gente quiere, cualquier estrategia estándar usada en BtS funcionará a las mil maravillas.</Spanish>
-		<Polish>*Podpowiedź do moda Rewolucje*: Jeżeli masz stabilne społeczeństwo i jesteś liderem, którego ludzie kochają, może spróbować wprowadzić jakąś standardową strategię z BTS.</Polish>
+		<Polish>*Podpowiedź do moda Rewolucje*: Jeżeli masz stabilne społeczeństwo i jesteś liderem, którego ludzie kochają, może spróbować wprowadzić jakąś standardową strategię z BtS.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_79</Tag>
@@ -1342,11 +1342,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_81</Tag>
-		<English>*DCM Hint*: Range bombarding cities has much less impact on the defenders than the defences of the city. Defenders can seek cover even behind damaged walls!....for a time...</English>
-		<French>*Conseils DCM*: Le Bombardement à distance des Villes a beaucoup moins d'impact sur les défenseurs que sur les défenses. Ceux-ci peuvent chercher à se protéger derrière les ruines!....pour un temps...</French>
-		<Italian>*Suggerimento da MOD 'RevDCM'*: Il 'Bombardamento ad Area' contro le città ha meno impatto sui difensori che sulle difese. I difensori possono cercare riparo anche dietro le mura danneggiate!.... per una sola volta...</Italian>
+		<English>*DCM Hint*: Range bombarding cities has much less impact on the defenders than the defences of the city. Defenders can seek cover even behind damaged walls... for a time.</English>
+		<French>*Conseils DCM*: Le Bombardement à distance des Villes a beaucoup moins d'impact sur les défenseurs que sur les défenses. Ceux-ci peuvent chercher à se protéger derrière les ruines... pour un temps...</French>
+		<Italian>*Suggerimento da MOD 'RevDCM'*: Il 'Bombardamento ad Area' contro le città ha meno impatto sui difensori che sulle difese. I difensori possono cercare riparo anche dietro le mura danneggiate... per una sola volta...</Italian>
 		<Spanish>*Consejo de DCM*: Realizar cañoneo de alcance sobre las ciudades produce mucho menos impacto sobre los defensores que sobre las defensas. Los defensores pues buscar cobijo incluso detrás de las murallas dañadas, al menos durante un tiempo...</Spanish>
-		<Polish>*Podpowiedź do moda DCM*: Bombardowanie z dystansu miasta ma dużo mniejszy wpływ na obrońców niż na obronę miasta. Obrońcy mogą szukać schronienia nawet z tyłu uszkodzonych ścian!... Przez jakiś czas...</Polish>
+		<Polish>*Podpowiedź do moda DCM*: Bombardowanie z dystansu miasta ma dużo mniejszy wpływ na obrońców niż na obronę miasta. Obrońcy mogą szukać schronienia nawet z tyłu uszkodzonych ścian... Przez jakiś czas...</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_82</Tag>
@@ -1366,7 +1366,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_84</Tag>
-		<English>*DCM Hint*: Properly set-up defensive structures like forts or field deployments with properly constructed frontlines, are by far the most effective way to range bombard.</English>
+		<English>*DCM Hint*: Properly set-up defensive structures like forts or field deployments with properly constructed front-lines, are by far the most effective way to range bombard.</English>
 		<French>*Conseils DCM*: Placez bien les structures défensives comme les forts ou les barbelés pour en faire des lignes de front. C'est de loin la méthode la plus efficace pour utiliser le bombardement à distance en tout sécurité.</French>
 		<Italian>*Suggerimento da MOD 'RevDCM'*: Strutture difensive ben approntate come forti o spiegamenti di forze ben impostati, sono di gran lunga il modo più efficace di difendersi dal 'Bombardamento ad Area'.</Italian>
 		<Spanish>*Consejo de DCM*: Desplegar adecuadamente tus unidades en la frontera, junto con una buena ubicación de los fuertes, son por descontado la forma más efectiva de utilizar el cañoneo de alcance.</Spanish>
@@ -1374,10 +1374,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_85</Tag>
-		<English>*DCM Hint*: Range bombard now only issues standard BTS collateral damage upon stacks. It is completely useless against single units and siege as well as the head defender of the enemy stack.</English>
+		<English>*DCM Hint*: Range bombard now only issues standard BtS collateral damage upon stacks. It is completely useless against single units and siege as well as the head defender of the enemy stack.</English>
 		<French>*Conseils DCM*: Le Bombardement à distance génère des dommages collatéraux uniquement sur des groupes d'unités. C'est complètement inefficace contre les unités seules ainsi que le meilleur défenseur du groupe.</French>
 		<German>*DCM Hint*: Range bombard now only issues standard collateral damage upon stacks. It is completely useless against single units and siege as well as the head defender of the enemy stack.</German>
-		<Italian>*Suggerimento da MOD 'RevDCM'*: Il 'Bombardamento ad Area' provoca solo danni collaterali normali contro un gruppo. E' completamente inutile contro unità singole e d'assedio così come contro l'unità in prima linea del gruppo.</Italian>
+		<Italian>*Suggerimento da MOD 'RevDCM'*: Il 'Bombardamento ad Area' provoca solo danni collaterali normali contro un gruppo. È completamente inutile contro unità singole e d'assedio così come contro l'unità in prima linea del gruppo.</Italian>
 		<Spanish>*Consejo de DCM*: El cañoneo de alcance solo infringe el daño colateral sobre los grupos de unidades. Es completamente ineficaz contra unidades en solitario y contra armas de asedio, así como contra el principal defensor del grupo.</Spanish>
 		<Polish>*Podpowiedź do moda DCM*: Bombardowanie z dystansu jest tylko dodatkiem do obrażeń grupowych. Jest to zupełnie bezużyteczne przeciw pojedynczym jednostkom i machinom oblężniczym jak również głównym obrońcom oddziału wroga.</Polish>
 	</TEXT>
@@ -1407,7 +1407,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVDCM_HINT_89</Tag>
-		<English>*Revolutions Mod Hint*: Revolutions and it's components are configurable and customisable in Revolution.ini</English>
+		<English>*Revolutions Mod Hint*: Revolutions and its components are configurable and customisable in Revolution.ini</English>
 		<French>*Conseil Mod Revolution*: Revolutions et ses composants est configurable et personnalisable dans le fichier Revolution.ini</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: 'Revolutions' e i suoi componenti sono configurabili e personalizzabili nel file 'Revolution.ini'</Italian>
 		<Spanish>*Consejo de Revolution*: Revolution y sus componentes pueden ser configurados y personalizados en el archivo Revolution.ini</Spanish>
@@ -1426,7 +1426,7 @@
 		<English>*Revolutions Mod Hint*: If you want an interesting variation of Revolutions, that effectively turns down the overall difficulty of the mod, try the "Inquisitions" option or "Limited Religions" or both!</English>
 		<French>*Conseil Mod Revolution*: Si vous voulez une variante intéressante de 'Révolution', qui réduit la difficulté du mod, essayez l'option 'Inquisition' ou 'Religions limitées', ou alors combinez les deux!</French>
 		<Italian>*Suggerimento del MOD 'Revolutions'*: Se cerchi una variazione interessante di 'Revolutions', per diminuire realmente la difficoltà del MOD, prova le opzioni "Inquisizioni Limitate" "Religioni Limitate" or entrambe!</Italian>
-		<Spanish>*Consejo de Revolution*: Si quieres una interesante variante de Revolution, que reduce ampliamente la dificultad general del juego, prueba las opciones "Inquisición" o "Religiones limitadas"...  ¡o ambas!</Spanish>
+		<Spanish>*Consejo de Revolution*: Si quieres una interesante variante de Revolution, que reduce ampliamente la dificultad general del juego, prueba las opciones "Inquisición" o "Religiones limitadas"... ¡o ambas!</Spanish>
 		<Polish>*Podpowiedź do moda Rewolucje*: Jeżeli chcesz interesującej odmiany Rewolucji. Spróbuj "Inkwizycji" albo opcji "Ograniczenie liczby religii" lub wypróbuj oba naraz!</Polish>
 	</TEXT>
 	<TEXT>
@@ -1457,7 +1457,7 @@
 		<Tag>TXT_KEY_REVDCM_HINT_94</Tag>
 		<English>*Influence Driven War*: Keep an eye out for the culture mix of the tile you are contesting. It is possible that a 5% influence swing to you may be enough to win the territory!</English>
 		<French>*Influence Driven War*: Gardez un oeil aux informations de culture des cases que vous revendiquez. Il est possible que seulement 5% de modifications de l'influence soient suffisants pour gagner le territoire!</French>
-		<Italian>*Suggerimento da MOD 'IDW'*: Attento alle influenze culturali di una casella da conquistare. E' possibile che una variazione del 5% dell'influenza culturale possa farti conquistare il territorio!</Italian>
+		<Italian>*Suggerimento da MOD 'IDW'*: Attento alle influenze culturali di una casella da conquistare. È possibile che una variazione del 5% dell'influenza culturale possa farti conquistare il territorio!</Italian>
 		<Spanish>*Consejo de IDW*: Presta atención a la mezcla cultural de la casilla que estás disputando. ¡Es posible que un pequeño cambio del 5% te otorgue el territorio!</Spanish>
 		<Polish>*Podpowiedź do moda IDW*: Nie spuszczaj oka z pola o które zabiegasz. Czasem wystarczy 5% wpływu, by wygrać dany teren!</Polish>
 	</TEXT>
@@ -1513,7 +1513,7 @@
 		<Tag>TXT_KEY_ROM_HINT_10</Tag>
 		<English>Caveman2Cosmos: There are several new Promotion lines and there has been made changes to almost all BtS promotions.</English>
 		<French>Caveman2Cosmos: Il y a quelques Promotions supplémentaires et les promotions originales ont été revues.</French>
-		<Italian>Caveman2Cosmos: Ci sono molte nuove linee di promozioni, e ci sono stati cambi a quasi tutte le promozioni di BTS.</Italian>
+		<Italian>Caveman2Cosmos: Ci sono molte nuove linee di promozioni, e ci sono stati cambi a quasi tutte le promozioni di BtS.</Italian>
 		<Spanish>Caveman2Cosmos: Hay multitud de nuevas ramas de ascenso, y se han realizado cambios en casi todos los ascensos de Beyond the Sword.</Spanish>
 		<Polish>Caveman2Cosmos: Zostało dodane mnóstwo nowych ścieżek Promocji i ponadto dokonano zmian prawie we wszystkich promocjach z BtS.</Polish>
 	</TEXT>
@@ -1562,9 +1562,9 @@
 		<Tag>TXT_KEY_ROM_HINT_16</Tag>
 		<English>Caveman2Cosmos: Game start year has been set to 200 000 BC.[NEWLINE]All game speeds have more turns than in normal BtS game.</English>
 		<French>Caveman2Cosmos: L'année de Démarrage du Jeu est de 200 000 av. J-C. Il y a donc plus de tours que dans le jeu normal, quelle que soit la vitesse de jeu.</French>
-		<Italian>Caveman2Cosmos: Il gioco inizia nel 200 000 a.C; tutte le velocità di gioco hanno più turni rispetto al normale BTS.</Italian>
+		<Italian>Caveman2Cosmos: Il gioco inizia nel 200 000 a.C; tutte le velocità di gioco hanno più turni rispetto al normale BtS.</Italian>
 		<Spanish>Caveman2Cosmos: Se ha establecido el año de comienzo de la partida en el 200 000 a.C. Todas las velocidades de juego duran más turnos que en una partida estándar de Beyond the Sword.</Spanish>
-		<Polish>Caveman2Cosmos: Gra rozpoczyna się teraz w roku 200 000 P.N.E. Wszystkie szybkości gry mają teraz większą liczbę tur niż w normalnej grze Bts.</Polish>
+		<Polish>Caveman2Cosmos: Gra rozpoczyna się teraz w roku 200 000 P.N.E. Wszystkie szybkości gry mają teraz większą liczbę tur niż w normalnej grze BtS.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROM_HINT_17</Tag>
@@ -1662,7 +1662,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROM_HINT_28</Tag>
-		<English>Caveman2Cosmos: Scientific victory requires you to learn most Transhuman era technologies and then to build enough Paradise Gardens and Ascention Gate Great Wonder.</English>
+		<English>Caveman2Cosmos: Scientific victory requires you to learn most Transhuman era technologies and then to build enough Paradise Gardens and Ascension Gate Great Wonder.</English>
 		<French>Caveman2Cosmos: La Victoire Scientifique nécessite la découverte de la plupart des technologies de l'ère Transhumaine, puis de construire suffisament de Jardins du Paradis et la Merveille Porte Ascensionnelle.</French>
 		<Spanish>Caveman2Cosmos: La victoria científica requiere que descubras la mayoría de tecnologías de la Época transhumana, y posteriormente construir suficientes Jardines del Paraíso y la Gran maravilla del Portal de la Ascensión.</Spanish>
 		<Polish>Caveman2Cosmos: Zwycięstwo naukowe wymaga do odkrycia większości technologi z Ery Transhumanizmu i wybudowania Rajskich Ogrodów i Bramy Oświecenia.</Polish>
@@ -1702,7 +1702,7 @@
 		<English>Caveman2Cosmos: Pressing [ALT+X] turns on the strategy overlay feature that allows you to plan where to put your cities. Pressing same button combination turns it off. To view the strategy overlay just press [CTRL+X].</English>
 		<French>Caveman2Cosmos: Appuyez sur [ALT+X] pour faire apparaître l'interface en mode édition vous permettant de planifier l'emplacement de vos Villes. La même combinaison de touches permet de la masquer à nouveau, et [CTRL+X] permet de l'afficher.</French>
 		<German>Caveman2Cosmos: Mit der Tastenkombination [ALT + X] lässt sich ein Strategieoverlay für die Vorausplanung von Stadtgründungen aktivieren. Ein erneutes Betätigen derselben Kombination deaktiviert es wieder. Geplante Stadtraster werden in der ausgewählten Farbe gespeichert und lassen sich mit der Tastenkombination [STRG + X] jederzeit anzeigen.</German>
-		<Italian>Caveman2Cosmos: Premendo [ALT+X] attvi la visione strategica, che ti permette di pianificare dove mettere le tue città. Premilo nuovamente per disattivare questa modalità. Per vedere semplicemente la visione strategica tieni premuto [CTRL+X].</Italian>
+		<Italian>Caveman2Cosmos: Premendo [ALT+X] attivi la visione strategica, che ti permette di pianificare dove mettere le tue città. Premilo nuovamente per disattivare questa modalità. Per vedere semplicemente la visione strategica tieni premuto [CTRL+X].</Italian>
 		<Spanish>Caveman2Cosmos: La combinación [ALT+X] activa la característica de la Capa estratégica, que te permite planificar dónde asentar tus futuras ciudades. Se desactiva al pulsar la misma combinación de nuevo.</Spanish>
 		<Polish>Caveman2Cosmos: Wciśnij [ALT+X] aby zaplanować rozmieszczenie miast. Jeśli chcesz zobaczyć lub ukryć planowanie kliknij [CTRL+X].</Polish>
 	</TEXT>
@@ -1725,7 +1725,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_ROM_HINT_35</Tag>
 		<English>Caveman2Cosmos: The AI has been improved so be prepared for their new tactics. For more information see Better BtS AI pedia pages in RoM Concepts pedia section.</English>
-		<French>Caveman2Cosmos: L'IA a été améliorée, attendez-vous à de nouvelles tactiques. Pous plus d'infos, consultez les pages 'Better BTS AI' dans les concepts ROM de la Civilopédia.</French>
+		<French>Caveman2Cosmos: L'IA a été améliorée, attendez-vous à de nouvelles tactiques. Pous plus d'infos, consultez les pages 'Better BtS AI' dans les concepts ROM de la Civilopédia.</French>
 		<Italian>Caveman2Cosmos: L'IA è stata migliorata, quindi sii pronto alle nuove tattiche. Per ulteriori informazioni, guarda la pagina della Civilopedia Better BtS AI.</Italian>
 		<Spanish>Caveman2Cosmos: La IA ha sido mejorada, así que prepárate frente a sus nuevas tácticas. Para más información, véase la página 'IA de BtS mejorada' en la sección 'Conceptos de RoM' de la Civilopedia.</Spanish>
 		<Polish>Caveman2Cosmos: AI zostało ulepszone więc przygotuj nowe taktyki. Po więcej informacji kieruj się do cywilopedi.</Polish>
@@ -1773,7 +1773,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_ROM_HINT_40</Tag>
 		<English>Caveman2Cosmos: With the Barbarian World game option the barbarians start with a free city for every civilization in the game. Combined with Barbarian Civ game option you'll see those Barbarian civs to grow into new civilizations earlier than with just the Barbarian Civ game option alone - if you survive the barbarian hordes...</English>
-		<French>Caveman2Cosmos: Avec l'option 'Monde Barbare' les barbares démarrent avec une Ville pour chaque civilisation de la partie. Combinée avec l'option 'Civ Barbare', vous allez voir ces Villes barbares rapidement faire émerger de nouvelles  Civilisations - si vous survivez aux hordes barbares...</French>
+		<French>Caveman2Cosmos: Avec l'option 'Monde Barbare' les barbares démarrent avec une Ville pour chaque civilisation de la partie. Combinée avec l'option 'Civ Barbare', vous allez voir ces Villes barbares rapidement faire émerger de nouvelles Civilisations - si vous survivez aux hordes barbares...</French>
 		<Italian>Caveman2Cosmos: Con l'opzione Mondo barbarico, i barbari cominciano il gioco con una città per ogni civiltà in gioco. Combinato con l'opzione civiltà barbare vedrai spunatre molto prima nuove civiltà, ovviamente se riesci a sopravvivere all'orda barbarica....</Italian>
 		<Spanish>Caveman2Cosmos: Con la opción de partida 'Mundo bárbaro', los bárbaros comenzarán con una ciudad por cada civilización en la partida. Si la combinas con la opción 'Civilizaciones bárbaras' podrás observar cómo dichas ciudades bárbaras se convierten en civilizaciones más rapido... si sobrevives a las hordas de bárbaros, claro...</Spanish>
 		<Polish>Caveman2Cosmos: Z włączoną opcją Barbarzyński Świat, barbarzyńcy rozpoczynają z miastami. Kombinacja z Cywilizacjami Barbarzyńców może dać wcześnie nowe cywilizacje, ale tylko jeśli przetrwasz hordy barbarzyńców...</Polish>
@@ -1813,8 +1813,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_ROM_HINT_9</Tag>
 		<English>Caveman2Cosmos: The tech tree has been completely redone. Many buildings from the normal Beyond the Sword game have been moved to new techs.</English>
-		<French>Caveman2Cosmos: L'arbre de Tech a été complètement revu. Beaucoup de bâtiments de Civ4 BTS nécessitent maintenant une technologie correspondante.</French>
-		<Italian>Caveman2Cosmos: L'albero delle tecnologie è stato completamente rifatto. Molti edifici di BTS sono ora sbloccati da nuove tecnologie.</Italian>
+		<French>Caveman2Cosmos: L'arbre de Tech a été complètement revu. Beaucoup de bâtiments de Civ4 BtS nécessitent maintenant une technologie correspondante.</French>
+		<Italian>Caveman2Cosmos: L'albero delle tecnologie è stato completamente rifatto. Molti edifici di BtS sono ora sbloccati da nuove tecnologie.</Italian>
 		<Spanish>Caveman2Cosmos: Se ha reformado por completo el árbol de tecnologías. Muchos edificios de Beyond the Sword han sido recolocados en otras tecnologías.</Spanish>
 		<Polish>Caveman2Cosmos: Drzewo technologii zostało całkowicie przebudowane. Wiele budynków z normalnej gry Beyond the Sword zostało przeniesionych do nowych technologii.</Polish>
 	</TEXT>

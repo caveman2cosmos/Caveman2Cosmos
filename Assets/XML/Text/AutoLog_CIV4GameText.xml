@@ -536,7 +536,7 @@
 		<English>A %s1 was built</English>
 		<French>[NUM1:Un:Une:Des:Des] %s1 [NUM1:a été construit:a été construite:ont été construits:ont été construites]</French>
 		<German>[NUM1:Ein:Eine:Ein:Einige:Einige:Einige] %s1:1 wurde errichtet</German>
-		<Italian>E' stato costruito un miglioramento %s1</Italian>
+		<Italian>È stato costruito un miglioramento %s1</Italian>
 		<Spanish>Se ha construido [NUM1:un:una:unos:unas] %s1</Spanish>
 		<Polish>Zbudowano: %s1</Polish>
 	</TEXT>
@@ -545,7 +545,7 @@
 		<English>A %s1 was destroyed</English>
 		<French>%s1 a été détruit</French>
 		<German>[NUM1:Ein:Eine:Ein:Einige:Einige:Einige] %s1:1 wurde zerstört</German>
-		<Italian>E' stato distrutto un miglioramento %s1</Italian>
+		<Italian>È stato distrutto un miglioramento %s1</Italian>
 		<Spanish>Se ha destruido [NUM1:un:una:unos:unas] %s1</Spanish>
 		<Polish>Zniszczono: %s1</Polish>
 	</TEXT>
@@ -588,7 +588,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_IN_TERRITORY_AT</Tag>
 		<English>%s1 at %s2</English>
-		<French>%s1 par  %s2</French>
+		<French>%s1 par %s2</French>
 		<German>%s1 bei %s2</German>
 		<Italian>%s1, a %s2</Italian>
 		<Spanish>%s1 en %s2</Spanish>
@@ -797,7 +797,7 @@
 		<English>Tech acquired (trade, lightbulb, hut, espionage): %s1</English>
 		<French>Tech. obtenu (commerce, village, espionnage,...): %s1</French>
 		<German>Technologie erhalten (durch Handel, Große Persönlichkeit, Stammesdorf, Spionage): %s1</German>
-		<Italian>E' stata acquisita la tecnologia %s1</Italian>
+		<Italian>È stata acquisita la tecnologia %s1</Italian>
 		<Spanish>Tecnología obtenida (por comercio, Gran personaje, Aldea tribal o espionaje): %s1</Spanish>
 		<Polish>Uzyskano technologię (handel, chatka, szpiegostwo, inne): %s1</Polish>
 	</TEXT>
@@ -903,7 +903,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT</Tag>
 		<English>Tribal village results: %s1</English>
-		<French>Village tribal visité:  %s1</French>
+		<French>Village tribal visité: %s1</French>
 		<German>Geschenk eines Stammesdorfes: %s1</German>
 		<Italian>Scoperto un villaggio tribale: %s1</Italian>
 		<Spanish>Resultado de aldea tribal: %s1</Spanish>
@@ -1188,7 +1188,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_WHILE_ATTACKING_ESCAPES</Tag>
 		<English>While attacking, %s1 escapes from %s2 %s3 (Prob Victory: %s4%s5)</English>
-		<French>En Attaquant, %s1 a réussi à s'échapper de  %s2 %s3 (Prob. de Victoire: %s4%s5)</French>
+		<French>En Attaquant, %s1 a réussi à s'échapper de %s2 %s3 (Prob. de Victoire: %s4%s5)</French>
 		<German>[NUM1:Angreifender:Angreifende:Angreifendes:Angreifende:Angreifende:Angreifende] %s1:1_UnitName [NUM1:floh:flohen] aus dem Kampf gegen %[s2_civ_adjective][NUM3:en:e:es:e:e:e] %s3:4_EnUName (Erfolgsaussicht: %s4%s5)</German>
 		<Italian>Attaccando, l'unità %s1 si è ritirata davanti all'unità %s3 %s2 (probabilità di vittoria: %s4%s5)</Italian>
 		<Spanish>Atacando, %s1 huyó de %s2 %s3 (probabilidad de victoria: %s4%s5)</Spanish>
