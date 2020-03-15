@@ -858,7 +858,7 @@
 					<iBuildingProductionModifier>100</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ARTIST_GUILD</BuildingType>
+					<BuildingType>BUILDING_ARTIST_COLONY</BuildingType>
 					<iBuildingProductionModifier>100</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -946,7 +946,7 @@
 					<iBuildingProductionModifier>100</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_BYZANTINE_HIPPODROME</BuildingType>
+					<BuildingType>BUILDING_HIPPODROME</BuildingType>
 					<iBuildingProductionModifier>100</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -4293,7 +4293,7 @@
 					<iBuildingProductionModifier>100</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ARTIST_GUILD</BuildingType>
+					<BuildingType>BUILDING_ARTIST_COLONY</BuildingType>
 					<iBuildingProductionModifier>100</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -4381,7 +4381,7 @@
 					<iBuildingProductionModifier>100</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_BYZANTINE_HIPPODROME</BuildingType>
+					<BuildingType>BUILDING_HIPPODROME</BuildingType>
 					<iBuildingProductionModifier>100</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>

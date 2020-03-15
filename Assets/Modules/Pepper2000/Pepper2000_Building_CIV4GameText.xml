@@ -4849,8 +4849,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIGITAL_EMBASSY_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][ICON_BULLET]Make contact with every other civ.</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][ICON_BULLET]Make contact with every other civ.</French>
+		<English>[ICON_BULLET][ICON_BULLET]Make contact with every other civ.</English>
+		<French>[ICON_BULLET][ICON_BULLET]Make contact with every other civ.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIGITAL_EMBASSY_PEDIA</Tag>
