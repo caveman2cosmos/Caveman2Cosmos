@@ -2313,4 +2313,44 @@
 		<Spanish>[ICON_BULLET]%D1 %F2_yeild/ciudad</Spanish>
 		<Polish>[ICON_BULLET]%D1%F2_yeild/Miasto</Polish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_CENTAUR_SHORT</Tag>
+		<English>AWotCentaur</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_FEATHER_SHORT</Tag>
+		<English>AWotFeather</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_FIST_SHORT</Tag>
+		<English>AWotFist</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_LEECH_SHORT</Tag>
+		<English>AWotLeech</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_SHADOWS_SHORT</Tag>
+		<English>AWotShadows</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WARRIOR_SHORT</Tag>
+		<English>AWotWarrior</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WAVES_SHORT</Tag>
+		<English>AWotWaves</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WILD_SHORT</Tag>
+		<English>AWotWild</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WIND_SHORT</Tag>
+		<English>AWotWind</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WOLF_SHORT</Tag>
+		<English>AWotWolf</English>
+	</TEXT>
 </Civ4GameText>

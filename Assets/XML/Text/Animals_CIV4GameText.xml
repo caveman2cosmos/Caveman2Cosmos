@@ -63,11 +63,6 @@
 		<German>Dies ist ein automatischer Effekt, der mit der Erforschung einer bestimmten Technologie aktiviert wird. Er hat keinen direkten Effekt, sondern dient der Vereinfachung von Updates, bei denen neue Mythen hinzugefügt oder bestehende verändert werden.</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_PEDIA</Tag>
-		<English>The Stories Effect buildings are not real buildings. They are used to allow another building to be unique within a nation without being a national wonder.[NEWLINE]- Stories Effect buildings are given for free by Stories buildings.</English>
-		<French>Les bâtiments d'effet des histoires ne sont pas de vrais bâtiments. Ils sont utilisés pour permettre à un autre bâtiment d'être unique au sein d'une nation, sans être une merveille nationale. [NEWLINE] - Les bâtiments d'effet des histoires sont donnés gratuitement par la construction des bâtiments liés aux Histoires animales.</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Tag>
 		<English>Free building provided as the effect of another.</English>
 		<French>Bâtiment gratuit obtenu comme effet d'un autre</French>
@@ -100,12 +95,6 @@
 		<English>The Animal Story buildings provide Education. They are built by subdued animals and story tellers.[NEWLINE]They can be built in every city, as they aren't pseudo National Wonders unlike Myth and Stories.</English>
 		<French>Les Bâtiments d'Histoire des animaux procure de l'Education. Ils sont construits par des animaux apprivoisés ou des conteurs d'histoires</French>
 		<Polish>Budynki Opowieściu o zwierztach dostarczają Edukacji. Powstają dzieki pochwyconym zwierztom i Gawdziarzom.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANTELOPE_STORY</Tag>
-		<English>Story - Antelope</English>
-		<French>Histoire de l'Antilope</French>
-		<Polish>Opowieść o Antylopie</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARCTICFOX_MYTH</Tag>
@@ -238,12 +227,6 @@
 		<Polish>Opowieść - Tapir Panamski</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BELUGA_STORY</Tag>
-		<English>Story - Beluga Whale</English>
-		<French>Histoire de la Baleine Beluga</French>
-		<Polish>Opowieść o Biełudze</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BLACK_RHINO_MYTH</Tag>
 		<English>Myth - Rhinoceros, Black</English>
 		<French>Mythe du Rhinocéros noir</French>
@@ -304,12 +287,6 @@
 		<Polish>Opowieść - Tapir Brazylijski</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BULL_STORY</Tag>
-		<English>Story - Bull</English>
-		<French>Histoire du Taureau</French>
-		<Polish>Opowieść o Byku</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAIMAN_MYTH</Tag>
 		<English>Myth - Caiman</English>
 		<French>
@@ -354,12 +331,6 @@
 		<English>Story - Caiman</English>
 		<French>Histoire du Caïman</French>
 		<Polish>Opowieść - Kajman</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CAMEL_STORY</Tag>
-		<English>Story - Camel</English>
-		<French>Histoire du Chameau</French>
-		<Polish>Opowieść o Wielbłądzie</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CARIBOU_MYTH</Tag>
@@ -520,12 +491,6 @@
 		<Tag>TXT_KEY_BUILDING_DART_FROG_STORY</Tag>
 		<English>Story - Dart Frog</English>
 		<French>Histoire de la Grenouille venimeuse</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DEER_STORY</Tag>
-		<English>Story - Deer</English>
-		<French>Histoire du Cervidé</French>
-		<Polish>Opowieść o Jeleniu</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DHOLE_MYTH</Tag>
@@ -702,12 +667,6 @@
 		<English>Myth Effect - Elephant</English>
 		<French>Effet (Mythe de l'Eléphant)</French>
 		<Polish>Efekt Mitu - Słoń</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ELEPHANT_STORY</Tag>
-		<English>Story - Elephant</English>
-		<French>Histoire de l'Eléphant</French>
-		<Polish>Opowieść o Słoniu</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EMPEROR_PENGUIN_MYTH</Tag>
@@ -1036,12 +995,6 @@
 		<French>Histoire du Glyptodon</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GOAT_STORY</Tag>
-		<English>Story - Goat</English>
-		<French>Histoire de la Chèvre</French>
-		<Polish>Opowieść o Kozie</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREATWHITE_SHARK_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Greatwhite shark</English>
 		<French>Effet (Mythe du Grand requin blanc)</French>
@@ -1327,12 +1280,6 @@
 		<French>Effet (Mythe du Léviathan)</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LEVIATHAN_STORY</Tag>
-		<English>Story - Leviathan</English>
-		<French>Histoire du Léviathan</French>
-		<Polish>Opowieść o Lewiatanie</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LION_STORY</Tag>
 		<English>Story - Lion</English>
 		<French>Histoire du Lion</French>
@@ -1480,12 +1427,6 @@
 		<French>Histoire du Loup à crinière</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MARSUPIAL_STORY</Tag>
-		<English>Story - Marsupial</English>
-		<French>Histoire du Marsupial</French>
-		<Polish>Opowieść o Torbaczach</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_METAL_MYTH</Tag>
 		<English>Myth - Metal</English>
 		<French>Mythe du Métal</French>
@@ -1629,12 +1570,6 @@
 		<French>Effet (Mythe du Narval)</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NARWHAL_STORY</Tag>
-		<English>Story - Narwhal</English>
-		<French>Histoire du Narval</French>
-		<Polish>Opowieść o Narwalu</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NILECROC_MYTH</Tag>
 		<English>Myth - Nile Crocodile</English>
 		<French>
@@ -1708,12 +1643,6 @@
 		<Tag>TXT_KEY_BUILDING_NUMBAT_STORY</Tag>
 		<English>Story - Numbat</English>
 		<French>Histoire du Numbat</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_OLD_MAN_STORY</Tag>
-		<English>Story - Old Man of the Forest</English>
-		<French>Histoire de l'Ancien de la Forêt</French>
-		<Polish>Opowieść - Stary człowiek z lasu</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OPOSSUM_MYTH</Tag>
@@ -2068,12 +1997,6 @@
 		<French>Effet (Mythe de la Raie)</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RAY_STORY</Tag>
-		<English>Story - Ray</English>
-		<French>Histoire de la Raie</French>
-		<Polish>Opowieść o Mancie</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REDFOX_MYTH</Tag>
 		<English>Myth - Redfox</English>
 		<French>Mythe du Renard Roux</French>
@@ -2317,12 +2240,6 @@
 		<Polish>Opowieść - Krokodyl Różańcowy</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SCAVENGER_STORY</Tag>
-		<English>Story - Scavenger</English>
-		<French>Histoire du Charognard</French>
-		<Polish>Opowieść o Padlinożercach</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEALION_MYTH</Tag>
 		<English>Myth - Sea Lion</English>
 		<French>Mythe du Lion des mers</French>
@@ -2484,12 +2401,6 @@
 		<French>Histoire du Léopard des neiges</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SPOTTED_CAT_STORY</Tag>
-		<English>Story - Spotted Cat</English>
-		<French>Histoire du Chat Tacheté</French>
-		<Polish>Opowieść o Ctkowanych kotach</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STONE_MYTH</Tag>
 		<English>Myth - Stone</English>
 		<French>Mythe de la Pierre</French>
@@ -2609,12 +2520,6 @@
 		<Tag>TXT_KEY_BUILDING_THYLACINE_STORY</Tag>
 		<English>Story - Thylacine</English>
 		<French>Histoire du Thylacine</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TIGER_STORY</Tag>
-		<English>Story - Tiger</English>
-		<French>Histoire du Tigre</French>
-		<Polish>Opowieść o Tygrysie</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOUCAN_MYTH</Tag>
@@ -2741,12 +2646,6 @@
 		<Tag>TXT_KEY_BUILDING_WALRUS_STORY</Tag>
 		<English>Story - Walrus</English>
 		<French>Histoire du Morse</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WEASEL_STORY</Tag>
-		<English>Story - Weasel</English>
-		<French>Histoire de la Belette</French>
-		<Polish>Opowieść o Łasicy</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHALESHARK_MYTH_EFFECT</Tag>
@@ -2881,11 +2780,6 @@
 		<German>Die Elefanten (Elephantidae) sind eine Familie im Auftrag Proboscidea in der Kategorie Mammalia. Sie wurden einmal zusammen mit anderen starken enthäuteten Tieren in einem jetzt unzulässigen Auftrag, Pachydermata eingestuft. Es gibt drei lebende Sorten: der afrikanische Bush Elefant, der afrikanische Waldelefant (bis vor kurzem zusammen bekannt als der afrikanische Elefant) und der asiatische Elefant (alias der indische Elefant). Vor andere Sorten sind seit der letzten Eiszeit, die ungefähr 10000 Jahren beendete, das Mammutsein das weithin bekannteste von diesen ausgestorben geworden.</German>
 		<Italian>Gli elefanti (Elephantidae) sono una famiglia nell'ordine Proboscidea nel codice categoria Mammalia. Sono stati classificati una volta con altri animali pelati spessi in un ordine ora non valido, Pachydermata. Ci sono tre specie viventi: l'elefante africano del Bush, l'elefante africano della foresta (fino a poco tempo fa conosciuto collettivamente come l'elefante africano) e l'elefante asiatico (anche conosciuto come l'elefante indiano). Altre specie sono diventato estinte dall'ultima età di ghiaccio, che si è conclusa circa 10.000 anni fa, essere gigantesco il più ben noto di questi.</Italian>
 		<Spanish>Los elefantes (Elephantidae) son una familia en la orden Proboscidea en la clase Mammalia. Los clasificaron una vez junto con otros animales pelados gruesos en una orden ahora inválida, Pachydermata. Hay tres especies vivas: el elefante africano de Bush, el elefante africano del bosque (hasta hace poco tiempo conocido colectivamente como el elefante africano), y el elefante asiático (también conocido como el elefante indio). Otras especies han llegado a estar extintas desde la edad de hielo pasada, que terminó hace aproximadamente 10.000 años, el ser gigantesco las más bien sabido de éstos.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_AARDVARK_PEDIA</Tag>
-		<English>TBD</English>
-		<French>TBD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARCTICFOX</Tag>
@@ -3127,11 +3021,6 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_DART_FROG_PEDIA</Tag>
-		<English>TBD</English>
-		<French>TBD</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_DESERT_TARANTULA</Tag>
 		<English>Desert Tarantula</English>
 		<French>
@@ -3219,10 +3108,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_ELEPHANT_AFRICAN_PEDIA</Tag>
-		<English>African elephants are elephants of the genus Loxodonta (from the Greek words loxo (oblique sided) and donta (tooth)). The genus consists of two extant species: the African bush elephant and the smaller African forest elephant. Loxodonta is one of two existing genera of the family, Elephantidae. Fossil remains of Loxodonta have been found only in Africa, in strata as old as the middle Pliocene.[PARAGRAPH:2]Description[PARAGRAPH:2]One species of African elephant, the bush elephant, is the largest living terrestrial animal, while the forest elephant is the third largest. Their thickset bodies rest on stocky legs, and they have concave backs. Their large ears enable heat loss. The upper lip and nose form a trunk. The trunk acts as a fifth limb, a sound amplifier, and an important method of touch. African elephants' trunks end in two opposing lips, whereas the Asian elephant trunk ends in a single lip. In L. africana, males stand 3.2-4.0 m (10-13 ft) tall at the shoulder and weigh 4,700-6,048 kg (10,360-13,330 lb), while females stand 2.2-2.6 m (7-9 ft) tall and weigh 2,160-3,232 kg (4,762-7,125 lb); L. cyclotis is smaller with male shoulder heights of up to 2.5 m (8 ft). The largest recorded individual stood four metres (13.1 ft) at the shoulders and weighed 10 tonnes (10 long tons; 11 short tons).[PARAGRAPH:2]Source: Wikipedia</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ELEPHANT_ASIAN</Tag>
@@ -3686,11 +3571,6 @@
 		<French>Numbat</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_NUMBAT_PEDIA</Tag>
-		<English>The numbat (Myrmecobius fasciatus), also known as the banded anteater, marsupial anteater, or walpurti, is a marsupial found in Western Australia. Its diet consists almost exclusively of termites. Once widespread across southern Australia, its range is now restricted to several small colonies, and it is listed as an endangered species. The numbat is an emblem of Western Australia and protected by conservation programs.[PARAGRAPH:2]Source: Wikipedia</English>
-		<French>Myrmecobius fasciatus (noms vernaculaires: myrmécobie à bandes, numbat ou encore fourmilier marsupial) est un petit marsupial endémique d'Australie-Occidentale. C'est le seul membre du genre Myrmecobius et de la famille Myrmecobiidae, l'une des trois familles qui composent l'ordre des Dasyuromorphia, regroupant l'ensemble des carnivores marsupiaux.</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_OPOSSUM</Tag>
 		<English>Opossum</English>
 		<French>Opossum</French>
@@ -3937,11 +3817,6 @@ There are 5 types of Reef Sharks:
 		<Polish>Mały Krokodyl</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_ROCKHOPPER_PENGUIN_PEDIA</Tag>
-		<English>The rockhopper penguins are three closely related taxa of crested penguins that have been traditionally treated as a single species and are sometimes split into two or three species.[PARAGRAPH:2]Not all experts agree on the classification of these penguins. Some consider all three as distinct species, some split the western and eastern forms into the southern rockhopper penguin and keep the northern rockhopper as distinct, while other experts consider all three potential varieties to be one species.[PARAGRAPH:2]Source: Wikipedia</English>
-		<French>Le Gorfou sauteur (Eudyptes chrysocome) est une espèce d'oiseaux de la famille des Spheniscidae. Comme les autres gorfous, il se distingue des manchots par une touffe de plumes noires de chaque côté de sa tête appelée aigrette.[PARAGRAPH:2]Source: Wikipedia</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SABRETOOTH</Tag>
 		<English>Sabretooth</English>
 		<French>
@@ -4099,23 +3974,6 @@ There are 5 types of Reef Sharks:
 		<French>Quelques animaux marins chassent les radeaux non protégés! Il faut se méfier!!</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_STAG</Tag>
-		<English>Stag</English>
-		<French>
-			<Text>Cerf</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Hirsch</German>
-		<Italian>Capriolo</Italian>
-		<Spanish>
-			<Text>Ciervo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Rogacz</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_STAG_DEER</Tag>
 		<English>Deer</English>
 		<French>
@@ -4138,7 +3996,7 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_AFRICANELEPHANT_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - African Elephant, Myth - Elephant, Master Hunter, Carnival, Exotic Herbivore Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - African Elephant, Myth - Elephant, Master Hunter, Carnival, Exotic Herbivore Cage and Enclosure</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires d'Eléphant d'Afrique, Mythe des Eléphants, Maître Chasseur, Carnaval, Cage et Enclos pour Herbivores exotiques</French>
 	</TEXT>
 	<TEXT>
@@ -4148,7 +4006,7 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ARCTICFOX_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth/Story/Stories - Arctic Fox, Myth - Dogs, Wolf Cage and Enclosure, Fox Traps and Fur Farm</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth/Story/Stories - Arctic Fox, Myth - Dogs, Wolf Cage and Enclosure, Fox Traps and Fur Farm</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Renard arctique, Chiens, Cages et enclos de loup, pièges à renard et fourrures</French>
 	</TEXT>
 	<TEXT>
@@ -4158,7 +4016,7 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ARMADILLO_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Armadillo, Myths of Earth, Worker Totem</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Armadillo, Myths of Earth, Worker Totem</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires des tatous[NEWLINE][ICON_BULLET]Mythe de la Terre[NEWLINE][ICON_BULLET]Totem du travail</French>
 	</TEXT>
 	<TEXT>
@@ -4168,12 +4026,12 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BABIRUSA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Babirusa, Myth of Boar, Pig Herd, Exotic Herbivore Cage and Enclosure, Master Hunter and Boar Camp</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Babirusa, Myth of Boar, Pig Herd, Exotic Herbivore Cage and Enclosure, Master Hunter and Boar Camp</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires de Babiroussa, Mythe des Ours, Enclos à cochons, camp d'ours, Maitre chasseur</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BAIRDS_TAPIR_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Tapir and Tapir, Bairds, Exotic Herbivores Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Tapir and Tapir, Bairds, Exotic Herbivores Cage and Enclosure</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Tapir et Tapir, Bairds, Cage et Enclos pour Herbivores exotiques</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Tapira</Polish>
 	</TEXT>
@@ -4185,7 +4043,7 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BLACK_RHINO_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Rhinocerous, Black; Rhino and Unicorn Myth, Master Hunter and Exotic Herbivores Cage</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Rhinocerous, Black; Rhino and Unicorn Myth, Master Hunter and Exotic Herbivores Cage</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] Mythe, une ou des Histoires du Rhinocéros noir [NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Nosorożce</Polish>
 	</TEXT>
@@ -4201,7 +4059,7 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BRAZILIAN_TAPIR_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Tapir and Tapir, Brazilian, Exotic Herbivores Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Tapir and Tapir, Brazilian, Exotic Herbivores Cage and Enclosure</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Tapir et Tapir, Brazilian, Cage et Enclos pour Herbivores exotiques</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Tapira</Polish>
 	</TEXT>
@@ -4217,15 +4075,9 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CAIMAN_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Caiman, Myth - Crocodiles, Bird Cage and Enclosure, Feather Worker and Parrots</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Caiman, Myth - Crocodiles, Bird Cage and Enclosure, Feather Worker and Parrots</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Caiman, Mythe du Crocodiles, Cages à oiseaux, Atelier de Plumes et Perroquets</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Kajman</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_CROCODILE_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Crocodile, Master Hunter, Myth - Reptile, Crocodile and Dragon, Reptile and Bad Boy Cage and Enclosure</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Crocodile, Maître Chasseur, Mythe du Reptile, Crocodile et Dragon, Cage et Enclos pour reptiles</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Krokodyl</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CUSCUS</Tag>
@@ -4234,7 +4086,7 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CUSCUS_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Cuscus, Myth - Marsupial, Marsupial Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Cuscus, Myth - Marsupial, Marsupial Cage and Enclosure</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires des couscous[NEWLINE][ICON_BULLET]Mythe - Marsupiaux[NEWLINE][ICON_BULLET]Cage et Enclos à Marsupiaux</French>
 	</TEXT>
 	<TEXT>
@@ -4253,7 +4105,7 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DART_FROG_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Dart Frog, Myth - Amphibians, Amphibian Pond and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Dart Frog, Myth - Amphibians, Amphibian Pond and Enclosure</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] Mythe, une ou plusieurs Histoires des Grenouilles venimeuses[NEWLINE][ICON_BULLET]Mythe - Amphibiens[NEWLINE][ICON_BULLET]Mare à amphibiens et enclos</French>
 	</TEXT>
 	<TEXT>
@@ -4272,7 +4124,7 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DHOLE_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Dhole, Myth of Canines, Wolf Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Dhole, Myth of Canines, Wolf Cage and Enclosure</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires du cuons et de Canins, Cage et Enclos à Loup</French>
 	</TEXT>
 	<TEXT>
@@ -4282,7 +4134,7 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DINGO_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Dingo, Dog Breeder, Kennels, Wolf Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Dingo, Dog Breeder, Kennels, Wolf Cage and Enclosure</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires du Dingo , Eleveur de chiens et Chenils, Cage et Enclos à loup</French>
 	</TEXT>
 	<TEXT>
@@ -4293,13 +4145,13 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ELASMOTHERIUM_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story, Stories and Remains - Elasmotherium, Myths - Rhino and Unicorn, Exotic Herbivore Cage and Enclosure, Master Hunter, Rhino Camp</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story, Stories and Remains - Elasmotherium, Myths - Rhino and Unicorn, Exotic Herbivore Cage and Enclosure, Master Hunter, Rhino Camp</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] Mythe, une ou des Histoires du Rhinocéros indien [NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Nosorożce</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_EMPEROR_PENGUIN_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Emperor Penguin
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Emperor Penguin
 [ICON_BULLET]Myths of Sea, Flightless Birds and Sea Birds
 [ICON_BULLET]Bird Cage and Enclosure
 		</English>
@@ -4315,7 +4167,7 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_EWOLF_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Ethiopian Wolf and Wolves, Wolf Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Ethiopian Wolf and Wolves, Wolf Cage and Enclosure</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Loup Ethiopien, Mythe des Loups, Cage et Enclos à loup</French>
 	</TEXT>
 	<TEXT>
@@ -4325,7 +4177,7 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_FENNECFOX_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Fennec Fox and Wolves, Wolf Cage, Enclosure, Fox Traps and Fur Farm</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Fennec Fox and Wolves, Wolf Cage, Enclosure, Fox Traps and Fur Farm</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires de Fennec, pièges à renard, et fermes de fourrures, Cage et Enclos à loup</French>
 	</TEXT>
 	<TEXT>
@@ -4350,13 +4202,13 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GATOR_ASIAN_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Chinese Alligator, Master Hunter, Myth - Reptile, Crocodile and Dragon, Reptile and Bad Boy Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Chinese Alligator, Master Hunter, Myth - Reptile, Crocodile and Dragon, Reptile and Bad Boy Cage and Enclosure</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) de l'Alligator de Chine, Maître chasseur, Mythe du Reptile, Crocodile et Dragon, Cage et Enclos pour reptiles</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Aligator Chiński</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GATOR_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Americian Alligator, Master Hunter, Myth - Reptile, Crocodile and Dragon, Reptile and Bad Boy Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Americian Alligator, Master Hunter, Myth - Reptile, Crocodile and Dragon, Reptile and Bad Boy Cage and Enclosure</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) de l'Alligator d'Amérique, Maître Chasseur, Mythe du Reptile, Crocodile et Dragon, Cage et Enclos pour reptiles</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Aligator Amerykański</Polish>
 	</TEXT>
@@ -4367,7 +4219,7 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GLYPTO_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Glyptodon, Remains - Glyptodon, Earth Myth</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Glyptodon, Remains - Glyptodon, Earth Myth</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Constuit[COLOR_REVERT] un Mythe, une ou des Histoires - Glyptodon[NEWLINE][ICON_BULLET]Restes - Glyptodon[NEWLINE][ICON_BULLET]Mythe la Terre</French>
 	</TEXT>
 	<TEXT>
@@ -4377,7 +4229,7 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GROUNDSLOTH_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Ground Sloth, Remains - Ground Sloth</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Ground Sloth, Remains - Ground Sloth</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Xénarthre, Restes de Xénarthre</French>
 	</TEXT>
 	<TEXT>
@@ -4393,7 +4245,7 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_INDIAN_RHINO_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Rhinoceros, Indian, Myth - Rhinoceros and Unicorn, Exotic Herbivore Cage and Enclosure, Rhino camp and master Hunter</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Rhinoceros, Indian, Myth - Rhinoceros and Unicorn, Exotic Herbivore Cage and Enclosure, Rhino camp and master Hunter</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] Mythe, une ou des Histoires du Rhinocéros indien [NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Nosorożce</Polish>
 	</TEXT>
@@ -4410,7 +4262,7 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_JAVA_RHINO_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Rhinoceros, Java, Myth - Rhinoceros and Unicorn, Exotic Herbivore Cage and Enclosure, Rhino camp and master Hunter</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Rhinoceros, Java, Myth - Rhinoceros and Unicorn, Exotic Herbivore Cage and Enclosure, Rhino camp and master Hunter</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] Mythe, une ou des Histoires du Rhinocéros de Java[NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Nosorożce</Polish>
 	</TEXT>
@@ -4431,7 +4283,7 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_LIZARD_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Lizard, Myths of Earth and Reptiles, Reptile Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Lizard, Myths of Earth and Reptiles, Reptile Cage and Enclosure</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Lézard, Mythes de la Terre et de Reptiles, Cage et Enclos à Reptiles </French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Jaszczurki</Polish>
 	</TEXT>
@@ -4443,7 +4295,7 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MALAYAN_TAPIR_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Tapir and Tapir, Malayan, Exotic Herbivores Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Tapir and Tapir, Malayan, Exotic Herbivores Cage and Enclosure</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Tapir et Tapir, Malayan, Cage et Enclos pour Herbivores exotiques</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Tapira</Polish>
 	</TEXT>
@@ -4454,7 +4306,7 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MANEDWOLF_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Maned Wolf and Wolves, Kennels, Wolf Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Maned Wolf and Wolves, Kennels, Wolf Cage and Enclosure</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires du Loup à crinière, Chenils, Cage et enclos à loup</French>
 	</TEXT>
 	<TEXT>
@@ -4469,13 +4321,13 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MOUNTAIN_TAPIR_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Tapir and Tapir, Mountain, Exotic Herbivores Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Tapir and Tapir, Mountain, Exotic Herbivores Cage and Enclosure</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Tapir et Tapir, Mountain, Cage et Enclos pour Herbivores exotiques</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Tapira</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_NILECROC_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Nile Crocodile, Master Hunter, Myth - Reptile, Crocodile and Dragon, Reptile and Bad Boy Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Nile Crocodile, Master Hunter, Myth - Reptile, Crocodile and Dragon, Reptile and Bad Boy Cage and Enclosure</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Nile Crocodile, Maître Chasseur, Mythe du Reptile, Crocodile et Dragon, Cage et Enclos pour reptiles</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Krokodyl Nilowy</Polish>
 	</TEXT>
@@ -4486,7 +4338,7 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_NUMBAT_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Numbat, Myth - Marsupial, Marsupial Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Numbat, Myth - Marsupial, Marsupial Cage and Enclosure</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires des numbats[NEWLINE][ICON_BULLET]Mythe - Marsupiaux[NEWLINE][ICON_BULLET]Cage et Enclos à Marsupiaux</French>
 	</TEXT>
 	<TEXT>
@@ -4496,12 +4348,12 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_OPOSSUM_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Opossum, Myth - Marsupial, Marsupial Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Opossum, Myth - Marsupial, Marsupial Cage and Enclosure</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires des opossums[NEWLINE][ICON_BULLET]Mythe - Marsupiaux[NEWLINE][ICON_BULLET]Cage et Enclos à Marsupiaux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PIGEON_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Pigeon</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Pigeon</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Pigeon</French>
 	</TEXT>
 	<TEXT>
@@ -4516,7 +4368,7 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PLATYPUS_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Platypus, Myths of Monotremes, Sea and Birds</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Platypus, Myths of Monotremes, Sea and Birds</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires de l'Ornithorynque, les Mythes de la Mer et des Oiseaux</French>
 	</TEXT>
 	<TEXT>
@@ -4526,7 +4378,7 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_POSSUM_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Possum, Myth of Marsupial, Marsupial Cage and Enclosure, Feather Worker and Parrots</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Possum, Myth of Marsupial, Marsupial Cage and Enclosure, Feather Worker and Parrots</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires des Phalangers communs[NEWLINE][ICON_BULLET]Mythe - Marsupiaux[NEWLINE][ICON_BULLET]Cage et Enclos à Marsupiaux</French>
 	</TEXT>
 	<TEXT>
@@ -4536,28 +4388,28 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PYGMYHIPPO_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Pygmy Hippopotamus, Exotic Herbivore Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Pygmy Hippopotamus, Exotic Herbivore Cage and Enclosure</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires des Hippopotames nains[NEWLINE][ICON_BULLET]Cage et Enclos pour herbivores exotiques</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_REDFOX_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Redfox, Wolf Cage and Enclosure, Canine Totem</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Redfox, Wolf Cage and Enclosure, Canine Totem</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires du renard roux, Cage et Enclos à loup, Totem Canin</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_REEF_SHARK_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Reef shark, Myths of Sea and Sharks, Master Sea Hunter and Wonders of the Deep, Marine and Shark Institute</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Reef shark, Myths of Sea and Sharks, Master Sea Hunter and Wonders of the Deep, Marine and Shark Institute</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Requin des récifs, Mythe de la Mer et des Requins, Maître Chasseur des Mers et Merveilles des profondeurs, Institut de Marine et des requins</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_RIVER_CROC_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - River Crocodile, Master Hunter, Myth - Reptile, Crocodile and Dragon, Reptile and Bad Boy Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - River Crocodile, Master Hunter, Myth - Reptile, Crocodile and Dragon, Reptile and Bad Boy Cage and Enclosure</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Crocodile de rivières, Maître chasseur, Mythe du Reptile, Crocodile et Dragon, Cage et Enclos pour reptiles</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Krokodyl Błotny</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ROCKHOPPER_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Rockhopper Penguin, Myths of Sea, Flightless Birds and Sea Birds, Bird Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Rockhopper Penguin, Myths of Sea, Flightless Birds and Sea Birds, Bird Cage and Enclosure</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construisez[COLOR_REVERT] les Mythes et Histoires des Gorfous[NEWLINE][ICON_BULLET]Permet les Mythes de la mer, Oiseaux terrestres et Oiseaux marins[NEWLINE][ICON_BULLET]Cages et enclos à Oiseaux</French>
 	</TEXT>
 	<TEXT>
@@ -4567,30 +4419,19 @@ There are 5 types of Reef Sharks:
 		<Polish>Oswojony Tygrys Szablozębny</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_SABRETOOTH_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Lion, Tiger and Paleolithic Cat Myth, Master Hunter and Exotic Big Cat Cage</English>
-		<French>permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe du Lion, Tigre et Chat Paléolithique, Maître Chasseur et la Cage pour les grands félins</French>
-		<Italian>[COLOR_HIGHLIGHT_TEXT]Costruisci[COLOR_REVERT] Mito del leone, Mito della tigre, Mito del gatto paleolitico, Mastro cacciatore, Gabbia-Felino esotico.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SALTWATER_CROC_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Saltwater Crocodile, Master Hunter, Myth - Reptile, Crocodile and Dragon, Reptile and Bad Boy Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Saltwater Crocodile, Master Hunter, Myth - Reptile, Crocodile and Dragon, Reptile and Bad Boy Cage and Enclosure</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Crocodile de mer, Maître Chasseur, Mythe du Reptile, Crocodile et Dragon, Cage et Enclos pour reptiles</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Krokodyl Różańcowy</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_SEALION_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Sea Lion and Pinnipeds, Pinniped Cage and Enclosure, Trained Seal</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Lion des mers et autres Pinnipèdes, Cage et Enclos pour pinnipèdes, Phoque dressé</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SEALION_LAND_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Sea Lion</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Sea Lion</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Lion des mers</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SEALION_SEA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Sea Lion</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Sea Lion</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Lion des mers</French>
 	</TEXT>
 	<TEXT>
@@ -4603,18 +4444,13 @@ There are 5 types of Reef Sharks:
 		</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_TARANTULA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Tarantula, Myth of Bugs, Bug Cage and Enclosure, Bug Catcher</English>
-		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires de Tarentules , Mythe des insectes, Récolteur d'insectes</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_THYLACINE</Tag>
 		<English>Subdued Thylacine</English>
 		<French>Thylacine (App.)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_THYLACINE_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Thylacine, Remains - Thylacine, Myth - Marsupial and Paleolithic Marsupial</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Thylacine, Remains - Thylacine, Myth - Marsupial and Paleolithic Marsupial</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires du Thylacine, Restes de Thylacine, Mythe du Marsupial</French>
 	</TEXT>
 	<TEXT>
@@ -4624,17 +4460,17 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_TREESLOTH_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Tree Sloth, Exotic Herbivore Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Tree Sloth, Exotic Herbivore Cage and Enclosure</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Paresseux, Cage et Enclos pour Herbivores exotiques</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_WALRUS_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Walrus and Pinnipeds, Pinniped Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Walrus and Pinnipeds, Pinniped Cage and Enclosure</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Morse et Pinnipèdes, Cage et Enclos de Pinnipèdes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_WHALESHARK_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Whaleshark, Myths of Sea and Sharks, Master Sea Hunter and Wonders of the Deep, Marine and Shark Institute</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Whaleshark, Myths of Sea and Sharks, Master Sea Hunter and Wonders of the Deep, Marine and Shark Institute</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Requin baleine, Mythes de la mer, Chasseur des mers et Merveilles des profondeurs, Institut de Marine</French>
 	</TEXT>
 	<TEXT>
@@ -4650,7 +4486,7 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_WHITE_RHINO_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Rhinoceros, White, Myth - Rhinoceros and Unicorn, Exotic Herbivore Cage and Enclosure, Rhino camp and master Hunter</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Rhinoceros, White, Myth - Rhinoceros and Unicorn, Exotic Herbivore Cage and Enclosure, Rhino camp and master Hunter</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] Mythe, une ou des Histoires du Rhinocéros blanc[NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Nosorożce</Polish>
 	</TEXT>
@@ -4661,7 +4497,7 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_WOMBAT_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Wombat, Myths of Earth and Marsupials, Marsupial Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Wombat, Myths of Earth and Marsupials, Marsupial Cage and Enclosure</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires des Wombats[NEWLINE][ICON_BULLET]Mythe - Marsupiaux[NEWLINE][ICON_BULLET]Cage et Enclos à Marsupiaux</French>
 	</TEXT>
 	<TEXT>
@@ -4678,7 +4514,7 @@ There are 5 types of Reef Sharks:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ZEBRA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Zebra and Horse, Zebra Herd and Hunter's Camp, Carnival and Exotic Herbivore Cage and Enclosure</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Zebra and Horse, Zebra Herd and Hunter's Camp, Carnival and Exotic Herbivore Cage and Enclosure</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythe, Histoire(s)du Zèbre et des chameaux, Troupeaux de zèbres et Camp de Chasseur, Carnaval et Cage et Enclos à Herbivores exotiques</French>
 	</TEXT>
 	<TEXT>
@@ -4772,15 +4608,6 @@ There are 5 types of Reef Sharks:
 		<English>A Tapir is a large browsing mammal, similar in shape to a pig, with a short, prehensile snout. Tapirs inhabit jungle and forest regions of South America, Central America, and Southeast Asia. There are four species of Tapirs: the Brazilian Tapir, the Malayan Tapir, Baird's Tapir and the Mountain Tapir. All four species of tapir are classified as endangered or vulnerable. Their closest relatives are the other odd-toed ungulates, including horses and rhinoceroses.[PARAGRAPH:2]Attacks on humans: Tapirs are generally shy, but when they are scared they can defend themselves with their very powerful jaws. In 1998, a zookeeper in Oklahoma City was mauled and had an arm severed after opening the door to a female tapir's enclosure to push food inside. (The tapir's 2-month-old baby also occupied the cage at the time.) In 2006, Carlos Manuel Rodriguez Echandi (who was then the Costa Rican Environmental Minister) became lost in the Corcovado National Park and was found by a search party with a "nasty bite" from a wild tapir. However, such examples are rare; for the most part, tapirs are likely to avoid confrontation in favour of running from predators, hiding, or, if possible, submerging themselves in nearby water until a threat is gone. (Source: Wikipedia)</English>
 		<German>Der Tapir (Tapirus) gehört zu den Unpaarhufern. Die Tiere mit dem charakteristischen Rüssel existieren schon seit dem Miozän. Tapire leben in Mittel- und Südamerika sowie in Südostasien. Sie können bis zu 250 cm lang werden, besitzen einen Stummelschwanz und große Eckzähne. Das höchste Gewicht bringt der Schabrackentapir auf die Waage: Er kann bis zu 320 kg schwer werden. Der Rüssel hilft bei der Nahrungssuche und besitzt eine Greiffunktion. Tapire ernähren sich von Pflanzen und bevorzugen weiche Nahrung wie Blätter, Früchte oder auch Algen. Dabei nehmen sie teilweise auch Gifte auf, die sie an Salz- oder Minerallecken neutralisieren.[PARAGRAPH:2]Tapire sind Einzelgänger. Männchen und Weibchen treffen nur zur Paarungszeit aufeinander. Ihre Reviere markieren sie mit Kot und Urin. Tapire sind nachtaktiv und verbringen den Tag im dichten Unterholz. Auf ihrer nächtlichen Nahrungssuche halten sie sich gern an Gewässern auf und baden im Schlamm. Sie sind gute Schwimmer und können bei Gefahr ins Wasser flüchten. Die Eckzähne setzen sie manchmal als Waffen ein. Ihre Feinde sind Großkatzen, Bären und Krokodile.[PARAGRAPH:2]Auch der Mensch macht Jagd auf Tapire, um Fleisch und Haut zu verwerten. Eine noch größere Gefahr ist allerdings die Zerstörung der Lebensräume, meist Brandrodung der tropischen Wälder. In Südamerika werden Tapire teilweise als Haustiere gehalten.</German>
 		<Polish>Tapiry (Tapiridae) rodzina ssaków z rzędu nieparzystokopytnych, posiadających krótką trąbę, która powstała z przekształconego nosa i wargi górnej, oraz bardzo krótki ogon. Na kończynie tylnej posiadają trzy, a na przedniej cztery palce, każdy zakończony kopytem. Ciało okryte jest aksamitną sierścią. Tapiry żyją w podmokłych, bagnistych lasach tropikalnych. Są dobrymi pływakami. Mimo pewnego podobieństwa do świni tapir należy do tej samej grupy ssaków, co nosorożec i koń.[PARAGRAPH:2]Tapiry są aktywne głównie nocą, lecz na niektórych obszarach można je też spotkać za dnia. Poruszają się po stałych, wydeptanych ścieżkach, które mogą przetrwać kilkadziesiąt lat. Prowadzą samotniczy tryb życia. Areały osobnicze mogą się ze sobą wzajemnie pokrywać. Tapiry są dobrymi pływakami i nurkami, przed niebezpieczeństwem chronią się głównie w wodzie. Głównym zmysłem jest wrażliwy słuch. Żywią się roślinnością przybrzeżną, dzikim ryżem i innymi podobnymi roślinami. Zjadają też owoce i rośliny uprawne. Żerują głównie nad brzegami rzek. Nos służy jako organ chwytny, rośliny zrywa ostrymi siekaczami i rozciera zębami bocznymi o szerokich koronach. Ze względu na drapieżniki większość dnia spędza w ukryciu. Mimo sporej wagi dobrze wspina się na strome brzegi. Gruba skóra chroni tapira przed skaleczeniami podczas przedzierania się przez gęstą roślinność. Są płochliwe i zachowują się bardzo cicho. Podobnie jak spokrewnione z nimi konie jedzą dużo pokarmu, lecz nie trawią go całkowicie. W odchodach zostawianych przy brzegach rzek stwierdzono niestrawione nasiona. Występują na odludnych terenach lub w dobrze chronionych rezerwatach. (źródło: Wikipedia)</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TARANTULA</Tag>
-		<English>Tarantula</English>
-		<French>
-			<Text>Tarentule</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TARANTULA_PEDIA</Tag>

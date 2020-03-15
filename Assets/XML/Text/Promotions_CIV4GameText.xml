@@ -19763,4 +19763,8 @@
 		<Tag>TXT_KEY_PROMOTION_ZEN</Tag>
 		<English>Zen</English>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_IVORY_WEAPONS</Tag>
+		<English>Ivory Weapons</English>
+	</TEXT>
 </Civ4GameText>

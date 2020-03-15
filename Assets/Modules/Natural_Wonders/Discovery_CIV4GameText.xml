@@ -9,10 +9,6 @@
 		<English>This is a tribute to the movie "Up!"</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DISCOVERY_AURORA</Tag>
-		<English>Discovery - Aurora</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DISCOVERY_AUYANTEPUI</Tag>
 		<English>Discovery - Auyántepui</English>
 	</TEXT>
@@ -103,10 +99,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DISCOVERY_VICTORIA_FALLS</Tag>
 		<English>Discovery - Victoria Falls</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FIRST_TO_DISCOVER_AURORA</Tag>
-		<English>Discovery - Aurora (First)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FIRST_TO_DISCOVER_AUYANTEPUI</Tag>

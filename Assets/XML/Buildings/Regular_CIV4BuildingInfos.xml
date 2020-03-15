@@ -1895,12 +1895,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Amber Gatherer -->
-			<Type>BUILDING_AMBER_GATHERER</Type>
-			<Description>TXT_KEY_BUILDING_AMBER_GATHERER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_AMBER_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_AMBER_GATHERER_STRATEGY</Strategy>
+			<Type>BUILDING_GATHERER_AMBER</Type>
+			<Description>TXT_KEY_BUILDING_GATHERER_AMBER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_AMBER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_AMBER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_AMBER_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_AMBER</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -5830,10 +5830,10 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Artist Colony -->
-			<Type>BUILDING_ARTIST_GUILD</Type>
-			<Description>TXT_KEY_BUILDING_ARTIST_GUILD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ARTIST_GUILD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ARTIST_GUILD_STRATEGY</Strategy>
+			<Type>BUILDING_ARTIST_COLONY</Type>
+			<Description>TXT_KEY_BUILDING_ARTIST_COLONY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ARTIST_COLONY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ARTIST_COLONY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ARTIST_COLONY</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
@@ -8554,9 +8554,9 @@
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_BARK_GATHERER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BARK_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BARK_GATHERER_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_GATHERER_BARK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_BARK_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_BARK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BARK_GATHERER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -8620,12 +8620,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Wild Barley Gatherer -->
-			<Type>BUILDING_BARLEY_GATHERER</Type>
-			<Description>TXT_KEY_BUILDING_BARLEY_GATHERER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BARLEY_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BARLEY_GATHERER_STRATEGY</Strategy>
+			<Type>BUILDING_GATHERER_BARLEY</Type>
+			<Description>TXT_KEY_BUILDING_GATHERER_BARLEY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_BARLEY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_BARLEY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BARLEY_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_BARLEY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -10276,12 +10276,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Berry Gatherer -->
-			<Type>BUILDING_BERRY_BUSHES</Type>
-			<Description>TXT_KEY_BUILDING_BERRY_BUSHES</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BERRY_BUSHES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BERRY_BUSHES_STRATEGY</Strategy>
+			<Type>BUILDING_GATHERER_BERRY</Type>
+			<Description>TXT_KEY_BUILDING_GATHERER_BERRY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_BERRY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_BERRY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BERRY_BUSHES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_BERRY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -12454,17 +12454,17 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Boneworker -->
-			<Type>BUILDING_BONEWORKERS_HUT</Type>
+			<Type>BUILDING_BONEWORKER</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_BONEWORKERS_HUT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BONEWORKERS_HUT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BONEWORKERS_HUT_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_BONEWORKER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_BONEWORKER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_BONEWORKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BONEWORKERS_HUT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_BONEWORKER</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -18624,13 +18624,13 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Carrion -->
-			<Type>BUILDING_CARRION</Type>
-			<Description>TXT_KEY_BUILDING_CARRION</Description>
-			<Help>TXT_KEY_BUILDING_CARRION_HELP</Help>
-			<Civilopedia>TXT_KEY_BUILDING_CARRION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CARRION_STRATEGY</Strategy>
+			<Type>BUILDING_GATHERER_CARRION</Type>
+			<Description>TXT_KEY_BUILDING_GATHERER_CARRION</Description>
+			<Help>TXT_KEY_BUILDING_GATHERER_CARRION_HELP</Help>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_CARRION_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_CARRION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CARRION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_CARRION</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -32742,12 +32742,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Earthworm Catcher -->
-			<Type>BUILDING_EARTHWORM</Type>
-			<Description>TXT_KEY_BUILDING_EARTHWORM</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EARTHWORM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_EARTHWORM_STRATEGY</Strategy>
+			<Type>BUILDING_GATHERER_EARTHWORM</Type>
+			<Description>TXT_KEY_BUILDING_GATHERER_EARTHWORM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_EARTHWORM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_EARTHWORM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_EARTHWORM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_EARTHWORM</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -33821,10 +33821,10 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Elementary School -->
-			<Type>BUILDING_PUBLIC_SCHOOL</Type>
-			<Description>TXT_KEY_BUILDING_PUBLIC_SCHOOL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PUBLIC_SCHOOL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_PUBLIC_SCHOOL_STRATEGY</Strategy>
+			<Type>BUILDING_ELEMENTARY_SCHOOL</Type>
+			<Description>TXT_KEY_BUILDING_ELEMENTARY_SCHOOL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ELEMENTARY_SCHOOL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ELEMENTARY_SCHOOL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ELEMENTARY_SCHOOL</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_SCHOOL</ConstructSound>
@@ -37746,9 +37746,9 @@
 		<BuildingInfo>
 			<!-- Fire Pit -->
 			<Type>BUILDING_FIREPIT</Type>
-			<Description>TXT_KEY_BUILDING_FIREPIT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FIREPIT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_FIREPIT_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_FIRE_PIT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FIRE_PIT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_FIRE_PIT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FIREPIT</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_TOTEM</ConstructSound>
@@ -43418,7 +43418,7 @@
 			<ObsoleteTech>TECH_PERSONAL_COMPUTERS</ObsoleteTech>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
-					<BuildingType>BUILDING_PUBLIC_SCHOOL</BuildingType>
+					<BuildingType>BUILDING_ELEMENTARY_SCHOOL</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings>
@@ -43527,10 +43527,10 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Grand Estate -->
-			<Type>BUILDING_ESTATE</Type>
-			<Description>TXT_KEY_BUILDING_ESTATE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ESTATE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ESTATE_STRATEGY</Strategy>
+			<Type>BUILDING_GRAND_ESTATE</Type>
+			<Description>TXT_KEY_BUILDING_GRAND_ESTATE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GRAND_ESTATE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GRAND_ESTATE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GRAND_ESTATE</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
@@ -43578,7 +43578,7 @@
 		<BuildingInfo>
 			<!-- Grand Manor -->
 			<Type>BUILDING_MANOR</Type>
-			<Description>TXT_KEY_BUILDING_MANOR2</Description>
+			<Description>TXT_KEY_BUILDING_MANOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MANOR_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MANOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -46921,7 +46921,7 @@
 			<PrereqTech>TECH_COMPULSORY_EDUCATION</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_PUBLIC_SCHOOL</BuildingType>
+				<BuildingType>BUILDING_ELEMENTARY_SCHOOL</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>870</iCost>
@@ -47678,12 +47678,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Hippodrome -->
-			<Type>BUILDING_BYZANTINE_HIPPODROME</Type>
-			<Description>TXT_KEY_BUILDING_BYZANTINE_HIPPODROME</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BYZANTINE_HIPPODROME_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BYZANTINE_HIPPODROME_STRATEGY</Strategy>
+			<Type>BUILDING_HIPPODROME</Type>
+			<Description>TXT_KEY_BUILDING_HIPPODROME</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HIPPODROME_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_HIPPODROME_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BYZANTINE_HIPPODROME</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HIPPODROME</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_COLOSSEUM</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -55279,7 +55279,7 @@
 			<Bonus>BONUS_BOOKS</Bonus>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_PUBLIC_SCHOOL</BuildingType>
+					<BuildingType>BUILDING_ELEMENTARY_SCHOOL</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
@@ -77565,7 +77565,7 @@
 			<PrereqTech>TECH_COMPULSORY_EDUCATION</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_PUBLIC_SCHOOL</BuildingType>
+				<BuildingType>BUILDING_ELEMENTARY_SCHOOL</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>870</iCost>
@@ -84463,7 +84463,7 @@
 				<Bonus>BONUS_BIOFUEL</Bonus>
 			</PrereqBonuses>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_PUBLIC_SCHOOL</BuildingType>
+				<BuildingType>BUILDING_ELEMENTARY_SCHOOL</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
@@ -90296,7 +90296,7 @@
 		<BuildingInfo>
 			<!-- Squatter Camps -->
 			<Type>BUILDING_SHANTYTOWN</Type>
-			<Description>TXT_KEY_BUILDING_SHANTYTOWN2</Description>
+			<Description>TXT_KEY_BUILDING_SHANTYTOWN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHANTYTOWN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SHANTYTOWN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>

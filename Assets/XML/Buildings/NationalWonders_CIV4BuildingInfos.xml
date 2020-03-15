@@ -1169,7 +1169,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<!-- Global -->
-			<FreeBuilding>BUILDING_PUBLIC_SCHOOL</FreeBuilding>
+			<FreeBuilding>BUILDING_ELEMENTARY_SCHOOL</FreeBuilding>
 			<!-- Misc -->
 			<iAsset>3</iAsset>
 			<Flavors>
@@ -1190,14 +1190,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Department of Energy -->
-			<Type>BUILDING_DOE</Type>
+			<Type>BUILDING_DEPARTMENT_ENERGY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DOE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DOE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DOE_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_DEPARTMENT_ENERGY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DEPARTMENT_ENERGY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_DEPARTMENT_ENERGY_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
@@ -1232,19 +1232,19 @@
 			<FreeBuilding>BUILDING_POWER_LINES</FreeBuilding>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_DOE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_DEPARTMENT_ENERGY</ArtDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Department of Foreign Policy -->
-			<Type>BUILDING_DEPT_FOREIGN_POLICY</Type>
+			<Type>BUILDING_DEPARTMENT_FOREIGN</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DEPT_FOREIGN_POLICY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DEPT_FOREIGN_POLICY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DEPT_FOREIGN_POLICY_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_DEPARTMENT_FOREIGN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DEPARTMENT_FOREIGN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_DEPARTMENT_FOREIGN_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_FOREIGN_POLICY</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
@@ -1270,7 +1270,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<!-- Global -->
-			<FreeBuilding>BUILDING_DEPT_FOREIGN_POLICY_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_DEPARTMENT_FOREIGN_EFFECT</FreeBuilding>
 			<!-- Security -->
 			<iEspionageDefense>15</iEspionageDefense>
 			<!-- Units -->
@@ -1286,19 +1286,19 @@
 			</UnitCombatFreeExperiences>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_DEPT_FOREIGN_POLICY_WONDER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_DEPARTMENT_FOREIGN_WONDER</ArtDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>		
 		<BuildingInfo>
 			<!-- Department of Motor Vehicles -->
-			<Type>BUILDING_DMV</Type>
+			<Type>BUILDING_DEPARTMENT_VEHICLES</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DMV</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DMV_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DMV_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_DEPARTMENT_VEHICLES</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DEPARTMENT_VEHICLES_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_DEPARTMENT_VEHICLES_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
@@ -1350,19 +1350,19 @@
 			</UnitProductionModifiers>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_DMV</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_DEPARTMENT_VEHICLES</ArtDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Department of Water -->
-			<Type>BUILDING_WATER_DEPARTMENT</Type>
+			<Type>BUILDING_DEPARTMENT_WATER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_WATER_DEPARTMENT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WATER_DEPARTMENT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_WATER_DEPARTMENT_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_DEPARTMENT_WATER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DEPARTMENT_WATER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_DEPARTMENT_WATER_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_PLUMBING</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
@@ -1404,7 +1404,7 @@
 			<FreeBuilding>BUILDING_WATER_PIPES</FreeBuilding>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_WATER_DEPARTMENT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_DEPARTMENT_WATER</ArtDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<!--↑ Departments ↑-->
@@ -1475,14 +1475,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Dutch Dike -->
-			<Type>BUILDING_NETHERLANDS_DIKE</Type>
+			<Type>BUILDING_DUTCH_DIKE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_NETHERLANDS_DIKE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NETHERLANDS_DIKE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NETHERLANDS_DIKE_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_DUTCH_DIKE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DUTCH_DIKE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_DUTCH_DIKE_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
@@ -1524,7 +1524,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_NETHERLANDS_DIKE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_DUTCH_DIKE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Electronic Gaming League -->
@@ -2092,12 +2092,12 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_ARTIST_GUILD</BuildingType>
+					<BuildingType>BUILDING_ARTIST_COLONY</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ARTIST_GUILD</BuildingType>
+				<BuildingType>BUILDING_ARTIST_COLONY</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
@@ -2125,7 +2125,7 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_ARTIST_GUILD</BuildingType>
+					<BuildingType>BUILDING_ARTIST_COLONY</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>

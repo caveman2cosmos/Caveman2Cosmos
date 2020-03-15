@@ -34,12 +34,6 @@
 		<Polish>Strażnik z łomem</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CROWBAR_GUARD_PEDIA</Tag>
-		<English>Post-Apocalypse unit</English>
-		<Italian>Unità post-apocalisse</Italian>
-		<Polish>Jednostka post-apo</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_CROWBAR_GUARD_STRATEGY</Tag>
 		<English>The Crowbar Guard is an alt-timeline Post-Apocalypse Unit. It should not be build unless you have been nuked and you can build nothing else.</English>
 		<Italian>La guardia con piede di porco è un'unità post-apocalisse. Non dovrebbe essere costruito, a meno che tu non sia stato bombardato con l'atomica e non possa costruire nient'altro.</Italian>
@@ -54,12 +48,6 @@
 		</French>
 		<Italian>Guerriero con accetta</Italian>
 		<Polish>Wojownik z siekierą</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_HATCHET_MAN_PEDIA</Tag>
-		<English>Post-Apocalypse unit</English>
-		<Italian>Unità post-apocalisse</Italian>
-		<Polish>Jednostka post-apo</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HATCHET_MAN_STRATEGY</Tag>
@@ -78,12 +66,6 @@
 		<Polish>Wojownik z maczetą</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_MACHETE_WARRIOR_PEDIA</Tag>
-		<English>Post-Apocalypse unit</English>
-		<Italian>Unità post-apocalisse</Italian>
-		<Polish>Jednostka post-apo</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_MACHETE_WARRIOR_STRATEGY</Tag>
 		<English>The Machete Warrior is an alt-timeline Post-Apocalypse Unit. It should not be build unless you have been nuked and you can build nothing else.</English>
 		<Italian>Il guerriero con machete è un'unità post-apocalisse. Non dovrebbe essere costruito, a meno che tu non sia stato bombardato con l'atomica e non possa costruire nient'altro.</Italian>
@@ -93,12 +75,6 @@
 		<English>Molotov Cocktail Thrower</English>
 		<French>Lanceur de Coktail Molotov</French>
 		<Polish>Miotacz Koktaili Mołotowa</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_POST_APOCALYPTIC_GRENADIER_PEDIA</Tag>
-		<English>Post-Apocalypse unit</English>
-		<Italian>Unità post-apocalisse</Italian>
-		<Polish>Jednostka post-apo</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POST_APOCALYPTIC_GRENADIER_STRATEGY</Tag>
@@ -114,12 +90,6 @@
 		</French>
 		<Italian>Guerriero con chiave inglese</Italian>
 		<Polish>Wojownik z kluczem fr.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_WRENCH_WARRIOR_PEDIA</Tag>
-		<English>Post-Apocalypse unit</English>
-		<Italian>Unità post-apocalisse</Italian>
-		<Polish>Jednostka post-apo</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WRENCH_WARRIOR_STRATEGY</Tag>

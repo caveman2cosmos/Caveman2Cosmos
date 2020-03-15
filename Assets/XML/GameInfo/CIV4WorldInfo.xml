@@ -39,7 +39,7 @@ Integer Tags
 		<WorldInfo>
 			<Type>WORLDSIZE_DUEL</Type>
 			<Description>TXT_KEY_WORLD_DUEL</Description>
-			<Help>TXT_KEY_WORLD_DUEL_HELP</Help>
+			<Help/>
 			<iDefaultPlayers>2</iDefaultPlayers>
 			<iUnitNameModifier>50</iUnitNameModifier>
 			<iTargetNumCities>2</iTargetNumCities>
@@ -67,7 +67,7 @@ Integer Tags
 		<WorldInfo>
 			<Type>WORLDSIZE_TINY</Type>
 			<Description>TXT_KEY_WORLD_TINY</Description>
-			<Help>TXT_KEY_WORLD_TINY_HELP</Help>
+			<Help/>
 			<iDefaultPlayers>4</iDefaultPlayers>
 			<iUnitNameModifier>40</iUnitNameModifier>
 			<iTargetNumCities>3</iTargetNumCities>
@@ -95,7 +95,7 @@ Integer Tags
 		<WorldInfo>
 			<Type>WORLDSIZE_SMALL</Type>
 			<Description>TXT_KEY_WORLD_SMALL</Description>
-			<Help>TXT_KEY_WORLD_SMALL_HELP</Help>
+			<Help/>
 			<iDefaultPlayers>6</iDefaultPlayers>
 			<iUnitNameModifier>30</iUnitNameModifier>
 			<iTargetNumCities>4</iTargetNumCities>
@@ -122,7 +122,7 @@ Integer Tags
 		<WorldInfo>
 			<Type>WORLDSIZE_STANDARD</Type>
 			<Description>TXT_KEY_WORLD_STANDARD</Description>
-			<Help>TXT_KEY_WORLD_STANDARD_HELP</Help>
+			<Help/>
 			<iDefaultPlayers>8</iDefaultPlayers>
 			<iUnitNameModifier>20</iUnitNameModifier>
 			<iTargetNumCities>6</iTargetNumCities>
@@ -147,7 +147,7 @@ Integer Tags
 		<WorldInfo>
 			<Type>WORLDSIZE_LARGE</Type>
 			<Description>TXT_KEY_WORLD_LARGE</Description>
-			<Help>TXT_KEY_WORLD_LARGE_HELP</Help>
+			<Help/>
 			<iDefaultPlayers>10</iDefaultPlayers>
 			<iUnitNameModifier>10</iUnitNameModifier>
 			<iTargetNumCities>8</iTargetNumCities>
@@ -176,7 +176,7 @@ Integer Tags
 		<WorldInfo>
 			<Type>WORLDSIZE_HUGE</Type>
 			<Description>TXT_KEY_WORLD_HUGE</Description>
-			<Help>TXT_KEY_WORLD_HUGE_HELP</Help>
+			<Help/>
 			<iDefaultPlayers>12</iDefaultPlayers>
 			<iUnitNameModifier>0</iUnitNameModifier>
 			<iTargetNumCities>11</iTargetNumCities>
@@ -205,7 +205,7 @@ Integer Tags
 		<WorldInfo>
 			<Type>WORLDSIZE_GIANT</Type>
 			<Description>TXT_KEY_WORLD_GIANT</Description>
-			<Help>TXT_KEY_WORLD_GIANT_HELP</Help>
+			<Help/>
 			<iDefaultPlayers>14</iDefaultPlayers>
 			<iUnitNameModifier>0</iUnitNameModifier>
 			<iTargetNumCities>14</iTargetNumCities>
@@ -234,7 +234,7 @@ Integer Tags
 		<WorldInfo>
 			<Type>WORLDSIZE_GIGANTIC</Type>
 			<Description>TXT_KEY_WORLD_GIGANTIC</Description>
-			<Help>TXT_KEY_WORLD_GIGANTIC_HELP</Help>
+			<Help/>
 			<iDefaultPlayers>16</iDefaultPlayers>
 			<iUnitNameModifier>0</iUnitNameModifier>
 			<iTargetNumCities>18</iTargetNumCities>

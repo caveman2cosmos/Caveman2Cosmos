@@ -1794,17 +1794,6 @@
 		<Polish>Użyj dyplomatów do przeprowadzania misji dyplomatycznych u [NEWLINE][TAB][TAB][ICON_BULLET]Innych narodów[NEWLINE][TAB][TAB][ICON_BULLET]Barbarzyńców[NEWLINE][TAB][TAB][ICON_BULLET]Tubylców</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_DIPLOMAT_VERY_EARLY</Tag>
-		<English>Diplomat - Ancient</English>
-		<French>Diplomate - Antique</French>
-		<Italian>
-			<Text>Diplomatico - Era antica</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Dyplomata - Starożytny</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_GREAT_STATESMAN_STRATEGY</Tag>
 		<English>Build a [COLOR_UNIT_TEXT]Court House[COLOR_REVERT], [COLOR_UNIT_TEXT]Jail[COLOR_REVERT], or [COLOR_UNIT_TEXT]Customs House[COLOR_REVERT] to add Lawyer specialists. In addition, [COLOR_UNIT_TEXT]Versailles[COLOR_REVERT], the [COLOR_UNIT_TEXT]United Nations[COLOR_REVERT], and the [COLOR_UNIT_TEXT]Forbidden Palace[COLOR_REVERT] wonders give Great Statesman points.</English>
 		<Italian>Può costruire un [COLOR_UNIT_TEXT]Palazzo di giustizia[COLOR_REVERT], una [COLOR_UNIT_TEXT]Prigione[COLOR_REVERT] o una [COLOR_UNIT_TEXT]Dogana[COLOR_REVERT] per aggiungere specialisti di tipo avvocato. In più, [COLOR_UNIT_TEXT]Versailles[COLOR_REVERT], le [COLOR_UNIT_TEXT]Nazioni Unite[COLOR_REVERT] e il [COLOR_UNIT_TEXT]Palazzo proibito[COLOR_REVERT] forniscono punti per ottenere un Grande uomo di stato.</Italian>

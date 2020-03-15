@@ -184,11 +184,11 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_SCREW_PROPELLER</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_AMBER_GATHERER</Type>
+			<Type>BUILDING_GATHERER_AMBER</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_ADVANCED_METALLURGY</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BARLEY_GATHERER</Type>
+			<Type>BUILDING_GATHERER_BARLEY</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_TRIBALISM</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>

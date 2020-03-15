@@ -302,38 +302,6 @@
 		<Italian>Stanco della tua vita monotona? Pronto per l'avventura? Adventure Tours ti porta l'eccitazione di immersioni subacquee, escursioni a cavallo, esplorazione di antiche rovine e osservazione dei più grandi animali della terra nel loro stesso habitat. Vivacizza la tua vita con noi!</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CORPORATION_ARTISTGUILD</Tag>
-		<English>Artists Guild</English>
-		<French>
-			<Text>Guilde des Artistes</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Künstlergilde</German>
-		<Italian>Gilda degli artisti</Italian>
-		<Spanish>
-			<Text>Gremio de artistas</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CORPORATION_BLACKSMGUILD</Tag>
-		<English>Blacksmiths Guild</English>
-		<French>
-			<Text>Guilde des Forgerons</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Hufschmiedgilde</German>
-		<Italian>Gilda dei fabbri</Italian>
-		<Spanish>
-			<Text>Gremio de herreros</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_BULLSEYE</Tag>
 		<English>Bullseye</English>
 		<French>Gran'Frais</French>
@@ -413,54 +381,6 @@
 		<Spanish>¡Tu local de comida rápida para saciar tu apetito!</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CORPORATION_BUTCHERGUILD</Tag>
-		<English>Butchers Guild</English>
-		<French>Guilde des Bouchers</French>
-		<German>Metzgergilde</German>
-		<Italian>Gilda dei macellai</Italian>
-		<Spanish>
-			<Text>Gremio de carniceros</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CORPORATION_CARPENTERGUILD</Tag>
-		<English>Carpenters Guild</English>
-		<French>Guilde des Charpentiers</French>
-		<German>Zimmerergilde</German>
-		<Italian>Gilda dei carpentieri</Italian>
-		<Spanish>
-			<Text>Gremio de carpinteros</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CORPORATION_CLERKSGUILD</Tag>
-		<English>Clerks Guild</English>
-		<French>Guilde des Clercs</French>
-		<German>Schreibergilde</German>
-		<Italian>Gilda degli scrivani</Italian>
-		<Spanish>
-			<Text>Gremio de escribas</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CORPORATION_DRAPERSGUILD</Tag>
-		<English>Drapers Guild</English>
-		<French>Guilde des Tailleurs</French>
-		<German>Tuchhändlergilde</German>
-		<Italian>Gilda dei drappieri</Italian>
-		<Spanish>
-			<Text>Gremio de sastres</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH</Tag>
 		<English>Emperors Clothing</English>
 		<French>Habits Impériaux</French>
@@ -504,14 +424,6 @@
 		<English>Your local store to get your clothes.</English>
 		<Italian>Il tuo negozio locale, dove comprare gli abiti.</Italian>
 		<Spanish>Tu tienda local donde renovar tu vestimenta.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CORPORATION_EQUESTGUILD</Tag>
-		<English>Equestrians Guild</English>
-		<French>Guilde des écuyers</French>
-		<German>Reitergilde</German>
-		<Italian>Gilda dei cavalieri</Italian>
-		<Spanish>Gremio de escuderos</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EWTRADE</Tag>
@@ -596,50 +508,6 @@
 		<Spanish>Tu tienda local donde renovar tu vestimenta.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CORPORATION_FISHMONGUILD</Tag>
-		<English>Fishmongers Guild</English>
-		<French>Guilde des Poissoniers</French>
-		<German>Fischhändlergilde</German>
-		<Spanish>
-			<Text>Gremio de pescaderos</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CORPORATION_GLASSGUILD</Tag>
-		<English>Glassblowers Guild</English>
-		<French>Guilde des Souffleurs de Verre</French>
-		<German>Glasbläsergilde</German>
-		<Spanish>
-			<Text>Gremio de vidrieros</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CORPORATION_GOLDSMGUILD</Tag>
-		<English>Goldsmiths Guild</English>
-		<French>Guilde des Orfèvres</French>
-		<German>Goldschmiedegilde</German>
-		<Spanish>
-			<Text>Gremio de orfebres</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CORPORATION_GROCERGUILD</Tag>
-		<English>Grocers Guild</English>
-		<French>Guilde des Epiciers</French>
-		<German>Krämergilde</German>
-		<Spanish>
-			<Text>Gremio de drogueros</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MALLWART</Tag>
 		<English>MallWart</English>
 		<French>Carouf'</French>
@@ -707,17 +575,6 @@
 		<Italian>Mass media indica una parte dei media progettati esplicitamente per raggiungere una grande quantità di persone. Il termine venne coniato negli anni 20 con l'avvento delle reti radio nazionali e la circolazione di massa dei quotidiani. Comunque, forme di comunicazione di massa come libri e manoscritti erano in uso già da secoli.[NEWLINE]I mass media includono i media su internet (come blog, messaggis, podcast e video sharing) perchè gli individui hanno ora un mezzo per esprimersi comparabile a quello prima riservato solo a un gruppo diproduttori di mass media. L'audience delle comunicazioni è stata vista da alcuni commentatori come una società di massa con speciali caratteristiche, come l'atomizzazione e la perdita di connessioni sociali, che la rendono suscettibile alle moderne tecniche di influenza dei mass media, come la pubblicità e la propaanda. L'acronimo "MSM", mainstream media, viene ampiamente usato nella bloosfera nelle discussioni riuardati i mass media.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CORPORATION_MASONGUILD</Tag>
-		<English>Masons Guild</English>
-		<French>Guilde des Maçons</French>
-		<German>Maurergilde</German>
-		<Spanish>
-			<Text>Gremio de albañiles</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MCDOWELLS</Tag>
 		<English>Big McDowells</English>
 		<Spanish>McDowells</Spanish>
@@ -756,17 +613,6 @@
 		<English>Your local fast food place to get your hunger on!</English>
 		<Italian>Il tuo fast food locale, per farti venire l'acquolina in bocca!</Italian>
 		<Spanish>¡Tu local de comida rápida para saciar tu apetito!</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CORPORATION_MERCERGUILD</Tag>
-		<English>Mercers Guild</English>
-		<French>Guilde des Marchands</French>
-		<German>Stoffhändlergilde</German>
-		<Spanish>
-			<Text>Gremio de merceros</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MILEHIGH</Tag>

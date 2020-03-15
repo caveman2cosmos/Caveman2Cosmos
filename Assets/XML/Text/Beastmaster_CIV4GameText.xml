@@ -1,25 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TAMER_CATS</Tag>
-		<English>Cat Tamer</English>
-		<French>
-			<Text>Dompteur de félins</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Polish>Treser Kotów</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TAMER_COMPLEX</Tag>
 		<English>Animal Tamer Complex</English>
 		<French>Centre de Dressage d'animaux</French>
 		<Polish>Kompleks Tresury Zwierząt</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TAMER_COMPLEX_PEDIA</Tag>
-		<English>Allows the building of animals based on what animal myths you have built in your nation.</English>
-		<Polish>Pozwala na werbowanie i tresowanie zwierząt.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TAMER_COMPLEX_STRATEGY</Tag>
@@ -27,18 +12,8 @@
 		<French>Construisez des animaux domptés, en fonction des mythes dont vous disposez.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TAMER_DOGS</Tag>
-		<English>Dog Tamer</English>
-		<French>
-			<Text>Dompteur de chiens</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Polish>Treser Psów</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TAMER_PEDIA</Tag>
-		<English>Animal taiming is not domestication. Taimed animals can be further trained.</English>
+		<English>Animal taming is not domestication. Tamed animals can be further trained.</English>
 		<Polish>Oswajanie zwierząt to nie udamawianie. Oswojone zwierzęta mogą być później tresowane.</Polish>
 	</TEXT>
 	<TEXT>
@@ -92,31 +67,6 @@
 		<English>Use tamed animals in combat or use them to build extensions to the Zoo or Carnival (ie cage buildings).</English>
 		<French>Les animaux domptés peuvent être utilisé au combat, ou pour construire des extensions pour le Zoo ou le Carnaval (ie Construction de cages).</French>
 		<Italian>Usa gli animali ammaestrati in combattimento, oppure utilizzali per espandere il tuo Zoo o il tuo Carnivale, costruendo le gabbie.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TAMED_BEAR</Tag>
-		<English>Tamed Bear</English>
-		<French>
-			<Text>Ours (dompté)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Gezaehmter Baer:Gezaehmter Baer:Gezaehmter Baer:Gezaehmter Baer:Gezaehmte Baeren:Gezaehmte Baeren:Gezaehmte Baeren:Gezaehmte Baeren</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
-			<Plural>0:0:0:0:1:1:1:1</Plural>
-		</German>
-		<Italian>
-			<Text>Orso ammaestrato:Orsi ammaestrati</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Tamed Bear:Tamed Bear</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Oswojony Niedźwiedź</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_BISON</Tag>
@@ -287,16 +237,6 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Oswojona Pantera</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TAMED_RHINO</Tag>
-		<English>Tamed Rhinoceros</English>
-		<French>
-			<Text>Rhinocéros (dompté)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Polish>Oswojony Nosorożec</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_WOLF</Tag>

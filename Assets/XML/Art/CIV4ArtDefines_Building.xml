@@ -528,7 +528,7 @@
 			<Button>,Art/Interface/Buttons/Buildings/Theatre.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,3,2</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BYZANTINE_HIPPODROME</Type>
+			<Type>ART_DEF_BUILDING_HIPPODROME</Type>
 			<LSystem>LSYSTEM_3x3</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0.77</fScale>
@@ -788,7 +788,7 @@
 			<Button>,Art/Interface/Buttons/Buildings/Wall.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,5,8</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NETHERLANDS_DIKE</Type>
+			<Type>ART_DEF_BUILDING_DUTCH_DIKE</Type>
 			<LSystem>LSYSTEM_COAST</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1</fScale>
@@ -9630,7 +9630,7 @@
 			<Button>Art/Interface/Buttons/Buildings/blooddance.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_EARTHWORM</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_EARTHWORM</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -11190,7 +11190,7 @@
 			<Button>art/Craft/art/woodcarver.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BERRY_BUSHES</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_BERRY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -11200,7 +11200,7 @@
 			<Button>art/Craft/art/berrybushes.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CARRION</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_CARRION</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -11220,7 +11220,7 @@
 			<Button>art/Craft/art/termitemound.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BONEWORKERS_HUT</Type>
+			<Type>ART_DEF_BUILDING_BONEWORKER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -16220,7 +16220,7 @@
 			<Button>art/Crops/Art/wheatgatherer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BARLEY_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_BARLEY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -16690,7 +16690,7 @@
 			<Button>art/Electricity/art/powerlines.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DOE</Type>
+			<Type>ART_DEF_BUILDING_DEPARTMENT_ENERGY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -22364,7 +22364,7 @@
 			<Button>art/Minerals/Art/jadegatherer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_AMBER_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_AMBER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -25454,7 +25454,7 @@
 			<Button>Art/Interface/Buttons/National_Wonders/grand_central_station.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DMV</Type>
+			<Type>ART_DEF_BUILDING_DEPARTMENT_VEHICLES</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -26364,7 +26364,7 @@
 			<Button>art/Water/art/waterpipes.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_WATER_DEPARTMENT</Type>
+			<Type>ART_DEF_BUILDING_DEPARTMENT_WATER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -28445,7 +28445,7 @@
 			<Button>Art/Interface/Buttons/Buildings/The_Atomium.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DEPT_FOREIGN_POLICY_WONDER</Type>
+			<Type>ART_DEF_BUILDING_DEPARTMENT_FOREIGN_WONDER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -28455,7 +28455,7 @@
 			<Button>Art/Interface/Buttons/Buildings/ForeignPolicyWonder.dds</Button>
 		</BuildingArtInfo>
              <BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DEPT_FOREIGN_POLICY</Type>
+			<Type>ART_DEF_BUILDING_DEPARTMENT_FOREIGN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>

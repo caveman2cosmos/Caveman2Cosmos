@@ -26,7 +26,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_INCAN_QUECHUA2</Description>
+			<Description>TXT_KEY_UNIT_INCAN_QUECHUA</Description>
 			<Civilopedia>TXT_KEY_UNIT_INCAN_QUECHUA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_INCAN_QUECHUA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>

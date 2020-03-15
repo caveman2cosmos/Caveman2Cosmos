@@ -70,12 +70,6 @@
 		<Polish>Celebryta (dawniej spotykana również forma celebryt obecnie nienotowana przez słowniki), rodz. żeński celebrytka, l.mn. celebryci (ang. celebrity, z łac. celebrare) termin odnoszący si do osoby czsto wystpującej w środkach masowego przekazu i wzbudzającej ich zainteresowanie, bez wzgldu na pełniony przez nią zawód (choć najczściej są to aktorzy, piosenkarze, uczestnicy reality show, sportowcy czy dziennikarze). Zgodnie z definicją sformułowaną przez Daniela Boorstina w 1961 roku celebryt to osoba, która jest znana z tego, że jest znana. Słowo celebryt nie jest dokładnym synonimem gwiazdy, sławy, idola, autorytetu. Ze wzgldu na możliwość szerokiego oddziaływania społecznego celebryci wykorzystywani są w działaniach reklamowych.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CELEBRITY_STRATEGY</Tag>
-		<English>A Celebrity can [NEWLINE][ICON_BULLET] boost culture in a city [NEWLINE][ICON_BULLET] remove anarchy due to conquest [NEWLINE][ICON_BULLET] end a slave revolt.</English>
-		<French>Une Célébrité peut [NEWLINE][ICON_BULLET] augmenter la culture d'une ville [NEWLINE][ICON_BULLET] réduire l'anarchie lié à la conquête [NEWLINE][ICON_BULLET] mettre fin à une révolte d'esclaves.</French>
-		<Italian>Una celebrità può [NEWLINE][ICON_BULLET]Aumentare la cultura in una città [NEWLINE][ICON_BULLET]Rimuovere l'anarchia dovuta alla conquista [NEWLINE][ICON_BULLET]Sedare una rivolta di schiavi</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_STORY_TELLER</Tag>
 		<English>Story Teller</English>
 		<French>Conteur d'histoire</French>

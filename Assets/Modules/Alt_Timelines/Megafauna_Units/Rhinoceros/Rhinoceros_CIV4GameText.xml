@@ -8,7 +8,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_RHINO_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Build Rhinoceros buildings and units faster in this city.</English>
+		<English>[ICON_BULLET]Build Rhinoceros buildings and units faster in this city.</English>
 		<French>Construit les bâtiments et unités Rhinos plus vite dans cette Ville.</French>
 	</TEXT>
 	<TEXT>
@@ -30,7 +30,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RHINO_TRAINER_EFFECT_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]This free building is used to enable the building of the special Rhinoceros units in all your cities.</English>
+		<English>[ICON_BULLET]This free building is used to enable the building of the special Rhinoceros units in all your cities.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RHINO_TRAINER_HERITAGE</Tag>

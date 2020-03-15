@@ -5526,7 +5526,6 @@
 			<Type>FEATURE_TORNADO</Type>
 			<Description>TXT_KEY_FEATURE_TORNADO</Description>
 			<Civilopedia>TXT_KEY_FEATURE_TORNADO_PEDIA</Civilopedia>
-			<Help>TXT_KEY_FEAT_DAMAGE_HELP1</Help>
 			<ArtDefineTag>ART_DEF_FEATURE_TORNADO</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>-3</iYieldChange>
