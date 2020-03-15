@@ -21924,7 +21924,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ABYSSINIA_STELE</BuildingType>
+					<BuildingType>BUILDING_STELE</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -22014,7 +22014,7 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_ABYSSINIA_STELE</BuildingType>
+					<BuildingType>BUILDING_STELE</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -22185,7 +22185,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ABYSSINIA_STELE</BuildingType>
+					<BuildingType>BUILDING_STELE</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -22275,7 +22275,7 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_ABYSSINIA_STELE</BuildingType>
+					<BuildingType>BUILDING_STELE</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -22446,7 +22446,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ABYSSINIA_STELE</BuildingType>
+					<BuildingType>BUILDING_STELE</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -22536,7 +22536,7 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_ABYSSINIA_STELE</BuildingType>
+					<BuildingType>BUILDING_STELE</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -22707,7 +22707,7 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_ABYSSINIA_STELE</BuildingType>
+					<BuildingType>BUILDING_STELE</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -22878,7 +22878,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ABYSSINIA_STELE</BuildingType>
+					<BuildingType>BUILDING_STELE</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -22968,7 +22968,7 @@
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_ABYSSINIA_STELE</BuildingType>
+					<BuildingType>BUILDING_STELE</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -23139,7 +23139,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ABYSSINIA_STELE</BuildingType>
+					<BuildingType>BUILDING_STELE</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -23229,7 +23229,7 @@
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_ABYSSINIA_STELE</BuildingType>
+					<BuildingType>BUILDING_STELE</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -23400,7 +23400,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ABYSSINIA_STELE</BuildingType>
+					<BuildingType>BUILDING_STELE</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -23490,7 +23490,7 @@
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_ABYSSINIA_STELE</BuildingType>
+					<BuildingType>BUILDING_STELE</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -23661,7 +23661,7 @@
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_ABYSSINIA_STELE</BuildingType>
+					<BuildingType>BUILDING_STELE</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>

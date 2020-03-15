@@ -7511,8 +7511,6 @@ void CvPlayer::disband(CvCity* pCity)
 bool CvPlayer::canReceiveGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit) const
 {
 	CvCity* pCity;
-	bool bTechFound;
-	int iI;
 	EraTypes eEra = (EraTypes)GC.getGoodyInfo(eGoody).getEraType();
 	EraTypes eNotEra = (EraTypes)GC.getGoodyInfo(eGoody).getNotEraType();
 
@@ -7524,63 +7522,40 @@ bool CvPlayer::canReceiveGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit) 
 	{
 		return false;
 	}
-
-	int iResearch = GC.getGoodyInfo(eGoody).getResearch();
-
-	if (iResearch != 0)
+	if (GC.getGoodyInfo(eGoody).getResearch() != 0 && getCurrentResearch() == NO_TECH)
 	{
-		TechTypes eTech = getCurrentResearch();
-
-		if (eTech == NO_TECH)
-		{
-			return false;
-		}
+		return false;
+	}
+	if (GC.getGoodyInfo(eGoody).getExperience() > 0 && (pUnit == NULL || !pUnit->canAcquirePromotionAny()))
+	{
+		return false;
+	}
+	if (GC.getGoodyInfo(eGoody).getDamagePrereq() > 0
+	&& (pUnit == NULL || pUnit->getDamage() < pUnit->maxHitPoints() * GC.getGoodyInfo(eGoody).getDamagePrereq() / 100))
+	{
+		return false;
 	}
 
-	if (GC.getGoodyInfo(eGoody).getExperience() > 0)
-	{
-		if ((pUnit == NULL) || !(pUnit->canAcquirePromotionAny()) || (GC.getGame().getElapsedGameTurns() < 10))
-		{
-			return false;
-		}
-	}
-
-	if (GC.getGoodyInfo(eGoody).getDamagePrereq() > 0)
-	{
-		if ((pUnit == NULL) || (pUnit->getDamage() < ((pUnit->maxHitPoints() * GC.getGoodyInfo(eGoody).getDamagePrereq()) / 100)))
-		{
-			return false;
-		}
-	}
-
+	bool bFound;
 	if (GC.getGoodyInfo(eGoody).isTech())
 	{
-		bTechFound = false;
-
-		for (iI = 0; iI < GC.getNumTechInfos(); iI++)
+		bFound = false;
+		for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 		{
-			if (GC.getTechInfo((TechTypes) iI).isGoodyTech())
+			if (GC.getTechInfo((TechTypes) iI).isGoodyTech() && canResearch((TechTypes)iI))
 			{
-				if (canResearch((TechTypes)iI))
-				{
-					bTechFound = true;
-					break;
-				}
+				bFound = true;
+				break;
 			}
 		}
-
-		if (!bTechFound)
+		if (!bFound)
 		{
 			return false;
 		}
 	}
-
-	if (GC.getGoodyInfo(eGoody).isBad())
+	if (GC.getGoodyInfo(eGoody).isBad() && (pUnit == NULL || pUnit->isNoBadGoodies()))
 	{
-		if ((pUnit == NULL) || pUnit->isNoBadGoodies())
-		{
-			return false;
-		}
+		return false;
 	}
 
 	if (GC.getGoodyInfo(eGoody).getGoodyUnit() != NO_UNIT)
@@ -7597,23 +7572,10 @@ bool CvPlayer::canReceiveGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit) 
 			return false;
 		}
 
-		const UnitTypes eUnit = (UnitTypes)GC.getGoodyInfo(eGoody).getGoodyUnit();
-
-		if (GC.getUnitInfo(eUnit).getCombat() + GET_TEAM(getTeam()).getUnitStrengthChange(eUnit) > 0
-		&& !GC.getUnitInfo(eUnit).isOnlyDefensive())
+		if (GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE)
+		&& GC.getUnitInfo((UnitTypes)GC.getGoodyInfo(eGoody).getGoodyUnit()).isFound())
 		{
-			if (GC.getGame().isGameMultiPlayer() || (GC.getGame().getElapsedGameTurns() < 20))
-			{
-				return false;
-			}
-		}
-
-		if (GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) && isHuman())
-		{
-			if (GC.getUnitInfo(eUnit).isFound())
-			{
-				return false;
-			}
+			return false;
 		}
 	}
 
@@ -7644,18 +7606,14 @@ bool CvPlayer::canReceiveGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit) 
 		{
 			pCity = GC.getMap().findCity(pPlot->getX(), pPlot->getY(), NO_PLAYER, getTeam());
 
-			if (pCity != NULL)
+			if (pCity != NULL && plotDistance(pPlot->getX(), pPlot->getY(), pCity->getX(), pCity->getY()) <= (8 - getNumCities()))
 			{
-				if (plotDistance(pPlot->getX(), pPlot->getY(), pCity->getX(), pCity->getY()) <= (8 - getNumCities()))
-				{
-					return false;
-				}
+				return false;
 			}
 		}
 	}
-
-	int iCount = GC.getGoodyInfo(eGoody).getNumMapCategoryTypes();
-	bool bFound = (iCount < 1);
+	const int iCount = GC.getGoodyInfo(eGoody).getNumMapCategoryTypes();
+	bFound = (iCount < 1);
 	for (int iI = 0; iI < iCount; iI++)
 	{
 		if (pPlot->isMapCategoryType((MapCategoryTypes)GC.getGoodyInfo(eGoody).getMapCategoryType(iI)))
@@ -7668,7 +7626,6 @@ bool CvPlayer::canReceiveGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit) 
 	{
 		return false;
 	}
-
 	return true;
 }
 
@@ -9006,33 +8963,32 @@ int CvPlayer::getProductionModifier(UnitTypes eUnit) const
 			iMultiplier += getMilitaryProductionModifier();
 		}
 	}
-
 	for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
 	{
 		if (hasTrait((TraitTypes)iI))
 		{
-			TraitTypes eTrait = ((TraitTypes)iI);
-			for (int j = 0; j < GC.getTraitInfo(eTrait).getNumUnitProductionModifiers(); j++)
+			CvTraitInfo& kTrait = GC.getTraitInfo((TraitTypes)iI);
+			for (int j = 0; j < kTrait.getNumUnitProductionModifiers(); j++)
 			{
-				if ((UnitTypes)GC.getTraitInfo(eTrait).getUnitProductionModifier(j).eUnit == eUnit)
+				if ((UnitTypes)kTrait.getUnitProductionModifier(j).eUnit == eUnit)
 				{
-					iMultiplier += GC.getTraitInfo(eTrait).getUnitProductionModifier(j).iModifier;
+					iMultiplier += kTrait.getUnitProductionModifier(j).iModifier;
+					break;
 				}
 			}
-
 			if (GC.getUnitInfo(eUnit).getSpecialUnitType() != NO_SPECIALUNIT)
 			{
-				for (int j = 0; j < GC.getTraitInfo(eTrait).getNumSpecialUnitProductionModifiers(); j++)
+				for (int j = 0; j < kTrait.getNumSpecialUnitProductionModifiers(); j++)
 				{
-					if ((SpecialUnitTypes)GC.getTraitInfo(eTrait).getSpecialUnitProductionModifier(j).eSpecialUnit == GC.getUnitInfo(eUnit).getSpecialUnitType())
+					if ((SpecialUnitTypes)kTrait.getSpecialUnitProductionModifier(j).eSpecialUnit == GC.getUnitInfo(eUnit).getSpecialUnitType())
 					{
-						iMultiplier += GC.getTraitInfo(eTrait).getSpecialUnitProductionModifier(j).iModifier;
+						iMultiplier += kTrait.getSpecialUnitProductionModifier(j).iModifier;
+						break;
 					}
 				}
 			}
 		}
 	}
-
 	return iMultiplier;
 }
 
@@ -15619,7 +15575,7 @@ void CvPlayer::changeYieldRateModifier(YieldTypes eIndex, int iChange)
 
 	if (iChange != 0)
 	{
-		m_aiYieldRateModifier[eIndex] = (m_aiYieldRateModifier[eIndex] + iChange);
+		m_aiYieldRateModifier[eIndex] += iChange;
 
 		invalidateYieldRankCache(eIndex);
 
@@ -15627,7 +15583,6 @@ void CvPlayer::changeYieldRateModifier(YieldTypes eIndex, int iChange)
 		{
 			setCommerceDirty();
 		}
-
 		AI_makeAssignWorkDirty();
 
 		if (getTeam() == GC.getGame().getActiveTeam())
@@ -22698,11 +22653,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UPKEEPS, GC.getNumUpkeepInfos(), m_paiUpkeepCount);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_paiSpecialistValidCount);
 
-	/************************************************************************************************/
-	/* Afforess	                  Start		 12/9/09                                                */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iForeignTradeRouteModifier);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iTaxRateUnhappiness);
 
@@ -22888,9 +22838,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 				WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_ppiSpecialistCommercePercentChanges[iI], SAVE_VALUE_TYPE_INT_ARRAY);
 			}
 		}
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
 
 		FAssertMsg((0 < GC.getNumTechInfos()), "GC.getNumTechInfos() is not greater than zero but it is expected to be in CvPlayer::read");
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_pabResearchingTech);
@@ -30617,7 +30564,7 @@ void CvPlayer::changeUnitProductionModifier(UnitTypes eIndex, int iChange)
 {
 	if (iChange != 0)
 	{
-		m_paiUnitProductionModifier[eIndex] = (m_paiUnitProductionModifier[eIndex] + iChange);
+		m_paiUnitProductionModifier[eIndex] += iChange;
 	}
 }
 
@@ -32833,11 +32780,6 @@ void CvPlayer::processTrait(TraitTypes eTrait, int iChange)
 	int iJ;
 	int	iLoop;
 
-/************************************************************************************************/
-/* REVDCM                                 09/02/10                                phungus420    */
-/*                                                                                              */
-/* RevTrait Effects                                                                             */
-/************************************************************************************************/
 	changeNonStateReligionCommerce(iChange*((GC.getTraitInfo(eTrait).isNonStateReligionCommerce())? 1 : 0));
 	changeUpgradeAnywhere(iChange*((GC.getTraitInfo(eTrait).isUpgradeAnywhere())? 1 : 0));
 	changeRevIdxLocal(iChange*GC.getTraitInfo(eTrait).getRevIdxLocal());
@@ -32848,9 +32790,6 @@ void CvPlayer::processTrait(TraitTypes eTrait, int iChange)
 	changeRevIdxNationalityMod(iChange*GC.getTraitInfo(eTrait).getRevIdxNationalityMod());
 	changeRevIdxBadReligionMod(iChange*GC.getTraitInfo(eTrait).getRevIdxBadReligionMod());
 	changeRevIdxGoodReligionMod(iChange*GC.getTraitInfo(eTrait).getRevIdxGoodReligionMod());
-/************************************************************************************************/
-/* REVDCM                                  END                                                  */
-/************************************************************************************************/
 
 	changeCivilizationHealth(iChange*GC.getTraitInfo(eTrait).getHealth());
 	changeExtraHappiness(iChange*GC.getTraitInfo(eTrait).getHappiness());
@@ -32967,7 +32906,7 @@ void CvPlayer::processTrait(TraitTypes eTrait, int iChange)
 	changeCoastalTradeRoutes(GC.getTraitInfo(eTrait).getCoastalTradeRoutes() * iChange);
 	changeMilitaryFoodProductionCount((GC.getTraitInfo(eTrait).isMilitaryFoodProduction()) ? iChange : 0);
 	changeInquisitionCount((GC.getTraitInfo(eTrait).isAllowsInquisitions())? iChange : 0);
-	//Team Project (6)
+
 	changePopulationgrowthratepercentage(GC.getTraitInfo(eTrait).getGlobalPopulationgrowthratepercentage(),(iChange==1));
 	changeNationalCityStartCulture(GC.getTraitInfo(eTrait).getCityStartCulture() * iChange);
 	changeNationalAirUnitCapacity(GC.getTraitInfo(eTrait).getGlobalAirUnitCapacity() * iChange);
@@ -32980,10 +32919,10 @@ void CvPlayer::processTrait(TraitTypes eTrait, int iChange)
 	changeNationalNavalCargoSpaceChange(GC.getTraitInfo(eTrait).getNavalCargoSpace() * iChange);
 	changeNationalMissileCargoSpaceChange(GC.getTraitInfo(eTrait).getMissileCargoSpace() * iChange);
 	changeExtraFreedomFighters(GC.getTraitInfo(eTrait).getFreedomFighterChange() * iChange);
-	//Team Project (3)
+
 	changeExtraNationalCaptureProbabilityModifier(GC.getTraitInfo(eTrait).getNationalCaptureProbabilityModifier() * iChange);
 	changeExtraNationalCaptureResistanceModifier(GC.getTraitInfo(eTrait).getNationalCaptureResistanceModifier() * iChange);
-	//Team Project (6)
+
 	changeExtraStateReligionSpreadModifier(GC.getTraitInfo(eTrait).getStateReligionSpreadProbabilityModifier() * iChange);
 	changeExtraNonStateReligionSpreadModifier(GC.getTraitInfo(eTrait).getNonStateReligionSpreadProbabilityModifier() * iChange);
 	changeCitiesStartwithStateReligionCount((GC.getTraitInfo(eTrait).isCitiesStartwithStateReligion())? iChange : 0);
@@ -32992,7 +32931,7 @@ void CvPlayer::processTrait(TraitTypes eTrait, int iChange)
 	changeFreeSpecialistperNationalWonderCount((GC.getTraitInfo(eTrait).isFreeSpecialistperNationalWonder())? iChange : 0);
 	changeFreeSpecialistperTeamProjectCount((GC.getTraitInfo(eTrait).isFreeSpecialistperTeamProject())? iChange : 0);
 	changeExtraGoodyCount((GC.getTraitInfo(eTrait).isExtraGoody())? iChange : 0);
-	//Team Project (5)
+
 	changeAllReligionsActiveCount((GC.getTraitInfo(eTrait).isAllReligionsActive())? iChange : 0);
 	changeAllReligionsActiveCount((GC.getTraitInfo(eTrait).isBansNonStateReligions())? -iChange : 0);
 	changeFreedomFighterCount(GC.getTraitInfo(eTrait).isFreedomFighter() ? iChange : 0);
@@ -33030,7 +32969,7 @@ void CvPlayer::processTrait(TraitTypes eTrait, int iChange)
 		{
 			changeExtraSpecialistCommerce(((SpecialistTypes)iI), ((CommerceTypes)iJ), (GC.getTraitInfo(eTrait).getSpecialistCommerceChange(iI, iJ) * iChange));
 		}
-	//Team Project (6)
+
 		if ((SpecialistTypes)GC.getTraitInfo(eTrait).getEraAdvanceFreeSpecialistType() == ((SpecialistTypes)iI))
 		{
 			changeEraAdvanceFreeSpecialistCount((SpecialistTypes)GC.getTraitInfo(eTrait).getEraAdvanceFreeSpecialistType(), iChange);
@@ -33046,7 +32985,6 @@ void CvPlayer::processTrait(TraitTypes eTrait, int iChange)
 		changeSpecialistExtraYield(((YieldTypes)iI), (GC.getTraitInfo(eTrait).getSpecialistExtraYield(iI) * iChange));
 		updateExtraYieldThreshold((YieldTypes)iI);
 		updateLessYieldThreshold((YieldTypes)iI);
-		//Team Project (7)
 		changeGoldenAgeYield(((YieldTypes)iI), (GC.getTraitInfo(eTrait).getGoldenAgeYieldChanges(iI) * iChange));
 	}
 
@@ -33054,7 +32992,6 @@ void CvPlayer::processTrait(TraitTypes eTrait, int iChange)
 	{
 		changeCapitalCommerceRateModifier(((CommerceTypes)iI), (GC.getTraitInfo(eTrait).getCapitalCommerceModifier(iI) * iChange));
 		changeSpecialistExtraCommerce(((CommerceTypes)iI), (GC.getTraitInfo(eTrait).getSpecialistExtraCommerce(iI) * iChange));
-		//Team Project (7)
 		changeGoldenAgeCommerce(((CommerceTypes)iI), (GC.getTraitInfo(eTrait).getGoldenAgeCommerceChanges(iI) * iChange));
 	}
 
@@ -33065,7 +33002,6 @@ void CvPlayer::processTrait(TraitTypes eTrait, int iChange)
 		changeNationalGreatPeopleUnitRate(eGreatPeopleUnit, GC.getTraitInfo(eTrait).getGreatPeopleRateChange() * iChange);
 	}
 
-	//Team Project (6)
 	UnitTypes eGreatPeopleUnit = (UnitTypes)GC.getTraitInfo(eTrait).getGoldenAgeonBirthofGreatPeopleType();
 	if (eGreatPeopleUnit != NO_UNIT)
 	{
@@ -33096,7 +33032,6 @@ void CvPlayer::processTrait(TraitTypes eTrait, int iChange)
 		}
 	}
 
-	//Team Project (8)
 	for (iI = 0; iI < GC.getTraitInfo(eTrait).getNumUnitCombatFreeExperiences(); iI++)
 	{
 		if ((UnitCombatTypes)GC.getTraitInfo(eTrait).getUnitCombatFreeExperience(iI).eUnitCombat != NO_UNITCOMBAT)
@@ -33127,7 +33062,6 @@ void CvPlayer::processTrait(TraitTypes eTrait, int iChange)
 	{
 		pLoopUnit->doSetFreePromotions(bAdding, eTrait);
 	}
-	//TB Traits end
 }
 
 void CvPlayer::recalculateModifiers()

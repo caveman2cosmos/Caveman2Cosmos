@@ -1057,29 +1057,25 @@ void CvTeam::shareItems(TeamTypes eTeam)
 
 	for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).getTeam() == eTeam)
 		{
-			if (GET_PLAYER((PlayerTypes)iI).getTeam() == eTeam)
+			for (pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
 			{
-				for (pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
+				for (iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
 				{
-					for (iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
+					if (pLoopCity->getNumActiveBuilding((BuildingTypes)iJ) > 0)
 					{
-						if (pLoopCity->getNumActiveBuilding((BuildingTypes)iJ) > 0)
+						if (GC.getBuildingInfo((BuildingTypes)iJ).isTeamShare())
 						{
-							if (GC.getBuildingInfo((BuildingTypes)iJ).isTeamShare())
+							for (iK = 0; iK < MAX_PLAYERS; iK++)
 							{
-								for (iK = 0; iK < MAX_PLAYERS; iK++)
+								if (GET_PLAYER((PlayerTypes)iK).getTeam() == getID() && GET_PLAYER((PlayerTypes)iK).isAlive())
 								{
-									if (GET_PLAYER((PlayerTypes)iK).getTeam() == getID() && GET_PLAYER((PlayerTypes)iK).isAlive())
-									{
-										GET_PLAYER((PlayerTypes)iK).processBuilding(((BuildingTypes)iJ), pLoopCity->getNumBuilding((BuildingTypes)iJ), pLoopCity->area());
-									}
+									GET_PLAYER((PlayerTypes)iK).processBuilding(((BuildingTypes)iJ), pLoopCity->getNumBuilding((BuildingTypes)iJ), pLoopCity->area());
 								}
 							}
-
-							processBuilding(((BuildingTypes)iJ), pLoopCity->getNumBuilding((BuildingTypes)iJ));
 						}
+						processBuilding(((BuildingTypes)iJ), pLoopCity->getNumBuilding((BuildingTypes)iJ));
 					}
 				}
 			}
@@ -1088,12 +1084,9 @@ void CvTeam::shareItems(TeamTypes eTeam)
 
 	for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).getTeam() == eTeam)
 		{
-			if (GET_PLAYER((PlayerTypes)iI).getTeam() == eTeam)
-			{
-				GET_PLAYER((PlayerTypes)iI).AI_updateBonusValue();
-			}
+			GET_PLAYER((PlayerTypes)iI).AI_updateBonusValue();
 		}
 	}
 }
@@ -1101,9 +1094,7 @@ void CvTeam::shareItems(TeamTypes eTeam)
 
 void CvTeam::shareCounters(TeamTypes eTeam)
 {
-	int iI;
-
-	for (iI = 0; iI < MAX_TEAMS; iI++)
+	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
 		if ((iI != getID()) && (iI != eTeam))
 		{
@@ -1166,7 +1157,7 @@ void CvTeam::shareCounters(TeamTypes eTeam)
 		}
 	}
 
-	for (iI = 0; iI < GC.getNumProjectInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumProjectInfos(); iI++)
 	{
 		int iExtraProjects = GET_TEAM(eTeam).getProjectCount((ProjectTypes)iI) - getProjectCount((ProjectTypes)iI);
 		if (iExtraProjects > 0)
@@ -1178,32 +1169,29 @@ void CvTeam::shareCounters(TeamTypes eTeam)
 		changeProjectMaking(((ProjectTypes)iI), GET_TEAM(eTeam).getProjectMaking((ProjectTypes)iI));
 	}
 
-	for (iI = 0; iI < GC.getNumUnitInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
 		changeUnitCount(((UnitTypes)iI), GET_TEAM(eTeam).getUnitCount((UnitTypes)iI));
 	}
 
-	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
 		changeBuildingCount((BuildingTypes)iI, GET_TEAM(eTeam).getBuildingCount((BuildingTypes)iI));
 	}
 
-	for (iI = 0; iI < GC.getNumTechInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 	{
 		// Overflow from techs this team already has can cause bugged behavior
-		if( !isHasTech((TechTypes)iI) )
+		if (!isHasTech((TechTypes)iI)
+		&& GET_TEAM(eTeam).getResearchProgress((TechTypes)iI) > getResearchProgress((TechTypes)iI))
 		{
-			if (GET_TEAM(eTeam).getResearchProgress((TechTypes)iI) > getResearchProgress((TechTypes)iI))
-			{
-				setResearchProgress(((TechTypes)iI), GET_TEAM(eTeam).getResearchProgress((TechTypes)iI), getLeaderID());
-			}
+			setResearchProgress(((TechTypes)iI), GET_TEAM(eTeam).getResearchProgress((TechTypes)iI), getLeaderID());
 		}
-
 		// Clear no tech trade if it is false for other team
 		// Fixes bug where if, with no tech brokering, team A trades a tech to team B, then later joins B in
 		// a permanent alliance.  Previous code would block the AB alliance from "brokering" the tech, even
 		// though A had researched it on their own.
-		if ( GET_TEAM(eTeam).isHasTech((TechTypes)iI) && !(GET_TEAM(eTeam).isNoTradeTech((TechTypes)iI)) )
+		if (GET_TEAM(eTeam).isHasTech((TechTypes)iI) && !GET_TEAM(eTeam).isNoTradeTech((TechTypes)iI))
 		{
 			setNoTradeTech(((TechTypes)iI), false);
 		}
@@ -8906,24 +8894,17 @@ void CvTeam::changeBuildingYieldModifier(BuildingTypes eIndex1, YieldTypes eInde
 
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
-			if (GET_PLAYER((PlayerTypes)iI).isAlive())
+			if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
 			{
-				if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
+				CvCity* pLoopCity;
+				int iLoop;
+				for (pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
 				{
-					CvCity* pLoopCity;
-					int iLoop;
-
-					for (pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
+					if (pLoopCity->getNumActiveBuilding(eIndex1) > 0 && !pLoopCity->isReligiouslyDisabledBuilding(eIndex1))
 					{
-						if (pLoopCity->getNumActiveBuilding(eIndex1) > 0)
-						{
-							if (!pLoopCity->isReligiouslyDisabledBuilding(eIndex1))
-							{
-								const int iExistingValue = pLoopCity->getBuildingYieldModifier(eIndex1, eIndex2);
-								// set the new
-								pLoopCity->updateYieldModifierByBuilding(eIndex1, eIndex2, (iExistingValue - iOldValue + getBuildingYieldModifier(eIndex1, eIndex2)));
-							}
-						}
+						const int iExistingValue = pLoopCity->getBuildingYieldModifier(eIndex1, eIndex2);
+						// set the new
+						pLoopCity->updateYieldModifierByBuilding(eIndex1, eIndex2, (iExistingValue - iOldValue + getBuildingYieldModifier(eIndex1, eIndex2)));
 					}
 				}
 			}

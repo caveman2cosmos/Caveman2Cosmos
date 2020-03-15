@@ -19,45 +19,45 @@
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
 				<!-- Tribes -->
-				<City>Shuar</City>
+				<City>TXT_KEY_CITY_NAME_SHUAR</City>
 				<City>TXT_KEY_CITY_NAME_AWAJUN</City>
-				<City>Huambisa</City>
-				<City>Achuar</City>
-				<City>Shiwiar</City>
+				<City>TXT_KEY_CITY_NAME_HUAMBISA</City>
+				<City>TXT_KEY_CITY_NAME_ACHUAR</City>
+				<City>TXT_KEY_CITY_NAME_SHIWIAR</City>
 				<!-- Actual Jivaro cities -->
-				<City>Yutupiza</City>
-				<City>Japaime</City>
+				<City>TXT_KEY_CITY_NAME_YUTUPIZA</City>
+				<City>TXT_KEY_CITY_NAME_JAPAIME</City>
 				<!-- Appropriate names -->
 				<City>TXT_KEY_CITY_NAME_YAAKAT</City>
 				<City>TXT_KEY_CITY_NAME_IPAAMAMU</City>
-				<City>Muraiya</City>
-				<City>Achu</City>
+				<City>TXT_KEY_CITY_NAME_MURAIYA</City>
+				<City>TXT_KEY_CITY_NAME_ACHU</City>
 				<City>TXT_KEY_CITY_NAME_MARANON</City>
 				<!-- Random words from jivaro/peruvian language -->
 				<City>TXT_KEY_CITY_NAME_NUGKUI</City>
 				<City>TXT_KEY_CITY_NAME_TSUGKI</City>
-				<City>Bikut</City>
-				<City>Muisak</City>
+				<City>TXT_KEY_CITY_NAME_BIKUT</City>
+				<City>TXT_KEY_CITY_NAME_MUISAK</City>
 				<City>TXT_KEY_CITY_NAME_ARUTAM</City>
-				<City>Tsantsa</City>
-				<City>Wakani</City>
+				<City>TXT_KEY_CITY_NAME_TSANTSA</City>
+				<City>TXT_KEY_CITY_NAME_WAKANI</City>
 				<City>TXT_KEY_CITY_NAME_KAKARAM</City>
 				<City>TXT_KEY_CITY_NAME_WAI</City>
-				<City>Tsentsak</City>
-				<City>Maikua</City>
-				<City>Natem</City>
-				<City>Sajino</City>
-				<City>Huangana</City>
-				<City>Pangi</City>
-				<City>Sachavaca</City>
-				<City>Otorongo</City>
-				<City>Majaz</City>
-				<City>Ronsoco</City>
-				<City>Achuni</City>
-				<City>Piripiri</City>
-				<City>Carachupa</City>
-				<City>Wampang</City>
-				<City>Pijuayo</City>
+				<City>TXT_KEY_CITY_NAME_TSENTSAK</City>
+				<City>TXT_KEY_CITY_NAME_MAIKUA</City>
+				<City>TXT_KEY_CITY_NAME_NATEM</City>
+				<City>TXT_KEY_CITY_NAME_SAJINO</City>
+				<City>TXT_KEY_CITY_NAME_HUANGANA</City>
+				<City>TXT_KEY_CITY_NAME_PANGI</City>
+				<City>TXT_KEY_CITY_NAME_SACHAVACA</City>
+				<City>TXT_KEY_CITY_NAME_OTORONGO</City>
+				<City>TXT_KEY_CITY_NAME_MAJAZ</City>
+				<City>TXT_KEY_CITY_NAME_RONSOCO</City>
+				<City>TXT_KEY_CITY_NAME_ACHUNI</City>
+				<City>TXT_KEY_CITY_NAME_PIRIPIRI</City>
+				<City>TXT_KEY_CITY_NAME_CARACHUPA</City>
+				<City>TXT_KEY_CITY_NAME_WAMPANG</City>
+				<City>TXT_KEY_CITY_NAME_PIJUAYO</City>
 				<City>TXT_KEY_CITY_NAME_ANUJE</City>
 			</Cities>
 			<FreeBuildings>
