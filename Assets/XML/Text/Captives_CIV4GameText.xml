@@ -407,7 +407,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAPTIVE_CIVILIAN_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]May join your cities (of less than size 7) or be sacraficed for culture or production. If you are running Slavery can be sold into slavery.</English>
+		<English>[ICON_BULLET]May join your cities (of less than size 7) or be sacraficed for culture or production. If you are running Slavery can be sold into slavery.</English>
 		<French>peut rejoindre vos villes (de moins de 7 de population) ou être sacrifiés pour de la culture ou de la production. Si vous acceptez l'esclavage, peux être vendus en tant qu'esclave.</French>
 		<Italian>Può unirsi alla tua città (se la popolazione è minore di 7) oppure essere sacrificato in cambio di cultura o produzione. Se la schiavitù è attiva nel tuo impero, quest'unità può essere venduta come schiava.</Italian>
 	</TEXT>
@@ -445,7 +445,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAPTIVE_MILITARY_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Upgrade to Military or Worker unit. Force build [COLOR_UNIT_TEXT]Improvement[COLOR_REVERT] or [COLOR_UNIT_TEXT]Building[COLOR_REVERT]. Sacrifice or join city.</English>
+		<English>[ICON_BULLET]Upgrade to Military or Worker unit. Force build [COLOR_UNIT_TEXT]Improvement[COLOR_REVERT] or [COLOR_UNIT_TEXT]Building[COLOR_REVERT]. Sacrifice or join city.</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Peut être converti en unité militaire ou ouvrière. Peut construire de manière forcée un [COLOR_UNIT_TEXT]aménagement[COLOR_REVERT] ou [COLOR_UNIT_TEXT]Bâtiment[COLOR_REVERT]. Peut être Sacrifié ou rejoindre une ville.</French>
 		<Italian>Può essere migliorato in un lavoratore o in un'unità militare. Può essere costretto a realizzare [COLOR_UNIT_TEXT]Miglioramenti[COLOR_REVERT] o [COLOR_UNIT_TEXT]Edifici[COLOR_REVERT]. Può essere sacrificato o essere aggiunto alla città.</Italian>
 	</TEXT>
@@ -483,7 +483,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FREED_SLAVE_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]May be set free (join your city population as food) or upgraded to workers.</English>
+		<English>[ICON_BULLET]May be set free (join your city population as food) or upgraded to workers.</English>
 		<French>Peut être libéré (rejoint votre ville sous forme de réserve de nourriture) ou amélioré en ouvriers.</French>
 		<Italian>Può essere liberato (che equivale ad aggiungere cibo una-tantum alla tua città) o essere migliorato come lavoratore.</Italian>
 	</TEXT>

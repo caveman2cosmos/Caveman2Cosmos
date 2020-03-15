@@ -23,14 +23,14 @@
 		<UnitInfo>
 			<Type>UNIT_DIPLOMAT_INDUST</Type>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_DEPT_FOREIGN_POLICY_EFFECT</BuildingType>
+				<BuildingType>BUILDING_DEPARTMENT_FOREIGN_EFFECT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_FOREIGN_POLICY</PrereqTech>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_DIPLOMAT_MODERN</Type>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_DEPT_FOREIGN_POLICY_EFFECT</BuildingType>
+				<BuildingType>BUILDING_DEPARTMENT_FOREIGN_EFFECT</BuildingType>
 			</PrereqAndBuildings>
 		</UnitInfo>
 	</UnitInfos>

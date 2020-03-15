@@ -109,7 +109,7 @@
 			<ObsoleteTech>TECH_CONGLOMERATES</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DEPT_FOREIGN_POLICY</Type>
+			<Type>BUILDING_DEPARTMENT_FOREIGN</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5830,7 +5830,7 @@
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_PUBLIC_SCHOOL</BuildingType>
+				<BuildingType>BUILDING_ELEMENTARY_SCHOOL</BuildingType>
 			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
@@ -15297,7 +15297,7 @@
 			</ReplaceBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PUBLIC_SCHOOL</Type>
+			<Type>BUILDING_ELEMENTARY_SCHOOL</Type>
 			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -18234,7 +18234,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EARTHWORM</Type>
+			<Type>BUILDING_GATHERER_EARTHWORM</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>

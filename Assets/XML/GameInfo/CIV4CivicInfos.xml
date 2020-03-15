@@ -5929,7 +5929,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_PUBLIC_SCHOOL</BuildingType>
+					<BuildingType>BUILDING_ELEMENTARY_SCHOOL</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -11265,7 +11265,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_PUBLIC_SCHOOL</BuildingType>
+					<BuildingType>BUILDING_ELEMENTARY_SCHOOL</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -13556,7 +13556,7 @@
 			<SpecialistValids/>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_DEPT_FOREIGN_POLICY</BuildingType>
+					<BuildingType>BUILDING_DEPARTMENT_FOREIGN</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -13799,7 +13799,7 @@
 			<SpecialistValids/>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_DEPT_FOREIGN_POLICY</BuildingType>
+					<BuildingType>BUILDING_DEPARTMENT_FOREIGN</BuildingType>
 					<iHappinessChange>3</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -13923,7 +13923,7 @@
 			<SpecialistValids/>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_DEPT_FOREIGN_POLICY</BuildingType>
+					<BuildingType>BUILDING_DEPARTMENT_FOREIGN</BuildingType>
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -15172,7 +15172,7 @@
 			<Flavors/>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_PUBLIC_SCHOOL</BuildingType>
+					<BuildingType>BUILDING_ELEMENTARY_SCHOOL</BuildingType>
 					<iProductionModifier>25</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
