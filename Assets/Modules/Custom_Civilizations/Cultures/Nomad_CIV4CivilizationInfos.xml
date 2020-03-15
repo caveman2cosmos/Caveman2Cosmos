@@ -576,47 +576,47 @@
 			<ArtStyleType>ARTSTYLE_SOUTH_PACIFIC</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_AUSTRALIA</UnitArtStyleType>
 			<Cities>
-				<City>Canberra</City>
-				<City>Sydney</City>
-				<City>Melbourne</City>
-				<City>Brisbane</City>
-				<City>Adelaide</City>
-				<City>Perth</City>
-				<City>Hobart</City>
-				<City>Darwin</City>
-				<City>Newcastle</City>
-				<City>Wollongong</City>
-				<City>Wagga Wagga</City>
-				<City>Port Macquarie</City>
-				<City>Albury</City>
-				<City>Broken Hill</City>
-				<City>Penrith</City>
-				<City>Katoomba</City>
-				<City>Gold Coast</City>
-				<City>Surfer's Paradise</City>
-				<City>Noosa</City>
-				<City>Coolangatta</City>
-				<City>Townsville</City>
-				<City>Cairns</City>
-				<City>Bundaberg</City>
-				<City>Sunshine Coast</City>
-				<City>Alice Springs</City>
-				<City>Broome</City>
-				<City>Boma</City>
-				<City>Derby</City>
-				<City>Kalgoorlie</City>
-				<City>Cooktown</City>
-				<City>Georgetown</City>
-				<City>Rockhampton</City>
-				<City>Port Hedland</City>
-				<City>Cloncurry</City>
-				<City>Gladstone</City>
-				<City>Hall's Creek</City>
-				<City>Tennant Creek</City>
-				<City>Lincoln</City>
-				<City>Hughenden</City>
-				<City>Mackay</City>
-				<City>Southern Cross</City>
+				<City>TXT_KEY_CITY_NAME_CANBERRA</City>
+				<City>TXT_KEY_CITY_NAME_SYDNEY</City>
+				<City>TXT_KEY_CITY_NAME_MELBOURNE</City>
+				<City>TXT_KEY_CITY_NAME_BRISBANE</City>
+				<City>TXT_KEY_CITY_NAME_ADELAIDE</City>
+				<City>TXT_KEY_CITY_NAME_PERTH</City>
+				<City>TXT_KEY_CITY_NAME_HOBART</City>
+				<City>TXT_KEY_CITY_NAME_DARWIN</City>
+				<City>TXT_KEY_CITY_NAME_NEWCASTLE</City>
+				<City>TXT_KEY_CITY_NAME_WOLLONGONG</City>
+				<City>TXT_KEY_CITY_NAME_WAGGA_WAGGA</City>
+				<City>TXT_KEY_CITY_NAME_PORT_MACQUARIE</City>
+				<City>TXT_KEY_CITY_NAME_ALBURY</City>
+				<City>TXT_KEY_CITY_NAME_BROKEN_HILL</City>
+				<City>TXT_KEY_CITY_NAME_PENRITH</City>
+				<City>TXT_KEY_CITY_NAME_KATOOMBA</City>
+				<City>TXT_KEY_CITY_NAME_GOLD_COAST</City>
+				<City>TXT_KEY_CITY_NAME_SURFERS_PARADISE</City>
+				<City>TXT_KEY_CITY_NAME_NOOSA</City>
+				<City>TXT_KEY_CITY_NAME_COOLANGATTA</City>
+				<City>TXT_KEY_CITY_NAME_TOWNSVILLE</City>
+				<City>TXT_KEY_CITY_NAME_CAIRNS</City>
+				<City>TXT_KEY_CITY_NAME_BUNDABERG</City>
+				<City>TXT_KEY_CITY_NAME_SUNSHINE_COAST</City>
+				<City>TXT_KEY_CITY_NAME_ALICE_SPRINGS</City>
+				<City>TXT_KEY_CITY_NAME_BROOME</City>
+				<City>TXT_KEY_CITY_NAME_BOMA</City>
+				<City>TXT_KEY_CITY_NAME_DERBY</City>
+				<City>TXT_KEY_CITY_NAME_KALGOORLIE</City>
+				<City>TXT_KEY_CITY_NAME_COOKTOWN</City>
+				<City>TXT_KEY_CITY_NAME_GEORGETOWN</City>
+				<City>TXT_KEY_CITY_NAME_ROCKHAMPTON</City>
+				<City>TXT_KEY_CITY_NAME_PORT_HEDLAND</City>
+				<City>TXT_KEY_CITY_NAME_CLONCURRY</City>
+				<City>TXT_KEY_CITY_NAME_GLADSTONE</City>
+				<City>TXT_KEY_CITY_NAME_HALLS_CREEK</City>
+				<City>TXT_KEY_CITY_NAME_TENNANT_CREEK</City>
+				<City>TXT_KEY_CITY_NAME_LINCOLN</City>
+				<City>TXT_KEY_CITY_NAME_HUGHENDEN</City>
+				<City>TXT_KEY_CITY_NAME_MACKAY</City>
+				<City>TXT_KEY_CITY_NAME_SOUTHERN_CROSS</City>
 			</Cities>
 			<FreeBuildings>
 				<FreeBuilding>
