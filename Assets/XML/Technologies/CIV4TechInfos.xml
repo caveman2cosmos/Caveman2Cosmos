@@ -4222,7 +4222,7 @@ Current techs which are not in this file:-
 			<Type>TECH_FUNGICULTURE</Type>
 			<Description>TXT_KEY_TECH_FUNGICULTURE</Description>
 			<Civilopedia>TXT_KEY_TECH_FUNGICULTURE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_HINDUISM_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_TECH_FUNGICULTURE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<iCost>110</iCost>
 			<Era>C2C_ERA_ANCIENT</Era>
