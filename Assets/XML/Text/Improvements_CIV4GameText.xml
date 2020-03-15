@@ -630,7 +630,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_FORTIFY_TO_UPGRADE</Tag>
 		<English>[ICON_BULLET]A unit must guard it to upgrade</English>
-		<French>[ICON_BULLET]Une unité doit renforcer pour mettre à niveau</French>
+		<French>[ICON_BULLET]Une unité doit la garder pour qu'elle évolue</French>
 		<German>[ICON_BULLET]Eine Unit muss stärken, um ein Upgrade</German>
 		<Italian>[ICON_BULLET]Una unità deve fortificare l'aggiornamento</Italian>
 		<Spanish>[ICON_BULLET]Se debe fortificar una unidad aquí para mejorar</Spanish>
@@ -1778,7 +1778,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SEE_FROM</Tag>
 		<English>[ICON_BULLET]%D1_Change Visibility Height</English>
-		<French>[ICON_BULLET]%D1_Change Hauteur de Visibilité</French>
+		<French>[ICON_BULLET]%D1_Change en Hauteur de Visibilité</French>
 		<Italian>[ICON_BULLET]%D1_Change visibilità Altezza</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change a la altura de la visibilidad</Spanish>
 		<Polish>[ICON_BULLET]%D1_Change Wysokość widzenia.</Polish>

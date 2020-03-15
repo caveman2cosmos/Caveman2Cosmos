@@ -53993,7 +53993,7 @@ Base XP gained when defending
 			<DefaultUnitAI>UNITAI_SCIENTIST</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SCIENTIST</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_PEOPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SCIENTIST_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_UNIT_GREAT_SCIENTIST_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<bGoldenAge>1</bGoldenAge>
 			<UnitAIs>

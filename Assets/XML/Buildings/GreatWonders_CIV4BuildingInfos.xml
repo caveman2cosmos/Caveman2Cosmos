@@ -8,14 +8,14 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<!-- Abu Simbel -->
-			<Type>BUILDING_ABU</Type>
+			<Type>BUILDING_ABU_SIMBEL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ABU</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ABU_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ABU_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_ABU_SIMBEL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ABU_SIMBEL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ABU_SIMBEL_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MONARCHY</PrereqTech>
 			<PrereqOrTerrain>
@@ -66,7 +66,7 @@
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_ABU</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ABU_SIMBEL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ABU</MovieDefineTag>
 			<PropertyManipulators>
 				<PropertySource>
@@ -5050,13 +5050,13 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Hadrian's Wall -->
-			<Type>BUILDING_ADRIANOS_WALL</Type>
+			<Type>BUILDING_HADRIAN_WALL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ADRIANOS_WALL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ADRIANOS_WALL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HADRIAN_WALL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HADRIAN_WALL_PEDIA</Civilopedia>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>

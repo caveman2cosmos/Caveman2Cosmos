@@ -1,6 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
+		<Tag>TXT_KEY_PROMOHELP_CHANGE_NOT_SPECIAL_CARGO</Tag>
+		<English>[ICON_BULLET]Does not allow transport of %s1 Units</English>
+		<French>[ICON_BULLET]Ne permet pas le transport de %s1 Unités</French>
+		<Polish>[ICON_BULLET]Nie pozwala na transport %s1</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOHELP_CHANGE_SPECIAL_UNIT</Tag>
+		<English>[ICON_BULLET]Changes the Unit's Special type to %s1</English>
+		<French>[ICON_BULLET]Change le type spécial de l'unité en %s1</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOHELP_INVISIBILITY_NEGATES_VEIL</Tag>
 		<English>[ICON_BULLET]Negates %F1_Invisible Veil</English>
 		<French>[ICON_BULLET]Invisibilité (%F1_Invisible): Désactivé.</French>
@@ -12843,12 +12854,6 @@
 		<Polish>Środki Nie-Śmiercionośne V</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_NOT_SPECIAL_CARGO_CHANGE_TEXT</Tag>
-		<English>[ICON_BULLET]Does not allow transport of %s1_Change Units</English>
-		<French>[ICON_BULLET]Ne permet pas le transport de %s1_Change Unités</French>
-		<Polish>[ICON_BULLET]Nie pozwala na transport %s1_Change</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_NO_DEFENSIVE_BONUS_CHANGE_NEGATIVE_TEXT</Tag>
 		<English>[ICON_BULLET]Removes %D1_Reasons Cause(s) to be unable to benefit from Defense Combat bonuses.</English>
 		<French>[ICON_BULLET]Enlève les %D1_Reasons raisons(s) pour ne pas pouvoir bénéficier des bonus de combat de défense.</French>
@@ -16807,11 +16812,6 @@
 		<English>[ICON_BULLET]Outfits unit to transport %s1_Change Units [COLOR_WARNING_TEXT](And then allows NO OTHER type!)[COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Equipe l'unité pour transporter %s1_Change Unités</French>
 		<Polish>[ICON_BULLET]Przygotowuje jednostkę do transportu innych jednostek %s1_Change</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SPECIAL_UNIT_TEXT</Tag>
-		<English>[ICON_BULLET]Changes the Unit's Special type to %s1_SpecialUnitType</English>
-		<French>[ICON_BULLET]Change le type spécial de l'unité en %s1_SpecialUnitType</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SPEED</Tag>

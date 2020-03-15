@@ -1,24 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_MISSION_ABOMBARD</Tag>
-		<English>Archer Bombard</English>
-		<French>Bombard. d'Archer</French>
-		<German>Bogenschützenbombardierung</German>
-		<Italian>Lancio di frecce a raffica</Italian>
-		<Spanish>Ráfaga de flechas</Spanish>
-		<Polish>Ostrzał Łuczniczy</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_ABOMBARD_HELP</Tag>
-		<English>Select an archer unit, select the archer bombard mission and then select the enemy unit to fire at.</English>
-		<French>Sélectionner une unité de tir à l'arc, pour l'action de Bombardement d'archer, et sélectionner ensuite la case où se trouve l'ennemi à attaquer.</French>
-		<German>Wählen Sie eine Bogenschützeneinheit, wählen Sie die Bombardiermission und anschließend die feindliche Einheit, die beschossen werden soll.</German>
-		<Italian>Seleziona una unità arciere, seleziona la missione "Lancio di frecce a raffica" e infine selezione l'unità nemica da colpire.</Italian>
-		<Spanish>Selecciona un arquero, selecciona la misión "Ráfaga de flechas" y haz clic sobre la unidad enemiga adyacente para bombardearla.</Spanish>
-		<Polish>Wybierz jednostkę łuczniczą, wybierz zdolność atak łuczniczy i wskaż jednostkę wroga do ostrzału.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISSION_AIRBOMB1</Tag>
 		<English>Airbomb Defenses</English>
 		<French>Bombardement des Défenses</French>

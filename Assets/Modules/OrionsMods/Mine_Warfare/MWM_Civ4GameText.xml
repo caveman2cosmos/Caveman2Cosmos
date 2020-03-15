@@ -139,6 +139,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAVAL_MINE_HELP</Tag>
 		<English>[ICON_BULLET]Harmless Until Armed.</English>
+		<French>[ICON_BULLET]Harmless Until Armed.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ARM_MINE</Tag>
@@ -175,6 +176,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LAND_MINE_FIELD_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Land Mine Field[COLOR_REVERT] is invisible to all units and has a hidden nationality.  The land mine field  is lethal and will attack all ships on a plot.  It has a high percentage randum chance of destroying any and all units that move into the plot and will remain persistant, requiring a Mine Sweeper to remove it.  Once armed, the land mine field cannot be disarmed, unless it is disbanded or removed by a Mine Sweeper.</English>
+		<French>The [COLOR_UNIT_TEXT]Terrestre Mine Field[COLOR_REVERT] is invisible to all units and has a hidden nationality.  The land mine field  is lethal and will attack all ships on a plot.  It has a high percentage randum chance of destroying any and all units that move into the plot and will remain persistant, requiring a Mine Sweeper to remove it.  Once armed, the land mine field cannot be disarmed, unless it is disbanded or removed by a Mine Sweeper.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LAND_MINE_PEDIA</Tag>
@@ -187,11 +189,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LAND_MINE_SWEEPER</Tag>
 		<English>Land Mine Sweeper</English>
+		<French>Détecteur de Mines Terrestres</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LAND_MINE_SWEEPER_PEDIA</Tag>
 		<English>The Land Mine Sweeper is a special unit designed to counter the threat posed by land mines. Minesweepers generally detect then neutralize mines in advance of other army operations.</English>
-		<French>The Land Mine Sweeper is a special unit designed to counter the threat posed by land mines.  Minesweepers generally detect then neutralize mines in advance of other army operations.</French>
+		<French>The Terrestre Mine Sweeper is a special unit designed to counter the threat posed by land mines.  Minesweepers generally detect then neutralize mines in advance of other army operations.</French>
 		<Italian>The Land Mine Sweeper is a special unit designed to counter the threat posed by land mines.  Minesweepers generally detect then neutralize mines in advance of other army operations.</Italian>
 		<Spanish>The Land Mine Sweeper is a special unit designed to counter the threat posed by land mines.  Minesweepers generally detect then neutralize mines in advance of other army operations.</Spanish>
 		<Russian>The Land Mine Sweeper is a special unit designed to counter the threat posed by land mines.  Minesweepers generally detect then neutralize mines in advance of other army operations.</Russian>
@@ -201,6 +204,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LAND_MINE_SWEEPER_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Land Mine Sweeper[COLOR_REVERT] can be used to detect and remove enemy land mines.  Use them to protect your Army units from destruction and to open up trade routes.</English>
+		<French>The [COLOR_UNIT_TEXT]Terrestre Mine Sweeper[COLOR_REVERT] can be used to detect and remove enemy land mines.  Use them to protect your Army units from destruction and to open up trade routes.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAVAL_MINE</Tag>

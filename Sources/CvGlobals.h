@@ -1007,7 +1007,6 @@ public:
 	bool isDCM_ATTACK_SUPPORT() const;
 	bool isDCM_OPP_FIRE() const;
 	bool isDCM_ACTIVE_DEFENSE() const;
-	bool isDCM_ARCHER_BOMBARD() const;
 	bool isDCM_FIGHTER_ENGAGE() const;
 
 	bool isDYNAMIC_CIV_NAMES() const;
@@ -1664,7 +1663,6 @@ protected:
 	bool m_bDCM_ATTACK_SUPPORT;
 	bool m_bDCM_OPP_FIRE;
 	bool m_bDCM_ACTIVE_DEFENSE;
-	bool m_bDCM_ARCHER_BOMBARD;
 	bool m_bDCM_FIGHTER_ENGAGE;
 
 	bool m_bDYNAMIC_CIV_NAMES;

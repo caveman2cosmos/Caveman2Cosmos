@@ -2498,7 +2498,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Religions/Kemetism/egypt_shrine.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ABYSSINIA_STELE</Type>
+			<Type>ART_DEF_BUILDING_STELE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -4980,7 +4980,7 @@
 			<Button>Art/Interface/Buttons/National_Wonders/national_courier_service.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ABU</Type>
+			<Type>ART_DEF_BUILDING_ABU_SIMBEL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>

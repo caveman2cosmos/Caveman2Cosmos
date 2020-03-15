@@ -5890,17 +5890,11 @@ void CvPlot::removeGoody()
 
 bool CvPlot::isCity(bool bCheckImprovement, TeamTypes eForTeam) const
 {
-	if (bCheckImprovement && NO_IMPROVEMENT != getImprovementType())
+	if (bCheckImprovement && NO_IMPROVEMENT != getImprovementType() && GC.getImprovementInfo(getImprovementType()).isActsAsCity()
+	&& (NO_TEAM == eForTeam || NO_TEAM == getTeam() && GC.getImprovementInfo(getImprovementType()).isOutsideBorders() || GET_TEAM(eForTeam).isFriendlyTerritory(getTeam())))
 	{
-		if (GC.getImprovementInfo(getImprovementType()).isActsAsCity())
-		{
-			if (NO_TEAM == eForTeam || (NO_TEAM == getTeam() && GC.getImprovementInfo(getImprovementType()).isOutsideBorders()) || GET_TEAM(eForTeam).isFriendlyTerritory(getTeam()))
-			{
-				return true;
-			}
-		}
+		return true;
 	}
-
 	return (getPlotCity() != NULL);
 }
 

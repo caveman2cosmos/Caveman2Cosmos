@@ -1777,15 +1777,6 @@
 		<Polish>[NEWLINE]Opcje 'C2C':</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_REV_MOD_INITIALIZING_ARCHER_BOMBARD</Tag>
-		<English>[NEWLINE][TAB]Archer Bombard</English>
-		<French>[NEWLINE][TAB]Bombardement possible pour Archer</French>
-		<German>[NEWLINE][TAB]Bogenschützenbombardierung</German>
-		<Italian>[NEWLINE][TAB]"Lancio di frecce a raffica"</Italian>
-		<Spanish>[NEWLINE][TAB]Cortina de flechas</Spanish>
-		<Polish>[NEWLINE][TAB]Atak Łuczniczy</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_ATTACK_SUPPORT</Tag>
 		<English>[NEWLINE][TAB]Attack Support</English>
 		<French>[NEWLINE][TAB]Support d'Attaque</French>

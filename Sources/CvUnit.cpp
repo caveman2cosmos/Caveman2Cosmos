@@ -14319,22 +14319,17 @@ BuildTypes CvUnit::getBuildType() const
 		case MISSION_LEAD:
 		case MISSION_ESPIONAGE:
 		case MISSION_DIE_ANIMATION:
-		// Dale - AB: Bombing START
+		// Dale - AB: Bombing
 		case MISSION_AIRBOMB1:
 		case MISSION_AIRBOMB2:
 		case MISSION_AIRBOMB3:
 		case MISSION_AIRBOMB4:
 		case MISSION_AIRBOMB5:
-		// Dale - AB: Bombing END
-		// Dale - RB: Field Bombard START
+		// Dale - RB: Field Bombard
 		case MISSION_RBOMBARD:
-		// Dale - RB: Field Bombard END
-		// Dale - ARB: Archer Bombard START
-		case MISSION_ABOMBARD:
-		// Dale - ARB: Archer Bombard END
-		// Dale - FE: Fighters START
+		// Dale - FE: Fighters
 		case MISSION_FENGAGE:
-		// Dale - FE: Fighters END
+		// ! Dale
 		case MISSION_HURRY_FOOD:
 		case MISSION_INQUISITION:
 		case MISSION_CLAIM_TERRITORY:
@@ -32108,219 +32103,6 @@ void CvUnit::doActiveDefense()
 }
 // Dale - SA: Active Defense END
 
-// Dale - ARB: Archer Bombard START
-bool CvUnit::canArcherBombard() const
-{
-	if(!GC.isDCM_ARCHER_BOMBARD())
-	{
-		return false;
-	}
-
-// TB SubCombat Mod Begin - Original code
-	//if (!(GC.getUnitInfo(getUnitType()).getUnitCombatType() == (UnitCombatTypes)1))
-	//{
-	//	return false;
-	//}
-// New Code:
-	if (!isArcher())
-	{
-		return false;
-	}
-	//TB SubCombat Mod End
-	if (isMadeAttack())
-	{
-		return false;
-	}
-	if (isCargo())
-	{
-		return false;
-	}
-	return true;
-}
-
-bool CvUnit::canArcherBombardAt(const CvPlot* fromPlot, int iX, int iY) const
-{
-	if (!canArcherBombard())
-	{
-		return false;
-	}
-
-	CvPlot* pTargetPlot = GC.getMap().plot(iX, iY);
-
-	if (!pTargetPlot)
-	{
-		return false;
-	}
-
-	if (plotDistance(fromPlot->getX(), fromPlot->getY(), pTargetPlot->getX(), pTargetPlot->getY()) > 1)
-	{
-		return false;
-	}
-
-	if(pTargetPlot->getNumVisiblePotentialEnemyDefenders(this) == 0)
-	{
-		return false;
-	}
-
-	if (pTargetPlot->isOwned())
-	{
-		if(pTargetPlot->getTeam() != getTeam())
-		{
-			if (!atWar(pTargetPlot->getTeam(), getTeam()))
-			{
-				return false;
-			}
-		}
-	}
-
-	return true;
-}
-
-bool CvUnit::archerBombard(int iX, int iY, bool supportAttack)
-{
-	//TB Note: Would like to provide archers with the potential to gain promos to enhance dmg and accuracy on this action
-	//And need some defenses for units against this effect, perhaps even implement armor vs puncture here and just use Armor VS Combat Class tag to assist.
-	CvPlot* pPlot;
-	CvWString szBuffer;
-	CvUnit* pLoopUnit = NULL;
-	int iDefenderNum, iUnitDamage;
-	bool bTarget = false;
-	if (!canArcherBombardAt(plot(), iX, iY))
-	{
-		return false;
-	}
-	pPlot = GC.getMap().plot(iX, iY);
-	iDefenderNum = pPlot->getNumVisiblePotentialEnemyDefenders(this);
-	if(iDefenderNum == 0)
-	{
-		return false;
-	}
-
-	// RevolutionDCM - getBestDefender() now used in all cases
-	pLoopUnit = pPlot->getBestDefender(NO_PLAYER, getOwner(), this, true);
-
-	if (GC.getGame().getSorenRandNum(100, "Bombard Accuracy") <= getDCMBombAccuracy())
-	{
-		bTarget = true;
-	}
-	else
-	{
-		MEMORY_TRACK_EXEMPT();
-
-		szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_BOMB_MISSED", getNameKey());
-		AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX(), getY(), true, true);
-		szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_BOMB_MISSED", getNameKey());
-		// RevolutionDCM - Archer Bombard fix - text display
-		AddDLLMessage(pLoopUnit->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX(), getY());
-	}
-	if (bTarget)
-	{
-		//RevolutionDCM - Archer Bombard fix - report killed units
-		iUnitDamage = std::max(1, ((GC.getDefineINT("COMBAT_DAMAGE") * (currFirepower(NULL, NULL) + ((currFirepower(NULL, NULL) + pLoopUnit->currFirepower(NULL, NULL) + 1) / 2))) / (pLoopUnit->currFirepower(pPlot, this) + ((currFirepower(NULL, NULL) + pLoopUnit->currFirepower(NULL, NULL) + 1) / 2))));
-		pLoopUnit->setupPreCombatDamage();
-		pLoopUnit->changeDamage(iUnitDamage, getOwner());
-		//TB Combat Mod begin
-		if (dealsColdDamage())
-		{
-			pLoopUnit->changeColdDamage(iUnitDamage);
-		}
-		//TB Combat Mod end
-		if (pLoopUnit->isDead())
-		{
-			if (pLoopUnit->isNPC())
-			{
-				GET_PLAYER(getOwner()).changeWinsVsBarbs(1);
-			}
-			if (!isHiddenNationality() && !pLoopUnit->isHiddenNationality())
-			{
-				int	attackerPreCombatDamage = getPreCombatDamage();
-				int defenderPreCombatDamage = pLoopUnit->getPreCombatDamage();
-
-				int	defenderWarWearinessChangeTimes100 = std::max(1, (GC.getDefineINT("WW_UNIT_KILLED_DEFENDING")*(pLoopUnit->maxHitPoints() - defenderPreCombatDamage))/pLoopUnit->maxHitPoints());
-				GET_TEAM(pLoopUnit->getTeam()).changeWarWearinessTimes100(getTeam(), *pPlot, defenderWarWearinessChangeTimes100);
-
-				GET_TEAM(getTeam()).AI_changeWarSuccess(pLoopUnit->getTeam(), GC.getDefineINT("WAR_SUCCESS_ATTACKING"));
-			}
-
-			{
-				MEMORY_TRACK_EXEMPT();
-
-				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_DESTROYED_ENEMY", getNameKey(), pLoopUnit->getNameKey());
-				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGame().getCurrentEra()).getAudioUnitVictoryScript(), MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
-				if (getVisualOwner(pLoopUnit->getTeam()) != getOwner())
-				{
-					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_WAS_DESTROYED_UNKNOWN", pLoopUnit->getNameKey(), getNameKey());
-				}
-				else
-				{
-					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_WAS_DESTROYED", pLoopUnit->getNameKey(), getNameKey(), getVisualCivAdjective(pLoopUnit->getTeam()));
-				}
-				AddDLLMessage(pLoopUnit->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer,GC.getEraInfo(GC.getGame().getCurrentEra()).getAudioUnitDefeatScript(), MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY());
-			}
-
-			// report event to Python, along with some other key state
-			CvEventReporter::getInstance().combatResult(this, pLoopUnit);
-			//pLoopUnit->getUnitInfo().getKillOutcomeList()->execute(*this, pLoopUnit->getOwner(), pLoopUnit->getUnitType());
-
-			CvOutcomeListMerged list;
-			list.addOutcomeList(pLoopUnit->getUnitInfo().getKillOutcomeList());
-			for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-			{
-				if (pLoopUnit->isHasUnitCombat((UnitCombatTypes)iI))
-				{
-					UnitCombatTypes eCombat = (UnitCombatTypes)iI;
-					CvOutcomeList* pOutcomeList = GC.getUnitCombatInfo(eCombat).getKillOutcomeList();
-					list.addOutcomeList(pOutcomeList);
-				}
-			}
-			list.execute(*this, pLoopUnit->getOwner(), pLoopUnit->getUnitType());
-
-			/*for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-			{
-				if (pLoopUnit->isHasUnitCombat((UnitCombatTypes)iI))
-				{
-					UnitCombatTypes eCombat = (UnitCombatTypes)iI;
-					CvOutcomeList* pOutcomeList = GC.getUnitCombatInfo(eCombat).getKillOutcomeList();
-					pOutcomeList->execute(*this, pLoopUnit->getOwner(), pLoopUnit->getUnitType());
-				}
-			}*/
-		}
-		else
-		{
-			MEMORY_TRACK_EXEMPT();
-			//TB Note: re-including original but commented out.  Once I see the damage mentioned I may want to tweak the coding rather than completely over-write its intention.
-//original:	szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_ATTACK_BY_AIR", getNameKey(), pLoopUnit->getNameKey(), -(((iUnitDamage - pLoopUnit->getDamage()) * 100) / pLoopUnit->maxHitPoints()));
-			szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_ATTACK_BY_AIR", getNameKey(), pLoopUnit->getNameKey(), -iUnitDamage);
-			AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_AIR_ATTACKED", MESSAGE_TYPE_INFO, pLoopUnit->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
-//original:	szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_ARE_ATTACKED_BY_AIR", pLoopUnit->getNameKey(), getNameKey(), -(((iUnitDamage - pLoopUnit->getDamage()) * 100) / pLoopUnit->maxHitPoints()));
-			szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_ARE_ATTACKED_BY_AIR", pLoopUnit->getNameKey(), getNameKey(), -iUnitDamage);
-			AddDLLMessage(pLoopUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_AIR_ATTACK", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX(), pPlot->getY(), true, true);
-		}
-		// RevolutionDCM - end
-/************************************************************************************************/
-/* RevolutionDCM	                  Start		 05/31/10                        Afforess       */
-/*                                                                                              */
-/* Battle Effects                                                                               */
-/************************************************************************************************/
-		setBattlePlot(pPlot, pLoopUnit);
-/************************************************************************************************/
-/* RevolutionDCM	             Battle Effects END                                             */
-/************************************************************************************************/
-	}
-
-	if (!supportAttack)
-	{
-		setMadeAttack(true);
-		changeMoves(GC.getMOVE_DENOMINATOR());
-	}
-
-	// Bombard entity mission
-	addMission(CvMissionDefinition(MISSION_BOMBARD, pPlot, this, pLoopUnit, GC.getMissionInfo(MISSION_ABOMBARD).getTime()* gDLL->getSecsPerTurn()));
-
-	return true;
-}
-// Dale - ARB: Archer Bombard END
-
 // Dale - FE: Fighters START
 bool CvUnit::canFEngage() const
 {
@@ -32605,7 +32387,11 @@ float CvUnit::doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWith
 						MEMORY_TRACK_EXEMPT();
 
 						CvWString szBuffer;
-						szBuffer.Format(L"City militia has emerged! Resistance: %.1f%%", fResistence);
+						CvWString szResistence;
+						szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_MILITIA_EMERGED");
+						szResistence.Format(L" %.1f%%", fResistence);				
+						szBuffer += szResistence;
+						//szBuffer.Format(L"City militia has emerged! Resistance: %.1f%%", fResistence);
 						AddDLLMessage(pLoserUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNIT_BUILD_UNIT", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pLoserPlot->getX(), pLoserPlot->getY(), true, true);
 						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNIT_BUILD_UNIT", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pLoserPlot->getX(), pLoserPlot->getY());
 					}

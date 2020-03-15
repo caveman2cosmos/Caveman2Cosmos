@@ -280,7 +280,6 @@ public:
 	bool isWorldWondersMaxed() const; // Exposed to Python
 	bool isTeamWondersMaxed() const; // Exposed to Python
 	bool isNationalWondersMaxed() const; // Exposed to Python
-	bool isBuildingsMaxed() const; // Exposed to Python
 	int getMaxNumWorldWonders() const; // Exposed to Python
 	int getMaxNumTeamWonders() const; // Exposed to Python
 	int getMaxNumNationalWonders() const; // Exposed to Python
@@ -1843,16 +1842,8 @@ protected:
 	int m_iBonusGoodHealth;
 	int m_iBonusBadHealth;
 	int m_iHurryAngerTimer;
-/************************************************************************************************/
-/* REVOLUTION_MOD                         04/28/08                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	int m_iRevRequestAngerTimer;
 	int m_iRevSuccessTimer;
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
 	int m_iConscriptAngerTimer;
 	int m_iDefyResolutionAngerTimer;
 	int m_iHappinessTimer;
@@ -2141,8 +2132,8 @@ protected:
 	bool* m_pabHasReligion;
 	bool* m_pabHasCorporation;
 
-	int		m_deferringBonusProcessingCount;
-	int*	m_paiStartDeferredSectionNumBonuses;
+	int	m_deferringBonusProcessingCount;
+	int* m_paiStartDeferredSectionNumBonuses;
 
 	CvProperties m_Properties;
 	CvBuildingList m_BuildingList;
