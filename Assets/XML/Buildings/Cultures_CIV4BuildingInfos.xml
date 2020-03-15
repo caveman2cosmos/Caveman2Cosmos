@@ -3584,7 +3584,7 @@
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_ABU</BuildingType>
+					<BuildingType>BUILDING_ABU_SIMBEL</BuildingType>
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -3641,7 +3641,7 @@
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_ADRIANOS_WALL</BuildingType>
+					<BuildingType>BUILDING_HADRIAN_WALL</BuildingType>
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -7740,7 +7740,7 @@
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_ADRIANOS_WALL</BuildingType>
+					<BuildingType>BUILDING_HADRIAN_WALL</BuildingType>
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>

@@ -65157,7 +65157,7 @@
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 				<ReplaceBuilding>
-					<BuildingType>BUILDING_ABYSSINIA_STELE</BuildingType>
+					<BuildingType>BUILDING_STELE</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 				<ReplaceBuilding>
@@ -91195,12 +91195,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Stele -->
-			<Type>BUILDING_ABYSSINIA_STELE</Type>
-			<Description>TXT_KEY_BUILDING_ABYSSINIA_STELE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ABYSSINIA_STELE_PEDIA</Civilopedia>
+			<Type>BUILDING_STELE</Type>
+			<Description>TXT_KEY_BUILDING_STELE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_STELE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_OBELISK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ABYSSINIA_STELE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_STELE</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_OBELISK</ConstructSound>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
