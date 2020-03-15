@@ -160,9 +160,9 @@ const CvTerrainInfo* CyGlobalContext::getTerrainInfo(int /*TerrainTypes*/ i) con
 	return i >= 0 && i < GC.numTypes<CvTerrainInfo>() ? &GC.get<CvTerrainInfo>(i) : NULL;
 }
 
-CvBonusClassInfo* CyGlobalContext::getBonusClassInfo(int /*BonusClassTypes*/ i) const
+const CvBonusClassInfo* CyGlobalContext::getBonusClassInfo(int /*BonusClassTypes*/ i) const
 {
-	return (i > 0 && i < GC.getNumBonusClassInfos() ? &GC.getBonusClassInfo((BonusClassTypes) i) : NULL);
+	return i > 0 && i < GC.numTypes<CvBonusClassInfo>() ? &GC.get<CvBonusClassInfo>(i) : NULL;
 }
 
 

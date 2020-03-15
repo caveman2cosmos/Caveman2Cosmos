@@ -1266,7 +1266,7 @@ void cvInternalGlobals::updateReplacements()
 	m_TechInfoReplacements.updateReplacements(getTechInfos());
 	m_TraitInfoReplacements.updateReplacements(getTraitInfos());
 	m_PromotionInfoReplacements.updateReplacements(getPromotionInfos());
-	m_BonusClassInfoReplacements.updateReplacements(getBonusClassInfos());
+	m_BonusClassInfo.updateReplacements();
 	m_BonusInfoReplacements.updateReplacements(getBonusInfos());
 	m_ImprovementInfoReplacements.updateReplacements(getImprovementInfos());
 	m_BuildingInfoReplacements.updateReplacements(getBuildingInfos());
@@ -1337,23 +1337,6 @@ std::vector<CvGameText*>& cvInternalGlobals::getGameTextXMLs()
 	return m_paGameTextXML;
 }
 
-// Landscape INFOS
-int cvInternalGlobals::getNumLandscapeInfos() const
-{
-	return (int)m_paLandscapeInfo.size();
-}
-
-std::vector<CvLandscapeInfo*>& cvInternalGlobals::getLandscapeInfos()
-{
-	return m_paLandscapeInfo;
-}
-
-CvLandscapeInfo& cvInternalGlobals::getLandscapeInfo(int iIndex) const
-{
-	FAssertMsg(iIndex >= 0 && iIndex < GC.getNumLandscapeInfos(), "LandscapeInfo index out of bounds");
-	return *(m_paLandscapeInfo[iIndex]);
-}
-
 int cvInternalGlobals::getActiveLandscapeID() const
 {
 	return m_iActiveLandscapeID;
@@ -1363,28 +1346,6 @@ void cvInternalGlobals::setActiveLandscapeID(int iLandscapeID)
 {
 	m_iActiveLandscapeID = iLandscapeID;
 }
-
-int cvInternalGlobals::getNumBonusClassInfos() const
-{
-	return (int)m_paBonusClassInfo.size();
-}
-
-std::vector<CvBonusClassInfo*>& cvInternalGlobals::getBonusClassInfos()	// For Moose - XML Load Util, CvInfos
-{
-	return m_paBonusClassInfo;
-}
-
-CvBonusClassInfo& cvInternalGlobals::getBonusClassInfo(BonusClassTypes eBonusNum) const
-{
-	FAssertMsg(eBonusNum >= 0 && eBonusNum < GC.getNumBonusClassInfos(), "BonusClassInfo index out of bounds");
-	return *(m_paBonusClassInfo[eBonusNum]);
-}
-
-CvInfoReplacements<CvBonusClassInfo>* cvInternalGlobals::getBonusClassInfoReplacements()
-{
-	return &m_BonusClassInfoReplacements;
-}
-
 
 int cvInternalGlobals::getNumBonusInfos() const
 {
@@ -4791,9 +4752,9 @@ void cvInternalGlobals::deleteInfoArrays()
 	deleteInfoArray(m_paYieldInfo);
 	m_TerrainInfo.clear();
 	deleteInfoArray(m_paFeatureInfo);
-	deleteInfoArray(m_paBonusClassInfo);
+	m_BonusClassInfo.clear();
 	deleteInfoArray(m_paBonusInfo);
-	deleteInfoArray(m_paLandscapeInfo);
+	m_LandscapeInfo.clear();
 
 	m_paUnitFormationInfo.clear();
 	deleteInfoArray(m_paCivicOptionInfo);

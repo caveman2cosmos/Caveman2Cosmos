@@ -1524,9 +1524,9 @@ TechTypes getDiscoveryTech(UnitTypes eUnit, PlayerTypes ePlayer)
 
 		int iBestValue = 0;
 
-		std::vector<int> paiBonusClassRevealed(GC.getNumBonusClassInfos());
-		std::vector<int> paiBonusClassUnrevealed(GC.getNumBonusClassInfos());
-		std::vector<int> paiBonusClassHave(GC.getNumBonusClassInfos());
+		std::vector<int> paiBonusClassRevealed(GC.numTypes<CvBonusClassInfo>());
+		std::vector<int> paiBonusClassUnrevealed(GC.numTypes<CvBonusClassInfo>());
+		std::vector<int> paiBonusClassHave(GC.numTypes<CvBonusClassInfo>());
 
 		bool bBonusArrayCalculated = false;
 

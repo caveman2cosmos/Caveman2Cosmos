@@ -307,12 +307,7 @@ CvXMLLoadUtility::~CvXMLLoadUtility()
 //------------------------------------------------------------------------------------------------------
 void CvXMLLoadUtility::ResetLandscapeInfo()
 {
-	for (int i = 0; i < GC.getNumLandscapeInfos(); ++i)
-	{
-		SAFE_DELETE(GC.getLandscapeInfos()[i]);
-	}
-
-	GC.getLandscapeInfos().clear();
+	GC.m_LandscapeInfo.clear();
 
 	SetupGlobalLandscapeInfo();
 }

@@ -59,7 +59,7 @@ public:
 
 	const CvEffectInfo* getEffectInfo(int i) const;
 	const CvTerrainInfo* getTerrainInfo(int i) const;
-	CvBonusClassInfo* getBonusClassInfo(int i) const;
+	const CvBonusClassInfo* getBonusClassInfo(int i) const;
 	CvBonusInfo* getBonusInfo(int i) const;
 	CvFeatureInfo* getFeatureInfo(int i) const;
 	CvCivilizationInfo* getCivilizationInfo(int idx) const;

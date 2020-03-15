@@ -180,10 +180,10 @@ void CvMap::reset(CvMapInitData* pInitInfo)
 		}
 
 		// convert to plot dimensions
-		if (GC.getNumLandscapeInfos() > 0)
+		if (GC.numTypes<CvLandscapeInfo>() > 0)
 		{
-			m_iGridWidth *= GC.getLandscapeInfo(GC.getActiveLandscapeID()).getPlotsPerCellX();
-			m_iGridHeight *= GC.getLandscapeInfo(GC.getActiveLandscapeID()).getPlotsPerCellY();
+			m_iGridWidth *= GC.get<CvLandscapeInfo>(GC.getActiveLandscapeID()).getPlotsPerCellX();
+			m_iGridHeight *= GC.get<CvLandscapeInfo>(GC.getActiveLandscapeID()).getPlotsPerCellY();
 		}
 	}
 

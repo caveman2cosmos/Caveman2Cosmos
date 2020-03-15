@@ -15206,13 +15206,13 @@ EffectTypes CvPlot::getBattleEffect()
 
 void CvPlot::setBattleEffect()
 {
-	const int effectsCount = GC.getNumEffectInfos();
+	const int effectsCount = GC.numTypes<CvEffectInfo>();
 	int iRandOffset = GC.getASyncRand().get(effectsCount);
 	for (int iI = 0; iI < effectsCount; iI++)
 	{
 		//Randomly loop over the effect types, so that the chosen effect is different each time
 		EffectTypes eLoopEffect = (EffectTypes)((iI + iRandOffset) % effectsCount);
-		if (GC.getEffectInfo(eLoopEffect).isBattleEffect())
+		if (GC.get<CvEffectInfo>(eLoopEffect).isBattleEffect())
 		{
 			m_eBattleEffect = eLoopEffect;
 			return;
@@ -16470,7 +16470,7 @@ void CvPlot::unitGameStateCorrections()
 
 bool CvPlot::isMapCategoryType(MapCategoryTypes eIndex) const
 {
-	const CvTerrainInfo& kTerrain = GC.get<CvTerrainInfo>(getTerrainType());
+	CvTerrainInfo& kTerrain = GC.get<CvTerrainInfo>(getTerrainType());
 	const int iNumTypes = kTerrain.getNumMapCategoryTypes();
 	if (iNumTypes > 0)
 	{

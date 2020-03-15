@@ -8719,11 +8719,11 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 				int* paiBonusClassUnrevealed;
 				int* paiBonusClassHave;
 
-				paiBonusClassRevealed = new int[GC.getNumBonusClassInfos()];
-				paiBonusClassUnrevealed = new int[GC.getNumBonusClassInfos()];
-				paiBonusClassHave = new int[GC.getNumBonusClassInfos()];
+				paiBonusClassRevealed = new int[GC.numTypes<CvBonusClassInfo>()];
+				paiBonusClassUnrevealed = new int[GC.numTypes<CvBonusClassInfo>()];
+				paiBonusClassHave = new int[GC.numTypes<CvBonusClassInfo>()];
 
-				for (int iI = 0; iI < GC.getNumBonusClassInfos(); iI++)
+				for (int iI = 0; iI < GC.numTypes<CvBonusClassInfo>(); iI++)
 				{
 					paiBonusClassRevealed[iI] = 0;
 					paiBonusClassUnrevealed[iI] = 0;

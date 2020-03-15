@@ -72,9 +72,9 @@ bool CvMapGenerator::canPlaceBonusAt(BonusTypes eBonus, int iX, int iY, bool bIg
 		}
 	}
 
-	CvBonusInfo& pInfo = GC.getBonusInfo(eBonus);
-	int iBonusClassType = pInfo.getBonusClassType();
-	CvBonusClassInfo& pClassInfo = GC.getBonusClassInfo((BonusClassTypes) iBonusClassType);
+	const CvBonusInfo& pInfo = GC.getBonusInfo(eBonus);
+	const int iBonusClassType = pInfo.getBonusClassType();
+	const CvBonusClassInfo& pClassInfo = GC.get<CvBonusClassInfo>(iBonusClassType);
 
 	if (pPlot->isWater()
 	&& GC.getMap().getNumBonusesOnLand(eBonus) * 100 / (GC.getMap().getNumBonuses(eBonus) + 1) < pInfo.getMinLandPercent())

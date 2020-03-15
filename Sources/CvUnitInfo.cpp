@@ -5607,7 +5607,7 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 		{
 			if ( NULL == m_piTerrainPassableTech )
 			{
-				CvXMLLoadUtility::InitList(&m_piTerrainPassableTech, GC.numTypes<CvTerrainInfo>(), NO_TECH);
+				CvXMLLoadUtility::InitList(&m_piTerrainPassableTech, GC.numTypes<CvTerrainInfo>(), (int)NO_TECH);
 			}
 			m_piTerrainPassableTech[i] = pClassInfo->getTerrainPassableTech(i);
 		}

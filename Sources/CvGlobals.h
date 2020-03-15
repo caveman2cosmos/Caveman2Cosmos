@@ -415,45 +415,47 @@ public:
 	template <class CvInfo>
 	CvInfoReplacements<CvInfo>* getReplacements() { FAssertMsg(false, NEEDS_PARAM); return NULL; }
 
-#define DECLARE_INFO_CONTAINER(CvInfo, enum, infoVector) \
+#define DECLARE_INFO_CONTAINER(CvInfo, enum, memberVector) \
 public: \
 	template<> \
-	inline int numTypes<CvInfo>() const { return infoVector.numTypes(); } \
+	inline int numTypes<CvInfo>() const { return memberVector.numTypes(); } \
 \
 	template<> \
-	std::vector<CvInfo*>& get<CvInfo>() { return infoVector.getVector(); } \
+	std::vector<CvInfo*>& get<CvInfo>() { return memberVector.getVector(); } \
 \
 	template<> \
-	const std::vector<CvInfo*>& get<CvInfo>() const { return infoVector.getVector(); } \
+	const std::vector<CvInfo*>& get<CvInfo>() const { return memberVector.getVector(); } \
 \
 	template<> \
-	inline CvInfo& get<CvInfo>(enum index) { return infoVector.getInfo(index); } \
+	inline CvInfo& get<CvInfo>(enum index) { return memberVector.getInfo(index); } \
 \
 	template<> \
-	inline const CvInfo& get<CvInfo>(enum index) const { return infoVector.getInfo(index); } \
+	inline const CvInfo& get<CvInfo>(enum index) const { return memberVector.getInfo(index); } \
 \
 	template<> \
-	inline CvInfo& get<CvInfo>(int index) { return infoVector.getInfo(index); } \
+	inline CvInfo& get<CvInfo>(int index) { return memberVector.getInfo(index); } \
 \
 	template<> \
-	inline const CvInfo& get<CvInfo>(int index) const { return infoVector.getInfo(index); } \
+	inline const CvInfo& get<CvInfo>(int index) const { return memberVector.getInfo(index); } \
 \
 	template<> \
-	CvInfoReplacements<CvInfo>* getReplacements<CvInfo>() { return infoVector.getReplacements(); } \
+	CvInfoReplacements<CvInfo>* getReplacements<CvInfo>() { return memberVector.getReplacements(); } \
 \
 protected: \
-	InfosVector<CvInfo> infoVector;
+	InfosVector<CvInfo> memberVector;
 
 	DECLARE_INFO_CONTAINER(CvAdvisorInfo, AdvisorTypes, m_AdvisorInfo);
 	DECLARE_INFO_CONTAINER(CvAnimationCategoryInfo, AnimationCategoryTypes, m_AnimationCategoryInfo);
 	DECLARE_INFO_CONTAINER(CvAnimationPathInfo, AnimationPathTypes, m_AnimationPathInfo);
 	DECLARE_INFO_CONTAINER(CvAttachableInfo, size_t, m_AttachableInfo);
+	DECLARE_INFO_CONTAINER(CvBonusClassInfo, BonusClassTypes, m_BonusClassInfo);
 	//DECLARE_INFO_CONTAINER(CvCameraInfo, CameraAnimationTypes, m_CameraInfo);
 	DECLARE_INFO_CONTAINER(CvCameraOverlayInfo, size_t, m_CameraOverlayInfo);
 	DECLARE_INFO_CONTAINER(CvClimateInfo, ClimateTypes, m_ClimateInfo);
 	DECLARE_INFO_CONTAINER(CvColorInfo, ColorTypes, m_ColorInfo);
-	DECLARE_INFO_CONTAINER(CvEffectInfo, size_t, m_EffectInfo);
+	DECLARE_INFO_CONTAINER(CvEffectInfo, EffectTypes, m_EffectInfo);
 	DECLARE_INFO_CONTAINER(CvEntityEventInfo, EntityEventTypes, m_EntityEventInfo);
+	DECLARE_INFO_CONTAINER(CvLandscapeInfo, size_t, m_LandscapeInfo);
 	DECLARE_INFO_CONTAINER(CvPlayerColorInfo, PlayerColorTypes, m_PlayerColorInfo);
 	//DECLARE_INFO_CONTAINER(CvRiverInfo, CvRiverInfo, m_RiverInfo);
 	DECLARE_INFO_CONTAINER(CvRiverModelInfo, size_t, m_RiverModelInfo);
@@ -469,16 +471,8 @@ public:
 	int getNumGameTextXML() const;
 	std::vector<CvGameText*>& getGameTextXMLs();
 
-	int getNumLandscapeInfos() const;
-	std::vector<CvLandscapeInfo*>& getLandscapeInfos();
-	CvLandscapeInfo& getLandscapeInfo(int iIndex) const;
 	int getActiveLandscapeID() const;
 	void setActiveLandscapeID(int iLandscapeID);
-
-	int getNumBonusClassInfos() const;
-	std::vector<CvBonusClassInfo*>& getBonusClassInfos();
-	CvBonusClassInfo& getBonusClassInfo(BonusClassTypes eBonusNum) const;
-	CvInfoReplacements<CvBonusClassInfo>* getBonusClassInfoReplacements();
 
 	int getNumBonusInfos() const;
 	std::vector<CvBonusInfo*>& getBonusInfos();
@@ -1486,8 +1480,6 @@ protected:
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 END                                                  */
 /************************************************************************************************/
-	CvInfoReplacements<CvTerrainInfo> m_TerrainInfoReplacements;
-	std::vector<CvLandscapeInfo*> m_paLandscapeInfo;
 	int m_iActiveLandscapeID;
 	std::vector<CvYieldInfo*> m_paYieldInfo;
 	std::vector<CvCommerceInfo*> m_paCommerceInfo;
@@ -1495,8 +1487,6 @@ protected:
 	CvInfoReplacements<CvRouteInfo> m_RouteInfoReplacements;
 	std::vector<CvFeatureInfo*> m_paFeatureInfo;
 	CvInfoReplacements<CvFeatureInfo> m_FeatureInfoReplacements;
-	std::vector<CvBonusClassInfo*> m_paBonusClassInfo;
-	CvInfoReplacements<CvBonusClassInfo> m_BonusClassInfoReplacements;
 	std::vector<CvBonusInfo*> m_paBonusInfo;
 	CvInfoReplacements<CvBonusInfo> m_BonusInfoReplacements;
 	std::vector<CvImprovementInfo*> m_paImprovementInfo;
@@ -1982,7 +1972,13 @@ public:
 	~ProxyTracker();
 };
 
-#define PROXY_TRACK(x)	ProxyTracker tracker(this,x);
+#define PROXY_TRACK(func) \
+	ProxyTracker tracker(this, func); \
+	return gGlobals->func();
+
+#define PROXY_TRACK(func, arg) \
+	ProxyTracker tracker(this, func); \
+	return gGlobals->func(arg);
 
 #else
 #define	PROXY_TRACK(x)	;
@@ -2389,7 +2385,7 @@ public:
 	DllExport CvLandscapeInfo& getLandscapeInfo(int iIndex)
 	{
 		PROXY_TRACK("getLandscapeInfo");
-		return gGlobals->getLandscapeInfo(iIndex);
+		return gGlobals->get<CvLandscapeInfo>(iIndex);
 	}
 	DllExport int getActiveLandscapeID()
 	{

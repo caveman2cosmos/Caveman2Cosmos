@@ -1723,11 +1723,11 @@ int CvTeamAI::AI_techTradeVal(TechTypes eTech, TeamTypes eTeam) const
 			}
 		}
 
-		int* paiBonusClassRevealed = new int[GC.getNumBonusClassInfos()];
-		int* paiBonusClassUnrevealed = new int[GC.getNumBonusClassInfos()];
-		int* paiBonusClassHave = new int[GC.getNumBonusClassInfos()];
+		int* paiBonusClassRevealed = new int[GC.numTypes<CvBonusClassInfo>()];
+		int* paiBonusClassUnrevealed = new int[GC.numTypes<CvBonusClassInfo>()];
+		int* paiBonusClassHave = new int[GC.numTypes<CvBonusClassInfo>()];
 
-		for (iI = 0; iI < GC.getNumBonusClassInfos(); iI++)
+		for (iI = 0; iI < GC.numTypes<CvBonusClassInfo>(); iI++)
 		{
 			paiBonusClassRevealed[iI] = 0;
 			paiBonusClassUnrevealed[iI] = 0;

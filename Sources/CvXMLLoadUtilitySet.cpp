@@ -669,7 +669,7 @@ bool CvXMLLoadUtility::SetupGlobalLandscapeInfo()
 		return false;
 	}
 
-	LoadGlobalClassInfo(GC.getLandscapeInfos(), "CIV4TerrainSettings", "Terrain", L"/Civ4TerrainSettings/LandscapeInfos/LandscapeInfo", false);
+	LoadGlobalClassInfo(GC.get<CvLandscapeInfo>(), "CIV4TerrainSettings", "Terrain", L"/Civ4TerrainSettings/LandscapeInfos/LandscapeInfo", false);
 
 	// delete the pointer to the FXml variable
 	DestroyFXml();
@@ -937,7 +937,7 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	LoadGlobalClassInfo(GC.get<CvAdvisorInfo>(), "CIV4AdvisorInfos", "Interface", L"/Civ4AdvisorInfos/AdvisorInfos/AdvisorInfo", false);
 	LoadGlobalClassInfo(GC.getIdeaClassInfos(), "CIV4IdeaClassInfos", "GameInfo", L"/Civ4IdeaClassInfos/IdeaClassInfos/IdeaClassInfo", false);
 	LoadGlobalClassInfo(GC.getIdeaInfos(), "CIV4IdeaInfos", "GameInfo", L"/Civ4IdeaInfos/IdeaInfos/IdeaInfo", false);
-	LoadGlobalClassInfo(GC.m_TerrainInfo, "CIV4TerrainInfos", "Terrain", L"/Civ4TerrainInfos/TerrainInfos/TerrainInfo", false, GC.m_TerrainInfo.getReplacements());
+	LoadGlobalClassInfo(GC.get<CvTerrainInfo>(), "CIV4TerrainInfos", "Terrain", L"/Civ4TerrainInfos/TerrainInfos/TerrainInfo", false, GC.m_TerrainInfo.getReplacements());
 	LoadGlobalClassInfo(GC.getYieldInfos(), "CIV4YieldInfos", "Terrain", L"/Civ4YieldInfos/YieldInfos/YieldInfo", false);
 	LoadGlobalClassInfo(GC.getCommerceInfos(), "CIV4CommerceInfo", "GameInfo", L"/Civ4CommerceInfo/CommerceInfos/CommerceInfo", false);
 	LoadGlobalClassInfo(GC.getEraInfos(), "CIV4EraInfos", "GameInfo", L"/Civ4EraInfos/EraInfos/EraInfo", false, GC.getEraInfoReplacements());
@@ -948,10 +948,10 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	LoadGlobalClassInfo(GC.getCivicOptionInfos(), "CIV4CivicOptionInfos", "GameInfo", L"/Civ4CivicOptionInfos/CivicOptionInfos/CivicOptionInfo", false);
 	LoadGlobalClassInfo(GC.getUpkeepInfos(), "CIV4UpkeepInfo", "GameInfo", L"/Civ4UpkeepInfo/UpkeepInfos/UpkeepInfo", false);
 	LoadGlobalClassInfo(GC.getCultureLevelInfos(), "CIV4CultureLevelInfo", "GameInfo", L"/Civ4CultureLevelInfo/CultureLevelInfos/CultureLevelInfo", false, GC.getCultureLevelInfoReplacements());
-	LoadGlobalClassInfo(GC.getBonusClassInfos(), "CIV4BonusClassInfos", "Terrain", L"/Civ4BonusClassInfos/BonusClassInfos/BonusClassInfo", false, GC.getBonusClassInfoReplacements());
+	LoadGlobalClassInfo(GC.get<CvBonusClassInfo>(), "CIV4BonusClassInfos", "Terrain", L"/Civ4BonusClassInfos/BonusClassInfos/BonusClassInfo", false, GC.m_BonusClassInfo.getReplacements());
 	LoadGlobalClassInfo(GC.getVictoryInfos(), "CIV4VictoryInfo", "GameInfo", L"/Civ4VictoryInfo/VictoryInfos/VictoryInfo", false);
 
-	LoadGlobalClassInfo(GC.getEffectInfos(), "CIV4EffectInfos", "Misc", L"/Civ4EffectInfos/EffectInfos/EffectInfo", false);
+	LoadGlobalClassInfo(GC.get<CvEffectInfo>(), "CIV4EffectInfos", "Misc", L"/Civ4EffectInfos/EffectInfos/EffectInfo", false);
 	LoadGlobalClassInfo(GC.get<CvEntityEventInfo>(), "CIV4EntityEventInfos", "Units", L"/Civ4EntityEventInfos/EntityEventInfos/EntityEventInfo", false);
 	LoadGlobalClassInfo(GC.getPropertyInfos(), "CIV4PropertyInfos", "GameInfo", L"/Civ4PropertyInfos/PropertyInfos/PropertyInfo", false);
 	LoadGlobalClassInfo(GC.getSpecialistInfos(), "CIV4SpecialistInfos", "GameInfo", L"/Civ4SpecialistInfos/SpecialistInfos/SpecialistInfo", false, GC.getSpecialistInfoReplacements());

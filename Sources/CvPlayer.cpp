@@ -24004,12 +24004,12 @@ void CvPlayer::write(FDataStreamBase* pStream)
 
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_VOTE_SOURCES, GC.getNumVoteSourceInfos(), m_pabLoyalMember);
 
-		for (iI=0;iI<GC.getNumCivicOptionInfos();iI++)
+		for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
 		{
 			WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_CIVICS, m_paeCivics[iI]);
 		}
 
-		for (iI=0;iI<GC.getNumSpecialistInfos();iI++)
+		for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 		{
 			WRAPPER_WRITE_ARRAY(wrapper, "CvPlayer", NUM_YIELD_TYPES, m_ppaaiSpecialistExtraYield[iI]);
 		}
@@ -32761,7 +32761,7 @@ void CvPlayer::clearModifierTotals()
 		m_paiBuildingProductionModifier[iI] = 0;
 	}
 
-	for (iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+	for (iI = 0; iI < GC.numTypes<CvTerrainInfo>(); iI++)
 	{
 		for (iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 		{
