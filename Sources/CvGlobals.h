@@ -1963,10 +1963,10 @@ public:
 	~ProxyTracker();
 };
 
-#define PROXY_TRACK(x)	ProxyTracker tracker(this,x);
-
+#define PROXY_TRACK(func)	ProxyTracker tracker(this, "func"); \
+							return gGlobals->func;
 #else
-#define	PROXY_TRACK(x)	;
+#define	PROXY_TRACK(func)	return gGlobals->func;
 #endif
 
 //	cvGlobals is a proxy class with the same virtual interface as cvInternalGlobals
@@ -1977,236 +1977,184 @@ public:
 //	by the core engine to establish memory allocators)
 class CvGlobals
 {
-//	friend class CvDLLUtilityIFace;
 	friend class CvXMLLoadUtility;
 	friend class ProxyTracker;
 protected:
 	void CheckProxy(const char* fnName) const;
 
 public:
-
-	// singleton accessor
 	DllExport inline static CvGlobals& getInstance();
 
-	CvGlobals()
-	{
-	}
-	virtual ~CvGlobals()
-	{
-	}
+	CvGlobals() {}
+	virtual ~CvGlobals() {}
 
 	DllExport void init()
 	{
-		PROXY_TRACK("init");
-		gGlobals->init();
+		PROXY_TRACK(init());
 	}
 	DllExport void uninit()
 	{
-		PROXY_TRACK("uninit");
-		gGlobals->uninit();
+		PROXY_TRACK(uninit());
 	}
-
 	DllExport CvDiplomacyScreen* getDiplomacyScreen()
 	{
-		PROXY_TRACK("getDiplomacyScreen");
-		return gGlobals->getDiplomacyScreen();
+		return PROXY_TRACK(getDiplomacyScreen());
 	}
 	DllExport CMPDiplomacyScreen* getMPDiplomacyScreen()
 	{
-		PROXY_TRACK("getMPDiplomacyScreen");
-		return gGlobals->getMPDiplomacyScreen();
+		return PROXY_TRACK(getMPDiplomacyScreen());
 	}
 	DllExport FMPIManager*& getFMPMgrPtr()
 	{
-		PROXY_TRACK("getFMPMgrPtr");
-		return gGlobals->getFMPMgrPtr();
+		return PROXY_TRACK(getFMPMgrPtr());
 	}
 	DllExport CvPortal& getPortal()
 	{
-		PROXY_TRACK("getPortal");
-		return gGlobals->getPortal();
+		return PROXY_TRACK(getPortal());
 	}
 	DllExport CvSetupData& getSetupData()
 	{
-		PROXY_TRACK("getSetupData");
-		return gGlobals->getSetupData();
+		return PROXY_TRACK(getSetupData());
 	}
 	DllExport CvInitCore& getInitCore()
 	{
-		PROXY_TRACK("getInitCore");
-		return gGlobals->getInitCore();
+		return PROXY_TRACK(getInitCore());
 	}
 	DllExport CvInitCore& getLoadedInitCore()
 	{
-		PROXY_TRACK("getLoadedInitCore");
-		return gGlobals->getLoadedInitCore();
+		return PROXY_TRACK(getLoadedInitCore());
 	}
 	DllExport CvInitCore& getIniInitCore()
 	{
-		PROXY_TRACK("getIniInitCore");
-		return gGlobals->getIniInitCore();
+		return PROXY_TRACK(getIniInitCore());
 	}
 	DllExport CvMessageCodeTranslator& getMessageCodes()
 	{
-		PROXY_TRACK("getMessageCodes");
-		return gGlobals->getMessageCodes();
+		return PROXY_TRACK(getMessageCodes());
 	}
 	DllExport CvStatsReporter& getStatsReporter()
 	{
-		PROXY_TRACK("getStatsReporter");
-		return gGlobals->getStatsReporter();
+		return PROXY_TRACK(getStatsReporter());
 	}
 	CvStatsReporter* getStatsReporterPtr()
 	{
-		PROXY_TRACK("getStatsReporterPtr");
-		return gGlobals->getStatsReporterPtr();
+		return PROXY_TRACK(getStatsReporterPtr());
 	}
 	DllExport CvInterface& getInterface()
 	{
-		PROXY_TRACK("getInterface");
-		return gGlobals->getInterface();
+		return PROXY_TRACK(getInterface());
 	}
 	DllExport CvInterface* getInterfacePtr()
 	{
-		PROXY_TRACK("getInterfacePtr");
-		return gGlobals->getInterfacePtr();
+		return PROXY_TRACK(getInterfacePtr());
 	}
 	DllExport int getMaxCivPlayers() const
 	{
-		PROXY_TRACK("getMaxCivPlayers");
-		return gGlobals->getMaxCivPlayers();
+		return PROXY_TRACK(getMaxCivPlayers());
 	}
 	DllExport CvMapExternal& getMap()
 	{
-		PROXY_TRACK("getMap");
-		return gGlobals->getMapExternal();
+		return PROXY_TRACK(getMap());
 	}
 	DllExport CvGameAI& getGame()
 	{
-		PROXY_TRACK("getGame");
-		return gGlobals->getGame();
+		return PROXY_TRACK(getGame());
 	}
 	DllExport CvGameAI* getGamePointer()
 	{
-		PROXY_TRACK("getGamePointer");
-		return gGlobals->getGamePointer();
+		return PROXY_TRACK(getGamePointer());
 	}
 	DllExport CvRandom& getASyncRand()
 	{
-		PROXY_TRACK("getASyncRand");
-		return gGlobals->getASyncRand();
+		return PROXY_TRACK(getASyncRand());
 	}
 	DllExport CMessageQueue& getMessageQueue()
 	{
-		PROXY_TRACK("getMessageQueue");
-		return gGlobals->getMessageQueue();
+		return PROXY_TRACK(getMessageQueue());
 	}
 	DllExport CMessageQueue& getHotMessageQueue()
 	{
-		PROXY_TRACK("getHotMessageQueue");
-		return gGlobals->getHotMessageQueue();
+		return PROXY_TRACK(getHotMessageQueue());
 	}
 	DllExport CMessageControl& getMessageControl()
 	{
-		PROXY_TRACK("getMessageControl");
-		return gGlobals->getMessageControl();
+		return PROXY_TRACK(getMessageControl());
 	}
 	DllExport CvDropMgr& getDropMgr()
 	{
-		PROXY_TRACK("getDropMgr");
-		return gGlobals->getDropMgr();
+		return PROXY_TRACK(getDropMgr());
 	}
 	DllExport FAStar& getPathFinder()
 	{
-		PROXY_TRACK("getPathFinder");
-		return gGlobals->getPathFinder();
+		return PROXY_TRACK(getPathFinder());
 	}
 	DllExport FAStar& getInterfacePathFinder()
 	{
-		PROXY_TRACK("getInterfacePathFinder");
-		return gGlobals->getInterfacePathFinder();
+		return PROXY_TRACK(getInterfacePathFinder());
 	}
 	DllExport FAStar& getStepFinder()
 	{
-		PROXY_TRACK("getStepFinder");
-		return gGlobals->getStepFinder();
+		return PROXY_TRACK(getStepFinder());
 	}
 	DllExport FAStar& getRouteFinder()
 	{
-		PROXY_TRACK("getRouteFinder");
-		return gGlobals->getRouteFinder();
+		return PROXY_TRACK(getRouteFinder());
 	}
 	DllExport FAStar& getBorderFinder()
 	{
-		PROXY_TRACK("getBorderFinder");
-		return gGlobals->getBorderFinder();
+		return PROXY_TRACK(getBorderFinder());
 	}
 	DllExport FAStar& getAreaFinder()
 	{
-		PROXY_TRACK("getAreaFinder");
-		return gGlobals->getAreaFinder();
+		return PROXY_TRACK(getAreaFinder());
 	}
 	DllExport FAStar& getPlotGroupFinder()
 	{
-		PROXY_TRACK("getPlotGroupFinder");
-		return gGlobals->getPlotGroupFinder();
+		return PROXY_TRACK(getPlotGroupFinder());
 	}
 	DllExport std::vector<CvInterfaceModeInfo*>& getInterfaceModeInfo()
 	{
-		PROXY_TRACK("getInterfaceModeInfo");
-		return gGlobals->getInterfaceModeInfos();
+		return PROXY_TRACK(getInterfaceModeInfo());
 	}
 	DllExport CvInterfaceModeInfo& getInterfaceModeInfo(InterfaceModeTypes e)
 	{
-		PROXY_TRACK("getInterfaceModeInfo");
-		return gGlobals->getInterfaceModeInfo(e);
+		return PROXY_TRACK(getInterfaceModeInfo(e));
 	}
-
 	DllExport bool& getLogging()
 	{
-		PROXY_TRACK("getLogging");
-		return gGlobals->getLogging();
+		return PROXY_TRACK(getLogging());
 	}
 	DllExport bool& getRandLogging()
 	{
-		PROXY_TRACK("getRandLogging");
-		return gGlobals->getRandLogging();
+		return PROXY_TRACK(getRandLogging());
 	}
 	DllExport bool& getSynchLogging()
 	{
-		PROXY_TRACK("getSynchLogging");
-		return gGlobals->getSynchLogging();
+		return PROXY_TRACK(getSynchLogging());
 	}
 	DllExport bool& overwriteLogs()
 	{
-		PROXY_TRACK("overwriteLogs");
-		return gGlobals->overwriteLogs();
+		return PROXY_TRACK(overwriteLogs());
 	}
-
 	DllExport int* getPlotDirectionX()
 	{
-		PROXY_TRACK("getPlotDirectionX");
-		return gGlobals->getPlotDirectionX();
+		return PROXY_TRACK(getPlotDirectionX());
 	}
 	DllExport int* getPlotDirectionY()
 	{
-		PROXY_TRACK("getPlotDirectionY");
-		return gGlobals->getPlotDirectionY();
+		return PROXY_TRACK(getPlotDirectionY());
 	}
 	DllExport int* getPlotCardinalDirectionX()
 	{
-		PROXY_TRACK("getPlotCardinalDirectionX");
-		return gGlobals->getPlotCardinalDirectionX();
+		return PROXY_TRACK(getPlotCardinalDirectionX());
 	}
 	DllExport int* getPlotCardinalDirectionY()
 	{
-		PROXY_TRACK("getPlotCardinalDirectionY");
-		return gGlobals->getPlotCardinalDirectionY();
+		return PROXY_TRACK(getPlotCardinalDirectionY());
 	}
 	DllExport DirectionTypes getXYDirection(int i, int j)
 	{
-		PROXY_TRACK("getXYDirection");
-		return gGlobals->getXYDirection(i,j);
+		return PROXY_TRACK(getXYDirection(i, j));
 	}
 	//
 	// Global Infos
@@ -2214,416 +2162,332 @@ public:
 	//
 	DllExport int getInfoTypeForString(const char* szType, bool hideAssert = false) const			// returns the infos index, use this when searching for an info type string
 	{
-		PROXY_TRACK("getInfoTypeForString");
-		return gGlobals->getInfoTypeForString(szType, hideAssert);
+		return PROXY_TRACK(getInfoTypeForString(szType, hideAssert));
 	}
 	DllExport void infoTypeFromStringReset()
 	{
-		PROXY_TRACK("infoTypeFromStringReset");
-		gGlobals->infoTypeFromStringReset();
+		PROXY_TRACK(infoTypeFromStringReset());
 	}
 	DllExport void infosReset()
 	{
-		PROXY_TRACK("infosReset");
-		gGlobals->infosReset();
+		PROXY_TRACK(infosReset());
 	}
 	DllExport int getNumWorldInfos()
 	{
-		PROXY_TRACK("getNumWorldInfos");
-		return gGlobals->getNumWorldInfos();
+		return PROXY_TRACK(getNumWorldInfos());
 	}
 	DllExport CvWorldInfo& getWorldInfo(WorldSizeTypes e)
 	{
-		PROXY_TRACK("getWorldInfo");
-		return gGlobals->getWorldInfo(e);
+		return PROXY_TRACK(getWorldInfo(e));
 	}
 	DllExport int getNumClimateInfos()
 	{
-		PROXY_TRACK("getNumClimateInfos");
-		return gGlobals->getNumClimateInfos();
+		return PROXY_TRACK(getNumClimateInfos());
 	}
 	DllExport CvClimateInfo& getClimateInfo(ClimateTypes e)
 	{
-		PROXY_TRACK("getClimateInfo");
-		return gGlobals->getClimateInfo(e);
+		return PROXY_TRACK(getClimateInfo(e));
 	}
 	DllExport int getNumSeaLevelInfos()
 	{
-		PROXY_TRACK("getNumSeaLevelInfos");
-		return gGlobals->getNumSeaLevelInfos();
+		return PROXY_TRACK(getNumSeaLevelInfos());
 	}
 	DllExport CvSeaLevelInfo& getSeaLevelInfo(SeaLevelTypes e)
 	{
-		PROXY_TRACK("getSeaLevelInfo");
-		return gGlobals->getSeaLevelInfo(e);
+		return PROXY_TRACK(getSeaLevelInfo(e));
 	}
 	DllExport CvColorInfo& getColorInfo(ColorTypes e)
 	{
-		PROXY_TRACK("getColorInfo");
-		return gGlobals->getColorInfo(e);
+		return PROXY_TRACK(getColorInfo(e));
 	}
 	DllExport int getNumPlayerColorInfos()
 	{
-		PROXY_TRACK("getNumPlayerColorInfos");
-		return gGlobals->getNumPlayerColorInfos();
+		return PROXY_TRACK(getNumPlayerColorInfos());
 	}
 	DllExport CvPlayerColorInfo& getPlayerColorInfo(PlayerColorTypes e)
 	{
-		PROXY_TRACK("getPlayerColorInfo");
-		return gGlobals->getPlayerColorInfo(e);
+		return PROXY_TRACK(getPlayerColorInfo(e));
 	}
 	DllExport int getNumHints()
 	{
-		PROXY_TRACK("getNumHints");
-		return gGlobals->getNumHints();
+		return PROXY_TRACK(getNumHints());
 	}
 	DllExport CvInfoBase& getHints(int i)
 	{
-		PROXY_TRACK("getHints");
-		return gGlobals->getHints(i);
+		PROXY_TRACK(getHints(i));
 	}
 	DllExport CvMainMenuInfo& getMainMenus(int i)
 	{
-		PROXY_TRACK("getMainMenus");
-		return gGlobals->getMainMenus(i);
+		return PROXY_TRACK(getMainMenus(i));
 	}
 	DllExport int getNumRouteModelInfos()
 	{
-		PROXY_TRACK("getNumRouteModelInfos");
-		return gGlobals->getNumRouteModelInfos();
+		return PROXY_TRACK(getNumRouteModelInfos());
 	}
 	DllExport CvRouteModelInfo& getRouteModelInfo(int i)
 	{
-		PROXY_TRACK("getRouteModelInfo");
-		return gGlobals->getRouteModelInfo(i);
+		return PROXY_TRACK(getRouteModelInfo(i));
 	}
 	DllExport int getNumRiverModelInfos()
 	{
-		PROXY_TRACK("getNumRiverModelInfos");
-		return gGlobals->getNumRiverModelInfos();
+		return PROXY_TRACK(getNumRiverModelInfos());
 	}
 	DllExport CvRiverModelInfo& getRiverModelInfo(int i)
 	{
-		PROXY_TRACK("getRiverModelInfo");
-		return gGlobals->getRiverModelInfo(i);
+		return PROXY_TRACK(getRiverModelInfo(i));
 	}
 	DllExport CvWaterPlaneInfo& getWaterPlaneInfo(int i)
 	{
-		PROXY_TRACK("getWaterPlaneInfo");
-		return gGlobals->getWaterPlaneInfo(i);
+		return PROXY_TRACK(getWaterPlaneInfo(i));
 	}
 	DllExport int getNumTerrainPlaneInfos()
 	{
-		PROXY_TRACK("getNumTerrainPlaneInfos");
-		return gGlobals->getNumTerrainPlaneInfos();
+		return PROXY_TRACK(getNumTerrainPlaneInfos());
 	}
 	DllExport CvTerrainPlaneInfo& getTerrainPlaneInfo(int i)
 	{
-		PROXY_TRACK("getTerrainPlaneInfo");
-		return gGlobals->getTerrainPlaneInfo(i);
+		return PROXY_TRACK(getTerrainPlaneInfo(i));
 	}
-
 	DllExport int getNumCameraOverlayInfos()
 	{
-		PROXY_TRACK("getNumCameraOverlayInfos");
-		return gGlobals->getNumCameraOverlayInfos();
+		return PROXY_TRACK(getNumCameraOverlayInfos());
 	}
 	DllExport CvCameraOverlayInfo& getCameraOverlayInfo(int i)
 	{
-		PROXY_TRACK("getCameraOverlayInfo");
-		return gGlobals->getCameraOverlayInfo(i);
+		return PROXY_TRACK(getCameraOverlayInfo(i));
 	}
 	DllExport CvAnimationPathInfo& getAnimationPathInfo(AnimationPathTypes e)
 	{
-		PROXY_TRACK("getAnimationPathInfo");
-		return gGlobals->getAnimationPathInfo(e);
+		return PROXY_TRACK(getAnimationPathInfo(e));
 	}
 	DllExport CvAnimationCategoryInfo& getAnimationCategoryInfo(AnimationCategoryTypes e)
 	{
-		PROXY_TRACK("getAnimationCategoryInfo");
-		return gGlobals->getAnimationCategoryInfo(e);
+		return PROXY_TRACK(getAnimationCategoryInfo(e));
 	}
 	DllExport CvEntityEventInfo& getEntityEventInfo(EntityEventTypes e)
 	{
-		PROXY_TRACK("getEntityEventInfo");
-		return gGlobals->getEntityEventInfo(e);
+		return PROXY_TRACK(getEntityEventInfo(e));
 	}
 	DllExport CvEffectInfo& getEffectInfo(int i)
 	{
-		PROXY_TRACK("getEffectInfo");
-		return gGlobals->getEffectInfo(i);
+		return PROXY_TRACK(getEffectInfo(i));
 	}
 	DllExport CvAttachableInfo& getAttachableInfo(int i)
 	{
-		PROXY_TRACK("getAttachableInfo");
-		return gGlobals->getAttachableInfo(i);
+		return PROXY_TRACK(getAttachableInfo(i));
 	}
 	DllExport int getNumUnitFormationInfos()
 	{
-		PROXY_TRACK("getNumUnitFormationInfos");
-		return gGlobals->getNumUnitFormationInfos();
+		return PROXY_TRACK(getNumUnitFormationInfos());
 	}
 	DllExport CvUnitFormationInfo& getUnitFormationInfo(int i)
 	{
-		PROXY_TRACK("getUnitFormationInfo");
-		return gGlobals->getUnitFormationInfo(i);
+		return PROXY_TRACK(getUnitFormationInfo(i));
 	}
 	DllExport CvLandscapeInfo& getLandscapeInfo(int iIndex)
 	{
-		PROXY_TRACK("getLandscapeInfo");
-		return gGlobals->getLandscapeInfo(iIndex);
+		return PROXY_TRACK(getLandscapeInfo(iIndex));
 	}
 	DllExport int getActiveLandscapeID()
 	{
-		PROXY_TRACK("getActiveLandscapeID");
-		return gGlobals->getActiveLandscapeID();
+		return PROXY_TRACK(getActiveLandscapeID());
 	}
 	DllExport void setActiveLandscapeID(int iLandscapeID)
 	{
-		PROXY_TRACK("setActiveLandscapeID");
-		return gGlobals->setActiveLandscapeID(iLandscapeID);
+		return PROXY_TRACK(setActiveLandscapeID(iLandscapeID));
 	}
 	DllExport int getNumTerrainInfos()
 	{
-		PROXY_TRACK("getNumTerrainInfos");
-		return gGlobals->getNumTerrainInfos();
+		return PROXY_TRACK(getNumTerrainInfos());
 	}
 	DllExport CvTerrainInfo& getTerrainInfo(TerrainTypes eTerrainNum)
 	{
-		PROXY_TRACK("getTerrainInfo");
-		return gGlobals->getTerrainInfo(eTerrainNum);
+		return PROXY_TRACK(getTerrainInfo(eTerrainNum));
 	}
 	DllExport int getNumBonusInfos()
 	{
-		PROXY_TRACK("getNumBonusInfos");
-		return gGlobals->getNumBonusInfos();
+		return PROXY_TRACK(getNumBonusInfos());
 	}
 	DllExport CvBonusInfo& getBonusInfo(BonusTypes eBonusNum)
 	{
-		PROXY_TRACK("getBonusInfo");
-		return gGlobals->getBonusInfo(eBonusNum);
+		return PROXY_TRACK(getBonusInfo(eBonusNum));
 	}
 	DllExport int getNumFeatureInfos()
 	{
-		PROXY_TRACK("getNumFeatureInfos");
-		return gGlobals->getNumFeatureInfos();
+		return PROXY_TRACK(getNumFeatureInfos());
 	}
 	DllExport CvFeatureInfo& getFeatureInfo(FeatureTypes eFeatureNum)
 	{
-		PROXY_TRACK("getFeatureInfo");
-		return gGlobals->getFeatureInfo(eFeatureNum);
+		return PROXY_TRACK(getFeatureInfo(eFeatureNum));
 	}
 	DllExport int& getNumPlayableCivilizationInfos()
 	{
-		PROXY_TRACK("getNumPlayableCivilizationInfos");
-		return gGlobals->getNumPlayableCivilizationInfos();
+		return PROXY_TRACK(getNumPlayableCivilizationInfos());
 	}
 	DllExport int& getNumAIPlayableCivilizationInfos()
 	{
-		PROXY_TRACK("getNumAIPlayableCivilizationInfos");
-		return gGlobals->getNumAIPlayableCivilizationInfos();
+		return PROXY_TRACK(getNumAIPlayableCivilizationInfos());
 	}
 	DllExport int getNumCivilizationInfos()
 	{
-		PROXY_TRACK("getNumCivilizationInfos");
-		return gGlobals->getNumCivilizationInfos();
+		return PROXY_TRACK(getNumCivilizationInfos());
 	}
 	DllExport CvCivilizationInfo& getCivilizationInfo(CivilizationTypes eCivilizationNum)
 	{
-		PROXY_TRACK("getCivilizationInfo");
-		return gGlobals->getCivilizationInfo(eCivilizationNum);
+		return PROXY_TRACK(getCivilizationInfo(eCivilizationNum));
 	}
 	DllExport int getNumLeaderHeadInfos()
 	{
-		PROXY_TRACK("getNumLeaderHeadInfos");
-		return gGlobals->getNumLeaderHeadInfos();
+		return PROXY_TRACK(getNumLeaderHeadInfos());
 	}
 	DllExport CvLeaderHeadInfo& getLeaderHeadInfo(LeaderHeadTypes eLeaderHeadNum)
 	{
-		PROXY_TRACK("getLeaderHeadInfo");
-		return gGlobals->getLeaderHeadInfo(eLeaderHeadNum);
+		return PROXY_TRACK(getLeaderHeadInfo(eLeaderHeadNum));
 	}
 	DllExport int getNumCursorInfos()
 	{
-		PROXY_TRACK("getNumCursorInfos");
-		return gGlobals->getNumCursorInfos();
+		return PROXY_TRACK(getNumCursorInfos());
 	}
 	DllExport CvCursorInfo& getCursorInfo(CursorTypes eCursorNum)
 	{
-		PROXY_TRACK("getCursorInfo");
-		return gGlobals->getCursorInfo(eCursorNum);
+		return PROXY_TRACK(getCursorInfo(eCursorNum));
 	}
 	DllExport CvThroneRoomCamera& getThroneRoomCamera(int iIndex)
 	{
-		PROXY_TRACK("getThroneRoomCamera");
-		return gGlobals->getThroneRoomCamera(iIndex);
+		return PROXY_TRACK(getThroneRoomCamera(iIndex));
 	}
 	DllExport int getNumThroneRoomInfos()
 	{
-		PROXY_TRACK("getNumThroneRoomInfos");
-		return gGlobals->getNumThroneRoomInfos();
+		return PROXY_TRACK(getNumThroneRoomInfos());
 	}
 	DllExport CvThroneRoomInfo& getThroneRoomInfo(int iIndex)
 	{
-		PROXY_TRACK("getThroneRoomInfo");
-		return gGlobals->getThroneRoomInfo(iIndex);
+		return PROXY_TRACK(getThroneRoomInfo(iIndex));
 	}
 	DllExport int getNumThroneRoomStyleInfos()
 	{
-		PROXY_TRACK("getNumThroneRoomStyleInfos");
-		return gGlobals->getNumThroneRoomStyleInfos();
+		return PROXY_TRACK(getNumThroneRoomStyleInfos());
 	}
 	DllExport CvThroneRoomStyleInfo& getThroneRoomStyleInfo(int iIndex)
 	{
-		PROXY_TRACK("getThroneRoomStyleInfo");
-		return gGlobals->getThroneRoomStyleInfo(iIndex);
+		return PROXY_TRACK(getThroneRoomStyleInfo(iIndex));
 	}
 	DllExport int getNumSlideShowInfos()
 	{
-		PROXY_TRACK("getNumSlideShowInfos");
-		return gGlobals->getNumSlideShowInfos();
+		return PROXY_TRACK(getNumSlideShowInfos());
 	}
 	DllExport CvSlideShowInfo& getSlideShowInfo(int iIndex)
 	{
-		PROXY_TRACK("getSlideShowInfo");
-		return gGlobals->getSlideShowInfo(iIndex);
+		return PROXY_TRACK(getSlideShowInfo(iIndex));
 	}
 	DllExport int getNumSlideShowRandomInfos()
 	{
-		PROXY_TRACK("getNumSlideShowRandomInfos");
-		return gGlobals->getNumSlideShowRandomInfos();
+		return PROXY_TRACK(getNumSlideShowRandomInfos());
 	}
 	DllExport CvSlideShowRandomInfo& getSlideShowRandomInfo(int iIndex)
 	{
-		PROXY_TRACK("getSlideShowRandomInfo");
-		return gGlobals->getSlideShowRandomInfo(iIndex);
+		return PROXY_TRACK(getSlideShowRandomInfo(iIndex));
 	}
 	DllExport int getNumWorldPickerInfos()
 	{
-		PROXY_TRACK("getNumWorldPickerInfos");
-		return gGlobals->getNumWorldPickerInfos();
+		return PROXY_TRACK(getNumWorldPickerInfos());
 	}
 	DllExport CvWorldPickerInfo& getWorldPickerInfo(int iIndex)
 	{
-		PROXY_TRACK("getWorldPickerInfo");
-		return gGlobals->getWorldPickerInfo(iIndex);
+		return PROXY_TRACK(getWorldPickerInfo(iIndex));
 	}
 	DllExport int getNumSpaceShipInfos()
 	{
-		PROXY_TRACK("getNumSpaceShipInfos");
-		return gGlobals->getNumSpaceShipInfos();
+		return PROXY_TRACK(getNumSpaceShipInfos());
 	}
 	DllExport CvSpaceShipInfo& getSpaceShipInfo(int iIndex)
 	{
-		PROXY_TRACK("getSpaceShipInfo");
-		return gGlobals->getSpaceShipInfo(iIndex);
+		return PROXY_TRACK(getSpaceShipInfo(iIndex));
 	}
 	DllExport CvGameOptionInfo& getGameOptionInfo(GameOptionTypes eGameOptionNum)
 	{
-		PROXY_TRACK("getGameOptionInfo");
-		return gGlobals->getGameOptionInfo(eGameOptionNum);
+		return PROXY_TRACK(getGameOptionInfo(eGameOptionNum));
 	}
 	DllExport CvMPOptionInfo& getMPOptionInfo(MultiplayerOptionTypes eMPOptionNum)
 	{
-		PROXY_TRACK("getMPOptionInfo");
-		return gGlobals->getMPOptionInfo(eMPOptionNum);
+		return PROXY_TRACK(getMPOptionInfo(eMPOptionNum));
 	}
 	DllExport CvPlayerOptionInfo& getPlayerOptionInfo(PlayerOptionTypes ePlayerOptionNum)
 	{
-		PROXY_TRACK("getPlayerOptionInfo");
-		return gGlobals->getPlayerOptionInfo(ePlayerOptionNum);
+		return PROXY_TRACK(getPlayerOptionInfo(ePlayerOptionNum));
 	}
 	DllExport CvGraphicOptionInfo& getGraphicOptionInfo(GraphicOptionTypes eGraphicOptionNum)
 	{
-		PROXY_TRACK("getGraphicOptionInfo");
-		return gGlobals->getGraphicOptionInfo(eGraphicOptionNum);
+		return PROXY_TRACK(getGraphicOptionInfo(eGraphicOptionNum));
 	}
 	DllExport int getNumRouteInfos()
 	{
-		PROXY_TRACK("getNumRouteInfos");
-		return gGlobals->getNumRouteInfos();
+		return PROXY_TRACK(getNumRouteInfos());
 	}
 	DllExport int getNumImprovementInfos()
 	{
-		PROXY_TRACK("getNumImprovementInfos");
-		return gGlobals->getNumImprovementInfos();
+		return PROXY_TRACK(getNumImprovementInfos());
 	}
 	DllExport CvImprovementInfo& getImprovementInfo(ImprovementTypes eImprovementNum)
 	{
-		PROXY_TRACK("getImprovementInfo");
-		return gGlobals->getImprovementInfo(eImprovementNum);
+		return PROXY_TRACK(getImprovementInfo(eImprovementNum));
 	}
 	DllExport CvBuildInfo& getBuildInfo(BuildTypes eBuildNum)
 	{
-		PROXY_TRACK("getBuildInfo");
-		return gGlobals->getBuildInfo(eBuildNum);
+		return PROXY_TRACK(getBuildInfo(eBuildNum));
 	}
 	DllExport int getNumHandicapInfos()
 	{
-		PROXY_TRACK("getNumHandicapInfos");
-		return gGlobals->getNumHandicapInfos();
+		return PROXY_TRACK(getNumHandicapInfos());
 	}
 	DllExport CvHandicapInfo& getHandicapInfo(HandicapTypes eHandicapNum)
 	{
-		PROXY_TRACK("getHandicapInfo");
-		return gGlobals->getHandicapInfo(eHandicapNum);
+		return PROXY_TRACK(getHandicapInfo(eHandicapNum));
 	}
 	DllExport int getNumGameSpeedInfos()
 	{
-		PROXY_TRACK("getNumGameSpeedInfos");
-		return gGlobals->getNumGameSpeedInfos();
+		return PROXY_TRACK(getNumGameSpeedInfos());
 	}
 	DllExport CvGameSpeedInfo& getGameSpeedInfo(GameSpeedTypes eGameSpeedNum)
 	{
-		PROXY_TRACK("getGameSpeedInfo");
-		return gGlobals->getGameSpeedInfo(eGameSpeedNum);
+		return PROXY_TRACK(getGameSpeedInfo(eGameSpeedNum));
 	}
 	DllExport int getNumTurnTimerInfos()
 	{
-		PROXY_TRACK("getNumTurnTimerInfos");
-		return gGlobals->getNumTurnTimerInfos();
+		return PROXY_TRACK(getNumTurnTimerInfos());
 	}
 	DllExport CvTurnTimerInfo& getTurnTimerInfo(TurnTimerTypes eTurnTimerNum)
 	{
-		PROXY_TRACK("getTurnTimerInfo");
-		return gGlobals->getTurnTimerInfo(eTurnTimerNum);
+		return PROXY_TRACK(getTurnTimerInfo(eTurnTimerNum));
 	}
 	DllExport int getNumActionInfos()
 	{
-		PROXY_TRACK("getNumActionInfos");
-		return gGlobals->getNumActionInfos();
+		return PROXY_TRACK(getNumActionInfos());
 	}
 	DllExport CvActionInfo& getActionInfo(int i)
 	{
-		PROXY_TRACK("getActionInfo");
-		return gGlobals->getActionInfo(i);
+		return PROXY_TRACK(getActionInfo(i));
 	}
 	DllExport CvMissionInfo& getMissionInfo(MissionTypes eMissionNum)
 	{
-		PROXY_TRACK("getMissionInfo");
-		return gGlobals->getMissionInfo(eMissionNum);
+		return PROXY_TRACK(getMissionInfo(eMissionNum));
 	}
 	DllExport int getNumEraInfos()
 	{
-		PROXY_TRACK("getNumEraInfos");
-		return gGlobals->getNumEraInfos();
+		return PROXY_TRACK(getNumEraInfos());
 	}
 	DllExport CvEraInfo& getEraInfo(EraTypes eEraNum)
 	{
-		PROXY_TRACK("getEraInfo");
-		return gGlobals->getEraInfo(eEraNum);
+		return PROXY_TRACK(getEraInfo(eEraNum));
 	}
 	DllExport int getNumVictoryInfos()
 	{
-		PROXY_TRACK("getNumVictoryInfos");
-		return gGlobals->getNumVictoryInfos();
+		return PROXY_TRACK(getNumVictoryInfos());
 	}
 	DllExport CvVictoryInfo& getVictoryInfo(VictoryTypes eVictoryNum)
 	{
-		PROXY_TRACK("getVictoryInfo");
-		return gGlobals->getVictoryInfo(eVictoryNum);
+		return PROXY_TRACK(getVictoryInfo(eVictoryNum));
 	}
-
 	//
 	// Global Types
 	// All type strings are upper case and are kept in this hash map for fast lookup
@@ -2631,189 +2495,151 @@ public:
 	//
 	DllExport int getTypesEnum(const char* szType) const				// use this when searching for a type
 	{
-		PROXY_TRACK("getTypesEnum");
-		return gGlobals->getTypesEnum(szType);
+		return PROXY_TRACK(getTypesEnum(szType));
 	}
 	DllExport int getNUM_ENGINE_DIRTY_BITS() const
 	{
-		PROXY_TRACK("getNUM_ENGINE_DIRTY_BITS");
-		return gGlobals->getNUM_ENGINE_DIRTY_BITS();
+		return PROXY_TRACK(getNUM_ENGINE_DIRTY_BITS());
 	}
 	DllExport int getNUM_INTERFACE_DIRTY_BITS() const
 	{
-		PROXY_TRACK("getNUM_INTERFACE_DIRTY_BITS");
-		return gGlobals->getNUM_INTERFACE_DIRTY_BITS();
+		return PROXY_TRACK(getNUM_INTERFACE_DIRTY_BITS());
 	}
 	DllExport int getNUM_YIELD_TYPES() const
 	{
-		PROXY_TRACK("getNUM_YIELD_TYPES");
-		return gGlobals->getNUM_YIELD_TYPES();
+		return PROXY_TRACK(getNUM_YIELD_TYPES());
 	}
 	DllExport int getNUM_FORCECONTROL_TYPES() const
 	{
-		PROXY_TRACK("getNUM_FORCECONTROL_TYPES");
-		return gGlobals->getNUM_FORCECONTROL_TYPES();
+		return PROXY_TRACK(getNUM_FORCECONTROL_TYPES());
 	}
 	DllExport int getNUM_INFOBAR_TYPES() const
 	{
-		PROXY_TRACK("getNUM_INFOBAR_TYPES");
-		return gGlobals->getNUM_INFOBAR_TYPES();
+		return PROXY_TRACK(getNUM_INFOBAR_TYPES());
 	}
 	DllExport int getNUM_HEALTHBAR_TYPES() const
 	{
-		PROXY_TRACK("getNUM_HEALTHBAR_TYPES");
-		return gGlobals->getNUM_HEALTHBAR_TYPES();
+		return PROXY_TRACK(getNUM_HEALTHBAR_TYPES());
 	}
 	DllExport int getNUM_LEADERANIM_TYPES() const
 	{
-		PROXY_TRACK("getNUM_LEADERANIM_TYPES");
-		return gGlobals->getNUM_LEADERANIM_TYPES();
+		return PROXY_TRACK(getNUM_LEADERANIM_TYPES());
 	}
 	DllExport int& getNumArtStyleTypes()
 	{
-		PROXY_TRACK("getNumArtStyleTypes");
-		return gGlobals->getNumArtStyleTypes();
+		return PROXY_TRACK(getNumArtStyleTypes());
 	}
 	DllExport CvString& getArtStyleTypes(ArtStyleTypes e)
 	{
-		PROXY_TRACK("getArtStyleTypes");
-		return gGlobals->getArtStyleTypes(e);
+		return PROXY_TRACK(getArtStyleTypes(e));
 	}
 	DllExport int& getNumFootstepAudioTypes()
 	{
-		PROXY_TRACK("getNumFootstepAudioTypes");
-		return gGlobals->getNumFootstepAudioTypes();
+		return PROXY_TRACK(getNumFootstepAudioTypes());
 	}
 	DllExport CvString& getFootstepAudioTags(int i)
 	{
-		PROXY_TRACK("getFootstepAudioTags");
-		return gGlobals->getFootstepAudioTags(i);
+		return PROXY_TRACK(getFootstepAudioTags(i));
 	}
-
 	//
 	///////////////// BEGIN global defines
 	// THESE ARE READ-ONLY
 	//
-
 	DllExport FVariableSystem* getDefinesVarSystem()
 	{
-		PROXY_TRACK("getDefinesVarSystem");
-		return gGlobals->getDefinesVarSystem();
+		return PROXY_TRACK(getDefinesVarSystem());
 	}
-	DllExport int getDefineINT( const char * szName ) const
+	DllExport int getDefineINT(const char* szName) const
 	{
-		PROXY_TRACK("getDefineINT");
-		return gGlobals->getDefineINT(szName);
+		return PROXY_TRACK(getDefineINT(szName));
 	}
-	DllExport float getDefineFLOAT( const char * szName ) const
+	DllExport float getDefineFLOAT(const char* szName) const
 	{
-		PROXY_TRACK("getDefineFLOAT");
-		return gGlobals->getDefineFLOAT(szName);
+		return PROXY_TRACK(getDefineFLOAT(szName));
 	}
-	DllExport const char * getDefineSTRING( const char * szName ) const
+	DllExport const char* getDefineSTRING(const char* szName) const
 	{
-		PROXY_TRACK("getDefineSTRING");
-		return gGlobals->getDefineSTRING(szName);
+		return PROXY_TRACK(getDefineSTRING(szName));
 	}
 	DllExport int getMAX_PLOT_LIST_ROWS()
 	{
-		PROXY_TRACK("getMAX_PLOT_LIST_ROWS");
-		return gGlobals->getMAX_PLOT_LIST_ROWS();
+		return PROXY_TRACK(getMAX_PLOT_LIST_ROWS());
 	}
 	DllExport int getUNIT_MULTISELECT_MAX()
 	{
-		PROXY_TRACK("getUNIT_MULTISELECT_MAX");
-		return gGlobals->getUNIT_MULTISELECT_MAX();
+		return PROXY_TRACK(getUNIT_MULTISELECT_MAX());
 	}
 	DllExport int getEVENT_MESSAGE_TIME()
 	{
-		PROXY_TRACK("getEVENT_MESSAGE_TIME");
-		return gGlobals->getEVENT_MESSAGE_TIME();
+		return PROXY_TRACK(getEVENT_MESSAGE_TIME());
 	}
 	DllExport float getCAMERA_MIN_YAW()
 	{
-		PROXY_TRACK("getCAMERA_MIN_YAW");
-		return gGlobals->getCAMERA_MIN_YAW();
+		return PROXY_TRACK(getCAMERA_MIN_YAW());
 	}
 	DllExport float getCAMERA_MAX_YAW()
 	{
-		PROXY_TRACK("getCAMERA_MAX_YAW");
-		return gGlobals->getCAMERA_MAX_YAW();
+		return PROXY_TRACK(getCAMERA_MAX_YAW());
 	}
 	DllExport float getCAMERA_FAR_CLIP_Z_HEIGHT()
 	{
-		PROXY_TRACK("getCAMERA_FAR_CLIP_Z_HEIGHT");
-		return gGlobals->getCAMERA_FAR_CLIP_Z_HEIGHT();
+		return PROXY_TRACK(getCAMERA_FAR_CLIP_Z_HEIGHT());
 	}
 	DllExport float getCAMERA_MAX_TRAVEL_DISTANCE()
 	{
-		PROXY_TRACK("getCAMERA_MAX_TRAVEL_DISTANCE");
-		return gGlobals->getCAMERA_MAX_TRAVEL_DISTANCE();
+		return PROXY_TRACK(getCAMERA_MAX_TRAVEL_DISTANCE());
 	}
 	DllExport float getCAMERA_START_DISTANCE()
 	{
-		PROXY_TRACK("getCAMERA_START_DISTANCE");
-		return gGlobals->getCAMERA_START_DISTANCE();
+		return PROXY_TRACK(getCAMERA_START_DISTANCE());
 	}
 	DllExport float getAIR_BOMB_HEIGHT()
 	{
-		PROXY_TRACK("getAIR_BOMB_HEIGHT");
-		return gGlobals->getAIR_BOMB_HEIGHT();
+		return PROXY_TRACK(getAIR_BOMB_HEIGHT());
 	}
 	DllExport float getPLOT_SIZE()
 	{
-		PROXY_TRACK("getPLOT_SIZE");
-		return gGlobals->getPLOT_SIZE();
+		return PROXY_TRACK(getPLOT_SIZE());
 	}
 	DllExport float getCAMERA_SPECIAL_PITCH()
 	{
-		PROXY_TRACK("getCAMERA_SPECIAL_PITCH");
-		return gGlobals->getCAMERA_SPECIAL_PITCH();
+		return PROXY_TRACK(getCAMERA_SPECIAL_PITCH());
 	}
 	DllExport float getCAMERA_MAX_TURN_OFFSET()
 	{
-		PROXY_TRACK("getCAMERA_MAX_TURN_OFFSET");
-		return gGlobals->getCAMERA_MAX_TURN_OFFSET();
+		return PROXY_TRACK(getCAMERA_MAX_TURN_OFFSET());
 	}
 	DllExport float getCAMERA_MIN_DISTANCE()
 	{
-		PROXY_TRACK("getCAMERA_MIN_DISTANCE");
-		return gGlobals->getCAMERA_MIN_DISTANCE();
+		return PROXY_TRACK(getCAMERA_MIN_DISTANCE());
 	}
 	DllExport float getCAMERA_UPPER_PITCH()
 	{
-		PROXY_TRACK("getCAMERA_UPPER_PITCH");
-		return gGlobals->getCAMERA_UPPER_PITCH();
+		return PROXY_TRACK(getCAMERA_UPPER_PITCH());
 	}
 	DllExport float getCAMERA_LOWER_PITCH()
 	{
-		PROXY_TRACK("getCAMERA_LOWER_PITCH");
-		return gGlobals->getCAMERA_LOWER_PITCH();
+		return PROXY_TRACK(getCAMERA_LOWER_PITCH());
 	}
 	DllExport float getFIELD_OF_VIEW()
 	{
-		PROXY_TRACK("getFIELD_OF_VIEW");
-		return gGlobals->getFIELD_OF_VIEW();
+		return PROXY_TRACK(getFIELD_OF_VIEW());
 	}
 	DllExport float getSHADOW_SCALE()
 	{
-		PROXY_TRACK("getSHADOW_SCALE");
-		return gGlobals->getSHADOW_SCALE();
+		return PROXY_TRACK(getSHADOW_SCALE());
 	}
 	DllExport float getUNIT_MULTISELECT_DISTANCE()
 	{
-		PROXY_TRACK("getUNIT_MULTISELECT_DISTANCE");
-		return gGlobals->getUNIT_MULTISELECT_DISTANCE();
+		return PROXY_TRACK(getUNIT_MULTISELECT_DISTANCE());
 	}
 	DllExport int getUSE_FINISH_TEXT_CALLBACK()
 	{
-		PROXY_TRACK("getUSE_FINISH_TEXT_CALLBACK");
-		return gGlobals->getUSE_FINISH_TEXT_CALLBACK();
+		return PROXY_TRACK(getUSE_FINISH_TEXT_CALLBACK());
 	}
 	DllExport int getMAX_CIV_PLAYERS()
 	{
-		PROXY_TRACK("getMAX_CIV_PLAYERS");
-		return gGlobals->getMAX_CIV_PLAYERS();
+		return PROXY_TRACK(getMAX_CIV_PLAYERS());
 	}
 	// ***** END EXPOSED TO PYTHON *****
 
@@ -2844,310 +2670,247 @@ public:
 
 	DllExport CvDLLUtilityIFaceBase* getDLLIFaceNonInl()
 	{
-		//PROXY_TRACK("getDLLIFaceNonInl");
 		return gGlobals->getDLLIFaceNonInl();
 	}
 	DllExport void setDLLProfiler(FProfiler* prof)
 	{
-		PROXY_TRACK("setDLLProfiler");
-		gGlobals->setDLLProfiler(prof);
+		PROXY_TRACK(setDLLProfiler(prof));
 	}
 	DllExport void enableDLLProfiler(bool bEnable)
 	{
-		PROXY_TRACK("enableDLLProfiler");
-		gGlobals->enableDLLProfiler(bEnable);
+		PROXY_TRACK(enableDLLProfiler(bEnable));
 	}
 	DllExport bool IsGraphicsInitialized() const
 	{
-		PROXY_TRACK("IsGraphicsInitialized");
-		return gGlobals->IsGraphicsInitialized();
+		return PROXY_TRACK(IsGraphicsInitialized());
 	}
 	DllExport void SetGraphicsInitialized(bool bVal)
 	{
-		PROXY_TRACK("SetGraphicsInitialized");
-		gGlobals->SetGraphicsInitialized(bVal);
+		PROXY_TRACK(SetGraphicsInitialized(bVal));
 	}
 	DllExport bool readBuildingInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("readBuildingInfoArray");
-		return gGlobals->readBuildingInfoArray(pStream);
+		return PROXY_TRACK(readBuildingInfoArray(pStream));
 	}
 	DllExport void writeBuildingInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("writeBuildingInfoArray");
-		gGlobals->writeBuildingInfoArray(pStream);
+		PROXY_TRACK(writeBuildingInfoArray(pStream));
 	}
 	DllExport bool readTechInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("readTechInfoArray");
-		return gGlobals->readTechInfoArray(pStream);
+		return PROXY_TRACK(readTechInfoArray(pStream));
 	}
 	DllExport void writeTechInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("writeTechInfoArray");
-		gGlobals->writeTechInfoArray(pStream);
+		PROXY_TRACK(writeTechInfoArray(pStream));
 	}
 	DllExport bool readUnitInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("readUnitInfoArray");
-		return gGlobals->readUnitInfoArray(pStream);
+		return PROXY_TRACK(readUnitInfoArray(pStream));
 	}
 	DllExport void writeUnitInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("writeUnitInfoArray");
-		gGlobals->writeUnitInfoArray(pStream);
+		PROXY_TRACK(writeUnitInfoArray(pStream));
 	}
 	DllExport bool readLeaderHeadInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("readLeaderHeadInfoArray");
-		return gGlobals->readLeaderHeadInfoArray(pStream);
+		return PROXY_TRACK(readLeaderHeadInfoArray(pStream));
 	}
 	DllExport void writeLeaderHeadInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("writeLeaderHeadInfoArray");
-		gGlobals->writeLeaderHeadInfoArray(pStream);
+		PROXY_TRACK(writeLeaderHeadInfoArray(pStream));
 	}
 	DllExport bool readCivilizationInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("readCivilizationInfoArray");
-		return gGlobals->readCivilizationInfoArray(pStream);
+		return PROXY_TRACK(readCivilizationInfoArray(pStream));
 	}
 	DllExport void writeCivilizationInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("writeCivilizationInfoArray");
-		gGlobals->writeCivilizationInfoArray(pStream);
+		PROXY_TRACK(writeCivilizationInfoArray(pStream));
 	}
 	DllExport bool readPromotionInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("readPromotionInfoArray");
-		return gGlobals->readPromotionInfoArray(pStream);
+		return PROXY_TRACK(readPromotionInfoArray(pStream));
 	}
 	DllExport void writePromotionInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("writePromotionInfoArray");
-		gGlobals->writePromotionInfoArray(pStream);
+		PROXY_TRACK(writePromotionInfoArray(pStream));
 	}
 	DllExport bool readDiplomacyInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("readDiplomacyInfoArray");
-		return gGlobals->readDiplomacyInfoArray(pStream);
+		return PROXY_TRACK(readDiplomacyInfoArray(pStream));
 	}
 	DllExport void writeDiplomacyInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("writeDiplomacyInfoArray");
-		gGlobals->writeDiplomacyInfoArray(pStream);
+		PROXY_TRACK(writeDiplomacyInfoArray(pStream));
 	}
 	DllExport bool readCivicInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("readCivicInfoArray");
-		return gGlobals->readCivicInfoArray(pStream);
+		return PROXY_TRACK(readCivicInfoArray(pStream));
 	}
 	DllExport void writeCivicInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("writeCivicInfoArray");
-		gGlobals->writeCivicInfoArray(pStream);
+		PROXY_TRACK(writeCivicInfoArray(pStream));
 	}
 	DllExport bool readHandicapInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("readHandicapInfoArray");
-		return gGlobals->readHandicapInfoArray(pStream);
+		return PROXY_TRACK(readHandicapInfoArray(pStream));
 	}
 	DllExport void writeHandicapInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("writeHandicapInfoArray");
-		gGlobals->writeHandicapInfoArray(pStream);
+		PROXY_TRACK(writeHandicapInfoArray(pStream));
 	}
 	DllExport bool readBonusInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("readBonusInfoArray");
-		return gGlobals->readBonusInfoArray(pStream);
+		return PROXY_TRACK(readBonusInfoArray(pStream));
 	}
 	DllExport void writeBonusInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("writeBonusInfoArray");
-		gGlobals->writeBonusInfoArray(pStream);
+		PROXY_TRACK(writeBonusInfoArray(pStream));
 	}
 	DllExport bool readImprovementInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("readImprovementInfoArray");
-		return gGlobals->readImprovementInfoArray(pStream);
+		return PROXY_TRACK(readImprovementInfoArray(pStream));
 	}
 	DllExport void writeImprovementInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("writeImprovementInfoArray");
-		gGlobals->writeImprovementInfoArray(pStream);
+		PROXY_TRACK(writeImprovementInfoArray(pStream));
 	}
 	DllExport bool readEventInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("readEventInfoArray");
-		return gGlobals->readEventInfoArray(pStream);
+		return PROXY_TRACK(readEventInfoArray(pStream));
 	}
 	DllExport void writeEventInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("writeEventInfoArray");
-		gGlobals->writeEventInfoArray(pStream);
+		PROXY_TRACK(writeEventInfoArray(pStream));
 	}
 	DllExport bool readEventTriggerInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("readEventTriggerInfoArray");
-		return gGlobals->readEventTriggerInfoArray(pStream);
+		return PROXY_TRACK(readEventTriggerInfoArray(pStream));
 	}
 	DllExport void writeEventTriggerInfoArray(FDataStreamBase* pStream)
 	{
-		PROXY_TRACK("writeEventTriggerInfoArray");
-		gGlobals->writeEventTriggerInfoArray(pStream);
+		PROXY_TRACK(writeEventTriggerInfoArray(pStream));
 	}
-
 	//
 	// additional accessors for initting globals
 	//
-
 	DllExport void setInterface(CvInterface* pVal)
 	{
-		PROXY_TRACK("setInterface");
-		gGlobals->setInterface(pVal);
+		PROXY_TRACK(setInterface(pVal));
 	}
 	DllExport void setDiplomacyScreen(CvDiplomacyScreen* pVal)
 	{
-		PROXY_TRACK("setDiplomacyScreen");
-		gGlobals->setDiplomacyScreen(pVal);
+		PROXY_TRACK(setDiplomacyScreen(pVal));
 	}
 	DllExport void setMPDiplomacyScreen(CMPDiplomacyScreen* pVal)
 	{
-		PROXY_TRACK("setMPDiplomacyScreen");
-		gGlobals->setMPDiplomacyScreen(pVal);
+		PROXY_TRACK(setMPDiplomacyScreen(pVal));
 	}
 	DllExport void setMessageQueue(CMessageQueue* pVal)
 	{
-		PROXY_TRACK("setMessageQueue");
-		gGlobals->setMessageQueue(pVal);
+		PROXY_TRACK(setMessageQueue(pVal));
 	}
 	DllExport void setHotJoinMessageQueue(CMessageQueue* pVal)
 	{
-		PROXY_TRACK("setHotJoinMessageQueue");
-		gGlobals->setHotJoinMessageQueue(pVal);
+		PROXY_TRACK(setHotJoinMessageQueue(pVal));
 	}
 	DllExport void setMessageControl(CMessageControl* pVal)
 	{
-		PROXY_TRACK("setMessageControl");
-		gGlobals->setMessageControl(pVal);
+		PROXY_TRACK(setMessageControl(pVal));
 	}
 	DllExport void setSetupData(CvSetupData* pVal)
 	{
-		PROXY_TRACK("setSetupData");
-		gGlobals->setSetupData(pVal);
+		PROXY_TRACK(setSetupData(pVal));
 	}
 	DllExport void setMessageCodeTranslator(CvMessageCodeTranslator* pVal)
 	{
-		PROXY_TRACK("setMessageCodeTranslator");
-		gGlobals->setMessageCodeTranslator(pVal);
+		PROXY_TRACK(setMessageCodeTranslator(pVal));
 	}
 	DllExport void setDropMgr(CvDropMgr* pVal)
 	{
-		PROXY_TRACK("setDropMgr");
-		gGlobals->setDropMgr(pVal);
+		PROXY_TRACK(setDropMgr(pVal));
 	}
 	DllExport void setPortal(CvPortal* pVal)
 	{
-		PROXY_TRACK("setPortal");
-		gGlobals->setPortal(pVal);
+		PROXY_TRACK(setPortal(pVal));
 	}
 	DllExport void setStatsReport(CvStatsReporter* pVal)
 	{
-		PROXY_TRACK("setStatsReport");
-		gGlobals->setStatsReport(pVal);
+		PROXY_TRACK(setStatsReport(pVal));
 	}
 	DllExport void setPathFinder(FAStar* pVal)
 	{
-		PROXY_TRACK("setPathFinder");
-		gGlobals->setPathFinder(pVal);
+		PROXY_TRACK(setPathFinder(pVal));
 	}
 	DllExport void setInterfacePathFinder(FAStar* pVal)
 	{
-		PROXY_TRACK("setInterfacePathFinder");
-		gGlobals->setInterfacePathFinder(pVal);
+		PROXY_TRACK(setInterfacePathFinder(pVal));
 	}
 	DllExport void setStepFinder(FAStar* pVal)
 	{
-		PROXY_TRACK("setStepFinder");
-		gGlobals->setStepFinder(pVal);
+		PROXY_TRACK(setStepFinder(pVal));
 	}
 	DllExport void setRouteFinder(FAStar* pVal)
 	{
-		PROXY_TRACK("setRouteFinder");
-		gGlobals->setRouteFinder(pVal);
+		PROXY_TRACK(setRouteFinder(pVal));
 	}
 	DllExport void setBorderFinder(FAStar* pVal)
 	{
-		PROXY_TRACK("setBorderFinder");
-		gGlobals->setBorderFinder(pVal);
+		PROXY_TRACK(setBorderFinder(pVal));
 	}
 	DllExport void setAreaFinder(FAStar* pVal)
 	{
-		PROXY_TRACK("setAreaFinder");
-		gGlobals->setAreaFinder(pVal);
+		PROXY_TRACK(setAreaFinder(pVal));
 	}
 	DllExport void setPlotGroupFinder(FAStar* pVal)
 	{
-		PROXY_TRACK("setPlotGroupFinder");
-		gGlobals->setPlotGroupFinder(pVal);
+		PROXY_TRACK(setPlotGroupFinder(pVal));
 	}
-
 	// So that CvEnums are moddable in the DLL
 	DllExport int getNumDirections() const
 	{
-		PROXY_TRACK("getNumDirections");
-		return gGlobals->getNumDirections();
+		return PROXY_TRACK(getNumDirections());
 	}
 	DllExport int getNumGameOptions() const
 	{
-		PROXY_TRACK("getNumGameOptions");
-		return gGlobals->getNumGameOptions();
+		return PROXY_TRACK(getNumGameOptions());
 	}
 	DllExport int getNumMPOptions() const
 	{
-		PROXY_TRACK("getNumMPOptions");
-		return gGlobals->getNumMPOptions();
+		return PROXY_TRACK(getNumMPOptions());
 	}
 	DllExport int getNumSpecialOptions() const
 	{
-		PROXY_TRACK("getNumSpecialOptions");
-		return gGlobals->getNumSpecialOptions();
+		return PROXY_TRACK(getNumSpecialOptions());
 	}
 	DllExport int getNumGraphicOptions() const
 	{
-		PROXY_TRACK("getNumGraphicOptions");
-		return gGlobals->getNumGraphicOptions();
+		return PROXY_TRACK(getNumGraphicOptions());
 	}
 	DllExport int getNumTradeableItems() const
 	{
-		PROXY_TRACK("getNumTradeableItems");
-		return gGlobals->getNumTradeableItems();
+		return PROXY_TRACK(getNumTradeableItems());
 	}
 	DllExport int getNumBasicItems() const
 	{
-		PROXY_TRACK("getNumBasicItems");
-		return gGlobals->getNumBasicItems();
+		return PROXY_TRACK(getNumBasicItems());
 	}
 	DllExport int getNumTradeableHeadings() const
 	{
-		PROXY_TRACK("getNumTradeableHeadings");
-		return gGlobals->getNumTradeableHeadings();
+		return PROXY_TRACK(getNumTradeableHeadings());
 	}
 	DllExport int getNumPlayerOptionInfos() const
 	{
-		PROXY_TRACK("getNumPlayerOptionInfos");
-		return gGlobals->getNumPlayerOptionInfos();
+		return PROXY_TRACK(getNumPlayerOptionInfos());
 	}
 	DllExport int getMaxNumSymbols() const
 	{
-		PROXY_TRACK("getMaxNumSymbols");
-		return gGlobals->getMaxNumSymbols();
+		return PROXY_TRACK(getMaxNumSymbols());
 	}
 	DllExport int getNumGraphicLevels() const
 	{
-		PROXY_TRACK("getNumGraphicLevels");
-		return gGlobals->getNumGraphicLevels();
+		return PROXY_TRACK(getNumGraphicLevels());
 	}
 };
 
@@ -3158,11 +2921,6 @@ extern CvGlobals gGlobalsProxy;	// for debugging
 //
 inline cvInternalGlobals& cvInternalGlobals::getInstance()
 {
-	// AIAndy: This function is called so often, it is not worth it to do this safety check on something that will not happen with the code changes we do nowadays
-	//if ( gGlobals == NULL )
-	//{
-	//	::MessageBoxA(NULL, "cvInternalGlobals::getInstance() called prior to instantiation\n","CvGameCore",MB_OK);
-	//}
 	return *gGlobals;
 }
 
