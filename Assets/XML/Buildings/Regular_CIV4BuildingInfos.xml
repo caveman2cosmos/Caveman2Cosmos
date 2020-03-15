@@ -37760,7 +37760,7 @@
 			<PrereqTech>TECH_CONTROLLED_FIRE</PrereqTech>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_STICK_GATHERER</BuildingType>
+					<BuildingType>BUILDING_GATHERER_STICK</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
@@ -78238,7 +78238,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CONDUCT</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ROCK_GATHERER</BuildingType>
+				<BuildingType>BUILDING_GATHERER_ROCK</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_BRONZE_WORKING</ObsoleteTech>
@@ -80088,17 +80088,17 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Reed Gatherer -->
-			<Type>BUILDING_REED_GATHERER</Type>
+			<Type>BUILDING_GATHERER_REED</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_REED_GATHERER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_REED_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_REED_GATHERER_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_GATHERER_REED</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_REED_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_REED_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_REED_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_REED</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -81294,12 +81294,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Wild Rice Gatherer -->
-			<Type>BUILDING_RICE_GATHERER</Type>
-			<Description>TXT_KEY_BUILDING_RICE_GATHERER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_RICE_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_RICE_GATHERER_STRATEGY</Strategy>
+			<Type>BUILDING_GATHERER_RICE</Type>
+			<Description>TXT_KEY_BUILDING_GATHERER_RICE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_RICE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_RICE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_RICE_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_RICE</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -82164,7 +82164,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PICTOGRAPHS</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ROCK_GATHERER</BuildingType>
+				<BuildingType>BUILDING_GATHERER_ROCK</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
@@ -82243,17 +82243,17 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Rock Gatherer -->
-			<Type>BUILDING_ROCK_GATHERER</Type>
+			<Type>BUILDING_GATHERER_ROCK</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_ROCK_GATHERER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ROCK_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ROCK_GATHERER_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_GATHERER_ROCK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_ROCK_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_ROCK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ROCK_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_ROCK</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -82417,17 +82417,17 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Tuber Gatherer -->
-			<Type>BUILDING_ROOT_TUBERS</Type>
+			<Type>BUILDING_GATHERER_TUBER</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_ROOT_TUBERS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ROOT_TUBERS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ROOT_TUBERS_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_GATHERER_TUBER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_TUBER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_TUBER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ROOT_TUBERS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_TUBER</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -85614,17 +85614,17 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Seed Gatherer -->
-			<Type>BUILDING_SEED_CAMP</Type>
+			<Type>BUILDING_GATHERER_GRAIN</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_SEED_CAMP</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SEED_CAMP_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SEED_CAMP_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_GATHERER_GRAIN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_GRAIN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_GRAIN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SEED_CAMP</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_GRAIN</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_COMMUNITY_GARDEN</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -88416,12 +88416,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Snail Catcher -->
-			<Type>BUILDING_SNAIL</Type>
-			<Description>TXT_KEY_BUILDING_SNAIL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SNAIL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SNAIL_STRATEGY</Strategy>
+			<Type>BUILDING_GATHERER_SNAIL</Type>
+			<Description>TXT_KEY_BUILDING_GATHERER_SNAIL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_SNAIL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_SNAIL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SNAIL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_SNAIL</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -91439,7 +91439,7 @@
 			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_STICK_GATHERER</BuildingType>
+					<BuildingType>BUILDING_GATHERER_STICK</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
@@ -91477,17 +91477,17 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Stick Gatherer -->
-			<Type>BUILDING_STICK_GATHERER</Type>
+			<Type>BUILDING_GATHERER_STICK</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_STICK_GATHERER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_STICK_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_STICK_GATHERER_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_GATHERER_STICK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_STICK_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_STICK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_STICK_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_STICK</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -91802,7 +91802,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TOOL_MAKING</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ROCK_GATHERER</BuildingType>
+				<BuildingType>BUILDING_GATHERER_ROCK</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>20</iCost>
@@ -92175,17 +92175,17 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Straw Gatherer -->
-			<Type>BUILDING_STRAW_GATHERER</Type>
+			<Type>BUILDING_GATHERER_STRAW</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_STRAW_GATHERER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_STRAW_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_STRAW_GATHERER_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_GATHERER_STRAW</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_STRAW_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_STRAW_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_STRAW_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_STRAW</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -100803,17 +100803,17 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Vine Gatherer -->
-			<Type>BUILDING_VINE_GATHERER</Type>
+			<Type>BUILDING_GATHERER_VINE</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_VINE_GATHERER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_VINE_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VINE_GATHERER_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_GATHERER_VINE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_VINE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_VINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VINE_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_VINE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -103229,12 +103229,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Wild Wheat Gatherer -->
-			<Type>BUILDING_WHEAT_GATHERER</Type>
-			<Description>TXT_KEY_BUILDING_WHEAT_GATHERER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WHEAT_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_WHEAT_GATHERER_STRATEGY</Strategy>
+			<Type>BUILDING_GATHERER_WHEAT</Type>
+			<Description>TXT_KEY_BUILDING_GATHERER_WHEAT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_WHEAT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_WHEAT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_WHEAT_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_WHEAT</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -103505,12 +103505,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Wild Mushrooms -->
-			<Type>BUILDING_WILD_MUSHROOMS</Type>
-			<Description>TXT_KEY_BUILDING_WILD_MUSHROOMS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WILD_MUSHROOMS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_WILD_MUSHROOMS_STRATEGY</Strategy>
+			<Type>BUILDING_GATHERER_MUSHROOM</Type>
+			<Description>TXT_KEY_BUILDING_GATHERER_MUSHROOM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_MUSHROOM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_MUSHROOM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_WILD_MUSHROOMS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_MUSHROOM</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

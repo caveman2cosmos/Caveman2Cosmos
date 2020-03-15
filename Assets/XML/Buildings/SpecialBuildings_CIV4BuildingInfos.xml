@@ -10825,7 +10825,7 @@
 			</TechTypes>
 			<Bonus>BONUS_HIDE</Bonus>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_STICK_GATHERER</BuildingType>
+				<BuildingType>BUILDING_GATHERER_STICK</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
@@ -12582,7 +12582,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_STICK_GATHERER</BuildingType>
+				<BuildingType>BUILDING_GATHERER_STICK</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>

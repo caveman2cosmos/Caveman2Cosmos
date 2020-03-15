@@ -16367,7 +16367,7 @@
 			</ReplaceBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_REED_GATHERER</Type>
+			<Type>BUILDING_GATHERER_REED</Type>
 			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -16387,7 +16387,7 @@
 			</ReplaceBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_STRAW_GATHERER</Type>
+			<Type>BUILDING_GATHERER_STRAW</Type>
 			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -16407,7 +16407,7 @@
 			</ReplaceBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_VINE_GATHERER</Type>
+			<Type>BUILDING_GATHERER_VINE</Type>
 			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -18386,7 +18386,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SNAIL</Type>
+			<Type>BUILDING_GATHERER_SNAIL</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>

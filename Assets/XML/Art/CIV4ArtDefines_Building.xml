@@ -9640,7 +9640,7 @@
 			<Button>Art/Interface/Buttons/Buildings/earthwormfetcher.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SNAIL</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_SNAIL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -11450,7 +11450,7 @@
 			<Button>art/Craft/art/bambooarmourer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ROOT_TUBERS</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_TUBER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -11740,7 +11740,7 @@
 			<Button>art/Craft/Art/shipwright.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_WILD_MUSHROOMS</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_MUSHROOM</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -12080,7 +12080,7 @@
 			<Button>Art/Interface/Buttons/National_Wonders/captured_fire.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_STICK_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_STICK</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -12090,7 +12090,7 @@
 			<Button>art/Craft/Art/stickgatherer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ROCK_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_ROCK</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -12900,7 +12900,7 @@
 			<Button>art/Craft/Art/aluminumsmith.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_VINE_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_VINE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -12910,7 +12910,7 @@
 			<Button>art/Craft/Art/vinegatherer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_REED_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_REED</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -12930,7 +12930,7 @@
 			<Button>art/Craft/Art/grassgatherer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_STRAW_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_STRAW</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -16210,7 +16210,7 @@
 			<Button>art/Crops/Art/brazilwoodgrove.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_WHEAT_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_WHEAT</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -16230,7 +16230,7 @@
 			<Button>art/Crops/Art/barleygatherer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_RICE_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_RICE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -19674,7 +19674,7 @@
 			<Button>art/Farming/Art/familyfarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SEED_CAMP</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_GRAIN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>

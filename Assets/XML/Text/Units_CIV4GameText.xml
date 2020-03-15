@@ -12369,7 +12369,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_IMMIGRANT_HELP</Tag>
 		<English>[ICON_BULLET]Adds 1 population point when joined to a city.[NEWLINE]Decreases the population in the city where it is built by 2</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Ajoute 1 de population lorsqu'il rejoint une ville. [NEWLINE] Diminue la population de la ville où elle est construite par 2</French>
+		<French>[ICON_BULLET]Ajoute 1 de population lorsqu'il rejoint une ville. [NEWLINE] Diminue la population de la ville où elle est construite par 2</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_IMMIGRANT_PEDIA</Tag>

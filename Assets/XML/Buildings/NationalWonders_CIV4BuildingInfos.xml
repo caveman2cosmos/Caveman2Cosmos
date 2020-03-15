@@ -632,7 +632,7 @@
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_CONTROLLED_FIRE</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_STICK_GATHERER</BuildingType>
+				<BuildingType>BUILDING_GATHERER_STICK</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_FIRE_MAKING</ObsoleteTech>
