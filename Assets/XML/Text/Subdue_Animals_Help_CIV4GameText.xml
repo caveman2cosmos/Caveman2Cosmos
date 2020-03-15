@@ -15,27 +15,6 @@
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Zbuduj[COLOR_REVERT] Mit Łasicy[NEWLINE][ICON_BULLET]Mit Ziemi[NEWLINE][ICON_BULLET]Klatkę z nocnymi zwierzętami</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_BEAR1_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth of the Bear, Master Hunter, Bear Cage and Dancing Bear</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Myth of the Bear, Maître de Chasse, Bear Cage and Dancing Bear</French>
-		<Italian>[COLOR_HIGHLIGHT_TEXT]Costruisci[COLOR_REVERT][NEWLINE][ICON_BULLET]Mito dell'orso[NEWLINE][ICON_BULLET]Mastro cacciatore[NEWLINE][ICON_BULLET]Orso ballerino, Gabbia - Orsi</Italian>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Zbuduj[COLOR_REVERT] Mit Niedźwiedzi[NEWLINE][ICON_BULLET]Wybitnego Łowcę[NEWLINE][ICON_BULLET]Klatkę z niedzwiedziem i Tańczącego Niedźwiedzia</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_BEAR2_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth of the Bear, Bear Cage and Dancing Bear</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Myth of the Bear, Bear Cage and Dancing Bear</French>
-		<Italian>[COLOR_HIGHLIGHT_TEXT]Costruisci[COLOR_REVERT][NEWLINE][ICON_BULLET]Mito dell'orso[NEWLINE][ICON_BULLET]Orso ballerino, Gabbia - Orsi</Italian>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Zbuduj[COLOR_REVERT] Mit Niedźwiedzi[NEWLINE][ICON_BULLET]Klatkę z niedzwiedziem i Tańczącego Niedźwiedzia</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_BEAR3_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth of the Bear and Paleolithic Bear, Master Hunter, Bear Cage and Dancing Bear</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Myth of the Bear and Paleolithic Bear, Maître de Chasse, Bear Cage and Dancing Bear</French>
-		<Italian>[COLOR_HIGHLIGHT_TEXT]Costruisci[COLOR_REVERT][NEWLINE][ICON_BULLET]Mito dell'orso, Mito dell'orso del paleolitico[NEWLINE][ICON_BULLET]Mastro cacciatore[NEWLINE][ICON_BULLET]Orso ballerino, Gabbia - Orsi</Italian>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Zbuduj[COLOR_REVERT] Mit Niedźwiedzi i Niedźwiedzi Kopalnych[NEWLINE][ICON_BULLET]Wybitnego Łowcę[NEWLINE][ICON_BULLET]Klatkę z niedzwiedziem i Tańczącego Niedźwiedzia</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BEAVER_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth of the Beaver, Rodent Cage, Beaver Traps and Fur Farm</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Myth of the Beaver, Rodent Cage, Beaver Traps and Fur Farm</French>
@@ -99,11 +78,6 @@
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Zbuduj[COLOR_REVERT] Mit Jelenia, Stado Jeleni[NEWLINE][ICON_BULLET]Wybitnego Łowcę[NEWLINE][ICON_BULLET]Klatkę z egzotycznymi roślinożercami</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_CAPUCHIN_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Capuchin and Old Man Of the Forest, Primate Cage and Enclosure</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythe, Histoire(s) - Capuchin and Old Man Of the Forest, Primate Cage and Enclosure</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CAPYBARA_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Capybara and Rodent, Rodent Cage and Enclosure</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythe, Histoire(s) - Capybara and Rodent, Rodent Cage and Enclosure</French>
@@ -128,16 +102,6 @@
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Spotted Cat Myth and Big Cat Cage</French>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Costruisci[COLOR_REVERT][NEWLINE][ICON_BULLET]Mito del felino maculato, Gabbia - Felini</Italian>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Zbuduj[COLOR_REVERT] Mit Cętkowanych Kotów, Klatkę z wielkimi kotami</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_CHEETAH_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Cheetah and Spotted Cats, Big Cat Cage and Enclosure</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythe, Histoire(s) - Cheetah and Spotted Cats, Big Cat Cage and Enclosure</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_CHIMPANZEE_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Chimpanzee and Old Man Of the Forest, Primate Cage and Enclosure</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythe, Histoire(s) - Chimpanzee and Old Man Of the Forest, Primate Cage and Enclosure</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_COW_HELP</Tag>
@@ -220,13 +184,6 @@
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Elephant Herd and Myth, Maître de Chasse and Carnival, Exotic Herbivores Cage</French>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Costruisci[COLOR_REVERT][NEWLINE][ICON_BULLET]Branco - Elefanti, Mito dell'elefante[NEWLINE][ICON_BULLET]Mastro cacciatore, Carnevale[NEWLINE][ICON_BULLET]Gabbia - Erbivori esotici</Italian>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Zbuduj[COLOR_REVERT] Mit Słonia, Stado Słoni[NEWLINE][ICON_BULLET]Wybitnego Łowcę i Karnawał[NEWLINE][ICON_BULLET]Klatkę z egzotycznymi roślinożercami</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_FISH_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Sea and Fish Myth, Fish Pens, Coastal Fish Pens, Marine Institute</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Sea and Fish Myth, Fish Pens, Coastal Fish Pens, Marine Institute</French>
-		<Italian>[COLOR_HIGHLIGHT_TEXT]Costruisci[COLOR_REVERT][NEWLINE][ICON_BULLET]Mito del pesce, Mito del Mare[NEWLINE][ICON_BULLET]Pinne di pesce[NEWLINE][ICON_BULLET]Istituto marino</Italian>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Zbuduj[COLOR_REVERT] Mit Ryb, Mit Morza[NEWLINE][ICON_BULLET]Hodowlę Ryb, Hodowlę Ryb Przybrzeżnych[NEWLINE][ICON_BULLET]Instytut Morski</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_FLAMINGO_HELP</Tag>
@@ -433,13 +390,6 @@
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Zbuduj[COLOR_REVERT] Mit Nieba, Mit Ptaków, Mit Ptaków Kopalnych[NEWLINE][ICON_BULLET]Wybitnego Morskiego Łowcę, Stado Strusi, Pierzarza[NEWLINE][ICON_BULLET]Klatkę z ptakami</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_MONITOR_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Crocodile, Reptile and Dragon Myth and Reptile Cage</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Crocodile, Reptile and Dragon Myth and Reptile Cage</French>
-		<Italian>[COLOR_HIGHLIGHT_TEXT]Costruisci[COLOR_REVERT][NEWLINE][ICON_BULLET]Mito del coccodrillo, Mito dei rettili, Mito del dragone, Gabbia - Rettili</Italian>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Zbuduj[COLOR_REVERT] Mit Krokodyli, Mit Gadów, Mit Smoka, Klatkę z gadami</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MONKEY_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Old Man of the Forest Myth, Monker Breeder and Primate Cage</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Old Man of the Forest Myth, Monker Breeder and Primate Cage</French>
@@ -506,13 +456,6 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_SKUNK_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Skunk</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythe, Histoire(s) - Skunk</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_SNAKE1_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth of the Reptile, Snake Charmer and Snake Pit, Reptile Cage</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Myth of the Reptile, Snake Charmer and Snake Pit, Reptile Cage</French>
-		<Italian>[COLOR_HIGHLIGHT_TEXT]Costruisci[COLOR_REVERT][NEWLINE][ICON_BULLET]Mito dei rettili[NEWLINE][ICON_BULLET]Incantatore di serpenti, Fossa dei serpenti[NEWLINE][ICON_BULLET]Gabbia - Rettili</Italian>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Zbuduj[COLOR_REVERT] Mit Gadów[NEWLINE][ICON_BULLET]Zaklinacza Węży i Jamę z wężami[NEWLINE][ICON_BULLET]Klatkę z gadami</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SNAKE2_HELP</Tag>

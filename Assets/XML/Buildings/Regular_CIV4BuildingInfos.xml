@@ -43578,7 +43578,7 @@
 		<BuildingInfo>
 			<!-- Grand Manor -->
 			<Type>BUILDING_MANOR</Type>
-			<Description>TXT_KEY_BUILDING_MANOR2</Description>
+			<Description>TXT_KEY_BUILDING_MANOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MANOR_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MANOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -90296,7 +90296,7 @@
 		<BuildingInfo>
 			<!-- Squatter Camps -->
 			<Type>BUILDING_SHANTYTOWN</Type>
-			<Description>TXT_KEY_BUILDING_SHANTYTOWN2</Description>
+			<Description>TXT_KEY_BUILDING_SHANTYTOWN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHANTYTOWN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SHANTYTOWN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>

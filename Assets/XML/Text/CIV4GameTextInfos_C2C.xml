@@ -41,14 +41,6 @@
 		<Spanish>[ICON_BULLET][NUM1:Un:Una:Unos:Unas] [COLOR_BUILDING_TEXT][LINK=%s1_NameType]%s2:1_Name[\LINK][COLOR_REVERT] gratis en todas las ciudades.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FREE_PROMOTION</Tag>
-		<English>[ICON_BULLET]Free [COLOR_HIGHLIGHT_TEXT][LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT] Promotion for Units Built in this City</English>
-		<French>[ICON_BULLET]Promotion gratuite [COLOR_HIGHLIGHT_TEXT]([LINK=%s1_NameType]%s2_Name[\LINK])[COLOR_REVERT] pour les unités construites dans cette ville</French>
-		<German>[ICON_BULLET]Freie Beförderung zu [COLOR_HIGHLIGHT_TEXT][LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT] für die in dieser Stadt errichteten Einheiten</German>
-		<Italian>[ICON_BULLET]Promozione [COLOR_HIGHLIGHT_TEXT][LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT] gratuita per le unità costruite in questa città.</Italian>
-		<Spanish>[ICON_BULLET]Da gratis el ascenso de [COLOR_HIGHLIGHT_TEXT][LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT] a las unidades construidas en esta ciudad</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FREE_SPECIALIST</Tag>
 		<English>[ICON_BULLET]%D1_Change Free [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT]</English>
 		<French>[ICON_BULLET]%D1_Change Donne un [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT] gratuit</French>

@@ -915,36 +915,6 @@
 		<French>Histoire du Paon</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PIG_NEW_MYTH</Tag>
-		<English>Myth - New Pig</English>
-		<French>Mythe du Cochon</French>
-		<Polish>Mit - Swinia</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PIG_NEW_MYTH_EFFECT</Tag>
-		<English>Myth Effect - New Pig</English>
-		<French>Effet (Mythe du Cochon)</French>
-		<Polish>Efekt Mitu - Swinia</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PIG_NEW_STORIES</Tag>
-		<English>Stories - New Pig</English>
-		<French>Histoires des Cochons</French>
-		<Polish>Historie - Swinia</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PIG_NEW_STORIES_EFFECT</Tag>
-		<English>Stories Effect - New Pig</English>
-		<French>Effet (Histoires des Cochons)</French>
-		<Polish>Efekt Historii - Swinia</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PIG_NEW_STORY</Tag>
-		<English>Story - New Pig</English>
-		<French>Histoire du Cochon</French>
-		<Polish>Opowieść - Swinia</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROCOPTODON_MYTH</Tag>
 		<English>Myth - Procoptodon</English>
 		<French>Mythe du Procoptodon</French>
@@ -1208,29 +1178,9 @@
 		<French>[COLOR_HIGHLIGHT_TEXT]Permet de construire[COLOR_REVERT] Mythe et Histoires des Cobras[NEWLINE][ICON_BULLET]Mythe de la Terre et des serpents[NEWLINE][ICON_BULLET]Cage et enclos pour Reptiles[NEWLINE][ICON_BULLET]Fosse à Serpents et Charmeur</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_GELADA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Gelada Babbon and Old Man Of the Forest, Primate Cage and Enclosure</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Babouin Gelada et Ancient de la Forêt, Cage et Enclos pour primates</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_JAGUAR_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Jaguar and Spotted Cats, Big Cat Cage and Enclosure</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Jaguar et autres félins, Cage et Enclos pour les grands félins</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_KANGAROO_GREY_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Grey Kangaroo and Marsuipial, Marsuipial Herd, Cage and Enclosure</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Kangourou gris et Marsupial, Troupeau, Cage et Enclosure de Marsupiaux</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_KANGAROO_RED_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Red Kangaroo and Marsuipial, Marsuipial Herd, Cage and Enclosure</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Kangourou roux et autres Marsupiaux, Troupeau, Cage et Enclos pour Marsupiaux</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_MANDRILL_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Mandrill and Old Man Of the Forest, Primate Cage and Enclosure</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Mandrill et Ancient de la Forêt, Cage et Enclos pour primates</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_NILE_MONITOR_HELP</Tag>
@@ -1256,11 +1206,6 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_PEACOCK_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Peacock and Birds, Bird Cage and Enclosure, Poultry Flock, Feather Worker and Flocks of Peacock</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Paon et des Oiseaux, Cages à Oiseaux, Atelier de Plumes</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_PROCOPTODON_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Procoptodon, Paleolithic Marsupial and Marsuipial, Marsuipial Herd, Cage and Enclosure</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Procoptodon, Marsupial Paléolithique, Troupeau, Cage et Enclos à Marsupiaux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PUFFADDER_HELP</Tag>
@@ -1306,11 +1251,6 @@
 		<Tag>TXT_KEY_UNIT_TAMED_LIZARD_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Story and Stories - Lizards, Reptile Cage and Enclosure</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construisez l'[COLOR_REVERT]Histoire ou les Histoires des lézards[NEWLINE][ICON_BULLET]Cage et Enclos à Reptiles</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TAMED_LIZARD_PEDIA</Tag>
-		<English>Tamed Lizard</English>
-		<French>Lézard géant(dompté)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_SNAKE</Tag>

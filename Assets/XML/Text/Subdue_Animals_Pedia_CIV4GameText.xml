@@ -167,32 +167,6 @@
 		<Polish>Zwinia domowa pochodzi od dzika, którego udomowienie nastąpiło przed ok. 7 tys. lat w Azji, a następnie w Europie. Według innych badaczy domestykacja tego gatunku nastąpiła znacznie wcześniej - już 12 700 - 13 000 lat p.n.e., a miało to miejsce w dorzeczu Eufratu i Tygrysu (późniejsza Mezopotamia).</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_IBEX_CERIMONIAL_GUARD_PEDIA</Tag>
-		<English>The [COLOR_BUILDING_TEXT]Ibex Cerimonial Guard[COLOR_REVERT] is mostly for display. It is build by the [COLOR_UNIT_TEXT]Ibex Chariot[COLOR_REVERT]. It can be upgraded to a tourist attraction.</English>
-		<Italian>Lo [COLOR_BUILDING_TEXT]Stambecco - Guardia cerimoniale[COLOR_REVERT] non è un edificio reale. Viene costruito dal [COLOR_UNIT_TEXT]Carro trainato da stambecchi[COLOR_REVERT]. Può essere migliorata per diventare un'attrazione turistica.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_IBEX_CHANGING_OF_THE_GUARD_PEDIA</Tag>
-		<English>Alternate timeline building based on the English Changing of the Guard cerimony.</English>
-		<Italian>Edifici legati a linee temporali alternative, basati sul cambio della guardia inglese.</Italian>
-		<Polish>Budynek alternatywnej linii czasowej.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_IBEX_COMPOUND_PEDIA</Tag>
-		<English>Alternate timeline building.</English>
-		<Italian>Edifici legati a linee temporali alternative.</Italian>
-		<Polish>Budynek alternatywnej linii czasowej.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KENNEL_PEDIA</Tag>
-		<English>Domesticated wolves serve many functions within a community. They serve as faithful companions, strengthen hunting parties and add their teeth and ears to the city's defense.</English>
-		<French>Les loups domestiques remplissent de nombreuses fonctions au sein des communautés. Ce sont des compagnons fidèles, qui renforcent les groupes de chasseurs et participent à la défense de la ville.</French>
-		<German>Zahme Wölfe erfüllen innerhalb einer Gemeinschaft viele Aufgaben. Sie dienen als treue Gefährten, unterstützen Jagdgruppen und leihen der Stadtverteidigung ihre Zähne und Ohren.</German>
-		<Italian>I lupi addomesticati hanno molte funzioni, in una comunità. Sono fedeli compagni, rinforzano le partite di caccia e aggiungono i propri denti e le proprie orecchie alle difese della città.</Italian>
-		<Spanish>Los lobos domésticos cumplen muchas funciones en una comunidad. Son unos compañeros fieles, sirven de refuerzo a las partidas de caza y colaboran en la defensa de la ciudad con sus dientes y su oído.</Spanish>
-		<Polish>Psiarnia to miejsce gdzie są przetrzymywane i rozmnażane psy.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LLAMA_HERD_PEDIA</Tag>
 		<English>TBD</English>
 		<Polish>Udomowienie lamy miało miejsce około 4000 5000 lat p.n.e. na terenach andyjskiej puny, prawdopodobnie w okolicach jeziora Titicaca. W czasach przedinkaskich, przedstawiciele kultury Mochica umieszczali szczątki lam w grobach, przedstawiali je także na swojej ceramice. Lamy i alpaki były podstawowym zwierzęciem w Państwie Inków, jako żywność, źródło paliwa, włókien na ubrania, jako zwierzęta juczne. Były także wykorzystywane w ceremoniach religijnych, jako zwierzęta ofiarne. Po podboju Państwa Inków przez konkwistadorów znaczenie lam znacznie spadło, gdyż konkwistadorzy sprowadzili własne zwierzęta juczne. Mimo tego lamy i alpaki pozostały ważnymi zwierzętami w Ameryce Południowej, głównie na terenach wysokogórskich. Państwa południowoamerykańskie na początku XX wieku wprowadziły zakaz eksportu tych zwierząt. Zakaz ten został ostatecznie zniesiony dla lam i alpak w latach 80. XX wieku.</Polish>
@@ -371,15 +345,6 @@
 		<French>Les animaux apparaissent dans la nature et sont des unités animales barbares. Voir également [LINK=CONCEPT_SUBDUED_ANIMALS]Animaux apprivoisés[\LINK] et [LINK=CONCEPT_TAMED_ANIMALS]Animaux dressés[\LINK].</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_HAWK_PEDIA</Tag>
-		<English>To soar, weightless, above the world: it is the dream of man, and the reality of the Hawk. Trained Hawks act as the eyes of Hunters, increasing their already considerable recon ability.</English>
-		<French>Pour monter, léger, au-dessus du monde: c'est le rêve de l'homme, et la réalité du faucon. Les fauconx qualifiés agissent en tant que yeux des chasseurs, augmentant leurs capacités reconditionnées déjà considérables.</French>
-		<German>Ansteigen, leicht, über der Welt: es ist der Traum des Mannes und die Wirklichkeit des Falken. Ausgebildete Falken dienen als die Augen der Jäger und erhöhen ihre bereits beträchtliche überholte Fähigkeit.</German>
-		<Italian>Salire, senza peso, sopra il mondo: è il sogno dell'uomo e la realtà del falco. I falchi addestrati fungono da occhi dei cacciatori, aumentando la loro già considerevole abilità.</Italian>
-		<Spanish>Para elevarse, ingrávido, sobre el mundo: es el sueño del hombre, y la realidad del halcón. Los halcones entrenados actúan como los ojos de cazadores, aumentando su capacidad renovada ya considerable.</Spanish>
-		<Polish>Sokolnictwo (myślistwo ptasze) jedna z gałęzi łowiectwa; sztuka układania (tresury) ptaków drapieżnych oraz łowy przy użyciu tych ptaków.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_HUNTER_PEDIA</Tag>
 		<English>Years of living in the wilderness on their own terms have taught these men a thing or two about the importance of stealth, speed and senses. They specialise in the hunting and subduing of animal units.</English>
 		<French>Des années de vie dans la nature selon leurs propres termes ont enseigné à ces hommes une ou deux choses sur l'importance de la furtivité, de la vitesse et des sens. Ils se spécialisent dans la chasse et la maîtrise des unités animales.</French>
@@ -390,12 +355,5 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_ANIMAL_STRATEGY</Tag>
 		<English>Subdued animals are primarily meant for use in constructing special buildings in cities.</English>
 		<French>Les animaux apprivoisés sont principalement destinés à la construction de bâtiments spéciaux dans les villes.</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TALESOF_SEA_ANIMALS_PEDIA</Tag>
-		<English>A Unit to enable some game mechanism.</English>
-		<French>Une unité pour activer un mécanisme de jeu.</French>
-		<Italian>Un'unità che non corrisponde a nulla esistente nella vita reale, serve solo a permettere alcune meccaniche di gioco.</Italian>
-		<Polish>Jednostka jest niezbędna dla mechaniki gry.</Polish>
 	</TEXT>
 </Civ4GameText>
