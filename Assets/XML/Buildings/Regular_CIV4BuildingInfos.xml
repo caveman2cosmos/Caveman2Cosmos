@@ -1895,12 +1895,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Amber Gatherer -->
-			<Type>BUILDING_AMBER_GATHERER</Type>
-			<Description>TXT_KEY_BUILDING_AMBER_GATHERER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_AMBER_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_AMBER_GATHERER_STRATEGY</Strategy>
+			<Type>BUILDING_GATHERER_AMBER</Type>
+			<Description>TXT_KEY_BUILDING_GATHERER_AMBER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_AMBER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_AMBER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_AMBER_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_AMBER</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -8554,9 +8554,9 @@
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_BARK_GATHERER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BARK_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BARK_GATHERER_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_GATHERER_BARK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_BARK_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_BARK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BARK_GATHERER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -8620,12 +8620,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Wild Barley Gatherer -->
-			<Type>BUILDING_BARLEY_GATHERER</Type>
-			<Description>TXT_KEY_BUILDING_BARLEY_GATHERER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BARLEY_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BARLEY_GATHERER_STRATEGY</Strategy>
+			<Type>BUILDING_GATHERER_BARLEY</Type>
+			<Description>TXT_KEY_BUILDING_GATHERER_BARLEY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_BARLEY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_BARLEY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BARLEY_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_BARLEY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -10276,12 +10276,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Berry Gatherer -->
-			<Type>BUILDING_BERRY_BUSHES</Type>
-			<Description>TXT_KEY_BUILDING_BERRY_BUSHES</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BERRY_BUSHES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BERRY_BUSHES_STRATEGY</Strategy>
+			<Type>BUILDING_GATHERER_BERRY</Type>
+			<Description>TXT_KEY_BUILDING_GATHERER_BERRY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_BERRY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_BERRY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BERRY_BUSHES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_BERRY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -18624,13 +18624,13 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Carrion -->
-			<Type>BUILDING_CARRION</Type>
-			<Description>TXT_KEY_BUILDING_CARRION</Description>
-			<Help>TXT_KEY_BUILDING_CARRION_HELP</Help>
-			<Civilopedia>TXT_KEY_BUILDING_CARRION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CARRION_STRATEGY</Strategy>
+			<Type>BUILDING_GATHERER_CARRION</Type>
+			<Description>TXT_KEY_BUILDING_GATHERER_CARRION</Description>
+			<Help>TXT_KEY_BUILDING_GATHERER_CARRION_HELP</Help>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_CARRION_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_CARRION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CARRION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_CARRION</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

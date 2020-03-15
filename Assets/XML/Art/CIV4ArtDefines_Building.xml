@@ -11190,7 +11190,7 @@
 			<Button>art/Craft/art/woodcarver.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BERRY_BUSHES</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_BERRY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -11200,7 +11200,7 @@
 			<Button>art/Craft/art/berrybushes.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CARRION</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_CARRION</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -16220,7 +16220,7 @@
 			<Button>art/Crops/Art/wheatgatherer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BARLEY_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_BARLEY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -22364,7 +22364,7 @@
 			<Button>art/Minerals/Art/jadegatherer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_AMBER_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_AMBER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
