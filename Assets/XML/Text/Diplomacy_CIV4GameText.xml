@@ -7718,15 +7718,6 @@
 		<Spanish>...%s1?</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>USER_DIPLO_USER_LETS_TALK</Tag>
-		<English>We wish to resume talks...</English>
-		<French>Nous souhaitons reprendre les négociations...</French>
-		<German>Wir wünschen, die Gespräche wieder aufzunehmen...</German>
-		<Italian>Vorremmo riprendere le nostre relazioni diplomatiche...</Italian>
-		<Spanish>Desearíamos retomar el diálogo...</Spanish>
-		<Polish>Chcemy wznowienia rozmów...</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>USER_DIPLO_WAR_1</Tag>
 		<English>Your head would look good on the end of a pole. (WAR)</English>
 		<French>Votre tête serait très bien au bout d'une lance.</French>

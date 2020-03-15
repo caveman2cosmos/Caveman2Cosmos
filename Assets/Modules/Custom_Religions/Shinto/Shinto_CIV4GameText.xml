@@ -45,30 +45,6 @@
 		<Italian>[COLOR_BUILDING_TEXT]Castello Matsumoto[COLOR_REVERT]</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SHAMANHUT</Tag>
-		<English>Shaman Hut</English>
-		<French>
-			<Text>Hutte du Shaman</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Schamanenhütte</German>
-		<Italian>Capanna dello sciamano</Italian>
-		<Spanish>
-			<Text>Cabaña del chamán</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Chata Szamana</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SHAMANHUT_PEDIA</Tag>
-		<English>Even though they lack technical sophistication. Most are female, due to their greater natural aptitudes, though this is by no means the rule. The shaman's lodge is somewhat larger than a poa, to make soon for the many strange natural components stored within. These include bushels of hanging herbs, colored clay for paint, exotic infusions in stoneware urns, and other oddities too numerous to describe. From these bizarre components they weave their magic, which focuses heavily on spirits and elemental forces. The lodge floor is often covered in bizarre mandalas and mystic circles drawn in colored sand, and one must watch where they step lest they disrupt some long-term project. Wards and glyphs are painted on nearly every surface, and while many look like childish nonsense, others contain awesome protective enchantments meant to drive off evil spirits. Most shamans will have from 1-3 apprentices living in the lodge at any given time, younger females who clean, gather and prepare ingredients, and assist the shaman in more complex rituals.</English>
-		<German>Das Domizil eines Schamanen oder einer Schamanin (die meisten waren tatsächlich Frauen) hebt sich schon durch die Größe deutlich von den restlichen Gebäuden eines Dorfes ab. Und diese hat nicht nur repräsentative Zwecke. Eine Schamamenhütte muss geräumig sein, da der Besitzer in ihrem Inneren nicht nur wohnt und arbeitet, er bewahrt hier auch eine Menge an Kräutern, Tiereingeweiden und anderen merkwürdigen Ingredienzen auf, die er für die Ausübung seiner Magie benötigt. Außerdem soll sie auch noch Platz für die Lehrlinge bieten, die während ihrer Ausbildung bei ihrem Meister wohnen und diesen beim Sammeln und Zubereiten von Zutaten und bei der Ausübung von komplexen Ritualen unterstützen.</German>
-		<Italian>La casa di uno sciamano. La maggior parte sono donne, grazie alle loro grandi doti naturali, anche se questo non è certamente la regola. L'abitazione di uno sciamano è normalmente più grande di quelle comuni, per far spazio a strani elementi naturali da conservare. Questi includono mazzi penduli dierbe, polveri colorate per la pittura, infusioni esotiche in urne di pietra e altre stranezze troppo numerose da essere descritte. Da questi bizzarri componenti essi tessono la loro magia, che si focalizza molto su spiriti e forze degli elementi. Il pavimento è spesso ricoperto di disegni bizzarri e cerchi mistici fatti di sabbia colorata, e bisogna guardare dove mettere i piedi per non interromperprogetti a lungo termine. Vari segni vengono disegnati su praticamente ogni superficie e, anche se sembrano disegni senza senso da bambini, alcuni contengono miracolose formule magiche cretae per allontanare gli spiriti maligni. Molti sicamani hanno da 1 a 3 assistenti, giovani donne che raccolgono e preparono ingredienti, puliscono e assistono lo sciamano nei rituali più complessi.</Italian>
-		<Polish>Osoba szamana, jego atrybuty i rytuały z nim związane różnią się w zależności od epoki, regionu i kultury. Na ogół jednak jego stałymi atrybutami są symbole transu i tańca (bębenek), oś, po której symbolicznie wchodzi w różne światy, znajdujące się na Drzewie Kosmicznym, oraz ubiór naznaczony zdolnościami lotów ekstatycznych (np. pióra).</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHAMANHUT_STRATEGY</Tag>
 		<English>Build a [COLOR_BUILDING_TEXT]Shaman Hut[COLOR_REVERT] to allow [COLOR_UNIT_TEXT]Shaman[COLOR_REVERT] trainning. They also increase the gold rate of your cities.</English>
 		<French>Construire une [COLOR_BUILDING_TEXT]Hutte de Shaman[COLOR_REVERT] permet l'entraînement d'un [COLOR_UNIT_TEXT]Shaman[COLOR_REVERT]. Augmente également l'or de la ville.</French>

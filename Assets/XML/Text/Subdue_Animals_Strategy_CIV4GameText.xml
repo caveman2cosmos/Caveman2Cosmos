@@ -126,12 +126,6 @@
 		<Spanish>The [COLOR_BUILDING_TEXT]Feather Worker[COLOR_REVERT] provides [LINK=BONUS_FEATHERS]Feathers[\LINK] and [LINK=BONUS_POULTRY]Poultry[\LINK]. It requires the [LINK=BUILDING_BONEWORKER]Bone Worker[\LINK] and can only be built by subdued birds.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FISH_FARM_STRATEGY</Tag>
-		<English>The [COLOR_BUILDING_TEXT]Fish Farm[COLOR_REVERT] provides extra food. It requires the [LINK=BUILDING_FISH_MYTH]Fish Myth building[\LINK].</English>
-		<French>La [COLOR_BUILDING_TEXT]Ferme à Poissons[COLOR_REVERT] fournit de la nourriture supplémentaire. Il nécessite le bâtiment [LINK=BUILDING_FISH_MYTH]Mythe du poisson[\LINK].</French>
-		<Italian>L'[COLOR_BUILDING_TEXT]allevamento costiero di pesce[COLOR_REVERT] fornisce cibo extra. Richiede il [LINK=BUILDING_FISH_MYTH]Mito - Storie di pesce[\LINK].</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FISH_PENS_STRATEGY</Tag>
 		<English>[COLOR_BUILDING_TEXT]Fish Pens[COLOR_REVERT] provide some happiness. It requires the [LINK=BUILDING_FISH_MYTH]Fish Myth building[\LINK].</English>
 		<French>Les [COLOR_BUILDING_TEXT]Enclos à poissons[COLOR_REVERT] procurent du bonheur. Il nécessite le bâtiment [LINK=BUILDING_FISH_MYTH]Mythe du poisson[\ LINK].</French>
@@ -172,32 +166,6 @@
 		<English>Only subdued horses can build the horse herd. It provides a horse resource.</English>
 		<French>Le troupeau de chevaux peut être construit directement par des chevaux apprivoisés.</French>
 		<Italian>Solo i cavalli addomesticati possono costruire un Branco - Cavalli; quest'edificio fornisce una fonte di cavalli. Basato su un'idea di Sarkyn.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_IBEX_CERIMONIAL_GUARD_STRATEGY</Tag>
-		<English>The [COLOR_BUILDING_TEXT]Ibex Cerimonial Guard[COLOR_REVERT] can only be built by the Ibex Chariot. It requires the [COLOR_BUILDING_TEXT]Herd - Ibex Compound[COLOR_REVERT] to build.</English>
-		<French>Le [COLOR_BUILDING_TEXT]Garde de cérémonie des bouquetins[COLOR_REVERT] ne peut être construit que par le chariot à bouquetins. Il nécessite le [COLOR_BUILDING_TEXT]troupeau de Bouquetins[COLOR_REVERT] pour être construit.</French>
-		<Italian>Lo [COLOR_BUILDING_TEXT]Stambecco - Guardia cerimoniale[COLOR_REVERT] può essere costruito solo dal carro trainato da stambecchi. Richiede il [COLOR_BUILDING_TEXT]Branco - Stambecchi[COLOR_REVERT].</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_IBEX_CHANGING_OF_THE_GUARD_STRATEGY</Tag>
-		<English>The [COLOR_BUILDING_TEXT]Ibex - Changing of the Guard[COLOR_REVERT] is a tourist attraction.</English>
-		<French>La [COLOR_BUILDING_TEXT]Relève de la garde bouquetin[COLOR_REVERT] est une attraction touristique.</French>
-		<Italian>Lo [COLOR_BUILDING_TEXT]Stambecco - Cambio della guardia[COLOR_REVERT] è un'attrazione turistica.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_IBEX_COMPOUND_STRATEGY</Tag>
-		<English>The [COLOR_BUILDING_TEXT]Herd - Ibex Compound[COLOR_REVERT] allows the building of the [COLOR_UNIT_TEXT]Ibex Chariot[COLOR_REVERT] and other Ibex based buildings.</English>
-		<French>Le [COLOR_BUILDING_TEXT]Troupeau de Bouquetins[COLOR_REVERT] permet la construction du [COLOR_UNIT_TEXT]Chariot Ibex[COLOR_REVERT] et d'autres bâtiments basés Ibex.</French>
-		<Italian>Il [COLOR_BUILDING_TEXT]Branco - Stambecchi[COLOR_REVERT] permette di addestrare il [COLOR_UNIT_TEXT]carro trainato da stambecchi[COLOR_REVERT] ed altri edifici legati ad essi.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KENNEL_STRATEGY</Tag>
-		<English>[COLOR_BUILDING_TEXT]Kennel[COLOR_REVERT] grant experience points to new recon units built in their cities with a kennel.</English>
-		<French>[COLOR_BUILDING_TEXT]Kennel[COLOR_REVERT]</French>
-		<German>[COLOR_BUILDING_TEXT]Kennel[COLOR_REVERT]</German>
-		<Italian>Un [COLOR_BUILDING_TEXT]canile[COLOR_REVERT] fornisce esperienza alle nuove unità da ricognizione costruite in città.</Italian>
-		<Spanish>[COLOR_BUILDING_TEXT]Kennel[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LLAMA_HERD_STRATEGY</Tag>
@@ -336,14 +304,6 @@
 		<French>A Compléter</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_HAWK_STRATEGY</Tag>
-		<English>They can be carried by Hunters. They can recon into unknown or enemy territory, expanding on their host's already considerable recon abilities.</English>
-		<French>Ils peuvent être portés par des chasseurs. Ils peuvent faire de la reconnaissance dans le territoire inconnu ou ennemi, augmentant pour leur hôtes leur capacités de reconnaissance déjà importantes.</French>
-		<German>Sie können von Hunters getragen werden. Sie Dose überholt in die unbekannte oder feindliche Gegend, erweiternd auf beträchtliche überholte Fähigkeiten ihres Wirtes bereits.</German>
-		<Italian>Possono essere trasportati dai cacciatori. Possono effettuare ricognizioni in territorio sconosciuto o nemico, ampliando le già considerevoli abilità dei loro padroni.</Italian>
-		<Spanish>Pueden ser llevados por Hunters. Ellos lata renovada en el territorio desconocido o enemigo, ampliándose en las capacidades renovadas ya considerables de su anfitrión.</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_HUNTER_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Hunter units[COLOR_REVERT] specialise in capturing animal units. They are not as good as [COLOR_UNIT_TEXT]recon units[COLOR_REVERT] when it comes to scouting.</English>
 		<French>Les [COLOR_UNIT_TEXT]unités de chasse[COLOR_REVERT] sont spécialisées dans la capture des unités animales. Elle peuvent éventuellemnt faire de l'exploration, même si elle n'obtiennent pas autant d'avantages que les [COLOR_UNIT_TEXT]unités de reconnaissance units[COLOR_REVERT].</French>
@@ -354,12 +314,6 @@
 		<English>All units have a small chance of subduing any animal unit. Sometimes instead of subduing an animal it will become a resource. Subdued animals can be used to build special buildings or traded for food, money or hammers.</English>
 		<French>Toutes les unités ont une petite probabilité d'apprivoiser une unité animale. De temps en temps, celle-ci peut devenir une ressource. Les animaux apprivoisés peuvent servient pour construire des bâtiments spéciaux.</French>
 		<Italian>Tutte le unità hanno una piccola chance di addomesticare un animale. A volte gli animali non vengono addomesticati, bensì diventano risorse sulla mappa. Gli animali addomesticati possono essere usati per costruire edifici speciali, possono essere migliorati in unità da combattimento e possono perfino essere venduti in cambio di cibo, oro o produzione.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TALESOF_SEA_ANIMALS_STRATEGY</Tag>
-		<English>Tales can be recorded as part of your cultural herratage.</English>
-		<French>Les contes et légendes des mers peuvent être intégrées comme une partie de votre héritage culturel.</French>
-		<Italian>Queste storie possono essere registrate come parte della tua eredità culturale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TALESOF_SEA_ANIMAL_STRATEGY</Tag>

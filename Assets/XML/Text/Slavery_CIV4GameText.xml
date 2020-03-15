@@ -1,14 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MEGATOWER_SLAVE_LEVEL</Tag>
-		<English>Megatower (Slave Level)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MEGATOWER_SLAVE_LEVEL_STRATEGY</Tag>
-		<English>Allows all specialist settled slaves.</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SLAVERY</Tag>
 		<English>Worldview - Slavery active</English>
 		<French>
@@ -82,12 +74,6 @@
 		<Polish>Baraki Niewolników - Handel</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SLAVE_COMPOUND_COMMERCE_STRATEGY</Tag>
-		<English>Allows specialist settled slaves (orchard and plantation workers) and their buildings. Small maintenance reduction.</English>
-		<French>Permet des spécialistes esclaves (travailleur dans les vergers et plantations). Réduction de l'entretien.</French>
-		<Italian>Permette gli schiavi specializzati come lavoratori delle piantagioni e i relativi edifici. Fornisce una piccola riduzione della manutenzione.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SLAVE_COMPOUND_CRIME_PREVENTION</Tag>
 		<English>Slave Compound - Crime Prevention</English>
 	</TEXT>
@@ -107,12 +93,6 @@
 		<Polish>Baraki Niewolników - Rozrywka</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SLAVE_COMPOUND_ENTERTAINMENT_STRATEGY</Tag>
-		<English>Allows specialist settled slaves (gladiator and actor). Reduces revolutionary sentiment.</English>
-		<French>Permet des spécialistes esclaves (gladiateurs et acteurs). Réduit le sentiment révolutionnaire.</French>
-		<Italian>Permette gli schiavi specializzati come gladiatori e attori. Riduce il sentimento rivoluzionario.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SLAVE_COMPOUND_FOOD</Tag>
 		<English>Slave Compound - Food</English>
 		<French>
@@ -126,12 +106,6 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Baraki Niewolników - Produkcja Zywności</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SLAVE_COMPOUND_FOOD_STRATEGY</Tag>
-		<English>Allows specialist settled slaves (farm worker) and their buildings. Reduces food wastage.</English>
-		<French>Permet des spécialistes esclaves (travailleur pour les fermes). Réduit la perte de nourriture.</French>
-		<Italian>Permette gli schiavi specializzati come contadini e i relativi edifici. Riduce lo spreco di cibo.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SLAVE_COMPOUND_HELP</Tag>
@@ -156,33 +130,6 @@
 		<Polish>Baraki Niewolników - Wsparcie Wojskowe</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SLAVE_COMPOUND_MILITARY_SUPPORT_STRATEGY</Tag>
-		<English>Reduces building costs for military buildings.</English>
-		<French>Réduit les coûts d'entretien des bâtiments militaires.</French>
-		<Italian>Riduce il costo degli edifici militari.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SLAVE_COMPOUND_MILITARY_TRAINING</Tag>
-		<English>Slave Compound - Military Training</English>
-		<French>
-			<Text>Camp d'esclaves - Entraînement Militaire</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Baracca degli schiavi - Addestramento militare</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Baraki Niewolników - Trening Wojskowy</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SLAVE_COMPOUND_MILITARY_TRAINING_STRATEGY</Tag>
-		<English>Reduces building costs for military units.</English>
-		<French>Réduits les coûts des unités militaires.</French>
-		<Italian>Riduce il costo per addestrare le unità militari.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SLAVE_COMPOUND_PEDIA</Tag>
 		<English>Slave Compounds are where state slaves are housed.</English>
 		<French>Les Camps d'esclaves sont les endroits où les esclaves sont autorisés à loger.</French>
@@ -203,12 +150,6 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Baraki Niewolników - Przemysł</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SLAVE_COMPOUND_PRODUCTION_STRATEGY</Tag>
-		<English>Allows specialist settled slaves (mine worker) and their buildings. Small maintenance reduction.</English>
-		<French>Permet des spécialistes esclaves (travailleur des mines). Réduction de l'entretien.</French>
-		<Italian>Permette gli schiavi specializzati come minatori e i relativi edifici. Fornisce una piccola riduzione della manutenzione.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SLAVE_COMPOUND_SANITATION</Tag>
@@ -335,6 +276,14 @@
 		<French>Rejoindre la ville en tant qu'instructeur.</French>
 		<Italian>Unisci alla città come schiavo legato all'educazione.</Italian>
 		<Polish>Dołącz niewolnika do miasta jako nauczyciela.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_JOIN_CITY_AS_SLAVE_SANITATION</Tag>
+		<English>Join city as a sanitation slave.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_JOIN_CITY_AS_SLAVE_CRIME_PREVENTION</Tag>
+		<English>Join city as a crime prevention slave.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_REMOVE_WV_SLAVERY</Tag>
@@ -503,6 +452,14 @@
 		<French>Votre Prisonnier est devenu un Esclave Spécialiste (Enseignant).</French>
 		<Italian>Il tuo prigioniero è diventato uno Schiavo specializzato - Educazione.</Italian>
 		<Polish>Twój Niewolnik stał się Specjalistą (Nauczanie).</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_JOIN_AS_SLAVE_SANITATION</Tag>
+		<English>Set city slave to clean cities.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_JOIN_AS_SLAVE_SANITATION_MESSAGE</Tag>
+		<English>Your captive has become a Slave Specialist (Sanitation).</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_REMOVE_WV_SLAVERY</Tag>

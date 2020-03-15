@@ -974,68 +974,6 @@
 		<Polish>Mit Humpbaka</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_IBEX_CERIMONIAL_GUARD</Tag>
-		<English>Ibex - Cerimonial Guard</English>
-		<French>
-			<Text>Gardien de Cérémonie - Bouquetin</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Stambecco - Guardia cerimoniale</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Koziorożec - Strażnik Ceremonialny</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_IBEX_CHANGING_OF_THE_GUARD</Tag>
-		<English>Ibex - Changing of the Guard</English>
-		<French>
-			<Text>Ibex - Changement de Garde</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Stambecco - Cambio della guardia</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Koziorożec - Zmiana Straży</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_IBEX_COMPOUND</Tag>
-		<English>Herd (Ibex)</English>
-		<French>
-			<Text>Troupeau d'Ibex</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Branco - Stambecchi</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Stado - Koziorożce</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KENNEL</Tag>
-		<English>Kennel</English>
-		<French>
-			<Text>Chenil (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Zwinger</German>
-		<Italian>
-			<Text>Canile</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>Madriguera</Spanish>
-		<Polish>Psiarnia</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KRAKEN_MYTH</Tag>
 		<English>Myth - Kraken</English>
 		<French>
@@ -1372,22 +1310,6 @@
 		<Polish>Mit Orki</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_BEAR_MYTH</Tag>
-		<English>Myth - Paleolithic Bear</English>
-		<French>Mythe de l'Ours Paléolithique</French>
-		<Italian>
-			<Text>Mito dell'orso paleolitico</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Mit Niedźwiedź Jaskiniowy</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_BEAR_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Paleolithic Bear</English>
-		<French>Effet (Mythe de l'ours Paléolithique)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_CAT_MYTH</Tag>
 		<English>Myth - Paleolithic Cat</English>
 		<French>Mythe du Félin Paléolithique</French>
@@ -1657,21 +1579,6 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Gadów</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RHINO_MYTH</Tag>
-		<English>Myth - Rhinoceros</English>
-		<French>
-			<Text>Mythe du Rhinocéros</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito del rinoceronte</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Mit Nosorożca</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RODENT_CAGE</Tag>

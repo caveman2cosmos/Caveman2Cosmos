@@ -1,13 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_ESPIONAGE_AI_SPENDING_TOGGLE</Tag>
-		<English>Show AI Espionage</English>
-		<French>Voir l'Espionnage de l'IA</French>
-		<German>KI-Spionage</German>
-		<Spanish>Mostrar espionaje de la IA</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_CORPORATION_REMOVED</Tag>
 		<English>The people of %s1 have boycotted %s2!!!</English>
 		<French>Le Peuple de %s1 boycotte %s2!!!</French>
@@ -50,14 +43,6 @@
 		<German>%d1%: Für eine Botschaft in ihrer Nation.</German>
 		<Italian>%d1%: per avere un'ambasciata nella loro nazione.</Italian>
 		<Spanish>%d1%: por tener una embajada en su nación.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ESPIONAGE_HELP_DESTROY_IMPROVEMENT_RADIATION</Tag>
-		<English>Will create fallout on the tile.</English>
-		<French>Va générer des Radiations sur la case.</French>
-		<German>Wird radioaktiven Niederschlag auf dem Feld verursachen.</German>
-		<Italian>Lascerà scorie nucleari nella casella.</Italian>
-		<Spanish>Generará Lluvia radiactiva en la casilla.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_HELP_NUKE</Tag>

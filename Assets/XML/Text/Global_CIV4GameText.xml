@@ -938,101 +938,6 @@
 		<Polish>[ICON_BULLET]Dolegliwość: Na końcu walki, szansa: %d1_Probability na zadanie %s2_PromotionName które zadał Tobie wróg.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_AGE_SEGMENT_DAWN_METAL</Tag>
-		<English>Dawn of the Metal Age</English>
-		<French>Age de l'Aube des métaux</French>
-		<Italian>Alba dell'era dei metalli</Italian>
-		<Spanish>Nacimiento de la Edad de los Metales</Spanish>
-		<Polish>Początek Ery Metalu</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_AGE_SEGMENT_DAWN_NEOLITHIC</Tag>
-		<English>Dawn of the Neolithic Age</English>
-		<French>Naissance de l'Age Néolithique</French>
-		<Italian>Alba dell'era neolitica</Italian>
-		<Spanish>Nacimiento del Neolítico</Spanish>
-		<Polish>Początek Ery Neolitu</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_AGE_SEGMENT_DAWN_PALEOLITHIC</Tag>
-		<English>Dawn of the Paleolithic Age</English>
-		<French>Naissance de l'Age Paléolithique</French>
-		<Italian>Alba dell'era paleolitica</Italian>
-		<Spanish>Nacimiento del Paleolítico</Spanish>
-		<Polish>Początek Ery Paleolitycznej</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_AGE_SEGMENT_RISE_METAL</Tag>
-		<English>Rise of the Metal Age</English>
-		<French>Avénement de l'Age du métal</French>
-		<Spanish>Ascenso de la Edad de los Metales</Spanish>
-		<Polish>Rozwój Ery Metalu</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_AGE_SEGMENT_RISE_NEOLITHIC</Tag>
-		<English>Rise of the Neolithic Age</English>
-		<French>Avénement de l'Age du Néolithique</French>
-		<Italian>Ascesa dell'era neolitica</Italian>
-		<Spanish>Ascenso del Neolítico</Spanish>
-		<Polish>Rozwój Ery Neolitu</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_AGE_SEGMENT_RISE_PALEOLITHIC</Tag>
-		<English>Rise of the Paleolithic Age</English>
-		<French>Avénement de l'Age du Paléolithique</French>
-		<Italian>Ascesa dell'era paleolitica</Italian>
-		<Spanish>Ascenso del Paleolítico</Spanish>
-		<Polish>Rozwój Ery Paleolitycznej</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_AGE_SEGMENT_WANING_METAL</Tag>
-		<English>Waning of the Metal Age</English>
-		<French>Déclin de l'Age des métaux</French>
-		<Italian>Declino dell'era dei metalli</Italian>
-		<Spanish>Declive de la Edad de los Metales</Spanish>
-		<Polish>Koniec Ery Metalu</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_AGE_SEGMENT_WANING_NEOLITHIC</Tag>
-		<English>Waning of the Neolithic Age</English>
-		<French>Déclin de l'Age du Néolithique</French>
-		<Italian>Declino dell'era neolitica</Italian>
-		<Spanish>Declive del Neolítico</Spanish>
-		<Polish>Koniec Ery Neolitu</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_AGE_SEGMENT_WANING_PALEOLITHIC</Tag>
-		<English>Waning of the Paleolithic Age</English>
-		<French>Déclin de l'Age du Paléolithique</French>
-		<Italian>Declino dell'era paleolitica</Italian>
-		<Spanish>Declive del Paleolítico</Spanish>
-		<Polish>Koniec Ery Paleolitycznej</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_AGE_SEGMENT_ZENITH_METAL</Tag>
-		<English>Zenith of the Metal Age</English>
-		<French>Zénith de l'Age des Métaux</French>
-		<Italian>Apogeo dell'era dei metalli</Italian>
-		<Spanish>Cénit de la Edad de los Metales</Spanish>
-		<Polish>Zenit Ery Metalu</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_AGE_SEGMENT_ZENITH_NEOLITHIC</Tag>
-		<English>Zenith of the Neolithic Age</English>
-		<French>Zénith de l'Age du Néolithique</French>
-		<Italian>Apogeo dell'era neolitica</Italian>
-		<Spanish>Cénit del Neolítico</Spanish>
-		<Polish>Zenit Ery Neolitu</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_AGE_SEGMENT_ZENITH_PALEOLITHIC</Tag>
-		<English>Zenith of the Paleolithic Age</English>
-		<French>Zénith de l'Age du Paléolithique</French>
-		<Italian>Apogeo dell'era paleolitica</Italian>
-		<Spanish>Cénit del Paleolítico</Spanish>
-		<Polish>Zenit Ery Paleolitycznej</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_AIAUTOPLAY_ABDICATE</Tag>
 		<English>Old age has finally caught up with you and you decide to abdicate rule.</English>
 		<French>La vieillesse vous a finalement rattrapé vous décidez à de renoncer au pouvoir.</French>
@@ -1294,24 +1199,6 @@
 		<Polish>Okropne wieści:[NEWLINE][NEWLINE]Rywale obalili cię w zamachu stanu![NEWLINE]Może pozwoliłeś im za dużo wolności?</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ALEXANDER_UNIT_PELTASTS_STRATEGY</Tag>
-		<English>Build this low powered melee combat unit to provide your army with quick response defensive units.</English>
-		<French>Produisez cette unité peu puissante de combat rapproché pour fournir rapidement à votre armée des unités défensives.</French>
-		<German>eignet sich als einfache aber [COLOR_HIGHLIGHT_TEXT]schnelle Nahkampf-Einheit[COLOR_REVERT] besonders für flexible Verteidigungsaufgaben.</German>
-		<Italian>Costruisci questa unità da combattimento in mischia poco potente per integrare il tuo esercito con unità di difesa a risposta rapida.</Italian>
-		<Spanish>Construye esta unidad de combate cuerpo a cuerpo, poco poderosa, para dotar a tu ejército de unidades defensivas de respuesta rápida.</Spanish>
-		<Polish>Buduj tych lekkozbrojnych żołnierzy, aby zapewnić twojej armii szybkie jednostki obronne.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ALEXANDER_UNIT_PRODROMOI_STRATEGY</Tag>
-		<English>This mounted unit is very powerful for early in the game and is a great counter to an enemy with catapults.</English>
-		<French>Cette unité montée est particulièrement efficace dans les premières phases du jeu et s'avère très utile face à un ennemi disposant de catapultes.</French>
-		<German>ist als frühe berittene Einheit sehr stark, eignet sich besonders zum [COLOR_HIGHLIGHT_TEXT]Einsatz gegen Katapulte[COLOR_REVERT].</German>
-		<Italian>Questa unità montante è molto potente nelle prime fasi della partita ed è ottima per contrastare le catapulte nemiche.</Italian>
-		<Spanish>Esta unidad montada es muy poderosa al principio del juego, y sirve para contrarrestar a un enemigo que disponga de catapultas.</Spanish>
-		<Polish>Ta konna jednostka jest bardzo potężna w początkowej fazie gry i będzie olbrzymim zagrożeniem dla wroga.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_ALL_RELIGIONS_ACTIVE</Tag>
 		<English>[ICON_BULLET]Enables full function of all religious buildings regardless of State Religion.</English>
 		<French>[ICON_BULLET]Active le fonctionnement de tous les bâtiments religieux, indépendemment de la Religion d'Etat.</French>
@@ -1334,15 +1221,6 @@
 		<German>+%d1_Change[ICON_UNHAPPY]: "Diese Stadt ist einfach zu monströs!"</German>
 		<Italian>+%d1_Change[ICON_UNHAPPY]: "Vogliamo una nazione aperta!"</Italian>
 		<Spanish>+%d1_Change [ICON_UNHAPPY]: "¡Echamos de menos el campo!"</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ANGER_CIVIC</Tag>
-		<English>[ICON_BULLET]+%d1_Change[ICON_UNHAPPY]: "We hate our government!"</English>
-		<French>[ICON_BULLET]+%d1_Change[ICON_UNHAPPY]: "Nous détestons notre gouvernement!"</French>
-		<German>[ICON_BULLET]+%d1_Change[ICON_UNHAPPY]: "Wir hassen unsere Regierung!"</German>
-		<Italian>[ICON_BULLET]+%d1_Change[ICON_UNHAPPY]: "Odiamo il nostro governo!"</Italian>
-		<Spanish>[ICON_BULLET]+%d1_Change[ICON_UNHAPPY]: "¡Odiamos a nuestro gobierno!"</Spanish>
-		<Polish>[ICON_BULLET]+%d1_Change[ICON_UNHAPPY]: "Nienawidzimy naszego rządu!"</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ANGER_CIVIC_PERCENT_BAD</Tag>
@@ -1402,19 +1280,6 @@
 		<Italian>[ICON_BULLET][COLOR_YELLOW]Si è in guerra![COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET][COLOR_YELLOW]¡Está en guerra![COLOR_REVERT]</Spanish>
 		<Polish>[ICON_BULLET][COLOR_YELLOW]Jesteś w stanie wojny![COLOR_REVERT]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_AURAC</Tag>
-		<English>A.U.R.A Command</English>
-		<French>Commandes A.U.R.A</French>
-		<German>A.U.R.A.C. Commando</German>
-		<Italian>Comando A.U.R.A.</Italian>
-		<Spanish>
-			<Text>Comando A.U.R.A.</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Polecenia A.U.R.A</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOMATED_WORKERS_CAN_BUILD</Tag>
@@ -1558,30 +1423,9 @@
 		<French>[ICON_BULLET]En paix avec les PNJ humanoides.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BASE_SPECIALIST_OUTPUT</Tag>
-		<English>[ICON_BULLET]%D1_Change%F2_YieldIcon Base Output</English>
-		<French>[ICON_BULLET]%D1_Change%F2_YieldIcon</French>
-		<German>[ICON_BULLET]%D1_Change%F2_YieldIcon Grundertrag</German>
-		<Spanish>[ICON_BULLET]Rendimiento base: %D1_Change%F2_YieldIcon</Spanish>
-		<Polish>[ICON_BULLET]%D1_Change%F2_YieldIcon Podstawowa Wartość</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BLEND_INTO_CITY_TEXT</Tag>
 		<English>[ICON_BULLET]Enters all cities peacefully.</English>
 		<French>[ICON_BULLET]Entre dans les Villes de manière pacifique.</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BNCHEMISTRY</Tag>
-		<English>Binary Neurochemistry</English>
-		<French>Neuro-Chimie Binaire</French>
-		<German>Binäre-Neurochemie</German>
-		<Italian>Neurochimica binaria</Italian>
-		<Spanish>
-			<Text>Neuroquímica binaria</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Binarna Neurochemia</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BTS_FOREST_PRESERVE</Tag>
@@ -1819,57 +1663,12 @@
 		<Polish>Zbuduj tą korporacje by otrzymać owoce oraz bonus do żywności.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BULL_REQUIRED</Tag>
-		<English>[COLOR_WARNING_TEXT]This feature requires the BUG DLL (BULL).[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]Cette fonctionnalité nécessite la DLL BUG (BULL).[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Für dieses Feature wird die BUG-DLL (BULL) benötigt.[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]Questa caratteristica richiede la libreria DLL del BUG Mod ('BULL').[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_WARNING_TEXT]Esta característica requiere la DLL de BUG (BULL).[COLOR_REVERT]</Spanish>
-		<Polish>[COLOR_WARNING_TEXT]Ta cecha wymaga BUG DLL (BULL).[COLOR_REVERT]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BULL_REQUIRED_NEWER</Tag>
-		<English>[COLOR_WARNING_TEXT]This feature requires a newer version of the BUG DLL (BULL).[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]Cette fonctionnalité nécessite une version plus récente de la DLL BUG (BULL).[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Für dieses Feature wird eine neuere Version der BUG-DLL (BULL) benötigt.[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]Questa caratteristica richiede una nuova versione della libreria DLL del BUG Mod ('BULL').[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_WARNING_TEXT]Esta característica requiere una nueva versión de la DLL de BUG (BULL).[COLOR_REVERT]</Spanish>
-		<Polish>[COLOR_WARNING_TEXT]Ta cecha wymaga nowszej wersji BUG DLL (BULL).[COLOR_REVERT]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BURGERWORLD_STRATEGY</Tag>
 		<English>Build the [COLOR_BUILDING_TEXT]Burgerworld[COLOR_REVERT] Headquarters to create the [COLOR_HIGHLIGHT_TEXT]Burgerworld Corporation[COLOR_REVERT] which consumes [COLOR_HIGHLIGHT_TEXT]Cow[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Pig[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Potato[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Wheat[COLOR_REVERT] or [COLOR_HIGHLIGHT_TEXT]Coffee[COLOR_REVERT] and adds a culture bonus to every city where the [COLOR_HIGHLIGHT_TEXT]Burgerworld Corporation[COLOR_REVERT] is present. The Headquarters provide gold for each city in the world with a Burgerworld franchise.</English>
 		<French>Construire le Siège de [COLOR_BUILDING_TEXT]MondoBurger[COLOR_REVERT] pour fonder la corporation [COLOR_HIGHLIGHT_TEXT]MondoBurger Corporation[COLOR_REVERT] qui consomme [COLOR_HIGHLIGHT_TEXT]vache[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]cochon[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Pommes de terres[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Blé[COLOR_REVERT] ou [COLOR_HIGHLIGHT_TEXT]Café[COLOR_REVERT] et ajoute un bonus de culture à chaque ville où la [COLOR_HIGHLIGHT_TEXT]Corporation MondoBurger[COLOR_REVERT] est présente. Le siège social fournit de l'or pour chaque ville du monde avec une franchise MondoBurger.</French>
 		<Italian>Costruisci il [COLOR_BUILDING_TEXT]QG di Burgerworld[COLOR_REVERT] per creare la corporazione [COLOR_HIGHLIGHT_TEXT]Burgerworld[COLOR_REVERT] che consuma [COLOR_HIGHLIGHT_TEXT]Mucca[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Maiale[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Patata[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Grano[COLOR_REVERT] o [COLOR_HIGHLIGHT_TEXT]Caffè[COLOR_REVERT] e aggiunge un bonus alla cultura in ogni città dove [COLOR_HIGHLIGHT_TEXT]Burgerworld[COLOR_REVERT] è presente. Il QG fornisce oro per ogni città nel mondo dove Burgerworld è presente.</Italian>
 		<Spanish>Construye la maravilla [COLOR_BUILDING_TEXT]Burgerworld[COLOR_REVERT] para crear la corporación [COLOR_HIGHLIGHT_TEXT]Burgerworld[COLOR_REVERT], que consume [COLOR_HIGHLIGHT_TEXT]Reses[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cerdos[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Patatas[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Trigo[COLOR_REVERT] y [COLOR_HIGHLIGHT_TEXT]Café[COLOR_REVERT] y añade una bonificación a los alimentos en todas las ciudades donde [COLOR_HIGHLIGHT_TEXT]Burgerworld[COLOR_REVERT] esté presente. La sede proporciona oro por cada ciudad del mapa en la que haya una franquicia de Burgerworld.</Spanish>
 		<Polish>Zbuduj siedzibę [COLOR_BUILDING_TEXT]Świata Hamburgerów[COLOR_REVERT]by utworzyć [COLOR_HIGHLIGHT_TEXT]Korporacje Świata Hamburgerów[COLOR_REVERT] która zużywa [COLOR_HIGHLIGHT_TEXT]Krowy[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Świnie[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Ziemniaki[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Pszenicę[COLOR_REVERT] lub [COLOR_HIGHLIGHT_TEXT]Kawę[COLOR_REVERT] i daje bonus do kultury każdemu miastu w którym znajduje się [COLOR_HIGHLIGHT_TEXT]Korporacja Świata Hamburgerów[COLOR_REVERT]. Siedziba zapewnia złoto dla każdego mista w którym znajduje się ta korporacja.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CANNOT_BE_BUILT_IN_CITY</Tag>
-		<English>[NEWLINE][ICON_BULLET]Can not be built in city which already has</English>
-		<French>[NEWLINE][ICON_BULLET]Ne peut être construit dans une Ville qui possède déjà</French>
-		<German>[NEWLINE][ICON_BULLET]Kann nicht in einer Stadt gebaut werden mit:</German>
-		<Italian>[NEWLINE][ICON_BULLET]Non può essere costruito in una città che già possiede:</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]No se puede construir en una ciudad que ya posea</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Nie może być zbudowane w mieście, które posiada już</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CAN_BUILD_BUILDING</Tag>
-		<English>[NEWLINE][ICON_BULLET]Can build</English>
-		<French>[NEWLINE][ICON_BULLET]Peut construire</French>
-		<German>[NEWLINE][ICON_BULLET]Kann errichten</German>
-		<Italian>[NEWLINE][ICON_BULLET]Può costruire</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Se puede construir</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Pozwala budować</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CAN_BUILD_OUTSIDE_BORDERS</Tag>
-		<English>[SPACE][SPACE][ICON_BULLET]Can Build improvements in neutral territory</English>
-		<French>[SPACE][SPACE][ICON_BULLET]Peut contruire des Améliorations de terrain en Territoire neutre</French>
-		<German>[SPACE][SPACE][ICON_BULLET]Kann Modernisierungen auf neutralem Territorium errichten</German>
-		<Italian>[SPACE][SPACE][ICON_BULLET]Can Build improvments in nutral territory</Italian>
-		<Spanish>[SPACE][SPACE][ICON_BULLET]Puede construir mejoras en territorio neutral</Spanish>
-		<Polish>[SPACE][SPACE][ICON_BULLET]Może zbudować udoskonalenia na neutralnym terytorium</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CAN_FOUND_ON_PEAKS</Tag>
@@ -1905,15 +1704,6 @@
 		<Polish>[COLOR_WARNING_TEXT]Nie możesz chronić samego siebie![COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CAN_ONLY_BE_BUILT_WHEN</Tag>
-		<English>[NEWLINE][ICON_BULLET]Can only be built when</English>
-		<French>[NEWLINE][ICON_BULLET]Peut être construit uniquement lorsque la Doctrine</French>
-		<German>[NEWLINE][ICON_BULLET]Kann nur gebaut werden wenn</German>
-		<Italian>[NEWLINE][ICON_BULLET]Può essere costruito solo quando la forma di governo</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Solo se puede construir con el principio</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Może być zbudowane tylko, gdy</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CAN_PASS_PEAKS</Tag>
 		<English>[ICON_BULLET]Units can move onto Peaks</English>
 		<French>[ICON_BULLET]Les Unités peuvent se déplacer jusqu'aux Sommets</French>
@@ -1932,15 +1722,6 @@
 		<Polish>[ICON_BULLET]Usuwa limit zasięgu samolotu</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CAN_TRAIN_UNIT</Tag>
-		<English>[NEWLINE][ICON_BULLET]Can train</English>
-		<French>[NEWLINE][ICON_BULLET]Peut former</French>
-		<German>[NEWLINE][ICON_BULLET]Kann ausbilden</German>
-		<Italian>[NEWLINE][ICON_BULLET]Può addestrare</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Se puede entrenar</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Pozwala trenować</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CAN_UPGRADE_ANYWHERE</Tag>
 		<English>[ICON_BULLET]Can upgrade units outside of national borders</English>
 		<French>
@@ -1956,15 +1737,6 @@
 		<Italian>[ICON_BULLET]È possibile aggiornare le unità al di fuori dei confini nazionali.</Italian>
 		<Spanish>[ICON_BULLET]Se pueden mejorar unidades fuera de las fronteras nacionales</Spanish>
 		<Polish>[ICON_BULLET]Możesz ulepszyć jednostki poza granicami kulturowymi.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CCV_MAININTERFACE__POSITIONOFSCORES_TEXT</Tag>
-		<English>Position of Scores</English>
-		<French>Position des Scores</French>
-		<German>Position des Scores</German>
-		<Italian>Posizion dei punteggi</Italian>
-		<Spanish>Posición de puntuación</Spanish>
-		<Polish>Pozycja wyników</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CDA_ADD_COLUMN</Tag>
@@ -2633,23 +2405,6 @@
 		<Polish>+%d1_Change[ICON_UNHAPPY]: "Nie ma podatków bez reprezentacji!"</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV4CCP_DESCRIPTION</Tag>
-		<English>The Community Core Project is the foundation for mods to build on by improving and adding to the Civ 4 SDK to improve performance, ease of use, and improved AI.</English>
-		<French>Le projet de noyau de la Communauté est la base pour que les mods construisent dessus en améliorant et en ajoutant au Civ 4 SDK pour améliorer l'exécution, la facilité d'utilisation, et la AI améliorée.</French>
-		<German>Das CIV-Community-Kernprojekt (CCCP) ist eine Grundlage, mit dessen Hilfe Mods die CIV4 SDK verbessern und ergänzen können und somit die Performance, Anwenderfreundlichkeit und die KI verbessern können.</German>
-		<Italian>Il progetto di nucleo della Comunità è il fondamento affinchè i mods costruisca sopra migliorando ed aggiungendo al Civ 4 SDK per migliorare le prestazioni, la facilità di uso e l'IA migliorata.</Italian>
-		<Spanish>El proyecto del núcleo de la comunidad CIV es una fundación para que los mods aprovechen las mejoras y añadidos al SDK de Civilization 4 para mejorar su funcionamiento, la facilidad de uso y la IA.</Spanish>
-		<Polish>CIV Community Core Project jest podstawą do dalszego budowania modów dzięki poprawionemu SDK Cywilizacji 4, który zapewnia lepszą wydajność, łatwość użycia oraz inteligentniejszych wrogów.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV4CCP_TITLE</Tag>
-		<English>CIV Community Core Project</English>
-		<French>Projet De Noyau communautaire de Mods 'Civ'</French>
-		<German>CIV-Community-Kernprojekt</German>
-		<Italian>Progetto Di Nucleo Della Comunità</Italian>
-		<Spanish>Proyecto del núcleo de la comunidad CIV (CCCP)</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIV4LERTS_ON_CITY_CAN_HURRY_GOLD</Tag>
 		<English>[COLOR_YIELD_FOOD]%s1 can hurry %s2 for %d3[ICON_GOLD].[COLOR_REVERT]</English>
 		<French>[COLOR_YIELD_FOOD]%s1 peut accélérer la production de %s2 pour %d3[ICON_GOLD].[COLOR_REVERT]</French>
@@ -2875,15 +2630,6 @@
 		<Polish>[COLOR_POSITIVE_TEXT]%s1 jest skłonny rozmawiać.[COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV4LERTS_ON_WILL_NEGOTIATE</Tag>
-		<English>[COLOR_TECH_TEXT]%s1 is willing to negotiate.[COLOR_REVERT]</English>
-		<French>[COLOR_TECH_TEXT]%s1 est disposé à négocier.[COLOR_REVERT]</French>
-		<German>[COLOR_TECH_TEXT]%s1 ist bereit zu verhandeln.[COLOR_REVERT]</German>
-		<Italian>[COLOR_TECH_TEXT]%s1 è disposto a negoziare.[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_TECH_TEXT]%s1 está dispuest[NUM1:o:a] a negociar.[COLOR_REVERT]</Spanish>
-		<Polish>[COLOR_TECH_TEXT]%s1 chciałby negocjować.[COLOR_REVERT]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIV4LERTS_ON_WORST_ENEMY</Tag>
 		<English>[COLOR_YIELD_FOOD]%s2 is the worst enemy of %s1.[COLOR_REVERT]</English>
 		<French>[COLOR_YIELD_FOOD]%s2 est le Pire Ennemi de %s1.[COLOR_REVERT]</French>
@@ -3087,39 +2833,6 @@
 		<Polish>Kultura</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_COMMERCE_GOLD</Tag>
-		<English>Gold</English>
-		<French>
-			<Text>Or</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Wirtschaft:Wirtschaft:Wirtschaft:Wirtschaft</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Oro</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Oro</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Złoto</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_COMMERCE_ON_CONSTRUCTION</Tag>
-		<English>[ICON_BULLET] On Completion</English>
-		<French>[ICON_BULLET] A la Création</French>
-		<German>[ICON_BULLET] bei der Fertigstellung</German>
-		<Spanish>[ICON_BULLET] al completar</Spanish>
-		<Polish>[ICON_BULLET] Na ukończeniu</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_COMMERCE_RESEARCH</Tag>
 		<English>Research</English>
 		<French>
@@ -3220,85 +2933,12 @@
 		<Polish>[ICON_BULLET]%D1_Mod%% do kosztów utrzymania miast na kontynencie</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_COPERNICUS_OBSERVATORY_LINK</Tag>
-		<English>[LINK=BUILDING_COPERNICUS_OBSERVATORY]Copernicus' Observatory[\LINK]</English>
-		<French>[LINK=BUILDING_COPERNICUS_OBSERVATORY]Observatoire de Copernic[\LINK]</French>
-		<German>[LINK=BUILDING_COPERNICUS_OBSERVATORY]Sternwarte des Kopernikus[\LINK]</German>
-		<Italian>[LINK=BUILDING_COPERNICUS_OBSERVATORY]Osservatorio di Copernico[\LINK]</Italian>
-		<Spanish>[LINK=BUILDING_COPERNICUS_OBSERVATORY]Observatorio de Copérnico[\LINK]</Spanish>
-		<Polish>[LINK=BUILDING_COPERNICUS_OBSERVATORY]Obserwatorium Kopernika[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CULTURAL_AGE_METAL</Tag>
-		<English>Metal Age</English>
-		<French>Age de métaux</French>
-		<Italian>Era dei metalli</Italian>
-		<Spanish>Edad de los Metales</Spanish>
-		<Polish>Era Metalu</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CULTURAL_AGE_METAL_STRATEGY</Tag>
-		<English>The culture of the Metal Age is started by the first usage of metals in arts.</English>
-		<French>La culture de l'âge du métal est lancée par la première utilisation des métaux dans les arts.</French>
-		<Italian>La cultura dell'era dei metalli inizia con il primo uso del metallo nelle arti.</Italian>
-		<Spanish>La cultura de la Edad de los Metales comienza con los primeros usos del metal en las artes.</Spanish>
-		<Polish>W tej erze pierwszy raz użyto metalu w kulturze.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CULTURAL_AGE_NEOLITHIC</Tag>
-		<English>Neolithic Age</English>
-		<French>Age Néolithique</French>
-		<Italian>Era neolitica</Italian>
-		<Spanish>Neolítico</Spanish>
-		<Polish>Era Neolitu</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CULTURAL_AGE_NEOLITHIC_STRATEGY</Tag>
-		<English>The Neolithic Age is the second age of culture.</English>
-		<French>Le Néolithique est le deuxième âge de la culture.</French>
-		<Italian>L'era neolitica è la seconda era della cultura.</Italian>
-		<Spanish>El Neolítico es la segunda era de la cultura.</Spanish>
-		<Polish>Jest to druga era kultury.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CULTURAL_AGE_PALEOLITHIC</Tag>
-		<English>Paleolithic Age</English>
-		<French>Age Paléolithique</French>
-		<Italian>Era paleolitica</Italian>
-		<Spanish>Paleolítico</Spanish>
-		<Polish>Era Paleolityczna</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CULTURAL_AGE_PALEOLITHIC_STRATEGY</Tag>
-		<English>The Paleolithic Age is the first age of culture.</English>
-		<French>Le Paléolithique est le premier âge de la culture.</French>
-		<Italian>L'era paleolitica è la prima era della cultura.</Italian>
-		<Spanish>El Paleolítico es la primera era de la cultura.</Spanish>
-		<Polish>Jest to pierwsza era kultury.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CULTURELEVEL_DISTINGUISHED</Tag>
-		<English>Distinguished</English>
-		<French>Distingué</French>
-		<German>Herausragend</German>
-		<Spanish>Distinguido</Spanish>
-		<Polish>Wyróżniająca się</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_ELEGANT</Tag>
 		<English>Elegant</English>
 		<French>Elégante</French>
 		<Italian>Elegante</Italian>
 		<Spanish>Elegante</Spanish>
 		<Polish>Wytworna</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CULTURELEVEL_EXTRAORDINARY</Tag>
-		<English>Extraordinary</English>
-		<French>Extraordinaire</French>
-		<German>Außergewöhnlich</German>
-		<Spanish>Extraordinario</Spanish>
-		<Polish>Niezwykła</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_ILLUSTRIOUS</Tag>
@@ -3347,22 +2987,6 @@
 		<Polish>Sławna</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CULTURELEVEL_SPECTACULAR</Tag>
-		<English>Spectacular</English>
-		<French>Spectaculaire</French>
-		<German>Eindrucksvoll</German>
-		<Spanish>Espectacular</Spanish>
-		<Polish>Spektakularna</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CULTURELEVEL_TRANSCENDENTAL</Tag>
-		<English>Transcendental</English>
-		<French>Transcendantal</French>
-		<German>Überirdisch</German>
-		<Spanish>Espectacular</Spanish>
-		<Polish>Transcendentalna</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CURE_AFFLICTION_LINE</Tag>
 		<English>Improves the %s1_Affliction condition of one unit on the same plot.</English>
 		<French>Améliore la condition de %s1_Affliction d'une unité sur la même case.</French>
@@ -3377,50 +3001,10 @@
 		<Polish>[ICON_BULLET]Leczenie: Może usunąć lub złagodzić %s1_PromotionName.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CVUTIL_RELIGION_RESPAWNED</Tag>
-		<English>A Holy City Religion has been Respawned.</English>
-		<French>Une nouvelle Ville Sainte a été choisie pour la religion.</French>
-		<German>Eine Religion hat eine neue Heilige Stadt erwählt.</German>
-		<Italian>È stata scelta una nuova città santa per una religione.</Italian>
-		<Spanish>Se ha seleccionado una nueva Ciudad Santa para una religión.</Spanish>
-		<Polish>Odrodziło się Święte Miasto.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CYANEMP</Tag>
-		<English>Blue Electromagnetic Pulse</English>
-		<French>Impulsion Electromagnétiques Bleue</French>
-		<German>Blaue EMPs</German>
-		<Italian>Impulso elettromagnetico Blu</Italian>
-		<Spanish>
-			<Text>Pulso electromagnético azul</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Niebieski Impuls Elektromagnetyczny</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_DAMAGE_BY_UNITCOMBAT</Tag>
 		<English>[ICON_BULLET]Damage that %s1_UNITCOMBAT: %d2_Mod%%. Heals in %d3 Turns.</English>
 		<French>[ICON_BULLET]Dégâts de %s1_UNITCOMBAT: %d2_Mod%%. se soigne en %d3 Tours.</French>
 		<Polish>[ICON_BULLET]Obrażenia otrzymane %s1_UNITCOMBAT: %d2_Mod%%. Uleczone w %d3 tur.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DARKAGE_ACTIVE</Tag>
-		<English>Dark Age active! Turns left: %d1</English>
-		<French>Age Sombre actif! Tours restants: %d1</French>
-		<German>Es herrscht ein Dunkles Zeitalter! Verbleibende Runden: %d1</German>
-		<Italian>Età oscura attiva! Turni rimanenti: %d1</Italian>
-		<Spanish>¡Edad oscura activa! Turnos restantes: %d1</Spanish>
-		<Polish>Mroczny Wiek aktywowany! Tur do zakończenia: %d1</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DARKAGE_NOT_ACTIVE</Tag>
-		<English>Dark Age not active.</English>
-		<French>Pas d'Age Sombre.</French>
-		<German>Es herrscht momentan kein Dunkles Zeitalter.</German>
-		<Italian>Età oscura non attiva.</Italian>
-		<Spanish>Edad oscura no activa.</Spanish>
-		<Polish>Mroczny wiek nie aktywny.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT</Tag>
@@ -3432,22 +3016,6 @@
 		<Polish>Słońce wstało w roku %s1_year. Od niepamiętnych czasów, ludzie z %s2_civ żyli koczowniczym trybem życia. Lata takiego życia nauczyły ich jak żyć z niebezpieczną naturą i osiąść by rozprzestrzeniać swoją kulturę. [NEWLINE][NEWLINE]%s3_leader, Twoi ludzię widzą w Tobie najsilniejszego, zaufali Ci byś zbudował Cywilizację która przetrwa próbę czasu!</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DCM_TEXT</Tag>
-		<English>Welcome to Dale's Combat Mod! To turn components on or off please edit the value in GlobalDefinesAlt.xml for that components global tag. The following components are turned on.</English>
-		<French>Bienvenue dans le mod de combat de Dale! Pour activer ou désactiver des composants, veuillez modifier la valeur dans GlobalDefinesAlt.xml pour cette balise globale de composants. Les composants suivants sont activés.</French>
-		<German>Willkommen zu Dales Kampfmodifikation (engl.: combat mod)! Um einzelne Komponenten ein- oder auszuschalten editiere bitte in GlobalDefinesAlt.xml den Wert des Tags für diese Komponente. Die folgenden Komponenten sind eingeschaltet.</German>
-		<Italian>Benvenuti al MOD Combattimento di Dale! Per attivare/disattivare i componenti modifica il parametro del componente in 'GlobalDefinesAlt.xml'. Questi sono i compinenti attivi:</Italian>
-		<Spanish>¡Bienvenido al Mod de Combate de Dale! Para activar o desactivar componentes, por favor edita el valor del componente en el archivo GlobalDefinesAlt.xml. Los siguientes componentes están activados:</Spanish>
-		<Polish>Witaj w modzie Dale's Combat Mod! Aby włączyć lub wyłączyć odpowiednie komponenty należy edytować ich wartości w pliku GlobalDefinesAlt.xml.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DCM_TITLE</Tag>
-		<English>Dale's Combat Mod!</English>
-		<French>Mode de Combat de Dale!</French>
-		<Italian>MOD Combattimento di Dale!</Italian>
-		<Spanish>Mod de Combate de Dale (DCM)</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_DECREASE_LOCAL_REBELS</Tag>
 		<English>[NEWLINE][ICON_BULLET]Decreases local rebelliousness</English>
 		<French>[NEWLINE][ICON_BULLET]Diminue la rebellion locale</French>
@@ -3457,25 +3025,7 @@
 		<Polish>[NEWLINE][ICON_BULLET]Obniża lokalną buntowniczość</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DECREASE_LOCAL_REBELS_PEDIA</Tag>
-		<English>[NEWLINE][ICON_BULLET]Decreases local rebelliousness</English>
-		<French>[NEWLINE][ICON_BULLET]Diminue la rebellion locale</French>
-		<German>[NEWLINE][ICON_BULLET]Reduziert lokale Aufsässigkeit</German>
-		<Italian>[NEWLINE][ICON_BULLET]Diminuisce il sentimento rivoluzionario locale</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Reduce la rebeldía local</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Obniża lokalną buntowniczość</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_DECREASE_NATIONAL_REBELS</Tag>
-		<English>[NEWLINE][ICON_BULLET]Decreases national rebelliousness</English>
-		<French>[NEWLINE][ICON_BULLET]Diminue la rebellion nationale</French>
-		<German>[NEWLINE][ICON_BULLET]Reduziert nationale Aufsässigkeit</German>
-		<Italian>[NEWLINE][ICON_BULLET]Diminuisce il sentimento rivoluzionario nazionale</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Reduce la rebeldía nacional</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Obniża narodową buntowniczość</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DECREASE_NATIONAL_REBELS_PEDIA</Tag>
 		<English>[NEWLINE][ICON_BULLET]Decreases national rebelliousness</English>
 		<French>[NEWLINE][ICON_BULLET]Diminue la rebellion nationale</French>
 		<German>[NEWLINE][ICON_BULLET]Reduziert nationale Aufsässigkeit</German>
@@ -3500,14 +3050,6 @@
 		<Italian>[ICON_BULLET][COLOR_BLUE]Si dispone di un patto di difesa[COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET][COLOR_BLUE]Tenéis un Acuerdo de protección[COLOR_REVERT]</Spanish>
 		<Polish>[ICON_BULLET][COLOR_BLUE]Posiadasz Pakt Obronny[COLOR_REVERT]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DELTA_TREND_ADVISOR_SIMPLE</Tag>
-		<English>Trend</English>
-		<French>Tendance</French>
-		<German>Tendenz</German>
-		<Italian>Tendenza</Italian>
-		<Spanish>Tendencia</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DEMO_SCREEN_RANK_TEXT</Tag>
@@ -3558,23 +3100,6 @@
 		<Polish>[SPACE]Poziom Trudności</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DIPLOMACY_MODIFIER</Tag>
-		<English>[ICON_BULLET]%D1_Change To Diplomatic Relations</English>
-		<French>[ICON_BULLET]%D1_Change aux Relations Diplomatiques</French>
-		<German>[ICON_BULLET]%D1_Change für diplomatische Beziehungen</German>
-		<Spanish>[ICON_BULLET]%D1_Change a las relaciones diplomáticas</Spanish>
-		<Polish>[ICON_BULLET]%D1_Change do relacji dyplomatycznych</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DISTANCE_MAINTANCE_MODIFIER</Tag>
-		<English>[ICON_BULLET]%D1_Change%% Distance Maintenance in All Cities</English>
-		<French>[ICON_BULLET]%D1_Change%% Maintenance liée à Distance du Palais dans toutes les Villes</French>
-		<German>[ICON_BULLET]%D1_Change%% Unterhalt durch Entfernung in allen Städten</German>
-		<Italian>[ICON_BULLET]%D1_Change%% Distance Maintance in All Cities</Italian>
-		<Spanish>[ICON_BULLET]%D1_Change%% al mantenimiento por distancia con la capital en todas las ciudades</Spanish>
-		<Polish>[ICON_BULLET]%D1_Change%% do kosztów utrzymania za odległość we wszystkich miastach</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_DJENNE_PYTHON</Tag>
 		<English>[COLOR_BUILDING_TEXT]The Great Mosque of Djenné [COLOR_SELECTED_TEXT]Increases Desert Trade[COLOR_REVERT]!</English>
 		<French>[COLOR_SELECTED_TEXT]La Grande Mosquée de Djenné augmente le commerce dans le Désert![COLOR_REVERT]</French>
@@ -3582,132 +3107,6 @@
 		<Italian>[COLOR_SELECTED_TEXT]La grande moschea di Djenné incrementa il commercio nel deserto![COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_SELECTED_TEXT]¡La Gran Mezquita de Djenné aumenta el comercio en el Desierto![COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_BUILDING_TEXT]Wielki Meczet w Dżenne [COLOR_SELECTED_TEXT]zwiększa handel na polach pustyni[COLOR_REVERT]!</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DOMAIN_AIR</Tag>
-		<English>Air Units</English>
-		<French>
-			<Text>Unités aériennes</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Lufteinheiten</Text>
-			<Gender>female</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Unità aerea:Unità aeree</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Unidad aérea:Unidades aéreas</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Jednostki powietrzne</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DOMAIN_IMMOBILE</Tag>
-		<English>Immobile Units</English>
-		<French>
-			<Text>Unités statiques</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Ortsfeste Einheiten</Text>
-			<Gender>female</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Unità fissa:Unità fisse</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Unidad inmóvil:Unidades inmóviles</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Nieruchome jednostki</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DOMAIN_LAND</Tag>
-		<English>Land Units</English>
-		<French>
-			<Text>Unités terrestres</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Landeinheiten</Text>
-			<Gender>female</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Unità terrestre:Unità terrestri</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Unidad terrestre:Unidades terrestres</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Jednostki lądowe</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DOMAIN_SEA</Tag>
-		<English>Water Units</English>
-		<French>
-			<Text>Unités navales</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Marineeinheiten</Text>
-			<Gender>female</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Unità navale:Unità navali</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Unidad acuática:Unidades acuáticas</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Jednostki morskie</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DOUBLE_VOTE_MODIFIER</Tag>
-		<English>[NEWLINE][SPACE][SPACE][ICON_BULLET]Receives Double Votes in United Nations</English>
-		<French>[NEWLINE][SPACE][SPACE][ICON_BULLET]obtient le double de voix aux Nations Unies</French>
-		<German>[NEWLINE][SPACE][SPACE][ICON_BULLET]verdoppelt die Stimmen bei den Vereinten Nationen</German>
-		<Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]Obtiene el doble de votos en las Naciones Unidas</Spanish>
-		<Polish>[NEWLINE][SPACE][SPACE][ICON_BULLET]Otrzymuje podwójne głosy w ONZ</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DP_EXTRA_POINTS</Tag>
-		<English>Extra points: %d1</English>
-		<French>Points Suppl.: %d1</French>
-		<German>Zusatzpunkte: %d1</German>
-		<Italian>Punti extra: %d1</Italian>
-		<Spanish>Puntos extra: %d1</Spanish>
-		<Polish>Dodatkowe punkty: %d1</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DP_TOTAL</Tag>
-		<English>Total Dark Age Points:</English>
-		<French>Total de Points Age Sombre:</French>
-		<German>Dunkle-Zeitalter-Punkte (insgesamt):</German>
-		<Italian>Totale punti era oscura:</Italian>
-		<Spanish>Total de puntos por Edad oscura:</Spanish>
-		<Polish>Suma punktów Mrocznego Wieku:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DURATION</Tag>
@@ -3723,33 +3122,6 @@
 		<Italian>[COLOR_SELECTED_TEXT]Il Progetto Eden sta migliorando il pianeta[COLOR_REVERT]!</Italian>
 		<Spanish>[COLOR_SELECTED_TEXT]¡El [COLOR_BUILDING_TEXT]Proyecto Edén[COLOR_SELECTED_TEXT] mejora el planeta![COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_SELECTED_TEXT]Projekt Eden ulepszył planetę.[COLOR_REVERT]!</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EDISON_LINK</Tag>
-		<English>[LINK=BUILDING_EDISON]Edison's Workshop[\LINK]</English>
-		<French>[LINK=BUILDING_EDISON]Atelier d'Edison[\LINK]</French>
-		<German>[LINK=BUILDING_EDISON]Edisons Werkstatt[\LINK]</German>
-		<Italian>[LINK=BUILDING_EDISON]Laboratorio di Edison[\LINK]</Italian>
-		<Spanish>[LINK=BUILDING_EDISON]Taller de Edison[\LINK]</Spanish>
-		<Polish>[LINK=BUILDING_EDISON]Warsztat Edisona[\LINK]</Polish>
-	</TEXT>
-		<TEXT>
-		<Tag>TXT_KEY_EINSTEIN_LAB_LINK</Tag>
-		<English>[LINK=BUILDING_EINSTEIN_LAB]Einstein's Laboratory[\LINK]</English>
-		<French>[LINK=BUILDING_EINSTEIN_LAB]Laboratoire d'Einstein[\LINK]</French>
-		<German>[LINK=BUILDING_EINSTEIN_LAB]Einsteins Labor[\LINK]</German>
-		<Italian>[LINK=BUILDING_EINSTEIN_LAB]Laboratorio di Einstein[\LINK]</Italian>
-		<Spanish>[LINK=BUILDING_EINSTEIN_LAB]Laboratorio de Einstein[\LINK]</Spanish>
-		<Polish>[LINK=BUILDING_EINSTEIN_LAB]Laboratorium Einsteina[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ELECTION_ANGER</Tag>
-		<English>+%d1_Change[ICON_UNHAPPY]: "You Refused to Hold an Election!"</English>
-		<French>+%d1_Change[ICON_UNHAPPY]: "Vous refusez de réaliser des Elections!"</French>
-		<German>+%d1_Change[ICON_UNHAPPY]: "Du hast Dich geweigert, eine Wahl abzuhalten!"</German>
-		<Italian>+%d1_Change[ICON_UNHAPPY]: "Hai rifiutato di concedere le elezioni!"</Italian>
-		<Spanish>+%d1_Change[ICON_UNHAPPY]: "¡Te negaste a convocar elecciones!"</Spanish>
-		<Polish>+%d1_Change[ICON_UNHAPPY]: "Odmówiłeś rozpisania wyborów!"</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EMBASSY_DIPLOMACY_BONUS</Tag>
@@ -3812,6 +3184,30 @@
 		<Spanish>Se evitan los ciudadanos enfermos dejando de crecer si se llega al límite de ciudadanos sanos.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_EMPHASIZE_AVOID_GROWTH_STRATEGY</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EMPHASIZE_COMMERCE_STRATEGY</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EMPHASIZE_FOOD_STRATEGY</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EMPHASIZE_GREAT_PEOPLE_STRATEGY</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EMPHASIZE_PRODUCTION_STRATEGY</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EMPHASIZE_RESEARCH_STRATEGY</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_END_YEAR</Tag>
 		<English>End Year</English>
 		<French>Année de fin</French>
@@ -3834,15 +3230,6 @@
 		<Italian>Interrogando gli abitanti di %s, hai scoperto alcuni segreti della tecnologia %s</Italian>
 		<Spanish>De los habitantes de %s, has aprendido algunos de los secretos de la tecnología %s.</Spanish>
 		<Polish>Od mieszkańców %s nauczyłeś się sekretów: %s</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ENSLAVE_CITY</Tag>
-		<English>Enlave the city's denizens!</English>
-		<French>Réduire les habitants de la Ville à l'esclavage!</French>
-		<German>Versklavt die Bewohner!</German>
-		<Italian>Schiavizza i cittadini!</Italian>
-		<Spanish>¡Esclavizar a los habitantes de la ciudad!</Spanish>
-		<Polish>Zniewolono mieszkańców miasta!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_ANCIENT</Tag>
@@ -4314,30 +3701,12 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<French>vrai</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FALSE</Tag>
-		<English>False</English>
-		<French>Faux</French>
-		<German>Nein</German>
-		<Italian>Falso</Italian>
-		<Spanish>No</Spanish>
-		<Polish>Fałsz</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FASHION_STRATEGY</Tag>
 		<English>Build the [COLOR_BUILDING_TEXT]Fashion House[COLOR_REVERT] Headquarters to create the [COLOR_HIGHLIGHT_TEXT]Fashion House Corporation[COLOR_REVERT] which consumes [COLOR_HIGHLIGHT_TEXT]Silk[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cotton[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Dye[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cow[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Wool[COLOR_REVERT] or [COLOR_HIGHLIGHT_TEXT]Fur[COLOR_REVERT] and adds a culture bonus to every city where the [COLOR_HIGHLIGHT_TEXT]Fashion House Corporation[COLOR_REVERT] is present. The Headquarters provide gold for each city in the world with a Fashion House franchise.</English>
 		<French>Construire le siège de [COLOR_BUILDING_TEXT]Maison de la Mode[COLOR_REVERT] pour créer la corporation [COLOR_HIGHLIGHT_TEXT]Maison de la Mode[COLOR_REVERT] qui consomme [COLOR_HIGHLIGHT_TEXT]Soie[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Coton[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Teinture[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Vache[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Laine[COLOR_REVERT] ou [COLOR_HIGHLIGHT_TEXT]Fourrures[COLOR_REVERT] et ajoute un bonus culture dans chaque ville où la corporation [COLOR_HIGHLIGHT_TEXT]Maison de la Mode[COLOR_REVERT] est présente. Le Siège génère de l'or, pour chaque ville pour laquelle il y a une franchise Maison de la Mode.</French>
 		<Italian>Costruisci il [COLOR_BUILDING_TEXT]QG di Fashion House[COLOR_REVERT] per creare la corporazione [COLOR_HIGHLIGHT_TEXT]Fashion House[COLOR_REVERT] che consuma [COLOR_HIGHLIGHT_TEXT]Seta[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cotone[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Tintura[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Bovini[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Lana[COLOR_REVERT] o COLOR_HIGHLIGHT_TEXT]Pellicce[COLOR_REVERT] e dà un bonus di cultura in tutte le città dove è presente [COLOR_HIGHLIGHT_TEXT]Fashion House[COLOR_REVERT]. Il QG fornisce oro per ogni città in cui è diffusa Fashion House.</Italian>
 		<Spanish>Construye la maravilla [COLOR_BUILDING_TEXT]Fashion House[COLOR_REVERT] para crear la corporación [COLOR_HIGHLIGHT_TEXT]Fashion House[COLOR_REVERT], que consume [COLOR_HIGHLIGHT_TEXT]Seda[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Algodón[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Tintura[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Reses[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Lana[COLOR_REVERT] y [COLOR_HIGHLIGHT_TEXT]Pieles[COLOR_REVERT], y añade una bonificación a la cultura en todas las ciudades donde [COLOR_HIGHLIGHT_TEXT]Fashion House[COLOR_REVERT] esté presente. La sede proporciona oro por cada ciudad del mapa en la que haya una franquicia de Fashion House.</Spanish>
 		<Polish>Zbuduj siedzibę [COLOR_BUILDING_TEXT]Domu Mody[COLOR_REVERT]by utworzyć [COLOR_HIGHLIGHT_TEXT]Korporacje Domów Mody[COLOR_REVERT] która zużywa [COLOR_HIGHLIGHT_TEXT]Jedwab[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Bawełne[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Barwniki[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Owce[COLOR_REVERT] lub [COLOR_HIGHLIGHT_TEXT]Futro[COLOR_REVERT] i daje bonus do kultury każdemu miastu w którym znajduje się [COLOR_HIGHLIGHT_TEXT]Korporacja Domów Mody[COLOR_REVERT]. Siedziba zapewnia złoto dla każdego mista w którym znajduje się ta korporacja.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_FEAT_UNITCOMBAT_TRACKED</Tag>
-		<English>Congratulations, you have trained your first Tracked Unit ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name! They are the strongest offensive units available - use them to crush your enemies!</English>
-		<French>Félicitations, vous venez d'entraîner votre première unité blindée ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) à %s2City_Name! Ce sont les plus puissantes unités offensives du jeu... elles vous permettront d'écraser vos ennemis!</French>
-		<German>Herzlichen Glückwunsch! Ihr habt Euer erstes Kettenfahrzeug ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name errichtet! Setzt diese stärksten verfügbaren Offensiveinheiten ein, um Eure Feinde vernichtend zu schlagen!</German>
-		<Italian>Congratulazioni, hai realizzato la tua prima unità corazzata ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) a %s2City_Name! Queste unità sono gli attaccanti più forti a disposizione: usale per annientare i tuoi nemici!</Italian>
-		<Spanish>Felicidades, habéis entrenado en %s2City_Name a vuestra primera unidad a tracción oruga, [NUM1:un:una:unos:unas] [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]. Son las unidades de ataque más poderosas que existen, usadlas para aplastar al enemigo.</Spanish>
-		<Polish>Gratulacje! Wyprodukowałeś swój pierwszy pojazd gąsienicowy ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) w mieście %s2City_Name! Pojazdy gąsienicowe są najpotężniejszymi jednostkami szturmowymi - wykorzystuj je w celu zniszczenia swoich wrogów!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_CITY_MAINT_COST_DISTANCE</Tag>
@@ -4485,74 +3854,9 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>[ICON_BULLET]Twoja Cywilizacja ma stałe granice</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FOREIGN_ADVISOR_ABBR_ATTITUDE</Tag>
-		<English>Attitude</English>
-		<German>Haltung</German>
-		<Italian>Attitudine</Italian>
-		<Spanish>Actitud</Spanish>
-		<Polish>Stosunek</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_FOREIGN_ADVISOR_ABBR_LEADER</Tag>
-		<English>Leader</English>
-		<French>Chef</French>
-		<German>Chef</German>
-		<Spanish>Líder</Spanish>
-		<Polish>Przywódca</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_FOREIGN_ADVISOR_BORDER_TENSION_OFF</Tag>
-		<English>Border tension off</English>
-		<French>Tensions frontalières: OFF</French>
-		<German>Grenzspannungen: aus</German>
-		<Spanish>Tensión fronteriza: no</Spanish>
-		<Polish>Napięcie Graniczne: OFF</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_FOREIGN_ADVISOR_BORDER_TENSION_ON</Tag>
-		<English>Border tension on</English>
-		<French>Tensions frontalières: ON</French>
-		<German>Grenzspannungen: an</German>
-		<Spanish>Tensión fronteriza: sí</Spanish>
-		<Polish>Napięcie Graniczne: ON</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_FOREIGN_ADVISOR_CONSTRAINTS</Tag>
-		<English>Constraints:</English>
-		<French>Restrictions:</French>
-		<German>Einschränkungen:</German>
-		<Spanish>Restricciones:</Spanish>
-		<Polish>Ograniczenia:</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_FOREIGN_ADVISOR_INFO</Tag>
 		<English>Info</English>
 		<French>Infos</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_FOREIGN_ADVISOR_POSSIBLE_FAV_CIVICS</Tag>
-		<English>Possible Favorite Civics</English>
-		<French>Doctrines préférées (prob.)</French>
-		<German>Mögliche Vorlieben</German>
-		<Italian>Possibili Forme di Governo Favorite</Italian>
-		<Spanish>Posible principio favorito</Spanish>
-		<Polish>Możliwe Ulubione Doktryny</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_FOREIGN_ADVISOR_RELIGIOUS_TENSION_OFF</Tag>
-		<English>Religious tension off</English>
-		<French>Tensions Religieuses: OFF</French>
-		<German>Religiöse Spannungen: aus</German>
-		<Spanish>Tensión religiosa: no</Spanish>
-		<Polish>Napięcie Religijne: OFF</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_FOREIGN_ADVISOR_RELIGIOUS_TENSION_ON</Tag>
-		<English>Religious tension on</English>
-		<French>Tensions Religieuses: ON</French>
-		<German>Religiöse Spannungen: an</German>
-		<Spanish>Tensión religiosa: sí</Spanish>
-		<Polish>Napięcie Religijne: ON</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FOREIGN_TRADE_INCOME</Tag>
@@ -4583,22 +3887,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<French>[ICON_BULLET]%D_Change Combattants de la liberté lorsque l'une de vos villes est capturée.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FREE_CONNECTIONS</Tag>
-		<English>[ICON_BULLET]Connects the City to every other City on the Continent</English>
-		<French>[ICON_BULLET]Connecte la Ville à toutes les autres sur le continent</French>
-		<German>[ICON_BULLET]Verbindet diese Stadt mit jeder anderen Stadt auf dem Kontinent</German>
-		<Spanish>[ICON_BULLET]Conecta la ciudad con todas las demás ciudades del continente</Spanish>
-		<Polish>[ICON_BULLET]Łączy to miasto z każdym miastem na kontynencie</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_FREE_PROMOTIONS</Tag>
-		<English>[ICON_BULLET]All units recive %d1_Num Free Promotions upon Completion</English>
-		<French>[ICON_BULLET]Toutes les Unités recoivent %d1_Num Promotions lorsqu'elles sont créées</French>
-		<German>[ICON_BULLET]Alle Einheiten erhalten bei der Fertigstellung %d1_Num kostenlose Beförderungen</German>
-		<Spanish>[ICON_BULLET]Todas las unidades reciben %d1_Num ascens[NUM1:o:os] gratis al completar</Spanish>
-		<Polish>[ICON_BULLET]Wszystkie nowe jednostki otrzymują darmową promocję %d1_Num</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_FREE_TRADE_AGREEMENT_MOD</Tag>
 		<English>%d1%: From Free Trade Agreement</English>
 		<French>%d1%: des Accords de libre échange</French>
@@ -4608,25 +3896,12 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>%d1%: z Wolnych Umów Handlowych</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FREE_UNIT_TIMER</Tag>
-		<English>[ICON_BULLET]Generates a Free Conscripted Unit every %d1_Timer Turns</English>
-		<French>[ICON_BULLET]Génère une Unité Conscrite gratuite tous les %d1_Timer Tours</French>
-		<German>[ICON_BULLET]Produziert eine kostenlose rekrutierte Einheit alle %d1_Timer Runden</German>
-		<Spanish>[ICON_BULLET]Produce una unidad recluta gratis cada %d1_Timer [NUM1:turno:turnos]</Spanish>
-		<Polish>[ICON_BULLET]Produkuje darmową jednostkę co %d1_Timer Tur</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_FROM_COMBAT_CLASS</Tag>
 		<English>From</English>
 		<French>*</French>
 		<German>Klasse: </German>
 		<Italian>da</Italian>
 		<Polish>Z</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOBJECT_BUILDING</Tag>
-		<English>Building</English>
-		<French>Bâtiment</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOBJECT_CITY</Tag>
@@ -4704,11 +3979,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Jednostka</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOBJECT_WONDER</Tag>
-		<English>Wonders</English>
-		<French>Merveilles</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPEED_BLITZ</Tag>
@@ -4877,14 +4147,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<German>Diese absolut höchste Spielgeschwindigkeit ist nur für Testzwecke gedacht.</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GLOBAL_SPECIALBUILDING_COMMERCE</Tag>
-		<English>In this City for every [COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT] on Earth</English>
-		<French>Dans cette Ville pour chaque [COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT] sur tout le Globe</French>
-		<German>In dieser Stadt für jedes [COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT] auf der Erde</German>
-		<Spanish>en esta ciudad por cada [COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT] en el mundo</Spanish>
-		<Polish>W tym mieście dla wszystkich [COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT] za Ziemi</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_ALL</Tag>
 		<English>All Resources</English>
 		<French>Toutes Ressources</French>
@@ -4912,15 +4174,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_GLOBELAYER_RESOURCES_STRATEGIC</Tag>
 		<English>Strategic</English>
 		<French>Stratégique</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GODS_INQUISTOR_CLEANSE_MOUSE_OVER</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Religious Persecution[COLOR_REVERT][NEWLINE]Removes all religions except the state religion from this city. This will consume the Inquisitor.</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Persécution religieuse[COLOR_REVERT][NEWLINE]Supprime toutes les religions d'une ville à l'exception de la religion d'état. Cet ordre détruira l'inquisiteur.</French>
-		<German>[COLOR_HIGHLIGHT_TEXT]Religiöse Verfolgung[COLOR_REVERT][NEWLINE]Entfernt alle Religionen aus der Stadt, bis auf die Staatsreligion.Der Inquisitor wird dabei geopfert.</German>
-		<Italian>[COLOR_HIGHLIGHT_TEXT]Persecuzione religiosa[COLOR_REVERT][NEWLINE]Rimuove da questa città tutte le religioni tranne quella di stato. In questa operazione l'Inquisitore verrà sacrificato.</Italian>
-		<Spanish>[COLOR_HIGHLIGHT_TEXT]Persecución religiosa[COLOR_REVERT][NEWLINE]Elimina todas las religiones de esta ciudad, salvo la religión oficial. Esto consumirá al inquisidor.</Spanish>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Prześladowania Religijne[COLOR_REVERT][NEWLINE]Usuwa wszystkie religie z tego miasta, oprócz religii państwowej.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOLDEN_AGE_YIELD</Tag>
@@ -4991,18 +4244,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Spanish>Los gorilas, los más grandes de los primates vivos, son los omnívoros de la tierra-vivienda que habitan los bosques de África. Los gorilas todavía se dividen en dos especies y (bajo discusión en fecha 2007) cuatro o cinco subespecies. Su DNA es 97%-98% idéntico a el de un ser humano, y es los parientes vivos más cercanos siguientes a los seres humanos después de las dos especies del chimpancé.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GPS3</Tag>
-		<English>Next Generation GPS</English>
-		<French>GPS Nouvelle Génération</French>
-		<Italian>GPS di nuova generazione</Italian>
-		<Spanish>
-			<Text>Sistemas de navegación avanzados</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-		<Polish>GPS Następnej Generacji</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GRAPH_SMOOTHING</Tag>
 		<English>Smooth Factor %d1_Num</English>
 		<French>Facteur de lissage %d1_Num</French>
@@ -5015,28 +4256,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_UNIT_GREAT_DOCTOR_STRATEGY</Tag>
 		<English>Use the Great Doctor to build the [LINK=BUILDING_UNIVERSAL_HEALTH_CARE]Universal Health Care[\LINK] National Wonder, discover a new technology or add to a city as a super specialist.</English>
 		<French>Utilisez le Docteur illustre pour construire la merveille nationale [LINK=BUILDING_UNIVERSAL_HEALTH_CARE]Couverture Santé Universelle[\ LINK], ou découvrir une nouvelle technologie ou encore ajoutez-le à une ville en tant que super spécialiste.</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREEKWAR_IMPROVEMENT_OLIVE_PRESS_STRATEGY</Tag>
-		<English>This improvement allows you to harvest [COLOR_HIGHLIGHT_TEXT]Olives[COLOR_REVERT].</English>
-		<French>Cette amélioration vous permet de cultiver des [COLOR_HIGHLIGHT_TEXT]olives[COLOR_REVERT].</French>
-		<German>macht die Ressource [COLOR_HIGHLIGHT_TEXT]Oliven[COLOR_REVERT] nutzbar.</German>
-		<Italian>Questo miglioramento ti consente di raccogliere le [COLOR_HIGHLIGHT_TEXT]olive[COLOR_REVERT].</Italian>
-		<Spanish>Esta mejora te permite cosechar [COLOR_HIGHLIGHT_TEXT]Aceitunas[COLOR_REVERT].</Spanish>
-		<Polish>To ulepszenie pozwala na uprawę [COLOR_HIGHLIGHT_TEXT]oliwek[COLOR_REVERT].</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GUI</Tag>
-		<English>Graphical User Interface</English>
-		<French>Interface Graphique Utilisateurs</French>
-		<German>Graphisches User-Interface</German>
-		<Italian>Interfaccia grafica dell'utilizzatore</Italian>
-		<Spanish>
-			<Text>Interfaz gráfica de usuario</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Graficzne Interfejsy</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_CHIEFTAIN</Tag>
@@ -5308,15 +4527,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>+%d1_Change[ICON_HAPPY]: "Kochamy nasze Cuda Natury!"</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_HAPPY_PROJECT</Tag>
-		<English>+%d1_Change[ICON_HAPPY]: "Our Nation's Technological Breakthroughs have benefitted Ourselves!"</English>
-		<French>+%d1_Change[ICON_HAPPY]: "Nos Avancées Technologiques nous sont très profitables!"</French>
-		<German>+%d1_Change[ICON_HAPPY]: "Unsere technologischen Errungenschaften haben uns geholfen!"</German>
-		<Italian>+%d1_Change[ICON_HAPPY]: "Le innovazioni tecnologiche della nostra Nazione ci hanno dato benefici!"</Italian>
-		<Spanish>+%d1_Change[ICON_HAPPY]: "¡Los avances tecnológicos de nuestra nación nos han beneficiado!"</Spanish>
-		<Polish>+%d1_Change[ICON_HAPPY]: "Rozwój naszego państwa jest korzystny dla naszych obywateli!"</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_HAPPY_SPECIALISTS</Tag>
 		<English>+%d1_Change[ICON_HAPPY]: "Some citizens' jobs please us!"</English>
 		<French>+%d1_Change[ICON_HAPPY]: "Nous sommes ravis par les emplois de certains citoyens!"</French>
@@ -5451,14 +4661,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<French>Taille d'Icones:</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPREGNABLE</Tag>
-		<English>[ICON_BULLET]City Can not be attacked by enemy ground forces</English>
-		<French>[ICON_BULLET]La Ville ne peut pas être attaquée par des unités terrestres</French>
-		<German>[ICON_BULLET]Stadt kann nicht durch feindliche Bodentruppen angegriffen werden</German>
-		<Spanish>[ICON_BULLET]La ciudad no puede ser atacada por unidades enemigas terrestres.</Spanish>
-		<Polish>[ICON_BULLET]Miasto nie może być zaatakowane przez wrogie wojska lądowe</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_INCREASE_LOCAL_REBELS</Tag>
 		<English>[NEWLINE][ICON_BULLET]Increases local rebelliousness</English>
 		<French>[NEWLINE][ICON_BULLET]Augmente la rebellion locale</French>
@@ -5468,25 +4670,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>[NEWLINE][ICON_BULLET]Wzmaga lokalną buntowniczość</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_INCREASE_LOCAL_REBELS_PEDIA</Tag>
-		<English>[NEWLINE][ICON_BULLET]Increases local rebelliousness</English>
-		<French>[NEWLINE][ICON_BULLET]Augmente la rebellion locale</French>
-		<German>[NEWLINE][ICON_BULLET]Erhöht lokale Aufsässigkeit</German>
-		<Italian>[NEWLINE][ICON_BULLET]Aumenta il sentimento rivoluzionario locale</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Aumenta la rebeldía local</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Wzmaga lokalną buntowniczość</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_INCREASE_NATIONAL_REBELS</Tag>
-		<English>[NEWLINE][ICON_BULLET]Increases national rebelliousness</English>
-		<French>[NEWLINE][ICON_BULLET]Augmente la rebellion nationale</French>
-		<German>[NEWLINE][ICON_BULLET]Erhöht nationale Aufsässigkeit</German>
-		<Italian>[NEWLINE][ICON_BULLET]Aumenta il sentimento rivoluzionario nazionale</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Aumenta la rebeldía nacional</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Wzmaga narodową buntowniczość</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_INCREASE_NATIONAL_REBELS_PEDIA</Tag>
 		<English>[NEWLINE][ICON_BULLET]Increases national rebelliousness</English>
 		<French>[NEWLINE][ICON_BULLET]Augmente la rebellion nationale</French>
 		<German>[NEWLINE][ICON_BULLET]Erhöht nationale Aufsässigkeit</German>
@@ -5688,19 +4872,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<English>(%d1)</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_INTERNET4</Tag>
-		<English>Intuitive Internet</English>
-		<French>Internet Intuitif</French>
-		<German>Intuitives Internet</German>
-		<Italian>Internet intuitivo</Italian>
-		<Spanish>
-			<Text>Internet intuitiva</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Intuicyjny Internet</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_INVASION_ENDED</Tag>
 		<English>We've managed to seal the entrance into %s1, and our fortifications are once again secure.</English>
 		<French>Nous avons réussi à condamner l'entrée de %s1, et nos fortifications sont à nouveau sûres.</French>
@@ -5892,24 +5063,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Italian>[ICON_BULLET]Raggio: %d1_BombRange</Italian>
 		<Spanish>[ICON_BULLET]Alcance: %d1_BombRange</Spanish>
 		<Polish>[ICON_BULLET]Zasięg: %d1_BombRange</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_JETPACK</Tag>
-		<English>Launchpod Jetpack</English>
-		<French>Aires de Décollage pour JetPack</French>
-		<German>Jetpacks</German>
-		<Italian>Aree di decollo per jetpack</Italian>
-		<Spanish>
-			<Text>Cápsula de lanzamiento propulsada</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Jetpack</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_JOIN_CITY_MOUSE_OVER</Tag>
-		<English>Join City</English>
-		<French>Rejoindre la Ville</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LANDMARK_BAY_0</Tag>
@@ -6134,15 +5287,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<English>W</English>
 		<French>O</French>
 		<Spanish>O</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LEONARDO_LINK</Tag>
-		<English>[LINK=BUILDING_LEONARDO]Leonardo's Workshop[\LINK]</English>
-		<French>[LINK=BUILDING_LEONARDO]Atelier de Léonard de Vinci[\LINK]</French>
-		<German>[LINK=BUILDING_LEONARDO]Leonardos Werkstatt[\LINK]</German>
-		<Italian>[LINK=BUILDING_LEONARDO]Bottega di Leonardo[\LINK]</Italian>
-		<Spanish>[LINK=BUILDING_LEONARDO]Taller de Leonardo[\LINK]</Spanish>
-		<Polish>[LINK=BUILDING_LEONARDO]Pracownia Leonarda[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LISTSCREEN_BUTTON_ADD</Tag>
@@ -6633,31 +5777,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>C.N</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MAIN_MENU_MAP</Tag>
-		<English>Map</English>
-		<French>
-			<Text>Carte</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Karte</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Mappa</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Mapa</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Mapa</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MALLWART_STRATEGY</Tag>
 		<English>Build this corporation in order to get fruit and groceries bonuses.</English>
 		<French>Construisez cette corporation afin d'obtenir des bonus de fruits et d'épicerie.</French>
@@ -6666,33 +5785,12 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>Zbuduj Siedzibę tej korporacji by zdobyć owoce i bonusy do żywności.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MANHATTAN</Tag>
-		<English>Manhattan Project</English>
-		<French>Projet Manhattan</French>
-		<Italian>Progetto Manhattan</Italian>
-		<Spanish>
-			<Text>Proyecto Manhattan</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Projekt Manhattan</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAPSTER_STRATEGY</Tag>
 		<English>Mapster is a good way to inform the populace of your nation's enduring successes...</English>
 		<French>Mapster est un bon moyen d'informer la population des succès durables de votre nation...</French>
 		<Italian>Mapster è un ottimo modo per informare la popolazione della tua nazione del tuo successo...</Italian>
 		<Spanish>Mapster es una buena opción para informar a la población de los grandes éxitos de tu nación...</Spanish>
 		<Polish>Mapster jest dobrym sposobem informowania Twojej ludności o Twoich sukcesach...</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MAP_SCRIPT_MAZE_LAND_PLUS1</Tag>
-		<English>Extra Land Strip</English>
-		<French>Accidents de Terrain Supplémentaires</French>
-		<German>Zusätzlicher Landstrich</German>
-		<Italian>Terreno aggiuntivo</Italian>
-		<Spanish>Franja de terreno adicional</Spanish>
-		<Polish>Dodatkowy pasek lądu</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_PERFECTMONGOOSE_DESCR</Tag>
@@ -6709,14 +5807,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<German>Eine Zufallskarte, die eine erdähnliche Plattentektonik, geostrophische und Monsunwinde und Regenfälle simuliert.</German>
 		<Italian>Mappa random che simula una tettonica a placche simile a quella terrestre, geostrofia, venti dei monsoni e piogge.</Italian>
 		<Spanish>Mapa aleatorio que simula una tectónica de placas similar a la de la Tierra, vientos geostróficos y de monzón, y lluvia.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MAP_SCRIPT_PERFECTWORLD_DESCR</Tag>
-		<English>Random map that simulates earth-like plate tectonics, geostrophic winds and rainfall. Also, this map has a high likelyhood of 'New World' type lands only reachable on the open ocean. Be warned that these new lands are often home to terrifying hordes of mace-wielding barbarians. Any explorers you send here should be thoroughly briefed on the risks involved prior to embarcation. Use of the 'buddy system' is encouraged.</English>
-		<French>Carte aléatoire qui simule la tectonique des plaques de type terrestre, les vents géostrophiques et les précipitations. En outre, cette carte a une forte probabilité de terres de type «Nouveau Monde» accessibles uniquement en haute mer. Soyez averti que ces nouvelles terres abritent souvent des hordes terrifiantes de barbares brandissant des masses. Tout explorateur que vous envoyez ici doit être parfaitement informé des risques encourus avant l'embarquement. L'utilisation du «système de jumelage» est encouragée.</French>
-		<German>Eine Zufallskarte, die eine erdähnliche Plattentektonik, geostrophische Winde und Regenfälle simuliert. Diese Karte hat außerdem eine hohe Wahrscheinlichkeit für Kontinente der Art "Neue Welt", die nur über den offenen Ozean zu erreichen sind. Achtung! Diese neuen Welten werden oft von Horden furchteinflößender, keulenschwingender Barbaren bevölkert. Alle hierher entsendeten Kundschafter sollten vor der Einschiffung gründlich über die zu erwartenden Risiken aufgeklärt werden. Zur Anwendung des "Buddy-Systems" wird dringend geraten.</German>
-		<Italian>Mappa random che simula una tettonica a placche simile a quella terrestre, venti geostrofici e piogge. In più questa mappa può generare mappe di tipo "Nuovo mondo" con un'alta probabilità, raggiungibili solo attraverso l'oceano. Fai attenzione: questi nuovi territori sono la casa si terrificanti orde barbariche. Ogni esploratore mandato in queste terre dovrebbe essere avvisato dei rischi prima dell'imbarco. Viene incoraggiato l'uso del 'buddy system'.</Italian>
-		<Spanish>Mapa aleatorio que simula una tectónica de placas similar a la de la Tierra, vientos geostróficos y lluvia. Además, este mapa posee una alta probabilidad de generar continentes de tipo 'Nuevo Mundo', solo alcanzables por el océano abierto. Ten cuidado, normalmente estas zonas son el hogar de terroríficas hordas de bárbaros con maza. Cualquier explorador que envíes deberá ser informado exhaustivamente de los riesgos en los que se envuelve antes de embarcar. Se fomenta el uso del 'buddy system'.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_PLANETGENERATOR068_DESCR</Tag>
@@ -11640,15 +10730,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>[COLOR_TECH_TEXT]Chce zostać wasalem: %s1[COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MOVEMENT_IMPROVEMENT_WITH_TECH</Tag>
-		<English>[ICON_BULLET]%D1_Change%F2_MoveIcon with [COLOR_TECH_TEXT]%s2_TechName[COLOR_REVERT]</English>
-		<French>[ICON_BULLET]%D1_Change%F2_MoveIcon avec: [COLOR_TECH_TEXT]%s2_TechName[COLOR_REVERT]</French>
-		<German>[ICON_BULLET]%D1_Change%F2_MoveIcon mit der Technologie [COLOR_TECH_TEXT]%s2_TechName[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]%D1_Change%F2_MoveIcon con [NUM3:il:la:gli:le] [COLOR_TECH_TEXT]%s2_TechName[COLOR_REVERT]</Italian>
-		<Spanish>[ICON_BULLET]%D1_Change %F2_MoveIcon con [NUM3:el:la:los:las] [COLOR_TECH_TEXT]%s2_TechName[COLOR_REVERT]</Spanish>
-		<Polish>[ICON_BULLET]%D1_Change%F2_MoveIcon z [COLOR_TECH_TEXT]%s2_TechName[COLOR_REVERT]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MOVEMENT_ROUTE_WITH_TECH</Tag>
 		<English>[ICON_BULLET]%s1_Change if the %s2_Tech Tech is known.</English>
 		<French>[ICON_BULLET]%s1_Change si la Tech %s2_Tech Tech est découverte.</French>
@@ -11695,74 +10776,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<German>Wie soll diese Siedlung heißen?</German>
 		<Italian>Come vuoi chiamare questo insediamento?</Italian>
 		<Spanish>¿Cómo quieres que se llame el asentamiento?</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NAME_HOLY_FEDERATION</Tag>
-		<English>Holy Federation of %s</English>
-		<French>Sainte fédération de %s</French>
-		<Italian>Sacra Federazione di %s</Italian>
-		<Polish>Święta Federacja %s</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NAME_PEOPLE</Tag>
-		<English>%s1 people %s2</English>
-		<French>%s1 peuple %s2</French>
-		<Italian>%s1 popolo %s2</Italian>
-		<Polish>%s1 ludzie %s2</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NAME_PREFIX_CIV</Tag>
-		<English>%s_civ_adjective</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NAME_PREFIX_ENGLISH_CULTURE</Tag>
-		<English>English</English>
-		<French>Anglais</French>
-		<Italian>Inglese</Italian>
-		<Polish>Anglosaskie</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NAME_PREFIX_HOLY</Tag>
-		<English>Holy</English>
-		<French>Saint</French>
-		<German>Heilige</German>
-		<Italian>Sacro</Italian>
-		<Spanish>Santo</Spanish>
-		<Polish>Święte</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NAME_SUFFIX_CAPITAL</Tag>
-		<English>of %s_city</English>
-		<French>de %s_city</French>
-		<Italian>di %s_city</Italian>
-		<Polish>z %s_city</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NAME_SUFFIX_CIV</Tag>
-		<English>of %s</English>
-		<French>des %s</French>
-		<Polish>z %s</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NAME_SUFFIX_FOREST</Tag>
-		<English>of the Woods</English>
-		<French>des bois</French>
-		<Italian>dei boschi</Italian>
-		<Polish>z Lasu</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NAME_SUFFIX_MOUNTAINS</Tag>
-		<English>of the Mountains</English>
-		<French>des montagnes</French>
-		<Italian>delle montagne</Italian>
-		<Polish>z Gór</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NAME_TRIBE</Tag>
-		<English>%s1 tribe %s2</English>
-		<French>tribu %s1 %s2</French>
-		<Italian>%s1 tribù %s2</Italian>
-		<Polish>Szczep %s1 %s2</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NANITE_DEFUSER_PYTHON</Tag>
@@ -11896,15 +10909,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>Związki zawodowe w Imperium %s1_civ_adjective Empire zostały zakazane.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_NEWTONS_UNIVERSITY_LINK</Tag>
-		<English>[LINK=BUILDING_NEWTONS_UNIVERSITY]Isaac Newton's College[\LINK]</English>
-		<French>[LINK=BUILDING_NEWTONS_UNIVERSITY]Collège d'Isaac Newton[\LINK]</French>
-		<German>[LINK=BUILDING_NEWTONS_UNIVERSITY]Isaac Newtons Schule[\LINK]</German>
-		<Italian>[LINK=BUILDING_NEWTONS_UNIVERSITY]Collegio di Isaac Newton[\LINK]</Italian>
-		<Spanish>[LINK=BUILDING_NEWTONS_UNIVERSITY]Colegio de Isaac Newton[\LINK]</Spanish>
-		<Polish>[LINK=BUILDING_NEWTONS_UNIVERSITY]Uczelnia Newtona[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HELLENIC_CATHEDRAL_PEDIA</Tag>
 		<English>In Civilization IV, a cathedral is defined as an especially large and ornate religious building where the faithful worship. Only the most prosperous cities can afford to create cathedrals, as they require huge amounts of raw material and years of dedicated labor by skilled craftsmen. For example, the Notre Dame Cathedral in Paris, France, took over two centuries to complete.</English>
 		<French>Dans Civilization IV, un grand lieu de culte est défini comme un édifice religieux particulièrement grand et richement orné dans lequel les fidèles pratiquent leur religion: "cathédrales" pour les chrétiens, "mosquées" pour les musulmans et "synagogues" pour les juifs. Seules les villes les plus prospères ont les moyens de construire de tels édifices. En effet, ils nécessitent d'énormes quantités de matériaux bruts et des artisans spécialisés doivent y consacrer des années de travail. Ainsi, il a fallu plus de deux siècles pour terminer la cathédrale Notre-Dame à Paris.</French>
@@ -11921,10 +10925,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Italian>Il monastero è un edificio nel quale i monaci possono ritirarsi dal mondo e concentrarsi sul Divino. In genere, nel monastero vige un regolamento ferreo per proteggere i membri della comunità dalle tentazioni. In alcuni monasteri, i monaci erano completamente silenziosi e non erano permesse visite dall'esterno per non interrompere i rituali quotidiani e le cerimonie religiose. [PARAGRAPH:1] Nel corso dei secoli, i monasteri sono stati spesso centro di insegnamento: in alcune zone, i monaci erano sovente gli unici in grado di leggere e scrivere nel giro di diversi chilometri. Da sempre, i monaci sono stati utilizzati come scribi per copiare le parole sacre della propria religione; i monasteri ospitavano spesso delle biblioteche che contenevano testi religiosi, scientifici, medici e filosofici.</Italian>
 		<Spanish>Un monasterio es un edificio en el que los monjes pueden retirarse del mundo para concentrarse en los asuntos de la divinidad. Normalmente tienen estrictas reglas de comportamiento para proteger a sus miembros de la tentación. En algunos monasterios, los monjes guardan un silencio total, mientras que en otros no se permite el acceso a los visitantes. Lo habitual es que sus miembros tengan que celebrar a diario muchos rituales y servicios religiosos. [PARAGRAPH:1] A lo largo de la historia, los monasterios han sido muchas veces centros de estudio. En las regiones remotas, los monjes podían ser las únicas personas letradas en muchos kilómetros a la redonda. A menudo han sido empleados como escribas, y se han dedicado a copiar los textos sagrados de su religión. Normalmente cuentan con grandes bibliotecas, que contienen textos religiosos, científicos, médicos y filosóficos.</Spanish>
 		<Polish>Klasztor jest budynkiem, w którym mnisi zamykają się przed światem zewnętrznym, dzięki czemu mogą w ciszy kontemplować bóstwo. Zazwyczaj klasztory posiadają surowe reguły postępowania, które mają na celu ochronę swoich umarłych dla świata mieszkańców przed przyziemnymi pokusami. W niektórych klasztorach mnisi zobowiązują się do zachowywania zupełnej ciszy; inne nie zezwalają na żadne odwiedziny z zewnątrz. W obrębie klasztorów zazwyczaj codziennie odbywa się wiele rytuałów i posług religijnych. [PARAGRAPH:1]Poprzez wieki klasztory niejednokrotnie stanowiły centra naukowe. Nic dziwnego, skoro w wielu odległych rejonach w promieniu wielu kilometrów mnisi jako jedyni umieli czytać i pisać. Mnisi niejednokrotnie byli zatrudniani jako skrybowie, przepisywali ręcznie święte księgi wyznawanej religii. Klasztory często posiadają rozległe biblioteki, w których znaleźć można teksty religijne, naukowe, medyczne oraz filozoficzne.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HELLENIC_SHRINE_PEDIA</Tag>
-		<English>TBD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HELLENIC_TEMPLE_PEDIA</Tag>
@@ -12039,15 +11039,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Italian>Il bersaglio di %s1 è %s2</Italian>
 		<Spanish>Objetivo de %s1 definido sobre %s2</Spanish>
 		<Polish>%s1 wyznaczył cel na %s2</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NUMBER_MAINTANCE_MODIFIER</Tag>
-		<English>[ICON_BULLET]%D1_Change%% Number of Cities Maintenance in All Cities</English>
-		<French>[ICON_BULLET]%D1_Change%% Nombre de Maintenance des Villes dans toutes les Villes</French>
-		<German>[ICON_BULLET]%D1_Change%% Unterhalt durch Anzahl der Städte in allen Städten</German>
-		<Italian>[ICON_BULLET]%D1_Change%% Number of Cities Maintance in All Cities</Italian>
-		<Spanish>[ICON_BULLET]%D1_Change%% al mantenimiento por número de ciudades en todas las ciudades</Spanish>
-		<Polish>[ICON_BULLET]%D1_Change%% do kosztów utrzymania za liczbę miast we wszystkich miastach</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ORBITAL</Tag>
@@ -12407,19 +11398,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<French>/Ville</French>
 		<Italian>/Città</Italian>
 		<Polish>/Miasto</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PHAGETERAPHY</Tag>
-		<English>Bacteriophage Therapy</English>
-		<French>Thérapie Bactériophage</French>
-		<German>Bakteriophage Therapie</German>
-		<Italian>Terapia batteriofaga</Italian>
-		<Spanish>
-			<Text>Terapia bacteriófaga</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Terapia Bakteriofagowa</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYEROPTION_AUTOMATED_AIR_CAN_DEFEND</Tag>
@@ -13274,15 +12252,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>[SPACE](Lub %s1_ImpName)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLOT_OVERGROWN</Tag>
-		<English>[COLOR_GREEN]Overgrown[COLOR_REVERT][SPACE]</English>
-		<French>[COLOR_GREEN]Envahi[COLOR_REVERT][SPACE]</French>
-		<German>[COLOR_GREEN]Überwuchert[COLOR_REVERT][SPACE]</German>
-		<Italian>[COLOR_GREEN]Ricoperto[COLOR_REVERT][SPACE]</Italian>
-		<Spanish>[COLOR_GREEN]Recubrimiento[COLOR_REVERT][SPACE]</Spanish>
-		<Polish>[COLOR_GREEN]Przerośnięty[COLOR_REVERT][SPACE]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PLOT_REQUIRES_OR</Tag>
 		<English>, or [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</English>
 		<French>, ou [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</French>
@@ -13383,14 +12352,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>Średnia Kultura</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROCESS_LESSER_CULTURE_STRATEGY</Tag>
-		<English>Lesser Culture converts one third of a city's hammers into culture.</English>
-		<French>convertit un tiers de la production en culture.</French>
-		<Italian>Cultura minore converte un terzo della produzione cittadina in cultura.</Italian>
-		<Spanish>Producir Cultura (menor) convierte un tercio de la producción de la ciudad en cultura.</Spanish>
-		<Polish>Konwertuje 1/3 młotków na kulturę.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROCESS_LESSER_RESEARCH</Tag>
 		<English>Lesser Research</English>
 		<French>Faible Recherche</French>
@@ -13402,13 +12363,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Italian>Ricerca minore</Italian>
 		<Spanish>Investigación (menor)</Spanish>
 		<Polish>Średnia Nauka</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROCESS_LESSER_RESEARCH_STRATEGY</Tag>
-		<English>Lesser Research converts one third of a city's hammers into research.</English>
-		<French>convertit un tiers de la production en recherche.</French>
-		<Spanish>Producir Investigación (menor) convierte un tercio de la producción de la ciudad en puntos de investigación.</Spanish>
-		<Polish>Konwertuje 1/3 młotków na naukę.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_LESSER_WEALTH</Tag>
@@ -13424,14 +12378,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>Średnie Bogactwo</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROCESS_LESSER_WEALTH_STRATEGY</Tag>
-		<English>Lesser Wealth converts one third of a city's hammers into gold.</English>
-		<French>convertit un tiers de la production en or.</French>
-		<Italian>Ricchezza minore converte un terzo della produzione cittadina in oro.</Italian>
-		<Spanish>Producir Riqueza (menor) convierte un tercio de la producción de la ciudad en oro.</Spanish>
-		<Polish>Konwertuje 1/3 młotków na złoto.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROCESS_MEAGER_CULTURE</Tag>
 		<English>Meager Culture</English>
 		<French>Maigre Culture</French>
@@ -13443,14 +12389,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Italian>Magra cultura</Italian>
 		<Spanish>Cultura (exigua)</Spanish>
 		<Polish>Mała Kultura</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROCESS_MEAGER_CULTURE_STRATEGY</Tag>
-		<English>Meager Culture converts one sixth of a city's hammers into culture.</English>
-		<French>convertit un sixième de la production en culture.</French>
-		<Italian>Magra cultura converte un sesto della produzione cittadina in cultura.</Italian>
-		<Spanish>Producir Cultura (exigua) convierte un sexto de la producción de la ciudad en cultura.</Spanish>
-		<Polish>Konwertuje 1/6 młotków na kulturę.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_MEAGER_RESEARCH</Tag>
@@ -13466,14 +12404,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>Mała Nauka</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROCESS_MEAGER_RESEARCH_STRATEGY</Tag>
-		<English>Meager Research converts one sixth of a city's hammers into research.</English>
-		<French>convertit un sixième de la production en recherche.</French>
-		<Italian>Magra ricerca converte un sesto della produzione cittadina in ricerca.</Italian>
-		<Spanish>Producir Investigación (exigua) convierte un sexto de la producción de la ciudad en puntos de investigación.</Spanish>
-		<Polish>Konwertuje 1/6 młotków na naukę.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROCESS_MEAGER_WEALTH</Tag>
 		<English>Meager Wealth</English>
 		<French>Maigre Richesse</French>
@@ -13485,15 +12415,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Italian>Magra ricchezza</Italian>
 		<Spanish>Riqueza (exigua)</Spanish>
 		<Polish>Małe Bogactwo</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROCESS_MEAGER_WEALTH_STRATEGY</Tag>
-		<English>Meager Wealth converts one sixth of a city's hammers into gold.</English>
-		<French>convertit un sixième de la production en or.</French>
-		<German>Wenn eine Stadt spärlichen Reichtum sammelt, wird 1/6 der [ICON_PRODUCTION] in [ICON_GOLD] umgewandelt.</German>
-		<Italian>Magra ricchezza converte un sesto della produzione cittadina in oro.</Italian>
-		<Spanish>Producir Riqueza (exigua) convierte un sexto de la producción de la ciudad en oro.</Spanish>
-		<Polish>Konwertuje 1/6 młotków na złoto.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_RESEARCH</Tag>
@@ -13811,14 +12732,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>[ICON_BULLET]Założyciel otrzymuje %s1_UnitName</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGIOUS</Tag>
-		<English>Religious</English>
-		<French>Religieuse</French>
-		<German>Religiös</German>
-		<Spanish>Religiosa</Spanish>
-		<Polish>Religia</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_RELIGIOUS_ANARCHY_CHANGE</Tag>
 		<English>[ICON_BULLET]%D1_Modifier%% Anarchy time from State Religion changes</English>
 		<French>[ICON_BULLET]%D1_Modifier%% temps d'Anarchie d'un changement de Religion d'état</French>
@@ -13863,195 +12776,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<French>Le bâtiment %s1 de la ville de %s2 a été désactivé, car il n'est opérationnel qu'en temps de guerre</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_REPLACES_AIRPORT</Tag>
-		<English>[NEWLINE][ICON_BULLET]Upgrades [LINK=BUILDING_AIRPORT]Airport[\LINK]</English>
-		<French>[NEWLINE][ICON_BULLET]Remplace l'[LINK=BUILDING_AIRPORT]Aéroport[\LINK]</French>
-		<German>[NEWLINE][ICON_BULLET]Ersetzt [LINK=BUILDING_AIRPORT]Flughafen[\LINK]</German>
-		<Italian>[NEWLINE][ICON_BULLET]Sostituisce [LINK=BUILDING_AIRPORT]Aeroporto[\LINK]</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Reemplaza [LINK=BUILDING_AIRPORT]Aeropuerto[\LINK]</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Zastępuje [LINK=BUILDING_AIRPORT]Lotnisko[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REPLACES_ANTI_MISSILE_BATTERIES</Tag>
-		<English>[NEWLINE][ICON_BULLET]Upgrades [LINK=BUILDING_ANTI_MISSILE_BATTERIES]Anti-Missile Batteries[\LINK]</English>
-		<French>[NEWLINE][ICON_BULLET]Remplace les[LINK=BUILDING_ANTI_MISSILE_BATTERIES]Batteries Anti-Missiles[\LINK]</French>
-		<German>[NEWLINE][ICON_BULLET]Ersetzt [LINK=BUILDING_ANTI_MISSILE_BATTERIES]Anti-Raketen-Geschütze[\LINK]</German>
-		<Italian>[NEWLINE][ICON_BULLET]Sostituisce [LINK=BUILDING_ANTI_MISSILE_BATTERIES]Batterie anti-missili[\LINK]</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Reemplaza [LINK=BUILDING_ANTI_MISSILE_BATTERIES]Baterías antimisiles[\LINK]</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Zastępuje [LINK=BUILDING_ANTI_MISSILE_BATTERIES]Obrona Przeciwrakietowa[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REPLACES_ARCOLOGY</Tag>
-		<English>[NEWLINE][ICON_BULLET]Upgrades [LINK=BUILDING_ARCOLOGY]Arcology[\LINK]</English>
-		<French>[NEWLINE][ICON_BULLET]Remplace l'[LINK=BUILDING_ARCOLOGY]Arcologie[\LINK]</French>
-		<German>[NEWLINE][ICON_BULLET]Ersetzt [LINK=BUILDING_ARCOLOGY]Arkologie[\LINK]</German>
-		<Italian>[NEWLINE][ICON_BULLET]Sostituisce [LINK=BUILDING_ARCOLOGY]Arcologia[\LINK]</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Reemplaza [LINK=BUILDING_ARCOLOGY]Arcología[\LINK]</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Zastępuje [LINK=BUILDING_ARCOLOGY]Arkologia[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REPLACES_ARCOLOGY_SHIELDING</Tag>
-		<English>[NEWLINE][ICON_BULLET]Upgrades [LINK=BUILDING_ARCOLOGY_SHIELDING]Arcology Shielding[\LINK]</English>
-		<French>[NEWLINE][ICON_BULLET]Remplace le [LINK=BUILDING_ARCOLOGY_SHIELDING]Bouclier d'Arcologie[\LINK]</French>
-		<German>[NEWLINE][ICON_BULLET]Ersetzt [LINK=BUILDING_ARCOLOGY_SHIELDING]Arkologie-Schild[\LINK]</German>
-		<Italian>[NEWLINE][ICON_BULLET]Sostituisce [LINK=BUILDING_ARCOLOGY_SHIELDING]Scudi dell'arcologia[\LINK]</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Reemplaza [LINK=BUILDING_ARCOLOGY_SHIELDING]Escudo arcológico[\LINK]</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Zastępuje [LINK=BUILDING_ARCOLOGY_SHIELDING]Pole Siłowe[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REPLACES_ARTESIAN_WELL</Tag>
-		<English>[NEWLINE][ICON_BULLET]Upgrades [LINK=BUILDING_ARTESIAN_WELL]Artesian Well[\LINK]</English>
-		<French>[NEWLINE][ICON_BULLET]Remplace le [LINK=BUILDING_ARTESIAN_WELL]Puits Artésien[\LINK]</French>
-		<German>[NEWLINE][ICON_BULLET]Ersetzt [LINK=BUILDING_ARTESIAN_WELL]Artesische Quelle[\LINK]</German>
-		<Italian>[NEWLINE][ICON_BULLET]Sostituisce [LINK=BUILDING_ARTESIAN_WELL]Pozzo artesiano[\LINK]</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Reemplaza [LINK=BUILDING_ARTESIAN_WELL]Pozo artesiano[\LINK]</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Ulepsz do [LINK=BUILDING_ARTESIAN_WELL]Studnia Artezyjska[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REPLACES_BAKERY</Tag>
-		<English>[NEWLINE][ICON_BULLET]Upgrades [LINK=BUILDING_BAKERY]Bakery[\LINK]</English>
-		<French>[NEWLINE][ICON_BULLET]Remplace la [LINK=BUILDING_BAKERY]Boulangerie[\LINK]</French>
-		<German>[NEWLINE][ICON_BULLET]Ersetzt [LINK=BUILDING_BAKERY]Bäckerei[\LINK]</German>
-		<Italian>[NEWLINE][ICON_BULLET]Sostituisce [LINK=BUILDING_BAKERY]Panetteria[\LINK]</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Reemplaza [LINK=BUILDING_BAKERY]Panadería[\LINK]</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Zastępuje [LINK=BUILDING_BAKERY]Piekarnia[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REPLACES_BARRACKS</Tag>
-		<English>[NEWLINE][ICON_BULLET]Upgrades [LINK=BUILDING_BARRACKS]Barracks[\LINK]</English>
-		<French>[NEWLINE][ICON_BULLET]Remplace la [LINK=BUILDING_BARRACKS]Caserne[\LINK]</French>
-		<German>[NEWLINE][ICON_BULLET]Ersetzt [LINK=BUILDING_BARRACKS]Kaserne[\LINK]</German>
-		<Italian>[NEWLINE][ICON_BULLET]Sostituisce [LINK=BUILDING_BARRACKS]Caserma[\LINK]</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Reemplaza [LINK=BUILDING_BARRACKS]Barracones[\LINK]</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Zastępuje [LINK=BUILDING_BARRACKS]Koszary[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REPLACES_BROADCAST_TOWER</Tag>
-		<English>[NEWLINE][ICON_BULLET]Upgrades [LINK=BUILDING_BROADCAST_TOWER]Broadcast Tower[\LINK]</English>
-		<French>[NEWLINE][ICON_BULLET]Remplace la [LINK=BUILDING_BROADCAST_TOWER]Tour de radiodiffusion[\LINK]</French>
-		<German>[NEWLINE][ICON_BULLET]Ersetzt [LINK=BUILDING_BROADCAST_TOWER]Funkturm[\LINK]</German>
-		<Italian>[NEWLINE][ICON_BULLET]Sostituisce [LINK=BUILDING_BROADCAST_TOWER]Ripetitore[\LINK]</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Reemplaza [LINK=BUILDING_BROADCAST_TOWER]Torre de radiodifusión[\LINK]</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Ulepsz do [LINK=BUILDING_BROADCAST_TOWER]Wieży Nadawczej[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REPLACES_COMMERCIAL_PORT</Tag>
-		<English>[NEWLINE][ICON_BULLET]Upgrades [LINK=BUILDING_COMMERCIAL_PORT]Commercial Port[\LINK]</English>
-		<French>[NEWLINE][ICON_BULLET]Remplace le [LINK=BUILDING_COMMERCIAL_PORT]Port Commercial[\LINK]</French>
-		<German>[NEWLINE][ICON_BULLET]Ersetzt [LINK=BUILDING_COMMERCIAL_PORT]Handelshafen[\LINK]</German>
-		<Italian>[NEWLINE][ICON_BULLET]Sostituisce [LINK=BUILDING_COMMERCIAL_PORT]Porto commerciale[\LINK]</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Reemplaza [LINK=BUILDING_COMMERCIAL_PORT]Puerto comercial[\LINK]</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Zastępuje [LINK=BUILDING_COMMERCIAL_PORT]Port Handlowy[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REPLACES_COMMUNICATION_TOWER</Tag>
-		<English>[NEWLINE][ICON_BULLET]Upgrades [LINK=BUILDING_COMMUNICATION_TOWER]Communication Tower[\LINK]</English>
-		<French>[NEWLINE][ICON_BULLET]Remplace la [LINK=BUILDING_COMMUNICATION_TOWER]Tour de Communication[\LINK]</French>
-		<German>[NEWLINE][ICON_BULLET]Ersetzt [LINK=BUILDING_COMMUNICATION_TOWER]Sendeturm[\LINK]</German>
-		<Italian>[NEWLINE][ICON_BULLET]Sostituisce [LINK=BUILDING_COMMUNICATION_TOWER]Torre di comunicazioni[\LINK]</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Reemplaza [LINK=BUILDING_COMMUNICATION_TOWER]Torre de comunicaciones[\LINK]</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Ulepsz do [LINK=BUILDING_COMMUNICATION_TOWER]Wieży Komunikacyjnej[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REPLACES_DRYDOCK</Tag>
-		<English>[NEWLINE][ICON_BULLET]Upgrades [LINK=BUILDING_DRYDOCK]Drydock[\LINK]</English>
-		<French>[NEWLINE][ICON_BULLET]Remplace la[LINK=BUILDING_DRYDOCK]Cale Sèche[\LINK]</French>
-		<German>[NEWLINE][ICON_BULLET]Ersetzt [LINK=BUILDING_DRYDOCK]Trockendock[\LINK]</German>
-		<Italian>[NEWLINE][ICON_BULLET]Sostituisce [LINK=BUILDING_DRYDOCK]Bacino di carenaggio[\LINK]</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Reemplaza [LINK=BUILDING_DRYDOCK]Astilleros[\LINK]</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Zastępuje [LINK=BUILDING_DRYDOCK]Suchy Dok[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REPLACES_FORGE</Tag>
-		<English>[NEWLINE][ICON_BULLET]Upgrades [LINK=BUILDING_FORGE]Forge[\LINK]</English>
-		<French>[NEWLINE][ICON_BULLET]Remplace la [LINK=BUILDING_FORGE]Forge[\LINK]</French>
-		<German>[NEWLINE][ICON_BULLET]Ersetzt [LINK=BUILDING_FORGE]Schmiede[\LINK]</German>
-		<Italian>[NEWLINE][ICON_BULLET]Sostituisce [LINK=BUILDING_FORGE]Forgia[\LINK]</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Reemplaza [LINK=BUILDING_FORGE]Fragua[\LINK]</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Zastępuje [LINK=BUILDING_FORGE]Kuźnia[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REPLACES_GRANARY</Tag>
-		<English>[NEWLINE][ICON_BULLET]Upgrades [LINK=BUILDING_GRANARY]Granary[\LINK]</English>
-		<French>[NEWLINE][ICON_BULLET]Remplace le [LINK=BUILDING_GRANARY]Grenier[\LINK]</French>
-		<German>[NEWLINE][ICON_BULLET]Ersetzt [LINK=BUILDING_GRANARY]Kornspeicher[\LINK]</German>
-		<Italian>[NEWLINE][ICON_BULLET]Sostituisce [LINK=BUILDING_GRANARY]Granaio[\LINK]</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Reemplaza [LINK=BUILDING_GRANARY]Granero[\LINK]</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Zastępuje [LINK=BUILDING_GRANARY]Spichlerz[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REPLACES_HARBOR</Tag>
-		<English>[NEWLINE][ICON_BULLET]Upgrades [LINK=BUILDING_HARBOR]Harbor[\LINK]</English>
-		<French>[NEWLINE][ICON_BULLET]Remplace le [LINK=BUILDING_HARBOR]Port[\LINK]</French>
-		<German>[NEWLINE][ICON_BULLET]Ersetzt [LINK=BUILDING_HARBOR]Hafen[\LINK]</German>
-		<Italian>[NEWLINE][ICON_BULLET]Sostituisce [LINK=BUILDING_HARBOR]Porto marittimo[\LINK]</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Reemplaza [LINK=BUILDING_HARBOR]Muelle[\LINK]</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Zastępuje [LINK=BUILDING_HARBOR]Przystań[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REPLACES_MILITARY_AIRBASE</Tag>
-		<English>[NEWLINE][ICON_BULLET]Upgrades [LINK=BUILDING_MILITARY_AIRBASE]Military Airbase[\LINK]</English>
-		<French>[NEWLINE][ICON_BULLET]Remplace la [LINK=BUILDING_MILITARY_AIRBASE]Base Militaire Aérienne[\LINK]</French>
-		<German>[NEWLINE][ICON_BULLET]Ersetzt [LINK=BUILDING_MILITARY_AIRBASE]Luftwaffenstützpunkt[\LINK]</German>
-		<Italian>[NEWLINE][ICON_BULLET]Sostituisce [LINK=BUILDING_MILITARY_AIRBASE]Base aerea militare[\LINK]</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Reemplaza [LINK=BUILDING_MILITARY_AIRBASE]Base militar aérea[\LINK]</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Ulepsz do [LINK=BUILDING_MILITARY_AIRBASE]Wojskowej Bazy Lotniczej[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REPLACES_PORT</Tag>
-		<English>[NEWLINE][ICON_BULLET]Upgrades [LINK=BUILDING_PORT]Port[\LINK]</English>
-		<French>[NEWLINE][ICON_BULLET]Remplace le[LINK=BUILDING_PORT]Grand Port[\LINK]</French>
-		<German>[NEWLINE][ICON_BULLET]Ersetzt [LINK=BUILDING_PORT]Seehafen[\LINK]</German>
-		<Italian>[NEWLINE][ICON_BULLET]Sostituisce [LINK=BUILDING_PORT]Porto[\LINK]</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Reemplaza [LINK=BUILDING_PORT]Puerto[\LINK]</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Zastępuje [LINK=BUILDING_PORT]Port[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REPLACES_RIVER_PORT</Tag>
-		<English>[NEWLINE][ICON_BULLET]Upgrades [LINK=BUILDING_RIVER_PORT]River Port[\LINK]</English>
-		<French>[NEWLINE][ICON_BULLET]Remplace le [LINK=BUILDING_RIVER_PORT]Port de Rivière[\LINK]</French>
-		<German>[NEWLINE][ICON_BULLET]Ersetzt [LINK=BUILDING_RIVER_PORT]Flusshafen[\LINK]</German>
-		<Italian>[NEWLINE][ICON_BULLET]Sostituisce [LINK=BUILDING_RIVER_PORT]Porto fluviale[\LINK]</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Reemplaza [LINK=BUILDING_RIVER_PORT]Puerto fluvial[\LINK]</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Zastępuje [LINK=BUILDING_RIVER_PORT]Port Rzeczny[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REPLACES_SHIPYARD</Tag>
-		<English>[NEWLINE][ICON_BULLET]Upgrades [LINK=BUILDING_SHIPYARD]Shipyard[\LINK]</English>
-		<French>[NEWLINE][ICON_BULLET]Remplace le [LINK=BUILDING_SHIPYARD]Chantier Naval[\LINK]</French>
-		<German>[NEWLINE][ICON_BULLET]Ersetzt [LINK=BUILDING_SHIPYARD]Schiffswerft[\LINK]</German>
-		<Italian>[NEWLINE][ICON_BULLET]Sostituisce [LINK=BUILDING_SHIPYARD]Cantiere navale[\LINK]</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Reemplaza [LINK=BUILDING_SHIPYARD]Muelle de construcción[\LINK]</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Zastępuje [LINK=BUILDING_SHIPYARD]Stocznia[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REPLACES_STABLE</Tag>
-		<English>[NEWLINE][ICON_BULLET]Upgrades [LINK=BUILDING_STABLE]Stable[\LINK]</English>
-		<French>[NEWLINE][ICON_BULLET]Remplace les [LINK=BUILDING_STABLE]Ecuries[\LINK]</French>
-		<German>[NEWLINE][ICON_BULLET]Ersetzt [LINK=BUILDING_STABLE]Stallungen[\LINK]</German>
-		<Italian>[NEWLINE][ICON_BULLET]Sostituisce [LINK=BUILDING_STABLE]Stalla[\LINK]</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Reemplaza [LINK=BUILDING_STABLE]Establo[\LINK]</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Zastępuje [LINK=BUILDING_STABLE]Stajnia[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REPLACES_TOLL_HOUSE</Tag>
-		<English>[NEWLINE][ICON_BULLET]Upgrades [LINK=BUILDING_TOLL_HOUSE]Toll House[\LINK]</English>
-		<French>[NEWLINE][ICON_BULLET]Remplace la [LINK=BUILDING_TOLL_HOUSE]Maison de Douane[\LINK]</French>
-		<German>[NEWLINE][ICON_BULLET]Ersetzt [LINK=BUILDING_TOLL_HOUSE]Zollhaus[\LINK]</German>
-		<Italian>[NEWLINE][ICON_BULLET]Sostituisce [LINK=BUILDING_TOLL_HOUSE]Dogana[\LINK]</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Reemplaza [LINK=BUILDING_TOLL_HOUSE]Oficina de peaje[\LINK]</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Zastępuje [LINK=BUILDING_TOLL_HOUSE]Komora Celna[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REPLACES_WALLS</Tag>
-		<English>[NEWLINE][ICON_BULLET]Upgrades [LINK=BUILDING_WALLS]Walls[\LINK]</English>
-		<French>[NEWLINE][ICON_BULLET]Remplace les [LINK=BUILDING_WALLS]Remparts[\LINK]</French>
-		<German>[NEWLINE][ICON_BULLET]Ersetzt [LINK=BUILDING_WALLS]Stadtmauern[\LINK]</German>
-		<Italian>[NEWLINE][ICON_BULLET]Sostituisce [LINK=BUILDING_WALLS]Mura[\LINK]</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Reemplaza [LINK=BUILDING_WALLS]Murallas[\LINK]</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Zastępuje [LINK=BUILDING_WALLS]Mury[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_REQUIRES</Tag>
 		<English>[ICON_BULLET][COLOR_WARNING_TEXT]Requires[SPACE]</English>
 		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Requiert:[SPACE]</French>
@@ -14059,15 +12783,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Richiede[SPACE]</Italian>
 		<Spanish>[ICON_BULLET][COLOR_WARNING_TEXT]Requiere[SPACE]</Spanish>
 		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]Wymaga[SPACE]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REQUIRES_HILLS_NEAR_CITY</Tag>
-		<English>[NEWLINE][ICON_BULLET]Requires hills within city radius</English>
-		<French>[NEWLINE][ICON_BULLET]Requiert des [COLOR_WARNING_TEXT]collines[COLOR_REVERT] dans le périmètre de la ville</French>
-		<German>[NEWLINE][ICON_BULLET]Erfordert Hügel im Stadtradius</German>
-		<Italian>[NEWLINE][ICON_BULLET]Richiede colline nel raggio d'azione della città</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Requiere Colinas en el radio de la ciudad</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Wymaga wzgórz w zasięgu miasta</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REQUIRES_IN_CITY_VICINITY</Tag>
@@ -14314,15 +13029,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<French>Ligne de Train sous vide</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SACK_CITY</Tag>
-		<English>Plunder the City!!!</English>
-		<French>Piller la Ville!!!</French>
-		<German>Plündert die Stadt!!!</German>
-		<Italian>Saccheggia la città!!!</Italian>
-		<Spanish>¡Saquear la ciudad!</Spanish>
-		<Polish>Grabież Miasta!!!</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SAFARI_STRATEGY</Tag>
 		<English>Build this corporation in order to get hunting bonuses.</English>
 		<French>Construisez cette corporation afin d'obtenir des bonus de chasse.</French>
@@ -14484,20 +13190,8 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>[ICON_BULLET]Lewi Strzelcy (Blisko): %s1_Unit% dodaje +%d2_Amount Siły</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SETTLE_NEW_CITY_NAME</Tag>
-		<English>City Name:</English>
-		<French>Nom de la ville:</French>
-		<German>Name der Stadt:</German>
-		<Italian>Nome della città:</Italian>
-		<Spanish>Nombre de la ciudad:</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_SET_WARNING_COLOR</Tag>
 		<English>[COLOR_WARNING_TEXT]</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SEVOPEDIA_TITLE</Tag>
-		<English>SEVOPEDIA</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SHARED_CIVIC_TRADE_MOD</Tag>
@@ -15984,40 +14678,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>Wielki Inżynier</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_GREAT_FARMER</Tag>
-		<English>Great Farmer</English>
-		<French>
-			<Text>Fermier Illustre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Großer Bauer</German>
-		<Italian>Grande agricoltore</Italian>
-		<Spanish>
-			<Text>Gran granjero:Grandes granjeros</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Wielki Farmer</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_GREAT_FISHER</Tag>
-		<English>Great Fisher</English>
-		<French>
-			<Text>Pêcheur Illustre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Großer Fischer</German>
-		<Italian>Grande pescatore</Italian>
-		<Spanish>
-			<Text>Gran pescador:Grandes pescadores</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Wielki Rybak</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_GREAT_HUNTER</Tag>
 		<English>Great Hunter</English>
 		<French>Chasseur Illustre</French>
@@ -16173,14 +14833,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Wielki Szpieg</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_HAPPY</Tag>
-		<English>[ICON_BULLET]%D1_Change[ICON_HAPPY]</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_HEALTHY</Tag>
-		<English>[ICON_BULLET]%D1_Change[ICON_HEALTHY]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_INSIDIOUSNESS</Tag>
@@ -16350,27 +15002,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>Zwiększa dochód i XP nowych jednostek piechoty trenowanych w tym mieście.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_SLAVE</Tag>
-		<English>Slave</English>
-		<French>
-			<Text>Esclave</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Sklave:Sklaven:Sklaven:Sklaven:Sklaven:Sklaven:Sklaven:Sklaven</Text>
-			<Gender>male:male:male:male:male:male:male:male</Gender>
-			<Plural>0:0:0:0:1:1:1:1</Plural>
-		</German>
-		<Italian>Schiavo</Italian>
-		<Spanish>
-			<Text>Esclavo:Esclavos</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Niewolnik</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_SLAVES</Tag>
 		<English>Slaves</English>
 		<French>
@@ -16424,14 +15055,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>[ICON_BULLET]%D1_Change%F2_HealthOrUnhealth z technologii: %s3_Tech.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_UNHAPPY</Tag>
-		<English>[ICON_BULLET]%D1_Change[ICON_UNHAPPY]</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SPECIALIST_UNHEALTHY</Tag>
-		<English>[ICON_BULLET]%D1_Change[ICON_UNHEALTHY]</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_UNIT_COMBAT_EXPERIENCE</Tag>
 		<English>[ICON_BULLET]%D1_Change Experience to %s2_UnitCombat type units trained in this city.</English>
 		<French>[ICON_BULLET]%D1_Change Experience pour les unités de type: %s2_UnitCombat entraînées dans cette Ville.</French>
@@ -16445,19 +15068,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<French>[ICON_BULLET]%D1_Change XP pour les %s2_UnitCombat</French>
 		<Italian>[ICON_BULLET]%D1_Change XP a %s2_UnitCombat units</Italian>
 		<Polish>[ICON_BULLET]%D1_Change Doświadczenia do: %s2_UnitCombat</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SPECIALUNIT_ANIMAL</Tag>
-		<English>Animals</English>
-		<French>Animaux</French>
-		<German>Tiere</German>
-		<Italian>Animali</Italian>
-		<Spanish>
-			<Text>Animales</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-		<Polish>Zwierzęta</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALUNIT_CAPTIVE</Tag>
@@ -16486,22 +15096,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>Myśliwiec</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SPECIALUNIT_MARINE</Tag>
-		<English>Marine</English>
-		<French>
-			<Text>Infanterie Marine</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>Fanti della marina</Italian>
-		<Spanish>
-			<Text>Infantería de marina</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Jednostki Morskie</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_SPECIALUNIT_MISSILE</Tag>
 		<English>Missiles</English>
 		<French>
@@ -16525,27 +15119,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Rakiety</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SPECIALUNIT_NUKE</Tag>
-		<English>Nukes</English>
-		<French>
-			<Text>Armes nucléaires</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Nuklearwaffen</German>
-		<Italian>
-			<Text>Bomba nucleare:Bombe nucleari</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Arma nuclear:Armas nucleares</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Broń Jądrowa</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALUNIT_PEOPLE</Tag>
@@ -16607,60 +15180,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<English>VTOL(Vertical Takeoff and Landing)</English>
 		<French>ADAV(aéronef à décollage et atterrissage verticaux)</French>
 		<Polish>VTOL(Pionowe lądowanie i start)</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SPLASH_BUTTON_NOTHANKS</Tag>
-		<English>No Thanks</English>
-		<French>Non Merci</French>
-		<German>Nein danke!</German>
-		<Italian>No grazie</Italian>
-		<Spanish>No, gracias</Spanish>
-		<Polish>Nie dziękuje</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SPLASH_BUTTON_REMIND</Tag>
-		<English>Remind Me Later</English>
-		<French>Me le rappeler plus tard</French>
-		<German>Später erinnern</German>
-		<Italian>Ricordamelo più tardi</Italian>
-		<Spanish>Recordar más tarde</Spanish>
-		<Polish>Przypomnij Później</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SPLASH_BUTTON_SHOW</Tag>
-		<English>Show Options</English>
-		<French>Voir les options</French>
-		<German>Optionen anzeigen</German>
-		<Italian>Mostra opzioni</Italian>
-		<Spanish>Mostrar opciones</Spanish>
-		<Polish>Pokaż Opcje</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SPLASH_TEXT1</Tag>
-		<English>C2C is a totally customizable mod, that allows each user to make the game what they want it to be.</English>
-		<French>C2C est un mod personnalisable, permettant à chacun de choisir ses préférences de jeu.</French>
-		<German>C2C ist ein vollständig anpassbares Mod, das es jedem Nutzer erlaubt, das Spiel genau so zu erleben, wie er es selbst möchte.</German>
-		<Italian>C2C è un mod completamente personalizzabile, che permette ad ogni utente di rendere il gioco come lo vogliono.</Italian>
-		<Spanish>C2C es un mod completamente personalizable, que permite a cada usuario crear la partida tal como la desee.</Spanish>
-		<Polish>C2C: jest totalnie modyfikowalnym modem, pozwala każdemu dostosować go do swoich potrzeb.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SPLASH_TEXT2</Tag>
-		<English>It is recommended that first time users familiarize themselves with all that A New Dawn has to offer.</English>
-		<French>Nous vous conseillons de prendre un peu de temps pour découvrir toutes les options possibles.</French>
-		<German>Neuen Nutzern wird empfohlen, sich zunächst mit den vielen Einstellungsmöglichkeiten, die "A New Dawn" bietet, vertraut zu machen.</German>
-		<Italian>È importante che gli utenti alle prime armi familiarizzino con tutto ciò che A New Dawn ha da offrire.</Italian>
-		<Spanish>Se recomienda a los usuarios novatos familiarizarse con todas las nuevas opciones que Caveman2Cosmos ofrece.</Spanish>
-		<Polish>Polecane jest nowym graczom na zapoznanie się z możliwościami C2C.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SPLASH_TITLE</Tag>
-		<English>Welcome to C2C</English>
-		<French>Bienvenue dans le Mod C2C</French>
-		<German>Willkommen bei C2C</German>
-		<Italian>Benvenuto a C2C</Italian>
-		<Spanish>Bienvenido a C2C</Spanish>
-		<Polish>Witaj w C2C</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPY_ESCAPED</Tag>
@@ -16735,21 +15254,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>%s1_civ_adjective %s2_unit operujący nieopodal %s4_city został złapany przez kontrwywiad %s3_civ_adjective!</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_STARSHIP_LAUNCH</Tag>
-		<English>%s1 has launched a starship!</English>
-		<French>%s1 a lancé un Vaisseau Spatial!</French>
-		<German>%s1 hat ein Raumschiff gestartet!</German>
-		<Spanish>¡%s1 ha lanzado una nave espacial!</Spanish>
-		<Polish>%s1 wystrzelił statek kosmiczny!</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_STAR_PROMOTION</Tag>
-		<English>[COLOR_GREEN]%s1 has earned %s2 Promotion![COLOR_REVERT]</English>
-		<French>[COLOR_GREEN]%s1 a reçut la promotion %s2![COLOR_REVERT]</French>
-		<Spanish>[COLOR_GREEN]¡[NUM1:Tu:Tu:Tus:Tus] %s1 [NUM1:ha:ha:han:han] obtenido el ascenso %s2![COLOR_REVERT]</Spanish>
-		<Polish>[COLOR_GREEN]%s1 zdobył nową promocję: %s2![COLOR_REVERT]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_STATE_RELIGION_FREE_EXPERIENCE</Tag>
 		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 from State Religion[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 de la Religion d'Etat[COLOR_REVERT]</French>
@@ -16767,25 +15271,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>[NEWLINE][ICON_BULLET]Religia Państwowa [ICON_RELIGION] bez Świętego Miasta wzmaga buntowniczość</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_STATE_RELIGION_WITHOUT_HOLY_CITY_PEDIA</Tag>
-		<English>[NEWLINE][ICON_BULLET]State [ICON_RELIGION] without Holy City increases rebelliousness</English>
-		<French>[NEWLINE][ICON_BULLET] [ICON_RELIGION] d'Etat sans Ville Sainte augmente la rebellion</French>
-		<German>[NEWLINE][ICON_BULLET]Staats-[ICON_RELIGION] ohne Heilige Stadt erhöht Aufsässigkeit</German>
-		<Italian>[NEWLINE][ICON_BULLET][ICON_RELIGION] di Stato senza Città Santa aumenta il sentimento rivoluzionario</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Una [ICON_RELIGION] oficial sin la Ciudad Santa aumenta la rebeldía</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Religia Państwowa [ICON_RELIGION] bez Świętego Miasta wzmaga buntowniczość</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_STATE_RELIGION_WITH_HOLY_CITY</Tag>
-		<English>[NEWLINE][ICON_BULLET]State [ICON_RELIGION] with Holy City decreases rebelliousness</English>
-		<French>[NEWLINE][ICON_BULLET] [ICON_RELIGION] d'Etat avec Ville Sainte diminue la rebellion</French>
-		<German>[NEWLINE][ICON_BULLET]Staats-[ICON_RELIGION] mit Heiliger Stadt reduziert Aufsässigkeit</German>
-		<Italian>[NEWLINE][ICON_BULLET][ICON_RELIGION] di Stato con la Città Santa diminuisce il sentimento rivoluzionario</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Una [ICON_RELIGION] oficial con la Ciudad Santa reduce la rebeldía</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Religia Państwowa [ICON_RELIGION] ze Świętym Miastem obniża buntowniczość</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_STATE_RELIGION_WITH_HOLY_CITY_PEDIA</Tag>
 		<English>[NEWLINE][ICON_BULLET]State [ICON_RELIGION] with Holy City decreases rebelliousness</English>
 		<French>[NEWLINE][ICON_BULLET] [ICON_RELIGION] d'Etat avec Ville Sainte diminue la rebellion</French>
 		<German>[NEWLINE][ICON_BULLET]Staats-[ICON_RELIGION] mit Heiliger Stadt reduziert Aufsässigkeit</German>
@@ -16899,73 +15385,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>Warstwa strategiczna</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SYSTEM_ALL</Tag>
-		<English>all</English>
-		<French>
-			<Text>tout</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Alle</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>tutto</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>todos:todas</Text>
-			<Gender>Male:Female</Gender>
-			<Plural>1:1</Plural>
-		</Spanish>
-		<Polish>Wszystkich</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SYSTEM_TEAM</Tag>
-		<English>team</English>
-		<French>
-			<Text>équipe</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Team</German>
-		<Italian>
-			<Text>squadra</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>equipo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Drużyna</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SYSTEM_YOU</Tag>
-		<English>you</English>
-		<French>
-			<Text>vous</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Ihr</German>
-		<Italian>
-			<Text>tu</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>tú:vosotros</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Ty</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_TECH_ALLOWS_IMPROVEMENT_UPGRADE</Tag>
 		<English>[ICON_BULLET]Allows %s1 to upgrade to %s2.</English>
 		<French>[ICON_BULLET]Permet à %s1 d'être amélioré en %s2.</French>
@@ -17044,34 +15463,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<English>Research Buddhism to found a Religion</English>
 		<French>Recherchez Bouddhisme pour fonder une religion</French>
 		<Spanish>Investiga el Budismo para fundar una religión.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_BUILDING_SPECIALIST_TECH_HAPPINESS</Tag>
-		<English>[ICON_BULLET]All Specialists gain %D1_Change%F2_HappOrUnhapp from %s3_Building where built.</English>
-		<French>[ICON_BULLET]Tous les Spécialistes gagnent %D1_Change%F2_HappOrUnhapp lorsque %s3_Building est construit.</French>
-		<Italian>[ICON_BULLET]Tutti gli specialisti ottengono %D1_Change%F2_HappOrUnhapp da %s3_Building dove viene costruito.</Italian>
-		<Polish>[ICON_BULLET]Wszyscy specjaliści dają: %D1_Change%F2_HappOrUnhapp z wybudowanym: %s3_Building.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_BUILDING_SPECIALIST_TECH_HAPPINESS_TYPE</Tag>
-		<English>[ICON_BULLET]%s1_Specialist gain %D2_Change%F3_HappOrUnhapp from %s4_Building where built.</English>
-		<French>[ICON_BULLET]%s1_Specialist gagne %D2_Change%F3_HappOrUnhapp lorsque %s4_Building est construit.</French>
-		<Italian>[ICON_BULLET]%s1_Specialist ottiene %D2_Change%F3_HappOrUnhapp da %s4_Building dove viene costruito.</Italian>
-		<Polish>[ICON_BULLET]%s1_Specialist daje: %D2_Change%F3_HappOrUnhapp z wybudowanym %s4_Building.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_BUILDING_SPECIALIST_TECH_HEALTH</Tag>
-		<English>[ICON_BULLET]All Specialists gain %D1_Change%F2_HealthOrUnhealth from %s3_Building where built.</English>
-		<French>[ICON_BULLET]Tous les Spécialistes gagnent %D1_Change%F2_HealthOrUnhealth lorsque %s3_Building est construit.</French>
-		<Italian>[ICON_BULLET]Tutti gli specialisti ottengono %D1_Change%F2_HealthOrUnhealth da %s3_Building dove viene costruito.</Italian>
-		<Polish>[ICON_BULLET]Wszyscy specjaliści dają: %D1_Change%F2_HealthOrUnhealth z wybudowanym: %s3_Building.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_BUILDING_SPECIALIST_TECH_HEALTH_TYPE</Tag>
-		<English>[ICON_BULLET]%s1_Specialist gain %D2_Change%F3_HealthOrUnhealth from %s4_Building where built.</English>
-		<French>[ICON_BULLET]%s1_Specialist gagne %D2_Change%F3_HealthOrUnhealth lorsque %s4_Building est construit.</French>
-		<Italian>[ICON_BULLET]%s1_Specialist ottiene %D2_Change%F3_HealthOrUnhealth da %s4_Building dove viene costruito.</Italian>
-		<Polish>[ICON_BULLET]%s1_Specialist daje: %D2_Change%F3_HealthOrUnhealth z wybudowanym: %s4_Building.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CHRISTIANITY</Tag>
@@ -17830,15 +16221,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>[ICON_BULLET]%d1_Change wydajność pracy</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_PAPAL_PIKEMAN_PEDIA</Tag>
-		<English>With the failure of the Western Roman Empire, the city of Rome was nominally under the protection of Byzantium. However, the Byzantines did little to support Rome, and the Pope had to field his own army to defend the Holy City.[PARAGRAPH:1]Papal Pikemen are heavy spearmen. They are loosely based upon the Swiss Guard mercenary units that have defended the Vatican for the past five centuries.</English>
-		<French>Avec la Chute de l'Empire romain d'Occident, la ville de Rome était sous la protection de Byzance. Cependant, les Byzantins n'aidèrent pas beaucoup Rome. Le Pape fut donc obligé de réunir sa propre armée pour défendre la ville sainte.[PARAGRAPH:1]Les piquiers pontificaux sont des lanciers lourds. lls sont plus ou moins basés sur les Gardes Suisses, des mercenaires qui ont défendu le Vatican durant les cinq derniers siècles.</French>
-		<German>Mit dem Scheitern des Römischen Reiches stand die Stadt Rom theoretisch unter dem Schutze Konstantinopels. Die Byzantiner taten jedoch recht wenig, um Rom zu unterstützen, und der Papst sah sich gezwungen, eine eigene Armee aufzubauen, um die Heilige Stadt zu verteidigen.[PARAGRAPH:1]Päpstliche Pikeniere sind schwere Speerkämpfer. Sie basieren lose auf der Schweizer Garde, die den Vatikan in den letzten fünf Jahrhunderten verteidigt hat.</German>
-		<Italian>Con la caduta dell'Impero Romano d'Occidente, la città di Roma era nominalmente sotto la protezione di Bisanzio. I Bizantini però fecero ben poco per supportare Roma e il papa dovette creare un proprio esercito per difendere la Città Santa.[PARAGRAPH:1]I picchieri papali sono lancieri pesanti. Si basano indicativamente sulle unità mercenarie della Guardia Svizzera che hanno difeso il Vaticano negli ultimi cinque secoli.</Italian>
-		<Spanish>Con la desaparición del Imperio Romano de occidente, la ciudad de Roma quedó nominalmente bajo la protección de Bizancio. Sin embargo, los bizantinos no hicieron gran cosa para proteger Roma, y los Papas tuvieron que reclutar sus propios ejércitos para defender la Ciudad Santa.[PARAGRAPH:1]Los piqueros papales son lanceros pesados. Estas unidades se basan en los mercenarios de la Guardia Suiza que llevan cinco siglos defendiendo la ciudad del Vaticano.</Spanish>
-		<Polish>Uzbrojenie ochronne w postaci pancerzy, półpancerzy i hełmów posiadał jedynie pierwszy szereg i zewnętrzne szeregi boczne. Broń pikinierów stanowiły długie piki, kusze i broń palna, co w połączeniu ze schodkowym ustawieniem kolumn (batalii), składających się każda z kilku szeregów pikinierów (przeważnie tzw. trzy batalie), dawało ich formacjom dużą manewrowość i przynosiło łatwe zwycięstwa nad rycerstwem feudalnym. Natarcie prowadzono kierując w przeciwnika trzymane na wysokości głowy piki czterech pierwszych szeregów batalii, następne szeregi trzymały piki w pionie i w miarę wbijania się w szeregi wroga opuszczały je w jego kierunku. O szeregi pikinierów rozbijały się szarże konne, a ich szyków w obronie nie sposób było pokonać.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_TILE_INFLUENCE</Tag>
 		<English>Tile Influence</English>
 		<French>Influence</French>
@@ -18211,27 +16593,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>Handel korporacjami</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRADE_CEASE_FIRE_STRING</Tag>
-		<English>Cease Fire</English>
-		<French>
-			<Text>Cessez-le-feu</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Waffenstillstand</German>
-		<Italian>
-			<Text>Tregua</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Alto el fuego</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Rozejm</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_TRADE_CITIES</Tag>
 		<English>Cities</English>
 		<French>
@@ -18255,31 +16616,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 			<Plural>1</Plural>
 		</Spanish>
 		<Polish>Miasta</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRADE_CIVICS</Tag>
-		<English>Civics</English>
-		<French>
-			<Text>Doctrine</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Gesellschaftsformen</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Forme di governo</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Principios</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-		<Polish>Doktryny</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRADE_CONTACT</Tag>
@@ -18466,31 +16802,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>Deklaruj głos</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRADE_RELIGIONS</Tag>
-		<English>Religions</English>
-		<French>
-			<Text>Religions</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Religionen</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Religioni</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Religiones</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-		<Polish>Religie</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_TRADE_RESOURCES</Tag>
 		<English>Resources</English>
 		<French>
@@ -18561,56 +16872,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>Zagłosował na %s1 (%s2)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRADE_TECH</Tag>
-		<English>Technology</English>
-		<French>
-			<Text>Technologie</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Technologie</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Tecnologia</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Tecnología</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Technologie</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRADE_TITLE_GOLD</Tag>
-		<English>Gold</English>
-		<French>
-			<Text>Or</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Gold</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Oro</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Oro</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Złoto</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_TRADE_VASSAL_STRING</Tag>
 		<English>Vassal State</English>
 		<French>
@@ -18677,15 +16938,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Mapy Świata</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRUE</Tag>
-		<English>True</English>
-		<French>Vrai</French>
-		<German>Ja</German>
-		<Italian>Vero</Italian>
-		<Spanish>Sí</Spanish>
-		<Polish>PRAWDA</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TURNTIMER_FAST</Tag>
@@ -20368,47 +18620,9 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>Wozy Zaopatrzeniowe</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUPPLY_TRAIN_PEDIA</Tag>
-		<English>[BOLD]Strategy:[\BOLD][PARAGRAPH:1]In this scenario, units cannot heal at all when in enemy territory, unless accompanied by Supply Trains. Always be sure to bring along one or more trains when invading enemy lands. Note that Supply Trains are totally unarmed, so it's a good idea to provide a heavy military escort when sending one into dangerous territory.[NEWLINE][NEWLINE][BOLD]Background:[\BOLD][PARAGRAPH:1]As Napoleon Bonaparte once noted, an army fights on its stomach. From the very earliest days of mass warfare, armies have always been accompanied by "supply trains," carrying food, medicine, spare weapons, and all of the other baggage that an army in the field needs to survive.[PARAGRAPH:1]The size and quality of an army's Supply Train shaped a campaign as much - or more - as did the size and quality of the army's soldiers. A huge Supply Train could support an army in the field for long periods of time, but it would also slow the army down. Further, Supply Trains needed a lot of protection, and the deeper an army advanced, the more vulnerable its train became.</English>
-		<French>
-			<Text>[BOLD]Stratégie:[\BOLD][PARAGRAPH:1]Dans ce scénario, les unités ne peuvent pas du tout se soigner en territoire ennemi, sauf si elles sont accompagnées par des convois d'approvisionnement. Veillez à toujours emmener au moins un convoi d'approvisionnement quand vous envahissez des territoires ennemis. Notez que les convois d'approvisionnement ne sont pas du tout armés et qu'il est donc préférable de leur fournir une bonne escorte quand vous les envoyez dans une région dangereuse.[NEWLINE][NEWLINE][BOLD]Histoire:[\BOLD][PARAGRAPH:1]Comme l'a un jour dit Napoléon Bonaparte, une armée doit manger pour se battre. Depuis le début des grandes guerres, les armées sont accompagnées par des "convois d'approvisionnement", transportant de la nourriture, des médicaments, des armes de rechange et tout ce dont une armée a besoin pour survivre sur le terrain.[PARAGRAPH:1]La taille et la qualité du convoi d'approvisionnement d'une armée avaient autant d'importance? si ce n'est plus? que le nombre ou la qualité de ses soldats. Un grand convoi d'approvisionnement pouvait soutenir une armée sur le terrain pendant longtemps, mais il la ralentissait aussi. De plus, les convois d'approvisionnement devaient être bien protégés et ils devenaient de plus en plus vulnérables à mesure que l'armée progressait.</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>[BOLD]Strategie:[\BOLD][PARAGRAPH:1]In diesem Szenario genesen Einheiten nicht, wenn sie sich auf feindlichem Gebiet aufhalten, sofern sie nicht von Versorgungszügen begleitet werden. Stellen Sie sicher, dass Sie immer mindestens einen Zug bereitstellen, wenn Sie in feindliche Ländereien eindringen. Denken Sie auch stets daran, dass Versorgungszüge völlig unbewaffnet sind und immer von einer schweren Militäreskorte begleitet werden sollten, wenn sie in gefährliches Gelände entsandt werden.[NEWLINE][NEWLINE][BOLD]Hintergrund:[\BOLD][PARAGRAPH:1]Wie Napoleon Bonaparte einst anmerkte, kämpft eine Armee nicht mit leeren Mägen. Seit Anbeginn der Massenkriegsführung wurden Armeen stets von Versorgungszügen begleitet, die Lebensmittel, Medizin, zusätzliche Waffen und das sonstiges Gepäck trugen, das eine Armee zum Überleben im Feld benötigt.[PARAGRAPH:1]Größe und Qualität des Versorgungszuges einer Armee kann eine Offensive mindestens ebenso beeinflussen wie Mannstärke und Ausbildung der Soldaten - wenn nicht gar mehr! Ein gewaltiger Versorgungszug kann eine Armee über lange Strecken hinweg im Feld versorgen, verlangsamt eine Armee jedoch auch. Darüber hinaus braucht ein Versorgungszug viel Schutz, und je weiter eine Armee vordringt, desto verwundbarer ist ein Versorgungszug.</German>
-		<Italian>
-			<Text>[BOLD]Strategia:[\BOLD][PARAGRAPH:1]In questo scenario le unità non guariscono mentre sono in territorio nemico, a meno che non siano accompagnate da carovane di supporto. Assicurati di averne sempre con te, quando invadi territori nemici. Attenzione, perché le carovane di supporto sono completamente disarmate ed è una buona idea affidarle a una pesante scorta militare, quando devono attraversare territori pericolosi.[NEWLINE][NEWLINE][BOLD]Informazioni:[\BOLD][PARAGRAPH:1]Come notò una volta Napoleone Bonaparte, un esercito marcia sul suo stomaco. Fin dai primi giorni delle guerre su larga scala, gli eserciti sono sempre stati accompagnati da "carovane di supporto" che trasportavano cibo, medicine, armi, e tutti quei bagagli che servono a un esercito per sopravvivere.[PARAGRAPH:1]Le dimensioni e la qualità delle carovane di supporto erano in grado di influenzare il successo di una campagna tanto quanto quelle dei soldati, se non di più. Un'enorme carovana di supporto poteva sostenere un esercito sul campo per lunghi periodi, ma allo stesso tempo lo rallentava. Inoltre, le carovane di supporto necessitavano di molta protezione e più l'esercito avanzava in territorio nemico, più la carovana diventava vulnerabile.</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>[BOLD]Estrategia:[\BOLD][PARAGRAPH:1]En este escenario, las unidades no se recuperan en territorio enemigo, salvo que estén acompañadas por Caravanas de suministros. Asegúrate de llevar una o más en cualquier fuerza de invasión. Ten presente que no tienen ningún armamento, así que es conveniente proporcionarles una escolta importante al enviarlas a territorio enemigo.[NEWLINE][NEWLINE][BOLD]Historia:[\BOLD][PARAGRAPH:1]Como Napoleón Bonaparte dijo una vez, un ejército marcha sobre su estómago. Desde los primeros tiempos de la historia de la guerra, los ejércitos han marchado siempre en compañía de "caravanas de suministros", en las que se transportaban comida, medicinas, armas adicionales y todo cuanto pueden necesitar las fuerzas para sobrevivir en el campo de batalla.[PARAGRAPH:1]El tamaño y la cantidad de las caravanas de suministros de un ejército para una campaña determinaba el resultado final de la misma, tanto como la calidad y cantidad de sus soldados o más. Una caravana de suministros enorme podía sustentar en el campo de batalla a un gran ejército durante mucho tiempo, aunque también lo obligaba a ralentizar las operaciones. Además, requerían de mucha protección, y cuanto más se adentraban los ejércitos en territorio enemigo, más vulnerables eran.</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Spanish>
-		<Polish>[BOLD]Strategia:[\\BOLD][PARAGRAPH:1]W tym scenariuszu, jednostki na wrogim terenie można leczyć tylko za pomocą Wozów Zaopatrzeniowych. Upewnij się, że masz ze sobą jeden lub kilka wozów kiedy dokonujesz inwazji na wrogi teren. Pamiętaj, że te jednostki są całkowicie bezbronne i należy zapewnić im eskortę wojskową.[NEWLINE][NEWLINE][BOLD]Historia:[\\BOLD][PARAGRAPH:1]Jak zauważył już Napoleon wojsko maszeruje żołądkiem. Od samego początku wojen, armiom towarzyszyły wozy zaopatrzeniowe, przewożąc pożywienie, lekarstwa, zapasy broni i wszystko inne co potrzebne do przeżycia w terenie.[PARAGRAPH:1]Rozmiar i jakość zaopatrzenia miały podobny wpływ na losy kampanii jak rozmiar i jakość sił wojskowych. Duża ilość zaopatrzenia mogła podtrzymać wartość bojową dużej armii przez długi czas, ale jednocześnie mogła mocno spowolnić jej marsz. Wozy z zaopatrzeniem potrzebowały stałej eskorty i im dalej posuwało się wojsko w głąb nieprzyjacielskiego terytorium tym bardziej stawały się wrażliwe i narażone na atak.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNKNOWN_NATION</Tag>
 		<English>An Unknown Nation</English>
 		<French>Une Nation inconnue</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNTIL</Tag>
-		<English>Until</English>
-		<French>jusqu'à</French>
-		<German>Bis</German>
-		<Italian>Finchè</Italian>
-		<Spanish>hasta</Spanish>
-		<Polish>Dopóki</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UPGRADECOST_MODIFIER</Tag>
-		<English>[ICON_BULLET]%D1_Change%% Cost of Unit Upgrades</English>
-		<French>[ICON_BULLET]%D1_Change%% Coût d'amélioration de l'unité</French>
-		<German>[ICON_BULLET]%D1_Change%% Kosten für Einheitenbförderung</German>
-		<Spanish>[ICON_BULLET]%D1_Change%% al coste de mejorar unidades</Spanish>
-		<Polish>[ICON_BULLET]%D1_Change%% do kosztów modernizacji jednostek</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UPGRADED_ADVANCED_SHIELDING</Tag>
@@ -20756,10 +18970,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>Zwycięstwo Naukowe</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_VICTORY_SCIENTIFIC_PEDIA</Tag>
-		<English>[SPACE]</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCORE</Tag>
 		<English>Score</English>
 		<French>
@@ -21083,14 +19293,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>Rezolucja ONZ #3445 (Światowa Doktryna - Władza: Parlament)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_VOTE_MODIFIER</Tag>
-		<English>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Change Votes in United Nations</English>
-		<French>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Change Voix aux Nations Unies</French>
-		<German>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Change Stimmen bei den Vereinten Nationen</German>
-		<Spanish>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Change a los escaños en las Naciones Unidas</Spanish>
-		<Polish>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1_Change głosów w ONZ</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_VOTE_SOCIALIZED_WELFARE</Tag>
 		<English>U.N. Resolution #4172 (Global Civic - Socialized)</English>
 		<French>
@@ -21241,24 +19443,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>Zbuduj siedzibę by zdobyć bonusy cukiernicze.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_WORLDSIZE_GIANT_HELP</Tag>
-		<English>If you are looking for a truly epic experience, this map size is for you. It has room for you and 23 opponents.</English>
-		<French>Si vous voulez vivre une véritable épopée, cette carte est faite pour vous. Elle est immense et oppose 23 adversaires.</French>
-		<German>Wenn Sie eine unvergessliche Erfahrung suchen, ist diese Karte Ihre erste Wahl. Immerhin treffen Sie hier auf bis zu 23 Gegner!</German>
-		<Italian>Se sei alla ricerca di un'esperienza davvero epica, la dimensione di questa mappa è quello che fa per te, poiché oltre a te c'è posto per altri dieci rivali.</Italian>
-		<Spanish>Si queréis una experiencia épica de verdad, un mapa de este tamaño es lo que andáis buscando. Tiene espacio suficiente para vos y para otros 16 rivales.</Spanish>
-		<Polish>Jeśli oczekujesz prawdziwie epickich przeżyć, to ten rozmiar mapy jest dla Ciebie. Oprócz ciebie jest tutaj jeszcze miejsce dla 23 przeciwników.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_WORLDSIZE_GIGANTIC_HELP</Tag>
-		<English>If you are looking for a truly epic experience, this map size is for you. It has room for you and 23 opponents.</English>
-		<French>Si vous voulez vivre une véritable épopée, cette carte est faite pour vous. Elle est immense et oppose 23 adversaires.</French>
-		<German>Wenn Sie eine unvergessliche Erfahrung suchen, ist diese Karte Ihre erste Wahl. Immerhin treffen Sie hier auf bis zu 23 Gegner!</German>
-		<Italian>Se sei alla ricerca di un'esperienza davvero epica, la dimensione di questa mappa è quello che fa per te, poiché oltre a te c'è posto per altri dieci rivali.</Italian>
-		<Spanish>Si queréis una experiencia épica de verdad, un mapa de este tamaño es lo que andáis buscando. Tiene espacio suficiente para vos y para otros 23 rivales.</Spanish>
-		<Polish>Jeśli oczekujesz prawdziwie epickich przeżyć, to ten rozmiar mapy jest dla Ciebie. Oprócz ciebie jest tutaj jeszcze miejsce dla 23 przeciwników.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_WORLD_DUEL</Tag>
 		<English>Duel</English>
 		<French>
@@ -21368,38 +19552,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Italian>La nazione %s1:2_civ_adjective nega le voci secondo cui sta ricercando una bomba incendiaria migliorata per le proprie forze aeree.</Italian>
 		<Spanish>La nación %s1:2_civ_adjective niega los informes que indican que está investigando una bomba incendiaria mejorada para sus fuerzas aéreas.</Spanish>
 		<Polish>Naród %s1_civ_adjective zaprzecza pogłoskom jakoby opracowywał udoskonaloną wersję bomb dla samolotów szturmowych.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_WORLD_NEWS_EVENT_BARBARIAN_ACTIVITY_DISCOVERED_1</Tag>
-		<English>The %s1_adjective tribe has been caught giving assistance to the Barbarians. This deplorable event has damaged their reputation.</English>
-		<French>La tribu %s1_adjective a été attrapée en train d'apporter de l'aide aux barbares. Cet événement déplorable ruine leur réputation.</French>
-		<Italian>La tribù %s1_adjective è stata scoperta a fornire aiuti ai barbari. Questo evento deplorevole ha danneggiato la loro reputazione.</Italian>
-		<Spanish>Han descubierto a la tribu %s1:2_adjective dando asistencia a los bárbaros. Este indignante acontecimiento ha dañado su reputación.</Spanish>
-		<Polish>Plemię %s1_adjective zostało przyłapane na pertraktowaniu z Barbarzyńcami. To wydarzenie zaszkodziło jego reputacji.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_WORLD_NEWS_EVENT_BARBARIAN_ATTITUDE_1</Tag>
-		<English>%s1_civ_adjective has apologized to the %s3_civ_adjective tribe for being involved in Barbarian Activity. They have also promised they will change their attitude from now. But, will they really do it?</English>
-		<French>la tribu %s1_civ_adjective s'est excusé auprès de la tribu %s3_civ_adjective pour avoir été impliqué dans des activités barbares. Ils ont également promis de changer leur attitude à cet égard. Le feront-ils vraiment?</French>
-		<Italian>La tribù %s1_civ_adjective si è scusata con la tribù %s3_civ_adjective per via delle sue attività barbare. Hanno anche promesso di cambiare il loro atteggiamento. Ma lo faranno veramente?</Italian>
-		<Spanish>La tribu %s1:2_civ_adjective se ha disculpado con la tribu %s3:2_civ_adjective por estar envueltos en actividades bárbaras. También prometieron que cambiarían de actitud. Pero, ¿lo harán de verdad?</Spanish>
-		<Polish>%s1_civ_adjective wybacza %s3_civ_adjective Barbarzyńską aktywność. Obiecali poprawę, ale czy tego dokonają?</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_WORLD_NEWS_EVENT_BARBARIAN_ATTITUDE_2</Tag>
-		<English>%s1_civ_adjective tribe has ignored %s3_civ_adjective demands to stop their supposed Barbarian Activity. This particular event has spoiled their relationship.</English>
-		<French>la tribu %s1_civ_adjective a ignoré les demandes %s3_civ_adjective d'arrêter leurs acitivtés barbares. Cet événement a jeté un froid dans leurs reltations.</French>
-		<Italian>La tribù %s1_civ_adjective ha ignorato le richieste della tribù %s3_civ_adjective di interrompere le loro presunte attività barbare. Questo evento ha rovinato le loro relazioni.</Italian>
-		<Spanish>La tribu %s1_civ_adjective ha ignorado las demandas %s3:4_civ_adjective para la paralización de las supuestas actividades bárbaras. Este evento ha estropeado sus relaciones.</Spanish>
-		<Polish>%s1_civ_adjective zignorował prośbę %s3_civ_adjective zaprzestaniu aktywności barbarzyńskiej. To wydarzenia osłabiło ich przyjaźń.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_WORLD_NEWS_EVENT_BARBARIAN_ATTITUDE_3</Tag>
-		<English>The %s3_civ_adjective has accused %s1_civ_adjective tribe of being involved in Barbarian activity. This intriguing event has completely spoiled their relationship.</English>
-		<French>La tribu %s3_civ_adjective a accusé la tribu %s1_civ_adjective d'être impliqué dans des activités barbares. Cet événement intolérable a dégradé leurs relations.</French>
-		<Italian>La tribù %s3_civ_adjective ha accusato la tribù %s1_civ_adjective di essere coinvolta in attività barbare. Questo evento ha rovinato completamente le loro relazioni.</Italian>
-		<Spanish>Los %s3:3_civ_adjective han acusado a la tribu %s1:2_civ_adjective de estar envueltos en actividades barbáricas. Este intrigante acontecimiento ha estropeado por completo sus relaciones.</Spanish>
-		<Polish>%s3_civ_adjective oskarża plemię %s1_civ_adjective o aktywność barbarzyńską. To wydarzenie kompletnie rujnuje ich stosunki.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WORLD_SMALL</Tag>
@@ -21629,4 +19781,110 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Spanish>Investigación actual:</Spanish>
 		<Polish>Aktualne Badania:</Polish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMMAND_HOTKEY</Tag>
+		<English>Command Hotkey</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAPSWITCH_EXAMPLE</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAPSWITCH_EXAMPLE_HELP</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_EXAMPLE</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_EXAMPLE_HELP</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<!-- Code placeholders
+	<TEXT>
+		<Tag>TXT_KEY_CIV_UNKNOWN</Tag>
+		<English>UNKNOWN CIV</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_ROUND_STUN_DEFENDER_MINUS_ATTACKER_ENDURANCE</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GLOBELAYER_DEBUG</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_LESS_GROWTH</Tag>
+		<English>[ICON_BULLET]Gives terrain a lower chance to spread</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LANDMARK</Tag>
+		<English></English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ATTACKER_REPELLED_HUMAN_ONSLAUGHT_HIDDEN</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_COMMERCE_TECH</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_GOLDEN_AGE_PLAYER_COMMERCE</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_PLUNDERED_CULTURE_FROM_VICTIMS</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_YOU_UNIT_WITHDRAW_ONSLAUGHT</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_YOU_UNIT_WITHDRAW_STAMPEDE</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MSG_HOLY_CITY_RESPAWNED</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_NO_INVISIBILIY_TEXT</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_VOTE</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_ENDURANCE</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_FORTITUDE_MODIFIER_POSITIVE_TEXT</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_FORTITUDE_MODIFIER_NEGATIVE_TEXT</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_POWER_SHOT_PRECISION_MODIFIER_TOTAL_MODIFIER</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TIRING_TOTAL_SHORT</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TIRING_TOTAL</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TRAP_DAMAGE</Tag>
+		<English>TBD</English>
+	</TEXT>
+	-->
 </Civ4GameText>

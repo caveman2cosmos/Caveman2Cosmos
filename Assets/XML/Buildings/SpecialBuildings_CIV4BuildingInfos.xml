@@ -214,7 +214,7 @@
 			<Type>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</Type>
 			<Description>TXT_KEY_BUILDING_ENVIRONMENTAL_A</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ENVIRONMENTAL_A_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ENVIRONMENTAL_A_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_ENVIRONMENTAL_ACHIEVEMENT_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_ENVIRONMENTAL_A</ArtDefineTag>
@@ -12468,7 +12468,7 @@
 		<BuildingInfo>
 			<!-- Housing (Igloos) -->
 			<Type>BUILDING_IGLOO</Type>
-			<Description>TXT_KEY_BUILDING_IGLOO2</Description>
+			<Description>TXT_KEY_BUILDING_IGLOO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_IGLOO_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_IGLOO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>

@@ -2438,12 +2438,4 @@
 		<German>Zikkurat</German>
 		<Spanish>Zigurat</Spanish>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVMENT_BUILD_TIME</Tag>
-		<English>[ICON_BULLET]%d1_Time Build Time</English>
-		<French>[ICON_BULLET]%d1_Time Temps de construction</French>
-		<German>[ICON_BULLET]%d1_Time Bauzeit</German>
-		<Spanish>[ICON_BULLET]Turnos de construcción: %d1_Time</Spanish>
-		<Polish>[ICON_BULLET]Czas Budowy: %d1_Time</Polish>
-	</TEXT>
 </Civ4GameText>

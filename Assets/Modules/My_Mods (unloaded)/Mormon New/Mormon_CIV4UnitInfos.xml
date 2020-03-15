@@ -92,7 +92,7 @@
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_RETURNED_MISSIONARY</Description>
 			<Civilopedia>TXT_KEY_UNIT_RETURNED_MISSIONARY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_RETURNED_MISSIONARY_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_UNIT_MORMON_MISSIONARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoCapture>1</bNoCapture>

@@ -12,16 +12,6 @@
 		<French>Construit les bâtiments et unités Girafes plus vite dans cette Ville.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_GIRAFFE_PEDIA</Tag>
-		<English>Military Standard (Giraffe) -b </English>
-		<French>Standards Militaires (Girafe)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_GIRAFFE_STRATEGY</Tag>
-		<English>Reduce the training costs of Giraffe units.</English>
-		<French>Réduit les coûts d'entrainements des unités avec Girafes</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GIRAFFE_TRAINER</Tag>
 		<English>Animal Trainer (Giraffe)</English>
 		<French>
