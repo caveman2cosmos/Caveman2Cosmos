@@ -3184,6 +3184,30 @@
 		<Spanish>Se evitan los ciudadanos enfermos dejando de crecer si se llega al límite de ciudadanos sanos.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_EMPHASIZE_AVOID_GROWTH_STRATEGY</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EMPHASIZE_COMMERCE_STRATEGY</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EMPHASIZE_FOOD_STRATEGY</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EMPHASIZE_GREAT_PEOPLE_STRATEGY</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EMPHASIZE_PRODUCTION_STRATEGY</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EMPHASIZE_RESEARCH_STRATEGY</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_END_YEAR</Tag>
 		<English>End Year</English>
 		<French>Année de fin</French>
@@ -18946,10 +18970,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>Zwycięstwo Naukowe</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_VICTORY_SCIENTIFIC_PEDIA</Tag>
-		<English>[SPACE]</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCORE</Tag>
 		<English>Score</English>
 		<French>
@@ -19760,5 +19780,25 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Italian>Ricerca corrente:</Italian>
 		<Spanish>Investigación actual:</Spanish>
 		<Polish>Aktualne Badania:</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMMAND_HOTKEY</Tag>
+		<English>Command Hotkey</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAPSWITCH_EXAMPLE</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAPSWITCH_EXAMPLE_HELP</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_EXAMPLE</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_EXAMPLE_HELP</Tag>
+		<English>TBD</English>
 	</TEXT>
 </Civ4GameText>

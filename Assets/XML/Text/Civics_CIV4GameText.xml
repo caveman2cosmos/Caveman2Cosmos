@@ -500,6 +500,32 @@
 		<French>Les déchets sont décomposés en particules très fines.</French>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIVIC_ATTITUDE_EXPORT_TRASH_TO_EVERYONE</Tag>
+		<English>%D1_AttitudeChange: "You take advantage of other countries!"</English>
+		<French>%D1_AttitudeChange: "Votre attitude est au dépend des autres pays!"</French>
+		<German>%D1_AttitudeChange: "Du nützt andere Nationen aus!"</German>
+		<Spanish>%D1_AttitudeChange: "¡Os aprovecháis de otros países!"</Spanish>
+		<Polish>%D1_AttitudeChange: "Wysyłasz śmieci innym krajom!"</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_ATTITUDE_MONARCHY_TO_MONARCHY</Tag>
+		<English>%D1_AttitudeChange: "Royalty should work together"</English>
+		<French>%D1_AttitudeChange: "Les Royautés devraient collaborer ensemble"</French>
+		<German>%D1_AttitudeChange: "Königreiche sollten zusammenarbeiten"</German>
+		<Italian>%D1_AttitudeChange: "I regni dovrebbero lavorare assieme"</Italian>
+		<Spanish>%D1_AttitudeChange: "La realeza debe colaborar unida"</Spanish>
+		<Polish>%D1_AttitudeChange: "Rodziny królewskie powinny pracować razem"</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_ATTITUDE_SEA_TRASH_TO_EVERYONE</Tag>
+		<English>%D1_AttitudeChange: "You're'polluting the ocean!"</English>
+		<French>%D1_AttitudeChange: "Vous polluez les océans!"</French>
+		<German>%D1_AttitudeChange: "Du verschmutzt den Ozean!"</German>
+		<Italian>%D1_AttitudeChange: "You're polluting the ocean!"</Italian>
+		<Spanish>%D1_AttitudeChange: "¡Estáis contaminando el océano!"</Spanish>
+		<Polish>%D1_AttitudeChange: "Zanieczyszczasz ocean odpadami!"</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIVIC_AUTOMATED</Tag>
 		<English>Automated</English>
 		<French>Automatisé</French>

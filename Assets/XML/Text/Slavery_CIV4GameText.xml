@@ -278,6 +278,14 @@
 		<Polish>Dołącz niewolnika do miasta jako nauczyciela.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MISSION_JOIN_CITY_AS_SLAVE_SANITATION</Tag>
+		<English>Join city as a sanitation slave.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_JOIN_CITY_AS_SLAVE_CRIME_PREVENTION</Tag>
+		<English>Join city as a crime prevention slave.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MISSION_REMOVE_WV_SLAVERY</Tag>
 		<English>Abandon Slavery World View</English>
 		<French>Abandonner l'Esclavage en Vision du monde</French>
@@ -444,6 +452,14 @@
 		<French>Votre Prisonnier est devenu un Esclave Spécialiste (Enseignant).</French>
 		<Italian>Il tuo prigioniero è diventato uno Schiavo specializzato - Educazione.</Italian>
 		<Polish>Twój Niewolnik stał się Specjalistą (Nauczanie).</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_JOIN_AS_SLAVE_SANITATION</Tag>
+		<English>Set city slave to clean cities.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_JOIN_AS_SLAVE_SANITATION_MESSAGE</Tag>
+		<English>Your captive has become a Slave Specialist (Sanitation).</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_REMOVE_WV_SLAVERY</Tag>

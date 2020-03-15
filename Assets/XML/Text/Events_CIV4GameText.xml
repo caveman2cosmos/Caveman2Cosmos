@@ -8654,8 +8654,11 @@
 		<Polish>[ICON_BULLET][COLOR_NEGATIVE_TEXT]-1[COLOR_REVERT] do relacji ze wszystkimi [COLOR_HIGHLIGHT_TEXT]znanymi przywódcami[COLOR_REVERT].[NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]Wywoła wojnę!![COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENT_X_1</Tag>
-		<English>TBD</English>
-		<French>TBD</French>
+		<Tag>TXT_KEY_EVENT_CORRUPT_SENATE</Tag>
+		<English>Widespread corruption in senate</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_SILKWORM_GOING_EXTINCT</Tag>
+		<English>Silkworms are endangered</English>
 	</TEXT>
 </Civ4GameText>
