@@ -6158,7 +6158,7 @@ void CvDLLWidgetData::parseTerrainTradeHelp(CvWidgetDataStruct &widgetDataStruct
 	{
 		GAMETEXT.buildTerrainTradeString(szBuffer, ((TechTypes)(widgetDataStruct.m_iData1)), widgetDataStruct.m_iData2);
 	}
-	else if (widgetDataStruct.m_iData2 == GC.getNumTerrainInfos())
+	else if (widgetDataStruct.m_iData2 == GC.numTypes<CvTerrainInfo>())
 	{
 		GAMETEXT.buildRiverTradeString(szBuffer, ((TechTypes)(widgetDataStruct.m_iData1)));
 	}
