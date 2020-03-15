@@ -186,11 +186,6 @@
 		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs arquebusiers pour partager vos aventures!</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GOODY_ASSAULT_MECH</Tag>
-		<English>[SPACE]You've found an abandoned Mech left behind by an intrepid, and probably now dead, private explorer!</English>
-		<French>[SPACE]Vous avez trouvé un Mech abandonnés laissés par un explorateur intrépide privé, et probablement mort aujourd'hui!</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GOODY_AXEMAN</Tag>
 		<English>[SPACE]The tribe has agreed to send one of its axemen along with you!</English>
 		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs guerriers avec hache pour partager vos aventures!</French>
@@ -540,32 +535,6 @@
 		<Spanish>[ICON_BULLET]%D1_Change%% a la probabilidad de retirarse</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_REPLACED_BY_BUILDING</Tag>
-		<English>Replaced by [LINK=%s1_default_buildingType]%s2_default_building[\LINK]</English>
-		<French>Remplacé par [LINK=%s1_default_buildingType]%s2_default_building[\LINK]</French>
-		<German>ersetzt durch [LINK=%s1_default_buildingType]%s2_default_building[\LINK]</German>
-		<Italian>Sostituita dall'edificià [LINK=%s1_default_buildingType]%s2_default_building[\LINK]</Italian>
-		<Spanish>Sustituido por [LINK=%s1_default_buildingType]%s2_default_building[\LINK]</Spanish>
-		<Polish>Zastąpione przez: [LINK=%s1_default_buildingType]%s2_default_building[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REPLACED_BY_UNIT</Tag>
-		<English>Replaced by [LINK=%s1_default_unitType]%s2_default_unit[\LINK]</English>
-		<French>Remplacé par [LINK=%s1_default_unitType]%s2_default_unit[\LINK]</French>
-		<German>ersetzt durch [LINK=%s1_default_unitType]%s2_default_unit[\LINK]</German>
-		<Spanish>Sustituida por [LINK=%s1_default_unitType]%s2_default_unit[\LINK]</Spanish>
-		<Italian>Sostituita dall'unità [LINK=%s1_default_unitType]%s2_default_unit[\LINK]</Italian>
-		<Polish>Zastąpione przez [LINK=%s1_default_unitType]%s2_default_unit[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REPLACES_UNIT</Tag>
-		<English>Replaces [LINK=%s1_default_unitType]%s2_default_unit[\LINK]</English>
-		<French>Remplace : [LINK=%s1_default_unitType]%s2_default_unit[\LINK]</French>
-		<German>Ersetzt [LINK=%s1_default_unitType]%s2_default_unit[\LINK]</German>
-		<Italian>Sostituisce l'unità [LINK=%s1_default_unitType]%s2_default_unit[\LINK]</Italian>
-		<Spanish>Reemplaza a la unidad de [LINK=%s1_default_unitType]%s2_default_unit[\LINK]</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_REQUIRES_PREREQUISITE_RELIGION</Tag>
 		<English>[ICON_BULLET]This building requires %F1_RelIcon in the city.</English>
 		<French>[ICON_BULLET]Ce Bâtiment requiert %F1_RelIcon dans la Ville.</French>
@@ -630,22 +599,6 @@
 		<German>Wird zur Religion [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT] konvertieren.</German>
 		<Italian>Si convertirà alla religione [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT].</Italian>
 		<Spanish>Se convertirá al [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT].</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIQUE_BUILDING</Tag>
-		<English>Unique Building for [LINK=%s1_civType]%s2_civDesc[\LINK]</English>
-		<French>Bâtiment unique pour [LINK=%s1_civType]%s2_civDesc[\LINK]</French>
-		<German>Einzigartiges Gebäude für: [LINK=%s1_civType]%s2_civDesc[\LINK]</German>
-		<Italian>Edificio unico [LINK=%s1_civType]%s2_civDesc[\LINK]</Italian>
-		<Spanish>Edificio exclusivo del [LINK=%s1_civType]%s2_civDesc[\LINK]</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIQUE_UNIT</Tag>
-		<English>Unique Unit for [LINK=%s1_civType]%s2_civ[\LINK]</English>
-		<French>Unité unique pour : [LINK=%s1_civType]%s2_civ[\LINK]</French>
-		<German>Spezialeinheit der Zivilisation [LINK=%s1_civType]%s2_civ[\LINK]</German>
-		<Italian>Unità unica per la civiltà [LINK=%s1_civType]%s2_civ[\LINK]</Italian>
-		<Spanish>Unidad exclusiva de [LINK=%s1_civType]%s2_civ[\LINK]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ATTACK_MOD_VS_CLASS</Tag>

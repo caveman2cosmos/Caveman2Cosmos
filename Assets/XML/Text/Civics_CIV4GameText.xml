@@ -500,242 +500,6 @@
 		<French>Les déchets sont décomposés en particules très fines.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_ATTITUDE_ABHOR_WAR</Tag>
-		<English>%D1_AttitudeChange: "We abhor violence!"</English>
-		<French>%D1_AttitudeChange: "Nous haïssons la Violence!"</French>
-		<German>%D1_AttitudeChange: "Wir verabscheuen Gewalt!"</German>
-		<Italian>%D1_AttitudeChange: "Noi aborriamo la violenza!"</Italian>
-		<Spanish>%D1_AttitudeChange: "¡Detestamos la violencia!"</Spanish>
-		<Polish>%D1_AttitudeChange: "Brzydzimy się przemocą!"</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_ATTITUDE_ANTI_BOURGEOIS</Tag>
-		<English>%D1_AttitudeChange: "You oppress the working class!"</English>
-		<French>%D1_AttitudeChange: "Vous oppressez la classe ouvrière!"</French>
-		<German>%D1_AttitudeChange: "Ihr unterdrückt die Arbeiterklasse!"</German>
-		<Italian>%D1_AttitudeChange: "Tu opprimi la classe operaia!"</Italian>
-		<Spanish>%D1_AttitudeChange: "¡Presionas a la clase obrera!"</Spanish>
-		<Polish>%D1_AttitudeChange: "Twoje klasy wyższe wyzyskują niższe!"</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_ATTITUDE_ANTI_CORPORATIST</Tag>
-		<English>%D1_AttitudeChange: "You've corrupted free market ideals!"</English>
-		<French>%D1_AttitudeChange: "Vous avez corrompu les idéaux du libre marché!"</French>
-		<German>%D1_AttitudeChange: "Ihr habt die Ideale des Freine Marktes verraten!"</German>
-		<Italian>%D1_AttitudeChange: "Tu hai corrotto gli ideali del libero mercato!"</Italian>
-		<Spanish>%D1_AttitudeChange: "¡Has corrompido los ideales del libre mercado!"</Spanish>
-		<Polish>%D1_AttitudeChange: "Zniszczyłeś idee wolnego rynku!"</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_ATTITUDE_ANTI_FREE_MARKET</Tag>
-		<English>%D1_AttitudeChange: "Capitalism is corrupt!"</English>
-		<French>%D1_AttitudeChange: "Le Capitalisme est corrompu!"</French>
-		<German>%D1_AttitudeChange: "Kapitalismus ist korrupt!"</German>
-		<Italian>%D1_AttitudeChange: "Il capitalismo è corrotto!"</Italian>
-		<Spanish>%D1_AttitudeChange: "¡El capitalismo está corrupto!"</Spanish>
-		<Polish>%D1_AttitudeChange: "Zniszczyłeś kapitalizm!"</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_ATTITUDE_ANTI_PLANNED</Tag>
-		<English>%D1_AttitudeChange: "The needs of one outweigh the needs of the many!"</English>
-		<French>%D1_AttitudeChange: "Les besoins individuels l'emportent sur les besoins collectifs!"</French>
-		<German>%D1_AttitudeChange: "Die Bedürfnisse des Einzelnen stehen über den Bedürfnissen von Vielen!"</German>
-		<Italian>%D1_AttitudeChange: "I bisogni di uno sono più importanti di quelli di molti!"</Italian>
-		<Spanish>%D1_AttitudeChange: "Las necesidades individuales pesan más que las colectivas!"</Spanish>
-		<Polish>%D1_AttitudeChange: "Potrzeby jednego przewyższają potrzeby wielu!"</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_ATTITUDE_ANTI_PROLETARIATARIAN</Tag>
-		<English>%D1_AttitudeChange: "You neglect the common people!"</English>
-		<French>%D1_AttitudeChange: "Vous négligez les élites!"</French>
-		<German>%D1_AttitudeChange: "Ihr vernachlässigt die Elite!"</German>
-		<Italian>%D1_AttitudeChange: "Tu neghi aiuti all'elìte!"</Italian>
-		<Spanish>%D1_AttitudeChange: "¡No cuentas con tus élites!"</Spanish>
-		<Polish>%D1_AttitudeChange: "Zaniedbujesz elity!"</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_ATTITUDE_BRAINWASH</Tag>
-		<English>%D1_AttitudeChange: "You're brainwashing your citizens!"</English>
-		<French>%D1_AttitudeChange: "Vous réalisez un vrai lavage de cerveau de vos citoyens!"</French>
-		<Spanish>%D1_AttitudeChange: "¡Estás lavando el cerebro a tus ciudadanos!"</Spanish>
-		<Polish>%D1_AttitudeChange: Pierzesz mózgi swoim podwładnym!</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_ATTITUDE_CENTRISM</Tag>
-		<English>%D1_AttitudeChange: "You have fair and forthright policies"</English>
-		<French>%D1_AttitudeChange: "Vous avez des politiques justes et sincères"</French>
-		<German>%D1_AttitudeChange: "Ihr betreibt eine faire und offene Politik"</German>
-		<Italian>%D1_AttitudeChange: "Tu segui politiche giuste e sincere"</Italian>
-		<Spanish>%D1_AttitudeChange: "Aplicas políticas justas y francas"</Spanish>
-		<Polish>%D1_AttitudeChange: "Prowadzisz sprawiedliwą oraz otwartą politykę"</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_ATTITUDE_CHANGE</Tag>
-		<English>[SPACE]Diplomacy with all players with[SPACE]</English>
-		<French>[SPACE]Diplomatie avec tous les joueurs avec[SPACE]</French>
-		<German>[SPACE]Diplomatiewert aller Spieler mit[SPACE]</German>
-		<Italian>[SPACE]Diplomazia con tutti i giocatori con[SPACE]</Italian>
-		<Spanish>[SPACE]Diplomacia de todos los jugadores con[SPACE]</Spanish>
-		<Polish>[SPACE]Dyplomacja z wszystkimi graczami z[SPACE]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_ATTITUDE_COMMUNISM</Tag>
-		<English>%D1_AttitudeChange: "From each according to his ability, to each according his need!"</English>
-		<French>%D1_AttitudeChange: "De chacun selon ses capacités, à chacun selon son besoin"</French>
-		<German>%D1_AttitudeChange: "Jeder nach seinen Fähigkeiten, jedem nach seinen Bedürfnissen!"</German>
-		<Italian>%D1_AttitudeChange: "Da ciascuno secondo le sue abilità, a ciascuno secondo i suoi bisogni"</Italian>
-		<Spanish>%D1_AttitudeChange: "De cada cual según su capacidad, a cada cual según su necesidad"</Spanish>
-		<Polish>%D1_AttitudeChange: "Od każdego według jego zdolności, każdemu według jego potrzeb"</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_ATTITUDE_DISTORT_RELIGION</Tag>
-		<English>%D1_AttitudeChange: "You abuse the environment!"</English>
-		<French>%D1_AttitudeChange: "Vous abusez de l'Environment!"</French>
-		<German>%D1_AttitudeChange: "Ihr zerstört die Umwelt!"</German>
-		<Italian>%D1_AttitudeChange: "Tu distruggi l'ambiente!"</Italian>
-		<Spanish>%D1_AttitudeChange: "¡Abusas del medio ambiente!"</Spanish>
-		<Polish>%D1_AttitudeChange: "Niszczysz środowisko!"</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_ATTITUDE_DOOM</Tag>
-		<English>%D1_AttitudeChange: "Your military police threaten the world!"</English>
-		<French>%D1_AttitudeChange: "Votre politique Militaire menace le Monde Entier!"</French>
-		<Italian>%D1_AttitudeChange: "Le tue politiche militari sono una minaccia per il mondo!"</Italian>
-		<Spanish>%D1_AttitudeChange: "¡Tus políticas militares son una amenaza para el mundo!"</Spanish>
-		<Polish>%D1_AttitudeChange: "Swoją Polityką Militarną zagrażasz całemu Światu!"</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_ATTITUDE_EXPORT_TRASH_TO_EVERYONE</Tag>
-		<English>%D1_AttitudeChange: "You take advantage of other countries!"</English>
-		<French>%D1_AttitudeChange: "Votre attitude est au dépend des autres pays!"</French>
-		<German>%D1_AttitudeChange: "Du nützt andere Nationen aus!"</German>
-		<Spanish>%D1_AttitudeChange: "¡Os aprovecháis de otros países!"</Spanish>
-		<Polish>%D1_AttitudeChange: "Wysyłasz śmieci innym krajom!"</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_ATTITUDE_FREEDOM</Tag>
-		<English>%D1_AttitudeChange: "In freedom we Trust!"</English>
-		<French>%D1_AttitudeChange: "Nous croyons en la Liberté!"</French>
-		<German>%D1_AttitudeChange: "Wir glauben an die Freiheit!"</German>
-		<Italian>%D1_AttitudeChange: "Crediamo nella liberà!"</Italian>
-		<Spanish>%D1_AttitudeChange: "¡Creemos en la libertad!"</Spanish>
-		<Polish>%D1_AttitudeChange: "Wierzymy w wolność!"</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_ATTITUDE_GODDLESS</Tag>
-		<English>%D1_AttitudeChange: "You are immoral"</English>
-		<French>%D1_AttitudeChange: "Vous êtes immoral"</French>
-		<German>%D1_AttitudeChange: "Ihr seid unmoralisch"</German>
-		<Italian>%D1_AttitudeChange: "Tu sei immorale"</Italian>
-		<Spanish>%D1_AttitudeChange: "Eres inmoral"</Spanish>
-		<Polish>%D1_AttitudeChange: "Jesteś niemoralny"</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_ATTITUDE_MONARCHY_TO_MONARCHY</Tag>
-		<English>%D1_AttitudeChange: "Royalty should work together"</English>
-		<French>%D1_AttitudeChange: "Les Royautés devraient collaborer ensemble"</French>
-		<German>%D1_AttitudeChange: "Königreiche sollten zusammenarbeiten"</German>
-		<Italian>%D1_AttitudeChange: "I regni dovrebbero lavorare assieme"</Italian>
-		<Spanish>%D1_AttitudeChange: "La realeza debe colaborar unida"</Spanish>
-		<Polish>%D1_AttitudeChange: "Rodziny królewskie powinny pracować razem"</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_ATTITUDE_OPPRESSION</Tag>
-		<English>%D1_AttitudeChange: "You oppress your citizens!"</English>
-		<French>%D1_AttitudeChange: "Vous oppressez vos Citoyens!"</French>
-		<German>%D1_AttitudeChange: "Ihr unterdrückt Eure Bürger!"</German>
-		<Italian>%D1_AttitudeChange: "Tu opprimi i tuoi cittadini!"</Italian>
-		<Spanish>%D1_AttitudeChange: "¡Presionas a tus ciudadanos!"</Spanish>
-		<Polish>%D1_AttitudeChange: "Ciemiężysz swych obywateli!"</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_ATTITUDE_PACIFISM</Tag>
-		<English>%D1_AttitudeChange: "You are peaceful"</English>
-		<French>%D1_AttitudeChange: "Vous êtes un pacifiste"</French>
-		<German>%D1_AttitudeChange: "Ihr seid friedlich"</German>
-		<Italian>%D1_AttitudeChange: "Tu sei pacifista"</Italian>
-		<Spanish>%D1_AttitudeChange: "Eres pacifista"</Spanish>
-		<Polish>%D1_AttitudeChange: "Jesteś pokojowo nastawiony"</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_ATTITUDE_PRO_BOURGEOIS</Tag>
-		<English>%D1_AttitudeChange: "You support your social elite"</English>
-		<French>%D1_AttitudeChange: "Vous soutenez vos élites"</French>
-		<German>%D1_AttitudeChange: "Ihr unterstützt Eure soziale Elite"</German>
-		<Italian>%D1_AttitudeChange: "Tu supporti l'elìte sociale"</Italian>
-		<Spanish>%D1_AttitudeChange: "Respaldas a tus élites sociales"</Spanish>
-		<Polish>%D1_AttitudeChange: "Walczmy o ludzi biznesu!"</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_ATTITUDE_PRO_CORPORATIST</Tag>
-		<English>%D1_AttitudeChange: "Corporations are the backbone of a solid economy"</English>
-		<French>%D1_AttitudeChange: "Les Corporations sont l'épine dorsale d'une économie solide"</French>
-		<German>%D1_AttitudeChange: "Korporationen sind das Rückgrat einer soliden Wirtschaft"</German>
-		<Italian>%D1_AttitudeChange: "Le corporazioni sono la spina dorsale di un'economia solida"</Italian>
-		<Spanish>%D1_AttitudeChange: "Las corporaciones son la piedra angular de una economía sólida"</Spanish>
-		<Polish>%D1_AttitudeChange: "Korporacje są podstawą solidnej gospodarki"</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_ATTITUDE_PRO_ENVIRONMENT</Tag>
-		<English>%D1_AttitudeChange: "You take care of the environment"</English>
-		<French>%D1_AttitudeChange: "Vous prenez soin de l'environment"</French>
-		<German>%D1_AttitudeChange: "Ihr sorgt Euch um die Umwelt"</German>
-		<Italian>%D1_AttitudeChange: "Tu ti prendi cura dell'ambiente"</Italian>
-		<Spanish>%D1_AttitudeChange: "Cuidas del medio ambiente"</Spanish>
-		<Polish>%D1_AttitudeChange: "Dbasz o środowisko"</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_ATTITUDE_PRO_FREE_MARKET</Tag>
-		<English>%D1_AttitudeChange: "Viva La Capitalism!"</English>
-		<French>%D1_AttitudeChange: "Vive Le Capitalisme!"</French>
-		<Italian>%D1_AttitudeChange: "Viva il capitalismo!"</Italian>
-		<Spanish>%D1_AttitudeChange: "¡Viva el capitalismo!"</Spanish>
-		<Polish>%D1_AttitudeChange: "Niech żyje Kapitalizm!"</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_ATTITUDE_PRO_PLANNED</Tag>
-		<English>%D1_AttitudeChange: "Your Economy is well regulated"</English>
-		<French>%D1_AttitudeChange: "Votre Economie est bien régulée"</French>
-		<German>%D1_AttitudeChange: "Eure Wirtschatft ist gut reguliert"</German>
-		<Italian>%D1_AttitudeChange: "La tua economia è regolata bene"</Italian>
-		<Spanish>%D1_AttitudeChange: "Tu economía está bien regulada"</Spanish>
-		<Polish>%D1_AttitudeChange: "Twoja ekonomia jest dobrze uregulowana"</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_ATTITUDE_PRO_PROLETARIATARIAN</Tag>
-		<English>%D1_AttitudeChange: "You support the working class"</English>
-		<French>%D1_AttitudeChange: "Vous soutenez la classe ouvrière"</French>
-		<German>%D1_AttitudeChange: "Ihr unterstützt die Arbeiterklasse"</German>
-		<Italian>%D1_AttitudeChange: "Tu supporti la classe operaia"</Italian>
-		<Spanish>%D1_AttitudeChange: "Respaldas a la clase obrera"</Spanish>
-		<Polish>%D1_AttitudeChange: "Walczmy o zwykłego człowieka!"</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_ATTITUDE_SEA_TRASH_TO_EVERYONE</Tag>
-		<English>%D1_AttitudeChange: "You're'polluting the ocean!"</English>
-		<French>%D1_AttitudeChange: "Vous polluez les océans!"</French>
-		<German>%D1_AttitudeChange: "Du verschmutzt den Ozean!"</German>
-		<Italian>%D1_AttitudeChange: "You're polluting the ocean!"</Italian>
-		<Spanish>%D1_AttitudeChange: "¡Estáis contaminando el océano!"</Spanish>
-		<Polish>%D1_AttitudeChange: "Zanieczyszczasz ocean odpadami!"</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_ATTITUDE_SLASHNBURN</Tag>
-		<English>%D1_AttitudeChange: "You destroy the environment!"</English>
-		<French>%D1_AttitudeChange: "Vous détruisez l'environnement!"</French>
-		<Spanish>%D1_AttitudeChange: "¡Estás destrozando el entorno natural!"</Spanish>
-		<Polish>%D1_AttitudeChange: "Niszczysz środowisko!"</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_ATTITUDE_TAKES_CARE_OF_CITIZENS</Tag>
-		<English>%D1_AttitudeChange: "You have progressive social policies"</English>
-		<French>%D1_AttitudeChange: "Vous avez des politiques sociales progressistes"</French>
-		<German>%D1_AttitudeChange: "Ihr habt eine fortschrittliche Sozialpolitik"</German>
-		<Italian>%D1_AttitudeChange: "Tu hai politiche sociali progressiste"</Italian>
-		<Spanish>%D1_AttitudeChange: "Aplicas políticas sociales progresistas"</Spanish>
-		<Polish>%D1_AttitudeChange: "Prowadzisz nowoczesną politykę socjalną"</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIVIC_AUTOMATED</Tag>
 		<English>Automated</English>
 		<French>Automatisé</French>
@@ -1523,15 +1287,6 @@
 		<Tag>TXT_KEY_CIVIC_CONSCRIPTION_CHANGE</Tag>
 		<English>[ICON_BULLET]You can [LINK=CONCEPT_DRAFT]Draft[\LINK] %D1_Num [NUM1:Unit:Units]</English>
 		<French>[ICON_BULLET]Vous pouvez [LINK=CONCEPT_DRAFT]Recruter[\LINK] %D1_Num [NUM1:Unité:Unités]</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_CONSCRIPTION_LOSS</Tag>
-		<English>[ICON_BULLET]Reduces total amount of units you can [LINK=CONCEPT_DRAFT]Draft[\LINK] by %d1_Num [NUM1:Unit:Units] per Turn</English>
-		<French>[ICON_BULLET]Peut [LINK=CONCEPT_DRAFT]enrôler[\LINK] %d1_Num [NUM1:Unité:Unités] par tour</French>
-		<German>[ICON_BULLET]Kann %d1_Num [NUM1:Einheit:Einheiten] pro Runde [LINK=CONCEPT_DRAFT]rekrutieren[\LINK]</German>
-		<Italian>[ICON_BULLET]Può [LINK=CONCEPT_DRAFT]richiamare[\LINK] alla leva %d1_Num unità per turno</Italian>
-		<Spanish>[ICON_BULLET]Puede [LINK=CONCEPT_DRAFT]reclutar[\LINK] %d1_Num [NUM1:unidad:unidades] por turno</Spanish>
-		<Polish>[ICON_BULLET]Redukuje pełną liczbę jednostek które możesz [LINK=CONCEPT_DRAFT]Powołać[\LINK] o %d1_Num na turę</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_CONSCRIPTION_PEDIA</Tag>
@@ -2454,10 +2209,6 @@
 		<French>Les entités ayant une intelligence et des capacités semblables à celles de Dieu sont désirées de faire tout le travail.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_ICON_BULLET</Tag>
-		<English>[ICON_BULLET]</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIVIC_IGNORANCE</Tag>
 		<English>Ignorance</English>
 		<French>Ignorance</French>
@@ -2666,15 +2417,6 @@
 		<German>Religionen sind unbekannt oder werden mit Argwohn betrachtet.</German>
 		<Italian>La tua nazione non ha alcuna forma di religione o spiritualità.</Italian>
 		<Polish>Niereligijność to obojętność lub wogóle brak religii.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_IS_ACTIVE</Tag>
-		<English>civic is active</English>
-		<French>est activée</French>
-		<German>Gesellschaftsform aktiv ist</German>
-		<Italian>è attiva</Italian>
-		<Spanish>activo</Spanish>
-		<Polish>doktryna jest aktywna</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_JUNTA</Tag>
@@ -3205,14 +2947,6 @@
 		<German>Die Sprache besteht nur aus Gesten und Grunzlauten.</German>
 		<Spanish>Tu pueblo conversa mediante gestos y gruñidos.</Spanish>
 		<Polish>Komunikowanie się za pomocą gestów i mimiki.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_NON_STATE_REL_COMMERCE_MOD</Tag>
-		<English>in all cities without State [ICON_RELIGION]</English>
-		<French>dans toutes les Villes sans [ICON_RELIGION] d'Etat</French>
-		<German>in allen Städten ohne der Staats-[ICON_RELIGION]</German>
-		<Spanish>en todas las ciudades sin la [ICON_RELIGION] oficial</Spanish>
-		<Polish>w miastach bez religii państwowej: [ICON_RELIGION]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_NON_STATE_REL_HAPPINESS_AMBIGUOUS</Tag>
@@ -4492,23 +4226,6 @@
 		<French>[ICON_BULLET]Les Villes avec la [ICON_RELIGION] d'état construisent des bâtiments %D1_Mod%% plus rapidement</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_STATE_REL_BUILDING_PENALTY</Tag>
-		<English>[ICON_BULLET]Cities with State [ICON_RELIGION] Construct Buildings slower by %D1_Mod%%</English>
-		<French>[ICON_BULLET]Vitesse de construction des bâtiments pour les villes ayant une [ICON_RELIGION] d'état : %D1_Mod%%</French>
-		<German>[ICON_BULLET]Städte mit der Staatsreligion [ICON_RELIGION] errichten Gebäude %D1_Mod%% schneller</German>
-		<Italian>[ICON_BULLET]Le città con la [ICON_RELIGION] ufficiale costruiscono gli edifici il %D1_Mod%% più velocemente</Italian>
-		<Spanish>[ICON_BULLET]Las ciudades con [ICON_RELIGION] oficial construyen edificios un %D1_Mod%% más rápido</Spanish>
-		<Polish>[ICON_BULLET]Miasta z [ICON_RELIGION] Narodową Budują Budynki wolniej o: %D1_Mod%%</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_STATE_REL_COMMERCE_MOD</Tag>
-		<English>in all cities with State [ICON_RELIGION]</English>
-		<French>dans toutes les Villes avec [ICON_RELIGION] d'Etat</French>
-		<German>in allen Städten mit der Staats-[ICON_RELIGION]</German>
-		<Spanish>en todas las ciudades con la [ICON_RELIGION] oficial</Spanish>
-		<Polish>w miastach z religią państwową: [ICON_RELIGION]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIVIC_STATE_REL_TRAIN</Tag>
 		<English>[ICON_BULLET]Cities with State [ICON_RELIGION] Train Units %D1_Mod%% as fast</English>
 		<French>[ICON_BULLET]Les Villes avec la [ICON_RELIGION] d'état entraînent des unités %D1_Mod%% plus rapidement</French>
@@ -5219,24 +4936,6 @@
 		<Polish>Kochamy naszego Dyktatora!</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_WE_LOVE_KING</Tag>
-		<English>"We Love the King Day"</English>
-		<French>"Journée du Roi"</French>
-		<German>Wir lieben den König!</German>
-		<Italian>"Adoriamo il giorno del Re"</Italian>
-		<Spanish>"Adoramos a nuestro Rey"</Spanish>
-		<Polish>Kochamy naszego Króla!</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_WE_LOVE_MIND</Tag>
-		<English>"We Love the Master Mind Day"</English>
-		<French>"Journée de l'Esprit Supérieur"</French>
-		<German>Wir lieben das Superhirn!</German>
-		<Italian>"Adoriamo il giorno dello Spirito supremo"</Italian>
-		<Spanish>"Adoramos a nuestro Gran Hermano"</Spanish>
-		<Polish>Kochamy naszego Mistrza Intelektu!</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIVIC_WE_LOVE_MONARCH</Tag>
 		<English>We love the Monarch.</English>
 		<French>Nous aimons le Roi.</French>
@@ -5259,15 +4958,6 @@
 		<German>Wir lieben den Premierminister!</German>
 		<Italian>Amiamo il Primo Ministro!</Italian>
 		<Polish>Kochamy naszego Premiera!</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVIC_WE_LOVE_PROPHET</Tag>
-		<English>"We Love the Prophet Day"</English>
-		<French>"Journée du Prophète"</French>
-		<German>Wir lieben den Propheten!</German>
-		<Italian>"Adoriamo il giorno del Profeta"</Italian>
-		<Spanish>"Adoramos a nuestro Profeta"</Spanish>
-		<Polish>Kochamy naszego Proroka!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_WE_LOVE_THE_HIGH_PRIEST</Tag>

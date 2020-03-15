@@ -8,28 +8,4 @@
 		<Tag>TXT_KEY_CONCEPT_WORLD_TECH_TEXT</Tag>
 		<English>World Tech</English>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DYNAMIC_CIVIC_CITY_STATES_1</Tag>
-		<English>City State of</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DYNAMIC_CIVIC_CITY_STATES_2</Tag>
-		<English>City States of</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DYNAMIC_CIVIC_PRIMITIVE_1</Tag>
-		<English>The Band of</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DYNAMIC_CIVIC_PRIMITIVE_2</Tag>
-		<English>Bands of</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DYNAMIC_CIVIC_TRIBAL_1</Tag>
-		<English>The Tribe of</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_DYNAMIC_CIVIC_TRIBAL_2</Tag>
-		<English>Tribes of</English>
-	</TEXT>
 </Civ4GameText>

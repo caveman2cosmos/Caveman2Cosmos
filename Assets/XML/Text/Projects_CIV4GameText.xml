@@ -256,31 +256,6 @@
 		<Spanish>Permite construir las maravillas nacionales de las Centrales de fusión a todas las civilizaciones, una vez hayan descubierto la tecnología de la Fusión.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROJECT_MANHATTAN_PROJECT</Tag>
-		<English>The Manhattan Project</English>
-		<French>
-			<Text>Projet Manhattan</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Manhattan Project[SPACE]</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Manhattan Project</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Proyecto Manhattan</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Projekt Manhattan</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROJECT_MISSILE_DEFENCE_I</Tag>
 		<English>AA Missile Defenses</English>
 		<French>Défense Contre Les Missiles I</French>

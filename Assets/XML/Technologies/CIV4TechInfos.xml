@@ -2587,7 +2587,7 @@ Current techs which are not in this file:-
 		<TechInfo>
 			<Type>TECH_STONE_BUILDING</Type>
 			<Description>TXT_KEY_TECH_STONE_BUILDING</Description>
-			<Civilopedia>TXT_KEY_TECH_CAVE_DWELLING_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_TECH_STONE_BUILDING_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_TECH_STONE_BUILDING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iAIWeight>10</iAIWeight>
@@ -3811,7 +3811,7 @@ Current techs which are not in this file:-
 			<Type>TECH_IDEOGRAMS</Type>
 			<Description>TXT_KEY_TECH_IDEOGRAMS</Description>
 			<Civilopedia>TXT_KEY_TECH_IDEOGRAMS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_WRITING_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_TECH_IDEOGRAMS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>84</iCost>
 			<Era>C2C_ERA_ANCIENT</Era>
@@ -4222,7 +4222,7 @@ Current techs which are not in this file:-
 			<Type>TECH_FUNGICULTURE</Type>
 			<Description>TXT_KEY_TECH_FUNGICULTURE</Description>
 			<Civilopedia>TXT_KEY_TECH_FUNGICULTURE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_AGRICULTURE_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_TECH_HINDUISM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<iCost>110</iCost>
 			<Era>C2C_ERA_ANCIENT</Era>
@@ -5897,7 +5897,7 @@ Current techs which are not in this file:-
 			<Type>TECH_DIVINATION</Type>
 			<Description>TXT_KEY_TECH_DIVINATION</Description>
 			<Civilopedia>TXT_KEY_TECH_DIVINATION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_PRIESTHOOD_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_TECH_DIVINATION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<iCost>213</iCost>
 			<Era>C2C_ERA_ANCIENT</Era>
@@ -8510,7 +8510,7 @@ Current techs which are not in this file:-
 			<Type>TECH_CALLIGRAPHY</Type>
 			<Description>TXT_KEY_TECH_CALLIGRAPHY</Description>
 			<Civilopedia>TXT_KEY_TECH_CALLIGRAPHY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_WRITING_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_TECH_CALLIGRAPHY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>614</iCost>
 			<Era>C2C_ERA_CLASSICAL</Era>
@@ -10076,7 +10076,7 @@ Current techs which are not in this file:-
 			<Type>TECH_RUDDER</Type>
 			<Description>TXT_KEY_TECH_RUDDER</Description>
 			<Civilopedia>TXT_KEY_TECH_RUDDER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_SHIP_BUILDING_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_TECH_RUDDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>1230</iCost>
@@ -13259,7 +13259,7 @@ Current techs which are not in this file:-
 			<Type>TECH_CALCULUS</Type>
 			<Description>TXT_KEY_TECH_CALCULUS</Description>
 			<Civilopedia>TXT_KEY_TECH_CALCULUS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_ALGEBRA_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_TECH_CALCULUS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>3274</iCost>
 			<Era>C2C_ERA_RENAISSANCE</Era>
@@ -15119,7 +15119,7 @@ Current techs which are not in this file:-
 			<Type>TECH_NITROGLYCERIN</Type>
 			<Description>TXT_KEY_TECH_NITROGLYCERIN</Description>
 			<Civilopedia>TXT_KEY_TECH_NITROGLYCERIN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_EXPLOSIVES_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_TECH_NITROGLYCERIN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>6351</iCost>
@@ -15993,7 +15993,7 @@ Current techs which are not in this file:-
 			<Type>TECH_IMPERIALISM</Type>
 			<Description>TXT_KEY_TECH_IMPERIALISM</Description>
 			<Civilopedia>TXT_KEY_TECH_IMPERIALISM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_GRAND_WAR_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_TECH_IMPERIALISM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>7008</iCost>
@@ -16028,7 +16028,7 @@ Current techs which are not in this file:-
 			<Type>TECH_WOMENS_SUFFRAGE</Type>
 			<Description>TXT_KEY_TECH_WOMENS_SUFFRAGE</Description>
 			<Civilopedia>TXT_KEY_TECH_WOMENS_SUFFRAGE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_LABOR_UNIONS_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_TECH_WOMENS_SUFFRAGE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iCost>7008</iCost>
 			<Era>C2C_ERA_INDUSTRIAL</Era>
@@ -22151,7 +22151,7 @@ Current techs which are not in this file:-
 			<Type>TECH_3D_PRINTING</Type>
 			<Description>TXT_KEY_TECH_3D_PRINTING</Description>
 			<Civilopedia>TXT_KEY_TECH_3D_PRINTING_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_3D_MODELLING_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_TECH_3D_PRINTING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>22847</iCost>
 			<Era>C2C_ERA_INFORMATION</Era>
