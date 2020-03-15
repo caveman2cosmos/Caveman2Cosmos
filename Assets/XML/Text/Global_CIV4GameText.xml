@@ -19801,7 +19801,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Tag>TXT_KEY_MAP_EXAMPLE_HELP</Tag>
 		<English>TBD</English>
 	</TEXT>
-	<!-- Code placeholders -->
+	<!-- Code placeholders
 	<TEXT>
 		<Tag>TXT_KEY_CIV_UNKNOWN</Tag>
 		<English>UNKNOWN CIV</English>
@@ -19886,4 +19886,5 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Tag>TXT_KEY_UNIT_TRAP_DAMAGE</Tag>
 		<English>TBD</English>
 	</TEXT>
+	-->
 </Civ4GameText>
