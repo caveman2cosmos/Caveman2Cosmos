@@ -2056,11 +2056,6 @@ public:
 		PROXY_TRACK("getStatsReporter");
 		return gGlobals->getStatsReporter();
 	}
-	CvStatsReporter* getStatsReporterPtr()
-	{
-		PROXY_TRACK("getStatsReporterPtr");
-		return gGlobals->getStatsReporterPtr();
-	}
 	DllExport CvInterface& getInterface()
 	{
 		PROXY_TRACK("getInterface");
