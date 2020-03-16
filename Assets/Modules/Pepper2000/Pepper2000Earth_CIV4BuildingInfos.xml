@@ -13479,7 +13479,7 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_PYRAMID</BuildingType>
+					<BuildingType>BUILDING_GREAT_PYRAMID</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>

@@ -8898,7 +8898,7 @@ Current techs which are not in this file:-
 			</OrPreReqs>
 			<PrereqBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_LAVA_ROCK_QUARRY</BuildingType>
+					<BuildingType>BUILDING_GATHERER_LAVA_ROCK</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqBuildings>

@@ -2830,12 +2830,12 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_JEWELLERY</BuildingType>
+					<BuildingType>BUILDING_JEWELER</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_JEWELLERY</BuildingType>
+				<BuildingType>BUILDING_JEWELER</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
@@ -2860,7 +2860,7 @@
 			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_JEWELLERY</BuildingType>
+					<BuildingType>BUILDING_JEWELER</BuildingType>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -3938,7 +3938,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_MICROLITH_WORKSHOP</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MICROLITH_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_MICROLITH_WORKSHOP_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MICROLITH_WORKSHOP_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MICROLITH</PrereqTech>
@@ -4565,14 +4565,14 @@
 		<!--↑ National Breeders ↑-->
 		<BuildingInfo>
 			<!-- National Fire Service -->
-			<Type>BUILDING_NFS</Type>
+			<Type>BUILDING_NATIONAL_FIRE_SERVICE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_NFS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NFS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NFS_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_NATIONAL_FIRE_SERVICE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_FIRE_SERVICE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_NATIONAL_FIRE_SERVICE_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_FIREFIGHTING</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
@@ -4611,7 +4611,7 @@
 				</Flavor>
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_NFS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_FIRE_SERVICE</ArtDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -4887,14 +4887,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National Science Foundation -->
-			<Type>BUILDING_NSF</Type>
+			<Type>BUILDING_NATIONAL_SCIENCE_FOUNDATION</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_NSF</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NSF_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NSF_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_NATIONAL_SCIENCE_FOUNDATION</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_SCIENCE_FOUNDATION_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_NATIONAL_SCIENCE_FOUNDATION_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
@@ -4926,7 +4926,7 @@
 			<iFreeTechs>1</iFreeTechs>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_NSF</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SCIENCE_FOUNDATION</ArtDefineTag>
 		</BuildingInfo>
 		<!--↓ National Smelters  noe Not Near A City Smelters↓-->
 		<BuildingInfo>
@@ -5502,14 +5502,14 @@
 		<!--↑ National Smelters ↑-->
 		<BuildingInfo>
 			<!-- National Sports League -->
-			<Type>BUILDING_NHL</Type>
+			<Type>BUILDING_NATIONAL_SPORTS_LEAGUE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_NHL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NHL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NHL_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_NATIONAL_SPORTS_LEAGUE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_SPORTS_LEAGUE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_NATIONAL_SPORTS_LEAGUE_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_MODERN_SPORTS</PrereqTech>
 			<ObsoleteTech>TECH_BINARY_PSYCHOKINESIS</ObsoleteTech>
@@ -5682,14 +5682,14 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National Weather Service -->
-			<Type>BUILDING_NWS</Type>
+			<Type>BUILDING_NATIONAL_WEATHER_SERVICE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_NWS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NWS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_NWS_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_NATIONAL_WEATHER_SERVICE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_WEATHER_SERVICE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_NATIONAL_WEATHER_SERVICE_STRATEGY</Strategy>
 			<!-- Prerequisites -->
 			<PrereqTech>TECH_RADIO</PrereqTech>
 			<TechTypes>
@@ -5752,7 +5752,7 @@
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>5</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_NWS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_WEATHER_SERVICE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- National Zoo -->
@@ -7349,7 +7349,7 @@
 					<iProductionModifier>15</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_NHL</BuildingType>
+					<BuildingType>BUILDING_NATIONAL_SPORTS_LEAGUE</BuildingType>
 					<iProductionModifier>15</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>

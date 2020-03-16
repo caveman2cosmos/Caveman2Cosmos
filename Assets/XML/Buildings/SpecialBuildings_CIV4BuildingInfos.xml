@@ -12232,7 +12232,7 @@
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 				<ReplaceBuilding>
-					<BuildingType>BUILDING_IROQUOIS_LONGHOUSE</BuildingType>
+					<BuildingType>BUILDING_LONGHOUSE</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 				<ReplaceBuilding>
@@ -12635,13 +12635,13 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Longhouse) -->
-			<Type>BUILDING_IROQUOIS_LONGHOUSE</Type>
-			<Description>TXT_KEY_BUILDING_LONGHOUSE2</Description>
-			<Civilopedia>TXT_KEY_BUILDING_IROQUOIS_LONGHOUSE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_COURTHOUSE_STRATEGY</Strategy>
+			<Type>BUILDING_LONGHOUSE</Type>
+			<Description>TXT_KEY_BUILDING_LONGHOUSE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LONGHOUSE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_LONGHOUSE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
-			<ArtDefineTag>ART_DEF_BUILDING_IROQUOIS_LONGHOUSE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_LONGHOUSE</ArtDefineTag>
 			<fVisibilityPriority>10000</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -14463,7 +14463,7 @@
 			<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_NFS</BuildingType>
+				<BuildingType>BUILDING_NATIONAL_FIRE_SERVICE</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Construction cost -->
@@ -14609,7 +14609,7 @@
 			<PrereqTech>TECH_ELECTRONICS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_NFS</BuildingType>
+				<BuildingType>BUILDING_NATIONAL_FIRE_SERVICE</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Construction cost -->
@@ -18321,7 +18321,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SCULPTURE</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_PYRAMID</BuildingType>
+				<BuildingType>BUILDING_GREAT_PYRAMID</BuildingType>
 				<BuildingType>BUILDING_SPHINX</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Construction cost -->

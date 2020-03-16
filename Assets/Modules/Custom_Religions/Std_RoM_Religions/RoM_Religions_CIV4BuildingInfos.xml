@@ -453,13 +453,13 @@
 		</BuildingInfo>
 <!-- Nagualismo -->
 		<BuildingInfo>
-			<Type>BUILDING_PYRAMID_OF_THE_MOON</Type>
+			<Type>BUILDING_GREAT_PYRAMID_OF_THE_MOON</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_PYRAMID_OF_THE_MOON</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PYRAMID_OF_THE_MOON_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_PYRAMID_OF_THE_MOON_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_GREAT_PYRAMID_OF_THE_MOON</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GREAT_PYRAMID_OF_THE_MOON_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GREAT_PYRAMID_OF_THE_MOON_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PYRAMID_OF_THE_MOON</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GREAT_PYRAMID_OF_THE_MOON</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_PYRAMID_OF_THE_MOON</MovieDefineTag>
 			<ReligionType>RELIGION_NAGHUALISM</ReligionType>
 			<StateReligion>RELIGION_NAGHUALISM</StateReligion>
@@ -532,13 +532,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PYRAMID_OF_THE_SUN</Type>
+			<Type>BUILDING_GREAT_PYRAMID_OF_THE_SUN</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_PYRAMID_OF_THE_SUN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PYRAMID_OF_THE_SUN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_PYRAMID_OF_THE_SUN_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_GREAT_PYRAMID_OF_THE_SUN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GREAT_PYRAMID_OF_THE_SUN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GREAT_PYRAMID_OF_THE_SUN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PYRAMID_OF_THE_SUN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GREAT_PYRAMID_OF_THE_SUN</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_PYRAMID_OF_THE_SUN</MovieDefineTag>
 			<ReligionType>RELIGION_NAGHUALISM</ReligionType>
 			<StateReligion>RELIGION_NAGHUALISM</StateReligion>

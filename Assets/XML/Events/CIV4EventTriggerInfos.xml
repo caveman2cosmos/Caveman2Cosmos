@@ -4191,7 +4191,7 @@
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
 				<Building>BUILDING_FORGE</Building>
-				<Building>BUILDING_JEWELLERY</Building>
+				<Building>BUILDING_JEWELER</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<iNumBuildingsGlobal>1</iNumBuildingsGlobal>
@@ -8187,7 +8187,7 @@
 			<iWeight>150</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<Building>BUILDING_OBELISK</Building>
+				<Building>BUILDING_MONUMENT</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>

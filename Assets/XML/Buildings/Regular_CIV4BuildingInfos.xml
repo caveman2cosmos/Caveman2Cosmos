@@ -52305,12 +52305,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Jeweler -->
-			<Type>BUILDING_JEWELLERY</Type>
-			<Description>TXT_KEY_BUILDING_JEWELLERY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_JEWELLERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_JEWELLERY_STRATEGY</Strategy>
+			<Type>BUILDING_JEWELER</Type>
+			<Description>TXT_KEY_BUILDING_JEWELER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_JEWELER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_JEWELER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_JEWELLERY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_JEWELER</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_JEWELLERY</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -54882,17 +54882,17 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Lava Rock Gatherer -->
-			<Type>BUILDING_LAVA_ROCK_QUARRY</Type>
+			<Type>BUILDING_GATHERER_LAVA_ROCK</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_LAVA_ROCK_QUARRY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LAVA_ROCK_QUARRY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_LAVA_ROCK_QUARRY_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_GATHERER_LAVA_ROCK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_LAVA_ROCK_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_LAVA_ROCK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_LAVA_ROCK_QUARRY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_LAVA_ROCK</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -65125,10 +65125,10 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Monument -->
-			<Type>BUILDING_OBELISK</Type>
-			<Description>TXT_KEY_BUILDING_OBELISK</Description>
+			<Type>BUILDING_MONUMENT</Type>
+			<Description>TXT_KEY_BUILDING_MONUMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MONUMENT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_OBELISK_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_MONUMENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MONUMENT</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_OBELISK</ConstructSound>
@@ -65149,7 +65149,7 @@
 			<ObsoleteTech>TECH_ASTRONOMY</ObsoleteTech>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
-					<BuildingType>BUILDING_EGYPTIAN_OBELISK</BuildingType>
+					<BuildingType>BUILDING_OBELISK</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 				<ReplaceBuilding>
@@ -68667,12 +68667,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Obelisk -->
-			<Type>BUILDING_EGYPTIAN_OBELISK</Type>
-			<Description>TXT_KEY_BUILDING_EGYPTIAN_OBELISK</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EGYPTIAN_OBELISK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_EGYPTIAN_OBELISK_STRATEGY</Strategy>
+			<Type>BUILDING_OBELISK</Type>
+			<Description>TXT_KEY_BUILDING_OBELISK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_OBELISK_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_OBELISK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_EGYPTIAN_OBELISK</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_OBELISK</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_OBELISK</ConstructSound>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -91198,7 +91198,7 @@
 			<Type>BUILDING_STELE</Type>
 			<Description>TXT_KEY_BUILDING_STELE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_STELE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_OBELISK_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_MONUMENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_STELE</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_OBELISK</ConstructSound>
@@ -107256,7 +107256,7 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_LAVA_ROCK_QUARRY</BuildingType>
+				<BuildingType>BUILDING_GATHERER_LAVA_ROCK</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
@@ -107627,7 +107627,7 @@
 			</BonusCommerceModifiers>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_PYRAMID</BuildingType>
+					<BuildingType>BUILDING_GREAT_PYRAMID</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>

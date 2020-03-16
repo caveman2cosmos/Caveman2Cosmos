@@ -378,7 +378,7 @@
 			<Button>Art/Interface/Buttons/National_Wonders/triumph_column.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_OBELISK</Type>
+			<Type>ART_DEF_BUILDING_MONUMENT</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1.25</fScale>
@@ -388,7 +388,7 @@
 			<Button>,Art/Interface/Buttons/Buildings/Obelisk.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,6,4</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_EGYPTIAN_OBELISK</Type>
+			<Type>ART_DEF_BUILDING_OBELISK</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1.25</fScale>
@@ -1238,7 +1238,7 @@
 			<Button>Art/Interface/Buttons/National_Wonders/scotland_yard.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PYRAMID</Type>
+			<Type>ART_DEF_BUILDING_GREAT_PYRAMID</Type>
 			<LSystem>LSYSTEM_4x4</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>3.03</fScale>
@@ -2298,7 +2298,7 @@
 			<Button>,Art/Interface/Buttons/Buildings/Harems.dds,Art/Interface/Buttons/RoM_Building_Atlas.dds,4,4</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_JEWELLERY</Type>
+			<Type>ART_DEF_BUILDING_JEWELER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -2568,7 +2568,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Religions/Kemetism/temple_of_isis.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_IROQUOIS_LONGHOUSE</Type>
+			<Type>ART_DEF_BUILDING_LONGHOUSE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -3749,7 +3749,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Control_Tower.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NWS</Type>
+			<Type>ART_DEF_BUILDING_NATIONAL_WEATHER_SERVICE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -8250,7 +8250,7 @@
 			<Button>Art/Interface/Buttons/Buildings/jetstreampowerplant.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_LAVA_ROCK_QUARRY</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_LAVA_ROCK</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -19784,7 +19784,7 @@
 			<Button>art/Firestorm/Buttons/Fire_Dock.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NFS</Type>
+			<Type>ART_DEF_BUILDING_NATIONAL_FIRE_SERVICE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -23874,7 +23874,7 @@
 			<Button>art/Science/art/chemistrylab.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NSF</Type>
+			<Type>ART_DEF_BUILDING_NATIONAL_SCIENCE_FOUNDATION</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
