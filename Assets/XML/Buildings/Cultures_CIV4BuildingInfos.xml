@@ -1867,11 +1867,11 @@
 			<!-- Misc. Effects -->
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_PYRAMID_OF_THE_MOON</BuildingType>
+					<BuildingType>BUILDING_GREAT_PYRAMID_OF_THE_MOON</BuildingType>
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_PYRAMID_OF_THE_SUN</BuildingType>
+					<BuildingType>BUILDING_GREAT_PYRAMID_OF_THE_SUN</BuildingType>
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -3568,7 +3568,7 @@
 			<!-- Misc. Effects -->
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_PYRAMID</BuildingType>
+					<BuildingType>BUILDING_GREAT_PYRAMID</BuildingType>
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -3584,7 +3584,7 @@
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_ABU</BuildingType>
+					<BuildingType>BUILDING_ABU_SIMBEL</BuildingType>
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -3641,7 +3641,7 @@
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_ADRIANOS_WALL</BuildingType>
+					<BuildingType>BUILDING_HADRIAN_WALL</BuildingType>
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -7740,7 +7740,7 @@
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_ADRIANOS_WALL</BuildingType>
+					<BuildingType>BUILDING_HADRIAN_WALL</BuildingType>
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>

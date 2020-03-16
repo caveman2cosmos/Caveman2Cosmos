@@ -21,8 +21,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_11_DIMENSIONAL_CITY_PEDIA</Tag>
-		<English>This city has 11 dimensions.  Traffic can be challenging.</English>
-		<French>This city has 11 dimensions.  Traffic can be challenging.</French>
+		<English>This city has 11 dimensions. Traffic can be challenging.</English>
+		<French>This city has 11 dimensions. Traffic can be challenging.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_11_DIMENSIONAL_CITY_STRATEGY</Tag>
@@ -63,8 +63,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_5D_ARTIFICIAL_GRAVITY_PEDIA</Tag>
-		<English>Generate gravity in high dimensions.  Useful for building hyperstructures.</English>
-		<French>Generate gravity in high dimensions.  Useful for building hyperstructures.</French>
+		<English>Generate gravity in high dimensions. Useful for building hyperstructures.</English>
+		<French>Generate gravity in high dimensions. Useful for building hyperstructures.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_5D_ARTIFICIAL_GRAVITY_STRATEGY</Tag>
@@ -217,8 +217,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ADVANCED_FLOODWALL_PEDIA</Tag>
-		<English>Climate Change has led to increased frequency and intensity of storms, as well as sea level rise.  This floodwall is designed to protect vulnerable coastal cities from the angry seas.  But if climate change is not brought under control, the city may simply need to be abanonded.</English>
-		<French>Climate Change has led to increased frequency and intensity of storms, as well as sea level rise.  This floodwall is designed to protect vulnerable coastal cities from the angry seas.  But if climate change is not brought under control, the city may simply need to be abanonded.</French>
+		<English>Climate Change has led to increased frequency and intensity of storms, as well as sea level rise. This floodwall is designed to protect vulnerable coastal cities from the angry seas. But if climate change is not brought under control, the city may simply need to be abanonded.</English>
+		<French>Climate Change has led to increased frequency and intensity of storms, as well as sea level rise. This floodwall is designed to protect vulnerable coastal cities from the angry seas. But if climate change is not brought under control, the city may simply need to be abanonded.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ADVANCED_FLOODWALL_STRATEGY</Tag>
@@ -427,7 +427,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AI_INVESTMENT_PEDIA</Tag>
-		<English>Automated investment services now outperform human investors in all circumstances.  The disintermediation of financial services now make high yield investments available to all social classes, reducing inequality.  Still gets a bailout.</English>
+		<English>Automated investment services now outperform human investors in all circumstances. The disintermediation of financial services now make high yield investments available to all social classes, reducing inequality. Still gets a bailout.</English>
 		<French>Les services d'investissement automatisés surpassent désormais les investisseurs humains en toutes circonstances. La désintermédiation des services financiers rend désormais les investissements à haut rendement accessibles à toutes les classes sociales, réduisant les inégalités. Obtient toujours un renflouement.</French>
 	</TEXT>
 	<TEXT>
@@ -748,8 +748,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANDROMEDA_PEDIA</Tag>
-		<English>The ultimate journey.  These colonists are venturing to Andromeda Galaxy to conduct research and start a brand new civilization.  Don't expect a post card.</English>
-		<French>The ultimate journey.  These colonists are venturing to Andromeda Galaxy to conduct research and start a brand new civilization.  Don't expect a post card.</French>
+		<English>The ultimate journey. These colonists are venturing to Andromeda Galaxy to conduct research and start a brand new civilization. Don't expect a post card.</English>
+		<French>The ultimate journey. These colonists are venturing to Andromeda Galaxy to conduct research and start a brand new civilization. Don't expect a post card.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANDROMEDA_STRATEGY</Tag>
@@ -762,8 +762,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_SUFFERING_PREVENTION_PEDIA</Tag>
-		<English>Though a variety of means, including simulated ecosystems and nanobotic neuromanipulators, all suffering of animals in this ecosystem is prevented.  It is done through your society's growing belief in the creation of utopia and elimination of suffering in all its forms in the universe.[PARAGRAPH:2]Source: Wikipedia</English>
-		<French>Though a variety of means, including simulated ecosystems and nanobotic neuromanipulators, all suffering of animals in this ecosystem is prevented.  It is done through your society's growing belief in the creation of utopia and elimination of suffering in all its forms in the universe.[PARAGRAPH:2]Source: Wikipedia</French>
+		<English>Though a variety of means, including simulated ecosystems and nanobotic neuromanipulators, all suffering of animals in this ecosystem is prevented. It is done through your society's growing belief in the creation of utopia and elimination of suffering in all its forms in the universe.[PARAGRAPH:2]Source: Wikipedia</English>
+		<French>Though a variety of means, including simulated ecosystems and nanobotic neuromanipulators, all suffering of animals in this ecosystem is prevented. It is done through your society's growing belief in the creation of utopia and elimination of suffering in all its forms in the universe.[PARAGRAPH:2]Source: Wikipedia</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_SUFFERING_PREVENTION_STRATEGY</Tag>
@@ -818,7 +818,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANTIMATTER_HARVESTER_PEDIA</Tag>
-		<English>Small amounts of antimatter might be harvest from Earth's radiation belts.  See http://www.centauri-dreams.org/?p=36068</English>
+		<English>Small amounts of antimatter might be harvest from Earth's radiation belts. See http://www.centauri-dreams.org/?p=36068</English>
 		<French>De petites quantités d'antimatière pourraient être récoltées à partir des ceintures de rayonnement de la Terre. Voir http://www.centauri-dreams.org/?p=36068</French>
 	</TEXT>
 	<TEXT>
@@ -846,7 +846,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANTIMATTER_INITIATED_FUSION_PEDIA</Tag>
-		<English>This plant uses antimatter to catalyze fusion reactions, allowing more compact devices.  The principle is similar to ACNP propulsion.</English>
+		<English>This plant uses antimatter to catalyze fusion reactions, allowing more compact devices. The principle is similar to ACNP propulsion.</English>
 		<French>Cette centrale utilise l'antimatière pour catalyser les réactions de fusion, permettant des appareils plus compacts. Le principe est similaire à la propulsion ACNP.</French>
 	</TEXT>
 	<TEXT>
@@ -1070,8 +1070,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARTISAN_PLANET_DESIGNER_PEDIA</Tag>
-		<English>These artisans effortly design and create entire planets.  Earth might have been one of them.</English>
-		<French>These artisans effortly design and create entire planets.  Earth might have been one of them.</French>
+		<English>These artisans effortly design and create entire planets. Earth might have been one of them.</English>
+		<French>These artisans effortly design and create entire planets. Earth might have been one of them.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ARTISAN_PLANET_DESIGNER_STRATEGY</Tag>
@@ -1210,8 +1210,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASTEROID_INTERIOR_CITY_PEDIA</Tag>
-		<English>A city inside a hollowed-out asteroid.  See https://en.wikipedia.org/wiki/Colonization_of_the_asteroids</English>
-		<French>A city inside a hollowed-out asteroid.  See https://en.wikipedia.org/wiki/Colonization_of_the_asteroids</French>
+		<English>A city inside a hollowed-out asteroid. See https://en.wikipedia.org/wiki/Colonization_of_the_asteroids</English>
+		<French>A city inside a hollowed-out asteroid. See https://en.wikipedia.org/wiki/Colonization_of_the_asteroids</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASTEROID_INTERIOR_CITY_STRATEGY</Tag>
@@ -1276,12 +1276,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASTEROID_RARE</Tag>
 		<English>Asteroid Mine (Rare Minerals)</English>
-		<French>Mine  d'Astéroïde(Minéraux rares)</French>
+		<French>Mine d'Astéroïde (Minéraux rares)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASTEROID_RARE_PEDIA</Tag>
-		<English>As acoustic weapons were developed for crowd and riot control, scientists gained a much greater understanding of how atmospheric shockwaves affect the molecular structure of matter.  This led to new techniques for separating materials in ore, improving the range of materials that could be economically recovered from asteroid mining.</English>
-		<French>As acoustic weapons were developed for crowd and riot control, scientists gained a much greater understanding of how atmospheric shockwaves affect the molecular structure of matter.  This led to new techniques for separating materials in ore, improving the range of materials that could be economically recovered from asteroid mining.</French>
+		<English>As acoustic weapons were developed for crowd and riot control, scientists gained a much greater understanding of how atmospheric shockwaves affect the molecular structure of matter. This led to new techniques for separating materials in ore, improving the range of materials that could be economically recovered from asteroid mining.</English>
+		<French>As acoustic weapons were developed for crowd and riot control, scientists gained a much greater understanding of how atmospheric shockwaves affect the molecular structure of matter. This led to new techniques for separating materials in ore, improving the range of materials that could be economically recovered from asteroid mining.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASTEROID_RARE_STRATEGY</Tag>
@@ -1308,8 +1308,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASTRONOMY_DATABASE_PEDIA</Tag>
-		<English>By the early 21st Century, vast volumes of astronomical data were becoming available from projects such as SETI and the Kepler Space Telescope.  Projects such as SETI@home allowed hobbyists to contribute their brain power and desktop computing power to sifting through the data.  These were the foundations of the era of citizen science.</English>
-		<French>By the early 21st Century, vast volumes of astronomical data were becoming available from projects such as SETI and the Kepler Space Telescope.  Projects such as SETI@home allowed hobbyists to contribute their brain power and desktop computing power to sifting through the data.  These were the foundations of the era of citizen science.</French>
+		<English>By the early 21st Century, vast volumes of astronomical data were becoming available from projects such as SETI and the Kepler Space Telescope. Projects such as SETI@home allowed hobbyists to contribute their brain power and desktop computing power to sifting through the data. These were the foundations of the era of citizen science.</English>
+		<French>By the early 21st Century, vast volumes of astronomical data were becoming available from projects such as SETI and the Kepler Space Telescope. Projects such as SETI@home allowed hobbyists to contribute their brain power and desktop computing power to sifting through the data. These were the foundations of the era of citizen science.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASTRONOMY_DATABASE_STRATEGY</Tag>
@@ -1406,7 +1406,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ATOMICALLY_PRECISE_ALLOYS_PEDIA</Tag>
-		<English>This factory can manufacture at sub-nanometer precision.  This allows for extremely precise and strong metallic alloys.</English>
+		<English>This factory can manufacture at sub-nanometer precision. This allows for extremely precise and strong metallic alloys.</English>
 		<French>Cette usine peut fabriquer avec une précision sub-nanométrique. Cela permet des alliages métalliques extrêmement précis et solides.</French>
 	</TEXT>
 	<TEXT>
@@ -1476,8 +1476,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AUTOMATED_HIGHWAY_PEDIA</Tag>
-		<English>This highway is restricted to self-driving cars.  This allows platooning, greatly increasing throughput and fuel efficiency, and it nearly eliminates accidents.</English>
-		<French>This highway is restricted to self-driving cars.  This allows platooning, greatly increasing throughput and fuel efficiency, and it nearly eliminates accidents.</French>
+		<English>This highway is restricted to self-driving cars. This allows platooning, greatly increasing throughput and fuel efficiency, and it nearly eliminates accidents.</English>
+		<French>This highway is restricted to self-driving cars. This allows platooning, greatly increasing throughput and fuel efficiency, and it nearly eliminates accidents.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AUTOMATED_HIGHWAY_STRATEGY</Tag>
@@ -1630,8 +1630,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BEHAVIOR_PREDICTION_PEDIA</Tag>
-		<English>Brain scans are taken and emulations are run to predict behavior.  Not 100% kosher for civil libertarians.</English>
-		<French>Brain scans are taken and emulations are run to predict behavior.  Not 100% kosher for civil libertarians.</French>
+		<English>Brain scans are taken and emulations are run to predict behavior. Not 100% kosher for civil libertarians.</English>
+		<French>Brain scans are taken and emulations are run to predict behavior. Not 100% kosher for civil libertarians.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BEHAVIOR_PREDICTION_STRATEGY</Tag>
@@ -1742,8 +1742,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BIOHACKER_STUDIO_PEDIA</Tag>
-		<English>This facility allows biohackers to convene and work outside of the strict regulatory environment.  They advance knowledge, but you don't know exactly what they're working on...</English>
-		<French>This facility allows biohackers to convene and work outside of the strict regulatory environment.  They advance knowledge, but you don't know exactly what they're working on...</French>
+		<English>This facility allows biohackers to convene and work outside of the strict regulatory environment. They advance knowledge, but you don't know exactly what they're working on...</English>
+		<French>This facility allows biohackers to convene and work outside of the strict regulatory environment. They advance knowledge, but you don't know exactly what they're working on...</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BIOHACKER_STUDIO_STRATEGY</Tag>
@@ -1756,8 +1756,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BIOLOGICAL_CARS_PEDIA</Tag>
-		<English>These cars are alive and conscious.  It's a little creepy.</English>
-		<French>These cars are alive and conscious.  It's a little creepy.</French>
+		<English>These cars are alive and conscious. It's a little creepy.</English>
+		<French>These cars are alive and conscious. It's a little creepy.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BIOLOGICAL_CARS_STRATEGY</Tag>
@@ -1892,12 +1892,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BLACKHOLE_COLONY</Tag>
 		<English>Interstellar Black Hole Colony</English>
-		<French>Colonie Interstellaire de  Black Hole</French>
+		<French>Colonie Interstellaire de Black Hole</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BLACKHOLE_COLONY_PEDIA</Tag>
-		<English>No biological life forms dare live here.  This colony is a purely computational substrate.[PARAGRAPH:2]See http://filmschoolrejects.com/features/interstellar-movie-truth.php</English>
-		<French>No biological life forms dare live here.  This colony is a purely computational substrate.[PARAGRAPH:2]See http://filmschoolrejects.com/features/interstellar-movie-truth.php</French>
+		<English>No biological life forms dare live here. This colony is a purely computational substrate.[PARAGRAPH:2]See http://filmschoolrejects.com/features/interstellar-movie-truth.php</English>
+		<French>No biological life forms dare live here. This colony is a purely computational substrate.[PARAGRAPH:2]See http://filmschoolrejects.com/features/interstellar-movie-truth.php</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BLACKHOLE_COLONY_STRATEGY</Tag>
@@ -1924,8 +1924,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BLACKHOLE_POWER_PEDIA</Tag>
-		<English>This contraption uses a reflective partial Dyson Sphere to move a star into a black hole.  Then the massive outgassing jets from the black hole are harnessed for power.[PARAGRAPH:2]See http://news.stanford.edu/news/2006/april26/green-042606.html</English>
-		<French>This contraption uses a reflective partial Dyson Sphere to move a star into a black hole.  Then the massive outgassing jets from the black hole are harnessed for power.[PARAGRAPH:2]See http://news.stanford.edu/news/2006/april26/green-042606.html</French>
+		<English>This contraption uses a reflective partial Dyson Sphere to move a star into a black hole. Then the massive outgassing jets from the black hole are harnessed for power.[PARAGRAPH:2]See http://news.stanford.edu/news/2006/april26/green-042606.html</English>
+		<French>This contraption uses a reflective partial Dyson Sphere to move a star into a black hole. Then the massive outgassing jets from the black hole are harnessed for power.[PARAGRAPH:2]See http://news.stanford.edu/news/2006/april26/green-042606.html</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BLACKHOLE_POWER_STRATEGY</Tag>
@@ -2036,8 +2036,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BLOCKCHAIN_FINANCIAL_SERVICES_PEDIA</Tag>
-		<English>Blockchain technology is used to provide decentralized commerce and money exchange.  It is much more efficient than working through institutional financial intermediaries, such as banks.[PARAGRAPH:2]http://betanews.com/2015/12/28/the-benefits-of-blockchain-for-financial-services/</English>
-		<French>Blockchain technology is used to provide decentralized commerce and money exchange.  It is much more efficient than working through institutional financial intermediaries, such as banks.[PARAGRAPH:2]http://betanews.com/2015/12/28/the-benefits-of-blockchain-for-financial-services/</French>
+		<English>Blockchain technology is used to provide decentralized commerce and money exchange. It is much more efficient than working through institutional financial intermediaries, such as banks.[PARAGRAPH:2]http://betanews.com/2015/12/28/the-benefits-of-blockchain-for-financial-services/</English>
+		<French>Blockchain technology is used to provide decentralized commerce and money exchange. It is much more efficient than working through institutional financial intermediaries, such as banks.[PARAGRAPH:2]http://betanews.com/2015/12/28/the-benefits-of-blockchain-for-financial-services/</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BLOCKCHAIN_FINANCIAL_SERVICES_STRATEGY</Tag>
@@ -2092,8 +2092,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BRANE_ASSEMBLER_PEDIA</Tag>
-		<English>This factory exists in branespace.  I'm not sure how it works either.</English>
-		<French>This factory exists in branespace.  I'm not sure how it works either.</French>
+		<English>This factory exists in branespace. I'm not sure how it works either.</English>
+		<French>This factory exists in branespace. I'm not sure how it works either.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BRANE_ASSEMBLER_STRATEGY</Tag>
@@ -2186,7 +2186,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BUSINESS_DISTRICT</Tag>
 		<English>Interstellar Business District</English>
-		<French>Quartier Interstellaire de  Business</French>
+		<French>Quartier Interstellaire de Business</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BUSINESS_DISTRICT_PEDIA</Tag>
@@ -2218,8 +2218,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BUSSARD_RAMJET_PORT_PEDIA</Tag>
-		<English>The Bussard ramjet is a theoretical method of spacecraft propulsion proposed in 1960 by the physicist Robert W. Bussard, popularized by Poul Anderson's novel Tau Zero, Larry Niven in his Known Space series of books, Vernor Vinge in his Zones of Thought series, and referred to by Carl Sagan in the television series and book Cosmos.  Bussard proposed a ramjet variant of a fusion rocket capable of reasonable interstellar travel, using enormous electromagnetic fields (ranging from kilometers to many thousands of kilometers in diameter) as a ram scoop to collect and compress hydrogen from the interstellar medium. High speeds force the reactive mass into a progressively constricted magnetic field, compressing it until thermonuclear fusion occurs. The magnetic field then directs the energy as rocket exhaust opposite to the intended direction of travel, thereby accelerating the vessel.[PARAGRAPH:2] Wikipedia</English>
-		<French>The Bussard ramjet is a theoretical method of spacecraft propulsion proposed in 1960 by the physicist Robert W. Bussard, popularized by Poul Anderson's novel Tau Zero, Larry Niven in his Known Space series of books, Vernor Vinge in his Zones of Thought series, and referred to by Carl Sagan in the television series and book Cosmos.  Bussard proposed a ramjet variant of a fusion rocket capable of reasonable interstellar travel, using enormous electromagnetic fields (ranging from kilometers to many thousands of kilometers in diameter) as a ram scoop to collect and compress hydrogen from the interstellar medium. High speeds force the reactive mass into a progressively constricted magnetic field, compressing it until thermonuclear fusion occurs. The magnetic field then directs the energy as rocket exhaust opposite to the intended direction of travel, thereby accelerating the vessel.[PARAGRAPH:2] Wikipedia</French>
+		<English>The Bussard ramjet is a theoretical method of spacecraft propulsion proposed in 1960 by the physicist Robert W. Bussard, popularized by Poul Anderson's novel Tau Zero, Larry Niven in his Known Space series of books, Vernor Vinge in his Zones of Thought series, and referred to by Carl Sagan in the television series and book Cosmos. Bussard proposed a ramjet variant of a fusion rocket capable of reasonable interstellar travel, using enormous electromagnetic fields (ranging from kilometers to many thousands of kilometers in diameter) as a ram scoop to collect and compress hydrogen from the interstellar medium. High speeds force the reactive mass into a progressively constricted magnetic field, compressing it until thermonuclear fusion occurs. The magnetic field then directs the energy as rocket exhaust opposite to the intended direction of travel, thereby accelerating the vessel.[PARAGRAPH:2] Wikipedia</English>
+		<French>The Bussard ramjet is a theoretical method of spacecraft propulsion proposed in 1960 by the physicist Robert W. Bussard, popularized by Poul Anderson's novel Tau Zero, Larry Niven in his Known Space series of books, Vernor Vinge in his Zones of Thought series, and referred to by Carl Sagan in the television series and book Cosmos. Bussard proposed a ramjet variant of a fusion rocket capable of reasonable interstellar travel, using enormous electromagnetic fields (ranging from kilometers to many thousands of kilometers in diameter) as a ram scoop to collect and compress hydrogen from the interstellar medium. High speeds force the reactive mass into a progressively constricted magnetic field, compressing it until thermonuclear fusion occurs. The magnetic field then directs the energy as rocket exhaust opposite to the intended direction of travel, thereby accelerating the vessel.[PARAGRAPH:2] Wikipedia</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BUSSARD_RAMJET_PORT_STRATEGY</Tag>
@@ -2274,8 +2274,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CALCIUM_MINE_PEDIA</Tag>
-		<English>Magnesium and Calcium are needed to sequester CO2.  See http://terraforming.wikia.com/wiki/Venus</English>
-		<French>Magnesium and Calcium are needed to sequester CO2.  See http://terraforming.wikia.com/wiki/Venus</French>
+		<English>Magnesium and Calcium are needed to sequester CO2. See http://terraforming.wikia.com/wiki/Venus</English>
+		<French>Magnesium and Calcium are needed to sequester CO2. See http://terraforming.wikia.com/wiki/Venus</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CALCIUM_MINE_STRATEGY</Tag>
@@ -2288,8 +2288,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CALLISTO_FLOATING_CONTINENT_PEDIA</Tag>
-		<English>As terraforming commences, the surface of Callisto melts.  An artificial continent is thus needed to live.  See http://terraforming.wikia.com/wiki/Callisto</English>
-		<French>As terraforming commences, the surface of Callisto melts.  An artificial continent is thus needed to live.  See http://terraforming.wikia.com/wiki/Callisto</French>
+		<English>As terraforming commences, the surface of Callisto melts. An artificial continent is thus needed to live. See http://terraforming.wikia.com/wiki/Callisto</English>
+		<French>As terraforming commences, the surface of Callisto melts. An artificial continent is thus needed to live. See http://terraforming.wikia.com/wiki/Callisto</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CALLISTO_FLOATING_CONTINENT_STRATEGY</Tag>
@@ -2302,8 +2302,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CALLISTO_NITROGEN_GENERATOR_PEDIA</Tag>
-		<English>Engineered bacteria are used to convert ammonia to nitrogen to buffer the atmosphere.  See http://terraforming.wikia.com/wiki/Callisto</English>
-		<French>Engineered bacteria are used to convert ammonia to nitrogen to buffer the atmosphere.  See http://terraforming.wikia.com/wiki/Callisto</French>
+		<English>Engineered bacteria are used to convert ammonia to nitrogen to buffer the atmosphere. See http://terraforming.wikia.com/wiki/Callisto</English>
+		<French>Engineered bacteria are used to convert ammonia to nitrogen to buffer the atmosphere. See http://terraforming.wikia.com/wiki/Callisto</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CALLISTO_NITROGEN_GENERATOR_STRATEGY</Tag>
@@ -2316,8 +2316,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CALLISTO_NOBLE_GAS_PEDIA</Tag>
-		<English>Small amounts of noble gas are added to the atmosphere as a buffer and for a greenhouse effect.  See http://terraforming.wikia.com/wiki/Callisto</English>
-		<French>Small amounts of noble gas are added to the atmosphere as a buffer and for a greenhouse effect.  See http://terraforming.wikia.com/wiki/Callisto</French>
+		<English>Small amounts of noble gas are added to the atmosphere as a buffer and for a greenhouse effect. See http://terraforming.wikia.com/wiki/Callisto</English>
+		<French>Small amounts of noble gas are added to the atmosphere as a buffer and for a greenhouse effect. See http://terraforming.wikia.com/wiki/Callisto</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CALLISTO_NOBLE_GAS_STRATEGY</Tag>
@@ -2330,8 +2330,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CALLISTO_RESUPPLY_BASE_PEDIA</Tag>
-		<English>A lonely outpost on Callisto.  Helps supply missions farther out and gains a foothold for developing the SOLAR_SYSTEM system.</English>
-		<French>A lonely outpost on Callisto.  Helps supply missions farther out and gains a foothold for developing the SOLAR_SYSTEM system.</French>
+		<English>A lonely outpost on Callisto. Helps supply missions farther out and gains a foothold for developing the SOLAR_SYSTEM system.</English>
+		<French>A lonely outpost on Callisto. Helps supply missions farther out and gains a foothold for developing the SOLAR_SYSTEM system.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CALLISTO_RESUPPLY_BASE_STRATEGY</Tag>
@@ -2386,8 +2386,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAPTURED_IO_PEDIA</Tag>
-		<English>Io has been moved from Jupiter's orbit to Venus's.  This allows Io to be more heavily colonized and also speeds up Venus's rotation.</English>
-		<French>Io has been moved from Jupiter's orbit to Venus's.  This allows Io to be more heavily colonized and also speeds up Venus's rotation.</French>
+		<English>Io has been moved from Jupiter's orbit to Venus's. This allows Io to be more heavily colonized and also speeds up Venus's rotation.</English>
+		<French>Io has been moved from Jupiter's orbit to Venus's. This allows Io to be more heavily colonized and also speeds up Venus's rotation.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAPTURED_IO_STRATEGY</Tag>
@@ -2610,8 +2610,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CERES_TRADING_POST_PEDIA</Tag>
-		<English>A base for refueling spacecraft in interplanetary trade, and a source of raw materials.  See https://en.wikipedia.org/wiki/Mining_of_Ceres</English>
-		<French>A base for refueling spacecraft in interplanetary trade, and a source of raw materials.  See https://en.wikipedia.org/wiki/Mining_of_Ceres</French>
+		<English>A base for refueling spacecraft in interplanetary trade, and a source of raw materials. See https://en.wikipedia.org/wiki/Mining_of_Ceres</English>
+		<French>A base for refueling spacecraft in interplanetary trade, and a source of raw materials. See https://en.wikipedia.org/wiki/Mining_of_Ceres</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CERES_TRADING_POST_STRATEGY</Tag>
@@ -2876,8 +2876,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_BLACK_HOLE_PEDIA</Tag>
-		<English>A miniature black hole is created in the cislunar colony.  The move was controversial due to safety concerns, but such concerns were set aside after an aggressive marketing campaign from General Kugelblitz.  Matter is fed into the black hole to keep it stablized, and the Hawking radiation is harvested for energy.  The exhaust from the black hole also accelerates the colony, facilitating commerce.</English>
-		<French>A miniature black hole is created in the cislunar colony.  The move was controversial due to safety concerns, but such concerns were set aside after an aggressive marketing campaign from General Kugelblitz.  Matter is fed into the black hole to keep it stablized, and the Hawking radiation is harvested for energy.  The exhaust from the black hole also accelerates the colony, facilitating commerce.</French>
+		<English>A miniature black hole is created in the cislunar colony. The move was controversial due to safety concerns, but such concerns were set aside after an aggressive marketing campaign from General Kugelblitz. Matter is fed into the black hole to keep it stablized, and the Hawking radiation is harvested for energy. The exhaust from the black hole also accelerates the colony, facilitating commerce.</English>
+		<French>A miniature black hole is created in the cislunar colony. The move was controversial due to safety concerns, but such concerns were set aside after an aggressive marketing campaign from General Kugelblitz. Matter is fed into the black hole to keep it stablized, and the Hawking radiation is harvested for energy. The exhaust from the black hole also accelerates the colony, facilitating commerce.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_BLACK_HOLE_STRATEGY</Tag>
@@ -2890,8 +2890,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_CLAYTRONIC_PEDIA</Tag>
-		<English>The space station is now made of programmable matter.  This reduces maintenance and improves efficiency.</English>
-		<French>The space station is now made of programmable matter.  This reduces maintenance and improves efficiency.</French>
+		<English>The space station is now made of programmable matter. This reduces maintenance and improves efficiency.</English>
+		<French>The space station is now made of programmable matter. This reduces maintenance and improves efficiency.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_CLAYTRONIC_STRATEGY</Tag>
@@ -2932,8 +2932,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_ECONOMY_PEDIA</Tag>
-		<English>In the late 21st century, a thriving cislunar space economy was in operation.  Lunar and cislunar bases, a full-fledged asteroid mining industry, affordable launch infrastructure on Earth, and massive orbital solar arrays all came together to make a sustainable industry.  Energy and raw materials became so inexpensive that poverty had become a thing of the past.  Your civilization is reaching Kardashev Type I.  The growing lunar and orbital infrastucture also served as a base for much grander construction projects in space.</English>
-		<French>In the late 21st century, a thriving cislunar space economy was in operation.  Lunaire and cislunar bases, a full-fledged asteroid mining industry, affordable launch infrastructure on Earth, and massive orbital solar arrays all came together to make a sustainable industry.  Energy and raw materials became so inexpensive that poverty had become a thing of the past.  Your civilization is reaching Kardashev Type I.  The growing lunar and orbital infrastucture also served as a base for much grander construction projects in space.</French>
+		<English>In the late 21st century, a thriving cislunar space economy was in operation. Lunar and cislunar bases, a full-fledged asteroid mining industry, affordable launch infrastructure on Earth, and massive orbital solar arrays all came together to make a sustainable industry. Energy and raw materials became so inexpensive that poverty had become a thing of the past. Your civilization is reaching Kardashev Type I. The growing lunar and orbital infrastucture also served as a base for much grander construction projects in space.</English>
+		<French>In the late 21st century, a thriving cislunar space economy was in operation. Lunaire and cislunar bases, a full-fledged asteroid mining industry, affordable launch infrastructure on Earth, and massive orbital solar arrays all came together to make a sustainable industry. Energy and raw materials became so inexpensive that poverty had become a thing of the past. Your civilization is reaching Kardashev Type I. The growing lunar and orbital infrastucture also served as a base for much grander construction projects in space.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_ECONOMY_STRATEGY</Tag>
@@ -2960,8 +2960,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_EMP_PEDIA</Tag>
-		<English>A network of powerful EMP transmitters on Earth's mountain peaks are used to beam power to your Cislunar stations.  This not only gives the stations more power, it also reduces station construction cost and allows easier and faster movement.</English>
-		<French>A network of powerful EMP transmitters on Earth's mountain peaks are used to beam power to your Cislunaire stations.  This not only gives the stations more power, it also reduces station construction cost and allows easier and faster movement.</French>
+		<English>A network of powerful EMP transmitters on Earth's mountain peaks are used to beam power to your Cislunar stations. This not only gives the stations more power, it also reduces station construction cost and allows easier and faster movement.</English>
+		<French>A network of powerful EMP transmitters on Earth's mountain peaks are used to beam power to your Cislunaire stations. This not only gives the stations more power, it also reduces station construction cost and allows easier and faster movement.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_EMP_STRATEGY</Tag>
@@ -2988,8 +2988,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_GOV_PEDIA</Tag>
-		<English>In the good old days, there was enough open space beyond geosynchronous Earth orbit that all sorts of governments, private entities, and eccentric trillionaires could build large unregulated colonies. With increasing competition for orbital lanes and several high profile disasters caused by internal strife, more regulation was needed. Keeping several thousand people who are more or less trapped in close quarters working together was a major challenge.  New AI systems that can act impartially and anticipate interpersonal conflicts before they arise were employed to assist the process. Whether we should trust the AI is another matter.</English>
-		<French>In the good old days, there was enough open space beyond geosynchronous Earth orbit that all sorts of governments, private entities, and eccentric trillionaires could build large unregulated colonies. With increasing competition for orbital lanes and several high profile disasters caused by internal strife, more regulation was needed. Keeping several thousand people who are more or less trapped in close quarters working together was a major challenge.  New AI systems that can act impartially and anticipate interpersonal conflicts before they arise were employed to assist the process. Whether we should trust the AI is another matter.</French>
+		<English>In the good old days, there was enough open space beyond geosynchronous Earth orbit that all sorts of governments, private entities, and eccentric trillionaires could build large unregulated colonies. With increasing competition for orbital lanes and several high profile disasters caused by internal strife, more regulation was needed. Keeping several thousand people who are more or less trapped in close quarters working together was a major challenge. New AI systems that can act impartially and anticipate interpersonal conflicts before they arise were employed to assist the process. Whether we should trust the AI is another matter.</English>
+		<French>In the good old days, there was enough open space beyond geosynchronous Earth orbit that all sorts of governments, private entities, and eccentric trillionaires could build large unregulated colonies. With increasing competition for orbital lanes and several high profile disasters caused by internal strife, more regulation was needed. Keeping several thousand people who are more or less trapped in close quarters working together was a major challenge. New AI systems that can act impartially and anticipate interpersonal conflicts before they arise were employed to assist the process. Whether we should trust the AI is another matter.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_GOV_STRATEGY</Tag>
@@ -3155,8 +3155,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_SOCIAL_ENGINEERING_PEDIA</Tag>
-		<English>As cislunar colonies grew, social challenges grew with them.  Managing complex social problems such as crime, poverty, and unrest in a fragile, confined environment has always been a great challenge.  Tight systems of social engineering were developed out of sheer necessity.</English>
-		<French>As cislunar colonies grew, social challenges grew with them.  Managing complex social problems such as crime, poverty, and unrest in a fragile, confined environment has always been a great challenge.  Tight systems of social engineering were developed out of sheer necessity.</French>
+		<English>As cislunar colonies grew, social challenges grew with them. Managing complex social problems such as crime, poverty, and unrest in a fragile, confined environment has always been a great challenge. Tight systems of social engineering were developed out of sheer necessity.</English>
+		<French>As cislunar colonies grew, social challenges grew with them. Managing complex social problems such as crime, poverty, and unrest in a fragile, confined environment has always been a great challenge. Tight systems of social engineering were developed out of sheer necessity.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_SOCIAL_ENGINEERING_STRATEGY</Tag>
@@ -3169,8 +3169,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_SOLAR_ARRAY_PEDIA</Tag>
-		<English>The station launched with enough solar power for critical systems.  These expansion modules increase the power supply.</English>
-		<French>The station launched with enough solar power for critical systems.  These expansion modules increase the power supply.</French>
+		<English>The station launched with enough solar power for critical systems. These expansion modules increase the power supply.</English>
+		<French>The station launched with enough solar power for critical systems. These expansion modules increase the power supply.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_SOLAR_ARRAY_STRATEGY</Tag>
@@ -3379,8 +3379,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CLIMATE_GEOENGINEERING_PEDIA</Tag>
-		<English>The use of upper atmospheric aerosols to reflect sunlight and counter global warming.  Expensive, but it works.[PARAGRAPH:2]http://www.geoengineering.ox.ac.uk/what-is-geoengineering/what-is-geoengineering/</English>
-		<French>The use of upper atmospheric aerosols to reflect sunlight and counter global warming.  Expensive, but it works.[PARAGRAPH:2]http://www.geoengineering.ox.ac.uk/what-is-geoengineering/what-is-geoengineering/</French>
+		<English>The use of upper atmospheric aerosols to reflect sunlight and counter global warming. Expensive, but it works.[PARAGRAPH:2]http://www.geoengineering.ox.ac.uk/what-is-geoengineering/what-is-geoengineering/</English>
+		<French>The use of upper atmospheric aerosols to reflect sunlight and counter global warming. Expensive, but it works.[PARAGRAPH:2]http://www.geoengineering.ox.ac.uk/what-is-geoengineering/what-is-geoengineering/</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CLIMATE_GEOENGINEERING_STRATEGY</Tag>
@@ -3533,8 +3533,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COLONY_ECOSYSTEM_PEDIA</Tag>
-		<English>A closed, engineered ecosystem.  Greatly improves the quality of life in the space colony.</English>
-		<French>A closed, engineered ecosystem.  Greatly improves the quality of life in the space colony.</French>
+		<English>A closed, engineered ecosystem. Greatly improves the quality of life in the space colony.</English>
+		<French>A closed, engineered ecosystem. Greatly improves the quality of life in the space colony.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COLONY_ECOSYSTEM_STRATEGY</Tag>
@@ -3799,8 +3799,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CONSCIOUS_STAR_PEDIA</Tag>
-		<English>The possibility of stellar consciousness has been raised by the physicist Gregory Matloff.  Though seemingly far-fetched, it cannot be ruled out, and there is some highly tentative evidence to support it.  See http://www.centauri-dreams.org/?p=33995 [PARAGRAPH:2]In C2C, a star becomes conscious when an advanced civilization living around it initiates self-replicated and evolving chemical reactions in the star's outermost layers.  A network of conscious stars can communicate on behalf of the civilization, and over millions of years, they can subtly adjust their motion in desired ways.</English>
-		<French>The possibility of stellar consciousness has been raised by the physicist Gregory Matloff.  Though seemingly far-fetched, it cannot be ruled out, and there is some highly tentative evidence to support it.  See http://www.centauri-dreams.org/?p=33995 [PARAGRAPH:2]In C2C, a star becomes conscious when an advanced civilization living around it initiates self-replicated and evolving chemical reactions in the star's outermost layers.  A network of conscious stars can communicate on behalf of the civilization, and over millions of years, they can subtly adjust their motion in desired ways.</French>
+		<English>The possibility of stellar consciousness has been raised by the physicist Gregory Matloff. Though seemingly far-fetched, it cannot be ruled out, and there is some highly tentative evidence to support it. See http://www.centauri-dreams.org/?p=33995 [PARAGRAPH:2]In C2C, a star becomes conscious when an advanced civilization living around it initiates self-replicated and evolving chemical reactions in the star's outermost layers. A network of conscious stars can communicate on behalf of the civilization, and over millions of years, they can subtly adjust their motion in desired ways.</English>
+		<French>The possibility of stellar consciousness has been raised by the physicist Gregory Matloff. Though seemingly far-fetched, it cannot be ruled out, and there is some highly tentative evidence to support it. See http://www.centauri-dreams.org/?p=33995 [PARAGRAPH:2]In C2C, a star becomes conscious when an advanced civilization living around it initiates self-replicated and evolving chemical reactions in the star's outermost layers. A network of conscious stars can communicate on behalf of the civilization, and over millions of years, they can subtly adjust their motion in desired ways.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CONSCIOUS_STAR_STRATEGY</Tag>
@@ -3841,8 +3841,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CONTROLLED_BREEDING_PEDIA</Tag>
-		<English>Human mating is highly regulated.  Not everyone is pleased</English>
-		<French>Human mating is highly regulated.  Not everyone is pleased</French>
+		<English>Human mating is highly regulated. Not everyone is pleased</English>
+		<French>Human mating is highly regulated. Not everyone is pleased</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CONTROLLED_BREEDING_STRATEGY</Tag>
@@ -3953,8 +3953,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COSMIC_EXPLORER_BASE_PEDIA</Tag>
-		<English>A base for explorers to gather and tell tales of the universe beyond the horizon, inside black holes, and in alternate dimnsions.  Stories are not guaranteed to be true.</English>
-		<French>A base for explorers to gather and tell tales of the universe beyond the horizon, inside black holes, and in alternate dimnsions.  Stories are not guaranteed to be true.</French>
+		<English>A base for explorers to gather and tell tales of the universe beyond the horizon, inside black holes, and in alternate dimnsions. Stories are not guaranteed to be true.</English>
+		<French>A base for explorers to gather and tell tales of the universe beyond the horizon, inside black holes, and in alternate dimnsions. Stories are not guaranteed to be true.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COSMIC_EXPLORER_BASE_STRATEGY</Tag>
@@ -3981,8 +3981,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COSMOLOGY_RESEARCH_STATION_PEDIA</Tag>
-		<English>This distant base studied cosmology.  Gaining a view of the universe from a different vantage point further adds to knowledge of the cosmos.</English>
-		<French>This distant base studied cosmology.  Gaining a view of the universe from a different vantage point further adds to knowledge of the cosmos.</French>
+		<English>This distant base studied cosmology. Gaining a view of the universe from a different vantage point further adds to knowledge of the cosmos.</English>
+		<French>This distant base studied cosmology. Gaining a view of the universe from a different vantage point further adds to knowledge of the cosmos.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COSMOLOGY_RESEARCH_STATION_STRATEGY</Tag>
@@ -4345,8 +4345,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DARK_MATTER_HEATING_PEDIA</Tag>
-		<English>Dark matter may one day be a power source to heat rogue planets.  See http://www.space.com/11265-dark-matter-alien-planets-warmth.html</English>
-		<French>Dark matter may one day be a power source to heat rogue planets.  See http://www.space.com/11265-dark-matter-alien-planets-warmth.html</French>
+		<English>Dark matter may one day be a power source to heat rogue planets. See http://www.space.com/11265-dark-matter-alien-planets-warmth.html</English>
+		<French>Dark matter may one day be a power source to heat rogue planets. See http://www.space.com/11265-dark-matter-alien-planets-warmth.html</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DARK_MATTER_HEATING_STRATEGY</Tag>
@@ -4849,8 +4849,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIGITAL_EMBASSY_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][ICON_BULLET]Make contact with every other civ.</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][ICON_BULLET]Make contact with every other civ.</French>
+		<English>[ICON_BULLET][ICON_BULLET]Make contact with every other civ.</English>
+		<French>[ICON_BULLET][ICON_BULLET]Make contact with every other civ.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIGITAL_EMBASSY_PEDIA</Tag>
@@ -4910,8 +4910,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIGITAL_RESURRECTION_PEDIA</Tag>
-		<English>Digital resurrection is the practice of reconstructing the deceased's appearance and personality from photographs, social media activity, purchasing habits, and other data.  It is used in historical reenactments, holographic concerts, and most controversially, coping with the death of loved ones.</English>
-		<French>Digital resurrection is the practice of reconstructing the deceased's appearance and personality from photographs, social media activity, purchasing habits, and other data.  It is used in historical reenactments, holographic concerts, and most controversially, coping with the death of loved ones.</French>
+		<English>Digital resurrection is the practice of reconstructing the deceased's appearance and personality from photographs, social media activity, purchasing habits, and other data. It is used in historical reenactments, holographic concerts, and most controversially, coping with the death of loved ones.</English>
+		<French>Digital resurrection is the practice of reconstructing the deceased's appearance and personality from photographs, social media activity, purchasing habits, and other data. It is used in historical reenactments, holographic concerts, and most controversially, coping with the death of loved ones.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DIGITAL_RESURRECTION_STRATEGY</Tag>
@@ -5092,8 +5092,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DYSON_SHUTTER_PEDIA</Tag>
-		<English>The Dyson Shutter is a collection of massive flaps that can rotate under stellar pressure.  This gives a low-energy way of communicating with other star systems.  See http://www.centauri-dreams.org/?p=36802</English>
-		<French>The Dyson Shutter is a collection of massive flaps that can rotate under stellar pressure.  This gives a low-energy way of communicating with other star systems.  See http://www.centauri-dreams.org/?p=36802</French>
+		<English>The Dyson Shutter is a collection of massive flaps that can rotate under stellar pressure. This gives a low-energy way of communicating with other star systems. See http://www.centauri-dreams.org/?p=36802</English>
+		<French>The Dyson Shutter is a collection of massive flaps that can rotate under stellar pressure. This gives a low-energy way of communicating with other star systems. See http://www.centauri-dreams.org/?p=36802</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DYSON_SHUTTER_STRATEGY</Tag>
@@ -5302,7 +5302,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT_PEDIA</Tag>
-		<English>A high-tech electronics manufacturing district.  Rapid prototyping technology allows small production runs, greatly increasingly the flexibility of the manufacturing plants.</English>
+		<English>A high-tech electronics manufacturing district. Rapid prototyping technology allows small production runs, greatly increasingly the flexibility of the manufacturing plants.</English>
 		<French>Un quartier de fabrication d'électronique de haute technologie. La technologie de prototypage rapide permet de petites séries de production, ce qui augmente considérablement la flexibilité des usines de fabrication.</French>
 	</TEXT>
 	<TEXT>
@@ -5386,8 +5386,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELLIS_MOON_PEDIA</Tag>
-		<English>With the advent of advanced, large passenger spacecraft, people are now moving throughout the solar system in large numbers.  This office will allow you process would-be immigrants.[PARAGRAPH:2]If yours is the only spacefaring civilization in the game, where are the immigrants coming from?  Better not worry about that too much.</English>
-		<French>With the advent of advanced, large passenger spacecraft, people are now moving throughout the solar system in large numbers.  This office will allow you process would-be immigrants.[PARAGRAPH:2]If yours is the only spacefaring civilization in the game, where are the immigrants coming from?  Better not worry about that too much.</French>
+		<English>With the advent of advanced, large passenger spacecraft, people are now moving throughout the solar system in large numbers. This office will allow you process would-be immigrants.[PARAGRAPH:2]If yours is the only spacefaring civilization in the game, where are the immigrants coming from? Better not worry about that too much.</English>
+		<French>With the advent of advanced, large passenger spacecraft, people are now moving throughout the solar system in large numbers. This office will allow you process would-be immigrants.[PARAGRAPH:2]If yours is the only spacefaring civilization in the game, where are the immigrants coming from? Better not worry about that too much.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ELLIS_MOON_STRATEGY</Tag>
@@ -5428,8 +5428,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENCELADUS_BASE_PEDIA</Tag>
-		<English>A base on Enceladus, a moon of Saturn.  Aids in developing the Saturnian system and in supply missions to the Kuiper Belt.</English>
-		<French>A base on Enceladus, a moon of Saturn.  Aids in developing the Saturnian system and in supply missions to the Kuiper Belt.</French>
+		<English>A base on Enceladus, a moon of Saturn. Aids in developing the Saturnian system and in supply missions to the Kuiper Belt.</English>
+		<French>A base on Enceladus, a moon of Saturn. Aids in developing the Saturnian system and in supply missions to the Kuiper Belt.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENCELADUS_BASE_STRATEGY</Tag>
@@ -5610,8 +5610,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ET_DISCOVERY_PEDIA</Tag>
-		<English>Are we alone in the universe?  For more than a century, mankind searched for an answer.  Projects such as SETI and the Kepler Space Telescope revealed hints of extraterrestial life, such as the Wow! Signal in 1977 and KIC 8462852 in 2015, but the evidence remained conclusive.  With massive cloud-based astronomical databased being combed by citizen scientists and AI systems, and with advances in optical instrumentation in the mid-21st century, conclusive evidence of extraterrestrial intelligence was finally found.</English>
-		<French>Are we alone in the universe?  For more than a century, mankind searched for an answer.  Projects such as SETI and the Kepler Space Telescope revealed hints of extraterrestial life, such as the Wow! Signal in 1977 and KIC 8462852 in 2015, but the evidence remained conclusive.  With massive cloud-based astronomical databased being combed by citizen scientists and AI systems, and with advances in optical instrumentation in the mid-21st century, conclusive evidence of extraterrestrial intelligence was finally found.</French>
+		<English>Are we alone in the universe? For more than a century, mankind searched for an answer. Projects such as SETI and the Kepler Space Telescope revealed hints of extraterrestial life, such as the Wow! Signal in 1977 and KIC 8462852 in 2015, but the evidence remained conclusive. With massive cloud-based astronomical databased being combed by citizen scientists and AI systems, and with advances in optical instrumentation in the mid-21st century, conclusive evidence of extraterrestrial intelligence was finally found.</English>
+		<French>Are we alone in the universe? For more than a century, mankind searched for an answer. Projects such as SETI and the Kepler Space Telescope revealed hints of extraterrestial life, such as the Wow! Signal in 1977 and KIC 8462852 in 2015, but the evidence remained conclusive. With massive cloud-based astronomical databased being combed by citizen scientists and AI systems, and with advances in optical instrumentation in the mid-21st century, conclusive evidence of extraterrestrial intelligence was finally found.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ET_DISCOVERY_STRATEGY</Tag>
@@ -5694,8 +5694,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EVENT_HORIZON_CITY_PEDIA</Tag>
-		<English>This city is so close to the event horizon of a black hole that biological life cannot surive the intense tidal forces, to say nothing of radiation.  But exotic non-biological life can.</English>
-		<French>This city is so close to the event horizon of a black hole that biological life cannot surive the intense tidal forces, to say nothing of radiation.  But exotic non-biological life can.</French>
+		<English>This city is so close to the event horizon of a black hole that biological life cannot surive the intense tidal forces, to say nothing of radiation. But exotic non-biological life can.</English>
+		<French>This city is so close to the event horizon of a black hole that biological life cannot surive the intense tidal forces, to say nothing of radiation. But exotic non-biological life can.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EVENT_HORIZON_CITY_STRATEGY</Tag>
@@ -5722,8 +5722,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EXABIT_BROADBAND_PEDIA</Tag>
-		<English>The widespread adoption of optronic communication made extremely fast broadband available to the general public.  This allowed seamless virtual reality and simulated reality experiences, and it further accelerated commerce by allowing massive flows of data for virtually free.</English>
-		<French>The widespread adoption of optronic communication made extremely fast broadband available to the general public.  This allowed seamless virtual reality and simulated reality experiences, and it further accelerated commerce by allowing massive flows of data for virtually free.</French>
+		<English>The widespread adoption of optronic communication made extremely fast broadband available to the general public. This allowed seamless virtual reality and simulated reality experiences, and it further accelerated commerce by allowing massive flows of data for virtually free.</English>
+		<French>The widespread adoption of optronic communication made extremely fast broadband available to the general public. This allowed seamless virtual reality and simulated reality experiences, and it further accelerated commerce by allowing massive flows of data for virtually free.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EXABIT_BROADBAND_STRATEGY</Tag>
@@ -5834,8 +5834,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EYE_IN_SKY_PEDIA</Tag>
-		<English>Shortly after Photonic Satellites were invented, governments race to deploy the technology.  Using ultra-high definition imaging, undetectable laser communications, and state-of-the-art automated processing, the Eye in the Sky is capable of producing a thorough real-time map of the entire world and all activity on it to a sub-meter resolution.  By now, privacy advocates had given up.</English>
-		<French>Shortly after Photonic Satellites were invented, governments race to deploy the technology.  Using ultra-high definition imaging, undetectable laser communications, and state-of-the-art automated processing, the Eye in the Sky is capable of producing a thorough real-time map of the entire world and all activity on it to a sub-meter resolution.  By now, privacy advocates had given up.</French>
+		<English>Shortly after Photonic Satellites were invented, governments race to deploy the technology. Using ultra-high definition imaging, undetectable laser communications, and state-of-the-art automated processing, the Eye in the Sky is capable of producing a thorough real-time map of the entire world and all activity on it to a sub-meter resolution. By now, privacy advocates had given up.</English>
+		<French>Shortly after Photonic Satellites were invented, governments race to deploy the technology. Using ultra-high definition imaging, undetectable laser communications, and state-of-the-art automated processing, the Eye in the Sky is capable of producing a thorough real-time map of the entire world and all activity on it to a sub-meter resolution. By now, privacy advocates had given up.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EYE_IN_SKY_STRATEGY</Tag>
@@ -5876,8 +5876,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FALSE_VACUUM_TRAP_PEDIA</Tag>
-		<English>Induces a localized vacuum collapse.  Good for defense.  Could be dangerous.</English>
-		<French>Induces a localized vacuum collapse.  Good for defense.  Could be dangerous.</French>
+		<English>Induces a localized vacuum collapse. Good for defense. Could be dangerous.</English>
+		<French>Induces a localized vacuum collapse. Good for defense. Could be dangerous.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FALSE_VACUUM_TRAP_STRATEGY</Tag>
@@ -5904,8 +5904,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FARM_PLANET_PEDIA</Tag>
-		<English>This entire planet is dedicated to farming.  The entire surface is covered with vertical farms and bioreactors over a mile high, and they are powered by a focused starlight power plant.</English>
-		<French>This entire planet is dedicated to farming.  The entire surface is covered with vertical farms and bioreactors over a mile high, and they are powered by a focused starlight power plant.</French>
+		<English>This entire planet is dedicated to farming. The entire surface is covered with vertical farms and bioreactors over a mile high, and they are powered by a focused starlight power plant.</English>
+		<French>This entire planet is dedicated to farming. The entire surface is covered with vertical farms and bioreactors over a mile high, and they are powered by a focused starlight power plant.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FARM_PLANET_STRATEGY</Tag>
@@ -6086,8 +6086,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLYING_CAR_PORT_PEDIA</Tag>
-		<English>This flying car port takes your city a step closer to a true three-dimensional organism.  Able to take off and land on rooftops, the roofspace, already connected via maglev skybridges, now functions as a second streetspace.  This further frees up the ground level for pedestrians and parks.</English>
-		<French>This flying car port takes your city a step closer to a true three-dimensional organism.  Able to take off and land on rooftops, the roofspace, already connected via maglev skybridges, now functions as a second streetspace.  This further frees up the ground level for pedestrians and parks.</French>
+		<English>This flying car port takes your city a step closer to a true three-dimensional organism. Able to take off and land on rooftops, the roofspace, already connected via maglev skybridges, now functions as a second streetspace. This further frees up the ground level for pedestrians and parks.</English>
+		<French>This flying car port takes your city a step closer to a true three-dimensional organism. Able to take off and land on rooftops, the roofspace, already connected via maglev skybridges, now functions as a second streetspace. This further frees up the ground level for pedestrians and parks.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLYING_CAR_PORT_STRATEGY</Tag>
@@ -6100,8 +6100,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOCUS_SUN_PEDIA</Tag>
-		<English>Orbital space colonies need power, and sometimes the onboard fusion engine and natural solar power don't cut it.  Using a massive array of mirrors in close orbit around the sun, this power station collects focused sunlight for massive power.[PARAGRAPH:2]Could be dangerous.</English>
-		<French>Orbital space colonies need power, and sometimes the onboard fusion engine and natural solar power don't cut it.  Using a massive array of mirrors in close orbit around the sun, this power station collects focused sunlight for massive power.[PARAGRAPH:2]Could be dangerous.</French>
+		<English>Orbital space colonies need power, and sometimes the onboard fusion engine and natural solar power don't cut it. Using a massive array of mirrors in close orbit around the sun, this power station collects focused sunlight for massive power.[PARAGRAPH:2]Could be dangerous.</English>
+		<French>Orbital space colonies need power, and sometimes the onboard fusion engine and natural solar power don't cut it. Using a massive array of mirrors in close orbit around the sun, this power station collects focused sunlight for massive power.[PARAGRAPH:2]Could be dangerous.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOCUS_SUN_STRATEGY</Tag>
@@ -6464,8 +6464,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALACTIC_CORE_PEDIA</Tag>
-		<English>The center of the galaxy is tantalizing.  The numerous, closely packed supergiant stars and the galactic black hole promise immense energy, something of which you never have enough.  But it is 26000 light years away, and the radiation near the core is intense.  This will be the most challenging journey yet.</English>
-		<French>The center of the galaxy is tantalizing.  The numerous, closely packed supergiant stars and the galactic black hole promise immense energy, something of which you never have enough.  But it is 26000 light years away, and the radiation near the core is intense.  This will be the most challenging journey yet.</French>
+		<English>The center of the galaxy is tantalizing. The numerous, closely packed supergiant stars and the galactic black hole promise immense energy, something of which you never have enough. But it is 26000 light years away, and the radiation near the core is intense. This will be the most challenging journey yet.</English>
+		<French>The center of the galaxy is tantalizing. The numerous, closely packed supergiant stars and the galactic black hole promise immense energy, something of which you never have enough. But it is 26000 light years away, and the radiation near the core is intense. This will be the most challenging journey yet.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALACTIC_CORE_STRATEGY</Tag>
@@ -6716,8 +6716,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GENESIS_COLONY_PEDIA</Tag>
-		<English>An ecosystem in the early universe.  Its presence both expands knowledge of the early universe and shapes the development of the universe to present day.</English>
-		<French>An ecosystem in the early universe.  Its presence both expands knowledge of the early universe and shapes the development of the universe to present day.</French>
+		<English>An ecosystem in the early universe. Its presence both expands knowledge of the early universe and shapes the development of the universe to present day.</English>
+		<French>An ecosystem in the early universe. Its presence both expands knowledge of the early universe and shapes the development of the universe to present day.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GENESIS_COLONY_STRATEGY</Tag>
@@ -6730,8 +6730,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GENETIC_PROFILING_PEDIA</Tag>
-		<English>The government now uses genetic testing at an early age to determine likely aptitude, tendency toward antisocial behavior, and potential consumer interests.  See https://ghr.nlm.nih.gov/primer/testing/discrimination</English>
-		<French>The government now uses genetic testing at an early age to determine likely aptitude, tendency toward antisocial behavior, and potential consumer interests.  See https://ghr.nlm.nih.gov/primer/testing/discrimination</French>
+		<English>The government now uses genetic testing at an early age to determine likely aptitude, tendency toward antisocial behavior, and potential consumer interests. See https://ghr.nlm.nih.gov/primer/testing/discrimination</English>
+		<French>The government now uses genetic testing at an early age to determine likely aptitude, tendency toward antisocial behavior, and potential consumer interests. See https://ghr.nlm.nih.gov/primer/testing/discrimination</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GENETIC_PROFILING_STRATEGY</Tag>
@@ -6870,8 +6870,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GLITCH_IN_THE_MATRIX_PEDIA</Tag>
-		<English>People sometimes report strange events--premonitions, dreams that foretell the future, and phenomena that cannot be explained by ordinary experience.  We don't know what these experiences mean or if such 'glitches' really occur at all, but they may be a sign of a reality beyond that which we know.</English>
-		<French>People sometimes report strange events--premonitions, dreams that foretell the future, and phenomena that cannot be explained by ordinary experience.  We don't know what these experiences mean or if such 'glitches' really occur at all, but they may be a sign of a reality beyond that which we know.</French>
+		<English>People sometimes report strange events--premonitions, dreams that foretell the future, and phenomena that cannot be explained by ordinary experience. We don't know what these experiences mean or if such 'glitches' really occur at all, but they may be a sign of a reality beyond that which we know.</English>
+		<French>People sometimes report strange events--premonitions, dreams that foretell the future, and phenomena that cannot be explained by ordinary experience. We don't know what these experiences mean or if such 'glitches' really occur at all, but they may be a sign of a reality beyond that which we know.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GLITCH_IN_THE_MATRIX_STRATEGY</Tag>
@@ -6954,8 +6954,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GRAVITATIONAL_CRANE_PEDIA</Tag>
-		<English>Dark matter can be finely manipulated for precise gravity control.  Useful in constructing megastructures.</English>
-		<French>Dark matter can be finely manipulated for precise gravity control.  Useful in constructing megastructures.</French>
+		<English>Dark matter can be finely manipulated for precise gravity control. Useful in constructing megastructures.</English>
+		<French>Dark matter can be finely manipulated for precise gravity control. Useful in constructing megastructures.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GRAVITATIONAL_CRANE_STRATEGY</Tag>
@@ -7360,8 +7360,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HOLLOW_PLANET_PEDIA</Tag>
-		<English>A hollow, artificial planet.  The interior contains a massive fusion reactor that doubles as an artificial sun, making both sides inhabitable.</English>
-		<French>A hollow, artificial planet.  The interior contains a massive fusion reactor that doubles as an artificial sun, making both sides inhabitable.</French>
+		<English>A hollow, artificial planet. The interior contains a massive fusion reactor that doubles as an artificial sun, making both sides inhabitable.</English>
+		<French>A hollow, artificial planet. The interior contains a massive fusion reactor that doubles as an artificial sun, making both sides inhabitable.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HOLLOW_PLANET_STRATEGY</Tag>
@@ -7598,8 +7598,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYDROPONIC_CANNABIS_PEDIA</Tag>
-		<English>This illicit lab grows cannabis hydroponically, so that the operation can be easily concealed.  Despite its dubious legal status, the product has some medicinal value.</English>
-		<French>This illicit lab grows cannabis hydroponically, so that the operation can be easily concealed.  Despite its dubious legal status, the product has some medicinal value.</French>
+		<English>This illicit lab grows cannabis hydroponically, so that the operation can be easily concealed. Despite its dubious legal status, the product has some medicinal value.</English>
+		<French>This illicit lab grows cannabis hydroponically, so that the operation can be easily concealed. Despite its dubious legal status, the product has some medicinal value.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYDROPONIC_CANNABIS_STRATEGY</Tag>
@@ -7906,8 +7906,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPESPACE_PORTAL_PEDIA</Tag>
-		<English>A portal into hyperspace.  Provides needed resources.</English>
-		<French>A portal into hyperspace.  Provides needed resources.</French>
+		<English>A portal into hyperspace. Provides needed resources.</English>
+		<French>A portal into hyperspace. Provides needed resources.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYPESPACE_PORTAL_STRATEGY</Tag>
@@ -8004,8 +8004,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INDUSTRIAL_PLANET_PEDIA</Tag>
-		<English>This entire planet is covered with heavy industry, and it is polluted beyond imagination.  The industry is entirely automated, as no human could survive for long in the toxic atmosphere.</English>
-		<French>This entire planet is covered with heavy industry, and it is polluted beyond imagination.  The industry is entirely automated, as no human could survive for long in the toxic atmosphere.</French>
+		<English>This entire planet is covered with heavy industry, and it is polluted beyond imagination. The industry is entirely automated, as no human could survive for long in the toxic atmosphere.</English>
+		<French>This entire planet is covered with heavy industry, and it is polluted beyond imagination. The industry is entirely automated, as no human could survive for long in the toxic atmosphere.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INDUSTRIAL_PLANET_STRATEGY</Tag>
@@ -8060,8 +8060,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INFLATON_FIELD_PEDIA</Tag>
-		<English>Create a localized field of inflation.  Be careful with it.</English>
-		<French>Create a localized field of inflation.  Be careful with it.</French>
+		<English>Create a localized field of inflation. Be careful with it.</English>
+		<French>Create a localized field of inflation. Be careful with it.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INFLATON_FIELD_STRATEGY</Tag>
@@ -8578,8 +8578,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERIOR_STAR_PEDIA</Tag>
-		<English>An interior heat source for the hollow planet.  May allow the planet to function as an interstellar vessel.</English>
-		<French>An interior heat source for the hollow planet.  May allow the planet to function as an interstellar vessel.</French>
+		<English>An interior heat source for the hollow planet. May allow the planet to function as an interstellar vessel.</English>
+		<French>An interior heat source for the hollow planet. May allow the planet to function as an interstellar vessel.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERIOR_STAR_STRATEGY</Tag>
@@ -8690,8 +8690,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_ADMINISTRATION_PEDIA</Tag>
-		<English>With the advent of Wormhole Communications, it is now possible for the central government to exercise tighter control over interstellar colonies.  This administration center does so.</English>
-		<French>With the advent of Wormhole Communications, it is now possible for the central government to exercise tighter control over interstellar colonies.  This administration center does so.</French>
+		<English>With the advent of Wormhole Communications, it is now possible for the central government to exercise tighter control over interstellar colonies. This administration center does so.</English>
+		<French>With the advent of Wormhole Communications, it is now possible for the central government to exercise tighter control over interstellar colonies. This administration center does so.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_ADMINISTRATION_STRATEGY</Tag>
@@ -8746,8 +8746,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_COLONY_PEDIA</Tag>
-		<English>For thousands of years, humans had dreamed of taking to the stars.  As human capabilities in space advanced, many interstellar concepts were proposed, including laser-powered solar sails, multi-kilomater magnetic sails, nuclear fission engines, nuclear fusion engines, antimatter propulsion, and the Alcubierre Drive, among others.  Motivations to travel were just as diverse: meet alien life, explore the universe, relieve overcrowding, and escape the increasingly authoritarian Solar Empire.</English>
-		<French>For thousands of years, humans had dreamed of taking to the stars.  As human capabilities in space advanced, many interstellar concepts were proposed, including laser-powered solar sails, multi-kilomater magnetic sails, nuclear fission engines, nuclear fusion engines, antimatter propulsion, and the Alcubierre Drive, among others.  Motivations to travel were just as diverse: meet alien life, explore the universe, relieve overcrowding, and escape the increasingly authoritarian Solar Empire.</French>
+		<English>For thousands of years, humans had dreamed of taking to the stars. As human capabilities in space advanced, many interstellar concepts were proposed, including laser-powered solar sails, multi-kilomater magnetic sails, nuclear fission engines, nuclear fusion engines, antimatter propulsion, and the Alcubierre Drive, among others. Motivations to travel were just as diverse: meet alien life, explore the universe, relieve overcrowding, and escape the increasingly authoritarian Solar Empire.</English>
+		<French>For thousands of years, humans had dreamed of taking to the stars. As human capabilities in space advanced, many interstellar concepts were proposed, including laser-powered solar sails, multi-kilomater magnetic sails, nuclear fission engines, nuclear fusion engines, antimatter propulsion, and the Alcubierre Drive, among others. Motivations to travel were just as diverse: meet alien life, explore the universe, relieve overcrowding, and escape the increasingly authoritarian Solar Empire.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_COLONY_STRATEGY</Tag>
@@ -8830,8 +8830,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_IMMIGRATION_PEDIA</Tag>
-		<English>Your civilization is now so prosperous that beings are coming from all over the galaxy.  You don't know what half of them are.</English>
-		<French>Your civilization is now so prosperous that beings are coming from all over the galaxy.  You don't know what half of them are.</French>
+		<English>Your civilization is now so prosperous that beings are coming from all over the galaxy. You don't know what half of them are.</English>
+		<French>Your civilization is now so prosperous that beings are coming from all over the galaxy. You don't know what half of them are.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_IMMIGRATION_STRATEGY</Tag>
@@ -8900,8 +8900,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_PROBE_PEDIA</Tag>
-		<English>hroughout their entire history, humans have dreamed about taking to the stars.  At long last, that reality appears to be within grasp.  This umnanned spacecraft will fly by Proxima Centauri and send back high resolution images, analysis of the stellar and interstellar medium, and images of any small planets that are discovered.</English>
-		<French>hroughout their entire history, humans have dreamed about taking to the stars.  At long last, that reality appears to be within grasp.  This umnanned spacecraft will fly by Proxima Centauri and send back high resolution images, analysis of the stellar and interstellar medium, and images of any small planets that are discovered.</French>
+		<English>hroughout their entire history, humans have dreamed about taking to the stars. At long last, that reality appears to be within grasp. This umnanned spacecraft will fly by Proxima Centauri and send back high resolution images, analysis of the stellar and interstellar medium, and images of any small planets that are discovered.</English>
+		<French>hroughout their entire history, humans have dreamed about taking to the stars. At long last, that reality appears to be within grasp. This umnanned spacecraft will fly by Proxima Centauri and send back high resolution images, analysis of the stellar and interstellar medium, and images of any small planets that are discovered.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_PROBE_STRATEGY</Tag>
@@ -8942,8 +8942,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_STADIUM_PEDIA</Tag>
-		<English>A stadium complex, with adjustable gravity, temperature, and atmospheric conditions.  Suitable for interspecies competition.</English>
-		<French>A stadium complex, with adjustable gravity, temperature, and atmospheric conditions.  Suitable for interspecies competition.</French>
+		<English>A stadium complex, with adjustable gravity, temperature, and atmospheric conditions. Suitable for interspecies competition.</English>
+		<French>A stadium complex, with adjustable gravity, temperature, and atmospheric conditions. Suitable for interspecies competition.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERSTELLAR_STADIUM_STRATEGY</Tag>
@@ -8998,8 +8998,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERTEMPORAL_STOCK_MARKET_PEDIA</Tag>
-		<English>How does a stock market work in a world in which time travel and faster-than-light travel are possible?  I don't know, but these investors have figured it out.</English>
-		<French>How does a stock market work in a world in which time travel and faster-than-light travel are possible?  I don't know, but these investors have figured it out.</French>
+		<English>How does a stock market work in a world in which time travel and faster-than-light travel are possible? I don't know, but these investors have figured it out.</English>
+		<French>How does a stock market work in a world in which time travel and faster-than-light travel are possible? I don't know, but these investors have figured it out.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTERTEMPORAL_STOCK_MARKET_STRATEGY</Tag>
@@ -9180,8 +9180,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JOVIAN_TROJAN_MINING_PEDIA</Tag>
-		<English>A mining operation among the Trojan asteroids of Jupiter.  Supplies your O'Neill colonies.</English>
-		<French>A mining operation among the Trojan asteroids of Jupiter.  Supplies your O'Neill colonies.</French>
+		<English>A mining operation among the Trojan asteroids of Jupiter. Supplies your O'Neill colonies.</English>
+		<French>A mining operation among the Trojan asteroids of Jupiter. Supplies your O'Neill colonies.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JOVIAN_TROJAN_MINING_STRATEGY</Tag>
@@ -9222,8 +9222,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KBO_OUTPOST_PEDIA</Tag>
-		<English>As the inner solar system became more crowded, a small number of colonists established outposts in the frozen wastelands beyond Neptune.  Some were rogues, some were entrepreneurs, and some were established by governments for research and to prepare for interstellar missions.</English>
-		<French>As the inner solar system became more crowded, a small number of colonists established outposts in the frozen wastelands beyond Neptune.  Some were rogues, some were entrepreneurs, and some were established by governments for research and to prepare for interstellar missions.</French>
+		<English>As the inner solar system became more crowded, a small number of colonists established outposts in the frozen wastelands beyond Neptune. Some were rogues, some were entrepreneurs, and some were established by governments for research and to prepare for interstellar missions.</English>
+		<French>As the inner solar system became more crowded, a small number of colonists established outposts in the frozen wastelands beyond Neptune. Some were rogues, some were entrepreneurs, and some were established by governments for research and to prepare for interstellar missions.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KBO_OUTPOST_STRATEGY</Tag>
@@ -9516,8 +9516,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LASER_STARWAY_PEDIA</Tag>
-		<English>The Laser Starway is a concept developed by Charles Quarra to accelerate spacecraft to interstellar speeds.  A network of beacons is placed between stars to collect and refocus sunlight.  The laser than propels a solar sail craft.[PARAGRAPH:2]See Centauri Dreams: http://www.centauri-dreams.org/?p=28727</English>
-		<French>The Laser Starway is a concept developed by Charles Quarra to accelerate spacecraft to interstellar speeds.  A network of beacons is placed between stars to collect and refocus sunlight.  The laser than propels a solar sail craft.[PARAGRAPH:2]See Centauri Dreams: http://www.centauri-dreams.org/?p=28727</French>
+		<English>The Laser Starway is a concept developed by Charles Quarra to accelerate spacecraft to interstellar speeds. A network of beacons is placed between stars to collect and refocus sunlight. The laser than propels a solar sail craft.[PARAGRAPH:2]See Centauri Dreams: http://www.centauri-dreams.org/?p=28727</English>
+		<French>The Laser Starway is a concept developed by Charles Quarra to accelerate spacecraft to interstellar speeds. A network of beacons is placed between stars to collect and refocus sunlight. The laser than propels a solar sail craft.[PARAGRAPH:2]See Centauri Dreams: http://www.centauri-dreams.org/?p=28727</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LASER_STARWAY_STRATEGY</Tag>
@@ -9558,8 +9558,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LEAN_LINEAR_CITY_PEDIA</Tag>
-		<English>Lean Linear City proposes a continuous urban ribbon of twenty or more stories high, extending for many kilometers. Two main, parallel structures are built in modules measuring 200 meters (600 feet) in length.  Each module accommodates about 3,000 residents and spaces for commercial, industrial, educational, cultural, recreational, and health maintenance activities. Lean Linear City suggests a possibility of sustainable urban development within its structure and the environment beyond. While carbon neutrality is within its reach through innovations in building technology and energy conservation, the most important contribution of Lean Linear City is, perhaps, its logistical approach to define and control the growth pattern of the existing and future cities.[PARAGRAPH:2]https://arcosanti.org/node/7326</English>
-		<French>Lean Linear City proposes a continuous urban ribbon of twenty or more stories high, extending for many kilometers. Two main, parallel structures are built in modules measuring 200 meters (600 feet) in length.  Each module accommodates about 3,000 residents and spaces for commercial, industrial, educational, cultural, recreational, and health maintenance activities. Lean Linear City suggests a possibility of sustainable urban development within its structure and the environment beyond. While carbon neutrality is within its reach through innovations in building technology and energy conservation, the most important contribution of Lean Linear City is, perhaps, its logistical approach to define and control the growth pattern of the existing and future cities.[PARAGRAPH:2]https://arcosanti.org/node/7326</French>
+		<English>Lean Linear City proposes a continuous urban ribbon of twenty or more stories high, extending for many kilometers. Two main, parallel structures are built in modules measuring 200 meters (600 feet) in length. Each module accommodates about 3,000 residents and spaces for commercial, industrial, educational, cultural, recreational, and health maintenance activities. Lean Linear City suggests a possibility of sustainable urban development within its structure and the environment beyond. While carbon neutrality is within its reach through innovations in building technology and energy conservation, the most important contribution of Lean Linear City is, perhaps, its logistical approach to define and control the growth pattern of the existing and future cities.[PARAGRAPH:2]https://arcosanti.org/node/7326</English>
+		<French>Lean Linear City proposes a continuous urban ribbon of twenty or more stories high, extending for many kilometers. Two main, parallel structures are built in modules measuring 200 meters (600 feet) in length. Each module accommodates about 3,000 residents and spaces for commercial, industrial, educational, cultural, recreational, and health maintenance activities. Lean Linear City suggests a possibility of sustainable urban development within its structure and the environment beyond. While carbon neutrality is within its reach through innovations in building technology and energy conservation, the most important contribution of Lean Linear City is, perhaps, its logistical approach to define and control the growth pattern of the existing and future cities.[PARAGRAPH:2]https://arcosanti.org/node/7326</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LEAN_LINEAR_CITY_STRATEGY</Tag>
@@ -10389,8 +10389,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAGITEK_ARENA_PEDIA</Tag>
-		<English>Manipulation of matter at the quantum level gives rise to phenomena that appear as magic.  Magitek armor links this technology to the human brain.</English>
-		<French>Manipulation of matter at the quantum level gives rise to phenomena that appear as magic.  Magitek armor links this technology to the human brain.</French>
+		<English>Manipulation of matter at the quantum level gives rise to phenomena that appear as magic. Magitek armor links this technology to the human brain.</English>
+		<French>Manipulation of matter at the quantum level gives rise to phenomena that appear as magic. Magitek armor links this technology to the human brain.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAGITEK_ARENA_STRATEGY</Tag>
@@ -10417,8 +10417,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAGLEV_LAUNCH_PEDIA</Tag>
-		<English>In the first century of human space flight, high launch costs were an insurmountable barrier to full-fledged commercialization and industrialization of space.  The advent of reusable rockets in the 2010s helped but were insufficient.  Only when governments and private companies applied advanced civil engineering knowledge and abundant power sources to building large maglev launch structures were costs affordable for the general public.</English>
-		<French>In the first century of human space flight, high launch costs were an insurmountable barrier to full-fledged commercialization and industrialization of space.  The advent of reusable rockets in the 2010s helped but were insufficient.  Only when governments and private companies applied advanced civil engineering knowledge and abundant power sources to building large maglev launch structures were costs affordable for the general public.</French>
+		<English>In the first century of human space flight, high launch costs were an insurmountable barrier to full-fledged commercialization and industrialization of space. The advent of reusable rockets in the 2010s helped but were insufficient. Only when governments and private companies applied advanced civil engineering knowledge and abundant power sources to building large maglev launch structures were costs affordable for the general public.</English>
+		<French>In the first century of human space flight, high launch costs were an insurmountable barrier to full-fledged commercialization and industrialization of space. The advent of reusable rockets in the 2010s helped but were insufficient. Only when governments and private companies applied advanced civil engineering knowledge and abundant power sources to building large maglev launch structures were costs affordable for the general public.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAGLEV_LAUNCH_STRATEGY</Tag>
@@ -10515,8 +10515,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_ARCOLOGY_PEDIA</Tag>
-		<English>Although the first arcologies were built on Earth, Mars was the next natural building site.  The low gravity and thin atmosphere allow for monumental architecture that Earthlings cannot even dream of.</English>
-		<French>Although the first arcologies were built on Earth, Mars was the next natural building site.  The low gravity and thin atmosphere allow for monumental architecture that Earthlings cannot even dream of.</French>
+		<English>Although the first arcologies were built on Earth, Mars was the next natural building site. The low gravity and thin atmosphere allow for monumental architecture that Earthlings cannot even dream of.</English>
+		<French>Although the first arcologies were built on Earth, Mars was the next natural building site. The low gravity and thin atmosphere allow for monumental architecture that Earthlings cannot even dream of.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_ARCOLOGY_STRATEGY</Tag>
@@ -10529,8 +10529,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_BIOFACTORY_PEDIA</Tag>
-		<English>Using Prototyped Pathogens, your Martian colonists can now develop a thriving biotech industry, producing medicine and better food. With life still a struggle, and emerging plans to terraform the planet, the Martians have given up all pretense of avoiding biological contamination.  This decision remains controverial.</English>
-		<French>Using Prototyped Pathogens, your Martian colonists can now develop a thriving biotech industry, producing medicine and better food. With life still a struggle, and emerging plans to terraform the planet, the Martians have given up all pretense of avoiding biological contamination.  This decision remains controverial.</French>
+		<English>Using Prototyped Pathogens, your Martian colonists can now develop a thriving biotech industry, producing medicine and better food. With life still a struggle, and emerging plans to terraform the planet, the Martians have given up all pretense of avoiding biological contamination. This decision remains controverial.</English>
+		<French>Using Prototyped Pathogens, your Martian colonists can now develop a thriving biotech industry, producing medicine and better food. With life still a struggle, and emerging plans to terraform the planet, the Martians have given up all pretense of avoiding biological contamination. This decision remains controverial.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_BIOFACTORY_STRATEGY</Tag>
@@ -10543,8 +10543,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_CITY_PEDIA</Tag>
-		<English>After decades of subsistence living in Martian caves and crude 3D printed dugouts, your colony is finally building something that resembles a city.  Now there is entertainment, adequate health care, and water that doesn't taste foul. But the more the city looks like Earth, the more you wish that is where you were.</English>
-		<French>After decades of subsistence living in Martian caves and crude 3D printed dugouts, your colony is finally building something that resembles a city.  Now there is entertainment, adequate health care, and water that doesn't taste foul. But the more the city looks like Earth, the more you wish that is where you were.</French>
+		<English>After decades of subsistence living in Martian caves and crude 3D printed dugouts, your colony is finally building something that resembles a city. Now there is entertainment, adequate health care, and water that doesn't taste foul. But the more the city looks like Earth, the more you wish that is where you were.</English>
+		<French>After decades of subsistence living in Martian caves and crude 3D printed dugouts, your colony is finally building something that resembles a city. Now there is entertainment, adequate health care, and water that doesn't taste foul. But the more the city looks like Earth, the more you wish that is where you were.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_CITY_STRATEGY</Tag>
@@ -10557,8 +10557,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_COLONY_PEDIA</Tag>
-		<English>This is your basic Mars colony.  It is equipped with the bare essentials: a hydroponic growing kit, a 3D printer, some medical supplies, and a (Martian) year's supply of Tang.  The road to Mars was long, strewn with half-starts by governments and private ventures, and a few tragic losses. When the first humans finally arrived, the cheering quickly gave way to the sobering reality of the struggles to survive away from the resources and familiar environment of Earth.  The first colonists suffered terrible health problems from low gravity, dust, radiation, and psychological torment.  Their initial efforts, exploration and gathering of scientific data, hardly justified the terrible costs.  In retrospect, it is amazing that humans pressed on and eventually built thriving cities on Mars and beyond.</English>
-		<French>This is your basic Mars colony.  It is equipped with the bare essentials: a hydroponic growing kit, a 3D printer, some medical supplies, and a (Martian) year's supply of Tang.  The road to Mars was long, strewn with half-starts by governments and private ventures, and a few tragic losses. When the first humans finally arrived, the cheering quickly gave way to the sobering reality of the struggles to survive away from the resources and familiar environment of Earth.  The first colonists suffered terrible health problems from low gravity, dust, radiation, and psychological torment.  Their initial efforts, exploration and gathering of scientific data, hardly justified the terrible costs.  In retrospect, it is amazing that humans pressed on and eventually built thriving cities on Mars and beyond.</French>
+		<English>This is your basic Mars colony. It is equipped with the bare essentials: a hydroponic growing kit, a 3D printer, some medical supplies, and a (Martian) year's supply of Tang. The road to Mars was long, strewn with half-starts by governments and private ventures, and a few tragic losses. When the first humans finally arrived, the cheering quickly gave way to the sobering reality of the struggles to survive away from the resources and familiar environment of Earth. The first colonists suffered terrible health problems from low gravity, dust, radiation, and psychological torment. Their initial efforts, exploration and gathering of scientific data, hardly justified the terrible costs. In retrospect, it is amazing that humans pressed on and eventually built thriving cities on Mars and beyond.</English>
+		<French>This is your basic Mars colony. It is equipped with the bare essentials: a hydroponic growing kit, a 3D printer, some medical supplies, and a (Martian) year's supply of Tang. The road to Mars was long, strewn with half-starts by governments and private ventures, and a few tragic losses. When the first humans finally arrived, the cheering quickly gave way to the sobering reality of the struggles to survive away from the resources and familiar environment of Earth. The first colonists suffered terrible health problems from low gravity, dust, radiation, and psychological torment. Their initial efforts, exploration and gathering of scientific data, hardly justified the terrible costs. In retrospect, it is amazing that humans pressed on and eventually built thriving cities on Mars and beyond.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_COLONY_STRATEGY</Tag>
@@ -10599,8 +10599,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_ECO_PEDIA</Tag>
-		<English>Using lifeforms with new and exotic biochemistry, scientists began designing small, regional ecosystems.  These were the beginnings of the full terraforming of the red planet.</English>
-		<French>Using lifeforms with new and exotic biochemistry, scientists began designing small, regional ecosystems.  These were the beginnings of the full terraforming of the red planet.</French>
+		<English>Using lifeforms with new and exotic biochemistry, scientists began designing small, regional ecosystems. These were the beginnings of the full terraforming of the red planet.</English>
+		<French>Using lifeforms with new and exotic biochemistry, scientists began designing small, regional ecosystems. These were the beginnings of the full terraforming of the red planet.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_ECO_STRATEGY</Tag>
@@ -10613,8 +10613,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_FACTORY_PEDIA</Tag>
-		<English>The first Martian factories were built from a standard rapid prototyping platform that was brought to the Red Planet.  At least Mission Control thought of that much.  But the machines keep breaking down under unanticipated climatic conditions and insufficient testing in the field. You are not sure whether to complain or be amazed that it works at all.</English>
-		<French>The first Martian factories were built from a standard rapid prototyping platform that was brought to the Red Planet.  At least Mission Control thought of that much.  But the machines keep breaking down under unanticipated climatic conditions and insufficient testing in the field. You are not sure whether to complain or be amazed that it works at all.</French>
+		<English>The first Martian factories were built from a standard rapid prototyping platform that was brought to the Red Planet. At least Mission Control thought of that much. But the machines keep breaking down under unanticipated climatic conditions and insufficient testing in the field. You are not sure whether to complain or be amazed that it works at all.</English>
+		<French>The first Martian factories were built from a standard rapid prototyping platform that was brought to the Red Planet. At least Mission Control thought of that much. But the machines keep breaking down under unanticipated climatic conditions and insufficient testing in the field. You are not sure whether to complain or be amazed that it works at all.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_FACTORY_STRATEGY</Tag>
@@ -10627,8 +10627,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_FARM_PEDIA</Tag>
-		<English>For more than a century after colonization began, Martians had to content themselves with hydroponically grown food.  After an extensive terraforming campaign, atmospheric conditions are now sufficient for hardy crops to be grown outdoors in some parts of the planet.</English>
-		<French>For more than a century after colonization began, Martians had to content themselves with hydroponically grown food.  After an extensive terraforming campaign, atmospheric conditions are now sufficient for hardy crops to be grown outdoors in some parts of the planet.</French>
+		<English>For more than a century after colonization began, Martians had to content themselves with hydroponically grown food. After an extensive terraforming campaign, atmospheric conditions are now sufficient for hardy crops to be grown outdoors in some parts of the planet.</English>
+		<French>For more than a century after colonization began, Martians had to content themselves with hydroponically grown food. After an extensive terraforming campaign, atmospheric conditions are now sufficient for hardy crops to be grown outdoors in some parts of the planet.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_FARM_STRATEGY</Tag>
@@ -10641,8 +10641,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_HITECH_PEDIA</Tag>
-		<English>The development of much more powerful ion beams, and advances in manufacturing technology generally, have allowed Martians to manufacture all manners of hitherto expensive goods.  However, the factory is a loud and dingy place. Working conditions became so unpleasant that workers actually organized for the development of robots to take the jobs.</English>
-		<French>The development of much more powerful ion beams, and advances in manufacturing technology generally, have allowed Martians to manufacture all manners of hitherto expensive goods.  However, the factory is a loud and dingy place. Working conditions became so unpleasant that workers actually organized for the development of robots to take the jobs.</French>
+		<English>The development of much more powerful ion beams, and advances in manufacturing technology generally, have allowed Martians to manufacture all manners of hitherto expensive goods. However, the factory is a loud and dingy place. Working conditions became so unpleasant that workers actually organized for the development of robots to take the jobs.</English>
+		<French>The development of much more powerful ion beams, and advances in manufacturing technology generally, have allowed Martians to manufacture all manners of hitherto expensive goods. However, the factory is a loud and dingy place. Working conditions became so unpleasant that workers actually organized for the development of robots to take the jobs.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_HITECH_STRATEGY</Tag>
@@ -10655,8 +10655,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_HYDROPONICS_PEDIA</Tag>
-		<English>This is no ordinary hydroponics facility.  You already had that.  The Martian Hydroponics Complex is a sprawling, multistory food factory that uses the latest advances in bioengineering and gastronomy. It still tastes like wet cardboard.</English>
-		<French>This is no ordinary hydroponics facility.  You already had that.  The Martian Hydroponics Complex is a sprawling, multistory food factory that uses the latest advances in bioengineering and gastronomy. It still tastes like wet cardboard.</French>
+		<English>This is no ordinary hydroponics facility. You already had that. The Martian Hydroponics Complex is a sprawling, multistory food factory that uses the latest advances in bioengineering and gastronomy. It still tastes like wet cardboard.</English>
+		<French>This is no ordinary hydroponics facility. You already had that. The Martian Hydroponics Complex is a sprawling, multistory food factory that uses the latest advances in bioengineering and gastronomy. It still tastes like wet cardboard.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_HYDROPONICS_STRATEGY</Tag>
@@ -10697,8 +10697,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_METRO_PEDIA</Tag>
-		<English>As early as the dawn of the 22nd century, no one imagined that applying high amounts of energy to the Martian regolith would ever be a viable construction technique.  But it is, and now there thousands of cities on Mars built in this manner.</English>
-		<French>As early as the dawn of the 22nd century, no one imagined that applying high amounts of energy to the Martian regolith would ever be a viable construction technique.  But it is, and now there thousands of cities on Mars built in this manner.</French>
+		<English>As early as the dawn of the 22nd century, no one imagined that applying high amounts of energy to the Martian regolith would ever be a viable construction technique. But it is, and now there thousands of cities on Mars built in this manner.</English>
+		<French>As early as the dawn of the 22nd century, no one imagined that applying high amounts of energy to the Martian regolith would ever be a viable construction technique. But it is, and now there thousands of cities on Mars built in this manner.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_METRO_STRATEGY</Tag>
@@ -10739,8 +10739,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_RADIATION_PEDIA</Tag>
-		<English>This electromagnetic shield will protect your Mars colonists from charged radiation.  Life is now slightly less miserable.</English>
-		<French>This electromagnetic shield will protect your Mars colonists from charged radiation.  Life is now slightly less miserable.</French>
+		<English>This electromagnetic shield will protect your Mars colonists from charged radiation. Life is now slightly less miserable.</English>
+		<French>This electromagnetic shield will protect your Mars colonists from charged radiation. Life is now slightly less miserable.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_RADIATION_STRATEGY</Tag>
@@ -10767,8 +10767,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_SEA_PEDIA</Tag>
-		<English>Terraforming of Mars is well under way.  A full-fledge sea, filled with Earthlike marine life, has been built.</English>
-		<French>Terraforming of Mars is well under way.  A full-fledge sea, filled with Earthlike marine life, has been built.</French>
+		<English>Terraforming of Mars is well under way. A full-fledge sea, filled with Earthlike marine life, has been built.</English>
+		<French>Terraforming of Mars is well under way. A full-fledge sea, filled with Earthlike marine life, has been built.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARS_SEA_STRATEGY</Tag>
@@ -11136,8 +11136,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_GEOLOGY_LAB_PEDIA</Tag>
-		<English>The first major contribution of the Martian colony is scientific research.  The lab gives new knowledge of the geology of Mars and the history of the Solar System.</English>
-		<French>The first major contribution of the Martian colony is scientific research.  The lab gives new knowledge of the geology of Mars and the history of the Solar System.</French>
+		<English>The first major contribution of the Martian colony is scientific research. The lab gives new knowledge of the geology of Mars and the history of the Solar System.</English>
+		<French>The first major contribution of the Martian colony is scientific research. The lab gives new knowledge of the geology of Mars and the history of the Solar System.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_GEOLOGY_LAB_STRATEGY</Tag>
@@ -11150,8 +11150,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_GOVERNMENT_PEDIA</Tag>
-		<English>The colony has gotten too big for ad hoc administration.  It now has a centralized government.</English>
-		<French>The colony has gotten too big for ad hoc administration.  It now has a centralized government.</French>
+		<English>The colony has gotten too big for ad hoc administration. It now has a centralized government.</English>
+		<French>The colony has gotten too big for ad hoc administration. It now has a centralized government.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_GOVERNMENT_STRATEGY</Tag>
@@ -11705,8 +11705,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MERCURY_COLONY_PEDIA</Tag>
-		<English>Now that you have an effective way to block the sun's intense heat, you can build colonies all over Mercury.  While it is not the most exciting place to live, the intense solar radiation, lack of atmosphere, and low gravity are great for industry.</English>
-		<French>Now that you have an effective way to block the sun's intense heat, you can build colonies all over Mercury.  While it is not the most exciting place to live, the intense solar radiation, lack of atmosphere, and low gravity are great for industry.</French>
+		<English>Now that you have an effective way to block the sun's intense heat, you can build colonies all over Mercury. While it is not the most exciting place to live, the intense solar radiation, lack of atmosphere, and low gravity are great for industry.</English>
+		<French>Now that you have an effective way to block the sun's intense heat, you can build colonies all over Mercury. While it is not the most exciting place to live, the intense solar radiation, lack of atmosphere, and low gravity are great for industry.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MERCURY_COLONY_STRATEGY</Tag>
@@ -11719,8 +11719,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MERCURY_COMET_BOMBARDMENT_PEDIA</Tag>
-		<English>A terraformed Mercury needs an atmosphere, which will come by bombarding comets.  See http://terraforming.wikia.com/wiki/Mercury.</English>
-		<French>A terraformed Mercury needs an atmosphere, which will come by bombarding comets.  See http://terraforming.wikia.com/wiki/Mercury.</French>
+		<English>A terraformed Mercury needs an atmosphere, which will come by bombarding comets. See http://terraforming.wikia.com/wiki/Mercury.</English>
+		<French>A terraformed Mercury needs an atmosphere, which will come by bombarding comets. See http://terraforming.wikia.com/wiki/Mercury.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MERCURY_COMET_BOMBARDMENT_STRATEGY</Tag>
@@ -11733,8 +11733,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MERCURY_SUNSHADE_PEDIA</Tag>
-		<English>At such a close distance to the Sun, Mercury needs a shield to block sunlight.  See http://terraforming.wikia.com/wiki/Mercury.</English>
-		<French>At such a close distance to the Sun, Mercury needs a shield to block sunlight.  See http://terraforming.wikia.com/wiki/Mercury.</French>
+		<English>At such a close distance to the Sun, Mercury needs a shield to block sunlight. See http://terraforming.wikia.com/wiki/Mercury.</English>
+		<French>At such a close distance to the Sun, Mercury needs a shield to block sunlight. See http://terraforming.wikia.com/wiki/Mercury.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MERCURY_SUNSHADE_STRATEGY</Tag>
@@ -12167,7 +12167,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOBILE_PLANT_PEDIA</Tag>
-		<English>Plants that can move.  So they're not really plants.</English>
+		<English>Plants that can move. So they're not really plants.</English>
 		<French>Des Usines qui peuvent se déplacer. Ce ne sont donc pas vraiment des usines implantées.</French>
 	</TEXT>
 	<TEXT>
@@ -12237,8 +12237,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MONOLITH_PEDIA</Tag>
-		<English>This mysterious object advances the evolution of life forms throughout the galaxy.  Even its designers are not entirely sure what it is, but it seems to have a quasi-mystical element to it.</English>
-		<French>This mysterious object advances the evolution of life forms throughout the galaxy.  Even its designers are not entirely sure what it is, but it seems to have a quasi-mystical element to it.</French>
+		<English>This mysterious object advances the evolution of life forms throughout the galaxy. Even its designers are not entirely sure what it is, but it seems to have a quasi-mystical element to it.</English>
+		<French>This mysterious object advances the evolution of life forms throughout the galaxy. Even its designers are not entirely sure what it is, but it seems to have a quasi-mystical element to it.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MONOLITH_STRATEGY</Tag>
@@ -12279,8 +12279,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOON_TERRA_PEDIA</Tag>
-		<English>The Moon now has an atmosphere and suitable climate, so that people can leave their arcologies for at least a short amount of time.  But there isn't much to do outside.</English>
-		<French>The Moon now has an atmosphere and suitable climate, so that people can leave their arcologies for at least a short amount of time.  But there isn't much to do outside.</French>
+		<English>The Moon now has an atmosphere and suitable climate, so that people can leave their arcologies for at least a short amount of time. But there isn't much to do outside.</English>
+		<French>The Moon now has an atmosphere and suitable climate, so that people can leave their arcologies for at least a short amount of time. But there isn't much to do outside.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOON_TERRA_STRATEGY</Tag>
@@ -12377,8 +12377,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSEUM_OF_HUMANITY_PEDIA</Tag>
-		<English>As humans come into contact with more sentient, non-Earth based life forms, new anthrocentric forms of politics and social organization have emerged.  One of them is this museum, dedicated to human history and human nature.</English>
-		<French>As humans come into contact with more sentient, non-Earth based life forms, new anthrocentric forms of politics and social organization have emerged.  One of them is this museum, dedicated to human history and human nature.</French>
+		<English>As humans come into contact with more sentient, non-Earth based life forms, new anthrocentric forms of politics and social organization have emerged. One of them is this museum, dedicated to human history and human nature.</English>
+		<French>As humans come into contact with more sentient, non-Earth based life forms, new anthrocentric forms of politics and social organization have emerged. One of them is this museum, dedicated to human history and human nature.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUSEUM_OF_HUMANITY_STRATEGY</Tag>
@@ -12475,8 +12475,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEBULA_REBEL_BASE_PEDIA</Tag>
-		<English>Did you know that if you were inside a nebula, it would not actually look like a colorful cloud around you?  But it is still a good place for rebels to hide.</English>
-		<French>Did you know that if you were inside a nebula, it would not actually look like a colorful cloud around you?  But it is still a good place for rebels to hide.</French>
+		<English>Did you know that if you were inside a nebula, it would not actually look like a colorful cloud around you? But it is still a good place for rebels to hide.</English>
+		<French>Did you know that if you were inside a nebula, it would not actually look like a colorful cloud around you? But it is still a good place for rebels to hide.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEBULA_REBEL_BASE_STRATEGY</Tag>
@@ -12503,7 +12503,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEO_PYRAMID_PEDIA</Tag>
-		<English>This bizarre pyramidal structure, inspired by the ancient Pyramids of Egypt, is capable of interstellar travel, time travel, and other amazing feats.  Little is known about it, even to its designers.  Its resemblance to ancient pyramids might not be entirely coincidental.</English>
+		<English>This bizarre pyramidal structure, inspired by the ancient Pyramids of Egypt, is capable of interstellar travel, time travel, and other amazing feats. Little is known about it, even to its designers. Its resemblance to ancient pyramids might not be entirely coincidental.</English>
 		<French>Cette structure pyramidale bizarre, inspirée des anciennes pyramides d'Égypte, est capable de voyages interstellaires, de voyages dans le temps et d'autres exploits incroyables. On en sait peu à ce sujet, même pour ses concepteurs. Sa ressemblance avec les anciennes pyramides n'est peut-être pas entièrement une coïncidence.</French>
 	</TEXT>
 	<TEXT>
@@ -12680,7 +12680,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEUTRON_STAR_COLONY</Tag>
 		<English>Interstellar Neutron Star Colony</English>
-		<French>Colonie Interstellaire de  Neutron Star</French>
+		<French>Colonie Interstellaire de Neutron Star</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEUTRON_STAR_COLONY_PEDIA</Tag>
@@ -12698,8 +12698,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEUTRON_STAR_COMPUTATIONAL_SUBSTRATE_PEDIA</Tag>
-		<English>The 'nuclear pasta' of a neutron star is appropriated for computational purposes.  This is as close as you get to colonizing a neutron star.</English>
-		<French>The 'nuclear pasta' of a neutron star is appropriated for computational purposes.  This is as close as you get to colonizing a neutron star.</French>
+		<English>The 'nuclear pasta' of a neutron star is appropriated for computational purposes. This is as close as you get to colonizing a neutron star.</English>
+		<French>The 'nuclear pasta' of a neutron star is appropriated for computational purposes. This is as close as you get to colonizing a neutron star.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEUTRON_STAR_COMPUTATIONAL_SUBSTRATE_STRATEGY</Tag>
@@ -12936,8 +12936,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OBERON_HEATING_PEDIA</Tag>
-		<English>Artificial heating is needed, such as from fusion power plants, to begin terraforming.  See http://terraforming.wikia.com/wiki/Oberon</English>
-		<French>Artificial heating is needed, such as from fusion power plants, to begin terraforming.  See http://terraforming.wikia.com/wiki/Oberon</French>
+		<English>Artificial heating is needed, such as from fusion power plants, to begin terraforming. See http://terraforming.wikia.com/wiki/Oberon</English>
+		<French>Artificial heating is needed, such as from fusion power plants, to begin terraforming. See http://terraforming.wikia.com/wiki/Oberon</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OBERON_HEATING_STRATEGY</Tag>
@@ -12950,8 +12950,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OBERON_MAGNETIC_FIELD_PEDIA</Tag>
-		<English>Needed to protect from solar storms.  See http://terraforming.wikia.com/wiki/Oberon</English>
-		<French>Needed to protect from solar storms.  See http://terraforming.wikia.com/wiki/Oberon</French>
+		<English>Needed to protect from solar storms. See http://terraforming.wikia.com/wiki/Oberon</English>
+		<French>Needed to protect from solar storms. See http://terraforming.wikia.com/wiki/Oberon</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OBERON_MAGNETIC_FIELD_STRATEGY</Tag>
@@ -13006,8 +13006,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OCEAN_PLANET_PEDIA</Tag>
-		<English>A base on an ocean planet around a red giant.  The water helps guard against radiation.</English>
-		<French>A base on an ocean planet around a red giant.  The water helps guard against radiation.</French>
+		<English>A base on an ocean planet around a red giant. The water helps guard against radiation.</English>
+		<French>A base on an ocean planet around a red giant. The water helps guard against radiation.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OCEAN_PLANET_STRATEGY</Tag>
@@ -13132,8 +13132,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OORT_CLOUD_SOLAR_ARRAY_PEDIA</Tag>
-		<English>Solar power way out in the Oort Cloud?  It can be done using mirror focusing in the inner solar system.</English>
-		<French>Solar power way out in the Oort Cloud?  It can be done using mirror focusing in the inner solar system.</French>
+		<English>Solar power way out in the Oort Cloud? It can be done using mirror focusing in the inner solar system.</English>
+		<French>Solar power way out in the Oort Cloud? It can be done using mirror focusing in the inner solar system.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OORT_CLOUD_SOLAR_ARRAY_STRATEGY</Tag>
@@ -13160,8 +13160,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OPEN_SOURCE_TECHNOLOGY_PEDIA</Tag>
-		<English>Through decentralized collaboration and changes to patent law, the technology needed for most manufacturing and commerce is now open source.  Since control of knowledge and patents is one of the central bases of power in the Information Age, the advent of widespread open source technology marked the beginning of the transition to a truly egalitarian society.</English>
-		<French>Through decentralized collaboration and changes to patent law, the technology needed for most manufacturing and commerce is now open source.  Since control of knowledge and patents is one of the central bases of power in the Information Age, the advent of widespread open source technology marked the beginning of the transition to a truly egalitarian society.</French>
+		<English>Through decentralized collaboration and changes to patent law, the technology needed for most manufacturing and commerce is now open source. Since control of knowledge and patents is one of the central bases of power in the Information Age, the advent of widespread open source technology marked the beginning of the transition to a truly egalitarian society.</English>
+		<French>Through decentralized collaboration and changes to patent law, the technology needed for most manufacturing and commerce is now open source. Since control of knowledge and patents is one of the central bases of power in the Information Age, the advent of widespread open source technology marked the beginning of the transition to a truly egalitarian society.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OPEN_SOURCE_TECHNOLOGY_STRATEGY</Tag>
@@ -13202,8 +13202,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORBITAL_ACCELERATOR_PEDIA</Tag>
-		<English>Particle accelerators on Earth, such as the Large Hadron Collider, yielded tremendously valuable information about the subatomic world.  Nevertheless, efforts to unify the branches of physics continued to be fruitless, and more experimental evidence was needed.  Earthbound accelerators could no longer provide enough energy, and so the International Orbital Accelerator was built.</English>
-		<French>Particle accelerators on Earth, such as the Large Hadron Collider, yielded tremendously valuable information about the subatomic world.  Nevertheless, efforts to unify the branches of physics continued to be fruitless, and more experimental evidence was needed.  Earthbound accelerators could no longer provide enough energy, and so the International Orbital Accelerator was built.</French>
+		<English>Particle accelerators on Earth, such as the Large Hadron Collider, yielded tremendously valuable information about the subatomic world. Nevertheless, efforts to unify the branches of physics continued to be fruitless, and more experimental evidence was needed. Earthbound accelerators could no longer provide enough energy, and so the International Orbital Accelerator was built.</English>
+		<French>Particle accelerators on Earth, such as the Large Hadron Collider, yielded tremendously valuable information about the subatomic world. Nevertheless, efforts to unify the branches of physics continued to be fruitless, and more experimental evidence was needed. Earthbound accelerators could no longer provide enough energy, and so the International Orbital Accelerator was built.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORBITAL_ACCELERATOR_STRATEGY</Tag>
@@ -13230,8 +13230,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORBITAL_COLONY_PEDIA</Tag>
-		<English>The O'Neill cylinder (also called an O'Neill colony) is a space settlement design proposed by American physicist Gerard K. O'Neill in his 1976 book The High Frontier: Human Colonies in Space. O'Neill proposed the colonization of space for the 21st century, using materials extracted from the Moon and later from asteroids. (Source: Wikipedia)[PARAGRAPH:2]In C2C, this is the first megastructure not tied to a planetary orbit; these colonies orbit the Sun and travel throughout the solar system freely.  They serve functions of trade and knowledge exchange.  Artifical gravity is nice, too.</English>
-		<French>The O'Neill cylinder (also called an O'Neill colony) is a space settlement design proposed by American physicist Gerard K. O'Neill in his 1976 book The High Frontier: Human Colonies in Space. O'Neill proposed the colonization of space for the 21st century, using materials extracted from the Moon and later from asteroids. (Source: Wikipedia)[PARAGRAPH:2]In C2C, this is the first megastructure not tied to a planetary orbit; these colonies orbit the Sun and travel throughout the solar system freely.  They serve functions of trade and knowledge exchange.  Artifical gravity is nice, too.</French>
+		<English>The O'Neill cylinder (also called an O'Neill colony) is a space settlement design proposed by American physicist Gerard K. O'Neill in his 1976 book The High Frontier: Human Colonies in Space. O'Neill proposed the colonization of space for the 21st century, using materials extracted from the Moon and later from asteroids. (Source: Wikipedia)[PARAGRAPH:2]In C2C, this is the first megastructure not tied to a planetary orbit; these colonies orbit the Sun and travel throughout the solar system freely. They serve functions of trade and knowledge exchange. Artifical gravity is nice, too.</English>
+		<French>The O'Neill cylinder (also called an O'Neill colony) is a space settlement design proposed by American physicist Gerard K. O'Neill in his 1976 book The High Frontier: Human Colonies in Space. O'Neill proposed the colonization of space for the 21st century, using materials extracted from the Moon and later from asteroids. (Source: Wikipedia)[PARAGRAPH:2]In C2C, this is the first megastructure not tied to a planetary orbit; these colonies orbit the Sun and travel throughout the solar system freely. They serve functions of trade and knowledge exchange. Artifical gravity is nice, too.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORBITAL_COLONY_STRATEGY</Tag>
@@ -13300,8 +13300,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORBITAL_VR_PEDIA</Tag>
-		<English>The first simulated reality systems on cislunar space stations were very effective in maintaining order and keeping people happy and entertained.  But they didn't always work right.  Glitches, if you will.  New systems have been developed for the era of orbital megastructures, taking advantage of the latest molecular brain scanning technology to insure that nothing interferes with the illusion.</English>
-		<French>The first simulated reality systems on cislunar space stations were very effective in maintaining order and keeping people happy and entertained.  But they didn't always work right.  Glitches, if you will.  New systems have been developed for the era of orbital megastructures, taking advantage of the latest molecular brain scanning technology to insure that nothing interferes with the illusion.</French>
+		<English>The first simulated reality systems on cislunar space stations were very effective in maintaining order and keeping people happy and entertained. But they didn't always work right. Glitches, if you will. New systems have been developed for the era of orbital megastructures, taking advantage of the latest molecular brain scanning technology to insure that nothing interferes with the illusion.</English>
+		<French>The first simulated reality systems on cislunar space stations were very effective in maintaining order and keeping people happy and entertained. But they didn't always work right. Glitches, if you will. New systems have been developed for the era of orbital megastructures, taking advantage of the latest molecular brain scanning technology to insure that nothing interferes with the illusion.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORBITAL_VR_STRATEGY</Tag>
@@ -13426,8 +13426,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PARADISE_PLANET_PEDIA</Tag>
-		<English>This entire planet has been set aside as a nature preserve, with only a few park rangers and tourists on the planet at a given time.  Of course, 'nature' entails extensively genetically engineered flora and fauna and meticulous maintainence of the highly unstable climate.  Artists often visit and think about the universe beyond.</English>
-		<French>This entire planet has been set aside as a nature preserve, with only a few park rangers and tourists on the planet at a given time.  Of course, 'nature' entails extensively genetically engineered flora and fauna and meticulous maintainence of the highly unstable climate.  Artists often visit and think about the universe beyond.</French>
+		<English>This entire planet has been set aside as a nature preserve, with only a few park rangers and tourists on the planet at a given time. Of course, 'nature' entails extensively genetically engineered flora and fauna and meticulous maintainence of the highly unstable climate. Artists often visit and think about the universe beyond.</English>
+		<French>This entire planet has been set aside as a nature preserve, with only a few park rangers and tourists on the planet at a given time. Of course, 'nature' entails extensively genetically engineered flora and fauna and meticulous maintainence of the highly unstable climate. Artists often visit and think about the universe beyond.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PARADISE_PLANET_STRATEGY</Tag>
@@ -13604,7 +13604,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PERSONAL_STARCRAFT_FACTORY</Tag>
 		<English>Interstellar Personal Starcraft Factory</English>
-		<French>Usine Interstellaire de Vaisseau Stellaire  Personnel</French>
+		<French>Usine Interstellaire de Vaisseau Stellaire Personnel</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PERSONAL_STARCRAFT_FACTORY_PEDIA</Tag>
@@ -13893,8 +13893,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POCKET_UNIVERSE_HOTEL_PEDIA</Tag>
-		<English>A hotel within a pocket universe.  A very advanced form of tourism.</English>
-		<French>A hotel within a pocket universe.  A very advanced form of tourism.</French>
+		<English>A hotel within a pocket universe. A very advanced form of tourism.</English>
+		<French>A hotel within a pocket universe. A very advanced form of tourism.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POCKET_UNIVERSE_HOTEL_STRATEGY</Tag>
@@ -14084,8 +14084,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRISON_PLANET_PEDIA</Tag>
-		<English>In this enlightened era, criminals are banished to a desolate planet in the outer reaches of the galaxy.  The planet is under continual satellite surveillance, and the patrol guards are under strict order to destroy all unauthorized ships that come within 100,000 kilometers.  Only one prisoner is known to have escaped.  I wonder where he is now.</English>
-		<French>In this enlightened era, criminals are banished to a desolate planet in the outer reaches of the galaxy.  The planet is under continual satellite surveillance, and the patrol guards are under strict order to destroy all unauthorized ships that come within 100,000 kilometers.  Only one prisoner is known to have escaped.  I wonder where he is now.</French>
+		<English>In this enlightened era, criminals are banished to a desolate planet in the outer reaches of the galaxy. The planet is under continual satellite surveillance, and the patrol guards are under strict order to destroy all unauthorized ships that come within 100,000 kilometers. Only one prisoner is known to have escaped. I wonder where he is now.</English>
+		<French>In this enlightened era, criminals are banished to a desolate planet in the outer reaches of the galaxy. The planet is under continual satellite surveillance, and the patrol guards are under strict order to destroy all unauthorized ships that come within 100,000 kilometers. Only one prisoner is known to have escaped. I wonder where he is now.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRISON_PLANET_STRATEGY</Tag>
@@ -14490,8 +14490,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RACIAL_PROFILING_PEDIA</Tag>
-		<English>The government now uses genetic testing at an early age to determine likely aptitude, tendency toward antisocial behavior, and potential consumer interests.  See https://ghr.nlm.nih.gov/primer/testing/discrimination</English>
-		<French>The government now uses genetic testing at an early age to determine likely aptitude, tendency toward antisocial behavior, and potential consumer interests.  See https://ghr.nlm.nih.gov/primer/testing/discrimination</French>
+		<English>The government now uses genetic testing at an early age to determine likely aptitude, tendency toward antisocial behavior, and potential consumer interests. See https://ghr.nlm.nih.gov/primer/testing/discrimination</English>
+		<French>The government now uses genetic testing at an early age to determine likely aptitude, tendency toward antisocial behavior, and potential consumer interests. See https://ghr.nlm.nih.gov/primer/testing/discrimination</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RACIAL_PROFILING_STRATEGY</Tag>
@@ -14672,8 +14672,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REGIONAL_PLANNING_COMMISSION_PEDIA</Tag>
-		<English>The Regional Planning Commission is tasked with managing growth of housing, infrastructure, and business within a wide metropolitan region.  This facilitates smooth growth.</English>
-		<French>The Regional Planning Commission is tasked with managing growth of housing, infrastructure, and business within a wide metropolitan region.  This facilitates smooth growth.</French>
+		<English>The Regional Planning Commission is tasked with managing growth of housing, infrastructure, and business within a wide metropolitan region. This facilitates smooth growth.</English>
+		<French>The Regional Planning Commission is tasked with managing growth of housing, infrastructure, and business within a wide metropolitan region. This facilitates smooth growth.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REGIONAL_PLANNING_COMMISSION_STRATEGY</Tag>
@@ -14868,8 +14868,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RINGWORLD_PEDIA</Tag>
-		<English>Ringworld is a 1970 science fiction novel by Larry Niven, set in his Known Space universe and considered a classic of science fiction literature. Niven later added four sequels and four prequels. (The Fleet of Worlds series, co-written with Edward M. Lerner provides the four prequels as well as Fate of Worlds, the final sequel.) These books tie into numerous other books set in Known Space. Ringworld won the Nebula Award in 1970, as well as both the Hugo Award and Locus Award in 1971.[PARAGRAPH:2]Ringworld: an artificial ring about one million miles (1.6 gigameters) wide and approximately the diameter of Earth's orbit (which makes it about 600 million miles (1,000 gigameters) in circumference), encircling a sunlike star. (Source: Wikipedia)[PARAGRAPH:2]Trillions of people live comfortably inside.  They don't worry about stability.</English>
-		<French>Ringworld is a 1970 science fiction novel by Larry Niven, set in his Known Space universe and considered a classic of science fiction literature. Niven later added four sequels and four prequels. (The Fleet of Worlds series, co-written with Edward M. Lerner provides the four prequels as well as Fate of Worlds, the final sequel.) These books tie into numerous other books set in Known Space. Ringworld won the Nebula Award in 1970, as well as both the Hugo Award and Locus Award in 1971.[PARAGRAPH:2]Ringworld: an artificial ring about one million miles (1.6 gigameters) wide and approximately the diameter of Earth's orbit (which makes it about 600 million miles (1,000 gigameters) in circumference), encircling a sunlike star. (Source: Wikipedia)[PARAGRAPH:2]Trillions of people live comfortably inside.  They don't worry about stability.</French>
+		<English>Ringworld is a 1970 science fiction novel by Larry Niven, set in his Known Space universe and considered a classic of science fiction literature. Niven later added four sequels and four prequels. (The Fleet of Worlds series, co-written with Edward M. Lerner provides the four prequels as well as Fate of Worlds, the final sequel.) These books tie into numerous other books set in Known Space. Ringworld won the Nebula Award in 1970, as well as both the Hugo Award and Locus Award in 1971.[PARAGRAPH:2]Ringworld: an artificial ring about one million miles (1.6 gigameters) wide and approximately the diameter of Earth's orbit (which makes it about 600 million miles (1,000 gigameters) in circumference), encircling a sunlike star. (Source: Wikipedia)[PARAGRAPH:2]Trillions of people live comfortably inside. They don't worry about stability.</English>
+		<French>Ringworld is a 1970 science fiction novel by Larry Niven, set in his Known Space universe and considered a classic of science fiction literature. Niven later added four sequels and four prequels. (The Fleet of Worlds series, co-written with Edward M. Lerner provides the four prequels as well as Fate of Worlds, the final sequel.) These books tie into numerous other books set in Known Space. Ringworld won the Nebula Award in 1970, as well as both the Hugo Award and Locus Award in 1971.[PARAGRAPH:2]Ringworld: an artificial ring about one million miles (1.6 gigameters) wide and approximately the diameter of Earth's orbit (which makes it about 600 million miles (1,000 gigameters) in circumference), encircling a sunlike star. (Source: Wikipedia)[PARAGRAPH:2]Trillions of people live comfortably inside. They don't worry about stability.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RINGWORLD_STRATEGY</Tag>
@@ -14938,8 +14938,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROGUE_BEACON_PEDIA</Tag>
-		<English>This beacon, established on a rogue planet, is used to relay interstellar communications.  It greatly reduces power consumption and helps keep a fledgling galactic civilization together.</English>
-		<French>This beacon, established on a rogue planet, is used to relay interstellar communications.  It greatly reduces power consumption and helps keep a fledgling galactic civilization together.</French>
+		<English>This beacon, established on a rogue planet, is used to relay interstellar communications. It greatly reduces power consumption and helps keep a fledgling galactic civilization together.</English>
+		<French>This beacon, established on a rogue planet, is used to relay interstellar communications. It greatly reduces power consumption and helps keep a fledgling galactic civilization together.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROGUE_BEACON_STRATEGY</Tag>
@@ -14952,8 +14952,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROGUE_OUTPOST_PEDIA</Tag>
-		<English>At long last, your people have left the Solar System.  The first step toward galactic domination is a small research and manufacturing outpost, truly in the middle of nowhere.[PARAGRAPH:2]A rogue planet, also known as an interstellar planet, nomad planet, free-floating planet, orphan planet or starless planet, is a planetary-mass object that orbits the galaxy directly. They have either been ejected from the planetary system in which they formed or have never been gravitationally bound to any star or brown dwarf. There may be billions of rogue planets in the Milky Way. (Source: Wikipedia)</English>
-		<French>At long last, your people have left the Solar System.  The first step toward galactic domination is a small research and manufacturing outpost, truly in the middle of nowhere.[PARAGRAPH:2]A rogue planet, also known as an interstellar planet, nomad planet, free-floating planet, orphan planet or starless planet, is a planetary-mass object that orbits the galaxy directly. They have either been ejected from the planetary system in which they formed or have never been gravitationally bound to any star or brown dwarf. There may be billions of rogue planets in the Milky Way. (Source: Wikipedia)</French>
+		<English>At long last, your people have left the Solar System. The first step toward galactic domination is a small research and manufacturing outpost, truly in the middle of nowhere.[PARAGRAPH:2]A rogue planet, also known as an interstellar planet, nomad planet, free-floating planet, orphan planet or starless planet, is a planetary-mass object that orbits the galaxy directly. They have either been ejected from the planetary system in which they formed or have never been gravitationally bound to any star or brown dwarf. There may be billions of rogue planets in the Milky Way. (Source: Wikipedia)</English>
+		<French>At long last, your people have left the Solar System. The first step toward galactic domination is a small research and manufacturing outpost, truly in the middle of nowhere.[PARAGRAPH:2]A rogue planet, also known as an interstellar planet, nomad planet, free-floating planet, orphan planet or starless planet, is a planetary-mass object that orbits the galaxy directly. They have either been ejected from the planetary system in which they formed or have never been gravitationally bound to any star or brown dwarf. There may be billions of rogue planets in the Milky Way. (Source: Wikipedia)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROGUE_OUTPOST_STRATEGY</Tag>
@@ -14966,8 +14966,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROGUE_REBEL_PEDIA</Tag>
-		<English>Not everybody is on board with your plans for galactic domination.  Whether you call them freedom fighters or terrorists, these rebels are determined to keep their independence.  And keep their lucrative piracy business.</English>
-		<French>Not everybody is on board with your plans for galactic domination.  Whether you call them freedom fighters or terrorists, these rebels are determined to keep their independence.  And keep their lucrative piracy business.</French>
+		<English>Not everybody is on board with your plans for galactic domination. Whether you call them freedom fighters or terrorists, these rebels are determined to keep their independence. And keep their lucrative piracy business.</English>
+		<French>Not everybody is on board with your plans for galactic domination. Whether you call them freedom fighters or terrorists, these rebels are determined to keep their independence. And keep their lucrative piracy business.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROGUE_REBEL_STRATEGY</Tag>
@@ -14980,8 +14980,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROGUE_RESUPPLY_PEDIA</Tag>
-		<English>It's a long way between the stars.  This resupply station is for travelers to refuel, resupply, and take a break from the drudgery of the starship.</English>
-		<French>It's a long way between the stars.  This resupply station is for travelers to refuel, resupply, and take a break from the drudgery of the starship.</French>
+		<English>It's a long way between the stars. This resupply station is for travelers to refuel, resupply, and take a break from the drudgery of the starship.</English>
+		<French>It's a long way between the stars. This resupply station is for travelers to refuel, resupply, and take a break from the drudgery of the starship.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROGUE_RESUPPLY_STRATEGY</Tag>
@@ -15162,8 +15162,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEDNA_PROBE_PEDIA</Tag>
-		<English>90377 Sedna is a large minor planet in the outer reaches of the Solar System that was, as of 2015, at a distance of about 86 astronomical units (AU) from the Sun, about three times as far as Neptune. Spectroscopy has revealed that Sedna's surface composition is similar to that of some other trans-Neptunian objects, being largely a mixture of water, methane, and nitrogen ices with tholins. Its surface is one of the reddest among Solar System objects. It is most likely a dwarf planet. (Source: Wikipedia)[PARAGRAPH:2]With the 2076 perihelion approaching, the World Space Agency developed a mission that would gain both a gravity and magnetic boost from Jupiter, then a final boost from Neptune, to deploy a robotic swarm to explore Sedna.  The first magnetic sails were invented just in time to allow this to happen.</English>
-		<French>90377 Sedna is a large minor planet in the outer reaches of the Solar System that was, as of 2015, at a distance of about 86 astronomical units (AU) from the Sun, about three times as far as Neptune. Spectroscopy has revealed that Sedna's surface composition is similar to that of some other trans-Neptunian objects, being largely a mixture of water, methane, and nitrogen ices with tholins. Its surface is one of the reddest among Solar System objects. It is most likely a dwarf planet. (Source: Wikipedia)[PARAGRAPH:2]With the 2076 perihelion approaching, the World Space Agency developed a mission that would gain both a gravity and magnetic boost from Jupiter, then a final boost from Neptune, to deploy a robotic swarm to explore Sedna.  The first magnetic sails were invented just in time to allow this to happen.</French>
+		<English>90377 Sedna is a large minor planet in the outer reaches of the Solar System that was, as of 2015, at a distance of about 86 astronomical units (AU) from the Sun, about three times as far as Neptune. Spectroscopy has revealed that Sedna's surface composition is similar to that of some other trans-Neptunian objects, being largely a mixture of water, methane, and nitrogen ices with tholins. Its surface is one of the reddest among Solar System objects. It is most likely a dwarf planet. (Source: Wikipedia)[PARAGRAPH:2]With the 2076 perihelion approaching, the World Space Agency developed a mission that would gain both a gravity and magnetic boost from Jupiter, then a final boost from Neptune, to deploy a robotic swarm to explore Sedna. The first magnetic sails were invented just in time to allow this to happen.</English>
+		<French>90377 Sedna is a large minor planet in the outer reaches of the Solar System that was, as of 2015, at a distance of about 86 astronomical units (AU) from the Sun, about three times as far as Neptune. Spectroscopy has revealed that Sedna's surface composition is similar to that of some other trans-Neptunian objects, being largely a mixture of water, methane, and nitrogen ices with tholins. Its surface is one of the reddest among Solar System objects. It is most likely a dwarf planet. (Source: Wikipedia)[PARAGRAPH:2]With the 2076 perihelion approaching, the World Space Agency developed a mission that would gain both a gravity and magnetic boost from Jupiter, then a final boost from Neptune, to deploy a robotic swarm to explore Sedna. The first magnetic sails were invented just in time to allow this to happen.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SEDNA_PROBE_STRATEGY</Tag>
@@ -15288,8 +15288,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHELLWORLD_PEDIA</Tag>
-		<English>This asteroid has been encased in a shell, and its surface has been converted into a small ecosystem.  An ideal place for spacefaring humans to live.  See http://www.nextbigfuture.com/2016/12/beyond-dome-city-colonies-to-shell.html</English>
-		<French>This asteroid has been encased in a shell, and its surface has been converted into a small ecosystem.  An ideal place for spacefaring humans to live.  See http://www.nextbigfuture.com/2016/12/beyond-dome-city-colonies-to-shell.html</French>
+		<English>This asteroid has been encased in a shell, and its surface has been converted into a small ecosystem. An ideal place for spacefaring humans to live. See http://www.nextbigfuture.com/2016/12/beyond-dome-city-colonies-to-shell.html</English>
+		<French>This asteroid has been encased in a shell, and its surface has been converted into a small ecosystem. An ideal place for spacefaring humans to live. See http://www.nextbigfuture.com/2016/12/beyond-dome-city-colonies-to-shell.html</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHELLWORLD_STRATEGY</Tag>
@@ -15302,8 +15302,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHELL_WORLD_FACTORY_PEDIA</Tag>
-		<English>The factory on the surface shell produces useful goods and also stablizes the shell.  See http://www.nextbigfuture.com/2016/12/beyond-dome-city-colonies-to-shell.html</English>
-		<French>The factory on the surface shell produces useful goods and also stablizes the shell.  See http://www.nextbigfuture.com/2016/12/beyond-dome-city-colonies-to-shell.html</French>
+		<English>The factory on the surface shell produces useful goods and also stablizes the shell. See http://www.nextbigfuture.com/2016/12/beyond-dome-city-colonies-to-shell.html</English>
+		<French>The factory on the surface shell produces useful goods and also stablizes the shell. See http://www.nextbigfuture.com/2016/12/beyond-dome-city-colonies-to-shell.html</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHELL_WORLD_FACTORY_STRATEGY</Tag>
@@ -15316,8 +15316,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHELL_WORLD_FLIGHT_PEDIA</Tag>
-		<English>The gravity is so low on the paraterraformed asteroid that people can strap wings to their arms and fly.  See http://www.nextbigfuture.com/2016/12/beyond-dome-city-colonies-to-shell.html</English>
-		<French>The gravity is so low on the paraterraformed asteroid that people can strap wings to their arms and fly.  See http://www.nextbigfuture.com/2016/12/beyond-dome-city-colonies-to-shell.html</French>
+		<English>The gravity is so low on the paraterraformed asteroid that people can strap wings to their arms and fly. See http://www.nextbigfuture.com/2016/12/beyond-dome-city-colonies-to-shell.html</English>
+		<French>The gravity is so low on the paraterraformed asteroid that people can strap wings to their arms and fly. See http://www.nextbigfuture.com/2016/12/beyond-dome-city-colonies-to-shell.html</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHELL_WORLD_FLIGHT_STRATEGY</Tag>
@@ -15330,8 +15330,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHELL_WORLD_HANGING_CITY_PEDIA</Tag>
-		<English>This city hangs from the asteroid shell.  See http://www.nextbigfuture.com/2016/12/beyond-dome-city-colonies-to-shell.html</English>
-		<French>This city hangs from the asteroid shell.  See http://www.nextbigfuture.com/2016/12/beyond-dome-city-colonies-to-shell.html</French>
+		<English>This city hangs from the asteroid shell. See http://www.nextbigfuture.com/2016/12/beyond-dome-city-colonies-to-shell.html</English>
+		<French>This city hangs from the asteroid shell. See http://www.nextbigfuture.com/2016/12/beyond-dome-city-colonies-to-shell.html</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHELL_WORLD_HANGING_CITY_STRATEGY</Tag>
@@ -15344,8 +15344,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHELL_WORLD_LIGHTING_PEDIA</Tag>
-		<English>Artificial lights mounted to the asteroid surface shell provide a natural diurnal cycle, improving health and stimulating plant growth.  See http://www.nextbigfuture.com/2016/12/beyond-dome-city-colonies-to-shell.html</English>
-		<French>Artificial lights mounted to the asteroid surface shell provide a natural diurnal cycle, improving health and stimulating plant growth.  See http://www.nextbigfuture.com/2016/12/beyond-dome-city-colonies-to-shell.html</French>
+		<English>Artificial lights mounted to the asteroid surface shell provide a natural diurnal cycle, improving health and stimulating plant growth. See http://www.nextbigfuture.com/2016/12/beyond-dome-city-colonies-to-shell.html</English>
+		<French>Artificial lights mounted to the asteroid surface shell provide a natural diurnal cycle, improving health and stimulating plant growth. See http://www.nextbigfuture.com/2016/12/beyond-dome-city-colonies-to-shell.html</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHELL_WORLD_LIGHTING_STRATEGY</Tag>
@@ -15358,8 +15358,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHELL_WORLD_SPACEPORT_PEDIA</Tag>
-		<English>This spaceport is an ideal commerce hub due to the low gravity well of the paraterraformed asteroid.  See http://www.nextbigfuture.com/2016/12/beyond-dome-city-colonies-to-shell.html</English>
-		<French>This spaceport is an ideal commerce hub due to the low gravity well of the paraterraformed asteroid.  See http://www.nextbigfuture.com/2016/12/beyond-dome-city-colonies-to-shell.html</French>
+		<English>This spaceport is an ideal commerce hub due to the low gravity well of the paraterraformed asteroid. See http://www.nextbigfuture.com/2016/12/beyond-dome-city-colonies-to-shell.html</English>
+		<French>This spaceport is an ideal commerce hub due to the low gravity well of the paraterraformed asteroid. See http://www.nextbigfuture.com/2016/12/beyond-dome-city-colonies-to-shell.html</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHELL_WORLD_SPACEPORT_STRATEGY</Tag>
@@ -15806,8 +15806,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SOLAR_ECONOMY_PEDIA</Tag>
-		<English>With massive arcologies on Earth, Mars, the Moon, and in orbit, mining throughout the asteroid belt and Kuiper Belt, a high tech economy around Earth, and the ongoing self-directed evolution of your species, your civilization has now built a thriving Solar System economy and is reaching Kardashev Type II.  The infrastructure now in place provides you with enough resources to reach for the stars.</English>
-		<French>With massive arcologies on Earth, Mars, the Moon, and in orbit, mining throughout the asteroid belt and Kuiper Belt, a high tech economy around Earth, and the ongoing self-directed evolution of your species, your civilization has now built a thriving Solar System economy and is reaching Kardashev Type II.  The infrastructure now in place provides you with enough resources to reach for the stars.</French>
+		<English>With massive arcologies on Earth, Mars, the Moon, and in orbit, mining throughout the asteroid belt and Kuiper Belt, a high tech economy around Earth, and the ongoing self-directed evolution of your species, your civilization has now built a thriving Solar System economy and is reaching Kardashev Type II. The infrastructure now in place provides you with enough resources to reach for the stars.</English>
+		<French>With massive arcologies on Earth, Mars, the Moon, and in orbit, mining throughout the asteroid belt and Kuiper Belt, a high tech economy around Earth, and the ongoing self-directed evolution of your species, your civilization has now built a thriving Solar System economy and is reaching Kardashev Type II. The infrastructure now in place provides you with enough resources to reach for the stars.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SOLAR_ECONOMY_STRATEGY</Tag>
@@ -15862,8 +15862,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SOLAR_NOVA_SURVIVAL_PLAN_PEDIA</Tag>
-		<English>Someday, the Sun will explode in a nova, incinerating Earth.  These protocols are to protect Earth's cultural heritage in the distant future.</English>
-		<French>Someday, the Sun will explode in a nova, incinerating Earth.  These protocols are to protect Earth's cultural heritage in the distant future.</French>
+		<English>Someday, the Sun will explode in a nova, incinerating Earth. These protocols are to protect Earth's cultural heritage in the distant future.</English>
+		<French>Someday, the Sun will explode in a nova, incinerating Earth. These protocols are to protect Earth's cultural heritage in the distant future.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SOLAR_NOVA_SURVIVAL_PLAN_STRATEGY</Tag>
@@ -15979,8 +15979,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPACESCRAPER_COMMERCIAL_DISTRICT_PEDIA</Tag>
-		<English>A commercial district above the boundary of space.  Near-vacuum maglev trains and short-distance space pods allow easy travel between towers.</English>
-		<French>A commercial district above the boundary of space.  Near-vacuum maglev trains and short-distance space pods allow easy travel between towers.</French>
+		<English>A commercial district above the boundary of space. Near-vacuum maglev trains and short-distance space pods allow easy travel between towers.</English>
+		<French>A commercial district above the boundary of space. Near-vacuum maglev trains and short-distance space pods allow easy travel between towers.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPACESCRAPER_COMMERCIAL_DISTRICT_STRATEGY</Tag>
@@ -16007,8 +16007,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPACESCRAPER_INDUSTRIAL_PEDIA</Tag>
-		<English>Very high-altitude factory.  It can benefit from easily-controlled environmental conditions.</English>
-		<French>Very high-altitude factory.  It can benefit from easily-controlled environmental conditions.</French>
+		<English>Very high-altitude factory. It can benefit from easily-controlled environmental conditions.</English>
+		<French>Very high-altitude factory. It can benefit from easily-controlled environmental conditions.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPACESCRAPER_INDUSTRIAL_STRATEGY</Tag>
@@ -16044,8 +16044,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPACE_CITY_PEDIA</Tag>
-		<English>This spaceport at the top of a very tall tower allows spacecraft to launch and land with minimal atmospheric interference.  This saves fuel and allows for more efficient spacecraft design.</English>
-		<French>This spaceport at the top of a very tall tower allows spacecraft to launch and land with minimal atmospheric interference.  This saves fuel and allows for more efficient spacecraft design.</French>
+		<English>This spaceport at the top of a very tall tower allows spacecraft to launch and land with minimal atmospheric interference. This saves fuel and allows for more efficient spacecraft design.</English>
+		<French>This spaceport at the top of a very tall tower allows spacecraft to launch and land with minimal atmospheric interference. This saves fuel and allows for more efficient spacecraft design.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPACE_CITY_STRATEGY</Tag>
@@ -16100,8 +16100,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPACE_WHALE_HUNTER_PEDIA</Tag>
-		<English>In C2C, space whaling is a generic term for searching the cosmos for exotic planets, civilizations, unusual life, or any else of interest.  Due to the infinite vastness of the cosmos, anything that is physically possible and can be imagined is out there somewhere, and these explorers are out to find it. See http://tvtropes.org/pmwiki/pmwiki.php/Main/SpaceWhale</English>
-		<French>In C2C, space whaling is a generic term for searching the cosmos for exotic planets, civilizations, unusual life, or any else of interest.  Due to the infinite vastness of the cosmos, anything that is physically possible and can be imagined is out there somewhere, and these explorers are out to find it. See http://tvtropes.org/pmwiki/pmwiki.php/Main/SpaceWhale</French>
+		<English>In C2C, space whaling is a generic term for searching the cosmos for exotic planets, civilizations, unusual life, or any else of interest. Due to the infinite vastness of the cosmos, anything that is physically possible and can be imagined is out there somewhere, and these explorers are out to find it. See http://tvtropes.org/pmwiki/pmwiki.php/Main/SpaceWhale</English>
+		<French>In C2C, space whaling is a generic term for searching the cosmos for exotic planets, civilizations, unusual life, or any else of interest. Due to the infinite vastness of the cosmos, anything that is physically possible and can be imagined is out there somewhere, and these explorers are out to find it. See http://tvtropes.org/pmwiki/pmwiki.php/Main/SpaceWhale</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPACE_WHALE_HUNTER_STRATEGY</Tag>
@@ -16282,8 +16282,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STARPORT_PEDIA</Tag>
-		<English>As the old spaceports built in the era of chemical rockets became obsolete, nations outfitted themselves with new and larger starports that could accomodate growing interplanetary traffic.  They were built to serve as the launching pad for interstellar missions as well.</English>
-		<French>As the old spaceports built in the era of chemical rockets became obsolete, nations outfitted themselves with new and larger starports that could accomodate growing interplanetary traffic.  They were built to serve as the launching pad for interstellar missions as well.</French>
+		<English>As the old spaceports built in the era of chemical rockets became obsolete, nations outfitted themselves with new and larger starports that could accomodate growing interplanetary traffic. They were built to serve as the launching pad for interstellar missions as well.</English>
+		<French>As the old spaceports built in the era of chemical rockets became obsolete, nations outfitted themselves with new and larger starports that could accomodate growing interplanetary traffic. They were built to serve as the launching pad for interstellar missions as well.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STARPORT_STRATEGY</Tag>
@@ -16334,7 +16334,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STAR_CLUSTER_COLONY</Tag>
 		<English>Interstellar Star Cluster Colony</English>
-		<French>Colonie Interstellaire de  Cluster d'Etoiles</French>
+		<French>Colonie Interstellaire de Cluster d'Etoiles</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STAR_CLUSTER_COLONY_PEDIA</Tag>
@@ -16348,7 +16348,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STAR_COLONY</Tag>
 		<English>Interstellar Star Colony</English>
-		<French>Colonie Interstellaire de  Star</French>
+		<French>Colonie Interstellaire de Star</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STAR_COLONY_PEDIA</Tag>
@@ -16394,8 +16394,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STELLAR_FUSION_POWER_PLANT_PEDIA</Tag>
-		<English>A fusion power plant is run from material scooped from a star, which itself is a fusion power plant.  Useful for near-stellar industry.</English>
-		<French>A fusion power plant is run from material scooped from a star, which itself is a fusion power plant.  Useful for near-stellar industry.</French>
+		<English>A fusion power plant is run from material scooped from a star, which itself is a fusion power plant. Useful for near-stellar industry.</English>
+		<French>A fusion power plant is run from material scooped from a star, which itself is a fusion power plant. Useful for near-stellar industry.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STELLAR_FUSION_POWER_PLANT_STRATEGY</Tag>
@@ -16576,8 +16576,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SULPHUR_HEXAFLOURIDE_PEDIA</Tag>
-		<English>Sulphur Hexaflouride is a potent greenhouse gas.  It is needed to raise the temperature on Europa to a tolerable level.  See http://terraforming.wikia.com/wiki/Europa</English>
-		<French>Sulphur Hexaflouride is a potent greenhouse gas.  It is needed to raise the temperature on Europa to a tolerable level.  See http://terraforming.wikia.com/wiki/Europa</French>
+		<English>Sulphur Hexaflouride is a potent greenhouse gas. It is needed to raise the temperature on Europa to a tolerable level. See http://terraforming.wikia.com/wiki/Europa</English>
+		<French>Sulphur Hexaflouride is a potent greenhouse gas. It is needed to raise the temperature on Europa to a tolerable level. See http://terraforming.wikia.com/wiki/Europa</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SULPHUR_HEXAFLOURIDE_STRATEGY</Tag>
@@ -17318,8 +17318,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIDALLY_LOCKED_WIND_PEDIA</Tag>
-		<English>Hurricane force winds blow due to the planet's extreme temperature differential.  A good source of energy.</English>
-		<French>Hurricane force winds blow due to the planet's extreme temperature differential.  A good source of energy.</French>
+		<English>Hurricane force winds blow due to the planet's extreme temperature differential. A good source of energy.</English>
+		<French>Hurricane force winds blow due to the planet's extreme temperature differential. A good source of energy.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIDALLY_LOCKED_WIND_STRATEGY</Tag>
@@ -17332,8 +17332,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIMEHOLE_PEDIA</Tag>
-		<English>A timehole is a wormhole that connects one point with another in its future light cone.  In other words, it is a portal between past and future.</English>
-		<French>A timehole is a wormhole that connects one point with another in its future light cone.  In other words, it is a portal between past and future.</French>
+		<English>A timehole is a wormhole that connects one point with another in its future light cone. In other words, it is a portal between past and future.</English>
+		<French>A timehole is a wormhole that connects one point with another in its future light cone. In other words, it is a portal between past and future.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIMEHOLE_STRATEGY</Tag>
@@ -17360,8 +17360,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIMELINE_SWITCHING_STATION_PEDIA</Tag>
-		<English>The time machine has been upgraded.  Now you can travel between different timelines, forking histories at will.</English>
-		<French>The time machine has been upgraded.  Now you can travel between different timelines, forking histories at will.</French>
+		<English>The time machine has been upgraded. Now you can travel between different timelines, forking histories at will.</English>
+		<French>The time machine has been upgraded. Now you can travel between different timelines, forking histories at will.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TIMELINE_SWITCHING_STATION_STRATEGY</Tag>
@@ -17472,8 +17472,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TITAN_AMMONIA_ERUPTION_PEDIA</Tag>
-		<English>Ammonia is needed to begin the warming process.  See http://terraforming.wikia.com/wiki/Titan</English>
-		<French>Ammonia is needed to begin the warming process.  See http://terraforming.wikia.com/wiki/Titan</French>
+		<English>Ammonia is needed to begin the warming process. See http://terraforming.wikia.com/wiki/Titan</English>
+		<French>Ammonia is needed to begin the warming process. See http://terraforming.wikia.com/wiki/Titan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TITAN_AMMONIA_ERUPTION_STRATEGY</Tag>
@@ -17528,8 +17528,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TITAN_CONTINENT_PEDIA</Tag>
-		<English>Raising the temperature will melt the surface, so an artificial continent is needed.  See http://terraforming.wikia.com/wiki/Titan</English>
-		<French>Raising the temperature will melt the surface, so an artificial continent is needed.  See http://terraforming.wikia.com/wiki/Titan</French>
+		<English>Raising the temperature will melt the surface, so an artificial continent is needed. See http://terraforming.wikia.com/wiki/Titan</English>
+		<French>Raising the temperature will melt the surface, so an artificial continent is needed. See http://terraforming.wikia.com/wiki/Titan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TITAN_CONTINENT_STRATEGY</Tag>
@@ -17556,8 +17556,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TITAN_FERTILIZER_PLANT_PEDIA</Tag>
-		<English>This factory uses the abundant hydrocarbon reserves on Titan to manufacture fertilizers.  Good for growing crops here and other nearby colonies.</English>
-		<French>This factory uses the abundant hydrocarbon reserves on Titan to manufacture fertilizers.  Good for growing crops here and other nearby colonies.</French>
+		<English>This factory uses the abundant hydrocarbon reserves on Titan to manufacture fertilizers. Good for growing crops here and other nearby colonies.</English>
+		<French>This factory uses the abundant hydrocarbon reserves on Titan to manufacture fertilizers. Good for growing crops here and other nearby colonies.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TITAN_FERTILIZER_PLANT_STRATEGY</Tag>
@@ -17570,8 +17570,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TITAN_HYDROCARBON_REFINERY_PEDIA</Tag>
-		<English>There sure is a lot of petroleum on Titan.  Better 'liberate' it.</English>
-		<French>There sure is a lot of petroleum on Titan.  Better 'liberate' it.</French>
+		<English>There sure is a lot of petroleum on Titan. Better 'liberate' it.</English>
+		<French>There sure is a lot of petroleum on Titan. Better 'liberate' it.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TITAN_HYDROCARBON_REFINERY_STRATEGY</Tag>
@@ -17612,8 +17612,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TITAN_SF6_PEDIA</Tag>
-		<English>Sulphur Hexaflouride is needed to warm the planet to a comfortable level.  See http://terraforming.wikia.com/wiki/Titan</English>
-		<French>Sulphur Hexaflouride is needed to warm the planet to a comfortable level.  See http://terraforming.wikia.com/wiki/Titan</French>
+		<English>Sulphur Hexaflouride is needed to warm the planet to a comfortable level. See http://terraforming.wikia.com/wiki/Titan</English>
+		<French>Sulphur Hexaflouride is needed to warm the planet to a comfortable level. See http://terraforming.wikia.com/wiki/Titan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TITAN_SF6_STRATEGY</Tag>
@@ -18046,8 +18046,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRITON_GEOTHERMAL_PEDIA</Tag>
-		<English>The close proximity of Triton to Neptune induces a lot of tidal heating, which makes Triton a decent source of geothermal power.  It will keep your small base going.</English>
-		<French>The close proximity of Triton to Neptune induces a lot of tidal heating, which makes Triton a decent source of geothermal power.  It will keep your small base going.</French>
+		<English>The close proximity of Triton to Neptune induces a lot of tidal heating, which makes Triton a decent source of geothermal power. It will keep your small base going.</English>
+		<French>The close proximity of Triton to Neptune induces a lot of tidal heating, which makes Triton a decent source of geothermal power. It will keep your small base going.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRITON_GEOTHERMAL_STRATEGY</Tag>
@@ -18060,8 +18060,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRITON_HEAT_RING_PEDIA</Tag>
-		<English>Due to the extreme distance from the Sun, a heat source is needed to terraform Triton.  See http://terraforming.wikia.com/wiki/Triton</English>
-		<French>Due to the extreme distance from the Sun, a heat source is needed to terraform Triton.  See http://terraforming.wikia.com/wiki/Triton</French>
+		<English>Due to the extreme distance from the Sun, a heat source is needed to terraform Triton. See http://terraforming.wikia.com/wiki/Triton</English>
+		<French>Due to the extreme distance from the Sun, a heat source is needed to terraform Triton. See http://terraforming.wikia.com/wiki/Triton</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRITON_HEAT_RING_STRATEGY</Tag>
@@ -18298,8 +18298,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSE_PEDIA</Tag>
-		<English>Create the universe.  Don't mess it up this time.</English>
-		<French>Create the universe.  Don't mess it up this time.</French>
+		<English>Create the universe. Don't mess it up this time.</English>
+		<French>Create the universe. Don't mess it up this time.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSE_PORTAL</Tag>
@@ -18354,8 +18354,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNOBTAINIUM_PEDIA</Tag>
-		<English>Find unobtainium.  Don't ask how.</English>
-		<French>Find unobtainium.  Don't ask how.</French>
+		<English>Find unobtainium. Don't ask how.</English>
+		<French>Find unobtainium. Don't ask how.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNOBTAINIUM_STRATEGY</Tag>
@@ -18368,8 +18368,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_URANIAN_SF6_PEDIA</Tag>
-		<English>Potent greenhouse gas needed for terraforming as such a distance from the Sun.  See http://terraforming.wikia.com/wiki/Oberon</English>
-		<French>Potent greenhouse gas needed for terraforming as such a distance from the Sun.  See http://terraforming.wikia.com/wiki/Oberon</French>
+		<English>Potent greenhouse gas needed for terraforming as such a distance from the Sun. See http://terraforming.wikia.com/wiki/Oberon</English>
+		<French>Potent greenhouse gas needed for terraforming as such a distance from the Sun. See http://terraforming.wikia.com/wiki/Oberon</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_URANIAN_SF6_STRATEGY</Tag>
@@ -18410,8 +18410,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_URANUS_MINE_PEDIA</Tag>
-		<English>The self-taught mathematician and physicist Adam Crowl proposed mining Helium 3 from the upper clouds of Uranus for use as fusion rocket fuel.  This is one of several concepts that could one day take humanity to the stars.[PARAGRAPH:2] See http://www.centauri-dreams.org/?p=18193</English>
-		<French>The self-taught mathematician and physicist Adam Crowl proposed mining Helium 3 from the upper clouds of Uranus for use as fusion rocket fuel.  This is one of several concepts that could one day take humanity to the stars.[PARAGRAPH:2] See http://www.centauri-dreams.org/?p=18193</French>
+		<English>The self-taught mathematician and physicist Adam Crowl proposed mining Helium 3 from the upper clouds of Uranus for use as fusion rocket fuel. This is one of several concepts that could one day take humanity to the stars.[PARAGRAPH:2] See http://www.centauri-dreams.org/?p=18193</English>
+		<French>The self-taught mathematician and physicist Adam Crowl proposed mining Helium 3 from the upper clouds of Uranus for use as fusion rocket fuel. This is one of several concepts that could one day take humanity to the stars.[PARAGRAPH:2] See http://www.centauri-dreams.org/?p=18193</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_URANUS_MINE_STRATEGY</Tag>
@@ -18480,8 +18480,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_URBAN_MOON_PEDIA</Tag>
-		<English>There are now so many cities on the Moon that, for all practical purposes, there is only one megacity.  That lunar real estate salesman you met back in the early 21st century wasn't so crazy after all.</English>
-		<French>There are now so many cities on the Moon that, for all practical purposes, there is only one megacity.  That lunar real estate salesman you met back in the early 21st century wasn't so crazy after all.</French>
+		<English>There are now so many cities on the Moon that, for all practical purposes, there is only one megacity. That lunar real estate salesman you met back in the early 21st century wasn't so crazy after all.</English>
+		<French>There are now so many cities on the Moon that, for all practical purposes, there is only one megacity. That lunar real estate salesman you met back in the early 21st century wasn't so crazy after all.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_URBAN_MOON_STRATEGY</Tag>
@@ -18537,7 +18537,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UTOPIAN_SPACE_COLONY</Tag>
 		<English>Interstellar Utopian Colony</English>
-		<French>Colonie Interstellaire de  Utopian</French>
+		<French>Colonie Interstellaire de Utopian</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UTOPIAN_SPACE_COLONY_PEDIA</Tag>
@@ -18676,8 +18676,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VENUS_CO2_REMOVAL_PEDIA</Tag>
-		<English>Venus' CO2-rich atmosphere makes the temperature much too high.  It is reacted with hydrogen to produce graphite.  See http://terraforming.wikia.com/wiki/Venus</English>
-		<French>Venus' CO2-rich atmosphere makes the temperature much too high.  It is reacted with hydrogen to produce graphite.  See http://terraforming.wikia.com/wiki/Venus</French>
+		<English>Venus' CO2-rich atmosphere makes the temperature much too high. It is reacted with hydrogen to produce graphite. See http://terraforming.wikia.com/wiki/Venus</English>
+		<French>Venus' CO2-rich atmosphere makes the temperature much too high. It is reacted with hydrogen to produce graphite. See http://terraforming.wikia.com/wiki/Venus</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VENUS_CO2_REMOVAL_STRATEGY</Tag>
@@ -18690,8 +18690,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VENUS_COLONY_PEDIA</Tag>
-		<English>After the first attempt to colonize the upper clouds of Venus ended with the craft crash-landing to the surface, many people thought that humans would never return.  But Earth had more than enough adventurers and dare-devils, and the second attempt was a success.  Making the colony financially viable and a tolerable place to live was another matter.</English>
-		<French>After the first attempt to colonize the upper clouds of Venus ended with the craft crash-landing to the surface, many people thought that humans would never return.  But Earth had more than enough adventurers and dare-devils, and the second attempt was a success.  Making the colony financially viable and a tolerable place to live was another matter.</French>
+		<English>After the first attempt to colonize the upper clouds of Venus ended with the craft crash-landing to the surface, many people thought that humans would never return. But Earth had more than enough adventurers and dare-devils, and the second attempt was a success. Making the colony financially viable and a tolerable place to live was another matter.</English>
+		<French>After the first attempt to colonize the upper clouds of Venus ended with the craft crash-landing to the surface, many people thought that humans would never return. But Earth had more than enough adventurers and dare-devils, and the second attempt was a success. Making the colony financially viable and a tolerable place to live was another matter.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VENUS_COLONY_STRATEGY</Tag>
@@ -18802,8 +18802,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VENUS_HYDROGEN_BOMBARDMENT_PEDIA</Tag>
-		<English>Hydrogen is needed to terraform Venus in order to react with the CO2 atmosphere.  See http://terraforming.wikia.com/wiki/Venus</English>
-		<French>Hydrogen is needed to terraform Venus in order to react with the CO2 atmosphere.  See http://terraforming.wikia.com/wiki/Venus</French>
+		<English>Hydrogen is needed to terraform Venus in order to react with the CO2 atmosphere. See http://terraforming.wikia.com/wiki/Venus</English>
+		<French>Hydrogen is needed to terraform Venus in order to react with the CO2 atmosphere. See http://terraforming.wikia.com/wiki/Venus</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VENUS_HYDROGEN_BOMBARDMENT_STRATEGY</Tag>
@@ -18942,8 +18942,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VENUS_SURFACE_PEDIA</Tag>
-		<English>Who would want to live in such a desolate place?  This is a primarily industrial city, harnessing resources from the surface of Venus and collecting scientific data.</English>
-		<French>Who would want to live in such a desolate place?  This is a primarily industrial city, harnessing resources from the surface of de Vénus and collecting scientific data.</French>
+		<English>Who would want to live in such a desolate place? This is a primarily industrial city, harnessing resources from the surface of Venus and collecting scientific data.</English>
+		<French>Who would want to live in such a desolate place? This is a primarily industrial city, harnessing resources from the surface of de Vénus and collecting scientific data.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VENUS_SURFACE_PROBE</Tag>
@@ -19096,8 +19096,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VIRTUAL_GOVERNANCE_PEDIA</Tag>
-		<English>As the importance of the virtual economy grows, so do the formal institutions of governance.  National governments are starting to become decoupled from physical territory.</English>
-		<French>As the importance of the virtual economy grows, so do the formal institutions of governance.  National governments are starting to become decoupled from physical territory.</French>
+		<English>As the importance of the virtual economy grows, so do the formal institutions of governance. National governments are starting to become decoupled from physical territory.</English>
+		<French>As the importance of the virtual economy grows, so do the formal institutions of governance. National governments are starting to become decoupled from physical territory.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VIRTUAL_GOVERNANCE_STRATEGY</Tag>
@@ -19260,12 +19260,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHITE_DWARF_COLONY</Tag>
 		<English>Interstellar White Dwarf Colony</English>
-		<French>Colonie Interstellaire de  White Dwarf</French>
+		<French>Colonie Interstellaire de White Dwarf</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHITE_DWARF_COLONY_PEDIA</Tag>
-		<English>This is an ancient colony around a white dwarf.  It is relatively small and built to last.</English>
-		<French>This is an ancient colony around a white dwarf.  It is relatively small and built to last.</French>
+		<English>This is an ancient colony around a white dwarf. It is relatively small and built to last.</English>
+		<French>This is an ancient colony around a white dwarf. It is relatively small and built to last.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WHITE_DWARF_COLONY_STRATEGY</Tag>

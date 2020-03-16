@@ -214,7 +214,7 @@
 			<Type>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</Type>
 			<Description>TXT_KEY_BUILDING_ENVIRONMENTAL_A</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ENVIRONMENTAL_A_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ENVIRONMENTAL_A_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_ENVIRONMENTAL_ACHIEVEMENT_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_ENVIRONMENTAL_A</ArtDefineTag>
@@ -10825,7 +10825,7 @@
 			</TechTypes>
 			<Bonus>BONUS_HIDE</Bonus>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_STICK_GATHERER</BuildingType>
+				<BuildingType>BUILDING_GATHERER_STICK</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
@@ -12232,7 +12232,7 @@
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 				<ReplaceBuilding>
-					<BuildingType>BUILDING_IROQUOIS_LONGHOUSE</BuildingType>
+					<BuildingType>BUILDING_LONGHOUSE</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 				<ReplaceBuilding>
@@ -12468,7 +12468,7 @@
 		<BuildingInfo>
 			<!-- Housing (Igloos) -->
 			<Type>BUILDING_IGLOO</Type>
-			<Description>TXT_KEY_BUILDING_IGLOO2</Description>
+			<Description>TXT_KEY_BUILDING_IGLOO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_IGLOO_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_IGLOO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -12582,7 +12582,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_STICK_GATHERER</BuildingType>
+				<BuildingType>BUILDING_GATHERER_STICK</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
@@ -12635,13 +12635,13 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Longhouse) -->
-			<Type>BUILDING_IROQUOIS_LONGHOUSE</Type>
-			<Description>TXT_KEY_BUILDING_LONGHOUSE2</Description>
-			<Civilopedia>TXT_KEY_BUILDING_IROQUOIS_LONGHOUSE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_COURTHOUSE_STRATEGY</Strategy>
+			<Type>BUILDING_LONGHOUSE</Type>
+			<Description>TXT_KEY_BUILDING_LONGHOUSE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LONGHOUSE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_LONGHOUSE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
-			<ArtDefineTag>ART_DEF_BUILDING_IROQUOIS_LONGHOUSE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_LONGHOUSE</ArtDefineTag>
 			<fVisibilityPriority>10000</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -14161,7 +14161,7 @@
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_DMV</BuildingType>
+				<BuildingType>BUILDING_DEPARTMENT_VEHICLES</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
@@ -14217,7 +14217,7 @@
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_DMV</BuildingType>
+				<BuildingType>BUILDING_DEPARTMENT_VEHICLES</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
@@ -14273,7 +14273,7 @@
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_DOE</BuildingType>
+				<BuildingType>BUILDING_DEPARTMENT_ENERGY</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Construction cost -->
@@ -14328,7 +14328,7 @@
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_WATER_DEPARTMENT</BuildingType>
+				<BuildingType>BUILDING_DEPARTMENT_WATER</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Construction cost -->
@@ -14383,7 +14383,7 @@
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_DMV</BuildingType>
+				<BuildingType>BUILDING_DEPARTMENT_VEHICLES</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
@@ -14463,7 +14463,7 @@
 			<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_NFS</BuildingType>
+				<BuildingType>BUILDING_NATIONAL_FIRE_SERVICE</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Construction cost -->
@@ -14609,7 +14609,7 @@
 			<PrereqTech>TECH_ELECTRONICS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_NFS</BuildingType>
+				<BuildingType>BUILDING_NATIONAL_FIRE_SERVICE</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Construction cost -->
@@ -18321,7 +18321,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SCULPTURE</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_PYRAMID</BuildingType>
+				<BuildingType>BUILDING_GREAT_PYRAMID</BuildingType>
 				<BuildingType>BUILDING_SPHINX</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Construction cost -->
@@ -19068,12 +19068,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Department of Foreign Policy Effect -->
-			<Type>BUILDING_DEPT_FOREIGN_POLICY_EFFECT</Type>
+			<Type>BUILDING_DEPARTMENT_FOREIGN_EFFECT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DEPT_FOREIGN_POLICY_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DEPT_FOREIGN_POLICY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_DEPARTMENT_FOREIGN_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DEPARTMENT_FOREIGN_PEDIA</Civilopedia>
 			<!-- Cost -->
 			<iCost>-1</iCost>
 			<!-- Local -->
@@ -19092,7 +19092,7 @@
 			</UnitCombatFreeExperiences>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_DEPT_FOREIGN_POLICY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_DEPARTMENT_FOREIGN</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Fertility Festival Effect -->

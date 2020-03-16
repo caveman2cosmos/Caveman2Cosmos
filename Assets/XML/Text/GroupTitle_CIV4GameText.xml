@@ -105,11 +105,6 @@
 		<French>coalition de </French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GROUPTITLE_COFFLE</Tag>
-		<English>Coffle of </English>
-		<French>colonne de </French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_COLLECTION</Tag>
 		<English>Collection of </English>
 		<French>collection de </French>
@@ -203,11 +198,6 @@
 		<Tag>TXT_KEY_GROUPTITLE_FLIGHT</Tag>
 		<English>Flight of </English>
 		<French>vol de </French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GROUPTITLE_FLOAT</Tag>
-		<English>Float of </English>
-		<French>flotte de </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_FLOCK</Tag>
@@ -372,11 +362,6 @@
 		<Tag>TXT_KEY_GROUPTITLE_MURDER_SMALL</Tag>
 		<English>Small Murder of </English>
 		<French>petit comité de </French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GROUPTITLE_NEST</Tag>
-		<English>Nest of </English>
-		<French>nid de </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_OBSTINANCY</Tag>

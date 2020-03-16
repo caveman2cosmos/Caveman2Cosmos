@@ -50,19 +50,19 @@
 				<City>TXT_KEY_CITY_NAME_RANGITANE</City>
 				<City>TXT_KEY_CITY_NAME_NGA_RAURU</City>
 				<City>TXT_KEY_CITY_NAME_NGA_RUAHINE</City>
-				<City>Pukaki</City>
-				<City>Ohau</City>
-				<City>Tekapo</City>
-				<City>Rangitata</City>
-				<City>Orari</City>
-				<City>Kakahu</City>
-				<City>Aoraki</City>
-				<City>Kura Tawhiti</City>
-				<City>Rapuwai</City>
-				<City>Korowai</City>
-				<City>Waimakairi</City>
-				<City>Opuha</City>
-				<City>Rakaia</City>
+				<City>TXT_KEY_CITY_NAME_PUKAKI</City>
+				<City>TXT_KEY_CITY_NAME_OHAU</City>
+				<City>TXT_KEY_CITY_NAME_TEKAPO</City>
+				<City>TXT_KEY_CITY_NAME_RANGITATA</City>
+				<City>TXT_KEY_CITY_NAME_ORARI</City>
+				<City>TXT_KEY_CITY_NAME_KAKAHU</City>
+				<City>TXT_KEY_CITY_NAME_AORAKI</City>
+				<City>TXT_KEY_CITY_NAME_KURA_TAWHITI</City>
+				<City>TXT_KEY_CITY_NAME_RAPUWAI</City>
+				<City>TXT_KEY_CITY_NAME_KOROWAI</City>
+				<City>TXT_KEY_CITY_NAME_WAIMAKAIRI</City>
+				<City>TXT_KEY_CITY_NAME_OPUHA</City>
+				<City>TXT_KEY_CITY_NAME_RAKAIA</City>
 			</Cities>
 			<FreeBuildings>
 				<FreeBuilding>

@@ -66,7 +66,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_METAMATERIAL_WARES</ID>
+						<ID>BONUS_METAMATERIALS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>

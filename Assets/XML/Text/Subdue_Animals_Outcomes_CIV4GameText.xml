@@ -91,7 +91,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE</Tag>
-		<English>This will consume the unit providing a culture and science boost based on which building is available in the city (Cave Paintings,  Story Tellers Hut, School of Scribes, Library or University).</English>
+		<English>This will consume the unit providing a culture and science boost based on which building is available in the city (Cave Paintings, Story Tellers Hut, School of Scribes, Library or University).</English>
 		<French>L'unité est utilisée pour procurer un bonus de culture et de science, dépendant des bâtiments présents dans la ville (Peintures des cavernes, Hutte du Conteur d'histoire, Ecole des scribes, Bibliothèque ou Université).</French>
 		<Italian>Consumerà l'unità fornendo un bonus a cultura e ricerca basato sugli edifici presenti in città (Pitture rupestri, Capanna del cantastorie, Scuola di scribi, Biblioteca o Università).</Italian>
 		<Polish>Ta akcja usunie jednostkę dostarczając małej ilości kultury i nauki bazując na tym jakie budynki są dostępne w mieście (Malunki Naskalne, Chata Opowiadacza, Szkoła Skrybów, Uniwersytet).</Polish>
@@ -166,7 +166,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_BUILD_DOMESTICATED_HERD_MESSAGE</Tag>
-		<English>A  herd now roams this plot.</English>
+		<English>A herd now roams this plot.</English>
 		<Polish>Od tego momentu stada zwierząt przemierzają ten teren.</Polish>
 	</TEXT>
 	<TEXT>
@@ -180,80 +180,10 @@
 		<Polish>Od tego momentu stada zwierząt zasiedlają ten teren.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SUBDUED_ALL</Tag>
-		<English>%s1, %s2 and %s3</English>
-		<French>%s1, %s2 et %s3</French>
-		<Italian>%s1, %s2 e %s3</Italian>
-		<Polish>%s1, %s2 i %s3</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SUBDUED_AND</Tag>
-		<English>%s1 and %s2</English>
-		<French>%s1 et %s2</French>
-		<Italian>%s1 e %s2</Italian>
-		<Polish>%s1 i %s2</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_SUBDUED_ANIMAL</Tag>
 		<English>A %s1 has been subdued.</English>
 		<French>%s1 a été apprivoisé.</French>
 		<Italian>[NUM1:Un:Una] %s1 [NUM1:è stato addomesticato:è stata addomesticata].</Italian>
 		<Polish>%s1 został pochwycony.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SUBDUED_BAD_UNIT</Tag>
-		<English>Capture %s1 (%d2) as %s3 (%d4).  Contains an invalid unit!</English>
-		<French>Capturé %s1 (%d2) en %s3 (%d4).  Contient une unité non valable!</French>
-		<Italian>Cattura %s1 (%d2) come %s3 (%d4). Contiene un'unità non valida!</Italian>
-		<Polish>Pochwyć %s1 (%d2) jako %s3 (%d4).  Zawiera niewłaściwą jednostkę!</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SUBDUED_GOLD</Tag>
-		<English>one gold</English>
-		<French>un d'or</French>
-		<Italian>un'unità di oro</Italian>
-		<Polish>jeden złota</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SUBDUED_KILL_MESSAGE</Tag>
-		<English>From killing %s1, %s2 has been delivered to %s3.</English>
-		<French>en tuant %s1, %s2 a été délivré en %s3.</French>
-		<Italian>Uccidendo %s1, %s2 è stato trasportato a %s3.</Italian>
-		<Polish>Za zabicie %s1, %s2 zostało dostarczone do %s3.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SUBDUED_MANY_FOOD</Tag>
-		<English>%d1 food</English>
-		<French>%d1 nourritures</French>
-		<Italian>%d1 cibo</Italian>
-		<Polish>%d1 pożywienia</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SUBDUED_MANY_HAMMERS</Tag>
-		<English>%d1 hammers</English>
-		<French>%d1 de production</French>
-		<Italian>%d1 produzione</Italian>
-		<Polish>%d1 produkcji</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SUBDUED_ONE_FOOD</Tag>
-		<English>one food</English>
-		<French>un de nourriture</French>
-		<Italian>un'unità di cibo</Italian>
-		<Polish>jeden pożywienia</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SUBDUED_ONE_HAMMER</Tag>
-		<English>one hammer</English>
-		<French>un de production</French>
-		<Italian>un'unità di produzione</Italian>
-		<Polish>jeden produkcji</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SUBDUED_UNIT_TO_RESOURCE</Tag>
-		<English>Subdued %s1 becomes a resource (%s2) instead.</English>
-		<French>%s1 est devenu une ressource (%s2)</French>
-		<Italian>%s1 è diventato una risorsa (%s2).</Italian>
-		<Polish>Poskromiony %s1 zamiast tego został surowcem (%s2).</Polish>
 	</TEXT>
 </Civ4GameText>

@@ -64,18 +64,6 @@
 		<Polish>Choroba (Kuru)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DISEASE_KURU_PEDIA</Tag>
-		<English>It is now widely accepted that Kuru was transmitted among members of the Fore tribe of Papua New Guinea via cannibalism.</English>
-		<Italian>E' comunemente accettato il fatto che il Kuru veniva trasmesso tra i membri della tribù Fore della Papua Nuova Guinea grazie al cannibalismo.</Italian>
-		<Polish>Kuru, popularnie "śmiejąca się śmierć" (ang. curu, kuru; nazwa od czasownika drżeć w języku plemienia Fore: "kuria", "guria") - zawsze śmiertelna, nieuleczalna choroba zakaźna wywoływana przez priony, dotycząca tkanki nerwowej, będąca zarazem pierwszą opisaną zakaźną encefalopatią gąbczastą u ludzi. Wykryto ją po raz pierwszy u człowieka, lecz w 1966 roku przeniesiona została na szympansy.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DISEASE_KURU_STRATEGY</Tag>
-		<English>Kuru is an event based disease. If you are running canibalism you may get this disease. The only way to remove it is to end cannibalism.</English>
-		<French>Kuru est une maladie événementielle. Si vous avec le canibalisme, cette maladie peut se répandre. La seule façon de stopper la propagation de cette maladie est d'arrêter le cannibalisme.</French>
-		<Italian>Il kuru è una malattia basata su un evento: se il cannibalismo viene praticato dalla tua gente, potresti contrarre questa malattia. L'unico modo per rimuoverla è porre fine al cannibalismo.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WORLDVIEW_BAD_PEDIA</Tag>
 		<English>We don't have the ability (yet) to have a building become unhappy with advances in knowledge. These auto build buildings simulate this for now.</English>
 		<French>We don't have the ability (yet) to have a building become unhappy with advances in knowledge. These auto build buildings simulate this for now.</French>
@@ -98,7 +86,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WV_CANNIBALISM_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Allows you to butcher human and Neanderthal captives for food.</English>
+		<English>[ICON_BULLET]Allows you to butcher human and Neanderthal captives for food.</English>
 		<French>vous permet de consommer les hommes et néanderthaliens - ils sont convertis en nourriture.</French>
 		<Italian>Ti permette di uccidere i prigionieri umani e Neanderthal per usarli come cibo.</Italian>
 		<Polish>Pozwala na zarzynanie i zjadanie jeńców.</Polish>

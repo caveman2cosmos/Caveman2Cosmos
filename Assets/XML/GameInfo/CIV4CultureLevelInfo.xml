@@ -112,7 +112,6 @@
 				</Has>
 			</ReplacementCondition>
 			<Description>TXT_KEY_CULTURELEVEL_POOR</Description>
-			<Help>TXT_KEY_CULTURELEVEL_POOR_HELP</Help>
 			<iCityDefenseModifier>3</iCityDefenseModifier>
 			<SpeedThresholds>
 				<SpeedThreshold>

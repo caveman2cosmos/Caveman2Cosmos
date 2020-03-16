@@ -109,7 +109,7 @@
 			<ObsoleteTech>TECH_CONGLOMERATES</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DEPT_FOREIGN_POLICY</Type>
+			<Type>BUILDING_DEPARTMENT_FOREIGN</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -879,7 +879,7 @@
 				<BuildingType>BUILDING_OMEGA_ASSEMBLER</BuildingType>
 				<BuildingType>BUILDING_QUANTUM_GRAVITY_SUPERCOMPUTER</BuildingType>
 			</PrereqInCityBuildings>
-			<Bonus>BONUS_MEGASTRONG_ALLOY_WARES</Bonus>
+			<Bonus>BONUS_MEGASTRONG_ALLOYS</Bonus>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1487,7 +1487,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_METAMATERIAL_WARES</FreeBonus>
+			<FreeBonus>BONUS_METAMATERIALS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
@@ -1495,7 +1495,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_LIQUID_METAL_WARES</FreeBonus>
+					<FreeBonus>BONUS_LIQUID_METAL</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -1507,7 +1507,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SUPERSTRONG_ALLOY_WARES</FreeBonus>
+					<FreeBonus>BONUS_SUPERSTRONG_ALLOYS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -2006,7 +2006,7 @@
 			</YieldChanges>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_LIQUID_METAL_WARES</BonusType>
+					<BonusType>BONUS_LIQUID_METAL</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -2430,7 +2430,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_VACUUM</FreeBonus>
+					<FreeBonus>BONUS_VACUUM_CLEANERS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -2510,7 +2510,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PORCELAIN_WARES</FreeBonus>
+					<FreeBonus>BONUS_PORCELAIN</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -2526,7 +2526,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TERRACOTTA_WARES</FreeBonus>
+					<FreeBonus>BONUS_TERRACOTTA</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -4138,7 +4138,7 @@
 			</YieldChanges>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_LIQUID_METAL_WARES</BonusType>
+					<BonusType>BONUS_LIQUID_METAL</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -4183,7 +4183,7 @@
 			</YieldChanges>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_LIQUID_METAL_WARES</BonusType>
+					<BonusType>BONUS_LIQUID_METAL</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -4279,7 +4279,7 @@
 				<BuildingType>BUILDING_POWER_LINES</BuildingType>
 				<BuildingType>BUILDING_HELIUM_3_IMPORTER</BuildingType>
 			</PrereqInCityBuildings>
-			<Bonus>BONUS_SUPERSTRONG_ALLOY_WARES</Bonus>
+			<Bonus>BONUS_SUPERSTRONG_ALLOYS</Bonus>
 			<bPower>1</bPower>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -4306,7 +4306,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ALPHA_ASSEMBLER</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_MEGASTRONG_ALLOY_WARES</FreeBonus>
+			<FreeBonus>BONUS_MEGASTRONG_ALLOYS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
 				<PropertySource>
@@ -4391,7 +4391,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_SUPERSTRONG_ALLOY_WARES</ID>
+						<ID>BONUS_SUPERSTRONG_ALLOYS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -4635,7 +4635,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_EPSILON_ASSEMBLER</BuildingType>
 			</PrereqInCityBuildings>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<FreeBonus>BONUS_NANOTRUSSES</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PropertyManipulators>
@@ -5830,7 +5830,7 @@
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_PUBLIC_SCHOOL</BuildingType>
+				<BuildingType>BUILDING_ELEMENTARY_SCHOOL</BuildingType>
 			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
@@ -13479,7 +13479,7 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_PYRAMID</BuildingType>
+					<BuildingType>BUILDING_GREAT_PYRAMID</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -13928,7 +13928,7 @@
 			<ObsoleteTech>TECH_ACCELERATED_GERMINATION</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DRIFTWOOD_GATHERER</Type>
+			<Type>BUILDING_GATHERER_DRIFTWOOD</Type>
 			<ObsoleteTech>TECH_TRADE</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -13986,7 +13986,7 @@
 			<ObsoleteTech>TECH_ASTROENGINEERING</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GRASS_GATHERER</Type>
+			<Type>BUILDING_GATHERER_GRASS</Type>
 			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -15297,7 +15297,7 @@
 			</ReplaceBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PUBLIC_SCHOOL</Type>
+			<Type>BUILDING_ELEMENTARY_SCHOOL</Type>
 			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -16367,7 +16367,7 @@
 			</ReplaceBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_REED_GATHERER</Type>
+			<Type>BUILDING_GATHERER_REED</Type>
 			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -16387,7 +16387,7 @@
 			</ReplaceBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_STRAW_GATHERER</Type>
+			<Type>BUILDING_GATHERER_STRAW</Type>
 			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -16407,7 +16407,7 @@
 			</ReplaceBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_VINE_GATHERER</Type>
+			<Type>BUILDING_GATHERER_VINE</Type>
 			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -18234,7 +18234,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EARTHWORM</Type>
+			<Type>BUILDING_GATHERER_EARTHWORM</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -18386,7 +18386,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SNAIL</Type>
+			<Type>BUILDING_GATHERER_SNAIL</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -20276,7 +20276,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
-			<Bonus>BONUS_SUPERSTRONG_ALLOY_WARES</Bonus>
+			<Bonus>BONUS_SUPERSTRONG_ALLOYS</Bonus>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -20509,7 +20509,7 @@
 				<iYield>5</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<Bonus>BONUS_SUPERSTRONG_ALLOY_WARES</Bonus>
+			<Bonus>BONUS_SUPERSTRONG_ALLOYS</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SUBTERRANEAN_CITY</Type>

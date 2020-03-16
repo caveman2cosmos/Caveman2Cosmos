@@ -302,38 +302,6 @@
 		<Italian>Stanco della tua vita monotona? Pronto per l'avventura? Adventure Tours ti porta l'eccitazione di immersioni subacquee, escursioni a cavallo, esplorazione di antiche rovine e osservazione dei più grandi animali della terra nel loro stesso habitat. Vivacizza la tua vita con noi!</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CORPORATION_ARTISTGUILD</Tag>
-		<English>Artists Guild</English>
-		<French>
-			<Text>Guilde des Artistes</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Künstlergilde</German>
-		<Italian>Gilda degli artisti</Italian>
-		<Spanish>
-			<Text>Gremio de artistas</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CORPORATION_BLACKSMGUILD</Tag>
-		<English>Blacksmiths Guild</English>
-		<French>
-			<Text>Guilde des Forgerons</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Hufschmiedgilde</German>
-		<Italian>Gilda dei fabbri</Italian>
-		<Spanish>
-			<Text>Gremio de herreros</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_BULLSEYE</Tag>
 		<English>Bullseye</English>
 		<French>Gran'Frais</French>
@@ -413,54 +381,6 @@
 		<Spanish>¡Tu local de comida rápida para saciar tu apetito!</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CORPORATION_BUTCHERGUILD</Tag>
-		<English>Butchers Guild</English>
-		<French>Guilde des Bouchers</French>
-		<German>Metzgergilde</German>
-		<Italian>Gilda dei macellai</Italian>
-		<Spanish>
-			<Text>Gremio de carniceros</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CORPORATION_CARPENTERGUILD</Tag>
-		<English>Carpenters Guild</English>
-		<French>Guilde des Charpentiers</French>
-		<German>Zimmerergilde</German>
-		<Italian>Gilda dei carpentieri</Italian>
-		<Spanish>
-			<Text>Gremio de carpinteros</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CORPORATION_CLERKSGUILD</Tag>
-		<English>Clerks Guild</English>
-		<French>Guilde des Clercs</French>
-		<German>Schreibergilde</German>
-		<Italian>Gilda degli scrivani</Italian>
-		<Spanish>
-			<Text>Gremio de escribas</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CORPORATION_DRAPERSGUILD</Tag>
-		<English>Drapers Guild</English>
-		<French>Guilde des Tailleurs</French>
-		<German>Tuchhändlergilde</German>
-		<Italian>Gilda dei drappieri</Italian>
-		<Spanish>
-			<Text>Gremio de sastres</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH</Tag>
 		<English>Emperors Clothing</English>
 		<French>Habits Impériaux</French>
@@ -506,14 +426,6 @@
 		<Spanish>Tu tienda local donde renovar tu vestimenta.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CORPORATION_EQUESTGUILD</Tag>
-		<English>Equestrians Guild</English>
-		<French>Guilde des écuyers</French>
-		<German>Reitergilde</German>
-		<Italian>Gilda dei cavalieri</Italian>
-		<Spanish>Gremio de escuderos</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EWTRADE</Tag>
 		<English>East West Traders</English>
 	</TEXT>
@@ -531,13 +443,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EWTRADE_PEDIA</Tag>
-		<English>The East West Traders evolved from corporations such as Transatlantic Triangular Trade, that operated during the 17th, 18th, and early 19th centuries, carrying slaves, cash crops, and manufactured goods between West Africa, the Caribbean  or American  colonies and the European colonial powers, with the northern colonies of British North America, especially New England, sometimes taking over the role of Europe. They are now more benign.</English>
+		<English>The East West Traders evolved from corporations such as Transatlantic Triangular Trade, that operated during the 17th, 18th, and early 19th centuries, carrying slaves, cash crops, and manufactured goods between West Africa, the Caribbean or American colonies and the European colonial powers, with the northern colonies of British North America, especially New England, sometimes taking over the role of Europe. They are now more benign.</English>
 		<Italian>La East West Traders si è evoluta dalle corporazioni del commercio triangolare transatlantico che operarono durante il 17°, 18° e all'inizio del 19° secolo; queste compagnie trasportavano schiavi, prodotti agricoli e beni manifatturieri tra l'Africa Occidentale, i Caraibi, le colonie Americane e le potenze coloniali Europee. Col tempo le colonie inglesi del Nord America, specialmente il New England, arrivarono aprendere il ruolo dell'Europa.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EWTRADE_STORE</Tag>
 		<English>East West Traders Store</English>
-		<French>Magasin  'East West Traders'</French>
+		<French>Magasin 'East West Traders'</French>
 		<German>East-West-Traders-Laden</German>
 		<Italian>Negozio di East West Traders</Italian>
 		<Spanish>
@@ -594,50 +506,6 @@
 		<English>Your local store to get your clothes.</English>
 		<Italian>Negozio locale in cui poter comprare i vestiti.</Italian>
 		<Spanish>Tu tienda local donde renovar tu vestimenta.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CORPORATION_FISHMONGUILD</Tag>
-		<English>Fishmongers Guild</English>
-		<French>Guilde des Poissoniers</French>
-		<German>Fischhändlergilde</German>
-		<Spanish>
-			<Text>Gremio de pescaderos</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CORPORATION_GLASSGUILD</Tag>
-		<English>Glassblowers Guild</English>
-		<French>Guilde des Souffleurs de Verre</French>
-		<German>Glasbläsergilde</German>
-		<Spanish>
-			<Text>Gremio de vidrieros</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CORPORATION_GOLDSMGUILD</Tag>
-		<English>Goldsmiths Guild</English>
-		<French>Guilde des Orfèvres</French>
-		<German>Goldschmiedegilde</German>
-		<Spanish>
-			<Text>Gremio de orfebres</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CORPORATION_GROCERGUILD</Tag>
-		<English>Grocers Guild</English>
-		<French>Guilde des Epiciers</French>
-		<German>Krämergilde</German>
-		<Spanish>
-			<Text>Gremio de drogueros</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MALLWART</Tag>
@@ -707,17 +575,6 @@
 		<Italian>Mass media indica una parte dei media progettati esplicitamente per raggiungere una grande quantità di persone. Il termine venne coniato negli anni 20 con l'avvento delle reti radio nazionali e la circolazione di massa dei quotidiani. Comunque, forme di comunicazione di massa come libri e manoscritti erano in uso già da secoli.[NEWLINE]I mass media includono i media su internet (come blog, messaggis, podcast e video sharing) perchè gli individui hanno ora un mezzo per esprimersi comparabile a quello prima riservato solo a un gruppo diproduttori di mass media. L'audience delle comunicazioni è stata vista da alcuni commentatori come una società di massa con speciali caratteristiche, come l'atomizzazione e la perdita di connessioni sociali, che la rendono suscettibile alle moderne tecniche di influenza dei mass media, come la pubblicità e la propaanda. L'acronimo "MSM", mainstream media, viene ampiamente usato nella bloosfera nelle discussioni riuardati i mass media.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CORPORATION_MASONGUILD</Tag>
-		<English>Masons Guild</English>
-		<French>Guilde des Maçons</French>
-		<German>Maurergilde</German>
-		<Spanish>
-			<Text>Gremio de albañiles</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MCDOWELLS</Tag>
 		<English>Big McDowells</English>
 		<Spanish>McDowells</Spanish>
@@ -756,17 +613,6 @@
 		<English>Your local fast food place to get your hunger on!</English>
 		<Italian>Il tuo fast food locale, per farti venire l'acquolina in bocca!</Italian>
 		<Spanish>¡Tu local de comida rápida para saciar tu apetito!</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CORPORATION_MERCERGUILD</Tag>
-		<English>Mercers Guild</English>
-		<French>Guilde des Marchands</French>
-		<German>Stoffhändlergilde</German>
-		<Spanish>
-			<Text>Gremio de merceros</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MILEHIGH</Tag>
@@ -1015,8 +861,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_WONKA_PEDIA</Tag>
-		<English>Since the dawn of civilization, humanity desired treats that cleansed their palates after consuming rich savory meals or plain meals. Early forays to treats mostly resided in cakes and pastries with the notion of just using beet sugar to satisfy the taste buds or sap based taffy. Other means for  common people to enjoy sweets often relied on more sweet starchy foods such as yams or azuki beans mashed to a fine paste for sweet snacks and relying on honeyed alcohol for drinks (Roman wine is much sweeter than any wine of today) as sugar based candies were often too expensive to make let alone enjoy by the average person. Although sugar cultivation happened in Southeast Asia and in the Middle East, it wasn't used in widespread use for commoners whom while may know about spices does not have access to refined sugar treats[PARAGRAPH:1]Thanks to easy access to sugar and cacao in the 1800's America were able to mass produce candy treats with Whitman's Chocolate boxes being the first case of mass produced confectioneries in America. However, it is the Swiss who produce most if not all of the most well known candy in the world when Confectionery as a business became truly lucrative with Lindt and Nestle being one of the candy magnates known to man although Mars Bars Inc. managed to wrestle control of the candy market away from Europe in 1911 with the delicious nougat, caramel and chocolate combination.</English>
-		<French>Depuis l'aube de la civilisation, l'humanité a toujours essayé de 'nettoyer' leurs palais après avoir consommé de riches plats. Les premiers essais consistaient essentiellement à consommer des gâteaux et pâtisseries, avec  à la notion de juste en utilisant la betterave à sucre pour satisfaire les papilles gustatives ou SAP basée tire. D'autres moyens pour les communes de profiter de bonbons sont souvent appuyés sur plus de féculents sucrés comme les ignames ou des haricots azuki purée pour obtenir une pâte fine pour des collations sucrées et en s'appuyant sur l'alcool de miel pour les boissons (vin romain est beaucoup plus douce que le vin d'aujourd'hui) que le sucre friandises à base sont souvent trop coûteux de faire profiter encore moins par la personne en moyenne. Bien que la culture du sucre des événements en Asie du Sud et au Moyen-Orient, il n'a pas été utilisé largement utilisés pour les roturiers qui peut tout savoir sur les épices n'a pas accès au sucre raffiné traite le paragraphe  Merci à accès facile pour le sucre et le cacao dans les années 1800 en Amérique ont été en mesure de produire en masse des bonbons traite avec des boîtes de chocolat Whitman étant le premier cas de production de masse confiseries en Amérique. Toutefois, ce sont les Suisses qui ont le plus produit, si pas tous les bonbons les plus connus dans le monde quand confiseries comme une entreprise est devenu vraiment lucratif avec Lindt et Nestlé étant l'un des magnats de bonbons que l'homme connaisse bien Pub Mars Inc réussi à battre le contrôle du marché des bonbons hors de l'Europe en 1911 avec la délicieuse combinaison de nougat, caramel et chocolat.</French>
+		<English>Since the dawn of civilization, humanity desired treats that cleansed their palates after consuming rich savory meals or plain meals. Early forays to treats mostly resided in cakes and pastries with the notion of just using beet sugar to satisfy the taste buds or sap based taffy. Other means for common people to enjoy sweets often relied on more sweet starchy foods such as yams or azuki beans mashed to a fine paste for sweet snacks and relying on honeyed alcohol for drinks (Roman wine is much sweeter than any wine of today) as sugar based candies were often too expensive to make let alone enjoy by the average person. Although sugar cultivation happened in Southeast Asia and in the Middle East, it wasn't used in widespread use for commoners whom while may know about spices does not have access to refined sugar treats[PARAGRAPH:1]Thanks to easy access to sugar and cacao in the 1800's America were able to mass produce candy treats with Whitman's Chocolate boxes being the first case of mass produced confectioneries in America. However, it is the Swiss who produce most if not all of the most well known candy in the world when Confectionery as a business became truly lucrative with Lindt and Nestle being one of the candy magnates known to man although Mars Bars Inc. managed to wrestle control of the candy market away from Europe in 1911 with the delicious nougat, caramel and chocolate combination.</English>
+		<French>Depuis l'aube de la civilisation, l'humanité a toujours essayé de 'nettoyer' leurs palais après avoir consommé de riches plats. Les premiers essais consistaient essentiellement à consommer des gâteaux et pâtisseries, avec à la notion de juste en utilisant la betterave à sucre pour satisfaire les papilles gustatives ou SAP basée tire. D'autres moyens pour les communes de profiter de bonbons sont souvent appuyés sur plus de féculents sucrés comme les ignames ou des haricots azuki purée pour obtenir une pâte fine pour des collations sucrées et en s'appuyant sur l'alcool de miel pour les boissons (vin romain est beaucoup plus douce que le vin d'aujourd'hui) que le sucre friandises à base sont souvent trop coûteux de faire profiter encore moins par la personne en moyenne. Bien que la culture du sucre des événements en Asie du Sud et au Moyen-Orient, il n'a pas été utilisé largement utilisés pour les roturiers qui peut tout savoir sur les épices n'a pas accès au sucre raffiné traite le paragraphe Merci à accès facile pour le sucre et le cacao dans les années 1800 en Amérique ont été en mesure de produire en masse des bonbons traite avec des boîtes de chocolat Whitman étant le premier cas de production de masse confiseries en Amérique. Toutefois, ce sont les Suisses qui ont le plus produit, si pas tous les bonbons les plus connus dans le monde quand confiseries comme une entreprise est devenu vraiment lucratif avec Lindt et Nestlé étant l'un des magnats de bonbons que l'homme connaisse bien Pub Mars Inc réussi à battre le contrôle du marché des bonbons hors de l'Europe en 1911 avec la délicieuse combinaison de nougat, caramel et chocolat.</French>
 		<German>Seit dem Anbruch der Zivilisation hat die Menschheit nach Geschmacksgenüssen verlangt, die ihren Gaumen nach reich gewürzten oder einfachen Mahlzeiten reinigen würden. Frühe Streifzüge in den Süßgenuß ergaben sich meist in Form von Kuchen und Backwaren, wobei nur Rübenzucker oder Toffee aus Pflanzensaft verwendet wurde, um die Geschmacksknospen zu befriedigen. In anderen Fällen musste sich das gewöhnliche Volk sein Vergnügen durch süße, stärkehaltige Verköstigungen verschaffen, wie Süßkartoffeln, zu feinem Brei zerstampften Azukibohnen oder Alkohol mit Honig (Römischer Wein war viel süßer als irgendein Wein heutzutage), da zuckerbasierte Süßigkeiten oft zu teuer waren, als daß ein Durchschnittsmensch sich allein daran erfreuen konnte. Obwohl Zucker in Südostasien und dem Mittleren Osten kultiviert wurde, so wurde dieser nicht weit in der Allgemeinheit verbreitet, die vielleicht Zugang zu Gewürzen, aber keinen zu Erzeugnissen aus raffiniertem Zucker hatte.[PARAGRAPH:1]Dank dem einfachen Zugang zu Zucker und Kakao in den 1800er Jahren, waren die Vereinigten Staaten in der Lage, Süßwaren in Massenproduktion herzustellen - Whitmans Schokolade-Schachteln waren die ersten Zuckerwaren aus Massenfertigung in den USA. Wie auch immer, es war die Schweiz, die anfing die meisten, wenn nicht sogar alle bekanntesten Süßigkeiten der Welt zu produzieren, als die Konditorei ein wirklich lukratives Geschäft mit Nestlé und Lindt als den uns bekannten Magnaten wurde, obwohl Mars Bars Inc. 1911 Europa die Marktkontrolle über das Süßwarengeschäft mit einer besonders köstlichen Kombination aus Nougat, Karamell und Schokolade erlangt hat.</German>
 		<Italian>Sin dagli albori della civiltà, l'umanità ha desiderato sapori che pulissero i palati dopo aver consumato pasti ricchi, salati o semplici. I primi esperimenti consistevano perlopiù in torte e pasticcini, con l'idea di utilizzare solo zucchero di barbabietola per soddisfare le papille gustative o i palati più raffinati. Altri mezzi per le persone comuni di godere dolci spesso richiedevano alimenti ricchi di amido come patate dolci o fagioli, schiacciati in una pasta fine per spuntini dolci e si affidavano ad alcol con miele per le bevande (il vino Romano è molto più dolce dei vini odierni), dato che le caramelle a base di zucchero erano spesso troppo costose per essere apprezzate dalle persone medie. Anche se la coltivazione dello zucchero era diffusa nel Sudest asiatico e in Medioriente, non era molto diffuso tra i consumatori che, anche se conoscevano le spezie, non avevano accesso allo zucchero raffinato.[PARAGRAPH:1]Grazie all'abbondanza di zucchero e cacao in America nel 1800, fu possibile produrre le prime caramelle, tanto che la Whitman's Chocolate boxes divenne la prima ad usare una produzione di massa di questo genere; in ogni caso, furono gli svizzeri a produrre tutte o quasi le caramelle più note al mondo quando questo business divenne redditizio a livello mondiale, con aziende leader come Lindt e Nestlè, anche se Mars Bars Inc. tentò di assumere il controllo del mercato europeo nel 1911, creando una combinazione di caramelle e cioccolato.</Italian>
 	</TEXT>
@@ -1034,8 +880,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_WONKA_SHOP_PEDIA</Tag>
-		<English>Since the dawn of civilization, humanity desired treats that cleansed their palates after consuming rich savory meals or plain meals. Early forays to treats mostly resided in cakes and pastries with the notion of just using beet sugar to satisfy the taste buds or sap based taffy. Other means for  common people to enjoy sweets often relied on more sweet starchy foods such as yams or azuki beans mashed to a fine paste for sweet snacks and relying on honeyed alcohol for drinks (Roman wine is much sweeter than any wine of today) as sugar based candies were often too expensive to make let alone enjoy by the average person. Although sugar cultivation happened in Southeast Asia and in the Middle East, it wasn't used in widespread use for commoners whom while may know about spices does not have access to refined sugar treats[PARAGRAPH:1]Thanks to easy access to sugar and cacao in the 1800's America were able to mass produce candy treats with Whitman's Chocolate boxes being the first case of mass produced confectioneries in America. However, it is the Swiss who produce most if not all of the most well known candy in the world when Confectionery as a business became truly lucrative with Lindt and Nestle being one of the candy magnates known to man although Mars Bars Inc. managed to wrestle control of the candy market away from Europe in 1911 with the delicious nougat, caramel and chocolate combination.</English>
-		<French>Depuis l'aube de la civilisation, l'humanité a toujours essayé de 'nettoyer' leurs palais après avoir consommé de riches plats. Les premiers essais consistaient essentiellement à consommer des gâteaux et pâtisseries, avec  à la notion de juste en utilisant la betterave à sucre pour satisfaire les papilles gustatives ou SAP basée tire. D'autres moyens pour les communes de profiter de bonbons sont souvent appuyés sur plus de féculents sucrés comme les ignames ou des haricots azuki purée pour obtenir une pâte fine pour des collations sucrées et en s'appuyant sur l'alcool de miel pour les boissons (vin romain est beaucoup plus douce que le vin d'aujourd'hui) que le sucre friandises à base sont souvent trop coûteux de faire profiter encore moins par la personne en moyenne. Bien que la culture du sucre des événements en Asie du Sud et au Moyen-Orient, il n'a pas été utilisé largement utilisés pour les roturiers qui peut tout savoir sur les épices n'a pas accès au sucre raffiné traite le paragraphe  Merci à accès facile pour le sucre et le cacao dans les années 1800 en Amérique ont été en mesure de produire en masse des bonbons traite avec des boîtes de chocolat Whitman étant le premier cas de production de masse confiseries en Amérique. Toutefois, ce sont les Suisses qui ont le plus produit, si pas tous les bonbons les plus connus dans le monde quand confiseries comme une entreprise est devenu vraiment lucratif avec Lindt et Nestlé étant l'un des magnats de bonbons que l'homme connaisse bien Pub Mars Inc réussi à battre le contrôle du marché des bonbons hors de l'Europe en 1911 avec la délicieuse combinaison de nougat, caramel et chocolat.</French>
+		<English>Since the dawn of civilization, humanity desired treats that cleansed their palates after consuming rich savory meals or plain meals. Early forays to treats mostly resided in cakes and pastries with the notion of just using beet sugar to satisfy the taste buds or sap based taffy. Other means for common people to enjoy sweets often relied on more sweet starchy foods such as yams or azuki beans mashed to a fine paste for sweet snacks and relying on honeyed alcohol for drinks (Roman wine is much sweeter than any wine of today) as sugar based candies were often too expensive to make let alone enjoy by the average person. Although sugar cultivation happened in Southeast Asia and in the Middle East, it wasn't used in widespread use for commoners whom while may know about spices does not have access to refined sugar treats[PARAGRAPH:1]Thanks to easy access to sugar and cacao in the 1800's America were able to mass produce candy treats with Whitman's Chocolate boxes being the first case of mass produced confectioneries in America. However, it is the Swiss who produce most if not all of the most well known candy in the world when Confectionery as a business became truly lucrative with Lindt and Nestle being one of the candy magnates known to man although Mars Bars Inc. managed to wrestle control of the candy market away from Europe in 1911 with the delicious nougat, caramel and chocolate combination.</English>
+		<French>Depuis l'aube de la civilisation, l'humanité a toujours essayé de 'nettoyer' leurs palais après avoir consommé de riches plats. Les premiers essais consistaient essentiellement à consommer des gâteaux et pâtisseries, avec à la notion de juste en utilisant la betterave à sucre pour satisfaire les papilles gustatives ou SAP basée tire. D'autres moyens pour les communes de profiter de bonbons sont souvent appuyés sur plus de féculents sucrés comme les ignames ou des haricots azuki purée pour obtenir une pâte fine pour des collations sucrées et en s'appuyant sur l'alcool de miel pour les boissons (vin romain est beaucoup plus douce que le vin d'aujourd'hui) que le sucre friandises à base sont souvent trop coûteux de faire profiter encore moins par la personne en moyenne. Bien que la culture du sucre des événements en Asie du Sud et au Moyen-Orient, il n'a pas été utilisé largement utilisés pour les roturiers qui peut tout savoir sur les épices n'a pas accès au sucre raffiné traite le paragraphe Merci à accès facile pour le sucre et le cacao dans les années 1800 en Amérique ont été en mesure de produire en masse des bonbons traite avec des boîtes de chocolat Whitman étant le premier cas de production de masse confiseries en Amérique. Toutefois, ce sont les Suisses qui ont le plus produit, si pas tous les bonbons les plus connus dans le monde quand confiseries comme une entreprise est devenu vraiment lucratif avec Lindt et Nestlé étant l'un des magnats de bonbons que l'homme connaisse bien Pub Mars Inc réussi à battre le contrôle du marché des bonbons hors de l'Europe en 1911 avec la délicieuse combinaison de nougat, caramel et chocolat.</French>
 		<German>Seit dem Anbruch der Zivilisation hat die Menschheit nach Geschmacksgenüssen verlangt, die ihren Gaumen nach reich gewürzten oder einfachen Mahlzeiten reinigen würden. Frühe Streifzüge in den Süßgenuß ergaben sich meist in Form von Kuchen und Backwaren, wobei nur Rübenzucker oder Toffee aus Pflanzensaft verwendet wurde, um die Geschmacksknospen zu befriedigen. In anderen Fällen musste sich das gewöhnliche Volk sein Vergnügen durch süße, stärkehaltige Verköstigungen verschaffen, wie Süßkartoffeln, zu feinem Brei zerstampften Azukibohnen oder Alkohol mit Honig (Römischer Wein war viel süßer als irgendein Wein heutzutage), da zuckerbasierte Süßigkeiten oft zu teuer waren, als daß ein Durchschnittsmensch sich allein daran erfreuen konnte. Obwohl Zucker in Südostasien und dem Mittleren Osten kultiviert wurde, so wurde dieser nicht weit in der Allgemeinheit verbreitet, die vielleicht Zugang zu Gewürzen, aber keinen zu Erzeugnissen aus raffiniertem Zucker hatte.[PARAGRAPH:1]Dank dem einfachen Zugang zu Zucker und Kakao in den 1800er Jahren, waren die Vereinigten Staaten in der Lage, Süßwaren in Massenproduktion herzustellen - Whitmans Schokolade-Schachteln waren die ersten Zuckerwaren aus Massenfertigung in den USA. Wie auch immer, es war die Schweiz, die anfing die meisten, wenn nicht sogar alle bekanntesten Süßigkeiten der Welt zu produzieren, als die Konditorei ein wirklich lukratives Geschäft mit Nestlé und Lindt als den uns bekannten Magnaten wurde, obwohl Mars Bars Inc. 1911 Europa die Marktkontrolle über das Süßwarengeschäft mit einer besonders köstlichen Kombination aus Nougat, Karamell und Schokolade erlangt hat.</German>
 		<Italian>Sin dagli albori della civiltà, l'umanità ha desiderato sapori che pulissero i palati dopo aver consumato pasti ricchi, salati o semplici. I primi esperimenti consistevano perlopiù in torte e pasticcini, con l'idea di utilizzare solo zucchero di barbabietola per soddisfare le papille gustative o i palati più raffinati. Altri mezzi per le persone comuni di godere dolci spesso richiedevano alimenti ricchi di amido come patate dolci o fagioli, schiacciati in una pasta fine per spuntini dolci e si affidavano ad alcol con miele per le bevande (il vino Romano è molto più dolce dei vini odierni), dato che le caramelle a base di zucchero erano spesso troppo costose per essere apprezzate dalle persone medie. Anche se la coltivazione dello zucchero era diffusa nel Sudest asiatico e in Medioriente, non era molto diffuso tra i consumatori che, anche se conoscevano le spezie, non avevano accesso allo zucchero raffinato.[PARAGRAPH:1]Grazie all'abbondanza di zucchero e cacao in America nel 1800, fu possibile produrre le prime caramelle, tanto che la Whitman's Chocolate boxes divenne la prima ad usare una produzione di massa di questo genere; in ogni caso, furono gli svizzeri a produrre tutte o quasi le caramelle più note al mondo quando questo business divenne redditizio a livello mondiale, con aziende leader come Lindt e Nestlè, anche se Mars Bars Inc. tentò di assumere il controllo del mercato europeo nel 1911, creando una combinazione di caramelle e cioccolato.</Italian>
 	</TEXT>

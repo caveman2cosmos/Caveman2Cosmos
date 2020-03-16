@@ -5786,7 +5786,7 @@
 			<Type>EVENT_WAR_MEMORIAL_1</Type>
 			<Description>TXT_KEY_EVENT_WAR_MEMORIAL_1</Description>
 			<bPickCity>1</bPickCity>
-			<Building>BUILDING_OBELISK</Building>
+			<Building>BUILDING_MONUMENT</Building>
 			<iBuildingChange>1</iBuildingChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -5797,7 +5797,7 @@
 			<bPickCity>1</bPickCity>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_OBELISK</Building>
+					<Building>BUILDING_MONUMENT</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -5811,7 +5811,7 @@
 			<bPickCity>1</bPickCity>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_OBELISK</Building>
+					<Building>BUILDING_MONUMENT</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>

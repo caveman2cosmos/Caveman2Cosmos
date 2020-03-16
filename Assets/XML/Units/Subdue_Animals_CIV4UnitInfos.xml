@@ -12021,7 +12021,7 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_RIVER_CROC_SMALL</Description>
-			<Civilopedia>TXT_KEY_UNIT_SUBDUED_CROCODILE_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_SUBDUED_RIVER_CROC_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -13604,7 +13604,6 @@
 			<Description>TXT_KEY_UNIT_SUBDUED_JUNGLE_TARANTULA</Description>
 			<Civilopedia>TXT_KEY_UNIT_TARANTULA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_SUBDUED_ANIMAL_STRATEGY</Strategy>
-			<Help>TXT_KEY_UNIT_SUBDUED_TARANTULA_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -13665,7 +13664,6 @@
 			<Description>TXT_KEY_UNIT_SUBDUED_DESERT_TARANTULA</Description>
 			<Civilopedia>TXT_KEY_UNIT_TARANTULA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_SUBDUED_ANIMAL_STRATEGY</Strategy>
-			<Help>TXT_KEY_UNIT_SUBDUED_TARANTULA_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>

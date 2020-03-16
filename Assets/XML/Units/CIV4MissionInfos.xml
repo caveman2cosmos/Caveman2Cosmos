@@ -283,7 +283,7 @@
 		<MissionInfo>
 			<Type>MISSION_RANGE_ATTACK</Type>
 			<Description>TXT_KEY_MISSION_RANGE_ATTACK</Description>
-			<Help>TXT_KEY_MISSION_RANGE_ATTACK_HELP</Help>
+			<Help/>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>ENTITY_EVENT_BOMBARD</EntityEventType>
 			<iTime>10</iTime>
@@ -1148,7 +1148,7 @@
 		<MissionInfo>
 			<Type>MISSION_DIPLOMAT_ASSIMULATE_IND_PEOPLE</Type>
 			<Description>TXT_KEY_MISSION_DIPLOMAT_ASSIMULATE_IND_PEOPLE</Description>
-			<Help>TXT_KEY_MISSION_DIPLOMAT_ASSIMULATE_IND_PEOPLE_HELP</Help>
+			<Help/>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>ENTITY_EVENT_GREAT_EVENT</EntityEventType>
 			<iTime>0</iTime>
@@ -1161,7 +1161,7 @@
 		<MissionInfo>
 			<Type>MISSION_DIPLOMAT_PRAISE_IND_PEOPLE</Type>
 			<Description>TXT_KEY_MISSION_DIPLOMAT_PRAISE_IND_PEOPLE</Description>
-			<Help>TXT_KEY_MISSION_DIPLOMAT_PRAISE_IND_PEOPLE_HELP</Help>
+			<Help/>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>ENTITY_EVENT_GREAT_EVENT</EntityEventType>
 			<iTime>0</iTime>
@@ -1174,7 +1174,7 @@
 		<MissionInfo>
 			<Type>MISSION_DIPLOMAT_SPEAK_TO_BARBARIAN_LEADERS</Type>
 			<Description>TXT_KEY_MISSION_DIPLOMAT_SPEAK_TO_BARBARIAN_LEADERS</Description>
-			<Help>TXT_KEY_MISSION_DIPLOMAT_SPEAK_TO_BARBARIAN_LEADERS_HELP</Help>
+			<Help/>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>ENTITY_EVENT_GREAT_EVENT</EntityEventType>
 			<iTime>0</iTime>
@@ -1187,7 +1187,7 @@
 		<MissionInfo>
 			<Type>MISSION_DIPLOMAT_SPREAD_RELIGION</Type>
 			<Description>TXT_KEY_MISSION_DIPLOMAT_SPREAD_RELIGION</Description>
-			<Help>TXT_KEY_MISSION_DIPLOMAT_SPREAD_RELIGION_HELP</Help>
+			<Help/>
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>ENTITY_EVENT_GREAT_EVENT</EntityEventType>
 			<iTime>0</iTime>
@@ -1330,7 +1330,6 @@
 			<Type>MISSION_CAPTIVE_UPGRADE_TO_SETTLER</Type>
 			<Description>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_SETTLER</Description>
 			<Help/>
-<!--			<Help>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_SETTLER_HELP</Help> -->
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
@@ -1344,7 +1343,6 @@
 			<Type>MISSION_CAPTIVE_UPGRADE_TO_GATHERER</Type>
 			<Description>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_GATHERER</Description>
 			<Help/>
-<!--			<Help>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_WORKER_HELP</Help> -->
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
@@ -1358,7 +1356,6 @@
 			<Type>MISSION_CAPTIVE_UPGRADE_TO_WORKER</Type>
 			<Description>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_WORKER</Description>
 			<Help/>
-<!--			<Help>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_WORKER_HELP</Help> -->
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
@@ -1372,7 +1369,6 @@
 			<Type>MISSION_CAPTIVE_UPGRADE_TO_IMMIGRANT</Type>
 			<Description>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_IMMIGRANT</Description>
 			<Help/>
-<!--			<Help>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_SETTLER_HELP</Help> -->
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
@@ -1386,7 +1382,6 @@
 			<Type>MISSION_CAPTIVE_UPGRADE_TO_STONE_THROWER</Type>
 			<Description>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_STONE_THROWER</Description>
 			<Help/>
-<!--			<Help>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_SETTLER_HELP</Help> -->
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
@@ -1400,7 +1395,6 @@
 			<Type>MISSION_CAPTIVE_UPGRADE_TO_ARCHER</Type>
 			<Description>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_ARCHER</Description>
 			<Help/>
-<!--			<Help>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_SETTLER_HELP</Help> -->
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
@@ -1414,7 +1408,6 @@
 			<Type>MISSION_CAPTIVE_UPGRADE_TO_AXEMAN</Type>
 			<Description>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_AXEMAN</Description>
 			<Help/>
-<!--			<Help>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_SETTLER_HELP</Help> -->
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
@@ -1428,7 +1421,6 @@
 			<Type>MISSION_CAPTIVE_UPGRADE_TO_SPEARMAN</Type>
 			<Description>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_SPEARMAN</Description>
 			<Help/>
-<!--			<Help>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_SETTLER_HELP</Help> -->
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
@@ -1442,7 +1434,6 @@
 			<Type>MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_WARRIOR</Type>
 			<Description>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_WARRIOR</Description>
 			<Help/>
-<!--			<Help>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_SETTLER_HELP</Help> -->
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
@@ -1481,7 +1472,6 @@
 		<MissionInfo>
 			<Type>MISSION_JOIN_CITY_FREED_SLAVE</Type>
 			<Description>TXT_KEY_MISSION_JOIN_CITY_FREED_SLAVE</Description>
-			<!--Help>TXT_KEY_MISSION_JOIN_CITY_FREED_SLAVE_HELP</Help-->
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>ENTITY_EVENT_GREAT_EVENT</EntityEventType>
 			<iTime>0</iTime>
@@ -1586,7 +1576,6 @@
 			<Type>MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_GATHERER</Type>
 			<Description>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_GATHERER</Description>
 			<Help/>
-<!--			<Help>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_SETTLER_HELP</Help> -->
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>
@@ -1600,7 +1589,6 @@
 			<Type>MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_TRACKER</Type>
 			<Description>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_TRACKER</Description>
 			<Help/>
-<!--			<Help>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_SETTLER_HELP</Help> -->
 			<Waypoint>NONE</Waypoint>
 			<EntityEventType>NONE</EntityEventType>
 			<iTime>0</iTime>

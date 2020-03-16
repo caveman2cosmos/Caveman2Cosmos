@@ -186,11 +186,11 @@
 		<!-- Red and Black Ware -->
 		<!-- by Sargon -->
 		<BonusInfo>
-			<Type>BONUS_RED_AND_BLACK_WARE</Type>
-			<Description>TXT_KEY_BONUS_RED_AND_BLACK_WARE</Description>
-			<Civilopedia>TXT_KEY_BONUS_RED_AND_BLACK_WARE_PEDIA</Civilopedia>
+			<Type>BONUS_RED_AND_BLACK_CERAMICS</Type>
+			<Description>TXT_KEY_BONUS_RED_AND_BLACK_CERAMICS</Description>
+			<Civilopedia>TXT_KEY_BONUS_RED_AND_BLACK_CERAMICS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_RED_AND_BLACK_WARE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_RED_AND_BLACK_CERAMICS</ArtDefineTag>
 			<TechReveal>TECH_GLASS_BLOWING</TechReveal>
 			<TechCityTrade>TECH_GLASS_BLOWING</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
