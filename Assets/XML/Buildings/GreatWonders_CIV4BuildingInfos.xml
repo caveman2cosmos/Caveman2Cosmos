@@ -801,6 +801,12 @@
 			<iGlobalPopulationChange>-30</iGlobalPopulationChange>
 			<!-- Unique effects -->
 			<VictoryPrereq>VICTORY_SCIENTIFIC</VictoryPrereq>
+			<VictoryThresholds>
+				<VictoryThreshold>
+					<VictoryType>VICTORY_SCIENTIFIC</VictoryType>
+					<iThreshold>1</iThreshold>
+				</VictoryThreshold>
+			</VictoryThresholds>
 			<bGoldenAge>1</bGoldenAge>
 			<!-- Misc -->
 			<iAsset>100</iAsset>

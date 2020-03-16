@@ -220,7 +220,7 @@ public:
 	std::vector<CvMapSwitchInfo*>& getMapSwitchInfos();
 	CvMapInfo& getMapInfo(const MapTypes eMap) const;
 	CvMapSwitchInfo& getMapSwitchInfo(const MapSwitchTypes eMapSwitch) const;
-	
+
 	void switchMap(MapTypes eMap);
 	CvMap& getMapByIndex(MapTypes eIndex);
 	void updateMaps();
@@ -566,29 +566,26 @@ public:
 	std::vector<CvOutcomeInfo*>& getOutcomeInfos();
 	CvOutcomeInfo& getOutcomeInfo(OutcomeTypes eOutcomeNum) const;
 
-/************************************************************************************************/
-/*Afforess                                     12/21/09                                         */
-/************************************************************************************************/
 	int getPEAK_EXTRA_DEFENSE() const;
 	int getPEAK_EXTRA_MOVEMENT() const;
-	
+
 	int iStuckUnitID;
 	int iStuckUnitCount;
 
 	bool isLoadedPlayerOptions() const;
 	void setLoadedPlayerOptions(bool bNewVal);
-	
+
 	bool isXMLLogging() const;
 	void setXMLLogging(bool bNewVal);
 
 	void updateReplacements();
-	
+
 	int getSCORE_FREE_PERCENT() const;
 	int getSCORE_POPULATION_FACTOR() const;
 	int getSCORE_LAND_FACTOR() const;
 	int getSCORE_TECH_FACTOR() const;
 	int getSCORE_WONDER_FACTOR() const;
-	
+
 	int getUSE_CAN_CREATE_PROJECT_CALLBACK() const;
 	int getUSE_CANNOT_CREATE_PROJECT_CALLBACK() const;
 	int getUSE_CAN_DO_MELTDOWN_CALLBACK() const;
@@ -604,7 +601,6 @@ public:
 	int getUSE_CAN_DO_GOLD_CALLBACK() const;
 	int getUSE_CAN_DO_RESEARCH_CALLBACK() const;
 	int getUSE_UPGRADE_UNIT_PRICE_CALLBACK() const;
-	int getUSE_IS_VICTORY_CALLBACK() const;
 	int getUSE_AI_UPDATE_UNIT_CALLBACK() const;
 	int getUSE_AI_CHOOSE_PRODUCTION_CALLBACK() const;
 	int getUSE_EXTRA_PLAYER_COSTS_CALLBACK() const;
@@ -631,9 +627,6 @@ public:
 	float getSAD_FACTOR_2() const;
 	float getSAD_FACTOR_3() const;
 	float getSAD_FACTOR_4() const;
-/************************************************************************************************/
-/* Afforess                                END                                                  */
-/************************************************************************************************/
 
 	int getNumCityTabInfos() const;
 	std::vector<CvInfoBase*>& getCityTabInfos();
@@ -1703,11 +1696,6 @@ protected:
 	int m_iMAX_HIT_POINTS;
 	int m_iPATH_DAMAGE_WEIGHT;
 	int m_iHILLS_EXTRA_DEFENSE;
-/************************************************************************************************/
-/* Afforess	                		 12/21/09                                                   */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	int m_iPEAK_EXTRA_DEFENSE;
 	int m_iPEAK_EXTRA_MOVEMENT;
 	bool m_bXMLLogging;
@@ -1734,7 +1722,6 @@ protected:
 	int m_iUSE_CAN_DO_GOLD_CALLBACK;
 	int m_iUSE_CAN_DO_RESEARCH_CALLBACK;
 	int m_iUSE_UPGRADE_UNIT_PRICE_CALLBACK;
-	int m_iUSE_IS_VICTORY_CALLBACK;
 	int m_iUSE_AI_UPDATE_UNIT_CALLBACK;
 	int m_iUSE_AI_CHOOSE_PRODUCTION_CALLBACK;
 	int m_iUSE_EXTRA_PLAYER_COSTS_CALLBACK;
@@ -1742,9 +1729,7 @@ protected:
 	int m_iUSE_AI_BESTTECH_CALLBACK;
 	int m_iUSE_CAN_DO_COMBAT_CALLBACK;
 	int m_iUSE_AI_CAN_DO_WARPLANS_CALLBACK;
-/************************************************************************************************/
-/* Afforess	Mountains End       END        		                                             */
-/************************************************************************************************/
+
 	int m_iRIVER_ATTACK_MODIFIER;
 	int m_iAMPHIB_ATTACK_MODIFIER;
 	int m_iHILLS_EXTRA_MOVEMENT;

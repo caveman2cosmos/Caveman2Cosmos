@@ -913,29 +913,20 @@ void CvDiplomacyResponse::UpdateDiplomacies(CvDiplomacyInfo* pDiplomacyInfo, int
 //
 //------------------------------------------------------------------------------------------------------
 CvSpecialistInfo::CvSpecialistInfo() :
-m_iGreatPeopleUnitType(NO_UNIT),
-m_iGreatPeopleRateChange(0),
-m_iMissionType(NO_MISSION),
-m_bVisible(false),
-m_piYieldChange(NULL),
-m_piCommerceChange(NULL),
-m_piFlavorValue(NULL),
-m_iExperience(0)
-/************************************************************************************************/
-/* Afforess					  Start		 Last Update: 3/8/10									*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+ m_iGreatPeopleUnitType(NO_UNIT)
+,m_iGreatPeopleRateChange(0)
+,m_iMissionType(NO_MISSION)
+,m_bVisible(false)
+,m_piYieldChange(NULL)
+,m_piCommerceChange(NULL)
+,m_piFlavorValue(NULL)
+,m_iExperience(0)
 ,m_iHealthPercent(0)
 ,m_iHappinessPercent(0)
 ,m_iInsidiousness(0)
 ,m_iInvestigation(0)
 ,m_bSlave(false)
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-{
-}
+{ }
 
 //------------------------------------------------------------------------------------------------------
 //
@@ -1046,11 +1037,6 @@ void CvSpecialistInfo::setTexture(const TCHAR* szVal)
 	m_szTexture = szVal;
 }
 
-/************************************************************************************************/
-/* Afforess					  Start		 Last Update: 3/8/10									*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 int CvSpecialistInfo::getHealthPercent() const
 {
 	return m_iHealthPercent;
@@ -1064,12 +1050,8 @@ bool CvSpecialistInfo::isSlave() const
 {
 	return m_bSlave;
 }
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-//Team Project (1)
+
 //TB Specialist Tags
-// int
 int CvSpecialistInfo::getInsidiousness() const
 {
 	return m_iInsidiousness;
@@ -1185,22 +1167,14 @@ bool CvSpecialistInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->SetVariableListTagPair(&m_piFlavorValue, L"Flavors", GC.getFlavorTypes(), GC.getNumFlavorTypes());
 
-/************************************************************************************************/
-/* Afforess					  Start		 Last Update: 3/8/10									*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	pXML->GetOptionalChildXmlValByName(&m_iHealthPercent, L"iHealthPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iHappinessPercent, L"iHappinessPercent");
 	pXML->GetOptionalChildXmlValByName(&m_bSlave, L"bSlave");
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-	//Team Project (1)
+
 	//TB Specialist Tags
-	// int
 	pXML->GetOptionalChildXmlValByName(&m_iInsidiousness, L"iInsidiousness");
 	pXML->GetOptionalChildXmlValByName(&m_iInvestigation, L"iInvestigation");
+
 	// int vector utilizing struct with delayed resolution
 	if(pXML->TryMoveToXmlFirstChild(L"TechHappinessTypes"))
 	{
@@ -1333,20 +1307,12 @@ void CvSpecialistInfo::copyNonDefaults(CvSpecialistInfo* pClassInfo, CvXMLLoadUt
 			m_piFlavorValue[i] = pClassInfo->getFlavorValue(i);
 		}
 	}
-/************************************************************************************************/
-/* Afforess					  Start		 Last Update: 3/8/10									*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 	if (getHealthPercent() == iDefault) m_iHealthPercent = pClassInfo->getHealthPercent();
 	if (getHappinessPercent() == iDefault) m_iHappinessPercent = pClassInfo->getHappinessPercent();
 	if (isSlave() == bDefault) m_bSlave = pClassInfo->isSlave();
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-	//Team Project (1)
+
 	//TB Specialist Tags
-	// int
 	if (getInsidiousness() == iDefault) m_iInsidiousness = pClassInfo->getInsidiousness();
 	if (getInvestigation() == iDefault) m_iInvestigation = pClassInfo->getInvestigation();
 
@@ -2812,29 +2778,19 @@ m_iPillageChange(0),
 m_iUpgradeDiscount(0),
 m_iExperiencePercent(0),
 m_iKamikazePercent(0),
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre																		  **/
-/**  Date: 16.09.2009																			   **/
-/**  ModComp: TLOTags																			   **/
-/**  Reason Added: New Tag Definition															   **/
-/**  Notes:																						 **/
-/*****************************************************************************************************/
 m_iAirCombatLimitChange(0),
 m_iCelebrityHappy(0),
 m_iCollateralDamageLimitChange(0),
 m_iCollateralDamageMaxUnitsChange(0),
 m_iCombatLimitChange(0),
 m_iExtraDropRange(0),
-//Team Project (2)
 m_iSurvivorChance(0),
 m_iVictoryAdjacentHeal(0),
 m_iVictoryHeal(0),
-//Team Project (2)
 m_iVictoryStackHeal(0),
 m_bDefensiveVictoryMove(false),
 m_bFreeDrop(false),
 m_bOffensiveVictoryMove(false),
-//Team Project (2)
 m_bOneUp(false),
 m_bPillageCulture(false),
 m_bPillageEspionage(false),
@@ -2842,9 +2798,6 @@ m_bPillageMarauder(false),
 m_bPillageOnMove(false),
 m_bPillageOnVictory(false),
 m_bPillageResearch(false),
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 16.09.2009; TLOTags															 **/
-/*****************************************************************************************************/
 m_bLeader(false),
 m_bBlitz(false),
 m_bAmphib(false),
@@ -2866,11 +2819,7 @@ m_pbUnitCombat(NULL),
 //ls612: Terrain Work modifiers
 m_piTerrainWorkPercent(NULL),
 m_piFeatureWorkPercent(NULL),
-/************************************************************************************************/
-/* Afforess					  Start		 Last Update: 3/8/10									*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 m_bCanMovePeaks(false)
 ,m_bCanLeadThroughPeaks(false)
 ,m_iNumPromotionOverwrites(0)
@@ -2882,9 +2831,7 @@ m_bCanMovePeaks(false)
 ,m_iPowerMultiplier(0)
 ,m_iIgnoreTerrainDamage(NO_TERRAIN)
 ,m_bZoneOfControl(false)
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+
 ,m_PropertyManipulators()
 //TB Combat Mods Begin
 //Textual References
@@ -3610,11 +3557,7 @@ int CvPromotionInfo::getFeatureWorkPercent(int i) const
 	FAssertMsg(i > -1, "Index out of bounds");
 	return m_piFeatureWorkPercent ? m_piFeatureWorkPercent[i] : 0;
 }
-/************************************************************************************************/
-/* Afforess					  Start		 Last Update: 3/8/10									*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 bool CvPromotionInfo::isCanMovePeaks() const
 {
 	return m_bCanMovePeaks;
@@ -3685,9 +3628,7 @@ bool CvPromotionInfo::isZoneOfControl() const
 {
 	return m_bZoneOfControl;
 }
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+
 //TB Combat Mods Begin  TB SubCombat Mod begin
 const wchar* CvPromotionInfo::getRenamesUnitTo() const
 {
@@ -5898,17 +5839,9 @@ bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iUpgradeDiscount, L"iUpgradeDiscount");
 	pXML->GetOptionalChildXmlValByName(&m_iExperiencePercent, L"iExperiencePercent");
 	pXML->GetOptionalChildXmlValByName(&m_iKamikazePercent, L"iKamikazePercent");
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre																		  **/
-/**  Date: 16.09.2009																			   **/
-/**  ModComp: TLOTags																			   **/
-/**  Reason Added: New Tag Definition															   **/
-/**  Notes:																						 **/
-/*****************************************************************************************************/
 	pXML->GetOptionalChildXmlValByName(&m_bDefensiveVictoryMove, L"bDefensiveVictoryMove");
 	pXML->GetOptionalChildXmlValByName(&m_bFreeDrop, L"bFreeDrop");
 	pXML->GetOptionalChildXmlValByName(&m_bOffensiveVictoryMove, L"bOffensiveVictoryMove");
-//Team Project (2)
 	pXML->GetOptionalChildXmlValByName(&m_bOneUp, L"bOneUp");
 	pXML->GetOptionalChildXmlValByName(&m_bPillageCulture, L"bPillageCulture");
 	pXML->GetOptionalChildXmlValByName(&m_bPillageEspionage, L"bPillageEspionage");
@@ -5922,15 +5855,10 @@ bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iCollateralDamageMaxUnitsChange, L"iCollateralDamageMaxUnitsChange");
 	pXML->GetOptionalChildXmlValByName(&m_iCombatLimitChange, L"iCombatLimitChange");
 	pXML->GetOptionalChildXmlValByName(&m_iExtraDropRange, L"iExtraDropRange");
-//Team Project (2)
 	pXML->GetOptionalChildXmlValByName(&m_iSurvivorChance, L"iSurvivorChance");
 	pXML->GetOptionalChildXmlValByName(&m_iVictoryAdjacentHeal, L"iVictoryAdjacentHeal");
 	pXML->GetOptionalChildXmlValByName(&m_iVictoryHeal, L"iVictoryHeal");
-//Team Project (2)
 	pXML->GetOptionalChildXmlValByName(&m_iVictoryStackHeal, L"iVictoryStackHeal");
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 16.09.2009; TLOTags															 **/
-/*****************************************************************************************************/
 
 	pXML->SetVariableListTagPair(&m_piTerrainAttackPercent, L"TerrainAttacks", GC.getNumTerrainInfos());
 	pXML->SetVariableListTagPair(&m_piTerrainDefensePercent, L"TerrainDefenses", GC.getNumTerrainInfos());
@@ -5938,7 +5866,6 @@ bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetVariableListTagPair(&m_piFeatureDefensePercent, L"FeatureDefenses", GC.getNumFeatureInfos());
 	pXML->SetVariableListTagPair(&m_piUnitCombatModifierPercent, L"UnitCombatMods", GC.getNumUnitCombatInfos());
 	pXML->SetVariableListTagPair(&m_piDomainModifierPercent, L"DomainMods", NUM_DOMAIN_TYPES);
-
 	pXML->SetVariableListTagPair(&m_pbTerrainDoubleMove, L"TerrainDoubleMoves", GC.getNumTerrainInfos());
 	pXML->SetVariableListTagPair(&m_pbFeatureDoubleMove, L"FeatureDoubleMoves", GC.getNumFeatureInfos());
 	pXML->SetVariableListTagPair(&m_pbUnitCombat, L"UnitCombats", GC.getNumUnitCombatInfos());
@@ -5946,11 +5873,6 @@ bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetVariableListTagPair(&m_piTerrainWorkPercent, L"TerrainWorks", GC.getNumTerrainInfos());
 	pXML->SetVariableListTagPair(&m_piFeatureWorkPercent, L"FeatureWorks", GC.getNumFeatureInfos());
 
-/************************************************************************************************/
-/* Afforess					  Start		 Last Update: 3/8/10									*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	pXML->GetOptionalChildXmlValByName(&m_bCanMovePeaks, L"bCanMovePeaks");
 	//	Koshling - enhanced mountaineering mode to differentiate between ability to move through
 	//	mountains, and ability to lead a stack through mountains
@@ -5965,9 +5887,7 @@ bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"IgnoreTerrainDamage");
 	m_iIgnoreTerrainDamage = pXML->GetInfoClass(szTextVal);
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+
 	m_PropertyManipulators.read(pXML);
 
 	//TB Combat Mods Begin  TB SubCombat Mod begin
@@ -6568,17 +6488,9 @@ bool CvPromotionInfo::readPass2(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PromotionPrereqOr2");
 	m_iPrereqOrPromotion2 = GC.getInfoTypeForString(szTextVal);
 
-/************************************************************************************************/
-/* Afforess					  Start		 Last Update: 3/8/10									*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	if (pXML->TryMoveToXmlFirstChild(L"PromotionOverwrites"))
 		pXML->SetIntWithChildList(&m_iNumPromotionOverwrites, &m_piPromotionOverwrites);
 
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 	return true;
 }
 /************************************************************************************************/
@@ -7455,11 +7367,6 @@ void CvPromotionInfo::copyNonDefaults(CvPromotionInfo* pClassInfo, CvXMLLoadUtil
 	if (getPrereqOrPromotion1() == iTextDefault) m_iPrereqOrPromotion1 = pClassInfo->getPrereqOrPromotion1();
 	if (getPrereqOrPromotion2() == iTextDefault) m_iPrereqOrPromotion2 = pClassInfo->getPrereqOrPromotion2();
 
-/************************************************************************************************/
-/* Afforess					  Start		 Last Update: 3/8/10									*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	if (isCanMovePeaks() == bDefault) m_bCanMovePeaks = pClassInfo->isCanMovePeaks();
 	//	Koshling - enhanced mountaineering mode to differentiate between ability to move through
 	//	mountains, and ability to lead a stack through mountains
@@ -7509,9 +7416,7 @@ void CvPromotionInfo::copyNonDefaults(CvPromotionInfo* pClassInfo, CvXMLLoadUtil
 	if (getAssetMultiplier() == iDefault) m_iAssetMultiplier = pClassInfo->getAssetMultiplier();
 	if (getPowerMultiplier() == iDefault) m_iPowerMultiplier = pClassInfo->getPowerMultiplier();
 	if (getIgnoreTerrainDamage() == NO_TERRAIN) m_iIgnoreTerrainDamage = pClassInfo->getIgnoreTerrainDamage();
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+
 	m_PropertyManipulators.copyNonDefaults(pClassInfo->getPropertyManipulators(), pXML);
 }
 
@@ -7522,11 +7427,7 @@ void CvPromotionInfo::copyNonDefaultsReadPass2(CvPromotionInfo* pClassInfo, CvXM
 	if (bOver || getPrereqPromotion() == iTextDefault) m_iPrereqPromotion = pClassInfo->getPrereqPromotion();
 	if (bOver || getPrereqOrPromotion1() == iTextDefault) m_iPrereqOrPromotion1 = pClassInfo->getPrereqOrPromotion1();
 	if (bOver || getPrereqOrPromotion2() == iTextDefault) m_iPrereqOrPromotion2 = pClassInfo->getPrereqOrPromotion2();
-/************************************************************************************************/
-/* Afforess					  Start		 Last Update: 3/8/10									*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 	if(pClassInfo->getNumPromotionOverwrites() > 0)
 	{
 		int iGoalSize = bOver ? pClassInfo->getNumPromotionOverwrites() : getNumPromotionOverwrites() + pClassInfo->getNumPromotionOverwrites();
@@ -7551,10 +7452,6 @@ void CvPromotionInfo::copyNonDefaultsReadPass2(CvPromotionInfo* pClassInfo, CvXM
 		m_iNumPromotionOverwrites = iGoalSize;
 		SAFE_DELETE_ARRAY(tempArray);
 	}
-
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 }
 
 void CvPromotionInfo::getCheckSum(unsigned int &iSum)
@@ -11816,11 +11713,6 @@ void CvCivicInfo::copyNonDefaults(CvCivicInfo* pClassInfo, CvXMLLoadUtility* pXM
 		m_szWeLoveTheKingKey = pClassInfo->getWeLoveTheKingKey();
 	}
 
-/************************************************************************************************/
-/* Afforess					  Start		 Last Update: 6/13/10									*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	if (getAttitudeShareMod() == iDefault) m_iAttitudeShareMod = pClassInfo->getAttitudeShareMod();
 	if (getEnslavementChance() == iDefault) m_iEnslavementChance = pClassInfo->getEnslavementChance();
 	if (getForeignTradeRouteModifier() == iDefault) m_iForeignTradeRouteModifier = pClassInfo->getForeignTradeRouteModifier();
@@ -12034,15 +11926,11 @@ void CvCivicInfo::copyNonDefaults(CvCivicInfo* pClassInfo, CvXMLLoadUtility* pXM
 		m_aszCivicAttitudeforPass3.push_back(pClassInfo->getCivicAttitudeNamesVectorElement(i));
 	}
 
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-//Team Project (3)
 	//TB Civic Tags
 	//Integers
 	if (getNationalCaptureProbabilityModifier() == iDefault) m_iNationalCaptureProbabilityModifier = pClassInfo->getNationalCaptureProbabilityModifier();
 	if (getNationalCaptureResistanceModifier() == iDefault) m_iNationalCaptureResistanceModifier = pClassInfo->getNationalCaptureResistanceModifier();
-//Team Project (5)
+
 	//Booleans
 	if (isAllReligionsActive() == bDefault) m_bAllReligionsActive = pClassInfo->isAllReligionsActive();
 	if (isBansNonStateReligions() == bDefault) m_bBansNonStateReligions = pClassInfo->isBansNonStateReligions();
@@ -13531,30 +13419,21 @@ void CvCivilizationInfo::copyNonDefaultsReadPass2(CvCivilizationInfo* pClassInfo
 //
 //------------------------------------------------------------------------------------------------------
 CvVictoryInfo::CvVictoryInfo() :
-m_iPopulationPercentLead(0),
-m_iLandPercent(0),
-m_iMinLandPercent(0),
-m_iReligionPercent(0),
-m_iCityCulture(NO_CULTURELEVEL),
-m_iNumCultureCities(0),
-m_iTotalCultureRatio(0),
-m_iVictoryDelayTurns(0),
-m_bTargetScore(false),
-m_bEndScore(false),
-m_bConquest(false),
-m_bDiploVote(false),
-m_bPermanent(false)
-/************************************************************************************************/
-/* Afforess					  Start		 12/9/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+ m_iPopulationPercentLead(0)
+,m_iLandPercent(0)
+,m_iMinLandPercent(0)
+,m_iReligionPercent(0)
+,m_iCityCulture(NO_CULTURELEVEL)
+,m_iNumCultureCities(0)
+,m_iTotalCultureRatio(0)
+,m_iVictoryDelayTurns(0)
+,m_bTargetScore(false)
+,m_bEndScore(false)
+,m_bConquest(false)
+,m_bDiploVote(false)
+,m_bPermanent(false)
 ,m_bTotalVictory(false)
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-{
-}
+{ }
 
 //------------------------------------------------------------------------------------------------------
 //
@@ -13563,9 +13442,7 @@ m_bPermanent(false)
 //  PURPOSE :   Default destructor
 //
 //------------------------------------------------------------------------------------------------------
-CvVictoryInfo::~CvVictoryInfo()
-{
-}
+CvVictoryInfo::~CvVictoryInfo() {}
 
 int CvVictoryInfo::getPopulationPercentLead() const
 {
@@ -13636,18 +13513,11 @@ const char* CvVictoryInfo::getMovie() const
 {
 	return m_szMovie;
 }
-/************************************************************************************************/
-/* Afforess					  Start		 12/9/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 bool CvVictoryInfo::isTotalVictory() const
 {
 	return m_bTotalVictory;
 }
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 
 //
@@ -13668,28 +13538,21 @@ bool CvVictoryInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bConquest, L"bConquest");
 	pXML->GetOptionalChildXmlValByName(&m_bDiploVote, L"bDiploVote");
 	pXML->GetOptionalChildXmlValByName(&m_bPermanent, L"bPermanent");
+	pXML->GetOptionalChildXmlValByName(&m_bTotalVictory, L"bTotalVictory");
+
 	pXML->GetOptionalChildXmlValByName(&m_iPopulationPercentLead, L"iPopulationPercentLead");
 	pXML->GetOptionalChildXmlValByName(&m_iLandPercent, L"iLandPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iMinLandPercent, L"iMinLandPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iReligionPercent, L"iReligionPercent");
+	pXML->GetOptionalChildXmlValByName(&m_iNumCultureCities, L"iNumCultureCities");
+	pXML->GetOptionalChildXmlValByName(&m_iTotalCultureRatio, L"iTotalCultureRatio");
+	pXML->GetOptionalChildXmlValByName(&m_iVictoryDelayTurns, L"iVictoryDelayTurns");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"CityCulture");
 	m_iCityCulture = pXML->GetInfoClass(szTextVal);
 
-	pXML->GetOptionalChildXmlValByName(&m_iNumCultureCities, L"iNumCultureCities");
-	pXML->GetOptionalChildXmlValByName(&m_iTotalCultureRatio, L"iTotalCultureRatio");
-	pXML->GetOptionalChildXmlValByName(&m_iVictoryDelayTurns, L"iVictoryDelayTurns");
 	pXML->GetOptionalChildXmlValByName(m_szMovie, L"VictoryMovie");
 
-/************************************************************************************************/
-/* Afforess					  Start		 12/9/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-	pXML->GetOptionalChildXmlValByName(&m_bTotalVictory, L"bTotalVictory");
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 	return true;
 }
 
@@ -13723,15 +13586,8 @@ void CvVictoryInfo::copyNonDefaults(CvVictoryInfo* pClassInfo, CvXMLLoadUtility*
 	if (getVictoryDelayTurns() == iDefault) m_iVictoryDelayTurns = pClassInfo->getVictoryDelayTurns();
 
 	if (getMovie() == cDefault) m_szMovie = pClassInfo->getMovie();
-/************************************************************************************************/
-/* Afforess					  Start		 12/9/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 	if (isTotalVictory() == bDefault) m_bTotalVictory = pClassInfo->isTotalVictory();
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 }
 
 void CvVictoryInfo::getCheckSum(unsigned int& iSum)
@@ -13913,15 +13769,8 @@ m_iNumGoodies(0),
 m_piGoodies(NULL),
 m_pbFreeTechs(NULL),
 m_pbAIFreeTechs(NULL)
-/************************************************************************************************/
-/* Afforess					  Start		 12/9/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 ,m_iRevolutionIndexPercent(0)
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 ,m_Percent()
 ,m_PropertyManipulators()
 {
@@ -14269,18 +14118,12 @@ int CvHandicapInfo::getPercent(int iID) const
 	return m_Percent.getValue(iID);
 }
 
-/************************************************************************************************/
-/* Afforess					  Start		 12/9/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 int CvHandicapInfo::getRevolutionIndexPercent() const
 {
 	return m_iRevolutionIndexPercent;
 }
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+
 
 void CvHandicapInfo::getCheckSum(unsigned int& iSum)
 {
@@ -14455,15 +14298,8 @@ bool CvHandicapInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetVariableListTagPair(&m_pbFreeTechs, L"FreeTechs", GC.getNumTechInfos());
 	pXML->SetVariableListTagPair(&m_pbAIFreeTechs, L"AIFreeTechs", GC.getNumTechInfos());
 
-/************************************************************************************************/
-/* Afforess					  Start		 12/9/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	pXML->GetOptionalChildXmlValByName(&m_iRevolutionIndexPercent, L"iRevolutionIndexPercent");
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+
 	if (pXML->TryMoveToXmlFirstChild(L"Percents"))
 	{
 		m_Percent.read(pXML);
@@ -14654,15 +14490,9 @@ void CvHandicapInfo::copyNonDefaults(CvHandicapInfo* pClassInfo, CvXMLLoadUtilit
 			m_pbAIFreeTechs[i] = pClassInfo->isAIFreeTechs(i);
 		}
 	}
-/************************************************************************************************/
-/* Afforess					  Start		 12/9/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 	if (getRevolutionIndexPercent() == iDefault) m_iRevolutionIndexPercent = pClassInfo->getRevolutionIndexPercent();
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+
 	m_Percent.copyNonDefaults(&(pClassInfo->m_Percent), pXML);
 
 	m_PropertyManipulators.copyNonDefaults(pClassInfo->getPropertyManipulators(), pXML);
@@ -14961,18 +14791,9 @@ bool CvGameSpeedInfo::read(CvXMLLoadUtility* pXML)
 		pXML->MoveToXmlParent();
 	}
 
-/************************************************************************************************/
-/* Afforess					  Start		 12/13/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	pXML->GetOptionalChildXmlValByName(&m_iUnitMovementPercent, L"iUnitMovementPercent");
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-	//TB GameSpeed begin
+
 	pXML->GetOptionalChildXmlValByName(&m_iTraitGainPercent, L"iTraitGainPercent");
-	//TB GameSpeed end
 
 	if (pXML->TryMoveToXmlFirstChild(L"Percents"))
 	{
@@ -15194,11 +15015,7 @@ m_paiFeatureTech(NULL),
 m_paiFeatureTime(NULL),
 m_paiFeatureProduction(NULL),
 m_pabFeatureRemove(NULL)
-/************************************************************************************************/
-/* Afforess					  Start		 05/25/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 ,m_pabNoTechCanRemoveWithNoProductionGain(NULL)
 ,m_iTerrainChange(NO_TERRAIN)
 ,m_iFeatureChange(NO_FEATURE)
@@ -15206,11 +15023,7 @@ m_pabFeatureRemove(NULL)
 ,m_bMine(false)
 ,m_bDisabled(false)
 ,m_bHideObsoleteExempt(false)
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-{
-}
+{ }
 
 //------------------------------------------------------------------------------------------------------
 //
@@ -15225,15 +15038,7 @@ CvBuildInfo::~CvBuildInfo()
 	SAFE_DELETE_ARRAY(m_paiFeatureTime);
 	SAFE_DELETE_ARRAY(m_paiFeatureProduction);
 	SAFE_DELETE_ARRAY(m_pabFeatureRemove);
-/************************************************************************************************/
-/* Afforess					  Start		 05/25/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	SAFE_DELETE_ARRAY(m_pabNoTechCanRemoveWithNoProductionGain);
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 	for (int i=0; i<(int)m_aiPrereqBonusTypes.size(); i++)
 	{
@@ -15465,11 +15270,7 @@ bool CvBuildInfo::read(CvXMLLoadUtility* pXML)
 	m_iImprovement = pXML->GetInfoClass(szTextVal);
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"RouteType");
 	m_iRoute = pXML->GetInfoClass(szTextVal);
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 06/13/09														*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"TerrainChange");
 	m_iTerrainChange = pXML->GetInfoClass(szTextVal);
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"FeatureChange");
@@ -15477,23 +15278,12 @@ bool CvBuildInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->GetOptionalChildXmlValByName(&m_bMine, L"bMine");
 	pXML->GetOptionalChildXmlValByName(&m_bHideObsoleteExempt, L"bHideObsoleteExempt");
-/************************************************************************************************/
-/* JOOYO_ADDON						  END													 */
-/************************************************************************************************/
+
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"EntityEvent");
 	m_iEntityEvent = pXML->GetInfoClass(szTextVal);
-/************************************************************************************************/
-/* Afforess					  Start		 05/25/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-/*
-	pXML->SetFeatureStruct(&m_paiFeatureTech, &m_paiFeatureTime, &m_paiFeatureProduction, &m_pabFeatureRemove);
-*/
+
 	pXML->SetFeatureStruct(&m_paiFeatureTech, &m_paiFeatureTime, &m_paiFeatureProduction, &m_pabFeatureRemove, &m_pabNoTechCanRemoveWithNoProductionGain);
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+
 	pXML->SetOptionalIntVectorWithDelayedResolution(m_aiPrereqBonusTypes, L"PrereqBonusTypes");
 	pXML->SetOptionalIntVector(&m_aiMapCategoryTypes, L"MapCategoryTypes");
 
@@ -16302,17 +16092,8 @@ m_bBonusMakesValid(false),
 m_bObsoleteBonusMakesValid(false),
 m_bBonusTrade(false),
 m_piYieldChange(NULL)
-/************************************************************************************************/
-/* Afforess					  Start		 01/20/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 ,m_iDepletionRand(0)
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-{
-}
+{ }
 
 //------------------------------------------------------------------------------------------------------
 //
@@ -16353,18 +16134,10 @@ int CvImprovementBonusInfo::getYieldChange(int i) const
 	return m_piYieldChange ? m_piYieldChange[i] : 0;
 }
 
-/************************************************************************************************/
-/* Afforess					  Start		 01/20/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 int CvImprovementBonusInfo::getDepletionRand() const
 {
 	return m_iDepletionRand;
 }
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 void CvImprovementBonusInfo::getCheckSum(unsigned int &iSum)
 {
@@ -16446,18 +16219,12 @@ m_pbFeatureMakesValid(NULL),
 m_ppiTechYieldChanges(NULL),
 m_ppiRouteYieldChanges(NULL),
 m_paImprovementBonus(NULL)
-/************************************************************************************************/
-/* Afforess					  Start		 12/9/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 ,m_bPeakMakesValid(false)
 ,m_iHealthPercent(0)
 ,m_iPrereqTech(NO_TECH)
 //,m_ppiTraitYieldChanges(NULL)
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+
 ,m_PropertyManipulators()
 //TB Improvements
 ,m_bCanMoveSeaUnits(true)
@@ -16905,16 +16672,13 @@ const TCHAR* CvArtInfoImprovement::getShaderNIF() const
 {
 	return m_szShaderNIF;
 }
+
 void CvArtInfoImprovement::setShaderNIF(const TCHAR* szDesc)
 {
 	m_szShaderNIF = szDesc;
 }
 
-/************************************************************************************************/
-/* Afforess					  Start		 12/9/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 bool CvImprovementInfo::isPeakMakesValid() const
 {
 	return m_bPeakMakesValid;
@@ -16951,9 +16715,6 @@ int CvImprovementInfo::getPrereqTech() const
 //	return m_ppiTraitYieldChanges ? m_ppiTraitYieldChanges[i] : NULL;
 //}
 
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 //TB Improvements
 //Object Indexes
@@ -17369,11 +17130,7 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 		m_iWorldSoundscapeScriptId = gDLL->getAudioTagIndex( szTextVal.GetCString(), AUDIOTAG_SOUNDSCAPE );
 	else
 		m_iWorldSoundscapeScriptId = -1;
-/************************************************************************************************/
-/* Afforess					  Start		 12/9/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 	int iHealth = 0;
 	pXML->GetOptionalChildXmlValByName(&iHealth, L"iHealth");
 	pXML->GetOptionalChildXmlValByName(&m_iHealthPercent, L"iHealthPercent");
@@ -17427,9 +17184,6 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 
 	//	pXML->MoveToXmlParent();
 	//}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 	m_PropertyManipulators.read(pXML);
 
@@ -17610,18 +17364,11 @@ void CvImprovementInfo::copyNonDefaults(CvImprovementInfo* pClassInfo, CvXMLLoad
 		{
 			m_paImprovementBonus[i].m_iDiscoverRand = pClassInfo->getImprovementBonusDiscoverRand(i);
 		}
-/************************************************************************************************/
-/* Afforess					  Start		 01/20/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 		if (m_paImprovementBonus[i].m_iDepletionRand == 0)
 		{
 			m_paImprovementBonus[i].m_iDepletionRand = pClassInfo->getImprovementBonusDepletionRand(i);
 		}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+
 		for (int j = 0; j < NUM_YIELD_TYPES; j++)
 		{
 			if (m_paImprovementBonus[i].m_piYieldChange[j] == iDefault)
@@ -17671,11 +17418,7 @@ void CvImprovementInfo::copyNonDefaults(CvImprovementInfo* pClassInfo, CvXMLLoad
 	//Readpass2 stuff
 	if (m_iImprovementPillage == iTextDefault) m_iImprovementPillage = pClassInfo->getImprovementPillage();
 	if (m_iImprovementUpgrade == iTextDefault) m_iImprovementUpgrade = pClassInfo->getImprovementUpgrade();
-/************************************************************************************************/
-/* Afforess					  Start		 12/9/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 	if (isPeakMakesValid() == bDefault) m_bPeakMakesValid = pClassInfo->isPeakMakesValid();
 	if (getHealthPercent() == iDefault) m_iHealthPercent = pClassInfo->getHealthPercent();
 	if (getPrereqTech() == NO_TECH) m_iPrereqTech = pClassInfo->getPrereqTech();
@@ -17698,9 +17441,7 @@ void CvImprovementInfo::copyNonDefaults(CvImprovementInfo* pClassInfo, CvXMLLoad
 	//		}
 	//	}
 	//}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+
 	//TB Improvements
 	//Object Indexes
 	if (m_iBonusChange == iTextDefault) m_iBonusChange = pClassInfo->getBonusChange();
@@ -17868,16 +17609,8 @@ m_piImprovementChange(NULL),
 m_pbTerrain(NULL),
 m_pbFeature(NULL),
 m_pbFeatureTerrain(NULL)
-/************************************************************************************************/
-/* Afforess					  Start		 12/9/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 ,m_bPeaks(false)
 ,m_bCurrency(false)
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 ,m_PropertyManipulators()
 ,m_tradeProvidingImprovements(NULL)
 {
@@ -18166,11 +17899,7 @@ const TCHAR* CvBonusInfo::getButton() const
 	}
 }
 
-/************************************************************************************************/
-/* Afforess					  Start		 12/9/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 bool CvBonusInfo::isPeaks() const
 {
 	return m_bPeaks;
@@ -18179,9 +17908,7 @@ bool CvBonusInfo::isCurrency() const
 {
 	return m_bCurrency;
 }
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+
 
 void CvBonusInfo::getCheckSum(unsigned int &iSum)
 {
@@ -18306,24 +18033,14 @@ bool CvBonusInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bFlatlands, L"bFlatlands");
 	pXML->GetOptionalChildXmlValByName(&m_bNoRiverSide, L"bNoRiverSide");
 	pXML->GetOptionalChildXmlValByName(&m_bNormalize, L"bNormalize");
+	pXML->GetOptionalChildXmlValByName(&m_bPeaks, L"bPeaks");
+	pXML->GetOptionalChildXmlValByName(&m_bCurrency, L"bCurrency");
 
 	pXML->SetVariableListTagPair(&m_pbTerrain, L"TerrainBooleans", GC.getNumTerrainInfos());
 	pXML->SetVariableListTagPair(&m_pbFeature, L"FeatureBooleans", GC.getNumFeatureInfos());
 	pXML->SetVariableListTagPair(&m_pbFeatureTerrain, L"FeatureTerrainBooleans", GC.getNumTerrainInfos());
-
 	//Vectors
 	pXML->SetOptionalIntVector(&m_aiMapCategoryTypes, L"MapCategoryTypes");
-/************************************************************************************************/
-/* Afforess					  Start		 12/9/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-	pXML->GetOptionalChildXmlValByName(&m_bPeaks, L"bPeaks");
-	pXML->GetOptionalChildXmlValByName(&m_bCurrency, L"bCurrency");
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-
 
 	if(pXML->TryMoveToXmlFirstChild(L"AfflictionCommunicabilityTypes"))
 	{
@@ -18451,16 +18168,10 @@ void CvBonusInfo::copyNonDefaults(CvBonusInfo* pClassInfo, CvXMLLoadUtility* pXM
 			m_aiMapCategoryTypes.push_back(pClassInfo->getMapCategoryType(i));
 		}
 	}
-/************************************************************************************************/
-/* Afforess					  Start		 12/9/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 	if (isPeaks() == bDefault) m_bPeaks = pClassInfo->isPeaks();
 	if (isCurrency() == bDefault) m_bCurrency = pClassInfo->isCurrency();
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+
 	m_PropertyManipulators.copyNonDefaults(pClassInfo->getPropertyManipulators(), pXML);
 }
 
@@ -18543,19 +18254,11 @@ m_piRiverYieldChange(NULL),
 m_piHillsYieldChange(NULL),
 m_pi3DAudioScriptFootstepIndex(NULL),
 m_pbTerrain(NULL)
-/************************************************************************************************/
-/* Afforess					  Start		 12/9/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 ,m_iSpreadProbability(0)
 ,m_iCultureDistance(0)
 ,m_iPopDestroys(-1)
 ,m_bIgnoreTerrainCulture(false)
 ,m_bCanGrowAnywhere(false)
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 ,m_PropertyManipulators()
 {
 	m_zobristValue = GC.getGame().getSorenRand().getInt();
@@ -18833,11 +18536,6 @@ const CvArtInfoFeature* CvFeatureInfo::getArtInfo() const
 	return ARTFILEMGR.getFeatureArtInfo( getArtDefineTag());
 }
 
-/************************************************************************************************/
-/* Afforess					  Start		 12/9/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 int CvFeatureInfo::getSpreadProbability() const
 {
 	return m_iSpreadProbability;
@@ -18867,9 +18565,6 @@ bool CvFeatureInfo::isCanGrowAnywhere() const
 {
 	return m_bCanGrowAnywhere;
 }
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 // AIAndy: Returns true if the feature can be displayed properly as secondary feature
 bool CvFeatureInfo::canBeSecondary() const
@@ -18971,11 +18666,7 @@ bool CvFeatureInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iEffectProbability, L"iEffectProbability");
 
 	pXML->SetVariableListTagPair(&m_pbTerrain, L"TerrainBooleans", GC.getNumTerrainInfos());
-/************************************************************************************************/
-/* Afforess					  Start		 12/9/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 	pXML->GetOptionalChildXmlValByName(&m_iSpreadProbability, L"iSpread");
 	pXML->GetOptionalChildXmlValByName(&m_iCultureDistance, L"iCultureDistance");
 	pXML->GetOptionalChildXmlValByName(&m_bIgnoreTerrainCulture, L"bIgnoreTerrainCulture");
@@ -19109,17 +18800,11 @@ void CvFeatureInfo::copyNonDefaults(CvFeatureInfo* pClassInfo, CvXMLLoadUtility*
 			m_pbTerrain[i] = pClassInfo->isTerrain(i);
 		}
 	}
-/************************************************************************************************/
-/* Afforess					  Start		 12/9/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 	if (getSpreadProbability() == iDefault) m_iSpreadProbability = pClassInfo->getSpreadProbability();
 	if (getCultureDistance() == iDefault) m_iCultureDistance = pClassInfo->getCultureDistance();
 	if (!isIgnoreTerrainCulture()) m_bIgnoreTerrainCulture = pClassInfo->isIgnoreTerrainCulture();
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+
 	if (getNumMapCategoryTypes() == 0)
 	{
 		m_aiMapCategoryTypes.clear();
@@ -19575,16 +19260,8 @@ m_piYields(NULL),
 m_piRiverYieldChange(NULL),
 m_piHillsYieldChange(NULL),
 m_pi3DAudioScriptFootstepIndex(NULL)
-/************************************************************************************************/
-/* Afforess					  Start		 04/21/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 ,m_iCultureDistance(0)
 ,m_iHealthPercent(0)
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 ,m_PropertyManipulators(),
 //TB Combat Mod begin
 m_bColdDamage(false)
@@ -19699,15 +19376,10 @@ int CvTerrainInfo::getHillsYieldChange(int i) const
 
 int CvTerrainInfo::get3DAudioScriptFootstepIndex(int i) const
 {
-//	FAssertMsg(i < ?, "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
 	return m_pi3DAudioScriptFootstepIndex ? m_pi3DAudioScriptFootstepIndex[i] : 0;
 }
-/************************************************************************************************/
-/* Afforess					  Start		 04/21/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 int CvTerrainInfo::getCultureDistance() const
 {
 	return m_iCultureDistance;
@@ -19716,9 +19388,6 @@ int CvTerrainInfo::getHealthPercent() const
 {
 	return m_iHealthPercent;
 }
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 //TB Combat Mod begin
 bool CvTerrainInfo::isColdDamage() const
@@ -19825,16 +19494,10 @@ bool CvTerrainInfo::read(CvXMLLoadUtility* pXML)
 		m_iWorldSoundscapeScriptId = gDLL->getAudioTagIndex( szTextVal.GetCString(), AUDIOTAG_SOUNDSCAPE );
 	else
 		m_iWorldSoundscapeScriptId = -1;
-/************************************************************************************************/
-/* Afforess					  Start		 04/21/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 	pXML->GetOptionalChildXmlValByName(&m_iCultureDistance, L"iCultureDistance");
 	pXML->GetOptionalChildXmlValByName(&m_iHealthPercent, L"iHealthPercent");
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+
 	m_PropertyManipulators.read(pXML);
 	//TB Combat Mods begin
 	pXML->GetOptionalChildXmlValByName(&m_bColdDamage, L"bColdDamage");
@@ -19947,16 +19610,10 @@ void CvTerrainInfo::copyNonDefaults(CvTerrainInfo* pClassInfo, CvXMLLoadUtility*
 	}
 
 	if (getWorldSoundscapeScriptId() == iTextDefault) m_iWorldSoundscapeScriptId = pClassInfo->getWorldSoundscapeScriptId();
-/************************************************************************************************/
-/* Afforess					  Start		 04/21/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 	if (getCultureDistance() == iDefault) m_iCultureDistance = pClassInfo->getCultureDistance();
 	if (getHealthPercent() == iDefault) m_iHealthPercent = pClassInfo->getHealthPercent();
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+
 	if (getNumMapCategoryTypes() == 0)
 	{
 		m_aiMapCategoryTypes.clear();
@@ -20381,20 +20038,12 @@ m_piDiploPeaceIntroMusicScriptIds(NULL),
 m_piDiploPeaceMusicScriptIds(NULL),
 m_piDiploWarIntroMusicScriptIds(NULL),
 m_piDiploWarMusicScriptIds(NULL)
-/************************************************************************************************/
-/* Afforess					  Start		 12/9/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 ,m_iMilitaryUnitRefuseAttitudeThreshold(ATTITUDE_ANNOYED)
 ,m_iWorkerRefuseAttitudeThreshold(ATTITUDE_ANNOYED)
 ,m_iCorporationRefuseAttitudeThreshold(ATTITUDE_CAUTIOUS)
 ,m_iSecretaryGeneralVoteRefuseAttitudeThreshold(ATTITUDE_ANNOYED)
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-{
-}
+{ }
 
 //------------------------------------------------------------------------------------------------------
 //
@@ -20964,11 +20613,6 @@ const TCHAR* CvLeaderHeadInfo::getLeaderHead() const
 	}
 }
 
-/************************************************************************************************/
-/* Afforess					  Start		 12/9/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 int CvLeaderHeadInfo::getMilitaryUnitRefuseAttitudeThreshold() const
 {
 	return m_iMilitaryUnitRefuseAttitudeThreshold;
@@ -21013,9 +20657,7 @@ void CvLeaderHeadInfo::setDiplomacyVictoryWeight(int i)
 {
 	m_iDiplomacyVictoryWeight = i;
 }
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+
 
 void CvLeaderHeadInfo::getCheckSum(unsigned int& iSum)
 {
@@ -21278,11 +20920,7 @@ bool CvLeaderHeadInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetVariableListTagPairForAudioScripts(&m_piDiploPeaceMusicScriptIds, L"DiplomacyMusicPeace", GC.getNumEraInfos());
 	pXML->SetVariableListTagPairForAudioScripts(&m_piDiploWarIntroMusicScriptIds, L"DiplomacyIntroMusicWar", GC.getNumEraInfos());
 	pXML->SetVariableListTagPairForAudioScripts(&m_piDiploWarMusicScriptIds, L"DiplomacyMusicWar", GC.getNumEraInfos());
-/************************************************************************************************/
-/* Afforess					  Start		 07/29/10											   */
-/*																							  */
-/* Advanced Diplomacy																		   */
-/************************************************************************************************/
+
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"MilitaryUnitRefuseAttitudeThreshold", "ATTITUDE_ANNOYED");
 	m_iMilitaryUnitRefuseAttitudeThreshold = pXML->GetInfoClass(szTextVal);
 
@@ -21297,9 +20935,6 @@ bool CvLeaderHeadInfo::read(CvXMLLoadUtility* pXML)
 
 	setDefaultMemoryInfo();
 	setDefaultContactInfo();
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 	return true;
 }
@@ -21530,11 +21165,7 @@ void CvLeaderHeadInfo::copyNonDefaults(CvLeaderHeadInfo* pClassInfo, CvXMLLoadUt
 			m_piDiploWarMusicScriptIds[j] = pClassInfo->getDiploWarMusicScriptIds(j);
 		}
 	}
-/************************************************************************************************/
-/* Afforess					  Start		 12/9/09												*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 	if (getMilitaryUnitRefuseAttitudeThreshold() == ATTITUDE_ANNOYED) m_iMilitaryUnitRefuseAttitudeThreshold = pClassInfo->getMilitaryUnitRefuseAttitudeThreshold();
 	if (getWorkerRefuseAttitudeThreshold() == ATTITUDE_ANNOYED) m_iWorkerRefuseAttitudeThreshold = pClassInfo->getWorkerRefuseAttitudeThreshold();
 	if (getCorporationRefuseAttitudeThreshold() == ATTITUDE_CAUTIOUS) m_iCorporationRefuseAttitudeThreshold = pClassInfo->getCorporationRefuseAttitudeThreshold();
@@ -21544,15 +21175,8 @@ void CvLeaderHeadInfo::copyNonDefaults(CvLeaderHeadInfo* pClassInfo, CvXMLLoadUt
 	if (getConquestVictoryWeight() == 0) m_iConquestVictoryWeight = pClassInfo->getConquestVictoryWeight();
 	if (getDominationVictoryWeight() == 0) m_iDominationVictoryWeight = pClassInfo->getDominationVictoryWeight();
 	if (getDiplomacyVictoryWeight() == 0) m_iDiplomacyVictoryWeight = pClassInfo->getDiplomacyVictoryWeight();
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 }
-/************************************************************************************************/
-/* Afforess					  Start		 05/23/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 //I'm lazy, so sue me. The XML still overrides this, so no worries.
 void CvLeaderHeadInfo::setDefaultMemoryInfo()
 {
@@ -21750,9 +21374,7 @@ void CvLeaderHeadInfo::setDefaultContactInfo()
 		}
 	}
 }
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+
 
 //======================================================================================================
 //					CvWorldInfo
@@ -21766,37 +21388,28 @@ void CvLeaderHeadInfo::setDefaultContactInfo()
 //
 //------------------------------------------------------------------------------------------------------
 CvWorldInfo::CvWorldInfo() :
-m_iDefaultPlayers(0),
-m_iUnitNameModifier(0),
-m_iTargetNumCities(0),
-m_iNumFreeBuildingBonuses(0),
-m_iBuildingPrereqModifier(0),
-m_iMaxConscriptModifier(0),
-m_iWarWearinessModifier(0),
-m_iGridWidth(0),
-m_iGridHeight(0),
-m_iTerrainGrainChange(0),
-m_iFeatureGrainChange(0),
-m_iResearchPercent(0),
-m_iTradeProfitPercent(0),
-m_iDistanceMaintenancePercent(0),
-m_iNumCitiesMaintenancePercent(0),
-m_iColonyMaintenancePercent(0),
-m_iCorporationMaintenancePercent(0),
-m_iNumCitiesAnarchyPercent(0),
-m_iAdvancedStartPointsMod(0)
-/************************************************************************************************/
-/* Afforess					  Start		 02/27/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+ m_iDefaultPlayers(0)
+,m_iUnitNameModifier(0)
+,m_iTargetNumCities(0)
+,m_iNumFreeBuildingBonuses(0)
+,m_iBuildingPrereqModifier(0)
+,m_iMaxConscriptModifier(0)
+,m_iWarWearinessModifier(0)
+,m_iGridWidth(0)
+,m_iGridHeight(0)
+,m_iTerrainGrainChange(0)
+,m_iFeatureGrainChange(0)
+,m_iResearchPercent(0)
+,m_iTradeProfitPercent(0)
+,m_iDistanceMaintenancePercent(0)
+,m_iNumCitiesMaintenancePercent(0)
+,m_iColonyMaintenancePercent(0)
+,m_iCorporationMaintenancePercent(0)
+,m_iNumCitiesAnarchyPercent(0)
+,m_iAdvancedStartPointsMod(0)
 ,m_iCommandersLevelThresholdsPercent(0)
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 ,m_Percent()
-{
-}
+{ }
 
 //------------------------------------------------------------------------------------------------------
 //
@@ -21904,18 +21517,10 @@ int CvWorldInfo::getAdvancedStartPointsMod() const
 	return m_iAdvancedStartPointsMod;
 }
 
-/************************************************************************************************/
-/* Afforess					  Start		 02/27/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 int CvWorldInfo::getCommandersLevelThresholdsPercent() const
 {
 	return m_iCommandersLevelThresholdsPercent;
 }
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 int CvWorldInfo::getPercent(int iID) const
 {
@@ -21950,15 +21555,7 @@ bool CvWorldInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iCorporationMaintenancePercent, L"iCorporationMaintenancePercent");
 	pXML->GetOptionalChildXmlValByName(&m_iNumCitiesAnarchyPercent, L"iNumCitiesAnarchyPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iAdvancedStartPointsMod, L"iAdvancedStartPointsMod");
-/************************************************************************************************/
-/* Afforess					  Start		 02/27/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	pXML->GetOptionalChildXmlValByName(&m_iCommandersLevelThresholdsPercent, L"iCommandersLevelThresholdsPercent");
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 	if (pXML->TryMoveToXmlFirstChild(L"Percents"))
 	{
@@ -21966,7 +21563,6 @@ bool CvWorldInfo::read(CvXMLLoadUtility* pXML)
 
 		pXML->MoveToXmlParent();
 	}
-
 	return true;
 }
 
@@ -22001,18 +21597,9 @@ void CvWorldInfo::copyNonDefaults(CvWorldInfo* pClassInfo, CvXMLLoadUtility* pXM
 	if (getCorporationMaintenancePercent() == iDefault) m_iCorporationMaintenancePercent = pClassInfo->getCorporationMaintenancePercent();
 	if (getNumCitiesAnarchyPercent() == iDefault) m_iNumCitiesAnarchyPercent = pClassInfo->getNumCitiesAnarchyPercent();
 	if (getAdvancedStartPointsMod() == iDefault) m_iAdvancedStartPointsMod = pClassInfo->getAdvancedStartPointsMod();
-/************************************************************************************************/
-/* Afforess					  Start		 02/27/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	if (getCommandersLevelThresholdsPercent() == iDefault) m_iCommandersLevelThresholdsPercent = pClassInfo->getCommandersLevelThresholdsPercent();
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 	m_Percent.copyNonDefaults(&(pClassInfo->m_Percent), pXML);
-
 }
 
 void CvWorldInfo::getCheckSum(unsigned int& iSum)
@@ -22964,11 +22551,6 @@ int CvProjectInfo::getProjectsNeeded(int i) const
 	return m_piProjectsNeeded ? m_piProjectsNeeded[i] : false;
 }
 
-/************************************************************************************************/
-/* Afforess					  Start		 01/02/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 int CvProjectInfo::getWorldHappiness() const
 {
 	return m_iWorldHappiness;
@@ -23040,9 +22622,7 @@ bool CvProjectInfo::isMapCategoryType(int i)
 int CvProjectInfo::getProjectsNeededVectorSize() const						{ return m_aszProjectsNeededforPass3.size(); }
 CvString CvProjectInfo::getProjectsNeededNamesVectorElement(int i) const	{ return m_aszProjectsNeededforPass3[i]; }
 int CvProjectInfo::getProjectsNeededValuesVectorElement(int i) const		{ return m_aiProjectsNeededforPass3[i]; }
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+
 
 bool CvProjectInfo::read(CvXMLLoadUtility* pXML)
 {
@@ -23090,11 +22670,6 @@ bool CvProjectInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"CreateSound");
 	setCreateSound(szTextVal);
 
-/************************************************************************************************/
-/* Afforess					  Start		 01/02/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	pXML->GetOptionalChildXmlValByName(&m_iWorldHappiness, L"iWorldHappiness");
 	pXML->GetOptionalChildXmlValByName(&m_iGlobalHappiness, L"iGlobalHappiness");
 	pXML->GetOptionalChildXmlValByName(&m_iWorldHealth, L"iWorldHealth");
@@ -23149,9 +22724,6 @@ bool CvProjectInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"AnyonePrereqProject");
 	m_aszExtraXMLforPass3.push_back(szTextVal);
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 	return true;
 }
@@ -23223,11 +22795,6 @@ void CvProjectInfo::copyNonDefaults(CvProjectInfo* pClassInfo, CvXMLLoadUtility*
 
 	if (m_iAnyoneProjectPrereq == iTextDefault) m_iAnyoneProjectPrereq = pClassInfo->getAnyoneProjectPrereq();
 
-/************************************************************************************************/
-/* Afforess					  Start		 07/30/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	if (getWorldHappiness() == iDefault) m_iWorldHappiness = pClassInfo->getWorldHappiness();
 	if (getGlobalHappiness() == iDefault) m_iGlobalHappiness= pClassInfo->getGlobalHappiness();
 	if (getWorldHealth() == iDefault) m_iWorldHealth = pClassInfo->getWorldHealth();
@@ -23297,9 +22864,7 @@ bool CvProjectInfo::readPass3()
 
 	return true;
 }
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+
 
 void CvProjectInfo::getCheckSum(unsigned int &iSum)
 {
@@ -23855,33 +23420,20 @@ CvPropertyManipulators* CvReligionInfo::getPropertyManipulators()
 //
 //------------------------------------------------------------------------------------------------------
 CvCorporationInfo::CvCorporationInfo() :
-m_iChar(0),
-/************************************************************************************************/
-/* TGA_INDEXATION						  03/17/08								MRGENIE	  */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-m_iTGAIndex(-1),
-/************************************************************************************************/
-/* TGA_INDEXATION						  END												  */
-/************************************************************************************************/
-m_iHeadquarterChar(0),
-m_iTechPrereq(NO_TECH),
-m_iFreeUnit(NO_UNIT),
-m_iSpreadFactor(0),
-m_iSpreadCost(0),
-m_iMaintenance(0),
-m_iMissionType(NO_MISSION),
-m_iBonusProduced(NO_BONUS),
-m_paiPrereqBonuses(NULL),
-m_paiHeadquarterCommerce(NULL),
-m_paiCommerceProduced(NULL),
-m_paiYieldProduced(NULL)
-/************************************************************************************************/
-/* Afforess					  Start		 01/14/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+ m_iChar(0)
+,m_iTGAIndex(-1)
+,m_iHeadquarterChar(0)
+,m_iTechPrereq(NO_TECH)
+,m_iFreeUnit(NO_UNIT)
+,m_iSpreadFactor(0)
+,m_iSpreadCost(0)
+,m_iMaintenance(0)
+,m_iMissionType(NO_MISSION)
+,m_iBonusProduced(NO_BONUS)
+,m_paiPrereqBonuses(NULL)
+,m_paiHeadquarterCommerce(NULL)
+,m_paiCommerceProduced(NULL)
+,m_paiYieldProduced(NULL)
 ,m_iObsoleteTech(NO_TECH)
 ,m_iPrereqGameOption(NO_GAMEOPTION)
 ,m_iHealth(0)
@@ -23893,9 +23445,6 @@ m_paiYieldProduced(NULL)
 ,m_pabCompetingCorporation(NULL)
 ,m_piYieldChange(NULL)
 ,m_piCommerceChange(NULL)
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 ,m_PropertyManipulators()
 {
 	reset();
@@ -23914,19 +23463,10 @@ CvCorporationInfo::~CvCorporationInfo()
 	SAFE_DELETE_ARRAY(m_paiHeadquarterCommerce);
 	SAFE_DELETE_ARRAY(m_paiCommerceProduced);
 	SAFE_DELETE_ARRAY(m_paiYieldProduced);
-/************************************************************************************************/
-/* Afforess					  Start		 02/05/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	SAFE_DELETE_ARRAY(m_paiPrereqBuilding);
 	SAFE_DELETE_ARRAY(m_pabCompetingCorporation);
 	SAFE_DELETE_ARRAY(m_piYieldChange);
 	SAFE_DELETE_ARRAY(m_piCommerceChange);
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-
 }
 
 int CvCorporationInfo::getChar() const
@@ -24059,11 +23599,6 @@ void CvCorporationInfo::setSound(const TCHAR* szVal)
 	m_szSound =szVal;
 }
 
-/************************************************************************************************/
-/* Afforess					  Start		 01/14/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 int CvCorporationInfo::getObsoleteTech() const
 {
 	return m_iObsoleteTech;
@@ -24145,9 +23680,6 @@ int* CvCorporationInfo::getCommerceChangeArray() const
 	return m_piCommerceChange;
 }
 
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 // Arrays
 
@@ -24320,11 +23852,6 @@ bool CvCorporationInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"Sound");
 	setSound(szTextVal);
 
-/************************************************************************************************/
-/* Afforess					  Start		 01/14/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"ObsoleteTech");
 	m_iObsoleteTech = pXML->GetInfoClass(szTextVal);
 
@@ -24419,10 +23946,6 @@ bool CvCorporationInfo::read(CvXMLLoadUtility* pXML)
 	{
 		pXML->CvXMLLoadUtility::InitList(&m_piYieldChange, NUM_YIELD_TYPES);
 	}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-
 	m_PropertyManipulators.read(pXML);
 
 	return true;
@@ -24494,12 +24017,6 @@ void CvCorporationInfo::copyNonDefaults(CvCorporationInfo* pClassInfo, CvXMLLoad
 	if (getMovieSound() == cDefault) setMovieSound(pClassInfo->getMovieSound());
 	if (getSound() == cDefault) setSound(pClassInfo->getSound());
 
-/************************************************************************************************/
-/* Afforess					  Start		 02/05/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-
 	for ( int i = 0; i < pClassInfo->getPrereqBuildingVectorSize(); i++ )
 	{
 		m_aiPrereqBuildingforPass3.push_back(pClassInfo->getPrereqBuildingValuesVectorElement(i));
@@ -24539,10 +24056,6 @@ void CvCorporationInfo::copyNonDefaults(CvCorporationInfo* pClassInfo, CvXMLLoad
 			m_piCommerceChange[j] = pClassInfo->getCommerceChange(j);
 		}
 	}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-
 	m_PropertyManipulators.copyNonDefaults(pClassInfo->getPropertyManipulators(), pXML);
 }
 
@@ -24663,11 +24176,6 @@ CvTraitInfo::CvTraitInfo()
 	, m_iMaxTeamBuildingProductionModifier(0)
 	, m_iMaxPlayerBuildingProductionModifier(0)
 
-	/********************************************************************************/
-	/**		REVDCM									2/16/10				phungus420	*/
-	/**																				*/
-	/**		RevTrait Effects														*/
-	/********************************************************************************/
 	, m_iRevIdxLocal(0)
 	, m_iRevIdxNational(0)
 	, m_iRevIdxDistanceModifier(0)
@@ -24678,27 +24186,13 @@ CvTraitInfo::CvTraitInfo()
 	, m_fRevIdxBadReligionMod(0)
 	, m_bNonStateReligionCommerce(false)
 	, m_bUpgradeAnywhere(false)
-	/********************************************************************************/
-	/**		REVDCM									END								*/
-	/********************************************************************************/
 
 	, m_paiExtraYieldThreshold(NULL)
 	, m_paiTradeYieldModifier(NULL)
 	, m_paiCommerceChange(NULL)
 	, m_paiCommerceModifier(NULL)
-	/************************************************************************************************/
-	/* Afforess					  Start		 08/26/10											   */
-	/*																							  */
-	/*																							  */
-	/************************************************************************************************/
-	/*
-	,m_pabFreePromotionUnitCombat(NULL)
-	m_pabFreePromotion(NULL)
-	*/
 	, m_ppbFreePromotionUnitCombats(NULL)
-	/************************************************************************************************/
-	/* Afforess						 END															*/
-	/************************************************************************************************/
+
 	, m_PropertyManipulators()
 	//TB Traits Mods begin
 	, m_PropertyManipulatorsNull()
@@ -24899,14 +24393,12 @@ CvTraitInfo::~CvTraitInfo()
 		GC.removeDelayedResolution((int*)&(m_aCivicOptionNoUpkeepTypes[i]));
 	}
 
-//Team Project (8)
 	//for Pure Traits
 	SAFE_DELETE_ARRAY(m_paiExtraYieldThresholdFiltered);
 	SAFE_DELETE_ARRAY(m_paiTradeYieldModifierFiltered);
 	SAFE_DELETE_ARRAY(m_paiCommerceChangeFiltered);
 	SAFE_DELETE_ARRAY(m_paiCommerceModifierFiltered);
 	SAFE_DELETE_ARRAY(m_piSeaPlotYieldChangesFiltered);
-//Team Project (7)
 	SAFE_DELETE_ARRAY(m_piGoldenAgeYieldChangesFiltered);
 	SAFE_DELETE_ARRAY(m_piGoldenAgeCommerceChangesFiltered);
 	if (m_ppaiSpecialistYieldChangeFiltered != NULL)
@@ -24941,9 +24433,6 @@ CvTraitInfo::~CvTraitInfo()
 		SAFE_DELETE_ARRAY(m_ppaiImprovementYieldChangeFiltered);
 	}
 	//TB Traits end
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 }
 
 int CvTraitInfo::getHealth() const
@@ -25393,24 +24882,6 @@ int CvTraitInfo::getCommerceModifier(int i) const
 	}
 	return m_paiCommerceModifier ? m_paiCommerceModifier[i] : 0;
 }
-
-
-/************************************************************************************************/
-/* Afforess					  Start		 08/26/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-/*
-int CvTraitInfo::isFreePromotion(int i) const
-{
-	return false;//m_pabFreePromotion ? m_pabFreePromotion[i] : -1;
-}
-
-int CvTraitInfo::isFreePromotionUnitCombat(int i) const
-{
-	return false;//m_pabFreePromotionUnitCombat ? m_pabFreePromotionUnitCombat[i] : -1;
-}
-*/
 
 bool CvTraitInfo::isFreePromotionUnitCombats(int i, int j) const
 {
@@ -27728,9 +27199,6 @@ BonusModifier CvTraitInfo::getBonusHappinessChange(int iBonus)
 }
 //TB Traits Mods end
 
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 {
 	MEMORY_TRACE_FUNCTION();
@@ -27816,18 +27284,6 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 		SAFE_DELETE_ARRAY(m_paiCommerceModifier);
 	}
 
-
-
-/************************************************************************************************/
-/* Afforess					  Start		 08/26/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-/*
-	pXML->SetVariableListTagPair(&m_pabFreePromotion, L"FreePromotions", sizeof(GC.getPromotionInfo((PromotionTypes)0)), GC.getNumPromotionInfos());
-
-	pXML->SetVariableListTagPair(&m_pabFreePromotionUnitCombat, L"FreePromotionUnitCombats", GC.getNumUnitCombatInfos());
-*/
 	FAssertMsg((GC.getNumPromotionInfos() > 0) && (GC.getNumUnitCombatInfos()) > 0,"either the number of promotion infos is zero or less or the number of unit combat types is zero or less");
 	if (pXML->TryMoveToXmlFirstChild(L"FreePromotionUnitCombatTypes"))
 	{
@@ -27919,9 +27375,6 @@ bool CvTraitInfo::read(CvXMLLoadUtility* pXML)
 
 		pXML->MoveToXmlParent();
 	}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 	m_PropertyManipulators.read(pXML);
 
 	//TB Traits Mods begin
@@ -32307,23 +31760,13 @@ int CvArtInfoFeature::getRotatedConnectionMask(int connectionMask, RotationTypes
 //
 //------------------------------------------------------------------------------------------------------
 CvEmphasizeInfo::CvEmphasizeInfo() :
-m_bAvoidGrowth(false),
-m_bGreatPeople(false),
-m_piYieldModifiers(NULL),
-m_piCommerceModifiers(NULL)
-/************************************************************************************************/
-/* Afforess					  Start		 02/10/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+ m_bAvoidGrowth(false)
+,m_bGreatPeople(false)
+,m_piYieldModifiers(NULL)
+,m_piCommerceModifiers(NULL)
 ,m_bAvoidAngryCitizens(false)
 ,m_bAvoidUnhealthyCitizens(false)
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-
-{
-}
+{ }
 
 //------------------------------------------------------------------------------------------------------
 //
@@ -32348,11 +31791,6 @@ bool CvEmphasizeInfo::isGreatPeople() const
 	return m_bGreatPeople;
 }
 
-/************************************************************************************************/
-/* Afforess					  Start		 02/10/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 bool CvEmphasizeInfo::isAvoidAngryCitizens() const
 {
 	return m_bAvoidAngryCitizens;
@@ -32362,9 +31800,6 @@ bool CvEmphasizeInfo::isAvoidUnhealthyCitizens() const
 {
 	return m_bAvoidUnhealthyCitizens;
 }
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 
 // Arrays
@@ -32417,16 +31852,8 @@ bool CvEmphasizeInfo::read(CvXMLLoadUtility* pXML)
 	{
 		SAFE_DELETE_ARRAY(m_piCommerceModifiers);
 	}
-/************************************************************************************************/
-/* Afforess					  Start		 02/10/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	pXML->GetChildXmlValByName(&m_bAvoidAngryCitizens, L"bAvoidAngryCitizens");
 	pXML->GetChildXmlValByName(&m_bAvoidUnhealthyCitizens, L"bAvoidUnhealthyCitizens");
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 	return true;
 }
@@ -32462,17 +31889,8 @@ void CvEmphasizeInfo::copyNonDefaults(CvEmphasizeInfo* pClassInfo, CvXMLLoadUtil
 			m_piCommerceModifiers[i] = pClassInfo->getCommerceChange(i);
 		}
 	}
-/************************************************************************************************/
-/* Afforess					  Start		 02/10/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	if (isAvoidAngryCitizens() == false) m_bAvoidAngryCitizens = pClassInfo->isAvoidAngryCitizens();
 	if (isAvoidUnhealthyCitizens() == false) m_bAvoidUnhealthyCitizens = pClassInfo->isAvoidUnhealthyCitizens();
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-
 }
 
 //------------------------------------------------------------------------------------------------------
@@ -32728,17 +32146,8 @@ m_bNoBarbCities(false),
 m_bFirstSoundtrackFirst(false),
 m_paiCitySoundscapeSciptIds(NULL),
 m_paiSoundtracks(NULL)
-/************************************************************************************************/
-/* Afforess					  Start		 09/12/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 ,m_iInitialCityMaintenancePercent(0)
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-{
-}
+{ }
 
 CvEraInfo::~CvEraInfo()
 {
@@ -32885,18 +32294,13 @@ bool CvEraInfo::isNoBarbCities() const
 {
 	return m_bNoBarbCities;
 }
-/************************************************************************************************/
-/* Afforess					  Start		 09/12/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 int CvEraInfo::getInitialCityMaintenancePercent() const
 {
 	return m_iInitialCityMaintenancePercent;
 }
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+
+
 // Arrays
 
 int CvEraInfo::getSoundtracks(int i) const
@@ -33020,15 +32424,8 @@ void CvEraInfo::copyNonDefaults(CvEraInfo* pClassInfo, CvXMLLoadUtility* pXML)
 	if (isFirstSoundtrackFirst() == bDefault) m_bFirstSoundtrackFirst = pClassInfo->isFirstSoundtrackFirst();
 	if (getAudioUnitVictoryScript() == cDefault) m_szAudioUnitVictoryScript = pClassInfo->getAudioUnitVictoryScript();
 	if (getAudioUnitDefeatScript() == cDefault) m_szAudioUnitDefeatScript = pClassInfo->getAudioUnitDefeatScript();
-/************************************************************************************************/
-/* Afforess					  Start		 09/12/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	if (getInitialCityMaintenancePercent() == iDefault) m_iInitialCityMaintenancePercent = pClassInfo->getInitialCityMaintenancePercent();
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+
 	if ( pClassInfo->getNumSoundtracks() != 0 )
 	{
 		int iNumSoundTracks = getNumSoundtracks() + pClassInfo->getNumSoundtracks();
@@ -33825,39 +33222,20 @@ bool CvDiplomacyTextInfo::read(CvXMLLoadUtility* pXML)
 //
 
 CvEffectInfo::CvEffectInfo() :
-m_fUpdateRate(0.0f),
-m_bProjectile(false),
-m_bSticky(false),
-m_fProjectileSpeed(0.0f),
-m_fProjectileArc(0.0f)
-/************************************************************************************************/
-/* RevolutionDCM					  Start		 05/31/10						Afforess	   */
-/*																							  */
-/* Battle Effects																			   */
-/************************************************************************************************/
+ m_fUpdateRate(0.0f)
+,m_bProjectile(false)
+,m_bSticky(false)
+,m_fProjectileSpeed(0.0f)
+,m_fProjectileArc(0.0f)
 ,m_bBattleEffect(false)
-/************************************************************************************************/
-/* RevolutionDCM				 Battle Effects END											 */
-/************************************************************************************************/
-{
-}
+{ }
 
-CvEffectInfo::~CvEffectInfo()
-{
-}
+CvEffectInfo::~CvEffectInfo() {}
 
-/************************************************************************************************/
-/* RevolutionDCM					  Start		 05/31/10						Afforess	   */
-/*																							  */
-/* Battle Effects																			   */
-/************************************************************************************************/
 bool CvEffectInfo::isBattleEffect() const
 {
 	return m_bBattleEffect;
 }
-/************************************************************************************************/
-/* RevolutionDCM				 Battle Effects END											 */
-/************************************************************************************************/
 
 bool CvEffectInfo::read(CvXMLLoadUtility* pXML)
 {
@@ -33894,15 +33272,8 @@ bool CvEffectInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_fProjectileSpeed, L"fSpeed");
 	pXML->GetOptionalChildXmlValByName(&m_fProjectileArc, L"fArcValue");
 	pXML->GetOptionalChildXmlValByName(&m_bSticky, L"bSticky");
-/************************************************************************************************/
-/* RevolutionDCM					  Start		 05/31/10						Afforess	   */
-/*																							  */
-/* Battle Effects																			   */
-/************************************************************************************************/
 	pXML->GetOptionalChildXmlValByName(&m_bBattleEffect, L"bBattleEffect");
-/************************************************************************************************/
-/* RevolutionDCM				 Battle Effects END											 */
-/************************************************************************************************/
+
 	return true;
 }
 
@@ -33935,15 +33306,7 @@ void CvEffectInfo::copyNonDefaults(CvEffectInfo* pClassInfo, CvXMLLoadUtility* p
 
 	if (isSticky() == bDefault) m_bSticky = pClassInfo->isSticky();
 
-/************************************************************************************************/
-/* RevolutionDCM					  Start		 05/31/10						Afforess	   */
-/*																							  */
-/* Battle Effects																			   */
-/************************************************************************************************/
 	if (isBattleEffect() == bDefault) m_bBattleEffect = pClassInfo->isBattleEffect();
-/************************************************************************************************/
-/* RevolutionDCM				 Battle Effects END											 */
-/************************************************************************************************/
 }
 
 
@@ -36625,11 +35988,6 @@ const wchar* CvEventInfo::getOtherPlayerPopup() const
 	return m_szOtherPlayerPopup;
 }
 
-/************************************************************************************************/
-/* Afforess					  Start		 01/20/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 int CvEventInfo::getPrereqGameOption() const
 {
 	return m_iPrereqGameOption;
@@ -36651,9 +36009,6 @@ int CvEventInfo::getClearEventChanceVectorSize() const						{ return m_aszClearE
 CvString CvEventInfo::getClearEventChanceNamesVectorElement(int i) const	{ return m_aszClearEventChanceforPass3[i]; }
 int CvEventInfo::getClearEventChanceValuesVectorElement(int i) const		{ return m_aiClearEventChanceforPass3[i]; }
 
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 void CvEventInfo::getCheckSum(unsigned int& iSum)
 {
@@ -37116,12 +36471,6 @@ bool CvEventInfo::read(CvXMLLoadUtility* pXML)
 
 		pXML->MoveToXmlParent();
 	}
-
-/************************************************************************************************/
-/* Afforess					  Start		 01/20/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PrereqGameOption");
 	m_iPrereqGameOption = pXML->GetInfoClass(szTextVal);
 
@@ -37210,17 +36559,11 @@ bool CvEventInfo::read(CvXMLLoadUtility* pXML)
 						break;
 					}
 				}
-
 				pXML->MoveToXmlParent();
 			}
 		}
-
 		pXML->MoveToXmlParent();
 	}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-
 	return true;
 }
 
@@ -37504,11 +36847,6 @@ void CvEventInfo::copyNonDefaults(CvEventInfo* pClassInfo, CvXMLLoadUtility* pXM
 		}
 	}
 
-/************************************************************************************************/
-/* Afforess					  Start		 01/20/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	if (getPrereqGameOption() == iTextDefault) m_iPrereqGameOption = pClassInfo->getPrereqGameOption();
 	if (getRevolutionIndexChange() == iDefault) m_iRevolutionIndexChange = pClassInfo->getRevolutionIndexChange();
 
@@ -37527,16 +36865,9 @@ void CvEventInfo::copyNonDefaults(CvEventInfo* pClassInfo, CvXMLLoadUtility* pXM
 		m_aiClearEventChanceforPass3.push_back(pClassInfo->getClearEventChanceValuesVectorElement(i));
 		m_aszClearEventChanceforPass3.push_back(pClassInfo->getClearEventChanceNamesVectorElement(i));
 	}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 }
 
-/************************************************************************************************/
-/* Afforess					  Start		 07/30/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 bool CvEventInfo::readPass3()
 {
 	m_piAdditionalEventChance = new int[GC.getNumEventInfos()];
@@ -37586,9 +36917,6 @@ bool CvEventInfo::readPass3()
 	}
 	return true;
 }
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 
 //======================================================================================================
@@ -37603,11 +36931,6 @@ bool CvEventInfo::readPass3()
 //
 //------------------------------------------------------------------------------------------------------
 CvEspionageMissionInfo::CvEspionageMissionInfo() :
-/************************************************************************************************/
-/* Afforess					  Start		 01/31/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 m_bNuke(false),
 m_bRevolt(false),
 m_bDisablePower(false),
@@ -37616,9 +36939,6 @@ m_iPrereqGameOption(NO_GAMEOPTION),
 m_iSabatogeResearchCostFactor(0),
 m_iRemoveReligionsCostFactor(0),
 m_iRemoveCorporationsCostFactor(0),
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 m_iCost(0),
 m_bIsPassive(false),
 m_bIsTwoPhases(false),
@@ -37819,11 +37139,6 @@ int CvEspionageMissionInfo::getDifficultyMod() const
 	return m_iDifficultyMod;
 }
 
-/************************************************************************************************/
-/* Afforess					  Start		 01/31/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 bool CvEspionageMissionInfo::isNuke() const
 {
 	return m_bNuke;
@@ -37863,9 +37178,6 @@ int CvEspionageMissionInfo::getRemoveCorporationsCostFactor() const
 {
 	return m_iRemoveCorporationsCostFactor;
 }
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 bool CvEspionageMissionInfo::read(CvXMLLoadUtility* pXML)
 {
@@ -37912,11 +37224,6 @@ bool CvEspionageMissionInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iCounterespionageNumTurns, L"iCounterespionageNumTurns");
 	pXML->GetOptionalChildXmlValByName(&m_iCounterespionageMod, L"iCounterespionageMod");
 	pXML->GetOptionalChildXmlValByName(&m_iDifficultyMod, L"iDifficultyMod");
-/************************************************************************************************/
-/* Afforess					  Start		 01/31/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	pXML->GetOptionalChildXmlValByName(&m_bNuke, L"bNuke");
 	pXML->GetOptionalChildXmlValByName(&m_bRevolt, L"bRevolt");
 	pXML->GetOptionalChildXmlValByName(&m_bDisablePower, L"bDisablePower");
@@ -37927,9 +37234,6 @@ bool CvEspionageMissionInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PrereqGameOption");
 	m_iPrereqGameOption = pXML->GetInfoClass(szTextVal);
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 	return true;
 }
@@ -37980,11 +37284,6 @@ void CvEspionageMissionInfo::copyNonDefaults(CvEspionageMissionInfo* pClassInfo,
 	if (getCounterespionageNumTurns() == iDefault) m_iCounterespionageNumTurns = pClassInfo->getCounterespionageNumTurns();
 	if (getCounterespionageMod() == iDefault) m_iCounterespionageMod = pClassInfo->getCounterespionageMod();
 	if (getDifficultyMod() == iDefault) m_iDifficultyMod = pClassInfo->getDifficultyMod();
-/************************************************************************************************/
-/* Afforess					  Start		 01/31/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	if (isNuke() == bDefault) m_bNuke = pClassInfo->isNuke();
 	if (isRevolt() == bDefault) m_bRevolt = pClassInfo->isRevolt();
 	if (isDisablePower() == bDefault) m_bDisablePower = pClassInfo->isDisablePower();
@@ -37993,9 +37292,6 @@ void CvEspionageMissionInfo::copyNonDefaults(CvEspionageMissionInfo* pClassInfo,
 	if (getSabatogeResearchCostFactor() == iDefault) m_iSabatogeResearchCostFactor = pClassInfo->getSabatogeResearchCostFactor();
 	if (getRemoveReligionsCostFactor() == iDefault) m_iRemoveReligionsCostFactor = pClassInfo->getRemoveReligionsCostFactor();
 	if (getRemoveCorporationsCostFactor() == iDefault) m_iRemoveCorporationsCostFactor = pClassInfo->getRemoveCorporationsCostFactor();
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 }
 
 void CvEspionageMissionInfo::getCheckSum(unsigned int &iSum)
@@ -38172,11 +37468,7 @@ void CvUnitArtStyleTypeInfo::setMiddleArtDefineTag(int /*Mesh Index*/ i, int /*U
 	m_azMiddleArtDefineTags.push_back(kTag);
 }
 
-/************************************************************************************************/
-/* Afforess					  Start		 03/10/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 const TCHAR* CvUnitArtStyleTypeInfo::getClassicalArtDefineTag(int /*Mesh Index*/ i, int /*UnitType*/ j) const
 {
 	FAssertMsg(i < GC.getUnitInfo((UnitTypes) j).getGroupDefinitions(), "Index out of bounds");
@@ -38340,9 +37632,6 @@ void CvUnitArtStyleTypeInfo::setFutureArtDefineTag(int /*Mesh Index*/ i, int /*U
 	kTag.szTag = szVal;
 	m_azFutureArtDefineTags.push_back(kTag);
 }
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 
 bool CvUnitArtStyleTypeInfo::read(CvXMLLoadUtility* pXML)
@@ -38378,14 +37667,9 @@ bool CvUnitArtStyleTypeInfo::read(CvXMLLoadUtility* pXML)
 
 						if (pXML->TryMoveToXmlFirstChild(L"UnitMeshGroup"))
 						{
+							// Overwrite with the Style Art
 							for (j = 0; j < iMesh; j++)
 							{
-							// Overwrite with the Style Art
-/************************************************************************************************/
-/* Afforess					  Start		 03/10/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 								if (pXML->GetOptionalChildXmlValByName(szTextVal, L"EarlyArtDefineTag"))
 									szTextVal = GC.hasInfoTypeForString(szTextVal) ? szTextVal : "";
 								setEarlyArtDefineTag(j, iIndex, szTextVal);
@@ -38407,9 +37691,7 @@ bool CvUnitArtStyleTypeInfo::read(CvXMLLoadUtility* pXML)
 								if (pXML->GetOptionalChildXmlValByName(szTextVal, L"FutureArtDefineTag"))
 									szTextVal = GC.hasInfoTypeForString(szTextVal) ? szTextVal : "";
 								setFutureArtDefineTag(j, iIndex, szTextVal);
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
+
 								if (!pXML->TryMoveToXmlNextSibling())
 								{
 									break;
@@ -38479,11 +37761,6 @@ void CvUnitArtStyleTypeInfo::copyNonDefaults(CvUnitArtStyleTypeInfo* pClassInfo,
 				}
 			}
 
-/************************************************************************************************/
-/* Afforess					  Start		 03/10/10											   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 			if ( getClassicalArtDefineTag(iUnitMesh, iUnitIndex) == NULL )
 			{
 				if ( pClassInfo->getClassicalArtDefineTag(iUnitMesh, iUnitIndex) != NULL )
@@ -38512,10 +37789,6 @@ void CvUnitArtStyleTypeInfo::copyNonDefaults(CvUnitArtStyleTypeInfo* pClassInfo,
 					setFutureArtDefineTag(iUnitMesh, iUnitIndex, pClassInfo->getFutureArtDefineTag(iUnitMesh, iUnitIndex));
 				}
 			}
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-
 		}
 	}
 }

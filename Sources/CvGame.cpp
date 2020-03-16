@@ -6,15 +6,7 @@
 #include "CvReplayMessage.h"
 #include "CvReplayInfo.h"
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      10/02/09                                jdog5000      */
-/*                                                                                              */
-/* AI logging                                                                                   */
-/************************************************************************************************/
 #include "BetterBTSAI.h"
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
 //	Koshling - save game compatibility between (most) builds
 //	UI flag values in game serialization.  These are bitwise combinable
@@ -53,23 +45,12 @@ CvGame::CvGame()
 	m_pabSpecialUnitValid = NULL;
 	m_pabSpecialBuildingValid = NULL;
 	m_abReligionSlotTaken = NULL;
-/************************************************************************************************/
-/* RevDCM	                  Start		 4/29/10                                                */
-/*                                                                                              */
-/* OC_LIMITED_RELIGIONS                                                                         */
-/************************************************************************************************/
+
 	m_abTechCanFoundReligion = NULL;
-/************************************************************************************************/
-/* LIMITED_RELIGIONS               END                                                          */
-/************************************************************************************************/
 
 	m_paHolyCity = NULL;
 	m_paHeadquarters = NULL;
-/************************************************************************************************/
-/* Afforess                                     12/7/09                                         */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
 	  starshipLaunched[iI] = false;
@@ -79,9 +60,6 @@ CvGame::CvGame()
 	m_abPreviousRequest = new bool[MAX_PLAYERS];
 	m_aiModderGameOption = new int[NUM_MODDERGAMEOPTION_TYPES];
 	m_aiFlexibleDifficultyTimer = new int[MAX_PLAYERS];
-/************************************************************************************************/
-/* Afforess	                         END                                                        */
-/************************************************************************************************/
 
 	m_pReplayInfo = NULL;
 
@@ -8318,15 +8296,9 @@ void CvGame::testAlive()
 		GET_PLAYER((PlayerTypes)iI).verifyAlive();
 	}
 }
-/************************************************************************************************/
-/* Afforess                                     12/7/09                                         */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-bool CvGame::testVictory(VictoryTypes eVictory, TeamTypes eTeam, bool* pbEndScore)// removed const
-/************************************************************************************************/
-/* Afforess	                         END                                                        */
-/************************************************************************************************/
+
+
+bool CvGame::testVictory(VictoryTypes eVictory, TeamTypes eTeam, bool* pbEndScore)
 {
 	PROFILE_FUNC();
 
@@ -8334,265 +8306,163 @@ bool CvGame::testVictory(VictoryTypes eVictory, TeamTypes eTeam, bool* pbEndScor
 	FAssert(eTeam >=0 && eTeam < MAX_PC_TEAMS);
 	FAssert(GET_TEAM(eTeam).isAlive());
 
-	bool bValid = isVictoryValid(eVictory);
 	if (pbEndScore)
 	{
 		*pbEndScore = false;
 	}
-
-	if (bValid)
+	if (!isVictoryValid(eVictory))
 	{
-		if (GC.getVictoryInfo(eVictory).isEndScore())
-		{
-			if (pbEndScore)
-			{
-				*pbEndScore = true;
-			}
-
-			if (getMaxTurns() == 0)
-			{
-				bValid = false;
-			}
-			else if (getElapsedGameTurns() < getMaxTurns())
-			{
-				bValid = false;
-			}
-			else
-			{
-				bool bFound = false;
-
-				for (int iK = 0; iK < MAX_PC_TEAMS; iK++)
-				{
-					if (GET_TEAM((TeamTypes)iK).isAlive())
-					{
-						if (iK != eTeam)
-						{
-							if (getTeamScore((TeamTypes)iK) >= getTeamScore(eTeam))
-							{
-								bFound = true;
-								break;
-							}
-						}
-					}
-				}
-
-				if (bFound)
-				{
-					bValid = false;
-				}
-			}
-		}
+		return false;
 	}
-
-	if (bValid)
+	bool bValid = true;
+	// Time Victory
+	if (bValid && GC.getVictoryInfo(eVictory).isEndScore())
 	{
-		if (GC.getVictoryInfo(eVictory).isTargetScore())
+		if (pbEndScore)
 		{
-			if (getTargetScore() == 0)
-			{
-				bValid = false;
-			}
-			else if (getTeamScore(eTeam) < getTargetScore())
-			{
-				bValid = false;
-			}
-			else
-			{
-				bool bFound = false;
-
-				for (int iK = 0; iK < MAX_PC_TEAMS; iK++)
-				{
-					if (GET_TEAM((TeamTypes)iK).isAlive())
-					{
-						if (iK != eTeam)
-						{
-							if (getTeamScore((TeamTypes)iK) >= getTeamScore(eTeam))
-							{
-								bFound = true;
-								break;
-							}
-						}
-					}
-				}
-
-				if (bFound)
-				{
-					bValid = false;
-				}
-			}
+			*pbEndScore = true;
 		}
-	}
 
-	if (bValid)
-	{
-		if (GC.getVictoryInfo(eVictory).isConquest())
+		if (getMaxTurns() == 0)
 		{
-			if (GET_TEAM(eTeam).getNumCities() == 0)
-			{
-				bValid = false;
-			}
-			else
-			{
-				bool bFound = false;
-
-				for (int iK = 0; iK < MAX_PC_TEAMS; iK++)
-				{
-					if (GET_TEAM((TeamTypes)iK).isAlive())
-					{
-						if (iK != eTeam && !GET_TEAM((TeamTypes)iK).isVassal(eTeam))
-						{
-							if (GET_TEAM((TeamTypes)iK).getNumCities() > 0)
-							{
-								bFound = true;
-								break;
-							}
-						}
-					}
-				}
-
-				if (bFound)
-				{
-					bValid = false;
-				}
-			}
+			bValid = false;
 		}
-	}
-
-	if (bValid)
-	{
-		if (GC.getVictoryInfo(eVictory).isDiploVote())
+		else if (getElapsedGameTurns() < getMaxTurns())
 		{
-			bool bFound = false;
-
-			for (int iK = 0; iK < GC.getNumVoteInfos(); iK++)
-			{
-				if (GC.getVoteInfo((VoteTypes)iK).isVictory())
-				{
-					if (getVoteOutcome((VoteTypes)iK) == eTeam)
-					{
-						bFound = true;
-						break;
-					}
-				}
-			}
-
-			if (!bFound)
-			{
-				bValid = false;
-			}
+			bValid = false;
 		}
-	}
-
-	if (bValid)
-	{
-		if (getAdjustedPopulationPercent(eVictory) > 0)
+		else
 		{
-			if (100 * GET_TEAM(eTeam).getTotalPopulation() < getTotalPopulation() * getAdjustedPopulationPercent(eVictory))
-			{
-				bValid = false;
-			}
-		}
-	}
-
-	if (bValid)
-	{
-		if (getAdjustedLandPercent(eVictory) > 0)
-		{
-			if (100 * GET_TEAM(eTeam).getTotalLand() < GC.getMap().getLandPlots() * getAdjustedLandPercent(eVictory))
-			{
-				bValid = false;
-			}
-		}
-	}
-
-	if (bValid)
-	{
-		if (GC.getVictoryInfo(eVictory).getReligionPercent() > 0)
-		{
-			bool bFound = false;
-
-			if (getNumCivCities() > (countCivPlayersAlive() * 2))
-			{
-				for (int iK = 0; iK < GC.getNumReligionInfos(); iK++)
-				{
-					if (GET_TEAM(eTeam).hasHolyCity((ReligionTypes)iK)
-						&& calculateReligionPercent((ReligionTypes)iK) >= GC.getVictoryInfo(eVictory).getReligionPercent())
-					{
-						bFound = true;
-						break;
-					}
-				}
-			}
-
-			if (!bFound)
-			{
-				bValid = false;
-			}
-		}
-	}
-
-	if (bValid)
-	{
-		if ((GC.getVictoryInfo(eVictory).getCityCulture() != NO_CULTURELEVEL) && (GC.getVictoryInfo(eVictory).getNumCultureCities() > 0))
-		{
-			int iCount = 0;
-
-			for (int iK = 0; iK < MAX_PC_PLAYERS; iK++)
-			{
-				if (GET_PLAYER((PlayerTypes)iK).isAlive())
-				{
-					if (GET_PLAYER((PlayerTypes)iK).getTeam() == eTeam)
-					{
-						int iLoop;
-						for (CvCity* pLoopCity = GET_PLAYER((PlayerTypes)iK).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iK).nextCity(&iLoop))
-						{
-							if (pLoopCity->getCultureLevel() >= GC.getVictoryInfo(eVictory).getCityCulture())
-							{
-								iCount++;
-							}
-						}
-					}
-				}
-			}
-
-			if (iCount < GC.getVictoryInfo(eVictory).getNumCultureCities())
-			{
-				bValid = false;
-			}
-		}
-	}
-
-	if (bValid)
-	{
-		if (GC.getVictoryInfo(eVictory).getTotalCultureRatio() > 0)
-		{
-			unsigned long long iThreshold;
-			iThreshold = ((GET_TEAM(eTeam).countTotalCulture() * 100) / GC.getVictoryInfo(eVictory).getTotalCultureRatio());
-
-			bool bFound = false;
-
 			for (int iK = 0; iK < MAX_PC_TEAMS; iK++)
 			{
-				if (GET_TEAM((TeamTypes)iK).isAlive())
+				if (iK != eTeam && GET_TEAM((TeamTypes)iK).isAlive() && getTeamScore((TeamTypes)iK) >= getTeamScore(eTeam))
 				{
-					if (iK != eTeam)
-					{
-						if (GET_TEAM((TeamTypes)iK).countTotalCulture() > iThreshold)
-						{
-							bFound = true;
-							break;
-						}
-					}
+					bValid = false;
+					break;
 				}
-			}
-
-			if (bFound)
-			{
-				bValid = false;
 			}
 		}
 	}
+	// Score Victory
+	if (bValid && GC.getVictoryInfo(eVictory).isTargetScore())
+	{
+		if (getTargetScore() == 0)
+		{
+			bValid = false;
+		}
+		else if (getTeamScore(eTeam) < getTargetScore())
+		{
+			bValid = false;
+		}
+		else
+		{
+			for (int iK = 0; iK < MAX_PC_TEAMS; iK++)
+			{
+				if (iK != eTeam && GET_TEAM((TeamTypes)iK).isAlive() && getTeamScore((TeamTypes)iK) >= getTeamScore(eTeam))
+				{
+					bValid = false;
+					break;
+				}
+			}
+		}
+	}
+	// Conquest Victory
+	if (bValid && GC.getVictoryInfo(eVictory).isConquest())
+	{
+		if (GET_TEAM(eTeam).getNumCities() == 0)
+		{
+			bValid = false;
+		}
+		else
+		{
+			for (int iK = 0; iK < MAX_PC_TEAMS; iK++)
+			{
+				if (iK != eTeam && GET_TEAM((TeamTypes)iK).isAlive() && !GET_TEAM((TeamTypes)iK).isVassal(eTeam)
+				&& GET_TEAM((TeamTypes)iK).getNumCities() > 0)
+				{
+					bValid = false;
+					break;
+				}
+			}
+		}
+	}
+	// Diplomatic Victory
+	if (bValid && GC.getVictoryInfo(eVictory).isDiploVote())
+	{
+		bValid = false;
+		for (int iK = 0; iK < GC.getNumVoteInfos(); iK++)
+		{
+			if (GC.getVoteInfo((VoteTypes)iK).isVictory() && getVoteOutcome((VoteTypes)iK) == eTeam)
+			{
+				bValid = true;
+				break;
+			}
+		}
+	}
+	// Domination Victory
+	if (bValid && getAdjustedPopulationPercent(eVictory) > 0 && 100 * GET_TEAM(eTeam).getTotalPopulation() < getTotalPopulation() * getAdjustedPopulationPercent(eVictory))
+	{
+		bValid = false;
+	}
+	if (bValid && getAdjustedLandPercent(eVictory) > 0 && 100 * GET_TEAM(eTeam).getTotalLand() < GC.getMap().getLandPlots() * getAdjustedLandPercent(eVictory))
+	{
+		bValid = false;
+	}
+	// Religious Victory
+	if (bValid && GC.getVictoryInfo(eVictory).getReligionPercent() > 0)
+	{
+		bValid = false;
+		if (getNumCivCities() > (countCivPlayersAlive() * 2))
+		{
+			for (int iK = 0; iK < GC.getNumReligionInfos(); iK++)
+			{
+				if (GET_TEAM(eTeam).hasHolyCity((ReligionTypes)iK)
+				&& calculateReligionPercent((ReligionTypes)iK) >= GC.getVictoryInfo(eVictory).getReligionPercent())
+				{
+					bValid = true;
+					break;
+				}
+			}
+		}
+	}
+	// Cultural Victory
+	if (bValid && GC.getVictoryInfo(eVictory).getCityCulture() != NO_CULTURELEVEL && GC.getVictoryInfo(eVictory).getNumCultureCities() > 0)
+	{
+		int iCount = 0;
+		for (int iK = 0; iK < MAX_PC_PLAYERS; iK++)
+		{
+			if (GET_PLAYER((PlayerTypes)iK).isAlive() && GET_PLAYER((PlayerTypes)iK).getTeam() == eTeam)
+			{
+				int iLoop;
+				for (CvCity* pLoopCity = GET_PLAYER((PlayerTypes)iK).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iK).nextCity(&iLoop))
+				{
+					if (pLoopCity->getCultureLevel() >= GC.getVictoryInfo(eVictory).getCityCulture())
+					{
+						iCount++;
+					}
+				}
+			}
+		}
+		if (iCount < GC.getVictoryInfo(eVictory).getNumCultureCities())
+		{
+			bValid = false;
+		}
+	}
+	// Not in use...
+	if (bValid && GC.getVictoryInfo(eVictory).getTotalCultureRatio() > 0)
+	{
+		const unsigned long long iThreshold = GET_TEAM(eTeam).countTotalCulture() * 100 / GC.getVictoryInfo(eVictory).getTotalCultureRatio();
 
+		for (int iK = 0; iK < MAX_PC_TEAMS; iK++)
+		{
+			if (iK != eTeam && GET_TEAM((TeamTypes)iK).isAlive() && GET_TEAM((TeamTypes)iK).countTotalCulture() > iThreshold)
+			{
+				bValid = false;
+				break;
+			}
+		}
+	}
+	// Scientific Victory
 	if (bValid)
 	{
 		for (int iK = 0; iK < GC.getNumBuildingInfos(); iK++)
@@ -8604,8 +8474,8 @@ bool CvGame::testVictory(VictoryTypes eVictory, TeamTypes eTeam, bool* pbEndScor
 			}
 		}
 	}
-
-	if (bValid)
+	// Space Race Victory
+	if (bValid && !starshipLaunched[eTeam])
 	{
 		for (int iK = 0; iK < GC.getNumProjectInfos(); iK++)
 		{
@@ -8615,42 +8485,11 @@ bool CvGame::testVictory(VictoryTypes eVictory, TeamTypes eTeam, bool* pbEndScor
 				break;
 			}
 		}
-	}
-
-	if (bValid)
-	{
-/************************************************************************************************/
-/* Afforess	                  Start		 12/26/09                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-		if(GC.getUSE_IS_VICTORY_CALLBACK())
+		if (bValid)
 		{
-			if (!Cy::call<bool>(PYGameModule, "isVictory", Cy::Args() << eVictory))
-			{
-				bValid = false;
-			}
+			starshipLaunched[eTeam] = true;
 		}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-
-/************************************************************************************************/
-/* Afforess                                     12/7/09                                         */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-//Sevo Begin--VCM
-		else
-		{
-			starshipLaunched[eTeam] = true;	
-		}
-//Sevo End VCM
-/************************************************************************************************/
-/* Afforess	                         END                                                        */
-/************************************************************************************************/
 	}
-
 	return bValid;
 }
 
@@ -8908,7 +8747,6 @@ void CvGame::processVote(const VoteTriggeredData& kData, int iChange)
 	{
 		changeForceCivicCount((CivicTypes)iI, kVote.isForceCivic(iI) ? iChange : 0);
 	}
-
 
 	if (iChange > 0)
 	{
