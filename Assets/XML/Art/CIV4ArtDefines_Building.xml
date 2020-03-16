@@ -378,7 +378,7 @@
 			<Button>Art/Interface/Buttons/National_Wonders/triumph_column.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_OBELISK</Type>
+			<Type>ART_DEF_BUILDING_MONUMENT</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1.25</fScale>
@@ -388,7 +388,7 @@
 			<Button>,Art/Interface/Buttons/Buildings/Obelisk.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,6,4</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_EGYPTIAN_OBELISK</Type>
+			<Type>ART_DEF_BUILDING_OBELISK</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1.25</fScale>
@@ -1238,7 +1238,7 @@
 			<Button>Art/Interface/Buttons/National_Wonders/scotland_yard.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PYRAMID</Type>
+			<Type>ART_DEF_BUILDING_GREAT_PYRAMID</Type>
 			<LSystem>LSYSTEM_4x4</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>3.03</fScale>
@@ -2298,7 +2298,7 @@
 			<Button>,Art/Interface/Buttons/Buildings/Harems.dds,Art/Interface/Buttons/RoM_Building_Atlas.dds,4,4</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_JEWELLERY</Type>
+			<Type>ART_DEF_BUILDING_JEWELER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -2568,7 +2568,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Religions/Kemetism/temple_of_isis.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_IROQUOIS_LONGHOUSE</Type>
+			<Type>ART_DEF_BUILDING_LONGHOUSE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -3749,7 +3749,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Control_Tower.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NWS</Type>
+			<Type>ART_DEF_BUILDING_NATIONAL_WEATHER_SERVICE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -8250,7 +8250,7 @@
 			<Button>Art/Interface/Buttons/Buildings/jetstreampowerplant.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_LAVA_ROCK_QUARRY</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_LAVA_ROCK</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -9640,7 +9640,7 @@
 			<Button>Art/Interface/Buttons/Buildings/earthwormfetcher.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SNAIL</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_SNAIL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -9940,7 +9940,7 @@
 			<Button>Art/Interface/Buttons/Buildings/weavingspider.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_LICHEN_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_LICHEN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -11450,7 +11450,7 @@
 			<Button>art/Craft/art/bambooarmourer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ROOT_TUBERS</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_TUBER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -11740,7 +11740,7 @@
 			<Button>art/Craft/Art/shipwright.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_WILD_MUSHROOMS</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_MUSHROOM</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -12080,7 +12080,7 @@
 			<Button>Art/Interface/Buttons/National_Wonders/captured_fire.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_STICK_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_STICK</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -12090,7 +12090,7 @@
 			<Button>art/Craft/Art/stickgatherer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ROCK_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_ROCK</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -12900,7 +12900,7 @@
 			<Button>art/Craft/Art/aluminumsmith.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_VINE_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_VINE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -12910,7 +12910,7 @@
 			<Button>art/Craft/Art/vinegatherer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_REED_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_REED</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -12920,7 +12920,7 @@
 			<Button>art/Craft/Art/reedgatherer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GRASS_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_GRASS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -12930,7 +12930,7 @@
 			<Button>art/Craft/Art/grassgatherer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_STRAW_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_STRAW</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -12940,7 +12940,7 @@
 			<Button>art/Craft/Art/strawgatherer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DRIFTWOOD_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_DRIFTWOOD</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -16210,7 +16210,7 @@
 			<Button>art/Crops/Art/brazilwoodgrove.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_WHEAT_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_WHEAT</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -16230,7 +16230,7 @@
 			<Button>art/Crops/Art/barleygatherer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_RICE_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_RICE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -16240,7 +16240,7 @@
 			<Button>art/Crops/Art/ricegatherer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CORN_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_CORN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -16250,7 +16250,7 @@
 			<Button>art/Crops/Art/corngatherer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_INDIGO_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_INDIGO</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -16260,7 +16260,7 @@
 			<Button>art/Crops/Art/indigogatherer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HENNA_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_HENNA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -19674,7 +19674,7 @@
 			<Button>art/Farming/Art/familyfarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SEED_CAMP</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_GRAIN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -19784,7 +19784,7 @@
 			<Button>art/Firestorm/Buttons/Fire_Dock.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NFS</Type>
+			<Type>ART_DEF_BUILDING_NATIONAL_FIRE_SERVICE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -22354,7 +22354,7 @@
 			<Button>art/Minerals/Art/platinummine.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_JADE_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_JADE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -23874,7 +23874,7 @@
 			<Button>art/Science/art/chemistrylab.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NSF</Type>
+			<Type>ART_DEF_BUILDING_NATIONAL_SCIENCE_FOUNDATION</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>

@@ -13479,7 +13479,7 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_PYRAMID</BuildingType>
+					<BuildingType>BUILDING_GREAT_PYRAMID</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -13928,7 +13928,7 @@
 			<ObsoleteTech>TECH_ACCELERATED_GERMINATION</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DRIFTWOOD_GATHERER</Type>
+			<Type>BUILDING_GATHERER_DRIFTWOOD</Type>
 			<ObsoleteTech>TECH_TRADE</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -13986,7 +13986,7 @@
 			<ObsoleteTech>TECH_ASTROENGINEERING</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GRASS_GATHERER</Type>
+			<Type>BUILDING_GATHERER_GRASS</Type>
 			<ObsoleteTech>TECH_GAIA_ECOLOGY</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -16367,7 +16367,7 @@
 			</ReplaceBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_REED_GATHERER</Type>
+			<Type>BUILDING_GATHERER_REED</Type>
 			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -16387,7 +16387,7 @@
 			</ReplaceBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_STRAW_GATHERER</Type>
+			<Type>BUILDING_GATHERER_STRAW</Type>
 			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -16407,7 +16407,7 @@
 			</ReplaceBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_VINE_GATHERER</Type>
+			<Type>BUILDING_GATHERER_VINE</Type>
 			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -18386,7 +18386,7 @@
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SNAIL</Type>
+			<Type>BUILDING_GATHERER_SNAIL</Type>
 			<ObsoleteTech>TECH_AGRICHEMICALS</ObsoleteTech>
 		</BuildingInfo>
 		<BuildingInfo>

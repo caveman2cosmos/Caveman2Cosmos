@@ -2037,22 +2037,22 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_COD_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Cod, Sea and Fish Myth, Fish Pens, Coastal Fish Pens, Marine Institute</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire [COLOR_REVERT] Mythe, Histoire(s) de la morue, Mythe de poissons, Filets de pêche, et Institut maritime</French>
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire [COLOR_REVERT] Mythe, Histoire(s) de la morue, Mythe de poissons, Filets de pêche, et Institut maritime</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MACKEREL_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Mackerel, Sea and Fish Myth, Fish Pens, Coastal Fish Pens, Marine Institute</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire [COLOR_REVERT] Mythe, Histoire(s) de Maquereaux, Mythe de le Mer et des Poissons, Filets de pêche, et Institut maritime</French>
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire [COLOR_REVERT] Mythe, Histoire(s) de Maquereaux, Mythe de le Mer et des Poissons, Filets de pêche, et Institut maritime</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MARLIN_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Marlin, Sea and Fish Myth, Fish Pens, Coastal Fish Pens, Marine Institute</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire [COLOR_REVERT] Mythes et Histoire(s) du Marlin, Mythes de la Mer et des Poissons, Filets, Institut de Marine</French>
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire [COLOR_REVERT] Mythes et Histoire(s) du Marlin, Mythes de la Mer et des Poissons, Filets, Institut de Marine</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_RAY_EAGLE_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Eagle Ray, Sea and Fish Myth, Fish Pens, Coastal Fish Pens, Marine Institute</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire [COLOR_REVERT] Mythe, Histoire(s) de l'aigle de mer, Mythes de le Mer et des Poissons, Filets de pêche, et Institut maritime</French>
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire [COLOR_REVERT] Mythe, Histoire(s) de l'aigle de mer, Mythes de le Mer et des Poissons, Filets de pêche, et Institut maritime</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TUNA_PEDIA</Tag>

@@ -7,6 +7,7 @@
 			<Type>TECH_CANAANISM</Type>
 			<Description>TXT_KEY_TECH_CANAANISM</Description>
 			<Civilopedia>TXT_KEY_TECH_CANAANISM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_TECH_CANAANISM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<iCost>309</iCost>
 			<bGlobal>1</bGlobal>

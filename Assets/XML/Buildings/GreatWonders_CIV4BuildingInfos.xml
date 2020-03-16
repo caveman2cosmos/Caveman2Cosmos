@@ -801,6 +801,12 @@
 			<iGlobalPopulationChange>-30</iGlobalPopulationChange>
 			<!-- Unique effects -->
 			<VictoryPrereq>VICTORY_SCIENTIFIC</VictoryPrereq>
+			<VictoryThresholds>
+				<VictoryThreshold>
+					<VictoryType>VICTORY_SCIENTIFIC</VictoryType>
+					<iThreshold>1</iThreshold>
+				</VictoryThreshold>
+			</VictoryThresholds>
 			<bGoldenAge>1</bGoldenAge>
 			<!-- Misc -->
 			<iAsset>100</iAsset>
@@ -10568,7 +10574,7 @@
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Global -->
-			<FreeBuilding>BUILDING_OBELISK</FreeBuilding>
+			<FreeBuilding>BUILDING_MONUMENT</FreeBuilding>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<Flavors>
@@ -12578,17 +12584,17 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- The Pyramids -->
-			<Type>BUILDING_PYRAMID</Type>
+			<Type>BUILDING_GREAT_PYRAMID</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_PYRAMID</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PYRAMID_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_PYRAMID_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_GREAT_PYRAMID</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GREAT_PYRAMID_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GREAT_PYRAMID_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_VALLEY_KINGS_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PYRAMID</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GREAT_PYRAMID</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_PYRAMIDS</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_PYRAMID</ConstructSound>
 			<fVisibilityPriority>100</fVisibilityPriority>
@@ -20638,7 +20644,7 @@
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_NHL</BuildingType>
+				<BuildingType>BUILDING_NATIONAL_SPORTS_LEAGUE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
