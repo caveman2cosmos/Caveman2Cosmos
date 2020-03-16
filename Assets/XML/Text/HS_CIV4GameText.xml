@@ -61,7 +61,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WV_HUMAN_SACRIFICE_HELP</Tag>
 		<English>[ICON_BULLET]Allows you to sacrifice human and Neanderthal captives for culture or happiness.</English>
-		<French>vous permet de sacrifier les hommes et néanderthaliens pour de la culture ou du bonheur.</French>
+		<French>[ICON_BULLET]Vous permet de sacrifier les hommes et néanderthaliens pour de la culture ou du bonheur.</French>
 		<Italian>Ti permette di sacrificare i prigionieri umani e Neanderthal per ottenere cultura o felicità.</Italian>
 		<Polish>Pozwala na składanie ofiar z pojmanych jeńców.</Polish>
 	</TEXT>

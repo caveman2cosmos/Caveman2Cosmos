@@ -139,7 +139,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_BARBARIAN_STONE_SPEARMAN_INVATION_1</Tag>
 		<English>A massive barbarian uprising is occurring. A frightening Barbarian Tribe has gathered an army and their Stone Spearmen seek to plunder other tribes.</English>
-		<French>A massive barbarian uprising is occurring. A frightening Barbarian Tribe has gathered an army and their Stone Spearmen seek to plunder other tribes.</French>
+		<French>Un soulèvement barbare massif se produit. Une effrayante tribu barbare a rassemblé une armée et leurs lanciers de pierre cherchent à piller d'autres tribus.</French>
 		<Italian>Si sta verificando una grande rivolta dei barbari. Una terrificante tribù barbarica ha radunato un esercito e i loro Guerrieri con lancia in pietra vogliono saccheggiare le altre tribù.</Italian>
 		<Spanish>Se está produciendo un levantamiento bárbaro masivo. Una aterradora tribu bárbara ha reunido un ejército y sus Guerreros con lanza de piedra pretenden saquear otras tribus.</Spanish>
 		<Polish>Ogromne powstanie barbarzyńców. Plemię Barbarzyńców zebrało wojska i idzie grabić inne plemiona.</Polish>
@@ -147,7 +147,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_BARBARIAN_WARRIOR_INVATION_1</Tag>
 		<English>A massive barbarian uprising is occurring. A frightening Barbarian Tribe has gathered an army and their Warriors seek to plunder other tribes.</English>
-		<French>A massive barbarian uprising is occurring. A frightening Barbarian Tribe has gathered an army and their Warriors seek to plunder other tribes.</French>
+		<French>Un soulèvement barbare massif se produit. Une effrayante tribu barbare a rassemblé une armée et leurs guerriers cherchent à piller d'autres tribus.</French>
 		<Italian>Si sta verificando una grande rivolta dei barbari. Una terrificante tribù barbarica ha radunato un esercito e i loro Guerrieri vogliono saccheggiare le altre tribù.</Italian>
 		<Spanish>Se está produciendo un levantamiento bárbaro masivo. Una aterradora tribu bárbara ha reunido un ejército y sus Guerreros pretenden saquear otras tribus.</Spanish>
 		<Polish>Ogromne powstanie barbarzyńców. Plemię Barbarzyńców zebrało wojska i idzie grabić inne plemiona.</Polish>
@@ -155,7 +155,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_BARBARIAN_WOMAN_1</Tag>
 		<English>A Barbarian woman was found in %s1_civ_adjective lands. She says she has escaped from a Barbarian leader.</English>
-		<French>A Barbarian woman was found in %s1_civ_adjective lands. She says she has escaped from a Barbarian leader.</French>
+		<French>Une femme barbare a été trouvée dans les terres %s1_civ_adjective. Elle dit qu'elle s'est échappée d'un chef barbare.</French>
 		<Italian>Una donna barbara è stata trovata nei territori %s1_civ_adjective. Dice di essere scappata da un leader barbarico.</Italian>
 		<Spanish>Se ha encontrado a una mujer bárbara en tierras %s1:4_civ_adjective. Dice haberse escapado de un Líder bárbaro.</Spanish>
 		<Polish>Barbarzyńska kobieta została odnaleziona na ziemiach %s1_civ_adjective. Mówi że uciekła od Barbarzyńskiego Przywódcy.</Polish>
@@ -163,7 +163,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_BARLEY_DISCOVERED_1</Tag>
 		<English>%s1_civ_adjective grain gatherers have found barley within their borders.</English>
-		<French>%s1_civ_adjective grain gatherers have found barley within their borders.</French>
+		<French>Les récolteurs de grains %s1_civ_adjective ont trouvé de l'orge à l'intérieur de leurs frontières.</French>
 		<Italian>I raccoglitori %s1_civ_adjective hanno trovato dell'orzo all'interno dei loro territori.</Italian>
 		<Spanish>Los recolectores de grano %s1:3_civ_adjective han encontrado Cebada en sus fronteras.</Spanish>
 		<Polish>Zbieracze %s1_civ_adjective znaleźli ziarna jęczmienia na swoich ziemiach.</Polish>
@@ -206,7 +206,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_BISON_HERD_1</Tag>
 		<English>%s1_civ_adjective hunters have found a herd of Bison within their borders.</English>
-		<French>%s1_civ_adjective hunters have found a herd of Bison within their borders.</French>
+		<French>Les chasseurs %s1_civ_adjective ont trouvé un troupeau de bisons à l'intérieur de leurs frontières.</French>
 		<Italian>I cacciatori %s1_civ_adjective hanno scoperto un branco di bisonti all'interno dei nostri territori.</Italian>
 		<Spanish>Los cazadores %s1:3_civ_adjective han encontrado una manada de Bisontes en sus fronteras.</Spanish>
 		<Polish>Łowcy %s1_civ_adjective odnaleźli stado Bizonów w swoich granicach.</Polish>
@@ -382,7 +382,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_CORN_DISCOVERED_1</Tag>
 		<English>%s1_civ_adjective grain gatherers have found corn seeds within their borders.</English>
-		<French>%s1_civ_adjective grain gatherers have found corn seeds within their borders.</French>
+		<French>Les récolteurs de grains %s1_civ_adjective ont trouvé corn seeds within their borders.</French>
 		<Italian>I raccoglitori %s1_civ_adjective hanno trovato dei semi di granoturco all'interno dei loro territori.</Italian>
 		<Spanish>Los recolectores de grano %s1:3_civ_adjective han encontrado semillas de Maíz en sus fronteras.</Spanish>
 		<Polish>Zbieracze %s1_civ_adjective znaleźli ziarna kukurydzy na swoich ziemiach.</Polish>
@@ -512,7 +512,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_FOREIGN_WOMAN_1</Tag>
 		<English>A %s4_civ_adjective tribeswoman has been found in %s1_civ_adjective territory. She seems to be an important member of the tribe.</English>
-		<French>A %s4_civ_adjective tribeswoman has been found in %s1_civ_adjective territory. She seems to be an important member of the tribe.</French>
+		<French>Une femme de la tribu %s4_civ_adjective a été trouvée sur le territoire %s1_civ_adjective. Elle semble être un membre important de la tribu.</French>
 		<Italian>Una donna della tribù %s4_civ_adjective è stata trovata nel territorio %s1_civ_adjective. Sembra che sia un membro importante della tribù.</Italian>
 		<Spanish>Han encontrado a una mujer de la tribu %s4:2_civ_adjective en territorio %s1_civ_adjective. Parece ser que se trata de una miembro importante de la tribu.</Spanish>
 		<Polish>Kobieta z %s4_civ_adjective została odnaleziona na terytorium in %s1_civ_adjective. Wygląda na ważną członkinię plemienia.</Polish>
@@ -536,7 +536,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_FREE_GATHERER_1</Tag>
 		<English>Our current research has given us a free Gatherer.</English>
-		<French>Our current research has given us a free Gatherer.</French>
+		<French>Nos recherches actuelles nous ont donné une Cueilleuse gratuite.</French>
 		<Italian>La nostra ricerca attuale ci ha fornito un raccoglitore gratuito.</Italian>
 		<Spanish>Nuestro último descubrimiento nos ha proporcionado un Recolector gratis.</Spanish>
 		<Polish>Nasze badania dały nam darmowego zbieracza.</Polish>
@@ -544,7 +544,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_FREE_HUNTER_1</Tag>
 		<English>Our current research has given us 2 free Atlatls.</English>
-		<French>Our current research has given us 2 free Atlatls.</French>
+		<French>Nos recherches actuelles nous ont donné 2 Atlatls gratuits.</French>
 		<Italian>La nostra ricerca attuale ci ha fornito 2 lanciatori di atlatl gratuiti.</Italian>
 		<Spanish>Nuestro último descubrimiento nos ha proporcionado 2 Lanzadores de dardos gratis.</Spanish>
 		<Polish>Nasze badania dały nam dwóch darmowych prymitywnych oszczepników.</Polish>
@@ -733,7 +733,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_HUNTING_LODGE_1</Tag>
 		<English>Many of our tribespeople are joinning our Hunting Lodge. It seems hunting has become not only a way to obtain food but also an entertainment activity.</English>
-		<French>Many of our tribespeople are joinning our Hunting Lodge. It seems hunting has become not only a way to obtain food but also an entertainment activity.</French>
+		<French>Beaucoup de nos tribus se joignent à notre pavillon de chasse. Il semble que la chasse soit devenue non seulement un moyen d'obtenir de la nourriture mais aussi une activité de divertissement.</French>
 		<Italian>Molti membri della nostra tribù si sono stabiliti nella Tenda dei cacciatori. Sembra che la caccia sia diventata non solo un mezzo per ottenere cibo, ma anche un'attività di intrattenimento.</Italian>
 		<Spanish>Muchos miembros de nuestra tribu están uniéndose a la Cabaña del cazador. Parece ser que la caza no sólo es un buen modo de obtener comida, sino también una actividad de entretenimiento.</Spanish>
 		<Polish>Dużo naszych współplemieńców dołącza do Łowców. Nie jest to jedyne źródło jedzenia ale rozrywki.</Polish>
@@ -842,7 +842,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_LOST_AT_SEA</Tag>
 		<English>On a sunny day, with no storms in sight, one of our expeditions has been lost at sea. Not only is the cause unknown, but there is no trace whatsoever of the expeditions equipment, crew or cargo. Several smaller vessels has also vanished without a trace in the same general region. Rumors are flying concerning this mystery.</English>
-		<French>On a sunny day, with no storms in sight, one of our expeditions has been lost at sea. Not only is the cause unknown, but there is no trace whatsoever of the expeditions equipment, crew or cargo. Several smaller vessels has also vanished without a trace in the same general region. Rumors are flying concerning this mystery.</French>
+		<French>Par une journée ensoleillée, sans tempête en vue, une de nos expéditions s'est perdue en mer. Non seulement la cause est inconnue, mais il n'y a aucune trace de l'équipement d'expédition, de l'équipage ou de la cargaison. Plusieurs petits navires ont également disparu sans laisser de trace dans la même région. Des rumeurs circulent concernant ce mystère.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_LOYALTY_TESTS_1</Tag>
@@ -892,7 +892,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_MAMMOTH_1</Tag>
 		<English>%s1_civ_adjective hunters have found a herd of Mammoths within their borders.</English>
-		<French>%s1_civ_adjective hunters have found a herd of Mammoths within their borders.</French>
+		<French>Les chasseurs %s1_civ_adjective ont trouvé un troupeau de mammouths à l'intérieur de leurs frontières.</French>
 		<Italian>I cacciatori %s1_civ_adjective hunters hanno trovato un branco di mammuth all'interno dei loro territori.</Italian>
 		<Spanish>Los cazadores %s1:3_civ_adjective han encontrado una manada de Mamuts en sus fronteras.</Spanish>
 		<Polish>Łowcy %s1_civ_adjective znaleźli Stado Mamutów w ich imperium.</Polish>
@@ -969,7 +969,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_MUSICOFGODS</Tag>
 		<English>People in the %s1_civ_adjective empire now regard electric noise as music...</English>
-		<French>People in the %s1_civ_adjective empire now regard electric noise as music...</French>
+		<French>Les gens de l'empire %s1_civ_adjective considèrent désormais le bruit électrique comme de la musique ...</French>
 		<Polish>Ludzie w Imperium %s1_civ_adjective uważają elektroniczne dźwięki za muzykę.</Polish>
 	</TEXT>
 	<TEXT>
@@ -1079,7 +1079,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_PINE_DISCOVERED_1</Tag>
 		<English>%s1_civ_adjective wood gatherers have found a new kind of tree within their borders.</English>
-		<French>%s1_civ_adjective wood gatherers have found a new kind of tree within their borders.</French>
+		<French>Les ramasseurs de bois %s1_civ_adjective ont trouvé un nouveau type d'arbre à l'intérieur de leurs frontières.</French>
 		<Italian>I raccoglitori di legno %s1_civ_adjective hanno trovato un nuovo tipo di albero all'interno dei loro territori.</Italian>
 		<Spanish>Los recolectores de leña %s1:3_civ_adjective han encontrado un nuevo tipo de árbol en sus fronteras.</Spanish>
 		<Polish>Zbieracze %s1_civ_adjective znaleźli nowy typ drzewa na swoich ziemiach.</Polish>
@@ -1183,7 +1183,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_RICE_DISCOVERED_1</Tag>
 		<English>%s1_civ_adjective grain gatherers have found rice within their borders.</English>
-		<French>%s1_civ_adjective grain gatherers have found rice within their borders.</French>
+		<French>Les récolteurs de grains %s1_civ_adjective ont trouvé rice within their borders.</French>
 		<Italian>I raccoglitori %s1_civ_adjective hanno trovato del riso all'interno dei loro territori.</Italian>
 		<Spanish>Los recolectores de grano %s1:3_civ_adjective han encontrado Arroz en sus fronteras.</Spanish>
 		<Polish>Zbieracze %s1_civ_adjective znaleźli ziarna ryżu na swoich ziemiach.</Polish>
@@ -1227,7 +1227,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SEA_STORM</Tag>
 		<English>Stormy waters sighted.</English>
-		<French>Stormy waters sighted.</French>
+		<French>Des eaux orageuses ont été aperçues.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SECURITY_TAX</Tag>
@@ -1437,7 +1437,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_WHEAT_DISCOVERED_1</Tag>
 		<English>%s1_civ_adjective grain gatherers have found wheat within their borders.</English>
-		<French>%s1_civ_adjective grain gatherers have found wheat within their borders.</French>
+		<French>Les récolteurs de grains %s1_civ_adjective ont trouvé wheat within their borders.</French>
 		<Italian>I raccoglitori %s1_civ_adjective hanno trovato del frumento all'interno dei loro territori.</Italian>
 		<Spanish>Los recolectores de grano %s1:3_civ_adjective han encontrado Trigo en sus fronteras.</Spanish>
 		<Polish>Zbieracze %s1_civ_adjective znaleźli ziarna pszenicy na swoich ziemiach</Polish>
@@ -2364,8 +2364,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BLANK</Tag>
-		<English/>
-		<French/>
+		<English></English>
+		<French></French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BONUS_UNIT</Tag>
@@ -2861,7 +2861,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CITYFIRE_CATASTROPHIC_1</Tag>
 		<English>Catastrophic fire has occurred!</English>
-		<French>Catastrophic fire has occurred!</French>
+		<French>Un incendie catastrophique s'est produit !</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CITYFIRE_HIT_CITY</Tag>
@@ -2872,12 +2872,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CITYFIRE_MAJOR_1</Tag>
 		<English>We had large fire!</English>
-		<French>We had large fire!</French>
+		<French>Nous avons eu un grand incendie !</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CITYFIRE_MINOR_1</Tag>
 		<English>We had minor fire.</English>
-		<French>We had minor fire.</French>
+		<French>Nous avons eu un incendie mineur.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CITYFIRE_NOHIT_CITY</Tag>
@@ -2933,7 +2933,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CIVIC_ATTITUDE_3</Tag>
 		<English>Is he crazy? Nobody give us orders. Let's show him the strength of Barbarism!</English>
-		<French>Is he crazy? Nobody give us orders. Let's show him the strength of Barbarism!</French>
+		<French>Est-il fou ? Personne ne nous donne d'ordre. Montrons-lui la force de la barbarie !</French>
 		<Italian>È pazzo? Nessuno ci da degli ordini. Mostriamogli la forza del barbarismo!</Italian>
 		<Spanish>¿Está loco? Nadie nos da órdenes. ¡Mostrémosle la verdadera fuerza de la Barbarie!</Spanish>
 		<Polish>Czy on jest szalony? Nikt nam nie będzie rozkazywał. Pokażmy mu potęgę barbaryzmu!</Polish>
@@ -2941,7 +2941,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CIVIC_ATTITUDE_HELP_1</Tag>
 		<English>[ICON_BULLET]Will automatically change to [COLOR_BUILDING_TEXT]Tribal Law Civic[COLOR_REVERT][NEWLINE][ICON_BULLET]Barbarians won't be pleased with this</English>
-		<French>[ICON_BULLET]Will automatically change to [COLOR_BUILDING_TEXT]Tribal Law Civic[COLOR_REVERT][NEWLINE][ICON_BULLET]Barbarians won't be pleased with this</French>
+		<French>[ICON_BULLET] Passera automatiquement à la doctrine [COLOR_BUILDING_TEXT]Loi Tribale[COLOR_REVERT] [NEWLINE] [ICON_BULLET] Les barbares ne seront pas satisfaits de cela</French>
 		<Italian>[ICON_BULLET]Adotterà automaticamente [COLOR_BUILDING_TEXT]Legge tribale[COLOR_REVERT][NEWLINE][ICON_BULLET]I barbari non saranno contenti di tutto questo</Italian>
 		<Spanish>[ICON_BULLET]Tu principio cambiará automáticamente a la [COLOR_BUILDING_TEXT]Ley tribal[COLOR_REVERT][NEWLINE][ICON_BULLET]Los bárbaros no estarán muy contentos de esto</Spanish>
 		<Polish>[ICON_BULLET]Automatyczna zmiana doktryny na [COLOR_BUILDING_TEXT]Plemienność[COLOR_REVERT][NEWLINE][ICON_BULLET]Barbarzyńcy nie będą z tego zadowoleni</Polish>
@@ -2949,7 +2949,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CIVIC_ATTITUDE_HELP_3</Tag>
 		<English>[ICON_BULLET]Will destroy up to 2 buildings in the %s1_civ_adjective city of [COLOR_BUILDING_TEXT]%s2_city[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]-1[COLOR_REVERT] relation hit with [COLOR_BUILDING_TEXT]all known leaders[COLOR_REVERT][NEWLINE][ICON_BULLET]Will trigger [COLOR_NEGATIVE_TEXT]War[COLOR_REVERT]</English>
-		<French>[ICON_BULLET]Will destroy up to 2 buildings in the %s1_civ_adjective city of [COLOR_BUILDING_TEXT]%s2_city[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]-1[COLOR_REVERT] relation hit with [COLOR_BUILDING_TEXT]all known leaders[COLOR_REVERT][NEWLINE][ICON_BULLET]Will trigger [COLOR_NEGATIVE_TEXT]War[COLOR_REVERT]</French>
+		<French>[ICON_BULLET] Détruit jusqu'à 2 bâtiments dans la ville %s1_civ_adjective de [COLOR_BUILDING_TEXT]%s2_city [COLOR_REVERT] [NEWLINE] [ICON_BULLET] [COLOR_NEGATIVE_TEXT] -1 [COLOR_REVERT] relation avec [COLOR_REVERT]tous les Leaders connus.[COLOR_REVERT][NEWLINE][ICON_BULLET]Déclenche la [COLOR_NEGATIVE_TEXT]Guerre[COLOR_REVERT]
+</French>
 		<Italian>[ICON_BULLET]Distruggerà fino a 2 ediici nella città %s1_civ_adjective di [COLOR_BUILDING_TEXT]%s2_city[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]-1[COLOR_REVERT] alle relazioni con [COLOR_BUILDING_TEXT]tutti i leader conosciuti[COLOR_REVERT][NEWLINE][ICON_BULLET]Dichiarerà [COLOR_NEGATIVE_TEXT]Guerra[COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET]Destruirás hasta 2 edificios en la ciudad %s1:2_civ_adjective de [COLOR_BUILDING_TEXT]%s2_city[COLOR_REVERT][NEWLINE][ICON_BULLET]Sufres [COLOR_NEGATIVE_TEXT]-1[COLOR_REVERT] en las relaciones con todos los [COLOR_BUILDING_TEXT]líderes conocidos[COLOR_REVERT][NEWLINE][ICON_BULLET]Provocará una [COLOR_NEGATIVE_TEXT]declaración de guerra[COLOR_REVERT]</Spanish>
 		<Polish>[ICON_BULLET]Zniszczy dwa budynki w mieście %s1_civ_adjective: [COLOR_BUILDING_TEXT]%s2_city[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]-1[COLOR_REVERT] do relacji z [COLOR_BUILDING_TEXT]wszystkimi znanymi liderami[COLOR_REVERT][NEWLINE][ICON_BULLET]Może wywołać [COLOR_NEGATIVE_TEXT]Wojnę[COLOR_REVERT]</Polish>
@@ -2984,7 +2985,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CLUBMAN_UPGRADE_1</Tag>
 		<English>We don't have time for that. Let them tell one of our units some fighting tips, but hurry up.</English>
-		<French>We don't have time for that. Let them tell one of our units some fighting tips, but hurry up.</French>
+		<French>Nous n'avons pas le temps pour ça. Qu'ils disent à l'une de nos unités quelques conseils de combat, mais dépêchez-vous.</French>
 		<Italian>Non abbiamo tempo per questo. Fate in modo che insegnino alle nostre unità alcune tattiche di combattimento, ma fate in fretta.</Italian>
 		<Spanish>No tenemos tiempo para eso. Dejemos que les enseñen algunos trucos de lucha a una de nuestras unidades, pero rápido.</Spanish>
 		<Polish>Nie mamy na to czasu. Niech dadzą wskazówki jednej jednostce, ale szybko.</Polish>
@@ -2992,7 +2993,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CLUBMAN_UPGRADE_2</Tag>
 		<English>Good. Some skill training will help.</English>
-		<French>Good. Some skill training will help.</French>
+		<French>Bien. Un entraînement de nos compétences nous aidera.</French>
 		<Italian>Bene. Un po' di allenamento farà bene.</Italian>
 		<Spanish>Bien. Un poco de entrenamiento no les vendría mal.</Spanish>
 		<Polish>Świetnie. Trening będzie dobry.</Polish>
@@ -3000,7 +3001,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CLUBMAN_UPGRADE_3</Tag>
 		<English>Excellent. Maybe some tips for the surprise attack.</English>
-		<French>Excellent. Maybe some tips for the surprise attack.</French>
+		<French>Excellent. Peut-être quelques conseils pour réaliser des attaques surprise.</French>
 		<Italian>Eccellente. Fatevi dare alcuni consigli per gli attacchi a sorpresa.</Italian>
 		<Spanish>Excelente. Tal vez podrían darles algunos consejos de cara a un ataque sorpresa.</Spanish>
 		<Polish>Genialnie. Może jakieś wskazówki na atak z zaskoczenia.</Polish>
@@ -3008,7 +3009,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CLUBMAN_UPGRADE_4</Tag>
 		<English>Amazing. Let them teach our units how to track our enemies.</English>
-		<French>Amazing. Let them teach our units how to track our enemies.</French>
+		<French>Incroyable. Laissez-les apprendre à nos unités comment traquer vos ennemis.</French>
 		<Italian>Fantastico. Fategli insegnare alle nostre unità come cercare le tracce dei nostri nemici.</Italian>
 		<Spanish>Fantástico. Dejemos que enseñen a nuestras unidades sobre como perseguir a nuestros enemigos.</Spanish>
 		<Polish>Cudownie. Niech nas nauczą jak śledzić naszych wrogów.</Polish>
@@ -3145,7 +3146,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CORN_DISCOVERED_1</Tag>
 		<English>Good. We need more food.</English>
-		<French>Good. We need more food.</French>
+		<French>Bien. Nous avons besoin de plus de nourriture.</French>
 		<Italian>Ottimo. Abbiamo bisogno di più cibo.</Italian>
 		<Spanish>Bien. Necesitamos más alimento.</Spanish>
 		<Polish>Dobrze. Potrzebujemy więcej jedzenia.</Polish>
@@ -3384,7 +3385,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DRUG_TRAFFICKERS_HELP_1</Tag>
 		<English>Just in Time.</English>
-		<French>Just in Time.</French>
+		<French>Juste à temps.</French>
 		<Italian>Appena in tempo.</Italian>
 		<Spanish>Justo a tiempo.</Spanish>
 		<Polish>W samą porę.</Polish>
@@ -3392,7 +3393,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DRUG_TRAFFICKERS_HELP_1_HELP</Tag>
 		<English>[ICON_BULLET]Receives [COLOR_POSITIVE_TEXT]+1[COLOR_REVERT] Unit in %[s1_city].</English>
-		<French>[ICON_BULLET]Receives [COLOR_POSITIVE_TEXT]+1[COLOR_REVERT] Unit in %[s1_city].</French>
+		<French>[ICON_BULLET]Reçoit [COLOR_POSITIVE_TEXT]+1[COLOR_REVERT] Unité à %[s1_city].</French>
 		<Italian>[ICON_BULLET]Riceve [COLOR_POSITIVE_TEXT]+1[COLOR_REVERT] Unità a %[s1_city].</Italian>
 		<Spanish>[ICON_BULLET]Recibes [COLOR_POSITIVE_TEXT]+1[COLOR_REVERT] unidad en %[s1_city].</Spanish>
 		<Polish>[ICON_BULLET]Dostarcza [COLOR_POSITIVE_TEXT]+1[COLOR_REVERT] jednostkę do %[s1_city].</Polish>
@@ -3400,7 +3401,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DRUG_TRAFFICKERS_HELP_2_HELP</Tag>
 		<English>[ICON_BULLET]Receives [COLOR_POSITIVE_TEXT]+2[COLOR_REVERT] Units in %[s1_city].</English>
-		<French>[ICON_BULLET]Receives [COLOR_POSITIVE_TEXT]+2[COLOR_REVERT] Units in %[s1_city].</French>
+		<French>[ICON_BULLET]Reçoit [COLOR_POSITIVE_TEXT]+2[COLOR_REVERT] Unités à %[s1_city].</French>
 		<Italian>[ICON_BULLET]Ricevi [COLOR_POSITIVE_TEXT]+2[COLOR_REVERT] Unità a %[s1_city].</Italian>
 		<Spanish>[ICON_BULLET]Recibes [COLOR_POSITIVE_TEXT]+2[COLOR_REVERT] unidades en %[s1_city].</Spanish>
 		<Polish>[ICON_BULLET]Dostarcza [COLOR_POSITIVE_TEXT]+2[COLOR_REVERT] jednostki do %[s1_city].</Polish>
@@ -3408,7 +3409,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DRUG_TRAFFICKERS_INIT_1</Tag>
 		<English>We will not allow that. Let's send some troops to get them out of there.</English>
-		<French>We will not allow that. Let's send some troops to get them out of there.</French>
+		<French>Nous ne le permettrons pas. Envoyons des troupes pour les sortir de là.</French>
 		<Italian>Non possiamo permetterlo. Manderemo dei soldati per farli sloggiare.</Italian>
 		<Spanish>No podemos permitirlo. Enviemos algunas tropas a que los saquen de ahí.</Spanish>
 		<Polish>Nie pozwalamy na coś takiego. Wyślij żołnierzy by się z nimi rozprawili.</Polish>
@@ -3416,7 +3417,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DRUG_TRAFFICKERS_INIT_1_HELP</Tag>
 		<English>[ICON_BULLET]Drug Traffickers won't get out without fighting.</English>
-		<French>[ICON_BULLET]Drug Traffickers won't get out without fighting.</French>
+		<French>[ICON_BULLET]Les trafiquants de drogue ne sortiront pas sans se battre.</French>
 		<Italian>[ICON_BULLET]I narcotrafficanti non se ne andranno senza combattere.</Italian>
 		<Spanish>[ICON_BULLET]Los narcotraficantes no se marcharán sin antes pelear.</Spanish>
 		<Polish>[ICON_BULLET]Handlarze Narkotyków nie chcą odejść bez walki.</Polish>
@@ -3424,7 +3425,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DRUG_TRAFFICKERS_INIT_2</Tag>
 		<English>Let's meet their leader. Maybe we could take advantage of the situation.</English>
-		<French>Let's meet their leader. Maybe we could take advantage of the situation.</French>
+		<French>Rencontrons leur chef. Nous pourrions peut-être profiter de la situation.</French>
 		<Italian>Dovremmo incontrare il loro leader. Potremmo trarre vantaggio entrambi da questa situazione.</Italian>
 		<Spanish>Reunámonos con su líder. Tal vez podamos sacar ventaja de la situación.</Spanish>
 		<Polish>Przyślij ich przywódcę. Może będziemy mogli załagodzić sytuacje.</Polish>
@@ -3432,7 +3433,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DRUG_TRAFFICKERS_INIT_2_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_NEGATIVE_TEXT]-1[COLOR_REVERT] relation hit with [COLOR_HIGHLIGHT_TEXT]all known leaders without Coca Plant[COLOR_REVERT] resource.</English>
-		<French>[ICON_BULLET][COLOR_NEGATIVE_TEXT]-1[COLOR_REVERT] relation hit with [COLOR_HIGHLIGHT_TEXT]all known leaders without Coca Plant[COLOR_REVERT] resource.</French>
+		<French>[ICON_BULLET][COLOR_NEGATIVE_TEXT]-1[COLOR_REVERT] de relation envers [COLOR_HIGHLIGHT_TEXT] tous les leaders n'ayant pas de plants de Coca [COLOR_REVERT].
+</French>
 		<Italian>[ICON_BULLET][COLOR_NEGATIVE_TEXT]-1[COLOR_REVERT] alle relazioni con [COLOR_HIGHLIGHT_TEXT]tutti i leader conosciuti senza accesso alla coca[COLOR_REVERT].</Italian>
 		<Spanish>[ICON_BULLET]Sufres [COLOR_NEGATIVE_TEXT]-1[COLOR_REVERT] en las relaciones con [COLOR_HIGHLIGHT_TEXT]todos los líderes conocidos que no posean la Coca[COLOR_REVERT] como recurso.</Spanish>
 		<Polish>[ICON_BULLET][COLOR_NEGATIVE_TEXT]-1[COLOR_REVERT] do relacji ze [COLOR_HIGHLIGHT_TEXT]wszystkimi znanymi przywódcami bez plantacji kokainy[COLOR_REVERT].</Polish>
@@ -3448,7 +3450,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DRUG_TRAFFICKING_1</Tag>
 		<English>Maybe he is right. Let's fulfill his demands.</English>
-		<French>Maybe he is right. Let's fulfill his demands.</French>
+		<French>Peut-être qu'il a raison. Répondons à ses exigences.</French>
 		<Italian>Probabilmetne ha ragione. Soddisferemo le sue richieste.</Italian>
 		<Spanish>Tal vez esté en lo cierto. Accedamos a sus demandas.</Spanish>
 		<Polish>Może ma rację. Spełnijmy jego żądania.</Polish>
@@ -3456,7 +3458,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DRUG_TRAFFICKING_2</Tag>
 		<English>Oh come on. I don't care what they think about it. I really like that grass. Go tell him we won't fulfill his demands.</English>
-		<French>Oh come on. I don't care what they think about it. I really like that grass. Go tell him we won't fulfill his demands.</French>
+		<French>Oh allez. Je me fiche de ce qu'ils en pensent. J'aime vraiment cette herbe. Allez lui dire que nous ne répondrons pas à ses demandes.</French>
 		<Italian>Oh andiamo. Non mi interessa cosa ne pensano a riguardo. Quella pianta mi piace molto. Digli che non soddisferemo le sue richieste.</Italian>
 		<Spanish>Venga hombre... Me da igual lo que piensen. Me gusta mucho esa planta, dile que no accederemos a sus demandas.</Spanish>
 		<Polish>No dalej. Mam to gdzieś co oni sądzą o tym. Ja lubię tą trawę. Nie spełnimy ich żądań.</Polish>
@@ -3464,7 +3466,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DRUG_TRAFFICKING_3</Tag>
 		<English>Just what I needed. A stupid leader telling me what I have to do. Tell this to the Drug Traffickers. They will know what to do.</English>
-		<French>Just what I needed. A stupid leader telling me what I have to do. Tell this to the Drug Traffickers. They will know what to do.</French>
+		<French>Juste ce dont j'avais besoin. Un leader stupide me disant ce que je dois faire. Dites-le aux trafiquants de drogue. Ils sauront quoi faire.</French>
 		<Italian>Proprio ciò che mi serviva. Uno stupido leader che mi dice ciò che devo fare. Racconta questa storia ai narcotrafficanti. Loro sapranno cosa fare.</Italian>
 		<Spanish>Justo lo que necesitaba. Un estúpido líder diciéndome lo que tengo que hacer. Coméntaselo a los narcotraficantes. Ellos sabrán qué hacer.</Spanish>
 		<Polish>Właśnie tego potrzebuje. Głupi przywódca mówiący mi co mam robić. Opowiedz o tym handlarzom narkotyków. Będą wiedzieć co zrobić.</Polish>
@@ -3472,7 +3474,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DRUG_TRAFFICKING_3_HELP</Tag>
 		<English>[ICON_BULLET]Will destroy some %[s1_civ_adjective] buildings in %[s2_city].[NEWLINE][ICON_BULLET]Will trigger War!</English>
-		<French>[ICON_BULLET]Will destroy some %[s1_civ_adjective] buildings in %[s2_city].[NEWLINE][ICON_BULLET]Will trigger War!</French>
+		<French>[ICON_BULLET] Détruit certains bâtiments %s1_civ_adjective dans%s2_city. [NEWLINE] [ICON_BULLET] Déclenche la guerre!</French>
 		<Italian>[ICON_BULLET]Distruggerà alcuni edifici %[s1_civ_adjective] a %[s2_city].[NEWLINE][ICON_BULLET]Dichiarerà Guerra!</Italian>
 		<Spanish>[ICON_BULLET]Destruirás algunos edificios %[s1_civ_adjective] en %[s2_city].[NEWLINE][ICON_BULLET]¡Provocará una declaración de guerra!</Spanish>
 		<Polish>[ICON_BULLET]Zniszczy niektóre budynki %[s1_civ_adjective] w mieście %[s2_city].[NEWLINE][ICON_BULLET]Wywoła wojnę!</Polish>
@@ -8656,9 +8658,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CORRUPT_SENATE</Tag>
 		<English>Widespread corruption in senate</English>
+		<French>Corruption généralisée au Sénat</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SILKWORM_GOING_EXTINCT</Tag>
 		<English>Silkworms are endangered</English>
+		<French>Les vers à soie sont menacés</French>
 	</TEXT>
 </Civ4GameText>

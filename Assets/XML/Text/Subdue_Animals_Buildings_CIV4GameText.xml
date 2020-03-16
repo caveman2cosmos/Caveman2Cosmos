@@ -59,7 +59,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_DOGS_HELP</Tag>
 		<English>[ICON_BULLET]Build Canine buildings and units faster in this city.</English>
-		<French>Construit les bâtiments et unités canines plus vite dans cette Ville.</French>
+		<French>[ICON_BULLET]Construit les bâtiments et unités canines plus vite dans cette Ville.</French>
 		<Italian>Questo edificio ti permette di addestrare le unità canine più velocemente.</Italian>
 		<Polish>Szybciej buduj jedn. psów i budynki z nimi związane.</Polish>
 	</TEXT>
@@ -77,7 +77,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_WORKERS_HELP</Tag>
 		<English>[ICON_BULLET]Build Worker units faster in this city.</English>
-		<French>Les unités ouvriers sont entraînées plus vite dans cette ville</French>
+		<French>[ICON_BULLET]Les unités ouvriers sont entraînées plus vite dans cette ville</French>
 		<Italian>Costruisce le unità di lavoratori più velocemente.</Italian>
 	</TEXT>
 	<TEXT>
