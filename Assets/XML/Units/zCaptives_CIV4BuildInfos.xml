@@ -4497,7 +4497,7 @@
 			<iTime>2000</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_PLANT_BAMBOO_GROVE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLANT_BAMBOO</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<FeatureChange>FEATURE_BAMBOO</FeatureChange>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>

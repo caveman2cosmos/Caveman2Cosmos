@@ -38722,11 +38722,11 @@
 			<!-- Unit effects -->
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
-					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+					<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 					<iProductionModifier>10</iProductionModifier>
 				</UnitProductionModifier>
 				<UnitProductionModifier>
-					<UnitType>UNIT_STONE_AGE_AXEMAN</UnitType>
+					<UnitType>UNIT_STONE_AXEMAN</UnitType>
 					<iProductionModifier>10</iProductionModifier>
 				</UnitProductionModifier>
 				<UnitProductionModifier>

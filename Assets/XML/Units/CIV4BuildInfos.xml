@@ -5929,7 +5929,7 @@
 			<iTime>2000</iTime>
 			<iCost>20</iCost>
 			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_PLANT_BAMBOO_GROVE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLANT_BAMBOO</ImprovementType>
 			<FeatureChange>FEATURE_BAMBOO</FeatureChange>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>

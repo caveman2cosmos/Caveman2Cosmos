@@ -5041,7 +5041,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		</SpawnInfo>
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_STONE_AGE_AXEMAN</Type>
-			<UnitType>UNIT_STONE_AGE_AXEMAN</UnitType>
+			<UnitType>UNIT_STONE_AXEMAN</UnitType>
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>450</iGlobalTurns>
@@ -5376,7 +5376,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		</SpawnInfo>
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_STONE_AGE_SPEARMAN</Type>
-			<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+			<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>

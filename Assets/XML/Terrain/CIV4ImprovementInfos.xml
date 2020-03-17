@@ -6154,10 +6154,10 @@
 		</ImprovementInfo>
 		<!-- Plant Bamboo -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_PLANT_BAMBOO_GROVE</Type>
+			<Type>IMPROVEMENT_PLANT_BAMBOO</Type>
 			<Description>TXT_KEY_BUILD_PLANT_BAMBOO_GROVE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_BAMBOO_GROVE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_BAMBOO</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<TerrainMakesValids>

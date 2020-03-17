@@ -446,7 +446,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAPTIVE_MILITARY_HELP</Tag>
 		<English>[ICON_BULLET]Upgrade to Military or Worker unit. Force build [COLOR_UNIT_TEXT]Improvement[COLOR_REVERT] or [COLOR_UNIT_TEXT]Building[COLOR_REVERT]. Sacrifice or join city.</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Peut être converti en unité militaire ou ouvrière. Peut construire de manière forcée un [COLOR_UNIT_TEXT]aménagement[COLOR_REVERT] ou [COLOR_UNIT_TEXT]Bâtiment[COLOR_REVERT]. Peut être Sacrifié ou rejoindre une ville.</French>
+		<French>[ICON_BULLET]Peut être converti en unité militaire ou ouvrière. Peut construire de manière forcée un [COLOR_UNIT_TEXT]aménagement[COLOR_REVERT] ou [COLOR_UNIT_TEXT]Bâtiment[COLOR_REVERT]. Peut être Sacrifié ou rejoindre une ville.</French>
 		<Italian>Può essere migliorato in un lavoratore o in un'unità militare. Può essere costretto a realizzare [COLOR_UNIT_TEXT]Miglioramenti[COLOR_REVERT] o [COLOR_UNIT_TEXT]Edifici[COLOR_REVERT]. Può essere sacrificato o essere aggiunto alla città.</Italian>
 	</TEXT>
 	<TEXT>

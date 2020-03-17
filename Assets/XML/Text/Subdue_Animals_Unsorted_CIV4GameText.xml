@@ -1180,7 +1180,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_KANGAROO_RED_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Red Kangaroo and Marsuipial, Marsuipial Herd, Cage and Enclosure</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Kangourou roux et autres Marsupiaux, Troupeau, Cage et Enclos pour Marsupiaux</French>
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Kangourou roux et autres Marsupiaux, Troupeau, Cage et Enclos pour Marsupiaux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_NILE_MONITOR_HELP</Tag>
@@ -1190,22 +1190,22 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_OKAPI_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Okapi and Myth - Giraffe, Carnival and Exotic Herbivore Cage and Enclosure</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Okapi et Mythe des Girafes, Carnaval et Cage et Enclos pour Herbivores exotiques</French>
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Okapi et Mythe des Girafes, Carnaval et Cage et Enclos pour Herbivores exotiques</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ORANGUTAN_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Orangutan and Old Man Of the Forest, Primate Cage and Enclosure</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Orangutan et Ancient de la Forêt, Cage et Enclos pour primates</French>
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Orangutan et Ancient de la Forêt, Cage et Enclos pour primates</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_OXPECKER_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Oxpecker and Birds, Bird Cage and Enclosure, Feather Worker</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Piqueboeufs et des Oiseaux, Cages à oiseaux, Atelier de plumes</French>
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Piqueboeufs et des Oiseaux, Cages à oiseaux, Atelier de plumes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PEACOCK_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Peacock and Birds, Bird Cage and Enclosure, Poultry Flock, Feather Worker and Flocks of Peacock</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Paon et des Oiseaux, Cages à Oiseaux, Atelier de Plumes</French>
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Paon et des Oiseaux, Cages à Oiseaux, Atelier de Plumes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PUFFADDER_HELP</Tag>
@@ -1215,17 +1215,17 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_QUOLL_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Quoll and Marsupials, Marsupial Cage and Enclosure</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Chat marsupial et autres Marsupiaux, Cage et Enclos pour Marsupiaux</French>
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Chat marsupial et autres Marsupiaux, Cage et Enclos pour Marsupiaux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_RATEL_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Ratel and weasel, Nocturnal and Bad Boy Cage and Enclosure</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Ratel et de la Belette, Cage et Enclos pour nocturnes</French>
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Ratel et de la Belette, Cage et Enclos pour nocturnes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SAIGA_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Saiga and Antelopes, Exotic Herbivore Cage and Enclosure</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Saiga et Antilopes, Cage et Enclos pour Herbivores exotiques</French>
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Saiga et Antilopes, Cage et Enclos pour Herbivores exotiques</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_VIPER_HELP</Tag>
@@ -1235,12 +1235,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_WALLAROO_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Wallaroo and Marsuipial, Kangaroo Herd, Cage and Enclosure</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Wallaroo et Marsuipial, Kangaroo Herd, Cage et Enclosure</French>
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Wallaroo et Marsuipial, Kangaroo Herd, Cage et Enclosure</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_WILDEBEEST_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Wildebeest and Antelopes, Exotic Herbivore Cage and Enclosure</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Gnou et Antilopes, Cage et Enclos pour Herbivores exotiques</French>
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Gnou et Antilopes, Cage et Enclos pour Herbivores exotiques</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_LIZARD</Tag>
