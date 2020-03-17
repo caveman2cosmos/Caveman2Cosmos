@@ -4763,21 +4763,6 @@ int cvInternalGlobals::getNPC0_TEAM() const
 	return NPC0_TEAM;
 }
 
-int cvInternalGlobals::getINVALID_PLOT_COORD() const
-{
-	return INVALID_PLOT_COORD;
-}
-
-int cvInternalGlobals::getNUM_CITY_PLOTS() const
-{
-	return NUM_CITY_PLOTS;
-}
-
-int cvInternalGlobals::getCITY_HOME_PLOT() const
-{
-	return CITY_HOME_PLOT;
-}
-
 void cvInternalGlobals::setDLLProfiler(FProfiler* prof)
 {
 	m_Profiler = prof;
@@ -4963,52 +4948,6 @@ void cvInternalGlobals::setTypesEnum(const char* szType, int iEnum)
 	FAssertMsg(szType, "null type string");
 	FAssertMsg(m_typesMap.find(szType)==m_typesMap.end(), "types entry already exists");
 	m_typesMap[szType] = iEnum;
-}
-
-
-int cvInternalGlobals::getNUM_ENGINE_DIRTY_BITS() const
-{
-	return NUM_ENGINE_DIRTY_BITS;
-}
-
-int cvInternalGlobals::getNUM_INTERFACE_DIRTY_BITS() const
-{
-	return NUM_INTERFACE_DIRTY_BITS;
-}
-
-int cvInternalGlobals::getNUM_YIELD_TYPES() const
-{
-	return NUM_YIELD_TYPES;
-}
-
-int cvInternalGlobals::getNUM_COMMERCE_TYPES() const
-{
-	return NUM_COMMERCE_TYPES;
-}
-
-int cvInternalGlobals::getNUM_FORCECONTROL_TYPES() const
-{
-	return NUM_FORCECONTROL_TYPES;
-}
-
-int cvInternalGlobals::getNUM_INFOBAR_TYPES() const
-{
-	return NUM_INFOBAR_TYPES;
-}
-
-int cvInternalGlobals::getNUM_HEALTHBAR_TYPES() const
-{
-	return NUM_HEALTHBAR_TYPES;
-}
-
-int cvInternalGlobals::getNUM_CONTROL_TYPES() const
-{
-	return NUM_CONTROL_TYPES;
-}
-
-int cvInternalGlobals::getNUM_LEADERANIM_TYPES() const
-{
-	return NUM_LEADERANIM_TYPES;
 }
 
 

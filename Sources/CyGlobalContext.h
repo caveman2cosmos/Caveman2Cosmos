@@ -432,9 +432,9 @@ public:
 	int getNPC1_TEAM() const { return GC.getNPC1_TEAM(); }
 	int getNPC0_PLAYER() const { return GC.getNPC0_PLAYER(); }
 	int getNPC0_TEAM() const { return GC.getNPC0_TEAM(); }
-	int getINVALID_PLOT_COORD() const { return GC.getINVALID_PLOT_COORD(); }
-	int getNUM_CITY_PLOTS() const { return GC.getNUM_CITY_PLOTS(); }
-	int getCITY_HOME_PLOT() const { return GC.getCITY_HOME_PLOT(); }
+	int getINVALID_PLOT_COORD() const { return INVALID_PLOT_COORD; }
+	int getNUM_CITY_PLOTS() const { return NUM_CITY_PLOTS; }
+	int getCITY_HOME_PLOT() const { return CITY_HOME_PLOT; }
 
 // BUG - BUG Info - start
 	void setIsBug(bool bIsBug) { GC.setIsBug(bIsBug); }										// Exposed to Python

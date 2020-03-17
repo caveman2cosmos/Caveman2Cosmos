@@ -913,16 +913,6 @@ public:
 	int getTypesEnum(const char* szType) const;				// use this when searching for a type
 	void setTypesEnum(const char* szType, int iEnum);
 
-	int getNUM_ENGINE_DIRTY_BITS() const;
-	int getNUM_INTERFACE_DIRTY_BITS() const;
-	int getNUM_YIELD_TYPES() const;
-	int getNUM_COMMERCE_TYPES() const;
-	int getNUM_FORCECONTROL_TYPES() const;
-	int getNUM_INFOBAR_TYPES() const;
-	int getNUM_HEALTHBAR_TYPES() const;
-	int getNUM_CONTROL_TYPES() const;
-	int getNUM_LEADERANIM_TYPES() const;
-
 	int& getNumEntityEventTypes();
 	CvString*& getEntityEventTypes();
 	CvString& getEntityEventTypes(EntityEventTypes e);
@@ -1179,9 +1169,6 @@ public:
 	int getNPC1_TEAM() const;
 	int getNPC0_PLAYER() const;
 	int getNPC0_TEAM() const;
-	int getINVALID_PLOT_COORD() const;
-	int getNUM_CITY_PLOTS() const;
-	int getCITY_HOME_PLOT() const;
 
 	// ***** END EXPOSED TO PYTHON *****
 
@@ -2913,48 +2900,38 @@ public:
 
 	DllExport int getNUM_ENGINE_DIRTY_BITS() const
 	{
-		PROXY_TRACK("getNUM_ENGINE_DIRTY_BITS");
-		return gGlobals->getNUM_ENGINE_DIRTY_BITS();
+		PROXY_TRACK("NUM_ENGINE_DIRTY_BITS");
+		return NUM_ENGINE_DIRTY_BITS;
 	}
 	DllExport int getNUM_INTERFACE_DIRTY_BITS() const
 	{
-		PROXY_TRACK("getNUM_INTERFACE_DIRTY_BITS");
-		return gGlobals->getNUM_INTERFACE_DIRTY_BITS();
+		PROXY_TRACK("NUM_INTERFACE_DIRTY_BITS");
+		return NUM_INTERFACE_DIRTY_BITS;
 	}
 	DllExport int getNUM_YIELD_TYPES() const
 	{
-		PROXY_TRACK("getNUM_YIELD_TYPES");
-		return gGlobals->getNUM_YIELD_TYPES();
-	}
-	int getNUM_COMMERCE_TYPES() const
-	{
-		PROXY_TRACK("getNUM_COMMERCE_TYPES");
-		return gGlobals->getNUM_COMMERCE_TYPES();
+		PROXY_TRACK("NUM_YIELD_TYPES");
+		return NUM_YIELD_TYPES;
 	}
 	DllExport int getNUM_FORCECONTROL_TYPES() const
 	{
-		PROXY_TRACK("getNUM_FORCECONTROL_TYPES");
-		return gGlobals->getNUM_FORCECONTROL_TYPES();
+		PROXY_TRACK("NUM_FORCECONTROL_TYPES");
+		return NUM_FORCECONTROL_TYPES;
 	}
 	DllExport int getNUM_INFOBAR_TYPES() const
 	{
-		PROXY_TRACK("getNUM_INFOBAR_TYPES");
-		return gGlobals->getNUM_INFOBAR_TYPES();
+		PROXY_TRACK("NUM_INFOBAR_TYPES");
+		return NUM_INFOBAR_TYPES;
 	}
 	DllExport int getNUM_HEALTHBAR_TYPES() const
 	{
-		PROXY_TRACK("getNUM_HEALTHBAR_TYPES");
-		return gGlobals->getNUM_HEALTHBAR_TYPES();
-	}
-	int getNUM_CONTROL_TYPES() const
-	{
-		PROXY_TRACK("getNUM_CONTROL_TYPES");
-		return gGlobals->getNUM_CONTROL_TYPES();
+		PROXY_TRACK("NUM_HEALTHBAR_TYPES");
+		return NUM_HEALTHBAR_TYPES;
 	}
 	DllExport int getNUM_LEADERANIM_TYPES() const
 	{
-		PROXY_TRACK("getNUM_LEADERANIM_TYPES");
-		return gGlobals->getNUM_LEADERANIM_TYPES();
+		PROXY_TRACK("NUM_LEADERANIM_TYPES");
+		return NUM_LEADERANIM_TYPES;
 	}
 
 	int& getNumEntityEventTypes()
@@ -3339,22 +3316,6 @@ public:
 	{
 		PROXY_TRACK("getNPC0_TEAM");
 		return gGlobals->getNPC0_TEAM();
-	}
-
-	int getINVALID_PLOT_COORD()
-	{
-		PROXY_TRACK("getINVALID_PLOT_COORD");
-		return gGlobals->getINVALID_PLOT_COORD();
-	}
-	int getNUM_CITY_PLOTS()
-	{
-		PROXY_TRACK("getNUM_CITY_PLOTS");
-		return gGlobals->getNUM_CITY_PLOTS();
-	}
-	int getCITY_HOME_PLOT()
-	{
-		PROXY_TRACK("getCITY_HOME_PLOT");
-		return gGlobals->getCITY_HOME_PLOT();
 	}
 
 	// ***** END EXPOSED TO PYTHON *****
