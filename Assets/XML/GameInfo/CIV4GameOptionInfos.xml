@@ -74,6 +74,14 @@
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
+			<!-- This one must always be the eight option as the exe has hardcoded it as such -->
+			<Type>GAMEOPTION_LEAD_ANY_CIV</Type>
+			<Description>TXT_KEY_GAMEOPTION_LEAD_ANY_CIV</Description>
+			<Help>TXT_KEY_GAMEOPTION_LEAD_ANY_CIV_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
 			<Type>GAMEOPTION_UNITED_NATIONS</Type>
 			<Description>TXT_KEY_GAMEOPTION_UNITED_NATIONS</Description>
 			<Help>TXT_KEY_GAMEOPTION_UNITED_NATIONS_HELP</Help>
@@ -340,13 +348,6 @@
 			<Type>GAMEOPTION_RELIGIOUS_DISABLING</Type>
 			<Description>TXT_KEY_GAMEOPTION_RELIGIOUS_DISABLING</Description>
 			<Help>TXT_KEY_GAMEOPTION_RELIGIOUS_DISABLING_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_LEAD_ANY_CIV</Type>
-			<Description>TXT_KEY_GAMEOPTION_LEAD_ANY_CIV</Description>
-			<Help>TXT_KEY_GAMEOPTION_LEAD_ANY_CIV_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
