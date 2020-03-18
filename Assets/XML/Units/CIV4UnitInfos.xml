@@ -3115,7 +3115,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_BAMBOO_GROVE</BuildType>
+					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3495,7 +3495,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_BAMBOO_GROVE</BuildType>
+					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3882,7 +3882,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_BAMBOO_GROVE</BuildType>
+					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -4274,7 +4274,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_BAMBOO_GROVE</BuildType>
+					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -51607,7 +51607,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_BAMBOO_GROVE</BuildType>
+					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -51756,7 +51756,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_BAMBOO_GROVE</BuildType>
+					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>

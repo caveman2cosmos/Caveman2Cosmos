@@ -2823,7 +2823,6 @@
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_SALT_GATHERER</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
-			<FeatureStructs/>
 			<HotKey>KB_S</HotKey>
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
@@ -5923,8 +5922,8 @@
 		</BuildInfo>
 		<!-- Plant Bamboo -->
 		<BuildInfo>
-			<Type>BUILD_PLANT_BAMBOO_GROVE</Type>
-			<Description>TXT_KEY_BUILD_PLANT_BAMBOO_GROVE</Description>
+			<Type>BUILD_PLANT_BAMBOO</Type>
+			<Description>TXT_KEY_BUILD_PLANT_BAMBOO</Description>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>20</iCost>

@@ -366,8 +366,8 @@
 		<Polish>Zbuduj [LINK=IMPROVEMENT_PLANTATION]Plantacj[\LINK] (Prace Przym.)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_PLANT_BAMBOO_GROVE_SLAVE</Tag>
-		<English>Plant [LINK=IMPROVEMENT_PLANT_BAMBOO]Bamboo Grove[\LINK] (Forced)</English>
+		<Tag>TXT_KEY_BUILD_PLANT_BAMBOO_SLAVE</Tag>
+		<English>Plant [LINK=IMPROVEMENT_PLANT_BAMBOO]Bamboo[\LINK] (Forced)</English>
 		<French>[LINK=IMPROVEMENT_PLANT_BAMBOO]Planter une Bambouseraie[\LINK] (Forcé)</French>
 		<German>Zwangsarbeit - Plant Bamboo Grove</German>
 		<Italian>Crea un bosco di bambù (Schiavo)</Italian>

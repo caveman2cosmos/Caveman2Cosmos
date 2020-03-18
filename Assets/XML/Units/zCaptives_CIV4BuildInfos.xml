@@ -4491,8 +4491,8 @@
 			<Button>Art/Interface/Buttons/TerrainFeatures/Jungle.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_PLANT_BAMBOO_GROVE_SLAVE</Type>
-			<Description>TXT_KEY_BUILD_PLANT_BAMBOO_GROVE_SLAVE</Description>
+			<Type>BUILD_PLANT_BAMBOO_SLAVE</Type>
+			<Description>TXT_KEY_BUILD_PLANT_BAMBOO_SLAVE</Description>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>0</iCost>
